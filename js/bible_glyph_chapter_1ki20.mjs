@@ -474,7 +474,7 @@ export function bible_glyph_chapter_1ki20() {
           "you",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I",
           "am",
           "the",
