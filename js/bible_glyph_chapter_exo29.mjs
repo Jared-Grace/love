@@ -999,7 +999,7 @@ export function bible_glyph_chapter_exo29() {
           "things",
           "by",
           "which",
-          "atonement",
+          "$umbrella+doing",
           "was",
           "made",
           "for",
