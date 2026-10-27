@@ -107,7 +107,7 @@ export function bible_glyph_chapter_lam01() {
           "$seat+round_pushpin",
           "to",
           "rest.",
-          "All",
+          "$all",
           "her",
           "pursuers",
           "have",
