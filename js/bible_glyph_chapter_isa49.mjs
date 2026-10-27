@@ -29,7 +29,7 @@ export function bible_glyph_chapter_isa49() {
           "Me",
           "from",
           "the",
-          "womb;",
+          "$baby+house;",
           "from",
           "the",
           "body",
