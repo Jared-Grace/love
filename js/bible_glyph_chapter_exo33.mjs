@@ -371,7 +371,7 @@ export function bible_glyph_chapter_exo33() {
           "$fishing_pole+proper_name",
           "$face",
           "$toward",
-          "face,",
+          "$face,",
           "as",
           "a",
           "$man_beard",
