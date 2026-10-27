@@ -440,7 +440,7 @@ export function bible_glyph_chapter_gen37() {
           "$man_beard",
           "found",
           "him",
-          "wandering",
+          "$shaking_face",
           "in",
           "the",
           "$field",
