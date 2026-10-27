@@ -216,7 +216,7 @@ export function bible_glyph_chapter_mic01() {
       {
         verse_number: 7,
         words: [
-          "All",
+          "$all",
           "her",
           "carved",
           "images",
