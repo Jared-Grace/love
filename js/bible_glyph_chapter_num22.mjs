@@ -533,7 +533,7 @@ export function bible_glyph_chapter_num22() {
           "a",
           "$speech+kitchen_knife+doing",
           "on",
-          "this",
+          "$flashlight",
           "$family",
           "for",
           "me.",
