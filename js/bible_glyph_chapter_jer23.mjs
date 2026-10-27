@@ -567,7 +567,7 @@ export function bible_glyph_chapter_jer23() {
           "$water",
           "to",
           "$cup+hands_giving,",
-          "for",
+          "$pointing",
           "from",
           "the",
           "$megaphone",
