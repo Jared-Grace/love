@@ -1181,7 +1181,7 @@ export function bible_glyph_chapter_2ch34() {
           "all",
           "the",
           "$family",
-          "great",
+          "$top",
           "and",
           "small,",
           "and",
