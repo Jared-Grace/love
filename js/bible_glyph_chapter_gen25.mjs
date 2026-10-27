@@ -558,7 +558,7 @@ export function bible_glyph_chapter_gen25() {
           "$first_place",
           "came",
           "out",
-          "red,",
+          "$red_circle+baby,",
           "$hair",
           "all",
           "over",
