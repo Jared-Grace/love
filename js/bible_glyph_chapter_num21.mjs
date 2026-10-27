@@ -286,7 +286,7 @@ export function bible_glyph_chapter_num21() {
           "$fishing_pole+proper_name",
           "$hammer+doing",
           "a",
-          "bronze",
+          "$bronze",
           "snake",
           "and",
           "mounted",
