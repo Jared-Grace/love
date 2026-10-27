@@ -78,7 +78,7 @@ export function bible_glyph_chapter_deu04() {
           "that",
           "you",
           "may",
-          "keep",
+          "$guard",
           "the",
           "$scroll",
           "of",
