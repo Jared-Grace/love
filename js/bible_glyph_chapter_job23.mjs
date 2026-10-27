@@ -129,7 +129,7 @@ export function bible_glyph_chapter_job23() {
           "would",
           "be",
           "delivered",
-          "forever",
+          "$clock+trophy",
           "from",
           "my",
           "Judge.",
