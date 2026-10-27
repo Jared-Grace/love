@@ -355,7 +355,7 @@ export function bible_glyph_chapter_1ki08() {
           "$person+round_pushpin",
           "there",
           "to",
-          "minister",
+          "$bellhop_bell+doing",
           "because",
           "of",
           "the",
