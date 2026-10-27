@@ -244,7 +244,7 @@ export function bible_glyph_chapter_2ch34() {
           "the",
           "$wood+imp",
           "poles,",
-          "crushed",
+          "$hammer+down_arrow+doing",
           "the",
           "idols",
           "to",
