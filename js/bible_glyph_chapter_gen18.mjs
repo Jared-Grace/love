@@ -183,7 +183,7 @@ export function bible_glyph_chapter_gen18() {
           "$speech,",
           "Quick!",
           "Prepare",
-          "three",
+          "$three",
           "seahs",
           "of",
           "fine",
