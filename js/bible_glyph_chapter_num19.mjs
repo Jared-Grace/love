@@ -106,7 +106,7 @@ export function bible_glyph_chapter_num19() {
           "$blood",
           "on",
           "his",
-          "finger",
+          "$index_pointing_up",
           "and",
           "sprinkle",
           "that",
