@@ -26,7 +26,7 @@ export function bible_glyph_chapter_neh09() {
           "$son",
           "gathered",
           "together,",
-          "fasting",
+          "$eating+locked",
           "and",
           "wearing",
           "sackcloth,",
