@@ -518,7 +518,7 @@ export function bible_glyph_chapter_1ki02() {
           "was",
           "mine,",
           "and",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire",
           "expected",
           "that",
