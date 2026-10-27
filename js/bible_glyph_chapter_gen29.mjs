@@ -365,7 +365,7 @@ export function bible_glyph_chapter_gen29() {
           "ran",
           "out",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "him.",
           "He",
           "embraced",
