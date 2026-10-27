@@ -229,7 +229,7 @@ export function bible_glyph_chapter_mic02() {
           "My",
           "$speech",
           "bring",
-          "good",
+          "$thumbs_up+doing",
           "to",
           "him",
           "who",
