@@ -575,7 +575,7 @@ export function bible_glyph_chapter_exo40() {
           "$hand_sending+thing,",
           "$pointing_up",
           "the",
-          "south",
+          "$compass+down_arrow",
           "$poultry_leg",
           "of",
           "the",
