@@ -629,7 +629,7 @@ export function bible_glyph_chapter_exo38() {
       {
         verse_number: 24,
         words: [
-          "All",
+          "$all",
           "the",
           "$gold",
           "$hammer+doing",
