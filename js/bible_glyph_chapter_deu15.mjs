@@ -667,7 +667,7 @@ export function bible_glyph_chapter_deu15() {
         words: [
           "Each",
           "$year",
-          "you",
+          "$you",
           "and",
           "your",
           "$house",
