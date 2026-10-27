@@ -1,6 +1,3 @@
-import { app_code_lesson_statement_name_number } from "./app_code_lesson_statement_name_number.mjs";
-import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
-import { app_code_lesson_statement_name_copy_single } from "./app_code_lesson_statement_name_copy_single.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
 import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
 import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
@@ -122,8 +119,11 @@ import { app_code_lesson_expression_comparison_or } from "./app_code_lesson_expr
 import { app_code_lesson_expression_choose_order_same_strength } from "./app_code_lesson_expression_choose_order_same_strength.mjs";
 import { app_code_lesson_expression_choose_order_three } from "./app_code_lesson_expression_choose_order_three.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
+import { app_code_lesson_statement_name_number } from "./app_code_lesson_statement_name_number.mjs";
+import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
 import { app_code_lesson_statement_name_identifier } from "./app_code_lesson_statement_name_identifier.mjs";
 import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
+import { app_code_lesson_statement_name_copy_single } from "./app_code_lesson_statement_name_copy_single.mjs";
 import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
 import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
 import { app_code_lesson_expression_choose_order_nested_add } from "./app_code_lesson_expression_choose_order_nested_add.mjs";
@@ -160,12 +160,189 @@ import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { app_code_lesson_statement_name_count } from "./app_code_lesson_statement_name_count.mjs";
 import { app_code_lesson_statement_name_compare } from "./app_code_lesson_statement_name_compare.mjs";
+import { app_code_lesson_expression_choose_order_stop_early_or } from "./app_code_lesson_expression_choose_order_stop_early_or.mjs";
+import { app_code_lesson_expression_choose_order_stop_early_and } from "./app_code_lesson_expression_choose_order_stop_early_and.mjs";
+import { app_code_lesson_expression_choose_order_stop_early_both } from "./app_code_lesson_expression_choose_order_stop_early_both.mjs";
+import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice.mjs";
+import { app_code_lesson_step_name_value } from "./app_code_lesson_step_name_value.mjs";
+import { app_code_lesson_step_name_two } from "./app_code_lesson_step_name_two.mjs";
+import { app_code_lesson_step_name_copy_single } from "./app_code_lesson_step_name_copy_single.mjs";
+import { app_code_lesson_step_name_again } from "./app_code_lesson_step_name_again.mjs";
+import { app_code_lesson_statement_name_again_last } from "./app_code_lesson_statement_name_again_last.mjs";
+import { app_code_lesson_step_name_copy_kept } from "./app_code_lesson_step_name_copy_kept.mjs";
+import { app_code_lesson_statement_name_plus_one } from "./app_code_lesson_statement_name_plus_one.mjs";
+import { app_code_lesson_step_name_plus_one } from "./app_code_lesson_step_name_plus_one.mjs";
+import { app_code_lesson_statement_name_minus_one } from "./app_code_lesson_statement_name_minus_one.mjs";
+import { app_code_lesson_step_name_one_more } from "./app_code_lesson_step_name_one_more.mjs";
+import { app_code_lesson_statement_name_one_more_last } from "./app_code_lesson_statement_name_one_more_last.mjs";
+import { app_code_lesson_statement_name_one_less } from "./app_code_lesson_statement_name_one_less.mjs";
+import { app_code_lesson_statement_name_one_less_last } from "./app_code_lesson_statement_name_one_less_last.mjs";
+import { app_code_lesson_step_name_sum } from "./app_code_lesson_step_name_sum.mjs";
+import { app_code_lesson_statement_name_join } from "./app_code_lesson_statement_name_join.mjs";
+import { app_code_lesson_step_name_join } from "./app_code_lesson_step_name_join.mjs";
+import { app_code_lesson_statement_name_itself_sum_last } from "./app_code_lesson_statement_name_itself_sum_last.mjs";
+import { app_code_lesson_statement_name_count_last } from "./app_code_lesson_statement_name_count_last.mjs";
+import { app_code_lesson_statement_name_subtract } from "./app_code_lesson_statement_name_subtract.mjs";
+import { app_code_lesson_statement_name_multiply } from "./app_code_lesson_statement_name_multiply.mjs";
+import { app_code_lesson_statement_name_divide } from "./app_code_lesson_statement_name_divide.mjs";
+import { app_code_lesson_statement_name_plus_assign } from "./app_code_lesson_statement_name_plus_assign.mjs";
+import { app_code_lesson_step_name_plus_assign } from "./app_code_lesson_step_name_plus_assign.mjs";
+import { app_code_lesson_statement_name_minus_assign } from "./app_code_lesson_statement_name_minus_assign.mjs";
+import { app_code_lesson_step_name_minus_assign } from "./app_code_lesson_step_name_minus_assign.mjs";
+import { app_code_lesson_statement_name_times_assign } from "./app_code_lesson_statement_name_times_assign.mjs";
+import { app_code_lesson_step_name_times_assign } from "./app_code_lesson_step_name_times_assign.mjs";
+import { app_code_lesson_statement_name_divide_assign } from "./app_code_lesson_statement_name_divide_assign.mjs";
+import { app_code_lesson_step_name_divide_assign } from "./app_code_lesson_step_name_divide_assign.mjs";
+import { app_code_lesson_statement_name_increment } from "./app_code_lesson_statement_name_increment.mjs";
+import { app_code_lesson_step_name_increment } from "./app_code_lesson_step_name_increment.mjs";
+import { app_code_lesson_statement_name_decrement } from "./app_code_lesson_statement_name_decrement.mjs";
+import { app_code_lesson_step_name_decrement } from "./app_code_lesson_step_name_decrement.mjs";
+import { app_code_lesson_statement_name_fill_from } from "./app_code_lesson_statement_name_fill_from.mjs";
+import { app_code_lesson_step_name_swap_try } from "./app_code_lesson_step_name_swap_try.mjs";
+import { app_code_lesson_statement_name_swap_try } from "./app_code_lesson_statement_name_swap_try.mjs";
+import { app_code_lesson_statement_name_temp_keep } from "./app_code_lesson_statement_name_temp_keep.mjs";
+import { app_code_lesson_statement_name_swap } from "./app_code_lesson_statement_name_swap.mjs";
+import { app_code_lesson_statement_name_greater } from "./app_code_lesson_statement_name_greater.mjs";
+import { app_code_lesson_statement_name_smaller_equal } from "./app_code_lesson_statement_name_smaller_equal.mjs";
+import { app_code_lesson_statement_name_greater_equal } from "./app_code_lesson_statement_name_greater_equal.mjs";
+import { app_code_lesson_statement_name_equal } from "./app_code_lesson_statement_name_equal.mjs";
+import { app_code_lesson_statement_name_not_equal } from "./app_code_lesson_statement_name_not_equal.mjs";
+import { app_code_lesson_statement_name_not } from "./app_code_lesson_statement_name_not.mjs";
+import { app_code_lesson_statement_name_or } from "./app_code_lesson_statement_name_or.mjs";
+import { app_code_lesson_statement_name_and } from "./app_code_lesson_statement_name_and.mjs";
+import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
+import { app_code_lesson_step_name_average_two } from "./app_code_lesson_step_name_average_two.mjs";
+import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
+import { app_code_lesson_step_name_average_three } from "./app_code_lesson_step_name_average_three.mjs";
+import { app_code_lesson_statement_name_average_three } from "./app_code_lesson_statement_name_average_three.mjs";
+import { app_code_lesson_statement_name_middle } from "./app_code_lesson_statement_name_middle.mjs";
+import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
+import { app_code_lesson_statement_name_grid_position } from "./app_code_lesson_statement_name_grid_position.mjs";
+import { app_code_lesson_statement_name_grid_index } from "./app_code_lesson_statement_name_grid_index.mjs";
+import { app_code_lesson_statement_name_sum_to } from "./app_code_lesson_statement_name_sum_to.mjs";
+import { app_code_lesson_statement_name_digit_split } from "./app_code_lesson_statement_name_digit_split.mjs";
+import { app_code_lesson_statement_name_digit_rest } from "./app_code_lesson_statement_name_digit_rest.mjs";
+import { app_code_lesson_statement_name_digit_append } from "./app_code_lesson_statement_name_digit_append.mjs";
+import { app_code_lesson_statement_name_clock_face } from "./app_code_lesson_statement_name_clock_face.mjs";
+import { app_code_lesson_statement_name_clock_next } from "./app_code_lesson_statement_name_clock_next.mjs";
+import { app_code_lesson_statement_name_egg_boxes } from "./app_code_lesson_statement_name_egg_boxes.mjs";
+import { app_code_lesson_statement_name_handshakes } from "./app_code_lesson_statement_name_handshakes.mjs";
+import { app_code_lesson_statement_name_rows_down } from "./app_code_lesson_statement_name_rows_down.mjs";
+import { app_code_lesson_statement_name_rows_apart } from "./app_code_lesson_statement_name_rows_apart.mjs";
+import { app_code_lesson_statement_name_grid_steps } from "./app_code_lesson_statement_name_grid_steps.mjs";
+import { app_code_lesson_statement_name_pages_read } from "./app_code_lesson_statement_name_pages_read.mjs";
+import { app_code_lesson_statement_name_last_seat } from "./app_code_lesson_statement_name_last_seat.mjs";
+import { app_code_lesson_statement_name_seat_one } from "./app_code_lesson_statement_name_seat_one.mjs";
+import { app_code_lesson_statement_name_seat_zero } from "./app_code_lesson_statement_name_seat_zero.mjs";
+import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
+import { app_code_lesson_statement_name_king_steps } from "./app_code_lesson_statement_name_king_steps.mjs";
+import { app_code_lesson_step_name_grid_inside } from "./app_code_lesson_step_name_grid_inside.mjs";
+import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_statement_name_grid_inside.mjs";
+import { app_code_lesson_statement_name_clock_back } from "./app_code_lesson_statement_name_clock_back.mjs";
+import { app_code_lesson_statement_name_even } from "./app_code_lesson_statement_name_even.mjs";
+import { app_code_lesson_statement_name_page_start } from "./app_code_lesson_statement_name_page_start.mjs";
+import { app_code_lesson_statement_name_clamp } from "./app_code_lesson_statement_name_clamp.mjs";
+import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
+import { app_code_lesson_statement_name_overlap_hours } from "./app_code_lesson_statement_name_overlap_hours.mjs";
+import { app_code_lesson_statement_name_meetings_join } from "./app_code_lesson_statement_name_meetings_join.mjs";
+import { app_code_lesson_statement_name_rectangles_overlap } from "./app_code_lesson_statement_name_rectangles_overlap.mjs";
+import { app_code_lesson_statement_name_shared_squares } from "./app_code_lesson_statement_name_shared_squares.mjs";
+import { app_code_lesson_statement_name_shared_squares_none } from "./app_code_lesson_statement_name_shared_squares_none.mjs";
+import { app_code_lesson_statement_name_square_in_rectangle } from "./app_code_lesson_statement_name_square_in_rectangle.mjs";
+import { app_code_lesson_statement_name_meeting_inside } from "./app_code_lesson_statement_name_meeting_inside.mjs";
+import { app_code_lesson_statement_name_rectangle_inside } from "./app_code_lesson_statement_name_rectangle_inside.mjs";
+import { app_code_lesson_statement_name_meeting_ended } from "./app_code_lesson_statement_name_meeting_ended.mjs";
+import { app_code_lesson_statement_name_meetings_free } from "./app_code_lesson_statement_name_meetings_free.mjs";
+import { app_code_lesson_statement_name_rectangle_above } from "./app_code_lesson_statement_name_rectangle_above.mjs";
+import { app_code_lesson_statement_name_rectangles_rows_between } from "./app_code_lesson_statement_name_rectangles_rows_between.mjs";
+import { app_code_lesson_statement_name_rectangles_columns_between } from "./app_code_lesson_statement_name_rectangles_columns_between.mjs";
+import { app_code_lesson_statement_name_rectangles_join_down } from "./app_code_lesson_statement_name_rectangles_join_down.mjs";
+import { app_code_lesson_statement_name_rectangles_join_across } from "./app_code_lesson_statement_name_rectangles_join_across.mjs";
+import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
+import { app_code_lesson_statement_name_rectangle_wide_as_tall } from "./app_code_lesson_statement_name_rectangle_wide_as_tall.mjs";
+import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
+import { app_code_lesson_braces_step_if_true } from "./app_code_lesson_braces_step_if_true.mjs";
+import { app_code_lesson_if_false } from "./app_code_lesson_if_false.mjs";
+import { app_code_lesson_braces_step_if_false } from "./app_code_lesson_braces_step_if_false.mjs";
+import { app_code_lesson_if_less_than } from "./app_code_lesson_if_less_than.mjs";
+import { app_code_lesson_if_name } from "./app_code_lesson_if_name.mjs";
+import { app_code_lesson_braces_step_if_name } from "./app_code_lesson_braces_step_if_name.mjs";
+import { app_code_lesson_if_names_less_than } from "./app_code_lesson_if_names_less_than.mjs";
+import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
+import { app_code_lesson_if_steps } from "./app_code_lesson_if_steps.mjs";
+import { app_code_lesson_number_text_plus } from "./app_code_lesson_number_text_plus.mjs";
+import { app_code_lesson_number_text_join } from "./app_code_lesson_number_text_join.mjs";
+import { app_code_lesson_if_even } from "./app_code_lesson_if_even.mjs";
+import { app_code_lesson_step_if_change } from "./app_code_lesson_step_if_change.mjs";
+import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
+import { app_code_lesson_step_if_two_lines } from "./app_code_lesson_step_if_two_lines.mjs";
+import { app_code_lesson_if_two_lines } from "./app_code_lesson_if_two_lines.mjs";
+import { app_code_lesson_if_two_changes } from "./app_code_lesson_if_two_changes.mjs";
+import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
+import { app_code_lesson_token_order_alone } from "./app_code_lesson_token_order_alone.mjs";
+import { app_code_lesson_token_order_braces_colored } from "./app_code_lesson_token_order_braces_colored.mjs";
+import { app_code_lesson_token_order_braces_only } from "./app_code_lesson_token_order_braces_only.mjs";
+import { app_code_lesson_token_order_braces_two } from "./app_code_lesson_token_order_braces_two.mjs";
+import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
+import { app_code_lesson_token_order_braces_plain } from "./app_code_lesson_token_order_braces_plain.mjs";
+import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two.mjs";
+import { app_code_lesson_brace_lines_two } from "./app_code_lesson_brace_lines_two.mjs";
+import { app_code_lesson_brace_lines_two_nested } from "./app_code_lesson_brace_lines_two_nested.mjs";
+import { app_code_lesson_braces_run } from "./app_code_lesson_braces_run.mjs";
+import { app_code_lesson_braces_step } from "./app_code_lesson_braces_step.mjs";
+import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
+import { app_code_lesson_if_two_bounds } from "./app_code_lesson_if_two_bounds.mjs";
+import { app_code_lesson_if_two_ifs } from "./app_code_lesson_if_two_ifs.mjs";
+import { app_code_lesson_if_and_if_not } from "./app_code_lesson_if_and_if_not.mjs";
+import { app_code_lesson_braces_run_if_else } from "./app_code_lesson_braces_run_if_else.mjs";
+import { app_code_lesson_braces_step_if_else } from "./app_code_lesson_braces_step_if_else.mjs";
+import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
+import { app_code_lesson_if_else_once } from "./app_code_lesson_if_else_once.mjs";
+import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
+import { app_code_lesson_if_else_change } from "./app_code_lesson_if_else_change.mjs";
+import { app_code_lesson_if_halve_or_triple } from "./app_code_lesson_if_halve_or_triple.mjs";
+import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
+import { app_code_lesson_braces_step_nested } from "./app_code_lesson_braces_step_nested.mjs";
+import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
+import { app_code_lesson_token_order_braces_three } from "./app_code_lesson_token_order_braces_three.mjs";
+import { app_code_lesson_token_order_braces_three_plain } from "./app_code_lesson_token_order_braces_three_plain.mjs";
+import { app_code_lesson_brace_pair } from "./app_code_lesson_brace_pair.mjs";
+import { app_code_lesson_brace_lines } from "./app_code_lesson_brace_lines.mjs";
+import { app_code_lesson_braces_run_after_nested } from "./app_code_lesson_braces_run_after_nested.mjs";
+import { app_code_lesson_braces_step_after_nested } from "./app_code_lesson_braces_step_after_nested.mjs";
+import { app_code_lesson_if_after_nested } from "./app_code_lesson_if_after_nested.mjs";
+import { app_code_lesson_braces_run_if_else_in_if } from "./app_code_lesson_braces_run_if_else_in_if.mjs";
+import { app_code_lesson_braces_step_if_else_in_if } from "./app_code_lesson_braces_step_if_else_in_if.mjs";
+import { app_code_lesson_if_else_in_if } from "./app_code_lesson_if_else_in_if.mjs";
+import { app_code_lesson_braces_run_if_else_in_if_else } from "./app_code_lesson_braces_run_if_else_in_if_else.mjs";
+import { app_code_lesson_braces_step_if_else_in_if_else } from "./app_code_lesson_braces_step_if_else_in_if_else.mjs";
+import { app_code_lesson_if_else_in_if_else } from "./app_code_lesson_if_else_in_if_else.mjs";
+import { app_code_lesson_braces_run_if_in_else } from "./app_code_lesson_braces_run_if_in_else.mjs";
+import { app_code_lesson_braces_step_if_in_else } from "./app_code_lesson_braces_step_if_in_else.mjs";
+import { app_code_lesson_if_in_else } from "./app_code_lesson_if_in_else.mjs";
+import { app_code_lesson_braces_run_else_if } from "./app_code_lesson_braces_run_else_if.mjs";
+import { app_code_lesson_braces_step_else_if } from "./app_code_lesson_braces_step_else_if.mjs";
+import { app_code_lesson_else_if } from "./app_code_lesson_else_if.mjs";
+import { app_code_lesson_braces_run_if_else_in_else } from "./app_code_lesson_braces_run_if_else_in_else.mjs";
+import { app_code_lesson_braces_step_if_else_in_else } from "./app_code_lesson_braces_step_if_else_in_else.mjs";
+import { app_code_lesson_if_else_in_else } from "./app_code_lesson_if_else_in_else.mjs";
+import { app_code_lesson_braces_run_else_if_else } from "./app_code_lesson_braces_run_else_if_else.mjs";
+import { app_code_lesson_braces_step_else_if_else } from "./app_code_lesson_braces_step_else_if_else.mjs";
+import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
+import { app_code_lesson_braces_run_else_if_twice } from "./app_code_lesson_braces_run_else_if_twice.mjs";
+import { app_code_lesson_braces_step_else_if_twice } from "./app_code_lesson_braces_step_else_if_twice.mjs";
+import { app_code_lesson_else_if_twice } from "./app_code_lesson_else_if_twice.mjs";
+import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
+import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
+import { app_code_lesson_braces_step_thrice } from "./app_code_lesson_braces_step_thrice.mjs";
+import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
 export function app_code_lessons_released_fns() {
   "the lessons handed to a learner on either page they are ever sent to - the built site, and latest; every other lesson is still built and still opens on the working copies";
   "A LIST, NOT A CUT. The release used to be every lesson up to one named lesson. That holds only while lessons are added after it, and on 2026-09-17 twenty-six had been put in between released ones - so a rebuild of latest would have handed the learner twenty-six lessons nobody had read through, spread all through a run they were already part way along. A list names each lesson, so a lesson put in anywhere stays out until it is named here.";
   "These are the lessons live on latest when the list was made, less the one lesson that had been deleted since. Their order here is not the order a learner meets them in; that stays the lesson list's own, so reordering the course needs no edit here.";
   "On 2026-09-24 every lesson in the lesson list was released at the human's request, so the thirty-four added after name_copy are every lesson that had not been named here yet.";
   "Releasing a lesson is adding it here. Each one is a function rather than its name, so a rename follows it and a deleted lesson fails the build instead of going quietly missing.";
+  "On 2026-10-27, at the human's asking, every lesson released except the while lessons: the 176 added after statement_name_compare are every lesson then in the lesson list that was not named here and is not a while lesson.";
   let fns = [
     app_code_lesson_symbols_digits_numbered,
     app_code_lesson_symbols_digit_number,
@@ -329,6 +506,182 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_statement_name_one_more,
     app_code_lesson_statement_name_count,
     app_code_lesson_statement_name_compare,
+    app_code_lesson_expression_choose_order_stop_early_or,
+    app_code_lesson_expression_choose_order_stop_early_and,
+    app_code_lesson_expression_choose_order_stop_early_both,
+    app_code_lesson_step_log_twice,
+    app_code_lesson_step_name_value,
+    app_code_lesson_step_name_two,
+    app_code_lesson_step_name_copy_single,
+    app_code_lesson_step_name_again,
+    app_code_lesson_statement_name_again_last,
+    app_code_lesson_step_name_copy_kept,
+    app_code_lesson_statement_name_plus_one,
+    app_code_lesson_step_name_plus_one,
+    app_code_lesson_statement_name_minus_one,
+    app_code_lesson_step_name_one_more,
+    app_code_lesson_statement_name_one_more_last,
+    app_code_lesson_statement_name_one_less,
+    app_code_lesson_statement_name_one_less_last,
+    app_code_lesson_step_name_sum,
+    app_code_lesson_statement_name_join,
+    app_code_lesson_step_name_join,
+    app_code_lesson_statement_name_itself_sum_last,
+    app_code_lesson_statement_name_count_last,
+    app_code_lesson_statement_name_subtract,
+    app_code_lesson_statement_name_multiply,
+    app_code_lesson_statement_name_divide,
+    app_code_lesson_statement_name_plus_assign,
+    app_code_lesson_step_name_plus_assign,
+    app_code_lesson_statement_name_minus_assign,
+    app_code_lesson_step_name_minus_assign,
+    app_code_lesson_statement_name_times_assign,
+    app_code_lesson_step_name_times_assign,
+    app_code_lesson_statement_name_divide_assign,
+    app_code_lesson_step_name_divide_assign,
+    app_code_lesson_statement_name_increment,
+    app_code_lesson_step_name_increment,
+    app_code_lesson_statement_name_decrement,
+    app_code_lesson_step_name_decrement,
+    app_code_lesson_statement_name_fill_from,
+    app_code_lesson_step_name_swap_try,
+    app_code_lesson_statement_name_swap_try,
+    app_code_lesson_statement_name_temp_keep,
+    app_code_lesson_statement_name_swap,
+    app_code_lesson_statement_name_greater,
+    app_code_lesson_statement_name_smaller_equal,
+    app_code_lesson_statement_name_greater_equal,
+    app_code_lesson_statement_name_equal,
+    app_code_lesson_statement_name_not_equal,
+    app_code_lesson_statement_name_not,
+    app_code_lesson_statement_name_or,
+    app_code_lesson_statement_name_and,
+    app_code_lesson_statement_name_remainder,
+    app_code_lesson_step_name_average_two,
+    app_code_lesson_statement_name_average_two,
+    app_code_lesson_step_name_average_three,
+    app_code_lesson_statement_name_average_three,
+    app_code_lesson_statement_name_middle,
+    app_code_lesson_statement_name_grid_row,
+    app_code_lesson_statement_name_grid_position,
+    app_code_lesson_statement_name_grid_index,
+    app_code_lesson_statement_name_sum_to,
+    app_code_lesson_statement_name_digit_split,
+    app_code_lesson_statement_name_digit_rest,
+    app_code_lesson_statement_name_digit_append,
+    app_code_lesson_statement_name_clock_face,
+    app_code_lesson_statement_name_clock_next,
+    app_code_lesson_statement_name_egg_boxes,
+    app_code_lesson_statement_name_handshakes,
+    app_code_lesson_statement_name_rows_down,
+    app_code_lesson_statement_name_rows_apart,
+    app_code_lesson_statement_name_grid_steps,
+    app_code_lesson_statement_name_pages_read,
+    app_code_lesson_statement_name_last_seat,
+    app_code_lesson_statement_name_seat_one,
+    app_code_lesson_statement_name_seat_zero,
+    app_code_lesson_statement_name_seat_less,
+    app_code_lesson_statement_name_king_steps,
+    app_code_lesson_step_name_grid_inside,
+    app_code_lesson_statement_name_grid_inside,
+    app_code_lesson_statement_name_clock_back,
+    app_code_lesson_statement_name_even,
+    app_code_lesson_statement_name_page_start,
+    app_code_lesson_statement_name_clamp,
+    app_code_lesson_statement_name_meetings_overlap,
+    app_code_lesson_statement_name_overlap_hours,
+    app_code_lesson_statement_name_meetings_join,
+    app_code_lesson_statement_name_rectangles_overlap,
+    app_code_lesson_statement_name_shared_squares,
+    app_code_lesson_statement_name_shared_squares_none,
+    app_code_lesson_statement_name_square_in_rectangle,
+    app_code_lesson_statement_name_meeting_inside,
+    app_code_lesson_statement_name_rectangle_inside,
+    app_code_lesson_statement_name_meeting_ended,
+    app_code_lesson_statement_name_meetings_free,
+    app_code_lesson_statement_name_rectangle_above,
+    app_code_lesson_statement_name_rectangles_rows_between,
+    app_code_lesson_statement_name_rectangles_columns_between,
+    app_code_lesson_statement_name_rectangles_join_down,
+    app_code_lesson_statement_name_rectangles_join_across,
+    app_code_lesson_statement_name_rectangles_cover_together,
+    app_code_lesson_statement_name_rectangle_wide_as_tall,
+    app_code_lesson_if_true,
+    app_code_lesson_braces_step_if_true,
+    app_code_lesson_if_false,
+    app_code_lesson_braces_step_if_false,
+    app_code_lesson_if_less_than,
+    app_code_lesson_if_name,
+    app_code_lesson_braces_step_if_name,
+    app_code_lesson_if_names_less_than,
+    app_code_lesson_if_not,
+    app_code_lesson_if_steps,
+    app_code_lesson_number_text_plus,
+    app_code_lesson_number_text_join,
+    app_code_lesson_if_even,
+    app_code_lesson_step_if_change,
+    app_code_lesson_if_change,
+    app_code_lesson_step_if_two_lines,
+    app_code_lesson_if_two_lines,
+    app_code_lesson_if_two_changes,
+    app_code_lesson_token_order,
+    app_code_lesson_token_order_alone,
+    app_code_lesson_token_order_braces_colored,
+    app_code_lesson_token_order_braces_only,
+    app_code_lesson_token_order_braces_two,
+    app_code_lesson_token_order_braces,
+    app_code_lesson_token_order_braces_plain,
+    app_code_lesson_brace_pair_two,
+    app_code_lesson_brace_lines_two,
+    app_code_lesson_brace_lines_two_nested,
+    app_code_lesson_braces_run,
+    app_code_lesson_braces_step,
+    app_code_lesson_if_twice,
+    app_code_lesson_if_two_bounds,
+    app_code_lesson_if_two_ifs,
+    app_code_lesson_if_and_if_not,
+    app_code_lesson_braces_run_if_else,
+    app_code_lesson_braces_step_if_else,
+    app_code_lesson_if_else,
+    app_code_lesson_if_else_once,
+    app_code_lesson_if_halve_even,
+    app_code_lesson_if_else_change,
+    app_code_lesson_if_halve_or_triple,
+    app_code_lesson_braces_run_nested,
+    app_code_lesson_braces_step_nested,
+    app_code_lesson_if_nested,
+    app_code_lesson_token_order_braces_three,
+    app_code_lesson_token_order_braces_three_plain,
+    app_code_lesson_brace_pair,
+    app_code_lesson_brace_lines,
+    app_code_lesson_braces_run_after_nested,
+    app_code_lesson_braces_step_after_nested,
+    app_code_lesson_if_after_nested,
+    app_code_lesson_braces_run_if_else_in_if,
+    app_code_lesson_braces_step_if_else_in_if,
+    app_code_lesson_if_else_in_if,
+    app_code_lesson_braces_run_if_else_in_if_else,
+    app_code_lesson_braces_step_if_else_in_if_else,
+    app_code_lesson_if_else_in_if_else,
+    app_code_lesson_braces_run_if_in_else,
+    app_code_lesson_braces_step_if_in_else,
+    app_code_lesson_if_in_else,
+    app_code_lesson_braces_run_else_if,
+    app_code_lesson_braces_step_else_if,
+    app_code_lesson_else_if,
+    app_code_lesson_braces_run_if_else_in_else,
+    app_code_lesson_braces_step_if_else_in_else,
+    app_code_lesson_if_else_in_else,
+    app_code_lesson_braces_run_else_if_else,
+    app_code_lesson_braces_step_else_if_else,
+    app_code_lesson_else_if_else,
+    app_code_lesson_braces_run_else_if_twice,
+    app_code_lesson_braces_step_else_if_twice,
+    app_code_lesson_else_if_twice,
+    app_code_lesson_else_if_order,
+    app_code_lesson_braces_run_thrice,
+    app_code_lesson_braces_step_thrice,
+    app_code_lesson_if_thrice,
   ];
   return fns;
 }
