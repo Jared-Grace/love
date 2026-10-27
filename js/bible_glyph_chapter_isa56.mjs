@@ -350,7 +350,7 @@ export function bible_glyph_chapter_isa56() {
           "they",
           "are",
           "all",
-          "mute",
+          "$knot+mouth+describing",
           "$dog,",
           "they",
           "$no_entry",
