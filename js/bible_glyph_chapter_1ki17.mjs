@@ -404,7 +404,7 @@ export function bible_glyph_chapter_1ki17() {
           "out",
           "to",
           "me.",
-          "Afterward",
+          "$next_track+describing",
           "$hammer+doing",
           "some",
           "for",
