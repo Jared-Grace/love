@@ -1182,7 +1182,7 @@ export function bible_glyph_chapter_2ki04() {
           "She",
           "$footprints",
           "in,",
-          "fell",
+          "$person+pointing_down",
           "at",
           "his",
           "feet",
