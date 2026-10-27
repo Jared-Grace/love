@@ -279,7 +279,7 @@ export function bible_glyph_chapter_lev02() {
           "$grain_offering",
           "$back+flashlight",
           "you",
-          "present",
+          "$magnet+doing",
           "$i_am",
           "$no_entry",
           "$hammer+doing",
