@@ -172,7 +172,7 @@ export function bible_glyph_chapter_lev01() {
           "skin",
           "$burnt_offering",
           "and",
-          "cut",
+          "$kitchen_knife+meat+doing",
           "it",
           "into",
           "pieces.",
