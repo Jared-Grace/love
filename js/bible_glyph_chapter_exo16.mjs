@@ -294,7 +294,7 @@ export function bible_glyph_chapter_exo16() {
           "$bread",
           "in",
           "the",
-          "morning",
+          "$morning",
           "to",
           "fill",
           "you,",
