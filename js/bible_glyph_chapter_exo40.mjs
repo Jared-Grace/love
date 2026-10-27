@@ -806,7 +806,7 @@ export function bible_glyph_chapter_exo40() {
           "$cloud",
           "$coat+doing",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting,",
           "and",
