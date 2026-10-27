@@ -466,7 +466,7 @@ export function bible_glyph_chapter_deu28() {
           "or",
           "to",
           "the",
-          "left",
+          "$hand+away",
           "from",
           "any",
           "of",
