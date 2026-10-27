@@ -394,7 +394,7 @@ export function bible_glyph_chapter_ezk11() {
           "as",
           "I",
           "was",
-          "prophesying,",
+          "$megaphone+doing,",
           "$proper_name$Pelatiah",
           "$son",
           "of",
