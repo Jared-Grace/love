@@ -274,7 +274,7 @@ export function bible_glyph_chapter_num27() {
         verse_number: 11,
         words: [
           "And",
-          "if",
+          "$traffic_light",
           "his",
           "$father",
           "has",
