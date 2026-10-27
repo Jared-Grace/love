@@ -589,7 +589,7 @@ export function bible_glyph_chapter_deu15() {
           "your",
           "servant",
           "$broken_chain+person,",
-          "because",
+          "$pointing",
           "his",
           "six",
           "$year",
