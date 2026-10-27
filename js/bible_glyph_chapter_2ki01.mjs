@@ -189,7 +189,7 @@ export function bible_glyph_chapter_2ki01() {
           "came",
           "up",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "us",
           "and",
           "$speech,",
