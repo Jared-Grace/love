@@ -163,7 +163,7 @@ export function bible_glyph_chapter_exo32() {
         verse_number: 5,
         words: [
           "When",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$eye",
           "this,",
           "he",
