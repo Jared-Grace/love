@@ -835,7 +835,7 @@ export function bible_glyph_chapter_gen44() {
           "my",
           "gray",
           "hair",
-          "down",
+          "$walking+pointing_down",
           "to",
           "Sheol",
           "in",
