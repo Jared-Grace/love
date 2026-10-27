@@ -301,7 +301,7 @@ export function bible_glyph_chapter_gen06() {
           "and",
           "$battery",
           "of",
-          "violence.",
+          "$boxing_glove.",
         ],
       },
       {
