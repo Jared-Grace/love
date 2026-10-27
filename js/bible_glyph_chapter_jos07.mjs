@@ -283,7 +283,7 @@ export function bible_glyph_chapter_jos07() {
           "You",
           "ever",
           "bring",
-          "this",
+          "$flashlight",
           "$family",
           "across",
           "the",
