@@ -68,7 +68,7 @@ export function bible_glyph_chapter_1sa25() {
           "was",
           "a",
           "very",
-          "wealthy",
+          "$top",
           "$man_beard",
           "with",
           "three",
