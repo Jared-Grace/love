@@ -1568,7 +1568,7 @@ export function bible_glyph_chapter_gen41() {
           "$famine",
           "had",
           "spread",
-          "over",
+          "$pointing_up",
           "all",
           "the",
           "$earth,",
