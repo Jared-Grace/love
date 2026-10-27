@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_exo30() {
           "fragrance",
           "shall",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "his",
