@@ -281,7 +281,7 @@ export function bible_glyph_chapter_ecc03() {
           "that",
           "there",
           "is",
-          "nothing",
+          "$dotted_line_face",
           "$thumbs_up",
           "for",
           "them",
