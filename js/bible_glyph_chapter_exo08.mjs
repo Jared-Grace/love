@@ -785,7 +785,7 @@ export function bible_glyph_chapter_exo08() {
           "of",
           "his",
           "$kneeling.",
-          "Throughout",
+          "$all",
           "the",
           "$earth",
           "of",
