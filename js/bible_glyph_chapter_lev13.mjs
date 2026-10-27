@@ -1338,7 +1338,7 @@ export function bible_glyph_chapter_lev13() {
           "is",
           "a",
           "harmless",
-          "rash",
+          "$white_circle+microbe",
           "that",
           "has",
           "broken",
