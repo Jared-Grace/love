@@ -593,7 +593,7 @@ export function bible_glyph_chapter_2ki03() {
       {
         verse_number: 18,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "a",
           "simple",
