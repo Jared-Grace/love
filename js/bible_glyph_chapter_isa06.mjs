@@ -370,7 +370,7 @@ export function bible_glyph_chapter_isa06() {
           "has",
           "driven",
           "$person",
-          "far",
+          "$satellite+doing",
           "away",
           "and",
           "the",
