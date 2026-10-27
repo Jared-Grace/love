@@ -539,7 +539,7 @@ export function bible_glyph_chapter_exo19() {
           "$family",
           "in",
           "the",
-          "camp",
+          "$camp",
           "$fear+vibration_mode+doing.",
         ],
       },
