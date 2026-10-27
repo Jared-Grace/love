@@ -638,7 +638,7 @@ export function bible_glyph_chapter_gen29() {
         verse_number: 25,
         words: [
           "When",
-          "morning",
+          "$morning",
           "$link,",
           "there",
           "was",
