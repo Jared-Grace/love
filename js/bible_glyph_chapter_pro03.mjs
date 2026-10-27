@@ -419,7 +419,7 @@ export function bible_glyph_chapter_pro03() {
           "$eyes",
           "of",
           "this:",
-          "Preserve",
+          "$guard+shield+doing",
           "sound",
           "judgment",
           "and",
