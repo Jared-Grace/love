@@ -257,7 +257,7 @@ export function bible_glyph_chapter_2ki06() {
           "to",
           "$bridge",
           "by",
-          "this",
+          "$flashlight",
           "$place,",
           "for",
           "the",
