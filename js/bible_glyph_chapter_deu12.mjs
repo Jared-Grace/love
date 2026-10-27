@@ -1018,7 +1018,7 @@ export function bible_glyph_chapter_deu12() {
           "you.",
           "Do",
           "not",
-          "inquire",
+          "$magnifying_glass+question",
           "about",
           "their",
           "$moai,",
