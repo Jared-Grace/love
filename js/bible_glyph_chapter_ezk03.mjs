@@ -265,7 +265,7 @@ export function bible_glyph_chapter_ezk03() {
           "of",
           "them",
           "$no_entry",
-          "dismayed",
+          "$anxious_face_with_sweat",
           "at",
           "their",
           "presence,",
