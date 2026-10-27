@@ -101,7 +101,7 @@ export function bible_glyph_chapter_ezk37() {
           "I",
           "$speech,",
           "only",
-          "You",
+          "$you",
           "$lightbulb.",
         ],
       },
