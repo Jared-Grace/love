@@ -165,7 +165,7 @@ export function bible_glyph_chapter_gen30() {
           "of",
           "Rachel,",
           "$pregnant_woman+doing",
-          "again",
+          "$repeat",
           "and",
           "bore",
           "$hand+foot",
