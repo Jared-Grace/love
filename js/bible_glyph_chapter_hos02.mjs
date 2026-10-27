@@ -625,7 +625,7 @@ export function bible_glyph_chapter_hos02() {
           "$hourglass;",
           "I",
           "will",
-          "betroth",
+          "$ring+doing",
           "you",
           "in",
           "$ruler+thing",
