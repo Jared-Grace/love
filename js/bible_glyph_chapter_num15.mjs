@@ -265,7 +265,7 @@ export function bible_glyph_chapter_num15() {
         verse_number: 10,
         words: [
           "Also",
-          "present",
+          "$magnet+doing",
           "half",
           "a",
           "hin",
