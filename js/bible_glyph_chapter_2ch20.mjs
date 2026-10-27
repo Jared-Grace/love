@@ -33,7 +33,7 @@ export function bible_glyph_chapter_2ch20() {
           "the",
           "$proper_name$Meunites,",
           "$footprints",
-          "against",
+          "$pointing_up",
           "$i_am+scales",
           "to",
           "make",
