@@ -76,7 +76,7 @@ export function bible_glyph_chapter_num27() {
           "$witness+crowd",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "$tent",
