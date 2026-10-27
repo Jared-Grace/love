@@ -269,7 +269,7 @@ export function bible_glyph_chapter_lam01() {
           "enemies",
           "$eye",
           "her,",
-          "laughing",
+          "$laughing",
           "at",
           "her",
           "downfall.",
