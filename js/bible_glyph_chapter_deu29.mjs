@@ -394,7 +394,7 @@ export function bible_glyph_chapter_deu29() {
           "this",
           "oath",
           "$no_entry",
-          "only",
+          "$one+person",
           "with",
           "you,",
         ],
