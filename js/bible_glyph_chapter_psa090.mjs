@@ -190,7 +190,7 @@ export function bible_glyph_chapter_psa090() {
           "Your",
           "fury;",
           "we",
-          "finish",
+          "$end_arrow",
           "our",
           "years",
           "with",
