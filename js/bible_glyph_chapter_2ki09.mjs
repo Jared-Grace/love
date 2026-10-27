@@ -1191,7 +1191,7 @@ export function bible_glyph_chapter_2ki09() {
           "and",
           "her",
           "$blood",
-          "splattered",
+          "$droplet+hand+doing",
           "on",
           "the",
           "wall",
