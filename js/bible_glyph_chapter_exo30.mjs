@@ -861,7 +861,7 @@ export function bible_glyph_chapter_exo30() {
         words: [
           "Any",
           "$man_beard",
-          "who",
+          "$back+flashlight",
           "mixes",
           "perfume",
           "like",
