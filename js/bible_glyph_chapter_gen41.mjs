@@ -743,7 +743,7 @@ export function bible_glyph_chapter_gen41() {
           "are",
           "the",
           "$seven",
-          "worthless",
+          "$tray_out+droplet+describing",
           "heads",
           "of",
           "$wheat+top",
