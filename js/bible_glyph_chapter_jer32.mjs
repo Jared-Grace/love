@@ -201,7 +201,7 @@ export function bible_glyph_chapter_jer32() {
           "$microphone",
           "the",
           "$i_am.",
-          "If",
+          "$pointing",
           "you",
           "fight",
           "against",
