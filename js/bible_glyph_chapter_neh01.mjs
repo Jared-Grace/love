@@ -409,7 +409,7 @@ export function bible_glyph_chapter_neh01() {
           "and",
           "$hands_giving",
           "him",
-          "mercy",
+          "$hugging_face",
           "in",
           "the",
           "sight",
