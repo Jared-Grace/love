@@ -226,7 +226,7 @@ export function bible_glyph_chapter_exo15() {
           "$speech,",
           "I",
           "will",
-          "pursue,",
+          "$running+toward,",
           "I",
           "will",
           "overtake,",
