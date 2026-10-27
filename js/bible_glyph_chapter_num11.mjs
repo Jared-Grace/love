@@ -298,7 +298,7 @@ export function bible_glyph_chapter_num11() {
           "to",
           "the",
           "$i_am,",
-          "Why",
+          "$flashlight+question",
           "have",
           "You",
           "brought",
