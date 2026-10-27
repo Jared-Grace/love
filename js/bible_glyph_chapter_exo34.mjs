@@ -177,7 +177,7 @@ export function bible_glyph_chapter_exo34() {
           "Then",
           "the",
           "$i_am",
-          "passed",
+          "$bridge",
           "in",
           "front",
           "of",
