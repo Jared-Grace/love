@@ -1352,7 +1352,7 @@ export function bible_glyph_chapter_1ki01() {
           "$speech,",
           "$footprints",
           "in,",
-          "for",
+          "$pointing",
           "you",
           "are",
           "a",
