@@ -2173,7 +2173,7 @@ export function bible_glyph_chapter_deu28() {
         words: [
           "In",
           "the",
-          "morning",
+          "$morning",
           "you",
           "will",
           "$speech,",
