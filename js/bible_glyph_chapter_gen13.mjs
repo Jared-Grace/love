@@ -310,7 +310,7 @@ export function bible_glyph_chapter_gen13() {
         words: [
           "So",
           "Lot",
-          "chose",
+          "$check_box",
           "for",
           "himself",
           "the",
