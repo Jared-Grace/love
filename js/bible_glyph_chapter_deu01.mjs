@@ -183,7 +183,7 @@ export function bible_glyph_chapter_deu01() {
       {
         verse_number: 7,
         words: [
-          "Resume",
+          "$curving_right+doing",
           "your",
           "journey",
           "and",
