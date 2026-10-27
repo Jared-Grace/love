@@ -21,7 +21,7 @@ export function bible_glyph_chapter_2ki06() {
           "$speech",
           "$toward",
           "$heart_on_fire+rescue,",
-          "Please",
+          "$pleading",
           "take",
           "note",
           "that",
