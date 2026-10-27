@@ -342,7 +342,7 @@ export function bible_glyph_chapter_gen31() {
           "$saluting_face",
           "to",
           "me.",
-          "Now",
+          "$watch",
           "get",
           "up,",
           "$tray_out",
