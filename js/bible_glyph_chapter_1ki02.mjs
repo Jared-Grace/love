@@ -905,7 +905,7 @@ export function bible_glyph_chapter_1ki02() {
           "to",
           "$skull,",
           "at",
-          "this",
+          "$flashlight",
           "$sun",
           "I",
           "will",
