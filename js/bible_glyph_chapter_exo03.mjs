@@ -198,7 +198,7 @@ export function bible_glyph_chapter_exo03() {
           "$pointing",
           "he",
           "was",
-          "afraid",
+          "$fear+doing",
           "to",
           "look",
           "at",
