@@ -82,7 +82,7 @@ export function bible_glyph_chapter_gen07() {
         words: [
           "and",
           "also",
-          "seven",
+          "$seven",
           "pairs",
           "of",
           "every",
