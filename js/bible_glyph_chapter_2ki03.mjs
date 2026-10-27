@@ -386,7 +386,7 @@ export function bible_glyph_chapter_2ki03() {
           "$speech",
           "of",
           "$i_am",
-          "is",
+          "$link",
           "with",
           "him.",
           "So",
