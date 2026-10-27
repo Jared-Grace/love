@@ -296,7 +296,7 @@ export function bible_glyph_chapter_mal01() {
           "pleased",
           "with",
           "you",
-          "or",
+          "$shuffle",
           "show",
           "you",
           "favor?",
