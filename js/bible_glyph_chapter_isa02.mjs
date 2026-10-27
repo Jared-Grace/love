@@ -424,7 +424,7 @@ export function bible_glyph_chapter_isa02() {
           "$all",
           "the",
           "high",
-          "hills;",
+          "$mountain+pinching_hand;",
         ],
       },
       {
