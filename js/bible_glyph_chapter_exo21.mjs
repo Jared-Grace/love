@@ -772,7 +772,7 @@ export function bible_glyph_chapter_exo21() {
           "$ox+horn+doing",
           "a",
           "$man_beard",
-          "or",
+          "$shuffle",
           "a",
           "$woman",
           "to",
