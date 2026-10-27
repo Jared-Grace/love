@@ -146,7 +146,7 @@ export function bible_glyph_chapter_psa130() {
           "in",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "with",
           "the",
           "$i_am",
