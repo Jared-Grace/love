@@ -542,7 +542,7 @@ export function bible_glyph_chapter_isa58() {
           "will",
           "make",
           "you",
-          "ride",
+          "$horse_racing+doing",
           "on",
           "the",
           "heights",
