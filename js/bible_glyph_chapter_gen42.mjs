@@ -211,7 +211,7 @@ export function bible_glyph_chapter_gen42() {
           "$mechanical_arm+describing.",
           "He",
           "$speech,",
-          "Where",
+          "$question+round_pushpin+tray_out",
           "have",
           "you",
           "$footprints",
