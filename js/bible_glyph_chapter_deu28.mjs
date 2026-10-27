@@ -1824,7 +1824,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "toward",
           "the",
-          "afterbirth",
+          "$baby+tray_out",
           "that",
           "comes",
           "from",
