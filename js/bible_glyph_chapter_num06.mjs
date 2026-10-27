@@ -586,7 +586,7 @@ export function bible_glyph_chapter_num06() {
           "$person_gesturing_ok,",
           "$hand_receiving",
           "the",
-          "hair,",
+          "$hair,",
           "and",
           "$hands_giving",
           "it",
