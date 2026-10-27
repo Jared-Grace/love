@@ -686,7 +686,7 @@ export function bible_glyph_chapter_ezk11() {
           "$heart_organ",
           "$walking",
           "after",
-          "detestable",
+          "$moai+thumbs_down",
           "things",
           "and",
           "abominations,",
