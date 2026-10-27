@@ -355,7 +355,7 @@ export function bible_glyph_chapter_exo37() {
           "to",
           "$lifting",
           "the",
-          "table.",
+          "$hand_sending+thing.",
         ],
       },
       {
