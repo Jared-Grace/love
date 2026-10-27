@@ -195,7 +195,7 @@ export function bible_glyph_chapter_psa095() {
           "where",
           "your",
           "$father",
-          "tested",
+          "$test_tube",
           "Me;",
           "they",
           "tried",
