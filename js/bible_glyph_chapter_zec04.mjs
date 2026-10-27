@@ -291,7 +291,7 @@ export function bible_glyph_chapter_zec04() {
           "the",
           "$i_am,",
           "which",
-          "scan",
+          "$walking+shuffle+doing",
           "the",
           "whole",
           "$earth.",
