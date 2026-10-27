@@ -270,7 +270,7 @@ export function bible_glyph_chapter_pro16() {
           "are",
           "a",
           "$king",
-          "delight,",
+          "$smiling_face_with_smiling_eyes,",
           "and",
           "he",
           "who",
