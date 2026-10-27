@@ -584,7 +584,7 @@ export function bible_glyph_chapter_1sa25() {
         words: [
           "Then",
           "Abigail",
-          "hurried",
+          "$fast_forward+doing",
           "and",
           "$hand_receiving",
           "two",
