@@ -157,7 +157,7 @@ export function bible_glyph_chapter_isa09() {
         words: [
           "For",
           "every",
-          "trampling",
+          "$hiking_boot+shield+person",
           "$hiking_boot+shield",
           "of",
           "battle",
