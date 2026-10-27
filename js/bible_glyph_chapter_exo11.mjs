@@ -346,7 +346,7 @@ export function bible_glyph_chapter_exo11() {
           "$house+proper_name,",
           "but",
           "$i_am",
-          "hardened",
+          "$might+up_arrow",
           "the",
           "$heart_organ",
           "of",
