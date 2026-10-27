@@ -1278,7 +1278,7 @@ export function bible_glyph_chapter_deu32() {
           "$all",
           "the",
           "$speech",
-          "I",
+          "$me",
           "have",
           "solemnly",
           "$witness+doing",
