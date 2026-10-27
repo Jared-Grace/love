@@ -79,7 +79,7 @@ export function bible_glyph_chapter_exo26() {
           "the",
           "other",
           "$five",
-          "joined",
+          "$link+doing",
           "$woman",
           "to",
           "$sister.",
