@@ -159,7 +159,7 @@ export function bible_glyph_chapter_exo25() {
           "to",
           "all",
           "that",
-          "I",
+          "$me",
           "$eye",
           "you,",
           "the",
