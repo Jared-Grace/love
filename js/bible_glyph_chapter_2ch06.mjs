@@ -1125,7 +1125,7 @@ export function bible_glyph_chapter_2ch06() {
           "$sprout",
           "in",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "You",
           "$hands_giving",
