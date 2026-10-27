@@ -150,7 +150,7 @@ export function bible_glyph_chapter_isa58() {
           "fist.",
           "You",
           "$no_entry",
-          "fast",
+          "$eating+locked+doing",
           "as",
           "you",
           "do",
