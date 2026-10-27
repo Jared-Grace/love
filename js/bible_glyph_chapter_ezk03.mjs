@@ -397,7 +397,7 @@ export function bible_glyph_chapter_ezk03() {
           "$arrow_both_ways+round_pushpin",
           "them,",
           "a",
-          "great",
+          "$top",
           "$earth+up_down_arrow+thing",
           "$voice.",
         ],
