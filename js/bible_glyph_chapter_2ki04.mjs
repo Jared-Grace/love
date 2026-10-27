@@ -409,7 +409,7 @@ export function bible_glyph_chapter_2ki04() {
           "$fear+vibration_mode+doing",
           "for",
           "us.",
-          "What",
+          "$flashlight+question",
           "can",
           "we",
           "$hammer+doing",
