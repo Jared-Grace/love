@@ -324,7 +324,7 @@ export function bible_glyph_chapter_zec09() {
           "$fruit",
           "and",
           "the",
-          "horse",
+          "$horse",
           "from",
           "$city+peace,",
           "and",
