@@ -353,7 +353,7 @@ export function bible_glyph_chapter_mal03() {
           "$microscope",
           "Me",
           "in",
-          "this,",
+          "$flashlight,",
           "$speech",
           "the",
           "$i_am",
