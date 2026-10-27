@@ -234,7 +234,7 @@ export function bible_glyph_chapter_psa032() {
           "with",
           "$horse+mouth+chains",
           "and",
-          "bridle",
+          "$horse+knot",
           "to",
           "make",
           "them",
