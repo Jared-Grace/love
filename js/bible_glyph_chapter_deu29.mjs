@@ -773,7 +773,7 @@ export function bible_glyph_chapter_deu29() {
           "Why",
           "$flashlight",
           "great",
-          "outburst",
+          "$angry_face+fire",
           "of",
           "anger?",
         ],
