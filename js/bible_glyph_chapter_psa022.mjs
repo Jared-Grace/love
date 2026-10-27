@@ -234,7 +234,7 @@ export function bible_glyph_chapter_psa022() {
           "$tray_out",
           "me,",
           "for",
-          "trouble",
+          "$clamp",
           "is",
           "near",
           "and",
