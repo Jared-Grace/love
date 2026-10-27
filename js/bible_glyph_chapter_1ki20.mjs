@@ -859,7 +859,7 @@ export function bible_glyph_chapter_1ki20() {
           "and",
           "$chariot",
           "for",
-          "chariot,",
+          "$chariot,",
           "so",
           "we",
           "can",
