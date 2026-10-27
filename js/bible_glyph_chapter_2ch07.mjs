@@ -693,7 +693,7 @@ export function bible_glyph_chapter_2ch07() {
           "from",
           "My",
           "presence",
-          "this",
+          "$flashlight",
           "$house",
           "I",
           "have",
