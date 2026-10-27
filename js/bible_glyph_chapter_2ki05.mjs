@@ -77,7 +77,7 @@ export function bible_glyph_chapter_2ki05() {
           "had",
           "taken",
           "a",
-          "young",
+          "$pinching_hand",
           "$girl",
           "from",
           "the",
