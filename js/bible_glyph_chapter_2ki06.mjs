@@ -255,7 +255,7 @@ export function bible_glyph_chapter_2ki06() {
           "careful",
           "not",
           "to",
-          "pass",
+          "$bridge",
           "by",
           "this",
           "$place,",
