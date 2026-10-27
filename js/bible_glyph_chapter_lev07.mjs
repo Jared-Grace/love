@@ -234,7 +234,7 @@ export function bible_glyph_chapter_lev07() {
           "whether",
           "mixed",
           "with",
-          "oil",
+          "$lotion_bottle",
           "or",
           "dry,",
           "belongs",
