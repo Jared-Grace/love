@@ -544,7 +544,7 @@ export function bible_glyph_chapter_exo03() {
           "remembered",
           "in",
           "every",
-          "generation.",
+          "$dna.",
         ],
       },
       {
