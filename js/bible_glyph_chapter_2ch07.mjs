@@ -749,7 +749,7 @@ export function bible_glyph_chapter_2ch07() {
           "a",
           "thing",
           "to",
-          "this",
+          "$flashlight",
           "$earth",
           "and",
           "to",
