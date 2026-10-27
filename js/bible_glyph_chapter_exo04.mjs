@@ -281,7 +281,7 @@ export function bible_glyph_chapter_exo04() {
           "$no_entry",
           "$anchor",
           "$plus",
-          "these",
+          "$flashlight+flashlight",
           "$two",
           "$placard",
           "or",
