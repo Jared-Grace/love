@@ -874,7 +874,7 @@ export function bible_glyph_chapter_exo28() {
           "of",
           "the",
           "$safety_vest",
-          "entirely",
+          "$all+describing",
           "of",
           "blue",
           "cloth,",
