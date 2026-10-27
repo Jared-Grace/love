@@ -787,7 +787,7 @@ export function bible_glyph_chapter_2ch34() {
           "been",
           "found.",
           "For",
-          "great",
+          "$top",
           "is",
           "the",
           "wrath",
