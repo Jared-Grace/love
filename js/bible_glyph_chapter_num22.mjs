@@ -1289,7 +1289,7 @@ export function bible_glyph_chapter_num22() {
           "and",
           "the",
           "princes",
-          "who",
+          "$back+flashlight",
           "were",
           "with",
           "him.",
