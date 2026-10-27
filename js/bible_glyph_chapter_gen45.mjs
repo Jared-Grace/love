@@ -338,7 +338,7 @@ export function bible_glyph_chapter_gen45() {
           "provide",
           "for",
           "you,",
-          "because",
+          "$pointing",
           "there",
           "will",
           "be",
