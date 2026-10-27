@@ -286,7 +286,7 @@ export function bible_glyph_chapter_num17() {
           "the",
           "$white_cane",
           "of",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "in",
           "front",
           "of",
