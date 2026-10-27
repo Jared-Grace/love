@@ -614,7 +614,7 @@ export function bible_glyph_chapter_gen08() {
           "will",
           "I",
           "destroy",
-          "all",
+          "$all",
           "$sprout,",
           "as",
           "I",
