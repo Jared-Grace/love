@@ -501,7 +501,7 @@ export function bible_glyph_chapter_exo22() {
         words: [
           "$traffic_light",
           "the",
-          "owner",
+          "$key",
           "was",
           "present,",
           "$no_entry",
