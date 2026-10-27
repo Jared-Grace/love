@@ -175,7 +175,7 @@ export function bible_glyph_chapter_psa090() {
           "$light+thing",
           "of",
           "Your",
-          "presence.",
+          "$face.",
         ],
       },
       {
