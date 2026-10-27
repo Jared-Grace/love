@@ -499,7 +499,7 @@ export function bible_glyph_chapter_2ki03() {
           "I",
           "would",
           "not",
-          "look",
+          "$face_with_monocle",
           "at",
           "you",
           "or",
