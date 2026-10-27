@@ -987,7 +987,7 @@ export function bible_glyph_chapter_ezk37() {
           "when",
           "My",
           "sanctuary",
-          "is",
+          "$link",
           "among",
           "them",
           "$hourglass.",
