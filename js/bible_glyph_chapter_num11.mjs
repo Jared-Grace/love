@@ -980,7 +980,7 @@ export function bible_glyph_chapter_num11() {
         words: [
           "Then",
           "$fishing_pole+proper_name",
-          "returned",
+          "$crowd+doing",
           "to",
           "the",
           "camp,",
