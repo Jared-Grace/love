@@ -401,7 +401,7 @@ export function bible_glyph_chapter_deu07() {
           "$flashlight+flashlight",
           "$scales+thing",
           "and",
-          "keep",
+          "$guard",
           "them",
           "carefully",
           "and",
