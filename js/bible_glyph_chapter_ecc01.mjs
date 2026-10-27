@@ -202,7 +202,7 @@ export function bible_glyph_chapter_ecc01() {
           "is",
           "$dotted_line_face",
           "$new_button",
-          "under",
+          "$down_arrow",
           "the",
           "sun.",
         ],
