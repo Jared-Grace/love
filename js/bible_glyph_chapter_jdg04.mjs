@@ -500,7 +500,7 @@ export function bible_glyph_chapter_jdg04() {
           "army",
           "of",
           "$proper_name$Sisera",
-          "fell",
+          "$person+pointing_down",
           "by",
           "the",
           "$sword;",
