@@ -588,7 +588,7 @@ export function bible_glyph_chapter_lev19() {
           "the",
           "$tent",
           "of",
-          "Meeting.",
+          "$alarm_clock.",
         ],
       },
       {
