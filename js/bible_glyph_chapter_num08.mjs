@@ -458,7 +458,7 @@ export function bible_glyph_chapter_num08() {
           "both",
           "$person",
           "and",
-          "beast.",
+          "$paw_prints.",
           "I",
           "$sparkle+doing",
           "them",
