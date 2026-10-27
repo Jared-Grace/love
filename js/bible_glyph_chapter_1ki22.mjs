@@ -1563,7 +1563,7 @@ export function bible_glyph_chapter_1ki22() {
           "my",
           "$kneeling",
           "$walking",
-          "with",
+          "$linked_paperclips",
           "your",
           "$kneeling.",
           "But",
