@@ -820,7 +820,7 @@ export function bible_glyph_chapter_exo04() {
           "So",
           "the",
           "LORD",
-          "let",
+          "$palm_down+doing",
           "him",
           "alone.",
           "When",
