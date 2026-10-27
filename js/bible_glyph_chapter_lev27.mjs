@@ -340,7 +340,7 @@ export function bible_glyph_chapter_lev27() {
           "the",
           "$soap+no_entry",
           "animals,",
-          "that",
+          "$back+flashlight",
           "may",
           "$no_entry",
           "be",
