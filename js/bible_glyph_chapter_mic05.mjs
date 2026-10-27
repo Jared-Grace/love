@@ -227,7 +227,7 @@ export function bible_glyph_chapter_mic05() {
           "our",
           "$earth",
           "and",
-          "marches",
+          "$hiking_boot",
           "into",
           "our",
           "borders.",
