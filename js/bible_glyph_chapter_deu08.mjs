@@ -504,7 +504,7 @@ export function bible_glyph_chapter_deu08() {
           "test",
           "you,",
           "so",
-          "that",
+          "$back+flashlight",
           "in",
           "the",
           "end",
