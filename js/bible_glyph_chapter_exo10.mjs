@@ -354,7 +354,7 @@ export function bible_glyph_chapter_exo10() {
           "must",
           "hold",
           "a",
-          "feast",
+          "$party_popper",
           "to",
           "$i_am.",
         ],
