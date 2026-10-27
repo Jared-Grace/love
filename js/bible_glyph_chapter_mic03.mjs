@@ -305,7 +305,7 @@ export function bible_glyph_chapter_mic03() {
         verse_number: 10,
         words: [
           "who",
-          "build",
+          "$brick",
           "$proper_name$Zion",
           "with",
           "$blood",
