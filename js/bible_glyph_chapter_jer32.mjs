@@ -749,7 +749,7 @@ export function bible_glyph_chapter_jer32() {
           "You",
           "$hands_giving",
           "them",
-          "this",
+          "$flashlight",
           "$earth",
           "that",
           "You",
