@@ -121,7 +121,7 @@ export function bible_glyph_chapter_lev05() {
           "to",
           "do",
           "evil",
-          "or",
+          "$shuffle",
           "to",
           "do",
           "good,",
