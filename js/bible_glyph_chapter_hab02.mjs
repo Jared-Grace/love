@@ -237,7 +237,7 @@ export function bible_glyph_chapter_hab02() {
           "who",
           "disturb",
           "you",
-          "awaken?",
+          "$sleeping_face+up_arrow+doing?",
           "Then",
           "you",
           "will",
