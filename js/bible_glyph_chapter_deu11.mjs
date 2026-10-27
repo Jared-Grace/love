@@ -422,7 +422,7 @@ export function bible_glyph_chapter_deu11() {
         verse_number: 13,
         words: [
           "So",
-          "if",
+          "$traffic_light",
           "you",
           "carefully",
           "$ear",
