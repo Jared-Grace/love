@@ -569,7 +569,7 @@ export function bible_glyph_chapter_1sa24() {
           "his",
           "$voice",
           "and",
-          "wept.",
+          "$loudly_crying.",
         ],
       },
       {
