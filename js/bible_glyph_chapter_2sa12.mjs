@@ -522,7 +522,7 @@ export function bible_glyph_chapter_2sa12() {
           "$magnifying_glass",
           "with",
           "$heart_on_fire",
-          "for",
+          "$back+person",
           "the",
           "boy.",
           "$two_hearts+proper_name",
