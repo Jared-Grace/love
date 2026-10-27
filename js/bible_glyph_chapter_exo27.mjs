@@ -323,7 +323,7 @@ export function bible_glyph_chapter_exo27() {
         verse_number: 13,
         words: [
           "The",
-          "east",
+          "$compass+right_arrow",
           "$straight_ruler+round_pushpin",
           "of",
           "the",
