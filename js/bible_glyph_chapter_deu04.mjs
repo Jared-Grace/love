@@ -60,7 +60,7 @@ export function bible_glyph_chapter_deu04() {
           "You",
           "must",
           "$no_entry",
-          "add",
+          "$plus+doing",
           "to",
           "the",
           "$speech",
