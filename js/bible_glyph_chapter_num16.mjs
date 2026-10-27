@@ -1262,7 +1262,7 @@ export function bible_glyph_chapter_num16() {
           "day",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "the",
           "$son",
