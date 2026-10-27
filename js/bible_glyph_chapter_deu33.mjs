@@ -316,7 +316,7 @@ export function bible_glyph_chapter_deu33() {
           "of",
           "his",
           "$hand.",
-          "Smash",
+          "$axe+collision+doing",
           "the",
           "loins",
           "of",
