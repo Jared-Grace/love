@@ -870,7 +870,7 @@ export function bible_glyph_chapter_deu07() {
           "for",
           "it",
           "is",
-          "detestable",
+          "$vomiting",
           "to",
           "$i_am",
           "your",
