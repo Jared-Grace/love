@@ -537,7 +537,7 @@ export function bible_glyph_chapter_num27() {
           "so",
           "that",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "the",
