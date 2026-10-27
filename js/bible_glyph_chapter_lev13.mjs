@@ -1299,7 +1299,7 @@ export function bible_glyph_chapter_lev13() {
           "When",
           "a",
           "$man_beard",
-          "or",
+          "$shuffle",
           "a",
           "$woman",
           "has",
