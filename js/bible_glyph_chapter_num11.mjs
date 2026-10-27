@@ -1109,7 +1109,7 @@ export function bible_glyph_chapter_num11() {
           "with",
           "a",
           "severe",
-          "plague.",
+          "$fist+thing.",
         ],
       },
       {
