@@ -356,7 +356,7 @@ export function bible_glyph_chapter_est04() {
           "in",
           "the",
           "inner",
-          "court",
+          "$house_with_garden",
           "without",
           "being",
           "summoned:",
