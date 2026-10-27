@@ -41,7 +41,7 @@ export function bible_glyph_chapter_zec04() {
           "$speech",
           "to",
           "me,",
-          "What",
+          "$flashlight+question",
           "do",
           "you",
           "$eye?",
