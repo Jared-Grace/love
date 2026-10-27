@@ -254,7 +254,7 @@ export function bible_glyph_chapter_1ki17() {
           "was",
           "a",
           "$widow",
-          "gathering",
+          "$fallen_leaf+wheat+doing",
           "$tree.",
           "Elijah",
           "called",
