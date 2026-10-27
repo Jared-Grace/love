@@ -69,7 +69,7 @@ export function bible_glyph_chapter_gen35() {
           "the",
           "$detective+thing",
           "$moai",
-          "among",
+          "$radio_button",
           "you.",
           "Purify",
           "yourselves",
