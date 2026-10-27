@@ -1044,7 +1044,7 @@ export function bible_glyph_chapter_2ki09() {
           "$proper_name$Megiddo",
           "and",
           "$skull+doing",
-          "there.",
+          "$telescope.",
         ],
       },
       {
