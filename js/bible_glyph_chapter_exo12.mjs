@@ -1486,7 +1486,7 @@ export function bible_glyph_chapter_exo12() {
       {
         verse_number: 48,
         words: [
-          "If",
+          "$pointing",
           "a",
           "foreigner",
           "resides",
