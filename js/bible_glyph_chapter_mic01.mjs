@@ -96,7 +96,7 @@ export function bible_glyph_chapter_mic01() {
           "come",
           "down",
           "and",
-          "tread",
+          "$hiking_boot",
           "on",
           "the",
           "high",
