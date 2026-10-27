@@ -316,7 +316,7 @@ export function bible_glyph_chapter_job28() {
           "$gem_stone+describing",
           "$gem_stone+stone",
           "or",
-          "sapphire.",
+          "$gem_stone+blue_circle.",
         ],
       },
       {
