@@ -802,7 +802,7 @@ export function bible_glyph_chapter_exo36() {
           "five",
           "$door+locked",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree",
           "for",
           "the",
