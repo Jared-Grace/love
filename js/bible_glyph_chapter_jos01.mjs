@@ -93,7 +93,7 @@ export function bible_glyph_chapter_jos01() {
           "as",
           "I",
           "$mouth",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name.",
         ],
       },
