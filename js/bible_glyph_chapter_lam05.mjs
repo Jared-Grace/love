@@ -215,7 +215,7 @@ export function bible_glyph_chapter_lam05() {
           "elders",
           "receive",
           "$no_entry",
-          "respect.",
+          "$face.",
         ],
       },
       {
