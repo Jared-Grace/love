@@ -432,7 +432,7 @@ export function bible_glyph_chapter_exo09() {
           "is",
           "no",
           "one",
-          "like",
+          "$likeness",
           "Me",
           "in",
           "all",
