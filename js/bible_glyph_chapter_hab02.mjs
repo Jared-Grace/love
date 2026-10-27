@@ -138,7 +138,7 @@ export function bible_glyph_chapter_hab02() {
         verse_number: 5,
         words: [
           "and,",
-          "indeed,",
+          "$plus+exclamation,",
           "wine",
           "betrays",
           "him.",
