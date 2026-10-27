@@ -1047,7 +1047,7 @@ export function bible_glyph_chapter_jer29() {
           "$anchor+doing",
           "in",
           "a",
-          "lie,",
+          "$lying_face,",
         ],
       },
       {
