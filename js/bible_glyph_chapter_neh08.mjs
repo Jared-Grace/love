@@ -601,7 +601,7 @@ export function bible_glyph_chapter_neh08() {
           "$hammer+doing",
           "$hut+leaf",
           "$man_beard",
-          "on",
+          "$pointing_up",
           "rooftops,",
           "in",
           "their",
