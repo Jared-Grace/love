@@ -322,7 +322,7 @@ export function bible_glyph_chapter_gen39() {
           "to",
           "go",
           "to",
-          "bed",
+          "$bed+doing",
           "with",
           "her",
           "or",
