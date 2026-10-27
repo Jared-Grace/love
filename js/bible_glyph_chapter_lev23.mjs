@@ -120,7 +120,7 @@ export function bible_glyph_chapter_lev23() {
           "$first_place",
           "month,",
           "at",
-          "twilight,",
+          "$sunset,",
           "begins",
           "the",
           "Passover",
