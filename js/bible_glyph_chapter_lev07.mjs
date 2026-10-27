@@ -657,7 +657,7 @@ export function bible_glyph_chapter_lev07() {
           "$all",
           "eats",
           "the",
-          "fat",
+          "$bacon",
           "of",
           "an",
           "animal",
