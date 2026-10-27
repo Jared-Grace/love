@@ -574,7 +574,7 @@ export function bible_glyph_chapter_gen28() {
           "pillar.",
           "He",
           "poured",
-          "oil",
+          "$lotion_bottle",
           "on",
           "top",
           "of",
