@@ -633,7 +633,7 @@ export function bible_glyph_chapter_deu33() {
           "$pointing",
           "$telescope",
           "the",
-          "portion",
+          "$field+pizza",
           "of",
           "a",
           "lawgiver",
