@@ -319,7 +319,7 @@ export function bible_glyph_chapter_gen06() {
           "it",
           "was",
           "corrupt,",
-          "for",
+          "$pointing",
           "all",
           "$meat",
           "had",
