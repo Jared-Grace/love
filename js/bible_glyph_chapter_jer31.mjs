@@ -540,7 +540,7 @@ export function bible_glyph_chapter_jer31() {
           "your",
           "$eyes",
           "from",
-          "tears,",
+          "$loudly_crying+water,",
           "for",
           "the",
           "reward",
