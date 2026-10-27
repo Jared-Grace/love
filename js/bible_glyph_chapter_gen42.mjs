@@ -729,7 +729,7 @@ export function bible_glyph_chapter_gen42() {
           "they",
           "loaded",
           "the",
-          "grain",
+          "$wheat+coin",
           "on",
           "their",
           "$donkey",
