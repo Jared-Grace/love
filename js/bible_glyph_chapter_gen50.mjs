@@ -325,7 +325,7 @@ export function bible_glyph_chapter_gen50() {
           "Thus",
           "the",
           "place",
-          "across",
+          "$bridge+thing",
           "the",
           "$pointing_down+proper_name",
           "is",
