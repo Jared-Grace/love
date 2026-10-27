@@ -306,7 +306,7 @@ export function bible_glyph_chapter_psa091() {
           "Me,",
           "I",
           "will",
-          "deliver",
+          "$door+running+doing",
           "him;",
           "$pointing",
           "he",
