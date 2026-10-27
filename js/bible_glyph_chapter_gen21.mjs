@@ -473,7 +473,7 @@ export function bible_glyph_chapter_gen21() {
       {
         verse_number: 18,
         words: [
-          "Get",
+          "$person+pointing_up",
           "up,",
           "$lifting",
           "up",
