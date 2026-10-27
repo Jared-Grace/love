@@ -256,7 +256,7 @@ export function bible_glyph_chapter_num12() {
           "As",
           "the",
           "$cloud",
-          "lifted",
+          "$away+doing",
           "from",
           "above",
           "the",
