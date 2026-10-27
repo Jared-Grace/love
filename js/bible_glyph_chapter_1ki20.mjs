@@ -669,7 +669,7 @@ export function bible_glyph_chapter_1ki20() {
           "with",
           "the",
           "$raised_fist",
-          "behind",
+          "$next_track",
           "them.",
         ],
       },
