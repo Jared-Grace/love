@@ -362,7 +362,7 @@ export function bible_glyph_chapter_num35() {
           "will",
           "$no_entry",
           "$skull+doing",
-          "until",
+          "$finish",
           "he",
           "stands",
           "before",
