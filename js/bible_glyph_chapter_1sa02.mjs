@@ -761,7 +761,7 @@ export function bible_glyph_chapter_1sa02() {
           "$no_entry",
           "a",
           "$thumbs_up",
-          "report",
+          "$ear+loudspeaker+thing",
           "I",
           "$ear",
           "circulating",
