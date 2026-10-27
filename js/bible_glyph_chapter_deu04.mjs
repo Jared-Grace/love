@@ -1567,7 +1567,7 @@ export function bible_glyph_chapter_deu04() {
       {
         verse_number: 44,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$scroll",
