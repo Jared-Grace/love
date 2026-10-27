@@ -1164,7 +1164,7 @@ export function bible_glyph_chapter_jer23() {
           "$priest",
           "or",
           "$family",
-          "who",
+          "$back+flashlight",
           "$speech,",
           "This",
           "is",
