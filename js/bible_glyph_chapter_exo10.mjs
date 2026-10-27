@@ -575,7 +575,7 @@ export function bible_glyph_chapter_exo10() {
           "$no_entry",
           "green",
           "was",
-          "left",
+          "$takeout_box+doing",
           "on",
           "any",
           "$tree",
