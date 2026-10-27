@@ -328,7 +328,7 @@ export function bible_glyph_chapter_exo05() {
           "longer",
           "$hands_giving",
           "you",
-          "straw.",
+          "$wheat+scissors.",
         ],
       },
       {
