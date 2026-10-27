@@ -463,7 +463,7 @@ export function bible_glyph_chapter_psa073() {
         verse_number: 26,
         words: [
           "My",
-          "flesh",
+          "$meat+fork_and_knife",
           "and",
           "my",
           "$heart_organ",
