@@ -326,7 +326,7 @@ export function bible_glyph_chapter_job01() {
           "$hand",
           "and",
           "strike",
-          "all",
+          "$all",
           "that",
           "he",
           "has,",
