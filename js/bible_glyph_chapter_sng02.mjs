@@ -31,7 +31,7 @@ export function bible_glyph_chapter_sng02() {
         words: [
           "Like",
           "a",
-          "lily",
+          "$white_flower",
           "among",
           "the",
           "thorns",
