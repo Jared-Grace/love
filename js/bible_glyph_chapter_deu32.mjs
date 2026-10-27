@@ -153,7 +153,7 @@ export function bible_glyph_chapter_deu32() {
           "wise",
           "$family?",
           "Is",
-          "He",
+          "$pointing_back",
           "$no_entry",
           "your",
           "$father",
