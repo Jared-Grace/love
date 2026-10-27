@@ -252,7 +252,7 @@ export function bible_glyph_chapter_jos07() {
           "of",
           "the",
           "$i_am",
-          "until",
+          "$finish",
           "evening,",
           "as",
           "did",
