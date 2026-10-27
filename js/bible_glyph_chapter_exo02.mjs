@@ -574,7 +574,7 @@ export function bible_glyph_chapter_exo02() {
           "He",
           "$plus",
           "drew",
-          "water",
+          "$bucket+up_arrow+doing",
           "for",
           "us",
           "and",
