@@ -256,7 +256,7 @@ export function bible_glyph_chapter_mic05() {
           "$i_am,",
           "like",
           "showers",
-          "on",
+          "$pointing_up",
           "the",
           "grass,",
           "which",
