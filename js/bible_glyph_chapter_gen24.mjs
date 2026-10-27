@@ -1506,7 +1506,7 @@ export function bible_glyph_chapter_gen24() {
         verse_number: 49,
         words: [
           "$watch",
-          "if",
+          "$traffic_light",
           "you",
           "will",
           "$hammer+doing",
