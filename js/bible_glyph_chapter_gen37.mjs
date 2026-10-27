@@ -235,7 +235,7 @@ export function bible_glyph_chapter_gen37() {
           "because",
           "of",
           "his",
-          "dream",
+          "$dream",
           "and",
           "his",
           "$speech.",
