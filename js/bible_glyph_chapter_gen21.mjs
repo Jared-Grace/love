@@ -780,7 +780,7 @@ export function bible_glyph_chapter_gen21() {
           "$hand",
           "as",
           "my",
-          "witness",
+          "$witness+thing",
           "that",
           "I",
           "dug",
