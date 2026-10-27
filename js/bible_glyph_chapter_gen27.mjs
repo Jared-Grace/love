@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_gen27() {
           "have",
           "$hands_giving",
           "him",
-          "all",
+          "$all",
           "his",
           "$brother",
           "as",
