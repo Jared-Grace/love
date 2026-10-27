@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "drove",
           "in",
-          "quail",
+          "$bird+meat",
           "from",
           "the",
           "$sea,",
