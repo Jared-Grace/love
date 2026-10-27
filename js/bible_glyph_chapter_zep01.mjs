@@ -217,7 +217,7 @@ export function bible_glyph_chapter_zep01() {
         verse_number: 7,
         words: [
           "Be",
-          "silent",
+          "$shushing_face+crowd+doing",
           "in",
           "the",
           "presence",
