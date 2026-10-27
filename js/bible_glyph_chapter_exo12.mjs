@@ -619,7 +619,7 @@ export function bible_glyph_chapter_exo12() {
           "be",
           "$no_entry",
           "$bubbles+bread+pinching_hand",
-          "found",
+          "$magnifying_glass+exclamation",
           "in",
           "your",
           "$house.",
