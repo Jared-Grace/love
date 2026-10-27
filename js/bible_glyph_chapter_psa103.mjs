@@ -281,7 +281,7 @@ export function bible_glyph_chapter_psa103() {
           "is",
           "mindful",
           "that",
-          "we",
+          "$me",
           "are",
           "$dust.",
         ],
