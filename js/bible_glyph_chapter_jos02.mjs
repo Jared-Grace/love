@@ -815,7 +815,7 @@ export function bible_glyph_chapter_jos02() {
           "$speech",
           "$toward",
           "$i_am+rescue.",
-          "Indeed,",
+          "$plus,",
           "all",
           "who",
           "$person+house",
