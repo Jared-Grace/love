@@ -243,7 +243,7 @@ export function bible_glyph_chapter_lev06() {
           "on",
           "his",
           "linen",
-          "robe",
+          "$triangular_ruler+dress",
           "and",
           "linen",
           "undergarments",
