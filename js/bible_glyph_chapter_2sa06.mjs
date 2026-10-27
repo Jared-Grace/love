@@ -225,7 +225,7 @@ export function bible_glyph_chapter_2sa06() {
           "there",
           "$linked_paperclips",
           "the",
-          "ark",
+          "$ark",
           "of",
           "$heart_on_fire.",
         ],
