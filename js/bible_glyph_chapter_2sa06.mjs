@@ -186,7 +186,7 @@ export function bible_glyph_chapter_2sa06() {
           "hold",
           "of",
           "the",
-          "ark",
+          "$ark",
           "of",
           "$heart_on_fire,",
           "because",
