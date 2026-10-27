@@ -413,7 +413,7 @@ export function bible_glyph_chapter_2ki09() {
           "$speech.",
           "$newspaper",
           "us",
-          "now.",
+          "$pleading.",
           "So",
           "Jehu",
           "$speech,",
