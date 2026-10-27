@@ -781,7 +781,7 @@ export function bible_glyph_chapter_exo36() {
           "So",
           "there",
           "were",
-          "eight",
+          "$eight",
           "frames",
           "and",
           "sixteen",
