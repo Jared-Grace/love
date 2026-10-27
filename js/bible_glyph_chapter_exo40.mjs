@@ -882,7 +882,7 @@ export function bible_glyph_chapter_exo40() {
       {
         verse_number: 37,
         words: [
-          "If",
+          "$traffic_light",
           "the",
           "cloud",
           "was",
