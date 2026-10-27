@@ -414,7 +414,7 @@ export function bible_glyph_chapter_exo32() {
           "$thumbs_down",
           "intent,",
           "to",
-          "kill",
+          "$fist+skull",
           "them",
           "in",
           "the",
