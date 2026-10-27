@@ -614,7 +614,7 @@ export function bible_glyph_chapter_lev22() {
           "When",
           "a",
           "$man_beard",
-          "presents",
+          "$magnet+doing",
           "a",
           "$sacrifice",
           "of",
