@@ -747,7 +747,7 @@ export function bible_glyph_chapter_2sa11() {
           "to",
           "$two_hearts+proper_name",
           "$all",
-          "that",
+          "$back+flashlight",
           "$i_am+father",
           "had",
           "sent",
