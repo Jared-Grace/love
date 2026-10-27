@@ -701,7 +701,7 @@ export function bible_glyph_chapter_num32() {
           "that",
           "$bow",
           "will",
-          "find",
+          "$magnifying_glass+exclamation",
           "you",
           "out.",
         ],
