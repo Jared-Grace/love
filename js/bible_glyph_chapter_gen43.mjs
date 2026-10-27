@@ -88,7 +88,7 @@ export function bible_glyph_chapter_gen43() {
       {
         verse_number: 4,
         words: [
-          "If",
+          "$traffic_light",
           "you",
           "will",
           "$hand_sending",
