@@ -62,7 +62,7 @@ export function bible_glyph_chapter_deu31() {
           "You",
           "shall",
           "$no_entry",
-          "cross",
+          "$bridge",
           "this",
           "$pointing_down+proper_name.",
         ],
