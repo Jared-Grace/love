@@ -403,7 +403,7 @@ export function bible_glyph_chapter_ezr03() {
           "foundation",
           "of",
           "the",
-          "temple",
+          "$classical_building",
           "of",
           "the",
           "$i_am,",
