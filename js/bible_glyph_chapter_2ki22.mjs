@@ -722,7 +722,7 @@ export function bible_glyph_chapter_2ki22() {
           "would",
           "become",
           "a",
-          "desolation",
+          "$astonished+thing",
           "and",
           "a",
           "curse,",
