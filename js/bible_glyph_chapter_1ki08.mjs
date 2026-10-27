@@ -1376,7 +1376,7 @@ export function bible_glyph_chapter_1ki08() {
           "that",
           "they",
           "may",
-          "fear",
+          "$fear+doing",
           "You",
           "all",
           "the",
