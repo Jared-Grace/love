@@ -429,7 +429,7 @@ export function bible_glyph_chapter_exo34() {
           "down",
           "their",
           "$altar,",
-          "smash",
+          "$broken_chain",
           "their",
           "sacred",
           "stones,",
