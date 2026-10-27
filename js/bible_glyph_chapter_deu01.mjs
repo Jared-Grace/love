@@ -1092,7 +1092,7 @@ export function bible_glyph_chapter_deu01() {
           "followed",
           "the",
           "$i_am",
-          "wholeheartedly.",
+          "$battery.",
         ],
       },
       {
