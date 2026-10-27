@@ -713,7 +713,7 @@ export function bible_glyph_chapter_exo16() {
           "much",
           "$bread,",
           "$two",
-          "omers",
+          "$wheat+knot",
           "per",
           "person,",
           "and",
