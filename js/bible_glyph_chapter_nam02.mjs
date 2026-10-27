@@ -317,7 +317,7 @@ export function bible_glyph_chapter_nam02() {
         verse_number: 12,
         words: [
           "The",
-          "lion",
+          "$lion",
           "mauled",
           "enough",
           "for",
