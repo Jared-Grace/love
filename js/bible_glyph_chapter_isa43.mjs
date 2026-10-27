@@ -121,7 +121,7 @@ export function bible_glyph_chapter_isa43() {
           "$clamp+proper_name",
           "for",
           "your",
-          "ransom,",
+          "$umbrella+coin,",
           "$proper_name$Cush",
           "and",
           "$proper_name$Seba",
