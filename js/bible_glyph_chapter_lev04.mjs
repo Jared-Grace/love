@@ -815,7 +815,7 @@ export function bible_glyph_chapter_lev04() {
           "$blood",
           "with",
           "his",
-          "finger",
+          "$index_pointing_up",
           "and",
           "$hands_giving",
           "on",
