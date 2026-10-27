@@ -796,7 +796,7 @@ export function bible_glyph_chapter_exo28() {
           "$wrestling+heart_on_fire",
           "on",
           "the",
-          "breastpiece",
+          "$gem_stone+t_shirt",
           "of",
           "$scales+thing",
           "over",
