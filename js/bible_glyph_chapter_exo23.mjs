@@ -71,7 +71,7 @@ export function bible_glyph_chapter_exo23() {
           "favouritism",
           "to",
           "a",
-          "poor",
+          "$pinching_hand+person",
           "man",
           "in",
           "his",
