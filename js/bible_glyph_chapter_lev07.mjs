@@ -217,7 +217,7 @@ export function bible_glyph_chapter_lev07() {
           "on",
           "a",
           "$cooking+bread",
-          "belongs",
+          "$link",
           "to",
           "$priest",
           "who",
