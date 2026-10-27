@@ -88,7 +88,7 @@ export function bible_glyph_chapter_hab02() {
           "testifies",
           "of",
           "the",
-          "end",
+          "$stop_sign",
           "and",
           "does",
           "$no_entry",
