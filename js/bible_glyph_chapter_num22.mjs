@@ -917,7 +917,7 @@ export function bible_glyph_chapter_num22() {
           "fool",
           "of",
           "me.",
-          "If",
+          "$crossed_fingers+manner",
           "I",
           "had",
           "a",
