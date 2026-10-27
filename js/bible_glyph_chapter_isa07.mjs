@@ -153,7 +153,7 @@ export function bible_glyph_chapter_isa07() {
           "down",
           "and",
           "be",
-          "quiet.",
+          "$pause_button+doing.",
           "Do",
           "$no_entry",
           "be",
