@@ -602,7 +602,7 @@ export function bible_glyph_chapter_gen44() {
           "he",
           "alone",
           "is",
-          "left",
+          "$takeout_box+doing",
           "of",
           "his",
           "$mother,",
