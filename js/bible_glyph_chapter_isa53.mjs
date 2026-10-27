@@ -306,7 +306,7 @@ export function bible_glyph_chapter_isa53() {
           "$no_entry",
           "was",
           "any",
-          "deceit",
+          "$lying_face+mouse_trap",
           "in",
           "His",
           "mouth.",
