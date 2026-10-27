@@ -731,7 +731,7 @@ export function bible_glyph_chapter_num09() {
           "lingered",
           "$pointing_up",
           "the",
-          "tabernacle",
+          "$tent+house",
           "and",
           "remained,",
           "the",
