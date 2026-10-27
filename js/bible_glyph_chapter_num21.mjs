@@ -616,7 +616,7 @@ export function bible_glyph_chapter_num21() {
           "we",
           "will",
           "$no_entry",
-          "drink",
+          "$cup_with_straw",
           "$water",
           "from",
           "any",
