@@ -70,7 +70,7 @@ export function bible_glyph_chapter_lev19() {
         words: [
           "Do",
           "$no_entry",
-          "turn",
+          "$curving_right+doing",
           "to",
           "idols",
           "or",
