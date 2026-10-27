@@ -277,7 +277,7 @@ export function bible_glyph_chapter_ecc12() {
           "he",
           "also",
           "$learner+doing",
-          "knowledge",
+          "$lightbulb+thing",
           "to",
           "the",
           "$family.",
