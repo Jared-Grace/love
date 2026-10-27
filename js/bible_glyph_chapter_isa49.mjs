@@ -408,7 +408,7 @@ export function bible_glyph_chapter_isa49() {
           "guide",
           "them",
           "and",
-          "lead",
+          "$sheep+water+doing",
           "them",
           "$pointing_up",
           "$fountain+thing",
