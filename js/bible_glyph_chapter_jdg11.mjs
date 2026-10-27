@@ -1082,7 +1082,7 @@ export function bible_glyph_chapter_jdg11() {
           "Ammon",
           "were",
           "subdued",
-          "before",
+          "$face",
           "the",
           "$son",
           "of",
