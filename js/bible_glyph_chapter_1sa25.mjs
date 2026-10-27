@@ -917,7 +917,7 @@ export function bible_glyph_chapter_1sa25() {
       {
         verse_number: 27,
         words: [
-          "Now",
+          "$watch",
           "let",
           "this",
           "gift",
