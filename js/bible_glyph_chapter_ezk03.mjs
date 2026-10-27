@@ -255,7 +255,7 @@ export function bible_glyph_chapter_ezk03() {
           "like",
           "a",
           "diamond,",
-          "harder",
+          "$might+up_arrow",
           "than",
           "flint.",
           "Do",
