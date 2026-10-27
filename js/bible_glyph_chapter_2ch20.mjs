@@ -397,7 +397,7 @@ export function bible_glyph_chapter_2ch20() {
           "$lightning",
           "$face",
           "this",
-          "vast",
+          "$multiply",
           "$crowd+loudspeaker",
           "that",
           "$footprints",
