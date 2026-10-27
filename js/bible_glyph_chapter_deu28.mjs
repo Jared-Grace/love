@@ -1753,7 +1753,7 @@ export function bible_glyph_chapter_deu28() {
           "he",
           "has",
           "nothing",
-          "left",
+          "$puzzle_piece+doing",
           "in",
           "the",
           "siege",
