@@ -24,7 +24,13 @@ export async function facebook_page_open(url) {
   let agent = await browser.userAgent();
   let v = agent.replace("HeadlessChrome", "Chrome");
   await page.setUserAgent(v);
-  await page.goto(url);
+  ("★ A PAGE THAT FAILS TO LOAD CLOSES THE BROWSER HERE, because the caller is never handed it and so cannot. On 2026-10-26 the internet dropped during a reel check; the browser stayed open, the run never exited, and its hold on the one profile would have refused every later run.");
+  try {
+    await page.goto(url);
+  } catch (e) {
+    await browser.close();
+    throw e;
+  }
   await sleep(6000);
   let r = {
     browser,
