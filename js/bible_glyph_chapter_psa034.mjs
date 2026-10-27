@@ -155,7 +155,7 @@ export function bible_glyph_chapter_psa034() {
           "$around",
           "those",
           "who",
-          "fear",
+          "$fear+describing",
           "Him,",
           "and",
           "he",
