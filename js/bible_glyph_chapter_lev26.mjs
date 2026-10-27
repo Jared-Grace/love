@@ -523,7 +523,7 @@ export function bible_glyph_chapter_lev26() {
           "and",
           "you",
           "will",
-          "flee",
+          "$running+dashing_away",
           "when",
           "no",
           "one",
