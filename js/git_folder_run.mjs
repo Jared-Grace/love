@@ -1,3 +1,5 @@
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { child_output_wait } from "./child_output_wait.mjs";
 import { sleep } from "./sleep.mjs";
@@ -20,7 +22,7 @@ export async function git_folder_run(folder, command_words) {
       return out;
     } catch (e) {
       let locked = String(e.message).includes("index.lock': File exists");
-      if (!locked || attempt >= attempts) {
+      if (not(locked) || greater_than_equal(attempt, attempts)) {
         throw e;
       }
       await sleep(1000);
