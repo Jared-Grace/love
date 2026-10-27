@@ -134,7 +134,7 @@ export function bible_glyph_chapter_jer17() {
           "have",
           "kindled",
           "My",
-          "anger,",
+          "$nose+fire,",
           "and",
           "it",
           "will",
