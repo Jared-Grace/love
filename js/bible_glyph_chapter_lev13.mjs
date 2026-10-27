@@ -1382,7 +1382,7 @@ export function bible_glyph_chapter_lev13() {
           "and",
           "he",
           "is",
-          "bald",
+          "$face+top+hair+no_entry",
           "on",
           "his",
           "forehead,",
