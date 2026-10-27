@@ -580,7 +580,7 @@ export function bible_glyph_chapter_deu14() {
           "$i_am",
           "is",
           "too",
-          "far",
+          "$satellite+doing",
           "away,",
         ],
       },
