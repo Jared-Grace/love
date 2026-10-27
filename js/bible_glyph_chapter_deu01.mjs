@@ -368,7 +368,7 @@ export function bible_glyph_chapter_deu01() {
           "$hands_giving+up_arrow",
           "for",
           "yourselves",
-          "wise,",
+          "$wisdom,",
           "$lightbulb,",
           "and",
           "respected",
