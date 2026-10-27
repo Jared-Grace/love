@@ -669,7 +669,7 @@ export function bible_glyph_chapter_gen28() {
           "$stone",
           "I",
           "have",
-          "set",
+          "$palm_down",
           "up",
           "as",
           "a",
