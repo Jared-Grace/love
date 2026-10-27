@@ -302,7 +302,7 @@ export function bible_glyph_chapter_gen35() {
           "called",
           "$hand+foot",
           "any",
-          "longer.",
+          "$repeat.",
           "$wrestling+heart_on_fire",
           "will",
           "be",
