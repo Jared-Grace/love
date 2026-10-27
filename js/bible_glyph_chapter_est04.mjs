@@ -392,7 +392,7 @@ export function bible_glyph_chapter_est04() {
           "for",
           "the",
           "past",
-          "thirty",
+          "$three+zero",
           "$sun.",
         ],
       },
