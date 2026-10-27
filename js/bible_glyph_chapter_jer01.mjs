@@ -419,7 +419,7 @@ export function bible_glyph_chapter_jer01() {
           "of",
           "the",
           "$compass+up_arrow,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
           "Their",
