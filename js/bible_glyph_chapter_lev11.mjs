@@ -843,7 +843,7 @@ export function bible_glyph_chapter_lev11() {
           "it",
           "is",
           "an",
-          "oven",
+          "$brick+fire",
           "or",
           "cooking",
           "pot,",
