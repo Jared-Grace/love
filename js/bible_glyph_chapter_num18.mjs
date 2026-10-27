@@ -601,7 +601,7 @@ export function bible_glyph_chapter_num18() {
           "$sparkle+thing,",
           "which",
           "is",
-          "twenty",
+          "$two+zero",
           "gerahs.",
         ],
       },
