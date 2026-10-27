@@ -116,6 +116,7 @@ export function bible_glyph_roots_hebrew_drafted() {
   "NAMES WHOSE ROOT NOW HAS A PICTURE, 172 rows in one pass checked against the table and against itself. They waited because the root had no picture, and the root has one now. A one-root name takes the root's picture with +proper_name; a gentilic takes +person, so the Ramite, the Horonite and the Izrahite stand by their names; a name that holds God or Jah takes no +proper_name. A name built on a name drawn today takes that name's picture: Aphekah under Aphek, Hammoth-dor with Dor's person, Hazar-enan with the spring, Jotbathah under Jotbah, Baal-hermon with Hermon and Helkath-hazzurim with the field. Where the meaning is a word already drawn, the name sits under that word's key: Nochah under Noah, Merajoth under rebellion, Hashabneiah under Hashabiah, Zerahiah under Izrahiah, Maadiah with Adaiah, and Jeuel with Jeiel. Where the root's picture is not the meaning, the meaning is drawn under a key of its own: Jaziz a star rising, Jaanai an ear and a reply, Ater a hand on a crutch, Minnith the abacus, Ramoth the mountain heights and En-dor the spring and the house.";
   "NAMES WHOSE ROOT NOW HAS A PICTURE TURNED DOWN: the root's picture for Jaziz (moving creatures), Jaanai (the ostrich), Ater (closing up), Minnith (a harp string), Ramoth (coral) and En-dor (a generation), because none of these is what the name means. Each of these because another root already wears it: earth+rock for Geshan (Kishion) and brick+up_arrow for Tulon (Binnui), so both still wait; gem_stone alone for Anak (Tarshish), so it is the gems on a chain; crutch alone for Ater (Eshean). Still waiting, because the root's picture is not what the name means and no other picture was settled: Chislon, Chesalon and Chesulloth (the fool's picture for hope, fertile and fattened), Sirion, Shammai, Shobek and the Aramaic 3879. Gath and Lael wait on the human's word, Hur and Hepher because Strong's offers two roots, Dizahab because Strong's says as if, and Tahash because Strong's says probably.";
   "WAITS WHOSE REASON HAD EXPIRED, 10 rows, 2026-10-27, most used first. The Philistine waited for Pelesheth, the Anakite for Anak and the Maachathite for Maacah; all three places are drawn now, so each clan is its place with the person. Gath waited on the human's word, but the only question was whether it may be drawn from the winepress, and Strong's says it is the same word, so Gath is the winepress with +proper_name and the Gittite is Gath with the person. Shiloh is from the same root as the Shiloh of Genesis forty nine, so it is rest with the place. Debir waited because Strong's points one verse at Lo-debar, which is a spelling note about Joshua thirteen and not a doubt about the city, so Debir is the inner sanctuary with +proper_name. Adonijah and Nathan waited because their bare pictures would read as a common phrase - the crown and the endless sign is Lord GOD - so both carry +proper_name, which no phrase does, as Jonathan already does though his name holds Jah. Al-tashheth is the psalm heading do not destroy, the two words it is, with +proper_name because it names a tune. Rejected: Gath as the grapes and the foot alone, which is yeqeb the winepress; Nathan as the gift, which is Mattan; Adonijah with no tag, which is the phrase. Still waiting, unchanged: Gath-hepher and Gath-rimmon, Gilead, Bashan, the Amorite, Phinehas, Michal, Hur, Hepher and every name Strong's calls foreign, uncertain, probable, perhaps or apparent.";
+  "A NAME WITH GOD OR JAH TAKES +proper_name WHEN ITS BARE PICTURES ARE WORDS A VERSE SAYS, 2026-10-27. The rule that such a name takes no tag assumed the God picture alone marks a name, and the misread gate measured otherwise: the LORD heard read as Hoshama in eleven verses, the LORD saved as Joshua, God knows as Eldaah, the LORD added as Joseph. So Hoshama, Jehosheba and Jehoshabeath, Hazael, Haziel, Barakel, Hazaiah, Jehdeiah, Abdeel, Abdiel, Elishaphat, Jesimiel, Gemariah, Jeberechiah, Jehiah, Shelemiah, Jehozabad and Jozabad take +proper_name; so do Jashobeam, which was simply untagged, Amanah, which shared its pictures with a sure covenant, and Chebar, which shared them with long ago. Joseph takes +proper_name as the Greek Joseph already does. Jehoiachin moves under kun beside Jeconiah and Coniah, the same king, with the same pictures. Where the tagged form was already worn by a sibling name, the name says one more thing: Hiel, living of God, is life and describing beside Jehiel's God will live; Tabeel, pleasing to God, is good and describing beside Mehetabel; Eldaah, God of knowledge, is God and knowledge beside Eliada's God is knowing; Zebadiah, the LORD has given, is the gift and doing beside Mattithiah's gift of the LORD. Rejected: accepting these joins verse by verse, because a name's join says somebody nobody wrote; reordering the pictures, because a name is drawn in the order it says them; and giving the tagged form to the newcomer by moving its sibling, because that reseats a name nothing faulted.";
   let rows = [
     ["11", "abad", "wilted_flower+place", "Abaddon, destruction"],
     ["1413", "gadad", "crowd+clamp+doing", "crowd together"],
@@ -1874,7 +1875,12 @@ export function bible_glyph_roots_hebrew_drafted() {
       "heart_on_fire+house+heart_on_fire+proper_name",
       "El-bethel, God of Bethel",
     ],
-    ["420", "yada", "heart_on_fire+lightbulb", "Eldaah, God of knowledge"],
+    [
+      "420",
+      "yada",
+      "heart_on_fire+lightbulb+thing+proper_name",
+      "Eldaah, God of knowledge",
+    ],
     ["424", "ayil", "tree+flexed_biceps", "oak"],
     ["425", "ayil", "tree+flexed_biceps+proper_name", "Elah, oak"],
     ["436", "ayil", "tree+flexed_biceps", "oak"],
@@ -5518,9 +5524,19 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2073", "zabal", "house+round_pushpin+thing", "a dwelling"],
     ["2120", "zachal", "worm+footprints+proper_name", "Zoheleth, crawling"],
     ["2198", "zaaph", "anger_symbol+water_wave+describing", "sullen"],
-    ["2371", "chazael", "eye+heart_on_fire", "Hazael, God has seen"],
+    [
+      "2371",
+      "chazael",
+      "eye+heart_on_fire+proper_name",
+      "Hazael, God has seen",
+    ],
     ["2383", "chazah", "eye+thing+proper_name", "Hezion, vision"],
-    ["2419", "chiel", "sprout+heart_on_fire", "Hiel, God lives"],
+    [
+      "2419",
+      "chiel",
+      "sprout+describing+heart_on_fire+proper_name",
+      "Hiel, God lives",
+    ],
     ["2480", "chalat", "hand+fast_forward+doing", "to snatch"],
     [
       "2607",
@@ -5739,9 +5755,24 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["3059", "yehoachaz", "i_am+hand+clamp", "Jehoahaz, the LORD has seized"],
     ["3099", "yehoachaz", "i_am+hand+clamp", "Joahaz, the LORD has seized"],
     ["3066", "yehudi", "menorah+speech", "in the Jews' language"],
-    ["3075", "yehozabad", "i_am+gift", "Jehozabad, the LORD has given"],
-    ["3107", "yehozabad", "i_am+gift", "Jozabad, the LORD has given"],
-    ["3078", "yehoyakin", "i_am+pin", "Jehoiachin, the LORD will establish"],
+    [
+      "3075",
+      "yehozabad",
+      "i_am+gift+proper_name",
+      "Jehozabad, the LORD has given",
+    ],
+    [
+      "3107",
+      "yehozabad",
+      "i_am+gift+proper_name",
+      "Jozabad, the LORD has given",
+    ],
+    [
+      "3078",
+      "kun",
+      "i_am+pin+proper_name",
+      "Jehoiachin, the LORD will establish",
+    ],
     [
       "3086",
       "yehoaddin",
@@ -5751,7 +5782,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     [
       "3089",
       "yehosheba",
-      "i_am+raised_back_of_hand",
+      "i_am+raised_back_of_hand+proper_name",
       "Jehosheba, the LORD has sworn",
     ],
     ["3098", "yoach", "i_am+brother", "Joah, the LORD is brother"],
@@ -6124,7 +6155,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1939", "hodavyah", "sparkles+light+i_am", "Hodaiah, majesty of the LORD"],
     ["1941", "hodavyah", "sparkles+light+i_am", "Hodijah, majesty of the LORD"],
     ["1950", "hamam", "crowd+tornado+describing+proper_name", "Homam, raging"],
-    ["1953", "hoshama", "i_am+ear", "Hoshama, the LORD has heard"],
+    ["1953", "hoshama", "i_am+ear+proper_name", "Hoshama, the LORD has heard"],
     [
       "1956",
       "yathar",
@@ -6135,7 +6166,12 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1987", "halam", "hammer+doer+proper_name", "Helem, smiter"],
     ["2066", "zabad", "gift+person+proper_name", "Zabad, giver"],
     ["2068", "zabdiel", "gift+thing+heart_on_fire", "Zabdiel, gift of God"],
-    ["2069", "zebadyah", "gift+i_am", "Zebadiah, the LORD has given"],
+    [
+      "2069",
+      "zebadyah",
+      "gift+doing+i_am+proper_name",
+      "Zebadiah, the LORD has given",
+    ],
     ["2127", "zua", "shaking_face+describing+proper_name", "Zia, trembling"],
     ["2133", "zayit", "olive+place+proper_name", "Zethan, olive grove"],
     [
@@ -6153,7 +6189,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2321", "chodesh", "new_moon+proper_name", "Hodesh, new moon"],
     ["2364", "chush", "running+thing+proper_name", "Hushah, haste"],
     ["2369", "chotham", "ring+locked+thing+proper_name", "Hotham, seal"],
-    ["2381", "chazael", "eye+heart_on_fire", "Haziel, seen of God"],
+    ["2381", "chazael", "eye+heart_on_fire+proper_name", "Haziel, seen of God"],
     [
       "2395",
       "chazaq",
@@ -6284,7 +6320,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     [
       "3165",
       "yechdeyahu",
-      "linked_paperclips+i_am",
+      "linked_paperclips+i_am+proper_name",
       "Jehdeiah, unity of the LORD",
     ],
     ["3166", "yachaziel", "eye+doing+heart_on_fire", "Jahaziel, beheld of God"],
@@ -6294,7 +6330,12 @@ export function bible_glyph_roots_hebrew_drafted() {
       "sprout+heart_on_fire+proper_name+person",
       "a Jehielite",
     ],
-    ["3174", "yechiyah", "sprout+i_am", "Jehiah, the LORD will live"],
+    [
+      "3174",
+      "yechiyah",
+      "sprout+i_am+proper_name",
+      "Jehiah, the LORD will live",
+    ],
     ["3185", "yachtseel", "divide+heart_on_fire", "Jahziel, allotted of God"],
     ["3187", "yachas", "family+scroll+doing", "to enroll by pedigree"],
     ["3210", "lun", "night+doing+proper_name", "Jalon, lodging"],
@@ -6365,7 +6406,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     [
       "3434",
       "yashobam",
-      "turn_back+family",
+      "turn_back+family+proper_name",
       "Jashobeam, the people will return",
     ],
     [
@@ -6380,7 +6421,12 @@ export function bible_glyph_roots_hebrew_drafted() {
       "coin+hand_sending+i_am",
       "Isshiah, the LORD will lend",
     ],
-    ["3450", "yesimael", "palm_down+heart_on_fire", "Jesimiel, God will place"],
+    [
+      "3450",
+      "yesimael",
+      "palm_down+heart_on_fire+proper_name",
+      "Jesimiel, God will place",
+    ],
     ["3457", "yasham", "field+desert+doing+proper_name", "Ishma, desolate"],
     [
       "3460",
@@ -6505,7 +6551,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     [
       "8018",
       "shelemyah",
-      "peace+gift+i_am",
+      "peace+gift+i_am+proper_name",
       "Shelemiah, thank offering of the LORD",
     ],
     [
@@ -6552,7 +6598,12 @@ export function bible_glyph_roots_hebrew_drafted() {
       "Sippai, basin-like",
     ],
     ["5660", "ebed", "kneeling+describing+proper_name", "Abdi, serviceable"],
-    ["5661", "abdiel", "kneeling+heart_on_fire", "Abdiel, servant of God"],
+    [
+      "5661",
+      "abdiel",
+      "kneeling+heart_on_fire+proper_name",
+      "Abdiel, servant of God",
+    ],
     ["5681", "abar", "bridge+person+proper_name", "Ibri, a Hebrew"],
     ["5717", "adiel", "gem_stone+ring+heart_on_fire", "Adiel, ornament of God"],
     ["5734", "adan", "smile+sparkles+thing+proper_name", "Adnah, pleasure"],
@@ -6826,7 +6877,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     [
       "478",
       "elishaphat",
-      "heart_on_fire+scales",
+      "heart_on_fire+scales+proper_name",
       "Elishaphat, God of judgment",
     ],
     ["710", "argaman", "purple_circle", "purple"],
@@ -6859,7 +6910,12 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2641", "chaser", "empty_nest+proper_name", "Hasrah, want"],
     ["2810", "chashab", "thinking+gear", "a contrivance, engine"],
     ["2996", "banah", "brick+thing+proper_name", "Jabneh, a building"],
-    ["3090", "yehosheba", "i_am+raised_back_of_hand", "Jehoshabeath"],
+    [
+      "3090",
+      "yehosheba",
+      "i_am+raised_back_of_hand+proper_name",
+      "Jehoshabeath",
+    ],
     ["3253", "yismakyahu", "crutch+doing+i_am", "Ismachiah, Jah will sustain"],
     ["3260", "yaad", "alarm_clock+proper_name", "Jedi, appointed"],
     ["3329", "yatsa", "walking+tray_out+baby", "offspring"],
@@ -7055,7 +7111,12 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2818", "chashach", "pleading+tray_in+doing", "to need"],
     ["2819", "chashach", "pleading+tray_in+thing", "a need"],
     ["2869", "tob", "thumbs_up", "good"],
-    ["2870", "tabeel", "thumbs_up+heart_on_fire", "Tabeel, pleasing to God"],
+    [
+      "2870",
+      "tabeel",
+      "thumbs_up+describing+heart_on_fire+proper_name",
+      "Tabeel, pleasing to God",
+    ],
     ["2884", "tabbaath", "ring+multiply+proper_name", "Tabbaoth, rings"],
     ["2941", "teem", "scales+scroll", "a decree"],
     ["2987", "yabal", "water+road+doing", "to carry"],
@@ -7327,7 +7388,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1937", "hodavyah", "sparkles+light+i_am", "Hodevah"],
     ["1960", "huyedah", "musical_score+crowd", "a choir"],
     ["2165", "zaman", "clock+round_pushpin+thing", "an appointed time"],
-    ["2382", "chazayah", "eye+i_am", "Hazaiah, Jah has seen"],
+    ["2382", "chazayah", "eye+i_am+proper_name", "Hazaiah, Jah has seen"],
     ["2517", "cheleq", "pizza+proper_name", "Helkai, apportioned"],
     [
       "2606",
@@ -7503,7 +7564,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     [
       "1292",
       "barakel",
-      "speech+thumbs_up+heart_on_fire",
+      "speech+thumbs_up+heart_on_fire+proper_name",
       "Barakel, God has blessed",
     ],
     ["1343", "gaah", "mountain+up_arrow+describing", "proud"],
@@ -7942,7 +8003,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2954", "taphash", "bacon+brain+doing", "to be gross"],
     ["2968", "yaab", "heart_eyes+face_exhaling+doing", "to long"],
     ["3053", "yahab", "hands_giving+backpack", "a burden"],
-    ["3084", "yoseph", "i_am+plus", "Joseph"],
+    ["3084", "yoseph", "i_am+plus+proper_name", "Joseph"],
     ["3121", "yaven", "brown_square+foot", "mire"],
     [
       "3128",
@@ -8402,7 +8463,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["93", "egoz", "seed+rock", "a nut"],
     ["366", "ayom", "fearful_face+describing", "frightful"],
     ["542", "amon_craft", "hand+check+person", "an expert"],
-    ["549", "aman", "check+scroll", "Amanah"],
+    ["549", "aman", "check+scroll+proper_name", "Amanah"],
     ["668", "appiryon", "seat+lifting", "a palanquin"],
     [
       "1174",
@@ -8580,7 +8641,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     [
       "3000",
       "yeberekyahu",
-      "speech+thumbs_up+i_am",
+      "speech+thumbs_up+i_am+proper_name",
       "Jeberechiah, blessed of the LORD",
     ],
     ["3126", "yanaq", "breast_feeding+sprout", "a tender shoot"],
@@ -8871,7 +8932,12 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1206", "bots", "foot+brown_square", "mud"],
     ["1226", "batstsoreth", "cloud+locked", "a drought"],
     ["1484", "gur", "lion+child", "a cub"],
-    ["1587", "gemaryah", "finish+i_am", "Gemariah, the LORD has perfected"],
+    [
+      "1587",
+      "gemaryah",
+      "finish+i_am+proper_name",
+      "Gemariah, the LORD has perfected",
+    ],
     ["1601", "gaah", "cow_face+loudspeaker+doing+proper_name", "Goah, lowing"],
     ["1628", "guwr", "luggage+place", "a residence"],
     ["1652", "geshem", "rain+water_wave+doing", "to shower"],
@@ -8953,7 +9019,12 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["5552", "salsillah", "tree+thread", "a branch"],
     ["5569", "samar", "hair+up_arrow+describing", "bristling"],
     ["5630", "shiryon", "t_shirt+chains", "a coat of mail"],
-    ["5655", "abdeel", "kneeling+doing+heart_on_fire", "Abdeel, serving God"],
+    [
+      "5655",
+      "abdeel",
+      "kneeling+doing+heart_on_fire+proper_name",
+      "Abdeel, serving God",
+    ],
     [
       "5663",
       "ebed_melek",
@@ -9113,11 +9184,11 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2915", "tuwach", "artist+rock+thing", "plaster"],
     ["2937", "taah_wander", "walking+cyclone+doing", "to lead astray"],
     ["2978", "athah", "airplane_arrival+thing", "an entrance"],
-    ["3112", "yehoyakin", "i_am+pin", "Jehoiachin"],
+    ["3112", "kun", "i_am+pin+proper_name", "Jehoiachin"],
     ["3154", "yeza", "droplet+hot_face", "sweat"],
     ["3242", "yanaq", "breast_feeding+sprout", "a twig"],
     ["3314", "yapha", "sun_with_face+light+thing", "splendor"],
-    ["3529", "kebar", "pointing_back+hourglass", "Chebar"],
+    ["3529", "kebar", "pointing_back+hourglass+proper_name", "Chebar"],
     ["3583", "kachal", "eye+artist+doing", "to paint the eyes"],
     ["3634", "kalal", "check+sparkles+doing", "to perfect"],
     ["3697", "kasam", "scissors+hair+doing", "to trim"],
