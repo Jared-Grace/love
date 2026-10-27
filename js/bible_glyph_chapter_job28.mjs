@@ -452,7 +452,7 @@ export function bible_glyph_chapter_job28() {
       {
         verse_number: 24,
         words: [
-          "For",
+          "$pointing",
           "He",
           "looks",
           "to",
