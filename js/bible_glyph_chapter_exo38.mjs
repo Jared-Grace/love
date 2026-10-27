@@ -825,7 +825,7 @@ export function bible_glyph_chapter_exo38() {
           "the",
           "wave",
           "offering",
-          "totaled",
+          "$seven+zero",
           "seventy",
           "talents",
           "and",
