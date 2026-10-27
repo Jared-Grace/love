@@ -821,7 +821,7 @@ export function bible_glyph_chapter_deu32() {
         words: [
           "$question+likeness",
           "could",
-          "one",
+          "$one",
           "man",
           "$running+toward",
           "a",
