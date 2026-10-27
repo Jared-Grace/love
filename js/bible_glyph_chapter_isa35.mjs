@@ -190,7 +190,7 @@ export function bible_glyph_chapter_isa35() {
           "will",
           "become",
           "a",
-          "pool,",
+          "$water+herb,",
           "the",
           "thirsty",
           "land",
