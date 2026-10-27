@@ -93,7 +93,7 @@ export function bible_glyph_chapter_lev14() {
           "$red_circle",
           "yarn,",
           "and",
-          "hyssop",
+          "$herb+bouquet",
           "be",
           "$hand_receiving",
           "for",
