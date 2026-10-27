@@ -89,7 +89,7 @@ export function bible_glyph_chapter_mic03() {
           "for",
           "the",
           "cooking",
-          "pot,",
+          "$pot_of_food,",
           "like",
           "$meat",
           "in",
