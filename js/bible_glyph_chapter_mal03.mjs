@@ -492,7 +492,7 @@ export function bible_glyph_chapter_mal03() {
           "and",
           "$walking",
           "$black_heart+manner",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "of",
