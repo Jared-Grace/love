@@ -849,7 +849,7 @@ export function bible_glyph_chapter_1sa20() {
           "by",
           "the",
           "$brick+shield,",
-          "opposite",
+          "$person+pointing_up",
           "$i_am+hands_giving,",
           "and",
           "$father+lamp",
