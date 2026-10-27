@@ -362,7 +362,7 @@ export function bible_glyph_chapter_isa58() {
           "pointing",
           "of",
           "the",
-          "finger,",
+          "$index_pointing_up,",
           "and",
           "malicious",
           "$mouth,",
