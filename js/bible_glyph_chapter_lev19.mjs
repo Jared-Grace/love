@@ -903,7 +903,7 @@ export function bible_glyph_chapter_lev19() {
         words: [
           "When",
           "a",
-          "foreigner",
+          "$foreigner",
           "$luggage",
           "with",
           "you",
