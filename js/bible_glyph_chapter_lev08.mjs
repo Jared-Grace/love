@@ -266,7 +266,7 @@ export function bible_glyph_chapter_lev08() {
           "the",
           "$person_gesturing_ok",
           "of",
-          "Aaron,",
+          "$white_cane+blossom+proper_name,",
           "$oil+doing",
           "him",
           "$sparkle+doing.",
