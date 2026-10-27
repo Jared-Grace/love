@@ -162,7 +162,7 @@ export function bible_glyph_chapter_exo34() {
           "$person+round_pushpin+anchor+doing",
           "with",
           "him",
-          "there,",
+          "$telescope,",
           "and",
           "proclaimed",
           "His",
