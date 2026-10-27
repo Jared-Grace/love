@@ -1380,7 +1380,7 @@ export function bible_glyph_chapter_deu28() {
       {
         verse_number: 45,
         words: [
-          "All",
+          "$all",
           "these",
           "curses",
           "will",
