@@ -351,7 +351,7 @@ export function bible_glyph_chapter_job01() {
           "$smiling_face_with_horns,",
           "Very",
           "well,",
-          "everything",
+          "$all",
           "he",
           "has",
           "is",
