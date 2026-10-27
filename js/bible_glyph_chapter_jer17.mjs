@@ -221,7 +221,7 @@ export function bible_glyph_chapter_jer17() {
           "$speech+thumbs_up",
           "is",
           "the",
-          "man",
+          "$might+man_beard",
           "who",
           "trusts",
           "in",
