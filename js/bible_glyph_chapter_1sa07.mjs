@@ -559,7 +559,7 @@ export function bible_glyph_chapter_1sa07() {
           "$turn_back+thing",
           "to",
           "$proper_name$Ramah,",
-          "because",
+          "$pointing",
           "his",
           "$house",
           "was",
