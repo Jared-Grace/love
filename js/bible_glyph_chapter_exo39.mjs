@@ -463,7 +463,7 @@ export function bible_glyph_chapter_exo39() {
           "$safety_vest",
           "at",
           "the",
-          "front.",
+          "$vs_button.",
         ],
       },
       {
