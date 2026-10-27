@@ -422,7 +422,7 @@ export function bible_glyph_chapter_lev02() {
           "of",
           "the",
           "crushed",
-          "grain",
+          "$wheat+hammer",
           "and",
           "the",
           "oil,",
