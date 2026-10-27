@@ -46,7 +46,7 @@ export function bible_glyph_chapter_psa103() {
           "and",
           "do",
           "$no_entry",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "all",
           "His",
           "kind",
