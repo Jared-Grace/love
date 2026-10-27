@@ -605,7 +605,7 @@ export function bible_glyph_chapter_gen09() {
           "and",
           "told",
           "his",
-          "two",
+          "$two",
           "$brother",
           "outside.",
         ],
