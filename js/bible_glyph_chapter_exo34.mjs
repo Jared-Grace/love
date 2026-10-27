@@ -900,7 +900,7 @@ export function bible_glyph_chapter_exo34() {
           "$linked_paperclips",
           "the",
           "$i_am",
-          "forty",
+          "$four+zero",
           "$sun",
           "and",
           "forty",
