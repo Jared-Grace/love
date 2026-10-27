@@ -446,7 +446,7 @@ export function bible_glyph_chapter_job19() {
           "chiseled",
           "in",
           "stone",
-          "forever",
+          "$clock+all",
           "by",
           "an",
           "$iron",
