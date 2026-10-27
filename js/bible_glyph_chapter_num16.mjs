@@ -931,7 +931,7 @@ export function bible_glyph_chapter_num16() {
           "down",
           "$sprout",
           "into",
-          "Sheol,",
+          "$pointing_down+skull,",
           "then",
           "you",
           "will",
