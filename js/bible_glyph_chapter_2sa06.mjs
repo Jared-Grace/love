@@ -767,7 +767,7 @@ export function bible_glyph_chapter_2sa06() {
           "had",
           "$no_entry",
           "$child",
-          "to",
+          "$finish",
           "the",
           "$sun",
           "of",
