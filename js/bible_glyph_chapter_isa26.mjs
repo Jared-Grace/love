@@ -32,7 +32,7 @@ export function bible_glyph_chapter_isa26() {
           "a",
           "strong",
           "$city;",
-          "salvation",
+          "$rescue+thing",
           "is",
           "established",
           "as",
