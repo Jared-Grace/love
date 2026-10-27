@@ -905,7 +905,7 @@ export function bible_glyph_chapter_1sa17() {
           "from",
           "him",
           "$toward",
-          "another",
+          "$plus+one",
           "and",
           "$speech",
           "about",
