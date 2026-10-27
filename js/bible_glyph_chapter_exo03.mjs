@@ -674,7 +674,7 @@ export function bible_glyph_chapter_exo03() {
           "met",
           "with",
           "us.",
-          "Now",
+          "$watch",
           "please",
           "let",
           "us",
