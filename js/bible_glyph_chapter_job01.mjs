@@ -669,7 +669,7 @@ export function bible_glyph_chapter_job01() {
         words: [
           "In",
           "all",
-          "this",
+          "$flashlight",
           "$proper_name$Job",
           "did",
           "$no_entry",
