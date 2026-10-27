@@ -736,7 +736,7 @@ export function bible_glyph_chapter_exo15() {
           "His",
           "$scroll",
           "and",
-          "keep",
+          "$guard",
           "all",
           "His",
           "statutes,",
