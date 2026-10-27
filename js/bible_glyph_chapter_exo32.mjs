@@ -137,7 +137,7 @@ export function bible_glyph_chapter_exo32() {
           "into",
           "a",
           "molten",
-          "calf.",
+          "$calf.",
           "And",
           "they",
           "$speech,",
