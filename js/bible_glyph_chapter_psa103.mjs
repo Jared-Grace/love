@@ -402,7 +402,7 @@ export function bible_glyph_chapter_psa103() {
           "all",
           "His",
           "$angel,",
-          "mighty",
+          "$might+person",
           "in",
           "$lightning,",
           "who",
