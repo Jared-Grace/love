@@ -511,7 +511,7 @@ export function bible_glyph_chapter_1ki20() {
           "will",
           "start",
           "the",
-          "battle?",
+          "$crossed_swords?",
           "And",
           "the",
           "prophet",
