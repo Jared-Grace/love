@@ -660,7 +660,7 @@ export function bible_glyph_chapter_deu10() {
           "$pointing_back",
           "is",
           "your",
-          "praise,",
+          "$clapping_hands+thing,",
           "and",
           "$pointing_back",
           "is",
