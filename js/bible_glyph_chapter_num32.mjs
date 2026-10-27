@@ -612,7 +612,7 @@ export function bible_glyph_chapter_num32() {
           "$face",
           "$i_am",
           "for",
-          "battle,",
+          "$crossed_swords,",
         ],
       },
       {
