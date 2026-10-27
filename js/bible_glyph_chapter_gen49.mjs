@@ -525,7 +525,7 @@ export function bible_glyph_chapter_gen49() {
           "climb",
           "over",
           "the",
-          "wall.",
+          "$wall+around.",
         ],
       },
       {
