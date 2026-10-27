@@ -526,7 +526,7 @@ export function bible_glyph_chapter_gen22() {
           "$sky",
           "and",
           "the",
-          "sand",
+          "$sea+brown_square",
           "on",
           "the",
           "shore",
