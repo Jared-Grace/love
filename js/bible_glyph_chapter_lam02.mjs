@@ -777,7 +777,7 @@ export function bible_glyph_chapter_lam02() {
           "your",
           "$eyes",
           "$no_entry",
-          "rest.",
+          "$shushing_face+pause_button.",
         ],
       },
       {
