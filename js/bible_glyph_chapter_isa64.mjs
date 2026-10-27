@@ -216,7 +216,7 @@ export function bible_glyph_chapter_isa64() {
           "have",
           "hidden",
           "Your",
-          "face",
+          "$face",
           "from",
           "us",
           "and",
