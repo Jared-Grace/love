@@ -299,7 +299,7 @@ export function bible_glyph_chapter_gen28() {
           "$telescope,",
           "$pointing",
           "the",
-          "sun",
+          "$sun_with_face",
           "had",
           "$footprints.",
           "And",
