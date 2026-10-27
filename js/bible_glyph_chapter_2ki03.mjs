@@ -727,7 +727,7 @@ export function bible_glyph_chapter_2ki03() {
           "the",
           "$morning,",
           "the",
-          "sun",
+          "$sun_with_face",
           "was",
           "shining",
           "on",
