@@ -1119,7 +1119,7 @@ export function bible_glyph_chapter_gen27() {
           "you",
           "have",
           "only",
-          "one",
+          "$one",
           "$speech+thumbs_up,",
           "my",
           "$father?",
