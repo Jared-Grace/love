@@ -464,7 +464,7 @@ export function bible_glyph_chapter_lev08() {
           "$kitchen_knife+meat+doing",
           "$ram",
           "into",
-          "pieces",
+          "$kitchen_knife+meat",
           "and",
           "burned",
           "the",
