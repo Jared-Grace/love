@@ -340,7 +340,7 @@ export function bible_glyph_chapter_mal02() {
           "so",
           "as",
           "to",
-          "profane",
+          "$sewing_needle",
           "the",
           "$covenant",
           "of",
