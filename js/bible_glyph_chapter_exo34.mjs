@@ -115,7 +115,7 @@ export function bible_glyph_chapter_exo34() {
           "chiseled",
           "out",
           "$two",
-          "tablets",
+          "$stone+writing_hand",
           "of",
           "$stone",
           "like",
