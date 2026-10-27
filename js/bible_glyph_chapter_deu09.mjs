@@ -498,7 +498,7 @@ export function bible_glyph_chapter_deu09() {
           "I",
           "have",
           "$eye",
-          "this",
+          "$flashlight",
           "$family,",
           "and",
           "they",
