@@ -702,7 +702,7 @@ export function bible_glyph_chapter_deu09() {
           "the",
           "$nose+fire",
           "and",
-          "wrath",
+          "$angry_face",
           "that",
           "$i_am",
           "had",
