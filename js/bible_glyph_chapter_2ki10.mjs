@@ -319,7 +319,7 @@ export function bible_glyph_chapter_2ki10() {
           "$stone+multiply",
           "at",
           "the",
-          "entrance",
+          "$door",
           "of",
           "the",
           "gate",
