@@ -611,7 +611,7 @@ export function bible_glyph_chapter_gen17() {
           "establish",
           "My",
           "$covenant",
-          "with",
+          "$safety_pin",
           "$laughing+proper_name,",
           "whom",
           "$proper_name$Sarah",
