@@ -188,7 +188,7 @@ export function bible_glyph_chapter_exo26() {
           "for",
           "a",
           "$tent",
-          "over",
+          "$pointing_up",
           "the",
           "tabernacle,",
           "eleven",
