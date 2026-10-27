@@ -134,7 +134,7 @@ export function bible_glyph_chapter_sng08() {
           "on",
           "her",
           "$two_hearts?",
-          "Under",
+          "$down_arrow",
           "the",
           "apple",
           "tree",
