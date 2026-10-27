@@ -277,7 +277,7 @@ export function bible_glyph_chapter_jer17() {
           "a",
           "$year",
           "of",
-          "drought,",
+          "$cloud+locked,",
           "nor",
           "does",
           "it",
