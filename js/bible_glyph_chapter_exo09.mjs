@@ -293,7 +293,7 @@ export function bible_glyph_chapter_exo09() {
           "$house+proper_name,",
           "and",
           "$fishing_pole+proper_name",
-          "tossed",
+          "$shower",
           "it",
           "into",
           "the",
