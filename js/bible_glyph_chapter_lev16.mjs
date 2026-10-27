@@ -393,7 +393,7 @@ export function bible_glyph_chapter_lev16() {
           "them",
           "$house",
           "the",
-          "veil.",
+          "$veil.",
         ],
       },
       {
