@@ -422,7 +422,7 @@ export function bible_glyph_chapter_jer17() {
           "in",
           "the",
           "$earth,",
-          "for",
+          "$pointing",
           "they",
           "have",
           "abandoned",
