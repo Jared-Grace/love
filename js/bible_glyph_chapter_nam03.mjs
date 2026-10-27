@@ -263,7 +263,7 @@ export function bible_glyph_chapter_nam03() {
           "$collision+down_arrow+doing",
           "at",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "every",
           "street.",
