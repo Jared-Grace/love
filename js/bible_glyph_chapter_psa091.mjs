@@ -242,7 +242,7 @@ export function bible_glyph_chapter_psa091() {
           "concerning",
           "you,",
           "to",
-          "guard",
+          "$guard",
           "you",
           "in",
           "all",
