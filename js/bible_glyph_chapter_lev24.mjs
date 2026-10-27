@@ -192,7 +192,7 @@ export function bible_glyph_chapter_lev24() {
           "be",
           "set",
           "out",
-          "before",
+          "$face",
           "$i_am",
           "on",
           "behalf",
