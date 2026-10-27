@@ -222,7 +222,7 @@ export function bible_glyph_chapter_hos02() {
           "I",
           "will",
           "$turn_back",
-          "to",
+          "$toward",
           "my",
           "first",
           "$man_beard,",
