@@ -127,7 +127,7 @@ export function bible_glyph_chapter_psa046() {
           "her",
           "when",
           "morning",
-          "dawns.",
+          "$curving_right+doing.",
         ],
       },
       {
