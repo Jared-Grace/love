@@ -1100,7 +1100,7 @@ export function bible_glyph_chapter_num16() {
           "flames",
           "and",
           "to",
-          "scatter",
+          "$wind+confetti_ball",
           "the",
           "coals",
           "far",
