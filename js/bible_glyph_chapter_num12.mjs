@@ -315,7 +315,7 @@ export function bible_glyph_chapter_num12() {
           "like",
           "a",
           "$skull+doing",
-          "whose",
+          "$back+flashlight",
           "$meat",
           "is",
           "half",
