@@ -345,7 +345,7 @@ export function bible_glyph_chapter_deu31() {
           "remission,",
           "during",
           "the",
-          "Feast",
+          "$party_popper",
           "of",
           "Tabernacles,",
         ],
