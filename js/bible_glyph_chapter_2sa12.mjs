@@ -39,7 +39,7 @@ export function bible_glyph_chapter_2sa12() {
           "and",
           "the",
           "other",
-          "poor.",
+          "$money_bag+no_entry+person.",
         ],
       },
       {
