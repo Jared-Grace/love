@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_2sa12() {
           "placed",
           "on",
           "$proper_name$David's",
-          "head.",
+          "$person_gesturing_ok.",
           "And",
           "David",
           "took",
