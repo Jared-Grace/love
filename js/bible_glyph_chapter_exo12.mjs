@@ -1237,7 +1237,7 @@ export function bible_glyph_chapter_exo12() {
           "people",
           "baked",
           "their",
-          "dough,",
+          "$flour+water,",
           "what",
           "they",
           "had",
