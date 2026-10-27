@@ -92,7 +92,7 @@ export function bible_glyph_chapter_gen07() {
           "of",
           "the",
           "$sky,",
-          "male",
+          "$reminder_ribbon+thing",
           "and",
           "female,",
           "to",
