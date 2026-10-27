@@ -1150,7 +1150,7 @@ export function bible_glyph_chapter_lev16() {
         words: [
           "The",
           "$priest",
-          "who",
+          "$back+flashlight",
           "is",
           "anointed",
           "with",
