@@ -1084,7 +1084,7 @@ export function bible_glyph_chapter_lev14() {
           "$tray_out",
           "the",
           "turtledoves",
-          "or",
+          "$shuffle",
           "one",
           "$tray_out",
           "the",
