@@ -567,7 +567,7 @@ export function bible_glyph_chapter_gen27() {
           "$speech",
           "$toward",
           "$hand+foot,",
-          '"Please',
+          '"$pleading',
           "come",
           "closer",
           "so",
