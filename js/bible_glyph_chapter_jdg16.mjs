@@ -360,7 +360,7 @@ export function bible_glyph_chapter_jdg16() {
           "to",
           "me.",
           "$watch",
-          "please",
+          "$pleading",
           "$newspaper",
           "me",
           "how",
