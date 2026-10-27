@@ -339,7 +339,7 @@ export function bible_glyph_chapter_num15() {
           "born",
           "shall",
           "$hammer+doing",
-          "these",
+          "$flashlight+flashlight",
           "things",
           "in",
           "this",
