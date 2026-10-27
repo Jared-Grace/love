@@ -580,7 +580,7 @@ export function bible_glyph_chapter_num06() {
           "Nazirite",
           "is",
           "to",
-          "shave",
+          "$razor+doing",
           "his",
           "consecrated",
           "head,",
