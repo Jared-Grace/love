@@ -62,7 +62,7 @@ export function bible_glyph_chapter_jos02() {
           "$king",
           "of",
           "$proper_name$Jericho:",
-          "Behold,",
+          "$exclamation,",
           "some",
           "men",
           "of",
