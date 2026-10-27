@@ -359,7 +359,7 @@ export function bible_glyph_chapter_1ki08() {
           "$face",
           "of",
           "the",
-          "cloud;",
+          "$cloud;",
           "for",
           "the",
           "$star",
