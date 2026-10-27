@@ -1009,7 +1009,7 @@ export function bible_glyph_chapter_jer07() {
       {
         verse_number: 32,
         words: [
-          "So",
+          "$right_arrow",
           "behold,",
           "the",
           "$sun",
