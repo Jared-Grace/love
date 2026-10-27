@@ -647,7 +647,7 @@ export function bible_glyph_chapter_exo30() {
           "hundred",
           "shekels",
           "of",
-          "cassia,",
+          "$herb+wood,",
           "all",
           "according",
           "to",
