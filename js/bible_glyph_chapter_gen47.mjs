@@ -833,7 +833,7 @@ export function bible_glyph_chapter_gen47() {
           "to",
           "$house+proper_name,",
           "and",
-          "four",
+          "$four",
           "fifths",
           "will",
           "be",
