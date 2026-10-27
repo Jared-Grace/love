@@ -281,7 +281,7 @@ export function bible_glyph_chapter_lev12() {
           "$hand_receiving",
           "$two",
           "$dove+ring",
-          "or",
+          "$shuffle",
           "$two",
           "$son",
           "of",
