@@ -401,7 +401,7 @@ export function bible_glyph_chapter_2ki11() {
           "$son,",
           "$hands_giving",
           "the",
-          "crown",
+          "$crown+soap",
           "on",
           "him,",
           "presented",
