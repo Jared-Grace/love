@@ -244,7 +244,7 @@ export function bible_glyph_chapter_ezr01() {
           "with",
           "goods",
           "and",
-          "livestock,",
+          "$paw_prints,",
           "and",
           "with",
           "valuables,",
