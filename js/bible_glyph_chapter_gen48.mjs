@@ -127,7 +127,7 @@ export function bible_glyph_chapter_gen48() {
           "as",
           "an",
           "$hourglass",
-          "possession.",
+          "$hand+clamp+thing.",
         ],
       },
       {
