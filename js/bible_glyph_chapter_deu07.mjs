@@ -247,7 +247,7 @@ export function bible_glyph_chapter_deu07() {
           "the",
           "other",
           "$family,",
-          "for",
+          "$pointing",
           "you",
           "were",
           "the",
