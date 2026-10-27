@@ -689,7 +689,7 @@ export function bible_glyph_chapter_exo02() {
           "from",
           "bondage",
           "$walking+pointing_up",
-          "to",
+          "$toward",
           "$heart_on_fire.",
         ],
       },
