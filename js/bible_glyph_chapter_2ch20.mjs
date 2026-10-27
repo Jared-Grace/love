@@ -523,7 +523,7 @@ export function bible_glyph_chapter_2ch20() {
           "of",
           "this",
           "vast",
-          "army,",
+          "$crowd+loudspeaker,",
           "for",
           "the",
           "battle",
