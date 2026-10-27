@@ -386,7 +386,7 @@ export function bible_glyph_chapter_1sa01() {
           "$pointing_up+proper_name",
           "$guard",
           "her",
-          "mouth.",
+          "$face_with_open_mouth.",
         ],
       },
       {
