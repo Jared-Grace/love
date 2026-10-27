@@ -1102,7 +1102,7 @@ export function bible_glyph_chapter_lev13() {
           "outbreak",
           "has",
           "$no_entry",
-          "spread",
+          "$microbe+arrow_both_ways+doing",
           "and",
           "there",
           "is",
