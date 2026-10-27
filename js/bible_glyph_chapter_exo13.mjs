@@ -593,7 +593,7 @@ export function bible_glyph_chapter_exo13() {
           "$clamp+proper_name",
           "arrayed",
           "for",
-          "battle.",
+          "$military_helmet+person+describing.",
         ],
       },
       {
