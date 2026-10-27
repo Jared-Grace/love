@@ -326,7 +326,7 @@ export function bible_glyph_chapter_1ki17() {
           "a",
           "handful",
           "of",
-          "flour",
+          "$wheat+flour",
           "in",
           "a",
           "$jar",
