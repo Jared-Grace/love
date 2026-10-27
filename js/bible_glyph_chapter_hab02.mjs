@@ -18,7 +18,7 @@ export function bible_glyph_chapter_hab02() {
           "stand",
           "at",
           "my",
-          "guard",
+          "$guard+thing",
           "post",
           "and",
           "station",
