@@ -191,7 +191,7 @@ export function bible_glyph_chapter_neh09() {
         verse_number: 6,
         words: [
           "You",
-          "alone",
+          "$one+person",
           "are",
           "the",
           "$i_am.",
