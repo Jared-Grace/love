@@ -362,7 +362,7 @@ export function bible_glyph_chapter_2ki01() {
           "to",
           "the",
           "captain,",
-          "If",
+          "$traffic_light",
           "I",
           "am",
           "a",
