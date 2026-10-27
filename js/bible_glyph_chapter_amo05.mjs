@@ -94,7 +94,7 @@ export function bible_glyph_chapter_amo05() {
           "have",
           "but",
           "ten",
-          "left",
+          "$puzzle_piece+doing",
           "in",
           "the",
           "$house",
