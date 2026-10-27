@@ -546,7 +546,7 @@ export function bible_glyph_chapter_est04() {
           "my",
           "maidens",
           "will",
-          "fast",
+          "$eating+locked+doing",
           "as",
           "you",
           "do.",
