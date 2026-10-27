@@ -476,7 +476,7 @@ export function bible_glyph_chapter_jer01() {
           "and",
           "have",
           "burned",
-          "incense",
+          "$incense+doing",
           "to",
           "other",
           "$moai,",
