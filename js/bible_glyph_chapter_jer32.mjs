@@ -233,7 +233,7 @@ export function bible_glyph_chapter_jer32() {
       {
         verse_number: 7,
         words: [
-          "Behold!",
+          "$exclamation!",
           "$proper_name$Hanamel,",
           "the",
           "$son",
