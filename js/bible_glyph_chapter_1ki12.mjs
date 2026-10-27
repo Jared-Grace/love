@@ -968,7 +968,7 @@ export function bible_glyph_chapter_1ki12() {
           "$moai,",
           "O",
           "$wrestling+heart_on_fire,",
-          "who",
+          "$back+flashlight",
           "brought",
           "you",
           "up",
