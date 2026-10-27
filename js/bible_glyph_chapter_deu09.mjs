@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_deu09() {
         verse_number: 29,
         words: [
           "But",
-          "they",
+          "$pointing_back",
           "are",
           "Your",
           "$family,",
