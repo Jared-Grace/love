@@ -487,7 +487,7 @@ export function bible_glyph_chapter_2ch07() {
           "by",
           "My",
           "$name_tag,",
-          "humble",
+          "$down_arrow+person+doing",
           "themselves",
           "and",
           "$hands_praying",
