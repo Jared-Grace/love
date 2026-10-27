@@ -143,7 +143,7 @@ export function bible_glyph_chapter_lev14() {
           "$cedar",
           "$tree,",
           "the",
-          "scarlet",
+          "$red_circle",
           "yarn,",
           "and",
           "the",
