@@ -274,7 +274,7 @@ export function bible_glyph_chapter_lev01() {
           "he",
           "is",
           "to",
-          "present",
+          "$magnet+doing",
           "an",
           "unblemished",
           "$reminder_ribbon+thing.",
