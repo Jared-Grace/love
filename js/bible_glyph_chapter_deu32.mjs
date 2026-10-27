@@ -376,7 +376,7 @@ export function bible_glyph_chapter_deu32() {
           "the",
           "$cow_face",
           "and",
-          "milk",
+          "$milk",
           "from",
           "the",
           "$sheep,",
