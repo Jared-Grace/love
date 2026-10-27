@@ -320,7 +320,7 @@ export function bible_glyph_chapter_isa61() {
           "among",
           "the",
           "$family.",
-          "All",
+          "$all",
           "who",
           "$eye",
           "them",
