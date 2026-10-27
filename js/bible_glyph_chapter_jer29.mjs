@@ -764,7 +764,7 @@ export function bible_glyph_chapter_jer29() {
           "$king",
           "of",
           "$face_spiral",
-          "roasted",
+          "$fire+barley+doing",
           "in",
           "the",
           "$fire.",
