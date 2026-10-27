@@ -612,7 +612,7 @@ export function bible_glyph_chapter_isa02() {
           "$nose+dashing_away",
           "in",
           "his",
-          "nostrils.",
+          "$nose+fire.",
           "Of",
           "what",
           "account",
