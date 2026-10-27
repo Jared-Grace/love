@@ -723,7 +723,7 @@ export function bible_glyph_chapter_deu05() {
           "should",
           "we",
           "$skull+doing?",
-          "For",
+          "$pointing",
           "this",
           "great",
           "$fire",
