@@ -175,7 +175,7 @@ export function bible_glyph_chapter_1ki17() {
           "later,",
           "however,",
           "the",
-          "brook",
+          "$national_park",
           "dried",
           "up",
           "because",
