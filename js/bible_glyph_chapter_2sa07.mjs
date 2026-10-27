@@ -56,7 +56,7 @@ export function bible_glyph_chapter_2sa07() {
           "$cedar,",
           "while",
           "the",
-          "ark",
+          "$ark",
           "of",
           "$heart_on_fire",
           "remains",
