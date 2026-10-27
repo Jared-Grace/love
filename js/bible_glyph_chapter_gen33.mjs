@@ -544,7 +544,7 @@ export function bible_glyph_chapter_gen33() {
           "the",
           "$father",
           "of",
-          "Shechem,",
+          "$backpack+mountain+proper_name,",
           "for",
           "a",
           "hundred",
