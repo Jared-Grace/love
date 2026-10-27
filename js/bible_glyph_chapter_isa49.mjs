@@ -444,7 +444,7 @@ export function bible_glyph_chapter_isa49() {
           "will",
           "$footprints",
           "from",
-          "far",
+          "$satellite",
           "away,",
           "from",
           "the",
