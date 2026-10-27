@@ -1135,7 +1135,7 @@ export function bible_glyph_chapter_jdg06() {
           "contend",
           "with",
           "him,",
-          "because",
+          "$pointing",
           "he",
           "had",
           "torn",
