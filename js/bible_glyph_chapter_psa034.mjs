@@ -151,7 +151,7 @@ export function bible_glyph_chapter_psa034() {
           "of",
           "the",
           "$i_am",
-          "encamps",
+          "$camp+doing",
           "around",
           "those",
           "who",
