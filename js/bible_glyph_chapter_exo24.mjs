@@ -188,7 +188,7 @@ export function bible_glyph_chapter_exo24() {
           "the",
           "$blood",
           "and",
-          "put",
+          "$palm_down",
           "it",
           "in",
           "bowls,",
