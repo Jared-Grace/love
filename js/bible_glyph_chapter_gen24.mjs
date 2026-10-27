@@ -401,7 +401,7 @@ export function bible_glyph_chapter_gen24() {
           "$exclamation",
           "$me",
           "am,",
-          "standing",
+          "$person+up_arrow",
           "beside",
           "the",
           "spring,",
