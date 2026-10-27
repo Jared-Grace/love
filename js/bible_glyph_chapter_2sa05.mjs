@@ -639,7 +639,7 @@ export function bible_glyph_chapter_2sa05() {
         words: [
           "So",
           "$two_hearts+proper_name",
-          "inquired",
+          "$question",
           "of",
           "the",
           "$i_am,",
