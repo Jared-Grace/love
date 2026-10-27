@@ -491,7 +491,7 @@ export function bible_glyph_chapter_2sa05() {
           "it",
           "and",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "the",
           "stronghold.",
