@@ -613,7 +613,7 @@ export function bible_glyph_chapter_lev13() {
           "and",
           "a",
           "white",
-          "swelling",
+          "$lifting+thing",
           "or",
           "a",
           "reddish-white",
