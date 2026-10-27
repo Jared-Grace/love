@@ -23,7 +23,7 @@ export function bible_glyph_chapter_jos02() {
           "secretly",
           "$hand_sending",
           "$two",
-          "spies",
+          "$foot+doing",
           "from",
           "$proper_name$Shittim,",
           "$speech,",
