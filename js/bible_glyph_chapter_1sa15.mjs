@@ -100,7 +100,7 @@ export function bible_glyph_chapter_1sa15() {
           "them.",
           "Do",
           "$no_entry",
-          "spare",
+          "$pleading_face+doing",
           "them,",
           "but",
           "put",
