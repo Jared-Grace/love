@@ -484,7 +484,7 @@ export function bible_glyph_chapter_jdg02() {
           "of",
           "the",
           "$i_am",
-          "was",
+          "$link",
           "against",
           "them",
           "to",
