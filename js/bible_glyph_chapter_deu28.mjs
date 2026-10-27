@@ -1913,7 +1913,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "your",
           "$seed",
-          "extraordinary",
+          "$star_struck",
           "disasters,",
           "severe",
           "and",
