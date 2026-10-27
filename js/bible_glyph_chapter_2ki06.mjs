@@ -111,7 +111,7 @@ export function bible_glyph_chapter_2ki06() {
           "they",
           "began",
           "to",
-          "cut",
+          "$axe+divide+doing",
           "down",
           "some",
           "$tree.",
