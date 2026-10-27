@@ -569,7 +569,7 @@ export function bible_glyph_chapter_zec08() {
           "$heart_red+doing",
           "to",
           "$raised_back_of_hand",
-          "falsely,",
+          "$lying_face,",
           "for",
           "I",
           "hate",
