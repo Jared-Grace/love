@@ -702,7 +702,7 @@ export function bible_glyph_chapter_deu15() {
           "is",
           "$manual_wheelchair",
           "or",
-          "blind,",
+          "$person_with_white_cane+describing,",
           "or",
           "has",
           "any",
