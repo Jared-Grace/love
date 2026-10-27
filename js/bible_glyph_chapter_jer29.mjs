@@ -590,7 +590,7 @@ export function bible_glyph_chapter_jer29() {
           "a",
           "curse,",
           "a",
-          "desolation,",
+          "$astonished+thing,",
           "and",
           "an",
           "object",
