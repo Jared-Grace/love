@@ -546,7 +546,7 @@ export function bible_glyph_chapter_jdg02() {
           "$ear",
           "their",
           "judges.",
-          "Instead",
+          "$pointing",
           "they",
           "prostituted",
           "themselves",
