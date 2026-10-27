@@ -226,7 +226,7 @@ export function bible_glyph_chapter_zec03() {
           "a",
           "place",
           "$brain+arrow_both_ways",
-          "these",
+          "$flashlight+flashlight",
           "who",
           "are",
           "standing",
