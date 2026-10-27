@@ -231,7 +231,7 @@ export function bible_glyph_chapter_zec12() {
           "them",
           "on",
           "the",
-          "right",
+          "$hand+right_arrow",
           "and",
           "on",
           "the",
