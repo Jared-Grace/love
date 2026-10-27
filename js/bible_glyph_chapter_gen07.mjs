@@ -410,7 +410,7 @@ export function bible_glyph_chapter_gen07() {
           "that",
           "has",
           "the",
-          "breath",
+          "$wind",
           "of",
           "$sprout.",
         ],
