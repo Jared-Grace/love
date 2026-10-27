@@ -142,7 +142,7 @@ export function bible_glyph_chapter_est04() {
           "instead",
           "of",
           "his",
-          "sackcloth,",
+          "$sackcloth,",
           "but",
           "he",
           "would",
