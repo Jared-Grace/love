@@ -164,7 +164,7 @@ export function bible_glyph_chapter_deu19() {
           "and",
           "swings",
           "his",
-          "axe",
+          "$axe",
           "to",
           "chop",
           "down",
