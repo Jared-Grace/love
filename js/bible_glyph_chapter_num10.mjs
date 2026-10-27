@@ -528,7 +528,7 @@ export function bible_glyph_chapter_num10() {
           "out,",
           "$lifting",
           "the",
-          "holy",
+          "$sparkle+house",
           "objects,",
           "and",
           "the",
