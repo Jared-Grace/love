@@ -457,7 +457,7 @@ export function bible_glyph_chapter_exo36() {
           "Each",
           "of",
           "the",
-          "eleven",
+          "$one+plus",
           "curtains",
           "was",
           "$three+zero",
