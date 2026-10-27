@@ -581,7 +581,7 @@ export function bible_glyph_chapter_zep03() {
       {
         verse_number: 19,
         words: [
-          "Behold,",
+          "$exclamation,",
           "at",
           "that",
           "time",
