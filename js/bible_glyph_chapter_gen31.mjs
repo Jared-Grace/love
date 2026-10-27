@@ -142,7 +142,7 @@ export function bible_glyph_chapter_gen31() {
       {
         verse_number: 6,
         words: [
-          "You",
+          "$you",
           "$lightbulb",
           "that",
           "with",
