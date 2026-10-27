@@ -237,7 +237,7 @@ export function bible_glyph_chapter_zec03() {
         verse_number: 8,
         words: [
           "$ear",
-          "now,",
+          "$pleading,",
           "O",
           "$i_am+rescue",
           "the",
