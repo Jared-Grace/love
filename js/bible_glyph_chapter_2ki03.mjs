@@ -687,7 +687,7 @@ export function bible_glyph_chapter_2ki03() {
           "$father+proper_name",
           "had",
           "$ear",
-          "that",
+          "$pointing",
           "the",
           "$king",
           "had",
