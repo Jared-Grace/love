@@ -305,7 +305,7 @@ export function bible_glyph_chapter_lev26() {
           "room",
           "for",
           "the",
-          "new.",
+          "$new_button.",
         ],
       },
       {
