@@ -333,7 +333,7 @@ export function bible_glyph_chapter_deu14() {
           "$bird+desert,",
           "the",
           "screech",
-          "owl,",
+          "$bird+night,",
           "the",
           "gull,",
           "any",
