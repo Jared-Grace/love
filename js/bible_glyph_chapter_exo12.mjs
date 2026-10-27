@@ -1528,7 +1528,7 @@ export function bible_glyph_chapter_exo12() {
           "$earth.",
           "But",
           "$no_entry",
-          "uncircumcised",
+          "$no_entry+scissors+covenant",
           "man",
           "may",
           "$eating",
