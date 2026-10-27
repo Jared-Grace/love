@@ -228,7 +228,7 @@ export function bible_glyph_chapter_jos06() {
           "ahead",
           "of",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$i_am.",
