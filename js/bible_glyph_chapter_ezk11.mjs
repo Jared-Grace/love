@@ -474,7 +474,7 @@ export function bible_glyph_chapter_ezk11() {
           "$speech,",
           "They",
           "are",
-          "far",
+          "$satellite+doing",
           "away",
           "from",
           "$i_am.",
