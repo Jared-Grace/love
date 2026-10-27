@@ -107,7 +107,7 @@ export function bible_glyph_chapter_lev24() {
           "also",
           "$flour",
           "and",
-          "bake",
+          "$bread+fire",
           "twelve",
           "loaves,",
           "using",
