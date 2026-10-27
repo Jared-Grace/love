@@ -1157,7 +1157,7 @@ export function bible_glyph_chapter_gen42() {
           "hair",
           "down",
           "to",
-          "Sheol",
+          "$pointing_down+skull",
           "in",
           "$crying_face+thing.",
         ],
