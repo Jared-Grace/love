@@ -1104,7 +1104,7 @@ export function bible_glyph_chapter_exo28() {
           "You",
           "are",
           "to",
-          "weave",
+          "$yarn+gem_stone+doing",
           "the",
           "tunic",
           "with",
