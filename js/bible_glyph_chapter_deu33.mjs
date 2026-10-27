@@ -50,7 +50,7 @@ export function bible_glyph_chapter_deu33() {
           "$proper_name$Seir.",
           "He",
           "shone",
-          "forth",
+          "$sun_with_face+light+doing",
           "from",
           "$mountain",
           "$proper_name$Paran",
