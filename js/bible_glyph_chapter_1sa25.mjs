@@ -264,7 +264,7 @@ export function bible_glyph_chapter_1sa25() {
           "young",
           "men",
           "find",
-          "favor",
+          "$heart_orange",
           "in",
           "your",
           "$eyes,",
