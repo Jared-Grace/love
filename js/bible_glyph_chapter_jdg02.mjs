@@ -391,7 +391,7 @@ export function bible_glyph_chapter_jdg02() {
           "they",
           "$walking",
           "$next_track",
-          "various",
+          "$plus+one",
           "$moai,",
           "the",
           "$moai",
