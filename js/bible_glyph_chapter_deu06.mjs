@@ -425,7 +425,7 @@ export function bible_glyph_chapter_deu06() {
           "of",
           "the",
           "$family",
-          "around",
+          "$around",
           "you.",
         ],
       },
