@@ -1292,7 +1292,7 @@ export function bible_glyph_chapter_jer31() {
           "$seed",
           "because",
           "of",
-          "all",
+          "$all",
           "they",
           "have",
           "$hammer+doing,",
