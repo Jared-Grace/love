@@ -444,7 +444,7 @@ export function bible_glyph_chapter_gen21() {
           "of",
           "$heart_on_fire",
           "$waving_hand",
-          "to",
+          "$toward",
           "$proper_name$Hagar",
           "from",
           "$sky,",
