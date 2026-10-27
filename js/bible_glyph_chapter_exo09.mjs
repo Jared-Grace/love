@@ -507,7 +507,7 @@ export function bible_glyph_chapter_exo09() {
       {
         verse_number: 17,
         words: [
-          "Still",
+          "$repeat",
           "you",
           "lord",
           "it",
