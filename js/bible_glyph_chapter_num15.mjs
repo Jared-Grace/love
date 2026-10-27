@@ -590,7 +590,7 @@ export function bible_glyph_chapter_num15() {
           "$i_am",
           "has",
           "$mouth",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
         ],
       },
