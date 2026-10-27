@@ -200,7 +200,7 @@ export function bible_glyph_chapter_jdg04() {
           "out",
           "$proper_name$Sisera,",
           "the",
-          "commander",
+          "$military_medal",
           "of",
           "Jabin",
           "army,",
