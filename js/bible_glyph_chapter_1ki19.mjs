@@ -366,7 +366,7 @@ export function bible_glyph_chapter_1ki19() {
           "$walking+tray_out",
           "out",
           "and",
-          "stand",
+          "$person+round_pushpin",
           "on",
           "the",
           "$mountain",
