@@ -340,7 +340,7 @@ export function bible_glyph_chapter_zec08() {
           "I",
           "had",
           "turned",
-          "every",
+          "$all",
           "$person",
           "against",
           "his",
