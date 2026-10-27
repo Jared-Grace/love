@@ -53,7 +53,7 @@ export function bible_glyph_chapter_2sa07() {
           "a",
           "$house",
           "of",
-          "cedar,",
+          "$cedar,",
           "while",
           "the",
           "ark",
