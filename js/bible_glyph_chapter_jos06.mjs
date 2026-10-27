@@ -640,7 +640,7 @@ export function bible_glyph_chapter_jos06() {
           "the",
           "articles",
           "of",
-          "bronze",
+          "$bronze",
           "and",
           "iron",
           "are",
