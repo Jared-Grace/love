@@ -265,7 +265,7 @@ export function bible_glyph_chapter_deu10() {
           "to",
           "$lifting",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$covenant",
