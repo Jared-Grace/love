@@ -1195,7 +1195,7 @@ export function bible_glyph_chapter_exo29() {
           "other",
           "$lamb",
           "at",
-          "twilight.",
+          "$sunset.",
         ],
       },
       {
