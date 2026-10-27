@@ -161,7 +161,7 @@ export function bible_glyph_chapter_lev05() {
           "in",
           "$one",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "ways,",
           "$hands_raised",
           "$bow+doing",
