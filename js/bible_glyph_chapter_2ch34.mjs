@@ -557,7 +557,7 @@ export function bible_glyph_chapter_2ch34() {
           "$proper_name$Hilkiah",
           "the",
           "$priest",
-          "found",
+          "$magnifying_glass+exclamation",
           "the",
           "Book",
           "of",
