@@ -942,7 +942,7 @@ export function bible_glyph_chapter_deu09() {
       {
         verse_number: 27,
         words: [
-          "Remember",
+          "$reminder_ribbon",
           "Your",
           "$kneeling",
           "$father+map,",
