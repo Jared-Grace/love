@@ -212,7 +212,7 @@ export function bible_glyph_chapter_2ki06() {
           "$king",
           "of",
           "$proper_name$Aram",
-          "was",
+          "$link",
           "at",
           "war",
           "against",
