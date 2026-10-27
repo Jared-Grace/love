@@ -308,7 +308,7 @@ export function bible_glyph_chapter_ezr01() {
           "of",
           "$proper_name$Mithredath",
           "the",
-          "treasurer,",
+          "$money_bag+person,",
           "who",
           "counted",
           "them",
