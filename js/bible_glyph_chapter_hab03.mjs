@@ -257,7 +257,7 @@ export function bible_glyph_chapter_hab03() {
           "its",
           "$hand",
           "on",
-          "high.",
+          "$up_arrow+place.",
         ],
       },
       {
