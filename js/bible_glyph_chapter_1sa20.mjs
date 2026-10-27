@@ -154,7 +154,7 @@ export function bible_glyph_chapter_1sa20() {
           "is",
           "but",
           "a",
-          "step",
+          "$footprints+one",
           "between",
           "me",
           "and",
