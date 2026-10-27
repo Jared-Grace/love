@@ -835,7 +835,7 @@ export function bible_glyph_chapter_lev11() {
           "of",
           "their",
           "carcasses",
-          "falls",
+          "$person+pointing_down",
           "will",
           "be",
           "unclean.",
