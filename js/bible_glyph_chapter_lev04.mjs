@@ -248,7 +248,7 @@ export function bible_glyph_chapter_lev04() {
           "remove",
           "with",
           "the",
-          "kidneys,",
+          "$heart_organ+two,",
         ],
       },
       {
