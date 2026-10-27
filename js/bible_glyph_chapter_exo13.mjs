@@ -672,7 +672,7 @@ export function bible_glyph_chapter_exo13() {
           "$sun",
           "in",
           "a",
-          "pillar",
+          "$candle",
           "of",
           "$cloud",
           "to",
