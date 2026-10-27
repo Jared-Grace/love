@@ -1060,7 +1060,7 @@ export function bible_glyph_chapter_gen31() {
           "let",
           "them",
           "judge",
-          "between",
+          "$brain+arrow_both_ways",
           "us",
           "two.",
         ],
