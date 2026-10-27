@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_1sa02() {
           "it",
           "from",
           "Me.",
-          "For",
+          "$pointing",
           "those",
           "who",
           "honor",
