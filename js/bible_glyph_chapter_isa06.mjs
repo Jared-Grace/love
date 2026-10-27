@@ -132,7 +132,7 @@ export function bible_glyph_chapter_isa06() {
           "Then",
           "I",
           "$speech:",
-          "Woe",
+          "$weary_face",
           "is",
           "me,",
           "for",
