@@ -100,7 +100,7 @@ export function bible_glyph_chapter_pro03() {
       {
         verse_number: 5,
         words: [
-          "Trust",
+          "$anchor+doing",
           "in",
           "the",
           "$i_am",
