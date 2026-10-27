@@ -217,7 +217,7 @@ export function bible_glyph_chapter_1sa17() {
           "for",
           "$crossed_swords?",
           "Am",
-          "I",
+          "$me",
           "$no_entry",
           "a",
           "$proper_name$Philistine,",
