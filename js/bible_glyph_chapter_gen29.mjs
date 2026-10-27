@@ -526,7 +526,7 @@ export function bible_glyph_chapter_gen29() {
           "So",
           "$hand+foot",
           "$kneeling+doing",
-          "seven",
+          "$seven",
           "$year",
           "for",
           "$proper_name$Rachel,",
