@@ -635,7 +635,7 @@ export function bible_glyph_chapter_2ki03() {
           "$all",
           "$thumbs_up",
           "$tree,",
-          "stop",
+          "$well+locked+doing",
           "up",
           "$all",
           "$spring",
