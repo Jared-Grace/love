@@ -595,7 +595,7 @@ export function bible_glyph_chapter_gen14() {
           "of",
           "$proper_name$Sodom",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Abram,",
           "$hands_giving",
           "me",
