@@ -72,7 +72,7 @@ export function bible_glyph_chapter_hab01() {
           "You",
           "tolerate",
           "$hot_face?",
-          "Destruction",
+          "$bomb+flexed_biceps+thing",
           "and",
           "violence",
           "are",
