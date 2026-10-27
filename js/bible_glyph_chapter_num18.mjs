@@ -490,7 +490,7 @@ export function bible_glyph_chapter_num18() {
         verse_number: 13,
         words: [
           "The",
-          "firstfruits",
+          "$first_place+sprout",
           "of",
           "everything",
           "in",
