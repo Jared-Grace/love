@@ -692,7 +692,7 @@ export function bible_glyph_chapter_deu07() {
           "will",
           "$hand_sending",
           "the",
-          "hornet",
+          "$fly+sewing_needle",
           "against",
           "them",
           "until",
