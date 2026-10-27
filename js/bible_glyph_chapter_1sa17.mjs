@@ -1563,7 +1563,7 @@ export function bible_glyph_chapter_1sa17() {
         words: [
           "Thus",
           "$two_hearts+proper_name",
-          "prevailed",
+          "$might+up_arrow",
           "$tray_out",
           "the",
           "$proper_name$Philistine",
