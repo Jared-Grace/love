@@ -93,7 +93,7 @@ export function bible_glyph_chapter_mic05() {
           "will",
           "be",
           "$hands_giving",
-          "until",
+          "$finish",
           "she",
           "who",
           "is",
