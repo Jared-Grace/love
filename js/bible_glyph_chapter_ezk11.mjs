@@ -505,7 +505,7 @@ export function bible_glyph_chapter_ezk11() {
           "I",
           "sent",
           "them",
-          "far",
+          "$satellite+doing",
           "away",
           "among",
           "the",
