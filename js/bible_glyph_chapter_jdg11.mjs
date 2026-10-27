@@ -869,7 +869,7 @@ export function bible_glyph_chapter_jdg11() {
       {
         verse_number: 27,
         words: [
-          "I",
+          "$me",
           "have",
           "$no_entry",
           "$bow+doing",
