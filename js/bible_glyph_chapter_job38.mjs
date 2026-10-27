@@ -474,7 +474,7 @@ export function bible_glyph_chapter_job38() {
           "$pizza+doing,",
           "or",
           "the",
-          "east",
+          "$compass+right_arrow+thing",
           "wind",
           "$confetti_ball",
           "over",
