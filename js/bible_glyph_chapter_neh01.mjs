@@ -155,7 +155,7 @@ export function bible_glyph_chapter_neh01() {
           "of",
           "$sky,",
           "the",
-          "great",
+          "$top",
           "and",
           "awesome",
           "$heart_on_fire",
