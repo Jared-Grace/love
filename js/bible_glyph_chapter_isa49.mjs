@@ -726,7 +726,7 @@ export function bible_glyph_chapter_isa49() {
           "all",
           "alone,",
           "so",
-          "where",
+          "$map+question",
           "did",
           "they",
           "come",
