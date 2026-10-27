@@ -632,7 +632,7 @@ export function bible_glyph_chapter_deu14() {
           "or",
           "anything",
           "you",
-          "wish.",
+          "$question.",
           "You",
           "are",
           "to",
