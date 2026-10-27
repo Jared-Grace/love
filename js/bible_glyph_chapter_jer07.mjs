@@ -280,7 +280,7 @@ export function bible_glyph_chapter_jer07() {
           "$hammer+doing",
           "$all",
           "these",
-          "abominations?",
+          "$vomiting?",
         ],
       },
       {
