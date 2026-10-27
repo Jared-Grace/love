@@ -777,7 +777,7 @@ export function bible_glyph_chapter_exo16() {
           "$all",
           "$more+doing",
           "and",
-          "keep",
+          "$guard+thing",
           "it",
           "until",
           "morning.",
