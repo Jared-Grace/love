@@ -432,7 +432,7 @@ export function bible_glyph_chapter_deu06() {
       {
         verse_number: 15,
         words: [
-          "For",
+          "$pointing",
           "the",
           "$i_am",
           "your",
