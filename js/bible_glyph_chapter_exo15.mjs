@@ -650,7 +650,7 @@ export function bible_glyph_chapter_exo15() {
           "$pointing_up",
           "$fishing_pole+proper_name,",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "are",
           "we",
           "to",
