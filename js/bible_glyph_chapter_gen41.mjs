@@ -862,7 +862,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "$pointing_up,",
           "the",
-          "dream",
+          "$dream",
           "was",
           "given",
           "to",
