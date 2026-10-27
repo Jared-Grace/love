@@ -1174,7 +1174,7 @@ export function bible_glyph_chapter_num22() {
           "went",
           "out",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "him",
           "at",
           "the",
