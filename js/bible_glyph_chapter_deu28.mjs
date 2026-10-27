@@ -1961,7 +1961,7 @@ export function bible_glyph_chapter_deu28() {
           "upon",
           "you",
           "$all",
-          "sickness",
+          "$thermometer_face+thing",
           "and",
           "plague",
           "$no_entry",
