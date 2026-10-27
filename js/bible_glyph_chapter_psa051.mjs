@@ -418,7 +418,7 @@ export function bible_glyph_chapter_psa051() {
           "delight",
           "in",
           "$ruler+thing",
-          "sacrifices,",
+          "$sacrifice,",
           "in",
           "whole",
           "burnt",
