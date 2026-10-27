@@ -258,7 +258,7 @@ export function bible_glyph_chapter_jer17() {
           "It",
           "does",
           "$no_entry",
-          "fear",
+          "$fear+doing",
           "when",
           "the",
           "heat",
