@@ -546,7 +546,7 @@ export function bible_glyph_chapter_pro01() {
           "$telescope+clock",
           "they",
           "will",
-          "call",
+          "$waving_hand",
           "on",
           "me,",
           "but",
