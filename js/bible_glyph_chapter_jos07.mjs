@@ -248,7 +248,7 @@ export function bible_glyph_chapter_jos07() {
           "$earth",
           "before",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$i_am",
