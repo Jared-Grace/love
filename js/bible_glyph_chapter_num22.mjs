@@ -800,7 +800,7 @@ export function bible_glyph_chapter_num22() {
           "crushing",
           "$proper_name$Balaam's",
           "$foot",
-          "against",
+          "$toward",
           "it.",
           "So",
           "he",
