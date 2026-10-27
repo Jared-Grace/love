@@ -398,7 +398,7 @@ export function bible_glyph_chapter_lev24() {
           "of",
           "Israel,",
           "$speech:",
-          "If",
+          "$pointing",
           "a",
           "$man_beard,",
           "any",
