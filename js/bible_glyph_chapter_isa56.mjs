@@ -222,7 +222,7 @@ export function bible_glyph_chapter_isa56() {
           "$kneeling,",
           "$all",
           "who",
-          "keep",
+          "$guard",
           "the",
           "$sabbath",
           "without",
