@@ -312,7 +312,7 @@ export function bible_glyph_chapter_gen28() {
           "that",
           "place,",
           "he",
-          "put",
+          "$palm_down",
           "it",
           "under",
           "his",
