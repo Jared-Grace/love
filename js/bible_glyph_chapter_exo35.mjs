@@ -556,7 +556,7 @@ export function bible_glyph_chapter_exo35() {
           "$man_beard",
           "$back+flashlight",
           "had",
-          "blue,",
+          "$blue_circle,",
           "purple",
           "or",
           "scarlet",
