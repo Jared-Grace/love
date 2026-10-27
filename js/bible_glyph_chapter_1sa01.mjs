@@ -555,7 +555,7 @@ export function bible_glyph_chapter_1sa01() {
           "$eating,",
           "and",
           "her",
-          "face",
+          "$face",
           "was",
           "$no_entry",
           "longer",
