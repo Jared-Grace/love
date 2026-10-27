@@ -700,7 +700,7 @@ export function bible_glyph_chapter_deu09() {
           "afraid",
           "of",
           "the",
-          "anger",
+          "$nose+fire",
           "and",
           "wrath",
           "that",
