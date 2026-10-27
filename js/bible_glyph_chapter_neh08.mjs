@@ -347,7 +347,7 @@ export function bible_glyph_chapter_neh08() {
           "$heart_on_fire.",
           "Do",
           "$no_entry",
-          "mourn",
+          "$loudly_crying+coffin",
           "or",
           "weep.",
           "For",
