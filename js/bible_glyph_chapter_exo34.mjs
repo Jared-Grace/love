@@ -872,7 +872,7 @@ export function bible_glyph_chapter_exo34() {
           "down",
           "$flashlight+flashlight",
           "$speech,",
-          "for",
+          "$pointing",
           "in",
           "accordance",
           "with",
