@@ -467,7 +467,7 @@ export function bible_glyph_chapter_lev19() {
           "neighbour",
           "as",
           "yourself.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am.",
