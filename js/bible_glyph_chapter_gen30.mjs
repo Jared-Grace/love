@@ -873,7 +873,7 @@ export function bible_glyph_chapter_gen30() {
           "not",
           "$black_circle+describing",
           "and",
-          "spotted",
+          "$black_circle+white_circle+doing",
           "among",
           "the",
           "$goat,",
