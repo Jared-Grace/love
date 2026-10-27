@@ -430,7 +430,7 @@ export function bible_glyph_chapter_lev25() {
           "You",
           "are",
           "to",
-          "buy",
+          "$coin+hand_receiving",
           "from",
           "your",
           "neighbor",
