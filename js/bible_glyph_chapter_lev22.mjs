@@ -82,7 +82,7 @@ export function bible_glyph_chapter_lev22() {
           "a",
           "state",
           "of",
-          "uncleanness,",
+          "$soap+no_entry+thing,",
           "that",
           "$person_other",
           "must",
