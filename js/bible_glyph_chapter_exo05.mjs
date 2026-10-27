@@ -511,7 +511,7 @@ export function bible_glyph_chapter_exo05() {
           "But",
           "Pharaoh",
           "$speech,",
-          "You",
+          "$you",
           "are",
           "slackers.",
           "Slackers.",
