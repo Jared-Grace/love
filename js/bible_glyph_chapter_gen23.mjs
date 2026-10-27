@@ -422,7 +422,7 @@ export function bible_glyph_chapter_gen23() {
           "bury",
           "my",
           "$skull+doing",
-          "there.",
+          "$telescope.",
         ],
       },
       {
