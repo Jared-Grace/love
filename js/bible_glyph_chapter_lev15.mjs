@@ -100,7 +100,7 @@ export function bible_glyph_chapter_lev15() {
           "$soap+no_entry,",
           "and",
           "any",
-          "furniture",
+          "$toolbox",
           "$pointing_up",
           "$back+flashlight",
           "he",
