@@ -73,7 +73,7 @@ export function bible_glyph_chapter_zec12() {
           "$hands_raised+proper_name",
           "will",
           "be",
-          "besieged",
+          "$city+around+thing",
           "as",
           "well",
           "as",
