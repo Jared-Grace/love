@@ -65,7 +65,7 @@ export function bible_glyph_chapter_psa121() {
           "Protector",
           "will",
           "$no_entry",
-          "slumber.",
+          "$sleeping_face+eye+doing.",
         ],
       },
       {
