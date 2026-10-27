@@ -961,7 +961,7 @@ export function bible_glyph_chapter_lev07() {
       {
         verse_number: 38,
         words: [
-          "which",
+          "$back+flashlight",
           "$i_am",
           "gave",
           "$fishing_pole+proper_name",
