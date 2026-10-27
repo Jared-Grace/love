@@ -509,7 +509,7 @@ export function bible_glyph_chapter_jer32() {
       {
         verse_number: 15,
         words: [
-          "For",
+          "$pointing",
           "this",
           "is",
           "what",
