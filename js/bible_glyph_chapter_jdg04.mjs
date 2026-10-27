@@ -119,7 +119,7 @@ export function bible_glyph_chapter_jdg04() {
           "$pointing_back",
           "would",
           "$person+house",
-          "under",
+          "$down_arrow",
           "the",
           "Palm",
           "of",
