@@ -930,7 +930,7 @@ export function bible_glyph_chapter_deu12() {
           "$flashlight+flashlight",
           "$speech",
           "$me",
-          "command",
+          "$speech+scroll",
           "you,",
           "so",
           "that",
