@@ -56,7 +56,7 @@ export function bible_glyph_chapter_exo38() {
           "that",
           "the",
           "$horn",
-          "were",
+          "$link",
           "$tray_out",
           "one",
           "piece",
