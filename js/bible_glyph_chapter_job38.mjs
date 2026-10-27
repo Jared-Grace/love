@@ -38,7 +38,7 @@ export function bible_glyph_chapter_job38() {
           "by",
           "words",
           "without",
-          "knowledge?",
+          "$lightbulb+thing?",
         ],
       },
       {
