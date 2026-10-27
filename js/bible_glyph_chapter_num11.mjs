@@ -166,7 +166,7 @@ export function bible_glyph_chapter_num11() {
           "gone;",
           "there",
           "is",
-          "nothing",
+          "$dotted_line_face",
           "to",
           "$eyes",
           "but",
