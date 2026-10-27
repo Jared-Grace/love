@@ -95,7 +95,7 @@ export function bible_glyph_chapter_exo02() {
           "it",
           "among",
           "the",
-          "reeds",
+          "$sea+leaf",
           "along",
           "the",
           "bank",
