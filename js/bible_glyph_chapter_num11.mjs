@@ -425,7 +425,7 @@ export function bible_glyph_chapter_num11() {
           "this",
           "is",
           "how",
-          "You",
+          "$you",
           "are",
           "going",
           "to",
