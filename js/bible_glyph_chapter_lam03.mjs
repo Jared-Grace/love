@@ -375,7 +375,7 @@ export function bible_glyph_chapter_lam03() {
           "Yet",
           "I",
           "$turn_back",
-          "this",
+          "$flashlight",
           "to",
           "$heart_organ,",
           "and",
