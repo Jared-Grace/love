@@ -888,7 +888,7 @@ export function bible_glyph_chapter_num20() {
           "$loudly_crying",
           "for",
           "him",
-          "thirty",
+          "$three+zero",
           "$sun.",
         ],
       },
