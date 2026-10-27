@@ -381,7 +381,7 @@ export function bible_glyph_chapter_gen21() {
           "the",
           "$child",
           "$down_arrow",
-          "one",
+          "$one",
           "of",
           "the",
           "bushes.",
