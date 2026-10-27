@@ -483,7 +483,7 @@ export function bible_glyph_chapter_isa07() {
           "two",
           "$king",
           "$you",
-          "dread",
+          "$nauseated_face+heart_red+doing",
           "will",
           "be",
           "laid",
