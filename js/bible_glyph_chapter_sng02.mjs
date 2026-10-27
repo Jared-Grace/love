@@ -73,7 +73,7 @@ export function bible_glyph_chapter_sng02() {
           "his",
           "$fruit",
           "is",
-          "sweet",
+          "$candy",
           "to",
           "my",
           "taste.",
