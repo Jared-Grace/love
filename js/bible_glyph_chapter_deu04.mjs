@@ -634,7 +634,7 @@ export function bible_glyph_chapter_deu04() {
           "in",
           "the",
           "$water",
-          "below",
+          "$down_arrow",
           "the",
           "$earth.",
         ],
