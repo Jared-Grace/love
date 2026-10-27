@@ -251,7 +251,7 @@ export function bible_glyph_chapter_deu01() {
           "possess",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "swore",
