@@ -959,7 +959,7 @@ export function bible_glyph_chapter_2ki09() {
           "of",
           "his",
           "$son,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "so",
