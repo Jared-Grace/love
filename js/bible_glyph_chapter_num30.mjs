@@ -474,7 +474,7 @@ export function bible_glyph_chapter_num30() {
           "vows",
           "and",
           "$knot+thing",
-          "that",
+          "$back+flashlight",
           "bind",
           "her.",
           "He",
