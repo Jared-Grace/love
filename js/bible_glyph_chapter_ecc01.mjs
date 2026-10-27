@@ -267,7 +267,7 @@ export function bible_glyph_chapter_ecc01() {
           "$me,",
           "the",
           "Teacher,",
-          "was",
+          "$link",
           "$king",
           "over",
           "$wrestling+heart_on_fire",
