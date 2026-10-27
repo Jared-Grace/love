@@ -619,7 +619,7 @@ export function bible_glyph_chapter_dan01() {
           "$scales+speech+heart_on_fire+proper_name",
           "$link",
           "there",
-          "until",
+          "$finish",
           "the",
           "first",
           "$year",
