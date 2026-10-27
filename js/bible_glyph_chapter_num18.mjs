@@ -870,7 +870,7 @@ export function bible_glyph_chapter_num18() {
         words: [
           "$pointing",
           "the",
-          "tithe",
+          "$ten+hands_giving",
           "that",
           "the",
           "$son",
