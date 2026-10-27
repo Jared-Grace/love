@@ -448,7 +448,7 @@ export function bible_glyph_chapter_mic06() {
           "$oil+droplet+doing",
           "yourselves",
           "with",
-          "oil;",
+          "$lotion_bottle;",
           "you",
           "will",
           "tread",
