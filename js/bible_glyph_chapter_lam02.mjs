@@ -830,7 +830,7 @@ export function bible_glyph_chapter_lam02() {
           "corner",
           "of",
           "$all",
-          "street.",
+          "$sun_behind_small_cloud.",
         ],
       },
       {
