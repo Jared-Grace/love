@@ -223,7 +223,7 @@ export function bible_glyph_chapter_deu18() {
           "$handshake",
           "who",
           "$person+round_pushpin",
-          "there",
+          "$telescope",
           "before",
           "the",
           "$i_am.",
