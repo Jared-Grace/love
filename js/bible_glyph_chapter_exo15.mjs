@@ -81,7 +81,7 @@ export function bible_glyph_chapter_exo15() {
           "and",
           "I",
           "will",
-          "exalt",
+          "$up_arrow",
           "Him.",
         ],
       },
