@@ -1844,7 +1844,7 @@ export function bible_glyph_chapter_lev13() {
           "$tray_out",
           "the",
           "weave,",
-          "or",
+          "$shuffle",
           "$tray_out",
           "the",
           "knit.",
