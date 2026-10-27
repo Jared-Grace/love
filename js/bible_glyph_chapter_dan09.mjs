@@ -708,7 +708,7 @@ export function bible_glyph_chapter_dan09() {
       {
         verse_number: 20,
         words: [
-          "While",
+          "$repeat",
           "I",
           "was",
           "$mouth,",
