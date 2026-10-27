@@ -287,7 +287,7 @@ export function bible_glyph_chapter_ecc03() {
           "them",
           "than",
           "to",
-          "rejoice",
+          "$beaming+doing",
           "and",
           "$hammer+doing",
           "$thumbs_up",
