@@ -448,7 +448,7 @@ export function bible_glyph_chapter_lam02() {
         words: [
           "My",
           "$eyes",
-          "fail",
+          "$end_arrow",
           "from",
           "weeping;",
           "I",
