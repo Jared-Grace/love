@@ -125,7 +125,7 @@ export function bible_glyph_chapter_exo27() {
           "$hands_giving",
           "the",
           "grate",
-          "beneath",
+          "$down_arrow+manner",
           "the",
           "$top+around",
           "of",
