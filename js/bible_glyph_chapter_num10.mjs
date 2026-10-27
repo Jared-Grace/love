@@ -693,7 +693,7 @@ export function bible_glyph_chapter_num10() {
           "march",
           "for",
           "the",
-          "divisions",
+          "$military_helmet",
           "of",
           "the",
           "$son",
