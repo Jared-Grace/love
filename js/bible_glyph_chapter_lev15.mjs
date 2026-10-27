@@ -650,7 +650,7 @@ export function bible_glyph_chapter_lev15() {
           "Whoever",
           "touches",
           "any",
-          "furniture",
+          "$toolbox",
           "on",
           "which",
           "she",
