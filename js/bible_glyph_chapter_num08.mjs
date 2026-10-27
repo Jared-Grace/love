@@ -436,7 +436,7 @@ export function bible_glyph_chapter_num08() {
           "the",
           "$hugging_face+baby,",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "all",
           "$son",
