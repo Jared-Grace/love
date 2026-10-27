@@ -1996,7 +1996,7 @@ export function bible_glyph_chapter_gen24() {
           "and",
           "was",
           "comforted",
-          "after",
+          "$next_track",
           "his",
           "mother's",
           "death.",
