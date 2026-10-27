@@ -28,7 +28,7 @@ export function bible_glyph_chapter_num14() {
           "and",
           "the",
           "$family",
-          "wept",
+          "$loudly_crying",
           "that",
           "$night.",
         ],
