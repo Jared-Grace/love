@@ -30,7 +30,7 @@ export function bible_glyph_chapter_gen46() {
           "to",
           "Beersheba",
           "he",
-          "offered",
+          "$sacrifice",
           "$sacrifice",
           "to",
           "the",
