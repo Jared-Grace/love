@@ -131,7 +131,7 @@ export function bible_glyph_chapter_jer18() {
           "with",
           "you",
           "as",
-          "this",
+          "$flashlight",
           "potter",
           "does,",
           "O",
