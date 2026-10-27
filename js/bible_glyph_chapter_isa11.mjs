@@ -284,7 +284,7 @@ export function bible_glyph_chapter_isa11() {
           "My",
           "$sparkle+thing",
           "$mountain,",
-          "for",
+          "$pointing",
           "the",
           "$earth",
           "will",
