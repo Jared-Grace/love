@@ -1432,7 +1432,7 @@ export function bible_glyph_chapter_gen41() {
           "has",
           "made",
           "me",
-          "forget",
+          "$reminder_ribbon+away+doing",
           "all",
           "my",
           "hardship",
