@@ -158,7 +158,7 @@ export function bible_glyph_chapter_lev21() {
           "of",
           "their",
           "$heart_on_fire.",
-          "Because",
+          "$pointing",
           "they",
           "present",
           "the",
