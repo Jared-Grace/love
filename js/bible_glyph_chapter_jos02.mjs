@@ -373,7 +373,7 @@ export function bible_glyph_chapter_jos02() {
           "$melting_face",
           "and",
           "$no_entry",
-          "courage",
+          "$wind",
           "remained",
           "in",
           "$man_beard,",
