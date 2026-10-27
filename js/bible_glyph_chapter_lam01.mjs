@@ -147,7 +147,7 @@ export function bible_glyph_chapter_lam01() {
           "$face_exhaling+voice+doing,",
           "her",
           "maidens",
-          "grieve,",
+          "$broken_heart+crying_face+doing,",
           "and",
           "she",
           "herself",
