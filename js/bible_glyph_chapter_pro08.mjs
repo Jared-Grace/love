@@ -391,7 +391,7 @@ export function bible_glyph_chapter_pro08() {
           "me",
           "as",
           "His",
-          "first",
+          "$first_place+thing",
           "$road,",
           "before",
           "His",
