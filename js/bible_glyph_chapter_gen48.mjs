@@ -485,7 +485,7 @@ export function bible_glyph_chapter_gen48() {
           "my",
           "life",
           "$finish",
-          "this",
+          "$flashlight",
           "$sun,",
         ],
       },
