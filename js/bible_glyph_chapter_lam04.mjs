@@ -72,7 +72,7 @@ export function bible_glyph_chapter_lam04() {
       {
         verse_number: 3,
         words: [
-          "Even",
+          "$plus",
           "jackals",
           "offer",
           "their",
