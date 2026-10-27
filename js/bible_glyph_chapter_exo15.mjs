@@ -261,7 +261,7 @@ export function bible_glyph_chapter_exo15() {
           "blew",
           "with",
           "Your",
-          "breath,",
+          "$wind,",
           "and",
           "the",
           "$sea",
