@@ -470,7 +470,7 @@ export function bible_glyph_chapter_hab03() {
           "$sheep+locked",
           "and",
           "no",
-          "cattle",
+          "$cow_face",
           "are",
           "in",
           "the",
