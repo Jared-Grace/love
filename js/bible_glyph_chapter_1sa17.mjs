@@ -20,7 +20,7 @@ export function bible_glyph_chapter_1sa17() {
           "their",
           "forces",
           "for",
-          "war",
+          "$crossed_swords",
           "at",
           "$proper_name$Socoh",
           "in",
