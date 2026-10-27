@@ -139,7 +139,7 @@ export function bible_glyph_chapter_num20() {
           "or",
           "$fig",
           "or",
-          "vines",
+          "$vine",
           "or",
           "pomegranates,",
           "and",
