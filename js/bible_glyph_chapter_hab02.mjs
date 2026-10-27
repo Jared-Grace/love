@@ -604,7 +604,7 @@ export function bible_glyph_chapter_hab02() {
           "$exclamation,",
           "it",
           "is",
-          "overlaid",
+          "$crab",
           "with",
           "gold",
           "and",
