@@ -323,7 +323,7 @@ export function bible_glyph_chapter_psa145() {
           "$eyes",
           "of",
           "all",
-          "look",
+          "$crossed_fingers+clock+doing",
           "to",
           "You,",
           "and",
