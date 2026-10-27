@@ -350,7 +350,7 @@ export function bible_glyph_chapter_1ki20() {
           "also,",
           "$traffic_light",
           "the",
-          "dust",
+          "$dust",
           "of",
           "$guard+proper_name",
           "is",
