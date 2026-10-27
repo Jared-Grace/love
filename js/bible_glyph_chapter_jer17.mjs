@@ -470,7 +470,7 @@ export function bible_glyph_chapter_jer17() {
           "$speech",
           "to",
           "me,",
-          "Where",
+          "$question+round_pushpin",
           "is",
           "the",
           "$speech",
