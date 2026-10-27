@@ -959,7 +959,7 @@ export function bible_glyph_chapter_exo30() {
           "where",
           "I",
           "will",
-          "meet",
+          "$alarm_clock+doing",
           "with",
           "you.",
           "It",
