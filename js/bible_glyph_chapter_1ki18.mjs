@@ -811,7 +811,7 @@ export function bible_glyph_chapter_1ki18() {
           "but",
           "do",
           "$no_entry",
-          "light",
+          "$palm_down",
           "the",
           "$fire.",
         ],
