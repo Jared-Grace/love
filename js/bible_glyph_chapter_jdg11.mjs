@@ -701,7 +701,7 @@ export function bible_glyph_chapter_jdg11() {
           "So",
           "$wrestling+heart_on_fire",
           "took",
-          "possession",
+          "$triangular_flag",
           "of",
           "all",
           "the",
