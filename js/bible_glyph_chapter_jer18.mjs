@@ -369,7 +369,7 @@ export function bible_glyph_chapter_jer18() {
           "among",
           "the",
           "$map.",
-          "Who",
+          "$person+question",
           "has",
           "ever",
           "$ear",
