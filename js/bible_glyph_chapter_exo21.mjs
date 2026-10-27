@@ -854,7 +854,7 @@ export function bible_glyph_chapter_exo21() {
         verse_number: 30,
         words: [
           "$traffic_light",
-          "payment",
+          "$umbrella+coin",
           "is",
           "demanded",
           "of",
