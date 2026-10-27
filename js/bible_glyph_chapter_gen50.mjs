@@ -171,7 +171,7 @@ export function bible_glyph_chapter_gen50() {
           "he",
           "made",
           "you",
-          "swear",
+          "$raised_back_of_hand+doing",
           "to",
           "do.",
         ],
