@@ -437,7 +437,7 @@ export function bible_glyph_chapter_isa02() {
           "and",
           "$pointing_up",
           "$all",
-          "fortified",
+          "$wall+locked+describing",
           "$brick+shield;",
         ],
       },
