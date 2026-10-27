@@ -244,7 +244,7 @@ export function bible_glyph_chapter_gen33() {
           "$speech,",
           "$no_entry,",
           "$pleading.",
-          "If",
+          "$traffic_light",
           "I",
           "have",
           "found",
