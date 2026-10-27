@@ -232,7 +232,7 @@ export function bible_glyph_chapter_1sa16() {
           "the",
           "$i_am",
           "$speech",
-          "to",
+          "$toward",
           "$ear+heart_on_fire,",
           "Do",
           "$no_entry",
