@@ -647,7 +647,7 @@ export function bible_glyph_chapter_deu06() {
           "the",
           "$i_am",
           "$hands_giving",
-          "great",
+          "$top",
           "and",
           "$thumbs_down",
           "$placard",
