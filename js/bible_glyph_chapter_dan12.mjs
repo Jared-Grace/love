@@ -170,7 +170,7 @@ export function bible_glyph_chapter_dan12() {
           "$eye,",
           "and",
           "saw",
-          "two",
+          "$two",
           "others",
           "standing",
           "there,",
