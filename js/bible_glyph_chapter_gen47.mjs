@@ -705,7 +705,7 @@ export function bible_glyph_chapter_gen47() {
           "$coin+hands_giving",
           "their",
           "$field,",
-          "because",
+          "$pointing",
           "the",
           "$famine",
           "was",
