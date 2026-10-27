@@ -350,7 +350,7 @@ export function bible_glyph_chapter_ezr01() {
           "hundred",
           "and",
           "ten",
-          "matching",
+          "$two+multiply",
           "$silver",
           "$snow+umbrella,",
           "and",
