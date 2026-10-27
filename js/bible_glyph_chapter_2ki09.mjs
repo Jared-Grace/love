@@ -1339,7 +1339,7 @@ export function bible_glyph_chapter_2ki09() {
           "one",
           "can",
           "$speech,",
-          "This",
+          "$flashlight",
           "is",
           "$proper_name$Jezebel.",
         ],
