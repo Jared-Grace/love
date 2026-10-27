@@ -17,7 +17,7 @@ export function bible_glyph_chapter_psa008() {
           "$i_am,",
           "our",
           "$crown,",
-          "how",
+          "$flashlight+question",
           "majestic",
           "is",
           "Your",
