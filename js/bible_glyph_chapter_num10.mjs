@@ -244,7 +244,7 @@ export function bible_glyph_chapter_num10() {
           "joyous",
           "$sun,",
           "your",
-          "appointed",
+          "$alarm_clock",
           "feasts",
           "and",
           "the",
