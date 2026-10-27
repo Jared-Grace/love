@@ -137,7 +137,7 @@ export function bible_glyph_chapter_amo05() {
           "$bridge",
           "to",
           "Beersheba.",
-          "For",
+          "$pointing",
           "$proper_name$Gilgal",
           "will",
           "surely",
