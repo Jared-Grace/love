@@ -274,7 +274,7 @@ export function bible_glyph_chapter_2sa05() {
           "is",
           "$speech,",
           "The",
-          "blind",
+          "$person_with_white_cane+describing",
           "and",
           "the",
           "$manual_wheelchair",
