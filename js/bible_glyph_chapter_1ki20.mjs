@@ -668,7 +668,7 @@ export function bible_glyph_chapter_1ki20() {
           "$city",
           "with",
           "the",
-          "army",
+          "$raised_fist",
           "behind",
           "them.",
         ],
