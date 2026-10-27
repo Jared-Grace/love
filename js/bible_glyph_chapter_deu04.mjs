@@ -1515,7 +1515,7 @@ export function bible_glyph_chapter_deu04() {
           "unintentionally,",
           "with",
           "$no_entry",
-          "prior",
+          "$sun+back",
           "malice.",
           "To",
           "save",
