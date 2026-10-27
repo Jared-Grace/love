@@ -364,7 +364,7 @@ export function bible_glyph_chapter_job28() {
       {
         verse_number: 19,
         words: [
-          "Topaz",
+          "$gem_stone+sun",
           "from",
           "$proper_name$Cush",
           "$no_entry",
