@@ -330,7 +330,7 @@ export function bible_glyph_chapter_ezr01() {
           "inventory.",
           "Thirty",
           "gold",
-          "dishes,",
+          "$cup+water+arrow_both_ways,",
           "a",
           "thousand",
           "silver",
