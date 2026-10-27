@@ -118,7 +118,7 @@ export function bible_glyph_chapter_zep03() {
           "He",
           "does",
           "$no_entry",
-          "fail",
+          "$crossed_swords+crowd+doing",
           "at",
           "$light,",
           "yet",
