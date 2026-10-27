@@ -184,7 +184,7 @@ export function bible_glyph_chapter_1ki08() {
           "$priest",
           "$footprints",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$covenant",
