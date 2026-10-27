@@ -864,7 +864,7 @@ export function bible_glyph_chapter_exo30() {
           "$back+flashlight",
           "mixes",
           "$lotion_bottle+bouquet+doing",
-          "like",
+          "$likeness",
           "it,",
           "or",
           "$hands_giving",
