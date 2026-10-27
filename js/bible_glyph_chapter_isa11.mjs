@@ -238,7 +238,7 @@ export function bible_glyph_chapter_isa11() {
           "$lion",
           "will",
           "$eating",
-          "straw",
+          "$wheat+scissors",
           "like",
           "the",
           "ox.",
