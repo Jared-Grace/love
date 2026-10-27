@@ -204,7 +204,7 @@ export function bible_glyph_chapter_sng02() {
           "$deer.",
           "$exclamation,",
           "he",
-          "stands",
+          "$person+round_pushpin",
           "behind",
           "our",
           "wall,",
