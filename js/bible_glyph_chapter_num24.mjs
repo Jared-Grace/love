@@ -345,7 +345,7 @@ export function bible_glyph_chapter_num24() {
           "Did",
           "I",
           "$no_entry",
-          "already",
+          "$plus",
           "$mouth",
           "the",
           "$angel",
