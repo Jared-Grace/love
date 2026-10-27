@@ -254,7 +254,7 @@ export function bible_glyph_chapter_est04() {
           "$hands_giving",
           "Hathach",
           "a",
-          "copy",
+          "$scroll+two",
           "of",
           "the",
           "written",
