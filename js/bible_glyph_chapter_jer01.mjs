@@ -495,7 +495,7 @@ export function bible_glyph_chapter_jer01() {
         words: [
           "Get",
           "yourself",
-          "ready.",
+          "$briefs+ribbon+doing.",
           "Stand",
           "up",
           "and",
