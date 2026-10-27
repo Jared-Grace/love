@@ -39,7 +39,7 @@ export function bible_glyph_chapter_zep02() {
           "passes",
           "like",
           "chaff,",
-          "before",
+          "$clock+back",
           "the",
           "burning",
           "anger",
