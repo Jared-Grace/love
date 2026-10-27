@@ -166,7 +166,7 @@ export function bible_glyph_chapter_1ki02() {
         verse_number: 5,
         words: [
           "$plus,",
-          "you",
+          "$you",
           "$lightbulb",
           "what",
           "$i_am+father",
