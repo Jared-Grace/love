@@ -116,7 +116,7 @@ export function bible_glyph_chapter_ezk37() {
           "$megaphone+doing",
           "concerning",
           "these",
-          "bones",
+          "$bone",
           "and",
           "$speech",
           "them,",
