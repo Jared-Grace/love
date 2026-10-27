@@ -359,7 +359,7 @@ export function bible_glyph_chapter_num18() {
           "or",
           "$bow",
           "or",
-          "guilt",
+          "$sacrifice+scales",
           "offerings,",
           "which",
           "they",
