@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_lev19() {
           "and",
           "$hammer+doing",
           "them.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am.",
