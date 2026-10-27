@@ -791,7 +791,7 @@ export function bible_glyph_chapter_exo04() {
           "$scissors",
           "off",
           "the",
-          "foreskin",
+          "$no_entry+scissors+covenant+thing",
           "of",
           "her",
           "$son,",
