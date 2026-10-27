@@ -63,7 +63,7 @@ export function bible_glyph_chapter_psa022() {
           "I",
           "have",
           "$no_entry",
-          "rest.",
+          "$muted_speaker+clock.",
         ],
       },
       {
