@@ -258,7 +258,7 @@ export function bible_glyph_chapter_hos06() {
           "$road",
           "to",
           "$proper_name$Shechem;",
-          "surely",
+          "$pointing",
           "they",
           "have",
           "$hammer+doing",
