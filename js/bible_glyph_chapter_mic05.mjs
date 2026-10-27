@@ -219,7 +219,7 @@ export function bible_glyph_chapter_mic05() {
           "So",
           "He",
           "will",
-          "deliver",
+          "$hand+rescue",
           "us",
           "when",
           "$proper_name$Assyria",
