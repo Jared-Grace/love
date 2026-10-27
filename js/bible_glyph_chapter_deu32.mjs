@@ -241,7 +241,7 @@ export function bible_glyph_chapter_deu32() {
           "But",
           "the",
           "$i_am",
-          "portion",
+          "$pizza",
           "is",
           "His",
           "$family,",
