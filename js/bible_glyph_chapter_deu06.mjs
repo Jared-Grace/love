@@ -370,7 +370,7 @@ export function bible_glyph_chapter_deu06() {
           "careful",
           "not",
           "to",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "the",
           "$i_am",
           "who",
