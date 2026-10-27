@@ -553,7 +553,7 @@ export function bible_glyph_chapter_jer32() {
           "$lamp+i_am,",
           "I",
           "$hands_praying",
-          "to",
+          "$toward",
           "the",
           "$i_am,",
         ],
