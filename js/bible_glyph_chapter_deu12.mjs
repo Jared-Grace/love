@@ -220,7 +220,7 @@ export function bible_glyph_chapter_deu12() {
           "shall",
           "$eating",
           "and",
-          "rejoice",
+          "$beaming+doing",
           "in",
           "all",
           "you",
