@@ -364,7 +364,7 @@ export function bible_glyph_chapter_1sa01() {
           "$sprout,",
           "and",
           "$no_entry",
-          "razor",
+          "$razor+hair",
           "shall",
           "ever",
           "touch",
