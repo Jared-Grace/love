@@ -138,7 +138,7 @@ export function bible_glyph_chapter_gen18() {
           "that",
           "you",
           "may",
-          "refresh",
+          "$hand+heart_red+doing",
           "your",
           "$heart_organ.",
           "After",
