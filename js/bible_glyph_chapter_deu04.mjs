@@ -1731,7 +1731,7 @@ export function bible_glyph_chapter_deu04() {
           "of",
           "the",
           "$desert+proper_name,",
-          "below",
+          "$down_arrow",
           "the",
           "slopes",
           "of",
