@@ -348,7 +348,7 @@ export function bible_glyph_chapter_jer23() {
           "like",
           "a",
           "$man_beard",
-          "overcome",
+          "$bridge",
           "by",
           "$wine,",
           "because",
