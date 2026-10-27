@@ -785,7 +785,7 @@ export function bible_glyph_chapter_lev19() {
           "$person_other,",
           "or",
           "put",
-          "tattoo",
+          "$sewing_needle+writing_hand",
           "$writing_hand+fire",
           "on",
           "yourselves.",
