@@ -964,7 +964,7 @@ export function bible_glyph_chapter_1sa20() {
         words: [
           "He",
           "$speech,",
-          "Please",
+          "$pleading",
           "let",
           "me",
           "go,",
