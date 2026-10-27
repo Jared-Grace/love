@@ -785,7 +785,7 @@ export function bible_glyph_chapter_num06() {
           "$i_am",
           "cause",
           "His",
-          "face",
+          "$face",
           "to",
           "shine",
           "upon",
