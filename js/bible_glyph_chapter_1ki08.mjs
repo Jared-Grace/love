@@ -26,7 +26,7 @@ export function bible_glyph_chapter_1ki08() {
           "elders",
           "of",
           "$wrestling+heart_on_fire,",
-          "all",
+          "$all",
           "the",
           "heads",
           "of",
