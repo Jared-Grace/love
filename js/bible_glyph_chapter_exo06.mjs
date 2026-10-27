@@ -304,7 +304,7 @@ export function bible_glyph_chapter_exo06() {
           "and",
           "from",
           "cruel",
-          "bondage.",
+          "$kneeling+thing.",
         ],
       },
       {
