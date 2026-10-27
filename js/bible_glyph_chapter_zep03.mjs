@@ -201,7 +201,7 @@ export function bible_glyph_chapter_zep03() {
           "rose",
           "$morning+doing",
           "to",
-          "corrupt",
+          "$collision",
           "all",
           "their",
           "deeds.",
