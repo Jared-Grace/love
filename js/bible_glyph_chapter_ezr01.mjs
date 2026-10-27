@@ -371,7 +371,7 @@ export function bible_glyph_chapter_ezr01() {
           "thousand",
           "four",
           "hundred",
-          "articles",
+          "$toolbox",
           "of",
           "gold",
           "and",
