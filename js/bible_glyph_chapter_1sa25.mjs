@@ -564,7 +564,7 @@ export function bible_glyph_chapter_1sa25() {
           "his",
           "$house.",
           "For",
-          "he",
+          "$pointing_back",
           "is",
           "such",
           "a",
