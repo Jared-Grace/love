@@ -286,7 +286,7 @@ export function bible_glyph_chapter_num24() {
           "struck",
           "his",
           "hands",
-          "together",
+          "$clapping_hands+doing",
           "and",
           "$speech",
           "to",
