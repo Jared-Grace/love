@@ -740,7 +740,7 @@ export function bible_glyph_chapter_deu29() {
           "$brown_square+proper_name",
           "and",
           "$proper_name$Zeboiim,",
-          "which",
+          "$back+flashlight",
           "the",
           "$i_am",
           "overthrew",
