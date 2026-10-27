@@ -617,7 +617,7 @@ export function bible_glyph_chapter_deu12() {
           "within",
           "your",
           "$gate$s.",
-          "Rejoice",
+          "$beaming+doing",
           "before",
           "the",
           "$i_am",
