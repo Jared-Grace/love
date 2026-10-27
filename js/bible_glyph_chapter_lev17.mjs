@@ -378,7 +378,7 @@ export function bible_glyph_chapter_lev17() {
           "the",
           "$blood,",
           "and",
-          "I",
+          "$me",
           "have",
           "$hands_giving",
           "$pointing_back",
