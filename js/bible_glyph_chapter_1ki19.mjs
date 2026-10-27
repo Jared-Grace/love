@@ -264,7 +264,7 @@ export function bible_glyph_chapter_1ki19() {
           "and",
           "$four+zero",
           "$night",
-          "until",
+          "$finish",
           "he",
           "reached",
           "$proper_name$Horeb,",
