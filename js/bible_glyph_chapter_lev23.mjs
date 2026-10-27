@@ -422,7 +422,7 @@ export function bible_glyph_chapter_lev23() {
           "you",
           "$footprints",
           "the",
-          "sheaf",
+          "$wheat+knot",
           "of",
           "the",
           "wave",
