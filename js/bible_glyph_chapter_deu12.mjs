@@ -187,7 +187,7 @@ export function bible_glyph_chapter_deu12() {
           "$saluting_face",
           "offerings",
           "and",
-          "freewill",
+          "$heart_red+gift",
           "offerings,",
           "as",
           "well",
