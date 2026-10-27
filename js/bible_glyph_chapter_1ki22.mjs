@@ -1429,7 +1429,7 @@ export function bible_glyph_chapter_1ki22() {
           "also",
           "made",
           "peace",
-          "with",
+          "$linked_paperclips",
           "the",
           "$king",
           "of",
