@@ -402,7 +402,7 @@ export function bible_glyph_chapter_psa022() {
           "$i_am,",
           "be",
           "$no_entry",
-          "far",
+          "$satellite+doing",
           "off;",
           "O",
           "my",
