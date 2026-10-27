@@ -548,7 +548,7 @@ export function bible_glyph_chapter_num23() {
           "that",
           "He",
           "should",
-          "lie,",
+          "$speech+crossed_fingers+doing,",
           "or",
           "a",
           "$son",
