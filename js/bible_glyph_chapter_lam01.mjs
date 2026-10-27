@@ -170,7 +170,7 @@ export function bible_glyph_chapter_lam01() {
           "enemies",
           "are",
           "at",
-          "ease.",
+          "$couch_and_lamp+doing.",
           "For",
           "the",
           "$i_am",
