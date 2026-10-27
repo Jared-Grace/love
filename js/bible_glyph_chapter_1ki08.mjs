@@ -285,7 +285,7 @@ export function bible_glyph_chapter_1ki08() {
           "in",
           "the",
           "$ark",
-          "except",
+          "$one+check",
           "the",
           "two",
           "$stone",
