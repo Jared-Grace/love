@@ -694,7 +694,7 @@ export function bible_glyph_chapter_exo37() {
           "$two",
           "$gold",
           "$ring",
-          "below",
+          "$down_arrow",
           "the",
           "molding",
           "on",
