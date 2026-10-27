@@ -372,7 +372,7 @@ export function bible_glyph_chapter_isa26() {
           "spirits",
           "will",
           "$zero",
-          "rise.",
+          "$person+pointing_up.",
           "Therefore",
           "You",
           "have",
