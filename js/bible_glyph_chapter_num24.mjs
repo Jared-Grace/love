@@ -540,7 +540,7 @@ export function bible_glyph_chapter_num24() {
           "and",
           "strike",
           "down",
-          "all",
+          "$all",
           "the",
           "$son",
           "of",
