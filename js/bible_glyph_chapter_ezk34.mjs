@@ -722,7 +722,7 @@ export function bible_glyph_chapter_ezk34() {
           "I",
           "will",
           "judge",
-          "between",
+          "$brain+arrow_both_ways",
           "one",
           "sheep",
           "and",
