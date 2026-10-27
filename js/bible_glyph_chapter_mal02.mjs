@@ -317,7 +317,7 @@ export function bible_glyph_chapter_mal02() {
           "Do",
           "we",
           "$no_entry",
-          "all",
+          "$all",
           "have",
           "$one",
           "$father?",
