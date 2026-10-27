@@ -634,7 +634,7 @@ export function bible_glyph_chapter_2ch07() {
           "a",
           "$man_beard",
           "to",
-          "rule",
+          "$joystick",
           "over",
           "$wrestling+heart_on_fire.",
         ],
