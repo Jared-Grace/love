@@ -58,7 +58,7 @@ export function bible_glyph_chapter_isa26() {
           "one",
           "that",
           "remains",
-          "faithful.",
+          "$anchor+describing.",
         ],
       },
       {
