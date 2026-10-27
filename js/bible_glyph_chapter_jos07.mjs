@@ -433,7 +433,7 @@ export function bible_glyph_chapter_jos07() {
           "and",
           "they",
           "have",
-          "put",
+          "$palm_down",
           "these",
           "things",
           "with",
