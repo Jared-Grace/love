@@ -27,7 +27,7 @@ export function bible_glyph_chapter_psa027() {
           "whom",
           "shall",
           "I",
-          "fear?",
+          "$fear+doing?",
           "The",
           "$i_am",
           "is",
