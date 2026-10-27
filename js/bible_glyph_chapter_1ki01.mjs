@@ -604,7 +604,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "$i_am+father",
           "the",
-          "commander",
+          "$military_medal",
           "of",
           "the",
           "army.",
