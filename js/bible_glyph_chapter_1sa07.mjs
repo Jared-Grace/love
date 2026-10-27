@@ -556,7 +556,7 @@ export function bible_glyph_chapter_1sa07() {
           "Then",
           "he",
           "would",
-          "return",
+          "$turn_back+thing",
           "to",
           "$proper_name$Ramah,",
           "because",
