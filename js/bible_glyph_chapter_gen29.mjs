@@ -177,7 +177,7 @@ export function bible_glyph_chapter_gen29() {
           "$woman",
           "$proper_name$Rachel,",
           "$footprints",
-          "with",
+          "$linked_paperclips",
           "his",
           "$sheep.",
         ],
