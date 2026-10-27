@@ -371,7 +371,7 @@ export function bible_glyph_chapter_lev24() {
           "who",
           "$ear",
           "him",
-          "lay",
+          "$crutch",
           "their",
           "$hand",
           "on",
