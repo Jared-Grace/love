@@ -19,7 +19,7 @@ export function bible_glyph_chapter_1sa25() {
           "When",
           "Samuel",
           "$skull+doing,",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire",
           "$tray_in+doing",
           "to",
