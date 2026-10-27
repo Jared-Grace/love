@@ -514,7 +514,7 @@ export function bible_glyph_chapter_lev26() {
           "enemies.",
           "Those",
           "who",
-          "hate",
+          "$heart_red+thumbs_down",
           "you",
           "will",
           "$crown+footprints+doing",
