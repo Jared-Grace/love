@@ -556,7 +556,7 @@ export function bible_glyph_chapter_num16() {
           "$man_beard",
           "his",
           "own,",
-          "250",
+          "$five+zero",
           "censers",
           "in",
           "all.",
