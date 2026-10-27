@@ -336,7 +336,7 @@ export function bible_glyph_chapter_gen21() {
           "$bread",
           "and",
           "a",
-          "skin",
+          "$goat+amphora",
           "of",
           "water,",
           "and",
