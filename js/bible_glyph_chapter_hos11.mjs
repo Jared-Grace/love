@@ -182,7 +182,7 @@ export function bible_glyph_chapter_hos11() {
           "Though",
           "they",
           "call",
-          "to",
+          "$toward",
           "the",
           "Most",
           "High,",
