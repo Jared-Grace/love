@@ -729,7 +729,7 @@ export function bible_glyph_chapter_gen41() {
           "$seven",
           "thin,",
           "$thumbs_down",
-          "cows",
+          "$bull",
           "that",
           "came",
           "up",
