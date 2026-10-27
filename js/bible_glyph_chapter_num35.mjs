@@ -924,7 +924,7 @@ export function bible_glyph_chapter_num35() {
           "of",
           "a",
           "murderer",
-          "who",
+          "$back+flashlight",
           "$thumbs_down",
           "to",
           "$skull+doing;",
