@@ -544,7 +544,7 @@ export function bible_glyph_chapter_gen31() {
           "got",
           "up",
           "and",
-          "crossed",
+          "$bridge",
           "the",
           "river",
           "and",
