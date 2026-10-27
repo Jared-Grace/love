@@ -370,7 +370,7 @@ export function bible_glyph_chapter_exo36() {
           "in",
           "the",
           "second",
-          "set.",
+          "$link+thread.",
         ],
       },
       {
