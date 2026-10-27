@@ -392,7 +392,7 @@ export function bible_glyph_chapter_deu29() {
           "$covenant",
           "and",
           "$flashlight",
-          "oath",
+          "$speech+raised_back_of_hand",
           "$no_entry",
           "$one+person",
           "with",
