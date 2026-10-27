@@ -702,7 +702,7 @@ export function bible_glyph_chapter_lev25() {
           "$hands_giving",
           "for",
           "the",
-          "redemption",
+          "$currency_exchange+thing",
           "of",
           "the",
           "$earth.",
