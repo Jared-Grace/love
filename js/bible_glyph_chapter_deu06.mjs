@@ -393,7 +393,7 @@ export function bible_glyph_chapter_deu06() {
       {
         verse_number: 13,
         words: [
-          "Fear",
+          "$fear+doing",
           "the",
           "$i_am",
           "your",
