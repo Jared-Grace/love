@@ -948,7 +948,7 @@ export function bible_glyph_chapter_2ki09() {
           "as",
           "I",
           "$eye",
-          "yesterday",
+          "$night+last_track",
           "the",
           "$blood",
           "of",
