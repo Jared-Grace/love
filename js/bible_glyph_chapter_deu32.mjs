@@ -318,7 +318,7 @@ export function bible_glyph_chapter_deu32() {
         words: [
           "The",
           "$i_am",
-          "alone",
+          "$person+one+describing",
           "led",
           "him,",
           "and",
