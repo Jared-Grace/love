@@ -744,7 +744,7 @@ export function bible_glyph_chapter_exo09() {
           "$star+describing",
           "$back+flashlight",
           "$no_entry",
-          "like",
+          "$likeness",
           "it",
           "had",
           "ever",
