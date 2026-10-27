@@ -654,7 +654,7 @@ export function bible_glyph_chapter_isa49() {
           "you",
           "will",
           "be",
-          "far",
+          "$satellite+doing",
           "away.",
         ],
       },
