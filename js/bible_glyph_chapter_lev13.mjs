@@ -1375,7 +1375,7 @@ export function bible_glyph_chapter_lev13() {
         verse_number: 41,
         words: [
           "Or",
-          "if",
+          "$traffic_light",
           "his",
           "hairline",
           "recedes",
