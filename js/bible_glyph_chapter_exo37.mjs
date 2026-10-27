@@ -737,7 +737,7 @@ export function bible_glyph_chapter_exo37() {
           "the",
           "$sparkle+thing",
           "anointing",
-          "oil",
+          "$lotion_bottle",
           "and",
           "the",
           "pure,",
