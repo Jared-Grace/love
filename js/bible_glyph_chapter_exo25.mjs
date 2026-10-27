@@ -97,7 +97,7 @@ export function bible_glyph_chapter_exo25() {
       {
         verse_number: 6,
         words: [
-          "oil",
+          "$lotion_bottle",
           "for",
           "the",
           "light,",
