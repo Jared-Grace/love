@@ -1091,7 +1091,7 @@ export function bible_glyph_chapter_num14() {
           "this",
           "entire",
           "$thumbs_down",
-          "congregation,",
+          "$witness+crowd,",
           "which",
           "has",
           "conspired",
