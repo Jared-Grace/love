@@ -1505,7 +1505,7 @@ export function bible_glyph_chapter_1ki20() {
           "there,",
           "the",
           "man",
-          "disappeared.",
+          "$dotted_line_face.",
           "And",
           "the",
           "$king",
