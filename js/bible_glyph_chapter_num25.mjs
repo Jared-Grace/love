@@ -262,7 +262,7 @@ export function bible_glyph_chapter_num25() {
           "So",
           "the",
           "$fist+microbe+thing",
-          "against",
+          "$pointing_up",
           "the",
           "$son",
           "of",
