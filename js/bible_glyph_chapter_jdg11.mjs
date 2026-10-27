@@ -372,7 +372,7 @@ export function bible_glyph_chapter_jdg11() {
           "of",
           "Ammon,",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "do",
           "you",
           "have",
