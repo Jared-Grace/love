@@ -74,7 +74,7 @@ export function bible_glyph_chapter_deu18() {
       {
         verse_number: 3,
         words: [
-          "This",
+          "$flashlight",
           "shall",
           "be",
           "the",
