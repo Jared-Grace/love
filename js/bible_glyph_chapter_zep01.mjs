@@ -179,7 +179,7 @@ export function bible_glyph_chapter_zep01() {
           "who",
           "$bowing",
           "and",
-          "swear",
+          "$raised_back_of_hand+doing",
           "by",
           "the",
           "$i_am",
