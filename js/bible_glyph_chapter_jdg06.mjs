@@ -982,7 +982,7 @@ export function bible_glyph_chapter_jdg06() {
           "down,",
           "and",
           "the",
-          "second",
+          "$second_place",
           "$bull",
           "offered",
           "up",
