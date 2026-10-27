@@ -739,7 +739,7 @@ export function bible_glyph_chapter_deu09() {
           "but",
           "at",
           "that",
-          "time",
+          "$clock",
           "I",
           "also",
           "$hands_praying",
