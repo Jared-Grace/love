@@ -1189,7 +1189,7 @@ export function bible_glyph_chapter_exo12() {
           "$son",
           "of",
           "Israel",
-          "journeyed",
+          "$tent+away",
           "from",
           "$proper_name$Rameses",
           "to",
