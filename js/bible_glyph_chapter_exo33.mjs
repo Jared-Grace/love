@@ -669,7 +669,7 @@ export function bible_glyph_chapter_exo33() {
           "I",
           "will",
           "have",
-          "compassion",
+          "$hugging_face+doing",
           "on",
           "whom",
           "I",
