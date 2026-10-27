@@ -373,7 +373,7 @@ export function bible_glyph_chapter_gen46() {
           "$hand+foot",
           "in",
           "Paddan",
-          "aram,",
+          "$up_arrow+earth+proper_name,",
           "in",
           "addition",
           "to",
