@@ -891,7 +891,7 @@ export function bible_glyph_chapter_1sa15() {
           "hem",
           "of",
           "his",
-          "robe,",
+          "$cloak,",
           "and",
           "it",
           "tore.",
