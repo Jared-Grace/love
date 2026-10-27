@@ -564,7 +564,7 @@ export function bible_glyph_chapter_num21() {
           "Bamoth",
           "to",
           "the",
-          "valley",
+          "$valley",
           "in",
           "$father+proper_name,",
           "where",
