@@ -667,7 +667,7 @@ export function bible_glyph_chapter_deu12() {
           "$mouth,",
           "and",
           "you",
-          "crave",
+          "$heart_eyes+hand_receiving+doing",
           "$meat",
           "and",
           "$speech,",
