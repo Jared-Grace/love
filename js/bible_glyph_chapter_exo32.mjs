@@ -79,7 +79,7 @@ export function bible_glyph_chapter_exo32() {
           "Take",
           "off",
           "the",
-          "gold",
+          "$gold",
           "$nose+ring",
           "that",
           "are",
