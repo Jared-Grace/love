@@ -149,7 +149,7 @@ export function bible_glyph_chapter_deu19() {
       {
         verse_number: 5,
         words: [
-          "If",
+          "$back+flashlight",
           "he",
           "$footprints",
           "into",
