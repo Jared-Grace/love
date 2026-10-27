@@ -87,7 +87,7 @@ export function bible_glyph_chapter_gen46() {
           "down",
           "to",
           "$clamp+proper_name,",
-          "for",
+          "$pointing",
           "I",
           "will",
           "make",
