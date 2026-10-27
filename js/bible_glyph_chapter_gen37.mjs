@@ -878,7 +878,7 @@ export function bible_glyph_chapter_gen37() {
           "gone!",
           "What",
           "am",
-          "I",
+          "$me",
           "going",
           "to",
           "do?",
