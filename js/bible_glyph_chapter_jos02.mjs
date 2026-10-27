@@ -681,7 +681,7 @@ export function bible_glyph_chapter_jos02() {
         verse_number: 20,
         words: [
           "And",
-          "if",
+          "$traffic_light",
           "you",
           "report",
           "our",
