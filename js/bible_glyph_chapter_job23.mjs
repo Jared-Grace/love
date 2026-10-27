@@ -68,7 +68,7 @@ export function bible_glyph_chapter_job23() {
           "and",
           "fill",
           "my",
-          "mouth",
+          "$face_with_open_mouth",
           "with",
           "arguments.",
         ],
