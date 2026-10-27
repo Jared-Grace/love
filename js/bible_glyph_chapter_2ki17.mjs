@@ -785,7 +785,7 @@ export function bible_glyph_chapter_2ki17() {
           "the",
           "$hand",
           "of",
-          "all",
+          "$all",
           "His",
           "$kneeling",
           "the",
