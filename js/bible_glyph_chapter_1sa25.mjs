@@ -548,7 +548,7 @@ export function bible_glyph_chapter_1sa25() {
           "$lightbulb",
           "and",
           "$eye",
-          "what",
+          "$flashlight+question",
           "you",
           "must",
           "$hammer+doing,",
