@@ -143,7 +143,7 @@ export function bible_glyph_chapter_ezk11() {
           "$wind",
           "of",
           "$i_am",
-          "fell",
+          "$person+pointing_down",
           "upon",
           "me",
           "and",
