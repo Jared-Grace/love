@@ -576,7 +576,7 @@ export function bible_glyph_chapter_deu05() {
           "his",
           "$ox",
           "or",
-          "donkey,",
+          "$donkey,",
           "or",
           "anything",
           "that",
