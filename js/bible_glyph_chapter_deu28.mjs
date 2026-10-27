@@ -1091,7 +1091,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "be",
           "driven",
-          "mad",
+          "$face_spiral+doing",
           "by",
           "the",
           "sight",
