@@ -391,7 +391,7 @@ export function bible_glyph_chapter_exo18() {
           "$man_in_tuxedo+family",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "$heart_on_fire.",
         ],
