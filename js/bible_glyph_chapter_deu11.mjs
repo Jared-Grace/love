@@ -503,7 +503,7 @@ export function bible_glyph_chapter_deu11() {
           "$field",
           "for",
           "your",
-          "livestock,",
+          "$paw_prints,",
           "and",
           "you",
           "will",
