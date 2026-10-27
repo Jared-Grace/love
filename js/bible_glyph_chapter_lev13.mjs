@@ -1916,7 +1916,7 @@ export function bible_glyph_chapter_lev13() {
       {
         verse_number: 59,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$scroll",
