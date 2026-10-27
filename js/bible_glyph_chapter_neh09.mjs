@@ -1373,7 +1373,7 @@ export function bible_glyph_chapter_neh09() {
         words: [
           "Its",
           "abundant",
-          "harvest",
+          "$fruit+basket",
           "goes",
           "to",
           "the",
