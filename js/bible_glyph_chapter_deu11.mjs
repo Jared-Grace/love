@@ -806,7 +806,7 @@ export function bible_glyph_chapter_deu11() {
           "and",
           "$tray_out",
           "the",
-          "River",
+          "$water+national_park",
           "$proper_name$Euphrates",
           "to",
           "the",
