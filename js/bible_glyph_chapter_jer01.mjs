@@ -216,7 +216,7 @@ export function bible_glyph_chapter_jer01() {
           "$fear+doing",
           "of",
           "them,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "with",
