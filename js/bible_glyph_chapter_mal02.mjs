@@ -521,7 +521,7 @@ export function bible_glyph_chapter_mal02() {
           "$wind?",
           "And",
           "why",
-          "one?",
+          "$one?",
           "Because",
           "He",
           "seeks",
