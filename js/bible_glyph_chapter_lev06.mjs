@@ -158,7 +158,7 @@ export function bible_glyph_chapter_lev06() {
           "of",
           "proper",
           "value,",
-          "to",
+          "$toward",
           "$priest.",
         ],
       },
