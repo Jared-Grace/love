@@ -469,7 +469,7 @@ export function bible_glyph_chapter_isa49() {
           "joy,",
           "O",
           "$sky;",
-          "rejoice,",
+          "$woman_dancing,",
           "O",
           "$earth;",
           "break",
