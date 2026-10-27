@@ -219,7 +219,7 @@ export function bible_glyph_chapter_psa095() {
           "angry",
           "with",
           "that",
-          "generation;",
+          "$dna;",
           "I",
           "$speech,",
           "They",
