@@ -952,7 +952,7 @@ export function bible_glyph_chapter_2ch34() {
           "Me",
           "and",
           "burned",
-          "incense",
+          "$incense+doing",
           "to",
           "other",
           "$moai,",
