@@ -394,7 +394,7 @@ export function bible_glyph_chapter_2ki06() {
           "and",
           "$eye",
           "$question+place",
-          "he",
+          "$pointing_back",
           "is,",
           "that",
           "I",
