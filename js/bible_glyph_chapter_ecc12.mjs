@@ -185,7 +185,7 @@ export function bible_glyph_chapter_ecc12() {
           "$house,",
           "and",
           "mourners",
-          "walk",
+          "$around+doing",
           "the",
           "streets.",
         ],
