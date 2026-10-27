@@ -627,7 +627,7 @@ export function bible_glyph_chapter_exo26() {
         verse_number: 26,
         words: [
           "$hammer+doing",
-          "crossbars",
+          "$door+locked",
           "of",
           "acacia",
           "$tree,",
