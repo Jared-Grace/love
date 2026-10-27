@@ -446,7 +446,7 @@ export function bible_glyph_chapter_2ki22() {
           "$family",
           "and",
           "for",
-          "all",
+          "$all",
           "$hands_raised+proper_name,",
           "concerning",
           "the",
