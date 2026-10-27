@@ -197,7 +197,7 @@ export function bible_glyph_chapter_psa116() {
           "$mouth,",
           "I",
           "am",
-          "greatly",
+          "$double_exclamation",
           "$persevering_face+doing.",
         ],
       },
