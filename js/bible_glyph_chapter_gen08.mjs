@@ -534,7 +534,7 @@ export function bible_glyph_chapter_gen08() {
           "out",
           "$tray_out",
           "the",
-          "ark.",
+          "$package.",
         ],
       },
       {
