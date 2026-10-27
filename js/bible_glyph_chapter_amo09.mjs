@@ -564,7 +564,7 @@ export function bible_glyph_chapter_amo09() {
           "uprooted",
           "from",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "I",
           "have",
