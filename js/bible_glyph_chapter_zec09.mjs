@@ -329,7 +329,7 @@ export function bible_glyph_chapter_zec09() {
           "$city+peace,",
           "and",
           "the",
-          "bow",
+          "$bow+wood",
           "of",
           "war",
           "will",
