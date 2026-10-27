@@ -446,7 +446,7 @@ export function bible_glyph_chapter_1sa03() {
           "down",
           "$finish",
           "the",
-          "morning,",
+          "$morning,",
           "then",
           "he",
           "opened",
