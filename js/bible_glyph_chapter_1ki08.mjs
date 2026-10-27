@@ -377,7 +377,7 @@ export function bible_glyph_chapter_1ki08() {
       {
         verse_number: 12,
         words: [
-          "Then",
+          "$telescope+clock",
           "$peace+proper_name",
           "$speech,",
           "The",
