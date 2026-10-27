@@ -773,7 +773,7 @@ export function bible_glyph_chapter_lev27() {
           "$sparkle+thing",
           "shekel,",
           "$two+zero",
-          "gerahs",
+          "$scales+pinching_hand",
           "to",
           "the",
           "shekel.",
