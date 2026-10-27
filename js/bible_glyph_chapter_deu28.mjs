@@ -75,7 +75,7 @@ export function bible_glyph_chapter_deu28() {
           "upon",
           "you",
           "and",
-          "overtake",
+          "$running+hand_receiving+doing",
           "you,",
           "if",
           "you",
