@@ -274,7 +274,7 @@ export function bible_glyph_chapter_ezr01() {
           "of",
           "the",
           "$i_am",
-          "that",
+          "$back+flashlight",
           "$proper_name$Nebuchadnezzar",
           "had",
           "carried",
