@@ -409,7 +409,7 @@ export function bible_glyph_chapter_pro02() {
           "$thumbs_down",
           "will",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "the",
