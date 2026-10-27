@@ -570,7 +570,7 @@ export function bible_glyph_chapter_deu18() {
           "if",
           "any",
           "$megaphone",
-          "dares",
+          "$cooking+doing",
           "to",
           "$mouth",
           "a",
