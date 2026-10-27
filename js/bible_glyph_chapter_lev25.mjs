@@ -173,7 +173,7 @@ export function bible_glyph_chapter_lev25() {
           "$kneeling",
           "and",
           "your",
-          "maidservant,",
+          "$broom,",
           "the",
           "hired",
           "hand",
