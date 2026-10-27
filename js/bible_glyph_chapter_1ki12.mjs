@@ -100,7 +100,7 @@ export function bible_glyph_chapter_1ki12() {
           "on",
           "us.",
           "But",
-          "now",
+          "$watch",
           "you",
           "must",
           "lighten",
