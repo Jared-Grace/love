@@ -561,7 +561,7 @@ export function bible_glyph_chapter_jdg16() {
       {
         verse_number: 15,
         words: [
-          "How",
+          "$question+likeness",
           "can",
           "you",
           "$speech,",
