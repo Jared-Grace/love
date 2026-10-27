@@ -1013,7 +1013,7 @@ export function bible_glyph_chapter_dan09() {
           "to",
           "$sacrifice",
           "and",
-          "offering.",
+          "$grain_offering.",
           "And",
           "on",
           "the",
