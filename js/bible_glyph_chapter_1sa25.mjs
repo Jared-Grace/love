@@ -593,7 +593,7 @@ export function bible_glyph_chapter_1sa25() {
           "of",
           "$bread,",
           "two",
-          "skins",
+          "$harp+ten",
           "of",
           "$wine,",
           "five",
