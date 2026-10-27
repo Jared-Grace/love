@@ -669,7 +669,7 @@ export function bible_glyph_chapter_num19() {
           "being",
           "cleansed",
           "must",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "his",
           "$garment",
           "and",
