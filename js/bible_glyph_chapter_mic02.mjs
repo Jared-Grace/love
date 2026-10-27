@@ -104,7 +104,7 @@ export function bible_glyph_chapter_mic02() {
           "will",
           "be",
           "a",
-          "time",
+          "$clock",
           "of",
           "$thumbs_down.",
         ],
