@@ -484,7 +484,7 @@ export function bible_glyph_chapter_gen06() {
           "breath",
           "of",
           "$sprout",
-          "under",
+          "$down_arrow",
           "the",
           "$sky.",
           "Everything",
