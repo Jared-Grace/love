@@ -1494,7 +1494,7 @@ export function bible_glyph_chapter_1ki02() {
           "$no_entry",
           "make",
           "you",
-          "swear",
+          "$raised_back_of_hand+doing",
           "by",
           "the",
           "$i_am",
