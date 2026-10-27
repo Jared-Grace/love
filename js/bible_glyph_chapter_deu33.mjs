@@ -75,7 +75,7 @@ export function bible_glyph_chapter_deu33() {
         words: [
           "$plus+exclamation",
           "You",
-          "love",
+          "$heart_hands+tray_in+doing",
           "the",
           "$family.",
           "All",
