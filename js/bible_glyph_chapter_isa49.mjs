@@ -422,7 +422,7 @@ export function bible_glyph_chapter_isa49() {
           "I",
           "will",
           "turn",
-          "all",
+          "$all",
           "My",
           "$mountain$s",
           "into",
