@@ -512,7 +512,7 @@ export function bible_glyph_chapter_jer17() {
           "utterance",
           "of",
           "my",
-          "lips",
+          "$kiss_mark",
           "was",
           "spoken",
           "in",
