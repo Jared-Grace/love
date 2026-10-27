@@ -309,7 +309,7 @@ export function bible_glyph_chapter_job28() {
           "valued",
           "in",
           "the",
-          "gold",
+          "$gold+stone",
           "of",
           "$proper_name$Ophir,",
           "in",
