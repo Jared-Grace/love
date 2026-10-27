@@ -658,7 +658,7 @@ export function bible_glyph_chapter_deu12() {
           "$i_am",
           "your",
           "$heart_on_fire",
-          "expands",
+          "$arrow_both_ways+doing",
           "your",
           "territory",
           "as",
