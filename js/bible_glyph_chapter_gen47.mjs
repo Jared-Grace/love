@@ -485,7 +485,7 @@ export function bible_glyph_chapter_gen47() {
           "the",
           "$clamp+person",
           "$footprints",
-          "to",
+          "$toward",
           "$i_am+plus",
           "and",
           "$speech,",
