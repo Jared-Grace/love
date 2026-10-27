@@ -155,7 +155,7 @@ export function bible_glyph_chapter_ezk03() {
           "$no_entry",
           "to",
           "the",
-          "many",
+          "$multiply",
           "$family",
           "of",
           "unfamiliar",
