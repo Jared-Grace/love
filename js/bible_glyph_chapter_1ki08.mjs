@@ -2191,7 +2191,7 @@ export function bible_glyph_chapter_1ki08() {
           "all",
           "the",
           "$son",
-          "dedicated",
+          "$beginner+doing",
           "the",
           "$house",
           "of",
