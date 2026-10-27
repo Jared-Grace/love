@@ -138,7 +138,7 @@ export function bible_glyph_chapter_lev22() {
           "by",
           "a",
           "$man_beard",
-          "who",
+          "$back+flashlight",
           "has",
           "an",
           "emission",
