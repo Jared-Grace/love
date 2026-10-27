@@ -1167,7 +1167,7 @@ export function bible_glyph_chapter_2ki09() {
           "And",
           "$two",
           "or",
-          "three",
+          "$three",
           "eunuchs",
           "looked",
           "$window+eyes+doing",
