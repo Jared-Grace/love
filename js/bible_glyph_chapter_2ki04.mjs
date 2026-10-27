@@ -93,7 +93,7 @@ export function bible_glyph_chapter_2ki04() {
           "a",
           "jar",
           "of",
-          "oil.",
+          "$lotion_bottle.",
         ],
       },
       {
