@@ -160,7 +160,7 @@ export function bible_glyph_chapter_exo23() {
           "false",
           "$speech.",
           "$no_entry",
-          "kill",
+          "$fist+skull",
           "the",
           "innocent",
           "or",
