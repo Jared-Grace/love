@@ -177,7 +177,7 @@ export function bible_glyph_chapter_exo22() {
       {
         verse_number: 6,
         words: [
-          "If",
+          "$pointing",
           "a",
           "$fire",
           "breaks",
