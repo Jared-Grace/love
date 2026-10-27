@@ -136,7 +136,7 @@ export function bible_glyph_chapter_gen04() {
           "He",
           "had",
           "$no_entry",
-          "regard.",
+          "$eyes+heart_red+doing.",
           "So",
           "$proper_name$Cain",
           "became",
