@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_lam03() {
           "O",
           "$crown;",
           "You",
-          "redeem",
+          "$currency_exchange",
           "my",
           "$sprout.",
         ],
