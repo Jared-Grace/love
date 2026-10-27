@@ -90,7 +90,7 @@ export function bible_glyph_chapter_psa116() {
           "$i_am:",
           "O",
           "$i_am,",
-          "deliver",
+          "$parachute",
           "my",
           "$person_other.",
         ],
