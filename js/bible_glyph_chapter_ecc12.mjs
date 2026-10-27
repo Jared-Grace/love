@@ -31,7 +31,7 @@ export function bible_glyph_chapter_ecc12() {
           "and",
           "the",
           "years",
-          "approach",
+          "$hand+doing",
           "of",
           "which",
           "you",
