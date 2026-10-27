@@ -344,7 +344,7 @@ export function bible_glyph_chapter_jer29() {
           "$lightbulb",
           "the",
           "plans",
-          "I",
+          "$me",
           "have",
           "for",
           "you,",
