@@ -385,7 +385,7 @@ export function bible_glyph_chapter_deu28() {
           "$earth",
           "in",
           "its",
-          "season",
+          "$clock",
           "and",
           "to",
           "$speech+thumbs_up",
