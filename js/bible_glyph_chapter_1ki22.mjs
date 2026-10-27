@@ -230,7 +230,7 @@ export function bible_glyph_chapter_1ki22() {
           "$speech,",
           "There",
           "is",
-          "still",
+          "$repeat",
           "one",
           "$man_beard",
           "through",
