@@ -424,7 +424,7 @@ export function bible_glyph_chapter_amo05() {
           "and",
           "$heart_red+doing",
           "$thumbs_up;",
-          "establish",
+          "$hand+round_pushpin+doing",
           "$scales+thing",
           "in",
           "the",
