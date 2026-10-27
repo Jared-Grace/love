@@ -341,7 +341,7 @@ export function bible_glyph_chapter_exo33() {
           "$door",
           "to",
           "the",
-          "tent,",
+          "$tent,",
           "they",
           "would",
           "stand",
