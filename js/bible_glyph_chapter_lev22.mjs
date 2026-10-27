@@ -278,7 +278,7 @@ export function bible_glyph_chapter_lev22() {
           "they",
           "$sewing_needle",
           "it.",
-          "I",
+          "$me",
           "am",
           "$i_am",
           "who",
