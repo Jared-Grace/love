@@ -921,7 +921,7 @@ export function bible_glyph_chapter_isa49() {
           "$meat",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I,",
           "the",
           "$i_am,",
