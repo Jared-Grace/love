@@ -926,7 +926,7 @@ export function bible_glyph_chapter_exo12() {
       {
         verse_number: 29,
         words: [
-          "Now",
+          "$link",
           "at",
           "midnight",
           "the",
