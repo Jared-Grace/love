@@ -582,7 +582,7 @@ export function bible_glyph_chapter_1ki18() {
           "$input_numbers+all",
           "$megaphone",
           "of",
-          "Asherah",
+          "$wood+imp",
           "who",
           "$eating",
           "at",
