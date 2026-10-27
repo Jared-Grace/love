@@ -436,7 +436,7 @@ export function bible_glyph_chapter_exo06() {
           "$proper_name$Hezron",
           "and",
           "$proper_name$Carmi.",
-          "These",
+          "$flashlight+flashlight",
           "were",
           "the",
           "clans",
