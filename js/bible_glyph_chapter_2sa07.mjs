@@ -162,7 +162,7 @@ export function bible_glyph_chapter_2sa07() {
           "out",
           "of",
           "$clamp+proper_name",
-          "until",
+          "$finish",
           "this",
           "$sun,",
           "but",
