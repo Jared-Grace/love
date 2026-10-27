@@ -171,7 +171,7 @@ export function bible_glyph_chapter_exo29() {
           "diadem",
           "to",
           "the",
-          "turban.",
+          "$person_wearing_turban.",
         ],
       },
       {
