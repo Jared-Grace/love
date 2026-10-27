@@ -947,7 +947,7 @@ export function bible_glyph_chapter_exo36() {
           "for",
           "the",
           "posts",
-          "four",
+          "$four",
           "$silver",
           "bases.",
         ],
