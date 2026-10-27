@@ -342,7 +342,7 @@ export function bible_glyph_chapter_num30() {
           "$person_other",
           "with",
           "an",
-          "oath,",
+          "$raised_back_of_hand,",
         ],
       },
       {
