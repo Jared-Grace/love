@@ -309,7 +309,7 @@ export function bible_glyph_chapter_exo04() {
           "$hand_receiving",
           "from",
           "the",
-          "Nile",
+          "$crocodile",
           "will",
           "become",
           "$blood",
