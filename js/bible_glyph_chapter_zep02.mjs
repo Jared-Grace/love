@@ -459,7 +459,7 @@ export function bible_glyph_chapter_zep02() {
           "sound",
           "from",
           "the",
-          "window,",
+          "$window,",
           "but",
           "desolation",
           "will",
