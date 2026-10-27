@@ -386,7 +386,7 @@ export function bible_glyph_chapter_isa09() {
           "$face_with_open_mouth.",
           "Despite",
           "all",
-          "this,",
+          "$flashlight,",
           "His",
           "anger",
           "is",
