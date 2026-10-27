@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_url_dev_local } from "./app_shared_url_dev_local.mjs";
+import { app_shared_url_stage_local } from "./app_shared_url_stage_local.mjs";
 import { app_a } from "./app_a.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -14,12 +14,14 @@ import { equal_assert_json } from "./equal_assert_json.mjs";
 import { file_read } from "./file_read.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_includes_assert_json } from "./text_includes_assert_json.mjs";
-export async function app_a_tests_run_e2e_sync() {
+export async function app_a_tests_run_e2e_sync(stage_name) {
+  "$plain stage_name";
   "open the code editor in an empty browser, change one function and sync, and check the one change is what would be sent to this machine";
   "The sending is caught before it leaves the browser and answered as if it had worked, so the walk writes nothing to disk and commits nothing.";
   "It opens a fresh browser on purpose: the first visit is the one that copies the code into the page, and it is the visit that once never finished, and the visit after which opening a function once crashed because a settings file had not been copied.";
-  arguments_assert(arguments, 0);
-  let url = await app_shared_url_dev_local(app_a);
+  "The stage is asked for so the folder about to be sent to people can be walked, not only the one somebody is working in; dev is the working one.";
+  arguments_assert(arguments, 1);
+  let url = await app_shared_url_stage_local(app_a, stage_name);
   function upload_is(request) {
     let left = request.method();
     let post_is = equal(left, "POST");
