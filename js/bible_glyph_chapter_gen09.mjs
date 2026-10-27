@@ -582,7 +582,7 @@ export function bible_glyph_chapter_gen09() {
           "and",
           "uncovered",
           "himself",
-          "inside",
+          "$radio_button",
           "his",
           "tent.",
         ],
