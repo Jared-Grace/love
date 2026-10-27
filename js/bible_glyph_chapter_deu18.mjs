@@ -343,7 +343,7 @@ export function bible_glyph_chapter_deu18() {
           "these",
           "things",
           "is",
-          "detestable",
+          "$vomiting",
           "to",
           "the",
           "$i_am.",
