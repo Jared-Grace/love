@@ -689,7 +689,7 @@ export function bible_glyph_chapter_deu04() {
           "all",
           "the",
           "$family",
-          "under",
+          "$down_arrow",
           "the",
           "$sky.",
         ],
