@@ -319,7 +319,7 @@ export function bible_glyph_chapter_mal03() {
           "a",
           "curse,",
           "yet",
-          "you",
+          "$you",
           "-",
           "the",
           "whole",
