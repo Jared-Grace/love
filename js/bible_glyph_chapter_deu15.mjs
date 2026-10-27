@@ -276,7 +276,7 @@ export function bible_glyph_chapter_deu15() {
           "the",
           "$year",
           "of",
-          "release,",
+          "$brown_square+sabbath+thing,",
           "is",
           "$magnet+doing,",
           "so",
