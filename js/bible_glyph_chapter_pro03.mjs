@@ -490,7 +490,7 @@ export function bible_glyph_chapter_pro03() {
         words: [
           "Do",
           "$no_entry",
-          "fear",
+          "$fear+doing",
           "sudden",
           "danger",
           "or",
