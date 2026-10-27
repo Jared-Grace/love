@@ -1998,7 +1998,7 @@ export function bible_glyph_chapter_deu28() {
           "$pinching_hand+input_numbers",
           "in",
           "number,",
-          "because",
+          "$pointing",
           "you",
           "would",
           "$no_entry",
