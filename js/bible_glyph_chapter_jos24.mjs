@@ -755,7 +755,7 @@ export function bible_glyph_chapter_jos24() {
           "$i_am+rescue",
           "$speech",
           "them,",
-          "You",
+          "$you",
           "are",
           "$witness",
           "against",
