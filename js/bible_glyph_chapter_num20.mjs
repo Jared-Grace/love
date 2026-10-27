@@ -427,7 +427,7 @@ export function bible_glyph_chapter_num20() {
           "$speech:",
           "$you",
           "$lightbulb",
-          "all",
+          "$all",
           "the",
           "hardship",
           "that",
