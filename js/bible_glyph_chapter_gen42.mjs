@@ -836,7 +836,7 @@ export function bible_glyph_chapter_gen42() {
           "described",
           "to",
           "him",
-          "all",
+          "$all",
           "the",
           "$speech",
           "that",
