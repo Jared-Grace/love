@@ -47,7 +47,7 @@ export function bible_glyph_chapter_pro08() {
       {
         verse_number: 3,
         words: [
-          "Beside",
+          "$hand",
           "the",
           "gates",
           "to",
