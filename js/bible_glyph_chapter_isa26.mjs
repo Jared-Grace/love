@@ -196,7 +196,7 @@ export function bible_glyph_chapter_isa26() {
           "renown",
           "are",
           "the",
-          "desire",
+          "$heart_eyes+hand_receiving+thing",
           "of",
           "our",
           "souls.",
