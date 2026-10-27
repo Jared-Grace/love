@@ -421,7 +421,7 @@ export function bible_glyph_chapter_gen06() {
           "and",
           "30",
           "$triangular_ruler",
-          "high.",
+          "$person+pointing_up.",
         ],
       },
       {
