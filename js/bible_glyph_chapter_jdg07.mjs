@@ -299,7 +299,7 @@ export function bible_glyph_chapter_jdg07() {
           "So",
           "the",
           "$three",
-          "hundred",
+          "$input_numbers+all",
           "$hand_receiving",
           "the",
           "provisions",
