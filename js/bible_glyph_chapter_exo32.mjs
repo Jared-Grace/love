@@ -935,7 +935,7 @@ export function bible_glyph_chapter_exo32() {
           "$gate",
           "through",
           "the",
-          "camp,",
+          "$camp,",
           "and",
           "slay",
           "his",
