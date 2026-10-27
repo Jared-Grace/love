@@ -626,7 +626,7 @@ export function bible_glyph_chapter_1ki17() {
           "$pointing_up",
           "his",
           "own",
-          "bed.",
+          "$bed.",
         ],
       },
       {
