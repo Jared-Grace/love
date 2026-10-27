@@ -444,7 +444,7 @@ export function bible_glyph_chapter_exo39() {
           "of",
           "the",
           "two",
-          "chains",
+          "$thread+repeat",
           "they",
           "$hands_giving",
           "to",
