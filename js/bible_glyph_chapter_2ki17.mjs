@@ -915,7 +915,7 @@ export function bible_glyph_chapter_2ki17() {
           "He",
           "has",
           "sent",
-          "lions",
+          "$lion",
           "among",
           "them,",
           "which",
