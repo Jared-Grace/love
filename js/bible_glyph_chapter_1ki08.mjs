@@ -289,7 +289,7 @@ export function bible_glyph_chapter_1ki08() {
           "the",
           "$two",
           "$stone",
-          "tablets",
+          "$stone+writing_hand",
           "that",
           "$fishing_pole+proper_name",
           "had",
