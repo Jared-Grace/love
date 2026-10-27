@@ -544,7 +544,7 @@ export function bible_glyph_chapter_lev17() {
           "native",
           "or",
           "$foreigner,",
-          "who",
+          "$back+flashlight",
           "$eating",
           "anything",
           "found",
