@@ -527,7 +527,7 @@ export function bible_glyph_chapter_job19() {
       {
         verse_number: 28,
         words: [
-          "If",
+          "$pointing",
           "you",
           "$speech,",
           "Let",
