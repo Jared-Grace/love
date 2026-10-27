@@ -222,7 +222,7 @@ export function bible_glyph_chapter_gen29() {
           "We",
           "$no_entry",
           "$finish",
-          "all",
+          "$all",
           "the",
           "flocks",
           "have",
