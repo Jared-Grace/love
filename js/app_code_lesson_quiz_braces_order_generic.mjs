@@ -11,7 +11,7 @@ import { html_clear } from "./html_clear.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_lesson_quiz_pieces_select } from "./app_code_lesson_quiz_pieces_select.mjs";
-export function app_code_lesson_quiz_braces_order_generic(
+export function app_code_lesson_quiz_braces_order_generic({
   parent,
   info,
   qa,
@@ -19,7 +19,7 @@ export function app_code_lesson_quiz_braces_order_generic(
   on_wrong,
   correction_code_set,
   colored,
-) {
+}) {
   "A quiz where the student writes out the braces of a program in the order they stand, by tapping a { piece and a } piece; what has been written so far is drawn with every pair in a colour of its own when colored is true, and in the one code colour when it is false.";
   "How taps are judged, and how the row of pieces is kept, is shared with every quiz that is put together from pieces. What is this quiz's own is that there are only two pieces.";
   "THE PIECES THEMSELVES ARE NOT COLOURED. The order of the braces alone decides which } closes which {, so the colours add nothing to what is being asked; they are drawn on what has been written, where each } takes the colour of the { it closes the moment it is tapped. A row of coloured pieces would also have to keep its colours through the shared row, which draws every piece in the one code colour again after each tap.";
