@@ -422,7 +422,7 @@ export function bible_glyph_chapter_gen12() {
           "the",
           "$clamp+person",
           "$eye",
-          "that",
+          "$pointing",
           "the",
           "$woman",
           "was",
