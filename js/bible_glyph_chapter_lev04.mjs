@@ -773,7 +773,7 @@ export function bible_glyph_chapter_lev04() {
           "his",
           "offering",
           "a",
-          "female",
+          "$female_sign",
           "$goat",
           "without",
           "blemish",
