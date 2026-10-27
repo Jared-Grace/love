@@ -781,7 +781,7 @@ export function bible_glyph_chapter_gen21() {
           "as",
           "my",
           "$witness+thing",
-          "that",
+          "$pointing",
           "I",
           "dug",
           "this",
