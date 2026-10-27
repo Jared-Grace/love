@@ -581,7 +581,7 @@ export function bible_glyph_chapter_exo26() {
           "together",
           "at",
           "the",
-          "bottom",
+          "$down_arrow+manner",
           "and",
           "fitted",
           "into",
