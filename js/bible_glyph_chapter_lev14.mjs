@@ -1197,7 +1197,7 @@ export function bible_glyph_chapter_lev14() {
           "you",
           "as",
           "your",
-          "possession,",
+          "$hand+clamp+thing,",
           "and",
           "I",
           "$hands_giving",
