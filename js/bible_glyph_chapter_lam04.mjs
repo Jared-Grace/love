@@ -580,7 +580,7 @@ export function bible_glyph_chapter_lam04() {
           "$oil",
           "one,",
           "the",
-          "breath",
+          "$wind",
           "of",
           "our",
           "life,",
