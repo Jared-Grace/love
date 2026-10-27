@@ -20,7 +20,7 @@ export function bible_glyph_chapter_exo22() {
           "$ninja+doing",
           "an",
           "$ox",
-          "or",
+          "$shuffle",
           "a",
           "sheep",
           "and",
