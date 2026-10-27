@@ -362,7 +362,7 @@ export function bible_glyph_chapter_ecc12() {
           "$stop_sign,",
           "and",
           "much",
-          "study",
+          "$open_book+brain",
           "wearies",
           "the",
           "$meat.",
