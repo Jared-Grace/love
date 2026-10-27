@@ -934,7 +934,7 @@ export function bible_glyph_chapter_ezk37() {
           "$hands_giving",
           "them",
           "and",
-          "multiply",
+          "$multiply+doing",
           "them,",
           "and",
           "I",
