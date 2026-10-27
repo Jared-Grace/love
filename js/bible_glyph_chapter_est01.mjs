@@ -375,7 +375,7 @@ export function bible_glyph_chapter_est01() {
           "and",
           "his",
           "anger",
-          "burned",
+          "$fire+wood",
           "within",
           "him.",
         ],
