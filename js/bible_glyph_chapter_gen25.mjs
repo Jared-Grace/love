@@ -463,7 +463,7 @@ export function bible_glyph_chapter_gen25() {
           "$proper_name$Rebekah",
           "his",
           "$woman",
-          "conceived.",
+          "$pregnant_woman+doing.",
         ],
       },
       {
