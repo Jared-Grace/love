@@ -1281,7 +1281,7 @@ export function bible_glyph_chapter_jer23() {
         verse_number: 38,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "you",
           "$speech,",
           "This",
