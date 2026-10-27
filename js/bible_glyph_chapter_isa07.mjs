@@ -747,7 +747,7 @@ export function bible_glyph_chapter_isa07() {
           "tilled",
           "by",
           "the",
-          "hoe,",
+          "$sprout+axe,",
           "for",
           "fear",
           "of",
