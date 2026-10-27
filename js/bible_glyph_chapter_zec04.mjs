@@ -338,7 +338,7 @@ export function bible_glyph_chapter_zec04() {
           "branches",
           "$hand",
           "the",
-          "two",
+          "$two",
           "gold",
           "pipes",
           "from",
