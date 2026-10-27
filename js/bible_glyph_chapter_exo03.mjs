@@ -356,7 +356,7 @@ export function bible_glyph_chapter_exo03() {
           "I",
           "should",
           "$walking",
-          "to",
+          "$toward",
           "$house+proper_name",
           "and",
           "$walking+tray_out",
