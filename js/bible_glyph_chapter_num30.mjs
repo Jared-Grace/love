@@ -434,7 +434,7 @@ export function bible_glyph_chapter_num30() {
           "or",
           "any",
           "$raised_back_of_hand",
-          "pledge",
+          "$knot+thing",
           "to",
           "deny",
           "$person_other,",
