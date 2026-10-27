@@ -365,7 +365,7 @@ export function bible_glyph_chapter_gen45() {
       {
         verse_number: 12,
         words: [
-          "Behold!",
+          "$exclamation!",
           "$eyes",
           "and",
           "my",
