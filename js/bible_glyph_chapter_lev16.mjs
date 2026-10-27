@@ -1173,7 +1173,7 @@ export function bible_glyph_chapter_lev16() {
           "on",
           "the",
           "$sparkle+thing",
-          "linen",
+          "$thread",
           "$garment,",
         ],
       },
