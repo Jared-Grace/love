@@ -587,7 +587,7 @@ export function bible_glyph_chapter_est01() {
           "all",
           "the",
           "$king",
-          "officials,",
+          "$military_medal,",
           "resulting",
           "in",
           "much",
