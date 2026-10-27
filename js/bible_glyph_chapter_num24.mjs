@@ -295,7 +295,7 @@ export function bible_glyph_chapter_num24() {
           "summoned",
           "you",
           "to",
-          "curse",
+          "$speech+kitchen_knife+doing",
           "my",
           "$enemy,",
           "but",
