@@ -737,7 +737,7 @@ export function bible_glyph_chapter_ezk34() {
           "appoint",
           "over",
           "them",
-          "one",
+          "$one",
           "$person+sheep,",
           "My",
           "$kneeling",
