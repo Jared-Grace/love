@@ -207,7 +207,7 @@ export function bible_glyph_chapter_psa090() {
           "our",
           "$sun",
           "is",
-          "seventy",
+          "$seven+zero",
           "years",
           "-",
           "or",
