@@ -133,7 +133,7 @@ export function bible_glyph_chapter_amo09() {
           "$telescope",
           "I",
           "will",
-          "command",
+          "$speech+scroll",
           "the",
           "serpent",
           "to",
