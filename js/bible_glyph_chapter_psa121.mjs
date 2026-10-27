@@ -95,7 +95,7 @@ export function bible_glyph_chapter_psa121() {
           "$i_am",
           "is",
           "the",
-          "shade",
+          "$umbrella_on_ground",
           "on",
           "your",
           "right",
