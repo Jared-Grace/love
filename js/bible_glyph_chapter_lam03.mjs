@@ -412,7 +412,7 @@ export function bible_glyph_chapter_lam03() {
           "$new_button",
           "every",
           "morning;",
-          "great",
+          "$multiply",
           "is",
           "Your",
           "faithfulness!",
