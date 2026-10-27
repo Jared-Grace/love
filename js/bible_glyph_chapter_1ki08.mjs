@@ -78,7 +78,7 @@ export function bible_glyph_chapter_1ki08() {
           "$peace+proper_name",
           "at",
           "the",
-          "feast",
+          "$party_popper",
           "in",
           "the",
           "month",
