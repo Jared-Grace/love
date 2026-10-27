@@ -1004,7 +1004,7 @@ export function bible_glyph_chapter_1ki18() {
           "And",
           "$heart_on_fire+i_am",
           "$hand_receiving",
-          "twelve",
+          "$two",
           "$stone,",
           "one",
           "for",
