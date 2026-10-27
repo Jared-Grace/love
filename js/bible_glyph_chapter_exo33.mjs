@@ -731,7 +731,7 @@ export function bible_glyph_chapter_exo33() {
           "by,",
           "I",
           "will",
-          "put",
+          "$palm_down",
           "you",
           "in",
           "a",
