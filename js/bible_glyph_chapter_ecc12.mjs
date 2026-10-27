@@ -276,7 +276,7 @@ export function bible_glyph_chapter_ecc12() {
           "but",
           "he",
           "also",
-          "taught",
+          "$learner+doing",
           "knowledge",
           "to",
           "the",
