@@ -443,7 +443,7 @@ export function bible_glyph_chapter_hab03() {
           "$cherry_blossom",
           "and",
           "no",
-          "fruit",
+          "$earth+fruit",
           "is",
           "on",
           "the",
