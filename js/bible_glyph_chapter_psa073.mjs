@@ -362,7 +362,7 @@ export function bible_glyph_chapter_psa073() {
           "waking",
           "from",
           "a",
-          "dream,",
+          "$dream,",
           "so",
           "You,",
           "O",
