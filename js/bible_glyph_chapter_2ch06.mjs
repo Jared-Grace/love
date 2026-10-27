@@ -159,7 +159,7 @@ export function bible_glyph_chapter_2ch06() {
           "$man_beard",
           "to",
           "be",
-          "ruler",
+          "$first_place+person",
           "over",
           "My",
           "$family",
