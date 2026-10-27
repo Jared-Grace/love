@@ -514,7 +514,7 @@ export function bible_glyph_chapter_gen41() {
           "and",
           "ugly",
           "and",
-          "thin",
+          "$bone+down_arrow+describing",
           "of",
           "$meat.",
           "I",
