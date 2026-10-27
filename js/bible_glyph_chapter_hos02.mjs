@@ -351,7 +351,7 @@ export function bible_glyph_chapter_hos02() {
           "exultation:",
           "her",
           "feasts,",
-          "New",
+          "$new_moon",
           "Moons,",
           "and",
           "Sabbaths",
