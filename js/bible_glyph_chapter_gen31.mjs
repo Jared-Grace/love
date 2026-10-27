@@ -853,7 +853,7 @@ export function bible_glyph_chapter_gen31() {
           "of",
           "our",
           "$brother,",
-          "see",
+          "$detective",
           "for",
           "yourself",
           "what",
