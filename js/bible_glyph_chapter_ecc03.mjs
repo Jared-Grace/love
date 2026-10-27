@@ -548,7 +548,7 @@ export function bible_glyph_chapter_ecc03() {
           "of",
           "the",
           "animal",
-          "descends",
+          "$walking+pointing_down",
           "into",
           "the",
           "$earth?",
