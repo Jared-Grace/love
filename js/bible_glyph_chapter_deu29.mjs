@@ -429,7 +429,7 @@ export function bible_glyph_chapter_deu29() {
           "who",
           "are",
           "not",
-          "here",
+          "$flashlight+round_pushpin",
           "$sun.",
         ],
       },
