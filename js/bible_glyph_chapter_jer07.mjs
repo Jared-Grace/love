@@ -905,7 +905,7 @@ export function bible_glyph_chapter_jer07() {
           "your",
           "hair",
           "and",
-          "throw",
+          "$throwing",
           "it",
           "away.",
           "Raise",
