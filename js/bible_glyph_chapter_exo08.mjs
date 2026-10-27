@@ -266,7 +266,7 @@ export function bible_glyph_chapter_exo08() {
           "honor",
           "over",
           "me.",
-          "When",
+          "$question+clock",
           "shall",
           "I",
           "pray",
