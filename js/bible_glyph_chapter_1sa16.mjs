@@ -338,7 +338,7 @@ export function bible_glyph_chapter_1sa16() {
           "$check_box",
           "any",
           "of",
-          "these.",
+          "$flashlight+flashlight.",
         ],
       },
       {
