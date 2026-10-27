@@ -420,7 +420,7 @@ export function bible_glyph_chapter_gen06() {
           "wide,",
           "and",
           "30",
-          "cubits",
+          "$triangular_ruler",
           "high.",
         ],
       },
