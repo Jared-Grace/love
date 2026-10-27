@@ -1383,7 +1383,7 @@ export function bible_glyph_chapter_gen27() {
           "these",
           "$proper_name$Hittite",
           "$woman.",
-          "If",
+          "$traffic_light",
           "$hand+foot",
           "$hand_receiving",
           "a",
