@@ -290,7 +290,7 @@ export function bible_glyph_chapter_deu01() {
           "burden",
           "for",
           "you",
-          "alone.",
+          "$one+person.",
         ],
       },
       {
