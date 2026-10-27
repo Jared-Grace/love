@@ -551,7 +551,7 @@ export function bible_glyph_chapter_gen04() {
           "And",
           "Lamech",
           "$hand_receiving",
-          "two",
+          "$two",
           "$woman,",
           "one",
           "named",
