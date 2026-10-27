@@ -334,7 +334,7 @@ export function bible_glyph_chapter_num11() {
         verse_number: 12,
         words: [
           "Did",
-          "I",
+          "$me",
           "conceive",
           "all",
           "these",
