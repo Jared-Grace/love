@@ -1356,7 +1356,7 @@ export function bible_glyph_chapter_gen41() {
           "from",
           "the",
           "fields",
-          "around",
+          "$around",
           "it.",
         ],
       },
