@@ -69,7 +69,7 @@ export function bible_glyph_chapter_gen37() {
           "$father",
           "a",
           "$thumbs_down",
-          "report",
+          "$left_speech_bubble+thumbs_down",
           "about",
           "them.",
         ],
