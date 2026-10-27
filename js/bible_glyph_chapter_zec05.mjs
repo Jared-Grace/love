@@ -312,7 +312,7 @@ export function bible_glyph_chapter_zec05() {
           "$mouth",
           "with",
           "me,",
-          "Where",
+          "$question+right_arrow",
           "are",
           "they",
           "$walking",
