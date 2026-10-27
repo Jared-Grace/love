@@ -497,7 +497,7 @@ export function bible_glyph_chapter_isa09() {
           "$crown",
           "takes",
           "$no_entry",
-          "pleasure",
+          "$beaming+doing",
           "in",
           "their",
           "young",
