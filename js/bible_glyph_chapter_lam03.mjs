@@ -1155,7 +1155,7 @@ export function bible_glyph_chapter_lam03() {
           "$running+toward",
           "them",
           "in",
-          "anger",
+          "$nose+fire",
           "and",
           "exterminate",
           "them",
