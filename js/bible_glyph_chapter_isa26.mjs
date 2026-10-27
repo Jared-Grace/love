@@ -149,7 +149,7 @@ export function bible_glyph_chapter_isa26() {
           "steps",
           "of",
           "the",
-          "poor.",
+          "$pinching_hand+person.",
         ],
       },
       {
