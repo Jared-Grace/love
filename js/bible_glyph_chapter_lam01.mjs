@@ -571,7 +571,7 @@ export function bible_glyph_chapter_lam01() {
           "has",
           "trampled",
           "the",
-          "Virgin",
+          "$girl+white_flower",
           "$woman",
           "of",
           "$hands_raised+proper_name.",
