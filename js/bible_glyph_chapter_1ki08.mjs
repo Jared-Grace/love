@@ -1052,7 +1052,7 @@ export function bible_glyph_chapter_1ki08() {
           "Your",
           "$altar",
           "in",
-          "this",
+          "$flashlight",
           "$house,",
         ],
       },
