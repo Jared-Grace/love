@@ -70,7 +70,7 @@ export function bible_glyph_chapter_deu14() {
           "$family$s",
           "$pointing_up",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth.",
