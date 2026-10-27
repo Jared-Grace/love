@@ -666,7 +666,7 @@ export function bible_glyph_chapter_gen30() {
           "$speech",
           "to",
           "him,",
-          "If",
+          "$traffic_light",
           "I",
           "have",
           "found",
