@@ -657,7 +657,7 @@ export function bible_glyph_chapter_num06() {
           "a",
           "wave",
           "offering",
-          "before",
+          "$face",
           "the",
           "$i_am.",
           "This",
