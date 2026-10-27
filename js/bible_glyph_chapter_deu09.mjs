@@ -350,7 +350,7 @@ export function bible_glyph_chapter_deu09() {
           "on",
           "the",
           "$mountain",
-          "forty",
+          "$four+zero",
           "$sun",
           "and",
           "forty",
