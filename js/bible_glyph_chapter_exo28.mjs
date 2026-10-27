@@ -764,7 +764,7 @@ export function bible_glyph_chapter_exo28() {
           "that",
           "the",
           "$gem_stone+t_shirt",
-          "is",
+          "$link",
           "above",
           "the",
           "waistband",
