@@ -524,7 +524,7 @@ export function bible_glyph_chapter_exo36() {
           "$thread+tent",
           "in",
           "the",
-          "second",
+          "$second_place",
           "set.",
         ],
       },
