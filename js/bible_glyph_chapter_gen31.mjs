@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_gen31() {
           "judge",
           "$brain+arrow_both_ways",
           "us",
-          "two.",
+          "$two.",
         ],
       },
       {
