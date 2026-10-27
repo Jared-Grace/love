@@ -541,7 +541,7 @@ export function bible_glyph_chapter_pro16() {
           "hunger",
           "drives",
           "him",
-          "onward.",
+          "$pointing_up.",
         ],
       },
       {
