@@ -1313,7 +1313,7 @@ export function bible_glyph_chapter_1ki08() {
           "$lightbulb",
           "his",
           "own",
-          "afflictions",
+          "$face_with_head_bandage",
           "and",
           "spreading",
           "out",
