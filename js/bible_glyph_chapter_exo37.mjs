@@ -22,7 +22,7 @@ export function bible_glyph_chapter_exo37() {
           "the",
           "$ark",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
           "two",
           "and",
