@@ -596,7 +596,7 @@ export function bible_glyph_chapter_2ki04() {
           "servant,",
           "$lifting",
           "him",
-          "to",
+          "$toward",
           "his",
           "$mother.",
         ],
