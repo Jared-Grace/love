@@ -59,7 +59,7 @@ export function bible_glyph_chapter_zep03() {
           "princes",
           "are",
           "roaring",
-          "lions;",
+          "$lion;",
           "her",
           "judges",
           "are",
