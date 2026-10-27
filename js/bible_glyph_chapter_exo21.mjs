@@ -971,7 +971,7 @@ export function bible_glyph_chapter_exo21() {
           "$key",
           "of",
           "the",
-          "pit",
+          "$hole+droplet",
           "shall",
           "make",
           "restitution.",
