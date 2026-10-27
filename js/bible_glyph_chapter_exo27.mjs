@@ -270,7 +270,7 @@ export function bible_glyph_chapter_exo27() {
           "$right_arrow",
           "on",
           "the",
-          "north",
+          "$compass+up_arrow",
           "$straight_ruler+round_pushpin,",
           "curtains",
           "a",
