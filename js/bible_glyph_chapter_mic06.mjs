@@ -151,7 +151,7 @@ export function bible_glyph_chapter_mic06() {
           "journey",
           "$tray_out",
           "$proper_name$Shittim",
-          "to",
+          "$finish",
           "$proper_name$Gilgal,",
           "so",
           "that",
