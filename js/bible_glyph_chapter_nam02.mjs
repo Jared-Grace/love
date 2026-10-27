@@ -238,7 +238,7 @@ export function bible_glyph_chapter_nam02() {
           "$silver!",
           "$pirate_flag+doing",
           "the",
-          "gold!",
+          "$gold!",
           "There",
           "is",
           "no",
