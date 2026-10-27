@@ -46,7 +46,7 @@ export function bible_glyph_chapter_neh01() {
         verse_number: 2,
         words: [
           "$proper_name$Hanani,",
-          "one",
+          "$one",
           "of",
           "my",
           "$brother,",
