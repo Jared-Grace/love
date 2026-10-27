@@ -742,7 +742,7 @@ export function bible_glyph_chapter_exo07() {
           "all",
           "the",
           "$clamp+person",
-          "dug",
+          "$pick+magnifying_glass+doing",
           "around",
           "the",
           "Nile",
