@@ -849,7 +849,7 @@ export function bible_glyph_chapter_exo04() {
           "$proper_name$Aaron,",
           '"$walking',
           "and",
-          "meet",
+          "$footprints+toward+doing",
           "$fishing_pole+proper_name",
           "in",
           "the",
