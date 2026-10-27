@@ -444,7 +444,7 @@ export function bible_glyph_chapter_num21() {
           "the",
           "wadis",
           "$back+flashlight",
-          "extend",
+          "$white_cane+doing",
           "to",
           "the",
           "site",
