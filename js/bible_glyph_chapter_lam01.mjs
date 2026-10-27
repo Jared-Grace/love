@@ -118,7 +118,7 @@ export function bible_glyph_chapter_lam01() {
           "midst",
           "of",
           "her",
-          "distress.",
+          "$pinching_hand+anxious_face_with_sweat.",
         ],
       },
       {
