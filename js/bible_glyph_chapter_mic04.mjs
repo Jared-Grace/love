@@ -453,7 +453,7 @@ export function bible_glyph_chapter_mic04() {
           "$brain",
           "His",
           "plan,",
-          "for",
+          "$pointing",
           "He",
           "has",
           "gathered",
