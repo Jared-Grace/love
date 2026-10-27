@@ -247,7 +247,7 @@ export function bible_glyph_chapter_1sa01() {
           "so",
           "grieved?",
           "Am",
-          "I",
+          "$me",
           "$no_entry",
           "$thumbs_up",
           "to",
