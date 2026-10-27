@@ -700,7 +700,7 @@ export function bible_glyph_chapter_deu01() {
           "from",
           "among",
           "you,",
-          "one",
+          "$one",
           "from",
           "each",
           "tribe.",
