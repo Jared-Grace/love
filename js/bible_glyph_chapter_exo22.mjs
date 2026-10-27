@@ -25,7 +25,7 @@ export function bible_glyph_chapter_exo22() {
           "sheep",
           "and",
           "slaughters",
-          "or",
+          "$shuffle",
           "sells",
           "it,",
           "he",
