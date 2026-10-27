@@ -1305,7 +1305,7 @@ export function bible_glyph_chapter_1sa17() {
           "$speech",
           "to",
           "$two_hearts+proper_name,",
-          "that",
+          "$pointing",
           "you",
           "$footprints",
           "at",
