@@ -914,7 +914,7 @@ export function bible_glyph_chapter_gen43() {
           "he",
           "$speech,",
           "Is",
-          "this",
+          "$flashlight",
           "your",
           "youngest",
           "$brother,",
