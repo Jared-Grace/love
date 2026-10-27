@@ -93,7 +93,7 @@ export function bible_glyph_chapter_jer18() {
           "$hammer+doing",
           "it",
           "into",
-          "another",
+          "$plus+one",
           "$toolbox,",
           "as",
           "it",
