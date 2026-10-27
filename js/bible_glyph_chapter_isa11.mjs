@@ -355,7 +355,7 @@ export function bible_glyph_chapter_isa11() {
           "to",
           "recover",
           "the",
-          "remnant",
+          "$puzzle_piece+thing",
           "of",
           "His",
           "$family",
