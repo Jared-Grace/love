@@ -173,7 +173,7 @@ export function bible_glyph_chapter_job31() {
       {
         verse_number: 9,
         words: [
-          "If",
+          "$traffic_light",
           "my",
           "$heart_organ",
           "has",
