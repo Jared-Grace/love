@@ -292,7 +292,7 @@ export function bible_glyph_chapter_job19() {
           "he",
           "does",
           "$no_entry",
-          "answer,",
+          "$speech+turn_back,",
           "though",
           "I",
           "implore",
