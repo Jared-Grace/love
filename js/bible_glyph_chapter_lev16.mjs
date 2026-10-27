@@ -934,7 +934,7 @@ export function bible_glyph_chapter_lev16() {
           "to",
           "burn",
           "the",
-          "fat",
+          "$bacon",
           "of",
           "the",
           "$bow",
