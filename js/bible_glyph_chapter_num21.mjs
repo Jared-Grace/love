@@ -636,7 +636,7 @@ export function bible_glyph_chapter_num21() {
           "passed",
           "through",
           "your",
-          "territory.",
+          "$passport_control.",
         ],
       },
       {
