@@ -160,7 +160,7 @@ export function bible_glyph_chapter_isa55() {
           "$lightbulb",
           "you",
           "will",
-          "run",
+          "$running",
           "to",
           "you.",
           "For",
