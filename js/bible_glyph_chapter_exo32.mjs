@@ -1094,7 +1094,7 @@ export function bible_glyph_chapter_exo32() {
           "out",
           "of",
           "the",
-          "book",
+          "$closed_book",
           "that",
           "You",
           "have",
