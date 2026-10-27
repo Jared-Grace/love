@@ -415,7 +415,7 @@ export function bible_glyph_chapter_deu29() {
           "$sun",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am",
