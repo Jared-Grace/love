@@ -43,7 +43,7 @@ export function bible_glyph_chapter_jdg07() {
           "them,",
           "near",
           "the",
-          "hill",
+          "$mountain+pinching_hand",
           "of",
           "Moreh",
           "in",
