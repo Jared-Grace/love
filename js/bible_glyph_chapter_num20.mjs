@@ -345,7 +345,7 @@ export function bible_glyph_chapter_num20() {
           "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron,",
-          "Because",
+          "$information",
           "you",
           "did",
           "$no_entry",
