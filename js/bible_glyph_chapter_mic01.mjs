@@ -402,7 +402,7 @@ export function bible_glyph_chapter_mic01() {
           "$horse+link+doing",
           "the",
           "$chariot",
-          "horses,",
+          "$horse+fast_forward,",
           "O",
           "dweller",
           "of",
