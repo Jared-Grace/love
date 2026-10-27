@@ -892,7 +892,7 @@ export function bible_glyph_chapter_deu09() {
           "and",
           "$four+zero",
           "$night,",
-          "because",
+          "$pointing",
           "$i_am",
           "had",
           "$speech",
