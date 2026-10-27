@@ -952,7 +952,7 @@ export function bible_glyph_chapter_deu01() {
           "$finish",
           "you",
           "$footprints",
-          "this",
+          "$flashlight",
           "$place.",
         ],
       },
