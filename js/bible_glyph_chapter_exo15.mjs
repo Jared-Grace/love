@@ -698,7 +698,7 @@ export function bible_glyph_chapter_exo15() {
           "an",
           "$scales+thing,",
           "and",
-          "there",
+          "$telescope",
           "He",
           "tested",
           "them,",
