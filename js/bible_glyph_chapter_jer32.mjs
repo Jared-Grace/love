@@ -475,7 +475,7 @@ export function bible_glyph_chapter_jer32() {
           "$wrestling+heart_on_fire,",
           "$speech,",
           "$hand_receiving",
-          "these",
+          "$flashlight+flashlight",
           "deeds,",
           "both",
           "the",
