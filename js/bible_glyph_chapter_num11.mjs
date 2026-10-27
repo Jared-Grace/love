@@ -653,7 +653,7 @@ export function bible_glyph_chapter_num11() {
           "rejected",
           "the",
           "$i_am",
-          "who",
+          "$back+flashlight",
           "is",
           "among",
           "you,",
