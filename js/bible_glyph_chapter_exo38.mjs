@@ -51,7 +51,7 @@ export function bible_glyph_chapter_exo38() {
           "of",
           "its",
           "$four",
-          "corners,",
+          "$triangular_ruler+brick,",
           "so",
           "that",
           "the",
