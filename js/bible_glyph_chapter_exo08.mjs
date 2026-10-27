@@ -472,7 +472,7 @@ export function bible_glyph_chapter_exo08() {
           "$white_cane+doing",
           "out",
           "your",
-          "staff",
+          "$white_cane",
           "and",
           "$fist",
           "the",
