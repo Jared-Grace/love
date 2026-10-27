@@ -727,7 +727,7 @@ export function bible_glyph_chapter_lev06() {
           "be",
           "broken,",
           "and",
-          "if",
+          "$traffic_light",
           "it",
           "is",
           "boiled",
