@@ -217,7 +217,7 @@ export function bible_glyph_chapter_num09() {
           "from",
           "$magnet+doing",
           "the",
-          "offering",
+          "$magnet+gift",
           "of",
           "$i_am",
           "at",
