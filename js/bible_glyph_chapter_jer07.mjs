@@ -303,7 +303,7 @@ export function bible_glyph_chapter_jer07() {
           "$eyes?",
           "Yes,",
           "I",
-          "too",
+          "$plus",
           "have",
           "$eye",
           "it,",
