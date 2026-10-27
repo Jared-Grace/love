@@ -480,7 +480,7 @@ export function bible_glyph_chapter_isa07() {
           "$brown_square",
           "of",
           "the",
-          "two",
+          "$two",
           "$king",
           "$you",
           "$nauseated_face+heart_red+doing",
