@@ -249,7 +249,7 @@ export function bible_glyph_chapter_num17() {
           "$fishing_pole+proper_name",
           "brought",
           "out",
-          "all",
+          "$all",
           "the",
           "staffs",
           "from",
