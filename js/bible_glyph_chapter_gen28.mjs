@@ -502,7 +502,7 @@ export function bible_glyph_chapter_gen28() {
           "up,",
           "he",
           "$speech,",
-          "Surely",
+          "$right_arrow",
           "the",
           "$i_am",
           "is",
