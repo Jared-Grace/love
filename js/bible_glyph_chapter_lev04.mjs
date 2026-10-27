@@ -891,7 +891,7 @@ export function bible_glyph_chapter_lev04() {
       {
         verse_number: 32,
         words: [
-          "If,",
+          "$traffic_light,",
           "however,",
           "$footprints",
           "$lamb",
