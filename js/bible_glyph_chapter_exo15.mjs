@@ -782,7 +782,7 @@ export function bible_glyph_chapter_exo15() {
           "$water",
           "and",
           "$seven+zero",
-          "palm",
+          "$palm_tree",
           "trees,",
           "and",
           "they",
