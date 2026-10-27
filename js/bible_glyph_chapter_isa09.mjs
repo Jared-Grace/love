@@ -528,7 +528,7 @@ export function bible_glyph_chapter_isa09() {
           "$clown_face+thumbs_down.",
           "Despite",
           "all",
-          "this,",
+          "$flashlight,",
           "His",
           "anger",
           "is",
