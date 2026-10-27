@@ -221,7 +221,7 @@ export function bible_glyph_chapter_exo01() {
           "oppress",
           "them",
           "with",
-          "forced",
+          "$luggage+back",
           "labor.",
           "As",
           "a",
