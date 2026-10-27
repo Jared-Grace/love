@@ -722,7 +722,7 @@ export function bible_glyph_chapter_num10() {
           "the",
           "father",
           "in",
-          "law",
+          "$man_in_tuxedo+family",
           "of",
           "$fishing_pole+proper_name:",
           "We",
