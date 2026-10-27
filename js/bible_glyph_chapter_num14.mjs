@@ -1207,7 +1207,7 @@ export function bible_glyph_chapter_num14() {
           "when",
           "$fishing_pole+proper_name",
           "$mouth",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "to",
           "all",
