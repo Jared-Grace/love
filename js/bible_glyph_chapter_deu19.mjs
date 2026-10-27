@@ -529,7 +529,7 @@ export function bible_glyph_chapter_deu19() {
           "of",
           "$two",
           "or",
-          "three",
+          "$three",
           "$witness$s.",
         ],
       },
