@@ -194,7 +194,7 @@ export function bible_glyph_chapter_jos03() {
           "they",
           "carried",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$covenant",
