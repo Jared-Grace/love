@@ -211,7 +211,7 @@ export function bible_glyph_chapter_lev27() {
           "vow",
           "is",
           "too",
-          "poor",
+          "$person+money_bag+away+doing",
           "to",
           "pay",
           "the",
