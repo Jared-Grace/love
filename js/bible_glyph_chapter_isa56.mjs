@@ -363,7 +363,7 @@ export function bible_glyph_chapter_isa56() {
           "around,",
           "$heart_red+doing",
           "to",
-          "slumber.",
+          "$sleeping_face+eye+doing.",
         ],
       },
       {
