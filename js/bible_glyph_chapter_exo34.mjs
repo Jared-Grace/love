@@ -755,7 +755,7 @@ export function bible_glyph_chapter_exo34() {
       {
         verse_number: 24,
         words: [
-          "For",
+          "$pointing",
           "I",
           "will",
           "drive",
