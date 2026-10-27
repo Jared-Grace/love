@@ -292,7 +292,7 @@ export function bible_glyph_chapter_hos06() {
       {
         verse_number: 11,
         words: [
-          "Also,",
+          "$plus,",
           "O",
           "Judah,",
           "a",
