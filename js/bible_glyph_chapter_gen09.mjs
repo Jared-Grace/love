@@ -607,7 +607,7 @@ export function bible_glyph_chapter_gen09() {
           "his",
           "$two",
           "$brother",
-          "outside.",
+          "$sun_behind_small_cloud.",
         ],
       },
       {
