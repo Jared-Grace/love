@@ -760,7 +760,7 @@ export function bible_glyph_chapter_ezk03() {
           "the",
           "plain,",
           "and",
-          "behold,",
+          "$exclamation,",
           "the",
           "$star",
           "of",
