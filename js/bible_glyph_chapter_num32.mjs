@@ -842,7 +842,7 @@ export function bible_glyph_chapter_num32() {
           "$speech",
           "to",
           "them,",
-          "If",
+          "$traffic_light",
           "the",
           "$son",
           "of",
