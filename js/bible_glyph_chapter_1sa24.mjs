@@ -442,7 +442,7 @@ export function bible_glyph_chapter_1sa24() {
           "May",
           "the",
           "$i_am",
-          "judge",
+          "$scales",
           "between",
           "you",
           "and",
