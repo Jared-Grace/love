@@ -237,7 +237,7 @@ export function bible_glyph_chapter_ezk01() {
           "were",
           "touching",
           "$toward",
-          "another.",
+          "$sister.",
           "They",
           "did",
           "$no_entry",
