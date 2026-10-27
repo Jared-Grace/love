@@ -242,7 +242,7 @@ export function bible_glyph_chapter_jer01() {
           "and",
           "touched",
           "my",
-          "mouth,",
+          "$face_with_open_mouth,",
           "and",
           "$speech",
           "to",
