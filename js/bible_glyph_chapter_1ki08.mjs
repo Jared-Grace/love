@@ -673,7 +673,7 @@ export function bible_glyph_chapter_1ki08() {
           "$place",
           "for",
           "the",
-          "ark,",
+          "$ark,",
           "which",
           "contains",
           "the",
