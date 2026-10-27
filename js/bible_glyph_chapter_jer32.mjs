@@ -348,7 +348,7 @@ export function bible_glyph_chapter_jer32() {
           "for",
           "him",
           "$seven",
-          "shekels",
+          "$coin",
           "of",
           "silver.",
         ],
