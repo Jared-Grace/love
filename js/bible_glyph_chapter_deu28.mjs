@@ -992,7 +992,7 @@ export function bible_glyph_chapter_deu28() {
           "of",
           "it.",
           "Your",
-          "donkey",
+          "$donkey",
           "will",
           "be",
           "taken",
