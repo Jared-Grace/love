@@ -20,7 +20,7 @@ export function bible_glyph_chapter_gen46() {
           "out",
           "with",
           "all",
-          "that",
+          "$back+flashlight",
           "he",
           "had,",
           "and",
