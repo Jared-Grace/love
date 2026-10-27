@@ -318,7 +318,7 @@ export function bible_glyph_chapter_exo24() {
           "pavement",
           "made",
           "of",
-          "sapphire,",
+          "$gem_stone+blue_circle,",
           "as",
           "clear",
           "as",
