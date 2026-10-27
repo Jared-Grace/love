@@ -515,7 +515,7 @@ export function bible_glyph_chapter_deu07() {
           "And",
           "$i_am",
           "will",
-          "remove",
+          "$away+doing",
           "$tray_out",
           "you",
           "all",
