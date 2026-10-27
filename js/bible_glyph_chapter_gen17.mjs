@@ -55,7 +55,7 @@ export function bible_glyph_chapter_gen17() {
           "and",
           "I",
           "will",
-          "multiply",
+          "$multiply+doing",
           "you",
           'exceedingly."',
         ],
