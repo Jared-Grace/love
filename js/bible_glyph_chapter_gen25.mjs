@@ -596,7 +596,7 @@ export function bible_glyph_chapter_gen25() {
           "$hand+foot.",
           "$laughing+proper_name",
           "was",
-          "sixty",
+          "$six+zero",
           "$son",
           "old",
           "when",
