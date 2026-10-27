@@ -270,7 +270,7 @@ export function bible_glyph_chapter_job01() {
           "$i_am,",
           "Does",
           "Job",
-          "fear",
+          "$fear+doing",
           "$heart_on_fire",
           "for",
           "$heart_orange+manner?",
