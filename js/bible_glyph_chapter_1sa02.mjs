@@ -42,7 +42,7 @@ export function bible_glyph_chapter_1sa02() {
           "enemies,",
           "$pointing",
           "I",
-          "rejoice",
+          "$beaming+doing",
           "in",
           "Your",
           "salvation.",
