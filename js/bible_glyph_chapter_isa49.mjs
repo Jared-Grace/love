@@ -604,7 +604,7 @@ export function bible_glyph_chapter_isa49() {
           "As",
           "surely",
           "as",
-          "I",
+          "$me",
           "$sprout,",
           "declares",
           "the",
