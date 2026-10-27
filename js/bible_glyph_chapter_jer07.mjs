@@ -131,7 +131,7 @@ export function bible_glyph_chapter_jer07() {
           "and",
           "your",
           "deeds,",
-          "if",
+          "$traffic_light",
           "you",
           "$hammer+doing",
           "$scales+thing",
