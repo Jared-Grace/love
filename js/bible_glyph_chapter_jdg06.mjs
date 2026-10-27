@@ -906,7 +906,7 @@ export function bible_glyph_chapter_jdg06() {
         verse_number: 27,
         words: [
           "So",
-          "Gideon",
+          "$axe+proper_name",
           "$hand_receiving",
           "ten",
           "of",
