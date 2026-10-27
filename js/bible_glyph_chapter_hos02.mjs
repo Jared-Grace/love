@@ -43,7 +43,7 @@ export function bible_glyph_chapter_hos02() {
           "My",
           "$woman,",
           "and",
-          "I",
+          "$me",
           "am",
           "$no_entry",
           "her",
