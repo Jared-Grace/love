@@ -1274,7 +1274,7 @@ export function bible_glyph_chapter_num16() {
           "and",
           "$proper_name$Aaron,",
           "$speech,",
-          "You",
+          "$you",
           "have",
           "$skull+doing",
           "the",
