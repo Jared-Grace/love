@@ -1143,7 +1143,7 @@ export function bible_glyph_chapter_exo12() {
           "for",
           "articles",
           "of",
-          "silver",
+          "$silver",
           "and",
           "gold",
           "and",
