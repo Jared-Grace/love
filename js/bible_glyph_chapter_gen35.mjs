@@ -430,7 +430,7 @@ export function bible_glyph_chapter_gen35() {
           "it",
           "and",
           "poured",
-          "oil",
+          "$lotion_bottle",
           "on",
           "it.",
         ],
