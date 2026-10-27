@@ -844,7 +844,7 @@ export function bible_glyph_chapter_exo28() {
           "whenever",
           "he",
           "$footprints",
-          "before",
+          "$face",
           "$i_am.",
           "So",
           "$proper_name$Aaron",
