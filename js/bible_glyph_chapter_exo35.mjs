@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo35() {
           "stirred",
           "him",
           "and",
-          "whose",
+          "$back+flashlight",
           "$wind",
           "prompted",
           "him",
