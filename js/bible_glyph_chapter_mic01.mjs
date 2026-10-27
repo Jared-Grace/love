@@ -391,7 +391,7 @@ export function bible_glyph_chapter_mic01() {
           "even",
           "to",
           "the",
-          "gate",
+          "$gate",
           "of",
           "$city+peace.",
         ],
