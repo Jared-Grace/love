@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_deu32() {
         verse_number: 39,
         words: [
           "$eye",
-          "now",
+          "$watch",
           "that",
           "I,",
           "I",
