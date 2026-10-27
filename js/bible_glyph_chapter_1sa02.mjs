@@ -1234,7 +1234,7 @@ export function bible_glyph_chapter_1sa02() {
           "a",
           "piece",
           "of",
-          "silver",
+          "$silver",
           "or",
           "a",
           "morsel",
