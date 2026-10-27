@@ -348,7 +348,7 @@ export function bible_glyph_chapter_jdg07() {
           "$speech",
           "to",
           "him,",
-          "Get",
+          "$person+pointing_up",
           "up",
           "and",
           "go",
