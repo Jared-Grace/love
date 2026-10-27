@@ -19,7 +19,7 @@ export function bible_glyph_chapter_1ki02() {
           "the",
           "$sun",
           "drew",
-          "near",
+          "$magnet+doing",
           "for",
           "$two_hearts+proper_name",
           "to",
