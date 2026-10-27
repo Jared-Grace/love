@@ -574,7 +574,7 @@ export function bible_glyph_chapter_1ch29() {
           "all",
           "$flashlight",
           "$crowd+loudspeaker",
-          "that",
+          "$back+flashlight",
           "we",
           "have",
           "provided",
