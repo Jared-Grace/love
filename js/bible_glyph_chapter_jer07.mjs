@@ -543,7 +543,7 @@ export function bible_glyph_chapter_jer07() {
           "They",
           "$pouring_liquid+wine",
           "out",
-          "drink",
+          "$pouring_liquid+wine+thing",
           "offerings",
           "to",
           "other",
