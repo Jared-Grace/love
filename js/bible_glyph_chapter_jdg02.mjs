@@ -560,7 +560,7 @@ export function bible_glyph_chapter_jdg02() {
           "They",
           "quickly",
           "$away+doing",
-          "from",
+          "$tray_out",
           "the",
           "$road",
           "of",
