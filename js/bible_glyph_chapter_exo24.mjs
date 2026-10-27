@@ -31,7 +31,7 @@ export function bible_glyph_chapter_exo24() {
           "and",
           "$father+pointing_back,",
           "and",
-          "seventy",
+          "$seven+zero",
           "of",
           "the",
           "elders",
