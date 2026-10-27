@@ -88,7 +88,7 @@ export function bible_glyph_chapter_isa55() {
       {
         verse_number: 3,
         words: [
-          "Incline",
+          "$white_cane+doing",
           "your",
           "ear",
           "and",
