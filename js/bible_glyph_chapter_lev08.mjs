@@ -277,7 +277,7 @@ export function bible_glyph_chapter_lev08() {
         words: [
           "Then",
           "$fishing_pole+proper_name",
-          "presented",
+          "$magnet+doing",
           "$son",
           "of",
           "Aaron,",
