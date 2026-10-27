@@ -150,7 +150,7 @@ export function bible_glyph_chapter_deu28() {
         verse_number: 5,
         words: [
           "Your",
-          "basket",
+          "$basket+thread",
           "and",
           "your",
           "kneading",
