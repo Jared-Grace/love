@@ -140,7 +140,7 @@ export function bible_glyph_chapter_isa12() {
           "glorious",
           "things.",
           "Let",
-          "this",
+          "$flashlight",
           "be",
           "$lightbulb",
           "in",
