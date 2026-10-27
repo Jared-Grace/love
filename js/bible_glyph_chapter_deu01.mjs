@@ -1112,7 +1112,7 @@ export function bible_glyph_chapter_deu01() {
           "He",
           "$speech,",
           "$no_entry",
-          "even",
+          "$plus",
           "you",
           "shall",
           "$footprints",
