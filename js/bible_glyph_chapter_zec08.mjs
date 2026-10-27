@@ -628,7 +628,7 @@ export function bible_glyph_chapter_zec08() {
           "feasts,",
           "times",
           "of",
-          "joy",
+          "$grinning_face",
           "and",
           "gladness",
           "for",
