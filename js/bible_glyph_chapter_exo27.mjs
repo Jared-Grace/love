@@ -439,7 +439,7 @@ export function bible_glyph_chapter_exo27() {
           "$hook",
           "and",
           "$bronze",
-          "bases.",
+          "$down_arrow+brick.",
         ],
       },
       {
