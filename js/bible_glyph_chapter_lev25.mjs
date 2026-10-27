@@ -693,7 +693,7 @@ export function bible_glyph_chapter_lev25() {
         words: [
           "Thus",
           "for",
-          "every",
+          "$all",
           "$earth",
           "you",
           "possess,",
