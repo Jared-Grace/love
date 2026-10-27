@@ -770,7 +770,7 @@ export function bible_glyph_chapter_ezk11() {
           "and",
           "$footprints",
           "me",
-          "back",
+          "$toward",
           "to",
           "the",
           "exiles",
