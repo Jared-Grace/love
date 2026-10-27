@@ -494,7 +494,7 @@ export function bible_glyph_chapter_num08() {
           "of",
           "$all",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "among",
           "$son",
           "of",
