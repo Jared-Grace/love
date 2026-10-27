@@ -90,7 +90,7 @@ export function bible_glyph_chapter_psa027() {
           "will",
           "keep",
           "my",
-          "trust.",
+          "$anchor+doing.",
         ],
       },
       {
