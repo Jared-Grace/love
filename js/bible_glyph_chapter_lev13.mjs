@@ -150,7 +150,7 @@ export function bible_glyph_chapter_lev13() {
           "and",
           "does",
           "not",
-          "appear",
+          "$eyes+thing",
           "to",
           "be",
           "deeper",
