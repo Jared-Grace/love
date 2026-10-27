@@ -640,7 +640,7 @@ export function bible_glyph_chapter_exo39() {
           "$fruit+red_circle",
           "of",
           "$blue_circle,",
-          "purple,",
+          "$purple_circle,",
           "and",
           "scarlet",
           "yarn,",
