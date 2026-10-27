@@ -368,7 +368,7 @@ export function bible_glyph_chapter_ecc01() {
           "to",
           "$heart_organ,",
           "Behold,",
-          "I",
+          "$me",
           "have",
           "grown",
           "and",
