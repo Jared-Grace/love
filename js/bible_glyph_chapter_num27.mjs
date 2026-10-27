@@ -339,7 +339,7 @@ export function bible_glyph_chapter_num27() {
           "$eye",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "have",
           "$hands_giving",
