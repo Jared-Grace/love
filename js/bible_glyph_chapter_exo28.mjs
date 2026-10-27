@@ -204,7 +204,7 @@ export function bible_glyph_chapter_exo28() {
           "It",
           "shall",
           "have",
-          "two",
+          "$two",
           "shoulder",
           "pieces",
           "attached",
