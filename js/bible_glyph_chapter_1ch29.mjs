@@ -294,7 +294,7 @@ export function bible_glyph_chapter_1ch29() {
           "silver,",
           "eighteen",
           "thousand",
-          "talents",
+          "$flying_disc",
           "of",
           "bronze,",
           "and",
