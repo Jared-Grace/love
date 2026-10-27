@@ -176,7 +176,7 @@ export function bible_glyph_chapter_1ki20() {
           "my",
           "$kneeling",
           "to",
-          "search",
+          "$performing_arts+doing",
           "your",
           "$house",
           "and",
