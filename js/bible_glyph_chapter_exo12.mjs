@@ -469,7 +469,7 @@ export function bible_glyph_chapter_exo12() {
           "to",
           "remove",
           "the",
-          "leaven",
+          "$bubbles+bread+pinching_hand",
           "from",
           "your",
           "$house.",
