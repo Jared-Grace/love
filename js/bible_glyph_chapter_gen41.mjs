@@ -543,7 +543,7 @@ export function bible_glyph_chapter_gen41() {
           "$eating",
           "the",
           "$seven",
-          "well-fed",
+          "$meat+describing",
           "$bull",
           "that",
           "were",
