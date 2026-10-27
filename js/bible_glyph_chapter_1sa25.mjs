@@ -1205,7 +1205,7 @@ export function bible_glyph_chapter_1sa25() {
           "$light",
           "not",
           "one",
-          "male",
+          "$droplet+brick+doing",
           "belonging",
           "to",
           "$proper_name$Nabal",
