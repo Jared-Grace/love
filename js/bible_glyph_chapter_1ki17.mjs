@@ -687,7 +687,7 @@ export function bible_glyph_chapter_1ki17() {
           "$i_am",
           "my",
           "$heart_on_fire,",
-          "please",
+          "$pleading",
           "$turn_back",
           "the",
           "$person_other",
