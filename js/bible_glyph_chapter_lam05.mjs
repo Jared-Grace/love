@@ -278,7 +278,7 @@ export function bible_glyph_chapter_lam05() {
           "fallen",
           "from",
           "our",
-          "head.",
+          "$person_gesturing_ok.",
           "Woe",
           "to",
           "us,",
