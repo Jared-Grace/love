@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_jdg06() {
           "to",
           "$skull+doing",
           "by",
-          "morning.",
+          "$morning.",
           "If",
           "Baal",
           "is",
