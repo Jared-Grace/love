@@ -1247,7 +1247,7 @@ export function bible_glyph_chapter_1ki08() {
           "May",
           "You",
           "$hands_giving",
-          "rain",
+          "$rain",
           "on",
           "the",
           "$earth",
