@@ -963,7 +963,7 @@ export function bible_glyph_chapter_gen47() {
           "$earth",
           "of",
           "$clamp+proper_name",
-          "seventeen",
+          "$ten",
           "years,",
           "and",
           "the",
