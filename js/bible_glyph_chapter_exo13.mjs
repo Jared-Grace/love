@@ -539,7 +539,7 @@ export function bible_glyph_chapter_exo13() {
           "the",
           "$proper_name$Philistines,",
           "though",
-          "it",
+          "$pointing_back",
           "was",
           "nearer.",
           "For",
