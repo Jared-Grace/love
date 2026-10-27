@@ -993,7 +993,7 @@ export function bible_glyph_chapter_1sa20() {
           "I",
           "have",
           "found",
-          "favor",
+          "$heart_orange",
           "in",
           "your",
           "$eyes,",
