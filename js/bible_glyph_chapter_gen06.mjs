@@ -81,7 +81,7 @@ export function bible_glyph_chapter_gen06() {
           "$sun",
           "will",
           "be",
-          "120",
+          "$input_numbers+all",
           "$year.",
         ],
       },
