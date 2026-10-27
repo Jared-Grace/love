@@ -32,7 +32,7 @@ export function bible_glyph_chapter_1sa07() {
           "the",
           "$house",
           "of",
-          "Abinadab",
+          "$father+heart_hands+proper_name",
           "on",
           "the",
           "hill.",
