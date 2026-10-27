@@ -2262,7 +2262,7 @@ export function bible_glyph_chapter_1ki08() {
           "So",
           "at",
           "that",
-          "time",
+          "$clock",
           "$peace+proper_name",
           "and",
           "all",
