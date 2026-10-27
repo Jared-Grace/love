@@ -334,7 +334,7 @@ export function bible_glyph_chapter_2ch34() {
           "$hands_giving",
           "him",
           "the",
-          "money",
+          "$silver",
           "that",
           "had",
           "been",
