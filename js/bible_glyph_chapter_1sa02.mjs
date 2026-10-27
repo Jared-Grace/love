@@ -411,7 +411,7 @@ export function bible_glyph_chapter_1sa02() {
           "kettle",
           "$shuffle",
           "cauldron",
-          "or",
+          "$shuffle",
           "cooking",
           "pot.",
           "And",
