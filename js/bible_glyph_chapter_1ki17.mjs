@@ -206,7 +206,7 @@ export function bible_glyph_chapter_1ki17() {
       {
         verse_number: 9,
         words: [
-          "Get",
+          "$person+pointing_up",
           "up",
           "and",
           "$walking",
