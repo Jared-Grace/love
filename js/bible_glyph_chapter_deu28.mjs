@@ -1486,7 +1486,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "$tongue+desert+thing",
           "and",
-          "nakedness",
+          "$garment+no_entry+thing",
           "and",
           "destitution.",
           "He",
