@@ -1039,7 +1039,7 @@ export function bible_glyph_chapter_2ki05() {
           "of",
           "$proper_name$Naaman",
           "will",
-          "cling",
+          "$paperclip",
           "to",
           "you",
           "and",
