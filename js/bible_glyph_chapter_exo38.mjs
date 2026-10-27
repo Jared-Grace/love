@@ -313,7 +313,7 @@ export function bible_glyph_chapter_exo38() {
           "posts",
           "and",
           "$ten",
-          "bases.",
+          "$down_arrow+brick.",
           "The",
           "hooks",
           "and",
