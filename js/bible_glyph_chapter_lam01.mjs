@@ -597,7 +597,7 @@ export function bible_glyph_chapter_lam01() {
           "one",
           "nearby",
           "to",
-          "comfort",
+          "$hug+doing",
           "me,",
           "no",
           "one",
