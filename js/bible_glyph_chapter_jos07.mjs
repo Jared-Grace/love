@@ -21,7 +21,7 @@ export function bible_glyph_chapter_jos07() {
           "$son",
           "of",
           "Israel",
-          "acted",
+          "$handshake+broken_chain+doing",
           "unfaithfully",
           "regarding",
           "the",
