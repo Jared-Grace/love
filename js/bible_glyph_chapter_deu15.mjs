@@ -86,7 +86,7 @@ export function bible_glyph_chapter_deu15() {
           "$back+flashlight",
           "your",
           "$brother",
-          "owes",
+          "$link",
           "you.",
         ],
       },
