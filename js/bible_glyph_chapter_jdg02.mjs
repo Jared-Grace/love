@@ -112,7 +112,7 @@ export function bible_glyph_chapter_jdg02() {
           "I",
           "will",
           "$no_entry",
-          "drive",
+          "$door+leftwards_pushing_hand+doing",
           "out",
           "these",
           "people",
