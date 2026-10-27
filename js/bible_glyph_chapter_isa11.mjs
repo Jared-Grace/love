@@ -522,7 +522,7 @@ export function bible_glyph_chapter_isa11() {
           "split",
           "it",
           "into",
-          "seven",
+          "$seven",
           "streams",
           "for",
           "men",
