@@ -703,7 +703,7 @@ export function bible_glyph_chapter_1ch29() {
           "and",
           "to",
           "$hammer+doing",
-          "all",
+          "$all",
           "of",
           "them,",
           "and",
