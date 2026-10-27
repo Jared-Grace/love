@@ -161,7 +161,7 @@ export function bible_glyph_chapter_ezk01() {
           "the",
           "form",
           "of",
-          "four",
+          "$four",
           "$sprout,",
           "and",
           "this",
