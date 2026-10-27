@@ -273,7 +273,7 @@ export function bible_glyph_chapter_psa042() {
           "because",
           "of",
           "the",
-          "oppression",
+          "$clamp+weary_face+thing",
           "of",
           "the",
           "$enemy?",
