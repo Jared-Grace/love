@@ -222,7 +222,7 @@ export function bible_glyph_chapter_2sa05() {
         words: [
           "Nevertheless,",
           "$two_hearts+proper_name",
-          "captured",
+          "$net+doing",
           "the",
           "fortress",
           "of",
