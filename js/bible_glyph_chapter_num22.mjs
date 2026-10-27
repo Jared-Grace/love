@@ -878,7 +878,7 @@ export function bible_glyph_chapter_num22() {
           "Then",
           "the",
           "$i_am",
-          "opened",
+          "$unlocked",
           "the",
           "donkey's",
           "mouth,",
