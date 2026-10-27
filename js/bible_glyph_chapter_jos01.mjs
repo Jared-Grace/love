@@ -413,7 +413,7 @@ export function bible_glyph_chapter_jos01() {
           "will",
           "give",
           "you",
-          "rest,",
+          "$seat+doing,",
           "and",
           "He",
           "will",
