@@ -178,7 +178,7 @@ export function bible_glyph_chapter_psa073() {
       {
         verse_number: 10,
         words: [
-          "So",
+          "$right_arrow",
           "their",
           "$family",
           "$turn_back",
