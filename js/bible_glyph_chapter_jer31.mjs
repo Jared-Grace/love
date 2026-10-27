@@ -1164,7 +1164,7 @@ export function bible_glyph_chapter_jer31() {
           "$finish",
           "the",
           "greatest,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
           "For",
