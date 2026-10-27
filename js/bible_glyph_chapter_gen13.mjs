@@ -387,7 +387,7 @@ export function bible_glyph_chapter_gen13() {
           "$speech",
           "$toward",
           "$proper_name$Abram,",
-          "after",
+          "$next_track",
           "$proper_name$Lot",
           "had",
           "parted",
