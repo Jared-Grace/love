@@ -697,7 +697,7 @@ export function bible_glyph_chapter_gen41() {
         verse_number: 26,
         words: [
           "The",
-          "seven",
+          "$seven",
           "$thumbs_up",
           "cows",
           "are",
