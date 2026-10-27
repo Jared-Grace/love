@@ -71,7 +71,7 @@ export function bible_glyph_chapter_2sa12() {
           "one",
           "small",
           "ewe",
-          "lamb",
+          "$lamb+female_sign",
           "that",
           "he",
           "had",
