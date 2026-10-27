@@ -306,7 +306,7 @@ export function bible_glyph_chapter_2ki05() {
           "torn",
           "your",
           "$garment?",
-          "Please",
+          "$pleading",
           "let",
           "the",
           "man",
