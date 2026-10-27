@@ -281,7 +281,7 @@ export function bible_glyph_chapter_1ki22() {
           "of",
           "$wrestling+heart_on_fire",
           "$waving_hand",
-          "one",
+          "$one",
           "of",
           "his",
           "officials",
