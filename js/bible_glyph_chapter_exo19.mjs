@@ -507,7 +507,7 @@ export function bible_glyph_chapter_exo19() {
           "$third_place",
           "$sun,",
           "when",
-          "morning",
+          "$morning",
           "came,",
           "there",
           "was",
