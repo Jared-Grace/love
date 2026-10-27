@@ -1352,7 +1352,7 @@ export function bible_glyph_chapter_deu28() {
       {
         verse_number: 44,
         words: [
-          "He",
+          "$pointing_back",
           "will",
           "lend",
           "to",
