@@ -43,7 +43,7 @@ export function bible_glyph_chapter_2ki09() {
           "this",
           "$amphora+droplet",
           "of",
-          "oil",
+          "$lotion_bottle",
           "in",
           "your",
           "$hand,",
