@@ -450,7 +450,7 @@ export function bible_glyph_chapter_gen20() {
           "$speech",
           "of",
           "me,",
-          "He",
+          "$pointing_back",
           "is",
           "my",
           "$brother.",
