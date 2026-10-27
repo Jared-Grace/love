@@ -340,7 +340,7 @@ export function bible_glyph_chapter_zec04() {
           "the",
           "$two",
           "gold",
-          "pipes",
+          "$water_wave+hole+right_arrow",
           "from",
           "which",
           "the",
