@@ -553,7 +553,7 @@ export function bible_glyph_chapter_gen44() {
         words: [
           "My",
           "$crown",
-          "asked",
+          "$question",
           "his",
           "$kneeling,",
           "$speech,",
