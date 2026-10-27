@@ -584,7 +584,7 @@ export function bible_glyph_chapter_num16() {
           "in",
           "it",
           "and",
-          "incense,",
+          "$incense,",
           "and",
           "stood",
           "at",
