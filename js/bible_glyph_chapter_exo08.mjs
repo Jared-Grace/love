@@ -69,7 +69,7 @@ export function bible_glyph_chapter_exo08() {
           "The",
           "Nile",
           "will",
-          "teem",
+          "$lizard+crowd+doing",
           "with",
           "$frog,",
           "and",
