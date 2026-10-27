@@ -356,7 +356,7 @@ export function bible_glyph_chapter_num16() {
           "who",
           "is",
           "$pointing_back",
-          "that",
+          "$pointing",
           "you",
           "should",
           "grumble",
