@@ -285,7 +285,7 @@ export function bible_glyph_chapter_ezk37() {
           "$footprints",
           "from",
           "the",
-          "four",
+          "$four",
           "$wind,",
           "O",
           "$wind,",
