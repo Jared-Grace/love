@@ -511,7 +511,7 @@ export function bible_glyph_chapter_2ki03() {
         verse_number: 15,
         words: [
           "But",
-          "now",
+          "$watch",
           "$hand_receiving",
           "me",
           "a",
