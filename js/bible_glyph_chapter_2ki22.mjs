@@ -452,7 +452,7 @@ export function bible_glyph_chapter_2ki22() {
           "the",
           "$speech",
           "of",
-          "this",
+          "$flashlight",
           "$closed_book",
           "that",
           "has",
