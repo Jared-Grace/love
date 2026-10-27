@@ -356,7 +356,7 @@ export function bible_glyph_chapter_exo17() {
           "his",
           "$hand,",
           "$wrestling+heart_on_fire",
-          "prevailed,",
+          "$might+man_beard+doing,",
           "but",
           "when",
           "he",
