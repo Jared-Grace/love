@@ -474,7 +474,7 @@ export function bible_glyph_chapter_job01() {
           "of",
           "$heart_on_fire",
           "$person+pointing_down",
-          "from",
+          "$tray_out",
           "the",
           "$sky.",
           "It",
