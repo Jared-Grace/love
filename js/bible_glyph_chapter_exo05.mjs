@@ -267,7 +267,7 @@ export function bible_glyph_chapter_exo05() {
           "us",
           "$walking",
           "and",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "our",
           "$heart_on_fire.",
