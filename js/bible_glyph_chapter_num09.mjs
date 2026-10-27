@@ -275,7 +275,7 @@ export function bible_glyph_chapter_num09() {
           "your",
           "descendants",
           "is",
-          "unclean",
+          "$soap+no_entry",
           "$person_other",
           "because",
           "of",
