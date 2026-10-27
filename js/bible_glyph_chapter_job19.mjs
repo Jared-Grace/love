@@ -221,7 +221,7 @@ export function bible_glyph_chapter_job19() {
           "me",
           "and",
           "encamp",
-          "around",
+          "$around",
           "my",
           "tent.",
         ],
