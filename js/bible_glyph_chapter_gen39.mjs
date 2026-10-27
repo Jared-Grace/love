@@ -101,7 +101,7 @@ export function bible_glyph_chapter_gen39() {
         verse_number: 4,
         words: [
           "$i_am+plus",
-          "found",
+          "$magnifying_glass+exclamation",
           "favor",
           "in",
           "his",
