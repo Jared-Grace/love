@@ -493,7 +493,7 @@ export function bible_glyph_chapter_pro16() {
           "are",
           "a",
           "$honey+house,",
-          "sweet",
+          "$candy",
           "to",
           "the",
           "soul",
