@@ -1368,7 +1368,7 @@ export function bible_glyph_chapter_lev13() {
           "he",
           "is",
           "still",
-          "clean.",
+          "$soap+describing.",
         ],
       },
       {
