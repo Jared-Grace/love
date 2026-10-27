@@ -943,7 +943,7 @@ export function bible_glyph_chapter_exo08() {
           "$i_am,",
           "so",
           "that",
-          "tomorrow",
+          "$sun+next_track",
           "the",
           "swarms",
           "of",
