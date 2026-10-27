@@ -146,7 +146,7 @@ export function bible_glyph_chapter_ecc03() {
           "a",
           "$clock",
           "to",
-          "keep",
+          "$guard",
           "and",
           "a",
           "$clock",
