@@ -107,7 +107,7 @@ export function bible_glyph_chapter_isa61() {
           "of",
           "$grinning_face",
           "for",
-          "mourning,",
+          "$loudly_crying+coffin+thing,",
           "and",
           "a",
           "garment",
