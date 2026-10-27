@@ -307,7 +307,7 @@ export function bible_glyph_chapter_gen09() {
           "$water",
           "of",
           "a",
-          "flood,",
+          "$water_wave+earth,",
           "and",
           "$no_entry",
           "$repeat",
