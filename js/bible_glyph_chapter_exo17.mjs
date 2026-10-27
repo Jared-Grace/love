@@ -407,7 +407,7 @@ export function bible_glyph_chapter_exo17() {
           "that",
           "his",
           "$hand",
-          "remained",
+          "$link",
           "steady",
           "until",
           "the",
