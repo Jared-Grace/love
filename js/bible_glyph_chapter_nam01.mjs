@@ -99,7 +99,7 @@ export function bible_glyph_chapter_nam01() {
           "clouds",
           "are",
           "the",
-          "dust",
+          "$dust+wind",
           "beneath",
           "His",
           "feet.",
