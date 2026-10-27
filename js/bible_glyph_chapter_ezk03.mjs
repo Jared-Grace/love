@@ -913,7 +913,7 @@ export function bible_glyph_chapter_ezk03() {
           "let",
           "him",
           "refuse,",
-          "for",
+          "$pointing",
           "they",
           "are",
           "a",
