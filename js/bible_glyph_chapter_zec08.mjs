@@ -192,7 +192,7 @@ export function bible_glyph_chapter_zec08() {
           "in",
           "My",
           "$eyes?",
-          "declares",
+          "$microphone",
           "the",
           "$i_am",
           "of",
