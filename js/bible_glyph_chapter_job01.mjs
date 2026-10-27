@@ -375,7 +375,7 @@ export function bible_glyph_chapter_job01() {
           "out",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am.",
