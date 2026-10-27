@@ -427,7 +427,7 @@ export function bible_glyph_chapter_hab02() {
           "as",
           "the",
           "$water",
-          "cover",
+          "$coat+doing",
           "the",
           "$sea.",
         ],
