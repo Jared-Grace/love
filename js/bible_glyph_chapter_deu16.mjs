@@ -650,7 +650,7 @@ export function bible_glyph_chapter_deu16() {
           "in",
           "$all",
           "$gate",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "your",
