@@ -848,7 +848,7 @@ export function bible_glyph_chapter_1sa20() {
           "place",
           "by",
           "the",
-          "wall,",
+          "$brick+shield,",
           "opposite",
           "$i_am+hands_giving,",
           "and",
