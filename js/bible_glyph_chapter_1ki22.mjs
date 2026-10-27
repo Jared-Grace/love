@@ -1523,7 +1523,7 @@ export function bible_glyph_chapter_1ki22() {
         verse_number: 48,
         words: [
           "$i_am+scales",
-          "built",
+          "$ten+doing",
           "ships",
           "of",
           "$proper_name$Tarshish",
