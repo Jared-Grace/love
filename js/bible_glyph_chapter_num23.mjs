@@ -687,7 +687,7 @@ export function bible_glyph_chapter_num23() {
           "rise",
           "like",
           "a",
-          "lioness.",
+          "$lion+female_sign.",
           "They",
           "rouse",
           "themselves",
