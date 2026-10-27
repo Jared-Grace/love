@@ -683,7 +683,7 @@ export function bible_glyph_chapter_lev15() {
           "a",
           "$bed",
           "$shuffle",
-          "furniture",
+          "$toolbox",
           "$pointing_up",
           "which",
           "she",
