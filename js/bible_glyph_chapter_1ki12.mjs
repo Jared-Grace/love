@@ -1136,7 +1136,7 @@ export function bible_glyph_chapter_1ki12() {
           "he",
           "$hammer+doing",
           "a",
-          "feast",
+          "$party_popper",
           "for",
           "the",
           "$son",
