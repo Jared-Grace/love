@@ -950,7 +950,7 @@ export function bible_glyph_chapter_gen37() {
           "is",
           "my",
           "$son",
-          "robe.",
+          "$dress+thread.",
           "A",
           "$thumbs_down",
           "$sprout",
