@@ -989,7 +989,7 @@ export function bible_glyph_chapter_deu31() {
           "while",
           "I",
           "am",
-          "still",
+          "$repeat",
           "$sprout",
           "with",
           "you",
