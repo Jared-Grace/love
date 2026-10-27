@@ -19,7 +19,7 @@ export function bible_glyph_chapter_num20() {
           "month",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "$wrestling+heart_on_fire",
           "$footprints",
