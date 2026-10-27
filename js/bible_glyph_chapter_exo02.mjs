@@ -213,7 +213,7 @@ export function bible_glyph_chapter_exo02() {
           "I",
           "$walking",
           "and",
-          "call",
+          "$waving_hand",
           "one",
           "of",
           "the",
