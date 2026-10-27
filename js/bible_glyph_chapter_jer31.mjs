@@ -473,7 +473,7 @@ export function bible_glyph_chapter_jer31() {
           "of",
           "the",
           "$priest",
-          "abundantly,",
+          "$bacon+ashes,",
           "and",
           "will",
           "fill",
