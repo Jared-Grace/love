@@ -922,7 +922,7 @@ export function bible_glyph_chapter_exo23() {
           "and",
           "you",
           "will",
-          "drive",
+          "$door+leftwards_pushing_hand+doing",
           "them",
           "out",
           "before",
