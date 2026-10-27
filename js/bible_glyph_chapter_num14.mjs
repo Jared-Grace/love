@@ -70,7 +70,7 @@ export function bible_glyph_chapter_num14() {
           "had",
           "$skull+doing",
           "in",
-          "this",
+          "$flashlight",
           "$wilderness!",
         ],
       },
