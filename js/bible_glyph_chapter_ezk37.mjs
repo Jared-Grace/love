@@ -859,7 +859,7 @@ export function bible_glyph_chapter_ezk37() {
           "My",
           "$scales+thing",
           "and",
-          "keep",
+          "$guard",
           "and",
           "$hammer+doing",
           "My",
