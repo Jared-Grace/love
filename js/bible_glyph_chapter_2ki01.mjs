@@ -732,7 +732,7 @@ export function bible_glyph_chapter_2ki01() {
           "he",
           "$hammer+doing,",
           "are",
-          "they",
+          "$pointing_back",
           "$no_entry",
           "written",
           "in",
