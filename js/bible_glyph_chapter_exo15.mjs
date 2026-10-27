@@ -647,7 +647,7 @@ export function bible_glyph_chapter_exo15() {
           "the",
           "$family",
           "$night+doing",
-          "against",
+          "$pointing_up",
           "$fishing_pole+proper_name,",
           "$speech,",
           "What",
