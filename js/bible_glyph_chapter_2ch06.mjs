@@ -367,7 +367,7 @@ export function bible_glyph_chapter_2ch06() {
           "Then",
           "Solomon",
           "stood",
-          "before",
+          "$face",
           "the",
           "altar",
           "of",
