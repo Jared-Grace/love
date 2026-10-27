@@ -36,7 +36,7 @@ export function bible_glyph_chapter_gen50() {
         words: [
           "And",
           "$i_am+plus",
-          "directed",
+          "$speech+scroll",
           "the",
           "physicians",
           "among",
