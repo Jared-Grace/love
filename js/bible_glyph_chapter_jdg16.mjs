@@ -577,7 +577,7 @@ export function bible_glyph_chapter_jdg16() {
           "not",
           "with",
           "me?",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "third",
