@@ -256,7 +256,7 @@ export function bible_glyph_chapter_exo22() {
           "thief",
           "is",
           "$no_entry",
-          "found,",
+          "$magnifying_glass+exclamation,",
           "the",
           "owner",
           "of",
