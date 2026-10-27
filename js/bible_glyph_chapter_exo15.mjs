@@ -38,7 +38,7 @@ export function bible_glyph_chapter_exo15() {
           "highly",
           "exalted.",
           "The",
-          "horse",
+          "$horse",
           "and",
           "rider",
           "He",
