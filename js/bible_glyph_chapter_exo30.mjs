@@ -208,7 +208,7 @@ export function bible_glyph_chapter_exo30() {
           "burn",
           "the",
           "$incense",
-          "perpetually",
+          "$clock+infinity",
           "before",
           "$i_am",
           "for",
