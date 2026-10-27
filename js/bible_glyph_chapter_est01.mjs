@@ -152,7 +152,7 @@ export function bible_glyph_chapter_est01() {
           "greatest,",
           "in",
           "the",
-          "garden",
+          "$garden",
           "$house_with_garden",
           "of",
           "the",
