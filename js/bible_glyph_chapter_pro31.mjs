@@ -461,7 +461,7 @@ export function bible_glyph_chapter_pro31() {
           "where",
           "he",
           "sits",
-          "among",
+          "$linked_paperclips",
           "the",
           "elders",
           "of",
