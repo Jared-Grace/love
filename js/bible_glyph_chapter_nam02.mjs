@@ -304,7 +304,7 @@ export function bible_glyph_chapter_nam02() {
           "$walking",
           "with",
           "their",
-          "cubs,",
+          "$lion+child,",
           "with",
           "nothing",
           "to",
