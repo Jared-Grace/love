@@ -322,7 +322,7 @@ export function bible_glyph_chapter_lev19() {
           "hired",
           "hand",
           "$finish",
-          "morning.",
+          "$morning.",
         ],
       },
       {
