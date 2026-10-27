@@ -608,7 +608,7 @@ export function bible_glyph_chapter_pro16() {
           "winks",
           "his",
           "$eyes",
-          "devises",
+          "$thinking+doing",
           "perversity;",
           "he",
           "who",
