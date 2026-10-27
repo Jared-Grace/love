@@ -645,7 +645,7 @@ export function bible_glyph_chapter_1sa25() {
           "am",
           "$footprints",
           "right",
-          "behind",
+          "$next_track",
           "you.",
           "But",
           "she",
