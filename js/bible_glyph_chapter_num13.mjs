@@ -653,7 +653,7 @@ export function bible_glyph_chapter_num13() {
           "descendants",
           "of",
           "$proper_name$Anak",
-          "there.",
+          "$telescope.",
         ],
       },
       {
