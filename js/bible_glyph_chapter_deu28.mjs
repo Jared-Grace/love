@@ -714,7 +714,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "$finish",
           "you",
-          "perish.",
+          "$wilted_flower.",
         ],
       },
       {
