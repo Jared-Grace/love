@@ -197,7 +197,7 @@ export function bible_glyph_chapter_2ki10() {
           "$closed_book,",
           "$speech,",
           "If",
-          "you",
+          "$you",
           "are",
           "on",
           "my",
