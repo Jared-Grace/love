@@ -481,7 +481,7 @@ export function bible_glyph_chapter_lev23() {
           "each",
           "made",
           "from",
-          "two",
+          "$two",
           "tenths",
           "of",
           "an",
