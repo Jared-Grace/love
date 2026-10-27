@@ -977,7 +977,7 @@ export function bible_glyph_chapter_deu05() {
           "aside",
           "to",
           "the",
-          "right",
+          "$hand+right_arrow",
           "or",
           "to",
           "the",
