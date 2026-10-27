@@ -1874,7 +1874,7 @@ export function bible_glyph_chapter_deu28() {
           "$guard",
           "to",
           "$hammer+doing",
-          "all",
+          "$all",
           "the",
           "$speech",
           "of",
