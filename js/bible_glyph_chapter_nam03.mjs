@@ -250,7 +250,7 @@ export function bible_glyph_chapter_nam03() {
           "she",
           "became",
           "an",
-          "exile;",
+          "$luggage+chains;",
           "she",
           "$walking",
           "into",
