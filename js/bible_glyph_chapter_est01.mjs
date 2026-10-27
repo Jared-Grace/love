@@ -44,7 +44,7 @@ export function bible_glyph_chapter_est01() {
           "$king",
           "$proper_name$Xerxes",
           "$person+house",
-          "on",
+          "$pointing_up",
           "his",
           "royal",
           "$throne",
