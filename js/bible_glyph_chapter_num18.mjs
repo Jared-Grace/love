@@ -394,7 +394,7 @@ export function bible_glyph_chapter_num18() {
           "$sparkle+thing",
           "offering,",
           "and",
-          "every",
+          "$all",
           "male",
           "may",
           "$eating",
