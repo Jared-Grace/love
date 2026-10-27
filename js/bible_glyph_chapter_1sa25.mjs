@@ -1341,7 +1341,7 @@ export function bible_glyph_chapter_1sa25() {
           "later,",
           "the",
           "$i_am",
-          "struck",
+          "$fist+microbe",
           "$proper_name$Nabal",
           "and",
           "he",
