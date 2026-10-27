@@ -69,7 +69,7 @@ export function bible_glyph_chapter_mal04() {
           "for",
           "you",
           "who",
-          "fear",
+          "$fear+describing",
           "My",
           "$name_tag,",
           "the",
