@@ -1806,7 +1806,7 @@ export function bible_glyph_chapter_lev13() {
           "is",
           "on",
           "the",
-          "front",
+          "$face+top+hair+no_entry+thing",
           "$shuffle",
           "$back+hair+no_entry+thing.",
         ],
