@@ -225,7 +225,7 @@ export function bible_glyph_chapter_ezk37() {
           "came",
           "together,",
           "bone",
-          "to",
+          "$toward",
           "bone.",
         ],
       },
