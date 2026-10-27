@@ -909,7 +909,7 @@ export function bible_glyph_chapter_deu05() {
           "$turn_back",
           "to",
           "your",
-          "tents.",
+          "$tent.",
         ],
       },
       {
