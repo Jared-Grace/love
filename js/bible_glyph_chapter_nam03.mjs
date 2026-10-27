@@ -397,7 +397,7 @@ export function bible_glyph_chapter_nam03() {
           "the",
           "$sword",
           "will",
-          "cut",
+          "$scissors",
           "you",
           "down",
           "and",
