@@ -248,7 +248,7 @@ export function bible_glyph_chapter_2ki05() {
           "$skull+doing",
           "and",
           "$sprout+doing,",
-          "that",
+          "$pointing",
           "this",
           "man",
           "$hand_sending",
