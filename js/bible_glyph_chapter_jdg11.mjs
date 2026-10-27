@@ -1148,7 +1148,7 @@ export function bible_glyph_chapter_jdg11() {
           "No,",
           "not",
           "my",
-          "daughter.",
+          "$girl+family.",
           "You",
           "have",
           "brought",
