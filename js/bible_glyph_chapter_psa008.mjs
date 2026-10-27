@@ -81,7 +81,7 @@ export function bible_glyph_chapter_psa008() {
           "and",
           "the",
           "stars,",
-          "which",
+          "$back+flashlight",
           "You",
           "have",
           "set",
