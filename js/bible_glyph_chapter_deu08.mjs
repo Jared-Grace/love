@@ -125,7 +125,7 @@ export function bible_glyph_chapter_deu08() {
           "does",
           "$no_entry",
           "$sprout+doing",
-          "on",
+          "$pointing_up",
           "$bread",
           "alone,",
           "but",
