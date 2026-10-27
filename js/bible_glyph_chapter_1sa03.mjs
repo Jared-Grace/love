@@ -516,7 +516,7 @@ export function bible_glyph_chapter_1sa03() {
           "severely,",
           "if",
           "you",
-          "hide",
+          "$hand+tray_in+doing",
           "$tray_out",
           "me",
           "$speech",
