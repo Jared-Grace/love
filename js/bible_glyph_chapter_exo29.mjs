@@ -808,7 +808,7 @@ export function bible_glyph_chapter_exo29() {
           "offering",
           "and",
           "the",
-          "thigh",
+          "$leg",
           "of",
           "the",
           "heave",
