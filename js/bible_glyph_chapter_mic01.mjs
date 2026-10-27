@@ -218,7 +218,7 @@ export function bible_glyph_chapter_mic01() {
         words: [
           "$all",
           "her",
-          "carved",
+          "$carpentry_saw+moai",
           "images",
           "will",
           "be",
