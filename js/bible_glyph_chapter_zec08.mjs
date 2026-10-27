@@ -458,7 +458,7 @@ export function bible_glyph_chapter_zec08() {
           "your",
           "$hand",
           "be",
-          "strong.",
+          "$might+up_arrow.",
         ],
       },
       {
