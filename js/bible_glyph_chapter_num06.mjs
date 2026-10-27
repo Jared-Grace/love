@@ -165,7 +165,7 @@ export function bible_glyph_chapter_num06() {
       {
         verse_number: 6,
         words: [
-          "Throughout",
+          "$all",
           "the",
           "$sun",
           "of",
