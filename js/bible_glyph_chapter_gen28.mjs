@@ -594,7 +594,7 @@ export function bible_glyph_chapter_gen28() {
           "the",
           "$city",
           "had",
-          "previously",
+          "$first_place",
           "been",
           "named",
           "$proper_name$Luz.",
