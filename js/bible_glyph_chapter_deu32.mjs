@@ -434,7 +434,7 @@ export function bible_glyph_chapter_deu32() {
           "and",
           "scorned",
           "the",
-          "Rock",
+          "$rock",
           "of",
           "his",
           "salvation.",
