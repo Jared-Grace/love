@@ -395,7 +395,7 @@ export function bible_glyph_chapter_lev05() {
           "$incense+doing",
           "it",
           "$altar",
-          "atop",
+          "$pointing_up",
           "the",
           "food",
           "offerings",
