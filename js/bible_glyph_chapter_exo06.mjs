@@ -131,7 +131,7 @@ export function bible_glyph_chapter_exo06() {
           "have",
           "$ear",
           "the",
-          "groaning",
+          "$weary_face+voice+thing",
           "of",
           "the",
           "$son",
