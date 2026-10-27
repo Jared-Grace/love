@@ -784,7 +784,7 @@ export function bible_glyph_chapter_num22() {
         words: [
           "And",
           "the",
-          "donkey",
+          "$donkey",
           "$eye",
           "the",
           "$angel",
