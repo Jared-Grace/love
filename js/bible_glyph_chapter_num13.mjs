@@ -375,7 +375,7 @@ export function bible_glyph_chapter_num13() {
           "Is",
           "the",
           "$earth",
-          "fertile",
+          "$lotion_bottle+describing",
           "or",
           "unproductive?",
           "Are",
