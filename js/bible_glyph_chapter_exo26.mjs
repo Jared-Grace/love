@@ -257,7 +257,7 @@ export function bible_glyph_chapter_exo26() {
         words: [
           "$hammer+doing",
           "$five+zero",
-          "loops",
+          "$curly_loop",
           "along",
           "the",
           "edge",
