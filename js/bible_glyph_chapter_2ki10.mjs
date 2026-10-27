@@ -344,7 +344,7 @@ export function bible_glyph_chapter_2ki10() {
           "$family",
           "and",
           "$speech,",
-          "You",
+          "$you",
           "are",
           "$ruler.",
           "It",
