@@ -460,7 +460,7 @@ export function bible_glyph_chapter_isa09() {
           "man,",
           "and",
           "the",
-          "tail",
+          "$snake+back",
           "is",
           "the",
           "$megaphone",
