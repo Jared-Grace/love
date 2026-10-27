@@ -87,7 +87,7 @@ export function bible_glyph_chapter_1sa01() {
           "to",
           "$bowing",
           "and",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "the",
           "$i_am",
