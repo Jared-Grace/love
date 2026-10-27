@@ -326,7 +326,7 @@ export function bible_glyph_chapter_neh01() {
           "the",
           "$sky,",
           "from",
-          "there",
+          "$telescope",
           "I",
           "will",
           "gather",
