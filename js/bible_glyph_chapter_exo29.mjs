@@ -1169,7 +1169,7 @@ export function bible_glyph_chapter_exo29() {
           "the",
           "$altar",
           "regularly:",
-          "two",
+          "$two",
           "$lamb",
           "a",
           "$son",
