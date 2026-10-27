@@ -1159,7 +1159,7 @@ export function bible_glyph_chapter_2ch06() {
           "because",
           "of",
           "Your",
-          "great",
+          "$top",
           "$name_tag",
           "and",
           "Your",
