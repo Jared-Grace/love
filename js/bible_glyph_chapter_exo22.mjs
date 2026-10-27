@@ -253,7 +253,7 @@ export function bible_glyph_chapter_exo22() {
         words: [
           "If",
           "the",
-          "thief",
+          "$ninja",
           "is",
           "$no_entry",
           "$magnifying_glass+exclamation,",
