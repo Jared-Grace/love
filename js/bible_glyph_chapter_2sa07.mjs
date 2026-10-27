@@ -312,7 +312,7 @@ export function bible_glyph_chapter_2sa07() {
           "$wrestling+heart_on_fire",
           "and",
           "will",
-          "plant",
+          "$sprout+down_arrow+doing",
           "them,",
           "so",
           "that",
