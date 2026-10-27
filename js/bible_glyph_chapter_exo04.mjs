@@ -802,7 +802,7 @@ export function bible_glyph_chapter_exo04() {
           "Moses'",
           "feet.",
           '"$pointing',
-          "you",
+          "$you",
           "are",
           "a",
           "$man_in_tuxedo",
