@@ -299,7 +299,7 @@ export function bible_glyph_chapter_lev25() {
           "shall",
           "be",
           "your",
-          "Jubilee,",
+          "$horn+party_popper,",
           "when",
           "each",
           "$man_beard",
