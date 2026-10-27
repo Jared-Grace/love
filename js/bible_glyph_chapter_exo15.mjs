@@ -328,7 +328,7 @@ export function bible_glyph_chapter_exo15() {
           "$gift",
           "You",
           "will",
-          "lead",
+          "$guide_dog",
           "the",
           "$family",
           "You",
