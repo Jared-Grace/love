@@ -803,7 +803,7 @@ export function bible_glyph_chapter_ezk37() {
           "transgressions.",
           "I",
           "will",
-          "save",
+          "$rescue",
           "them",
           "from",
           "all",
