@@ -258,7 +258,7 @@ export function bible_glyph_chapter_isa61() {
           "will",
           "inherit",
           "a",
-          "double",
+          "$two+multiply",
           "portion",
           "in",
           "their",
