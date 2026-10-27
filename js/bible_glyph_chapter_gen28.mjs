@@ -316,7 +316,7 @@ export function bible_glyph_chapter_gen28() {
           "it",
           "under",
           "his",
-          "head",
+          "$person_gesturing_ok+place",
           "and",
           "lay",
           "down",
