@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_exo08() {
           "$no_entry",
           "one",
           "fly",
-          "remained.",
+          "$puzzle_piece+doing.",
         ],
       },
       {
