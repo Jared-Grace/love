@@ -407,7 +407,7 @@ export function bible_glyph_chapter_lev01() {
           "Then",
           "$priest",
           "shall",
-          "bring",
+          "$magnet+doing",
           "it",
           "to",
           "$altar,",
