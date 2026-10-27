@@ -391,7 +391,7 @@ export function bible_glyph_chapter_lam02() {
           "no",
           "more,",
           "and",
-          "even",
+          "$plus",
           "her",
           "$megaphone",
           "find",
