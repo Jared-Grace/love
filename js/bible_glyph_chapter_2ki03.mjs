@@ -621,7 +621,7 @@ export function bible_glyph_chapter_2ki03() {
           "shall",
           "attack",
           "$all",
-          "fortified",
+          "$wall+locked",
           "$city",
           "and",
           "$all",
