@@ -844,7 +844,7 @@ export function bible_glyph_chapter_deu33() {
           "even",
           "the",
           "$sky",
-          "drip",
+          "$dew+down_arrow+doing",
           "with",
           "$dew.",
         ],
