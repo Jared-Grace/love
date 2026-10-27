@@ -613,7 +613,7 @@ export function bible_glyph_chapter_num11() {
           "it",
           "$no_entry",
           "for",
-          "one",
+          "$one",
           "day,",
           "or",
           "two",
