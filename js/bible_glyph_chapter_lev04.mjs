@@ -657,7 +657,7 @@ export function bible_glyph_chapter_lev04() {
           "$burnt_offering",
           "is",
           "slaughtered",
-          "before",
+          "$face",
           "$i_am.",
           "It",
           "is",
