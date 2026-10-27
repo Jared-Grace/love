@@ -87,7 +87,7 @@ export function bible_glyph_chapter_exo11() {
           "$hands_giving",
           "the",
           "$family",
-          "favor",
+          "$heart_orange",
           "in",
           "the",
           "$eyes",
