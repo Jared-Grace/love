@@ -1451,7 +1451,7 @@ export function bible_glyph_chapter_num16() {
           "he",
           "$hands_giving",
           "the",
-          "incense",
+          "$incense",
           "and",
           "made",
           "atonement",
