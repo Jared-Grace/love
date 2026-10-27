@@ -964,7 +964,7 @@ export function bible_glyph_chapter_exo08() {
           "$no_entry",
           "act",
           "deceitfully",
-          "again",
+          "$plus+doing",
           "by",
           "refusing",
           "to",
