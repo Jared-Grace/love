@@ -973,7 +973,7 @@ export function bible_glyph_chapter_exo08() {
           "$family",
           "$hand_sending",
           "and",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "$i_am.",
         ],
