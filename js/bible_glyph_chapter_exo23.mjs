@@ -139,7 +139,7 @@ export function bible_glyph_chapter_exo23() {
           "You",
           "shall",
           "$no_entry",
-          "deny",
+          "$white_cane+doing",
           "$scales+thing",
           "to",
           "the",
