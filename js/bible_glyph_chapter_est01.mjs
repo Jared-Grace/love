@@ -313,7 +313,7 @@ export function bible_glyph_chapter_est01() {
           "and",
           "$proper_name$Carkas,",
           "the",
-          "seven",
+          "$seven",
           "eunuchs",
           "who",
           "served",
