@@ -943,7 +943,7 @@ export function bible_glyph_chapter_jer07() {
           "in",
           "My",
           "$eyes,",
-          "declares",
+          "$microphone",
           "$i_am.",
           "They",
           "have",
