@@ -591,7 +591,7 @@ export function bible_glyph_chapter_num14() {
           "unpunished;",
           "He",
           "will",
-          "visit",
+          "$clipboard+doing",
           "the",
           "$cyclone",
           "of",
