@@ -790,7 +790,7 @@ export function bible_glyph_chapter_lev26() {
           "in",
           "a",
           "single",
-          "oven",
+          "$brick+fire",
           "and",
           "$turn_back",
           "your",
