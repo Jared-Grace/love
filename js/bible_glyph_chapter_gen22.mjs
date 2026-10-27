@@ -281,7 +281,7 @@ export function bible_glyph_chapter_gen22() {
           "$brick",
           "the",
           "$altar",
-          "there",
+          "$telescope",
           "and",
           "arranged",
           "the",
