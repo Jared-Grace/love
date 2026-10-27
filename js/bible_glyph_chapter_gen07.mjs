@@ -525,7 +525,7 @@ export function bible_glyph_chapter_gen07() {
         words: [
           "The",
           "$water",
-          "rose",
+          "$might+man_beard+doing",
           "to",
           "a",
           "depth",
