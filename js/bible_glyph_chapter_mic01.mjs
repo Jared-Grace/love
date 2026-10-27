@@ -206,7 +206,7 @@ export function bible_glyph_chapter_mic01() {
           "stones",
           "into",
           "the",
-          "valley",
+          "$valley",
           "and",
           "expose",
           "her",
