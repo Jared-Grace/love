@@ -1782,7 +1782,7 @@ export function bible_glyph_chapter_lev13() {
           "article",
           "has",
           "$no_entry",
-          "changed",
+          "$upside_down_face",
           "in",
           "its",
           "$eyes,",
