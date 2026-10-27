@@ -386,7 +386,7 @@ export function bible_glyph_chapter_deu18() {
           "$pointing",
           "$flashlight+flashlight",
           "$map,",
-          "which",
+          "$back+flashlight",
           "you",
           "will",
           "dispossess,",
