@@ -857,7 +857,7 @@ export function bible_glyph_chapter_num16() {
           "to",
           "$hammer",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "things,",
           "and",
           "that",
