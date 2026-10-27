@@ -214,7 +214,7 @@ export function bible_glyph_chapter_2ki06() {
           "$proper_name$Aram",
           "$link",
           "at",
-          "war",
+          "$crossed_swords+doing",
           "against",
           "$wrestling+heart_on_fire.",
           "After",
