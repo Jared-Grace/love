@@ -654,7 +654,7 @@ export function bible_glyph_chapter_pro08() {
       {
         verse_number: 35,
         words: [
-          "For",
+          "$pointing",
           "whoever",
           "finds",
           "me",
