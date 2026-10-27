@@ -581,7 +581,7 @@ export function bible_glyph_chapter_jdg16() {
           "is",
           "the",
           "third",
-          "time",
+          "$drum",
           "you",
           "have",
           "mocked",
