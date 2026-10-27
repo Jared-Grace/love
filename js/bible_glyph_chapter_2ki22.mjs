@@ -620,7 +620,7 @@ export function bible_glyph_chapter_2ki22() {
           "to",
           "$plus+one",
           "$moai,",
-          "that",
+          "$right_arrow+toward",
           "they",
           "might",
           "provoke",
