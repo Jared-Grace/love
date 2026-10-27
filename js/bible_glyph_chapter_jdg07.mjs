@@ -215,7 +215,7 @@ export function bible_glyph_chapter_jdg07() {
           "from",
           "those",
           "who",
-          "kneel",
+          "$leg+down_arrow+doing",
           "down",
           "to",
           "drink.",
