@@ -63,7 +63,7 @@ export function bible_glyph_chapter_isa55() {
           "which",
           "does",
           "$no_entry",
-          "satisfy?",
+          "$eating+top+check?",
           "$ear",
           "$ear",
           "to",
