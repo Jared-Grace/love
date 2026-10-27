@@ -411,7 +411,7 @@ export function bible_glyph_chapter_exo07() {
           "to",
           "$footprints+toward+doing",
           "him",
-          "on",
+          "$pointing_up",
           "the",
           "bank",
           "of",
