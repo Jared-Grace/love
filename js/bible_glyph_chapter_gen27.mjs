@@ -301,7 +301,7 @@ export function bible_glyph_chapter_gen27() {
           "hairy",
           "$man_beard,",
           "but",
-          "I",
+          "$me",
           "am",
           "smooth-skinned.",
         ],
