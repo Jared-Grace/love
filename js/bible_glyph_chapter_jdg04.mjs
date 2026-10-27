@@ -384,7 +384,7 @@ export function bible_glyph_chapter_jdg04() {
         verse_number: 13,
         words: [
           "he",
-          "summoned",
+          "$loudspeaker+mouth",
           "all",
           "nine",
           "hundred",
