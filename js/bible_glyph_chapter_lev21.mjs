@@ -187,7 +187,7 @@ export function bible_glyph_chapter_lev21() {
           "$hand_receiving",
           "a",
           "$woman",
-          "defiled",
+          "$sword+skull",
           "by",
           "prostitution,",
           "$no_entry",
