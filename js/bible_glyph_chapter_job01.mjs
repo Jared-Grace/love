@@ -489,7 +489,7 @@ export function bible_glyph_chapter_job01() {
           "them,",
           "and",
           "$me",
-          "alone",
+          "$one+person",
           "have",
           "escaped",
           "to",
