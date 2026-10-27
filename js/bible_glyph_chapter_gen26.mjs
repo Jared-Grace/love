@@ -88,7 +88,7 @@ export function bible_glyph_chapter_gen26() {
           "and",
           "$speech+thumbs_up",
           "you.",
-          "For",
+          "$pointing",
           "to",
           "you",
           "and",
