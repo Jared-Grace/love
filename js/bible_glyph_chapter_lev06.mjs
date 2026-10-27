@@ -230,7 +230,7 @@ export function bible_glyph_chapter_lev06() {
           "must",
           "be",
           "kept",
-          "burning.",
+          "$fire+alarm_clock+doing.",
         ],
       },
       {
