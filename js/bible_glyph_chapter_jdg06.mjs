@@ -65,7 +65,7 @@ export function bible_glyph_chapter_jdg06() {
           "in",
           "the",
           "$mountain,",
-          "caves",
+          "$cave",
           "and",
           "strongholds.",
         ],
