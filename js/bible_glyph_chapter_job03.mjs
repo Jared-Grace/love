@@ -470,7 +470,7 @@ export function bible_glyph_chapter_job03() {
           "given",
           "to",
           "a",
-          "man",
+          "$might+man_beard",
           "whose",
           "$road",
           "is",
