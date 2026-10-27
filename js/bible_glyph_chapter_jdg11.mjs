@@ -997,7 +997,7 @@ export function bible_glyph_chapter_jdg11() {
           "out",
           "of",
           "the",
-          "door",
+          "$door+thing",
           "of",
           "my",
           "$house",
