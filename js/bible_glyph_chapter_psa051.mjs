@@ -316,7 +316,7 @@ export function bible_glyph_chapter_psa051() {
           "salvation,",
           "and",
           "my",
-          "tongue",
+          "$tongue",
           "will",
           "sing",
           "of",
