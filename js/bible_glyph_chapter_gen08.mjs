@@ -109,7 +109,7 @@ export function bible_glyph_chapter_gen08() {
           "of",
           "the",
           "seventh",
-          "month,",
+          "$new_moon,",
           "the",
           "$package",
           "came",
