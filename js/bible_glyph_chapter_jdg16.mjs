@@ -846,7 +846,7 @@ export function bible_glyph_chapter_jdg16() {
           "was",
           "bound",
           "with",
-          "bronze",
+          "$bronze",
           "shackles",
           "and",
           "forced",
