@@ -853,7 +853,7 @@ export function bible_glyph_chapter_jer29() {
           "have",
           "sent",
           "out",
-          "letters",
+          "$closed_book",
           "to",
           "all",
           "the",
