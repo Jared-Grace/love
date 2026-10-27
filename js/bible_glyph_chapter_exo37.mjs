@@ -691,7 +691,7 @@ export function bible_glyph_chapter_exo37() {
         words: [
           "He",
           "$hammer+doing",
-          "two",
+          "$two",
           "$gold",
           "$ring",
           "below",
