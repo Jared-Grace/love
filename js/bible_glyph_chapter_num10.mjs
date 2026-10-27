@@ -258,7 +258,7 @@ export function bible_glyph_chapter_num10() {
           "$trumpet+doing",
           "the",
           "trumpets",
-          "over",
+          "$pointing_up",
           "your",
           "$burnt_offering",
           "and",
