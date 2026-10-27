@@ -178,7 +178,7 @@ export function bible_glyph_chapter_zec04() {
           "are",
           "you,",
           "O",
-          "great",
+          "$top",
           "$mountain?",
           "Before",
           "$proper_name$Zerubbabel",
