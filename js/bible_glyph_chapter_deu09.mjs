@@ -668,7 +668,7 @@ export function bible_glyph_chapter_deu09() {
           "$water,",
           "because",
           "of",
-          "all",
+          "$all",
           "the",
           "$bow",
           "you",
