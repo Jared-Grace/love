@@ -42,7 +42,7 @@ export function bible_glyph_chapter_job19() {
           "me;",
           "you",
           "shamelessly",
-          "mistreat",
+          "$fist+face+doing",
           "me.",
         ],
       },
