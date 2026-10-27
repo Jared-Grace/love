@@ -108,7 +108,7 @@ export function bible_glyph_chapter_psa042() {
           "out",
           "my",
           "$person_other:",
-          "how",
+          "$pointing",
           "I",
           "walked",
           "with",
