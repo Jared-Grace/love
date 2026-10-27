@@ -98,7 +98,7 @@ export function bible_glyph_chapter_num22() {
           "lick",
           "up",
           "$all",
-          "around",
+          "$around",
           "us,",
           "as",
           "an",
