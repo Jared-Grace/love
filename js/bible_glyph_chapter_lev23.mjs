@@ -605,7 +605,7 @@ export function bible_glyph_chapter_lev23() {
           "a",
           "wave",
           "offering",
-          "before",
+          "$face",
           "$i_am.",
           "The",
           "bread",
