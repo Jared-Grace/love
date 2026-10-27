@@ -549,7 +549,7 @@ export function bible_glyph_chapter_1ki17() {
           "worse,",
           "$finish",
           "$no_entry",
-          "breath",
+          "$nose+dashing_away",
           "$takeout_box+doing",
           "in",
           "him.",
