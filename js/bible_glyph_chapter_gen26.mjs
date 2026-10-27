@@ -99,7 +99,7 @@ export function bible_glyph_chapter_gen26() {
           "will",
           "$hands_giving",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$earth,",
           "and",
           "I",
