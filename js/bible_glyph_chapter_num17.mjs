@@ -80,7 +80,7 @@ export function bible_glyph_chapter_num17() {
           "$white_cane",
           "for",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "each",
           "$house",
