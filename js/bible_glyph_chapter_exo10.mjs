@@ -876,7 +876,7 @@ export function bible_glyph_chapter_exo10() {
           "be",
           "left",
           "behind,",
-          "for",
+          "$pointing",
           "we",
           "must",
           "$hand_receiving",
