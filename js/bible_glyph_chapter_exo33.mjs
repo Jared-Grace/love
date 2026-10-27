@@ -40,7 +40,7 @@ export function bible_glyph_chapter_exo33() {
           "to",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "promised",
           "to",
