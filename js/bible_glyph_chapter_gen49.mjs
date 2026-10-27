@@ -22,7 +22,7 @@ export function bible_glyph_chapter_gen49() {
           "$son",
           "and",
           "$speech,",
-          "Gather",
+          "$crowd+doing",
           "yourselves,",
           "so",
           "that",
