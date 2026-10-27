@@ -143,7 +143,7 @@ export function bible_glyph_chapter_ezk37() {
           "to",
           "$flashlight+flashlight",
           "$bone:",
-          "I",
+          "$me",
           "will",
           "cause",
           "$wind",
