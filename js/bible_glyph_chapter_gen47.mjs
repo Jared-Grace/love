@@ -949,7 +949,7 @@ export function bible_glyph_chapter_gen47() {
           "fruitful",
           "and",
           "multiplied",
-          "greatly.",
+          "$double_exclamation.",
         ],
       },
       {
