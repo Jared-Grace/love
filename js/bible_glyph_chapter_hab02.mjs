@@ -155,7 +155,7 @@ export function bible_glyph_chapter_hab02() {
           "his",
           "$person_other",
           "like",
-          "Sheol,",
+          "$pointing_down+skull,",
           "and",
           "like",
           "$skull",
