@@ -87,7 +87,7 @@ export function bible_glyph_chapter_num12() {
         verse_number: 4,
         words: [
           "And",
-          "suddenly",
+          "$lightning+manner",
           "$i_am",
           "$speech",
           "to",
