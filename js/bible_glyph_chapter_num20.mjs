@@ -251,7 +251,7 @@ export function bible_glyph_chapter_num20() {
           "$white_cane",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am,",
