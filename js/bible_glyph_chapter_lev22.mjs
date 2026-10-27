@@ -852,7 +852,7 @@ export function bible_glyph_chapter_lev22() {
           "You",
           "must",
           "$no_entry",
-          "slaughter",
+          "$kitchen_knife+doing",
           "an",
           "$ox",
           "$shuffle",
