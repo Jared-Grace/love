@@ -559,7 +559,7 @@ export function bible_glyph_chapter_jer23() {
           "will",
           "feed",
           "them",
-          "wormwood",
+          "$herb+lemon",
           "and",
           "give",
           "them",
