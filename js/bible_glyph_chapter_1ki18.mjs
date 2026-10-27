@@ -1206,7 +1206,7 @@ export function bible_glyph_chapter_1ki18() {
           "I",
           "have",
           "$hammer+doing",
-          "all",
+          "$all",
           "these",
           "$speech.",
         ],
