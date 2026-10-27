@@ -1035,7 +1035,7 @@ export function bible_glyph_chapter_jer29() {
           "to",
           "you,",
           "though",
-          "I",
+          "$me",
           "did",
           "$no_entry",
           "$hand_sending",
