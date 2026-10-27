@@ -337,7 +337,7 @@ export function bible_glyph_chapter_exo32() {
           "so",
           "that",
           "My",
-          "anger",
+          "$nose+fire",
           "may",
           "burn",
           "against",
