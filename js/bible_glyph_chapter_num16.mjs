@@ -191,7 +191,7 @@ export function bible_glyph_chapter_num16() {
           "as",
           "follows.",
           "$hand_receiving",
-          "censers,",
+          "$cooking,",
           "Korah",
           "and",
           "all",
