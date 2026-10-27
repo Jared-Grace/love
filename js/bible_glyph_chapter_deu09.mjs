@@ -99,7 +99,7 @@ export function bible_glyph_chapter_deu09() {
           "$fire.",
           "He",
           "will",
-          "destroy",
+          "$bomb",
           "them",
           "and",
           "subdue",
