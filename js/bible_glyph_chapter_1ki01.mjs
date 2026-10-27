@@ -1659,7 +1659,7 @@ export function bible_glyph_chapter_1ki01() {
           "And",
           "$peace+proper_name",
           "$speech,",
-          "If",
+          "$traffic_light",
           "he",
           "proves",
           "to",
