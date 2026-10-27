@@ -425,7 +425,7 @@ export function bible_glyph_chapter_gen26() {
         verse_number: 15,
         words: [
           "And",
-          "all",
+          "$all",
           "the",
           "$well",
           "that",
