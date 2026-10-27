@@ -130,7 +130,7 @@ export function bible_glyph_chapter_2sa12() {
           "own",
           "$sheep",
           "or",
-          "cattle",
+          "$cow_face",
           "to",
           "$hammer+doing",
           "for",
