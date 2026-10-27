@@ -837,7 +837,7 @@ export function bible_glyph_chapter_jer07() {
           "When",
           "you",
           "$mouth",
-          "all",
+          "$all",
           "these",
           "$speech",
           "to",
