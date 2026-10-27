@@ -924,7 +924,7 @@ export function bible_glyph_chapter_dan09() {
           "in",
           "times",
           "of",
-          "distress.",
+          "$clamp+person+thing.",
         ],
       },
       {
