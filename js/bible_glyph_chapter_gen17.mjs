@@ -668,7 +668,7 @@ export function bible_glyph_chapter_gen17() {
           "his",
           "$silver,",
           "every",
-          "male",
+          "$reminder_ribbon+thing",
           "among",
           "the",
           "members",
