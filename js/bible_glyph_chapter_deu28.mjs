@@ -421,7 +421,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "$no_entry",
           "the",
-          "tail.",
+          "$snake+back.",
           "You",
           "will",
           "only",
