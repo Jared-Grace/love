@@ -219,7 +219,7 @@ export function bible_glyph_chapter_1ki08() {
           "$pointing",
           "the",
           "cherubim",
-          "spread",
+          "$folding_hand_fan",
           "their",
           "wings",
           "over",
