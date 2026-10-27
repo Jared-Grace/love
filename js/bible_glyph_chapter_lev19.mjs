@@ -864,7 +864,7 @@ export function bible_glyph_chapter_lev19() {
           "defiled",
           "by",
           "them.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
