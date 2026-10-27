@@ -1181,7 +1181,7 @@ export function bible_glyph_chapter_1ki02() {
           "$military_medal",
           "of",
           "the",
-          "army",
+          "$military_helmet",
           "of",
           "$wrestling+heart_on_fire,",
           "and",
