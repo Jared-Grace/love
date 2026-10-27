@@ -120,7 +120,7 @@ export function bible_glyph_roots_hebrew_drafted() {
   "A NAME WITH GOD OR JAH TAKES +proper_name WHEN ITS BARE PICTURES ARE WORDS A VERSE SAYS, 2026-10-27. The rule that such a name takes no tag assumed the God picture alone marks a name, and the misread gate measured otherwise: the LORD heard read as Hoshama in eleven verses, the LORD saved as Joshua, God knows as Eldaah, the LORD added as Joseph. So Hoshama, Jehosheba and Jehoshabeath, Hazael, Haziel, Barakel, Hazaiah, Jehdeiah, Abdeel, Abdiel, Elishaphat, Jesimiel, Gemariah, Jeberechiah, Jehiah, Shelemiah, Jehozabad and Jozabad take +proper_name; so do Jashobeam, which was simply untagged, Amanah, which shared its pictures with a sure covenant, and Chebar, which shared them with long ago. Joseph takes +proper_name as the Greek Joseph already does. Jehoiachin moves under kun beside Jeconiah and Coniah, the same king, with the same pictures. Where the tagged form was already worn by a sibling name, the name says one more thing: Hiel, living of God, is life and describing beside Jehiel's God will live; Tabeel, pleasing to God, is good and describing beside Mehetabel; Eldaah, God of knowledge, is God and knowledge beside Eliada's God is knowing; Zebadiah, the LORD has given, is the gift and doing beside Mattithiah's gift of the LORD. Rejected: accepting these joins verse by verse, because a name's join says somebody nobody wrote; reordering the pictures, because a name is drawn in the order it says them; and giving the tagged form to the newcomer by moving its sibling, because that reseats a name nothing faulted.";
   ("TWO NAMES REDRAWN AGAINST BROWN, DRIVER AND BRIGGS, 2026-10-27. Laying 484 name rows against what that lexicon says each name means ($fn ",
     fn_name("bible_bdb_names_meanings_cache"),
-    ") found nearly all agreeing and two read from the wrong word. Helem was drawn as a dream, from chalam to dream, and the lexicon reads him from chalam to be strong, so he is the flexed arm. Harim was drawn snub-nosed, which is charum, a different vowel and a different word; the name is charam, devoted, so he is Horem's bomb and altar with describing, since Horem and Hormah already wear the bare pair. Kept, though the lexicon reads otherwise, because the drawing is the same root's other sense and nothing says which the namer meant: Jorai as rain and not taught (yarah is both), Gur as a cub and not sojourning, Zibeon as dyed cloth and not the hyena, Gad as the raid of Genesis forty nine and not the fortune of Genesis thirty, Tokhath as obedience where the lexicon follows the corrected spelling Tikvath.");
+    ") found nearly all agreeing and two read from the wrong word. Helem was drawn as a dream, from chalam to dream, and the lexicon reads him from chalam to be strong, so he is the flexed arm. Harim was drawn snub-nosed, which is charum, a different vowel and a different word; the name is charam, devoted, so he is Horem's bomb and altar with describing, since Horem and Hormah already wear the bare pair. Five more were then redrawn after the lexicon, each setting aside the reading it had worn: Jorai is whom Yah teaches and not rain, though yarah is both; Gur is sojourning and not a cub; Zibeon is the hyena and not dyed cloth; Gad is fortune, as Leah names him in Genesis thirty, and not the raid Jacob plays on in Genesis forty nine, so he and the Gadites now share the lots of Gadi and Gaddi; Tokhath is hope and not obedience, because the lexicon corrects him to Tikvath and Second Kings twenty two names the same man Tikvah, and one man wears one picture.");
   let rows = [
     ["11", "abad", "wilted_flower+place", "Abaddon, destruction"],
     ["1413", "gadad", "crowd+clamp+doing", "crowd together"],
@@ -128,7 +128,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["1110", "balaq", "zero+doing", "lay waste"],
     ["1111", "balaq", "zero+doer+proper_name", "Balak, waster"],
     ["1464", "guwd", "boxing_glove+doing", "attack"],
-    ["1410", "guwd", "boxing_glove+proper_name", "Gad"],
+    ["1410", "gad_fortune", "lots+thumbs_up+proper_name", "Gad, fortune"],
     [
       "6578",
       "perath",
@@ -3439,7 +3439,7 @@ export function bible_glyph_roots_hebrew_drafted() {
       "Geuel, majesty of God",
     ],
     ["1367", "gebul", "passport_control+place", "border, region"],
-    ["1425", "guwd", "boxing_glove+proper_name+person", "Gadite"],
+    ["1425", "gad_fortune", "lots+thumbs_up+proper_name+person", "Gadite"],
     ["1433", "gadal", "top+thing", "greatness"],
     ["1442", "gadaph", "speech+axe+doing", "revile, blaspheme"],
     ["1447", "gader", "wall+stone", "wall, enclosure"],
@@ -5725,7 +5725,7 @@ export function bible_glyph_roots_hebrew_drafted() {
       "Baal-shalishah, Baal of Shalishah",
     ],
     ["1443", "gadar", "wall+around+doing", "to wall in"],
-    ["1483", "gur", "lion+child+proper_name", "Gur, cub"],
+    ["1483", "guwr", "luggage+proper_name", "Gur, sojourning"],
     ["1563", "galam", "garment+clockwise_arrows+doing", "to fold up"],
     ["1598", "ganan", "shield+around+doing", "to protect"],
     ["1785", "dayeq", "castle+wheel", "a siege tower"],
@@ -6989,12 +6989,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8196", "mishpat", "scales+down_arrow", "a judgment, punishment"],
     ["8322", "sharaq", "mouth+wind+thumbs_down+thing", "an object of hissing"],
     ["8395", "bus", "footprints+down_arrow+thing", "trampling, ruin"],
-    [
-      "8445",
-      "yiqqahah",
-      "saluting_face+thing+proper_name",
-      "Tokhath, obedience",
-    ],
+    ["8445", "tiqvah", "crossed_fingers+proper_name", "Tokhath, Tikvath, hope"],
     ["8469", "chanan", "heart_orange+hands_praying", "a supplication"],
     ["69", "eben", "stone", "a stone"],
     ["104", "iggera", "envelope+horse", "a letter"],
@@ -10086,7 +10081,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["2817", "chasupha", "garment+no_entry+proper_name", "Hasupha, nakedness"],
     ["2929", "talmon", "clamp+describing+proper_name", "Talmon, oppressive"],
     ["3139", "yoreh", "rain+proper_name", "Jorah, rainy"],
-    ["3140", "yoreh", "rain+proper_name", "Jorai, rainy"],
+    ["3140", "yoreh", "i_am+teacher+proper_name", "Jorai, whom Yah teaches"],
     [
       "3150",
       "yizziyah",
@@ -10637,7 +10632,7 @@ export function bible_glyph_roots_hebrew_drafted() {
       "Paarai, yawning",
     ],
     ["664", "aphek", "castle+flexed_biceps+proper_name", "Aphekah, fortress"],
-    ["6649", "tseba", "artist+garment+proper_name", "Tsibon, variegated"],
+    ["6649", "tsabua", "dog+artist+proper_name", "Zibeon, hyena"],
     [
       "6726",
       "tsiyun",

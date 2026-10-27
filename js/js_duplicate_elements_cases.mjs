@@ -56,6 +56,18 @@ export function js_duplicate_elements_cases() {
       names: [],
       why: "two of the names are functions declared here rather than variables set here, and they are the same kind of thing - this is the list of drawing steps of a lesson that was reported for it, two of whose steps are written out just above",
     },
+    {
+      code: text_frozen(
+        "let a = f();\nlet b = g();\nlet c = h();\nlet r = [a, b, next, c, a, next, b];\n",
+      ),
+      names: [],
+      why: "next is set nowhere in this file, yet the list also holds values made here, so it is a lesson's screens spelled out with the same break asked for between groups rather than a register - eight lessons were reported for this shape",
+    },
+    {
+      code: text_frozen("let a = f();\nlet r = [b, c, d, e, g, c];\n"),
+      names: ["c"],
+      why: "a name being set in the file is not enough on its own - none of this list's names is, so it is still a register and its repeat is still found",
+    },
   ];
   return cases;
 }
