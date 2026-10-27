@@ -467,7 +467,7 @@ export function bible_glyph_chapter_2ki04() {
           "her",
           "$man_beard",
           "is",
-          "old.",
+          "$old_man+doing.",
         ],
       },
       {
