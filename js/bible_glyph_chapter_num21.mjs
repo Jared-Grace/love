@@ -705,7 +705,7 @@ export function bible_glyph_chapter_num21() {
           "up",
           "to",
           "the",
-          "border",
+          "$passport_control",
           "of",
           "the",
           "$son",
