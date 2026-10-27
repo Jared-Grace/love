@@ -24,7 +24,7 @@ export function bible_glyph_chapter_gen08() {
           "and",
           "the",
           "$paw_prints",
-          "that",
+          "$back+flashlight",
           "were",
           "with",
           "him",
