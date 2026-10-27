@@ -503,7 +503,7 @@ export function bible_glyph_chapter_2ki11() {
           "$garment",
           "and",
           "screamed,",
-          "Treason!",
+          "$knot+crowd+thing!",
           "Treason!",
         ],
       },
