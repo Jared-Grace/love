@@ -224,7 +224,7 @@ export function bible_glyph_chapter_jer01() {
           "to",
           "$hand+rescue",
           "you,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
