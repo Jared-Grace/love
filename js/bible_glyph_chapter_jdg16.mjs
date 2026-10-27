@@ -756,7 +756,7 @@ export function bible_glyph_chapter_jdg16() {
           "a",
           "$man_beard",
           "to",
-          "shave",
+          "$razor+doing",
           "off",
           "the",
           "seven",
