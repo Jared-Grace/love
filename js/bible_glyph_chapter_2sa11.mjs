@@ -654,7 +654,7 @@ export function bible_glyph_chapter_2sa11() {
           "may",
           "$speech",
           "you,",
-          "Why",
+          "$flashlight+question+lightbulb",
           "did",
           "you",
           "get",
