@@ -485,7 +485,7 @@ export function bible_glyph_chapter_gen21() {
           "by",
           "the",
           "$hand,",
-          "for",
+          "$pointing",
           "I",
           "will",
           "make",
