@@ -259,7 +259,7 @@ export function bible_glyph_chapter_hos14() {
           "him",
           "$lightbulb",
           "them.",
-          "For",
+          "$pointing",
           "the",
           "$road",
           "of",
