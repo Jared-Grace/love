@@ -265,7 +265,7 @@ export function bible_glyph_chapter_exo01() {
       },
       {
         verse_number: 13,
-        words: ["They", "$kneeling+doing", "the", "$son", "ruthlessly"],
+        words: ["They", "$kneeling+doing", "the", "$son", "$collision+thing"],
       },
       {
         verse_number: 14,
