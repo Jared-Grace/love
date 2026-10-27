@@ -970,7 +970,7 @@ export function bible_glyph_chapter_lev14() {
           "with",
           "his",
           "right",
-          "forefinger",
+          "$index_pointing_up",
           "some",
           "$tray_out",
           "the",
