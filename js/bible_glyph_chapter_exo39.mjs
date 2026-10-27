@@ -759,7 +759,7 @@ export function bible_glyph_chapter_exo39() {
           "$thread+white_circle,",
           "embroidered",
           "with",
-          "blue,",
+          "$blue_circle,",
           "purple,",
           "and",
           "scarlet",
