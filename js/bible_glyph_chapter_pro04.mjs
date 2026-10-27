@@ -436,7 +436,7 @@ export function bible_glyph_chapter_pro04() {
         verse_number: 22,
         words: [
           "$pointing",
-          "they",
+          "$pointing_back",
           "are",
           "$sprout",
           "to",
