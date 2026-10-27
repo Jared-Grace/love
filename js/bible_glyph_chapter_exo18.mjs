@@ -463,7 +463,7 @@ export function bible_glyph_chapter_exo18() {
           "the",
           "$family",
           "$person+up_arrow",
-          "around",
+          "$pointing_up",
           "you",
           "from",
           "morning",
