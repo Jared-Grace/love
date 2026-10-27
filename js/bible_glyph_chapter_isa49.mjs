@@ -541,7 +541,7 @@ export function bible_glyph_chapter_isa49() {
           "I",
           "will",
           "$no_entry",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "you!",
         ],
       },
