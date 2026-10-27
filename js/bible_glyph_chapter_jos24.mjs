@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_jos24() {
           "the",
           "elders",
           "who",
-          "outlived",
+          "$straight_ruler+clock+doing",
           "$i_am+rescue",
           "and",
           "who",
