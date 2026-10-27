@@ -435,7 +435,7 @@ export function bible_glyph_chapter_neh09() {
           "of",
           "$fire",
           "to",
-          "light",
+          "$light+doing",
           "for",
           "them",
           "the",
