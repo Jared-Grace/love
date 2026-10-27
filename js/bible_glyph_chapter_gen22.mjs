@@ -643,7 +643,7 @@ export function bible_glyph_chapter_gen22() {
           "$proper_name$Rebekah.",
           "$proper_name$Milcah",
           "bore",
-          "these",
+          "$flashlight+flashlight",
           "$eight",
           "sons",
           "to",
