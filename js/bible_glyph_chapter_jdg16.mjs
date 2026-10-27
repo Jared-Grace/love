@@ -363,7 +363,7 @@ export function bible_glyph_chapter_jdg16() {
           "$pleading",
           "$newspaper",
           "me",
-          "how",
+          "$flashlight+question",
           "you",
           "can",
           "be",
