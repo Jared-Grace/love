@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_2ch20() {
           "So",
           "$i_am+scales",
           "$castle+doing",
-          "over",
+          "$pointing_up",
           "$hands_raised+proper_name.",
           "He",
           "was",
