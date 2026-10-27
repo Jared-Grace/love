@@ -838,7 +838,7 @@ export function bible_glyph_chapter_jdg16() {
           "and",
           "brought",
           "him",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$proper_name$Gaza,",
           "where",
