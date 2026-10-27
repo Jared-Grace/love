@@ -22,7 +22,7 @@ export function bible_glyph_chapter_deu07() {
           "into",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "you",
           "are",
           "$footprints",
