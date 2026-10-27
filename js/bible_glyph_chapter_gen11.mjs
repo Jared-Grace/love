@@ -92,7 +92,7 @@ export function bible_glyph_chapter_gen11() {
           "$hands_giving+up_arrow,",
           "let",
           "us",
-          "build",
+          "$brick",
           "for",
           "ourselves",
           "a",
