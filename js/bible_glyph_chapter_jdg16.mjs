@@ -1051,7 +1051,7 @@ export function bible_glyph_chapter_jdg16() {
           "were",
           "on",
           "the",
-          "roof",
+          "$house+top",
           "$eye",
           "$proper_name$Samson",
           "entertain",
