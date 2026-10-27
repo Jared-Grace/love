@@ -793,7 +793,7 @@ export function bible_glyph_chapter_lev15() {
           "Any",
           "$bed",
           "on",
-          "which",
+          "$back+flashlight",
           "she",
           "lies",
           "or",
