@@ -537,7 +537,7 @@ export function bible_glyph_chapter_deu33() {
           "$proper_name$Zebulun",
           "he",
           "$speech,",
-          "Rejoice,",
+          "$beaming+doing,",
           "$proper_name$Zebulun,",
           "in",
           "your",
