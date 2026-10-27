@@ -386,7 +386,7 @@ export function bible_glyph_chapter_1ki17() {
           "have",
           "$speech.",
           "But",
-          "first",
+          "$first_place",
           "$hammer+doing",
           "me",
           "a",
