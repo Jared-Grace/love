@@ -558,7 +558,7 @@ export function bible_glyph_chapter_exo15() {
           "back",
           "to",
           "them,",
-          "Sing",
+          "$song+doing",
           "to",
           "the",
           "$i_am,",
