@@ -338,7 +338,7 @@ export function bible_glyph_chapter_2ki17() {
           "on",
           "$all",
           "high",
-          "hill",
+          "$mountain+pinching_hand",
           "and",
           "under",
           "$all",
