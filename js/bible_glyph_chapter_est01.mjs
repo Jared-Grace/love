@@ -442,7 +442,7 @@ export function bible_glyph_chapter_est01() {
           "$king",
           "and",
           "ranked",
-          "highest",
+          "$first_place",
           "in",
           "the",
           "kingdom.",
