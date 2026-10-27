@@ -224,7 +224,7 @@ export function bible_glyph_chapter_1ki20() {
           "$eye",
           "what",
           "$thumbs_down",
-          "this",
+          "$flashlight",
           "man",
           "is",
           "looking",
