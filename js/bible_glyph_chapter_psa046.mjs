@@ -94,7 +94,7 @@ export function bible_glyph_chapter_psa046() {
           "$water+national_park",
           "whose",
           "streams",
-          "delight",
+          "$beaming+doing",
           "the",
           "$city",
           "of",
