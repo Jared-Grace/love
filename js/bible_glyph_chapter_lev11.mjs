@@ -314,7 +314,7 @@ export function bible_glyph_chapter_lev11() {
       {
         verse_number: 12,
         words: [
-          "Everything",
+          "$all",
           "in",
           "the",
           "$water",
