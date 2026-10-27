@@ -110,7 +110,7 @@ export function bible_glyph_chapter_1ch29() {
           "all",
           "kinds",
           "of",
-          "precious",
+          "$gem_stone+describing",
           "stones,",
           "and",
           "slabs",
