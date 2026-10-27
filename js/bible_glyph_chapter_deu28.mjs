@@ -491,7 +491,7 @@ export function bible_glyph_chapter_deu28() {
       {
         verse_number: 15,
         words: [
-          "If,",
+          "$traffic_light,",
           "however,",
           "you",
           "will",
