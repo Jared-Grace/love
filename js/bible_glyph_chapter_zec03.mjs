@@ -284,7 +284,7 @@ export function bible_glyph_chapter_zec03() {
           "one",
           "$stone",
           "are",
-          "seven",
+          "$seven",
           "$eyes.",
           "Behold,",
           "I",
