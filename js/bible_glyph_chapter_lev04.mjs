@@ -316,7 +316,7 @@ export function bible_glyph_chapter_lev04() {
           "to",
           "a",
           "ceremonially",
-          "clean",
+          "$soap+describing",
           "$place",
           "where",
           "the",
