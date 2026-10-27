@@ -108,7 +108,7 @@ export function bible_glyph_chapter_deu16() {
           "$bread",
           "of",
           "$persevering_face+thing,",
-          "because",
+          "$pointing",
           "you",
           "left",
           "the",
