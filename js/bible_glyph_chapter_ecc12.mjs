@@ -174,7 +174,7 @@ export function bible_glyph_chapter_ecc12() {
           "the",
           "caper",
           "berry",
-          "shrivels.",
+          "$broken_chain+scroll+doing.",
           "For",
           "then",
           "$person",
