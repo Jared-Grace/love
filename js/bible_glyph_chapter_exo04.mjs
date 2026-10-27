@@ -125,7 +125,7 @@ export function bible_glyph_chapter_exo04() {
           "back",
           "into",
           "a",
-          "staff",
+          "$white_cane",
           "in",
           "his",
           "$hand.",
