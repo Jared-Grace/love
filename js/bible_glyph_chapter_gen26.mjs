@@ -332,7 +332,7 @@ export function bible_glyph_chapter_gen26() {
           "would",
           "have",
           "$footprints",
-          "guilt",
+          "$sacrifice+scales",
           "on",
           "us.",
         ],
