@@ -42,7 +42,7 @@ export function bible_glyph_chapter_exo16() {
           "of",
           "the",
           "second",
-          "month",
+          "$new_moon",
           "after",
           "they",
           "had",
