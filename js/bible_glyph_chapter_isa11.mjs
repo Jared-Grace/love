@@ -325,7 +325,7 @@ export function bible_glyph_chapter_isa11() {
           "The",
           "$map",
           "will",
-          "seek",
+          "$magnifying_glass+question",
           "Him,",
           "and",
           "His",
