@@ -819,7 +819,7 @@ export function bible_glyph_chapter_num23() {
           "prepare",
           "for",
           "me",
-          "seven",
+          "$seven",
           "$bull",
           "and",
           "seven",
