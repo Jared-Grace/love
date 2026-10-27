@@ -656,7 +656,7 @@ export function bible_glyph_chapter_jer18() {
           "the",
           "$sword",
           "in",
-          "battle.",
+          "$crossed_swords.",
         ],
       },
       {
