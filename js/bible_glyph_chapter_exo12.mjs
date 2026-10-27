@@ -1488,7 +1488,7 @@ export function bible_glyph_chapter_exo12() {
         words: [
           "$pointing",
           "a",
-          "foreigner",
+          "$foreigner",
           "$luggage",
           "$safety_pin",
           "you",
