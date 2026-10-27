@@ -54,7 +54,7 @@ export function bible_glyph_chapter_hab01() {
           "You",
           "do",
           "$no_entry",
-          "save?",
+          "$rescue?",
         ],
       },
       {
