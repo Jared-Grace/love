@@ -393,7 +393,7 @@ export function bible_glyph_chapter_exo21() {
           "$man_beard",
           "acts",
           "willfully",
-          "against",
+          "$pointing_up",
           "his",
           "neighbour",
           "and",
