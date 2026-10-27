@@ -352,7 +352,7 @@ export function bible_glyph_chapter_num13() {
           "the",
           "$earth",
           "where",
-          "they",
+          "$pointing_back",
           "live",
           "$thumbs_up",
           "or",
