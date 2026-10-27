@@ -848,7 +848,7 @@ export function bible_glyph_chapter_exo38() {
           "bases",
           "for",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "$tent",
