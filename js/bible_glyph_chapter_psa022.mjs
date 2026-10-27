@@ -593,7 +593,7 @@ export function bible_glyph_chapter_psa022() {
           "the",
           "$earth",
           "will",
-          "remember",
+          "$reminder_ribbon",
           "and",
           "$turn_back",
           "to",
