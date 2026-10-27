@@ -246,7 +246,7 @@ export function bible_glyph_chapter_num09() {
           "$ear",
           "$flashlight+question",
           "$i_am",
-          "commands",
+          "$speech+scroll",
           "concerning",
           "you.",
         ],
