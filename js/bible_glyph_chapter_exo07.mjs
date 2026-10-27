@@ -486,7 +486,7 @@ export function bible_glyph_chapter_exo07() {
           "you",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I",
           "am",
           "$i_am.",
