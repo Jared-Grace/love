@@ -541,7 +541,7 @@ export function bible_glyph_chapter_zep01() {
           "$walking",
           "like",
           "the",
-          "blind,",
+          "$person_with_white_cane+describing,",
           "because",
           "they",
           "have",
