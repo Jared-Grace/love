@@ -1230,7 +1230,7 @@ export function bible_glyph_chapter_1sa17() {
           "the",
           "$national_park,",
           "and",
-          "put",
+          "$palm_down",
           "them",
           "in",
           "the",
