@@ -32,7 +32,7 @@ export function bible_glyph_chapter_pro04() {
       {
         verse_number: 2,
         words: [
-          "For",
+          "$pointing",
           "I",
           "$hands_giving",
           "you",
