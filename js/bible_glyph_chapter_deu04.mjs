@@ -243,7 +243,7 @@ export function bible_glyph_chapter_deu04() {
           "a",
           "$moai",
           "as",
-          "near",
+          "$magnet",
           "to",
           "them",
           "as",
