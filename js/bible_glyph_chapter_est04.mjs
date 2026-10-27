@@ -156,7 +156,7 @@ export function bible_glyph_chapter_est04() {
         words: [
           "Then",
           "Esther",
-          "summoned",
+          "$waving_hand",
           "$proper_name$Hathach,",
           "one",
           "of",
