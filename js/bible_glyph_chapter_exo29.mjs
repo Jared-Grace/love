@@ -351,7 +351,7 @@ export function bible_glyph_chapter_exo29() {
         verse_number: 13,
         words: [
           "$hand_receiving",
-          "all",
+          "$all",
           "the",
           "fat",
           "that",
