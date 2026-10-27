@@ -1751,7 +1751,7 @@ export function bible_glyph_chapter_1ki08() {
         words: [
           "May",
           "You",
-          "forgive",
+          "$sponge",
           "Your",
           "$family",
           "who",
