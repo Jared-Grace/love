@@ -288,7 +288,7 @@ export function bible_glyph_chapter_lev07() {
           "offer",
           "$flatbread",
           "$bagel",
-          "mixed",
+          "$spoon+cyclone",
           "with",
           "olive",
           "oil,",
