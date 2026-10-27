@@ -527,7 +527,7 @@ export function bible_glyph_chapter_exo13() {
           "$heart_on_fire",
           "did",
           "$no_entry",
-          "lead",
+          "$guide_dog",
           "them",
           "along",
           "the",
