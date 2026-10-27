@@ -464,7 +464,7 @@ export function bible_glyph_chapter_2sa11() {
           "And",
           "in",
           "the",
-          "evening",
+          "$sunset",
           "Uriah",
           "went",
           "out",
