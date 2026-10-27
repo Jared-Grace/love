@@ -215,7 +215,7 @@ export function bible_glyph_chapter_dan09() {
           "covered",
           "with",
           "shame",
-          "-",
+          "$back+flashlight",
           "the",
           "$man_beard",
           "of",
