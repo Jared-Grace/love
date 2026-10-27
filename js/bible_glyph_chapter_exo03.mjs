@@ -296,7 +296,7 @@ export function bible_glyph_chapter_exo03() {
           "And",
           "$watch",
           "the",
-          "cry",
+          "$loudspeaker+mouth",
           "of",
           "the",
           "$son",
