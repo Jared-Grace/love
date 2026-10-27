@@ -122,7 +122,7 @@ export function bible_glyph_chapter_jer07() {
         verse_number: 5,
         words: [
           "$pointing",
-          "if",
+          "$traffic_light",
           "you",
           "really",
           "correct",
