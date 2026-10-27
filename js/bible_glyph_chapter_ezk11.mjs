@@ -700,7 +700,7 @@ export function bible_glyph_chapter_ezk11() {
           "their",
           "own",
           "heads,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am.",
