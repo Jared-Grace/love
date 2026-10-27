@@ -164,7 +164,7 @@ export function bible_glyph_chapter_gen11() {
           "speaking",
           "the",
           "same",
-          "language",
+          "$kiss_mark",
           "they",
           "have",
           "begun",
