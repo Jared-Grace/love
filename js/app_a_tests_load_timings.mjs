@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_url_stage_local } from "./app_shared_url_stage_local.mjs";
 import { app_a } from "./app_a.mjs";
@@ -5,6 +6,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { add } from "./add.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { subtract } from "./subtract.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
@@ -19,6 +21,8 @@ export async function app_a_tests_load_timings(stage_name) {
   let screen_ready_again = null;
   let buttons = null;
   let store_read = null;
+  let saved = null;
+  let downloads = 0;
   async function on_page(page) {
     function on_response(response) {
       let request = response.request();
@@ -30,8 +34,11 @@ export async function app_a_tests_load_timings(stage_name) {
       let text = request.postData();
       let named = text_includes(text, fn_name("app_a_download"));
       if (named) {
-        let left2 = date_now_milliseconds();
-        names_arrived = subtract(left2, started);
+        downloads = add(downloads, 1);
+        if (equal(names_arrived, null)) {
+          let left2 = date_now_milliseconds();
+          names_arrived = subtract(left2, started);
+        }
       }
     }
     page.on("response", on_response);
@@ -44,6 +51,18 @@ export async function app_a_tests_load_timings(stage_name) {
     let left3 = date_now_milliseconds();
     screen_ready = subtract(left3, started);
     buttons = await page.locator("button").count();
+    ("The names are kept once the flag is set; reloading sooner would only download them again.");
+    ("Written as text because it runs inside the page, where none of this repo's functions exist.");
+    let flagged = text_combine_multiple([
+      'Object.keys(localStorage).some(k => k.includes("',
+      fn_name("app_a_file_system_initialize"),
+      '"))',
+    ]);
+    await page.waitForFunction(flagged, null, {
+      timeout: 600000,
+    });
+    let left5 = date_now_milliseconds();
+    saved = subtract(left5, started);
     ("A second visit has the names already, so what it still takes is the drawing alone.");
     let again = date_now_milliseconds();
     await page.reload();
@@ -65,6 +84,8 @@ export async function app_a_tests_load_timings(stage_name) {
     screen_ready_again,
     buttons,
     store_read,
+    saved,
+    downloads,
   };
   return r;
 }
