@@ -663,7 +663,7 @@ export function bible_glyph_chapter_ezk01() {
           "the",
           "$voice",
           "of",
-          "many",
+          "$multiply",
           "$water,",
           "like",
           "the",
