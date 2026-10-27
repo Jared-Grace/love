@@ -41,7 +41,7 @@ export function bible_glyph_chapter_pro08() {
           "she",
           "takes",
           "her",
-          "stand.",
+          "$person+up_arrow.",
         ],
       },
       {
