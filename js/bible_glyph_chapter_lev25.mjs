@@ -1048,7 +1048,7 @@ export function bible_glyph_chapter_lev25() {
           "$no_entry",
           "be",
           "sold,",
-          "for",
+          "$pointing",
           "this",
           "is",
           "their",
