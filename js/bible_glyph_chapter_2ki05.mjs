@@ -794,7 +794,7 @@ export function bible_glyph_chapter_2ki05() {
         words: [
           "So",
           "Gehazi",
-          "pursued",
+          "$running+toward",
           "$proper_name$Naaman.",
           "And",
           "when",
