@@ -623,7 +623,7 @@ export function bible_glyph_chapter_lev27() {
           "the",
           "$field,",
           "or",
-          "if",
+          "$traffic_light",
           "he",
           "has",
           "sold",
