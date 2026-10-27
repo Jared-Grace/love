@@ -551,7 +551,7 @@ export function bible_glyph_chapter_lev05() {
           "it,",
           "he",
           "is",
-          "guilty",
+          "$sacrifice+scales+doing",
           "and",
           "shall",
           "$lifting",
