@@ -614,7 +614,7 @@ export function bible_glyph_chapter_2sa11() {
           "$speech",
           "of",
           "the",
-          "battle.",
+          "$crossed_swords.",
         ],
       },
       {
