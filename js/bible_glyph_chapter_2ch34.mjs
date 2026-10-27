@@ -454,7 +454,7 @@ export function bible_glyph_chapter_2ch34() {
           "for",
           "the",
           "$house",
-          "that",
+          "$back+flashlight",
           "the",
           "$king",
           "of",
