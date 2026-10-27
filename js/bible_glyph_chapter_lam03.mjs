@@ -685,7 +685,7 @@ export function bible_glyph_chapter_lam03() {
           "$walking+tray_out",
           "from",
           "the",
-          "mouth",
+          "$face_with_open_mouth",
           "of",
           "the",
           "Most",
