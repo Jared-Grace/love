@@ -1044,7 +1044,7 @@ export function bible_glyph_chapter_exo39() {
           "tabernacle,",
           "$tent",
           "of",
-          "Meeting;",
+          "$alarm_clock;",
         ],
       },
       {
