@@ -540,7 +540,7 @@ export function bible_glyph_chapter_gen20() {
           "front",
           "of",
           "all",
-          "who",
+          "$back+flashlight",
           "are",
           "with",
           "you.",
