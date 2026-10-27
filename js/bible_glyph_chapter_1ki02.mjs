@@ -1189,7 +1189,7 @@ export function bible_glyph_chapter_1ki02() {
           "$son",
           "of",
           "$proper_name$Jether,",
-          "commander",
+          "$military_medal",
           "of",
           "the",
           "army",
