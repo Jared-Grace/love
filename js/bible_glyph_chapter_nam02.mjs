@@ -114,7 +114,7 @@ export function bible_glyph_chapter_nam02() {
         words: [
           "The",
           "chariots",
-          "dash",
+          "$clapping_hands",
           "through",
           "the",
           "streets;",
