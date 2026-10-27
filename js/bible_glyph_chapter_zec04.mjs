@@ -112,7 +112,7 @@ export function bible_glyph_chapter_zec04() {
           "me,",
           "$flashlight+question",
           "are",
-          "these,",
+          "$flashlight+flashlight,",
           "my",
           "$crown?",
         ],
