@@ -343,7 +343,7 @@ export function bible_glyph_chapter_isa43() {
           "$anchor",
           "Me,",
           "and",
-          "understand",
+          "$brain",
           "that",
           "I",
           "am",
