@@ -143,7 +143,7 @@ export function bible_glyph_chapter_deu04() {
           "to",
           "this",
           "$sun,",
-          "every",
+          "$all",
           "one",
           "of",
           "you.",
