@@ -949,7 +949,7 @@ export function bible_glyph_chapter_deu01() {
           "which",
           "you",
           "$walking",
-          "until",
+          "$finish",
           "you",
           "$footprints",
           "this",
