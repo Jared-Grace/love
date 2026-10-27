@@ -894,7 +894,7 @@ export function bible_glyph_chapter_gen31() {
           "$tent",
           "of",
           "the",
-          "two",
+          "$two",
           "servant",
           "women,",
           "and",
