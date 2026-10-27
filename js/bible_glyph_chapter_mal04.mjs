@@ -103,7 +103,7 @@ export function bible_glyph_chapter_mal04() {
           "Then",
           "you",
           "will",
-          "trample",
+          "$foot+down_arrow+doing",
           "the",
           "$thumbs_down,",
           "for",
