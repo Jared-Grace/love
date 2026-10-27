@@ -706,7 +706,7 @@ export function bible_glyph_chapter_deu28() {
           "with",
           "$wilted_flower+wind",
           "and",
-          "mildew,",
+          "$microbe+wheat,",
           "and",
           "these",
           "will",
