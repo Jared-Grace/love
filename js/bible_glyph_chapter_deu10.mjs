@@ -568,7 +568,7 @@ export function bible_glyph_chapter_deu10() {
           "the",
           "$top",
           "and",
-          "mighty",
+          "$might+person",
           "and",
           "awesome",
           "$heart_on_fire,",
