@@ -429,7 +429,7 @@ export function bible_glyph_chapter_jos03() {
           "from",
           "above",
           "will",
-          "stand",
+          "$person+round_pushpin",
           "up",
           "in",
           "a",
