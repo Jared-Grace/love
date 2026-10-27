@@ -620,7 +620,7 @@ export function bible_glyph_chapter_num23() {
           "them,",
           "and",
           "the",
-          "shout",
+          "$public_address+thing",
           "of",
           "the",
           "$king",
