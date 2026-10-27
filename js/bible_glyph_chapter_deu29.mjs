@@ -309,7 +309,7 @@ export function bible_glyph_chapter_deu29() {
           "your",
           "$tree",
           "and",
-          "draw",
+          "$bucket+doing",
           "your",
           "$water",
           "-",
