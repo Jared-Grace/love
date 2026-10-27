@@ -221,7 +221,7 @@ export function bible_glyph_chapter_num15() {
           "to",
           "fulfill",
           "a",
-          "vow,",
+          "$saluting_face,",
           "$shuffle",
           "as",
           "a",
