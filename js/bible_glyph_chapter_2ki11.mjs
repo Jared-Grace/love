@@ -523,7 +523,7 @@ export function bible_glyph_chapter_2ki11() {
           "charge",
           "of",
           "the",
-          "army,",
+          "$raised_fist,",
           "$walking+tray_out",
           "her",
           "out",
