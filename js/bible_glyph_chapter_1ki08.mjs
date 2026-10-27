@@ -1790,7 +1790,7 @@ export function bible_glyph_chapter_1ki08() {
         verse_number: 51,
         words: [
           "For",
-          "they",
+          "$pointing_back",
           "are",
           "Your",
           "$family",
