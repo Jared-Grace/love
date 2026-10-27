@@ -878,7 +878,7 @@ export function bible_glyph_chapter_lam02() {
           "Both",
           "young",
           "and",
-          "old",
+          "$old_man",
           "lie",
           "together",
           "in",
