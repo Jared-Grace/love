@@ -1235,7 +1235,7 @@ export function bible_glyph_chapter_gen24() {
           "you",
           "will",
           "be",
-          "released",
+          "$smiling_face_with_halo+describing",
           "from",
           "my",
           "oath.",
