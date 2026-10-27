@@ -1362,7 +1362,7 @@ export function bible_glyph_chapter_jer32() {
           "they",
           "will",
           "always",
-          "fear",
+          "$fear+doing",
           "Me",
           "for",
           "their",
