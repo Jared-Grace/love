@@ -141,7 +141,7 @@ export function bible_glyph_chapter_job01() {
           "$morning",
           "to",
           "offer",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "for",
           "all",
