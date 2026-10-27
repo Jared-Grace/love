@@ -462,7 +462,7 @@ export function bible_glyph_chapter_ezk37() {
           "in",
           "your",
           "own",
-          "land.",
+          "$brown_square.",
           "Then",
           "you",
           "will",
