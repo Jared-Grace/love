@@ -73,7 +73,7 @@ export function bible_glyph_chapter_exo39() {
           "sheets",
           "$gold",
           "and",
-          "cut",
+          "$axe+down_arrow+doing",
           "threads",
           "from",
           "them",
