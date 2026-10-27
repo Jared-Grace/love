@@ -947,7 +947,7 @@ export function bible_glyph_chapter_exo29() {
           "of",
           "ordination",
           "and",
-          "boil",
+          "$pot_of_food+doing",
           "its",
           "$meat",
           "in",
