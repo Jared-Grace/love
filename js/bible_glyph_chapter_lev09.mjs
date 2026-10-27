@@ -540,7 +540,7 @@ export function bible_glyph_chapter_lev09() {
           "$burnt_offering",
           "and",
           "the",
-          "peace",
+          "$peace+gift",
           "offering,",
           "he",
           "stepped",
