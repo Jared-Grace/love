@@ -587,7 +587,7 @@ export function bible_glyph_chapter_2ki09() {
           "$hands_raised+proper_name",
           "had",
           "gone",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$eye",
           "him.",
