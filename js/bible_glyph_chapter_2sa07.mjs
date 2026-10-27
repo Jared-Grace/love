@@ -206,7 +206,7 @@ export function bible_glyph_chapter_2sa07() {
           "My",
           "$family",
           "$wrestling+heart_on_fire,",
-          "Why",
+          "$flashlight+question",
           "$no_entry",
           "you",
           "built",
