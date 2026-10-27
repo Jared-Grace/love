@@ -584,7 +584,7 @@ export function bible_glyph_chapter_zep03() {
           "$exclamation,",
           "at",
           "that",
-          "time",
+          "$clock",
           "I",
           "will",
           "$hammer+doing",
