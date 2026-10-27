@@ -528,7 +528,7 @@ export function bible_glyph_chapter_gen14() {
           "$bread",
           "and",
           "$wine.",
-          "He",
+          "$pointing_back",
           "was",
           "$priest",
           "of",
