@@ -861,7 +861,7 @@ export function bible_glyph_chapter_jer31() {
         verse_number: 26,
         words: [
           "At",
-          "this",
+          "$flashlight",
           "I",
           "awoke",
           "and",
