@@ -61,7 +61,7 @@ export function bible_glyph_chapter_num08() {
           "facing",
           "$toward",
           "the",
-          "front",
+          "$vs_button",
           "of",
           "the",
           "lampstand,",
