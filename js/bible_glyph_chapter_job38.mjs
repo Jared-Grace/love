@@ -459,7 +459,7 @@ export function bible_glyph_chapter_job38() {
           "of",
           "war",
           "and",
-          "battle?",
+          "$crossed_swords?",
         ],
       },
       {
