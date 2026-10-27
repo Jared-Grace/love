@@ -111,7 +111,7 @@ export function bible_glyph_chapter_psa073() {
         verse_number: 6,
         words: [
           "$right_arrow",
-          "pride",
+          "$mountain+up_arrow+thing",
           "is",
           "their",
           "necklace;",
