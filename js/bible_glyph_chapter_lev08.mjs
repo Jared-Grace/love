@@ -633,7 +633,7 @@ export function bible_glyph_chapter_lev08() {
           "the",
           "entrails,",
           "the",
-          "lobe",
+          "$meat+brown_square+takeout_box",
           "of",
           "the",
           "liver,",
