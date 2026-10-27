@@ -838,7 +838,7 @@ export function bible_glyph_chapter_2ki05() {
           "to",
           "$speech,",
           "$exclamation,",
-          "two",
+          "$two",
           "young",
           "men",
           "from",
