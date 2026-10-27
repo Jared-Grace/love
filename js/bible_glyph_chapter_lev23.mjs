@@ -510,7 +510,7 @@ export function bible_glyph_chapter_lev23() {
           "to",
           "$magnet+doing",
           "$seven",
-          "unblemished",
+          "$full_moon+describing",
           "$lamb,",
           "each",
           "a",
