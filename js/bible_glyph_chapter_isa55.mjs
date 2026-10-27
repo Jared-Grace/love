@@ -40,7 +40,7 @@ export function bible_glyph_chapter_isa55() {
           "$silver",
           "and",
           "$no_entry",
-          "cost!",
+          "$receipt+coin!",
         ],
       },
       {
