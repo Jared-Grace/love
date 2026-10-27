@@ -564,7 +564,7 @@ export function bible_glyph_chapter_jer18() {
       {
         verse_number: 19,
         words: [
-          "Attend",
+          "$ear_with_hearing_aid",
           "to",
           "me,",
           "O",
