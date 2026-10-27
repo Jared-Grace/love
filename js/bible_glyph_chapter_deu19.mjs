@@ -553,7 +553,7 @@ export function bible_glyph_chapter_deu19() {
       {
         verse_number: 17,
         words: [
-          "both",
+          "$two",
           "parties",
           "to",
           "the",
