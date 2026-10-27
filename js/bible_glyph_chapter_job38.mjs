@@ -609,7 +609,7 @@ export function bible_glyph_chapter_job38() {
           "chains",
           "of",
           "the",
-          "Pleiades",
+          "$star+seven",
           "or",
           "loosen",
           "the",
