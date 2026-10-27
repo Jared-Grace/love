@@ -1158,7 +1158,7 @@ export function bible_glyph_chapter_lev14() {
           "$hand",
           "can",
           "$no_entry",
-          "afford",
+          "$running+hand_receiving+doing",
           "the",
           "cost",
           "of",
