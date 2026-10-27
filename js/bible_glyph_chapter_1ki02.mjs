@@ -423,7 +423,7 @@ export function bible_glyph_chapter_1ki02() {
           "$year.",
           "He",
           "$castle+doing",
-          "seven",
+          "$seven",
           "$year",
           "in",
           "$proper_name$Hebron,",
