@@ -1064,7 +1064,7 @@ export function bible_glyph_chapter_lev13() {
           "there",
           "is",
           "no",
-          "black",
+          "$black_circle",
           "$hair",
           "in",
           "it,",
