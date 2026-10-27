@@ -568,7 +568,7 @@ export function bible_glyph_chapter_num22() {
           "$no_entry",
           "$hammer+doing",
           "anything",
-          "small",
+          "$pinching_hand",
           "or",
           "great",
           "beyond",
