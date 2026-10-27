@@ -224,7 +224,7 @@ export function bible_glyph_chapter_job38() {
           "you",
           "commanded",
           "the",
-          "morning",
+          "$morning",
           "or",
           "$lightbulb",
           "the",
