@@ -296,7 +296,7 @@ export function bible_glyph_chapter_dan12() {
           "I",
           "did",
           "$no_entry",
-          "understand.",
+          "$brain.",
           "So",
           "I",
           "$speech,",
