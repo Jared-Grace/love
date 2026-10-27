@@ -1490,7 +1490,7 @@ export function bible_glyph_chapter_exo12() {
           "a",
           "foreigner",
           "$luggage",
-          "with",
+          "$safety_pin",
           "you",
           "and",
           "wants",
