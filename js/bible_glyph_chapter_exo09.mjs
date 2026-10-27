@@ -299,7 +299,7 @@ export function bible_glyph_chapter_exo09() {
           "the",
           "$sky,",
           "and",
-          "festering",
+          "$red_circle+bubbles",
           "$fire+microbe",
           "broke",
           "out",
