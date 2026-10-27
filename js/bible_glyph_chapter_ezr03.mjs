@@ -503,7 +503,7 @@ export function bible_glyph_chapter_ezr03() {
           "and",
           "$father",
           "$person_gesturing_ok,",
-          "who",
+          "$back+flashlight",
           "had",
           "$eye",
           "the",
