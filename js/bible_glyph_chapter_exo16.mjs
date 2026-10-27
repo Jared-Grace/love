@@ -309,7 +309,7 @@ export function bible_glyph_chapter_exo16() {
           "Him.",
           "Who",
           "are",
-          "we?",
+          "$me?",
           "Your",
           "grumblings",
           "are",
