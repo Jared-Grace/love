@@ -851,7 +851,7 @@ export function bible_glyph_chapter_num20() {
           "$proper_name$Eleazar,",
           "$proper_name$Aaron",
           "$skull+doing",
-          "there",
+          "$telescope",
           "on",
           "top",
           "of",
