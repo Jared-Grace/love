@@ -992,7 +992,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "You",
           "drew",
-          "near",
+          "$magnet+doing",
           "$sun",
           "I",
           "called",
