@@ -1003,7 +1003,7 @@ export function bible_glyph_chapter_exo36() {
           "$gold,",
           "and",
           "their",
-          "five",
+          "$five",
           "bases",
           "were",
           "$bronze.",
