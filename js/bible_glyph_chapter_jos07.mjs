@@ -824,7 +824,7 @@ export function bible_glyph_chapter_jos07() {
           "from",
           "$proper_name$Shinar,",
           "two",
-          "hundred",
+          "$input_numbers+all",
           "shekels",
           "of",
           "silver,",
