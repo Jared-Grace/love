@@ -386,7 +386,7 @@ export function bible_glyph_chapter_1ki18() {
           "$i_am",
           "from",
           "my",
-          "youth.",
+          "$child+flexed_biceps+thing.",
         ],
       },
       {
