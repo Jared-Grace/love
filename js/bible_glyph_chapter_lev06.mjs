@@ -291,7 +291,7 @@ export function bible_glyph_chapter_lev06() {
           "$bacon+ashes",
           "outside",
           "$camp",
-          "to",
+          "$toward",
           "a",
           "ceremonially",
           "clean",
