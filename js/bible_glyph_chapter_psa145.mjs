@@ -259,7 +259,7 @@ export function bible_glyph_chapter_psa145() {
           "and",
           "the",
           "$star",
-          "splendor",
+          "$crown+sparkles",
           "of",
           "Your",
           "kingdom.",
