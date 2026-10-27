@@ -605,7 +605,7 @@ export function bible_glyph_chapter_gen28() {
         words: [
           "Then",
           "$hand+foot",
-          "made",
+          "$saluting_face+doing",
           "a",
           "vow,",
           "$speech,",
