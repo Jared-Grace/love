@@ -519,7 +519,7 @@ export function bible_glyph_chapter_deu07() {
           "$tray_out",
           "you",
           "all",
-          "sickness.",
+          "$thermometer_face+thing.",
           "He",
           "will",
           "$no_entry",
