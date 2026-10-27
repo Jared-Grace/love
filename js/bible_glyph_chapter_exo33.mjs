@@ -517,7 +517,7 @@ export function bible_glyph_chapter_exo33() {
         words: [
           "Moses",
           "$speech,",
-          "If",
+          "$traffic_light",
           "Your",
           "Presence",
           "does",
