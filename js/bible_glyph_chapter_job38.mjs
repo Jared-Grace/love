@@ -476,7 +476,7 @@ export function bible_glyph_chapter_job38() {
           "the",
           "east",
           "wind",
-          "scattered",
+          "$confetti_ball",
           "over",
           "the",
           "$earth?",
