@@ -204,7 +204,7 @@ export function bible_glyph_chapter_ecc12() {
           "and",
           "the",
           "golden",
-          "bowl",
+          "$fountain+ring",
           "is",
           "crushed,",
           "before",
