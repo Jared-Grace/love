@@ -1463,7 +1463,7 @@ export function bible_glyph_chapter_lev14() {
       {
         verse_number: 43,
         words: [
-          "If",
+          "$traffic_light",
           "the",
           "mildew",
           "$turn_back",
