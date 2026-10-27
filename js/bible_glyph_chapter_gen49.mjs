@@ -132,7 +132,7 @@ export function bible_glyph_chapter_gen49() {
           "$footprints",
           "into",
           "their",
-          "council.",
+          "$shushing_face+crowd.",
           "May",
           "my",
           "$star",
