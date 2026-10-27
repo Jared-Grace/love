@@ -379,7 +379,7 @@ export function bible_glyph_chapter_exo30() {
       {
         verse_number: 14,
         words: [
-          "Everyone",
+          "$all",
           "who",
           "crosses",
           "over,",
