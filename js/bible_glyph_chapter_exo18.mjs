@@ -801,7 +801,7 @@ export function bible_glyph_chapter_exo18() {
           "$family",
           "at",
           "all",
-          "times.",
+          "$clock.",
           "The",
           "difficult",
           "cases",
