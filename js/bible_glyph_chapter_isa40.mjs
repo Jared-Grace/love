@@ -740,7 +740,7 @@ export function bible_glyph_chapter_isa40() {
           "$up_arrow+thing",
           "and",
           "$eye:",
-          "Who",
+          "$person+question",
           "created",
           "all",
           "these?",
