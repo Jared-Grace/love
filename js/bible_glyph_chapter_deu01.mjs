@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_deu01() {
       {
         verse_number: 36,
         words: [
-          "except",
+          "$all+tray_out",
           "$dog+proper_name",
           "$son",
           "of",
