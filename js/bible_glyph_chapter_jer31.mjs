@@ -459,7 +459,7 @@ export function bible_glyph_chapter_jer31() {
           "joy",
           "for",
           "their",
-          "sorrow.",
+          "$crying_face+thing.",
         ],
       },
       {
