@@ -372,7 +372,7 @@ export function bible_glyph_chapter_isa09() {
           "$proper_name$Aram",
           "from",
           "the",
-          "east",
+          "$compass+right_arrow",
           "and",
           "$proper_name$Philistia",
           "from",
