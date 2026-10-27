@@ -19,7 +19,7 @@ export function bible_glyph_chapter_deu10() {
         words: [
           "At",
           "that",
-          "time",
+          "$clock",
           "the",
           "$i_am",
           "$speech",
