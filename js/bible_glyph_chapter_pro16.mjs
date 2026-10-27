@@ -327,7 +327,7 @@ export function bible_glyph_chapter_pro16() {
       {
         verse_number: 16,
         words: [
-          "How",
+          "$flashlight+question",
           "much",
           "$thumbs_up",
           "to",
