@@ -333,7 +333,7 @@ export function bible_glyph_chapter_dan09() {
       {
         verse_number: 11,
         words: [
-          "All",
+          "$all",
           "$wrestling+heart_on_fire",
           "has",
           "transgressed",
