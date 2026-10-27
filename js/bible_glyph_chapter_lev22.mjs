@@ -753,7 +753,7 @@ export function bible_glyph_chapter_lev22() {
           "$hammer+down_arrow+doing,",
           "$broken_chain+hand+doing,",
           "or",
-          "cut.",
+          "$scissors.",
           "You",
           "are",
           "$no_entry",
