@@ -393,7 +393,7 @@ export function bible_glyph_chapter_gen39() {
           "When",
           "she",
           "$eye",
-          "that",
+          "$pointing",
           "he",
           "had",
           "left",
