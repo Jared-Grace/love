@@ -776,7 +776,7 @@ export function bible_glyph_chapter_exo32() {
           "us.",
           "As",
           "for",
-          "this",
+          "$flashlight",
           "$fishing_pole+proper_name,",
           "$back+flashlight",
           "brought",
