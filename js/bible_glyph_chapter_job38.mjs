@@ -95,7 +95,7 @@ export function bible_glyph_chapter_job38() {
           "$lightbulb!",
           "$shuffle",
           "$person+question",
-          "stretched",
+          "$white_cane+doing",
           "a",
           "measuring",
           "line",
