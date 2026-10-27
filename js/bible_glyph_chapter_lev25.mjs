@@ -1633,7 +1633,7 @@ export function bible_glyph_chapter_lev25() {
         verse_number: 54,
         words: [
           "Even",
-          "if",
+          "$traffic_light",
           "he",
           "is",
           "$no_entry",
