@@ -317,7 +317,7 @@ export function bible_glyph_chapter_2ki05() {
           "he",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "there",
           "is",
           "a",
