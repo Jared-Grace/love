@@ -824,7 +824,7 @@ export function bible_glyph_chapter_num10() {
           "share",
           "with",
           "you",
-          "whatever",
+          "$back+flashlight",
           "$thumbs_up",
           "$i_am",
           "gives",
