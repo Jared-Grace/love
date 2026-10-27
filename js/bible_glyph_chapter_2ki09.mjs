@@ -779,7 +779,7 @@ export function bible_glyph_chapter_2ki09() {
           "they",
           "harnessed",
           "his",
-          "chariot.",
+          "$chariot.",
           "Then",
           "$i_am+up_arrow",
           "$king",
