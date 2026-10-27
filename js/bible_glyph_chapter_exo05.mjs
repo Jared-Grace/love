@@ -430,7 +430,7 @@ export function bible_glyph_chapter_exo05() {
           "have",
           "you",
           "$no_entry",
-          "fulfilled",
+          "$end_arrow",
           "your",
           "quota",
           "of",
