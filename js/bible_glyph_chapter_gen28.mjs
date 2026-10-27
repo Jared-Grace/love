@@ -665,7 +665,7 @@ export function bible_glyph_chapter_gen28() {
         verse_number: 22,
         words: [
           "and",
-          "this",
+          "$flashlight",
           "$stone",
           "I",
           "have",
