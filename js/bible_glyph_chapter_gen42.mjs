@@ -41,7 +41,7 @@ export function bible_glyph_chapter_gen42() {
         words: [
           "He",
           "$speech,",
-          "Look,",
+          "$exclamation,",
           "I",
           "have",
           "$ear",
