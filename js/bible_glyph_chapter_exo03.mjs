@@ -528,7 +528,7 @@ export function bible_glyph_chapter_exo03() {
           "me",
           "to",
           "you.",
-          "This",
+          "$flashlight",
           "is",
           "My",
           "$name_tag",
