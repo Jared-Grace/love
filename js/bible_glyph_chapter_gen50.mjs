@@ -312,7 +312,7 @@ export function bible_glyph_chapter_gen50() {
           "Atad,",
           "they",
           "$speech,",
-          "This",
+          "$flashlight",
           "is",
           "a",
           "solemn",
