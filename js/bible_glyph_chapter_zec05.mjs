@@ -51,7 +51,7 @@ export function bible_glyph_chapter_zec05() {
           "$page_with_curl,",
           "twenty",
           "cubits",
-          "long",
+          "$up_down_arrow",
           "and",
           "ten",
           "cubits",
