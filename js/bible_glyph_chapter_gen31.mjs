@@ -799,7 +799,7 @@ export function bible_glyph_chapter_gen31() {
           "$father's",
           "$house.",
           "But",
-          "why",
+          "$flashlight+question",
           "did",
           "you",
           "steal",
