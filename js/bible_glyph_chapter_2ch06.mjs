@@ -188,7 +188,7 @@ export function bible_glyph_chapter_2ch06() {
           "$two_hearts+proper_name",
           "to",
           "be",
-          "over",
+          "$pointing_up",
           "My",
           "$family",
           "$wrestling+heart_on_fire.",
