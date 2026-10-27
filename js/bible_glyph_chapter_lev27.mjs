@@ -222,7 +222,7 @@ export function bible_glyph_chapter_lev27() {
           "present",
           "the",
           "person",
-          "before",
+          "$face",
           "the",
           "$priest,",
           "and",
