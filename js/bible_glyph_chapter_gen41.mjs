@@ -176,7 +176,7 @@ export function bible_glyph_chapter_gen41() {
           "swallowed",
           "up",
           "the",
-          "seven",
+          "$seven",
           "plump,",
           "ripe",
           "ones.",
