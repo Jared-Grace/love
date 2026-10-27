@@ -440,7 +440,7 @@ export function bible_glyph_chapter_deu16() {
           "and",
           "carefully",
           "$hammer+doing",
-          "these",
+          "$flashlight+flashlight",
           "$locked_with_pen.",
         ],
       },
