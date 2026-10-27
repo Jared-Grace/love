@@ -112,7 +112,7 @@ export function bible_glyph_chapter_job38() {
           "its",
           "foundations",
           "$down_arrow+sea+doing,",
-          "or",
+          "$shuffle",
           "who",
           "laid",
           "its",
