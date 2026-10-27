@@ -1807,7 +1807,7 @@ export function bible_glyph_chapter_lev13() {
           "on",
           "the",
           "front",
-          "or",
+          "$shuffle",
           "$back+hair+no_entry+thing.",
         ],
       },
