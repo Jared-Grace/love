@@ -767,7 +767,7 @@ export function bible_glyph_chapter_ezk37() {
           "$no_entry",
           "longer",
           "be",
-          "two",
+          "$two",
           "$map",
           "and",
           "will",
