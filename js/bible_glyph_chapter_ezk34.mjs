@@ -689,7 +689,7 @@ export function bible_glyph_chapter_ezk34() {
           "and",
           "$person_shrugging,",
           "$ox+horn+doing",
-          "all",
+          "$all",
           "the",
           "weak",
           "ones",
