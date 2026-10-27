@@ -967,7 +967,7 @@ export function bible_glyph_chapter_jdg11() {
         verse_number: 30,
         words: [
           "$unlocked+proper_name",
-          "made",
+          "$saluting_face+doing",
           "this",
           "vow",
           "to",
