@@ -496,7 +496,7 @@ export function bible_glyph_chapter_exo38() {
           "and",
           "$four",
           "$bronze",
-          "bases.",
+          "$down_arrow+brick.",
           "Their",
           "hooks",
           "were",
