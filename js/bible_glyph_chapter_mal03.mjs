@@ -346,7 +346,7 @@ export function bible_glyph_chapter_mal03() {
           "there",
           "may",
           "be",
-          "food",
+          "$wolf+thing",
           "in",
           "My",
           "$house.",
