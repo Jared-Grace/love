@@ -1225,7 +1225,7 @@ export function bible_glyph_chapter_jdg06() {
           "came",
           "up",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "him.",
         ],
       },
