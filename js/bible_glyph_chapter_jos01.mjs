@@ -47,7 +47,7 @@ export function bible_glyph_chapter_jos01() {
           "$skull+doing.",
           "$watch",
           "therefore",
-          "arise,",
+          "$person+pointing_up,",
           "you",
           "and",
           "all",
