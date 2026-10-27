@@ -288,7 +288,7 @@ export function bible_glyph_chapter_psa034() {
       {
         verse_number: 14,
         words: [
-          "Turn",
+          "$away+doing",
           "away",
           "from",
           "$thumbs_down",
