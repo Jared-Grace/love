@@ -345,7 +345,7 @@ export function bible_glyph_chapter_exo16() {
           "has",
           "$ear",
           "your",
-          "grumbling.",
+          "$pouting_face+voice.",
         ],
       },
       {
