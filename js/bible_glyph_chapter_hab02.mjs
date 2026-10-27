@@ -475,7 +475,7 @@ export function bible_glyph_chapter_hab02() {
           "of",
           "$star.",
           "You",
-          "too",
+          "$plus",
           "must",
           "$cup_with_straw",
           "and",
