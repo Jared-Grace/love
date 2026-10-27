@@ -200,7 +200,7 @@ export function bible_glyph_chapter_1ki18() {
           "Now",
           "as",
           "Obadiah",
-          "went",
+          "$link",
           "on",
           "his",
           "$road,",
