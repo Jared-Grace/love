@@ -292,7 +292,7 @@ export function bible_glyph_chapter_1ki20() {
           "$crown",
           "the",
           "$king,",
-          "All",
+          "$all",
           "that",
           "you",
           "demanded",
