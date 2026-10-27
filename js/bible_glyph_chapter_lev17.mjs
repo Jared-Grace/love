@@ -477,7 +477,7 @@ export function bible_glyph_chapter_lev17() {
           "its",
           "$blood",
           "and",
-          "cover",
+          "$coat+doing",
           "it",
           "with",
           "$dust.",
