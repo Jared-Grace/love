@@ -109,7 +109,7 @@ export function bible_glyph_chapter_gen45() {
           "Then",
           "$i_am+plus",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "$brother,",
           "Please",
