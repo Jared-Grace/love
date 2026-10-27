@@ -681,7 +681,7 @@ export function bible_glyph_chapter_2ch07() {
           "Israel",
           "from",
           "the",
-          "soil",
+          "$brown_square",
           "I",
           "have",
           "$hands_giving",
