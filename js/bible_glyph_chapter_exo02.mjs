@@ -81,7 +81,7 @@ export function bible_glyph_chapter_exo02() {
           "with",
           "$black_circle+oil",
           "and",
-          "pitch.",
+          "$oil+black_circle.",
           "Then",
           "she",
           "placed",
