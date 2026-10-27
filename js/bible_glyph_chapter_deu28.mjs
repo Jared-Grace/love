@@ -1815,7 +1815,7 @@ export function bible_glyph_chapter_deu28() {
           "$son",
           "and",
           "her",
-          "daughter,",
+          "$girl+family,",
         ],
       },
       {
