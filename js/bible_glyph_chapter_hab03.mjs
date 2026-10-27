@@ -145,7 +145,7 @@ export function bible_glyph_chapter_hab03() {
           "the",
           "ancient",
           "mountains",
-          "crumbled;",
+          "$confetti_ball;",
           "the",
           "$hourglass",
           "hills",
