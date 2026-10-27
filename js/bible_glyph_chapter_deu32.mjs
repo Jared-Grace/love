@@ -719,7 +719,7 @@ export function bible_glyph_chapter_deu32() {
           "infant",
           "and",
           "the",
-          "gray",
+          "$older_person",
           "haired",
           "$man_beard.",
         ],
