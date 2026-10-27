@@ -216,7 +216,7 @@ export function bible_glyph_chapter_exo03() {
           "$eye",
           "$eye",
           "the",
-          "affliction",
+          "$persevering_face+thing",
           "of",
           "My",
           "$family",
