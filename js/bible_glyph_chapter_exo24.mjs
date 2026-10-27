@@ -497,7 +497,7 @@ export function bible_glyph_chapter_exo24() {
           "the",
           "LORD",
           "called",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name",
           "from",
           "within",
