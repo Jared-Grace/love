@@ -839,7 +839,7 @@ export function bible_glyph_chapter_2ki03() {
           "and",
           "cut",
           "down",
-          "every",
+          "$all",
           "$thumbs_up",
           "$tree.",
           "Only",
