@@ -307,7 +307,7 @@ export function bible_glyph_chapter_exo24() {
           "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire.",
-          "Under",
+          "$down_arrow",
           "His",
           "$foot",
           "was",
