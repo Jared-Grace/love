@@ -590,7 +590,7 @@ export function bible_glyph_chapter_gen21() {
           "and",
           "$proper_name$Phicol",
           "the",
-          "commander",
+          "$military_medal",
           "of",
           "his",
           "army",
