@@ -1542,7 +1542,7 @@ export function bible_glyph_chapter_gen31() {
           "us.",
           "And",
           "$hand+foot",
-          "swore",
+          "$raised_back_of_hand+doing",
           "by",
           "the",
           "Fear",
