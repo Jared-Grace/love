@@ -807,7 +807,7 @@ export function bible_glyph_chapter_num06() {
           "up",
           "His",
           "countenance",
-          "toward",
+          "$toward",
           "you",
           "and",
           "give",
