@@ -159,7 +159,7 @@ export function bible_glyph_chapter_deu08() {
           "$foot+balloon+doing",
           "during",
           "these",
-          "forty",
+          "$four+zero",
           "$year.",
         ],
       },
