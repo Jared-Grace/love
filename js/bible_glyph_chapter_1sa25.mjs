@@ -617,7 +617,7 @@ export function bible_glyph_chapter_1sa25() {
           "$input_numbers+all",
           "cakes",
           "of",
-          "figs,",
+          "$fig+flatbread,",
           "and",
           "she",
           "loaded",
