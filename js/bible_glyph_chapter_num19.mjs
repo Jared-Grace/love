@@ -511,7 +511,7 @@ export function bible_glyph_chapter_num19() {
         words: [
           "$all",
           "who",
-          "touches,",
+          "$hand+doing,",
           "in",
           "the",
           "open",
