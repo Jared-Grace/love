@@ -745,7 +745,7 @@ export function bible_glyph_chapter_1sa02() {
           "$thumbs_down",
           "$speech",
           "from",
-          "all",
+          "$all",
           "$flashlight+flashlight",
           "$family.",
         ],
