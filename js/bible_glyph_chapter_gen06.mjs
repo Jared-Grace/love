@@ -268,7 +268,7 @@ export function bible_glyph_chapter_gen06() {
           "and",
           "$proper_name$Noah",
           "$walking",
-          "with",
+          "$safety_pin",
           "$heart_on_fire.",
         ],
       },
