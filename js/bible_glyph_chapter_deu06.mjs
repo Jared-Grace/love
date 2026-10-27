@@ -114,7 +114,7 @@ export function bible_glyph_chapter_deu06() {
           "may",
           "prosper",
           "and",
-          "multiply",
+          "$multiply+doing",
           "greatly",
           "in",
           "an",
