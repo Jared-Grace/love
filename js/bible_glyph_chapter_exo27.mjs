@@ -372,7 +372,7 @@ export function bible_glyph_chapter_exo27() {
           "on",
           "the",
           "other",
-          "side",
+          "$person_shrugging",
           "fifteen",
           "cubits",
           "long,",
