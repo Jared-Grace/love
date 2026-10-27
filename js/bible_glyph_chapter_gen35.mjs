@@ -330,7 +330,7 @@ export function bible_glyph_chapter_gen35() {
           "Be",
           "fruitful",
           "and",
-          "multiply.",
+          "$multiply+doing.",
           "A",
           "$map",
           "and",
