@@ -297,7 +297,7 @@ export function bible_glyph_chapter_zec14() {
           "become",
           "$king",
           "over",
-          "all",
+          "$all",
           "the",
           "$earth,",
           "the",
