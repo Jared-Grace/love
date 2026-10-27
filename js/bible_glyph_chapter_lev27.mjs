@@ -787,7 +787,7 @@ export function bible_glyph_chapter_lev27() {
           "$first_place+baby",
           "of",
           "the",
-          "livestock",
+          "$paw_prints",
           "belongs",
           "to",
           "$i_am,",
