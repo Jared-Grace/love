@@ -383,7 +383,7 @@ export function bible_glyph_chapter_1ki19() {
           "by.",
           "And",
           "a",
-          "great",
+          "$top",
           "and",
           "mighty",
           "$wind",
