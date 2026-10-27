@@ -386,7 +386,7 @@ export function bible_glyph_chapter_num15() {
           "offering",
           "as",
           "a",
-          "pleasing",
+          "$nose+thumbs_up",
           "$nose",
           "to",
           "$i_am,",
