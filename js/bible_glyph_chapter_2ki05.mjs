@@ -397,7 +397,7 @@ export function bible_glyph_chapter_2ki05() {
           "surely",
           "$walking+tray_out",
           "out,",
-          "stand",
+          "$person+round_pushpin",
           "and",
           "call",
           "on",
