@@ -1180,7 +1180,7 @@ export function bible_glyph_chapter_1ki20() {
           "$speech,",
           "Is",
           "he",
-          "still",
+          "$repeat",
           "$sprout?",
           "He",
           "is",
