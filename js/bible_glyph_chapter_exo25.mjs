@@ -814,7 +814,7 @@ export function bible_glyph_chapter_exo25() {
           "and",
           "flower,",
           "and",
-          "three",
+          "$three",
           "cups",
           "shaped",
           "like",
