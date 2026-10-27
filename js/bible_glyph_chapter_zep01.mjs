@@ -166,7 +166,7 @@ export function bible_glyph_chapter_zep01() {
           "those",
           "who",
           "$bowing",
-          "on",
+          "$pointing_up",
           "the",
           "rooftops",
           "to",
