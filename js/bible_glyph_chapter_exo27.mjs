@@ -31,7 +31,7 @@ export function bible_glyph_chapter_exo27() {
           "$altar",
           "must",
           "be",
-          "square,",
+          "$four+straight_ruler+describing,",
           "and",
           "three",
           "$triangular_ruler",
