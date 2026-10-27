@@ -294,7 +294,7 @@ export function bible_glyph_chapter_exo31() {
           "$check+exclamation",
           "you",
           "must",
-          "keep",
+          "$guard",
           "my",
           "$sabbath,",
           "for",
