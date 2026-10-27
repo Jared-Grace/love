@@ -381,7 +381,7 @@ export function bible_glyph_chapter_exo03() {
           "God",
           "$speech,",
           "and",
-          "this",
+          "$flashlight",
           "will",
           "be",
           "the",
