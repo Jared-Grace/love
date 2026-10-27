@@ -211,7 +211,7 @@ export function bible_glyph_chapter_jdg11() {
           "$footprints",
           "to",
           "me",
-          "now,",
+          "$watch,",
           "when",
           "you",
           "are",
