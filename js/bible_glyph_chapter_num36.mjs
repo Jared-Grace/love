@@ -373,7 +373,7 @@ export function bible_glyph_chapter_num36() {
           "tribe",
           "to",
           "$plus+one,",
-          "for",
+          "$pointing",
           "every",
           "$man_beard",
           "of",
