@@ -190,7 +190,7 @@ export function bible_glyph_chapter_lev10() {
           "angry",
           "with",
           "the",
-          "whole",
+          "$all",
           "congregation.",
           "$brother,",
           "the",
