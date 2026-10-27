@@ -389,7 +389,7 @@ export function bible_glyph_chapter_mic04() {
           "You",
           "will",
           "$footprints",
-          "to",
+          "$finish",
           "$face_spiral;",
           "there",
           "you",
