@@ -1193,7 +1193,7 @@ export function bible_glyph_chapter_deu01() {
         verse_number: 40,
         words: [
           "But",
-          "you",
+          "$you",
           "are",
           "to",
           "turn",
