@@ -178,7 +178,7 @@ export function bible_glyph_chapter_gen41() {
           "the",
           "$seven",
           "$meat+describing,",
-          "ripe",
+          "$battery+describing",
           "ones.",
           "Then",
           "$house+proper_name",
