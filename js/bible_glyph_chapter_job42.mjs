@@ -422,7 +422,7 @@ export function bible_glyph_chapter_job42() {
           "$hands_giving",
           "them",
           "an",
-          "inheritance",
+          "$inheritance",
           "among",
           "their",
           "$brother.",
