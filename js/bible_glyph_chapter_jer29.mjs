@@ -48,7 +48,7 @@ export function bible_glyph_chapter_jer29() {
           "had",
           "carried",
           "into",
-          "exile",
+          "$luggage+chains+doing",
           "from",
           "$city+peace",
           "to",
