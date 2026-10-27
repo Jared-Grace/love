@@ -220,7 +220,7 @@ export function bible_glyph_chapter_zec08() {
           "$earth",
           "of",
           "the",
-          "east",
+          "$east",
           "and",
           "from",
           "the",
