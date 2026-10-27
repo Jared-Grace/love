@@ -130,7 +130,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 5,
         words: [
           "Then",
-          "Ahab",
+          "$brother+father+proper_name",
           "$speech",
           "to",
           "$kneeling+i_am,",
