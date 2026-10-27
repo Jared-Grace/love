@@ -56,7 +56,7 @@ export function bible_glyph_chapter_lam02() {
         verse_number: 2,
         words: [
           "$no_entry",
-          "pity",
+          "$pleading_face+doing",
           "the",
           "$crown",
           "has",
