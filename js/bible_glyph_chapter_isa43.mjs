@@ -200,7 +200,7 @@ export function bible_glyph_chapter_isa43() {
           "$speech",
           "to",
           "the",
-          "north,",
+          "$compass+up_arrow,",
           "$hands_giving",
           "them",
           "up,",
