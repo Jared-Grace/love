@@ -509,7 +509,7 @@ export function bible_glyph_chapter_num24() {
           "him,",
           "but",
           "$no_entry",
-          "now.",
+          "$watch.",
           "I",
           "behold",
           "him,",
