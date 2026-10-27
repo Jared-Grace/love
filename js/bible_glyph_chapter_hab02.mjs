@@ -63,7 +63,7 @@ export function bible_glyph_chapter_hab02() {
           "inscribe",
           "it",
           "on",
-          "tablets,",
+          "$stone+writing_hand,",
           "so",
           "that",
           "a",
