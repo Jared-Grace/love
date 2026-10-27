@@ -479,7 +479,7 @@ export function bible_glyph_chapter_psa073() {
           "$heart_organ",
           "and",
           "my",
-          "portion",
+          "$pizza",
           "$hourglass.",
         ],
       },
