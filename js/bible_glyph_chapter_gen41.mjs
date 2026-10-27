@@ -1297,7 +1297,7 @@ export function bible_glyph_chapter_gen41() {
           "$i_am+plus",
           "$walking+tray_out",
           "$house+proper_name's",
-          "presence",
+          "$face",
           "and",
           "traveled",
           "throughout",
