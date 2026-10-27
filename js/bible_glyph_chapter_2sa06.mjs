@@ -409,7 +409,7 @@ export function bible_glyph_chapter_2sa06() {
           "those",
           "carrying",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$i_am",
