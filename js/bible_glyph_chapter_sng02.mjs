@@ -402,7 +402,7 @@ export function bible_glyph_chapter_sng02() {
           "the",
           "shadows",
           "$running+dashing_away,",
-          "turn,",
+          "$around+doing,",
           "my",
           "beloved,",
           "and",
