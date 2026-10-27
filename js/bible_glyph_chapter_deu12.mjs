@@ -184,7 +184,7 @@ export function bible_glyph_chapter_deu12() {
           "heave",
           "offerings,",
           "your",
-          "vow",
+          "$saluting_face",
           "offerings",
           "and",
           "freewill",
