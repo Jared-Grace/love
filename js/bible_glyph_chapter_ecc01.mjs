@@ -77,7 +77,7 @@ export function bible_glyph_chapter_ecc01() {
           "but",
           "the",
           "$earth",
-          "remains",
+          "$person+round_pushpin",
           "$hourglass.",
         ],
       },
