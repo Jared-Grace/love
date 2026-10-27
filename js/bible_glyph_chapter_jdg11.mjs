@@ -1061,7 +1061,7 @@ export function bible_glyph_chapter_jdg11() {
         words: [
           "He",
           "devastated",
-          "twenty",
+          "$two+zero",
           "$city",
           "from",
           "$proper_name$Aroer",
