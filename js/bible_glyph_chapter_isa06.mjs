@@ -296,7 +296,7 @@ export function bible_glyph_chapter_isa06() {
           "$flashlight",
           "$family",
           "$lotion_bottle+doing;",
-          "deafen",
+          "$star+doing",
           "their",
           "ears",
           "and",
