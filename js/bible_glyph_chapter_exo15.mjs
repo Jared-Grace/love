@@ -489,7 +489,7 @@ export function bible_glyph_chapter_exo15() {
           "For",
           "when",
           "$house+proper_name",
-          "horses",
+          "$horse",
           "and",
           "chariots",
           "and",
