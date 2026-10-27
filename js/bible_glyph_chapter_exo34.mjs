@@ -87,7 +87,7 @@ export function bible_glyph_chapter_exo34() {
           "may",
           "be",
           "$eye",
-          "anywhere",
+          "$all",
           "on",
           "the",
           "$mountain.",
