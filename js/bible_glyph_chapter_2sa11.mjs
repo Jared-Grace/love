@@ -301,7 +301,7 @@ export function bible_glyph_chapter_2sa11() {
           "$no_entry",
           "go",
           "down",
-          "to",
+          "$toward",
           "his",
           "$house.",
         ],
