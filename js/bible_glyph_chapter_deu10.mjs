@@ -646,7 +646,7 @@ export function bible_glyph_chapter_deu10() {
           "to",
           "Him",
           "and",
-          "take",
+          "$raised_back_of_hand+doing",
           "your",
           "oaths",
           "in",
