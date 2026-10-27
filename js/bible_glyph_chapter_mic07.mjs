@@ -594,7 +594,7 @@ export function bible_glyph_chapter_mic07() {
           "$might+up_arrow",
           "His",
           "anger",
-          "forever,",
+          "$clock+all,",
           "because",
           "He",
           "delights",
