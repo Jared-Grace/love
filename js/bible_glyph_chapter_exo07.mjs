@@ -336,7 +336,7 @@ export function bible_glyph_chapter_exo07() {
           "the",
           "staff",
           "of",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "swallowed",
           "up",
           "their",
