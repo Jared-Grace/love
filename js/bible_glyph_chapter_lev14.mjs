@@ -558,7 +558,7 @@ export function bible_glyph_chapter_lev14() {
           "$hand+away+describing",
           "$hand_with_fingers_splayed",
           "and",
-          "sprinkle",
+          "$droplet+hand+doing",
           "some",
           "$tray_out",
           "the",
