@@ -191,7 +191,7 @@ export function bible_glyph_chapter_psa019() {
           "are",
           "radiant,",
           "giving",
-          "light",
+          "$light+doing",
           "to",
           "the",
           "$eyes.",
