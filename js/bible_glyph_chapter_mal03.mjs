@@ -429,7 +429,7 @@ export function bible_glyph_chapter_mal03() {
           "will",
           "call",
           "you",
-          "blessed,",
+          "$gift+smile+doing,",
           "for",
           "you",
           "will",
