@@ -124,7 +124,7 @@ export function bible_glyph_chapter_lev25() {
           "are",
           "$no_entry",
           "to",
-          "reap",
+          "$sheaf_of_rice+scissors+doing",
           "the",
           "aftergrowth",
           "of",
