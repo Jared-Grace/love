@@ -125,7 +125,7 @@ export function bible_glyph_chapter_2ki03() {
           "$wrestling+heart_on_fire",
           "a",
           "$input_numbers+all",
-          "thousand",
+          "$ten+all",
           "lambs",
           "and",
           "the",
