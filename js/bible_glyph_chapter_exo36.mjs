@@ -809,7 +809,7 @@ export function bible_glyph_chapter_exo36() {
           "frames",
           "on",
           "one",
-          "side",
+          "$x_ray",
           "of",
           "the",
           "tabernacle,",
