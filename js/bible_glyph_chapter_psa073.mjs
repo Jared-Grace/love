@@ -430,7 +430,7 @@ export function bible_glyph_chapter_psa073() {
           "me",
           "with",
           "Your",
-          "counsel,",
+          "$person_tipping_hand,",
           "and",
           "later",
           "$hand_receiving",
