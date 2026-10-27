@@ -853,7 +853,7 @@ export function bible_glyph_chapter_exo38() {
           "the",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "the",
           "$bronze",
           "$altar",
