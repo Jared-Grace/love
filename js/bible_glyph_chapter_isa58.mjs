@@ -70,7 +70,7 @@ export function bible_glyph_chapter_isa58() {
           "and",
           "does",
           "$no_entry",
-          "forsake",
+          "$derelict_house+doing",
           "the",
           "$scales+thing",
           "of",
