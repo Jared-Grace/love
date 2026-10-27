@@ -430,7 +430,7 @@ export function bible_glyph_chapter_deu19() {
           "show",
           "him",
           "$no_entry",
-          "pity.",
+          "$pleading_face+eyes+doing.",
           "You",
           "are",
           "to",
