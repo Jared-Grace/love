@@ -216,7 +216,7 @@ export function bible_glyph_chapter_hos14() {
           "I",
           "to",
           "do",
-          "anymore",
+          "$repeat",
           "with",
           "idols?",
           "It",
