@@ -173,7 +173,7 @@ export function bible_glyph_chapter_lev11() {
           "the",
           "$pig,",
           "$pointing",
-          "it",
+          "$pointing_back",
           "has",
           "a",
           "split",
