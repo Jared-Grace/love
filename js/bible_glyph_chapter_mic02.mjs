@@ -259,7 +259,7 @@ export function bible_glyph_chapter_mic02() {
           "$dress",
           "from",
           "unsuspecting",
-          "passersby",
+          "$bridge",
           "like",
           "men",
           "$turn_back",
