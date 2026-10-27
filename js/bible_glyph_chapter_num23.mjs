@@ -396,7 +396,7 @@ export function bible_glyph_chapter_num23() {
           "And",
           "from",
           "there",
-          "curse",
+          "$speech+kitchen_knife+doing",
           "them",
           "for",
           "me.",
