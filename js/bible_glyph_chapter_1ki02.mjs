@@ -1398,7 +1398,7 @@ export function bible_glyph_chapter_1ki02() {
         verse_number: 39,
         words: [
           "After",
-          "three",
+          "$three",
           "$year,",
           "$link,",
           "two",
