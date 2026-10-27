@@ -155,7 +155,7 @@ export function bible_glyph_chapter_jos03() {
           "$family,",
           "$sparkle+doing",
           "yourselves,",
-          "for",
+          "$pointing",
           "tomorrow",
           "the",
           "$i_am",
