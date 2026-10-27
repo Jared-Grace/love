@@ -691,7 +691,7 @@ export function bible_glyph_chapter_exo35() {
           "spices",
           "and",
           "olive",
-          "oil",
+          "$lotion_bottle",
           "for",
           "the",
           "light,",
