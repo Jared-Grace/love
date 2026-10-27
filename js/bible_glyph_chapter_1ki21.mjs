@@ -61,7 +61,7 @@ export function bible_glyph_chapter_1ki21() {
           "a",
           "vegetable",
           "$garden,",
-          "since",
+          "$pointing",
           "it",
           "is",
           "next",
