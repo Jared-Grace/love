@@ -509,7 +509,7 @@ export function bible_glyph_chapter_jos06() {
           "circled",
           "the",
           "$city",
-          "seven",
+          "$seven",
           "times.",
         ],
       },
