@@ -115,7 +115,7 @@ export function bible_glyph_chapter_lev27() {
           "valuation",
           "shall",
           "be",
-          "twenty",
+          "$two+zero",
           "shekels",
           "for",
           "the",
