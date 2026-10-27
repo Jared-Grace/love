@@ -64,7 +64,7 @@ export function bible_glyph_chapter_deu16() {
           "sacrifice",
           "from",
           "the",
-          "herd",
+          "$cow_face",
           "or",
           "$sheep",
           "in",
