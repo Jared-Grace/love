@@ -363,7 +363,7 @@ export function bible_glyph_chapter_num32() {
         verse_number: 13,
         words: [
           "The",
-          "anger",
+          "$nose+fire",
           "of",
           "$i_am",
           "$angry_face+doing",
