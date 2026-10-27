@@ -555,7 +555,7 @@ export function bible_glyph_chapter_lev07() {
       {
         verse_number: 21,
         words: [
-          "If",
+          "$pointing",
           "$person_other",
           "touches",
           "anything",
