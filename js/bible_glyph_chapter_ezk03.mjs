@@ -257,7 +257,7 @@ export function bible_glyph_chapter_ezk03() {
           "diamond,",
           "$might+up_arrow",
           "than",
-          "flint.",
+          "$rock+kitchen_knife.",
           "Do",
           "$no_entry",
           "be",
