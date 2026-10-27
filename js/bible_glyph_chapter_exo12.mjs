@@ -862,7 +862,7 @@ export function bible_glyph_chapter_exo12() {
           "are",
           "to",
           "$speech,",
-          "It",
+          "$pointing_back",
           "is",
           "the",
           "$lamb+door",
