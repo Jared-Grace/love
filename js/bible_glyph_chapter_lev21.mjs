@@ -516,7 +516,7 @@ export function bible_glyph_chapter_lev21() {
           "a",
           "broken",
           "$foot",
-          "or",
+          "$shuffle",
           "a",
           "broken",
           "$hand,",
