@@ -627,7 +627,7 @@ export function bible_glyph_chapter_mal02() {
           "$pointing_back",
           "$smiling_face_with_hearts+doing,",
           "$shuffle,",
-          "Where",
+          "$question+round_pushpin",
           "is",
           "the",
           "$heart_on_fire",
