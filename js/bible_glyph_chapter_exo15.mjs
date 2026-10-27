@@ -32,7 +32,7 @@ export function bible_glyph_chapter_exo15() {
           "to",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "He",
           "is",
           "highly",
