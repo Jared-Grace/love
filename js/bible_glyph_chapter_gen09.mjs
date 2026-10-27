@@ -192,7 +192,7 @@ export function bible_glyph_chapter_gen09() {
           "in",
           "His",
           "own",
-          "image",
+          "$framed_picture",
           "$heart_on_fire",
           "$hammer+doing",
           "$person.",
