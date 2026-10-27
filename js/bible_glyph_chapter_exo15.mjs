@@ -293,7 +293,7 @@ export function bible_glyph_chapter_exo15() {
           "is",
           "$likeness",
           "You,",
-          "majestic",
+          "$sparkles+up_arrow+doing",
           "in",
           "$sparkle+thing,",
           "revered",
