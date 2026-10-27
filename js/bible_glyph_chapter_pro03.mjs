@@ -312,7 +312,7 @@ export function bible_glyph_chapter_pro03() {
       {
         verse_number: 16,
         words: [
-          "Long",
+          "$up_down_arrow",
           "$sun",
           "is",
           "in",
