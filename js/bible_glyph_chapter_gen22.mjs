@@ -494,7 +494,7 @@ export function bible_glyph_chapter_gen22() {
           "you",
           "have",
           "$hammer+doing",
-          "this",
+          "$flashlight",
           "and",
           "have",
           "$no_entry",
