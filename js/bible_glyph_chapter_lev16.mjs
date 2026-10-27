@@ -72,7 +72,7 @@ export function bible_glyph_chapter_lev16() {
           "seat",
           "on",
           "the",
-          "ark,",
+          "$ark,",
           "or",
           "$no_entry",
           "he",
