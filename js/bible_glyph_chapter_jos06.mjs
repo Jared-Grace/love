@@ -879,7 +879,7 @@ export function bible_glyph_chapter_jos06() {
           "to",
           "$flashlight",
           "$sun,",
-          "because",
+          "$pointing",
           "she",
           "hid",
           "the",
