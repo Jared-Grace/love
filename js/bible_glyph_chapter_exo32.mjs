@@ -642,7 +642,7 @@ export function bible_glyph_chapter_exo32() {
           "and",
           "$eye",
           "the",
-          "calf",
+          "$calf",
           "and",
           "the",
           "dancing,",
