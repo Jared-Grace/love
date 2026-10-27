@@ -689,7 +689,7 @@ export function bible_glyph_chapter_jer31() {
           "I",
           "have",
           "great",
-          "compassion",
+          "$hugging_face+doing",
           "for",
           "him,",
           "declares",
