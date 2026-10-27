@@ -504,7 +504,7 @@ export function bible_glyph_chapter_zep03() {
           "$city+peace:",
           "Do",
           "$no_entry",
-          "fear,",
+          "$fear+doing,",
           "O",
           "Zion;",
           "do",
