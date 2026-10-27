@@ -415,7 +415,7 @@ export function bible_glyph_chapter_gen24() {
           "coming",
           "out",
           "to",
-          "draw",
+          "$bucket+doing",
           "$water.",
         ],
       },
