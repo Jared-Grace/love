@@ -1094,7 +1094,7 @@ export function bible_glyph_chapter_1ki18() {
           "he",
           "$speech,",
           "$battery",
-          "four",
+          "$four",
           "$water",
           "and",
           "pour",
