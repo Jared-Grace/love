@@ -467,7 +467,7 @@ export function bible_glyph_chapter_ezk03() {
           "them",
           "$seven",
           "$sun,",
-          "overwhelmed.",
+          "$astonished+doing.",
         ],
       },
       {
