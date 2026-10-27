@@ -1407,7 +1407,7 @@ export function bible_glyph_chapter_1ki18() {
           "$sea,",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "servant.",
           "So",
