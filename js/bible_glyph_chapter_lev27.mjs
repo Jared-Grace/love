@@ -969,7 +969,7 @@ export function bible_glyph_chapter_lev27() {
           "$ten+hands_giving,",
           "he",
           "must",
-          "add",
+          "$plus+doing",
           "a",
           "fifth",
           "to",
