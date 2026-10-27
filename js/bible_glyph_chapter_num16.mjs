@@ -212,7 +212,7 @@ export function bible_glyph_chapter_num16() {
           "them",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am.",
