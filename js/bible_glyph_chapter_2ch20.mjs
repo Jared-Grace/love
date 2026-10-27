@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_2ch20() {
           "had",
           "made",
           "them",
-          "rejoice",
+          "$beaming+doing",
           "over",
           "their",
           "enemies.",
