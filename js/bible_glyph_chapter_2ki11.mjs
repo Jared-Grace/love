@@ -514,7 +514,7 @@ export function bible_glyph_chapter_2ki11() {
           "$i_am+lightbulb",
           "the",
           "$priest",
-          "ordered",
+          "$speech+scroll",
           "the",
           "commanders",
           "of",
