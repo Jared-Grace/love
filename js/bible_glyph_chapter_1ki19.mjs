@@ -597,7 +597,7 @@ export function bible_glyph_chapter_1ki19() {
           "$proper_name$Nimshi",
           "as",
           "$king",
-          "over",
+          "$pointing_up",
           "$wrestling+heart_on_fire,",
           "and",
           "$heart_on_fire+rescue",
