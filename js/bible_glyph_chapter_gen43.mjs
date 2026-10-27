@@ -300,7 +300,7 @@ export function bible_glyph_chapter_gen43() {
           "not",
           "$flashlight+question+doing,",
           "by",
-          "now",
+          "$watch",
           "we",
           "could",
           "have",
