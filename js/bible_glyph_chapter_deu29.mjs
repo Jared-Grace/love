@@ -825,7 +825,7 @@ export function bible_glyph_chapter_deu29() {
           "$walking",
           "and",
           "$kneeling+doing",
-          "other",
+          "$plus+one",
           "$moai,",
           "and",
           "they",
