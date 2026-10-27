@@ -1002,7 +1002,7 @@ export function bible_glyph_chapter_lam03() {
           "$speech,",
           "$no_entry",
           "be",
-          "afraid.",
+          "$fear+doing.",
         ],
       },
       {
