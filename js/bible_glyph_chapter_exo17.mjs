@@ -395,7 +395,7 @@ export function bible_glyph_chapter_exo17() {
           "$white_cane+blossom+proper_name",
           "and",
           "$proper_name$Hur",
-          "held",
+          "$hand+up_arrow+doing",
           "his",
           "$hand",
           "up,",
