@@ -1434,7 +1434,7 @@ export function bible_glyph_chapter_num16() {
           "ran",
           "into",
           "the",
-          "midst",
+          "$radio_button",
           "of",
           "the",
           "$church.",
