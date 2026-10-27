@@ -203,7 +203,7 @@ export function bible_glyph_chapter_ezr03() {
           "of",
           "the",
           "seventh",
-          "month",
+          "$new_moon",
           "they",
           "began",
           "to",
