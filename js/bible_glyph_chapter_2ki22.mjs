@@ -725,7 +725,7 @@ export function bible_glyph_chapter_2ki22() {
           "$astonished+thing",
           "and",
           "a",
-          "curse,",
+          "$balloon+speech,",
           "and",
           "because",
           "you",
