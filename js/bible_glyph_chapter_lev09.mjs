@@ -131,7 +131,7 @@ export function bible_glyph_chapter_lev09() {
           "front",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "and",
           "the",
           "whole",
