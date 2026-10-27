@@ -969,7 +969,7 @@ export function bible_glyph_chapter_jdg11() {
           "$unlocked+proper_name",
           "$saluting_face+doing",
           "this",
-          "vow",
+          "$saluting_face",
           "to",
           "the",
           "$i_am,",
