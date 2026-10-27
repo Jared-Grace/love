@@ -479,7 +479,7 @@ export function bible_glyph_chapter_est04() {
           "your",
           "$father",
           "will",
-          "perish.",
+          "$wilted_flower.",
           "And",
           "who",
           "$lightbulb",
