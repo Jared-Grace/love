@@ -779,7 +779,7 @@ export function bible_glyph_chapter_exo26() {
           "$gold,",
           "with",
           "$gold",
-          "hooks,",
+          "$hook,",
           "standing",
           "on",
           "$four",
