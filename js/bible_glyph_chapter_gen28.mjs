@@ -575,7 +575,7 @@ export function bible_glyph_chapter_gen28() {
           "He",
           "poured",
           "$lotion_bottle",
-          "on",
+          "$pointing_up",
           "top",
           "of",
           "it.",
