@@ -717,7 +717,7 @@ export function bible_glyph_chapter_exo04() {
           "$wrestling+heart_on_fire",
           "is",
           "My",
-          "firstborn",
+          "$first_place+baby",
           "$son,",
         ],
       },
