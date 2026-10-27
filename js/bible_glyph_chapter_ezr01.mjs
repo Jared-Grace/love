@@ -155,7 +155,7 @@ export function bible_glyph_chapter_ezr01() {
           "every",
           "$puzzle_piece+doing,",
           "wherever",
-          "he",
+          "$pointing_back",
           "lives,",
           "be",
           "assisted",
