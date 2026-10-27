@@ -296,7 +296,7 @@ export function bible_glyph_chapter_amo05() {
           "$right_arrow,",
           "$information",
           "you",
-          "trample",
+          "$foot+wheat+collision+doing",
           "on",
           "the",
           "poor",
