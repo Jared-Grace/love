@@ -350,7 +350,7 @@ export function bible_glyph_chapter_dan01() {
           "$speech",
           "$toward",
           "the",
-          "steward",
+          "$key+person",
           "whom",
           "the",
           "chief",
