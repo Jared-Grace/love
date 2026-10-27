@@ -818,7 +818,7 @@ export function bible_glyph_chapter_lev23() {
           "$flashlight",
           "$sun,",
           "for",
-          "it",
+          "$pointing_back",
           "is",
           "the",
           "$sun",
