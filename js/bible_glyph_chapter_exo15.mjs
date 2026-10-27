@@ -170,7 +170,7 @@ export function bible_glyph_chapter_exo15() {
           "By",
           "Your",
           "great",
-          "majesty",
+          "$peacock",
           "You",
           "overthrew",
           "Your",
