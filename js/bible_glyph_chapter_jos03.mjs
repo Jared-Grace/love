@@ -525,7 +525,7 @@ export function bible_glyph_chapter_jos03() {
           "the",
           "water",
           "flowing",
-          "toward",
+          "$pointing_up",
           "the",
           "$sea",
           "of",
