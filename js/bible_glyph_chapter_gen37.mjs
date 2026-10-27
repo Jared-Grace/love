@@ -535,7 +535,7 @@ export function bible_glyph_chapter_gen37() {
       {
         verse_number: 19,
         words: [
-          "Here",
+          "$exclamation",
           "$footprints",
           "that",
           "dreamer!",
