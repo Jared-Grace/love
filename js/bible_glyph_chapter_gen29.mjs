@@ -210,7 +210,7 @@ export function bible_glyph_chapter_gen29() {
           "them",
           "back",
           "to",
-          "pasture.",
+          "$person+sheep.",
         ],
       },
       {
