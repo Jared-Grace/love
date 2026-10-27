@@ -1445,7 +1445,7 @@ export function bible_glyph_chapter_deu28() {
       {
         verse_number: 47,
         words: [
-          "Because",
+          "$down_arrow",
           "you",
           "did",
           "$no_entry",
