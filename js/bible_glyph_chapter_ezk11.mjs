@@ -559,7 +559,7 @@ export function bible_glyph_chapter_ezk11() {
           "the",
           "$family",
           "and",
-          "assemble",
+          "$crowd+doing",
           "you",
           "$tray_out",
           "the",
