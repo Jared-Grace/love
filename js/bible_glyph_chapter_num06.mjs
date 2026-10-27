@@ -256,7 +256,7 @@ export function bible_glyph_chapter_num06() {
           "must",
           "shave",
           "his",
-          "head",
+          "$person_gesturing_ok",
           "on",
           "the",
           "$sun",
