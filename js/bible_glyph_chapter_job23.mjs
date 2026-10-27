@@ -19,7 +19,7 @@ export function bible_glyph_chapter_job23() {
       {
         verse_number: 2,
         words: [
-          "Even",
+          "$plus",
           "$sun",
           "my",
           "complaint",
