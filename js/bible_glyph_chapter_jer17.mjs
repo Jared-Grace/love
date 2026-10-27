@@ -199,7 +199,7 @@ export function bible_glyph_chapter_jer17() {
           "$tent+doing",
           "in",
           "the",
-          "parched",
+          "$fire+bone+describing",
           "places",
           "of",
           "the",
