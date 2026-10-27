@@ -642,7 +642,7 @@ export function bible_glyph_chapter_exo36() {
           "$skateboard",
           "for",
           "the",
-          "south",
+          "$compass+down_arrow",
           "$straight_ruler+round_pushpin",
           "of",
           "the",
