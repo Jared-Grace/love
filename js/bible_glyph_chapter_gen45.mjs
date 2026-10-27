@@ -112,7 +112,7 @@ export function bible_glyph_chapter_gen45() {
           "$toward",
           "his",
           "$brother,",
-          "Please",
+          "$pleading",
           "come",
           "near",
           "me.",
