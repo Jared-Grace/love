@@ -554,7 +554,7 @@ export function bible_glyph_chapter_ezr03() {
           "was",
           "$ear",
           "from",
-          "afar.",
+          "$satellite.",
         ],
       },
     ],
