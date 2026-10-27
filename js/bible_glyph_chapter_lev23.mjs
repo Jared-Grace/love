@@ -874,7 +874,7 @@ export function bible_glyph_chapter_lev23() {
           "$sun,",
           "I",
           "will",
-          "destroy",
+          "$wilted_flower",
           "that",
           "$person_other",
           "from",
