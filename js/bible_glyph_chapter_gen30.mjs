@@ -419,7 +419,7 @@ export function bible_glyph_chapter_gen30() {
           "you",
           "with",
           "the",
-          "mandrakes",
+          "$ginger_root+heart_red",
           "of",
           "my",
           "$son.",
