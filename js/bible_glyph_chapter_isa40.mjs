@@ -712,7 +712,7 @@ export function bible_glyph_chapter_isa40() {
       {
         verse_number: 25,
         words: [
-          "To",
+          "$toward",
           "whom",
           "will",
           "you",
