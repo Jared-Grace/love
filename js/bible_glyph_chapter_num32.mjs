@@ -456,7 +456,7 @@ export function bible_glyph_chapter_num32() {
           "destruction",
           "of",
           "all",
-          "this",
+          "$flashlight",
           "$family.",
         ],
       },
