@@ -213,7 +213,7 @@ export function bible_glyph_chapter_gen25() {
           "$son",
           "of",
           "Heth.",
-          "There",
+          "$telescope",
           "$father+map",
           "was",
           "buried",
