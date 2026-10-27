@@ -675,7 +675,7 @@ export function bible_glyph_chapter_deu15() {
           "to",
           "$eating",
           "it",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "your",
