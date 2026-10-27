@@ -182,7 +182,7 @@ export function bible_glyph_chapter_lam03() {
           "He",
           "is",
           "a",
-          "bear",
+          "$bear",
           "lying",
           "in",
           "wait,",
