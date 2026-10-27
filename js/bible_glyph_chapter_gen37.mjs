@@ -171,7 +171,7 @@ export function bible_glyph_chapter_gen37() {
           "them,",
           "$ear",
           "to",
-          "this",
+          "$flashlight",
           "dream",
           "I",
           "had.",
