@@ -839,7 +839,7 @@ export function bible_glyph_chapter_exo35() {
           "$all",
           "kind",
           "of",
-          "artistic",
+          "$thinking+thing",
           "$tools.",
         ],
       },
