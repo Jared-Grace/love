@@ -424,7 +424,7 @@ export function bible_glyph_chapter_exo07() {
           "$hand",
           "the",
           "$white_cane",
-          "that",
+          "$back+flashlight",
           "was",
           "changed",
           "into",
