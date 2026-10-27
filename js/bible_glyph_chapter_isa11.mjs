@@ -201,7 +201,7 @@ export function bible_glyph_chapter_isa11() {
           "and",
           "the",
           "young",
-          "lion",
+          "$lion",
           "and",
           "the",
           "fatling",
