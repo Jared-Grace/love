@@ -505,7 +505,7 @@ export function bible_glyph_chapter_gen28() {
           "$right_arrow",
           "the",
           "$i_am",
-          "is",
+          "$link",
           "in",
           "this",
           "$place,",
