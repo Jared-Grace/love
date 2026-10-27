@@ -303,7 +303,7 @@ export function bible_glyph_chapter_num21() {
           "a",
           "snake",
           "and",
-          "looked",
+          "$face_with_monocle",
           "at",
           "the",
           "$bronze",
