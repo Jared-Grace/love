@@ -450,7 +450,7 @@ export function bible_glyph_chapter_exo28() {
           "when",
           "folded",
           "over",
-          "double,",
+          "$page_with_curl+doing,",
           "a",
           "span",
           "long",
