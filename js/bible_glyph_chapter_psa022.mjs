@@ -346,7 +346,7 @@ export function bible_glyph_chapter_psa022() {
           "a",
           "band",
           "of",
-          "evil",
+          "$thumbs_down+doing",
           "men",
           "encircles",
           "me;",
