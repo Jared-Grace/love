@@ -856,7 +856,7 @@ export function bible_glyph_chapter_1sa15() {
           "$turn_back",
           "with",
           "you.",
-          "For",
+          "$pointing",
           "you",
           "have",
           "rejected",
