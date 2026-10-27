@@ -149,7 +149,7 @@ export function bible_glyph_chapter_pro08() {
           "$face_with_open_mouth",
           "are",
           "$ruler+thing;",
-          "none",
+          "$dotted_line_face",
           "are",
           "crooked",
           "or",
