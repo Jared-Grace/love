@@ -203,7 +203,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 7,
         words: [
           "and",
-          "tomorrow",
+          "$sun+next_track",
           "$hands_giving",
           "$fire",
           "and",
