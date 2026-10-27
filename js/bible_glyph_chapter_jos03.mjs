@@ -321,7 +321,7 @@ export function bible_glyph_chapter_jos03() {
           "He",
           "will",
           "surely",
-          "drive",
+          "$triangular_flag",
           "out",
           "before",
           "you",
