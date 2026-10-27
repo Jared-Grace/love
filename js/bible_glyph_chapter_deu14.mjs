@@ -647,7 +647,7 @@ export function bible_glyph_chapter_deu14() {
           "your",
           "$heart_on_fire",
           "and",
-          "rejoice",
+          "$beaming+doing",
           "with",
           "your",
           "$house.",
