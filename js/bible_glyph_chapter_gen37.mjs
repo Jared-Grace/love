@@ -761,7 +761,7 @@ export function bible_glyph_chapter_gen37() {
           "profit",
           "will",
           "we",
-          "gain",
+          "$money_bag+hand_receiving",
           "if",
           "we",
           "kill",
