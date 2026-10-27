@@ -983,7 +983,7 @@ export function bible_glyph_chapter_num11() {
           "$crowd+doing",
           "$toward",
           "the",
-          "camp,",
+          "$camp,",
           "along",
           "with",
           "the",
