@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_dan09() {
           "And",
           "on",
           "the",
-          "wing",
+          "$wing",
           "of",
           "the",
           "temple",
