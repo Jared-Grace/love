@@ -375,7 +375,7 @@ export function bible_glyph_chapter_jer18() {
           "$ear",
           "things",
           "like",
-          "these?",
+          "$flashlight+flashlight?",
           "Virgin",
           "$wrestling+heart_on_fire",
           "has",
