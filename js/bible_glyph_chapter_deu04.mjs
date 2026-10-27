@@ -1574,7 +1574,7 @@ export function bible_glyph_chapter_deu04() {
           "$back+flashlight",
           "$fishing_pole+proper_name",
           "$palm_down",
-          "before",
+          "$face",
           "the",
           "$son",
           "of",
