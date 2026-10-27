@@ -102,7 +102,7 @@ export function bible_glyph_chapter_gen46() {
       {
         verse_number: 4,
         words: [
-          "I",
+          "$me",
           "will",
           "go",
           "down",
