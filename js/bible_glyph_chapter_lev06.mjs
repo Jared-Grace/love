@@ -653,7 +653,7 @@ export function bible_glyph_chapter_lev06() {
           "shall",
           "be",
           "slaughtered",
-          "before",
+          "$face",
           "$i_am.",
           "It",
           "is",
