@@ -975,7 +975,7 @@ export function bible_glyph_chapter_2ki09() {
           "$microphone",
           "the",
           "$i_am.",
-          "Now",
+          "$watch",
           "then,",
           "pick",
           "him",
