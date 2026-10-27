@@ -191,7 +191,7 @@ export function bible_glyph_chapter_isa55() {
           "may",
           "be",
           "found;",
-          "call",
+          "$waving_hand",
           "on",
           "Him",
           "while",
