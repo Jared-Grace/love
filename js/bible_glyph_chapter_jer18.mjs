@@ -488,7 +488,7 @@ export function bible_glyph_chapter_jer18() {
           "$wind",
           "I",
           "will",
-          "scatter",
+          "$confetti_ball",
           "them",
           "before",
           "the",
