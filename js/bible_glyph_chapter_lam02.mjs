@@ -746,7 +746,7 @@ export function bible_glyph_chapter_lam02() {
           "of",
           "the",
           "people",
-          "cry",
+          "$loudspeaker+mouth",
           "out",
           "to",
           "the",
