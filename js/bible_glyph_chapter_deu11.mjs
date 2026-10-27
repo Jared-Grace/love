@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_deu11() {
           "are",
           "about",
           "to",
-          "cross",
+          "$bridge",
           "the",
           "$pointing_down+proper_name",
           "to",
