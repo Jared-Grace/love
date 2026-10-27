@@ -737,7 +737,7 @@ export function bible_glyph_chapter_gen46() {
           "$eye",
           "of",
           "your",
-          "face,",
+          "$face,",
           "since",
           "you",
           "are",
