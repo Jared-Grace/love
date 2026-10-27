@@ -459,7 +459,7 @@ export function bible_glyph_chapter_est04() {
           "at",
           "$flashlight",
           "$clock,",
-          "relief",
+          "$divide+arrow_both_ways",
           "and",
           "deliverance",
           "will",
