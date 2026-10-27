@@ -143,7 +143,7 @@ export function bible_glyph_chapter_dan12() {
           "$ring+locked",
           "the",
           "$closed_book",
-          "until",
+          "$finish",
           "the",
           "time",
           "of",
