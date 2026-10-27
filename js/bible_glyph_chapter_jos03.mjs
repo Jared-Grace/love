@@ -341,7 +341,7 @@ export function bible_glyph_chapter_jos03() {
         words: [
           "$exclamation,",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$covenant",
