@@ -1083,7 +1083,7 @@ export function bible_glyph_chapter_lev16() {
           "native",
           "or",
           "the",
-          "foreigner",
+          "$foreigner",
           "who",
           "resides",
           "among",
