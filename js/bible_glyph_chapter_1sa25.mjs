@@ -437,7 +437,7 @@ export function bible_glyph_chapter_1sa25() {
           "$sword",
           "too.",
           "About",
-          "four",
+          "$four",
           "hundred",
           "$man_beard",
           "$walking+pointing_up",
