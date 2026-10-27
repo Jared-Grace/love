@@ -96,7 +96,7 @@ export function bible_glyph_chapter_gen30() {
           "and",
           "$tray_out",
           "her",
-          "I",
+          "$me",
           "too",
           "can",
           "$brick",
