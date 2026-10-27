@@ -276,7 +276,7 @@ export function bible_glyph_chapter_exo01() {
           "$sprout",
           "$lemon+doing",
           "with",
-          "hard",
+          "$mechanical_arm+describing",
           "labor",
           "in",
           "brick",
