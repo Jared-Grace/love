@@ -545,7 +545,7 @@ export function bible_glyph_chapter_2ch20() {
           "are",
           "to",
           "march",
-          "down",
+          "$walking+pointing_down",
           "against",
           "them.",
           "You",
