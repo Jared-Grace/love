@@ -670,7 +670,7 @@ export function bible_glyph_chapter_gen37() {
           "him",
           "of",
           "his",
-          "robe",
+          "$dress+thread",
           "-",
           "the",
           "robe",
