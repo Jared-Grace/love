@@ -289,7 +289,7 @@ export function bible_glyph_chapter_1sa24() {
           "him,",
           "$two_hearts+proper_name",
           "$bowing+down_arrow+doing",
-          "facedown",
+          "$nose+fire",
           "to",
           "the",
           "$earth",
