@@ -118,7 +118,7 @@ export function bible_glyph_chapter_dan12() {
           "those",
           "who",
           "lead",
-          "many",
+          "$multiply",
           "to",
           "$ruler+doing",
           "like",
