@@ -542,7 +542,7 @@ export function bible_glyph_chapter_gen47() {
           "$footprints",
           "their",
           "livestock",
-          "to",
+          "$toward",
           "$i_am+plus,",
           "and",
           "he",
