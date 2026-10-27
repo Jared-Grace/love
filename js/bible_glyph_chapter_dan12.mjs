@@ -76,7 +76,7 @@ export function bible_glyph_chapter_dan12() {
         verse_number: 2,
         words: [
           "And",
-          "many",
+          "$multiply",
           "who",
           "sleep",
           "in",
