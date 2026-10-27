@@ -856,7 +856,7 @@ export function bible_glyph_chapter_exo26() {
           "$face+toward",
           "the",
           "table",
-          "on",
+          "$pointing_up",
           "the",
           "south",
           "side",
