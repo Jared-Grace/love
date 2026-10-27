@@ -880,7 +880,7 @@ export function bible_glyph_chapter_jos07() {
           "$tent",
           "with",
           "the",
-          "silver",
+          "$silver",
           "underneath.",
         ],
       },
