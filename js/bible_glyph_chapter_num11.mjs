@@ -137,7 +137,7 @@ export function bible_glyph_chapter_num11() {
           "$fish",
           "we",
           "ate",
-          "freely",
+          "$heart_orange+manner",
           "in",
           "$clamp+proper_name,",
           "along",
