@@ -417,7 +417,7 @@ export function bible_glyph_chapter_1sa16() {
           "$oil+doing",
           "him,",
           "for",
-          "he",
+          "$pointing_back",
           "is",
           "the",
           "one.",
