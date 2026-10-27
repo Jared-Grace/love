@@ -382,7 +382,7 @@ export function bible_glyph_chapter_jdg16() {
           "me",
           "up",
           "with",
-          "new",
+          "$new_button",
           "$thread+repeat",
           "that",
           "have",
