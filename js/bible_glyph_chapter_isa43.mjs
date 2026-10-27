@@ -13,7 +13,7 @@ export function bible_glyph_chapter_isa43() {
         verse_number: 1,
         words: [
           "But",
-          "now,",
+          "$watch,",
           "this",
           "is",
           "what",
