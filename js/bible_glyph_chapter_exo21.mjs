@@ -124,7 +124,7 @@ export function bible_glyph_chapter_exo21() {
         verse_number: 5,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "the",
           "$kneeling",
           "$speech",
