@@ -145,7 +145,7 @@ export function bible_glyph_chapter_deu15() {
           "$all",
           "these",
           "$scroll",
-          "I",
+          "$me",
           "am",
           "giving",
           "you",
