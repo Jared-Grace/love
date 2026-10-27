@@ -569,7 +569,7 @@ export function bible_glyph_chapter_deu12() {
           "give,",
           "or",
           "your",
-          "freewill",
+          "$heart_red+gift",
           "offerings",
           "or",
           "special",
