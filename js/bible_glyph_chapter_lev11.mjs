@@ -171,7 +171,7 @@ export function bible_glyph_chapter_lev11() {
         words: [
           "And",
           "the",
-          "pig,",
+          "$pig,",
           "though",
           "it",
           "has",
