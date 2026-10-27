@@ -433,7 +433,7 @@ export function bible_glyph_chapter_isa43() {
           "When",
           "I",
           "act,",
-          "who",
+          "$person+question",
           "can",
           "$turn_back",
           "it?",
