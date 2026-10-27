@@ -894,7 +894,7 @@ export function bible_glyph_chapter_exo23() {
           "the",
           "Red",
           "$sea",
-          "to",
+          "$finish",
           "the",
           "$sea",
           "of",
