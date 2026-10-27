@@ -267,7 +267,7 @@ export function bible_glyph_chapter_psa116() {
           "the",
           "presence",
           "of",
-          "all",
+          "$all",
           "His",
           "$family.",
         ],
