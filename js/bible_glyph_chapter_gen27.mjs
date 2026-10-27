@@ -496,7 +496,7 @@ export function bible_glyph_chapter_gen27() {
         words: [
           "$hand+foot",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "$father,",
           '"I',
