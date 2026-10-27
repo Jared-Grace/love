@@ -292,7 +292,7 @@ export function bible_glyph_chapter_exo28() {
           "remaining",
           "$six",
           "$name_tag",
-          "on",
+          "$pointing_up",
           "the",
           "other",
           "$stone,",
