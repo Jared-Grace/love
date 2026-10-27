@@ -875,7 +875,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 29,
         words: [
           "$traffic_light",
-          "these",
+          "$flashlight+flashlight",
           "men",
           "$skull",
           "as",
