@@ -704,7 +704,7 @@ export function bible_glyph_chapter_num24() {
           "but",
           "they",
           "will",
-          "perish",
+          "$wilted_flower+thing",
           "$finish.",
         ],
       },
