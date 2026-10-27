@@ -241,7 +241,7 @@ export function bible_glyph_chapter_exo27() {
           "long",
           "on",
           "one",
-          "side,",
+          "$straight_ruler+round_pushpin,",
         ],
       },
       {
