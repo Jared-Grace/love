@@ -286,7 +286,7 @@ export function bible_glyph_chapter_1ch29() {
           "thousand",
           "darics",
           "of",
-          "gold,",
+          "$gold,",
           "ten",
           "thousand",
           "talents",
