@@ -348,7 +348,7 @@ export function bible_glyph_chapter_dan01() {
           "Then",
           "$proper_name$Daniel",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "steward",
           "whom",
