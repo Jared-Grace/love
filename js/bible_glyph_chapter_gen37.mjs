@@ -991,7 +991,7 @@ export function bible_glyph_chapter_gen37() {
       {
         verse_number: 35,
         words: [
-          "All",
+          "$all",
           "his",
           "$son",
           "and",
