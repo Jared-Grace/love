@@ -482,7 +482,7 @@ export function bible_glyph_chapter_dan01() {
           "they",
           "were",
           "to",
-          "drink,",
+          "$cup_with_straw+thing,",
           "and",
           "he",
           "$hands_giving",
