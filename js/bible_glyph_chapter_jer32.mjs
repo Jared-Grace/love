@@ -765,7 +765,7 @@ export function bible_glyph_chapter_jer32() {
           "with",
           "$milk",
           "and",
-          "honey.",
+          "$honey.",
         ],
       },
       {
