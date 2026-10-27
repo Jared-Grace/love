@@ -547,7 +547,7 @@ export function bible_glyph_chapter_lev11() {
           "their",
           "carcasses",
           "must",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "his",
           "$garment,",
           "and",
