@@ -463,7 +463,7 @@ export function bible_glyph_chapter_exo23() {
           "And",
           "keep",
           "the",
-          "Feast",
+          "$party_popper",
           "of",
           "Ingathering",
           "at",
