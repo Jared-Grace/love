@@ -583,7 +583,7 @@ export function bible_glyph_chapter_num19() {
           "$man_beard",
           "who",
           "is",
-          "clean",
+          "$soap+describing",
           "is",
           "to",
           "$hand_receiving",
