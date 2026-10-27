@@ -231,7 +231,7 @@ export function bible_glyph_chapter_hab02() {
           "your",
           "creditors",
           "$eye+lightning",
-          "arise",
+          "$person+pointing_up",
           "and",
           "those",
           "who",
