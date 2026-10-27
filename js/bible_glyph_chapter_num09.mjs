@@ -68,7 +68,7 @@ export function bible_glyph_chapter_num09() {
           "fourteenth",
           "$sun",
           "of",
-          "this",
+          "$flashlight",
           "$new_moon,",
           "at",
           "twilight.",
