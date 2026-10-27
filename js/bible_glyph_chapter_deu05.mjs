@@ -665,7 +665,7 @@ export function bible_glyph_chapter_deu05() {
           "and",
           "your",
           "elders",
-          "approached",
+          "$magnet+doing",
           "me,",
         ],
       },
