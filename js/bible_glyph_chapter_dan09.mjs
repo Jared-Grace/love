@@ -558,7 +558,7 @@ export function bible_glyph_chapter_dan09() {
           "$pleading",
           "that",
           "Your",
-          "anger",
+          "$nose+fire",
           "and",
           "wrath",
           "may",
