@@ -571,7 +571,7 @@ export function bible_glyph_chapter_exo25() {
         verse_number: 24,
         words: [
           "And",
-          "overlay",
+          "$top+brown_square+doing",
           "it",
           "with",
           "pure",
