@@ -283,7 +283,7 @@ export function bible_glyph_chapter_num16() {
           "and",
           "brought",
           "you",
-          "near",
+          "$magnet+doing",
           "to",
           "Himself",
           "to",
