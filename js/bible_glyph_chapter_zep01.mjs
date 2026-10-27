@@ -146,7 +146,7 @@ export function bible_glyph_chapter_zep01() {
           "$flashlight",
           "$place",
           "every",
-          "remnant",
+          "$puzzle_piece+thing",
           "of",
           "Baal,",
           "the",
