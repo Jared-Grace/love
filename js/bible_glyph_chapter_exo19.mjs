@@ -80,7 +80,7 @@ export function bible_glyph_chapter_exo19() {
           "and",
           "the",
           "$i_am",
-          "called",
+          "$waving_hand",
           "to",
           "him",
           "$tray_out",
