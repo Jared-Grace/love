@@ -311,7 +311,7 @@ export function bible_glyph_chapter_gen08() {
           "freshly",
           "plucked",
           "olive",
-          "leaf.",
+          "$leaf.",
           "So",
           "Noah",
           "$lightbulb",
