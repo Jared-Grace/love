@@ -784,7 +784,7 @@ export function bible_glyph_chapter_num09() {
           "according",
           "to",
           "the",
-          "command",
+          "$face_with_open_mouth",
           "of",
           "$i_am",
           "by",
