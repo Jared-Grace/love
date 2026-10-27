@@ -781,7 +781,7 @@ export function bible_glyph_chapter_exo03() {
           "$no_entry",
           "$walking",
           "away",
-          "empty-handed.",
+          "$hand+zero+manner.",
         ],
       },
       {
