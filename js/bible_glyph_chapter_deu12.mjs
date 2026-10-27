@@ -402,7 +402,7 @@ export function bible_glyph_chapter_deu12() {
           "within",
           "your",
           "$gate$s,",
-          "since",
+          "$pointing",
           "he",
           "has",
           "no",
