@@ -484,7 +484,7 @@ export function bible_glyph_chapter_gen48() {
           "all",
           "my",
           "life",
-          "to",
+          "$finish",
           "this",
           "$sun,",
         ],
