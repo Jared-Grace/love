@@ -258,7 +258,7 @@ export function bible_glyph_chapter_hos11() {
           "$turn_back",
           "$collision",
           "$fruit.",
-          "For",
+          "$pointing",
           "I",
           "am",
           "$heart_on_fire",
