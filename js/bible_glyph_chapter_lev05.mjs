@@ -133,7 +133,7 @@ export function bible_glyph_chapter_lev05() {
           "rashly",
           "pronounce",
           "an",
-          "oath,",
+          "$raised_back_of_hand,",
           "even",
           "if",
           "he",
