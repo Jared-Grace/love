@@ -265,7 +265,7 @@ export function bible_glyph_chapter_job38() {
           "$brown_square+water",
           "under",
           "a",
-          "seal;",
+          "$ring+locked+thing;",
           "its",
           "hills",
           "stand",
