@@ -1412,7 +1412,7 @@ export function bible_glyph_chapter_neh09() {
           "view",
           "of",
           "all",
-          "this,",
+          "$flashlight,",
           "we",
           "are",
           "making",
