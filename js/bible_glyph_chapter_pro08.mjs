@@ -497,7 +497,7 @@ export function bible_glyph_chapter_pro08() {
           "$face",
           "of",
           "the",
-          "deep,",
+          "$sea+down_arrow,",
         ],
       },
       {
