@@ -1204,7 +1204,7 @@ export function bible_glyph_chapter_1ki08() {
           "from",
           "their",
           "$bow",
-          "because",
+          "$pointing",
           "You",
           "have",
           "afflicted",
