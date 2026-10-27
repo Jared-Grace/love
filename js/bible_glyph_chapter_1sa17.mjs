@@ -954,7 +954,7 @@ export function bible_glyph_chapter_1sa17() {
           "$no_entry",
           "$person",
           "$heart_organ",
-          "fail",
+          "$person+pointing_down",
           "on",
           "account",
           "of",
