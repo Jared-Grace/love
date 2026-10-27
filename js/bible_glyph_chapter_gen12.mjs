@@ -342,7 +342,7 @@ export function bible_glyph_chapter_gen12() {
           "his",
           "$woman",
           "$military_medal+proper_name,",
-          "Look,",
+          "$exclamation,",
           "I",
           "$lightbulb",
           "that",
