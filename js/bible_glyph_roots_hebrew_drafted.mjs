@@ -115,6 +115,7 @@ export function bible_glyph_roots_hebrew_drafted() {
   "NAMES DRAWN BY WHAT THEY MEAN TURNED DOWN: sprouts for Shilhim, because Strong's gives javelins first, so it is the spear with more; the plain dark for Hachaliah, because Strong's says darkness of Jah, so it holds I AM; a key of their own for Dodai, Remeth, Zalmon, Gibbar, Jether, Enaim and Anem, because each meaning already lives under a key; the fortune picture for Azgad, because Strong's says a stern troop, so it is the raised fist and the crowd. The first picture tried for Amam, Dor, Bozez, Hirah, Jeruel, Lebanon, Mehida, Nekoda, Ain, Aziza, Japheth and Mispar, because another root already wore it, so each took the picture it has now; the abacus stays with Sophereth, the woman scribe, and Mispar is the number pad.";
   "NAMES WHOSE ROOT NOW HAS A PICTURE, 172 rows in one pass checked against the table and against itself. They waited because the root had no picture, and the root has one now. A one-root name takes the root's picture with +proper_name; a gentilic takes +person, so the Ramite, the Horonite and the Izrahite stand by their names; a name that holds God or Jah takes no +proper_name. A name built on a name drawn today takes that name's picture: Aphekah under Aphek, Hammoth-dor with Dor's person, Hazar-enan with the spring, Jotbathah under Jotbah, Baal-hermon with Hermon and Helkath-hazzurim with the field. Where the meaning is a word already drawn, the name sits under that word's key: Nochah under Noah, Merajoth under rebellion, Hashabneiah under Hashabiah, Zerahiah under Izrahiah, Maadiah with Adaiah, and Jeuel with Jeiel. Where the root's picture is not the meaning, the meaning is drawn under a key of its own: Jaziz a star rising, Jaanai an ear and a reply, Ater a hand on a crutch, Minnith the abacus, Ramoth the mountain heights and En-dor the spring and the house.";
   "NAMES WHOSE ROOT NOW HAS A PICTURE TURNED DOWN: the root's picture for Jaziz (moving creatures), Jaanai (the ostrich), Ater (closing up), Minnith (a harp string), Ramoth (coral) and En-dor (a generation), because none of these is what the name means. Each of these because another root already wears it: earth+rock for Geshan (Kishion) and brick+up_arrow for Tulon (Binnui), so both still wait; gem_stone alone for Anak (Tarshish), so it is the gems on a chain; crutch alone for Ater (Eshean). Still waiting, because the root's picture is not what the name means and no other picture was settled: Chislon, Chesalon and Chesulloth (the fool's picture for hope, fertile and fattened), Sirion, Shammai, Shobek and the Aramaic 3879. Gath and Lael wait on the human's word, Hur and Hepher because Strong's offers two roots, Dizahab because Strong's says as if, and Tahash because Strong's says probably.";
+  "WAITS WHOSE REASON HAD EXPIRED, 10 rows, 2026-10-27, most used first. The Philistine waited for Pelesheth, the Anakite for Anak and the Maachathite for Maacah; all three places are drawn now, so each clan is its place with the person. Gath waited on the human's word, but the only question was whether it may be drawn from the winepress, and Strong's says it is the same word, so Gath is the winepress with +proper_name and the Gittite is Gath with the person. Shiloh is from the same root as the Shiloh of Genesis forty nine, so it is rest with the place. Debir waited because Strong's points one verse at Lo-debar, which is a spelling note about Joshua thirteen and not a doubt about the city, so Debir is the inner sanctuary with +proper_name. Adonijah and Nathan waited because their bare pictures would read as a common phrase - the crown and the endless sign is Lord GOD - so both carry +proper_name, which no phrase does, as Jonathan already does though his name holds Jah. Al-tashheth is the psalm heading do not destroy, the two words it is, with +proper_name because it names a tune. Rejected: Gath as the grapes and the foot alone, which is yeqeb the winepress; Nathan as the gift, which is Mattan; Adonijah with no tag, which is the phrase. Still waiting, unchanged: Gath-hepher and Gath-rimmon, Gilead, Bashan, the Amorite, Phinehas, Michal, Hur, Hepher and every name Strong's calls foreign, uncertain, probable, perhaps or apparent.";
   let rows = [
     ["11", "abad", "wilted_flower+place", "Abaddon, destruction"],
     ["1413", "gadad", "crowd+clamp+doing", "crowd together"],
@@ -10652,6 +10653,26 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["8576", "nacham", "hug+proper_name", "Tanchumeth"],
     ["8603", "taphel", "brick+droplet+proper_name", "Tophel, quagmire"],
     ["8612", "topheth", "tambourine+thumbs_down+proper_name", "Topheth"],
+    ["6430", "palash", "dust+cyclone+proper_name+person", "Philistine"],
+    [
+      "1661",
+      "gath_press",
+      "grapes+foot+amphora+proper_name",
+      "Gath, winepress",
+    ],
+    ["1663", "gath_press", "grapes+foot+amphora+proper_name+person", "Gittite"],
+    ["7887", "shalah_ease", "couch_and_lamp+place+proper_name", "Shiloh"],
+    ["1688", "debir", "house+sparkle+place+proper_name", "Debir"],
+    ["6062", "anaq", "gem_stone+link+proper_name+person", "Anakite"],
+    ["4602", "maak", "egg+two+fist+proper_name+person", "Maachathite"],
+    ["138", "adon", "crown+i_am+proper_name", "Adonijah, my lord is Jah"],
+    ["5416", "nathan", "hands_giving+proper_name", "Nathan, given"],
+    [
+      "516",
+      "al",
+      "no_entry+exclamation+collision+proper_name",
+      "Al-tashheth, do not destroy",
+    ],
   ];
   let drafted = [];
   for (let row of rows) {
