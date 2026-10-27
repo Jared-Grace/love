@@ -277,7 +277,7 @@ export function bible_glyph_chapter_isa64() {
           "our",
           "$cyclone",
           "$clock+all.",
-          "Oh,",
+          "$exclamation,",
           "look",
           "upon",
           "us,",
