@@ -1077,7 +1077,7 @@ export function bible_glyph_chapter_jdg16() {
           "me.",
           "$might+up_arrow",
           "me",
-          "just",
+          "$check+exclamation",
           "once",
           "more,",
           "O",
