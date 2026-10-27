@@ -182,7 +182,7 @@ export function bible_glyph_chapter_1ki21() {
           "$mouth",
           "to",
           "him,",
-          "Why",
+          "$flashlight+question",
           "is",
           "your",
           "$wind",
