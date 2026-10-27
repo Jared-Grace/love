@@ -150,7 +150,7 @@ export function bible_glyph_chapter_mic03() {
           "lead",
           "My",
           "$family",
-          "astray,",
+          "$shaking_face,",
           "who",
           "proclaim",
           "$peace",
