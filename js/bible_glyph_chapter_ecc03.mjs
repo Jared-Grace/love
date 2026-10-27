@@ -527,7 +527,7 @@ export function bible_glyph_chapter_ecc03() {
           "all",
           "$turn_back",
           "$toward",
-          "dust.",
+          "$dust.",
         ],
       },
       {
