@@ -315,7 +315,7 @@ export function bible_glyph_chapter_1ki22() {
           "on",
           "his",
           "throne,",
-          "dressed",
+          "$garment+doing",
           "in",
           "royal",
           "attire",
