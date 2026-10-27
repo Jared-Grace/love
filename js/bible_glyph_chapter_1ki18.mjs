@@ -1489,7 +1489,7 @@ export function bible_glyph_chapter_1ki18() {
           "and",
           "a",
           "heavy",
-          "rain",
+          "$rain+water_wave",
           "began",
           "to",
           "fall.",
