@@ -196,7 +196,7 @@ export function bible_glyph_chapter_psa084() {
           "my",
           "$hands_praying+thing;",
           "give",
-          "ear,",
+          "$ear+doing,",
           "O",
           "$heart_on_fire",
           "of",
