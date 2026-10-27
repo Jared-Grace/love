@@ -226,7 +226,7 @@ export function bible_glyph_chapter_num11() {
           "$hammer+doing",
           "it",
           "into",
-          "cakes.",
+          "$flatbread+fire.",
           "It",
           "tasted",
           "like",
