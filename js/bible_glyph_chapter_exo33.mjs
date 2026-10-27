@@ -396,7 +396,7 @@ export function bible_glyph_chapter_exo33() {
           "$proper_name$Nun",
           "would",
           "$no_entry",
-          "leave",
+          "$walking+away+doing",
           "the",
           "tent.",
         ],
