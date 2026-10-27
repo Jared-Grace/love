@@ -193,7 +193,7 @@ export function bible_glyph_chapter_deu11() {
           "when",
           "the",
           "$earth",
-          "opened",
+          "$face_with_open_mouth+doing",
           "its",
           "mouth",
           "and",
