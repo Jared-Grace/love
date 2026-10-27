@@ -107,7 +107,7 @@ export function bible_glyph_chapter_pro16() {
           "in",
           "$heart_organ",
           "is",
-          "detestable",
+          "$vomiting",
           "to",
           "the",
           "$i_am;",
