@@ -422,7 +422,7 @@ export function bible_glyph_chapter_gen37() {
           "off",
           "from",
           "the",
-          "Valley",
+          "$valley",
           "of",
           "$proper_name$Hebron.",
           "And",
