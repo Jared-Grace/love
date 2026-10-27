@@ -346,7 +346,7 @@ export function bible_glyph_chapter_gen45() {
           "$repeat",
           "$year",
           "of",
-          "famine.",
+          "$famine.",
           "Otherwise,",
           "you",
           "and",
