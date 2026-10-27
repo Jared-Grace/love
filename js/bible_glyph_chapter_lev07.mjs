@@ -490,7 +490,7 @@ export function bible_glyph_chapter_lev07() {
           "shall",
           "$lifting",
           "his",
-          "iniquity.",
+          "$cyclone.",
         ],
       },
       {
