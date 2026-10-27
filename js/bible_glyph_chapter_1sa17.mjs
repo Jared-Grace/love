@@ -469,7 +469,7 @@ export function bible_glyph_chapter_1sa17() {
           "grain",
           "and",
           "these",
-          "ten",
+          "$ten",
           "loaves",
           "of",
           "$bread",
