@@ -444,7 +444,7 @@ export function bible_glyph_chapter_1ki22() {
           "let",
           "your",
           "$speech",
-          "be",
+          "$link",
           "like",
           "their",
           "$speech,",
