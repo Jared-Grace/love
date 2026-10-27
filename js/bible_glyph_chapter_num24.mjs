@@ -392,7 +392,7 @@ export function bible_glyph_chapter_num24() {
           "my",
           "own",
           "$heart_organ.",
-          "Whatever",
+          "$back+flashlight",
           "$i_am",
           "$mouth,",
           "that",
