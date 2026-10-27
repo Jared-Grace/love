@@ -519,7 +519,7 @@ export function bible_glyph_chapter_gen14() {
         verse_number: 18,
         words: [
           "Then",
-          "Melchizedek",
+          "$king+ruler+proper_name",
           "$king",
           "of",
           "$proper_name$Salem",
