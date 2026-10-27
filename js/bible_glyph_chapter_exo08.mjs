@@ -856,7 +856,7 @@ export function bible_glyph_chapter_exo08() {
           "sacrifices",
           "that",
           "are",
-          "detestable",
+          "$vomiting",
           "$eyes",
           "the",
           "$clamp+proper_name,",
