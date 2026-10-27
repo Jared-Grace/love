@@ -169,7 +169,7 @@ export function bible_glyph_chapter_isa02() {
           "they",
           "$learner+doing",
           "for",
-          "war",
+          "$crossed_swords",
           "$repeat.",
         ],
       },
