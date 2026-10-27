@@ -48,7 +48,7 @@ export function bible_glyph_chapter_psa110() {
           "$hand_sending",
           "Your",
           "mighty",
-          "scepter",
+          "$white_cane",
           "from",
           "$proper_name$Zion:",
           "Rule",
