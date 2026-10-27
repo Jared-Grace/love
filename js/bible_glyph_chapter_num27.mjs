@@ -99,7 +99,7 @@ export function bible_glyph_chapter_num27() {
           "he",
           "was",
           "$no_entry",
-          "among",
+          "$radio_button",
           "the",
           "followers",
           "of",
