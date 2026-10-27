@@ -458,7 +458,7 @@ export function bible_glyph_chapter_exo05() {
           "$footprints",
           "and",
           "appealed",
-          "to",
+          "$toward",
           "$house+proper_name,",
           "$speech,",
           "Why",
