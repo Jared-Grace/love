@@ -703,7 +703,7 @@ export function bible_glyph_chapter_deu01() {
           "$one",
           "from",
           "each",
-          "tribe.",
+          "$wood.",
         ],
       },
       {
