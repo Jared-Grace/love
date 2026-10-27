@@ -171,7 +171,7 @@ export function bible_glyph_chapter_num15() {
           "$spoon+cyclone",
           "with",
           "a",
-          "third",
+          "$third_place",
           "of",
           "a",
           "hin",
