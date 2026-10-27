@@ -81,7 +81,7 @@ export function bible_glyph_chapter_zep01() {
           "away",
           "$person",
           "and",
-          "beast;",
+          "$paw_prints;",
           "I",
           "will",
           "sweep",
