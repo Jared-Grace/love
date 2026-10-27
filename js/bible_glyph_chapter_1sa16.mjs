@@ -335,7 +335,7 @@ export function bible_glyph_chapter_1sa16() {
           "$i_am",
           "has",
           "$no_entry",
-          "chosen",
+          "$check_box",
           "any",
           "of",
           "these.",
