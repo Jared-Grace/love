@@ -274,7 +274,7 @@ export function bible_glyph_chapter_jer07() {
           "We",
           "are",
           "delivered,",
-          "so",
+          "$right_arrow+toward",
           "we",
           "can",
           "$hammer+doing",
