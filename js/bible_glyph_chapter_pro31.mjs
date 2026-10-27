@@ -513,7 +513,7 @@ export function bible_glyph_chapter_pro31() {
           "She",
           "opens",
           "her",
-          "mouth",
+          "$face_with_open_mouth",
           "with",
           "$wisdom,",
           "and",
