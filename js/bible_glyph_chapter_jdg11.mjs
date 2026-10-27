@@ -547,7 +547,7 @@ export function bible_glyph_chapter_jdg11() {
           "he",
           "would",
           "$no_entry",
-          "consent.",
+          "$heart_red+check+doing.",
           "So",
           "$wrestling+heart_on_fire",
           "$person+house",
