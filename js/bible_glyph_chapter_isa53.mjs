@@ -302,7 +302,7 @@ export function bible_glyph_chapter_isa53() {
           "had",
           "$hammer+doing",
           "$no_entry",
-          "violence,",
+          "$boxing_glove,",
           "$no_entry",
           "was",
           "any",
