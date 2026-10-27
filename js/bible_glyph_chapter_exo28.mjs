@@ -497,7 +497,7 @@ export function bible_glyph_chapter_exo28() {
           "in",
           "the",
           "second",
-          "row",
+          "$straight_ruler+repeat",
           "a",
           "turquoise,",
           "a",
