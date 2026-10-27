@@ -341,7 +341,7 @@ export function bible_glyph_chapter_deu34() {
           "signs",
           "and",
           "wonders",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "sent",
