@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_deu04() {
           "$tree",
           "and",
           "$stone,",
-          "which",
+          "$back+flashlight",
           "can",
           "$no_entry",
           "$eye",
