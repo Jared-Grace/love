@@ -618,7 +618,7 @@ export function bible_glyph_chapter_ezk37() {
           "$tree",
           "of",
           "$i_am+plus,",
-          "which",
+          "$back+flashlight",
           "is",
           "in",
           "the",
