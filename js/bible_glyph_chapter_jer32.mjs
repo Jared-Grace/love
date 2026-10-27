@@ -65,7 +65,7 @@ export function bible_glyph_chapter_jer32() {
           "the",
           "$megaphone",
           "was",
-          "imprisoned",
+          "$pause_button+no_entry+doing",
           "in",
           "the",
           "courtyard",
