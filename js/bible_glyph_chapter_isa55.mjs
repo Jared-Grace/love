@@ -391,7 +391,7 @@ export function bible_glyph_chapter_isa55() {
           "the",
           "$field",
           "will",
-          "clap",
+          "$clapping_hands+party_popper+doing",
           "their",
           "hands.",
         ],
