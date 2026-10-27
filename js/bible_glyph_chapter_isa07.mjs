@@ -319,7 +319,7 @@ export function bible_glyph_chapter_isa07() {
       {
         verse_number: 10,
         words: [
-          "Again",
+          "$plus+doing",
           "the",
           "$i_am",
           "$mouth",
