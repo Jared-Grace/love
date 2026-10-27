@@ -234,7 +234,7 @@ export function bible_glyph_chapter_lam02() {
           "tabernacle",
           "like",
           "a",
-          "garden",
+          "$garden",
           "booth;",
           "He",
           "has",
