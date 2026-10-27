@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_deu04() {
           "and",
           "can",
           "$no_entry",
-          "smell.",
+          "$nose+doing.",
         ],
       },
       {
