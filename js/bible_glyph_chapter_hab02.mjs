@@ -555,7 +555,7 @@ export function bible_glyph_chapter_hab02() {
           "a",
           "craftsman",
           "should",
-          "carve",
+          "$rock+axe+doing",
           "it",
           "-",
           "or",
