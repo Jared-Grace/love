@@ -428,7 +428,7 @@ export function bible_glyph_chapter_dan12() {
           "$walking",
           "until",
           "the",
-          "end.",
+          "$stop_sign.",
           "You",
           "will",
           "rest,",
