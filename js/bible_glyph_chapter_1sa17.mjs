@@ -320,7 +320,7 @@ export function bible_glyph_chapter_1sa17() {
           "the",
           "$wrestling+heart_on_fire",
           "were",
-          "dismayed",
+          "$anxious_face_with_sweat",
           "and",
           "greatly",
           "afraid.",
