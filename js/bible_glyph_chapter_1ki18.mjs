@@ -165,7 +165,7 @@ export function bible_glyph_chapter_1ki18() {
           "to",
           "destroy",
           "any",
-          "livestock.",
+          "$paw_prints.",
         ],
       },
       {
