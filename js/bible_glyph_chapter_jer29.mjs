@@ -448,7 +448,7 @@ export function bible_glyph_chapter_jer29() {
           "have",
           "banished",
           "you,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
           "I",
