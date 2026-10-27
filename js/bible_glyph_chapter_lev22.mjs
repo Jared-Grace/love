@@ -920,7 +920,7 @@ export function bible_glyph_chapter_lev22() {
           "You",
           "are",
           "to",
-          "keep",
+          "$guard",
           "My",
           "$scroll",
           "and",
