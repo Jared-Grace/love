@@ -32,7 +32,7 @@ export function bible_glyph_chapter_isa56() {
           "salvation",
           "is",
           "$footprints",
-          "soon,",
+          "$magnet,",
           "and",
           "My",
           "$ruler+thing",
