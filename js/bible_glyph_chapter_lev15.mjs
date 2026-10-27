@@ -863,7 +863,7 @@ export function bible_glyph_chapter_lev15() {
           "discharge,",
           "she",
           "must",
-          "count",
+          "$abacus",
           "off",
           "seven",
           "$sun,",
