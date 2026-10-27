@@ -475,7 +475,7 @@ export function bible_glyph_chapter_deu08() {
           "the",
           "$rock",
           "of",
-          "flint.",
+          "$rock+lightning.",
         ],
       },
       {
