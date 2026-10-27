@@ -240,7 +240,7 @@ export function bible_glyph_chapter_job28() {
         verse_number: 13,
         words: [
           "$no_entry",
-          "man",
+          "$man_beard",
           "can",
           "$lightbulb",
           "its",
