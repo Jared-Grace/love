@@ -361,7 +361,7 @@ export function bible_glyph_chapter_isa02() {
       {
         verse_number: 12,
         words: [
-          "For",
+          "$pointing",
           "the",
           "$sun",
           "of",
