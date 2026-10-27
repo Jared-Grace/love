@@ -939,7 +939,7 @@ export function bible_glyph_chapter_2ch20() {
           "$sun",
           "gathering",
           "the",
-          "plunder",
+          "$plunder",
           "because",
           "there",
           "was",
