@@ -134,7 +134,7 @@ export function bible_glyph_chapter_lev24() {
           "row,",
           "on",
           "the",
-          "table",
+          "$hand_sending+thing",
           "of",
           "pure",
           "gold",
