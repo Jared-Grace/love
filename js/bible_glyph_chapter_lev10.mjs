@@ -256,7 +256,7 @@ export function bible_glyph_chapter_lev10() {
           "$footprints",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "$no_entry",
           "$skull+doing.",
           "This",
