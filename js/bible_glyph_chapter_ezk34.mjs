@@ -528,7 +528,7 @@ export function bible_glyph_chapter_ezk34() {
           "and",
           "strengthen",
           "the",
-          "weak;",
+          "$thermometer_face+doing;",
           "but",
           "the",
           "sleek",
