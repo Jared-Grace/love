@@ -212,7 +212,7 @@ export function bible_glyph_chapter_exo05() {
           "$no_entry",
           "$plus+doing",
           "$hands_giving",
-          "straw",
+          "$wheat+scissors",
           "to",
           "the",
           "$family",
