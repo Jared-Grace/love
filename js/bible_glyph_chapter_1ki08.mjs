@@ -1796,7 +1796,7 @@ export function bible_glyph_chapter_1ki08() {
           "$family",
           "and",
           "Your",
-          "inheritance;",
+          "$inheritance;",
           "You",
           "brought",
           "them",
