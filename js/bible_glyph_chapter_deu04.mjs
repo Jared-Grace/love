@@ -472,7 +472,7 @@ export function bible_glyph_chapter_deu04() {
           "you",
           "His",
           "$covenant,",
-          "which",
+          "$back+flashlight",
           "He",
           "commanded",
           "you",
