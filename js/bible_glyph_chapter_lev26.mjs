@@ -216,7 +216,7 @@ export function bible_glyph_chapter_lev26() {
           "and",
           "they",
           "will",
-          "fall",
+          "$person+pointing_down",
           "before",
           "you",
           "by",
