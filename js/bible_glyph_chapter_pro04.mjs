@@ -177,7 +177,7 @@ export function bible_glyph_chapter_pro04() {
           "grace",
           "on",
           "your",
-          "head;",
+          "$person_gesturing_ok;",
           "she",
           "will",
           "present",
