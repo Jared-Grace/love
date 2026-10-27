@@ -653,7 +653,7 @@ export function bible_glyph_chapter_jer31() {
           "disgrace",
           "of",
           "my",
-          "youth.",
+          "$child+flexed_biceps+thing.",
         ],
       },
       {
