@@ -551,7 +551,7 @@ export function bible_glyph_chapter_gen22() {
           "through",
           "your",
           "offspring",
-          "all",
+          "$all",
           "$map",
           "of",
           "the",
