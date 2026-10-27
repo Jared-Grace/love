@@ -436,7 +436,7 @@ export function bible_glyph_chapter_gen05() {
         verse_number: 21,
         words: [
           "When",
-          "Enoch",
+          "$gift+heart_on_fire+proper_name",
           "had",
           "$sprout+doing",
           "sixty",
