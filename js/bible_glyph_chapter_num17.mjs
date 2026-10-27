@@ -236,7 +236,7 @@ export function bible_glyph_chapter_num17() {
           "put",
           "forth",
           "$cherry_blossom+thing,",
-          "blossomed,",
+          "$blossom+doing,",
           "and",
           "produced",
           "almonds.",
