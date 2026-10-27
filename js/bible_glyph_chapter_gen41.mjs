@@ -643,7 +643,7 @@ export function bible_glyph_chapter_gen41() {
           "grain",
           "$whale",
           "the",
-          "seven",
+          "$seven",
           "$thumbs_up",
           "ones.",
           "I",
