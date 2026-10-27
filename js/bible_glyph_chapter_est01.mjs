@@ -343,7 +343,7 @@ export function bible_glyph_chapter_est01() {
           "and",
           "officials,",
           "$pointing",
-          "she",
+          "$pointing_back",
           "was",
           "$thumbs_up",
           "to",
