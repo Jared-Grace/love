@@ -322,7 +322,7 @@ export function bible_glyph_chapter_amo05() {
           "you",
           "will",
           "$no_entry",
-          "drink",
+          "$cup_with_straw",
           "the",
           "$wine",
           "from",
