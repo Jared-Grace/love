@@ -367,7 +367,7 @@ export function bible_glyph_chapter_lev05() {
           "$white_circle+incense",
           "on",
           "it,",
-          "because",
+          "$pointing",
           "it",
           "is",
           "$bow.",
