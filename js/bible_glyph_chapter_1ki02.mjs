@@ -1153,7 +1153,7 @@ export function bible_glyph_chapter_1ki02() {
           "he",
           "struck",
           "down",
-          "two",
+          "$two",
           "men",
           "more",
           "$ruler",
