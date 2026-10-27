@@ -46,7 +46,7 @@ export function bible_glyph_chapter_zec08() {
           "for",
           "$proper_name$Zion",
           "with",
-          "great",
+          "$top",
           "$face_steam;",
           "with",
           "great",
