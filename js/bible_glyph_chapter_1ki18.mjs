@@ -374,7 +374,7 @@ export function bible_glyph_chapter_1ki18() {
           "you,",
           "he",
           "will",
-          "kill",
+          "$fist+skull",
           "me.",
           "But",
           "I,",
