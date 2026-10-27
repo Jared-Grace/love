@@ -19,7 +19,7 @@ export function bible_glyph_chapter_2sa12() {
           "$i_am",
           "$hand_sending",
           "$proper_name$Nathan",
-          "to",
+          "$toward",
           "$two_hearts+proper_name.",
           "When",
           "he",
