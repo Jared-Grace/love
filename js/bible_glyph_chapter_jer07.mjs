@@ -101,7 +101,7 @@ export function bible_glyph_chapter_jer07() {
           "$no_entry",
           "$anchor+doing",
           "in",
-          "deceptive",
+          "$lying_face",
           "$speech,",
           "$speech,",
           "The",
