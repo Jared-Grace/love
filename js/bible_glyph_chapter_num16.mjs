@@ -560,7 +560,7 @@ export function bible_glyph_chapter_num16() {
           "censers",
           "in",
           "all.",
-          "You",
+          "$you",
           "and",
           "$proper_name$Aaron,",
           "each",
