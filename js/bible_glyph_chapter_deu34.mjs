@@ -213,7 +213,7 @@ export function bible_glyph_chapter_deu34() {
           "a",
           "$input_numbers+all",
           "and",
-          "twenty",
+          "$two+zero",
           "years",
           "old",
           "when",
