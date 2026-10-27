@@ -432,7 +432,7 @@ export function bible_glyph_chapter_lev24() {
           "assembly",
           "must",
           "surely",
-          "stone",
+          "$rock+right_arrow+doing",
           "him.",
           "Whether",
           "he",
