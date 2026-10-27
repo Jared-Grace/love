@@ -277,7 +277,7 @@ export function bible_glyph_chapter_2ch20() {
           "will",
           "$person+round_pushpin",
           "before",
-          "this",
+          "$flashlight",
           "$house",
           "and",
           "before",
