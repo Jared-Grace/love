@@ -292,7 +292,7 @@ export function bible_glyph_chapter_job28() {
           "$no_entry",
           "can",
           "its",
-          "price",
+          "$receipt+coin",
           "be",
           "weighed",
           "out",
