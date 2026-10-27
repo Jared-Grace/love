@@ -408,7 +408,7 @@ export function bible_glyph_chapter_isa09() {
           "did",
           "$no_entry",
           "$turn_back",
-          "to",
+          "$finish",
           "Him",
           "who",
           "struck",
