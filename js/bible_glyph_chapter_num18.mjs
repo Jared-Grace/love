@@ -637,7 +637,7 @@ export function bible_glyph_chapter_num18() {
           "the",
           "$altar",
           "and",
-          "burn",
+          "$incense+doing",
           "their",
           "$bacon",
           "as",
