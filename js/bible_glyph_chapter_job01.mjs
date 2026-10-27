@@ -427,7 +427,7 @@ export function bible_glyph_chapter_job01() {
           "donkeys",
           "were",
           "$person+sheep",
-          "nearby,",
+          "$pointing_up,",
         ],
       },
       {
