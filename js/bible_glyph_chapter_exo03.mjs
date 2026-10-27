@@ -113,7 +113,7 @@ export function bible_glyph_chapter_exo03() {
           "the",
           "$i_am",
           "$eye",
-          "that",
+          "$pointing",
           "he",
           "had",
           "gone",
