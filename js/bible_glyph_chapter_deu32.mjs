@@ -481,7 +481,7 @@ export function bible_glyph_chapter_deu32() {
           "$father",
           "did",
           "$no_entry",
-          "fear.",
+          "$tornado+fearful_face+doing.",
         ],
       },
       {
