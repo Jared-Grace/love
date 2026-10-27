@@ -77,7 +77,7 @@ export function bible_glyph_chapter_hos14() {
           "we",
           "ride",
           "$pointing_up",
-          "horses.",
+          "$horse.",
           "We",
           "will",
           "$no_entry",
