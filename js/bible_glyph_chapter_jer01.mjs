@@ -394,7 +394,7 @@ export function bible_glyph_chapter_jer01() {
           "the",
           "$compass+up_arrow",
           "on",
-          "all",
+          "$all",
           "who",
           "live",
           "in",
