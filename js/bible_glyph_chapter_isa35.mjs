@@ -148,7 +148,7 @@ export function bible_glyph_chapter_isa35() {
       {
         verse_number: 6,
         words: [
-          "Then",
+          "$telescope+clock",
           "the",
           "lame",
           "will",
