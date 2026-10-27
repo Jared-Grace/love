@@ -799,7 +799,7 @@ export function bible_glyph_chapter_num18() {
         verse_number: 22,
         words: [
           "$no_entry",
-          "longer",
+          "$repeat",
           "may",
           "the",
           "$son",
