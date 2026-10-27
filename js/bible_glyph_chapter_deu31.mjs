@@ -178,7 +178,7 @@ export function bible_glyph_chapter_deu31() {
           "$fearful_face+shaking_face+doing",
           "of",
           "them,",
-          "for",
+          "$pointing",
           "$i_am",
           "your",
           "$heart_on_fire",
