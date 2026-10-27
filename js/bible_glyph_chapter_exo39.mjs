@@ -973,7 +973,7 @@ export function bible_glyph_chapter_exo39() {
           "$altar,",
           "the",
           "anointing",
-          "oil,",
+          "$lotion_bottle,",
           "the",
           "fragrant",
           "$incense,",
