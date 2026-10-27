@@ -703,7 +703,7 @@ export function bible_glyph_chapter_deu09() {
           "$nose+fire",
           "and",
           "$angry_face",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "had",
           "directed",
