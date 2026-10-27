@@ -179,7 +179,7 @@ export function bible_glyph_chapter_exo06() {
           "and",
           "I",
           "will",
-          "deliver",
+          "$hand+rescue",
           "you",
           "from",
           "their",
