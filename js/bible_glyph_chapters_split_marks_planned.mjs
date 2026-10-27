@@ -1,4 +1,3 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_roots_split_families } from "./bible_glyph_roots_split_families.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
@@ -12,6 +11,7 @@ import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { bible_glyph_gloss_english_absent_is } from "./bible_glyph_gloss_english_absent_is.mjs";
 import { not_equal } from "./not_equal.mjs";
+import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function bible_glyph_chapters_split_marks_planned() {
   arguments_assert(arguments, 0);
