@@ -234,7 +234,7 @@ export function bible_glyph_chapter_num15() {
       {
         verse_number: 9,
         words: [
-          "present",
+          "$magnet+doing",
           "with",
           "the",
           "$son",
