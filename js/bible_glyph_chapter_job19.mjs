@@ -284,7 +284,7 @@ export function bible_glyph_chapter_job19() {
         verse_number: 16,
         words: [
           "I",
-          "call",
+          "$waving_hand",
           "for",
           "my",
           "$kneeling,",
