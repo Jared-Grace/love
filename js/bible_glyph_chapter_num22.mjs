@@ -1153,7 +1153,7 @@ export function bible_glyph_chapter_num22() {
           "So",
           "$proper_name$Balaam",
           "$walking",
-          "with",
+          "$linked_paperclips",
           "the",
           "princes",
           "of",
