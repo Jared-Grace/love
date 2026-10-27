@@ -1790,7 +1790,7 @@ export function bible_glyph_chapter_deu28() {
           "$no_entry",
           "$test_tube",
           "to",
-          "set",
+          "$hand+round_pushpin+doing",
           "the",
           "sole",
           "of",
