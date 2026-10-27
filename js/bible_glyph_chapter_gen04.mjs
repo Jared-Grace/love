@@ -625,7 +625,7 @@ export function bible_glyph_chapter_gen04() {
           "$all",
           "$hammer_and_wrench+doer",
           "of",
-          "bronze",
+          "$bronze",
           "and",
           "iron.",
           "And",
