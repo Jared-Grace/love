@@ -209,7 +209,7 @@ export function bible_glyph_chapter_gen43() {
           "he",
           "would",
           "$speech,",
-          "Bring",
+          "$walking+pointing_down",
           "your",
           "$brother",
           "here?",
