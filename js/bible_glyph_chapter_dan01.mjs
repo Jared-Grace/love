@@ -386,7 +386,7 @@ export function bible_glyph_chapter_dan01() {
           "and",
           "$water",
           "to",
-          "drink.",
+          "$cup_with_straw.",
         ],
       },
       {
