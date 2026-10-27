@@ -578,7 +578,7 @@ export function bible_glyph_chapter_ezk11() {
           "to",
           "you",
           "the",
-          "land",
+          "$brown_square",
           "of",
           "$wrestling+heart_on_fire.",
         ],
