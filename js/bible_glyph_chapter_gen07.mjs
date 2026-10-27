@@ -245,7 +245,7 @@ export function bible_glyph_chapter_gen07() {
           "enter",
           "the",
           "$package,",
-          "male",
+          "$reminder_ribbon+thing",
           "and",
           "female,",
           "as",
