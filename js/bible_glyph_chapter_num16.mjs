@@ -525,7 +525,7 @@ export function bible_glyph_chapter_num16() {
           "the",
           "$i_am",
           "tomorrow,",
-          "you",
+          "$you",
           "and",
           "they",
           "and",
