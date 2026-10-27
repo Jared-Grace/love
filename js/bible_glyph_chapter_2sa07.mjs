@@ -542,7 +542,7 @@ export function bible_glyph_chapter_2sa07() {
           "$right_arrow",
           "$proper_name$Nathan",
           "$mouth",
-          "to",
+          "$toward",
           "$two_hearts+proper_name",
           "all",
           "the",
