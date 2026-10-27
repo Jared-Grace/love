@@ -173,7 +173,7 @@ export function bible_glyph_chapter_2ki05() {
           "$hand_receiving",
           "with",
           "$hand",
-          "ten",
+          "$ten",
           "talents",
           "of",
           "silver,",
