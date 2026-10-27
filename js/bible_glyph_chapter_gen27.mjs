@@ -873,7 +873,7 @@ export function bible_glyph_chapter_gen27() {
         verse_number: 31,
         words: [
           "He",
-          "too",
+          "$plus",
           "$hammer+doing",
           "some",
           "tasty",
