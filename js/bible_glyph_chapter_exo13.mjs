@@ -148,7 +148,7 @@ export function bible_glyph_chapter_exo13() {
           "$flashlight",
           "$kneeling+thing",
           "in",
-          "this",
+          "$flashlight",
           "month.",
         ],
       },
