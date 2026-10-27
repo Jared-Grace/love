@@ -142,7 +142,7 @@ export function bible_glyph_chapter_gen26() {
           "these",
           "$earth.",
           "And",
-          "all",
+          "$all",
           "the",
           "$map",
           "of",
