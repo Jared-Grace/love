@@ -395,7 +395,7 @@ export function bible_glyph_chapter_1ki19() {
           "shattered",
           "the",
           "rocks",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "but",
