@@ -671,7 +671,7 @@ export function bible_glyph_chapter_ezk34() {
           "between",
           "the",
           "fat",
-          "sheep",
+          "$sheep+one",
           "and",
           "the",
           "lean",
