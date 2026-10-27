@@ -401,7 +401,7 @@ export function bible_glyph_chapter_exo10() {
           "and",
           "$kneeling+doing",
           "$i_am,",
-          "since",
+          "$pointing",
           "that",
           "is",
           "what",
