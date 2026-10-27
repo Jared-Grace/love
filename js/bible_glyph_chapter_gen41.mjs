@@ -240,7 +240,7 @@ export function bible_glyph_chapter_gen41() {
           "$speech,",
           '"$sun',
           "$me",
-          "recall",
+          "$reminder_ribbon",
           "my",
           "failures.",
         ],
