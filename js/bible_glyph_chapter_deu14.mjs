@@ -368,7 +368,7 @@ export function bible_glyph_chapter_deu14() {
           "any",
           "kind",
           "of",
-          "heron,",
+          "$bird+angry_face,",
           "the",
           "hoopoe,",
           "or",
