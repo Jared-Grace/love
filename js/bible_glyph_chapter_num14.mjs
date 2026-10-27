@@ -1217,7 +1217,7 @@ export function bible_glyph_chapter_num14() {
           "Israel,",
           "the",
           "$family",
-          "mourned",
+          "$loudly_crying+coffin",
           "bitterly.",
         ],
       },
