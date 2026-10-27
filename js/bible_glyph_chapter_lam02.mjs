@@ -760,7 +760,7 @@ export function bible_glyph_chapter_lam02() {
           "$proper_name$Zion,",
           "let",
           "your",
-          "tears",
+          "$loudly_crying+water",
           "run",
           "$walking+pointing_down",
           "like",
