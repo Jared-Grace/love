@@ -463,7 +463,7 @@ export function bible_glyph_chapter_num24() {
           "whose",
           "$eyes",
           "are",
-          "open,",
+          "$veil+away+doing,",
         ],
       },
       {
