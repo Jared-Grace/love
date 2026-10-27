@@ -557,7 +557,7 @@ export function bible_glyph_chapter_2ch07() {
           "$name_tag",
           "may",
           "be",
-          "there",
+          "$telescope",
           "forever.",
           "My",
           "$eyes",
