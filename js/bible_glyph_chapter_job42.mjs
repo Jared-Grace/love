@@ -423,7 +423,7 @@ export function bible_glyph_chapter_job42() {
           "them",
           "an",
           "$inheritance",
-          "among",
+          "$radio_button",
           "their",
           "$brother.",
         ],
