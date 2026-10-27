@@ -1506,7 +1506,7 @@ export function bible_glyph_chapter_jer32() {
           "It",
           "is",
           "a",
-          "desolation,",
+          "$astonished+thing,",
           "without",
           "$person",
           "or",
