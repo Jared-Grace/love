@@ -275,7 +275,7 @@ export function bible_glyph_chapter_isa43() {
       {
         verse_number: 9,
         words: [
-          "All",
+          "$all",
           "the",
           "$map",
           "gather",
