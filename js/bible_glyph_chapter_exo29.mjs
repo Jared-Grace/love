@@ -60,7 +60,7 @@ export function bible_glyph_chapter_exo29() {
           "$lotion_bottle,",
           "and",
           "$flatbread",
-          "wafers",
+          "$flatbread+oil",
           "$oil+doing",
           "with",
           "$lotion_bottle.",
