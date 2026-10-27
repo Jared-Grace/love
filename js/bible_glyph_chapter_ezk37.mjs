@@ -266,7 +266,7 @@ export function bible_glyph_chapter_ezk37() {
           "to",
           "the",
           "$wind;",
-          "prophesy,",
+          "$megaphone+doing,",
           "$son",
           "of",
           "$person,",
