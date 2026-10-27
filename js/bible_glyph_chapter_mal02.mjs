@@ -609,7 +609,7 @@ export function bible_glyph_chapter_mal02() {
           "Him?",
           "By",
           "$speech,",
-          "All",
+          "$all",
           "who",
           "$hammer+doing",
           "$thumbs_down",
