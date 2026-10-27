@@ -636,7 +636,7 @@ export function bible_glyph_chapter_dan09() {
           "$heart_on_fire,",
           "and",
           "$ear;",
-          "open",
+          "$eye+unlocked+doing",
           "Your",
           "$eyes",
           "and",
