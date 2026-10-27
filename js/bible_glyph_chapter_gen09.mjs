@@ -426,7 +426,7 @@ export function bible_glyph_chapter_gen09() {
           "will",
           "the",
           "$water",
-          "become",
+          "$link",
           "a",
           "flood",
           "to",
