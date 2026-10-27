@@ -288,7 +288,7 @@ export function bible_glyph_chapter_neh01() {
           "$handshake+broken_chain+doing,",
           "I",
           "will",
-          "scatter",
+          "$confetti_ball",
           "you",
           "among",
           "the",
