@@ -496,7 +496,7 @@ export function bible_glyph_chapter_est04() {
           "come",
           "to",
           "the",
-          "kingdom?",
+          "$castle?",
         ],
       },
       {
