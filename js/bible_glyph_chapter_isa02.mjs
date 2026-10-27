@@ -81,7 +81,7 @@ export function bible_glyph_chapter_isa02() {
           "us",
           "go",
           "up",
-          "to",
+          "$toward",
           "the",
           "$mountain",
           "of",
