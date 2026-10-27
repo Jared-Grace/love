@@ -457,7 +457,7 @@ export function bible_glyph_chapter_lev04() {
           "$tray_out",
           "$blood",
           "and",
-          "sprinkle",
+          "$droplet+hand+doing",
           "it",
           "seven",
           "times",
