@@ -496,7 +496,7 @@ export function bible_glyph_chapter_gen05() {
           "And",
           "$proper_name$Enoch",
           "$walking",
-          "with",
+          "$safety_pin",
           "$heart_on_fire,",
           "and",
           "he",
