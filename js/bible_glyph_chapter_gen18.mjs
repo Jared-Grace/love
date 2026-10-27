@@ -841,7 +841,7 @@ export function bible_glyph_chapter_gen18() {
           "I",
           "will",
           "$no_entry",
-          "destroy",
+          "$collision",
           "it.",
         ],
       },
