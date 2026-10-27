@@ -638,7 +638,7 @@ export function bible_glyph_chapter_exo34() {
           "a",
           "lamb,",
           "but",
-          "if",
+          "$traffic_light",
           "you",
           "do",
           "$no_entry",
