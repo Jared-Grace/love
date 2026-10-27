@@ -718,7 +718,7 @@ export function bible_glyph_chapter_2ki05() {
           "may",
           "the",
           "$i_am",
-          "forgive",
+          "$sponge",
           "your",
           "$kneeling",
           "in",
