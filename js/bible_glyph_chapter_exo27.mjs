@@ -436,7 +436,7 @@ export function bible_glyph_chapter_exo27() {
           "bands",
           "and",
           "$silver",
-          "hooks",
+          "$hook",
           "and",
           "$bronze",
           "bases.",
