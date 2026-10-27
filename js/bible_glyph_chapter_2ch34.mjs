@@ -242,7 +242,7 @@ export function bible_glyph_chapter_2ch34() {
           "$altar",
           "and",
           "the",
-          "Asherah",
+          "$wood+imp",
           "poles,",
           "crushed",
           "the",
