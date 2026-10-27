@@ -430,7 +430,7 @@ export function bible_glyph_chapter_exo15() {
           "You",
           "have",
           "bought",
-          "pass",
+          "$bridge",
           "by.",
         ],
       },
