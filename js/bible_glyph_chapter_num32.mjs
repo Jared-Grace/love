@@ -626,7 +626,7 @@ export function bible_glyph_chapter_num32() {
           "your",
           "armed",
           "men",
-          "crosses",
+          "$bridge",
           "the",
           "$pointing_down+proper_name",
           "before",
