@@ -976,7 +976,7 @@ export function bible_glyph_chapter_lev19() {
           "shall",
           "maintain",
           "$ruler+thing",
-          "scales,",
+          "$scales+two,",
           "$ruler+thing",
           "$stone,",
           "an",
