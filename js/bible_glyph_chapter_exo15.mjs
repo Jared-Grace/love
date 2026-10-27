@@ -584,7 +584,7 @@ export function bible_glyph_chapter_exo15() {
         words: [
           "Then",
           "$fishing_pole+proper_name",
-          "led",
+          "$tent+away",
           "$wrestling+heart_on_fire",
           "from",
           "the",
