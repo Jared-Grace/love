@@ -481,7 +481,7 @@ export function bible_glyph_chapter_gen14() {
       {
         verse_number: 17,
         words: [
-          "After",
+          "$next_track",
           "Abram",
           "$turn_back",
           "from",
