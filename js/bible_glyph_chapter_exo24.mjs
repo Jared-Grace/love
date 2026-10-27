@@ -478,7 +478,7 @@ export function bible_glyph_chapter_exo24() {
           "$star",
           "of",
           "$i_am",
-          "settled",
+          "$tent+doing",
           "on",
           "$mountain",
           "$proper_name$Sinai,",
