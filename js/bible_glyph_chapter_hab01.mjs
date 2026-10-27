@@ -295,7 +295,7 @@ export function bible_glyph_chapter_hab01() {
           "by",
           "like",
           "the",
-          "wind",
+          "$wind",
           "and",
           "pass",
           "through.",
