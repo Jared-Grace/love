@@ -1226,7 +1226,7 @@ export function bible_glyph_chapter_gen27() {
           '"The',
           "$sun",
           "of",
-          "mourning",
+          "$loudly_crying+coffin+thing",
           "for",
           "my",
           "$father",
