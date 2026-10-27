@@ -742,7 +742,7 @@ export function bible_glyph_chapter_zec08() {
           "In",
           "those",
           "$sun",
-          "ten",
+          "$ten",
           "men",
           "of",
           "every",
