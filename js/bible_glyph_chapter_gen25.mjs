@@ -367,7 +367,7 @@ export function bible_glyph_chapter_gen25() {
           "settled",
           "from",
           "$proper_name$Havilah",
-          "to",
+          "$finish",
           "$proper_name$Shur,",
           "near",
           "the",
