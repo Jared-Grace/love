@@ -336,7 +336,7 @@ export function bible_glyph_chapter_num25() {
           "I",
           "did",
           "$no_entry",
-          "consume",
+          "$end_arrow",
           "the",
           "$son",
           "of",
