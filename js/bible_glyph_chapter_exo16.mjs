@@ -975,7 +975,7 @@ export function bible_glyph_chapter_exo16() {
           "$wrestling+heart_on_fire",
           "called",
           "it",
-          "manna.",
+          "$flashlight+question+thing.",
           "It",
           "was",
           "white",
