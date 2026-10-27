@@ -570,7 +570,7 @@ export function bible_glyph_chapter_num14() {
           "is",
           "$straight_ruler+clock+describing",
           "to",
-          "anger",
+          "$nose+fire",
           "and",
           "abounding",
           "in",
