@@ -144,7 +144,7 @@ export function bible_glyph_chapter_psa084() {
         words: [
           "As",
           "they",
-          "pass",
+          "$bridge",
           "through",
           "the",
           "Valley",
