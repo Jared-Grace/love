@@ -644,7 +644,7 @@ export function bible_glyph_chapter_gen45() {
           "he",
           "$hands_giving",
           "$three",
-          "hundred",
+          "$input_numbers+all",
           "shekels",
           "of",
           "silver",
