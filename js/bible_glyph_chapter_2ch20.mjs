@@ -483,7 +483,7 @@ export function bible_glyph_chapter_2ch20() {
           "stood",
           "in",
           "the",
-          "midst",
+          "$radio_button",
           "of",
           "the",
           "$church.",
