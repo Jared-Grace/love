@@ -443,7 +443,7 @@ export function bible_glyph_chapter_exo24() {
           "here",
           "with",
           "you.",
-          "Whoever",
+          "$person+question",
           "has",
           "a",
           "$speech",
