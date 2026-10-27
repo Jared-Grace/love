@@ -118,7 +118,7 @@ export function bible_glyph_chapter_deu32() {
           "toward",
           "Him;",
           "the",
-          "blemish",
+          "$person+black_circle",
           "on",
           "them",
           "is",
