@@ -532,7 +532,7 @@ export function bible_glyph_chapter_num24() {
           "$wrestling+heart_on_fire.",
           "He",
           "will",
-          "crush",
+          "$axe+collision+doing",
           "the",
           "skulls",
           "of",
