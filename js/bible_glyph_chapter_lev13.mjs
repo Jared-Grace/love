@@ -618,7 +618,7 @@ export function bible_glyph_chapter_lev13() {
           "a",
           "reddish-white",
           "spot",
-          "develops",
+          "$link",
           "in",
           "the",
           "$place",
