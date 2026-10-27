@@ -191,7 +191,7 @@ export function bible_glyph_chapter_exo33() {
           "I",
           "will",
           "$lightbulb",
-          "what",
+          "$flashlight+question",
           "to",
           "$hammer+doing",
           "with",
