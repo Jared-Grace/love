@@ -651,7 +651,7 @@ export function bible_glyph_chapter_1sa25() {
           "she",
           "did",
           "$no_entry",
-          "tell",
+          "$newspaper",
           "her",
           "$man_beard",
           "$proper_name$Nabal.",
