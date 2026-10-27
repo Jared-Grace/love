@@ -48,7 +48,7 @@ export function bible_glyph_chapter_num22() {
           "$proper_name$Zippor",
           "$eye",
           "$all",
-          "that",
+          "$back+flashlight",
           "$wrestling+heart_on_fire",
           "had",
           "$hammer+doing",
