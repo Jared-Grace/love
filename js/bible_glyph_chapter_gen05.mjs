@@ -502,7 +502,7 @@ export function bible_glyph_chapter_gen05() {
           "he",
           "was",
           "not,",
-          "because",
+          "$pointing",
           "$heart_on_fire",
           "$hand_receiving",
           "him.",
