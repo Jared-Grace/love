@@ -1236,7 +1236,7 @@ export function bible_glyph_chapter_gen27() {
           "then",
           "I",
           "will",
-          "kill",
+          "$fist+skull",
           "my",
           "$brother",
           '$hand+foot."',
