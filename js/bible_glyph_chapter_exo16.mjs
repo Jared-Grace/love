@@ -670,7 +670,7 @@ export function bible_glyph_chapter_exo16() {
           "So",
           "$fishing_pole+proper_name",
           "was",
-          "angry",
+          "$angry_face+collision+doing",
           "with",
           "them.",
         ],
