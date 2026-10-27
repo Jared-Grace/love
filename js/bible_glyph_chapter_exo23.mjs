@@ -452,7 +452,7 @@ export function bible_glyph_chapter_exo23() {
           "$harvest,",
           "with",
           "the",
-          "firstfruits",
+          "$first_place+sprout",
           "of",
           "what",
           "you",
