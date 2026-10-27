@@ -490,7 +490,7 @@ export function bible_glyph_chapter_num09() {
           "the",
           "$witness+thing.",
           "From",
-          "evening",
+          "$sunset",
           "until",
           "$morning",
           "it",
