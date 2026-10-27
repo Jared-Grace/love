@@ -110,7 +110,7 @@ export function bible_glyph_chapter_isa26() {
           "who",
           "$person+house",
           "on",
-          "high;",
+          "$up_arrow+thing;",
           "He",
           "lays",
           "the",
