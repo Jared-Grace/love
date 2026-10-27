@@ -930,7 +930,7 @@ export function bible_glyph_chapter_jer31() {
           "and",
           "bring",
           "$thumbs_down+doing,",
-          "so",
+          "$right_arrow",
           "I",
           "will",
           "watch",
