@@ -563,7 +563,7 @@ export function bible_glyph_chapter_gen07() {
           "creature",
           "that",
           "swarms",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth,",
           "and",
