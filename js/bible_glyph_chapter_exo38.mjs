@@ -862,7 +862,7 @@ export function bible_glyph_chapter_exo38() {
           "$bronze",
           "grating,",
           "and",
-          "all",
+          "$all",
           "the",
           "utensils",
           "for",
