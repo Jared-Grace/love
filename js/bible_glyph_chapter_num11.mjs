@@ -646,7 +646,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "makes",
           "you",
-          "nauseous,",
+          "$nauseated_face+thing,",
           "because",
           "you",
           "have",
