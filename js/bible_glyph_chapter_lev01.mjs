@@ -210,7 +210,7 @@ export function bible_glyph_chapter_lev01() {
           "to",
           "$card_index_dividers",
           "the",
-          "pieces,",
+          "$kitchen_knife+meat,",
           "including",
           "the",
           "head",
