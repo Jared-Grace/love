@@ -357,7 +357,7 @@ export function bible_glyph_chapter_2ch20() {
       {
         verse_number: 11,
         words: [
-          "See",
+          "$exclamation",
           "how",
           "they",
           "are",
