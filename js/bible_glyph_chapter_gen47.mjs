@@ -986,7 +986,7 @@ export function bible_glyph_chapter_gen47() {
           "the",
           "$sun",
           "drew",
-          "near",
+          "$magnet+doing",
           "for",
           "$wrestling+heart_on_fire",
           "to",
