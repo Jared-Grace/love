@@ -974,7 +974,7 @@ export function bible_glyph_chapter_lev07() {
           "of",
           "Israel",
           "to",
-          "present",
+          "$magnet+doing",
           "their",
           "offerings",
           "$i_am",
