@@ -506,7 +506,7 @@ export function bible_glyph_chapter_deu07() {
           "or",
           "among",
           "your",
-          "livestock.",
+          "$paw_prints.",
         ],
       },
       {
