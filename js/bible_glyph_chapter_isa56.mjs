@@ -409,7 +409,7 @@ export function bible_glyph_chapter_isa56() {
       {
         verse_number: 12,
         words: [
-          "Come,",
+          "$airplane_arrival+doing,",
           "let",
           "me",
           "$hand_receiving",
