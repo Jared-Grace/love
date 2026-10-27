@@ -324,7 +324,7 @@ export function bible_glyph_chapter_exo36() {
         words: [
           "He",
           "joined",
-          "five",
+          "$five",
           "of",
           "the",
           "curtains",
