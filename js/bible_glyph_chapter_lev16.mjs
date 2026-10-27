@@ -78,7 +78,7 @@ export function bible_glyph_chapter_lev16() {
           "he",
           "will",
           "$skull+doing,",
-          "because",
+          "$pointing",
           "I",
           "$eye",
           "in",
