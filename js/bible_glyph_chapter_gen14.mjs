@@ -40,7 +40,7 @@ export function bible_glyph_chapter_gen14() {
         verse_number: 2,
         words: [
           "$hammer+doing",
-          "war",
+          "$crossed_swords",
           "against",
           "$proper_name$Bera",
           "$king",
