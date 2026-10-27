@@ -636,7 +636,7 @@ export function bible_glyph_chapter_exo13() {
           "with",
           "you",
           "from",
-          "this",
+          "$flashlight",
           "place.",
         ],
       },
