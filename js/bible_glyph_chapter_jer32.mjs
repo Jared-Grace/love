@@ -372,7 +372,7 @@ export function bible_glyph_chapter_jer32() {
           "$silver",
           "on",
           "the",
-          "scales.",
+          "$scales+two.",
         ],
       },
       {
