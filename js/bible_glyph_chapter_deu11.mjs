@@ -481,7 +481,7 @@ export function bible_glyph_chapter_deu11() {
           "may",
           "$crowd+doing",
           "your",
-          "grain,",
+          "$wheat+barley,",
           "your",
           "new",
           "$wine",
