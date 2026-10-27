@@ -462,7 +462,7 @@ export function bible_glyph_chapter_num15() {
           "to",
           "the",
           "$foreigner",
-          "residing",
+          "$luggage",
           "with",
           "you.",
         ],
