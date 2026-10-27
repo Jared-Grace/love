@@ -1377,7 +1377,7 @@ export function bible_glyph_chapter_1sa20() {
           "up",
           "from",
           "the",
-          "south",
+          "$compass+down_arrow",
           "side",
           "of",
           "the",
