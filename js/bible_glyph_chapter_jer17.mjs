@@ -138,7 +138,7 @@ export function bible_glyph_chapter_jer17() {
           "and",
           "it",
           "will",
-          "burn",
+          "$fire+alarm_clock+doing",
           "$finish.",
         ],
       },
