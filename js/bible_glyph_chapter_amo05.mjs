@@ -234,7 +234,7 @@ export function bible_glyph_chapter_amo05() {
           "and",
           "pours",
           "them",
-          "over",
+          "$pointing_up",
           "the",
           "face",
           "of",
