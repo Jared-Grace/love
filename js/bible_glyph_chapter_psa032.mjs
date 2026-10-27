@@ -226,7 +226,7 @@ export function bible_glyph_chapter_psa032() {
           "which",
           "have",
           "no",
-          "understanding,",
+          "$brain,",
           "which",
           "must",
           "be",
