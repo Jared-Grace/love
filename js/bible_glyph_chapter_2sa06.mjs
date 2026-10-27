@@ -498,7 +498,7 @@ export function bible_glyph_chapter_2sa06() {
           "of",
           "Saul",
           "looked",
-          "down",
+          "$window+eyes+doing",
           "from",
           "a",
           "window",
