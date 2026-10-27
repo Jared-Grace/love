@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_jer31() {
           "I",
           "will",
           "make",
-          "with",
+          "$safety_pin",
           "the",
           "$house",
           "of",
