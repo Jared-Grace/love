@@ -238,7 +238,7 @@ export function bible_glyph_chapter_pro02() {
           "who",
           "leave",
           "the",
-          "straight",
+          "$straight_ruler+thumbs_up+thing",
           "$railway_track",
           "to",
           "$walking",
