@@ -1034,7 +1034,7 @@ export function bible_glyph_chapter_num16() {
           "people",
           "of",
           "$wrestling+heart_on_fire",
-          "around",
+          "$around",
           "them",
           "fled,",
           "$speech,",
