@@ -280,7 +280,7 @@ export function bible_glyph_chapter_exo35() {
         verse_number: 13,
         words: [
           "the",
-          "table",
+          "$hand_sending+thing",
           "with",
           "its",
           "poles",
