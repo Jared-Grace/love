@@ -358,7 +358,7 @@ export function bible_glyph_chapter_pro08() {
           "way",
           "of",
           "$ruler+thing,",
-          "along",
+          "$radio_button",
           "the",
           "paths",
           "of",
