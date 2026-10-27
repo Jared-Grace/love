@@ -381,7 +381,7 @@ export function bible_glyph_chapter_lev17() {
           "I",
           "have",
           "$hands_giving",
-          "it",
+          "$pointing_back",
           "to",
           "you",
           "upon",
