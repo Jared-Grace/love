@@ -1401,7 +1401,7 @@ export function bible_glyph_chapter_1ki22() {
           "of",
           "the",
           "$i_am.",
-          "However,",
+          "$check+exclamation,",
           "the",
           "high",
           "places",
