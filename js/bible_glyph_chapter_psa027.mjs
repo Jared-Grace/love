@@ -310,7 +310,7 @@ export function bible_glyph_chapter_psa027() {
           "O",
           "$i_am,",
           "and",
-          "lead",
+          "$guide_dog",
           "me",
           "on",
           "a",
