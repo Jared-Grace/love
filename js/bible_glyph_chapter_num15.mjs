@@ -533,7 +533,7 @@ export function bible_glyph_chapter_num15() {
           "lift",
           "up",
           "a",
-          "cake",
+          "$bagel",
           "as",
           "a",
           "contribution,",
