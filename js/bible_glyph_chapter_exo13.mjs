@@ -607,7 +607,7 @@ export function bible_glyph_chapter_exo13() {
           "$i_am+plus",
           "with",
           "him,",
-          "because",
+          "$pointing",
           "$i_am+plus",
           "had",
           "made",
