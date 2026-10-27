@@ -485,7 +485,7 @@ export function bible_glyph_chapter_lev22() {
           "the",
           "punishment",
           "for",
-          "guilt",
+          "$sacrifice+scales+thing",
           "by",
           "allowing",
           "them",
