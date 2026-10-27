@@ -514,7 +514,7 @@ export function bible_glyph_chapter_1sa03() {
           "ever",
           "so",
           "$plus+doing,",
-          "if",
+          "$traffic_light",
           "you",
           "$hand+tray_in+doing",
           "$tray_out",
