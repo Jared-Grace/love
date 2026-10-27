@@ -1458,7 +1458,7 @@ export function bible_glyph_chapter_lev25() {
           "has",
           "sold",
           "himself.",
-          "One",
+          "$one",
           "of",
           "his",
           "$brother",
