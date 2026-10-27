@@ -599,7 +599,7 @@ export function bible_glyph_chapter_2sa11() {
           "the",
           "$proper_name$Hittite",
           "$skull+doing",
-          "also.",
+          "$plus.",
         ],
       },
       {
