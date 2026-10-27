@@ -598,7 +598,7 @@ export function bible_glyph_chapter_dan09() {
         verse_number: 17,
         words: [
           "So",
-          "now,",
+          "$watch,",
           "our",
           "$heart_on_fire,",
           "$ear",
