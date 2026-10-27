@@ -314,7 +314,7 @@ export function bible_glyph_chapter_psa103() {
           "when",
           "the",
           "$wind",
-          "passes",
+          "$bridge",
           "over,",
           "it",
           "vanishes,",
