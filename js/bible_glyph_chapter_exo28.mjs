@@ -385,7 +385,7 @@ export function bible_glyph_chapter_exo28() {
         verse_number: 14,
         words: [
           "and",
-          "two",
+          "$two",
           "chains",
           "of",
           "pure",
