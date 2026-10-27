@@ -456,7 +456,7 @@ export function bible_glyph_chapter_hab01() {
           "to",
           "his",
           "fishing",
-          "net,",
+          "$net+darkness,",
           "for",
           "by",
           "these",
