@@ -31,7 +31,7 @@ export function bible_glyph_chapter_gen48() {
           "his",
           "$two",
           "$son",
-          "with",
+          "$linked_paperclips",
           "him,",
           "$proper_name$Manasseh",
           "and",
