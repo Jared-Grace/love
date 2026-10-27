@@ -653,7 +653,7 @@ export function bible_glyph_chapter_jos06() {
           "$footprints",
           "into",
           "the",
-          "treasury",
+          "$gem_stone+house",
           "of",
           "the",
           "$i_am.",
