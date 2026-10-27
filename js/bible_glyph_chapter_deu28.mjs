@@ -1168,7 +1168,7 @@ export function bible_glyph_chapter_deu28() {
           "have",
           "$lightbulb,",
           "and",
-          "there",
+          "$telescope",
           "you",
           "will",
           "$kneeling+doing",
