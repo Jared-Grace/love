@@ -1215,7 +1215,7 @@ export function bible_glyph_chapter_2ch20() {
           "recorded",
           "in",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "$king",
