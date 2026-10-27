@@ -96,7 +96,7 @@ export function bible_glyph_chapter_2sa06() {
           "$house",
           "of",
           "$proper_name$Abinadab,",
-          "which",
+          "$back+flashlight",
           "was",
           "on",
           "the",
