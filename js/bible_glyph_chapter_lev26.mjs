@@ -325,7 +325,7 @@ export function bible_glyph_chapter_lev26() {
           "$person_other",
           "will",
           "$no_entry",
-          "despise",
+          "$nauseated_face+leftwards_pushing_hand+doing",
           "you.",
         ],
       },
