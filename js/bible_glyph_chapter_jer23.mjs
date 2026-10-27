@@ -1064,7 +1064,7 @@ export function bible_glyph_chapter_jer23() {
       {
         verse_number: 32,
         words: [
-          "Indeed,",
+          "$exclamation,",
           "I",
           "am",
           "against",
