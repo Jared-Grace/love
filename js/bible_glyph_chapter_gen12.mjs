@@ -291,7 +291,7 @@ export function bible_glyph_chapter_gen12() {
       },
       {
         verse_number: 9,
-        words: ["And", "Abram", "$walking", "on", "toward", "the", "Negev."],
+        words: ["And", "Abram", "$walking", "on", "toward", "the", "$compass+down_arrow."],
       },
       {
         verse_number: 10,
