@@ -270,7 +270,7 @@ export function bible_glyph_chapter_psa084() {
           "$heart_on_fire",
           "is",
           "a",
-          "sun",
+          "$sun_with_face",
           "and",
           "a",
           "shield;",
