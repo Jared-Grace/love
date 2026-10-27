@@ -1474,7 +1474,7 @@ export function bible_glyph_chapter_exo12() {
         verse_number: 47,
         words: [
           "The",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "$wrestling+heart_on_fire",
