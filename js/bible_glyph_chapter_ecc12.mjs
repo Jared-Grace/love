@@ -241,7 +241,7 @@ export function bible_glyph_chapter_ecc12() {
           "$link,",
           "and",
           "the",
-          "spirit",
+          "$wind",
           "$turn_back",
           "to",
           "$heart_on_fire",
