@@ -427,7 +427,7 @@ export function bible_glyph_chapter_zep01() {
           "$vineyard",
           "but",
           "$no_entry",
-          "drink",
+          "$cup_with_straw",
           "their",
           "$wine.",
         ],
