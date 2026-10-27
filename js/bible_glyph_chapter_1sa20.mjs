@@ -333,7 +333,7 @@ export function bible_glyph_chapter_1sa20() {
           "$i_am+hands_giving",
           "replied,",
           "$speech,",
-          "Never.",
+          "$person_gesturing_no+exclamation.",
           "If",
           "I",
           "ever",
