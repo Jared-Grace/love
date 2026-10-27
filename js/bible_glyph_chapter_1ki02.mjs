@@ -1536,7 +1536,7 @@ export function bible_glyph_chapter_1ki02() {
         verse_number: 43,
         words: [
           "So",
-          "why",
+          "$flashlight+question+lightbulb",
           "have",
           "you",
           "$no_entry",
