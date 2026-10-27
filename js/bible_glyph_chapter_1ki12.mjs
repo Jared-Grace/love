@@ -715,7 +715,7 @@ export function bible_glyph_chapter_1ki12() {
           "to",
           "$hammer+doing",
           "war",
-          "against",
+          "$linked_paperclips",
           "the",
           "$house",
           "of",
