@@ -214,7 +214,7 @@ export function bible_glyph_chapter_isa40() {
         verse_number: 8,
         words: [
           "The",
-          "grass",
+          "$herb+thing",
           "$fallen_leaf",
           "and",
           "the",
