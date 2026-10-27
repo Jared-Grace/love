@@ -347,7 +347,7 @@ export function bible_glyph_chapter_gen45() {
           "$year",
           "of",
           "$famine.",
-          "Otherwise,",
+          "$no_entry+traffic_light,",
           "you",
           "and",
           "your",
