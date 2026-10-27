@@ -291,7 +291,7 @@ export function bible_glyph_chapter_gen33() {
           "$footprints",
           "to",
           "you,",
-          "because",
+          "$pointing",
           "$heart_on_fire",
           "has",
           "been",
