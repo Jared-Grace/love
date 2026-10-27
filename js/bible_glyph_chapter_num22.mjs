@@ -627,7 +627,7 @@ export function bible_glyph_chapter_num22() {
           "to",
           "summon",
           "you,",
-          "get",
+          "$person+pointing_up",
           "up",
           "and",
           "$walking",
