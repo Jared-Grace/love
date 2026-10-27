@@ -632,7 +632,7 @@ export function bible_glyph_chapter_exo23() {
           "$voice",
           "and",
           "$hammer+doing",
-          "everything",
+          "$all",
           "I",
           "$mouth,",
           "then",
