@@ -149,7 +149,7 @@ export function bible_glyph_chapter_psa090() {
           "consumed",
           "by",
           "Your",
-          "anger,",
+          "$nose+fire,",
           "and",
           "terrified",
           "by",
