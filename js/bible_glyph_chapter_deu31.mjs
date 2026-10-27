@@ -748,7 +748,7 @@ export function bible_glyph_chapter_deu31() {
           "will",
           "$curving_right+doing",
           "to",
-          "other",
+          "$plus+one",
           "$moai",
           "and",
           "$kneeling+doing",
