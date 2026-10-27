@@ -61,7 +61,7 @@ export function bible_glyph_chapter_isa06() {
           "their",
           "faces,",
           "with",
-          "two",
+          "$two",
           "they",
           "covered",
           "their",
