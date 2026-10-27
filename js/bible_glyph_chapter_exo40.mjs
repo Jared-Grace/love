@@ -61,7 +61,7 @@ export function bible_glyph_chapter_exo40() {
           "screen",
           "off",
           "the",
-          "ark",
+          "$ark",
           "with",
           "the",
           "veil.",
