@@ -31,7 +31,7 @@ export function bible_glyph_chapter_job23() {
           "heavy",
           "$pointing_up",
           "my",
-          "groaning.",
+          "$tired_face.",
         ],
       },
       {
