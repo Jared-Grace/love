@@ -808,7 +808,7 @@ export function bible_glyph_chapter_exo18() {
           "they",
           "would",
           "$footprints",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "but",
           "any",
