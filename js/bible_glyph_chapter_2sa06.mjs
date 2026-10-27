@@ -385,7 +385,7 @@ export function bible_glyph_chapter_2sa06() {
           "brought",
           "up",
           "the",
-          "ark",
+          "$ark",
           "of",
           "$heart_on_fire",
           "from",
