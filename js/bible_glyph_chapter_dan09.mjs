@@ -731,7 +731,7 @@ export function bible_glyph_chapter_dan09() {
           "$i_am",
           "my",
           "$heart_on_fire",
-          "concerning",
+          "$pointing_up",
           "$heart_on_fire",
           "$sparkle+thing",
           "$mountain",
