@@ -271,7 +271,7 @@ export function bible_glyph_chapter_lev11() {
           "$sea",
           "or",
           "streams",
-          "that",
+          "$back+flashlight",
           "does",
           "not",
           "have",
