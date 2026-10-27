@@ -229,7 +229,7 @@ export function bible_glyph_chapter_lam04() {
           "skin",
           "has",
           "shriveled",
-          "on",
+          "$pointing_up",
           "their",
           "bones;",
           "it",
