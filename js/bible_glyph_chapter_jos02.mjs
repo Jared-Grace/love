@@ -125,7 +125,7 @@ export function bible_glyph_chapter_jos02() {
           "had",
           "$hand_receiving",
           "the",
-          "two",
+          "$two",
           "men",
           "and",
           "hidden",
