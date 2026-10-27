@@ -831,7 +831,7 @@ export function bible_glyph_chapter_lev15() {
           "things",
           "will",
           "be",
-          "unclean;",
+          "$soap+no_entry;",
           "he",
           "must",
           "wash",
