@@ -468,7 +468,7 @@ export function bible_glyph_chapter_num25() {
       {
         verse_number: 17,
         words: [
-          "Attack",
+          "$clamp+doing",
           "the",
           "$proper_name$Midianites",
           "and",
