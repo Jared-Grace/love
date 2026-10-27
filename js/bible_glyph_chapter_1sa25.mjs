@@ -522,7 +522,7 @@ export function bible_glyph_chapter_1sa25() {
           "They",
           "were",
           "a",
-          "wall",
+          "$brick+shield",
           "around",
           "us,",
           "both",
