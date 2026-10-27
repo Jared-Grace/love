@@ -153,7 +153,7 @@ export function bible_glyph_chapter_neh08() {
           "his",
           "right",
           "side",
-          "stood",
+          "$person+round_pushpin",
           "$proper_name$Mattithiah,",
           "$proper_name$Shema,",
           "$proper_name$Anaiah,",
