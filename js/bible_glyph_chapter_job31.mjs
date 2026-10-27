@@ -662,7 +662,7 @@ export function bible_glyph_chapter_job31() {
         words: [
           "but",
           "$no_entry",
-          "stranger",
+          "$foreigner",
           "had",
           "to",
           "lodge",
