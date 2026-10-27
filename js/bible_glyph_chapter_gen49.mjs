@@ -163,7 +163,7 @@ export function bible_glyph_chapter_gen49() {
           "be",
           "their",
           "$nose+fire,",
-          "for",
+          "$pointing",
           "it",
           "is",
           "strong,",
