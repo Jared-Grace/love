@@ -1167,7 +1167,7 @@ export function bible_glyph_chapter_1ki18() {
           "$heart_on_fire+i_am",
           "the",
           "$megaphone",
-          "approached",
+          "$walking+toward",
           "the",
           "altar",
           "and",
