@@ -224,7 +224,7 @@ export function bible_glyph_chapter_dan01() {
           "new",
           "$name_tag.",
           "To",
-          "Daniel",
+          "$scales+speech+heart_on_fire+proper_name",
           "he",
           "gave",
           "the",
