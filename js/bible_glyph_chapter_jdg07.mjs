@@ -37,7 +37,7 @@ export function bible_glyph_chapter_jdg07() {
           "$camp",
           "of",
           "$proper_name$Midian",
-          "was",
+          "$link",
           "north",
           "of",
           "them,",
