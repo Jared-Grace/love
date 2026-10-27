@@ -28,7 +28,7 @@ export function bible_glyph_chapter_2ki22() {
           "and",
           "he",
           "$castle+doing",
-          "thirty",
+          "$three+zero",
           "one",
           "years",
           "in",
