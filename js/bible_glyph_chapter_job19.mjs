@@ -160,7 +160,7 @@ export function bible_glyph_chapter_job19() {
           "and",
           "removed",
           "the",
-          "crown",
+          "$crown+thing",
           "from",
           "my",
           "head.",
