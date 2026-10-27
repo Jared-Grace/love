@@ -183,7 +183,7 @@ export function bible_glyph_chapter_job19() {
           "He",
           "uproots",
           "my",
-          "hope",
+          "$crossed_fingers",
           "like",
           "a",
           "$tree.",
