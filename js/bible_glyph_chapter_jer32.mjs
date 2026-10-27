@@ -761,7 +761,7 @@ export function bible_glyph_chapter_jer32() {
           "$father,",
           "a",
           "$earth",
-          "flowing",
+          "$water+right_arrow",
           "with",
           "milk",
           "and",
