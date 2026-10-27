@@ -328,7 +328,7 @@ export function bible_glyph_chapter_mic07() {
           "be",
           "covered",
           "with",
-          "shame",
+          "$flushed+cloak",
           "-",
           "she",
           "who",
