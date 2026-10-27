@@ -479,7 +479,7 @@ export function bible_glyph_chapter_pro03() {
           "you",
           "rest,",
           "your",
-          "sleep",
+          "$sleeping_face+thing",
           "will",
           "be",
           "sweet.",
