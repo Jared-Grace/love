@@ -287,7 +287,7 @@ export function bible_glyph_chapter_jer07() {
         verse_number: 11,
         words: [
           "Has",
-          "this",
+          "$flashlight",
           "$house",
           "which",
           "bears",
