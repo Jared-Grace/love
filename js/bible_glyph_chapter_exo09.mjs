@@ -300,7 +300,7 @@ export function bible_glyph_chapter_exo09() {
           "$sky,",
           "and",
           "festering",
-          "boils",
+          "$fire+microbe",
           "broke",
           "out",
           "on",
