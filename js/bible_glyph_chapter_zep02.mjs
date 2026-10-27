@@ -115,7 +115,7 @@ export function bible_glyph_chapter_zep02() {
           "driven",
           "out",
           "at",
-          "noon,",
+          "$sun+top,",
           "and",
           "$proper_name$Ekron",
           "will",
