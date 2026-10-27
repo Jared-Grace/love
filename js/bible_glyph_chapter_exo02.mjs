@@ -33,7 +33,7 @@ export function bible_glyph_chapter_exo02() {
         words: [
           "and",
           "$woman",
-          "conceived",
+          "$pregnant_woman+doing",
           "and",
           "gave",
           "birth",
