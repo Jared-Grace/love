@@ -907,7 +907,7 @@ export function bible_glyph_chapter_deu29() {
         verse_number: 29,
         words: [
           "The",
-          "secret",
+          "$see_no_evil_monkey",
           "things",
           "belong",
           "to",
