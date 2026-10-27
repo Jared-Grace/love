@@ -244,7 +244,7 @@ export function bible_glyph_chapter_gen13() {
           "to",
           "the",
           "right;",
-          "if",
+          "$traffic_light",
           "you",
           "go",
           "to",
