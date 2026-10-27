@@ -1187,7 +1187,7 @@ export function bible_glyph_chapter_1sa20() {
           "$bread",
           "on",
           "that",
-          "second",
+          "$second_place",
           "$sun",
           "of",
           "the",
