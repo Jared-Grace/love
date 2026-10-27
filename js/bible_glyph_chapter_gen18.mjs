@@ -496,7 +496,7 @@ export function bible_glyph_chapter_gen18() {
           "$speech,",
           "Shall",
           "I",
-          "hide",
+          "$coat+doing",
           "from",
           "$father+map",
           "what",
