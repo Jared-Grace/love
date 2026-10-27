@@ -423,7 +423,7 @@ export function bible_glyph_chapter_psa145() {
         words: [
           "The",
           "$i_am",
-          "preserves",
+          "$guard",
           "all",
           "who",
           "$heart_red+doing",
