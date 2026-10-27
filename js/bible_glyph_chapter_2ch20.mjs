@@ -763,7 +763,7 @@ export function bible_glyph_chapter_2ch20() {
           "the",
           "$i_am",
           "and",
-          "praise",
+          "$clapping_hands",
           "the",
           "splendor",
           "of",
