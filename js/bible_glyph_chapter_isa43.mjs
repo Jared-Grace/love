@@ -567,7 +567,7 @@ export function bible_glyph_chapter_isa43() {
           "things;",
           "pay",
           "$no_entry",
-          "attention",
+          "$brain",
           "to",
           "the",
           "things",
