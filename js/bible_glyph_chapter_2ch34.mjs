@@ -228,7 +228,7 @@ export function bible_glyph_chapter_2ch34() {
           "in",
           "the",
           "ruins",
-          "around",
+          "$around",
           "them.",
         ],
       },
