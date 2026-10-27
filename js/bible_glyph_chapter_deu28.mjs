@@ -1455,7 +1455,7 @@ export function bible_glyph_chapter_deu28() {
           "your",
           "$heart_on_fire",
           "with",
-          "joy",
+          "$beaming",
           "and",
           "gladness",
           "of",
