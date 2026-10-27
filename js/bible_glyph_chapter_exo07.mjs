@@ -152,7 +152,7 @@ export function bible_glyph_chapter_exo07() {
           "$i_am",
           "when",
           "I",
-          "stretch",
+          "$white_cane+doing",
           "out",
           "My",
           "$hand",
