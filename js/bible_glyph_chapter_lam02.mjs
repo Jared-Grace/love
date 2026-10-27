@@ -352,7 +352,7 @@ export function bible_glyph_chapter_lam02() {
           "and",
           "walls",
           "$loudly_crying+coffin;",
-          "together",
+          "$linked_paperclips+manner",
           "they",
           "waste",
           "away.",
