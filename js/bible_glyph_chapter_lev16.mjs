@@ -882,7 +882,7 @@ export function bible_glyph_chapter_lev16() {
           "He",
           "is",
           "to",
-          "bathe",
+          "$bathtub+doing",
           "his",
           "$meat",
           "with",
