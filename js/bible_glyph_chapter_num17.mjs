@@ -19,7 +19,7 @@ export function bible_glyph_chapter_num17() {
         verse_number: 2,
         words: [
           "$mouth",
-          "to",
+          "$toward",
           "the",
           "$son",
           "of",
