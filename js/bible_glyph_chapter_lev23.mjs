@@ -839,7 +839,7 @@ export function bible_glyph_chapter_lev23() {
       {
         verse_number: 29,
         words: [
-          "If",
+          "$pointing",
           "any",
           "$person_other",
           "does",
