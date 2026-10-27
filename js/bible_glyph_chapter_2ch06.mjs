@@ -1298,7 +1298,7 @@ export function bible_glyph_chapter_2ch06() {
           "$hands_praying+thing",
           "and",
           "their",
-          "plea,",
+          "$heart_orange+pleading,",
           "and",
           "$hammer+doing",
           "their",
