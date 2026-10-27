@@ -796,7 +796,7 @@ export function bible_glyph_chapter_jos24() {
           "incline",
           "your",
           "$heart_organ",
-          "to",
+          "$toward",
           "the",
           "$i_am,",
           "the",
