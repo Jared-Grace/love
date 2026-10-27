@@ -1865,7 +1865,7 @@ export function bible_glyph_chapter_gen24() {
           "just",
           "$footprints",
           "from",
-          "Beer-lahai-roi,",
+          "$well+sprout+eyes+doer+proper_name,",
           "for",
           "he",
           "was",
