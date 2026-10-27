@@ -923,7 +923,7 @@ export function bible_glyph_chapter_exo34() {
           "the",
           "$covenant,",
           "the",
-          "Ten",
+          "$ten",
           "$speech.",
         ],
       },
