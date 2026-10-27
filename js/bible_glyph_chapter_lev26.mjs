@@ -1261,7 +1261,7 @@ export function bible_glyph_chapter_lev26() {
           "and",
           "if",
           "their",
-          "uncircumcised",
+          "$no_entry+scissors+covenant",
           "$heart_organ",
           "will",
           "be",
