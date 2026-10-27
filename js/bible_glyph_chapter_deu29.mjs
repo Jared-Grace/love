@@ -771,7 +771,7 @@ export function bible_glyph_chapter_deu29() {
           "$flashlight",
           "$earth?",
           "Why",
-          "this",
+          "$flashlight",
           "great",
           "outburst",
           "of",
