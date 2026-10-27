@@ -1303,7 +1303,7 @@ export function bible_glyph_chapter_exo12() {
         words: [
           "At",
           "the",
-          "end",
+          "$stop_sign",
           "of",
           "the",
           "430",
