@@ -79,7 +79,7 @@ export function bible_glyph_chapter_lev19() {
           "$moai",
           "for",
           "yourselves.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
