@@ -1320,7 +1320,7 @@ export function bible_glyph_chapter_1ki08() {
           "his",
           "hands",
           "$toward",
-          "this",
+          "$flashlight",
           "$house,",
         ],
       },
