@@ -277,7 +277,7 @@ export function bible_glyph_chapter_gen06() {
         words: [
           "$proper_name$Noah",
           "had",
-          "three",
+          "$three",
           "$son:",
           "$proper_name$Shem,",
           "$proper_name$Ham,",
