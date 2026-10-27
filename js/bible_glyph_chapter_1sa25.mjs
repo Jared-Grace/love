@@ -1106,7 +1106,7 @@ export function bible_glyph_chapter_1sa25() {
           "$crown,",
           "may",
           "you",
-          "remember",
+          "$reminder_ribbon",
           "your",
           "servant.",
         ],
