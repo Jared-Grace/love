@@ -132,7 +132,7 @@ export function bible_glyph_chapter_pro08() {
           "and",
           "wickedness",
           "is",
-          "detestable",
+          "$vomiting",
           "to",
           "my",
           "lips.",
