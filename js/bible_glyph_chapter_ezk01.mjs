@@ -273,7 +273,7 @@ export function bible_glyph_chapter_ezk01() {
           "face",
           "of",
           "a",
-          "lion",
+          "$lion",
           "on",
           "the",
           "right",
