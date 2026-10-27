@@ -262,7 +262,7 @@ export function bible_glyph_chapter_lev09() {
           "he",
           "burned",
           "the",
-          "fat,",
+          "$bacon,",
           "the",
           "kidneys",
           "and",
