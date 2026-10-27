@@ -208,7 +208,7 @@ export function bible_glyph_chapter_lev12() {
           "of",
           "the",
           "$dove",
-          "or",
+          "$shuffle",
           "a",
           "turtledove",
           "for",
