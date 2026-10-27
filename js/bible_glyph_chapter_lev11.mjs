@@ -504,7 +504,7 @@ export function bible_glyph_chapter_lev11() {
           "All",
           "other",
           "$bird",
-          "insects",
+          "$lizard+crowd",
           "that",
           "have",
           "four",
