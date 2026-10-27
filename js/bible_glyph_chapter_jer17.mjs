@@ -414,7 +414,7 @@ export function bible_glyph_chapter_jer17() {
           "shame.",
           "All",
           "who",
-          "turn",
+          "$away+person",
           "away",
           "will",
           "be",
