@@ -787,7 +787,7 @@ export function bible_glyph_chapter_exo12() {
           "your",
           "$house",
           "and",
-          "strike",
+          "$fist+microbe",
           "you",
           "down.",
         ],
