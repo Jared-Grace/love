@@ -484,7 +484,7 @@ export function bible_glyph_chapter_exo19() {
           "$toward",
           "the",
           "$family,",
-          "Be",
+          "$link",
           "prepared",
           "for",
           "the",
