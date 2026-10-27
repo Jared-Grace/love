@@ -379,7 +379,7 @@ export function bible_glyph_chapter_exo23() {
           "to",
           "celebrate",
           "a",
-          "feast",
+          "$party_popper+doing",
           "to",
           "Me.",
         ],
