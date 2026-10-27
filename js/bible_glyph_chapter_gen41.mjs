@@ -537,7 +537,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "Then",
           "the",
-          "thin,",
+          "$bone+down_arrow+describing,",
           "$thumbs_down",
           "$bull",
           "$eating",
