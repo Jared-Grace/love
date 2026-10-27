@@ -67,7 +67,7 @@ export function bible_glyph_chapter_lev25() {
           "$year",
           "you",
           "may",
-          "sow",
+          "$seed+doing",
           "your",
           "$field",
           "and",
