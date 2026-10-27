@@ -647,7 +647,7 @@ export function bible_glyph_chapter_gen18() {
           "$proper_name$Sodom,",
           "but",
           "$father+map",
-          "remained",
+          "$repeat",
           "standing",
           "before",
           "the",
