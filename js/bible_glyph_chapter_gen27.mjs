@@ -594,7 +594,7 @@ export function bible_glyph_chapter_gen27() {
           "$hand+foot",
           "came",
           "close",
-          "to",
+          "$toward",
           "his",
           "$father",
           "$laughing+proper_name,",
