@@ -702,7 +702,7 @@ export function bible_glyph_chapter_1ki22() {
           "$speech,",
           "$me",
           "will",
-          "entice",
+          "$fishing_pole+doing",
           "him.",
           "And",
           "the",
