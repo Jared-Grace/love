@@ -999,7 +999,7 @@ export function bible_glyph_chapter_gen42() {
           "and",
           "you",
           "can",
-          "trade",
+          "$coin+walking+doing",
           "in",
           "the",
           "$earth.",
