@@ -582,7 +582,7 @@ export function bible_glyph_chapter_exo25() {
           "it",
           "a",
           "$gold",
-          "molding",
+          "$crown+around",
           "around.",
         ],
       },
