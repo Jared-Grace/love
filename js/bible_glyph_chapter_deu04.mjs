@@ -217,7 +217,7 @@ export function bible_glyph_chapter_deu04() {
           "$locked_with_pen",
           "and",
           "$speech,",
-          "Surely",
+          "$one+check",
           "this",
           "great",
           "$map",
