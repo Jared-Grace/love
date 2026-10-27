@@ -490,7 +490,7 @@ export function bible_glyph_chapter_gen22() {
           "the",
           "$i_am,",
           "$pointing",
-          "because",
+          "$information",
           "you",
           "have",
           "$hammer+doing",
