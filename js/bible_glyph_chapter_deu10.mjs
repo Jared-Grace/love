@@ -417,7 +417,7 @@ export function bible_glyph_chapter_deu10() {
           "you,",
           "but",
           "to",
-          "fear",
+          "$fear+doing",
           "the",
           "$i_am",
           "your",
