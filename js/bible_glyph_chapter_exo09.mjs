@@ -375,7 +375,7 @@ export function bible_glyph_chapter_exo09() {
           "the",
           "$morning",
           "and",
-          "stand",
+          "$person+round_pushpin+anchor+doing",
           "before",
           "$house+proper_name",
           "and",
