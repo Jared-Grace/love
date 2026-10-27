@@ -574,7 +574,7 @@ export function bible_glyph_chapter_jdg04() {
           "Do",
           "$no_entry",
           "be",
-          "afraid.",
+          "$fear+doing.",
           "So",
           "he",
           "entered",
