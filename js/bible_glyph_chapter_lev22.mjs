@@ -407,7 +407,7 @@ export function bible_glyph_chapter_lev22() {
           "as",
           "in",
           "her",
-          "youth,",
+          "$child+flexed_biceps+thing,",
           "she",
           "may",
           "share",
