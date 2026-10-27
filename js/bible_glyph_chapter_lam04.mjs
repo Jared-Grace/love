@@ -89,7 +89,7 @@ export function bible_glyph_chapter_lam04() {
           "$family",
           "has",
           "become",
-          "cruel,",
+          "$fist+angry_face+describing,",
           "like",
           "an",
           "ostrich",
