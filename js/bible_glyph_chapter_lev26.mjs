@@ -1300,7 +1300,7 @@ export function bible_glyph_chapter_lev26() {
           "and",
           "I",
           "will",
-          "remember",
+          "$reminder_ribbon",
           "the",
           "$earth.",
         ],
