@@ -13,7 +13,7 @@ export function bible_glyph_chapter_sng02() {
       {
         verse_number: 1,
         words: [
-          "I",
+          "$me",
           "am",
           "a",
           "rose",
