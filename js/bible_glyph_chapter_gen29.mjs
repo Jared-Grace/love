@@ -252,7 +252,7 @@ export function bible_glyph_chapter_gen29() {
       {
         verse_number: 9,
         words: [
-          "While",
+          "$repeat",
           "he",
           "was",
           "still",
