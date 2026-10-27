@@ -447,7 +447,7 @@ export function bible_glyph_chapter_pro16() {
       {
         verse_number: 22,
         words: [
-          "Understanding",
+          "$nerd_face+thing",
           "is",
           "a",
           "fountain",
