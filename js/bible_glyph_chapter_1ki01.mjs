@@ -268,7 +268,7 @@ export function bible_glyph_chapter_1ki01() {
         words: [
           "And",
           "Adonijah",
-          "sacrificed",
+          "$sacrifice",
           "$sheep,",
           "oxen",
           "and",
