@@ -532,7 +532,7 @@ export function bible_glyph_chapter_exo27() {
           "the",
           "$lamp",
           "$walking+pointing_up",
-          "continually.",
+          "$clock+infinity.",
         ],
       },
       {
