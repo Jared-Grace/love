@@ -70,7 +70,7 @@ export function bible_glyph_chapter_sng08() {
           "spiced",
           "$wine",
           "to",
-          "drink,",
+          "$cup+hands_giving,",
           "the",
           "nectar",
           "of",
