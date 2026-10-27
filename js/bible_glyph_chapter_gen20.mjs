@@ -555,7 +555,7 @@ export function bible_glyph_chapter_gen20() {
           "And",
           "$father+map",
           "$hands_praying",
-          "to",
+          "$toward",
           "$heart_on_fire,",
           "and",
           "$heart_on_fire",
