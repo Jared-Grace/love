@@ -115,7 +115,7 @@ export function bible_glyph_chapter_lev15() {
         words: [
           "Any",
           "$man_beard",
-          "who",
+          "$back+flashlight",
           "touches",
           "his",
           "$bed",
