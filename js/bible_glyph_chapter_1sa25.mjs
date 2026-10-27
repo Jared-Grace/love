@@ -302,7 +302,7 @@ export function bible_glyph_chapter_1sa25() {
           "$footprints,",
           "they",
           "$mouth",
-          "to",
+          "$toward",
           "$proper_name$Nabal",
           "all",
           "these",
