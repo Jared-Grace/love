@@ -272,7 +272,7 @@ export function bible_glyph_chapter_jos01() {
           "$writing_hand",
           "in",
           "it.",
-          "For",
+          "$pointing",
           "then",
           "you",
           "will",
