@@ -227,7 +227,7 @@ export function bible_glyph_chapter_num06() {
           "of",
           "his",
           "separation",
-          "he",
+          "$pointing_back",
           "is",
           "$sparkle",
           "to",
