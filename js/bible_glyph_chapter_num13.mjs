@@ -473,7 +473,7 @@ export function bible_glyph_chapter_num13() {
           "When",
           "they",
           "$footprints",
-          "to",
+          "$finish",
           "the",
           "Valley",
           "of",
