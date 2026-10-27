@@ -231,7 +231,7 @@ export function bible_glyph_chapter_psa019() {
           "than",
           "gold,",
           "than",
-          "much",
+          "$multiply",
           "pure",
           "gold;",
           "they",
