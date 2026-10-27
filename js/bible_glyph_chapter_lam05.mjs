@@ -212,7 +212,7 @@ export function bible_glyph_chapter_lam05() {
           "by",
           "their",
           "$hand;",
-          "elders",
+          "$old_man",
           "receive",
           "$no_entry",
           "$face.",
