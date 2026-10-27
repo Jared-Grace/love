@@ -701,7 +701,7 @@ export function bible_glyph_chapter_lev06() {
           "$blood",
           "is",
           "spattered",
-          "on",
+          "$pointing_up",
           "$garment,",
           "you",
           "must",
