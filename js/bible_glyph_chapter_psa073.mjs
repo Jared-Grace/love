@@ -215,7 +215,7 @@ export function bible_glyph_chapter_psa073() {
         verse_number: 12,
         words: [
           "$exclamation,",
-          "these",
+          "$flashlight+flashlight",
           "are",
           "the",
           "$thumbs_down,",
