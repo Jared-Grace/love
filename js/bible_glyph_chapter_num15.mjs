@@ -583,7 +583,7 @@ export function bible_glyph_chapter_num15() {
           "do",
           "$no_entry",
           "$hammer+doing",
-          "all",
+          "$all",
           "these",
           "$scroll",
           "that",
