@@ -34,7 +34,7 @@ export function bible_glyph_chapter_zep03() {
           "she",
           "$no_entry",
           "$hand_receiving",
-          "correction.",
+          "$teacher+exclamation.",
           "She",
           "does",
           "$no_entry",
