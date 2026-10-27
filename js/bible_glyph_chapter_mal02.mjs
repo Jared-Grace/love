@@ -231,7 +231,7 @@ export function bible_glyph_chapter_mal02() {
           "$scroll",
           "from",
           "his",
-          "mouth,",
+          "$face_with_open_mouth,",
           "because",
           "he",
           "is",
