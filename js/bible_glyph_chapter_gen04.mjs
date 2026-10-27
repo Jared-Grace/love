@@ -435,7 +435,7 @@ export function bible_glyph_chapter_gen04() {
           "will",
           "be",
           "avenged",
-          "sevenfold.",
+          "$seven+manner.",
           "And",
           "the",
           "$i_am",
