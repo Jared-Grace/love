@@ -82,7 +82,7 @@ export function bible_glyph_chapter_mic02() {
           "planning",
           "$pointing_up",
           "this",
-          "nation",
+          "$houses",
           "a",
           "$thumbs_down",
           "from",
