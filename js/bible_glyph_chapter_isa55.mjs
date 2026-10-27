@@ -183,7 +183,7 @@ export function bible_glyph_chapter_isa55() {
       {
         verse_number: 6,
         words: [
-          "Seek",
+          "$magnifying_glass+question",
           "the",
           "$i_am",
           "while",
