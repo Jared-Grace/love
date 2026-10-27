@@ -530,7 +530,7 @@ export function bible_glyph_chapter_1sa02() {
           "$hand_receiving",
           "it",
           "by",
-          "force.",
+          "$might+up_arrow+thing.",
         ],
       },
       {
