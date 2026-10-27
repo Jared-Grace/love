@@ -692,7 +692,7 @@ export function bible_glyph_chapter_exo21() {
           "$kitchen_knife+blood,",
           "$purple_circle+thing",
           "for",
-          "stripe.",
+          "$purple_circle+thing.",
         ],
       },
       {
