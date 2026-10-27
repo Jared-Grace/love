@@ -858,7 +858,7 @@ export function bible_glyph_chapter_deu32() {
           "$no_entry",
           "like",
           "our",
-          "Rock,",
+          "$rock,",
           "even",
           "our",
           "enemies",
