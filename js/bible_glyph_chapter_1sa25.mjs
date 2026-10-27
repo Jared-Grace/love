@@ -603,7 +603,7 @@ export function bible_glyph_chapter_1sa25() {
           "$hammer+doing",
           "ready,",
           "$five",
-          "seahs",
+          "$bucket+input_numbers+baby",
           "of",
           "roasted",
           "grain,",
