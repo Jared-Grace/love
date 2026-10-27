@@ -587,7 +587,7 @@ export function bible_glyph_chapter_jdg06() {
           "I",
           "will",
           "stay",
-          "until",
+          "$finish",
           "you",
           "$turn_back.",
         ],
