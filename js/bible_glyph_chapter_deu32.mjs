@@ -1350,7 +1350,7 @@ export function bible_glyph_chapter_deu32() {
           "the",
           "$i_am",
           "$mouth",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
         ],
       },
