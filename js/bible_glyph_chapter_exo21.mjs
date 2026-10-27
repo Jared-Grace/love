@@ -330,7 +330,7 @@ export function bible_glyph_chapter_exo21() {
           "free",
           "to",
           "$walking+tray_out,",
-          "without",
+          "$dotted_line_face",
           "any",
           "$silver.",
         ],
