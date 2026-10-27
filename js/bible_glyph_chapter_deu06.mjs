@@ -184,7 +184,7 @@ export function bible_glyph_chapter_deu06() {
       {
         verse_number: 6,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "$speech",
           "I",
           "am",
