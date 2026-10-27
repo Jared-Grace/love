@@ -985,7 +985,7 @@ export function bible_glyph_chapter_jdg16() {
           "they",
           "stationed",
           "him",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "pillars.",
         ],
