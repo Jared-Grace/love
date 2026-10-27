@@ -295,7 +295,7 @@ export function bible_glyph_chapter_isa06() {
           "of",
           "this",
           "$family",
-          "calloused;",
+          "$lotion_bottle+doing;",
           "deafen",
           "their",
           "ears",
