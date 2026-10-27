@@ -527,7 +527,7 @@ export function bible_glyph_chapter_hos02() {
           "and",
           "$no_entry",
           "longer",
-          "call",
+          "$waving_hand",
           "Me",
           "my",
           "Master.",
