@@ -284,7 +284,7 @@ export function bible_glyph_chapter_jer29() {
         verse_number: 9,
         words: [
           "$pointing",
-          "they",
+          "$pointing_back",
           "are",
           "falsely",
           "prophesying",
