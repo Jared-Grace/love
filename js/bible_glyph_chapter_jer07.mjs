@@ -814,7 +814,7 @@ export function bible_glyph_chapter_jer07() {
           "$ear",
           "Me",
           "$no_entry",
-          "incline",
+          "$white_cane+doing",
           "their",
           "ear,",
           "but",
