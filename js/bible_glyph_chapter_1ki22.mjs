@@ -163,7 +163,7 @@ export function bible_glyph_chapter_1ki22() {
           "$megaphone,",
           "about",
           "$four",
-          "hundred",
+          "$input_numbers+all",
           "$man_beard,",
           "and",
           "$speech",
