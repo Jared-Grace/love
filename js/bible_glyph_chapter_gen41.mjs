@@ -596,7 +596,7 @@ export function bible_glyph_chapter_gen41() {
           "I",
           "also",
           "$eye",
-          "seven",
+          "$seven",
           "heads",
           "of",
           "grain,",
