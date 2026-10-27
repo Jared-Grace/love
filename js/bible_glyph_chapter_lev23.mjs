@@ -185,7 +185,7 @@ export function bible_glyph_chapter_lev23() {
         verse_number: 8,
         words: [
           "For",
-          "seven",
+          "$seven",
           "$sun",
           "you",
           "are",
