@@ -24,7 +24,7 @@ export function bible_glyph_chapter_zec14() {
           "$footprints,",
           "when",
           "your",
-          "plunder",
+          "$plunder",
           "will",
           "be",
           "divided",
