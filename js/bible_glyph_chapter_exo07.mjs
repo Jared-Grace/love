@@ -775,7 +775,7 @@ export function bible_glyph_chapter_exo07() {
           "had",
           "struck",
           "the",
-          "Nile.",
+          "$crocodile.",
         ],
       },
     ],
