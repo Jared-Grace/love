@@ -410,7 +410,7 @@ export function bible_glyph_chapter_mal01() {
           "the",
           "$map.",
           "In",
-          "every",
+          "$all",
           "$place",
           "incense",
           "and",
