@@ -295,7 +295,7 @@ export function bible_glyph_chapter_exo11() {
           "Moses",
           "left",
           "the",
-          "presence",
+          "$linked_paperclips",
           "of",
           "$house+proper_name",
           "in",
