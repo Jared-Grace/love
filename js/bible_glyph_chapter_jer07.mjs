@@ -293,7 +293,7 @@ export function bible_glyph_chapter_jer07() {
           "bears",
           "My",
           "$name_tag",
-          "become",
+          "$link",
           "a",
           "$cave",
           "of",
