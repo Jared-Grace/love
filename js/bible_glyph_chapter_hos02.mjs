@@ -246,7 +246,7 @@ export function bible_glyph_chapter_hos02() {
           "$pointing",
           "it",
           "was",
-          "I",
+          "$me",
           "who",
           "$hands_giving",
           "her",
