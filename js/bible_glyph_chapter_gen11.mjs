@@ -217,7 +217,7 @@ export function bible_glyph_chapter_gen11() {
           "scattered",
           "them",
           "from",
-          "there",
+          "$telescope",
           "over",
           "the",
           "face",
