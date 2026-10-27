@@ -447,7 +447,7 @@ export function bible_glyph_chapter_gen16() {
           "$well+sprout+eyes+doer+proper_name.",
           "It",
           "is",
-          "between",
+          "$brain+arrow_both_ways",
           "$proper_name$Kadesh",
           "and",
           "$proper_name$Bered.",
