@@ -103,7 +103,7 @@ export function bible_glyph_chapter_jos06() {
           "front",
           "of",
           "the",
-          "ark.",
+          "$ark.",
           "Then",
           "on",
           "the",
