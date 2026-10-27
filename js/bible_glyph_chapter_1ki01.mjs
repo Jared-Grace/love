@@ -337,7 +337,7 @@ export function bible_glyph_chapter_1ki01() {
           "Nathan",
           "$speech",
           "$toward",
-          "Bathsheba,",
+          "$girl+family+raised_back_of_hand+proper_name,",
           "the",
           "$mother",
           "of",
