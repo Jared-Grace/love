@@ -396,7 +396,7 @@ export function bible_glyph_chapter_exo25() {
           "at",
           "the",
           "two",
-          "ends",
+          "$end_arrow+triangular_ruler",
           "of",
           "the",
           "lid.",
