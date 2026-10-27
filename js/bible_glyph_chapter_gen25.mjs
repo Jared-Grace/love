@@ -537,7 +537,7 @@ export function bible_glyph_chapter_gen25() {
           "When",
           "the",
           "$sun",
-          "came",
+          "$battery",
           "for",
           "her",
           "to",
