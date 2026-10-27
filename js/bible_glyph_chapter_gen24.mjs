@@ -1029,7 +1029,7 @@ export function bible_glyph_chapter_gen24() {
       },
       {
         verse_number: 34,
-        words: ["I", "am", "$father+map's", "$kneeling,", "he", "$speech."],
+        words: ["$me", "am", "$father+map's", "$kneeling,", "he", "$speech."],
       },
       {
         verse_number: 35,
