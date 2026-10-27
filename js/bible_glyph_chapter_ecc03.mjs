@@ -431,7 +431,7 @@ export function bible_glyph_chapter_ecc03() {
           "there",
           "is",
           "a",
-          "time",
+          "$clock",
           "for",
           "every",
           "activity",
