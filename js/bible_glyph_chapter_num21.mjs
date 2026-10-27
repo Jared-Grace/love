@@ -67,7 +67,7 @@ export function bible_glyph_chapter_num21() {
           "$hand,",
           "we",
           "will",
-          "devote",
+          "$bomb+altar+doing",
           "their",
           "$city",
           "to",
