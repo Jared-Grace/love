@@ -549,7 +549,7 @@ export function bible_glyph_chapter_exo05() {
           "$hands_giving",
           "the",
           "full",
-          "quota",
+          "$abacus+scales",
           "of",
           "bricks.",
         ],
