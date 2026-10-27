@@ -263,7 +263,7 @@ export function bible_glyph_chapter_jos03() {
           "$footprints",
           "to",
           "the",
-          "edge",
+          "$end_arrow+round_pushpin",
           "of",
           "the",
           "$water",
