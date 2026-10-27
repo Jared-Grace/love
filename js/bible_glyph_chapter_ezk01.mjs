@@ -737,7 +737,7 @@ export function bible_glyph_chapter_ezk01() {
           "the",
           "appearance",
           "of",
-          "sapphire,",
+          "$gem_stone+blue_circle,",
           "and",
           "on",
           "the",
