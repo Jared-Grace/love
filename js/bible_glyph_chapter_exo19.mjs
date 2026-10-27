@@ -217,7 +217,7 @@ export function bible_glyph_chapter_exo19() {
           "$family,",
           "and",
           "$palm_down",
-          "before",
+          "$face",
           "them",
           "all",
           "these",
