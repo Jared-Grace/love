@@ -92,7 +92,7 @@ export function bible_glyph_chapter_exo13() {
         verse_number: 4,
         words: [
           "$sun",
-          "you",
+          "$you",
           "are",
           "leaving,",
           "in",
