@@ -142,7 +142,7 @@ export function bible_glyph_chapter_exo03() {
         words: [
           "Do",
           "$no_entry",
-          "come",
+          "$magnet+doing",
           "any",
           "closer,",
           "God",
