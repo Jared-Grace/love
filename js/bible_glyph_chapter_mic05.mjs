@@ -13,7 +13,7 @@ export function bible_glyph_chapter_mic05() {
       {
         verse_number: 1,
         words: [
-          "Now,",
+          "$watch,",
           "O",
           "$woman",
           "of",
