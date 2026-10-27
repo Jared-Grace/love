@@ -951,7 +951,7 @@ export function bible_glyph_chapter_2sa12() {
           "So",
           "David",
           "$crowd+doing",
-          "all",
+          "$all",
           "the",
           "$family",
           "and",
