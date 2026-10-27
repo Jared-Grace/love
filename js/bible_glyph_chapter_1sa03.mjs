@@ -69,7 +69,7 @@ export function bible_glyph_chapter_1sa03() {
       {
         verse_number: 3,
         words: [
-          "Before",
+          "$clock+back",
           "the",
           "$lamp",
           "of",
