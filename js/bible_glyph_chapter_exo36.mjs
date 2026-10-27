@@ -394,7 +394,7 @@ export function bible_glyph_chapter_exo36() {
           "of",
           "the",
           "second",
-          "set,",
+          "$link+thread,",
           "so",
           "that",
           "the",
