@@ -258,7 +258,7 @@ export function bible_glyph_chapter_gen28() {
           "$father+map",
           "and",
           "the",
-          "sister",
+          "$sister",
           "of",
           "$proper_name$Nebaioth,",
           "in",
