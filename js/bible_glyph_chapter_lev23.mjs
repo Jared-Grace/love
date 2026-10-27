@@ -243,7 +243,7 @@ export function bible_glyph_chapter_lev23() {
           "you,",
           "and",
           "you",
-          "reap",
+          "$sheaf_of_rice+scissors+doing",
           "its",
           "$harvest,",
           "you",
