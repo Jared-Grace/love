@@ -30,7 +30,7 @@ export function bible_glyph_chapter_gen41() {
           "He",
           "was",
           "standing",
-          "beside",
+          "$pointing_up",
           "the",
           "Nile,",
         ],
