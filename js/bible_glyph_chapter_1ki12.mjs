@@ -642,7 +642,7 @@ export function bible_glyph_chapter_1ki12() {
           "of",
           "$two_hearts+proper_name",
           "to",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
