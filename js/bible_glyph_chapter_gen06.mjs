@@ -257,7 +257,7 @@ export function bible_glyph_chapter_gen06() {
           "of",
           "$proper_name$Noah.",
           "$proper_name$Noah",
-          "was",
+          "$link",
           "a",
           "$ruler",
           "man,",
