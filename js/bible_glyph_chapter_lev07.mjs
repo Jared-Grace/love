@@ -114,7 +114,7 @@ export function bible_glyph_chapter_lev07() {
         words: [
           "$priest",
           "shall",
-          "burn",
+          "$incense+doing",
           "them",
           "$altar",
           "as",
