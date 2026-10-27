@@ -1496,7 +1496,7 @@ export function bible_glyph_chapter_gen31() {
           "a",
           "$witness+thing,",
           "that",
-          "I",
+          "$me",
           "$no_entry",
           "cross",
           "this",
