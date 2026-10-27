@@ -214,7 +214,7 @@ export function bible_glyph_chapter_2ki11() {
           "at",
           "the",
           "$gate",
-          "behind",
+          "$next_track",
           "the",
           "guards.",
           "You",
