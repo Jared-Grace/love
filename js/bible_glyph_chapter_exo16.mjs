@@ -391,7 +391,7 @@ export function bible_glyph_chapter_exo16() {
           "have",
           "$ear",
           "the",
-          "grumbling",
+          "$pouting_face+voice",
           "of",
           "the",
           "$wrestling+heart_on_fire.",
