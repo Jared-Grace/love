@@ -210,7 +210,7 @@ export function bible_glyph_chapter_deu14() {
           "well",
           "as",
           "the",
-          "pig;",
+          "$pig;",
           "though",
           "it",
           "has",
