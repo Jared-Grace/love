@@ -499,7 +499,7 @@ export function bible_glyph_chapter_pro31() {
           "and",
           "she",
           "can",
-          "laugh",
+          "$laughing",
           "at",
           "the",
           "$sun",
