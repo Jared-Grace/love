@@ -170,7 +170,7 @@ export function bible_glyph_chapter_ecc03() {
           "$clock",
           "to",
           "be",
-          "silent",
+          "$mouth+locked",
           "and",
           "a",
           "$clock",
