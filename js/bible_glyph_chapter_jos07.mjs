@@ -848,7 +848,7 @@ export function bible_glyph_chapter_jos07() {
           "in",
           "the",
           "$earth",
-          "inside",
+          "$radio_button",
           "my",
           "tent,",
           "with",
