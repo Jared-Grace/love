@@ -270,7 +270,7 @@ export function bible_glyph_chapter_exo26() {
           "first",
           "set,",
           "and",
-          "fifty",
+          "$five+zero",
           "loops",
           "along",
           "the",
