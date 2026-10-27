@@ -668,7 +668,7 @@ export function bible_glyph_chapter_1ki01() {
           "$linked_paperclips",
           "his",
           "$father,",
-          "I",
+          "$me",
           "and",
           "my",
           "$son",
