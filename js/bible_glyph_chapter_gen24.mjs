@@ -892,7 +892,7 @@ export function bible_glyph_chapter_gen24() {
           "he",
           "$eye",
           "the",
-          "ring,",
+          "$nose+ring,",
           "and",
           "the",
           "bracelets",
