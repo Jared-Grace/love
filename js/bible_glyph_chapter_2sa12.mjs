@@ -1026,7 +1026,7 @@ export function bible_glyph_chapter_2sa12() {
           "were",
           "there",
           "and",
-          "put",
+          "$palm_down",
           "them",
           "to",
           "work",
