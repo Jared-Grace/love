@@ -555,7 +555,7 @@ export function bible_glyph_chapter_jdg02() {
           "$moai",
           "and",
           "$bowing",
-          "to",
+          "$toward",
           "them.",
           "They",
           "quickly",
