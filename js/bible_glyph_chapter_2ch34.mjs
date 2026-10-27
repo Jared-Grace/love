@@ -1225,7 +1225,7 @@ export function bible_glyph_chapter_2ch34() {
           "made",
           "a",
           "$covenant",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "to",
