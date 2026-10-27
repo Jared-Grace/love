@@ -18,7 +18,7 @@ export function bible_glyph_chapter_exo27() {
           "an",
           "$altar",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
           "five",
           "cubits",
