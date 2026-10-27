@@ -174,7 +174,7 @@ export function bible_glyph_chapter_1ki22() {
           "against",
           "$proper_name$Ramoth-gilead",
           "to",
-          "war,",
+          "$crossed_swords,",
           "or",
           "should",
           "I",
