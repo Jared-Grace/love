@@ -854,7 +854,7 @@ export function bible_glyph_chapter_gen41() {
           "will",
           "be",
           "so",
-          "severe.",
+          "$star+describing.",
         ],
       },
       {
