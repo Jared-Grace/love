@@ -382,7 +382,7 @@ export function bible_glyph_chapter_exo17() {
           "a",
           "$stone",
           "and",
-          "put",
+          "$palm_down",
           "it",
           "under",
           "him,",
