@@ -248,7 +248,7 @@ export function bible_glyph_chapter_jer31() {
           "$earth,",
           "including",
           "the",
-          "blind",
+          "$person_with_white_cane+describing",
           "and",
           "the",
           "lame,",
