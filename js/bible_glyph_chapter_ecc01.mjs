@@ -85,7 +85,7 @@ export function bible_glyph_chapter_ecc01() {
         verse_number: 5,
         words: [
           "The",
-          "sun",
+          "$sun_with_face",
           "$sun+up_arrow+doing",
           "and",
           "the",
