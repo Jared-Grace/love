@@ -423,7 +423,7 @@ export function bible_glyph_chapter_jer29() {
           "found",
           "by",
           "you,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "and",
