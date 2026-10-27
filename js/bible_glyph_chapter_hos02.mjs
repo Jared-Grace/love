@@ -162,7 +162,7 @@ export function bible_glyph_chapter_hos02() {
           "$yarn",
           "and",
           "linen,",
-          "oil",
+          "$lotion_bottle",
           "and",
           "drink.",
         ],
