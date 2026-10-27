@@ -39,7 +39,7 @@ export function bible_glyph_chapter_1ki20() {
           "he",
           "marched",
           "up,",
-          "besieged",
+          "$city+around+doing",
           "$guard+proper_name",
           "and",
           "waged",
