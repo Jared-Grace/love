@@ -253,7 +253,7 @@ export function bible_glyph_chapter_jos06() {
           "$face",
           "the",
           "$i_am",
-          "advanced",
+          "$bridge",
           "and",
           "blew",
           "the",
