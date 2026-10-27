@@ -478,7 +478,7 @@ export function bible_glyph_chapter_gen43() {
           "$clamp+proper_name",
           "and",
           "stood",
-          "before",
+          "$face",
           "$i_am+plus.",
         ],
       },
