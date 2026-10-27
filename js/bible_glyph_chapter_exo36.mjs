@@ -385,7 +385,7 @@ export function bible_glyph_chapter_exo36() {
           "curtain",
           "and",
           "$hammer+doing",
-          "fifty",
+          "$five+zero",
           "loops",
           "on",
           "the",
