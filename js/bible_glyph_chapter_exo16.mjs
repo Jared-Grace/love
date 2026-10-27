@@ -1131,7 +1131,7 @@ export function bible_glyph_chapter_exo16() {
       },
       {
         verse_number: 36,
-        words: ["Now", "an", "omer", "is", "a", "tenth", "of", "an", "ephah."],
+        words: ["Now", "an", "omer", "is", "a", "tenth", "of", "an", "$bucket+input_numbers."],
       },
     ],
   };
