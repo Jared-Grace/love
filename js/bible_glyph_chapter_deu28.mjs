@@ -1627,7 +1627,7 @@ export function bible_glyph_chapter_deu28() {
           "the",
           "$giraffe",
           "and",
-          "fortified",
+          "$wall+locked+describing",
           "$brick+shield",
           "in",
           "which",
