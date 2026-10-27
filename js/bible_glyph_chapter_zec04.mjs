@@ -95,7 +95,7 @@ export function bible_glyph_chapter_zec04() {
           "other",
           "on",
           "its",
-          "left.",
+          "$hand+away.",
         ],
       },
       {
