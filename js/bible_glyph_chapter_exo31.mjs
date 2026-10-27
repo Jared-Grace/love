@@ -329,7 +329,7 @@ export function bible_glyph_chapter_exo31() {
       {
         verse_number: 14,
         words: [
-          "Keep",
+          "$guard",
           "the",
           "$sabbath,",
           "for",
