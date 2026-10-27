@@ -129,7 +129,7 @@ export function bible_glyph_chapter_lev22() {
           "Whoever",
           "touches",
           "$all",
-          "defiled",
+          "$soap+no_entry",
           "by",
           "a",
           "dead",
