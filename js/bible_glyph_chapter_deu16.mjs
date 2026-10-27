@@ -456,7 +456,7 @@ export function bible_glyph_chapter_deu16() {
           "of",
           "Tabernacles",
           "for",
-          "seven",
+          "$seven",
           "$sun",
           "after",
           "you",
