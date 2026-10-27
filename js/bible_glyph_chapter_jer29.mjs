@@ -661,7 +661,7 @@ export function bible_glyph_chapter_jer29() {
           "of",
           "the",
           "$i_am,",
-          "all",
+          "$all",
           "you",
           "exiles",
           "I",
