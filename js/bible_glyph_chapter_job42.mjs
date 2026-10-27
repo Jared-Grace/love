@@ -152,7 +152,7 @@ export function bible_glyph_chapter_job42() {
           "and",
           "your",
           "$two",
-          "friends,",
+          "$person+sheep,",
           "for",
           "you",
           "have",
