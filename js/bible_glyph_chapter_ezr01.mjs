@@ -168,7 +168,7 @@ export function bible_glyph_chapter_ezr01() {
           "with",
           "$silver,",
           "$gold,",
-          "goods",
+          "$package+money_bag",
           "and",
           "livestock,",
           "along",
