@@ -310,7 +310,7 @@ export function bible_glyph_chapter_exo12() {
           "feet",
           "and",
           "your",
-          "staff",
+          "$wood+leaf",
           "in",
           "your",
           "$hand.",
