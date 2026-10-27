@@ -68,7 +68,7 @@ export function bible_glyph_chapter_num24() {
           "$wind",
           "of",
           "$heart_on_fire",
-          "came",
+          "$link",
           "upon",
           "him,",
         ],
