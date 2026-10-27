@@ -140,7 +140,7 @@ export function bible_glyph_chapter_1ki18() {
           "$earth",
           "to",
           "$all",
-          "spring",
+          "$spring",
           "and",
           "$all",
           "valley.",
