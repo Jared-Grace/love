@@ -83,7 +83,7 @@ export function bible_glyph_chapter_2ch20() {
           "and",
           "set",
           "his",
-          "face",
+          "$face",
           "to",
           "seek",
           "the",
