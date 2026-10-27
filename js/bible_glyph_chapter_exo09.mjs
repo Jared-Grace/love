@@ -538,7 +538,7 @@ export function bible_glyph_chapter_exo09() {
           "the",
           "worst",
           "$ice",
-          "that",
+          "$back+flashlight",
           "has",
           "$no_entry",
           "fallen",
