@@ -1016,7 +1016,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "whenever",
           "a",
-          "lion",
+          "$lion",
           "or",
           "a",
           "bear",
