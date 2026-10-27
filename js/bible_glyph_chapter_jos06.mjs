@@ -687,7 +687,7 @@ export function bible_glyph_chapter_jos06() {
           "shout,",
           "and",
           "the",
-          "wall",
+          "$brick+shield",
           "$person+pointing_down.",
           "Then",
           "all",
