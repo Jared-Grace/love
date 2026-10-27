@@ -184,7 +184,7 @@ export function bible_glyph_chapter_jos06() {
           "Take",
           "up",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$covenant,",
