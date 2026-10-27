@@ -739,7 +739,7 @@ export function bible_glyph_chapter_gen37() {
           "$herb+droplet,",
           "$droplet+bandage,",
           "and",
-          "myrrh",
+          "$tree+droplet",
           "on",
           "their",
           "$walking",
