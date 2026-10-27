@@ -289,7 +289,7 @@ export function bible_glyph_chapter_exo09() {
           "furnace",
           "and",
           "stood",
-          "before",
+          "$face",
           "$house+proper_name,",
           "and",
           "$fishing_pole+proper_name",
