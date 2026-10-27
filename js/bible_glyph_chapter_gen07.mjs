@@ -247,7 +247,7 @@ export function bible_glyph_chapter_gen07() {
           "$package,",
           "$reminder_ribbon+thing",
           "and",
-          "female,",
+          "$female_sign,",
           "as",
           "$heart_on_fire",
           "had",
