@@ -677,7 +677,7 @@ export function bible_glyph_chapter_gen47() {
           "and",
           "that",
           "the",
-          "land",
+          "$brown_square",
           "may",
           "$no_entry",
           "become",
