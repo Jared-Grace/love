@@ -786,7 +786,7 @@ export function bible_glyph_chapter_exo06() {
           "$mouth",
           "to",
           "him,",
-          "I",
+          "$me",
           "am",
           "$i_am.",
           "$mouth",
