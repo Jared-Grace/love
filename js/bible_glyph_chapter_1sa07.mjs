@@ -411,7 +411,7 @@ export function bible_glyph_chapter_1sa07() {
           "a",
           "$stone",
           "and",
-          "set",
+          "$palm_down",
           "it",
           "up",
           "between",
