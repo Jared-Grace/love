@@ -800,7 +800,7 @@ export function bible_glyph_chapter_exo36() {
           "also",
           "$hammer+doing",
           "five",
-          "crossbars",
+          "$door+locked",
           "of",
           "acacia",
           "$tree",
