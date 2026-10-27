@@ -111,7 +111,7 @@ export function bible_glyph_chapter_num19() {
           "$droplet+hand+doing",
           "that",
           "$blood",
-          "seven",
+          "$seven",
           "times",
           "$toward",
           "the",
