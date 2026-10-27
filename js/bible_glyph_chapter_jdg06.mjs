@@ -1160,7 +1160,7 @@ export function bible_glyph_chapter_jdg06() {
           "of",
           "the",
           "$compass+right_arrow",
-          "gathered",
+          "$crowd+doing",
           "together,",
           "crossed",
           "over",
