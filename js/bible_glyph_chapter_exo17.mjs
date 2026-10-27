@@ -453,7 +453,7 @@ export function bible_glyph_chapter_exo17() {
           "it",
           "to",
           "$i_am+rescue,",
-          "because",
+          "$pointing",
           "I",
           "will",
           "utterly",
