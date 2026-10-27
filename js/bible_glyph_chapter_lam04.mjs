@@ -400,7 +400,7 @@ export function bible_glyph_chapter_lam04() {
           "in",
           "the",
           "streets,",
-          "defiled",
+          "$nauseated_face+doing",
           "by",
           "this",
           "$blood,",
