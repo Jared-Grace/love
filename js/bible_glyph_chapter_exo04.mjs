@@ -928,7 +928,7 @@ export function bible_glyph_chapter_exo04() {
           "$i_am",
           "had",
           "$mouth",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name.",
           "And",
           "$proper_name$Moses",
