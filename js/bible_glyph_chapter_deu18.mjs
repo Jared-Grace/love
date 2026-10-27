@@ -224,7 +224,7 @@ export function bible_glyph_chapter_deu18() {
           "who",
           "$person+round_pushpin",
           "$telescope",
-          "before",
+          "$face",
           "the",
           "$i_am.",
         ],
