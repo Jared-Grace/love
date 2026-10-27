@@ -122,7 +122,7 @@ export function bible_glyph_chapter_neh01() {
           "When",
           "I",
           "$ear",
-          "these",
+          "$flashlight+flashlight",
           "$speech,",
           "I",
           "sat",
