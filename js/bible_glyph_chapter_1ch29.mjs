@@ -963,7 +963,7 @@ export function bible_glyph_chapter_1ch29() {
           "$pointing_up",
           "$wrestling+heart_on_fire",
           "were",
-          "forty",
+          "$four+zero",
           "years.",
           "Seven",
           "years",
