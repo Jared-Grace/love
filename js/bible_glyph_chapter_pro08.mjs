@@ -323,7 +323,7 @@ export function bible_glyph_chapter_pro08() {
           "and",
           "$star,",
           "enduring",
-          "wealth",
+          "$money_bag+more",
           "and",
           "$ruler+thing.",
         ],
