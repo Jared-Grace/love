@@ -594,7 +594,7 @@ export function bible_glyph_chapter_1sa03() {
           "from",
           "$proper_name$Dan",
           "$finish",
-          "Beersheba,",
+          "$well+seven+proper_name,",
           "$lightbulb",
           "that",
           "$ear+heart_on_fire",
