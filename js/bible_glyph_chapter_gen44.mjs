@@ -104,7 +104,7 @@ export function bible_glyph_chapter_gen44() {
       {
         verse_number: 4,
         words: [
-          "They",
+          "$pointing_back",
           "had",
           "$no_entry",
           "$walking+tray_out",
