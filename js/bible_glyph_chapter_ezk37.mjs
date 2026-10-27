@@ -328,7 +328,7 @@ export function bible_glyph_chapter_ezk37() {
           "-",
           "a",
           "vast",
-          "army.",
+          "$raised_fist.",
         ],
       },
       {
