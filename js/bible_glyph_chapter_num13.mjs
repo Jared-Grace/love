@@ -529,7 +529,7 @@ export function bible_glyph_chapter_num13() {
           "$son",
           "of",
           "Israel",
-          "cut",
+          "$scissors",
           "there.",
         ],
       },
