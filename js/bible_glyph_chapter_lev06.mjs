@@ -562,7 +562,7 @@ export function bible_glyph_chapter_lev06() {
           "$hammer+doing",
           "with",
           "oil",
-          "on",
+          "$pointing_up",
           "a",
           "griddle.",
           "$footprints",
