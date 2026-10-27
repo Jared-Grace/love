@@ -705,7 +705,7 @@ export function bible_glyph_chapter_1ki19() {
           "and",
           "threw",
           "his",
-          "cloak",
+          "$cloak+sparkles",
           "around",
           "him.",
         ],
