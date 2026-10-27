@@ -385,7 +385,7 @@ export function bible_glyph_chapter_exo05() {
           "pressing",
           "them,",
           "$speech,",
-          "Fulfill",
+          "$end_arrow",
           "your",
           "$speech",
           "of",
