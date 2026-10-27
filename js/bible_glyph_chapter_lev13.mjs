@@ -1756,7 +1756,7 @@ export function bible_glyph_chapter_lev13() {
           "isolated",
           "for",
           "another",
-          "seven",
+          "$seven",
           "$sun.",
         ],
       },
