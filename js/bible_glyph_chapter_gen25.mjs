@@ -772,7 +772,7 @@ export function bible_glyph_chapter_gen25() {
           "$bread",
           "and",
           "lentil",
-          "stew.",
+          "$pot_of_food+thing.",
           "He",
           "ate,",
           "and",
