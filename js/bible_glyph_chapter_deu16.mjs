@@ -531,7 +531,7 @@ export function bible_glyph_chapter_deu16() {
           "$i_am",
           "will",
           "$check_box,",
-          "because",
+          "$pointing",
           "the",
           "$i_am",
           "your",
