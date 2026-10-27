@@ -621,7 +621,7 @@ export function bible_glyph_chapter_mic07() {
           "will",
           "$throwing",
           "out",
-          "all",
+          "$all",
           "our",
           "$bow",
           "into",
