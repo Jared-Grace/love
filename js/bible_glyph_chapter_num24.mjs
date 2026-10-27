@@ -307,7 +307,7 @@ export function bible_glyph_chapter_num24() {
           "them",
           "these",
           "$three",
-          "times.",
+          "$drum.",
         ],
       },
       {
