@@ -1574,7 +1574,7 @@ export function bible_glyph_chapter_jer32() {
           "them",
           "from",
           "$turn_back+chains,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
