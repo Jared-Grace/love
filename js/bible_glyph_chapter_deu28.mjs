@@ -1433,7 +1433,7 @@ export function bible_glyph_chapter_deu28() {
           "$placard",
           "and",
           "a",
-          "wonder",
+          "$shooting_star",
           "upon",
           "you",
           "and",
