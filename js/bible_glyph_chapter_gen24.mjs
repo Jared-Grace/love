@@ -1261,7 +1261,7 @@ export function bible_glyph_chapter_gen24() {
           "my",
           "$crown",
           "$father+map,",
-          "if",
+          "$traffic_light",
           "only",
           "You",
           "would",
