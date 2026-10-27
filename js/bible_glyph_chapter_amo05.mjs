@@ -719,7 +719,7 @@ export function bible_glyph_chapter_amo05() {
           "$sacrifice",
           "and",
           "offerings",
-          "forty",
+          "$four+zero",
           "$year",
           "in",
           "the",
