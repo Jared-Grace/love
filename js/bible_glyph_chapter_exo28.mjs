@@ -1013,7 +1013,7 @@ export function bible_glyph_chapter_exo28() {
           "as",
           "on",
           "a",
-          "seal,",
+          "$ring+locked+thing,",
           "$sparkle+thing",
           "TO",
           "$i_am.",
