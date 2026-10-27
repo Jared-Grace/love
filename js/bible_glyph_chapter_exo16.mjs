@@ -1110,7 +1110,7 @@ export function bible_glyph_chapter_exo16() {
           "$finish",
           "they",
           "$footprints",
-          "to",
+          "$toward",
           "a",
           "$earth",
           "where",
