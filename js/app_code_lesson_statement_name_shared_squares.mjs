@@ -120,15 +120,15 @@ export function app_code_lesson_statement_name_shared_squares() {
   );
   function crossing_draw(box) {
     "the two rectangles of Do two rectangles overlap, their shared part 2 to 3 across and 1 to 3 down";
-    app_code_rectangles_edges_draw(
-      box,
-      4,
-      4,
-      [0, 3, 0, 3],
-      [2, 4, 1, 4],
-      [2, 3],
-      [1, 3],
-    );
+    app_code_rectangles_edges_draw({
+      parent: box,
+      columns: 4,
+      rows: 4,
+      first: [0, 3, 0, 3],
+      second: [2, 4, 1, 4],
+      across: [2, 3],
+      down: [1, 3],
+    });
   }
   let right_arrow = app_code_arrow_inline_draw(0);
   let down_arrow = app_code_arrow_inline_draw(90);

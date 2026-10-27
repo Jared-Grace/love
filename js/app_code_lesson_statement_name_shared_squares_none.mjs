@@ -149,15 +149,15 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   );
   function apart_draw(box) {
     "two rectangles apart corner to corner, so they share no square";
-    app_code_rectangles_edges_draw(
-      box,
-      5,
-      5,
-      [0, 2, 0, 2],
-      [3, 5, 3, 5],
-      null,
-      null,
-    );
+    app_code_rectangles_edges_draw({
+      parent: box,
+      columns: 5,
+      rows: 5,
+      first: [0, 2, 0, 2],
+      second: [3, 5, 3, 5],
+      across: null,
+      down: null,
+    });
   }
   let right_arrow = app_code_arrow_inline_draw(0);
   let down_arrow = app_code_arrow_inline_draw(90);

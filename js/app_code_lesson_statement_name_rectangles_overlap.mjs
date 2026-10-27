@@ -140,15 +140,15 @@ export function app_code_lesson_statement_name_rectangles_overlap() {
   ) {
     "the picture of two rectangles with their edges numbered, as an entry of the writing";
     function draw_inner(box) {
-      app_code_rectangles_edges_draw(
-        box,
+      app_code_rectangles_edges_draw({
+        parent: box,
         columns,
         rows,
         first,
         second,
-        across_inner,
-        down_inner,
-      );
+        across: across_inner,
+        down: down_inner,
+      });
     }
     return draw_inner;
   }
