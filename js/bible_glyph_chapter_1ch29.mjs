@@ -289,7 +289,7 @@ export function bible_glyph_chapter_1ch29() {
           "$gold,",
           "ten",
           "thousand",
-          "talents",
+          "$flying_disc",
           "of",
           "silver,",
           "eighteen",
