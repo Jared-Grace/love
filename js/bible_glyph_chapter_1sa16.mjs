@@ -94,7 +94,7 @@ export function bible_glyph_chapter_1sa16() {
           "have",
           "$footprints",
           "to",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "the",
           "$i_am.",
