@@ -981,7 +981,7 @@ export function bible_glyph_chapter_num18() {
       {
         verse_number: 28,
         words: [
-          "So",
+          "$right_arrow",
           "you",
           "are",
           "to",
