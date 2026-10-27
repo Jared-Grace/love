@@ -163,7 +163,7 @@ export function bible_glyph_chapter_pro16() {
           "enemies",
           "live",
           "at",
-          "peace",
+          "$peace+doing",
           "with",
           "him.",
         ],
