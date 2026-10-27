@@ -899,7 +899,7 @@ export function bible_glyph_chapter_2ki06() {
           "the",
           "threshing",
           "floor",
-          "or",
+          "$shuffle",
           "$tray_out",
           "the",
           "winepress?",
