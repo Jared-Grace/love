@@ -411,7 +411,7 @@ export function bible_glyph_chapter_exo06() {
       {
         verse_number: 14,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "were",
           "the",
           "heads",
