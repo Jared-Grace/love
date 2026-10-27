@@ -836,7 +836,7 @@ export function bible_glyph_chapter_gen30() {
           "the",
           "spotted",
           "and",
-          "speckled",
+          "$black_circle+describing",
           "among",
           "the",
           "$goat.",
