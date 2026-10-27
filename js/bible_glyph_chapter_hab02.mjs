@@ -324,7 +324,7 @@ export function bible_glyph_chapter_hab02() {
           "by",
           "cutting",
           "off",
-          "many",
+          "$multiply",
           "$family",
           "and",
           "$bow+doing",
