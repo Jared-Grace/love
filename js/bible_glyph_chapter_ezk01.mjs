@@ -723,7 +723,7 @@ export function bible_glyph_chapter_ezk01() {
         words: [
           "Above",
           "the",
-          "expanse",
+          "$sky+arrow_both_ways",
           "over",
           "their",
           "heads",
