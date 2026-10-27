@@ -946,7 +946,7 @@ export function bible_glyph_chapter_num22() {
           "I",
           "$no_entry",
           "the",
-          "donkey",
+          "$donkey",
           "you",
           "have",
           "ridden",
