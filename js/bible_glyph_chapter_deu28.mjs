@@ -1364,7 +1364,7 @@ export function bible_glyph_chapter_deu28() {
           "lend",
           "to",
           "him.",
-          "He",
+          "$pointing_back",
           "will",
           "be",
           "the",
