@@ -144,7 +144,7 @@ export function bible_glyph_chapter_psa022() {
       {
         verse_number: 7,
         words: [
-          "All",
+          "$all",
           "who",
           "$eye",
           "me",
