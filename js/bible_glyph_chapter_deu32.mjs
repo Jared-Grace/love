@@ -752,7 +752,7 @@ export function bible_glyph_chapter_deu32() {
           "I",
           "had",
           "not",
-          "dreaded",
+          "$luggage",
           "the",
           "taunt",
           "of",
