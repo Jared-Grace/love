@@ -688,7 +688,7 @@ export function bible_glyph_chapter_gen44() {
           "$no_entry",
           "$eye",
           "my",
-          "face",
+          "$face",
           "again.",
         ],
       },
