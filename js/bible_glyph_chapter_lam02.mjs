@@ -69,7 +69,7 @@ export function bible_glyph_chapter_lam02() {
           "$hand+foot.",
           "In",
           "His",
-          "wrath",
+          "$anger_symbol",
           "He",
           "has",
           "demolished",
