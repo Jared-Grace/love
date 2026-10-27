@@ -278,7 +278,7 @@ export function bible_glyph_chapter_dan12() {
           "has",
           "finally",
           "been",
-          "shattered,",
+          "$collision+doing,",
           "all",
           "these",
           "things",
