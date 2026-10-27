@@ -916,7 +916,7 @@ export function bible_glyph_chapter_jer07() {
           "the",
           "barren",
           "heights,",
-          "for",
+          "$pointing",
           "$i_am",
           "has",
           "rejected",
