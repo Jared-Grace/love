@@ -79,7 +79,7 @@ export function bible_glyph_chapter_psa027() {
           "will",
           "$no_entry",
           "fear;",
-          "though",
+          "$traffic_light",
           "a",
           "war",
           "breaks",
