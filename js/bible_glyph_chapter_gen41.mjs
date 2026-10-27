@@ -1398,7 +1398,7 @@ export function bible_glyph_chapter_gen41() {
           "the",
           "years",
           "of",
-          "famine",
+          "$famine",
           "$footprints,",
           "$two",
           "$son",
