@@ -1730,7 +1730,7 @@ export function bible_glyph_chapter_deu04() {
           "$sea",
           "of",
           "the",
-          "Arabah,",
+          "$desert+proper_name,",
           "below",
           "the",
           "slopes",
