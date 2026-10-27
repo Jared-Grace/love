@@ -573,7 +573,7 @@ export function bible_glyph_chapter_num32() {
           "the",
           "$pointing_down+proper_name",
           "and",
-          "beyond,",
+          "$telescope+right_arrow,",
           "because",
           "$footprints",
           "$inheritance",
