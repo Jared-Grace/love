@@ -191,7 +191,7 @@ export function bible_glyph_chapter_nam02() {
           "maidservants",
           "$horse+right_arrow+doing",
           "$voice",
-          "doves",
+          "$dove",
           "and",
           "beat",
           "upon",
