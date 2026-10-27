@@ -352,7 +352,7 @@ export function bible_glyph_chapter_hos11() {
           "of",
           "$wrestling+heart_on_fire",
           "with",
-          "deceit;",
+          "$lying_face+mouse_trap;",
           "but",
           "$hands_raised+proper_name",
           "still",
