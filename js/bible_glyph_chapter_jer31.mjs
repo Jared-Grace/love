@@ -711,7 +711,7 @@ export function bible_glyph_chapter_jer31() {
           "signposts.",
           "Keep",
           "the",
-          "highway",
+          "$road+up_arrow",
           "in",
           "$heart_organ,",
           "the",
