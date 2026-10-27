@@ -144,7 +144,7 @@ export function bible_glyph_chapter_lam04() {
           "$anchor",
           "in",
           "$worm",
-          "huddle",
+          "$people_hugging",
           "in",
           "ash",
           "heaps.",
