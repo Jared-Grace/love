@@ -408,7 +408,7 @@ export function bible_glyph_chapter_exo27() {
           "and",
           "finely",
           "spun",
-          "linen,",
+          "$thread+white_circle,",
           "embroidered,",
           "and",
           "it",
