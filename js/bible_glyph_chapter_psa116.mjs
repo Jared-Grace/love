@@ -117,7 +117,7 @@ export function bible_glyph_chapter_psa116() {
         words: [
           "The",
           "$i_am",
-          "preserves",
+          "$guard",
           "the",
           "simplehearted;",
           "I",
