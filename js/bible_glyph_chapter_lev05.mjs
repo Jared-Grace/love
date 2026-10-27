@@ -339,7 +339,7 @@ export function bible_glyph_chapter_lev05() {
           "$no_entry",
           "$running+hand_receiving+doing",
           "$two",
-          "turtledoves",
+          "$dove+ring",
           "or",
           "$two",
           "$son",
