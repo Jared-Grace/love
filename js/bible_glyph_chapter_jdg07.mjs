@@ -470,7 +470,7 @@ export function bible_glyph_chapter_jdg07() {
         words: [
           "And",
           "as",
-          "Gideon",
+          "$axe+proper_name",
           "$footprints,",
           "a",
           "$man_beard",
