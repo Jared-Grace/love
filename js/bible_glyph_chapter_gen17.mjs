@@ -222,7 +222,7 @@ export function bible_glyph_chapter_gen17() {
           "$heart_on_fire",
           "also",
           "$speech",
-          "to",
+          "$toward",
           "$father+map,",
           '"You',
           "must",
