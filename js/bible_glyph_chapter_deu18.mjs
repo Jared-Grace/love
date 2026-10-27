@@ -123,7 +123,7 @@ export function bible_glyph_chapter_deu18() {
           "firstfruits",
           "of",
           "your",
-          "grain,",
+          "$wheat+barley,",
           "new",
           "$wine",
           "and",
