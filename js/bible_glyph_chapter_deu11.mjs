@@ -969,7 +969,7 @@ export function bible_glyph_chapter_deu11() {
           "and",
           "the",
           "curse",
-          "on",
+          "$pointing_up",
           "$mountain",
           "$proper_name$Ebal.",
         ],
