@@ -1157,7 +1157,7 @@ export function bible_glyph_chapter_deu04() {
           "$heart_on_fire",
           "$milky_way+doing",
           "$person",
-          "on",
+          "$pointing_up",
           "the",
           "$earth,",
           "and",
