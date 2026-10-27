@@ -192,7 +192,7 @@ export function bible_glyph_chapter_deu15() {
       {
         verse_number: 7,
         words: [
-          "If",
+          "$pointing",
           "there",
           "is",
           "a",
