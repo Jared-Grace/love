@@ -344,7 +344,7 @@ export function bible_glyph_chapter_mal01() {
       {
         verse_number: 10,
         words: [
-          "Oh,",
+          "$person+question,",
           "that",
           "one",
           "of",
