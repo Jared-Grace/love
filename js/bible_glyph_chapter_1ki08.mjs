@@ -1846,7 +1846,7 @@ export function bible_glyph_chapter_1ki08() {
       {
         verse_number: 53,
         words: [
-          "For",
+          "$pointing",
           "You",
           "have",
           "set",
