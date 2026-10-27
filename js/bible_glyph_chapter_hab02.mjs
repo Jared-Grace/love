@@ -452,7 +452,7 @@ export function bible_glyph_chapter_hab02() {
           "$plus+exclamation",
           "they",
           "are",
-          "drunk,",
+          "$woozy_face+doing,",
           "in",
           "order",
           "to",
