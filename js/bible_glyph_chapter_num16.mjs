@@ -937,7 +937,7 @@ export function bible_glyph_chapter_num16() {
           "will",
           "$lightbulb",
           "that",
-          "these",
+          "$flashlight+flashlight",
           "men",
           "have",
           "treated",
