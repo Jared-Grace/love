@@ -153,7 +153,7 @@ export function bible_glyph_chapter_gen14() {
           "$tree+flexed_biceps+crown+sparkle+proper_name,",
           "which",
           "is",
-          "near",
+          "$pointing_up",
           "the",
           "$wilderness.",
         ],
