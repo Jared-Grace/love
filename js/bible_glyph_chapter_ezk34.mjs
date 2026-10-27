@@ -492,7 +492,7 @@ export function bible_glyph_chapter_ezk34() {
       {
         verse_number: 15,
         words: [
-          "I",
+          "$me",
           "Myself",
           "will",
           "tend",
