@@ -216,7 +216,7 @@ export function bible_glyph_chapter_isa58() {
         verse_number: 6,
         words: [
           "$no_entry",
-          "this",
+          "$flashlight",
           "the",
           "fast",
           "that",
