@@ -391,7 +391,7 @@ export function bible_glyph_chapter_job42() {
           "daughter",
           "$proper_name$Jemimah,",
           "his",
-          "second",
+          "$second_place",
           "$proper_name$Keziah,",
           "and",
           "his",
