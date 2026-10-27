@@ -799,7 +799,7 @@ export function bible_glyph_chapter_gen47() {
           "you",
           "and",
           "your",
-          "land",
+          "$brown_square",
           "for",
           "$house+proper_name",
           "this",
