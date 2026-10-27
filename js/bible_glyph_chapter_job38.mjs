@@ -471,7 +471,7 @@ export function bible_glyph_chapter_job38() {
           "is",
           "the",
           "$light",
-          "dispersed,",
+          "$pizza+doing,",
           "or",
           "the",
           "east",
