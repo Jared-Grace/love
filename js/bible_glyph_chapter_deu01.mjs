@@ -1276,7 +1276,7 @@ export function bible_glyph_chapter_deu01() {
           "up",
           "and",
           "fight,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "$no_entry",
