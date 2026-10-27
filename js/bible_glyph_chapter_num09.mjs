@@ -270,7 +270,7 @@ export function bible_glyph_chapter_num09() {
           "$man_beard",
           "of",
           "you",
-          "or",
+          "$shuffle",
           "of",
           "your",
           "descendants",
