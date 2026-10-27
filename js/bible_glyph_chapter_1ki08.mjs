@@ -2057,7 +2057,7 @@ export function bible_glyph_chapter_1ki08() {
           "the",
           "$i_am",
           "be",
-          "near",
+          "$magnet",
           "to",
           "the",
           "$i_am",
