@@ -562,7 +562,7 @@ export function bible_glyph_chapter_pro01() {
           "but",
           "will",
           "$no_entry",
-          "find",
+          "$magnifying_glass+exclamation",
           "me.",
         ],
       },
