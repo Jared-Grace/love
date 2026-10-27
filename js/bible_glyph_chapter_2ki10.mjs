@@ -914,7 +914,7 @@ export function bible_glyph_chapter_2ki10() {
           "stationed",
           "eighty",
           "$man_beard",
-          "outside",
+          "$sun_behind_small_cloud",
           "and",
           "$speech",
           "to",
