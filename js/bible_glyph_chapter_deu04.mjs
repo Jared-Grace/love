@@ -1183,7 +1183,7 @@ export function bible_glyph_chapter_deu04() {
           "$speech",
           "ever",
           "happened,",
-          "or",
+          "$shuffle",
           "has",
           "the",
           "like",
