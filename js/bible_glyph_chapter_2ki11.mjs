@@ -48,7 +48,7 @@ export function bible_glyph_chapter_2ki11() {
           "$proper_name$Joram",
           "and",
           "the",
-          "sister",
+          "$sister",
           "of",
           "$proper_name$Ahaziah,",
           "$hand_receiving",
