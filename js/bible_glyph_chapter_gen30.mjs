@@ -1026,7 +1026,7 @@ export function bible_glyph_chapter_gen30() {
           "that",
           "$footprints",
           "to",
-          "drink.",
+          "$cup_with_straw.",
           "And",
           "the",
           "$sheep",
