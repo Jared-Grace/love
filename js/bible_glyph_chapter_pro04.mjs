@@ -478,7 +478,7 @@ export function bible_glyph_chapter_pro04() {
           "$curly_loop+mouth",
           "from",
           "your",
-          "mouth;",
+          "$face_with_open_mouth;",
           "keep",
           "perverse",
           "speech",
