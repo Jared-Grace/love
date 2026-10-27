@@ -1210,7 +1210,7 @@ export function bible_glyph_chapter_num14() {
           "$flashlight+flashlight",
           "$speech",
           "$toward",
-          "all",
+          "$all",
           "the",
           "$son",
           "of",
