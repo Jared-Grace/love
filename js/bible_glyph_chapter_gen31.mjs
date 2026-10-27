@@ -223,7 +223,7 @@ export function bible_glyph_chapter_gen31() {
           "took",
           "$hand+rescue",
           "the",
-          "livestock",
+          "$coin+cow_face",
           "of",
           "your",
           "$father",
