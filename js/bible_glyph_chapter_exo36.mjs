@@ -616,7 +616,7 @@ export function bible_glyph_chapter_exo36() {
           "$two",
           "$hand",
           "connected",
-          "to",
+          "$toward",
           "one",
           "another,",
           "and",
