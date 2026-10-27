@@ -1504,7 +1504,7 @@ export function bible_glyph_chapter_lev13() {
           "and",
           "cry",
           "out,",
-          "Unclean,",
+          "$soap+no_entry,",
           "unclean.",
         ],
       },
