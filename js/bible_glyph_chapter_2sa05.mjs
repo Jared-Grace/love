@@ -42,7 +42,7 @@ export function bible_glyph_chapter_2sa05() {
       {
         verse_number: 2,
         words: [
-          "Even",
+          "$plus",
           "in",
           "times",
           "past,",
