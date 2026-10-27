@@ -399,7 +399,7 @@ export function bible_glyph_chapter_gen33() {
           "of",
           "the",
           "$child,",
-          "until",
+          "$finish",
           "I",
           "$footprints",
           "to",
