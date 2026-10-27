@@ -1445,7 +1445,7 @@ export function bible_glyph_chapter_2ki04() {
           "$eating,",
           "Elisha",
           "$speech,",
-          "for",
+          "$pointing",
           "this",
           "is",
           "what",
