@@ -524,7 +524,7 @@ export function bible_glyph_chapter_zec14() {
           "animals",
           "in",
           "those",
-          "camps.",
+          "$camp.",
         ],
       },
       {
