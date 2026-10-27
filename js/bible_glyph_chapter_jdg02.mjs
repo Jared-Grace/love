@@ -131,7 +131,7 @@ export function bible_glyph_chapter_jdg02() {
           "will",
           "be",
           "a",
-          "snare",
+          "$snare",
           "to",
           "you.",
         ],
