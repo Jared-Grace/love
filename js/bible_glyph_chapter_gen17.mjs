@@ -304,7 +304,7 @@ export function bible_glyph_chapter_gen17() {
           "after",
           "generation,",
           "every",
-          "male",
+          "$reminder_ribbon+thing",
           "among",
           "you",
           "must",
