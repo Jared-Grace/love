@@ -244,7 +244,7 @@ export function bible_glyph_chapter_num09() {
           "until",
           "I",
           "$ear",
-          "what",
+          "$flashlight+question",
           "$i_am",
           "commands",
           "concerning",
