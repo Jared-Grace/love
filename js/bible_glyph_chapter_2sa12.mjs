@@ -69,7 +69,7 @@ export function bible_glyph_chapter_2sa12() {
           "$dotted_line_face",
           "$pointing",
           "$one",
-          "small",
+          "$pinching_hand",
           "ewe",
           "$lamb+female_sign",
           "that",
