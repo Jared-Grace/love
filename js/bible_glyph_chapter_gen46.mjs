@@ -94,7 +94,7 @@ export function bible_glyph_chapter_gen46() {
           "you",
           "into",
           "a",
-          "great",
+          "$top",
           "$map",
           "there.",
         ],
