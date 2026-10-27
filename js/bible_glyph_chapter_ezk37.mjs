@@ -45,7 +45,7 @@ export function bible_glyph_chapter_ezk37() {
           "valley;",
           "$pointing_back",
           "was",
-          "full",
+          "$battery+describing",
           "of",
           "bones.",
         ],
