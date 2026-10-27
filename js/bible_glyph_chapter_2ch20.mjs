@@ -85,7 +85,7 @@ export function bible_glyph_chapter_2ch20() {
           "his",
           "$face",
           "to",
-          "seek",
+          "$magnifying_glass+question",
           "the",
           "$i_am.",
           "And",
