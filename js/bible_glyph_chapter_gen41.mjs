@@ -1043,7 +1043,7 @@ export function bible_glyph_chapter_gen41() {
           "them,",
           '"Can',
           "we",
-          "find",
+          "$magnifying_glass+exclamation",
           "anyone",
           "like",
           "this",
