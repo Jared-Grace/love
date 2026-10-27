@@ -708,7 +708,7 @@ export function bible_glyph_chapter_exo12() {
           "cluster",
           "of",
           "$herb+bouquet,",
-          "dip",
+          "$down_arrow+water+doing",
           "it",
           "into",
           "the",
