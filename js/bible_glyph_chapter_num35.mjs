@@ -140,7 +140,7 @@ export function bible_glyph_chapter_num35() {
           "cubits",
           "on",
           "the",
-          "east,",
+          "$compass+right_arrow,",
           "two",
           "thousand",
           "on",
