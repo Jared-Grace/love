@@ -656,7 +656,7 @@ export function bible_glyph_chapter_exo16() {
           "it",
           "$tray_out",
           "$finish",
-          "morning,",
+          "$morning,",
           "and",
           "it",
           "became",
