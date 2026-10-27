@@ -206,7 +206,7 @@ export function bible_glyph_chapter_isa55() {
           "Let",
           "the",
           "$thumbs_down",
-          "forsake",
+          "$derelict_house+doing",
           "his",
           "$road",
           "and",
