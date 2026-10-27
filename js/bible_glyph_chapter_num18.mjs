@@ -949,7 +949,7 @@ export function bible_glyph_chapter_num18() {
           "to",
           "$i_am,",
           "a",
-          "tithe",
+          "$ten+hands_giving",
           "$tray_out",
           "the",
           "tithe.",
