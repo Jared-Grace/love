@@ -430,7 +430,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "$no_entry",
           "$down_arrow+manner,",
-          "if",
+          "$pointing",
           "you",
           "$ear",
           "to",
