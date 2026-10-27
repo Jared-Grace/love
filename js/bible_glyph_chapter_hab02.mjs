@@ -107,7 +107,7 @@ export function bible_glyph_chapter_hab02() {
           "and",
           "will",
           "$no_entry",
-          "delay.",
+          "$turtle+doing.",
         ],
       },
       {
