@@ -904,7 +904,7 @@ export function bible_glyph_chapter_1sa25() {
           "and",
           "all",
           "who",
-          "seek",
+          "$magnifying_glass",
           "$thumbs_down",
           "against",
           "my",
