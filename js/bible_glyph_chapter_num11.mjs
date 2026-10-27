@@ -1097,7 +1097,7 @@ export function bible_glyph_chapter_num11() {
           "of",
           "the",
           "$i_am",
-          "burned",
+          "$angry_face+doing",
           "against",
           "the",
           "$family,",
