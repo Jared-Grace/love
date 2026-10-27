@@ -539,7 +539,7 @@ export function bible_glyph_chapter_deu04() {
           "you",
           "$eye",
           "$no_entry",
-          "form",
+          "$framed_picture+person",
           "of",
           "any",
           "kind",
