@@ -573,7 +573,7 @@ export function bible_glyph_chapter_deu16() {
           "are",
           "to",
           "$eye",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "your",
