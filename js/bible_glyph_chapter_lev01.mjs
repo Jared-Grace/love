@@ -448,7 +448,7 @@ export function bible_glyph_chapter_lev01() {
           "it",
           "to",
           "the",
-          "east",
+          "$compass+right_arrow",
           "$children_crossing",
           "of",
           "$altar,",
