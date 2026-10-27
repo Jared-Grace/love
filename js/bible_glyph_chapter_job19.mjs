@@ -172,7 +172,7 @@ export function bible_glyph_chapter_job19() {
           "He",
           "tears",
           "me",
-          "down",
+          "$wall+down_arrow+doing",
           "on",
           "every",
           "side",
