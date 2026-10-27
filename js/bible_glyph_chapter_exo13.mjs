@@ -382,7 +382,7 @@ export function bible_glyph_chapter_exo13() {
           "to",
           "break",
           "its",
-          "neck.",
+          "$back+scarf+collision+doing.",
           "And",
           "$all",
           "firstborn",
