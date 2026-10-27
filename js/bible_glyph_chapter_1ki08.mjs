@@ -2092,7 +2092,7 @@ export function bible_glyph_chapter_1ki08() {
         words: [
           "so",
           "that",
-          "all",
+          "$all",
           "the",
           "$family",
           "of",
