@@ -28,7 +28,7 @@ export function bible_glyph_chapter_isa55() {
           "$dotted_line_face",
           "$silver,",
           "$walking,",
-          "buy,",
+          "$wheat+coin+doing,",
           "and",
           "$eating!",
           "$walking,",
