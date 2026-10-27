@@ -225,7 +225,7 @@ export function bible_glyph_chapter_est04() {
           "exact",
           "amount",
           "of",
-          "money",
+          "$silver",
           "$back+flashlight",
           "$proper_name$Haman",
           "had",
