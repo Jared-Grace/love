@@ -288,7 +288,7 @@ export function bible_glyph_chapter_gen14() {
           "and",
           "the",
           "rest",
-          "fled",
+          "$running+dashing_away",
           "to",
           "the",
           "$mountain.",
