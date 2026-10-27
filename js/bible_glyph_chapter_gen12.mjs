@@ -365,7 +365,7 @@ export function bible_glyph_chapter_gen12() {
           "they",
           "will",
           "$speech,",
-          "This",
+          "$flashlight",
           "is",
           "his",
           "$woman.",
