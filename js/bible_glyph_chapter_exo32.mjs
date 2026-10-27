@@ -590,7 +590,7 @@ export function bible_glyph_chapter_exo32() {
           "$public_address+thing,",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "The",
           "$voice",
