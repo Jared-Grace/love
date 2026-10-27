@@ -119,7 +119,7 @@ export function bible_glyph_chapter_gen47() {
           "there",
           "is",
           "no",
-          "pasture",
+          "$person+sheep+place",
           "for",
           "the",
           "$sheep",
