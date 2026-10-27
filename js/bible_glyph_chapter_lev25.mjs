@@ -75,7 +75,7 @@ export function bible_glyph_chapter_lev25() {
           "your",
           "$vineyard",
           "and",
-          "gather",
+          "$crowd+doing",
           "its",
           "crops.",
         ],
