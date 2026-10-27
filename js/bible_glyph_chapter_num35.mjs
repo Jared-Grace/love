@@ -1031,7 +1031,7 @@ export function bible_glyph_chapter_num35() {
           "$me,",
           "$i_am,",
           "$tent+doing",
-          "among",
+          "$radio_button",
           "the",
           "$son",
           "of",
