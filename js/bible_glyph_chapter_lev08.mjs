@@ -44,7 +44,7 @@ export function bible_glyph_chapter_lev08() {
           "and",
           "assemble",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "at",
           "the",
