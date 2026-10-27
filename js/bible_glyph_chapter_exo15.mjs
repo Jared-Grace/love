@@ -291,7 +291,7 @@ export function bible_glyph_chapter_exo15() {
           "$i_am?",
           "$person+question",
           "is",
-          "like",
+          "$likeness",
           "You,",
           "majestic",
           "in",
