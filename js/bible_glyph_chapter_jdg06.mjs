@@ -111,7 +111,7 @@ export function bible_glyph_chapter_jdg06() {
           "the",
           "$earth",
           "as",
-          "far",
+          "$finish",
           "as",
           "$proper_name$Gaza.",
           "They",
