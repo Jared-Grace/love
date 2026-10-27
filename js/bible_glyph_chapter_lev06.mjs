@@ -494,7 +494,7 @@ export function bible_glyph_chapter_lev06() {
           "This",
           "is",
           "$hourglass",
-          "portion",
+          "$locked_with_pen",
           "for",
           "the",
           "generations",
