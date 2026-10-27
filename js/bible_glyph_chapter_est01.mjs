@@ -189,7 +189,7 @@ export function bible_glyph_chapter_est01() {
           "Gold",
           "and",
           "$silver",
-          "couches",
+          "$bed",
           "were",
           "arranged",
           "on",
