@@ -480,7 +480,7 @@ export function bible_glyph_chapter_num25() {
       {
         verse_number: 18,
         words: [
-          "for",
+          "$pointing",
           "they",
           "assailed",
           "you",
