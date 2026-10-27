@@ -724,7 +724,7 @@ export function bible_glyph_chapter_num08() {
           "$no_entry",
           "$kneeling+doing",
           "any",
-          "longer.",
+          "$repeat.",
         ],
       },
       {
