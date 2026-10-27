@@ -394,7 +394,7 @@ export function bible_glyph_chapter_num09() {
           "from",
           "his",
           "$family,",
-          "because",
+          "$pointing",
           "he",
           "did",
           "$no_entry",
