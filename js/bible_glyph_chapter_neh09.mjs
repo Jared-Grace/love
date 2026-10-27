@@ -1206,7 +1206,7 @@ export function bible_glyph_chapter_neh09() {
           "all",
           "the",
           "hardship",
-          "that",
+          "$back+flashlight",
           "has",
           "come",
           "upon",
