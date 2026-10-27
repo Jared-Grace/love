@@ -716,7 +716,7 @@ export function bible_glyph_chapter_lev26() {
           "with",
           "hostility,",
           "and",
-          "I",
+          "$me",
           "will",
           "$fist",
           "you",
