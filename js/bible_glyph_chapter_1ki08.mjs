@@ -160,7 +160,7 @@ export function bible_glyph_chapter_1ki08() {
           "assembled",
           "with",
           "him",
-          "sacrificed",
+          "$sacrifice",
           "so",
           "many",
           "$sheep",
