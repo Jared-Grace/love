@@ -456,7 +456,7 @@ export function bible_glyph_chapter_gen06() {
           "$package,",
           "and",
           "$down_arrow+describing,",
-          "middle,",
+          "$second_place,",
           "and",
           "upper",
           "decks.",
