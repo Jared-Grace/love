@@ -264,7 +264,7 @@ export function bible_glyph_chapter_exo09() {
           "$clamp+proper_name,",
           "and",
           "festering",
-          "boils",
+          "$fire+microbe",
           "will",
           "break",
           "out",
