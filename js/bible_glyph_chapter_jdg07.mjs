@@ -264,7 +264,7 @@ export function bible_glyph_chapter_jdg07() {
           "$proper_name$Gideon,",
           "With",
           "the",
-          "three",
+          "$three",
           "hundred",
           "$man_beard",
           "who",
