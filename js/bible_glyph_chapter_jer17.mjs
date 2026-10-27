@@ -464,7 +464,7 @@ export function bible_glyph_chapter_jer17() {
       {
         verse_number: 15,
         words: [
-          "Behold,",
+          "$exclamation,",
           "they",
           "keep",
           "$speech",
