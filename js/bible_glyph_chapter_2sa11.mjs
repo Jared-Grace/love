@@ -448,7 +448,7 @@ export function bible_glyph_chapter_2sa11() {
         words: [
           "Then",
           "$two_hearts+proper_name",
-          "invited",
+          "$waving_hand",
           "Uriah",
           "to",
           "$eating",
