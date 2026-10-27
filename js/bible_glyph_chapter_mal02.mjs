@@ -209,7 +209,7 @@ export function bible_glyph_chapter_mal02() {
           "$turn_back",
           "$multiply",
           "from",
-          "iniquity.",
+          "$cyclone.",
         ],
       },
       {
