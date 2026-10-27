@@ -632,7 +632,7 @@ export function bible_glyph_chapter_jdg11() {
           "$speech",
           "to",
           "him,",
-          "Please",
+          "$pleading",
           "let",
           "us",
           "$bridge",
