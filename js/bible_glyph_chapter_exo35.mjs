@@ -450,7 +450,7 @@ export function bible_glyph_chapter_exo35() {
         words: [
           "Then",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "the",
