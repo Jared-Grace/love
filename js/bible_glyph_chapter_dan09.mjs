@@ -432,7 +432,7 @@ export function bible_glyph_chapter_dan09() {
           "$scroll",
           "of",
           "$fishing_pole+proper_name,",
-          "all",
+          "$all",
           "this",
           "$thumbs_down",
           "has",
