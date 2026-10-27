@@ -514,7 +514,7 @@ export function bible_glyph_chapter_pro03() {
           "confidence",
           "and",
           "will",
-          "keep",
+          "$guard",
           "your",
           "$foot",
           "from",
