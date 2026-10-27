@@ -260,7 +260,7 @@ export function bible_glyph_chapter_zec09() {
           "My",
           "people,",
           "$pointing",
-          "now",
+          "$watch",
           "I",
           "$eye",
           "with",
