@@ -72,7 +72,7 @@ export function bible_glyph_chapter_exo32() {
         verse_number: 2,
         words: [
           "So",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$speech",
           "to",
           "them,",
