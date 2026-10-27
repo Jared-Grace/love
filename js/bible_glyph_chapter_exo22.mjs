@@ -543,7 +543,7 @@ export function bible_glyph_chapter_exo22() {
           "her,",
           "he",
           "must",
-          "pay",
+          "$coin+ring+doing",
           "the",
           "full",
           "dowry",
