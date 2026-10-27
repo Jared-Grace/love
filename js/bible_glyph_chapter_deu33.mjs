@@ -403,7 +403,7 @@ export function bible_glyph_chapter_deu33() {
           "with",
           "the",
           "bountiful",
-          "harvest",
+          "$fruit+basket",
           "from",
           "the",
           "sun",
