@@ -243,7 +243,7 @@ export function bible_glyph_chapter_psa116() {
           "of",
           "salvation",
           "and",
-          "call",
+          "$waving_hand",
           "on",
           "the",
           "$name_tag",
