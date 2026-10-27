@@ -225,7 +225,7 @@ export function bible_glyph_chapter_lev04() {
       {
         verse_number: 9,
         words: [
-          "both",
+          "$two",
           "kidneys",
           "with",
           "the",
