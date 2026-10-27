@@ -427,7 +427,7 @@ export function bible_glyph_chapter_jdg11() {
           "to",
           "the",
           "$pointing_down+proper_name.",
-          "Now,",
+          "$watch,",
           "therefore,",
           "$turn_back",
           "it",
