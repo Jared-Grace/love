@@ -869,7 +869,7 @@ export function bible_glyph_chapter_gen26() {
           "$peace.",
           "You",
           "are",
-          "now",
+          "$watch",
           "$speech+thumbs_up",
           "of",
           "$i_am.",
