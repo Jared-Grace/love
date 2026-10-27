@@ -980,7 +980,7 @@ export function bible_glyph_chapter_exo12() {
           "$house+proper_name",
           "got",
           "up,",
-          "he",
+          "$pointing_back",
           "and",
           "all",
           "his",
