@@ -530,7 +530,7 @@ export function bible_glyph_chapter_lev13() {
           "$sprout",
           "$meat",
           "is",
-          "unclean;",
+          "$soap+no_entry;",
           "it",
           "is",
           "a",
