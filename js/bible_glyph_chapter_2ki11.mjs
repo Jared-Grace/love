@@ -471,7 +471,7 @@ export function bible_glyph_chapter_2ki11() {
           "$person+round_pushpin",
           "by",
           "the",
-          "pillar",
+          "$candle",
           "according",
           "to",
           "the",
