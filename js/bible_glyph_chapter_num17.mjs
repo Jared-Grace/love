@@ -258,7 +258,7 @@ export function bible_glyph_chapter_num17() {
           "of",
           "$i_am",
           "to",
-          "all",
+          "$all",
           "the",
           "$son",
           "of",
