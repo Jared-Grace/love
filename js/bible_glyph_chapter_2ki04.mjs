@@ -669,7 +669,7 @@ export function bible_glyph_chapter_2ki04() {
           "$man_beard",
           "and",
           "$speech,",
-          "Please",
+          "$pleading",
           "$hand_sending",
           "me",
           "one",
