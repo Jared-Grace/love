@@ -653,7 +653,7 @@ export function bible_glyph_chapter_gen46() {
           "to",
           "$clamp+proper_name",
           "were",
-          "seventy.",
+          "$seven+zero.",
         ],
       },
       {
