@@ -16,7 +16,7 @@ export function bible_glyph_chapter_ezr03() {
           "When",
           "the",
           "seventh",
-          "month",
+          "$new_moon",
           "came",
           "and",
           "the",
