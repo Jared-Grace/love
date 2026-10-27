@@ -1528,7 +1528,7 @@ export function bible_glyph_chapter_deu04() {
           "to",
           "$one",
           "$tray_out",
-          "these",
+          "$flashlight+flashlight",
           "$city.",
         ],
       },
