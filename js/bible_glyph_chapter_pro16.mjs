@@ -536,7 +536,7 @@ export function bible_glyph_chapter_pro16() {
           "$hot_face+doing",
           "for",
           "him,",
-          "because",
+          "$pointing",
           "his",
           "hunger",
           "drives",
