@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_deu01() {
           "and",
           "swore",
           "an",
-          "oath,",
+          "$raised_back_of_hand+doing,",
           "$speech,",
         ],
       },
