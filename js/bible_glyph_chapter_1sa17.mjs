@@ -490,7 +490,7 @@ export function bible_glyph_chapter_1sa17() {
           "also",
           "these",
           "$ten",
-          "portions",
+          "$kitchen_knife+thing",
           "of",
           "cheese",
           "to",
