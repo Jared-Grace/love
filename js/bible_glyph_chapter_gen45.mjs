@@ -649,7 +649,7 @@ export function bible_glyph_chapter_gen45() {
           "of",
           "$silver",
           "and",
-          "five",
+          "$five",
           "sets",
           "of",
           "clothes.",
