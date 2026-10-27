@@ -311,7 +311,7 @@ export function bible_glyph_chapter_isa11() {
           "that",
           "$sun,",
           "the",
-          "Root",
+          "$ginger_root",
           "of",
           "$proper_name$Jesse",
           "will",
