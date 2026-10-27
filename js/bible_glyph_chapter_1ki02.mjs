@@ -1133,7 +1133,7 @@ export function bible_glyph_chapter_1ki02() {
           "$blood",
           "that",
           "$i_am+father",
-          "shed.",
+          "$jar+down_arrow+doing.",
         ],
       },
       {
