@@ -398,7 +398,7 @@ export function bible_glyph_chapter_dan09() {
           "upon",
           "us",
           "a",
-          "great",
+          "$top",
           "$thumbs_down.",
           "For",
           "under",
