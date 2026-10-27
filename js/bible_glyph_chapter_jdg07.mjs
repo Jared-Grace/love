@@ -950,7 +950,7 @@ export function bible_glyph_chapter_jdg07() {
           "$wolf+proper_name",
           "at",
           "the",
-          "winepress",
+          "$grapes+foot",
           "of",
           "$wolf+proper_name.",
           "Then",
