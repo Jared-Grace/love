@@ -1158,7 +1158,7 @@ export function bible_glyph_chapter_gen41() {
           "on",
           "$i_am+plus's",
           "$hand,",
-          "clothed",
+          "$garment+doing",
           "him",
           "in",
           "garments",
