@@ -1425,7 +1425,7 @@ export function bible_glyph_chapter_gen24() {
           "I",
           "asked",
           "her,",
-          "Whose",
+          "$person+question",
           "$woman",
           "are",
           "you?",
