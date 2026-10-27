@@ -172,7 +172,7 @@ export function bible_glyph_chapter_zec14() {
           "it",
           "will",
           "extend",
-          "to",
+          "$toward",
           "$proper_name$Azal.",
           "You",
           "will",
