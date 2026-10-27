@@ -34,7 +34,7 @@ export function bible_glyph_chapter_est04() {
           "out",
           "into",
           "the",
-          "middle",
+          "$radio_button",
           "of",
           "the",
           "$city,",
