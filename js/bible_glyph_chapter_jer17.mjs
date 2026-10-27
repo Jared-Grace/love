@@ -70,7 +70,7 @@ export function bible_glyph_chapter_jer17() {
         words: [
           "O",
           "My",
-          "mountain",
+          "$mountain+top",
           "in",
           "the",
           "countryside,",
