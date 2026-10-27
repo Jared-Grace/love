@@ -770,7 +770,7 @@ export function bible_glyph_chapter_gen24() {
           "have",
           "plenty",
           "of",
-          "straw",
+          "$wheat+scissors",
           "and",
           "feed,",
           "as",
