@@ -201,7 +201,7 @@ export function bible_glyph_chapter_ezk01() {
           "of",
           "a",
           "$calf,",
-          "gleaming",
+          "$sparkles+star+doing",
           "$eyes",
           "polished",
           "bronze.",
