@@ -430,7 +430,7 @@ export function bible_glyph_chapter_gen43() {
           "may",
           "release",
           "your",
-          "other",
+          "$plus+one",
           "$brother",
           "along",
           "with",
