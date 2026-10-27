@@ -92,7 +92,7 @@ export function bible_glyph_chapter_gen45() {
           "were",
           "$no_entry",
           "to",
-          "answer",
+          "$speech+turn_back",
           "him,",
           "because",
           "they",
