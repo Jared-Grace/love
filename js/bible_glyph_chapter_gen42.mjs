@@ -78,7 +78,7 @@ export function bible_glyph_chapter_gen42() {
           "$i_am+plus",
           "$brother",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "buy",
           "grain",
