@@ -213,7 +213,7 @@ export function bible_glyph_chapter_jer07() {
         words: [
           "But",
           "$exclamation,",
-          "you",
+          "$you",
           "keep",
           "trusting",
           "in",
