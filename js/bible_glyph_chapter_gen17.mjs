@@ -276,7 +276,7 @@ export function bible_glyph_chapter_gen17() {
           "You",
           "are",
           "to",
-          "circumcise",
+          "$scissors+covenant+doing",
           "the",
           "$meat",
           "of",
