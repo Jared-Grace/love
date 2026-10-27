@@ -12,7 +12,7 @@ export function bible_glyph_chapter_deu12() {
       {
         verse_number: 1,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "statutes",
