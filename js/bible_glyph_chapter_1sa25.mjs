@@ -388,7 +388,7 @@ export function bible_glyph_chapter_1sa25() {
         words: [
           "So",
           "$two_hearts+proper_name's",
-          "men",
+          "$child+flexed_biceps",
           "turned",
           "around",
           "on",
