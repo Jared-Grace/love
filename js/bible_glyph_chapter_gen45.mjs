@@ -43,7 +43,7 @@ export function bible_glyph_chapter_gen45() {
           "he",
           "$lightbulb",
           "himself",
-          "to",
+          "$toward",
           "his",
           "$brother.",
         ],
