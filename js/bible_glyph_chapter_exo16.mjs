@@ -779,7 +779,7 @@ export function bible_glyph_chapter_exo16() {
           "and",
           "$guard+thing",
           "it",
-          "until",
+          "$finish",
           "morning.",
         ],
       },
