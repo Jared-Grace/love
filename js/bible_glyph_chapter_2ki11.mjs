@@ -717,7 +717,7 @@ export function bible_glyph_chapter_2ki11() {
           "$road",
           "of",
           "the",
-          "Gate",
+          "$gate",
           "of",
           "the",
           "Guards",
