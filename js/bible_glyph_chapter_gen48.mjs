@@ -276,7 +276,7 @@ export function bible_glyph_chapter_gen48() {
           "$hands_giving",
           "me",
           "in",
-          "this",
+          "$flashlight",
           "place.",
           "So",
           "Jacob",
