@@ -469,7 +469,7 @@ export function bible_glyph_chapter_exo38() {
           "and",
           "finely",
           "spun",
-          "linen.",
+          "$thread+white_circle.",
           "It",
           "was",
           "twenty",
