@@ -145,7 +145,7 @@ export function bible_glyph_chapter_1sa16() {
           "and",
           "$footprints",
           "to",
-          "Bethlehem.",
+          "$house+bread+proper_name.",
           "When",
           "the",
           "elders",
