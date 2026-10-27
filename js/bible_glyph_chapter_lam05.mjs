@@ -300,7 +300,7 @@ export function bible_glyph_chapter_lam05() {
           "$thermometer_face+blood+describing;",
           "because",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "our",
           "$eyes",
           "grow",
