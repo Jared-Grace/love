@@ -686,7 +686,7 @@ export function bible_glyph_chapter_deu05() {
           "His",
           "$star",
           "and",
-          "greatness,",
+          "$top+thing,",
           "and",
           "we",
           "have",
