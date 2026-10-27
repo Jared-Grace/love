@@ -528,7 +528,7 @@ export function bible_glyph_chapter_exo32() {
           "$curving_right+doing",
           "and",
           "went",
-          "down",
+          "$walking+pointing_down",
           "the",
           "$mountain",
           "with",
