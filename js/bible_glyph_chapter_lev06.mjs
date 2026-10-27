@@ -81,7 +81,7 @@ export function bible_glyph_chapter_lev06() {
           "$bow+doing",
           "and",
           "becomes",
-          "guilty,",
+          "$sacrifice+scales+doing,",
           "$turn_back",
           "what",
           "he",
