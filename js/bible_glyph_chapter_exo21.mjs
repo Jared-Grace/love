@@ -301,7 +301,7 @@ export function bible_glyph_chapter_exo21() {
           "the",
           "$meat+fork_and_knife,",
           "the",
-          "clothing,",
+          "$coat+thing,",
           "or",
           "the",
           "marital",
