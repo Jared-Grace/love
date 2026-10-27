@@ -596,7 +596,7 @@ export function bible_glyph_chapter_lev27() {
           "it,",
           "he",
           "must",
-          "add",
+          "$plus+doing",
           "a",
           "fifth",
           "to",
