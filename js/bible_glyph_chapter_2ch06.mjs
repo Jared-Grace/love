@@ -1491,7 +1491,7 @@ export function bible_glyph_chapter_2ch06() {
       {
         verse_number: 40,
         words: [
-          "Now,",
+          "$watch,",
           "my",
           "$heart_on_fire,",
           "may",
