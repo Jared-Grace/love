@@ -108,7 +108,7 @@ export function bible_glyph_chapter_gen44() {
           "had",
           "$no_entry",
           "$walking+tray_out",
-          "far",
+          "$satellite+doing",
           "from",
           "the",
           "$city",
