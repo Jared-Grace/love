@@ -413,7 +413,7 @@ export function bible_glyph_chapter_1sa03() {
       {
         verse_number: 14,
         words: [
-          "Therefore",
+          "$right_arrow",
           "I",
           "have",
           "sworn",
