@@ -767,7 +767,7 @@ export function bible_glyph_chapter_gen09() {
           "the",
           "$sun",
           "of",
-          "Noah",
+          "$seat+proper_name",
           "were",
           "nine",
           "hundred",
