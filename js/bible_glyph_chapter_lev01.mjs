@@ -94,7 +94,7 @@ export function bible_glyph_chapter_lev01() {
           "for",
           "its",
           "acceptance",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
