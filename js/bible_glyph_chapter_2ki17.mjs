@@ -697,7 +697,7 @@ export function bible_glyph_chapter_2ki17() {
           "them",
           "from",
           "His",
-          "presence.",
+          "$face.",
         ],
       },
       {
