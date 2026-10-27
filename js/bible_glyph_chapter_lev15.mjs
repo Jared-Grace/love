@@ -559,7 +559,7 @@ export function bible_glyph_chapter_lev15() {
           "remain",
           "$soap+no_entry",
           "$finish",
-          "evening.",
+          "$sunset.",
         ],
       },
       {
