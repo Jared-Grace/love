@@ -153,7 +153,7 @@ export function bible_glyph_chapter_jos07() {
           "our",
           "$family",
           "there,",
-          "since",
+          "$pointing",
           "the",
           "people",
           "of",
