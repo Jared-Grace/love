@@ -2248,7 +2248,7 @@ export function bible_glyph_chapter_1ki08() {
           "$i_am",
           "was",
           "too",
-          "small",
+          "$pinching_hand",
           "to",
           "contain",
           "all",
