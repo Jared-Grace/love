@@ -349,7 +349,7 @@ export function bible_glyph_chapter_zec05() {
           "be",
           "set",
           "$telescope",
-          "on",
+          "$pointing_up",
           "its",
           "pedestal.",
         ],
