@@ -761,7 +761,7 @@ export function bible_glyph_chapter_jdg07() {
           "horns",
           "in",
           "their",
-          "right",
+          "$hand+right_arrow",
           "$hand,",
           "they",
           "shouted,",
