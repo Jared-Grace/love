@@ -383,7 +383,7 @@ export function bible_glyph_chapter_ezk11() {
           "of",
           "the",
           "$map",
-          "around",
+          "$around",
           "you.",
         ],
       },
