@@ -149,7 +149,7 @@ export function bible_glyph_chapter_lam03() {
           "and",
           "plead",
           "for",
-          "help,",
+          "$sos_button+doing,",
           "He",
           "shuts",
           "out",
