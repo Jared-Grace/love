@@ -882,7 +882,7 @@ export function bible_glyph_chapter_exo29() {
           "The",
           "$sparkle+thing",
           "$garment",
-          "that",
+          "$back+flashlight",
           "belong",
           "to",
           "$proper_name$Aaron",
