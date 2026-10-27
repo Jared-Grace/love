@@ -282,7 +282,7 @@ export function bible_glyph_chapter_jer01() {
           "and",
           "overthrow,",
           "to",
-          "build",
+          "$brick",
           "and",
           "plant.",
         ],
