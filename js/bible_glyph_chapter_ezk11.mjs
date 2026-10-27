@@ -752,7 +752,7 @@ export function bible_glyph_chapter_ezk11() {
           "over",
           "the",
           "$mountain",
-          "east",
+          "$compass+right_arrow",
           "of",
           "the",
           "$city.",
