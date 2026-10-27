@@ -856,7 +856,7 @@ export function bible_glyph_chapter_exo40() {
         words: [
           "Whenever",
           "the",
-          "cloud",
+          "$cloud",
           "was",
           "lifted",
           "from",
