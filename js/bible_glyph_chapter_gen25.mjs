@@ -499,7 +499,7 @@ export function bible_glyph_chapter_gen25() {
           "$speech",
           "to",
           "her,",
-          "Two",
+          "$two",
           "$map",
           "are",
           "in",
