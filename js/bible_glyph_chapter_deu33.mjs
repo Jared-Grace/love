@@ -406,7 +406,7 @@ export function bible_glyph_chapter_deu33() {
           "$fruit+basket",
           "from",
           "the",
-          "sun",
+          "$sun_with_face",
           "and",
           "the",
           "abundant",
