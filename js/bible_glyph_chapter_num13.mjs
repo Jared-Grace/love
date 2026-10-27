@@ -616,7 +616,7 @@ export function bible_glyph_chapter_num13() {
           "is",
           "flowing",
           "with",
-          "milk",
+          "$milk",
           "and",
           "honey.",
           "Here",
