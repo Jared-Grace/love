@@ -526,7 +526,7 @@ export function bible_glyph_chapter_2ch20() {
           "$crowd+loudspeaker,",
           "for",
           "the",
-          "battle",
+          "$crossed_swords",
           "does",
           "$no_entry",
           "belong",
