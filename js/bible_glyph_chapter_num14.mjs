@@ -466,7 +466,7 @@ export function bible_glyph_chapter_num14() {
           "them,",
           "and",
           "that",
-          "You",
+          "$you",
           "$walking",
           "before",
           "them",
