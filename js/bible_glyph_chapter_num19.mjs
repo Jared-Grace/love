@@ -163,7 +163,7 @@ export function bible_glyph_chapter_num19() {
           "$tree,",
           "$herb+bouquet",
           "and",
-          "scarlet",
+          "$red_circle",
           "wool,",
           "and",
           "throw",
