@@ -861,7 +861,7 @@ export function bible_glyph_chapter_deu12() {
           "$sparkle+thing",
           "and",
           "your",
-          "vow",
+          "$saluting_face",
           "offerings",
           "and",
           "$footprints",
