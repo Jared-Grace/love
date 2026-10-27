@@ -483,7 +483,7 @@ export function bible_glyph_chapter_gen35() {
       {
         verse_number: 17,
         words: [
-          "During",
+          "$link",
           "her",
           "hardest",
           "labor",
