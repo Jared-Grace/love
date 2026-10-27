@@ -494,7 +494,7 @@ export function bible_glyph_chapter_pro04() {
           "Let",
           "your",
           "$eyes",
-          "look",
+          "$face_with_monocle",
           "$face+toward;",
           "fix",
           "your",
