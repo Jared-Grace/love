@@ -215,7 +215,7 @@ export function bible_glyph_chapter_exo18() {
           "$footprints",
           "into",
           "the",
-          "tent.",
+          "$tent.",
         ],
       },
       {
