@@ -216,7 +216,7 @@ export function bible_glyph_chapter_num15() {
           "as",
           "a",
           "$burnt_offering",
-          "or",
+          "$shuffle",
           "$sacrifice",
           "to",
           "fulfill",
