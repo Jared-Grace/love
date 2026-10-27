@@ -381,7 +381,7 @@ export function bible_glyph_chapter_isa53() {
           "life",
           "and",
           "be",
-          "satisfied.",
+          "$eating+top.",
           "By",
           "His",
           "knowledge",
