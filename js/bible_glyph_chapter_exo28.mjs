@@ -1106,7 +1106,7 @@ export function bible_glyph_chapter_exo28() {
           "to",
           "$yarn+gem_stone+doing",
           "the",
-          "tunic",
+          "$dress+thread",
           "with",
           "fine",
           "linen,",
