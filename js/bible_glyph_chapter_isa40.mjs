@@ -789,7 +789,7 @@ export function bible_glyph_chapter_isa40() {
           "you",
           "$mouth,",
           "O",
-          "Israel,",
+          "$wrestling+heart_on_fire,",
           "My",
           "$road",
           "is",
