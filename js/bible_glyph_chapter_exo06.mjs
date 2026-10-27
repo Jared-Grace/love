@@ -465,7 +465,7 @@ export function bible_glyph_chapter_exo06() {
           "a",
           "$proper_name$Canaanite",
           "woman.",
-          "These",
+          "$flashlight+flashlight",
           "were",
           "the",
           "clans",
