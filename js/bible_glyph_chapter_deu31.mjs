@@ -478,7 +478,7 @@ export function bible_glyph_chapter_deu31() {
           "$skull+doing",
           "is",
           "$magnet+doing.",
-          "Call",
+          "$waving_hand",
           "$i_am+rescue",
           "and",
           "present",
