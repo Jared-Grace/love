@@ -747,7 +747,7 @@ export function bible_glyph_chapter_gen11() {
         words: [
           "But",
           "$military_medal+proper_name",
-          "was",
+          "$link",
           "barren;",
           "she",
           "had",
