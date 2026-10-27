@@ -690,7 +690,7 @@ export function bible_glyph_chapter_exo13() {
           "to",
           "give",
           "them",
-          "light,",
+          "$light+doing,",
           "so",
           "that",
           "they",
