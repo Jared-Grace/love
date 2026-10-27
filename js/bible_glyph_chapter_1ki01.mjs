@@ -1038,7 +1038,7 @@ export function bible_glyph_chapter_1ki01() {
           "of",
           "your",
           "$crown.",
-          "Set",
+          "$horse_racing+doing",
           "$peace+proper_name",
           "my",
           "$son",
