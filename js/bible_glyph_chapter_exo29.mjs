@@ -293,7 +293,7 @@ export function bible_glyph_chapter_exo29() {
           "And",
           "you",
           "shall",
-          "slaughter",
+          "$kitchen_knife+doing",
           "the",
           "$bull",
           "before",
