@@ -359,7 +359,7 @@ export function bible_glyph_chapter_exo16() {
           "to",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "$wrestling+heart_on_fire,",
           "they",
