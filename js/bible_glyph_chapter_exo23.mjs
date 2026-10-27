@@ -520,7 +520,7 @@ export function bible_glyph_chapter_exo23() {
           "$no_entry",
           "may",
           "the",
-          "fat",
+          "$bacon",
           "of",
           "My",
           "feast",
