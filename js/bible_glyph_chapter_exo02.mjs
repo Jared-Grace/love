@@ -593,7 +593,7 @@ export function bible_glyph_chapter_exo02() {
           "their",
           "father",
           "$speech.",
-          "Why",
+          "$flashlight+question",
           "did",
           "you",
           "leave",
