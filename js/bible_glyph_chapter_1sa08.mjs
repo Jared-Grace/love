@@ -363,7 +363,7 @@ export function bible_glyph_chapter_1sa08() {
           "and",
           "$sheaf_of_rice+scissors+doing",
           "his",
-          "harvest,",
+          "$harvest,",
           "and",
           "to",
           "$hammer+doing",
