@@ -341,7 +341,7 @@ export function bible_glyph_chapter_lam01() {
           "$i_am,",
           "on",
           "my",
-          "affliction,",
+          "$persevering_face+thing,",
           "for",
           "the",
           "$enemy",
