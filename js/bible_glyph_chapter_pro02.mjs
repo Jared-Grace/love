@@ -385,7 +385,7 @@ export function bible_glyph_chapter_pro02() {
       {
         verse_number: 21,
         words: [
-          "For",
+          "$pointing",
           "the",
           "upright",
           "will",
