@@ -172,7 +172,7 @@ export function bible_glyph_chapter_ezk37() {
           "upon",
           "you",
           "and",
-          "cover",
+          "$bone+garment+doing",
           "you",
           "with",
           "skin.",
