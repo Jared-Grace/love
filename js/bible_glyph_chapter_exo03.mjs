@@ -680,7 +680,7 @@ export function bible_glyph_chapter_exo03() {
           "us",
           "$walking",
           "a",
-          "three",
+          "$three",
           "$sun",
           "$road",
           "into",
