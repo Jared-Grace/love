@@ -307,7 +307,7 @@ export function bible_glyph_chapter_lev14() {
           "to",
           "$hand_receiving",
           "$two",
-          "unblemished",
+          "$full_moon+describing",
           "male",
           "$lamb,",
           "an",
