@@ -362,7 +362,7 @@ export function bible_glyph_chapter_jos06() {
           "$around+doing",
           "the",
           "$city,",
-          "circling",
+          "$fist+around+doing",
           "it",
           "once.",
           "Then",
