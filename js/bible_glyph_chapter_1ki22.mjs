@@ -1305,7 +1305,7 @@ export function bible_glyph_chapter_1ki22() {
           "And",
           "$brother+father+proper_name",
           "$bed+doing",
-          "with",
+          "$linked_paperclips",
           "his",
           "$father,",
           "and",
