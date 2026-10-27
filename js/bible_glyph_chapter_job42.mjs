@@ -58,7 +58,7 @@ export function bible_glyph_chapter_job42() {
           "I",
           "did",
           "$no_entry",
-          "understand,",
+          "$brain,",
           "things",
           "too",
           "wonderful",
