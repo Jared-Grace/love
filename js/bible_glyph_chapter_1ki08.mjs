@@ -1892,7 +1892,7 @@ export function bible_glyph_chapter_1ki08() {
           "finished",
           "$hands_praying",
           "this",
-          "entire",
+          "$all",
           "$hands_praying+thing",
           "and",
           "petition",
