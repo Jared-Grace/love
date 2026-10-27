@@ -359,7 +359,7 @@ export function bible_glyph_chapter_deu31() {
           "$footprints",
           "to",
           "$eye",
-          "before",
+          "$face",
           "$i_am",
           "your",
           "$heart_on_fire",
