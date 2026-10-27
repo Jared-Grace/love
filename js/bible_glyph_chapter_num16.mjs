@@ -650,7 +650,7 @@ export function bible_glyph_chapter_num16() {
       {
         verse_number: 21,
         words: [
-          "Separate",
+          "$construction",
           "yourselves",
           "from",
           "this",
