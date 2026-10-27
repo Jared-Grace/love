@@ -346,7 +346,7 @@ export function bible_glyph_chapter_sng08() {
           "$ten+all",
           "shekels",
           "of",
-          "silver.",
+          "$silver.",
         ],
       },
       {
