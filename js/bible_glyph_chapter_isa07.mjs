@@ -161,7 +161,7 @@ export function bible_glyph_chapter_isa07() {
           "or",
           "$heart_organ",
           "over",
-          "these",
+          "$flashlight+flashlight",
           "$two",
           "$fire+cloud+describing",
           "$snake+back",
