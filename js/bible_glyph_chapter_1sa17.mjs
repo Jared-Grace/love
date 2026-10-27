@@ -57,7 +57,7 @@ export function bible_glyph_chapter_1sa17() {
           "themselves",
           "for",
           "$crossed_swords",
-          "against",
+          "$footprints+toward+doing",
           "the",
           "$proper_name$Philistines.",
         ],
