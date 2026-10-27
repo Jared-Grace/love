@@ -154,7 +154,7 @@ export function bible_glyph_chapter_lev08() {
           "he",
           "$palm_down",
           "the",
-          "breastpiece",
+          "$gem_stone+t_shirt",
           "$pointing_up",
           "him,",
           "and",
