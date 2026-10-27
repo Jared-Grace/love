@@ -649,7 +649,7 @@ export function bible_glyph_chapter_exo34() {
           "to",
           "break",
           "its",
-          "neck.",
+          "$back+scarf+collision+doing.",
           "You",
           "must",
           "$coin+turn_back",
