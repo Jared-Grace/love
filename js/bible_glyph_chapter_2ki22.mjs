@@ -561,7 +561,7 @@ export function bible_glyph_chapter_2ki22() {
           "$speech",
           "the",
           "$man_beard",
-          "who",
+          "$back+flashlight",
           "$hand_sending",
           "you",
         ],
