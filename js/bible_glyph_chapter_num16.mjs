@@ -1172,7 +1172,7 @@ export function bible_glyph_chapter_num16() {
           "$priest",
           "$hand_receiving",
           "the",
-          "bronze",
+          "$bronze",
           "$cooking",
           "brought",
           "by",
