@@ -28,7 +28,7 @@ export function bible_glyph_chapter_2ki06() {
           "the",
           "$place",
           "where",
-          "we",
+          "$me",
           "$person+house",
           "with",
           "you",
