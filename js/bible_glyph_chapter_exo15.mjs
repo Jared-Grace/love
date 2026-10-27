@@ -209,7 +209,7 @@ export function bible_glyph_chapter_exo15() {
           "wall;",
           "the",
           "depths",
-          "congealed",
+          "$ice+doing",
           "in",
           "the",
           "$heart_organ",
