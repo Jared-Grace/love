@@ -244,7 +244,7 @@ export function bible_glyph_chapter_exo17() {
           "$son",
           "of",
           "Israel",
-          "quarreled",
+          "$wrestling+thing",
           "and",
           "because",
           "they",
