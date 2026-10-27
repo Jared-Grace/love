@@ -373,7 +373,7 @@ export function bible_glyph_chapter_gen21() {
           "$water",
           "in",
           "the",
-          "skin",
+          "$goat+amphora",
           "was",
           "gone,",
           "she",
