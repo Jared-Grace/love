@@ -91,7 +91,7 @@ export function bible_glyph_chapter_jdg07() {
       {
         verse_number: 3,
         words: [
-          "Now",
+          "$pleading",
           "$watch",
           "$waving_hand",
           "in",
