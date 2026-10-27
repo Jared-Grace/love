@@ -883,7 +883,7 @@ export function bible_glyph_chapter_1ch29() {
           "the",
           "officials",
           "and",
-          "mighty",
+          "$might+person",
           "men,",
           "as",
           "well",
