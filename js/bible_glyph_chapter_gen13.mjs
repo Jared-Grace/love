@@ -64,7 +64,7 @@ export function bible_glyph_chapter_gen13() {
           "on",
           "from",
           "the",
-          "Negev",
+          "$compass+down_arrow",
           "as",
           "far",
           "as",
