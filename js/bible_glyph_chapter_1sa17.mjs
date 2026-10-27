@@ -1511,7 +1511,7 @@ export function bible_glyph_chapter_1sa17() {
           "$two_hearts+proper_name,",
           "$two_hearts+proper_name",
           "ran",
-          "quickly",
+          "$fast_forward+doing",
           "toward",
           "the",
           "battle",
