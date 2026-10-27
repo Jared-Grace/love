@@ -905,7 +905,7 @@ export function bible_glyph_chapter_1ki01() {
           "$king",
           "swore",
           "an",
-          "oath,",
+          "$raised_back_of_hand+doing,",
           "$speech,",
           "As",
           "surely",
