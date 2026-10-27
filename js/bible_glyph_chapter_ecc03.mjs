@@ -352,7 +352,7 @@ export function bible_glyph_chapter_ecc03() {
           "that",
           "they",
           "should",
-          "fear",
+          "$fear+doing",
           "Him.",
         ],
       },
