@@ -14,7 +14,7 @@ export function bible_glyph_chapter_psa027() {
         verse_number: 1,
         words: [
           "Of",
-          "David.",
+          "$two_hearts+proper_name.",
           "The",
           "$i_am",
           "is",
