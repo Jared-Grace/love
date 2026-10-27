@@ -75,7 +75,7 @@ export function bible_glyph_chapter_lev19() {
           "idols",
           "or",
           "$hammer+doing",
-          "molten",
+          "$pouring_liquid+moai",
           "$moai",
           "for",
           "yourselves.",
