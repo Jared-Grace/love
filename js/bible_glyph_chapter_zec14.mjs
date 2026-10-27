@@ -58,7 +58,7 @@ export function bible_glyph_chapter_zec14() {
           "and",
           "the",
           "$woman",
-          "ravished.",
+          "$bed+fist+doing.",
           "Half",
           "of",
           "the",
