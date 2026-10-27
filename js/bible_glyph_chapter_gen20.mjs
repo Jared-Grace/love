@@ -293,7 +293,7 @@ export function bible_glyph_chapter_gen20() {
         words: [
           "Then",
           "$father+king",
-          "called",
+          "$waving_hand",
           "$father+map",
           "and",
           "$speech",
