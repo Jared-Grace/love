@@ -264,7 +264,7 @@ export function bible_glyph_chapter_1sa08() {
           "of",
           "the",
           "$king",
-          "who",
+          "$back+flashlight",
           "will",
           "$castle+doing",
           "over",
