@@ -73,7 +73,7 @@ export function bible_glyph_chapter_lev26() {
           "for",
           "My",
           "sanctuary.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am.",
