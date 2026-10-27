@@ -66,7 +66,7 @@ export function bible_glyph_chapter_lev02() {
           "and",
           "$priest",
           "shall",
-          "burn",
+          "$incense+doing",
           "this",
           "as",
           "a",
