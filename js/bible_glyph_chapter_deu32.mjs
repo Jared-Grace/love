@@ -1016,7 +1016,7 @@ export function bible_glyph_chapter_deu32() {
           "$back+flashlight",
           "$eating",
           "the",
-          "fat",
+          "$bacon",
           "of",
           "their",
           "sacrifices",
