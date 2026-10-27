@@ -242,7 +242,7 @@ export function bible_glyph_chapter_gen21() {
           "in",
           "the",
           "inheritance",
-          "with",
+          "$linked_paperclips",
           "my",
           "$son",
           "$laughing+proper_name.",
