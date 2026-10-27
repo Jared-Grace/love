@@ -198,7 +198,7 @@ export function bible_glyph_chapter_mic01() {
           "area",
           "for",
           "a",
-          "vineyard.",
+          "$vineyard.",
           "I",
           "will",
           "pour",
