@@ -393,7 +393,7 @@ export function bible_glyph_chapter_exo12() {
           "$blood",
           "I",
           "will",
-          "pass",
+          "$leg+up_arrow+doing",
           "over",
           "you.",
           "$no_entry",
