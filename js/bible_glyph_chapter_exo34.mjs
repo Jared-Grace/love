@@ -1065,7 +1065,7 @@ export function bible_glyph_chapter_exo34() {
           "veil",
           "over",
           "his",
-          "face.",
+          "$face.",
         ],
       },
       {
