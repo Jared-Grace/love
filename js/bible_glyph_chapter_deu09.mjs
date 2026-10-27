@@ -719,7 +719,7 @@ export function bible_glyph_chapter_deu09() {
           "to",
           "me",
           "this",
-          "time",
+          "$drum",
           "as",
           "well.",
         ],
