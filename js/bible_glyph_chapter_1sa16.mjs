@@ -635,7 +635,7 @@ export function bible_glyph_chapter_1sa16() {
           "$two_hearts+proper_name",
           "your",
           "$son,",
-          "who",
+          "$back+flashlight",
           "is",
           "with",
           "the",
