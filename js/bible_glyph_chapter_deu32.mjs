@@ -1308,7 +1308,7 @@ export function bible_glyph_chapter_deu32() {
         verse_number: 47,
         words: [
           "For",
-          "they",
+          "$pointing_back",
           "are",
           "$no_entry",
           "$tray_out+droplet+describing",
