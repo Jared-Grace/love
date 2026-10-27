@@ -914,7 +914,7 @@ export function bible_glyph_chapter_2ki03() {
           "his",
           "$first_place+baby",
           "$son,",
-          "who",
+          "$back+flashlight",
           "was",
           "to",
           "$castle+doing",
