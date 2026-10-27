@@ -110,7 +110,7 @@ export function bible_glyph_chapter_2ch34() {
           "$city+peace",
           "of",
           "the",
-          "high",
+          "$snow_capped_mountain",
           "places,",
           "the",
           "Asherah",
