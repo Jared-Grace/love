@@ -259,7 +259,7 @@ export function bible_glyph_chapter_lev12() {
           "$shuffle",
           "to",
           "a",
-          "female.",
+          "$female_sign.",
         ],
       },
       {
