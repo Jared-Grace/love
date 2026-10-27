@@ -35,7 +35,7 @@ export function bible_glyph_chapter_2ki05() {
           "and",
           "highly",
           "regarded,",
-          "for",
+          "$pointing",
           "through",
           "him",
           "the",
