@@ -39,7 +39,7 @@ export function bible_glyph_chapter_hos06() {
           "but",
           "He",
           "will",
-          "bind",
+          "$adhesive_bandage+doing",
           "up",
           "our",
           "wounds.",
