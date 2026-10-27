@@ -26,7 +26,7 @@ export function bible_glyph_chapter_num32() {
           "of",
           "Gad",
           "had",
-          "very",
+          "$double_exclamation",
           "$bone+describing",
           "herds",
           "and",
