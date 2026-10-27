@@ -330,7 +330,7 @@ export function bible_glyph_chapter_deu14() {
         verse_number: 15,
         words: [
           "the",
-          "ostrich,",
+          "$bird+desert,",
           "the",
           "screech",
           "owl,",
