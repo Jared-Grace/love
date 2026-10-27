@@ -329,7 +329,7 @@ export function bible_glyph_chapter_deu31() {
           "$speech,",
           "At",
           "the",
-          "end",
+          "$stop_sign",
           "of",
           "every",
           "seven",
