@@ -167,7 +167,7 @@ export function bible_glyph_chapter_1sa20() {
           "Then",
           "$i_am+hands_giving",
           "$speech",
-          "to",
+          "$toward",
           "$two_hearts+proper_name,",
           "Whatever",
           "your",
