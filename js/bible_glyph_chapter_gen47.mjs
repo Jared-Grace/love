@@ -1077,7 +1077,7 @@ export function bible_glyph_chapter_gen47() {
           "$bowing",
           "at",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "his",
           "$bed.",
