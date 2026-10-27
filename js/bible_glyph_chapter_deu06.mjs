@@ -596,7 +596,7 @@ export function bible_glyph_chapter_deu06() {
           "statutes",
           "and",
           "$scales+thing",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "our",
