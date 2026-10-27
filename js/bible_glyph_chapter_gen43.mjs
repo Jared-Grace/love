@@ -341,7 +341,7 @@ export function bible_glyph_chapter_gen43() {
           "and",
           "carry",
           "them",
-          "down",
+          "$walking+pointing_down",
           "to",
           "the",
           "$man_beard",
