@@ -190,7 +190,7 @@ export function bible_glyph_chapter_ezk11() {
           "you",
           "killed",
           "in",
-          "this",
+          "$flashlight",
           "$city",
           "and",
           "filled",
