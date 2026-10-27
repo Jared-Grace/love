@@ -128,7 +128,7 @@ export function bible_glyph_chapter_zec08() {
           "$man_beard",
           "with",
           "a",
-          "staff",
+          "$white_cane+walking",
           "in",
           "$hand",
           "because",
