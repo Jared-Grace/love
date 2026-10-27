@@ -269,7 +269,7 @@ export function bible_glyph_chapter_deu09() {
           "this",
           "and",
           "$no_entry",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "how",
           "you",
           "provoked",
