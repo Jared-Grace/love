@@ -232,7 +232,7 @@ export function bible_glyph_chapter_deu31() {
           "$earth",
           "$back+flashlight",
           "$i_am",
-          "swore",
+          "$raised_back_of_hand+doing",
           "to",
           "their",
           "$father",
