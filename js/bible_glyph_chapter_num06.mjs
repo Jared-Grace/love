@@ -483,7 +483,7 @@ export function bible_glyph_chapter_num06() {
           "from",
           "fine",
           "flour",
-          "mixed",
+          "$spoon+cyclone",
           "with",
           "$oil+doing,",
           "and",
