@@ -259,7 +259,7 @@ export function bible_glyph_chapter_1sa02() {
           "but",
           "the",
           "$thumbs_down",
-          "perish",
+          "$shushing_face+pause_button",
           "in",
           "$darkness;",
           "for",
