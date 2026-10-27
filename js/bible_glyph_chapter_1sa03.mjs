@@ -533,7 +533,7 @@ export function bible_glyph_chapter_1sa03() {
           "$ear+heart_on_fire",
           "$newspaper",
           "him",
-          "everything",
+          "$all",
           "and",
           "did",
           "$no_entry",
