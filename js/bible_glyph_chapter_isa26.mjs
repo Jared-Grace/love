@@ -523,7 +523,7 @@ export function bible_glyph_chapter_isa26() {
           "sing,",
           "you",
           "who",
-          "dwell",
+          "$tent+doing",
           "in",
           "the",
           "$dust!",
