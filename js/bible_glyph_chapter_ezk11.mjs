@@ -626,7 +626,7 @@ export function bible_glyph_chapter_ezk11() {
           "them.",
           "I",
           "will",
-          "remove",
+          "$away+doing",
           "their",
           "$heart_organ",
           "of",
