@@ -661,7 +661,7 @@ export function bible_glyph_chapter_gen50() {
           "$son",
           "to",
           "the",
-          "third",
+          "$child+three",
           "generation,",
           "and",
           "indeed",
