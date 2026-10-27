@@ -1142,7 +1142,7 @@ export function bible_glyph_chapter_jer23() {
           "$speech",
           "to",
           "them,",
-          "What",
+          "$flashlight+question",
           "burden?",
           "I",
           "will",
