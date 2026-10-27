@@ -408,7 +408,7 @@ export function bible_glyph_chapter_1sa02() {
           "the",
           "pan",
           "$shuffle",
-          "kettle",
+          "$pot_of_food+basket",
           "$shuffle",
           "cauldron",
           "$shuffle",
