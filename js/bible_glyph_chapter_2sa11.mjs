@@ -352,7 +352,7 @@ export function bible_glyph_chapter_2sa11() {
           "$proper_name$Uriah",
           "$speech,",
           "The",
-          "ark",
+          "$ark",
           "and",
           "$wrestling+heart_on_fire",
           "and",
