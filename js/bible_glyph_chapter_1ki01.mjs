@@ -449,7 +449,7 @@ export function bible_glyph_chapter_1ki01() {
           "$repeat",
           "$mouth",
           "$telescope",
-          "with",
+          "$linked_paperclips",
           "the",
           "$king,",
           "I",
