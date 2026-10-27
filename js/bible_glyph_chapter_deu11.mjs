@@ -1001,7 +1001,7 @@ export function bible_glyph_chapter_deu11() {
           "live",
           "in",
           "the",
-          "Arabah",
+          "$desert+proper_name",
           "opposite",
           "$proper_name$Gilgal,",
           "near",
