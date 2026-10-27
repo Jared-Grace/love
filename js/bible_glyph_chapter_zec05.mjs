@@ -170,7 +170,7 @@ export function bible_glyph_chapter_zec05() {
           "and",
           "$speech",
           "me,",
-          "Now",
+          "$pleading",
           "$lifting",
           "up",
           "your",
