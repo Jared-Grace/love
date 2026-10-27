@@ -65,7 +65,7 @@ export function bible_glyph_chapter_ezk37() {
           "saw",
           "a",
           "great",
-          "many",
+          "$multiply",
           "bones",
           "on",
           "the",
