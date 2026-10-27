@@ -30,7 +30,7 @@ export function bible_glyph_chapter_ezr03() {
           "$family",
           "assembled",
           "as",
-          "one",
+          "$one",
           "$man_beard",
           "in",
           "$city+peace.",
