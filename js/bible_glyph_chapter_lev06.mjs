@@ -64,7 +64,7 @@ export function bible_glyph_chapter_lev06() {
           "swears",
           "$lying_face,",
           "so",
-          "that",
+          "$back+flashlight",
           "$person",
           "may",
           "$hammer+doing",
