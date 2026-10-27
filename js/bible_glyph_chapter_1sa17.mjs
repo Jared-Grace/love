@@ -1172,7 +1172,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 39,
         words: [
           "$two_hearts+proper_name",
-          "strapped",
+          "$briefs+doing",
           "his",
           "$sword",
           "over",
