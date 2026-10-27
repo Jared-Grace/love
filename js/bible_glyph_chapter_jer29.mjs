@@ -1016,7 +1016,7 @@ export function bible_glyph_chapter_jer29() {
           "a",
           "message",
           "to",
-          "all",
+          "$all",
           "the",
           "exiles,",
           "$speech",
