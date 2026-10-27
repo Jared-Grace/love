@@ -439,7 +439,7 @@ export function bible_glyph_chapter_num16() {
           "$earth",
           "$water+right_arrow",
           "with",
-          "milk",
+          "$milk",
           "and",
           "honey,",
           "or",
