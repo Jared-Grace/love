@@ -210,7 +210,7 @@ export function bible_glyph_chapter_psa091() {
           "Most",
           "High,",
           "your",
-          "dwelling,",
+          "$house+bed,",
         ],
       },
       {
