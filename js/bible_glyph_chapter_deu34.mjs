@@ -199,7 +199,7 @@ export function bible_glyph_chapter_deu34() {
           "location",
           "of",
           "his",
-          "grave",
+          "$tomb+thing",
           "to",
           "this",
           "$sun.",
