@@ -233,7 +233,7 @@ export function bible_glyph_chapter_isa43() {
         verse_number: 7,
         words: [
           "$all",
-          "called",
+          "$waving_hand",
           "by",
           "My",
           "$name_tag,",
