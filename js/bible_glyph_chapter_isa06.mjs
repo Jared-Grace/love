@@ -51,7 +51,7 @@ export function bible_glyph_chapter_isa06() {
           "$fire+snake,",
           "each",
           "having",
-          "six",
+          "$six",
           "wings:",
           "With",
           "two",
