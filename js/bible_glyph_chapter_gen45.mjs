@@ -78,7 +78,7 @@ export function bible_glyph_chapter_gen45() {
           "to",
           "his",
           "$brother,",
-          "I",
+          "$me",
           "am",
           "$i_am+plus!",
           "Is",
