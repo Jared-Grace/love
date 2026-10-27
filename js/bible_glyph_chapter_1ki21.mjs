@@ -187,7 +187,7 @@ export function bible_glyph_chapter_1ki21() {
           "your",
           "$wind",
           "so",
-          "sullen",
+          "$pouting_face+back+describing",
           "that",
           "you",
           "are",
