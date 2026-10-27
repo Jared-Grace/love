@@ -885,7 +885,7 @@ export function bible_glyph_chapter_jer07() {
           "would",
           "$no_entry",
           "$hand_receiving",
-          "correction.",
+          "$teacher+exclamation.",
           "Truth",
           "has",
           "perished;",
