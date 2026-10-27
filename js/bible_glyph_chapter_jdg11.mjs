@@ -1124,7 +1124,7 @@ export function bible_glyph_chapter_jdg11() {
           "$dotted_line_face",
           "other",
           "$son",
-          "or",
+          "$shuffle",
           "$girl+family",
           "besides",
           "her.",
