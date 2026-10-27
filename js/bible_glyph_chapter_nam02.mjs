@@ -207,7 +207,7 @@ export function bible_glyph_chapter_nam02() {
           "been",
           "like",
           "a",
-          "pool",
+          "$camel+water_wave",
           "of",
           "$water",
           "throughout",
