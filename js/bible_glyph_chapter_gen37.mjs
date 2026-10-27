@@ -500,7 +500,7 @@ export function bible_glyph_chapter_gen37() {
           "$i_am+plus",
           "set",
           "$walking",
-          "after",
+          "$next_track",
           "his",
           "$brother",
           "and",
