@@ -196,7 +196,7 @@ export function bible_glyph_chapter_job28() {
           "his",
           "$eyes",
           "$eye",
-          "every",
+          "$all",
           "treasure.",
         ],
       },
