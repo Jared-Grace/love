@@ -1049,7 +1049,7 @@ export function bible_glyph_chapter_2ki10() {
           "it",
           "into",
           "a",
-          "latrine,",
+          "$pile_of_poo+house,",
           "which",
           "it",
           "is",
