@@ -246,7 +246,7 @@ export function bible_glyph_chapter_exo36() {
           "was",
           "enough",
           "for",
-          "all",
+          "$all",
           "the",
           "$tools",
           "to",
