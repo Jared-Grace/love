@@ -81,7 +81,7 @@ export function bible_glyph_chapter_gen27() {
           "your",
           "weapons,",
           "your",
-          "quiver",
+          "$arrow+package",
           "and",
           "bow,",
           "and",
