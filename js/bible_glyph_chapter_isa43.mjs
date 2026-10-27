@@ -347,7 +347,7 @@ export function bible_glyph_chapter_isa43() {
           "that",
           "I",
           "am",
-          "He.",
+          "$pointing_back.",
           "Before",
           "Me",
           "$no_entry",
