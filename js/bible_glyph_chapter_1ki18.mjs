@@ -1009,7 +1009,7 @@ export function bible_glyph_chapter_1ki18() {
           "one",
           "for",
           "each",
-          "tribe",
+          "$wood",
           "of",
           "the",
           "$son",
