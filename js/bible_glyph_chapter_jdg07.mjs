@@ -135,7 +135,7 @@ export function bible_glyph_chapter_jdg07() {
           "are",
           "$repeat",
           "too",
-          "many",
+          "$multiply",
           "$family.",
           "Take",
           "them",
