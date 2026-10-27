@@ -1453,7 +1453,7 @@ export function bible_glyph_chapter_gen41() {
           "$name_tag",
           "of",
           "the",
-          "second",
+          "$second_place",
           "$fruit,",
           "saying,",
           '"$heart_on_fire',
