@@ -632,7 +632,7 @@ export function bible_glyph_chapter_gen24() {
           "And",
           "she",
           "quickly",
-          "emptied",
+          "$amphora+down_arrow+doing",
           "her",
           "$jar",
           "into",
