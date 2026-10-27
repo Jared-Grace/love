@@ -508,7 +508,7 @@ export function bible_glyph_chapter_mal03() {
           "call",
           "the",
           "arrogant",
-          "blessed.",
+          "$gift+smile+doing.",
           "Not",
           "only",
           "do",
