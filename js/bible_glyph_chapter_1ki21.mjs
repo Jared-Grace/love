@@ -221,7 +221,7 @@ export function bible_glyph_chapter_1ki21() {
           "for",
           "$silver,",
           "$shuffle",
-          "if",
+          "$traffic_light",
           "you",
           "wish,",
           "I",
