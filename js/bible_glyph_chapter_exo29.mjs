@@ -168,7 +168,7 @@ export function bible_glyph_chapter_exo29() {
           "$hands_giving",
           "the",
           "$sparkle+thing",
-          "diadem",
+          "$crown+soap",
           "to",
           "the",
           "$person_wearing_turban.",
