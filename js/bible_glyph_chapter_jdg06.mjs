@@ -73,7 +73,7 @@ export function bible_glyph_chapter_jdg06() {
       {
         verse_number: 3,
         words: [
-          "Whenever",
+          "$traffic_light",
           "the",
           "$wrestling+heart_on_fire",
           "planted",
