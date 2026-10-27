@@ -1069,7 +1069,7 @@ export function bible_glyph_chapter_jer31() {
           "a",
           "$covenant",
           "$pointing_back",
-          "broke,",
+          "$broken_chain+scroll+doing,",
           "though",
           "I",
           "was",
