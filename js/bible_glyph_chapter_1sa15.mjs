@@ -113,7 +113,7 @@ export function bible_glyph_chapter_1sa15() {
           "$baby_bottle",
           "and",
           "$breast_feeding+doing,",
-          "oxen",
+          "$ox",
           "and",
           "sheep,",
           "camels",
