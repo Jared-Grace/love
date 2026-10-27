@@ -83,7 +83,7 @@ export function bible_glyph_chapter_1ki12() {
           "$wrestling+heart_on_fire",
           "and",
           "$mouth",
-          "to",
+          "$toward",
           "$proper_name$Rehoboam,",
           "$speech,",
         ],
