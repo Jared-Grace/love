@@ -576,7 +576,7 @@ export function bible_glyph_chapter_num14() {
           "in",
           "$gift,",
           "$lifting",
-          "iniquity",
+          "$cyclone",
           "and",
           "transgression.",
           "Yet",
