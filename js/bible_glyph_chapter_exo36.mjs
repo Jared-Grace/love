@@ -789,7 +789,7 @@ export function bible_glyph_chapter_exo36() {
           "$down_arrow+brick,",
           "$two",
           "$down_arrow",
-          "each",
+          "$one",
           "frame.",
         ],
       },
