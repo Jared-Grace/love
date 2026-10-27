@@ -779,7 +779,7 @@ export function bible_glyph_chapter_lev23() {
           "$sun",
           "of",
           "this",
-          "seventh",
+          "$seven+describing",
           "$new_moon",
           "is",
           "the",
