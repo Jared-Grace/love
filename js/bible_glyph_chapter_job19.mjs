@@ -110,7 +110,7 @@ export function bible_glyph_chapter_job19() {
           "I",
           "$loudspeaker+mouth",
           "out,",
-          "Violence!",
+          "$boxing_glove!",
           "I",
           "get",
           "$no_entry",
