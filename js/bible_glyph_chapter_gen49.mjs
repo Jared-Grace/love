@@ -802,7 +802,7 @@ export function bible_glyph_chapter_gen49() {
           "are",
           "buried.",
           "And",
-          "there",
+          "$telescope",
           "I",
           "buried",
           "$proper_name$Leah.",
