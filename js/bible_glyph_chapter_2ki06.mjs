@@ -770,7 +770,7 @@ export function bible_glyph_chapter_2ki06() {
           "And",
           "the",
           "Aramean",
-          "raiders",
+          "$crowd+sword",
           "did",
           "$no_entry",
           "$footprints",
