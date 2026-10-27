@@ -723,7 +723,7 @@ export function bible_glyph_chapter_deu11() {
           "$traffic_light",
           "you",
           "carefully",
-          "keep",
+          "$guard",
           "all",
           "these",
           "$scroll",
