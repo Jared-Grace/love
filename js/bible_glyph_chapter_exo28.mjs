@@ -261,7 +261,7 @@ export function bible_glyph_chapter_exo28() {
         verse_number: 9,
         words: [
           "$hand_receiving",
-          "two",
+          "$two",
           "onyx",
           "$stone",
           "and",
