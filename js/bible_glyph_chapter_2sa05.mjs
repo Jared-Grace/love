@@ -103,7 +103,7 @@ export function bible_glyph_chapter_2sa05() {
           "and",
           "$king",
           "$two_hearts+proper_name",
-          "made",
+          "$scissors",
           "a",
           "$covenant",
           "with",
