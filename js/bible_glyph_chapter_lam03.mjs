@@ -465,7 +465,7 @@ export function bible_glyph_chapter_lam03() {
           "is",
           "$thumbs_up",
           "to",
-          "wait",
+          "$hourglass+crossed_fingers+describing",
           "quietly",
           "for",
           "the",
