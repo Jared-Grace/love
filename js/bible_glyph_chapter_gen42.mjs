@@ -107,7 +107,7 @@ export function bible_glyph_chapter_gen42() {
           "am",
           "afraid",
           "that",
-          "harm",
+          "$face_with_head_bandage+thing",
           "might",
           "come",
           "to",
