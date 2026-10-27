@@ -68,7 +68,7 @@ export function bible_glyph_chapter_exo25() {
       {
         verse_number: 4,
         words: [
-          "blue",
+          "$blue_circle",
           "and",
           "purple",
           "and",
