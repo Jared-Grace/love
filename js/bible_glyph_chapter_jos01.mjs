@@ -244,7 +244,7 @@ export function bible_glyph_chapter_jos01() {
         verse_number: 8,
         words: [
           "This",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "$scroll",
