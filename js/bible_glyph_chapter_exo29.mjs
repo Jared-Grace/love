@@ -59,7 +59,7 @@ export function bible_glyph_chapter_exo29() {
           "with",
           "oil,",
           "and",
-          "unleavened",
+          "$flatbread",
           "wafers",
           "$oil+doing",
           "with",
