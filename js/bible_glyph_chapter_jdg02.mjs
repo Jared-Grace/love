@@ -124,7 +124,7 @@ export function bible_glyph_chapter_jdg02() {
           "thorns",
           "in",
           "your",
-          "sides,",
+          "$pointing+person,",
           "and",
           "their",
           "$moai",
