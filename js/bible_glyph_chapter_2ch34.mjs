@@ -827,7 +827,7 @@ export function bible_glyph_chapter_2ch34() {
         verse_number: 22,
         words: [
           "So",
-          "Hilkiah",
+          "$pizza+i_am",
           "and",
           "those",
           "the",
