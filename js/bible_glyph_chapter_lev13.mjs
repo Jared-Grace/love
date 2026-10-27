@@ -1463,7 +1463,7 @@ export function bible_glyph_chapter_lev13() {
           "diseased;",
           "$pointing_back",
           "is",
-          "unclean.",
+          "$soap+no_entry.",
           "The",
           "$priest",
           "must",
