@@ -449,7 +449,7 @@ export function bible_glyph_chapter_gen47() {
           "exchange",
           "for",
           "the",
-          "grain",
+          "$wheat+coin",
           "they",
           "were",
           "buying,",
