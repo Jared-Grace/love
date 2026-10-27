@@ -224,7 +224,7 @@ export function bible_glyph_chapter_psa051() {
       {
         verse_number: 10,
         words: [
-          "Create",
+          "$milky_way+doing",
           "in",
           "me",
           "a",
