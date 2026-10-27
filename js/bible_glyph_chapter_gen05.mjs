@@ -603,7 +603,7 @@ export function bible_glyph_chapter_gen05() {
           "$name_tag",
           "$proper_name$Noah,",
           "$speech,",
-          "This",
+          "$flashlight",
           "one",
           "will",
           "comfort",
