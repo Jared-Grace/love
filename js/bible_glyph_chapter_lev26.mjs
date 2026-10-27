@@ -183,7 +183,7 @@ export function bible_glyph_chapter_lev26() {
           "lie",
           "down",
           "with",
-          "nothing",
+          "$dotted_line_face",
           "to",
           "fear.",
           "I",
