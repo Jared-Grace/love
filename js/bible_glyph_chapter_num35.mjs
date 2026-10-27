@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_num35() {
           "For",
           "$me,",
           "$i_am,",
-          "dwell",
+          "$tent+doing",
           "among",
           "the",
           "$son",
