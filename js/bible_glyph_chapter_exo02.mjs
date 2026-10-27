@@ -132,7 +132,7 @@ export function bible_glyph_chapter_exo02() {
           "of",
           "$house+proper_name",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "bathe",
           "in",
