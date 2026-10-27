@@ -68,7 +68,7 @@ export function bible_glyph_chapter_deu09() {
           "$ear",
           "it",
           "said:",
-          "Who",
+          "$person+question",
           "can",
           "stand",
           "up",
