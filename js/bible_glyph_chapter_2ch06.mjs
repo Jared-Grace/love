@@ -618,7 +618,7 @@ export function bible_glyph_chapter_2ch06() {
           "the",
           "$sky,",
           "cannot",
-          "contain",
+          "$package+hand+doing",
           "You,",
           "much",
           "less",
