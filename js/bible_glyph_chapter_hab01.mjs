@@ -274,7 +274,7 @@ export function bible_glyph_chapter_hab01() {
           "$pointing_back",
           "laugh",
           "at",
-          "every",
+          "$all",
           "fortress",
           "and",
           "build",
