@@ -174,7 +174,7 @@ export function bible_glyph_chapter_psa110() {
           "by",
           "the",
           "$road;",
-          "therefore",
+          "$pointing_up",
           "He",
           "will",
           "lift",
