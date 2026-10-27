@@ -134,7 +134,7 @@ export function bible_glyph_chapter_est01() {
           "$hammer+doing",
           "a",
           "seven-day",
-          "feast",
+          "$cup_with_straw+thing",
           "for",
           "all",
           "the",
