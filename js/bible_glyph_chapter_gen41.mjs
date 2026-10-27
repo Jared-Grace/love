@@ -1133,7 +1133,7 @@ export function bible_glyph_chapter_gen41() {
           "$hands_giving",
           "you",
           "over",
-          "all",
+          "$all",
           "the",
           "$earth",
           "of",
