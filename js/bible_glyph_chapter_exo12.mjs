@@ -752,7 +752,7 @@ export function bible_glyph_chapter_exo12() {
           "passes",
           "through",
           "to",
-          "strike",
+          "$fist+microbe",
           "down",
           "the",
           "$clamp+proper_name,",
