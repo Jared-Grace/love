@@ -722,7 +722,7 @@ export function bible_glyph_chapter_gen27() {
           "come",
           "near",
           "and",
-          "kiss",
+          "$face_blowing_a_kiss",
           "me,",
           "my",
           '$son."',
