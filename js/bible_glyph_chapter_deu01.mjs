@@ -211,7 +211,7 @@ export function bible_glyph_chapter_deu01() {
           "foothills,",
           "in",
           "the",
-          "Negev,",
+          "$compass+down_arrow,",
           "and",
           "along",
           "the",
