@@ -240,7 +240,7 @@ export function bible_glyph_chapter_jer23() {
           "$sun",
           "are",
           "$footprints,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "when",
