@@ -193,7 +193,7 @@ export function bible_glyph_chapter_psa022() {
           "$fountain+doing",
           "from",
           "the",
-          "womb;",
+          "$baby+house;",
           "You",
           "made",
           "me",
