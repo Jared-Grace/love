@@ -79,7 +79,7 @@ export function bible_glyph_chapter_1ki21() {
           "its",
           "place,",
           "or",
-          "if",
+          "$traffic_light",
           "it",
           "seems",
           "$thumbs_up",
