@@ -527,7 +527,7 @@ export function bible_glyph_chapter_exo07() {
           "the",
           "river",
           "will",
-          "stink;",
+          "$nose+nauseated_face+doing;",
           "the",
           "$clamp+person",
           "will",
