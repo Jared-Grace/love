@@ -594,7 +594,7 @@ export function bible_glyph_chapter_deu11() {
       {
         verse_number: 18,
         words: [
-          "Fix",
+          "$palm_down",
           "these",
           "$speech",
           "of",
