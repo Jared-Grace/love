@@ -819,7 +819,7 @@ export function bible_glyph_chapter_lev11() {
           "in",
           "such",
           "a",
-          "container",
+          "$toolbox",
           "will",
           "be",
           "$soap+no_entry.",
