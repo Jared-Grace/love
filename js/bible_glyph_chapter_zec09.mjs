@@ -273,7 +273,7 @@ export function bible_glyph_chapter_zec09() {
         verse_number: 9,
         words: [
           "$woman_dancing",
-          "greatly,",
+          "$double_exclamation,",
           "O",
           "$woman",
           "of",
