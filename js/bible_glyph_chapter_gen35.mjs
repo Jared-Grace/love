@@ -323,7 +323,7 @@ export function bible_glyph_chapter_gen35() {
           "$speech",
           "to",
           "him,",
-          "I",
+          "$me",
           "am",
           "$heart_on_fire",
           "$might.",
