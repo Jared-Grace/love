@@ -1334,7 +1334,7 @@ export function bible_glyph_chapter_gen31() {
           "to",
           "his",
           "$brother,",
-          "Gather",
+          "$hand+sheaf_of_rice+doing",
           "$stone.",
           "And",
           "they",
