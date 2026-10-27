@@ -743,7 +743,7 @@ export function bible_glyph_chapter_isa49() {
           "$crown",
           "$i_am",
           "$speech:",
-          "Behold,",
+          "$exclamation,",
           "I",
           "will",
           "lift",
