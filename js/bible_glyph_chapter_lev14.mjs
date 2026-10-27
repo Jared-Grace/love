@@ -1833,7 +1833,7 @@ export function bible_glyph_chapter_lev14() {
           "a",
           "swelling,",
           "a",
-          "rash,",
+          "$microbe+hair+down_arrow,",
           "or",
           "a",
           "spot,",
