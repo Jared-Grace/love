@@ -1871,7 +1871,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "are",
           "$no_entry",
-          "careful",
+          "$guard",
           "to",
           "$hammer+doing",
           "all",
