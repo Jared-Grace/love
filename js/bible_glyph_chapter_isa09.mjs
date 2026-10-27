@@ -198,7 +198,7 @@ export function bible_glyph_chapter_isa09() {
           "government",
           "will",
           "be",
-          "upon",
+          "$pointing_up",
           "His",
           "shoulders.",
           "And",
