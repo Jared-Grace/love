@@ -225,7 +225,7 @@ export function bible_glyph_chapter_gen16() {
           "$angel",
           "of",
           "$i_am",
-          "found",
+          "$magnifying_glass+exclamation",
           "her",
           "by",
           "a",
