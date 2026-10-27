@@ -463,7 +463,7 @@ export function bible_glyph_chapter_num06() {
           "offering,",
           "an",
           "$full_moon+describing",
-          "ram",
+          "$ram",
           "as",
           "a",
           "peace",
