@@ -95,7 +95,7 @@ export function bible_glyph_chapter_ezk01() {
           "$proper_name$Chaldeans",
           "by",
           "the",
-          "River",
+          "$water+national_park",
           "$proper_name$Kebar.",
           "And",
           "there",
