@@ -160,7 +160,7 @@ export function bible_glyph_chapter_2sa05() {
           "thirty-three",
           "$year",
           "over",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire",
           "and",
           "$hands_raised+proper_name.",
