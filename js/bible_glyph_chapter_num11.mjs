@@ -39,7 +39,7 @@ export function bible_glyph_chapter_num11() {
           "was",
           "kindled",
           "and",
-          "blazed",
+          "$fire+wood",
           "among",
           "them,",
           "and",
