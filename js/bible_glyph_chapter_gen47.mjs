@@ -596,7 +596,7 @@ export function bible_glyph_chapter_gen47() {
           "$speech,",
           "We",
           "$no_entry",
-          "hide",
+          "$hand+tray_in+doing",
           "from",
           "our",
           "$crown",
