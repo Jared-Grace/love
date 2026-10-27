@@ -691,7 +691,7 @@ export function bible_glyph_chapter_gen21() {
           "$person+question",
           "has",
           "$hammer+doing",
-          "this.",
+          "$flashlight.",
           "You",
           "did",
           "$no_entry",
