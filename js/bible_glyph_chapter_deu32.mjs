@@ -421,7 +421,7 @@ export function bible_glyph_chapter_deu32() {
           "kicked,",
           "becoming",
           "fat,",
-          "bloated,",
+          "$meat+multiply+doing,",
           "and",
           "gorged.",
           "He",
