@@ -402,7 +402,7 @@ export function bible_glyph_chapter_gen24() {
           "$me",
           "am,",
           "$person+up_arrow",
-          "beside",
+          "$pointing_up",
           "the",
           "spring,",
           "and",
