@@ -788,7 +788,7 @@ export function bible_glyph_chapter_exo04() {
           "a",
           "$rock+kitchen_knife",
           "knife,",
-          "cut",
+          "$scissors",
           "off",
           "the",
           "foreskin",
