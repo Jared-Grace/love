@@ -125,7 +125,7 @@ export function bible_glyph_chapter_zec05() {
           "$house",
           "of",
           "the",
-          "thief",
+          "$ninja",
           "and",
           "the",
           "$house",
