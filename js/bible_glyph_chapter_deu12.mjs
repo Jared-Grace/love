@@ -32,7 +32,7 @@ export function bible_glyph_chapter_deu12() {
           "in",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am,",
           "the",
