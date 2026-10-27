@@ -324,7 +324,7 @@ export function bible_glyph_chapter_exo19() {
           "them",
           "today",
           "and",
-          "tomorrow.",
+          "$sun+next_track.",
           "They",
           "must",
           "wash",
