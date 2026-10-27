@@ -126,7 +126,7 @@ export function bible_glyph_chapter_jdg16() {
           "and",
           "took",
           "them",
-          "to",
+          "$toward",
           "the",
           "top",
           "of",
