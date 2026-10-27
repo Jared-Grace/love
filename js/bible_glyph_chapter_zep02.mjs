@@ -371,7 +371,7 @@ export function bible_glyph_chapter_zep02() {
           "$map",
           "of",
           "every",
-          "shore",
+          "$sea+round_pushpin",
           "will",
           "$bowing",
           "to",
