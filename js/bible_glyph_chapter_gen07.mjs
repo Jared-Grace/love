@@ -448,7 +448,7 @@ export function bible_glyph_chapter_gen07() {
           "forty",
           "$sun",
           "the",
-          "flood",
+          "$water_wave+earth",
           "kept",
           "coming",
           "upon",
