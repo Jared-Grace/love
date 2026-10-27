@@ -1128,7 +1128,7 @@ export function bible_glyph_chapter_exo32() {
         words: [
           "$watch",
           "$walking,",
-          "lead",
+          "$guide_dog",
           "the",
           "$family",
           "to",
