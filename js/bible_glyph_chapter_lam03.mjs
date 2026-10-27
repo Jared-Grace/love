@@ -772,7 +772,7 @@ export function bible_glyph_chapter_lam03() {
           "have",
           "killed",
           "$no_entry",
-          "pity.",
+          "$pleading_face+doing.",
         ],
       },
       {
