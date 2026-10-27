@@ -82,7 +82,7 @@ export function bible_glyph_chapter_gen05() {
           "in",
           "his",
           "own",
-          "likeness,",
+          "$likeness+thing,",
           "after",
           "his",
           "own",
