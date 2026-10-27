@@ -274,7 +274,7 @@ export function bible_glyph_chapter_deu28() {
           "you,",
           "$pointing",
           "you",
-          "keep",
+          "$guard",
           "the",
           "$scroll",
           "of",
