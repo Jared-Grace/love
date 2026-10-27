@@ -279,7 +279,7 @@ export function bible_glyph_chapter_gen07() {
           "In",
           "the",
           "$six",
-          "hundredth",
+          "$input_numbers+all",
           "year",
           "of",
           "the",
