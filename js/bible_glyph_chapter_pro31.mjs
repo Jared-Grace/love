@@ -413,7 +413,7 @@ export function bible_glyph_chapter_pro31() {
           "She",
           "has",
           "$no_entry",
-          "fear",
+          "$fear+doing",
           "for",
           "her",
           "$house",
