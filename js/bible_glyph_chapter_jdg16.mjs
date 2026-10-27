@@ -930,7 +930,7 @@ export function bible_glyph_chapter_jdg16() {
           "praised",
           "their",
           "$moai,",
-          "saying,",
+          "$pointing,",
           "Our",
           "$moai",
           "has",
