@@ -612,7 +612,7 @@ export function bible_glyph_chapter_num13() {
           "us,",
           "and",
           "indeed",
-          "it",
+          "$pointing_back",
           "is",
           "flowing",
           "with",
