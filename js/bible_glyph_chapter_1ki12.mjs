@@ -368,7 +368,7 @@ export function bible_glyph_chapter_1ki12() {
           "you",
           "with",
           "whips,",
-          "I",
+          "$me",
           "will",
           "scourge",
           "you",
