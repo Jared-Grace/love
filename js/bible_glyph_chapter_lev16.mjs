@@ -452,7 +452,7 @@ export function bible_glyph_chapter_lev16() {
           "it",
           "with",
           "his",
-          "finger",
+          "$index_pointing_up",
           "on",
           "the",
           "east",
