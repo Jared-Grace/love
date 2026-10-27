@@ -1147,7 +1147,7 @@ export function bible_glyph_chapter_2ki10() {
           "$son",
           "will",
           "$person+house",
-          "on",
+          "$pointing_up",
           "the",
           "$throne",
           "of",
