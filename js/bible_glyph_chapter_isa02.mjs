@@ -23,7 +23,7 @@ export function bible_glyph_chapter_isa02() {
           "$son",
           "of",
           "$proper_name$Amoz",
-          "concerning",
+          "$pointing_up",
           "$hands_raised+proper_name",
           "and",
           "$city+peace.",
