@@ -368,7 +368,7 @@ export function bible_glyph_chapter_exo15() {
       {
         verse_number: 15,
         words: [
-          "Then",
+          "$telescope+clock",
           "the",
           "chiefs",
           "of",
