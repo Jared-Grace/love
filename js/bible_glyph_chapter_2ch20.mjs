@@ -589,7 +589,7 @@ export function bible_glyph_chapter_2ch20() {
           "up",
           "your",
           "positions,",
-          "stand",
+          "$person+round_pushpin",
           "firm,",
           "and",
           "$eye",
