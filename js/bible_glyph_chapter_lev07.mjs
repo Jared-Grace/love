@@ -518,7 +518,7 @@ export function bible_glyph_chapter_lev07() {
           "who",
           "is",
           "ceremonially",
-          "clean",
+          "$soap+describing",
           "may",
           "eat",
           "the",
