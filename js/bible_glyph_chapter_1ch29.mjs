@@ -660,7 +660,7 @@ export function bible_glyph_chapter_1ch29() {
           "$wrestling+heart_on_fire,",
           "our",
           "$father,",
-          "keep",
+          "$guard",
           "this",
           "$hourglass",
           "in",
