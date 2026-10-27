@@ -1055,7 +1055,7 @@ export function bible_glyph_chapter_exo32() {
           "$i_am",
           "and",
           "$speech,",
-          "Oh,",
+          "$pleading_face+exclamation,",
           "these",
           "$family",
           "have",
