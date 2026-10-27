@@ -1024,7 +1024,7 @@ export function bible_glyph_chapter_jer23() {
           "against",
           "the",
           "$megaphone,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "who",
