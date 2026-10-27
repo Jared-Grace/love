@@ -379,7 +379,7 @@ export function bible_glyph_chapter_jer23() {
           "curse",
           "the",
           "$earth",
-          "mourns",
+          "$loudly_crying+coffin",
           "and",
           "the",
           "pastures",
