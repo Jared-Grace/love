@@ -1146,7 +1146,7 @@ export function bible_glyph_chapter_1sa02() {
         verse_number: 34,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "shall",
           "$footprints",
           "to",
