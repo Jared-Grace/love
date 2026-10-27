@@ -990,7 +990,7 @@ export function bible_glyph_chapter_1ch29() {
           "$thumbs_up",
           "old",
           "age,",
-          "full",
+          "$eating+top+describing",
           "of",
           "$sun,",
           "riches",
