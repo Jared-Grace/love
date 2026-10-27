@@ -162,7 +162,7 @@ export function bible_glyph_chapter_gen27() {
         words: [
           "$proper_name$Rebekah",
           "$speech",
-          "to",
+          "$toward",
           "her",
           "$son",
           "$hand+foot,",
