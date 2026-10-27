@@ -364,7 +364,7 @@ export function bible_glyph_chapter_deu14() {
         verse_number: 18,
         words: [
           "the",
-          "stork,",
+          "$bird+baby,",
           "any",
           "kind",
           "of",
