@@ -595,7 +595,7 @@ export function bible_glyph_chapter_exo36() {
           "Each",
           "frame",
           "was",
-          "ten",
+          "$ten",
           "cubits",
           "long",
           "and",
