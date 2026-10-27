@@ -59,7 +59,7 @@ export function bible_glyph_chapter_zec14() {
           "the",
           "$woman",
           "$bed+fist+doing.",
-          "Half",
+          "$divide",
           "of",
           "the",
           "$city",
