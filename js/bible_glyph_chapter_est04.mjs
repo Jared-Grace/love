@@ -21,7 +21,7 @@ export function bible_glyph_chapter_est04() {
           "had",
           "$hammer+doing,",
           "he",
-          "tore",
+          "$t_shirt+scissors+doing",
           "his",
           "$garment,",
           "put",
