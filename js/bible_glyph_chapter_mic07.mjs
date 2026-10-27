@@ -254,7 +254,7 @@ export function bible_glyph_chapter_mic07() {
           "me,",
           "my",
           "$enemy!",
-          "Though",
+          "$pointing",
           "I",
           "have",
           "fallen,",
