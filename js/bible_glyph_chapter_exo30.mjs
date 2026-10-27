@@ -555,7 +555,7 @@ export function bible_glyph_chapter_exo30() {
           "the",
           "$altar",
           "to",
-          "minister",
+          "$bellhop_bell+doing",
           "by",
           "presenting",
           "a",
