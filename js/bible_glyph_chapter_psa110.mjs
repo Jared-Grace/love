@@ -170,7 +170,7 @@ export function bible_glyph_chapter_psa110() {
           "drink",
           "from",
           "the",
-          "brook",
+          "$national_park",
           "by",
           "the",
           "$road;",
