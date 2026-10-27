@@ -190,7 +190,7 @@ export function bible_glyph_chapter_pro16() {
           "A",
           "$person",
           "$heart_organ",
-          "plans",
+          "$thinking+doing",
           "his",
           "$road,",
           "but",
