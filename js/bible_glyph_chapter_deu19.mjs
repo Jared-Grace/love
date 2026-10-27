@@ -540,7 +540,7 @@ export function bible_glyph_chapter_deu19() {
           "a",
           "false",
           "$witness",
-          "testifies",
+          "$speech+turn_back",
           "against",
           "$man_beard,",
           "accusing",
