@@ -706,7 +706,7 @@ export function bible_glyph_chapter_gen43() {
           "$no_entry",
           "$lightbulb",
           "$person+question",
-          "put",
+          "$palm_down",
           "our",
           "$silver",
           "in",
