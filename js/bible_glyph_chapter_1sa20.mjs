@@ -245,7 +245,7 @@ export function bible_glyph_chapter_1sa20() {
           "his",
           "own",
           "$city,",
-          "because",
+          "$pointing",
           "the",
           "yearly",
           "sacrifice",
