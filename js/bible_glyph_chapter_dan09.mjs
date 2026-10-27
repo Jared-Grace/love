@@ -616,7 +616,7 @@ export function bible_glyph_chapter_dan09() {
           "$crown,",
           "cause",
           "Your",
-          "face",
+          "$face",
           "to",
           "shine",
           "upon",
