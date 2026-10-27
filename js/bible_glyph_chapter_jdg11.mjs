@@ -1236,7 +1236,7 @@ export function bible_glyph_chapter_jdg11() {
           "$speech",
           "for",
           "$two",
-          "months.",
+          "$new_moon.",
           "Let",
           "me",
           "$walking",
