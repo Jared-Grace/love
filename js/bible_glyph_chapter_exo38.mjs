@@ -274,7 +274,7 @@ export function bible_glyph_chapter_exo38() {
           "was",
           "also",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "cubits",
           "long,",
           "with",
