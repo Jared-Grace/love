@@ -481,7 +481,7 @@ export function bible_glyph_chapter_2ki10() {
           "$hands_raised+proper_name",
           "and",
           "$speech,",
-          "Who",
+          "$person+question",
           "are",
           "you?",
           "They",
