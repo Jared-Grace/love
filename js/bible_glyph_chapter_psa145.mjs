@@ -74,7 +74,7 @@ export function bible_glyph_chapter_psa145() {
           "praised,",
           "and",
           "His",
-          "greatness",
+          "$top+thing",
           "is",
           "unsearchable.",
         ],
