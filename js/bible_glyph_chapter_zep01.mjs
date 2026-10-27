@@ -341,7 +341,7 @@ export function bible_glyph_chapter_zep01() {
       {
         verse_number: 11,
         words: [
-          "Wail,",
+          "$crying_face+loudspeaker+doing,",
           "O",
           "dwellers",
           "of",
