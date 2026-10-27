@@ -28,7 +28,7 @@ export function bible_glyph_chapter_num12() {
           "$woman",
           "he",
           "$hand_receiving,",
-          "for",
+          "$pointing",
           "he",
           "$hand_receiving",
           "a",
