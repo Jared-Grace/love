@@ -252,7 +252,7 @@ export function bible_glyph_chapter_1sa15() {
           "$proper_name$Amalek",
           "$sprout,",
           "but",
-          "all",
+          "$all",
           "the",
           "$family",
           "he",
