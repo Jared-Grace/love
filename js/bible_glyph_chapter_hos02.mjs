@@ -143,7 +143,7 @@ export function bible_glyph_chapter_hos02() {
           "them",
           "in",
           "disgrace.",
-          "For",
+          "$pointing",
           "she",
           "$speech,",
           "I",
