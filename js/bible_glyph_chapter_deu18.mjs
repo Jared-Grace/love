@@ -613,7 +613,7 @@ export function bible_glyph_chapter_deu18() {
           "in",
           "your",
           "$heart_organ,",
-          "How",
+          "$question+likeness",
           "can",
           "we",
           "$lightbulb",
