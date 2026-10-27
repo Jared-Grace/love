@@ -1186,7 +1186,7 @@ export function bible_glyph_chapter_1ki22() {
           "$speech,",
           "Every",
           "$man_beard",
-          "to",
+          "$toward",
           "his",
           "own",
           "$city,",
