@@ -110,7 +110,7 @@ export function bible_glyph_chapter_job28() {
           "is",
           "transformed",
           "below",
-          "as",
+          "$likeness",
           "by",
           "$fire.",
         ],
