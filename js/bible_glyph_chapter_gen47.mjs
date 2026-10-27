@@ -779,7 +779,7 @@ export function bible_glyph_chapter_gen47() {
           "$no_entry",
           "sell",
           "their",
-          "land.",
+          "$brown_square.",
         ],
       },
       {
