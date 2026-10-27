@@ -19,7 +19,7 @@ export function bible_glyph_chapter_exo36() {
           "$tent+father",
           "and",
           "every",
-          "skilled",
+          "$wisdom",
           "$man_beard",
           "of",
           "$heart_organ",
