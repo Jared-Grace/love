@@ -1589,7 +1589,7 @@ export function bible_glyph_chapter_deu04() {
           "the",
           "$witness+thing,",
           "the",
-          "statutes",
+          "$locked_with_pen",
           "and",
           "the",
           "$scales+thing",
