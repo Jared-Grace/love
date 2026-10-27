@@ -649,7 +649,7 @@ export function bible_glyph_chapter_num19() {
           "one",
           "on",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "and",
           "on",
