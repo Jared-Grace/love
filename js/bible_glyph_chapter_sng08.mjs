@@ -171,7 +171,7 @@ export function bible_glyph_chapter_sng08() {
           "$ring+locked+thing",
           "upon",
           "your",
-          "arm.",
+          "$hand+might.",
           "For",
           "$heart_red",
           "is",
