@@ -1465,7 +1465,7 @@ export function bible_glyph_chapter_1ki02() {
           "$peace+proper_name",
           "was",
           "told",
-          "that",
+          "$pointing",
           "$proper_name$Shimei",
           "had",
           "$walking",
