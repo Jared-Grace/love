@@ -515,7 +515,7 @@ export function bible_glyph_chapter_exo10() {
           "over",
           "the",
           "entire",
-          "territory",
+          "$passport_control",
           "of",
           "$clamp+proper_name.",
           "$no_entry",
