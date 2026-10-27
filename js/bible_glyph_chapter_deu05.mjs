@@ -784,7 +784,7 @@ export function bible_glyph_chapter_deu05() {
           "and",
           "$ear",
           "all",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "our",
