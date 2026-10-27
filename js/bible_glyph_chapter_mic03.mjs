@@ -112,7 +112,7 @@ export function bible_glyph_chapter_mic03() {
           "He",
           "will",
           "$no_entry",
-          "answer",
+          "$speech+turn_back",
           "them.",
           "At",
           "that",
