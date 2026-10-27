@@ -917,7 +917,7 @@ export function bible_glyph_chapter_exo28() {
         verse_number: 33,
         words: [
           "$hammer+doing",
-          "pomegranates",
+          "$fruit+red_circle",
           "of",
           "blue,",
           "purple",
