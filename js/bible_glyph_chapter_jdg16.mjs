@@ -429,7 +429,7 @@ export function bible_glyph_chapter_jdg16() {
           "hidden",
           "in",
           "her",
-          "room,",
+          "$door+bed,",
           "he",
           "snapped",
           "the",
