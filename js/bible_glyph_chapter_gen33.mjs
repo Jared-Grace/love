@@ -138,7 +138,7 @@ export function bible_glyph_chapter_gen33() {
           "$speech,",
           "$person+question",
           "are",
-          "these",
+          "$flashlight+flashlight",
           "with",
           "you?",
           "Jacob",
