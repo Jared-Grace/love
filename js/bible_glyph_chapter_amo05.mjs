@@ -20,7 +20,7 @@ export function bible_glyph_chapter_amo05() {
           "$speech,",
           "this",
           "lamentation",
-          "I",
+          "$me",
           "$lifting",
           "up",
           "against",
