@@ -63,7 +63,7 @@ export function bible_glyph_chapter_gen49() {
         verse_number: 3,
         words: [
           "$eyes+son,",
-          "you",
+          "$you",
           "are",
           "my",
           "$first_place+baby,",
