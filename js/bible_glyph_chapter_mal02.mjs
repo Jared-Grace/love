@@ -261,7 +261,7 @@ export function bible_glyph_chapter_mal02() {
           "caused",
           "many",
           "to",
-          "stumble.",
+          "$hiking_boot+rock.",
           "You",
           "have",
           "violated",
