@@ -1220,7 +1220,7 @@ export function bible_glyph_chapter_1sa02() {
         words: [
           "And",
           "$all",
-          "left",
+          "$takeout_box+doing",
           "in",
           "your",
           "$house",
