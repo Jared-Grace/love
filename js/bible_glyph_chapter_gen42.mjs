@@ -792,7 +792,7 @@ export function bible_glyph_chapter_gen42() {
           "here",
           "in",
           "my",
-          "sack.",
+          "$backpack.",
           "Their",
           "$heart_organ",
           "$walking+tray_out,",
