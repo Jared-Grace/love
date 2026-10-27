@@ -446,7 +446,7 @@ export function bible_glyph_chapter_exo37() {
         verse_number: 18,
         words: [
           "$six",
-          "branches",
+          "$tanabata_tree",
           "$walking+tray_out",
           "from",
           "the",
