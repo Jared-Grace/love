@@ -162,7 +162,7 @@ export function bible_glyph_chapter_exo16() {
           "I",
           "will",
           "$test_tube",
-          "whether",
+          "$traffic_light",
           "or",
           "$no_entry",
           "they",
