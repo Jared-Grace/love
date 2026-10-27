@@ -15,7 +15,7 @@ export function bible_glyph_chapter_zec14() {
       {
         verse_number: 1,
         words: [
-          "Behold,",
+          "$exclamation,",
           "a",
           "$sun",
           "of",
