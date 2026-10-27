@@ -287,7 +287,7 @@ export function bible_glyph_chapter_zec05() {
           "those",
           "of",
           "a",
-          "stork,",
+          "$bird+baby,",
           "and",
           "they",
           "lifted",
