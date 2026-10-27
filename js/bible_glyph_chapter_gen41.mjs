@@ -1493,7 +1493,7 @@ export function bible_glyph_chapter_gen41() {
         verse_number: 54,
         words: [
           "the",
-          "seven",
+          "$seven",
           "$year",
           "of",
           "famine",
