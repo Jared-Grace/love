@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_gen47() {
           "$speech",
           "to",
           "him,",
-          "If",
+          "$traffic_light",
           "I",
           "have",
           "found",
