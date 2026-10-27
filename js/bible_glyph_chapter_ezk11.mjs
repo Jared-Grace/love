@@ -744,7 +744,7 @@ export function bible_glyph_chapter_ezk11() {
           "rose",
           "up",
           "from",
-          "within",
+          "$radio_button",
           "the",
           "$city",
           "and",
