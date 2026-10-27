@@ -382,7 +382,7 @@ export function bible_glyph_chapter_exo16() {
       },
       {
         verse_number: 11,
-        words: ["Then", "the", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,"],
+        words: ["Then", "the", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 12,
