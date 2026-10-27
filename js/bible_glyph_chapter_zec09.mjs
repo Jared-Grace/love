@@ -140,7 +140,7 @@ export function bible_glyph_chapter_zec09() {
           "as",
           "will",
           "$proper_name$Ekron,",
-          "for",
+          "$pointing",
           "her",
           "hope",
           "will",
