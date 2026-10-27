@@ -405,7 +405,7 @@ export function bible_glyph_chapter_pro03() {
           "clouds",
           "$cloud+droplet+doing",
           "with",
-          "dew.",
+          "$dew.",
         ],
       },
       {
