@@ -967,7 +967,7 @@ export function bible_glyph_chapter_lev16() {
           "with",
           "$water,",
           "and",
-          "afterward",
+          "$next_track",
           "he",
           "may",
           "$footprints",
