@@ -90,7 +90,7 @@ export function bible_glyph_chapter_gen50() {
           "to",
           "$house+proper_name's",
           "$house,",
-          "If",
+          "$traffic_light",
           "I",
           "have",
           "found",
