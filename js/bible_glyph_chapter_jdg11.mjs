@@ -796,7 +796,7 @@ export function bible_glyph_chapter_jdg11() {
         verse_number: 25,
         words: [
           "Are",
-          "you",
+          "$you",
           "$watch",
           "so",
           "much",
