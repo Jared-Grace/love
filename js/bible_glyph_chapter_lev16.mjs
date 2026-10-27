@@ -678,7 +678,7 @@ export function bible_glyph_chapter_lev16() {
           "$hands_giving",
           "it",
           "on",
-          "all",
+          "$around",
           "the",
           "horns",
           "of",
