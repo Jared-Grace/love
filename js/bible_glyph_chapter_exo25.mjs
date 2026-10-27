@@ -70,7 +70,7 @@ export function bible_glyph_chapter_exo25() {
         words: [
           "$blue_circle",
           "and",
-          "purple",
+          "$purple_circle",
           "and",
           "scarlet",
           "yarn,",
