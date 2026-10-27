@@ -171,7 +171,7 @@ export function bible_glyph_chapter_psa046() {
         verse_number: 8,
         words: [
           "$walking,",
-          "see",
+          "$eye+doing",
           "the",
           "works",
           "of",
