@@ -352,7 +352,7 @@ export function bible_glyph_chapter_2ki10() {
           "$me",
           "who",
           "conspired",
-          "against",
+          "$pointing_up",
           "my",
           "$crown",
           "and",
