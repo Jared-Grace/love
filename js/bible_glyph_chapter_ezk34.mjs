@@ -718,7 +718,7 @@ export function bible_glyph_chapter_ezk34() {
           "$no_entry",
           "$repeat",
           "$link",
-          "prey.",
+          "$pirate_flag+thing.",
           "I",
           "will",
           "judge",
