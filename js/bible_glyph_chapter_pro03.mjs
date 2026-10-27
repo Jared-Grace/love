@@ -495,7 +495,7 @@ export function bible_glyph_chapter_pro03() {
           "$fearful_face",
           "or",
           "the",
-          "ruin",
+          "$tornado+collision",
           "that",
           "$footprints",
           "the",
