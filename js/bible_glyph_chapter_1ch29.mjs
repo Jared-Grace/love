@@ -173,7 +173,7 @@ export function bible_glyph_chapter_1ch29() {
           "$proper_name$Ophir,",
           "and",
           "seven",
-          "thousand",
+          "$ten+all",
           "talents",
           "of",
           "refined",
