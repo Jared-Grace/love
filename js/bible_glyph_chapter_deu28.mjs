@@ -1529,7 +1529,7 @@ export function bible_glyph_chapter_deu28() {
           "down",
           "like",
           "an",
-          "eagle,",
+          "$eagle,",
           "a",
           "$map",
           "whose",
