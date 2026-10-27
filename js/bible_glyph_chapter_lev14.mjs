@@ -90,7 +90,7 @@ export function bible_glyph_chapter_lev14() {
           "$bird+pinching_hand,",
           "$cedar",
           "$tree,",
-          "scarlet",
+          "$red_circle",
           "yarn,",
           "and",
           "hyssop",
