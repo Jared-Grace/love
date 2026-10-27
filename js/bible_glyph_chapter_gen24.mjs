@@ -1119,7 +1119,7 @@ export function bible_glyph_chapter_gen24() {
           "in",
           "whose",
           "$earth",
-          "I",
+          "$me",
           "$person+house,",
         ],
       },
