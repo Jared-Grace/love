@@ -206,7 +206,7 @@ export function bible_glyph_chapter_jos02() {
           "the",
           "stalks",
           "of",
-          "flax",
+          "$herb+thread+thing",
           "she",
           "had",
           "laid",
