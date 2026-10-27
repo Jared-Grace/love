@@ -1003,7 +1003,7 @@ export function bible_glyph_chapter_lev14() {
           "on",
           "the",
           "right",
-          "earlobe",
+          "$ear+end_arrow",
           "of",
           "the",
           "one",
