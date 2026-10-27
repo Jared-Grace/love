@@ -63,7 +63,7 @@ export function bible_glyph_chapter_psa145() {
       {
         verse_number: 3,
         words: [
-          "Great",
+          "$top",
           "is",
           "the",
           "$i_am,",
