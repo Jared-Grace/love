@@ -499,7 +499,7 @@ export function bible_glyph_chapter_exo40() {
           "shielded",
           "off",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$witness+thing,",
