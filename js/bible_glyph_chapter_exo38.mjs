@@ -371,7 +371,7 @@ export function bible_glyph_chapter_exo38() {
           "on",
           "the",
           "other",
-          "side",
+          "$person_shrugging",
           "of",
           "the",
           "$gate",
