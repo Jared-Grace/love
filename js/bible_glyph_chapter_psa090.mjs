@@ -246,7 +246,7 @@ export function bible_glyph_chapter_psa090() {
           "Your",
           "$nose+fire?",
           "Your",
-          "wrath",
+          "$anger_symbol",
           "matches",
           "the",
           "$fear",
