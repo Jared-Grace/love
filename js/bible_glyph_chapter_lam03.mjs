@@ -429,7 +429,7 @@ export function bible_glyph_chapter_lam03() {
           "$speech",
           "my",
           "$person_other,",
-          "therefore",
+          "$pointing_up",
           "I",
           "will",
           "hope",
