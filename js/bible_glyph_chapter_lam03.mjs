@@ -1047,7 +1047,7 @@ export function bible_glyph_chapter_lam03() {
           "$all",
           "their",
           "malice,",
-          "all",
+          "$all",
           "their",
           "plots",
           "against",
