@@ -435,7 +435,7 @@ export function bible_glyph_chapter_gen28() {
           "and",
           "the",
           "$compass+down_arrow.",
-          "All",
+          "$all",
           "the",
           "families",
           "of",
