@@ -321,7 +321,7 @@ export function bible_glyph_chapter_exo03() {
       {
         verse_number: 10,
         words: [
-          "Therefore,",
+          "$watch,",
           "$walking!",
           "I",
           "am",
