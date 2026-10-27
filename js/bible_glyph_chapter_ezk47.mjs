@@ -527,7 +527,7 @@ export function bible_glyph_chapter_ezk47() {
           "On",
           "the",
           "north",
-          "side",
+          "$straight_ruler+round_pushpin",
           "it",
           "will",
           "extend",
