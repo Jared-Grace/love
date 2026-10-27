@@ -1099,7 +1099,7 @@ export function bible_glyph_chapter_2ki06() {
           "the",
           "$angel",
           "$footprints,",
-          "shut",
+          "$locked+doing",
           "the",
           "door",
           "to",
