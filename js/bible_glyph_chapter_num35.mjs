@@ -425,7 +425,7 @@ export function bible_glyph_chapter_num35() {
           "serve",
           "as",
           "a",
-          "refuge",
+          "$house+ring_buoy",
           "for",
           "the",
           "$son",
