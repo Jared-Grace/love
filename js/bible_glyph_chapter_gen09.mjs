@@ -739,7 +739,7 @@ export function bible_glyph_chapter_gen09() {
           "and",
           "may",
           "$proper_name$Canaan",
-          "be",
+          "$link",
           "his",
           "$kneeling.",
         ],
