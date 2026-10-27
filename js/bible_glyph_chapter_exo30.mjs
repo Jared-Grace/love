@@ -875,7 +875,7 @@ export function bible_glyph_chapter_exo30() {
           "outsider,",
           "shall",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "his",
