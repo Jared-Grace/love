@@ -652,7 +652,7 @@ export function bible_glyph_chapter_lev15() {
           "any",
           "$toolbox",
           "on",
-          "which",
+          "$back+flashlight",
           "she",
           "was",
           "sitting",
