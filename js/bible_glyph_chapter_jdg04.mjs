@@ -348,7 +348,7 @@ export function bible_glyph_chapter_jdg04() {
           "had",
           "pitched",
           "his",
-          "tent",
+          "$tent",
           "by",
           "the",
           "great",
