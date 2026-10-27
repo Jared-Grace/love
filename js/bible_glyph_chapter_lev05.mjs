@@ -217,7 +217,7 @@ export function bible_glyph_chapter_lev05() {
           "as",
           "restitution",
           "$bow+doing",
-          "two",
+          "$two",
           "turtledoves",
           "or",
           "two",
