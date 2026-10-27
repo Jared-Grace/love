@@ -318,7 +318,7 @@ export function bible_glyph_chapter_1ki12() {
           "made",
           "our",
           "yoke",
-          "heavy,",
+          "$star+doing,",
           "but",
           "you",
           "must",
