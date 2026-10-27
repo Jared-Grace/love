@@ -46,7 +46,7 @@ export function bible_glyph_chapter_job38() {
         words: [
           "$pleading",
           "$briefs+ribbon+doing",
-          "yourself",
+          "$leg+battery",
           "like",
           "a",
           "$might+man_beard;",
