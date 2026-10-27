@@ -966,7 +966,7 @@ export function bible_glyph_chapter_lev27() {
           "part",
           "of",
           "his",
-          "tithe,",
+          "$ten+hands_giving,",
           "he",
           "must",
           "add",
