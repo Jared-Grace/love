@@ -286,7 +286,7 @@ export function bible_glyph_chapter_gen39() {
           "me",
           "$pointing",
           "you,",
-          "because",
+          "$back+flashlight",
           "you",
           "are",
           "his",
