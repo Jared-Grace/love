@@ -77,7 +77,7 @@ export function bible_glyph_chapter_jdg11() {
           "our",
           "$father",
           "$house,",
-          "because",
+          "$pointing",
           "you",
           "are",
           "the",
