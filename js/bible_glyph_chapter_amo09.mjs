@@ -472,7 +472,7 @@ export function bible_glyph_chapter_amo09() {
           "$sun",
           "are",
           "$footprints,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "when",
