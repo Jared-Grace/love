@@ -465,7 +465,7 @@ export function bible_glyph_chapter_1ki19() {
           "$face",
           "in",
           "his",
-          "cloak",
+          "$cloak+sparkles",
           "and",
           "went",
           "out",
