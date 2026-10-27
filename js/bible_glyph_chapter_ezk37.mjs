@@ -142,7 +142,7 @@ export function bible_glyph_chapter_ezk37() {
           "$speech",
           "to",
           "these",
-          "bones:",
+          "$bone:",
           "I",
           "will",
           "cause",
