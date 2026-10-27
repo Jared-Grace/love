@@ -305,7 +305,7 @@ export function bible_glyph_chapter_neh01() {
           "to",
           "Me",
           "and",
-          "keep",
+          "$guard",
           "My",
           "$scroll",
           "and",
