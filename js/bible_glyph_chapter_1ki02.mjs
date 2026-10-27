@@ -1407,7 +1407,7 @@ export function bible_glyph_chapter_1ki02() {
           "Shimei",
           "ran",
           "away",
-          "to",
+          "$toward",
           "$proper_name$Achish",
           "$son",
           "of",
