@@ -63,7 +63,7 @@ export function bible_glyph_chapter_ecc01() {
           "toils",
           "$down_arrow",
           "the",
-          "sun?",
+          "$sun_with_face?",
         ],
       },
       {
