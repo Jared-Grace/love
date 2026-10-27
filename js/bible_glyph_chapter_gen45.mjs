@@ -172,7 +172,7 @@ export function bible_glyph_chapter_gen45() {
       {
         verse_number: 6,
         words: [
-          "For",
+          "$pointing",
           "the",
           "famine",
           "has",
