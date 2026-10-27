@@ -602,7 +602,7 @@ export function bible_glyph_chapter_gen48() {
           "hand",
           "$pointing_up",
           "his",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
