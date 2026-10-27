@@ -287,7 +287,7 @@ export function bible_glyph_chapter_lev19() {
           "$name_tag",
           "and",
           "so",
-          "profane",
+          "$sewing_needle",
           "the",
           "$name_tag",
           "of",
