@@ -121,7 +121,7 @@ export function bible_glyph_chapter_deu05() {
           "At",
           "that",
           "time",
-          "I",
+          "$me",
           "was",
           "standing",
           "between",
