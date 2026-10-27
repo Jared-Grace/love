@@ -770,7 +770,7 @@ export function bible_glyph_chapter_jer23() {
           "yet",
           "$pointing_back",
           "have",
-          "run",
+          "$running",
           "with",
           "their",
           "message.",
