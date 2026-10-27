@@ -607,7 +607,7 @@ export function bible_glyph_chapter_1ch29() {
           "$lightbulb,",
           "my",
           "$heart_on_fire,",
-          "that",
+          "$pointing",
           "You",
           "test",
           "the",
