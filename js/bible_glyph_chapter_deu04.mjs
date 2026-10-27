@@ -291,7 +291,7 @@ export function bible_glyph_chapter_deu04() {
       {
         verse_number: 9,
         words: [
-          "Only",
+          "$one+check",
           "be",
           "on",
           "your",
