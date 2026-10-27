@@ -931,7 +931,7 @@ export function bible_glyph_chapter_exo29() {
           "of",
           "$alarm_clock",
           "to",
-          "minister",
+          "$bellhop_bell+doing",
           "in",
           "the",
           "$sparkle+thing",
