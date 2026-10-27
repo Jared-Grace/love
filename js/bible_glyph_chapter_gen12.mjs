@@ -535,7 +535,7 @@ export function bible_glyph_chapter_gen12() {
       {
         verse_number: 19,
         words: [
-          "Why",
+          "$flashlight+question",
           "did",
           "you",
           "$speech,",
