@@ -119,7 +119,7 @@ export function bible_glyph_chapter_mal03() {
           "$fire+droplet+doing",
           "them",
           "like",
-          "gold",
+          "$gold",
           "and",
           "$silver.",
           "Then",
