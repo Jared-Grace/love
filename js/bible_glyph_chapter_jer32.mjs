@@ -1404,7 +1404,7 @@ export function bible_glyph_chapter_jer32() {
           "will",
           "$hands_giving",
           "My",
-          "fear",
+          "$fear",
           "in",
           "their",
           "$heart_organ,",
