@@ -15,7 +15,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 1,
         words: [
-          "I",
+          "$me",
           "am",
           "the",
           "man",
