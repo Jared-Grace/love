@@ -342,7 +342,7 @@ export function bible_glyph_chapter_exo11() {
           "$all",
           "$flashlight+flashlight",
           "$shooting_star",
-          "before",
+          "$face",
           "$house+proper_name,",
           "but",
           "$i_am",
