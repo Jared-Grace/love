@@ -94,7 +94,7 @@ export function bible_glyph_chapter_lev19() {
           "you",
           "sacrifice",
           "a",
-          "peace",
+          "$peace+gift",
           "offering",
           "to",
           "the",
