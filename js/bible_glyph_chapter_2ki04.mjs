@@ -497,7 +497,7 @@ export function bible_glyph_chapter_2ki04() {
           "$speech,",
           "At",
           "this",
-          "time",
+          "$alarm_clock",
           "next",
           "year",
           "you",
