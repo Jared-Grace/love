@@ -249,7 +249,7 @@ export function bible_glyph_chapter_pro31() {
           "and",
           "$no_entry",
           "$thumbs_down",
-          "all",
+          "$all",
           "the",
           "$sun",
           "of",
