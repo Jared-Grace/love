@@ -300,7 +300,7 @@ export function bible_glyph_chapter_jer17() {
           "and",
           "beyond",
           "cure.",
-          "Who",
+          "$person+question",
           "can",
           "$lightbulb",
           "it?",
