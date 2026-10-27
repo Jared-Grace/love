@@ -811,7 +811,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 46,
         words: [
-          "All",
+          "$all",
           "our",
           "enemies",
           "$face_with_open_mouth+doing",
