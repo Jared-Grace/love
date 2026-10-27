@@ -473,7 +473,7 @@ export function bible_glyph_chapter_1sa03() {
         words: [
           "But",
           "$pointing_up+proper_name",
-          "called",
+          "$waving_hand",
           "to",
           "him",
           "and",
