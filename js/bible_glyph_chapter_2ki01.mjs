@@ -551,7 +551,7 @@ export function bible_glyph_chapter_2ki01() {
           "consumed",
           "the",
           "first",
-          "two",
+          "$two",
           "captains",
           "of",
           "fifty",
