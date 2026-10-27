@@ -402,7 +402,7 @@ export function bible_glyph_chapter_isa61() {
           "and",
           "as",
           "a",
-          "garden",
+          "$garden",
           "enables",
           "seed",
           "to",
