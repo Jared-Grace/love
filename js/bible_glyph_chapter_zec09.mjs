@@ -560,7 +560,7 @@ export function bible_glyph_chapter_zec09() {
           "sparkle",
           "$pointing_up",
           "His",
-          "land.",
+          "$brown_square.",
         ],
       },
       {
