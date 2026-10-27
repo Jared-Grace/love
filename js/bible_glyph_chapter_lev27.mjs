@@ -498,7 +498,7 @@ export function bible_glyph_chapter_lev27() {
           "$receipt",
           "shall",
           "be",
-          "proportional",
+          "$face_with_open_mouth",
           "to",
           "the",
           "$seed",
