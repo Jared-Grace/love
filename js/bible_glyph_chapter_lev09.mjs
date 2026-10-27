@@ -54,7 +54,7 @@ export function bible_glyph_chapter_lev09() {
           "and",
           "$magnet+doing",
           "them",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
