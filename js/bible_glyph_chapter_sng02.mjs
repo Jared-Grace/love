@@ -212,7 +212,7 @@ export function bible_glyph_chapter_sng02() {
           "$tray_out",
           "the",
           "windows,",
-          "peering",
+          "$blossom+doing",
           "$tray_out",
           "the",
           "lattice.",
