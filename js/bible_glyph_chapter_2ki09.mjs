@@ -277,7 +277,7 @@ export function bible_glyph_chapter_2ki09() {
         verse_number: 8,
         words: [
           "The",
-          "whole",
+          "$all",
           "$house",
           "of",
           "$proper_name$Ahab",
