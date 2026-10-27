@@ -173,7 +173,7 @@ export function bible_glyph_chapter_lev07() {
           "$priest",
           "$back+flashlight",
           "makes",
-          "atonement",
+          "$umbrella+doing",
           "with",
           "it.",
         ],
