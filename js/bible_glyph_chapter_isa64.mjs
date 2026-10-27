@@ -244,7 +244,7 @@ export function bible_glyph_chapter_isa64() {
           "We",
           "are",
           "the",
-          "clay,",
+          "$brown_square+water,",
           "and",
           "$you",
           "are",
