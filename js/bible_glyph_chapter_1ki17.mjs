@@ -650,7 +650,7 @@ export function bible_glyph_chapter_1ki17() {
           "tragedy",
           "$pointing_up",
           "this",
-          "widow",
+          "$widow",
           "who",
           "has",
           "opened",
