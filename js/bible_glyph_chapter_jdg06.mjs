@@ -324,7 +324,7 @@ export function bible_glyph_chapter_jdg06() {
           "and",
           "sat",
           "down",
-          "under",
+          "$down_arrow",
           "the",
           "oak",
           "in",
