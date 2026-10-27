@@ -411,7 +411,7 @@ export function bible_glyph_chapter_gen30() {
           "$footprints",
           "to",
           "me,",
-          "for",
+          "$pointing",
           "I",
           "have",
           "surely",
