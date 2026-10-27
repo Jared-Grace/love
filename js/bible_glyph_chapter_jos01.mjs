@@ -344,7 +344,7 @@ export function bible_glyph_chapter_jos01() {
           "your",
           "$backpack+bread,",
           "$pointing",
-          "within",
+          "$repeat",
           "three",
           "$sun",
           "you",
