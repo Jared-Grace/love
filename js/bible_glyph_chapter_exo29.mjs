@@ -856,7 +856,7 @@ export function bible_glyph_chapter_exo29() {
           "of",
           "Israel,",
           "$pointing",
-          "it",
+          "$pointing_back",
           "is",
           "the",
           "heave",
