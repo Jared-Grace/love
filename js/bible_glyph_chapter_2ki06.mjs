@@ -1114,7 +1114,7 @@ export function bible_glyph_chapter_2ki06() {
           "his",
           "$crown",
           "$foot",
-          "behind",
+          "$next_track",
           "him?",
         ],
       },
