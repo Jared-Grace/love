@@ -361,7 +361,7 @@ export function bible_glyph_chapter_exo06() {
           "to",
           "me,",
           "since",
-          "I",
+          "$me",
           "am",
           "uncircumcised",
           "of",
