@@ -533,7 +533,7 @@ export function bible_glyph_chapter_ezk01() {
       {
         verse_number: 20,
         words: [
-          "Wherever",
+          "$pointing_up",
           "the",
           "$wind",
           "would",
