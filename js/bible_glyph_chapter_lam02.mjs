@@ -912,7 +912,7 @@ export function bible_glyph_chapter_lam02() {
           "slaughtered",
           "them",
           "$no_entry",
-          "compassion.",
+          "$pleading_face+doing.",
         ],
       },
       {
