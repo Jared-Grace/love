@@ -513,7 +513,7 @@ export function bible_glyph_chapter_1sa03() {
           "and",
           "ever",
           "so",
-          "severely,",
+          "$plus+doing,",
           "if",
           "you",
           "$hand+tray_in+doing",
