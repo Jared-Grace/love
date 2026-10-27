@@ -160,7 +160,7 @@ export function bible_glyph_chapter_1ki21() {
           "$bed,",
           "turned",
           "his",
-          "face",
+          "$face",
           "$around+doing,",
           "and",
           "would",
