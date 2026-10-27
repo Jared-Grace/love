@@ -284,7 +284,7 @@ export function bible_glyph_chapter_lev03() {
           "fat",
           "that",
           "is",
-          "on",
+          "$pointing_up",
           "them,",
         ],
       },
