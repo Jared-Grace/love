@@ -321,7 +321,7 @@ export function bible_glyph_chapter_deu16() {
           "to",
           "count",
           "off",
-          "seven",
+          "$seven",
           "weeks",
           "from",
           "the",
