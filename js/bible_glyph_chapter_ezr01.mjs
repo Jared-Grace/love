@@ -240,7 +240,7 @@ export function bible_glyph_chapter_ezr01() {
           "of",
           "$silver",
           "and",
-          "gold,",
+          "$gold,",
           "with",
           "goods",
           "and",
