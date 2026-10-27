@@ -812,7 +812,7 @@ export function bible_glyph_chapter_exo23() {
           "before",
           "you",
           "to",
-          "drive",
+          "$door+leftwards_pushing_hand+doing",
           "the",
           "$proper_name$Hivites,",
           "$proper_name$Canaanites,",
