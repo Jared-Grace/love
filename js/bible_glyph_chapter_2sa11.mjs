@@ -234,7 +234,7 @@ export function bible_glyph_chapter_2sa11() {
           "and",
           "how",
           "the",
-          "war",
+          "$crossed_swords",
           "was",
           "going.",
         ],
