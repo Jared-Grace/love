@@ -472,7 +472,7 @@ export function bible_glyph_chapter_deu28() {
           "of",
           "the",
           "$speech",
-          "I",
+          "$me",
           "command",
           "you",
           "$sun,",
