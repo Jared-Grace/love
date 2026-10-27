@@ -575,7 +575,7 @@ export function bible_glyph_chapter_exo16() {
           "this.",
           "Some",
           "gathered",
-          "more",
+          "$multiply+doing",
           "and",
           "some",
           "less.",
