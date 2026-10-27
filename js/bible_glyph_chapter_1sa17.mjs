@@ -153,7 +153,7 @@ export function bible_glyph_chapter_1sa17() {
           "legs",
           "and",
           "a",
-          "javelin",
+          "$spear+pinching_hand",
           "of",
           "$bronze",
           "slung",
