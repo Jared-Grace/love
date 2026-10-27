@@ -348,7 +348,7 @@ export function bible_glyph_chapter_deu28() {
           "produce",
           "of",
           "your",
-          "land,",
+          "$brown_square,",
           "in",
           "the",
           "land",
