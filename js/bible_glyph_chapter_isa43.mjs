@@ -664,7 +664,7 @@ export function bible_glyph_chapter_isa43() {
           "will",
           "declare",
           "My",
-          "praise.",
+          "$clapping_hands+thing.",
         ],
       },
       {
