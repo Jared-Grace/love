@@ -515,7 +515,7 @@ export function bible_glyph_chapter_jer31() {
           "to",
           "be",
           "comforted,",
-          "because",
+          "$pointing",
           "they",
           "are",
           "no",
