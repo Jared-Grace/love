@@ -940,7 +940,7 @@ export function bible_glyph_chapter_dan09() {
           "$oil",
           "will",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "and",
           "will",
