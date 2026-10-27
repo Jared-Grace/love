@@ -1165,7 +1165,7 @@ export function bible_glyph_chapter_2ki09() {
           "side?",
           "$person+question?",
           "And",
-          "two",
+          "$two",
           "or",
           "three",
           "eunuchs",
