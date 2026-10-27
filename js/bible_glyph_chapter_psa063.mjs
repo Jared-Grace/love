@@ -145,7 +145,7 @@ export function bible_glyph_chapter_psa063() {
           "I",
           "$reminder_ribbon",
           "You",
-          "on",
+          "$pointing_up",
           "my",
           "bed,",
           "I",
