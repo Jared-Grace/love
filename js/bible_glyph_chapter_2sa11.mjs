@@ -62,7 +62,7 @@ export function bible_glyph_chapter_2sa11() {
         verse_number: 2,
         words: [
           "One",
-          "evening",
+          "$sunset",
           "$two_hearts+proper_name",
           "got",
           "up",
