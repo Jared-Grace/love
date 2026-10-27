@@ -65,7 +65,7 @@ export function bible_glyph_chapter_num06() {
           "must",
           "$no_entry",
           "drink",
-          "vinegar",
+          "$wine+lemon",
           "made",
           "from",
           "$wine",
