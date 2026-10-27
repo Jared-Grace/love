@@ -563,7 +563,7 @@ export function bible_glyph_chapter_exo27() {
           "the",
           "lamps",
           "from",
-          "evening",
+          "$sunset",
           "until",
           "$morning",
           "before",
