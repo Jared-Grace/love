@@ -983,7 +983,7 @@ export function bible_glyph_chapter_1ki21() {
           "himself",
           "before",
           "Me?",
-          "Because",
+          "$information",
           "he",
           "has",
           "humbled",
