@@ -907,7 +907,7 @@ export function bible_glyph_chapter_gen24() {
           "The",
           "$man_beard",
           "$mouth",
-          "this",
+          "$flashlight+manner",
           "to",
           "me,",
           "Laban",
