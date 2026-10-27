@@ -63,7 +63,7 @@ export function bible_glyph_chapter_sng02() {
           "the",
           "$son.",
           "I",
-          "delight",
+          "$heart_eyes+doing",
           "to",
           "$person+house",
           "in",
