@@ -474,7 +474,7 @@ export function bible_glyph_chapter_2ch34() {
           "$hammer+doing",
           "the",
           "$tools",
-          "faithfully.",
+          "$anchor+check.",
           "Over",
           "them",
           "were",
