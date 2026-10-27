@@ -161,7 +161,7 @@ export function bible_glyph_chapter_jos03() {
           "$i_am",
           "will",
           "$hammer+doing",
-          "wonders",
+          "$star_struck",
           "among",
           "you.",
         ],
