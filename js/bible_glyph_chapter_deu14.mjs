@@ -137,7 +137,7 @@ export function bible_glyph_chapter_deu14() {
           "may",
           "$eating",
           "any",
-          "animal",
+          "$paw_prints",
           "that",
           "has",
           "a",
