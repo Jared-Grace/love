@@ -257,7 +257,7 @@ export function bible_glyph_chapter_pro08() {
           "judgment",
           "are",
           "mine;",
-          "I",
+          "$me",
           "have",
           "insight",
           "and",
