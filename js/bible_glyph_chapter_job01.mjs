@@ -284,7 +284,7 @@ export function bible_glyph_chapter_job01() {
           "$no_entry",
           "placed",
           "a",
-          "hedge",
+          "$thorns+around+doing",
           "around",
           "him",
           "and",
