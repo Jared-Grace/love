@@ -897,7 +897,7 @@ export function bible_glyph_chapter_dan09() {
           "and",
           "rebuild",
           "$city+peace,",
-          "until",
+          "$finish",
           "the",
           "$oil,",
           "the",
