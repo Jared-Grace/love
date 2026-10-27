@@ -571,7 +571,7 @@ export function bible_glyph_chapter_gen04() {
           "to",
           "$proper_name$Jabal,",
           "who",
-          "was",
+          "$link",
           "the",
           "$father",
           "of",
