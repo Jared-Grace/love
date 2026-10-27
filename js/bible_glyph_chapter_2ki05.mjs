@@ -162,7 +162,7 @@ export function bible_glyph_chapter_2ki05() {
           "with",
           "a",
           "letter",
-          "to",
+          "$toward",
           "the",
           "$king",
           "of",
