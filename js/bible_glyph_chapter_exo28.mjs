@@ -312,7 +312,7 @@ export function bible_glyph_chapter_exo28() {
           "a",
           "$stone",
           "$hammer_and_wrench+doer",
-          "engraves",
+          "$rock+writing_hand+thing",
           "a",
           "seal,",
           "engrave",
