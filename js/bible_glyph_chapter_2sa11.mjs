@@ -898,7 +898,7 @@ export function bible_glyph_chapter_2sa11() {
           "had",
           "her",
           "brought",
-          "to",
+          "$toward",
           "his",
           "$house,",
           "and",
