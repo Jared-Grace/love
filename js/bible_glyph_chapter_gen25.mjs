@@ -178,7 +178,7 @@ export function bible_glyph_chapter_gen25() {
           "$laughing+proper_name",
           "and",
           "$ear+heart_on_fire",
-          "buried",
+          "$tomb+doing",
           "him",
           "in",
           "the",
