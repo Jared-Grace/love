@@ -231,7 +231,7 @@ export function bible_glyph_chapter_jdg04() {
           "$speech",
           "to",
           "her,",
-          "If",
+          "$traffic_light",
           "you",
           "will",
           "$walking",
