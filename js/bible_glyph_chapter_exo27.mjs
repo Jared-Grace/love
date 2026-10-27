@@ -427,7 +427,7 @@ export function bible_glyph_chapter_exo27() {
           "$all",
           "the",
           "posts",
-          "around",
+          "$around",
           "the",
           "courtyard",
           "shall",
