@@ -243,7 +243,7 @@ export function bible_glyph_chapter_num32() {
           "they",
           "went",
           "up",
-          "to",
+          "$finish",
           "the",
           "Valley",
           "of",
