@@ -472,7 +472,7 @@ export function bible_glyph_chapter_lev23() {
           "from",
           "your",
           "dwellings",
-          "two",
+          "$two",
           "$bread",
           "as",
           "a",
