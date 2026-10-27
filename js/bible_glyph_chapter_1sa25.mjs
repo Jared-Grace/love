@@ -796,7 +796,7 @@ export function bible_glyph_chapter_1sa25() {
           "on",
           "me",
           "alone.",
-          "Please",
+          "$pleading",
           "let",
           "your",
           "servant",
