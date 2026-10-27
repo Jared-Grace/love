@@ -465,7 +465,7 @@ export function bible_glyph_chapter_isa07() {
         verse_number: 16,
         words: [
           "$pointing",
-          "before",
+          "$clock+back",
           "the",
           "boy",
           "$lightbulb",
