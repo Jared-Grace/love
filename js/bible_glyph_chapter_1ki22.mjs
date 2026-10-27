@@ -1532,7 +1532,7 @@ export function bible_glyph_chapter_1ki22() {
           "to",
           "$proper_name$Ophir",
           "for",
-          "gold,",
+          "$gold,",
           "but",
           "they",
           "did",
