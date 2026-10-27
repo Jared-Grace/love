@@ -1531,7 +1531,7 @@ export function bible_glyph_chapter_lev13() {
           "in",
           "a",
           "place",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp.",
         ],
