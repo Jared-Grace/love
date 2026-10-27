@@ -215,7 +215,7 @@ export function bible_glyph_chapter_num09() {
           "be",
           "excluded",
           "from",
-          "presenting",
+          "$magnet+doing",
           "the",
           "offering",
           "of",
