@@ -26,7 +26,7 @@ export function bible_glyph_chapter_psa042() {
           "$proper_name$Korah.",
           "As",
           "the",
-          "deer",
+          "$deer",
           "pants",
           "for",
           "streams",
