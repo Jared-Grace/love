@@ -57,7 +57,7 @@ export function bible_glyph_chapter_exo05() {
           "But",
           "$house+proper_name",
           "$speech,",
-          "Who",
+          "$person+question",
           "is",
           "$i_am,",
           "that",
