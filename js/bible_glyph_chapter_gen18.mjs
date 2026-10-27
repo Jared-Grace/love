@@ -233,7 +233,7 @@ export function bible_glyph_chapter_gen18() {
           "Then",
           "Abraham",
           "$hand_receiving",
-          "curds",
+          "$milk+brick",
           "and",
           "milk",
           "and",
