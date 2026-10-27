@@ -667,7 +667,7 @@ export function bible_glyph_chapter_gen21() {
           "$you+exclamation",
           "to",
           "$father+king",
-          "about",
+          "$pointing_up",
           "a",
           "well",
           "that",
