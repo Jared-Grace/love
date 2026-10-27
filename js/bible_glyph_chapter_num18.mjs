@@ -187,7 +187,7 @@ export function bible_glyph_chapter_num18() {
           "wrath",
           "may",
           "$no_entry",
-          "fall",
+          "$link",
           "again",
           "on",
           "the",
