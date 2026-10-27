@@ -1069,7 +1069,7 @@ export function bible_glyph_chapter_jdg06() {
           "to",
           "all",
           "who",
-          "stood",
+          "$person+round_pushpin",
           "against",
           "him,",
           "Are",
