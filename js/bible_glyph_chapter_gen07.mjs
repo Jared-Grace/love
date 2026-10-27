@@ -368,7 +368,7 @@ export function bible_glyph_chapter_gen07() {
       {
         verse_number: 14,
         words: [
-          "They",
+          "$pointing_back",
           "had",
           "with",
           "them",
