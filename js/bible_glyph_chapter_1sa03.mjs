@@ -53,7 +53,7 @@ export function bible_glyph_chapter_1sa03() {
           "had",
           "grown",
           "so",
-          "dim",
+          "$dim_button+describing",
           "that",
           "he",
           "could",
