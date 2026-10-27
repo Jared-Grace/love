@@ -223,7 +223,7 @@ export function bible_glyph_chapter_job19() {
           "encamp",
           "$around",
           "my",
-          "tent.",
+          "$tent.",
         ],
       },
       {
