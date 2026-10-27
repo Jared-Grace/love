@@ -77,7 +77,7 @@ export function bible_glyph_chapter_jdg02() {
           "the",
           "people",
           "of",
-          "this",
+          "$flashlight",
           "$earth,",
           "but",
           "you",
