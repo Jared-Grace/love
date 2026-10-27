@@ -43,7 +43,7 @@ export function bible_glyph_chapter_job23() {
           "$lightbulb",
           "where",
           "to",
-          "find",
+          "$magnifying_glass+exclamation",
           "Him,",
           "so",
           "that",
