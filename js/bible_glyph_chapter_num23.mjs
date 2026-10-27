@@ -19,7 +19,7 @@ export function bible_glyph_chapter_num23() {
           "$speech",
           "$toward",
           "$proper_name$Balak,",
-          "Build",
+          "$brick",
           "for",
           "me",
           "here",
