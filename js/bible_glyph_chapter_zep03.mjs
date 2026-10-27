@@ -175,7 +175,7 @@ export function bible_glyph_chapter_zep03() {
           "$check+exclamation",
           "you",
           "will",
-          "fear",
+          "$fear+doing",
           "Me",
           "and",
           "$hand_receiving",
