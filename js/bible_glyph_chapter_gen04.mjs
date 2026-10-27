@@ -476,7 +476,7 @@ export function bible_glyph_chapter_gen04() {
           "$earth",
           "of",
           "$proper_name$Nod,",
-          "east",
+          "$compass+right_arrow+manner",
           "of",
           "$proper_name$Eden.",
         ],
