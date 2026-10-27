@@ -258,7 +258,7 @@ export function bible_glyph_chapter_lev01() {
       {
         verse_number: 10,
         words: [
-          "If,",
+          "$traffic_light,",
           "however,",
           "his",
           "offering",
