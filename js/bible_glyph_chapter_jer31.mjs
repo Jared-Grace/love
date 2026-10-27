@@ -263,7 +263,7 @@ export function bible_glyph_chapter_jer31() {
           "$turn_back",
           "as",
           "a",
-          "great",
+          "$top",
           "$church.",
         ],
       },
