@@ -223,7 +223,7 @@ export function bible_glyph_chapter_jer17() {
           "the",
           "$might+man_beard",
           "$back+flashlight",
-          "trusts",
+          "$anchor+doing",
           "in",
           "the",
           "$i_am,",
