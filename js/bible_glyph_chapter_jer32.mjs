@@ -204,7 +204,7 @@ export function bible_glyph_chapter_jer32() {
           "$pointing",
           "you",
           "fight",
-          "against",
+          "$safety_pin",
           "the",
           "$proper_name$Chaldeans,",
           "you",
