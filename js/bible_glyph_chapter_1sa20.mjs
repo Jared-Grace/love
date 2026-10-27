@@ -105,7 +105,7 @@ export function bible_glyph_chapter_1sa20() {
           "But",
           "$two_hearts+proper_name",
           "$raised_back_of_hand+doing",
-          "again,",
+          "$repeat,",
           "$speech,",
           "Your",
           "$father",
