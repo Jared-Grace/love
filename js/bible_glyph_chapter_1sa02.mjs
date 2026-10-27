@@ -497,7 +497,7 @@ export function bible_glyph_chapter_1sa02() {
           "to",
           "him,",
           "The",
-          "fat",
+          "$bacon",
           "must",
           "be",
           "burned",
