@@ -990,7 +990,7 @@ export function bible_glyph_chapter_exo09() {
           "$pointing",
           "they",
           "are",
-          "late",
+          "$wheat+hourglass_not_done",
           "crops.",
         ],
       },
