@@ -731,7 +731,7 @@ export function bible_glyph_chapter_jer32() {
           "wonders,",
           "with",
           "a",
-          "strong",
+          "$might+up_arrow",
           "$hand",
           "and",
           "an",
