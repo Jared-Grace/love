@@ -402,7 +402,7 @@ export function bible_glyph_chapter_gen15() {
       {
         verse_number: 15,
         words: [
-          "You,",
+          "$you,",
           "however,",
           "will",
           "$footprints",
