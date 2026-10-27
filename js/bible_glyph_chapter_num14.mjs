@@ -941,7 +941,7 @@ export function bible_glyph_chapter_num14() {
           "to",
           "settle",
           "you,",
-          "except",
+          "$pointing",
           "$dog+proper_name",
           "$son",
           "of",
