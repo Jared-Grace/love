@@ -840,7 +840,7 @@ export function bible_glyph_chapter_deu11() {
           "of",
           "you",
           "upon",
-          "all",
+          "$all",
           "the",
           "$earth",
           "wherever",
