@@ -233,7 +233,7 @@ export function bible_glyph_chapter_gen30() {
           "And",
           "$proper_name$Zilpah,",
           "the",
-          "servant",
+          "$houses+female_sign",
           "of",
           "Leah,",
           "$baby",
