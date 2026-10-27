@@ -291,7 +291,7 @@ export function bible_glyph_chapter_exo34() {
           "stiff-necked,",
           "$sponge",
           "our",
-          "iniquity",
+          "$cyclone",
           "and",
           "$bow,",
           "and",
