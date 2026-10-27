@@ -223,7 +223,7 @@ export function bible_glyph_chapter_exo31() {
           "well",
           "as",
           "the",
-          "woven",
+          "$sewing_needle+dress",
           "$garment,",
           "both",
           "the",
