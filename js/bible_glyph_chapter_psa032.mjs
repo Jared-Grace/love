@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa032() {
         verse_number: 4,
         words: [
           "$pointing",
-          "day",
+          "$sun+manner",
           "and",
           "$night",
           "Your",
