@@ -675,7 +675,7 @@ export function bible_glyph_chapter_exo12() {
           "Then",
           "$fishing_pole+proper_name",
           "$waving_hand",
-          "all",
+          "$all",
           "the",
           "elders",
           "of",
