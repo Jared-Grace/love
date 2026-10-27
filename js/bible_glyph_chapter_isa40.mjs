@@ -762,7 +762,7 @@ export function bible_glyph_chapter_isa40() {
           "of",
           "His",
           "great",
-          "power",
+          "$battery+money_bag",
           "and",
           "mighty",
           "$lightning,",
