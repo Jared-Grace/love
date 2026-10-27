@@ -176,7 +176,7 @@ export function bible_glyph_chapter_jos06() {
           "$son",
           "of",
           "$proper_name$Nun",
-          "summoned",
+          "$waving_hand",
           "the",
           "$priest",
           "and",
