@@ -1113,7 +1113,7 @@ export function bible_glyph_chapter_2ki10() {
           "$speech",
           "to",
           "$i_am+pointing_back,",
-          "Because",
+          "$information",
           "you",
           "have",
           "done",
