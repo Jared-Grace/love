@@ -49,7 +49,7 @@ export function bible_glyph_chapter_exo22() {
         words: [
           "$traffic_light",
           "a",
-          "thief",
+          "$ninja",
           "is",
           "caught",
           "breaking",
