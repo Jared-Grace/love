@@ -319,7 +319,7 @@ export function bible_glyph_chapter_num30() {
       {
         verse_number: 10,
         words: [
-          "If",
+          "$traffic_light",
           "in",
           "the",
           "$house",
