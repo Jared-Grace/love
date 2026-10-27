@@ -1118,7 +1118,7 @@ export function bible_glyph_chapter_1sa17() {
           "$lion",
           "and",
           "the",
-          "bear,",
+          "$bear,",
           "will",
           "deliver",
           "me",
