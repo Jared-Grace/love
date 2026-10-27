@@ -47,7 +47,7 @@ export function bible_glyph_chapter_num17() {
           "of",
           "the",
           "$father.",
-          "Write",
+          "$writing_hand",
           "the",
           "$name_tag",
           "of",
