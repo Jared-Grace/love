@@ -675,7 +675,7 @@ export function bible_glyph_chapter_num22() {
         words: [
           "Then",
           "$heart_on_fire",
-          "anger",
+          "$nose+fire",
           "was",
           "kindled",
           "because",
