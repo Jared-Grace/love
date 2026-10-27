@@ -17,7 +17,7 @@ export function bible_glyph_chapter_gen05() {
           "$flashlight",
           "is",
           "the",
-          "book",
+          "$closed_book",
           "of",
           "the",
           "generations",
