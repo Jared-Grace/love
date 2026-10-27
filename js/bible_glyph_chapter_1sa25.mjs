@@ -623,7 +623,7 @@ export function bible_glyph_chapter_1sa25() {
           "loaded",
           "them",
           "on",
-          "donkeys.",
+          "$donkey.",
         ],
       },
       {
