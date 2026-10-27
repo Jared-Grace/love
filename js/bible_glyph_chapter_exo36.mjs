@@ -445,7 +445,7 @@ export function bible_glyph_chapter_exo36() {
           "$pointing_up",
           "the",
           "tabernacle,",
-          "eleven",
+          "$one+plus",
           "$thread+tent",
           "he",
           "$hammer+doing.",
