@@ -787,7 +787,7 @@ export function bible_glyph_chapter_gen26() {
           "to",
           "me?",
           "You",
-          "hated",
+          "$heart_red+thumbs_down",
           "me",
           "and",
           "sent",
