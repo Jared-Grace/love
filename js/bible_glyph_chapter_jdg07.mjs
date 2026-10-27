@@ -576,7 +576,7 @@ export function bible_glyph_chapter_jdg07() {
           "$wrestling+heart_on_fire",
           "and",
           "$speech,",
-          "Get",
+          "$person+pointing_up",
           "up,",
           "for",
           "the",
