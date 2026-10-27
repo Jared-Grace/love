@@ -123,7 +123,7 @@ export function bible_glyph_chapter_deu19() {
           "regarding",
           "the",
           "manslayer",
-          "who",
+          "$back+flashlight",
           "flees",
           "to",
           "one",
