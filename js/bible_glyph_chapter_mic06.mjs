@@ -50,7 +50,7 @@ export function bible_glyph_chapter_mic06() {
           "and",
           "you",
           "$infinity+describing",
-          "foundations",
+          "$brick+round_pushpin+thing",
           "of",
           "the",
           "$earth.",
