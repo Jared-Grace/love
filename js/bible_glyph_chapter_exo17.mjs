@@ -174,7 +174,7 @@ export function bible_glyph_chapter_exo17() {
           "your",
           "$hand",
           "the",
-          "staff",
+          "$white_cane",
           "with",
           "which",
           "you",
