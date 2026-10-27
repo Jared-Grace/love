@@ -55,7 +55,7 @@ export function bible_glyph_chapter_zec12() {
         verse_number: 2,
         words: [
           "$exclamation,",
-          "I",
+          "$me",
           "will",
           "make",
           "$city+peace",
