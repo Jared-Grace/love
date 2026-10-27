@@ -22,7 +22,7 @@ export function bible_glyph_chapter_jos07() {
           "of",
           "Israel",
           "$handshake+broken_chain+doing",
-          "unfaithfully",
+          "$handshake+broken_chain+thing",
           "regarding",
           "the",
           "things",
