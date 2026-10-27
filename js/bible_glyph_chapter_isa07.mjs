@@ -456,7 +456,7 @@ export function bible_glyph_chapter_isa07() {
           "will",
           "be",
           "eating",
-          "curds",
+          "$milk+brick",
           "and",
           "honey.",
         ],
