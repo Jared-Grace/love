@@ -501,7 +501,7 @@ export function bible_glyph_chapter_exo28() {
           "a",
           "$gem_stone+fire,",
           "a",
-          "sapphire",
+          "$gem_stone+blue_circle",
           "and",
           "a",
           "diamond;",
