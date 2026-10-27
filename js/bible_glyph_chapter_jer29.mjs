@@ -1094,7 +1094,7 @@ export function bible_glyph_chapter_jer29() {
           "$microphone",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "he",
           "has",
           "$mouth",
