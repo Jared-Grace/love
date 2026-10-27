@@ -1106,7 +1106,7 @@ export function bible_glyph_chapter_gen41() {
           "obey",
           "your",
           "commands.",
-          "Only",
+          "$one+check",
           "with",
           "regard",
           "to",
