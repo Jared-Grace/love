@@ -500,7 +500,7 @@ export function bible_glyph_chapter_dan01() {
           "$child",
           "$heart_on_fire",
           "$hands_giving",
-          "knowledge",
+          "$lightbulb+thing",
           "and",
           "understanding",
           "in",
