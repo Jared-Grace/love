@@ -349,7 +349,7 @@ export function bible_glyph_chapter_num17() {
           "$toward",
           "$fishing_pole+proper_name,",
           "$speech,",
-          "Look,",
+          "$exclamation,",
           "we",
           "are",
           "perishing.",
