@@ -19,7 +19,7 @@ export function bible_glyph_chapter_lev05() {
           "$bow+doing",
           "$ear",
           "$voice",
-          "charge",
+          "$speech+raised_back_of_hand",
           "about",
           "something",
           "he",
