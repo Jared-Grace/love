@@ -437,7 +437,7 @@ export function bible_glyph_chapter_num35() {
           "$foreigner",
           "or",
           "stranger",
-          "among",
+          "$radio_button",
           "them,",
           "so",
           "that",
