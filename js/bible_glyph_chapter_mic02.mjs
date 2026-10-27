@@ -264,7 +264,7 @@ export function bible_glyph_chapter_mic02() {
           "men",
           "$turn_back",
           "from",
-          "battle.",
+          "$crossed_swords.",
         ],
       },
       {
