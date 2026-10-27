@@ -729,7 +729,7 @@ export function bible_glyph_chapter_num09() {
           "the",
           "$cloud",
           "lingered",
-          "over",
+          "$pointing_up",
           "the",
           "tabernacle",
           "and",
