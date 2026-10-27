@@ -580,7 +580,7 @@ export function bible_glyph_chapter_psa022() {
           "your",
           "$heart_organ",
           "$sprout+doing",
-          "forever!",
+          "$clock+all!",
         ],
       },
       {
