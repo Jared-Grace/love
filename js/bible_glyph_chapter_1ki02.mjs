@@ -1345,7 +1345,7 @@ export function bible_glyph_chapter_1ki02() {
           "$lightbulb",
           "for",
           "certain",
-          "that",
+          "$pointing",
           "you",
           "will",
           "$skull+doing.",
