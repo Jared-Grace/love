@@ -546,7 +546,7 @@ export function bible_glyph_chapter_isa09() {
         words: [
           "$pointing",
           "wickedness",
-          "burns",
+          "$fire+wood",
           "like",
           "a",
           "$fire",
