@@ -438,7 +438,7 @@ export function bible_glyph_chapter_deu31() {
           "will",
           "$ear",
           "and",
-          "learn",
+          "$learner+doing",
           "to",
           "fear",
           "$i_am",
