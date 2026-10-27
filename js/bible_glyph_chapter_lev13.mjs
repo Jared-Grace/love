@@ -1722,7 +1722,7 @@ export function bible_glyph_chapter_lev13() {
           "$eye",
           "it",
           "again,",
-          "if",
+          "$exclamation",
           "the",
           "mildew",
           "has",
