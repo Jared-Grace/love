@@ -98,7 +98,7 @@ export function bible_glyph_chapter_gen22() {
           "$son",
           "$laughing+proper_name.",
           "He",
-          "split",
+          "$carpentry_saw",
           "the",
           "$tree",
           "for",
