@@ -708,7 +708,7 @@ export function bible_glyph_chapter_exo16() {
           "$sun",
           "they",
           "gathered",
-          "twice",
+          "$two+multiply",
           "as",
           "much",
           "$bread,",
