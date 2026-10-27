@@ -347,7 +347,7 @@ export function bible_glyph_chapter_zep01() {
           "of",
           "the",
           "$rock+hole+hammer,",
-          "for",
+          "$pointing",
           "all",
           "your",
           "$family",
