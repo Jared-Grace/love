@@ -570,7 +570,7 @@ export function bible_glyph_chapter_zec08() {
           "to",
           "$raised_back_of_hand",
           "$lying_face,",
-          "for",
+          "$pointing",
           "I",
           "hate",
           "all",
