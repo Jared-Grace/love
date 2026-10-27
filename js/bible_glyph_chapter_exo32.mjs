@@ -333,7 +333,7 @@ export function bible_glyph_chapter_exo32() {
           "$watch",
           "leave",
           "Me",
-          "alone,",
+          "$seat+doing,",
           "so",
           "that",
           "My",
