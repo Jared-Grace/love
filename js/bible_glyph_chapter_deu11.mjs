@@ -25,7 +25,7 @@ export function bible_glyph_chapter_deu11() {
           "$heart_on_fire",
           "and",
           "always",
-          "keep",
+          "$guard",
           "His",
           "charge,",
           "His",
