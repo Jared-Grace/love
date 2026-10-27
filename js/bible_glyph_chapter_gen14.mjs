@@ -457,7 +457,7 @@ export function bible_glyph_chapter_gen14() {
         words: [
           "He",
           "$turn_back",
-          "all",
+          "$all",
           "the",
           "goods,",
           "and",
