@@ -80,7 +80,7 @@ export function bible_glyph_chapter_1sa20() {
           "$speech",
           "$pinching_hand,",
           "without",
-          "telling",
+          "$luggage+chains+doing",
           "me.",
           "So",
           "why",
