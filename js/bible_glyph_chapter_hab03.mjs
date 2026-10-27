@@ -263,7 +263,7 @@ export function bible_glyph_chapter_hab03() {
       {
         verse_number: 11,
         words: [
-          "Sun",
+          "$sun_with_face",
           "and",
           "moon",
           "stood",
