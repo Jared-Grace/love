@@ -1133,7 +1133,7 @@ export function bible_glyph_chapter_1sa25() {
           "$flashlight",
           "$sun",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "me.",
         ],
       },
