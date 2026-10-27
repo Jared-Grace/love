@@ -585,7 +585,7 @@ export function bible_glyph_chapter_ecc03() {
           "him",
           "to",
           "$eye",
-          "what",
+          "$flashlight+question",
           "will",
           "come",
           "after",
