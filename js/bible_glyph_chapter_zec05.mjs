@@ -112,7 +112,7 @@ export function bible_glyph_chapter_zec05() {
           "send",
           "it",
           "out,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am",
           "of",
