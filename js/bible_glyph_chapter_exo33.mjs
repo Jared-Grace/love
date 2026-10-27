@@ -398,7 +398,7 @@ export function bible_glyph_chapter_exo33() {
           "$no_entry",
           "$walking+away+doing",
           "the",
-          "tent.",
+          "$tent.",
         ],
       },
       {
