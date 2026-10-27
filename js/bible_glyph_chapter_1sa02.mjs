@@ -626,7 +626,7 @@ export function bible_glyph_chapter_1sa02() {
           "May",
           "the",
           "$i_am",
-          "give",
+          "$palm_down",
           "you",
           "$seed",
           "by",
