@@ -57,7 +57,7 @@ export function bible_glyph_chapter_pro31() {
           "$no_entry",
           "$hands_giving",
           "your",
-          "strength",
+          "$raised_fist",
           "to",
           "$woman,",
           "or",
