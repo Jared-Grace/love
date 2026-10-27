@@ -600,7 +600,7 @@ export function bible_glyph_chapter_lev25() {
           "$no_entry",
           "$crowd+doing",
           "our",
-          "produce?",
+          "$fruit+basket?",
         ],
       },
       {
