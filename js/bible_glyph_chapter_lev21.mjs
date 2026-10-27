@@ -467,7 +467,7 @@ export function bible_glyph_chapter_lev21() {
           "of",
           "your",
           "$seed",
-          "who",
+          "$back+flashlight",
           "has",
           "a",
           "bodily",
