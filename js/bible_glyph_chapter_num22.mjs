@@ -586,7 +586,7 @@ export function bible_glyph_chapter_num22() {
         words: [
           "So",
           "$watch",
-          "please",
+          "$pleading",
           "$person+house",
           "here",
           "$night",
