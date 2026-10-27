@@ -60,7 +60,7 @@ export function bible_glyph_chapter_mic06() {
           "has",
           "a",
           "case",
-          "against",
+          "$linked_paperclips",
           "His",
           "$family,",
           "and",
