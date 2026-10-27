@@ -321,7 +321,7 @@ export function bible_glyph_chapter_exo21() {
           "$no_entry",
           "$hammer+doing",
           "these",
-          "three",
+          "$three",
           "things",
           "for",
           "her,",
