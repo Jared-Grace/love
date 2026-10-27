@@ -660,7 +660,7 @@ export function bible_glyph_chapter_num22() {
           "$morning,",
           "$adhesive_bandage+doing",
           "his",
-          "donkey,",
+          "$donkey,",
           "and",
           "$walking",
           "with",
