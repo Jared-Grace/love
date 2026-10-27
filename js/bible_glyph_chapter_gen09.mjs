@@ -265,7 +265,7 @@ export function bible_glyph_chapter_gen09() {
           "the",
           "$bird,",
           "the",
-          "livestock,",
+          "$paw_prints,",
           "and",
           "$all",
           "$sprout",
