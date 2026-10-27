@@ -213,7 +213,7 @@ export function bible_glyph_chapter_job42() {
           "according",
           "to",
           "your",
-          "folly.",
+          "$clown_face+thumbs_down.",
           "For",
           "you",
           "have",
