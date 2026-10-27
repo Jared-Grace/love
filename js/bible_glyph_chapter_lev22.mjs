@@ -170,7 +170,7 @@ export function bible_glyph_chapter_lev22() {
           "unclean,",
           "whatever",
           "the",
-          "uncleanness",
+          "$soap+no_entry+thing",
           "may",
           "be:",
         ],
