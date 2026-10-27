@@ -1121,7 +1121,7 @@ export function bible_glyph_chapter_jdg11() {
           "child.",
           "He",
           "had",
-          "no",
+          "$dotted_line_face",
           "other",
           "$son",
           "or",
