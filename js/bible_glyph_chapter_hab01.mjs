@@ -131,7 +131,7 @@ export function bible_glyph_chapter_hab01() {
           "am",
           "doing",
           "a",
-          "work",
+          "$hand+hammer",
           "in",
           "your",
           "$sun",
