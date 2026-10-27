@@ -437,7 +437,7 @@ export function bible_glyph_chapter_deu29() {
         verse_number: 16,
         words: [
           "$pointing",
-          "you",
+          "$you",
           "yourselves",
           "$lightbulb",
           "how",
