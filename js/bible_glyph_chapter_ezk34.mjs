@@ -187,7 +187,7 @@ export function bible_glyph_chapter_ezk34() {
           "to",
           "search",
           "or",
-          "seek",
+          "$magnifying_glass",
           "them",
           "out.",
         ],
