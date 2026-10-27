@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_gen42() {
           "my",
           "$two",
           "$son",
-          "if",
+          "$traffic_light",
           "I",
           "$no_entry",
           "$footprints",
