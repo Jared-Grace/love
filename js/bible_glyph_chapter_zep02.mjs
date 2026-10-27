@@ -55,7 +55,7 @@ export function bible_glyph_chapter_zep02() {
           "of",
           "the",
           "$i_am",
-          "anger",
+          "$nose+fire",
           "$footprints",
           "upon",
           "you.",
