@@ -440,7 +440,7 @@ export function bible_glyph_chapter_mal02() {
           "the",
           "$i_am",
           "with",
-          "tears,",
+          "$loudly_crying+water,",
           "with",
           "weeping",
           "and",
