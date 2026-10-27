@@ -344,7 +344,7 @@ export function bible_glyph_chapter_exo31() {
           "it",
           "$skull+doing",
           "$skull+doing.",
-          "Whoever",
+          "$all",
           "$hammer+doing",
           "any",
           "$tools",
