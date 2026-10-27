@@ -210,7 +210,7 @@ export function bible_glyph_chapter_pro16() {
           "is",
           "on",
           "the",
-          "lips",
+          "$kiss_mark",
           "of",
           "a",
           "$king;",
