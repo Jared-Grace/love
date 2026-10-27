@@ -416,7 +416,7 @@ export function bible_glyph_chapter_num23() {
           "$proper_name$Zophim,",
           "to",
           "the",
-          "top",
+          "$person_gesturing_ok",
           "of",
           "$proper_name$Pisgah,",
           "where",
