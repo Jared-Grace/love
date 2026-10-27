@@ -110,7 +110,7 @@ export function bible_glyph_chapter_gen15() {
           "to",
           "Abram,",
           "$speech,",
-          "This",
+          "$flashlight",
           "one",
           "will",
           "$no_entry",
