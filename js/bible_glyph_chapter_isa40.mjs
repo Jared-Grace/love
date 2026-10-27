@@ -286,7 +286,7 @@ export function bible_glyph_chapter_isa40() {
           "might,",
           "and",
           "His",
-          "arm",
+          "$hand+might",
           "establishes",
           "His",
           "rule.",
