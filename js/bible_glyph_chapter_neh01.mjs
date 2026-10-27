@@ -249,7 +249,7 @@ export function bible_glyph_chapter_neh01() {
           "and",
           "have",
           "$no_entry",
-          "kept",
+          "$guard",
           "the",
           "$scroll,",
           "the",
