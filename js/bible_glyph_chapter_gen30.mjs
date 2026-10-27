@@ -207,7 +207,7 @@ export function bible_glyph_chapter_gen30() {
           "When",
           "Leah",
           "$eye",
-          "that",
+          "$pointing",
           "she",
           "had",
           "stopped",
