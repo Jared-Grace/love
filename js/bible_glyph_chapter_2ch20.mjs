@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_2ch20() {
           "with",
           "harps",
           "and",
-          "lyres",
+          "$harp",
           "and",
           "trumpets,",
           "and",
