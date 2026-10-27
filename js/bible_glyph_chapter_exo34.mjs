@@ -207,7 +207,7 @@ export function bible_glyph_chapter_exo34() {
       {
         verse_number: 7,
         words: [
-          "maintaining",
+          "$guard+shield+doing",
           "$gift",
           "to",
           "a",
