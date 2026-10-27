@@ -645,7 +645,7 @@ export function bible_glyph_chapter_1ki22() {
           "$military_helmet",
           "of",
           "$sky",
-          "standing",
+          "$person+round_pushpin",
           "by",
           "Him",
           "on",
