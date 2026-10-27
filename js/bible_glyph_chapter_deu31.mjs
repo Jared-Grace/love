@@ -506,7 +506,7 @@ export function bible_glyph_chapter_deu31() {
           "the",
           "$tent",
           "of",
-          "Meeting.",
+          "$alarm_clock.",
         ],
       },
       {
