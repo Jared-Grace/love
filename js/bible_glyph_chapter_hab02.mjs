@@ -296,7 +296,7 @@ export function bible_glyph_chapter_hab02() {
           "$house",
           "by",
           "$thumbs_down",
-          "gain,",
+          "$money_bag+hand_receiving,",
           "to",
           "place",
           "his",
