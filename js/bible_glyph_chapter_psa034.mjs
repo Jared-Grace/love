@@ -457,7 +457,7 @@ export function bible_glyph_chapter_psa034() {
           "$no_entry",
           "who",
           "take",
-          "refuge",
+          "$hut",
           "in",
           "Him",
           "will",
