@@ -29,7 +29,7 @@ export function bible_glyph_chapter_num13() {
           "$earth",
           "of",
           "$proper_name$Canaan,",
-          "which",
+          "$back+flashlight",
           "I",
           "am",
           "$hands_giving",
