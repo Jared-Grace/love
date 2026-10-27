@@ -69,7 +69,7 @@ export function bible_glyph_chapter_num09() {
           "$sun",
           "of",
           "this",
-          "month,",
+          "$new_moon,",
           "at",
           "twilight.",
           "You",
