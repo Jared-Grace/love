@@ -1322,7 +1322,7 @@ export function bible_glyph_chapter_2ki04() {
           "they",
           "tasted",
           "the",
-          "stew,",
+          "$pot_of_food+thing,",
           "they",
           "cried",
           "out,",
