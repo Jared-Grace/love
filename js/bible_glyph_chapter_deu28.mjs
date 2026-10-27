@@ -1398,7 +1398,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "are",
           "destroyed,",
-          "since",
+          "$pointing",
           "you",
           "did",
           "$no_entry",
