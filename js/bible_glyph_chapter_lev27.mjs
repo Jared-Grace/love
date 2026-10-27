@@ -338,7 +338,7 @@ export function bible_glyph_chapter_lev27() {
           "any",
           "of",
           "the",
-          "unclean",
+          "$soap+no_entry",
           "animals,",
           "that",
           "may",
