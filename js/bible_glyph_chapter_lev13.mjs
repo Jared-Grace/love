@@ -251,7 +251,7 @@ export function bible_glyph_chapter_lev13() {
           "pronounce",
           "him",
           "$soap+doing;",
-          "it",
+          "$pointing_back",
           "is",
           "a",
           "rash.",
