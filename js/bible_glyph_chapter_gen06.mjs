@@ -466,7 +466,7 @@ export function bible_glyph_chapter_gen06() {
         verse_number: 17,
         words: [
           "And",
-          "behold,",
+          "$exclamation,",
           "I",
           "will",
           "$footprints",
