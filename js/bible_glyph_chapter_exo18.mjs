@@ -92,7 +92,7 @@ export function bible_glyph_chapter_exo18() {
           "have",
           "been",
           "a",
-          "foreigner",
+          "$foreigner",
           "in",
           "a",
           "foreign",
