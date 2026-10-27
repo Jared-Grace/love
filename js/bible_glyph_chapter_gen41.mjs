@@ -950,7 +950,7 @@ export function bible_glyph_chapter_gen41() {
           "excess",
           "food",
           "from",
-          "these",
+          "$flashlight+flashlight",
           "$thumbs_up",
           "$year",
           "that",
