@@ -414,7 +414,7 @@ export function bible_glyph_chapter_exo09() {
           "all",
           "My",
           "plagues",
-          "against",
+          "$toward",
           "your",
           "$heart_organ",
           "and",
