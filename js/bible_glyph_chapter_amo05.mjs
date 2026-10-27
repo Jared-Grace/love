@@ -280,7 +280,7 @@ export function bible_glyph_chapter_amo05() {
           "reproves",
           "in",
           "the",
-          "gate,",
+          "$gate,",
           "and",
           "despise",
           "him",
