@@ -725,7 +725,7 @@ export function bible_glyph_chapter_deu29() {
           "unproductive,",
           "with",
           "$no_entry",
-          "plant",
+          "$herb",
           "$walking+pointing_up",
           "on",
           "it,",
