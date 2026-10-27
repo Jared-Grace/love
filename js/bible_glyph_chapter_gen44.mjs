@@ -228,7 +228,7 @@ export function bible_glyph_chapter_gen44() {
           "$question+likeness",
           "would",
           "we",
-          "steal",
+          "$ninja+doing",
           "$silver",
           "or",
           "$gold",
