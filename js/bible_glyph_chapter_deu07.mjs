@@ -523,7 +523,7 @@ export function bible_glyph_chapter_deu07() {
           "He",
           "will",
           "$no_entry",
-          "lay",
+          "$palm_down",
           "upon",
           "you",
           "any",
