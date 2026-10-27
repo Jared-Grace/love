@@ -362,7 +362,7 @@ export function bible_glyph_chapter_2ki11() {
           "And",
           "the",
           "guards",
-          "stood",
+          "$person+round_pushpin",
           "with",
           "weapons",
           "in",
