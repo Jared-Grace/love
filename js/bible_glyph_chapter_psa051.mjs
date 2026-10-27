@@ -289,7 +289,7 @@ export function bible_glyph_chapter_psa051() {
           "I",
           "will",
           "$learner+doing",
-          "transgressors",
+          "$black_flag+doing",
           "Your",
           "$road,",
           "and",
