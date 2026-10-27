@@ -194,7 +194,7 @@ export function bible_glyph_chapter_gen39() {
           "himself",
           "with",
           "$package+question",
-          "except",
+          "$pointing",
           "the",
           "$bread",
           "he",
