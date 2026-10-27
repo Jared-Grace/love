@@ -176,7 +176,7 @@ export function bible_glyph_chapter_gen18() {
           "hurried",
           "into",
           "the",
-          "tent",
+          "$tent",
           "to",
           "$proper_name$Sarah",
           "and",
