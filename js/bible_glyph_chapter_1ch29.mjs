@@ -164,7 +164,7 @@ export function bible_glyph_chapter_1ch29() {
         words: [
           "$three",
           "$ten+all",
-          "talents",
+          "$flying_disc",
           "of",
           "gold,",
           "the",
