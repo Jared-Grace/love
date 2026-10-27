@@ -1004,7 +1004,7 @@ export function bible_glyph_chapter_deu11() {
           "$desert+proper_name",
           "$vs_button",
           "$proper_name$Gilgal,",
-          "near",
+          "$children_crossing",
           "the",
           "Oak",
           "of",
