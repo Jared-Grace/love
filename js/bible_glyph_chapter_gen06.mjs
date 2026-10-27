@@ -352,7 +352,7 @@ export function bible_glyph_chapter_gen06() {
           "the",
           "$earth",
           "is",
-          "full",
+          "$battery",
           "of",
           "violence",
           "through",
