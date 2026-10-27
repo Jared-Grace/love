@@ -706,7 +706,7 @@ export function bible_glyph_chapter_exo36() {
           "$four+zero",
           "$silver",
           "bases,",
-          "two",
+          "$two",
           "under",
           "each",
           "frame.",
