@@ -617,7 +617,7 @@ export function bible_glyph_chapter_jer18() {
       {
         verse_number: 21,
         words: [
-          "Therefore,",
+          "$right_arrow,",
           "hand",
           "their",
           "$son",
