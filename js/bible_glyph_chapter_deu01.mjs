@@ -867,7 +867,7 @@ export function bible_glyph_chapter_deu01() {
           "the",
           "$sky.",
           "We",
-          "even",
+          "$plus",
           "$eye",
           "the",
           "$son$s",
