@@ -351,7 +351,7 @@ export function bible_glyph_chapter_neh01() {
       {
         verse_number: 10,
         words: [
-          "They",
+          "$pointing_back",
           "are",
           "Your",
           "$kneeling",
