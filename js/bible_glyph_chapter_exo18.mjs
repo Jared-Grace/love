@@ -167,7 +167,7 @@ export function bible_glyph_chapter_exo18() {
           "$speech",
           "$toward",
           "$fishing_pole+proper_name,",
-          "I,",
+          "$me,",
           "your",
           "father",
           "in",
