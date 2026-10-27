@@ -401,7 +401,7 @@ export function bible_glyph_chapter_hab03() {
           "at",
           "the",
           "$voice.",
-          "Decay",
+          "$bone+microbe",
           "$footprints",
           "my",
           "bones,",
