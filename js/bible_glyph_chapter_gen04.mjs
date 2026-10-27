@@ -162,7 +162,7 @@ export function bible_glyph_chapter_gen04() {
           "you",
           "angry,",
           "and",
-          "why",
+          "$flashlight+question",
           "has",
           "your",
           "countenance",
