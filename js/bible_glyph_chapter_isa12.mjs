@@ -129,7 +129,7 @@ export function bible_glyph_chapter_isa12() {
       {
         verse_number: 5,
         words: [
-          "Sing",
+          "$harp+doing",
           "to",
           "the",
           "$i_am,",
