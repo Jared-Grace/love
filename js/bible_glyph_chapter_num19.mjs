@@ -52,7 +52,7 @@ export function bible_glyph_chapter_num19() {
           "without",
           "blemish,",
           "one",
-          "that",
+          "$back+flashlight",
           "has",
           "no",
           "defect",
