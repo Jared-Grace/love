@@ -249,7 +249,7 @@ export function bible_glyph_chapter_1ki18() {
           "But",
           "Obadiah",
           "$speech,",
-          "How",
+          "$flashlight+question",
           "have",
           "I",
           "$bow+doing,",
