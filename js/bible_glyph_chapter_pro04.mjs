@@ -508,7 +508,7 @@ export function bible_glyph_chapter_pro04() {
         words: [
           "Make",
           "a",
-          "level",
+          "$scales+road+doing",
           "path",
           "for",
           "your",
