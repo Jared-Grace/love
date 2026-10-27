@@ -429,7 +429,7 @@ export function bible_glyph_chapter_2ch07() {
           "I",
           "have",
           "chosen",
-          "this",
+          "$flashlight",
           "$place",
           "for",
           "Myself",
