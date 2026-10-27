@@ -175,7 +175,7 @@ export function bible_glyph_chapter_exo18() {
           "$proper_name$Jethro,",
           "am",
           "$footprints",
-          "to",
+          "$toward",
           "you",
           "with",
           "your",
