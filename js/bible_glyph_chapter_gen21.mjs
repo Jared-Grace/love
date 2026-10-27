@@ -735,7 +735,7 @@ export function bible_glyph_chapter_gen21() {
         verse_number: 28,
         words: [
           "$father+map",
-          "separated",
+          "$person+up_arrow",
           "seven",
           "ewe",
           "lambs",
