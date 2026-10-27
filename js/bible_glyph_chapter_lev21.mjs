@@ -364,7 +364,7 @@ export function bible_glyph_chapter_lev21() {
           "$pointing",
           "the",
           "$crown+soap",
-          "oil",
+          "$lotion_bottle",
           "of",
           "the",
           "anointing",
