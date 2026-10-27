@@ -108,7 +108,7 @@ export function bible_glyph_chapter_1sa17() {
           "$triangular_ruler",
           "and",
           "a",
-          "span",
+          "$hand_with_fingers_splayed+straight_ruler",
           "in",
           "height.",
         ],
