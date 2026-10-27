@@ -802,7 +802,7 @@ export function bible_glyph_chapter_2ki04() {
           "out",
           "$watch",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "her",
           "and",
           "$speech,",
