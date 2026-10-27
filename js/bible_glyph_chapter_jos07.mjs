@@ -132,7 +132,7 @@ export function bible_glyph_chapter_jos07() {
           "Two",
           "thousand",
           "$man_beard",
-          "or",
+          "$shuffle",
           "three",
           "thousand",
           "$man_beard",
