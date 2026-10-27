@@ -894,7 +894,7 @@ export function bible_glyph_chapter_deu04() {
           "and",
           "$hammer+doing",
           "an",
-          "idol",
+          "$nesting_dolls",
           "of",
           "any",
           "form,",
