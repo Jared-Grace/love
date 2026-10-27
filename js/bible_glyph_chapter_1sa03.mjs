@@ -281,7 +281,7 @@ export function bible_glyph_chapter_1sa03() {
           "$speech,",
           "$mouth,",
           "$i_am,",
-          "for",
+          "$pointing",
           "Your",
           "$kneeling",
           "is",
