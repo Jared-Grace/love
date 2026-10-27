@@ -612,7 +612,7 @@ export function bible_glyph_chapter_exo38() {
           "$proper_name$Dan,",
           "an",
           "engraver,",
-          "designer",
+          "$thinking+doing",
           "and",
           "embroiderer",
           "in",
