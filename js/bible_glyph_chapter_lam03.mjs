@@ -982,7 +982,7 @@ export function bible_glyph_chapter_lam03() {
           "$no_entry",
           "$eyes+locked+doing",
           "my",
-          "cry",
+          "$voice+waving_hand",
           "for",
           "relief.",
         ],
