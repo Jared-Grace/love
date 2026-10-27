@@ -498,7 +498,7 @@ export function bible_glyph_chapter_gen22() {
           "and",
           "have",
           "$no_entry",
-          "withheld",
+          "$hand+pause_button+doing",
           "your",
           "only",
           "$son,",
