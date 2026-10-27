@@ -118,7 +118,7 @@ export function bible_glyph_chapter_1sa03() {
         words: [
           "He",
           "ran",
-          "to",
+          "$toward",
           "$proper_name$Eli",
           "and",
           "$speech,",
