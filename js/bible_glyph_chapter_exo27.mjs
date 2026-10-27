@@ -461,7 +461,7 @@ export function bible_glyph_chapter_exo27() {
           "and",
           "five",
           "cubits",
-          "high,",
+          "$person+pointing_up,",
           "with",
           "curtains",
           "of",
