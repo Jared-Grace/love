@@ -172,7 +172,7 @@ export function bible_glyph_chapter_jos03() {
           "And",
           "$i_am+rescue",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$priest,",
           "$speech,",
