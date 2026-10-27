@@ -1329,7 +1329,7 @@ export function bible_glyph_chapter_1sa20() {
           "did",
           "$no_entry",
           "$lightbulb",
-          "anything.",
+          "$package+question.",
           "Only",
           "$i_am+hands_giving",
           "and",
