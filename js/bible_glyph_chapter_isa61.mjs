@@ -103,7 +103,7 @@ export function bible_glyph_chapter_isa61() {
           "for",
           "$ashes,",
           "the",
-          "oil",
+          "$lotion_bottle",
           "of",
           "joy",
           "for",
