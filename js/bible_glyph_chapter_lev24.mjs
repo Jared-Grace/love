@@ -127,7 +127,7 @@ export function bible_glyph_chapter_lev24() {
           "$palm_down",
           "them",
           "in",
-          "two",
+          "$two",
           "rows,",
           "six",
           "per",
