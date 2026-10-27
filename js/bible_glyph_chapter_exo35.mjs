@@ -82,7 +82,7 @@ export function bible_glyph_chapter_exo35() {
         verse_number: 3,
         words: [
           "$no_entry",
-          "light",
+          "$fire+wood",
           "a",
           "$fire",
           "in",
