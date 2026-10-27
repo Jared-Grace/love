@@ -609,7 +609,7 @@ export function bible_glyph_chapter_lev19() {
           "the",
           "guilt",
           "offering",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "for",
