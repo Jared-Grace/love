@@ -363,7 +363,7 @@ export function bible_glyph_chapter_neh01() {
           "redeemed",
           "by",
           "Your",
-          "great",
+          "$top",
           "$lightning",
           "and",
           "Your",
