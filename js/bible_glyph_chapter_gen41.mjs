@@ -1580,7 +1580,7 @@ export function bible_glyph_chapter_gen41() {
           "storehouses",
           "and",
           "sold",
-          "grain",
+          "$wheat+coin+doing",
           "to",
           "the",
           "$clamp+proper_name,",
