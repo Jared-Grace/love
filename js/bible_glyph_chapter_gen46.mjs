@@ -106,7 +106,7 @@ export function bible_glyph_chapter_gen46() {
           "will",
           "go",
           "down",
-          "with",
+          "$linked_paperclips",
           "you",
           "to",
           "$clamp+proper_name,",
