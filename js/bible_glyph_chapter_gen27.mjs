@@ -333,7 +333,7 @@ export function bible_glyph_chapter_gen27() {
           "upon",
           "myself",
           "a",
-          "curse",
+          "$balloon+speech",
           "and",
           "$no_entry",
           "a",
