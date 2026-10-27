@@ -179,7 +179,7 @@ export function bible_glyph_chapter_exo36() {
           "$footprints",
           "$multiply+doing",
           "than",
-          "enough",
+          "$check+all",
           "for",
           "the",
           "$tools",
