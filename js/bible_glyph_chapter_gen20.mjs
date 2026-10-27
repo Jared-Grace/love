@@ -212,7 +212,7 @@ export function bible_glyph_chapter_gen20() {
         verse_number: 7,
         words: [
           "So",
-          "now,",
+          "$watch,",
           "$turn_back",
           "the",
           "$woman",
