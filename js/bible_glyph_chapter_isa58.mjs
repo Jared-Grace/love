@@ -27,7 +27,7 @@ export function bible_glyph_chapter_isa58() {
           "a",
           "ram",
           "horn.",
-          "Declare",
+          "$newspaper",
           "to",
           "My",
           "$family",
