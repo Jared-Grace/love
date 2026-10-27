@@ -213,7 +213,7 @@ export function bible_glyph_chapter_exo24() {
           "he",
           "$hand_receiving",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "$covenant",
