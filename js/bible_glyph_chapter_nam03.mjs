@@ -319,7 +319,7 @@ export function bible_glyph_chapter_nam03() {
           "ripe",
           "figs;",
           "when",
-          "shaken,",
+          "$up_down_arrow+doing,",
           "they",
           "fall",
           "into",
