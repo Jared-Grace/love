@@ -1867,7 +1867,7 @@ export function bible_glyph_chapter_deu28() {
       {
         verse_number: 58,
         words: [
-          "If",
+          "$traffic_light",
           "you",
           "are",
           "$no_entry",
