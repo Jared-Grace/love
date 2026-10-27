@@ -206,7 +206,7 @@ export function bible_glyph_chapter_gen08() {
           "sent",
           "out",
           "a",
-          "dove",
+          "$dove",
           "to",
           "$eye",
           "if",
