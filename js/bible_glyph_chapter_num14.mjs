@@ -1126,7 +1126,7 @@ export function bible_glyph_chapter_num14() {
           "out",
           "the",
           "$earth,",
-          "who",
+          "$back+flashlight",
           "had",
           "$turn_back",
           "and",
