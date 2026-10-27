@@ -972,7 +972,7 @@ export function bible_glyph_chapter_2ki09() {
           "plot",
           "of",
           "ground,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
           "Now",
