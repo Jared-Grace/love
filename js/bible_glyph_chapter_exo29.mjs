@@ -454,7 +454,7 @@ export function bible_glyph_chapter_exo29() {
       {
         verse_number: 17,
         words: [
-          "Cut",
+          "$kitchen_knife+meat+doing",
           "the",
           "$ram",
           "into",
