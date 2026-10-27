@@ -181,7 +181,7 @@ export function bible_glyph_chapter_gen49() {
           "in",
           "$hand+foot",
           "and",
-          "scatter",
+          "$confetti_ball",
           "them",
           "in",
           "$wrestling+heart_on_fire.",
