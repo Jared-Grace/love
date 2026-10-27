@@ -629,7 +629,7 @@ export function bible_glyph_chapter_gen35() {
           "$proper_name$Leah:",
           "$eyes+son",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "$hand+foot,",
           "$ear+proper_name,",
