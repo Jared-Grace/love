@@ -141,7 +141,7 @@ export function bible_glyph_chapter_2ch34() {
           "$wall+down_arrow+doing,",
           "and",
           "he",
-          "cut",
+          "$axe+tree+doing",
           "to",
           "pieces",
           "the",
