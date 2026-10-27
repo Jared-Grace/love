@@ -258,7 +258,7 @@ export function bible_glyph_chapter_num12() {
           "$cloud",
           "$away+doing",
           "from",
-          "above",
+          "$pointing_up",
           "the",
           "$tent,",
           "suddenly",
