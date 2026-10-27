@@ -1286,7 +1286,7 @@ export function bible_glyph_chapter_jer31() {
           "would",
           "$me",
           "$gesturing_no+throwing+doing",
-          "all",
+          "$all",
           "of",
           "$wrestling+heart_on_fire's",
           "$seed",
