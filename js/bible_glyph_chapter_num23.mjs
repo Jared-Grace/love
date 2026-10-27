@@ -118,7 +118,7 @@ export function bible_glyph_chapter_num23() {
           "have",
           "set",
           "up",
-          "seven",
+          "$seven",
           "$altar,",
           "and",
           "I",
