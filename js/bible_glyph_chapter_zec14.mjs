@@ -266,7 +266,7 @@ export function bible_glyph_chapter_zec14() {
           "$divide",
           "of",
           "it",
-          "toward",
+          "$toward",
           "the",
           "Eastern",
           "$sea",
