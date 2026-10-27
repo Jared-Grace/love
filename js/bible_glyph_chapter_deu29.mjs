@@ -656,7 +656,7 @@ export function bible_glyph_chapter_deu29() {
           "$covenant",
           "$writing_hand",
           "in",
-          "this",
+          "$flashlight",
           "$closed_book",
           "of",
           "the",
