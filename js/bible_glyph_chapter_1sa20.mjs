@@ -1286,7 +1286,7 @@ export function bible_glyph_chapter_1sa20() {
           "$speech,",
           "Is",
           "the",
-          "arrow",
+          "$arrow+thing",
           "$no_entry",
           "beyond",
           "you?",
