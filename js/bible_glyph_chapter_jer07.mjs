@@ -912,7 +912,7 @@ export function bible_glyph_chapter_jer07() {
           "up",
           "a",
           "lamentation",
-          "on",
+          "$pointing_up",
           "the",
           "barren",
           "heights,",
