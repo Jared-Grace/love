@@ -475,7 +475,7 @@ export function bible_glyph_chapter_exo26() {
           "for",
           "the",
           "south",
-          "side.",
+          "$straight_ruler+round_pushpin.",
         ],
       },
       {
