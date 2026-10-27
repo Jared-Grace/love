@@ -652,7 +652,7 @@ export function bible_glyph_chapter_exo34() {
           "neck.",
           "You",
           "must",
-          "redeem",
+          "$coin+turn_back",
           "all",
           "the",
           "firstborn",
