@@ -73,7 +73,7 @@ export function bible_glyph_chapter_lam04() {
         verse_number: 3,
         words: [
           "$plus",
-          "jackals",
+          "$dragon",
           "offer",
           "their",
           "breasts",
