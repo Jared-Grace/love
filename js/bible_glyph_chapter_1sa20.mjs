@@ -132,7 +132,7 @@ export function bible_glyph_chapter_1sa20() {
           "$no_entry",
           "$lightbulb",
           "of",
-          "this,",
+          "$flashlight,",
           "or",
           "he",
           "will",
