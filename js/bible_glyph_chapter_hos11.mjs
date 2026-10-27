@@ -134,7 +134,7 @@ export function bible_glyph_chapter_hos11() {
           "$king",
           "by",
           "$proper_name$Assyria,",
-          "because",
+          "$pointing",
           "they",
           "refused",
           "to",
