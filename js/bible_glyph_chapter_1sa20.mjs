@@ -251,7 +251,7 @@ export function bible_glyph_chapter_1sa20() {
           "$sacrifice",
           "for",
           "his",
-          "whole",
+          "$all",
           "clan",
           "is",
           "$telescope.",
