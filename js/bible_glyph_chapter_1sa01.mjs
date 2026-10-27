@@ -824,7 +824,7 @@ export function bible_glyph_chapter_1sa01() {
           "$linked_paperclips",
           "you",
           "$hands_praying",
-          "to",
+          "$toward",
           "the",
           "$i_am.",
         ],
