@@ -197,7 +197,7 @@ export function bible_glyph_chapter_2ch20() {
           "one",
           "can",
           "stand",
-          "against",
+          "$linked_paperclips",
           "You.",
         ],
       },
