@@ -96,7 +96,7 @@ export function bible_glyph_chapter_1ki01() {
           "$wrestling+heart_on_fire",
           "for",
           "a",
-          "beautiful",
+          "$face+sparkle",
           "$girl,",
           "and",
           "they",
