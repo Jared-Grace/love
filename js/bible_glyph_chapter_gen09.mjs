@@ -208,7 +208,7 @@ export function bible_glyph_chapter_gen09() {
           "be",
           "fruitful",
           "and",
-          "multiply.",
+          "$multiply+doing.",
           "Spread",
           "out",
           "across",
