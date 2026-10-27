@@ -318,7 +318,7 @@ export function bible_glyph_chapter_lev26() {
           "My",
           "dwelling",
           "place",
-          "among",
+          "$radio_button",
           "you,",
           "and",
           "My",
