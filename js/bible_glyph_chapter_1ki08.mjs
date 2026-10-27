@@ -2234,7 +2234,7 @@ export function bible_glyph_chapter_1ki08() {
           "offerings,",
           "and",
           "the",
-          "fat",
+          "$bacon",
           "of",
           "the",
           "peace",
