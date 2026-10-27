@@ -1190,7 +1190,7 @@ export function bible_glyph_chapter_lev23() {
         words: [
           "On",
           "the",
-          "first",
+          "$first_place",
           "$sun",
           "you",
           "are",
