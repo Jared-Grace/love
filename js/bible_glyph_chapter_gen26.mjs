@@ -316,7 +316,7 @@ export function bible_glyph_chapter_gen26() {
           "$hammer+doing",
           "to",
           "us?",
-          "One",
+          "$one",
           "of",
           "the",
           "$family",
