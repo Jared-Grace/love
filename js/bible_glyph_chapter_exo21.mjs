@@ -593,7 +593,7 @@ export function bible_glyph_chapter_exo21() {
           "$no_entry",
           "be",
           "punished,",
-          "since",
+          "$pointing",
           "the",
           "servant",
           "is",
