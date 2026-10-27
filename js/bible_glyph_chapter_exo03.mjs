@@ -690,7 +690,7 @@ export function bible_glyph_chapter_exo03() {
           "that",
           "we",
           "may",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "the",
           "$i_am",
