@@ -35,7 +35,7 @@ export function bible_glyph_chapter_isa43() {
           "$wrestling+heart_on_fire:",
           "Do",
           "$no_entry",
-          "fear,",
+          "$fear+doing,",
           "for",
           "I",
           "have",
