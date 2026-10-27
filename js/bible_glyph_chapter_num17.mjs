@@ -219,7 +219,7 @@ export function bible_glyph_chapter_num17() {
           "saw",
           "that",
           "the",
-          "staff",
+          "$white_cane",
           "of",
           "Aaron,",
           "which",
