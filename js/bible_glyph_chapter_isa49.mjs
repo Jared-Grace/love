@@ -22,7 +22,7 @@ export function bible_glyph_chapter_isa49() {
           "attention,",
           "O",
           "distant",
-          "peoples:",
+          "$crowd+earth:",
           "The",
           "$i_am",
           "called",
