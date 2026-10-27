@@ -398,7 +398,7 @@ export function bible_glyph_chapter_exo28() {
           "and",
           "$hands_giving",
           "these",
-          "chains",
+          "$link+chains",
           "to",
           "the",
           "settings.",
