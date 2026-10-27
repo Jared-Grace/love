@@ -885,7 +885,7 @@ export function bible_glyph_chapter_deu29() {
           "land",
           "in",
           "His",
-          "anger,",
+          "$nose+fire,",
           "rage,",
           "and",
           "great",
