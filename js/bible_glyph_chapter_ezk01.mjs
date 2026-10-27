@@ -236,7 +236,7 @@ export function bible_glyph_chapter_ezk01() {
           "wings",
           "were",
           "touching",
-          "one",
+          "$toward",
           "another.",
           "They",
           "did",
