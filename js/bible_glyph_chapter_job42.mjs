@@ -432,7 +432,7 @@ export function bible_glyph_chapter_job42() {
         verse_number: 16,
         words: [
           "$next_track",
-          "this",
+          "$flashlight",
           "$proper_name$Job",
           "$sprout+doing",
           "140",
