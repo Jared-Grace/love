@@ -770,7 +770,7 @@ export function bible_glyph_chapter_exo26() {
           "it",
           "on",
           "$four",
-          "posts",
+          "$candle",
           "of",
           "acacia",
           "wood",
