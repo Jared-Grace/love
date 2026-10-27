@@ -1809,7 +1809,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "$footprints",
           "him",
-          "before",
+          "$face",
           "$proper_name$Saul,",
           "still",
           "holding",
