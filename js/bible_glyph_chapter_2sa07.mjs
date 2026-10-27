@@ -569,7 +569,7 @@ export function bible_glyph_chapter_2sa07() {
           "$speech:",
           "Who",
           "am",
-          "I,",
+          "$me,",
           "O",
           "$crown",
           "$i_am,",
