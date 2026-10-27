@@ -524,7 +524,7 @@ export function bible_glyph_chapter_exo23() {
           "of",
           "My",
           "feast",
-          "remain",
+          "$night+doing",
           "until",
           "$morning.",
         ],
