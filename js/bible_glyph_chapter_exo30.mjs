@@ -900,7 +900,7 @@ export function bible_glyph_chapter_exo30() {
           "$incense+bacon,",
           "and",
           "pure",
-          "frankincense,",
+          "$white_circle+incense,",
           "in",
           "equal",
           "measures.",
