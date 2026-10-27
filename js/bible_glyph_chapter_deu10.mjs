@@ -696,7 +696,7 @@ export function bible_glyph_chapter_deu10() {
           "in",
           "number,",
           "and",
-          "now",
+          "$watch",
           "the",
           "$i_am",
           "your",
