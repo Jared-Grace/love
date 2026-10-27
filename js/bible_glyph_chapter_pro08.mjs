@@ -239,7 +239,7 @@ export function bible_glyph_chapter_pro08() {
           "$thumbs_down;",
           "I",
           "hate",
-          "arrogant",
+          "$peacock",
           "$mountain+up_arrow+thing,",
           "$thumbs_down",
           "$road,",
