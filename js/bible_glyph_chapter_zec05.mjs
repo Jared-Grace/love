@@ -98,7 +98,7 @@ export function bible_glyph_chapter_zec05() {
           "other",
           "side",
           "every",
-          "perjurer",
+          "$raised_back_of_hand+doing",
           "will",
           "be",
           "removed.",
