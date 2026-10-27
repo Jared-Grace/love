@@ -1225,7 +1225,7 @@ export function bible_glyph_chapter_gen41() {
           "$no_entry",
           "$man_beard",
           "shall",
-          "lift",
+          "$up_arrow",
           "his",
           "$hand",
           "or",
