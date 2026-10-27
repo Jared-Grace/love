@@ -968,7 +968,7 @@ export function bible_glyph_chapter_exo21() {
         verse_number: 34,
         words: [
           "the",
-          "owner",
+          "$key",
           "of",
           "the",
           "pit",
