@@ -139,7 +139,7 @@ export function bible_glyph_chapter_gen26() {
           "your",
           "$seed",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$earth.",
           "And",
           "$all",
