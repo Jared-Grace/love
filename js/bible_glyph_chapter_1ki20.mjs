@@ -1565,7 +1565,7 @@ export function bible_glyph_chapter_1ki20() {
           "the",
           "$i_am",
           "$speech.",
-          "Because",
+          "$information",
           "you",
           "have",
           "let",
