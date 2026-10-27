@@ -444,7 +444,7 @@ export function bible_glyph_chapter_lev14() {
           "the",
           "$sparkle+thing",
           "sanctuary.",
-          "Like",
+          "$pointing",
           "the",
           "$bow,",
           "the",
