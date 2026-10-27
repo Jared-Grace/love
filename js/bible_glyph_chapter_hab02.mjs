@@ -151,7 +151,7 @@ export function bible_glyph_chapter_hab02() {
           "at",
           "rest.",
           "He",
-          "enlarges",
+          "$arrow_both_ways+doing",
           "his",
           "$person_other",
           "like",
