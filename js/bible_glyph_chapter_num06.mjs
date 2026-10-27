@@ -821,7 +821,7 @@ export function bible_glyph_chapter_num06() {
           "So",
           "they",
           "shall",
-          "put",
+          "$palm_down",
           "My",
           "$name_tag",
           "on",
