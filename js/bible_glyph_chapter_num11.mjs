@@ -265,7 +265,7 @@ export function bible_glyph_chapter_num11() {
           "$ear",
           "the",
           "$family",
-          "weeping,",
+          "$loudly_crying,",
           "family",
           "after",
           "$man_beard,",
