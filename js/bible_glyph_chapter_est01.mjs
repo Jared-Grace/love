@@ -244,7 +244,7 @@ export function bible_glyph_chapter_est01() {
           "of",
           "the",
           "$king",
-          "no",
+          "$dotted_line_face",
           "limit",
           "was",
           "placed",
