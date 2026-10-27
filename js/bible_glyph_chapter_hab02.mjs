@@ -568,7 +568,7 @@ export function bible_glyph_chapter_hab02() {
           "For",
           "its",
           "maker",
-          "trusts",
+          "$anchor+doing",
           "in",
           "his",
           "own",
