@@ -22,7 +22,7 @@ export function bible_glyph_chapter_2ki09() {
           "the",
           "$megaphone",
           "$waving_hand",
-          "one",
+          "$one",
           "of",
           "the",
           "$son",
