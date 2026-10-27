@@ -612,7 +612,7 @@ export function bible_glyph_chapter_exo12() {
         verse_number: 19,
         words: [
           "For",
-          "seven",
+          "$seven",
           "$sun",
           "there",
           "must",
