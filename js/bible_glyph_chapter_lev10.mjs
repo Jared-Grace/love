@@ -178,7 +178,7 @@ export function bible_glyph_chapter_lev10() {
           "become",
           "disheveled",
           "$no_entry",
-          "tear",
+          "$t_shirt+divide+doing",
           "$garment,",
           "$no_entry",
           "$skull+doing",
