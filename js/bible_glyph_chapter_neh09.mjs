@@ -1401,7 +1401,7 @@ export function bible_glyph_chapter_neh09() {
           "We",
           "are",
           "in",
-          "great",
+          "$top",
           "distress.",
         ],
       },
