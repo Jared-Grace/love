@@ -428,7 +428,7 @@ export function bible_glyph_chapter_lev24() {
           "$skull+doing",
           "$skull+doing.",
           "The",
-          "whole",
+          "$all",
           "assembly",
           "must",
           "surely",
