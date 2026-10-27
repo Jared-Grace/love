@@ -691,7 +691,7 @@ export function bible_glyph_chapter_lev23() {
           "of",
           "your",
           "$harvest.",
-          "Leave",
+          "$derelict_house+doing",
           "them",
           "for",
           "the",
