@@ -691,7 +691,7 @@ export function bible_glyph_chapter_1ki18() {
           "us.",
           "Let",
           "them",
-          "choose",
+          "$check_box",
           "one",
           "bull",
           "for",
