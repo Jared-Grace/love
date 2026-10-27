@@ -373,7 +373,7 @@ export function bible_glyph_chapter_deu14() {
           "$bird+crown,",
           "or",
           "the",
-          "bat.",
+          "$mouse+wing.",
         ],
       },
       {
