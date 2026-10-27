@@ -204,7 +204,7 @@ export function bible_glyph_chapter_psa091() {
           "who",
           "is",
           "my",
-          "refuge,",
+          "$hut+place,",
           "even",
           "the",
           "Most",
