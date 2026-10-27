@@ -780,7 +780,7 @@ export function bible_glyph_chapter_jos24() {
       {
         verse_number: 23,
         words: [
-          "Now",
+          "$watch",
           "therefore,",
           "he",
           "said,",
