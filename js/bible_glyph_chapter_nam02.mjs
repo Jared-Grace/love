@@ -233,7 +233,7 @@ export function bible_glyph_chapter_nam02() {
       {
         verse_number: 9,
         words: [
-          "Plunder",
+          "$pirate_flag+doing",
           "the",
           "silver!",
           "Plunder",
