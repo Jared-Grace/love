@@ -31,7 +31,7 @@ export function bible_glyph_chapter_gen05() {
           "$person,",
           "in",
           "the",
-          "likeness",
+          "$likeness+thing",
           "of",
           "$heart_on_fire",
           "he",
