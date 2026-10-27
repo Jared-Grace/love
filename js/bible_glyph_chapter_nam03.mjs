@@ -54,7 +54,7 @@ export function bible_glyph_chapter_nam03() {
         verse_number: 3,
         words: [
           "$walking+pointing_up",
-          "horseman,",
+          "$horse+doer,",
           "flashing",
           "$sword,",
           "shining",
