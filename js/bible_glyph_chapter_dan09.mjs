@@ -555,7 +555,7 @@ export function bible_glyph_chapter_dan09() {
           "Your",
           "$ruler+thing,",
           "I",
-          "pray",
+          "$pleading",
           "that",
           "Your",
           "anger",
