@@ -730,7 +730,7 @@ export function bible_glyph_chapter_ezk03() {
           "$speech",
           "to",
           "me,",
-          "Get",
+          "$person+pointing_up",
           "up,",
           "$walking+tray_out",
           "out",
