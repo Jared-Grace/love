@@ -582,7 +582,7 @@ export function bible_glyph_chapter_deu33() {
           "on",
           "the",
           "hidden",
-          "treasures",
+          "$pick+tray_in+doing",
           "of",
           "the",
           "sand.",
