@@ -1254,7 +1254,7 @@ export function bible_glyph_chapter_2ki09() {
           "$no_entry",
           "but",
           "her",
-          "skull,",
+          "$skull+hollow_circle,",
           "her",
           "feet,",
           "and",
