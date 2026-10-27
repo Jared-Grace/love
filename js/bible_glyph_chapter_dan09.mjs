@@ -570,7 +570,7 @@ export function bible_glyph_chapter_dan09() {
           "Your",
           "$sparkle+thing",
           "$mountain;",
-          "for",
+          "$pointing",
           "because",
           "of",
           "our",
