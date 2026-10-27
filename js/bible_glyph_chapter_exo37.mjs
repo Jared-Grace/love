@@ -493,7 +493,7 @@ export function bible_glyph_chapter_exo37() {
           "same",
           "for",
           "all",
-          "six",
+          "$six",
           "branches",
           "that",
           "extended",
