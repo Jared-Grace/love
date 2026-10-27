@@ -359,7 +359,7 @@ export function bible_glyph_chapter_lev03() {
           "$hand",
           "on",
           "its",
-          "head",
+          "$person_gesturing_ok",
           "and",
           "slaughter",
           "it",
