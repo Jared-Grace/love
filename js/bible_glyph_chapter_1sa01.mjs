@@ -855,7 +855,7 @@ export function bible_glyph_chapter_1sa01() {
         verse_number: 28,
         words: [
           "$plus",
-          "I",
+          "$me",
           "dedicate",
           "the",
           "boy",
