@@ -350,7 +350,7 @@ export function bible_glyph_chapter_isa58() {
           "Here",
           "I",
           "am.",
-          "If",
+          "$traffic_light",
           "you",
           "remove",
           "the",
