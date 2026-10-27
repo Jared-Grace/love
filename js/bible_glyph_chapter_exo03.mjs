@@ -762,7 +762,7 @@ export function bible_glyph_chapter_exo03() {
           "I",
           "will",
           "$hands_giving",
-          "this",
+          "$flashlight",
           "$family",
           "such",
           "$heart_orange",
