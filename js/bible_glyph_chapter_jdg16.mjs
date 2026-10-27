@@ -1173,7 +1173,7 @@ export function bible_glyph_chapter_jdg16() {
           "$skull",
           "he",
           "$skull+doing",
-          "more",
+          "$multiply",
           "than",
           "he",
           "had",
