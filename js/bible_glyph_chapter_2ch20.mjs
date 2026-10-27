@@ -37,7 +37,7 @@ export function bible_glyph_chapter_2ch20() {
           "$i_am+scales",
           "to",
           "make",
-          "war.",
+          "$crossed_swords.",
         ],
       },
       {
