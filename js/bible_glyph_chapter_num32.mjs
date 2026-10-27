@@ -857,7 +857,7 @@ export function bible_glyph_chapter_num32() {
           "$pointing_down+proper_name",
           "with",
           "you,",
-          "every",
+          "$all",
           "man",
           "armed",
           "for",
