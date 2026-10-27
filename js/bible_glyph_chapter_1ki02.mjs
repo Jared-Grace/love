@@ -989,7 +989,7 @@ export function bible_glyph_chapter_1ki02() {
           "with",
           "$father+peace,",
           "he",
-          "fled",
+          "$running+dashing_away",
           "to",
           "the",
           "tent",
