@@ -618,7 +618,7 @@ export function bible_glyph_chapter_lev22() {
           "a",
           "$sacrifice",
           "of",
-          "peace",
+          "$peace+gift",
           "offerings",
           "to",
           "$i_am",
