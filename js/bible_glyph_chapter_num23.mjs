@@ -302,7 +302,7 @@ export function bible_glyph_chapter_num23() {
           "let",
           "my",
           "end",
-          "be",
+          "$link",
           "like",
           "theirs.",
         ],
