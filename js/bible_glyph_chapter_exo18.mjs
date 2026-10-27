@@ -223,7 +223,7 @@ export function bible_glyph_chapter_exo18() {
         words: [
           "Then",
           "$fishing_pole+proper_name",
-          "recounted",
+          "$abacus",
           "to",
           "his",
           "father",
