@@ -466,7 +466,7 @@ export function bible_glyph_chapter_num23() {
           "with",
           "$proper_name$Balaam",
           "and",
-          "put",
+          "$palm_down",
           "a",
           "$speech",
           "in",
