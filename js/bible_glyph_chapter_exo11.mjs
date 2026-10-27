@@ -263,7 +263,7 @@ export function bible_glyph_chapter_exo11() {
         words: [
           "And",
           "all",
-          "these",
+          "$flashlight+flashlight",
           "$kneeling",
           "of",
           "yours",
