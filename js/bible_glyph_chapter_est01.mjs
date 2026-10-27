@@ -463,7 +463,7 @@ export function bible_glyph_chapter_est01() {
           "with",
           "$queen",
           "$proper_name$Vashti,",
-          "since",
+          "$pointing_up",
           "she",
           "$no_entry",
           "obey",
