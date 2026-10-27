@@ -688,7 +688,7 @@ export function bible_glyph_chapter_2sa05() {
           "trees,",
           "move",
           "quickly,",
-          "because",
+          "$pointing",
           "this",
           "will",
           "mean",
