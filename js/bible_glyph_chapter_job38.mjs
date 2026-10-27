@@ -262,7 +262,7 @@ export function bible_glyph_chapter_job38() {
           "takes",
           "shape",
           "like",
-          "clay",
+          "$brown_square+water",
           "under",
           "a",
           "seal;",
