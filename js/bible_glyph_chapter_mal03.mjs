@@ -47,7 +47,7 @@ export function bible_glyph_chapter_mal03() {
           "$covenant,",
           "in",
           "whom",
-          "you",
+          "$you",
           "delight",
           "-",
           "see,",
