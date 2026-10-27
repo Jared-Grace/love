@@ -703,7 +703,7 @@ export function bible_glyph_chapter_exo36() {
         verse_number: 26,
         words: [
           "with",
-          "forty",
+          "$four+zero",
           "$silver",
           "bases,",
           "two",
