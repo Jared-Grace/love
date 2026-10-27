@@ -14,7 +14,7 @@ export function bible_glyph_chapter_lam01() {
         verse_number: 1,
         words: [
           "$question+likeness",
-          "lonely",
+          "$person+one+describing",
           "$person+house",
           "the",
           "$city,",
