@@ -74,7 +74,7 @@ export function bible_glyph_chapter_isa26() {
           "steadfast",
           "of",
           "mind,",
-          "because",
+          "$pointing",
           "he",
           "trusts",
           "in",
