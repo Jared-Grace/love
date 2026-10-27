@@ -1232,7 +1232,7 @@ export function bible_glyph_chapter_2ki09() {
           "she",
           "was",
           "the",
-          "daughter",
+          "$girl+family",
           "of",
           "a",
           "$king.",
