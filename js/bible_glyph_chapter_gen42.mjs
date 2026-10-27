@@ -749,7 +749,7 @@ export function bible_glyph_chapter_gen42() {
           "for",
           "the",
           "night,",
-          "one",
+          "$one",
           "of",
           "them",
           "opened",
