@@ -54,7 +54,7 @@ export function bible_glyph_chapter_psa091() {
           "in",
           "whom",
           "I",
-          "trust.",
+          "$anchor+doing.",
         ],
       },
       {
