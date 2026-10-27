@@ -356,7 +356,7 @@ export function bible_glyph_chapter_est01() {
           "$queen",
           "$proper_name$Vashti,",
           "however,",
-          "refused",
+          "$person_gesturing_no+doing",
           "to",
           "$footprints",
           "at",
