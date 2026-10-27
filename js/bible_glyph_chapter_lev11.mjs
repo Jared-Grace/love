@@ -661,7 +661,7 @@ export function bible_glyph_chapter_lev11() {
           "the",
           "$earth",
           "are",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "you:",
           "the",
