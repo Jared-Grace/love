@@ -202,7 +202,7 @@ export function bible_glyph_chapter_job01() {
           "$speech",
           "$toward",
           "Satan,",
-          "Where",
+          "$question+round_pushpin+tray_out",
           "have",
           "you",
           "come",
