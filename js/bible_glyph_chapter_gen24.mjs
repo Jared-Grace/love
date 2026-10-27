@@ -817,7 +817,7 @@ export function bible_glyph_chapter_gen24() {
           "$back+flashlight",
           "has",
           "$no_entry",
-          "withheld",
+          "$derelict_house+doing",
           "His",
           "$gift",
           "and",
