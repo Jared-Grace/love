@@ -1314,7 +1314,7 @@ export function bible_glyph_chapter_gen24() {
           "and",
           "she",
           "$speech,",
-          "Drink,",
+          "$cup_with_straw,",
           "and",
           "I",
           "will",
