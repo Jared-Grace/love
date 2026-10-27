@@ -916,7 +916,7 @@ export function bible_glyph_chapter_exo09() {
           "will",
           "be",
           "$no_entry",
-          "more",
+          "$repeat",
           "$ice,",
           "so",
           "that",
