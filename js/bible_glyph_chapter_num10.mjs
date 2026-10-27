@@ -305,7 +305,7 @@ export function bible_glyph_chapter_num10() {
           "from",
           "$pointing_up",
           "the",
-          "tabernacle",
+          "$tent+house",
           "of",
           "the",
           "$witness+thing.",
