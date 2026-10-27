@@ -700,7 +700,7 @@ export function bible_glyph_chapter_lam03() {
           "any",
           "$sprout",
           "$person",
-          "complain,",
+          "$pouting_face+speech+doing,",
           "in",
           "view",
           "of",
