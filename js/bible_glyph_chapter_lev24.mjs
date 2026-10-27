@@ -124,7 +124,7 @@ export function bible_glyph_chapter_lev24() {
       {
         verse_number: 6,
         words: [
-          "Set",
+          "$palm_down",
           "them",
           "in",
           "two",
