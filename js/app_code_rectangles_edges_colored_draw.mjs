@@ -225,16 +225,16 @@ export function app_code_rectangles_edges_colored_draw({
     let layer = on_corner ? "2" : "1";
     let both = edge_both(edge, shared, corner_edge);
     if (both) {
-      app_code_grid_edge_line_pair_draw(
+      app_code_grid_edge_line_pair_draw({
         grid,
-        end_color,
-        start_color,
+        before_color: end_color,
+        after_color: start_color,
         index,
         last,
         span,
         vertical,
         layer,
-      );
+      });
       return;
     }
     app_code_grid_edge_line_draw({

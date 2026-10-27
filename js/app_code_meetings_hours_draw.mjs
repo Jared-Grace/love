@@ -130,16 +130,16 @@ export function app_code_meetings_hours_draw(
     let colored = not(b);
     let layer = colored ? "2" : "1";
     if (both) {
-      app_code_grid_edge_line_pair_draw(
+      app_code_grid_edge_line_pair_draw({
         grid,
-        end_color,
-        start_color,
-        column_line,
+        before_color: end_color,
+        after_color: start_color,
+        index: column_line,
         last,
-        rows,
-        true,
-        "2",
-      );
+        span: rows,
+        vertical: true,
+        layer: "2",
+      });
     } else {
       app_code_grid_edge_line_draw({
         grid,
