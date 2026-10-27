@@ -53,7 +53,7 @@ export function bible_glyph_chapter_1ki19() {
           "and",
           "ever",
           "so",
-          "severely,",
+          "$plus+doing,",
           "if",
           "by",
           "this",
