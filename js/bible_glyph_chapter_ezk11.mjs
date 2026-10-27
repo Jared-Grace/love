@@ -302,7 +302,7 @@ export function bible_glyph_chapter_ezk11() {
           "will",
           "judge",
           "you",
-          "even",
+          "$pointing_up",
           "to",
           "the",
           "borders",
