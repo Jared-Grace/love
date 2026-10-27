@@ -400,7 +400,7 @@ export function bible_glyph_chapter_num32() {
         verse_number: 14,
         words: [
           "Now",
-          "behold,",
+          "$exclamation,",
           "you",
           "have",
           "risen",
