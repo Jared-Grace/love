@@ -124,7 +124,7 @@ export function bible_glyph_chapter_lev02() {
           "$flour,",
           "either",
           "unleavened",
-          "cakes",
+          "$bagel",
           "mixed",
           "with",
           "oil",
