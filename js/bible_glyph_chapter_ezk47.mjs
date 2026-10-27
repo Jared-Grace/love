@@ -412,7 +412,7 @@ export function bible_glyph_chapter_ezk47() {
           "$no_entry",
           "$full_moon+doing.",
           "Each",
-          "month",
+          "$new_moon",
           "they",
           "will",
           "bear",
