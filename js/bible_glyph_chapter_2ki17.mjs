@@ -558,7 +558,7 @@ export function bible_glyph_chapter_2ki17() {
           "they",
           "$hammer+doing",
           "an",
-          "Asherah",
+          "$wood+imp",
           "pole.",
           "They",
           "$bowing",
