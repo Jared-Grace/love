@@ -224,7 +224,7 @@ export function bible_glyph_chapter_gen39() {
           "$i_am+plus",
           "and",
           "$speech,",
-          "Sleep",
+          "$bed+doing",
           "with",
           "me.",
         ],
