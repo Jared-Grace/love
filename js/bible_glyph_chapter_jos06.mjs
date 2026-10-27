@@ -807,7 +807,7 @@ export function bible_glyph_chapter_jos06() {
           "and",
           "settled",
           "them",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "camp",
           "of",
