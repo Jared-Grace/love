@@ -949,7 +949,7 @@ export function bible_glyph_chapter_2ki04() {
           "Then",
           "lay",
           "my",
-          "staff",
+          "$white_cane+walking",
           "on",
           "the",
           "boy's",
