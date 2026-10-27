@@ -221,7 +221,7 @@ export function bible_glyph_chapter_isa53() {
           "lamb",
           "to",
           "the",
-          "slaughter,",
+          "$meat_on_bone,",
           "and",
           "as",
           "a",
