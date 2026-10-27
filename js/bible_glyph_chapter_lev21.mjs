@@ -315,7 +315,7 @@ export function bible_glyph_chapter_lev21() {
           "hang",
           "$broken_chain+doing,",
           "$no_entry",
-          "tear",
+          "$t_shirt+divide+doing",
           "his",
           "$garment.",
         ],
