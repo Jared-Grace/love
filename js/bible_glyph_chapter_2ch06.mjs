@@ -402,7 +402,7 @@ export function bible_glyph_chapter_2ch06() {
           "$triangular_ruler",
           "long,",
           "$five",
-          "cubits",
+          "$triangular_ruler",
           "wide",
           "and",
           "three",
