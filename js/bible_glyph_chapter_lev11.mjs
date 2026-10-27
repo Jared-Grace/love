@@ -949,7 +949,7 @@ export function bible_glyph_chapter_lev11() {
           "who",
           "touches",
           "the",
-          "carcass",
+          "$skull+bone",
           "will",
           "be",
           "unclean",
