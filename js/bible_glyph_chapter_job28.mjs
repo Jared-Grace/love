@@ -421,7 +421,7 @@ export function bible_glyph_chapter_job28() {
       {
         verse_number: 22,
         words: [
-          "Abaddon",
+          "$wilted_flower+place",
           "and",
           "$skull",
           "$speech,",
