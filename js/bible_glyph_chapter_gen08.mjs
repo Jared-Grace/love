@@ -428,7 +428,7 @@ export function bible_glyph_chapter_gen08() {
           "$walking+tray_out",
           "$tray_out",
           "the",
-          "ark,",
+          "$package,",
           "you",
           "and",
           "your",
