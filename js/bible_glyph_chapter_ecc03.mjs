@@ -117,7 +117,7 @@ export function bible_glyph_chapter_ecc03() {
           "stones",
           "together,",
           "a",
-          "time",
+          "$clock",
           "to",
           "embrace",
           "and",
