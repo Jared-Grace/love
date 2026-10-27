@@ -656,7 +656,7 @@ export function bible_glyph_chapter_isa07() {
           "And",
           "from",
           "the",
-          "abundance",
+          "$multiply+thing",
           "of",
           "milk",
           "they",
