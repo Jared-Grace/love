@@ -68,7 +68,7 @@ export function bible_glyph_chapter_lev08() {
           "and",
           "the",
           "assembly",
-          "gathered",
+          "$church+doing",
           "at",
           "the",
           "entrance",
