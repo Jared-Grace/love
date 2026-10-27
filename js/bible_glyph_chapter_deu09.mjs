@@ -887,7 +887,7 @@ export function bible_glyph_chapter_deu09() {
           "$face",
           "$i_am",
           "for",
-          "forty",
+          "$four+zero",
           "$sun",
           "and",
           "forty",
