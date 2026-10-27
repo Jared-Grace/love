@@ -102,7 +102,7 @@ export function bible_glyph_chapter_1sa03() {
           "Then",
           "the",
           "$i_am",
-          "called",
+          "$waving_hand",
           "to",
           "$ear+heart_on_fire,",
           "and",
