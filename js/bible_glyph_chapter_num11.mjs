@@ -214,7 +214,7 @@ export function bible_glyph_chapter_num11() {
           "it",
           "in",
           "a",
-          "mortar,",
+          "$hammer+wheat+thing,",
           "then",
           "boiled",
           "it",
