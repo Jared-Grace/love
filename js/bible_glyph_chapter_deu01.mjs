@@ -21,7 +21,7 @@ export function bible_glyph_chapter_deu01() {
           "$fishing_pole+proper_name",
           "$mouth",
           "$toward",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire",
           "in",
           "the",
