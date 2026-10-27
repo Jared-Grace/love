@@ -907,7 +907,7 @@ export function bible_glyph_chapter_exo04() {
           "$walking",
           "and",
           "assembled",
-          "all",
+          "$all",
           "the",
           "elders",
           "of",
