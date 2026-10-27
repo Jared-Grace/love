@@ -629,7 +629,7 @@ export function bible_glyph_chapter_jer32() {
         words: [
           "the",
           "One",
-          "great",
+          "$top",
           "in",
           "counsel",
           "and",
