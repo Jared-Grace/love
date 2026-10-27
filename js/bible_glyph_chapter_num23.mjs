@@ -777,7 +777,7 @@ export function bible_glyph_chapter_num23() {
           "$heart_on_fire",
           "that",
           "you",
-          "curse",
+          "$speech+kitchen_knife+doing",
           "them",
           "for",
           "me",
