@@ -425,7 +425,7 @@ export function bible_glyph_chapter_deu33() {
           "of",
           "the",
           "ancient",
-          "mountains",
+          "$mountain+top",
           "and",
           "the",
           "bounty",
