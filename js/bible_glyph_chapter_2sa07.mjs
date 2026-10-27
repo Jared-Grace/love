@@ -318,7 +318,7 @@ export function bible_glyph_chapter_2sa07() {
           "that",
           "they",
           "may",
-          "dwell",
+          "$tent+doing",
           "in",
           "a",
           "place",
