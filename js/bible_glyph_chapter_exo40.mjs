@@ -518,7 +518,7 @@ export function bible_glyph_chapter_exo40() {
           "Moses",
           "$hands_giving",
           "the",
-          "table",
+          "$hand_sending+thing",
           "in",
           "the",
           "Tent",
