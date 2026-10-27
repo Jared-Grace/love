@@ -1330,7 +1330,7 @@ export function bible_glyph_chapter_deu32() {
           "in",
           "the",
           "$brown_square",
-          "that",
+          "$back+flashlight",
           "you",
           "are",
           "crossing",
