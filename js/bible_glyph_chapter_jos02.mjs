@@ -549,7 +549,7 @@ export function bible_glyph_chapter_jos02() {
           "$telescope",
           "$three",
           "$sun",
-          "until",
+          "$finish",
           "they",
           "have",
           "$turn_back;",
