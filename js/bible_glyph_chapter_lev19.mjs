@@ -200,7 +200,7 @@ export function bible_glyph_chapter_lev19() {
           "you",
           "reap",
           "the",
-          "harvest",
+          "$harvest",
           "of",
           "your",
           "$earth,",
