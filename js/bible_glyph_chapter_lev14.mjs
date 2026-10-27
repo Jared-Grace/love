@@ -244,7 +244,7 @@ export function bible_glyph_chapter_lev14() {
           "his",
           "$tent",
           "for",
-          "seven",
+          "$seven",
           "$sun.",
         ],
       },
