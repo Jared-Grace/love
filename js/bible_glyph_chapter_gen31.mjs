@@ -520,7 +520,7 @@ export function bible_glyph_chapter_gen31() {
           "that",
           "he",
           "did",
-          "not",
+          "$zero+thing",
           "tell",
           "him",
           "he",
