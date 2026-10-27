@@ -266,7 +266,7 @@ export function bible_glyph_chapter_psa091() {
           "you",
           "will",
           "not",
-          "strike",
+          "$fist+microbe",
           "your",
           "$foot",
           "against",
