@@ -471,7 +471,7 @@ export function bible_glyph_chapter_deu14() {
           "of",
           "all",
           "the",
-          "produce",
+          "$fruit+basket",
           "brought",
           "forth",
           "each",
