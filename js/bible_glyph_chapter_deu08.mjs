@@ -281,7 +281,7 @@ export function bible_glyph_chapter_deu08() {
           "$eating",
           "$bread",
           "$no_entry",
-          "scarcity,",
+          "$poor+thing,",
           "where",
           "you",
           "will",
