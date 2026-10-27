@@ -663,7 +663,7 @@ export function bible_glyph_chapter_amo05() {
           "will",
           "have",
           "$no_entry",
-          "regard.",
+          "$face_with_monocle.",
         ],
       },
       {
