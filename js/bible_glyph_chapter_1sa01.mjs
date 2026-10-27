@@ -170,7 +170,7 @@ export function bible_glyph_chapter_1sa01() {
         verse_number: 6,
         words: [
           "And",
-          "because",
+          "$pointing",
           "the",
           "$i_am",
           "had",
