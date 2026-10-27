@@ -105,7 +105,7 @@ export function bible_glyph_chapter_job01() {
           "would",
           "invite",
           "their",
-          "three",
+          "$three",
           "sisters",
           "to",
           "$eating",
