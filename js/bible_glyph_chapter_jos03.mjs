@@ -543,7 +543,7 @@ export function bible_glyph_chapter_jos03() {
           "$family",
           "crossed",
           "over",
-          "opposite",
+          "$newspaper+thing",
           "$proper_name$Jericho.",
         ],
       },
