@@ -424,7 +424,7 @@ export function bible_glyph_chapter_lev04() {
           "shall",
           "be",
           "slaughtered",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
