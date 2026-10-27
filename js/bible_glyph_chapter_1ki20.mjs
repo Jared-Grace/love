@@ -1578,7 +1578,7 @@ export function bible_glyph_chapter_1ki20() {
           "$man_beard",
           "I",
           "had",
-          "devoted",
+          "$bomb+altar+thing",
           "to",
           "destruction,",
           "your",
