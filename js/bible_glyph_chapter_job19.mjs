@@ -24,7 +24,7 @@ export function bible_glyph_chapter_job19() {
           "torment",
           "$person_other",
           "and",
-          "crush",
+          "$stone+dust+doing",
           "me",
           "with",
           "words?",
