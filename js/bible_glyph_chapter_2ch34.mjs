@@ -602,7 +602,7 @@ export function bible_glyph_chapter_2ch34() {
           "he",
           "$hands_giving",
           "it",
-          "to",
+          "$toward",
           "Shaphan.",
         ],
       },
