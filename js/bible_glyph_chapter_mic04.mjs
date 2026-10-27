@@ -330,7 +330,7 @@ export function bible_glyph_chapter_mic04() {
       {
         verse_number: 9,
         words: [
-          "Why",
+          "$flashlight+question",
           "do",
           "you",
           "$watch",
