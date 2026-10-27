@@ -140,7 +140,7 @@ export function bible_glyph_chapter_2ki06() {
           "He",
           "cried",
           "out,",
-          "Oh,",
+          "$crying_face+speech,",
           "my",
           "$crown,",
           "it",
