@@ -623,7 +623,7 @@ export function bible_glyph_chapter_exo39() {
           "that",
           "it",
           "$no_entry",
-          "tear.",
+          "$t_shirt+scissors+doing.",
         ],
       },
       {
