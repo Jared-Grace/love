@@ -294,7 +294,7 @@ export function bible_glyph_chapter_num21() {
           "on",
           "a",
           "pole.",
-          "If",
+          "$traffic_light",
           "a",
           "$man_beard",
           "was",
