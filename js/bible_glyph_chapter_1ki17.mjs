@@ -49,7 +49,7 @@ export function bible_glyph_chapter_1ki17() {
           "nor",
           "rain",
           "in",
-          "these",
+          "$flashlight+flashlight",
           "$year",
           "except",
           "at",
