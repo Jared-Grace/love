@@ -801,7 +801,7 @@ export function bible_glyph_chapter_job31() {
         words: [
           "$traffic_light",
           "my",
-          "land",
+          "$brown_square",
           "cries",
           "out",
           "against",
