@@ -293,7 +293,7 @@ export function bible_glyph_chapter_lam05() {
         words: [
           "Because",
           "of",
-          "this",
+          "$flashlight",
           "our",
           "$heart_organ",
           "are",
