@@ -150,7 +150,7 @@ export function bible_glyph_chapter_2sa05() {
           "$seven",
           "$year",
           "and",
-          "six",
+          "$six",
           "months,",
           "and",
           "in",
