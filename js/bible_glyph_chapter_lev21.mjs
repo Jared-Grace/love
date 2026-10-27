@@ -290,7 +290,7 @@ export function bible_glyph_chapter_lev21() {
           "had",
           "the",
           "anointing",
-          "oil",
+          "$lotion_bottle",
           "$pouring_liquid+fire",
           "$pointing_up",
           "his",
