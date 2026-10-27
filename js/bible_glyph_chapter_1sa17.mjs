@@ -123,7 +123,7 @@ export function bible_glyph_chapter_1sa17() {
           "$military_helmet+top",
           "$pointing_up",
           "his",
-          "head,",
+          "$person_gesturing_ok,",
           "and",
           "he",
           "wore",
