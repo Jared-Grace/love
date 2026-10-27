@@ -386,7 +386,7 @@ export function bible_glyph_chapter_dan12() {
           "the",
           "abomination",
           "of",
-          "desolation",
+          "$astonished+doing",
           "is",
           "$hands_giving",
           "up,",
