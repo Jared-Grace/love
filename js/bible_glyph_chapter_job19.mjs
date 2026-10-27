@@ -536,7 +536,7 @@ export function bible_glyph_chapter_job19() {
           "him,",
           "since",
           "the",
-          "root",
+          "$ginger_root",
           "of",
           "the",
           "$speech",
