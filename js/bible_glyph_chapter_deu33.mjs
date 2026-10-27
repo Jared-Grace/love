@@ -798,7 +798,7 @@ export function bible_glyph_chapter_deu33() {
           "$heart_on_fire",
           "is",
           "your",
-          "dwelling",
+          "$house+bed",
           "place,",
           "and",
           "underneath",
