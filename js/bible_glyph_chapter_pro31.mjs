@@ -362,7 +362,7 @@ export function bible_glyph_chapter_pro31() {
           "lamp",
           "is",
           "$no_entry",
-          "extinguished",
+          "$fire+no_entry+doing",
           "at",
           "$night.",
         ],
