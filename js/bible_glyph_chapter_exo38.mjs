@@ -21,7 +21,7 @@ export function bible_glyph_chapter_exo38() {
           "of",
           "$burnt_offering",
           "from",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
           "five",
           "cubits",
