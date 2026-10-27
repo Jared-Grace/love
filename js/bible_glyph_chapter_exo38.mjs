@@ -827,7 +827,7 @@ export function bible_glyph_chapter_exo38() {
           "offering",
           "$seven+zero",
           "seventy",
-          "talents",
+          "$flying_disc",
           "and",
           "two",
           "thousand",
