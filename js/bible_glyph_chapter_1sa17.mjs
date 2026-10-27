@@ -575,7 +575,7 @@ export function bible_glyph_chapter_1sa17() {
           "was",
           "marching",
           "out",
-          "to",
+          "$toward",
           "its",
           "position",
           "and",
