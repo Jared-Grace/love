@@ -883,7 +883,7 @@ export function bible_glyph_chapter_jdg11() {
           "$thumbs_down",
           "by",
           "waging",
-          "war",
+          "$crossed_swords+doing",
           "against",
           "me.",
           "May",
