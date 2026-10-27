@@ -352,7 +352,7 @@ export function bible_glyph_chapter_deu28() {
           "in",
           "the",
           "$brown_square",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "swore",
