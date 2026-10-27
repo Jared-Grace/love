@@ -1069,7 +1069,7 @@ export function bible_glyph_chapter_2ch34() {
           "wept",
           "before",
           "Me,",
-          "I",
+          "$me",
           "have",
           "$ear",
           "you,",
