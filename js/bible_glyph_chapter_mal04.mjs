@@ -34,7 +34,7 @@ export function bible_glyph_chapter_mal04() {
           "evil",
           "will",
           "be",
-          "stubble.",
+          "$fallen_leaf+wheat.",
           "The",
           "$sun",
           "is",
