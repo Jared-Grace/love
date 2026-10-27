@@ -1179,7 +1179,7 @@ export function bible_glyph_chapter_exo32() {
           "$hammer+doing",
           "with",
           "the",
-          "calf",
+          "$calf",
           "that",
           "$proper_name$Aaron",
           "had",
