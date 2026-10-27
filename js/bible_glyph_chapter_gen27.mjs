@@ -1314,7 +1314,7 @@ export function bible_glyph_chapter_gen27() {
           "$sun,",
           "$finish",
           "the",
-          "fury",
+          "$angry_face",
           "of",
           "your",
           "$brother",
