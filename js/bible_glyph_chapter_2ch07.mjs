@@ -258,7 +258,7 @@ export function bible_glyph_chapter_2ch07() {
           "$hammer+doing",
           "could",
           "$no_entry",
-          "hold",
+          "$package+hand+doing",
           "all",
           "these",
           "offerings.",
