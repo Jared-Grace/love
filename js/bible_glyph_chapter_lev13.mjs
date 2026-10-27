@@ -1333,7 +1333,7 @@ export function bible_glyph_chapter_lev13() {
           "$meat",
           "are",
           "dull",
-          "white,",
+          "$white_circle,",
           "it",
           "is",
           "a",
