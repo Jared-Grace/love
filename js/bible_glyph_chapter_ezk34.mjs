@@ -76,7 +76,7 @@ export function bible_glyph_chapter_ezk34() {
           "You",
           "$eating",
           "the",
-          "fat,",
+          "$bacon,",
           "wear",
           "the",
           "wool,",
