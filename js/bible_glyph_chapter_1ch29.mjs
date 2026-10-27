@@ -993,7 +993,7 @@ export function bible_glyph_chapter_1ch29() {
           "$eating+top+describing",
           "of",
           "$sun,",
-          "riches",
+          "$money_bag",
           "and",
           "$star,",
           "and",
