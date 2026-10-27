@@ -985,7 +985,7 @@ export function bible_glyph_chapter_lev19() {
           "and",
           "an",
           "$ruler+thing",
-          "hin.",
+          "$jar+straight_ruler.",
           "I",
           "am",
           "the",
