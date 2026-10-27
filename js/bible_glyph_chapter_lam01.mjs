@@ -532,7 +532,7 @@ export function bible_glyph_chapter_lam01() {
           "those",
           "I",
           "$no_entry",
-          "withstand.",
+          "$person+pointing_up.",
         ],
       },
       {
