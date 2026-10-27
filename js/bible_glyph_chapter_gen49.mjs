@@ -647,7 +647,7 @@ export function bible_glyph_chapter_gen49() {
           "rest",
           "on",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "$i_am+plus,",
           "on",
