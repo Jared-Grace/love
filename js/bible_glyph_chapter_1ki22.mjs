@@ -20,7 +20,7 @@ export function bible_glyph_chapter_1ki22() {
           "$three",
           "$year",
           "$person+house",
-          "without",
+          "$dotted_line_face",
           "war",
           "between",
           "$proper_name$Aram",
