@@ -162,7 +162,7 @@ export function bible_glyph_chapter_psa090() {
         words: [
           "You",
           "have",
-          "set",
+          "$palm_down+round_pushpin+doing",
           "our",
           "iniquities",
           "before",
