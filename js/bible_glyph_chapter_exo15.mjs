@@ -400,7 +400,7 @@ export function bible_glyph_chapter_exo15() {
           "and",
           "dread",
           "will",
-          "fall",
+          "$person+pointing_down",
           "on",
           "them.",
           "By",
