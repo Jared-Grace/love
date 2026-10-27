@@ -281,7 +281,7 @@ export function bible_glyph_chapter_lev19() {
           "must",
           "$no_entry",
           "$raised_back_of_hand+doing",
-          "falsely",
+          "$lying_face",
           "by",
           "My",
           "$name_tag",
