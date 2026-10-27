@@ -204,7 +204,7 @@ export function bible_glyph_chapter_2sa05() {
           "$person_with_white_cane+describing",
           "and",
           "the",
-          "lame",
+          "$manual_wheelchair",
           "can",
           "repel",
           "you,",
