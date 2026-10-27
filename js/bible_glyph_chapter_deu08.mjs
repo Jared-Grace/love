@@ -87,7 +87,7 @@ export function bible_glyph_chapter_deu08() {
           "$no_entry",
           "you",
           "would",
-          "keep",
+          "$guard",
           "His",
           "$scroll.",
         ],
