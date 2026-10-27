@@ -224,7 +224,7 @@ export function bible_glyph_chapter_deu31() {
           "$you",
           "will",
           "$footprints",
-          "with",
+          "$safety_pin",
           "this",
           "$family",
           "into",
