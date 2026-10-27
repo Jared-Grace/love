@@ -1166,7 +1166,7 @@ export function bible_glyph_chapter_num22() {
           "When",
           "Balak",
           "$ear",
-          "that",
+          "$pointing",
           "$proper_name$Balaam",
           "was",
           "$footprints,",
