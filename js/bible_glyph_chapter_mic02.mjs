@@ -297,7 +297,7 @@ export function bible_glyph_chapter_mic02() {
           "$person+pointing_up",
           "and",
           "$walking,",
-          "for",
+          "$pointing",
           "this",
           "is",
           "$no_entry",
