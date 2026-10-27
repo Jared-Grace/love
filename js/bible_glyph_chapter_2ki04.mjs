@@ -182,7 +182,7 @@ export function bible_glyph_chapter_2ki04() {
           "the",
           "jars",
           "were",
-          "full,",
+          "$battery,",
           "she",
           "$speech",
           "to",
