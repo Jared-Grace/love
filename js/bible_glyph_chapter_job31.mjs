@@ -478,7 +478,7 @@ export function bible_glyph_chapter_job31() {
       {
         verse_number: 23,
         words: [
-          "For",
+          "$pointing",
           "calamity",
           "from",
           "$heart_on_fire",
