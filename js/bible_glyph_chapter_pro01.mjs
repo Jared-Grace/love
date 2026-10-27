@@ -180,7 +180,7 @@ export function bible_glyph_chapter_pro01() {
           "$son,",
           "$traffic_light",
           "sinners",
-          "entice",
+          "$fishing_pole+doing",
           "you,",
           "$no_entry",
           "yield",
