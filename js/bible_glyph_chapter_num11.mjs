@@ -861,7 +861,7 @@ export function bible_glyph_chapter_num11() {
           "remained",
           "in",
           "the",
-          "camp,",
+          "$camp,",
           "one",
           "$name_tag",
           "$proper_name$Eldad",
