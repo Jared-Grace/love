@@ -405,7 +405,7 @@ export function bible_glyph_chapter_num11() {
           "$me",
           "$no_entry",
           "$lifting",
-          "all",
+          "$all",
           "these",
           "$family",
           "by",
