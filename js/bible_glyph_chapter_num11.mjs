@@ -886,7 +886,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "the",
           "$wind",
-          "rested",
+          "$seat+doing",
           "on",
           "them,",
           "and",
