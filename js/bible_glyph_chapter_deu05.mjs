@@ -927,7 +927,7 @@ export function bible_glyph_chapter_deu05() {
           "$mouth",
           "to",
           "you",
-          "all",
+          "$all",
           "the",
           "$scroll",
           "and",
