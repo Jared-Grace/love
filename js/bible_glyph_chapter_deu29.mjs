@@ -440,7 +440,7 @@ export function bible_glyph_chapter_deu29() {
           "$you",
           "yourselves",
           "$lightbulb",
-          "how",
+          "$back+flashlight",
           "we",
           "lived",
           "in",
