@@ -443,7 +443,7 @@ export function bible_glyph_chapter_mal01() {
         words: [
           "But",
           "you",
-          "profane",
+          "$sewing_needle",
           "it",
           "when",
           "you",
