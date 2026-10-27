@@ -494,7 +494,7 @@ export function bible_glyph_chapter_exo40() {
           "$veil",
           "for",
           "the",
-          "screen,",
+          "$umbrella+door,",
           "and",
           "shielded",
           "off",
