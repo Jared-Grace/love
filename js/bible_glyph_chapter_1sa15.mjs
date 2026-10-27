@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_1sa15() {
           "the",
           "$i_am",
           "$hug+doing",
-          "that",
+          "$pointing",
           "He",
           "had",
           "made",
