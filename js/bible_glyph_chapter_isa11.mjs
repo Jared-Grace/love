@@ -510,7 +510,7 @@ export function bible_glyph_chapter_isa11() {
           "sweep",
           "His",
           "$hand",
-          "over",
+          "$pointing_up",
           "the",
           "Euphrates",
           "with",
