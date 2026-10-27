@@ -289,7 +289,7 @@ export function bible_glyph_chapter_exo16() {
           "to",
           "$eating",
           "this",
-          "evening",
+          "$sunset",
           "and",
           "$bread",
           "in",
