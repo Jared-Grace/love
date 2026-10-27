@@ -600,7 +600,7 @@ export function bible_glyph_chapter_exo22() {
       {
         verse_number: 19,
         words: [
-          "Whoever",
+          "$all",
           "lies",
           "with",
           "an",
