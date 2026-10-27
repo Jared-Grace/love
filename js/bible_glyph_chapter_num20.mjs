@@ -546,7 +546,7 @@ export function bible_glyph_chapter_num20() {
           "or",
           "to",
           "the",
-          "left",
+          "$hand+away",
           "until",
           "we",
           "have",
