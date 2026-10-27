@@ -461,7 +461,7 @@ export function bible_glyph_chapter_deu10() {
           "$i_am",
           "and",
           "His",
-          "statutes",
+          "$statute",
           "that",
           "I",
           "am",
