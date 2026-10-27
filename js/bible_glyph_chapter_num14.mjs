@@ -968,7 +968,7 @@ export function bible_glyph_chapter_num14() {
           "$speech",
           "would",
           "become",
-          "plunder,",
+          "$pirate_flag+thing,",
           "and",
           "they",
           "will",
