@@ -745,7 +745,7 @@ export function bible_glyph_chapter_exo33() {
           "with",
           "My",
           "hand",
-          "until",
+          "$finish",
           "I",
           "have",
           "passed",
