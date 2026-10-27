@@ -312,7 +312,7 @@ export function bible_glyph_chapter_exo01() {
           "the",
           "$proper_name$Hebrew",
           "$baby,",
-          "whose",
+          "$back+flashlight",
           "$name_tag",
           "were",
           "$proper_name$Shiphrah",
