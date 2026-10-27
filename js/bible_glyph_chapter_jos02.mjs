@@ -813,7 +813,7 @@ export function bible_glyph_chapter_jos02() {
           "$hand,",
           "they",
           "$speech",
-          "to",
+          "$toward",
           "$i_am+rescue.",
           "Indeed,",
           "all",
