@@ -388,7 +388,7 @@ export function bible_glyph_chapter_ecc03() {
           "$repeat,",
           "I",
           "$eye",
-          "under",
+          "$down_arrow",
           "the",
           "sun",
           "that",
