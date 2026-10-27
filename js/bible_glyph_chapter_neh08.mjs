@@ -218,7 +218,7 @@ export function bible_glyph_chapter_neh08() {
           "the",
           "$i_am,",
           "the",
-          "great",
+          "$top",
           "$heart_on_fire,",
           "and",
           "all",
