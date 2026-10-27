@@ -400,7 +400,7 @@ export function bible_glyph_chapter_2ch06() {
           "$bucket+soap",
           "$five",
           "$triangular_ruler",
-          "long,",
+          "$up_down_arrow,",
           "$five",
           "$triangular_ruler",
           "wide",
