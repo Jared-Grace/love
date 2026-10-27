@@ -144,7 +144,7 @@ export function bible_glyph_chapter_dan01() {
           "in",
           "the",
           "$king",
-          "palace,",
+          "$classical_building,",
           "and",
           "to",
           "teach",
