@@ -188,7 +188,7 @@ export function bible_glyph_chapter_mic04() {
           "him.",
           "$pointing",
           "the",
-          "mouth",
+          "$face_with_open_mouth",
           "of",
           "the",
           "$i_am",
