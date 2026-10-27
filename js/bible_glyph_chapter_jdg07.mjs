@@ -680,7 +680,7 @@ export function bible_glyph_chapter_jdg07() {
           "all",
           "$around",
           "the",
-          "camp",
+          "$camp",
           "and",
           "$speech,",
           "For",
