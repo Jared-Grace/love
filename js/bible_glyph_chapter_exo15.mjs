@@ -627,7 +627,7 @@ export function bible_glyph_chapter_exo15() {
           "$cup_with_straw",
           "the",
           "$water",
-          "because",
+          "$pointing",
           "it",
           "was",
           "bitter.",
