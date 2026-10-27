@@ -621,7 +621,7 @@ export function bible_glyph_chapter_gen45() {
           "also",
           "$hands_giving",
           "them",
-          "provisions",
+          "$backpack+bread",
           "for",
           "their",
           "$road.",
