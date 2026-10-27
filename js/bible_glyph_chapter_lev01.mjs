@@ -394,7 +394,7 @@ export function bible_glyph_chapter_lev01() {
           "$tray_out",
           "a",
           "$dove+ring",
-          "or",
+          "$shuffle",
           "$tray_out",
           "a",
           "$son",
