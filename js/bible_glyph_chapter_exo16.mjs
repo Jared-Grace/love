@@ -116,7 +116,7 @@ export function bible_glyph_chapter_exo16() {
           "to",
           "starve",
           "$flashlight",
-          "whole",
+          "$all",
           "$church",
           "to",
           "$skull+doing.",
