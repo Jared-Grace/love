@@ -232,7 +232,7 @@ export function bible_glyph_chapter_gen13() {
           "Part",
           "from",
           "me.",
-          "If",
+          "$traffic_light",
           "you",
           "go",
           "to",
