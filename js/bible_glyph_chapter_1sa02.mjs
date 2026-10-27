@@ -691,7 +691,7 @@ export function bible_glyph_chapter_1sa02() {
           "$pointing_up+proper_name",
           "was",
           "very",
-          "old,",
+          "$old_man+doing,",
           "and",
           "he",
           "$ear",
