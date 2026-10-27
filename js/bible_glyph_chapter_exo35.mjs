@@ -669,7 +669,7 @@ export function bible_glyph_chapter_exo35() {
           "The",
           "leaders",
           "$footprints",
-          "onyx",
+          "$gem_stone+stone",
           "$stone",
           "and",
           "$stone",
