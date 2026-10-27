@@ -19,7 +19,7 @@ export function bible_glyph_chapter_num10() {
         verse_number: 2,
         words: [
           "$hammer+doing",
-          "two",
+          "$two",
           "trumpets",
           "of",
           "$hammer+doing",
