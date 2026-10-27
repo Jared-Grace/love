@@ -741,7 +741,7 @@ export function bible_glyph_chapter_deu15() {
           "they",
           "would",
           "a",
-          "gazelle",
+          "$deer+sparkles",
           "or",
           "a",
           "deer.",
