@@ -1295,7 +1295,7 @@ export function bible_glyph_chapter_2ki10() {
         words: [
           "And",
           "$i_am+pointing_back",
-          "rested",
+          "$bed+doing",
           "with",
           "his",
           "$father",
