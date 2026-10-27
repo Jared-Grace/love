@@ -45,7 +45,7 @@ export function bible_glyph_chapter_deu32() {
           "speech",
           "$water+right_arrow+doing",
           "like",
-          "dew,",
+          "$dew,",
           "like",
           "gentle",
           "rain",
