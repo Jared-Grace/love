@@ -359,7 +359,7 @@ export function bible_glyph_chapter_pro01() {
           "greedy,",
           "whose",
           "unjust",
-          "gain",
+          "$money_bag+hand_receiving",
           "$hand_receiving",
           "the",
           "$person_other",
