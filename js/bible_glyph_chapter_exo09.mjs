@@ -983,7 +983,7 @@ export function bible_glyph_chapter_exo09() {
           "the",
           "$wheat",
           "and",
-          "spelt",
+          "$barley+razor",
           "were",
           "$no_entry",
           "$fist,",
