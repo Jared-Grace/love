@@ -109,7 +109,7 @@ export function bible_glyph_chapter_ezk47() {
           "the",
           "$man_beard",
           "$walking+tray_out",
-          "eastward",
+          "$compass+right_arrow+thing",
           "with",
           "a",
           "measuring",
