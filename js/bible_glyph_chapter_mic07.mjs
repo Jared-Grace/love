@@ -352,7 +352,7 @@ export function bible_glyph_chapter_mic07() {
           "she",
           "will",
           "be",
-          "trampled",
+          "$foot+person+down_arrow+thing",
           "like",
           "mud",
           "in",
