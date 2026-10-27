@@ -1687,7 +1687,7 @@ export function bible_glyph_chapter_1ki08() {
           "who",
           "took",
           "them",
-          "captive,",
+          "$chains+person+doing,",
           "and",
           "when",
           "they",
