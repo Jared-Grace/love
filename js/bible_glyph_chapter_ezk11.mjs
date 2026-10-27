@@ -175,7 +175,7 @@ export function bible_glyph_chapter_ezk11() {
           "your",
           "$wind,",
           "and",
-          "I",
+          "$me",
           "$lightbulb",
           "them.",
         ],
