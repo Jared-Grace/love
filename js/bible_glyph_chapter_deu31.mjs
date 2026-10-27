@@ -274,7 +274,7 @@ export function bible_glyph_chapter_deu31() {
           "you.",
           "$no_entry",
           "be",
-          "afraid",
+          "$fear+doing",
           "and",
           "$no_entry",
           "be",
