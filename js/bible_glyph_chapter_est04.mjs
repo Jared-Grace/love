@@ -370,7 +370,7 @@ export function bible_glyph_chapter_est04() {
           "if",
           "the",
           "$king",
-          "extends",
+          "$hand+right_arrow+wood",
           "the",
           "gold",
           "scepter",
