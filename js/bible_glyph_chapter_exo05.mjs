@@ -228,7 +228,7 @@ export function bible_glyph_chapter_exo05() {
           "gather",
           "their",
           "own",
-          "straw.",
+          "$wheat+scissors.",
         ],
       },
       {
