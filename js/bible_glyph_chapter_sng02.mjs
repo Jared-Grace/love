@@ -175,7 +175,7 @@ export function bible_glyph_chapter_sng02() {
           "My",
           "$two_hearts",
           "approaches.",
-          "Look,",
+          "$exclamation,",
           "here",
           "he",
           "$footprints,",
