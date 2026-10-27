@@ -528,7 +528,7 @@ export function bible_glyph_chapter_deu09() {
           "their",
           "$name_tag",
           "from",
-          "under",
+          "$down_arrow",
           "$sky.",
           "Then",
           "I",
