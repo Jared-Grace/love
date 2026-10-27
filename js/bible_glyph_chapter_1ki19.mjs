@@ -658,7 +658,7 @@ export function bible_glyph_chapter_1ki19() {
           "$kneeling+leg",
           "have",
           "$no_entry",
-          "bowed",
+          "$leg+down_arrow+doing",
           "to",
           "Baal",
           "and",
