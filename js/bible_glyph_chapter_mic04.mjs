@@ -481,7 +481,7 @@ export function bible_glyph_chapter_mic04() {
           "will",
           "give",
           "you",
-          "horns",
+          "$horn",
           "of",
           "iron",
           "and",
