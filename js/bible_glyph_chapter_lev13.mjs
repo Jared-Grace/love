@@ -336,7 +336,7 @@ export function bible_glyph_chapter_lev13() {
           "When",
           "a",
           "$person",
-          "develops",
+          "$link",
           "a",
           "skin",
           "disease,",
