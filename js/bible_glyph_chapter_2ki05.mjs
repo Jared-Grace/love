@@ -702,7 +702,7 @@ export function bible_glyph_chapter_2ki05() {
           "$bowing",
           "$telescope,",
           "and",
-          "he",
+          "$pointing_back",
           "leans",
           "on",
           "my",
