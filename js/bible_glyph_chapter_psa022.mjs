@@ -570,7 +570,7 @@ export function bible_glyph_chapter_psa022() {
           "$eating+top;",
           "those",
           "who",
-          "seek",
+          "$magnifying_glass+question",
           "the",
           "$i_am",
           "will",
