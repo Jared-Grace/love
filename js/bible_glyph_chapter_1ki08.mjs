@@ -705,7 +705,7 @@ export function bible_glyph_chapter_1ki08() {
           "Then",
           "$peace+proper_name",
           "$person+round_pushpin",
-          "before",
+          "$face",
           "the",
           "$altar",
           "of",
