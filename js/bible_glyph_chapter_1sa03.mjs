@@ -502,7 +502,7 @@ export function bible_glyph_chapter_1sa03() {
           "you?",
           "Do",
           "$no_entry",
-          "hide",
+          "$hand+tray_in+doing",
           "it",
           "$tray_out",
           "me.",
