@@ -785,7 +785,7 @@ export function bible_glyph_chapter_gen21() {
           "I",
           "dug",
           "this",
-          "well.",
+          "$well.",
         ],
       },
       {
