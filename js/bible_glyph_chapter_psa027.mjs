@@ -381,7 +381,7 @@ export function bible_glyph_chapter_psa027() {
           "be",
           "$might+up_arrow",
           "and",
-          "courageous.",
+          "$superhero.",
           "$crossed_fingers+doing",
           "patiently",
           "for",
