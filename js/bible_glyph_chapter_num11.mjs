@@ -465,7 +465,7 @@ export function bible_glyph_chapter_num11() {
           "$fishing_pole+proper_name,",
           "$crowd+doing",
           "Me",
-          "seventy",
+          "$seven+zero",
           "of",
           "the",
           "elders",
