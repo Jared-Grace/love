@@ -431,7 +431,7 @@ export function bible_glyph_chapter_lev21() {
           "he",
           "does",
           "$no_entry",
-          "defile",
+          "$sewing_needle",
           "his",
           "$seed",
           "among",
