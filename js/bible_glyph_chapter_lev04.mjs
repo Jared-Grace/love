@@ -200,7 +200,7 @@ export function bible_glyph_chapter_lev04() {
           "he",
           "shall",
           "remove",
-          "all",
+          "$all",
           "the",
           "fat",
           "$tray_out",
