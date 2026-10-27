@@ -306,7 +306,7 @@ export function bible_glyph_chapter_isa35() {
           "and",
           "$beaming",
           "will",
-          "overtake",
+          "$running+hand_receiving+doing",
           "them,",
           "and",
           "sorrow",
