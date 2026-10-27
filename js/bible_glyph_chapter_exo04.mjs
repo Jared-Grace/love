@@ -649,7 +649,7 @@ export function bible_glyph_chapter_exo04() {
           "$fishing_pole+proper_name",
           "$hand_receiving",
           "the",
-          "staff",
+          "$white_cane",
           "of",
           "$heart_on_fire",
           "in",
