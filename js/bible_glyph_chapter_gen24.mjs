@@ -1762,7 +1762,7 @@ export function bible_glyph_chapter_gen24() {
           "Will",
           "you",
           "$walking",
-          "with",
+          "$linked_paperclips",
           "this",
           "$man_beard?",
           "I",
