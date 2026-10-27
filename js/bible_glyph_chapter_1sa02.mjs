@@ -286,7 +286,7 @@ export function bible_glyph_chapter_1sa02() {
           "shattered;",
           "He",
           "will",
-          "thunder",
+          "$loudspeaker+cloud_with_lightning+doing",
           "against",
           "them",
           "from",
