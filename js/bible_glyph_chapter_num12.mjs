@@ -68,7 +68,7 @@ export function bible_glyph_chapter_num12() {
           "was",
           "a",
           "very",
-          "humble",
+          "$persevering_face+person",
           "$man_beard,",
           "more",
           "so",
