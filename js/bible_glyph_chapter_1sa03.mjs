@@ -32,7 +32,7 @@ export function bible_glyph_chapter_1sa03() {
           "of",
           "the",
           "$i_am",
-          "was",
+          "$link",
           "rare",
           "and",
           "visions",
