@@ -373,7 +373,7 @@ export function bible_glyph_chapter_num12() {
           "in",
           "$disappointed_face",
           "for",
-          "seven",
+          "$seven",
           "$sun?",
           "Let",
           "her",
