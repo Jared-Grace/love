@@ -868,7 +868,7 @@ export function bible_glyph_chapter_ezk03() {
           "$you+exclamation",
           "them,",
           "$pointing",
-          "they",
+          "$pointing_back",
           "are",
           "a",
           "rebellious",
