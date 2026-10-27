@@ -17,7 +17,7 @@ export function bible_glyph_chapter_jer07() {
           "is",
           "the",
           "$speech",
-          "that",
+          "$back+flashlight",
           "came",
           "to",
           "$up_arrow+i_am",
