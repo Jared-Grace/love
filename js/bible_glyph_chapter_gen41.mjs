@@ -1388,7 +1388,7 @@ export function bible_glyph_chapter_gen41() {
           "it",
           "was",
           "beyond",
-          "measure.",
+          "$input_numbers.",
         ],
       },
       {
