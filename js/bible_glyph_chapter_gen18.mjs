@@ -681,7 +681,7 @@ export function bible_glyph_chapter_gen18() {
           "if",
           "there",
           "are",
-          "fifty",
+          "$five+zero",
           "$ruler",
           "in",
           "the",
