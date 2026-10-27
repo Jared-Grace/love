@@ -1247,7 +1247,7 @@ export function bible_glyph_chapter_jer31() {
           "would",
           "$wrestling+heart_on_fire's",
           "$seed",
-          "ever",
+          "$all",
           "$sabbath+doing",
           "to",
           "be",
