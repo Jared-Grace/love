@@ -31,7 +31,7 @@ export function bible_glyph_chapter_lev23() {
           "feasts",
           "of",
           "$i_am",
-          "that",
+          "$back+flashlight",
           "you",
           "are",
           "to",
