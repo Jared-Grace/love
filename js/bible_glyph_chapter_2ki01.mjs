@@ -14,7 +14,7 @@ export function bible_glyph_chapter_2ki01() {
       {
         verse_number: 1,
         words: [
-          "After",
+          "$next_track",
           "the",
           "$skull",
           "of",
