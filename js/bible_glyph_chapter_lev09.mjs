@@ -556,7 +556,7 @@ export function bible_glyph_chapter_lev09() {
           "$footprints",
           "$tent",
           "of",
-          "Meeting.",
+          "$alarm_clock.",
           "When",
           "they",
           "came",
