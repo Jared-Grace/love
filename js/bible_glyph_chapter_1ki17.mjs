@@ -44,7 +44,7 @@ export function bible_glyph_chapter_1ki17() {
           "there",
           "will",
           "be",
-          "neither",
+          "$traffic_light",
           "dew",
           "nor",
           "rain",
