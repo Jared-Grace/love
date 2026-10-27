@@ -145,7 +145,7 @@ export function bible_glyph_chapter_exo21() {
           "want",
           "to",
           "$walking+tray_out",
-          "free,",
+          "$broken_chain+person,",
         ],
       },
       {
