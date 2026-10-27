@@ -108,7 +108,7 @@ export function bible_glyph_chapter_1sa16() {
           "$proper_name$Jesse",
           "to",
           "the",
-          "sacrifice,",
+          "$sacrifice,",
           "and",
           "I",
           "will",
