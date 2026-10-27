@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_num14() {
           "for",
           "your",
           "unfaithfulness",
-          "until",
+          "$finish",
           "the",
           "last",
           "of",
