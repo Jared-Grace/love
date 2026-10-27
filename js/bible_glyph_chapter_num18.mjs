@@ -966,7 +966,7 @@ export function bible_glyph_chapter_num18() {
           "to",
           "you",
           "as",
-          "grain",
+          "$wheat+barley",
           "$tray_out",
           "the",
           "threshing",
