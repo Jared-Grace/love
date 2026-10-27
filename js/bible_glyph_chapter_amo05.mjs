@@ -520,7 +520,7 @@ export function bible_glyph_chapter_amo05() {
       {
         verse_number: 18,
         words: [
-          "Woe",
+          "$weary_face",
           "to",
           "you",
           "who",
