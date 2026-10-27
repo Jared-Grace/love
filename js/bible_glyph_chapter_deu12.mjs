@@ -777,7 +777,7 @@ export function bible_glyph_chapter_deu12() {
           "$eating",
           "the",
           "$blood,",
-          "because",
+          "$pointing",
           "the",
           "$blood",
           "is",
