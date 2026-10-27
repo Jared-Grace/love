@@ -259,7 +259,7 @@ export function bible_glyph_chapter_2ki06() {
           "by",
           "$flashlight",
           "$place,",
-          "for",
+          "$pointing",
           "the",
           "$proper_name$Arameans",
           "are",
