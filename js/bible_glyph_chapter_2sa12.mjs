@@ -427,7 +427,7 @@ export function bible_glyph_chapter_2sa12() {
           "this",
           "thing",
           "before",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire",
           "in",
           "broad",
