@@ -481,7 +481,7 @@ export function bible_glyph_chapter_exo39() {
           "on",
           "the",
           "other",
-          "two",
+          "$two",
           "corners",
           "of",
           "the",
