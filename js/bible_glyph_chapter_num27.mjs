@@ -515,7 +515,7 @@ export function bible_glyph_chapter_num27() {
           "$priest",
           "and",
           "the",
-          "whole",
+          "$all",
           "congregation,",
           "and",
           "commission",
