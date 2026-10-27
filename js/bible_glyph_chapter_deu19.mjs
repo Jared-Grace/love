@@ -116,7 +116,7 @@ export function bible_glyph_chapter_deu19() {
         verse_number: 4,
         words: [
           "Now",
-          "this",
+          "$flashlight",
           "is",
           "the",
           "$speech",
