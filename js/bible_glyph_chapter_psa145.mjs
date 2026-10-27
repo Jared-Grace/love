@@ -175,7 +175,7 @@ export function bible_glyph_chapter_psa145() {
           "$heart_orange+describing",
           "and",
           "$hugging_face+describing,",
-          "slow",
+          "$straight_ruler+clock+describing",
           "to",
           "anger",
           "and",
