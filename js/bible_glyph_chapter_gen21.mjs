@@ -346,7 +346,7 @@ export function bible_glyph_chapter_gen21() {
           "the",
           "shoulders",
           "of",
-          "Hagar,",
+          "$woman+dashing_away+proper_name,",
           "and",
           "sent",
           "her",
