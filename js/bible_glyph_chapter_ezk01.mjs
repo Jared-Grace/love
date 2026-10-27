@@ -644,7 +644,7 @@ export function bible_glyph_chapter_ezk01() {
           "had",
           "$two",
           "wings",
-          "covering",
+          "$coat+doing",
           "its",
           "body.",
         ],
