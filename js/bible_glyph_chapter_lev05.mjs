@@ -293,7 +293,7 @@ export function bible_glyph_chapter_lev05() {
           "base",
           "of",
           "$altar.",
-          "It",
+          "$pointing_back",
           "is",
           "$bow.",
         ],
