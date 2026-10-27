@@ -786,7 +786,7 @@ export function bible_glyph_chapter_lev22() {
           "of",
           "your",
           "$heart_on_fire,",
-          "because",
+          "$pointing",
           "they",
           "are",
           "deformed",
