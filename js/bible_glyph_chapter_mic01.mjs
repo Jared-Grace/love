@@ -457,7 +457,7 @@ export function bible_glyph_chapter_mic01() {
         words: [
           "I",
           "will",
-          "again",
+          "$repeat",
           "$footprints",
           "a",
           "conqueror",
