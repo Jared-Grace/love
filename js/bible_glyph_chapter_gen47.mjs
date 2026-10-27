@@ -499,7 +499,7 @@ export function bible_glyph_chapter_gen47() {
           "before",
           "your",
           "eyes?",
-          "For",
+          "$pointing",
           "our",
           "$silver",
           "has",
