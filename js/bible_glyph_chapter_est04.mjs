@@ -80,7 +80,7 @@ export function bible_glyph_chapter_est04() {
         words: [
           "In",
           "$all",
-          "province",
+          "$map+crown",
           "to",
           "which",
           "the",
