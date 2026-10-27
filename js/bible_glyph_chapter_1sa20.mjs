@@ -1383,7 +1383,7 @@ export function bible_glyph_chapter_1sa20() {
           "the",
           "stone,",
           "$person+pointing_down",
-          "facedown",
+          "$nose+fire",
           "to",
           "the",
           "$earth,",
