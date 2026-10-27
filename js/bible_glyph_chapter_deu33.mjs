@@ -825,7 +825,7 @@ export function bible_glyph_chapter_deu33() {
           "So",
           "$wrestling+heart_on_fire",
           "dwells",
-          "securely.",
+          "$anchor+thing.",
           "The",
           "$eyes",
           "of",
