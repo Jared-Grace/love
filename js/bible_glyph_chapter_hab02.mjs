@@ -96,7 +96,7 @@ export function bible_glyph_chapter_hab02() {
           "$traffic_light",
           "it",
           "lingers,",
-          "wait",
+          "$hourglass+doing",
           "for",
           "it,",
           "since",
