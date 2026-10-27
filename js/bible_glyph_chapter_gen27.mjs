@@ -628,7 +628,7 @@ export function bible_glyph_chapter_gen27() {
           "$no_entry",
           "recognize",
           "him,",
-          "because",
+          "$pointing",
           "his",
           "$hand",
           "were",
