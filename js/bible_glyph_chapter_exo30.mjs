@@ -934,7 +934,7 @@ export function bible_glyph_chapter_exo30() {
       {
         verse_number: 36,
         words: [
-          "Grind",
+          "$clockwise_arrows+dust+doing",
           "$tray_out",
           "some",
           "of",
