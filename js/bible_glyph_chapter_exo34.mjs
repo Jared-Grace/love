@@ -470,7 +470,7 @@ export function bible_glyph_chapter_exo34() {
         words: [
           "Do",
           "not",
-          "make",
+          "$scissors",
           "a",
           "$covenant",
           "with",
