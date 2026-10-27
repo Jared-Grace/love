@@ -1039,7 +1039,7 @@ export function bible_glyph_chapter_exo32() {
           "can",
           "make",
           "atonement",
-          "for",
+          "$back+person",
           "your",
           "$bow.",
         ],
