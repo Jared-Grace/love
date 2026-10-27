@@ -678,7 +678,7 @@ export function bible_glyph_chapter_2ch06() {
           "day",
           "and",
           "$night,",
-          "toward",
+          "$toward",
           "the",
           "$place",
           "where",
