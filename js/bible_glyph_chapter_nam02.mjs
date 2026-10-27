@@ -266,7 +266,7 @@ export function bible_glyph_chapter_nam02() {
           "desolate",
           "and",
           "laid",
-          "waste!",
+          "$zero+doing!",
           "$heart_organ",
           "melt,",
           "knees",
