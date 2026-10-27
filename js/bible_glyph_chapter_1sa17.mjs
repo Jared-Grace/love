@@ -606,7 +606,7 @@ export function bible_glyph_chapter_1sa17() {
         words: [
           "Then",
           "$two_hearts+proper_name",
-          "left",
+          "$hand_with_fingers_splayed+doing",
           "his",
           "supplies",
           "in",
