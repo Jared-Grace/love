@@ -450,7 +450,7 @@ export function bible_glyph_chapter_hab03() {
           "vines,",
           "though",
           "the",
-          "olive",
+          "$olive",
           "crop",
           "$lying_face+doing",
           "and",
