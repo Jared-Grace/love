@@ -331,7 +331,7 @@ export function bible_glyph_chapter_exo23() {
           "$foreigner",
           "may",
           "be",
-          "refreshed.",
+          "$face_exhaling+seat+doing.",
         ],
       },
       {
