@@ -306,7 +306,7 @@ export function bible_glyph_chapter_psa019() {
           "cleansed",
           "of",
           "great",
-          "transgression.",
+          "$black_flag.",
         ],
       },
       {
