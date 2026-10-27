@@ -280,7 +280,7 @@ export function bible_glyph_chapter_deu34() {
           "$wind",
           "of",
           "$wisdom,",
-          "because",
+          "$pointing",
           "$fishing_pole+proper_name",
           "had",
           "laid",
