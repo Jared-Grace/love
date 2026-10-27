@@ -127,7 +127,7 @@ export function bible_glyph_chapter_psa084() {
           "are",
           "$person",
           "whose",
-          "strength",
+          "$mechanical_arm",
           "is",
           "in",
           "You,",
