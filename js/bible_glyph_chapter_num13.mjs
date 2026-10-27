@@ -530,7 +530,7 @@ export function bible_glyph_chapter_num13() {
           "of",
           "Israel",
           "$scissors",
-          "there.",
+          "$telescope.",
         ],
       },
       {
