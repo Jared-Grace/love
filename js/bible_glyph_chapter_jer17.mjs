@@ -156,7 +156,7 @@ export function bible_glyph_chapter_jer17() {
           "the",
           "$might+man_beard",
           "who",
-          "trusts",
+          "$anchor+doing",
           "in",
           "$person,",
           "who",
