@@ -240,7 +240,7 @@ export function bible_glyph_chapter_isa61() {
           "will",
           "have",
           "a",
-          "double",
+          "$two+multiply",
           "portion,",
           "and",
           "instead",
