@@ -31,7 +31,7 @@ export function bible_glyph_chapter_1ki22() {
       {
         verse_number: 2,
         words: [
-          "However,",
+          "$link,",
           "in",
           "the",
           "third",
