@@ -141,7 +141,7 @@ export function bible_glyph_chapter_jdg11() {
           "Ammon",
           "made",
           "$crossed_swords+doing",
-          "with",
+          "$linked_paperclips",
           "them,",
           "the",
           "elders",
