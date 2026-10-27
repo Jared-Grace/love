@@ -317,7 +317,7 @@ export function bible_glyph_chapter_exo39() {
           "And",
           "the",
           "fourth",
-          "row",
+          "$straight_ruler+repeat",
           "had",
           "a",
           "beryl,",
