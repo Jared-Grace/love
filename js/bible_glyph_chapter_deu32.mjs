@@ -264,7 +264,7 @@ export function bible_glyph_chapter_deu32() {
           "in",
           "a",
           "barren,",
-          "howling",
+          "$crying_face+loudspeaker+thing",
           "wilderness;",
           "He",
           "surrounded",
