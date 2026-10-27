@@ -1070,7 +1070,7 @@ export function bible_glyph_chapter_deu32() {
           "wound",
           "and",
           "I",
-          "heal,",
+          "$bandage,",
           "and",
           "there",
           "is",
