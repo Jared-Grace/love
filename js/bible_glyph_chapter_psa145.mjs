@@ -302,7 +302,7 @@ export function bible_glyph_chapter_psa145() {
         words: [
           "The",
           "$i_am",
-          "upholds",
+          "$crutch",
           "all",
           "who",
           "fall,",
