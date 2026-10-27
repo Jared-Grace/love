@@ -956,7 +956,7 @@ export function bible_glyph_chapter_2ch34() {
           "to",
           "$plus+one",
           "$moai,",
-          "that",
+          "$right_arrow+toward",
           "they",
           "might",
           "provoke",
