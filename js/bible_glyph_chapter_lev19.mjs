@@ -541,7 +541,7 @@ export function bible_glyph_chapter_lev19() {
           "$shuffle",
           "given",
           "her",
-          "freedom,",
+          "$broken_chain+person+thing,",
           "there",
           "must",
           "be",
