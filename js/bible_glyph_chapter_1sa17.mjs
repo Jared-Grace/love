@@ -517,7 +517,7 @@ export function bible_glyph_chapter_1sa17() {
       {
         verse_number: 19,
         words: [
-          "They",
+          "$pointing_back",
           "are",
           "with",
           "$proper_name$Saul",
