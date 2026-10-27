@@ -238,7 +238,7 @@ export function bible_glyph_chapter_gen07() {
           "$footprints",
           "to",
           "$proper_name$Noah",
-          "two",
+          "$two",
           "by",
           "two",
           "to",
