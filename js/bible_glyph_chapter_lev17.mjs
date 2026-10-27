@@ -310,7 +310,7 @@ export function bible_glyph_chapter_lev17() {
           "$man_beard",
           "must",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "his",
