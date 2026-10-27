@@ -72,7 +72,7 @@ export function bible_glyph_chapter_psa046() {
           "though",
           "their",
           "$water",
-          "roar",
+          "$crowd+loudspeaker+doing",
           "and",
           "foam",
           "and",
