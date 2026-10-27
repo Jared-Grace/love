@@ -485,7 +485,7 @@ export function bible_glyph_chapter_num11() {
           "them",
           "to",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting",
           "and",
