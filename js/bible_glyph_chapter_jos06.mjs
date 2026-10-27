@@ -359,7 +359,7 @@ export function bible_glyph_chapter_jos06() {
           "the",
           "$i_am",
           "carried",
-          "around",
+          "$around+doing",
           "the",
           "$city,",
           "circling",
