@@ -293,7 +293,7 @@ export function bible_glyph_chapter_zep01() {
           "the",
           "$door+down_arrow,",
           "who",
-          "fill",
+          "$battery",
           "the",
           "$house",
           "of",
