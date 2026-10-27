@@ -42,7 +42,7 @@ export function bible_glyph_chapter_2ki05() {
           "$i_am",
           "had",
           "$hands_giving",
-          "victory",
+          "$rescue+thing",
           "to",
           "$proper_name$Aram.",
           "And",
