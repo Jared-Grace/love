@@ -486,7 +486,7 @@ export function bible_glyph_chapter_gen50() {
           "I",
           "beg",
           "you,",
-          "please",
+          "$pleading",
           "$lifting",
           "the",
           "transgression",
