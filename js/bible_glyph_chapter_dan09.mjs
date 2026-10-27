@@ -605,7 +605,7 @@ export function bible_glyph_chapter_dan09() {
           "the",
           "$hands_praying+thing",
           "and",
-          "petitions",
+          "$heart_orange+hands_praying",
           "of",
           "Your",
           "$kneeling.",
