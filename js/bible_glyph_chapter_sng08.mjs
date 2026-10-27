@@ -203,7 +203,7 @@ export function bible_glyph_chapter_sng08() {
           "$multiply",
           "$water",
           "$no_entry",
-          "quench",
+          "$fire+no_entry+doing",
           "$heart_red;",
           "rivers",
           "$no_entry",
