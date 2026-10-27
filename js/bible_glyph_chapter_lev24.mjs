@@ -497,7 +497,7 @@ export function bible_glyph_chapter_lev24() {
           "to",
           "his",
           "neighbor,",
-          "whatever",
+          "$back+flashlight",
           "he",
           "has",
           "$hammer+doing",
