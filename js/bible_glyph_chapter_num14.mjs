@@ -803,7 +803,7 @@ export function bible_glyph_chapter_num14() {
           "valleys,",
           "turn",
           "back",
-          "tomorrow",
+          "$sun+next_track",
           "and",
           "head",
           "for",
