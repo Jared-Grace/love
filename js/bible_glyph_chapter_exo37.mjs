@@ -572,7 +572,7 @@ export function bible_glyph_chapter_exo37() {
           "and",
           "branches",
           "$link",
-          "all",
+          "$all",
           "$tray_out",
           "one",
           "piece",
