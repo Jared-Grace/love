@@ -230,7 +230,7 @@ export function bible_glyph_chapter_gen44() {
           "we",
           "$ninja+doing",
           "$silver",
-          "or",
+          "$shuffle",
           "$gold",
           "from",
           "the",
