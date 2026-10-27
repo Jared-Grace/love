@@ -353,7 +353,7 @@ export function bible_glyph_chapter_num15() {
           "as",
           "a",
           "pleasing",
-          "aroma",
+          "$nose",
           "to",
           "$i_am.",
         ],
