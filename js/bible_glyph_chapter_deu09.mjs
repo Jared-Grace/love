@@ -63,7 +63,7 @@ export function bible_glyph_chapter_deu09() {
           "about",
           "them,",
           "and",
-          "you",
+          "$you",
           "have",
           "$ear",
           "it",
