@@ -1204,7 +1204,7 @@ export function bible_glyph_chapter_lev23() {
           "the",
           "branches",
           "of",
-          "palm",
+          "$palm_tree",
           "trees,",
           "the",
           "boughs",
