@@ -957,7 +957,7 @@ export function bible_glyph_chapter_num16() {
           "had",
           "finished",
           "$mouth",
-          "all",
+          "$all",
           "these",
           "$speech,",
           "the",
