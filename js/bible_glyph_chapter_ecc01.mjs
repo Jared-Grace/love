@@ -89,7 +89,7 @@ export function bible_glyph_chapter_ecc01() {
           "$sun+up_arrow+doing",
           "and",
           "the",
-          "sun",
+          "$sun_with_face",
           "$footprints;",
           "it",
           "hurries",
