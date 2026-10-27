@@ -95,7 +95,7 @@ export function bible_glyph_chapter_deu14() {
           "are",
           "the",
           "animals",
-          "that",
+          "$back+flashlight",
           "you",
           "may",
           "$eating:",
