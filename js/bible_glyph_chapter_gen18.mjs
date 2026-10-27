@@ -639,7 +639,7 @@ export function bible_glyph_chapter_gen18() {
           "the",
           "two",
           "men",
-          "turned",
+          "$curving_right+doing",
           "away",
           "and",
           "$walking",
