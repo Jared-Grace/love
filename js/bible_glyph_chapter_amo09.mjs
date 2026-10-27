@@ -77,7 +77,7 @@ export function bible_glyph_chapter_amo09() {
           "$hole+pick+doing",
           "down",
           "to",
-          "Sheol,",
+          "$pointing_down+skull,",
           "from",
           "there",
           "My",
