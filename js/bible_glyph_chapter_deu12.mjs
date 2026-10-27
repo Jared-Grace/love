@@ -350,7 +350,7 @@ export function bible_glyph_chapter_deu12() {
           "to",
           "$footprints",
           "everything",
-          "I",
+          "$me",
           "command",
           "you:",
           "your",
