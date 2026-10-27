@@ -278,7 +278,7 @@ export function bible_glyph_chapter_mal01() {
           "the",
           "$manual_wheelchair",
           "and",
-          "sick",
+          "$thermometer_face+doing",
           "ones,",
           "is",
           "it",
