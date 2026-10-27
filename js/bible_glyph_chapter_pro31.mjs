@@ -41,7 +41,7 @@ export function bible_glyph_chapter_pro31() {
           "son",
           "of",
           "my",
-          "womb?",
+          "$baby+house?",
           "What,",
           "O",
           "son",
