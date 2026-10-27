@@ -1238,7 +1238,7 @@ export function bible_glyph_chapter_1sa17() {
           "of",
           "his",
           "$person+sheep",
-          "bag.",
+          "$toolbox.",
           "And",
           "with",
           "his",
