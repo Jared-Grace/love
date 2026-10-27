@@ -919,7 +919,7 @@ export function bible_glyph_chapter_1sa25() {
         words: [
           "$watch",
           "let",
-          "this",
+          "$flashlight",
           "gift",
           "your",
           "servant",
