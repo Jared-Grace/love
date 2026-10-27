@@ -21,7 +21,7 @@ export function bible_glyph_chapter_jer17() {
           "with",
           "an",
           "iron",
-          "stylus,",
+          "$writing_hand+sewing_needle,",
           "engraved",
           "with",
           "a",
