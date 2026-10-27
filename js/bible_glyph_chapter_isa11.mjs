@@ -318,7 +318,7 @@ export function bible_glyph_chapter_isa11() {
           "$person+round_pushpin",
           "as",
           "a",
-          "banner",
+          "$triangular_flag+up_arrow",
           "for",
           "the",
           "$family,",
