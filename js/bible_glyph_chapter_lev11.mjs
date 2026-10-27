@@ -577,7 +577,7 @@ export function bible_glyph_chapter_lev11() {
           "the",
           "$cow_face+clockwise_arrows+thing",
           "is",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "you;",
           "whoever",
