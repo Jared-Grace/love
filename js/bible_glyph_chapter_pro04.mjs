@@ -461,7 +461,7 @@ export function bible_glyph_chapter_pro04() {
           "with",
           "all",
           "$guard+thing,",
-          "for",
+          "$pointing",
           "from",
           "it",
           "$tray_out",
