@@ -297,7 +297,7 @@ export function bible_glyph_chapter_job23() {
       {
         verse_number: 15,
         words: [
-          "Therefore",
+          "$pointing_up",
           "I",
           "am",
           "terrified",
