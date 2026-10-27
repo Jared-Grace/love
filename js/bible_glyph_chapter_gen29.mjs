@@ -555,7 +555,7 @@ export function bible_glyph_chapter_gen29() {
           "$speech",
           "to",
           "$proper_name$Laban,",
-          "Grant",
+          "$hands_giving+up_arrow",
           "me",
           "my",
           "$woman,",
