@@ -407,7 +407,7 @@ export function bible_glyph_chapter_1sa16() {
           "and",
           "a",
           "$thumbs_up",
-          "appearance.",
+          "$eyes+thing.",
           "And",
           "the",
           "$i_am",
