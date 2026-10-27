@@ -515,7 +515,7 @@ export function bible_glyph_chapter_gen18() {
           "surely",
           "become",
           "a",
-          "great",
+          "$top",
           "and",
           "powerful",
           "$map,",
