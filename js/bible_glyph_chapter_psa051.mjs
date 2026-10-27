@@ -387,7 +387,7 @@ export function bible_glyph_chapter_psa051() {
           "You",
           "will",
           "$no_entry",
-          "despise.",
+          "$unamused_face+doing.",
         ],
       },
       {
