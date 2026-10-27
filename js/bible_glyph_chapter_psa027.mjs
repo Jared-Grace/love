@@ -240,7 +240,7 @@ export function bible_glyph_chapter_psa027() {
           "His",
           "$face.",
           "Your",
-          "face,",
+          "$face,",
           "O",
           "$i_am,",
           "I",
