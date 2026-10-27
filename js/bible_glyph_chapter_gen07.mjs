@@ -48,7 +48,7 @@ export function bible_glyph_chapter_gen07() {
           "$hand_receiving",
           "with",
           "you",
-          "seven",
+          "$seven",
           "pairs",
           "of",
           "every",
