@@ -555,7 +555,7 @@ export function bible_glyph_chapter_deu28() {
           "$basket+thread",
           "and",
           "your",
-          "kneading",
+          "$bread+bucket",
           "bowl",
           "will",
           "be",
