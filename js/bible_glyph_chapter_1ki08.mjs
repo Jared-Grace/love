@@ -720,7 +720,7 @@ export function bible_glyph_chapter_1ki08() {
           "of",
           "$wrestling+heart_on_fire",
           "and",
-          "spread",
+          "$folding_hand_fan",
           "out",
           "his",
           "hands",
