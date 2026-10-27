@@ -830,7 +830,7 @@ export function bible_glyph_chapter_num06() {
           "of",
           "Israel,",
           "and",
-          "I",
+          "$me",
           "will",
           "$speech+thumbs_up",
           "them.",
