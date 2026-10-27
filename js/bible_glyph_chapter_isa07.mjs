@@ -157,7 +157,7 @@ export function bible_glyph_chapter_isa07() {
           "Do",
           "$no_entry",
           "be",
-          "afraid",
+          "$fear+doing",
           "or",
           "$heart_organ",
           "over",
