@@ -177,7 +177,7 @@ export function bible_glyph_chapter_zec09() {
           "$scissors",
           "off",
           "the",
-          "pride",
+          "$peacock",
           "of",
           "the",
           "$proper_name$Philistines.",
