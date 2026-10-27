@@ -772,7 +772,7 @@ export function bible_glyph_chapter_isa49() {
           "carry",
           "your",
           "daughters",
-          "on",
+          "$pointing_up",
           "their",
           "shoulders.",
         ],
