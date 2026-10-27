@@ -329,7 +329,7 @@ export function bible_glyph_chapter_psa116() {
           "of",
           "thanksgiving",
           "and",
-          "call",
+          "$waving_hand",
           "on",
           "the",
           "$name_tag",
