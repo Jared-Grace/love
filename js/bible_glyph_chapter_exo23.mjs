@@ -525,7 +525,7 @@ export function bible_glyph_chapter_exo23() {
           "My",
           "$party_popper",
           "$night+doing",
-          "until",
+          "$finish",
           "$morning.",
         ],
       },
