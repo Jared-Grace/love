@@ -925,7 +925,7 @@ export function bible_glyph_chapter_gen31() {
           "household",
           "figures",
           "and",
-          "put",
+          "$palm_down",
           "them",
           "in",
           "the",
