@@ -417,7 +417,7 @@ export function bible_glyph_chapter_jos24() {
           "own",
           "$sword",
           "or",
-          "bow.",
+          "$bow+wood.",
         ],
       },
       {
