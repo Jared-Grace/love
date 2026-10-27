@@ -762,7 +762,7 @@ export function bible_glyph_chapter_deu11() {
           "will",
           "drive",
           "out",
-          "all",
+          "$all",
           "these",
           "$map",
           "before",
