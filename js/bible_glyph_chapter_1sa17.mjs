@@ -174,7 +174,7 @@ export function bible_glyph_chapter_1sa17() {
           "like",
           "a",
           "weaver's",
-          "beam,",
+          "$thread+wood,",
           "and",
           "its",
           "iron",
