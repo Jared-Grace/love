@@ -275,7 +275,7 @@ export function bible_glyph_chapter_2sa12() {
           "and",
           "$hands_raised+proper_name,",
           "and",
-          "if",
+          "$traffic_light",
           "that",
           "was",
           "not",
