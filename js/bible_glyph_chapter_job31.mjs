@@ -521,7 +521,7 @@ export function bible_glyph_chapter_job31() {
           "in",
           "my",
           "great",
-          "wealth",
+          "$raised_fist",
           "because",
           "my",
           "$hand",
