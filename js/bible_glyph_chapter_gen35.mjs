@@ -674,7 +674,7 @@ export function bible_glyph_chapter_gen35() {
           "$proper_name$Gad",
           "and",
           "$proper_name$Asher.",
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "$son",
