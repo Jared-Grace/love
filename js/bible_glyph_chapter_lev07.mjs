@@ -296,7 +296,7 @@ export function bible_glyph_chapter_lev07() {
           "wafers",
           "$oil+doing",
           "with",
-          "oil,",
+          "$lotion_bottle,",
           "and",
           "$bagel",
           "$flour",
