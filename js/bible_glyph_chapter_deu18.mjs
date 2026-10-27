@@ -20,7 +20,7 @@ export function bible_glyph_chapter_deu18() {
           "$priest,",
           "indeed",
           "the",
-          "whole",
+          "$all",
           "tribe",
           "of",
           "$handshake+proper_name,",
