@@ -54,7 +54,7 @@ export function bible_glyph_chapter_jos01() {
           "these",
           "$family,",
           "and",
-          "cross",
+          "$bridge",
           "over",
           "the",
           "$pointing_down+proper_name",
