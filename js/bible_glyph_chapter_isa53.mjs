@@ -421,7 +421,7 @@ export function bible_glyph_chapter_isa53() {
           "with",
           "the",
           "strong,",
-          "because",
+          "$down_arrow",
           "He",
           "has",
           "poured",
