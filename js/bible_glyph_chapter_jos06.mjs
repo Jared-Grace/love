@@ -531,7 +531,7 @@ export function bible_glyph_chapter_jos06() {
           "$speech",
           "the",
           "$family,",
-          "Shout!",
+          "$public_address!",
           "For",
           "the",
           "$i_am",
