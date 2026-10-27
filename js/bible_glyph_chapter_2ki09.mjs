@@ -40,7 +40,7 @@ export function bible_glyph_chapter_2ki09() {
           "your",
           "belt,",
           "$hand_receiving",
-          "this",
+          "$flashlight",
           "$amphora+droplet",
           "of",
           "$lotion_bottle",
