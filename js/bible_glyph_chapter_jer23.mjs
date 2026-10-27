@@ -457,7 +457,7 @@ export function bible_glyph_chapter_jer23() {
           "$year",
           "of",
           "their",
-          "punishment,",
+          "$clipboard+thing,",
           "declares",
           "the",
           "$i_am.",
