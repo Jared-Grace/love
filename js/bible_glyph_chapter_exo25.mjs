@@ -798,7 +798,7 @@ export function bible_glyph_chapter_exo25() {
       {
         verse_number: 33,
         words: [
-          "Three",
+          "$three",
           "cups",
           "shaped",
           "like",
