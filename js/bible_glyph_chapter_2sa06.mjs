@@ -709,7 +709,7 @@ export function bible_glyph_chapter_2sa06() {
           "He",
           "appointed",
           "me",
-          "ruler",
+          "$first_place+person",
           "over",
           "$wrestling+heart_on_fire,",
           "the",
