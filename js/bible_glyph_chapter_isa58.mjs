@@ -144,7 +144,7 @@ export function bible_glyph_chapter_isa58() {
           "strife,",
           "to",
           "$fist",
-          "viciously",
+          "$thumbs_down+person+thing",
           "with",
           "your",
           "$fist+locked.",
