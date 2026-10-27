@@ -858,7 +858,7 @@ export function bible_glyph_chapter_jos24() {
         verse_number: 26,
         words: [
           "$i_am+rescue",
-          "recorded",
+          "$writing_hand",
           "these",
           "$speech",
           "in",
