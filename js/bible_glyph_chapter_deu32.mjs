@@ -761,7 +761,7 @@ export function bible_glyph_chapter_deu32() {
           "lest",
           "their",
           "adversaries",
-          "misunderstand",
+          "$detective",
           "and",
           "$speech,",
           "Our",
