@@ -237,7 +237,7 @@ export function bible_glyph_chapter_exo27() {
           "$thread+white_circle,",
           "a",
           "$input_numbers+all",
-          "cubits",
+          "$triangular_ruler",
           "long",
           "on",
           "one",
