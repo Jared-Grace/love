@@ -543,7 +543,7 @@ export function bible_glyph_chapter_gen27() {
           "find",
           "it",
           "so",
-          "quickly,",
+          "$fast_forward+doing,",
           "my",
           '$son?"',
           '"Because',
