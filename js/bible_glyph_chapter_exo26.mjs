@@ -847,7 +847,7 @@ export function bible_glyph_chapter_exo26() {
           "place",
           "the",
           "table",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$veil,",
           "and",
