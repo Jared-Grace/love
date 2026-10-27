@@ -852,7 +852,7 @@ export function bible_glyph_chapter_lev23() {
           "he",
           "must",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "his",
