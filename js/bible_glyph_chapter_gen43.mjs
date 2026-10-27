@@ -795,7 +795,7 @@ export function bible_glyph_chapter_gen43() {
           "$i_am+plus",
           "$footprints",
           "at",
-          "noon,",
+          "$sun+top,",
           "since",
           "they",
           "had",
