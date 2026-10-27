@@ -669,7 +669,7 @@ export function bible_glyph_chapter_deu04() {
           "do",
           "not",
           "be",
-          "enticed",
+          "$leftwards_pushing_hand",
           "to",
           "$bowing",
           "down",
