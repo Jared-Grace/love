@@ -701,7 +701,7 @@ export function bible_glyph_chapter_2ch06() {
           "$kneeling",
           "$hands_praying",
           "$toward",
-          "this",
+          "$flashlight",
           "$place.",
         ],
       },
