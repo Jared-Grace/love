@@ -407,7 +407,7 @@ export function bible_glyph_chapter_sng02() {
           "beloved,",
           "and",
           "be",
-          "like",
+          "$likeness+doing",
           "a",
           "gazelle",
           "or",
