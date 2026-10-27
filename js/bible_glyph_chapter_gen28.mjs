@@ -465,7 +465,7 @@ export function bible_glyph_chapter_gen28() {
           "$guard",
           "over",
           "you",
-          "wherever",
+          "$all",
           "you",
           "$walking,",
           "and",
