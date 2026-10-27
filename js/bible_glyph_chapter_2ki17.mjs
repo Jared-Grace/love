@@ -631,7 +631,7 @@ export function bible_glyph_chapter_2ki17() {
           "$face.",
           "$no_entry",
           "one",
-          "remained",
+          "$puzzle_piece+doing",
           "except",
           "the",
           "tribe",
