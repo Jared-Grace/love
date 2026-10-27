@@ -1463,7 +1463,7 @@ export function bible_glyph_chapter_deu28() {
           "in",
           "all",
           "your",
-          "abundance,",
+          "$multiply+thing,",
         ],
       },
       {
