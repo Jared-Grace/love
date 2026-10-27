@@ -529,7 +529,7 @@ export function bible_glyph_chapter_lam04() {
           "our",
           "streets.",
           "Our",
-          "end",
+          "$stop_sign",
           "drew",
           "$magnet+doing;",
           "our",
