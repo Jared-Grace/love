@@ -28,7 +28,7 @@ export function bible_glyph_chapter_gen17() {
           "him",
           "and",
           "$speech,",
-          '"I',
+          '"$me',
           "am",
           "$heart_on_fire",
           "$might.",
