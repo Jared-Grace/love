@@ -895,7 +895,7 @@ export function bible_glyph_chapter_exo25() {
           "it,",
           "for",
           "the",
-          "six",
+          "$six",
           "branches",
           "coming",
           "$tray_out",
