@@ -962,7 +962,7 @@ export function bible_glyph_chapter_exo32() {
           "that",
           "$sun",
           "about",
-          "three",
+          "$three",
           "thousand",
           "$tray_out",
           "the",
