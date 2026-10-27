@@ -318,7 +318,7 @@ export function bible_glyph_chapter_gen43() {
           "$speech",
           "to",
           "them,",
-          "If",
+          "$traffic_light",
           "it",
           "must",
           "be",
