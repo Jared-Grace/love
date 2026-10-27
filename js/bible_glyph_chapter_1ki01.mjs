@@ -1284,7 +1284,7 @@ export function bible_glyph_chapter_1ki01() {
           "the",
           "$earth",
           "was",
-          "split",
+          "$carpentry_saw",
           "by",
           "the",
           "$voice.",
