@@ -150,7 +150,7 @@ export function bible_glyph_chapter_jer01() {
       {
         verse_number: 6,
         words: [
-          "Ah,",
+          "$crying_face+speech,",
           "$crown",
           "$i_am,",
           "I",
