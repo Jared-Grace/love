@@ -110,7 +110,7 @@ export function bible_glyph_chapter_job01() {
           "to",
           "$eating",
           "and",
-          "drink",
+          "$cup_with_straw",
           "with",
           "them.",
         ],
