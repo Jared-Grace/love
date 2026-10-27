@@ -444,7 +444,7 @@ export function bible_glyph_chapter_gen16() {
           "$well",
           "was",
           "called",
-          "Beer-lahai-roi.",
+          "$well+sprout+eyes+doer+proper_name.",
           "It",
           "is",
           "between",
