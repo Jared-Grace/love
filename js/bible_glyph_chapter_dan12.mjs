@@ -38,7 +38,7 @@ export function bible_glyph_chapter_dan12() {
           "a",
           "$clock",
           "of",
-          "distress",
+          "$clamp",
           "the",
           "likes",
           "of",
