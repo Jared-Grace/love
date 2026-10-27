@@ -53,7 +53,7 @@ export function bible_glyph_chapter_num12() {
           "$mouth",
           "through",
           "us",
-          "also?",
+          "$plus?",
           "And",
           "$i_am",
           "$ear",
