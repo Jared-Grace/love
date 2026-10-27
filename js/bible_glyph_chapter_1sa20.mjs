@@ -301,7 +301,7 @@ export function bible_glyph_chapter_1sa20() {
           "into",
           "a",
           "$covenant",
-          "with",
+          "$linked_paperclips",
           "you",
           "before",
           "the",
