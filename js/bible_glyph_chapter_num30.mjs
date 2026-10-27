@@ -520,7 +520,7 @@ export function bible_glyph_chapter_num30() {
       {
         verse_number: 16,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "statutes",
