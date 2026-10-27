@@ -193,7 +193,7 @@ export function bible_glyph_chapter_exo34() {
           "is",
           "$hugging_face+describing",
           "and",
-          "gracious,",
+          "$heart_orange+describing,",
           "slow",
           "to",
           "anger,",
