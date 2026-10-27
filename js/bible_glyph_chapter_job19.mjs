@@ -342,7 +342,7 @@ export function bible_glyph_chapter_job19() {
       {
         verse_number: 19,
         words: [
-          "All",
+          "$all",
           "my",
           "best",
           "friends",
