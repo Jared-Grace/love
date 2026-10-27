@@ -143,7 +143,7 @@ export function bible_glyph_chapter_zep01() {
           "$scissors",
           "off",
           "$tray_out",
-          "this",
+          "$flashlight",
           "$place",
           "every",
           "remnant",
