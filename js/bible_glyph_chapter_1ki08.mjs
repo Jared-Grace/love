@@ -1273,7 +1273,7 @@ export function bible_glyph_chapter_1ki08() {
           "the",
           "$earth,",
           "or",
-          "blight",
+          "$wilted_flower+wind",
           "or",
           "mildew",
           "or",
