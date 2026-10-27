@@ -85,7 +85,7 @@ export function bible_glyph_chapter_jdg04() {
           "$pointing_back",
           "had",
           "harshly",
-          "oppressed",
+          "$clamp+weary_face+doing",
           "the",
           "Israelites",
           "for",
