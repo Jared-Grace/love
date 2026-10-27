@@ -399,7 +399,7 @@ export function bible_glyph_chapter_gen06() {
         verse_number: 15,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "is",
           "how",
           "you",
