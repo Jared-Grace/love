@@ -355,7 +355,7 @@ export function bible_glyph_chapter_num23() {
           "$palm_down",
           "in",
           "my",
-          "mouth?",
+          "$face_with_open_mouth?",
         ],
       },
       {
