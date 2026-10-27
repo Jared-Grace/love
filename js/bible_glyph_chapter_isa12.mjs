@@ -161,7 +161,7 @@ export function bible_glyph_chapter_isa12() {
           "of",
           "$proper_name$Zion,",
           "$pointing",
-          "great",
+          "$top",
           "among",
           "you",
           "is",
