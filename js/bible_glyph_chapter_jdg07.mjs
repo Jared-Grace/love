@@ -741,7 +741,7 @@ export function bible_glyph_chapter_jdg07() {
         words: [
           "The",
           "$three",
-          "companies",
+          "$person_gesturing_ok",
           "$trumpet+doing",
           "their",
           "horns",
