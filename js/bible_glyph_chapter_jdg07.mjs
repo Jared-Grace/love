@@ -63,7 +63,7 @@ export function bible_glyph_chapter_jdg07() {
           "You",
           "have",
           "too",
-          "many",
+          "$multiply",
           "$family",
           "for",
           "Me",
