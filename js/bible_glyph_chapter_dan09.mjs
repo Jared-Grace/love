@@ -52,7 +52,7 @@ export function bible_glyph_chapter_dan09() {
           "$castle+doing,",
           "$me,",
           "$proper_name$Daniel,",
-          "understood",
+          "$brain",
           "from",
           "the",
           "sacred",
