@@ -398,7 +398,7 @@ export function bible_glyph_chapter_isa02() {
           "cedars",
           "of",
           "$proper_name$Lebanon,",
-          "lofty",
+          "$up_arrow",
           "and",
           "lifted",
           "up,",
