@@ -450,7 +450,7 @@ export function bible_glyph_chapter_job42() {
           "to",
           "the",
           "fourth",
-          "generation.",
+          "$dna.",
         ],
       },
       {
