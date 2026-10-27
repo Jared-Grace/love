@@ -604,7 +604,7 @@ export function bible_glyph_chapter_jdg11() {
           "territory",
           "of",
           "$father+proper_name,",
-          "since",
+          "$pointing",
           "the",
           "$proper_name$Arnon",
           "was",
