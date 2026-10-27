@@ -223,7 +223,7 @@ export function bible_glyph_chapter_2sa06() {
           "he",
           "$skull+doing",
           "there",
-          "beside",
+          "$linked_paperclips",
           "the",
           "ark",
           "of",
