@@ -649,7 +649,7 @@ export function bible_glyph_chapter_jdg04() {
           "there",
           "a",
           "$man_beard",
-          "here?",
+          "$flashlight+round_pushpin?",
           "$speech,",
           "No.",
         ],
