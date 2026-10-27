@@ -718,7 +718,7 @@ export function bible_glyph_chapter_isa07() {
           "$footprints",
           "there",
           "with",
-          "bow",
+          "$bow+wood",
           "and",
           "$arrow,",
           "for",
