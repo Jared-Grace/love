@@ -210,7 +210,7 @@ export function bible_glyph_chapter_exo05() {
           "You",
           "shall",
           "$no_entry",
-          "longer",
+          "$plus+doing",
           "$hands_giving",
           "straw",
           "to",
