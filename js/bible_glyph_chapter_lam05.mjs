@@ -129,7 +129,7 @@ export function bible_glyph_chapter_lam05() {
         verse_number: 8,
         words: [
           "$kneeling",
-          "rule",
+          "$joystick",
           "over",
           "us;",
           "there",
