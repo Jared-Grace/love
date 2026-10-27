@@ -72,7 +72,7 @@ export function bible_glyph_chapter_deu32() {
           "the",
           "$i_am.",
           "$hands_giving+up_arrow",
-          "greatness",
+          "$top+thing",
           "to",
           "our",
           "$heart_on_fire!",
