@@ -63,7 +63,7 @@ export function bible_glyph_chapter_deu18() {
           "$i_am",
           "is",
           "their",
-          "inheritance,",
+          "$inheritance,",
           "as",
           "He",
           "$mouth",
