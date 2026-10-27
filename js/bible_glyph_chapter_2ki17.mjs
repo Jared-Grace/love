@@ -372,7 +372,7 @@ export function bible_glyph_chapter_2ki17() {
           "$hammer+doing",
           "$thumbs_down",
           "$speech,",
-          "provoking",
+          "$face_steam+right_anger_bubble",
           "the",
           "$i_am",
           "to",
