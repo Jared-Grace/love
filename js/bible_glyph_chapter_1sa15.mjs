@@ -763,7 +763,7 @@ export function bible_glyph_chapter_1sa15() {
           "the",
           "$bow",
           "of",
-          "divination,",
+          "$crystal_ball,",
           "and",
           "arrogance",
           "is",
