@@ -463,7 +463,7 @@ export function bible_glyph_chapter_hab03() {
           "the",
           "$sheep",
           "are",
-          "cut",
+          "$axe+divide+doing",
           "off",
           "from",
           "the",
