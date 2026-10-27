@@ -1526,7 +1526,7 @@ export function bible_glyph_chapter_deu04() {
           "could",
           "$running+dashing_away",
           "to",
-          "one",
+          "$one",
           "$tray_out",
           "these",
           "$city.",
