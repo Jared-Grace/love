@@ -169,7 +169,7 @@ export function bible_glyph_chapter_1ki20() {
           "$traffic_light",
           "this",
           "$clock",
-          "tomorrow",
+          "$sun+next_track",
           "I",
           "will",
           "$hand_sending",
