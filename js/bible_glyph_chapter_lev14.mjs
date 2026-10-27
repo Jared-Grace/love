@@ -1836,7 +1836,7 @@ export function bible_glyph_chapter_lev14() {
           "$microbe+hair+down_arrow,",
           "or",
           "a",
-          "spot,",
+          "$white_circle+round_pushpin,",
         ],
       },
       {
