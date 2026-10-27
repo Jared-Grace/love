@@ -970,7 +970,7 @@ export function bible_glyph_chapter_2ch06() {
           "may",
           "You",
           "$hands_giving",
-          "rain",
+          "$rain",
           "on",
           "the",
           "$earth",
