@@ -1334,7 +1334,7 @@ export function bible_glyph_chapter_lev26() {
           "penalty",
           "for",
           "their",
-          "iniquity,",
+          "$cyclone,",
           "because",
           "they",
           "rejected",
