@@ -30,7 +30,7 @@ export function bible_glyph_chapter_exo21() {
       {
         verse_number: 2,
         words: [
-          "If",
+          "$pointing",
           "you",
           "buy",
           "a",
