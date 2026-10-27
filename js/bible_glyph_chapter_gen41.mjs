@@ -1185,7 +1185,7 @@ export function bible_glyph_chapter_gen41() {
           "in",
           "his",
           "second",
-          "chariot,",
+          "$chariot,",
           "with",
           "men",
           "calling",
