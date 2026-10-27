@@ -302,7 +302,7 @@ export function bible_glyph_chapter_lam01() {
           "have",
           "$eye",
           "her",
-          "nakedness;",
+          "$face_with_peeking_eye;",
           "she",
           "herself",
           "groans",
