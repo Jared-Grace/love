@@ -495,7 +495,7 @@ export function bible_glyph_chapter_gen31() {
           "$sheep,",
           "and",
           "$proper_name$Rachel",
-          "stole",
+          "$ninja+doing",
           "the",
           "household",
           "figures",
