@@ -404,7 +404,7 @@ export function bible_glyph_chapter_deu15() {
           "$proper_name$Hebrew,",
           "a",
           "man",
-          "or",
+          "$shuffle",
           "a",
           "woman,",
           "is",
