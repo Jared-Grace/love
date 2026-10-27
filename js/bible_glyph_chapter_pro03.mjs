@@ -555,7 +555,7 @@ export function bible_glyph_chapter_pro03() {
           "neighbor,",
           "$walking",
           "$turn_back",
-          "tomorrow",
+          "$sun+next_track",
           "and",
           "I",
           "will",
