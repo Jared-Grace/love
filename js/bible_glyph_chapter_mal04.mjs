@@ -170,7 +170,7 @@ export function bible_glyph_chapter_mal04() {
           "$footprints",
           "of",
           "the",
-          "great",
+          "$top",
           "and",
           "awesome",
           "$sun",
