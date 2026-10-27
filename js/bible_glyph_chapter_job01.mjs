@@ -292,7 +292,7 @@ export function bible_glyph_chapter_job01() {
           "$house",
           "and",
           "$all",
-          "that",
+          "$back+flashlight",
           "he",
           "owns",
           "on",
