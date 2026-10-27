@@ -22,7 +22,7 @@ export function bible_glyph_chapter_exo21() {
           "you",
           "are",
           "to",
-          "set",
+          "$palm_down",
           "before",
           "them.",
         ],
