@@ -925,7 +925,7 @@ export function bible_glyph_chapter_num21() {
           "out",
           "the",
           "$proper_name$Amorites",
-          "who",
+          "$back+flashlight",
           "were",
           "there.",
         ],
