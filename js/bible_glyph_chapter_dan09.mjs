@@ -682,7 +682,7 @@ export function bible_glyph_chapter_dan09() {
           "$sponge!",
           "O",
           "$crown,",
-          "hear",
+          "$ear_with_hearing_aid",
           "and",
           "$hammer+doing!",
           "For",
