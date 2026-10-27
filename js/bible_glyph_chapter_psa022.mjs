@@ -496,7 +496,7 @@ export function bible_glyph_chapter_psa022() {
           "Him!",
           "Revere",
           "Him,",
-          "all",
+          "$all",
           "offspring",
           "of",
           "$wrestling+heart_on_fire!",
