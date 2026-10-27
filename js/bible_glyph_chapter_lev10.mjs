@@ -283,7 +283,7 @@ export function bible_glyph_chapter_lev10() {
           "the",
           "common,",
           "and",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "unclean",
           "and",
