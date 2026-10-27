@@ -176,7 +176,7 @@ export function bible_glyph_chapter_1sa01() {
           "had",
           "closed",
           "her",
-          "womb,",
+          "$hugging_face+baby,",
           "her",
           "rival",
           "would",
