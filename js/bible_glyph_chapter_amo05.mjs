@@ -531,7 +531,7 @@ export function bible_glyph_chapter_amo05() {
           "of",
           "the",
           "$i_am!",
-          "What",
+          "$flashlight+question",
           "will",
           "the",
           "$sun",
