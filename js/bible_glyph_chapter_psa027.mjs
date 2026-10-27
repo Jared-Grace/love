@@ -303,7 +303,7 @@ export function bible_glyph_chapter_psa027() {
       {
         verse_number: 11,
         words: [
-          "Teach",
+          "$bow+toward",
           "me",
           "Your",
           "$road,",
