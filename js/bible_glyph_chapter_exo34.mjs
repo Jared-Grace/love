@@ -706,7 +706,7 @@ export function bible_glyph_chapter_exo34() {
           "to",
           "$hammer+doing",
           "the",
-          "Feast",
+          "$party_popper",
           "of",
           "Weeks",
           "with",
