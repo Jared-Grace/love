@@ -424,7 +424,7 @@ export function bible_glyph_chapter_lev01() {
           "be",
           "drained",
           "out",
-          "on",
+          "$pointing_up",
           "$wall",
           "of",
           "$altar.",
