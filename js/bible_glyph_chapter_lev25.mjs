@@ -1249,7 +1249,7 @@ export function bible_glyph_chapter_lev25() {
           "$turn_back",
           "to",
           "his",
-          "clan",
+          "$houses",
           "and",
           "$turn_back",
           "to",
