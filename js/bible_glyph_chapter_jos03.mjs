@@ -536,7 +536,7 @@ export function bible_glyph_chapter_jos03() {
           "$sea,",
           "was",
           "completely",
-          "cut",
+          "$scissors",
           "off.",
           "So",
           "the",
