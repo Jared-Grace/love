@@ -526,7 +526,7 @@ export function bible_glyph_chapter_exo27() {
           "$olive",
           "for",
           "the",
-          "light,",
+          "$light+thing,",
           "to",
           "keep",
           "the",
