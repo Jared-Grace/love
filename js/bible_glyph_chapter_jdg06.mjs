@@ -545,7 +545,7 @@ export function bible_glyph_chapter_jdg06() {
           "$hammer+doing",
           "me",
           "a",
-          "sign",
+          "$placard",
           "that",
           "it",
           "is",
