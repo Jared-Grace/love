@@ -684,7 +684,7 @@ export function bible_glyph_chapter_lev11() {
           "$lightning,",
           "the",
           "common",
-          "lizard,",
+          "$lizard+herb,",
           "the",
           "skink,",
           "and",
