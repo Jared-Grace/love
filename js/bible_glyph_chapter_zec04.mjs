@@ -271,7 +271,7 @@ export function bible_glyph_chapter_zec04() {
           "these",
           "seven",
           "will",
-          "rejoice",
+          "$beaming+doing",
           "when",
           "they",
           "$eye",
