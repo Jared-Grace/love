@@ -541,7 +541,7 @@ export function bible_glyph_chapter_gen08() {
         verse_number: 20,
         words: [
           "Then",
-          "Noah",
+          "$seat+proper_name",
           "$brick",
           "an",
           "$altar",
