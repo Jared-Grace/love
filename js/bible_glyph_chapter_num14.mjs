@@ -712,7 +712,7 @@ export function bible_glyph_chapter_num14() {
           "Me",
           "these",
           "$ten",
-          "times",
+          "$drum",
           "and",
           "have",
           "$no_entry",
