@@ -728,7 +728,7 @@ export function bible_glyph_chapter_lev16() {
           "Aaron",
           "has",
           "finished",
-          "purifying",
+          "$umbrella+doing",
           "the",
           "$sparkle+thing",
           "Place,",
