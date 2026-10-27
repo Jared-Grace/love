@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_gen37() {
           "down",
           "to",
           "Sheol",
-          "mourning",
+          "$loudly_crying+coffin+describing",
           "for",
           "my",
           "$son.",
