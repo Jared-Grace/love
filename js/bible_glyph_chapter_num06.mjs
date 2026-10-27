@@ -641,7 +641,7 @@ export function bible_glyph_chapter_num06() {
           "hair",
           "of",
           "his",
-          "consecration.",
+          "$crown+soap.",
         ],
       },
       {
