@@ -1438,7 +1438,7 @@ export function bible_glyph_chapter_lev26() {
       {
         verse_number: 46,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "statutes,",
