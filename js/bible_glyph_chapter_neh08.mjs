@@ -462,7 +462,7 @@ export function bible_glyph_chapter_neh08() {
           "understood",
           "the",
           "$speech",
-          "that",
+          "$back+flashlight",
           "had",
           "been",
           "$lightbulb",
