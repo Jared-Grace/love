@@ -648,7 +648,7 @@ export function bible_glyph_chapter_zec14() {
       {
         verse_number: 19,
         words: [
-          "This",
+          "$flashlight",
           "will",
           "be",
           "the",
