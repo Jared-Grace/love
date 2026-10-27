@@ -55,7 +55,7 @@ export function bible_glyph_chapter_hos11() {
           "burned",
           "incense",
           "to",
-          "carved",
+          "$carpentry_saw+moai",
           "images.",
         ],
       },
