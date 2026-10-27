@@ -694,7 +694,7 @@ export function bible_glyph_chapter_deu28() {
           "wasting",
           "disease,",
           "with",
-          "fever",
+          "$thermometer_face+fire",
           "and",
           "inflammation,",
           "with",
