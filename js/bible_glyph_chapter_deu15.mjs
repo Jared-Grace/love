@@ -591,7 +591,7 @@ export function bible_glyph_chapter_deu15() {
           "$broken_chain+person,",
           "$pointing",
           "his",
-          "six",
+          "$six",
           "$year",
           "of",
           "$kneeling+doing",
