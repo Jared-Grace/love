@@ -1156,7 +1156,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "appoint",
           "away",
-          "to",
+          "$toward",
           "a",
           "$map",
           "that",
