@@ -384,7 +384,7 @@ export function bible_glyph_chapter_deu18() {
         verse_number: 14,
         words: [
           "$pointing",
-          "these",
+          "$flashlight+flashlight",
           "$map,",
           "which",
           "you",
