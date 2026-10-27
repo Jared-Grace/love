@@ -606,7 +606,7 @@ export function bible_glyph_chapter_isa26() {
           "and",
           "will",
           "$no_entry",
-          "longer",
+          "$repeat",
           "$coat+doing",
           "her",
           "slain.",
