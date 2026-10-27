@@ -241,7 +241,7 @@ export function bible_glyph_chapter_gen09() {
           "$exclamation,",
           "$me",
           "now",
-          "establish",
+          "$person+pointing_up",
           "My",
           "$covenant",
           "with",
