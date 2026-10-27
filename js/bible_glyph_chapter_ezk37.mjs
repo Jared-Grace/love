@@ -236,7 +236,7 @@ export function bible_glyph_chapter_ezk37() {
           "I",
           "$eye,",
           "tendons",
-          "appeared",
+          "$exclamation",
           "on",
           "them,",
           "$meat",
