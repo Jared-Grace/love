@@ -306,7 +306,7 @@ export function bible_glyph_chapter_num22() {
           "$person+question",
           "are",
           "these",
-          "men",
+          "$man_beard",
           "with",
           "you?",
         ],
