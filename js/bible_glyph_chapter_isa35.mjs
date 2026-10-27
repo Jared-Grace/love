@@ -104,7 +104,7 @@ export function bible_glyph_chapter_isa35() {
           "do",
           "$no_entry",
           "$fear+doing!",
-          "Behold,",
+          "$exclamation,",
           "your",
           "$heart_on_fire",
           "will",
