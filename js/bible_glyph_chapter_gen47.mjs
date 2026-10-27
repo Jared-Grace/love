@@ -804,7 +804,7 @@ export function bible_glyph_chapter_gen47() {
           "$house+proper_name",
           "this",
           "$sun,",
-          "here",
+          "$eyes+exclamation",
           "is",
           "$seed",
           "for",
