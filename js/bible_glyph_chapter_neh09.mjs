@@ -914,7 +914,7 @@ export function bible_glyph_chapter_neh09() {
           "delighted",
           "in",
           "Your",
-          "great",
+          "$top",
           "goodness.",
         ],
       },
