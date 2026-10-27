@@ -437,7 +437,7 @@ export function bible_glyph_chapter_exo34() {
           "chop",
           "down",
           "their",
-          "Asherah",
+          "$wood+imp",
           "poles.",
         ],
       },
