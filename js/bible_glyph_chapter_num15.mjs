@@ -901,7 +901,7 @@ export function bible_glyph_chapter_num15() {
           "shall",
           "certainly",
           "be",
-          "cut",
+          "$scissors",
           "off,",
           "and",
           "his",
