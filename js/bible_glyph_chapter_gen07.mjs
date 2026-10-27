@@ -510,7 +510,7 @@ export function bible_glyph_chapter_gen07() {
           "that",
           "all",
           "the",
-          "high",
+          "$giraffe",
           "$mountain",
           "under",
           "all",
