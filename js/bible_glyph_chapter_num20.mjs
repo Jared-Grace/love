@@ -660,7 +660,7 @@ export function bible_glyph_chapter_num20() {
         words: [
           "So",
           "Edom",
-          "refused",
+          "$person_gesturing_no+doing",
           "to",
           "$hands_giving",
           "$wrestling+heart_on_fire",
