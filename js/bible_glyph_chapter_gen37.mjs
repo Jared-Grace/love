@@ -978,7 +978,7 @@ export function bible_glyph_chapter_gen37() {
           "$sackcloth",
           "around",
           "his",
-          "waist,",
+          "$briefs+round_pushpin,",
           "and",
           "mourned",
           "for",
