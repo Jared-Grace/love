@@ -83,7 +83,7 @@ export function bible_glyph_chapter_psa091() {
         words: [
           "He",
           "will",
-          "cover",
+          "$wing+doing",
           "you",
           "with",
           "His",
