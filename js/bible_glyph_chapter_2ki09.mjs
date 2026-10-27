@@ -384,7 +384,7 @@ export function bible_glyph_chapter_2ki09() {
           "everything",
           "all",
           "right?",
-          "Why",
+          "$flashlight+question+lightbulb",
           "did",
           "this",
           "madman",
