@@ -667,7 +667,7 @@ export function bible_glyph_chapter_deu28() {
           "$paperclip",
           "to",
           "you",
-          "until",
+          "$finish",
           "He",
           "has",
           "exterminated",
