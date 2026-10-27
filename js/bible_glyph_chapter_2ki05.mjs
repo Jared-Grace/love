@@ -639,7 +639,7 @@ export function bible_glyph_chapter_2ki05() {
           "$speech",
           "$proper_name$Naaman,",
           "then",
-          "please",
+          "$pleading",
           "let",
           "your",
           "$kneeling",
