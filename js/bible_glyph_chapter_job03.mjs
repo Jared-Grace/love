@@ -176,7 +176,7 @@ export function bible_glyph_chapter_job03() {
           "prepared",
           "to",
           "rouse",
-          "Leviathan.",
+          "$crocodile+sea.",
         ],
       },
       {
