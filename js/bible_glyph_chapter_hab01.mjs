@@ -406,7 +406,7 @@ export function bible_glyph_chapter_hab01() {
           "that",
           "have",
           "$no_entry",
-          "ruler.",
+          "$joystick.",
         ],
       },
       {
