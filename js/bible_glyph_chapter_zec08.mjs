@@ -555,7 +555,7 @@ export function bible_glyph_chapter_zec08() {
         words: [
           "Do",
           "$no_entry",
-          "plot",
+          "$thinking+doing",
           "$thumbs_down",
           "in",
           "your",
