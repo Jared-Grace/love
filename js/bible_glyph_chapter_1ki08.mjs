@@ -152,7 +152,7 @@ export function bible_glyph_chapter_1ki08() {
           "and",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "$wrestling+heart_on_fire",
           "who",
