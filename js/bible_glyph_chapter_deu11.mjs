@@ -225,7 +225,7 @@ export function bible_glyph_chapter_deu11() {
           "have",
           "$eye",
           "$all",
-          "great",
+          "$top",
           "work",
           "that",
           "the",
