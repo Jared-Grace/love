@@ -922,7 +922,7 @@ export function bible_glyph_chapter_2ki09() {
           "when",
           "you",
           "and",
-          "I",
+          "$me",
           "were",
           "riding",
           "together",
