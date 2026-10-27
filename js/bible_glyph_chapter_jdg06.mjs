@@ -1159,7 +1159,7 @@ export function bible_glyph_chapter_jdg06() {
           "$son",
           "of",
           "the",
-          "east",
+          "$compass+right_arrow",
           "gathered",
           "together,",
           "crossed",
