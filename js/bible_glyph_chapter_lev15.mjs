@@ -971,7 +971,7 @@ export function bible_glyph_chapter_lev15() {
           "by",
           "defiling",
           "My",
-          "tabernacle,",
+          "$tent+house,",
           "which",
           "is",
           "among",
