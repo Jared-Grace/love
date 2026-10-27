@@ -1246,7 +1246,7 @@ export function bible_glyph_chapter_deu04() {
           "$placard,",
           "$shooting_star",
           "and",
-          "war,",
+          "$crossed_swords,",
           "by",
           "a",
           "strong",
