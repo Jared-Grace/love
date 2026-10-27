@@ -168,7 +168,7 @@ export function bible_glyph_chapter_est01() {
           "white",
           "$thread+herb",
           "and",
-          "blue",
+          "$blue_circle",
           "were",
           "fastened",
           "with",
