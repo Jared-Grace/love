@@ -509,7 +509,7 @@ export function bible_glyph_chapter_jos02() {
           "$knot+thread",
           "through",
           "the",
-          "window,",
+          "$window,",
           "since",
           "the",
           "$house",
