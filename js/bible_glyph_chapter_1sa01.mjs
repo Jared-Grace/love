@@ -380,7 +380,7 @@ export function bible_glyph_chapter_1sa01() {
           "kept",
           "on",
           "$hands_praying",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "$pointing_up+proper_name",
