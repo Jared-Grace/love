@@ -621,7 +621,7 @@ export function bible_glyph_chapter_1sa01() {
           "him",
           "$ear+heart_on_fire,",
           "saying,",
-          "Because",
+          "$pointing",
           "I",
           "have",
           "asked",
