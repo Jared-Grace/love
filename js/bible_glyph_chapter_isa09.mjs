@@ -164,7 +164,7 @@ export function bible_glyph_chapter_isa09() {
           "and",
           "every",
           "garment",
-          "rolled",
+          "$stone+wheel+doing",
           "in",
           "$blood",
           "will",
