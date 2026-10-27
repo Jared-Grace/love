@@ -925,7 +925,7 @@ export function bible_glyph_chapter_1ki12() {
           "Then",
           "they",
           "will",
-          "kill",
+          "$fist+skull",
           "me",
           "and",
           "$turn_back",
