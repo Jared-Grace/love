@@ -339,7 +339,7 @@ export function bible_glyph_chapter_2sa11() {
           "did",
           "you",
           "$no_entry",
-          "go",
+          "$walking+pointing_down",
           "down",
           "to",
           "your",
