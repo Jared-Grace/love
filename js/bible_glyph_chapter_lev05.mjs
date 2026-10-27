@@ -272,7 +272,7 @@ export function bible_glyph_chapter_lev05() {
           "he",
           "is",
           "to",
-          "sprinkle",
+          "$droplet+hand+doing",
           "$blood",
           "of",
           "$bow",
