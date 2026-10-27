@@ -445,7 +445,7 @@ export function bible_glyph_chapter_gen40() {
           "chief",
           "$bread+fire",
           "$eye",
-          "that",
+          "$pointing",
           "the",
           "meaning",
           "was",
