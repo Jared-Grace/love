@@ -626,7 +626,7 @@ export function bible_glyph_chapter_1sa16() {
           "Saul",
           "sent",
           "$angel",
-          "to",
+          "$toward",
           "$proper_name$Jesse",
           "and",
           "$speech,",
