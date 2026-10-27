@@ -439,7 +439,7 @@ export function bible_glyph_chapter_pro16() {
           "$brain,",
           "and",
           "pleasant",
-          "speech",
+          "$kiss_mark",
           "promotes",
           "instruction.",
         ],
