@@ -310,7 +310,7 @@ export function bible_glyph_chapter_jdg11() {
           "$ear",
           "between",
           "us,",
-          "if",
+          "$traffic_light",
           "we",
           "do",
           "$no_entry",
