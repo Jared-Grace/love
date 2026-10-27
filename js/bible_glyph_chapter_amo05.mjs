@@ -19,7 +19,7 @@ export function bible_glyph_chapter_amo05() {
           "this",
           "$speech,",
           "this",
-          "lamentation",
+          "$loudly_crying+song",
           "$me",
           "$lifting",
           "up",
