@@ -694,7 +694,7 @@ export function bible_glyph_chapter_exo35() {
           "$lotion_bottle",
           "for",
           "the",
-          "light,",
+          "$light+thing,",
           "for",
           "the",
           "anointing",
