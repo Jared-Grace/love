@@ -33,7 +33,7 @@ export function bible_glyph_chapter_jos01() {
           "of",
           "$proper_name$Nun,",
           "$fishing_pole+proper_name",
-          "assistant,",
+          "$bellhop_bell+doing,",
           "$speech:",
         ],
       },
