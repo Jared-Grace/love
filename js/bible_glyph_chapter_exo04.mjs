@@ -346,7 +346,7 @@ export function bible_glyph_chapter_exo04() {
           "Your",
           "$kneeling,",
           "for",
-          "I",
+          "$me",
           "am",
           "slow",
           "of",
