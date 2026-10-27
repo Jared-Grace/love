@@ -836,7 +836,7 @@ export function bible_glyph_chapter_lev08() {
           "$proper_name$Aaron",
           "and",
           "$son,",
-          "Boil",
+          "$pot_of_food+doing",
           "$meat",
           "at",
           "the",
