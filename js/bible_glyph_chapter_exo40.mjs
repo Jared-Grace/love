@@ -526,7 +526,7 @@ export function bible_glyph_chapter_exo40() {
           "$alarm_clock",
           "$pointing_up",
           "the",
-          "north",
+          "$compass+up_arrow",
           "$poultry_leg",
           "of",
           "the",
