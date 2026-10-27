@@ -431,7 +431,7 @@ export function bible_glyph_chapter_num06() {
           "he",
           "is",
           "to",
-          "present",
+          "$magnet+doing",
           "an",
           "offering",
           "to",
