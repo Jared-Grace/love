@@ -596,7 +596,7 @@ export function bible_glyph_chapter_exo29() {
           "of",
           "the",
           "anointing",
-          "oil,",
+          "$lotion_bottle,",
           "and",
           "sprinkle",
           "it",
