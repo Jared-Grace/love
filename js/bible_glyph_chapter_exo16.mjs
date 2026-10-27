@@ -96,7 +96,7 @@ export function bible_glyph_chapter_exo16() {
           "we",
           "sat",
           "by",
-          "pots",
+          "$pot_of_food",
           "of",
           "$meat",
           "and",
