@@ -303,7 +303,7 @@ export function bible_glyph_chapter_gen04() {
         verse_number: 11,
         words: [
           "$watch",
-          "you",
+          "$you",
           "are",
           "$speech+thumbs_down",
           "$tray_out",
