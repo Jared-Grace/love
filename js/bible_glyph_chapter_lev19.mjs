@@ -757,7 +757,7 @@ export function bible_glyph_chapter_lev19() {
           "sides",
           "of",
           "your",
-          "head",
+          "$person_gesturing_ok",
           "or",
           "clip",
           "off",
