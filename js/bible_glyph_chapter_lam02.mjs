@@ -134,7 +134,7 @@ export function bible_glyph_chapter_lam02() {
           "that",
           "consumes",
           "everything",
-          "around",
+          "$around",
           "it.",
         ],
       },
