@@ -183,7 +183,7 @@ export function bible_glyph_chapter_neh01() {
           "Your",
           "$eyes",
           "$link",
-          "open",
+          "$unlocked",
           "and",
           "Your",
           "ears",
