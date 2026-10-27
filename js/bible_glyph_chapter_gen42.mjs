@@ -130,7 +130,7 @@ export function bible_glyph_chapter_gen42() {
           "those",
           "who",
           "$footprints,",
-          "since",
+          "$pointing",
           "the",
           "$famine",
           "had",
