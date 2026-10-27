@@ -922,7 +922,7 @@ export function bible_glyph_chapter_gen27() {
           "am",
           "$proper_name$Esau,",
           "your",
-          "firstborn",
+          "$first_place+baby",
           '$son,"',
           "he",
           "$speech.",
