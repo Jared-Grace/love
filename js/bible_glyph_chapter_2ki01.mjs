@@ -323,7 +323,7 @@ export function bible_glyph_chapter_2ki01() {
           "his",
           "company",
           "of",
-          "fifty",
+          "$five+zero",
           "men.",
           "So",
           "the",
