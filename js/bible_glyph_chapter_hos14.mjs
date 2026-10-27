@@ -20,7 +20,7 @@ export function bible_glyph_chapter_hos14() {
           "$i_am",
           "your",
           "$heart_on_fire,",
-          "for",
+          "$pointing",
           "you",
           "have",
           "stumbled",
