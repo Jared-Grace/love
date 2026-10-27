@@ -77,7 +77,7 @@ export function bible_glyph_chapter_hab03() {
           "from",
           "$mountain",
           "$proper_name$Paran.",
-          "Selah.",
+          "$pause_button.",
           "His",
           "glory",
           "covered",
