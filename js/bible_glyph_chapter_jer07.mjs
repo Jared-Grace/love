@@ -189,7 +189,7 @@ export function bible_glyph_chapter_jer07() {
           "you",
           "live",
           "in",
-          "this",
+          "$flashlight",
           "$place,",
           "in",
           "the",
