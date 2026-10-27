@@ -143,7 +143,7 @@ export function bible_glyph_chapter_psa145() {
           "will",
           "declare",
           "Your",
-          "greatness.",
+          "$top+thing.",
         ],
       },
       {
