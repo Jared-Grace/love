@@ -1995,7 +1995,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "be",
           "left",
-          "few",
+          "$pinching_hand+input_numbers",
           "in",
           "number,",
           "because",
