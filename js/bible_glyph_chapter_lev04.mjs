@@ -745,7 +745,7 @@ export function bible_glyph_chapter_lev04() {
           "$family",
           "$earth",
           "$bow+doing",
-          "unintentionally",
+          "$footprints+question+thing",
           "by",
           "$hammer+doing",
           "any",
