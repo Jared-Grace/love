@@ -599,7 +599,7 @@ export function bible_glyph_chapter_2sa05() {
       {
         verse_number: 21,
         words: [
-          "There",
+          "$telescope",
           "the",
           "Philistines",
           "abandoned",
