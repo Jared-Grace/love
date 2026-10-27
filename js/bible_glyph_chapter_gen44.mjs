@@ -61,7 +61,7 @@ export function bible_glyph_chapter_gen44() {
           "one,",
           "in",
           "the",
-          "mouth",
+          "$face_with_open_mouth",
           "of",
           "the",
           "sack",
