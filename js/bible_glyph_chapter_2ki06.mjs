@@ -764,7 +764,7 @@ export function bible_glyph_chapter_2ki06() {
           "and",
           "they",
           "$walking",
-          "to",
+          "$toward",
           "their",
           "$crown.",
           "And",
