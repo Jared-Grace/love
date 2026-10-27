@@ -913,7 +913,7 @@ export function bible_glyph_chapter_num21() {
           "$fishing_pole+proper_name",
           "had",
           "sent",
-          "spies",
+          "$foot+doing",
           "to",
           "$proper_name$Jazer,",
           "Israel",
