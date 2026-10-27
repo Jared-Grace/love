@@ -245,7 +245,7 @@ export function bible_glyph_chapter_gen43() {
           "neither",
           "we,",
           "nor",
-          "you,",
+          "$you,",
           "nor",
           "our",
           "children.",
