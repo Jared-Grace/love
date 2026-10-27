@@ -398,7 +398,7 @@ export function bible_glyph_chapter_isa56() {
           "their",
           "own",
           "$road,",
-          "each",
+          "$end_arrow+round_pushpin",
           "$man_beard",
           "seeking",
           "his",
