@@ -1273,7 +1273,7 @@ export function bible_glyph_chapter_lev26() {
           "amends",
           "for",
           "their",
-          "iniquity,",
+          "$cyclone,",
         ],
       },
       {
