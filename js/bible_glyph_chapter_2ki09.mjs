@@ -877,7 +877,7 @@ export function bible_glyph_chapter_2ki09() {
           "and",
           "shot",
           "$i_am+up_arrow",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "shoulders.",
           "The",
