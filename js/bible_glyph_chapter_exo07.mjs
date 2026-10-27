@@ -730,7 +730,7 @@ export function bible_glyph_chapter_exo07() {
           "$palm_down+round_pushpin+doing",
           "any",
           "of",
-          "this",
+          "$flashlight",
           "to",
           "$heart_organ.",
         ],
