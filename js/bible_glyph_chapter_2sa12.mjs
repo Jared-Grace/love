@@ -72,7 +72,7 @@ export function bible_glyph_chapter_2sa12() {
           "$pinching_hand",
           "ewe",
           "$lamb+female_sign",
-          "that",
+          "$back+flashlight",
           "he",
           "had",
           "bought.",
