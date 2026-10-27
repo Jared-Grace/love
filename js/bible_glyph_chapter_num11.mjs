@@ -882,7 +882,7 @@ export function bible_glyph_chapter_num11() {
           "out",
           "to",
           "the",
-          "tent,",
+          "$tent,",
           "and",
           "the",
           "$wind",
