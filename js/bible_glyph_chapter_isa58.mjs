@@ -202,7 +202,7 @@ export function bible_glyph_chapter_isa58() {
           "call",
           "$flashlight",
           "a",
-          "fast,",
+          "$eating+locked,",
           "and",
           "a",
           "$sun",
