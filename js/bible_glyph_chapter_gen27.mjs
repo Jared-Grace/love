@@ -511,7 +511,7 @@ export function bible_glyph_chapter_gen27() {
           "you",
           "$mouth",
           "me.",
-          "Please",
+          "$pleading",
           "$person+house",
           "up",
           "and",
