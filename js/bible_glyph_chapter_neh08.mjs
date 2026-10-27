@@ -668,7 +668,7 @@ export function bible_glyph_chapter_neh08() {
           "And",
           "there",
           "was",
-          "great",
+          "$top",
           "$beaming.",
         ],
       },
