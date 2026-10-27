@@ -684,7 +684,7 @@ export function bible_glyph_chapter_gen39() {
           "success",
           "in",
           "whatever",
-          "he",
+          "$pointing_back",
           "$hammer+doing.",
         ],
       },
