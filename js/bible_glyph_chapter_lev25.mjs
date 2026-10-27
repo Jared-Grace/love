@@ -223,7 +223,7 @@ export function bible_glyph_chapter_lev25() {
           "years,",
           "$seven",
           "years",
-          "seven",
+          "$seven",
           "$sun,",
           "so",
           "that",
