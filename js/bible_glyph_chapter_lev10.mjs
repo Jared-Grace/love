@@ -574,7 +574,7 @@ export function bible_glyph_chapter_lev10() {
           "$mouth",
           "to",
           "$fishing_pole+proper_name,",
-          "Behold,",
+          "$exclamation,",
           "$sun",
           "they",
           "presented",
