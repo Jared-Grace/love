@@ -245,7 +245,7 @@ export function bible_glyph_chapter_1ki22() {
           "$me",
           "$heart_red+thumbs_down",
           "him,",
-          "because",
+          "$pointing",
           "he",
           "$no_entry",
           "prophesies",
