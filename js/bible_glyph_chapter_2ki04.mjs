@@ -1263,7 +1263,7 @@ export function bible_glyph_chapter_2ki04() {
           "field",
           "to",
           "gather",
-          "herbs,",
+          "$light+herb,",
           "and",
           "he",
           "found",
