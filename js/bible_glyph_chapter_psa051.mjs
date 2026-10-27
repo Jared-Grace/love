@@ -246,7 +246,7 @@ export function bible_glyph_chapter_psa051() {
         words: [
           "Do",
           "$no_entry",
-          "cast",
+          "$throwing",
           "me",
           "away",
           "from",
