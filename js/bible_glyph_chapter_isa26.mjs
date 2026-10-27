@@ -89,7 +89,7 @@ export function bible_glyph_chapter_isa26() {
           "the",
           "$i_am",
           "$finish,",
-          "because",
+          "$pointing",
           "GOD",
           "the",
           "$i_am",
