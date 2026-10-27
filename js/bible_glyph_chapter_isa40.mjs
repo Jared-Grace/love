@@ -96,7 +96,7 @@ export function bible_glyph_chapter_isa40() {
         verse_number: 4,
         words: [
           "$all",
-          "valley",
+          "$valley",
           "shall",
           "be",
           "lifted",
