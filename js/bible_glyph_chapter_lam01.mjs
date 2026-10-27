@@ -422,7 +422,7 @@ export function bible_glyph_chapter_lam01() {
           "$no_entry",
           "to",
           "you,",
-          "all",
+          "$all",
           "you",
           "who",
           "pass",
