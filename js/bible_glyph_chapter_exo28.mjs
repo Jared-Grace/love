@@ -719,7 +719,7 @@ export function bible_glyph_chapter_exo28() {
           "of",
           "the",
           "$two",
-          "shoulder",
+          "$person_shrugging",
           "pieces",
           "of",
           "the",
