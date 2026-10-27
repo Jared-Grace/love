@@ -376,7 +376,7 @@ export function bible_glyph_chapter_gen06() {
           "for",
           "yourself",
           "an",
-          "ark",
+          "$package",
           "of",
           "gopher",
           "$tree.",
