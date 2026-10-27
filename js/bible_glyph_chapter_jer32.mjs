@@ -631,7 +631,7 @@ export function bible_glyph_chapter_jer32() {
           "One",
           "$top",
           "in",
-          "counsel",
+          "$person_tipping_hand",
           "and",
           "mighty",
           "in",
