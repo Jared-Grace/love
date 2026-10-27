@@ -307,7 +307,7 @@ export function bible_glyph_chapter_job19() {
         verse_number: 17,
         words: [
           "My",
-          "breath",
+          "$wind",
           "is",
           "repulsive",
           "to",
