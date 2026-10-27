@@ -155,7 +155,7 @@ export function bible_glyph_chapter_gen04() {
           "the",
           "$i_am",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Cain,",
           "Why",
           "are",
