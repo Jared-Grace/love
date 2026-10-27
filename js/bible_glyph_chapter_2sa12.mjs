@@ -68,7 +68,7 @@ export function bible_glyph_chapter_2sa12() {
           "had",
           "$dotted_line_face",
           "$pointing",
-          "one",
+          "$one",
           "small",
           "ewe",
           "$lamb+female_sign",
