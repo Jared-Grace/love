@@ -404,7 +404,7 @@ export function bible_glyph_chapter_jdg16() {
         verse_number: 12,
         words: [
           "So",
-          "Delilah",
+          "$battery+down_arrow+female_sign+proper_name",
           "$hand_receiving",
           "new",
           "ropes",
