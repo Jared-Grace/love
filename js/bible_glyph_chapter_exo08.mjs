@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_exo08() {
           "his",
           "$family;",
           "$no_entry",
-          "one",
+          "$one",
           "fly",
           "$puzzle_piece+doing.",
         ],
