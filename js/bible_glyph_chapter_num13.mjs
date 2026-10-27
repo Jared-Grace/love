@@ -328,7 +328,7 @@ export function bible_glyph_chapter_num13() {
           "$eye",
           "the",
           "$earth,",
-          "what",
+          "$flashlight+question",
           "it",
           "is",
           "like,",
