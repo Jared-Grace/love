@@ -1445,7 +1445,7 @@ export function bible_glyph_chapter_exo12() {
           "be",
           "eaten",
           "inside",
-          "one",
+          "$one",
           "$house.",
           "You",
           "are",
