@@ -28,7 +28,7 @@ export function bible_glyph_chapter_lam03() {
           "rod",
           "of",
           "God's",
-          "wrath.",
+          "$anger_symbol.",
         ],
       },
       {
