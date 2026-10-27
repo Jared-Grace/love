@@ -177,7 +177,7 @@ export function bible_glyph_chapter_ezk34() {
           "over",
           "all",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "$earth,",
