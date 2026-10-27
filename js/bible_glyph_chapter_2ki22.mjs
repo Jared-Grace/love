@@ -389,7 +389,7 @@ export function bible_glyph_chapter_2ki22() {
           "$speech",
           "of",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "$scroll,",
