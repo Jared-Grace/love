@@ -527,7 +527,7 @@ export function bible_glyph_chapter_lam02() {
       {
         verse_number: 13,
         words: [
-          "What",
+          "$flashlight+question",
           "can",
           "I",
           "$witness+doing",
