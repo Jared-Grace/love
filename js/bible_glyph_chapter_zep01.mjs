@@ -599,7 +599,7 @@ export function bible_glyph_chapter_zep01() {
           "His",
           "$face_steam.",
           "$pointing",
-          "indeed,",
+          "$check+exclamation,",
           "He",
           "will",
           "$hammer+doing",
