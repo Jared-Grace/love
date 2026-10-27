@@ -459,7 +459,7 @@ export function bible_glyph_chapter_jos06() {
           "$sun",
           "they",
           "marched",
-          "around",
+          "$around+doing",
           "the",
           "$city",
           "once",
