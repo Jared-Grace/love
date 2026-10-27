@@ -136,7 +136,7 @@ export function bible_glyph_chapter_neh01() {
           "$eating+locked+doing",
           "and",
           "$hands_praying",
-          "before",
+          "$face",
           "the",
           "$heart_on_fire",
           "of",
