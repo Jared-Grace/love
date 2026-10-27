@@ -372,7 +372,7 @@ export function bible_glyph_chapter_isa02() {
           "will",
           "come",
           "against",
-          "all",
+          "$all",
           "the",
           "proud",
           "and",
