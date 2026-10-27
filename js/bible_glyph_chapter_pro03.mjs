@@ -230,7 +230,7 @@ export function bible_glyph_chapter_pro03() {
           "$no_entry",
           "$nauseated_face+heart_red+doing",
           "His",
-          "rebuke;",
+          "$you+exclamation+thing;",
         ],
       },
       {
