@@ -598,7 +598,7 @@ export function bible_glyph_chapter_gen17() {
           "him",
           "into",
           "a",
-          "great",
+          "$top",
           "$map.",
         ],
       },
