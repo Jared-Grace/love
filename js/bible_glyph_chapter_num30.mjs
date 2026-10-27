@@ -193,7 +193,7 @@ export function bible_glyph_chapter_num30() {
       {
         verse_number: 6,
         words: [
-          "If",
+          "$traffic_light",
           "a",
           "woman",
           "marries",
