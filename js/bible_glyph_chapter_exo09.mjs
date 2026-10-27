@@ -137,7 +137,7 @@ export function bible_glyph_chapter_exo09() {
         verse_number: 5,
         words: [
           "$i_am",
-          "set",
+          "$palm_down",
           "a",
           "time,",
           "$speech,",
