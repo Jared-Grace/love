@@ -780,7 +780,7 @@ export function bible_glyph_chapter_deu05() {
         verse_number: 27,
         words: [
           "Go",
-          "near",
+          "$magnet+doing",
           "and",
           "$ear",
           "all",
