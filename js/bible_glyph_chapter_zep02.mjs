@@ -78,7 +78,7 @@ export function bible_glyph_chapter_zep02() {
           "out",
           "His",
           "$scales+thing.",
-          "Seek",
+          "$magnifying_glass",
           "$ruler+thing;",
           "seek",
           "humility.",
