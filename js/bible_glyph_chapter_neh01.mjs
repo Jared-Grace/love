@@ -285,7 +285,7 @@ export function bible_glyph_chapter_neh01() {
           "If",
           "you",
           "are",
-          "unfaithful,",
+          "$handshake+broken_chain+doing,",
           "I",
           "will",
           "scatter",
