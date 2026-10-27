@@ -96,7 +96,7 @@ export function bible_glyph_chapter_psa103() {
           "you",
           "with",
           "$thumbs_up",
-          "things,",
+          "$gem_stone+ring,",
           "so",
           "that",
           "your",
