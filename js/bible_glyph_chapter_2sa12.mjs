@@ -914,7 +914,7 @@ export function bible_glyph_chapter_2sa12() {
       {
         verse_number: 28,
         words: [
-          "Now,",
+          "$watch,",
           "therefore,",
           "assemble",
           "the",
