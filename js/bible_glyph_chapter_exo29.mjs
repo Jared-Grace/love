@@ -753,7 +753,7 @@ export function bible_glyph_chapter_exo29() {
           "as",
           "a",
           "pleasing",
-          "aroma",
+          "$nose",
           "before",
           "$i_am.",
           "It",
