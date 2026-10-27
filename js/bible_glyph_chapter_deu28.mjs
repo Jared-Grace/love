@@ -417,7 +417,7 @@ export function bible_glyph_chapter_deu28() {
           "$hands_giving",
           "you",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "and",
           "$no_entry",
           "the",
