@@ -251,7 +251,7 @@ export function bible_glyph_chapter_gen41() {
           "$house+proper_name",
           "was",
           "once",
-          "angry",
+          "$angry_face+collision+doing",
           "with",
           "his",
           "$kneeling,",
