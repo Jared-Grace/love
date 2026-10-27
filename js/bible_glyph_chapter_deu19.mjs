@@ -559,7 +559,7 @@ export function bible_glyph_chapter_deu19() {
           "the",
           "dispute",
           "must",
-          "stand",
+          "$person+round_pushpin",
           "in",
           "the",
           "presence",
