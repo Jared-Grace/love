@@ -756,7 +756,7 @@ export function bible_glyph_chapter_ezk03() {
           "and",
           "went",
           "out",
-          "to",
+          "$toward",
           "the",
           "plain,",
           "and",
