@@ -1510,7 +1510,7 @@ export function bible_glyph_chapter_jer32() {
           "$dotted_line_face",
           "$person",
           "or",
-          "beast;",
+          "$paw_prints;",
           "it",
           "has",
           "been",
