@@ -171,7 +171,7 @@ export function bible_glyph_chapter_exo18() {
           "your",
           "father",
           "in",
-          "law",
+          "$man_in_tuxedo+family",
           "$proper_name$Jethro,",
           "am",
           "$footprints",
