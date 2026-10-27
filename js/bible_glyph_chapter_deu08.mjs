@@ -366,7 +366,7 @@ export function bible_glyph_chapter_deu08() {
       {
         verse_number: 12,
         words: [
-          "Otherwise,",
+          "$no_entry+traffic_light,",
           "when",
           "you",
           "$eating",
