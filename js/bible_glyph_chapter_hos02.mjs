@@ -618,7 +618,7 @@ export function bible_glyph_chapter_hos02() {
           "So",
           "I",
           "will",
-          "betroth",
+          "$ring+doing",
           "you",
           "to",
           "Me",
