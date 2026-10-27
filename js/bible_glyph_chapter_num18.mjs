@@ -58,7 +58,7 @@ export function bible_glyph_chapter_num18() {
           "bring",
           "with",
           "you",
-          "also",
+          "$plus",
           "your",
           "$brother",
           "from",
