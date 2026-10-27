@@ -63,7 +63,7 @@ export function bible_glyph_chapter_psa091() {
           "$pointing",
           "$pointing_back",
           "will",
-          "deliver",
+          "$hand+rescue",
           "you",
           "from",
           "the",
