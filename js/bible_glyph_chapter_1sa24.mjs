@@ -586,7 +586,7 @@ export function bible_glyph_chapter_1sa24() {
           "$ruler",
           "than",
           "I,",
-          "for",
+          "$pointing",
           "you",
           "have",
           "rewarded",
