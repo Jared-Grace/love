@@ -445,7 +445,7 @@ export function bible_glyph_chapter_jer23() {
           "$person+pointing_down",
           "into",
           "it.",
-          "For",
+          "$pointing",
           "I",
           "will",
           "$footprints",
