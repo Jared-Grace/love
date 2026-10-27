@@ -231,7 +231,7 @@ export function bible_glyph_chapter_1ki08() {
           "and",
           "overshadowed",
           "the",
-          "ark",
+          "$ark",
           "and",
           "its",
           "poles.",
