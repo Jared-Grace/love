@@ -340,7 +340,7 @@ export function bible_glyph_chapter_jer29() {
         verse_number: 11,
         words: [
           "For",
-          "I",
+          "$me",
           "$lightbulb",
           "the",
           "plans",
