@@ -245,7 +245,7 @@ export function bible_glyph_chapter_exo12() {
           "$water,",
           "but",
           "only",
-          "roasted",
+          "$meat+fire+describing",
           "over",
           "the",
           "$fire,",
