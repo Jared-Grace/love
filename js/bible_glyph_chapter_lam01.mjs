@@ -587,7 +587,7 @@ export function bible_glyph_chapter_lam01() {
           "$loudly_crying;",
           "my",
           "$eyes",
-          "flow",
+          "$walking+pointing_down",
           "with",
           "$water.",
           "For",
