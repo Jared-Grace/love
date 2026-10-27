@@ -783,7 +783,7 @@ export function bible_glyph_chapter_jer29() {
           "$wrestling+heart_on_fire",
           "by",
           "committing",
-          "adultery",
+          "$ring+no_entry+doing",
           "with",
           "the",
           "$woman",
