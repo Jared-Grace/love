@@ -94,7 +94,7 @@ export function bible_glyph_chapter_est04() {
           "there",
           "was",
           "great",
-          "mourning",
+          "$loudly_crying+coffin+thing",
           "among",
           "the",
           "$menorah.",
