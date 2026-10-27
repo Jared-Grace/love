@@ -127,7 +127,7 @@ export function bible_glyph_chapter_isa58() {
           "please,",
           "and",
           "you",
-          "oppress",
+          "$crown+fist+doing",
           "$all",
           "your",
           "workers.",
