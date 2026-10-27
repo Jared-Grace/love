@@ -745,7 +745,7 @@ export function bible_glyph_chapter_2ki06() {
           "king",
           "prepared",
           "a",
-          "great",
+          "$top",
           "$coin+shopping_cart+doing",
           "for",
           "them,",
