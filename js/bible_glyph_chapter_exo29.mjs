@@ -1039,7 +1039,7 @@ export function bible_glyph_chapter_exo29() {
           "$bread",
           "is",
           "left",
-          "until",
+          "$finish",
           "the",
           "$morning,",
           "you",
