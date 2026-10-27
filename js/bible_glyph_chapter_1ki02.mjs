@@ -1569,7 +1569,7 @@ export function bible_glyph_chapter_1ki02() {
           "$all",
           "the",
           "$thumbs_down",
-          "that",
+          "$back+flashlight",
           "your",
           "$heart_organ",
           "$lightbulb",
