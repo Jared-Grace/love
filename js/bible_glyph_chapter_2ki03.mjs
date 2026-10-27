@@ -282,7 +282,7 @@ export function bible_glyph_chapter_2ki03() {
           "roundabout",
           "$road",
           "for",
-          "seven",
+          "$seven",
           "$sun,",
           "there",
           "was",
