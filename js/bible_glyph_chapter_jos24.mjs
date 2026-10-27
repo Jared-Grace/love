@@ -604,7 +604,7 @@ export function bible_glyph_chapter_jos24() {
           "and",
           "$hammer+doing",
           "these",
-          "great",
+          "$top",
           "$placard",
           "before",
           "our",
