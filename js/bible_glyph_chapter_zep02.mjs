@@ -269,7 +269,7 @@ export function bible_glyph_chapter_zep02() {
           "as",
           "surely",
           "as",
-          "I",
+          "$me",
           "$sprout,",
           "declares",
           "the",
