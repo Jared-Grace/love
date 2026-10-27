@@ -397,7 +397,7 @@ export function bible_glyph_chapter_num19() {
           "will",
           "$no_entry",
           "be",
-          "clean.",
+          "$soap+doing.",
         ],
       },
       {
