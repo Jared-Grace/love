@@ -436,7 +436,7 @@ export function bible_glyph_chapter_pro16() {
           "$heart_organ",
           "are",
           "called",
-          "discerning,",
+          "$brain,",
           "and",
           "pleasant",
           "speech",
