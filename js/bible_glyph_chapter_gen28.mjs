@@ -170,7 +170,7 @@ export function bible_glyph_chapter_gen28() {
         verse_number: 6,
         words: [
           "Now",
-          "Esau",
+          "$hair+proper_name",
           "$eye",
           "that",
           "$laughing+proper_name",
