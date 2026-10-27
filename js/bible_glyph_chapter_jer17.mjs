@@ -109,7 +109,7 @@ export function bible_glyph_chapter_jer17() {
           "will",
           "relinquish",
           "the",
-          "inheritance",
+          "$inheritance",
           "that",
           "I",
           "$hands_giving",
