@@ -722,7 +722,7 @@ export function bible_glyph_chapter_2ch06() {
           "when",
           "they",
           "$hands_praying",
-          "toward",
+          "$toward",
           "this",
           "$place.",
           "May",
