@@ -579,7 +579,7 @@ export function bible_glyph_chapter_num11() {
           "the",
           "$i_am,",
           "$speech,",
-          "Who",
+          "$person+question",
           "will",
           "feed",
           "us",
