@@ -644,7 +644,7 @@ export function bible_glyph_chapter_exo22() {
           "$clamp+weary_face+doing",
           "a",
           "$foreigner,",
-          "for",
+          "$pointing",
           "you",
           "yourselves",
           "were",
