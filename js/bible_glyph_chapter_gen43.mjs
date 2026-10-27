@@ -511,7 +511,7 @@ export function bible_glyph_chapter_gen43() {
           "and",
           "prepare",
           "it,",
-          "for",
+          "$pointing",
           "they",
           "shall",
           "dine",
