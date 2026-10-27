@@ -116,7 +116,7 @@ export function bible_glyph_chapter_num17() {
         verse_number: 5,
         words: [
           "The",
-          "staff",
+          "$white_cane",
           "belonging",
           "to",
           "the",
