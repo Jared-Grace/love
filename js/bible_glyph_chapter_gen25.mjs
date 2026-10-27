@@ -274,7 +274,7 @@ export function bible_glyph_chapter_gen25() {
       {
         verse_number: 13,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "$name_tag",
