@@ -665,7 +665,7 @@ export function bible_glyph_chapter_lev08() {
           "before",
           "$i_am",
           "$hand_receiving",
-          "one",
+          "$one",
           "$bagel",
           "of",
           "unleavened",
