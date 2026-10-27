@@ -559,7 +559,7 @@ export function bible_glyph_chapter_exo35() {
           "$blue_circle,",
           "$purple_circle",
           "or",
-          "scarlet",
+          "$worm",
           "yarn,",
           "or",
           "fine",
