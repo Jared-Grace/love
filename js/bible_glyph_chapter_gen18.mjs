@@ -386,7 +386,7 @@ export function bible_glyph_chapter_gen18() {
           "$flashlight+question",
           "did",
           "$proper_name$Sarah",
-          "laugh",
+          "$laughing",
           "and",
           "$speech,",
           "Can",
