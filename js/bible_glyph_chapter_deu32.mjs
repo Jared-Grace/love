@@ -827,7 +827,7 @@ export function bible_glyph_chapter_deu32() {
           "a",
           "thousand,",
           "or",
-          "two",
+          "$two",
           "put",
           "ten",
           "thousand",
