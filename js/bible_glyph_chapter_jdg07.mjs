@@ -408,7 +408,7 @@ export function bible_glyph_chapter_jdg07() {
           "the",
           "$camp.",
           "So",
-          "he",
+          "$pointing_back",
           "went",
           "with",
           "$proper_name$Purah",
