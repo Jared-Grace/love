@@ -576,7 +576,7 @@ export function bible_glyph_chapter_exo09() {
           "$person",
           "or",
           "$paw_prints",
-          "that",
+          "$back+flashlight",
           "remains",
           "in",
           "the",
