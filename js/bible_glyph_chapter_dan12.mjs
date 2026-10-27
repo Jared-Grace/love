@@ -54,7 +54,7 @@ export function bible_glyph_chapter_dan12() {
           "$map",
           "until",
           "that",
-          "time.",
+          "$clock.",
           "But",
           "at",
           "that",
