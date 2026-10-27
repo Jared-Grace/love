@@ -468,7 +468,7 @@ export function bible_glyph_chapter_1sa01() {
           "out",
           "my",
           "$person_other",
-          "before",
+          "$face",
           "the",
           "$i_am.",
         ],
