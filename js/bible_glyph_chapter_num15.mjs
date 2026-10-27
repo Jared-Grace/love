@@ -758,7 +758,7 @@ export function bible_glyph_chapter_num15() {
         verse_number: 27,
         words: [
           "Also,",
-          "if",
+          "$traffic_light",
           "one",
           "$person_other",
           "$bow+doing",
