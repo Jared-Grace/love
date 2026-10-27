@@ -267,7 +267,7 @@ export function bible_glyph_chapter_psa019() {
       {
         verse_number: 12,
         words: [
-          "Who",
+          "$person+question",
           "can",
           "discern",
           "his",
