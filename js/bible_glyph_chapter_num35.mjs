@@ -695,7 +695,7 @@ export function bible_glyph_chapter_num35() {
           "congregation",
           "must",
           "judge",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "slayer",
           "and",
