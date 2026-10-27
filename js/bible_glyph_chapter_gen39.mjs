@@ -337,7 +337,7 @@ export function bible_glyph_chapter_gen39() {
         words: [
           "One",
           "$sun,",
-          "however,",
+          "$link,",
           "Joseph",
           "$footprints",
           "into",
