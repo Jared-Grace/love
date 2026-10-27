@@ -139,7 +139,7 @@ export function bible_glyph_chapter_1ki21() {
           "$proper_name$Jezreelite",
           "had",
           "$mouth",
-          "to",
+          "$toward",
           "him,",
           "$speech,",
           "I",
