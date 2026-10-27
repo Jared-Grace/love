@@ -769,7 +769,7 @@ export function bible_glyph_chapter_1sa01() {
           "$wheat+flour",
           "and",
           "a",
-          "skin",
+          "$harp+ten",
           "of",
           "$wine,",
           "though",
