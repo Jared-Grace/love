@@ -17,7 +17,7 @@ export function bible_glyph_chapter_1ki22() {
         verse_number: 1,
         words: [
           "Then",
-          "three",
+          "$three",
           "$year",
           "$person+house",
           "without",
