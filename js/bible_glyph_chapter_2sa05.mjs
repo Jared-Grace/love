@@ -356,7 +356,7 @@ export function bible_glyph_chapter_2sa05() {
           "$two_hearts+proper_name,",
           "along",
           "with",
-          "cedar",
+          "$cedar",
           "$tree,",
           "and",
           "craftsmen",
