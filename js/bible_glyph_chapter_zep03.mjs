@@ -265,7 +265,7 @@ export function bible_glyph_chapter_zep03() {
         verse_number: 9,
         words: [
           "$pointing",
-          "then",
+          "$telescope+clock",
           "I",
           "will",
           "restore",
