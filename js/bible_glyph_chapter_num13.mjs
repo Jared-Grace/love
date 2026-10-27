@@ -301,7 +301,7 @@ export function bible_glyph_chapter_num13() {
           "$hand_sending",
           "them",
           "to",
-          "spy",
+          "$telescope+walking+doing",
           "out",
           "the",
           "$earth",
