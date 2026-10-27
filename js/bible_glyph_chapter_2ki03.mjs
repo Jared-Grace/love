@@ -150,7 +150,7 @@ export function bible_glyph_chapter_2ki03() {
           "$king",
           "of",
           "$father+proper_name",
-          "rebelled",
+          "$black_flag+doing",
           "against",
           "the",
           "$king",
