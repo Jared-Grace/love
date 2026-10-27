@@ -143,7 +143,7 @@ export function bible_glyph_chapter_zec03() {
           "put",
           "a",
           "clean",
-          "turban",
+          "$person_wearing_turban+thing",
           "on",
           "his",
           "head.",
