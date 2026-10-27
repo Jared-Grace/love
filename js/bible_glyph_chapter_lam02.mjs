@@ -321,7 +321,7 @@ export function bible_glyph_chapter_lam02() {
         words: [
           "The",
           "$i_am",
-          "determined",
+          "$thinking+doing",
           "to",
           "destroy",
           "the",
