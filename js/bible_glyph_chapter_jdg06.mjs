@@ -730,7 +730,7 @@ export function bible_glyph_chapter_jdg06() {
           "When",
           "Gideon",
           "$eye",
-          "that",
+          "$pointing",
           "it",
           "was",
           "the",
