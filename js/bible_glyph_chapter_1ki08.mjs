@@ -146,7 +146,7 @@ export function bible_glyph_chapter_1ki08() {
           "There,",
           "before",
           "the",
-          "ark,",
+          "$ark,",
           "$king",
           "$peace+proper_name",
           "and",
