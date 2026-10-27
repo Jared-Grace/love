@@ -371,7 +371,7 @@ export function bible_glyph_chapter_lev06() {
           "of",
           "Aaron",
           "shall",
-          "present",
+          "$magnet+doing",
           "it",
           "before",
           "$i_am",
