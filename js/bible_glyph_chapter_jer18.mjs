@@ -484,7 +484,7 @@ export function bible_glyph_chapter_jer18() {
         words: [
           "Like",
           "the",
-          "east",
+          "$compass+right_arrow+thing",
           "$wind",
           "I",
           "will",
