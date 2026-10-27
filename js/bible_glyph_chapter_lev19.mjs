@@ -789,7 +789,7 @@ export function bible_glyph_chapter_lev19() {
           "$writing_hand+fire",
           "on",
           "yourselves.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am.",
