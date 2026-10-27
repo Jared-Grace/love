@@ -415,7 +415,7 @@ export function bible_glyph_chapter_pro03() {
           "$son,",
           "do",
           "$no_entry",
-          "lose",
+          "$curving_right+away+doing",
           "$eyes",
           "of",
           "this:",
