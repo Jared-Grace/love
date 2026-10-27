@@ -60,7 +60,7 @@ export function bible_glyph_chapter_exo05() {
           "$person+question",
           "is",
           "$i_am,",
-          "that",
+          "$back+flashlight",
           "I",
           "should",
           "$ear",
