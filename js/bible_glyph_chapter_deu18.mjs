@@ -262,7 +262,7 @@ export function bible_glyph_chapter_deu18() {
           "$footprints",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "your",
