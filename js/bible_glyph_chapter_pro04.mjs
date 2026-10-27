@@ -425,7 +425,7 @@ export function bible_glyph_chapter_pro04() {
           "of",
           "your",
           "$eyes;",
-          "keep",
+          "$guard",
           "them",
           "within",
           "your",
