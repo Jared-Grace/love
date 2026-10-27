@@ -528,7 +528,7 @@ export function bible_glyph_chapter_mic07() {
         words: [
           "They",
           "will",
-          "lick",
+          "$tongue+herb+doing",
           "the",
           "dust",
           "like",
