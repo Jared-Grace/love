@@ -863,7 +863,7 @@ export function bible_glyph_chapter_exo08() {
           "will",
           "they",
           "$no_entry",
-          "stone",
+          "$stone+throwing+doing",
           "us?",
         ],
       },
