@@ -1261,7 +1261,7 @@ export function bible_glyph_chapter_jer32() {
           "of",
           "$wrestling+heart_on_fire,",
           "$speech",
-          "about",
+          "$toward",
           "this",
           "$city",
           "of",
