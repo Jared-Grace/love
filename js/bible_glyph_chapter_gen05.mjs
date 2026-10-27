@@ -27,7 +27,7 @@ export function bible_glyph_chapter_gen05() {
           "the",
           "$sun",
           "$heart_on_fire",
-          "created",
+          "$milky_way+doing",
           "$person,",
           "in",
           "the",
