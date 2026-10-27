@@ -170,7 +170,7 @@ export function bible_glyph_chapter_gen08() {
           "$hammer+doing",
           "in",
           "the",
-          "ark",
+          "$package",
         ],
       },
       {
