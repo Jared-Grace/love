@@ -779,7 +779,7 @@ export function bible_glyph_chapter_1ch29() {
           "$i_am,",
           "a",
           "thousand",
-          "bulls,",
+          "$bull,",
           "a",
           "thousand",
           "rams",
