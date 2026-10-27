@@ -349,7 +349,7 @@ export function bible_glyph_chapter_zec14() {
           "site",
           "of",
           "the",
-          "First",
+          "$first_place",
           "$gate,",
           "to",
           "the",
