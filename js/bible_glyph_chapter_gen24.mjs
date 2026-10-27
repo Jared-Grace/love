@@ -235,7 +235,7 @@ export function bible_glyph_chapter_gen24() {
           "my",
           "$son",
           "from",
-          "there.",
+          "$telescope.",
         ],
       },
       {
