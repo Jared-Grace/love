@@ -1220,7 +1220,7 @@ export function bible_glyph_chapter_deu28() {
           "$field",
           "but",
           "harvest",
-          "little,",
+          "$pinching_hand+input_numbers,",
           "because",
           "the",
           "locusts",
