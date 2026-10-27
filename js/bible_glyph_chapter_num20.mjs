@@ -274,7 +274,7 @@ export function bible_glyph_chapter_num20() {
           "the",
           "$church",
           "in",
-          "front",
+          "$face",
           "of",
           "the",
           "rock,",
