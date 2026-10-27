@@ -762,7 +762,7 @@ export function bible_glyph_chapter_gen49() {
           "$field",
           "of",
           "$proper_name$Machpelah",
-          "near",
+          "$pointing_up",
           "$proper_name$Mamre",
           "in",
           "the",
