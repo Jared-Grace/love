@@ -566,7 +566,7 @@ export function bible_glyph_chapter_job31() {
           "$hand",
           "threw",
           "a",
-          "kiss",
+          "$face_blowing_a_kiss",
           "from",
           "my",
           "mouth,",
