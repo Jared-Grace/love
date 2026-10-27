@@ -1275,7 +1275,7 @@ export function bible_glyph_chapter_2ch20() {
           "of",
           "$proper_name$Mareshah",
           "prophesied",
-          "against",
+          "$pointing_up",
           "$i_am+scales,",
           "$speech,",
           '"Because',
