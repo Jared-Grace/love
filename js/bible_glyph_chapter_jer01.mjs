@@ -418,7 +418,7 @@ export function bible_glyph_chapter_jer01() {
           "$castle",
           "of",
           "the",
-          "north,",
+          "$compass+up_arrow,",
           "declares",
           "the",
           "$i_am.",
