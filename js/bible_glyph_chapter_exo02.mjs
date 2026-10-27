@@ -65,7 +65,7 @@ export function bible_glyph_chapter_exo02() {
           "she",
           "could",
           "$no_entry",
-          "longer",
+          "$repeat",
           "hide",
           "him,",
           "she",
