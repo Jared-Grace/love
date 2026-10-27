@@ -495,7 +495,7 @@ export function bible_glyph_chapter_gen50() {
           "of",
           "your",
           "$brother,",
-          "for",
+          "$pointing",
           "the",
           "$thumbs_down",
           "they",
