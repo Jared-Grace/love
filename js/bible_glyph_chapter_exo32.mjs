@@ -847,7 +847,7 @@ export function bible_glyph_chapter_exo32() {
           "out",
           "of",
           "control,",
-          "for",
+          "$pointing",
           "$proper_name$Aaron",
           "had",
           "let",
