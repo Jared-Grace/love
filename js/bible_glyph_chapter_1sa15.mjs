@@ -811,7 +811,7 @@ export function bible_glyph_chapter_1sa15() {
           "and",
           "your",
           "$speech,",
-          "because",
+          "$pointing",
           "I",
           "feared",
           "the",
