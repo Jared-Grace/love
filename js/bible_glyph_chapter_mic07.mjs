@@ -249,7 +249,7 @@ export function bible_glyph_chapter_mic07() {
         words: [
           "Do",
           "$no_entry",
-          "gloat",
+          "$beaming+doing",
           "over",
           "me,",
           "my",
