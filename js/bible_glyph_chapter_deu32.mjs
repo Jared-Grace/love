@@ -823,7 +823,7 @@ export function bible_glyph_chapter_deu32() {
           "could",
           "one",
           "man",
-          "pursue",
+          "$running+toward",
           "a",
           "thousand,",
           "or",
