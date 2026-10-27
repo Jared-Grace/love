@@ -404,7 +404,7 @@ export function bible_glyph_chapter_neh09() {
           "pursuers",
           "into",
           "the",
-          "depths",
+          "$water_wave+hole",
           "like",
           "a",
           "$stone",
