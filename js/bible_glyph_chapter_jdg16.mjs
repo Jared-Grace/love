@@ -760,7 +760,7 @@ export function bible_glyph_chapter_jdg16() {
           "off",
           "the",
           "$seven",
-          "braids",
+          "$hair+curly_loop",
           "of",
           "his",
           "head.",
