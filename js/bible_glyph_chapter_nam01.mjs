@@ -388,7 +388,7 @@ export function bible_glyph_chapter_nam01() {
           "will",
           "be",
           "$no_entry",
-          "descendants",
+          "$seed+doing",
           "to",
           "carry",
           "on",
