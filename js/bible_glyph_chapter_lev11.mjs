@@ -431,7 +431,7 @@ export function bible_glyph_chapter_lev11() {
         words: [
           "All",
           "$bird",
-          "insects",
+          "$lizard+crowd",
           "that",
           "$walking",
           "on",
