@@ -207,7 +207,7 @@ export function bible_glyph_chapter_exo10() {
         words: [
           "They",
           "will",
-          "fill",
+          "$battery",
           "your",
           "$house",
           "and",
