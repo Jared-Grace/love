@@ -1220,7 +1220,7 @@ export function bible_glyph_chapter_exo28() {
           "of",
           "$alarm_clock",
           "$shuffle",
-          "approach",
+          "$walking+toward",
           "the",
           "$altar",
           "to",
