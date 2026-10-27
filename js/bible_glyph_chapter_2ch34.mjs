@@ -814,7 +814,7 @@ export function bible_glyph_chapter_2ch34() {
           "$i_am",
           "by",
           "$hammer+doing",
-          "all",
+          "$all",
           "that",
           "is",
           "written",
