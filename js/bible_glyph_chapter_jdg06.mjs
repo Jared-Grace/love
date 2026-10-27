@@ -563,7 +563,7 @@ export function bible_glyph_chapter_jdg06() {
           "$no_entry",
           "$walking+away+doing",
           "from",
-          "this",
+          "$flashlight",
           "place",
           "until",
           "I",
