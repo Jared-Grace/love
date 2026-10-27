@@ -1161,7 +1161,7 @@ export function bible_glyph_chapter_jdg06() {
           "the",
           "$compass+right_arrow",
           "$crowd+doing",
-          "together,",
+          "$linked_paperclips+manner,",
           "crossed",
           "over",
           "the",
