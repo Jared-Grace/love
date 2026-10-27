@@ -332,7 +332,7 @@ export function bible_glyph_chapter_gen17() {
           "$son",
           "of",
           "a",
-          "foreigner,",
+          "$detective+thing,",
           "even",
           "those",
           "who",
