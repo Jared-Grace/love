@@ -383,7 +383,7 @@ export function bible_glyph_chapter_lev24() {
           "the",
           "whole",
           "assembly",
-          "stone",
+          "$rock+right_arrow+doing",
           "him.",
         ],
       },
