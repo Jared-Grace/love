@@ -81,7 +81,7 @@ export function bible_glyph_chapter_zep02() {
           "$magnifying_glass",
           "$ruler+thing;",
           "$magnifying_glass",
-          "humility.",
+          "$persevering_face+thing.",
           "Perhaps",
           "you",
           "will",
