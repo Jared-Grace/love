@@ -1978,7 +1978,7 @@ export function bible_glyph_chapter_gen24() {
           "her",
           "into",
           "the",
-          "tent",
+          "$tent",
           "of",
           "his",
           "mother",
