@@ -167,7 +167,7 @@ export function bible_glyph_chapter_psa130() {
           "And",
           "$pointing_back",
           "will",
-          "redeem",
+          "$coin+turn_back",
           "$wrestling+heart_on_fire",
           "from",
           "all",
