@@ -235,7 +235,7 @@ export function bible_glyph_chapter_lev09() {
           "he",
           "dipped",
           "his",
-          "finger",
+          "$index_pointing_up",
           "$blood",
           "and",
           "$hands_giving",
