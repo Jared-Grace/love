@@ -77,7 +77,7 @@ export function bible_glyph_chapter_lev06() {
       {
         verse_number: 4,
         words: [
-          "once",
+          "$pointing",
           "$bow+doing",
           "and",
           "becomes",
