@@ -351,7 +351,7 @@ export function bible_glyph_chapter_lev06() {
           "burning",
           "on",
           "$altar",
-          "continually.",
+          "$clock+infinity.",
           "It",
           "$no_entry",
           "be",
