@@ -1722,7 +1722,7 @@ export function bible_glyph_chapter_1sa17() {
           "$city+peace,",
           "and",
           "he",
-          "put",
+          "$palm_down",
           "Goliath's",
           "weapons",
           "in",
