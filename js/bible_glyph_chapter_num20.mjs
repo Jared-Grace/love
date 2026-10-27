@@ -16,7 +16,7 @@ export function bible_glyph_chapter_num20() {
           "In",
           "the",
           "first",
-          "month",
+          "$new_moon",
           "the",
           "$all",
           "$witness+crowd",
