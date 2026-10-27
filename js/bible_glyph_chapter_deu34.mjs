@@ -54,7 +54,7 @@ export function bible_glyph_chapter_deu34() {
       {
         verse_number: 2,
         words: [
-          "all",
+          "$all",
           "of",
           "$proper_name$Naphtali,",
           "the",
