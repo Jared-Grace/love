@@ -531,7 +531,7 @@ export function bible_glyph_chapter_gen07() {
           "depth",
           "of",
           "fifteen",
-          "cubits",
+          "$triangular_ruler",
           "and",
           "covered",
           "the",
