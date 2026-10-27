@@ -351,7 +351,7 @@ export function bible_glyph_chapter_num32() {
           "$son",
           "of",
           "$proper_name$Nun,",
-          "because",
+          "$pointing",
           "they",
           "did",
           "follow",
