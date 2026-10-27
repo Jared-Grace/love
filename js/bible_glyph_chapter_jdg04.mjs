@@ -491,7 +491,7 @@ export function bible_glyph_chapter_jdg04() {
           "and",
           "army",
           "as",
-          "far",
+          "$finish",
           "as",
           "$proper_name$Harosheth-hagoyim,",
           "and",
