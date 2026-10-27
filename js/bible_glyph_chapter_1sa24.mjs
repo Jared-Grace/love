@@ -161,7 +161,7 @@ export function bible_glyph_chapter_1sa24() {
           "corner",
           "of",
           "$proper_name$Saul's",
-          "robe.",
+          "$cloak.",
         ],
       },
       {
