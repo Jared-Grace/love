@@ -109,7 +109,7 @@ export function bible_glyph_chapter_deu09() {
           "and",
           "you",
           "will",
-          "drive",
+          "$triangular_flag",
           "them",
           "out",
           "and",
