@@ -670,7 +670,7 @@ export function bible_glyph_chapter_ezk47() {
           "and",
           "along",
           "the",
-          "Brook",
+          "$national_park",
           "of",
           "Egypt",
           "to",
