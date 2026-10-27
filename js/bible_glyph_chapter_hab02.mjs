@@ -440,7 +440,7 @@ export function bible_glyph_chapter_hab02() {
           "him",
           "who",
           "gives",
-          "drink",
+          "$cup+hands_giving",
           "to",
           "his",
           "neighbors,",
