@@ -1625,7 +1625,7 @@ export function bible_glyph_chapter_1sa17() {
           "the",
           "$proper_name$Philistines",
           "$eye",
-          "that",
+          "$pointing",
           "their",
           "hero",
           "was",
