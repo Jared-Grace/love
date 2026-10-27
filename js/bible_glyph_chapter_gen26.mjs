@@ -272,7 +272,7 @@ export function bible_glyph_chapter_gen26() {
           "$laughing+proper_name",
           "and",
           "$speech,",
-          "She",
+          "$pointing_back",
           "is",
           "surely",
           "your",
