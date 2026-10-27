@@ -1174,7 +1174,7 @@ export function bible_glyph_chapter_num16() {
           "the",
           "$bronze",
           "$cooking",
-          "brought",
+          "$magnet+doing",
           "by",
           "those",
           "who",
