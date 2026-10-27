@@ -403,7 +403,7 @@ export function bible_glyph_chapter_1sa25() {
           "to",
           "him",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$speech.",
         ],
       },
