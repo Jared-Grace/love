@@ -903,7 +903,7 @@ export function bible_glyph_chapter_num11() {
           "A",
           "young",
           "man",
-          "ran",
+          "$running",
           "and",
           "reported",
           "to",
