@@ -679,7 +679,7 @@ export function bible_glyph_chapter_num06() {
           "offering",
           "and",
           "the",
-          "thigh",
+          "$leg",
           "that",
           "was",
           "presented.",
