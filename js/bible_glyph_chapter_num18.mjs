@@ -706,7 +706,7 @@ export function bible_glyph_chapter_num18() {
           "a",
           "$hourglass",
           "$locked_with_pen.",
-          "It",
+          "$pointing_back",
           "is",
           "a",
           "$covenant",
