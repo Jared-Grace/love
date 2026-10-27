@@ -984,7 +984,7 @@ export function bible_glyph_chapter_gen43() {
           "composure,",
           "he",
           "$speech,",
-          "Serve",
+          "$palm_down",
           "the",
           "$bread.",
         ],
