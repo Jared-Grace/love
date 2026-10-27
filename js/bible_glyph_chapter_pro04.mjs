@@ -55,7 +55,7 @@ export function bible_glyph_chapter_pro04() {
           "to",
           "my",
           "$father,",
-          "tender",
+          "$baby+heart_red+describing",
           "and",
           "the",
           "only",
