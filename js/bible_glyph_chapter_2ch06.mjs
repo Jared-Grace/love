@@ -1478,7 +1478,7 @@ export function bible_glyph_chapter_2ch06() {
           "$scales+thing.",
           "May",
           "You",
-          "forgive",
+          "$sponge",
           "Your",
           "$family",
           "who",
