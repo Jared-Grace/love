@@ -471,7 +471,7 @@ export function bible_glyph_chapter_gen27() {
           "So",
           "Jacob",
           "$footprints",
-          "to",
+          "$toward",
           "his",
           "$father",
           "and",
