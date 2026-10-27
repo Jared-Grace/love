@@ -651,7 +651,7 @@ export function bible_glyph_chapter_num21() {
           "passage",
           "through",
           "his",
-          "territory.",
+          "$passport_control.",
           "$proper_name$Instead",
           "he",
           "gathered",
