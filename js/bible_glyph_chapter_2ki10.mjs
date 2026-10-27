@@ -323,7 +323,7 @@ export function bible_glyph_chapter_2ki10() {
           "of",
           "the",
           "$gate",
-          "until",
+          "$finish",
           "morning.",
         ],
       },
