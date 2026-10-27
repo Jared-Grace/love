@@ -76,7 +76,7 @@ export function bible_glyph_chapter_gen25() {
           "$proper_name$Abida",
           "and",
           "$proper_name$Eldaah.",
-          "All",
+          "$all",
           "these",
           "were",
           "$son",
