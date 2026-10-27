@@ -423,7 +423,7 @@ export function bible_glyph_chapter_exo07() {
           "your",
           "$hand",
           "the",
-          "staff",
+          "$white_cane",
           "that",
           "was",
           "changed",
