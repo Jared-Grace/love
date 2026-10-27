@@ -967,7 +967,7 @@ export function bible_glyph_chapter_lev13() {
           "scar",
           "from",
           "the",
-          "burn.",
+          "$fire+adhesive_bandage.",
         ],
       },
       {
