@@ -454,7 +454,7 @@ export function bible_glyph_chapter_ezk34() {
           "them",
           "in",
           "$thumbs_up",
-          "pasture,",
+          "$person+sheep+place,",
           "and",
           "the",
           "lofty",
