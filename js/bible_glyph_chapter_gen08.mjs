@@ -461,7 +461,7 @@ export function bible_glyph_chapter_gen08() {
           "$bird",
           "and",
           "the",
-          "livestock",
+          "$paw_prints",
           "and",
           "everything",
           "that",
