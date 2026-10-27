@@ -453,7 +453,7 @@ export function bible_glyph_chapter_nam01() {
           "wicked",
           "will",
           "$no_entry",
-          "again",
+          "$plus+doing",
           "march",
           "through",
           "you;",
