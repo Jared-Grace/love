@@ -220,7 +220,7 @@ export function bible_glyph_chapter_mal03() {
         verse_number: 6,
         words: [
           "$pointing",
-          "I,",
+          "$me,",
           "the",
           "$i_am,",
           "do",
