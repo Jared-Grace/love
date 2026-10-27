@@ -497,7 +497,7 @@ export function bible_glyph_chapter_exo12() {
         words: [
           "On",
           "the",
-          "first",
+          "$first_place",
           "$sun",
           "you",
           "are",
