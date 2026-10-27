@@ -485,7 +485,7 @@ export function bible_glyph_chapter_exo28() {
           "a",
           "ruby,",
           "a",
-          "topaz",
+          "$gem_stone+sun",
           "and",
           "an",
           "emerald;",
