@@ -957,7 +957,7 @@ export function bible_glyph_chapter_num11() {
           "I",
           "wish",
           "that",
-          "all",
+          "$all",
           "the",
           "$i_am",
           "$family",
