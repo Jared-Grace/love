@@ -935,7 +935,7 @@ export function bible_glyph_chapter_2ki03() {
           "And",
           "there",
           "was",
-          "great",
+          "$top",
           "$angry_face+collision",
           "against",
           "the",
