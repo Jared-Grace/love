@@ -567,7 +567,7 @@ export function bible_glyph_chapter_exo40() {
           "lampstand",
           "in",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting",
           "opposite",
