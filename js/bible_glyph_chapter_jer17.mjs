@@ -882,7 +882,7 @@ export function bible_glyph_chapter_jer17() {
           "the",
           "$compass+down_arrow,",
           "$footprints",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "and",
           "sacrifices,",
