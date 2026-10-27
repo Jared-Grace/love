@@ -808,7 +808,7 @@ export function bible_glyph_chapter_exo36() {
           "the",
           "frames",
           "on",
-          "one",
+          "$one",
           "$x_ray",
           "of",
           "the",
