@@ -619,7 +619,7 @@ export function bible_glyph_chapter_gen41() {
           "other",
           "heads",
           "of",
-          "grain",
+          "$wheat+top",
           "sprouted,",
           "withered",
           "and",
