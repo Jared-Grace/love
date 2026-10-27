@@ -344,7 +344,7 @@ export function bible_glyph_chapter_lev10() {
           "leaven",
           "$children_crossing",
           "$altar,",
-          "because",
+          "$pointing",
           "it",
           "is",
           "$sparkle+thing",
