@@ -260,7 +260,7 @@ export function bible_glyph_chapter_exo13() {
           "between",
           "your",
           "$eyes,",
-          "that",
+          "$right_arrow+toward",
           "the",
           "$scroll",
           "of",
