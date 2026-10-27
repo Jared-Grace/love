@@ -196,7 +196,7 @@ export function bible_glyph_chapter_exo30() {
         verse_number: 8,
         words: [
           "When",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "sets",
           "up",
           "the",
