@@ -465,7 +465,7 @@ export function bible_glyph_chapter_lam01() {
           "$fire",
           "from",
           "on",
-          "high,",
+          "$up_arrow+thing,",
           "and",
           "it",
           "overpowered",
