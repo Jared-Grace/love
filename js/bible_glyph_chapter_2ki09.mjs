@@ -981,7 +981,7 @@ export function bible_glyph_chapter_2ki09() {
           "him",
           "up",
           "and",
-          "throw",
+          "$throwing",
           "him",
           "on",
           "the",
