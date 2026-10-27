@@ -764,7 +764,7 @@ export function bible_glyph_chapter_zec08() {
           "$walking",
           "with",
           "you,",
-          "for",
+          "$pointing",
           "we",
           "have",
           "$ear",
