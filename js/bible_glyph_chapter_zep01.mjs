@@ -239,7 +239,7 @@ export function bible_glyph_chapter_zep01() {
           "has",
           "prepared",
           "a",
-          "sacrifice;",
+          "$sacrifice;",
           "He",
           "has",
           "$sparkle+doing",
