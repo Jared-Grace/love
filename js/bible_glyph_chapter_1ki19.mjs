@@ -485,7 +485,7 @@ export function bible_glyph_chapter_1ki19() {
           "him",
           "and",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "are",
           "you",
           "doing",
