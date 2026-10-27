@@ -986,7 +986,7 @@ export function bible_glyph_chapter_deu09() {
           "$i_am",
           "was",
           "$zero+thing",
-          "able",
+          "$might+doing",
           "to",
           "$footprints",
           "them",
