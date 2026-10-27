@@ -376,7 +376,7 @@ export function bible_glyph_chapter_lev24() {
           "$hand",
           "on",
           "his",
-          "head,",
+          "$person_gesturing_ok,",
           "and",
           "then",
           "have",
