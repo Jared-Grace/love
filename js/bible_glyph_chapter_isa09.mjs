@@ -524,7 +524,7 @@ export function bible_glyph_chapter_isa09() {
           "and",
           "every",
           "$mouth",
-          "speaks",
+          "$voice+doing",
           "folly.",
           "Despite",
           "all",
