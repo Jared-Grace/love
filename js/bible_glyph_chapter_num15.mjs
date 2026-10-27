@@ -222,7 +222,7 @@ export function bible_glyph_chapter_num15() {
           "fulfill",
           "a",
           "vow,",
-          "or",
+          "$shuffle",
           "as",
           "a",
           "peace",
