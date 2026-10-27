@@ -381,7 +381,7 @@ export function bible_glyph_chapter_1sa16() {
           "$no_entry",
           "sit",
           "down",
-          "until",
+          "$finish",
           "he",
           "$footprints.",
         ],
