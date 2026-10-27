@@ -229,7 +229,7 @@ export function bible_glyph_chapter_jos01() {
           "or",
           "to",
           "the",
-          "left,",
+          "$hand+away,",
           "so",
           "that",
           "you",
