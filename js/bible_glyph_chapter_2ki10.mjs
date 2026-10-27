@@ -1181,7 +1181,7 @@ export function bible_glyph_chapter_2ki10() {
           "He",
           "did",
           "$no_entry",
-          "turn",
+          "$away+doing",
           "away",
           "from",
           "the",
