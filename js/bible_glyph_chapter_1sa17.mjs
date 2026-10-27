@@ -979,7 +979,7 @@ export function bible_glyph_chapter_1sa17() {
           "$no_entry",
           "$walking",
           "$toward",
-          "this",
+          "$flashlight",
           "$proper_name$Philistine",
           "to",
           "fight",
