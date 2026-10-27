@@ -472,7 +472,7 @@ export function bible_glyph_chapter_1sa20() {
           "and",
           "ever",
           "so",
-          "severely,",
+          "$plus+doing,",
           "if",
           "I",
           "do",
