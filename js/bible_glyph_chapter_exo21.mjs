@@ -1047,7 +1047,7 @@ export function bible_glyph_chapter_exo21() {
           "goring,",
           "and",
           "its",
-          "owner",
+          "$key",
           "$no_entry",
           "restrained",
           "it,",
