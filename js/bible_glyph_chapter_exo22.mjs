@@ -622,7 +622,7 @@ export function bible_glyph_chapter_exo22() {
           "other",
           "than",
           "$i_am",
-          "alone,",
+          "$one+person,",
           "he",
           "must",
           "be",
