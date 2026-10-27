@@ -426,7 +426,7 @@ export function bible_glyph_chapter_exo05() {
           "beaten",
           "and",
           "$speech,",
-          "Why",
+          "$flashlight+question+lightbulb",
           "have",
           "you",
           "$no_entry",
