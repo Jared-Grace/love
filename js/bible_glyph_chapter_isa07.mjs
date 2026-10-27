@@ -164,7 +164,7 @@ export function bible_glyph_chapter_isa07() {
           "these",
           "$two",
           "smoldering",
-          "stubs",
+          "$snake+back",
           "of",
           "firewood,",
           "over",
