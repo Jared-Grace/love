@@ -51,7 +51,7 @@ export function bible_glyph_chapter_exo26() {
           "$up_down_arrow",
           "and",
           "four",
-          "cubits",
+          "$triangular_ruler",
           "wide,",
           "all",
           "the",
