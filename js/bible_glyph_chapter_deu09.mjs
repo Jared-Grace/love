@@ -523,7 +523,7 @@ export function bible_glyph_chapter_deu09() {
           "$bomb",
           "them",
           "and",
-          "blot",
+          "$broom+doing",
           "out",
           "their",
           "$name_tag",
