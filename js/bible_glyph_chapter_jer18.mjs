@@ -391,7 +391,7 @@ export function bible_glyph_chapter_jer18() {
         words: [
           "Does",
           "the",
-          "snow",
+          "$snow",
           "of",
           "$proper_name$Lebanon",
           "ever",
