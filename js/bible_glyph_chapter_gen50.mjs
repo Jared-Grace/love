@@ -141,7 +141,7 @@ export function bible_glyph_chapter_gen50() {
           "$earth",
           "of",
           "$proper_name$Canaan.",
-          "Now",
+          "$watch",
           "let",
           "me",
           "$walking+pointing_up",
