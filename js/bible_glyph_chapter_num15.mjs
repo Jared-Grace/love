@@ -667,7 +667,7 @@ export function bible_glyph_chapter_num15() {
           "the",
           "$scales+thing,",
           "and",
-          "one",
+          "$one",
           "male",
           "$goat",
           "as",
