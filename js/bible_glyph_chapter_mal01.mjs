@@ -117,7 +117,7 @@ export function bible_glyph_chapter_mal01() {
           "may",
           "$brick,",
           "but",
-          "I",
+          "$me",
           "will",
           "demolish.",
           "They",
