@@ -532,7 +532,7 @@ export function bible_glyph_chapter_isa49() {
           "$son",
           "of",
           "her",
-          "womb?",
+          "$baby+house?",
           "Even",
           "if",
           "she",
