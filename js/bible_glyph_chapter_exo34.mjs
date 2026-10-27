@@ -450,7 +450,7 @@ export function bible_glyph_chapter_exo34() {
           "$no_entry",
           "$bowing",
           "any",
-          "other",
+          "$plus+one",
           "$moai,",
           "$pointing",
           "the",
