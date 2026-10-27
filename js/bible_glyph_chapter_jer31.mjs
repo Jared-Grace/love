@@ -346,7 +346,7 @@ export function bible_glyph_chapter_jer31() {
           "$person+sheep",
           "keeps",
           "his",
-          "flock.",
+          "$sheep+crowd.",
         ],
       },
       {
