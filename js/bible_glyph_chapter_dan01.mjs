@@ -475,7 +475,7 @@ export function bible_glyph_chapter_dan01() {
           "withhold",
           "their",
           "choice",
-          "food",
+          "$crown+bread",
           "and",
           "the",
           "$wine",
