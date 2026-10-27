@@ -537,7 +537,7 @@ export function bible_glyph_chapter_lev27() {
           "according",
           "to",
           "your",
-          "valuation.",
+          "$receipt.",
         ],
       },
       {
