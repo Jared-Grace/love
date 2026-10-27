@@ -630,7 +630,7 @@ export function bible_glyph_chapter_exo28() {
           "chains",
           "to",
           "the",
-          "two",
+          "$two",
           "$ring",
           "at",
           "the",
