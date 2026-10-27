@@ -1077,7 +1077,7 @@ export function bible_glyph_chapter_lev26() {
           "will",
           "$footprints",
           "a",
-          "faintness",
+          "$melting_face+heart_red",
           "into",
           "their",
           "$heart_organ",
