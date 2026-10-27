@@ -973,7 +973,7 @@ export function bible_glyph_chapter_gen26() {
           "$city",
           "is",
           "Beersheba",
-          "to",
+          "$finish",
           "this",
           "$sun.",
         ],
