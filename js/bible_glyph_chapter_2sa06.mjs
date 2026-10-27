@@ -87,7 +87,7 @@ export function bible_glyph_chapter_2sa06() {
           "on",
           "a",
           "new",
-          "cart",
+          "$wheel",
           "and",
           "brought",
           "it",
