@@ -457,7 +457,7 @@ export function bible_glyph_chapter_gen18() {
           "but",
           "you",
           "did",
-          "laugh.",
+          "$laughing.",
         ],
       },
       {
