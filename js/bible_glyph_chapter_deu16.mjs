@@ -737,7 +737,7 @@ export function bible_glyph_chapter_deu16() {
           "up",
           "any",
           "$tree",
-          "Asherah",
+          "$wood+imp",
           "pole",
           "next",
           "to",
