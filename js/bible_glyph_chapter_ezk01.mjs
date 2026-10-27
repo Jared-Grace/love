@@ -63,7 +63,7 @@ export function bible_glyph_chapter_ezk01() {
           "$year",
           "of",
           "the",
-          "exile",
+          "$luggage+chains+thing",
           "of",
           "$king",
           "$proper_name$Jehoiachin.",
