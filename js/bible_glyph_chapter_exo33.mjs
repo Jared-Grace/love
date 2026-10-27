@@ -272,7 +272,7 @@ export function bible_glyph_chapter_exo33() {
           "to",
           "the",
           "tent,",
-          "all",
+          "$all",
           "the",
           "$family",
           "would",
