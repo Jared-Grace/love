@@ -287,7 +287,7 @@ export function bible_glyph_chapter_gen17() {
           "will",
           "be",
           "a",
-          "sign",
+          "$placard",
           "of",
           "the",
           "$covenant",
