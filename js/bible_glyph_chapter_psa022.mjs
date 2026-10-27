@@ -297,7 +297,7 @@ export function bible_glyph_chapter_psa022() {
           "$heart_organ",
           "$link",
           "like",
-          "wax;",
+          "$candle+droplet;",
           "it",
           "melts",
           "away",
