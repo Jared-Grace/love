@@ -414,7 +414,7 @@ export function bible_glyph_chapter_gen49() {
           "his",
           "$family",
           "as",
-          "one",
+          "$one",
           "of",
           "the",
           "tribes",
