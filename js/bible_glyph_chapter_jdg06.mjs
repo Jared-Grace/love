@@ -1315,7 +1315,7 @@ export function bible_glyph_chapter_jdg06() {
           "Gideon",
           "arose",
           "the",
-          "next",
+          "$sun+next_track+thing",
           "morning,",
           "he",
           "squeezed",
