@@ -399,7 +399,7 @@ export function bible_glyph_chapter_pro01() {
           "at",
           "the",
           "$city",
-          "gates",
+          "$gate",
           "she",
           "$speech:",
         ],
