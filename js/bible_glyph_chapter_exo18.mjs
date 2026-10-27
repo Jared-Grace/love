@@ -715,7 +715,7 @@ export function bible_glyph_chapter_exo18() {
       {
         verse_number: 23,
         words: [
-          "If",
+          "$traffic_light",
           "you",
           "$hammer+doing",
           "this",
