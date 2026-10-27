@@ -136,7 +136,7 @@ export function bible_glyph_chapter_isa43() {
           "Because",
           "you",
           "are",
-          "precious",
+          "$gem_stone+doing",
           "in",
           "My",
           "$eyes,",
