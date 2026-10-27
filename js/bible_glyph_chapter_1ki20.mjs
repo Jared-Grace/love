@@ -571,7 +571,7 @@ export function bible_glyph_chapter_1ki20() {
           "Ben",
           "hadad",
           "was",
-          "getting",
+          "$cup_with_straw",
           "drunk",
           "in",
           "the",
