@@ -630,7 +630,7 @@ export function bible_glyph_chapter_lam01() {
           "no",
           "one",
           "to",
-          "comfort",
+          "$hug+doing",
           "her.",
           "The",
           "$i_am",
