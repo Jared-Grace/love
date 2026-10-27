@@ -747,7 +747,7 @@ export function bible_glyph_chapter_exo22() {
           "$link",
           "as",
           "a",
-          "creditor",
+          "$coin+hand_sending+doing",
           "to",
           "him,",
           "and",
