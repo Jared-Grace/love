@@ -747,7 +747,7 @@ export function bible_glyph_chapter_exo04() {
           "let",
           "him",
           "go,",
-          "behold,",
+          "$exclamation,",
           "I",
           "will",
           "kill",
