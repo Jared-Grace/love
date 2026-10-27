@@ -469,7 +469,7 @@ export function bible_glyph_chapter_exo08() {
           "$speech",
           "to",
           "$proper_name$Aaron,",
-          "Stretch",
+          "$white_cane+doing",
           "out",
           "your",
           "staff",
