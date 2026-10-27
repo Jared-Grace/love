@@ -1550,7 +1550,7 @@ export function bible_glyph_chapter_exo12() {
           "native",
           "and",
           "the",
-          "foreigner",
+          "$foreigner",
           "who",
           "resides",
           "among",
