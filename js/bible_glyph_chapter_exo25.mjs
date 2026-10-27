@@ -444,7 +444,7 @@ export function bible_glyph_chapter_exo25() {
           "$folding_hand_fan",
           "their",
           "wings",
-          "upward,",
+          "$walking+pointing_up,",
           "covering",
           "the",
           "lid",
