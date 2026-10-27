@@ -889,7 +889,7 @@ export function bible_glyph_chapter_gen41() {
       {
         verse_number: 33,
         words: [
-          "Now,",
+          "$watch,",
           "therefore,",
           "$house+proper_name",
           "should",
