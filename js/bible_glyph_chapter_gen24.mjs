@@ -307,7 +307,7 @@ export function bible_glyph_chapter_gen24() {
           "of",
           "his",
           "$crown",
-          "camels",
+          "$camel",
           "and",
           "$walking,",
           "taking",
