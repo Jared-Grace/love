@@ -539,7 +539,7 @@ export function bible_glyph_chapter_gen44() {
           "with",
           "your",
           "$kneeling,",
-          "for",
+          "$pointing",
           "you",
           "are",
           "equal",
