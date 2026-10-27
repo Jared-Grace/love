@@ -28,7 +28,7 @@ export function bible_glyph_chapter_deu16() {
           "$i_am",
           "your",
           "$heart_on_fire,",
-          "because",
+          "$pointing",
           "in",
           "the",
           "$new_moon",
