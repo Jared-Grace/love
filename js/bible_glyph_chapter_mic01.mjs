@@ -331,7 +331,7 @@ export function bible_glyph_chapter_mic01() {
           "weep",
           "at",
           "all.",
-          "Roll",
+          "$dust+cyclone+doing",
           "in",
           "the",
           "$dust",
