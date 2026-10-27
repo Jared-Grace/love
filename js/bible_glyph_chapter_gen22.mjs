@@ -395,7 +395,7 @@ export function bible_glyph_chapter_gen22() {
           "$eyes",
           "and",
           "$eye",
-          "behind",
+          "$next_track",
           "him",
           "a",
           "$ram",
