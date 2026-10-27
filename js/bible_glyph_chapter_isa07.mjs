@@ -258,7 +258,7 @@ export function bible_glyph_chapter_isa07() {
         words: [
           "$pointing",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "$proper_name$Aram",
           "is",
