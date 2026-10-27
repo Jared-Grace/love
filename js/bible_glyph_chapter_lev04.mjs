@@ -126,7 +126,7 @@ export function bible_glyph_chapter_lev04() {
           "to",
           "$down_arrow+water+doing",
           "his",
-          "finger",
+          "$index_pointing_up",
           "in",
           "$blood",
           "and",
