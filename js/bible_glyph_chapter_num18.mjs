@@ -199,7 +199,7 @@ export function bible_glyph_chapter_num18() {
       {
         verse_number: 6,
         words: [
-          "Behold,",
+          "$exclamation,",
           "$me",
           "Myself",
           "have",
