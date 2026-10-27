@@ -260,7 +260,7 @@ export function bible_glyph_chapter_lev26() {
         words: [
           "I",
           "will",
-          "turn",
+          "$curving_right+doing",
           "toward",
           "you",
           "and",
