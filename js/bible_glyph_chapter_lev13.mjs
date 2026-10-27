@@ -617,7 +617,7 @@ export function bible_glyph_chapter_lev13() {
           "$shuffle",
           "a",
           "reddish-white",
-          "spot",
+          "$white_circle+round_pushpin",
           "$link",
           "in",
           "the",
