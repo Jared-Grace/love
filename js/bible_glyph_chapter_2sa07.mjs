@@ -172,7 +172,7 @@ export function bible_glyph_chapter_2sa07() {
           "about",
           "with",
           "a",
-          "tent",
+          "$tent",
           "as",
           "My",
           "dwelling.",
