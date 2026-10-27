@@ -127,7 +127,7 @@ export function bible_glyph_chapter_deu08() {
           "$sprout+doing",
           "$pointing_up",
           "$bread",
-          "alone,",
+          "$one+person,",
           "but",
           "$pointing_up",
           "every",
