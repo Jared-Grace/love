@@ -732,7 +732,7 @@ export function bible_glyph_chapter_1sa02() {
           "to",
           "his",
           "sons,",
-          "Why",
+          "$flashlight+question",
           "are",
           "you",
           "$hammer+doing",
