@@ -496,7 +496,7 @@ export function bible_glyph_chapter_ezk01() {
           "four",
           "rims",
           "were",
-          "full",
+          "$battery+describing",
           "of",
           "$eyes",
           "all",
