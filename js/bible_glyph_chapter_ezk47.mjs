@@ -54,7 +54,7 @@ export function bible_glyph_chapter_ezk47() {
           "under",
           "the",
           "south",
-          "side",
+          "$person_shrugging",
           "of",
           "the",
           "$house,",
