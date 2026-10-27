@@ -432,7 +432,7 @@ export function bible_glyph_chapter_num11() {
           "$hammer+doing",
           "me,",
           "$pleading",
-          "kill",
+          "$fist+skull",
           "me",
           "right",
           "now,",
