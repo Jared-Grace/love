@@ -700,7 +700,7 @@ export function bible_glyph_chapter_gen43() {
           "$hand",
           "to",
           "buy",
-          "food.",
+          "$eating+thing.",
           "We",
           "do",
           "$no_entry",
