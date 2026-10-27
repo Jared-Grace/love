@@ -410,7 +410,7 @@ export function bible_glyph_chapter_psa022() {
           "come",
           "quickly",
           "to",
-          "help",
+          "$rescue+hand+thing",
           "me.",
         ],
       },
