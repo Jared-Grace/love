@@ -985,7 +985,7 @@ export function bible_glyph_chapter_num14() {
         words: [
           "As",
           "for",
-          "you,",
+          "$you,",
           "however,",
           "your",
           "bodies",
