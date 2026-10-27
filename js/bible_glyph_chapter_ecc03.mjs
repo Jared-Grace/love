@@ -544,7 +544,7 @@ export function bible_glyph_chapter_ecc03() {
           "upward",
           "and",
           "the",
-          "spirit",
+          "$wind",
           "of",
           "the",
           "animal",
