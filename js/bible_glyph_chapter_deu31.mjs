@@ -589,7 +589,7 @@ export function bible_glyph_chapter_deu31() {
         words: [
           "Then",
           "My",
-          "anger",
+          "$nose+fire",
           "will",
           "burn",
           "against",
