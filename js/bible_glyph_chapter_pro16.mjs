@@ -141,7 +141,7 @@ export function bible_glyph_chapter_pro16() {
           "$i_am",
           "one",
           "turns",
-          "aside",
+          "$away+doing",
           "from",
           "$thumbs_down.",
         ],
