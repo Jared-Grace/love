@@ -611,7 +611,7 @@ export function bible_glyph_chapter_num09() {
           "$straight_ruler+clock+doing",
           "$pointing_up",
           "the",
-          "tabernacle",
+          "$tent+house",
           "for",
           "many",
           "$sun,",
