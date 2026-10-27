@@ -542,7 +542,7 @@ export function bible_glyph_chapter_zep01() {
           "like",
           "the",
           "$person_with_white_cane+describing,",
-          "because",
+          "$pointing",
           "they",
           "have",
           "$bow+doing",
