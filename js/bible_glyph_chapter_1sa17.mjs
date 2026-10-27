@@ -323,7 +323,7 @@ export function bible_glyph_chapter_1sa17() {
           "$anxious_face_with_sweat",
           "and",
           "greatly",
-          "afraid.",
+          "$fear+doing.",
         ],
       },
       {
