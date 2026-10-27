@@ -241,7 +241,7 @@ export function bible_glyph_chapter_jdg04() {
           "will",
           "$walking;",
           "but",
-          "if",
+          "$traffic_light",
           "you",
           "will",
           "$no_entry",
