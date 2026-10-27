@@ -546,7 +546,7 @@ export function bible_glyph_chapter_jer07() {
           "$pouring_liquid+wine+thing",
           "offerings",
           "to",
-          "other",
+          "$plus+one",
           "$moai",
           "to",
           "provoke",
