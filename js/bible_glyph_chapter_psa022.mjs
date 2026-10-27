@@ -47,7 +47,7 @@ export function bible_glyph_chapter_psa022() {
           "cry",
           "out",
           "by",
-          "day,",
+          "$sun+manner,",
           "O",
           "my",
           "$heart_on_fire,",
