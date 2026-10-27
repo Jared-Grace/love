@@ -198,7 +198,7 @@ export function bible_glyph_chapter_lev21() {
           "by",
           "her",
           "$man_beard,",
-          "for",
+          "$pointing",
           "he",
           "is",
           "$sparkle",
