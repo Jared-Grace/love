@@ -1085,7 +1085,7 @@ export function bible_glyph_chapter_2ch06() {
           "all",
           "his",
           "$road,",
-          "since",
+          "$back+flashlight",
           "You",
           "$lightbulb",
           "his",
