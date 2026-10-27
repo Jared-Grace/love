@@ -372,7 +372,7 @@ export function bible_glyph_chapter_gen20() {
           "is",
           "$one+check",
           "no",
-          "fear",
+          "$fear",
           "of",
           "$heart_on_fire",
           "in",
