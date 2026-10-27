@@ -358,7 +358,7 @@ export function bible_glyph_chapter_gen29() {
           "news",
           "about",
           "his",
-          "sister",
+          "$sister",
           "$son",
           "$hand+foot,",
           "he",
