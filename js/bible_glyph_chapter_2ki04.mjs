@@ -1277,7 +1277,7 @@ export function bible_glyph_chapter_2ki04() {
           "as",
           "many",
           "wild",
-          "gourds",
+          "$fruit+divide",
           "as",
           "his",
           "$garment",
