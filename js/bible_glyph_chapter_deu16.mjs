@@ -281,7 +281,7 @@ export function bible_glyph_chapter_deu16() {
         verse_number: 8,
         words: [
           "For",
-          "six",
+          "$six",
           "$sun",
           "you",
           "must",
