@@ -404,7 +404,7 @@ export function bible_glyph_chapter_sng02() {
           "$running+dashing_away,",
           "$around+doing,",
           "my",
-          "beloved,",
+          "$two_hearts,",
           "and",
           "be",
           "$likeness+doing",
