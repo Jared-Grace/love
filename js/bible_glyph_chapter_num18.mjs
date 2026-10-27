@@ -465,7 +465,7 @@ export function bible_glyph_chapter_num18() {
           "the",
           "freshest",
           "olive",
-          "oil",
+          "$oil+new_button",
           "and",
           "all",
           "the",
