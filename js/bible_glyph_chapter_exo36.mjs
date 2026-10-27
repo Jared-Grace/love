@@ -582,7 +582,7 @@ export function bible_glyph_chapter_exo36() {
           "upright",
           "$skateboard",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree",
           "for",
           "the",
