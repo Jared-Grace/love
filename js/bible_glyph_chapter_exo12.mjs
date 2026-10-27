@@ -1463,7 +1463,7 @@ export function bible_glyph_chapter_exo12() {
           "you",
           "may",
           "$no_entry",
-          "break",
+          "$broken_chain",
           "any",
           "of",
           "the",
