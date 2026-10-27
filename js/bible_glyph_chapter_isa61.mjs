@@ -416,7 +416,7 @@ export function bible_glyph_chapter_isa61() {
           "cause",
           "$ruler+thing",
           "and",
-          "praise",
+          "$clapping_hands+thing",
           "to",
           "spring",
           "up",
