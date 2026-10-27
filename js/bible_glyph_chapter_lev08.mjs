@@ -604,7 +604,7 @@ export function bible_glyph_chapter_lev08() {
           "$foot.",
           "Then",
           "$fishing_pole+proper_name",
-          "splattered",
+          "$shower",
           "$blood",
           "on",
           "all",
