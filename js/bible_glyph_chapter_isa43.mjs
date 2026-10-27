@@ -802,7 +802,7 @@ export function bible_glyph_chapter_isa43() {
           "case,",
           "so",
           "that",
-          "you",
+          "$you",
           "may",
           "be",
           "$ruler+doing.",
