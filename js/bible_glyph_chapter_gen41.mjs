@@ -41,7 +41,7 @@ export function bible_glyph_chapter_gen41() {
           "when",
           "$seven",
           "$bull,",
-          "sleek",
+          "$face+sparkle",
           "and",
           "fat",
           "of",
