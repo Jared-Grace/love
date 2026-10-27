@@ -549,7 +549,7 @@ export function bible_glyph_chapter_mal02() {
       {
         verse_number: 16,
         words: [
-          "For",
+          "$pointing",
           "I",
           "hate",
           "$hand_sending,",
