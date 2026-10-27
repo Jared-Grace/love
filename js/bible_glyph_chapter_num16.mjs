@@ -527,7 +527,7 @@ export function bible_glyph_chapter_num16() {
           "tomorrow,",
           "$you",
           "and",
-          "they",
+          "$pointing_back",
           "and",
           "$proper_name$Aaron.",
         ],
