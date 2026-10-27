@@ -193,7 +193,7 @@ export function bible_glyph_chapter_deu04() {
         words: [
           "$hammer+doing",
           "them",
-          "carefully,",
+          "$guard,",
           "for",
           "this",
           "will",
