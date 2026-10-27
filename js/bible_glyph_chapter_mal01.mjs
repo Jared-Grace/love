@@ -266,7 +266,7 @@ export function bible_glyph_chapter_mal01() {
           "$person_with_white_cane+describing",
           "animals",
           "for",
-          "sacrifice,",
+          "$sacrifice,",
           "is",
           "it",
           "not",
