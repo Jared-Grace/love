@@ -694,7 +694,7 @@ export function bible_glyph_chapter_gen25() {
           "red,",
           "the",
           "red,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "worn",
