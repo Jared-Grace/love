@@ -290,7 +290,7 @@ export function bible_glyph_chapter_psa042() {
           "bones,",
           "my",
           "enemies",
-          "taunt",
+          "$face_with_rolling_eyes+doing",
           "me,",
           "while",
           "they",
