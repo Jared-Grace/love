@@ -804,7 +804,7 @@ export function bible_glyph_chapter_exo16() {
           "$nose+nauseated_face+doing",
           "or",
           "$no_entry",
-          "contain",
+          "$link",
           "any",
           "maggots.",
         ],
