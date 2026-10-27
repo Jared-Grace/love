@@ -472,7 +472,7 @@ export function bible_glyph_chapter_1sa07() {
         words: [
           "The",
           "$city",
-          "which",
+          "$back+flashlight",
           "the",
           "$proper_name$Philistines",
           "had",
