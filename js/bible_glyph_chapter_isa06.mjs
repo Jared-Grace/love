@@ -191,7 +191,7 @@ export function bible_glyph_chapter_isa06() {
           "had",
           "$hand_receiving",
           "with",
-          "tongs",
+          "$pinching_hand+hand_receiving",
           "from",
           "the",
           "$altar.",
