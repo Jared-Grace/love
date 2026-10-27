@@ -127,7 +127,7 @@ export function bible_glyph_chapter_mal02() {
           "have",
           "sent",
           "you",
-          "this",
+          "$flashlight",
           "$scroll",
           "so",
           "that",
