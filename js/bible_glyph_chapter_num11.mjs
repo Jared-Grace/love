@@ -1121,7 +1121,7 @@ export function bible_glyph_chapter_num11() {
           "that",
           "$place",
           "$tomb+heart_eyes+hand_receiving+proper_name,",
-          "because",
+          "$pointing",
           "there",
           "they",
           "buried",
