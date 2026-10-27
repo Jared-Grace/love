@@ -218,7 +218,7 @@ export function bible_glyph_chapter_exo07() {
         words: [
           "$i_am",
           "$speech",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron,",
