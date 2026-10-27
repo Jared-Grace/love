@@ -604,7 +604,7 @@ export function bible_glyph_chapter_num32() {
           "$hammer+doing",
           "this",
           "$speech,",
-          "if",
+          "$traffic_light",
           "you",
           "will",
           "arm",
