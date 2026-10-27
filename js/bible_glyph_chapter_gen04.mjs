@@ -361,7 +361,7 @@ export function bible_glyph_chapter_gen04() {
           "But",
           "Cain",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$i_am,",
           "My",
