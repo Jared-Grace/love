@@ -251,7 +251,7 @@ export function bible_glyph_chapter_gen31() {
           "$dream,",
           "and",
           "the",
-          "males",
+          "$goat+horn",
           "mating",
           "with",
           "the",
