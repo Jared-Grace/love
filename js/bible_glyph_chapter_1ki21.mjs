@@ -260,7 +260,7 @@ export function bible_glyph_chapter_1ki21() {
           "not",
           "$hammer+doing",
           "the",
-          "reign",
+          "$castle",
           "over",
           "$wrestling+heart_on_fire?",
           "Get",
