@@ -1311,7 +1311,7 @@ export function bible_glyph_chapter_exo29() {
           "will",
           "also",
           "$alarm_clock+doing",
-          "there",
+          "$telescope",
           "with",
           "the",
           "$son",
