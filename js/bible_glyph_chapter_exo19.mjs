@@ -647,7 +647,7 @@ export function bible_glyph_chapter_exo19() {
           "and",
           "called",
           "$fishing_pole+proper_name",
-          "to",
+          "$toward",
           "the",
           "summit,",
           "so",
