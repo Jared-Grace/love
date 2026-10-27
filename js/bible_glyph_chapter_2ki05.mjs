@@ -119,7 +119,7 @@ export function bible_glyph_chapter_2ki05() {
           "him",
           "of",
           "his",
-          "leprosy.",
+          "$microbe.",
         ],
       },
       {
