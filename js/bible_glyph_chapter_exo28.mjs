@@ -763,7 +763,7 @@ export function bible_glyph_chapter_exo28() {
           "so",
           "that",
           "the",
-          "breastpiece",
+          "$gem_stone+t_shirt",
           "is",
           "above",
           "the",
