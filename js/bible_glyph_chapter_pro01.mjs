@@ -295,7 +295,7 @@ export function bible_glyph_chapter_pro01() {
           "$pointing",
           "their",
           "feet",
-          "run",
+          "$running",
           "to",
           "$thumbs_down,",
           "and",
