@@ -430,7 +430,7 @@ export function bible_glyph_chapter_isa02() {
       {
         verse_number: 15,
         words: [
-          "against",
+          "$pointing_up",
           "every",
           "high",
           "$tower",
