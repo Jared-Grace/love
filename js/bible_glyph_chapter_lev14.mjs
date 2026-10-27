@@ -546,7 +546,7 @@ export function bible_glyph_chapter_lev14() {
           "The",
           "$priest",
           "shall",
-          "dip",
+          "$down_arrow+water+doing",
           "his",
           "right",
           "forefinger",
