@@ -45,7 +45,7 @@ export function bible_glyph_chapter_isa26() {
       {
         verse_number: 2,
         words: [
-          "Open",
+          "$unlocked",
           "the",
           "$gate$s",
           "so",
