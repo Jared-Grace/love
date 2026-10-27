@@ -300,7 +300,7 @@ export function bible_glyph_chapter_psa042() {
           "$all",
           "$sun",
           "long,",
-          "Where",
+          "$question+round_pushpin",
           "is",
           "your",
           "$heart_on_fire?",
