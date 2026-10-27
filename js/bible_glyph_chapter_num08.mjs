@@ -76,7 +76,7 @@ export function bible_glyph_chapter_num08() {
       {
         verse_number: 4,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "how",
           "the",
