@@ -199,7 +199,7 @@ export function bible_glyph_chapter_psa046() {
           "He",
           "breaks",
           "the",
-          "bow",
+          "$bow+wood",
           "and",
           "shatters",
           "the",
