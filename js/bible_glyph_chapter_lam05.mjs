@@ -390,7 +390,7 @@ export function bible_glyph_chapter_lam05() {
           "us",
           "and",
           "remain",
-          "angry",
+          "$angry_face+collision+doing",
           "with",
           "us",
           "beyond",
