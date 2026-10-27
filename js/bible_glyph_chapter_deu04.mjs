@@ -1153,7 +1153,7 @@ export function bible_glyph_chapter_deu04() {
           "$tray_out",
           "the",
           "$sun",
-          "that",
+          "$back+flashlight",
           "$heart_on_fire",
           "created",
           "$person",
