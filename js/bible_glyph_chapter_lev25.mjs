@@ -1342,7 +1342,7 @@ export function bible_glyph_chapter_lev25() {
           "of",
           "the",
           "foreigners",
-          "residing",
+          "$luggage",
           "among",
           "you,",
           "or",
