@@ -60,7 +60,7 @@ export function bible_glyph_chapter_zec04() {
           "the",
           "top",
           "and",
-          "seven",
+          "$seven",
           "lamps",
           "on",
           "it,",
