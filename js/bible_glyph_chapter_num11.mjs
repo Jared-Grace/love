@@ -340,7 +340,7 @@ export function bible_glyph_chapter_num11() {
           "these",
           "$family?",
           "Did",
-          "I",
+          "$me",
           "give",
           "them",
           "birth,",
