@@ -62,7 +62,7 @@ export function bible_glyph_chapter_lev06() {
           "it",
           "and",
           "swears",
-          "falsely,",
+          "$lying_face,",
           "so",
           "that",
           "$person",
