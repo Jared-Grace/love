@@ -371,7 +371,7 @@ export function bible_glyph_chapter_num22() {
           "against",
           "them",
           "and",
-          "drive",
+          "$door+leftwards_pushing_hand+doing",
           "them",
           "away.",
         ],
