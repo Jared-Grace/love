@@ -434,7 +434,7 @@ export function bible_glyph_chapter_exo04() {
           "of",
           "the",
           "$i_am",
-          "burned",
+          "$angry_face+doing",
           "against",
           "$fishing_pole+proper_name,",
           "and",
