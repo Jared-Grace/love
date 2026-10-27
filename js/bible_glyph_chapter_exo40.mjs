@@ -245,7 +245,7 @@ export function bible_glyph_chapter_exo40() {
         words: [
           "$oil+doing",
           "the",
-          "basin",
+          "$bucket+soap",
           "and",
           "its",
           "stand,",
