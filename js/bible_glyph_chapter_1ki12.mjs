@@ -96,7 +96,7 @@ export function bible_glyph_chapter_1ki12() {
           "put",
           "a",
           "heavy",
-          "yoke",
+          "$yoke",
           "on",
           "us.",
           "But",
