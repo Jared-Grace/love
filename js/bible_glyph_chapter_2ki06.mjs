@@ -19,7 +19,7 @@ export function bible_glyph_chapter_2ki06() {
           "the",
           "$megaphone",
           "$speech",
-          "to",
+          "$toward",
           "$heart_on_fire+rescue,",
           "Please",
           "take",
