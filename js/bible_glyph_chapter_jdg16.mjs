@@ -1016,7 +1016,7 @@ export function bible_glyph_chapter_jdg16() {
           "so",
           "I",
           "can",
-          "lean",
+          "$crutch+doing",
           "against",
           "them.",
         ],
