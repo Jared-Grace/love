@@ -299,7 +299,7 @@ export function bible_glyph_chapter_deu19() {
           "all",
           "these",
           "$scroll",
-          "I",
+          "$me",
           "am",
           "giving",
           "you",
