@@ -80,7 +80,7 @@ export function bible_glyph_chapter_num20() {
           "with",
           "our",
           "$brother",
-          "before",
+          "$face",
           "the",
           "$i_am!",
         ],
