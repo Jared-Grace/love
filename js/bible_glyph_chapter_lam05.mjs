@@ -273,7 +273,7 @@ export function bible_glyph_chapter_lam05() {
         verse_number: 16,
         words: [
           "The",
-          "crown",
+          "$crown+thing",
           "has",
           "fallen",
           "from",
