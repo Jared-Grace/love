@@ -1378,7 +1378,7 @@ export function bible_glyph_chapter_num16() {
         words: [
           "$fishing_pole+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Aaron,",
           "$hand_receiving",
           "your",
