@@ -23,7 +23,7 @@ export function bible_glyph_chapter_gen15() {
           "the",
           "$i_am",
           "$link",
-          "to",
+          "$toward",
           "$proper_name$Abram",
           "in",
           "a",
