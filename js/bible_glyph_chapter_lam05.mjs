@@ -226,7 +226,7 @@ export function bible_glyph_chapter_lam05() {
           "$lifting",
           "at",
           "millstones;",
-          "boys",
+          "$child+flexed_biceps",
           "stagger",
           "under",
           "loads",
