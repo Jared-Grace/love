@@ -747,7 +747,7 @@ export function bible_glyph_chapter_num35() {
           "must",
           "live",
           "there",
-          "until",
+          "$finish",
           "the",
           "$skull",
           "of",
