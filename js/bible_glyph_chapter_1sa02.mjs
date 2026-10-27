@@ -544,7 +544,7 @@ export function bible_glyph_chapter_1sa02() {
           "young",
           "men",
           "$link",
-          "severe",
+          "$top",
           "in",
           "the",
           "sight",
