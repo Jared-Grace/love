@@ -874,7 +874,7 @@ export function bible_glyph_chapter_num15() {
           "$person_other",
           "shall",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "among",
