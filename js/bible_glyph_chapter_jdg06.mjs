@@ -511,7 +511,7 @@ export function bible_glyph_chapter_jdg06() {
           "The",
           "$i_am",
           "$speech,",
-          "Surely",
+          "$pointing",
           "I",
           "will",
           "be",
