@@ -203,7 +203,7 @@ export function bible_glyph_chapter_mal04() {
           "to",
           "their",
           "$father.",
-          "Otherwise,",
+          "$no_entry+traffic_light,",
           "I",
           "will",
           "$footprints",
