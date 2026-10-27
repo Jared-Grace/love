@@ -214,7 +214,7 @@ export function bible_glyph_chapter_nam03() {
           "$around",
           "her,",
           "whose",
-          "rampart",
+          "$shield+hole",
           "was",
           "the",
           "$sea,",
