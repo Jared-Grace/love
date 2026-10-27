@@ -388,7 +388,7 @@ export function bible_glyph_chapter_jer31() {
           "they",
           "will",
           "be",
-          "radiant",
+          "$sparkles+face+doing",
           "over",
           "the",
           "bounty",
