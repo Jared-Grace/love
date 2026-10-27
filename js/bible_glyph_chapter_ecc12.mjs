@@ -259,7 +259,7 @@ export function bible_glyph_chapter_ecc12() {
           "$speech",
           "the",
           "Teacher.",
-          "Everything",
+          "$all",
           "is",
           "futile.",
         ],
