@@ -598,7 +598,7 @@ export function bible_glyph_chapter_job01() {
           "are",
           "$skull+doing,",
           "and",
-          "I",
+          "$me",
           "alone",
           "have",
           "escaped",
