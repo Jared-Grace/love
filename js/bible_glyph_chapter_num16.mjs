@@ -446,7 +446,7 @@ export function bible_glyph_chapter_num16() {
           "$hands_giving",
           "us",
           "an",
-          "inheritance",
+          "$inheritance",
           "of",
           "fields",
           "and",
