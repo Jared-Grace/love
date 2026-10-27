@@ -1363,7 +1363,7 @@ export function bible_glyph_chapter_1ki20() {
           "$walking",
           "away,",
           "a",
-          "lion",
+          "$lion",
           "found",
           "him",
           "and",
