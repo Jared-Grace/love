@@ -221,7 +221,7 @@ export function bible_glyph_chapter_psa034() {
           "$i_am",
           "will",
           "$no_entry",
-          "lack",
+          "$empty_nest+doing",
           "any",
           "$thumbs_up",
           "thing.",
