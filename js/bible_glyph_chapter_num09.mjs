@@ -398,7 +398,7 @@ export function bible_glyph_chapter_num09() {
           "he",
           "did",
           "$no_entry",
-          "present",
+          "$magnet+doing",
           "the",
           "$magnet+gift",
           "of",
