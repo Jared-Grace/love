@@ -47,7 +47,7 @@ export function bible_glyph_chapter_isa06() {
         words: [
           "Above",
           "Him",
-          "stood",
+          "$person+round_pushpin",
           "$fire+snake,",
           "each",
           "having",
