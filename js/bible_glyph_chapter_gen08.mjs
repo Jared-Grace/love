@@ -607,7 +607,7 @@ export function bible_glyph_chapter_gen08() {
           "$thumbs_down",
           "from",
           "his",
-          "youth.",
+          "$child+flexed_biceps+thing.",
           "And",
           "$no_entry",
           "again",
