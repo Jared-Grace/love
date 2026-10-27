@@ -516,7 +516,7 @@ export function bible_glyph_chapter_mal03() {
           "$brick,",
           "they",
           "even",
-          "test",
+          "$microscope",
           "$heart_on_fire",
           "and",
           "escape.",
