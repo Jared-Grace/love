@@ -1213,7 +1213,7 @@ export function bible_glyph_chapter_gen41() {
           "And",
           "$house+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$i_am+plus,",
           '"I',
           "am",
