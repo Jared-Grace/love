@@ -689,7 +689,7 @@ export function bible_glyph_chapter_1ch29() {
           "my",
           "$son",
           "a",
-          "whole",
+          "$peace+describing",
           "$heart_organ",
           "to",
           "keep",
