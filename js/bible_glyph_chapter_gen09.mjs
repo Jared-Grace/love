@@ -749,7 +749,7 @@ export function bible_glyph_chapter_gen09() {
         words: [
           "$next_track",
           "the",
-          "flood",
+          "$water_wave+earth",
           "$proper_name$Noah",
           "$sprout+doing",
           "three",
