@@ -266,7 +266,7 @@ export function bible_glyph_chapter_jos02() {
           "up",
           "$pointing_up",
           "the",
-          "roof",
+          "$house+top",
         ],
       },
       {
