@@ -319,7 +319,7 @@ export function bible_glyph_chapter_nam02() {
           "The",
           "$lion",
           "mauled",
-          "enough",
+          "$check+all",
           "for",
           "its",
           "cubs",
