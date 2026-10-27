@@ -289,7 +289,7 @@ export function bible_glyph_chapter_isa40() {
           "$hand+might",
           "establishes",
           "His",
-          "rule.",
+          "$joystick.",
           "His",
           "reward",
           "is",
