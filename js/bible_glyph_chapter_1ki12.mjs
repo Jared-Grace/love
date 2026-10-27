@@ -679,7 +679,7 @@ export function bible_glyph_chapter_1ki12() {
           "$two_hearts+proper_name",
           "but",
           "the",
-          "tribe",
+          "$wood",
           "of",
           "$hands_raised+proper_name.",
         ],
