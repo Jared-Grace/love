@@ -278,7 +278,7 @@ export function bible_glyph_chapter_lev13() {
           "on",
           "his",
           "skin",
-          "after",
+          "$next_track",
           "he",
           "has",
           "$eye",
