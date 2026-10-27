@@ -362,7 +362,7 @@ export function bible_glyph_chapter_pro16() {
           "guards",
           "his",
           "$road",
-          "protects",
+          "$guard",
           "his",
           "life.",
         ],
