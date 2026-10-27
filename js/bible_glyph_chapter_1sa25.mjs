@@ -588,7 +588,7 @@ export function bible_glyph_chapter_1sa25() {
           "and",
           "$hand_receiving",
           "two",
-          "hundred",
+          "$input_numbers+all",
           "loaves",
           "of",
           "$bread,",
