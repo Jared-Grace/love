@@ -154,7 +154,7 @@ export function bible_glyph_chapter_deu09() {
           "in",
           "to",
           "possess",
-          "this",
+          "$flashlight",
           "$earth.",
           "Rather,",
           "$i_am",
