@@ -384,7 +384,7 @@ export function bible_glyph_chapter_jdg16() {
           "with",
           "$new_button",
           "$thread+repeat",
-          "that",
+          "$back+flashlight",
           "have",
           "$no_entry",
           "been",
