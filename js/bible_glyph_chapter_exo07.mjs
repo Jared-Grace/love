@@ -249,7 +249,7 @@ export function bible_glyph_chapter_exo07() {
           "$throwing",
           "it",
           "down",
-          "before",
+          "$face",
           "$house+proper_name,",
           "and",
           "it",
