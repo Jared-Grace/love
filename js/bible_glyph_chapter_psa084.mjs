@@ -43,7 +43,7 @@ export function bible_glyph_chapter_psa084() {
         words: [
           "My",
           "$person_other",
-          "longs,",
+          "$heart_eyes+hourglass+doing,",
           "even",
           "faints,",
           "for",
