@@ -659,7 +659,7 @@ export function bible_glyph_chapter_gen22() {
         words: [
           "Moreover,",
           "his",
-          "concubine,",
+          "$woman+second_place,",
           "whose",
           "$name_tag",
           "was",
