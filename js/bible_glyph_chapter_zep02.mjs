@@ -299,7 +299,7 @@ export function bible_glyph_chapter_zep02() {
           "of",
           "weeds",
           "and",
-          "salt",
+          "$salt",
           "pits,",
           "a",
           "$hourglass",
