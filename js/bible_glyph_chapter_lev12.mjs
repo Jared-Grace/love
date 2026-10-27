@@ -186,7 +186,7 @@ export function bible_glyph_chapter_lev12() {
           "$priest",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "$tent",
