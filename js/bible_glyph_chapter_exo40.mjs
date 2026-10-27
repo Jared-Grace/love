@@ -830,7 +830,7 @@ export function bible_glyph_chapter_exo40() {
           "to",
           "$footprints",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting,",
           "because",
