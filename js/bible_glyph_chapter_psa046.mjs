@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa046() {
           "and",
           "the",
           "$mountain",
-          "quake",
+          "$earth+up_down_arrow+doing",
           "in",
           "the",
           "surge.",
