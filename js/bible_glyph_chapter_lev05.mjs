@@ -612,7 +612,7 @@ export function bible_glyph_chapter_lev05() {
           "He",
           "was",
           "certainly",
-          "guilty",
+          "$sacrifice+scales+doing",
           "before",
           "$i_am.",
         ],
