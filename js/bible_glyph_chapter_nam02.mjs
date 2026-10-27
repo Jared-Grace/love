@@ -374,7 +374,7 @@ export function bible_glyph_chapter_nam02() {
           "lions.",
           "I",
           "will",
-          "cut",
+          "$scissors",
           "off",
           "your",
           "prey",
