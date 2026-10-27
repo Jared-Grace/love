@@ -54,7 +54,7 @@ export function bible_glyph_chapter_jer31() {
           "survived",
           "the",
           "$sword",
-          "found",
+          "$magnifying_glass+exclamation",
           "favor",
           "in",
           "the",
