@@ -543,7 +543,7 @@ export function bible_glyph_chapter_exo27() {
           "$tent",
           "of",
           "$alarm_clock,",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$veil",
           "that",
