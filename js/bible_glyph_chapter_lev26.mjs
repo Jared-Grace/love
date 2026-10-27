@@ -812,7 +812,7 @@ export function bible_glyph_chapter_lev26() {
         verse_number: 27,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "in",
           "spite",
           "of",
