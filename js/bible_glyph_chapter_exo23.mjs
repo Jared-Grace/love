@@ -390,7 +390,7 @@ export function bible_glyph_chapter_exo23() {
           "You",
           "are",
           "to",
-          "keep",
+          "$guard",
           "the",
           "$party_popper",
           "of",
