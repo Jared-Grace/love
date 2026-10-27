@@ -271,7 +271,7 @@ export function bible_glyph_chapter_2sa06() {
           "$i_am",
           "and",
           "$speech,",
-          "How",
+          "$question+likeness",
           "can",
           "the",
           "ark",
