@@ -527,7 +527,7 @@ export function bible_glyph_chapter_isa26() {
           "in",
           "the",
           "$dust!",
-          "For",
+          "$pointing",
           "your",
           "$dew",
           "is",
