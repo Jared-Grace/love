@@ -242,7 +242,7 @@ export function bible_glyph_chapter_num22() {
           "the",
           "fees",
           "for",
-          "divination",
+          "$crystal_ball",
           "in",
           "their",
           "$hand.",
