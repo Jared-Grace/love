@@ -675,7 +675,7 @@ export function bible_glyph_chapter_gen49() {
           "he",
           "devours",
           "the",
-          "prey,",
+          "$money_bag+sword,",
           "and",
           "in",
           "the",
