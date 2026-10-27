@@ -264,7 +264,7 @@ export function bible_glyph_chapter_jos07() {
           "they",
           "all",
           "sprinkled",
-          "dust",
+          "$dust",
           "on",
           "their",
           "heads.",
