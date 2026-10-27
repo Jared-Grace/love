@@ -195,7 +195,7 @@ export function bible_glyph_chapter_neh01() {
           "of",
           "Your",
           "$kneeling",
-          "that",
+          "$back+flashlight",
           "I",
           "$hands_praying",
           "before",
