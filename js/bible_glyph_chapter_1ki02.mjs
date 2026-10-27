@@ -601,7 +601,7 @@ export function bible_glyph_chapter_1ki02() {
       {
         verse_number: 18,
         words: [
-          "Bathsheba",
+          "$girl+family+raised_back_of_hand+proper_name",
           "$speech,",
           "$thumbs_up.",
           "I",
