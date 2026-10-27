@@ -713,7 +713,7 @@ export function bible_glyph_chapter_deu12() {
           "any",
           "of",
           "the",
-          "herd",
+          "$cow_face",
           "or",
           "$sheep",
           "$i_am",
