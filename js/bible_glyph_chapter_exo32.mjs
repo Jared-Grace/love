@@ -1116,7 +1116,7 @@ export function bible_glyph_chapter_exo32() {
           "Me",
           "I",
           "will",
-          "blot",
+          "$broom+doing",
           "out",
           "of",
           "My",
