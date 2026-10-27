@@ -225,7 +225,7 @@ export function bible_glyph_chapter_mic01() {
           "smashed",
           "to",
           "pieces;",
-          "all",
+          "$all",
           "her",
           "wages",
           "will",
