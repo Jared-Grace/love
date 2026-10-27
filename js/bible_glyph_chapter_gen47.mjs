@@ -481,7 +481,7 @@ export function bible_glyph_chapter_gen47() {
           "$earth",
           "of",
           "$proper_name$Canaan,",
-          "all",
+          "$all",
           "the",
           "$clamp+person",
           "$footprints",
