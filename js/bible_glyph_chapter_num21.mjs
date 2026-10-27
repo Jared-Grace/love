@@ -826,7 +826,7 @@ export function bible_glyph_chapter_num21() {
           "the",
           "$snow_capped_mountain",
           "of",
-          "Arnon.",
+          "$water_wave+loudspeaker+proper_name.",
         ],
       },
       {
