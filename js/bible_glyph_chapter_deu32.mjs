@@ -1026,7 +1026,7 @@ export function bible_glyph_chapter_deu32() {
           "$wine",
           "of",
           "their",
-          "drink",
+          "$pouring_liquid+wine+thing",
           "offerings?",
           "Let",
           "them",
