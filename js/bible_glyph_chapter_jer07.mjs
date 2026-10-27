@@ -867,7 +867,7 @@ export function bible_glyph_chapter_jer07() {
           "$speech",
           "to",
           "them,",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$map",
