@@ -68,7 +68,7 @@ export function bible_glyph_chapter_mic05() {
           "One",
           "to",
           "be",
-          "ruler",
+          "$joystick",
           "over",
           "$wrestling+heart_on_fire",
           "-",
