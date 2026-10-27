@@ -280,7 +280,7 @@ export function bible_glyph_chapter_gen14() {
           "$proper_name$Sodom",
           "and",
           "$proper_name$Gomorrah",
-          "fled,",
+          "$running+dashing_away,",
           "some",
           "fell",
           "into",
