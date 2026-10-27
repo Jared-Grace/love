@@ -191,7 +191,7 @@ export function bible_glyph_chapter_exo16() {
           "it",
           "will",
           "be",
-          "twice",
+          "$two+multiply",
           "as",
           "much",
           "as",
