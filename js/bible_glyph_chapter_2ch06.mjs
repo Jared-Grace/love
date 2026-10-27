@@ -134,7 +134,7 @@ export function bible_glyph_chapter_2ch06() {
           "$city",
           "from",
           "any",
-          "tribe",
+          "$wood",
           "of",
           "$wrestling+heart_on_fire",
           "in",
