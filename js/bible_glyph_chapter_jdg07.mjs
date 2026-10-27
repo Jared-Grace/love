@@ -720,7 +720,7 @@ export function bible_glyph_chapter_jdg07() {
           "changing",
           "of",
           "the",
-          "guard.",
+          "$guard.",
           "They",
           "blew",
           "their",
