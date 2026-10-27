@@ -52,7 +52,7 @@ export function bible_glyph_chapter_lev10() {
           "out",
           "from",
           "the",
-          "presence",
+          "$face",
           "$i_am",
           "and",
           "consumed",
