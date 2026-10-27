@@ -102,7 +102,7 @@ export function bible_glyph_chapter_psa073() {
           "are",
           "$no_entry",
           "afflicted",
-          "like",
+          "$linked_paperclips",
           "other",
           "$person.",
         ],
