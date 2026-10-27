@@ -865,7 +865,7 @@ export function bible_glyph_chapter_lev11() {
       {
         verse_number: 36,
         words: [
-          "Nevertheless,",
+          "$check+exclamation,",
           "a",
           "$spring",
           "or",
