@@ -96,7 +96,7 @@ export function bible_glyph_chapter_ecc12() {
           "$pointing",
           "they",
           "are",
-          "few,",
+          "$down_arrow+pinching_hand+doing,",
           "and",
           "those",
           "$eye",
