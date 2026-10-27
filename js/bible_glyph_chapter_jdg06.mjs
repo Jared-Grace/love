@@ -1272,7 +1272,7 @@ export function bible_glyph_chapter_jdg06() {
           "$traffic_light",
           "there",
           "is",
-          "dew",
+          "$dew",
           "on",
           "the",
           "fleece",
