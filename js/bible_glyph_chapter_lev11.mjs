@@ -1031,7 +1031,7 @@ export function bible_glyph_chapter_lev11() {
           "$walking",
           "on",
           "its",
-          "belly",
+          "$pregnant_woman+place",
           "or",
           "$walking",
           "on",
