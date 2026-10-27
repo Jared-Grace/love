@@ -153,7 +153,7 @@ export function bible_glyph_chapter_amo09() {
           "by",
           "their",
           "enemies,",
-          "there",
+          "$telescope",
           "I",
           "will",
           "command",
