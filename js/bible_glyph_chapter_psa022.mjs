@@ -615,7 +615,7 @@ export function bible_glyph_chapter_psa022() {
         verse_number: 28,
         words: [
           "$pointing",
-          "dominion",
+          "$castle",
           "belongs",
           "to",
           "the",
