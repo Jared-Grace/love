@@ -592,7 +592,7 @@ export function bible_glyph_chapter_dan01() {
           "which",
           "the",
           "$king",
-          "consulted",
+          "$magnifying_glass",
           "them,",
           "he",
           "found",
