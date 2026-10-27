@@ -654,7 +654,7 @@ export function bible_glyph_chapter_exo13() {
           "$proper_name$Etham",
           "on",
           "the",
-          "edge",
+          "$end_arrow+round_pushpin",
           "of",
           "the",
           "$wilderness.",
