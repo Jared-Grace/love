@@ -254,7 +254,7 @@ export function bible_glyph_chapter_job03() {
       {
         verse_number: 12,
         words: [
-          "Why",
+          "$flashlight+question+lightbulb",
           "were",
           "there",
           "knees",
