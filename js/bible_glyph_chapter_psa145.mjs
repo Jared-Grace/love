@@ -378,7 +378,7 @@ export function bible_glyph_chapter_psa145() {
           "The",
           "$i_am",
           "is",
-          "near",
+          "$magnet",
           "to",
           "all",
           "who",
