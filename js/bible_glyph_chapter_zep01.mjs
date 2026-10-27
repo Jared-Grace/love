@@ -273,7 +273,7 @@ export function bible_glyph_chapter_zep01() {
           "are",
           "dressed",
           "in",
-          "foreign",
+          "$detective+describing",
           "$garment+thing.",
         ],
       },
