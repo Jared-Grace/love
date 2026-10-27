@@ -489,7 +489,7 @@ export function bible_glyph_chapter_gen29() {
           "will",
           "$kneeling+doing",
           "you",
-          "seven",
+          "$seven",
           "$year",
           "for",
           "your",
