@@ -990,7 +990,7 @@ export function bible_glyph_chapter_neh09() {
           "In",
           "Your",
           "great",
-          "compassion",
+          "$hugging_face",
           "You",
           "$hands_giving",
           "them",
