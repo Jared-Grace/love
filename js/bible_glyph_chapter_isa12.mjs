@@ -58,7 +58,7 @@ export function bible_glyph_chapter_isa12() {
           "$no_entry",
           "be",
           "afraid.",
-          "For",
+          "$pointing",
           "the",
           "LORD",
           "$i_am",
