@@ -559,7 +559,7 @@ export function bible_glyph_chapter_2ch34() {
           "$priest",
           "$magnifying_glass+exclamation",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "$scroll",
