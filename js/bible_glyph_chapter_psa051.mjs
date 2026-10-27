@@ -288,7 +288,7 @@ export function bible_glyph_chapter_psa051() {
           "Then",
           "I",
           "will",
-          "teach",
+          "$learner+doing",
           "transgressors",
           "Your",
           "$road,",
