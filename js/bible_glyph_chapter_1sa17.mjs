@@ -889,7 +889,7 @@ export function bible_glyph_chapter_1sa17() {
           "$speech",
           "$two_hearts+proper_name.",
           "Was",
-          "it",
+          "$pointing_back",
           "not",
           "just",
           "a",
