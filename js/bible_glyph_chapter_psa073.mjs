@@ -220,7 +220,7 @@ export function bible_glyph_chapter_psa073() {
           "the",
           "$thumbs_down,",
           "$hourglass",
-          "carefree",
+          "$person_in_lotus_position+describing",
           "as",
           "they",
           "increase",
