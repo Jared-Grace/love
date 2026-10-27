@@ -99,7 +99,7 @@ export function bible_glyph_chapter_psa130() {
           "My",
           "$person_other",
           "does",
-          "wait,",
+          "$crossed_fingers+doing,",
           "and",
           "in",
           "His",
