@@ -1034,7 +1034,7 @@ export function bible_glyph_chapter_num21() {
           "And",
           "they",
           "took",
-          "possession",
+          "$triangular_flag",
           "of",
           "his",
           "$earth.",
