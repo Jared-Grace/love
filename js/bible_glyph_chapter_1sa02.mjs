@@ -592,7 +592,7 @@ export function bible_glyph_chapter_1sa02() {
           "him",
           "a",
           "little",
-          "robe",
+          "$cloak",
           "and",
           "bring",
           "it",
