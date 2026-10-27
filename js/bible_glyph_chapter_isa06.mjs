@@ -116,7 +116,7 @@ export function bible_glyph_chapter_isa06() {
           "doorposts",
           "and",
           "thresholds",
-          "shook,",
+          "$up_down_arrow+doing,",
           "and",
           "the",
           "$house",
