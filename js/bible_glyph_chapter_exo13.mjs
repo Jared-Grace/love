@@ -472,7 +472,7 @@ export function bible_glyph_chapter_exo13() {
           "male",
           "of",
           "every",
-          "womb,",
+          "$hugging_face+baby,",
           "but",
           "redeem",
           "all",
