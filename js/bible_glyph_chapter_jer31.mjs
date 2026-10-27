@@ -422,7 +422,7 @@ export function bible_glyph_chapter_jer31() {
           "$garden,",
           "and",
           "$no_entry",
-          "again",
+          "$plus+doing",
           "will",
           "they",
           "languish.",
