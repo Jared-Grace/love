@@ -533,7 +533,7 @@ export function bible_glyph_chapter_lev14() {
           "it",
           "into",
           "the",
-          "left",
+          "$hand+away+describing",
           "$hand_with_fingers_splayed",
           "of",
           "the",
