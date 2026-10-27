@@ -149,7 +149,7 @@ export function bible_glyph_chapter_num17() {
           "So",
           "$fishing_pole+proper_name",
           "$mouth",
-          "to",
+          "$toward",
           "the",
           "$son",
           "of",
