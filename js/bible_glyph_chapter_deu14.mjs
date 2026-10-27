@@ -195,7 +195,7 @@ export function bible_glyph_chapter_deu14() {
           "have",
           "a",
           "divided",
-          "hoof.",
+          "$cow_face+foot.",
           "They",
           "are",
           "unclean",
