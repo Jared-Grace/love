@@ -760,7 +760,7 @@ export function bible_glyph_chapter_deu12() {
           "$soap+no_entry",
           "and",
           "the",
-          "clean",
+          "$soap+describing",
           "may",
           "$eating",
           "it.",
