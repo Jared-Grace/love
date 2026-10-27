@@ -374,7 +374,7 @@ export function bible_glyph_chapter_ezk37() {
         verse_number: 12,
         words: [
           "$right_arrow",
-          "prophesy",
+          "$megaphone+doing",
           "and",
           "$speech",
           "them",
