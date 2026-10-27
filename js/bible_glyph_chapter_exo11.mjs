@@ -37,7 +37,7 @@ export function bible_glyph_chapter_exo11() {
           "you",
           "go",
           "from",
-          "this",
+          "$flashlight",
           "place,",
           "and",
           "when",
