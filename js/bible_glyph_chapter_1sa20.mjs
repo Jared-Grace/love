@@ -660,7 +660,7 @@ export function bible_glyph_chapter_1sa20() {
           "$three+doing",
           "days,",
           "hurry",
-          "down",
+          "$walking+pointing_down",
           "and",
           "$footprints",
           "to",
