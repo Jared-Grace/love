@@ -1326,7 +1326,7 @@ export function bible_glyph_chapter_jer31() {
           "$proper_name$Hananel",
           "to",
           "the",
-          "Corner",
+          "$triangular_ruler+brick",
           "$gate.",
         ],
       },
