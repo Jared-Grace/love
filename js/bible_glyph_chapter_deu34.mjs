@@ -381,7 +381,7 @@ export function bible_glyph_chapter_deu34() {
           "and",
           "awesome",
           "deeds",
-          "that",
+          "$back+flashlight",
           "$fishing_pole+proper_name",
           "did",
           "in",
