@@ -323,7 +323,7 @@ export function bible_glyph_chapter_isa07() {
           "the",
           "$i_am",
           "$mouth",
-          "to",
+          "$toward",
           "$proper_name$Ahaz,",
           "$speech,",
         ],
