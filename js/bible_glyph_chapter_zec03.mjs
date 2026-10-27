@@ -62,7 +62,7 @@ export function bible_glyph_chapter_zec03() {
           "has",
           "chosen",
           "$city+peace",
-          "rebukes",
+          "$pointing+anger_symbol+doing",
           "you!",
           "Is",
           "$no_entry",
