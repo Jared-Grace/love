@@ -711,7 +711,7 @@ export function bible_glyph_chapter_ezk01() {
           "as",
           "they",
           "stood",
-          "still",
+          "$person+round_pushpin",
           "with",
           "their",
           "wings",
