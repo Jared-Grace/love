@@ -898,7 +898,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "grope",
           "about",
-          "like",
+          "$back+flashlight",
           "a",
           "blind",
           "man",
