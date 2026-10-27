@@ -598,7 +598,7 @@ export function bible_glyph_chapter_num22() {
           "I",
           "may",
           "$lightbulb",
-          "what",
+          "$flashlight+question",
           "more",
           "the",
           "$i_am",
