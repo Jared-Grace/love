@@ -615,7 +615,7 @@ export function bible_glyph_chapter_jhn04() {
           "“I",
           "$lightbulb",
           "$pointing",
-          "Messiah",
+          "$oil",
           "$footprints,",
           "who",
           "is",
