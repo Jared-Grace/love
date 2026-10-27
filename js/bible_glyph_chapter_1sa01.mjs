@@ -732,7 +732,7 @@ export function bible_glyph_chapter_1sa01() {
           "nursed",
           "her",
           "$son",
-          "until",
+          "$finish",
           "she",
           "had",
           "weaned",
