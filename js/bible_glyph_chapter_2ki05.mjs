@@ -647,7 +647,7 @@ export function bible_glyph_chapter_2ki05() {
           "$hands_giving",
           "as",
           "much",
-          "soil",
+          "$brown_square",
           "as",
           "a",
           "$ox+two",
