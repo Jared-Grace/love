@@ -61,7 +61,7 @@ export function bible_glyph_chapter_jdg06() {
           "$hammer+doing",
           "for",
           "themselves",
-          "shelters",
+          "$cave+water_wave",
           "in",
           "the",
           "$mountain,",
