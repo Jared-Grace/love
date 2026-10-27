@@ -58,7 +58,7 @@ export function bible_glyph_chapter_1ki19() {
           "by",
           "this",
           "$clock",
-          "tomorrow",
+          "$sun+next_track",
           "I",
           "have",
           "not",
