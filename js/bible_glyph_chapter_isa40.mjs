@@ -743,7 +743,7 @@ export function bible_glyph_chapter_isa40() {
           "$person+question",
           "$milky_way+doing",
           "all",
-          "these?",
+          "$flashlight+flashlight?",
           "He",
           "leads",
           "forth",
