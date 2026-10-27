@@ -864,7 +864,7 @@ export function bible_glyph_chapter_jdg06() {
         verse_number: 26,
         words: [
           "Then",
-          "build",
+          "$brick",
           "a",
           "proper",
           "$altar",
