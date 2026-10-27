@@ -770,7 +770,7 @@ export function bible_glyph_chapter_1ki17() {
           "I",
           "$lightbulb",
           "that",
-          "you",
+          "$you",
           "are",
           "a",
           "$man_beard",
