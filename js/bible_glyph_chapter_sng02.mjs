@@ -247,7 +247,7 @@ export function bible_glyph_chapter_sng02() {
           "is",
           "past;",
           "the",
-          "rain",
+          "$rain+water_wave",
           "is",
           "over",
           "and",
