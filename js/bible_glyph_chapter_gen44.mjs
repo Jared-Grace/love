@@ -447,7 +447,7 @@ export function bible_glyph_chapter_gen44() {
           "has",
           "found",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "your",
           "$kneeling.",
