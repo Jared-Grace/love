@@ -856,7 +856,7 @@ export function bible_glyph_chapter_exo34() {
           "in",
           "its",
           "mother's",
-          "milk.",
+          "$milk.",
         ],
       },
       {
