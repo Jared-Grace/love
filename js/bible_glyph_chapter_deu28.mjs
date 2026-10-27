@@ -1298,7 +1298,7 @@ export function bible_glyph_chapter_deu28() {
           "$no_entry",
           "$link",
           "yours,",
-          "because",
+          "$pointing",
           "they",
           "will",
           "$walking",
