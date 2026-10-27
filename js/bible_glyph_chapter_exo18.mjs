@@ -95,7 +95,7 @@ export function bible_glyph_chapter_exo18() {
           "$foreigner",
           "in",
           "a",
-          "foreign",
+          "$detective+describing",
           "$earth.",
         ],
       },
