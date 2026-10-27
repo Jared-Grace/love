@@ -720,7 +720,7 @@ export function bible_glyph_chapter_lam02() {
           "overthrown",
           "you",
           "$no_entry",
-          "pity;",
+          "$pleading_face+doing;",
           "He",
           "has",
           "let",
