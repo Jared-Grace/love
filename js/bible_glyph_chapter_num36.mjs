@@ -263,7 +263,7 @@ export function bible_glyph_chapter_num36() {
           "in",
           "their",
           "$eyes,",
-          "provided",
+          "$check+exclamation",
           "the",
           "$woman",
           "marry",
