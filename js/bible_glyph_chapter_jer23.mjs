@@ -1337,7 +1337,7 @@ export function bible_glyph_chapter_jer23() {
           "out",
           "of",
           "My",
-          "presence,",
+          "$face,",
           "both",
           "you",
           "and",
