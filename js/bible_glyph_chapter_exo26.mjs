@@ -919,7 +919,7 @@ export function bible_glyph_chapter_exo26() {
           "hooks,",
           "and",
           "cast",
-          "five",
+          "$five",
           "$bronze",
           "bases",
           "for",
