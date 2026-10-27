@@ -12,7 +12,7 @@ export function bible_glyph_chapter_job19() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "Job", "answered:"],
+        words: ["Then", "Job", "$speech+turn_back:"],
       },
       {
         verse_number: 2,
