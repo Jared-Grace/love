@@ -936,7 +936,7 @@ export function bible_glyph_chapter_lev11() {
         words: [
           "$pointing",
           "an",
-          "animal",
+          "$paw_prints",
           "$tray_out",
           "those",
           "that",
