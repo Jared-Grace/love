@@ -232,7 +232,7 @@ export function bible_glyph_chapter_hos14() {
           "am",
           "like",
           "a",
-          "flourishing",
+          "$tree+leaf+describing",
           "$tree+harp;",
           "your",
           "$fruit",
