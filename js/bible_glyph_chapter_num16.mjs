@@ -653,7 +653,7 @@ export function bible_glyph_chapter_num16() {
           "$construction",
           "yourselves",
           "from",
-          "this",
+          "$flashlight",
           "$witness+crowd,",
           "so",
           "that",
