@@ -1650,7 +1650,7 @@ export function bible_glyph_chapter_1sa17() {
           "forward",
           "with",
           "a",
-          "shout",
+          "$public_address",
           "and",
           "pursued",
           "the",
