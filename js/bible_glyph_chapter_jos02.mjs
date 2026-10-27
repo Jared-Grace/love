@@ -160,7 +160,7 @@ export function bible_glyph_chapter_jos02() {
           "when",
           "the",
           "gate",
-          "was",
+          "$link",
           "about",
           "to",
           "close,",
