@@ -66,7 +66,7 @@ export function bible_glyph_chapter_dan12() {
           "delivered,",
           "everyone",
           "found",
-          "written",
+          "$writing_hand",
           "in",
           "the",
           "book.",
