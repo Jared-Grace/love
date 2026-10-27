@@ -96,7 +96,7 @@ export function bible_glyph_chapter_job23() {
         words: [
           "Would",
           "He",
-          "contend",
+          "$wrestling+doing",
           "with",
           "me",
           "in",
