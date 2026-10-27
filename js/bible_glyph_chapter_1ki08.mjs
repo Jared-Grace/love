@@ -2026,7 +2026,7 @@ export function bible_glyph_chapter_1ki08() {
           "$road",
           "and",
           "to",
-          "keep",
+          "$guard",
           "the",
           "$scroll",
           "and",
