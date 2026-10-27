@@ -138,7 +138,7 @@ export function bible_glyph_chapter_exo08() {
           "$hand",
           "with",
           "your",
-          "staff",
+          "$white_cane",
           "over",
           "the",
           "rivers",
