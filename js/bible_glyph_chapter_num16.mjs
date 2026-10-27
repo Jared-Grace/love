@@ -393,7 +393,7 @@ export function bible_glyph_chapter_num16() {
           "it",
           "not",
           "enough",
-          "that",
+          "$pointing",
           "you",
           "have",
           "brought",
