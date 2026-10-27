@@ -691,7 +691,7 @@ export function bible_glyph_chapter_gen24() {
           "camels",
           "had",
           "finished",
-          "drinking,",
+          "$cup_with_straw,",
           "the",
           "man",
           "$hand_receiving",
