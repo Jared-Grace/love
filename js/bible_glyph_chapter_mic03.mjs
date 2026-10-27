@@ -376,7 +376,7 @@ export function bible_glyph_chapter_mic03() {
           "will",
           "become",
           "a",
-          "heap",
+          "$derelict_house+thing",
           "of",
           "rubble,",
           "and",
