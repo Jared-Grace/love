@@ -488,7 +488,7 @@ export function bible_glyph_chapter_exo36() {
           "and",
           "the",
           "other",
-          "six",
+          "$six",
           "into",
           "another.",
         ],
