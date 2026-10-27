@@ -304,7 +304,7 @@ export function bible_glyph_chapter_hos02() {
           "were",
           "given",
           "to",
-          "cover",
+          "$coat+doing",
           "her",
           "nakedness.",
         ],
