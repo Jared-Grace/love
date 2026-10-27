@@ -178,7 +178,7 @@ export function bible_glyph_chapter_lam05() {
           "an",
           "$brick+fire",
           "with",
-          "fever",
+          "$anger_symbol+fire",
           "from",
           "our",
           "hunger.",
