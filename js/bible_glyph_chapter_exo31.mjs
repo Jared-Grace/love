@@ -484,7 +484,7 @@ export function bible_glyph_chapter_exo31() {
           "of",
           "the",
           "$witness+thing,",
-          "tablets",
+          "$stone+writing_hand",
           "of",
           "$stone",
           "inscribed",
