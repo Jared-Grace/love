@@ -208,7 +208,7 @@ export function bible_glyph_chapter_pro31() {
           "of",
           "noble",
           "character,",
-          "who",
+          "$person+question",
           "can",
           "find?",
           "She",
