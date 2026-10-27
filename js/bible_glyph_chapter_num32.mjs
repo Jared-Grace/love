@@ -144,7 +144,7 @@ export function bible_glyph_chapter_num32() {
           "your",
           "$eyes,",
           "let",
-          "this",
+          "$flashlight",
           "$earth",
           "be",
           "$hands_giving",
