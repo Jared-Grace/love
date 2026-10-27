@@ -1147,7 +1147,7 @@ export function bible_glyph_chapter_2ki06() {
           "$flashlight+question",
           "should",
           "I",
-          "wait",
+          "$hourglass+crossed_fingers",
           "for",
           "the",
           "$i_am",
