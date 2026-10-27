@@ -71,7 +71,7 @@ export function bible_glyph_chapter_num10() {
           "But",
           "$traffic_light",
           "only",
-          "one",
+          "$one",
           "is",
           "sounded,",
           "then",
