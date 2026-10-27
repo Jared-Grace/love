@@ -772,7 +772,7 @@ export function bible_glyph_chapter_gen21() {
           "to",
           "$hand_receiving",
           "the",
-          "seven",
+          "$seven",
           "ewe",
           "lambs",
           "from",
