@@ -217,7 +217,7 @@ export function bible_glyph_chapter_mal02() {
         words: [
           "For",
           "the",
-          "lips",
+          "$kiss_mark",
           "of",
           "a",
           "$priest",
