@@ -708,7 +708,7 @@ export function bible_glyph_chapter_lev04() {
           "He",
           "must",
           "burn",
-          "all",
+          "$all",
           "its",
           "fat",
           "$altar",
