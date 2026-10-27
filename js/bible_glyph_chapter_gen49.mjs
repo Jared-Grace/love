@@ -437,7 +437,7 @@ export function bible_glyph_chapter_gen49() {
           "viper",
           "in",
           "the",
-          "path,",
+          "$railway_track,",
           "that",
           "bites",
           "the",
