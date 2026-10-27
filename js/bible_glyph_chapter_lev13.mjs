@@ -917,7 +917,7 @@ export function bible_glyph_chapter_lev13() {
           "must",
           "pronounce",
           "him",
-          "unclean;",
+          "$soap+no_entry;",
           "it",
           "is",
           "a",
