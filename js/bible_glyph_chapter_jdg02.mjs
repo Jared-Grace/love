@@ -551,7 +551,7 @@ export function bible_glyph_chapter_jdg02() {
           "prostituted",
           "themselves",
           "with",
-          "other",
+          "$plus+one",
           "$moai",
           "and",
           "$bowing",
