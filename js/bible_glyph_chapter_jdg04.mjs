@@ -196,7 +196,7 @@ export function bible_glyph_chapter_jdg04() {
           "And",
           "I",
           "will",
-          "draw",
+          "$hook+doing",
           "out",
           "$proper_name$Sisera,",
           "the",
