@@ -347,7 +347,7 @@ export function bible_glyph_chapter_gen27() {
           "$mother",
           "$speech,",
           '"Your',
-          "curse",
+          "$balloon+speech",
           "be",
           "on",
           "me,",
