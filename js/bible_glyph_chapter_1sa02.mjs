@@ -477,7 +477,7 @@ export function bible_glyph_chapter_1sa02() {
           "will",
           "$no_entry",
           "$hand_receiving",
-          "boiled",
+          "$pot_of_food+doing",
           "$meat",
           "$tray_out",
           "you,",
