@@ -1075,7 +1075,7 @@ export function bible_glyph_chapter_jdg16() {
           "$pleading",
           "$reminder_ribbon",
           "me.",
-          "Strengthen",
+          "$might+up_arrow",
           "me",
           "just",
           "once",
