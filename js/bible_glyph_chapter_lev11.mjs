@@ -815,7 +815,7 @@ export function bible_glyph_chapter_lev11() {
           "$soap+no_entry,",
           "and",
           "any",
-          "drink",
+          "$cup_with_straw",
           "in",
           "such",
           "a",
