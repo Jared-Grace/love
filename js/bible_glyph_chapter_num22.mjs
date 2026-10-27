@@ -570,7 +570,7 @@ export function bible_glyph_chapter_num22() {
           "anything",
           "$pinching_hand",
           "$shuffle",
-          "great",
+          "$top",
           "beyond",
           "the",
           "command",
