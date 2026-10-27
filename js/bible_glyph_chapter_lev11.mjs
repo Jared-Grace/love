@@ -822,7 +822,7 @@ export function bible_glyph_chapter_lev11() {
           "container",
           "will",
           "be",
-          "unclean.",
+          "$soap+no_entry.",
         ],
       },
       {
