@@ -713,7 +713,7 @@ export function bible_glyph_chapter_lev16() {
           "it",
           "from",
           "the",
-          "uncleanness",
+          "$soap+no_entry+thing",
           "of",
           "the",
           "$son",
