@@ -300,7 +300,7 @@ export function bible_glyph_chapter_exo15() {
           "with",
           "praises,",
           "$hammer+doing",
-          "wonders?",
+          "$star_struck+thing?",
         ],
       },
       {
