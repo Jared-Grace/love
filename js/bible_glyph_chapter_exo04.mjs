@@ -923,7 +923,7 @@ export function bible_glyph_chapter_exo04() {
           "And",
           "$proper_name$Aaron",
           "$mouth",
-          "everything",
+          "$all",
           "the",
           "$i_am",
           "had",
