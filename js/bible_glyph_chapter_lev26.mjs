@@ -994,7 +994,7 @@ export function bible_glyph_chapter_lev26() {
           "$city",
           "are",
           "laid",
-          "waste.",
+          "$desert+thing.",
         ],
       },
       {
