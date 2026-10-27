@@ -70,7 +70,7 @@ export function bible_glyph_chapter_1sa02() {
           "there",
           "is",
           "no",
-          "Rock",
+          "$rock",
           "like",
           "our",
           "$heart_on_fire.",
