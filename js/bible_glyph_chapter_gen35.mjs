@@ -26,7 +26,7 @@ export function bible_glyph_chapter_gen35() {
           "Bethel",
           "and",
           "settle",
-          "there,",
+          "$telescope,",
           "and",
           "$hammer+doing",
           "an",
