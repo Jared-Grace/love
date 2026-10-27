@@ -691,7 +691,7 @@ export function bible_glyph_chapter_exo29() {
           "$bread",
           "made",
           "with",
-          "oil,",
+          "$lotion_bottle,",
           "and",
           "$one",
           "wafer",
