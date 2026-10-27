@@ -821,7 +821,7 @@ export function bible_glyph_chapter_1sa01() {
           "who",
           "stood",
           "here",
-          "beside",
+          "$linked_paperclips",
           "you",
           "$hands_praying",
           "to",
