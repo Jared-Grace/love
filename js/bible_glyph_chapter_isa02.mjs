@@ -314,7 +314,7 @@ export function bible_glyph_chapter_isa02() {
           "$pick+tray_in+doing",
           "in",
           "the",
-          "dust",
+          "$dust",
           "from",
           "the",
           "terror",
