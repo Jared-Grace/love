@@ -164,7 +164,7 @@ export function bible_glyph_chapter_pro01() {
           "$heart_orange",
           "on",
           "your",
-          "head",
+          "$person_gesturing_ok",
           "and",
           "a",
           "pendant",
