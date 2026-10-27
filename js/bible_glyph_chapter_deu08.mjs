@@ -399,7 +399,7 @@ export function bible_glyph_chapter_deu08() {
           "your",
           "$silver",
           "and",
-          "gold",
+          "$gold",
           "increase",
           "and",
           "all",
