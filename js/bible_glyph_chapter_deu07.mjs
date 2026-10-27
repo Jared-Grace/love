@@ -236,7 +236,7 @@ export function bible_glyph_chapter_deu07() {
           "on",
           "you",
           "and",
-          "choose",
+          "$check_box",
           "you",
           "because",
           "you",
