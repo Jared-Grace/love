@@ -127,7 +127,7 @@ export function bible_glyph_chapter_exo03() {
           "from",
           "within",
           "the",
-          "bush,",
+          "$thorns+herb,",
           "$fishing_pole+proper_name,",
           "$fishing_pole+proper_name!",
           "Here",
