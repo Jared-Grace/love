@@ -705,7 +705,7 @@ export function bible_glyph_chapter_exo22() {
           "and",
           "I",
           "will",
-          "kill",
+          "$fist+skull",
           "you",
           "with",
           "the",
