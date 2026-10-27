@@ -554,7 +554,7 @@ export function bible_glyph_chapter_jos06() {
           "it",
           "must",
           "be",
-          "devoted",
+          "$bomb+altar+thing",
           "to",
           "the",
           "$i_am",
