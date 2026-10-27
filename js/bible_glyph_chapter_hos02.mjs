@@ -104,7 +104,7 @@ export function bible_glyph_chapter_hos02() {
           "her",
           "$skull+doing",
           "of",
-          "thirst.",
+          "$tongue+desert+thing.",
         ],
       },
       {
