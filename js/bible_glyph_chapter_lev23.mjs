@@ -92,7 +92,7 @@ export function bible_glyph_chapter_lev23() {
           "$flashlight+flashlight",
           "are",
           "the",
-          "appointed",
+          "$alarm_clock",
           "feasts",
           "of",
           "$i_am,",
