@@ -637,7 +637,7 @@ export function bible_glyph_chapter_jer23() {
           "to",
           "those",
           "who",
-          "despise",
+          "$thumbs_down+eyes+doing",
           "Me,",
           "The",
           "$i_am",
