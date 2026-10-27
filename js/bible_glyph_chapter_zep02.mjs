@@ -38,7 +38,7 @@ export function bible_glyph_chapter_zep02() {
           "$sun",
           "passes",
           "like",
-          "chaff,",
+          "$wheat+dashing_away,",
           "$clock+back",
           "the",
           "burning",
