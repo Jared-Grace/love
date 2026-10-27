@@ -55,7 +55,7 @@ export function bible_glyph_chapter_psa073() {
       {
         verse_number: 3,
         words: [
-          "For",
+          "$pointing",
           "I",
           "$face_steam+doing",
           "the",
