@@ -261,7 +261,7 @@ export function bible_glyph_chapter_gen06() {
           "a",
           "$ruler",
           "man,",
-          "blameless",
+          "$full_moon+describing",
           "in",
           "his",
           "generation,",
