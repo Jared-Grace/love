@@ -913,7 +913,7 @@ export function bible_glyph_chapter_1sa02() {
           "to",
           "wear",
           "an",
-          "ephod",
+          "$safety_vest",
           "in",
           "My",
           "presence.",
