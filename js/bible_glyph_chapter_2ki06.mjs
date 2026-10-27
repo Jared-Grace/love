@@ -264,7 +264,7 @@ export function bible_glyph_chapter_2ki06() {
           "$proper_name$Arameans",
           "are",
           "going",
-          "down",
+          "$stone+down_arrow+describing",
           "$telescope.",
         ],
       },
