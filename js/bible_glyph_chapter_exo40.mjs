@@ -135,7 +135,7 @@ export function bible_glyph_chapter_exo40() {
           "front",
           "of",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "tabernacle,",
