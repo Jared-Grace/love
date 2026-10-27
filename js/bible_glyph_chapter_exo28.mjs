@@ -899,7 +899,7 @@ export function bible_glyph_chapter_exo28() {
           "be",
           "a",
           "woven",
-          "collar",
+          "$kiss_mark",
           "like",
           "that",
           "of",
