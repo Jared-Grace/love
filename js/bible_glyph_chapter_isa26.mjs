@@ -596,7 +596,7 @@ export function bible_glyph_chapter_isa26() {
           "$earth",
           "for",
           "their",
-          "iniquity.",
+          "$cyclone.",
           "The",
           "$earth",
           "will",
