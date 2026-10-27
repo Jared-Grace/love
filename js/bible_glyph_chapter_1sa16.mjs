@@ -375,7 +375,7 @@ export function bible_glyph_chapter_1sa16() {
           "and",
           "$hand_receiving",
           "him,",
-          "for",
+          "$pointing",
           "we",
           "will",
           "$no_entry",
