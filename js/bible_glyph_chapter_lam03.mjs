@@ -539,7 +539,7 @@ export function bible_glyph_chapter_lam03() {
           "him",
           "$hands_giving",
           "his",
-          "cheek",
+          "$face+bone",
           "to",
           "the",
           "one",
