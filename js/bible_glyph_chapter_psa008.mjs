@@ -150,7 +150,7 @@ export function bible_glyph_chapter_psa008() {
           "You",
           "have",
           "placed",
-          "everything",
+          "$all",
           "under",
           "his",
           "feet:",
