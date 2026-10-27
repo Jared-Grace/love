@@ -530,7 +530,7 @@ export function bible_glyph_chapter_exo15() {
           "the",
           "prophetess,",
           "Aaron",
-          "sister,",
+          "$sister,",
           "$hand_receiving",
           "a",
           "tambourine",
