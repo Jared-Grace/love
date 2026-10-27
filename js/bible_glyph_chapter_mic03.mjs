@@ -55,7 +55,7 @@ export function bible_glyph_chapter_mic03() {
           "and",
           "strip",
           "the",
-          "flesh",
+          "$meat+fork_and_knife",
           "from",
           "their",
           "bones.",
