@@ -753,7 +753,7 @@ export function bible_glyph_chapter_2ki17() {
           "all",
           "the",
           "$bow",
-          "that",
+          "$back+flashlight",
           "$proper_name$Jeroboam",
           "had",
           "$hammer+doing,",
