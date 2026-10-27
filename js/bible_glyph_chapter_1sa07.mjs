@@ -565,7 +565,7 @@ export function bible_glyph_chapter_1sa07() {
           "was",
           "$telescope,",
           "and",
-          "there",
+          "$telescope",
           "he",
           "judged",
           "$wrestling+heart_on_fire",
