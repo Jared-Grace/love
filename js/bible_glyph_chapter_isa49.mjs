@@ -639,7 +639,7 @@ export function bible_glyph_chapter_isa49() {
           "ravaged",
           "$earth",
           "will",
-          "now",
+          "$watch",
           "indeed",
           "be",
           "too",
