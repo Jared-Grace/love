@@ -1090,7 +1090,7 @@ export function bible_glyph_chapter_gen27() {
           "sustained",
           "him",
           "with",
-          "grain",
+          "$wheat+barley",
           "and",
           "new",
           "$wine.",
