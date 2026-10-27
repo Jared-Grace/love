@@ -26,7 +26,7 @@ export function bible_glyph_chapter_mal04() {
           "when",
           "all",
           "the",
-          "arrogant",
+          "$peacock+fire+describing",
           "and",
           "every",
           "$hammer+doing",
