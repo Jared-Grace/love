@@ -872,7 +872,7 @@ export function bible_glyph_chapter_exo12() {
           "$i_am,",
           "$back+flashlight",
           "$leg+up_arrow+doing",
-          "over",
+          "$pointing_up",
           "the",
           "$house",
           "of",
