@@ -1123,7 +1123,7 @@ export function bible_glyph_chapter_jer07() {
           "of",
           "the",
           "$bouquet,",
-          "for",
+          "$pointing",
           "the",
           "$earth",
           "will",
