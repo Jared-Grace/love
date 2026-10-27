@@ -334,7 +334,7 @@ export function bible_glyph_chapter_lev09() {
           "he",
           "burned",
           "them",
-          "on",
+          "$pointing_up",
           "$altar.",
         ],
       },
