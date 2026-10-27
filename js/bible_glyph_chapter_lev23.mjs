@@ -1129,7 +1129,7 @@ export function bible_glyph_chapter_lev23() {
           "to",
           "all",
           "the",
-          "freewill",
+          "$heart_red+gift",
           "offerings",
           "you",
           "$hands_giving",
