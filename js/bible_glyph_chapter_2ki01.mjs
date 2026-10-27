@@ -648,7 +648,7 @@ export function bible_glyph_chapter_2ki01() {
           "for",
           "you",
           "to",
-          "inquire",
+          "$magnifying_glass+question",
           "of",
           "His",
           "$speech?",
