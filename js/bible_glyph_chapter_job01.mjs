@@ -243,7 +243,7 @@ export function bible_glyph_chapter_job01() {
           "is",
           "no",
           "one",
-          "like",
+          "$likeness",
           "him",
           "on",
           "the",
