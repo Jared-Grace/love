@@ -150,7 +150,7 @@ export function bible_glyph_chapter_gen42() {
           "$i_am+plus",
           "was",
           "the",
-          "ruler",
+          "$crown+person+doer",
           "of",
           "the",
           "$earth,",
