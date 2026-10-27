@@ -1064,7 +1064,7 @@ export function bible_glyph_chapter_1ki20() {
           "on",
           "$two+zero",
           "seven",
-          "thousand",
+          "$ten+all",
           "$man_beard",
           "of",
           "them.",
