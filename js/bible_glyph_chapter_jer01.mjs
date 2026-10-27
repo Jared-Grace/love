@@ -255,7 +255,7 @@ export function bible_glyph_chapter_jer01() {
           "$speech",
           "in",
           "your",
-          "mouth.",
+          "$face_with_open_mouth.",
         ],
       },
       {
