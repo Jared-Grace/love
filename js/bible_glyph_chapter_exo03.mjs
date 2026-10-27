@@ -803,7 +803,7 @@ export function bible_glyph_chapter_exo03() {
           "for",
           "$silver",
           "and",
-          "gold",
+          "$gold",
           "$toolbox",
           "and",
           "clothing,",
