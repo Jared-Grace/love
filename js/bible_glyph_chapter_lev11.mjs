@@ -736,7 +736,7 @@ export function bible_glyph_chapter_lev11() {
           "that",
           "article",
           "becomes",
-          "unclean:",
+          "$soap+no_entry:",
           "any",
           "article",
           "of",
