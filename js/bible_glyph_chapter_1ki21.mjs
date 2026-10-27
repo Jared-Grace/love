@@ -811,7 +811,7 @@ export function bible_glyph_chapter_1ki21() {
           "$proper_name$Jezebel",
           "the",
           "$i_am",
-          "also",
+          "$plus",
           "$mouth,",
           "$speech,",
           "The",
