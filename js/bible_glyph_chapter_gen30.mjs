@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_gen30() {
           "in",
           "the",
           "$water",
-          "troughs",
+          "$cup+hands_giving+thing",
           "in",
           "front",
           "of",
