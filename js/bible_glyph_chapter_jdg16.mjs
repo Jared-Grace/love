@@ -1109,7 +1109,7 @@ export function bible_glyph_chapter_jdg16() {
           "out",
           "for",
           "the",
-          "two",
+          "$two",
           "central",
           "pillars",
           "supporting",
