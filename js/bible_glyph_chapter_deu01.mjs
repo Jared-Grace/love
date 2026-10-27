@@ -995,7 +995,7 @@ export function bible_glyph_chapter_deu01() {
           "the",
           "$cloud",
           "by",
-          "day,",
+          "$sun+manner,",
           "to",
           "seek",
           "out",
