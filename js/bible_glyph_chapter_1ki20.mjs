@@ -245,7 +245,7 @@ export function bible_glyph_chapter_1ki20() {
           "I",
           "did",
           "$no_entry",
-          "deny",
+          "$locked+hand+doing",
           "him.",
         ],
       },
