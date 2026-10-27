@@ -239,7 +239,7 @@ export function bible_glyph_chapter_pro02() {
           "leave",
           "the",
           "straight",
-          "paths",
+          "$railway_track",
           "to",
           "$walking",
           "in",
