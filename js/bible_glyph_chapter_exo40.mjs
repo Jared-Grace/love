@@ -590,7 +590,7 @@ export function bible_glyph_chapter_exo40() {
           "up",
           "the",
           "lamps",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "just",
