@@ -458,7 +458,7 @@ export function bible_glyph_chapter_pro16() {
           "possessor,",
           "but",
           "the",
-          "discipline",
+          "$teacher+exclamation",
           "of",
           "fools",
           "is",
