@@ -243,7 +243,7 @@ export function bible_glyph_chapter_exo18() {
           "for",
           "$wrestling+heart_on_fire",
           "sake,",
-          "all",
+          "$all",
           "the",
           "hardships",
           "they",
