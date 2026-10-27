@@ -1117,7 +1117,7 @@ export function bible_glyph_chapter_2ch20() {
           "$name_tag",
           "was",
           "$proper_name$Azubah",
-          "daughter",
+          "$girl+family",
           "of",
           "$proper_name$Shilhi.",
         ],
