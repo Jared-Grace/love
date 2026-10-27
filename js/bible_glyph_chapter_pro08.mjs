@@ -214,7 +214,7 @@ export function bible_glyph_chapter_pro08() {
         words: [
           "I,",
           "$wisdom,",
-          "dwell",
+          "$tent+doing",
           "together",
           "with",
           "prudence,",
