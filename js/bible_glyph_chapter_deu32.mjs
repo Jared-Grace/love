@@ -776,7 +776,7 @@ export function bible_glyph_chapter_deu32() {
           "$i_am",
           "who",
           "did",
-          "all",
+          "$all",
           "this.",
         ],
       },
