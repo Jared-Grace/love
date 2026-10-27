@@ -267,7 +267,7 @@ export function bible_glyph_chapter_isa11() {
           "$light+hole",
           "of",
           "the",
-          "viper.",
+          "$snake+tongue.",
         ],
       },
       {
