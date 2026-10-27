@@ -636,7 +636,7 @@ export function bible_glyph_chapter_deu28() {
           "$hand",
           "to",
           "$hammer+doing,",
-          "until",
+          "$finish",
           "you",
           "are",
           "destroyed",
