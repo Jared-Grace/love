@@ -801,7 +801,7 @@ export function bible_glyph_chapter_lev11() {
         verse_number: 34,
         words: [
           "Any",
-          "food",
+          "$eating+thing",
           "$footprints",
           "into",
           "contact",
