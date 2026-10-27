@@ -1164,7 +1164,7 @@ export function bible_glyph_chapter_gen27() {
           "away",
           "from",
           "the",
-          "dew",
+          "$dew",
           "of",
           "$sky",
           "above.",
