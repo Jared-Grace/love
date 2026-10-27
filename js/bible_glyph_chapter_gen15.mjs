@@ -148,7 +148,7 @@ export function bible_glyph_chapter_gen15() {
           "the",
           "$sky",
           "and",
-          "count",
+          "$abacus",
           "the",
           "stars,",
           "if",
