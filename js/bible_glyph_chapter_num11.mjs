@@ -14,7 +14,7 @@ export function bible_glyph_chapter_num11() {
       {
         verse_number: 1,
         words: [
-          "Soon",
+          "$link",
           "the",
           "$family",
           "began",
