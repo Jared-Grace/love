@@ -194,7 +194,7 @@ export function bible_glyph_chapter_deu06() {
           "are",
           "to",
           "be",
-          "upon",
+          "$pointing_up",
           "your",
           "$heart_organ.",
         ],
