@@ -1283,7 +1283,7 @@ export function bible_glyph_chapter_jer32() {
           "by",
           "$sword",
           "and",
-          "famine",
+          "$famine",
           "and",
           "plague,",
         ],
