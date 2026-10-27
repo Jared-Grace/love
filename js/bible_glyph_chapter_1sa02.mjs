@@ -1114,7 +1114,7 @@ export function bible_glyph_chapter_1sa02() {
           "I",
           "do",
           "$no_entry",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "My",
