@@ -660,7 +660,7 @@ export function bible_glyph_chapter_2ki05() {
           "$kneeling",
           "will",
           "$no_entry",
-          "again",
+          "$repeat",
           "$hammer+doing",
           "a",
           "burnt",
