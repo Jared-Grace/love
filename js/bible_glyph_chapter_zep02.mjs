@@ -517,7 +517,7 @@ export function bible_glyph_chapter_zep02() {
           "passes",
           "by",
           "her",
-          "hisses",
+          "$mouth+wind+thumbs_down+doing",
           "and",
           "shakes",
           "his",
