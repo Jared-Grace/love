@@ -791,7 +791,7 @@ export function bible_glyph_chapter_ezk47() {
           "$wood",
           "a",
           "foreigner",
-          "dwells,",
+          "$luggage,",
           "there",
           "you",
           "are",
