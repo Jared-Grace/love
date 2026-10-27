@@ -538,7 +538,7 @@ export function bible_glyph_chapter_deu09() {
           "into",
           "a",
           "$map",
-          "mightier",
+          "$bone+describing",
           "and",
           "greater",
           "$tray_out",
