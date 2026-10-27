@@ -822,7 +822,7 @@ export function bible_glyph_chapter_2ki03() {
           "threw",
           "$stone",
           "on",
-          "every",
+          "$all",
           "$thumbs_up",
           "field",
           "until",
