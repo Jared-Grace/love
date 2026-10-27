@@ -450,7 +450,7 @@ export function bible_glyph_chapter_2ki01() {
           "$fire",
           "come",
           "down",
-          "from",
+          "$tray_out",
           "the",
           "$sky",
           "and",
