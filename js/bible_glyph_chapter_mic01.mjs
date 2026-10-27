@@ -82,7 +82,7 @@ export function bible_glyph_chapter_mic01() {
         verse_number: 3,
         words: [
           "$pointing",
-          "behold,",
+          "$exclamation,",
           "the",
           "$i_am",
           "comes",
