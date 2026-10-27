@@ -217,7 +217,7 @@ export function bible_glyph_chapter_jer07() {
           "keep",
           "trusting",
           "in",
-          "deceptive",
+          "$lying_face",
           "$speech",
           "to",
           "no",
