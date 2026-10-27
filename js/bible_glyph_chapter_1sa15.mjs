@@ -153,7 +153,7 @@ export function bible_glyph_chapter_1sa15() {
         words: [
           "$proper_name$Saul",
           "$footprints",
-          "to",
+          "$finish",
           "the",
           "$city",
           "of",
