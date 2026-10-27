@@ -748,7 +748,7 @@ export function bible_glyph_chapter_jer17() {
           "necks",
           "and",
           "would",
-          "not",
+          "$zero+manner",
           "$ear",
           "or",
           "$hand_receiving",
