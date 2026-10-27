@@ -325,7 +325,7 @@ export function bible_glyph_chapter_num32() {
           "$laughing+proper_name",
           "and",
           "$hand+foot,",
-          "because",
+          "$pointing",
           "they",
           "did",
           "$no_entry",
