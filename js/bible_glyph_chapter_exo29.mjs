@@ -146,7 +146,7 @@ export function bible_glyph_chapter_exo29() {
           "breastpiece.",
           "Fasten",
           "the",
-          "ephod",
+          "$safety_vest",
           "on",
           "him",
           "with",
