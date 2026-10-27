@@ -389,7 +389,7 @@ export function bible_glyph_chapter_isa11() {
           "will",
           "raise",
           "a",
-          "banner",
+          "$triangular_flag+up_arrow",
           "for",
           "the",
           "$map",
