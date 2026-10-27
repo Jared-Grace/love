@@ -373,7 +373,7 @@ export function bible_glyph_chapter_pro16() {
           "Pride",
           "goes",
           "before",
-          "destruction,",
+          "$broken_chain+thing,",
           "and",
           "a",
           "haughty",
