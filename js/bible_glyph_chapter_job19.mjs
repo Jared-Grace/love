@@ -137,7 +137,7 @@ export function bible_glyph_chapter_job19() {
           "so",
           "I",
           "$no_entry",
-          "pass;",
+          "$bridge;",
           "He",
           "has",
           "veiled",
