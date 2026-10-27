@@ -710,7 +710,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "these",
           "will",
-          "pursue",
+          "$running+toward",
           "you",
           "until",
           "you",
