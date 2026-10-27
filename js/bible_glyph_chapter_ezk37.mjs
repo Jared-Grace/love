@@ -847,7 +847,7 @@ export function bible_glyph_chapter_ezk37() {
           "there",
           "will",
           "be",
-          "one",
+          "$one",
           "$person+sheep",
           "for",
           "all",
