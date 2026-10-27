@@ -604,7 +604,7 @@ export function bible_glyph_chapter_2ch06() {
           "$heart_on_fire",
           "$anchor+manner",
           "$person+house",
-          "with",
+          "$safety_pin",
           "$person",
           "upon",
           "the",
