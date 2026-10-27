@@ -99,7 +99,7 @@ export function bible_glyph_chapter_mic01() {
           "$hiking_boot",
           "$pointing_up",
           "the",
-          "high",
+          "$snow_capped_mountain",
           "places",
           "of",
           "the",
