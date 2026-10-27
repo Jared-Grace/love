@@ -53,7 +53,7 @@ export function bible_glyph_chapter_hos11() {
           "Baals",
           "and",
           "burned",
-          "incense",
+          "$incense+doing",
           "to",
           "$carpentry_saw+moai",
           "images.",
