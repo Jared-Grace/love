@@ -112,7 +112,7 @@ export function bible_glyph_chapter_jer31() {
           "O",
           "Virgin",
           "$wrestling+heart_on_fire.",
-          "Again",
+          "$repeat",
           "you",
           "will",
           "take",
