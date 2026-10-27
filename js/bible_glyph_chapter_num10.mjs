@@ -922,7 +922,7 @@ export function bible_glyph_chapter_num10() {
           "may",
           "those",
           "who",
-          "hate",
+          "$heart_red+thumbs_down",
           "You",
           "$running+dashing_away",
           "before",
