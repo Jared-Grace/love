@@ -365,7 +365,7 @@ export function bible_glyph_chapter_job19() {
           "skin",
           "and",
           "$meat",
-          "cling",
+          "$paperclip",
           "to",
           "my",
           "bones;",
