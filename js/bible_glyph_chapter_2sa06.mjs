@@ -205,7 +205,7 @@ export function bible_glyph_chapter_2sa06() {
           "of",
           "the",
           "$i_am",
-          "burned",
+          "$angry_face+doing",
           "against",
           "$proper_name$Uzzah,",
           "and",
