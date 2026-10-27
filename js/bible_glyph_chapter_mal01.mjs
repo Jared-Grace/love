@@ -369,7 +369,7 @@ export function bible_glyph_chapter_mal01() {
           "I",
           "take",
           "no",
-          "pleasure",
+          "$smiling_face_with_hearts",
           "in",
           "you,",
           "$speech",
