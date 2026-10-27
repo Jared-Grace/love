@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_gen43() {
           "age,",
           "from",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "to",
           "the",
           "youngest,",
