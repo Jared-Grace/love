@@ -292,7 +292,7 @@ export function bible_glyph_chapter_mic05() {
           "$family",
           "like",
           "a",
-          "lion",
+          "$lion",
           "among",
           "the",
           "beasts",
