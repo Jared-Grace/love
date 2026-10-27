@@ -953,7 +953,7 @@ export function bible_glyph_chapter_exo12() {
           "$throne",
           "to",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "the",
           "prisoner",
