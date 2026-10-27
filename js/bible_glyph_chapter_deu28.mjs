@@ -1484,7 +1484,7 @@ export function bible_glyph_chapter_deu28() {
           "in",
           "$famine",
           "and",
-          "thirst",
+          "$tongue+desert+thing",
           "and",
           "nakedness",
           "and",
