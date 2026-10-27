@@ -226,7 +226,7 @@ export function bible_glyph_chapter_exo32() {
           "the",
           "$i_am",
           "$mouth",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "$walking",
           "down",
