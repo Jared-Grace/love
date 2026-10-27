@@ -247,7 +247,7 @@ export function bible_glyph_chapter_jer32() {
           "you",
           "to",
           "$speech,",
-          "Buy",
+          "$coin+hand_receiving",
           "for",
           "yourself",
           "my",
