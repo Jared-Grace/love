@@ -196,7 +196,7 @@ export function bible_glyph_chapter_num06() {
           "or",
           "$brother",
           "or",
-          "sister",
+          "$sister",
           "should",
           "$skull,",
           "he",
