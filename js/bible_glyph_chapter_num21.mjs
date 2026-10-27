@@ -690,7 +690,7 @@ export function bible_glyph_chapter_num21() {
           "$sword",
           "and",
           "took",
-          "possession",
+          "$triangular_flag",
           "of",
           "his",
           "$earth",
