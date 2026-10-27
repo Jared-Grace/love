@@ -510,7 +510,7 @@ export function bible_glyph_chapter_lev10() {
       {
         verse_number: 17,
         words: [
-          "Why",
+          "$flashlight+question+lightbulb",
           "$no_entry",
           "$eating",
           "$bow",
