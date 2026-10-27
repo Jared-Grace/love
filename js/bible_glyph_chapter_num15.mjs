@@ -225,7 +225,7 @@ export function bible_glyph_chapter_num15() {
           "$shuffle",
           "as",
           "a",
-          "peace",
+          "$peace+gift",
           "offering",
           "to",
           "$i_am,",
