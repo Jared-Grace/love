@@ -187,7 +187,7 @@ export function bible_glyph_chapter_ezk01() {
           "Their",
           "legs",
           "were",
-          "straight,",
+          "$up_arrow+ruler,",
           "and",
           "the",
           "soles",
