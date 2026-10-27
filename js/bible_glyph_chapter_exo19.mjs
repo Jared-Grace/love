@@ -458,7 +458,7 @@ export function bible_glyph_chapter_exo19() {
           "When",
           "$fishing_pole+proper_name",
           "came",
-          "down",
+          "$walking+pointing_down",
           "$tray_out",
           "the",
           "$mountain",
