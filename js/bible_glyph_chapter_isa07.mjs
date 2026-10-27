@@ -270,7 +270,7 @@ export function bible_glyph_chapter_isa07() {
           "$proper_name$Damascus",
           "is",
           "$proper_name$Rezin.",
-          "Within",
+          "$repeat",
           "sixty-five",
           "$year",
           "$fruit",
