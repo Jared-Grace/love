@@ -526,7 +526,7 @@ export function bible_glyph_chapter_deu31() {
           "and",
           "the",
           "$cloud",
-          "stood",
+          "$person+round_pushpin",
           "over",
           "the",
           "entrance",
