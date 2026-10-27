@@ -658,7 +658,7 @@ export function bible_glyph_chapter_jdg06() {
           "them",
           "on",
           "this",
-          "rock,",
+          "$person_climbing,",
           "and",
           "pour",
           "out",
