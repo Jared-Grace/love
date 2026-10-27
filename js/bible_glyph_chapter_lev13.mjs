@@ -1843,7 +1843,7 @@ export function bible_glyph_chapter_lev13() {
           "$cow_face+coat,",
           "$tray_out",
           "the",
-          "weave,",
+          "$yarn+round_pushpin,",
           "$shuffle",
           "$tray_out",
           "the",
