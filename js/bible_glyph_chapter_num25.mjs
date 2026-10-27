@@ -329,7 +329,7 @@ export function bible_glyph_chapter_num25() {
           "for",
           "My",
           "sake",
-          "among",
+          "$radio_button",
           "them,",
           "so",
           "that",
