@@ -256,7 +256,7 @@ export function bible_glyph_chapter_mic02() {
           "off",
           "the",
           "splendid",
-          "robe",
+          "$dress",
           "from",
           "unsuspecting",
           "passersby",
