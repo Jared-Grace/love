@@ -622,7 +622,7 @@ export function bible_glyph_chapter_gen17() {
           "at",
           "$flashlight",
           "$alarm_clock",
-          "next",
+          "$plus+one",
           '$year."',
         ],
       },
