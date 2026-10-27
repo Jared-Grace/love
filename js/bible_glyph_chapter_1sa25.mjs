@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_1sa25() {
           "securely",
           "in",
           "the",
-          "bundle",
+          "$knot+package",
           "of",
           "the",
           "$sprout",
