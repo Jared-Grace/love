@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_jos07() {
           "heaped",
           "a",
           "large",
-          "pile",
+          "$stone+mountain",
           "of",
           "rocks",
           "over",
