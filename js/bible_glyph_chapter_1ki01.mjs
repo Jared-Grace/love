@@ -1318,7 +1318,7 @@ export function bible_glyph_chapter_1ki01() {
           "horn,",
           "he",
           "$speech,",
-          "Why",
+          "$flashlight+question+lightbulb",
           "is",
           "there",
           "such",
