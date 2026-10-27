@@ -865,7 +865,7 @@ export function bible_glyph_chapter_lam03() {
           "$water_wave+down_arrow+hand+doing",
           "$no_entry",
           "ceasing,",
-          "without",
+          "$dotted_line_face",
           "relief,",
         ],
       },
