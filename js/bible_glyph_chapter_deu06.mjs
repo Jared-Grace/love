@@ -307,7 +307,7 @@ export function bible_glyph_chapter_deu06() {
           "$hands_giving",
           "you",
           "-",
-          "great",
+          "$top",
           "and",
           "$thumbs_up",
           "$city",
