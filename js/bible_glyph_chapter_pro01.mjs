@@ -488,7 +488,7 @@ export function bible_glyph_chapter_pro01() {
           "neglected",
           "$all",
           "my",
-          "counsel,",
+          "$person_tipping_hand,",
           "and",
           "wanted",
           "$no_entry",
