@@ -182,7 +182,7 @@ export function bible_glyph_chapter_jos07() {
           "fled",
           "$face",
           "the",
-          "men",
+          "$man_beard",
           "of",
           "$proper_name$Ai.",
         ],
