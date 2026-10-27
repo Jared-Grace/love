@@ -408,7 +408,7 @@ export function bible_glyph_chapter_lev08() {
           "hide,",
           "$meat",
           "and",
-          "dung",
+          "$pile_of_poo",
           "he",
           "burned",
           "outside",
