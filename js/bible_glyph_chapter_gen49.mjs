@@ -120,7 +120,7 @@ export function bible_glyph_chapter_gen49() {
           "are",
           "weapons",
           "of",
-          "violence.",
+          "$boxing_glove.",
         ],
       },
       {
