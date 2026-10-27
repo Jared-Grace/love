@@ -632,7 +632,7 @@ export function bible_glyph_chapter_1sa20() {
           "$speech",
           "to",
           "David,",
-          "Tomorrow",
+          "$sun+next_track",
           "is",
           "the",
           "New",
