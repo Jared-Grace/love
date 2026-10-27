@@ -230,7 +230,7 @@ export function bible_glyph_chapter_neh09() {
           "things,",
           "and",
           "the",
-          "host",
+          "$military_helmet",
           "of",
           "$sky",
           "$bowing",
