@@ -605,7 +605,7 @@ export function bible_glyph_chapter_gen04() {
           "who",
           "play",
           "the",
-          "harp",
+          "$harp",
           "and",
           "flute.",
         ],
