@@ -224,7 +224,7 @@ export function bible_glyph_chapter_gen37() {
           "Will",
           "you",
           "actually",
-          "rule",
+          "$joystick",
           "us?",
           "So",
           "they",
