@@ -348,7 +348,7 @@ export function bible_glyph_chapter_jer29() {
           "have",
           "for",
           "you,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "plans",
