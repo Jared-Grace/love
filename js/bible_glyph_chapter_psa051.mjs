@@ -303,7 +303,7 @@ export function bible_glyph_chapter_psa051() {
       {
         verse_number: 14,
         words: [
-          "Deliver",
+          "$hand+rescue",
           "me",
           "from",
           "$blood,",
