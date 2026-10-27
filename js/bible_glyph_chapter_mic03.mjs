@@ -329,7 +329,7 @@ export function bible_glyph_chapter_mic03() {
           "teach",
           "for",
           "a",
-          "price,",
+          "$receipt+coin,",
           "and",
           "her",
           "$megaphone",
