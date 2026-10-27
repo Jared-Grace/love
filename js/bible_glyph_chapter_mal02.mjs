@@ -625,7 +625,7 @@ export function bible_glyph_chapter_mal02() {
           "in",
           "them",
           "$pointing_back",
-          "delights,",
+          "$smiling_face_with_hearts+doing,",
           "or,",
           "Where",
           "is",
