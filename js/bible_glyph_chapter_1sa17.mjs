@@ -133,7 +133,7 @@ export function bible_glyph_chapter_1sa17() {
           "mail",
           "$coin+thing",
           "$five",
-          "thousand",
+          "$ten+all",
           "shekels",
           "of",
           "$bronze.",
