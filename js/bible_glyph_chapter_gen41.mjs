@@ -213,7 +213,7 @@ export function bible_glyph_chapter_gen41() {
           "of",
           "$clamp+proper_name.",
           "$house+proper_name",
-          "told",
+          "$abacus",
           "them",
           "his",
           "dreams,",
