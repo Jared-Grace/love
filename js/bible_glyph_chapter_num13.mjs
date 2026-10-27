@@ -459,7 +459,7 @@ export function bible_glyph_chapter_num13() {
           "had",
           "been",
           "built",
-          "seven",
+          "$seven",
           "$year",
           "before",
           "$proper_name$Zoan",
