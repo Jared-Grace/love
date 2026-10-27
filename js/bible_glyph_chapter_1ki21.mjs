@@ -111,7 +111,7 @@ export function bible_glyph_chapter_1ki21() {
           "$hands_giving",
           "you",
           "the",
-          "inheritance",
+          "$inheritance",
           "of",
           "my",
           "$father.",
