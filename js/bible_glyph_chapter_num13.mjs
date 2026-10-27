@@ -516,7 +516,7 @@ export function bible_glyph_chapter_num13() {
           "was",
           "called",
           "the",
-          "Valley",
+          "$national_park",
           "of",
           "$proper_name$Eshcol,",
           "because",
