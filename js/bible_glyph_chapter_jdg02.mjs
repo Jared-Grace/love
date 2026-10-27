@@ -313,7 +313,7 @@ export function bible_glyph_chapter_jdg02() {
           "After",
           "that",
           "$all",
-          "generation",
+          "$dna",
           "had",
           "been",
           "gathered",
