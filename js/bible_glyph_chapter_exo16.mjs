@@ -770,7 +770,7 @@ export function bible_glyph_chapter_exo16() {
           "you",
           "want",
           "to",
-          "boil.",
+          "$pot_of_food+doing.",
           "Then",
           "set",
           "aside",
