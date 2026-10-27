@@ -274,7 +274,7 @@ export function bible_glyph_chapter_psa034() {
         words: [
           "$guard+shield+doing",
           "your",
-          "tongue",
+          "$tongue",
           "from",
           "$thumbs_down",
           "and",
