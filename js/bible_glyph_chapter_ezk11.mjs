@@ -294,7 +294,7 @@ export function bible_glyph_chapter_ezk11() {
         words: [
           "You",
           "will",
-          "fall",
+          "$person+pointing_down",
           "by",
           "the",
           "$sword.",
