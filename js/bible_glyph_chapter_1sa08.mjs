@@ -277,7 +277,7 @@ export function bible_glyph_chapter_1sa08() {
           "So",
           "$ear+heart_on_fire",
           "$speech",
-          "all",
+          "$all",
           "the",
           "$speech",
           "of",
