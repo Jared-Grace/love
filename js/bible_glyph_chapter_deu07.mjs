@@ -578,7 +578,7 @@ export function bible_glyph_chapter_deu07() {
           "$kneeling+doing",
           "their",
           "$moai,",
-          "for",
+          "$pointing",
           "that",
           "will",
           "be",
