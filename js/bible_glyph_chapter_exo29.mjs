@@ -569,7 +569,7 @@ export function bible_glyph_chapter_exo29() {
           "their",
           "right",
           "$foot.",
-          "Splatter",
+          "$shower",
           "the",
           "remaining",
           "$blood",
