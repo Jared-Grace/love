@@ -181,7 +181,7 @@ export function bible_glyph_chapter_exo28() {
           "to",
           "$hammer",
           "the",
-          "ephod",
+          "$safety_vest",
           "with",
           "$gold",
           "and",
