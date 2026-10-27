@@ -331,7 +331,7 @@ export function bible_glyph_chapter_ecc01() {
           "have",
           "found",
           "them",
-          "all",
+          "$all",
           "to",
           "be",
           "futile,",
