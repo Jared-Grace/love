@@ -640,7 +640,7 @@ export function bible_glyph_chapter_num09() {
           "remained",
           "over",
           "the",
-          "tabernacle",
+          "$tent+house",
           "for",
           "only",
           "a",
