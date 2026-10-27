@@ -154,7 +154,7 @@ export function bible_glyph_chapter_job38() {
           "$fountain+doing",
           "from",
           "the",
-          "womb,",
+          "$hugging_face+baby,",
         ],
       },
       {
