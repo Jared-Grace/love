@@ -765,7 +765,7 @@ export function bible_glyph_chapter_deu07() {
           "the",
           "$field",
           "would",
-          "multiply",
+          "$multiply+doing",
           "around",
           "you.",
         ],
