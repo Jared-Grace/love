@@ -835,7 +835,7 @@ export function bible_glyph_chapter_deu32() {
           "flight,",
           "unless",
           "their",
-          "Rock",
+          "$rock",
           "had",
           "sold",
           "them,",
