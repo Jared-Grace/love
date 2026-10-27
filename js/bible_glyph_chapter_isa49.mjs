@@ -606,7 +606,7 @@ export function bible_glyph_chapter_isa49() {
           "as",
           "$me",
           "$sprout,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "you",
