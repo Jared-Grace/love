@@ -570,7 +570,7 @@ export function bible_glyph_chapter_exo10() {
           "the",
           "hail",
           "had",
-          "left",
+          "$takeout_box+doing",
           "behind.",
           "$no_entry",
           "green",
