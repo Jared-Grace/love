@@ -354,7 +354,7 @@ export function bible_glyph_chapter_job31() {
           "have",
           "eaten",
           "my",
-          "morsel",
+          "$bread+pinching_hand",
           "alone,",
           "$no_entry",
           "sharing",
