@@ -637,7 +637,7 @@ export function bible_glyph_chapter_ezk01() {
           "stretched",
           "out",
           "$woman",
-          "toward",
+          "$toward",
           "another.",
           "$man_beard",
           "also",
