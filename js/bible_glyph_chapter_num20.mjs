@@ -310,7 +310,7 @@ export function bible_glyph_chapter_num20() {
           "struck",
           "the",
           "rock",
-          "twice",
+          "$drum",
           "with",
           "his",
           "$white_cane,",
