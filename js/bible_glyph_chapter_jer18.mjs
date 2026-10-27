@@ -149,7 +149,7 @@ export function bible_glyph_chapter_jer18() {
           "the",
           "potter's",
           "$hand,",
-          "so",
+          "$right_arrow",
           "are",
           "you",
           "in",
