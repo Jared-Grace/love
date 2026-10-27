@@ -221,7 +221,7 @@ export function bible_glyph_chapter_2ki04() {
           "he",
           "$speech,",
           "$walking,",
-          "sell",
+          "$coin+hands_giving",
           "the",
           "oil",
           "and",
