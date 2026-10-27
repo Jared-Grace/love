@@ -482,7 +482,7 @@ export function bible_glyph_chapter_jdg06() {
           "$flashlight+question",
           "can",
           "I",
-          "save",
+          "$rescue",
           "$wrestling+heart_on_fire?",
           "Indeed,",
           "my",
