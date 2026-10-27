@@ -39,7 +39,7 @@ export function bible_glyph_chapter_ezk37() {
           "down",
           "in",
           "the",
-          "middle",
+          "$radio_button",
           "of",
           "the",
           "valley;",
