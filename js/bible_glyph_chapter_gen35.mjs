@@ -559,7 +559,7 @@ export function bible_glyph_chapter_gen35() {
           "over",
           "her",
           "grave.",
-          "It",
+          "$pointing_back",
           "marks",
           "the",
           "grave",
