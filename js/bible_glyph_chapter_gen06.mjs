@@ -437,7 +437,7 @@ export function bible_glyph_chapter_gen06() {
           "the",
           "$package,",
           "and",
-          "finish",
+          "$end_arrow",
           "its",
           "walls",
           "a",
