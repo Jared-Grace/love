@@ -446,7 +446,7 @@ export function bible_glyph_chapter_1ki12() {
           "$star+doing,",
           "$me",
           "will",
-          "add",
+          "$plus+doing",
           "to",
           "your",
           "$yoke.",
