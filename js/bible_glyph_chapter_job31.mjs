@@ -241,7 +241,7 @@ export function bible_glyph_chapter_job31() {
           "burns",
           "down",
           "to",
-          "Abaddon;",
+          "$wilted_flower+place;",
           "it",
           "would",
           "root",
