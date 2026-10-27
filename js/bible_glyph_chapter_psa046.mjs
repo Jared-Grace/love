@@ -193,7 +193,7 @@ export function bible_glyph_chapter_psa046() {
           "wars",
           "to",
           "cease",
-          "throughout",
+          "$finish",
           "the",
           "$earth;",
           "He",
