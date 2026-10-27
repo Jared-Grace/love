@@ -71,7 +71,7 @@ export function bible_glyph_chapter_psa027() {
           "$traffic_light",
           "an",
           "army",
-          "encamps",
+          "$camp+doing",
           "around",
           "me,",
           "my",
