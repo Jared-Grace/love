@@ -1286,7 +1286,7 @@ export function bible_glyph_chapter_1sa25() {
           "he",
           "was",
           "very",
-          "drunk.",
+          "$woozy_face+doer.",
           "So",
           "she",
           "told",
