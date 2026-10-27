@@ -245,7 +245,7 @@ export function bible_glyph_chapter_jos02() {
           "gone",
           "out,",
           "the",
-          "gate",
+          "$gate",
           "was",
           "shut.",
         ],
