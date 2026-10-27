@@ -558,7 +558,7 @@ export function bible_glyph_chapter_1sa01() {
           "$face",
           "was",
           "$no_entry",
-          "longer",
+          "$repeat",
           "$link.",
         ],
       },
