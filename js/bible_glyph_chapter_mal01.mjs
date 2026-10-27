@@ -361,7 +361,7 @@ export function bible_glyph_chapter_mal01() {
           "$no_entry",
           "longer",
           "kindle",
-          "useless",
+          "$heart_orange+manner",
           "fires",
           "on",
           "My",
