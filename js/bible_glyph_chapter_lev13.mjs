@@ -904,7 +904,7 @@ export function bible_glyph_chapter_lev13() {
           "him",
           "again,",
           "and",
-          "if",
+          "$traffic_light",
           "it",
           "has",
           "spread",
