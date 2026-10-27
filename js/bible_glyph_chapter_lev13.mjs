@@ -1798,7 +1798,7 @@ export function bible_glyph_chapter_lev13() {
           "$microbe+arrow_both_ways+doing,",
           "you",
           "must",
-          "burn",
+          "$fire+doing",
           "it,",
           "whether",
           "the",
