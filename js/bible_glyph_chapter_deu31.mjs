@@ -903,7 +903,7 @@ export function bible_glyph_chapter_deu31() {
           "the",
           "$speech",
           "of",
-          "this",
+          "$flashlight",
           "$scroll",
           "from",
           "beginning",
