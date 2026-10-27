@@ -486,7 +486,7 @@ export function bible_glyph_chapter_zep03() {
           "longer",
           "will",
           "you",
-          "fear",
+          "$fear+doing",
           "any",
           "$thumbs_down.",
         ],
