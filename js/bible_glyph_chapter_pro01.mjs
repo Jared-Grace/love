@@ -422,7 +422,7 @@ export function bible_glyph_chapter_pro01() {
           "long",
           "will",
           "scoffers",
-          "delight",
+          "$heart_eyes+doing",
           "in",
           "their",
           "scorn",
