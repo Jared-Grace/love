@@ -712,7 +712,7 @@ export function bible_glyph_chapter_gen18() {
       {
         verse_number: 25,
         words: [
-          "Far",
+          "$person_gesturing_no+exclamation",
           "be",
           "it",
           "from",
