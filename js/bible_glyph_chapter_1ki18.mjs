@@ -75,7 +75,7 @@ export function bible_glyph_chapter_1ki18() {
         words: [
           "and",
           "$proper_name$Ahab",
-          "summoned",
+          "$waving_hand",
           "$kneeling+i_am,",
           "who",
           "was",
