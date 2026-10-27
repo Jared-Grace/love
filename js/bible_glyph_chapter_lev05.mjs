@@ -50,7 +50,7 @@ export function bible_glyph_chapter_lev05() {
           "unclean,",
           "whether",
           "the",
-          "carcass",
+          "$skull+bone",
           "of",
           "an",
           "unclean",
