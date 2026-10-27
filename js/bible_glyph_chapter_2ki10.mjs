@@ -471,7 +471,7 @@ export function bible_glyph_chapter_2ki10() {
         verse_number: 13,
         words: [
           "$i_am+pointing_back",
-          "met",
+          "$magnifying_glass+exclamation",
           "some",
           "$brother",
           "of",
