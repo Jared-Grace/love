@@ -432,7 +432,7 @@ export function bible_glyph_chapter_lev23() {
           "to",
           "$abacus",
           "off",
-          "seven",
+          "$seven",
           "full",
           "$sabbath.",
         ],
