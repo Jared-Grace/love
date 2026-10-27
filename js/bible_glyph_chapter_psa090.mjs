@@ -357,7 +357,7 @@ export function bible_glyph_chapter_psa090() {
           "$kneeling,",
           "and",
           "Your",
-          "splendor",
+          "$crown+sparkles",
           "to",
           "their",
           "$son.",
