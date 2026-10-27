@@ -270,7 +270,7 @@ export function bible_glyph_chapter_deu31() {
           "leave",
           "you",
           "$no_entry",
-          "forsake",
+          "$derelict_house+doing",
           "you.",
           "$no_entry",
           "be",
