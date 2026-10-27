@@ -483,7 +483,7 @@ export function bible_glyph_chapter_lam03() {
           "$thumbs_up",
           "for",
           "a",
-          "man",
+          "$might+man_beard",
           "to",
           "$lifting",
           "the",
