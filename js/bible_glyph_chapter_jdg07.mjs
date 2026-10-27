@@ -271,7 +271,7 @@ export function bible_glyph_chapter_jdg07() {
           "lapped",
           "I",
           "will",
-          "save",
+          "$rescue",
           "you",
           "and",
           "$hands_giving",
