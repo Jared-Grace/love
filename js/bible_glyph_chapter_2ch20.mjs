@@ -940,7 +940,7 @@ export function bible_glyph_chapter_2ch20() {
           "gathering",
           "the",
           "$plunder",
-          "because",
+          "$pointing",
           "there",
           "was",
           "so",
