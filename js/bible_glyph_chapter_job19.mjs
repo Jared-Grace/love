@@ -436,7 +436,7 @@ export function bible_glyph_chapter_job19() {
           "inscribed",
           "in",
           "a",
-          "book,",
+          "$closed_book,",
         ],
       },
       {
