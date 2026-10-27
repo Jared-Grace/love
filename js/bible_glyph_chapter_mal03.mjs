@@ -399,7 +399,7 @@ export function bible_glyph_chapter_mal03() {
           "fruits",
           "of",
           "your",
-          "land,",
+          "$brown_square,",
           "and",
           "the",
           "vine",
