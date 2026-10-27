@@ -995,7 +995,7 @@ export function bible_glyph_chapter_2ch20() {
           "$i_am+scales",
           "at",
           "their",
-          "head,",
+          "$person_gesturing_ok,",
           "$turn_back",
           "to",
           "$city+peace",
