@@ -578,7 +578,7 @@ export function bible_glyph_chapter_2sa07() {
           "is",
           "my",
           "$house,",
-          "that",
+          "$pointing",
           "You",
           "have",
           "$footprints",
