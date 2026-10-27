@@ -486,7 +486,7 @@ export function bible_glyph_chapter_deu04() {
           "wrote",
           "them",
           "$pointing_up",
-          "two",
+          "$two",
           "tablets",
           "of",
           "$stone.",
