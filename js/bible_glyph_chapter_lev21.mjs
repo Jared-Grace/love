@@ -361,7 +361,7 @@ export function bible_glyph_chapter_lev21() {
           "$no_entry",
           "desecrate",
           "it,",
-          "for",
+          "$pointing",
           "the",
           "consecration",
           "oil",
