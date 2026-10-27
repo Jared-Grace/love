@@ -62,7 +62,7 @@ export function bible_glyph_chapter_exo16() {
           "the",
           "$wilderness",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "$wrestling+heart_on_fire",
