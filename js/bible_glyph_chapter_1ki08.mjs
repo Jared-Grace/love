@@ -1082,7 +1082,7 @@ export function bible_glyph_chapter_1ki08() {
           "on",
           "his",
           "own",
-          "head",
+          "$person_gesturing_ok",
           "what",
           "he",
           "has",
