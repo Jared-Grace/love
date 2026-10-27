@@ -695,7 +695,7 @@ export function bible_glyph_chapter_2sa06() {
           "before",
           "the",
           "$i_am,",
-          "who",
+          "$back+flashlight",
           "chose",
           "me",
           "over",
