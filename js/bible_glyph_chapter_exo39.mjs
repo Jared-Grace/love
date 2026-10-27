@@ -52,7 +52,7 @@ export function bible_glyph_chapter_exo39() {
           "$safety_vest",
           "$gold,",
           "and",
-          "blue,",
+          "$blue_circle,",
           "purple,",
           "and",
           "scarlet",
