@@ -910,7 +910,7 @@ export function bible_glyph_chapter_jer32() {
           "the",
           "$i_am",
           "$link",
-          "to",
+          "$toward",
           "$up_arrow+i_am,",
         ],
       },
