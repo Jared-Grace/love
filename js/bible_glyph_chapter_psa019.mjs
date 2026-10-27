@@ -130,7 +130,7 @@ export function bible_glyph_chapter_psa019() {
           "and",
           "runs",
           "its",
-          "circuit",
+          "$sun+clockwise_arrows",
           "to",
           "the",
           "other;",
