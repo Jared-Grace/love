@@ -689,7 +689,7 @@ export function bible_glyph_chapter_gen49() {
       {
         verse_number: 28,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "twelve",
