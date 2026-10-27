@@ -229,7 +229,7 @@ export function bible_glyph_chapter_2ki04() {
           "your",
           "debt.",
           "Then",
-          "you",
+          "$you",
           "and",
           "your",
           "$son",
