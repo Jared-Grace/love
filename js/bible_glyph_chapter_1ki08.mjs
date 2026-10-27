@@ -151,7 +151,7 @@ export function bible_glyph_chapter_1ki08() {
           "$peace+proper_name",
           "and",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "$wrestling+heart_on_fire",
