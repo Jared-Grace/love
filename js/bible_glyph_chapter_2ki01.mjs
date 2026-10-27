@@ -439,7 +439,7 @@ export function bible_glyph_chapter_2ki01() {
           "Again",
           "$heart_on_fire+i_am",
           "$mouth,",
-          "If",
+          "$traffic_light",
           "I",
           "am",
           "a",
