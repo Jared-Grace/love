@@ -996,7 +996,7 @@ export function bible_glyph_chapter_exo16() {
         words: [
           "$fishing_pole+proper_name",
           "$speech,",
-          "This",
+          "$flashlight",
           "is",
           "what",
           "the",
