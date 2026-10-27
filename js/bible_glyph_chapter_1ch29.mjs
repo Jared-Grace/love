@@ -22,7 +22,7 @@ export function bible_glyph_chapter_1ch29() {
           "$speech",
           "to",
           "the",
-          "whole",
+          "$all",
           "$church,",
           "$peace+proper_name",
           "my",
