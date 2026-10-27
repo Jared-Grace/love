@@ -511,7 +511,7 @@ export function bible_glyph_chapter_lam01() {
           "they",
           "are",
           "draped",
-          "over",
+          "$pointing_up",
           "my",
           "neck,",
           "and",
