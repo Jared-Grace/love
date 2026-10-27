@@ -1060,7 +1060,7 @@ export function bible_glyph_chapter_1ki20() {
           "where",
           "the",
           "wall",
-          "fell",
+          "$person+pointing_down",
           "on",
           "twenty",
           "seven",
