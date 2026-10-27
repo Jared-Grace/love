@@ -149,7 +149,7 @@ export function bible_glyph_chapter_gen27() {
           "the",
           "$field",
           "to",
-          "hunt",
+          "$net+deer+doing",
           "game",
           "and",
           "$footprints",
