@@ -27,7 +27,7 @@ export function bible_glyph_chapter_exo38() {
           "cubits",
           "long",
           "and",
-          "five",
+          "$five",
           "cubits",
           "wide.",
           "It",
