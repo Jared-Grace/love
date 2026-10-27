@@ -326,7 +326,7 @@ export function bible_glyph_chapter_num15() {
           "to",
           "$hammer+doing",
           "each",
-          "one.",
+          "$one.",
         ],
       },
       {
