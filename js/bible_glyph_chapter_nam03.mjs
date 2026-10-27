@@ -47,7 +47,7 @@ export function bible_glyph_chapter_nam03() {
           "$horse",
           "and",
           "bounding",
-          "chariot!",
+          "$chariot!",
         ],
       },
       {
