@@ -265,7 +265,7 @@ export function bible_glyph_chapter_psa022() {
         verse_number: 13,
         words: [
           "They",
-          "open",
+          "$face_with_open_mouth+doing",
           "their",
           "jaws",
           "against",
