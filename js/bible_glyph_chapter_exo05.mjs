@@ -340,7 +340,7 @@ export function bible_glyph_chapter_exo05() {
           "your",
           "own",
           "$wheat+scissors",
-          "wherever",
+          "$back+flashlight",
           "you",
           "can",
           "find",
