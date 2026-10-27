@@ -109,7 +109,7 @@ export function bible_glyph_chapter_pro03() {
           "your",
           "$heart_organ,",
           "and",
-          "lean",
+          "$crutch+doing",
           "$no_entry",
           "on",
           "your",
