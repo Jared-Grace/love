@@ -278,7 +278,7 @@ export function bible_glyph_chapter_jer07() {
           "we",
           "can",
           "$hammer+doing",
-          "all",
+          "$all",
           "these",
           "abominations?",
         ],
