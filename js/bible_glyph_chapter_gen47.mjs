@@ -747,7 +747,7 @@ export function bible_glyph_chapter_gen47() {
           "he",
           "did",
           "$no_entry",
-          "acquire",
+          "$coin+hand_receiving",
           "the",
           "$priest",
           "portion",
