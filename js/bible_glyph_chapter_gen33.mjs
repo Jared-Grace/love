@@ -228,7 +228,7 @@ export function bible_glyph_chapter_gen33() {
           "$speech,",
           "I",
           "have",
-          "plenty,",
+          "$multiply,",
           "my",
           "$brother.",
           "Keep",
