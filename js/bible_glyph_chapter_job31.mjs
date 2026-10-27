@@ -498,7 +498,7 @@ export function bible_glyph_chapter_job31() {
           "$traffic_light",
           "I",
           "have",
-          "put",
+          "$palm_down",
           "my",
           "trust",
           "in",
