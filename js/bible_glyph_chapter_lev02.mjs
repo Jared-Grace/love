@@ -384,7 +384,7 @@ export function bible_glyph_chapter_lev02() {
           "of",
           "new",
           "$barley+sprout",
-          "roasted",
+          "$fire+barley+doing",
           "on",
           "the",
           "$fire",
