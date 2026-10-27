@@ -598,7 +598,7 @@ export function bible_glyph_chapter_gen09() {
           "$proper_name$Canaan,",
           "$eye",
           "the",
-          "nakedness",
+          "$face_with_peeking_eye",
           "of",
           "his",
           "$father",
