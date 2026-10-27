@@ -620,7 +620,7 @@ export function bible_glyph_chapter_gen17() {
           "to",
           "you",
           "at",
-          "this",
+          "$flashlight",
           "$alarm_clock",
           "next",
           '$year."',
