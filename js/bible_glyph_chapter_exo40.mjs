@@ -803,7 +803,7 @@ export function bible_glyph_chapter_exo40() {
         words: [
           "Then",
           "the",
-          "cloud",
+          "$cloud",
           "$coat+doing",
           "the",
           "Tent",
