@@ -620,7 +620,7 @@ export function bible_glyph_chapter_ezk11() {
           "and",
           "$hands_giving",
           "a",
-          "new",
+          "$new_button",
           "$wind",
           "within",
           "them.",
