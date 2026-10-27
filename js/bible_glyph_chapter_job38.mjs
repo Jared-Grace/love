@@ -126,7 +126,7 @@ export function bible_glyph_chapter_job38() {
           "the",
           "morning",
           "stars",
-          "sang",
+          "$partying_face",
           "together",
           "and",
           "all",
