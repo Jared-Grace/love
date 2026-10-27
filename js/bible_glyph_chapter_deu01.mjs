@@ -760,7 +760,7 @@ export function bible_glyph_chapter_deu01() {
           "a",
           "$thumbs_up",
           "$earth",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "our",
