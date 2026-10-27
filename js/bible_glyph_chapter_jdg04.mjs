@@ -210,7 +210,7 @@ export function bible_glyph_chapter_jdg04() {
           "and",
           "his",
           "troops",
-          "to",
+          "$toward",
           "the",
           "River",
           "$proper_name$Kishon,",
