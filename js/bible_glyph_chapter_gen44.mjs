@@ -915,7 +915,7 @@ export function bible_glyph_chapter_gen44() {
           "$pointing",
           "your",
           "$kneeling",
-          "guaranteed",
+          "$handshake+money_bag+doing",
           "the",
           "safety",
           "of",
