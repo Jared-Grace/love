@@ -924,7 +924,7 @@ export function bible_glyph_chapter_num10() {
           "who",
           "hate",
           "You",
-          "flee",
+          "$running+dashing_away",
           "before",
           "You.",
         ],
