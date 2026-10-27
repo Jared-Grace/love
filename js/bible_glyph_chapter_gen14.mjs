@@ -649,7 +649,7 @@ export function bible_glyph_chapter_gen14() {
           "$thread+thing",
           "or",
           "the",
-          "strap",
+          "$sandal+thread",
           "of",
           "a",
           "$sandal,",
