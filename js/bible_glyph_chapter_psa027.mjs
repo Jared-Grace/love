@@ -315,7 +315,7 @@ export function bible_glyph_chapter_psa027() {
           "on",
           "a",
           "level",
-          "path",
+          "$railway_track",
           "because",
           "of",
           "my",
