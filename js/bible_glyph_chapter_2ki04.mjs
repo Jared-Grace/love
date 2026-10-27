@@ -1060,7 +1060,7 @@ export function bible_glyph_chapter_2ki04() {
           "in,",
           "$locked+doing",
           "the",
-          "door",
+          "$door+thing",
           "behind",
           "the",
           "two",
