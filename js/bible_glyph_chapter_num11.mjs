@@ -833,7 +833,7 @@ export function bible_glyph_chapter_num11() {
           "it",
           "to",
           "the",
-          "seventy",
+          "$seven+zero",
           "elders.",
           "As",
           "the",
