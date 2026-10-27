@@ -238,7 +238,7 @@ export function bible_glyph_chapter_2sa07() {
           "of",
           "Hosts",
           "$speech:",
-          "I",
+          "$me",
           "$hand_receiving",
           "you",
           "$tray_out",
