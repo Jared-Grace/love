@@ -206,7 +206,7 @@ export function bible_glyph_chapter_isa58() {
           "and",
           "a",
           "$sun",
-          "acceptable",
+          "$smiling_face_with_smiling_eyes",
           "to",
           "the",
           "$i_am?",
