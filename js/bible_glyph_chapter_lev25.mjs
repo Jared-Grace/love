@@ -71,7 +71,7 @@ export function bible_glyph_chapter_lev25() {
           "your",
           "$field",
           "and",
-          "prune",
+          "$scissors+vine+doing",
           "your",
           "$vineyard",
           "and",
