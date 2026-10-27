@@ -561,7 +561,7 @@ export function bible_glyph_chapter_jdg07() {
           "$axe+proper_name",
           "$ear",
           "the",
-          "dream",
+          "$dream",
           "and",
           "its",
           "interpretation,",
