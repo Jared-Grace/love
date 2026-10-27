@@ -323,7 +323,7 @@ export function bible_glyph_chapter_exo34() {
           "will",
           "$hammer+doing",
           "$star_struck",
-          "that",
+          "$back+flashlight",
           "have",
           "$no_entry",
           "been",
