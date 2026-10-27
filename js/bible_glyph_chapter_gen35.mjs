@@ -583,7 +583,7 @@ export function bible_glyph_chapter_gen35() {
           "$tent",
           "$telescope+right_arrow",
           "the",
-          "tower",
+          "$tower+sheep+crowd+proper_name",
           "of",
           "Eder.",
         ],
