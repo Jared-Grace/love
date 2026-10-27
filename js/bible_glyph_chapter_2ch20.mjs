@@ -1045,7 +1045,7 @@ export function bible_glyph_chapter_2ch20() {
           "$heart_on_fire",
           "$link",
           "$pointing_up",
-          "all",
+          "$all",
           "the",
           "$castle",
           "of",
