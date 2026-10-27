@@ -1838,7 +1838,7 @@ export function bible_glyph_chapter_deu28() {
           "bears,",
           "$pointing",
           "for",
-          "lack",
+          "$empty_nest+coin",
           "of",
           "anything",
           "else",
