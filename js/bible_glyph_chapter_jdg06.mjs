@@ -525,7 +525,7 @@ export function bible_glyph_chapter_jdg06() {
           "the",
           "$proper_name$Midianites",
           "as",
-          "one",
+          "$one",
           "$man_beard.",
         ],
       },
