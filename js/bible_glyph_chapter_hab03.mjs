@@ -217,7 +217,7 @@ export function bible_glyph_chapter_hab03() {
           "You",
           "brandished",
           "Your",
-          "bow;",
+          "$bow+wood;",
           "You",
           "called",
           "for",
