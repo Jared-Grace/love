@@ -1033,7 +1033,7 @@ export function bible_glyph_chapter_exo28() {
           "it",
           "on",
           "the",
-          "turban;",
+          "$person_wearing_turban;",
           "it",
           "shall",
           "be",
