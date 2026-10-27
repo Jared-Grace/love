@@ -228,7 +228,7 @@ export function bible_glyph_chapter_gen49() {
           "return",
           "from",
           "the",
-          "prey,",
+          "$wolf+thing,",
           "my",
           "$son.",
           "He",
