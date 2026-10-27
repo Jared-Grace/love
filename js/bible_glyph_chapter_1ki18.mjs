@@ -395,7 +395,7 @@ export function bible_glyph_chapter_1ki18() {
           "Was",
           "it",
           "$no_entry",
-          "reported",
+          "$newspaper",
           "to",
           "my",
           "$crown",
