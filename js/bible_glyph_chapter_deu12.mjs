@@ -833,7 +833,7 @@ export function bible_glyph_chapter_deu12() {
           "$son",
           "after",
           "you,",
-          "because",
+          "$pointing",
           "you",
           "will",
           "be",
