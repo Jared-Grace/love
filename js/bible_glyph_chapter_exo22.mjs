@@ -471,7 +471,7 @@ export function bible_glyph_chapter_exo22() {
           "$pointing",
           "a",
           "$man_beard",
-          "borrows",
+          "$question",
           "an",
           "animal",
           "from",
