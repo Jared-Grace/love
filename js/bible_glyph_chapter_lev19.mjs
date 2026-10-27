@@ -234,7 +234,7 @@ export function bible_glyph_chapter_lev19() {
           "strip",
           "your",
           "vineyard",
-          "bare",
+          "$wheat+pinching_hand+doing",
           "or",
           "gather",
           "its",
