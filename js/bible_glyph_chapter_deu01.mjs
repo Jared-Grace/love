@@ -594,7 +594,7 @@ export function bible_glyph_chapter_deu01() {
           "of",
           "the",
           "$proper_name$Amorites,",
-          "which",
+          "$back+flashlight",
           "the",
           "$i_am",
           "our",
