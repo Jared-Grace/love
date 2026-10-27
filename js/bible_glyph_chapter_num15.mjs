@@ -253,7 +253,7 @@ export function bible_glyph_chapter_num15() {
           "$flour",
           "$spoon+cyclone",
           "with",
-          "half",
+          "$divide",
           "a",
           "hin",
           "of",
