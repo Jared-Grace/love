@@ -255,7 +255,7 @@ export function bible_glyph_chapter_2sa05() {
           "to",
           "reach",
           "the",
-          "lame",
+          "$manual_wheelchair",
           "and",
           "the",
           "blind,",
