@@ -723,7 +723,7 @@ export function bible_glyph_chapter_1ki19() {
           "$heart_on_fire+i_am,",
           "and",
           "$speech,",
-          "Please",
+          "$pleading",
           "let",
           "me",
           "$face_blowing_a_kiss",
