@@ -483,7 +483,7 @@ export function bible_glyph_chapter_lev10() {
           "carefully",
           "for",
           "the",
-          "goat",
+          "$goat+man_beard",
           "$bow,",
           "and",
           "behold,",
