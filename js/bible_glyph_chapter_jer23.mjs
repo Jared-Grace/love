@@ -986,7 +986,7 @@ export function bible_glyph_chapter_jer23() {
           "$wheat+scissors",
           "compared",
           "to",
-          "grain?",
+          "$wheat+wind?",
           "declares",
           "the",
           "$i_am.",
