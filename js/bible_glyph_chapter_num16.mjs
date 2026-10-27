@@ -1488,7 +1488,7 @@ export function bible_glyph_chapter_num16() {
           "from",
           "the",
           "$fist+microbe+thing",
-          "numbered",
+          "$four",
           "14,700,",
           "in",
           "addition",
