@@ -1188,7 +1188,7 @@ export function bible_glyph_chapter_lev16() {
           "$sparkle+thing",
           "Place,",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting",
           "and",
