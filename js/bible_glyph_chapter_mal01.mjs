@@ -276,7 +276,7 @@ export function bible_glyph_chapter_mal01() {
           "you",
           "present",
           "the",
-          "lame",
+          "$manual_wheelchair",
           "and",
           "sick",
           "ones,",
