@@ -980,7 +980,7 @@ export function bible_glyph_chapter_num35() {
           "the",
           "$earth",
           "where",
-          "you",
+          "$you",
           "live.",
           "$blood",
           "pollutes",
