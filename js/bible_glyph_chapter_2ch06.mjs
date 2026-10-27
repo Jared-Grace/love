@@ -1345,7 +1345,7 @@ export function bible_glyph_chapter_2ch06() {
           "an",
           "$earth",
           "$satellite",
-          "or",
+          "$shuffle",
           "near,",
         ],
       },
