@@ -268,7 +268,7 @@ export function bible_glyph_chapter_exo12() {
           "$tray_out",
           "it",
           "until",
-          "morning;",
+          "$morning;",
           "before",
           "the",
           "morning",
