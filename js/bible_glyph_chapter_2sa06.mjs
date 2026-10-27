@@ -442,7 +442,7 @@ export function bible_glyph_chapter_2sa06() {
           "$i_am,",
           "$briefs+doing",
           "a",
-          "linen",
+          "$thread",
           "$safety_vest,",
         ],
       },
