@@ -180,7 +180,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 6,
         words: [
           "So",
-          "please",
+          "$pleading",
           "$walking",
           "$watch",
           "and",
