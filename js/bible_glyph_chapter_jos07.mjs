@@ -55,7 +55,7 @@ export function bible_glyph_chapter_jos07() {
           "apart.",
           "So",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "the",
           "$i_am",
