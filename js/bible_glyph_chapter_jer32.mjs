@@ -1052,7 +1052,7 @@ export function bible_glyph_chapter_jer32() {
           "done",
           "nothing",
           "but",
-          "provoke",
+          "$face_steam+right_anger_bubble",
           "Me",
           "to",
           "anger",
