@@ -362,7 +362,7 @@ export function bible_glyph_chapter_jos24() {
           "$pointing_down+proper_name",
           "and",
           "$footprints",
-          "to",
+          "$toward",
           "$proper_name$Jericho.",
           "The",
           "people",
