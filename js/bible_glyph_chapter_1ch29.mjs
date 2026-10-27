@@ -172,7 +172,7 @@ export function bible_glyph_chapter_1ch29() {
           "of",
           "$proper_name$Ophir,",
           "and",
-          "seven",
+          "$seven",
           "$ten+all",
           "$flying_disc",
           "of",
