@@ -392,7 +392,7 @@ export function bible_glyph_chapter_num20() {
           "of",
           "Israel",
           "quarreled",
-          "with",
+          "$safety_pin",
           "the",
           "$i_am,",
           "and",
