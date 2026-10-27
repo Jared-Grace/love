@@ -559,7 +559,7 @@ export function bible_glyph_chapter_exo08() {
           "And",
           "the",
           "gnats",
-          "remained",
+          "$link",
           "on",
           "$person",
           "and",
