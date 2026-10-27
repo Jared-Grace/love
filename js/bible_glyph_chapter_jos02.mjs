@@ -744,7 +744,7 @@ export function bible_glyph_chapter_jos02() {
           "and",
           "stayed",
           "$telescope",
-          "three",
+          "$three",
           "$sun,",
           "until",
           "their",
