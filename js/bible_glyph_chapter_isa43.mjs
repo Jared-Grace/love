@@ -572,7 +572,7 @@ export function bible_glyph_chapter_isa43() {
           "the",
           "things",
           "of",
-          "old.",
+          "$compass+right_arrow+describing.",
         ],
       },
       {
