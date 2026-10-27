@@ -128,7 +128,7 @@ export function bible_glyph_chapter_gen41() {
           "and",
           "dreamed",
           "a",
-          "second",
+          "$second_place",
           "time.",
           "Seven",
           "heads",
