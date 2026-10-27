@@ -529,7 +529,7 @@ export function bible_glyph_chapter_lev14() {
           "olive",
           "$lotion_bottle",
           "and",
-          "pour",
+          "$pouring_liquid+fire",
           "it",
           "into",
           "the",
