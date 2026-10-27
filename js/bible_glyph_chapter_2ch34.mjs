@@ -790,7 +790,7 @@ export function bible_glyph_chapter_2ch34() {
           "$top",
           "is",
           "the",
-          "wrath",
+          "$angry_face",
           "of",
           "the",
           "$i_am",
