@@ -131,7 +131,7 @@ export function bible_glyph_chapter_gen50() {
           "in",
           "the",
           "$tomb",
-          "that",
+          "$back+flashlight",
           "I",
           "dug",
           "for",
