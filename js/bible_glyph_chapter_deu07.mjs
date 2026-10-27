@@ -325,7 +325,7 @@ export function bible_glyph_chapter_deu07() {
           "for",
           "a",
           "$ten+all",
-          "generations",
+          "$dna",
           "of",
           "those",
           "who",
