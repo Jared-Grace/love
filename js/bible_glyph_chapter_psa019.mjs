@@ -261,7 +261,7 @@ export function bible_glyph_chapter_psa019() {
           "them",
           "is",
           "great",
-          "reward.",
+          "$foot+end_arrow+manner.",
         ],
       },
       {
