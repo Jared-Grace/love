@@ -348,7 +348,7 @@ export function bible_glyph_chapter_1ki21() {
         words: [
           "But",
           "seat",
-          "two",
+          "$two",
           "men,",
           "$son",
           "of",
