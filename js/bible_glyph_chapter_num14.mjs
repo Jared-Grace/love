@@ -617,7 +617,7 @@ export function bible_glyph_chapter_num14() {
           "the",
           "$cyclone",
           "of",
-          "this",
+          "$flashlight",
           "$family,",
           "in",
           "keeping",
