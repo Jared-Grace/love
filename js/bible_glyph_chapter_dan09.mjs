@@ -481,7 +481,7 @@ export function bible_glyph_chapter_dan09() {
           "it",
           "upon",
           "us.",
-          "For",
+          "$pointing",
           "the",
           "$i_am",
           "our",
