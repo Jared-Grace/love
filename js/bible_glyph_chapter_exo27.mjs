@@ -356,7 +356,7 @@ export function bible_glyph_chapter_exo27() {
           "cubits",
           "long,",
           "with",
-          "three",
+          "$three",
           "$candle",
           "and",
           "three",
