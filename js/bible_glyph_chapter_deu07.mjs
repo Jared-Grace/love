@@ -95,7 +95,7 @@ export function bible_glyph_chapter_deu07() {
         words: [
           "Do",
           "$no_entry",
-          "intermarry",
+          "$man_in_tuxedo+family",
           "with",
           "them.",
           "Do",
