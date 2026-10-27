@@ -221,7 +221,7 @@ export function bible_glyph_chapter_lam04() {
           "they",
           "are",
           "$no_entry",
-          "recognized",
+          "$detective",
           "in",
           "the",
           "streets.",
