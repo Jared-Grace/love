@@ -396,7 +396,7 @@ export function bible_glyph_chapter_lev06() {
           "$flour",
           "and",
           "olive",
-          "oil,",
+          "$lotion_bottle,",
           "together",
           "with",
           "all",
