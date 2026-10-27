@@ -549,7 +549,7 @@ export function bible_glyph_chapter_lev27() {
           "$sparkle+doing",
           "his",
           "$field",
-          "after",
+          "$next_track",
           "the",
           "Jubilee,",
           "the",
