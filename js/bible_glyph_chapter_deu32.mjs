@@ -758,7 +758,7 @@ export function bible_glyph_chapter_deu32() {
           "of",
           "the",
           "$enemy,",
-          "lest",
+          "$no_entry+traffic_light",
           "their",
           "adversaries",
           "$detective",
