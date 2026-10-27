@@ -386,7 +386,7 @@ export function bible_glyph_chapter_deu09() {
           "the",
           "exact",
           "$speech",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "had",
           "$mouth",
