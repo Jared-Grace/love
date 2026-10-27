@@ -105,7 +105,7 @@ export function bible_glyph_chapter_exo04() {
           "it",
           "by",
           "the",
-          'tail,"',
+          "$snake+back",
           "the",
           "$i_am",
           "$speech",
