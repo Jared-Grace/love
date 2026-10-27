@@ -366,7 +366,7 @@ export function bible_glyph_chapter_ezk37() {
           "perished;",
           "we",
           "are",
-          "cut",
+          "$axe+divide+doing",
           "off.",
         ],
       },
