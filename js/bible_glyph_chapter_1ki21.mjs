@@ -871,7 +871,7 @@ export function bible_glyph_chapter_1ki21() {
           "one",
           "like",
           "$proper_name$Ahab,",
-          "who",
+          "$back+flashlight",
           "sold",
           "himself",
           "to",
