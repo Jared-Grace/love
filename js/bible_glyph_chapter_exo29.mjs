@@ -813,7 +813,7 @@ export function bible_glyph_chapter_exo29() {
           "the",
           "heave",
           "offering,",
-          "that",
+          "$back+flashlight",
           "which",
           "is",
           "waved",
