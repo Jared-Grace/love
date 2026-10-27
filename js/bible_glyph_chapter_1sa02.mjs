@@ -787,7 +787,7 @@ export function bible_glyph_chapter_1sa02() {
           "for",
           "him;",
           "but",
-          "if",
+          "$traffic_light",
           "a",
           "$man_beard",
           "$bow+doing",
