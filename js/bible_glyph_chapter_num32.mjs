@@ -381,7 +381,7 @@ export function bible_glyph_chapter_num32() {
           "$year,",
           "$finish",
           "the",
-          "whole",
+          "$all",
           "generation",
           "who",
           "had",
