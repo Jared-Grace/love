@@ -336,7 +336,7 @@ export function bible_glyph_chapter_jer31() {
           "scattered",
           "$wrestling+heart_on_fire",
           "will",
-          "gather",
+          "$tray_in+doing",
           "them",
           "and",
           "keep",
