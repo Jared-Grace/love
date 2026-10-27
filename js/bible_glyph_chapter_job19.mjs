@@ -404,7 +404,7 @@ export function bible_glyph_chapter_job19() {
       {
         verse_number: 22,
         words: [
-          "Why",
+          "$flashlight+question",
           "do",
           "you",
           "persecute",
