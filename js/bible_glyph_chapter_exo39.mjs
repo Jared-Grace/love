@@ -167,7 +167,7 @@ export function bible_glyph_chapter_exo39() {
           "$gold",
           "filigree",
           "settings,",
-          "engraved",
+          "$unlocked",
           "like",
           "a",
           "seal",
