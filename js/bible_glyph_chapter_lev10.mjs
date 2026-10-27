@@ -116,7 +116,7 @@ export function bible_glyph_chapter_lev10() {
           "of",
           "$proper_name$Uzziel,",
           "the",
-          "uncle",
+          "$two_hearts",
           "of",
           "Aaron,",
           "$speech",
