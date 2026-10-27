@@ -177,7 +177,7 @@ export function bible_glyph_chapter_zec05() {
           "$eyes",
           "and",
           "$eye",
-          "what",
+          "$flashlight+question",
           "is",
           "approaching.",
         ],
