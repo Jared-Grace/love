@@ -752,7 +752,7 @@ export function bible_glyph_chapter_2ki03() {
         words: [
           "They",
           "$speech,",
-          "This",
+          "$flashlight",
           "is",
           "$blood!",
           "The",
