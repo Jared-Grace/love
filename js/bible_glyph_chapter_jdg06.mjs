@@ -1287,7 +1287,7 @@ export function bible_glyph_chapter_jdg06() {
           "I",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "You",
           "are",
           "going",
