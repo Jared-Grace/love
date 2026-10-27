@@ -29,7 +29,7 @@ export function bible_glyph_chapter_ezr01() {
           "of",
           "the",
           "$i_am",
-          "spoken",
+          "$face_with_open_mouth",
           "through",
           "$up_arrow+i_am,",
           "the",
