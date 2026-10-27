@@ -353,7 +353,7 @@ export function bible_glyph_chapter_lev16() {
           "to",
           "slaughter",
           "the",
-          "bull",
+          "$bull",
           "for",
           "his",
           "own",
