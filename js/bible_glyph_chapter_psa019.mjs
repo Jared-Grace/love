@@ -90,7 +90,7 @@ export function bible_glyph_chapter_psa019() {
           "has",
           "pitched",
           "a",
-          "tent",
+          "$tent",
           "for",
           "the",
           "$sun_with_face.",
