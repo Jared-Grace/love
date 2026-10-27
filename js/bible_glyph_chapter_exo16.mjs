@@ -650,7 +650,7 @@ export function bible_glyph_chapter_exo16() {
           "Some",
           "of",
           "them",
-          "left",
+          "$takeout_box+doing",
           "part",
           "of",
           "it",
