@@ -306,7 +306,7 @@ export function bible_glyph_chapter_num24() {
           "$speech+thumbs_up",
           "them",
           "these",
-          "three",
+          "$three",
           "times.",
         ],
       },
