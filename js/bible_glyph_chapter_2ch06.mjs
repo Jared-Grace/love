@@ -343,7 +343,7 @@ export function bible_glyph_chapter_2ch06() {
           "have",
           "placed",
           "the",
-          "ark,",
+          "$ark,",
           "which",
           "contains",
           "the",
