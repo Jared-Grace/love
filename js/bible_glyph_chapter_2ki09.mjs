@@ -825,7 +825,7 @@ export function bible_glyph_chapter_2ki09() {
           "come",
           "in",
           "$peace?",
-          "How",
+          "$flashlight+question",
           "can",
           "there",
           "be",
