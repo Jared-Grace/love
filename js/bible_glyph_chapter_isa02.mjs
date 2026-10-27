@@ -235,7 +235,7 @@ export function bible_glyph_chapter_isa02() {
           "Their",
           "$earth",
           "is",
-          "full",
+          "$battery",
           "of",
           "silver",
           "and",
