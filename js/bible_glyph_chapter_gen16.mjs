@@ -30,7 +30,7 @@ export function bible_glyph_chapter_gen16() {
           "had",
           "an",
           "$clamp+person",
-          "maidservant",
+          "$houses+female_sign",
           "whose",
           "$name_tag",
           "was",
