@@ -295,7 +295,7 @@ export function bible_glyph_chapter_isa07() {
           "$guard+proper_name,",
           "and",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "$guard+proper_name",
           "is",
