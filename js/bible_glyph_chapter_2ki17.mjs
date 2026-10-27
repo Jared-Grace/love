@@ -341,7 +341,7 @@ export function bible_glyph_chapter_2ki17() {
           "hill",
           "and",
           "under",
-          "every",
+          "$all",
           "green",
           "$tree.",
         ],
