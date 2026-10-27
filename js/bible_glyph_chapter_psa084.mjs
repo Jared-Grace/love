@@ -227,7 +227,7 @@ export function bible_glyph_chapter_psa084() {
       {
         verse_number: 10,
         words: [
-          "For",
+          "$pointing",
           "one",
           "$sun",
           "in",
