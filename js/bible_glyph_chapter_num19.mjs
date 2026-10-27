@@ -494,7 +494,7 @@ export function bible_glyph_chapter_num19() {
         words: [
           "And",
           "any",
-          "open",
+          "$unlocked",
           "$toolbox",
           "without",
           "a",
