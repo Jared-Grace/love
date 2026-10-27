@@ -177,7 +177,7 @@ export function bible_glyph_chapter_psa046() {
           "of",
           "the",
           "$i_am,",
-          "who",
+          "$back+flashlight",
           "brings",
           "devastation",
           "upon",
