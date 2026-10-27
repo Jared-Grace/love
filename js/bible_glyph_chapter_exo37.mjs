@@ -483,7 +483,7 @@ export function bible_glyph_chapter_exo37() {
           "and",
           "petals,",
           "and",
-          "three",
+          "$three",
           "on",
           "the",
           "next",
