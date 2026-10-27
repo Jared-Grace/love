@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo19() {
         words: [
           "In",
           "the",
-          "third",
+          "$third_place",
           "$new_moon,",
           "on",
           "the",
