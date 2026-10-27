@@ -149,7 +149,7 @@ export function bible_glyph_chapter_job03() {
           "that",
           "$night",
           "$link",
-          "barren.",
+          "$pregnant_woman+no_entry.",
           "May",
           "$no_entry",
           "joyful",
