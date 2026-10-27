@@ -113,7 +113,7 @@ export function bible_glyph_chapter_ezk37() {
           "$speech",
           "to",
           "me,",
-          "Prophesy",
+          "$megaphone+doing",
           "concerning",
           "these",
           "bones",
