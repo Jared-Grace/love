@@ -1926,7 +1926,7 @@ export function bible_glyph_chapter_gen24() {
           "$speech",
           "the",
           "$kneeling,",
-          "Who",
+          "$person+question",
           "is",
           "that",
           "$man_beard",
