@@ -960,7 +960,7 @@ export function bible_glyph_chapter_deu09() {
           "nor",
           "upon",
           "the",
-          "wickedness",
+          "$thumbs_down+person+thing",
           "of",
           "their",
           "$bow.",
