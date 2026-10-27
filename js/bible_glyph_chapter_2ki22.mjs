@@ -525,7 +525,7 @@ export function bible_glyph_chapter_2ki22() {
           "of",
           "the",
           "wardrobe.",
-          "She",
+          "$pointing_back",
           "$person+house",
           "in",
           "$city+peace",
