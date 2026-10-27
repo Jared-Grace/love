@@ -235,7 +235,7 @@ export function bible_glyph_chapter_jer23() {
         verse_number: 7,
         words: [
           "$right_arrow",
-          "behold,",
+          "$exclamation,",
           "the",
           "$sun",
           "are",
