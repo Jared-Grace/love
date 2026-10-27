@@ -533,7 +533,7 @@ export function bible_glyph_chapter_exo40() {
           "$tent+house,",
           "$sun_behind_small_cloud",
           "the",
-          "veil.",
+          "$veil.",
         ],
       },
       {
