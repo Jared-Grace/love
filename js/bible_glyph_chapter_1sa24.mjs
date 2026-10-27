@@ -284,7 +284,7 @@ export function bible_glyph_chapter_1sa24() {
           '$king!"',
           "When",
           "$proper_name$Saul",
-          "looked",
+          "$face_with_monocle",
           "behind",
           "him,",
           "$two_hearts+proper_name",
