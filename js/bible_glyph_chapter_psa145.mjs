@@ -18,7 +18,7 @@ export function bible_glyph_chapter_psa145() {
           "A",
           "Psalm",
           "of",
-          "praise.",
+          "$clapping_hands+thing.",
           "Of",
           "David.",
           "I",
