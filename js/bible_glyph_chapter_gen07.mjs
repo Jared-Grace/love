@@ -601,7 +601,7 @@ export function bible_glyph_chapter_gen07() {
           "$all",
           "living",
           "thing",
-          "on",
+          "$pointing_up",
           "the",
           "face",
           "of",
