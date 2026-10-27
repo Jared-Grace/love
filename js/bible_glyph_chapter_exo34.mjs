@@ -452,7 +452,7 @@ export function bible_glyph_chapter_exo34() {
           "any",
           "other",
           "$moai,",
-          "for",
+          "$pointing",
           "the",
           "$i_am,",
           "whose",
