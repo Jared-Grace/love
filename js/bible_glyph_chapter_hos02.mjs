@@ -306,7 +306,7 @@ export function bible_glyph_chapter_hos02() {
           "to",
           "$coat+doing",
           "her",
-          "nakedness.",
+          "$face_with_peeking_eye.",
         ],
       },
       {
