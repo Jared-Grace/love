@@ -454,7 +454,7 @@ export function bible_glyph_chapter_lam01() {
           "of",
           "His",
           "fierce",
-          "anger?",
+          "$nose+fire?",
         ],
       },
       {
