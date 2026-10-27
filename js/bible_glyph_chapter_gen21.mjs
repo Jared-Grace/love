@@ -342,7 +342,7 @@ export function bible_glyph_chapter_gen21() {
           "and",
           "$palm_down",
           "them",
-          "on",
+          "$pointing_up",
           "the",
           "shoulders",
           "of",
