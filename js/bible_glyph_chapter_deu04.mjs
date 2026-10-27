@@ -1243,7 +1243,7 @@ export function bible_glyph_chapter_deu04() {
           "$map,",
           "by",
           "trials,",
-          "signs,",
+          "$placard,",
           "wonders",
           "and",
           "war,",
