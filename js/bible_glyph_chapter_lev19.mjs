@@ -801,7 +801,7 @@ export function bible_glyph_chapter_lev19() {
           "You",
           "must",
           "$no_entry",
-          "defile",
+          "$sewing_needle",
           "your",
           "$woman",
           "by",
