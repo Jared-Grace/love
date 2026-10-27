@@ -278,7 +278,7 @@ export function bible_glyph_chapter_num12() {
           "that",
           "she",
           "was",
-          "leprous.",
+          "$microbe+describing.",
         ],
       },
       {
