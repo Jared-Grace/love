@@ -531,7 +531,7 @@ export function bible_glyph_chapter_1ki01() {
           "$heart_on_fire",
           "to",
           "your",
-          "maidservant,",
+          "$broom,",
           "Surely",
           "$peace+proper_name",
           "your",
