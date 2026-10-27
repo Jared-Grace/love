@@ -90,7 +90,7 @@ export function bible_glyph_chapter_gen39() {
           "and",
           "made",
           "him",
-          "prosper",
+          "$chart_increasing",
           "in",
           "all",
           "$pointing_back",
