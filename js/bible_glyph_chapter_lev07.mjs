@@ -937,7 +937,7 @@ export function bible_glyph_chapter_lev07() {
       {
         verse_number: 37,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "$scroll",
           "of",
