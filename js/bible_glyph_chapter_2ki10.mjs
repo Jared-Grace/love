@@ -1245,7 +1245,7 @@ export function bible_glyph_chapter_2ki10() {
           "by",
           "the",
           "$proper_name$Arnon",
-          "Valley",
+          "$national_park",
           "through",
           "$proper_name$Gilead",
           "to",
