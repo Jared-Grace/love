@@ -322,7 +322,7 @@ export function bible_glyph_chapter_lev11() {
           "does",
           "not",
           "have",
-          "fins",
+          "$fish+wing",
           "and",
           "scales",
           "shall",
