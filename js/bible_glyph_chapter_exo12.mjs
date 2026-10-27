@@ -1049,7 +1049,7 @@ export function bible_glyph_chapter_exo12() {
           "your",
           "$sheep",
           "and",
-          "herds",
+          "$cow_face",
           "as",
           "well,",
           "just",
