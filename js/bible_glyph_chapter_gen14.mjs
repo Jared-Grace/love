@@ -223,7 +223,7 @@ export function bible_glyph_chapter_gen14() {
           "drew",
           "up",
           "for",
-          "battle",
+          "$crossed_swords",
           "in",
           "the",
           "$valley",
