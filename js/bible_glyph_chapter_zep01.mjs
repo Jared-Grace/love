@@ -532,7 +532,7 @@ export function bible_glyph_chapter_zep01() {
           "will",
           "bring",
           "such",
-          "distress",
+          "$clamp+doing",
           "on",
           "$person",
           "that",
