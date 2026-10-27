@@ -536,7 +536,7 @@ export function bible_glyph_chapter_isa43() {
           "armies",
           "and",
           "warriors",
-          "together,",
+          "$linked_paperclips+manner,",
           "to",
           "lie",
           "down,",
