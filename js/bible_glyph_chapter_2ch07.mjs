@@ -775,7 +775,7 @@ export function bible_glyph_chapter_2ch07() {
           "of",
           "their",
           "$father,",
-          "who",
+          "$back+flashlight",
           "brought",
           "them",
           "out",
