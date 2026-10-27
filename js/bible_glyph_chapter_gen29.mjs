@@ -512,7 +512,7 @@ export function bible_glyph_chapter_gen29() {
           "you",
           "than",
           "to",
-          "another",
+          "$plus+one",
           "man.",
           "Stay",
           "here",
