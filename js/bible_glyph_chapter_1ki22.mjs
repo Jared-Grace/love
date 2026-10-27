@@ -369,7 +369,7 @@ export function bible_glyph_chapter_1ki22() {
           "$ox+horn+doing",
           "the",
           "$proper_name$Arameans",
-          "until",
+          "$finish",
           "they",
           "are",
           "finished",
