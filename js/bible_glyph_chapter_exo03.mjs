@@ -466,7 +466,7 @@ export function bible_glyph_chapter_exo03() {
           "$fishing_pole+proper_name,",
           "I",
           "AM",
-          "WHO",
+          "$back+flashlight",
           "I",
           "AM.",
           "This",
