@@ -345,7 +345,7 @@ export function bible_glyph_chapter_mic04() {
           "Has",
           "your",
           "counselor",
-          "perished,",
+          "$wilted_flower,",
           "so",
           "that",
           "anguish",
