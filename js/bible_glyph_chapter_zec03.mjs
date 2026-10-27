@@ -144,7 +144,7 @@ export function bible_glyph_chapter_zec03() {
           "a",
           "$soap+describing",
           "$person_wearing_turban+thing",
-          "on",
+          "$pointing_up",
           "his",
           "head.",
           "So",
