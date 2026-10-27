@@ -641,7 +641,7 @@ export function bible_glyph_chapter_2ch06() {
           "$kneeling",
           "and",
           "his",
-          "plea,",
+          "$heart_orange+pleading,",
           "O",
           "$i_am",
           "my",
