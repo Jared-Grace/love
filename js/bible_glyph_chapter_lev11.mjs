@@ -630,7 +630,7 @@ export function bible_glyph_chapter_lev11() {
           "picks",
           "up",
           "a",
-          "carcass",
+          "$skull+bone",
           "must",
           "wash",
           "his",
