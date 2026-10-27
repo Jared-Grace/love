@@ -1307,7 +1307,7 @@ export function bible_glyph_chapter_1sa25() {
         words: [
           "In",
           "the",
-          "morning,",
+          "$morning,",
           "when",
           "$proper_name$Nabal",
           "was",
