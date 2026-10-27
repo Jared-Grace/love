@@ -1070,7 +1070,7 @@ export function bible_glyph_chapter_1ki02() {
           "$proper_name$Joab",
           "$speech,",
           "$no_entry,",
-          "here",
+          "$flashlight+round_pushpin",
           "I",
           "will",
           "$skull+doing.",
