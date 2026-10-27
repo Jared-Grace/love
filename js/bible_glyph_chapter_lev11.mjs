@@ -1175,7 +1175,7 @@ export function bible_glyph_chapter_lev11() {
           "$soap+no_entry",
           "and",
           "the",
-          "clean,",
+          "$soap+describing,",
           "$brain+arrow_both_ways",
           "the",
           "$sprout",
