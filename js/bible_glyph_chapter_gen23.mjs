@@ -400,7 +400,7 @@ export function bible_glyph_chapter_gen23() {
           "$earth,",
           "$speech,",
           "But",
-          "if",
+          "$traffic_light",
           "you",
           "will,",
           "$ear",
