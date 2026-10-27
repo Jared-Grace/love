@@ -725,7 +725,7 @@ export function bible_glyph_chapter_2sa12() {
           "you",
           "have",
           "$hammer+doing?",
-          "While",
+          "$information+toward",
           "the",
           "$child",
           "was",
