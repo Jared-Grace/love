@@ -291,7 +291,7 @@ export function bible_glyph_chapter_num12() {
           "$crown,",
           "$pleading",
           "$no_entry",
-          "hold",
+          "$palm_down+round_pushpin+doing",
           "against",
           "us",
           "this",
