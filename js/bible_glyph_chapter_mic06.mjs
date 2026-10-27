@@ -138,7 +138,7 @@ export function bible_glyph_chapter_mic06() {
           "$king",
           "of",
           "$father+proper_name",
-          "counseled",
+          "$person_tipping_hand+doing",
           "and",
           "what",
           "$proper_name$Balaam",
