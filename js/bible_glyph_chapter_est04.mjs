@@ -39,7 +39,7 @@ export function bible_glyph_chapter_est04() {
           "the",
           "$city,",
           "$loudspeaker+mouth",
-          "loudly",
+          "$top",
           "and",
           "bitterly.",
         ],
