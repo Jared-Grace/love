@@ -281,7 +281,7 @@ export function bible_glyph_chapter_deu29() {
           "leaders",
           "of",
           "tribes,",
-          "elders,",
+          "$old_man,",
           "officials,",
           "and",
           "all",
