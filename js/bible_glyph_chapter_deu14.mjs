@@ -493,7 +493,7 @@ export function bible_glyph_chapter_deu14() {
           "tenth",
           "of",
           "your",
-          "grain,",
+          "$wheat+barley,",
           "new",
           "$wine,",
           "and",
