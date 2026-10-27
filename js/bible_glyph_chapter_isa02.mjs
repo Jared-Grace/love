@@ -378,7 +378,7 @@ export function bible_glyph_chapter_isa02() {
           "and",
           "lofty,",
           "against",
-          "all",
+          "$all",
           "that",
           "is",
           "exalted,",
