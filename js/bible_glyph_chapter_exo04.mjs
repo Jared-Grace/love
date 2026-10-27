@@ -462,7 +462,7 @@ export function bible_glyph_chapter_exo04() {
           "his",
           "way",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "you.",
           "When",
           "he",
