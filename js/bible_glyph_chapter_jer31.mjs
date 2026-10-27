@@ -759,7 +759,7 @@ export function bible_glyph_chapter_jer31() {
           "will",
           "shelter",
           "a",
-          "man.",
+          "$might+man_beard.",
         ],
       },
       {
