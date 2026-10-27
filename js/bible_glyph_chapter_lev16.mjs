@@ -415,7 +415,7 @@ export function bible_glyph_chapter_lev16() {
           "the",
           "cloud",
           "of",
-          "incense",
+          "$incense",
           "will",
           "cover",
           "the",
