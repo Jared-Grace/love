@@ -994,7 +994,7 @@ export function bible_glyph_chapter_jos24() {
           "land",
           "of",
           "his",
-          "inheritance,",
+          "$inheritance,",
           "in",
           "the",
           "$mountain",
