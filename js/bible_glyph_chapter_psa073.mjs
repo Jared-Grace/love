@@ -18,7 +18,7 @@ export function bible_glyph_chapter_psa073() {
           "Psalm",
           "of",
           "$crowd+proper_name.",
-          "Surely",
+          "$check+exclamation",
           "$heart_on_fire",
           "is",
           "$thumbs_up",
