@@ -1552,7 +1552,7 @@ export function bible_glyph_chapter_lev13() {
           "$garment",
           "$shuffle",
           "a",
-          "linen",
+          "$herb+thread+thing",
           "$garment,",
         ],
       },
