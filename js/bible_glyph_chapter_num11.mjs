@@ -35,7 +35,7 @@ export function bible_glyph_chapter_num11() {
           "$ear",
           "them,",
           "His",
-          "anger",
+          "$nose+fire",
           "was",
           "kindled",
           "and",
