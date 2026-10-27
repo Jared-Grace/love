@@ -18,7 +18,7 @@ export function bible_glyph_chapter_dan01() {
           "$year",
           "of",
           "the",
-          "reign",
+          "$castle",
           "of",
           "$i_am+pointing_up",
           "$king",
