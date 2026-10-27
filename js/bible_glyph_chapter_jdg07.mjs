@@ -226,7 +226,7 @@ export function bible_glyph_chapter_jdg07() {
         words: [
           "And",
           "the",
-          "number",
+          "$input_numbers",
           "of",
           "those",
           "who",
