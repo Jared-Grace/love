@@ -146,7 +146,7 @@ export function bible_glyph_chapter_exo10() {
           "But",
           "$traffic_light",
           "you",
-          "refuse",
+          "$person_gesturing_no+describing",
           "to",
           "let",
           "My",
