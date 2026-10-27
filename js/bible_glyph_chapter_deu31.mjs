@@ -17,7 +17,7 @@ export function bible_glyph_chapter_deu31() {
           "$walking",
           "and",
           "$mouth",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "to",
           "all",
