@@ -21,7 +21,7 @@ export function bible_glyph_chapter_1sa25() {
           "$skull+doing,",
           "all",
           "$wrestling+heart_on_fire",
-          "gathered",
+          "$tray_in+doing",
           "to",
           "mourn",
           "for",
