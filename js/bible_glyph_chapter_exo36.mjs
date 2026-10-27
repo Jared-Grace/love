@@ -967,7 +967,7 @@ export function bible_glyph_chapter_exo36() {
           "$umbrella+door",
           "of",
           "$blue_circle,",
-          "purple",
+          "$purple_circle",
           "and",
           "scarlet",
           "yarn",
