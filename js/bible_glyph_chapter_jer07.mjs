@@ -608,7 +608,7 @@ export function bible_glyph_chapter_jer07() {
           "$person",
           "and",
           "on",
-          "beast,",
+          "$paw_prints,",
           "on",
           "the",
           "$tree",
