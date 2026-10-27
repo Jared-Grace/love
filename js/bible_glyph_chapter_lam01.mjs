@@ -342,7 +342,7 @@ export function bible_glyph_chapter_lam01() {
           "on",
           "my",
           "$persevering_face+thing,",
-          "for",
+          "$pointing",
           "the",
           "$enemy",
           "has",
