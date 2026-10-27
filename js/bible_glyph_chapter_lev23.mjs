@@ -148,7 +148,7 @@ export function bible_glyph_chapter_lev23() {
           "to",
           "$i_am.",
           "For",
-          "seven",
+          "$seven",
           "$sun",
           "you",
           "must",
