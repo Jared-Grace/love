@@ -337,7 +337,7 @@ export function bible_glyph_chapter_pro31() {
           "girds",
           "herself",
           "with",
-          "strength",
+          "$mechanical_arm",
           "and",
           "shows",
           "that",
