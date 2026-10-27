@@ -364,7 +364,7 @@ export function bible_glyph_chapter_2ki03() {
           "of",
           "$proper_name$Shaphat",
           "is",
-          "here,",
+          "$flashlight+round_pushpin,",
           "who",
           "used",
           "to",
