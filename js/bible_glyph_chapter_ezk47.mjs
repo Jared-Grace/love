@@ -19,7 +19,7 @@ export function bible_glyph_chapter_ezk47() {
           "brought",
           "me",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "entrance",
           "of",
