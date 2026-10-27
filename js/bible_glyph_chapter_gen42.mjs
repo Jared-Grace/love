@@ -125,7 +125,7 @@ export function bible_glyph_chapter_gen42() {
           "$footprints",
           "to",
           "buy",
-          "grain",
+          "$wheat+coin+doing",
           "among",
           "those",
           "who",
