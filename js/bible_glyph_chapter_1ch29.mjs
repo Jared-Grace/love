@@ -411,7 +411,7 @@ export function bible_glyph_chapter_1ch29() {
           "power",
           "and",
           "the",
-          "glory",
+          "$ribbon",
           "and",
           "the",
           "majesty",
