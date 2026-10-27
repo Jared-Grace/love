@@ -308,7 +308,7 @@ export function bible_glyph_chapter_2ch07() {
           "a",
           "solemn",
           "assembly,",
-          "for",
+          "$pointing",
           "the",
           "dedication",
           "of",
