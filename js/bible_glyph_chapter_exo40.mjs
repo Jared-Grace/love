@@ -170,7 +170,7 @@ export function bible_glyph_chapter_exo40() {
       {
         verse_number: 8,
         words: [
-          "Set",
+          "$palm_down",
           "up",
           "the",
           "surrounding",
