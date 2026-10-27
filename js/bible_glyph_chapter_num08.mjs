@@ -378,7 +378,7 @@ export function bible_glyph_chapter_num08() {
       {
         verse_number: 15,
         words: [
-          "After",
+          "$next_track",
           "you",
           "have",
           "cleansed",
