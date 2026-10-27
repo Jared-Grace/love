@@ -113,7 +113,7 @@ export function bible_glyph_chapter_mic01() {
           "$mountain",
           "will",
           "$melting_face",
-          "beneath",
+          "$down_arrow",
           "Him,",
           "and",
           "the",
