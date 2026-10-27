@@ -294,7 +294,7 @@ export function bible_glyph_chapter_lev13() {
           "$eye",
           "himself",
           "again",
-          "to",
+          "$toward",
           "the",
           "$priest.",
         ],
