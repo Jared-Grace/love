@@ -1106,7 +1106,7 @@ export function bible_glyph_chapter_lev25() {
           "from",
           "him",
           "any",
-          "interest",
+          "$coin+chart_increasing",
           "or",
           "profit,",
           "but",
