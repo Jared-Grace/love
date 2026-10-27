@@ -456,7 +456,7 @@ export function bible_glyph_chapter_1sa07() {
           "$hand",
           "of",
           "$i_am",
-          "was",
+          "$link",
           "against",
           "the",
           "$proper_name$Philistines",
