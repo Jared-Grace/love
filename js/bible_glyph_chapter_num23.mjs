@@ -204,7 +204,7 @@ export function bible_glyph_chapter_num23() {
           "mountains",
           "of",
           "the",
-          "east.",
+          "$compass+right_arrow.",
           "$walking,",
           "he",
           "said,",
