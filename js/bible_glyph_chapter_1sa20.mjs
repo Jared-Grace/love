@@ -1279,7 +1279,7 @@ export function bible_glyph_chapter_1sa20() {
           "had",
           "fallen,",
           "$i_am+hands_giving",
-          "called",
+          "$waving_hand",
           "after",
           "him",
           "and",
