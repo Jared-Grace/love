@@ -799,7 +799,7 @@ export function bible_glyph_chapter_num15() {
           "by",
           "$bow+doing",
           "unintentionally",
-          "before",
+          "$face",
           "$i_am,",
           "and",
           "when",
