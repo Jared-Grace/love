@@ -933,7 +933,7 @@ export function bible_glyph_chapter_exo34() {
           "When",
           "$fishing_pole+proper_name",
           "came",
-          "down",
+          "$walking+pointing_down",
           "from",
           "$mountain",
           "$proper_name$Sinai",
