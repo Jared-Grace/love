@@ -244,7 +244,7 @@ export function bible_glyph_chapter_gen35() {
           "Now",
           "Deborah,",
           "the",
-          "nurse",
+          "$breast_feeding+doing",
           "of",
           "Rebekah,",
           "$skull+doing",
