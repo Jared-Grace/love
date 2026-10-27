@@ -770,7 +770,7 @@ export function bible_glyph_chapter_exo33() {
           "$last_track,",
           "but",
           "My",
-          "face",
+          "$face",
           "must",
           "$no_entry",
           "be",
