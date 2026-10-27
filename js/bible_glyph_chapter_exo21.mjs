@@ -609,7 +609,7 @@ export function bible_glyph_chapter_exo21() {
           "who",
           "are",
           "fighting",
-          "strike",
+          "$fist+microbe",
           "a",
           "pregnant",
           "$woman",
