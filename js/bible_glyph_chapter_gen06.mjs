@@ -21,7 +21,7 @@ export function bible_glyph_chapter_gen06() {
           "$multiply+crowd+doing",
           "$pointing_up",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "ground,",
