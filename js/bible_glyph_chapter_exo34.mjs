@@ -556,7 +556,7 @@ export function bible_glyph_chapter_exo34() {
           "You",
           "are",
           "to",
-          "keep",
+          "$guard",
           "the",
           "$party_popper",
           "of",
