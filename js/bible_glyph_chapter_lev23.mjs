@@ -796,7 +796,7 @@ export function bible_glyph_chapter_lev23() {
           "humble",
           "$person_other,",
           "and",
-          "present",
+          "$magnet+doing",
           "a",
           "food",
           "offering",
