@@ -596,7 +596,7 @@ export function bible_glyph_chapter_lam02() {
           "to",
           "$turn_back",
           "your",
-          "captivity.",
+          "$turn_back+chains.",
           "The",
           "burdens",
           "they",
