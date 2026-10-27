@@ -972,7 +972,7 @@ export function bible_glyph_chapter_lev15() {
           "defiling",
           "My",
           "$tent+house,",
-          "which",
+          "$back+flashlight",
           "is",
           "among",
           "them.",
