@@ -521,7 +521,7 @@ export function bible_glyph_chapter_gen20() {
           "have",
           "$hands_giving",
           "a",
-          "thousand",
+          "$ten+all",
           "of",
           "$silver",
           "to",
