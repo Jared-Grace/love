@@ -839,7 +839,7 @@ export function bible_glyph_chapter_jdg07() {
           "border",
           "of",
           "Abel-meholah",
-          "near",
+          "$pointing_up",
           "$proper_name$Tabbath.",
         ],
       },
