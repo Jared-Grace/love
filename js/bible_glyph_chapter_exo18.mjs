@@ -27,7 +27,7 @@ export function bible_glyph_chapter_exo18() {
           "$ear",
           "about",
           "all",
-          "that",
+          "$back+flashlight",
           "$heart_on_fire",
           "had",
           "$hammer+doing",
