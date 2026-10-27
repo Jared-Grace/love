@@ -987,7 +987,7 @@ export function bible_glyph_chapter_jer29() {
           "however,",
           "had",
           "read",
-          "this",
+          "$flashlight",
           "$closed_book",
           "to",
           "$up_arrow+i_am",
