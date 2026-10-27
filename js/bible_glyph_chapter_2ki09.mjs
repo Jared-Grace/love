@@ -1194,7 +1194,7 @@ export function bible_glyph_chapter_2ki09() {
           "$droplet+hand+doing",
           "on",
           "the",
-          "wall",
+          "$brick+shield",
           "and",
           "on",
           "the",
