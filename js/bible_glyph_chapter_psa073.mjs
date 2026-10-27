@@ -342,7 +342,7 @@ export function bible_glyph_chapter_psa073() {
         verse_number: 19,
         words: [
           "$question+likeness",
-          "suddenly",
+          "$winking_face",
           "they",
           "are",
           "laid",
