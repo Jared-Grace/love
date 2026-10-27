@@ -751,7 +751,7 @@ export function bible_glyph_chapter_jer32() {
           "them",
           "$flashlight",
           "$earth",
-          "that",
+          "$back+flashlight",
           "You",
           "had",
           "sworn",
