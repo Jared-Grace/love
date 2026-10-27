@@ -992,7 +992,7 @@ export function bible_glyph_chapter_1ki02() {
           "$running+dashing_away",
           "to",
           "the",
-          "tent",
+          "$tent",
           "of",
           "the",
           "$i_am",
