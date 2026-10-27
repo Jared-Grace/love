@@ -415,7 +415,7 @@ export function bible_glyph_chapter_mic04() {
         words: [
           "But",
           "$watch",
-          "many",
+          "$multiply",
           "$map",
           "have",
           "assembled",
