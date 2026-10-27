@@ -22,7 +22,7 @@ export async function app_a_download_paths() {
   let filtered = list_filter_ends_with_any(combineds, [ext_f, ext_h, ext_j]);
   ("The editor reads the short names for functions while opening one, and that record sits in the settings folder beside the code, so that small folder travels too.");
   let aliases = data_aliases_path();
-  let settings = path_dirname(aliases);
+  let settings = await path_dirname(aliases);
   let path_settings = repo_love_path(settings);
   let settings_paths = await folder_read_recursive_skipped_paths_async(
     path_settings,
