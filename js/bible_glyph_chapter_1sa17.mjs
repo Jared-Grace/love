@@ -378,7 +378,7 @@ export function bible_glyph_chapter_1sa17() {
           "$walking",
           "$proper_name$Saul",
           "into",
-          "battle:",
+          "$crossed_swords:",
           "The",
           "firstborn",
           "was",
