@@ -208,7 +208,7 @@ export function bible_glyph_chapter_gen22() {
           "Then",
           "Isaac",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "$father",
           "$father+map,",
