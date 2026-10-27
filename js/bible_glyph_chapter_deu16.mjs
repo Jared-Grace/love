@@ -161,7 +161,7 @@ export function bible_glyph_chapter_deu16() {
           "the",
           "$meat",
           "you",
-          "sacrifice",
+          "$sacrifice",
           "in",
           "the",
           "evening",
