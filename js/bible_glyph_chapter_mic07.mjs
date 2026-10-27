@@ -261,7 +261,7 @@ export function bible_glyph_chapter_mic07() {
           "I",
           "will",
           "arise;",
-          "though",
+          "$pointing",
           "I",
           "$person+house",
           "in",
