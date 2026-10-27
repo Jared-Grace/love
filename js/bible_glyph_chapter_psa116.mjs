@@ -176,7 +176,7 @@ export function bible_glyph_chapter_psa116() {
           "I",
           "will",
           "$walking",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "in",
