@@ -488,7 +488,7 @@ export function bible_glyph_chapter_lev25() {
           "number",
           "of",
           "years,",
-          "for",
+          "$pointing",
           "it",
           "is",
           "a",
