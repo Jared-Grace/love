@@ -314,7 +314,7 @@ export function bible_glyph_chapter_gen24() {
           "all",
           "manner",
           "of",
-          "good",
+          "$thumbs_up+thing",
           "things",
           "from",
           "his",
