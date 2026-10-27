@@ -417,7 +417,7 @@ export function bible_glyph_chapter_2sa05() {
           "$two_hearts+proper_name",
           "$hand_receiving",
           "$repeat",
-          "concubines",
+          "$woman+second_place",
           "and",
           "$woman",
           "from",
