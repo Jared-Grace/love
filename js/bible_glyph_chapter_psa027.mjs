@@ -117,7 +117,7 @@ export function bible_glyph_chapter_psa027() {
           "of",
           "the",
           "$i_am",
-          "all",
+          "$all",
           "the",
           "$sun",
           "of",
