@@ -1133,7 +1133,7 @@ export function bible_glyph_chapter_num16() {
           "$hammer+doing",
           "them",
           "into",
-          "sheets",
+          "$snare+bird",
           "to",
           "overlay",
           "the",
