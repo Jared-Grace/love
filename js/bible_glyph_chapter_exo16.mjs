@@ -780,7 +780,7 @@ export function bible_glyph_chapter_exo16() {
           "$guard+thing",
           "it",
           "$finish",
-          "morning.",
+          "$morning.",
         ],
       },
       {
