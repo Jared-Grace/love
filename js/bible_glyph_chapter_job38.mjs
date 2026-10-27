@@ -486,7 +486,7 @@ export function bible_glyph_chapter_job38() {
         verse_number: 25,
         words: [
           "$person+question",
-          "cuts",
+          "$divide+earth+doing",
           "a",
           "channel",
           "for",
