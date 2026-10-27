@@ -540,7 +540,7 @@ export function bible_glyph_chapter_jer01() {
           "$iron",
           "$candle,",
           "and",
-          "bronze",
+          "$bronze",
           "$brick+shield",
           "against",
           "the",
