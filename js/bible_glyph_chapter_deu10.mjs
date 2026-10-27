@@ -134,7 +134,7 @@ export function bible_glyph_chapter_deu10() {
           "the",
           "$ten",
           "$speech",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
