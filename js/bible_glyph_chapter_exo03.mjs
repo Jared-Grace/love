@@ -155,7 +155,7 @@ export function bible_glyph_chapter_exo03() {
           "the",
           "$place",
           "where",
-          "you",
+          "$you",
           "are",
           "standing",
           "is",
