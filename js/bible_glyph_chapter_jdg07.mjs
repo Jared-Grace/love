@@ -667,7 +667,7 @@ export function bible_glyph_chapter_jdg07() {
           "are",
           "with",
           "me",
-          "blow",
+          "$trumpet+doing",
           "our",
           "horns,",
           "then",
