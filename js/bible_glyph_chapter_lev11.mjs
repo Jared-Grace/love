@@ -934,7 +934,7 @@ export function bible_glyph_chapter_lev11() {
       {
         verse_number: 39,
         words: [
-          "If",
+          "$pointing",
           "an",
           "animal",
           "$tray_out",
