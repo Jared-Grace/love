@@ -169,7 +169,7 @@ export function bible_glyph_chapter_ezr03() {
           "those",
           "for",
           "the",
-          "New",
+          "$new_moon",
           "Moons",
           "and",
           "for",
