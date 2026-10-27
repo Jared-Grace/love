@@ -816,7 +816,7 @@ export function bible_glyph_chapter_exo06() {
           "uncircumcised",
           "of",
           "lips,",
-          "why",
+          "$question+likeness",
           "would",
           "$house+proper_name",
           "$ear",
