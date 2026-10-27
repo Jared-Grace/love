@@ -63,7 +63,7 @@ export function bible_glyph_chapter_zep01() {
           "$all",
           "from",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth,",
