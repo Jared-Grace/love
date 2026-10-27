@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_2ch20() {
           "when",
           "they",
           "$ear",
-          "that",
+          "$pointing",
           "the",
           "$i_am",
           "had",
