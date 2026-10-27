@@ -430,7 +430,7 @@ export function bible_glyph_chapter_exo31() {
           "It",
           "is",
           "a",
-          "sign",
+          "$placard",
           "between",
           "me",
           "and",
