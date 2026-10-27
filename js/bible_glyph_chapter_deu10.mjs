@@ -306,7 +306,7 @@ export function bible_glyph_chapter_deu10() {
           "$pizza",
           "or",
           "$inheritance",
-          "among",
+          "$linked_paperclips",
           "his",
           "$brother.",
           "The",
