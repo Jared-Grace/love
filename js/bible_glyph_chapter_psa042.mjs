@@ -180,7 +180,7 @@ export function bible_glyph_chapter_psa042() {
           "me.",
           "Therefore",
           "I",
-          "remember",
+          "$reminder_ribbon",
           "You",
           "from",
           "the",
