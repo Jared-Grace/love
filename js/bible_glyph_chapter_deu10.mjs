@@ -537,7 +537,7 @@ export function bible_glyph_chapter_deu10() {
       {
         verse_number: 16,
         words: [
-          "Circumcise",
+          "$scissors+covenant+doing",
           "therefore",
           "your",
           "$heart_organ,",
