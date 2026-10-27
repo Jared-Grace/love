@@ -135,7 +135,7 @@ export function bible_glyph_chapter_lev01() {
           "the",
           "$son",
           "$cow_face",
-          "before",
+          "$face",
           "$i_am,",
           "and",
           "$son",
