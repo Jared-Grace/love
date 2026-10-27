@@ -225,7 +225,7 @@ export function bible_glyph_chapter_lev12() {
           "will",
           "$magnet+doing",
           "them",
-          "before",
+          "$face",
           "$i_am",
           "and",
           "make",
