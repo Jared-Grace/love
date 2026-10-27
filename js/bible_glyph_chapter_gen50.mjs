@@ -254,7 +254,7 @@ export function bible_glyph_chapter_gen50() {
           "was",
           "an",
           "exceedingly",
-          "large",
+          "$star+describing",
           "$camp.",
         ],
       },
