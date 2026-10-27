@@ -420,7 +420,7 @@ export function bible_glyph_chapter_num32() {
           "$nose+fire",
           "of",
           "$i_am",
-          "against",
+          "$toward",
           "$wrestling+heart_on_fire",
           "yet",
           "further.",
