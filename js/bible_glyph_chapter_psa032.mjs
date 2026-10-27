@@ -52,7 +52,7 @@ export function bible_glyph_chapter_psa032() {
           "there",
           "is",
           "no",
-          "deceit.",
+          "$lying_face+right_arrow+thing.",
         ],
       },
       {
