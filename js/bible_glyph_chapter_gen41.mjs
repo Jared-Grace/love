@@ -315,7 +315,7 @@ export function bible_glyph_chapter_gen41() {
           "the",
           "guard,",
           "was",
-          "there",
+          "$telescope",
           "with",
           "us.",
           "We",
