@@ -17,7 +17,7 @@ export function bible_glyph_chapter_mic03() {
           "I",
           "$speech:",
           "$ear",
-          "now,",
+          "$pleading,",
           "O",
           "leaders",
           "of",
