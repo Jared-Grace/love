@@ -493,7 +493,7 @@ export function bible_glyph_chapter_jos03() {
           "and",
           "their",
           "feet",
-          "touched",
+          "$down_arrow+water+doing",
           "the",
           "$water,",
         ],
