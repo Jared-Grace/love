@@ -69,7 +69,7 @@ export function bible_glyph_chapter_jos02() {
           "$wrestling+heart_on_fire",
           "have",
           "$footprints",
-          "here",
+          "$round_pushpin+pointing_down",
           "$night",
           "to",
           "spy",
