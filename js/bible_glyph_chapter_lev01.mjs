@@ -175,7 +175,7 @@ export function bible_glyph_chapter_lev01() {
           "$kitchen_knife+meat+doing",
           "it",
           "into",
-          "pieces.",
+          "$kitchen_knife+meat.",
         ],
       },
       {
