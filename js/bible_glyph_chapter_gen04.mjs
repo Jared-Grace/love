@@ -699,7 +699,7 @@ export function bible_glyph_chapter_gen04() {
           "$lightbulb",
           "his",
           "$woman",
-          "again,",
+          "$repeat,",
           "and",
           "she",
           "gave",
