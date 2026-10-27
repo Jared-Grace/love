@@ -822,7 +822,7 @@ export function bible_glyph_chapter_gen18() {
           "$five.",
           "Will",
           "You",
-          "destroy",
+          "$collision",
           "the",
           "whole",
           "$city",
