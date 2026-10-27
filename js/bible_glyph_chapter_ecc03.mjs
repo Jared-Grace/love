@@ -434,7 +434,7 @@ export function bible_glyph_chapter_ecc03() {
           "$clock",
           "for",
           "$all",
-          "activity",
+          "$smiling_face_with_hearts",
           "and",
           "$all",
           "deed.",
