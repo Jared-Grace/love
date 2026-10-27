@@ -725,7 +725,7 @@ export function bible_glyph_chapter_jdg02() {
           "$me",
           "will",
           "$no_entry",
-          "longer",
+          "$plus+doing",
           "drive",
           "out",
           "before",
