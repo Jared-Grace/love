@@ -695,7 +695,7 @@ export function bible_glyph_chapter_gen37() {
           "him",
           "into",
           "the",
-          "pit.",
+          "$hole+droplet.",
           "Now",
           "the",
           "pit",
