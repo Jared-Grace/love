@@ -454,7 +454,7 @@ export function bible_glyph_chapter_lam04() {
         verse_number: 16,
         words: [
           "The",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am",
