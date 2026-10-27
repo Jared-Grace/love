@@ -521,7 +521,7 @@ export function bible_glyph_chapter_deu28() {
           "$sun,",
           "$all",
           "these",
-          "curses",
+          "$balloon+speech",
           "will",
           "$footprints",
           "upon",
