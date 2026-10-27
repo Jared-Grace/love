@@ -352,7 +352,7 @@ export function bible_glyph_chapter_exo33() {
           "$man_beard",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "his",
           "own",
