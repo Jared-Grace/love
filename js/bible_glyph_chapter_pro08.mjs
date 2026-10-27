@@ -678,7 +678,7 @@ export function bible_glyph_chapter_pro08() {
           "$bow+doing",
           "$boxing_glove+hand+doing",
           "$person_other;",
-          "all",
+          "$all",
           "who",
           "hate",
           "me",
