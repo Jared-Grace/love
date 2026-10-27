@@ -77,7 +77,7 @@ export function bible_glyph_chapter_num14() {
       {
         verse_number: 3,
         words: [
-          "Why",
+          "$flashlight+question",
           "is",
           "the",
           "$i_am",
