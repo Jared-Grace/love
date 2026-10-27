@@ -29,7 +29,7 @@ export function bible_glyph_chapter_ezk03() {
           "$magnifying_glass+exclamation",
           "here.",
           "$eating",
-          "this",
+          "$flashlight",
           "$page_with_curl,",
           "then",
           "$walking",
