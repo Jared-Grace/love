@@ -248,7 +248,7 @@ export function bible_glyph_chapter_lev15() {
           "$horse_racing+doing",
           "will",
           "be",
-          "unclean.",
+          "$soap+no_entry.",
         ],
       },
       {
