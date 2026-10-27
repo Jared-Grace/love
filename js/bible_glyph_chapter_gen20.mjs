@@ -490,7 +490,7 @@ export function bible_glyph_chapter_gen20() {
           "And",
           "$father+king",
           "$speech,",
-          "Look,",
+          "$exclamation,",
           "my",
           "$earth",
           "is",
