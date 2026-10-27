@@ -634,7 +634,7 @@ export function bible_glyph_chapter_hos02() {
           "in",
           "$gift",
           "and",
-          "compassion.",
+          "$hugging_face.",
         ],
       },
       {
