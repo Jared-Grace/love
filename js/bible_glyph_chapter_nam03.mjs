@@ -290,7 +290,7 @@ export function bible_glyph_chapter_nam03() {
           "too",
           "will",
           "become",
-          "drunk;",
+          "$woozy_face+doing;",
           "you",
           "will",
           "go",
