@@ -2133,7 +2133,7 @@ export function bible_glyph_chapter_deu28() {
           "a",
           "trembling",
           "$heart_organ,",
-          "failing",
+          "$end_arrow+thing",
           "$eyes,",
           "and",
           "a",
