@@ -1614,7 +1614,7 @@ export function bible_glyph_chapter_1ki08() {
           "own",
           "$earth,",
           "whether",
-          "far",
+          "$satellite",
           "or",
           "near,",
         ],
