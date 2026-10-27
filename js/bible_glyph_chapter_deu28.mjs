@@ -1960,7 +1960,7 @@ export function bible_glyph_chapter_deu28() {
           "$walking+pointing_up",
           "upon",
           "you",
-          "every",
+          "$all",
           "sickness",
           "and",
           "plague",
