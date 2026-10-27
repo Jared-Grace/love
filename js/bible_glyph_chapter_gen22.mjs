@@ -359,7 +359,7 @@ export function bible_glyph_chapter_gen22() {
           "boy,",
           "$no_entry",
           "$hammer+doing",
-          "anything",
+          "$package+question",
           "to",
           "him,",
           "$speech",
