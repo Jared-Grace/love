@@ -161,7 +161,7 @@ export function bible_glyph_chapter_job01() {
           "in",
           "their",
           "$heart_organ.",
-          "This",
+          "$flashlight+manner",
           "was",
           "the",
           "regular",
