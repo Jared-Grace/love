@@ -215,7 +215,7 @@ export function bible_glyph_chapter_num06() {
           "is",
           "upon",
           "his",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
