@@ -187,7 +187,7 @@ export function bible_glyph_chapter_dan09() {
           "to",
           "our",
           "$king,",
-          "leaders,",
+          "$military_medal,",
           "$father,",
           "and",
           "all",
