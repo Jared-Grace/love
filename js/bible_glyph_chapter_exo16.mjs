@@ -437,7 +437,7 @@ export function bible_glyph_chapter_exo16() {
           "and",
           "covered",
           "the",
-          "camp,",
+          "$camp,",
           "and",
           "in",
           "the",
