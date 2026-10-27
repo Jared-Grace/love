@@ -707,7 +707,7 @@ export function bible_glyph_chapter_exo12() {
           "a",
           "cluster",
           "of",
-          "hyssop,",
+          "$herb+bouquet,",
           "dip",
           "it",
           "into",
