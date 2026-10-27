@@ -49,7 +49,7 @@ export function bible_glyph_chapter_exo40() {
       {
         verse_number: 3,
         words: [
-          "Put",
+          "$palm_down",
           "the",
           "ark",
           "of",
