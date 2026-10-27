@@ -357,7 +357,7 @@ export function bible_glyph_chapter_gen13() {
           "pitched",
           "his",
           "tent",
-          "toward",
+          "$finish",
           "$proper_name$Sodom.",
         ],
       },
