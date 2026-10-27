@@ -817,7 +817,7 @@ export function bible_glyph_chapter_lev26() {
           "spite",
           "of",
           "all",
-          "this",
+          "$flashlight",
           "you",
           "will",
           "$no_entry",
