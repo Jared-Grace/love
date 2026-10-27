@@ -755,7 +755,7 @@ export function bible_glyph_chapter_jdg06() {
           "$i_am",
           "$face",
           "to",
-          "face.",
+          "$face.",
         ],
       },
       {
