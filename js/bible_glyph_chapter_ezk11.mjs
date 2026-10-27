@@ -42,7 +42,7 @@ export function bible_glyph_chapter_ezk11() {
           "the",
           "$gate",
           "were",
-          "twenty",
+          "$two+zero",
           "five",
           "$man_beard.",
           "Among",
