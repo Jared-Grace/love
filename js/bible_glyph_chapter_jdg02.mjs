@@ -722,7 +722,7 @@ export function bible_glyph_chapter_jdg02() {
       {
         verse_number: 21,
         words: [
-          "I",
+          "$me",
           "will",
           "$no_entry",
           "longer",
