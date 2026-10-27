@@ -48,7 +48,7 @@ export function bible_glyph_chapter_isa06() {
           "Above",
           "Him",
           "stood",
-          "seraphim,",
+          "$fire+snake,",
           "each",
           "having",
           "six",
