@@ -934,7 +934,7 @@ export function bible_glyph_chapter_2ki06() {
           "$eating",
           "him,",
           "and",
-          "tomorrow",
+          "$sun+next_track",
           "we",
           "will",
           "$eating",
