@@ -678,7 +678,7 @@ export function bible_glyph_chapter_gen50() {
           "up",
           "on",
           "$i_am+plus's",
-          "knees.",
+          "$kneeling+leg.",
         ],
       },
       {
