@@ -461,7 +461,7 @@ export function bible_glyph_chapter_gen11() {
         verse_number: 18,
         words: [
           "When",
-          "Peleg",
+          "$divide+proper_name",
           "had",
           "$sprout+doing",
           "thirty",
