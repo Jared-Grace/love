@@ -774,7 +774,7 @@ export function bible_glyph_chapter_exo40() {
           "up",
           "the",
           "courtyard",
-          "around",
+          "$around",
           "the",
           "tabernacle",
           "and",
