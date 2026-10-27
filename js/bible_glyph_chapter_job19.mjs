@@ -55,7 +55,7 @@ export function bible_glyph_chapter_job19() {
           "have",
           "truly",
           "gone",
-          "astray,",
+          "$road+woozy_face+doing,",
           "my",
           "error",
           "concerns",
