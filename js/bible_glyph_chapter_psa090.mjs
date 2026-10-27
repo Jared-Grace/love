@@ -349,7 +349,7 @@ export function bible_glyph_chapter_psa090() {
         words: [
           "May",
           "Your",
-          "work",
+          "$hand+hammer",
           "be",
           "$eye",
           "to",
