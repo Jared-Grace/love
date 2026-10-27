@@ -581,7 +581,7 @@ export function bible_glyph_chapter_2ki01() {
           "the",
           "$i_am",
           "$mouth",
-          "to",
+          "$toward",
           "$heart_on_fire+i_am,",
           "Go",
           "down",
