@@ -246,7 +246,7 @@ export function bible_glyph_chapter_psa095() {
           "I",
           "swore",
           "on",
-          "oath",
+          "$raised_back_of_hand+doing",
           "in",
           "My",
           "anger,",
