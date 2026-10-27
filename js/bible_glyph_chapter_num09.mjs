@@ -112,7 +112,7 @@ export function bible_glyph_chapter_num09() {
           "should",
           "$hammer+doing",
           "the",
-          "Passover,",
+          "$lamb+door,",
         ],
       },
       {
