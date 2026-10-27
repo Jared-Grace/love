@@ -467,7 +467,7 @@ export function bible_glyph_chapter_1ki18() {
           "of",
           "Hosts",
           "$sprout,",
-          "before",
+          "$face",
           "whom",
           "I",
           "$person+round_pushpin,",
