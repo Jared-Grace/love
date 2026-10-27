@@ -200,7 +200,7 @@ export function bible_glyph_chapter_ezk01() {
           "hooves",
           "of",
           "a",
-          "calf,",
+          "$calf,",
           "gleaming",
           "$eyes",
           "polished",
