@@ -2320,7 +2320,7 @@ export function bible_glyph_chapter_1ki08() {
           "and",
           "$walking",
           "$tent",
-          "joyful",
+          "$beaming+describing",
           "and",
           "$thumbs_up",
           "in",
