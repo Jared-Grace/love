@@ -195,7 +195,7 @@ export function bible_glyph_chapter_pro01() {
           "they",
           "$speech,",
           "$walking",
-          "along,",
+          "$safety_pin,",
           "let",
           "us",
           "lie",
