@@ -484,7 +484,7 @@ export function bible_glyph_chapter_exo40() {
           "he",
           "$footprints",
           "the",
-          "ark",
+          "$ark",
           "into",
           "the",
           "tabernacle,",
