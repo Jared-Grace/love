@@ -271,7 +271,7 @@ export function bible_glyph_chapter_num12() {
           "$snow.",
           "$proper_name$Aaron",
           "$curving_right+doing",
-          "toward",
+          "$toward",
           "her",
           "and",
           "saw",
