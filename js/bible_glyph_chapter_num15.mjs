@@ -598,7 +598,7 @@ export function bible_glyph_chapter_num15() {
         verse_number: 23,
         words: [
           "$all",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "has",
           "commanded",
