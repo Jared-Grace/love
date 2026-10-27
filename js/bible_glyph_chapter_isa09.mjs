@@ -433,7 +433,7 @@ export function bible_glyph_chapter_isa09() {
           "$scissors",
           "off",
           "$wrestling+heart_on_fire's",
-          "head",
+          "$person_gesturing_ok",
           "and",
           "tail,",
           "both",
