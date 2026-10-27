@@ -24,7 +24,7 @@ export function bible_glyph_chapter_neh08() {
           "in",
           "the",
           "square",
-          "before",
+          "$face",
           "the",
           "$water",
           "Gate,",
