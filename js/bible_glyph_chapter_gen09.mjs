@@ -239,7 +239,7 @@ export function bible_glyph_chapter_gen09() {
         verse_number: 9,
         words: [
           "Behold,",
-          "I",
+          "$me",
           "now",
           "establish",
           "My",
