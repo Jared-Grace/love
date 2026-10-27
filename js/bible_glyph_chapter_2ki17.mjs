@@ -1269,7 +1269,7 @@ export function bible_glyph_chapter_2ki17() {
           "and",
           "an",
           "outstretched",
-          "arm.",
+          "$hand+might.",
           "You",
           "are",
           "to",
