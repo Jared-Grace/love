@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_jer23() {
       {
         verse_number: 30,
         words: [
-          "Therefore",
+          "$right_arrow",
           "behold,",
           "I",
           "am",
