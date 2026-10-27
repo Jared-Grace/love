@@ -200,7 +200,7 @@ export function bible_glyph_chapter_num09() {
           "Moses:",
           "We",
           "are",
-          "unclean,",
+          "$soap+no_entry,",
           "$person_other",
           "made",
           "so",
