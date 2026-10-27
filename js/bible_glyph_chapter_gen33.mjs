@@ -23,7 +23,7 @@ export function bible_glyph_chapter_gen33() {
           "$proper_name$Esau",
           "$footprints",
           "with",
-          "four",
+          "$four",
           "hundred",
           "$man_beard.",
           "So",
