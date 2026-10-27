@@ -357,7 +357,7 @@ export function bible_glyph_chapter_jer07() {
           "you",
           "have",
           "$hammer",
-          "all",
+          "$all",
           "these",
           "things,",
           "declares",
