@@ -42,7 +42,7 @@ export function bible_glyph_chapter_mal01() {
           "But",
           "you",
           "$speech,",
-          "How",
+          "$flashlight+question",
           "have",
           "You",
           "$heart_red+doing",
