@@ -340,7 +340,7 @@ export function bible_glyph_chapter_lev14() {
           "log",
           "of",
           "olive",
-          "oil.",
+          "$lotion_bottle.",
         ],
       },
       {
