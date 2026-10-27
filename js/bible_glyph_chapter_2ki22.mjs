@@ -741,7 +741,7 @@ export function bible_glyph_chapter_2ki22() {
           "have",
           "$ear",
           "you,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
