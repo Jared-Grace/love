@@ -303,7 +303,7 @@ export function bible_glyph_chapter_lev24() {
           "the",
           "$wrestling+heart_on_fire",
           "$woman",
-          "blasphemed",
+          "$hole+right_arrow+doing",
           "the",
           "$name_tag",
           "$speech+thumbs_down.",
