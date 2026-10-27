@@ -1075,7 +1075,7 @@ export function bible_glyph_chapter_1sa20() {
       {
         verse_number: 31,
         words: [
-          "For",
+          "$pointing",
           "as",
           "long",
           "as",
