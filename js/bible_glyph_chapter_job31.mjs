@@ -63,7 +63,7 @@ export function bible_glyph_chapter_job31() {
           "$collision+exclamation",
           "for",
           "the",
-          "unjust",
+          "$imp+person",
           "and",
           "calamity",
           "for",
