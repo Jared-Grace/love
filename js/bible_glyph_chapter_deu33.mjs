@@ -87,7 +87,7 @@ export function bible_glyph_chapter_deu33() {
           "Your",
           "$hand,",
           "and",
-          "they",
+          "$pointing_back",
           "sit",
           "down",
           "at",
