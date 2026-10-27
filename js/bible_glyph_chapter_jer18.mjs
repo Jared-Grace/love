@@ -460,7 +460,7 @@ export function bible_glyph_chapter_jer18() {
           "their",
           "$earth",
           "a",
-          "desolation,",
+          "$astonished+thing,",
           "an",
           "object",
           "of",
