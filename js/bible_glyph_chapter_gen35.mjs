@@ -565,7 +565,7 @@ export function bible_glyph_chapter_gen35() {
           "grave",
           "of",
           "Rachel",
-          "to",
+          "$finish",
           "this",
           "$sun.",
         ],
