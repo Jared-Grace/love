@@ -145,7 +145,7 @@ export function bible_glyph_chapter_dan12() {
           "$closed_book",
           "$finish",
           "the",
-          "time",
+          "$clock",
           "of",
           "the",
           "end.",
