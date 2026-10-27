@@ -181,7 +181,7 @@ export function bible_glyph_chapter_1sa17() {
           "$fire+tongue",
           "weighed",
           "$six",
-          "hundred",
+          "$input_numbers+all",
           "shekels.",
           "In",
           "addition,",
