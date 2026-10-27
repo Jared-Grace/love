@@ -1161,7 +1161,7 @@ export function bible_glyph_chapter_2ch20() {
           "The",
           "high",
           "places,",
-          "however,",
+          "$check+exclamation,",
           "were",
           "$no_entry",
           "removed,",
