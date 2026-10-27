@@ -439,7 +439,7 @@ export function bible_glyph_chapter_job28() {
         words: [
           "But",
           "$heart_on_fire",
-          "understands",
+          "$brain",
           "its",
           "$road,",
           "and",
