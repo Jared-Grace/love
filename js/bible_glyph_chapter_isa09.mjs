@@ -110,7 +110,7 @@ export function bible_glyph_chapter_isa09() {
           "they",
           "rejoice",
           "at",
-          "harvest",
+          "$harvest",
           "time,",
           "as",
           "men",
