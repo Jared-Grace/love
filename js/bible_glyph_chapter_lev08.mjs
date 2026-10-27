@@ -310,7 +310,7 @@ export function bible_glyph_chapter_lev08() {
           "brought",
           "$bull",
           "$bow",
-          "near,",
+          "$walking+toward,",
           "and",
           "$proper_name$Aaron",
           "and",
