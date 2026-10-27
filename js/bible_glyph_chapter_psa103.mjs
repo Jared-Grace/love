@@ -15,7 +15,7 @@ export function bible_glyph_chapter_psa103() {
         verse_number: 1,
         words: [
           "Of",
-          "David.",
+          "$two_hearts+proper_name.",
           "$speech+thumbs_up",
           "the",
           "$i_am,",
