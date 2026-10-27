@@ -527,7 +527,7 @@ export function bible_glyph_chapter_jer17() {
           "$no_entry",
           "$link",
           "a",
-          "terror",
+          "$derelict_house+fearful_face",
           "to",
           "me;",
           "You",
