@@ -489,7 +489,7 @@ export function bible_glyph_chapter_exo25() {
           "$hands_giving",
           "the",
           "$witness+thing",
-          "that",
+          "$back+flashlight",
           "I",
           "shall",
           "$hands_giving",
