@@ -36,7 +36,7 @@ export function bible_glyph_chapter_isa43() {
           "Do",
           "$no_entry",
           "$fear+doing,",
-          "for",
+          "$pointing",
           "I",
           "have",
           "redeemed",
