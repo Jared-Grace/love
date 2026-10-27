@@ -602,7 +602,7 @@ export function bible_glyph_chapter_1sa25() {
           "had",
           "$hammer+doing",
           "ready,",
-          "five",
+          "$five",
           "seahs",
           "of",
           "roasted",
