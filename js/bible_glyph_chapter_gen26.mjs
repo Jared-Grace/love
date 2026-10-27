@@ -692,7 +692,7 @@ export function bible_glyph_chapter_gen26() {
           "$father.",
           "$no_entry",
           "be",
-          "afraid,",
+          "$fear+doing,",
           "for",
           "I",
           "am",
