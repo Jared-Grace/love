@@ -363,7 +363,7 @@ export function bible_glyph_chapter_lev09() {
           "then",
           "presented",
           "the",
-          "offering",
+          "$magnet+gift",
           "of",
           "$family.",
           "$hand_receiving",
