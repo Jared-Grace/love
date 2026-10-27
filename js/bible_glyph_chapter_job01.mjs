@@ -231,7 +231,7 @@ export function bible_glyph_chapter_job01() {
           "$i_am",
           "$speech",
           "$toward",
-          "Satan,",
+          "$smiling_face_with_horns,",
           "Have",
           "you",
           "considered",
