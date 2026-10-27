@@ -611,7 +611,7 @@ export function bible_glyph_chapter_isa49() {
           "$i_am,",
           "you",
           "will",
-          "wear",
+          "$garment+doing",
           "them",
           "all",
           "as",
