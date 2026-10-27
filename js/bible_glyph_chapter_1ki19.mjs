@@ -650,7 +650,7 @@ export function bible_glyph_chapter_1ki19() {
           "have",
           "reserved",
           "$seven",
-          "thousand",
+          "$ten+all",
           "in",
           "$wrestling+heart_on_fire,",
           "all",
