@@ -580,7 +580,7 @@ export function bible_glyph_chapter_1sa16() {
       {
         verse_number: 18,
         words: [
-          "One",
+          "$one",
           "of",
           "the",
           "servants",
