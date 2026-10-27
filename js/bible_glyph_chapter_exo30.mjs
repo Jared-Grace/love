@@ -899,7 +899,7 @@ export function bible_glyph_chapter_exo30() {
           "and",
           "$incense+bacon,",
           "and",
-          "pure",
+          "$sparkles+droplet",
           "$white_circle+incense,",
           "in",
           "equal",
