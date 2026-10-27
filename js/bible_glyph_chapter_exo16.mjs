@@ -265,7 +265,7 @@ export function bible_glyph_chapter_exo16() {
           "For",
           "who",
           "are",
-          "we,",
+          "$me,",
           "that",
           "you",
           "should",
