@@ -345,7 +345,7 @@ export function bible_glyph_chapter_deu16() {
           "shall",
           "$hammer+doing",
           "the",
-          "Feast",
+          "$party_popper",
           "of",
           "Weeks",
           "to",
