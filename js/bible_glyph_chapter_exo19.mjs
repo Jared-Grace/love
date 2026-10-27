@@ -161,7 +161,7 @@ export function bible_glyph_chapter_exo19() {
           "all",
           "the",
           "$family,",
-          "for",
+          "$pointing",
           "the",
           "whole",
           "$earth",
