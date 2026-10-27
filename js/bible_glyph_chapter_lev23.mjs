@@ -138,7 +138,7 @@ export function bible_glyph_chapter_lev23() {
           "of",
           "the",
           "same",
-          "month",
+          "$new_moon",
           "begins",
           "the",
           "Feast",
