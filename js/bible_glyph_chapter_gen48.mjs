@@ -466,7 +466,7 @@ export function bible_glyph_chapter_gen48() {
           "May",
           "the",
           "$heart_on_fire",
-          "before",
+          "$face",
           "whom",
           "my",
           "$father",
