@@ -797,7 +797,7 @@ export function bible_glyph_chapter_gen21() {
           "was",
           "called",
           "$well+seven+proper_name,",
-          "because",
+          "$pointing",
           "it",
           "was",
           "there",
