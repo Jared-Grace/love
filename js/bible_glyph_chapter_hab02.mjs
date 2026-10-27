@@ -547,7 +547,7 @@ export function bible_glyph_chapter_hab02() {
         verse_number: 18,
         words: [
           "$flashlight+question",
-          "use",
+          "$chart_increasing+doing",
           "is",
           "an",
           "idol,",
