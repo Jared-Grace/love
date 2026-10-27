@@ -935,7 +935,7 @@ export function bible_glyph_chapter_deu31() {
         verse_number: 26,
         words: [
           "$hand_receiving",
-          "this",
+          "$flashlight",
           "$closed_book",
           "of",
           "the",
