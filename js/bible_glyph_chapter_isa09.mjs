@@ -118,7 +118,7 @@ export function bible_glyph_chapter_isa09() {
           "in",
           "dividing",
           "the",
-          "plunder.",
+          "$plunder.",
         ],
       },
       {
