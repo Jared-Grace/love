@@ -103,7 +103,7 @@ export function bible_glyph_chapter_lev27() {
           "person",
           "is",
           "from",
-          "five",
+          "$five",
           "$son",
           "of",
           "age",
