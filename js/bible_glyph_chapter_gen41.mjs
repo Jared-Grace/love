@@ -155,7 +155,7 @@ export function bible_glyph_chapter_gen41() {
           "of",
           "$wheat+top",
           "sprouted,",
-          "thin",
+          "$pinching_hand+describing",
           "and",
           "scorched",
           "by",
