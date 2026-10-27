@@ -527,7 +527,7 @@ export function bible_glyph_chapter_pro03() {
         words: [
           "Do",
           "$no_entry",
-          "withhold",
+          "$locked+hand+doing",
           "$thumbs_up",
           "from",
           "the",
