@@ -942,7 +942,7 @@ export function bible_glyph_chapter_exo21() {
           "$man_beard",
           "$unlocked",
           "a",
-          "pit,",
+          "$hole+droplet,",
           "$shuffle",
           "if",
           "a",
