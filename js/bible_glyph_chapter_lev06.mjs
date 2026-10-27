@@ -289,7 +289,7 @@ export function bible_glyph_chapter_lev06() {
           "carry",
           "the",
           "$bacon+ashes",
-          "outside",
+          "$sun_behind_small_cloud",
           "$camp",
           "$toward",
           "a",
