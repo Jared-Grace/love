@@ -56,7 +56,7 @@ export function bible_glyph_chapter_1sa24() {
           "$two_hearts+proper_name",
           "and",
           "his",
-          "men",
+          "$man_beard",
           "in",
           "the",
           "region",
