@@ -78,7 +78,7 @@ export function bible_glyph_chapter_gen49() {
           "$takeout_box",
           "in",
           "honor,",
-          "excelling",
+          "$takeout_box",
           "in",
           "power.",
         ],
