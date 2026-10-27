@@ -583,7 +583,7 @@ export function bible_glyph_chapter_exo34() {
           "the",
           "$new_moon",
           "of",
-          "Abib,",
+          "$barley+sprout,",
           "for",
           "in",
           "the",
