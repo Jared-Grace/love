@@ -257,7 +257,7 @@ export function bible_glyph_chapter_exo38() {
           "and",
           "with",
           "$silver",
-          "hooks",
+          "$hook",
           "and",
           "bands",
           "on",
