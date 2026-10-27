@@ -403,7 +403,7 @@ export function bible_glyph_chapter_exo12() {
           "on",
           "you",
           "to",
-          "destroy",
+          "$collision+person",
           "you",
           "when",
           "I",
