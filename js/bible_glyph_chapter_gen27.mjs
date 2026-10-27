@@ -955,7 +955,7 @@ export function bible_glyph_chapter_gen27() {
           "ate",
           "it",
           "all",
-          "before",
+          "$clock+back",
           "you",
           "$footprints",
           "in,",
