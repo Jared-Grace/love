@@ -176,7 +176,7 @@ export function bible_glyph_chapter_psa091() {
         words: [
           "You",
           "will",
-          "only",
+          "$one+check",
           "look",
           "on",
           "it",
