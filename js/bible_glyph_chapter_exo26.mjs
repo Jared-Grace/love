@@ -527,7 +527,7 @@ export function bible_glyph_chapter_exo26() {
         verse_number: 21,
         words: [
           "and",
-          "forty",
+          "$four+zero",
           "$silver",
           "bases,",
           "two",
