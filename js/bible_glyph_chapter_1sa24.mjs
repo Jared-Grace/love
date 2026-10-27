@@ -640,7 +640,7 @@ export function bible_glyph_chapter_1sa24() {
           "When",
           "a",
           "$man_beard",
-          "finds",
+          "$magnifying_glass+exclamation",
           "his",
           "$enemy,",
           "does",
