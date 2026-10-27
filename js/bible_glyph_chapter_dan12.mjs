@@ -171,7 +171,7 @@ export function bible_glyph_chapter_dan12() {
           "and",
           "saw",
           "$two",
-          "others",
+          "$plus+one",
           "standing",
           "there,",
           "one",
