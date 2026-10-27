@@ -50,7 +50,7 @@ export function bible_glyph_chapter_isa53() {
           "$ginger_root",
           "out",
           "of",
-          "dry",
+          "$sun+desert",
           "$earth.",
           "He",
           "had",
