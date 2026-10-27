@@ -352,7 +352,7 @@ export function bible_glyph_chapter_pro31() {
         words: [
           "She",
           "sees",
-          "that",
+          "$pointing",
           "her",
           "gain",
           "is",
