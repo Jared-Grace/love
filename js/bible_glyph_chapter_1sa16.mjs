@@ -324,7 +324,7 @@ export function bible_glyph_chapter_1sa16() {
           "his",
           "$son",
           "$bridge",
-          "before",
+          "$face",
           "$ear+heart_on_fire,",
           "but",
           "$ear+heart_on_fire",
