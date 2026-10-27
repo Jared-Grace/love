@@ -246,7 +246,7 @@ export function bible_glyph_chapter_num23() {
       {
         verse_number: 9,
         words: [
-          "For",
+          "$pointing",
           "from",
           "atop",
           "the",
