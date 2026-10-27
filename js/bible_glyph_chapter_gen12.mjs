@@ -318,7 +318,7 @@ export function bible_glyph_chapter_gen12() {
           "while,",
           "because",
           "the",
-          "famine",
+          "$famine",
           "was",
           "severe",
           "in",
