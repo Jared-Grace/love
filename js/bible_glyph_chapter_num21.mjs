@@ -763,7 +763,7 @@ export function bible_glyph_chapter_num21() {
           "$father+proper_name",
           "and",
           "taken",
-          "all",
+          "$all",
           "his",
           "$earth",
           "as",
