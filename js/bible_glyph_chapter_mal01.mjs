@@ -497,7 +497,7 @@ export function bible_glyph_chapter_mal01() {
           "stolen,",
           "$manual_wheelchair,",
           "or",
-          "sick!",
+          "$thermometer_face+doing!",
           "Should",
           "I",
           "accept",
