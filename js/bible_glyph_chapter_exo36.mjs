@@ -957,7 +957,7 @@ export function bible_glyph_chapter_exo36() {
         words: [
           "For",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "$tent",
