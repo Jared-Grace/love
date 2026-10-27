@@ -810,7 +810,7 @@ export function bible_glyph_chapter_job31() {
           "its",
           "furrows",
           "weep",
-          "together,",
+          "$linked_paperclips+manner,",
         ],
       },
       {
