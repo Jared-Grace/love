@@ -36,7 +36,7 @@ export function bible_glyph_chapter_gen30() {
           "me",
           "$son,",
           "or",
-          "I",
+          "$me",
           "$skull+doing.",
         ],
       },
