@@ -425,7 +425,7 @@ export function bible_glyph_chapter_exo40() {
         words: [
           "Then",
           "he",
-          "spread",
+          "$folding_hand_fan",
           "the",
           "tent",
           "over",
