@@ -248,7 +248,7 @@ export function bible_glyph_chapter_jos03() {
       {
         verse_number: 8,
         words: [
-          "Command",
+          "$speech+scroll",
           "the",
           "$priest",
           "$lifting",
