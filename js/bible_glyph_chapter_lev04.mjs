@@ -213,7 +213,7 @@ export function bible_glyph_chapter_lev04() {
           "the",
           "entrails,",
           "and",
-          "all",
+          "$all",
           "the",
           "fat",
           "that",
