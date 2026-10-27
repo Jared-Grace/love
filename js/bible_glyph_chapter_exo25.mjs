@@ -503,7 +503,7 @@ export function bible_glyph_chapter_exo25() {
           "there",
           "I",
           "will",
-          "meet",
+          "$alarm_clock+doing",
           "with",
           "you,",
           "and",
