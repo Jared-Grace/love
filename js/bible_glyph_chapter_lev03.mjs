@@ -292,7 +292,7 @@ export function bible_glyph_chapter_lev03() {
         verse_number: 10,
         words: [
           "$two",
-          "kidneys",
+          "$heart_organ+two",
           "with",
           "the",
           "fat",
