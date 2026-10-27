@@ -190,7 +190,7 @@ export function bible_glyph_chapter_hos02() {
           "so",
           "she",
           "$no_entry",
-          "find",
+          "$magnifying_glass+exclamation",
           "her",
           "way.",
         ],
