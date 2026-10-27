@@ -667,7 +667,7 @@ export function bible_glyph_chapter_exo29() {
           "the",
           "$hand+right_arrow",
           "$leg,",
-          "since",
+          "$pointing",
           "this",
           "is",
           "a",
