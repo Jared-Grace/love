@@ -737,7 +737,7 @@ export function bible_glyph_chapter_jdg02() {
           "$map",
           "that",
           "$i_am+rescue",
-          "left",
+          "$derelict_house+doing",
           "when",
           "he",
           "$skull+doing.",
