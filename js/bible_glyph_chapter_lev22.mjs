@@ -580,7 +580,7 @@ export function bible_glyph_chapter_lev22() {
           "the",
           "$cow_face,",
           "the",
-          "sheep,",
+          "$lamb,",
           "or",
           "the",
           "$goat.",
