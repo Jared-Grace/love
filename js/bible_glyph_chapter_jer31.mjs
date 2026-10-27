@@ -1284,7 +1284,7 @@ export function bible_glyph_chapter_jer31() {
           "searched",
           "out,",
           "would",
-          "I",
+          "$me",
           "reject",
           "all",
           "of",
