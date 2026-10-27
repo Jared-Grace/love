@@ -115,7 +115,7 @@ export function bible_glyph_chapter_ecc12() {
           "doors",
           "to",
           "the",
-          "street",
+          "$road+houses",
           "are",
           "$locked+doing",
           "and",
