@@ -244,7 +244,7 @@ export function bible_glyph_chapter_deu12() {
           "to",
           "$hammer+doing",
           "as",
-          "we",
+          "$me",
           "are",
           "$hammer+doing",
           "here",
