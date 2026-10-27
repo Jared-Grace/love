@@ -415,7 +415,7 @@ export function bible_glyph_chapter_1ki01() {
           "$raised_back_of_hand+doing",
           "to",
           "your",
-          "maidservant,",
+          "$broom,",
           "$speech,",
           "Surely",
           "$peace+proper_name",
