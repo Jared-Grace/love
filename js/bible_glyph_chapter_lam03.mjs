@@ -1064,7 +1064,7 @@ export function bible_glyph_chapter_lam03() {
           "insults,",
           "O",
           "$i_am,",
-          "all",
+          "$all",
           "their",
           "plots",
           "against",
