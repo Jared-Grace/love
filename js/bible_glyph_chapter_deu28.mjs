@@ -2232,7 +2232,7 @@ export function bible_glyph_chapter_deu28() {
           "$no_entry",
           "$eye",
           "$plus+doing.",
-          "There",
+          "$telescope",
           "you",
           "will",
           "$coin+hands_giving",
