@@ -148,7 +148,7 @@ export function bible_glyph_chapter_2sa06() {
           "$wrestling+heart_on_fire",
           "were",
           "celebrating",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "with",
