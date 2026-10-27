@@ -141,7 +141,7 @@ export function bible_glyph_chapter_ezr03() {
           "written,",
           "and",
           "offered",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "$sun",
           "based",
