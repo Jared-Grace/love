@@ -164,7 +164,7 @@ export function bible_glyph_chapter_gen35() {
           "terror",
           "from",
           "$heart_on_fire",
-          "fell",
+          "$link",
           "on",
           "the",
           "$city",
