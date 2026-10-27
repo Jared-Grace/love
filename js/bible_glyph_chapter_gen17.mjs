@@ -720,7 +720,7 @@ export function bible_glyph_chapter_gen17() {
           "circumcised",
           "on",
           "the",
-          "same",
+          "$bone",
           "$sun.",
         ],
       },
