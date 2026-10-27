@@ -347,7 +347,7 @@ export function bible_glyph_chapter_zec12() {
           "$map",
           "that",
           "$footprints",
-          "against",
+          "$pointing_up",
           "$city+peace.",
         ],
       },
