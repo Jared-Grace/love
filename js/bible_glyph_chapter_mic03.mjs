@@ -273,7 +273,7 @@ export function bible_glyph_chapter_mic03() {
       {
         verse_number: 9,
         words: [
-          "Now",
+          "$pleading",
           "$ear",
           "this,",
           "O",
