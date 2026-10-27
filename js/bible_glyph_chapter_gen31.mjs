@@ -372,7 +372,7 @@ export function bible_glyph_chapter_gen31() {
           "portion",
           "or",
           "$inheritance",
-          "left",
+          "$repeat",
           "for",
           "us",
           "in",
