@@ -29,7 +29,7 @@ export function bible_glyph_chapter_2ki01() {
         verse_number: 2,
         words: [
           "Now",
-          "Ahaziah",
+          "$hand+clamp+i_am",
           "had",
           "fallen",
           "through",
