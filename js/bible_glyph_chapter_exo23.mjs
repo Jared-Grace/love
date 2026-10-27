@@ -22,7 +22,7 @@ export function bible_glyph_chapter_exo23() {
           "false",
           "report.",
           "$no_entry",
-          "join",
+          "$palm_down+round_pushpin+doing",
           "your",
           "$hand",
           "with",
