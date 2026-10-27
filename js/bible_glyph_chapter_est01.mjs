@@ -177,7 +177,7 @@ export function bible_glyph_chapter_est01() {
           "fine",
           "white",
           "and",
-          "purple",
+          "$purple_circle",
           "material",
           "to",
           "silver",
