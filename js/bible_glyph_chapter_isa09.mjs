@@ -506,7 +506,7 @@ export function bible_glyph_chapter_isa09() {
           "He",
           "has",
           "$no_entry",
-          "compassion",
+          "$hugging_face+doing",
           "on",
           "their",
           "fatherless",
