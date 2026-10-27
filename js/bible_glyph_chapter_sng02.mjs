@@ -226,7 +226,7 @@ export function bible_glyph_chapter_sng02() {
           "$speech",
           "to",
           "me,",
-          "Arise,",
+          "$person+pointing_up,",
           "my",
           "darling,",
           "my",
