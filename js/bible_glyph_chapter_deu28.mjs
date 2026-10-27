@@ -1382,7 +1382,7 @@ export function bible_glyph_chapter_deu28() {
         words: [
           "$all",
           "these",
-          "curses",
+          "$balloon+speech",
           "will",
           "$footprints",
           "upon",
