@@ -99,7 +99,7 @@ export function bible_glyph_chapter_exo13() {
           "the",
           "$new_moon",
           "of",
-          "Abib.",
+          "$barley+sprout.",
         ],
       },
       {
