@@ -574,7 +574,7 @@ export function bible_glyph_chapter_job01() {
           "suddenly",
           "a",
           "mighty",
-          "wind",
+          "$wind",
           "$footprints",
           "from",
           "the",
