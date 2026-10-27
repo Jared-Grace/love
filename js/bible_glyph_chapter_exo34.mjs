@@ -406,7 +406,7 @@ export function bible_glyph_chapter_exo34() {
           "of",
           "the",
           "$earth",
-          "you",
+          "$you",
           "are",
           "$footprints,",
           "lest",
