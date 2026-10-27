@@ -991,7 +991,7 @@ export function bible_glyph_chapter_lev27() {
           "$sheep",
           "$back+flashlight",
           "$bridge",
-          "under",
+          "$down_arrow",
           "the",
           "rod",
           "of",
