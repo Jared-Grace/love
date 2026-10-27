@@ -76,7 +76,7 @@ export function bible_glyph_chapter_mal03() {
           "And",
           "who",
           "can",
-          "stand",
+          "$person+round_pushpin",
           "when",
           "He",
           "$eye?",
