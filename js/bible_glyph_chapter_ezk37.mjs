@@ -592,7 +592,7 @@ export function bible_glyph_chapter_ezk37() {
           "you",
           "mean",
           "by",
-          "these?",
+          "$flashlight+flashlight?",
         ],
       },
       {
