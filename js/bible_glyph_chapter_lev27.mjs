@@ -592,7 +592,7 @@ export function bible_glyph_chapter_lev27() {
           "$field",
           "decides",
           "to",
-          "redeem",
+          "$currency_exchange",
           "it,",
           "he",
           "must",
