@@ -215,7 +215,7 @@ export function bible_glyph_chapter_isa06() {
           "has",
           "touched",
           "your",
-          "lips,",
+          "$kiss_mark,",
           "your",
           "iniquity",
           "is",
