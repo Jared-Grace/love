@@ -259,7 +259,7 @@ export function bible_glyph_chapter_gen24() {
           "$raised_back_of_hand",
           "of",
           "mine.",
-          "Only",
+          "$one+check",
           "do",
           "$no_entry",
           "take",
