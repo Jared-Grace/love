@@ -110,7 +110,7 @@ export function bible_glyph_chapter_zec04() {
           "$mouth",
           "with",
           "me,",
-          "What",
+          "$flashlight+question",
           "are",
           "these,",
           "my",
