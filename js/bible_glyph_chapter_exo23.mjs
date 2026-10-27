@@ -852,7 +852,7 @@ export function bible_glyph_chapter_exo23() {
           "the",
           "$field",
           "would",
-          "multiply",
+          "$multiply+crowd+doing",
           "against",
           "you.",
         ],
