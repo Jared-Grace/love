@@ -52,7 +52,7 @@ export function bible_glyph_chapter_job31() {
           "the",
           "$might",
           "on",
-          "high?",
+          "$up_arrow+thing?",
         ],
       },
       {
