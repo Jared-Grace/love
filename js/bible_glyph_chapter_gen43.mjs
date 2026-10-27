@@ -367,7 +367,7 @@ export function bible_glyph_chapter_gen43() {
         verse_number: 12,
         words: [
           "$hand_receiving",
-          "double",
+          "$two+multiply",
           "the",
           "$silver",
           "in",
