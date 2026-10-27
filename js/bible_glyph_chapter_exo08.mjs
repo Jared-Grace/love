@@ -522,7 +522,7 @@ export function bible_glyph_chapter_exo08() {
           "upon",
           "$person",
           "and",
-          "beast.",
+          "$paw_prints.",
           "All",
           "the",
           "$dust",
