@@ -743,7 +743,7 @@ export function bible_glyph_chapter_1sa16() {
           "his",
           "$harp",
           "and",
-          "play,",
+          "$harp+hand+doing,",
           "and",
           "$proper_name$Saul",
           "would",
