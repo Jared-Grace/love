@@ -845,7 +845,7 @@ export function bible_glyph_chapter_num10() {
           "$i_am",
           "on",
           "a",
-          "three",
+          "$three",
           "day",
           "$road,",
           "and",
