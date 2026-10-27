@@ -1244,7 +1244,7 @@ export function bible_glyph_chapter_deu04() {
           "by",
           "trials,",
           "$placard,",
-          "wonders",
+          "$shooting_star",
           "and",
           "war,",
           "by",
