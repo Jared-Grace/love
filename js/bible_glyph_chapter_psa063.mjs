@@ -246,7 +246,7 @@ export function bible_glyph_chapter_psa063() {
           "the",
           "$king",
           "will",
-          "rejoice",
+          "$beaming+doing",
           "in",
           "$heart_on_fire;",
           "all",
