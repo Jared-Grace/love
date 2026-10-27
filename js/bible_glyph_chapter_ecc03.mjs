@@ -263,7 +263,7 @@ export function bible_glyph_chapter_ecc03() {
           "$magnifying_glass+exclamation",
           "the",
           "work",
-          "that",
+          "$back+flashlight",
           "$heart_on_fire",
           "has",
           "$hammer+doing",
