@@ -375,7 +375,7 @@ export function bible_glyph_chapter_jos07() {
           "$hammer+doing",
           "for",
           "Your",
-          "great",
+          "$top",
           "$name_tag?",
         ],
       },
