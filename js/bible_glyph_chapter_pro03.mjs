@@ -281,7 +281,7 @@ export function bible_glyph_chapter_pro03() {
           "more",
           "$thumbs_up",
           "than",
-          "silver,",
+          "$silver,",
           "and",
           "her",
           "gain",
