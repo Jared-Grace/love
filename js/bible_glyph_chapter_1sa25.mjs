@@ -1444,7 +1444,7 @@ export function bible_glyph_chapter_1sa25() {
           "She",
           "arose,",
           "$bowing",
-          "facedown",
+          "$nose+fire",
           "to",
           "the",
           "$earth,",
