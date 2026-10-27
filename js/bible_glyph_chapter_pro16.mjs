@@ -196,7 +196,7 @@ export function bible_glyph_chapter_pro16() {
           "but",
           "the",
           "$i_am",
-          "determines",
+          "$pin+doing",
           "his",
           "steps.",
         ],
