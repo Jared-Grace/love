@@ -185,7 +185,7 @@ export function bible_glyph_chapter_isa43() {
           "the",
           "$east,",
           "and",
-          "gather",
+          "$tray_in+doing",
           "you",
           "from",
           "the",
