@@ -790,7 +790,7 @@ export function bible_glyph_chapter_exo03() {
           "Every",
           "$woman",
           "shall",
-          "ask",
+          "$question",
           "her",
           "neighbor",
           "and",
