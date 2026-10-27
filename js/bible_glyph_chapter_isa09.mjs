@@ -451,7 +451,7 @@ export function bible_glyph_chapter_isa09() {
         verse_number: 15,
         words: [
           "The",
-          "head",
+          "$person_gesturing_ok",
           "is",
           "the",
           "$old_man",
