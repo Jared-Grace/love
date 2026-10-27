@@ -12,7 +12,7 @@ export function bible_glyph_chapter_1ki19() {
         verse_number: 1,
         words: [
           "Now",
-          "Ahab",
+          "$brother+father+proper_name",
           "$newspaper",
           "$proper_name$Jezebel",
           "everything",
