@@ -434,7 +434,7 @@ export function bible_glyph_chapter_1sa15() {
           "the",
           "$i_am",
           "$speech+thumbs_up",
-          "you.",
+          "$you.",
           "I",
           "have",
           "carried",
