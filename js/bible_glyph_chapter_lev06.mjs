@@ -392,7 +392,7 @@ export function bible_glyph_chapter_lev06() {
           "$tray_out",
           "$grain_offering",
           "a",
-          "handful",
+          "$fist+wheat",
           "$flour",
           "and",
           "olive",
