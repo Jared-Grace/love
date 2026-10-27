@@ -425,7 +425,7 @@ export function bible_glyph_chapter_neh09() {
           "a",
           "$candle",
           "of",
-          "cloud,",
+          "$cloud,",
           "and",
           "by",
           "$night",
