@@ -333,7 +333,7 @@ export function bible_glyph_chapter_ezk11() {
           "nor",
           "will",
           "you",
-          "be",
+          "$link",
           "the",
           "$meat",
           "within",
