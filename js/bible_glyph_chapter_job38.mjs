@@ -791,7 +791,7 @@ export function bible_glyph_chapter_job38() {
           "and",
           "lie",
           "in",
-          "wait",
+          "$ninja+hourglass_not_done+thing",
           "in",
           "the",
           "thicket?",
