@@ -254,7 +254,7 @@ export function bible_glyph_chapter_psa145() {
           "of",
           "$person",
           "Your",
-          "mighty",
+          "$might+thing",
           "acts",
           "and",
           "the",
