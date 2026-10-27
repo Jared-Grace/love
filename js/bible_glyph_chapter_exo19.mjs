@@ -516,7 +516,7 @@ export function bible_glyph_chapter_exo19() {
           "$cloud_with_lightning.",
           "A",
           "thick",
-          "cloud",
+          "$cloud",
           "was",
           "upon",
           "the",
