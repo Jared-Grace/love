@@ -379,7 +379,7 @@ export function bible_glyph_chapter_lev02() {
           "you",
           "shall",
           "offer",
-          "crushed",
+          "$wheat+hammer",
           "heads",
           "of",
           "new",
