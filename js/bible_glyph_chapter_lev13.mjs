@@ -1445,7 +1445,7 @@ export function bible_glyph_chapter_lev13() {
           "reddish-white",
           "$eyes+thing",
           "a",
-          "disease",
+          "$microbe",
           "of",
           "the",
           "skin",
