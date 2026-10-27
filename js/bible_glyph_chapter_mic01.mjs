@@ -432,7 +432,7 @@ export function bible_glyph_chapter_mic01() {
       {
         verse_number: 14,
         words: [
-          "Therefore",
+          "$right_arrow",
           "$hands_giving",
           "farewell",
           "gifts",
