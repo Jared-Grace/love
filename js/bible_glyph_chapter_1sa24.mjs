@@ -347,7 +347,7 @@ export function bible_glyph_chapter_1sa24() {
           "$hand",
           "in",
           "the",
-          "cave.",
+          "$cave.",
           "I",
           "was",
           "$speech",
