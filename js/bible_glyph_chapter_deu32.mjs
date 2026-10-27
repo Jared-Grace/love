@@ -98,7 +98,7 @@ export function bible_glyph_chapter_deu32() {
           "$heart_on_fire",
           "of",
           "faithfulness",
-          "without",
+          "$dotted_line_face",
           "injustice,",
           "$ruler",
           "and",
