@@ -936,7 +936,7 @@ export function bible_glyph_chapter_2ki03() {
           "there",
           "was",
           "great",
-          "fury",
+          "$angry_face+collision",
           "against",
           "the",
           "$wrestling+heart_on_fire,",
