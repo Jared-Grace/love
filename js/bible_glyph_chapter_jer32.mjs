@@ -825,7 +825,7 @@ export function bible_glyph_chapter_jer32() {
           "the",
           "$city",
           "to",
-          "capture",
+          "$net+doing",
           "it.",
           "And",
           "by",
