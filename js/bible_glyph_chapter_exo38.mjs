@@ -35,7 +35,7 @@ export function bible_glyph_chapter_exo38() {
           "square,",
           "and",
           "three",
-          "cubits",
+          "$triangular_ruler",
           "high.",
         ],
       },
