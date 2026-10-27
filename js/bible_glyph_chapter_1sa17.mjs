@@ -56,7 +56,7 @@ export function bible_glyph_chapter_1sa17() {
           "arraying",
           "themselves",
           "for",
-          "battle",
+          "$crossed_swords",
           "against",
           "the",
           "$proper_name$Philistines.",
