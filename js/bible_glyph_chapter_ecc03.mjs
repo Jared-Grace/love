@@ -21,7 +21,7 @@ export function bible_glyph_chapter_ecc03() {
           "season,",
           "and",
           "a",
-          "time",
+          "$clock",
           "for",
           "every",
           "purpose",
