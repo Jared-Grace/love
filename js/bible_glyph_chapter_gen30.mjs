@@ -878,7 +878,7 @@ export function bible_glyph_chapter_gen30() {
           "the",
           "$goat,",
           "and",
-          "dark",
+          "$brown_square+describing",
           "among",
           "the",
           "lambs,",
