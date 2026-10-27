@@ -119,7 +119,7 @@ export function bible_glyph_chapter_psa073() {
           "garment",
           "of",
           "violence",
-          "covers",
+          "$fog+doing",
           "them.",
         ],
       },
