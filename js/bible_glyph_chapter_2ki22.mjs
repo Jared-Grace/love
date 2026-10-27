@@ -484,7 +484,7 @@ export function bible_glyph_chapter_2ki22() {
           "book,",
           "by",
           "$hammer+doing",
-          "all",
+          "$all",
           "that",
           "is",
           "written",
