@@ -30,7 +30,7 @@ export function bible_glyph_chapter_num13() {
           "of",
           "$proper_name$Canaan,",
           "$back+flashlight",
-          "I",
+          "$me",
           "am",
           "$hands_giving",
           "to",
