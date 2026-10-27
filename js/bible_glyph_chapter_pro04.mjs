@@ -316,7 +316,7 @@ export function bible_glyph_chapter_pro04() {
           "$pointing",
           "they",
           "$no_entry",
-          "sleep",
+          "$sleeping_face+doing",
           "unless",
           "they",
           "do",
