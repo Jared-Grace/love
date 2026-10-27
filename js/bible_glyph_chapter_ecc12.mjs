@@ -83,7 +83,7 @@ export function bible_glyph_chapter_ecc12() {
           "of",
           "the",
           "$house",
-          "tremble,",
+          "$shaking_face+doing,",
           "and",
           "the",
           "strong",
