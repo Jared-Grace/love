@@ -475,7 +475,7 @@ export function bible_glyph_chapter_deu18() {
           "$no_entry",
           "$eye",
           "this",
-          "great",
+          "$top",
           "$fire",
           "anymore,",
           "so",
