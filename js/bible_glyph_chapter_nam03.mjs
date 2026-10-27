@@ -531,7 +531,7 @@ export function bible_glyph_chapter_nam03() {
           "wound",
           "is",
           "severe.",
-          "All",
+          "$all",
           "who",
           "$ear",
           "the",
