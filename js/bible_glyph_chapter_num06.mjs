@@ -31,7 +31,7 @@ export function bible_glyph_chapter_num06() {
           "if",
           "a",
           "$man_beard",
-          "or",
+          "$shuffle",
           "$woman",
           "makes",
           "a",
