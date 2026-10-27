@@ -289,7 +289,7 @@ export function bible_glyph_chapter_exo34() {
           "$family",
           "is",
           "stiff-necked,",
-          "forgive",
+          "$sponge",
           "our",
           "iniquity",
           "and",
