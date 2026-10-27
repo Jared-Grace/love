@@ -180,7 +180,7 @@ export function bible_glyph_chapter_num24() {
         words: [
           "$water",
           "will",
-          "flow",
+          "$water+right_arrow+doing",
           "from",
           "his",
           "buckets,",
