@@ -247,7 +247,7 @@ export function bible_glyph_chapter_exo21() {
           "$no_entry",
           "$joystick",
           "to",
-          "sell",
+          "$coin+hands_giving",
           "her",
           "to",
           "a",
