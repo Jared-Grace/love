@@ -1424,7 +1424,7 @@ export function bible_glyph_chapter_1ki18() {
           "$dotted_line_face",
           "there.",
           "$seven",
-          "times",
+          "$drum",
           "Elijah",
           "$speech,",
           "$turn_back.",
