@@ -68,7 +68,7 @@ export function bible_glyph_chapter_sng02() {
           "$person+house",
           "in",
           "his",
-          "shade,",
+          "$umbrella_on_ground,",
           "and",
           "his",
           "$fruit",
