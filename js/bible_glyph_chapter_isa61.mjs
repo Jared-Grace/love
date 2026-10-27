@@ -146,7 +146,7 @@ export function bible_glyph_chapter_isa61() {
           "rebuild",
           "the",
           "$hourglass",
-          "ruins;",
+          "$desert+thing;",
           "they",
           "will",
           "restore",
