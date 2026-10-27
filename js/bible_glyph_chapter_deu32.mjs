@@ -997,7 +997,7 @@ export function bible_glyph_chapter_deu32() {
           "He",
           "will",
           "$speech,",
-          "Where",
+          "$question+round_pushpin",
           "are",
           "their",
           "$moai,",
