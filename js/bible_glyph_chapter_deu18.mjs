@@ -45,7 +45,7 @@ export function bible_glyph_chapter_deu18() {
           "that",
           "is",
           "their",
-          "inheritance.",
+          "$inheritance.",
         ],
       },
       {
