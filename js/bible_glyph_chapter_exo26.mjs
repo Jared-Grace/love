@@ -212,7 +212,7 @@ export function bible_glyph_chapter_exo26() {
           "and",
           "four",
           "$triangular_ruler",
-          "wide,",
+          "$arrow_both_ways,",
           "all",
           "eleven",
           "curtains",
