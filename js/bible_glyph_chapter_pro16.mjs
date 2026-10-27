@@ -570,7 +570,7 @@ export function bible_glyph_chapter_pro16() {
           "perverse",
           "$man_beard",
           "$hand_sending",
-          "dissension,",
+          "$crossed_swords+speech,",
           "and",
           "a",
           "gossip",
