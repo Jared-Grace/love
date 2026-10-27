@@ -1257,7 +1257,7 @@ export function bible_glyph_chapter_deu04() {
           "$hand+might,",
           "and",
           "by",
-          "great",
+          "$top",
           "$fear+thing,",
           "as",
           "the",
