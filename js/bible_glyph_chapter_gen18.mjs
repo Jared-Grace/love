@@ -270,7 +270,7 @@ export function bible_glyph_chapter_gen18() {
         words: [
           "They",
           "$speech,",
-          "Where",
+          "$question+round_pushpin",
           "is",
           "$proper_name$Sarah",
           "your",
