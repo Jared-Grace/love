@@ -1061,7 +1061,7 @@ export function bible_glyph_chapter_deu12() {
           "$back+flashlight",
           "the",
           "$i_am",
-          "hates.",
+          "$heart_red+thumbs_down.",
           "They",
           "even",
           "burn",
