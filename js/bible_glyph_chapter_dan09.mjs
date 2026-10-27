@@ -284,7 +284,7 @@ export function bible_glyph_chapter_dan09() {
           "our",
           "$heart_on_fire",
           "belong",
-          "compassion",
+          "$hugging_face",
           "and",
           "forgiveness,",
           "even",
