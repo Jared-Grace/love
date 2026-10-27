@@ -696,7 +696,7 @@ export function bible_glyph_chapter_ezk34() {
           "with",
           "your",
           "horns",
-          "until",
+          "$finish",
           "you",
           "have",
           "scattered",
