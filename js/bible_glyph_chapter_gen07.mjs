@@ -550,7 +550,7 @@ export function bible_glyph_chapter_gen07() {
           "upon",
           "the",
           "$earth",
-          "perished,",
+          "$wind+skull+doing,",
           "the",
           "$bird",
           "and",
