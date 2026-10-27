@@ -1158,7 +1158,7 @@ export function bible_glyph_chapter_lev26() {
         words: [
           "You",
           "will",
-          "perish",
+          "$wilted_flower",
           "among",
           "the",
           "$map,",
