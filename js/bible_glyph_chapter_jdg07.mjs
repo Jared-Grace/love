@@ -75,7 +75,7 @@ export function bible_glyph_chapter_jdg07() {
           "$hand,",
           "$no_entry+traffic_light",
           "$wrestling+heart_on_fire",
-          "glorify",
+          "$crown+sparkles+doing",
           "themselves",
           "over",
           "Me,",
