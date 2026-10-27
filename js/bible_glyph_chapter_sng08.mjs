@@ -343,7 +343,7 @@ export function bible_glyph_chapter_sng08() {
           "to",
           "$footprints",
           "a",
-          "thousand",
+          "$ten+all",
           "shekels",
           "of",
           "silver.",
