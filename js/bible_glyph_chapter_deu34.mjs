@@ -248,7 +248,7 @@ export function bible_glyph_chapter_deu34() {
           "plains",
           "of",
           "$father+proper_name",
-          "thirty",
+          "$three+zero",
           "$sun,",
           "until",
           "the",
