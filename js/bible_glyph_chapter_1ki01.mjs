@@ -412,7 +412,7 @@ export function bible_glyph_chapter_1ki01() {
           "did",
           "$you",
           "$no_entry",
-          "swear",
+          "$raised_back_of_hand+doing",
           "to",
           "your",
           "maidservant,",
