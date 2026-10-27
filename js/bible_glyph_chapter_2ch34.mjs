@@ -154,7 +154,7 @@ export function bible_glyph_chapter_2ch34() {
           "He",
           "shattered",
           "the",
-          "Asherah",
+          "$wood+imp",
           "poles,",
           "the",
           "carved",
