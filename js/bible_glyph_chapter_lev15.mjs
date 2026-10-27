@@ -596,7 +596,7 @@ export function bible_glyph_chapter_lev15() {
           "will",
           "be",
           "unclean",
-          "until",
+          "$finish",
           "evening.",
         ],
       },
