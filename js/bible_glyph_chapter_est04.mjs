@@ -69,7 +69,7 @@ export function bible_glyph_chapter_est04() {
           "from",
           "$footprints",
           "the",
-          "gate",
+          "$gate",
           "of",
           "the",
           "$king.",
