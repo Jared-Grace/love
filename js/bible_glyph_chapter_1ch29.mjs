@@ -545,7 +545,7 @@ export function bible_glyph_chapter_1ch29() {
           "strangers",
           "in",
           "Your",
-          "presence,",
+          "$face,",
           "as",
           "were",
           "all",
