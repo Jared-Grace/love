@@ -308,7 +308,7 @@ export function bible_glyph_chapter_lam01() {
           "$face_exhaling+voice+doing",
           "and",
           "$turn_back",
-          "away.",
+          "$last_track.",
         ],
       },
       {
