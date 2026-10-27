@@ -967,7 +967,7 @@ export function bible_glyph_chapter_1ki20() {
           "the",
           "$i_am",
           "$speech.",
-          "Because",
+          "$information",
           "the",
           "$proper_name$Arameans",
           "have",
