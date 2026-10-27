@@ -454,7 +454,7 @@ export function bible_glyph_chapter_deu07() {
           "your",
           "$brown_square,",
           "your",
-          "grain,",
+          "$wheat+barley,",
           "$wine",
           "and",
           "oil,",
