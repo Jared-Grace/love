@@ -187,7 +187,7 @@ export function bible_glyph_chapter_lam03() {
           "in",
           "wait,",
           "a",
-          "lion",
+          "$lion",
           "hiding",
           "in",
           "ambush.",
