@@ -246,7 +246,7 @@ export function bible_glyph_chapter_dan01() {
         verse_number: 8,
         words: [
           "But",
-          "Daniel",
+          "$scales+speech+heart_on_fire+proper_name",
           "$palm_down",
           "up",
           "his",
