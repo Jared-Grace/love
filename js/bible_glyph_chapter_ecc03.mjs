@@ -501,7 +501,7 @@ export function bible_glyph_chapter_ecc03() {
           "$person",
           "has",
           "no",
-          "advantage",
+          "$takeout_box+thing",
           "$tray_out",
           "the",
           "animals,",
