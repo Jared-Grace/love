@@ -45,7 +45,7 @@ export function bible_glyph_chapter_job38() {
         verse_number: 3,
         words: [
           "Now",
-          "brace",
+          "$briefs+ribbon+doing",
           "yourself",
           "like",
           "a",
