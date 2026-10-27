@@ -256,7 +256,7 @@ export function bible_glyph_chapter_ezr03() {
           "$proper_name$Tyre,",
           "to",
           "$footprints",
-          "cedar",
+          "$cedar",
           "$tree",
           "$tray_out",
           "$proper_name$Lebanon",
