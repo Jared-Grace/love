@@ -331,7 +331,7 @@ export function bible_glyph_chapter_zec09() {
           "the",
           "$bow+wood",
           "of",
-          "war",
+          "$crossed_swords",
           "will",
           "be",
           "broken.",
