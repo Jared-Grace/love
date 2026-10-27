@@ -215,7 +215,7 @@ export function bible_glyph_chapter_lev13() {
           "him",
           "for",
           "another",
-          "seven",
+          "$seven",
           "$sun.",
         ],
       },
