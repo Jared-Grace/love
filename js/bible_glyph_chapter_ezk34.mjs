@@ -839,7 +839,7 @@ export function bible_glyph_chapter_ezk34() {
           "will",
           "send",
           "down",
-          "showers",
+          "$rain+water_wave",
           "in",
           "season,",
           "showers",
