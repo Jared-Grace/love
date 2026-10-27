@@ -108,7 +108,7 @@ export function bible_glyph_chapter_gen41() {
           "$eating",
           "the",
           "$seven",
-          "sleek,",
+          "$face+sparkle,",
           "well-fed",
           "cows.",
           "Then",
