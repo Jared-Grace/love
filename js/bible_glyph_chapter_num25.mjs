@@ -89,7 +89,7 @@ export function bible_glyph_chapter_num25() {
           "$toward",
           "$fishing_pole+proper_name,",
           "$hand_receiving",
-          "all",
+          "$all",
           "the",
           "leaders",
           "of",
