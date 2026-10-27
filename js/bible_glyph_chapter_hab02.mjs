@@ -93,7 +93,7 @@ export function bible_glyph_chapter_hab02() {
           "does",
           "$no_entry",
           "$speech+crossed_fingers+doing.",
-          "Though",
+          "$traffic_light",
           "it",
           "lingers,",
           "wait",
