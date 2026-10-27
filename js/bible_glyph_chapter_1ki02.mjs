@@ -943,7 +943,7 @@ export function bible_glyph_chapter_1ki02() {
         words: [
           "So",
           "$peace+proper_name",
-          "banished",
+          "$door+leftwards_pushing_hand+doing",
           "$proper_name$Abiathar",
           "from",
           "the",
