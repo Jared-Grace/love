@@ -578,7 +578,7 @@ export function bible_glyph_chapter_isa26() {
         verse_number: 21,
         words: [
           "For",
-          "behold,",
+          "$exclamation,",
           "the",
           "$i_am",
           "is",
