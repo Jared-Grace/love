@@ -69,7 +69,7 @@ export function bible_glyph_chapter_pro08() {
           "O",
           "$man_beard,",
           "I",
-          "call",
+          "$waving_hand",
           "out,",
           "and",
           "my",
