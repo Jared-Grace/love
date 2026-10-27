@@ -310,7 +310,7 @@ export function bible_glyph_chapter_2ki03() {
           "of",
           "$wrestling+heart_on_fire",
           "$speech,",
-          "Alas,",
+          "$crying_face+speech,",
           "$i_am",
           "has",
           "summoned",
