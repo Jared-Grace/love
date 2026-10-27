@@ -138,7 +138,7 @@ export function bible_glyph_chapter_deu33() {
           "of",
           "$wrestling+heart_on_fire",
           "came",
-          "together.",
+          "$linked_paperclips+manner.",
         ],
       },
       {
