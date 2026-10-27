@@ -53,7 +53,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 3,
         words: [
-          "Indeed,",
+          "$check+exclamation,",
           "He",
           "keeps",
           "$turn_back",
