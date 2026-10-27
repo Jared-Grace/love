@@ -29,7 +29,7 @@ export function bible_glyph_chapter_job23() {
           "$hand",
           "is",
           "heavy",
-          "despite",
+          "$pointing_up",
           "my",
           "groaning.",
         ],
