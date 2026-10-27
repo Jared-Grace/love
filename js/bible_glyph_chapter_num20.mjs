@@ -88,7 +88,7 @@ export function bible_glyph_chapter_num20() {
       {
         verse_number: 4,
         words: [
-          "Why",
+          "$flashlight+question",
           "have",
           "you",
           "$footprints",
