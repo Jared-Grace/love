@@ -487,7 +487,7 @@ export function bible_glyph_chapter_gen26() {
           "camped",
           "in",
           "the",
-          "valley",
+          "$national_park",
           "of",
           "$proper_name$Gerar",
           "and",
