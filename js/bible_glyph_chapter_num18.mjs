@@ -395,7 +395,7 @@ export function bible_glyph_chapter_num18() {
           "offering,",
           "and",
           "$all",
-          "male",
+          "$reminder_ribbon+thing",
           "may",
           "$eating",
           "it.",
