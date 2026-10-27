@@ -284,7 +284,7 @@ export function bible_glyph_chapter_gen41() {
           "both",
           "he",
           "and",
-          "I",
+          "$me",
           "had",
           "dreams,",
           "and",
