@@ -857,7 +857,7 @@ export function bible_glyph_chapter_deu33() {
           "you,",
           "O",
           "$wrestling+heart_on_fire.",
-          "Who",
+          "$person+question",
           "is",
           "like",
           "you,",
