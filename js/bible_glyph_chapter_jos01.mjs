@@ -269,7 +269,7 @@ export function bible_glyph_chapter_jos01() {
           "to",
           "$hammer+doing",
           "$all",
-          "written",
+          "$writing_hand",
           "in",
           "it.",
           "For",
