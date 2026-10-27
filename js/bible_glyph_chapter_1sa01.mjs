@@ -559,7 +559,7 @@ export function bible_glyph_chapter_1sa01() {
           "was",
           "$no_entry",
           "longer",
-          "downcast.",
+          "$link.",
         ],
       },
       {
