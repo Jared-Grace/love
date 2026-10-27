@@ -271,7 +271,7 @@ export function bible_glyph_chapter_nam02() {
           "$melting_face,",
           "$kneeling+leg",
           "$leg+shaking_face,",
-          "bodies",
+          "$briefs+round_pushpin",
           "$dizzy+pregnant_woman,",
           "and",
           "$all",
