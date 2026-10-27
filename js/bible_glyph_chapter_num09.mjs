@@ -482,7 +482,7 @@ export function bible_glyph_chapter_num09() {
           "up,",
           "the",
           "$cloud",
-          "covered",
+          "$coat+doing",
           "it,",
           "the",
           "$tent",
