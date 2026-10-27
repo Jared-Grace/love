@@ -479,7 +479,7 @@ export function bible_glyph_chapter_gen05() {
           "the",
           "$sun",
           "of",
-          "Enoch",
+          "$gift+heart_on_fire+proper_name",
           "were",
           "three",
           "hundred",
