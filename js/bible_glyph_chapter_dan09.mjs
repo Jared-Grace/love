@@ -835,7 +835,7 @@ export function bible_glyph_chapter_dan09() {
         verse_number: 24,
         words: [
           "Seventy",
-          "weeks",
+          "$seven+sun",
           "are",
           "decreed",
           "for",
