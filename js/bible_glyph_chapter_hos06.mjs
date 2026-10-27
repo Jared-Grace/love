@@ -127,7 +127,7 @@ export function bible_glyph_chapter_hos06() {
           "you,",
           "O",
           "$fruit?",
-          "What",
+          "$flashlight+question",
           "shall",
           "I",
           "$hammer+doing",
