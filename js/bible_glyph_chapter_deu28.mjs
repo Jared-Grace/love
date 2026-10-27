@@ -1915,7 +1915,7 @@ export function bible_glyph_chapter_deu28() {
           "$seed",
           "$star_struck",
           "disasters,",
-          "severe",
+          "$top",
           "and",
           "lasting",
           "plagues,",
