@@ -272,7 +272,7 @@ export function bible_glyph_chapter_deu28() {
           "sworn",
           "to",
           "you,",
-          "if",
+          "$pointing",
           "you",
           "keep",
           "the",
