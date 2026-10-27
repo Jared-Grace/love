@@ -421,7 +421,7 @@ export function bible_glyph_chapter_job03() {
           "$sprout",
           "to",
           "the",
-          "bitter",
+          "$lemon",
           "of",
           "$person_other?",
         ],
