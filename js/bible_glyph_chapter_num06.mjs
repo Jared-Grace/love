@@ -475,7 +475,7 @@ export function bible_glyph_chapter_num06() {
         words: [
           "and",
           "a",
-          "basket",
+          "$basket",
           "of",
           "unleavened",
           "cakes",
