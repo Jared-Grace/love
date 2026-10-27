@@ -68,7 +68,7 @@ export function bible_glyph_chapter_psa034() {
       {
         verse_number: 3,
         words: [
-          "Magnify",
+          "$top+doing",
           "the",
           "$i_am",
           "with",
