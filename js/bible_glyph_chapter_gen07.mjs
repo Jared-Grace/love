@@ -445,7 +445,7 @@ export function bible_glyph_chapter_gen07() {
         verse_number: 17,
         words: [
           "For",
-          "forty",
+          "$four+zero",
           "$sun",
           "the",
           "$water_wave+earth",
