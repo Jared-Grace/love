@@ -679,7 +679,7 @@ export function bible_glyph_chapter_lev11() {
         verse_number: 30,
         words: [
           "the",
-          "gecko,",
+          "$lizard+voice,",
           "the",
           "$lightning,",
           "the",
