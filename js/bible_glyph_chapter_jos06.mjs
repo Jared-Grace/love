@@ -780,7 +780,7 @@ export function bible_glyph_chapter_jos06() {
           "So",
           "the",
           "young",
-          "spies",
+          "$foot+doing",
           "$footprints",
           "and",
           "brought",
