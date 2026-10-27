@@ -143,7 +143,7 @@ export function bible_glyph_chapter_pro31() {
         words: [
           "Let",
           "him",
-          "drink",
+          "$cup_with_straw",
           "and",
           "forget",
           "his",
