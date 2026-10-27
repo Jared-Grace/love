@@ -814,7 +814,7 @@ export function bible_glyph_chapter_num10() {
       {
         verse_number: 32,
         words: [
-          "If",
+          "$pointing",
           "you",
           "$walking",
           "with",
