@@ -342,7 +342,7 @@ export function bible_glyph_chapter_lev16() {
           "offering",
           "and",
           "makes",
-          "atonement",
+          "$umbrella+doing",
           "for",
           "himself",
           "and",
