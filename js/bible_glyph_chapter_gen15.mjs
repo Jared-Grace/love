@@ -224,7 +224,7 @@ export function bible_glyph_chapter_gen15() {
           "can",
           "I",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I",
           "will",
           "possess",
