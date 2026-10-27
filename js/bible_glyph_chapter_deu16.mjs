@@ -770,7 +770,7 @@ export function bible_glyph_chapter_deu16() {
           "$i_am",
           "your",
           "$heart_on_fire",
-          "hates.",
+          "$heart_red+thumbs_down.",
         ],
       },
     ],
