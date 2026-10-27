@@ -60,7 +60,7 @@ export function bible_glyph_chapter_exo36() {
         words: [
           "Then",
           "$fishing_pole+proper_name",
-          "summoned",
+          "$waving_hand",
           "$proper_name$Bezalel",
           "and",
           "$tent+father",
