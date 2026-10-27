@@ -529,7 +529,7 @@ export function bible_glyph_chapter_lam03() {
           "there",
           "is",
           "still",
-          "hope.",
+          "$crossed_fingers.",
         ],
       },
       {
