@@ -225,7 +225,7 @@ export function bible_glyph_chapter_zec03() {
           "you",
           "a",
           "place",
-          "among",
+          "$brain+arrow_both_ways",
           "these",
           "who",
           "are",
