@@ -15,7 +15,7 @@ export function bible_glyph_chapter_jos24() {
           "Then",
           "$i_am+rescue",
           "$crowd+doing",
-          "all",
+          "$all",
           "the",
           "tribes",
           "of",
