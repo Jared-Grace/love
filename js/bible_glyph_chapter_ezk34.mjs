@@ -870,7 +870,7 @@ export function bible_glyph_chapter_ezk34() {
           "flock",
           "will",
           "be",
-          "secure",
+          "$anchor+thing",
           "in",
           "their",
           "$brown_square.",
