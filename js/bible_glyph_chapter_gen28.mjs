@@ -607,7 +607,7 @@ export function bible_glyph_chapter_gen28() {
           "$hand+foot",
           "$saluting_face+doing",
           "a",
-          "vow,",
+          "$saluting_face,",
           "$speech,",
           "If",
           "$heart_on_fire",
