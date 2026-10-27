@@ -151,7 +151,7 @@ export function bible_glyph_chapter_psa121() {
           "and",
           "going,",
           "both",
-          "now",
+          "$watch",
           "and",
           "forevermore.",
         ],
