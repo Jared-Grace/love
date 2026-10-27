@@ -101,7 +101,7 @@ export function bible_glyph_chapter_isa61() {
           "of",
           "beauty",
           "for",
-          "ashes,",
+          "$ashes,",
           "the",
           "oil",
           "of",
