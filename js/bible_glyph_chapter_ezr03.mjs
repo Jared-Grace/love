@@ -469,7 +469,7 @@ export function bible_glyph_chapter_ezr03() {
           "gave",
           "a",
           "great",
-          "shout",
+          "$public_address",
           "of",
           "$clapping_hands",
           "to",
