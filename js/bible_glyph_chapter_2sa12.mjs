@@ -235,7 +235,7 @@ export function bible_glyph_chapter_2sa12() {
           "$oil+doing",
           "you",
           "$king",
-          "over",
+          "$pointing_up",
           "$wrestling+heart_on_fire,",
           "and",
           "$me",
