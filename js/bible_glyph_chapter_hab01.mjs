@@ -49,7 +49,7 @@ export function bible_glyph_chapter_hab01() {
           "out",
           "to",
           "You,",
-          "Violence!",
+          "$boxing_glove!",
           "but",
           "You",
           "do",
