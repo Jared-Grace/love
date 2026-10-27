@@ -143,7 +143,7 @@ export function bible_glyph_chapter_1sa25() {
           "$wilderness,",
           "he",
           "$ear",
-          "that",
+          "$pointing",
           "$proper_name$Nabal",
           "was",
           "shearing",
