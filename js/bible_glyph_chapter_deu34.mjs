@@ -46,7 +46,7 @@ export function bible_glyph_chapter_deu34() {
           "from",
           "$proper_name$Gilead",
           "as",
-          "far",
+          "$finish",
           "as",
           "$proper_name$Dan,",
         ],
