@@ -84,7 +84,7 @@ export function bible_glyph_chapter_lev27() {
           "it",
           "is",
           "a",
-          "female,",
+          "$female_sign,",
           "then",
           "your",
           "valuation",
