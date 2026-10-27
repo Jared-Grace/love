@@ -94,7 +94,7 @@ export function bible_glyph_chapter_exo09() {
           "$camel,",
           "on",
           "your",
-          "herds",
+          "$cow_face",
           "and",
           "your",
           "$sheep.",
