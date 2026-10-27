@@ -900,7 +900,7 @@ export function bible_glyph_chapter_exo10() {
           "to",
           "$kneeling+doing",
           "$i_am",
-          "until",
+          "$finish",
           "we",
           "$footprints",
           "there.",
