@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_exo39() {
           "its",
           "ropes",
           "and",
-          "tent",
+          "$tent+wood",
           "pegs,",
           "and",
           "all",
