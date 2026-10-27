@@ -81,7 +81,7 @@ export function bible_glyph_chapter_pro04() {
           "of",
           "my",
           "$speech;",
-          "keep",
+          "$guard",
           "my",
           "$scroll",
           "and",
