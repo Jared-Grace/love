@@ -331,7 +331,7 @@ export function bible_glyph_chapter_num20() {
           "were",
           "able",
           "to",
-          "drink.",
+          "$cup_with_straw.",
         ],
       },
       {
