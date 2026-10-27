@@ -185,7 +185,7 @@ export function bible_glyph_chapter_num22() {
           "$watch",
           "and",
           "$speech+thumbs_down",
-          "this",
+          "$flashlight",
           "$family",
           "for",
           "me,",
