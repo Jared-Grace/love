@@ -58,7 +58,7 @@ export function bible_glyph_chapter_gen47() {
           "And",
           "he",
           "$hand_receiving",
-          "five",
+          "$five",
           "of",
           "his",
           "$brother",
