@@ -910,7 +910,7 @@ export function bible_glyph_chapter_dan09() {
           "and",
           "sixty",
           "two",
-          "weeks.",
+          "$seven+sun.",
           "It",
           "will",
           "be",
