@@ -676,7 +676,7 @@ export function bible_glyph_chapter_deu33() {
           "of",
           "the",
           "$lion,",
-          "leaping",
+          "$paw_prints+fast_forward+doing",
           "$tray_out",
           "$proper_name$Bashan.",
         ],
