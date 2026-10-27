@@ -1700,7 +1700,7 @@ export function bible_glyph_chapter_deu28() {
         words: [
           "The",
           "most",
-          "gentle",
+          "$baby+heart_red+describing",
           "and",
           "refined",
           "$man_beard",
