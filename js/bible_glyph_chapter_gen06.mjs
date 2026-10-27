@@ -408,7 +408,7 @@ export function bible_glyph_chapter_gen06() {
           "$hammer+doing",
           "it:",
           "the",
-          "ark",
+          "$package",
           "is",
           "to",
           "be",
