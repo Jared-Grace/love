@@ -930,7 +930,7 @@ export function bible_glyph_chapter_jos07() {
           "of",
           "$proper_name$Zerah,",
           "the",
-          "silver,",
+          "$silver,",
           "the",
           "cloak,",
           "the",
