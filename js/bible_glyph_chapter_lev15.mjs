@@ -746,7 +746,7 @@ export function bible_glyph_chapter_lev15() {
           "her",
           "$blood",
           "for",
-          "many",
+          "$multiply",
           "$sun",
           "at",
           "a",
