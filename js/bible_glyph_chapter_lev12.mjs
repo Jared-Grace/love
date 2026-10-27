@@ -146,7 +146,7 @@ export function bible_glyph_chapter_lev12() {
           "must",
           "continue",
           "in",
-          "purification",
+          "$soap+sparkles",
           "from",
           "her",
           "$blood",
