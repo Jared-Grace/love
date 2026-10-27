@@ -23,7 +23,7 @@ export function bible_glyph_chapter_gen13() {
           "to",
           "the",
           "Negev,",
-          "he",
+          "$pointing_back",
           "and",
           "his",
           "$woman",
