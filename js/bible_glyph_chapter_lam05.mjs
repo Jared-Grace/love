@@ -256,7 +256,7 @@ export function bible_glyph_chapter_lam05() {
       {
         verse_number: 15,
         words: [
-          "Joy",
+          "$grinning_face+thing",
           "has",
           "left",
           "our",
