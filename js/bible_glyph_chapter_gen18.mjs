@@ -177,7 +177,7 @@ export function bible_glyph_chapter_gen18() {
           "into",
           "the",
           "$tent",
-          "to",
+          "$toward",
           "$proper_name$Sarah",
           "and",
           "$speech,",
