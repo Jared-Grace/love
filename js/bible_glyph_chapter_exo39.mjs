@@ -239,7 +239,7 @@ export function bible_glyph_chapter_exo39() {
         words: [
           "It",
           "was",
-          "square",
+          "$four+straight_ruler+describing",
           "and",
           "$hammer+doing",
           "folded",
