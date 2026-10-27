@@ -160,7 +160,7 @@ export function bible_glyph_chapter_lev21() {
           "$heart_on_fire.",
           "$pointing",
           "they",
-          "present",
+          "$magnet+doing",
           "the",
           "food",
           "offerings",
