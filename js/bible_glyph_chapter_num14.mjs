@@ -179,7 +179,7 @@ export function bible_glyph_chapter_num14() {
           "out",
           "the",
           "$earth,",
-          "tore",
+          "$t_shirt+scissors+doing",
           "their",
           "$garment",
         ],
