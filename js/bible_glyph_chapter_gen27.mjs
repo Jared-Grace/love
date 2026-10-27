@@ -1295,7 +1295,7 @@ export function bible_glyph_chapter_gen27() {
           "once",
           "and",
           "$dashing_away",
-          "to",
+          "$toward",
           "my",
           "$brother",
           "$proper_name$Laban",
