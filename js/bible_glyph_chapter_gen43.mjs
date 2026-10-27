@@ -652,7 +652,7 @@ export function bible_glyph_chapter_gen43() {
           "lodged",
           "for",
           "the",
-          "night,",
+          "$night+thing,",
           "we",
           "opened",
           "our",
