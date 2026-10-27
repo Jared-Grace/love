@@ -299,7 +299,7 @@ export function bible_glyph_chapter_deu32() {
           "its",
           "$hatching_chick,",
           "He",
-          "spread",
+          "$folding_hand_fan",
           "His",
           "wings",
           "to",
