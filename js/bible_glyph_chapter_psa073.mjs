@@ -410,7 +410,7 @@ export function bible_glyph_chapter_psa073() {
         verse_number: 23,
         words: [
           "Yet",
-          "I",
+          "$me",
           "am",
           "always",
           "with",
