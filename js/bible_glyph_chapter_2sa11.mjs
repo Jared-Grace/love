@@ -708,7 +708,7 @@ export function bible_glyph_chapter_2sa11() {
           "$skull+doing",
           "in",
           "$proper_name$Thebez?",
-          "Why",
+          "$flashlight+question",
           "did",
           "you",
           "get",
