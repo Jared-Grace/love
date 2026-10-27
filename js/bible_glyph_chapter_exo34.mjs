@@ -870,7 +870,7 @@ export function bible_glyph_chapter_exo34() {
           "$fishing_pole+proper_name,",
           "$writing_hand",
           "down",
-          "these",
+          "$flashlight+flashlight",
           "$speech,",
           "for",
           "in",
