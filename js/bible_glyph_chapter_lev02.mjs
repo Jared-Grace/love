@@ -57,7 +57,7 @@ export function bible_glyph_chapter_lev02() {
           "$fist+flour+doing",
           "$flour",
           "and",
-          "oil,",
+          "$lotion_bottle,",
           "together",
           "with",
           "all",
