@@ -181,7 +181,7 @@ export function bible_glyph_chapter_exo34() {
           "in",
           "front",
           "of",
-          "Moses",
+          "$face",
           "and",
           "called",
           "out,",
