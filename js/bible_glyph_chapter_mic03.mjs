@@ -275,7 +275,7 @@ export function bible_glyph_chapter_mic03() {
         words: [
           "$pleading",
           "$ear",
-          "this,",
+          "$flashlight,",
           "O",
           "leaders",
           "of",
