@@ -1136,7 +1136,7 @@ export function bible_glyph_chapter_gen27() {
           "his",
           "$voice",
           "and",
-          "wept.",
+          "$loudly_crying.",
         ],
       },
       {
