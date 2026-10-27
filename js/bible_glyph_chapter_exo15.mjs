@@ -450,7 +450,7 @@ export function bible_glyph_chapter_exo15() {
           "$mountain",
           "of",
           "Your",
-          "inheritance,",
+          "$inheritance,",
           "the",
           "place,",
           "O",
