@@ -383,7 +383,7 @@ export function bible_glyph_chapter_1ch29() {
           "$church.",
           "$speech+thumbs_up",
           "are",
-          "You,",
+          "$you,",
           "O",
           "$i_am,",
           "$heart_on_fire",
