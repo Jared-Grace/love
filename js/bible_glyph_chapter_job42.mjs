@@ -206,7 +206,7 @@ export function bible_glyph_chapter_job42() {
           "his",
           "prayer",
           "and",
-          "not",
+          "$zero+manner",
           "$hammer+doing",
           "with",
           "you",
