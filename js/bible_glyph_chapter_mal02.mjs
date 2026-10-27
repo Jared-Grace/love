@@ -187,7 +187,7 @@ export function bible_glyph_chapter_mal02() {
           "was",
           "in",
           "his",
-          "mouth,",
+          "$face_with_open_mouth,",
           "and",
           "$no_entry",
           "false",
