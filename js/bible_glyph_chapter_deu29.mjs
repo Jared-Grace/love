@@ -622,7 +622,7 @@ export function bible_glyph_chapter_deu29() {
           "The",
           "$i_am",
           "will",
-          "blot",
+          "$broom+doing",
           "out",
           "his",
           "$name_tag",
