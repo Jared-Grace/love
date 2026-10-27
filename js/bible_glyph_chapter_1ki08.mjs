@@ -1431,7 +1431,7 @@ export function bible_glyph_chapter_1ki08() {
           "$ear",
           "of",
           "Your",
-          "great",
+          "$top",
           "$name_tag",
           "and",
           "Your",
