@@ -985,7 +985,7 @@ export function bible_glyph_chapter_deu09() {
           "Because",
           "$i_am",
           "was",
-          "not",
+          "$zero+thing",
           "able",
           "to",
           "$footprints",
