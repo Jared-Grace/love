@@ -458,7 +458,7 @@ export function bible_glyph_chapter_exo36() {
           "of",
           "the",
           "$one+plus",
-          "curtains",
+          "$thread+tent",
           "was",
           "$three+zero",
           "$triangular_ruler",
