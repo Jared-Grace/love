@@ -492,7 +492,7 @@ export function bible_glyph_chapter_2ch07() {
           "and",
           "$hands_praying",
           "and",
-          "seek",
+          "$magnifying_glass",
           "My",
           "face",
           "and",
