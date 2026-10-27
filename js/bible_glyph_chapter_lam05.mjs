@@ -347,7 +347,7 @@ export function bible_glyph_chapter_lam05() {
           "You",
           "forgotten",
           "us",
-          "forever?",
+          "$clock+trophy?",
           "Why",
           "have",
           "You",
