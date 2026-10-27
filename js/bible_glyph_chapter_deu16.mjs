@@ -18,7 +18,7 @@ export function bible_glyph_chapter_deu16() {
           "the",
           "$new_moon",
           "of",
-          "Abib",
+          "$barley+sprout",
           "and",
           "$hammer+doing",
           "the",
