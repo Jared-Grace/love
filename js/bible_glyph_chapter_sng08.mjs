@@ -40,7 +40,7 @@ export function bible_glyph_chapter_sng08() {
           "and",
           "$no_entry",
           "would",
-          "despise",
+          "$eyes+thumbs_down+doing",
           "me.",
         ],
       },
