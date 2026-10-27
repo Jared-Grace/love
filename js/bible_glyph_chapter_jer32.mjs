@@ -1531,7 +1531,7 @@ export function bible_glyph_chapter_jer32() {
           "be",
           "purchased",
           "with",
-          "silver,",
+          "$silver,",
           "and",
           "deeds",
           "will",
