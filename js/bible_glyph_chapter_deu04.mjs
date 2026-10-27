@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_deu04() {
         verse_number: 28,
         words: [
           "And",
-          "there",
+          "$telescope",
           "you",
           "will",
           "$kneeling+doing",
