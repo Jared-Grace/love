@@ -1335,7 +1335,7 @@ export function bible_glyph_chapter_jer31() {
         words: [
           "The",
           "measuring",
-          "line",
+          "$thread+hand+straight_ruler",
           "will",
           "once",
           "$repeat",
