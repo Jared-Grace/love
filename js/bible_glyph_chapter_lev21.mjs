@@ -563,7 +563,7 @@ export function bible_glyph_chapter_lev21() {
           "$proper_name$Aaron",
           "the",
           "$priest",
-          "who",
+          "$back+flashlight",
           "has",
           "a",
           "defect",
