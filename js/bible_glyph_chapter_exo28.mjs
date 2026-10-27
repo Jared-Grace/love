@@ -496,7 +496,7 @@ export function bible_glyph_chapter_exo28() {
         words: [
           "in",
           "the",
-          "second",
+          "$second_place",
           "$straight_ruler+repeat",
           "a",
           "turquoise,",
