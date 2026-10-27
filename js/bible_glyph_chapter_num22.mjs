@@ -678,7 +678,7 @@ export function bible_glyph_chapter_num22() {
           "$nose+fire",
           "was",
           "kindled",
-          "because",
+          "$pointing",
           "Balaam",
           "was",
           "$walking",
