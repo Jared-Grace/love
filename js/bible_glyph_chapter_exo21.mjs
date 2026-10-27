@@ -229,7 +229,7 @@ export function bible_glyph_chapter_exo21() {
           "of",
           "her",
           "$crown",
-          "who",
+          "$back+flashlight",
           "had",
           "designated",
           "her",
