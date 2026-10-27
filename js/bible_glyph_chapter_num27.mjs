@@ -325,7 +325,7 @@ export function bible_glyph_chapter_num27() {
           "Then",
           "$i_am",
           "$speech",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name:",
           "$walking+pointing_up",
           "up",
