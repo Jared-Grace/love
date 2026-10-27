@@ -519,7 +519,7 @@ export function bible_glyph_chapter_jer07() {
         words: [
           "The",
           "$son",
-          "gather",
+          "$hand+sheaf_of_rice+doing",
           "$tree,",
           "the",
           "$father",
