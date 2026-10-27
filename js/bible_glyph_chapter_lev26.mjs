@@ -1144,7 +1144,7 @@ export function bible_glyph_chapter_lev26() {
           "you",
           "will",
           "$no_entry",
-          "be",
+          "$link",
           "able",
           "to",
           "stand",
