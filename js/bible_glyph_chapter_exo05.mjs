@@ -371,7 +371,7 @@ export function bible_glyph_chapter_exo05() {
           "$clamp+proper_name",
           "to",
           "gather",
-          "stubble",
+          "$fallen_leaf+wheat",
           "for",
           "straw.",
         ],
