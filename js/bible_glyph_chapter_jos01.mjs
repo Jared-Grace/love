@@ -294,7 +294,7 @@ export function bible_glyph_chapter_jos01() {
           "commanded",
           "you?",
           "Be",
-          "strong",
+          "$might+up_arrow",
           "and",
           "courageous!",
           "Do",
