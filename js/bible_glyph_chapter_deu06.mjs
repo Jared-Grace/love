@@ -683,7 +683,7 @@ export function bible_glyph_chapter_deu06() {
           "us",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "He",
           "had",
           "sworn",
