@@ -451,7 +451,7 @@ export function bible_glyph_chapter_exo18() {
           "for",
           "the",
           "$family?",
-          "Why",
+          "$flashlight+question+lightbulb",
           "do",
           "you",
           "$person+house",
