@@ -547,7 +547,7 @@ export function bible_glyph_chapter_lev21() {
           "$microbe+snow,",
           "or",
           "a",
-          "crushed",
+          "$egg+two+hammer",
           "testicle.",
         ],
       },
