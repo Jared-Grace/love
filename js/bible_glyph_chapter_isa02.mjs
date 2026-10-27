@@ -15,7 +15,7 @@ export function bible_glyph_chapter_isa02() {
         words: [
           "The",
           "$speech",
-          "that",
+          "$back+flashlight",
           "was",
           "revealed",
           "to",
