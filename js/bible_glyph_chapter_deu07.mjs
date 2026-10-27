@@ -210,7 +210,7 @@ export function bible_glyph_chapter_deu07() {
           "$family,",
           "His",
           "prized",
-          "possession",
+          "$heart_red+gem_stone",
           "out",
           "of",
           "all",
