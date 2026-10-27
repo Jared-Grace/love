@@ -709,7 +709,7 @@ export function bible_glyph_chapter_gen29() {
           "in",
           "return",
           "for",
-          "another",
+          "$plus+one",
           "$seven",
           "$year",
           "of",
