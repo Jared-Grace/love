@@ -913,7 +913,7 @@ export function bible_glyph_chapter_jer23() {
           "$megaphone",
           "who",
           "prophesy",
-          "falsehood,",
+          "$lying_face,",
           "these",
           "$megaphone",
           "of",
