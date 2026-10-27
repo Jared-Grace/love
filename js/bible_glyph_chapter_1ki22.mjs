@@ -1149,7 +1149,7 @@ export function bible_glyph_chapter_1ki22() {
           "$proper_name$Arameans.",
           "And",
           "that",
-          "evening",
+          "$sunset",
           "he",
           "$skull+doing,",
           "and",
