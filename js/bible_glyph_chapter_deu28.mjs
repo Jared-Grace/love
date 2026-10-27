@@ -373,7 +373,7 @@ export function bible_glyph_chapter_deu28() {
           "$unlocked",
           "His",
           "good",
-          "storehouse,",
+          "$gem_stone+house,",
           "the",
           "$sky,",
           "to",
