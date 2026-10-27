@@ -303,7 +303,7 @@ export function bible_glyph_chapter_lev16() {
           "$goat+man_beard",
           "$walking+pointing_up",
           "by",
-          "lot",
+          "$lots",
           "as",
           "the",
           "scapegoat",
