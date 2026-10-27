@@ -605,7 +605,7 @@ export function bible_glyph_chapter_zep01() {
           "$hammer+doing",
           "a",
           "sudden",
-          "end",
+          "$end_arrow+thing",
           "of",
           "all",
           "who",
