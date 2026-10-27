@@ -169,7 +169,7 @@ export function bible_glyph_chapter_isa12() {
           "$sparkle",
           "One",
           "of",
-          "Israel.",
+          "$wrestling+heart_on_fire.",
         ],
       },
     ],
