@@ -428,7 +428,7 @@ export function bible_glyph_chapter_num19() {
           "$person_other",
           "must",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "$wrestling+heart_on_fire,",
