@@ -113,7 +113,7 @@ export function bible_glyph_chapter_lev22() {
           "a",
           "skin",
           "disease",
-          "or",
+          "$shuffle",
           "a",
           "discharge,",
           "he",
