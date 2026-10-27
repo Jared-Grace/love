@@ -1628,7 +1628,7 @@ export function bible_glyph_chapter_deu28() {
           "high",
           "and",
           "fortified",
-          "walls",
+          "$brick+shield",
           "in",
           "which",
           "you",
