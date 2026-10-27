@@ -406,7 +406,7 @@ export function bible_glyph_chapter_num24() {
       {
         verse_number: 14,
         words: [
-          "Now",
+          "$watch",
           "I",
           "am",
           "$walking",
