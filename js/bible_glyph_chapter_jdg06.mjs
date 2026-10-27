@@ -835,7 +835,7 @@ export function bible_glyph_chapter_jdg06() {
           "a",
           "$second_place",
           "$bull",
-          "seven",
+          "$seven",
           "years",
           "old,",
           "and",
