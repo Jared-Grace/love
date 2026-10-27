@@ -123,7 +123,7 @@ export function bible_glyph_chapter_1sa02() {
           "are",
           "equipped",
           "with",
-          "strength.",
+          "$raised_fist.",
         ],
       },
       {
