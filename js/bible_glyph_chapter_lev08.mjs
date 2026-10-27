@@ -584,7 +584,7 @@ export function bible_glyph_chapter_lev08() {
           "$blood",
           "on",
           "their",
-          "right",
+          "$hand+right_arrow+describing",
           "$ear+end_arrow,",
           "on",
           "the",
