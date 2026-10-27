@@ -486,7 +486,7 @@ export function bible_glyph_chapter_lev03() {
           "$no_entry",
           "$eating",
           "any",
-          "fat",
+          "$bacon",
           "or",
           "any",
           "$blood.",
