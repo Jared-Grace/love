@@ -530,7 +530,7 @@ export function bible_glyph_chapter_lev05() {
       {
         verse_number: 17,
         words: [
-          "If",
+          "$traffic_light",
           "$person_other",
           "$bow+doing",
           "and",
