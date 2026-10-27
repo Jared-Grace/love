@@ -72,7 +72,7 @@ export function bible_glyph_chapter_isa09() {
           "a",
           "$top",
           "$light;",
-          "on",
+          "$pointing_up",
           "those",
           "living",
           "in",
