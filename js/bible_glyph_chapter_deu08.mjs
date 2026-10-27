@@ -559,7 +559,7 @@ export function bible_glyph_chapter_deu08() {
           "$lightning",
           "to",
           "$hammer+doing",
-          "wealth,",
+          "$raised_fist,",
           "in",
           "order",
           "to",
