@@ -134,7 +134,7 @@ export function bible_glyph_chapter_1sa17() {
           "$coin+thing",
           "$five",
           "$ten+all",
-          "shekels",
+          "$coin",
           "of",
           "$bronze.",
         ],
