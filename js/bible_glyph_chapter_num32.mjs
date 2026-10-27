@@ -417,7 +417,7 @@ export function bible_glyph_chapter_num32() {
           "$broom+away+doing",
           "the",
           "$angry_face+thing",
-          "anger",
+          "$nose+fire",
           "of",
           "$i_am",
           "against",
