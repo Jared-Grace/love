@@ -316,7 +316,7 @@ export function bible_glyph_chapter_jer07() {
         words: [
           "But",
           "$walking",
-          "now",
+          "$pleading",
           "to",
           "My",
           "$place",
