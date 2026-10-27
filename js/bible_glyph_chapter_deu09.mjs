@@ -621,7 +621,7 @@ export function bible_glyph_chapter_deu09() {
           "took",
           "the",
           "$two",
-          "tablets",
+          "$stone+writing_hand",
           "and",
           "threw",
           "them",
