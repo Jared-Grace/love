@@ -762,7 +762,7 @@ export function bible_glyph_chapter_lev07() {
           "$heart_organ+meat.",
           "$footprints",
           "the",
-          "breast",
+          "$heart_organ+meat",
           "and",
           "wave",
           "it",
