@@ -726,7 +726,7 @@ export function bible_glyph_chapter_lev22() {
           "it",
           "is",
           "$no_entry",
-          "acceptable",
+          "$smiling_face_with_smiling_eyes+doing",
           "in",
           "fulfilment",
           "of",
