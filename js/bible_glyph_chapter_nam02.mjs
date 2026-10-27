@@ -306,7 +306,7 @@ export function bible_glyph_chapter_nam02() {
           "their",
           "$lion+child,",
           "with",
-          "nothing",
+          "$dotted_line_face",
           "to",
           "frighten",
           "them",
