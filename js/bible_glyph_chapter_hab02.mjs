@@ -630,7 +630,7 @@ export function bible_glyph_chapter_hab02() {
           "in",
           "His",
           "$sparkle+thing",
-          "temple;",
+          "$classical_building;",
           "let",
           "all",
           "the",
