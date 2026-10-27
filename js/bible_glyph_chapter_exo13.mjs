@@ -97,7 +97,7 @@ export function bible_glyph_chapter_exo13() {
           "leaving,",
           "in",
           "the",
-          "month",
+          "$new_moon",
           "of",
           "Abib.",
         ],
