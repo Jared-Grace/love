@@ -409,7 +409,7 @@ export function bible_glyph_chapter_exo07() {
           "$water.",
           "$person+up_arrow",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "him",
           "on",
           "the",
