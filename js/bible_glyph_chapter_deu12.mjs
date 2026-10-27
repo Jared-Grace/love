@@ -247,7 +247,7 @@ export function bible_glyph_chapter_deu12() {
           "$me",
           "are",
           "$hammer+doing",
-          "here",
+          "$flashlight+round_pushpin",
           "$sun,",
           "where",
           "$man_beard",
