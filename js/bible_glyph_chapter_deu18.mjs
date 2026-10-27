@@ -21,7 +21,7 @@ export function bible_glyph_chapter_deu18() {
           "indeed",
           "the",
           "$all",
-          "tribe",
+          "$wood",
           "of",
           "$handshake+proper_name,",
           "shall",
