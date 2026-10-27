@@ -1051,7 +1051,7 @@ export function bible_glyph_chapter_exo39() {
         verse_number: 41,
         words: [
           "the",
-          "woven",
+          "$sewing_needle+dress",
           "$garment",
           "for",
           "ministering",
