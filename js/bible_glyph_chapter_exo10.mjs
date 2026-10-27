@@ -20,7 +20,7 @@ export function bible_glyph_chapter_exo10() {
           "$toward",
           "$fishing_pole+proper_name,",
           "$footprints",
-          "to",
+          "$toward",
           "$house+proper_name,",
           "for",
           "I",
