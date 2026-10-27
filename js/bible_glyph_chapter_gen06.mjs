@@ -264,7 +264,7 @@ export function bible_glyph_chapter_gen06() {
           "$full_moon+describing",
           "in",
           "his",
-          "generation,",
+          "$dna,",
           "and",
           "$proper_name$Noah",
           "$walking",
