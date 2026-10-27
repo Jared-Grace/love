@@ -1332,7 +1332,7 @@ export function bible_glyph_chapter_1ki18() {
           "$toward",
           "the",
           "$proper_name$Kishon",
-          "Valley",
+          "$national_park",
           "and",
           "slaughtered",
           "them",
