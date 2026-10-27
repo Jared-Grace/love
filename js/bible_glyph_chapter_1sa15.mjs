@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_1sa15() {
           "$walking",
           "to",
           "him",
-          "cheerfully,",
+          "$chains+star,",
           "for",
           "he",
           "$speech,",
