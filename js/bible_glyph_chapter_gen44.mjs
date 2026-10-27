@@ -485,7 +485,7 @@ export function bible_glyph_chapter_gen44() {
           "me",
           "to",
           "$hammer+doing",
-          "this.",
+          "$flashlight.",
           "The",
           "$man_beard",
           "in",
