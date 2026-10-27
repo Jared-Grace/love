@@ -223,7 +223,7 @@ export function bible_glyph_chapter_2ki04() {
           "$walking,",
           "$coin+hands_giving",
           "the",
-          "oil",
+          "$lotion_bottle",
           "and",
           "pay",
           "your",
