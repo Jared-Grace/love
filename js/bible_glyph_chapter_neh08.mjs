@@ -104,7 +104,7 @@ export function bible_glyph_chapter_neh08() {
           "$gate,",
           "$tray_out",
           "$light",
-          "until",
+          "$finish",
           "noon,",
           "in",
           "front",
