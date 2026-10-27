@@ -248,7 +248,7 @@ export function bible_glyph_chapter_deu32() {
           "$hand+foot",
           "His",
           "allotted",
-          "inheritance.",
+          "$inheritance.",
         ],
       },
       {
