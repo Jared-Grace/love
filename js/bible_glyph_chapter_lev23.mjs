@@ -815,7 +815,7 @@ export function bible_glyph_chapter_lev23() {
           "any",
           "$tools",
           "on",
-          "this",
+          "$flashlight",
           "$sun,",
           "for",
           "it",
