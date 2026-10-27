@@ -489,7 +489,7 @@ export function bible_glyph_chapter_lev15() {
           "must",
           "$bathtub+doing",
           "his",
-          "whole",
+          "$all",
           "$meat",
           "with",
           "$water,",
