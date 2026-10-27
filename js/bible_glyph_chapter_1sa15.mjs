@@ -655,7 +655,7 @@ export function bible_glyph_chapter_1sa15() {
           "on",
           "the",
           "$road",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "gave",
