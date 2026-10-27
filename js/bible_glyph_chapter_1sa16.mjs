@@ -67,7 +67,7 @@ export function bible_glyph_chapter_1sa16() {
           "But",
           "$ear+heart_on_fire",
           "$speech,",
-          "How",
+          "$question+likeness",
           "can",
           "I",
           "$walking?",
