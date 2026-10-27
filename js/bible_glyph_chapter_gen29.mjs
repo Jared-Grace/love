@@ -52,7 +52,7 @@ export function bible_glyph_chapter_gen29() {
           "lying",
           "near",
           "it,",
-          "because",
+          "$pointing",
           "the",
           "flocks",
           "were",
