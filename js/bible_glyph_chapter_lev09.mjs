@@ -379,7 +379,7 @@ export function bible_glyph_chapter_lev09() {
           "$bow+doing",
           "like",
           "the",
-          "first",
+          "$first_place",
           "one.",
         ],
       },
