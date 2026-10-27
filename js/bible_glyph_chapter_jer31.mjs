@@ -213,7 +213,7 @@ export function bible_glyph_chapter_jer31() {
           "$speech,",
           "O",
           "$i_am,",
-          "save",
+          "$rescue",
           "Your",
           "$family,",
           "the",
