@@ -105,7 +105,7 @@ export function bible_glyph_chapter_1sa17() {
           "He",
           "was",
           "$six",
-          "cubits",
+          "$triangular_ruler",
           "and",
           "a",
           "span",
