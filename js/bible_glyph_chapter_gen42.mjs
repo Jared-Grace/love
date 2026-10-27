@@ -956,7 +956,7 @@ export function bible_glyph_chapter_gen42() {
           "to",
           "relieve",
           "the",
-          "hunger",
+          "$famine+thing",
           "of",
           "your",
           "$house,",
