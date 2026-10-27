@@ -21,7 +21,7 @@ export function bible_glyph_chapter_1ki20() {
           "$king",
           "of",
           "$proper_name$Aram",
-          "assembled",
+          "$tray_in+doing",
           "his",
           "entire",
           "army.",
