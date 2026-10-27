@@ -753,7 +753,7 @@ export function bible_glyph_chapter_jos02() {
           "$turn_back,",
           "having",
           "searched",
-          "all",
+          "$all",
           "along",
           "the",
           "$road",
