@@ -323,7 +323,7 @@ export function bible_glyph_chapter_mic03() {
           "judge",
           "for",
           "a",
-          "bribe,",
+          "$money_bag+hand_sending,",
           "her",
           "$priest",
           "teach",
