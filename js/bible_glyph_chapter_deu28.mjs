@@ -17,7 +17,7 @@ export function bible_glyph_chapter_deu28() {
       {
         verse_number: 1,
         words: [
-          "Now",
+          "$link",
           "if",
           "you",
           "will",
