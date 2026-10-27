@@ -613,7 +613,7 @@ export function bible_glyph_chapter_exo28() {
           "to",
           "the",
           "two",
-          "corners",
+          "$end_arrow+triangular_ruler",
           "of",
           "the",
           "breastpiece.",
