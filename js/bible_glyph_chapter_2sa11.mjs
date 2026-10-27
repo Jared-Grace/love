@@ -289,7 +289,7 @@ export function bible_glyph_chapter_2sa11() {
           "of",
           "the",
           "$king",
-          "with",
+          "$safety_pin",
           "all",
           "the",
           "$kneeling",
