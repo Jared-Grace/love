@@ -614,7 +614,7 @@ export function bible_glyph_chapter_ezk11() {
           "will",
           "$hands_giving",
           "them",
-          "singleness",
+          "$one",
           "of",
           "$heart_organ",
           "and",
