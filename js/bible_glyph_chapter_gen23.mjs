@@ -14,7 +14,7 @@ export function bible_glyph_chapter_gen23() {
       {
         verse_number: 1,
         words: [
-          "Now",
+          "$link",
           "the",
           "$sprout",
           "of",
