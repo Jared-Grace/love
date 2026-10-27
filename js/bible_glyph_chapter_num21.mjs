@@ -516,7 +516,7 @@ export function bible_glyph_chapter_num21() {
           "well",
           "the",
           "princes",
-          "dug,",
+          "$pick+magnifying_glass+doing,",
           "that",
           "the",
           "nobles",
