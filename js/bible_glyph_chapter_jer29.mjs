@@ -540,7 +540,7 @@ export function bible_glyph_chapter_jer29() {
           "$hand_sending",
           "$sword",
           "and",
-          "famine",
+          "$famine",
           "and",
           "plague",
           "against",
