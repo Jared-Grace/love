@@ -151,7 +151,7 @@ export function bible_glyph_chapter_deu06() {
           "the",
           "$i_am",
           "is",
-          "One.",
+          "$one.",
         ],
       },
       {
