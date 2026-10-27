@@ -494,7 +494,7 @@ export function bible_glyph_chapter_2ch07() {
           "and",
           "$magnifying_glass",
           "My",
-          "face",
+          "$face",
           "and",
           "$turn_back",
           "from",
