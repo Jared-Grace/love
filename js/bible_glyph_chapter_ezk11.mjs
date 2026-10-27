@@ -436,7 +436,7 @@ export function bible_glyph_chapter_ezk11() {
           "$speech",
           "of",
           "$i_am",
-          "came",
+          "$link",
           "to",
           "me,",
           "$speech,",
