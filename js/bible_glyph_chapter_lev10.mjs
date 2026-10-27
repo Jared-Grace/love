@@ -392,7 +392,7 @@ export function bible_glyph_chapter_lev10() {
         words: [
           "And",
           "the",
-          "breast",
+          "$heart_organ+meat",
           "of",
           "the",
           "wave",
