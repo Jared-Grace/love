@@ -74,7 +74,7 @@ export function bible_glyph_chapter_num13() {
           "$wilderness",
           "of",
           "$proper_name$Paran.",
-          "All",
+          "$all",
           "the",
           "men",
           "were",
