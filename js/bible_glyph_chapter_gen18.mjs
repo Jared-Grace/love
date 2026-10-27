@@ -357,7 +357,7 @@ export function bible_glyph_chapter_gen18() {
           "to",
           "herself,",
           "$speech,",
-          "After",
+          "$next_track",
           "I",
           "am",
           "worn",
