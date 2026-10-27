@@ -901,7 +901,7 @@ export function bible_glyph_chapter_1ki20() {
           "$proper_name$Aphek",
           "to",
           "fight",
-          "against",
+          "$linked_paperclips",
           "$wrestling+heart_on_fire.",
         ],
       },
