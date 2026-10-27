@@ -336,7 +336,7 @@ export function bible_glyph_chapter_psa051() {
           "my",
           "$face_with_open_mouth",
           "will",
-          "declare",
+          "$newspaper",
           "Your",
           "praise.",
         ],
