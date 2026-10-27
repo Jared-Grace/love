@@ -53,7 +53,7 @@ export function bible_glyph_chapter_exo29() {
           "with",
           "$flatbread",
           "$bread,",
-          "unleavened",
+          "$flatbread",
           "cakes",
           "mixed",
           "with",
