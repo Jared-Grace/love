@@ -149,7 +149,7 @@ export function bible_glyph_chapter_num11() {
           "the",
           "$herb+thing,",
           "the",
-          "onions",
+          "$herb+white_circle",
           "and",
           "the",
           "garlic.",
