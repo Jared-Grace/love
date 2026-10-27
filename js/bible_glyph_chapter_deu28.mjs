@@ -520,7 +520,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "$sun,",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$balloon+speech",
           "will",
           "$footprints",
