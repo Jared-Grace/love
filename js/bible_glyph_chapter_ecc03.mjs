@@ -516,7 +516,7 @@ export function bible_glyph_chapter_ecc03() {
         words: [
           "All",
           "$walking",
-          "to",
+          "$toward",
           "one",
           "$place;",
           "all",
