@@ -645,7 +645,7 @@ export function bible_glyph_chapter_1ki20() {
           "marched",
           "out",
           "for",
-          "war,",
+          "$crossed_swords,",
           "take",
           "them",
           "$sprout.",
