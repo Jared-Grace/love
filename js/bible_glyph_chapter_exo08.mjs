@@ -846,7 +846,7 @@ export function bible_glyph_chapter_exo08() {
           "$heart_on_fire",
           "would",
           "be",
-          "detestable",
+          "$vomiting",
           "to",
           "the",
           "$clamp+proper_name.",
