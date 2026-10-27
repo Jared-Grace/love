@@ -609,7 +609,7 @@ export function bible_glyph_chapter_num08() {
           "$garment,",
           "and",
           "$proper_name$Aaron",
-          "presented",
+          "$hand+up_down_arrow+doing",
           "them",
           "as",
           "a",
