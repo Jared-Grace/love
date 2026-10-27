@@ -967,7 +967,7 @@ export function bible_glyph_chapter_2ki17() {
           "live",
           "there",
           "and",
-          "teach",
+          "$bow+toward",
           "the",
           "$scales+thing",
           "of",
