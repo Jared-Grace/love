@@ -223,7 +223,7 @@ export function bible_glyph_chapter_lev10() {
           "$skull+doing,",
           "$pointing",
           "the",
-          "anointing",
+          "$oil+thing",
           "$lotion_bottle",
           "of",
           "$i_am",
