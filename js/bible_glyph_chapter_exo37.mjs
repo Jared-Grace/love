@@ -282,7 +282,7 @@ export function bible_glyph_chapter_exo37() {
           "a",
           "$gold",
           "$crown+around",
-          "around",
+          "$around",
           "it.",
         ],
       },
