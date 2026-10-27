@@ -692,7 +692,7 @@ export function bible_glyph_chapter_1ch29() {
           "$peace+describing",
           "$heart_organ",
           "to",
-          "keep",
+          "$guard",
           "Your",
           "$scroll,",
           "Your",
