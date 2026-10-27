@@ -38,7 +38,7 @@ export function bible_glyph_chapter_1sa16() {
           "your",
           "$horn",
           "with",
-          "oil",
+          "$lotion_bottle",
           "and",
           "$walking.",
           "I",
