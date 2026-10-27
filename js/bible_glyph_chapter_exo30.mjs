@@ -645,7 +645,7 @@ export function bible_glyph_chapter_exo30() {
         words: [
           "five",
           "hundred",
-          "shekels",
+          "$five",
           "of",
           "$herb+wood,",
           "all",
