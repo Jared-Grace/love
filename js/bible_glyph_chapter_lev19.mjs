@@ -739,7 +739,7 @@ export function bible_glyph_chapter_lev19() {
           "practise",
           "divination",
           "$no_entry",
-          "sorcery.",
+          "$cloud+doing.",
         ],
       },
       {
