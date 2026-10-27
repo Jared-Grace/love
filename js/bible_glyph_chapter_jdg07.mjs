@@ -247,7 +247,7 @@ export function bible_glyph_chapter_jdg07() {
           "of",
           "the",
           "$family",
-          "knelt",
+          "$leg+down_arrow+doing",
           "down",
           "to",
           "drink.",
