@@ -180,7 +180,7 @@ export function bible_glyph_chapter_deu15() {
           "will",
           "rule",
           "over",
-          "many",
+          "$multiply",
           "$map",
           "but",
           "be",
