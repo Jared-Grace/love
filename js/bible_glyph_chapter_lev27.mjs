@@ -764,7 +764,7 @@ export function bible_glyph_chapter_lev27() {
       {
         verse_number: 25,
         words: [
-          "Every",
+          "$all",
           "valuation",
           "will",
           "be",
