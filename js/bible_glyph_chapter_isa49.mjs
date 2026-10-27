@@ -107,7 +107,7 @@ export function bible_glyph_chapter_isa49() {
           "have",
           "labored",
           "in",
-          "vain,",
+          "$tray_out+droplet+thing,",
           "I",
           "have",
           "spent",
