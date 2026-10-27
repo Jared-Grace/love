@@ -289,7 +289,7 @@ export function bible_glyph_chapter_zep01() {
           "all",
           "who",
           "leap",
-          "over",
+          "$pointing_up",
           "the",
           "threshold,",
           "who",
