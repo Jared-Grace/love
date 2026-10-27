@@ -52,7 +52,7 @@ export function bible_glyph_chapter_mal01() {
           "$proper_name$Esau",
           "$hand+foot",
           "$brother?",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
           "Yet",
