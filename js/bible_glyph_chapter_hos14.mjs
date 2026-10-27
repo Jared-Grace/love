@@ -250,7 +250,7 @@ export function bible_glyph_chapter_hos14() {
           "let",
           "him",
           "understand",
-          "these",
+          "$flashlight+flashlight",
           "things;",
           "whoever",
           "is",
