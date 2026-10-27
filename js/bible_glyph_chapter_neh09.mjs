@@ -245,7 +245,7 @@ export function bible_glyph_chapter_neh09() {
           "the",
           "$i_am",
           "$heart_on_fire",
-          "who",
+          "$back+flashlight",
           "chose",
           "$proper_name$Abram",
           "and",
