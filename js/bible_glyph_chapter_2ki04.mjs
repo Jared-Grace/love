@@ -624,7 +624,7 @@ export function bible_glyph_chapter_2ki04() {
           "her",
           "lap",
           "$finish",
-          "noon,",
+          "$sun+top,",
           "and",
           "then",
           "he",
