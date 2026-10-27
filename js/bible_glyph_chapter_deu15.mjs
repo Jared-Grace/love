@@ -238,7 +238,7 @@ export function bible_glyph_chapter_deu15() {
       {
         verse_number: 8,
         words: [
-          "Instead,",
+          "$pointing,",
           "you",
           "are",
           "to",
