@@ -929,7 +929,7 @@ export function bible_glyph_chapter_num22() {
           "$watch,",
           "I",
           "would",
-          "kill",
+          "$fist+skull",
           "you.",
         ],
       },
