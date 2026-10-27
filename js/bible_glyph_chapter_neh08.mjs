@@ -421,7 +421,7 @@ export function bible_glyph_chapter_neh08() {
           "the",
           "$handshake",
           "$mouth+locked",
-          "all",
+          "$all",
           "the",
           "$family,",
           "$speech,",
