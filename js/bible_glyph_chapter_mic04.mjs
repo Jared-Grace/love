@@ -151,7 +151,7 @@ export function bible_glyph_chapter_mic04() {
           "up",
           "the",
           "$sword",
-          "against",
+          "$toward",
           "$map,",
           "$no_entry",
           "will",
