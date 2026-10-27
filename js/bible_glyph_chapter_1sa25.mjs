@@ -1055,7 +1055,7 @@ export function bible_glyph_chapter_1sa25() {
           "for",
           "my",
           "$crown",
-          "all",
+          "$all",
           "the",
           "$thumbs_up",
           "He",
