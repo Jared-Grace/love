@@ -1249,7 +1249,7 @@ export function bible_glyph_chapter_jer32() {
       {
         verse_number: 36,
         words: [
-          "Now",
+          "$watch",
           "therefore,",
           "this",
           "is",
