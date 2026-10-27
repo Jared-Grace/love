@@ -224,7 +224,7 @@ export function bible_glyph_chapter_gen27() {
           "exactly",
           "as",
           "$me",
-          "tell",
+          "$speech+scroll",
           "you.",
         ],
       },
