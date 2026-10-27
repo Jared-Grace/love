@@ -185,7 +185,7 @@ export function bible_glyph_chapter_num25() {
           "of",
           "$wrestling+heart_on_fire,",
           "while",
-          "they",
+          "$pointing_back",
           "were",
           "weeping",
           "at",
