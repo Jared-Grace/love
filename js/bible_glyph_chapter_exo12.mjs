@@ -564,7 +564,7 @@ export function bible_glyph_chapter_exo12() {
           "$clamp+proper_name.",
           "You",
           "must",
-          "keep",
+          "$guard",
           "this",
           "$sun",
           "as",
