@@ -550,7 +550,7 @@ export function bible_glyph_chapter_2ki06() {
           "of",
           "$fire",
           "all",
-          "around",
+          "$around",
           "$heart_on_fire+rescue.",
         ],
       },
