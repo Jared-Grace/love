@@ -961,7 +961,7 @@ export function bible_glyph_chapter_deu28() {
           "it.",
           "You",
           "will",
-          "plant",
+          "$sprout+down_arrow+doing",
           "a",
           "$vineyard,",
           "but",
