@@ -443,7 +443,7 @@ export function bible_glyph_chapter_jer07() {
           "just",
           "as",
           "I",
-          "cast",
+          "$throwing",
           "out",
           "all",
           "your",
