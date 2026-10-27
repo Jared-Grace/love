@@ -519,7 +519,7 @@ export function bible_glyph_chapter_1sa24() {
           "$i_am",
           "$link",
           "our",
-          "judge",
+          "$scales+speech+doer",
           "and",
           "decide",
           "between",
