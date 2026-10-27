@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_exo08() {
           "$star+doing",
           "his",
           "$heart_organ",
-          "this",
+          "$flashlight",
           "$drum",
           "as",
           "well,",
