@@ -45,7 +45,7 @@ export function bible_glyph_chapter_deu07() {
           "$proper_name$Hivites",
           "and",
           "$proper_name$Jebusites,",
-          "seven",
+          "$seven",
           "$map",
           "larger",
           "and",
