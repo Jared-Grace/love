@@ -450,7 +450,7 @@ export function bible_glyph_chapter_2ki09() {
           "his",
           "$garment",
           "and",
-          "put",
+          "$palm_down",
           "it",
           "under",
           "$proper_name$Jehu",
