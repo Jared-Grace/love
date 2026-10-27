@@ -600,7 +600,7 @@ export function bible_glyph_chapter_lev08() {
           "toes",
           "of",
           "their",
-          "right",
+          "$hand+right_arrow+describing",
           "$foot.",
           "Then",
           "$fishing_pole+proper_name",
