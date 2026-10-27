@@ -132,7 +132,7 @@ export function bible_glyph_chapter_2ki03() {
           "wool",
           "of",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "thousand",
           "$ram.",
         ],
