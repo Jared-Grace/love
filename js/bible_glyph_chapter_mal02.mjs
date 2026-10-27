@@ -569,7 +569,7 @@ export function bible_glyph_chapter_mal02() {
           "his",
           "garment",
           "with",
-          "violence,",
+          "$boxing_glove,",
           "$speech",
           "the",
           "$i_am",
