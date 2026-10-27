@@ -58,7 +58,7 @@ export function bible_glyph_chapter_deu09() {
           "of",
           "the",
           "$proper_name$Anakim.",
-          "You",
+          "$you",
           "$lightbulb",
           "about",
           "them,",
