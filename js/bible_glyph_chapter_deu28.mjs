@@ -2231,7 +2231,7 @@ export function bible_glyph_chapter_deu28() {
           "would",
           "$no_entry",
           "$eye",
-          "again.",
+          "$plus+doing.",
           "There",
           "you",
           "will",
