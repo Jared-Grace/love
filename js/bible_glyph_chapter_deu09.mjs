@@ -375,7 +375,7 @@ export function bible_glyph_chapter_deu09() {
           "the",
           "$two",
           "$stone",
-          "tablets,",
+          "$stone+writing_hand,",
           "inscribed",
           "by",
           "the",
