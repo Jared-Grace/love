@@ -337,7 +337,7 @@ export function bible_glyph_chapter_lev02() {
           "you",
           "shall",
           "season",
-          "each",
+          "$all",
           "of",
           "your",
           "$grain_offering",
