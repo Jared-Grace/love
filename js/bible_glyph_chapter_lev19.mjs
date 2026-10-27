@@ -707,7 +707,7 @@ export function bible_glyph_chapter_lev19() {
           "and",
           "thus",
           "your",
-          "harvest",
+          "$fruit+basket",
           "will",
           "be",
           "increased.",
