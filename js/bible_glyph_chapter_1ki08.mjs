@@ -2274,7 +2274,7 @@ export function bible_glyph_chapter_1ki08() {
           "$church",
           "from",
           "$proper_name$Lebo-hamath",
-          "to",
+          "$finish",
           "the",
           "Brook",
           "of",
