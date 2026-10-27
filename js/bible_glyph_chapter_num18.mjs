@@ -476,7 +476,7 @@ export function bible_glyph_chapter_num18() {
           "$wheat+barley,",
           "the",
           "firstfruits",
-          "that",
+          "$back+flashlight",
           "they",
           "$hands_giving",
           "to",
