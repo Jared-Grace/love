@@ -271,7 +271,7 @@ export function bible_glyph_chapter_zep02() {
           "as",
           "$me",
           "$sprout,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am",
           "of",
