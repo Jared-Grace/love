@@ -520,7 +520,7 @@ export function bible_glyph_chapter_ecc03() {
           "$one",
           "$place;",
           "all",
-          "come",
+          "$link",
           "$tray_out",
           "dust,",
           "and",
