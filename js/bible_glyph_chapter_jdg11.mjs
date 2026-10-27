@@ -937,7 +937,7 @@ export function bible_glyph_chapter_jdg11() {
           "the",
           "$i_am",
           "$link",
-          "upon",
+          "$pointing_up",
           "$unlocked+proper_name,",
           "and",
           "he",
