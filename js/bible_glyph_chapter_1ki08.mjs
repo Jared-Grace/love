@@ -116,7 +116,7 @@ export function bible_glyph_chapter_1ki08() {
           "brought",
           "up",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$i_am",
