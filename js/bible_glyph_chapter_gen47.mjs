@@ -212,7 +212,7 @@ export function bible_glyph_chapter_gen47() {
           "men",
           "among",
           "them,",
-          "put",
+          "$palm_down",
           "them",
           "in",
           "charge",
