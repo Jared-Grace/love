@@ -440,7 +440,7 @@ export function bible_glyph_chapter_mic04() {
         verse_number: 12,
         words: [
           "But",
-          "they",
+          "$pointing_back",
           "do",
           "$no_entry",
           "$lightbulb",
