@@ -642,7 +642,7 @@ export function bible_glyph_chapter_deu28() {
           "destroyed",
           "and",
           "quickly",
-          "perish",
+          "$wilted_flower",
           "because",
           "of",
           "the",
