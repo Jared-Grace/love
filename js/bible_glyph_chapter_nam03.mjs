@@ -545,7 +545,7 @@ export function bible_glyph_chapter_nam03() {
           "who",
           "has",
           "$no_entry",
-          "experienced",
+          "$bridge",
           "your",
           "constant",
           "$thumbs_down?",
