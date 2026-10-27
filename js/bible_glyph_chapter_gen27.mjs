@@ -1324,7 +1324,7 @@ export function bible_glyph_chapter_gen27() {
       {
         verse_number: 45,
         words: [
-          "until",
+          "$finish",
           "the",
           "rage",
           "of",
