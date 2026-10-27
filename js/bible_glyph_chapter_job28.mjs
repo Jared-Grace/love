@@ -454,7 +454,7 @@ export function bible_glyph_chapter_job28() {
         words: [
           "$pointing",
           "$pointing_back",
-          "looks",
+          "$face_with_monocle",
           "to",
           "the",
           "ends",
