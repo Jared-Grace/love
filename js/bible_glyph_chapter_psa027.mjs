@@ -382,7 +382,7 @@ export function bible_glyph_chapter_psa027() {
           "strong",
           "and",
           "courageous.",
-          "Wait",
+          "$crossed_fingers+doing",
           "patiently",
           "for",
           "the",
