@@ -370,7 +370,7 @@ export function bible_glyph_chapter_deu14() {
           "of",
           "$bird+angry_face,",
           "the",
-          "hoopoe,",
+          "$bird+crown,",
           "or",
           "the",
           "bat.",
