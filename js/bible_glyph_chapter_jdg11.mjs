@@ -670,7 +670,7 @@ export function bible_glyph_chapter_jdg11() {
           "$proper_name$Jahaz,",
           "and",
           "fought",
-          "with",
+          "$linked_paperclips",
           "$wrestling+heart_on_fire.",
         ],
       },
