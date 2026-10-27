@@ -1119,7 +1119,7 @@ export function bible_glyph_chapter_exo16() {
           "settle.",
           "They",
           "ate",
-          "manna",
+          "$flashlight+question+thing",
           "until",
           "they",
           "$footprints",
