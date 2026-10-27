@@ -478,7 +478,7 @@ export function bible_glyph_chapter_exo35() {
           "and",
           "$back+flashlight",
           "$wind",
-          "prompted",
+          "$heart_hands+doing",
           "him",
           "$footprints",
           "and",
