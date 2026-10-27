@@ -659,7 +659,7 @@ export function bible_glyph_chapter_gen09() {
         words: [
           "When",
           "Noah",
-          "awoke",
+          "$sleeping_face+up_arrow+doing",
           "from",
           "his",
           "drunkenness",
