@@ -1181,7 +1181,7 @@ export function bible_glyph_chapter_gen41() {
           "He",
           "had",
           "Joseph",
-          "ride",
+          "$horse_racing+doing",
           "in",
           "his",
           "second",
