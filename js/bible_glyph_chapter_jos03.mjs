@@ -505,7 +505,7 @@ export function bible_glyph_chapter_jos03() {
           "flowing",
           "$water",
           "stood",
-          "still.",
+          "$person+round_pushpin.",
           "It",
           "backed",
           "up",
