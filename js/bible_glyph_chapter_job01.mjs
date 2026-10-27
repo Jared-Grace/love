@@ -639,7 +639,7 @@ export function bible_glyph_chapter_job01() {
           "came",
           "from",
           "the",
-          "womb",
+          "$baby+house",
           "of",
           "my",
           "$mother,",
