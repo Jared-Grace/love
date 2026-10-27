@@ -171,7 +171,7 @@ export function bible_glyph_chapter_isa40() {
           "$meat",
           "is",
           "like",
-          "grass,",
+          "$herb+thing,",
           "and",
           "all",
           "its",
