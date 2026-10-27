@@ -1390,7 +1390,7 @@ export function bible_glyph_chapter_1sa20() {
           "and",
           "$bowing",
           "$three",
-          "times.",
+          "$drum.",
           "Then",
           "they",
           "kissed",
