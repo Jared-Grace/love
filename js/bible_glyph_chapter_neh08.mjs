@@ -655,7 +655,7 @@ export function bible_glyph_chapter_neh08() {
           "$son",
           "of",
           "$proper_name$Nun",
-          "until",
+          "$finish",
           "that",
           "$sun,",
           "the",
