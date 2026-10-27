@@ -1235,7 +1235,7 @@ export function bible_glyph_chapter_1ki20() {
           "up",
           "into",
           "his",
-          "chariot.",
+          "$chariot.",
         ],
       },
       {
