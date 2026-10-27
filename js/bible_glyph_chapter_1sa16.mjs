@@ -681,7 +681,7 @@ export function bible_glyph_chapter_1sa16() {
           "When",
           "David",
           "$footprints",
-          "to",
+          "$toward",
           "$proper_name$Saul",
           "and",
           "entered",
