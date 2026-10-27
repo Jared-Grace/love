@@ -351,7 +351,7 @@ export function bible_glyph_chapter_lev16() {
           "he",
           "is",
           "to",
-          "slaughter",
+          "$kitchen_knife+doing",
           "the",
           "$bull",
           "for",
