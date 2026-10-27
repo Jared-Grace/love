@@ -271,7 +271,7 @@ export function bible_glyph_chapter_jer29() {
           "do",
           "$no_entry",
           "$ear",
-          "to",
+          "$toward",
           "the",
           "dreams",
           "you",
