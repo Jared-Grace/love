@@ -805,7 +805,7 @@ export function bible_glyph_chapter_jdg07() {
           "And",
           "when",
           "the",
-          "three",
+          "$three",
           "hundred",
           "rams",
           "horns",
