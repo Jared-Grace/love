@@ -237,7 +237,7 @@ export function bible_glyph_chapter_isa02() {
           "is",
           "$battery",
           "of",
-          "silver",
+          "$silver",
           "and",
           "gold,",
           "with",
