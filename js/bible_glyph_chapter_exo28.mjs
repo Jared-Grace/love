@@ -186,7 +186,7 @@ export function bible_glyph_chapter_exo28() {
           "$gold",
           "and",
           "with",
-          "blue,",
+          "$blue_circle,",
           "purple",
           "and",
           "scarlet",
