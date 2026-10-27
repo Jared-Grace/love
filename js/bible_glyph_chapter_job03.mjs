@@ -218,7 +218,7 @@ export function bible_glyph_chapter_job03() {
           "doors",
           "of",
           "the",
-          "womb",
+          "$baby+house",
           "to",
           "hide",
           "the",
