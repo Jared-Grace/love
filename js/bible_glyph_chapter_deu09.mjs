@@ -249,7 +249,7 @@ export function bible_glyph_chapter_deu09() {
           "is",
           "$hands_giving",
           "you",
-          "this",
+          "$flashlight",
           "$thumbs_up",
           "$earth",
           "to",
