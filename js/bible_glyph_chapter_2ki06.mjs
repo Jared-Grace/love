@@ -493,7 +493,7 @@ export function bible_glyph_chapter_2ki06() {
           "$fear+doing,",
           "Elisha",
           "$speech,",
-          "for",
+          "$pointing",
           "those",
           "who",
           "are",
