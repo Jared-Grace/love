@@ -323,7 +323,7 @@ export function bible_glyph_chapter_2ki04() {
           "a",
           "$bed,",
           "a",
-          "table,",
+          "$hand_sending+thing,",
           "a",
           "chair",
           "and",
