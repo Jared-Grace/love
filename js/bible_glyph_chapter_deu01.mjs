@@ -835,7 +835,7 @@ export function bible_glyph_chapter_deu01() {
       {
         verse_number: 28,
         words: [
-          "Where",
+          "$question+right_arrow",
           "can",
           "we",
           "$walking+pointing_up?",
