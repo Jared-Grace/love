@@ -1129,7 +1129,7 @@ export function bible_glyph_chapter_1sa02() {
           "your",
           "heart",
           "to",
-          "grieve.",
+          "$weary_face+heart_red+doing.",
           "All",
           "your",
           "descendants",
