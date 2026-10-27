@@ -28,7 +28,7 @@ export function bible_glyph_chapter_jdg07() {
           "with",
           "him",
           "$camp+doing",
-          "beside",
+          "$pointing_up",
           "the",
           "spring",
           "of",
