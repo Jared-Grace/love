@@ -751,7 +751,7 @@ export function bible_glyph_chapter_num11() {
           "$hand",
           "too",
           "short?",
-          "Now",
+          "$watch",
           "you",
           "will",
           "$eye",
