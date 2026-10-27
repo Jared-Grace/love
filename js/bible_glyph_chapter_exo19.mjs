@@ -752,7 +752,7 @@ export function bible_glyph_chapter_exo19() {
           "$i_am",
           "$speech,",
           "$walking",
-          "down",
+          "$walking+pointing_down",
           "and",
           "bring",
           "$proper_name$Aaron",
