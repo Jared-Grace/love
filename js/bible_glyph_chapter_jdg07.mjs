@@ -673,7 +673,7 @@ export function bible_glyph_chapter_jdg07() {
           "then",
           "you",
           "also",
-          "blow",
+          "$trumpet+doing",
           "your",
           "horns",
           "from",
