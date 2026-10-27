@@ -712,7 +712,7 @@ export function bible_glyph_chapter_exo16() {
           "as",
           "much",
           "$bread,",
-          "two",
+          "$two",
           "omers",
           "per",
           "person,",
