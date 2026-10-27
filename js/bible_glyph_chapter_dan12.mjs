@@ -19,7 +19,7 @@ export function bible_glyph_chapter_dan12() {
           "$proper_name$Michael,",
           "the",
           "great",
-          "prince",
+          "$military_medal",
           "who",
           "stands",
           "watch",
