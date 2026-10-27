@@ -235,7 +235,7 @@ export function bible_glyph_chapter_isa11() {
           "$linked_paperclips+manner,",
           "and",
           "the",
-          "lion",
+          "$lion",
           "will",
           "$eating",
           "straw",
