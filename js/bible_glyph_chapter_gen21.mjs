@@ -480,7 +480,7 @@ export function bible_glyph_chapter_gen21() {
           "the",
           "boy",
           "and",
-          "take",
+          "$might+up_arrow",
           "him",
           "by",
           "the",
