@@ -680,7 +680,7 @@ export function bible_glyph_chapter_gen35() {
           "$son",
           "of",
           "$hand+foot",
-          "who",
+          "$back+flashlight",
           "were",
           "born",
           "to",
