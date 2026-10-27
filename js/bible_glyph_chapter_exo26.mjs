@@ -289,7 +289,7 @@ export function bible_glyph_chapter_exo26() {
         verse_number: 11,
         words: [
           "$hammer+doing",
-          "fifty",
+          "$five+zero",
           "clasps",
           "of",
           "$bronze",
