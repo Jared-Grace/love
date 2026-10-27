@@ -25,7 +25,7 @@ export function bible_glyph_chapter_exo28() {
           "his",
           "$son",
           "from",
-          "among",
+          "$radio_button",
           "the",
           "$son",
           "of",
