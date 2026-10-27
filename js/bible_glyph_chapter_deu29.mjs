@@ -177,7 +177,7 @@ export function bible_glyph_chapter_deu29() {
           "might",
           "$lightbulb",
           "that",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
