@@ -84,7 +84,7 @@ export function bible_glyph_chapter_job01() {
           "$son",
           "of",
           "the",
-          "East.",
+          "$compass+right_arrow.",
         ],
       },
       {
