@@ -123,7 +123,7 @@ export function bible_glyph_chapter_psa022() {
         verse_number: 6,
         words: [
           "But",
-          "I",
+          "$me",
           "am",
           "a",
           "worm",
