@@ -854,7 +854,7 @@ export function bible_glyph_chapter_1sa20() {
           "and",
           "$father+lamp",
           "sat",
-          "beside",
+          "$pointing+person",
           "him,",
           "but",
           "the",
