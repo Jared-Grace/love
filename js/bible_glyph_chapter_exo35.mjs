@@ -651,7 +651,7 @@ export function bible_glyph_chapter_exo35() {
           "all",
           "the",
           "$woman",
-          "whose",
+          "$back+flashlight",
           "$heart_organ",
           "were",
           "stirred",
