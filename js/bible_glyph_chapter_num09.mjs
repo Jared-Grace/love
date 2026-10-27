@@ -338,7 +338,7 @@ export function bible_glyph_chapter_num09() {
           "They",
           "may",
           "$no_entry",
-          "leave",
+          "$puzzle_piece+doing",
           "any",
           "$tray_out",
           "it",
