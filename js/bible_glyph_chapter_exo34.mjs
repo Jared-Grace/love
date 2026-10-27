@@ -544,7 +544,7 @@ export function bible_glyph_chapter_exo34() {
           "shall",
           "$no_entry",
           "$hammer+doing",
-          "molten",
+          "$pouring_liquid+moai",
           "$moai",
           "for",
           "yourselves.",
