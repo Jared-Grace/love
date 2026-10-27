@@ -240,7 +240,7 @@ export function bible_glyph_chapter_gen27() {
           "me",
           "$two",
           "$thumbs_up",
-          "young",
+          "$goat+child",
           "goats,",
           "so",
           "that",
