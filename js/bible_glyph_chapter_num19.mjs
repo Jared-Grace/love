@@ -521,7 +521,7 @@ export function bible_glyph_chapter_num19() {
           "by",
           "the",
           "$sword,",
-          "or",
+          "$shuffle",
           "someone",
           "who",
           "has",
