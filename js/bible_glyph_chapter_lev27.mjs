@@ -906,7 +906,7 @@ export function bible_glyph_chapter_lev27() {
           "the",
           "rest",
           "for",
-          "destruction",
+          "$bomb+altar+doing",
           "may",
           "$no_entry",
           "be",
