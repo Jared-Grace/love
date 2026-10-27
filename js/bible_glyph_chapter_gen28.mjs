@@ -356,7 +356,7 @@ export function bible_glyph_chapter_gen28() {
           "going",
           "up",
           "and",
-          "down",
+          "$walking+pointing_down",
           "it.",
         ],
       },
