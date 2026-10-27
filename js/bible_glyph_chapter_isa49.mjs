@@ -809,7 +809,7 @@ export function bible_glyph_chapter_isa49() {
           "you",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I",
           "am",
           "the",
