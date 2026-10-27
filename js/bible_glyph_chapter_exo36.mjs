@@ -737,7 +737,7 @@ export function bible_glyph_chapter_exo36() {
           "he",
           "$hammer+doing",
           "two",
-          "frames",
+          "$skateboard",
           "for",
           "the",
           "two",
