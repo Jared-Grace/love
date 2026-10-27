@@ -519,7 +519,7 @@ export function bible_glyph_chapter_num08() {
           "his",
           "$son",
           "from",
-          "among",
+          "$radio_button",
           "$son",
           "of",
           "Israel,",
