@@ -455,7 +455,7 @@ export function bible_glyph_chapter_jos06() {
           "So",
           "on",
           "the",
-          "second",
+          "$second_place",
           "$sun",
           "they",
           "marched",
