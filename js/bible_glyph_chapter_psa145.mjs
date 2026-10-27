@@ -122,7 +122,7 @@ export function bible_glyph_chapter_psa145() {
           "of",
           "Your",
           "wondrous",
-          "works.",
+          "$voice.",
         ],
       },
       {
