@@ -70,7 +70,7 @@ export function bible_glyph_chapter_isa02() {
         verse_number: 3,
         words: [
           "And",
-          "many",
+          "$multiply",
           "$family",
           "will",
           "$walking",
