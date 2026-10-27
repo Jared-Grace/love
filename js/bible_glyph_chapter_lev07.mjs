@@ -202,7 +202,7 @@ export function bible_glyph_chapter_lev07() {
           "Likewise,",
           "$all",
           "$grain_offering",
-          "that",
+          "$back+flashlight",
           "is",
           "baked",
           "in",
