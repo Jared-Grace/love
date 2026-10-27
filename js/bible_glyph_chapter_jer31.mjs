@@ -663,7 +663,7 @@ export function bible_glyph_chapter_jer31() {
           "not",
           "$fruit",
           "a",
-          "precious",
+          "$gem_stone+describing",
           "$son",
           "to",
           "Me,",
