@@ -234,7 +234,7 @@ export function bible_glyph_chapter_lev02() {
           "$tray_out",
           "$grain_offering",
           "and",
-          "burn",
+          "$incense+doing",
           "it",
           "$altar",
           "as",
