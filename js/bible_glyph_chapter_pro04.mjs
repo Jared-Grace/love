@@ -394,7 +394,7 @@ export function bible_glyph_chapter_pro04() {
           "$flashlight+question",
           "makes",
           "them",
-          "stumble.",
+          "$hiking_boot+rock.",
         ],
       },
       {
