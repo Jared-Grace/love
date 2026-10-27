@@ -264,7 +264,7 @@ export function bible_glyph_chapter_lev09() {
           "the",
           "$bacon,",
           "the",
-          "kidneys",
+          "$heart_organ+two",
           "and",
           "the",
           "lobe",
