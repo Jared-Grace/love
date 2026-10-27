@@ -89,7 +89,7 @@ export function bible_glyph_chapter_exo26() {
         verse_number: 4,
         words: [
           "$hammer+doing",
-          "loops",
+          "$curly_loop",
           "of",
           "blue",
           "material",
