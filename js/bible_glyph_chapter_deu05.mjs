@@ -309,7 +309,7 @@ export function bible_glyph_chapter_deu05() {
           "$heart_on_fire",
           "in",
           "vain,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "will",
