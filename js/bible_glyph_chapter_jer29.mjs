@@ -737,7 +737,7 @@ export function bible_glyph_chapter_jer29() {
           "Because",
           "of",
           "them,",
-          "all",
+          "$all",
           "the",
           "exiles",
           "of",
