@@ -163,7 +163,7 @@ export function bible_glyph_chapter_psa116() {
           "my",
           "$eyes",
           "$tray_out",
-          "tears,",
+          "$loudly_crying+water,",
           "my",
           "feet",
           "from",
