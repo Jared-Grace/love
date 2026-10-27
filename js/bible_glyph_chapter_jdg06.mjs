@@ -908,7 +908,7 @@ export function bible_glyph_chapter_jdg06() {
           "So",
           "$axe+proper_name",
           "$hand_receiving",
-          "ten",
+          "$ten",
           "of",
           "his",
           "$kneeling",
