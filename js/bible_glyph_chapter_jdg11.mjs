@@ -992,7 +992,7 @@ export function bible_glyph_chapter_jdg11() {
         verse_number: 31,
         words: [
           "then",
-          "whatever",
+          "$back+flashlight",
           "comes",
           "out",
           "of",
