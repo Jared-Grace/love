@@ -375,7 +375,7 @@ export function bible_glyph_chapter_exo13() {
           "you",
           "do",
           "$no_entry",
-          "redeem",
+          "$coin+turn_back",
           "it",
           "you",
           "are",
