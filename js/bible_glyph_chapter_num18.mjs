@@ -1074,7 +1074,7 @@ export function bible_glyph_chapter_num18() {
           "floor",
           "or",
           "the",
-          "winepress.",
+          "$grapes+foot.",
         ],
       },
       {
