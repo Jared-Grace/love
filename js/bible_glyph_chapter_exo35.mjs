@@ -285,7 +285,7 @@ export function bible_glyph_chapter_exo35() {
           "its",
           "poles",
           "and",
-          "all",
+          "$all",
           "its",
           "utensils,",
           "and",
