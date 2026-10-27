@@ -778,7 +778,7 @@ export function bible_glyph_chapter_exo28() {
           "out",
           "from",
           "the",
-          "ephod.",
+          "$safety_vest.",
         ],
       },
       {
