@@ -508,7 +508,7 @@ export function bible_glyph_chapter_exo07() {
           "and",
           "it",
           "will",
-          "turn",
+          "$upside_down_face",
           "to",
           "$blood.",
         ],
