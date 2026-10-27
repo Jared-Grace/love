@@ -791,7 +791,7 @@ export function bible_glyph_chapter_1ki18() {
           "are",
           "so",
           "numerous,",
-          "choose",
+          "$check_box",
           "for",
           "yourselves",
           "one",
