@@ -503,7 +503,7 @@ export function bible_glyph_chapter_lev16() {
           "$blood",
           "$house",
           "the",
-          "veil.",
+          "$veil.",
           "He",
           "must",
           "$hammer+doing",
