@@ -202,7 +202,7 @@ export function bible_glyph_chapter_1sa25() {
           "and",
           "to",
           "all",
-          "that",
+          "$back+flashlight",
           "belongs",
           "to",
           "you.",
