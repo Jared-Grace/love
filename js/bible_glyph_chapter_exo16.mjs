@@ -24,7 +24,7 @@ export function bible_glyph_chapter_exo16() {
           "$proper_name$Elim",
           "and",
           "$footprints",
-          "to",
+          "$toward",
           "the",
           "$wilderness",
           "of",
