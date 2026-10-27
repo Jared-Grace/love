@@ -841,7 +841,7 @@ export function bible_glyph_chapter_1sa25() {
           "means",
           "$proper_name$Fool,",
           "and",
-          "folly",
+          "$clown_face+thumbs_down",
           "goes",
           "with",
           "him.",
