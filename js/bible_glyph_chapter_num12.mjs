@@ -286,7 +286,7 @@ export function bible_glyph_chapter_num12() {
         words: [
           "Aaron",
           "$speech",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "$crown,",
           "please",
