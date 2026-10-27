@@ -76,7 +76,7 @@ export function bible_glyph_chapter_1sa07() {
           "$wrestling+heart_on_fire",
           "mourned",
           "and",
-          "sought",
+          "$next_track",
           "$i_am.",
         ],
       },
