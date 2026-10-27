@@ -870,7 +870,7 @@ export function bible_glyph_chapter_exo09() {
           "of",
           "$heart_on_fire",
           "and",
-          "hail.",
+          "$ice.",
           "I",
           "will",
           "let",
