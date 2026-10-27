@@ -147,7 +147,7 @@ export function bible_glyph_chapter_2sa12() {
           "the",
           "poor",
           "$man_beard",
-          "lamb",
+          "$lamb+female_sign",
           "and",
           "$hammer+doing",
           "it",
