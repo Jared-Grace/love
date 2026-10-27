@@ -105,7 +105,7 @@ export function bible_glyph_chapter_lev13() {
           "and",
           "the",
           "sore",
-          "appears",
+          "$eyes+thing",
           "to",
           "be",
           "deeper",
