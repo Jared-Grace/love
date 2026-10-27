@@ -453,7 +453,7 @@ export function bible_glyph_chapter_exo28() {
           "$page_with_curl+doing,",
           "a",
           "$hand_with_fingers_splayed+straight_ruler",
-          "long",
+          "$up_down_arrow",
           "and",
           "a",
           "$hand_with_fingers_splayed+straight_ruler",
