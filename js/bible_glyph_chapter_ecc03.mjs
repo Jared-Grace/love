@@ -335,7 +335,7 @@ export function bible_glyph_chapter_ecc03() {
           "$hammer+doing",
           "endures",
           "forever;",
-          "nothing",
+          "$dotted_line_face",
           "can",
           "be",
           "added",
