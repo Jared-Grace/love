@@ -799,7 +799,7 @@ export function bible_glyph_chapter_isa49() {
           "you",
           "$nose+fire",
           "and",
-          "lick",
+          "$tongue+herb+doing",
           "the",
           "$dust",
           "at",
