@@ -261,7 +261,7 @@ export function bible_glyph_chapter_gen37() {
           "I",
           "had",
           "another",
-          "dream,",
+          "$dream+doing,",
           "and",
           "this",
           "time",
