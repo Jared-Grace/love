@@ -125,7 +125,7 @@ export function bible_glyph_chapter_psa130() {
           "wait",
           "for",
           "the",
-          "morning,",
+          "$morning,",
           "more",
           "than",
           "watchmen",
