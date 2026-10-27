@@ -923,7 +923,7 @@ export function bible_glyph_chapter_jer07() {
           "and",
           "forsaken",
           "the",
-          "generation",
+          "$dna",
           "of",
           "His",
           "wrath.",
