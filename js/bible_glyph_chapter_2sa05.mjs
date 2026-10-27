@@ -108,7 +108,7 @@ export function bible_glyph_chapter_2sa05() {
           "$covenant",
           "with",
           "them",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "and",
