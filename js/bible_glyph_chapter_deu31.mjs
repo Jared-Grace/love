@@ -453,7 +453,7 @@ export function bible_glyph_chapter_deu31() {
           "the",
           "land",
           "that",
-          "you",
+          "$you",
           "are",
           "crossing",
           "the",
