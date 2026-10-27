@@ -251,7 +251,7 @@ export function bible_glyph_chapter_exo05() {
           "$no_entry",
           "$tray_out",
           "it,",
-          "for",
+          "$pointing",
           "they",
           "are",
           "lazy.",
