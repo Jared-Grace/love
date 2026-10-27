@@ -123,7 +123,7 @@ export function bible_glyph_chapter_1sa07() {
           "and",
           "$kneeling+doing",
           "Him",
-          "only.",
+          "$one+person.",
           "And",
           "He",
           "will",
