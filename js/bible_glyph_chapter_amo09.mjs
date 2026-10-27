@@ -530,7 +530,7 @@ export function bible_glyph_chapter_amo09() {
           "They",
           "will",
           "$sprout+down_arrow+doing",
-          "vineyards",
+          "$vineyard",
           "and",
           "drink",
           "their",
