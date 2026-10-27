@@ -280,7 +280,7 @@ export function bible_glyph_chapter_lev12() {
           "shall",
           "$hand_receiving",
           "$two",
-          "turtledoves",
+          "$dove+ring",
           "or",
           "$two",
           "$son",
