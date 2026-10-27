@@ -14,7 +14,7 @@ export function bible_glyph_chapter_psa046() {
         words: [
           "For",
           "the",
-          "choirmaster.",
+          "$musical_score.",
           "Of",
           "the",
           "$son",
