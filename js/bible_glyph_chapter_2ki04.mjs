@@ -38,7 +38,7 @@ export function bible_glyph_chapter_2ki04() {
           "and",
           "$you",
           "$lightbulb",
-          "that",
+          "$pointing",
           "your",
           "$kneeling",
           "feared",
