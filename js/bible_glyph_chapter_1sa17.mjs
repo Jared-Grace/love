@@ -1711,7 +1711,7 @@ export function bible_glyph_chapter_1sa17() {
           "$two_hearts+proper_name",
           "$hand_receiving",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "the",
           "$proper_name$Philistine",
