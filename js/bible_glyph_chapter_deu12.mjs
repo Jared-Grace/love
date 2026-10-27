@@ -926,7 +926,7 @@ export function bible_glyph_chapter_deu12() {
           "careful",
           "to",
           "$ear",
-          "all",
+          "$all",
           "these",
           "$speech",
           "I",
