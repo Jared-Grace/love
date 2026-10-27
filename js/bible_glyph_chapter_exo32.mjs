@@ -647,7 +647,7 @@ export function bible_glyph_chapter_exo32() {
           "the",
           "dancing,",
           "he",
-          "burned",
+          "$angry_face+doing",
           "with",
           "anger",
           "and",
