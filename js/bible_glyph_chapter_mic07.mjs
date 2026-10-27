@@ -143,7 +143,7 @@ export function bible_glyph_chapter_mic07() {
           "$clipboard+thing,",
           "has",
           "$footprints;",
-          "now",
+          "$watch",
           "is",
           "the",
           "time",
