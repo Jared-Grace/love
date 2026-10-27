@@ -449,7 +449,7 @@ export function bible_glyph_chapter_gen49() {
           "that",
           "its",
           "rider",
-          "tumbles",
+          "$person+pointing_down",
           "backward.",
         ],
       },
