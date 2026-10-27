@@ -81,7 +81,7 @@ export function bible_glyph_chapter_gen46() {
           "Do",
           "$no_entry",
           "be",
-          "afraid",
+          "$fear+doing",
           "to",
           "go",
           "down",
