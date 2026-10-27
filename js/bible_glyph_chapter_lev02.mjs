@@ -345,7 +345,7 @@ export function bible_glyph_chapter_lev02() {
           "$salt.",
           "You",
           "$no_entry",
-          "leave",
+          "$sabbath+doing",
           "the",
           "$salt",
           "$covenant",
