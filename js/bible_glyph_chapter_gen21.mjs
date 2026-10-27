@@ -670,7 +670,7 @@ export function bible_glyph_chapter_gen21() {
           "$pointing_up",
           "a",
           "well",
-          "that",
+          "$back+flashlight",
           "the",
           "$kneeling",
           "of",
