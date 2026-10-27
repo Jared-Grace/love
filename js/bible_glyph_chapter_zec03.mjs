@@ -37,7 +37,7 @@ export function bible_glyph_chapter_zec03() {
           "right",
           "hand",
           "to",
-          "accuse",
+          "$enemy+speech+doing",
           "him.",
         ],
       },
