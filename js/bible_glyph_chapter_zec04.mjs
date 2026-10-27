@@ -31,7 +31,7 @@ export function bible_glyph_chapter_zec04() {
           "awakened",
           "from",
           "his",
-          "sleep.",
+          "$sleeping_face+thing.",
         ],
       },
       {
