@@ -374,7 +374,7 @@ export function bible_glyph_chapter_lev21() {
           "is",
           "on",
           "him.",
-          "I",
+          "$me",
           "am",
           "$i_am.",
         ],
