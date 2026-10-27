@@ -688,7 +688,7 @@ export function bible_glyph_chapter_exo10() {
           "single",
           "$locusts",
           "$puzzle_piece+doing",
-          "anywhere",
+          "$all",
           "in",
           "$clamp+proper_name.",
         ],
