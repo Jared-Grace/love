@@ -758,7 +758,7 @@ export function bible_glyph_chapter_exo08() {
           "will",
           "take",
           "place",
-          "tomorrow.",
+          "$sun+next_track.",
         ],
       },
       {
