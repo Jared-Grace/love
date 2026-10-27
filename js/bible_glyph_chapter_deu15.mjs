@@ -19,7 +19,7 @@ export function bible_glyph_chapter_deu15() {
           "$stop_sign",
           "of",
           "every",
-          "seven",
+          "$seven",
           "$year",
           "you",
           "must",
