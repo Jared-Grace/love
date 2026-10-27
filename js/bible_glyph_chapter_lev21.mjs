@@ -389,7 +389,7 @@ export function bible_glyph_chapter_lev21() {
           "must",
           "be",
           "a",
-          "virgin.",
+          "$girl+white_flower+thing.",
         ],
       },
       {
