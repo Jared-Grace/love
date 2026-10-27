@@ -899,7 +899,7 @@ export function bible_glyph_chapter_gen37() {
           "and",
           "dipped",
           "the",
-          "robe",
+          "$dress+thread",
           "in",
           "its",
           "$blood.",
