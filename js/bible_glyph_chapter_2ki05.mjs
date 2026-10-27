@@ -867,7 +867,7 @@ export function bible_glyph_chapter_2ki05() {
           "of",
           "silver",
           "and",
-          "two",
+          "$two",
           "sets",
           "of",
           "clothing.",
