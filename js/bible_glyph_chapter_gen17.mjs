@@ -666,7 +666,7 @@ export function bible_glyph_chapter_gen17() {
           "purchased",
           "with",
           "his",
-          "money,",
+          "$silver,",
           "every",
           "male",
           "among",
