@@ -418,7 +418,7 @@ export function bible_glyph_chapter_num27() {
       },
       {
         verse_number: 15,
-        words: ["So", "$fishing_pole+proper_name", "$mouth", "to", "$i_am,", "$speech"],
+        words: ["So", "$fishing_pole+proper_name", "$mouth", "$toward", "$i_am,", "$speech"],
       },
       {
         verse_number: 16,
