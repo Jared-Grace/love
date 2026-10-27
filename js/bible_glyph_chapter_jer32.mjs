@@ -611,7 +611,7 @@ export function bible_glyph_chapter_jer32() {
           "after",
           "them,",
           "O",
-          "great",
+          "$top",
           "and",
           "mighty",
           "$heart_on_fire",
