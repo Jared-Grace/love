@@ -186,7 +186,7 @@ export function bible_glyph_chapter_isa26() {
           "walk",
           "in",
           "the",
-          "path",
+          "$railway_track",
           "of",
           "Your",
           "$scales+thing.",
