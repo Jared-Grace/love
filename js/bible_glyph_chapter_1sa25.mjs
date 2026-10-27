@@ -611,7 +611,7 @@ export function bible_glyph_chapter_1sa25() {
           "$input_numbers+all",
           "clusters",
           "of",
-          "raisins,",
+          "$grapes+fallen_leaf,",
           "and",
           "two",
           "$input_numbers+all",
