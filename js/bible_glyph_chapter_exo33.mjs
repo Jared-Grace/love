@@ -714,7 +714,7 @@ export function bible_glyph_chapter_exo33() {
           "you",
           "are",
           "to",
-          "stand",
+          "$person+up_arrow",
           "upon",
           "a",
           "rock.",
