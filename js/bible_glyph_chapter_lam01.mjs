@@ -171,7 +171,7 @@ export function bible_glyph_chapter_lam01() {
           "are",
           "at",
           "$couch_and_lamp+doing.",
-          "For",
+          "$pointing",
           "the",
           "$i_am",
           "has",
