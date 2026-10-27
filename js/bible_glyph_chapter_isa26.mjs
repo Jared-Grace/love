@@ -251,7 +251,7 @@ export function bible_glyph_chapter_isa26() {
           "he",
           "does",
           "not",
-          "learn",
+          "$learner+doing",
           "$ruler+thing.",
           "In",
           "the",
