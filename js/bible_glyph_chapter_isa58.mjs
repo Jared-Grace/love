@@ -532,7 +532,7 @@ export function bible_glyph_chapter_isa58() {
           "$telescope+clock",
           "you",
           "will",
-          "delight",
+          "$beaming+couch_and_lamp+doing",
           "yourself",
           "in",
           "the",
