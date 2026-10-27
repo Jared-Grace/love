@@ -95,7 +95,7 @@ export function bible_glyph_chapter_ecc03() {
           "mourn",
           "and",
           "a",
-          "time",
+          "$clock",
           "to",
           "dance,",
         ],
