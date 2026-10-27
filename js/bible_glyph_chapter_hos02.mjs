@@ -130,7 +130,7 @@ export function bible_glyph_chapter_hos02() {
       {
         verse_number: 5,
         words: [
-          "For",
+          "$pointing",
           "their",
           "$mother",
           "has",
