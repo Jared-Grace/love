@@ -40,7 +40,7 @@ export function bible_glyph_chapter_zec14() {
           "I",
           "will",
           "$crowd+doing",
-          "all",
+          "$all",
           "the",
           "$map",
           "against",
