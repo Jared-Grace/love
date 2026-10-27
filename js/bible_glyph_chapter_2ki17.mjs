@@ -1333,7 +1333,7 @@ export function bible_glyph_chapter_2ki17() {
           "and",
           "do",
           "$no_entry",
-          "worship",
+          "$fear+doing",
           "other",
           "$moai.",
         ],
