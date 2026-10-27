@@ -17,7 +17,7 @@ export function bible_glyph_chapter_jer31() {
           "At",
           "that",
           "$clock,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "I",
