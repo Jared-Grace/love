@@ -452,7 +452,7 @@ export function bible_glyph_chapter_deu16() {
           "to",
           "$hammer+doing",
           "the",
-          "Feast",
+          "$party_popper",
           "of",
           "Tabernacles",
           "for",
