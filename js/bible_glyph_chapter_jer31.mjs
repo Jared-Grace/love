@@ -448,7 +448,7 @@ export function bible_glyph_chapter_jer31() {
           "will",
           "$upside_down_face",
           "their",
-          "mourning",
+          "$loudly_crying+coffin+thing",
           "into",
           "joy",
           "and",
