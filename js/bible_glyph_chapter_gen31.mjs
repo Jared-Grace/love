@@ -196,7 +196,7 @@ export function bible_glyph_chapter_gen31() {
           "the",
           "$sheep",
           "$baby",
-          "speckled.",
+          "$black_circle+describing.",
           "And",
           "$traffic_light",
           "he",
