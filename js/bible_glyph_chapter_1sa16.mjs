@@ -274,7 +274,7 @@ export function bible_glyph_chapter_1sa16() {
         words: [
           "Then",
           "Jesse",
-          "called",
+          "$waving_hand",
           "$proper_name$Abinadab",
           "and",
           "presented",
