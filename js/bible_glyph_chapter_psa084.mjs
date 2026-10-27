@@ -213,7 +213,7 @@ export function bible_glyph_chapter_psa084() {
           "O",
           "$heart_on_fire,",
           "and",
-          "look",
+          "$face_with_monocle",
           "with",
           "favor",
           "on",
