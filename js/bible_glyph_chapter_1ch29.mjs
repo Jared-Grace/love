@@ -710,7 +710,7 @@ export function bible_glyph_chapter_1ch29() {
           "to",
           "$brick",
           "the",
-          "palace",
+          "$castle+crown",
           "for",
           "which",
           "I",
