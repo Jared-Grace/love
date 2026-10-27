@@ -511,7 +511,7 @@ export function bible_glyph_chapter_dan01() {
           "and",
           "$wisdom.",
           "And",
-          "Daniel",
+          "$scales+speech+heart_on_fire+proper_name",
           "had",
           "insight",
           "into",
