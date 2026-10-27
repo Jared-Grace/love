@@ -392,7 +392,7 @@ export function bible_glyph_chapter_lev05() {
           "memorial",
           "portion",
           "and",
-          "burn",
+          "$incense+doing",
           "it",
           "$altar",
           "atop",
