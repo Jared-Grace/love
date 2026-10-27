@@ -271,7 +271,7 @@ export function bible_glyph_chapter_lev04() {
           "shall",
           "burn",
           "them",
-          "on",
+          "$pointing_up",
           "$altar",
           "of",
           "$burnt_offering.",
