@@ -229,7 +229,7 @@ export function bible_glyph_chapter_jer29() {
           "to",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "if",
           "it",
           "prospers,",
