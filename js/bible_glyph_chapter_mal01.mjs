@@ -449,7 +449,7 @@ export function bible_glyph_chapter_mal01() {
           "you",
           "$speech,",
           "The",
-          "table",
+          "$hand_sending+thing",
           "of",
           "the",
           "$crown",
