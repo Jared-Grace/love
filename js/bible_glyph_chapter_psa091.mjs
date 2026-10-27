@@ -280,7 +280,7 @@ export function bible_glyph_chapter_psa091() {
           "You",
           "will",
           "tread",
-          "on",
+          "$pointing_up",
           "the",
           "lion",
           "and",
