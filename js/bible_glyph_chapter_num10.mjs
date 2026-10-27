@@ -367,7 +367,7 @@ export function bible_glyph_chapter_num10() {
       {
         verse_number: 14,
         words: [
-          "First",
+          "$first_place",
           "the",
           "divisions",
           "of",
