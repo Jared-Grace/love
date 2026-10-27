@@ -827,7 +827,7 @@ export function bible_glyph_chapter_jdg07() {
           "another.",
           "The",
           "army",
-          "fled",
+          "$running+dashing_away",
           "to",
           "Beth-shittah",
           "toward",
