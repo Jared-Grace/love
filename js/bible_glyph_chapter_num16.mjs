@@ -484,7 +484,7 @@ export function bible_glyph_chapter_num16() {
           "$no_entry",
           "$curving_right+doing",
           "their",
-          "offering.",
+          "$grain_offering.",
           "I",
           "have",
           "$no_entry",
