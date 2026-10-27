@@ -375,7 +375,7 @@ export function bible_glyph_chapter_deu08() {
           "$eating+top,",
           "when",
           "you",
-          "build",
+          "$brick",
           "$thumbs_up",
           "$house",
           "in",
