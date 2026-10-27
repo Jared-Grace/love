@@ -48,7 +48,7 @@ export function bible_glyph_chapter_num10() {
           "are",
           "sounded,",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "is",
           "to",
