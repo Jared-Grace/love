@@ -774,7 +774,7 @@ export function bible_glyph_chapter_exo16() {
           "Then",
           "set",
           "aside",
-          "whatever",
+          "$all",
           "remains",
           "and",
           "keep",
