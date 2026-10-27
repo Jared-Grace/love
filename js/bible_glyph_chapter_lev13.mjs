@@ -1840,7 +1840,7 @@ export function bible_glyph_chapter_lev13() {
           "$garment,",
           "$tray_out",
           "the",
-          "leather,",
+          "$cow_face+coat,",
           "$tray_out",
           "the",
           "weave,",
