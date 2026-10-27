@@ -117,7 +117,7 @@ export function bible_glyph_chapter_jdg07() {
           "$ten+all",
           "$turn_back,",
           "but",
-          "ten",
+          "$ten",
           "$ten+all",
           "remained.",
         ],
