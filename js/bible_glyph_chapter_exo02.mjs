@@ -703,7 +703,7 @@ export function bible_glyph_chapter_exo02() {
           "$weary_face+voice+thing,",
           "and",
           "$heart_on_fire",
-          "remembered",
+          "$reminder_ribbon",
           "His",
           "$covenant",
           "with",
