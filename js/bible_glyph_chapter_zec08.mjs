@@ -406,7 +406,7 @@ export function bible_glyph_chapter_zec08() {
           "the",
           "remnant",
           "of",
-          "this",
+          "$flashlight",
           "$family",
           "I",
           "will",
