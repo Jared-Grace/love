@@ -496,7 +496,7 @@ export function bible_glyph_chapter_num19() {
           "any",
           "$unlocked",
           "$toolbox",
-          "without",
+          "$dotted_line_face",
           "a",
           "lid",
           "fastened",
