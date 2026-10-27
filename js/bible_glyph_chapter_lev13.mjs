@@ -1034,7 +1034,7 @@ export function bible_glyph_chapter_lev13() {
           "of",
           "the",
           "$person_gesturing_ok",
-          "or",
+          "$shuffle",
           "$beard.",
         ],
       },
