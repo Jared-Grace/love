@@ -298,7 +298,7 @@ export function bible_glyph_chapter_psa034() {
           "$magnifying_glass",
           "$peace",
           "and",
-          "pursue",
+          "$running+toward",
           "it.",
         ],
       },
