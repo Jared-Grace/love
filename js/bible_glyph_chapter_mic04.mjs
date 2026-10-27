@@ -81,7 +81,7 @@ export function bible_glyph_chapter_mic04() {
           "$hand+foot.",
           "He",
           "will",
-          "teach",
+          "$bow+toward",
           "us",
           "His",
           "$road,",
