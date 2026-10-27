@@ -262,7 +262,7 @@ export function bible_glyph_chapter_isa43() {
           "$eyes",
           "but",
           "are",
-          "blind,",
+          "$person_with_white_cane+describing,",
           "and",
           "who",
           "have",
