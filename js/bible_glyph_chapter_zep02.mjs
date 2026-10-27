@@ -430,7 +430,7 @@ export function bible_glyph_chapter_zep02() {
       {
         verse_number: 14,
         words: [
-          "Herds",
+          "$sheep+crowd",
           "will",
           "lie",
           "down",
