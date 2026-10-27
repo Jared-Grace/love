@@ -599,7 +599,7 @@ export function bible_glyph_chapter_exo32() {
           "is",
           "in",
           "the",
-          "camp.",
+          "$camp.",
         ],
       },
       {
