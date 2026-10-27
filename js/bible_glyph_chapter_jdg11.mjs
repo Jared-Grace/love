@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jdg11() {
           "and",
           "$link",
           "our",
-          "commander,",
+          "$crown+person+scales,",
           "so",
           "that",
           "we",
