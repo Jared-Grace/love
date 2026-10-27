@@ -834,7 +834,7 @@ export function bible_glyph_chapter_gen30() {
           "lamb,",
           "and",
           "the",
-          "spotted",
+          "$black_circle+white_circle+doing",
           "and",
           "$black_circle+describing",
           "among",
