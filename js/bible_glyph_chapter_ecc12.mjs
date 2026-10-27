@@ -161,7 +161,7 @@ export function bible_glyph_chapter_ecc12() {
           "$road,",
           "when",
           "the",
-          "almond",
+          "$tree+blossom+first_place",
           "tree",
           "$thumbs_down+eyes+doing",
           "and",
