@@ -68,7 +68,7 @@ export function bible_glyph_chapter_exo11() {
           "every",
           "$woman",
           "should",
-          "ask",
+          "$question",
           "their",
           "neighbors",
           "for",
