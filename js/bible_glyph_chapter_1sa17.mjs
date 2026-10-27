@@ -1542,7 +1542,7 @@ export function bible_glyph_chapter_1sa17() {
           "$proper_name$Philistine",
           "on",
           "the",
-          "forehead.",
+          "$face+top.",
           "The",
           "$stone",
           "sank",
