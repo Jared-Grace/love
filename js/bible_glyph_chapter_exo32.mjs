@@ -147,7 +147,7 @@ export function bible_glyph_chapter_exo32() {
           "$moai,",
           "O",
           "$wrestling+heart_on_fire,",
-          "who",
+          "$back+flashlight",
           "brought",
           "you",
           "up",
