@@ -263,7 +263,7 @@ export function bible_glyph_chapter_lev24() {
           "$proper_name$Egyptian,",
           "went",
           "out",
-          "among",
+          "$radio_button",
           "the",
           "$son",
           "of",
