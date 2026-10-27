@@ -571,7 +571,7 @@ export function bible_glyph_chapter_exo37() {
           "buds",
           "and",
           "branches",
-          "were",
+          "$link",
           "all",
           "$tray_out",
           "one",
