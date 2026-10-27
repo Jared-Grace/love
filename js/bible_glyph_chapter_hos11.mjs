@@ -191,7 +191,7 @@ export function bible_glyph_chapter_hos11() {
           "by",
           "$no_entry",
           "means",
-          "exalt",
+          "$up_arrow",
           "them.",
         ],
       },
