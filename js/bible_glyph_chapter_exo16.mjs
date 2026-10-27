@@ -336,7 +336,7 @@ export function bible_glyph_chapter_exo16() {
           "$witness+crowd",
           "of",
           "$wrestling+heart_on_fire,",
-          "Come",
+          "$magnet+doing",
           "before",
           "the",
           "$i_am,",
