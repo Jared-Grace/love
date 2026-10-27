@@ -369,7 +369,7 @@ export function bible_glyph_chapter_exo33() {
           "$mouth",
           "$toward",
           "$fishing_pole+proper_name",
-          "face",
+          "$face",
           "$toward",
           "face,",
           "as",
