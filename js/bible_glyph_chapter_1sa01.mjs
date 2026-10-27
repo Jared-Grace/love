@@ -449,7 +449,7 @@ export function bible_glyph_chapter_1sa01() {
           "am",
           "a",
           "$woman",
-          "troubled",
+          "$mechanical_arm+describing",
           "in",
           "spirit.",
           "I",
