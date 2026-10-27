@@ -187,7 +187,7 @@ export function bible_glyph_chapter_lev04() {
           "$burnt_offering",
           "at",
           "the",
-          "entrance",
+          "$door",
           "$tent",
           "of",
           "$alarm_clock.",
