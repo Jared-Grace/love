@@ -296,7 +296,7 @@ export function bible_glyph_chapter_pro31() {
           "while",
           "it",
           "is",
-          "still",
+          "$repeat",
           "$night",
           "to",
           "$hands_giving",
