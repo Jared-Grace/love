@@ -311,7 +311,7 @@ export function bible_glyph_chapter_isa02() {
           "the",
           "rocks",
           "and",
-          "hide",
+          "$pick+tray_in+doing",
           "in",
           "the",
           "dust",
