@@ -476,7 +476,7 @@ export function bible_glyph_chapter_hos02() {
           "and",
           "make",
           "the",
-          "Valley",
+          "$valley",
           "of",
           "$proper_name$Achor",
           "into",
