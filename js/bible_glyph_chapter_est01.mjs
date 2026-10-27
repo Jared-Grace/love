@@ -484,7 +484,7 @@ export function bible_glyph_chapter_est01() {
           "And",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$king",
