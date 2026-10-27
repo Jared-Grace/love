@@ -49,7 +49,7 @@ export function bible_glyph_chapter_mic06() {
           "$mountain,",
           "and",
           "you",
-          "enduring",
+          "$infinity+describing",
           "foundations",
           "of",
           "the",
