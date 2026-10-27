@@ -641,7 +641,7 @@ export function bible_glyph_chapter_gen41() {
           "heads",
           "of",
           "grain",
-          "swallowed",
+          "$whale",
           "the",
           "seven",
           "$thumbs_up",
