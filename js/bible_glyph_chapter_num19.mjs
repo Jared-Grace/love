@@ -421,7 +421,7 @@ export function bible_glyph_chapter_num19() {
           "$bow+doing,",
           "defiles",
           "the",
-          "tabernacle",
+          "$tent+house",
           "of",
           "$i_am.",
           "That",
