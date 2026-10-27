@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_jer31() {
           "will",
           "make",
           "a",
-          "new",
+          "$new_button",
           "$covenant",
           "with",
           "the",
