@@ -490,7 +490,7 @@ export function bible_glyph_chapter_lev19() {
           "different",
           "kinds",
           "of",
-          "livestock,",
+          "$paw_prints,",
           "you",
           "shall",
           "$no_entry",
