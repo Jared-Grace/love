@@ -28,7 +28,7 @@ export function bible_glyph_chapter_pro16() {
           "reply",
           "of",
           "the",
-          "tongue",
+          "$tongue",
           "is",
           "from",
           "the",
