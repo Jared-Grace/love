@@ -334,7 +334,7 @@ export function bible_glyph_chapter_psa051() {
           "$kiss_mark,",
           "and",
           "my",
-          "mouth",
+          "$face_with_open_mouth",
           "will",
           "declare",
           "Your",
