@@ -869,7 +869,7 @@ export function bible_glyph_chapter_lev04() {
           "$altar",
           "as",
           "a",
-          "pleasing",
+          "$nose+thumbs_up",
           "$nose",
           "$i_am.",
           "In",
