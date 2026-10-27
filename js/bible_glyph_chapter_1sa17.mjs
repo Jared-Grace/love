@@ -948,7 +948,7 @@ export function bible_glyph_chapter_1sa17() {
           "And",
           "$two_hearts+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Saul,",
           "Let",
           "$no_entry",
