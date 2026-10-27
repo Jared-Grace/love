@@ -487,7 +487,7 @@ export function bible_glyph_chapter_hab01() {
           "slay",
           "$map",
           "$no_entry",
-          "mercy?",
+          "$pleading_face+doing?",
         ],
       },
     ],
