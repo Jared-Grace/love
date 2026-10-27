@@ -914,7 +914,7 @@ export function bible_glyph_chapter_lam03() {
           "me",
           "like",
           "a",
-          "bird.",
+          "$bird+pinching_hand.",
         ],
       },
       {
