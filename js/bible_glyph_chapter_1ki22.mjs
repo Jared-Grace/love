@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_1ki22() {
           "$pinching_hand",
           "or",
           "$top,",
-          "except",
+          "$pointing",
           "the",
           "$king",
           "of",
