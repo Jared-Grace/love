@@ -300,7 +300,7 @@ export function bible_glyph_chapter_gen12() {
           "there",
           "was",
           "a",
-          "famine",
+          "$famine",
           "in",
           "the",
           "$earth.",
