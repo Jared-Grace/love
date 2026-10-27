@@ -849,7 +849,7 @@ export function bible_glyph_chapter_gen21() {
           "Abraham",
           "planted",
           "a",
-          "tamarisk",
+          "$tree+salt",
           "tree",
           "in",
           "Beersheba,",
