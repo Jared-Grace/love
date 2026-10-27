@@ -849,7 +849,7 @@ export function bible_glyph_chapter_gen18() {
         verse_number: 29,
         words: [
           "Once",
-          "again",
+          "$plus+doing",
           "Abraham",
           "$mouth",
           "to",
