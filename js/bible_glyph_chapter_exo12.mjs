@@ -1213,7 +1213,7 @@ export function bible_glyph_chapter_exo12() {
           "a",
           "mixed",
           "multitude",
-          "also",
+          "$plus",
           "went",
           "up",
           "with",
