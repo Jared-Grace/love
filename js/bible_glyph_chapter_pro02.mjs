@@ -199,7 +199,7 @@ export function bible_glyph_chapter_pro02() {
       {
         verse_number: 11,
         words: [
-          "Discretion",
+          "$thinking+map+thing",
           "will",
           "watch",
           "over",
