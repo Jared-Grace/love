@@ -246,7 +246,7 @@ export function bible_glyph_chapter_isa64() {
           "the",
           "clay,",
           "and",
-          "You",
+          "$you",
           "are",
           "the",
           "potter;",
