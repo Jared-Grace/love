@@ -809,7 +809,7 @@ export function bible_glyph_chapter_job31() {
           "and",
           "its",
           "furrows",
-          "weep",
+          "$loudly_crying",
           "$linked_paperclips+manner,",
         ],
       },
