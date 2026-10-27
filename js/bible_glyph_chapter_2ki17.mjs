@@ -116,7 +116,7 @@ export function bible_glyph_chapter_2ki17() {
           "had",
           "$no_entry",
           "$walking+pointing_up",
-          "tribute",
+          "$grain_offering",
           "to",
           "the",
           "$king",
