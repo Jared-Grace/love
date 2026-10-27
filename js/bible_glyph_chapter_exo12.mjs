@@ -627,7 +627,7 @@ export function bible_glyph_chapter_exo12() {
           "$all",
           "$eating",
           "something",
-          "leavened,",
+          "$bread+bubbles,",
           "that",
           "$person_other",
           "must",
