@@ -540,7 +540,7 @@ export function bible_glyph_chapter_num32() {
           "will",
           "$no_entry",
           "$turn_back",
-          "to",
+          "$toward",
           "$house",
           "until",
           "every",
