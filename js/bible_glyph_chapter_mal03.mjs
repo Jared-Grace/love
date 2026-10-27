@@ -513,7 +513,7 @@ export function bible_glyph_chapter_mal03() {
           "only",
           "do",
           "$hammer+doing",
-          "prosper,",
+          "$brick,",
           "they",
           "even",
           "test",
