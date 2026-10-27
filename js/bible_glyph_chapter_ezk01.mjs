@@ -420,7 +420,7 @@ export function bible_glyph_chapter_ezk01() {
           "on",
           "the",
           "$earth",
-          "beside",
+          "$children_crossing",
           "each",
           "$sprout",
           "with",
