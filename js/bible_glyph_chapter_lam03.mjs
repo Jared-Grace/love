@@ -595,7 +595,7 @@ export function bible_glyph_chapter_lam03() {
           "He",
           "does",
           "$no_entry",
-          "afflict",
+          "$persevering_face+doing",
           "or",
           "grieve",
           "the",
