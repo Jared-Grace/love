@@ -152,7 +152,7 @@ export function bible_glyph_chapter_psa116() {
       {
         verse_number: 8,
         words: [
-          "For",
+          "$pointing",
           "You",
           "have",
           "delivered",
