@@ -870,7 +870,7 @@ export function bible_glyph_chapter_isa40() {
         words: [
           "Even",
           "youths",
-          "grow",
+          "$weary_face+wing+doing",
           "tired",
           "and",
           "weary,",
