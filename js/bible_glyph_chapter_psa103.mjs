@@ -236,7 +236,7 @@ export function bible_glyph_chapter_psa103() {
           "the",
           "west,",
           "so",
-          "far",
+          "$satellite+doing",
           "has",
           "He",
           "removed",
