@@ -161,7 +161,7 @@ export function bible_glyph_chapter_1ki17() {
           "and",
           "he",
           "would",
-          "drink",
+          "$cup_with_straw",
           "$tray_out",
           "the",
           "$national_park.",
