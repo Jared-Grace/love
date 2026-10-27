@@ -387,7 +387,7 @@ export function bible_glyph_chapter_exo26() {
           "out",
           "of",
           "$ram",
-          "skins",
+          "$cow_face+coat",
           "dyed",
           "red,",
           "and",
