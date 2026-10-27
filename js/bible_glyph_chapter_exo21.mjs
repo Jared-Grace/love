@@ -487,7 +487,7 @@ export function bible_glyph_chapter_exo21() {
           "$stone",
           "$shuffle",
           "a",
-          "fist,",
+          "$fist+locked,",
           "and",
           "he",
           "does",
