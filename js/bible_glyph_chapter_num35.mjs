@@ -57,7 +57,7 @@ export function bible_glyph_chapter_num35() {
           "in",
           "and",
           "pasturelands",
-          "around",
+          "$around",
           "those",
           "$city",
           "to",
