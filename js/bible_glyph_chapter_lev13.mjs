@@ -1940,7 +1940,7 @@ export function bible_glyph_chapter_lev13() {
           "for",
           "pronouncing",
           "it",
-          "clean",
+          "$soap+doing",
           "$shuffle",
           "unclean.",
         ],
