@@ -372,7 +372,7 @@ export function bible_glyph_chapter_jer23() {
           "is",
           "full",
           "of",
-          "adulterers;",
+          "$ring+no_entry+doing;",
           "because",
           "of",
           "the",
