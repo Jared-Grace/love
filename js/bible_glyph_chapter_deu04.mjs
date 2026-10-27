@@ -749,7 +749,7 @@ export function bible_glyph_chapter_deu04() {
           "that",
           "I",
           "would",
-          "not",
+          "$zero+manner",
           "cross",
           "the",
           "$pointing_down+proper_name",
