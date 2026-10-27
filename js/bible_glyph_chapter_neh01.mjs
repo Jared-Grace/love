@@ -380,7 +380,7 @@ export function bible_glyph_chapter_neh01() {
           "Your",
           "ear",
           "be",
-          "attentive",
+          "$ear_with_hearing_aid+describing",
           "to",
           "the",
           "$hands_praying+thing",
