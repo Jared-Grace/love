@@ -685,7 +685,7 @@ export function bible_glyph_chapter_jdg06() {
           "of",
           "the",
           "$white_cane+walking",
-          "that",
+          "$back+flashlight",
           "was",
           "in",
           "his",
