@@ -423,7 +423,7 @@ export function bible_glyph_chapter_2sa05() {
           "from",
           "$city+peace,",
           "and",
-          "more",
+          "$repeat",
           "$son",
           "and",
           "$woman",
