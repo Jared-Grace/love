@@ -292,7 +292,7 @@ export function bible_glyph_chapter_gen24() {
           "to",
           "him",
           "$pointing_up",
-          "this",
+          "$flashlight",
           "$speech.",
         ],
       },
