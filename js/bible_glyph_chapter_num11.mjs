@@ -104,7 +104,7 @@ export function bible_glyph_chapter_num11() {
         words: [
           "Meanwhile",
           "the",
-          "rabble",
+          "$crowd+shuffle",
           "among",
           "them",
           "had",
