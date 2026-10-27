@@ -484,7 +484,7 @@ export function bible_glyph_chapter_pro08() {
           "established",
           "the",
           "$sky,",
-          "I",
+          "$me",
           "was",
           "$telescope,",
           "when",
