@@ -188,7 +188,7 @@ export function bible_glyph_chapter_mic07() {
           "$pointing",
           "a",
           "$son",
-          "dishonors",
+          "$fallen_leaf+doing",
           "his",
           "$father,",
           "a",
