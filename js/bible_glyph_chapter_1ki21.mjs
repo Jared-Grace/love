@@ -916,7 +916,7 @@ export function bible_glyph_chapter_1ki21() {
           "had",
           "driven",
           "out",
-          "before",
+          "$face",
           "the",
           "$son",
           "of",
