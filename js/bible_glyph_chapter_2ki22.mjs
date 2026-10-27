@@ -136,7 +136,7 @@ export function bible_glyph_chapter_2ki22() {
           "him",
           "count",
           "the",
-          "money",
+          "$silver",
           "that",
           "has",
           "been",
