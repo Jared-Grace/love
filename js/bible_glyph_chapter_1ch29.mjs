@@ -142,7 +142,7 @@ export function bible_glyph_chapter_1ch29() {
           "personal",
           "treasures",
           "of",
-          "gold",
+          "$gold",
           "and",
           "silver,",
           "over",
