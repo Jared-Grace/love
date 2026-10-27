@@ -705,7 +705,7 @@ export function bible_glyph_chapter_1sa02() {
           "all",
           "$wrestling+heart_on_fire,",
           "and",
-          "how",
+          "$back+flashlight",
           "they",
           "were",
           "sleeping",
