@@ -152,7 +152,7 @@ export function bible_glyph_chapter_isa35() {
           "the",
           "lame",
           "will",
-          "leap",
+          "$leg+up_arrow+up_arrow+doing",
           "like",
           "a",
           "deer,",
