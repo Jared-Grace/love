@@ -136,7 +136,7 @@ export function bible_glyph_chapter_psa027() {
           "Him",
           "in",
           "His",
-          "temple.",
+          "$classical_building.",
         ],
       },
       {
