@@ -442,7 +442,7 @@ export function bible_glyph_chapter_isa43() {
       {
         verse_number: 14,
         words: [
-          "Thus",
+          "$flashlight+manner",
           "$speech",
           "the",
           "$i_am,",
