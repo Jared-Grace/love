@@ -461,7 +461,7 @@ export function bible_glyph_chapter_lev07() {
           "eaten",
           "on",
           "the",
-          "third",
+          "$third_place",
           "$sun,",
           "it",
           "$no_entry",
