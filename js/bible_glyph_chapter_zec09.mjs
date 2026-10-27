@@ -566,7 +566,7 @@ export function bible_glyph_chapter_zec09() {
       {
         verse_number: 17,
         words: [
-          "How",
+          "$flashlight+question",
           "lovely",
           "they",
           "will",
