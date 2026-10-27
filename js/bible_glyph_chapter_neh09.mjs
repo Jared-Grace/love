@@ -123,7 +123,7 @@ export function bible_glyph_chapter_neh09() {
           "$brick+proper_name,",
           "and",
           "$proper_name$Chenani",
-          "stood",
+          "$person+pointing_up",
           "on",
           "the",
           "raised",
