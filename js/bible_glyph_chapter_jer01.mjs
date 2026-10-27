@@ -344,7 +344,7 @@ export function bible_glyph_chapter_jer01() {
       {
         verse_number: 13,
         words: [
-          "Again",
+          "$second_place",
           "the",
           "$speech",
           "of",
