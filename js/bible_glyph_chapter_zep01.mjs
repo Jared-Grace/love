@@ -346,7 +346,7 @@ export function bible_glyph_chapter_zep01() {
           "dwellers",
           "of",
           "the",
-          "Hollow,",
+          "$rock+hole+hammer,",
           "for",
           "all",
           "your",
