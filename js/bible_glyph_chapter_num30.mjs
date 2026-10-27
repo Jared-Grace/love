@@ -473,7 +473,7 @@ export function bible_glyph_chapter_num30() {
           "the",
           "vows",
           "and",
-          "pledges",
+          "$knot+thing",
           "that",
           "bind",
           "her.",
