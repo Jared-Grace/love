@@ -575,7 +575,7 @@ export function bible_glyph_chapter_num06() {
           "the",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "the",
           "Nazirite",
           "is",
