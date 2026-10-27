@@ -240,7 +240,7 @@ export function bible_glyph_chapter_exo23() {
           "and",
           "$crowd+doing",
           "its",
-          "produce,",
+          "$fruit+basket,",
         ],
       },
       {
