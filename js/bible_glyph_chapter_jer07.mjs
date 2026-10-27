@@ -49,7 +49,7 @@ export function bible_glyph_chapter_jer07() {
           "$speech",
           "of",
           "$i_am,",
-          "all",
+          "$all",
           "you",
           "people",
           "of",
