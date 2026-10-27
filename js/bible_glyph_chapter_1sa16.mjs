@@ -432,7 +432,7 @@ export function bible_glyph_chapter_1sa16() {
           "the",
           "$horn",
           "of",
-          "oil",
+          "$lotion_bottle",
           "and",
           "$oil+doing",
           "him",
