@@ -775,7 +775,7 @@ export function bible_glyph_chapter_num11() {
           "out",
           "and",
           "$mouth",
-          "to",
+          "$toward",
           "the",
           "$family",
           "the",
