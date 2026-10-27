@@ -615,7 +615,7 @@ export function bible_glyph_chapter_2sa12() {
           "$ear",
           "us.",
           "So",
-          "how",
+          "$question+likeness",
           "can",
           "we",
           "$speech",
