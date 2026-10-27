@@ -1276,7 +1276,7 @@ export function bible_glyph_chapter_jdg06() {
           "on",
           "the",
           "fleece",
-          "only,",
+          "$one+person,",
           "and",
           "all",
           "the",
