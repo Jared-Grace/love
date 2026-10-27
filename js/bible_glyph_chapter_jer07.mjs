@@ -1122,7 +1122,7 @@ export function bible_glyph_chapter_jer07() {
           "$voice",
           "of",
           "the",
-          "bride,",
+          "$bouquet,",
           "for",
           "the",
           "$earth",
