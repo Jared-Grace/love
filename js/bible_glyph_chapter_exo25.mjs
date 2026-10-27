@@ -32,7 +32,7 @@ export function bible_glyph_chapter_exo25() {
           "for",
           "me.",
           "From",
-          "every",
+          "$all",
           "$man_beard",
           "whose",
           "$heart_organ",
