@@ -720,7 +720,7 @@ export function bible_glyph_chapter_isa07() {
           "with",
           "bow",
           "and",
-          "arrow,",
+          "$arrow,",
           "for",
           "the",
           "$earth",
