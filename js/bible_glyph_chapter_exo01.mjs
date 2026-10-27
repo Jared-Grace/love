@@ -443,7 +443,7 @@ export function bible_glyph_chapter_exo01() {
           "So",
           "$heart_on_fire",
           "was",
-          "good",
+          "$thumbs_up+doing",
           "to",
           "the",
           "midwives,",
