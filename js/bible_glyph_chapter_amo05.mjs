@@ -366,7 +366,7 @@ export function bible_glyph_chapter_amo05() {
           "justice",
           "in",
           "the",
-          "gate.",
+          "$gate.",
         ],
       },
       {
