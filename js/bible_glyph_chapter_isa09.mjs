@@ -658,7 +658,7 @@ export function bible_glyph_chapter_isa09() {
           "all",
           "$flashlight,",
           "His",
-          "anger",
+          "$nose+fire",
           "is",
           "$no_entry",
           "$turn_back;",
