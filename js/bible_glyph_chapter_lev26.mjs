@@ -665,7 +665,7 @@ export function bible_glyph_chapter_lev26() {
           "children,",
           "$scissors",
           "your",
-          "livestock",
+          "$paw_prints",
           "and",
           "reduce",
           "your",
