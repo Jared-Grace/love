@@ -819,7 +819,7 @@ export function bible_glyph_chapter_deu32() {
       {
         verse_number: 30,
         words: [
-          "How",
+          "$question+likeness",
           "could",
           "one",
           "man",
