@@ -847,7 +847,7 @@ export function bible_glyph_chapter_gen41() {
           "$lightbulb,",
           "$face",
           "the",
-          "famine",
+          "$famine",
           "that",
           "follows",
           "it",
