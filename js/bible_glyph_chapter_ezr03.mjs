@@ -507,7 +507,7 @@ export function bible_glyph_chapter_ezr03() {
           "had",
           "$eye",
           "the",
-          "first",
+          "$first_place",
           "$house,",
           "$voice",
           "when",
