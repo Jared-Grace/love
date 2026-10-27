@@ -170,7 +170,7 @@ export function bible_glyph_chapter_num36() {
           "And",
           "when",
           "the",
-          "Jubilee",
+          "$horn+party_popper",
           "comes",
           "for",
           "the",
