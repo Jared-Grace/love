@@ -530,7 +530,7 @@ export function bible_glyph_chapter_lev17() {
           "it",
           "must",
           "be",
-          "cut",
+          "$scissors",
           "off.",
         ],
       },
