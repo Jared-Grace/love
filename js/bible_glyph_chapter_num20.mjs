@@ -365,7 +365,7 @@ export function bible_glyph_chapter_num20() {
           "will",
           "$no_entry",
           "$footprints",
-          "this",
+          "$flashlight",
           "$church",
           "into",
           "the",
