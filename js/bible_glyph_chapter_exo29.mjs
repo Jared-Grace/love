@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_exo29() {
           "$no_entry",
           "be",
           "eaten,",
-          "because",
+          "$pointing",
           "it",
           "is",
           "$sparkle+thing.",
