@@ -788,7 +788,7 @@ export function bible_glyph_chapter_jos24() {
           "rid",
           "of",
           "the",
-          "foreign",
+          "$detective+thing",
           "$moai",
           "among",
           "you",
