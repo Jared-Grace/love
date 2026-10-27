@@ -1011,7 +1011,7 @@ export function bible_glyph_chapter_gen43() {
           "$no_entry",
           "eat",
           "$bread",
-          "with",
+          "$safety_pin",
           "the",
           "$proper_name$Hebrews,",
           "since",
