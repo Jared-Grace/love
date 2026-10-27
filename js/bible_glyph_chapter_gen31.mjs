@@ -168,7 +168,7 @@ export function bible_glyph_chapter_gen31() {
           "my",
           "$coin+hammer+thing",
           "$ten",
-          "times,",
+          "$input_numbers+thing,",
           "but",
           "$heart_on_fire",
           "$no_entry",
