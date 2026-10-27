@@ -524,7 +524,7 @@ export function bible_glyph_chapter_gen12() {
           "did",
           "you",
           "$no_entry",
-          "tell",
+          "$newspaper",
           "me",
           "she",
           "was",
