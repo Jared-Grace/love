@@ -17,7 +17,7 @@ export function bible_glyph_chapter_gen42() {
           "When",
           "$hand+foot",
           "$eye",
-          "that",
+          "$pointing",
           "there",
           "was",
           "grain",
