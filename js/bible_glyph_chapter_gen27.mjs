@@ -631,7 +631,7 @@ export function bible_glyph_chapter_gen27() {
           "$pointing",
           "his",
           "$hand",
-          "were",
+          "$link",
           "hairy",
           "like",
           "the",
