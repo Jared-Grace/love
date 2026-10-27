@@ -494,7 +494,7 @@ export function bible_glyph_chapter_exo35() {
           "the",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "for",
           "all",
           "its",
