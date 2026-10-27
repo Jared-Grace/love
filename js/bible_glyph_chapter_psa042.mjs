@@ -226,7 +226,7 @@ export function bible_glyph_chapter_psa042() {
         verse_number: 8,
         words: [
           "By",
-          "day",
+          "$sun+manner",
           "the",
           "$i_am",
           "decrees",
