@@ -847,7 +847,7 @@ export function bible_glyph_chapter_lev23() {
           "humble",
           "himself",
           "on",
-          "this",
+          "$flashlight",
           "$sun,",
           "he",
           "must",
