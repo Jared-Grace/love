@@ -441,7 +441,7 @@ export function bible_glyph_chapter_gen42() {
           "may",
           "be",
           "tested.",
-          "If",
+          "$traffic_light",
           "they",
           "are",
           "$no_entry",
