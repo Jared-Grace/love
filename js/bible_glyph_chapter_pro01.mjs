@@ -392,7 +392,7 @@ export function bible_glyph_chapter_pro01() {
           "In",
           "the",
           "main",
-          "concourse",
+          "$crowd+loudspeaker+doing",
           "she",
           "cries",
           "aloud;",
