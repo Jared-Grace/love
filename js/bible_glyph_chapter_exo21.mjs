@@ -687,7 +687,7 @@ export function bible_glyph_chapter_exo21() {
           "$fire+name_tag",
           "for",
           "$fire+name_tag,",
-          "wound",
+          "$kitchen_knife+blood",
           "for",
           "wound,",
           "stripe",
