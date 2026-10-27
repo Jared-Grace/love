@@ -77,7 +77,7 @@ export function bible_glyph_chapter_nam02() {
           "$might+person",
           "men",
           "are",
-          "red;",
+          "$red_circle+doing;",
           "the",
           "valiant",
           "$man_beard",
