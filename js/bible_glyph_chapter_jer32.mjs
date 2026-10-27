@@ -290,7 +290,7 @@ export function bible_glyph_chapter_jer32() {
           "and",
           "$speech",
           "me,",
-          "Please",
+          "$pleading",
           "$coin+hand_receiving",
           "my",
           "$field",
