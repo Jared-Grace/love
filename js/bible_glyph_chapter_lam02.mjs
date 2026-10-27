@@ -248,7 +248,7 @@ export function bible_glyph_chapter_lam02() {
           "has",
           "made",
           "Zion",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "her",
           "appointed",
           "feasts",
