@@ -323,7 +323,7 @@ export function bible_glyph_chapter_lam02() {
           "$i_am",
           "$thinking+doing",
           "to",
-          "destroy",
+          "$collision",
           "the",
           "wall",
           "of",
