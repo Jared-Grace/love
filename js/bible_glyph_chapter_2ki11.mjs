@@ -102,7 +102,7 @@ export function bible_glyph_chapter_2ki11() {
           "with",
           "his",
           "nurse,",
-          "hidden",
+          "$ninja+tray_in+doing",
           "in",
           "the",
           "$house",
