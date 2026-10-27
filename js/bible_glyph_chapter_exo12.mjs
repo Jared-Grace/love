@@ -624,7 +624,7 @@ export function bible_glyph_chapter_exo12() {
           "your",
           "$house.",
           "$pointing",
-          "anyone",
+          "$all",
           "$eating",
           "something",
           "leavened,",
