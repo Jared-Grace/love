@@ -591,7 +591,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 33,
         words: [
-          "For",
+          "$pointing",
           "He",
           "does",
           "$no_entry",
