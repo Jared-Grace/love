@@ -849,7 +849,7 @@ export function bible_glyph_chapter_jer23() {
           "$see_no_evil_monkey+place",
           "places",
           "where",
-          "I",
+          "$me",
           "$no_entry",
           "$eye",
           "him,",
