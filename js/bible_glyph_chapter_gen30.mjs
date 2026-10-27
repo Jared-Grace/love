@@ -513,7 +513,7 @@ export function bible_glyph_chapter_gen30() {
           "will",
           "honor",
           "me,",
-          "because",
+          "$pointing",
           "I",
           "have",
           "borne",
