@@ -526,7 +526,7 @@ export function bible_glyph_chapter_ezk47() {
           "$earth.",
           "On",
           "the",
-          "north",
+          "$compass+up_arrow",
           "$straight_ruler+round_pushpin",
           "it",
           "will",
