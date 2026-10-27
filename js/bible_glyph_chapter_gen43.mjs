@@ -961,7 +961,7 @@ export function bible_glyph_chapter_gen43() {
           "$footprints",
           "a",
           "private",
-          "room",
+          "$door+bed",
           "and",
           "wept",
           "there.",
