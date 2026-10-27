@@ -19,7 +19,7 @@ export function bible_glyph_chapter_exo26() {
           "tabernacle",
           "with",
           "$ten",
-          "curtains",
+          "$thread+tent",
           "of",
           "finely",
           "spun",
