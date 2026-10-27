@@ -740,7 +740,7 @@ export function bible_glyph_chapter_exo33() {
           "the",
           "$rock",
           "and",
-          "cover",
+          "$wing+doing",
           "you",
           "with",
           "My",
