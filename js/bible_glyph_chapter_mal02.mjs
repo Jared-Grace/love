@@ -484,7 +484,7 @@ export function bible_glyph_chapter_mal02() {
           "$woman",
           "of",
           "your",
-          "youth,",
+          "$child+flexed_biceps+thing,",
           "against",
           "whom",
           "you",
