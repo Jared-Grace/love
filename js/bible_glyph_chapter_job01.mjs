@@ -291,7 +291,7 @@ export function bible_glyph_chapter_job01() {
           "his",
           "$house",
           "and",
-          "all",
+          "$all",
           "that",
           "he",
           "owns",
