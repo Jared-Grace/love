@@ -604,7 +604,7 @@ export function bible_glyph_chapter_job31() {
           "in",
           "my",
           "enemy's",
-          "ruin,",
+          "$spear+broken_heart,",
           "or",
           "exulted",
           "when",
