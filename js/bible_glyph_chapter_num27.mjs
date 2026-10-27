@@ -62,7 +62,7 @@ export function bible_glyph_chapter_num27() {
         verse_number: 2,
         words: [
           "They",
-          "stood",
+          "$person+round_pushpin",
           "before",
           "$fishing_pole+proper_name,",
           "$proper_name$Eleazar",
