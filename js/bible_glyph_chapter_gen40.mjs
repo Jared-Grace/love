@@ -120,7 +120,7 @@ export function bible_glyph_chapter_gen40() {
           "$king",
           "of",
           "Egypt,",
-          "who",
+          "$back+flashlight",
           "were",
           "held",
           "in",
