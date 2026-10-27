@@ -349,7 +349,7 @@ export function bible_glyph_chapter_exo13() {
           "All",
           "the",
           "firstborn",
-          "males",
+          "$reminder_ribbon+thing",
           "of",
           "your",
           "$paw_prints",
