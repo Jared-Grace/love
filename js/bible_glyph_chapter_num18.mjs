@@ -161,7 +161,7 @@ export function bible_glyph_chapter_num18() {
           "$alien",
           "may",
           "come",
-          "near",
+          "$magnet+doing",
           "you.",
         ],
       },
