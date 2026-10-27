@@ -551,7 +551,7 @@ export function bible_glyph_chapter_deu32() {
           "are",
           "a",
           "perverse",
-          "generation,",
+          "$dna,",
           "$son",
           "of",
           "unfaithfulness.",
