@@ -559,7 +559,7 @@ export function bible_glyph_chapter_jdg02() {
           "them.",
           "They",
           "quickly",
-          "turned",
+          "$away+doing",
           "from",
           "the",
           "$road",
