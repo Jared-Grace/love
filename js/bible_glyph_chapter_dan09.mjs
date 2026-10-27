@@ -977,7 +977,7 @@ export function bible_glyph_chapter_dan09() {
           "there",
           "will",
           "be",
-          "war;",
+          "$crossed_swords;",
           "desolations",
           "have",
           "been",
