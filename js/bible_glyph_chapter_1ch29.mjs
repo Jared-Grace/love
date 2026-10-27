@@ -811,7 +811,7 @@ export function bible_glyph_chapter_1ch29() {
           "drank",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am",
