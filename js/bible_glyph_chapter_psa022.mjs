@@ -368,7 +368,7 @@ export function bible_glyph_chapter_psa022() {
           "$all",
           "my",
           "bones;",
-          "they",
+          "$pointing_back",
           "stare",
           "and",
           "$eye",
