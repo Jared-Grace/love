@@ -253,7 +253,7 @@ export function bible_glyph_chapter_nam01() {
           "to",
           "an",
           "end.",
-          "Affliction",
+          "$clamp",
           "will",
           "$no_entry",
           "rise",
