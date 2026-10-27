@@ -163,7 +163,7 @@ export function bible_glyph_chapter_nam02() {
         words: [
           "The",
           "river",
-          "gates",
+          "$gate",
           "are",
           "thrown",
           "open",
