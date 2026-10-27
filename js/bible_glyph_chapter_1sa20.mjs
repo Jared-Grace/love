@@ -19,7 +19,7 @@ export function bible_glyph_chapter_1sa20() {
         words: [
           "Then",
           "$two_hearts+proper_name",
-          "fled",
+          "$dashing_away",
           "from",
           "$proper_name$Naioth",
           "in",
