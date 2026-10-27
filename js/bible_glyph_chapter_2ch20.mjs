@@ -997,7 +997,7 @@ export function bible_glyph_chapter_2ch20() {
           "their",
           "$person_gesturing_ok,",
           "$turn_back",
-          "to",
+          "$toward",
           "$city+peace",
           "joyfully,",
           "for",
