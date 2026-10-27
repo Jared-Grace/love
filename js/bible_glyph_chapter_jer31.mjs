@@ -1378,7 +1378,7 @@ export function bible_glyph_chapter_jer31() {
           "Valley",
           "to",
           "the",
-          "east,",
+          "$east,",
           "to",
           "the",
           "$triangular_ruler+brick",
