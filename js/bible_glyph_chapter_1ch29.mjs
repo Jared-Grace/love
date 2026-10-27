@@ -40,7 +40,7 @@ export function bible_glyph_chapter_1ch29() {
           "The",
           "$tools",
           "is",
-          "great,",
+          "$top,",
           "because",
           "the",
           "palace",
