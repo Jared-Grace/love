@@ -161,7 +161,7 @@ export function bible_glyph_chapter_pro01() {
           "a",
           "garland",
           "of",
-          "grace",
+          "$heart_orange",
           "on",
           "your",
           "head",
