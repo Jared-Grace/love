@@ -964,7 +964,7 @@ export function bible_glyph_chapter_deu01() {
           "spite",
           "of",
           "all",
-          "this,",
+          "$flashlight,",
           "you",
           "did",
           "not",
