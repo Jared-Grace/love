@@ -483,7 +483,7 @@ export function bible_glyph_chapter_jer32() {
           "copy",
           "and",
           "the",
-          "open",
+          "$luggage+chains+doing",
           "copy",
           "of",
           "the",
