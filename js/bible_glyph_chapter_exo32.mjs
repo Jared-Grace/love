@@ -179,7 +179,7 @@ export function bible_glyph_chapter_exo32() {
           "shall",
           "be",
           "a",
-          "feast",
+          "$party_popper",
           "to",
           "the",
           "$i_am.",
