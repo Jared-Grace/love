@@ -274,7 +274,7 @@ export function bible_glyph_chapter_exo01() {
           "made",
           "their",
           "$sprout",
-          "bitter",
+          "$lemon+doing",
           "with",
           "hard",
           "labor",
