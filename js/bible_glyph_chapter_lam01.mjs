@@ -149,7 +149,7 @@ export function bible_glyph_chapter_lam01() {
           "maidens",
           "$broken_heart+crying_face+doing,",
           "and",
-          "she",
+          "$pointing_back",
           "herself",
           "is",
           "bitter",
