@@ -586,7 +586,7 @@ export function bible_glyph_chapter_psa022() {
       {
         verse_number: 27,
         words: [
-          "All",
+          "$all",
           "the",
           "ends",
           "of",
