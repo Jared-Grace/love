@@ -505,7 +505,7 @@ export function bible_glyph_chapter_gen17() {
           "And",
           "$father+map",
           "$speech",
-          "to",
+          "$toward",
           "$heart_on_fire,",
           '"O',
           "that",
