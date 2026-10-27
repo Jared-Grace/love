@@ -112,7 +112,7 @@ export function bible_glyph_chapter_psa091() {
           "$no_entry",
           "$fear+doing",
           "the",
-          "terror",
+          "$fearful_face",
           "of",
           "the",
           "$night,",
