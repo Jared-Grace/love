@@ -330,7 +330,7 @@ export function bible_glyph_chapter_jer01() {
           "$eye",
           "$thumbs_up+doing,",
           "$pointing",
-          "I",
+          "$me",
           "am",
           "watching",
           "over",
