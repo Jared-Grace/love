@@ -970,7 +970,7 @@ export function bible_glyph_chapter_num15() {
           "had",
           "$no_entry",
           "been",
-          "declared",
+          "$divide+voice+doing",
           "what",
           "should",
           "be",
