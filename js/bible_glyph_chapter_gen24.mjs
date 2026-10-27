@@ -1660,7 +1660,7 @@ export function bible_glyph_chapter_gen24() {
           "up",
           "the",
           "next",
-          "morning,",
+          "$morning,",
           "he",
           "$speech,",
           "$hand_sending",
