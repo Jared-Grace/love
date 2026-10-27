@@ -767,7 +767,7 @@ export function bible_glyph_chapter_dan09() {
           "$clock",
           "of",
           "the",
-          "evening",
+          "$sunset",
           "$grain_offering.",
         ],
       },
