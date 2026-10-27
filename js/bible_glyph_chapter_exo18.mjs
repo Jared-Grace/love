@@ -84,7 +84,7 @@ export function bible_glyph_chapter_exo18() {
           "was",
           "$name_tag",
           "$proper_name$Gershom,",
-          "for",
+          "$pointing",
           "Moses",
           "had",
           "$speech,",
