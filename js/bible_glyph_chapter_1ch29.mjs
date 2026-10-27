@@ -168,7 +168,7 @@ export function bible_glyph_chapter_1ch29() {
           "of",
           "$gold,",
           "the",
-          "gold",
+          "$gold",
           "of",
           "$proper_name$Ophir,",
           "and",
