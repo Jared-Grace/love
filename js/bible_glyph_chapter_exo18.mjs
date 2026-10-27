@@ -414,7 +414,7 @@ export function bible_glyph_chapter_exo18() {
           "the",
           "$family",
           "stood",
-          "around",
+          "$pointing_up",
           "$fishing_pole+proper_name",
           "from",
           "morning",
