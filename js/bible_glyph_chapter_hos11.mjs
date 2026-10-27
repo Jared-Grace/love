@@ -356,7 +356,7 @@ export function bible_glyph_chapter_hos11() {
           "but",
           "$hands_raised+proper_name",
           "$repeat",
-          "walks",
+          "$running+around+doing",
           "with",
           "$heart_on_fire",
           "and",
