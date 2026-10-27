@@ -737,7 +737,7 @@ export function bible_glyph_chapter_gen26() {
           "pitched",
           "his",
           "$tent",
-          "there,",
+          "$telescope,",
           "and",
           "the",
           "$kneeling",
