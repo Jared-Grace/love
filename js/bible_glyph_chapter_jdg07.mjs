@@ -218,7 +218,7 @@ export function bible_glyph_chapter_jdg07() {
           "$leg+down_arrow+doing",
           "down",
           "to",
-          "drink.",
+          "$cup_with_straw.",
         ],
       },
       {
