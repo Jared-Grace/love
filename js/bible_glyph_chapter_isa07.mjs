@@ -119,7 +119,7 @@ export function bible_glyph_chapter_isa07() {
           "with",
           "your",
           "$son",
-          "Shear-jashub",
+          "$puzzle_piece+thing+turn_back+proper_name",
           "to",
           "$footprints+toward+doing",
           "$proper_name$Ahaz",
