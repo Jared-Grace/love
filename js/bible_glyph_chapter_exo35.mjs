@@ -364,7 +364,7 @@ export function bible_glyph_chapter_exo35() {
           "its",
           "utensils,",
           "the",
-          "basin",
+          "$bucket+soap",
           "with",
           "its",
           "stand,",
