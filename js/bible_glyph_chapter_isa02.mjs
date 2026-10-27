@@ -167,7 +167,7 @@ export function bible_glyph_chapter_isa02() {
           "$no_entry",
           "will",
           "they",
-          "train",
+          "$learner+doing",
           "for",
           "war",
           "anymore.",
