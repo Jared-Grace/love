@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_1ki20() {
           "$brick+shield",
           "$person+pointing_down",
           "on",
-          "twenty",
+          "$two+zero",
           "seven",
           "thousand",
           "$man_beard",
