@@ -1114,7 +1114,7 @@ export function bible_glyph_chapter_2ki09() {
           "$eyes,",
           "$thumbs_up+doing",
           "her",
-          "head,",
+          "$person_gesturing_ok,",
           "and",
           "looked",
           "down",
