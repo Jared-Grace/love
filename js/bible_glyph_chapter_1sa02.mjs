@@ -468,7 +468,7 @@ export function bible_glyph_chapter_1sa02() {
           "$hands_giving",
           "$meat",
           "to",
-          "roast",
+          "$fire+meat_on_bone+doing",
           "for",
           "the",
           "$priest,",
