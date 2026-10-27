@@ -377,7 +377,7 @@ export function bible_glyph_chapter_num25() {
           "$covenant",
           "of",
           "$hourglass",
-          "priesthood,",
+          "$priest+thing,",
           "because",
           "he",
           "was",
