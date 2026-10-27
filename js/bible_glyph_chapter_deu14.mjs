@@ -168,7 +168,7 @@ export function bible_glyph_chapter_deu14() {
           "a",
           "completely",
           "divided",
-          "hoof,",
+          "$cow_face+foot,",
           "you",
           "are",
           "$no_entry",
