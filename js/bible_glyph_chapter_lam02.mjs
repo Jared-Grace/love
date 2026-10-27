@@ -732,7 +732,7 @@ export function bible_glyph_chapter_lam02() {
           "and",
           "exalted",
           "the",
-          "horn",
+          "$horn",
           "of",
           "your",
           "foes.",
