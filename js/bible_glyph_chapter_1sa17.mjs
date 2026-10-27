@@ -104,7 +104,7 @@ export function bible_glyph_chapter_1sa17() {
           "$camp.",
           "He",
           "was",
-          "six",
+          "$six",
           "cubits",
           "and",
           "a",
