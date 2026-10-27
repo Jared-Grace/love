@@ -291,7 +291,7 @@ export function bible_glyph_chapter_2ch07() {
           "$proper_name$Lebo-hamath",
           "$finish",
           "the",
-          "Brook",
+          "$national_park",
           "of",
           "$clamp+proper_name.",
         ],
