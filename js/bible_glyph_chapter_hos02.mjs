@@ -484,7 +484,7 @@ export function bible_glyph_chapter_hos02() {
           "gateway",
           "of",
           "hope.",
-          "There",
+          "$telescope",
           "she",
           "will",
           "respond",
