@@ -781,7 +781,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "has",
           "invited",
-          "all",
+          "$all",
           "the",
           "$son",
           "of",
