@@ -1050,7 +1050,7 @@ export function bible_glyph_chapter_exo32() {
           "So",
           "$fishing_pole+proper_name",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "$i_am",
           "and",
