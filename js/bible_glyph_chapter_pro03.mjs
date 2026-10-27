@@ -363,7 +363,7 @@ export function bible_glyph_chapter_pro03() {
           "those",
           "who",
           "lay",
-          "hold",
+          "$hand+up_arrow+doing",
           "of",
           "her",
           "are",
