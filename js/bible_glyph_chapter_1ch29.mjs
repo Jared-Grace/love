@@ -163,7 +163,7 @@ export function bible_glyph_chapter_1ch29() {
         verse_number: 4,
         words: [
           "$three",
-          "thousand",
+          "$ten+all",
           "talents",
           "of",
           "gold,",
