@@ -787,7 +787,7 @@ export function bible_glyph_chapter_jer07() {
           "$earth",
           "of",
           "$clamp+proper_name",
-          "until",
+          "$finish",
           "this",
           "$sun,",
           "I",
