@@ -257,7 +257,7 @@ export function bible_glyph_chapter_exo25() {
           "on",
           "its",
           "$four",
-          "feet,",
+          "$drum,",
           "two",
           "$ring",
           "on",
