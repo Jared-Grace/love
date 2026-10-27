@@ -289,7 +289,7 @@ export function bible_glyph_chapter_isa11() {
           "$earth",
           "will",
           "be",
-          "full",
+          "$battery",
           "of",
           "the",
           "knowledge",
