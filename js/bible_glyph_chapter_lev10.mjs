@@ -298,7 +298,7 @@ export function bible_glyph_chapter_lev10() {
           "that",
           "you",
           "may",
-          "teach",
+          "$bow+toward",
           "$son",
           "of",
           "Israel",
