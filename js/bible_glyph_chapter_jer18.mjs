@@ -535,7 +535,7 @@ export function bible_glyph_chapter_jer18() {
           "the",
           "$priest,",
           "nor",
-          "counsel",
+          "$person_tipping_hand",
           "to",
           "the",
           "wise,",
