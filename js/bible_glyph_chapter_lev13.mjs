@@ -1543,7 +1543,7 @@ export function bible_glyph_chapter_lev13() {
           "any",
           "$garment",
           "$link",
-          "contaminated",
+          "$face_with_head_bandage",
           "with",
           "mildew,",
           "whether",
