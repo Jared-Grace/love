@@ -332,7 +332,7 @@ export function bible_glyph_chapter_deu01() {
           "increase",
           "you",
           "a",
-          "thousand",
+          "$ten+all",
           "times",
           "over",
           "and",
