@@ -149,7 +149,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "After",
           "them,",
-          "seven",
+          "$seven",
           "other",
           "heads",
           "of",
