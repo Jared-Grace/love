@@ -406,7 +406,7 @@ export function bible_glyph_chapter_deu05() {
           "any",
           "of",
           "your",
-          "livestock,",
+          "$paw_prints,",
           "nor",
           "the",
           "foreigner",
