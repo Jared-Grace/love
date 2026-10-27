@@ -706,7 +706,7 @@ export function bible_glyph_chapter_exo28() {
         verse_number: 27,
         words: [
           "$hammer+doing",
-          "two",
+          "$two",
           "additional",
           "$gold",
           "$ring",
