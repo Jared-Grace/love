@@ -153,7 +153,7 @@ export function bible_glyph_chapter_psa022() {
           "they",
           "sneer",
           "and",
-          "shake",
+          "$up_down_arrow+doing",
           "their",
           "heads:",
         ],
