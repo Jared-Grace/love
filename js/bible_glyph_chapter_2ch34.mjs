@@ -613,7 +613,7 @@ export function bible_glyph_chapter_2ch34() {
           "Shaphan",
           "$footprints",
           "the",
-          "book",
+          "$closed_book",
           "to",
           "the",
           "$king",
