@@ -627,7 +627,7 @@ export function bible_glyph_chapter_jer29() {
           "$microphone",
           "the",
           "$i_am,",
-          "which",
+          "$back+flashlight",
           "I",
           "sent",
           "$toward",
