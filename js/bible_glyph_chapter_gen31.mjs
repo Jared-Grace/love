@@ -1400,7 +1400,7 @@ export function bible_glyph_chapter_gen31() {
         words: [
           "and",
           "Mizpah,",
-          "because",
+          "$back+flashlight",
           "he",
           "$speech,",
           "May",
