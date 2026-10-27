@@ -289,7 +289,7 @@ export function bible_glyph_chapter_num12() {
           "$toward",
           "$fishing_pole+proper_name,",
           "$crown,",
-          "please",
+          "$pleading",
           "$no_entry",
           "hold",
           "against",
