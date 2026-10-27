@@ -536,7 +536,7 @@ export function bible_glyph_chapter_est01() {
           "causing",
           "them",
           "to",
-          "despise",
+          "$unamused_face+doing",
           "their",
           "husbands",
           "and",
