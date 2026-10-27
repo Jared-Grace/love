@@ -384,7 +384,7 @@ export function bible_glyph_chapter_zec08() {
           "be",
           "prosperous,",
           "the",
-          "vine",
+          "$vine",
           "will",
           "$hands_giving",
           "its",
