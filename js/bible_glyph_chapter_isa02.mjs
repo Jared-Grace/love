@@ -140,7 +140,7 @@ export function bible_glyph_chapter_isa02() {
           "and",
           "arbitrate",
           "for",
-          "many",
+          "$multiply",
           "$family.",
           "They",
           "will",
