@@ -87,7 +87,7 @@ export function bible_glyph_chapter_exo21() {
       {
         verse_number: 4,
         words: [
-          "If",
+          "$traffic_light",
           "his",
           "$crown",
           "$hands_giving",
