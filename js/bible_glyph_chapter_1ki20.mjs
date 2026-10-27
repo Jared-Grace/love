@@ -938,7 +938,7 @@ export function bible_glyph_chapter_1ki20() {
           "while",
           "the",
           "$proper_name$Arameans",
-          "covered",
+          "$battery",
           "the",
           "$earth.",
         ],
