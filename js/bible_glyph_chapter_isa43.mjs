@@ -269,7 +269,7 @@ export function bible_glyph_chapter_isa43() {
           "ears",
           "but",
           "are",
-          "deaf.",
+          "$deaf_person.",
         ],
       },
       {
