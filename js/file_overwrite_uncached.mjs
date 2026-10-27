@@ -1,15 +1,18 @@
-import { function_import_relative } from "./function_import_relative.mjs";
+import { browser_is } from "./browser_is.mjs";
+import { file_path_normalize } from "./file_path_normalize.mjs";
+import { browser_files_store } from "./browser_files_store.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { null_is } from "./null_is.mjs";
+import { text_empty_is } from "./text_empty_is.mjs";
 import { property_set } from "./property_set.mjs";
+import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { not } from "./not.mjs";
+import { property_get } from "./property_get.mjs";
 import { json_compress } from "./json_compress.mjs";
 import { indexeddb_put } from "./indexeddb_put.mjs";
 import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
-import { browser_files_store } from "./browser_files_store.mjs";
-import { file_path_normalize } from "./file_path_normalize.mjs";
-import { browser_is } from "./browser_is.mjs";
+import { function_import_relative } from "./function_import_relative.mjs";
 export async function file_overwrite_uncached(file_path, contents) {
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
@@ -31,6 +34,17 @@ export async function file_overwrite_uncached(file_path, contents) {
         property_set(previous, "deleted", true);
       } else {
         property_delete_if_exists(previous, "deleted");
+      }
+      ("THE FIRST WRITE SINCE THE LAST UPLOAD KEEPS WHAT WAS THERE BEFORE IT, and marks the file changed. Uploading then sends only the marked files, and tells the server what each was before, so the server can refuse a file changed on both sides. Finding the changed files by unpacking every stored file and counting its versions stopped finding anything the moment a file kept only one version.");
+      ("The earlier copy is kept still packed, so marking costs no unpacking and a write costs what it did.");
+      let marked = property_exists(previous, "changed");
+      if (not(marked)) {
+        let had = property_exists(previous, p);
+        if (had) {
+          let before = property_get(previous, p);
+          property_set(previous, "original", before);
+        }
+        property_set(previous, "changed", true);
       }
       let f = {
         ["versions"]: [contents],
