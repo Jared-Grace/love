@@ -315,7 +315,7 @@ export function bible_glyph_chapter_exo37() {
         verse_number: 13,
         words: [
           "He",
-          "cast",
+          "$pouring_liquid+fire",
           "for",
           "the",
           "table",
