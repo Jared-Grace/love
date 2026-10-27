@@ -91,7 +91,7 @@ export function bible_glyph_chapter_psa046() {
           "There",
           "is",
           "a",
-          "river",
+          "$water+national_park",
           "whose",
           "streams",
           "delight",
