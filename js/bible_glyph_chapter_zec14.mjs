@@ -353,7 +353,7 @@ export function bible_glyph_chapter_zec14() {
           "$gate,",
           "to",
           "the",
-          "Corner",
+          "$triangular_ruler+wall",
           "$gate,",
           "and",
           "from",
