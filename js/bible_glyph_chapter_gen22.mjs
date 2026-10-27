@@ -486,7 +486,7 @@ export function bible_glyph_chapter_gen22() {
           "I",
           "have",
           "sworn,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "that",
