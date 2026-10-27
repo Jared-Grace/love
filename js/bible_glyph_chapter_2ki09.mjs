@@ -492,7 +492,7 @@ export function bible_glyph_chapter_2ki09() {
           "$wrestling+heart_on_fire",
           "had",
           "been",
-          "defending",
+          "$guard",
           "Ramoth",
           "gilead",
           "against",
