@@ -242,7 +242,7 @@ export function bible_glyph_chapter_gen18() {
           "of",
           "the",
           "herd",
-          "that",
+          "$back+flashlight",
           "had",
           "been",
           "$hammer+doing,",
