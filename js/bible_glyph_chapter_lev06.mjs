@@ -174,7 +174,7 @@ export function bible_glyph_chapter_lev06() {
           "atonement",
           "for",
           "him",
-          "before",
+          "$face",
           "$i_am,",
           "and",
           "he",
