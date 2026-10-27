@@ -769,7 +769,7 @@ export function bible_glyph_chapter_jer07() {
           "$last_track",
           "and",
           "$no_entry",
-          "forward.",
+          "$face.",
         ],
       },
       {
