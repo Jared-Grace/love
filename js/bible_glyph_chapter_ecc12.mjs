@@ -163,7 +163,7 @@ export function bible_glyph_chapter_ecc12() {
           "the",
           "almond",
           "tree",
-          "blossoms",
+          "$thumbs_down+eyes+doing",
           "and",
           "the",
           "grasshopper",
