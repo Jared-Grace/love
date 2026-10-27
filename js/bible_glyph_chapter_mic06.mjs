@@ -359,7 +359,7 @@ export function bible_glyph_chapter_mic06() {
           "the",
           "city",
           "are",
-          "full",
+          "$battery",
           "of",
           "violence,",
           "and",
