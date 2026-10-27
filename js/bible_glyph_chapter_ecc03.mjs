@@ -522,7 +522,7 @@ export function bible_glyph_chapter_ecc03() {
           "all",
           "$link",
           "$tray_out",
-          "dust,",
+          "$dust,",
           "and",
           "all",
           "$turn_back",
