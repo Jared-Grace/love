@@ -396,7 +396,7 @@ export function bible_glyph_chapter_nam01() {
           "$name_tag.",
           "I",
           "will",
-          "cut",
+          "$scissors",
           "off",
           "the",
           "carved",
