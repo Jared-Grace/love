@@ -214,7 +214,7 @@ export function bible_glyph_chapter_deu04() {
           "of",
           "all",
           "these",
-          "statutes",
+          "$locked_with_pen",
           "and",
           "$speech,",
           "Surely",
