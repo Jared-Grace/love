@@ -542,7 +542,7 @@ export function bible_glyph_chapter_num20() {
           "$white_cane+doing",
           "to",
           "the",
-          "right",
+          "$hand+right_arrow",
           "or",
           "to",
           "the",
