@@ -503,7 +503,7 @@ export function bible_glyph_chapter_exo18() {
           "me",
           "to",
           "judge",
-          "between",
+          "$brain+arrow_both_ways",
           "one",
           "$man_beard",
           "and",
