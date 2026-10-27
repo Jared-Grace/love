@@ -761,7 +761,7 @@ export function bible_glyph_chapter_1ki12() {
           "of",
           "$hands_raised+proper_name,",
           "and",
-          "all",
+          "$all",
           "the",
           "$house",
           "of",
