@@ -110,7 +110,7 @@ export function bible_glyph_chapter_psa091() {
           "You",
           "will",
           "$no_entry",
-          "fear",
+          "$fear+doing",
           "the",
           "terror",
           "of",
