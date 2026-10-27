@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_1sa25() {
           "will",
           "have",
           "$no_entry",
-          "remorse",
+          "$rock+foot",
           "and",
           "no",
           "staggering",
