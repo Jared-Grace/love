@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_jer29() {
           "$ear+i_am",
           "the",
           "$proper_name$Nehelamite:",
-          "Because",
+          "$information",
           "$ear+i_am",
           "has",
           "prophesied",
