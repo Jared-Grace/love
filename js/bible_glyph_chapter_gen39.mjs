@@ -201,7 +201,7 @@ export function bible_glyph_chapter_gen39() {
           "$eating.",
           "Now",
           "$i_am+plus",
-          "was",
+          "$link",
           "well-built",
           "and",
           "handsome.",
