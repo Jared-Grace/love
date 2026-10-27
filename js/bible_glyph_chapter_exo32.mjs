@@ -34,7 +34,7 @@ export function bible_glyph_chapter_exo32() {
           "$proper_name$Aaron",
           "and",
           "$speech,",
-          "Come,",
+          "$person+pointing_up,",
           "$hammer+doing",
           "us",
           "$moai",
