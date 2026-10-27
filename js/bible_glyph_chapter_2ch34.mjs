@@ -237,7 +237,7 @@ export function bible_glyph_chapter_2ch34() {
         words: [
           "He",
           "tore",
-          "down",
+          "$wall+down_arrow+doing",
           "the",
           "$altar",
           "and",
