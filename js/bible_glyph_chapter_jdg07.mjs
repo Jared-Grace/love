@@ -584,7 +584,7 @@ export function bible_glyph_chapter_jdg07() {
           "has",
           "$hands_giving",
           "the",
-          "camp",
+          "$camp",
           "of",
           "$proper_name$Midian",
           "into",
