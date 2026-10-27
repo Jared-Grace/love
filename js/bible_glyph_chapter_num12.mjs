@@ -364,7 +364,7 @@ export function bible_glyph_chapter_num12() {
           "$mouth+water+away+doing",
           "in",
           "her",
-          "face,",
+          "$face,",
           "would",
           "she",
           "$no_entry",
