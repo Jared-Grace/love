@@ -373,7 +373,7 @@ export function bible_glyph_chapter_ezr01() {
           "hundred",
           "$toolbox",
           "of",
-          "gold",
+          "$gold",
           "and",
           "silver.",
           "$proper_name$Sheshbazzar",
