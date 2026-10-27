@@ -195,7 +195,7 @@ export function bible_glyph_chapter_psa042() {
           "$proper_name$Hermon,",
           "from",
           "$mountain",
-          "Mizar.",
+          "$pinching_hand+manner.",
         ],
       },
       {
