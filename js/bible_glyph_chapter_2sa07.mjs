@@ -27,7 +27,7 @@ export function bible_glyph_chapter_2sa07() {
           "had",
           "given",
           "him",
-          "rest",
+          "$seat+doing",
           "from",
           "all",
           "his",
