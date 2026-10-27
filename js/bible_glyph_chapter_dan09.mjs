@@ -402,7 +402,7 @@ export function bible_glyph_chapter_dan09() {
           "$thumbs_down.",
           "For",
           "under",
-          "all",
+          "$all",
           "of",
           "$sky,",
           "$no_entry",
