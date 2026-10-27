@@ -813,7 +813,7 @@ export function bible_glyph_chapter_2sa12() {
         words: [
           "Then",
           "$two_hearts+proper_name",
-          "comforted",
+          "$hug+doing",
           "his",
           "$woman",
           "Bathsheba,",
