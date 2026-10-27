@@ -351,7 +351,7 @@ export function bible_glyph_chapter_lam02() {
           "ramparts",
           "and",
           "walls",
-          "lament;",
+          "$loudly_crying+coffin;",
           "together",
           "they",
           "waste",
