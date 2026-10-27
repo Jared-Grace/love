@@ -486,7 +486,7 @@ export function bible_glyph_chapter_gen27() {
           '"Which',
           "one",
           "are",
-          "you,",
+          "$you,",
           "my",
           '$son?"',
         ],
