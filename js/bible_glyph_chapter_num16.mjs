@@ -742,7 +742,7 @@ export function bible_glyph_chapter_num16() {
           "up",
           "and",
           "$walking",
-          "to",
+          "$toward",
           "$proper_name$Dathan",
           "and",
           "$father+up_arrow,",
