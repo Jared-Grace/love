@@ -301,7 +301,7 @@ export function bible_glyph_chapter_pro04() {
           "travel",
           "on",
           "it.",
-          "Turn",
+          "$away+road+doing",
           "from",
           "it",
           "and",
