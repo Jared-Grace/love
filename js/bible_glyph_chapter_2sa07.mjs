@@ -141,7 +141,7 @@ export function bible_glyph_chapter_2sa07() {
       {
         verse_number: 6,
         words: [
-          "For",
+          "$pointing",
           "I",
           "have",
           "$no_entry",
