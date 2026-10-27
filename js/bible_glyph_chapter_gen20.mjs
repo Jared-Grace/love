@@ -91,7 +91,7 @@ export function bible_glyph_chapter_gen20() {
           "you",
           "$hand_receiving,",
           "for",
-          "she",
+          "$pointing_back",
           "is",
           "married",
           "to",
