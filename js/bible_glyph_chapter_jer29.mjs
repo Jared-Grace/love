@@ -20,7 +20,7 @@ export function bible_glyph_chapter_jer29() {
           "of",
           "the",
           "letter",
-          "that",
+          "$back+flashlight",
           "$up_arrow+i_am",
           "the",
           "$megaphone",
