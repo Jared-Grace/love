@@ -153,7 +153,7 @@ export function bible_glyph_chapter_pro04() {
           "and",
           "she",
           "will",
-          "exalt",
+          "$up_arrow",
           "you;",
           "if",
           "you",
