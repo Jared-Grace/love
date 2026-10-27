@@ -549,7 +549,7 @@ export function bible_glyph_chapter_num16() {
           "and",
           "$magnet+doing",
           "it",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "each",
