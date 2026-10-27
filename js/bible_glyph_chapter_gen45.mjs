@@ -643,7 +643,7 @@ export function bible_glyph_chapter_gen45() {
           "$son+right_arrow",
           "he",
           "$hands_giving",
-          "three",
+          "$three",
           "hundred",
           "shekels",
           "of",
