@@ -296,7 +296,7 @@ export function bible_glyph_chapter_gen42() {
           "all",
           "$son",
           "of",
-          "one",
+          "$one",
           "$man_beard.",
           "We",
           "are",
