@@ -171,7 +171,7 @@ export function bible_glyph_chapter_hos06() {
           "words",
           "of",
           "My",
-          "mouth,",
+          "$face_with_open_mouth,",
           "and",
           "My",
           "$scales+thing",
