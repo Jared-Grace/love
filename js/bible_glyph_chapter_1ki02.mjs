@@ -181,7 +181,7 @@ export function bible_glyph_chapter_1ki02() {
           "$hammer+doing",
           "to",
           "the",
-          "two",
+          "$two",
           "commanders",
           "of",
           "the",
