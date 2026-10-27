@@ -830,7 +830,7 @@ export function bible_glyph_chapter_1sa25() {
           "on",
           "$proper_name$Nabal,",
           "$pointing",
-          "he",
+          "$pointing_back",
           "lives",
           "up",
           "$toward",
