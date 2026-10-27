@@ -715,7 +715,7 @@ export function bible_glyph_chapter_num20() {
           "the",
           "$i_am",
           "$speech",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron,",
