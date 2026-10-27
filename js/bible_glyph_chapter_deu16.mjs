@@ -122,7 +122,7 @@ export function bible_glyph_chapter_deu16() {
           "that",
           "you",
           "may",
-          "remember",
+          "$reminder_ribbon",
           "for",
           "the",
           "rest",
