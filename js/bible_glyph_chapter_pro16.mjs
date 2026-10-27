@@ -179,7 +179,7 @@ export function bible_glyph_chapter_pro16() {
           "$ruler+thing",
           "than",
           "great",
-          "gain",
+          "$fruit+basket",
           "with",
           "$no_entry.",
         ],
