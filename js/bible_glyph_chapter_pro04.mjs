@@ -111,7 +111,7 @@ export function bible_glyph_chapter_pro04() {
         verse_number: 6,
         words: [
           "$no_entry",
-          "forsake",
+          "$derelict_house+doing",
           "wisdom,",
           "and",
           "she",
