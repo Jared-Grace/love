@@ -484,7 +484,7 @@ export function bible_glyph_chapter_exo32() {
           "your",
           "$seed",
           "$all",
-          "this",
+          "$flashlight",
           "$earth",
           "that",
           "I",
