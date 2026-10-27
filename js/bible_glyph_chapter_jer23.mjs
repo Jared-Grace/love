@@ -1119,7 +1119,7 @@ export function bible_glyph_chapter_jer23() {
         words: [
           "Now",
           "when",
-          "this",
+          "$flashlight",
           "$family",
           "or",
           "a",
