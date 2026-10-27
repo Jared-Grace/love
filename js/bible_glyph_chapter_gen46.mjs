@@ -206,7 +206,7 @@ export function bible_glyph_chapter_gen46() {
           "his",
           "$son",
           "$woman,",
-          "all",
+          "$all",
           "his",
           "$seed,",
           "he",
