@@ -1207,7 +1207,7 @@ export function bible_glyph_chapter_1ki18() {
           "have",
           "$hammer+doing",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$speech.",
         ],
       },
