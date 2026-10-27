@@ -366,7 +366,7 @@ export function bible_glyph_chapter_isa49() {
           "They",
           "will",
           "$person+sheep",
-          "along",
+          "$pointing_up",
           "the",
           "$road$s,",
           "and",
