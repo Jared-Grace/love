@@ -595,7 +595,7 @@ export function bible_glyph_chapter_exo32() {
           "The",
           "$voice",
           "of",
-          "war",
+          "$crossed_swords",
           "is",
           "in",
           "the",
