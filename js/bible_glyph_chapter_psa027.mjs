@@ -81,7 +81,7 @@ export function bible_glyph_chapter_psa027() {
           "$fear+doing;",
           "$traffic_light",
           "a",
-          "war",
+          "$crossed_swords",
           "breaks",
           "out",
           "against",
