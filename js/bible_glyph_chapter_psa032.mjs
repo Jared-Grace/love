@@ -273,7 +273,7 @@ export function bible_glyph_chapter_psa032() {
           "the",
           "$i_am",
           "and",
-          "rejoice,",
+          "$woman_dancing,",
           "O",
           "$ruler;",
           "shout",
