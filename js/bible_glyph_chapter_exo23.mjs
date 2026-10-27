@@ -955,7 +955,7 @@ export function bible_glyph_chapter_exo23() {
           "in",
           "your",
           "$earth,",
-          "lest",
+          "$no_entry+traffic_light",
           "they",
           "cause",
           "you",
