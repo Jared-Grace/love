@@ -1227,7 +1227,7 @@ export function bible_glyph_chapter_num16() {
           "to",
           "offer",
           "$incense",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "so",
