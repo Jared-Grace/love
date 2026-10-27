@@ -614,7 +614,7 @@ export function bible_glyph_chapter_lev13() {
           "a",
           "white",
           "$lifting+thing",
-          "or",
+          "$shuffle",
           "a",
           "reddish-white",
           "spot",
