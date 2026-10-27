@@ -734,7 +734,7 @@ export function bible_glyph_chapter_2sa06() {
           "humiliate",
           "myself",
           "even",
-          "more",
+          "$repeat",
           "than",
           "this,",
           "and",
