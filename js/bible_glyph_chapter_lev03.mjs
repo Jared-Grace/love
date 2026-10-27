@@ -149,7 +149,7 @@ export function bible_glyph_chapter_lev03() {
           "$altar",
           "atop",
           "$burnt_offering",
-          "that",
+          "$back+flashlight",
           "is",
           "on",
           "$tree",
