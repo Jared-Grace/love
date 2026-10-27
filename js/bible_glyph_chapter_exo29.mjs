@@ -151,7 +151,7 @@ export function bible_glyph_chapter_exo29() {
           "him",
           "with",
           "its",
-          "woven",
+          "$ribbon+yarn",
           "waistband.",
         ],
       },
