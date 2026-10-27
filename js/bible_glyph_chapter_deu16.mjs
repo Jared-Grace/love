@@ -648,7 +648,7 @@ export function bible_glyph_chapter_deu16() {
           "your",
           "tribes",
           "in",
-          "every",
+          "$all",
           "$gate",
           "that",
           "the",
