@@ -773,7 +773,7 @@ export function bible_glyph_chapter_2ki11() {
         words: [
           "$proper_name$Joash",
           "was",
-          "seven",
+          "$seven",
           "years",
           "$son",
           "when",
