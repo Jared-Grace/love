@@ -943,7 +943,7 @@ export function bible_glyph_chapter_deu31() {
           "and",
           "place",
           "it",
-          "beside",
+          "$pointing+person",
           "the",
           "$ark",
           "of",
