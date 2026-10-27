@@ -616,7 +616,7 @@ export function bible_glyph_chapter_exo29() {
           "his",
           "$son.",
           "Then",
-          "he",
+          "$pointing_back",
           "and",
           "his",
           "$garment",
