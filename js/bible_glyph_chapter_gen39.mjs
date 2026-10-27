@@ -370,7 +370,7 @@ export function bible_glyph_chapter_gen39() {
           "cloak",
           "and",
           "$speech,",
-          "Sleep",
+          "$bed+doing",
           "with",
           "me.",
           "But",
