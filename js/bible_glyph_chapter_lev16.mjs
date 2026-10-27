@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_lev16() {
           "burns",
           "them",
           "must",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "his",
           "$garment",
           "and",
