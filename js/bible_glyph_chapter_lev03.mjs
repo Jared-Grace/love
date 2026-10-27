@@ -324,7 +324,7 @@ export function bible_glyph_chapter_lev03() {
           "$priest",
           "is",
           "to",
-          "burn",
+          "$incense+doing",
           "them",
           "$altar",
           "$bread,",
