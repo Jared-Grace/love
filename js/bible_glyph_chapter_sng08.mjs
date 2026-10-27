@@ -283,7 +283,7 @@ export function bible_glyph_chapter_sng08() {
           "$pointing_back",
           "is",
           "a",
-          "door,",
+          "$door+thing,",
           "we",
           "will",
           "enclose",
