@@ -41,7 +41,7 @@ export function bible_glyph_chapter_1ki19() {
           "$hand_sending",
           "an",
           "$angel",
-          "to",
+          "$toward",
           "$heart_on_fire+i_am,",
           "$speech,",
           "May",
