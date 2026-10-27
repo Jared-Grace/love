@@ -753,7 +753,7 @@ export function bible_glyph_chapter_jos07() {
           "I",
           "urge",
           "you,",
-          "give",
+          "$palm_down",
           "$star",
           "to",
           "the",
