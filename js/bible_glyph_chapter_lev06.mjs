@@ -506,7 +506,7 @@ export function bible_glyph_chapter_lev06() {
           "offerings",
           "$i_am.",
           "Anything",
-          "that",
+          "$back+flashlight",
           "touches",
           "them",
           "$sparkle+doing.",
