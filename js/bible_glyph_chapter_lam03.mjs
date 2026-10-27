@@ -206,7 +206,7 @@ export function bible_glyph_chapter_lam03() {
           "tore",
           "me",
           "to",
-          "pieces;",
+          "$bear+divide+doing;",
           "He",
           "left",
           "me",
