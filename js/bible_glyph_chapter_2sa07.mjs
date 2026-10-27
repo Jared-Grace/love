@@ -77,7 +77,7 @@ export function bible_glyph_chapter_2sa07() {
           "$walking",
           "and",
           "$hammer+doing",
-          "all",
+          "$all",
           "that",
           "is",
           "in",
