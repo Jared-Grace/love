@@ -122,7 +122,7 @@ export function bible_glyph_chapter_hab02() {
           "$person_other",
           "is",
           "$no_entry",
-          "upright",
+          "$straight_ruler+thumbs_up+doing",
           "-",
           "but",
           "the",
