@@ -190,7 +190,7 @@ export function bible_glyph_chapter_ezr01() {
         words: [
           "So",
           "the",
-          "heads",
+          "$person_gesturing_ok",
           "of",
           "the",
           "$father",
