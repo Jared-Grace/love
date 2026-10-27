@@ -970,7 +970,7 @@ export function bible_glyph_chapter_gen44() {
           "let",
           "him",
           "return",
-          "with",
+          "$linked_paperclips",
           "his",
           "$brother.",
         ],
