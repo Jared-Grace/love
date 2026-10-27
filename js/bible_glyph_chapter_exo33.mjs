@@ -256,7 +256,7 @@ export function bible_glyph_chapter_exo33() {
           "$tent",
           "of",
           "$alarm_clock",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp.",
         ],
