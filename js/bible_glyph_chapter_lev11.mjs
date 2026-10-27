@@ -423,7 +423,7 @@ export function bible_glyph_chapter_lev11() {
           "$bird+crown,",
           "and",
           "the",
-          "bat.",
+          "$mouse+wing.",
         ],
       },
       {
