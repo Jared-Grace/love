@@ -783,7 +783,7 @@ export function bible_glyph_chapter_2ch20() {
           "to",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "His",
           "$gift",
           "endures",
