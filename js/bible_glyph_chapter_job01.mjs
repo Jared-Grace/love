@@ -273,7 +273,7 @@ export function bible_glyph_chapter_job01() {
           "fear",
           "$heart_on_fire",
           "for",
-          "nothing?",
+          "$heart_orange+manner?",
         ],
       },
       {
