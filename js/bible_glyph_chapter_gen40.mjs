@@ -389,7 +389,7 @@ export function bible_glyph_chapter_gen40() {
           "by",
           "mentioning",
           "me",
-          "to",
+          "$toward",
           "$house+proper_name,",
           "so",
           "that",
