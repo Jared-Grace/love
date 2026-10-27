@@ -329,7 +329,7 @@ export function bible_glyph_chapter_jer31() {
           "it",
           "in",
           "distant",
-          "coastlands:",
+          "$sea+round_pushpin:",
           "The",
           "One",
           "who",
