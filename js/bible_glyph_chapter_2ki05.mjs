@@ -1051,7 +1051,7 @@ export function bible_glyph_chapter_2ki05() {
           "Gehazi",
           "left",
           "his",
-          "presence,",
+          "$face,",
           "he",
           "was",
           "leprous,",
