@@ -931,7 +931,7 @@ export function bible_glyph_chapter_exo36() {
           "$four",
           "posts",
           "of",
-          "acacia",
+          "$tree+thorns",
           "wood",
           "and",
           "overlaid",
