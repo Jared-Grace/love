@@ -1057,7 +1057,7 @@ export function bible_glyph_chapter_lev16() {
           "be",
           "a",
           "$hourglass",
-          "statute",
+          "$statute",
           "for",
           "you.",
           "On",
