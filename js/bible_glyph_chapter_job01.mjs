@@ -41,7 +41,7 @@ export function bible_glyph_chapter_job01() {
       },
       {
         verse_number: 2,
-        words: ["He", "had", "$seven", "$son", "and", "three", "$woman."],
+        words: ["He", "had", "$seven", "$son", "and", "$three", "$woman."],
       },
       {
         verse_number: 3,
