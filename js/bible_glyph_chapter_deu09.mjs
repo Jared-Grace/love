@@ -442,7 +442,7 @@ export function bible_glyph_chapter_deu09() {
           "$speech",
           "to",
           "me:",
-          "Get",
+          "$person+pointing_up",
           "up",
           "and",
           "go",
