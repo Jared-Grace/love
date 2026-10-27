@@ -1142,7 +1142,7 @@ export function bible_glyph_chapter_gen31() {
           "$night,",
           "and",
           "sleep",
-          "fled",
+          "$bird+dashing_away+doing",
           "from",
           "my",
           "$eyes.",
