@@ -223,7 +223,7 @@ export function bible_glyph_chapter_psa091() {
           "you,",
           "and",
           "$no_entry",
-          "plague",
+          "$face_with_head_bandage",
           "will",
           "approach",
           "your",
