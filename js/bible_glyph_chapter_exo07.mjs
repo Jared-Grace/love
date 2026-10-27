@@ -770,7 +770,7 @@ export function bible_glyph_chapter_exo07() {
           "full",
           "$sun",
           "$battery",
-          "after",
+          "$next_track",
           "$i_am",
           "had",
           "struck",
