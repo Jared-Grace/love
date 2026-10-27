@@ -149,7 +149,7 @@ export function bible_glyph_chapter_jer07() {
           "you",
           "$no_entry",
           "longer",
-          "oppress",
+          "$fist+down_arrow+doing",
           "the",
           "$foreigner",
           "and",
