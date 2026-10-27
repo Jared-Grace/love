@@ -338,7 +338,7 @@ export function bible_glyph_chapter_gen48() {
           "to",
           "$eye",
           "your",
-          "face",
+          "$face",
           "again,",
           "but",
           "now",
