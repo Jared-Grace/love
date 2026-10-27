@@ -334,7 +334,7 @@ export function bible_glyph_chapter_lev01() {
           "them",
           "atop",
           "$tree",
-          "that",
+          "$back+flashlight",
           "is",
           "on",
           "the",
