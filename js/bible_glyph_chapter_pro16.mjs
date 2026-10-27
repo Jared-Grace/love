@@ -38,7 +38,7 @@ export function bible_glyph_chapter_pro16() {
       {
         verse_number: 2,
         words: [
-          "All",
+          "$all",
           "a",
           "$man_beard",
           "$road",
