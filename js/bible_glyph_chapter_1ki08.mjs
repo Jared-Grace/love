@@ -1192,7 +1192,7 @@ export function bible_glyph_chapter_1ki08() {
           "and",
           "they",
           "$hands_praying",
-          "toward",
+          "$toward",
           "this",
           "$place",
           "and",
