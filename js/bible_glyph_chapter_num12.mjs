@@ -220,7 +220,7 @@ export function bible_glyph_chapter_num12() {
           "$framed_picture+person",
           "of",
           "$i_am.",
-          "Why",
+          "$flashlight+question+lightbulb",
           "then",
           "were",
           "you",
