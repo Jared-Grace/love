@@ -336,7 +336,7 @@ export function bible_glyph_chapter_lev15() {
           "Any",
           "clay",
           "pot",
-          "that",
+          "$back+flashlight",
           "the",
           "man",
           "with",
