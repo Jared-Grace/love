@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_exo28() {
           "$hammer+doing",
           "an",
           "embroidered",
-          "sash.",
+          "$ribbon+garment.",
         ],
       },
       {
