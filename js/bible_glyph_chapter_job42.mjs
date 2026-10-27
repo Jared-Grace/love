@@ -127,7 +127,7 @@ export function bible_glyph_chapter_job42() {
       {
         verse_number: 7,
         words: [
-          "After",
+          "$next_track",
           "the",
           "$i_am",
           "had",
