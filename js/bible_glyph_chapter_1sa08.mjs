@@ -234,7 +234,7 @@ export function bible_glyph_chapter_1sa08() {
           "$kneeling+doing",
           "$plus+one",
           "$moai,",
-          "so",
+          "$right_arrow",
           "they",
           "are",
           "$hammer+doing",
