@@ -316,7 +316,7 @@ export function bible_glyph_chapter_gen22() {
           "the",
           "knife",
           "to",
-          "slaughter",
+          "$kitchen_knife+doing",
           "his",
           "$son.",
         ],
