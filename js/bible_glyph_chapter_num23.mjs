@@ -91,7 +91,7 @@ export function bible_glyph_chapter_num23() {
           "me",
           "I",
           "will",
-          "tell",
+          "$newspaper",
           "you.",
           "So",
           "$proper_name$Balaam",
