@@ -414,7 +414,7 @@ export function bible_glyph_chapter_exo36() {
           "$hammer+doing",
           "$five+zero",
           "$gold",
-          "clasps",
+          "$hook+link",
           "to",
           "join",
           "the",
