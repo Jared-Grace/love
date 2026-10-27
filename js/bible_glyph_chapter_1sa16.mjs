@@ -533,7 +533,7 @@ export function bible_glyph_chapter_1sa16() {
           "$harp+hand+doing",
           "the",
           "$harp.",
-          "Whenever",
+          "$link",
           "the",
           "$wind",
           "of",
