@@ -926,7 +926,7 @@ export function bible_glyph_chapter_gen18() {
           "the",
           "$crown,",
           "suppose",
-          "twenty",
+          "$two+zero",
           "are",
           "found",
           "$telescope.",
