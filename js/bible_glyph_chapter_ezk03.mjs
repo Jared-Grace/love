@@ -225,7 +225,7 @@ export function bible_glyph_chapter_ezk03() {
       {
         verse_number: 8,
         words: [
-          "Behold,",
+          "$exclamation,",
           "I",
           "have",
           "$hands_giving",
