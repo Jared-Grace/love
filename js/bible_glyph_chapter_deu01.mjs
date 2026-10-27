@@ -1247,7 +1247,7 @@ export function bible_glyph_chapter_deu01() {
           "his",
           "weapons",
           "of",
-          "war,",
+          "$crossed_swords,",
           "thinking",
           "it",
           "easy",
