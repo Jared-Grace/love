@@ -616,7 +616,7 @@ export function bible_glyph_chapter_gen22() {
         words: [
           "$proper_name$Uz",
           "the",
-          "firstborn,",
+          "$first_place+baby,",
           "his",
           "$brother",
           "$proper_name$Buz,",
