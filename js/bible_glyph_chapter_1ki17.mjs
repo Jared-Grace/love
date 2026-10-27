@@ -40,7 +40,7 @@ export function bible_glyph_chapter_1ki17() {
           "before",
           "whom",
           "I",
-          "stand,",
+          "$person+round_pushpin,",
           "there",
           "will",
           "be",
