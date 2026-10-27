@@ -733,7 +733,7 @@ export function bible_glyph_chapter_jdg16() {
           "her,",
           "bringing",
           "the",
-          "money",
+          "$silver",
           "in",
           "their",
           "$hand.",
