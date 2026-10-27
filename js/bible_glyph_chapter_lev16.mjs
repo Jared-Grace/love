@@ -93,7 +93,7 @@ export function bible_glyph_chapter_lev16() {
       {
         verse_number: 3,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "how",
           "$proper_name$Aaron",
