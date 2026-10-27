@@ -1180,7 +1180,7 @@ export function bible_glyph_chapter_gen30() {
           "$multiply",
           "$sheep,",
           "and",
-          "maidservants",
+          "$houses+female_sign",
           "and",
           "$kneeling,",
           "and",
