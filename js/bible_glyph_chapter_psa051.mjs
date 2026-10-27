@@ -201,7 +201,7 @@ export function bible_glyph_chapter_psa051() {
           "You",
           "have",
           "crushed",
-          "rejoice.",
+          "$woman_dancing.",
         ],
       },
       {
