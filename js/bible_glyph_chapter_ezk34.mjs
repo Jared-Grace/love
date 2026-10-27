@@ -841,7 +841,7 @@ export function bible_glyph_chapter_ezk34() {
           "down",
           "$rain+water_wave",
           "in",
-          "season,",
+          "$clock,",
           "$rain+water_wave",
           "of",
           "$speech+thumbs_up.",
