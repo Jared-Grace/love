@@ -548,7 +548,7 @@ export function bible_glyph_chapter_num08() {
           "so",
           "that",
           "$no_entry",
-          "plague",
+          "$fist+microbe+thing",
           "will",
           "come",
           "against",
