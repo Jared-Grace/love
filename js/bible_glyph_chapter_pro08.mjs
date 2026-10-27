@@ -568,7 +568,7 @@ export function bible_glyph_chapter_pro08() {
           "$sun",
           "by",
           "$sun,",
-          "rejoicing",
+          "$laughing",
           "in",
           "His",
           "presence",
