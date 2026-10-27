@@ -53,7 +53,7 @@ export function bible_glyph_chapter_exo08() {
           "let",
           "them",
           "go,",
-          "I",
+          "$me",
           "will",
           "plague",
           "your",
