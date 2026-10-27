@@ -519,7 +519,7 @@ export function bible_glyph_chapter_ezr03() {
           "this",
           "$house,",
           "but",
-          "many",
+          "$multiply",
           "others",
           "$voice.",
         ],
