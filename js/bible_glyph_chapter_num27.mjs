@@ -187,7 +187,7 @@ export function bible_glyph_chapter_num27() {
           "as",
           "an",
           "$inheritance",
-          "among",
+          "$radio_button",
           "the",
           "$brother",
           "of",
