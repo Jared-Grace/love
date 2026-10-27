@@ -504,7 +504,7 @@ export function bible_glyph_chapter_isa02() {
           "holes",
           "in",
           "the",
-          "ground,",
+          "$dust,",
           "away",
           "from",
           "the",
