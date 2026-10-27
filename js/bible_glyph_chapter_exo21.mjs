@@ -1011,7 +1011,7 @@ export function bible_glyph_chapter_exo21() {
           "$skull+doing,",
           "they",
           "must",
-          "sell",
+          "$coin+hands_giving",
           "the",
           "$sprout",
           "$ox",
