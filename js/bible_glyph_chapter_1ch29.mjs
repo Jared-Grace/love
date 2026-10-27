@@ -819,7 +819,7 @@ export function bible_glyph_chapter_1ch29() {
           "$sun",
           "with",
           "great",
-          "joy.",
+          "$beaming.",
           "Then",
           "for",
           "a",
