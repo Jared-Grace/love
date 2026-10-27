@@ -243,7 +243,7 @@ export function bible_glyph_chapter_gen50() {
         words: [
           "$chariot",
           "and",
-          "horsemen",
+          "$horse+doer",
           "alike",
           "went",
           "up",
