@@ -503,7 +503,7 @@ export function bible_glyph_chapter_1sa24() {
           "Whom",
           "are",
           "$you",
-          "pursuing?",
+          "$running+toward?",
           "A",
           "$skull+doing",
           "dog?",
