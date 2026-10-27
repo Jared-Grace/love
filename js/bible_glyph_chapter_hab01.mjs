@@ -252,7 +252,7 @@ export function bible_glyph_chapter_hab01() {
           "wind;",
           "they",
           "$crowd+doing",
-          "prisoners",
+          "$chains+person",
           "like",
           "$sea+brown_square.",
         ],
