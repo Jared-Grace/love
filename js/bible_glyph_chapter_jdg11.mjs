@@ -265,7 +265,7 @@ export function bible_glyph_chapter_jdg11() {
           "$speech",
           "to",
           "them,",
-          "If",
+          "$traffic_light",
           "you",
           "$turn_back",
           "me",
