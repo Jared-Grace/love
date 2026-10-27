@@ -2108,7 +2108,7 @@ export function bible_glyph_chapter_1ki08() {
           "there",
           "is",
           "no",
-          "other.",
+          "$repeat.",
         ],
       },
       {
