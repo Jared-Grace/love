@@ -115,7 +115,7 @@ export function bible_glyph_chapter_1sa20() {
           "and",
           "he",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I",
           "have",
           "found",
