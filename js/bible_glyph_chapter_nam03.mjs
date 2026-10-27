@@ -307,7 +307,7 @@ export function bible_glyph_chapter_nam03() {
       {
         verse_number: 12,
         words: [
-          "All",
+          "$all",
           "your",
           "fortresses",
           "are",
