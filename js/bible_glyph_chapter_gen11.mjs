@@ -19,7 +19,7 @@ export function bible_glyph_chapter_gen11() {
           "$earth",
           "had",
           "one",
-          "language",
+          "$kiss_mark",
           "and",
           "a",
           "common",
