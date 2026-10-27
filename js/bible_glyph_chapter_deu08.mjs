@@ -265,7 +265,7 @@ export function bible_glyph_chapter_deu08() {
           "$earth",
           "of",
           "$olive",
-          "oil",
+          "$lotion_bottle",
           "and",
           "honey,",
         ],
