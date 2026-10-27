@@ -552,7 +552,7 @@ export function bible_glyph_chapter_gen09() {
         verse_number: 20,
         words: [
           "Now",
-          "Noah,",
+          "$seat+proper_name,",
           "a",
           "$man_beard",
           "of",
