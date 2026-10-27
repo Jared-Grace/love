@@ -725,7 +725,7 @@ export function bible_glyph_chapter_lam01() {
           "O",
           "$i_am,",
           "how",
-          "distressed",
+          "$clamp+thing",
           "I",
           "am!",
           "I",
