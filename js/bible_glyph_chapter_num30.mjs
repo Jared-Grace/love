@@ -294,7 +294,7 @@ export function bible_glyph_chapter_num30() {
         verse_number: 9,
         words: [
           "The",
-          "vow",
+          "$saluting_face",
           "of",
           "a",
           "$widow",
