@@ -1042,7 +1042,7 @@ export function bible_glyph_chapter_exo28() {
           "front",
           "of",
           "the",
-          "turban.",
+          "$person_wearing_turban.",
         ],
       },
       {
