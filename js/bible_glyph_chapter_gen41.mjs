@@ -1425,7 +1425,7 @@ export function bible_glyph_chapter_gen41() {
           "$name_tag",
           "of",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "$proper_name$Manasseh,",
           "saying,",
           '"$heart_on_fire',
