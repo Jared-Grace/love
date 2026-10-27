@@ -451,7 +451,7 @@ export function bible_glyph_chapter_isa02() {
           "$proper_name$Tarshish",
           "and",
           "against",
-          "every",
+          "$all",
           "stately",
           "vessel.",
         ],
