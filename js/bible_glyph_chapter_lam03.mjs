@@ -573,7 +573,7 @@ export function bible_glyph_chapter_lam03() {
         verse_number: 32,
         words: [
           "$pointing",
-          "if",
+          "$traffic_light",
           "He",
           "causes",
           "grief,",
