@@ -952,7 +952,7 @@ export function bible_glyph_chapter_exo10() {
           "you",
           "$eye",
           "my",
-          "face",
+          "$face",
           "you",
           "will",
           "$skull+doing.",
