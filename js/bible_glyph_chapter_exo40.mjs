@@ -914,7 +914,7 @@ export function bible_glyph_chapter_exo40() {
           "was",
           "over",
           "the",
-          "tabernacle",
+          "$tent+house",
           "by",
           "day,",
           "and",
