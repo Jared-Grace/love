@@ -269,7 +269,7 @@ export function bible_glyph_chapter_deu07() {
           "and",
           "kept",
           "the",
-          "oath",
+          "$raised_back_of_hand",
           "He",
           "swore",
           "to",
