@@ -394,7 +394,7 @@ export function bible_glyph_chapter_lev17() {
           "your",
           "$person_other;",
           "for",
-          "it",
+          "$pointing_back",
           "is",
           "the",
           "$blood",
