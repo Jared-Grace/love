@@ -792,7 +792,7 @@ export function bible_glyph_chapter_deu32() {
           "$person_tipping_hand,",
           "with",
           "no",
-          "understanding",
+          "$brain+thing",
           "among",
           "them.",
         ],
