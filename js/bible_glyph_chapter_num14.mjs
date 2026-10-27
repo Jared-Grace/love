@@ -912,7 +912,7 @@ export function bible_glyph_chapter_num14() {
           "old",
           "or",
           "older,",
-          "because",
+          "$back+flashlight",
           "you",
           "have",
           "grumbled",
