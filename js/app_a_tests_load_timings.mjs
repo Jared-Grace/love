@@ -18,6 +18,7 @@ export async function app_a_tests_load_timings(stage_name) {
   let screen_ready = null;
   let screen_ready_again = null;
   let buttons = null;
+  let store_read = null;
   async function on_page(page) {
     function on_response(response) {
       let request = response.request();
@@ -51,6 +52,11 @@ export async function app_a_tests_load_timings(stage_name) {
     });
     let left4 = date_now_milliseconds();
     screen_ready_again = subtract(left4, again);
+    ("Reading every saved record once, the way the list of names is read at startup.");
+    ("Written as text because it runs inside the page, where none of this repo's functions exist.");
+    let store_read_time =
+      '(async () => { let db = await new Promise(r => { let o = indexedDB.open("files"); o.onsuccess = () => r(o.result); }); let t = performance.now(); let all = await new Promise(r => { let g = db.transaction("files").objectStore("files").getAll(); g.onsuccess = () => r(g.result); }); return { ms: Math.round(performance.now() - t), count: all.length, bytes: JSON.stringify(all).length }; })()';
+    store_read = await page.evaluate(store_read_time);
   }
   await playwright_test_blank(on_page);
   let r = {
@@ -58,6 +64,7 @@ export async function app_a_tests_load_timings(stage_name) {
     screen_ready,
     screen_ready_again,
     buttons,
+    store_read,
   };
   return r;
 }
