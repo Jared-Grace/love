@@ -55,7 +55,7 @@ export function bible_glyph_chapter_ezk03() {
           "fed",
           "me",
           "the",
-          "scroll.",
+          "$page_with_curl.",
         ],
       },
       {
