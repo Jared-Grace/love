@@ -260,7 +260,7 @@ export function bible_glyph_chapter_exo04() {
           "$voice",
           "of",
           "the",
-          "first",
+          "$first_place",
           "$placard,",
           "they",
           "may",
