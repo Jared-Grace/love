@@ -638,7 +638,7 @@ export function bible_glyph_chapter_1ki01() {
           "upon",
           "you,",
           "to",
-          "tell",
+          "$newspaper",
           "them",
           "who",
           "will",
