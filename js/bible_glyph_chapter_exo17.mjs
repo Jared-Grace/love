@@ -440,7 +440,7 @@ export function bible_glyph_chapter_exo17() {
           "$speech",
           "to",
           "$fishing_pole+proper_name,",
-          "Write",
+          "$writing_hand",
           "this",
           "on",
           "a",
