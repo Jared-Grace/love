@@ -832,7 +832,7 @@ export function bible_glyph_chapter_1ki21() {
           "Anyone",
           "belonging",
           "to",
-          "Ahab",
+          "$brother+father+proper_name",
           "who",
           "$skull+doing",
           "in",
