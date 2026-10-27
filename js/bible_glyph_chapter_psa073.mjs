@@ -492,7 +492,7 @@ export function bible_glyph_chapter_psa073() {
           "You",
           "will",
           "surely",
-          "perish;",
+          "$wilted_flower;",
           "You",
           "destroy",
           "all",
