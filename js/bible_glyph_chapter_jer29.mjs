@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_jer29() {
           "the",
           "exiles,",
           "$speech",
-          "what",
+          "$flashlight+manner",
           "the",
           "$i_am",
           "$speech",
