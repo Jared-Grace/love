@@ -147,7 +147,7 @@ export function bible_glyph_chapter_lev14() {
           "yarn,",
           "and",
           "the",
-          "hyssop,",
+          "$herb+bouquet,",
           "and",
           "dip",
           "them",
