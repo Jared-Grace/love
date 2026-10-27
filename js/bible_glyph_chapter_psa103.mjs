@@ -219,7 +219,7 @@ export function bible_glyph_chapter_psa103() {
           "for",
           "those",
           "who",
-          "fear",
+          "$fear+describing",
           "Him.",
         ],
       },
