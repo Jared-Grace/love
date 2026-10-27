@@ -589,7 +589,7 @@ export function bible_glyph_chapter_hos02() {
           "crawl",
           "on",
           "the",
-          "ground.",
+          "$brown_square.",
           "And",
           "I",
           "will",
