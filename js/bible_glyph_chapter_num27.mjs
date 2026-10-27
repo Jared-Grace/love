@@ -611,7 +611,7 @@ export function bible_glyph_chapter_num27() {
           "and",
           "had",
           "him",
-          "stand",
+          "$person+round_pushpin",
           "before",
           "$proper_name$Eleazar",
           "the",
