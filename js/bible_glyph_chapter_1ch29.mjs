@@ -786,7 +786,7 @@ export function bible_glyph_chapter_1ch29() {
           "and",
           "a",
           "$ten+all",
-          "lambs,",
+          "$lamb,",
           "along",
           "with",
           "their",
