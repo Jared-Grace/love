@@ -898,7 +898,7 @@ export function bible_glyph_chapter_exo08() {
         words: [
           "$house+proper_name",
           "$speech,",
-          "I",
+          "$me",
           "will",
           "let",
           "you",
