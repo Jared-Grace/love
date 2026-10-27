@@ -193,7 +193,7 @@ export function bible_glyph_chapter_gen39() {
           "$lightbulb",
           "himself",
           "with",
-          "anything",
+          "$package+question",
           "except",
           "the",
           "$bread",
