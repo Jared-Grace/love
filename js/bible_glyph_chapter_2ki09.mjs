@@ -493,7 +493,7 @@ export function bible_glyph_chapter_2ki09() {
           "had",
           "been",
           "$guard",
-          "Ramoth",
+          "$up_arrow+compass+down_arrow+proper_name",
           "gilead",
           "against",
           "$proper_name$Hazael",
