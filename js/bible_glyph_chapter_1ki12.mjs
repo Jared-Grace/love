@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_1ki12() {
           "Jeroboam",
           "$hammer+doing",
           "a",
-          "feast",
+          "$party_popper",
           "on",
           "the",
           "fifteenth",
