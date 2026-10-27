@@ -953,7 +953,7 @@ export function bible_glyph_chapter_exo34() {
           "$lightbulb",
           "$pointing",
           "his",
-          "face",
+          "$face",
           "had",
           "become",
           "radiant",
