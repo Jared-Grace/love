@@ -245,7 +245,7 @@ export function bible_glyph_chapter_jer07() {
           "after",
           "$plus+one",
           "$moai",
-          "that",
+          "$back+flashlight",
           "you",
           "have",
           "$no_entry",
