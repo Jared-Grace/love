@@ -855,7 +855,7 @@ export function bible_glyph_chapter_exo29() {
           "$son",
           "of",
           "Israel,",
-          "for",
+          "$pointing",
           "it",
           "is",
           "the",
