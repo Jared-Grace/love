@@ -270,7 +270,7 @@ export function bible_glyph_chapter_isa55() {
           "than",
           "the",
           "$earth,",
-          "so",
+          "$right_arrow",
           "My",
           "$road",
           "are",
