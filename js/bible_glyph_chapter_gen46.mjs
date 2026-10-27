@@ -460,7 +460,7 @@ export function bible_glyph_chapter_gen46() {
           "$proper_name$Leah.",
           "They",
           "were",
-          "sixteen",
+          "$six",
           "$person_other",
           "in",
           "all.",
