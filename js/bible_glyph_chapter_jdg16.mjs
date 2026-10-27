@@ -870,7 +870,7 @@ export function bible_glyph_chapter_jdg16() {
           "of",
           "his",
           "head",
-          "began",
+          "$sewing_needle",
           "to",
           "grow",
           "back",
