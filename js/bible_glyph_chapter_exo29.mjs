@@ -682,7 +682,7 @@ export function bible_glyph_chapter_exo29() {
           "along",
           "with",
           "one",
-          "loaf",
+          "$flying_disc",
           "of",
           "$bread,",
           "one",
