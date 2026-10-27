@@ -403,7 +403,7 @@ export function bible_glyph_chapter_hab02() {
           "weary",
           "themselves",
           "in",
-          "vain?",
+          "$tray_out+droplet+thing?",
         ],
       },
       {
