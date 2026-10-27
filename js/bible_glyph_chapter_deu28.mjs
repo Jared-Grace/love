@@ -727,7 +727,7 @@ export function bible_glyph_chapter_deu28() {
           "$person_gesturing_ok",
           "will",
           "be",
-          "bronze,",
+          "$bronze,",
           "and",
           "the",
           "$earth",
