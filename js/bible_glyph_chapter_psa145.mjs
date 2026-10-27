@@ -313,7 +313,7 @@ export function bible_glyph_chapter_psa145() {
           "who",
           "are",
           "bowed",
-          "down.",
+          "$curving_up+person+doing.",
         ],
       },
       {
