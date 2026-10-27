@@ -75,7 +75,7 @@ export function bible_glyph_chapter_gen49() {
           "of",
           "my",
           "$battery+money_bag,",
-          "excelling",
+          "$takeout_box",
           "in",
           "honor,",
           "excelling",
