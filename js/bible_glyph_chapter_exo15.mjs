@@ -408,7 +408,7 @@ export function bible_glyph_chapter_exo15() {
           "power",
           "of",
           "Your",
-          "arm",
+          "$hand+might",
           "they",
           "will",
           "be",
