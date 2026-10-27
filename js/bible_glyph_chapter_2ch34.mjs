@@ -1280,7 +1280,7 @@ export function bible_glyph_chapter_2ch34() {
           "$son+right_arrow",
           "take",
           "a",
-          "stand",
+          "$person+round_pushpin",
           "in",
           "agreement",
           "to",
