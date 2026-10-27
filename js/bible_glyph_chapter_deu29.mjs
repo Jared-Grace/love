@@ -842,7 +842,7 @@ export function bible_glyph_chapter_deu29() {
           "LORD",
           "had",
           "$no_entry",
-          "given",
+          "$pizza+doing",
           "to",
           "them.",
         ],
