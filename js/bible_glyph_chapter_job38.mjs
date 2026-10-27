@@ -550,7 +550,7 @@ export function bible_glyph_chapter_job38() {
           "have",
           "a",
           "$father?",
-          "Who",
+          "$person+question",
           "has",
           "begotten",
           "the",
