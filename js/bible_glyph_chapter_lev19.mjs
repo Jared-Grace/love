@@ -150,7 +150,7 @@ export function bible_glyph_chapter_lev19() {
           "eaten",
           "on",
           "the",
-          "third",
+          "$third_place",
           "$sun,",
           "it",
           "is",
