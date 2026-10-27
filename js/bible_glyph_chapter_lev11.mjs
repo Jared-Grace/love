@@ -998,7 +998,7 @@ export function bible_glyph_chapter_lev11() {
         verse_number: 41,
         words: [
           "$all",
-          "creature",
+          "$lizard+crowd",
           "that",
           "moves",
           "along",
