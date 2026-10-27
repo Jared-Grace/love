@@ -782,7 +782,7 @@ export function bible_glyph_chapter_jer31() {
           "$turn_back",
           "them",
           "from",
-          "captivity,",
+          "$turn_back+chains,",
           "they",
           "will",
           "once",
