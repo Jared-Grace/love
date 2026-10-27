@@ -292,7 +292,7 @@ export function bible_glyph_chapter_num06() {
           "$priest",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "Tent",
