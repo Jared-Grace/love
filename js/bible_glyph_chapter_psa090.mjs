@@ -228,7 +228,7 @@ export function bible_glyph_chapter_psa090() {
           "$pointing",
           "they",
           "quickly",
-          "pass,",
+          "$fast_forward+away+doing,",
           "and",
           "we",
           "fly",
