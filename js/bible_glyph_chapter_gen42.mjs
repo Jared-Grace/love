@@ -625,7 +625,7 @@ export function bible_glyph_chapter_gen42() {
           "would",
           "$no_entry",
           "$ear.",
-          "Now",
+          "$exclamation",
           "we",
           "must",
           "account",
