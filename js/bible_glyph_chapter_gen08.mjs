@@ -640,7 +640,7 @@ export function bible_glyph_chapter_gen08() {
           "$cold_face",
           "and",
           "heat,",
-          "summer",
+          "$harvest+sun",
           "and",
           "winter,",
           "$sun",
