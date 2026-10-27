@@ -360,7 +360,7 @@ export function bible_glyph_chapter_2ki17() {
           "like",
           "the",
           "$map",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
