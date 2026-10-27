@@ -602,7 +602,7 @@ export function bible_glyph_chapter_gen18() {
           "$bow",
           "is",
           "so",
-          "grievous.",
+          "$star+doing.",
         ],
       },
       {
