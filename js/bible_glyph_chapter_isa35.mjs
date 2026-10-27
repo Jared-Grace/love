@@ -132,7 +132,7 @@ export function bible_glyph_chapter_isa35() {
           "$eyes",
           "of",
           "the",
-          "blind",
+          "$person_with_white_cane+describing",
           "will",
           "be",
           "opened",
