@@ -339,7 +339,7 @@ export function bible_glyph_chapter_mic03() {
           "$silver.",
           "Yet",
           "they",
-          "lean",
+          "$crutch+doing",
           "upon",
           "the",
           "$i_am,",
