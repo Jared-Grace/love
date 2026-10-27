@@ -619,7 +619,7 @@ export function bible_glyph_chapter_exo35() {
       {
         verse_number: 25,
         words: [
-          "Every",
+          "$all",
           "$woman",
           "skilled",
           "of",
