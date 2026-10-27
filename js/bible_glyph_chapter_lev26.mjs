@@ -882,7 +882,7 @@ export function bible_glyph_chapter_lev26() {
         words: [
           "I",
           "will",
-          "destroy",
+          "$bomb",
           "your",
           "high",
           "places,",
