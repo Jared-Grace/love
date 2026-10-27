@@ -837,7 +837,7 @@ export function bible_glyph_chapter_num22() {
           "turn",
           "to",
           "the",
-          "right",
+          "$hand+right_arrow",
           "or",
           "the",
           "left.",
