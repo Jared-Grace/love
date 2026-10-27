@@ -58,7 +58,7 @@ export function bible_glyph_chapter_deu08() {
           "$heart_on_fire",
           "$walking",
           "you",
-          "all",
+          "$all",
           "the",
           "$road",
           "these",
