@@ -79,7 +79,7 @@ export function bible_glyph_chapter_ezk01() {
           "$i_am",
           "came",
           "directly",
-          "to",
+          "$toward",
           "$might+heart_on_fire",
           "the",
           "$son",
