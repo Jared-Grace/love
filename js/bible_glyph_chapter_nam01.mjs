@@ -20,7 +20,7 @@ export function bible_glyph_chapter_nam01() {
           "against",
           "$proper_name$Nineveh,",
           "the",
-          "book",
+          "$closed_book",
           "of",
           "the",
           "vision",
