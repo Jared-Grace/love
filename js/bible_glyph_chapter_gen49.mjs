@@ -152,7 +152,7 @@ export function bible_glyph_chapter_gen49() {
           "a",
           "whim",
           "they",
-          "hamstring",
+          "$leg+kitchen_knife+doing",
           "$ox.",
         ],
       },
