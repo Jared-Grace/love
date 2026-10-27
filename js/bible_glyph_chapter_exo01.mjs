@@ -213,7 +213,7 @@ export function bible_glyph_chapter_exo01() {
           "the",
           "Egyptians",
           "appointed",
-          "taskmasters",
+          "$military_medal",
           "$pointing_up",
           "the",
           "Israelites",
