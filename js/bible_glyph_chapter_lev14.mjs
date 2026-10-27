@@ -1573,7 +1573,7 @@ export function bible_glyph_chapter_lev14() {
           "be",
           "unclean",
           "$finish",
-          "evening.",
+          "$sunset.",
         ],
       },
       {
