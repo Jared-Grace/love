@@ -749,7 +749,7 @@ export function bible_glyph_chapter_lev13() {
           "$traffic_light",
           "the",
           "spot",
-          "remains",
+          "$person+round_pushpin",
           "$down_arrow",
           "and",
           "does",
