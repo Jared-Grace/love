@@ -627,7 +627,7 @@ export function bible_glyph_chapter_num15() {
         verse_number: 24,
         words: [
           "and",
-          "if",
+          "$traffic_light",
           "it",
           "was",
           "$hammer+doing",
