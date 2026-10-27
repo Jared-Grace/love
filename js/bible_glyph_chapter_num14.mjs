@@ -192,7 +192,7 @@ export function bible_glyph_chapter_num14() {
           "$speech",
           "$toward",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "the",
