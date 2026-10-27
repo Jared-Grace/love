@@ -308,7 +308,7 @@ export function bible_glyph_chapter_psa116() {
           "$son",
           "of",
           "Your",
-          "maidservant.",
+          "$broom.",
           "You",
           "have",
           "broken",
