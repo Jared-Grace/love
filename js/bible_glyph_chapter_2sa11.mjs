@@ -716,7 +716,7 @@ export function bible_glyph_chapter_2sa11() {
           "close",
           "to",
           "the",
-          "wall?",
+          "$brick+shield?",
           "Then",
           "you",
           "are",
