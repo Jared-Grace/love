@@ -84,7 +84,7 @@ export function bible_glyph_chapter_zec03() {
           "$link",
           "dressed",
           "in",
-          "filthy",
+          "$pile_of_poo+coat",
           "$garment",
           "as",
           "he",
