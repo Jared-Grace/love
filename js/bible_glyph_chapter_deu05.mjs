@@ -105,7 +105,7 @@ export function bible_glyph_chapter_deu05() {
           "you",
           "$face",
           "to",
-          "face",
+          "$face",
           "out",
           "of",
           "the",
