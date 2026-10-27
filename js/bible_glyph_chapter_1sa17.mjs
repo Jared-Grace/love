@@ -1545,7 +1545,7 @@ export function bible_glyph_chapter_1sa17() {
           "$face+top.",
           "The",
           "$stone",
-          "sank",
+          "$down_arrow+sea+doing",
           "into",
           "his",
           "$face+top,",
