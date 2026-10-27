@@ -614,7 +614,7 @@ export function bible_glyph_chapter_2ki04() {
           "and",
           "$footprints",
           "him",
-          "to",
+          "$toward",
           "his",
           "$mother,",
           "the",
