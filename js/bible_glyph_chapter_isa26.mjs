@@ -175,7 +175,7 @@ export function bible_glyph_chapter_isa26() {
       {
         verse_number: 8,
         words: [
-          "Yes,",
+          "$plus+exclamation,",
           "we",
           "wait",
           "for",
