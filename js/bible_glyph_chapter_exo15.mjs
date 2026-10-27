@@ -341,7 +341,7 @@ export function bible_glyph_chapter_exo15() {
           "with",
           "Your",
           "$mechanical_arm",
-          "to",
+          "$toward",
           "Your",
           "$sparkle+thing",
           "dwelling.",
