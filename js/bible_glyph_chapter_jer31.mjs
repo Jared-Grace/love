@@ -205,7 +205,7 @@ export function bible_glyph_chapter_jer31() {
           "of",
           "the",
           "$map.",
-          "Make",
+          "$ear+loudspeaker",
           "your",
           "praises",
           "$ear,",
