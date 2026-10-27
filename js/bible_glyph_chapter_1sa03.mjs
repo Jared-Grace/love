@@ -569,7 +569,7 @@ export function bible_glyph_chapter_1sa03() {
           "and",
           "the",
           "$i_am",
-          "was",
+          "$link",
           "with",
           "him,",
           "and",
