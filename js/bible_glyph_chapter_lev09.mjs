@@ -587,7 +587,7 @@ export function bible_glyph_chapter_lev09() {
           "$burnt_offering",
           "and",
           "the",
-          "fat",
+          "$bacon",
           "portions",
           "on",
           "$altar.",
