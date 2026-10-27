@@ -201,7 +201,7 @@ export function bible_glyph_chapter_gen18() {
         words: [
           "Meanwhile,",
           "$father+map",
-          "ran",
+          "$running",
           "to",
           "the",
           "herd,",
