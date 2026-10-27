@@ -86,7 +86,7 @@ export function bible_glyph_chapter_gen05() {
           "after",
           "his",
           "own",
-          "image,",
+          "$framed_picture,",
           "and",
           "called",
           "his",
