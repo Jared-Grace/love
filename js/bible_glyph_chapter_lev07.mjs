@@ -759,7 +759,7 @@ export function bible_glyph_chapter_lev07() {
           "together",
           "with",
           "the",
-          "breast.",
+          "$heart_organ+meat.",
           "$footprints",
           "the",
           "breast",
