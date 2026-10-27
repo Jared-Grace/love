@@ -444,7 +444,7 @@ export function bible_glyph_chapter_gen43() {
           "$baby+no_entry+doing,",
           "I",
           "am",
-          "bereaved.",
+          "$baby+no_entry+doing.",
         ],
       },
       {
