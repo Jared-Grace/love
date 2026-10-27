@@ -186,7 +186,7 @@ export function bible_glyph_chapter_hos02() {
           "her",
           "with",
           "a",
-          "wall,",
+          "$wall+around+doing,",
           "so",
           "she",
           "$no_entry",
