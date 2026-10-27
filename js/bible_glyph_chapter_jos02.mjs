@@ -789,7 +789,7 @@ export function bible_glyph_chapter_jos02() {
           "$proper_name$Nun",
           "and",
           "reported",
-          "all",
+          "$all",
           "that",
           "had",
           "happened",
