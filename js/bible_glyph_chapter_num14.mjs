@@ -1209,7 +1209,7 @@ export function bible_glyph_chapter_num14() {
           "$mouth",
           "$flashlight+flashlight",
           "$speech",
-          "to",
+          "$toward",
           "all",
           "the",
           "$son",
