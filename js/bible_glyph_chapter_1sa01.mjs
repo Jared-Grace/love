@@ -384,7 +384,7 @@ export function bible_glyph_chapter_1sa01() {
           "the",
           "$i_am,",
           "$pointing_up+proper_name",
-          "watched",
+          "$guard",
           "her",
           "mouth.",
         ],
