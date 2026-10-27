@@ -454,7 +454,7 @@ export function bible_glyph_chapter_lev14() {
           "to",
           "the",
           "$priest;",
-          "it",
+          "$pointing_back",
           "is",
           "most",
           "$sparkle+thing,",
