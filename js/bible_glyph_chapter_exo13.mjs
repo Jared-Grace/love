@@ -502,7 +502,7 @@ export function bible_glyph_chapter_exo13() {
           "between",
           "your",
           "$eyes,",
-          "for",
+          "$pointing",
           "$i_am",
           "brought",
           "us",
