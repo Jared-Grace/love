@@ -564,7 +564,7 @@ export function bible_glyph_chapter_lev06() {
           "oil",
           "$pointing_up",
           "a",
-          "griddle.",
+          "$cooking+bread.",
           "$footprints",
           "it",
           "well",
