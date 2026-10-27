@@ -274,7 +274,7 @@ export function bible_glyph_chapter_1sa03() {
           "lie",
           "down,",
           "and",
-          "if",
+          "$traffic_light",
           "He",
           "calls",
           "you,",
