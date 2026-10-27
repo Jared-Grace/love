@@ -1070,7 +1070,7 @@ export function bible_glyph_chapter_exo32() {
           "themselves",
           "$moai",
           "of",
-          "gold.",
+          "$gold.",
         ],
       },
       {
