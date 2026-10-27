@@ -398,7 +398,7 @@ export function bible_glyph_chapter_jer29() {
         words: [
           "You",
           "will",
-          "seek",
+          "$magnifying_glass",
           "Me",
           "and",
           "find",
