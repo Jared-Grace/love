@@ -359,7 +359,7 @@ export function bible_glyph_chapter_pro31() {
           "$thumbs_up,",
           "and",
           "her",
-          "lamp",
+          "$lamp",
           "is",
           "$no_entry",
           "$fire+no_entry+doing",
