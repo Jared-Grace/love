@@ -1129,7 +1129,7 @@ export function bible_glyph_chapter_jer23() {
           "$priest",
           "asks",
           "you,",
-          "What",
+          "$flashlight+question",
           "is",
           "the",
           "burden",
