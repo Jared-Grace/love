@@ -924,7 +924,7 @@ export function bible_glyph_chapter_jos06() {
           "cost",
           "of",
           "his",
-          "firstborn",
+          "$first_place+baby",
           "he",
           "will",
           "lay",
