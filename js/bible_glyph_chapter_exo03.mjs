@@ -650,7 +650,7 @@ export function bible_glyph_chapter_exo03() {
           "your",
           "$voice,",
           "and",
-          "you",
+          "$you",
           "must",
           "$footprints",
           "with",
