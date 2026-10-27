@@ -156,7 +156,7 @@ export function bible_glyph_chapter_lev01() {
           "$altar",
           "at",
           "the",
-          "entrance",
+          "$door",
           "$tent",
           "of",
           "Meeting.",
