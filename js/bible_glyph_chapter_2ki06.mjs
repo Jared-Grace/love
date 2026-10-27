@@ -813,7 +813,7 @@ export function bible_glyph_chapter_2ki06() {
           "was",
           "a",
           "great",
-          "famine",
+          "$famine",
           "in",
           "$guard+proper_name.",
           "Indeed,",
