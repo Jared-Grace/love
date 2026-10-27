@@ -363,7 +363,7 @@ export function bible_glyph_chapter_num11() {
           "infant,",
           "to",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "You",
           "swore",
