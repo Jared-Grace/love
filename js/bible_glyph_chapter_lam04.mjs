@@ -190,7 +190,7 @@ export function bible_glyph_chapter_lam04() {
           "were",
           "brighter",
           "than",
-          "snow,",
+          "$snow,",
           "whiter",
           "than",
           "milk;",
