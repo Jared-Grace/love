@@ -415,7 +415,7 @@ export function bible_glyph_chapter_deu09() {
           "the",
           "$stop_sign",
           "of",
-          "forty",
+          "$four+zero",
           "$sun",
           "and",
           "forty",
