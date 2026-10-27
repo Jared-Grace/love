@@ -1477,7 +1477,7 @@ export function bible_glyph_chapter_2ki04() {
           "and",
           "had",
           "some",
-          "left",
+          "$takeout_box+doing",
           "over,",
           "according",
           "to",
