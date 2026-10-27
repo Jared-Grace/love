@@ -403,7 +403,7 @@ export function bible_glyph_chapter_1sa17() {
           "the",
           "youngest.",
           "The",
-          "three",
+          "$three",
           "oldest",
           "had",
           "$walking",
