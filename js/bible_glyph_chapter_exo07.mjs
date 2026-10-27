@@ -616,7 +616,7 @@ export function bible_glyph_chapter_exo07() {
           "$proper_name$Aaron",
           "raised",
           "the",
-          "staff",
+          "$white_cane",
           "and",
           "struck",
           "the",
