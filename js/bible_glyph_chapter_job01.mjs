@@ -327,7 +327,7 @@ export function bible_glyph_chapter_job01() {
           "and",
           "strike",
           "$all",
-          "that",
+          "$back+flashlight",
           "he",
           "has,",
           "and",
