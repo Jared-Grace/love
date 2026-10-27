@@ -932,7 +932,7 @@ export function bible_glyph_chapter_lev25() {
           "in",
           "villages",
           "with",
-          "no",
+          "$dotted_line_face",
           "$wall",
           "around",
           "them",
