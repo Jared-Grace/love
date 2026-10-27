@@ -331,7 +331,7 @@ export function bible_glyph_chapter_num30() {
           "has",
           "made",
           "a",
-          "vow",
+          "$saluting_face+doing",
           "or",
           "an",
           "obligation",
