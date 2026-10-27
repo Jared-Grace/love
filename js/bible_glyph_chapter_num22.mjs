@@ -299,7 +299,7 @@ export function bible_glyph_chapter_num22() {
           "Then",
           "$heart_on_fire",
           "$footprints",
-          "to",
+          "$toward",
           "$proper_name$Balaam",
           "and",
           "$speech,",
