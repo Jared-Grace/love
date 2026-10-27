@@ -440,7 +440,7 @@ export function bible_glyph_chapter_lev26() {
           "$scroll",
           "and",
           "so",
-          "break",
+          "$broken_chain+scroll+doing",
           "My",
           "$covenant,",
         ],
