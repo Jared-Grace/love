@@ -537,7 +537,7 @@ export function bible_glyph_chapter_ecc03() {
           "$lightbulb",
           "if",
           "the",
-          "spirit",
+          "$wind",
           "of",
           "$son",
           "$walking+pointing_up",
