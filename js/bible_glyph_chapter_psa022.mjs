@@ -631,7 +631,7 @@ export function bible_glyph_chapter_psa022() {
       {
         verse_number: 29,
         words: [
-          "All",
+          "$all",
           "the",
           "rich",
           "of",
