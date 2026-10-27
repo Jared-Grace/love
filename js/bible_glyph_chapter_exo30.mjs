@@ -659,7 +659,7 @@ export function bible_glyph_chapter_exo30() {
           "hin",
           "of",
           "$olive",
-          "oil.",
+          "$lotion_bottle.",
         ],
       },
       {
