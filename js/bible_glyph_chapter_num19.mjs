@@ -643,7 +643,7 @@ export function bible_glyph_chapter_num19() {
           "clean",
           "is",
           "to",
-          "sprinkle",
+          "$droplet+hand+doing",
           "the",
           "unclean",
           "one",
