@@ -173,7 +173,7 @@ export function bible_glyph_chapter_jdg16() {
           "her",
           "and",
           "$speech,",
-          "Entice",
+          "$fishing_pole+doing",
           "him",
           "and",
           "find",
