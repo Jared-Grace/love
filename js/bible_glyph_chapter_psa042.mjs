@@ -202,7 +202,7 @@ export function bible_glyph_chapter_psa042() {
         verse_number: 7,
         words: [
           "$sea+down_arrow",
-          "calls",
+          "$waving_hand",
           "$toward",
           "$sea+down_arrow",
           "in",
