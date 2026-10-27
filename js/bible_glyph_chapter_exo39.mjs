@@ -292,7 +292,7 @@ export function bible_glyph_chapter_exo39() {
           "$gem_stone+blue_circle,",
           "and",
           "a",
-          "diamond.",
+          "$gem_stone+hammer.",
         ],
       },
       {
