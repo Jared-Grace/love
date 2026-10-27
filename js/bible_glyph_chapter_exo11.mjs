@@ -247,7 +247,7 @@ export function bible_glyph_chapter_exo11() {
           "you",
           "will",
           "$lightbulb",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "makes",
           "a",
