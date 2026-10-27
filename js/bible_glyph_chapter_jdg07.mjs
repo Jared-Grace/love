@@ -406,7 +406,7 @@ export function bible_glyph_chapter_jdg07() {
           "to",
           "attack",
           "the",
-          "camp.",
+          "$camp.",
           "So",
           "he",
           "went",
