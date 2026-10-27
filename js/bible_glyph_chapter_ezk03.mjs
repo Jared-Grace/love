@@ -722,7 +722,7 @@ export function bible_glyph_chapter_ezk03() {
           "of",
           "the",
           "$i_am",
-          "was",
+          "$link",
           "upon",
           "me,",
           "and",
