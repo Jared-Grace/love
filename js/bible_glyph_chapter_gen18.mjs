@@ -50,7 +50,7 @@ export function bible_glyph_chapter_gen18() {
           "up",
           "and",
           "$eye",
-          "three",
+          "$three",
           "men",
           "standing",
           "nearby.",
