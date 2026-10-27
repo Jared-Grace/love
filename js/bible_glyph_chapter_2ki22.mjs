@@ -635,7 +635,7 @@ export function bible_glyph_chapter_2ki22() {
           "their",
           "$hand.",
           "My",
-          "wrath",
+          "$angry_face",
           "will",
           "be",
           "kindled",
