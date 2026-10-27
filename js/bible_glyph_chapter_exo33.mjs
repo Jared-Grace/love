@@ -445,7 +445,7 @@ export function bible_glyph_chapter_exo33() {
           "and",
           "you",
           "have",
-          "found",
+          "$magnifying_glass+exclamation",
           "favor",
           "in",
           "My",
