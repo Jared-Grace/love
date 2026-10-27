@@ -377,7 +377,7 @@ export function bible_glyph_chapter_gen50() {
           "as",
           "a",
           "$tomb",
-          "site",
+          "$hand+clamp+thing",
           "from",
           "$proper_name$Ephron",
           "the",
