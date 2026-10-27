@@ -733,7 +733,7 @@ export function bible_glyph_chapter_1sa17() {
           "$hands_giving",
           "him",
           "his",
-          "daughter",
+          "$girl+family",
           "in",
           "$woman",
           "and",
