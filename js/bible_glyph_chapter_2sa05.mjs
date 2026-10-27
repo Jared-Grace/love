@@ -381,7 +381,7 @@ export function bible_glyph_chapter_2sa05() {
           "And",
           "$two_hearts+proper_name",
           "$lightbulb",
-          "that",
+          "$pointing",
           "the",
           "$i_am",
           "had",
