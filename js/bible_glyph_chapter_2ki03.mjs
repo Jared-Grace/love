@@ -453,7 +453,7 @@ export function bible_glyph_chapter_2ki03() {
           "has",
           "summoned",
           "these",
-          "three",
+          "$three",
           "$king",
           "to",
           "$hands_giving",
