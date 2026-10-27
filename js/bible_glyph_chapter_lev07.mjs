@@ -373,7 +373,7 @@ export function bible_glyph_chapter_lev07() {
           "thanksgiving",
           "of",
           "his",
-          "peace",
+          "$peace+gift",
           "offering",
           "must",
           "be",
