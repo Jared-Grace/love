@@ -704,7 +704,7 @@ export function bible_glyph_chapter_exo03() {
           "But",
           "$me",
           "$lightbulb",
-          "that",
+          "$pointing",
           "the",
           "$king",
           "of",
