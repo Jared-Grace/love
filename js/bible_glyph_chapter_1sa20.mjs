@@ -1226,7 +1226,7 @@ export function bible_glyph_chapter_1sa20() {
           "$two_hearts+proper_name,",
           "and",
           "a",
-          "small",
+          "$pinching_hand",
           "$child+flexed_biceps",
           "was",
           "with",
