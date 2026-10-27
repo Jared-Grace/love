@@ -102,7 +102,7 @@ export function bible_glyph_chapter_gen41() {
           "were",
           "$thumbs_down",
           "and",
-          "thin",
+          "$pinching_hand+describing",
           "of",
           "$meat",
           "$eating",
