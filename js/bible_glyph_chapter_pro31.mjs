@@ -424,7 +424,7 @@ export function bible_glyph_chapter_pro31() {
           "they",
           "are",
           "all",
-          "clothed",
+          "$garment+doing",
           "in",
           "scarlet.",
         ],
