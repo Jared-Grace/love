@@ -619,7 +619,7 @@ export function bible_glyph_chapter_exo40() {
           "front",
           "of",
           "the",
-          "veil.",
+          "$veil.",
         ],
       },
       {
