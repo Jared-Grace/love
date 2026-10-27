@@ -36,7 +36,7 @@ export function bible_glyph_chapter_exo34() {
           "the",
           "$speech",
           "that",
-          "were",
+          "$link",
           "on",
           "the",
           "first",
