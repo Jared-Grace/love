@@ -610,7 +610,7 @@ export function bible_glyph_chapter_num06() {
           "$hand_receiving",
           "the",
           "boiled",
-          "shoulder",
+          "$hand+might",
           "$tray_out",
           "the",
           "ram,",
