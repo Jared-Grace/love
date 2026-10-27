@@ -185,7 +185,7 @@ export function bible_glyph_chapter_zep01() {
           "$i_am",
           "but",
           "also",
-          "swear",
+          "$raised_back_of_hand+doing",
           "by",
           "$king",
           "Milcom,",
