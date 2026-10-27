@@ -521,7 +521,7 @@ export function bible_glyph_chapter_jdg04() {
           "fled",
           "on",
           "$foot",
-          "to",
+          "$toward",
           "the",
           "tent",
           "of",
