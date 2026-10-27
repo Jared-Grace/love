@@ -24,7 +24,7 @@ export function bible_glyph_chapter_exo38() {
           "$tree+thorns",
           "$tree,",
           "$five",
-          "cubits",
+          "$triangular_ruler",
           "long",
           "and",
           "$five",
