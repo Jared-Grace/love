@@ -130,7 +130,7 @@ export function bible_glyph_chapter_deu08() {
           "$one+person,",
           "but",
           "$pointing_up",
-          "every",
+          "$all",
           "word",
           "that",
           "comes",
