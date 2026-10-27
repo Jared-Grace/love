@@ -585,7 +585,7 @@ export function bible_glyph_chapter_gen07() {
           "that",
           "had",
           "the",
-          "breath",
+          "$nose+dashing_away",
           "of",
           "life",
           "in",
