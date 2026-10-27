@@ -673,7 +673,7 @@ export function bible_glyph_chapter_deu16() {
         verse_number: 19,
         words: [
           "$no_entry",
-          "deny",
+          "$white_cane+doing",
           "$scales+thing",
           "or",
           "show",
