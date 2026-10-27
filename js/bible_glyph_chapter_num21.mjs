@@ -958,7 +958,7 @@ export function bible_glyph_chapter_num21() {
           "$all",
           "$family",
           "in",
-          "battle",
+          "$crossed_swords",
           "at",
           "$proper_name$Edrei.",
         ],
