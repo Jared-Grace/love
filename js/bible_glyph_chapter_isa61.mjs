@@ -172,7 +172,7 @@ export function bible_glyph_chapter_isa61() {
         words: [
           "Strangers",
           "will",
-          "stand",
+          "$person+round_pushpin",
           "and",
           "feed",
           "your",
