@@ -867,7 +867,7 @@ export function bible_glyph_chapter_deu29() {
           "it",
           "$all",
           "$balloon+speech",
-          "written",
+          "$writing_hand",
           "in",
           "this",
           "book.",
