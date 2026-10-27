@@ -327,7 +327,7 @@ export function bible_glyph_chapter_lev02() {
           "as",
           "a",
           "pleasing",
-          "aroma.",
+          "$nose.",
         ],
       },
       {
