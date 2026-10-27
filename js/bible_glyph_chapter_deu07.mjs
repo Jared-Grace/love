@@ -789,7 +789,7 @@ export function bible_glyph_chapter_deu07() {
           "into",
           "$top",
           "$megaphone+crowd+thing",
-          "until",
+          "$finish",
           "they",
           "are",
           "destroyed.",
