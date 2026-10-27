@@ -639,7 +639,7 @@ export function bible_glyph_chapter_lev19() {
           "the",
           "$earth",
           "and",
-          "plant",
+          "$sprout+down_arrow+doing",
           "any",
           "kind",
           "of",
