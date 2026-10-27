@@ -437,7 +437,7 @@ export function bible_glyph_chapter_deu07() {
           "$speech+thumbs_up",
           "you",
           "and",
-          "multiply",
+          "$multiply+doing",
           "you.",
           "He",
           "will",
