@@ -1401,7 +1401,7 @@ export function bible_glyph_chapter_lev13() {
           "is",
           "a",
           "reddish-white",
-          "sore",
+          "$face_with_head_bandage",
           "on",
           "the",
           "bald",
