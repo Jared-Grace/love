@@ -582,7 +582,7 @@ export function bible_glyph_chapter_exo06() {
           "$fishing_pole+proper_name.",
           "$proper_name$Amram",
           "$sprout",
-          "137",
+          "$seven",
           "years.",
         ],
       },
