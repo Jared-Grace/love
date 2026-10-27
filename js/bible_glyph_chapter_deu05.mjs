@@ -451,7 +451,7 @@ export function bible_glyph_chapter_deu05() {
           "you",
           "out",
           "of",
-          "there",
+          "$telescope",
           "with",
           "a",
           "mighty",
