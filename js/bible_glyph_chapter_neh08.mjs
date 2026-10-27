@@ -379,7 +379,7 @@ export function bible_glyph_chapter_neh08() {
           "what",
           "is",
           "rich,",
-          "drink",
+          "$cup_with_straw",
           "what",
           "is",
           "sweet,",
