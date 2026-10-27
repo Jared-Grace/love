@@ -655,7 +655,7 @@ export function bible_glyph_chapter_1ki19() {
           "$wrestling+heart_on_fire,",
           "all",
           "whose",
-          "knees",
+          "$kneeling+leg",
           "have",
           "$no_entry",
           "bowed",
