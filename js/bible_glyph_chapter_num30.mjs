@@ -270,7 +270,7 @@ export function bible_glyph_chapter_num30() {
           "nullifies",
           "the",
           "$saluting_face",
-          "that",
+          "$back+flashlight",
           "binds",
           "her,",
           "or",
