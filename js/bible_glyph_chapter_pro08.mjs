@@ -492,7 +492,7 @@ export function bible_glyph_chapter_pro08() {
           "inscribed",
           "a",
           "$compass+thing",
-          "on",
+          "$pointing_up",
           "the",
           "face",
           "of",
