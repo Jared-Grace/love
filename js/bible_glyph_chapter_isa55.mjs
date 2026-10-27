@@ -326,7 +326,7 @@ export function bible_glyph_chapter_isa55() {
       {
         verse_number: 11,
         words: [
-          "so",
+          "$right_arrow",
           "My",
           "$speech",
           "that",
