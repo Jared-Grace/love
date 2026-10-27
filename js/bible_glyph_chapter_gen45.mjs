@@ -234,7 +234,7 @@ export function bible_glyph_chapter_gen45() {
           "who",
           "sent",
           "me",
-          "here,",
+          "$round_pushpin+pointing_down,",
           "but",
           "$heart_on_fire,",
           "who",
