@@ -126,7 +126,7 @@ export function bible_glyph_chapter_num27() {
       {
         verse_number: 4,
         words: [
-          "Why",
+          "$flashlight+question",
           "should",
           "the",
           "$name_tag",
