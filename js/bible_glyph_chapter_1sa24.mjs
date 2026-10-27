@@ -316,7 +316,7 @@ export function bible_glyph_chapter_1sa24() {
           "$person",
           "who",
           "$speech,",
-          "'Look,",
+          "$exclamation,",
           "$two_hearts+proper_name",
           "intends",
           "to",
