@@ -772,7 +772,7 @@ export function bible_glyph_chapter_exo34() {
           "$no_entry",
           "$man_beard",
           "will",
-          "covet",
+          "$heart_eyes+doing",
           "your",
           "$earth",
           "when",
