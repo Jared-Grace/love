@@ -119,7 +119,7 @@ export function bible_glyph_chapter_gen15() {
           "heir,",
           "but",
           "one",
-          "who",
+          "$back+flashlight",
           "comes",
           "from",
           "your",
