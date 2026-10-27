@@ -1313,7 +1313,7 @@ export function bible_glyph_chapter_2ki17() {
           "Do",
           "$no_entry",
           "$fear+doing",
-          "other",
+          "$plus+one",
           "$moai.",
         ],
       },
