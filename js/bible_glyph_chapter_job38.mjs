@@ -477,7 +477,7 @@ export function bible_glyph_chapter_job38() {
           "$compass+right_arrow+thing",
           "wind",
           "$confetti_ball",
-          "over",
+          "$pointing_up",
           "the",
           "$earth?",
         ],
