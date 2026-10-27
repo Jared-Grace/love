@@ -507,7 +507,7 @@ export function bible_glyph_chapter_zec14() {
           "And",
           "a",
           "similar",
-          "plague",
+          "$fist+microbe+thing",
           "will",
           "strike",
           "the",
