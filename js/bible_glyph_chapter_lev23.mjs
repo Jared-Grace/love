@@ -937,7 +937,7 @@ export function bible_glyph_chapter_lev23() {
           "day",
           "of",
           "the",
-          "month",
+          "$new_moon",
           "until",
           "the",
           "following",
