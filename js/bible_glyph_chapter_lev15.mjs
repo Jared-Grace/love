@@ -54,7 +54,7 @@ export function bible_glyph_chapter_lev15() {
       {
         verse_number: 3,
         words: [
-          "This",
+          "$flashlight",
           "uncleanness",
           "is",
           "from",
