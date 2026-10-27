@@ -19,7 +19,7 @@ export function bible_glyph_chapter_num18() {
           "$speech",
           "$toward",
           "$proper_name$Aaron,",
-          "You",
+          "$you",
           "and",
           "your",
           "$son",
