@@ -355,7 +355,7 @@ export function bible_glyph_chapter_lev17() {
           "the",
           "$blood,",
           "and",
-          "cut",
+          "$scissors",
           "him",
           "off",
           "from",
