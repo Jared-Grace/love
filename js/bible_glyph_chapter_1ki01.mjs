@@ -1699,7 +1699,7 @@ export function bible_glyph_chapter_1ki01() {
           "$peace",
           "summoned",
           "Adonijah",
-          "down",
+          "$walking+pointing_down",
           "from",
           "the",
           "$altar,",
