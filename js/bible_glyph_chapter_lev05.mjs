@@ -75,7 +75,7 @@ export function bible_glyph_chapter_lev05() {
           "is",
           "unclean",
           "and",
-          "guilty.",
+          "$sacrifice+scales+doing.",
         ],
       },
       {
