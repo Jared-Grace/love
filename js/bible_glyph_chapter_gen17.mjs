@@ -37,7 +37,7 @@ export function bible_glyph_chapter_gen17() {
           "Me",
           "and",
           "be",
-          "blameless.",
+          "$full_moon+describing.",
         ],
       },
       {
