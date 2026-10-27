@@ -423,7 +423,7 @@ export function bible_glyph_chapter_psa051() {
           "whole",
           "burnt",
           "offerings;",
-          "then",
+          "$telescope+clock",
           "bulls",
           "will",
           "be",
