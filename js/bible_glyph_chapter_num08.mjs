@@ -492,7 +492,7 @@ export function bible_glyph_chapter_num08() {
           "in",
           "place",
           "of",
-          "all",
+          "$all",
           "the",
           "firstborn",
           "among",
