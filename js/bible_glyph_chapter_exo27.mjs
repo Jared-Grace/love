@@ -116,7 +116,7 @@ export function bible_glyph_chapter_exo27() {
           "of",
           "the",
           "$four",
-          "corners.",
+          "$end_arrow+triangular_ruler.",
         ],
       },
       {
