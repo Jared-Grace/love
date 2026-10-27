@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_sides_one_operator_say(run, sides) {
   arguments_assert(arguments, 2);
   ("why the two sides of a line go first, told for a line whose two sides hold the SAME operator: the operator is named, both of it are pointed at, and then the question of which of them goes first is asked for the run underneath to answer");
@@ -13,13 +13,13 @@ export function app_code_lesson_expression_sides_one_operator_say(run, sides) {
   let outer_symbol = property_get(sides, "outer_symbol");
   let left_code = property_get(sides, "left_code");
   let right_code = property_get(sides, "right_code");
-  html_div_cycle_code(run, [
+  app_code_div_cycle_code(run, [
     "",
     side_symbol,
     " is solved before ",
     outer_symbol,
   ]);
-  html_div_cycle_code(run, [
+  app_code_div_cycle_code(run, [
     "But there are two ",
     side_symbol,
     ": ",
@@ -28,5 +28,5 @@ export function app_code_lesson_expression_sides_one_operator_say(run, sides) {
     right_code,
   ]);
   ("the question is asked out loud before it is answered, because a learner who has only ever had one right press at a time is already looking for which of the two it is - asked, they are looking for the answer to the line below rather than for a trap");
-  html_div_cycle_code(run, ["Which ", side_symbol, " do we solve first?"]);
+  app_code_div_cycle_code(run, ["Which ", side_symbol, " do we solve first?"]);
 }

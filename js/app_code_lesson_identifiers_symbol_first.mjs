@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_identifiers_letters_spaces } from "./app_code_lesson_identifiers_letters_spaces.mjs";
 import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
 import { list_to_and_list } from "./list_to_and_list.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_span_text_padded_space } from "./html_span_text_padded_space.mjs";
 import { ternary } from "./ternary.mjs";
 import { list_is } from "./list_is.mjs";
@@ -81,7 +81,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       ": ",
     ]);
     let parts = list_concat_single(single, combined);
-    html_div_cycle_code(c2, parts);
+    app_code_div_cycle_code(c2, parts);
     let c = app_code_container_light_blue(root);
     html_div_text_multiple(c, [
       "However identifiers cannot have a digit as their first symbol (Identifiers cannot begin with a digit)",

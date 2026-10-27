@@ -13,7 +13,7 @@ import { json_to } from "./json_to.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { app_code_lesson_statement_names_binary_answer_lines } from "./app_code_lesson_statement_names_binary_answer_lines.mjs";
@@ -71,7 +71,7 @@ export function app_code_lesson_statement_names_binary_above({
   );
   app_code_code_lines_writes_out(box_remember, [logged_numbers], written);
   let box_names = app_code_container_light_blue(root);
-  html_div_cycle_code(box_names, [
+  app_code_div_cycle_code(box_names, [
     "Suppose we give names (",
     name_first,
     ", ",
@@ -85,14 +85,14 @@ export function app_code_lesson_statement_names_binary_above({
   let held_first = js_code_let_statement(name_first, number_first);
   let held_last = js_code_let_statement(name_last, number_last);
   html_div_code_lines(box_names, [held_first, held_last]);
-  html_div_cycle_code(box_names, [
+  app_code_div_cycle_code(box_names, [
     "We can use ",
     symbol,
     with_values,
     numbers_asked,
     ")",
   ]);
-  html_div_cycle_code(box_names, [
+  app_code_div_cycle_code(box_names, [
     "We can also use ",
     symbol,
     " between two names (like ",

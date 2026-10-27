@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_intro(
   parent,
 ) {
@@ -11,19 +11,19 @@ export function app_code_lesson_expression_choose_order_and_before_or_intro(
   ("Said as CAN give a different answer rather than DOES, because it is only sometimes: the two ways round agree on most lines and part on a few. A learner told they always differ would go looking for a difference that is not there and decide they had solved it wrong.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "Now one line can hold both ",
     and_symbol,
     " and ",
     or_symbol,
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "The ",
     and_symbol,
     " is solved before the ",
     or_symbol,
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "Solving them the other way round can give a different answer",
   ]);
 }

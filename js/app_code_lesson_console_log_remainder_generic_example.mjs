@@ -8,7 +8,7 @@ import { range_map } from "./range_map.mjs";
 import { list_join } from "./list_join.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { word_pluralize } from "./word_pluralize.mjs";
 import { word_is_are } from "./word_is_are.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -42,7 +42,7 @@ export function app_code_lesson_console_log_remainder_generic_example(
     right,
   );
   let t3 = text_to(total);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "Suppose we share ",
     t3,
     " loaves of bread into ",
@@ -50,7 +50,7 @@ export function app_code_lesson_console_log_remainder_generic_example(
     " groups",
   ]);
   let t4 = text_to(each_group);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "Then each group gets ",
     t4,
     " loaves - that is ",

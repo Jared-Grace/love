@@ -7,7 +7,7 @@ import { app_code_lesson_expression_parentheses_minus_divide_title_name_id } fro
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_parentheses_flat_decoys } from "./app_code_parentheses_flat_decoys.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
@@ -58,16 +58,16 @@ export function app_code_lesson_expression_parentheses_minus_divide() {
       app_code_lesson_expression_choose_order_plus_minus,
       ["", plus, " and ", minus, " are solved left to right"],
     );
-    html_div_cycle_code(recall, ["So ", "12 - 3 + 4", " is ", "13"]);
+    app_code_div_cycle_code(recall, ["So ", "12 - 3 + 4", " is ", "13"]);
     let changed = app_code_container_light_blue(root);
-    html_div_cycle_code(changed, [
+    app_code_div_cycle_code(changed, [
       "But ",
       "12 - (3 + 4)",
       " does the ",
       "3 + 4",
       " first",
     ]);
-    html_div_cycle_code(changed, [
+    app_code_div_cycle_code(changed, [
       "",
       "3 + 4",
       " is ",
@@ -75,18 +75,18 @@ export function app_code_lesson_expression_parentheses_minus_divide() {
       ", so we have ",
       "12 - 7",
     ]);
-    html_div_cycle_code(changed, ["So ", "12 - (3 + 4)", " is ", "5"]);
+    app_code_div_cycle_code(changed, ["So ", "12 - (3 + 4)", " is ", "5"]);
     let after_divide = app_code_container_light_blue(root);
-    html_div_cycle_code(after_divide, ["Likewise for ", divided, " :"]);
-    html_div_cycle_code(after_divide, ["", "12 / 2 * 3", " is ", "18"]);
-    html_div_cycle_code(after_divide, [
+    app_code_div_cycle_code(after_divide, ["Likewise for ", divided, " :"]);
+    app_code_div_cycle_code(after_divide, ["", "12 / 2 * 3", " is ", "18"]);
+    app_code_div_cycle_code(after_divide, [
       "But ",
       "12 / (2 * 3)",
       " does the ",
       "2 * 3",
       " first",
     ]);
-    html_div_cycle_code(after_divide, [
+    app_code_div_cycle_code(after_divide, [
       "",
       "2 * 3",
       " is ",
@@ -94,9 +94,15 @@ export function app_code_lesson_expression_parentheses_minus_divide() {
       ", so we have ",
       "12 / 6",
     ]);
-    html_div_cycle_code(after_divide, ["So ", "12 / (2 * 3)", " is ", "2"]);
+    app_code_div_cycle_code(after_divide, ["So ", "12 / (2 * 3)", " is ", "2"]);
     let rule = app_code_container_light_blue(root);
     let r = app_code_parentheses_inside_before_outside("");
-    html_div_cycle_code(rule, ["Whatever is inside ", open, " and ", close, r]);
+    app_code_div_cycle_code(rule, [
+      "Whatever is inside ",
+      open,
+      " and ",
+      close,
+      r,
+    ]);
   }
 }

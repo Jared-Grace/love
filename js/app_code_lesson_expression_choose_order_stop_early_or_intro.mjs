@@ -3,7 +3,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_stop_early_or_intro(
   parent,
 ) {
@@ -21,9 +21,9 @@ export function app_code_lesson_expression_choose_order_stop_early_or_intro(
   let skipped_wrapped = ["(", skipped, ")"].join("");
   let with_true = [true_word, " ", or_symbol, " ", true_word].join("");
   let with_false = [true_word, " ", or_symbol, " ", false_word].join("");
-  html_div_cycle_code(parent, ["So ", with_true, " is ", true_word]);
-  html_div_cycle_code(parent, ["And ", with_false, " is ", true_word]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, ["So ", with_true, " is ", true_word]);
+  app_code_div_cycle_code(parent, ["And ", with_false, " is ", true_word]);
+  app_code_div_cycle_code(parent, [
     "For ",
     stops,
     " , it doesn't matter what the ",
@@ -33,26 +33,26 @@ export function app_code_lesson_expression_choose_order_stop_early_or_intro(
     " is always ",
     true_word,
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "So that's how JavaScript solves ",
     stops,
     " :",
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "When the left side of ",
     or_symbol,
     " is ",
     true_word,
     ", JavaScript never solves its right side",
   ]);
-  html_div_cycle_code(parent, ["So when JavaScript solves ", whole]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, ["So when JavaScript solves ", whole]);
+  app_code_div_cycle_code(parent, [
     "JavaScript treats the ",
     skipped,
     " as ",
     dots,
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "And JavaScript sees ",
     stops,
     " and completely skips the ",
@@ -60,6 +60,12 @@ export function app_code_lesson_expression_choose_order_stop_early_or_intro(
     " ",
     skipped_wrapped,
   ]);
-  html_div_cycle_code(parent, ["JavaScript solves the answer as ", true_word]);
-  html_div_cycle_code(parent, ["And JavaScript never solves the ", skipped]);
+  app_code_div_cycle_code(parent, [
+    "JavaScript solves the answer as ",
+    true_word,
+  ]);
+  app_code_div_cycle_code(parent, [
+    "And JavaScript never solves the ",
+    skipped,
+  ]);
 }

@@ -26,7 +26,7 @@ import { less_than } from "./less_than.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -179,7 +179,7 @@ export function app_code_lesson_if_two_bounds() {
       " can be written twice",
     ]);
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "Two ",
       "if",
       "s can ask about one name with different numbers:",
@@ -189,7 +189,7 @@ export function app_code_lesson_if_two_bounds() {
     app_code_code_lines_writes_out(box_two, all_lines, all_written);
     let low_true = js_code_binary_spaced_nb(4, greater, 1);
     let high_true = js_code_binary_spaced_nb(4, greater, 3);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       low_true,
       " is ",
@@ -198,7 +198,7 @@ export function app_code_lesson_if_two_bounds() {
       high_true,
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,
       " starts at ",
@@ -210,7 +210,7 @@ export function app_code_lesson_if_two_bounds() {
     app_code_code_lines_writes_out(box_three, first_lines, first_written);
     let low_true2 = js_code_binary_spaced_nb(2, greater, 1);
     let high_false = js_code_binary_spaced_nb(2, greater, 3);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "",
       low_true2,
       " is ",
@@ -221,7 +221,7 @@ export function app_code_lesson_if_two_bounds() {
       "false",
     ]);
     let box_four = app_code_container_light_blue(root);
-    html_div_cycle_code(box_four, [
+    app_code_div_cycle_code(box_four, [
       "So these two ",
       "if",
       "s can go three ways:",
@@ -230,16 +230,22 @@ export function app_code_lesson_if_two_bounds() {
     let if_low = js_code_if_dots(low_condition);
     let high_condition = js_code_binary_spaced_nb(name, greater, 3);
     let if_high = js_code_if_dots(high_condition);
-    html_div_cycle_code(box_four, ["", if_low, " and ", if_high, " both run"]);
-    html_div_cycle_code(box_four, ["only ", if_low, " runs"]);
-    html_div_cycle_code(box_four, [
+    app_code_div_cycle_code(box_four, [
+      "",
+      if_low,
+      " and ",
+      if_high,
+      " both run",
+    ]);
+    app_code_div_cycle_code(box_four, ["only ", if_low, " runs"]);
+    app_code_div_cycle_code(box_four, [
       "neither ",
       if_low,
       " nor ",
       if_high,
       " runs",
     ]);
-    html_div_cycle_code(box_four, [
+    app_code_div_cycle_code(box_four, [
       "",
       if_high,
       " never runs alone: a number more than ",

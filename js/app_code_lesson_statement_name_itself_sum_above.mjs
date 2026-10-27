@@ -13,7 +13,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_div_code } from "./app_code_div_code.mjs";
 export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   arguments_assert(arguments, 2);
@@ -70,7 +70,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   let logged_again = js_code_console_log_statement(name_first);
   let lines_again = [held_again, given_again, logged_again];
   app_code_code_lines_writes_out(box_again, lines_again, number_new);
-  html_div_cycle_code(box_again, [
+  app_code_div_cycle_code(box_again, [
     "The value the name (",
     name_first,
     ") held before (",
@@ -89,12 +89,12 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   );
   app_code_div_code(box_itself, code_total);
   ("The third name is named in the line that says we do not need it, and the name we already have is named in the line that offers it. Both lines are about which cup is being filled, and a learner reading them without the letters has to look back up at the code to find out which cups are meant - so the letters are put where the sentence needs them, drawn as code because that is what they are everywhere else on this screen.");
-  html_div_cycle_code(box_itself, [
+  app_code_div_cycle_code(box_itself, [
     "We do not need a new name (",
     name_third,
     ") for the sum",
   ]);
-  html_div_cycle_code(box_itself, [
+  app_code_div_cycle_code(box_itself, [
     "Instead, we can give the sum to a name we already have (",
     name_first,
     "):",
@@ -102,7 +102,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   let given_sum = js_code_assign_statement(name_first, names_sum);
   app_code_div_code(box_itself, given_sum);
   ("the log line closes the box it belongs to. It reads the name that box just filled, so it is the end of that program rather than the start of the next point.");
-  html_div_cycle_code(box_itself, [
+  app_code_div_cycle_code(box_itself, [
     "Then we can log out the value of ",
     name_first,
     ":",
@@ -120,12 +120,15 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   ("Three short lines rather than one long one, because they are three steps and a learner is being walked down them: the sum has a value, so the sum did not have to be written, so the value could have been written in its place. Said in one line the middle step is missing and the last line arrives as a claim; said in three, each line is the reason for the one under it.");
   ("A box makes one point, and this is a second one. The box above says which name the sum may be given to; this one says that the sum could have been a plain number all along. A learner who only wants the first point can stop at the end of the box above it, which they cannot do when the two run on inside one box.");
   let box_value = app_code_container_light_blue(root);
-  html_div_cycle_code(box_value, ["", names_sum, " solves to ", total]);
+  app_code_div_cycle_code(box_value, ["", names_sum, " solves to ", total]);
   ("both sentences name a whole line rather than the half of it that changes, and the line they are about is drawn once, underneath, inside the program it belongs to. Named as a sum and a number, the two sentences were about the right-hand sides and a learner had to work out for themselves that the rest of the line stayed as it was.");
   let given_total = js_code_assign_statement(name_first, total);
   ("this line ends on the line it names and no colon, because nothing follows it. A colon promises the reader something is coming next; the line under this one starts a new sentence of its own, and the program it does introduce is two rows further down under the line that offers it.");
-  html_div_cycle_code(box_value, ["So we did not have to write ", given_sum]);
-  html_div_cycle_code(box_value, [
+  app_code_div_cycle_code(box_value, [
+    "So we did not have to write ",
+    given_sum,
+  ]);
+  app_code_div_cycle_code(box_value, [
     "Instead, we could have just written ",
     given_total,
     ":",

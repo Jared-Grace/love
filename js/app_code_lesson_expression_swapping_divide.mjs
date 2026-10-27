@@ -6,7 +6,7 @@ import { app_code_category_expressions } from "./app_code_category_expressions.m
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_swapping_divide() {
   "the second swapping lesson: the arithmetic operators that do NOT swap - / (divide), % (remainder) and ** (power). Each gets an everyday reason it is directional, so the rule is understood, not memorised, and both sides are worked out so the swap is seen. + and * are recalled as the ones that do swap, so the quiz mixes them (true) with / % ** (false). Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
@@ -36,25 +36,25 @@ export function app_code_lesson_expression_swapping_divide() {
       app_code_lesson_expression_swapping_add,
       ["", "+", " and ", "*", " keep the same value when swapped"],
     );
-    html_div_cycle_code(recall, [
+    app_code_div_cycle_code(recall, [
       "",
       "3 + 4 === 7",
       " and swapped: ",
       "4 + 3 === 7",
     ]);
     let division = app_code_container_light_blue(root);
-    html_div_cycle_code(division, [
+    app_code_div_cycle_code(division, [
       "Dividing (",
       "/",
       ") groups a number into equally sized parts",
     ]);
-    html_div_cycle_code(division, [
+    app_code_div_cycle_code(division, [
       "",
       "1 / 2 === 0.5",
       " but swapped: ",
       "2 / 1 === 2",
     ]);
-    html_div_cycle_code(division, [
+    app_code_div_cycle_code(division, [
       "",
       "0.5",
       " and ",
@@ -64,18 +64,18 @@ export function app_code_lesson_expression_swapping_divide() {
     ]);
     app_code_lesson_swapping_same_numbers_line(division);
     let leftover = app_code_container_light_blue(root);
-    html_div_cycle_code(leftover, [
+    app_code_div_cycle_code(leftover, [
       "The remainder (",
       "%",
       ") is what is left after dividing",
     ]);
-    html_div_cycle_code(leftover, [
+    app_code_div_cycle_code(leftover, [
       "",
       "7 % 3 === 1",
       " but swapped: ",
       "3 % 7 === 3",
     ]);
-    html_div_cycle_code(leftover, [
+    app_code_div_cycle_code(leftover, [
       "",
       "1",
       " and ",
@@ -84,19 +84,19 @@ export function app_code_lesson_expression_swapping_divide() {
       "%",
     ]);
     let power = app_code_container_light_blue(root);
-    html_div_cycle_code(power, [
+    app_code_div_cycle_code(power, [
       "A power (",
       "**",
       ") multiplies a number by itself",
     ]);
-    html_div_cycle_code(power, ["", "5 ** 3", " is ", "5 * 5 * 5 === 125"]);
-    html_div_cycle_code(power, [
+    app_code_div_cycle_code(power, ["", "5 ** 3", " is ", "5 * 5 * 5 === 125"]);
+    app_code_div_cycle_code(power, [
       "",
       "3 ** 5",
       " is ",
       "3 * 3 * 3 * 3 * 3 === 243",
     ]);
-    html_div_cycle_code(power, [
+    app_code_div_cycle_code(power, [
       "",
       "125",
       " and ",

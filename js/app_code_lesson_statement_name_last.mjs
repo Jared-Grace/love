@@ -5,7 +5,7 @@ import { list_first } from "./list_first.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
@@ -36,17 +36,17 @@ export function app_code_lesson_statement_name_last(
     app_code_code_lines_writes_out_watched(box_one, [code]);
     let box_two = app_code_container_light_blue(root);
     let log_text = js_console_log_name();
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "In the previous lesson, there were multiple ",
       log_text,
       "s.",
     ]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "In this lesson there is only one ",
       log_text,
       " - at the end.",
     ]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "This last ",
       log_text,
       " writes out the very last value of ",

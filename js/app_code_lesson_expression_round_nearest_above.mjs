@@ -11,7 +11,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_lesson_expression_round_nearest_round_code } from "./app_code_lesson_expression_round_nearest_round_code.mjs";
 import { app_code_lesson_expression_round_nearest_rule_line } from "./app_code_lesson_expression_round_nearest_rule_line.mjs";
 import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -44,14 +44,14 @@ export function app_code_lesson_expression_round_nearest_above(root) {
   );
   ("second question: what the digit decides. Each case is a rule line, then that rule on an ordinary number, then that rule on the knife-edge number where a learner would most doubt it");
   let rule = app_code_container_light_blue(root);
-  html_div_cycle_code(rule, ["What does ", "Math.round", " do?"]);
+  app_code_div_cycle_code(rule, ["What does ", "Math.round", " do?"]);
   app_code_lesson_expression_round_nearest_rule_line(
     rule,
     ["0", "1", "2", "3", "4"],
     "Math.floor",
   );
   let v = app_code_lesson_expression_round_nearest_round_code(low_decimal);
-  html_div_cycle_code(rule, ["For example, ", v, " is ", whole_text]);
+  app_code_div_cycle_code(rule, ["For example, ", v, " is ", whole_text]);
   let down = app_code_lesson_expression_round_nearest_rounds_line(
     "4999",
     ' rounds "down" to ',
@@ -68,7 +68,7 @@ export function app_code_lesson_expression_round_nearest_above(root) {
     "Math.ceil",
   );
   let v2 = app_code_lesson_expression_round_nearest_round_code(high_decimal);
-  html_div_cycle_code(rule, ["For example, ", v2, " is ", whole_up]);
+  app_code_div_cycle_code(rule, ["For example, ", v2, " is ", whole_up]);
   let up = app_code_lesson_expression_round_nearest_rounds_line(
     "5",
     ' rounds "up" to ',

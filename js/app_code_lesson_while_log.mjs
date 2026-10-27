@@ -29,7 +29,7 @@ import { list_unique } from "./list_unique.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { list_last } from "./list_last.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
@@ -168,7 +168,7 @@ export function app_code_lesson_while_log() {
     let condition2 = js_code_binary_spaced_nb(value, less, bound);
     let json = json_to(value);
     let json2 = json_to(value_after);
-    html_div_cycle_code(root, [
+    app_code_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -192,7 +192,7 @@ export function app_code_lesson_while_log() {
       " again and again, while what it asks is true.",
     ]);
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "Put a ",
       "console.log",
       " inside, and it writes out ",
@@ -206,7 +206,7 @@ export function app_code_lesson_while_log() {
     said(box_two, 4, 9, 7);
     said(box_two, 7, 9, 10);
     let last = js_code_binary_spaced_nb(10, less, 9);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       last,
       " is ",
@@ -215,7 +215,7 @@ export function app_code_lesson_while_log() {
       "{ ... }",
       " is skipped, and the code continues after it",
     ]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "Three lines were written out, so the ",
       "{ ... }",
       " ran three times",

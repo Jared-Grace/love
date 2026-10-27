@@ -9,7 +9,7 @@ import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_quotient() {
   ("identify the QUOTIENT (the whole result of dividing and rounding down) in Math.floor(a / b) === c - the dividend a and divisor b stand as decoys; a thin lesson over ",
     app_code_lesson_operand_generic.name,
@@ -50,7 +50,7 @@ export function app_code_lesson_expression_quotient() {
   function remember_roles(root, context) {
     "remind all three roles at once, since the quotient question Math.floor(14 / 4) === 3 shows the dividend, divisor and quotient together";
     let remember = app_code_container_light_blue(root);
-    html_div_cycle_code(remember, ["", "Math.floor(14 / 4) === 3"]);
+    app_code_div_cycle_code(remember, ["", "Math.floor(14 / 4) === 3"]);
     app_code_remember_from_lesson(
       remember,
       context,
@@ -63,7 +63,7 @@ export function app_code_lesson_expression_quotient() {
       app_code_lesson_expression_divisor,
       ["the ", "4", " is the divisor"],
     );
-    html_div_cycle_code(remember, ["The ", "3", " is the quotient"]);
+    app_code_div_cycle_code(remember, ["The ", "3", " is the quotient"]);
   }
   function title_name_id() {
     "the home title says Naming the quotient, the same opening as the three lessons around it";

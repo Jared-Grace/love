@@ -30,7 +30,7 @@ import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -182,7 +182,7 @@ export function app_code_lesson_if_less_than() {
       ["", small_first, " is ", "true"],
     );
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "We can put ",
       small_first,
       " in an ",
@@ -197,8 +197,8 @@ export function app_code_lesson_if_less_than() {
     );
     let both = list_join_newline([inside_shown, after_shown]);
     app_code_code_lines_writes_out(box_two, true_lines, both);
-    html_div_cycle_code(box_two, ["", small_first, " is ", "true"]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, ["", small_first, " is ", "true"]);
+    app_code_div_cycle_code(box_two, [
       "So the lines inside ",
       brace_left,
       " and ",
@@ -206,11 +206,11 @@ export function app_code_lesson_if_less_than() {
       " run",
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, ["But suppose we swap the numbers:"]);
+    app_code_div_cycle_code(box_three, ["But suppose we swap the numbers:"]);
     let false_lines = program_lines(big_first, inside_shown, after_shown, true);
     app_code_code_lines_writes_out(box_three, false_lines, after_shown);
-    html_div_cycle_code(box_three, ["", big_first, " is ", "false"]);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, ["", big_first, " is ", "false"]);
+    app_code_div_cycle_code(box_three, [
       "So the lines inside ",
       brace_left,
       " and ",

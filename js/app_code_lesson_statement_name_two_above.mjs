@@ -4,7 +4,7 @@ import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_state
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
@@ -24,9 +24,9 @@ export function app_code_lesson_statement_name_two_above(root, context) {
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
   let box_two = app_code_container_light_blue(root);
-  html_div_cycle_code(box_two, ["You can have more than one cup"]);
+  app_code_div_cycle_code(box_two, ["You can have more than one cup"]);
   ("TWO CUPS, and a colon before the two names. Two on its own leaves the noun to be carried down from the line above it, and the two names that follow then arrive as a list of something the sentence never said; the colon is what marks them as that list rather than as more of the same sentence.");
-  html_div_cycle_code(box_two, [
+  app_code_div_cycle_code(box_two, [
     "Suppose you had two cups: one called ",
     name_first,
     " and one called ",
@@ -44,17 +44,17 @@ export function app_code_lesson_statement_name_two_above(root, context) {
   );
   ("asked one at a time, and answered one at a time, because the name is what picks which of the two is being talked about and that is the only new thing on this screen");
   let box_ask = app_code_container_light_blue(root);
-  html_div_cycle_code(box_ask, [
+  app_code_div_cycle_code(box_ask, [
     "If someone asked what is inside the cup called ",
     name_first,
   ]);
   app_code_value_line(box_ask, "You could answer: ", word_first);
-  html_div_cycle_code(box_ask, [
+  app_code_div_cycle_code(box_ask, [
     "And if they asked what is inside the cup called ",
     name_last,
   ]);
   app_code_value_line(box_ask, "You could answer: ", word_last);
-  html_div_cycle_code(box_ask, ["The name says which cup they mean"]);
+  app_code_div_cycle_code(box_ask, ["The name says which cup they mean"]);
   ("the code box makes both cups first and then asks for one of them, in that order, because both lines have to have happened before either name means anything");
   let quoted_first = app_code_string_code(word_first);
   let quoted_last = app_code_string_code(word_last);
@@ -62,10 +62,10 @@ export function app_code_lesson_statement_name_two_above(root, context) {
   let held_last = js_code_let_statement(name_last, quoted_last);
   let logged = js_code_console_log_statement(name_last);
   let box_code = app_code_container_light_blue(root);
-  html_div_cycle_code(box_code, ["In JS we make both cups like this:"]);
+  app_code_div_cycle_code(box_code, ["In JS we make both cups like this:"]);
   ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   html_div_code_lines(box_code, [held_first, held_last]);
-  html_div_cycle_code(box_code, [
+  app_code_div_cycle_code(box_code, [
     "Then we write out whatever is inside the cup called ",
     name_last,
   ]);

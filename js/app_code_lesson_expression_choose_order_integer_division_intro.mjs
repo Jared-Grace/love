@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_integer_division_intro(
   parent,
 ) {
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_choose_order_integer_division_intro(
   let floor_name = js_code_math_floor_name();
   let inside_first = app_code_parentheses_inside_before_outside("");
   let tail = text_combine(" itself, and whatever is inside them", inside_first);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "Now the brackets belong to ",
     floor_name,
     tail,

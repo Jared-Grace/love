@@ -10,7 +10,7 @@ import { multiply } from "./multiply.mjs";
 import { add } from "./add.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_which_part_first_above(
   root,
   context,
@@ -78,13 +78,13 @@ export function app_code_lesson_expression_which_part_first_above(
     app_code_lesson_expression_choose_order,
     ["the ", strong_part, " is solved first, to get ", inner_text],
   );
-  html_div_cycle_code(right_card, [
+  app_code_div_cycle_code(right_card, [
     "Then we have ",
     stood_in,
     ", which is ",
     value_text,
   ]);
-  html_div_cycle_code(right_card, [
+  app_code_div_cycle_code(right_card, [
     "Here we replaced the ",
     strong_part,
     " with ",
@@ -94,15 +94,20 @@ export function app_code_lesson_expression_which_part_first_above(
   let wrong_card = app_code_container_light_blue(root);
   ("The card opens on the question it is answering. Without it the first line is a bare fact about a part of the line nobody has been given a reason to look at, and a learner who has just been told the 2 * 4 is solved first has to guess why the 1 + 2 is suddenly being solved instead. Naming both parts is what makes it a choice rather than a change of subject.");
   ("A question, not the conclusion. The conclusion here is that this way is wrong, and stating that first leaves nothing to find out - the card would be watched rather than followed. The parentheses card that asks What if there were no ( and ) is the same move for the same reason.");
-  html_div_cycle_code(wrong_card, [
+  app_code_div_cycle_code(wrong_card, [
     "What if we replaced the ",
     weak_part,
     " first instead of the ",
     strong_part,
     "?",
   ]);
-  html_div_cycle_code(wrong_card, ["", weak_part, " is ", wrong_inner_text]);
-  html_div_cycle_code(wrong_card, [
+  app_code_div_cycle_code(wrong_card, [
+    "",
+    weak_part,
+    " is ",
+    wrong_inner_text,
+  ]);
+  app_code_div_cycle_code(wrong_card, [
     "If we replace the ",
     weak_part,
     " with ",
@@ -112,7 +117,7 @@ export function app_code_lesson_expression_which_part_first_above(
     ", which is ",
     wrong_value_text,
   ]);
-  html_div_cycle_code(wrong_card, [
+  app_code_div_cycle_code(wrong_card, [
     "But ",
     whole,
     " is ",
@@ -120,16 +125,16 @@ export function app_code_lesson_expression_which_part_first_above(
     ", not ",
     wrong_value_text,
   ]);
-  html_div_cycle_code(wrong_card, [
+  app_code_div_cycle_code(wrong_card, [
     "So here we cannot replace the ",
     weak_part,
     " first",
   ]);
-  html_div_cycle_code(wrong_card, [
+  app_code_div_cycle_code(wrong_card, [
     "Instead we must replace the ",
     strong_part,
   ]);
-  html_div_cycle_code(wrong_card, [
+  app_code_div_cycle_code(wrong_card, [
     "That is because ",
     times,
     " is solved before ",
@@ -137,7 +142,7 @@ export function app_code_lesson_expression_which_part_first_above(
   ]);
   let rule_card = app_code_container_light_blue(root);
   ("the rule closes the screen rather than opening it, the same way round as the lesson on comparing a comparison: a general sentence put first has nothing yet to attach to, while the same sentence at the end is a name for something already watched happening");
-  html_div_cycle_code(rule_card, [
+  app_code_div_cycle_code(rule_card, [
     "So, in general, replacements must honor order like ",
     times,
     " before ",

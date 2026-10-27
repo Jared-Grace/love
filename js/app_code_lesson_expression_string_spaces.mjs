@@ -12,7 +12,7 @@ import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { app_code_verse_word_pairs } from "./app_code_verse_word_pairs.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 export function app_code_lesson_expression_string_spaces() {
   "the second string lesson, reusing the first one's machinery: a string can hold more than one word - a phrase with a SPACE - and the space is part of the string's value (it is not dropped). The word source is adjacent word pairs from the shared verse.";
@@ -47,8 +47,8 @@ export function app_code_lesson_expression_string_spaces() {
     let phrase = list_random_item(list);
     let code = app_code_string_code(phrase);
     let intro = app_code_container_light_blue(root);
-    html_div_cycle_code(intro, ["A string is text in quotes"]);
-    html_div_cycle_code(intro, ["A string can hold more than one word"]);
+    app_code_div_cycle_code(intro, ["A string is text in quotes"]);
+    app_code_div_cycle_code(intro, ["A string can hold more than one word"]);
     let example_line = html_div(intro);
     html_span_text(example_line, "Here is a string with a space: ");
     html_span_text_code_dark(example_line, code);
@@ -60,6 +60,6 @@ export function app_code_lesson_expression_string_spaces() {
     let value_out = html_span_text_code_dark(ex, phrase);
     let color = app_code_string_value_color();
     html_font_color_set(value_out, color);
-    html_div_cycle_code(define, ["The space is part of the value"]);
+    app_code_div_cycle_code(define, ["The space is part of the value"]);
   }
 }

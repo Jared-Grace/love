@@ -6,7 +6,7 @@ import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_sta
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { app_code_lesson_cup_code_box } from "./app_code_lesson_cup_code_box.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
     app_code_lesson_statement_name_value,
     ["a variable has a name, and holds one value"],
   );
-  html_div_cycle_code(box_before, [
+  app_code_div_cycle_code(box_before, [
     "So far every cup has been called ",
     name_before,
   ]);
@@ -36,15 +36,17 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
   app_code_lesson_cup_fruit(box_before, grapes, name_before, uncolored);
   ("the second picture is the first one with a different word written on it, and the line under it says the one thing a learner has to carry away - that nothing else about the cup moved");
   let box_any = app_code_container_light_blue(root);
-  html_div_cycle_code(box_any, ["But you can call a cup whatever you like"]);
+  app_code_div_cycle_code(box_any, [
+    "But you can call a cup whatever you like",
+  ]);
   ("THIS CUP rather than THIS ONE. One is a word that has to be resolved before the sentence means anything, and the thing it stands for was named two boxes up; naming the cup outright costs one word and leaves nothing to resolve. It also lines the sentence up with every other line on these screens, which all say cup.");
-  html_div_cycle_code(box_any, ["Suppose you called this cup ", name]);
+  app_code_div_cycle_code(box_any, ["Suppose you called this cup ", name]);
   app_code_lesson_cup_fruit(box_any, grapes, name, uncolored);
-  html_div_cycle_code(box_any, ["What is in the cup did not change"]);
+  app_code_div_cycle_code(box_any, ["What is in the cup did not change"]);
   app_code_value_line(box_any, "Inside the cup: ", grapes);
   let box_id = app_code_container_light_blue(root);
-  html_div_cycle_code(box_id, ["A name can be any identifier"]);
-  html_div_cycle_code(box_id, [
+  app_code_div_cycle_code(box_id, ["A name can be any identifier"]);
+  app_code_div_cycle_code(box_id, [
     "The word ",
     name,
     " is an identifier, so it can be a name",
@@ -52,7 +54,7 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
   ("the code box gives a cup a word for a name and a word for a value, so the two are the same kind of thing on the page and only where they stand tells them apart - which is exactly the reading the questions ask for");
   app_code_lesson_cup_code_box(root, name, word);
   let box_care = app_code_container_light_blue(root);
-  html_div_cycle_code(box_care, [
+  app_code_div_cycle_code(box_care, [
     "What comes out is what is inside the cup, not the name on it",
   ]);
 }

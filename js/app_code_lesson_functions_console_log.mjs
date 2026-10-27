@@ -4,7 +4,7 @@ import { identity } from "./identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
 import { js_code_call_arg_fn } from "./js_code_call_arg_fn.mjs";
 import { js_operator_first_code_call_only } from "./js_operator_first_code_call_only.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_transform_first_combine } from "./list_transform_first_combine.mjs";
 import { list_between_space_nb } from "./list_between_space_nb.mjs";
 import { js_code_parenthesis_list } from "./js_code_parenthesis_list.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_functions_console_log() {
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
     let inside = [" inside its ", ...parts];
-    html_div_cycle_code(c, [
+    app_code_div_cycle_code(c, [
       "However, ",
       verb,
       " and ",

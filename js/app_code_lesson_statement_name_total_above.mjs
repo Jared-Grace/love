@@ -10,7 +10,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_div_code } from "./app_code_div_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_statement_name_total_above(root, context) {
   let box_named = app_code_container_light_blue(root);
   ("the plus stands in the writing as a code chip, because it is the symbol the lesson turns on rather than a symbol merely mentioned in passing.");
   ("Both lines name the third cup in brackets, drawn as code because that is what it is everywhere else on this screen. A name and that name are the only words a learner would otherwise have, and neither says which of the three cups is meant, so the letter is put where the sentence needs it rather than left to be found by looking back up at the code.");
-  html_div_cycle_code(box_named, [
+  app_code_div_cycle_code(box_named, [
     "We can solve operators like ",
     plus,
     " and give the solved value a name (",
@@ -55,7 +55,7 @@ export function app_code_lesson_statement_name_total_above(root, context) {
   ]);
   let code_total = js_code_let_statement(name_total, names_sum);
   app_code_div_code(box_named, code_total);
-  html_div_cycle_code(box_named, [
+  app_code_div_cycle_code(box_named, [
     "Then we can log out the value of that name (",
     name_total,
     "):",
@@ -70,18 +70,18 @@ export function app_code_lesson_statement_name_total_above(root, context) {
   let operator = js_operator_triple_equal_symbol();
   let equality = js_code_binary_spaced_nb(names_sum, operator, total);
   let box_same = app_code_container_light_blue(root);
-  html_div_cycle_code(box_same, [
+  app_code_div_cycle_code(box_same, [
     "When we solve ",
     names_sum,
     ", its value is ",
     total,
   ]);
-  html_div_cycle_code(box_same, ["Earlier we wrote:"]);
+  app_code_div_cycle_code(box_same, ["Earlier we wrote:"]);
   app_code_div_code(box_same, code_total);
-  html_div_cycle_code(box_same, ["Instead we could have written:"]);
+  app_code_div_cycle_code(box_same, ["Instead we could have written:"]);
   let code_same = js_code_let_statement(name_total, total);
   app_code_div_code(box_same, code_same);
-  html_div_cycle_code(box_same, [
+  app_code_div_cycle_code(box_same, [
     "And ",
     name_total,
     " would have the same value either way because ",

@@ -16,7 +16,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { function_is } from "./function_is.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_code_code_dark_lines_pointed } from "./app_code_code_dark_lines_pointed.mjs";
@@ -113,7 +113,7 @@ export function app_code_lesson_statement_formula_answer_count({
       } else if (function_is(parts)) {
         parts(box_now, context);
       } else {
-        html_div_cycle_code(box_now, parts);
+        app_code_div_cycle_code(box_now, parts);
       }
     }
     let example = program_of(example_values);

@@ -6,7 +6,7 @@ import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_strong_card(
   root,
   context,

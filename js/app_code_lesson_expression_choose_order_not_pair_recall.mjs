@@ -5,7 +5,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_not_changes_true_false } from "./app_code_not_changes_true_false.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 export function app_code_lesson_expression_choose_order_not_pair_recall(
   root,
@@ -27,7 +27,7 @@ export function app_code_lesson_expression_choose_order_not_pair_recall(
     changes,
   );
   let inside_first = app_code_parentheses_inside_before_outside("");
-  html_div_cycle_code(recall_card, [
+  app_code_div_cycle_code(recall_card, [
     "And whatever is inside ",
     left_parenthesis,
     " and ",

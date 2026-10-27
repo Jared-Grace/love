@@ -6,7 +6,7 @@ import { app_code_category_expressions } from "./app_code_category_expressions.m
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_swapping_order() {
   "the third swapping lesson: the ordering comparisons < > <= >=, which FLIP when swapped. The reason is understood, not memorised: if 2 < 3 is true then 3 < 2 is false, because swapping would say the bigger number is now the smaller one. + and * are recalled as the ones that can swap, so the quiz mixes them (true) with < > <= >= (false). Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
@@ -46,7 +46,7 @@ export function app_code_lesson_expression_swapping_order() {
       ["", "<", " and ", ">", " ask which number is smaller or bigger"],
     );
     let less = app_code_container_light_blue(root);
-    html_div_cycle_code(less, [
+    app_code_div_cycle_code(less, [
       "",
       "2 < 3",
       " is ",
@@ -56,13 +56,13 @@ export function app_code_lesson_expression_swapping_order() {
       " is ",
       "false",
     ]);
-    html_div_cycle_code(less, [
+    app_code_div_cycle_code(less, [
       "Swapping ",
       "<",
       " would say the bigger number is now the smaller number",
     ]);
-    html_div_cycle_code(less, ["And likewise for ", ">"]);
-    html_div_cycle_code(less, [
+    app_code_div_cycle_code(less, ["And likewise for ", ">"]);
+    app_code_div_cycle_code(less, [
       "So we can never swap two different numbers around ",
       "<",
       " or ",
@@ -70,7 +70,7 @@ export function app_code_lesson_expression_swapping_order() {
     ]);
     app_code_lesson_swapping_same_numbers_line(less);
     let or_equal = app_code_container_light_blue(root);
-    html_div_cycle_code(or_equal, [
+    app_code_div_cycle_code(or_equal, [
       "",
       "3 <= 5",
       " is ",
@@ -80,21 +80,21 @@ export function app_code_lesson_expression_swapping_order() {
       " is ",
       "false",
     ]);
-    html_div_cycle_code(or_equal, [
+    app_code_div_cycle_code(or_equal, [
       "So we can never swap two different numbers around ",
       "<=",
       " or ",
       ">=",
     ]);
     let swappers = app_code_container_light_blue(root);
-    html_div_cycle_code(swappers, [
+    app_code_div_cycle_code(swappers, [
       "So far, only ",
       "+",
       " and ",
       "*",
       " keep the same value when swapped",
     ]);
-    html_div_cycle_code(swappers, [
+    app_code_div_cycle_code(swappers, [
       "But ",
       "-",
       " , ",

@@ -6,7 +6,7 @@ import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_code_dark_lines_braces_paired_random } from "./app_code_code_dark_lines_braces_paired_random.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_brace_pair_two() {
       ["the braces of code are its ", left, " and ", right, " tokens."],
     );
     let box_paired = app_code_container_light_blue(root);
-    html_div_cycle_code(box_paired, [
+    app_code_div_cycle_code(box_paired, [
       "Braces come in pairs. Every ",
       left,
       " has a matching ",
@@ -41,14 +41,14 @@ export function app_code_lesson_brace_pair_two() {
       left,
       " too",
     ]);
-    html_div_cycle_code(box_paired, [
+    app_code_div_cycle_code(box_paired, [
       "A ",
       left,
       " begins a section of code, and its ",
       right,
       " ends it",
     ]);
-    html_div_cycle_code(box_paired, [
+    app_code_div_cycle_code(box_paired, [
       "Here each pair has a colour of its own:",
     ]);
     let paired_div = html_div(box_paired);

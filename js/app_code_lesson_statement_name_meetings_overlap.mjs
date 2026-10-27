@@ -6,7 +6,7 @@ import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -52,9 +52,9 @@ export function app_code_lesson_statement_name_meetings_overlap() {
   function remember_lines(box) {
     "Larger and Smaller in their own shape, the call beside what it is";
     let larger = js_code_call_args(max_name, ["3", "8"]);
-    html_div_cycle_code(box, ["", larger, " is ", "8"]);
+    app_code_div_cycle_code(box, ["", larger, " is ", "8"]);
     let smaller = js_code_call_args(min_name, ["3", "8"]);
-    html_div_cycle_code(box, ["", smaller, " is ", "3"]);
+    app_code_div_cycle_code(box, ["", smaller, " is ", "3"]);
   }
   function values_get() {
     "two pairs that overlap, one inside the other, and two that do not, one that only touches, in a fresh order each screen";

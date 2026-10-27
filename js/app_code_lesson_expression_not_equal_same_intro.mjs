@@ -9,7 +9,7 @@ import { js_keyword_false } from "./js_keyword_false.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_not_changes_true_false } from "./app_code_not_changes_true_false.mjs";
 export function app_code_lesson_expression_not_equal_same_intro(root, context) {
   "the two cards above the lesson matching a !== against a ! around an ===: first what each of the two comparison symbols asks, and that one therefore gives the opposite answer to the other; then, on a second card, what a ! does spelled out on true and false themselves before it is called an opposite - so the word opposite is earned in both halves before the two spellings are put together.";
@@ -32,21 +32,25 @@ export function app_code_lesson_expression_not_equal_same_intro(root, context) {
   let long = js_code_not_parenthesis_wrapped(inner);
   let long_other = js_code_not_parenthesis_wrapped(short);
   let asks = app_code_container_light_blue(root);
-  html_div_cycle_code(asks, [
+  app_code_div_cycle_code(asks, [
     "",
     short,
     " asks if the two sides are different",
   ]);
-  html_div_cycle_code(asks, ["", inner, " asks if the two sides are the same"]);
-  html_div_cycle_code(asks, ['"Same" and "different" are opposite ideas']);
-  html_div_cycle_code(asks, [
+  app_code_div_cycle_code(asks, [
+    "",
+    inner,
+    " asks if the two sides are the same",
+  ]);
+  app_code_div_cycle_code(asks, ['"Same" and "different" are opposite ideas']);
+  app_code_div_cycle_code(asks, [
     "So ",
     different_symbol,
     " gives the opposite answer to ",
     same_symbol,
   ]);
   let joins = app_code_container_light_blue(root);
-  html_div_cycle_code(joins, [
+  app_code_div_cycle_code(joins, [
     "",
     true_word,
     " and ",
@@ -60,20 +64,20 @@ export function app_code_lesson_expression_not_equal_same_intro(root, context) {
     app_code_lesson_expression_not,
     changes,
   );
-  html_div_cycle_code(joins, [
+  app_code_div_cycle_code(joins, [
     "So, ",
     bang_symbol,
     " gives the opposite answer too",
   ]);
-  html_div_cycle_code(joins, [
+  app_code_div_cycle_code(joins, [
     "So ",
     short,
     " and ",
     long,
     " always solve to the same answer",
   ]);
-  html_div_cycle_code(joins, ["Both are ways to solve the same answer"]);
-  html_div_cycle_code(joins, [
+  app_code_div_cycle_code(joins, ["Both are ways to solve the same answer"]);
+  app_code_div_cycle_code(joins, [
     "Likewise, ",
     inner,
     " and ",

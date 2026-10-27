@@ -1,7 +1,7 @@
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_binary_next_arg } from "./app_code_binary_next_arg.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_expression_comparison(params) {
       if (present) {
         let container = app_code_container_light_blue(root);
         function render_line(line) {
-          html_div_cycle_code(container, line);
+          app_code_div_cycle_code(container, line);
         }
         each(lines, render_line);
       }
@@ -58,7 +58,7 @@ export function app_code_lesson_expression_comparison(params) {
       question_middle,
       " the right number?",
     ]);
-    html_div_cycle_code(question_container, ["The symbol ", symbol, tail]);
+    app_code_div_cycle_code(question_container, ["The symbol ", symbol, tail]);
     render_section(explanation);
     let parts = closing();
     app_code_container_light_blue_cycle_code(root, parts);

@@ -9,7 +9,7 @@ import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_absolute_value() {
   "practice Math.abs, another value-in value-out function like the rounding ones: Math.abs gives how far a number is from zero, which is always positive - a negative number loses its minus sign (Math.abs(-5) is 5) and a positive number stays the same (Math.abs(5) is 5); the answer is that distance; magnitude 2..9";
   function abs_code(inner) {
@@ -62,21 +62,21 @@ export function app_code_lesson_expression_absolute_value() {
     let negative_text = text_combine_multiple(["-", magnitude_text]);
     let example_box = app_code_container_light_blue(root);
     let v = abs_code(negative_text);
-    html_div_cycle_code(example_box, ["", v, " is ", magnitude_text]);
+    app_code_div_cycle_code(example_box, ["", v, " is ", magnitude_text]);
     let v2 = abs_code(magnitude_text);
-    html_div_cycle_code(example_box, ["", v2, " is ", magnitude_text]);
+    app_code_div_cycle_code(example_box, ["", v2, " is ", magnitude_text]);
     let rules = app_code_container_light_blue(root);
-    html_div_cycle_code(rules, [
+    app_code_div_cycle_code(rules, [
       "",
       "Math.abs",
       " will make a negative number positive",
     ]);
-    html_div_cycle_code(rules, [
+    app_code_div_cycle_code(rules, [
       "",
       "Math.abs",
       " will keep a positive number the same",
     ]);
-    html_div_cycle_code(rules, [
+    app_code_div_cycle_code(rules, [
       "The result of ",
       "Math.abs",
       " is always positive",

@@ -3,7 +3,7 @@ import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
 export function app_code_lesson_expression_choose_order_not_twice_recall(
@@ -23,5 +23,5 @@ export function app_code_lesson_expression_choose_order_not_twice_recall(
   );
   let word_true = js_keyword_true();
   let not_true = app_code_operator_code_before(symbol, word_true);
-  html_div_cycle_code(recall_card, ["So ", not_true, " is false"]);
+  app_code_div_cycle_code(recall_card, ["So ", not_true, " is false"]);
 }

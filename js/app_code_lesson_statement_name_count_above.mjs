@@ -10,7 +10,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_statement_name_count_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the program the screen before this one ended on, and then that same program with its middle line said a second time");
@@ -39,7 +39,7 @@ export function app_code_lesson_statement_name_count_above(root, context) {
   app_code_code_lines_writes_out_watched(box_once, [held, grown, logged]);
   let box_twice = app_code_container_light_blue(root);
   ("how far the name moves is said as a number rather than as the word twice, and the number one copy of the line would have moved it is said beside it. Twice named the count of lines and left the reader to carry it over to the value, which is the step being shown; the two numbers side by side are that step, written.");
-  html_div_cycle_code(box_twice, [
+  app_code_div_cycle_code(box_twice, [
     "Write that line (",
     grown,
     ") twice and the value of the name goes up by ",
@@ -54,5 +54,5 @@ export function app_code_lesson_statement_name_count_above(root, context) {
     grown,
     logged,
   ]);
-  html_div_cycle_code(box_twice, ["This is how a program counts"]);
+  app_code_div_cycle_code(box_twice, ["This is how a program counts"]);
 }

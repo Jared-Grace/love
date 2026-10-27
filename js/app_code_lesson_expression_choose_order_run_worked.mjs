@@ -10,7 +10,7 @@ import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_code_expression_step_reason_of } from "./app_code_expression_step_reason_of.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
 export function app_code_lesson_expression_choose_order_run_worked(
@@ -45,11 +45,15 @@ export function app_code_lesson_expression_choose_order_run_worked(
   ("It used to open with the outer operator having something on one side, so it could not be solved yet. That is true of the line and it is not the reason: a learner reads it as an order that comes from one part having something beside it, which is not a rule they can carry anywhere, and the real rule was never said at all. Worse, it left the two operators unexplained beside each other, so a learner had no way to tell whether it was the parentheses or the operators that decided.");
   ("The parentheses are drawn round the part as well as named, because the word and the mark have to be pinned to each other - this is the screen where a learner meets parentheses as a REASON rather than as something they have merely seen.");
   let reason = app_code_expression_step_reason_of(tree, step);
-  html_div_cycle_code(run, reason);
-  html_div_cycle_code(run, ["So we cannot solve the ", outer_symbol, " yet"]);
-  html_div_cycle_code(run, ["We must solve the ", step_symbol, " first"]);
+  app_code_div_cycle_code(run, reason);
+  app_code_div_cycle_code(run, [
+    "So we cannot solve the ",
+    outer_symbol,
+    " yet",
+  ]);
+  app_code_div_cycle_code(run, ["We must solve the ", step_symbol, " first"]);
   ("said as the doing rather than as an equation, because the three lines above it are all about what may be done and this is the one that does it");
-  html_div_cycle_code(run, ["We solve ", step_code, " to get ", step_text]);
+  app_code_div_cycle_code(run, ["We solve ", step_code, " to get ", step_text]);
   ("the swap is said in the very words the button that makes it says, out of the one place both of them read, so the word for the swap and its two pieces wear the colour they wear on the line itself");
   let swap_line = html_div(run);
   app_code_expression_replace_swap_say(
@@ -59,7 +63,7 @@ export function app_code_lesson_expression_choose_order_run_worked(
     step_code,
     step_text,
   );
-  html_div_cycle_code(run, [
+  app_code_div_cycle_code(run, [
     "Then all we have left is ",
     stepped_code,
     ", and that solves to ",

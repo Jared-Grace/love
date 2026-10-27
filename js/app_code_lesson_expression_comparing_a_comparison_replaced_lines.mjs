@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_comparing_a_comparison_line } from "./app_code_lesson_expression_comparing_a_comparison_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_expression_comparing_a_comparison_replaced_lines
   let ended = fn(value, right_value);
   let ended_code = js_true_false_word(ended);
   let opening = text_combine(then_lead, " we have ");
-  html_div_cycle_code(card, [opening, stood_in]);
-  html_div_cycle_code(card, ["", stood_in, " is ", ended_code]);
-  html_div_cycle_code(card, ["So ", whole, " is ", ended_code]);
+  app_code_div_cycle_code(card, [opening, stood_in]);
+  app_code_div_cycle_code(card, ["", stood_in, " is ", ended_code]);
+  app_code_div_cycle_code(card, ["So ", whole, " is ", ended_code]);
 }

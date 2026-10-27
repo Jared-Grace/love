@@ -8,7 +8,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { app_code_lesson_statement_name_plus_one_box } from "./app_code_lesson_statement_name_plus_one_box.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 export function app_code_lesson_statement_name_one_more_above(root, context) {
   arguments_assert(arguments, 2);
@@ -23,7 +23,7 @@ export function app_code_lesson_statement_name_one_more_above(root, context) {
   let code = js_code_assign_statement(name, more);
   app_code_lesson_statement_name_plus_one_box(root, context);
   let box = app_code_container_light_blue(root);
-  html_div_cycle_code(box, [
+  app_code_div_cycle_code(box, [
     "Instead of a new name (",
     name_last,
     "), a name (",

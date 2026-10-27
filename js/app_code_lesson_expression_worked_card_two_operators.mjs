@@ -1,7 +1,7 @@
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_worked_card_two_operators({
   root,
   heading,
@@ -20,10 +20,16 @@ export function app_code_lesson_expression_worked_card_two_operators({
   let heading_written = list_empty_not_is(heading);
   let worked = app_code_container_light_blue(root);
   if (heading_written) {
-    html_div_cycle_code(worked, heading);
+    app_code_div_cycle_code(worked, heading);
   }
-  html_div_cycle_code(worked, ["For ", whole, ", we solve ", pair, " first"]);
-  html_div_cycle_code(worked, [
+  app_code_div_cycle_code(worked, [
+    "For ",
+    whole,
+    ", we solve ",
+    pair,
+    " first",
+  ]);
+  app_code_div_cycle_code(worked, [
     "",
     pair,
     " is ",
@@ -31,7 +37,7 @@ export function app_code_lesson_expression_worked_card_two_operators({
     ", so we have ",
     rest,
   ]);
-  html_div_cycle_code(worked, [
+  app_code_div_cycle_code(worked, [
     "",
     rest,
     " is ",

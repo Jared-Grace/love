@@ -8,7 +8,7 @@ import { html_span_text_content } from "./html_span_text_content.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
 import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_middle_step } from "./app_code_lesson_statement_name_middle_step.mjs";
 import { list_first } from "./list_first.mjs";
@@ -45,13 +45,13 @@ export function app_code_lesson_statement_name_middle() {
   let plus = js_operator_plus_symbol();
   function remember_lines(box) {
     "lesson 87 in its own shape, each expression beside what it is";
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, [
       "",
       "Math.floor(14 / 4)",
       " is ",
       "Math.floor(3.5)",
     ]);
-    html_div_cycle_code(box, ["", "Math.floor(3.5)", " is ", "3"]);
+    app_code_div_cycle_code(box, ["", "Math.floor(3.5)", " is ", "3"]);
   }
   function values_get() {
     "four of the five pairs, in a fresh order each screen";

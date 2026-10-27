@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -35,9 +35,9 @@ export function app_code_lesson_statement_name_clamp() {
   function remember_lines(box) {
     "Larger and Smaller in their own shape, the call beside what it is";
     let larger = js_code_call_args(max_name, ["3", "8"]);
-    html_div_cycle_code(box, ["", larger, " is ", "8"]);
+    app_code_div_cycle_code(box, ["", larger, " is ", "8"]);
     let smaller = js_code_call_args(min_name, ["3", "8"]);
-    html_div_cycle_code(box, ["", smaller, " is ", "3"]);
+    app_code_div_cycle_code(box, ["", smaller, " is ", "3"]);
   }
   function values_get() {
     "one temperature below the range, one above it, and two in it, in a fresh order each screen";

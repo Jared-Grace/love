@@ -8,7 +8,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_true_false() {
   function refill() {
     let t = js_keyword_true();
@@ -44,7 +44,7 @@ export function app_code_lesson_expression_true_false() {
     let c = app_code_container_light_blue(root);
     let t2 = js_keyword_true();
     let f2 = js_keyword_false();
-    html_div_cycle_code(c, [
+    app_code_div_cycle_code(c, [
       "",
       t2,
       " and ",

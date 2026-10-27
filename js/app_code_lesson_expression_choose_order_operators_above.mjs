@@ -11,7 +11,7 @@ import { app_code_lesson_expression_choose_order_operators_intro } from "./app_c
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
@@ -49,15 +49,19 @@ export function app_code_lesson_expression_choose_order_operators_above(
   ("the rule is said FIRST, naming both operators, and what it rules out follows from it - because which of the two is stronger is the whole of why this line has an order at all");
   ("It used to open with the weaker operator having something on one side, so it could not be solved yet. That is true of the line and it is not the reason: read as written, the order comes from one part having something beside it, which is not a rule a learner can carry to the next line - and the rule they CAN carry, that this operator goes before that one, was left to be inferred from the word stronger a line further down.");
   ("Said of these two operators rather than of the four. The card above already names all four in their two groups; what this line adds is that the rule has just decided something about the line in front of them.");
-  html_div_cycle_code(run, [
+  app_code_div_cycle_code(run, [
     "The ",
     strong_symbol,
     " is solved before the ",
     weak_symbol,
   ]);
-  html_div_cycle_code(run, ["So we cannot solve the ", weak_symbol, " yet"]);
+  app_code_div_cycle_code(run, [
+    "So we cannot solve the ",
+    weak_symbol,
+    " yet",
+  ]);
   ("said as the doing rather than as an equation, because the two lines above it are about what may be done and this is the one that does it");
-  html_div_cycle_code(run, ["We solve ", step_code, " to get ", step_text]);
+  app_code_div_cycle_code(run, ["We solve ", step_code, " to get ", step_text]);
   ("the swap is said in the very words the button that makes it says, out of the one place both of them read, so the word for the swap and its two pieces wear the colour they wear on the line itself");
   let swap_line = html_div(run);
   app_code_expression_replace_swap_say(
@@ -67,7 +71,7 @@ export function app_code_lesson_expression_choose_order_operators_above(
     step_code,
     step_text,
   );
-  html_div_cycle_code(run, [
+  app_code_div_cycle_code(run, [
     "Then all we have left is ",
     stepped_code,
     ", and that solves to ",

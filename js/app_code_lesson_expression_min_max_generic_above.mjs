@@ -4,7 +4,7 @@ import { list_get } from "./list_get.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_expression_min_max_generic_code } from "./app_code_lesson_expression_min_max_generic_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_expression_min_max_generic_above({
   let other_text = text_to(other);
   let example_box = app_code_container_light_blue(root);
   let compare_middle = text_combine_multiple([" is ", comparison, " "]);
-  html_div_cycle_code(example_box, [
+  app_code_div_cycle_code(example_box, [
     "",
     chosen_text,
     compare_middle,
@@ -43,13 +43,13 @@ export function app_code_lesson_expression_min_max_generic_above({
     other,
     called_name,
   );
-  html_div_cycle_code(example_box, ["So ", v, " is ", chosen_text]);
+  app_code_div_cycle_code(example_box, ["So ", v, " is ", chosen_text]);
   let v2 = app_code_lesson_expression_min_max_generic_code(
     other,
     chosen,
     called_name,
   );
-  html_div_cycle_code(example_box, ["And ", v2, " is also ", chosen_text]);
+  app_code_div_cycle_code(example_box, ["And ", v2, " is also ", chosen_text]);
   let chooses = text_combine_multiple([" chooses the ", noun, " number (the "]);
   let chooses_line = html_div(example_box);
   html_span_text_code_dark(chooses_line, called_name);
@@ -58,7 +58,7 @@ export function app_code_lesson_expression_min_max_generic_above({
   html_bold(short_term);
   html_span_text(chooses_line, "imum)");
   let equal_box = app_code_container_light_blue(root);
-  html_div_cycle_code(equal_box, [
+  app_code_div_cycle_code(equal_box, [
     "If both numbers are equal, then there's only one number to choose from, so ",
     called_name,
     " chooses that number",

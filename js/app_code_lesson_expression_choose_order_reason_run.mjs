@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_expression_choose_order_run_open } from "./app_code_lesson_expression_choose_order_run_open.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
 import { list_first } from "./list_first.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_expression_choose_order_reason_run(
   let heading_written = list_empty_not_is(heading);
   let line_card = app_code_container_light_blue(root);
   if (heading_written) {
-    html_div_cycle_code(line_card, heading);
+    app_code_div_cycle_code(line_card, heading);
   }
   let run = app_code_lesson_expression_choose_order_run_open(
     root,
@@ -46,10 +46,10 @@ export function app_code_lesson_expression_choose_order_reason_run(
     let reason_written = list_empty_not_is(reason);
     let lead = "We solve ";
     if (reason_written) {
-      html_div_cycle_code(run, reason);
+      app_code_div_cycle_code(run, reason);
       lead = "So we solve ";
     }
-    html_div_cycle_code(run, [lead, step_code, " to get ", step_text]);
+    app_code_div_cycle_code(run, [lead, step_code, " to get ", step_text]);
     current = app_code_expression_solved(current, node);
     ready = app_code_lesson_expression_choose_order_run_remains(run, current);
   }

@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_identifiers_letters_spaces } from "./app_code_lesson_identifiers_letters_spaces.mjs";
 import { app_code_lesson_identifiers_underscores_generic_batch_get } from "./app_code_lesson_identifiers_underscores_generic_batch_get.mjs";
 import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { word_plural } from "./word_plural.mjs";
 import { list_swap_beginning } from "./list_swap_beginning.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
@@ -51,14 +51,14 @@ export function app_code_lesson_identifiers_underscores_generic({
       p,
       " ",
     ]);
-    html_div_cycle_code(c2, [combined, separator_valid]);
+    app_code_div_cycle_code(c2, [combined, separator_valid]);
     let p2 = word_plural(separator_invalid_name);
     let combined2 = text_combine_multiple([
       "However identifiers cannot have ",
       p2,
       " ",
     ]);
-    html_div_cycle_code(c2, [combined2, separator_invalid]);
+    app_code_div_cycle_code(c2, [combined2, separator_invalid]);
     function define_valid() {
       app_code_lesson_underscores_define_symbol(
         c,

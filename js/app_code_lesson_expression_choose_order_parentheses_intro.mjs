@@ -3,7 +3,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_intro(
   parent,
 ) {
@@ -17,7 +17,7 @@ export function app_code_lesson_expression_choose_order_parentheses_intro(
   let or_symbol = js_operator_or_symbol();
   let left_parenthesis = js_code_parenthesis_left();
   let right_parenthesis = js_code_parenthesis_right();
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "Now ",
     left_parenthesis,
     " and ",
@@ -25,13 +25,13 @@ export function app_code_lesson_expression_choose_order_parentheses_intro(
     " can stand around a ",
     or_symbol,
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "The ",
     or_symbol,
     " inside them is solved before the ",
     and_symbol,
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "So the parentheses change which one goes first",
   ]);
 }

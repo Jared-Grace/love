@@ -9,7 +9,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { js_comment_start } from "./js_comment_start.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 export function app_code_lesson_comment_after_code_above(root, context) {
@@ -35,19 +35,19 @@ export function app_code_lesson_comment_after_code_above(root, context) {
   app_code_code_lines_writes_out(box_lines, [first_line, last_noted], value);
   let slashes = js_comment_start();
   let box_after = app_code_container_light_blue(root);
-  html_div_cycle_code(box_after, [
+  app_code_div_cycle_code(box_after, [
     "The slashes can also go after code, on the same line:",
   ]);
   let after = list_join_space([first_line, last_noted]);
   app_code_code_lines_writes_out(box_after, [after], value);
-  html_div_cycle_code(box_after, [
+  app_code_div_cycle_code(box_after, [
     "The code before the slashes (",
     slashes,
     ") runs",
   ]);
-  html_div_cycle_code(box_after, ["The rest of that line is skipped"]);
+  app_code_div_cycle_code(box_after, ["The rest of that line is skipped"]);
   let box_note = app_code_container_light_blue(root);
-  html_div_cycle_code(box_note, [
+  app_code_div_cycle_code(box_note, [
     "A comment after code is often a note about that code:",
   ]);
   let note = js_code_comment_line("add twenty and thirty");

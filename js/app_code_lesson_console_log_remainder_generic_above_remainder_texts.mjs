@@ -3,7 +3,7 @@ import { app_code_lesson_expression_remainder_2 } from "./app_code_lesson_expres
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_console_log_remainder_generic_example } from "./app_code_lesson_console_log_remainder_generic_example.mjs";
 import { html_div } from "./html_div.mjs";
@@ -33,9 +33,11 @@ export function app_code_lesson_console_log_remainder_generic_above_remainder_te
     );
   } else {
     let first_line = text_combine("When", rest);
-    html_div_cycle_code(intro, [first_line]);
+    app_code_div_cycle_code(intro, [first_line]);
   }
-  html_div_cycle_code(intro, ["Other times the numbers do not divide evenly"]);
+  app_code_div_cycle_code(intro, [
+    "Other times the numbers do not divide evenly",
+  ]);
   let example_box = app_code_container_light_blue(root);
   app_code_lesson_console_log_remainder_generic_example(
     example_box,
@@ -53,9 +55,9 @@ export function app_code_lesson_console_log_remainder_generic_above_remainder_te
     0,
     divisor,
   );
-  html_div_cycle_code(evenly_box, ["", percent, " gives the remainder"]);
+  app_code_div_cycle_code(evenly_box, ["", percent, " gives the remainder"]);
   let meaning = app_code_container_light_blue(root);
-  html_div_cycle_code(meaning, [
+  app_code_div_cycle_code(meaning, [
     "When we divide by ",
     divisor_text,
     ", the remainder is always smaller than ",

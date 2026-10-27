@@ -1,7 +1,7 @@
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_replaced_lines } from "./app_code_lesson_expression_comparing_a_comparison_replaced_lines.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
 export function app_code_lesson_expression_comparing_a_comparison_replacing_worked_example(
   root,
@@ -16,8 +16,8 @@ export function app_code_lesson_expression_comparing_a_comparison_replacing_work
   ("It opens on the fact rather than on the line, because the line is already standing above it. 3 === 5 is false is the reason for the step under it, and So we replace names the step as following from that reason.");
   let card = app_code_container_light_blue(root);
   let answer = js_true_false_word(value);
-  html_div_cycle_code(card, ["", code, " is ", answer]);
-  html_div_cycle_code(card, ["So we replace the ", code, " with ", answer]);
+  app_code_div_cycle_code(card, ["", code, " is ", answer]);
+  app_code_div_cycle_code(card, ["So we replace the ", code, " with ", answer]);
   app_code_lesson_expression_comparing_a_comparison_replaced_lines(
     card,
     code,

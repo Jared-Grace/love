@@ -20,7 +20,7 @@ import { json_to } from "./json_to.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { equal } from "./equal.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
@@ -139,7 +139,7 @@ export function app_code_lesson_if_twice() {
     let v = json_to(value);
     if (runs) {
       let after = json_to(value_after);
-      html_div_cycle_code(root, [
+      app_code_div_cycle_code(root, [
         "",
         condition2,
         " is ",
@@ -151,7 +151,7 @@ export function app_code_lesson_if_twice() {
       ]);
       return;
     }
-    html_div_cycle_code(root, [
+    app_code_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -178,13 +178,17 @@ export function app_code_lesson_if_twice() {
     let one_if = list_concat_multiple([[code5], if_lines2, [statement2]]);
     app_code_code_lines_writes_out(box_one, one_if, "4");
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, ["We can write the same ", "if", " twice:"]);
+    app_code_div_cycle_code(box_two, [
+      "We can write the same ",
+      "if",
+      " twice:",
+    ]);
     let twice_lines = program_lines(1, 5, 3);
     app_code_code_lines_writes_out(box_two, twice_lines, "7");
     said(box_two, 1, 4, true);
     said(box_two, 4, 7, true);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,
       " starts at ",

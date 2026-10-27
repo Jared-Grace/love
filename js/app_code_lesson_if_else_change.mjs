@@ -25,7 +25,7 @@ import { json_to } from "./json_to.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -144,7 +144,7 @@ export function app_code_lesson_if_else_change() {
     let condition2 = js_code_binary_spaced_nb(name, less, 5);
     let if_dots = js_code_if_dots(condition2);
     let code5 = js_code_else_dots();
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "Both ",
       if_dots,
       " and ",
@@ -155,7 +155,7 @@ export function app_code_lesson_if_else_change() {
     app_code_code_lines_writes_out(box_two, true_lines, "7");
     let true_condition = js_code_binary_spaced_nb(4, less, 5);
     let yes2 = js_code_assign_operator_statement(name, plus, 3);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       true_condition,
       " is ",
@@ -165,7 +165,7 @@ export function app_code_lesson_if_else_change() {
       " runs",
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,
       " starts at ",
@@ -176,7 +176,7 @@ export function app_code_lesson_if_else_change() {
     app_code_code_lines_writes_out(box_three, false_lines, "12");
     let false_condition = js_code_binary_spaced_nb(6, less, 5);
     let no2 = js_code_assign_operator_statement(name, times, 2);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "",
       false_condition,
       " is ",

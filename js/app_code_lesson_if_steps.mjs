@@ -12,7 +12,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_program_lines } from "./app_code_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
@@ -82,7 +82,7 @@ export function app_code_lesson_if_steps() {
     let seed = [4, 3, 5];
     let condition = condition_get(seed, true);
     let box = app_code_container_light_blue(root);
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, [
       "Each line can work something out, and an ",
       "if",
       " at the end can use the answer:",
@@ -97,14 +97,28 @@ export function app_code_lesson_if_steps() {
     );
     let both = list_join_newline([inside_shown, after_shown]);
     app_code_code_lines_writes_out(box, lines, both);
-    html_div_cycle_code(box, ["", "a", " is ", "4"]);
+    app_code_div_cycle_code(box, ["", "a", " is ", "4"]);
     let combined = js_code_binary_spaced_nb(4, times, 3);
-    html_div_cycle_code(box, ["", "b", " is ", combined, ", which is ", "12"]);
+    app_code_div_cycle_code(box, [
+      "",
+      "b",
+      " is ",
+      combined,
+      ", which is ",
+      "12",
+    ]);
     let combined2 = js_code_binary_spaced_nb(12, minus, 5);
-    html_div_cycle_code(box, ["", "c", " is ", combined2, ", which is ", "7"]);
+    app_code_div_cycle_code(box, [
+      "",
+      "c",
+      " is ",
+      combined2,
+      ", which is ",
+      "7",
+    ]);
     let combined3 = js_code_binary_spaced_nb(7, less, 10);
-    html_div_cycle_code(box, ["", combined3, " is ", "true"]);
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, ["", combined3, " is ", "true"]);
+    app_code_div_cycle_code(box, [
       "So the lines inside ",
       brace_left,
       " and ",

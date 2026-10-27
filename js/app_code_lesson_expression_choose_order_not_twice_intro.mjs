@@ -7,7 +7,7 @@ import { app_code_operator_code_before } from "./app_code_operator_code_before.m
 import { noop } from "./noop.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_bold } from "./html_bold.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div_cycle } from "./html_div_cycle.mjs";
 export function app_code_lesson_expression_choose_order_not_twice_intro(
   parent,
@@ -36,7 +36,7 @@ export function app_code_lesson_expression_choose_order_not_twice_intro(
     html_bold,
     noop,
   ];
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "For ",
     plus,
     ", we use two numbers: ",
@@ -53,7 +53,7 @@ export function app_code_lesson_expression_choose_order_not_twice_intro(
     "binary",
     " operator",
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "Likewise, for ",
     six_minus_five,
     " then ",
@@ -75,10 +75,10 @@ export function app_code_lesson_expression_choose_order_not_twice_intro(
     "unary",
     " operator",
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "It's called a unary operator because there is only one number (",
     "7",
     ")",
   ]);
-  html_div_cycle_code(parent, ["", bang, " is always a unary operator"]);
+  app_code_div_cycle_code(parent, ["", bang, " is always a unary operator"]);
 }

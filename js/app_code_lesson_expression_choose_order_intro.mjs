@@ -2,7 +2,7 @@ import { app_shared_hr_spaced } from "./app_shared_hr_spaced.mjs";
 import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_intro(
   parent,
   whole_line,
@@ -10,11 +10,11 @@ export function app_code_lesson_expression_choose_order_intro(
   arguments_assert(arguments, 2);
   ("what the lesson is for, said of the very line the learner is about to press: that we mean to solve it, that solving it all at once comes later, that for now it is solved a step at a time, and which operator the line itself says goes first");
   app_code_lesson_suppose_solve_line(parent, "Suppose", whole_line);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "Eventually we will teach you to solve this all at once",
   ]);
   ("ends on a colon, because it is the last of the saying and what comes after it is the thing said - the rule, and then the line to press");
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "But, for now, we will teach you to solve this step-by-step:",
   ]);
   ("and a line is drawn right across underneath it, because what follows is not more of the saying - it is the working itself starting, and the two want telling apart by something a learner can see rather than by a gap they have to notice");
@@ -26,6 +26,6 @@ export function app_code_lesson_expression_choose_order_intro(
     whole_line,
   );
   ("the rule is handed back because it is the one line here that stops being true: it is said of the whole line as written, and the first choice leaves a shorter line it no longer describes, so the caller takes it away at that moment");
-  let rule_line = html_div_cycle_code(parent, rule);
+  let rule_line = app_code_div_cycle_code(parent, rule);
   return rule_line;
 }

@@ -7,7 +7,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_statement_name_minus_one_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: one more than a name, the program the lesson on one more than a name was about, then one line saying a new name can hold a name with one taken away");
@@ -23,7 +23,7 @@ export function app_code_lesson_statement_name_minus_one_above(root, context) {
   let less = js_code_binary_spaced_nb(name_first, minus, 1);
   let held_more = js_code_let_statement(name_last, more);
   let held_less = js_code_let_statement(name_last, less);
-  html_div_cycle_code(box, [
+  app_code_div_cycle_code(box, [
     "A new name can also hold a name with one taken away (",
     held_less,
     " instead of ",

@@ -27,7 +27,7 @@ import { list_filter } from "./list_filter.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
@@ -161,7 +161,7 @@ export function app_code_lesson_while_total_squares() {
     let after = json_to(total_after);
     let object = add(value, 1);
     let n_after = json_to(object);
-    html_div_cycle_code(root, [
+    app_code_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -188,7 +188,7 @@ export function app_code_lesson_while_total_squares() {
       ["", "total += n;", " adds each ", name, " to ", total_name, "."],
     );
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "What is added does not have to be ",
       name,
       " itself. Here ",
@@ -205,7 +205,7 @@ export function app_code_lesson_while_total_squares() {
     said(box_two, 2, 4, 5);
     said(box_two, 3, 4, 14);
     let last = js_code_binary_spaced_nb(4, less, 4);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       last,
       " is ",
@@ -214,7 +214,7 @@ export function app_code_lesson_while_total_squares() {
       "{ ... }",
       " is skipped, and the code continues after it",
     ]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "So ",
       total_name,
       " is 1 + 4 + 9, which is 14",

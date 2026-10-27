@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_statement_name_shorter_above({
   root,
@@ -26,20 +26,20 @@ export function app_code_lesson_statement_name_shorter_above({
   app_code_remember_from_lesson(box_long, context, lesson_from, remembered);
   app_code_code_lines_writes_out_watched(box_long, lines_long);
   let box_short = app_code_container_light_blue(root);
-  html_div_cycle_code(box_short, [
+  app_code_div_cycle_code(box_short, [
     "A shorter way to write ",
     long,
     " is ",
     short,
   ]);
-  html_div_cycle_code(box_short, [
+  app_code_div_cycle_code(box_short, [
     "",
     long,
     " and ",
     short,
     " do exactly the same thing",
   ]);
-  html_div_cycle_code(box_short, [
+  app_code_div_cycle_code(box_short, [
     "",
     short,
     " is shorter and easier to type:",

@@ -15,7 +15,7 @@ import { js_code_while_lines } from "./js_code_while_lines.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
 import { add } from "./add.mjs";
@@ -80,7 +80,7 @@ export function app_code_lesson_while_down() {
     let up_lines = list_concat_multiple([[code], while_lines, [statement]]);
     app_code_code_lines_writes_out(box_one, up_lines, "10");
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "A ",
       "while",
       " can also take away from ",

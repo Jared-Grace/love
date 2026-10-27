@@ -5,7 +5,7 @@ import { list_get } from "./list_get.mjs";
 import { app_code_lesson_expression_round_generic_above_term } from "./app_code_lesson_expression_round_generic_above_term.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_bold } from "./html_bold.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 export function app_code_lesson_expression_round_generic_above_rounds(
   ordinary_digits,
@@ -41,7 +41,7 @@ export function app_code_lesson_expression_round_generic_above_rounds(
   if (introduce_whole_number) {
     html_bold(term);
   }
-  html_div_cycle_code(define, [
+  app_code_div_cycle_code(define, [
     "",
     decimal,
     " has a decimal, so ",

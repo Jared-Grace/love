@@ -23,7 +23,7 @@ import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_while_generic(params) {
@@ -118,7 +118,7 @@ export function app_code_lesson_while_generic(params) {
     let condition2 = js_code_binary_spaced_nb(value, comparison, bound);
     if (runs) {
       let after = json_to(value_after);
-      html_div_cycle_code(root, [
+      app_code_div_cycle_code(root, [
         "",
         condition2,
         " is ",
@@ -130,7 +130,7 @@ export function app_code_lesson_while_generic(params) {
       ]);
       return;
     }
-    html_div_cycle_code(root, [
+    app_code_div_cycle_code(root, [
       "",
       condition2,
       " is ",

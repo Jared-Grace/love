@@ -17,7 +17,7 @@ import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { divide } from "./divide.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_remainder_any() {
   "practice the remainder % with a mix of divisors; the intro DEFINES the remainder via the formula (dividend - Math.floor(n / d) * d, learned in the remainder-by-dividing lessons) rather than pointing back to the 2/3/4 lessons; both the number and the divisor vary each question";
   let percent = js_operator_percent_sign();
@@ -69,27 +69,29 @@ export function app_code_lesson_expression_remainder_any() {
       app_code_lesson_expression_dividend,
       ["for ", "14 / 4", ", ", "14", " is the dividend"],
     );
-    html_div_cycle_code(derive, [
+    app_code_div_cycle_code(derive, [
       "And ",
       "Math.floor(14 / 4) * 4",
       " is the whole part",
     ]);
-    html_div_cycle_code(derive, ["Now we will subtract them from each other:"]);
-    html_div_cycle_code(derive, ["", "14 - Math.floor(14 / 4) * 4"]);
-    html_div_cycle_code(derive, ["This is the same as ", "14 % 4"]);
-    html_div_cycle_code(derive, [
+    app_code_div_cycle_code(derive, [
+      "Now we will subtract them from each other:",
+    ]);
+    app_code_div_cycle_code(derive, ["", "14 - Math.floor(14 / 4) * 4"]);
+    app_code_div_cycle_code(derive, ["This is the same as ", "14 % 4"]);
+    app_code_div_cycle_code(derive, [
       "So ",
       "14 % 4",
       " is ",
       "14 - Math.floor(14 / 4) * 4",
     ]);
     let define = app_code_container_light_blue(root);
-    html_div_cycle_code(define, [
+    app_code_div_cycle_code(define, [
       "So the remainder ",
       percent,
       " is the dividend minus its whole part",
     ]);
-    html_div_cycle_code(define, [
+    app_code_div_cycle_code(define, [
       "And this works the same way for any number we divide by",
     ]);
   }

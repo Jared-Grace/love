@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_arithmetic_to_value_symbols } from "./app_code_arithmetic_to_value_symbols.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_code_cycle_parts_and_list } from "./app_code_cycle_parts_and_list.mjs";
@@ -9,7 +9,9 @@ export function app_code_lesson_expression_arithmetic_equality_above(root) {
   arguments_assert(arguments, 1);
   ("first the rule, then it worked once true and once false: each side is done first to its own number, and only then are the two numbers compared");
   let header = app_code_container_light_blue(root);
-  html_div_cycle_code(header, ["Both sides of a comparison can be arithmetic"]);
+  app_code_div_cycle_code(header, [
+    "Both sides of a comparison can be arithmetic",
+  ]);
   let yes = app_code_container_light_blue(root);
   ("the rule is named by its two operators before the line is worked, because a learner who has just been told that both sides MAY be arithmetic still has no reason to do the arithmetic first - the naming is what turns the worked line below from a thing to copy into a thing that follows");
   ("The same words as the lessons ahead of this one - X is solved before Y - so that a learner meeting the shape again with a different operator in the middle recognises the sentence rather than reading a new rule.");
@@ -21,10 +23,10 @@ export function app_code_lesson_expression_arithmetic_equality_above(root) {
   let rule_parts = app_code_cycle_parts_and_list(symbols);
   let rule_tail = [" are all solved before ", equality];
   list_add_multiple(rule_parts, rule_tail);
-  html_div_cycle_code(yes, rule_parts);
+  app_code_div_cycle_code(yes, rule_parts);
   ("THE TWO WORKED LINES SHOW ALL THREE OPERATORS BETWEEN THEM, one of them on each side of a comparison, so nothing the rule row names goes unseen. The true line used to be 3 + 4 === 5 + 2, which is a plus on both sides - the rarest shape the quiz draws at 33 lines in 400, and the one shape where the two sides look like the same working out done twice. The divide is what the old screen never showed at all.");
   ("12 / 4 === 1 + 2 is also the truer example of what a true line here IS. The two sides are meant to look unalike and land on one number - that is the whole reason the maker draws each side its own operator - and two sides both written with a plus hide that behind a likeness.");
-  html_div_cycle_code(yes, [
+  app_code_div_cycle_code(yes, [
     "So, for ",
     "12 / 4 === 1 + 2",
     ", we solve ",
@@ -34,7 +36,7 @@ export function app_code_lesson_expression_arithmetic_equality_above(root) {
     " first, before the ",
     "===",
   ]);
-  html_div_cycle_code(yes, [
+  app_code_div_cycle_code(yes, [
     "Both are ",
     "3",
     ", so ",
@@ -43,7 +45,7 @@ export function app_code_lesson_expression_arithmetic_equality_above(root) {
     "true",
   ]);
   let no = app_code_container_light_blue(root);
-  html_div_cycle_code(no, [
+  app_code_div_cycle_code(no, [
     "For ",
     "10 - 4 === 2 + 5",
     ", we solve ",
@@ -52,7 +54,7 @@ export function app_code_lesson_expression_arithmetic_equality_above(root) {
     "2 + 5",
     " first",
   ]);
-  html_div_cycle_code(no, [
+  app_code_div_cycle_code(no, [
     "That is ",
     "6",
     " and ",

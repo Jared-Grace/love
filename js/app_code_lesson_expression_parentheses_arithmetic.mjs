@@ -10,7 +10,7 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 export function app_code_lesson_expression_parentheses_arithmetic() {
   "the FIRST parentheses a learner ever meets, and they are met where they change the answer: (1 + 2) * 3 is 9 where 1 + 2 * 3 is 7. Everything else here is already known - the numbers, the operators, and the precedence rule itself, which the plus-times lesson taught as we always do the * first, even when it comes later in the line. So exactly one thing is new: a pair of symbols that overrides that rule. The parenthesised group is shown on BOTH sides of the *, the same way the plus-times lesson showed the same multiplication in both positions, so what is learned is the parentheses rather than a position.";
@@ -53,14 +53,14 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
       app_code_lesson_expression_choose_order,
       ["", "1 + 2 * 3", " does the ", times, " first"],
     );
-    html_div_cycle_code(recall, ["So ", "1 + 2 * 3", " is ", "7"]);
-    html_div_cycle_code(recall, [
+    app_code_div_cycle_code(recall, ["So ", "1 + 2 * 3", " is ", "7"]);
+    app_code_div_cycle_code(recall, [
       "But what if we want to do the ",
       plus,
       " first?",
     ]);
     let tool = app_code_container_light_blue(root);
-    html_div_cycle_code(tool, [
+    app_code_div_cycle_code(tool, [
       "We can put ",
       open,
       " and ",
@@ -68,14 +68,14 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
       " around the ",
       "1 + 2",
     ]);
-    html_div_cycle_code(tool, [
+    app_code_div_cycle_code(tool, [
       "",
       "(1 + 2) * 3",
       " does the ",
       "1 + 2",
       " first",
     ]);
-    html_div_cycle_code(tool, [
+    app_code_div_cycle_code(tool, [
       "",
       "1 + 2",
       " is ",
@@ -83,9 +83,9 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
       ", so we have ",
       "3 * 3",
     ]);
-    html_div_cycle_code(tool, ["So ", "(1 + 2) * 3", " is ", "9"]);
+    app_code_div_cycle_code(tool, ["So ", "(1 + 2) * 3", " is ", "9"]);
     let either = app_code_container_light_blue(root);
-    html_div_cycle_code(either, [
+    app_code_div_cycle_code(either, [
       "The ",
       open,
       " and ",
@@ -93,14 +93,14 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
       " can be on either side of the ",
       times,
     ]);
-    html_div_cycle_code(either, [
+    app_code_div_cycle_code(either, [
       "",
       "4 * (5 - 3)",
       " does the ",
       "5 - 3",
       " first",
     ]);
-    html_div_cycle_code(either, [
+    app_code_div_cycle_code(either, [
       "",
       "5 - 3",
       " is ",
@@ -108,9 +108,15 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
       ", so we have ",
       "4 * 2",
     ]);
-    html_div_cycle_code(either, ["So ", "4 * (5 - 3)", " is ", "8"]);
+    app_code_div_cycle_code(either, ["So ", "4 * (5 - 3)", " is ", "8"]);
     let rule = app_code_container_light_blue(root);
     let r = app_code_parentheses_inside_before_outside("");
-    html_div_cycle_code(rule, ["Whatever is inside ", open, " and ", close, r]);
+    app_code_div_cycle_code(rule, [
+      "Whatever is inside ",
+      open,
+      " and ",
+      close,
+      r,
+    ]);
   }
 }

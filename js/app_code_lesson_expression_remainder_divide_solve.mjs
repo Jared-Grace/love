@@ -14,7 +14,7 @@ import { text_integers } from "./text_integers.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_remainder_divide_solve() {
   "SOLVE the remainder-by-dividing formula: given a - Math.floor(a / b) * b, work out its value - the remainder. The learner has already solved each sub-part (Math.floor(a / b) in integer division, then * b for the whole part), so this is the one added step: subtract the whole part from the dividend. The answer is the leftover (the remainder); quotient 2..3, divisor 3..6";
   function make(divisor) {
@@ -76,18 +76,23 @@ export function app_code_lesson_expression_remainder_divide_solve() {
       ["the remainder of ", "14 / 4", " is ", "14 - Math.floor(14 / 4) * 4"],
     );
     let solving = app_code_container_light_blue(root);
-    html_div_cycle_code(solving, ["Solve the formula one step at a time:"]);
-    html_div_cycle_code(solving, ["", "14 / 4", " is ", "3.5"]);
-    html_div_cycle_code(solving, ["", "Math.floor(14 / 4)", " is ", "3"]);
-    html_div_cycle_code(solving, ["", "Math.floor(14 / 4) * 4", " is ", "12"]);
-    html_div_cycle_code(solving, [
+    app_code_div_cycle_code(solving, ["Solve the formula one step at a time:"]);
+    app_code_div_cycle_code(solving, ["", "14 / 4", " is ", "3.5"]);
+    app_code_div_cycle_code(solving, ["", "Math.floor(14 / 4)", " is ", "3"]);
+    app_code_div_cycle_code(solving, [
+      "",
+      "Math.floor(14 / 4) * 4",
+      " is ",
+      "12",
+    ]);
+    app_code_div_cycle_code(solving, [
       "",
       "14 - Math.floor(14 / 4) * 4",
       " is ",
       "14 - 12",
     ]);
-    html_div_cycle_code(solving, ["", "14 - 12", " is ", "2"]);
-    html_div_cycle_code(solving, [
+    app_code_div_cycle_code(solving, ["", "14 - 12", " is ", "2"]);
+    app_code_div_cycle_code(solving, [
       "",
       "14 - Math.floor(14 / 4) * 4",
       " is ",

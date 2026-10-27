@@ -14,7 +14,7 @@ import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -108,13 +108,13 @@ export function app_code_lesson_else_if_order() {
       ["an ", else_if_b, " can have an ", "else", " after it"],
     );
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, ["The checks can be comparisons:"]);
+    app_code_div_cycle_code(box_two, ["The checks can be comparisons:"]);
     let joy_lines = program_lines([50], words4);
     let joy_written = list_join_newline([joy, patience]);
     app_code_code_lines_writes_out(box_two, joy_lines, joy_written);
     let v = compared(50, 10);
     let v2 = compared(50, 100);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       v,
       " is ",
@@ -128,12 +128,12 @@ export function app_code_lesson_else_if_order() {
       " runs",
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, ["But suppose ", "n", " is ", "5", ":"]);
+    app_code_div_cycle_code(box_three, ["But suppose ", "n", " is ", "5", ":"]);
     let love_lines = program_lines([5], words4);
     let love_written = list_join_newline([love, patience]);
     app_code_code_lines_writes_out(box_three, love_lines, love_written);
     let v3 = compared(5, 10);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "",
       v3,
       " is ",
@@ -143,7 +143,7 @@ export function app_code_lesson_else_if_order() {
       " runs",
     ]);
     let v4 = compared(5, 100);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "",
       v4,
       " is ",
@@ -152,17 +152,23 @@ export function app_code_lesson_else_if_order() {
       else_if_second,
       " is not reached",
     ]);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "The checks are asked in order, and the first one that is ",
       "true",
       " wins",
     ]);
     let box_four = app_code_container_light_blue(root);
-    html_div_cycle_code(box_four, ["And suppose ", "n", " is ", "500", ":"]);
+    app_code_div_cycle_code(box_four, [
+      "And suppose ",
+      "n",
+      " is ",
+      "500",
+      ":",
+    ]);
     let peace_lines = program_lines([500], words4);
     let peace_written = list_join_newline([peace, patience]);
     app_code_code_lines_writes_out(box_four, peace_lines, peace_written);
-    html_div_cycle_code(box_four, [
+    app_code_div_cycle_code(box_four, [
       "Neither check is ",
       "true",
       ", so ",

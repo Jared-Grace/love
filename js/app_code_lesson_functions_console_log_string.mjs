@@ -7,7 +7,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_code_div_code } from "./app_code_div_code.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -50,10 +50,14 @@ export function app_code_lesson_functions_console_log_string() {
     let quoted = app_code_string_code(word);
     let code = js_code_console_log_statement(quoted);
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["", f_name, " can be given a string too:"]);
+    app_code_div_cycle_code(c, ["", f_name, " can be given a string too:"]);
     app_code_div_code(c, code);
     app_code_writes_out_line(c, word);
     let quote = js_string_quote();
-    html_div_cycle_code(c, ["The quote marks ", quote, " are not written out"]);
+    app_code_div_cycle_code(c, [
+      "The quote marks ",
+      quote,
+      " are not written out",
+    ]);
   }
 }

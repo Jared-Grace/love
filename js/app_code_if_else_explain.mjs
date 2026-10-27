@@ -13,7 +13,7 @@ import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_else_program_lines } from "./app_code_if_else_program_lines.mjs";
 export function app_code_if_else_explain(root, context) {
   arguments_assert(arguments, 2);
@@ -44,7 +44,7 @@ export function app_code_if_else_explain(root, context) {
   let both_lines = list_concat_multiple([[setup], if_yes, if_no]);
   app_code_code_lines_writes_out(box_one, both_lines, love);
   let box_two = app_code_container_light_blue(root);
-  html_div_cycle_code(box_two, [
+  app_code_div_cycle_code(box_two, [
     "",
     else_dots,
     " says the same as ",
@@ -55,7 +55,7 @@ export function app_code_if_else_explain(root, context) {
   ]);
   let true_lines = app_code_if_else_program_lines(name, true, words);
   app_code_code_lines_writes_out(box_two, true_lines, love);
-  html_div_cycle_code(box_two, [
+  app_code_div_cycle_code(box_two, [
     "",
     name,
     " is ",
@@ -67,10 +67,16 @@ export function app_code_if_else_explain(root, context) {
     " runs",
   ]);
   let box_three = app_code_container_light_blue(root);
-  html_div_cycle_code(box_three, ["But suppose ", name, " is ", "false", ":"]);
+  app_code_div_cycle_code(box_three, [
+    "But suppose ",
+    name,
+    " is ",
+    "false",
+    ":",
+  ]);
   let false_lines = app_code_if_else_program_lines(name, false, words);
   app_code_code_lines_writes_out(box_three, false_lines, joy);
-  html_div_cycle_code(box_three, [
+  app_code_div_cycle_code(box_three, [
     "",
     name,
     " is ",
@@ -82,7 +88,7 @@ export function app_code_if_else_explain(root, context) {
     " runs",
   ]);
   let box_four = app_code_container_light_blue(root);
-  html_div_cycle_code(box_four, [
+  app_code_div_cycle_code(box_four, [
     "So ",
     else_dots,
     " runs when ",

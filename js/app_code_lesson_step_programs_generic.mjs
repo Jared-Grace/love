@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
@@ -27,14 +27,14 @@ export function app_code_lesson_step_programs_generic(
   function above(root, context) {
     "what the learner does, in the order the questions come";
     let box = app_code_container_light_blue(root);
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, [
       "Run the program yourself, one line at a time, as the computer does",
     ]);
     ("2026-10-15: says the line you chose rather than that line, the pointing word the lesson-text gate looks for. Not picked: showing a line of code here, since the line is a different one at every step");
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, [
       "First choose the next line to run. Then say what the line you chose does, and do it",
     ]);
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, [
       "When no line is left to run, choose: The program is complete",
     ]);
   }

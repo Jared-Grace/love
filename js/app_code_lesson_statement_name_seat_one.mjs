@@ -7,7 +7,7 @@ import { js_operator_less_than_equal_symbol } from "./js_operator_less_than_equa
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -45,7 +45,7 @@ export function app_code_lesson_statement_name_seat_one() {
     let left = js_code_binary_spaced_nb("2", less, "5");
     let right = js_code_binary_spaced_nb("5", less, "8");
     let both = js_code_binary_spaced_nb(left, and_symbol, right);
-    html_div_cycle_code(box, ["", both, " is ", "true"]);
+    app_code_div_cycle_code(box, ["", both, " is ", "true"]);
   }
   function values_get() {
     "two seats in the row and two outside it, in a fresh order each screen";

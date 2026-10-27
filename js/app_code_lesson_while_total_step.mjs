@@ -29,7 +29,7 @@ import { json_to } from "./json_to.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
@@ -179,7 +179,7 @@ export function app_code_lesson_while_total_step() {
     let after = json_to(total_after);
     let object = add(value, step);
     let n_after = json_to(object);
-    html_div_cycle_code(root, [
+    app_code_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -214,7 +214,7 @@ export function app_code_lesson_while_total_step() {
       ],
     );
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       name,
       " can count by more than 1. Here ",
@@ -231,7 +231,7 @@ export function app_code_lesson_while_total_step() {
     said(box_two, 3, 7, 2, 4);
     said(box_two, 5, 7, 2, 9);
     let last = js_code_binary_spaced_nb(7, less, 7);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       last,
       " is ",
@@ -240,13 +240,13 @@ export function app_code_lesson_while_total_step() {
       "{ ... }",
       " is skipped, and the code continues after it",
     ]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "So ",
       total_name,
       " is 1 + 3 + 5, which is 9",
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "Start ",
       name,
       " at 2 instead, and it counts 2, 4, 6: the even numbers. And ",

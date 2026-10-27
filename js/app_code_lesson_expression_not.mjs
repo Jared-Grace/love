@@ -6,7 +6,7 @@ import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 export function app_code_lesson_expression_not() {
   let symbol = js_operator_bang_symbol();
@@ -31,7 +31,7 @@ export function app_code_lesson_expression_not() {
   return lesson_symbol;
   function above(root) {
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, [
+    app_code_div_cycle_code(c, [
       "The symbol ",
       symbol,
       " gives the opposite yes-or-no answer",
@@ -39,10 +39,10 @@ export function app_code_lesson_expression_not() {
     let code3 = js_keyword_true();
     let prefixed3 = js_code_not(code3);
     let f = js_keyword_false();
-    html_div_cycle_code(c, ["", prefixed3, " is ", f]);
+    app_code_div_cycle_code(c, ["", prefixed3, " is ", f]);
     let code4 = js_keyword_false();
     let prefixed4 = js_code_not(code4);
     let t = js_keyword_true();
-    html_div_cycle_code(c, ["", prefixed4, " is ", t]);
+    app_code_div_cycle_code(c, ["", prefixed4, " is ", t]);
   }
 }

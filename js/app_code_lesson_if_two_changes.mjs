@@ -27,7 +27,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -149,12 +149,12 @@ export function app_code_lesson_if_two_changes() {
     let one_change = list_concat_multiple([[code4], if_lines2, [statement2]]);
     app_code_code_lines_writes_out(box_one, one_change, "7");
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, ["An ", "if", " can hold two changes:"]);
+    app_code_div_cycle_code(box_two, ["An ", "if", " can hold two changes:"]);
     let times_lines = program_lines(4, 5, 3, 1, true);
     app_code_code_lines_writes_out(box_two, times_lines, "13");
     let four_times = js_code_binary_spaced_nb(4, times, 3);
     let twelve_plus = js_code_binary_spaced_nb(12, plus, 1);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "The lines run in order: ",
       four_times,
       " is ",
@@ -165,12 +165,12 @@ export function app_code_lesson_if_two_changes() {
       "13",
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, ["But suppose we swap the two lines:"]);
+    app_code_div_cycle_code(box_three, ["But suppose we swap the two lines:"]);
     let plus_lines = program_lines(4, 5, 3, 1, false);
     app_code_code_lines_writes_out(box_three, plus_lines, "15");
     let four_plus = js_code_binary_spaced_nb(4, plus, 1);
     let five_times = js_code_binary_spaced_nb(5, times, 3);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "Now ",
       four_plus,
       " is ",

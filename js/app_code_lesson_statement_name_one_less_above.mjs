@@ -10,7 +10,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_statement_name_one_less_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: a name given one more than it holds, the program the lesson on one more taught, then the same program with a minus where the plus was");
@@ -37,7 +37,7 @@ export function app_code_lesson_statement_name_one_less_above(root, context) {
     logged,
   ]);
   let box_less = app_code_container_light_blue(root);
-  html_div_cycle_code(box_less, [
+  app_code_div_cycle_code(box_less, [
     "A name can also be given one less than it holds (",
     code_less,
     " instead of ",

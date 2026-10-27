@@ -28,7 +28,7 @@ import { not } from "./not.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -153,7 +153,7 @@ export function app_code_lesson_if_else_once() {
       " in between",
     ]);
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "But suppose ",
       if_dots,
       " changes ",
@@ -163,7 +163,7 @@ export function app_code_lesson_if_else_once() {
     let ifs_lines = program_lines(name4, words7, false);
     let both_written = list_join_newline(words7);
     app_code_code_lines_writes_out(box_two, ifs_lines, both_written);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       name4,
       " is ",
@@ -172,7 +172,7 @@ export function app_code_lesson_if_else_once() {
       if_dots,
       " run",
     ]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       change2,
       " makes ",
@@ -186,10 +186,10 @@ export function app_code_lesson_if_else_once() {
       " is written out",
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, ["", else_dots, " asks only once:"]);
+    app_code_div_cycle_code(box_three, ["", else_dots, " asks only once:"]);
     let else_lines = program_lines(name4, words7, true);
     app_code_code_lines_writes_out(box_three, else_lines, love);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "",
       name4,
       " was ",
@@ -200,7 +200,7 @@ export function app_code_lesson_if_else_once() {
       say_love,
       " runs",
     ]);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "",
       else_dots,
       " is not asked again, so ",
@@ -211,7 +211,7 @@ export function app_code_lesson_if_else_once() {
       "false",
     ]);
     let box_four = app_code_container_light_blue(root);
-    html_div_cycle_code(box_four, [
+    app_code_div_cycle_code(box_four, [
       "So exactly one of ",
       if_dots,
       " and ",

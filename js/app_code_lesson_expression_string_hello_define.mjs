@@ -7,7 +7,7 @@ import { html_bold } from "./html_bold.mjs";
 import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_code_string_value_shape } from "./app_code_string_value_shape.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_string_hello_define(root, word) {
   arguments_assert(arguments, 2);
   ("the second box: says what the value of a string is, then shows it on the same word the box above used - quoted on one side, bare on the other, with the value coloured both times so the eye follows what changed. The one thing to take away is written underneath: the quotes are how it is written, not part of what it is.");
@@ -27,5 +27,7 @@ export function app_code_lesson_expression_string_hello_define(root, word) {
   let color4 = app_code_string_value_color_on_light();
   html_font_color_set(value_word, color4);
   app_code_string_value_of_is_say(example, word);
-  html_div_cycle_code(define, ["A string's value does not include its quotes"]);
+  app_code_div_cycle_code(define, [
+    "A string's value does not include its quotes",
+  ]);
 }

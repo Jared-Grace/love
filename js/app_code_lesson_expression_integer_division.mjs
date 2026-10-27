@@ -14,7 +14,7 @@ import { text_to } from "./text_to.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_integer_division() {
   "practice integer division: how many WHOLE times the divisor fits into the number, written as Math.floor(number / divisor); dividing gives a decimal (14 / 4 is 3.5) and Math.floor throws the decimal away to leave the whole count (3); the answer is that whole number; divisor 3..6, quotient 2..3 with one quotient-0 edge case per batch (number smaller than the divisor, e.g. 5 / 6), leftover 1..divisor-1 so the division never comes out even";
   function make(divisor, quotient) {
@@ -62,24 +62,24 @@ export function app_code_lesson_expression_integer_division() {
     "the two cards this screen opens with are the two the pressing screen in front of it opens with, out of the one place both read: a learner arriving here has just pressed this line apart, and the opening that set it up there is the opening that puts it back here";
     app_code_integer_division_uneven_cards(root);
     let solution = app_code_container_light_blue(root);
-    html_div_cycle_code(solution, [
+    app_code_div_cycle_code(solution, [
       "Now we will divide, and then round down to get a whole number:",
     ]);
-    html_div_cycle_code(solution, [
+    app_code_div_cycle_code(solution, [
       "",
       "Math.floor(14 / 4)",
       " is ",
       "Math.floor(3.5)",
     ]);
-    html_div_cycle_code(solution, ["", "Math.floor(3.5)", " is ", "3"]);
-    html_div_cycle_code(solution, [
+    app_code_div_cycle_code(solution, ["", "Math.floor(3.5)", " is ", "3"]);
+    app_code_div_cycle_code(solution, [
       "That is how many whole ",
       "4",
       "s fit into ",
       "14",
     ]);
     let subtracting = app_code_container_light_blue(root);
-    html_div_cycle_code(subtracting, [
+    app_code_div_cycle_code(subtracting, [
       "The ",
       "3",
       " is also how many times you can subtract ",
@@ -88,6 +88,6 @@ export function app_code_lesson_expression_integer_division() {
       "14",
       ":",
     ]);
-    html_div_cycle_code(subtracting, ["", "14 - 4 - 4 - 4"]);
+    app_code_div_cycle_code(subtracting, ["", "14 - 4 - 4 - 4"]);
   }
 }

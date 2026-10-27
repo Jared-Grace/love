@@ -7,7 +7,7 @@ import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_expression_min_max_of_three_code } from "./app_code_lesson_expression_min_max_of_three_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_min_max_of_three_above(root) {
     c,
   );
   let define = app_code_container_light_blue(root);
-  html_div_cycle_code(define, [
+  app_code_div_cycle_code(define, [
     "",
     "Math.min",
     " and ",
@@ -57,7 +57,7 @@ export function app_code_lesson_expression_min_max_of_three_above(root) {
   html_bold(min_term);
   html_span_text(min_line, "imum) of ");
   html_span_text_code_dark(min_line, nums_text);
-  html_div_cycle_code(min_box, ["So ", v_min, " is ", smallest_text]);
+  app_code_div_cycle_code(min_box, ["So ", v_min, " is ", smallest_text]);
   let max_box = app_code_container_light_blue(root);
   let max_line = html_div(max_box);
   html_span_text_code_dark(max_line, largest_text);
@@ -66,5 +66,5 @@ export function app_code_lesson_expression_min_max_of_three_above(root) {
   html_bold(max_term);
   html_span_text(max_line, "imum) of ");
   html_span_text_code_dark(max_line, nums_text);
-  html_div_cycle_code(max_box, ["So ", v_max, " is ", largest_text]);
+  app_code_div_cycle_code(max_box, ["So ", v_max, " is ", largest_text]);
 }

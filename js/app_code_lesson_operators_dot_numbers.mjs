@@ -11,7 +11,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_operators_arithmetic } from "./app_code_operators_arithmetic.mjs";
 import { app_code_div_code } from "./app_code_div_code.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { js_operator_dot_name } from "./js_operator_dot_name.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_operators_dot_numbers() {
       operator_name_math_articled,
       " ",
     ]);
-    html_div_cycle_code(c4, [
+    app_code_div_cycle_code(c4, [
       combined,
       operator,
       " can be used in numbers as a decimal point:",
@@ -42,7 +42,7 @@ export function app_code_lesson_operators_dot_numbers() {
     let first3 = number_pi_truncated_text();
     app_code_div_code(c4, first3);
     let c = app_code_container_light_blue(root);
-    let d = html_div_cycle_code(c, [
+    let d = app_code_div_cycle_code(c, [
       "Besides decimal points, ",
       operator,
       " is a symbol that can be used like: ",
@@ -52,7 +52,7 @@ export function app_code_lesson_operators_dot_numbers() {
     let d2 = html_div_text(c2, "We can use ");
     app_code_operators_arithmetic(d2);
     html_span_text(d2, " with numbers");
-    html_div_cycle_code(c2, [
+    app_code_div_cycle_code(c2, [
       "And we can use ",
       operator,
       " with identifiers:",
@@ -68,7 +68,7 @@ export function app_code_lesson_operators_dot_numbers() {
       example_get,
     );
     let c3 = app_code_container_light_blue(root);
-    html_div_cycle_code(c3, [
+    app_code_div_cycle_code(c3, [
       "However, we cannot directly use ",
       operator,
       " with both an identifier and a number",

@@ -13,7 +13,7 @@ import { app_code_batch_question_answer_fns } from "./app_code_batch_question_an
 import { app_code_quiz_tokens_order } from "./app_code_quiz_tokens_order.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_tokens_tap_guided } from "./app_code_lesson_quiz_tokens_tap_guided.mjs";
@@ -36,12 +36,12 @@ export function app_code_lesson_token_order() {
   function above(root, context) {
     "what a token is, as a piece we unscramble code out of, then the order the tokens of a program are read in";
     let box_one = app_code_container_light_blue(root);
-    html_div_cycle_code(box_one, [
+    app_code_div_cycle_code(box_one, [
       "When we unscramble code, we build it out of pieces",
     ]);
     app_code_tokens_explain(box_one);
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "Here is a longer program, and its tokens in the order we read them:",
     ]);
     let longer = app_code_token_order_longer();

@@ -3,7 +3,7 @@ import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { not } from "./not.mjs";
 export function app_code_expression_step_say(note, current, ready, line_code) {
   arguments_assert(arguments, 4);
@@ -16,6 +16,6 @@ export function app_code_expression_step_say(note, current, ready, line_code) {
     app_shared_success_message(note);
     return;
   }
-  html_div_cycle_code(note, ["So now we have ", line_code]);
+  app_code_div_cycle_code(note, ["So now we have ", line_code]);
   app_code_expression_choose_say(note, ready, "Now, choose ");
 }

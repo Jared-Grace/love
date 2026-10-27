@@ -3,7 +3,7 @@ import { list_first_property } from "./list_first_property.mjs";
 import { app_code_lesson_code_expression } from "./app_code_lesson_code_expression.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "./app_code_lesson_operators_generic_batch_get.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { app_code_lesson_name_id_symbol } from "./app_code_lesson_name_id_symbol.mjs";
@@ -43,7 +43,7 @@ export function app_code_lesson_operators_generic({
       verb,
       " numbers: ",
     ]);
-    html_div_cycle_code(c, [combined, replaced]);
+    app_code_div_cycle_code(c, [combined, replaced]);
     let ne = equal_not(operator_js, operator_math);
     if (ne) {
       c = app_code_container_light_blue(root);
@@ -57,7 +57,7 @@ export function app_code_lesson_operators_generic({
         operator_name_math_articled,
       );
       let combined3 = text_combine_multiple([" to ", verb, " numbers"]);
-      html_div_cycle_code(c, [combined2, operator_math, combined3]);
+      app_code_div_cycle_code(c, [combined2, operator_math, combined3]);
     }
     let t = null;
     if (ne) {
@@ -71,7 +71,7 @@ export function app_code_lesson_operators_generic({
       verb,
       " two numbers",
     ]);
-    html_div_cycle_code(c, [combined4, operator_js, combined5]);
+    app_code_div_cycle_code(c, [combined4, operator_js, combined5]);
   }
   let left = app_code_category_operators();
   let name_id = app_code_lesson_name_id_symbol(left, [math_name], operator_js);

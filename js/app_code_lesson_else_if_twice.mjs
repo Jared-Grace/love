@@ -19,7 +19,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_braces_run_else_if_twice } from "./app_code_lesson_braces_run_else_if_twice.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -117,7 +117,7 @@ export function app_code_lesson_else_if_twice() {
       ["an ", else_if_b, " can have an ", "else", " after it"],
     );
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "An ",
       else_if_b,
       " can have another ",
@@ -127,7 +127,7 @@ export function app_code_lesson_else_if_twice() {
     let peace_lines = program_lines([false, false, true], words4);
     let peace_written = list_join_newline([peace, kindness]);
     app_code_code_lines_writes_out(box_two, peace_lines, peace_written);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       "a",
       " is ",
@@ -140,7 +140,7 @@ export function app_code_lesson_else_if_twice() {
       else_if_c,
       " is reached",
     ]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       "c",
       " is ",
@@ -150,7 +150,7 @@ export function app_code_lesson_else_if_twice() {
       " runs",
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "But suppose ",
       "b",
       " and ",
@@ -162,7 +162,7 @@ export function app_code_lesson_else_if_twice() {
     let joy_lines = program_lines([false, true, true], words4);
     let joy_written = list_join_newline([joy, kindness]);
     app_code_code_lines_writes_out(box_three, joy_lines, joy_written);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "",
       "b",
       " is ",
@@ -171,7 +171,7 @@ export function app_code_lesson_else_if_twice() {
       say_joy,
       " runs",
     ]);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "Then ",
       else_if_c,
       " is not reached, even though ",
@@ -180,7 +180,7 @@ export function app_code_lesson_else_if_twice() {
       "true",
     ]);
     let box_four = app_code_container_light_blue(root);
-    html_div_cycle_code(box_four, [
+    app_code_div_cycle_code(box_four, [
       "And suppose ",
       "a",
       ", ",
@@ -194,7 +194,7 @@ export function app_code_lesson_else_if_twice() {
     let patience_lines = program_lines([false, false, false], words4);
     let patience_written = list_join_newline([patience, kindness]);
     app_code_code_lines_writes_out(box_four, patience_lines, patience_written);
-    html_div_cycle_code(box_four, [
+    app_code_div_cycle_code(box_four, [
       "None is ",
       "true",
       ", so ",

@@ -8,7 +8,7 @@ import { app_code_category_expressions } from "./app_code_category_expressions.m
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_swapping_equal() {
   "the fourth swapping lesson: === and !== DO swap, because asking are-they-the-same (or are-they-different) reads the same either way. Both sides are already comparisons, so each is wrapped in ( ) - (a === b) === (b === a) - since a === b === b === a would otherwise chain left to right. The ordering comparisons < > <= >= are recalled as the ones that flip, so the quiz mixes === !== (true) with < > <= >= (false), all wrapped. Answer is the code's own true/false value, correct by construction.";
   let name_id = title_name_id();
@@ -46,20 +46,20 @@ export function app_code_lesson_expression_swapping_equal() {
     );
     let same = app_code_container_light_blue(root);
     ("One line became four, each a single step, because the original packed the supposition, the swap, the reason and the conclusion into one sentence joined by a dash - and it opened on the conclusion (doesn't matter) before the reader had been given the thing it was a conclusion about.");
-    html_div_cycle_code(same, [
+    app_code_div_cycle_code(same, [
       "Suppose we ask if two numbers are the same (",
       "===",
       ")",
     ]);
-    html_div_cycle_code(same, ["Suppose we swap the two numbers"]);
-    html_div_cycle_code(same, [
+    app_code_div_cycle_code(same, ["Suppose we swap the two numbers"]);
+    app_code_div_cycle_code(same, [
       "Then we are still asking if those two numbers are the same",
     ]);
-    html_div_cycle_code(same, ["So the answer will be the same"]);
+    app_code_div_cycle_code(same, ["So the answer will be the same"]);
     ("the line before this one already opens on So. Two conclusions in a row both announcing themselves as the conclusion read as one thought stuttering, and the second one is the further step - it says what the sameness of the answer buys us");
-    html_div_cycle_code(same, ["This means we can always swap ", "==="]);
+    app_code_div_cycle_code(same, ["This means we can always swap ", "==="]);
     ("Each operator's example sits directly under its own rule. One example, placed after both rules, is read as belonging to the rule it touches - so the === example stranded under the !== sentence left === claimed four lines earlier with nothing beside it, and !== claimed with an example that was not of it.");
-    html_div_cycle_code(same, [
+    app_code_div_cycle_code(same, [
       "For example: ",
       "3 === 5",
       " is ",
@@ -71,13 +71,17 @@ export function app_code_lesson_expression_swapping_equal() {
     ]);
     ("The same frame as the === opener above, word for word down to the operator and the one word that changes - same becomes different. That repetition is the point: a likewise is only readable if the thing it is like is recognisable, and the surest way to be recognisable is to be the same sentence. Suppose we ask if is also what dodges the stutter in if we ask if, without reaching for whether or not - two words of hedging in front of different, which is already the harder half to hold.");
     ("Two lines rather than one, the same as every line in this card. The === case needed four because its reasoning was being walked for the first time; walking it again here would be a near-copy of four lines the reader has just read, so only the supposition and the conclusion are kept - and as well is what says the two steps between them are the ones already given.");
-    html_div_cycle_code(same, [
+    app_code_div_cycle_code(same, [
       "Suppose we ask if two numbers are different (",
       "!==",
       ")",
     ]);
-    html_div_cycle_code(same, ["Then we can always swap ", "!==", " as well"]);
-    html_div_cycle_code(same, [
+    app_code_div_cycle_code(same, [
+      "Then we can always swap ",
+      "!==",
+      " as well",
+    ]);
+    app_code_div_cycle_code(same, [
       "For example: ",
       "3 !== 5",
       " is ",
@@ -88,7 +92,7 @@ export function app_code_lesson_expression_swapping_equal() {
       "true",
     ]);
     let order_recall = app_code_container_light_blue(root);
-    html_div_cycle_code(order_recall, [
+    app_code_div_cycle_code(order_recall, [
       "But we can never swap two different numbers around ",
       "<",
       ", ",
@@ -114,6 +118,11 @@ export function app_code_lesson_expression_swapping_equal() {
         ")",
       ],
     );
-    html_div_cycle_code(paren, ["", "(3 === 5) === (5 === 3)", " is ", "true"]);
+    app_code_div_cycle_code(paren, [
+      "",
+      "(3 === 5) === (5 === 3)",
+      " is ",
+      "true",
+    ]);
   }
 }

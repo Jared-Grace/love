@@ -8,7 +8,7 @@ import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
@@ -44,16 +44,19 @@ export function app_code_lesson_statement_name_again_above(root, context) {
     word_after,
     " in",
   ]);
-  html_div_cycle_code(box_after, [swap]);
+  app_code_div_cycle_code(box_after, [swap]);
   app_code_lesson_cup_fruit(box_after, word_after, name, uncolored);
-  html_div_cycle_code(box_after, ["It is the same cup, still called ", name]);
+  app_code_div_cycle_code(box_after, [
+    "It is the same cup, still called ",
+    name,
+  ]);
   ("the line begins with a however, because the line above it has just said that nothing about the cup changed - same cup, same name - and this one says the one thing that did. Without the however the two lines read as two more facts about a cup, and the second is the whole lesson.");
   let gone = list_join_empty([
     "However, the ",
     word_before,
     " are not in it any more",
   ]);
-  html_div_cycle_code(box_after, [gone]);
+  app_code_div_cycle_code(box_after, [gone]);
   ("the code box says the no-let part before the second line rather than after it, because a learner reading the line first will read the missing word as a mistake");
   let box_code = app_code_container_light_blue(root);
   let quoted_before = app_code_string_code(word_before);
@@ -61,16 +64,16 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   let held = js_code_let_statement(name, quoted_before);
   let again = js_code_assign_statement(name, quoted_after);
   let logged = js_code_console_log_statement(name);
-  html_div_cycle_code(box_code, ["In JS we make the cup like this:"]);
+  app_code_div_cycle_code(box_code, ["In JS we make the cup like this:"]);
   app_code_div_code(box_code, held);
   ("THE CUP rather than IT. The line before it is about the cup and the line after it is about a word, so an it standing between them has two things it could be pointing at and the learner has to pick. Naming the cup costs one word and leaves nothing to pick.");
-  html_div_cycle_code(box_code, [
+  app_code_div_cycle_code(box_code, [
     "We do not make the cup again, so we do not write ",
     "let",
     " a second time:",
   ]);
   app_code_div_code(box_code, again);
-  html_div_cycle_code(box_code, [
+  app_code_div_cycle_code(box_code, [
     "We write out what is in the cup each time we put something in it:",
   ]);
   ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The line that makes the cup and the line that fills it again stand above as the two lines being taught, and stand here again because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on two lines a learner had to carry down the box - and on this screen the whole question is which of two words comes out, which only both lines together answer.");
@@ -87,19 +90,19 @@ export function app_code_lesson_statement_name_again_above(root, context) {
     app_code_lesson_functions_console_log_statement,
     ["a statement ends with ", semicolon],
   );
-  html_div_cycle_code(box_care, [
+  app_code_div_cycle_code(box_care, [
     "In JS, the ",
     semicolon,
     " statements happen in the order they are written",
   ]);
-  html_div_cycle_code(box_care, [
+  app_code_div_cycle_code(box_care, [
     "So when we set the value of ",
     name,
     ", then whichever value was set last is the value that ",
     name,
     " will have",
   ]);
-  html_div_cycle_code(box_care, [
+  app_code_div_cycle_code(box_care, [
     "Here we set the value of ",
     name,
     " twice, so after the second time ",

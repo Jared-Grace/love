@@ -8,7 +8,7 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -65,11 +65,15 @@ export function app_code_lesson_expression_comparison_and() {
     "the rule, then one side changed, then both sides changed, worked once true and once false: each comparison is done first, and only then does && combine them";
     "The one-side form is worked first because it is the single step from the && the learner already has. They know true && false; replacing ONE operand with a comparison changes one thing. The card used to open on 3 < 5 && 2 < 4, which replaces both at once - two changes shown as one, and the header sentence says one side, so the first example contradicted the line above it.";
     let header = app_code_container_light_blue(root);
-    html_div_cycle_code(header, ["A comparison can be one side of ", "&&"]);
+    app_code_div_cycle_code(header, ["A comparison can be one side of ", "&&"]);
     app_code_lesson_expression_comparison_and_card_one_side(root);
     let yes = app_code_container_light_blue(root);
-    html_div_cycle_code(yes, ["Both sides of ", "&&", " can be comparisons"]);
-    html_div_cycle_code(yes, [
+    app_code_div_cycle_code(yes, [
+      "Both sides of ",
+      "&&",
+      " can be comparisons",
+    ]);
+    app_code_div_cycle_code(yes, [
       "For ",
       "3 < 5 && 2 < 4",
       ", we solve ",
@@ -79,7 +83,7 @@ export function app_code_lesson_expression_comparison_and() {
       " before ",
       "&&",
     ]);
-    html_div_cycle_code(yes, [
+    app_code_div_cycle_code(yes, [
       "Both are ",
       "true",
       ", so ",
@@ -88,7 +92,7 @@ export function app_code_lesson_expression_comparison_and() {
       "true",
     ]);
     let no = app_code_container_light_blue(root);
-    html_div_cycle_code(no, [
+    app_code_div_cycle_code(no, [
       "Likewise, for ",
       "7 > 2 && 5 > 8",
       ", we solve ",
@@ -99,7 +103,7 @@ export function app_code_lesson_expression_comparison_and() {
       "&&",
     ]);
     ("Each comparison named beside its own value. That was singular standing for a pair, and worse, it left which of the two came out false unsaid - the card above can say Both are true because the two agree there and nothing is lost by not separating them, but here they differ, and the difference is the whole example. A learner reading That is true and false has no way to tell whether 7 > 2 was the false one.");
-    html_div_cycle_code(no, [
+    app_code_div_cycle_code(no, [
       "",
       "7 > 2",
       " is ",
@@ -109,6 +113,6 @@ export function app_code_lesson_expression_comparison_and() {
       " is ",
       "false",
     ]);
-    html_div_cycle_code(no, ["So ", "true && false", " is ", "false"]);
+    app_code_div_cycle_code(no, ["So ", "true && false", " is ", "false"]);
   }
 }

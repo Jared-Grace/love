@@ -7,7 +7,7 @@ import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -39,8 +39,11 @@ export function app_code_lesson_expression_choose_order_not_twice_inside_first(
   let color_third = app_code_highlight_color_third();
   let not_true = app_code_operator_code_before(bang, word_true);
   let bang_bang_true = app_code_operator_code_before(bang, not_true);
-  html_div_cycle_code(parent, ["Suppose we want to solve ", bang_bang_true]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
+    "Suppose we want to solve ",
+    bang_bang_true,
+  ]);
+  app_code_div_cycle_code(parent, [
     "If there are multiple unary operators, the operator on the inside is solved first",
   ]);
   let line_rewrite = html_div(parent);

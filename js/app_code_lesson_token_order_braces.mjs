@@ -8,7 +8,7 @@ import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
 import { app_code_braces_paired_with_order } from "./app_code_braces_paired_with_order.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -36,14 +36,14 @@ export function app_code_lesson_token_order_braces() {
       ["we read the tokens of code left to right, then top to bottom."],
     );
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "The braces of code are its ",
       left,
       " and ",
       right,
       " tokens",
     ]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "Here each ",
       "{ }",
       " has a colour of its own. Under the code are only its braces, in the order we read them:",

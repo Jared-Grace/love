@@ -6,7 +6,7 @@ import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_not_pair_intro(parent) {
   arguments_assert(arguments, 1);
   ("the sentences that say what is different about this lesson, in a card of their own");
@@ -24,9 +24,9 @@ export function app_code_lesson_expression_choose_order_not_pair_intro(parent) {
   let or_pair = app_code_operator_code(false_word, or_symbol, true_word);
   let and_whole = js_code_not_parenthesis_wrapped(and_pair);
   let or_whole = js_code_not_parenthesis_wrapped(or_pair);
-  html_div_cycle_code(parent, ["We can write ", and_whole]);
-  html_div_cycle_code(parent, ["And we can write ", or_whole]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, ["We can write ", and_whole]);
+  app_code_div_cycle_code(parent, ["And we can write ", or_whole]);
+  app_code_div_cycle_code(parent, [
     "So the ",
     symbol,
     " can be in front of a whole ",
@@ -35,14 +35,14 @@ export function app_code_lesson_expression_choose_order_not_pair_intro(parent) {
     or_symbol,
     " inside parenthesis",
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "",
     symbol,
     " in front of parenthesis means ",
     symbol,
     " applies to the entire parenthesis",
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "So the parenthesis is solved, first, and then the ",
     symbol,
     " is applied to the result of solving the parenthesis",

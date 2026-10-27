@@ -3,7 +3,7 @@ import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_arithmetic_less_than_worked_example({
   other,
   other_on_left,
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_arithmetic_less_than_worked_example({
     " ",
     full_right,
   ]);
-  html_div_cycle_code(box, [
+  app_code_div_cycle_code(box, [
     "For ",
     full_expression,
     ", we solve ",
@@ -58,7 +58,7 @@ export function app_code_lesson_expression_arithmetic_less_than_worked_example({
     " ",
     combined_right,
   ]);
-  html_div_cycle_code(box, [
+  app_code_div_cycle_code(box, [
     "Now we have ",
     combined_expression,
     ", which is ",

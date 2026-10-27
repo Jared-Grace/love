@@ -5,7 +5,7 @@ import { app_code_expression_operator_chip } from "./app_code_expression_operato
 import { html_div_cycle } from "./html_div_cycle.mjs";
 import { app_code_lesson_expression_choose_order_rule_parts } from "./app_code_lesson_expression_choose_order_rule_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_choose_order_wrong_say(
   note,
@@ -35,6 +35,6 @@ export function app_code_lesson_expression_choose_order_wrong_say(
     line_code,
   );
   ("stands off from what follows by the same gap that stands above it, because a refusal is said between the sentence that hands the learner to the line and the line itself - so it now sits where that sentence was and owes the line underneath the same room the sentence gave it");
-  let rule_line = html_div_cycle_code(note, parts);
+  let rule_line = app_code_div_cycle_code(note, parts);
   app_shared_spaced_below(rule_line);
 }

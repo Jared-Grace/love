@@ -9,7 +9,7 @@ import { app_code_remember_from_lesson_names } from "./app_code_remember_from_le
 import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -52,7 +52,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   );
   ("the word for what is in a cup is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and only the names on the cups are code here.");
   let both = list_join_empty(["So both cups have ", word_first, " in them"]);
-  html_div_cycle_code(box_have, [both]);
+  app_code_div_cycle_code(box_have, [both]);
   let box_change = app_code_container_light_blue(root);
   let took = list_join_empty([
     "Now suppose someone took the ",
@@ -127,7 +127,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   ("A blank line stands before each note, so the notes break the program into the three moments the story told it in - filling, changing, writing out. Run together, twelve lines of alternating note and code read as one wall.");
   let blank = text_empty();
   let text = app_code_js_written_that_text();
-  html_div_cycle_code(box_code, [text]);
+  app_code_div_cycle_code(box_code, [text]);
   ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The filling, the copying and the changing stand here because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on lines a learner had to carry down the box - and this screen turns entirely on their order, since the word that comes out is the one the middle line copied and not the one the last line put in.");
   let lines = [
     note_held,

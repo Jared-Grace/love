@@ -19,7 +19,7 @@ import { json_to } from "./json_to.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { equal } from "./equal.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
@@ -146,7 +146,7 @@ export function app_code_lesson_if_thrice() {
     let v = json_to(value);
     if (runs) {
       let after = json_to(value_after);
-      html_div_cycle_code(root, [
+      app_code_div_cycle_code(root, [
         "",
         condition2,
         " is ",
@@ -158,7 +158,7 @@ export function app_code_lesson_if_thrice() {
       ]);
       return;
     }
-    html_div_cycle_code(root, [
+    app_code_div_cycle_code(root, [
       "",
       condition2,
       " is ",
@@ -178,7 +178,7 @@ export function app_code_lesson_if_thrice() {
       " can be written twice",
     ]);
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "We can write the same ",
       "if",
       " three times:",
@@ -189,7 +189,7 @@ export function app_code_lesson_if_thrice() {
     said(box_two, 4, 9, 7, true);
     said(box_two, 7, 9, 10, true);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,
       " starts at ",

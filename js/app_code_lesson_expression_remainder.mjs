@@ -12,7 +12,7 @@ import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_remainder() {
   "identify the REMAINDER (what is left over) in a % b === r - the dividend a and divisor b stand as decoys; the sibling of the dividend / divisor / quotient identify lessons, a thin lesson over the shared identify-an-operand generic. The quotient is at least 1, so the dividend is always bigger than the divisor which is bigger than the remainder - all three numbers distinct, so the learner really has to know which is the remainder";
   function make(divisor) {
@@ -50,7 +50,7 @@ export function app_code_lesson_expression_remainder() {
   function remember_roles(root, context) {
     "remind all three roles at once, since the remainder question 17 % 5 === 2 shows the dividend, divisor and remainder together";
     let remember = app_code_container_light_blue(root);
-    html_div_cycle_code(remember, ["", "17 % 5 === 2"]);
+    app_code_div_cycle_code(remember, ["", "17 % 5 === 2"]);
     app_code_remember_from_lesson(
       remember,
       context,
@@ -63,7 +63,7 @@ export function app_code_lesson_expression_remainder() {
       app_code_lesson_expression_divisor,
       ["the ", "5", " is the divisor"],
     );
-    html_div_cycle_code(remember, ["The ", "2", " is the remainder"]);
+    app_code_div_cycle_code(remember, ["The ", "2", " is the remainder"]);
   }
   function title_name_id() {
     "the home title says Naming the remainder, the same opening as the three lessons around it";

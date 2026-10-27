@@ -4,7 +4,7 @@ import { app_code_div_code_multiple } from "./app_code_div_code_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { digit_positive_random } from "./digit_positive_random.mjs";
 import { text_combine_right_fn } from "./text_combine_right_fn.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_asterisk_generic_minus(
@@ -23,7 +23,7 @@ export function app_code_lesson_operators_asterisk_generic_minus(
   let right = "right";
   let combined4 = text_combine(minus, right);
   app_code_div_code_multiple(c, [combined, combined4]);
-  html_div_cycle_code(c, [
+  app_code_div_cycle_code(c, [
     "However JS does not have something like this for ",
     operator,
   ]);

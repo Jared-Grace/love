@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_label_solve_left_to_right } from "./app_code_label_solve_left_to_right.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_cross_precedence_rule(
   root,
   weak_symbol,
@@ -15,17 +15,17 @@ export function app_code_lesson_cross_precedence_rule(
   arguments_assert(arguments, 3);
   let header = app_code_container_light_blue(root);
   let same_strength = app_code_label_solve_left_to_right();
-  html_div_cycle_code(header, [same_strength]);
-  html_div_cycle_code(header, [
+  app_code_div_cycle_code(header, [same_strength]);
+  app_code_div_cycle_code(header, [
     "But some operators are solved before other operators",
   ]);
-  html_div_cycle_code(header, [
+  app_code_div_cycle_code(header, [
     "We solve ",
     strong_symbol,
     " before ",
     weak_symbol,
   ]);
-  html_div_cycle_code(header, [
+  app_code_div_cycle_code(header, [
     "Even when ",
     weak_symbol,
     " is written before ",

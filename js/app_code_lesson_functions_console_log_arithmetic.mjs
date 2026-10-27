@@ -9,7 +9,7 @@ import { list_map } from "./list_map.mjs";
 import { js_operator_to_expression_only } from "./js_operator_to_expression_only.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
@@ -40,8 +40,11 @@ export function app_code_lesson_functions_console_log_arithmetic() {
   return lesson;
   function above(root) {
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["Before, we put a single number inside ", f_name]);
-    html_div_cycle_code(c, ["We can also use ", f_name, " like this: "]);
+    app_code_div_cycle_code(c, [
+      "Before, we put a single number inside ",
+      f_name,
+    ]);
+    app_code_div_cycle_code(c, ["We can also use ", f_name, " like this: "]);
     function lambda(o) {
       let e = js_operator_to_expression_only(o, number_next);
       let call = js_code_call_arg(f_name, e);

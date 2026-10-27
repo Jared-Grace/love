@@ -2,7 +2,7 @@ import { app_code_lesson_operand_generic_quizzes_get } from "./app_code_lesson_o
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
@@ -30,7 +30,12 @@ export function app_code_lesson_operand_generic(params) {
     let sample_question = property_get(sample, "question");
     let sample_answer = property_get(sample, "answer");
     let middle = text_combine_multiple([" the ", role, " is "]);
-    html_div_cycle_code(intro, ["In ", sample_question, middle, sample_answer]);
+    app_code_div_cycle_code(intro, [
+      "In ",
+      sample_question,
+      middle,
+      sample_answer,
+    ]);
     if (above_more) {
       ("an optional extra block after the definition (the quotient lesson uses it to remind all three roles, since its question shows the dividend, divisor and quotient at once)");
       above_more(root, context);
@@ -40,7 +45,7 @@ export function app_code_lesson_operand_generic(params) {
       "In this lesson you will choose the ",
       role,
     ]);
-    html_div_cycle_code(ask, [combined]);
+    app_code_div_cycle_code(ask, [combined]);
   }
   function quizzes_get(question, answer) {
     let r = app_code_lesson_operand_generic_quizzes_get({

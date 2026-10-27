@@ -12,7 +12,7 @@ import { app_code_symbols_eval_valid_expression } from "./app_code_symbols_eval_
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { list_between_space_before } from "./list_between_space_before.mjs";
 import { list_first } from "./list_first.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { js_operator_to_code_call } from "./js_operator_to_code_call.mjs";
@@ -66,9 +66,9 @@ export function app_code_lesson_functions_invalid() {
       verb,
       " function requires all of these parts: ",
     ];
-    html_div_cycle_code(c, parts);
+    app_code_div_cycle_code(c, parts);
     let combined = list_between_space_before(normalized);
-    html_div_cycle_code(c, combined);
+    app_code_div_cycle_code(c, combined);
     let combined2 = list_between_space_before_after(
       ["If any of these symbols "],
       symbols_required,

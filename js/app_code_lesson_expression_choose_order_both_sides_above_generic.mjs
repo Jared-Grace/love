@@ -8,7 +8,7 @@ import { text_to } from "./text_to.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
 export function app_code_lesson_expression_choose_order_both_sides_above_generic(
   root,
@@ -54,21 +54,21 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   ("★ THIS USED TO OFFER A CHOICE, AND THE CHOICE WAS NOT TRUE OF THE COMPUTER. It said we could solve either side first and that either way we would get the same answer. That holds for a line whose every part is a plain number, and it stops holding the moment a part counts, prints or fetches - because JavaScript settles the order completely: it works out the left side of an operator all the way down, then the right side, then the operator itself. A course that taught the choice would be teaching a rule it had to take back later, and the learner who took it seriously would be the one it caught out.");
   ("Two rows, and the second one gives the reason. The first says what to do and the second says why it is that way round, which is the order a learner reads them in and the order that lets them work the next line out for themselves rather than remember this one.");
   ("A row saying it does not matter which one we solve first stood under these and is gone with the choice it belonged to.");
-  html_div_cycle_code(run, [
+  app_code_div_cycle_code(run, [
     "So we solve ",
     left_code,
     " first, then ",
     right_code,
   ]);
-  html_div_cycle_code(run, [
+  app_code_div_cycle_code(run, [
     "JavaScript always works out the left side before the right",
   ]);
   ("both are then simply shown coming to their values, one line each, with nothing said about order - the order question is already answered above and saying it again here would make it sound unsettled");
   let left_solved = app_code_expression_equals_text(left_code, left_text);
-  html_div_cycle_code(run, ["", left_solved]);
+  app_code_div_cycle_code(run, ["", left_solved]);
   let right_solved = app_code_expression_equals_text(right_code, right_text);
-  html_div_cycle_code(run, ["", right_solved]);
-  html_div_cycle_code(run, [
+  app_code_div_cycle_code(run, ["", right_solved]);
+  app_code_div_cycle_code(run, [
     "Then we replace them to get ",
     both_code,
     ", which is ",

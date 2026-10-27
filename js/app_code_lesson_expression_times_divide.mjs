@@ -8,7 +8,7 @@ import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_times_divide() {
   "mixing * and / in one expression: a * b / c and a / b * c; * and / are the same strength, so it just works from left to right; each triple is built so a = b * c, which keeps BOTH arrangements whole numbers (a * b / c and a / b * c) - no decimals either way";
   let times = js_operator_asterisk_symbol();
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_times_divide() {
   }
   function above(root) {
     let box = app_code_container_light_blue(root);
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, [
       "We can mix ",
       times,
       " and ",
@@ -41,9 +41,9 @@ export function app_code_lesson_expression_times_divide() {
       " together",
     ]);
     let same_strength = app_code_label_solve_left_to_right();
-    html_div_cycle_code(box, [same_strength]);
+    app_code_div_cycle_code(box, [same_strength]);
     let example_box = app_code_container_light_blue(root);
-    html_div_cycle_code(example_box, [
+    app_code_div_cycle_code(example_box, [
       "For example, for ",
       "6 * 2 / 3",
       ", we solve ",
@@ -51,13 +51,13 @@ export function app_code_lesson_expression_times_divide() {
       " first, which is ",
       "12",
     ]);
-    html_div_cycle_code(example_box, [
+    app_code_div_cycle_code(example_box, [
       "Now we have ",
       "12 / 3",
       ", which is ",
       "4",
     ]);
-    html_div_cycle_code(example_box, ["So ", "6 * 2 / 3", " is ", "4"]);
+    app_code_div_cycle_code(example_box, ["So ", "6 * 2 / 3", " is ", "4"]);
   }
   let lesson = app_code_lesson_expression_pair_generic({
     symbol1: times,

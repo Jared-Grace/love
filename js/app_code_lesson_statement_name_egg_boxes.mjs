@@ -1,4 +1,4 @@
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_statement_name_egg_boxes() {
   function remember_lines(box) {
     "the rounding-up lesson in its own shape, the expression beside what it is";
     let call = js_code_call_args(ceil_name, ["3.2"]);
-    html_div_cycle_code(box, ["", call, " is ", "4"]);
+    app_code_div_cycle_code(box, ["", call, " is ", "4"]);
   }
   function values_get() {
     "24 every time, and three of four counts that leave a box part full, in a fresh order each screen";

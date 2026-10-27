@@ -11,7 +11,7 @@ import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -63,13 +63,13 @@ export function app_code_lesson_expression_not_twice() {
     let not_false = js_code_not(false_word);
     let twice_true = not_twice_of(true_word);
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, [
+    app_code_div_cycle_code(c, [
       "A ",
       symbol,
       " can go in front of another ",
       symbol,
     ]);
-    html_div_cycle_code(c, ["For example we can write ", twice_true]);
+    app_code_div_cycle_code(c, ["For example we can write ", twice_true]);
     let line_remember = app_code_remember_from_lesson(
       c,
       context,
@@ -79,14 +79,14 @@ export function app_code_lesson_expression_not_twice() {
     app_code_lesson_expression_choose_order_not_twice_rewritten_plain(
       line_remember,
     );
-    html_div_cycle_code(c, [
+    app_code_div_cycle_code(c, [
       "For ",
       twice_true,
       ", we solve ",
       not_true,
       " first",
     ]);
-    html_div_cycle_code(c, [
+    app_code_div_cycle_code(c, [
       "",
       not_true,
       " is ",
@@ -96,7 +96,7 @@ export function app_code_lesson_expression_not_twice() {
       " is ",
       not_false,
     ]);
-    html_div_cycle_code(c, [
+    app_code_div_cycle_code(c, [
       "",
       not_false,
       " is ",
@@ -106,7 +106,7 @@ export function app_code_lesson_expression_not_twice() {
       " is ",
       true_word,
     ]);
-    html_div_cycle_code(c, [
+    app_code_div_cycle_code(c, [
       "Two ",
       symbol,
       " symbols give back the value we started with",

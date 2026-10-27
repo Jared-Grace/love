@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_arithmetic_parentheses_intro(
   parent,
 ) {
@@ -12,7 +12,7 @@ export function app_code_lesson_expression_choose_order_arithmetic_parentheses_i
   let left_parenthesis = js_code_parenthesis_left();
   let right_parenthesis = js_code_parenthesis_right();
   let times = js_operator_asterisk_symbol();
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "Now ",
     left_parenthesis,
     " and ",

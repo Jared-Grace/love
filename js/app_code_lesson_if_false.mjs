@@ -29,7 +29,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -149,7 +149,7 @@ export function app_code_lesson_if_false() {
     let both = list_join_newline([inside_shown, after_shown]);
     app_code_code_lines_writes_out(box_one, true_lines, both);
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "If the value inside ",
       left,
       " and ",
@@ -166,7 +166,7 @@ export function app_code_lesson_if_false() {
     let after_code = app_code_string_code(after_shown);
     let after_line = js_code_console_log_statement(after_code);
     app_code_code_lines_writes_out(box_two, false_lines, after_shown);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "",
       after_line,
       " is after ",

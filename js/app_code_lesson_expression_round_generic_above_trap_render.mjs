@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_round_generic_above_v } from "./app_code_lesson_expression_round_generic_above_v.mjs";
 import { app_code_lesson_expression_round_generic_above_gives_suffix } from "./app_code_lesson_expression_round_generic_above_gives_suffix.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_round_generic_above_trap_render(
   r,
   superlative,
@@ -24,7 +24,7 @@ export function app_code_lesson_expression_round_generic_above_trap_render(
   let gives_suffix = property_get(r3, "gives_suffix");
   let rounds = property_get(r3, "rounds");
   let whole_stays = property_get(r3, "whole_stays");
-  html_div_cycle_code(rounds, [
+  app_code_div_cycle_code(rounds, [
     "If a number has a decimal, ",
     called_name,
     gives_suffix,

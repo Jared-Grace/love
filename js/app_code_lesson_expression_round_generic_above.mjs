@@ -2,7 +2,7 @@ import { app_code_lesson_expression_round_generic_above_trap_render } from "./ap
 import { app_code_lesson_expression_round_generic_above_rounds } from "./app_code_lesson_expression_round_generic_above_rounds.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
 export function app_code_lesson_expression_round_generic_above({
   root,
@@ -34,7 +34,7 @@ export function app_code_lesson_expression_round_generic_above({
     trap_render,
   );
   let whole_para = app_code_container_light_blue(root);
-  html_div_cycle_code(whole_para, [
+  app_code_div_cycle_code(whole_para, [
     "",
     called_name,
     " does not change a number that is already whole",
@@ -43,5 +43,10 @@ export function app_code_lesson_expression_round_generic_above({
     whole_stays,
     called_name,
   );
-  html_div_cycle_code(whole_para, ["For example, ", v, " is ", whole_stays]);
+  app_code_div_cycle_code(whole_para, [
+    "For example, ",
+    v,
+    " is ",
+    whole_stays,
+  ]);
 }

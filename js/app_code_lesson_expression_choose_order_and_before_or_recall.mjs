@@ -5,7 +5,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_recall(
   root,
   context,
@@ -31,7 +31,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_recall(
       true_word,
     ],
   );
-  html_div_cycle_code(recall_card, [
+  app_code_div_cycle_code(recall_card, [
     "And ",
     or_symbol,
     " is ",

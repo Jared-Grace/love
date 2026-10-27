@@ -3,7 +3,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_div_code } from "./app_code_div_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 export function app_code_lesson_cup_code_box(root, name, word) {
@@ -15,7 +15,7 @@ export function app_code_lesson_cup_code_box(root, name, word) {
   let held = js_code_let_statement(name, quoted);
   let logged = js_code_console_log_statement(name);
   let box_code = app_code_container_light_blue(root);
-  html_div_cycle_code(box_code, [
+  app_code_div_cycle_code(box_code, [
     "In JS we make a cup called ",
     name,
     " and put ",
@@ -23,7 +23,7 @@ export function app_code_lesson_cup_code_box(root, name, word) {
     " in it like this:",
   ]);
   app_code_div_code(box_code, held);
-  html_div_cycle_code(box_code, [
+  app_code_div_cycle_code(box_code, [
     "Then we can write out whatever is inside the cup like this:",
   ]);
   ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The line that makes the cup stands on its own a row up, as the line being taught, and stands here again because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on a line a learner had to carry down from higher in the box - and nothing in the log line says which cup was filled with what.");

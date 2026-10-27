@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_braces_run_programs_shape } from "./app_code_braces_run_programs_shape.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_braces_run_walkthrough } from "./app_code_braces_run_walkthrough.mjs";
@@ -32,12 +32,12 @@ export function app_code_lesson_braces_run_explain_generic(
     "The box on sections last, straight before the worked example, at the human's asking 2026-10-11: it is the rule the example is answered by, so it sits where the answering begins.";
     explain(root, context);
     let box_steps = app_code_container_light_blue(root);
-    html_div_cycle_code(box_steps, [
+    app_code_div_cycle_code(box_steps, [
       "When a ",
       "{ ... }",
       " does not run, it is as if its lines were not there",
     ]);
-    html_div_cycle_code(box_steps, [
+    app_code_div_cycle_code(box_steps, [
       "When a ",
       "{ ... }",
       " runs, it is as if only its lines were there",

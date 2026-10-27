@@ -37,7 +37,7 @@ export function app_code_lesson_prose_colon_ast_add(ast) {
         if (expression.callee) {
           saying = equal(
             expression.callee.name,
-            fn_name("html_div_cycle_code"),
+            fn_name("app_code_div_cycle_code"),
           );
         }
       }

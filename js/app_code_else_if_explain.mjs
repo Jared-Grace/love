@@ -8,7 +8,7 @@ import { js_code_else_one_line } from "./js_code_else_one_line.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_in_else } from "./app_code_lesson_if_in_else.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_else_if_nested_lines } from "./app_code_else_if_nested_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
@@ -35,7 +35,7 @@ export function app_code_else_if_explain(root, context) {
     "else",
   ]);
   let box_two = app_code_container_light_blue(root);
-  html_div_cycle_code(box_two, [
+  app_code_div_cycle_code(box_two, [
     "Here ",
     if_b,
     " is the only line inside ",
@@ -46,7 +46,7 @@ export function app_code_else_if_explain(root, context) {
   let written = list_join_newline([joy, peace]);
   app_code_code_lines_writes_out(box_two, nested, written);
   let box_three = app_code_container_light_blue(root);
-  html_div_cycle_code(box_three, [
+  app_code_div_cycle_code(box_three, [
     "So ",
     else_with_if,
     " can be written shorter as ",
@@ -55,7 +55,7 @@ export function app_code_else_if_explain(root, context) {
   ]);
   let chain_lines = app_code_else_if_program_lines([false, true], words);
   app_code_code_lines_writes_out(box_three, chain_lines, written);
-  html_div_cycle_code(box_three, [
+  app_code_div_cycle_code(box_three, [
     "",
     "a",
     " is ",
@@ -69,11 +69,11 @@ export function app_code_else_if_explain(root, context) {
     " run",
   ]);
   let box_four = app_code_container_light_blue(root);
-  html_div_cycle_code(box_four, ["But suppose ", "a", " is ", "true", ":"]);
+  app_code_div_cycle_code(box_four, ["But suppose ", "a", " is ", "true", ":"]);
   let love_lines = app_code_else_if_program_lines([true, true], words);
   let love_written = list_join_newline([love, peace]);
   app_code_code_lines_writes_out(box_four, love_lines, love_written);
-  html_div_cycle_code(box_four, [
+  app_code_div_cycle_code(box_four, [
     "",
     "a",
     " is ",
@@ -84,7 +84,7 @@ export function app_code_else_if_explain(root, context) {
     if_a,
     " runs",
   ]);
-  html_div_cycle_code(box_four, [
+  app_code_div_cycle_code(box_four, [
     "",
     else_if_b,
     " is not reached, even though ",

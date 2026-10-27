@@ -27,7 +27,7 @@ import { list_filter } from "./list_filter.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_even } from "./app_code_lesson_statement_name_even.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -127,17 +127,21 @@ export function app_code_lesson_if_even() {
       ["", even_check, " is ", "true", " when ", name, " is even"],
     );
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, ["We can put that check in an ", "if", ":"]);
+    app_code_div_cycle_code(box_two, [
+      "We can put that check in an ",
+      "if",
+      ":",
+    ]);
     let even_code = program_get(4);
     let lines2 = program_lines(4);
     let value = eval_console_log_lines(even_code);
     app_code_code_lines_writes_out(box_two, lines2, value);
     let combined = js_code_binary_spaced_nb(4, percent, 2);
-    html_div_cycle_code(box_two, ["", combined, " is ", "0"]);
+    app_code_div_cycle_code(box_two, ["", combined, " is ", "0"]);
     let left = js_code_binary_spaced_nb(4, percent, 2);
     let combined2 = js_code_binary_spaced_nb(left, same, 0);
-    html_div_cycle_code(box_two, ["So ", combined2, " is ", "true"]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, ["So ", combined2, " is ", "true"]);
+    app_code_div_cycle_code(box_two, [
       "So the lines inside ",
       brace_left,
       " and ",
@@ -145,17 +149,23 @@ export function app_code_lesson_if_even() {
       " run",
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, ["But suppose ", name, " is ", "5", ":"]);
+    app_code_div_cycle_code(box_three, [
+      "But suppose ",
+      name,
+      " is ",
+      "5",
+      ":",
+    ]);
     let odd_code = program_get(5);
     let lines3 = program_lines(5);
     let value2 = eval_console_log_lines(odd_code);
     app_code_code_lines_writes_out(box_three, lines3, value2);
     let combined3 = js_code_binary_spaced_nb(5, percent, 2);
-    html_div_cycle_code(box_three, ["", combined3, " is ", "1"]);
+    app_code_div_cycle_code(box_three, ["", combined3, " is ", "1"]);
     let left3 = js_code_binary_spaced_nb(5, percent, 2);
     let combined4 = js_code_binary_spaced_nb(left3, same, 0);
-    html_div_cycle_code(box_three, ["So ", combined4, " is ", "false"]);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, ["So ", combined4, " is ", "false"]);
+    app_code_div_cycle_code(box_three, [
       "So the lines inside ",
       brace_left,
       " and ",

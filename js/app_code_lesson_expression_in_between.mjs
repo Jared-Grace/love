@@ -8,7 +8,7 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_expression_in_between() {
   function above(root) {
     "the goal, then the trap, then the fix: repeat the middle number and join with &&";
     let goal = app_code_container_light_blue(root);
-    html_div_cycle_code(goal, [
+    app_code_div_cycle_code(goal, [
       "Is ",
       "5",
       " between ",
@@ -74,7 +74,7 @@ export function app_code_lesson_expression_in_between() {
     app_code_lesson_expression_in_between_card_chained(root);
     let fix = app_code_container_light_blue(root);
     ("The fix is given as a break into pieces rather than as repeat the middle number, because repeating a number is what the writing looks like, not what it means. Two pieces that must both hold is the meaning, and it is also what && was taught to do, so the && arrives as the thing the reader already has rather than as a trick. The last line then hands back the shorthand, once it stands for something.");
-    html_div_cycle_code(fix, [
+    app_code_div_cycle_code(fix, [
       "For JS, instead of a single ",
       "2 < 5 < 8",
       ", we break it into two pieces: ",
@@ -82,13 +82,13 @@ export function app_code_lesson_expression_in_between() {
       " and ",
       "5 < 8",
     ]);
-    html_div_cycle_code(fix, [
+    app_code_div_cycle_code(fix, [
       "Both pieces must be ",
       "true",
       ", so we write ",
       "2 < 5 && 5 < 8",
     ]);
-    html_div_cycle_code(fix, [
+    app_code_div_cycle_code(fix, [
       "In a sense we just replace the middle ",
       "5",
       " with ",

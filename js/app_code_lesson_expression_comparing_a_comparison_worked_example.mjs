@@ -4,7 +4,7 @@ import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_so
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_comparing_a_comparison_worked_example(
   root,
   lead,
@@ -28,7 +28,7 @@ export function app_code_lesson_expression_comparing_a_comparison_worked_example
     right_value,
   );
   app_code_lesson_suppose_solve_line(card, lead, whole);
-  html_div_cycle_code(card, ["We replace the ", code, " with ", answer]);
+  app_code_div_cycle_code(card, ["We replace the ", code, " with ", answer]);
   app_code_lesson_expression_comparing_a_comparison_replaced_lines(
     card,
     code,

@@ -5,7 +5,7 @@ import { list_get } from "./list_get.mjs";
 import { add } from "./add.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_expression_round_generic_above_term({
   let metaphor = app_code_container_light_blue(root);
   metaphor_render(metaphor);
   let define = app_code_container_light_blue(root);
-  html_div_cycle_code(define, ["", decimal, " is a decimal number"]);
+  app_code_div_cycle_code(define, ["", decimal, " is a decimal number"]);
   let no_decimal = html_div(define);
   html_span_text_code_dark(no_decimal, whole_text);
   html_span_text(no_decimal, " has no decimal, so ");

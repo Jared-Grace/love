@@ -18,7 +18,7 @@ import { less_than } from "./less_than.mjs";
 import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_braces_color_next } from "./app_code_braces_color_next.mjs";
 import { app_code_if_blocks_lines_kept } from "./app_code_if_blocks_lines_kept.mjs";
 import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
@@ -127,7 +127,7 @@ export function app_code_braces_run_walkthrough(root, code) {
     let runs = property_get(block, "runs");
     let box = app_code_container_light_blue(root);
     if (first) {
-      html_div_cycle_code(box, ["For example:"]);
+      app_code_div_cycle_code(box, ["For example:"]);
       first = false;
     }
     let color = app_code_braces_color_next();
@@ -149,18 +149,18 @@ export function app_code_braces_run_walkthrough(root, code) {
       [" run?"],
     ]);
     let parts = reason_parts(block);
-    html_div_cycle_code(box, parts);
+    app_code_div_cycle_code(box, parts);
     let words = runs ? [["Yes, "], [" runs"]] : [["No, "], [" does not run"]];
     let item = list_get(words, 0);
     let item2 = list_get(words, 1);
     app_code_div_braces_painted(box, [item, left, [" ... "], right, item2]);
     for (let removed of removed_lines(block)) {
-      html_div_cycle_code(box, removed);
+      app_code_div_cycle_code(box, removed);
     }
-    html_div_cycle_code(box, ["Now we have:"]);
+    app_code_div_cycle_code(box, ["Now we have:"]);
   }
   let box_end = app_code_container_light_blue(root);
   let lines_end = app_code_if_blocks_lines_kept(code, blocks, count);
   program_draw(box_end, lines_end, null, null);
-  html_div_cycle_code(box_end, ["So the code is as if it were only this"]);
+  app_code_div_cycle_code(box_end, ["So the code is as if it were only this"]);
 }

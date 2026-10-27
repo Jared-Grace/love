@@ -11,7 +11,7 @@ import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_not } from "./app_code_lesson_statement_name_not.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_program_lines } from "./app_code_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
@@ -67,7 +67,7 @@ export function app_code_lesson_if_not() {
       ],
     );
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "We can put ",
       opposite,
       " in an ",
@@ -84,9 +84,9 @@ export function app_code_lesson_if_not() {
     );
     let both = list_join_newline([inside_shown, after_shown]);
     app_code_code_lines_writes_out(box_two, true_lines, both);
-    html_div_cycle_code(box_two, ["", name, " is ", "false"]);
-    html_div_cycle_code(box_two, ["So ", opposite, " is ", "true"]);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, ["", name, " is ", "false"]);
+    app_code_div_cycle_code(box_two, ["So ", opposite, " is ", "true"]);
+    app_code_div_cycle_code(box_two, [
       "So the lines inside ",
       brace_left,
       " and ",
@@ -94,7 +94,13 @@ export function app_code_lesson_if_not() {
       " run",
     ]);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, ["But suppose ", name, " is ", "true", ":"]);
+    app_code_div_cycle_code(box_three, [
+      "But suppose ",
+      name,
+      " is ",
+      "true",
+      ":",
+    ]);
     let setup3 = setup_get(name, true);
     let false_lines = app_code_if_program_lines(
       setup3,
@@ -104,8 +110,8 @@ export function app_code_lesson_if_not() {
       true,
     );
     app_code_code_lines_writes_out(box_three, false_lines, after_shown);
-    html_div_cycle_code(box_three, ["So ", opposite, " is ", "false"]);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, ["So ", opposite, " is ", "false"]);
+    app_code_div_cycle_code(box_three, [
       "So the lines inside ",
       brace_left,
       " and ",

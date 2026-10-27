@@ -26,7 +26,7 @@ import { list_first } from "./list_first.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_number_text_join() {
@@ -111,14 +111,14 @@ export function app_code_lesson_number_text_join() {
     let value = text_combine("5", ending);
     app_code_code_lines_writes_out(box_two, [statement3], value);
     let box_three = app_code_container_light_blue(root);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "A name holding a number joins the same way:",
     ]);
     let program = program_get(name, 5, ending);
     let lines2 = text_split_newline(program);
     let value2 = text_combine("5", ending);
     app_code_code_lines_writes_out(box_three, lines2, value2);
-    html_div_cycle_code(box_three, [
+    app_code_div_cycle_code(box_three, [
       "",
       name,
       " is ",

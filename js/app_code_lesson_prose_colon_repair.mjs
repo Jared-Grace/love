@@ -11,7 +11,7 @@ export async function app_code_lesson_prose_colon_repair() {
   let repo = "love";
   let names = await repo_functions_names_code_includes(
     repo,
-    fn_name("html_div_cycle_code"),
+    fn_name("app_code_div_cycle_code"),
   );
   let repaired = [];
   let added_all = 0;

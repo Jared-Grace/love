@@ -7,7 +7,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
 import { app_code_lesson_token_order_alone } from "./app_code_lesson_token_order_alone.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_token_order_generic } from "./app_code_lesson_token_order_generic.mjs";
 import { app_code_lesson_token_order_example_choose_braces } from "./app_code_lesson_token_order_example_choose_braces.mjs";
@@ -31,17 +31,17 @@ export function app_code_lesson_token_order_braces_colored() {
       context,
       app_code_lesson_token_order_alone,
     );
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, [
       "In this lesson, the braces ",
       left,
       " ",
       right,
       " are colored",
     ]);
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, [
       "In the previous lesson, when a token was chosen, it was always shown below",
     ]);
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, [
       "In this lesson, the ",
       left,
       " ",

@@ -11,7 +11,7 @@ import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { equal } from "./equal.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
@@ -82,9 +82,9 @@ export function app_code_lesson_expression_parentheses_both_sides() {
     ("The last row is word for word the shape the choose-order-pair run ends on - replace them to get the middle line, which is the answer. That run is the lesson immediately before this one and the learner has just pressed their way through it, so the same sentence closes the loop rather than opening a new one.");
     let whole = "(3 === 5) === (5 === 3)";
     app_code_lesson_suppose_solve_line(both, "Suppose", whole);
-    html_div_cycle_code(both, ["", "3 === 5", " is ", "false"]);
-    html_div_cycle_code(both, ["", "5 === 3", " is ", "false"]);
-    html_div_cycle_code(both, [
+    app_code_div_cycle_code(both, ["", "3 === 5", " is ", "false"]);
+    app_code_div_cycle_code(both, ["", "5 === 3", " is ", "false"]);
+    app_code_div_cycle_code(both, [
       "Then we replace them to get ",
       "false === false",
       ", which is ",

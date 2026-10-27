@@ -14,7 +14,7 @@ import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_whole_part() {
   "practice the whole part in finding a remainder: the quotient (how many whole times the number divides) times the divisor gives the biggest multiple of the divisor that fits - 3 whole 4s is 3 * 4 which is 12, and 12 is as much of 14 as splits evenly into 4s; this is the multiply step of the remainder pipeline (integer division gave the quotient, next you subtract this whole part from the number); the answer is the product; quotient 2..3, divisor 3..6";
   function make(divisor) {
@@ -73,14 +73,21 @@ export function app_code_lesson_expression_whole_part() {
       ["the whole part of ", "14 / 4", " is ", "Math.floor(14 / 4) * 4"],
     );
     let evaluating = app_code_container_light_blue(root);
-    html_div_cycle_code(evaluating, ["Solve the formula one step at a time:"]);
-    html_div_cycle_code(evaluating, ["", "Math.floor(14 / 4)", " is ", "3"]);
-    html_div_cycle_code(evaluating, [
+    app_code_div_cycle_code(evaluating, [
+      "Solve the formula one step at a time:",
+    ]);
+    app_code_div_cycle_code(evaluating, [
+      "",
+      "Math.floor(14 / 4)",
+      " is ",
+      "3",
+    ]);
+    app_code_div_cycle_code(evaluating, [
       "",
       "Math.floor(14 / 4) * 4",
       " is ",
       "3 * 4",
     ]);
-    html_div_cycle_code(evaluating, ["", "3 * 4", " is ", "12"]);
+    app_code_div_cycle_code(evaluating, ["", "3 * 4", " is ", "12"]);
   }
 }

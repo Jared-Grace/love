@@ -7,7 +7,7 @@ import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_order_braces.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_braces_three_programs } from "./app_code_braces_three_programs.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_braces_paired_with_order } from "./app_code_braces_paired_with_order.mjs";
@@ -43,7 +43,7 @@ export function app_code_lesson_token_order_braces_three() {
       ],
     );
     let box_two = app_code_container_light_blue(root);
-    html_div_cycle_code(box_two, [
+    app_code_div_cycle_code(box_two, [
       "Now each program has three pairs of braces ",
       "{ }",
       ". Each pair has a colour of its own. Under the code are only its braces, in the order we read them:",

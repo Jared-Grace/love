@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_not_parenthesis_shape } from "./app_code_not_parenthesis_shape.mjs";
 export function app_code_lesson_expression_choose_order_not_intro(parent) {
   arguments_assert(arguments, 1);
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_not_intro(parent) {
   let left_parenthesis = js_code_parenthesis_left();
   let right_parenthesis = js_code_parenthesis_right();
   let marks = text_combine_3(left_parenthesis, " ", right_parenthesis);
-  let row_shape = html_div_cycle_code(parent, [
+  let row_shape = app_code_div_cycle_code(parent, [
     "",
     symbol,
     " can be in front of parenthesis ",
@@ -24,12 +24,12 @@ export function app_code_lesson_expression_choose_order_not_intro(parent) {
     " like this: ",
   ]);
   app_code_not_parenthesis_shape(row_shape);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "The parenthesis means: solve what's inside the parenthesis, first, and then apply ",
     symbol,
     " to the solved value",
   ]);
-  html_div_cycle_code(parent, [
+  app_code_div_cycle_code(parent, [
     "So what's inside the parenthesis is solved, first and then ",
     symbol,
     " applies to that solved value",

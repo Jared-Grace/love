@@ -1,4 +1,4 @@
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -36,9 +36,9 @@ export function app_code_lesson_statement_name_rows_apart() {
   function remember_lines(box) {
     "lesson 102 in its own shape, each expression beside what it is";
     let below = js_code_call_args(math_abs, ["-4"]);
-    html_div_cycle_code(box, ["", below, " is ", "4"]);
+    app_code_div_cycle_code(box, ["", below, " is ", "4"]);
     let positive = js_code_call_args(math_abs, ["4"]);
-    html_div_cycle_code(box, ["", positive, " is ", "4"]);
+    app_code_div_cycle_code(box, ["", positive, " is ", "4"]);
   }
   function values_get() {
     "four of the five pairs, in a fresh order each screen; two go down and three go up, so every screen has both";

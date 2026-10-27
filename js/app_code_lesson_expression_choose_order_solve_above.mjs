@@ -11,7 +11,7 @@ import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_so
 import { app_code_operators_say } from "./app_code_operators_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_expression_choose_order_solve_above(
   let line_card = app_code_container_light_blue(root);
   app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
   let recap = app_code_container_light_blue(root);
-  html_div_cycle_code(recap, [
+  app_code_div_cycle_code(recap, [
     "Before, you chose each operator in order (",
     first_symbol,
     ", then ",
@@ -54,7 +54,7 @@ export function app_code_lesson_expression_choose_order_solve_above(
     ")",
   ]);
   let solved = app_code_expression_equals_text(step_code, step_text);
-  html_div_cycle_code(recap, [
+  app_code_div_cycle_code(recap, [
     "Then you saw what that operator would be replaced with (like ",
     solved,
     ")",
@@ -68,7 +68,7 @@ export function app_code_lesson_expression_choose_order_solve_above(
     step_code,
     step_text,
   );
-  html_div_cycle_code(recap, [
+  app_code_div_cycle_code(recap, [
     "You did this until there were no more operators left (so the final value was ",
     final_text,
     ")",

@@ -1,6 +1,6 @@
 import { app_code_lesson_cross_precedence_rule } from "./app_code_lesson_cross_precedence_rule.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_cross_precedence_intro(params) {
     "one example said in two lines: the whole expression and the strong sub-expression taken out of it with its value, then what is left of the line and what that comes to";
     let box = app_code_container_light_blue(root);
     let t3 = text_to(inner);
-    html_div_cycle_code(box, [
+    app_code_div_cycle_code(box, [
       "For ",
       expression,
       ", we solve ",
@@ -42,7 +42,7 @@ export function app_code_lesson_cross_precedence_intro(params) {
       t3,
     ]);
     let t4 = text_to(final);
-    html_div_cycle_code(box, ["Now we have ", combined, ", which is ", t4]);
+    app_code_div_cycle_code(box, ["Now we have ", combined, ", which is ", t4]);
   }
   ("the strong part LATER: the line opens with the weak operator, and the rule is what sends the learner past it to the end of the line");
   let later_sub = binary(later_inner_left, strong_symbol, later_inner_right);

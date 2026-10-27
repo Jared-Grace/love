@@ -8,7 +8,7 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
@@ -62,14 +62,14 @@ export function app_code_lesson_expression_parentheses_one_side() {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let idea = app_code_container_light_blue(root);
-    html_div_cycle_code(idea, [
+    app_code_div_cycle_code(idea, [
       "We can put ",
       open,
       " and ",
       close,
       " around a comparison",
     ]);
-    html_div_cycle_code(idea, [
+    app_code_div_cycle_code(idea, [
       "",
       "(3 === 5)",
       " solves to same value as ",
@@ -78,15 +78,20 @@ export function app_code_lesson_expression_parentheses_one_side() {
     let r = app_code_parentheses_inside_before_outside(
       " show that whatever is inside",
     );
-    html_div_cycle_code(idea, ["The ", open, " and ", close, r]);
+    app_code_div_cycle_code(idea, ["The ", open, " and ", close, r]);
     let first = app_code_container_light_blue(root);
-    html_div_cycle_code(first, ["", "3 === 5", " is ", "false"]);
-    html_div_cycle_code(first, ["So ", "(3 === 5) === false", " is ", "true"]);
+    app_code_div_cycle_code(first, ["", "3 === 5", " is ", "false"]);
+    app_code_div_cycle_code(first, [
+      "So ",
+      "(3 === 5) === false",
+      " is ",
+      "true",
+    ]);
     let either = app_code_container_light_blue(root);
     ("The outer operator is named by its SYMBOL, never by the word comparison. Two comparisons stand on this line - the > inside the parentheses and the === outside them - and the word is already spent on the inner one by the card above, which says we put ( and ) AROUND a comparison. So either side of the comparison would say the parentheses can sit outside the thing they are around. Both symbols are listed because the quiz asks both, and a rule naming only === would read as a rule about ===.");
     let same_symbol = js_operator_triple_equal_symbol();
     let different_symbol = js_operator_bang_double_equal_symbol();
-    html_div_cycle_code(either, [
+    app_code_div_cycle_code(either, [
       "The ",
       open,
       " and ",
@@ -96,13 +101,18 @@ export function app_code_lesson_expression_parentheses_one_side() {
       " or ",
       different_symbol,
     ]);
-    html_div_cycle_code(either, ["", "3 > 8", " is ", "false"]);
-    html_div_cycle_code(either, ["So ", "false === (3 > 8)", " is ", "true"]);
+    app_code_div_cycle_code(either, ["", "3 > 8", " is ", "false"]);
+    app_code_div_cycle_code(either, [
+      "So ",
+      "false === (3 > 8)",
+      " is ",
+      "true",
+    ]);
     ("Solve, not work out - the childhood math word the track already runs on, decided in the arithmetic-both-sides lesson and used by every lesson that names the act. Past tense, because the two lines above it on this card have already done it: the line points back at what the reader just watched happen, rather than stating a rule they have yet to apply.");
     ("However needs an antecedent, and this line is it. Without it the word points at nothing on the card and the reader supplies the contrast themselves - or misses that there is one.");
     ("Going from left to right names the READING motion, not an evaluation rule, which is why the phrase is safe here after being refused elsewhere. The shared inside-before-outside sentence must not say before working left to right, because that would be a claim about every operator and ** runs right to left; this line makes no claim about any operator at all - it says only what stands before what on this one line.");
     ("The line names the === and the 3 > 8, and deliberately not the false. The false is leftmost, but it is already a value - there is nothing to solve about it, so a reader is never tempted to do it first and no contrast is set up by saying it comes first. The === is the one whose turn the parentheses defer, so it is the one worth naming. Saying the === is first would be the other error: true about which operator comes first, false about the page, because the false is standing to its left. Comes before the 3 > 8 is true on both counts at once, and it hands the next line its subject.");
-    html_div_cycle_code(either, [
+    app_code_div_cycle_code(either, [
       "Going from left to right, the ",
       "===",
       " comes before the ",
@@ -110,7 +120,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
     ]);
     ("The reason clause INSTANTIATES the idea card three cards up rather than repeating it. That card states the rule in its general form - whatever is inside is solved before whatever is outside - and this line says what the whatever turned out to be here. A rule and its instance differ in GENERALITY, not in wording, so this is not the near-copy the repo warns against: substituting the instance into the rule is the whole of what a worked example does, and a card that shows an instance without ever naming which rule it instances leaves the reader to guess the link.");
     ("3 > 8 is written twice rather than replaced by it. The repo kills a pronoun with the name it stands for, and here the doubled name is also what binds the two halves of the sentence together - the thing solved first and the thing inside the parentheses are the SAME thing, which is the entire point.");
-    html_div_cycle_code(either, [
+    app_code_div_cycle_code(either, [
       "However, we had to solve the ",
       "3 > 8",
       " first because ",
