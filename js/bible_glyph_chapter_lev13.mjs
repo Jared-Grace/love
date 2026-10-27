@@ -1182,7 +1182,7 @@ export function bible_glyph_chapter_lev13() {
           "appear",
           "to",
           "be",
-          "deeper",
+          "$down_arrow+hole+describing",
           "$tray_out",
           "the",
           "skin,",
