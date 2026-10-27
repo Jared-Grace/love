@@ -745,7 +745,7 @@ export function bible_glyph_chapter_zec08() {
           "$ten",
           "men",
           "of",
-          "every",
+          "$all",
           "tongue",
           "from",
           "the",
