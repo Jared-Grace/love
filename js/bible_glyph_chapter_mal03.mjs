@@ -38,7 +38,7 @@ export function bible_glyph_chapter_mal03() {
           "$footprints",
           "$toward",
           "His",
-          "temple",
+          "$classical_building",
           "-",
           "the",
           "$angel",
