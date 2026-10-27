@@ -309,7 +309,7 @@ export function bible_glyph_chapter_2ki17() {
           "$heart_on_fire.",
           "They",
           "built",
-          "high",
+          "$snow_capped_mountain",
           "places",
           "in",
           "all",
