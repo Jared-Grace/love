@@ -367,7 +367,7 @@ export function bible_glyph_chapter_psa073() {
           "You,",
           "O",
           "$crown,",
-          "awaken",
+          "$rooster",
           "and",
           "despise",
           "their",
