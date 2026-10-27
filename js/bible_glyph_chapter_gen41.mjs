@@ -701,7 +701,7 @@ export function bible_glyph_chapter_gen41() {
           "$thumbs_up",
           "cows",
           "are",
-          "seven",
+          "$seven",
           "$year,",
           "and",
           "the",
