@@ -1210,7 +1210,7 @@ export function bible_glyph_chapter_2ch20() {
           "$son",
           "of",
           "$proper_name$Hanani,",
-          "which",
+          "$back+flashlight",
           "are",
           "recorded",
           "in",
