@@ -524,7 +524,7 @@ export function bible_glyph_chapter_deu11() {
           "$heart_organ",
           "is",
           "not",
-          "enticed",
+          "$fishing_pole+doing",
           "to",
           "turn",
           "aside,",
