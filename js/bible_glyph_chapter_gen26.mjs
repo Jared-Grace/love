@@ -464,7 +464,7 @@ export function bible_glyph_chapter_gen26() {
           "$walking",
           "from",
           "us,",
-          "for",
+          "$pointing",
           "you",
           "are",
           "much",
