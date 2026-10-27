@@ -508,7 +508,7 @@ export function bible_glyph_chapter_exo23() {
           "You",
           "must",
           "$no_entry",
-          "offer",
+          "$sacrifice",
           "the",
           "$blood",
           "of",
