@@ -283,7 +283,7 @@ export function bible_glyph_chapter_jer29() {
       {
         verse_number: 9,
         words: [
-          "For",
+          "$pointing",
           "they",
           "are",
           "falsely",
