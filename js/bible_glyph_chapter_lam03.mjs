@@ -401,7 +401,7 @@ export function bible_glyph_chapter_lam03() {
           "His",
           "mercies",
           "$no_entry",
-          "fail.",
+          "$end_arrow.",
         ],
       },
       {
