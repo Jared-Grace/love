@@ -109,7 +109,7 @@ export function bible_glyph_chapter_2ki05() {
           "to",
           "the",
           "$megaphone",
-          "who",
+          "$back+flashlight",
           "is",
           "in",
           "$guard+proper_name,",
