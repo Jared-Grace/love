@@ -1300,7 +1300,7 @@ export function bible_glyph_chapter_num22() {
         words: [
           "The",
           "next",
-          "morning",
+          "$morning",
           "$proper_name$Balak",
           "$hand_receiving",
           "$proper_name$Balaam",
