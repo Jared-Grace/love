@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_1ki20() {
           "seventh",
           "$sun",
           "the",
-          "battle",
+          "$crossed_swords",
           "$magnet+doing.",
           "The",
           "$son",
