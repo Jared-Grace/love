@@ -661,7 +661,7 @@ export function bible_glyph_chapter_1ch29() {
           "our",
           "$father,",
           "$guard",
-          "this",
+          "$flashlight",
           "$hourglass",
           "in",
           "the",
