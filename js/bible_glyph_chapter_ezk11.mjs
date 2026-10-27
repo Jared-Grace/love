@@ -128,7 +128,7 @@ export function bible_glyph_chapter_ezk11() {
           "$megaphone+doing",
           "against",
           "them.",
-          "Prophesy,",
+          "$megaphone+doing,",
           "O",
           "$son",
           "of",
