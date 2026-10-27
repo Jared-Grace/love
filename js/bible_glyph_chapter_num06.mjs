@@ -498,7 +498,7 @@ export function bible_glyph_chapter_num06() {
           "$grain_offering",
           "offerings",
           "and",
-          "drink",
+          "$pouring_liquid+wine+thing",
           "offerings.",
         ],
       },
