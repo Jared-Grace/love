@@ -23,7 +23,7 @@ export function bible_glyph_chapter_2sa11() {
           "spring,",
           "at",
           "the",
-          "time",
+          "$clock",
           "when",
           "kings",
           "march",
