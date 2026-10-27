@@ -49,7 +49,7 @@ export function bible_glyph_chapter_lev21() {
       {
         verse_number: 2,
         words: [
-          "except",
+          "$pointing",
           "for",
           "his",
           "closest",
