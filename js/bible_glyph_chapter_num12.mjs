@@ -208,7 +208,7 @@ export function bible_glyph_chapter_num12() {
           "him",
           "$face_with_open_mouth",
           "to",
-          "face,",
+          "$face_with_open_mouth,",
           "clearly",
           "and",
           "$no_entry",
