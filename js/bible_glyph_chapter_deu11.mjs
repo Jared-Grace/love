@@ -195,7 +195,7 @@ export function bible_glyph_chapter_deu11() {
           "$earth",
           "$face_with_open_mouth+doing",
           "its",
-          "mouth",
+          "$face_with_open_mouth",
           "and",
           "swallowed",
           "them,",
