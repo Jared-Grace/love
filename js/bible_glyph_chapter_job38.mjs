@@ -268,7 +268,7 @@ export function bible_glyph_chapter_job38() {
           "$ring+locked+thing;",
           "its",
           "hills",
-          "stand",
+          "$person+round_pushpin+anchor+doing",
           "out",
           "like",
           "the",
