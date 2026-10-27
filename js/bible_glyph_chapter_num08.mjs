@@ -50,7 +50,7 @@ export function bible_glyph_chapter_num08() {
         verse_number: 3,
         words: [
           "And",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$hammer+doing",
           "$right_arrow;",
           "he",
