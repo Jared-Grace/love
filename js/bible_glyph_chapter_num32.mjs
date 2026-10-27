@@ -472,7 +472,7 @@ export function bible_glyph_chapter_num32() {
           "We",
           "want",
           "to",
-          "build",
+          "$brick",
           "$sheep",
           "folds",
           "here",
