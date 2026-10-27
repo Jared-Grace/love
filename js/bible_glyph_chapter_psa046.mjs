@@ -43,7 +43,7 @@ export function bible_glyph_chapter_psa046() {
       {
         verse_number: 2,
         words: [
-          "Therefore",
+          "$pointing_up",
           "we",
           "will",
           "$no_entry",
