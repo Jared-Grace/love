@@ -550,7 +550,7 @@ export function bible_glyph_chapter_jos07() {
         words: [
           "In",
           "the",
-          "morning",
+          "$morning",
           "you",
           "must",
           "present",
