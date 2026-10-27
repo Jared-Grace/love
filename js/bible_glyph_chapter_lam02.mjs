@@ -635,7 +635,7 @@ export function bible_glyph_chapter_lam02() {
           "of",
           "$city+peace:",
           "Is",
-          "this",
+          "$flashlight",
           "the",
           "$city",
           "that",
