@@ -336,7 +336,7 @@ export function bible_glyph_chapter_2sa06() {
           "$proper_name$Gittite",
           "for",
           "$three",
-          "months,",
+          "$new_moon,",
           "and",
           "the",
           "$i_am",
