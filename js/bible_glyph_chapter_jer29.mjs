@@ -646,7 +646,7 @@ export function bible_glyph_chapter_jer29() {
           "you",
           "exiles",
           "$ear,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
