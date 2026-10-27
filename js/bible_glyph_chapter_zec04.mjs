@@ -311,7 +311,7 @@ export function bible_glyph_chapter_zec04() {
           "trees",
           "on",
           "the",
-          "right",
+          "$hand+right_arrow",
           "of",
           "the",
           "lampstand",
