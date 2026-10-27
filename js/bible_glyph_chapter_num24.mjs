@@ -52,7 +52,7 @@ export function bible_glyph_chapter_num24() {
         verse_number: 2,
         words: [
           "When",
-          "Balaam",
+          "$foreigner+proper_name",
           "lifted",
           "up",
           "his",
