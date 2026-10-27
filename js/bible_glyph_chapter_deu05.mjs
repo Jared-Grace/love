@@ -31,7 +31,7 @@ export function bible_glyph_chapter_deu05() {
           "statutes",
           "and",
           "$scales+thing",
-          "that",
+          "$back+flashlight",
           "I",
           "$mouth",
           "in",
