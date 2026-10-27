@@ -606,7 +606,7 @@ export function bible_glyph_chapter_jdg06() {
           "goat",
           "and",
           "an",
-          "ephah",
+          "$bucket+input_numbers",
           "of",
           "flour",
           "and",
