@@ -550,7 +550,7 @@ export function bible_glyph_chapter_exo25() {
           "a",
           "$hand_sending+thing",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
           "two",
           "cubits",
