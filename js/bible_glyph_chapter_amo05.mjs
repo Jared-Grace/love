@@ -390,7 +390,7 @@ export function bible_glyph_chapter_amo05() {
       {
         verse_number: 14,
         words: [
-          "Seek",
+          "$magnifying_glass+question",
           "$thumbs_up,",
           "$no_entry",
           "$thumbs_down,",
