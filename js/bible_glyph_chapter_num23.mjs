@@ -499,7 +499,7 @@ export function bible_glyph_chapter_num23() {
           "by",
           "his",
           "$burnt_offering",
-          "with",
+          "$safety_pin",
           "the",
           "princes",
           "of",
