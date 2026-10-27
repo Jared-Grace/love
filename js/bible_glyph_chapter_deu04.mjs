@@ -219,7 +219,7 @@ export function bible_glyph_chapter_deu04() {
           "$speech,",
           "$one+check",
           "this",
-          "great",
+          "$top",
           "$map",
           "is",
           "a",
