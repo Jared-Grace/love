@@ -1096,7 +1096,7 @@ export function bible_glyph_chapter_jdg16() {
           "$proper_name$Philistines",
           "for",
           "my",
-          "two",
+          "$two",
           "$eyes.",
         ],
       },
