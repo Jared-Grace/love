@@ -318,7 +318,7 @@ export function bible_glyph_chapter_exo28() {
           "$unlocked",
           "on",
           "the",
-          "two",
+          "$two",
           "$stone",
           "the",
           "$name_tag",
