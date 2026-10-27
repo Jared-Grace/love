@@ -32,7 +32,7 @@ export function bible_glyph_chapter_lev24() {
           "$olive",
           "for",
           "the",
-          "light,",
+          "$light+thing,",
           "to",
           "keep",
           "the",
