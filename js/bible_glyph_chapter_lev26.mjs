@@ -970,7 +970,7 @@ export function bible_glyph_chapter_lev26() {
           "But",
           "I",
           "will",
-          "scatter",
+          "$wind+confetti_ball",
           "you",
           "among",
           "the",
