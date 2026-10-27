@@ -82,7 +82,7 @@ export function bible_glyph_chapter_gen22() {
           "$morning+doing",
           "the",
           "next",
-          "morning,",
+          "$morning,",
           "saddled",
           "his",
           "donkey,",
