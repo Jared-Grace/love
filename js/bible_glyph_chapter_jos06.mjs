@@ -370,7 +370,7 @@ export function bible_glyph_chapter_jos06() {
           "$footprints",
           "to",
           "the",
-          "camp",
+          "$camp",
           "and",
           "spent",
           "the",
