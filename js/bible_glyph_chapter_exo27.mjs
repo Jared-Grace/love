@@ -152,7 +152,7 @@ export function bible_glyph_chapter_exo27() {
           "the",
           "$altar",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
           "and",
           "overlay",
