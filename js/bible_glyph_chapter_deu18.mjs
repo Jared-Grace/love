@@ -155,7 +155,7 @@ export function bible_glyph_chapter_deu18() {
           "your",
           "tribes",
           "to",
-          "stand",
+          "$person+round_pushpin",
           "and",
           "minister",
           "in",
