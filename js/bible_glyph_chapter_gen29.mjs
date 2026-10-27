@@ -82,7 +82,7 @@ export function bible_glyph_chapter_gen29() {
           "had",
           "been",
           "gathered",
-          "there,",
+          "$telescope,",
           "the",
           "shepherds",
           "would",
