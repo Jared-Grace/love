@@ -181,7 +181,7 @@ export function bible_glyph_chapter_deu18() {
           "$footprints",
           "from",
           "any",
-          "town",
+          "$gate",
           "of",
           "residence",
           "throughout",
