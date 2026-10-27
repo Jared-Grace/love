@@ -525,7 +525,7 @@ export function bible_glyph_chapter_isa09() {
           "every",
           "$mouth",
           "$voice+doing",
-          "folly.",
+          "$clown_face+thumbs_down.",
           "Despite",
           "all",
           "this,",
