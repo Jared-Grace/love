@@ -1222,7 +1222,7 @@ export function bible_glyph_chapter_1sa17() {
           "in",
           "his",
           "$hand,",
-          "selected",
+          "$check_box",
           "five",
           "smooth",
           "$stone",
