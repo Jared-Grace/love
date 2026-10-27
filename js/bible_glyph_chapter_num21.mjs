@@ -56,7 +56,7 @@ export function bible_glyph_chapter_num21() {
           "to",
           "the",
           "$i_am,",
-          "If",
+          "$traffic_light",
           "You",
           "will",
           "$hands_giving",
