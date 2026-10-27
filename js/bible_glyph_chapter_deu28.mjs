@@ -55,7 +55,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "high",
           "above",
-          "all",
+          "$all",
           "the",
           "$map",
           "of",
