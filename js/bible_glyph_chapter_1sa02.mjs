@@ -22,7 +22,7 @@ export function bible_glyph_chapter_1sa02() {
           "$hands_praying:",
           "My",
           "$heart_organ",
-          "rejoices",
+          "$partying_face+doing",
           "in",
           "the",
           "$i_am;",
