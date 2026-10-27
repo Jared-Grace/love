@@ -221,7 +221,7 @@ export function bible_glyph_chapter_gen46() {
         verse_number: 8,
         words: [
           "Now",
-          "these",
+          "$flashlight+flashlight",
           "are",
           "the",
           "$name_tag",
