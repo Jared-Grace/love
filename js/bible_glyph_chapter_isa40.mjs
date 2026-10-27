@@ -219,7 +219,7 @@ export function bible_glyph_chapter_isa40() {
           "and",
           "the",
           "flowers",
-          "fall,",
+          "$fallen_leaf+doing,",
           "but",
           "the",
           "$speech",
