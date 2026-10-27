@@ -1660,7 +1660,7 @@ export function bible_glyph_chapter_lev13() {
           "then",
           "regardless",
           "of",
-          "how",
+          "$back+flashlight",
           "it",
           "is",
           "$hammer+doing",
