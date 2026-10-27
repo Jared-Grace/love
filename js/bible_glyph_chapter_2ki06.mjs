@@ -716,7 +716,7 @@ export function bible_glyph_chapter_2ki06() {
           "own",
           "$sword",
           "or",
-          "bow?",
+          "$bow+wood?",
           "Set",
           "$bread",
           "and",
