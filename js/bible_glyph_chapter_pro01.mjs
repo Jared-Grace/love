@@ -45,7 +45,7 @@ export function bible_glyph_chapter_pro01() {
         words: [
           "for",
           "$hand_receiving",
-          "instruction",
+          "$teacher+exclamation",
           "in",
           "wise",
           "living,",
