@@ -252,7 +252,7 @@ export function bible_glyph_chapter_est01() {
           "the",
           "drinking,",
           "and",
-          "every",
+          "$all",
           "official",
           "of",
           "his",
