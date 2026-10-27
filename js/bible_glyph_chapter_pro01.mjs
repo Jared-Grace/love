@@ -245,7 +245,7 @@ export function bible_glyph_chapter_pro01() {
           "$money_bag+more;",
           "we",
           "will",
-          "fill",
+          "$battery",
           "our",
           "$house",
           "with",
