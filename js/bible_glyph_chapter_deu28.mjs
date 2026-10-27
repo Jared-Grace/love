@@ -1602,7 +1602,7 @@ export function bible_glyph_chapter_deu28() {
           "of",
           "your",
           "$sheep,",
-          "until",
+          "$finish",
           "they",
           "have",
           "caused",
