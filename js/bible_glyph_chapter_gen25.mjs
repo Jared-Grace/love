@@ -478,7 +478,7 @@ export function bible_glyph_chapter_gen25() {
           "and",
           "she",
           "$speech,",
-          "Why",
+          "$flashlight+question",
           "is",
           "this",
           "happening",
