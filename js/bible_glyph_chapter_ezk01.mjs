@@ -488,7 +488,7 @@ export function bible_glyph_chapter_ezk01() {
           "Their",
           "rims",
           "were",
-          "high",
+          "$giraffe+thing",
           "and",
           "awesome,",
           "and",
