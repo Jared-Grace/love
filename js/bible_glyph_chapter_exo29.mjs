@@ -1125,7 +1125,7 @@ export function bible_glyph_chapter_exo29() {
         verse_number: 37,
         words: [
           "For",
-          "seven",
+          "$seven",
           "$sun",
           "you",
           "shall",
