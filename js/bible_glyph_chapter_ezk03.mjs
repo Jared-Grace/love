@@ -796,7 +796,7 @@ export function bible_glyph_chapter_ezk03() {
           "and",
           "set",
           "me",
-          "on",
+          "$pointing_up",
           "my",
           "feet.",
           "He",
