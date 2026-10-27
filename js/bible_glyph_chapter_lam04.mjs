@@ -531,7 +531,7 @@ export function bible_glyph_chapter_lam04() {
           "Our",
           "end",
           "drew",
-          "near;",
+          "$magnet+doing;",
           "our",
           "$sun",
           "ran",
