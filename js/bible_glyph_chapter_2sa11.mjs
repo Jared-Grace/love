@@ -498,7 +498,7 @@ export function bible_glyph_chapter_2sa11() {
           "next",
           "$morning",
           "$two_hearts+proper_name",
-          "wrote",
+          "$writing_hand",
           "a",
           "letter",
           "to",
