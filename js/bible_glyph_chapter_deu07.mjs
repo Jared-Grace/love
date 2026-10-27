@@ -685,7 +685,7 @@ export function bible_glyph_chapter_deu07() {
       {
         verse_number: 20,
         words: [
-          "Moreover,",
+          "$plus,",
           "$i_am",
           "your",
           "$heart_on_fire",
