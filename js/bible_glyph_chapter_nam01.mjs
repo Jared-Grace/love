@@ -334,7 +334,7 @@ export function bible_glyph_chapter_nam01() {
           "cut",
           "down",
           "and",
-          "pass",
+          "$bridge",
           "away.",
           "Though",
           "I",
