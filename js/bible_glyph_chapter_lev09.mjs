@@ -107,7 +107,7 @@ export function bible_glyph_chapter_lev09() {
           "$grain_offering",
           "$spoon+cyclone",
           "with",
-          "oil.",
+          "$lotion_bottle.",
           "For",
           "$sun",
           "$i_am",
