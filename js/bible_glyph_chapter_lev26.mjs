@@ -805,7 +805,7 @@ export function bible_glyph_chapter_lev26() {
           "but",
           "$no_entry",
           "be",
-          "satisfied.",
+          "$eating+top.",
         ],
       },
       {
