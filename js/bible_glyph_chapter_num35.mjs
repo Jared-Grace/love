@@ -705,7 +705,7 @@ export function bible_glyph_chapter_num35() {
           "$blood",
           "according",
           "to",
-          "these",
+          "$flashlight+flashlight",
           "$scales.",
         ],
       },
