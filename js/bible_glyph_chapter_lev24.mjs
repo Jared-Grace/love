@@ -150,7 +150,7 @@ export function bible_glyph_chapter_lev24() {
           "are",
           "to",
           "$hands_giving",
-          "pure",
+          "$sparkles+droplet",
           "$white_circle+incense",
           "near",
           "each",
