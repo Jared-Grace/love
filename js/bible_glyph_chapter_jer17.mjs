@@ -312,7 +312,7 @@ export function bible_glyph_chapter_jer17() {
           "I",
           "the",
           "$i_am",
-          "search",
+          "$detective+doing",
           "the",
           "$heart_organ,",
           "I",
