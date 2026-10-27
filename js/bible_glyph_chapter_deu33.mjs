@@ -585,7 +585,7 @@ export function bible_glyph_chapter_deu33() {
           "$pick+tray_in+doing",
           "of",
           "the",
-          "sand.",
+          "$sea+brown_square.",
         ],
       },
       {
