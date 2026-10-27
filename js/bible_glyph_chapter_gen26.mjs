@@ -555,7 +555,7 @@ export function bible_glyph_chapter_gen26() {
           "$national_park",
           "and",
           "found",
-          "there",
+          "$telescope",
           "a",
           "$well",
           "of",
