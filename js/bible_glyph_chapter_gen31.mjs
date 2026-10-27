@@ -590,7 +590,7 @@ export function bible_glyph_chapter_gen31() {
           "a",
           "$road",
           "of",
-          "seven",
+          "$seven",
           "$sun,",
           "and",
           "caught",
