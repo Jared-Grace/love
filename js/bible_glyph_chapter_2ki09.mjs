@@ -1228,7 +1228,7 @@ export function bible_glyph_chapter_2ki09() {
           "and",
           "bury",
           "her,",
-          "for",
+          "$pointing",
           "she",
           "was",
           "the",
