@@ -201,7 +201,7 @@ export function bible_glyph_chapter_jos01() {
           "Above",
           "all,",
           "be",
-          "strong",
+          "$might+up_arrow",
           "and",
           "very",
           "courageous.",
