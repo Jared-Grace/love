@@ -232,7 +232,7 @@ export function bible_glyph_chapter_lev16() {
           "$hand_receiving",
           "the",
           "$two",
-          "goats",
+          "$goat+man_beard",
           "and",
           "present",
           "them",
