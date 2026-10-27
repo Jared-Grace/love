@@ -36,7 +36,7 @@ export function bible_glyph_chapter_amo05() {
         words: [
           "Fallen",
           "is",
-          "Virgin",
+          "$girl+white_flower",
           "$wrestling+heart_on_fire,",
           "$no_entry",
           "again",
