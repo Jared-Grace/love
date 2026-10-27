@@ -217,7 +217,7 @@ export function bible_glyph_chapter_exo37() {
           "their",
           "wings",
           "$walking+pointing_up,",
-          "overshadowing",
+          "$wing+doing",
           "the",
           "mercy",
           "seat",
