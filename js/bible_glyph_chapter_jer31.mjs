@@ -929,7 +929,7 @@ export function bible_glyph_chapter_jer31() {
           "$wilted_flower,",
           "and",
           "bring",
-          "disaster,",
+          "$thumbs_down+doing,",
           "so",
           "I",
           "will",
