@@ -267,7 +267,7 @@ export function bible_glyph_chapter_exo27() {
       {
         verse_number: 11,
         words: [
-          "Likewise",
+          "$right_arrow",
           "on",
           "the",
           "north",
