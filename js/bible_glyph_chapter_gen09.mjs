@@ -204,7 +204,7 @@ export function bible_glyph_chapter_gen09() {
           "But",
           "as",
           "for",
-          "you,",
+          "$you,",
           "be",
           "fruitful",
           "and",
