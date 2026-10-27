@@ -455,7 +455,7 @@ export function bible_glyph_chapter_mal02() {
           "or",
           "$hand_receiving",
           "them",
-          "gladly",
+          "$smiling_face_with_smiling_eyes",
           "from",
           "your",
           "$hand.",
