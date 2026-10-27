@@ -991,7 +991,7 @@ export function bible_glyph_chapter_lev16() {
           "the",
           "$bow",
           "offering,",
-          "whose",
+          "$back+flashlight",
           "$blood",
           "was",
           "$footprints",
