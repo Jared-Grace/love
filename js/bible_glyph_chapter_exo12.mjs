@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo12() {
           "$all",
           "eats",
           "anything",
-          "leavened",
+          "$bread+bubbles",
           "must",
           "be",
           "cut",
