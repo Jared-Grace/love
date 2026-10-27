@@ -396,7 +396,7 @@ export function bible_glyph_chapter_jdg06() {
           "$flashlight+question",
           "has",
           "all",
-          "this",
+          "$flashlight",
           "happened",
           "to",
           "us?",
