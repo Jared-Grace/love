@@ -52,7 +52,7 @@ export function bible_glyph_chapter_gen15() {
           "O",
           "$crown",
           "$i_am,",
-          "what",
+          "$flashlight+question",
           "can",
           "You",
           "$hands_giving",
