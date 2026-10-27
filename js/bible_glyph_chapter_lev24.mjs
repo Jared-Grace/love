@@ -26,7 +26,7 @@ export function bible_glyph_chapter_lev24() {
           "to",
           "you",
           "pure",
-          "oil",
+          "$lotion_bottle",
           "of",
           "pressed",
           "$olive",
