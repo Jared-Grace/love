@@ -595,7 +595,7 @@ export function bible_glyph_chapter_lev13() {
           "When",
           "a",
           "boil",
-          "appears",
+          "$link",
           "on",
           "the",
           "skin",
