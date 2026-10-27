@@ -261,7 +261,7 @@ export function bible_glyph_chapter_2ch20() {
       {
         verse_number: 9,
         words: [
-          "'If",
+          "$traffic_light",
           "$thumbs_down",
           "$footprints",
           "upon",
