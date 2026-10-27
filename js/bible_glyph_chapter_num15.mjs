@@ -1068,7 +1068,7 @@ export function bible_glyph_chapter_num15() {
           "$hands_giving",
           "a",
           "blue",
-          "cord",
+          "$wrestling+thread",
           "on",
           "each",
           "tassel.",
