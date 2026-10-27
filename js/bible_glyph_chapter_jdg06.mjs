@@ -1269,7 +1269,7 @@ export function bible_glyph_chapter_jdg06() {
           "the",
           "threshing",
           "floor.",
-          "If",
+          "$traffic_light",
           "there",
           "is",
           "dew",
