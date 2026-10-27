@@ -140,7 +140,7 @@ export function bible_glyph_chapter_pro01() {
           "to",
           "your",
           "$father",
-          "instruction,",
+          "$teacher+exclamation,",
           "and",
           "do",
           "not",
