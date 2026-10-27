@@ -761,7 +761,7 @@ export function bible_glyph_chapter_lev16() {
           "$hand",
           "on",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "the",
           "$sprout",
