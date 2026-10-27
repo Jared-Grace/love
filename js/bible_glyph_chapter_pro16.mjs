@@ -153,7 +153,7 @@ export function bible_glyph_chapter_pro16() {
           "a",
           "$man_beard",
           "$road",
-          "please",
+          "$smiling_face_with_smiling_eyes+doing",
           "the",
           "$i_am,",
           "He",
