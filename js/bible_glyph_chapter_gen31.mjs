@@ -369,7 +369,7 @@ export function bible_glyph_chapter_gen31() {
           "Is",
           "there",
           "any",
-          "portion",
+          "$pizza",
           "or",
           "$inheritance",
           "$repeat",
