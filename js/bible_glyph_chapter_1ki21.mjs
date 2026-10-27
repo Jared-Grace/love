@@ -310,7 +310,7 @@ export function bible_glyph_chapter_1ki21() {
           "elders",
           "and",
           "nobles",
-          "who",
+          "$back+flashlight",
           "$person+house",
           "with",
           "$proper_name$Naboth",
