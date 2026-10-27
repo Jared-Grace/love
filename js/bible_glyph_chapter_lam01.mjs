@@ -33,7 +33,7 @@ export function bible_glyph_chapter_lam01() {
           "has",
           "become",
           "a",
-          "widow.",
+          "$widow.",
           "The",
           "princess",
           "of",
