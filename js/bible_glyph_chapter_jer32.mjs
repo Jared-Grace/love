@@ -640,7 +640,7 @@ export function bible_glyph_chapter_jer32() {
           "$eyes",
           "are",
           "on",
-          "all",
+          "$all",
           "the",
           "$road",
           "of",
