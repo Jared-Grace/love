@@ -200,7 +200,7 @@ export function bible_glyph_chapter_1ki01() {
           "way?",
           "Adonijah",
           "was",
-          "also",
+          "$plus",
           "very",
           "$thumbs_up",
           "to",
