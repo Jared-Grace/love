@@ -207,7 +207,7 @@ export function bible_glyph_chapter_gen24() {
           "promised",
           "me",
           "on",
-          "oath,",
+          "$raised_back_of_hand+doing,",
           "$speech,",
           "To",
           "your",
