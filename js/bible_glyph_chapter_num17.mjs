@@ -133,7 +133,7 @@ export function bible_glyph_chapter_num17() {
           "of",
           "the",
           "constant",
-          "grumbling",
+          "$pouting_face+voice",
           "of",
           "the",
           "$son",
