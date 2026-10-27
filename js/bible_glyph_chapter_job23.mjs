@@ -79,7 +79,7 @@ export function bible_glyph_chapter_job23() {
           "I",
           "would",
           "$lightbulb",
-          "how",
+          "$left_speech_bubble",
           "He",
           "would",
           "answer",
