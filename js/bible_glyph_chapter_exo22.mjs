@@ -481,7 +481,7 @@ export function bible_glyph_chapter_exo22() {
           "it",
           "is",
           "injured",
-          "or",
+          "$shuffle",
           "$skull+doing",
           "while",
           "its",
