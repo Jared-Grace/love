@@ -938,7 +938,7 @@ export function bible_glyph_chapter_deu32() {
           "repay.",
           "In",
           "due",
-          "time",
+          "$clock",
           "their",
           "$foot",
           "will",
