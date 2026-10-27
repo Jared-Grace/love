@@ -1091,7 +1091,7 @@ export function bible_glyph_chapter_gen42() {
           "may",
           "$skull+doing",
           "my",
-          "two",
+          "$two",
           "$son",
           "if",
           "I",
