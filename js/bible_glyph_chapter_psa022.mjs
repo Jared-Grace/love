@@ -331,7 +331,7 @@ export function bible_glyph_chapter_psa022() {
           "me",
           "in",
           "the",
-          "dust",
+          "$dust",
           "of",
           "$skull.",
         ],
