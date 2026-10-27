@@ -870,7 +870,7 @@ export function bible_glyph_chapter_exo29() {
           "$sacrifice",
           "from",
           "their",
-          "peace",
+          "$peace+gift",
           "offerings",
           "to",
           "$i_am.",
