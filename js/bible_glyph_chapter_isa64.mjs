@@ -60,7 +60,7 @@ export function bible_glyph_chapter_isa64() {
           "the",
           "$map",
           "will",
-          "tremble",
+          "$vibration_mode",
           "at",
           "Your",
           "$face.",
