@@ -1677,7 +1677,7 @@ export function bible_glyph_chapter_1ki08() {
           "their",
           "$heart_organ",
           "and",
-          "soul",
+          "$person_other",
           "in",
           "the",
           "$earth",
