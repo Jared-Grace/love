@@ -55,7 +55,7 @@ export function bible_glyph_chapter_jdg02() {
           "I",
           "will",
           "$no_entry",
-          "break",
+          "$broken_chain+scroll+doing",
           "My",
           "$covenant",
           "with",
