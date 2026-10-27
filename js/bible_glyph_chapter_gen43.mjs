@@ -438,7 +438,7 @@ export function bible_glyph_chapter_gen43() {
           "As",
           "for",
           "me,",
-          "if",
+          "$back+flashlight",
           "I",
           "am",
           "bereaved,",
