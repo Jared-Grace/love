@@ -93,7 +93,7 @@ export function bible_glyph_chapter_2ch20() {
           "proclaimed",
           "a",
           "$eating+locked",
-          "throughout",
+          "$pointing_up",
           "$hands_raised+proper_name.",
         ],
       },
