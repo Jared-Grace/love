@@ -30,7 +30,7 @@ export function bible_glyph_chapter_psa046() {
           "our",
           "$hut+place",
           "and",
-          "strength,",
+          "$mechanical_arm,",
           "an",
           "ever-present",
           "help",
