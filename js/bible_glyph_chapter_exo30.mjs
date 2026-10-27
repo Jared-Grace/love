@@ -484,7 +484,7 @@ export function bible_glyph_chapter_exo30() {
           "$hammer+doing",
           "a",
           "$bronze",
-          "basin",
+          "$bucket+soap",
           "with",
           "a",
           "$bronze",
