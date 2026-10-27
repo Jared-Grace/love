@@ -519,7 +519,7 @@ export function bible_glyph_chapter_lev25() {
           "your",
           "$heart_on_fire,",
           "$pointing",
-          "I",
+          "$me",
           "am",
           "$i_am",
           "your",
