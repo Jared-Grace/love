@@ -806,7 +806,7 @@ export function bible_glyph_chapter_exo38() {
           "for",
           "the",
           "posts,",
-          "overlaid",
+          "$top+brown_square+doing",
           "their",
           "tops",
           "and",
