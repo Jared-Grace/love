@@ -845,7 +845,7 @@ export function bible_glyph_chapter_deu01() {
           "made",
           "our",
           "$heart_organ",
-          "melt,",
+          "$melting_face,",
           "$speech:",
           "The",
           "$family",
