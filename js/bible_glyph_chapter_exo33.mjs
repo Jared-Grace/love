@@ -687,7 +687,7 @@ export function bible_glyph_chapter_exo33() {
           "$no_entry",
           "$eye",
           "My",
-          "face,",
+          "$face,",
           "for",
           "$no_entry",
           "$person",
