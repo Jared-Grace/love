@@ -812,7 +812,7 @@ export function bible_glyph_chapter_2ki06() {
           "there",
           "was",
           "a",
-          "great",
+          "$top",
           "$famine",
           "in",
           "$guard+proper_name.",
