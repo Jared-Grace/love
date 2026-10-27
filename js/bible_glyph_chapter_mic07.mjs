@@ -501,7 +501,7 @@ export function bible_glyph_chapter_mic07() {
           "$eye",
           "and",
           "be",
-          "ashamed,",
+          "$flushed,",
           "deprived",
           "of",
           "all",
