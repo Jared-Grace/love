@@ -866,7 +866,7 @@ export function bible_glyph_chapter_deu29() {
           "upon",
           "it",
           "$all",
-          "curse",
+          "$balloon+speech",
           "written",
           "in",
           "this",
