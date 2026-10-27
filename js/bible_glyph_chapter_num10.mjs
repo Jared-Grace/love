@@ -202,7 +202,7 @@ export function bible_glyph_chapter_num10() {
           "you",
           "$footprints",
           "into",
-          "battle",
+          "$crossed_swords",
           "in",
           "your",
           "$earth",
