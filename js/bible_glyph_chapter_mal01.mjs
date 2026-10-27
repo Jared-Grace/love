@@ -382,7 +382,7 @@ export function bible_glyph_chapter_mal01() {
           "will",
           "accept",
           "$no_entry",
-          "offering",
+          "$grain_offering",
           "from",
           "your",
           "$hand.",
