@@ -226,7 +226,7 @@ export function bible_glyph_chapter_deu15() {
           "your",
           "$heart_organ",
           "$no_entry",
-          "shut",
+          "$fist+locked+doing",
           "your",
           "$hand",
           "from",
