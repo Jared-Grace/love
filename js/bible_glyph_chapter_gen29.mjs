@@ -908,7 +908,7 @@ export function bible_glyph_chapter_gen29() {
           "attached",
           "to",
           "me,",
-          "because",
+          "$pointing",
           "I",
           "have",
           "borne",
