@@ -216,7 +216,7 @@ export function bible_glyph_chapter_zec05() {
         verse_number: 7,
         words: [
           "And",
-          "behold,",
+          "$exclamation,",
           "the",
           "cover",
           "of",
