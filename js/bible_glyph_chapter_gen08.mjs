@@ -313,7 +313,7 @@ export function bible_glyph_chapter_gen08() {
           "$olive",
           "$leaf.",
           "So",
-          "Noah",
+          "$seat+proper_name",
           "$lightbulb",
           "that",
           "the",
