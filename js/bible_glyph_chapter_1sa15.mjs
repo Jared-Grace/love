@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_1sa15() {
           "Then",
           "$ear+heart_on_fire",
           "$speech,",
-          "Bring",
+          "$walking+toward",
           "me",
           "$proper_name$Agag",
           "$king",
