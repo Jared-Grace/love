@@ -146,7 +146,7 @@ export function bible_glyph_chapter_pro08() {
           "words",
           "of",
           "my",
-          "mouth",
+          "$face_with_open_mouth",
           "are",
           "$ruler+thing;",
           "none",
