@@ -640,7 +640,7 @@ export function bible_glyph_chapter_num24() {
           "your",
           "nest",
           "is",
-          "set",
+          "$palm_down",
           "in",
           "a",
           "cliff.",
