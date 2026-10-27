@@ -184,7 +184,7 @@ export function bible_glyph_chapter_sng08() {
           "as",
           "unrelenting",
           "as",
-          "Sheol.",
+          "$pointing_down+skull.",
           "Its",
           "sparks",
           "are",
