@@ -77,7 +77,7 @@ export function bible_glyph_chapter_lev04() {
         words: [
           "$footprints",
           "$bull",
-          "to",
+          "$toward",
           "the",
           "entrance",
           "$tent",
