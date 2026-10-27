@@ -377,7 +377,7 @@ export function bible_glyph_chapter_isa06() {
           "$earth",
           "is",
           "utterly",
-          "forsaken.",
+          "$derelict_house+describing.",
         ],
       },
       {
