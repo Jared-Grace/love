@@ -268,7 +268,7 @@ export function bible_glyph_chapter_nam03() {
           "every",
           "$sun_behind_small_cloud.",
           "They",
-          "cast",
+          "$throwing+lots+doing",
           "lots",
           "for",
           "her",
