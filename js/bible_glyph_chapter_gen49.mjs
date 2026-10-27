@@ -482,7 +482,7 @@ export function bible_glyph_chapter_gen49() {
           "will",
           "be",
           "rich.",
-          "He",
+          "$pointing_back",
           "shall",
           "$hands_giving",
           "$king",
