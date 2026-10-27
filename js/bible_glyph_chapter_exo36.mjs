@@ -742,7 +742,7 @@ export function bible_glyph_chapter_exo36() {
           "the",
           "two",
           "back",
-          "corners",
+          "$triangular_ruler+round_pushpin",
           "of",
           "the",
           "tabernacle.",
