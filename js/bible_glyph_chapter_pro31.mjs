@@ -580,7 +580,7 @@ export function bible_glyph_chapter_pro31() {
           "$you",
           "$walking+pointing_up",
           "them",
-          "all.",
+          "$all.",
         ],
       },
       {
