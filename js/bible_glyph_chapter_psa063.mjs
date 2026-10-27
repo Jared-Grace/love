@@ -249,7 +249,7 @@ export function bible_glyph_chapter_psa063() {
           "$beaming+doing",
           "in",
           "$heart_on_fire;",
-          "all",
+          "$all",
           "who",
           "swear",
           "by",
