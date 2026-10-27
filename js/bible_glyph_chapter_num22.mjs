@@ -569,7 +569,7 @@ export function bible_glyph_chapter_num22() {
           "$hammer+doing",
           "anything",
           "$pinching_hand",
-          "or",
+          "$shuffle",
           "great",
           "beyond",
           "the",
