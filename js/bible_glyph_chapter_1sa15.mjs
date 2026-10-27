@@ -455,7 +455,7 @@ export function bible_glyph_chapter_1sa15() {
           "Then",
           "what",
           "is",
-          "this",
+          "$flashlight",
           "$voice",
           "of",
           "$sheep",
