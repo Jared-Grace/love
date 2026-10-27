@@ -223,7 +223,7 @@ export function bible_glyph_chapter_1ki21() {
           "$shuffle",
           "$traffic_light",
           "you",
-          "wish,",
+          "$smiling_face_with_hearts+doer,",
           "I",
           "will",
           "$hands_giving",
