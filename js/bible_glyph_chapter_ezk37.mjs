@@ -78,7 +78,7 @@ export function bible_glyph_chapter_ezk37() {
           "they",
           "were",
           "very",
-          "dry.",
+          "$fallen_leaf+describing.",
         ],
       },
       {
