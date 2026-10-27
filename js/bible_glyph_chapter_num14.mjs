@@ -1142,7 +1142,7 @@ export function bible_glyph_chapter_num14() {
           "out",
           "a",
           "bad",
-          "report",
+          "$left_speech_bubble+thumbs_down",
           "about",
           "the",
           "$earth,",
