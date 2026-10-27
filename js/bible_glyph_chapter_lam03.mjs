@@ -980,7 +980,7 @@ export function bible_glyph_chapter_lam03() {
           "my",
           "$voice:",
           "$no_entry",
-          "ignore",
+          "$eyes+locked+doing",
           "my",
           "cry",
           "for",
