@@ -559,7 +559,7 @@ export function bible_glyph_chapter_isa58() {
           "your",
           "$father",
           "$hand+foot.",
-          "For",
+          "$pointing",
           "the",
           "$mouth",
           "of",
