@@ -74,7 +74,7 @@ export function bible_glyph_chapter_num18() {
           "that",
           "they",
           "may",
-          "join",
+          "$paperclip+doing",
           "you",
           "and",
           "assist",
