@@ -134,7 +134,7 @@ export function bible_glyph_chapter_lev09() {
           "$alarm_clock,",
           "and",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "drew",
           "$magnet+doing",
