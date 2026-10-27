@@ -660,7 +660,7 @@ export function bible_glyph_chapter_deu12() {
           "$heart_on_fire",
           "$arrow_both_ways+doing",
           "your",
-          "territory",
+          "$passport_control",
           "as",
           "He",
           "has",
