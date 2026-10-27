@@ -415,7 +415,7 @@ export function bible_glyph_chapter_lev15() {
           "the",
           "$dove,",
           "$footprints",
-          "before",
+          "$face",
           "$i_am",
           "at",
           "the",
