@@ -1011,7 +1011,7 @@ export function bible_glyph_chapter_gen24() {
           "will",
           "$no_entry",
           "$eating",
-          "until",
+          "$finish",
           "I",
           "have",
           "$mouth",
