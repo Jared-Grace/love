@@ -71,7 +71,7 @@ export function bible_glyph_chapter_pro02() {
         words: [
           "$traffic_light",
           "you",
-          "seek",
+          "$magnifying_glass",
           "it",
           "like",
           "silver",
