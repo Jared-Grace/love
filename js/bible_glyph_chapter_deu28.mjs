@@ -731,7 +731,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "the",
           "$earth",
-          "beneath",
+          "$down_arrow",
           "you",
           "iron.",
         ],
