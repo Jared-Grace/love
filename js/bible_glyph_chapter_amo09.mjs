@@ -144,7 +144,7 @@ export function bible_glyph_chapter_amo09() {
       {
         verse_number: 4,
         words: [
-          "Though",
+          "$traffic_light",
           "they",
           "are",
           "$walking",
