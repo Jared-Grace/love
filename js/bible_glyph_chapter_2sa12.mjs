@@ -750,7 +750,7 @@ export function bible_glyph_chapter_2sa12() {
         words: [
           "David",
           "$speech,",
-          "While",
+          "$repeat",
           "the",
           "$child",
           "was",
