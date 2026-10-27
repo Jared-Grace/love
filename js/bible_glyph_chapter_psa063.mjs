@@ -47,7 +47,7 @@ export function bible_glyph_chapter_psa063() {
           "You,",
           "in",
           "a",
-          "dry",
+          "$sun+desert",
           "and",
           "weary",
           "$earth",
