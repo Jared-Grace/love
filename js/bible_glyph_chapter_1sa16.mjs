@@ -358,7 +358,7 @@ export function bible_glyph_chapter_1sa16() {
           "have?",
           "There",
           "is",
-          "still",
+          "$repeat",
           "the",
           "youngest,",
           "Jesse",
