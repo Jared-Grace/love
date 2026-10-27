@@ -561,7 +561,7 @@ export function bible_glyph_chapter_num11() {
           "$sparkle+doing",
           "yourselves",
           "for",
-          "tomorrow,",
+          "$sun+next_track,",
           "and",
           "you",
           "will",
