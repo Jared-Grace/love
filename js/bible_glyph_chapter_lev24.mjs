@@ -65,7 +65,7 @@ export function bible_glyph_chapter_lev24() {
           "$sunset",
           "$finish",
           "$morning",
-          "before",
+          "$face",
           "$i_am",
           "continually.",
           "This",
