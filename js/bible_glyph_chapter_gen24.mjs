@@ -1275,7 +1275,7 @@ export function bible_glyph_chapter_gen24() {
       {
         verse_number: 43,
         words: [
-          "Here",
+          "$exclamation",
           "I",
           "am,",
           "standing",
