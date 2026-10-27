@@ -76,7 +76,7 @@ export function bible_glyph_chapter_num15() {
           "$hammer+doing",
           "a",
           "pleasing",
-          "aroma",
+          "$nose",
           "to",
           "$i_am",
           "$tray_out",
