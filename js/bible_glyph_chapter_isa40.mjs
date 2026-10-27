@@ -741,7 +741,7 @@ export function bible_glyph_chapter_isa40() {
           "and",
           "$eye:",
           "$person+question",
-          "created",
+          "$milky_way+doing",
           "all",
           "these?",
           "He",
