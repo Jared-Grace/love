@@ -788,7 +788,7 @@ export function bible_glyph_chapter_deu07() {
           "them",
           "into",
           "great",
-          "confusion",
+          "$megaphone+crowd+thing",
           "until",
           "they",
           "are",
