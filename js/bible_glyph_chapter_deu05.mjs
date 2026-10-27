@@ -873,7 +873,7 @@ export function bible_glyph_chapter_deu05() {
           "a",
           "$heart_organ",
           "to",
-          "fear",
+          "$fear+doing",
           "Me",
           "and",
           "keep",
