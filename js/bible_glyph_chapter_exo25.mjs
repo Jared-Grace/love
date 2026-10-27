@@ -632,7 +632,7 @@ export function bible_glyph_chapter_exo25() {
           "are",
           "at",
           "its",
-          "four",
+          "$four",
           "$foot.",
         ],
       },
