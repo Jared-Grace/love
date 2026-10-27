@@ -36,7 +36,7 @@ export function bible_glyph_chapter_mal03() {
           "will",
           "$lightning+manner",
           "$footprints",
-          "to",
+          "$toward",
           "His",
           "temple",
           "-",
