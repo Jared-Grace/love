@@ -707,7 +707,7 @@ export function bible_glyph_chapter_2ki10() {
         words: [
           "$watch",
           "therefore",
-          "summon",
+          "$waving_hand",
           "to",
           "me",
           "all",
