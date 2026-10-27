@@ -391,7 +391,7 @@ export function bible_glyph_chapter_deu29() {
           "$flashlight",
           "$covenant",
           "and",
-          "this",
+          "$flashlight",
           "oath",
           "$no_entry",
           "$one+person",
