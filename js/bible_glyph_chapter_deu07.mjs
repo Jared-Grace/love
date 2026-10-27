@@ -643,7 +643,7 @@ export function bible_glyph_chapter_deu07() {
         words: [
           "the",
           "great",
-          "trials",
+          "$test_tube+thing",
           "that",
           "your",
           "$eyes",
