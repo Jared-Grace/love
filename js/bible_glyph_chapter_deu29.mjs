@@ -500,7 +500,7 @@ export function bible_glyph_chapter_deu29() {
           "among",
           "you",
           "$sun",
-          "whose",
+          "$back+flashlight",
           "$heart_organ",
           "turns",
           "away",
