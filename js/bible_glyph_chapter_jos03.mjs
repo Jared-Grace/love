@@ -530,7 +530,7 @@ export function bible_glyph_chapter_jos03() {
           "$sea",
           "of",
           "the",
-          "Arabah,",
+          "$desert+proper_name,",
           "the",
           "Salt",
           "$sea,",
