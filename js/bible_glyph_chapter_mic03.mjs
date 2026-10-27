@@ -121,7 +121,7 @@ export function bible_glyph_chapter_mic03() {
           "will",
           "hide",
           "His",
-          "face",
+          "$face",
           "from",
           "them",
           "because",
