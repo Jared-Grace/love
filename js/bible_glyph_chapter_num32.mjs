@@ -620,7 +620,7 @@ export function bible_glyph_chapter_num32() {
         words: [
           "and",
           "if",
-          "every",
+          "$all",
           "one",
           "of",
           "your",
