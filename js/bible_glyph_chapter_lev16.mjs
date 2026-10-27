@@ -702,7 +702,7 @@ export function bible_glyph_chapter_lev16() {
           "$blood",
           "with",
           "his",
-          "finger",
+          "$index_pointing_up",
           "seven",
           "times,",
           "to",
