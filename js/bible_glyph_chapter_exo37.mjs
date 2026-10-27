@@ -249,7 +249,7 @@ export function bible_glyph_chapter_exo37() {
           "also",
           "$hammer+doing",
           "the",
-          "table",
+          "$hand_sending+thing",
           "of",
           "acacia",
           "$tree,",
