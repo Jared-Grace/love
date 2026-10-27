@@ -812,7 +812,7 @@ export function bible_glyph_chapter_exo08() {
           "and",
           "$speech,",
           "$walking,",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "your",
           "$heart_on_fire",
