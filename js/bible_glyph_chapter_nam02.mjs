@@ -29,7 +29,7 @@ export function bible_glyph_chapter_nam02() {
           "$road!",
           "Brace",
           "yourselves!",
-          "Summon",
+          "$superhero",
           "all",
           "your",
           "$lightning!",
