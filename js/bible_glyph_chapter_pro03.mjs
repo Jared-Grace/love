@@ -219,7 +219,7 @@ export function bible_glyph_chapter_pro03() {
           "$son,",
           "do",
           "$no_entry",
-          "reject",
+          "$gesturing_no+throwing+doing",
           "the",
           "$teacher+exclamation",
           "of",
