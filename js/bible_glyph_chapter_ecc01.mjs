@@ -289,7 +289,7 @@ export function bible_glyph_chapter_ecc01() {
           "explore",
           "by",
           "$wisdom",
-          "all",
+          "$all",
           "that",
           "is",
           "$hammer+doing",
