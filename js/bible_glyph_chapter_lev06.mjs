@@ -547,7 +547,7 @@ export function bible_glyph_chapter_lev06() {
           "it",
           "$morning",
           "and",
-          "half",
+          "$divide+thing",
           "in",
           "the",
           "evening.",
