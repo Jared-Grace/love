@@ -744,7 +744,7 @@ export function bible_glyph_chapter_lam01() {
           "been",
           "most",
           "rebellious.",
-          "Outside",
+          "$sun_behind_small_cloud",
           "the",
           "$sword",
           "bereaves;",
