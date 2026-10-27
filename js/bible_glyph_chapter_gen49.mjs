@@ -692,7 +692,7 @@ export function bible_glyph_chapter_gen49() {
           "$flashlight+flashlight",
           "are",
           "the",
-          "twelve",
+          "$two",
           "tribes",
           "of",
           "$wrestling+heart_on_fire,",
