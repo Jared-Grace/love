@@ -55,7 +55,7 @@ export function bible_glyph_chapter_gen27() {
       {
         verse_number: 2,
         words: [
-          '"Look,"',
+          '"$exclamation',
           "he",
           "$speech,",
           '"I',
