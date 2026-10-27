@@ -142,7 +142,7 @@ export function bible_glyph_chapter_lev16() {
           "tie",
           "a",
           "linen",
-          "sash",
+          "$ribbon+garment",
           "around",
           "him",
           "and",
