@@ -127,7 +127,7 @@ export function bible_glyph_chapter_exo19() {
           "you",
           "on",
           "eagles",
-          "wings",
+          "$wing",
           "and",
           "$footprints",
           "you",
