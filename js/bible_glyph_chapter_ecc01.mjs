@@ -169,7 +169,7 @@ export function bible_glyph_chapter_ecc01() {
           "$eyes",
           "is",
           "$no_entry",
-          "satisfied",
+          "$eating+top",
           "with",
           "$eye,",
           "$no_entry",
