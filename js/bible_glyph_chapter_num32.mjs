@@ -934,7 +934,7 @@ export function bible_glyph_chapter_num32() {
           "$i_am",
           "has",
           "$mouth",
-          "to",
+          "$toward",
           "$kneeling,",
           "so",
           "we",
