@@ -74,7 +74,7 @@ export function bible_glyph_chapter_exo01() {
           "of",
           "$hand+foot",
           "numbered",
-          "seventy",
+          "$seven+zero",
           "in",
           "all,",
           "including",
