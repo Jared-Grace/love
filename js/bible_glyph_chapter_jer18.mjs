@@ -138,7 +138,7 @@ export function bible_glyph_chapter_jer18() {
           "$house",
           "of",
           "$wrestling+heart_on_fire?",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
           "Just",
