@@ -365,7 +365,7 @@ export function bible_glyph_chapter_mal02() {
           "and",
           "in",
           "$city+peace.",
-          "For",
+          "$pointing",
           "$hands_raised+proper_name",
           "has",
           "profaned",
