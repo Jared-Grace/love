@@ -343,7 +343,7 @@ export function bible_glyph_chapter_job03() {
           "child,",
           "like",
           "an",
-          "infant",
+          "$baby_bottle",
           "who",
           "$no_entry",
           "$eye",
