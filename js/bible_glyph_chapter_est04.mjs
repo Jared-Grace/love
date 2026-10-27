@@ -234,7 +234,7 @@ export function bible_glyph_chapter_est04() {
           "pay",
           "into",
           "the",
-          "treasury",
+          "$money_bag+locked",
           "of",
           "the",
           "$king",
