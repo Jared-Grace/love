@@ -926,7 +926,7 @@ export function bible_glyph_chapter_2ki10() {
           "one",
           "of",
           "the",
-          "men",
+          "$man_beard",
           "$me",
           "am",
           "delivering",
