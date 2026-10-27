@@ -395,7 +395,7 @@ export function bible_glyph_chapter_exo39() {
           "filigree",
           "settings",
           "and",
-          "two",
+          "$two",
           "$gold",
           "$ring,",
           "and",
