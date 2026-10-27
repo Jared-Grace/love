@@ -276,7 +276,7 @@ export function bible_glyph_chapter_1sa25() {
           "a",
           "$thumbs_up",
           "$sun.",
-          "Please",
+          "$pleading",
           "$hands_giving",
           "whatever",
           "your",
