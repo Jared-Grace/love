@@ -24,7 +24,7 @@ export function bible_glyph_chapter_ecc03() {
           "$clock",
           "for",
           "every",
-          "purpose",
+          "$smiling_face_with_hearts",
           "under",
           "$sky:",
         ],
