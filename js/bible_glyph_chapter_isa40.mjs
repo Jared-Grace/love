@@ -203,7 +203,7 @@ export function bible_glyph_chapter_isa40() {
           "$wind+away+doing",
           "on",
           "them;",
-          "indeed,",
+          "$right_arrow,",
           "the",
           "$family",
           "are",
