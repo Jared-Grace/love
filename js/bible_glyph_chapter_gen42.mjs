@@ -452,7 +452,7 @@ export function bible_glyph_chapter_gen42() {
           "as",
           "$house+proper_name",
           "$sprout,",
-          "you",
+          "$you",
           "are",
           "spies.",
         ],
