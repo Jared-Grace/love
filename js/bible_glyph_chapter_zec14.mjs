@@ -281,7 +281,7 @@ export function bible_glyph_chapter_zec14() {
           "in",
           "$harvest+sun",
           "and",
-          "winter",
+          "$snowman",
           "alike.",
         ],
       },
