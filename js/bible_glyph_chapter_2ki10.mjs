@@ -387,7 +387,7 @@ export function bible_glyph_chapter_2ki10() {
           "the",
           "$i_am",
           "$mouth",
-          "against",
+          "$pointing_up",
           "the",
           "$house",
           "of",
