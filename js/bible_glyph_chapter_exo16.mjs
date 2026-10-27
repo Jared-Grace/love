@@ -450,7 +450,7 @@ export function bible_glyph_chapter_exo16() {
           "dew",
           "around",
           "the",
-          "camp.",
+          "$camp.",
         ],
       },
       {
