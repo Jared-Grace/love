@@ -320,7 +320,7 @@ export function bible_glyph_chapter_zec03() {
           "On",
           "that",
           "$sun,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am",
           "of",
