@@ -488,7 +488,7 @@ export function bible_glyph_chapter_est04() {
           "for",
           "such",
           "a",
-          "time",
+          "$clock",
           "as",
           "this",
           "you",
