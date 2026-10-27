@@ -919,7 +919,7 @@ export function bible_glyph_chapter_jer29() {
           "$hands_giving",
           "him",
           "in",
-          "stocks",
+          "$chains+wood",
           "and",
           "neck",
           "irons.",
