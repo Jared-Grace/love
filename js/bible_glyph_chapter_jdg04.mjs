@@ -485,7 +485,7 @@ export function bible_glyph_chapter_jdg04() {
         words: [
           "Then",
           "Barak",
-          "pursued",
+          "$running+toward",
           "the",
           "chariots",
           "and",
