@@ -782,7 +782,7 @@ export function bible_glyph_chapter_1sa17() {
           "this",
           "uncircumcised",
           "$proper_name$Philistine,",
-          "that",
+          "$pointing",
           "he",
           "should",
           "defy",
