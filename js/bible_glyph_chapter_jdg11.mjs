@@ -1235,7 +1235,7 @@ export function bible_glyph_chapter_jdg11() {
           "one",
           "$speech",
           "for",
-          "two",
+          "$two",
           "months.",
           "Let",
           "me",
