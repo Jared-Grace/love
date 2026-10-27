@@ -1277,7 +1277,7 @@ export function bible_glyph_chapter_1ki08() {
           "or",
           "$microbe+wheat",
           "or",
-          "locusts",
+          "$locusts",
           "or",
           "grasshoppers,",
           "when",
