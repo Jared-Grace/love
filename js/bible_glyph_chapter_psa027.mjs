@@ -222,7 +222,7 @@ export function bible_glyph_chapter_psa027() {
           "$voice",
           "when",
           "I",
-          "call;",
+          "$waving_hand;",
           "be",
           "merciful",
           "and",
