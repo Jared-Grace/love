@@ -19,7 +19,7 @@ export function bible_glyph_chapter_isa09() {
           "be",
           "$no_entry",
           "more",
-          "gloom",
+          "$fog+darkness",
           "for",
           "those",
           "in",
