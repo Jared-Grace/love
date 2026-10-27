@@ -162,7 +162,7 @@ export function bible_glyph_chapter_1ki22() {
           "the",
           "$megaphone,",
           "about",
-          "four",
+          "$four",
           "hundred",
           "$man_beard,",
           "and",
