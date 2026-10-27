@@ -1370,7 +1370,7 @@ export function bible_glyph_chapter_gen41() {
           "$wheat+wind",
           "like",
           "the",
-          "sand",
+          "$sea+brown_square",
           "of",
           "the",
           "$sea,",
