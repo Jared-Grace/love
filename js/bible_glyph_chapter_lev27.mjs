@@ -147,7 +147,7 @@ export function bible_glyph_chapter_lev27() {
           "age,",
           "then",
           "your",
-          "valuation",
+          "$receipt",
           "shall",
           "be",
           "$five",
