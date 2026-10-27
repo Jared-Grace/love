@@ -240,7 +240,7 @@ export function bible_glyph_chapter_hab01() {
           "of",
           "them",
           "$footprints",
-          "bent",
+          "$right_arrow+plus",
           "on",
           "$boxing_glove;",
           "their",
