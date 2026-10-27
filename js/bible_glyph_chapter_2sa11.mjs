@@ -161,7 +161,7 @@ export function bible_glyph_chapter_2sa11() {
           "herself",
           "from",
           "her",
-          "uncleanness.",
+          "$soap+no_entry+thing.",
           "Then",
           "she",
           "$turn_back",
