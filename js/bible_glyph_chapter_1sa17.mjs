@@ -1218,7 +1218,7 @@ export function bible_glyph_chapter_1sa17() {
           "David",
           "$hand_receiving",
           "his",
-          "staff",
+          "$wood+leaf",
           "in",
           "his",
           "$hand,",
