@@ -769,7 +769,7 @@ export function bible_glyph_chapter_exo36() {
           "he",
           "$hammer+doing",
           "$two",
-          "corners",
+          "$triangular_ruler+round_pushpin",
           "in",
           "this",
           "way.",
