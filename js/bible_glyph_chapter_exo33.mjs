@@ -642,7 +642,7 @@ export function bible_glyph_chapter_exo33() {
           "My",
           "goodness",
           "to",
-          "pass",
+          "$bridge",
           "before",
           "you,",
           "and",
