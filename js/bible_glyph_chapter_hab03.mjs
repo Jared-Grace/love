@@ -452,7 +452,7 @@ export function bible_glyph_chapter_hab03() {
           "the",
           "olive",
           "crop",
-          "fails",
+          "$lying_face+doing",
           "and",
           "the",
           "fields",
