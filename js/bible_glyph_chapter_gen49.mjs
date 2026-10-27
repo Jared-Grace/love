@@ -94,7 +94,7 @@ export function bible_glyph_chapter_gen49() {
           "will",
           "$no_entry",
           "excel,",
-          "because",
+          "$pointing",
           "you",
           "went",
           "up",
