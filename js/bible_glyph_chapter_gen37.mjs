@@ -522,7 +522,7 @@ export function bible_glyph_chapter_gen37() {
           "the",
           "distance,",
           "and",
-          "before",
+          "$clock+back",
           "he",
           "arrived,",
           "they",
