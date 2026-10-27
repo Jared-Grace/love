@@ -702,7 +702,7 @@ export function bible_glyph_chapter_lev15() {
       {
         verse_number: 24,
         words: [
-          "If",
+          "$traffic_light",
           "a",
           "$man_beard",
           "lies",
