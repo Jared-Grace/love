@@ -162,7 +162,7 @@ export function bible_glyph_chapter_jer07() {
           "$no_entry",
           "longer",
           "shed",
-          "innocent",
+          "$smiling_face_with_halo+describing",
           "$blood",
           "in",
           "this",
