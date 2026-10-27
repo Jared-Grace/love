@@ -447,7 +447,7 @@ export function bible_glyph_chapter_ezr03() {
           "sang",
           "responsively",
           "with",
-          "praise",
+          "$clapping_hands",
           "and",
           "$hands_raised",
           "to",
