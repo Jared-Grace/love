@@ -237,7 +237,7 @@ export function app_code_rectangles_edges_colored_draw({
       );
       return;
     }
-    app_code_grid_edge_line_draw(
+    app_code_grid_edge_line_draw({
       grid,
       color,
       index,
@@ -245,7 +245,7 @@ export function app_code_rectangles_edges_colored_draw({
       span,
       vertical,
       layer,
-    );
+    });
   }
   for (let edge of range(columns + 1)) {
     line_draw(edge, across, columns, true, corner_x);

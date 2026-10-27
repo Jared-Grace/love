@@ -141,15 +141,15 @@ export function app_code_meetings_hours_draw(
         "2",
       );
     } else {
-      app_code_grid_edge_line_draw(
+      app_code_grid_edge_line_draw({
         grid,
         color,
-        column_line,
+        index: column_line,
         last,
-        rows,
-        true,
+        span: rows,
+        vertical: true,
         layer,
-      );
+      });
     }
   }
   for (let row of range(rows)) {
