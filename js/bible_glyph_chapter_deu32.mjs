@@ -160,7 +160,7 @@ export function bible_glyph_chapter_deu32() {
           "and",
           "Creator?",
           "Has",
-          "He",
+          "$pointing_back",
           "$hammer+doing",
           "you",
           "and",
