@@ -472,7 +472,7 @@ export function bible_glyph_chapter_job19() {
           "He",
           "will",
           "stand",
-          "upon",
+          "$pointing_up",
           "the",
           "earth.",
         ],
