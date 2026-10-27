@@ -966,7 +966,7 @@ export function bible_glyph_chapter_1sa25() {
           "because",
           "my",
           "$crown",
-          "fights",
+          "$crossed_swords+doing",
           "the",
           "$crossed_swords",
           "of",
