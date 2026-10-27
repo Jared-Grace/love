@@ -271,7 +271,7 @@ export function bible_glyph_chapter_exo24() {
           "in",
           "accordance",
           "with",
-          "all",
+          "$all",
           "these",
           "$speech.",
         ],
