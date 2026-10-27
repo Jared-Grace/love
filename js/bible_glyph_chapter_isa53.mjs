@@ -297,7 +297,7 @@ export function bible_glyph_chapter_isa53() {
           "in",
           "His",
           "$skull,",
-          "although",
+          "$pointing_up",
           "He",
           "had",
           "$hammer+doing",
