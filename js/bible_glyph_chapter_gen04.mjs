@@ -716,7 +716,7 @@ export function bible_glyph_chapter_gen04() {
           "has",
           "granted",
           "me",
-          "another",
+          "$plus+one",
           "$seed",
           "in",
           "place",
