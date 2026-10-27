@@ -1443,7 +1443,7 @@ export function bible_glyph_chapter_lev13() {
           "$face+top+hair+no_entry+thing",
           "is",
           "reddish-white",
-          "like",
+          "$eyes+thing",
           "a",
           "disease",
           "of",
