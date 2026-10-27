@@ -1023,7 +1023,7 @@ export function bible_glyph_chapter_deu12() {
           "their",
           "$moai,",
           "$speech,",
-          "How",
+          "$question+likeness",
           "do",
           "these",
           "$map",
