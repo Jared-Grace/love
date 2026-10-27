@@ -523,7 +523,7 @@ export function bible_glyph_chapter_num11() {
           "on",
           "you",
           "and",
-          "put",
+          "$palm_down",
           "it",
           "on",
           "them.",
