@@ -813,7 +813,7 @@ export function bible_glyph_chapter_gen47() {
           "sow",
           "in",
           "the",
-          "land.",
+          "$brown_square.",
         ],
       },
       {
