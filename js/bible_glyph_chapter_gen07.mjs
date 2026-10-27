@@ -457,7 +457,7 @@ export function bible_glyph_chapter_gen07() {
           "and",
           "the",
           "$water",
-          "rose",
+          "$multiply+doing",
           "and",
           "lifted",
           "the",
