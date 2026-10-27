@@ -715,7 +715,7 @@ export function bible_glyph_chapter_1sa16() {
           "in",
           "my",
           "service,",
-          "for",
+          "$pointing",
           "he",
           "has",
           "found",
