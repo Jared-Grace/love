@@ -1569,7 +1569,7 @@ export function bible_glyph_chapter_1sa17() {
           "$proper_name$Philistine",
           "with",
           "a",
-          "sling",
+          "$door+thread",
           "and",
           "a",
           "$stone;",
