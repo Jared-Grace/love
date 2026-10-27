@@ -965,7 +965,7 @@ export function bible_glyph_chapter_1ch29() {
           "were",
           "$four+zero",
           "years.",
-          "Seven",
+          "$seven",
           "years",
           "he",
           "$castle+doing",
