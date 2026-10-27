@@ -441,7 +441,7 @@ export function bible_glyph_chapter_jdg11() {
           "$plus+doing",
           "$hand_sending",
           "$angel",
-          "to",
+          "$toward",
           "the",
           "$king",
           "of",
