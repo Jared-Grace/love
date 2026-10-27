@@ -293,7 +293,7 @@ export function bible_glyph_chapter_hos11() {
           "roar",
           "like",
           "a",
-          "lion.",
+          "$lion.",
           "When",
           "He",
           "roars,",
