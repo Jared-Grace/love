@@ -794,7 +794,7 @@ export function bible_glyph_chapter_num22() {
           "and",
           "pressed",
           "herself",
-          "against",
+          "$toward",
           "the",
           "wall,",
           "crushing",
