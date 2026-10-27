@@ -206,7 +206,7 @@ export function bible_glyph_chapter_isa06() {
           "he",
           "touched",
           "my",
-          "mouth",
+          "$face_with_open_mouth",
           "and",
           "$speech:",
           "Now",
