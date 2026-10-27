@@ -506,7 +506,7 @@ export function bible_glyph_chapter_gen41() {
           "After",
           "them,",
           "$seven",
-          "other",
+          "$plus+one",
           "cows",
           "came",
           "up,",
