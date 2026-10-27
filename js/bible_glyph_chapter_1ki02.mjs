@@ -553,7 +553,7 @@ export function bible_glyph_chapter_1ki02() {
           "have",
           "just",
           "one",
-          "request",
+          "$question+thing",
           "of",
           "you.",
           "Do",
