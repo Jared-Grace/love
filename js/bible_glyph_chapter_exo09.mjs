@@ -638,7 +638,7 @@ export function bible_glyph_chapter_exo09() {
           "$speech",
           "of",
           "$i_am",
-          "left",
+          "$derelict_house+doing",
           "their",
           "$kneeling",
           "and",
