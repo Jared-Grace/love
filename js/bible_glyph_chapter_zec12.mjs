@@ -254,7 +254,7 @@ export function bible_glyph_chapter_zec12() {
           "The",
           "$i_am",
           "will",
-          "save",
+          "$rescue",
           "the",
           "tents",
           "of",
