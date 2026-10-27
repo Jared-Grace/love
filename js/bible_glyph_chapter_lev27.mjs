@@ -511,7 +511,7 @@ export function bible_glyph_chapter_lev27() {
           "$silver",
           "for",
           "every",
-          "homer",
+          "$brown_square+water",
           "of",
           "$barley",
           "$seed.",
