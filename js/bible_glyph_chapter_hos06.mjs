@@ -184,7 +184,7 @@ export function bible_glyph_chapter_hos06() {
       {
         verse_number: 6,
         words: [
-          "For",
+          "$pointing",
           "I",
           "desire",
           "$gift,",
