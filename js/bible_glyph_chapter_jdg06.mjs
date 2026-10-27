@@ -1139,7 +1139,7 @@ export function bible_glyph_chapter_jdg06() {
           "he",
           "had",
           "torn",
-          "down",
+          "$wall+down_arrow+doing",
           "the",
           "$altar",
           "of",
