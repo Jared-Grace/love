@@ -558,7 +558,7 @@ export function bible_glyph_chapter_zec09() {
           "they",
           "will",
           "sparkle",
-          "over",
+          "$pointing_up",
           "His",
           "land.",
         ],
