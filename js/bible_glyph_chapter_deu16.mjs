@@ -330,7 +330,7 @@ export function bible_glyph_chapter_deu16() {
           "first",
           "put",
           "the",
-          "sickle",
+          "$wheat+kitchen_knife",
           "to",
           "the",
           "standing",
