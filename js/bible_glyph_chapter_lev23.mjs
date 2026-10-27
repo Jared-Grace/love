@@ -236,7 +236,7 @@ export function bible_glyph_chapter_lev23() {
           "into",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "am",
           "$hands_giving",
