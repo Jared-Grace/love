@@ -1218,7 +1218,7 @@ export function bible_glyph_chapter_lev13() {
           "on",
           "the",
           "skin",
-          "after",
+          "$next_track",
           "his",
           "cleansing,",
         ],
