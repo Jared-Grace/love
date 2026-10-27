@@ -123,7 +123,7 @@ export function bible_glyph_chapter_deu06() {
           "with",
           "$milk",
           "and",
-          "honey,",
+          "$honey,",
           "just",
           "as",
           "the",
