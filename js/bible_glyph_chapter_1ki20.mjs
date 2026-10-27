@@ -1384,7 +1384,7 @@ export function bible_glyph_chapter_1ki20() {
           "$speech,",
           "Strike",
           "me,",
-          "please.",
+          "$pleading.",
           "So",
           "the",
           "$man_beard",
