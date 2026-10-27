@@ -433,7 +433,7 @@ export function bible_glyph_chapter_exo26() {
           "and",
           "a",
           "$divide",
-          "wide.",
+          "$arrow_both_ways.",
         ],
       },
       {
