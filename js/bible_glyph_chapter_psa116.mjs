@@ -372,7 +372,7 @@ export function bible_glyph_chapter_psa116() {
           "$i_am,",
           "in",
           "your",
-          "midst,",
+          "$radio_button,",
           "O",
           "Jerusalem.",
           "Hallelujah!",
