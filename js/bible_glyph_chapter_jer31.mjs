@@ -678,7 +678,7 @@ export function bible_glyph_chapter_jer31() {
           "him,",
           "I",
           "still",
-          "remember",
+          "$reminder_ribbon",
           "him.",
           "Therefore",
           "My",
