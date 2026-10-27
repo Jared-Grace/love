@@ -328,7 +328,7 @@ export function bible_glyph_chapter_job42() {
           "$hands_giving",
           "him",
           "a",
-          "piece",
+          "$coin+scales",
           "of",
           "silver",
           "and",
