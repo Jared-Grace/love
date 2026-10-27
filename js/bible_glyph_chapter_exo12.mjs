@@ -730,7 +730,7 @@ export function bible_glyph_chapter_exo12() {
           "doorframe.",
           "$no_entry",
           "of",
-          "you",
+          "$you",
           "shall",
           "$walking+tray_out",
           "out",
