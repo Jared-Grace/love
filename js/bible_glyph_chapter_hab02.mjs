@@ -187,7 +187,7 @@ export function bible_glyph_chapter_hab02() {
           "$no_entry",
           "all",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "$lifting",
           "up",
           "a",
