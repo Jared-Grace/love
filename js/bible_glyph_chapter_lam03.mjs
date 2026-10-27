@@ -753,7 +753,7 @@ export function bible_glyph_chapter_lam03() {
           "$you",
           "have",
           "$no_entry",
-          "forgiven.",
+          "$sponge.",
         ],
       },
       {
