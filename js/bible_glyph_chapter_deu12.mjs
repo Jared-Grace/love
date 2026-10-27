@@ -733,7 +733,7 @@ export function bible_glyph_chapter_deu12() {
           "within",
           "your",
           "$gate$s",
-          "whenever",
+          "$all",
           "you",
           "want.",
         ],
