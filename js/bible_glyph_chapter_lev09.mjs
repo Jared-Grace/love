@@ -329,7 +329,7 @@ export function bible_glyph_chapter_lev09() {
           "piece,",
           "$pointing_down",
           "the",
-          "head,",
+          "$person_gesturing_ok,",
           "and",
           "he",
           "burned",
