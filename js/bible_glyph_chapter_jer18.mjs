@@ -295,7 +295,7 @@ export function bible_glyph_chapter_jer18() {
           "the",
           "$i_am",
           "$speech:",
-          "Behold,",
+          "$exclamation,",
           "I",
           "am",
           "planning",
