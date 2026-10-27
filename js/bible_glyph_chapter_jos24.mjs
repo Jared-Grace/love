@@ -859,7 +859,7 @@ export function bible_glyph_chapter_jos24() {
         words: [
           "$i_am+rescue",
           "$writing_hand",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "in",
           "the",
