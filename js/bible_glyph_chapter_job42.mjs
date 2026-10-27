@@ -119,7 +119,7 @@ export function bible_glyph_chapter_job42() {
           "I",
           "repent",
           "in",
-          "dust",
+          "$dust",
           "and",
           "ashes.",
         ],
