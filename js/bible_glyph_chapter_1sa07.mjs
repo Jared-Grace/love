@@ -448,7 +448,7 @@ export function bible_glyph_chapter_1sa07() {
           "$footprints",
           "into",
           "the",
-          "territory",
+          "$passport_control",
           "of",
           "$wrestling+heart_on_fire.",
           "And",
