@@ -391,7 +391,7 @@ export function bible_glyph_chapter_ezk37() {
           "$family,",
           "I",
           "will",
-          "open",
+          "$unlocked",
           "your",
           "graves",
           "and",
