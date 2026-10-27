@@ -692,7 +692,7 @@ export function bible_glyph_chapter_num19() {
           "if",
           "a",
           "$man_beard",
-          "who",
+          "$back+flashlight",
           "is",
           "unclean",
           "does",
