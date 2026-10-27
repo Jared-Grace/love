@@ -584,7 +584,7 @@ export function bible_glyph_chapter_pro08() {
           "whole",
           "$globe",
           "and",
-          "delighting",
+          "$smiling_face_with_hearts+eyes+thing",
           "in",
           "the",
           "$son",
