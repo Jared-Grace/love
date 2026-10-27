@@ -116,7 +116,7 @@ export function bible_glyph_chapter_lev06() {
           "he",
           "has",
           "sworn",
-          "falsely.",
+          "$lying_face.",
           "He",
           "must",
           "make",
