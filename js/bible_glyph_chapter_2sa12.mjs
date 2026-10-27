@@ -902,7 +902,7 @@ export function bible_glyph_chapter_2sa12() {
           "$multiply+proper_name",
           "and",
           "have",
-          "captured",
+          "$net+doing",
           "the",
           "$water",
           "supply",
