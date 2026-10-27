@@ -79,7 +79,7 @@ export function bible_glyph_chapter_lev04() {
           "$bull",
           "$toward",
           "the",
-          "entrance",
+          "$door",
           "$tent",
           "of",
           "Meeting",
