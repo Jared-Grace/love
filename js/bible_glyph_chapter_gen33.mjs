@@ -295,7 +295,7 @@ export function bible_glyph_chapter_gen33() {
           "$heart_on_fire",
           "has",
           "been",
-          "gracious",
+          "$heart_orange+doing",
           "to",
           "me",
           "and",
