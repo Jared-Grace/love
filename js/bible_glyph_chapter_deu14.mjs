@@ -500,7 +500,7 @@ export function bible_glyph_chapter_deu14() {
           "$oil+new_button,",
           "and",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "your",
           "herds",
