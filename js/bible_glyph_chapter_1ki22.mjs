@@ -1119,7 +1119,7 @@ export function bible_glyph_chapter_1ki22() {
           "of",
           "the",
           "battle,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "badly",
