@@ -1202,7 +1202,7 @@ export function bible_glyph_chapter_jer31() {
           "in",
           "order",
           "the",
-          "moon",
+          "$moon",
           "and",
           "stars",
           "for",
