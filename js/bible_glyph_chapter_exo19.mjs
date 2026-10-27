@@ -238,7 +238,7 @@ export function bible_glyph_chapter_exo19() {
           "the",
           "$family",
           "answered",
-          "together,",
+          "$linked_paperclips+manner,",
           "Everything",
           "the",
           "$i_am",
