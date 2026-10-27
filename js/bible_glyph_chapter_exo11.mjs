@@ -23,7 +23,7 @@ export function bible_glyph_chapter_exo11() {
           "$footprints",
           "one",
           "$repeat",
-          "plague",
+          "$face_with_head_bandage",
           "upon",
           "$house+proper_name",
           "and",
