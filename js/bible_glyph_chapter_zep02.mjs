@@ -485,7 +485,7 @@ export function bible_glyph_chapter_zep02() {
           "$city",
           "that",
           "dwells",
-          "securely,",
+          "$anchor+thing,",
           "that",
           "$speech",
           "to",
