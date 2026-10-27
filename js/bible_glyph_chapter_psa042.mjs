@@ -71,7 +71,7 @@ export function bible_glyph_chapter_psa042() {
         verse_number: 3,
         words: [
           "My",
-          "tears",
+          "$loudly_crying+water",
           "have",
           "been",
           "my",
