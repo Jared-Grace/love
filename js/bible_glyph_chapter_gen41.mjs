@@ -1408,7 +1408,7 @@ export function bible_glyph_chapter_gen41() {
           "$i_am+plus",
           "by",
           "$proper_name$Asenath,",
-          "daughter",
+          "$girl+family",
           "of",
           "Potiphera,",
           "$priest",
