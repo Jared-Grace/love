@@ -338,7 +338,7 @@ export function bible_glyph_chapter_hab03() {
           "head",
           "to",
           "$brick+round_pushpin+thing.",
-          "Selah.",
+          "$pause_button.",
         ],
       },
       {
