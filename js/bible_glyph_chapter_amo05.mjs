@@ -706,7 +706,7 @@ export function bible_glyph_chapter_amo05() {
           "like",
           "an",
           "ever-flowing",
-          "stream.",
+          "$national_park.",
         ],
       },
       {
