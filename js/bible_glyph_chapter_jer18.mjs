@@ -141,7 +141,7 @@ export function bible_glyph_chapter_jer18() {
           "$microphone",
           "the",
           "$i_am.",
-          "Just",
+          "$exclamation",
           "as",
           "clay",
           "is",
