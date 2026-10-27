@@ -945,7 +945,7 @@ export function bible_glyph_chapter_jdg16() {
           "our",
           "$earth",
           "and",
-          "multiplied",
+          "$multiply+doing",
           "our",
           "dead.",
         ],
