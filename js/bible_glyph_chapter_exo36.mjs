@@ -521,7 +521,7 @@ export function bible_glyph_chapter_exo36() {
           "of",
           "the",
           "corresponding",
-          "curtain",
+          "$thread+tent",
           "in",
           "the",
           "second",
