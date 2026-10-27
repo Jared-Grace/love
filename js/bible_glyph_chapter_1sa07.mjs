@@ -517,7 +517,7 @@ export function bible_glyph_chapter_1sa07() {
           "$ear+heart_on_fire",
           "$scales",
           "$wrestling+heart_on_fire",
-          "all",
+          "$all",
           "the",
           "$sun",
           "of",
