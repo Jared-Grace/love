@@ -953,7 +953,7 @@ export function bible_glyph_chapter_exo28() {
           "and",
           "a",
           "pomegranate,",
-          "alternating",
+          "$around",
           "around",
           "the",
           "lower",
