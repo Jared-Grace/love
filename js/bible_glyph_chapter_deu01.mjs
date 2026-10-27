@@ -348,7 +348,7 @@ export function bible_glyph_chapter_deu01() {
         verse_number: 12,
         words: [
           "But",
-          "how",
+          "$question+likeness",
           "can",
           "I",
           "$lifting",
