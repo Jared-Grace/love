@@ -428,7 +428,7 @@ export function bible_glyph_chapter_isa55() {
           "$i_am,",
           "an",
           "$hourglass",
-          "sign,",
+          "$placard,",
           "$no_entry",
           "to",
           "be",
