@@ -609,7 +609,7 @@ export function bible_glyph_chapter_deu29() {
           "that",
           "$man_beard,",
           "and",
-          "every",
+          "$all",
           "curse",
           "written",
           "in",
