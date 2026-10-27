@@ -184,7 +184,7 @@ export function bible_glyph_chapter_exo35() {
         verse_number: 8,
         words: [
           "olive",
-          "oil",
+          "$lotion_bottle",
           "for",
           "the",
           "light,",
