@@ -552,7 +552,7 @@ export function bible_glyph_chapter_gen26() {
           "$pick+magnifying_glass+doing",
           "in",
           "the",
-          "valley",
+          "$national_park",
           "and",
           "found",
           "there",
