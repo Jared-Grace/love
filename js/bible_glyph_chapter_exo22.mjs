@@ -218,7 +218,7 @@ export function bible_glyph_chapter_exo22() {
           "$man_beard",
           "$hands_giving",
           "$silver",
-          "or",
+          "$shuffle",
           "goods",
           "to",
           "his",
