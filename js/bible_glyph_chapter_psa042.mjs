@@ -203,7 +203,7 @@ export function bible_glyph_chapter_psa042() {
         words: [
           "$sea+down_arrow",
           "calls",
-          "to",
+          "$toward",
           "$sea+down_arrow",
           "in",
           "the",
