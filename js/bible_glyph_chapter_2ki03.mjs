@@ -571,7 +571,7 @@ export function bible_glyph_chapter_2ki03() {
           "$rain+water_wave,",
           "but",
           "the",
-          "valley",
+          "$national_park",
           "will",
           "be",
           "filled",
