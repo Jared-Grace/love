@@ -333,7 +333,7 @@ export function bible_glyph_chapter_gen49() {
         words: [
           "$proper_name$Zebulun",
           "shall",
-          "dwell",
+          "$tent+doing",
           "by",
           "the",
           "shore",
