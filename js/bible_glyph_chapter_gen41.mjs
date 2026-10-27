@@ -1168,7 +1168,7 @@ export function bible_glyph_chapter_gen41() {
           "and",
           "placed",
           "a",
-          "gold",
+          "$gold",
           "$gold+link",
           "around",
           "his",
