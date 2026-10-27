@@ -350,7 +350,7 @@ export function bible_glyph_chapter_2ch20() {
           "and",
           "did",
           "$no_entry",
-          "destroy",
+          "$bomb",
           "them.",
         ],
       },
