@@ -601,7 +601,7 @@ export function bible_glyph_chapter_deu09() {
           "You",
           "had",
           "turned",
-          "aside",
+          "$away+doing",
           "quickly",
           "$tray_out",
           "the",
