@@ -946,7 +946,7 @@ export function bible_glyph_chapter_1ch29() {
           "of",
           "$proper_name$Jesse",
           "$castle+doing",
-          "over",
+          "$pointing_up",
           "all",
           "$wrestling+heart_on_fire.",
         ],
