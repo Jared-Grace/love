@@ -945,7 +945,7 @@ export function bible_glyph_chapter_gen41() {
           "Let",
           "them",
           "collect",
-          "all",
+          "$all",
           "the",
           "excess",
           "food",
