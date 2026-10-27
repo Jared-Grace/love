@@ -387,7 +387,7 @@ export function bible_glyph_chapter_ezk47() {
       {
         verse_number: 12,
         words: [
-          "Along",
+          "$pointing_up",
           "both",
           "banks",
           "of",
