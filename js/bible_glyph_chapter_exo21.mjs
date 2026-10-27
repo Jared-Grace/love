@@ -524,7 +524,7 @@ export function bible_glyph_chapter_exo21() {
           "shall",
           "go",
           "unpunished.",
-          "Nevertheless,",
+          "$one+check,",
           "he",
           "must",
           "$hands_giving",
