@@ -761,7 +761,7 @@ export function bible_glyph_chapter_jos24() {
           "against",
           "yourselves",
           "that",
-          "you",
+          "$you",
           "have",
           "chosen",
           "the",
