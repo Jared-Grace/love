@@ -1923,7 +1923,7 @@ export function bible_glyph_chapter_deu28() {
           "$thumbs_down",
           "and",
           "chronic",
-          "sicknesses.",
+          "$thermometer_face+thing.",
         ],
       },
       {
