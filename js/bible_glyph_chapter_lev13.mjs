@@ -227,7 +227,7 @@ export function bible_glyph_chapter_lev13() {
           "will",
           "$eye",
           "him",
-          "again",
+          "$second_place",
           "on",
           "the",
           "seventh",
