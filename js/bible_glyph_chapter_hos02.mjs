@@ -200,7 +200,7 @@ export function bible_glyph_chapter_hos02() {
         words: [
           "She",
           "will",
-          "pursue",
+          "$running+toward",
           "her",
           "$heart_red+doing",
           "but",
