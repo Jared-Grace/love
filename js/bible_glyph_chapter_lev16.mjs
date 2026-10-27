@@ -83,7 +83,7 @@ export function bible_glyph_chapter_lev16() {
           "$eye",
           "in",
           "the",
-          "cloud",
+          "$cloud",
           "above",
           "the",
           "mercy",
