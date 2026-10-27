@@ -568,7 +568,7 @@ export function bible_glyph_chapter_jos02() {
           "$speech",
           "to",
           "her,",
-          "We",
+          "$me",
           "will",
           "not",
           "be",
