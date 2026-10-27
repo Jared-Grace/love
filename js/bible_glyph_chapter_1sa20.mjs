@@ -1212,7 +1212,7 @@ export function bible_glyph_chapter_1sa20() {
         words: [
           "In",
           "the",
-          "morning",
+          "$morning",
           "$i_am+hands_giving",
           "went",
           "out",
