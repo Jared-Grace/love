@@ -403,7 +403,7 @@ export function bible_glyph_chapter_mic06() {
           "but",
           "$no_entry",
           "be",
-          "satisfied,",
+          "$eating+top,",
           "and",
           "your",
           "hunger",
