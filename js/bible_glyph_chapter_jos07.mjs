@@ -539,7 +539,7 @@ export function bible_glyph_chapter_jos07() {
           "$face",
           "your",
           "enemies",
-          "until",
+          "$finish",
           "you",
           "remove",
           "them.",
