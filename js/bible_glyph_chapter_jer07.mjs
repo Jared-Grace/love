@@ -541,7 +541,7 @@ export function bible_glyph_chapter_jer07() {
           "of",
           "$sky.",
           "They",
-          "pour",
+          "$pouring_liquid+wine",
           "out",
           "drink",
           "offerings",
