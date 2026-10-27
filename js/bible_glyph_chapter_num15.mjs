@@ -1067,7 +1067,7 @@ export function bible_glyph_chapter_num15() {
           "$garment,",
           "$hands_giving",
           "a",
-          "blue",
+          "$blue_circle",
           "$wrestling+thread",
           "on",
           "each",
