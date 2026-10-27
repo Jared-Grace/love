@@ -578,7 +578,7 @@ export function bible_glyph_chapter_jdg07() {
           "$speech,",
           "$person+pointing_up",
           "up,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "has",
