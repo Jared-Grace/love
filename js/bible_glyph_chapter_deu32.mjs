@@ -1047,7 +1047,7 @@ export function bible_glyph_chapter_deu32() {
         words: [
           "$eye",
           "$watch",
-          "that",
+          "$pointing",
           "I,",
           "I",
           "am",
