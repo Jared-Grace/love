@@ -100,7 +100,7 @@ export function bible_glyph_chapter_deu15() {
           "$poor",
           "among",
           "you,",
-          "however,",
+          "$end_arrow+zero,",
           "because",
           "the",
           "$i_am",
