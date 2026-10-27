@@ -1443,7 +1443,7 @@ export function bible_glyph_chapter_deu04() {
           "and",
           "$scroll,",
           "which",
-          "I",
+          "$me",
           "am",
           "giving",
           "you",
