@@ -34,7 +34,7 @@ export function bible_glyph_chapter_lev27() {
           "makes",
           "a",
           "special",
-          "vow",
+          "$saluting_face",
           "involving",
           "the",
           "value",
