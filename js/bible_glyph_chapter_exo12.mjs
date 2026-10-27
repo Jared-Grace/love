@@ -346,7 +346,7 @@ export function bible_glyph_chapter_exo12() {
           "$fist",
           "down",
           "every",
-          "firstborn",
+          "$first_place+baby",
           "male,",
           "both",
           "$person",
