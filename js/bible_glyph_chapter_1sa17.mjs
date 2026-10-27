@@ -571,7 +571,7 @@ export function bible_glyph_chapter_1sa17() {
           "camp",
           "as",
           "the",
-          "army",
+          "$raised_fist",
           "was",
           "marching",
           "out",
