@@ -417,7 +417,7 @@ export function bible_glyph_chapter_zec14() {
           "rot",
           "while",
           "$pointing_back",
-          "stand",
+          "$person+round_pushpin",
           "on",
           "their",
           "feet,",
