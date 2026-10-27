@@ -535,7 +535,7 @@ export function bible_glyph_chapter_1sa01() {
           "your",
           "maidservant",
           "$magnifying_glass+exclamation",
-          "favor",
+          "$heart_orange",
           "with",
           "your",
           "$eyes,",
