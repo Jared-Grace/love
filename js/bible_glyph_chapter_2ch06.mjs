@@ -1218,7 +1218,7 @@ export function bible_glyph_chapter_2ch06() {
           "Your",
           "$name_tag",
           "and",
-          "fear",
+          "$fear+doing",
           "You,",
           "as",
           "do",
