@@ -751,7 +751,7 @@ export function bible_glyph_chapter_gen11() {
           "$pregnant_woman+no_entry+describing;",
           "she",
           "had",
-          "no",
+          "$dotted_line_face",
           "children.",
         ],
       },
