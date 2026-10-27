@@ -501,7 +501,7 @@ export function bible_glyph_chapter_2ki22() {
           "$priest,",
           "$proper_name$Ahikam,",
           "$proper_name$Achbor,",
-          "Shaphan",
+          "$badger",
           "and",
           "$proper_name$Asaiah",
           "$walking",
