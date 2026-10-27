@@ -244,7 +244,7 @@ export function bible_glyph_chapter_2ki01() {
           "up",
           "from",
           "the",
-          "bed",
+          "$bed",
           "on",
           "which",
           "you",
