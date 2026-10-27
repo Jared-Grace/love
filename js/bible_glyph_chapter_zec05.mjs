@@ -87,7 +87,7 @@ export function bible_glyph_chapter_zec05() {
           "of",
           "it",
           "every",
-          "thief",
+          "$ninja+doing",
           "will",
           "be",
           "removed,",
