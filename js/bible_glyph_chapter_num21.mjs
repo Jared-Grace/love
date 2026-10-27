@@ -832,7 +832,7 @@ export function bible_glyph_chapter_num21() {
       {
         verse_number: 29,
         words: [
-          "Woe",
+          "$weary_face",
           "to",
           "you,",
           "O",
