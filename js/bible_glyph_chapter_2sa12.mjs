@@ -63,7 +63,7 @@ export function bible_glyph_chapter_2sa12() {
         words: [
           "but",
           "the",
-          "poor",
+          "$money_bag+no_entry+person",
           "man",
           "had",
           "nothing",
