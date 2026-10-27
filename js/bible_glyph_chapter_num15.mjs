@@ -510,7 +510,7 @@ export function bible_glyph_chapter_num15() {
           "$earth,",
           "you",
           "shall",
-          "lift",
+          "$up_arrow",
           "up",
           "an",
           "offering",
