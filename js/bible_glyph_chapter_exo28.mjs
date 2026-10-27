@@ -280,7 +280,7 @@ export function bible_glyph_chapter_exo28() {
       {
         verse_number: 10,
         words: [
-          "six",
+          "$six",
           "of",
           "their",
           "$name_tag",
