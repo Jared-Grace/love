@@ -517,7 +517,7 @@ export function bible_glyph_chapter_num25() {
           "the",
           "$sun",
           "the",
-          "plague",
+          "$fist+microbe+thing",
           "came",
           "because",
           "of",
