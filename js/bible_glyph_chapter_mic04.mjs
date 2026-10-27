@@ -93,7 +93,7 @@ export function bible_glyph_chapter_mic04() {
           "in",
           "His",
           "paths.",
-          "For",
+          "$pointing",
           "the",
           "$scroll",
           "will",
