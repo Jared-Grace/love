@@ -1042,7 +1042,7 @@ export function bible_glyph_chapter_lev23() {
           "offering",
           "to",
           "$i_am.",
-          "It",
+          "$pointing_back",
           "is",
           "a",
           "solemn",
