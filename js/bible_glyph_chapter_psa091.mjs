@@ -142,7 +142,7 @@ export function bible_glyph_chapter_psa091() {
           "that",
           "destroys",
           "at",
-          "noon.",
+          "$sun+top.",
         ],
       },
       {
