@@ -228,7 +228,7 @@ export function bible_glyph_chapter_exo38() {
           "courtyard.",
           "The",
           "south",
-          "side",
+          "$straight_ruler+round_pushpin",
           "of",
           "the",
           "courtyard",
