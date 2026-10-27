@@ -424,7 +424,7 @@ export function bible_glyph_chapter_1sa02() {
           "whatever",
           "the",
           "meat",
-          "fork",
+          "$fork_and_knife",
           "brought",
           "up.",
           "This",
