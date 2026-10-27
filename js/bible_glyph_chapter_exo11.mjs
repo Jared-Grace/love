@@ -57,7 +57,7 @@ export function bible_glyph_chapter_exo11() {
         verse_number: 2,
         words: [
           "$mouth",
-          "now",
+          "$pleading",
           "to",
           "the",
           "$family,",
