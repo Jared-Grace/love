@@ -668,7 +668,7 @@ export function bible_glyph_chapter_deu31() {
           "by",
           "turning",
           "$toward",
-          "other",
+          "$plus+one",
           "$moai.",
         ],
       },
