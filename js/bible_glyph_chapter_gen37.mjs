@@ -892,7 +892,7 @@ export function bible_glyph_chapter_gen37() {
           "$hand_receiving",
           "$i_am+plus's",
           "$dress+thread,",
-          "slaughtered",
+          "$kitchen_knife+doing",
           "a",
           "young",
           "goat,",
