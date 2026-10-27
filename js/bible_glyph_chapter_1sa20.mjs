@@ -1246,7 +1246,7 @@ export function bible_glyph_chapter_1sa20() {
           "$magnifying_glass+exclamation",
           "the",
           "arrows",
-          "I",
+          "$me",
           "shoot.",
           "And",
           "as",
