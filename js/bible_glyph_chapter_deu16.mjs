@@ -681,7 +681,7 @@ export function bible_glyph_chapter_deu16() {
           "$no_entry",
           "$hand_receiving",
           "a",
-          "bribe,",
+          "$money_bag+hand_sending,",
           "for",
           "a",
           "bribe",
