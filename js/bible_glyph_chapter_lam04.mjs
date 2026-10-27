@@ -92,7 +92,7 @@ export function bible_glyph_chapter_lam04() {
           "$fist+angry_face+describing,",
           "$pointing",
           "an",
-          "ostrich",
+          "$bird+wilderness",
           "in",
           "the",
           "$wilderness.",
