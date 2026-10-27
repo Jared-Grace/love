@@ -1137,7 +1137,7 @@ export function bible_glyph_chapter_deu01() {
           "Encourage",
           "him,",
           "$pointing",
-          "he",
+          "$pointing_back",
           "will",
           "enable",
           "$wrestling+heart_on_fire",
