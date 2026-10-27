@@ -398,7 +398,7 @@ export function bible_glyph_chapter_deu15() {
       {
         verse_number: 12,
         words: [
-          "If",
+          "$pointing",
           "a",
           "$brother",
           "$proper_name$Hebrew,",
