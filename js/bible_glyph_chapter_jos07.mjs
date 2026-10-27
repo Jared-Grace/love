@@ -225,7 +225,7 @@ export function bible_glyph_chapter_jos07() {
           "of",
           "the",
           "$family",
-          "melted",
+          "$melting_face",
           "and",
           "became",
           "like",
