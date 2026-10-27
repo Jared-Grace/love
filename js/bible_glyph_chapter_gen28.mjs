@@ -646,7 +646,7 @@ export function bible_glyph_chapter_gen28() {
           "may",
           "$turn_back",
           "$peace",
-          "to",
+          "$toward",
           "the",
           "$house",
           "of",
