@@ -767,7 +767,7 @@ export function bible_glyph_chapter_exo08() {
           "And",
           "$i_am",
           "$hammer+doing",
-          "so.",
+          "$right_arrow.",
           "Thick",
           "swarms",
           "of",
