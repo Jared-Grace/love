@@ -951,7 +951,7 @@ export function bible_glyph_chapter_num21() {
           "came",
           "out",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "them",
           "with",
           "his",
