@@ -595,7 +595,7 @@ export function bible_glyph_chapter_mic07() {
           "His",
           "$nose+fire",
           "$clock+all,",
-          "because",
+          "$pointing",
           "He",
           "delights",
           "in",
