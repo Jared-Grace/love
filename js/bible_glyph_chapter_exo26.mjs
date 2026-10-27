@@ -224,7 +224,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 9,
         words: [
-          "Join",
+          "$link+doing",
           "five",
           "of",
           "the",
