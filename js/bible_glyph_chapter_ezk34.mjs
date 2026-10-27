@@ -961,7 +961,7 @@ export function bible_glyph_chapter_ezk34() {
           "$link",
           "$crowd+doing",
           "of",
-          "famine",
+          "$famine",
           "in",
           "the",
           "$earth",
