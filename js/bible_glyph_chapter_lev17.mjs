@@ -33,7 +33,7 @@ export function bible_glyph_chapter_lev17() {
           "$speech",
           "to",
           "them,",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$speech",
