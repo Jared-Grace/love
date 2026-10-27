@@ -179,7 +179,7 @@ export function bible_glyph_chapter_2sa12() {
           "$man_beard",
           "who",
           "$hammer+doing",
-          "this",
+          "$flashlight",
           "deserves",
           "to",
           "$skull.",
