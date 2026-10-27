@@ -310,7 +310,7 @@ export function bible_glyph_chapter_jer32() {
           "inheritance",
           "and",
           "redemption.",
-          "Buy",
+          "$coin+hand_receiving",
           "it",
           "for",
           "yourself.",
