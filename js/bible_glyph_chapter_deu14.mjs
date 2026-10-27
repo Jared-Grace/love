@@ -600,7 +600,7 @@ export function bible_glyph_chapter_deu14() {
           "$hand,",
           "and",
           "$walking",
-          "to",
+          "$toward",
           "the",
           "$place",
           "the",
