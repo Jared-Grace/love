@@ -428,7 +428,7 @@ export function bible_glyph_chapter_lev19() {
           "your",
           "$heart_organ.",
           "Directly",
-          "rebuke",
+          "$you+exclamation",
           "your",
           "neighbour,",
           "so",
