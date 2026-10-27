@@ -334,7 +334,7 @@ export function bible_glyph_chapter_mic04() {
           "do",
           "you",
           "$watch",
-          "cry",
+          "$public_address",
           "aloud?",
           "Is",
           "there",
