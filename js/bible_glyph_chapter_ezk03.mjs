@@ -886,7 +886,7 @@ export function bible_glyph_chapter_ezk03() {
           "you,",
           "I",
           "will",
-          "open",
+          "$unlocked",
           "your",
           "mouth,",
           "and",
