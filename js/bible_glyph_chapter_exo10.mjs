@@ -153,7 +153,7 @@ export function bible_glyph_chapter_exo10() {
           "$family",
           "$hand_sending,",
           "then",
-          "tomorrow",
+          "$sun+next_track",
           "I",
           "will",
           "$footprints",
