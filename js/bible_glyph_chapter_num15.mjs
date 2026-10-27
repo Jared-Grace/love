@@ -315,7 +315,7 @@ export function bible_glyph_chapter_num15() {
           "No",
           "matter",
           "how",
-          "many",
+          "$input_numbers",
           "you",
           "$hammer+doing,",
           "this",
