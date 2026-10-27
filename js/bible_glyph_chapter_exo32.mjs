@@ -832,7 +832,7 @@ export function bible_glyph_chapter_exo32() {
           "out",
           "came",
           "this",
-          "calf.",
+          "$calf.",
         ],
       },
       {
