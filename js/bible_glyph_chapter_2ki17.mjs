@@ -800,7 +800,7 @@ export function bible_glyph_chapter_2ki17() {
           "into",
           "$proper_name$Assyria,",
           "to",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
