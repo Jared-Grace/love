@@ -455,7 +455,7 @@ export function bible_glyph_chapter_2ch06() {
           "is",
           "no",
           "$heart_on_fire",
-          "like",
+          "$likeness",
           "You",
           "in",
           "the",
