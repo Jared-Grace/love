@@ -608,7 +608,7 @@ export function bible_glyph_chapter_jdg06() {
           "an",
           "$bucket+input_numbers",
           "of",
-          "flour",
+          "$wheat+flour",
           "and",
           "unleavened",
           "bread.",
