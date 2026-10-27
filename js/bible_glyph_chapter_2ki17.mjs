@@ -572,7 +572,7 @@ export function bible_glyph_chapter_2ki17() {
           "and",
           "they",
           "$kneeling+doing",
-          "Baal.",
+          "$key+proper_name.",
         ],
       },
       {
