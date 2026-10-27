@@ -488,7 +488,7 @@ export function bible_glyph_chapter_exo40() {
           "into",
           "the",
           "$tent+house,",
-          "put",
+          "$palm_down",
           "up",
           "the",
           "veil",
