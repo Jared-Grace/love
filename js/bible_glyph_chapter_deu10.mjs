@@ -328,7 +328,7 @@ export function bible_glyph_chapter_deu10() {
       {
         verse_number: 10,
         words: [
-          "I",
+          "$me",
           "stayed",
           "on",
           "the",
