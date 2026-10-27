@@ -406,7 +406,7 @@ export function bible_glyph_chapter_jos24() {
           "drove",
           "out",
           "the",
-          "two",
+          "$two",
           "$proper_name$Amorite",
           "$king",
           "before",
