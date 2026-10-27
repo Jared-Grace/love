@@ -66,7 +66,7 @@ export function bible_glyph_chapter_lev27() {
           "$receipt",
           "shall",
           "be",
-          "fifty",
+          "$five+zero",
           "shekels",
           "of",
           "$silver,",
