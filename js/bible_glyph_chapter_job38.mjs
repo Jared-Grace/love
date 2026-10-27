@@ -90,7 +90,7 @@ export function bible_glyph_chapter_job38() {
           "$palm_down",
           "its",
           "measurements?",
-          "Surely",
+          "$pointing",
           "you",
           "$lightbulb!",
           "Or",
