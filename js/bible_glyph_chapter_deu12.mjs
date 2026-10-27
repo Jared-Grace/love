@@ -735,7 +735,7 @@ export function bible_glyph_chapter_deu12() {
           "$gate$s",
           "$all",
           "you",
-          "want.",
+          "$heart_eyes+hand_receiving+thing.",
         ],
       },
       {
