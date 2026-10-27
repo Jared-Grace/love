@@ -240,7 +240,7 @@ export function bible_glyph_chapter_est01() {
         verse_number: 8,
         words: [
           "By",
-          "order",
+          "$brick+round_pushpin+doing",
           "of",
           "the",
           "$king",
