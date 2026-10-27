@@ -392,7 +392,7 @@ export function bible_glyph_chapter_num35() {
         verse_number: 14,
         words: [
           "Select",
-          "three",
+          "$three",
           "$city",
           "to",
           "$hands_giving",
