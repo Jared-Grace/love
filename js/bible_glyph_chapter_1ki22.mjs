@@ -1285,7 +1285,7 @@ export function bible_glyph_chapter_1ki22() {
           "$writing_hand",
           "in",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "$speech",
