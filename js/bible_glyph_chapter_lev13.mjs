@@ -1192,7 +1192,7 @@ export function bible_glyph_chapter_lev13() {
           "to",
           "pronounce",
           "him",
-          "clean.",
+          "$soap+doing.",
           "He",
           "must",
           "wash",
