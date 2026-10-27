@@ -22,7 +22,7 @@ export function bible_glyph_chapter_zep01() {
           "$i_am",
           "$back+flashlight",
           "$link",
-          "to",
+          "$toward",
           "$proper_name$Zephaniah",
           "$son",
           "of",
