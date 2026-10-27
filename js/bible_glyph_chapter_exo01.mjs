@@ -431,7 +431,7 @@ export function bible_glyph_chapter_exo01() {
           "and",
           "give",
           "birth",
-          "before",
+          "$clock+back",
           "a",
           "midwife",
           "$footprints.",
