@@ -266,7 +266,7 @@ export function bible_glyph_chapter_nam03() {
           "$person_gesturing_ok",
           "of",
           "every",
-          "street.",
+          "$sun_behind_small_cloud.",
           "They",
           "cast",
           "lots",
