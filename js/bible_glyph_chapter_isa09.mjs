@@ -293,7 +293,7 @@ export function bible_glyph_chapter_isa09() {
       {
         verse_number: 9,
         words: [
-          "All",
+          "$all",
           "the",
           "$family",
           "will",
