@@ -367,7 +367,7 @@ export function bible_glyph_chapter_jer29() {
           "future",
           "and",
           "a",
-          "hope.",
+          "$crossed_fingers.",
         ],
       },
       {
