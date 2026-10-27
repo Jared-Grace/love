@@ -13,7 +13,7 @@ export function bible_glyph_chapter_gen06() {
       {
         verse_number: 1,
         words: [
-          "Now",
+          "$link",
           "when",
           "$person",
           "began",
