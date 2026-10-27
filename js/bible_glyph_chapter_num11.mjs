@@ -1023,7 +1023,7 @@ export function bible_glyph_chapter_num11() {
           "in",
           "every",
           "direction",
-          "around",
+          "$around",
           "the",
           "$camp,",
           "about",
