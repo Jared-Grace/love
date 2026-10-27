@@ -355,7 +355,7 @@ export function bible_glyph_chapter_deu32() {
           "nourished",
           "him",
           "with",
-          "honey",
+          "$honey",
           "from",
           "the",
           "rock",
