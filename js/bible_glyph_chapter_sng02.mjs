@@ -179,7 +179,7 @@ export function bible_glyph_chapter_sng02() {
           "here",
           "he",
           "$footprints,",
-          "leaping",
+          "$leg+up_arrow+up_arrow+doing",
           "across",
           "the",
           "$mountain,",
