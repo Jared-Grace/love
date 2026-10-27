@@ -330,7 +330,7 @@ export function bible_glyph_chapter_psa091() {
           "Me,",
           "I",
           "will",
-          "answer",
+          "$speech+turn_back",
           "him;",
           "I",
           "will",
