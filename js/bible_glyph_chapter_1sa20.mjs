@@ -642,7 +642,7 @@ export function bible_glyph_chapter_1sa20() {
           "will",
           "be",
           "missed,",
-          "because",
+          "$pointing",
           "your",
           "seat",
           "will",
