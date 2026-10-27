@@ -624,7 +624,7 @@ export function bible_glyph_chapter_1ki22() {
           "Micaiah",
           "continued,",
           "$speech,",
-          "Therefore",
+          "$right_arrow",
           "$ear",
           "the",
           "$speech",
