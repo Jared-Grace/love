@@ -139,7 +139,7 @@ export function bible_glyph_chapter_psa042() {
           "Why",
           "are",
           "you",
-          "downcast,",
+          "$bowing+hole+doing,",
           "O",
           "my",
           "$person_other?",
