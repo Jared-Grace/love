@@ -92,7 +92,7 @@ export function bible_glyph_chapter_ezk37() {
           "of",
           "$person,",
           "can",
-          "these",
+          "$flashlight+flashlight",
           "$bone",
           "$sprout+doing?",
           "O",
