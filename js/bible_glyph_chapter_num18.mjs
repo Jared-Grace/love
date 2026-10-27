@@ -952,7 +952,7 @@ export function bible_glyph_chapter_num18() {
           "$ten+hands_giving",
           "$tray_out",
           "the",
-          "tithe.",
+          "$ten+hands_giving.",
         ],
       },
       {
