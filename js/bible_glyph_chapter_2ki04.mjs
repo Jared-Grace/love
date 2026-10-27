@@ -496,7 +496,7 @@ export function bible_glyph_chapter_2ki04() {
           "Elisha",
           "$speech,",
           "At",
-          "this",
+          "$flashlight",
           "$alarm_clock",
           "next",
           "year",
