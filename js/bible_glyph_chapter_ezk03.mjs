@@ -337,7 +337,7 @@ export function bible_glyph_chapter_ezk03() {
           "or",
           "refuse",
           "to",
-          "listen.",
+          "$ear+loudspeaker.",
         ],
       },
       {
