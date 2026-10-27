@@ -90,7 +90,7 @@ export function bible_glyph_chapter_lev26() {
           "statutes",
           "and",
           "carefully",
-          "keep",
+          "$guard",
           "My",
           "$scroll",
           "and",
