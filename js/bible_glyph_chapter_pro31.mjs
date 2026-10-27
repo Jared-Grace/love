@@ -426,7 +426,7 @@ export function bible_glyph_chapter_pro31() {
           "all",
           "$garment+doing",
           "in",
-          "scarlet.",
+          "$red_circle.",
         ],
       },
       {
