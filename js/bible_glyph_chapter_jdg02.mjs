@@ -301,7 +301,7 @@ export function bible_glyph_chapter_jdg02() {
           "country",
           "of",
           "$fruit,",
-          "north",
+          "$compass+up_arrow",
           "of",
           "$mountain",
           "$proper_name$Gaash.",
