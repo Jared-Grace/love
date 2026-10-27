@@ -854,7 +854,7 @@ export function bible_glyph_chapter_lev19() {
           "$lightbulb+ghost.",
           "Do",
           "$no_entry",
-          "seek",
+          "$magnifying_glass",
           "them",
           "out,",
           "or",
