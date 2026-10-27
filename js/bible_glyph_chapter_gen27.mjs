@@ -934,7 +934,7 @@ export function bible_glyph_chapter_gen27() {
           "$laughing+proper_name",
           "began",
           "to",
-          "tremble",
+          "$fear+vibration_mode+doing",
           "violently",
           "and",
           "$speech,",
