@@ -686,7 +686,7 @@ export function bible_glyph_chapter_deu15() {
           "the",
           "$i_am",
           "will",
-          "choose.",
+          "$check_box.",
         ],
       },
       {
