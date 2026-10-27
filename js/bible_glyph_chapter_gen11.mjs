@@ -679,7 +679,7 @@ export function bible_glyph_chapter_gen11() {
       {
         verse_number: 28,
         words: [
-          "During",
+          "$pointing_up",
           "the",
           "lifetime",
           "of",
