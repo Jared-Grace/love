@@ -645,7 +645,7 @@ export function bible_glyph_chapter_2ki03() {
           "ruin",
           "$all",
           "$thumbs_up",
-          "field",
+          "$field+pizza",
           "with",
           "$stone.",
         ],
