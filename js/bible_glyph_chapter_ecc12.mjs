@@ -245,7 +245,7 @@ export function bible_glyph_chapter_ecc12() {
           "$turn_back",
           "to",
           "$heart_on_fire",
-          "who",
+          "$back+flashlight",
           "$hands_giving",
           "it.",
         ],
