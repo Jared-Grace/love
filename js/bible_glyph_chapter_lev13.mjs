@@ -1910,7 +1910,7 @@ export function bible_glyph_chapter_lev13() {
           "it",
           "will",
           "be",
-          "clean.",
+          "$soap+doing.",
         ],
       },
       {
