@@ -689,7 +689,7 @@ export function bible_glyph_chapter_jos02() {
           "we",
           "will",
           "be",
-          "released",
+          "$smiling_face_with_halo+describing",
           "from",
           "the",
           "oath",
