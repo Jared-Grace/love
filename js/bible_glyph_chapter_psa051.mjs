@@ -428,7 +428,7 @@ export function bible_glyph_chapter_psa051() {
           "will",
           "be",
           "offered",
-          "on",
+          "$pointing_up",
           "Your",
           "$altar.",
         ],
