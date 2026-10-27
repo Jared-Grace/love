@@ -551,7 +551,7 @@ export function bible_glyph_chapter_lev10() {
           "$blood",
           "$no_entry",
           "$footprints",
-          "inside",
+          "$face+house",
           "the",
           "$sparkle+thing",
           "place,",
