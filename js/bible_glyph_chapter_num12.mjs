@@ -318,7 +318,7 @@ export function bible_glyph_chapter_num12() {
           "$back+flashlight",
           "$meat",
           "is",
-          "half",
+          "$divide",
           "$eating",
           "when",
           "he",
