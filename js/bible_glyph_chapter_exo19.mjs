@@ -429,7 +429,7 @@ export function bible_glyph_chapter_exo19() {
           "with",
           "arrows.",
           "Whether",
-          "beast",
+          "$paw_prints",
           "or",
           "$man_beard,",
           "he",
