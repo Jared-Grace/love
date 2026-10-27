@@ -678,7 +678,7 @@ export function bible_glyph_chapter_jdg07() {
           "horns",
           "from",
           "all",
-          "around",
+          "$around",
           "the",
           "camp",
           "and",
