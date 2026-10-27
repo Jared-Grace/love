@@ -99,7 +99,7 @@ export function bible_glyph_chapter_exo36() {
           "$hand_receiving",
           "from",
           "$fishing_pole+proper_name",
-          "all",
+          "$all",
           "the",
           "contributions",
           "that",
