@@ -37,7 +37,7 @@ export function bible_glyph_chapter_isa06() {
           "of",
           "His",
           "robe",
-          "filled",
+          "$battery",
           "the",
           "temple.",
         ],
