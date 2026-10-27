@@ -393,7 +393,7 @@ export function bible_glyph_chapter_num21() {
           "into",
           "$proper_name$Amorite",
           "territory.",
-          "Now",
+          "$pointing",
           "the",
           "$proper_name$Arnon",
           "is",
