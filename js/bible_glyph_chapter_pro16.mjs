@@ -218,7 +218,7 @@ export function bible_glyph_chapter_pro16() {
           "mouth",
           "must",
           "$no_entry",
-          "betray",
+          "$handshake+broken_chain+doing",
           "$scales+thing.",
         ],
       },
