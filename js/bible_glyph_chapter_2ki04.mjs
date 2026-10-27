@@ -518,7 +518,7 @@ export function bible_glyph_chapter_2ki04() {
           "of",
           "$heart_on_fire,",
           "$no_entry",
-          "lie",
+          "$speech+crossed_fingers+doing",
           "to",
           "your",
           "maidservant.",
