@@ -402,7 +402,7 @@ export function bible_glyph_chapter_isa55() {
           "Instead",
           "of",
           "the",
-          "thornbush,",
+          "$thorns+wood,",
           "the",
           "cypress",
           "will",
