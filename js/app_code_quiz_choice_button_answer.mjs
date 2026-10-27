@@ -14,7 +14,7 @@ export function app_code_quiz_choice_button_answer(
     let r = false;
     return r;
   }
-  let b = app_code_quiz_choice_button_answer_generic(
+  let b = app_code_quiz_choice_button_answer_generic({
     parent,
     text,
     right,
@@ -22,6 +22,6 @@ export function app_code_quiz_choice_button_answer(
     on_success,
     on_wrong,
     soft_take,
-  );
+  });
   return b;
 }

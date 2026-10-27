@@ -12,7 +12,7 @@ import { list_add } from "./list_add.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-export function app_code_quiz_choice_button_answer_generic(
+export function app_code_quiz_choice_button_answer_generic({
   parent,
   text,
   right,
@@ -20,8 +20,8 @@ export function app_code_quiz_choice_button_answer_generic(
   on_success,
   on_wrong,
   soft_take,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   ("an answer the learner may pick, and what pressing it does: the right one turns green and the quiz goes on, a wrong one turns red and is spent, and once the right one is pressed none of them does anything. state is shared by every choice of one question, and says whether it has been answered");
   ("Three quizzes were each writing this same pressing out in full, and a fourth was about to; written once, a choice behaves the same wherever it is offered.");
   ("A wrong choice made of words is also dimmed, which says spent without taking the red away; one drawn as a run of code is left at full strength, because the red is on the code block there, and half of it over the page behind comes out as a wash rather than as red.");

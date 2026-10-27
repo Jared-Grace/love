@@ -614,15 +614,15 @@ export function app_code_program_step_through_generic(
       ]);
       return true;
     }
-    let complete = app_code_quiz_choice_button_answer_generic(
-      choices,
-      "The program is complete",
-      done,
-      answered,
-      on_complete,
+    let complete = app_code_quiz_choice_button_answer_generic({
+      parent: choices,
+      text: "The program is complete",
+      right: done,
+      state: answered,
+      on_success: on_complete,
       on_wrong,
       soft_take,
-    );
+    });
     property_set(holder, "button", complete);
   }
   function note_value_source(name) {
@@ -1134,15 +1134,15 @@ export function app_code_program_step_through_generic(
         }
         return soft;
       }
-      let b = app_code_quiz_choice_button_answer_generic(
-        choices,
-        words,
-        right2,
-        answered,
-        on_right,
+      let b = app_code_quiz_choice_button_answer_generic({
+        parent: choices,
+        text: words,
+        right: right2,
+        state: answered,
+        on_success: on_right,
         on_wrong,
         soft_take,
-      );
+      });
       if (right2) {
         property_set(holder, "button", b);
       }
@@ -1180,15 +1180,15 @@ export function app_code_program_step_through_generic(
       reason_show(program_reason);
       return false;
     }
-    let program_button = app_code_quiz_choice_button_answer_generic(
-      choices,
-      "This program is complete",
-      program_right,
-      answered,
-      on_program_complete,
+    let program_button = app_code_quiz_choice_button_answer_generic({
+      parent: choices,
+      text: "This program is complete",
+      right: program_right,
+      state: answered,
+      on_success: on_program_complete,
       on_wrong,
-      soft_none,
-    );
+      soft_take: soft_none,
+    });
     if (program_right) {
       ("Show me the answer says this shortcut for the last line, so it is the choice pointed at");
       function program_button_get() {
