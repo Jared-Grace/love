@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_2ki04() {
           "he",
           "$turn_back",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "Elisha",
           "and",
           "told",
