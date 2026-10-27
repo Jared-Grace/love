@@ -25,7 +25,7 @@ export function bible_glyph_chapter_isa35() {
           "the",
           "desert",
           "will",
-          "rejoice",
+          "$woman_dancing",
           "and",
           "blossom",
           "like",
