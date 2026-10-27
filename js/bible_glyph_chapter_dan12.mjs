@@ -97,7 +97,7 @@ export function bible_glyph_chapter_dan12() {
           "shame",
           "and",
           "$hourglass",
-          "contempt.",
+          "$nauseated_face+eyes.",
         ],
       },
       {
