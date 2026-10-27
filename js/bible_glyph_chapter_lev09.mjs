@@ -351,7 +351,7 @@ export function bible_glyph_chapter_lev09() {
           "and",
           "burned",
           "them",
-          "atop",
+          "$pointing_up",
           "$burnt_offering",
           "$altar.",
         ],
