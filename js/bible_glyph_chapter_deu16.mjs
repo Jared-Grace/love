@@ -513,7 +513,7 @@ export function bible_glyph_chapter_deu16() {
         verse_number: 15,
         words: [
           "For",
-          "seven",
+          "$seven",
           "$sun",
           "you",
           "shall",
