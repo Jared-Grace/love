@@ -378,7 +378,7 @@ export function bible_glyph_chapter_hab01() {
           "while",
           "the",
           "$thumbs_down",
-          "swallow",
+          "$whale",
           "up",
           "those",
           "more",
