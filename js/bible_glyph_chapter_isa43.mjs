@@ -375,7 +375,7 @@ export function bible_glyph_chapter_isa43() {
           "there",
           "is",
           "no",
-          "Savior",
+          "$rescue",
           "but",
           "Me.",
         ],
