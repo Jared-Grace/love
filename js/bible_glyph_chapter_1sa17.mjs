@@ -136,7 +136,7 @@ export function bible_glyph_chapter_1sa17() {
           "thousand",
           "shekels",
           "of",
-          "bronze.",
+          "$bronze.",
         ],
       },
       {
