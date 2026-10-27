@@ -338,7 +338,7 @@ export function bible_glyph_chapter_exo33() {
           "$person+round_pushpin",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "tent,",
