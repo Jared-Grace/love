@@ -732,7 +732,7 @@ export function bible_glyph_chapter_gen31() {
           "$no_entry",
           "$hand_with_fingers_splayed+doing",
           "me",
-          "kiss",
+          "$face_blowing_a_kiss",
           "my",
           "$son",
           "and",
