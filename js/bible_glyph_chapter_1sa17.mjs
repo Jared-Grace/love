@@ -389,7 +389,7 @@ export function bible_glyph_chapter_1sa17() {
           "$proper_name$Abinadab,",
           "and",
           "the",
-          "third",
+          "$third_place",
           "was",
           "$proper_name$Shammah.",
         ],
