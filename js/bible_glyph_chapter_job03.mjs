@@ -262,7 +262,7 @@ export function bible_glyph_chapter_job03() {
           "receive",
           "me,",
           "and",
-          "breasts",
+          "$breast_feeding",
           "that",
           "I",
           "should",
