@@ -621,7 +621,7 @@ export function bible_glyph_chapter_num06() {
           "the",
           "basket,",
           "and",
-          "one",
+          "$one",
           "$flatbread",
           "wafer,",
           "and",
