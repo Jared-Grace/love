@@ -1400,7 +1400,7 @@ export function bible_glyph_chapter_1ki02() {
           "After",
           "three",
           "$year,",
-          "however,",
+          "$link,",
           "two",
           "$kneeling",
           "of",
