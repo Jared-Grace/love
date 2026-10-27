@@ -769,7 +769,7 @@ export function bible_glyph_chapter_deu12() {
       {
         verse_number: 23,
         words: [
-          "Only",
+          "$one+check",
           "be",
           "sure",
           "not",
