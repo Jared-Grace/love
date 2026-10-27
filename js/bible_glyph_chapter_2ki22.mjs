@@ -781,7 +781,7 @@ export function bible_glyph_chapter_2ki22() {
           "will",
           "$footprints",
           "on",
-          "this",
+          "$flashlight",
           "$place.",
           "So",
           "they",
