@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_num11() {
           "called",
           "that",
           "$place",
-          "Kibroth-hattaavah,",
+          "$tomb+heart_eyes+hand_receiving+proper_name,",
           "because",
           "there",
           "they",
