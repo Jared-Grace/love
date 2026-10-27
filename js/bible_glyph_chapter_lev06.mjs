@@ -328,7 +328,7 @@ export function bible_glyph_chapter_lev06() {
           "on",
           "it,",
           "and",
-          "burn",
+          "$incense+doing",
           "on",
           "it",
           "the",
