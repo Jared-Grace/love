@@ -530,7 +530,7 @@ export function bible_glyph_chapter_jer18() {
           "will",
           "$no_entry",
           "be",
-          "lost",
+          "$wilted_flower",
           "to",
           "the",
           "$priest,",
