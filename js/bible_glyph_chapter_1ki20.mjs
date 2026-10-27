@@ -357,7 +357,7 @@ export function bible_glyph_chapter_1ki20() {
           "enough",
           "for",
           "a",
-          "handful",
+          "$palm_up_hand+thing",
           "for",
           "each",
           "of",
