@@ -807,7 +807,7 @@ export function bible_glyph_chapter_lev13() {
           "must",
           "$eye",
           "it.",
-          "If",
+          "$exclamation",
           "the",
           "$hair",
           "in",
