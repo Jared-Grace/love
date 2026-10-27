@@ -449,7 +449,7 @@ export function bible_glyph_chapter_mal02() {
           "He",
           "no",
           "$repeat",
-          "regards",
+          "$curving_right+doing",
           "your",
           "offerings",
           "or",
