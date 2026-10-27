@@ -458,7 +458,7 @@ export function bible_glyph_chapter_deu19() {
           "You",
           "must",
           "$no_entry",
-          "move",
+          "$back+walking+doing",
           "your",
           "neighbor's",
           "boundary",
