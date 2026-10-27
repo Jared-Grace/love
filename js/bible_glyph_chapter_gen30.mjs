@@ -760,7 +760,7 @@ export function bible_glyph_chapter_gen30() {
           "$foot.",
           "But",
           "$watch,",
-          "when",
+          "$question+clock",
           "shall",
           "I",
           "$hammer+doing",
