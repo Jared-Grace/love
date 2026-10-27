@@ -1365,7 +1365,7 @@ export function bible_glyph_chapter_deu01() {
           "$turn_back",
           "and",
           "wept",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "but",
