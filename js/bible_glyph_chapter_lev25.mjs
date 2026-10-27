@@ -380,7 +380,7 @@ export function bible_glyph_chapter_lev25() {
         verse_number: 13,
         words: [
           "In",
-          "this",
+          "$flashlight",
           "$year",
           "of",
           "$horn+party_popper,",
