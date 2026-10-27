@@ -225,7 +225,7 @@ export function bible_glyph_chapter_gen44() {
           "of",
           "our",
           "sacks.",
-          "Why",
+          "$question+likeness",
           "would",
           "we",
           "steal",
