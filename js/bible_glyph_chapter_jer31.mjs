@@ -1365,7 +1365,7 @@ export function bible_glyph_chapter_jer31() {
           "dead",
           "bodies",
           "and",
-          "ashes,",
+          "$bacon+ashes,",
           "and",
           "all",
           "the",
