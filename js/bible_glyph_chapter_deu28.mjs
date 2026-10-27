@@ -1368,7 +1368,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "be",
           "the",
-          "head,",
+          "$person_gesturing_ok,",
           "and",
           "you",
           "will",
