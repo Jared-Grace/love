@@ -337,7 +337,7 @@ export function bible_glyph_chapter_num32() {
       {
         verse_number: 12,
         words: [
-          "Not",
+          "$zero+manner",
           "one",
           "except",
           "$dog+proper_name",
