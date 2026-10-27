@@ -579,7 +579,7 @@ export function bible_glyph_chapter_neh08() {
           "$tree,",
           "to",
           "$hammer+doing",
-          "booths,",
+          "$hut+leaf,",
           "as",
           "it",
           "is",
