@@ -79,7 +79,7 @@ export function bible_glyph_chapter_amo05() {
           "have",
           "but",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "$puzzle_piece+doing,",
           "and",
           "the",
