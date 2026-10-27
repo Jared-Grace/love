@@ -378,7 +378,7 @@ export function bible_glyph_chapter_1ki01() {
           "me",
           "$person_tipping_hand+doing",
           "you.",
-          "Save",
+          "$parachute",
           "your",
           "own",
           "$person_other",
