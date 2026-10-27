@@ -304,7 +304,7 @@ export function bible_glyph_chapter_isa35() {
           "$beaming.",
           "Gladness",
           "and",
-          "joy",
+          "$beaming",
           "will",
           "overtake",
           "them,",
