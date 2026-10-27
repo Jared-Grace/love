@@ -303,7 +303,7 @@ export function bible_glyph_chapter_exo26() {
           "$link+doing",
           "the",
           "$tent",
-          "together",
+          "$link",
           "as",
           "one.",
         ],
