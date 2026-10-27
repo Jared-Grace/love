@@ -477,7 +477,7 @@ export function bible_glyph_chapter_isa07() {
           "$check_box",
           "$thumbs_up,",
           "the",
-          "land",
+          "$brown_square",
           "of",
           "the",
           "two",
