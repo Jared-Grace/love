@@ -78,7 +78,7 @@ export function bible_glyph_chapter_exo09() {
           "bring",
           "a",
           "severe",
-          "plague",
+          "$face_with_medical_mask",
           "on",
           "your",
           "livestock",
