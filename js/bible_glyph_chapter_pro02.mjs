@@ -201,7 +201,7 @@ export function bible_glyph_chapter_pro02() {
         words: [
           "$thinking+map+thing",
           "will",
-          "watch",
+          "$guard",
           "over",
           "you,",
           "and",
