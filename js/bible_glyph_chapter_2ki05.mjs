@@ -387,7 +387,7 @@ export function bible_glyph_chapter_2ki05() {
           "Naaman",
           "$walking",
           "away",
-          "angry,",
+          "$angry_face+collision+doing,",
           "$speech,",
           "I",
           "thought",
