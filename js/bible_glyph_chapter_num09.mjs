@@ -282,7 +282,7 @@ export function bible_glyph_chapter_num09() {
           "a",
           "dead",
           "body,",
-          "or",
+          "$shuffle",
           "is",
           "away",
           "on",
