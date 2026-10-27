@@ -1619,7 +1619,7 @@ export function bible_glyph_chapter_1ki01() {
           "$speech,",
           "$exclamation,",
           "$proper_name$Adonijah",
-          "fears",
+          "$fear+doing",
           "$king",
           "$peace+proper_name,",
           "and",
