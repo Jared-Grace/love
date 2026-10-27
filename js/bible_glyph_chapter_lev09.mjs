@@ -227,7 +227,7 @@ export function bible_glyph_chapter_lev09() {
           "$son",
           "of",
           "$proper_name$Aaron",
-          "brought",
+          "$magnet+doing",
           "$blood",
           "to",
           "him,",
