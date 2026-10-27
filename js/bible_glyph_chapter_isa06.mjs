@@ -153,7 +153,7 @@ export function bible_glyph_chapter_isa06() {
           "$family",
           "of",
           "$soap+no_entry",
-          "lips;",
+          "$kiss_mark;",
           "for",
           "my",
           "$eyes",
