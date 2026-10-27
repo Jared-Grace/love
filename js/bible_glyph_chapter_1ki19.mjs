@@ -762,7 +762,7 @@ export function bible_glyph_chapter_1ki19() {
           "him,",
           "$hand_receiving",
           "his",
-          "pair",
+          "$ox+two",
           "of",
           "oxen,",
           "and",
