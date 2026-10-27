@@ -1326,7 +1326,7 @@ export function bible_glyph_chapter_1sa25() {
           "him,",
           "and",
           "$pointing_back",
-          "became",
+          "$link",
           "like",
           "a",
           "$stone.",
