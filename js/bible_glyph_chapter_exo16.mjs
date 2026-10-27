@@ -829,7 +829,7 @@ export function bible_glyph_chapter_exo16() {
           "you",
           "will",
           "$no_entry",
-          "find",
+          "$magnifying_glass+exclamation",
           "anything",
           "in",
           "the",
