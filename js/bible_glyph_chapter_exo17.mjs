@@ -457,7 +457,7 @@ export function bible_glyph_chapter_exo17() {
           "I",
           "will",
           "utterly",
-          "blot",
+          "$broom+doing",
           "out",
           "the",
           "memory",
