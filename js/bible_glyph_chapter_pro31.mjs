@@ -133,7 +133,7 @@ export function bible_glyph_chapter_pro31() {
           "$wine",
           "to",
           "the",
-          "bitter",
+          "$lemon",
           "in",
           "$person_other.",
         ],
