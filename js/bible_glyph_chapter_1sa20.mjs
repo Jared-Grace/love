@@ -306,7 +306,7 @@ export function bible_glyph_chapter_1sa20() {
           "before",
           "the",
           "$i_am.",
-          "If",
+          "$traffic_light",
           "there",
           "is",
           "iniquity",
