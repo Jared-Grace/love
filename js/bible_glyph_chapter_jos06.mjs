@@ -614,7 +614,7 @@ export function bible_glyph_chapter_jos06() {
           "set",
           "apart",
           "the",
-          "camp",
+          "$camp",
           "of",
           "$wrestling+heart_on_fire",
           "for",
