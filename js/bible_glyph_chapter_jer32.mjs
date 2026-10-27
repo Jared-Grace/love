@@ -210,7 +210,7 @@ export function bible_glyph_chapter_jer32() {
           "you",
           "will",
           "$no_entry",
-          "succeed.",
+          "$chart_increasing.",
         ],
       },
       {
