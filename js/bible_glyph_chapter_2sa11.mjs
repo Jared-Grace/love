@@ -801,7 +801,7 @@ export function bible_glyph_chapter_2sa11() {
           "$kneeling",
           "from",
           "the",
-          "wall.",
+          "$brick+shield.",
           "Some",
           "of",
           "the",
