@@ -507,7 +507,7 @@ export function bible_glyph_chapter_gen30() {
           "$thumbs_up",
           "$gift+thing.",
           "This",
-          "time",
+          "$drum",
           "my",
           "$man_beard",
           "will",
