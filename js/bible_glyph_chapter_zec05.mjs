@@ -50,7 +50,7 @@ export function bible_glyph_chapter_zec05() {
           "$bird+doing",
           "$page_with_curl,",
           "$two+zero",
-          "cubits",
+          "$triangular_ruler",
           "$up_down_arrow",
           "and",
           "ten",
