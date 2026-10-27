@@ -95,7 +95,7 @@ export function bible_glyph_chapter_psa063() {
       {
         verse_number: 4,
         words: [
-          "So",
+          "$right_arrow",
           "I",
           "will",
           "$speech+thumbs_up",
