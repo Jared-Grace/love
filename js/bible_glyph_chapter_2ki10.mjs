@@ -316,7 +316,7 @@ export function bible_glyph_chapter_2ki10() {
           "them",
           "in",
           "$two",
-          "heaps",
+          "$stone+multiply",
           "at",
           "the",
           "entrance",
