@@ -172,7 +172,7 @@ export function bible_glyph_chapter_lev11() {
           "And",
           "the",
           "$pig,",
-          "though",
+          "$pointing",
           "it",
           "has",
           "a",
