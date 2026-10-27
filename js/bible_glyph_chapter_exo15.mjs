@@ -136,7 +136,7 @@ export function bible_glyph_chapter_exo15() {
           "them;",
           "they",
           "sank",
-          "like",
+          "$likeness",
           "a",
           "$stone.",
         ],
