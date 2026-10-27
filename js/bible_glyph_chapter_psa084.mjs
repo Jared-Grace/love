@@ -273,7 +273,7 @@ export function bible_glyph_chapter_psa084() {
           "$sun_with_face",
           "and",
           "a",
-          "shield;",
+          "$shield;",
           "the",
           "$i_am",
           "$hands_giving",
