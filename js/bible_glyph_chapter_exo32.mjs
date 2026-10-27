@@ -81,7 +81,7 @@ export function bible_glyph_chapter_exo32() {
           "the",
           "$gold",
           "$nose+ring",
-          "that",
+          "$back+flashlight",
           "are",
           "on",
           "your",
