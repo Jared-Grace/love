@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_1sa17() {
           "$lion",
           "and",
           "$bear;",
-          "this",
+          "$flashlight",
           "$no_entry+scissors+covenant",
           "$proper_name$Philistine",
           "will",
