@@ -326,7 +326,7 @@ export function bible_glyph_chapter_amo09() {
           "will",
           "$no_entry",
           "utterly",
-          "destroy",
+          "$bomb",
           "the",
           "$house",
           "of",
