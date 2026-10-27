@@ -502,7 +502,7 @@ export function bible_glyph_chapter_ezk37() {
         verse_number: 16,
         words: [
           "And",
-          "you,",
+          "$you,",
           "$son",
           "of",
           "$person,",
