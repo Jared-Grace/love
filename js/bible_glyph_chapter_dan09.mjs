@@ -810,7 +810,7 @@ export function bible_glyph_chapter_dan09() {
           "went",
           "out,",
           "and",
-          "I",
+          "$me",
           "have",
           "$footprints",
           "to",
