@@ -52,7 +52,7 @@ export function bible_glyph_chapter_mal04() {
           "Hosts.",
           "$no_entry",
           "a",
-          "root",
+          "$ginger_root",
           "or",
           "branch",
           "will",
