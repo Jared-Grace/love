@@ -620,7 +620,7 @@ export function bible_glyph_chapter_deu09() {
           "I",
           "took",
           "the",
-          "two",
+          "$two",
           "tablets",
           "and",
           "threw",
