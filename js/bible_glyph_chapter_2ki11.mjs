@@ -244,7 +244,7 @@ export function bible_glyph_chapter_2ki11() {
           "$sabbath",
           "are",
           "to",
-          "guard",
+          "$guard",
           "the",
           "$house",
           "of",
