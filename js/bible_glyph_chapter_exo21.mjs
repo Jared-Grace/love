@@ -734,7 +734,7 @@ export function bible_glyph_chapter_exo21() {
         verse_number: 27,
         words: [
           "And",
-          "if",
+          "$traffic_light",
           "he",
           "knocks",
           "out",
