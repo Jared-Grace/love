@@ -54,7 +54,7 @@ export function bible_glyph_chapter_mal04() {
           "a",
           "$ginger_root",
           "or",
-          "branch",
+          "$tree+leaf",
           "will",
           "be",
           "left",
