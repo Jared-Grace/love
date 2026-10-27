@@ -1075,7 +1075,7 @@ export function bible_glyph_chapter_exo34() {
           "whenever",
           "$fishing_pole+proper_name",
           "$footprints",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "to",
