@@ -356,7 +356,7 @@ export function bible_glyph_chapter_num22() {
           "and",
           "put",
           "a",
-          "curse",
+          "$speech+kitchen_knife+doing",
           "on",
           "them",
           "for",
