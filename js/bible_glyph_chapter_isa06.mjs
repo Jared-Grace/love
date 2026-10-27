@@ -49,7 +49,7 @@ export function bible_glyph_chapter_isa06() {
           "Him",
           "$person+round_pushpin",
           "$fire+snake,",
-          "each",
+          "$one",
           "having",
           "$six",
           "wings:",
