@@ -350,7 +350,7 @@ export function bible_glyph_chapter_deu18() {
           "And",
           "because",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "$vomiting",
           "things,",
           "the",
