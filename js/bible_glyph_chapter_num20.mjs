@@ -15,7 +15,7 @@ export function bible_glyph_chapter_num20() {
         words: [
           "In",
           "the",
-          "first",
+          "$first_place",
           "$new_moon",
           "the",
           "$all",
