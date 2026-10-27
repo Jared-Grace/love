@@ -590,7 +590,7 @@ export function bible_glyph_chapter_2ki17() {
           "$fire,",
           "and",
           "practiced",
-          "divination",
+          "$crystal_ball",
           "and",
           "soothsaying.",
           "They",
