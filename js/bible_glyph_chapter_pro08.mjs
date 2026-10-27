@@ -595,7 +595,7 @@ export function bible_glyph_chapter_pro08() {
       {
         verse_number: 32,
         words: [
-          "Now",
+          "$watch",
           "therefore,",
           "my",
           "$son,",
