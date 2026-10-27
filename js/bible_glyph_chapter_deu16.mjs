@@ -209,7 +209,7 @@ export function bible_glyph_chapter_deu16() {
           "only",
           "$sacrifice",
           "the",
-          "Passover",
+          "$lamb+door",
           "sacrifice",
           "at",
           "the",
