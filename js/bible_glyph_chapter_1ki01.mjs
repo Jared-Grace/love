@@ -1209,7 +1209,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "$proper_name$Pelethites,",
           "went",
-          "down",
+          "$walking+pointing_down",
           "and",
           "set",
           "$peace+proper_name",
