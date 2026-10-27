@@ -366,7 +366,7 @@ export function bible_glyph_chapter_num13() {
           "open",
           "camps",
           "or",
-          "fortifications?",
+          "$wall+locked?",
         ],
       },
       {
