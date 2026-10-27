@@ -73,7 +73,7 @@ export function bible_glyph_chapter_lev01() {
           "$burnt_offering",
           "$tray_out",
           "the",
-          "herd,",
+          "$cow_face,",
           "he",
           "is",
           "to",
