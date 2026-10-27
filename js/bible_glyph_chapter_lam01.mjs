@@ -565,7 +565,7 @@ export function bible_glyph_chapter_lam01() {
           "grapes",
           "in",
           "a",
-          "winepress,",
+          "$grapes+foot+amphora,",
           "the",
           "$crown",
           "has",
