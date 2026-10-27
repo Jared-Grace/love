@@ -192,7 +192,7 @@ export function bible_glyph_chapter_lev25() {
           "and",
           "for",
           "your",
-          "livestock",
+          "$paw_prints",
           "and",
           "the",
           "$sprout",
