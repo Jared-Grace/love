@@ -58,7 +58,7 @@ export function bible_glyph_chapter_deu01() {
           "journey",
           "from",
           "$proper_name$Horeb",
-          "to",
+          "$finish",
           "Kadesh-barnea",
           "by",
           "$road",
