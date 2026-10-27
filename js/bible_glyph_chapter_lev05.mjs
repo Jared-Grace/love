@@ -253,7 +253,7 @@ export function bible_glyph_chapter_lev05() {
           "to",
           "twist",
           "its",
-          "head",
+          "$person_gesturing_ok",
           "at",
           "the",
           "front",
