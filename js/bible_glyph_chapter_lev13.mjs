@@ -486,7 +486,7 @@ export function bible_glyph_chapter_lev13() {
           "has",
           "all",
           "turned",
-          "white,",
+          "$white_circle,",
           "he",
           "is",
           "clean.",
