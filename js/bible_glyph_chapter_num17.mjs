@@ -257,7 +257,7 @@ export function bible_glyph_chapter_num17() {
           "$face",
           "of",
           "$i_am",
-          "to",
+          "$toward",
           "$all",
           "the",
           "$son",
