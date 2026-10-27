@@ -424,7 +424,7 @@ export function bible_glyph_chapter_exo36() {
           "that",
           "the",
           "tabernacle",
-          "was",
+          "$link",
           "a",
           "unit.",
         ],
