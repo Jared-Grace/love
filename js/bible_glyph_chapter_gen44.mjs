@@ -126,7 +126,7 @@ export function bible_glyph_chapter_gen44() {
           "and",
           "when",
           "you",
-          "overtake",
+          "$running+hand_receiving+doing",
           "them,",
           "$speech,",
           "Why",
