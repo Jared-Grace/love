@@ -106,7 +106,7 @@ export function bible_glyph_chapter_hos14() {
         words: [
           "I",
           "will",
-          "heal",
+          "$bandage",
           "their",
           "apostasy;",
           "I",
