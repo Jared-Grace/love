@@ -256,7 +256,7 @@ export function bible_glyph_chapter_lev05() {
           "$person_gesturing_ok",
           "at",
           "the",
-          "front",
+          "$vs_button",
           "of",
           "its",
           "neck",
