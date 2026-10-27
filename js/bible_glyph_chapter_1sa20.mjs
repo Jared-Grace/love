@@ -1174,7 +1174,7 @@ export function bible_glyph_chapter_1sa20() {
           "up",
           "from",
           "the",
-          "table",
+          "$hand_sending+thing",
           "in",
           "fierce",
           "anger,",
