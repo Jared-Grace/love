@@ -748,7 +748,7 @@ export function bible_glyph_chapter_1ki21() {
           "descendants.",
           "I",
           "will",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "$proper_name$Ahab",
