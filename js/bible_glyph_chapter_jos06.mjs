@@ -241,7 +241,7 @@ export function bible_glyph_chapter_jos06() {
           "$i_am+rescue",
           "had",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$family,",
           "seven",
