@@ -1117,7 +1117,7 @@ export function bible_glyph_chapter_2ki09() {
           "$person_gesturing_ok,",
           "and",
           "looked",
-          "down",
+          "$window+eyes+doing",
           "from",
           "a",
           "window.",
