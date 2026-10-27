@@ -254,7 +254,7 @@ export function bible_glyph_chapter_deu04() {
           "is",
           "to",
           "us",
-          "whenever",
+          "$all",
           "we",
           "call",
           "on",
