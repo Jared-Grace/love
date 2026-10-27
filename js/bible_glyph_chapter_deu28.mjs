@@ -355,7 +355,7 @@ export function bible_glyph_chapter_deu28() {
           "$back+flashlight",
           "the",
           "$i_am",
-          "swore",
+          "$raised_back_of_hand+doing",
           "to",
           "your",
           "$father",
