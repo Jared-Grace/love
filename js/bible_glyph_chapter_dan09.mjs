@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_dan09() {
           "that",
           "causes",
           "desolation,",
-          "until",
+          "$finish",
           "the",
           "decreed",
           "destruction",
