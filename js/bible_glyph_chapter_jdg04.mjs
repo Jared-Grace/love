@@ -124,7 +124,7 @@ export function bible_glyph_chapter_jdg04() {
           "$palm_tree+wood",
           "of",
           "$proper_name$Deborah",
-          "between",
+          "$brain+arrow_both_ways",
           "$proper_name$Ramah",
           "and",
           "Bethel",
