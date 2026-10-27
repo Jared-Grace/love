@@ -229,7 +229,7 @@ export function bible_glyph_chapter_isa35() {
           "of",
           "$sparkle+thing.",
           "The",
-          "unclean",
+          "$soap+no_entry",
           "will",
           "$no_entry",
           "travel",
