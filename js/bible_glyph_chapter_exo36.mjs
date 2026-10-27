@@ -470,7 +470,7 @@ export function bible_glyph_chapter_exo36() {
           "all",
           "the",
           "same",
-          "size.",
+          "$triangular_ruler+thing.",
         ],
       },
       {
