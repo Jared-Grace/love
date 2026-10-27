@@ -65,7 +65,7 @@ export function bible_glyph_chapter_gen47() {
           "and",
           "presented",
           "them",
-          "before",
+          "$face",
           "$house+proper_name.",
         ],
       },
