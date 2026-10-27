@@ -1519,7 +1519,7 @@ export function bible_glyph_chapter_gen24() {
           "tell",
           "me;",
           "and",
-          "if",
+          "$traffic_light",
           "$no_entry,",
           "tell",
           "me,",
