@@ -45,7 +45,7 @@ export function bible_glyph_chapter_2sa06() {
           "$walking+pointing_up",
           "up",
           "from",
-          "there",
+          "$telescope",
           "the",
           "ark",
           "of",
