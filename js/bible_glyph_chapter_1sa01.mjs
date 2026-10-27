@@ -53,7 +53,7 @@ export function bible_glyph_chapter_1sa01() {
         words: [
           "He",
           "had",
-          "two",
+          "$two",
           "$woman,",
           "one",
           "$name_tag",
