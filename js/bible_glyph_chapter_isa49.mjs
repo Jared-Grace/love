@@ -448,7 +448,7 @@ export function bible_glyph_chapter_isa49() {
           "away,",
           "from",
           "the",
-          "north",
+          "$compass+up_arrow",
           "and",
           "from",
           "the",
