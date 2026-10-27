@@ -692,7 +692,7 @@ export function bible_glyph_chapter_deu14() {
           "of",
           "all",
           "your",
-          "produce",
+          "$fruit+basket",
           "for",
           "that",
           "year",
