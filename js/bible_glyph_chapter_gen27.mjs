@@ -546,7 +546,7 @@ export function bible_glyph_chapter_gen27() {
           "$fast_forward+doing,",
           "my",
           '$son?"',
-          '"Because',
+          '"$pointing',
           "the",
           "$i_am",
           "your",
