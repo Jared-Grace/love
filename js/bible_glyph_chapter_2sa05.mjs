@@ -703,7 +703,7 @@ export function bible_glyph_chapter_2sa05() {
           "to",
           "$fist",
           "the",
-          "camp",
+          "$camp",
           "of",
           "the",
           "$proper_name$Philistines.",
