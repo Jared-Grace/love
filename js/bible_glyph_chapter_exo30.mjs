@@ -803,7 +803,7 @@ export function bible_glyph_chapter_exo30() {
           "of",
           "Israel,",
           "$speech,",
-          "This",
+          "$flashlight",
           "will",
           "be",
           "my",
