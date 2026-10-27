@@ -63,7 +63,7 @@ export function bible_glyph_chapter_isa64() {
           "tremble",
           "at",
           "Your",
-          "presence.",
+          "$face.",
         ],
       },
       {
