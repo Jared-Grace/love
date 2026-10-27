@@ -458,7 +458,7 @@ export function bible_glyph_chapter_2ki01() {
           "you",
           "and",
           "your",
-          "fifty",
+          "$five+zero",
           "men.",
           "And",
           "the",
