@@ -345,7 +345,7 @@ export function bible_glyph_chapter_exo26() {
         verse_number: 13,
         words: [
           "A",
-          "cubit",
+          "$triangular_ruler",
           "on",
           "either",
           "side",
