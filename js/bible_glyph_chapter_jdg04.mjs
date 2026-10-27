@@ -759,7 +759,7 @@ export function bible_glyph_chapter_jdg04() {
           "$king",
           "of",
           "$proper_name$Canaan",
-          "before",
+          "$face",
           "the",
           "Israelites.",
         ],
