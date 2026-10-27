@@ -444,7 +444,7 @@ export function bible_glyph_chapter_lev23() {
           "shall",
           "$abacus",
           "off",
-          "fifty",
+          "$five+zero",
           "$sun",
           "$finish",
           "the",
