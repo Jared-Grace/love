@@ -444,7 +444,7 @@ export function bible_glyph_chapter_jdg04() {
           "$mountain",
           "$proper_name$Tabor",
           "with",
-          "ten",
+          "$ten",
           "thousand",
           "$man_beard",
           "following",
