@@ -1489,7 +1489,7 @@ export function bible_glyph_chapter_exo12() {
           "$pointing",
           "a",
           "foreigner",
-          "resides",
+          "$luggage",
           "with",
           "you",
           "and",
