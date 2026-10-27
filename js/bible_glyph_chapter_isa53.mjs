@@ -122,7 +122,7 @@ export function bible_glyph_chapter_isa53() {
           "our",
           "sorrows;",
           "yet",
-          "we",
+          "$me",
           "considered",
           "Him",
           "stricken,",
