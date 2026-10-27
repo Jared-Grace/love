@@ -1142,7 +1142,7 @@ export function bible_glyph_chapter_num16() {
           "they",
           "were",
           "presented",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "and",
