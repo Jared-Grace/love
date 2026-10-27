@@ -530,7 +530,7 @@ export function bible_glyph_chapter_psa073() {
           "I",
           "may",
           "proclaim",
-          "all",
+          "$all",
           "Your",
           "$tools.",
         ],
