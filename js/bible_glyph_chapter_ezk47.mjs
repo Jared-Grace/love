@@ -704,7 +704,7 @@ export function bible_glyph_chapter_ezk47() {
           "to",
           "a",
           "point",
-          "opposite",
+          "$face+toward",
           "Lebo",
           "$footprints.",
           "This",
