@@ -778,7 +778,7 @@ export function bible_glyph_chapter_gen43() {
           "$foot,",
           "and",
           "$hands_giving",
-          "food",
+          "$wheat+donkey",
           "for",
           "their",
           "$donkey.",
