@@ -1492,7 +1492,7 @@ export function bible_glyph_chapter_1ki22() {
           "shrine",
           "prostitutes",
           "$back+flashlight",
-          "remained",
+          "$puzzle_piece+doing",
           "from",
           "the",
           "$sun",
