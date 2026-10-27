@@ -213,7 +213,7 @@ export function bible_glyph_chapter_job03() {
           "night",
           "did",
           "$no_entry",
-          "shut",
+          "$locked+doing",
           "the",
           "doors",
           "of",
