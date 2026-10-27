@@ -998,7 +998,7 @@ export function bible_glyph_chapter_1ki02() {
           "$i_am",
           "and",
           "took",
-          "hold",
+          "$might+up_arrow",
           "of",
           "the",
           "horns",
