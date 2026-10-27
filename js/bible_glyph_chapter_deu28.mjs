@@ -882,7 +882,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "with",
           "madness,",
-          "blindness",
+          "$person_with_white_cane+eye+thing",
           "and",
           "confusion",
           "of",
