@@ -215,7 +215,7 @@ export function bible_glyph_chapter_lev04() {
           "and",
           "$all",
           "the",
-          "fat",
+          "$bacon",
           "that",
           "is",
           "on",
