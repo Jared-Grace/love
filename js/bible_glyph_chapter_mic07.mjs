@@ -230,7 +230,7 @@ export function bible_glyph_chapter_mic07() {
           "$i_am;",
           "I",
           "will",
-          "wait",
+          "$hourglass+crossed_fingers",
           "for",
           "the",
           "$heart_on_fire",
