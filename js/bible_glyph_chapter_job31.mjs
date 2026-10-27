@@ -441,7 +441,7 @@ export function bible_glyph_chapter_job31() {
           "up",
           "my",
           "$hand",
-          "against",
+          "$pointing_up",
           "the",
           "fatherless",
           "because",
