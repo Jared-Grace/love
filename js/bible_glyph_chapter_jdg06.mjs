@@ -1073,7 +1073,7 @@ export function bible_glyph_chapter_jdg06() {
           "against",
           "him,",
           "Are",
-          "you",
+          "$you",
           "contending",
           "for",
           "Baal?",
