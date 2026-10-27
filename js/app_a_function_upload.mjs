@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { browser_files_store } from "./browser_files_store.mjs";
 import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
 import { browser_files_database_initialize } from "./browser_files_database_initialize.mjs";
-import { list_filter_property } from "./list_filter_property.mjs";
+import { list_filter_property_exists } from "./list_filter_property_exists.mjs";
 import { json_decompress } from "./json_decompress.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_last } from "./list_last.mjs";
@@ -19,7 +19,8 @@ export async function app_a_function_upload() {
   ("Sends the server only the files marked changed since the last upload, each as what it was before and what it is now, then clears the marks. Only the marked files are unpacked; the rest are never opened.");
   let store = browser_files_store();
   let all = await indexeddb_get_all(browser_files_database_initialize, store);
-  let filtered = list_filter_property(all, "changed", true);
+  ("Most files carry no mark at all, so the mark is asked whether it is there rather than read.");
+  let filtered = list_filter_property_exists(all, "changed");
   async function contents_get(compressed) {
     let f = await json_decompress(compressed);
     let versions = property_get(f, "versions");
