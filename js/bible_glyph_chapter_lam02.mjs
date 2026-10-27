@@ -614,7 +614,7 @@ export function bible_glyph_chapter_lam02() {
         words: [
           "All",
           "who",
-          "pass",
+          "$bridge",
           "by",
           "$clapping_hands+doing",
           "their",
