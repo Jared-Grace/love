@@ -354,7 +354,7 @@ export function bible_glyph_chapter_gen46() {
           "$proper_name$Zebulun",
           "were",
           "$proper_name$Sered,",
-          "Elon,",
+          "$tree+flexed_biceps+place+proper_name,",
           "and",
           "$proper_name$Jahleel.",
         ],
