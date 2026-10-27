@@ -85,7 +85,7 @@ export function bible_glyph_chapter_lev11() {
           "only",
           "chew",
           "the",
-          "cud",
+          "$cow_face+clockwise_arrows+thing",
           "or",
           "only",
           "have",
