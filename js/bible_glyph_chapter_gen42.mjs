@@ -343,7 +343,7 @@ export function bible_glyph_chapter_gen42() {
           "the",
           "$son",
           "of",
-          "one",
+          "$one",
           "$man_beard",
           "in",
           "the",
