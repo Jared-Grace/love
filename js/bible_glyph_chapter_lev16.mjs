@@ -742,7 +742,7 @@ export function bible_glyph_chapter_lev16() {
           "he",
           "is",
           "to",
-          "bring",
+          "$magnet+doing",
           "forward",
           "the",
           "$sprout",
