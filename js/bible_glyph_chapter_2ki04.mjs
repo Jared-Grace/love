@@ -585,7 +585,7 @@ export function bible_glyph_chapter_2ki04() {
           "head!",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "$father.",
           "So",
