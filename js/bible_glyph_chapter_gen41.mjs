@@ -233,7 +233,7 @@ export function bible_glyph_chapter_gen41() {
           "Then",
           "the",
           "chief",
-          "cupbearer",
+          "$cup+hands_giving+doer",
           "$mouth",
           "to",
           "$house+proper_name,",
