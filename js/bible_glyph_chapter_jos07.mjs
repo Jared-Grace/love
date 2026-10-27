@@ -160,7 +160,7 @@ export function bible_glyph_chapter_jos07() {
           "$proper_name$Ai",
           "are",
           "so",
-          "few.",
+          "$pinching_hand+input_numbers.",
         ],
       },
       {
