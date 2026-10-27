@@ -148,7 +148,7 @@ export function bible_glyph_chapter_hab03() {
           "$confetti_ball;",
           "the",
           "$hourglass",
-          "hills",
+          "$mountain+pinching_hand",
           "$bowing+hole+doing.",
           "His",
           "ways",
