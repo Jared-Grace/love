@@ -181,7 +181,7 @@ export function bible_glyph_chapter_deu32() {
           "years",
           "long",
           "past.",
-          "Ask",
+          "$question",
           "your",
           "$father,",
           "and",
