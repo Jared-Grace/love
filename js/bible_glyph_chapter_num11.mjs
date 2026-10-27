@@ -75,7 +75,7 @@ export function bible_glyph_chapter_num11() {
           "the",
           "$fire",
           "died",
-          "down.",
+          "$water_wave+down_arrow+doing.",
         ],
       },
       {
