@@ -217,7 +217,7 @@ export function bible_glyph_chapter_jos24() {
           "He",
           "$palm_down",
           "$new_moon+fog",
-          "between",
+          "$brain+arrow_both_ways",
           "you",
           "and",
           "the",
