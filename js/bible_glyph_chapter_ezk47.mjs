@@ -310,7 +310,7 @@ export function bible_glyph_chapter_ezk47() {
           "number",
           "of",
           "$fish,",
-          "because",
+          "$pointing",
           "it",
           "$footprints",
           "there",
