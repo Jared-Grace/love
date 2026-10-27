@@ -894,7 +894,7 @@ export function bible_glyph_chapter_num15() {
           "of",
           "$i_am",
           "and",
-          "broken",
+          "$broken_chain+scroll+doing",
           "His",
           "$scroll.",
           "$person_other",
