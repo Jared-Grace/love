@@ -429,7 +429,7 @@ export function bible_glyph_chapter_gen08() {
           "$tray_out",
           "the",
           "$package,",
-          "you",
+          "$you",
           "and",
           "your",
           "$woman,",
