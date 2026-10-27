@@ -129,7 +129,7 @@ export function bible_glyph_chapter_exo38() {
           "$ring",
           "at",
           "the",
-          "four",
+          "$four",
           "corners",
           "of",
           "the",
