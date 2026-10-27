@@ -40,7 +40,7 @@ export function bible_glyph_chapter_isa61() {
           "sent",
           "Me",
           "to",
-          "bind",
+          "$adhesive_bandage+doing",
           "up",
           "the",
           "broken",
