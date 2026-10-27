@@ -262,7 +262,7 @@ export function bible_glyph_chapter_pro31() {
         words: [
           "She",
           "selects",
-          "wool",
+          "$yarn",
           "and",
           "flax,",
           "and",
