@@ -396,7 +396,7 @@ export function bible_glyph_chapter_num22() {
           "$speech+thumbs_down",
           "this",
           "$family,",
-          "for",
+          "$pointing",
           "they",
           "are",
           "$speech+thumbs_up.",
