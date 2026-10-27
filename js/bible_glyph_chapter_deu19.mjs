@@ -19,7 +19,7 @@ export function bible_glyph_chapter_deu19() {
           "your",
           "$heart_on_fire",
           "has",
-          "cut",
+          "$scissors",
           "off",
           "the",
           "$map",
