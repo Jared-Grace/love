@@ -186,7 +186,7 @@ export function bible_glyph_chapter_gen20() {
           "$heart_organ",
           "you",
           "$hammer+doing",
-          "this,",
+          "$flashlight,",
           "and",
           "I",
           "held",
