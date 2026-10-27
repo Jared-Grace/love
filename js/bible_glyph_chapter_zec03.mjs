@@ -81,7 +81,7 @@ export function bible_glyph_chapter_zec03() {
         words: [
           "Now",
           "$i_am+rescue",
-          "was",
+          "$link",
           "dressed",
           "in",
           "filthy",
