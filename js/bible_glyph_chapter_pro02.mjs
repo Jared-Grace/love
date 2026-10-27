@@ -273,7 +273,7 @@ export function bible_glyph_chapter_pro02() {
           "whose",
           "$railway_track",
           "are",
-          "crooked",
+          "$curly_loop+describing",
           "and",
           "whose",
           "ways",
