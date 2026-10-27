@@ -97,7 +97,7 @@ export function bible_glyph_chapter_lev24() {
           "lampstand",
           "$face",
           "$i_am",
-          "continually.",
+          "$clock+infinity.",
         ],
       },
       {
