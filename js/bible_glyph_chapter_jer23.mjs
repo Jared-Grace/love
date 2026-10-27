@@ -1343,7 +1343,7 @@ export function bible_glyph_chapter_jer23() {
           "and",
           "the",
           "$city",
-          "that",
+          "$back+flashlight",
           "I",
           "$hands_giving",
           "to",
