@@ -415,7 +415,7 @@ export function bible_glyph_chapter_nam01() {
           "prepare",
           "your",
           "$tomb,",
-          "for",
+          "$pointing",
           "you",
           "are",
           "$speech+thumbs_down.",
