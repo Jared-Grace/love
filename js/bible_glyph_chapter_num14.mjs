@@ -17,7 +17,7 @@ export function bible_glyph_chapter_num14() {
         words: [
           "Then",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "lifted",
           "up",
