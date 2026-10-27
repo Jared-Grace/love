@@ -95,7 +95,7 @@ export function bible_glyph_chapter_pro04() {
         words: [
           "$coin+hand_receiving",
           "$wisdom,",
-          "get",
+          "$coin+hand_receiving",
           "understanding;",
           "$no_entry",
           "forget",
