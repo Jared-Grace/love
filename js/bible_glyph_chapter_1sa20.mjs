@@ -1088,7 +1088,7 @@ export function bible_glyph_chapter_1sa20() {
           "of",
           "$proper_name$Jesse",
           "$sprout",
-          "on",
+          "$pointing_up",
           "this",
           "earth,",
           "$no_entry",
