@@ -632,7 +632,7 @@ export function bible_glyph_chapter_2ki03() {
           "shall",
           "cut",
           "down",
-          "every",
+          "$all",
           "$thumbs_up",
           "$tree,",
           "stop",
