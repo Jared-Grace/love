@@ -125,7 +125,7 @@ export function bible_glyph_chapter_dan01() {
         words: [
           "$child",
           "$dotted_line_face",
-          "blemish,",
+          "$person+black_circle,",
           "$thumbs_up",
           "in",
           "appearance,",
