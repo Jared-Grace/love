@@ -561,7 +561,7 @@ export function bible_glyph_chapter_jos24() {
           "The",
           "$family",
           "replied,",
-          "Far",
+          "$person_gesturing_no+exclamation",
           "be",
           "it",
           "from",
