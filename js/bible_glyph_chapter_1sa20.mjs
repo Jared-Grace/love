@@ -214,7 +214,7 @@ export function bible_glyph_chapter_1sa20() {
           "$field",
           "$finish",
           "the",
-          "evening",
+          "$sunset",
           "of",
           "the",
           "third",
