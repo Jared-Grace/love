@@ -190,7 +190,7 @@ export function bible_glyph_chapter_exo22() {
           "that",
           "it",
           "consumes",
-          "stacked",
+          "$wheat+tower",
           "or",
           "standing",
           "grain,",
