@@ -566,7 +566,7 @@ export function bible_glyph_chapter_amo05() {
           "$lion",
           "only",
           "to",
-          "encounter",
+          "$toward+person+doing",
           "a",
           "bear,",
           "or",
