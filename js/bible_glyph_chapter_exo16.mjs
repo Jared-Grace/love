@@ -460,7 +460,7 @@ export function bible_glyph_chapter_exo16() {
           "the",
           "layer",
           "of",
-          "dew",
+          "$dew",
           "had",
           "evaporated,",
           "there",
