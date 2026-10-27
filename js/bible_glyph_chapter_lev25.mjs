@@ -1555,7 +1555,7 @@ export function bible_glyph_chapter_lev25() {
           "$traffic_light",
           "many",
           "$year",
-          "remain,",
+          "$repeat,",
           "he",
           "must",
           "$turn_back",
