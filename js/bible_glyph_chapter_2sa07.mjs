@@ -667,7 +667,7 @@ export function bible_glyph_chapter_2sa07() {
           "have",
           "$hammer+doing",
           "this",
-          "great",
+          "$top+thing",
           "thing",
           "and",
           "$lightbulb",
