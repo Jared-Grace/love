@@ -348,7 +348,7 @@ export function bible_glyph_chapter_gen33() {
           "$sheep",
           "and",
           "the",
-          "cattle",
+          "$cow_face",
           "are",
           "nursing.",
           "If",
