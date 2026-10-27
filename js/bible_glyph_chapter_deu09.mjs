@@ -373,7 +373,7 @@ export function bible_glyph_chapter_deu09() {
           "$hands_giving",
           "me",
           "the",
-          "two",
+          "$two",
           "$stone",
           "tablets,",
           "inscribed",
