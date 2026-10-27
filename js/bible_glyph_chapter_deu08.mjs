@@ -591,7 +591,7 @@ export function bible_glyph_chapter_deu08() {
           "$heart_on_fire",
           "and",
           "$walking",
-          "after",
+          "$next_track",
           "other",
           "$moai",
           "to",
