@@ -251,7 +251,7 @@ export function bible_glyph_chapter_ezk03() {
           "have",
           "$hands_giving",
           "your",
-          "forehead",
+          "$face+top",
           "like",
           "a",
           "diamond,",
