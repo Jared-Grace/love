@@ -287,7 +287,7 @@ export function bible_glyph_chapter_2ki04() {
           "$pleading",
           "I",
           "$lightbulb",
-          "that",
+          "$pointing",
           "the",
           "$man_beard",
           "who",
