@@ -310,7 +310,7 @@ export function bible_glyph_chapter_ezk01() {
           "$walking+pointing_up;",
           "$man_beard",
           "had",
-          "two",
+          "$two",
           "wings",
           "touching",
           "the",
