@@ -193,7 +193,7 @@ export function bible_glyph_chapter_num08() {
           "to",
           "$hand_receiving",
           "a",
-          "second",
+          "$second_place",
           "young",
           "$bull,",
           "a",
