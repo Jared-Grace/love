@@ -856,7 +856,7 @@ export function bible_glyph_chapter_num16() {
           "me",
           "to",
           "$hammer",
-          "all",
+          "$all",
           "these",
           "things,",
           "and",
