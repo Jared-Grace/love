@@ -1041,7 +1041,7 @@ export function bible_glyph_chapter_jdg06() {
           "He",
           "must",
           "$skull+doing,",
-          "because",
+          "$pointing",
           "he",
           "has",
           "torn",
