@@ -47,7 +47,7 @@ export function bible_glyph_chapter_2sa06() {
           "from",
           "$telescope",
           "the",
-          "ark",
+          "$ark",
           "of",
           "$heart_on_fire,",
           "which",
