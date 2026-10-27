@@ -312,7 +312,7 @@ export function bible_glyph_chapter_ezk11() {
           "you",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I",
           "am",
           "$i_am.",
