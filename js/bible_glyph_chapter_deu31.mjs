@@ -615,7 +615,7 @@ export function bible_glyph_chapter_deu31() {
           "be",
           "$eating.",
           "And",
-          "many",
+          "$multiply",
           "$thumbs_down",
           "and",
           "afflictions",
