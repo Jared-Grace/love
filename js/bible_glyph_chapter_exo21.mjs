@@ -712,7 +712,7 @@ export function bible_glyph_chapter_exo21() {
           "$eyes",
           "of",
           "his",
-          "maidservant",
+          "$broom",
           "and",
           "blinds",
           "it,",
