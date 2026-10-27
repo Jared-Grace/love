@@ -67,7 +67,7 @@ export function bible_glyph_chapter_nam03() {
           "corpses,",
           "dead",
           "bodies",
-          "without",
+          "$dotted_line_face",
           "end",
           "-",
           "they",
