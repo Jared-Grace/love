@@ -790,7 +790,7 @@ export function bible_glyph_chapter_deu04() {
           "this",
           "$earth.",
           "But",
-          "you",
+          "$you",
           "shall",
           "cross",
           "over",
