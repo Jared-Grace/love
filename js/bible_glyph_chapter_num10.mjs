@@ -946,7 +946,7 @@ export function bible_glyph_chapter_num10() {
           "to",
           "the",
           "countless",
-          "thousands",
+          "$ten+all",
           "of",
           "$wrestling+heart_on_fire.",
         ],
