@@ -188,7 +188,7 @@ export function bible_glyph_chapter_exo39() {
           "them",
           "$pointing_up",
           "the",
-          "shoulder",
+          "$person_shrugging",
           "pieces",
           "of",
           "the",
