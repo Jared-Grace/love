@@ -344,7 +344,7 @@ export function bible_glyph_chapter_2ki11() {
           "the",
           "spears",
           "and",
-          "shields",
+          "$shield+thing",
           "of",
           "$king",
           "$two_hearts+proper_name",
