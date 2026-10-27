@@ -885,7 +885,7 @@ export function bible_glyph_chapter_2ki03() {
           "$hand_receiving",
           "with",
           "him",
-          "seven",
+          "$seven",
           "hundred",
           "$man_beard",
           "with",
