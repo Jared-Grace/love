@@ -153,7 +153,7 @@ export function bible_glyph_chapter_psa073() {
           "arrogance",
           "they",
           "$mouth",
-          "oppression.",
+          "$fist+down_arrow+thing.",
         ],
       },
       {
