@@ -943,7 +943,7 @@ export function bible_glyph_chapter_jdg07() {
           "$proper_name$Oreb",
           "at",
           "the",
-          "rock",
+          "$rock",
           "of",
           "$proper_name$Oreb",
           "and",
