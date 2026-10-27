@@ -292,7 +292,7 @@ export function bible_glyph_chapter_gen41() {
           "$man_beard",
           "had",
           "a",
-          "dream",
+          "$dream",
           "with",
           "its",
           "own",
