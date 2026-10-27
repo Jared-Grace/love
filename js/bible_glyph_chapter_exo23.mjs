@@ -354,7 +354,7 @@ export function bible_glyph_chapter_exo23() {
           "the",
           "$name_tag",
           "of",
-          "other",
+          "$plus+one",
           "$moai,",
           "and",
           "they",
