@@ -1241,7 +1241,7 @@ export function bible_glyph_chapter_1sa02() {
           "of",
           "$bread,",
           "$speech,",
-          "Please",
+          "$pleading",
           "appoint",
           "me",
           "to",
