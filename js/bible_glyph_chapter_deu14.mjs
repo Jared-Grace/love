@@ -143,7 +143,7 @@ export function bible_glyph_chapter_deu14() {
           "a",
           "split",
           "$cow_face+foot",
-          "divided",
+          "$palm_up_hand+divide+doing",
           "in",
           "two",
           "and",
