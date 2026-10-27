@@ -166,7 +166,7 @@ export function bible_glyph_chapter_gen27() {
           "her",
           "$son",
           "$hand+foot,",
-          '"Behold,',
+          '"$exclamation,',
           "I",
           "$ear",
           "your",
