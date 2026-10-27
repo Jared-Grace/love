@@ -78,7 +78,7 @@ export function bible_glyph_chapter_deu33() {
           "$heart_hands+tray_in+doing",
           "the",
           "$family.",
-          "All",
+          "$all",
           "the",
           "$sparkle",
           "ones",
