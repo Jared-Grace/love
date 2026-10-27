@@ -126,7 +126,7 @@ export function bible_glyph_chapter_psa022() {
           "$me",
           "am",
           "a",
-          "worm",
+          "$worm",
           "and",
           "$no_entry",
           "a",
