@@ -544,7 +544,7 @@ export function bible_glyph_chapter_gen41() {
           "the",
           "seven",
           "well-fed",
-          "cows",
+          "$bull",
           "that",
           "were",
           "there",
