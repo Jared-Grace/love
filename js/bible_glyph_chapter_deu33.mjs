@@ -574,7 +574,7 @@ export function bible_glyph_chapter_deu33() {
           "feast",
           "on",
           "the",
-          "abundance",
+          "$water_wave+multiply+thing",
           "of",
           "the",
           "$sea",
