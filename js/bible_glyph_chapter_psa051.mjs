@@ -348,7 +348,7 @@ export function bible_glyph_chapter_psa051() {
           "You",
           "do",
           "$no_entry",
-          "delight",
+          "$smiling_face_with_hearts+doing",
           "in",
           "sacrifice,",
           "or",
