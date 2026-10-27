@@ -493,7 +493,7 @@ export function bible_glyph_chapter_1sa03() {
         words: [
           "Eli",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "was",
           "the",
           "$speech",
