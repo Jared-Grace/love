@@ -467,7 +467,7 @@ export function bible_glyph_chapter_hab03() {
           "off",
           "from",
           "the",
-          "fold",
+          "$sheep+locked",
           "and",
           "no",
           "cattle",
