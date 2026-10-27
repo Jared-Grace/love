@@ -34,7 +34,7 @@ export function bible_glyph_chapter_2ki01() {
           "fallen",
           "through",
           "the",
-          "lattice",
+          "$net+thing",
           "of",
           "his",
           "upper",
