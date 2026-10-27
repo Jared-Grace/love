@@ -573,7 +573,7 @@ export function bible_glyph_chapter_lev27() {
           "$horn+party_popper,",
           "and",
           "your",
-          "valuation",
+          "$receipt",
           "will",
           "be",
           "reduced.",
