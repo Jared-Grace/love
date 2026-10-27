@@ -325,7 +325,7 @@ export function bible_glyph_chapter_lam05() {
       {
         verse_number: 19,
         words: [
-          "You,",
+          "$you,",
           "O",
           "$i_am,",
           "$person+house",
