@@ -181,7 +181,7 @@ export function bible_glyph_chapter_2ki06() {
           "made",
           "the",
           "iron",
-          "float.",
+          "$water_wave+up_arrow+doing.",
         ],
       },
       {
