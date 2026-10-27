@@ -540,7 +540,7 @@ export function bible_glyph_chapter_gen28() {
           "$house",
           "of",
           "$heart_on_fire.",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "gate",
