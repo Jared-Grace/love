@@ -926,7 +926,7 @@ export function bible_glyph_chapter_jer31() {
           "$wall+down_arrow+doing,",
           "to",
           "demolish,",
-          "destroy,",
+          "$wilted_flower,",
           "and",
           "bring",
           "disaster,",
