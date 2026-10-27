@@ -20,7 +20,7 @@ export function bible_glyph_chapter_isa58() {
           "$no_entry",
           "hold",
           "back!",
-          "Raise",
+          "$up_arrow",
           "your",
           "$voice",
           "like",
