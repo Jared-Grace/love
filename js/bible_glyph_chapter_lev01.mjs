@@ -330,7 +330,7 @@ export function bible_glyph_chapter_lev01() {
           "and",
           "$priest",
           "shall",
-          "arrange",
+          "$card_index_dividers",
           "them",
           "atop",
           "$tree",
