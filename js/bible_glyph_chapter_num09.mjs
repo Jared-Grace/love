@@ -415,7 +415,7 @@ export function bible_glyph_chapter_num09() {
           "consequences",
           "of",
           "his",
-          "sin.",
+          "$bow+thing.",
         ],
       },
       {
