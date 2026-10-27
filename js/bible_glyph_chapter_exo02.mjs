@@ -700,7 +700,7 @@ export function bible_glyph_chapter_exo02() {
           "$heart_on_fire",
           "$ear",
           "their",
-          "groaning,",
+          "$weary_face+voice+thing,",
           "and",
           "$heart_on_fire",
           "remembered",
