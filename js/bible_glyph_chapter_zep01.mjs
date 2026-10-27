@@ -481,7 +481,7 @@ export function bible_glyph_chapter_zep01() {
           "of",
           "trouble",
           "and",
-          "distress,",
+          "$clamp+anxious_face_with_sweat,",
           "a",
           "$sun",
           "of",
