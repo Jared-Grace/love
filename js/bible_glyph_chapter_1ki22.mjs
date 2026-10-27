@@ -133,7 +133,7 @@ export function bible_glyph_chapter_1ki22() {
           "$i_am+scales",
           "also",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$king",
           "of",
