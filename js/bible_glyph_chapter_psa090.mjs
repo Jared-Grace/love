@@ -211,7 +211,7 @@ export function bible_glyph_chapter_psa090() {
           "years",
           "-",
           "or",
-          "eighty",
+          "$eight+zero",
           "$traffic_light",
           "we",
           "are",
