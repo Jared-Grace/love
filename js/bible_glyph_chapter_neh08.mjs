@@ -190,7 +190,7 @@ export function bible_glyph_chapter_neh08() {
           "all",
           "the",
           "$family,",
-          "since",
+          "$pointing",
           "he",
           "was",
           "standing",
