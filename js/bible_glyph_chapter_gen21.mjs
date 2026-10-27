@@ -854,7 +854,7 @@ export function bible_glyph_chapter_gen21() {
           "in",
           "Beersheba,",
           "and",
-          "there",
+          "$telescope",
           "he",
           "called",
           "upon",
