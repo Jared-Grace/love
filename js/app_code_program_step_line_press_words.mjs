@@ -75,7 +75,7 @@ export function app_code_program_step_line_press_words(lines, trace, index, i) {
         wrong = app_code_program_step_line_ran_words(lines, trace, index, i);
       }
       if (null_is(wrong)) {
-        wrong = app_code_program_step_line_never_words(lines, trace, index, i);
+        wrong = app_code_program_step_line_never_words(lines, trace, i);
       }
       return wrong;
     }

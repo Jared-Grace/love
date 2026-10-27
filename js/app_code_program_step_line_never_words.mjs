@@ -1,15 +1,10 @@
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_program_line_enclosing } from "./app_code_program_line_enclosing.mjs";
-export function app_code_program_step_line_never_words(
-  lines,
-  trace,
-  index,
-  pressed,
-) {
-  arguments_assert(arguments, 4);
-  ("Why a pressed line is not the next to run, when it never runs at all: the nearest { } around it whose head runs is never entered - an if false each time it runs, or an else whose ifs before it are never all false. null when the line runs, or when something else keeps it from running. lines is the program's lines, trace the lines it runs in order, index how many have run, and pressed the line pressed");
+import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
+export function app_code_program_step_line_never_words(lines, trace, pressed) {
+  arguments_assert(arguments, 3);
+  ("Why a pressed line is not the next to run, when it never runs at all: the nearest { } around it whose head runs is never entered - an if false each time it runs, or an else whose ifs before it are never all false. null when the line runs, or when something else keeps it from running. lines is the program's lines, trace the lines it runs in order, and pressed the line pressed");
   ("2026-10-23, the human chose these words, and asked what happens when the if's name is changed before it runs: so whether an if is true is read from what ran, never from the condition. An if that runs while the first line inside its { } never runs was false each time it ran, whatever its name held before. Said whether or not the if has run yet, since the line never runs either way. Not picked: saying only once the if has run, which leaves the press before it with no words");
   ("A { } whose head never runs is not the cause, so the next one out is asked; a { } entered while the line still never runs was left some other way, so nothing is said");
   ("A line starting with } closes a { } rather than sitting inside it, so the if it closes is not one it is inside");
