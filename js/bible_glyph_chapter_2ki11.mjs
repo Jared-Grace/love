@@ -210,7 +210,7 @@ export function bible_glyph_chapter_2ki11() {
           "$proper_name$Sur,",
           "and",
           "a",
-          "third",
+          "$third_place",
           "at",
           "the",
           "gate",
