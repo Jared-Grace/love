@@ -32,7 +32,7 @@ export function bible_glyph_chapter_job31() {
           "desire",
           "at",
           "a",
-          "virgin?",
+          "$girl+white_flower?",
         ],
       },
       {
