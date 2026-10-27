@@ -1404,7 +1404,7 @@ export function bible_glyph_chapter_num16() {
           "for",
           "them,",
           "$pointing",
-          "wrath",
+          "$angry_face+collision",
           "has",
           "$walking+tray_out",
           "out",
