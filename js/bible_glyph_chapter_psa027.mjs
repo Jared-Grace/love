@@ -345,7 +345,7 @@ export function bible_glyph_chapter_psa027() {
           "me,",
           "$face_exhaling+thing",
           "out",
-          "violence.",
+          "$boxing_glove.",
         ],
       },
       {
