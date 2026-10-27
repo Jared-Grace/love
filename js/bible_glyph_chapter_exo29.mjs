@@ -1220,7 +1220,7 @@ export function bible_glyph_chapter_exo29() {
           "quarter",
           "hin",
           "of",
-          "oil",
+          "$lotion_bottle",
           "from",
           "pressed",
           "olives,",
