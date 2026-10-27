@@ -683,7 +683,7 @@ export function bible_glyph_chapter_isa43() {
           "you",
           "have",
           "grown",
-          "weary",
+          "$weary_face+doing",
           "of",
           "Me,",
           "O",
