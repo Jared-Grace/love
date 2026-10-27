@@ -97,7 +97,7 @@ export function bible_glyph_chapter_gen42() {
           "$son+right_arrow,",
           "$i_am+plus",
           "$brother,",
-          "with",
+          "$safety_pin",
           "his",
           "$brother,",
           "for",
