@@ -408,7 +408,7 @@ export function bible_glyph_chapter_zep01() {
           "wealth",
           "will",
           "be",
-          "plundered",
+          "$money_bag+fist+thing",
           "and",
           "their",
           "$house",
