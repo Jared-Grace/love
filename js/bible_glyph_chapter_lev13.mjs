@@ -64,7 +64,7 @@ export function bible_glyph_chapter_lev13() {
           "$proper_name$Aaron",
           "the",
           "$priest,",
-          "or",
+          "$shuffle",
           "to",
           "one",
           "of",
