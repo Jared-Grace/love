@@ -1413,7 +1413,7 @@ export function bible_glyph_chapter_lev14() {
           "and",
           "the",
           "$dust",
-          "that",
+          "$back+flashlight",
           "is",
           "scraped",
           "off",
