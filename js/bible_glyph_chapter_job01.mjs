@@ -463,7 +463,7 @@ export function bible_glyph_chapter_job01() {
           "While",
           "he",
           "was",
-          "still",
+          "$repeat",
           "$mouth,",
           "another",
           "$footprints",
