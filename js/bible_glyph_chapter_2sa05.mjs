@@ -125,7 +125,7 @@ export function bible_glyph_chapter_2sa05() {
         words: [
           "$two_hearts+proper_name",
           "was",
-          "thirty",
+          "$three+zero",
           "years",
           "old",
           "when",
