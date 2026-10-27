@@ -164,7 +164,7 @@ export function bible_glyph_chapter_ezk01() {
           "$four",
           "$sprout,",
           "and",
-          "this",
+          "$flashlight",
           "was",
           "their",
           "appearance:",
