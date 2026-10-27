@@ -278,7 +278,7 @@ export function bible_glyph_chapter_num24() {
           "anger",
           "of",
           "Balak",
-          "burned",
+          "$angry_face+doing",
           "against",
           "$proper_name$Balaam,",
           "and",
