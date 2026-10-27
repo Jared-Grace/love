@@ -1088,7 +1088,7 @@ export function bible_glyph_chapter_lev23() {
           "$pouring_liquid+wine+thing",
           "offerings,",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "a",
           "$sun",

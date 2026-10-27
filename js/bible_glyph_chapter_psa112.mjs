@@ -108,7 +108,7 @@ export function bible_glyph_chapter_psa112() {
           "who",
           "conducts",
           "his",
-          "$speech",
+          "$voice",
           "with",
           "$scales+thing.",
         ],

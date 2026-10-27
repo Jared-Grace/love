@@ -46,7 +46,7 @@ export function bible_glyph_chapter_lev05() {
           "$person_other",
           "touches",
           "$all",
-          "$speech",
+          "$voice",
           "unclean,",
           "whether",
           "the",

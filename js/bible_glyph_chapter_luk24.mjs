@@ -124,7 +124,7 @@ export function bible_glyph_chapter_luk24() {
           "$sprout+doing",
           "among",
           "the",
-          "$skull?",
+          "$coffin?",
         ],
       },
       {
@@ -1125,7 +1125,7 @@ export function bible_glyph_chapter_luk24() {
           "$person+up_arrow",
           "$tray_out",
           "the",
-          "$skull",
+          "$coffin",
           "on",
           "the",
           "$third_place",

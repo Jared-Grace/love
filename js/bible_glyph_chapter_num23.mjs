@@ -82,7 +82,7 @@ export function bible_glyph_chapter_num23() {
           "$footprints+toward+doing",
           "with",
           "me,",
-          "$speech",
+          "$voice",
           "and",
           "whatever",
           "He",

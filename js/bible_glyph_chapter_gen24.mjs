@@ -293,7 +293,7 @@ export function bible_glyph_chapter_gen24() {
           "him",
           "$pointing_up",
           "$flashlight",
-          "$speech.",
+          "$voice.",
         ],
       },
       {
@@ -858,7 +858,7 @@ export function bible_glyph_chapter_gen24() {
           "$house",
           "about",
           "$flashlight+flashlight",
-          "$speech.",
+          "$voice.",
         ],
       },
       {
@@ -1590,7 +1590,7 @@ export function bible_glyph_chapter_gen24() {
           "$kneeling",
           "$ear",
           "their",
-          "$speech,",
+          "$voice,",
           "he",
           "$bowing",
           "to",

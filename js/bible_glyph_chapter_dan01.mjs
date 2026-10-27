@@ -167,7 +167,7 @@ export function bible_glyph_chapter_dan01() {
           "them",
           "a",
           "daily",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "royal",
@@ -583,7 +583,7 @@ export function bible_glyph_chapter_dan01() {
         words: [
           "In",
           "every",
-          "$speech",
+          "$voice",
           "of",
           "$wisdom",
           "and",

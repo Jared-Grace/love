@@ -292,7 +292,7 @@ export function bible_glyph_chapter_isa01() {
         words: [
           "$ear",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am,",

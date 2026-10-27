@@ -288,7 +288,7 @@ export function bible_glyph_chapter_1ki19() {
           "night.",
           "And",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

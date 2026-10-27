@@ -253,7 +253,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "Now",
           "this",
-          "$speech",
+          "$voice",
           "$thumbs_down+doing",
           "$father+map",
           "$double_exclamation",

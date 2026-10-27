@@ -607,7 +607,7 @@ export function bible_glyph_chapter_jos01() {
           "$no_entry",
           "$ear",
           "your",
-          "$speech,",
+          "$voice,",
           "all",
           "that",
           "you",

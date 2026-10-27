@@ -694,7 +694,7 @@ export function bible_glyph_chapter_deu16() {
           "and",
           "twists",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$ruler.",

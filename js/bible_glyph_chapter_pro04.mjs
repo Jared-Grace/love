@@ -80,7 +80,7 @@ export function bible_glyph_chapter_pro04() {
           "$hand+up_arrow+doing",
           "of",
           "my",
-          "$speech;",
+          "$voice;",
           "$guard",
           "my",
           "$scroll+exclamation",

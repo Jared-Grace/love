@@ -18,7 +18,7 @@ export function bible_glyph_chapter_zec09() {
           "burden",
           "of",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

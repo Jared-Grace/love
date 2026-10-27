@@ -575,7 +575,7 @@ export function bible_glyph_chapter_num13() {
           "They",
           "$turn_back",
           "a",
-          "$speech",
+          "$voice",
           "for",
           "the",
           "$all",

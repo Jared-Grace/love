@@ -61,7 +61,7 @@ export function bible_glyph_chapter_deu10() {
           "the",
           "tablets",
           "the",
-          "$speech",
+          "$voice",
           "that",
           "$link",
           "on",

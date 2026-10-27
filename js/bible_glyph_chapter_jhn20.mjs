@@ -243,7 +243,7 @@ export function bible_glyph_chapter_jhn20() {
           "$person+up_arrow",
           "$tray_out",
           "the",
-          "$skull.",
+          "$coffin.",
         ],
       },
       {

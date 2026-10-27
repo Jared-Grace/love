@@ -318,7 +318,7 @@ export function bible_glyph_chapter_jer31() {
         words: [
           "$ear",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am,",
@@ -789,7 +789,7 @@ export function bible_glyph_chapter_jer31() {
           "$repeat",
           "$speech",
           "this",
-          "$speech",
+          "$voice",
           "in",
           "the",
           "$earth",

@@ -17,7 +17,7 @@ export function bible_glyph_chapter_amo05() {
         words: [
           "$ear",
           "this",
-          "$speech,",
+          "$voice,",
           "this",
           "$loudly_crying+song",
           "$me",

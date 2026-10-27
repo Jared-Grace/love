@@ -406,7 +406,7 @@ export function bible_glyph_chapter_gen18() {
         words: [
           "Is",
           "any",
-          "$speech",
+          "$voice",
           "too",
           "difficult",
           "for",
@@ -721,7 +721,7 @@ export function bible_glyph_chapter_gen18() {
           "$hammer+doing",
           "such",
           "a",
-          "$speech,",
+          "$voice,",
           "to",
           "$skull+doing",
           "the",

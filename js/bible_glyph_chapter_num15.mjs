@@ -890,7 +890,7 @@ export function bible_glyph_chapter_num15() {
           "has",
           "despised",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "$i_am",
           "and",

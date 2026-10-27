@@ -596,7 +596,7 @@ export function bible_glyph_chapter_deu11() {
         words: [
           "$palm_down",
           "$flashlight+flashlight",
-          "$speech",
+          "$voice",
           "of",
           "mine",
           "in",

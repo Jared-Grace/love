@@ -433,7 +433,7 @@ export function bible_glyph_chapter_ezk11() {
         words: [
           "Then",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "$i_am",
           "$link",

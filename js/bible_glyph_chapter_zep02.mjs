@@ -140,7 +140,7 @@ export function bible_glyph_chapter_zep02() {
           "the",
           "$proper_name$Cherethites!",
           "The",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

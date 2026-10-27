@@ -1482,7 +1482,7 @@ export function bible_glyph_chapter_2ki04() {
           "according",
           "to",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am.",

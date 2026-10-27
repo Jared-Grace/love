@@ -1524,7 +1524,7 @@ export function bible_glyph_chapter_1ki02() {
           "to",
           "me,",
           "The",
-          "$speech",
+          "$voice",
           "is",
           "$thumbs_up.",
           "I",

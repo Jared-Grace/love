@@ -29,7 +29,7 @@ export function bible_glyph_chapter_hag01() {
           "sixth",
           "$new_moon,",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",
@@ -91,7 +91,7 @@ export function bible_glyph_chapter_hag01() {
         words: [
           "Then",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

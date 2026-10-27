@@ -233,7 +233,7 @@ export function bible_glyph_chapter_lev10() {
           "$hammer+doing",
           "as",
           "$fishing_pole+proper_name",
-          "$speech.",
+          "$voice.",
         ],
       },
       {

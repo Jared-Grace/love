@@ -41,7 +41,7 @@ export function bible_glyph_chapter_jon04() {
           "$no_entry",
           "what",
           "I",
-          "$speech",
+          "$voice",
           "$finish",
           "I",
           "was",

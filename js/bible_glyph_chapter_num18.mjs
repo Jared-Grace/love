@@ -250,7 +250,7 @@ export function bible_glyph_chapter_num18() {
           "priesthood,",
           "for",
           "everything",
-          "$speech",
+          "$voice",
           "the",
           "$altar",
           "and",

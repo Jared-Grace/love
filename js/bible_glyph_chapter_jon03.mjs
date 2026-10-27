@@ -67,7 +67,7 @@ export function bible_glyph_chapter_jon03() {
           "accordance",
           "with",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am.",
@@ -144,7 +144,7 @@ export function bible_glyph_chapter_jon03() {
         verse_number: 6,
         words: [
           "When",
-          "$speech",
+          "$voice",
           "$hand+doing",
           "the",
           "$king",

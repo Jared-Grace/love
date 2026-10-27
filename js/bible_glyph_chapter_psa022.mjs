@@ -35,7 +35,7 @@ export function bible_glyph_chapter_psa022() {
           "far",
           "from",
           "my",
-          "$speech",
+          "$voice",
           "of",
           "groaning?",
         ],

@@ -328,7 +328,7 @@ export function bible_glyph_chapter_isa55() {
         words: [
           "$right_arrow",
           "My",
-          "$speech",
+          "$voice",
           "that",
           "$walking+tray_out",
           "from",

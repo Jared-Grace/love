@@ -279,7 +279,7 @@ export function bible_glyph_chapter_isa09() {
           "has",
           "sent",
           "a",
-          "$speech",
+          "$voice",
           "against",
           "$hand+foot,",
           "and",

@@ -15,7 +15,7 @@ export function bible_glyph_chapter_ecc01() {
         verse_number: 1,
         words: [
           "The",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "Teacher,",

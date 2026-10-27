@@ -610,7 +610,7 @@ export function bible_glyph_chapter_jdg16() {
           "him",
           "with",
           "her",
-          "$speech",
+          "$voice",
           "$sun",
           "after",
           "$sun",

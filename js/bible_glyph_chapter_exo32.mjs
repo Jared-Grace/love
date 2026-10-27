@@ -957,7 +957,7 @@ export function bible_glyph_chapter_exo32() {
           "$hammer+doing",
           "as",
           "$fishing_pole+proper_name",
-          "$speech,",
+          "$voice,",
           "and",
           "that",
           "$sun",

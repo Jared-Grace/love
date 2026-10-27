@@ -872,7 +872,7 @@ export function bible_glyph_chapter_gen41() {
           "versions",
           "$pointing",
           "the",
-          "$speech",
+          "$voice",
           "has",
           "been",
           "decreed",
@@ -1016,7 +1016,7 @@ export function bible_glyph_chapter_gen41() {
         verse_number: 37,
         words: [
           "This",
-          "$speech",
+          "$voice",
           "was",
           "good",
           "in",

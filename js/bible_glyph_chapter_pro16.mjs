@@ -412,7 +412,7 @@ export function bible_glyph_chapter_pro16() {
         words: [
           "Whoever",
           "heeds",
-          "$speech",
+          "$voice",
           "will",
           "$magnifying_glass+exclamation",
           "$thumbs_up,",

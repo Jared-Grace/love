@@ -222,7 +222,7 @@ export function bible_glyph_chapter_isa40() {
           "$fallen_leaf+doing,",
           "but",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "our",
           "$heart_on_fire",

@@ -17,7 +17,7 @@ export function bible_glyph_chapter_zec08() {
         words: [
           "Again",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",
@@ -282,7 +282,7 @@ export function bible_glyph_chapter_zec08() {
           "$sun",
           "$ear",
           "$flashlight+flashlight",
-          "$speech",
+          "$voice",
           "$back+flashlight",
           "by",
           "the",
@@ -586,7 +586,7 @@ export function bible_glyph_chapter_zec08() {
         words: [
           "Then",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

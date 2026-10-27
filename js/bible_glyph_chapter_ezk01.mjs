@@ -73,7 +73,7 @@ export function bible_glyph_chapter_ezk01() {
         verse_number: 3,
         words: [
           "The",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

@@ -539,7 +539,7 @@ export function bible_glyph_chapter_job19() {
           "$ginger_root",
           "of",
           "the",
-          "$speech",
+          "$voice",
           "$magnifying_glass+exclamation",
           "with",
           "him,",

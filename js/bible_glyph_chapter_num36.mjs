@@ -242,7 +242,7 @@ export function bible_glyph_chapter_num36() {
           "$flashlight",
           "is",
           "the",
-          "$speech",
+          "$voice",
           "that",
           "$i_am",
           "has",

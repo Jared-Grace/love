@@ -383,7 +383,7 @@ export function bible_glyph_chapter_2ki03() {
           "$i_am+scales",
           "$speech,",
           "The",
-          "$speech",
+          "$voice",
           "of",
           "$i_am",
           "$link",

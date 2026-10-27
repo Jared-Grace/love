@@ -16,7 +16,7 @@ export function bible_glyph_chapter_exo29() {
         words: [
           "Now",
           "$flashlight",
-          "$speech",
+          "$voice",
           "is",
           "what",
           "you",

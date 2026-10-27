@@ -354,7 +354,7 @@ export function bible_glyph_chapter_gen20() {
           "$hammer+doing",
           "such",
           "a",
-          "$speech?",
+          "$voice?",
         ],
       },
       {
@@ -593,7 +593,7 @@ export function bible_glyph_chapter_gen20() {
           "$father+king,",
           "over",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "$proper_name$Sarah",
           "the",

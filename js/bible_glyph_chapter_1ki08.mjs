@@ -2045,7 +2045,7 @@ export function bible_glyph_chapter_1ki08() {
           "And",
           "may",
           "$flashlight+flashlight",
-          "$speech",
+          "$voice",
           "with",
           "which",
           "I",
@@ -2084,7 +2084,7 @@ export function bible_glyph_chapter_1ki08() {
           "as",
           "each",
           "$sun",
-          "$speech,",
+          "$voice,",
         ],
       },
       {

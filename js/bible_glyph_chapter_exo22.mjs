@@ -289,7 +289,7 @@ export function bible_glyph_chapter_exo22() {
         words: [
           "In",
           "all",
-          "$speech",
+          "$voice",
           "of",
           "illegal",
           "possession,",
@@ -316,7 +316,7 @@ export function bible_glyph_chapter_exo22() {
           "shall",
           "$footprints",
           "their",
-          "$speech",
+          "$voice",
           "before",
           "the",
           "$heart_on_fire.",

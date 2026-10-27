@@ -14,7 +14,7 @@ export function bible_glyph_chapter_isa02() {
         verse_number: 1,
         words: [
           "The",
-          "$speech",
+          "$voice",
           "$back+flashlight",
           "was",
           "revealed",
@@ -119,7 +119,7 @@ export function bible_glyph_chapter_isa02() {
           "$scroll,",
           "and",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

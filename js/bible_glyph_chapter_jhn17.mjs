@@ -460,7 +460,7 @@ export function bible_glyph_chapter_jhn17() {
           "$tray_out",
           "of",
           "$pin",
-          "$thumbs_down",
+          "$smiling_face_with_horns",
           "one.",
         ],
       },

@@ -103,7 +103,7 @@ export function bible_glyph_chapter_psa130() {
           "and",
           "in",
           "His",
-          "$speech",
+          "$voice",
           "I",
           "put",
           "my",

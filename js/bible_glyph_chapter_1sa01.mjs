@@ -723,7 +723,7 @@ export function bible_glyph_chapter_1sa01() {
           "$i_am",
           "$person+pointing_up",
           "His",
-          "$speech.",
+          "$voice.",
           "So",
           "the",
           "$woman",

@@ -34,7 +34,7 @@ export function bible_glyph_chapter_hos14() {
         words: [
           "$hand_receiving",
           "your",
-          "$speech",
+          "$voice",
           "and",
           "$turn_back",
           "to",

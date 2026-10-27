@@ -16,9 +16,9 @@ export function bible_glyph_chapter_gen15() {
         words: [
           "$next_track",
           "$flashlight+flashlight",
-          "$speech,",
+          "$voice,",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",
@@ -102,7 +102,7 @@ export function bible_glyph_chapter_gen15() {
         words: [
           "Then",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

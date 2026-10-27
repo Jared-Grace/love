@@ -20,7 +20,7 @@ export function bible_glyph_chapter_deu30() {
           "When",
           "all",
           "$flashlight+flashlight",
-          "$speech",
+          "$voice",
           "$footprints",
           "upon",
           "you",
@@ -487,7 +487,7 @@ export function bible_glyph_chapter_deu30() {
         words: [
           "But",
           "the",
-          "$speech",
+          "$voice",
           "is",
           "$double_exclamation",
           "$magnet",

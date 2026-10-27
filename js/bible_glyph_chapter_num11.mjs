@@ -759,7 +759,7 @@ export function bible_glyph_chapter_num11() {
           "or",
           "$no_entry",
           "My",
-          "$speech",
+          "$voice",
           "will",
           "come",
           "to",

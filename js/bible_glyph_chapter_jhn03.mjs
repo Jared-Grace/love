@@ -501,7 +501,7 @@ export function bible_glyph_chapter_jhn03() {
           "their",
           "$tools",
           "were",
-          "$thumbs_down.",
+          "$smiling_face_with_horns.",
         ],
       },
       {

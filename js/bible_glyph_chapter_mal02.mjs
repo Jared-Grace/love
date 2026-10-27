@@ -598,7 +598,7 @@ export function bible_glyph_chapter_mal02() {
           "$i_am",
           "with",
           "your",
-          "$speech;",
+          "$voice;",
           "yet",
           "you",
           "$speech,",

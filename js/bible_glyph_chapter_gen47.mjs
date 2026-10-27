@@ -1056,7 +1056,7 @@ export function bible_glyph_chapter_gen47() {
           "as",
           "you",
           "have",
-          "$speech.",
+          "$voice.",
         ],
       },
       {

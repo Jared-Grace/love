@@ -68,7 +68,7 @@ export function bible_glyph_chapter_psa101() {
           "$palm_down+round_pushpin+doing",
           "$no_entry",
           "worthless",
-          "$speech",
+          "$voice",
           "before",
           "my",
           "$eyes.",

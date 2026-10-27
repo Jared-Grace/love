@@ -279,7 +279,7 @@ export function bible_glyph_chapter_rut04() {
           "to",
           "make",
           "any",
-          "$speech",
+          "$voice",
           "legally",
           "binding",
           "a",

@@ -793,7 +793,7 @@ export function bible_glyph_chapter_gen30() {
           "will",
           "$hammer+doing",
           "$flashlight",
-          "$speech",
+          "$voice",
           "for",
           "me,",
           "I",
@@ -904,7 +904,7 @@ export function bible_glyph_chapter_gen30() {
           "as",
           "you",
           "have",
-          "$speech.",
+          "$voice.",
         ],
       },
       {

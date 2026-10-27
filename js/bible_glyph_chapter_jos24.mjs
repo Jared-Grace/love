@@ -860,7 +860,7 @@ export function bible_glyph_chapter_jos24() {
           "$i_am+rescue",
           "$writing_hand",
           "$flashlight+flashlight",
-          "$speech",
+          "$voice",
           "in",
           "the",
           "$closed_book",

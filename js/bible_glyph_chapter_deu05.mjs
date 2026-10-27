@@ -134,7 +134,7 @@ export function bible_glyph_chapter_deu05() {
           "to",
           "you",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am,",

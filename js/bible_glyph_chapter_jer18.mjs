@@ -47,7 +47,7 @@ export function bible_glyph_chapter_jer18() {
           "you",
           "$ear",
           "My",
-          "$speech.",
+          "$voice.",
         ],
       },
       {
@@ -111,7 +111,7 @@ export function bible_glyph_chapter_jer18() {
         words: [
           "Then",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",
@@ -541,7 +541,7 @@ export function bible_glyph_chapter_jer18() {
           "wise,",
           "nor",
           "the",
-          "$speech",
+          "$voice",
           "from",
           "the",
           "$megaphone.",
@@ -558,7 +558,7 @@ export function bible_glyph_chapter_jer18() {
           "any",
           "of",
           "his",
-          "$speech.",
+          "$voice.",
         ],
       },
       {

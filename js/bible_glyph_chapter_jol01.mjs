@@ -15,7 +15,7 @@ export function bible_glyph_chapter_jol01() {
           "This",
           "is",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

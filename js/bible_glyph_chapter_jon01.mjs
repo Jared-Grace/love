@@ -15,7 +15,7 @@ export function bible_glyph_chapter_jon01() {
         words: [
           "Now",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

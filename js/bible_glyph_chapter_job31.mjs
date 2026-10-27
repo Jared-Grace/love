@@ -851,7 +851,7 @@ export function bible_glyph_chapter_job31() {
           "Thus",
           "conclude",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "$proper_name$Job.",
         ],

@@ -221,7 +221,7 @@ export function bible_glyph_chapter_exo19() {
           "them",
           "$all",
           "$flashlight+flashlight",
-          "$speech",
+          "$voice",
           "$back+flashlight",
           "the",
           "$i_am",

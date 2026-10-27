@@ -227,7 +227,7 @@ export function bible_glyph_chapter_mic02() {
           "Do",
           "$no_entry",
           "My",
-          "$speech",
+          "$voice",
           "bring",
           "$thumbs_up+doing",
           "to",

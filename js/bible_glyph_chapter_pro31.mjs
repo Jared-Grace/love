@@ -16,7 +16,7 @@ export function bible_glyph_chapter_pro31() {
           "These",
           "are",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "$king",
           "$proper_name$Lemuel,",

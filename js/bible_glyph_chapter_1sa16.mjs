@@ -608,7 +608,7 @@ export function bible_glyph_chapter_1sa16() {
           "and",
           "a",
           "warrior,",
-          "$speech",
+          "$voice",
           "and",
           "handsome,",
           "and",

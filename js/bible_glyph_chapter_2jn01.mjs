@@ -311,7 +311,7 @@ export function bible_glyph_chapter_2jn01() {
           "$handshake+hands_giving+doing",
           "in",
           "$pointing_back",
-          "$thumbs_down",
+          "$smiling_face_with_horns",
           "$tools.",
         ],
       },

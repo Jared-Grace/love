@@ -235,7 +235,7 @@ export function bible_glyph_chapter_3jn01() {
           "he",
           "$hammer",
           "with",
-          "$thumbs_down",
+          "$smiling_face_with_horns",
           "$speech",
           "against",
           "$me.",

@@ -408,7 +408,7 @@ export function bible_glyph_chapter_psa103() {
           "who",
           "$hammer+doing",
           "His",
-          "$speech,",
+          "$voice,",
           "who",
           "$ear",
           "to",
@@ -416,7 +416,7 @@ export function bible_glyph_chapter_psa103() {
           "$voice",
           "of",
           "His",
-          "$speech.",
+          "$voice.",
         ],
       },
       {

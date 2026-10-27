@@ -290,7 +290,7 @@ export function bible_glyph_chapter_jos03() {
           "and",
           "$ear",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

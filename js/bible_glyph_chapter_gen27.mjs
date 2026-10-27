@@ -978,7 +978,7 @@ export function bible_glyph_chapter_gen27() {
           "$hair+proper_name",
           "$ear",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "his",
           "$father,",
@@ -1247,7 +1247,7 @@ export function bible_glyph_chapter_gen27() {
         words: [
           "When",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "her",
           "older",

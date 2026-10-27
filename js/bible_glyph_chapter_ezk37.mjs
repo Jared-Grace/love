@@ -124,7 +124,7 @@ export function bible_glyph_chapter_ezk37() {
           "$bone,",
           "$ear",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am!",
@@ -488,7 +488,7 @@ export function bible_glyph_chapter_ezk37() {
         words: [
           "Again",
           "the",
-          "$speech",
+          "$voice",
           "of",
           "the",
           "$i_am",

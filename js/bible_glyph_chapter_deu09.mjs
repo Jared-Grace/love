@@ -216,7 +216,7 @@ export function bible_glyph_chapter_deu09() {
           "to",
           "$person+pointing_up",
           "the",
-          "$speech",
+          "$voice",
           "$i_am",
           "$raised_back_of_hand+doing",
           "to",

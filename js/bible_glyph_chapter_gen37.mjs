@@ -238,7 +238,7 @@ export function bible_glyph_chapter_gen37() {
           "$dream",
           "and",
           "his",
-          "$speech.",
+          "$voice.",
         ],
       },
       {
@@ -339,7 +339,7 @@ export function bible_glyph_chapter_gen37() {
           "what",
           "he",
           "had",
-          "$speech.",
+          "$voice.",
         ],
       },
       {
@@ -411,7 +411,7 @@ export function bible_glyph_chapter_gen37() {
           "faring,",
           "and",
           "bring",
-          "$speech",
+          "$voice",
           "$turn_back",
           "to",
           "me.",
