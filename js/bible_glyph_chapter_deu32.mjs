@@ -336,7 +336,7 @@ export function bible_glyph_chapter_deu32() {
           "He",
           "made",
           "him",
-          "ride",
+          "$horse_racing+doing",
           "on",
           "the",
           "heights",
