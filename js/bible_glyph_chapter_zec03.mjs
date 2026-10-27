@@ -54,7 +54,7 @@ export function bible_glyph_chapter_zec03() {
           "$i_am",
           "rebukes",
           "you,",
-          "Satan!",
+          "$smiling_face_with_horns!",
           "Indeed,",
           "the",
           "$i_am",
