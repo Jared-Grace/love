@@ -414,7 +414,7 @@ export function bible_glyph_chapter_lev11() {
         verse_number: 19,
         words: [
           "the",
-          "stork,",
+          "$bird+baby,",
           "any",
           "kind",
           "of",
