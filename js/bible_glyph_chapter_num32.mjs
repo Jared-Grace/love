@@ -907,7 +907,7 @@ export function bible_glyph_chapter_num32() {
           "accept",
           "their",
           "possession",
-          "among",
+          "$radio_button",
           "you",
           "in",
           "the",
