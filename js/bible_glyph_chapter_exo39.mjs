@@ -361,7 +361,7 @@ export function bible_glyph_chapter_exo39() {
           "of",
           "the",
           "twelve",
-          "tribes,",
+          "$wood,",
           "$name_tag",
           "by",
           "name.",
