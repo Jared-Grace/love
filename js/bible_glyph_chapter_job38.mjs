@@ -715,7 +715,7 @@ export function bible_glyph_chapter_job38() {
           "understanding",
           "to",
           "the",
-          "mind?",
+          "$brain+eyes?",
         ],
       },
       {
