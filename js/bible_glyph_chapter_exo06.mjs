@@ -654,7 +654,7 @@ export function bible_glyph_chapter_exo06() {
           "$proper_name$Elkanah",
           "and",
           "$proper_name$Abiasaph.",
-          "These",
+          "$flashlight+flashlight",
           "were",
           "the",
           "clans",
