@@ -146,7 +146,7 @@ export function bible_glyph_chapter_hab02() {
           "is",
           "an",
           "arrogant",
-          "man",
+          "$might+man_beard",
           "$no_entry",
           "at",
           "rest.",
