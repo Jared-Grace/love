@@ -200,7 +200,7 @@ export function bible_glyph_chapter_nam01() {
           "is",
           "$thumbs_up,",
           "a",
-          "stronghold",
+          "$shield+house",
           "in",
           "the",
           "$sun",
