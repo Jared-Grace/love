@@ -534,7 +534,7 @@ export function bible_glyph_chapter_exo28() {
           "a",
           "$gem_stone+water_wave,",
           "an",
-          "onyx",
+          "$gem_stone+stone",
           "and",
           "a",
           "jasper.",
