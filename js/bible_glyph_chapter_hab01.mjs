@@ -110,7 +110,7 @@ export function bible_glyph_chapter_hab01() {
           "that",
           "$scales+thing",
           "is",
-          "perverted.",
+          "$scales+collision+doing.",
         ],
       },
       {
