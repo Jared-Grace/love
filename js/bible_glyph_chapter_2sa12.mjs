@@ -788,7 +788,7 @@ export function bible_glyph_chapter_2sa12() {
           "$flashlight+question",
           "should",
           "I",
-          "fast?",
+          "$eating+locked+doing?",
           "Can",
           "I",
           "$turn_back",
