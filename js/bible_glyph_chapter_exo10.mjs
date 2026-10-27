@@ -761,7 +761,7 @@ export function bible_glyph_chapter_exo10() {
           "total",
           "$darkness",
           "$link",
-          "all",
+          "$all",
           "the",
           "$earth",
           "of",
