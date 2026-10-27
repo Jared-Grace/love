@@ -316,7 +316,7 @@ export function bible_glyph_chapter_exo09() {
           "magicians",
           "could",
           "$no_entry",
-          "stand",
+          "$person+round_pushpin",
           "before",
           "$fishing_pole+proper_name,",
           "because",
