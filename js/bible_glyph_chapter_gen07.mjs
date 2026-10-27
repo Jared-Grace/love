@@ -647,7 +647,7 @@ export function bible_glyph_chapter_gen07() {
           "And",
           "the",
           "$water",
-          "prevailed",
+          "$might+man_beard+doing",
           "upon",
           "the",
           "$earth",
