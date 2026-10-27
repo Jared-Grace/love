@@ -69,7 +69,7 @@ export function bible_glyph_chapter_num17() {
           "$white_cane+blossom+proper_name",
           "$pointing_up",
           "the",
-          "staff",
+          "$white_cane",
           "of",
           "$handshake+proper_name,",
           "because",
