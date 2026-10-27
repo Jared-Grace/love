@@ -311,7 +311,7 @@ export function bible_glyph_chapter_1sa02() {
           "will",
           "$up_arrow",
           "the",
-          "horn",
+          "$horn",
           "of",
           "His",
           "$oil.",
