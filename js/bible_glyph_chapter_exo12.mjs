@@ -774,7 +774,7 @@ export function bible_glyph_chapter_exo12() {
           "$leg+up_arrow+doing",
           "over",
           "that",
-          "doorway,",
+          "$door,",
           "so",
           "He",
           "will",
