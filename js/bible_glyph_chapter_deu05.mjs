@@ -206,7 +206,7 @@ export function bible_glyph_chapter_deu05() {
           "for",
           "yourself",
           "an",
-          "idol",
+          "$nesting_dolls",
           "in",
           "the",
           "form",
