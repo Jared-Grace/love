@@ -601,7 +601,7 @@ export function bible_glyph_chapter_lev24() {
           "took",
           "the",
           "$speech+thumbs_down",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp",
           "and",
