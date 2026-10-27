@@ -117,7 +117,7 @@ export function bible_glyph_chapter_num08() {
           "the",
           "$handshake",
           "from",
-          "among",
+          "$radio_button",
           "$son",
           "of",
           "Israel,",
