@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa103() {
           "$sprout",
           "from",
           "the",
-          "Pit,",
+          "$hole+skull,",
           "who",
           "crowns",
           "you",
