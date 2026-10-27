@@ -719,7 +719,7 @@ export function bible_glyph_chapter_deu11() {
       {
         verse_number: 22,
         words: [
-          "For",
+          "$pointing",
           "if",
           "you",
           "carefully",
