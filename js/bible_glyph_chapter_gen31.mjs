@@ -1434,7 +1434,7 @@ export function bible_glyph_chapter_gen31() {
           "if",
           "you",
           "$hand_receiving",
-          "other",
+          "$pointing_up",
           "$woman",
           "beside",
           "my",
