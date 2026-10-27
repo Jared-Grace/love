@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lev06() {
     verses: [
       {
         verse_number: 1,
-        words: ["And", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
+        words: ["And", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
