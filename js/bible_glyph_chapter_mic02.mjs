@@ -100,7 +100,7 @@ export function bible_glyph_chapter_mic02() {
           "so",
           "proudly,",
           "$pointing",
-          "it",
+          "$pointing_back",
           "will",
           "be",
           "a",
