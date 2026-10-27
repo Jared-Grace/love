@@ -505,7 +505,7 @@ export function bible_glyph_chapter_lev27() {
           "required",
           "for",
           "it:",
-          "fifty",
+          "$five+zero",
           "shekels",
           "of",
           "$silver",
