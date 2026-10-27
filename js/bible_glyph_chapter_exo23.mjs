@@ -566,7 +566,7 @@ export function bible_glyph_chapter_exo23() {
       {
         verse_number: 20,
         words: [
-          "Behold,",
+          "$exclamation,",
           "I",
           "am",
           "sending",
