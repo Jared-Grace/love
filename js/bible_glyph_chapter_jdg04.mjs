@@ -181,7 +181,7 @@ export function bible_glyph_chapter_jdg04() {
           "$hand_receiving",
           "with",
           "you",
-          "ten",
+          "$ten",
           "thousand",
           "$man_beard",
           "of",
