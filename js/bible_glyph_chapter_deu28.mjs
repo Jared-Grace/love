@@ -1314,7 +1314,7 @@ export function bible_glyph_chapter_deu28() {
           "locusts",
           "will",
           "consume",
-          "all",
+          "$all",
           "your",
           "$tree",
           "and",
