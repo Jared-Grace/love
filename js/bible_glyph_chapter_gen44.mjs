@@ -925,7 +925,7 @@ export function bible_glyph_chapter_gen44() {
           "my",
           "$father,",
           "$speech,",
-          "If",
+          "$traffic_light",
           "I",
           "do",
           "$no_entry",
