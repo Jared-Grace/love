@@ -406,7 +406,7 @@ export function bible_glyph_chapter_gen13() {
           "where",
           "$you",
           "are,",
-          "north",
+          "$compass+up_arrow",
           "and",
           "south",
           "and",
