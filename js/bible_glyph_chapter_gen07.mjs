@@ -268,7 +268,7 @@ export function bible_glyph_chapter_gen07() {
           "the",
           "flood",
           "came",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth.",
         ],
