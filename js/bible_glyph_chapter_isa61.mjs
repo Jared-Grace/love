@@ -281,7 +281,7 @@ export function bible_glyph_chapter_isa61() {
           "$heart_red+doing",
           "$scales+thing;",
           "I",
-          "hate",
+          "$heart_red+thumbs_down",
           "robbery",
           "and",
           "iniquity.",
