@@ -441,7 +441,7 @@ export function bible_glyph_chapter_exo18() {
           "$family,",
           "he",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "is",
           "this",
           "$back+flashlight",
