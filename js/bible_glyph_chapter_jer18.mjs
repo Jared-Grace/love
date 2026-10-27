@@ -439,7 +439,7 @@ export function bible_glyph_chapter_jer18() {
           "leave",
           "the",
           "$hourglass",
-          "roads,",
+          "$road+droplet,",
           "to",
           "$walking",
           "on",
