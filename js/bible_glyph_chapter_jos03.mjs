@@ -18,7 +18,7 @@ export function bible_glyph_chapter_jos03() {
           "Early",
           "the",
           "next",
-          "morning",
+          "$morning",
           "$i_am+rescue",
           "got",
           "up",
