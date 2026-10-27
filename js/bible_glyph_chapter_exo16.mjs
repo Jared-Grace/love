@@ -1105,7 +1105,7 @@ export function bible_glyph_chapter_exo16() {
           "Israel",
           "ate",
           "$flashlight+question+thing",
-          "forty",
+          "$four+zero",
           "$year,",
           "until",
           "they",
