@@ -510,7 +510,7 @@ export function bible_glyph_chapter_lev09() {
           "$hand+right_arrow",
           "$leg",
           "he",
-          "waved",
+          "$hand+up_down_arrow+doing",
           "as",
           "a",
           "wave",
