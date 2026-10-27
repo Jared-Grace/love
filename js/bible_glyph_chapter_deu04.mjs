@@ -1212,7 +1212,7 @@ export function bible_glyph_chapter_deu04() {
           "the",
           "$fire,",
           "as",
-          "you",
+          "$you",
           "have",
           "$ear,",
           "and",
