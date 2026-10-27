@@ -211,7 +211,7 @@ export function bible_glyph_chapter_deu28() {
           "from",
           "you",
           "on",
-          "seven",
+          "$seven",
           "$road.",
         ],
       },
