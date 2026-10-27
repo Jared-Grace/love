@@ -198,7 +198,7 @@ export function bible_glyph_chapter_zec04() {
           "by",
           "shouts",
           "of",
-          "Grace,",
+          "$heart_orange,",
           "grace",
           "to",
           "it.",
