@@ -27,7 +27,7 @@ export function bible_glyph_chapter_num32() {
           "Gad",
           "had",
           "very",
-          "large",
+          "$bone+describing",
           "herds",
           "and",
           "flocks,",
