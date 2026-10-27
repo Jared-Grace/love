@@ -586,7 +586,7 @@ export function bible_glyph_chapter_2sa12() {
           "$two_hearts+proper_name's",
           "$kneeling",
           "were",
-          "afraid",
+          "$fear+doing",
           "to",
           "tell",
           "him",
