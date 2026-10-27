@@ -438,7 +438,7 @@ export function bible_glyph_chapter_job38() {
           "the",
           "storehouses",
           "of",
-          "hail,",
+          "$ice,",
         ],
       },
       {
