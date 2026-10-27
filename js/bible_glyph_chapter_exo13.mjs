@@ -28,7 +28,7 @@ export function bible_glyph_chapter_exo13() {
           "first",
           "from",
           "$all",
-          "womb",
+          "$hugging_face+baby",
           "among",
           "the",
           "$son",
