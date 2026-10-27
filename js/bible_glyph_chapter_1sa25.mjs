@@ -81,7 +81,7 @@ export function bible_glyph_chapter_1sa25() {
           "and",
           "he",
           "was",
-          "shearing",
+          "$scissors+sheep+doing",
           "his",
           "$sheep",
           "in",
