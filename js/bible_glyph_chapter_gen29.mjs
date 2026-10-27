@@ -801,7 +801,7 @@ export function bible_glyph_chapter_gen29() {
           "He",
           "opened",
           "her",
-          "womb;",
+          "$hugging_face+baby;",
           "but",
           "$proper_name$Rachel",
           "was",
