@@ -536,7 +536,7 @@ export function bible_glyph_chapter_lev25() {
           "My",
           "$statute",
           "and",
-          "carefully",
+          "$guard",
           "$hammer+doing",
           "My",
           "$scales+thing,",
