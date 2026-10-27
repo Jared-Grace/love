@@ -288,7 +288,7 @@ export function bible_glyph_chapter_1sa17() {
           "the",
           "Philistine",
           "$speech,",
-          "I",
+          "$me",
           "defy",
           "the",
           "ranks",
