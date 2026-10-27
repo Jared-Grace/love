@@ -467,7 +467,7 @@ export function bible_glyph_chapter_amo09() {
       {
         verse_number: 13,
         words: [
-          "Behold,",
+          "$exclamation,",
           "the",
           "$sun",
           "are",
