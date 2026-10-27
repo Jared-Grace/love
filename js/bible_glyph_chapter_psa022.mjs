@@ -369,7 +369,7 @@ export function bible_glyph_chapter_psa022() {
           "my",
           "bones;",
           "$pointing_back",
-          "stare",
+          "$face_with_monocle",
           "and",
           "$eye",
           "over",
