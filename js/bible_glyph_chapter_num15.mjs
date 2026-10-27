@@ -290,7 +290,7 @@ export function bible_glyph_chapter_num15() {
       {
         verse_number: 11,
         words: [
-          "This",
+          "$flashlight+manner",
           "is",
           "to",
           "be",
