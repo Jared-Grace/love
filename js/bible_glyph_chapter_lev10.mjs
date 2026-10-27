@@ -547,7 +547,7 @@ export function bible_glyph_chapter_lev10() {
       {
         verse_number: 18,
         words: [
-          "Since",
+          "$exclamation",
           "$blood",
           "$no_entry",
           "$footprints",
