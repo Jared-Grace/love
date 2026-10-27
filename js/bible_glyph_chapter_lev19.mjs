@@ -479,7 +479,7 @@ export function bible_glyph_chapter_lev19() {
           "You",
           "are",
           "to",
-          "keep",
+          "$guard",
           "My",
           "statutes.",
           "You",
