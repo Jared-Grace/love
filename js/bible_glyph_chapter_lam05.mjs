@@ -90,7 +90,7 @@ export function bible_glyph_chapter_lam05() {
           "and",
           "find",
           "$no_entry",
-          "rest.",
+          "$seat+doing.",
         ],
       },
       {
