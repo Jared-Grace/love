@@ -891,7 +891,7 @@ export function bible_glyph_chapter_ezk34() {
           "bars",
           "of",
           "their",
-          "yoke",
+          "$yoke",
           "and",
           "delivered",
           "them",
