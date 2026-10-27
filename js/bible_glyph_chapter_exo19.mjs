@@ -553,7 +553,7 @@ export function bible_glyph_chapter_exo19() {
           "$family",
           "$tray_out",
           "the",
-          "camp",
+          "$camp",
           "to",
           "$footprints+toward+doing",
           "with",
