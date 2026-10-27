@@ -565,7 +565,7 @@ export function bible_glyph_chapter_amo09() {
           "from",
           "the",
           "$brown_square",
-          "that",
+          "$back+flashlight",
           "I",
           "have",
           "$hands_giving",
