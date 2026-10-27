@@ -595,7 +595,7 @@ export function bible_glyph_chapter_zep03() {
           "you.",
           "I",
           "will",
-          "save",
+          "$rescue",
           "the",
           "lame",
           "and",
