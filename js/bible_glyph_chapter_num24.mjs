@@ -712,7 +712,7 @@ export function bible_glyph_chapter_num24() {
         verse_number: 25,
         words: [
           "Then",
-          "Balaam",
+          "$foreigner+proper_name",
           "$person+pointing_up,",
           "$walking",
           "and",
