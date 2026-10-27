@@ -602,7 +602,7 @@ export function bible_glyph_chapter_isa07() {
           "will",
           "use",
           "a",
-          "razor",
+          "$razor",
           "hired",
           "from",
           "beyond",
