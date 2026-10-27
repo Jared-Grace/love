@@ -586,7 +586,7 @@ export function bible_glyph_chapter_num15() {
           "$all",
           "$flashlight+flashlight",
           "$scroll",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "has",
           "$mouth",
