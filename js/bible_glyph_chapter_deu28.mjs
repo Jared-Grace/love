@@ -41,7 +41,7 @@ export function bible_glyph_chapter_deu28() {
           "His",
           "$scroll",
           "that",
-          "I",
+          "$me",
           "am",
           "giving",
           "you",
