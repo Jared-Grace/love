@@ -65,7 +65,7 @@ export function bible_glyph_chapter_1ki22() {
           "you",
           "not",
           "$lightbulb",
-          "that",
+          "$pointing",
           "$proper_name$Ramoth-gilead",
           "is",
           "ours,",
