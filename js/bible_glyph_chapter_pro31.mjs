@@ -586,7 +586,7 @@ export function bible_glyph_chapter_pro31() {
       {
         verse_number: 30,
         words: [
-          "Charm",
+          "$heart_orange",
           "is",
           "deceptive",
           "and",
