@@ -603,7 +603,7 @@ export function bible_glyph_chapter_num20() {
           "or",
           "our",
           "herds",
-          "drink",
+          "$cup_with_straw",
           "your",
           "$water,",
           "we",
