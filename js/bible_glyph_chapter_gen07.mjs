@@ -216,7 +216,7 @@ export function bible_glyph_chapter_gen07() {
           "$tray_out",
           "the",
           "clean",
-          "animals",
+          "$paw_prints",
           "and",
           "the",
           "unclean,",
