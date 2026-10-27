@@ -375,7 +375,7 @@ export function bible_glyph_chapter_2sa07() {
           "enemies.",
           "The",
           "$i_am",
-          "declares",
+          "$newspaper",
           "to",
           "you",
           "that",
