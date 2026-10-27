@@ -740,7 +740,7 @@ export function bible_glyph_chapter_jer32() {
           "and",
           "with",
           "great",
-          "terror.",
+          "$fear+thing.",
         ],
       },
       {
