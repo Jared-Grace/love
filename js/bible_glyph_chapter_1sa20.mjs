@@ -997,7 +997,7 @@ export function bible_glyph_chapter_1sa20() {
           "in",
           "your",
           "$eyes,",
-          "please",
+          "$pleading",
           "let",
           "me",
           "go",
