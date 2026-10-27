@@ -432,7 +432,7 @@ export function bible_glyph_chapter_dan01() {
           "tested",
           "them",
           "for",
-          "ten",
+          "$ten",
           "$sun.",
         ],
       },
