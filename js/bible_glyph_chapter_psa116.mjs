@@ -375,7 +375,7 @@ export function bible_glyph_chapter_psa116() {
           "$radio_button,",
           "O",
           "Jerusalem.",
-          "Hallelujah!",
+          "$clapping_hands!",
         ],
       },
     ],
