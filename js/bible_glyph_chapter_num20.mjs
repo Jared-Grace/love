@@ -565,7 +565,7 @@ export function bible_glyph_chapter_num20() {
           "You",
           "may",
           "$no_entry",
-          "travel",
+          "$bridge",
           "through",
           "our",
           "land,",
