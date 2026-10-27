@@ -565,7 +565,7 @@ export function bible_glyph_chapter_2ki01() {
           "my",
           "$person_other",
           "be",
-          "precious",
+          "$gem_stone+doing",
           "in",
           "your",
           "$eyes.",
