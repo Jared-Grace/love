@@ -633,7 +633,7 @@ export function bible_glyph_chapter_num14() {
           "have",
           "forgiven",
           "$family",
-          "ever",
+          "$finish",
           "since",
           "they",
           "left",
