@@ -1286,7 +1286,7 @@ export function bible_glyph_chapter_neh09() {
           "$scroll",
           "and",
           "$witness+thing",
-          "that",
+          "$back+flashlight",
           "You",
           "$witness+doing",
           "them.",
