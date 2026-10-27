@@ -121,7 +121,7 @@ export function bible_glyph_chapter_gen43() {
           "will",
           "$no_entry",
           "$walking+pointing_down,",
-          "for",
+          "$pointing",
           "the",
           "$man_beard",
           "$speech",
