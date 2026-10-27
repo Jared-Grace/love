@@ -427,7 +427,7 @@ export function bible_glyph_chapter_ecc03() {
           "and",
           "the",
           "$thumbs_down,",
-          "since",
+          "$pointing",
           "there",
           "is",
           "a",
