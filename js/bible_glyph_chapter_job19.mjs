@@ -67,7 +67,7 @@ export function bible_glyph_chapter_job19() {
         verse_number: 5,
         words: [
           "$traffic_light",
-          "indeed",
+          "$anchor+manner",
           "you",
           "would",
           "exalt",
