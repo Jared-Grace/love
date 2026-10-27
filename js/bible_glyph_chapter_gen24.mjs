@@ -1786,7 +1786,7 @@ export function bible_glyph_chapter_gen24() {
           "way",
           "with",
           "her",
-          "nurse,",
+          "$breast_feeding+doing,",
           "along",
           "with",
           "$father+map's",
