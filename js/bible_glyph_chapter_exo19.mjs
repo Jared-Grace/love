@@ -637,7 +637,7 @@ export function bible_glyph_chapter_exo19() {
         words: [
           "The",
           "$i_am",
-          "descended",
+          "$walking+pointing_down",
           "to",
           "the",
           "top",
