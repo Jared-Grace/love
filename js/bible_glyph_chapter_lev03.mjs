@@ -391,7 +391,7 @@ export function bible_glyph_chapter_lev03() {
           "offering",
           "he",
           "shall",
-          "present",
+          "$magnet+doing",
           "a",
           "food",
           "offering",
