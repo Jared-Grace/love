@@ -233,7 +233,7 @@ export function bible_glyph_chapter_num36() {
           "of",
           "$i_am+plus",
           "$mouth",
-          "correctly.",
+          "$right_arrow.",
         ],
       },
       {
