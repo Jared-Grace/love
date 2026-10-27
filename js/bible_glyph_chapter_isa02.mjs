@@ -609,7 +609,7 @@ export function bible_glyph_chapter_isa02() {
           "has",
           "only",
           "the",
-          "breath",
+          "$nose+dashing_away",
           "in",
           "his",
           "nostrils.",
