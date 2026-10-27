@@ -251,7 +251,7 @@ export function bible_glyph_chapter_lev23() {
           "to",
           "$footprints",
           "a",
-          "sheaf",
+          "$wheat+knot",
           "of",
           "the",
           "firstfruits",
