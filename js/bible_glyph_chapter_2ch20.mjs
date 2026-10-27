@@ -209,7 +209,7 @@ export function bible_glyph_chapter_2ch20() {
           "did",
           "You",
           "$no_entry",
-          "drive",
+          "$triangular_flag",
           "out",
           "the",
           "inhabitants",
