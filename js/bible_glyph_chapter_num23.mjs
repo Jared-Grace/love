@@ -716,7 +716,7 @@ export function bible_glyph_chapter_num23() {
           "Now",
           "Balak",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Balaam,",
           "Then",
           "$no_entry",
