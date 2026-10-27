@@ -569,7 +569,7 @@ export function bible_glyph_chapter_1sa02() {
           "$ear+heart_on_fire",
           "was",
           "ministering",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "a",
