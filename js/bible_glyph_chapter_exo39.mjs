@@ -49,7 +49,7 @@ export function bible_glyph_chapter_exo39() {
           "He",
           "$hammer+doing",
           "the",
-          "ephod",
+          "$safety_vest",
           "$gold,",
           "and",
           "blue,",
