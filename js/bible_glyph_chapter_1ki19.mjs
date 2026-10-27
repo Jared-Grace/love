@@ -98,7 +98,7 @@ export function bible_glyph_chapter_1ki19() {
           "left",
           "his",
           "servant",
-          "there,",
+          "$telescope,",
         ],
       },
       {
