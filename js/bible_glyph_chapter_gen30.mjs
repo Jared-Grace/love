@@ -871,7 +871,7 @@ export function bible_glyph_chapter_gen30() {
           "$back+flashlight",
           "is",
           "not",
-          "speckled",
+          "$black_circle+describing",
           "and",
           "spotted",
           "among",
