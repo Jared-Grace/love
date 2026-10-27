@@ -339,7 +339,7 @@ export function bible_glyph_chapter_lev25() {
           "$seed+doing,",
           "$no_entry",
           "to",
-          "reap",
+          "$sheaf_of_rice+scissors+doing",
           "its",
           "aftergrowth,",
           "$no_entry",
