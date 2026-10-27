@@ -774,7 +774,7 @@ export function bible_glyph_chapter_1sa02() {
       {
         verse_number: 25,
         words: [
-          "If",
+          "$traffic_light",
           "a",
           "$man_beard",
           "$bow+doing",
