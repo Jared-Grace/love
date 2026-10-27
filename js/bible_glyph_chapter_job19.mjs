@@ -500,7 +500,7 @@ export function bible_glyph_chapter_job19() {
       {
         verse_number: 27,
         words: [
-          "I",
+          "$me",
           "will",
           "see",
           "Him",
