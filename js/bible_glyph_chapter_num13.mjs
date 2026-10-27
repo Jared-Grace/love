@@ -488,7 +488,7 @@ export function bible_glyph_chapter_num13() {
           "single",
           "$grapes+bouquet",
           "of",
-          "grapes,",
+          "$grapes,",
           "which",
           "they",
           "carried",
