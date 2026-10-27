@@ -554,7 +554,7 @@ export function bible_glyph_chapter_deu33() {
         words: [
           "They",
           "will",
-          "call",
+          "$waving_hand",
           "the",
           "$family",
           "to",
