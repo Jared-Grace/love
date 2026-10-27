@@ -464,7 +464,7 @@ export function bible_glyph_chapter_isa43() {
           "and",
           "$walking+pointing_down",
           "them",
-          "all",
+          "$all",
           "down",
           "as",
           "fugitives,",
