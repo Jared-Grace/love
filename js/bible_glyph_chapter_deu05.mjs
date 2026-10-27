@@ -524,7 +524,7 @@ export function bible_glyph_chapter_deu05() {
       },
       {
         verse_number: 17,
-        words: ["You", "shall", "$no_entry", "murder."],
+        words: ["You", "shall", "$no_entry", "$sword+coffin."],
       },
       {
         verse_number: 18,
