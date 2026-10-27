@@ -151,7 +151,7 @@ export function bible_glyph_chapter_lev02() {
           "must",
           "be",
           "$flour",
-          "mixed",
+          "$spoon+cyclone",
           "with",
           "oil,",
           "unleavened.",
