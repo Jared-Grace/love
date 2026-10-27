@@ -107,7 +107,7 @@ export function bible_glyph_chapter_lev15() {
           "sits",
           "will",
           "be",
-          "unclean.",
+          "$soap+no_entry.",
         ],
       },
       {
