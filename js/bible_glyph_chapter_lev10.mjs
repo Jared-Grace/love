@@ -91,7 +91,7 @@ export function bible_glyph_chapter_lev10() {
           "the",
           "sight",
           "of",
-          "all",
+          "$all",
           "$family",
           "I",
           "will",
