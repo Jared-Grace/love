@@ -80,7 +80,7 @@ export function bible_glyph_chapter_amo05() {
           "but",
           "a",
           "hundred",
-          "left,",
+          "$puzzle_piece+doing,",
           "and",
           "the",
           "one",
