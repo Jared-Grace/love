@@ -371,7 +371,7 @@ export function bible_glyph_chapter_lam05() {
           "we",
           "may",
           "$turn_back;",
-          "renew",
+          "$new_button+doing",
           "our",
           "$sun",
           "as",
