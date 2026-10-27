@@ -466,7 +466,7 @@ export function bible_glyph_chapter_isa09() {
           "$megaphone",
           "who",
           "teaches",
-          "lies.",
+          "$lying_face.",
         ],
       },
       {
