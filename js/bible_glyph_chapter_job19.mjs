@@ -193,7 +193,7 @@ export function bible_glyph_chapter_job19() {
         verse_number: 11,
         words: [
           "His",
-          "anger",
+          "$nose+fire",
           "$angry_face+doing",
           "against",
           "me,",
