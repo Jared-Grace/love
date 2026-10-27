@@ -30,7 +30,7 @@ export function bible_glyph_chapter_ezk03() {
           "here.",
           "$eating",
           "this",
-          "scroll,",
+          "$page_with_curl,",
           "then",
           "$walking",
           "and",
