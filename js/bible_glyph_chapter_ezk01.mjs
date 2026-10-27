@@ -442,7 +442,7 @@ export function bible_glyph_chapter_ezk01() {
           "the",
           "$eyes",
           "of",
-          "beryl,",
+          "$gem_stone+water_wave,",
           "and",
           "all",
           "four",
