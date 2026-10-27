@@ -61,7 +61,7 @@ export function bible_glyph_chapter_pro01() {
         words: [
           "to",
           "$hands_giving",
-          "prudence",
+          "$fox+thing",
           "to",
           "the",
           "simple",
