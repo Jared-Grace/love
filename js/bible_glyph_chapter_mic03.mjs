@@ -116,7 +116,7 @@ export function bible_glyph_chapter_mic03() {
           "them.",
           "At",
           "that",
-          "time",
+          "$clock",
           "He",
           "will",
           "hide",
