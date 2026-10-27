@@ -885,7 +885,7 @@ export function bible_glyph_chapter_1ki22() {
           "the",
           "$king",
           "$speech.",
-          "Put",
+          "$palm_down",
           "this",
           "man",
           "in",
