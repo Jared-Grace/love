@@ -384,7 +384,7 @@ export function bible_glyph_chapter_mic06() {
           "am",
           "striking",
           "you",
-          "severely,",
+          "$thermometer_face+doing,",
           "to",
           "ruin",
           "you",
