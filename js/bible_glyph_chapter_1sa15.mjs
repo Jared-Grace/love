@@ -286,7 +286,7 @@ export function bible_glyph_chapter_1sa15() {
           "fat",
           "calves",
           "and",
-          "lambs,",
+          "$ram+field,",
           "and",
           "everything",
           "else",
