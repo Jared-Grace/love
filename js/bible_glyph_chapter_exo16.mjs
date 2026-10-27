@@ -218,7 +218,7 @@ export function bible_glyph_chapter_exo16() {
           "of",
           "Israel,",
           "This",
-          "evening",
+          "$sunset",
           "you",
           "will",
           "$lightbulb",
