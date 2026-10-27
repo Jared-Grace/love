@@ -1141,7 +1141,7 @@ export function bible_glyph_chapter_deu04() {
         verse_number: 32,
         words: [
           "$pointing,",
-          "ask",
+          "$question",
           "now",
           "about",
           "the",
