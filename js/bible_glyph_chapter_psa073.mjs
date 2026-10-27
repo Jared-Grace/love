@@ -394,7 +394,7 @@ export function bible_glyph_chapter_psa073() {
         words: [
           "I",
           "was",
-          "senseless",
+          "$cow_face+brain+thing",
           "$no_entry",
           "$lightbulb;",
           "I",
