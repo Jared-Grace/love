@@ -739,7 +739,7 @@ export function bible_glyph_chapter_gen18() {
           "are",
           "treated",
           "alike.",
-          "Far",
+          "$person_gesturing_no+exclamation",
           "be",
           "it",
           "from",
