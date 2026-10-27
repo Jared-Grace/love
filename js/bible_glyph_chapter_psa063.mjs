@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa063() {
       {
         verse_number: 3,
         words: [
-          "Because",
+          "$pointing",
           "Your",
           "$gift",
           "is",
