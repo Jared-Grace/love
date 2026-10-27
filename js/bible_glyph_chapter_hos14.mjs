@@ -191,7 +191,7 @@ export function bible_glyph_chapter_hos14() {
           "$sprout+doing",
           "$wheat+barley",
           "and",
-          "blossom",
+          "$cherry_blossom",
           "like",
           "the",
           "vine.",
