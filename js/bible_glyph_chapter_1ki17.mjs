@@ -337,7 +337,7 @@ export function bible_glyph_chapter_1ki17() {
           "in",
           "a",
           "jug.",
-          "Look,",
+          "$exclamation,",
           "I",
           "am",
           "gathering",
