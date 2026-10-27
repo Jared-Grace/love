@@ -35,7 +35,7 @@ export function bible_glyph_chapter_1ki02() {
       {
         verse_number: 2,
         words: [
-          "I",
+          "$me",
           "am",
           "about",
           "to",
