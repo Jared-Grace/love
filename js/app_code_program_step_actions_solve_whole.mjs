@@ -12,6 +12,7 @@ import { not_equal } from "./not_equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_code_expression_name } from "./app_code_expression_name.mjs";
+import { property_set } from "./property_set.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { app_code_expression_from_js } from "./app_code_expression_from_js.mjs";
@@ -91,7 +92,8 @@ export function app_code_program_step_actions_solve_whole(code, actions) {
       }
       let name = property_get(named, "name");
       let value = property_get(named, "value");
-      values[name] = app_code_expression_name(name, value);
+      let expression_named = app_code_expression_name(name, value);
+      property_set(values, name, expression_named);
     }
     let slice = text_slice(code, root_from, root_to);
     function parse() {

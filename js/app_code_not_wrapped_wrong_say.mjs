@@ -1,11 +1,11 @@
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_equal_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_tokenizer_normalized_or_null } from "./js_tokenizer_normalized_or_null.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+import { subtract } from "./subtract.mjs";
 export function app_code_not_wrapped_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("for a quiz between a comparison and the same line written with a ! around the opposite mark, in either direction: a !== b is !(a === b), and a === b is !(a !== b); null for any other pair");
@@ -34,19 +34,20 @@ export function app_code_not_wrapped_wrong_say(question, answer, choice) {
   } else {
     return null;
   }
-  let opposite = {
-    [different]: same,
-    [same]: different,
-  };
   let op = short[1];
-  if (not(op in opposite)) {
+  let flipped = null;
+  if (equal(op, different)) {
+    flipped = same;
+  } else if (equal(op, same)) {
+    flipped = different;
+  } else {
     return null;
   }
   let matches =
     equal(long[0], bang) &&
     equal(long[1], "(") &&
     equal(long[2], short[0]) &&
-    equal(long[3], opposite[op]) &&
+    equal(long[3], flipped) &&
     equal(long[4], short[2]) &&
     equal(long[5], ")");
   if (not(matches)) {
@@ -59,13 +60,13 @@ export function app_code_not_wrapped_wrong_say(question, answer, choice) {
       "Remember: ",
       op,
       " asks the opposite of ",
-      opposite[op],
+      flipped,
       ", so ",
       short_text,
       " is the same line as ",
       long_text,
       ": the same two sides, with ",
-      opposite[op],
+      flipped,
       " between them and a ",
       bang,
       " around it",
@@ -78,7 +79,7 @@ export function app_code_not_wrapped_wrong_say(question, answer, choice) {
     " flips what ",
     inner,
     " says, and the mark that says the opposite of ",
-    opposite[op],
+    flipped,
     " is ",
     op,
     ", so it is ",

@@ -3,6 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_code_if_blocks } from "./app_code_if_blocks.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_if_blocks_lines_kept } from "./app_code_if_blocks_lines_kept.mjs";
+import { text_get } from "./text_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export function app_code_if_blocks_kept(code) {
@@ -18,7 +19,7 @@ export function app_code_if_blocks_kept(code) {
   for (let line of lines) {
     let written = "";
     for (let i of line) {
-      written = written + code[i];
+      written = written + text_get(code, i);
     }
     list_add(kept, written);
   }
