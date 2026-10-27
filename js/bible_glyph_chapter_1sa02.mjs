@@ -143,7 +143,7 @@ export function bible_glyph_chapter_1sa02() {
           "no",
           "more.",
           "The",
-          "barren",
+          "$pregnant_woman+no_entry+describing",
           "woman",
           "gives",
           "birth",
