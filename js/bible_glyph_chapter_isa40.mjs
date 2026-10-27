@@ -268,7 +268,7 @@ export function bible_glyph_chapter_isa40() {
           "$city",
           "of",
           "$hands_raised+proper_name,",
-          "Here",
+          "$exclamation",
           "is",
           "your",
           "$heart_on_fire.",
