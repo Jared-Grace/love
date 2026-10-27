@@ -215,7 +215,7 @@ export function bible_glyph_chapter_1sa16() {
           "$heart_on_fire+father",
           "and",
           "$speech,",
-          "Surely",
+          "$check+exclamation",
           "here",
           "before",
           "the",
