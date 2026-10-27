@@ -116,7 +116,7 @@ export function bible_glyph_chapter_job31() {
           "me",
           "with",
           "$ruler+thing",
-          "scales,",
+          "$scales+two,",
           "that",
           "He",
           "may",
