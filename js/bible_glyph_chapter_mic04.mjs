@@ -118,7 +118,7 @@ export function bible_glyph_chapter_mic04() {
           "He",
           "will",
           "judge",
-          "between",
+          "$brain+arrow_both_ways",
           "many",
           "$family",
           "and",
