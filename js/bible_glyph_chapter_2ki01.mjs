@@ -524,7 +524,7 @@ export function bible_glyph_chapter_2ki01() {
           "the",
           "$person_other",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "$five+zero",
           "$kneeling",
           "of",
