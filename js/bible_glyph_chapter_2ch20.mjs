@@ -1201,7 +1201,7 @@ export function bible_glyph_chapter_2ch20() {
           "they",
           "are",
           "indeed",
-          "written",
+          "$writing_hand",
           "in",
           "the",
           "$speech",
