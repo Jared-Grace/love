@@ -560,7 +560,7 @@ export function bible_glyph_chapter_deu32() {
       {
         verse_number: 21,
         words: [
-          "They",
+          "$pointing_back",
           "have",
           "$face_steam+doing",
           "Me",
