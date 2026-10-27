@@ -106,7 +106,7 @@ export function bible_glyph_chapter_lev16() {
           "with",
           "a",
           "young",
-          "bull",
+          "$bull",
           "for",
           "a",
           "$bow",
