@@ -737,7 +737,7 @@ export function bible_glyph_chapter_2ki01() {
           "$writing_hand",
           "in",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "Chronicles",
