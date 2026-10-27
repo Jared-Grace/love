@@ -384,7 +384,7 @@ export function bible_glyph_chapter_lev14() {
           "is",
           "to",
           "$hand_receiving",
-          "one",
+          "$one",
           "of",
           "the",
           "male",
