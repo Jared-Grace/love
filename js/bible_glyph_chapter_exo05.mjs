@@ -461,7 +461,7 @@ export function bible_glyph_chapter_exo05() {
           "$toward",
           "$house+proper_name,",
           "$speech,",
-          "Why",
+          "$flashlight+question",
           "are",
           "you",
           "$hammer+doing",
