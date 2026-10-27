@@ -509,7 +509,7 @@ export function bible_glyph_chapter_2sa06() {
           "$gold+fire+might+doing",
           "and",
           "dancing",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "and",
