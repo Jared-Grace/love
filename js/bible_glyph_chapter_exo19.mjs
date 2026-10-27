@@ -703,7 +703,7 @@ export function bible_glyph_chapter_exo19() {
           "the",
           "$i_am",
           "will",
-          "break",
+          "$wall+collision+doing",
           "out",
           "against",
           "them.",
