@@ -182,7 +182,7 @@ export function bible_glyph_chapter_exo33() {
           "would",
           "destroy",
           "you.",
-          "Now",
+          "$watch",
           "take",
           "off",
           "your",
