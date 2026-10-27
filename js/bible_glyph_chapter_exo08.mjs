@@ -753,7 +753,7 @@ export function bible_glyph_chapter_exo08() {
           "and",
           "your",
           "$family.",
-          "This",
+          "$flashlight",
           "$placard",
           "will",
           "take",
