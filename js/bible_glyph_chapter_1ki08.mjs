@@ -2176,7 +2176,7 @@ export function bible_glyph_chapter_1ki08() {
           "twenty",
           "two",
           "thousand",
-          "oxen",
+          "$cow_face",
           "and",
           "a",
           "hundred",
