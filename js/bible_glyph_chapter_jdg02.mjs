@@ -752,7 +752,7 @@ export function bible_glyph_chapter_jdg02() {
           "I",
           "will",
           "$test_tube",
-          "whether",
+          "$traffic_light",
           "or",
           "$no_entry",
           "$wrestling+heart_on_fire",
