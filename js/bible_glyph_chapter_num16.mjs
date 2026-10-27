@@ -290,7 +290,7 @@ export function bible_glyph_chapter_num16() {
           "$kneeling+doing",
           "at",
           "the",
-          "tabernacle",
+          "$tent+house",
           "of",
           "the",
           "$i_am,",
