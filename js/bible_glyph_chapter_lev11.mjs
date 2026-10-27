@@ -964,7 +964,7 @@ export function bible_glyph_chapter_lev11() {
           "eats",
           "from",
           "the",
-          "carcass",
+          "$skull+bone",
           "must",
           "wash",
           "his",
