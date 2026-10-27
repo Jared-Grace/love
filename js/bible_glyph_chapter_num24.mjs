@@ -170,7 +170,7 @@ export function bible_glyph_chapter_num24() {
           "planted,",
           "like",
           "$cedar",
-          "beside",
+          "$pointing_up",
           "the",
           "$water.",
         ],
