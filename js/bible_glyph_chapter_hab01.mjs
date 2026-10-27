@@ -363,7 +363,7 @@ export function bible_glyph_chapter_hab01() {
           "You",
           "$no_entry",
           "tolerate",
-          "wrongdoing.",
+          "$hot_face.",
           "So",
           "why",
           "do",
