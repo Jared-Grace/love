@@ -916,7 +916,7 @@ export function bible_glyph_chapter_isa40() {
           "$walking",
           "and",
           "$no_entry",
-          "faint.",
+          "$weary_face+wing+doing.",
         ],
       },
     ],
