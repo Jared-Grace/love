@@ -754,7 +754,7 @@ export function bible_glyph_chapter_exo18() {
           "$voice",
           "and",
           "$hammer+doing",
-          "everything",
+          "$all",
           "he",
           "$speech.",
         ],
