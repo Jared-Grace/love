@@ -1191,7 +1191,7 @@ export function bible_glyph_chapter_deu28() {
           "of",
           "$astonished+thing",
           "and",
-          "scorn",
+          "$speech+likeness",
           "and",
           "ridicule",
           "among",
