@@ -617,7 +617,7 @@ export function bible_glyph_chapter_gen39() {
           "him,",
           "$hands_giving",
           "him",
-          "favor",
+          "$heart_orange",
           "in",
           "the",
           "$eyes",
