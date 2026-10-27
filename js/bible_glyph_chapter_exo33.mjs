@@ -129,7 +129,7 @@ export function bible_glyph_chapter_exo33() {
           "the",
           "$family",
           "$ear",
-          "this",
+          "$flashlight",
           "$thumbs_down",
           "$speech,",
           "they",
