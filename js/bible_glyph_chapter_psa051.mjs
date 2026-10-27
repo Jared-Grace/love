@@ -131,7 +131,7 @@ export function bible_glyph_chapter_psa051() {
           "brought",
           "forth",
           "in",
-          "iniquity;",
+          "$cyclone;",
           "I",
           "was",
           "sinful",
