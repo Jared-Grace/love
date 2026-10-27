@@ -614,7 +614,7 @@ export function bible_glyph_chapter_psa022() {
       {
         verse_number: 28,
         words: [
-          "For",
+          "$pointing",
           "dominion",
           "belongs",
           "to",
