@@ -881,7 +881,7 @@ export function bible_glyph_chapter_2ki09() {
           "the",
           "shoulders.",
           "The",
-          "arrow",
+          "$arrow+thing",
           "$walking+tray_out",
           "his",
           "$heart_organ",
