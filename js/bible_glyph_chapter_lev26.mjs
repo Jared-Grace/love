@@ -435,7 +435,7 @@ export function bible_glyph_chapter_lev26() {
           "will",
           "not",
           "$hammer+doing",
-          "all",
+          "$all",
           "My",
           "$scroll",
           "and",
