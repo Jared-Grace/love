@@ -214,7 +214,7 @@ export function bible_glyph_chapter_1ki18() {
           "him,",
           "he",
           "fell",
-          "facedown",
+          "$face",
           "and",
           "$speech,",
           "Is",
