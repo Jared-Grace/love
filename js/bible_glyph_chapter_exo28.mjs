@@ -1085,7 +1085,7 @@ export function bible_glyph_chapter_exo28() {
           "shall",
           "always",
           "be",
-          "on",
+          "$pointing_up",
           "his",
           "forehead,",
           "so",
