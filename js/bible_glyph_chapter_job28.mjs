@@ -159,7 +159,7 @@ export function bible_glyph_chapter_job28() {
           "trodden",
           "it;",
           "$no_entry",
-          "lion",
+          "$lion+megaphone",
           "has",
           "prowled",
           "over",
