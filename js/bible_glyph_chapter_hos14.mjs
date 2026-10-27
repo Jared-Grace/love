@@ -276,7 +276,7 @@ export function bible_glyph_chapter_hos14() {
           "but",
           "the",
           "rebellious",
-          "stumble",
+          "$hiking_boot+rock",
           "in",
           "them.",
         ],
