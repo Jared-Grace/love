@@ -28,7 +28,7 @@ export function bible_glyph_chapter_jer23() {
           "of",
           "My",
           "pasture,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
