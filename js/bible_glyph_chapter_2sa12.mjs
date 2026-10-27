@@ -465,7 +465,7 @@ export function bible_glyph_chapter_2sa12() {
       {
         verse_number: 14,
         words: [
-          "Nevertheless,",
+          "$end_arrow+zero,",
           "because",
           "you",
           "have",
