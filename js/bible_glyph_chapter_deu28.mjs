@@ -1029,7 +1029,7 @@ export function bible_glyph_chapter_deu28() {
           "be",
           "$hands_giving",
           "to",
-          "another",
+          "$plus+one",
           "$family,",
           "while",
           "your",
