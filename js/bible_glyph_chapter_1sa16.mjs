@@ -604,7 +604,7 @@ export function bible_glyph_chapter_1sa16() {
           "a",
           "$man_beard",
           "of",
-          "valor",
+          "$raised_fist",
           "and",
           "a",
           "warrior,",
