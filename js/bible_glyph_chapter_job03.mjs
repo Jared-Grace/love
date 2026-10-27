@@ -410,7 +410,7 @@ export function bible_glyph_chapter_job03() {
       {
         verse_number: 20,
         words: [
-          "Why",
+          "$flashlight+question",
           "is",
           "$light",
           "$hands_giving",
