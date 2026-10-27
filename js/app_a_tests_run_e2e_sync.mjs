@@ -1,14 +1,15 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_url_dev_local } from "./app_shared_url_dev_local.mjs";
 import { app_a } from "./app_a.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_single } from "./list_single.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
 import { file_read } from "./file_read.mjs";
 import { list_last } from "./list_last.mjs";
@@ -25,8 +26,15 @@ export async function app_a_tests_run_e2e_sync() {
     if (not(post_is)) {
       return false;
     }
-    let body = request.postDataJSON();
-    let f_name = property_get(body, "f_name");
+    ("A page that fails sends a report of the failure as a form rather than as json, so only json is read.");
+    let headers = request.headers();
+    let type = property_get(headers, "content-type");
+    let json_is = text_includes(type, "json");
+    if (not(json_is)) {
+      return false;
+    }
+    let posted = request.postDataJSON();
+    let f_name = property_get(posted, "f_name");
     let eq = equal(f_name, fn_name("app_a_upload"));
     return eq;
   }
