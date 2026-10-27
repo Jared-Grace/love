@@ -108,7 +108,7 @@ export function bible_glyph_chapter_pro31() {
           "what",
           "is",
           "decreed,",
-          "depriving",
+          "$two+repeat+doing",
           "all",
           "the",
           "$son",
