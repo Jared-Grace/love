@@ -370,7 +370,7 @@ export function bible_glyph_chapter_job31() {
           "$pointing",
           "from",
           "my",
-          "youth",
+          "$child+flexed_biceps+thing",
           "I",
           "reared",
           "him",
