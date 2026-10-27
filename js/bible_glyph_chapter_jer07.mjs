@@ -139,7 +139,7 @@ export function bible_glyph_chapter_jer07() {
           "one",
           "$man_beard",
           "and",
-          "another,",
+          "$person+sheep,",
         ],
       },
       {
