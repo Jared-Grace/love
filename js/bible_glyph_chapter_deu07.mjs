@@ -607,7 +607,7 @@ export function bible_glyph_chapter_deu07() {
           "$question+likeness",
           "can",
           "we",
-          "drive",
+          "$triangular_flag",
           "them",
           "out?",
         ],
