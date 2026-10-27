@@ -39,7 +39,7 @@ export function bible_glyph_chapter_deu09() {
           "with",
           "large",
           "$city",
-          "fortified",
+          "$wall+locked+describing",
           "to",
           "$sky.",
         ],
