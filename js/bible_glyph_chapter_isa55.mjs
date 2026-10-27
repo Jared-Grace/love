@@ -47,7 +47,7 @@ export function bible_glyph_chapter_isa55() {
         verse_number: 2,
         words: [
           "$flashlight+question",
-          "spend",
+          "$scales+money_bag+doing",
           "money",
           "on",
           "that",
