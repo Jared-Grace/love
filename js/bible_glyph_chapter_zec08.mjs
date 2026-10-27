@@ -153,7 +153,7 @@ export function bible_glyph_chapter_zec08() {
           "$child",
           "and",
           "$child",
-          "playing",
+          "$laughing",
           "there.",
         ],
       },
