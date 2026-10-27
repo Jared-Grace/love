@@ -187,7 +187,7 @@ export function bible_glyph_chapter_ecc03() {
           "$heart_red+doing",
           "and",
           "a",
-          "time",
+          "$clock",
           "to",
           "hate,",
           "a",
