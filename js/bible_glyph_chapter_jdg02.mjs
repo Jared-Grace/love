@@ -630,7 +630,7 @@ export function bible_glyph_chapter_jdg02() {
           "pity",
           "by",
           "their",
-          "groaning",
+          "$weary_face+voice+thing",
           "under",
           "those",
           "who",
