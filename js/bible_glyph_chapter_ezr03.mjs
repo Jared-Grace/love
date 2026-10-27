@@ -279,7 +279,7 @@ export function bible_glyph_chapter_ezr03() {
           "In",
           "the",
           "$second_place",
-          "month",
+          "$new_moon",
           "of",
           "the",
           "$second_place",
