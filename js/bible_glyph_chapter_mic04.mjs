@@ -471,7 +471,7 @@ export function bible_glyph_chapter_mic04() {
         words: [
           "$person+pointing_up",
           "and",
-          "thresh,",
+          "$foot+wheat+doing,",
           "O",
           "$woman",
           "of",
