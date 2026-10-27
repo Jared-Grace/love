@@ -688,7 +688,7 @@ export function bible_glyph_chapter_num16() {
           "all",
           "$meat,",
           "when",
-          "one",
+          "$one",
           "$man_beard",
           "$bow+doing,",
           "will",
