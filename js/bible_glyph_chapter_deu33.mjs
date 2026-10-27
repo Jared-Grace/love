@@ -805,7 +805,7 @@ export function bible_glyph_chapter_deu33() {
           "are",
           "the",
           "$hourglass",
-          "arms.",
+          "$hand+might.",
           "He",
           "drives",
           "out",
