@@ -899,7 +899,7 @@ export function bible_glyph_chapter_1ki18() {
           "Perhaps",
           "he",
           "is",
-          "sleeping",
+          "$sleeping_face+describing",
           "and",
           "must",
           "be",
