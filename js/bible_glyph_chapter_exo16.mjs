@@ -879,7 +879,7 @@ export function bible_glyph_chapter_exo16() {
           "they",
           "did",
           "$no_entry",
-          "find",
+          "$magnifying_glass+exclamation",
           "anything.",
         ],
       },
