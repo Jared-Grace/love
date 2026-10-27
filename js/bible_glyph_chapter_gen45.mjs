@@ -611,7 +611,7 @@ export function bible_glyph_chapter_gen45() {
           "$i_am+plus",
           "$hands_giving",
           "them",
-          "wagons",
+          "$wheel",
           "as",
           "$house+proper_name",
           "had",
