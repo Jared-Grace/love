@@ -62,7 +62,7 @@ export function bible_glyph_chapter_num17() {
         verse_number: 3,
         words: [
           "And",
-          "write",
+          "$writing_hand",
           "the",
           "$name_tag",
           "of",
