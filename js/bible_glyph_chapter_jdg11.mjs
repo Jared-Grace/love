@@ -661,7 +661,7 @@ export function bible_glyph_chapter_jdg11() {
           "$passport_control.",
           "So",
           "he",
-          "gathered",
+          "$crowd+doing",
           "all",
           "his",
           "$family,",
