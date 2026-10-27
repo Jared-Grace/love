@@ -1088,7 +1088,7 @@ export function bible_glyph_chapter_num11() {
           "between",
           "their",
           "teeth,",
-          "before",
+          "$clock+back",
           "it",
           "was",
           "chewed,",
