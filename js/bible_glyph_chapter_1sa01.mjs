@@ -801,7 +801,7 @@ export function bible_glyph_chapter_1sa01() {
       {
         verse_number: 26,
         words: [
-          "Please,",
+          "$pleading_face+manner,",
           "my",
           "$crown,",
           "Hannah",
