@@ -246,7 +246,7 @@ export function bible_glyph_chapter_deu19() {
           "This",
           "is",
           "why",
-          "I",
+          "$me",
           "am",
           "$speech",
           "you",
