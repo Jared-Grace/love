@@ -406,7 +406,7 @@ export function bible_glyph_chapter_deu12() {
           "he",
           "has",
           "no",
-          "portion",
+          "$pizza",
           "or",
           "$inheritance",
           "among",
