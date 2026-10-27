@@ -507,7 +507,7 @@ export function bible_glyph_chapter_gen26() {
           "$well",
           "of",
           "$water",
-          "that",
+          "$back+flashlight",
           "had",
           "been",
           "dug",
