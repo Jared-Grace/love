@@ -420,7 +420,7 @@ export function bible_glyph_chapter_jdg04() {
           "is",
           "the",
           "$sun",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "has",
