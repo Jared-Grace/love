@@ -66,7 +66,7 @@ export function bible_glyph_chapter_gen29() {
           "$stone",
           "$pointing_up",
           "the",
-          "mouth",
+          "$face_with_open_mouth",
           "of",
           "the",
           "well.",
