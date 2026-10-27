@@ -64,7 +64,7 @@ export function bible_glyph_chapter_1sa07() {
           "Kiriath-jearim",
           "many",
           "$sun,",
-          "twenty",
+          "$two+zero",
           "$year",
           "in",
           "all.",
