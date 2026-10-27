@@ -60,7 +60,7 @@ export function bible_glyph_chapter_lev11() {
           "may",
           "$eating",
           "any",
-          "animal",
+          "$paw_prints",
           "that",
           "has",
           "a",
