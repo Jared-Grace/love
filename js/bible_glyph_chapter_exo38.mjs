@@ -237,7 +237,7 @@ export function bible_glyph_chapter_exo38() {
           "of",
           "finely",
           "spun",
-          "linen",
+          "$thread+white_circle",
           "a",
           "hundred",
           "cubits",
