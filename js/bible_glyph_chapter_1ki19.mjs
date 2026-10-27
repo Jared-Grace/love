@@ -448,7 +448,7 @@ export function bible_glyph_chapter_1ki19() {
           "came",
           "a",
           "$shushing_face+pause_button+thing,",
-          "small",
+          "$pinching_hand+describing",
           "$voice.",
         ],
       },
