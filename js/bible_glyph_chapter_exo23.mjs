@@ -907,7 +907,7 @@ export function bible_glyph_chapter_exo23() {
           "$finish",
           "the",
           "River.",
-          "For",
+          "$pointing",
           "I",
           "will",
           "$hands_giving",
