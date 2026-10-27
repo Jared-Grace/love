@@ -975,7 +975,7 @@ export function bible_glyph_chapter_num22() {
           "Then",
           "the",
           "$i_am",
-          "opened",
+          "$luggage+chains+doing",
           "$proper_name$Balaam's",
           "$eyes,",
           "and",
