@@ -828,7 +828,7 @@ export function bible_glyph_chapter_lev07() {
           "offering",
           "and",
           "the",
-          "fat",
+          "$bacon",
           "shall",
           "have",
           "the",
