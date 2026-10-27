@@ -22,7 +22,7 @@ export function bible_glyph_chapter_2sa05() {
           "of",
           "$wrestling+heart_on_fire",
           "$footprints",
-          "to",
+          "$toward",
           "$two_hearts+proper_name",
           "at",
           "$proper_name$Hebron",
