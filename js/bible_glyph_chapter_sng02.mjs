@@ -294,7 +294,7 @@ export function bible_glyph_chapter_sng02() {
           "and",
           "the",
           "blossoming",
-          "vines",
+          "$vine",
           "$hands_giving",
           "their",
           "fragrance.",
