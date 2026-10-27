@@ -584,7 +584,7 @@ export function bible_glyph_chapter_exo09() {
           "and",
           "is",
           "$no_entry",
-          "brought",
+          "$crowd+doing",
           "$house",
           "will",
           "$skull+doing",
