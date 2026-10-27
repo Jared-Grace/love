@@ -429,7 +429,7 @@ export function bible_glyph_chapter_ezk37() {
           "$i_am,",
           "when",
           "I",
-          "open",
+          "$unlocked",
           "your",
           "graves",
           "and",
