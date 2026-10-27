@@ -938,7 +938,7 @@ export function bible_glyph_chapter_gen24() {
           "$i_am,",
           "$speech",
           "Laban.",
-          "Why",
+          "$flashlight+question",
           "are",
           "you",
           "standing",
