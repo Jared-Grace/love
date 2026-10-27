@@ -353,7 +353,7 @@ export function bible_glyph_chapter_2ki22() {
           "Moreover,",
           "Shaphan",
           "the",
-          "scribe",
+          "$abacus",
           "$newspaper",
           "the",
           "$king,",
