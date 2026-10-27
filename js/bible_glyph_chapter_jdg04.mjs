@@ -667,7 +667,7 @@ export function bible_glyph_chapter_jdg04() {
           "a",
           "$tent",
           "$tent+wood,",
-          "grabbed",
+          "$palm_down",
           "a",
           "hammer",
           "and",
