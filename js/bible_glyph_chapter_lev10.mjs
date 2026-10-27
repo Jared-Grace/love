@@ -17,7 +17,7 @@ export function bible_glyph_chapter_lev10() {
           "Now",
           "$son",
           "of",
-          "Aaron,",
+          "$white_cane+blossom+proper_name,",
           "$proper_name$Nadab",
           "and",
           "$father+pointing_back,",
