@@ -469,7 +469,7 @@ export function bible_glyph_chapter_exo13() {
           "$i_am",
           "the",
           "first",
-          "male",
+          "$reminder_ribbon+thing",
           "of",
           "every",
           "$hugging_face+baby,",
