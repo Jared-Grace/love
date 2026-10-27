@@ -515,7 +515,7 @@ export function bible_glyph_chapter_exo15() {
           "Israel",
           "$walking",
           "on",
-          "dry",
+          "$fallen_leaf+brown_square",
           "ground",
           "through",
           "the",
