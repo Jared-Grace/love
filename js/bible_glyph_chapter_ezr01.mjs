@@ -380,7 +380,7 @@ export function bible_glyph_chapter_ezr01() {
           "brought",
           "all",
           "these",
-          "along",
+          "$linked_paperclips",
           "when",
           "the",
           "exiles",
