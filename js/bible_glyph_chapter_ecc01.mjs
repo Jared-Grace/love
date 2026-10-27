@@ -106,7 +106,7 @@ export function bible_glyph_chapter_ecc01() {
           "The",
           "$wind",
           "$walking",
-          "southward,",
+          "$compass+down_arrow+wind,",
           "then",
           "turns",
           "northward;",
