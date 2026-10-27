@@ -543,7 +543,7 @@ export function bible_glyph_chapter_mal01() {
           "I",
           "am",
           "a",
-          "great",
+          "$top",
           "$king,",
           "$speech",
           "the",
