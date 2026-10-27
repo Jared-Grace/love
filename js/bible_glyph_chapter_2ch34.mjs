@@ -441,7 +441,7 @@ export function bible_glyph_chapter_2ch34() {
           "builders",
           "to",
           "$coin+hand_receiving",
-          "dressed",
+          "$pick+rock",
           "$stone,",
           "as",
           "well",
