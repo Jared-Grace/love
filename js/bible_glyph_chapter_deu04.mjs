@@ -87,7 +87,7 @@ export function bible_glyph_chapter_deu04() {
           "your",
           "$heart_on_fire",
           "that",
-          "I",
+          "$me",
           "am",
           "giving",
           "you.",
