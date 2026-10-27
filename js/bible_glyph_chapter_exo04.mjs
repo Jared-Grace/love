@@ -225,7 +225,7 @@ export function bible_glyph_chapter_exo04() {
           "his",
           "$hand",
           "$turn_back",
-          "inside",
+          "$toward",
           "his",
           "cloak,",
           "and",
