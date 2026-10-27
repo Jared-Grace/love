@@ -126,7 +126,7 @@ export function bible_glyph_chapter_exo34() {
           "$morning+doing",
           "in",
           "the",
-          "morning",
+          "$morning",
           "and",
           "went",
           "up",
