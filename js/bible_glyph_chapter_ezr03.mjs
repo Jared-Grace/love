@@ -471,7 +471,7 @@ export function bible_glyph_chapter_ezr03() {
           "great",
           "shout",
           "of",
-          "praise",
+          "$clapping_hands",
           "to",
           "the",
           "$i_am,",
