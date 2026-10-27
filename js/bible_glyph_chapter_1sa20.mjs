@@ -688,7 +688,7 @@ export function bible_glyph_chapter_1sa20() {
         words: [
           "I",
           "will",
-          "shoot",
+          "$bow+toward",
           "$three",
           "$arrow",
           "to",
