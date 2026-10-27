@@ -412,7 +412,7 @@ export function bible_glyph_chapter_mal01() {
           "In",
           "$all",
           "$place",
-          "incense",
+          "$incense+doing",
           "and",
           "pure",
           "offerings",
