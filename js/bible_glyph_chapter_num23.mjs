@@ -139,7 +139,7 @@ export function bible_glyph_chapter_num23() {
         words: [
           "Then",
           "$i_am",
-          "put",
+          "$palm_down",
           "a",
           "$speech",
           "in",
