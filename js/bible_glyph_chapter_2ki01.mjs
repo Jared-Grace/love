@@ -141,7 +141,7 @@ export function bible_glyph_chapter_2ki01() {
           "$no_entry",
           "get",
           "up",
-          "from",
+          "$tray_out",
           "the",
           "$bed",
           "on",
