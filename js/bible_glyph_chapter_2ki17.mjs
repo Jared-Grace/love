@@ -36,7 +36,7 @@ export function bible_glyph_chapter_2ki17() {
           "and",
           "he",
           "reigned",
-          "nine",
+          "$nine",
           "years.",
         ],
       },
