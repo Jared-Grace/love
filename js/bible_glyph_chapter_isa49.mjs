@@ -392,7 +392,7 @@ export function bible_glyph_chapter_isa49() {
           "scorching",
           "heat",
           "or",
-          "sun",
+          "$sun_with_face",
           "$fist",
           "down",
           "on",
