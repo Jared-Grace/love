@@ -837,7 +837,7 @@ export function bible_glyph_chapter_2ki17() {
           "Israel.",
           "They",
           "took",
-          "possession",
+          "$triangular_flag",
           "of",
           "$guard+proper_name",
           "and",
