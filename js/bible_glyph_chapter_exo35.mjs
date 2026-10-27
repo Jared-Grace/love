@@ -293,7 +293,7 @@ export function bible_glyph_chapter_exo35() {
           "$bread",
           "of",
           "the",
-          "Presence,",
+          "$face,",
         ],
       },
       {
