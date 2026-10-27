@@ -489,7 +489,7 @@ export function bible_glyph_chapter_hab03() {
           "$i_am;",
           "I",
           "will",
-          "rejoice",
+          "$woman_dancing",
           "in",
           "the",
           "$heart_on_fire",
