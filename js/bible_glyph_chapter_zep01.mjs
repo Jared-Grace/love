@@ -475,7 +475,7 @@ export function bible_glyph_chapter_zep01() {
           "a",
           "$sun",
           "of",
-          "wrath,",
+          "$anger_symbol,",
           "a",
           "$sun",
           "of",
