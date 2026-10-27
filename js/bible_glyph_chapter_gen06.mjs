@@ -413,7 +413,7 @@ export function bible_glyph_chapter_gen06() {
           "to",
           "be",
           "300",
-          "cubits",
+          "$triangular_ruler",
           "long,",
           "50",
           "cubits",
