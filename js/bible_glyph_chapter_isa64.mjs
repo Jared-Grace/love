@@ -278,7 +278,7 @@ export function bible_glyph_chapter_isa64() {
           "$cyclone",
           "$clock+all.",
           "$exclamation,",
-          "look",
+          "$face_with_monocle",
           "upon",
           "us,",
           "we",
