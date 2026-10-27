@@ -677,7 +677,7 @@ export function bible_glyph_chapter_1sa20() {
           "began,",
           "and",
           "$person+house",
-          "beside",
+          "$children_crossing",
           "the",
           "$stone",
           "$proper_name$Ezel.",
