@@ -130,7 +130,7 @@ export function bible_glyph_chapter_gen41() {
           "a",
           "$second_place",
           "time.",
-          "Seven",
+          "$seven",
           "heads",
           "of",
           "grain,",
