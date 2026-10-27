@@ -76,7 +76,7 @@ export function bible_glyph_chapter_exo17() {
           "$flashlight+question",
           "do",
           "you",
-          "test",
+          "$test_tube",
           "the",
           "$i_am?",
         ],
