@@ -87,7 +87,7 @@ export function bible_glyph_chapter_num14() {
           "$flashlight",
           "$earth",
           "to",
-          "fall",
+          "$person+pointing_down",
           "by",
           "the",
           "$sword?",
