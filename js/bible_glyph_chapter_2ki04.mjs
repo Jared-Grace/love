@@ -677,7 +677,7 @@ export function bible_glyph_chapter_2ki04() {
           "the",
           "servants",
           "and",
-          "one",
+          "$one",
           "of",
           "the",
           "donkeys,",
