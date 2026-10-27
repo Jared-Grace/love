@@ -55,7 +55,7 @@ export function bible_glyph_chapter_2sa12() {
           "of",
           "$sheep",
           "and",
-          "cattle,",
+          "$cow_face,",
         ],
       },
       {
