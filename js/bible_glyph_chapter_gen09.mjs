@@ -422,7 +422,7 @@ export function bible_glyph_chapter_gen09() {
           "every",
           "$meat.",
           "$no_entry",
-          "again",
+          "$repeat",
           "will",
           "the",
           "$water",
