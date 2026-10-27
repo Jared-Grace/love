@@ -163,7 +163,7 @@ export function bible_glyph_chapter_lev02() {
           "Crumble",
           "it",
           "and",
-          "pour",
+          "$pouring_liquid+fire",
           "oil",
           "on",
           "it;",
