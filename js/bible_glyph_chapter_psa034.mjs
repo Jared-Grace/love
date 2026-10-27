@@ -240,7 +240,7 @@ export function bible_glyph_chapter_psa034() {
           "teach",
           "you",
           "the",
-          "fear",
+          "$fear",
           "of",
           "the",
           "$i_am.",
