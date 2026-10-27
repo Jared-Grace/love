@@ -483,7 +483,7 @@ export function bible_glyph_chapter_num35() {
         verse_number: 17,
         words: [
           "Or",
-          "if",
+          "$traffic_light",
           "anyone",
           "has",
           "in",
