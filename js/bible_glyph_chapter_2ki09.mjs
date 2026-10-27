@@ -891,7 +891,7 @@ export function bible_glyph_chapter_2ki09() {
           "$leg+down_arrow+doing",
           "in",
           "his",
-          "chariot.",
+          "$chariot.",
         ],
       },
       {
