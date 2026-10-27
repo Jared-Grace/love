@@ -75,7 +75,7 @@ export function bible_glyph_chapter_jer18() {
         words: [
           "But",
           "the",
-          "vessel",
+          "$toolbox",
           "that",
           "he",
           "was",
