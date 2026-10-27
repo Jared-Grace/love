@@ -761,7 +761,7 @@ export function bible_glyph_chapter_lam01() {
           "have",
           "$ear",
           "my",
-          "groaning,",
+          "$face_exhaling+voice+doing,",
           "but",
           "there",
           "is",
