@@ -248,7 +248,7 @@ export function bible_glyph_chapter_num20() {
           "$fishing_pole+proper_name",
           "$hand_receiving",
           "the",
-          "staff",
+          "$white_cane",
           "from",
           "the",
           "presence",
