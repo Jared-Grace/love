@@ -700,7 +700,7 @@ export function bible_glyph_chapter_num23() {
           "they",
           "$eating",
           "their",
-          "prey",
+          "$wolf+thing",
           "and",
           "drink",
           "the",
