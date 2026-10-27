@@ -33,7 +33,7 @@ export function bible_glyph_chapter_job19() {
       {
         verse_number: 3,
         words: [
-          "Ten",
+          "$ten",
           "times",
           "now",
           "you",
