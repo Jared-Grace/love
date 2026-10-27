@@ -133,7 +133,7 @@ export function bible_glyph_chapter_deu32() {
           "perverse",
           "and",
           "crooked",
-          "generation.",
+          "$dna.",
         ],
       },
       {
