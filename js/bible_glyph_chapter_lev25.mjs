@@ -1485,7 +1485,7 @@ export function bible_glyph_chapter_lev25() {
           "$meat",
           "from",
           "his",
-          "clan",
+          "$houses",
           "may",
           "redeem",
           "him.",
