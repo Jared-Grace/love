@@ -830,7 +830,7 @@ export function bible_glyph_chapter_ezk34() {
           "and",
           "the",
           "places",
-          "around",
+          "$around",
           "My",
           "hill",
           "a",
