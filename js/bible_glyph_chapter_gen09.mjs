@@ -428,7 +428,7 @@ export function bible_glyph_chapter_gen09() {
           "$water",
           "$link",
           "a",
-          "flood",
+          "$water_wave+earth",
           "to",
           "destroy",
           "all",
