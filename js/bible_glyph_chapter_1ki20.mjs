@@ -43,7 +43,7 @@ export function bible_glyph_chapter_1ki20() {
           "$guard+proper_name",
           "and",
           "waged",
-          "war",
+          "$crossed_swords+doing",
           "against",
           "it.",
         ],
