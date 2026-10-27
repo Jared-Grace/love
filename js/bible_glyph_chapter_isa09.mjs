@@ -435,7 +435,7 @@ export function bible_glyph_chapter_isa09() {
           "$wrestling+heart_on_fire's",
           "$person_gesturing_ok",
           "and",
-          "tail,",
+          "$snake+back,",
           "both",
           "palm",
           "branch",
