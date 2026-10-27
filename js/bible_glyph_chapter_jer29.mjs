@@ -855,7 +855,7 @@ export function bible_glyph_chapter_jer29() {
           "out",
           "$closed_book",
           "to",
-          "all",
+          "$all",
           "the",
           "$family",
           "of",
