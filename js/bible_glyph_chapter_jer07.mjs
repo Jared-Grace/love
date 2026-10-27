@@ -954,7 +954,7 @@ export function bible_glyph_chapter_jer07() {
           "in",
           "the",
           "$house",
-          "that",
+          "$back+flashlight",
           "bears",
           "My",
           "$name_tag,",
