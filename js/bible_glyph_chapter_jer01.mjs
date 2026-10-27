@@ -468,7 +468,7 @@ export function bible_glyph_chapter_jer01() {
           "$all",
           "their",
           "$thumbs_down,",
-          "because",
+          "$back+flashlight",
           "they",
           "have",
           "forsaken",
