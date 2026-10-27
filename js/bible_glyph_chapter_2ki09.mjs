@@ -555,7 +555,7 @@ export function bible_glyph_chapter_2ki09() {
           "to",
           "$walking",
           "and",
-          "tell",
+          "$newspaper",
           "it",
           "in",
           "$proper_name$Jezreel.",
