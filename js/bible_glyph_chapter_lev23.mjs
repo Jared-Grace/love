@@ -177,7 +177,7 @@ export function bible_glyph_chapter_lev23() {
           "to",
           "$hammer+doing",
           "any",
-          "regular",
+          "$kneeling+thing",
           "$tools.",
         ],
       },
