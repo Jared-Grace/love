@@ -512,7 +512,7 @@ export function bible_glyph_chapter_mal02() {
           "LORD",
           "$hammer+doing",
           "them",
-          "one,",
+          "$one,",
           "having",
           "a",
           "portion",
