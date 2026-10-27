@@ -601,7 +601,7 @@ export function bible_glyph_chapter_deu19() {
           "who",
           "has",
           "falsely",
-          "accused",
+          "$speech+turn_back",
           "his",
           "$brother,",
         ],
