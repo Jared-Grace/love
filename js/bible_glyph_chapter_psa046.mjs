@@ -139,7 +139,7 @@ export function bible_glyph_chapter_psa046() {
           "$vibration_mode+doing;",
           "the",
           "$earth",
-          "melts",
+          "$ice+droplet+doing",
           "when",
           "He",
           "$hands_giving",
