@@ -1269,7 +1269,7 @@ export function bible_glyph_chapter_2ki04() {
           "found",
           "a",
           "wild",
-          "vine,",
+          "$vine,",
           "$tray_out",
           "which",
           "he",
