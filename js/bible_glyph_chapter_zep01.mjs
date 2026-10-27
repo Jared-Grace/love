@@ -561,7 +561,7 @@ export function bible_glyph_chapter_zep01() {
           "their",
           "$meat+person",
           "like",
-          "dung.",
+          "$pile_of_poo+wheel.",
         ],
       },
       {
