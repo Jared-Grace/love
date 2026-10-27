@@ -509,7 +509,7 @@ export function bible_glyph_chapter_num06() {
           "$priest",
           "is",
           "to",
-          "present",
+          "$magnet+doing",
           "all",
           "these",
           "before",
