@@ -920,7 +920,7 @@ export function bible_glyph_chapter_2ki06() {
           "And",
           "she",
           "$speech,",
-          "This",
+          "$flashlight",
           "$woman",
           "$speech",
           "to",
