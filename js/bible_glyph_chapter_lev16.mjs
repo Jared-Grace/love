@@ -1110,7 +1110,7 @@ export function bible_glyph_chapter_lev16() {
           "all",
           "your",
           "$bow",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "and",
