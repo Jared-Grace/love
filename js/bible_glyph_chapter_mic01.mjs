@@ -311,7 +311,7 @@ export function bible_glyph_chapter_mic01() {
           "my",
           "$family,",
           "as",
-          "far",
+          "$finish",
           "as",
           "$city+peace",
           "itself.",
