@@ -425,7 +425,7 @@ export function bible_glyph_chapter_deu15() {
           "must",
           "set",
           "him",
-          "free.",
+          "$broken_chain+person.",
         ],
       },
       {
