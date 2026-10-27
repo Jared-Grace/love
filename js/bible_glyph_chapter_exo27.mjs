@@ -453,7 +453,7 @@ export function bible_glyph_chapter_exo27() {
           "a",
           "hundred",
           "cubits",
-          "long",
+          "$up_down_arrow",
           "and",
           "fifty",
           "cubits",
