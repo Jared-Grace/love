@@ -1590,7 +1590,7 @@ export function bible_glyph_chapter_lev13() {
           "$yarn+plus,",
           "$shuffle",
           "$cow_face+coat",
-          "article",
+          "$toolbox",
           "is",
           "$leaf+lemon+describing",
           "$shuffle",
