@@ -370,7 +370,7 @@ export function bible_glyph_chapter_1sa24() {
           "my",
           "$crown,",
           "$pointing",
-          "he",
+          "$pointing_back",
           "is",
           "the",
           "$i_am's",
