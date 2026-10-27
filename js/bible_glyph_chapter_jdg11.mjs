@@ -852,7 +852,7 @@ export function bible_glyph_chapter_jdg11() {
           "$proper_name$Arnon,",
           "for",
           "$three",
-          "hundred",
+          "$input_numbers+all",
           "$year.",
           "Why",
           "did",
