@@ -845,7 +845,7 @@ export function bible_glyph_chapter_ezk03() {
           "will",
           "make",
           "your",
-          "tongue",
+          "$tongue",
           "stick",
           "to",
           "the",
