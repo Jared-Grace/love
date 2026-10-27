@@ -638,7 +638,7 @@ export function bible_glyph_chapter_pro01() {
           "of",
           "fools",
           "will",
-          "destroy",
+          "$wilted_flower",
           "them.",
         ],
       },
