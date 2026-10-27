@@ -432,7 +432,7 @@ export function bible_glyph_chapter_1ki01() {
           "on",
           "my",
           "$throne?",
-          "Why",
+          "$flashlight+question+lightbulb",
           "then",
           "has",
           "$proper_name$Adonijah",
