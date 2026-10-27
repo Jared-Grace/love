@@ -654,7 +654,7 @@ export function bible_glyph_chapter_lev11() {
         words: [
           "The",
           "following",
-          "creatures",
+          "$lizard+crowd",
           "that",
           "move",
           "along",
