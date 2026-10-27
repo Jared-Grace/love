@@ -987,7 +987,7 @@ export function bible_glyph_chapter_exo08() {
           "$house+proper_name",
           "and",
           "prayed",
-          "to",
+          "$toward",
           "$i_am.",
         ],
       },
