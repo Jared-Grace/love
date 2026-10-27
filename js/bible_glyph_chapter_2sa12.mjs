@@ -519,7 +519,7 @@ export function bible_glyph_chapter_2sa12() {
         verse_number: 16,
         words: [
           "$two_hearts+proper_name",
-          "pleaded",
+          "$magnifying_glass",
           "with",
           "$heart_on_fire",
           "for",
