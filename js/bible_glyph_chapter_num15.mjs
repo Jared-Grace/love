@@ -34,7 +34,7 @@ export function bible_glyph_chapter_num15() {
           "the",
           "$earth",
           "$back+flashlight",
-          "I",
+          "$me",
           "am",
           "$hands_giving",
           "you",
