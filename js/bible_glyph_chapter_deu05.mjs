@@ -84,7 +84,7 @@ export function bible_glyph_chapter_deu05() {
           "with",
           "us,",
           "with",
-          "all",
+          "$all",
           "of",
           "us",
           "who",
