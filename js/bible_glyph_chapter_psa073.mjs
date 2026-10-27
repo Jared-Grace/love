@@ -49,7 +49,7 @@ export function bible_glyph_chapter_psa073() {
           "steps",
           "had",
           "nearly",
-          "slipped.",
+          "$jar+down_arrow+doing.",
         ],
       },
       {
