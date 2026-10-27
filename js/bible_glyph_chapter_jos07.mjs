@@ -81,7 +81,7 @@ export function bible_glyph_chapter_jos07() {
           "$back+flashlight",
           "is",
           "near",
-          "Beth-aven",
+          "$house+thumbs_down+hole+proper_name",
           "to",
           "the",
           "east",
