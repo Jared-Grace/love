@@ -121,7 +121,7 @@ export function bible_glyph_chapter_ezk37() {
           "$speech",
           "them,",
           "Dry",
-          "bones,",
+          "$bone,",
           "$ear",
           "the",
           "$speech",
