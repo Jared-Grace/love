@@ -933,7 +933,7 @@ export function bible_glyph_chapter_gen41() {
           "$clamp+proper_name",
           "during",
           "the",
-          "seven",
+          "$seven",
           "$year",
           "of",
           "abundance.",
