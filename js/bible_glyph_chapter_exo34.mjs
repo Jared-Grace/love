@@ -191,7 +191,7 @@ export function bible_glyph_chapter_exo34() {
           "$i_am",
           "$heart_on_fire,",
           "is",
-          "compassionate",
+          "$hugging_face+describing",
           "and",
           "gracious,",
           "slow",
