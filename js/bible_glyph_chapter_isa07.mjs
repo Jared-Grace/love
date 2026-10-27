@@ -132,7 +132,7 @@ export function bible_glyph_chapter_isa07() {
           "of",
           "the",
           "upper",
-          "pool,",
+          "$camel+water_wave,",
           "on",
           "the",
           "road",
