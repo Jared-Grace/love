@@ -414,7 +414,7 @@ export function bible_glyph_chapter_1sa07() {
           "$palm_down",
           "it",
           "up",
-          "between",
+          "$brain+arrow_both_ways",
           "$proper_name$Mizpah",
           "and",
           "$proper_name$Shen.",
