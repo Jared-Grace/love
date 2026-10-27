@@ -273,7 +273,7 @@ export function bible_glyph_chapter_deu04() {
           "to",
           "have",
           "$ruler",
-          "statutes",
+          "$locked_with_pen",
           "and",
           "$scales+thing",
           "like",
