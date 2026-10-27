@@ -1182,7 +1182,7 @@ export function bible_glyph_chapter_num14() {
           "had",
           "$walking",
           "to",
-          "spy",
+          "$telescope+walking+doing",
           "out",
           "the",
           "$earth,",
