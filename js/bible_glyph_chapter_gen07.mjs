@@ -403,7 +403,7 @@ export function bible_glyph_chapter_gen07() {
           "$package,",
           "$two",
           "by",
-          "two",
+          "$two",
           "of",
           "every",
           "$meat",
