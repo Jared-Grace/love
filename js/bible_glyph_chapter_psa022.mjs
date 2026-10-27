@@ -509,7 +509,7 @@ export function bible_glyph_chapter_psa022() {
           "He",
           "has",
           "$no_entry",
-          "despised,",
+          "$unamused_face+doing,",
           "$no_entry",
           "detested,",
           "the",
