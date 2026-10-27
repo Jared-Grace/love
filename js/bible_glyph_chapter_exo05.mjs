@@ -397,7 +397,7 @@ export function bible_glyph_chapter_exo05() {
           "just",
           "as",
           "when",
-          "straw",
+          "$wheat+scissors",
           "was",
           "provided.",
         ],
