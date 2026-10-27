@@ -107,7 +107,7 @@ export function bible_glyph_chapter_lev25() {
           "are",
           "$no_entry",
           "to",
-          "sow",
+          "$seed+doing",
           "your",
           "$field,",
           "$no_entry",
