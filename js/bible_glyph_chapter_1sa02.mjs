@@ -916,7 +916,7 @@ export function bible_glyph_chapter_1sa02() {
           "$safety_vest",
           "in",
           "My",
-          "presence.",
+          "$face.",
           "I",
           "also",
           "$hands_giving",
