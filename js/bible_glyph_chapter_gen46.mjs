@@ -608,7 +608,7 @@ export function bible_glyph_chapter_gen46() {
           "his",
           "own",
           "seed,",
-          "besides",
+          "$one+person",
           "the",
           "$woman",
           "of",
