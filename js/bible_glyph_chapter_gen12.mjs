@@ -495,7 +495,7 @@ export function bible_glyph_chapter_gen12() {
           "$house",
           "with",
           "severe",
-          "plagues",
+          "$face_with_head_bandage",
           "because",
           "of",
           "$military_medal+proper_name,",
