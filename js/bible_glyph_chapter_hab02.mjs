@@ -302,7 +302,7 @@ export function bible_glyph_chapter_hab02() {
           "his",
           "nest",
           "on",
-          "high",
+          "$up_arrow+thing",
           "and",
           "escape",
           "the",
