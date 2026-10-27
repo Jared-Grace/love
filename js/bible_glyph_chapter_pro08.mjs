@@ -275,7 +275,7 @@ export function bible_glyph_chapter_pro08() {
           "rulers",
           "enact",
           "$ruler+thing",
-          "laws.",
+          "$locked_with_pen+doing.",
         ],
       },
       {
