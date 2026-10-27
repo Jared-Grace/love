@@ -414,7 +414,7 @@ export function bible_glyph_chapter_lev01() {
           "twist",
           "off",
           "its",
-          "head,",
+          "$person_gesturing_ok,",
           "and",
           "burn",
           "it",
