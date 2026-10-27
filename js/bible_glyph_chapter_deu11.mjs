@@ -694,7 +694,7 @@ export function bible_glyph_chapter_deu11() {
           "multiplied",
           "in",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "the",
           "$i_am",
