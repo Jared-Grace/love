@@ -633,7 +633,7 @@ export function bible_glyph_chapter_lev22() {
           "offering,",
           "from",
           "the",
-          "herd",
+          "$cow_face",
           "$shuffle",
           "the",
           "$sheep,",
