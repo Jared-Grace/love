@@ -458,7 +458,7 @@ export function bible_glyph_chapter_ezk11() {
           "exiles,",
           "and",
           "the",
-          "whole",
+          "$all",
           "$house",
           "of",
           "$wrestling+heart_on_fire,",
