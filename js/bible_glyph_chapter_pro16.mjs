@@ -630,7 +630,7 @@ export function bible_glyph_chapter_pro16() {
           "a",
           "$crown+thing",
           "of",
-          "glory;",
+          "$ribbon;",
           "it",
           "is",
           "attained",
