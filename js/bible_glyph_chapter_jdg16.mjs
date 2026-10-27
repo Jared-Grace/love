@@ -118,7 +118,7 @@ export function bible_glyph_chapter_jdg16() {
           "all.",
           "Then",
           "he",
-          "put",
+          "$palm_down",
           "them",
           "on",
           "his",
