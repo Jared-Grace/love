@@ -55,7 +55,7 @@ export function bible_glyph_chapter_1ki20() {
           "he",
           "sent",
           "$angel",
-          "to",
+          "$toward",
           "$proper_name$Ahab",
           "$king",
           "of",
