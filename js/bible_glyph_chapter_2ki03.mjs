@@ -126,7 +126,7 @@ export function bible_glyph_chapter_2ki03() {
           "a",
           "$input_numbers+all",
           "$ten+all",
-          "lambs",
+          "$ram+field",
           "and",
           "the",
           "wool",
