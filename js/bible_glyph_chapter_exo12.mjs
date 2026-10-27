@@ -336,7 +336,7 @@ export function bible_glyph_chapter_exo12() {
           "$night",
           "I",
           "will",
-          "pass",
+          "$bridge",
           "through",
           "the",
           "$earth",
