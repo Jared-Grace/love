@@ -21,7 +21,7 @@ export function bible_glyph_chapter_lev19() {
           "to",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "$wrestling+heart_on_fire",
           "and",
