@@ -1285,7 +1285,7 @@ export function bible_glyph_chapter_gen27() {
         verse_number: 43,
         words: [
           "So",
-          "now,",
+          "$watch,",
           "my",
           "$son,",
           "$ear",
