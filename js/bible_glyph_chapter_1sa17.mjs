@@ -596,7 +596,7 @@ export function bible_glyph_chapter_1sa17() {
           "$card_index_dividers",
           "in",
           "formation",
-          "against",
+          "$footprints+toward+doing",
           "each",
           "other.",
         ],
