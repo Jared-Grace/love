@@ -98,7 +98,7 @@ export function bible_glyph_chapter_gen09() {
           "you",
           "the",
           "$leaf+describing",
-          "plants,",
+          "$herb,",
           "I",
           "now",
           "$hands_giving",
