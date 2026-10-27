@@ -349,7 +349,7 @@ export function bible_glyph_chapter_exo40() {
           "for",
           "a",
           "$hourglass",
-          "priesthood",
+          "$priest+thing",
           "throughout",
           "their",
           "generations.",
