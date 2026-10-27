@@ -374,7 +374,7 @@ export function bible_glyph_chapter_psa090() {
           "$crown",
           "our",
           "$heart_on_fire",
-          "rest",
+          "$link",
           "upon",
           "us;",
           "establish",
