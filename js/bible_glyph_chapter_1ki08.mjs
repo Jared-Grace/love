@@ -1952,7 +1952,7 @@ export function bible_glyph_chapter_1ki08() {
           "who",
           "has",
           "$hands_giving",
-          "rest",
+          "$seat+thing",
           "to",
           "His",
           "$family",
