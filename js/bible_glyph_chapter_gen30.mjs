@@ -557,7 +557,7 @@ export function bible_glyph_chapter_gen30() {
           "and",
           "opened",
           "her",
-          "womb.",
+          "$hugging_face+baby.",
         ],
       },
       {
