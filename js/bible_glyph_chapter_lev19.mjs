@@ -539,7 +539,7 @@ export function bible_glyph_chapter_lev19() {
           "been",
           "redeemed",
           "$shuffle",
-          "given",
+          "$hands_giving",
           "her",
           "$broken_chain+person+thing,",
           "there",
