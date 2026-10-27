@@ -237,7 +237,7 @@ export function bible_glyph_chapter_isa64() {
           "$watch,",
           "O",
           "$i_am,",
-          "You",
+          "$you",
           "are",
           "our",
           "$father.",
