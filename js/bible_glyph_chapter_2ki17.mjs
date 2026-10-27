@@ -333,7 +333,7 @@ export function bible_glyph_chapter_2ki17() {
           "sacred",
           "pillars",
           "and",
-          "Asherah",
+          "$wood+imp",
           "poles",
           "on",
           "every",
