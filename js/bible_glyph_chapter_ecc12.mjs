@@ -230,7 +230,7 @@ export function bible_glyph_chapter_ecc12() {
         words: [
           "before",
           "the",
-          "dust",
+          "$dust",
           "$turn_back",
           "to",
           "the",
