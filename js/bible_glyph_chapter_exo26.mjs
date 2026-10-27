@@ -918,7 +918,7 @@ export function bible_glyph_chapter_exo26() {
           "$gold",
           "$hook,",
           "and",
-          "cast",
+          "$pouring_liquid+fire",
           "$five",
           "$bronze",
           "bases",
