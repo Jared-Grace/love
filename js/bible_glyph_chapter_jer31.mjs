@@ -802,7 +802,7 @@ export function bible_glyph_chapter_jer31() {
           "May",
           "the",
           "$i_am",
-          "bless",
+          "$speech+thumbs_up",
           "you,",
           "O",
           "$ruler+thing",
