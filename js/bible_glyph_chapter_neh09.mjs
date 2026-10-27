@@ -548,7 +548,7 @@ export function bible_glyph_chapter_neh09() {
         verse_number: 16,
         words: [
           "But",
-          "they",
+          "$pointing_back",
           "and",
           "our",
           "$father",
