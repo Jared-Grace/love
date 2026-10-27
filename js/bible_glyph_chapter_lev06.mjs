@@ -638,7 +638,7 @@ export function bible_glyph_chapter_lev06() {
           "and",
           "$son,",
           "$speech",
-          "This",
+          "$flashlight",
           "is",
           "$scroll",
           "of",
