@@ -395,7 +395,7 @@ export function bible_glyph_chapter_deu14() {
       },
       {
         verse_number: 20,
-        words: ["But", "you", "may", "$eating", "any", "clean", "$bird."],
+        words: ["But", "you", "may", "$eating", "any", "$soap+describing", "$bird."],
       },
       {
         verse_number: 21,
