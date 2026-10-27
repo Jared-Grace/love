@@ -345,7 +345,7 @@ export function bible_glyph_chapter_ezr01() {
         words: [
           "thirty",
           "gold",
-          "bowls,",
+          "$snow+umbrella,",
           "four",
           "hundred",
           "and",
