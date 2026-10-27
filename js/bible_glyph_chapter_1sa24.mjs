@@ -327,7 +327,7 @@ export function bible_glyph_chapter_1sa24() {
       {
         verse_number: 10,
         words: [
-          "Behold,",
+          "$exclamation,",
           "this",
           "$sun",
           "you",
