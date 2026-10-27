@@ -120,7 +120,7 @@ export function bible_glyph_chapter_gen22() {
         words: [
           "On",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "$father+map",
           "lifted",
