@@ -327,7 +327,7 @@ export function bible_glyph_chapter_exo02() {
           "he",
           "went",
           "out",
-          "to",
+          "$toward",
           "his",
           "own",
           "$brother",
