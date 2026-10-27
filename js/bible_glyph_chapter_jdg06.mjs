@@ -1382,7 +1382,7 @@ export function bible_glyph_chapter_jdg06() {
           "And",
           "$heart_on_fire",
           "$hammer+doing",
-          "so",
+          "$right_arrow",
           "that",
           "$night.",
           "Only",
