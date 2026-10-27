@@ -206,7 +206,7 @@ export function bible_glyph_chapter_job38() {
           "but",
           "$no_entry",
           "$plus+doing;",
-          "here",
+          "$flashlight+round_pushpin",
           "your",
           "proud",
           "waves",
