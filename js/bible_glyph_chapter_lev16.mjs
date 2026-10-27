@@ -19,7 +19,7 @@ export function bible_glyph_chapter_lev16() {
           "$mouth",
           "$toward",
           "$fishing_pole+proper_name",
-          "after",
+          "$next_track",
           "the",
           "$skull",
           "of",
