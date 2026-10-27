@@ -516,7 +516,7 @@ export function bible_glyph_chapter_ezk47() {
       {
         verse_number: 15,
         words: [
-          "This",
+          "$flashlight",
           "will",
           "be",
           "the",
