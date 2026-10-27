@@ -255,7 +255,7 @@ export function bible_glyph_chapter_lev03() {
           "peace",
           "he",
           "shall",
-          "bring",
+          "$magnet+doing",
           "a",
           "food",
           "offering",
