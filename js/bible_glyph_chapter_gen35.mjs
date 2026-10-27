@@ -463,7 +463,7 @@ export function bible_glyph_chapter_gen35() {
           "While",
           "they",
           "were",
-          "still",
+          "$repeat",
           "some",
           "$earth",
           "from",
