@@ -260,7 +260,7 @@ export function bible_glyph_chapter_isa35() {
           "$telescope,",
           "and",
           "no",
-          "vicious",
+          "$wall+collision+person",
           "$sprout",
           "will",
           "$walking+pointing_up",
