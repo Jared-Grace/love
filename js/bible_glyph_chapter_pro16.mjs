@@ -43,7 +43,7 @@ export function bible_glyph_chapter_pro16() {
           "$man_beard",
           "$road",
           "are",
-          "pure",
+          "$sparkles+droplet",
           "in",
           "his",
           "own",
