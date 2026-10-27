@@ -1279,7 +1279,7 @@ export function bible_glyph_chapter_2ki10() {
           "written",
           "in",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "Chronicles",
