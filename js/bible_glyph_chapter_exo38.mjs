@@ -396,7 +396,7 @@ export function bible_glyph_chapter_exo38() {
           "$all",
           "the",
           "curtains",
-          "around",
+          "$around",
           "the",
           "courtyard",
           "were",
