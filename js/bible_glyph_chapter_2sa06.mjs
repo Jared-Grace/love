@@ -256,7 +256,7 @@ export function bible_glyph_chapter_2sa06() {
           "is",
           "called",
           "to",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
