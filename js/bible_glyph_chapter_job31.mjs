@@ -244,7 +244,7 @@ export function bible_glyph_chapter_job31() {
           "$wilted_flower+place;",
           "it",
           "would",
-          "root",
+          "$ginger_root+doing",
           "out",
           "my",
           "entire",
