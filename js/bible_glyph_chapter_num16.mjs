@@ -919,7 +919,7 @@ export function bible_glyph_chapter_num16() {
           "swallows",
           "them",
           "and",
-          "all",
+          "$all",
           "that",
           "belongs",
           "to",
