@@ -402,7 +402,7 @@ export function bible_glyph_chapter_neh08() {
           "$crown.",
           "Do",
           "$no_entry",
-          "grieve,",
+          "$heart_red+kitchen_knife+doing,",
           "for",
           "the",
           "joy",
