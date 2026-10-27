@@ -1313,7 +1313,7 @@ export function bible_glyph_chapter_num14() {
           "and",
           "$proper_name$Canaanites",
           "will",
-          "face",
+          "$face",
           "you",
           "$telescope,",
           "and",
