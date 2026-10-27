@@ -588,7 +588,7 @@ export function bible_glyph_chapter_gen40() {
           "of",
           "the",
           "chief",
-          "baker",
+          "$bread+fire",
           "among",
           "his",
           "$kneeling.",
