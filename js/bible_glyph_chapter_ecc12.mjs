@@ -404,7 +404,7 @@ export function bible_glyph_chapter_ecc12() {
       {
         verse_number: 14,
         words: [
-          "For",
+          "$pointing",
           "$heart_on_fire",
           "will",
           "$footprints",
