@@ -229,7 +229,7 @@ export function bible_glyph_chapter_zec05() {
           "a",
           "$woman",
           "$person+house",
-          "inside",
+          "$radio_button",
           "the",
           "basket.",
         ],
