@@ -688,7 +688,7 @@ export function bible_glyph_chapter_jos06() {
           "and",
           "the",
           "wall",
-          "collapsed.",
+          "$person+pointing_down.",
           "Then",
           "all",
           "the",
