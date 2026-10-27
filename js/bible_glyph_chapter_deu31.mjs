@@ -984,7 +984,7 @@ export function bible_glyph_chapter_deu31() {
           "have",
           "been",
           "rebelling",
-          "against",
+          "$linked_paperclips",
           "$i_am",
           "while",
           "I",
