@@ -372,7 +372,7 @@ export function bible_glyph_chapter_ezk01() {
           "of",
           "torches,",
           "$walking",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "$sprout.",
           "The",
