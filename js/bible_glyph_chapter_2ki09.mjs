@@ -1163,7 +1163,7 @@ export function bible_glyph_chapter_2ki09() {
           "on",
           "my",
           "side?",
-          "Who?",
+          "$person+question?",
           "And",
           "two",
           "or",
