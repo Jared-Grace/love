@@ -859,7 +859,7 @@ export function bible_glyph_chapter_1sa17() {
           "in",
           "the",
           "$wilderness?",
-          "I",
+          "$me",
           "$lightbulb",
           "your",
           "pride",
