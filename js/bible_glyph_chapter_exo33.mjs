@@ -335,7 +335,7 @@ export function bible_glyph_chapter_exo33() {
           "$candle",
           "of",
           "$cloud",
-          "standing",
+          "$person+round_pushpin",
           "at",
           "the",
           "entrance",
