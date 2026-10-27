@@ -1011,7 +1011,7 @@ export function bible_glyph_chapter_lam03() {
           "You",
           "defend",
           "my",
-          "cause,",
+          "$wrestling+thing,",
           "O",
           "$crown;",
           "You",
