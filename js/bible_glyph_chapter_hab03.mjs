@@ -358,7 +358,7 @@ export function bible_glyph_chapter_hab03() {
           "stormed",
           "out",
           "to",
-          "scatter",
+          "$confetti_ball",
           "us,",
           "gloating",
           "as",
