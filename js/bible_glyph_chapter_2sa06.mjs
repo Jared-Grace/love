@@ -16,7 +16,7 @@ export function bible_glyph_chapter_2sa06() {
         words: [
           "$two_hearts+proper_name",
           "again",
-          "assembled",
+          "$crowd+doing",
           "all",
           "the",
           "chosen",
