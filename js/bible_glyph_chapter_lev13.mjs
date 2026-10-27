@@ -549,7 +549,7 @@ export function bible_glyph_chapter_lev13() {
           "$turn_back",
           "and",
           "turns",
-          "white,",
+          "$white_circle,",
           "he",
           "must",
           "$footprints",
