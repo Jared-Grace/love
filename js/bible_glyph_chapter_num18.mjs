@@ -670,7 +670,7 @@ export function bible_glyph_chapter_num18() {
           "offering",
           "and",
           "the",
-          "right",
+          "$hand+right_arrow",
           "$leg",
           "belong",
           "to",
