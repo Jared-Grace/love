@@ -112,7 +112,7 @@ export function bible_glyph_chapter_zec08() {
           "of",
           "Hosts",
           "$speech:",
-          "Old",
+          "$old_man",
           "men",
           "and",
           "old",
