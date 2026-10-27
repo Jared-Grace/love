@@ -66,7 +66,7 @@ export function bible_glyph_chapter_ecc12() {
           "the",
           "clouds",
           "$turn_back",
-          "after",
+          "$next_track",
           "the",
           "rain;",
         ],
