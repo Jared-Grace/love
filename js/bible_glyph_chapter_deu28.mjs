@@ -1392,7 +1392,7 @@ export function bible_glyph_chapter_deu28() {
           "$running+toward",
           "you",
           "and",
-          "overtake",
+          "$running+hand_receiving+doing",
           "you",
           "until",
           "you",
