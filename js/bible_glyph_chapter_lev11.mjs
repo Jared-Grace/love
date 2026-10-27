@@ -1172,7 +1172,7 @@ export function bible_glyph_chapter_lev11() {
           "distinguish",
           "$brain+arrow_both_ways",
           "the",
-          "unclean",
+          "$soap+no_entry",
           "and",
           "the",
           "clean,",
