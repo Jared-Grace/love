@@ -741,7 +741,7 @@ export function bible_glyph_chapter_lev22() {
           "are",
           "$no_entry",
           "to",
-          "present",
+          "$magnet+doing",
           "to",
           "$i_am",
           "an",
