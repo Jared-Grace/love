@@ -296,7 +296,7 @@ export function bible_glyph_chapter_exo04() {
           "the",
           "$crocodile",
           "and",
-          "pour",
+          "$jar+down_arrow+doing",
           "it",
           "on",
           "the",
