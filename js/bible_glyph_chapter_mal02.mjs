@@ -327,7 +327,7 @@ export function bible_glyph_chapter_mal02() {
           "$heart_on_fire",
           "$milky_way+doing",
           "us?",
-          "Why",
+          "$flashlight+question+lightbulb",
           "then",
           "do",
           "we",
