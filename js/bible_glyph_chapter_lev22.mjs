@@ -370,7 +370,7 @@ export function bible_glyph_chapter_lev22() {
           "to",
           "$eating",
           "the",
-          "contributions",
+          "$up_arrow+gift",
           "of",
           "the",
           "$sparkle+thing.",
