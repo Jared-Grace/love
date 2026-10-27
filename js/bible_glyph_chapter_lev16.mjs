@@ -1227,7 +1227,7 @@ export function bible_glyph_chapter_lev16() {
           "$son",
           "of",
           "Israel",
-          "once",
+          "$one",
           "a",
           "$year",
           "because",
