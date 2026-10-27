@@ -1029,7 +1029,7 @@ export function bible_glyph_chapter_gen27() {
           "he",
           "not",
           "rightly",
-          "named",
+          "$waving_hand",
           "$hand+foot?",
           "For",
           "he",
