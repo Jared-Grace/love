@@ -101,7 +101,7 @@ export function bible_glyph_chapter_lev13() {
           "infection",
           "has",
           "turned",
-          "white",
+          "$white_circle",
           "and",
           "the",
           "sore",
