@@ -592,7 +592,7 @@ export function bible_glyph_chapter_deu14() {
           "it",
           "for",
           "$silver,",
-          "take",
+          "$city+around+doing",
           "the",
           "$silver",
           "in",
