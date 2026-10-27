@@ -411,7 +411,7 @@ export function bible_glyph_chapter_mic05() {
           "I",
           "will",
           "also",
-          "cut",
+          "$scissors",
           "off",
           "the",
           "carved",
