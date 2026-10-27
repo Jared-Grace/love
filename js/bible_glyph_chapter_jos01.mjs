@@ -303,7 +303,7 @@ export function bible_glyph_chapter_jos01() {
           "afraid",
           "or",
           "discouraged,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "your",
