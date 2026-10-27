@@ -367,7 +367,7 @@ export function bible_glyph_chapter_num15() {
           "generations",
           "to",
           "come,",
-          "if",
+          "$pointing",
           "a",
           "$foreigner",
           "residing",
