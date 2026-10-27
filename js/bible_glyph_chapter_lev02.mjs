@@ -62,7 +62,7 @@ export function bible_glyph_chapter_lev02() {
           "with",
           "$all",
           "the",
-          "frankincense,",
+          "$white_circle+incense,",
           "and",
           "$priest",
           "shall",
