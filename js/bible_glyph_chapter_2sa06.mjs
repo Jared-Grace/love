@@ -501,7 +501,7 @@ export function bible_glyph_chapter_2sa06() {
           "$window+eyes+doing",
           "from",
           "a",
-          "window",
+          "$window",
           "and",
           "$eye",
           "$king",
