@@ -126,7 +126,7 @@ export function bible_glyph_chapter_1sa17() {
           "$person_gesturing_ok,",
           "and",
           "he",
-          "wore",
+          "$garment+doing",
           "a",
           "$t_shirt+chains",
           "of",
