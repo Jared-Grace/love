@@ -129,7 +129,7 @@ export function bible_glyph_chapter_num06() {
           "of",
           "separation,",
           "$no_entry",
-          "razor",
+          "$razor",
           "shall",
           "pass",
           "over",
