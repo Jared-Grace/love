@@ -105,7 +105,7 @@ export function bible_glyph_chapter_gen13() {
           "And",
           "there",
           "$proper_name$Abram",
-          "called",
+          "$waving_hand",
           "on",
           "the",
           "$name_tag",
