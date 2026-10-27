@@ -79,7 +79,7 @@ export function bible_glyph_chapter_2ki17() {
           "him,",
           "and",
           "$rescue+proper_name",
-          "became",
+          "$link",
           "his",
           "$kneeling",
           "and",
