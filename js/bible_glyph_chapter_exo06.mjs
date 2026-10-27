@@ -496,7 +496,7 @@ export function bible_glyph_chapter_exo06() {
           "$handshake+proper_name",
           "$sprout",
           "$seven",
-          "years.",
+          "$year.",
         ],
       },
       {
