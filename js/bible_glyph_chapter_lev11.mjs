@@ -782,7 +782,7 @@ export function bible_glyph_chapter_lev11() {
           "falls",
           "into",
           "a",
-          "clay",
+          "$amphora",
           "pot,",
           "everything",
           "in",
