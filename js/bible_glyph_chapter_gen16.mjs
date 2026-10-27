@@ -96,7 +96,7 @@ export function bible_glyph_chapter_gen16() {
           "$proper_name$Hagar",
           "her",
           "$clamp+person",
-          "maidservant",
+          "$houses+female_sign",
           "and",
           "$hands_giving",
           "her",
