@@ -1023,7 +1023,7 @@ export function bible_glyph_chapter_lev15() {
           "any",
           "male",
           "or",
-          "female",
+          "$female_sign",
           "who",
           "has",
           "a",
