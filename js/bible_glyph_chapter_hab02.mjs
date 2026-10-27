@@ -343,7 +343,7 @@ export function bible_glyph_chapter_hab02() {
           "out",
           "from",
           "the",
-          "wall,",
+          "$brick+shield,",
           "and",
           "the",
           "rafters",
