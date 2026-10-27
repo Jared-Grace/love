@@ -429,7 +429,7 @@ export function bible_glyph_chapter_deu28() {
           "upward",
           "and",
           "$no_entry",
-          "downward,",
+          "$down_arrow+manner,",
           "if",
           "you",
           "$ear",
