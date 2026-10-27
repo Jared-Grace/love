@@ -1143,7 +1143,7 @@ export function bible_glyph_chapter_1sa20() {
         words: [
           "Then",
           "Saul",
-          "hurled",
+          "$throwing+doing",
           "his",
           "$spear",
           "at",
