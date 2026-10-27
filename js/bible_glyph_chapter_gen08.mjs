@@ -279,7 +279,7 @@ export function bible_glyph_chapter_gen08() {
           "$plus+one",
           "$sun",
           "and",
-          "again",
+          "$plus+doing",
           "sent",
           "out",
           "the",
