@@ -22,7 +22,7 @@ export function bible_glyph_chapter_exo27() {
           "$tree,",
           "$five",
           "$triangular_ruler",
-          "long",
+          "$up_down_arrow",
           "and",
           "$five",
           "$triangular_ruler",
