@@ -158,7 +158,7 @@ export function bible_glyph_chapter_isa35() {
           "$deer,",
           "and",
           "the",
-          "tongue",
+          "$tongue",
           "of",
           "the",
           "mute",
