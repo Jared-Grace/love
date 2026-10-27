@@ -313,7 +313,7 @@ export function bible_glyph_chapter_lev21() {
           "his",
           "hair",
           "hang",
-          "loose,",
+          "$broken_chain+doing,",
           "$no_entry",
           "tear",
           "his",
