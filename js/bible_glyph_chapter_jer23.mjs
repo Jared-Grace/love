@@ -442,7 +442,7 @@ export function bible_glyph_chapter_jer23() {
           "the",
           "darkness",
           "and",
-          "fall",
+          "$person+pointing_down",
           "into",
           "it.",
           "For",
