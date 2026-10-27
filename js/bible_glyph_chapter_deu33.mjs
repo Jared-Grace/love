@@ -152,7 +152,7 @@ export function bible_glyph_chapter_deu33() {
           "$skull+doing,",
           "nor",
           "his",
-          "men",
+          "$man_beard+crowd",
           "be",
           "few.",
         ],
