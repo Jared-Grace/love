@@ -32,7 +32,7 @@ export function bible_glyph_chapter_pro08() {
           "On",
           "the",
           "heights",
-          "overlooking",
+          "$pointing_up",
           "the",
           "$road,",
           "at",
