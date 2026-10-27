@@ -254,7 +254,7 @@ export function bible_glyph_chapter_gen48() {
           "$i_am+plus,",
           "he",
           "$speech,",
-          "Who",
+          "$person+question",
           "are",
           "these?",
         ],
