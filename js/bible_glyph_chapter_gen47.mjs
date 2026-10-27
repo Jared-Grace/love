@@ -735,7 +735,7 @@ export function bible_glyph_chapter_gen47() {
           "end",
           "of",
           "$clamp+proper_name",
-          "to",
+          "$finish",
           "the",
           "other.",
         ],
