@@ -396,7 +396,7 @@ export function bible_glyph_chapter_mic04() {
           "will",
           "be",
           "rescued;",
-          "there",
+          "$telescope",
           "the",
           "$i_am",
           "will",
