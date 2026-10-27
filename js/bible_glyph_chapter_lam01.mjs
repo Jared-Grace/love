@@ -711,7 +711,7 @@ export function bible_glyph_chapter_lam01() {
           "they",
           "searched",
           "for",
-          "food",
+          "$eating+thing",
           "to",
           "keep",
           "$turn_back",
