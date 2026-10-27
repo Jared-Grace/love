@@ -341,7 +341,7 @@ export function bible_glyph_chapter_lev05() {
           "$two",
           "turtledoves",
           "or",
-          "two",
+          "$two",
           "$son",
           "$dove,",
           "$footprints",
