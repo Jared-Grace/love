@@ -884,7 +884,7 @@ export function bible_glyph_chapter_lev26() {
           "will",
           "$bomb",
           "your",
-          "high",
+          "$snow_capped_mountain",
           "places,",
           "cut",
           "down",
