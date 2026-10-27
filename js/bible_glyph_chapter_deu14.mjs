@@ -23,7 +23,7 @@ export function bible_glyph_chapter_deu14() {
           "$heart_on_fire;",
           "do",
           "$no_entry",
-          "cut",
+          "$crowd+clamp+doing",
           "yourselves",
           "or",
           "shave",
