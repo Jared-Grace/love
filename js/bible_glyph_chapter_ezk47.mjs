@@ -276,7 +276,7 @@ export function bible_glyph_chapter_ezk47() {
           "down",
           "into",
           "the",
-          "Arabah.",
+          "$desert+proper_name.",
           "When",
           "it",
           "$footprints",
