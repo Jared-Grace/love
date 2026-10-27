@@ -109,7 +109,7 @@ export function bible_glyph_chapter_psa116() {
           "is",
           "full",
           "of",
-          "compassion.",
+          "$hugging_face+doing.",
         ],
       },
       {
