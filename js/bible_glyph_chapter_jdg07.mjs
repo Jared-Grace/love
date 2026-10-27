@@ -156,7 +156,7 @@ export function bible_glyph_chapter_jdg07() {
           "$speech",
           "to",
           "you,",
-          "This",
+          "$flashlight",
           "one",
           "shall",
           "$walking",
