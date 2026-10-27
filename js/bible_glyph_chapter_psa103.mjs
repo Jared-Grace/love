@@ -150,7 +150,7 @@ export function bible_glyph_chapter_psa103() {
           "is",
           "$hugging_face+describing",
           "and",
-          "gracious,",
+          "$heart_orange+describing,",
           "slow",
           "to",
           "anger,",
