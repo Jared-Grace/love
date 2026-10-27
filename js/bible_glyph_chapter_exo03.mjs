@@ -200,7 +200,7 @@ export function bible_glyph_chapter_exo03() {
           "was",
           "$fear+doing",
           "to",
-          "look",
+          "$face_with_monocle",
           "at",
           "$heart_on_fire.",
         ],
