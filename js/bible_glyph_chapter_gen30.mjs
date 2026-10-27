@@ -397,7 +397,7 @@ export function bible_glyph_chapter_gen30() {
           "$field",
           "in",
           "the",
-          "evening,",
+          "$sunset,",
           "$proper_name$Leah",
           "went",
           "out",
