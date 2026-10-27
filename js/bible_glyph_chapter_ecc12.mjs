@@ -359,7 +359,7 @@ export function bible_glyph_chapter_ecc12() {
           "there",
           "is",
           "no",
-          "end,",
+          "$stop_sign,",
           "and",
           "much",
           "study",
