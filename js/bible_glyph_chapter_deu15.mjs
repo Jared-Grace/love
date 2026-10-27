@@ -556,7 +556,7 @@ export function bible_glyph_chapter_deu15() {
           "ear",
           "into",
           "the",
-          "door,",
+          "$door+thing,",
           "and",
           "he",
           "will",
