@@ -554,7 +554,7 @@ export function bible_glyph_chapter_zec09() {
           "jewels",
           "in",
           "a",
-          "crown",
+          "$crown+soap",
           "they",
           "will",
           "sparkle",
