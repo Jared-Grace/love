@@ -733,7 +733,7 @@ export function bible_glyph_chapter_deu15() {
           "ceremonially",
           "$soap+no_entry",
           "and",
-          "clean",
+          "$soap+describing",
           "may",
           "eat",
           "it",
