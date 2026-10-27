@@ -799,7 +799,7 @@ export function bible_glyph_chapter_lev15() {
           "or",
           "any",
           "furniture",
-          "on",
+          "$pointing_up",
           "$back+flashlight",
           "she",
           "sits",
