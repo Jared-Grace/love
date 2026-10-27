@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_num16() {
           "owned.",
           "The",
           "$earth",
-          "closed",
+          "$coat+doing",
           "over",
           "them,",
           "and",
