@@ -129,7 +129,7 @@ export function bible_glyph_chapter_exo25() {
           "and",
           "in",
           "the",
-          "breastpiece.",
+          "$gem_stone+t_shirt.",
         ],
       },
       {
