@@ -382,7 +382,7 @@ export function bible_glyph_chapter_psa145() {
           "to",
           "all",
           "who",
-          "call",
+          "$waving_hand",
           "on",
           "Him,",
           "to",
