@@ -159,7 +159,7 @@ export function bible_glyph_chapter_num09() {
           "were",
           "some",
           "men",
-          "who",
+          "$back+flashlight",
           "were",
           "unclean,",
           "$person_other",
