@@ -449,7 +449,7 @@ export function bible_glyph_chapter_num25() {
           "$rock+proper_name,",
           "a",
           "tribal",
-          "chief",
+          "$person_gesturing_ok",
           "of",
           "a",
           "$house",
