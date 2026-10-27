@@ -151,7 +151,7 @@ export function bible_glyph_chapter_lev24() {
           "to",
           "$hands_giving",
           "pure",
-          "frankincense",
+          "$white_circle+incense",
           "near",
           "each",
           "row,",
