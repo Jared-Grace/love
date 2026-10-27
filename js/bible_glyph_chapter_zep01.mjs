@@ -220,7 +220,7 @@ export function bible_glyph_chapter_zep01() {
           "$shushing_face+crowd+doing",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$crown",
