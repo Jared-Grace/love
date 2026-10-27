@@ -658,7 +658,7 @@ export function bible_glyph_chapter_num23() {
           "$hand+foot",
           "and",
           "$no_entry",
-          "divination",
+          "$crystal_ball",
           "against",
           "$wrestling+heart_on_fire.",
           "It",
