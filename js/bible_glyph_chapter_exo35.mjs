@@ -176,7 +176,7 @@ export function bible_glyph_chapter_exo35() {
           "and",
           "fine",
           "leather,",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
         ],
       },
