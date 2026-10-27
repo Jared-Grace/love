@@ -404,7 +404,7 @@ export function bible_glyph_chapter_ezk47() {
           "leaves",
           "will",
           "$no_entry",
-          "wither,",
+          "$fallen_leaf+doing,",
           "and",
           "their",
           "fruit",
