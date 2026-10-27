@@ -783,7 +783,7 @@ export function bible_glyph_chapter_2sa11() {
           "back",
           "to",
           "the",
-          "entrance",
+          "$door",
           "of",
           "the",
           "gate.",
