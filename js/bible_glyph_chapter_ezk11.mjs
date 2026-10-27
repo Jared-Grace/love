@@ -598,7 +598,7 @@ export function bible_glyph_chapter_ezk11() {
           "it",
           "$all",
           "its",
-          "detestable",
+          "$moai+thumbs_down",
           "things",
           "and",
           "$all",
