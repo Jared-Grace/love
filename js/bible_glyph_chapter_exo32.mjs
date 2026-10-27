@@ -1136,7 +1136,7 @@ export function bible_glyph_chapter_exo32() {
           "place",
           "I",
           "$mouth.",
-          "Behold,",
+          "$exclamation,",
           "My",
           "$angel",
           "shall",
