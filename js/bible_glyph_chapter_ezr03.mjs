@@ -329,7 +329,7 @@ export function bible_glyph_chapter_ezr03() {
           "They",
           "appointed",
           "$handshake",
-          "twenty",
+          "$two+zero",
           "years",
           "of",
           "age",
