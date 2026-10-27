@@ -443,7 +443,7 @@ export function bible_glyph_chapter_exo09() {
       {
         verse_number: 15,
         words: [
-          "For",
+          "$pointing",
           "by",
           "this",
           "time",
