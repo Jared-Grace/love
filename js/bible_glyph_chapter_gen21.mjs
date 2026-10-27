@@ -224,7 +224,7 @@ export function bible_glyph_chapter_gen21() {
           "$speech",
           "to",
           "$father+map,",
-          "Expel",
+          "$door+leftwards_pushing_hand+doing",
           "the",
           "slave",
           "woman",
