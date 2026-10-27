@@ -558,7 +558,7 @@ export function bible_glyph_chapter_gen09() {
           "of",
           "the",
           "soil,",
-          "proceeded",
+          "$sewing_needle",
           "to",
           "plant",
           "a",
