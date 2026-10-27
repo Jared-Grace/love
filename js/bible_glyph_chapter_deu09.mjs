@@ -501,7 +501,7 @@ export function bible_glyph_chapter_deu09() {
           "$flashlight",
           "$family,",
           "and",
-          "they",
+          "$pointing_back",
           "are",
           "indeed",
           "a",
