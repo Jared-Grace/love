@@ -431,7 +431,7 @@ export function bible_glyph_chapter_1ki22() {
           "$megaphone",
           "$face_with_open_mouth",
           "with",
-          "one",
+          "$one",
           "another",
           "and",
           "are",
