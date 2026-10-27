@@ -1067,7 +1067,7 @@ export function bible_glyph_chapter_gen27() {
           "$laughing+proper_name",
           "$speech",
           "$proper_name$Esau,",
-          '"Look,',
+          '"$exclamation,',
           "I",
           "have",
           "made",
