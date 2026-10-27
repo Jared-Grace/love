@@ -897,7 +897,7 @@ export function bible_glyph_chapter_gen18() {
           "$telescope.",
           "He",
           "$speech,",
-          "If",
+          "$traffic_light",
           "I",
           "find",
           "$three+zero",
