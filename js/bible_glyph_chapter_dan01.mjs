@@ -100,7 +100,7 @@ export function bible_glyph_chapter_dan01() {
           "chief",
           "of",
           "his",
-          "court",
+          "$castle+kneeling",
           "officials,",
           "to",
           "$footprints",
