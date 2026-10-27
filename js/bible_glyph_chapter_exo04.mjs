@@ -88,7 +88,7 @@ export function bible_glyph_chapter_exo04() {
           "$snake,",
           "and",
           "he",
-          "ran",
+          "$running+dashing_away",
           "from",
           "it.",
         ],
