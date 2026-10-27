@@ -495,7 +495,7 @@ export function bible_glyph_chapter_num06() {
           "together",
           "with",
           "their",
-          "grain",
+          "$grain_offering",
           "offerings",
           "and",
           "drink",
