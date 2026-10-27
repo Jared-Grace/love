@@ -776,7 +776,7 @@ export function bible_glyph_chapter_gen44() {
           "us,",
           "$you",
           "$lightbulb",
-          "that",
+          "$pointing",
           "my",
           "$woman",
           "$baby",
