@@ -13,7 +13,7 @@ export function bible_glyph_chapter_mal04() {
       {
         verse_number: 1,
         words: [
-          "For",
+          "$pointing",
           "behold,",
           "the",
           "$sun",
