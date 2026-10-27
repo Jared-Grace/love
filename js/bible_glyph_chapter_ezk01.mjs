@@ -345,7 +345,7 @@ export function bible_glyph_chapter_ezk01() {
           "would",
           "$walking,",
           "$no_entry",
-          "turning",
+          "$around+doing",
           "as",
           "they",
           "$walking.",
