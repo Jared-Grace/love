@@ -89,7 +89,7 @@ export function bible_glyph_chapter_deu16() {
           "must",
           "$no_entry",
           "$eating",
-          "leavened",
+          "$bread+bubbles",
           "bread",
           "with",
           "it;",
