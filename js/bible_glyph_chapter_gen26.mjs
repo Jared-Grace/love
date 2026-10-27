@@ -344,7 +344,7 @@ export function bible_glyph_chapter_gen26() {
           "$father+king",
           "$speech",
           "to",
-          "all",
+          "$all",
           "the",
           "$family,",
           "Whoever",
