@@ -930,7 +930,7 @@ export function bible_glyph_chapter_exo32() {
           "and",
           "forth",
           "from",
-          "gate",
+          "$gate",
           "to",
           "gate",
           "through",
