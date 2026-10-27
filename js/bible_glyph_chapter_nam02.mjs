@@ -74,7 +74,7 @@ export function bible_glyph_chapter_nam02() {
           "shields",
           "of",
           "his",
-          "mighty",
+          "$might+person",
           "men",
           "are",
           "red;",
