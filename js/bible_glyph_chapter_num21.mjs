@@ -496,7 +496,7 @@ export function bible_glyph_chapter_num21() {
           "$wrestling+heart_on_fire",
           "$song+doing",
           "this",
-          "song:",
+          "$song:",
           "Spring",
           "up,",
           "O",
