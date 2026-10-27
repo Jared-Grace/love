@@ -730,7 +730,7 @@ export function bible_glyph_chapter_gen09() {
           "$proper_name$Japheth.",
           "May",
           "he",
-          "dwell",
+          "$tent+doing",
           "in",
           "the",
           "tents",
