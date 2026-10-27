@@ -290,7 +290,7 @@ export function bible_glyph_chapter_exo13() {
           "you",
           "shall",
           "$guard",
-          "this",
+          "$flashlight",
           "$statute",
           "at",
           "the",
