@@ -618,7 +618,7 @@ export function bible_glyph_chapter_lev06() {
           "shall",
           "be",
           "burned",
-          "completely.",
+          "$all+describing.",
           "It",
           "$no_entry",
           "to",
