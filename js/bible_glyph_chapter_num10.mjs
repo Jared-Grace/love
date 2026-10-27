@@ -251,7 +251,7 @@ export function bible_glyph_chapter_num10() {
           "beginning",
           "of",
           "each",
-          "month,",
+          "$new_moon,",
           "you",
           "are",
           "to",
