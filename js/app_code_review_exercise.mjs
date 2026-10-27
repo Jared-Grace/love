@@ -62,8 +62,8 @@ export function app_code_review_exercise(
     "offered here as well as on the lesson's own quiz, and not because a review looks any different: a quiz that is handed this on one screen and not on the other is a quiz that works on one screen and throws on the other, and the review is the screen nobody tries first";
     app_code_label_text_set(answer_label_div, said);
   }
-  function on_reveal() {
-    app_code_lesson_quiz_show_correction(container_correction);
+  async function on_reveal() {
+    await app_code_lesson_quiz_show_correction(container_correction);
   }
   let answers_div = html_div(a_container);
   ("a miss adds added_count more of this quiz to the review, and the learner may say it was a slip and keep them out; added_count is 0 where nothing is added, and then nothing is offered");
