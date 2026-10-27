@@ -160,7 +160,7 @@ export function bible_glyph_chapter_2sa06() {
           "$harp,",
           "stringed",
           "instruments,",
-          "tambourines,",
+          "$tambourine,",
           "sistrums",
           "and",
           "cymbals.",
