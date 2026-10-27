@@ -253,7 +253,7 @@ export function bible_glyph_chapter_exo31() {
           "to",
           "the",
           "anointing",
-          "oil",
+          "$lotion_bottle",
           "and",
           "the",
           "fragrant",
