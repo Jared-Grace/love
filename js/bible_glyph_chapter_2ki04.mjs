@@ -686,7 +686,7 @@ export function bible_glyph_chapter_2ki04() {
           "may",
           "go",
           "quickly",
-          "to",
+          "$finish",
           "the",
           "$man_beard",
           "of",
