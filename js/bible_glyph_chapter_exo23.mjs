@@ -765,7 +765,7 @@ export function bible_glyph_chapter_exo23() {
           "will",
           "fulfill",
           "the",
-          "number",
+          "$input_numbers",
           "of",
           "your",
           "$sun.",
