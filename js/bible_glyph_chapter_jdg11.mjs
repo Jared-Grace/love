@@ -759,7 +759,7 @@ export function bible_glyph_chapter_jdg11() {
           "$family",
           "$wrestling+heart_on_fire,",
           "should",
-          "you",
+          "$you",
           "now",
           "possess",
           "it?",
