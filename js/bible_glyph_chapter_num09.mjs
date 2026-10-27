@@ -26,7 +26,7 @@ export function bible_glyph_chapter_num09() {
           "in",
           "the",
           "first",
-          "month",
+          "$new_moon",
           "of",
           "the",
           "$second_place",
