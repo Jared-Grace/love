@@ -449,7 +449,7 @@ export function bible_glyph_chapter_num08() {
         words: [
           "For",
           "every",
-          "firstborn",
+          "$first_place+baby",
           "$son",
           "in",
           "$wrestling+heart_on_fire",
