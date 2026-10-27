@@ -593,7 +593,7 @@ export function bible_glyph_chapter_num14() {
           "will",
           "visit",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "the",
           "$father",
