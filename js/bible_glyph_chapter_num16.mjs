@@ -1354,7 +1354,7 @@ export function bible_glyph_chapter_num16() {
           "$person_climbing+doing",
           "away",
           "from",
-          "this",
+          "$flashlight",
           "$witness+crowd,",
           "so",
           "that",
