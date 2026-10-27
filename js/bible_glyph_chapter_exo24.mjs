@@ -225,7 +225,7 @@ export function bible_glyph_chapter_exo24() {
           "$family,",
           "who",
           "$speech,",
-          "All",
+          "$all",
           "that",
           "$i_am",
           "has",
