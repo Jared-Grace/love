@@ -277,7 +277,7 @@ export function bible_glyph_chapter_num23() {
         words: [
           "$person+question",
           "can",
-          "count",
+          "$input_numbers+doing",
           "the",
           "$dust",
           "of",
