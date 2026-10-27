@@ -1264,7 +1264,7 @@ export function bible_glyph_chapter_jdg06() {
           "a",
           "fleece",
           "of",
-          "wool",
+          "$yarn",
           "on",
           "the",
           "threshing",
