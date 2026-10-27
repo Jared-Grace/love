@@ -35,7 +35,7 @@ export function bible_glyph_chapter_gen43() {
           "eaten",
           "all",
           "the",
-          "grain",
+          "$wheat+coin",
           "they",
           "had",
           "$footprints",
