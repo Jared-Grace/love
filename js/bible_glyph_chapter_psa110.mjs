@@ -76,7 +76,7 @@ export function bible_glyph_chapter_psa110() {
           "Arrayed",
           "in",
           "$sparkle+thing",
-          "splendor,",
+          "$crown+sparkles,",
           "from",
           "the",
           "womb",
