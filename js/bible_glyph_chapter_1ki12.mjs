@@ -354,7 +354,7 @@ export function bible_glyph_chapter_1ki12() {
           "with",
           "a",
           "heavy",
-          "yoke,",
+          "$yoke,",
           "I",
           "will",
           "add",
