@@ -416,7 +416,7 @@ export function bible_glyph_chapter_num22() {
           "$speech",
           "to",
           "the",
-          "princes",
+          "$military_medal",
           "of",
           "Balak,",
           "$walking",
