@@ -410,7 +410,7 @@ export function bible_glyph_chapter_isa49() {
           "and",
           "lead",
           "them",
-          "beside",
+          "$pointing_up",
           "springs",
           "of",
           "$water.",
