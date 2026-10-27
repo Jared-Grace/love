@@ -674,7 +674,7 @@ export function bible_glyph_chapter_num35() {
           "$skull+doing",
           "him,",
           "though",
-          "he",
+          "$pointing_back",
           "was",
           "$no_entry",
           "his",
