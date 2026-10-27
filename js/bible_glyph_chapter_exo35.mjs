@@ -810,7 +810,7 @@ export function bible_glyph_chapter_exo35() {
         words: [
           "to",
           "design",
-          "artistic",
+          "$thinking+thing",
           "$hammer+doing",
           "in",
           "$gold,",
