@@ -449,7 +449,7 @@ export function bible_glyph_chapter_lev07() {
       {
         verse_number: 18,
         words: [
-          "If",
+          "$traffic_light",
           "any",
           "$meat",
           "$sacrifice",
