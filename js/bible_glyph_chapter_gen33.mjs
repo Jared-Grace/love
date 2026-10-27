@@ -37,7 +37,7 @@ export function bible_glyph_chapter_gen33() {
           "$proper_name$Rachel",
           "and",
           "the",
-          "two",
+          "$two",
           "servants.",
         ],
       },
