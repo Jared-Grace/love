@@ -198,7 +198,7 @@ export function bible_glyph_chapter_jer32() {
           "attend",
           "to",
           "him,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
           "If",
