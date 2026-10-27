@@ -377,7 +377,7 @@ export function bible_glyph_chapter_isa07() {
           "Isaiah",
           "$speech,",
           '"$ear',
-          "now,",
+          "$pleading,",
           "O",
           "$house",
           "of",
