@@ -462,7 +462,7 @@ export function bible_glyph_chapter_exo09() {
           "$family",
           "with",
           "a",
-          "plague",
+          "$face_with_medical_mask",
           "to",
           "wipe",
           "you",
