@@ -531,7 +531,7 @@ export function bible_glyph_chapter_exo40() {
           "of",
           "the",
           "$tent+house,",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "veil.",
         ],
