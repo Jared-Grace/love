@@ -595,7 +595,7 @@ export function bible_glyph_chapter_jos06() {
           "devoted",
           "to",
           "destruction,",
-          "lest",
+          "$no_entry+traffic_light",
           "you",
           "yourself",
           "be",
