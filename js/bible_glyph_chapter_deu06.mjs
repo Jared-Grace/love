@@ -585,7 +585,7 @@ export function bible_glyph_chapter_deu06() {
           "$son",
           "$question,",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "is",
           "the",
           "meaning",
