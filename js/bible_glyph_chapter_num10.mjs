@@ -792,7 +792,7 @@ export function bible_glyph_chapter_num10() {
           "$no_entry",
           "leave",
           "us,",
-          "since",
+          "$pointing",
           "you",
           "$lightbulb",
           "where",
