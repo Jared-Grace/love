@@ -18,7 +18,7 @@ export function bible_glyph_chapter_gen20() {
           "$father+map",
           "moved",
           "from",
-          "there",
+          "$telescope",
           "to",
           "the",
           "$earth",
