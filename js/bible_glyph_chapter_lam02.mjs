@@ -804,7 +804,7 @@ export function bible_glyph_chapter_lam02() {
           "$water",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$crown.",
