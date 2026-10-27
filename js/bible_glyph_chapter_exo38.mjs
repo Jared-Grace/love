@@ -528,7 +528,7 @@ export function bible_glyph_chapter_exo38() {
           "for",
           "the",
           "surrounding",
-          "courtyard",
+          "$house_with_garden",
           "were",
           "$bronze.",
         ],
