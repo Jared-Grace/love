@@ -317,7 +317,7 @@ export function bible_glyph_chapter_deu05() {
           "leave",
           "anyone",
           "unpunished",
-          "who",
+          "$back+flashlight",
           "takes",
           "His",
           "$name_tag",
