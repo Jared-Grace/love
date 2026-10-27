@@ -470,7 +470,7 @@ export function bible_glyph_chapter_num27() {
           "$link",
           "like",
           "$sheep",
-          "without",
+          "$dotted_line_face",
           "a",
           "$person+sheep.",
         ],
