@@ -773,7 +773,7 @@ export function bible_glyph_chapter_num10() {
           "am",
           "$walking",
           "back",
-          "to",
+          "$toward",
           "my",
           "own",
           "$earth",
