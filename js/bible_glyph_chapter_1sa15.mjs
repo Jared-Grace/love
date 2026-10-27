@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_1sa15() {
           "made",
           "$woman",
           "childless,",
-          "so",
+          "$right_arrow",
           "will",
           "your",
           "$mother",
