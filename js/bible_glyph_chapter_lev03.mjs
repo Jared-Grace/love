@@ -33,7 +33,7 @@ export function bible_glyph_chapter_lev03() {
           "it",
           "without",
           "blemish",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
