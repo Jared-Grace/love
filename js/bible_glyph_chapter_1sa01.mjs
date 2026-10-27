@@ -451,7 +451,7 @@ export function bible_glyph_chapter_1sa01() {
           "$woman",
           "$mechanical_arm+describing",
           "in",
-          "spirit.",
+          "$wind.",
           "I",
           "have",
           "$no_entry",
