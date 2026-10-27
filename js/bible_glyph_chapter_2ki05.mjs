@@ -409,7 +409,7 @@ export function bible_glyph_chapter_2ki05() {
           "his",
           "$heart_on_fire,",
           "and",
-          "wave",
+          "$hand+up_down_arrow+doing",
           "his",
           "$hand",
           "over",
