@@ -222,7 +222,7 @@ export function bible_glyph_chapter_gen28() {
           "and",
           "Esau",
           "$eye",
-          "that",
+          "$pointing",
           "the",
           "$proper_name$Canaanite",
           "$woman",
