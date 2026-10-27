@@ -968,7 +968,7 @@ export function bible_glyph_chapter_2ki09() {
           "repay",
           "you",
           "on",
-          "this",
+          "$flashlight",
           "plot",
           "of",
           "$field+pizza,",
