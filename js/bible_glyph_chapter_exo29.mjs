@@ -801,7 +801,7 @@ export function bible_glyph_chapter_exo29() {
         words: [
           "$sparkle+doing",
           "the",
-          "breast",
+          "$heart_organ+meat",
           "of",
           "the",
           "wave",
