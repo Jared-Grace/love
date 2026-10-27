@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_1sa20() {
         verse_number: 32,
         words: [
           "$i_am+hands_giving",
-          "replied",
+          "$speech+turn_back",
           "to",
           "his",
           "$father,",
