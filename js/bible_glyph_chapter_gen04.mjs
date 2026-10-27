@@ -278,7 +278,7 @@ export function bible_glyph_chapter_gen04() {
           "the",
           "LORD",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "have",
           "you",
           "$hammer+doing?",
