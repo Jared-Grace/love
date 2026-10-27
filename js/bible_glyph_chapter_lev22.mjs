@@ -227,7 +227,7 @@ export function bible_glyph_chapter_lev22() {
           "the",
           "$sparkle+thing,",
           "$pointing",
-          "they",
+          "$pointing_back",
           "are",
           "his",
           "$bread.",
