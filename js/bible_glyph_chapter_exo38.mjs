@@ -383,7 +383,7 @@ export function bible_glyph_chapter_exo38() {
           "cubits",
           "long,",
           "with",
-          "three",
+          "$three",
           "$candle",
           "and",
           "three",
