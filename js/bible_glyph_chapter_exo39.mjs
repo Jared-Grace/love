@@ -783,7 +783,7 @@ export function bible_glyph_chapter_exo39() {
           "of",
           "the",
           "$sparkle+thing",
-          "crown",
+          "$crown+soap",
           "of",
           "pure",
           "$gold,",
