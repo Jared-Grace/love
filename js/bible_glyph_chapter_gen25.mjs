@@ -726,7 +726,7 @@ export function bible_glyph_chapter_gen25() {
           "$proper_name$Esau",
           "$speech,",
           "$exclamation,",
-          "I",
+          "$me",
           "am",
           "$walking",
           "to",
