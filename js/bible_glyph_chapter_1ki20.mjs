@@ -880,7 +880,7 @@ export function bible_glyph_chapter_1ki20() {
           "$voice",
           "and",
           "$hammer+doing",
-          "accordingly.",
+          "$right_arrow.",
         ],
       },
       {
