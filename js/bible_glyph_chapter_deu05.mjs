@@ -541,7 +541,7 @@ export function bible_glyph_chapter_deu05() {
           "shall",
           "$no_entry",
           "bear",
-          "false",
+          "$bubbles",
           "$witness",
           "against",
           "your",
