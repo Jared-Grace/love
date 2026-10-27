@@ -494,7 +494,7 @@ export function bible_glyph_chapter_1sa15() {
           "and",
           "$cow_face",
           "to",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "the",
           "$i_am",
