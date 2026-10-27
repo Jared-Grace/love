@@ -600,7 +600,7 @@ export function bible_glyph_chapter_2ki09() {
           "the",
           "watchman",
           "$person+round_pushpin",
-          "on",
+          "$pointing_up",
           "the",
           "$tower",
           "in",
