@@ -174,7 +174,7 @@ export function bible_glyph_chapter_2ki05() {
           "with",
           "$hand",
           "$ten",
-          "talents",
+          "$flying_disc",
           "of",
           "silver,",
           "six",
