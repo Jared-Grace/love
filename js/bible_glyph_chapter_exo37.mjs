@@ -329,7 +329,7 @@ export function bible_glyph_chapter_exo37() {
           "to",
           "the",
           "$four",
-          "corners",
+          "$straight_ruler+round_pushpin",
           "at",
           "its",
           "$four",
