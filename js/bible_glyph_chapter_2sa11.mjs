@@ -335,7 +335,7 @@ export function bible_glyph_chapter_2sa11() {
           "from",
           "the",
           "$road?",
-          "Why",
+          "$flashlight+question+lightbulb",
           "did",
           "you",
           "$no_entry",
