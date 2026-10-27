@@ -90,7 +90,7 @@ export function bible_glyph_chapter_gen04() {
           "$brown_square",
           "as",
           "an",
-          "offering",
+          "$grain_offering",
           "to",
           "the",
           "$i_am,",
