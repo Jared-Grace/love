@@ -1691,7 +1691,7 @@ export function bible_glyph_chapter_deu04() {
           "extending",
           "from",
           "$proper_name$Aroer",
-          "on",
+          "$pointing_up",
           "the",
           "rim",
           "of",
