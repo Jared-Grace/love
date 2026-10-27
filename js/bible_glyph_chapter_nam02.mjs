@@ -249,7 +249,7 @@ export function bible_glyph_chapter_nam02() {
           "an",
           "$star",
           "of",
-          "every",
+          "$all",
           "precious",
           "thing.",
         ],
