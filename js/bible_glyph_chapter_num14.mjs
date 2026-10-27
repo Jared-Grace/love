@@ -783,7 +783,7 @@ export function bible_glyph_chapter_num14() {
           "his",
           "$seed",
           "will",
-          "inherit",
+          "$triangular_flag",
           "it.",
         ],
       },
