@@ -171,7 +171,7 @@ export function bible_glyph_chapter_exo21() {
           "$door+thing",
           "$shuffle",
           "the",
-          "doorpost,",
+          "$door+wood,",
           "and",
           "his",
           "$crown",
