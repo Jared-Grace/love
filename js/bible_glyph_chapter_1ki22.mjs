@@ -231,7 +231,7 @@ export function bible_glyph_chapter_1ki22() {
           "There",
           "is",
           "$repeat",
-          "one",
+          "$one",
           "$man_beard",
           "through",
           "whom",
