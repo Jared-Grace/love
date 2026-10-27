@@ -376,7 +376,7 @@ export function bible_glyph_chapter_exo34() {
           "$sun.",
           "I",
           "will",
-          "drive",
+          "$door+leftwards_pushing_hand+doing",
           "out",
           "before",
           "you",
