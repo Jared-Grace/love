@@ -659,7 +659,7 @@ export function bible_glyph_chapter_num20() {
         verse_number: 21,
         words: [
           "So",
-          "Edom",
+          "$red_circle+map+proper_name",
           "$person_gesturing_no+doing",
           "to",
           "$hands_giving",
