@@ -575,7 +575,7 @@ export function bible_glyph_chapter_exo21() {
       {
         verse_number: 21,
         words: [
-          "However,",
+          "$check+exclamation,",
           "if",
           "the",
           "servant",
