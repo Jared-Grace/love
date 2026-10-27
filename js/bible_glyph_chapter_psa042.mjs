@@ -201,7 +201,7 @@ export function bible_glyph_chapter_psa042() {
       {
         verse_number: 7,
         words: [
-          "Deep",
+          "$sea+down_arrow",
           "calls",
           "to",
           "deep",
