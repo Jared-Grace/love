@@ -272,7 +272,7 @@ export function bible_glyph_chapter_hab01() {
           "of",
           "scorn.",
           "$pointing_back",
-          "laugh",
+          "$laughing",
           "at",
           "$all",
           "$wall+locked",
