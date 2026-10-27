@@ -278,7 +278,7 @@ export function bible_glyph_chapter_deu15() {
           "of",
           "release,",
           "is",
-          "near,",
+          "$magnet+doing,",
           "so",
           "that",
           "you",
