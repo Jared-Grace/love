@@ -617,7 +617,7 @@ export function bible_glyph_chapter_exo25() {
           "$hammer+doing",
           "for",
           "it",
-          "four",
+          "$four",
           "$gold",
           "$ring,",
           "and",
