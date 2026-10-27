@@ -102,7 +102,7 @@ export function bible_glyph_chapter_zec09() {
       {
         verse_number: 4,
         words: [
-          "Behold,",
+          "$exclamation,",
           "the",
           "$crown",
           "will",
