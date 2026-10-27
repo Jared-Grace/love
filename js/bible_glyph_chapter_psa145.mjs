@@ -207,7 +207,7 @@ export function bible_glyph_chapter_psa145() {
       {
         verse_number: 10,
         words: [
-          "All",
+          "$all",
           "You",
           "have",
           "made",
