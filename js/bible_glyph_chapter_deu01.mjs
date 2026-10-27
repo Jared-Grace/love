@@ -504,7 +504,7 @@ export function bible_glyph_chapter_deu01() {
           "to",
           "$heart_on_fire.",
           "And",
-          "bring",
+          "$magnet+doing",
           "to",
           "me",
           "any",
