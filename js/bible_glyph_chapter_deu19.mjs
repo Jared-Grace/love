@@ -206,7 +206,7 @@ export function bible_glyph_chapter_deu19() {
           "of",
           "$blood",
           "might",
-          "pursue",
+          "$running+toward",
           "the",
           "manslayer",
           "in",
