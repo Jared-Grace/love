@@ -501,7 +501,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "Then",
           "$heart_on_fire",
-          "opened",
+          "$eye+unlocked+doing",
           "her",
           "$eyes",
           "and",
