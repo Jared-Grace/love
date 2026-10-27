@@ -315,7 +315,7 @@ export function bible_glyph_chapter_gen09() {
           "there",
           "be",
           "a",
-          "flood",
+          "$water_wave+earth",
           "to",
           "destroy",
           "the",
