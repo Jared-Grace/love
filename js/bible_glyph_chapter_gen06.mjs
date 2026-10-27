@@ -69,7 +69,7 @@ export function bible_glyph_chapter_gen06() {
           "$wind",
           "will",
           "$no_entry",
-          "contend",
+          "$scales+speech+doing",
           "with",
           "$person",
           "$hourglass,",
