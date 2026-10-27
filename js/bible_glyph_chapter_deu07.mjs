@@ -554,7 +554,7 @@ export function bible_glyph_chapter_deu07() {
           "You",
           "must",
           "destroy",
-          "all",
+          "$all",
           "the",
           "$family",
           "that",
