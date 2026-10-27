@@ -646,7 +646,7 @@ export function bible_glyph_chapter_2sa12() {
           "one",
           "another,",
           "$two_hearts+proper_name",
-          "perceived",
+          "$brain",
           "$pointing",
           "the",
           "$child",
