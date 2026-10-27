@@ -255,7 +255,7 @@ export function bible_glyph_chapter_lev06() {
           "shall",
           "remove",
           "the",
-          "ashes",
+          "$bacon+ashes",
           "that",
           "the",
           "$fire",
