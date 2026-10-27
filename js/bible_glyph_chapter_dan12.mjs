@@ -18,7 +18,7 @@ export function bible_glyph_chapter_dan12() {
           "$clock",
           "$proper_name$Michael,",
           "the",
-          "great",
+          "$top",
           "$military_medal",
           "who",
           "stands",
