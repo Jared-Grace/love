@@ -616,7 +616,7 @@ export function bible_glyph_chapter_deu32() {
           "and",
           "it",
           "burns",
-          "to",
+          "$finish",
           "the",
           "depths",
           "of",
