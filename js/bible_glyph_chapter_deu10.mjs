@@ -79,7 +79,7 @@ export function bible_glyph_chapter_deu10() {
           "them",
           "in",
           "the",
-          "ark.",
+          "$ark.",
         ],
       },
       {
