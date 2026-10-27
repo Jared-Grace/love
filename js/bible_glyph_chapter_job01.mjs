@@ -514,7 +514,7 @@ export function bible_glyph_chapter_job01() {
           "$palm_down",
           "$three",
           "$person_gesturing_ok,",
-          "raided",
+          "$garment+tray_out+doing",
           "the",
           "camels",
           "and",
