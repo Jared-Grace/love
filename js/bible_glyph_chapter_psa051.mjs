@@ -216,7 +216,7 @@ export function bible_glyph_chapter_psa051() {
           "and",
           "blot",
           "out",
-          "all",
+          "$all",
           "my",
           "iniquities.",
         ],
