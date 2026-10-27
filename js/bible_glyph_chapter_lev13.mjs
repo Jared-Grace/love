@@ -1593,7 +1593,7 @@ export function bible_glyph_chapter_lev13() {
           "article",
           "is",
           "$leaf+lemon+describing",
-          "or",
+          "$shuffle",
           "red,",
           "then",
           "it",
