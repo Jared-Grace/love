@@ -667,7 +667,7 @@ export function bible_glyph_chapter_jos06() {
           "the",
           "rams",
           "horns",
-          "sounded,",
+          "$trumpet+doing,",
           "the",
           "$family",
           "shouted.",
