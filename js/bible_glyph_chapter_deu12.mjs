@@ -366,7 +366,7 @@ export function bible_glyph_chapter_deu12() {
           "all",
           "the",
           "choice",
-          "offerings",
+          "$saluting_face",
           "you",
           "vow",
           "to",
