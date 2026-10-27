@@ -284,7 +284,7 @@ export function bible_glyph_chapter_gen39() {
           "$no_entry",
           "$tray_out",
           "me",
-          "except",
+          "$pointing",
           "you,",
           "because",
           "you",
