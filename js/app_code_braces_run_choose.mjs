@@ -37,8 +37,8 @@ import { not } from "./not.mjs";
 import { html_style_clear } from "./html_style_clear.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { app_code_braces_run_output_show } from "./app_code_braces_run_output_show.mjs";
 import { app_code_braces_color_next } from "./app_code_braces_color_next.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -223,12 +223,14 @@ export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
       index = index + 1;
     }
     property_set(state, "index", index);
-    html_clear(ask);
     let b3 = list_size(blocks);
     if (greater_than_equal(index, b3)) {
+      ("the question goes for good once the program is done, so nothing is written into it again after the wait");
+      html_clear(ask);
       await app_code_braces_run_output_show(wrap, code, on_success);
       return;
     }
+    html_clear(ask);
     let block = list_get(blocks, index);
     let open = property_get(block, "open");
     let close = property_get(block, "close");
