@@ -551,7 +551,7 @@ export function bible_glyph_chapter_exo03() {
         verse_number: 16,
         words: [
           "$walking,",
-          "assemble",
+          "$crowd+doing",
           "the",
           "elders",
           "of",
