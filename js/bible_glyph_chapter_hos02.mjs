@@ -729,7 +729,7 @@ export function bible_glyph_chapter_hos02() {
           "$hugging_face+doing",
           "on",
           "$no_entry",
-          "Compassion;",
+          "$hugging_face+doing;",
           "I",
           "will",
           "$speech",
