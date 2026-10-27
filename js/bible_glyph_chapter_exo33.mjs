@@ -287,7 +287,7 @@ export function bible_glyph_chapter_exo33() {
           "and",
           "watch",
           "$fishing_pole+proper_name",
-          "until",
+          "$finish",
           "he",
           "$footprints",
           "the",
