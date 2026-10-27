@@ -614,7 +614,7 @@ export function bible_glyph_chapter_job01() {
           "Job",
           "stood",
           "up,",
-          "tore",
+          "$t_shirt+scissors+doing",
           "his",
           "robe,",
           "and",
