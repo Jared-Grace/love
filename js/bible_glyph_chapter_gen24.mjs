@@ -667,7 +667,7 @@ export function bible_glyph_chapter_gen24() {
           "$man_beard",
           "$exploding_head+doing",
           "her",
-          "silently",
+          "$shushing_face",
           "to",
           "$lightbulb",
           "whether",
