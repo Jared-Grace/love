@@ -1781,7 +1781,7 @@ export function bible_glyph_chapter_1sa17() {
         words: [
           "Find",
           "out",
-          "whose",
+          "$person+question",
           "$son",
           "this",
           "young",
