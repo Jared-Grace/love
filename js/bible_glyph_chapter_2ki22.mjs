@@ -773,7 +773,7 @@ export function bible_glyph_chapter_2ki22() {
           "will",
           "$no_entry",
           "$eye",
-          "all",
+          "$all",
           "the",
           "$thumbs_down",
           "that",
