@@ -258,7 +258,7 @@ export function bible_glyph_chapter_2sa05() {
           "$manual_wheelchair",
           "and",
           "the",
-          "blind,",
+          "$person_with_white_cane+describing,",
           "who",
           "are",
           "hated",
