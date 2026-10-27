@@ -271,7 +271,7 @@ export function bible_glyph_chapter_1sa24() {
           "out",
           "of",
           "the",
-          "cave,",
+          "$cave,",
           "and",
           "called",
           "out",
