@@ -829,7 +829,7 @@ export function bible_glyph_chapter_jos06() {
           "it.",
           "$one+check,",
           "the",
-          "silver",
+          "$silver",
           "and",
           "gold",
           "and",
