@@ -570,7 +570,7 @@ export function bible_glyph_chapter_exo40() {
           "$tent",
           "of",
           "$alarm_clock",
-          "opposite",
+          "$face+toward",
           "the",
           "table,",
           "on",
