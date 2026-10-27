@@ -265,7 +265,7 @@ export function bible_glyph_chapter_deu32() {
           "a",
           "barren,",
           "$crying_face+loudspeaker+thing",
-          "wilderness;",
+          "$field+desert+thing;",
           "He",
           "surrounded",
           "him,",
