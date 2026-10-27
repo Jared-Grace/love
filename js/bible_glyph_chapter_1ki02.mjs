@@ -395,7 +395,7 @@ export function bible_glyph_chapter_1ki02() {
           "Then",
           "$two_hearts+proper_name",
           "$bed+doing",
-          "with",
+          "$linked_paperclips",
           "his",
           "$father,",
           "and",
