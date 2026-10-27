@@ -193,7 +193,7 @@ export function bible_glyph_chapter_num14() {
           "$toward",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "the",
           "$son",
