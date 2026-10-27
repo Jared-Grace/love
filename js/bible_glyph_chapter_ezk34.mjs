@@ -514,7 +514,7 @@ export function bible_glyph_chapter_ezk34() {
         words: [
           "I",
           "will",
-          "seek",
+          "$magnifying_glass",
           "the",
           "$wilted_flower,",
           "bring",
