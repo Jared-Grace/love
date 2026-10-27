@@ -293,7 +293,7 @@ export function bible_glyph_chapter_psa116() {
       {
         verse_number: 16,
         words: [
-          "Truly,",
+          "$pleading_face+exclamation,",
           "O",
           "$i_am,",
           "I",
