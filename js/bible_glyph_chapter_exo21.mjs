@@ -245,7 +245,7 @@ export function bible_glyph_chapter_exo21() {
           "He",
           "has",
           "$no_entry",
-          "right",
+          "$joystick",
           "to",
           "sell",
           "her",
