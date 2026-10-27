@@ -152,7 +152,7 @@ export function bible_glyph_chapter_num32() {
           "$kneeling",
           "as",
           "a",
-          "possession.",
+          "$hand+clamp+thing.",
           "Do",
           "$no_entry",
           "make",
