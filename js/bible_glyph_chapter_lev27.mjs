@@ -1050,7 +1050,7 @@ export function bible_glyph_chapter_lev27() {
       {
         verse_number: 34,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "$scroll",
