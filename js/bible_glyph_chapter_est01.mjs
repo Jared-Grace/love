@@ -188,7 +188,7 @@ export function bible_glyph_chapter_est01() {
           "pillars.",
           "Gold",
           "and",
-          "silver",
+          "$silver",
           "couches",
           "were",
           "arranged",
