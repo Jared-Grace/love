@@ -83,7 +83,7 @@ export function bible_glyph_chapter_deu31() {
           "He",
           "will",
           "$bomb",
-          "these",
+          "$flashlight+flashlight",
           "$map",
           "before",
           "you,",
