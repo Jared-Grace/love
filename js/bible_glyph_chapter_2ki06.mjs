@@ -1081,7 +1081,7 @@ export function bible_glyph_chapter_2ki06() {
           "you",
           "$eye",
           "$pointing",
-          "this",
+          "$flashlight",
           "$son",
           "of",
           "a",
