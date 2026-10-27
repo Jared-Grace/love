@@ -35,7 +35,7 @@ export function bible_glyph_chapter_exo10() {
           "his",
           "$kneeling,",
           "so",
-          "that",
+          "$right_arrow+toward",
           "I",
           "may",
           "perform",
