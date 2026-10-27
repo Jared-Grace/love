@@ -75,7 +75,7 @@ export function bible_glyph_chapter_psa091() {
           "from",
           "the",
           "deadly",
-          "plague.",
+          "$face_with_medical_mask.",
         ],
       },
       {
