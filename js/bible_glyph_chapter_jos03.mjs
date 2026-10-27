@@ -285,7 +285,7 @@ export function bible_glyph_chapter_jos03() {
           "$son",
           "of",
           "Israel,",
-          "Come",
+          "$walking+toward",
           "here",
           "and",
           "$ear",
