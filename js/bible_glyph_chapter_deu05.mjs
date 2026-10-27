@@ -39,7 +39,7 @@ export function bible_glyph_chapter_deu05() {
           "hearing",
           "this",
           "$sun.",
-          "Learn",
+          "$learner+doing",
           "them",
           "and",
           "be",
