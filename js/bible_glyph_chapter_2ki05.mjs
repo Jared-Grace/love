@@ -15,7 +15,7 @@ export function bible_glyph_chapter_2ki05() {
           "Now",
           "$smile+describing+proper_name,",
           "the",
-          "commander",
+          "$military_medal",
           "of",
           "the",
           "army",
