@@ -252,7 +252,7 @@ export function bible_glyph_chapter_exo34() {
       {
         verse_number: 8,
         words: [
-          "Immediately",
+          "$fast_forward+doing",
           "$fishing_pole+proper_name",
           "bowed",
           "to",
