@@ -665,7 +665,7 @@ export function bible_glyph_chapter_jdg04() {
           "Heber,",
           "$hand_receiving",
           "a",
-          "tent",
+          "$tent",
           "$tent+wood,",
           "grabbed",
           "a",
