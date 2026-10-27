@@ -150,7 +150,7 @@ export function bible_glyph_chapter_ecc12() {
         words: [
           "when",
           "men",
-          "fear",
+          "$fear+doing",
           "the",
           "heights",
           "and",
