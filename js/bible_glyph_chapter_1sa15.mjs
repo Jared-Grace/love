@@ -1032,7 +1032,7 @@ export function bible_glyph_chapter_1sa15() {
           "for",
           "he",
           "$speech,",
-          "Surely",
+          "$right_arrow",
           "the",
           "bitterness",
           "of",
