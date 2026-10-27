@@ -230,7 +230,7 @@ export function bible_glyph_chapter_exo09() {
           "and",
           "$proper_name$Aaron,",
           "$hand_receiving",
-          "handfuls",
+          "$battery+thing",
           "of",
           "soot",
           "from",
