@@ -415,7 +415,7 @@ export function bible_glyph_chapter_exo10() {
           "driven",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "$house+proper_name.",
         ],
