@@ -567,7 +567,7 @@ export function bible_glyph_chapter_est04() {
           "And",
           "if",
           "I",
-          "perish,",
+          "$wilted_flower,",
           "I",
           "perish.",
         ],
