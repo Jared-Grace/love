@@ -271,7 +271,7 @@ export function bible_glyph_chapter_ezk03() {
           "$face,",
           "even",
           "though",
-          "they",
+          "$pointing_back",
           "are",
           "a",
           "rebellious",
