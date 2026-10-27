@@ -726,7 +726,7 @@ export function bible_glyph_chapter_gen18() {
           "$skull+doing",
           "the",
           "$ruler",
-          "with",
+          "$linked_paperclips",
           "the",
           "$thumbs_down,",
           "so",
