@@ -1016,7 +1016,7 @@ export function bible_glyph_chapter_lev13() {
           "is",
           "$gold+describing",
           "and",
-          "thin,",
+          "$pinching_hand+describing,",
           "the",
           "$priest",
           "must",
