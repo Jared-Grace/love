@@ -394,7 +394,7 @@ export function bible_glyph_chapter_isa11() {
           "the",
           "$map",
           "and",
-          "gather",
+          "$crowd+doing",
           "the",
           "exiles",
           "of",
