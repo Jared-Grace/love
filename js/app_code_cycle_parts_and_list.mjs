@@ -6,7 +6,7 @@ import { each_index } from "./each_index.mjs";
 import { equal_0 } from "./equal_0.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
-export function html_cycle_parts_and_list(codes) {
+export function app_code_cycle_parts_and_list(codes) {
   arguments_assert(arguments, 1);
   ("a list of code words written out as the alternating plain-then-code parts ",
     fn_name("app_code_cycle_code"),

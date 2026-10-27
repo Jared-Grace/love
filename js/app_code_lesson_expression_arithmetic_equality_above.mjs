@@ -3,7 +3,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_arithmetic_to_value_symbols } from "./app_code_arithmetic_to_value_symbols.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
-import { html_cycle_parts_and_list } from "./html_cycle_parts_and_list.mjs";
+import { app_code_cycle_parts_and_list } from "./app_code_cycle_parts_and_list.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export function app_code_lesson_expression_arithmetic_equality_above(root) {
   arguments_assert(arguments, 1);
@@ -18,7 +18,7 @@ export function app_code_lesson_expression_arithmetic_equality_above(root) {
   ("Built from the symbols list so it cannot drift from it: a fourth operator added to the list the sides are drawn from is named here the moment it can appear, where a typed-out row would go on naming three and be wrong without anything going red.");
   let symbols = app_code_arithmetic_to_value_symbols();
   let equality = js_operator_triple_equal_symbol();
-  let rule_parts = html_cycle_parts_and_list(symbols);
+  let rule_parts = app_code_cycle_parts_and_list(symbols);
   let rule_tail = [" are all solved before ", equality];
   list_add_multiple(rule_parts, rule_tail);
   html_div_cycle_code(yes, rule_parts);
