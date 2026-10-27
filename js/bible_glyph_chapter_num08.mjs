@@ -215,7 +215,7 @@ export function bible_glyph_chapter_num08() {
           "$face",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "and",
           "assemble",
           "the",
