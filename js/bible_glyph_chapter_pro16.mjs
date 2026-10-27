@@ -574,7 +574,7 @@ export function bible_glyph_chapter_pro16() {
           "and",
           "a",
           "gossip",
-          "divides",
+          "$divide+arrow_both_ways+doing",
           "close",
           "friends.",
         ],
