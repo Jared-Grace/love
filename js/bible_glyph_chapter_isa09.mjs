@@ -50,7 +50,7 @@ export function bible_glyph_chapter_isa09() {
           "of",
           "the",
           "$sea,",
-          "beyond",
+          "$bridge+thing",
           "the",
           "$pointing_down+proper_name,",
           "$proper_name$Galilee",
