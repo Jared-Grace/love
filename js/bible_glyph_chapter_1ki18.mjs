@@ -570,7 +570,7 @@ export function bible_glyph_chapter_1ki18() {
           "with",
           "the",
           "$four",
-          "hundred",
+          "$input_numbers+all",
           "and",
           "fifty",
           "$megaphone",
