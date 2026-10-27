@@ -50,7 +50,7 @@ export function bible_glyph_chapter_job42() {
           "$person_tipping_hand",
           "without",
           "$lightbulb+thing?",
-          "Surely",
+          "$right_arrow",
           "I",
           "spoke",
           "of",
