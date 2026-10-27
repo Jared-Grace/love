@@ -416,7 +416,7 @@ export function bible_glyph_chapter_2sa06() {
           "had",
           "advanced",
           "$six",
-          "paces,",
+          "$foot+right_arrow+thing,",
           "he",
           "sacrificed",
           "an",
