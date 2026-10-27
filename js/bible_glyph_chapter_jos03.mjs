@@ -270,7 +270,7 @@ export function bible_glyph_chapter_jos03() {
           "in",
           "the",
           "$pointing_down+proper_name,",
-          "stand",
+          "$person+round_pushpin",
           "there.",
         ],
       },
