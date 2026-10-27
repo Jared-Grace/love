@@ -786,7 +786,7 @@ export function bible_glyph_chapter_2sa11() {
           "$door",
           "of",
           "the",
-          "gate.",
+          "$gate.",
         ],
       },
       {
