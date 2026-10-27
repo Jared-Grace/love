@@ -402,7 +402,7 @@ export function bible_glyph_chapter_gen22() {
           "in",
           "the",
           "thicket,",
-          "caught",
+          "$hand+clamp",
           "by",
           "its",
           "horns.",
