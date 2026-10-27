@@ -41,7 +41,7 @@ export function bible_glyph_chapter_2sa07() {
         words: [
           "he",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Nathan",
           "the",
           "$megaphone,",
