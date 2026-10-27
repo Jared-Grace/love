@@ -463,7 +463,7 @@ export function bible_glyph_chapter_lev01() {
         words: [
           "He",
           "shall",
-          "tear",
+          "$palm_up_hand+divide+doing",
           "it",
           "open",
           "by",
