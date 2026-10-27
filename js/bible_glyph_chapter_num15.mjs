@@ -1090,7 +1090,7 @@ export function bible_glyph_chapter_num15() {
           "that",
           "you",
           "may",
-          "remember",
+          "$reminder_ribbon",
           "all",
           "the",
           "$scroll",
