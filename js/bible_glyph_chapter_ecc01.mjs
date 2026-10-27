@@ -376,7 +376,7 @@ export function bible_glyph_chapter_ecc01() {
           "in",
           "$wisdom",
           "beyond",
-          "all",
+          "$all",
           "those",
           "who",
           "were",
