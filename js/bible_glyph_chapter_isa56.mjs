@@ -110,7 +110,7 @@ export function bible_glyph_chapter_isa56() {
           "the",
           "eunuch",
           "$speech,",
-          "I",
+          "$me",
           "am",
           "but",
           "a",
