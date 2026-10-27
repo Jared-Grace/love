@@ -1251,7 +1251,7 @@ export function bible_glyph_chapter_neh09() {
           "has",
           "$footprints",
           "us,",
-          "because",
+          "$pointing",
           "You",
           "have",
           "$hammer+doing",
