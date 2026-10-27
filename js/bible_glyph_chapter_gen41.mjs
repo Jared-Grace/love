@@ -1376,7 +1376,7 @@ export function bible_glyph_chapter_gen41() {
           "$sea,",
           "in",
           "such",
-          "abundance",
+          "$multiply+doing",
           "that",
           "he",
           "stopped",
