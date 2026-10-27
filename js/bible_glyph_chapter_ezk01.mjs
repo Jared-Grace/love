@@ -124,7 +124,7 @@ export function bible_glyph_chapter_ezk01() {
           "$compass+up_arrow,",
           "a",
           "great",
-          "cloud",
+          "$cloud",
           "with",
           "$fire",
           "$hand_receiving",
