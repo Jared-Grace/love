@@ -540,7 +540,7 @@ export function bible_glyph_chapter_gen24() {
           "to",
           "the",
           "spring,",
-          "filled",
+          "$battery",
           "her",
           "$jar,",
           "and",
