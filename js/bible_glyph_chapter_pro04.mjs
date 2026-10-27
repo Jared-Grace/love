@@ -526,7 +526,7 @@ export function bible_glyph_chapter_pro04() {
         verse_number: 27,
         words: [
           "$no_entry",
-          "swerve",
+          "$white_cane+doing",
           "to",
           "the",
           "right",
