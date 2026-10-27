@@ -407,7 +407,7 @@ export function bible_glyph_chapter_deu32() {
           "you",
           "drank",
           "the",
-          "wine.",
+          "$wine+bubbles.",
         ],
       },
       {
