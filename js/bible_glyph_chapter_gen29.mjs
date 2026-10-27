@@ -710,7 +710,7 @@ export function bible_glyph_chapter_gen29() {
           "return",
           "for",
           "another",
-          "seven",
+          "$seven",
           "$year",
           "of",
           "work.",
