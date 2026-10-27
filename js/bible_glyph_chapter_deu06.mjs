@@ -418,7 +418,7 @@ export function bible_glyph_chapter_deu06() {
           "$no_entry",
           "$walking",
           "after",
-          "other",
+          "$plus+one",
           "$moai,",
           "the",
           "$moai",
