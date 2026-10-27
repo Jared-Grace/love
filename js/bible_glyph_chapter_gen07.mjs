@@ -225,7 +225,7 @@ export function bible_glyph_chapter_gen07() {
           "and",
           "everything",
           "$back+flashlight",
-          "crawls",
+          "$lizard+doing",
           "along",
           "the",
           "ground,",
