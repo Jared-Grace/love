@@ -207,7 +207,7 @@ export function bible_glyph_chapter_lev04() {
           "$bull",
           "$bow,",
           "the",
-          "fat",
+          "$bacon",
           "that",
           "covers",
           "the",
