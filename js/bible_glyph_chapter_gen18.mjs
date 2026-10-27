@@ -53,7 +53,7 @@ export function bible_glyph_chapter_gen18() {
           "$three",
           "$man_beard",
           "$person+up_arrow",
-          "nearby.",
+          "$pointing_up.",
           "When",
           "he",
           "$eye",
