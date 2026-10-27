@@ -620,7 +620,7 @@ export function bible_glyph_chapter_isa40() {
           "enthroned",
           "above",
           "the",
-          "circle",
+          "$compass+thing",
           "of",
           "the",
           "$earth;",
