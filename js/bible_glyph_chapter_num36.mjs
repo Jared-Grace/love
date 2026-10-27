@@ -44,7 +44,7 @@ export function bible_glyph_chapter_num36() {
           "$son",
           "of",
           "$i_am+plus,",
-          "approached",
+          "$magnet+doing",
           "and",
           "$mouth",
           "to",
