@@ -234,7 +234,7 @@ export function bible_glyph_chapter_exo23() {
           "you",
           "are",
           "to",
-          "sow",
+          "$seed+doing",
           "your",
           "$earth",
           "and",
