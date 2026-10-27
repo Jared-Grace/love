@@ -783,7 +783,7 @@ export function bible_glyph_chapter_gen29() {
           "for",
           "$repeat",
           "another",
-          "seven",
+          "$seven",
           "$year.",
         ],
       },
