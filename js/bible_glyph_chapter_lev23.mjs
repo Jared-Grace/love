@@ -362,7 +362,7 @@ export function bible_glyph_chapter_lev23() {
           "quarter",
           "of",
           "a",
-          "hin.",
+          "$jar+straight_ruler.",
         ],
       },
       {
