@@ -386,7 +386,7 @@ export function bible_glyph_chapter_neh08() {
           "and",
           "$hand_sending",
           "out",
-          "portions",
+          "$input_numbers+thing",
           "to",
           "those",
           "who",
