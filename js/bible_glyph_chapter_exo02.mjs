@@ -683,7 +683,7 @@ export function bible_glyph_chapter_exo02() {
           "out,",
           "and",
           "their",
-          "cry",
+          "$voice+waving_hand",
           "for",
           "deliverance",
           "from",
