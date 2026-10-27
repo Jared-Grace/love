@@ -939,7 +939,7 @@ export function bible_glyph_chapter_exo34() {
           "$proper_name$Sinai",
           "with",
           "the",
-          "two",
+          "$two",
           "tablets",
           "of",
           "the",
