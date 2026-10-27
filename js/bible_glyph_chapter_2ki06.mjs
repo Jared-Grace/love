@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_2ki06() {
           "$plus+doing,",
           "$traffic_light",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "$heart_on_fire+rescue",
           "$son",
