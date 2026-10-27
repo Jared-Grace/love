@@ -501,7 +501,7 @@ export function bible_glyph_chapter_ezk11() {
           "$crown",
           "$i_am",
           "$speech:",
-          "Although",
+          "$pointing",
           "I",
           "sent",
           "them",
