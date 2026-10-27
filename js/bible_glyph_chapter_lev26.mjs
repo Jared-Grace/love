@@ -236,7 +236,7 @@ export function bible_glyph_chapter_lev26() {
           "$input_numbers+all,",
           "and",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "of",
           "you",
           "will",
