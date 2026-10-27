@@ -816,7 +816,7 @@ export function bible_glyph_chapter_gen18() {
         words: [
           "Suppose",
           "the",
-          "fifty",
+          "$five+zero",
           "$ruler",
           "lack",
           "five.",
