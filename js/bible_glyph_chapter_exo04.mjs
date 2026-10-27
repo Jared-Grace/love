@@ -369,7 +369,7 @@ export function bible_glyph_chapter_exo04() {
           "$person",
           "his",
           "$face_with_open_mouth?",
-          "Or",
+          "$shuffle",
           "$person+question",
           "makes",
           "the",
