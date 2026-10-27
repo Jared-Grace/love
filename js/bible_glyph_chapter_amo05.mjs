@@ -485,7 +485,7 @@ export function bible_glyph_chapter_amo05() {
           "will",
           "be",
           "summoned",
-          "to",
+          "$toward",
           "mourn,",
           "and",
           "the",
