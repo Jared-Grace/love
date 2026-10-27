@@ -210,7 +210,7 @@ export function bible_glyph_chapter_gen23() {
           "with",
           "them,",
           "$speech,",
-          "If",
+          "$traffic_light",
           "it",
           "is",
           "in",
