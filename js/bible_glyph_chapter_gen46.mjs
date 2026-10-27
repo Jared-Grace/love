@@ -818,7 +818,7 @@ export function bible_glyph_chapter_gen46() {
           "you",
           "and",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "is",
           "your",
           "occupation?",
