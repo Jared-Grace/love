@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_deu12() {
           "$speech,",
           "$question+likeness",
           "do",
-          "these",
+          "$flashlight+flashlight",
           "$map",
           "$kneeling+doing",
           "their",
