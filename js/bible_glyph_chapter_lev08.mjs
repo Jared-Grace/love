@@ -375,7 +375,7 @@ export function bible_glyph_chapter_lev08() {
           "all",
           "the",
           "$bacon",
-          "that",
+          "$back+flashlight",
           "was",
           "on",
           "the",
