@@ -355,7 +355,7 @@ export function bible_glyph_chapter_exo15() {
           "will",
           "$ear",
           "and",
-          "tremble;",
+          "$vibration_mode;",
           "anguish",
           "will",
           "grip",
