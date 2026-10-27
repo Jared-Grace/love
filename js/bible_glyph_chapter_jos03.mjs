@@ -564,7 +564,7 @@ export function bible_glyph_chapter_jos03() {
           "$person+round_pushpin",
           "firm",
           "on",
-          "dry",
+          "$desert+brown_square",
           "ground",
           "in",
           "the",
