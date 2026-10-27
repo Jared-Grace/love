@@ -955,7 +955,7 @@ export function bible_glyph_chapter_num21() {
           "them",
           "with",
           "his",
-          "whole",
+          "$all",
           "$family",
           "in",
           "battle",
