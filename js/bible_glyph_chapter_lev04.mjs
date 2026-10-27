@@ -956,7 +956,7 @@ export function bible_glyph_chapter_lev04() {
           "$blood",
           "he",
           "shall",
-          "pour",
+          "$jar+down_arrow+doing",
           "out",
           "at",
           "the",
