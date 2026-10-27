@@ -696,7 +696,7 @@ export function bible_glyph_chapter_deu32() {
       {
         verse_number: 25,
         words: [
-          "Outside,",
+          "$sun_behind_small_cloud,",
           "the",
           "$sword",
           "will",
