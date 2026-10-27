@@ -342,7 +342,7 @@ export function bible_glyph_chapter_exo04() {
           "You",
           "have",
           "$mouth",
-          "to",
+          "$toward",
           "Your",
           "$kneeling,",
           "for",
