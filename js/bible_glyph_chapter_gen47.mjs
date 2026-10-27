@@ -77,7 +77,7 @@ export function bible_glyph_chapter_gen47() {
           "to",
           "his",
           "$brother,",
-          "What",
+          "$flashlight+question",
           "is",
           "your",
           "occupation?",
