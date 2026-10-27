@@ -357,7 +357,7 @@ export function bible_glyph_chapter_lev27() {
           "must",
           "be",
           "presented",
-          "before",
+          "$face",
           "the",
           "$priest.",
         ],
