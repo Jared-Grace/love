@@ -932,7 +932,7 @@ export function bible_glyph_chapter_jdg07() {
           "captured",
           "the",
           "$two",
-          "princes",
+          "$military_medal",
           "of",
           "$proper_name$Midian,",
           "$proper_name$Oreb",
