@@ -366,7 +366,7 @@ export function bible_glyph_chapter_isa55() {
           "$walking+tray_out",
           "out",
           "with",
-          "joy",
+          "$beaming",
           "and",
           "be",
           "led",
