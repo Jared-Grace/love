@@ -175,7 +175,7 @@ export function bible_glyph_chapter_gen24() {
           "my",
           "$son",
           "$turn_back",
-          "there.",
+          "$telescope.",
         ],
       },
       {
