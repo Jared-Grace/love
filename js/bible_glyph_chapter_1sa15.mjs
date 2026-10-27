@@ -554,7 +554,7 @@ export function bible_glyph_chapter_1sa15() {
           "$no_entry",
           "become",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "the",
           "tribes",
