@@ -425,7 +425,7 @@ export function bible_glyph_chapter_lam03() {
           "$i_am",
           "is",
           "my",
-          "portion,",
+          "$pizza,",
           "$speech",
           "my",
           "$person_other,",
