@@ -722,7 +722,7 @@ export function bible_glyph_chapter_2ch07() {
         words: [
           "And",
           "when",
-          "this",
+          "$flashlight",
           "$house",
           "has",
           "become",
