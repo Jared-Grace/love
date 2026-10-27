@@ -583,7 +583,7 @@ export function bible_glyph_chapter_lev19() {
           "$i_am,",
           "to",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "Tent",
