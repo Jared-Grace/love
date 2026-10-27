@@ -64,7 +64,7 @@ export function bible_glyph_chapter_lev26() {
         words: [
           "You",
           "must",
-          "keep",
+          "$guard",
           "My",
           "Sabbaths",
           "and",
