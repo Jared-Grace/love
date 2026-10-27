@@ -478,7 +478,7 @@ export function bible_glyph_chapter_deu10() {
       {
         verse_number: 14,
         words: [
-          "Behold,",
+          "$exclamation,",
           "to",
           "the",
           "$i_am",
