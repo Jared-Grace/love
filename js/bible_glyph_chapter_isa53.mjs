@@ -112,7 +112,7 @@ export function bible_glyph_chapter_isa53() {
         verse_number: 4,
         words: [
           "$right_arrow",
-          "He",
+          "$pointing_back",
           "took",
           "up",
           "our",
