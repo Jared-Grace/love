@@ -675,7 +675,7 @@ export function bible_glyph_chapter_1ki02() {
           "have",
           "just",
           "$one",
-          "small",
+          "$pinching_hand",
           "request",
           "of",
           "you.",
