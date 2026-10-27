@@ -50,7 +50,7 @@ export function bible_glyph_chapter_gen21() {
           "$father+map",
           "in",
           "his",
-          "old",
+          "$old_man+thing",
           "age,",
           "at",
           "the",
