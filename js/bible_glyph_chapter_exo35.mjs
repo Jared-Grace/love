@@ -402,7 +402,7 @@ export function bible_glyph_chapter_exo35() {
           "pegs",
           "for",
           "the",
-          "tabernacle",
+          "$tent+house",
           "and",
           "for",
           "the",
