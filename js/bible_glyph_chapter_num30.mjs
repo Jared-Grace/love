@@ -66,7 +66,7 @@ export function bible_glyph_chapter_num30() {
           "he",
           "must",
           "$no_entry",
-          "break",
+          "$sewing_needle",
           "his",
           "$speech;",
           "he",
