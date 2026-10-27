@@ -684,7 +684,7 @@ export function bible_glyph_chapter_1sa15() {
           "$hand_receiving",
           "from",
           "the",
-          "plunder",
+          "$plunder",
           "$sheep",
           "and",
           "cattle,",
