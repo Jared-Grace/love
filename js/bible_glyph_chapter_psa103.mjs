@@ -425,7 +425,7 @@ export function bible_glyph_chapter_psa103() {
           "$speech+thumbs_up",
           "the",
           "$i_am,",
-          "all",
+          "$all",
           "His",
           "hosts,",
           "you",
