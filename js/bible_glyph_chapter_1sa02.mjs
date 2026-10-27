@@ -945,7 +945,7 @@ export function bible_glyph_chapter_1sa02() {
           "$foot+collision+doing",
           "at",
           "My",
-          "sacrifice",
+          "$sacrifice",
           "and",
           "offering",
           "that",
