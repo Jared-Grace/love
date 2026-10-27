@@ -342,7 +342,7 @@ export function bible_glyph_chapter_est01() {
           "$family",
           "and",
           "officials,",
-          "for",
+          "$pointing",
           "she",
           "was",
           "$thumbs_up",
