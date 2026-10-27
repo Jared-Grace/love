@@ -22,7 +22,7 @@ export function bible_glyph_chapter_exo10() {
           "$footprints",
           "$toward",
           "$house+proper_name,",
-          "for",
+          "$pointing",
           "I",
           "have",
           "hardened",
