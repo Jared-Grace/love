@@ -964,7 +964,7 @@ export function bible_glyph_chapter_lev19() {
           "$scales+thing",
           "of",
           "length,",
-          "weight,",
+          "$coin+thing,",
           "or",
           "volume.",
         ],
