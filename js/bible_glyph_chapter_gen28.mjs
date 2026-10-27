@@ -482,7 +482,7 @@ export function bible_glyph_chapter_gen28() {
           "$no_entry",
           "$derelict_house+doing",
           "you",
-          "until",
+          "$finish",
           "I",
           "have",
           "$hammer+doing",
