@@ -100,7 +100,7 @@ export function bible_glyph_chapter_zep01() {
           "and",
           "the",
           "idols",
-          "with",
+          "$safety_pin",
           "their",
           "$thumbs_down",
           "worshipers.",
