@@ -983,7 +983,7 @@ export function bible_glyph_chapter_jer23() {
           "For",
           "what",
           "is",
-          "straw",
+          "$wheat+scissors",
           "compared",
           "to",
           "grain?",
