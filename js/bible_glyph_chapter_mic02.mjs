@@ -86,7 +86,7 @@ export function bible_glyph_chapter_mic02() {
           "a",
           "$thumbs_down",
           "from",
-          "which",
+          "$back+flashlight",
           "you",
           "$no_entry",
           "free",
