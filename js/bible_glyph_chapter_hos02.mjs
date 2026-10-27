@@ -118,7 +118,7 @@ export function bible_glyph_chapter_hos02() {
           "on",
           "her",
           "$son,",
-          "because",
+          "$pointing",
           "they",
           "are",
           "the",
