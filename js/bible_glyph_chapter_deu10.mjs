@@ -340,7 +340,7 @@ export function bible_glyph_chapter_deu10() {
           "$four+zero",
           "$sun",
           "and",
-          "forty",
+          "$four+zero",
           "$night,",
           "and",
           "the",
