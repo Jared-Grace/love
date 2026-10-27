@@ -500,7 +500,7 @@ export function bible_glyph_chapter_pro04() {
           "your",
           "gaze",
           "$straight_ruler+thumbs_up+doing",
-          "ahead.",
+          "$newspaper+thing.",
         ],
       },
       {
