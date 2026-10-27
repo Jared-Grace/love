@@ -238,7 +238,7 @@ export function bible_glyph_chapter_pro16() {
           "weights",
           "in",
           "the",
-          "bag",
+          "$money_bag+scales",
           "are",
           "His",
           "concern.",
