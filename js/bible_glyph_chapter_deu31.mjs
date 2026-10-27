@@ -470,7 +470,7 @@ export function bible_glyph_chapter_deu31() {
           "$speech",
           "$toward",
           "$fishing_pole+proper_name,",
-          "Behold,",
+          "$exclamation,",
           "the",
           "$sun",
           "of",
