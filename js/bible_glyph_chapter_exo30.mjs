@@ -29,7 +29,7 @@ export function bible_glyph_chapter_exo30() {
           "$hammer+doing",
           "it",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree.",
         ],
       },
