@@ -630,7 +630,7 @@ export function bible_glyph_chapter_lev27() {
           "the",
           "$field",
           "to",
-          "another",
+          "$plus+one",
           "$man_beard,",
           "it",
           "may",
