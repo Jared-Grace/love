@@ -486,7 +486,7 @@ export function bible_glyph_chapter_neh08() {
           "all",
           "the",
           "$father",
-          "gathered",
+          "$crowd+doing",
           "along",
           "with",
           "the",
