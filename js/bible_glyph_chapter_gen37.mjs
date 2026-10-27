@@ -1033,7 +1033,7 @@ export function bible_glyph_chapter_gen37() {
           "Meanwhile,",
           "the",
           "Midianites",
-          "sold",
+          "$coin+hands_giving",
           "$pointing_down",
           "in",
           "$clamp+proper_name",
