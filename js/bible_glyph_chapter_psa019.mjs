@@ -332,7 +332,7 @@ export function bible_glyph_chapter_psa019() {
           "O",
           "$i_am,",
           "my",
-          "Rock",
+          "$rock",
           "and",
           "my",
           "Redeemer.",
