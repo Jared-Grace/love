@@ -580,7 +580,7 @@ export function bible_glyph_chapter_2ki03() {
           "and",
           "you",
           "will",
-          "drink,",
+          "$cup_with_straw,",
           "you",
           "and",
           "your",
