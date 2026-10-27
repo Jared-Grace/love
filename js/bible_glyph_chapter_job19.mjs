@@ -60,7 +60,7 @@ export function bible_glyph_chapter_job19() {
           "error",
           "concerns",
           "me",
-          "alone.",
+          "$safety_pin.",
         ],
       },
       {
