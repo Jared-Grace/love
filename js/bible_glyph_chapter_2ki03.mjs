@@ -624,7 +624,7 @@ export function bible_glyph_chapter_2ki03() {
           "fortified",
           "$city",
           "and",
-          "every",
+          "$all",
           "$city",
           "of",
           "importance.",
