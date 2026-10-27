@@ -97,7 +97,7 @@ export function bible_glyph_chapter_exo30() {
           "$two",
           "$gold",
           "$ring",
-          "below",
+          "$down_arrow",
           "the",
           "molding",
           "on",
