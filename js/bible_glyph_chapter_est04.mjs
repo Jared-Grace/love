@@ -372,7 +372,7 @@ export function bible_glyph_chapter_est04() {
           "$king",
           "$hand+right_arrow+wood",
           "the",
-          "gold",
+          "$gold",
           "$wood",
           "may",
           "that",
