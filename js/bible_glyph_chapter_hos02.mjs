@@ -483,7 +483,7 @@ export function bible_glyph_chapter_hos02() {
           "a",
           "gateway",
           "of",
-          "hope.",
+          "$crossed_fingers.",
           "$telescope",
           "she",
           "will",
