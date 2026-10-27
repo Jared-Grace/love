@@ -142,7 +142,7 @@ export function bible_glyph_chapter_mic02() {
           "of",
           "my",
           "$family.",
-          "How",
+          "$question+likeness",
           "He",
           "has",
           "removed",
