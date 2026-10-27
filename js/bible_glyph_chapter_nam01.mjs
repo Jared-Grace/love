@@ -402,7 +402,7 @@ export function bible_glyph_chapter_nam01() {
           "carved",
           "image",
           "and",
-          "cast",
+          "$pouring_liquid+moai",
           "idol",
           "from",
           "the",
