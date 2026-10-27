@@ -377,7 +377,7 @@ export function bible_glyph_chapter_isa61() {
           "wears",
           "a",
           "priestly",
-          "headdress,",
+          "$crown+sparkles+thing,",
           "as",
           "a",
           "bride",
