@@ -647,7 +647,7 @@ export function bible_glyph_chapter_gen45() {
           "$input_numbers+all",
           "shekels",
           "of",
-          "silver",
+          "$silver",
           "and",
           "five",
           "sets",
