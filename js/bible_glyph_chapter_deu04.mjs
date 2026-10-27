@@ -213,7 +213,7 @@ export function bible_glyph_chapter_deu04() {
           "$ear",
           "of",
           "all",
-          "these",
+          "$flashlight+flashlight",
           "$locked_with_pen",
           "and",
           "$speech,",
