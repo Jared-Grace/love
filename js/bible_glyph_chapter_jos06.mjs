@@ -118,7 +118,7 @@ export function bible_glyph_chapter_jos06() {
           "while",
           "the",
           "$priest",
-          "blow",
+          "$trumpet+doing",
           "the",
           "horns.",
         ],
