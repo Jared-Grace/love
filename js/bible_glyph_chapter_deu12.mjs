@@ -1033,7 +1033,7 @@ export function bible_glyph_chapter_deu12() {
           "I",
           "will",
           "$hammer+doing",
-          "likewise.",
+          "$plus.",
         ],
       },
       {
