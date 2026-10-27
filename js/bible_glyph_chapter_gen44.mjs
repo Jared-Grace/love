@@ -998,7 +998,7 @@ export function bible_glyph_chapter_gen44() {
           "$eye",
           "the",
           "$thumbs_down",
-          "that",
+          "$back+flashlight",
           "would",
           "overwhelm",
           "my",
