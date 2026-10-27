@@ -455,7 +455,7 @@ export function bible_glyph_chapter_amo09() {
           "$waving_hand",
           "My",
           "$name_tag,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "who",
