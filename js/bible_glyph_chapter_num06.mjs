@@ -462,7 +462,7 @@ export function bible_glyph_chapter_num06() {
           "$bow",
           "offering,",
           "an",
-          "unblemished",
+          "$full_moon+describing",
           "ram",
           "as",
           "a",
