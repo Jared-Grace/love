@@ -288,7 +288,7 @@ export function bible_glyph_chapter_zep01() {
           "punish",
           "$all",
           "who",
-          "leap",
+          "$leg+up_arrow+up_arrow+doing",
           "$pointing_up",
           "the",
           "threshold,",
