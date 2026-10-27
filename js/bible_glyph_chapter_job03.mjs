@@ -537,7 +537,7 @@ export function bible_glyph_chapter_job03() {
           "I",
           "have",
           "$no_entry",
-          "rest,",
+          "$seat+doing,",
           "but",
           "trouble",
           "has",
