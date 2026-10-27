@@ -579,7 +579,7 @@ export function bible_glyph_chapter_lev06() {
           "$grain_offering,",
           "a",
           "pleasing",
-          "aroma",
+          "$nose",
           "$i_am.",
         ],
       },
