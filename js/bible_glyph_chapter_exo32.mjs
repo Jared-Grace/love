@@ -432,7 +432,7 @@ export function bible_glyph_chapter_exo32() {
           "from",
           "Your",
           "fierce",
-          "anger",
+          "$nose+fire",
           "and",
           "relent",
           "from",
