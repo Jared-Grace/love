@@ -361,7 +361,7 @@ export function bible_glyph_chapter_exo02() {
           "that",
           "and",
           "$eye",
-          "no",
+          "$dotted_line_face",
           "one,",
           "he",
           "struck",
