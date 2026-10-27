@@ -215,7 +215,7 @@ export function bible_glyph_chapter_neh01() {
           "$hands_raised",
           "the",
           "$bow",
-          "that",
+          "$back+flashlight",
           "we",
           "the",
           "$son",
