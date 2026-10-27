@@ -441,7 +441,7 @@ export function bible_glyph_chapter_deu16() {
           "carefully",
           "$hammer+doing",
           "these",
-          "statutes.",
+          "$locked_with_pen.",
         ],
       },
       {
