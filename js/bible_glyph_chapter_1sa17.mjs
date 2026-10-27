@@ -718,7 +718,7 @@ export function bible_glyph_chapter_1sa17() {
           "To",
           "the",
           "$man_beard",
-          "who",
+          "$back+flashlight",
           "kills",
           "him",
           "the",
