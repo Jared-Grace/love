@@ -1325,7 +1325,7 @@ export function bible_glyph_chapter_jdg06() {
           "wrung",
           "out",
           "the",
-          "dew,",
+          "$dew,",
           "a",
           "bowlful",
           "of",
