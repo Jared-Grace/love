@@ -153,7 +153,7 @@ export function bible_glyph_chapter_pro08() {
           "are",
           "crooked",
           "or",
-          "perverse.",
+          "$curly_loop+describing.",
         ],
       },
       {
