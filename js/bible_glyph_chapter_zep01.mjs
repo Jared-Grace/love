@@ -268,7 +268,7 @@ export function bible_glyph_chapter_zep01() {
           "the",
           "$king,",
           "and",
-          "all",
+          "$all",
           "who",
           "are",
           "dressed",
