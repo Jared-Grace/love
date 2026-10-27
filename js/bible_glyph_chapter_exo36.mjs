@@ -653,7 +653,7 @@ export function bible_glyph_chapter_exo36() {
         verse_number: 24,
         words: [
           "with",
-          "forty",
+          "$four+zero",
           "$silver",
           "bases",
           "$hammer+doing",
