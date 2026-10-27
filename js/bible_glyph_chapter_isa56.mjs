@@ -341,7 +341,7 @@ export function bible_glyph_chapter_isa56() {
           "of",
           "Israel",
           "are",
-          "blind,",
+          "$person_with_white_cane+describing,",
           "they",
           "are",
           "all",
