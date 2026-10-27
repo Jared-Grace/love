@@ -641,7 +641,7 @@ export function bible_glyph_chapter_exo22() {
           "$raised_fist+pointing_down+doing",
           "or",
           "$no_entry",
-          "oppress",
+          "$clamp+weary_face+doing",
           "a",
           "$foreigner,",
           "for",
