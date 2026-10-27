@@ -550,7 +550,7 @@ export function bible_glyph_chapter_2sa06() {
           "Then",
           "$two_hearts+proper_name",
           "$walking+pointing_up",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "and",
           "peace",
