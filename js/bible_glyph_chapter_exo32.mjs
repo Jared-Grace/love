@@ -316,7 +316,7 @@ export function bible_glyph_chapter_exo32() {
           "I",
           "have",
           "$eye",
-          "this",
+          "$flashlight",
           "$family,",
           "and",
           "they",
