@@ -1352,7 +1352,7 @@ export function bible_glyph_chapter_gen27() {
           "back",
           "from",
           "$telescope.",
-          "Why",
+          "$flashlight+question",
           "should",
           "I",
           "lose",
