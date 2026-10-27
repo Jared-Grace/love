@@ -862,7 +862,7 @@ export function bible_glyph_chapter_deu11() {
           "$eye,",
           "this",
           "$sun",
-          "I",
+          "$me",
           "am",
           "$hands_giving",
           "before",
