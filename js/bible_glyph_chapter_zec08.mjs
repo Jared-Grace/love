@@ -625,7 +625,7 @@ export function bible_glyph_chapter_zec08() {
           "will",
           "become",
           "$thumbs_up",
-          "feasts,",
+          "$alarm_clock,",
           "times",
           "of",
           "$grinning_face",
