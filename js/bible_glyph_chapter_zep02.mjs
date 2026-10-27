@@ -491,7 +491,7 @@ export function bible_glyph_chapter_zep02() {
           "to",
           "her",
           "$heart_organ,",
-          "I",
+          "$me",
           "am",
           "it,",
           "and",
