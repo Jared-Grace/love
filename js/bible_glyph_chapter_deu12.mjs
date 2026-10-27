@@ -270,7 +270,7 @@ export function bible_glyph_chapter_deu12() {
           "$no_entry",
           "$footprints",
           "yet",
-          "to",
+          "$toward",
           "the",
           "resting",
           "place",
