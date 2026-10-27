@@ -452,7 +452,7 @@ export function bible_glyph_chapter_est04() {
         verse_number: 14,
         words: [
           "For",
-          "if",
+          "$traffic_light",
           "you",
           "remain",
           "silent",
