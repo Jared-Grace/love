@@ -524,7 +524,7 @@ export function bible_glyph_chapter_exo40() {
           "$tent",
           "of",
           "$alarm_clock",
-          "on",
+          "$pointing_up",
           "the",
           "north",
           "side",
