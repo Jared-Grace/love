@@ -728,7 +728,7 @@ export function bible_glyph_chapter_deu15() {
           "within",
           "your",
           "$gate$s;",
-          "both",
+          "$linked_paperclips+manner",
           "the",
           "ceremonially",
           "$soap+no_entry",
