@@ -436,7 +436,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 14,
         words: [
           "And",
-          "now",
+          "$watch",
           "you",
           "$speech,",
           "$walking",
