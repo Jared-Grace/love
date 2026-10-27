@@ -763,7 +763,7 @@ export function bible_glyph_chapter_amo05() {
           "send",
           "you",
           "into",
-          "exile",
+          "$luggage+chains+doing",
           "beyond",
           "$proper_name$Damascus,",
           "$speech",
