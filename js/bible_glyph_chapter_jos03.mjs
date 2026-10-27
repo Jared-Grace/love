@@ -419,7 +419,7 @@ export function bible_glyph_chapter_jos03() {
           "$water",
           "will",
           "be",
-          "cut",
+          "$scissors",
           "off,",
           "and",
           "the",
