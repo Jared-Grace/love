@@ -52,7 +52,7 @@ export function bible_glyph_chapter_jos03() {
         verse_number: 2,
         words: [
           "After",
-          "three",
+          "$three",
           "$sun",
           "the",
           "officers",
