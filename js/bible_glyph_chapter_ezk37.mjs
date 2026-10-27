@@ -753,7 +753,7 @@ export function bible_glyph_chapter_ezk37() {
           "of",
           "$wrestling+heart_on_fire,",
           "and",
-          "one",
+          "$one",
           "$king",
           "will",
           "rule",
