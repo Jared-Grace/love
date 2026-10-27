@@ -295,7 +295,7 @@ export function bible_glyph_chapter_exo06() {
           "did",
           "$no_entry",
           "$ear",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "from",
           "shortness",
