@@ -626,7 +626,7 @@ export function bible_glyph_chapter_lam02() {
           "They",
           "hiss",
           "and",
-          "shake",
+          "$up_down_arrow+doing",
           "their",
           "heads",
           "at",
