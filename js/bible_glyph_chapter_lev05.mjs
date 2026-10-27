@@ -120,7 +120,7 @@ export function bible_glyph_chapter_lev05() {
           "$kiss_mark",
           "to",
           "do",
-          "evil",
+          "$thumbs_down+doing",
           "$shuffle",
           "to",
           "do",
