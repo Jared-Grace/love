@@ -485,7 +485,7 @@ export function bible_glyph_chapter_gen07() {
           "$earth,",
           "and",
           "the",
-          "ark",
+          "$package",
           "$walking",
           "on",
           "the",
