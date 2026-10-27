@@ -1378,7 +1378,7 @@ export function bible_glyph_chapter_1ki20() {
           "the",
           "prophet",
           "found",
-          "another",
+          "$plus+one",
           "$man_beard",
           "and",
           "$speech,",
