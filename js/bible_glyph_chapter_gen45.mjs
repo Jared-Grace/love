@@ -534,7 +534,7 @@ export function bible_glyph_chapter_gen45() {
           "$eating",
           "from",
           "the",
-          "fat",
+          "$bacon",
           "of",
           "the",
           "$earth.",
