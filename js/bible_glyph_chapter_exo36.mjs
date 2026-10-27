@@ -260,7 +260,7 @@ export function bible_glyph_chapter_exo36() {
       {
         verse_number: 8,
         words: [
-          "All",
+          "$all",
           "the",
           "skilled",
           "of",
