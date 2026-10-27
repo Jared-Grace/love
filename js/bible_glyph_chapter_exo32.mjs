@@ -1078,7 +1078,7 @@ export function bible_glyph_chapter_exo32() {
         words: [
           "Yet",
           "$watch,",
-          "if",
+          "$traffic_light",
           "You",
           "would",
           "only",
