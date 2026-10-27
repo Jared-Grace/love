@@ -381,7 +381,7 @@ export function bible_glyph_chapter_exo04() {
           "sighted",
           "$shuffle",
           "the",
-          "blind?",
+          "$person_with_white_cane+describing?",
           "Is",
           "it",
           "$no_entry",
