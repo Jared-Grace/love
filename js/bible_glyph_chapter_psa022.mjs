@@ -217,7 +217,7 @@ export function bible_glyph_chapter_psa022() {
           "from",
           "my",
           "mother's",
-          "womb",
+          "$baby+house",
           "You",
           "have",
           "been",
