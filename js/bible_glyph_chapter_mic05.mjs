@@ -88,7 +88,7 @@ export function bible_glyph_chapter_mic05() {
       {
         verse_number: 3,
         words: [
-          "Therefore",
+          "$right_arrow",
           "$wrestling+heart_on_fire",
           "will",
           "be",
