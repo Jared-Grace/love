@@ -412,7 +412,7 @@ export function bible_glyph_chapter_jdg04() {
           "Then",
           "Deborah",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Barak,",
           "Arise!",
           "For",
