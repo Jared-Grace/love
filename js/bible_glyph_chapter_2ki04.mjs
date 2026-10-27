@@ -368,7 +368,7 @@ export function bible_glyph_chapter_2ki04() {
           "And",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Gehazi",
           "his",
           "servant,",
