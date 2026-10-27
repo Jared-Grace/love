@@ -1031,7 +1031,7 @@ export function bible_glyph_chapter_dan09() {
           "$finish",
           "the",
           "decreed",
-          "destruction",
+          "$end_arrow+thing",
           "is",
           "poured",
           "out",
