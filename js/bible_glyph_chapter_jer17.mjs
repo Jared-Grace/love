@@ -505,7 +505,7 @@ export function bible_glyph_chapter_jer17() {
           "$sun",
           "of",
           "despair.",
-          "You",
+          "$you",
           "$lightbulb",
           "that",
           "the",
