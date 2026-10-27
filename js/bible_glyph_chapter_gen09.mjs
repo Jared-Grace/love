@@ -532,7 +532,7 @@ export function bible_glyph_chapter_gen09() {
         verse_number: 19,
         words: [
           "These",
-          "three",
+          "$three",
           "were",
           "the",
           "$son",
