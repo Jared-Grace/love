@@ -119,7 +119,7 @@ export function bible_glyph_chapter_lev14() {
           "birds",
           "be",
           "slaughtered",
-          "over",
+          "$pointing_up",
           "$sprout",
           "$water",
           "in",
