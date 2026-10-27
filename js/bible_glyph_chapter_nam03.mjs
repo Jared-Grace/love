@@ -68,7 +68,7 @@ export function bible_glyph_chapter_nam03() {
           "dead",
           "bodies",
           "$dotted_line_face",
-          "end",
+          "$end_arrow+round_pushpin",
           "-",
           "they",
           "stumble",
