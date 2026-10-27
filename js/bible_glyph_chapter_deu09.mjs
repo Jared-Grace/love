@@ -520,7 +520,7 @@ export function bible_glyph_chapter_deu09() {
           "that",
           "I",
           "may",
-          "destroy",
+          "$bomb",
           "them",
           "and",
           "blot",
