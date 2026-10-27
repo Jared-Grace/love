@@ -523,7 +523,7 @@ export function bible_glyph_chapter_lev11() {
           "will",
           "make",
           "you",
-          "unclean.",
+          "$soap+no_entry.",
           "Whoever",
           "touches",
           "their",
