@@ -679,7 +679,7 @@ export function bible_glyph_chapter_deu07() {
           "$family",
           "you",
           "now",
-          "fear.",
+          "$fear+describing.",
         ],
       },
       {
