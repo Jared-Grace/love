@@ -69,7 +69,7 @@ export function bible_glyph_chapter_job03() {
           "to",
           "$darkness.",
           "May",
-          "God",
+          "$heart_on_fire",
           "above",
           "$no_entry",
           "seek",
