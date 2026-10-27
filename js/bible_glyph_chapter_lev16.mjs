@@ -417,7 +417,7 @@ export function bible_glyph_chapter_lev16() {
           "of",
           "$incense",
           "will",
-          "cover",
+          "$coat+doing",
           "the",
           "mercy",
           "seat",
