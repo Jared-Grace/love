@@ -300,7 +300,7 @@ export function bible_glyph_chapter_exo39() {
         words: [
           "The",
           "third",
-          "row",
+          "$straight_ruler+repeat",
           "had",
           "a",
           "jacinth,",
