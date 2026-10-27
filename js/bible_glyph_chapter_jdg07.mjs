@@ -806,7 +806,7 @@ export function bible_glyph_chapter_jdg07() {
           "when",
           "the",
           "$three",
-          "hundred",
+          "$input_numbers+all",
           "rams",
           "horns",
           "$trumpet+doing,",
