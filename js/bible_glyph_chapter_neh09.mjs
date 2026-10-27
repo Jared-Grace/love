@@ -760,7 +760,7 @@ export function bible_glyph_chapter_neh09() {
           "feet",
           "did",
           "$no_entry",
-          "swell.",
+          "$foot+balloon+doing.",
         ],
       },
       {
