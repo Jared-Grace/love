@@ -285,7 +285,7 @@ export function bible_glyph_chapter_psa091() {
           "lion",
           "and",
           "the",
-          "cobra;",
+          "$snake+curly_loop;",
           "you",
           "will",
           "trample",
