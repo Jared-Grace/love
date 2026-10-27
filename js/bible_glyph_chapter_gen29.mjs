@@ -446,7 +446,7 @@ export function bible_glyph_chapter_gen29() {
           "Now",
           "Laban",
           "had",
-          "two",
+          "$two",
           "$woman.",
           "The",
           "older",
