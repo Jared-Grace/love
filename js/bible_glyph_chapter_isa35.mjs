@@ -309,7 +309,7 @@ export function bible_glyph_chapter_isa35() {
           "$running+hand_receiving+doing",
           "them,",
           "and",
-          "sorrow",
+          "$crying_face+thing",
           "and",
           "sighing",
           "will",
