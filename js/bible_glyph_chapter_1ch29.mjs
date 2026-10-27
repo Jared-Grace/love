@@ -361,7 +361,7 @@ export function bible_glyph_chapter_1ch29() {
           "$i_am.",
           "$king",
           "$two_hearts+proper_name",
-          "also",
+          "$plus",
           "$beaming+doing",
           "greatly.",
         ],
