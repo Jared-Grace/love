@@ -416,7 +416,7 @@ export function bible_glyph_chapter_exo07() {
           "bank",
           "of",
           "the",
-          "Nile,",
+          "$crocodile,",
           "and",
           "$hand_receiving",
           "in",
