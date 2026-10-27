@@ -77,7 +77,7 @@ export function bible_glyph_chapter_2ki06() {
         verse_number: 3,
         words: [
           "Then",
-          "one",
+          "$one",
           "of",
           "them",
           "$speech,",
