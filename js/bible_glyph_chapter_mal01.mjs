@@ -517,7 +517,7 @@ export function bible_glyph_chapter_mal01() {
           "cursed",
           "is",
           "the",
-          "deceiver",
+          "$mouse_trap+doer",
           "who",
           "has",
           "an",
