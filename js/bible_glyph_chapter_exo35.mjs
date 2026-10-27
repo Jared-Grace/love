@@ -451,7 +451,7 @@ export function bible_glyph_chapter_exo35() {
           "Then",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "the",
           "$son",
