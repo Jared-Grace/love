@@ -322,7 +322,7 @@ export function bible_glyph_chapter_zec08() {
           "$person",
           "nor",
           "for",
-          "beast,",
+          "$paw_prints,",
           "nor",
           "was",
           "there",
