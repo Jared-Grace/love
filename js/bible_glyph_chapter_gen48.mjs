@@ -611,7 +611,7 @@ export function bible_glyph_chapter_gen48() {
           "But",
           "his",
           "$father",
-          "refused",
+          "$person_gesturing_no+doing",
           "and",
           "$speech,",
           "I",
