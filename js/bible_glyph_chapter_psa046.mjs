@@ -164,7 +164,7 @@ export function bible_glyph_chapter_psa046() {
           "is",
           "our",
           "fortress.",
-          "Selah",
+          "$pause_button",
         ],
       },
       {
