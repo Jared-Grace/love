@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jos01() {
         verse_number: 6,
         words: [
           "Be",
-          "strong",
+          "$might+up_arrow",
           "and",
           "courageous,",
           "for",
