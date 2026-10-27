@@ -148,7 +148,7 @@ export function bible_glyph_chapter_psa022() {
           "who",
           "$eye",
           "me",
-          "mock",
+          "$squinting_face_with_tongue+speech+doing",
           "me;",
           "they",
           "sneer",
