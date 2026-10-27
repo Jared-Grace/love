@@ -422,7 +422,7 @@ export function bible_glyph_chapter_ezk34() {
           "into",
           "their",
           "own",
-          "land.",
+          "$brown_square.",
           "I",
           "will",
           "$person+sheep",
