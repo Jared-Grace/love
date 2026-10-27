@@ -510,7 +510,7 @@ export function bible_glyph_chapter_deu11() {
           "$eating",
           "and",
           "be",
-          "satisfied.",
+          "$eating+top.",
         ],
       },
       {
