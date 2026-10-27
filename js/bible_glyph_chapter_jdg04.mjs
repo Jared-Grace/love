@@ -604,7 +604,7 @@ export function bible_glyph_chapter_jdg04() {
           "$speech",
           "to",
           "her,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "thirsty.",
