@@ -471,7 +471,7 @@ export function bible_glyph_chapter_exo35() {
           "And",
           "everyone",
           "$man_beard",
-          "whose",
+          "$back+flashlight",
           "$heart_organ",
           "stirred",
           "him",
