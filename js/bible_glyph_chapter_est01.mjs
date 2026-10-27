@@ -327,7 +327,7 @@ export function bible_glyph_chapter_est01() {
           "$footprints",
           "$queen",
           "$proper_name$Vashti",
-          "before",
+          "$face",
           "$king,",
           "wearing",
           "her",
