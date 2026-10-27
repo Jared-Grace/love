@@ -694,7 +694,7 @@ export function bible_glyph_chapter_exo32() {
           "powder",
           "over",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "$water.",
