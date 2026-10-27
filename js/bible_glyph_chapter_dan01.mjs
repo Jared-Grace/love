@@ -368,7 +368,7 @@ export function bible_glyph_chapter_dan01() {
       {
         verse_number: 12,
         words: [
-          "Please",
+          "$pleading",
           "$test_tube",
           "your",
           "$kneeling",
