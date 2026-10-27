@@ -897,7 +897,7 @@ export function bible_glyph_chapter_exo30() {
           "$droplet+incense,",
           "$water_wave+incense",
           "and",
-          "galbanum,",
+          "$incense+bacon,",
           "and",
           "pure",
           "frankincense,",
