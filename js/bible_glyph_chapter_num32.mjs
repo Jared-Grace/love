@@ -936,7 +936,7 @@ export function bible_glyph_chapter_num32() {
           "$mouth",
           "$toward",
           "$kneeling,",
-          "so",
+          "$right_arrow",
           "we",
           "will",
           "$hammer+doing.",
