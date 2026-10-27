@@ -77,7 +77,7 @@ export function bible_glyph_chapter_isa55() {
           "your",
           "$person_other",
           "will",
-          "delight",
+          "$beaming+couch_and_lamp+doing",
           "in",
           "the",
           "richest",
