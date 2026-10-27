@@ -46,7 +46,7 @@ export function bible_glyph_chapter_isa02() {
           "$i_am",
           "will",
           "be",
-          "established",
+          "$pin+doing",
           "as",
           "the",
           "chief",
