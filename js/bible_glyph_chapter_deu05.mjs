@@ -937,7 +937,7 @@ export function bible_glyph_chapter_deu05() {
           "you",
           "are",
           "to",
-          "teach",
+          "$learner+doing",
           "them",
           "to",
           "$hammer+doing",
