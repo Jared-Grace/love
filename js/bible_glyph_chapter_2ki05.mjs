@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_2ki05() {
           "$clock",
           "to",
           "$hand_receiving",
-          "money",
+          "$silver",
           "and",
           "clothing,",
           "olive",
