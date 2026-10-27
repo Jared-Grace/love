@@ -328,7 +328,7 @@ export function bible_glyph_chapter_psa034() {
         verse_number: 16,
         words: [
           "The",
-          "face",
+          "$face",
           "of",
           "the",
           "$i_am",
