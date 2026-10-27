@@ -1193,7 +1193,7 @@ export function bible_glyph_chapter_1sa17() {
           "$no_entry",
           "$walking",
           "in",
-          "these,",
+          "$flashlight+flashlight,",
           "$two_hearts+proper_name",
           "$speech",
           "to",
