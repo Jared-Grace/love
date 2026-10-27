@@ -130,7 +130,7 @@ export function bible_glyph_chapter_gen29() {
           "are",
           "$you",
           "from?",
-          "We",
+          "$me",
           "are",
           "from",
           "$proper_name$Haran,",
