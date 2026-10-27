@@ -609,7 +609,7 @@ export function bible_glyph_chapter_pro16() {
           "his",
           "$eyes",
           "$thinking+doing",
-          "perversity;",
+          "$upside_down_face+speech+thing;",
           "he",
           "who",
           "purses",
