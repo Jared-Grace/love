@@ -405,7 +405,7 @@ export function bible_glyph_chapter_2ch07() {
           "his",
           "own",
           "$house",
-          "successfully,",
+          "$chart_increasing,",
         ],
       },
       {
