@@ -242,7 +242,7 @@ export function bible_glyph_chapter_exo11() {
           "at",
           "$man_beard",
           "or",
-          "beast.",
+          "$paw_prints.",
           "Then",
           "you",
           "will",
