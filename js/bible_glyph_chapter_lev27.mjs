@@ -551,7 +551,7 @@ export function bible_glyph_chapter_lev27() {
           "$field",
           "$next_track",
           "the",
-          "Jubilee,",
+          "$horn+party_popper,",
           "the",
           "$priest",
           "is",
