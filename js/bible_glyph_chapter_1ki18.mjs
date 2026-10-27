@@ -204,7 +204,7 @@ export function bible_glyph_chapter_1ki18() {
           "on",
           "his",
           "$road,",
-          "suddenly",
+          "$exclamation",
           "$heart_on_fire+i_am",
           "met",
           "him.",
