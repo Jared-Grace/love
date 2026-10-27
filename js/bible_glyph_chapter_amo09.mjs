@@ -197,7 +197,7 @@ export function bible_glyph_chapter_amo09() {
           "all",
           "its",
           "dwellers",
-          "mourn",
+          "$loudly_crying+coffin",
           "all",
           "the",
           "land",
