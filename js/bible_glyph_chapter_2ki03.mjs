@@ -96,7 +96,7 @@ export function bible_glyph_chapter_2ki03() {
           "he",
           "did",
           "$no_entry",
-          "turn",
+          "$away+doing",
           "away",
           "$tray_out",
           "them.",
