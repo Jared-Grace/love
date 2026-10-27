@@ -221,7 +221,7 @@ export function bible_glyph_chapter_jer07() {
           "$speech",
           "to",
           "no",
-          "avail.",
+          "$chart_increasing+doing.",
         ],
       },
       {
