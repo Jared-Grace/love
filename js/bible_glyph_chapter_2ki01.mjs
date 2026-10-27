@@ -494,7 +494,7 @@ export function bible_glyph_chapter_2ki01() {
           "$military_medal",
           "with",
           "his",
-          "fifty",
+          "$five+zero",
           "men.",
           "And",
           "the",
