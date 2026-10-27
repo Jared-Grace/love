@@ -645,7 +645,7 @@ export function bible_glyph_chapter_gen40() {
           "cupbearer",
           "did",
           "$no_entry",
-          "remember",
+          "$reminder_ribbon",
           "$i_am+plus.",
           "He",
           "forgot",
