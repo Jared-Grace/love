@@ -518,7 +518,7 @@ export function bible_glyph_chapter_gen04() {
         words: [
           "Now",
           "to",
-          "Enoch",
+          "$gift+heart_on_fire+proper_name",
           "was",
           "born",
           "$proper_name$Irad,",
