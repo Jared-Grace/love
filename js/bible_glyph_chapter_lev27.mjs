@@ -459,7 +459,7 @@ export function bible_glyph_chapter_lev27() {
           "who",
           "$sparkle+doing",
           "it",
-          "redeems",
+          "$currency_exchange",
           "his",
           "$house,",
           "he",
