@@ -596,7 +596,7 @@ export function bible_glyph_chapter_mic07() {
           "$nose+fire",
           "$clock+all,",
           "$pointing",
-          "He",
+          "$pointing_back",
           "$smiling_face_with_hearts+doer",
           "in",
           "$gift?",
