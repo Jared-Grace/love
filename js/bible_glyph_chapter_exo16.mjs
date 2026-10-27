@@ -817,7 +817,7 @@ export function bible_glyph_chapter_exo16() {
           "$eating",
           "it",
           "$sun,",
-          "because",
+          "$pointing",
           "$sun",
           "is",
           "a",
