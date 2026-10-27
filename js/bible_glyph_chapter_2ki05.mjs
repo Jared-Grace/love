@@ -865,7 +865,7 @@ export function bible_glyph_chapter_2ki05() {
           "a",
           "$flying_disc",
           "of",
-          "silver",
+          "$silver",
           "and",
           "$two",
           "sets",
