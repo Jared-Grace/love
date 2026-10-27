@@ -385,7 +385,7 @@ export function bible_glyph_chapter_exo33() {
           "$turn_back",
           "$toward",
           "the",
-          "camp,",
+          "$camp,",
           "but",
           "his",
           "young",
