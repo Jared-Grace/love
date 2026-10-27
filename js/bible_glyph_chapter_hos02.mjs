@@ -446,7 +446,7 @@ export function bible_glyph_chapter_hos02() {
         verse_number: 14,
         words: [
           "$right_arrow,",
-          "behold,",
+          "$exclamation,",
           "I",
           "will",
           "allure",
