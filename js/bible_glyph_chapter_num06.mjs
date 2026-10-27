@@ -545,7 +545,7 @@ export function bible_glyph_chapter_num06() {
           "along",
           "with",
           "the",
-          "basket",
+          "$basket",
           "of",
           "unleavened",
           "bread.",
