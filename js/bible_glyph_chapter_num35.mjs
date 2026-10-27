@@ -154,7 +154,7 @@ export function bible_glyph_chapter_num35() {
           "side,",
           "and",
           "two",
-          "thousand",
+          "$ten+all",
           "on",
           "the",
           "north,",
