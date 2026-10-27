@@ -691,7 +691,7 @@ export function bible_glyph_chapter_1ki01() {
           "was",
           "$repeat",
           "$mouth",
-          "with",
+          "$linked_paperclips",
           "the",
           "$king,",
           "$proper_name$Nathan",
