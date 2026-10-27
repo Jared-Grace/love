@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_exo29() {
         verse_number: 34,
         words: [
           "And",
-          "if",
+          "$traffic_light",
           "any",
           "$tray_out",
           "the",
