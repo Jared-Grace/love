@@ -461,7 +461,7 @@ export function bible_glyph_chapter_isa11() {
           "to",
           "the",
           "west;",
-          "together",
+          "$linked_paperclips+manner",
           "they",
           "will",
           "plunder",
