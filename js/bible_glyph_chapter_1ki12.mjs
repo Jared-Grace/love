@@ -618,7 +618,7 @@ export function bible_glyph_chapter_1ki12() {
           "$proper_name$Rehoboam",
           "$walking+pointing_up",
           "his",
-          "chariot",
+          "$chariot",
           "in",
           "haste",
           "and",
