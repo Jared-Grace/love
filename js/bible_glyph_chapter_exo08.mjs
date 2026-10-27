@@ -754,7 +754,7 @@ export function bible_glyph_chapter_exo08() {
           "your",
           "$family.",
           "This",
-          "sign",
+          "$placard",
           "will",
           "take",
           "place",
