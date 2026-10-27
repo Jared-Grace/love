@@ -25,7 +25,7 @@ export function bible_glyph_chapter_neh01() {
           "$proper_name$Hacaliah.",
           "In",
           "the",
-          "month",
+          "$new_moon",
           "of",
           "$proper_name$Chislev,",
           "in",
