@@ -364,7 +364,7 @@ export function bible_glyph_chapter_exo30() {
           "shekel,",
           "which",
           "weighs",
-          "twenty",
+          "$two+zero",
           "gerahs.",
           "This",
           "$divide+thing",
