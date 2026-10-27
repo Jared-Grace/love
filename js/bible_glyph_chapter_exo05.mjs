@@ -419,7 +419,7 @@ export function bible_glyph_chapter_exo05() {
           "of",
           "$house+proper_name",
           "had",
-          "set",
+          "$palm_down",
           "over",
           "them,",
           "were",
