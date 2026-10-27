@@ -701,7 +701,7 @@ export function bible_glyph_chapter_2sa11() {
           "him",
           "from",
           "the",
-          "wall,",
+          "$brick+shield,",
           "so",
           "that",
           "he",
