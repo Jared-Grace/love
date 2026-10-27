@@ -711,7 +711,7 @@ export function bible_glyph_chapter_num18() {
           "a",
           "$covenant",
           "of",
-          "salt,",
+          "$salt,",
           "$hourglass",
           "before",
           "$i_am,",
