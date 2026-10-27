@@ -222,7 +222,7 @@ export function bible_glyph_chapter_2ki11() {
           "to",
           "take",
           "turns",
-          "guarding",
+          "$guard",
           "the",
           "$house.",
         ],
