@@ -632,7 +632,7 @@ export function bible_glyph_chapter_gen27() {
           "his",
           "$hand",
           "$link",
-          "hairy",
+          "$goat+man_beard",
           "like",
           "the",
           "$hand",
