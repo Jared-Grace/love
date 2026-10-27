@@ -372,7 +372,7 @@ export function bible_glyph_chapter_deu18() {
           "You",
           "must",
           "be",
-          "blameless",
+          "$full_moon+describing",
           "before",
           "the",
           "$i_am",
