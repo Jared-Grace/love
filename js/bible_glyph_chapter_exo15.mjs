@@ -443,7 +443,7 @@ export function bible_glyph_chapter_exo15() {
           "them",
           "in",
           "and",
-          "plant",
+          "$sprout+down_arrow+doing",
           "them",
           "on",
           "the",
