@@ -1029,7 +1029,7 @@ export function bible_glyph_chapter_2ki09() {
           "$proper_name$Ahaziah",
           "in",
           "his",
-          "chariot",
+          "$chariot",
           "on",
           "the",
           "Ascent",
