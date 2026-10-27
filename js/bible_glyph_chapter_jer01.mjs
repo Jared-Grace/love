@@ -40,7 +40,7 @@ export function bible_glyph_chapter_jer01() {
           "of",
           "the",
           "$i_am",
-          "came",
+          "$link",
           "to",
           "him",
           "in",
