@@ -323,7 +323,7 @@ export function bible_glyph_chapter_psa073() {
       {
         verse_number: 18,
         words: [
-          "Surely",
+          "$check+exclamation",
           "You",
           "set",
           "them",
