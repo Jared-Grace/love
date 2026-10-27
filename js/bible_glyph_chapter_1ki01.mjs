@@ -270,7 +270,7 @@ export function bible_glyph_chapter_1ki01() {
           "Adonijah",
           "$sacrifice",
           "$sheep,",
-          "oxen",
+          "$cow_face",
           "and",
           "fattened",
           "calves",
