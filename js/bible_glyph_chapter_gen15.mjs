@@ -503,7 +503,7 @@ export function bible_glyph_chapter_gen15() {
           "to",
           "the",
           "great",
-          "River",
+          "$water+national_park",
           "$proper_name$Euphrates:",
         ],
       },
