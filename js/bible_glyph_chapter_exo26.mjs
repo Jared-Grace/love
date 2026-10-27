@@ -867,7 +867,7 @@ export function bible_glyph_chapter_exo26() {
           "$hands_giving",
           "the",
           "table",
-          "on",
+          "$pointing_up",
           "the",
           "north",
           "side.",
