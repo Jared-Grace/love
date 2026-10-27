@@ -93,7 +93,7 @@ export function bible_glyph_chapter_isa06() {
           "$i_am",
           "of",
           "Hosts;",
-          "all",
+          "$all",
           "the",
           "$earth",
           "is",
