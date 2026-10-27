@@ -184,7 +184,7 @@ export function bible_glyph_chapter_gen07() {
         verse_number: 7,
         words: [
           "And",
-          "Noah",
+          "$seat+proper_name",
           "$footprints",
           "the",
           "ark,",
