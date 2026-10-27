@@ -508,7 +508,7 @@ export function bible_glyph_chapter_2ch07() {
           "$tray_out",
           "$sky,",
           "and",
-          "forgive",
+          "$sponge",
           "their",
           "$bow,",
           "and",
