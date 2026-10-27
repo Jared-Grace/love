@@ -292,7 +292,7 @@ export function bible_glyph_chapter_lev07() {
           "with",
           "olive",
           "oil,",
-          "unleavened",
+          "$flatbread",
           "wafers",
           "$oil+doing",
           "with",
