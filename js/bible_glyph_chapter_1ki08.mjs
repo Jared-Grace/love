@@ -1110,7 +1110,7 @@ export function bible_glyph_chapter_1ki08() {
           "$wrestling+heart_on_fire",
           "are",
           "defeated",
-          "before",
+          "$face",
           "an",
           "$enemy",
           "because",
