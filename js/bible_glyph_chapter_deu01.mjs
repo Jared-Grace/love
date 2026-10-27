@@ -417,7 +417,7 @@ export function bible_glyph_chapter_deu01() {
           "of",
           "your",
           "tribes,",
-          "wise",
+          "$wisdom",
           "and",
           "$lightbulb",
           "men,",
