@@ -497,7 +497,7 @@ export function bible_glyph_chapter_job28() {
           "limit",
           "for",
           "the",
-          "rain",
+          "$rain",
           "and",
           "a",
           "$road",
