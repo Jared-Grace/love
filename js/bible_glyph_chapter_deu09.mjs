@@ -214,7 +214,7 @@ export function bible_glyph_chapter_deu09() {
           "before",
           "you,",
           "to",
-          "keep",
+          "$person+pointing_up",
           "the",
           "$speech",
           "$i_am",
