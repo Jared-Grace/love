@@ -349,7 +349,7 @@ export function bible_glyph_chapter_1ki12() {
           "Whereas",
           "my",
           "$father",
-          "burdened",
+          "$package+up_arrow+doing",
           "you",
           "with",
           "a",
