@@ -376,7 +376,7 @@ export function bible_glyph_chapter_gen20() {
           "of",
           "$heart_on_fire",
           "in",
-          "this",
+          "$flashlight",
           "$place,",
           "and",
           "they",
