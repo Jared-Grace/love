@@ -27,7 +27,7 @@ export function bible_glyph_chapter_mic04() {
           "$i_am",
           "will",
           "be",
-          "established",
+          "$pin+doing",
           "as",
           "the",
           "chief",
