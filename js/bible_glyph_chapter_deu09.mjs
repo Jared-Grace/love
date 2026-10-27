@@ -711,7 +711,7 @@ export function bible_glyph_chapter_deu09() {
           "you,",
           "enough",
           "to",
-          "destroy",
+          "$bomb",
           "you.",
           "But",
           "$i_am",
