@@ -424,7 +424,7 @@ export function bible_glyph_chapter_deu28() {
           "$snake+back.",
           "You",
           "will",
-          "only",
+          "$one+check",
           "move",
           "upward",
           "and",
