@@ -322,7 +322,7 @@ export function bible_glyph_chapter_deu18() {
           "casts",
           "spells,",
           "or",
-          "consults",
+          "$question",
           "a",
           "medium",
           "or",
