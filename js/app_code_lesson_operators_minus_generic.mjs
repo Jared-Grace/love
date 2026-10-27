@@ -17,7 +17,7 @@ import { app_code_lesson_operators_minus_generic_container_both_sides_number } f
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_div_code_multiple } from "./app_code_div_code_multiple.mjs";
-import { html_div_cycle_code_multiple } from "./html_div_cycle_code_multiple.mjs";
+import { app_code_div_cycle_code_multiple } from "./app_code_div_cycle_code_multiple.mjs";
 import { app_code_div_code } from "./app_code_div_code.mjs";
 import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_operator.mjs";
 export function app_code_lesson_operators_minus_generic({
@@ -81,7 +81,7 @@ export function app_code_lesson_operators_minus_generic({
     let combined4 = text_combine(operator, right2);
     app_code_div_code_multiple(c, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
-    html_div_cycle_code_multiple(c4, [
+    app_code_div_cycle_code_multiple(c4, [
       ["Therefore, ", operator, " must have a value on the right side"],
       [
         "And if ",

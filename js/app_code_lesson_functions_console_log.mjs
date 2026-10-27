@@ -14,7 +14,7 @@ import { js_operator_first_code_call } from "./js_operator_first_code_call.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
-import { html_div_cycle_code_multiple } from "./html_div_cycle_code_multiple.mjs";
+import { app_code_div_cycle_code_multiple } from "./app_code_div_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
   var r = app_code_lesson_functions_console_log_generic({
     above,
@@ -37,7 +37,7 @@ export function app_code_lesson_functions_console_log() {
     let c = app_code_container_light_blue(root);
     js_code_call_arg_fn(f_name, next);
     js_operators_arithmetic();
-    html_div_cycle_code_multiple(c, [
+    app_code_div_cycle_code_multiple(c, [
       ["Here is an example of a function call: ", call],
       ["", verb, " is a function"],
       ["And here is a new function: ", f_name],
