@@ -749,7 +749,7 @@ export function bible_glyph_chapter_num18() {
           "I",
           "am",
           "your",
-          "portion",
+          "$pizza",
           "and",
           "your",
           "$inheritance",
