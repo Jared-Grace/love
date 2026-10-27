@@ -490,7 +490,7 @@ export function bible_glyph_chapter_deu01() {
           "both",
           "$pinching_hand",
           "and",
-          "great",
+          "$top",
           "alike.",
           "Do",
           "$no_entry",
