@@ -712,7 +712,7 @@ export function bible_glyph_chapter_1sa24() {
           "you",
           "will",
           "not",
-          "cut",
+          "$scissors",
           "off",
           "my",
           "$seed",
