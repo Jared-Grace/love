@@ -500,7 +500,7 @@ export function bible_glyph_chapter_deu15() {
           "that",
           "is",
           "why",
-          "I",
+          "$me",
           "am",
           "giving",
           "you",
