@@ -833,7 +833,7 @@ export function bible_glyph_chapter_1sa25() {
           "he",
           "lives",
           "up",
-          "to",
+          "$toward",
           "his",
           "$name_tag.",
           "His",
