@@ -526,7 +526,7 @@ export function bible_glyph_chapter_exo09() {
       {
         verse_number: 18,
         words: [
-          "Behold,",
+          "$exclamation,",
           "at",
           "this",
           "time",
