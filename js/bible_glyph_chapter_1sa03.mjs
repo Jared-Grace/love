@@ -365,7 +365,7 @@ export function bible_glyph_chapter_1sa03() {
           "out",
           "against",
           "$pointing_up+proper_name",
-          "everything",
+          "$all",
           "I",
           "have",
           "$mouth",
