@@ -125,7 +125,7 @@ export function bible_glyph_chapter_1sa03() {
           "Here",
           "I",
           "am,",
-          "for",
+          "$pointing",
           "you",
           "have",
           "called",
