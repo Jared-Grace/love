@@ -671,7 +671,7 @@ export function bible_glyph_chapter_deu10() {
           "for",
           "you",
           "these",
-          "great",
+          "$top",
           "and",
           "awesome",
           "wonders",
