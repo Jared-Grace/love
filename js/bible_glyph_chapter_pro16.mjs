@@ -482,7 +482,7 @@ export function bible_glyph_chapter_pro16() {
           "persuasiveness",
           "to",
           "his",
-          "lips.",
+          "$kiss_mark.",
         ],
       },
       {
