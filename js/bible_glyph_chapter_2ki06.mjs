@@ -407,7 +407,7 @@ export function bible_glyph_chapter_2ki06() {
           "On",
           "receiving",
           "the",
-          "report,",
+          "$newspaper,",
           "Elisha",
           "is",
           "in",
