@@ -613,7 +613,7 @@ export function bible_glyph_chapter_exo34() {
           "all",
           "the",
           "firstborn",
-          "males",
+          "$reminder_ribbon",
           "among",
           "your",
           "livestock,",
