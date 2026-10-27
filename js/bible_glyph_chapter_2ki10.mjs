@@ -204,7 +204,7 @@ export function bible_glyph_chapter_2ki10() {
           "side,",
           "and",
           "if",
-          "you",
+          "$you",
           "will",
           "$ear",
           "my",
