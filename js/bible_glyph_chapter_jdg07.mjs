@@ -381,7 +381,7 @@ export function bible_glyph_chapter_jdg07() {
           "down",
           "to",
           "the",
-          "camp",
+          "$camp",
           "with",
           "your",
           "servant",
