@@ -403,7 +403,7 @@ export function bible_glyph_chapter_num12() {
           "Miriam",
           "was",
           "confined",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp",
           "for",
