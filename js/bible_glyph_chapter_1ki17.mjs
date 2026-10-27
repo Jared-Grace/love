@@ -333,7 +333,7 @@ export function bible_glyph_chapter_1ki17() {
           "and",
           "a",
           "little",
-          "oil",
+          "$lotion_bottle",
           "in",
           "a",
           "jug.",
