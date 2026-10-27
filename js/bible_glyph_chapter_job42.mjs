@@ -132,7 +132,7 @@ export function bible_glyph_chapter_job42() {
           "$i_am",
           "had",
           "$mouth",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "to",
           "$proper_name$Job,",
