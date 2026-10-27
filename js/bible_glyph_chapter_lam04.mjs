@@ -108,7 +108,7 @@ export function bible_glyph_chapter_lam04() {
           "$paperclip",
           "in",
           "thirst",
-          "to",
+          "$toward",
           "the",
           "roof",
           "of",
