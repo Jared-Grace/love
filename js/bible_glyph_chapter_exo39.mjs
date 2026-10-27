@@ -440,7 +440,7 @@ export function bible_glyph_chapter_exo39() {
           "And",
           "the",
           "other",
-          "ends",
+          "$end_arrow+triangular_ruler",
           "of",
           "the",
           "two",
