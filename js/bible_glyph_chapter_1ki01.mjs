@@ -1273,7 +1273,7 @@ export function bible_glyph_chapter_1ki01() {
           "$family",
           "were",
           "$sewing_needle",
-          "flutes",
+          "$flute",
           "and",
           "rejoicing",
           "with",
