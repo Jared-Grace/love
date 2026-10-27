@@ -694,7 +694,7 @@ export function bible_glyph_chapter_exo29() {
           "$lotion_bottle,",
           "and",
           "$one",
-          "wafer",
+          "$flatbread+oil",
           "from",
           "the",
           "$basket",
