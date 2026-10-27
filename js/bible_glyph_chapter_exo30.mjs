@@ -38,7 +38,7 @@ export function bible_glyph_chapter_exo30() {
         words: [
           "A",
           "cubit",
-          "long",
+          "$up_down_arrow",
           "and",
           "a",
           "cubit",
