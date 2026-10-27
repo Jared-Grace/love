@@ -1131,7 +1131,7 @@ export function bible_glyph_chapter_1ki01() {
           "$son",
           "of",
           "$i_am+lightbulb",
-          "replied",
+          "$speech+turn_back",
           "to",
           "the",
           "$king,",
