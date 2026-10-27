@@ -580,7 +580,7 @@ export function bible_glyph_chapter_2ch34() {
           "And",
           "Hilkiah",
           "$speech",
-          "to",
+          "$toward",
           "Shaphan",
           "the",
           "scribe,",
