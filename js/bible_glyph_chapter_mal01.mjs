@@ -323,7 +323,7 @@ export function bible_glyph_chapter_mal01() {
           "be",
           "$heart_orange+doing?",
           "Since",
-          "this",
+          "$flashlight",
           "has",
           "come",
           "from",
