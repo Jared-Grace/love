@@ -80,7 +80,7 @@ export function bible_glyph_chapter_jos06() {
           "$fist+around+doing",
           "the",
           "$city",
-          "one",
+          "$one",
           "$drum.",
           "$hammer+doing",
           "this",
