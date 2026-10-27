@@ -409,7 +409,7 @@ export function bible_glyph_chapter_jer32() {
           "$hands_giving",
           "this",
           "deed",
-          "to",
+          "$toward",
           "$proper_name$Baruch",
           "$son",
           "of",
