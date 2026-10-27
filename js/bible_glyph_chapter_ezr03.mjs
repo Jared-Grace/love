@@ -468,7 +468,7 @@ export function bible_glyph_chapter_ezr03() {
           "$family",
           "gave",
           "a",
-          "great",
+          "$top",
           "$public_address",
           "of",
           "$clapping_hands",
