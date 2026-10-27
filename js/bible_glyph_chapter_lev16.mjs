@@ -1142,7 +1142,7 @@ export function bible_glyph_chapter_lev16() {
           "is",
           "a",
           "$hourglass",
-          "statute.",
+          "$statute.",
         ],
       },
       {
