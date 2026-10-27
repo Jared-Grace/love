@@ -865,7 +865,7 @@ export function bible_glyph_chapter_ezk03() {
           "a",
           "$man_beard",
           "to",
-          "rebuke",
+          "$you+exclamation",
           "them,",
           "though",
           "they",
