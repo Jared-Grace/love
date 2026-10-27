@@ -435,7 +435,7 @@ export function bible_glyph_chapter_gen29() {
           "me",
           "$flashlight+question",
           "your",
-          "wages",
+          "$coin+hammer+thing",
           "should",
           "be.",
         ],
