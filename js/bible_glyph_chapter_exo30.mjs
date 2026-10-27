@@ -700,7 +700,7 @@ export function bible_glyph_chapter_exo30() {
           "the",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "the",
           "$ark",
           "of",
