@@ -158,7 +158,7 @@ export function bible_glyph_chapter_num27() {
         words: [
           "So",
           "$fishing_pole+proper_name",
-          "brought",
+          "$magnet+doing",
           "their",
           "$scales+thing",
           "before",
