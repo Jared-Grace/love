@@ -1224,7 +1224,7 @@ export function bible_glyph_chapter_exo28() {
           "the",
           "$altar",
           "to",
-          "minister",
+          "$bellhop_bell+doing",
           "in",
           "the",
           "$sparkle+thing",
