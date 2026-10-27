@@ -602,7 +602,7 @@ export function bible_glyph_chapter_num18() {
           "which",
           "is",
           "$two+zero",
-          "gerahs.",
+          "$scales+pinching_hand.",
         ],
       },
       {
