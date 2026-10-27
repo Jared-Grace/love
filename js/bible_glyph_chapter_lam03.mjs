@@ -334,7 +334,7 @@ export function bible_glyph_chapter_lam03() {
           "along",
           "with",
           "my",
-          "hope",
+          "$hourglass+crossed_fingers+thing",
           "from",
           "the",
           "$i_am.",
