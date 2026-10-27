@@ -62,7 +62,7 @@ export function bible_glyph_chapter_gen16() {
           "her",
           "I",
           "can",
-          "build",
+          "$brick",
           "a",
           "family.",
           "And",
