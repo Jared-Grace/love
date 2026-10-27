@@ -265,7 +265,7 @@ export function bible_glyph_chapter_exo37() {
           "and",
           "a",
           "$divide",
-          "high.",
+          "$person+pointing_up.",
         ],
       },
       {
