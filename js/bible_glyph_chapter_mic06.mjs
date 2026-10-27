@@ -269,7 +269,7 @@ export function bible_glyph_chapter_mic06() {
           "and",
           "to",
           "$walking",
-          "humbly",
+          "$walking+bowing",
           "with",
           "your",
           "$heart_on_fire?",
