@@ -309,7 +309,7 @@ export function bible_glyph_chapter_1sa20() {
           "$traffic_light",
           "there",
           "is",
-          "iniquity",
+          "$cyclone",
           "in",
           "me,",
           "then",
