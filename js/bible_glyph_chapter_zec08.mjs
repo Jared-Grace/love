@@ -49,7 +49,7 @@ export function bible_glyph_chapter_zec08() {
           "$top",
           "$face_steam;",
           "with",
-          "great",
+          "$top",
           "fervor",
           "I",
           "am",
