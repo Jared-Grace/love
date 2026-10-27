@@ -1242,7 +1242,7 @@ export function bible_glyph_chapter_2ki17() {
           "them,",
           "and",
           "$no_entry",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "them.",
         ],
