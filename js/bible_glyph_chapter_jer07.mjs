@@ -1010,7 +1010,7 @@ export function bible_glyph_chapter_jer07() {
         verse_number: 32,
         words: [
           "$right_arrow",
-          "behold,",
+          "$exclamation,",
           "the",
           "$sun",
           "are",
