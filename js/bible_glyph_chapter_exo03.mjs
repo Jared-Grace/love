@@ -72,7 +72,7 @@ export function bible_glyph_chapter_exo03() {
           "$eye",
           "the",
           "$thorns+herb",
-          "ablaze",
+          "$fire+wood",
           "with",
           "$fire,",
           "but",
