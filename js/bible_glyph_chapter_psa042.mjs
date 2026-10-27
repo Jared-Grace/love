@@ -229,7 +229,7 @@ export function bible_glyph_chapter_psa042() {
           "$sun+manner",
           "the",
           "$i_am",
-          "decrees",
+          "$speech+scroll",
           "His",
           "$gift,",
           "and",
