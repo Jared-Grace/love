@@ -682,7 +682,7 @@ export function bible_glyph_chapter_num11() {
           "I",
           "am",
           "among",
-          "600,000",
+          "$six",
           "$family",
           "on",
           "foot,",
