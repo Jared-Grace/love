@@ -631,7 +631,7 @@ export function bible_glyph_chapter_2ch20() {
           "Then",
           "$i_am+scales",
           "$bowing+down_arrow+doing",
-          "facedown",
+          "$nose+fire",
           "to",
           "the",
           "$earth,",
