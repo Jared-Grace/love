@@ -1220,7 +1220,7 @@ export function bible_glyph_chapter_jer32() {
           "$fire",
           "to",
           "$proper_name$Molech,",
-          "something",
+          "$back+flashlight",
           "I",
           "$no_entry",
           "commanded",
