@@ -906,7 +906,7 @@ export function bible_glyph_chapter_2ki10() {
           "$hammer+doing",
           "$sacrifice",
           "and",
-          "burnt",
+          "$burnt_offering",
           "offerings.",
           "Now",
           "$i_am+pointing_back",
