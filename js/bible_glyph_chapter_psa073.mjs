@@ -494,7 +494,7 @@ export function bible_glyph_chapter_psa073() {
           "surely",
           "$wilted_flower;",
           "You",
-          "destroy",
+          "$scissors+no_entry+doing",
           "all",
           "who",
           "are",
