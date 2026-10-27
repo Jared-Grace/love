@@ -1088,10 +1088,41 @@ def tokenize(command, subst_validator=None, outer_vars=None):
         collapsed.pop(0)
     while collapsed and collapsed[-1] == SEP_SEMI:
         collapsed.pop()
-    return collapsed
+    return _system_path_verbs_plain(collapsed)
 
 
 SEPARATORS = {SEP_SEMI, SEP_PIPE, SEP_AND, SEP_OR}
+
+# Read-only tools an agent sometimes spells by their system path
+# (`/usr/bin/grep`). Spelled that way the verb matched no allow rule and the
+# human was asked about a plain grep. The path names the same program the
+# plain word finds on PATH - if anything a surer one - so the word is
+# rewritten to the plain name and every check, deny floors included, then
+# judges it exactly as it judges the plain word. Deliberately a short fixed
+# list, not "any /usr/bin/X": `/usr/bin/time` is not the shell's `time` (it
+# takes `-o FILE`), and the same is true of other builtins with a binary twin.
+SYSTEM_PATH_VERBS_PLAIN = {
+    "grep", "egrep", "fgrep", "head", "tail", "wc", "sort", "uniq", "cut",
+    "tr", "ls", "cat", "diff", "stat", "basename", "dirname", "md5sum",
+    "sha256sum",
+}
+SYSTEM_PATH_VERB_RE = re.compile(r"^/(?:usr/)?bin/([a-z0-9]+)$")
+STATEMENT_STARTERS = {"do", "then", "else"}
+
+
+def _system_path_verbs_plain(tokens):
+    """`tokens` with a statement's first word `/usr/bin/<tool>` or
+    `/bin/<tool>` rewritten to `<tool>`, for a tool in SYSTEM_PATH_VERBS_PLAIN.
+    Only the command word is touched: the same text as an argument is a path
+    to a file and stays one."""
+    out = []
+    for t in tokens:
+        starts = not out or out[-1] in SEPARATORS or out[-1] in STATEMENT_STARTERS
+        m = SYSTEM_PATH_VERB_RE.match(t) if starts else None
+        if m and m.group(1) in SYSTEM_PATH_VERBS_PLAIN:
+            t = m.group(1)
+        out.append(t)
+    return out
 
 
 def split_statements(tokens):
