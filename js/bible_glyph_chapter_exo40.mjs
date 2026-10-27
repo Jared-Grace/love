@@ -884,7 +884,7 @@ export function bible_glyph_chapter_exo40() {
         words: [
           "$traffic_light",
           "the",
-          "cloud",
+          "$cloud",
           "was",
           "$no_entry",
           "lifted,",
