@@ -559,7 +559,7 @@ export function bible_glyph_chapter_1ki22() {
           "$speech,",
           "I",
           "$eye",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire",
           "scattered",
           "on",
