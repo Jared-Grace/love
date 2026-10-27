@@ -508,7 +508,7 @@ export function bible_glyph_chapter_neh09() {
         words: [
           "In",
           "their",
-          "hunger",
+          "$famine",
           "You",
           "$hands_giving",
           "them",
