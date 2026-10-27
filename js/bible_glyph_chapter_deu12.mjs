@@ -438,7 +438,7 @@ export function bible_glyph_chapter_deu12() {
           "must",
           "offer",
           "them",
-          "only",
+          "$pointing",
           "in",
           "the",
           "$place",
