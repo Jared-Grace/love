@@ -112,7 +112,7 @@ export function bible_glyph_chapter_exo38() {
           "$net",
           "$down_arrow",
           "its",
-          "ledge,",
+          "$top+around,",
           "halfway",
           "up",
           "from",
