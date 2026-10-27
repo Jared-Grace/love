@@ -102,7 +102,7 @@ export function bible_glyph_chapter_exo06() {
         words: [
           "I",
           "also",
-          "established",
+          "$person+pointing_up",
           "My",
           "$covenant",
           "with",
