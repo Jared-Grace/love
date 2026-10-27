@@ -78,7 +78,7 @@ export function bible_glyph_chapter_job03() {
           "may",
           "$no_entry",
           "light",
-          "shine",
+          "$sun_with_face+light+doing",
           "upon",
           "it.",
         ],
