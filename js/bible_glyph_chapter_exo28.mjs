@@ -1137,7 +1137,7 @@ export function bible_glyph_chapter_exo28() {
           "$hammer+doing",
           "for",
           "them",
-          "sashes",
+          "$ribbon+garment",
           "and",
           "headbands;",
           "$hammer+doing",
