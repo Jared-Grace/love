@@ -430,7 +430,7 @@ export function bible_glyph_chapter_gen50() {
           "they",
           "$speech,",
           "What",
-          "if",
+          "$crossed_fingers+manner",
           "$i_am+plus",
           "bears",
           "a",
