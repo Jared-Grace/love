@@ -283,7 +283,7 @@ export function bible_glyph_chapter_gen33() {
         verse_number: 11,
         words: [
           "$hand_receiving,",
-          "please,",
+          "$pleading,",
           "my",
           "$speech+thumbs_up",
           "that",
