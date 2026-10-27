@@ -1298,7 +1298,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 43,
         words: [
           "Am",
-          "I",
+          "$me",
           "a",
           "$dog,",
           "he",
