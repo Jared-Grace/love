@@ -529,7 +529,7 @@ export function bible_glyph_chapter_dan01() {
           "Now",
           "at",
           "the",
-          "end",
+          "$end_arrow+straight_ruler",
           "of",
           "the",
           "$sun",
