@@ -2193,7 +2193,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "$hands_giving",
           "the",
-          "morning.",
+          "$morning.",
           "For",
           "the",
           "dread",
