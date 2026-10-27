@@ -590,7 +590,7 @@ export function bible_glyph_chapter_exo09() {
           "$skull+doing",
           "when",
           "the",
-          "hail",
+          "$ice",
           "comes",
           "$walking+pointing_down",
           "upon",
