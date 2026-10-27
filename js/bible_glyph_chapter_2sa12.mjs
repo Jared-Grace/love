@@ -526,7 +526,7 @@ export function bible_glyph_chapter_2sa12() {
           "the",
           "boy.",
           "$two_hearts+proper_name",
-          "fasted",
+          "$eating+locked+doing",
           "and",
           "$footprints",
           "his",
