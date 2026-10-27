@@ -199,7 +199,7 @@ export function bible_glyph_chapter_isa58() {
           "$ashes?",
           "Will",
           "you",
-          "call",
+          "$waving_hand",
           "$flashlight",
           "a",
           "$eating+locked,",
