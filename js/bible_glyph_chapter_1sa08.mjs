@@ -528,7 +528,7 @@ export function bible_glyph_chapter_1sa08() {
           "Nevertheless,",
           "the",
           "$family",
-          "refused",
+          "$person_gesturing_no+doing",
           "to",
           "$ear",
           "the",
