@@ -522,7 +522,7 @@ export function bible_glyph_chapter_lev19() {
           "If",
           "a",
           "$man_beard",
-          "lies",
+          "$bed+doing",
           "$seed",
           "with",
           "a",
