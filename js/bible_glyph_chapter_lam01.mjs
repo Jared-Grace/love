@@ -144,7 +144,7 @@ export function bible_glyph_chapter_lam01() {
           "deserted;",
           "her",
           "$priest",
-          "groan,",
+          "$face_exhaling+voice+doing,",
           "her",
           "maidens",
           "grieve,",
