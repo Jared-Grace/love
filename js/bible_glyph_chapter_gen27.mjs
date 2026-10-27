@@ -718,7 +718,7 @@ export function bible_glyph_chapter_gen27() {
           "$speech",
           "to",
           "him,",
-          '"Please',
+          '"$pleading',
           "come",
           "near",
           "and",
