@@ -62,7 +62,7 @@ export function bible_glyph_chapter_isa43() {
           "through",
           "the",
           "$water,",
-          "I",
+          "$me",
           "will",
           "be",
           "with",
