@@ -136,7 +136,7 @@ export function bible_glyph_chapter_exo17() {
           "$family?",
           "A",
           "little",
-          "more",
+          "$repeat",
           "and",
           "they",
           "will",
