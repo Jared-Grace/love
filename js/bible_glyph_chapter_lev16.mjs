@@ -279,7 +279,7 @@ export function bible_glyph_chapter_lev16() {
           "shall",
           "$magnet+doing",
           "the",
-          "goat",
+          "$goat+man_beard",
           "$walking+pointing_up",
           "by",
           "lot",
