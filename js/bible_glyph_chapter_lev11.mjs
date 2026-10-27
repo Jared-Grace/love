@@ -339,7 +339,7 @@ export function bible_glyph_chapter_lev11() {
           "you",
           "are",
           "to",
-          "detest",
+          "$nauseated_face+no_entry+doing",
           "the",
           "following",
           "$tray_out",
