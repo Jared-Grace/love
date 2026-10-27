@@ -593,7 +593,7 @@ export function bible_glyph_chapter_ezk11() {
           "it,",
           "they",
           "will",
-          "remove",
+          "$away+doing",
           "$tray_out",
           "it",
           "all",
