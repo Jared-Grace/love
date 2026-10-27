@@ -726,7 +726,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "Moreover,",
           "the",
-          "seven",
+          "$seven",
           "thin,",
           "$thumbs_down",
           "cows",
