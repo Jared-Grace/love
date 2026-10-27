@@ -164,7 +164,7 @@ export function bible_glyph_chapter_lev10() {
           "Then",
           "$fishing_pole+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Aaron",
           "and",
           "$son",
