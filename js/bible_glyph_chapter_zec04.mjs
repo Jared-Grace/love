@@ -307,7 +307,7 @@ export function bible_glyph_chapter_zec04() {
           "are",
           "the",
           "$two",
-          "olive",
+          "$olive",
           "trees",
           "on",
           "the",
