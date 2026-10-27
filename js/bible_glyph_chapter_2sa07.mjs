@@ -596,7 +596,7 @@ export function bible_glyph_chapter_2sa07() {
           "this",
           "was",
           "a",
-          "small",
+          "$baby+down_arrow+doing",
           "thing",
           "in",
           "Your",
