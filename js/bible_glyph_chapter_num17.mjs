@@ -122,7 +122,7 @@ export function bible_glyph_chapter_num17() {
           "the",
           "$man_beard",
           "I",
-          "choose",
+          "$check_box",
           "will",
           "sprout,",
           "and",
