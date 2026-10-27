@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_1ki20() {
           "each",
           "other",
           "for",
-          "seven",
+          "$seven",
           "$sun,",
           "and",
           "on",
