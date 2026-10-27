@@ -670,7 +670,7 @@ export function bible_glyph_chapter_num23() {
           "$hand+foot",
           "and",
           "$wrestling+heart_on_fire,",
-          "What",
+          "$flashlight+question",
           "great",
           "things",
           "$heart_on_fire",
