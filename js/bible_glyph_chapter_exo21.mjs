@@ -981,7 +981,7 @@ export function bible_glyph_chapter_exo21() {
           "$silver",
           "to",
           "its",
-          "owner,",
+          "$key,",
           "and",
           "the",
           "$skull+doing",
