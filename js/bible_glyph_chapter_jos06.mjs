@@ -152,7 +152,7 @@ export function bible_glyph_chapter_jos06() {
           "$public_address.",
           "Then",
           "the",
-          "wall",
+          "$brick+shield",
           "of",
           "the",
           "$city",
