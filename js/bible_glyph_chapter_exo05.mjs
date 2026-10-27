@@ -221,7 +221,7 @@ export function bible_glyph_chapter_exo05() {
           "$white_circle+brick,",
           "as",
           "before.",
-          "They",
+          "$pointing_back",
           "must",
           "$walking",
           "and",
