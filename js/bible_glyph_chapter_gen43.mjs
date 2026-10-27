@@ -956,7 +956,7 @@ export function bible_glyph_chapter_gen43() {
           "for",
           "somewhere",
           "to",
-          "weep.",
+          "$loudly_crying.",
           "He",
           "$footprints",
           "a",
