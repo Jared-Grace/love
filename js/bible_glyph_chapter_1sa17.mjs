@@ -1234,7 +1234,7 @@ export function bible_glyph_chapter_1sa17() {
           "them",
           "in",
           "the",
-          "pouch",
+          "$backpack+sheaf_of_rice",
           "of",
           "his",
           "$person+sheep",
