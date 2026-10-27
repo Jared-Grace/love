@@ -190,7 +190,7 @@ export function bible_glyph_chapter_gen45() {
           "$repeat",
           "years",
           "$dotted_line_face",
-          "plowing",
+          "$farmer+ox",
           "or",
           "harvesting.",
         ],
