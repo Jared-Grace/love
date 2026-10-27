@@ -191,7 +191,7 @@ export function bible_glyph_chapter_ecc03() {
           "to",
           "hate,",
           "a",
-          "time",
+          "$clock",
           "for",
           "war",
           "and",
