@@ -895,7 +895,7 @@ export function bible_glyph_chapter_deu29() {
           "$throwing",
           "them",
           "into",
-          "another",
+          "$plus+one",
           "$earth,",
           "where",
           "they",
