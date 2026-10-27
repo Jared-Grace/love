@@ -363,7 +363,7 @@ export function bible_glyph_chapter_2ki05() {
           "$bathtub+doing",
           "yourself",
           "$seven",
-          "times",
+          "$drum",
           "in",
           "the",
           "$pointing_down+proper_name,",
