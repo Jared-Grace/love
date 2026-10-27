@@ -406,7 +406,7 @@ export function bible_glyph_chapter_deu14() {
           "to",
           "$eating",
           "any",
-          "carcass;",
+          "$skull+bone;",
           "you",
           "may",
           "$hands_giving",
