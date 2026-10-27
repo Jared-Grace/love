@@ -177,7 +177,7 @@ export function bible_glyph_chapter_1ch29() {
           "$flying_disc",
           "of",
           "refined",
-          "silver,",
+          "$silver,",
           "to",
           "overlay",
           "the",
