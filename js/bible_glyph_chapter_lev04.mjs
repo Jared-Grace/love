@@ -347,7 +347,7 @@ export function bible_glyph_chapter_lev04() {
           "$traffic_light",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "$wrestling+heart_on_fire",
           "strays",
