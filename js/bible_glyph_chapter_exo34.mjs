@@ -977,7 +977,7 @@ export function bible_glyph_chapter_exo34() {
           "Israel",
           "$eye",
           "$fishing_pole+proper_name,",
-          "behold,",
+          "$exclamation,",
           "his",
           "face",
           "was",
