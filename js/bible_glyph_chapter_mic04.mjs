@@ -414,7 +414,7 @@ export function bible_glyph_chapter_mic04() {
         verse_number: 11,
         words: [
           "But",
-          "now",
+          "$watch",
           "many",
           "$map",
           "have",
