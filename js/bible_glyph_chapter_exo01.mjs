@@ -465,7 +465,7 @@ export function bible_glyph_chapter_exo01() {
           "$pointing",
           "the",
           "midwives",
-          "feared",
+          "$fear+doing",
           "$heart_on_fire,",
           "He",
           "gave",
