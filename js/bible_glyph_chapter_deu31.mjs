@@ -373,7 +373,7 @@ export function bible_glyph_chapter_deu31() {
           "are",
           "to",
           "read",
-          "this",
+          "$flashlight",
           "$scroll",
           "in",
           "the",
