@@ -69,7 +69,7 @@ export function bible_glyph_chapter_zec03() {
           "$flashlight",
           "man",
           "a",
-          "firebrand",
+          "$wood+fire",
           "snatched",
           "from",
           "the",
