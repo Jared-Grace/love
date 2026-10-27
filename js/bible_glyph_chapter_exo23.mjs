@@ -871,7 +871,7 @@ export function bible_glyph_chapter_exo23() {
           "ahead",
           "of",
           "you,",
-          "until",
+          "$finish",
           "you",
           "become",
           "fruitful",
