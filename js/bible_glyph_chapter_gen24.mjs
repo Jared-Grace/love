@@ -1176,7 +1176,7 @@ export function bible_glyph_chapter_gen24() {
           "me,",
           "The",
           "$i_am,",
-          "before",
+          "$face",
           "whom",
           "I",
           "have",
