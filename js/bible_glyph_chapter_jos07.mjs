@@ -1040,7 +1040,7 @@ export function bible_glyph_chapter_jos07() {
           "of",
           "$proper_name$Achor",
           "to",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
