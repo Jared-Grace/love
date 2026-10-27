@@ -618,7 +618,7 @@ export function bible_glyph_chapter_jdg04() {
           "gave",
           "him",
           "a",
-          "drink,",
+          "$cup+hands_giving,",
           "and",
           "covered",
           "him",
