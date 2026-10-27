@@ -302,7 +302,7 @@ export function bible_glyph_chapter_dan12() {
           "$speech,",
           "My",
           "$crown,",
-          "what",
+          "$flashlight+question",
           "will",
           "be",
           "the",
