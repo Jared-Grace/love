@@ -746,7 +746,7 @@ export function bible_glyph_chapter_lev13() {
         verse_number: 23,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "the",
           "spot",
           "remains",
