@@ -122,7 +122,7 @@ export function bible_glyph_chapter_exo10() {
           "long",
           "will",
           "you",
-          "refuse",
+          "$person_gesturing_no+doing",
           "to",
           "humble",
           "yourself",
