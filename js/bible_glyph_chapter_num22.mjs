@@ -456,7 +456,7 @@ export function bible_glyph_chapter_num22() {
           "and",
           "$speech,",
           "$proper_name$Balaam",
-          "refused",
+          "$person_gesturing_no+doing",
           "to",
           "$walking",
           "with",
