@@ -704,7 +704,7 @@ export function bible_glyph_chapter_exo40() {
           "He",
           "placed",
           "the",
-          "basin",
+          "$bucket+soap",
           "between",
           "the",
           "Tent",
