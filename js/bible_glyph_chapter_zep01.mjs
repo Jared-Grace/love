@@ -232,7 +232,7 @@ export function bible_glyph_chapter_zep01() {
           "the",
           "$i_am",
           "is",
-          "near.",
+          "$magnet.",
           "Indeed,",
           "the",
           "$i_am",
