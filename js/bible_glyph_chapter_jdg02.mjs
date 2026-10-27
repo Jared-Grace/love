@@ -751,7 +751,7 @@ export function bible_glyph_chapter_jdg02() {
           "way",
           "I",
           "will",
-          "test",
+          "$test_tube",
           "whether",
           "or",
           "$no_entry",
