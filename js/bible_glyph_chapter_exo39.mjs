@@ -250,7 +250,7 @@ export function bible_glyph_chapter_exo39() {
           "long",
           "and",
           "a",
-          "span",
+          "$hand_with_fingers_splayed+straight_ruler",
           "wide.",
         ],
       },
