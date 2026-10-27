@@ -268,7 +268,7 @@ export function bible_glyph_chapter_jos01() {
           "careful",
           "to",
           "$hammer+doing",
-          "everything",
+          "$all",
           "written",
           "in",
           "it.",
