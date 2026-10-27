@@ -354,7 +354,7 @@ export function bible_glyph_chapter_zep01() {
           "will",
           "be",
           "silenced;",
-          "all",
+          "$all",
           "who",
           "weigh",
           "out",
