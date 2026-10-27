@@ -895,7 +895,7 @@ export function bible_glyph_chapter_jdg06() {
           "$tree",
           "of",
           "the",
-          "Asherah",
+          "$wood+imp",
           "pole",
           "you",
           "cut",
