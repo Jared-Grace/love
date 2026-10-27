@@ -462,7 +462,7 @@ export function bible_glyph_chapter_jos06() {
           "$around+doing",
           "the",
           "$city",
-          "once",
+          "$drum",
           "and",
           "$turn_back",
           "to",
