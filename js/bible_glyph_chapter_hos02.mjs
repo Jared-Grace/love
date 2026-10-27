@@ -114,7 +114,7 @@ export function bible_glyph_chapter_hos02() {
           "will",
           "have",
           "$no_entry",
-          "compassion",
+          "$hugging_face+doing",
           "on",
           "her",
           "$son,",
