@@ -288,7 +288,7 @@ export function bible_glyph_chapter_1sa24() {
           "behind",
           "him,",
           "$two_hearts+proper_name",
-          "bowed",
+          "$bowing+down_arrow+doing",
           "facedown",
           "to",
           "the",
