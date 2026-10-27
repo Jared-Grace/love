@@ -244,7 +244,7 @@ export function bible_glyph_chapter_gen07() {
           "to",
           "enter",
           "the",
-          "ark,",
+          "$package,",
           "male",
           "and",
           "female,",
