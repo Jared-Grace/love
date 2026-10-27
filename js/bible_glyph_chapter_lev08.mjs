@@ -714,7 +714,7 @@ export function bible_glyph_chapter_lev08() {
           "a",
           "wave",
           "offering",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
