@@ -532,7 +532,7 @@ export function bible_glyph_chapter_job19() {
           "$speech,",
           "Let",
           "us",
-          "persecute",
+          "$running+toward",
           "him,",
           "since",
           "the",
