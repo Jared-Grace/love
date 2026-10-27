@@ -355,7 +355,7 @@ export function bible_glyph_chapter_gen24() {
           "it",
           "was",
           "toward",
-          "evening,",
+          "$sunset,",
           "at",
           "the",
           "time",
