@@ -785,7 +785,7 @@ export function bible_glyph_chapter_1ki17() {
           "$i_am",
           "from",
           "your",
-          "mouth",
+          "$face_with_open_mouth",
           "is",
           "$check.",
         ],
