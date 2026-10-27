@@ -159,7 +159,7 @@ export function bible_glyph_chapter_gen26() {
       {
         verse_number: 5,
         words: [
-          "because",
+          "$foot+end_arrow+manner",
           "$father+map",
           "$ear",
           "my",
