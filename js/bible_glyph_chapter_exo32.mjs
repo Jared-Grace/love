@@ -29,7 +29,7 @@ export function bible_glyph_chapter_exo32() {
           "$mountain,",
           "the",
           "$family",
-          "gathered",
+          "$church+doing",
           "around",
           "$proper_name$Aaron",
           "and",
