@@ -268,7 +268,7 @@ export function bible_glyph_chapter_num22() {
           "Spend",
           "the",
           "$night",
-          "here,",
+          "$flashlight+round_pushpin,",
           "and",
           "I",
           "will",
