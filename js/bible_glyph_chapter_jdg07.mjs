@@ -966,7 +966,7 @@ export function bible_glyph_chapter_jdg07() {
           "$proper_name$Oreb",
           "and",
           "$wolf+proper_name",
-          "to",
+          "$toward",
           "$proper_name$Gideon",
           "on",
           "the",
