@@ -267,7 +267,7 @@ export function bible_glyph_chapter_exo07() {
           "and",
           "$proper_name$Aaron",
           "$footprints",
-          "to",
+          "$toward",
           "$house+proper_name",
           "and",
           "$hammer+doing",
