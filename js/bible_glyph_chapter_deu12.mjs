@@ -76,7 +76,7 @@ export function bible_glyph_chapter_deu12() {
           "and",
           "under",
           "every",
-          "green",
+          "$tree+leaf+describing",
           "$tree.",
         ],
       },
