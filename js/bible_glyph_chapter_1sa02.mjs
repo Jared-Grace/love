@@ -1080,7 +1080,7 @@ export function bible_glyph_chapter_1sa02() {
           "distress",
           "in",
           "My",
-          "dwelling",
+          "$house+bed",
           "place.",
           "Despite",
           "all",
