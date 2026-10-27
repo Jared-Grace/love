@@ -307,7 +307,7 @@ export function bible_glyph_chapter_mic05() {
           "flocks",
           "of",
           "$sheep,",
-          "which",
+          "$back+flashlight",
           "as",
           "it",
           "passes",
