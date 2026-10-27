@@ -480,7 +480,7 @@ export function bible_glyph_chapter_deu28() {
           "do",
           "not",
           "$walking",
-          "after",
+          "$next_track",
           "other",
           "$moai",
           "to",
