@@ -67,7 +67,7 @@ export function bible_glyph_chapter_2ki01() {
           "will",
           "$sprout+doing",
           "from",
-          "this",
+          "$flashlight",
           "$thermometer_face+thing.",
         ],
       },
