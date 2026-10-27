@@ -74,7 +74,7 @@ export function bible_glyph_chapter_nam01() {
           "to",
           "$nose+fire",
           "and",
-          "great",
+          "$top",
           "in",
           "$lightning;",
           "the",
