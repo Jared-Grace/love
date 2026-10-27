@@ -1381,7 +1381,7 @@ export function bible_glyph_chapter_deu28() {
         verse_number: 45,
         words: [
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$balloon+speech",
           "will",
           "$footprints",
