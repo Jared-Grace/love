@@ -792,7 +792,7 @@ export function bible_glyph_chapter_exo21() {
           "eaten.",
           "But",
           "the",
-          "owner",
+          "$key",
           "of",
           "the",
           "$ox",
