@@ -658,7 +658,7 @@ export function bible_glyph_chapter_gen09() {
         verse_number: 24,
         words: [
           "When",
-          "Noah",
+          "$seat+proper_name",
           "$sleeping_face+up_arrow+doing",
           "from",
           "his",
