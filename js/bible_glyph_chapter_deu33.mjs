@@ -288,7 +288,7 @@ export function bible_glyph_chapter_deu33() {
           "$wrestling+heart_on_fire.",
           "He",
           "will",
-          "set",
+          "$palm_down",
           "incense",
           "before",
           "You",
