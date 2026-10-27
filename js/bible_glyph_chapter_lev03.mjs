@@ -183,7 +183,7 @@ export function bible_glyph_chapter_lev03() {
           "a",
           "male",
           "$shuffle",
-          "female",
+          "$female_sign",
           "without",
           "blemish.",
         ],
