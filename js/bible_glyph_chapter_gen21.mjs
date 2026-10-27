@@ -277,7 +277,7 @@ export function bible_glyph_chapter_gen21() {
           "$no_entry",
           "be",
           "distressed",
-          "about",
+          "$pointing_up",
           "the",
           "boy",
           "and",
