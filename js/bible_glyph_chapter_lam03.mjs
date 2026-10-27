@@ -824,7 +824,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 47,
         words: [
-          "Panic",
+          "$fearful_face",
           "and",
           "pitfall",
           "have",
