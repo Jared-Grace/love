@@ -218,7 +218,7 @@ export function bible_glyph_chapter_isa35() {
         verse_number: 8,
         words: [
           "And",
-          "there",
+          "$telescope",
           "will",
           "be",
           "a",
