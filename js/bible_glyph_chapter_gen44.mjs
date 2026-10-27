@@ -562,7 +562,7 @@ export function bible_glyph_chapter_gen44() {
           "have",
           "a",
           "$father",
-          "or",
+          "$shuffle",
           "a",
           "$brother?",
         ],
