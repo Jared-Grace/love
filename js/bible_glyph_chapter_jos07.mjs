@@ -482,7 +482,7 @@ export function bible_glyph_chapter_jos07() {
           "with",
           "you",
           "any",
-          "longer",
+          "$plus+doing",
           "if",
           "you",
           "do",
