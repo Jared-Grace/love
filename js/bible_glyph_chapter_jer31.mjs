@@ -237,7 +237,7 @@ export function bible_glyph_chapter_jer31() {
           "the",
           "$compass+up_arrow",
           "and",
-          "gather",
+          "$tray_in+doing",
           "them",
           "from",
           "the",
