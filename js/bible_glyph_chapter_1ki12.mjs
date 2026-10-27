@@ -660,7 +660,7 @@ export function bible_glyph_chapter_1ki12() {
           "they",
           "summoned",
           "him",
-          "to",
+          "$toward",
           "the",
           "assembly",
           "and",
