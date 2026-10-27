@@ -344,7 +344,7 @@ export function bible_glyph_chapter_amo05() {
           "your",
           "transgressions",
           "are",
-          "many",
+          "$multiply",
           "and",
           "your",
           "$bow",
