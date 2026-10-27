@@ -378,7 +378,7 @@ export function bible_glyph_chapter_gen07() {
           "wild",
           "$sprout",
           "and",
-          "livestock,",
+          "$paw_prints,",
           "every",
           "crawling",
           "creature,",
