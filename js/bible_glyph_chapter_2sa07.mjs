@@ -608,7 +608,7 @@ export function bible_glyph_chapter_2sa07() {
           "have",
           "also",
           "$mouth",
-          "about",
+          "$toward",
           "the",
           "future",
           "of",
