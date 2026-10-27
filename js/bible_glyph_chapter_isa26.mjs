@@ -353,7 +353,7 @@ export function bible_glyph_chapter_isa26() {
           "but",
           "Your",
           "$name_tag",
-          "alone",
+          "$one+person",
           "do",
           "we",
           "confess.",
