@@ -285,7 +285,7 @@ export function bible_glyph_chapter_exo06() {
           "$fishing_pole+proper_name",
           "$mouth",
           "this",
-          "to",
+          "$toward",
           "the",
           "$son",
           "of",
