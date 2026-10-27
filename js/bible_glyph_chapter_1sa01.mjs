@@ -116,7 +116,7 @@ export function bible_glyph_chapter_1sa01() {
           "whenever",
           "the",
           "$sun",
-          "came",
+          "$link",
           "for",
           "$proper_name$Elkanah",
           "to",
