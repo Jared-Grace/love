@@ -323,7 +323,7 @@ export function bible_glyph_chapter_lev22() {
           "if",
           "a",
           "$priest",
-          "buys",
+          "$coin+hand_receiving",
           "a",
           "$person_other",
           "with",
