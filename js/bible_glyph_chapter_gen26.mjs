@@ -592,7 +592,7 @@ export function bible_glyph_chapter_gen26() {
           "the",
           "$well",
           "$proper_name$Esek,",
-          "because",
+          "$pointing",
           "they",
           "contended",
           "with",
