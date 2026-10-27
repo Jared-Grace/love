@@ -618,7 +618,7 @@ export function bible_glyph_chapter_2ki22() {
           "burned",
           "$incense+doing",
           "to",
-          "other",
+          "$plus+one",
           "$moai,",
           "that",
           "they",
