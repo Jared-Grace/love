@@ -276,7 +276,7 @@ export function bible_glyph_chapter_jer01() {
           "uproot",
           "and",
           "tear",
-          "down,",
+          "$wall+down_arrow+doing,",
           "to",
           "destroy",
           "and",
