@@ -554,7 +554,7 @@ export function bible_glyph_chapter_gen18() {
           "after",
           "him",
           "to",
-          "keep",
+          "$guard",
           "the",
           "$road",
           "of",
