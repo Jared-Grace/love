@@ -755,7 +755,7 @@ export function bible_glyph_chapter_lev08() {
           "also",
           "$hand_receiving",
           "the",
-          "breast",
+          "$heart_organ+meat",
           "and",
           "waved",
           "it",
