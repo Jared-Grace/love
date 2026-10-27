@@ -20,7 +20,7 @@ export function bible_glyph_chapter_1ki21() {
           "Some",
           "time",
           "after",
-          "these",
+          "$flashlight+flashlight",
           "$speech,",
           "$proper_name$Naboth",
           "the",
