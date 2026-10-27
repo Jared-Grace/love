@@ -292,7 +292,7 @@ export function bible_glyph_chapter_lev14() {
           "he",
           "will",
           "be",
-          "clean.",
+          "$soap+doing.",
         ],
       },
       {
