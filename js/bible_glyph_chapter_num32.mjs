@@ -306,7 +306,7 @@ export function bible_glyph_chapter_num32() {
           "out",
           "of",
           "$clamp+proper_name,",
-          "twenty",
+          "$two+zero",
           "$son",
           "of",
           "years",
