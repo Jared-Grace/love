@@ -831,7 +831,7 @@ export function bible_glyph_chapter_lam03() {
           "come",
           "upon",
           "us,",
-          "devastation",
+          "$wind+derelict_house+thing",
           "and",
           "destruction.",
         ],
