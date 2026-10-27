@@ -238,7 +238,7 @@ export function bible_glyph_chapter_psa027() {
           "$speech,",
           "$magnifying_glass",
           "His",
-          "face.",
+          "$face.",
           "Your",
           "face,",
           "O",
