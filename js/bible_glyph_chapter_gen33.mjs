@@ -82,7 +82,7 @@ export function bible_glyph_chapter_gen33() {
           "to",
           "the",
           "$earth",
-          "seven",
+          "$seven",
           "times,",
           "until",
           "he",
