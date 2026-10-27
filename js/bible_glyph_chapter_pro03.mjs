@@ -84,7 +84,7 @@ export function bible_glyph_chapter_pro03() {
           "you",
           "will",
           "$magnifying_glass+exclamation",
-          "favor",
+          "$heart_orange",
           "and",
           "high",
           "regard",
