@@ -801,7 +801,7 @@ export function bible_glyph_chapter_lev07() {
           "$hands_giving",
           "the",
           "right",
-          "thigh",
+          "$leg",
           "$priest",
           "as",
           "a",
