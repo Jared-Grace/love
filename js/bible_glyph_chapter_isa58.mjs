@@ -235,7 +235,7 @@ export function bible_glyph_chapter_isa58() {
           "cords",
           "of",
           "the",
-          "yoke,",
+          "$cow_face+wood,",
           "to",
           "set",
           "the",
