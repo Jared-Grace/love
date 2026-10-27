@@ -1403,7 +1403,7 @@ export function bible_glyph_chapter_num16() {
           "atonement",
           "for",
           "them,",
-          "because",
+          "$pointing",
           "wrath",
           "has",
           "$walking+tray_out",
