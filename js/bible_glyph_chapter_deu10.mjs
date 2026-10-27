@@ -110,7 +110,7 @@ export function bible_glyph_chapter_deu10() {
           "$mountain",
           "with",
           "the",
-          "two",
+          "$two",
           "tablets",
           "in",
           "my",
