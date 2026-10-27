@@ -457,7 +457,7 @@ export function bible_glyph_chapter_lev17() {
           "any",
           "$foreigner",
           "$luggage",
-          "among",
+          "$radio_button",
           "them,",
           "hunts",
           "down",
