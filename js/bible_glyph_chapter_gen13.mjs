@@ -404,7 +404,7 @@ export function bible_glyph_chapter_gen13() {
           "the",
           "$place",
           "where",
-          "you",
+          "$you",
           "are,",
           "north",
           "and",
