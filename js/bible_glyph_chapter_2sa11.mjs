@@ -417,7 +417,7 @@ export function bible_glyph_chapter_2sa11() {
         words: [
           "$two_hearts+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Uriah,",
           "Stay",
           "here",
