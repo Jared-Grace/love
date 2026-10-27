@@ -811,7 +811,7 @@ export function bible_glyph_chapter_exo06() {
           "before",
           "$i_am,",
           "$exclamation",
-          "I",
+          "$me",
           "am",
           "uncircumcised",
           "of",
