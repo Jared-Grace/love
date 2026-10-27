@@ -862,7 +862,7 @@ export function bible_glyph_chapter_exo40() {
           "from",
           "above",
           "the",
-          "tabernacle,",
+          "$tent+house,",
           "the",
           "$son",
           "of",
