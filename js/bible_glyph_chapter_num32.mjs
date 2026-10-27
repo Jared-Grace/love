@@ -542,7 +542,7 @@ export function bible_glyph_chapter_num32() {
           "$turn_back",
           "$toward",
           "$house",
-          "until",
+          "$finish",
           "every",
           "$man_beard",
           "of",
