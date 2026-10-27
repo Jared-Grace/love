@@ -662,7 +662,7 @@ export function bible_glyph_chapter_deu10() {
           "your",
           "praise,",
           "and",
-          "He",
+          "$pointing_back",
           "is",
           "your",
           "$heart_on_fire,",
