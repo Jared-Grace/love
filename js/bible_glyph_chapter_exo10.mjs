@@ -871,7 +871,7 @@ export function bible_glyph_chapter_exo10() {
           "us.",
           "$no_entry",
           "a",
-          "hoof",
+          "$cow_face+foot",
           "will",
           "be",
           "left",
