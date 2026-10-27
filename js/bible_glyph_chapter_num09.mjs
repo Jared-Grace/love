@@ -608,7 +608,7 @@ export function bible_glyph_chapter_num09() {
           "when",
           "the",
           "$cloud",
-          "lingered",
+          "$straight_ruler+clock+doing",
           "over",
           "the",
           "tabernacle",
