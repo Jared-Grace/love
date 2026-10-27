@@ -426,7 +426,7 @@ export function bible_glyph_chapter_deu14() {
           "$shuffle",
           "you",
           "may",
-          "sell",
+          "$coin+hands_giving",
           "it",
           "to",
           "a",
