@@ -1085,7 +1085,7 @@ export function bible_glyph_chapter_jer32() {
           "it",
           "was",
           "built",
-          "until",
+          "$finish",
           "now.",
           "Therefore",
           "I",
