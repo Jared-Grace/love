@@ -55,7 +55,7 @@ export function bible_glyph_chapter_gen21() {
           "at",
           "the",
           "very",
-          "time",
+          "$alarm_clock",
           "$heart_on_fire",
           "had",
           "$mouth.",
