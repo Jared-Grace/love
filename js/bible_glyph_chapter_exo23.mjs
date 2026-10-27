@@ -865,7 +865,7 @@ export function bible_glyph_chapter_exo23() {
           "little",
           "I",
           "will",
-          "drive",
+          "$door+leftwards_pushing_hand+doing",
           "them",
           "out",
           "ahead",
