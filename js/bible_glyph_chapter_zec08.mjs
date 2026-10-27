@@ -212,7 +212,7 @@ export function bible_glyph_chapter_zec08() {
           "$speech:",
           "I",
           "will",
-          "save",
+          "$rescue",
           "My",
           "$family",
           "from",
