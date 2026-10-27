@@ -508,7 +508,7 @@ export function bible_glyph_chapter_hab02() {
         words: [
           "$pointing",
           "your",
-          "violence",
+          "$boxing_glove",
           "against",
           "$proper_name$Lebanon",
           "will",
