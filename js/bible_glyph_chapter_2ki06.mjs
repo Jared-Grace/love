@@ -393,7 +393,7 @@ export function bible_glyph_chapter_2ki06() {
           "$walking",
           "and",
           "$eye",
-          "where",
+          "$question+place",
           "he",
           "is,",
           "that",
