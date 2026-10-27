@@ -240,7 +240,7 @@ export function bible_glyph_chapter_num06() {
         words: [
           "$pointing",
           "someone",
-          "suddenly",
+          "$eye+lightning",
           "$skull+doing",
           "in",
           "his",
