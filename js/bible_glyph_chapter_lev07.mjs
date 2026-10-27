@@ -435,7 +435,7 @@ export function bible_glyph_chapter_lev07() {
           "any",
           "$meat",
           "$sacrifice",
-          "remaining",
+          "$takeout_box+doing",
           "until",
           "the",
           "third",
