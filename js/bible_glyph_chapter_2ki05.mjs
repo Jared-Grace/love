@@ -1018,7 +1018,7 @@ export function bible_glyph_chapter_2ki05() {
           "$silver",
           "and",
           "clothing,",
-          "olive",
+          "$olive",
           "groves",
           "and",
           "vineyards,",
