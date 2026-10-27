@@ -45,7 +45,7 @@ export function bible_glyph_chapter_1ki21() {
         verse_number: 2,
         words: [
           "So",
-          "Ahab",
+          "$brother+father+proper_name",
           "$mouth",
           "to",
           "$proper_name$Naboth",
