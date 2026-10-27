@@ -519,7 +519,7 @@ export function bible_glyph_chapter_num22() {
           "you",
           "$double_exclamation,",
           "and",
-          "whatever",
+          "$all",
           "you",
           "$speech",
           "I",
