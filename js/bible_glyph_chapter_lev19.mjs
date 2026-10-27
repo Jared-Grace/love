@@ -240,7 +240,7 @@ export function bible_glyph_chapter_lev19() {
           "its",
           "$grapes+one",
           "grapes.",
-          "Leave",
+          "$derelict_house+doing",
           "them",
           "for",
           "the",
