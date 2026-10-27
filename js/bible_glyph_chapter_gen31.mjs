@@ -323,7 +323,7 @@ export function bible_glyph_chapter_gen31() {
       {
         verse_number: 13,
         words: [
-          "I",
+          "$me",
           "am",
           "the",
           "$heart_on_fire",
