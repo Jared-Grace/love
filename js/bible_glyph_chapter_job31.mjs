@@ -336,7 +336,7 @@ export function bible_glyph_chapter_job31() {
           "desires",
           "of",
           "the",
-          "poor",
+          "$pinching_hand+person",
           "or",
           "allowed",
           "the",
