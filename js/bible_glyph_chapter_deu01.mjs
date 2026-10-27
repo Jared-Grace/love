@@ -89,7 +89,7 @@ export function bible_glyph_chapter_deu01() {
           "$son$s",
           "of",
           "Israel",
-          "all",
+          "$all",
           "that",
           "the",
           "$i_am",
