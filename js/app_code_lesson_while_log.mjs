@@ -5,8 +5,8 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
-import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
 import { js_keyword_while } from "./js_keyword_while.mjs";
+import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
@@ -22,8 +22,8 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_size } from "./list_size.mjs";
 import { multiply } from "./multiply.mjs";
-import { list_take } from "./list_take.mjs";
 import { subtract } from "./subtract.mjs";
+import { list_take } from "./list_take.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -39,7 +39,8 @@ export function app_code_lesson_while_log() {
   ("a console.log inside a while: let n = 1; while (n < 9) { console.log(n); n += 3; } writes out 1, 4 and 7, one under the other");
   ("The one new fact is that a line inside a while runs once for every time the while runs, so a console.log inside it writes out one line each time, and the runs can be counted from what is written out.");
   ("Asked for by the human 2026-10-09, to sit straight after While: seeing each run written out makes the repeating plain before any lesson asks for a total kept in the head.");
-  ("Each screen has one program from each of four counts of runs - one, two, three and four. None is left out, because a program that writes out nothing would show an empty answer.");
+  ("Each screen has one program from each of three counts of runs - one, two and three. None is left out, because a program that writes out nothing would show an empty answer.");
+  ("2026-10-27: no program runs more than three times, asked for by the human for now; the four-run group taken out, so a screen has three programs");
   ("Reading forwards, the wrong answers are the lines one run fewer, one run more, and every line written after n has changed rather than before; each once and never the answer.");
   ("Reading backwards, the wrong program is the same program compared against a number past where n ends, so it runs once more and writes out one line more.");
   ("The numbers are those of While, so n never lands exactly on the number it is compared against, except in the backwards wrong program.");
@@ -82,7 +83,7 @@ export function app_code_lesson_while_log() {
     return text;
   }
   function batch_get() {
-    "four programs, running one, two, three and four times";
+    "three programs, running one, two and three times";
     let groups = [
       [
         [3, 5, 4],
@@ -96,12 +97,8 @@ export function app_code_lesson_while_log() {
         [1, 9, 3],
         [2, 7, 2],
       ],
-      [
-        [1, 8, 2],
-        [2, 13, 3],
-      ],
     ];
-    let picked = list_shuffle_take(groups, 4);
+    let picked = list_shuffle_take(groups, 3);
     let triples = list_map(picked, list_random_item);
     function program_of(triple) {
       let item = list_get(triple, 0);

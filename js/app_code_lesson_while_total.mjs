@@ -4,8 +4,8 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
-import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
 import { js_keyword_while } from "./js_keyword_while.mjs";
+import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -39,7 +39,8 @@ export function app_code_lesson_while_total() {
   ("The one new fact is that a while can change two names each time it runs, so one name can count while the other adds up, and what is written out is the one that adds up.");
   ("Asked for by the human 2026-10-09, as the lesson after While counting down, on the road from while to for.");
   ("n goes up by 1 each run, so n always lands exactly on the number it is compared against, and the last check is the same number on both sides of <, which is false; the first box says so, since the lessons before kept n off that number.");
-  ("Each screen has four programs drawn from five counts of runs - none, one, two, three and four.");
+  ("Each screen has four programs, one from each of four counts of runs - none, one, two and three.");
+  ("2026-10-27: no program runs more than three times, asked for by the human for now; the four-run group taken out");
   ("Reading forwards, the wrong answers are the total one run fewer, the total one run more, and n where it ends, the name not written out; each once, never the answer, never below zero.");
   ("Reading backwards, the wrong program is the same program compared against one more, so it runs once more.");
   ("The writing is a first draft by Claude 2026-10-09.");
@@ -90,10 +91,6 @@ export function app_code_lesson_while_total() {
       [
         [1, 4],
         [2, 5],
-      ],
-      [
-        [1, 5],
-        [2, 6],
       ],
     ];
     let picked = list_shuffle_take(groups, 4);

@@ -24,7 +24,8 @@ export function app_code_lesson_while_down() {
   ("a while that counts down: let n = 10; while (n > 2) { n -= 3; } console.log(n); writes out 1");
   ("The one new fact is that a while works the same whichever way n moves: it asks, runs its lines while what it asks is true, and stops asking once it is false, here with n growing smaller and compared with greater than.");
   ("Asked for by the human 2026-10-09, as the lesson after While.");
-  ("Each screen has four programs drawn from five counts of runs - none, one, two, three and four - as in While.");
+  ("Each screen has four programs, one from each of four counts of runs - none, one, two and three - as in While.");
+  ("2026-10-27: no program runs more than three times, asked for by the human for now; the four-run group taken out");
   ("Reading forwards, the wrong answers are n after one run fewer, one run more, and where n starts, each once and never the answer, and never below zero or above where n starts, since n only shrinks and this course has not shown a number below zero.");
   ("Reading backwards, the wrong program is the same program compared against one less than the answer, so it runs once more.");
   ("The numbers are chosen so that n never lands exactly on the number it is compared against, except in the backwards wrong program.");
@@ -50,10 +51,6 @@ export function app_code_lesson_while_down() {
     [
       [10, 2, 3],
       [11, 3, 3],
-    ],
-    [
-      [9, 2, 2],
-      [14, 3, 3],
     ],
   ];
   function possible(start, value) {

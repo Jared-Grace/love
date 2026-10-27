@@ -22,7 +22,8 @@ export function app_code_lesson_while() {
   ("the first while: let n = 1; while (n < 9) { n += 3; } console.log(n); writes out 10, the same as if (n < 9) { n += 3; } written three times");
   ("The one new fact is that while asks again after its lines run, and keeps going until what it asks is false, so it does what the same if written over and over does, without the learner counting how many to write.");
   ("Asked for by the human 2026-10-09, as the lesson after The same if three times: the first box writes that program and this one side by side, so the two are seen to write out the same.");
-  ("Each screen has four programs drawn from five counts of runs - none, one, two, three and four - so a screen always asks one that runs more often than three ifs could.");
+  ("Each screen has four programs, one from each of four counts of runs - none, one, two and three.");
+  ("2026-10-27: no program runs more than three times, asked for by the human for now; the four-run group, which ran more often than three ifs could, taken out");
   ("Reading forwards, the wrong answers are n after one run fewer, one run more, and where n starts, each once and never the answer, so stopping a run early or late is offered, and so is reading while as never running.");
   ("Reading backwards, the wrong program is the same program compared against one more than the answer, so it runs once more and writes out the answer plus what is added.");
   ("The numbers are chosen so that n never lands exactly on the number it is compared against, except in the backwards wrong program, as in The same if twice.");
@@ -46,10 +47,6 @@ export function app_code_lesson_while() {
     [
       [1, 9, 3],
       [2, 7, 2],
-    ],
-    [
-      [1, 8, 2],
-      [2, 13, 3],
     ],
   ];
   function possible(start, value) {
