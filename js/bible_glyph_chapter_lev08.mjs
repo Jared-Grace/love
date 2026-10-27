@@ -678,7 +678,7 @@ export function bible_glyph_chapter_lev08() {
           "$lotion_bottle,",
           "and",
           "$one",
-          "wafer,",
+          "$flatbread+oil,",
           "and",
           "he",
           "placed",
