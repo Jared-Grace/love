@@ -250,7 +250,7 @@ export function bible_glyph_chapter_mic05() {
           "$multiply",
           "$family",
           "like",
-          "dew",
+          "$dew",
           "from",
           "the",
           "$i_am,",
