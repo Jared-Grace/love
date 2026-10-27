@@ -696,7 +696,7 @@ export function bible_glyph_chapter_1ki12() {
           "he",
           "mobilized",
           "the",
-          "whole",
+          "$all",
           "$house",
           "of",
           "$hands_raised+proper_name",
