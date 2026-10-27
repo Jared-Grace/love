@@ -968,7 +968,7 @@ export function bible_glyph_chapter_1sa20() {
           "let",
           "me",
           "go,",
-          "because",
+          "$pointing",
           "our",
           "clan",
           "is",
