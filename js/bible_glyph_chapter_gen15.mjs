@@ -139,7 +139,7 @@ export function bible_glyph_chapter_gen15() {
           "LORD",
           "took",
           "him",
-          "outside",
+          "$sun_behind_small_cloud",
           "and",
           "$speech,",
           "Now",
