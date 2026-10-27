@@ -1208,7 +1208,7 @@ export function bible_glyph_chapter_num22() {
           "an",
           "urgent",
           "summons?",
-          "Why",
+          "$flashlight+question",
           "did",
           "you",
           "$no_entry",
