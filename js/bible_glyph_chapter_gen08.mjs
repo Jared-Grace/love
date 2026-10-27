@@ -65,7 +65,7 @@ export function bible_glyph_chapter_gen08() {
           "closed,",
           "and",
           "the",
-          "rain",
+          "$rain+water_wave",
           "$tray_out",
           "the",
           "$sky",
