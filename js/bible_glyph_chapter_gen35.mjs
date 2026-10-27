@@ -210,7 +210,7 @@ export function bible_glyph_chapter_gen35() {
       {
         verse_number: 7,
         words: [
-          "There",
+          "$telescope",
           "he",
           "built",
           "an",
