@@ -690,7 +690,7 @@ export function bible_glyph_chapter_lev13() {
           "$priest",
           "$eye",
           "it,",
-          "if",
+          "$exclamation",
           "there",
           "is",
           "no",
