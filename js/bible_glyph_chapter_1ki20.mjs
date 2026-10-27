@@ -209,7 +209,7 @@ export function bible_glyph_chapter_1ki20() {
           "$king",
           "of",
           "$wrestling+heart_on_fire",
-          "summoned",
+          "$waving_hand",
           "all",
           "the",
           "elders",
