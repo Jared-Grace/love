@@ -540,7 +540,7 @@ export function bible_glyph_chapter_gen06() {
           "into",
           "the",
           "ark",
-          "two",
+          "$two",
           "of",
           "every",
           "$sprout",
