@@ -716,7 +716,7 @@ export function bible_glyph_chapter_gen30() {
           "him,",
           "You",
           "$lightbulb",
-          "how",
+          "$back+flashlight",
           "I",
           "have",
           "$kneeling+doing",
