@@ -905,7 +905,7 @@ export function bible_glyph_chapter_jer17() {
         verse_number: 27,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "you",
           "do",
           "$no_entry",
