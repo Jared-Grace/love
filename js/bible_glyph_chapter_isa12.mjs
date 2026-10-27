@@ -26,7 +26,7 @@ export function bible_glyph_chapter_isa12() {
           "You,",
           "O",
           "$i_am.",
-          "Although",
+          "$pointing",
           "You",
           "were",
           "angry",
