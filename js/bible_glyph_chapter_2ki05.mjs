@@ -31,7 +31,7 @@ export function bible_glyph_chapter_2ki05() {
           "in",
           "his",
           "$crown",
-          "sight",
+          "$face",
           "and",
           "highly",
           "regarded,",
