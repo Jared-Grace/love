@@ -176,7 +176,7 @@ export function bible_glyph_chapter_2ki06() {
           "$tree,",
           "$throwing",
           "it",
-          "there,",
+          "$telescope,",
           "and",
           "made",
           "the",
