@@ -257,7 +257,7 @@ export function bible_glyph_chapter_isa35() {
           "lion",
           "will",
           "be",
-          "there,",
+          "$telescope,",
           "and",
           "no",
           "vicious",
