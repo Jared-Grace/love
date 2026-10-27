@@ -390,7 +390,7 @@ export function bible_glyph_chapter_1sa02() {
           "a",
           "three-pronged",
           "meat",
-          "fork",
+          "$fork_and_knife",
           "while",
           "the",
           "$meat",
