@@ -196,7 +196,7 @@ export function bible_glyph_chapter_1sa15() {
           "$hammer+doing",
           "$gift",
           "to",
-          "all",
+          "$all",
           "the",
           "$son",
           "of",
