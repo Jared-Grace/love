@@ -295,7 +295,7 @@ export function bible_glyph_chapter_lev25() {
           "all",
           "its",
           "inhabitants.",
-          "It",
+          "$pointing_back",
           "shall",
           "be",
           "your",
