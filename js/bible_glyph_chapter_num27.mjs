@@ -183,7 +183,7 @@ export function bible_glyph_chapter_num27() {
           "certainly",
           "$hands_giving",
           "them",
-          "property",
+          "$hand+clamp+thing",
           "as",
           "an",
           "$inheritance",
