@@ -798,7 +798,7 @@ export function bible_glyph_chapter_1ki12() {
           "$no_entry",
           "to",
           "fight",
-          "against",
+          "$linked_paperclips",
           "your",
           "$brother,",
           "the",
