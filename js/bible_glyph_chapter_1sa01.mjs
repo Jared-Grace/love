@@ -657,7 +657,7 @@ export function bible_glyph_chapter_1sa01() {
           "to",
           "fulfill",
           "his",
-          "vow.",
+          "$saluting_face.",
         ],
       },
       {
