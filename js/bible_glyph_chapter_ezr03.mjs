@@ -246,7 +246,7 @@ export function bible_glyph_chapter_ezr03() {
           "and",
           "$cup_with_straw+thing",
           "and",
-          "oil",
+          "$lotion_bottle",
           "to",
           "the",
           "people",
