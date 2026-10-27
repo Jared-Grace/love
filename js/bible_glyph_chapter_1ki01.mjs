@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_1ki01() {
           "So",
           "they",
           "$footprints",
-          "before",
+          "$face",
           "the",
           "$king.",
         ],
