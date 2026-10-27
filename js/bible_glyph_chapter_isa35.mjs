@@ -272,7 +272,7 @@ export function bible_glyph_chapter_isa35() {
           "$no_entry",
           "be",
           "found",
-          "there,",
+          "$telescope,",
           "but",
           "the",
           "redeemed",
