@@ -373,7 +373,7 @@ export function bible_glyph_chapter_pro02() {
           "the",
           "$thumbs_up",
           "and",
-          "keep",
+          "$guard",
           "to",
           "the",
           "paths",
