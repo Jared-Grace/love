@@ -491,7 +491,7 @@ export function bible_glyph_chapter_exo18() {
       {
         verse_number: 16,
         words: [
-          "Whenever",
+          "$pointing",
           "they",
           "have",
           "a",
