@@ -284,7 +284,7 @@ export function bible_glyph_chapter_hos02() {
           "$wheat+barley",
           "in",
           "its",
-          "time",
+          "$clock",
           "and",
           "My",
           "new",
