@@ -907,7 +907,7 @@ export function bible_glyph_chapter_num14() {
           "in",
           "the",
           "census,",
-          "twenty",
+          "$two+zero",
           "years",
           "old",
           "or",
