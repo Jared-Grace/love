@@ -152,7 +152,7 @@ export function bible_glyph_chapter_lev21() {
           "$heart_on_fire,",
           "and",
           "$no_entry",
-          "profane",
+          "$sewing_needle",
           "the",
           "$name_tag",
           "of",
