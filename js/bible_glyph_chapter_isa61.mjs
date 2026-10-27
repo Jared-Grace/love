@@ -112,7 +112,7 @@ export function bible_glyph_chapter_isa61() {
           "a",
           "garment",
           "of",
-          "praise",
+          "$clapping_hands+thing",
           "for",
           "a",
           "$wind",
