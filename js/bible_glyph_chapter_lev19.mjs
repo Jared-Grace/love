@@ -485,7 +485,7 @@ export function bible_glyph_chapter_lev19() {
           "You",
           "shall",
           "$no_entry",
-          "crossbreed",
+          "$cow_face+bed+doing",
           "two",
           "different",
           "kinds",
