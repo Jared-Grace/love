@@ -1380,7 +1380,7 @@ export function bible_glyph_chapter_deu32() {
           "$earth",
           "of",
           "$proper_name$Canaan,",
-          "which",
+          "$back+flashlight",
           "I",
           "am",
           "$hands_giving",
