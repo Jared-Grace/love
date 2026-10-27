@@ -503,7 +503,7 @@ export function bible_glyph_chapter_num19() {
           "on",
           "it",
           "is",
-          "unclean.",
+          "$soap+no_entry.",
         ],
       },
       {
