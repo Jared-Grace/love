@@ -736,7 +736,7 @@ export function bible_glyph_chapter_1sa02() {
           "are",
           "you",
           "$hammer+doing",
-          "these",
+          "$flashlight+flashlight",
           "$speech?",
           "I",
           "$ear",
