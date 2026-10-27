@@ -195,7 +195,7 @@ export function bible_glyph_chapter_psa145() {
           "all,",
           "and",
           "His",
-          "compassion",
+          "$hugging_face",
           "rests",
           "on",
           "all",
