@@ -523,7 +523,7 @@ export function bible_glyph_chapter_exo10() {
           "had",
           "there",
           "been",
-          "so",
+          "$right_arrow",
           "$star+describing",
           "$locusts,",
           "and",
