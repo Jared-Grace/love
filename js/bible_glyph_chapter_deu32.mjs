@@ -1260,7 +1260,7 @@ export function bible_glyph_chapter_deu32() {
           "$all",
           "$flashlight+flashlight",
           "$speech",
-          "to",
+          "$toward",
           "$all",
           "$wrestling+heart_on_fire,",
         ],
