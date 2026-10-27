@@ -743,7 +743,7 @@ export function bible_glyph_chapter_num18() {
           "you",
           "have",
           "any",
-          "portion",
+          "$pizza",
           "among",
           "them.",
           "I",
