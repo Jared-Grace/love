@@ -235,7 +235,7 @@ export function bible_glyph_chapter_zec12() {
           "and",
           "on",
           "the",
-          "left,",
+          "$hand+away,",
           "while",
           "the",
           "people",
