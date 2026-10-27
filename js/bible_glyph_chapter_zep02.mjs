@@ -251,7 +251,7 @@ export function bible_glyph_chapter_zep02() {
           "$son",
           "of",
           "Ammon,",
-          "who",
+          "$back+flashlight",
           "have",
           "taunted",
           "My",
