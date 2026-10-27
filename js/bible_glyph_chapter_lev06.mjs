@@ -348,7 +348,7 @@ export function bible_glyph_chapter_lev06() {
           "shall",
           "be",
           "kept",
-          "burning",
+          "$fire+alarm_clock+doing",
           "on",
           "$altar",
           "$clock+infinity.",
