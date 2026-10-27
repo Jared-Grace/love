@@ -75,7 +75,7 @@ export function bible_glyph_chapter_job38() {
           "of",
           "the",
           "$earth?",
-          "Tell",
+          "$newspaper",
           "Me,",
           "if",
           "you",
