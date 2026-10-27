@@ -427,7 +427,7 @@ export function bible_glyph_chapter_gen15() {
           "In",
           "the",
           "fourth",
-          "generation",
+          "$dna",
           "your",
           "descendants",
           "will",
