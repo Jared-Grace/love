@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_jdg16() {
           "was",
           "$battery+describing",
           "of",
-          "men",
+          "$man_beard",
           "and",
           "$woman;",
           "$all",
