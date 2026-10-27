@@ -249,7 +249,7 @@ export function bible_glyph_chapter_2ki17() {
           "They",
           "had",
           "worshiped",
-          "other",
+          "$plus+one",
           "$moai,",
         ],
       },
