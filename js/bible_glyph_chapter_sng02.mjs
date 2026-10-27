@@ -20,7 +20,7 @@ export function bible_glyph_chapter_sng02() {
           "of",
           "$proper_name$Sharon,",
           "a",
-          "lily",
+          "$white_flower",
           "of",
           "the",
           "valleys.",
