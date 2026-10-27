@@ -85,7 +85,7 @@ export function bible_glyph_chapter_job23() {
           "answer",
           "and",
           "consider",
-          "what",
+          "$flashlight+question",
           "He",
           "would",
           "$speech.",
