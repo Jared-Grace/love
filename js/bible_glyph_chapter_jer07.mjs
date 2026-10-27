@@ -231,7 +231,7 @@ export function bible_glyph_chapter_jer07() {
           "you",
           "$ninja+doing",
           "and",
-          "murder,",
+          "$sword+coffin,",
           "commit",
           "adultery",
           "and",
