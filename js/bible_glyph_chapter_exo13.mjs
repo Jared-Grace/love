@@ -206,7 +206,7 @@ export function bible_glyph_chapter_exo13() {
           "anywhere",
           "within",
           "your",
-          "borders.",
+          "$passport_control.",
         ],
       },
       {
