@@ -229,7 +229,7 @@ export function bible_glyph_chapter_lev04() {
           "$heart_organ+two",
           "with",
           "the",
-          "fat",
+          "$bacon",
           "on",
           "them",
           "near",
