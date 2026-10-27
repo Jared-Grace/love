@@ -1461,7 +1461,7 @@ export function bible_glyph_chapter_lev13() {
           "$man_beard",
           "is",
           "diseased;",
-          "he",
+          "$pointing_back",
           "is",
           "unclean.",
           "The",
