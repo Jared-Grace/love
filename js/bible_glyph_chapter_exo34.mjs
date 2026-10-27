@@ -413,7 +413,7 @@ export function bible_glyph_chapter_exo34() {
           "they",
           "become",
           "a",
-          "snare",
+          "$snare",
           "in",
           "your",
           "midst.",
