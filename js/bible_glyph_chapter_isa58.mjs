@@ -240,7 +240,7 @@ export function bible_glyph_chapter_isa58() {
           "set",
           "the",
           "oppressed",
-          "free,",
+          "$broken_chain+person,",
           "and",
           "tear",
           "off",
