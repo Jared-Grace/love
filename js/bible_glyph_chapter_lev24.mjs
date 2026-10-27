@@ -270,7 +270,7 @@ export function bible_glyph_chapter_lev24() {
           "Israel,",
           "and",
           "a",
-          "fight",
+          "$boxing_glove+two+doing",
           "broke",
           "out",
           "in",
