@@ -134,7 +134,7 @@ export function bible_glyph_chapter_lev21() {
           "and",
           "$no_entry",
           "make",
-          "cuts",
+          "$razor+blood+thing",
           "in",
           "their",
           "$meat.",
