@@ -257,7 +257,7 @@ export function bible_glyph_chapter_lam01() {
           "When",
           "her",
           "$family",
-          "fell",
+          "$person+pointing_down",
           "into",
           "enemy",
           "$hand,",
