@@ -94,7 +94,7 @@ export function bible_glyph_chapter_mal04() {
           "calves",
           "from",
           "the",
-          "stall.",
+          "$house+cow_face.",
         ],
       },
       {
