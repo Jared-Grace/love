@@ -1687,7 +1687,7 @@ export function bible_glyph_chapter_1ki22() {
           "and",
           "$bowing",
           "him,",
-          "provoking",
+          "$face_steam+right_anger_bubble",
           "the",
           "$i_am,",
           "the",
