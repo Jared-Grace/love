@@ -680,7 +680,7 @@ export function bible_glyph_chapter_exo04() {
           "that",
           "I",
           "have",
-          "put",
+          "$palm_down",
           "in",
           "your",
           "$hand.",
