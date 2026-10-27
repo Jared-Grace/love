@@ -706,7 +706,7 @@ export function bible_glyph_chapter_zec14() {
           "the",
           "sprinkling",
           "bowls",
-          "before",
+          "$face",
           "the",
           "$altar.",
         ],
