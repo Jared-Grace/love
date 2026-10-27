@@ -1121,7 +1121,7 @@ export function bible_glyph_chapter_jer23() {
           "when",
           "$flashlight",
           "$family",
-          "or",
+          "$shuffle",
           "a",
           "$megaphone",
           "or",
