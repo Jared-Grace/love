@@ -871,7 +871,7 @@ export function bible_glyph_chapter_num35() {
           "generations",
           "to",
           "come,",
-          "wherever",
+          "$all",
           "you",
           "live.",
         ],
