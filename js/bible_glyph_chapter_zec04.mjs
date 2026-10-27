@@ -377,7 +377,7 @@ export function bible_glyph_chapter_zec04() {
           "$flashlight+flashlight",
           "are",
           "the",
-          "two",
+          "$two",
           "$son",
           "of",
           "the",
