@@ -708,7 +708,7 @@ export function bible_glyph_chapter_1ch29() {
           "them,",
           "and",
           "to",
-          "build",
+          "$brick",
           "the",
           "palace",
           "for",
