@@ -152,7 +152,7 @@ export function bible_glyph_chapter_isa06() {
           "a",
           "$family",
           "of",
-          "unclean",
+          "$soap+no_entry",
           "lips;",
           "for",
           "my",
