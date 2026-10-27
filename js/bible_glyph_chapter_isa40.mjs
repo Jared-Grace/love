@@ -749,7 +749,7 @@ export function bible_glyph_chapter_isa40() {
           "forth",
           "the",
           "starry",
-          "host",
+          "$military_helmet",
           "by",
           "$input_numbers;",
           "He",
