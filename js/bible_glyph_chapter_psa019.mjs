@@ -15,7 +15,7 @@ export function bible_glyph_chapter_psa019() {
         words: [
           "The",
           "$sky",
-          "declare",
+          "$abacus",
           "the",
           "$star",
           "of",
