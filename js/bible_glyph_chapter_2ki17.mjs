@@ -197,7 +197,7 @@ export function bible_glyph_chapter_2ki17() {
           "by",
           "the",
           "$proper_name$Habor",
-          "River",
+          "$water+national_park",
           "in",
           "$proper_name$Gozan,",
           "and",
