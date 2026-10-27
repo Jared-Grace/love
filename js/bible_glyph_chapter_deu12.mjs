@@ -688,7 +688,7 @@ export function bible_glyph_chapter_deu12() {
       {
         verse_number: 21,
         words: [
-          "If",
+          "$pointing",
           "the",
           "$place",
           "where",
