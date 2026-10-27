@@ -340,7 +340,7 @@ export function bible_glyph_chapter_exo15() {
           "them",
           "with",
           "Your",
-          "strength",
+          "$mechanical_arm",
           "to",
           "Your",
           "$sparkle+thing",
