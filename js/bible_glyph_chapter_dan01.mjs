@@ -461,7 +461,7 @@ export function bible_glyph_chapter_dan01() {
           "eating",
           "the",
           "$king",
-          "food.",
+          "$crown+bread.",
         ],
       },
       {
