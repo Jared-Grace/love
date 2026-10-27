@@ -344,7 +344,7 @@ export function bible_glyph_chapter_num21() {
           "in",
           "the",
           "$wilderness",
-          "opposite",
+          "$pointing_up",
           "$father+proper_name,",
           "to",
           "the",
