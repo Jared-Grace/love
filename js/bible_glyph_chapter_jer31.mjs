@@ -721,7 +721,7 @@ export function bible_glyph_chapter_jer31() {
           "$walking.",
           "$turn_back,",
           "O",
-          "Virgin",
+          "$girl+white_flower",
           "$wrestling+heart_on_fire,",
           "$turn_back",
           "to",
