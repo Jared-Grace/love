@@ -100,7 +100,7 @@ export function bible_glyph_chapter_psa103() {
           "so",
           "that",
           "your",
-          "youth",
+          "$child+flexed_biceps+thing",
           "is",
           "renewed",
           "like",
