@@ -34,7 +34,7 @@ export function bible_glyph_chapter_2ch06() {
         verse_number: 2,
         words: [
           "But",
-          "I",
+          "$me",
           "have",
           "built",
           "You",
