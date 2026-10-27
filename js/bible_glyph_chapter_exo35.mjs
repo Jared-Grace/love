@@ -310,7 +310,7 @@ export function bible_glyph_chapter_exo35() {
           "$lamp,",
           "and",
           "the",
-          "oil",
+          "$lotion_bottle",
           "for",
           "the",
           "$light+thing,",
