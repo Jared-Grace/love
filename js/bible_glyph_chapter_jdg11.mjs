@@ -438,7 +438,7 @@ export function bible_glyph_chapter_jdg11() {
         verse_number: 14,
         words: [
           "$unlocked+proper_name",
-          "again",
+          "$plus+doing",
           "$hand_sending",
           "$angel",
           "to",
