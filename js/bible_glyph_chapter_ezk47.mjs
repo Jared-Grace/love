@@ -40,7 +40,7 @@ export function bible_glyph_chapter_ezk47() {
           "toward",
           "the",
           "$compass+right_arrow+thing,",
-          "for",
+          "$pointing",
           "the",
           "$house",
           "faced",
