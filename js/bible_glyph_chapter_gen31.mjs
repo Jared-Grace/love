@@ -1537,7 +1537,7 @@ export function bible_glyph_chapter_gen31() {
           "of",
           "their",
           "$father,",
-          "judge",
+          "$scales",
           "between",
           "us.",
           "And",
