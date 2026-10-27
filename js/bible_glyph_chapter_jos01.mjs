@@ -101,7 +101,7 @@ export function bible_glyph_chapter_jos01() {
         verse_number: 4,
         words: [
           "Your",
-          "territory",
+          "$passport_control",
           "shall",
           "extend",
           "from",
