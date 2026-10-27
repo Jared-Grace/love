@@ -452,7 +452,7 @@ export function bible_glyph_chapter_2ki03() {
           "who",
           "has",
           "summoned",
-          "these",
+          "$flashlight+flashlight",
           "$three",
           "$king",
           "to",
