@@ -671,7 +671,7 @@ export function bible_glyph_chapter_jer32() {
         words: [
           "You",
           "performed",
-          "signs",
+          "$placard",
           "and",
           "wonders",
           "in",
