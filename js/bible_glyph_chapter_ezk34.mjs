@@ -516,7 +516,7 @@ export function bible_glyph_chapter_ezk34() {
           "will",
           "seek",
           "the",
-          "lost,",
+          "$wilted_flower,",
           "bring",
           "$turn_back",
           "the",
