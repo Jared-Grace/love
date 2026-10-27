@@ -615,7 +615,7 @@ export function bible_glyph_chapter_gen14() {
           "But",
           "Abram",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$king",
           "of",
