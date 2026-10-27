@@ -32,7 +32,7 @@ export function bible_glyph_chapter_psa042() {
           "$water_wave+road",
           "of",
           "$water,",
-          "so",
+          "$right_arrow",
           "my",
           "$person_other",
           "longs",
