@@ -716,7 +716,7 @@ export function bible_glyph_chapter_neh09() {
           "You",
           "did",
           "$no_entry",
-          "withhold",
+          "$locked+hand+doing",
           "Your",
           "manna",
           "from",
