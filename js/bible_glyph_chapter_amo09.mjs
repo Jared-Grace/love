@@ -340,7 +340,7 @@ export function bible_glyph_chapter_amo09() {
         verse_number: 9,
         words: [
           "$pointing",
-          "surely",
+          "$exclamation",
           "I",
           "will",
           "give",
