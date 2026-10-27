@@ -450,7 +450,7 @@ export function bible_glyph_chapter_gen06() {
           "door",
           "in",
           "the",
-          "side",
+          "$pointing+person",
           "of",
           "the",
           "$package,",
