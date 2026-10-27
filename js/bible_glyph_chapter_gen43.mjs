@@ -865,7 +865,7 @@ export function bible_glyph_chapter_gen43() {
           "of?",
           "Is",
           "he",
-          "still",
+          "$repeat",
           "$sprout?",
         ],
       },
