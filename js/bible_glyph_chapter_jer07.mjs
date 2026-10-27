@@ -1106,7 +1106,7 @@ export function bible_glyph_chapter_jer07() {
           "the",
           "$voice",
           "of",
-          "joy",
+          "$grinning_face",
           "and",
           "the",
           "$voice",
