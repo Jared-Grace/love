@@ -87,7 +87,7 @@ export function bible_glyph_chapter_num13() {
         verse_number: 4,
         words: [
           "And",
-          "these",
+          "$flashlight+flashlight",
           "were",
           "their",
           "names.",
