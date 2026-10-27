@@ -415,7 +415,7 @@ export function bible_glyph_chapter_job38() {
           "$baby!",
           "And",
           "the",
-          "number",
+          "$input_numbers",
           "of",
           "your",
           "$sun",
