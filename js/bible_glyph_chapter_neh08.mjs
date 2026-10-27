@@ -493,7 +493,7 @@ export function bible_glyph_chapter_neh08() {
           "$priest",
           "and",
           "$handshake",
-          "around",
+          "$toward",
           "$proper_name$Ezra",
           "the",
           "scribe",
