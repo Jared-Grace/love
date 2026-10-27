@@ -503,7 +503,7 @@ export function bible_glyph_chapter_lev10() {
           "remaining",
           "$son",
           "of",
-          "Aaron,",
+          "$white_cane+blossom+proper_name,",
           "$speech,",
         ],
       },
