@@ -580,7 +580,7 @@ export function bible_glyph_chapter_gen17() {
           "him",
           "fruitful",
           "and",
-          "multiply",
+          "$multiply+doing",
           "him",
           "greatly.",
           "He",
