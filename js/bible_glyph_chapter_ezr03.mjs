@@ -110,7 +110,7 @@ export function bible_glyph_chapter_ezr03() {
           "$i_am,",
           "both",
           "the",
-          "morning",
+          "$morning",
           "and",
           "evening",
           "offerings,",
