@@ -294,7 +294,7 @@ export function bible_glyph_chapter_mic02() {
       {
         verse_number: 10,
         words: [
-          "Arise",
+          "$person+pointing_up",
           "and",
           "$walking,",
           "for",
