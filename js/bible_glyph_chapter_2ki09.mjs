@@ -581,7 +581,7 @@ export function bible_glyph_chapter_2ki09() {
           "up",
           "$telescope.",
           "And",
-          "Ahaziah",
+          "$hand+clamp+i_am",
           "$king",
           "of",
           "$hands_raised+proper_name",
