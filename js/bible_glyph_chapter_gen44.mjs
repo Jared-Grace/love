@@ -878,7 +878,7 @@ export function bible_glyph_chapter_gen44() {
           "when",
           "he",
           "$eye",
-          "that",
+          "$pointing",
           "the",
           "boy",
           "is",
