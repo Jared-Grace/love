@@ -271,7 +271,7 @@ export function bible_glyph_chapter_exo26() {
           "set,",
           "and",
           "$five+zero",
-          "loops",
+          "$curly_loop",
           "along",
           "the",
           "edge",
