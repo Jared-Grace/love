@@ -448,7 +448,7 @@ export function bible_glyph_chapter_isa58() {
           "rebuild",
           "the",
           "$hourglass",
-          "ruins;",
+          "$desert+thing;",
           "you",
           "will",
           "restore",
