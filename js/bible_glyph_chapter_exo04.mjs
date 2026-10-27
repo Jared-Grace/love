@@ -752,7 +752,7 @@ export function bible_glyph_chapter_exo04() {
           "will",
           "$fist+skull",
           "your",
-          "firstborn",
+          "$first_place+baby",
           '$son."',
         ],
       },
