@@ -709,7 +709,7 @@ export function bible_glyph_chapter_gen26() {
           "many,",
           "for",
           "the",
-          "sake",
+          "$information+toward",
           "of",
           "$father+map",
           "my",
