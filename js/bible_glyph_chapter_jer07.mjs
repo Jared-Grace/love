@@ -871,7 +871,7 @@ export function bible_glyph_chapter_jer07() {
           "is",
           "the",
           "$map",
-          "that",
+          "$back+flashlight",
           "would",
           "$no_entry",
           "$ear",
