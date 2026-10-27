@@ -286,7 +286,7 @@ export function bible_glyph_chapter_mic01() {
           "mourn",
           "like",
           "an",
-          "ostrich.",
+          "$bird+desert.",
         ],
       },
       {
