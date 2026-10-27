@@ -141,7 +141,7 @@ export function bible_glyph_chapter_gen11() {
           "and",
           "the",
           "$tower",
-          "that",
+          "$back+flashlight",
           "the",
           "$son",
           "of",
