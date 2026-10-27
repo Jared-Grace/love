@@ -1158,7 +1158,7 @@ export function bible_glyph_chapter_neh09() {
           "in",
           "Your",
           "great",
-          "compassion",
+          "$hugging_face",
           "You",
           "did",
           "$no_entry",
