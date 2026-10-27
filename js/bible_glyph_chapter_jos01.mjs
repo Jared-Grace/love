@@ -124,7 +124,7 @@ export function bible_glyph_chapter_jos01() {
           "west",
           "to",
           "the",
-          "Great",
+          "$top",
           "$sea.",
         ],
       },
