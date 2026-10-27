@@ -271,7 +271,7 @@ export function bible_glyph_chapter_lev19() {
           "deceive",
           "one",
           "$man_beard",
-          "another.",
+          "$handshake+person.",
         ],
       },
       {
