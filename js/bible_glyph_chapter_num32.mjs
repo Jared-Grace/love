@@ -266,7 +266,7 @@ export function bible_glyph_chapter_num32() {
           "into",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "had",
           "$hands_giving",
