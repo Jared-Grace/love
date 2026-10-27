@@ -551,7 +551,7 @@ export function bible_glyph_chapter_lam04() {
           "chased",
           "us",
           "were",
-          "swifter",
+          "$balloon+running",
           "than",
           "the",
           "eagles",
