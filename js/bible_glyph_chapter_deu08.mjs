@@ -62,7 +62,7 @@ export function bible_glyph_chapter_deu08() {
           "the",
           "$road",
           "these",
-          "forty",
+          "$four+zero",
           "$year",
           "in",
           "the",
