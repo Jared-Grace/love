@@ -398,7 +398,7 @@ export function bible_glyph_chapter_zec09() {
           "prisoners",
           "of",
           "$crossed_fingers;",
-          "even",
+          "$plus",
           "$sun",
           "I",
           "declare",
