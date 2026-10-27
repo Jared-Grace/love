@@ -298,7 +298,7 @@ export function bible_glyph_chapter_mic02() {
           "and",
           "$walking,",
           "$pointing",
-          "this",
+          "$flashlight",
           "is",
           "$no_entry",
           "your",
