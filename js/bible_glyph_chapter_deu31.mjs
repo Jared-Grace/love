@@ -332,7 +332,7 @@ export function bible_glyph_chapter_deu31() {
           "$stop_sign",
           "of",
           "every",
-          "seven",
+          "$seven",
           "years,",
           "at",
           "the",
