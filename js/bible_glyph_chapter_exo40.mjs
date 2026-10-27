@@ -74,7 +74,7 @@ export function bible_glyph_chapter_exo40() {
           "$footprints",
           "in",
           "the",
-          "table",
+          "$hand_sending+thing",
           "and",
           "set",
           "out",
