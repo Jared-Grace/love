@@ -1048,7 +1048,7 @@ export function bible_glyph_chapter_deu04() {
           "$heart_on_fire,",
           "you",
           "will",
-          "find",
+          "$magnifying_glass+exclamation",
           "Him",
           "if",
           "you",
