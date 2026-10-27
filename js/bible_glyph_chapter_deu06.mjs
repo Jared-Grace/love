@@ -352,7 +352,7 @@ export function bible_glyph_chapter_deu06() {
           "you",
           "did",
           "$no_entry",
-          "plant",
+          "$sprout+down_arrow+doing",
           "-",
           "and",
           "when",
