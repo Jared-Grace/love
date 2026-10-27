@@ -81,7 +81,7 @@ export function bible_glyph_chapter_num19() {
           "have",
           "it",
           "brought",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp",
           "and",
