@@ -134,7 +134,7 @@ export function bible_glyph_chapter_exo01() {
         words: [
           "Then",
           "a",
-          "new",
+          "$new_button",
           "$king,",
           "who",
           "did",
