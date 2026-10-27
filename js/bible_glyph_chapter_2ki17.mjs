@@ -355,7 +355,7 @@ export function bible_glyph_chapter_2ki17() {
           "on",
           "all",
           "the",
-          "high",
+          "$snow_capped_mountain",
           "places,",
           "like",
           "the",
