@@ -253,7 +253,7 @@ export function bible_glyph_chapter_jdg16() {
           "me",
           "up",
           "with",
-          "seven",
+          "$seven",
           "fresh",
           "bowstrings",
           "that",
