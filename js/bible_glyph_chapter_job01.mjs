@@ -528,7 +528,7 @@ export function bible_glyph_chapter_job01() {
           "the",
           "$sword,",
           "and",
-          "I",
+          "$me",
           "alone",
           "have",
           "escaped",
