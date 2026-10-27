@@ -140,7 +140,7 @@ export function bible_glyph_chapter_gen22() {
         words: [
           "$person+house",
           "$flashlight+round_pushpin",
-          "with",
+          "$linked_paperclips",
           "the",
           "donkey,",
           "$father+map",
