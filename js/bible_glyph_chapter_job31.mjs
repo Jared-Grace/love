@@ -580,7 +580,7 @@ export function bible_glyph_chapter_job31() {
           "also",
           "be",
           "an",
-          "iniquity",
+          "$cyclone",
           "to",
           "be",
           "judged,",
