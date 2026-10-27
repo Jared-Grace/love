@@ -211,7 +211,7 @@ export function bible_glyph_chapter_lev09() {
         words: [
           "So",
           "Aaron",
-          "approached",
+          "$magnet+doing",
           "$altar",
           "and",
           "slaughtered",
