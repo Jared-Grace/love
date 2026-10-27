@@ -288,7 +288,7 @@ export function bible_glyph_chapter_isa56() {
         verse_number: 8,
         words: [
           "Thus",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am,",
