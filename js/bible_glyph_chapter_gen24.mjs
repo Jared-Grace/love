@@ -1448,7 +1448,7 @@ export function bible_glyph_chapter_gen24() {
           "$palm_down",
           "the",
           "$nose+ring",
-          "on",
+          "$pointing_up",
           "her",
           "nose",
           "and",
