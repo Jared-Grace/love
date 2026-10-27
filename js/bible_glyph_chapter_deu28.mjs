@@ -893,7 +893,7 @@ export function bible_glyph_chapter_deu28() {
         verse_number: 29,
         words: [
           "At",
-          "noon",
+          "$sun+top",
           "you",
           "will",
           "grope",
