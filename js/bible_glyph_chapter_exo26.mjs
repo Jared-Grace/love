@@ -484,7 +484,7 @@ export function bible_glyph_chapter_exo26() {
           "$hammer+doing",
           "$four+zero",
           "$silver",
-          "bases",
+          "$down_arrow+brick",
           "under",
           "the",
           "twenty",
