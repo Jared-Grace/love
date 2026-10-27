@@ -272,7 +272,7 @@ export function bible_glyph_chapter_ecc12() {
           "$link",
           "the",
           "Teacher",
-          "wise,",
+          "$wisdom,",
           "but",
           "he",
           "also",
