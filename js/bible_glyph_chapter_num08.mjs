@@ -59,7 +59,7 @@ export function bible_glyph_chapter_num08() {
           "the",
           "$lamp",
           "facing",
-          "toward",
+          "$toward",
           "the",
           "front",
           "of",
