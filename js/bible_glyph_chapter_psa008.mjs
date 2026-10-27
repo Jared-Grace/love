@@ -160,7 +160,7 @@ export function bible_glyph_chapter_psa008() {
         verse_number: 7,
         words: [
           "all",
-          "sheep",
+          "$sheep",
           "and",
           "oxen,",
           "and",
