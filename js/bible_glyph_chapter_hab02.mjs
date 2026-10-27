@@ -550,7 +550,7 @@ export function bible_glyph_chapter_hab02() {
           "$chart_increasing+doing",
           "is",
           "an",
-          "idol,",
+          "$nesting_dolls,",
           "that",
           "a",
           "craftsman",
