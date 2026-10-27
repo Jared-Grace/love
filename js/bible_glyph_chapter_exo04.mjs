@@ -325,7 +325,7 @@ export function bible_glyph_chapter_exo04() {
           "$speech,",
           '"$pleading_face+manner,',
           "$crown,",
-          "I",
+          "$me",
           "have",
           "$no_entry",
           "been",
