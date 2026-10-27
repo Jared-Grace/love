@@ -369,7 +369,7 @@ export function bible_glyph_chapter_dan01() {
         verse_number: 12,
         words: [
           "Please",
-          "test",
+          "$test_tube",
           "your",
           "$kneeling",
           "for",
