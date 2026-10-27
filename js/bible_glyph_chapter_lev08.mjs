@@ -556,7 +556,7 @@ export function bible_glyph_chapter_lev08() {
           "thumb",
           "of",
           "his",
-          "right",
+          "$hand+right_arrow+describing",
           "$hand,",
           "and",
           "on",
