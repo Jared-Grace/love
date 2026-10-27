@@ -536,7 +536,7 @@ export function bible_glyph_chapter_gen27() {
           "$speech",
           "his",
           "$son,",
-          '"How',
+          '"$flashlight+question',
           "did",
           "you",
           "ever",
