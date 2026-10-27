@@ -417,7 +417,7 @@ export function bible_glyph_chapter_gen21() {
           "as",
           "she",
           "sat",
-          "nearby,",
+          "$newspaper+thing,",
           "she",
           "lifted",
           "up",
