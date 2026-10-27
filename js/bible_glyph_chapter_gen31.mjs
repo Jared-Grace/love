@@ -409,7 +409,7 @@ export function bible_glyph_chapter_gen31() {
       {
         verse_number: 16,
         words: [
-          "Surely",
+          "$pointing",
           "all",
           "the",
           "wealth",
