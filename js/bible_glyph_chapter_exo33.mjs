@@ -74,7 +74,7 @@ export function bible_glyph_chapter_exo33() {
           "and",
           "I",
           "will",
-          "drive",
+          "$door+leftwards_pushing_hand+doing",
           "out",
           "the",
           "$proper_name$Canaanites,",
