@@ -51,7 +51,7 @@ export function bible_glyph_chapter_psa110() {
           "$white_cane",
           "from",
           "$proper_name$Zion:",
-          "Rule",
+          "$crown+footprints+doing",
           "in",
           "the",
           "midst",
