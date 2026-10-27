@@ -26,7 +26,7 @@ export function bible_glyph_chapter_gen26() {
           "the",
           "first",
           "$famine",
-          "that",
+          "$back+flashlight",
           "was",
           "in",
           "the",
