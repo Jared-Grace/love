@@ -947,7 +947,7 @@ export function bible_glyph_chapter_1sa15() {
           "change",
           "His",
           "mind,",
-          "for",
+          "$pointing",
           "He",
           "is",
           "$no_entry",
