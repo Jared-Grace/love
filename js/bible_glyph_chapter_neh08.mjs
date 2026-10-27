@@ -599,7 +599,7 @@ export function bible_glyph_chapter_neh08() {
           "branches",
           "and",
           "$hammer+doing",
-          "booths",
+          "$hut+leaf",
           "$man_beard",
           "on",
           "rooftops,",
