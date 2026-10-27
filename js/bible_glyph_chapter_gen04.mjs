@@ -414,7 +414,7 @@ export function bible_glyph_chapter_gen04() {
           "finds",
           "me",
           "will",
-          "kill",
+          "$fist+skull",
           "me.",
         ],
       },
