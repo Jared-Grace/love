@@ -77,7 +77,7 @@ export function bible_glyph_chapter_exo37() {
           "$ring",
           "for",
           "its",
-          "four",
+          "$four",
           "feet,",
           "two",
           "$ring",
