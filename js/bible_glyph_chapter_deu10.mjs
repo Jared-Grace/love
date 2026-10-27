@@ -170,7 +170,7 @@ export function bible_glyph_chapter_deu10() {
           "I",
           "went",
           "back",
-          "down",
+          "$walking+pointing_down",
           "the",
           "$mountain",
           "and",
