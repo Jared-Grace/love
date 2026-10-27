@@ -87,7 +87,7 @@ export function bible_glyph_chapter_isa02() {
           "of",
           "the",
           "$i_am,",
-          "to",
+          "$toward",
           "the",
           "$house",
           "of",
