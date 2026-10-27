@@ -759,7 +759,7 @@ export function bible_glyph_chapter_jer07() {
           "in",
           "the",
           "stubborn",
-          "inclinations",
+          "$person_tipping_hand+thing",
           "of",
           "their",
           "$thumbs_down",
