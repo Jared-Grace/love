@@ -723,7 +723,7 @@ export function bible_glyph_chapter_deu31() {
           "into",
           "the",
           "land",
-          "that",
+          "$back+flashlight",
           "I",
           "swore",
           "to",
