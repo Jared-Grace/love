@@ -712,7 +712,7 @@ export function bible_glyph_chapter_exo30() {
         verse_number: 27,
         words: [
           "the",
-          "table",
+          "$hand_sending+thing",
           "and",
           "all",
           "its",
