@@ -598,7 +598,7 @@ export function bible_glyph_chapter_gen07() {
         verse_number: 23,
         words: [
           "And",
-          "every",
+          "$all",
           "living",
           "thing",
           "on",
