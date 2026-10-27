@@ -1627,7 +1627,7 @@ export function bible_glyph_chapter_lev13() {
           "contaminated",
           "article",
           "for",
-          "seven",
+          "$seven",
           "$sun.",
         ],
       },
