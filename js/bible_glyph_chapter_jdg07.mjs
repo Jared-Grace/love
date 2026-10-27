@@ -860,7 +860,7 @@ export function bible_glyph_chapter_jdg07() {
           "$tray_out",
           "$proper_name$Asher",
           "and",
-          "all",
+          "$all",
           "$proper_name$Manasseh,",
           "and",
           "they",
