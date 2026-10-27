@@ -499,7 +499,7 @@ export function bible_glyph_chapter_jos06() {
           "same",
           "$scales+thing,",
           "$seven",
-          "times.",
+          "$drum.",
           "That",
           "was",
           "the",
