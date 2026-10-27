@@ -116,7 +116,7 @@ export function bible_glyph_chapter_deu16() {
           "of",
           "$clamp+proper_name",
           "in",
-          "haste",
+          "$running+fast_forward",
           "-",
           "so",
           "that",
