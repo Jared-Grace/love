@@ -68,7 +68,7 @@ export function bible_glyph_chapter_psa130() {
           "$crown,",
           "who",
           "could",
-          "stand?",
+          "$person+round_pushpin?",
         ],
       },
       {
