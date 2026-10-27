@@ -383,7 +383,7 @@ export function bible_glyph_chapter_gen18() {
           "$i_am",
           "$speech",
           "$father+map,",
-          "Why",
+          "$flashlight+question",
           "did",
           "$proper_name$Sarah",
           "laugh",
