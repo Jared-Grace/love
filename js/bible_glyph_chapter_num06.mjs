@@ -158,7 +158,7 @@ export function bible_glyph_chapter_num06() {
           "of",
           "his",
           "$person_gesturing_ok",
-          "grow",
+          "$top+doing",
           "long.",
         ],
       },
