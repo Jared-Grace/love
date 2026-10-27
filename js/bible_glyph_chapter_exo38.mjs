@@ -757,7 +757,7 @@ export function bible_glyph_chapter_exo38() {
           "talents",
           "of",
           "$silver",
-          "were",
+          "$link",
           "used",
           "to",
           "cast",
