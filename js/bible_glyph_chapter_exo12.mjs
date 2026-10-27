@@ -1200,7 +1200,7 @@ export function bible_glyph_chapter_exo12() {
           "$might+man_beard",
           "on",
           "$foot+doer,",
-          "besides",
+          "$one+person",
           "women",
           "and",
           "children.",
