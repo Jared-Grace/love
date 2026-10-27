@@ -212,7 +212,7 @@ export function bible_glyph_chapter_1ki22() {
           "of",
           "the",
           "$i_am",
-          "here",
+          "$flashlight+round_pushpin",
           "of",
           "whom",
           "we",
