@@ -336,7 +336,7 @@ export function bible_glyph_chapter_dan01() {
           "would",
           "endanger",
           "my",
-          "head",
+          "$person_gesturing_ok",
           "before",
           "the",
           "$king.",
