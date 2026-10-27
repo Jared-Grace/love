@@ -818,7 +818,7 @@ export function bible_glyph_chapter_exo29() {
           "is",
           "waved",
           "and",
-          "that",
+          "$back+flashlight",
           "which",
           "is",
           "lifted",
