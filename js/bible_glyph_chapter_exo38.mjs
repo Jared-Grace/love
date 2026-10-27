@@ -32,7 +32,7 @@ export function bible_glyph_chapter_exo38() {
           "$arrow_both_ways.",
           "It",
           "was",
-          "square,",
+          "$four+straight_ruler+describing,",
           "and",
           "three",
           "$triangular_ruler",
