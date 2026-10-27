@@ -704,7 +704,7 @@ export function bible_glyph_chapter_lev16() {
           "his",
           "$index_pointing_up",
           "$seven",
-          "times,",
+          "$drum,",
           "to",
           "cleanse",
           "it",
