@@ -36,7 +36,7 @@ export function bible_glyph_chapter_psa090() {
       {
         verse_number: 2,
         words: [
-          "Before",
+          "$clock+back",
           "the",
           "$mountain",
           "were",
