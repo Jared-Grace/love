@@ -1365,7 +1365,7 @@ export function bible_glyph_chapter_lev13() {
           "and",
           "is",
           "$back+hair+no_entry+describing,",
-          "he",
+          "$pointing_back",
           "is",
           "still",
           "$soap+describing.",
