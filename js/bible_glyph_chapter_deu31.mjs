@@ -630,7 +630,7 @@ export function bible_glyph_chapter_deu31() {
           "$speech,",
           "Have",
           "$no_entry",
-          "these",
+          "$flashlight+flashlight",
           "$thumbs_down",
           "come",
           "upon",
