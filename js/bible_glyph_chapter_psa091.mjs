@@ -88,7 +88,7 @@ export function bible_glyph_chapter_psa091() {
           "with",
           "His",
           "feathers;",
-          "under",
+          "$down_arrow",
           "His",
           "wings",
           "you",
