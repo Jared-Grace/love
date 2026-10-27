@@ -549,7 +549,7 @@ export function bible_glyph_chapter_jer31() {
           "work",
           "will",
           "come,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
           "Then",
