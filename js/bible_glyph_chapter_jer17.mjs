@@ -22,7 +22,7 @@ export function bible_glyph_chapter_jer17() {
           "an",
           "$iron",
           "$writing_hand+sewing_needle,",
-          "engraved",
+          "$shushing_face",
           "with",
           "a",
           "diamond",
