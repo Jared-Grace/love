@@ -728,7 +728,7 @@ export function bible_glyph_chapter_exo18() {
           "you",
           "will",
           "be",
-          "able",
+          "$might+doing",
           "to",
           "endure,",
           "and",
