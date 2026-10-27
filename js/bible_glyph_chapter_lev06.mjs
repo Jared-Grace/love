@@ -689,7 +689,7 @@ export function bible_glyph_chapter_lev06() {
       {
         verse_number: 27,
         words: [
-          "Anything",
+          "$all",
           "that",
           "touches",
           "$meat",
