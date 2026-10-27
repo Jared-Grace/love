@@ -288,7 +288,7 @@ export function bible_glyph_chapter_gen07() {
           "$seat+proper_name,",
           "in",
           "the",
-          "second",
+          "$second_place",
           "month,",
           "on",
           "the",
