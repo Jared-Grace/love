@@ -215,7 +215,7 @@ export function bible_glyph_chapter_jer23() {
           "$tent+doing",
           "$anchor+thing.",
           "And",
-          "this",
+          "$flashlight",
           "is",
           "His",
           "$name_tag",
