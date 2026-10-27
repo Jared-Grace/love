@@ -974,7 +974,7 @@ export function bible_glyph_chapter_lev22() {
           "be",
           "your",
           "$heart_on_fire.",
-          "I",
+          "$me",
           "am",
           "$i_am.",
         ],
