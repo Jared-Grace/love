@@ -217,7 +217,7 @@ export function bible_glyph_chapter_deu31() {
           "all",
           "$wrestling+heart_on_fire,",
           "Be",
-          "strong",
+          "$might+up_arrow",
           "and",
           "courageous,",
           "for",
