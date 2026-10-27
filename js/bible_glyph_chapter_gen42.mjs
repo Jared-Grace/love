@@ -161,7 +161,7 @@ export function bible_glyph_chapter_gen42() {
           "one",
           "who",
           "sold",
-          "grain",
+          "$wheat+coin+doing",
           "to",
           "all",
           "the",
