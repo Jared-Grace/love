@@ -205,7 +205,7 @@ export function bible_glyph_chapter_lev17() {
           "of",
           "$alarm_clock,",
           "and",
-          "burn",
+          "$incense+doing",
           "the",
           "fat",
           "as",
