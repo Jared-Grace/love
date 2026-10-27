@@ -32,7 +32,7 @@ export function bible_glyph_chapter_psa116() {
       {
         verse_number: 2,
         words: [
-          "Because",
+          "$pointing",
           "He",
           "has",
           "inclined",
