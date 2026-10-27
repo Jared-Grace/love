@@ -133,7 +133,7 @@ export function bible_glyph_chapter_1ki17() {
           "lived",
           "by",
           "the",
-          "Brook",
+          "$national_park",
           "of",
           "$proper_name$Cherith,",
           "east",
