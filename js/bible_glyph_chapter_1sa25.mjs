@@ -1298,7 +1298,7 @@ export function bible_glyph_chapter_1sa25() {
           "or",
           "much,",
           "until",
-          "morning",
+          "$morning",
           "$light.",
         ],
       },
