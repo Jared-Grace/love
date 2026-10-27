@@ -1181,7 +1181,7 @@ export function bible_glyph_chapter_1ki08() {
           "there",
           "is",
           "$no_entry",
-          "rain",
+          "$rain",
           "because",
           "Your",
           "people",
