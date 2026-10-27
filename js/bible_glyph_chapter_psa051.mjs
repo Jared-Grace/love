@@ -145,7 +145,7 @@ export function bible_glyph_chapter_psa051() {
       {
         verse_number: 6,
         words: [
-          "Surely",
+          "$exclamation",
           "You",
           "desire",
           "$check",
