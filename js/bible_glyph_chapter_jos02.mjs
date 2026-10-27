@@ -47,7 +47,7 @@ export function bible_glyph_chapter_jos02() {
           "$proper_name$Rahab,",
           "and",
           "stayed",
-          "there.",
+          "$telescope.",
         ],
       },
       {
