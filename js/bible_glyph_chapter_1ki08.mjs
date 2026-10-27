@@ -1896,7 +1896,7 @@ export function bible_glyph_chapter_1ki08() {
           "$hands_praying+thing",
           "and",
           "petition",
-          "to",
+          "$toward",
           "the",
           "$i_am,",
           "he",
