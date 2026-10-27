@@ -336,7 +336,7 @@ export function bible_glyph_chapter_exo01() {
           "$pointing_up",
           "the",
           "birthstools.",
-          "If",
+          "$traffic_light",
           "the",
           "child",
           "is",
