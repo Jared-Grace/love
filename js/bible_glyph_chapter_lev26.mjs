@@ -1355,7 +1355,7 @@ export function bible_glyph_chapter_lev26() {
           "in",
           "spite",
           "of",
-          "this,",
+          "$flashlight,",
           "when",
           "they",
           "are",
