@@ -114,7 +114,7 @@ export function bible_glyph_chapter_1sa02() {
           "bows",
           "of",
           "the",
-          "mighty",
+          "$might+person",
           "are",
           "broken,",
           "but",
