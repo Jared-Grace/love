@@ -63,7 +63,7 @@ export function bible_glyph_chapter_num15() {
           "for",
           "a",
           "special",
-          "vow",
+          "$saluting_face",
           "$shuffle",
           "a",
           "freewill",
