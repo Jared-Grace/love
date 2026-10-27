@@ -624,7 +624,7 @@ export function bible_glyph_chapter_deu04() {
           "crawls",
           "on",
           "the",
-          "ground,",
+          "$brown_square,",
           "or",
           "of",
           "any",
