@@ -223,7 +223,7 @@ export function bible_glyph_chapter_pro01() {
           "like",
           "$pointing_down+skull,",
           "and",
-          "whole",
+          "$full_moon+describing",
           "like",
           "those",
           "descending",
