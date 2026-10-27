@@ -204,7 +204,7 @@ export function bible_glyph_chapter_ezk11() {
       {
         verse_number: 7,
         words: [
-          "Therefore",
+          "$right_arrow",
           "this",
           "is",
           "what",
