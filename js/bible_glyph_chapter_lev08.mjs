@@ -772,7 +772,7 @@ export function bible_glyph_chapter_lev08() {
           "it",
           "was",
           "the",
-          "portion",
+          "$input_numbers+thing",
           "of",
           "$fishing_pole+proper_name,",
           "as",
