@@ -622,7 +622,7 @@ export function bible_glyph_chapter_num06() {
           "basket,",
           "and",
           "one",
-          "unleavened",
+          "$flatbread",
           "wafer,",
           "and",
           "$hands_giving",
