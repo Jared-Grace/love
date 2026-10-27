@@ -498,7 +498,7 @@ export function bible_glyph_chapter_nam03() {
           "$proper_name$Assyria,",
           "your",
           "$person+sheep",
-          "slumber;",
+          "$sleeping_face+eye+doing;",
           "your",
           "officers",
           "sleep.",
