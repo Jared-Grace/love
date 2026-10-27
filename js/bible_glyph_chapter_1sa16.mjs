@@ -402,7 +402,7 @@ export function bible_glyph_chapter_1sa16() {
           "was",
           "ruddy,",
           "with",
-          "beautiful",
+          "$face+sparkle",
           "$eyes",
           "and",
           "a",
