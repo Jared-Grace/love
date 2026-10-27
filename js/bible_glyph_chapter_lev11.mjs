@@ -903,7 +903,7 @@ export function bible_glyph_chapter_lev11() {
           "the",
           "seed",
           "is",
-          "clean.",
+          "$soap+describing.",
         ],
       },
       {
