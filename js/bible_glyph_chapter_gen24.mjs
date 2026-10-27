@@ -1055,7 +1055,7 @@ export function bible_glyph_chapter_gen24() {
           "$cow_face,",
           "$silver",
           "and",
-          "gold,",
+          "$gold,",
           "$kneeling",
           "and",
           "maidservants,",
