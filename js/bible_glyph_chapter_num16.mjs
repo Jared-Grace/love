@@ -16,7 +16,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 1,
         words: [
           "Now",
-          "Korah",
+          "$hair+no_entry+proper_name",
           "$son",
           "of",
           "$proper_name$Izhar,",
