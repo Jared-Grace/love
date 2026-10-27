@@ -712,7 +712,7 @@ export function bible_glyph_chapter_num13() {
           "of",
           "the",
           "land,",
-          "for",
+          "$pointing",
           "we",
           "can",
           "certainly",
