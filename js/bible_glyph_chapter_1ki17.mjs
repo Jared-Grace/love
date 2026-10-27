@@ -675,7 +675,7 @@ export function bible_glyph_chapter_1ki17() {
           "over",
           "the",
           "$child",
-          "three",
+          "$three",
           "times",
           "and",
           "cried",
