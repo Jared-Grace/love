@@ -358,7 +358,7 @@ export function bible_glyph_chapter_gen42() {
           "our",
           "$father,",
           "and",
-          "one",
+          "$one",
           "is",
           "no",
           "more.",
