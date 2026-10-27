@@ -531,7 +531,7 @@ export function bible_glyph_chapter_jer31() {
           "the",
           "$i_am",
           "$speech:",
-          "Keep",
+          "$locked+hand+doing",
           "your",
           "$voice",
           "from",
