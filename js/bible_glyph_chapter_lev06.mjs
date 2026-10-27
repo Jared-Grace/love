@@ -362,7 +362,7 @@ export function bible_glyph_chapter_lev06() {
         verse_number: 14,
         words: [
           "Now",
-          "this",
+          "$flashlight",
           "is",
           "$scroll",
           "of",
