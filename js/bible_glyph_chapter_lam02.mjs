@@ -676,7 +676,7 @@ export function bible_glyph_chapter_lam02() {
           "swallowed",
           "her",
           "up.",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$sun",
