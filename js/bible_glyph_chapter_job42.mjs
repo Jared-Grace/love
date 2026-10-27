@@ -43,7 +43,7 @@ export function bible_glyph_chapter_job42() {
           "asked,",
           "Who",
           "is",
-          "this",
+          "$flashlight",
           "who",
           "conceals",
           "My",
