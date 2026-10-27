@@ -1128,7 +1128,7 @@ export function bible_glyph_chapter_jdg16() {
           "pillar",
           "and",
           "his",
-          "left",
+          "$hand+away",
           "hand",
           "on",
           "the",
