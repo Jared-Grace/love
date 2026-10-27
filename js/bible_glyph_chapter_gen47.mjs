@@ -450,7 +450,7 @@ export function bible_glyph_chapter_gen47() {
           "for",
           "the",
           "$wheat+coin",
-          "they",
+          "$pointing_back",
           "were",
           "buying,",
           "and",
