@@ -397,7 +397,7 @@ export function bible_glyph_chapter_exo29() {
           "$sun_behind_small_cloud",
           "the",
           "$camp.",
-          "It",
+          "$pointing_back",
           "is",
           "a",
           "$bow.",
