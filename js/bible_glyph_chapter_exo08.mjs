@@ -488,7 +488,7 @@ export function bible_glyph_chapter_exo08() {
           "swarms",
           "of",
           "gnats",
-          "throughout",
+          "$all",
           "the",
           "$earth",
           "of",
