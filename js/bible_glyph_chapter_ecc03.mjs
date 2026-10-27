@@ -167,7 +167,7 @@ export function bible_glyph_chapter_ecc03() {
           "to",
           "mend,",
           "a",
-          "time",
+          "$clock",
           "to",
           "be",
           "silent",
