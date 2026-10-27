@@ -202,7 +202,7 @@ export function bible_glyph_chapter_deu01() {
           "peoples",
           "in",
           "the",
-          "Arabah,",
+          "$desert+proper_name,",
           "in",
           "the",
           "$mountain,",
