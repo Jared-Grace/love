@@ -146,7 +146,7 @@ export function bible_glyph_chapter_gen37() {
           "$i_am+plus",
           "had",
           "a",
-          "dream,",
+          "$dream+doing,",
           "and",
           "when",
           "he",
