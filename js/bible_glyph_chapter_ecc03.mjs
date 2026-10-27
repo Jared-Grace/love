@@ -193,7 +193,7 @@ export function bible_glyph_chapter_ecc03() {
           "a",
           "$clock",
           "for",
-          "war",
+          "$crossed_swords",
           "and",
           "a",
           "$clock",
