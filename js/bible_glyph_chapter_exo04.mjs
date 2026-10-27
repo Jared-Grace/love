@@ -85,7 +85,7 @@ export function bible_glyph_chapter_exo04() {
           "it",
           "became",
           "a",
-          "snake,",
+          "$snake,",
           "and",
           "he",
           "ran",
