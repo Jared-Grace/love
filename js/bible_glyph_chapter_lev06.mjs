@@ -323,7 +323,7 @@ export function bible_glyph_chapter_lev06() {
           "to",
           "the",
           "$fire,",
-          "arrange",
+          "$card_index_dividers",
           "$burnt_offering",
           "on",
           "it,",
