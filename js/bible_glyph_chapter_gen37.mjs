@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_gen37() {
           "So",
           "his",
           "$father",
-          "wept",
+          "$loudly_crying",
           "for",
           "him.",
         ],
