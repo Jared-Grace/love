@@ -211,7 +211,7 @@ export function bible_glyph_chapter_psa022() {
           "birth",
           "I",
           "was",
-          "cast",
+          "$throwing",
           "upon",
           "You;",
           "from",
