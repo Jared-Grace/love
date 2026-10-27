@@ -1155,7 +1155,7 @@ export function bible_glyph_chapter_num16() {
           "serve",
           "as",
           "a",
-          "sign",
+          "$placard",
           "to",
           "the",
           "$son",
