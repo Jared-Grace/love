@@ -266,7 +266,7 @@ export function bible_glyph_chapter_gen49() {
           "between",
           "his",
           "$foot,",
-          "until",
+          "$finish",
           "$proper_name$Shiloh",
           "$footprints,",
           "and",
