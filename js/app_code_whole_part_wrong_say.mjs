@@ -1,3 +1,4 @@
+import { floor } from "./floor.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { divide } from "./divide.mjs";
@@ -63,7 +64,7 @@ export function app_code_whole_part_wrong_say(question, answer, choice) {
     return null;
   }
   let divided = divide(n, d);
-  let quotient = Math.floor(divided);
+  let quotient = floor(divided);
   let input = multiply(quotient, d);
   let whole_value = text_to(input);
   let division = js_code_binary_spaced_nb(dividend, "/", divisor);
