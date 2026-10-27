@@ -673,7 +673,7 @@ export function bible_glyph_chapter_gen37() {
           "$dress+thread",
           "-",
           "the",
-          "robe",
+          "$dress+thread",
           "of",
           "many",
           "colors",
