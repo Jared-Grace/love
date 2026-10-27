@@ -68,7 +68,7 @@ export function bible_glyph_chapter_psa084() {
       {
         verse_number: 3,
         words: [
-          "Even",
+          "$plus",
           "the",
           "sparrow",
           "has",
