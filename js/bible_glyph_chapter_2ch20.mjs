@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_2ch20() {
           "$toward",
           "$city+peace",
           "$beaming,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "had",
