@@ -599,7 +599,7 @@ export function bible_glyph_chapter_gen44() {
           "is",
           "$skull+doing,",
           "and",
-          "he",
+          "$pointing_back",
           "alone",
           "is",
           "$takeout_box+doing",
