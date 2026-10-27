@@ -759,7 +759,7 @@ export function bible_glyph_chapter_jer17() {
       {
         verse_number: 24,
         words: [
-          "If",
+          "$traffic_light",
           "$link",
           "you",
           "$ear",
