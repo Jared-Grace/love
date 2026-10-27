@@ -28,7 +28,7 @@ export function bible_glyph_chapter_gen49() {
           "that",
           "I",
           "can",
-          "tell",
+          "$newspaper",
           "you",
           "what",
           "will",
