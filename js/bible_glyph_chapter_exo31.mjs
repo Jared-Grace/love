@@ -367,7 +367,7 @@ export function bible_glyph_chapter_exo31() {
         verse_number: 15,
         words: [
           "For",
-          "six",
+          "$six",
           "$sun",
           "$tools",
           "may",
