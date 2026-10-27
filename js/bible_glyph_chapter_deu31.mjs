@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_deu31() {
           "I",
           "may",
           "$mouth",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "in",
           "their",
