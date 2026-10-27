@@ -744,7 +744,7 @@ export function bible_glyph_chapter_num18() {
           "have",
           "any",
           "$pizza",
-          "among",
+          "$radio_button",
           "them.",
           "I",
           "am",
