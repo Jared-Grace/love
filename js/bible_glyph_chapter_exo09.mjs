@@ -858,7 +858,7 @@ export function bible_glyph_chapter_exo09() {
       {
         verse_number: 28,
         words: [
-          "Pray",
+          "$hands_praying+incense+doing",
           "to",
           "$i_am,",
           "for",
