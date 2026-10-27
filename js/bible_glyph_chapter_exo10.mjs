@@ -720,7 +720,7 @@ export function bible_glyph_chapter_exo10() {
         words: [
           "$i_am",
           "$speech",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "Stretch",
           "out",
