@@ -16,7 +16,7 @@ export function bible_glyph_chapter_num35() {
         words: [
           "$i_am",
           "$mouth",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name",
           "on",
           "the",
