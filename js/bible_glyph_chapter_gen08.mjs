@@ -381,7 +381,7 @@ export function bible_glyph_chapter_gen08() {
           "$earth.",
           "So",
           "Noah",
-          "removed",
+          "$away+doing",
           "the",
           "covering",
           "from",
