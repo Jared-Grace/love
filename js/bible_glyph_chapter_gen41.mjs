@@ -1565,7 +1565,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "When",
           "the",
-          "famine",
+          "$famine",
           "had",
           "spread",
           "over",
