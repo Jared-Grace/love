@@ -613,7 +613,7 @@ export function bible_glyph_chapter_jer31() {
           "I",
           "may",
           "$turn_back,",
-          "for",
+          "$pointing",
           "You",
           "are",
           "the",
