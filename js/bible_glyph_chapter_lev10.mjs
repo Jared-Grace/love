@@ -537,7 +537,7 @@ export function bible_glyph_chapter_lev10() {
           "congregation",
           "by",
           "making",
-          "atonement",
+          "$umbrella+doing",
           "for",
           "them",
           "before",
