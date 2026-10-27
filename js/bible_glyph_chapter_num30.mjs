@@ -332,7 +332,7 @@ export function bible_glyph_chapter_num30() {
           "made",
           "a",
           "$saluting_face+doing",
-          "or",
+          "$shuffle",
           "an",
           "obligation",
           "under",
