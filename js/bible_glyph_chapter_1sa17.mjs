@@ -28,7 +28,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "they",
           "camped",
-          "between",
+          "$brain+arrow_both_ways",
           "$proper_name$Socoh",
           "and",
           "$proper_name$Azekah",
