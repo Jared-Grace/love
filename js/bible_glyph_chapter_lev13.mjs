@@ -973,7 +973,7 @@ export function bible_glyph_chapter_lev13() {
       {
         verse_number: 29,
         words: [
-          "If",
+          "$pointing",
           "a",
           "$man_beard",
           "$shuffle",
