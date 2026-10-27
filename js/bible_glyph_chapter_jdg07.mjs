@@ -603,7 +603,7 @@ export function bible_glyph_chapter_jdg07() {
           "hundred",
           "$man_beard",
           "into",
-          "three",
+          "$three",
           "companies",
           "and",
           "$hands_giving",
