@@ -764,7 +764,7 @@ export function bible_glyph_chapter_amo05() {
           "you",
           "into",
           "$luggage+chains+doing",
-          "beyond",
+          "$telescope+right_arrow",
           "$proper_name$Damascus,",
           "$speech",
           "the",
