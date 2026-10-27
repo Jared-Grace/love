@@ -217,7 +217,7 @@ export function bible_glyph_chapter_jer01() {
           "of",
           "them,",
           "$pointing",
-          "I",
+          "$me",
           "am",
           "with",
           "you",
