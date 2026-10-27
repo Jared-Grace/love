@@ -17,7 +17,7 @@ export function bible_glyph_chapter_isa26() {
           "In",
           "that",
           "$sun",
-          "this",
+          "$flashlight",
           "$song",
           "will",
           "be",
