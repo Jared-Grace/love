@@ -1021,7 +1021,7 @@ export function bible_glyph_chapter_1ki08() {
           "You",
           "$ear",
           "and",
-          "forgive.",
+          "$sponge.",
         ],
       },
       {
