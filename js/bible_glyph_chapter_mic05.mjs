@@ -312,7 +312,7 @@ export function bible_glyph_chapter_mic05() {
           "it",
           "passes",
           "through",
-          "tramples",
+          "$foot+person+down_arrow+doing",
           "and",
           "tears",
           "with",
