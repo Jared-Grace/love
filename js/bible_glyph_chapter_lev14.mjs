@@ -176,7 +176,7 @@ export function bible_glyph_chapter_lev14() {
           "times",
           "he",
           "shall",
-          "sprinkle",
+          "$droplet+hand+doing",
           "the",
           "one",
           "to",
