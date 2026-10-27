@@ -1412,7 +1412,7 @@ export function bible_glyph_chapter_deu28() {
           "your",
           "$heart_on_fire",
           "and",
-          "keep",
+          "$guard",
           "the",
           "$scroll",
           "and",
