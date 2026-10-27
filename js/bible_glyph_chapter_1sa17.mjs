@@ -369,7 +369,7 @@ export function bible_glyph_chapter_1sa17() {
         verse_number: 13,
         words: [
           "The",
-          "three",
+          "$three",
           "older",
           "$son",
           "of",
