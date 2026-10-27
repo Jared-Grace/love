@@ -190,7 +190,7 @@ export function bible_glyph_chapter_lam02() {
         words: [
           "The",
           "$crown",
-          "is",
+          "$link",
           "like",
           "an",
           "$enemy;",
