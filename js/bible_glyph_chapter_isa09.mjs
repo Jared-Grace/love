@@ -158,7 +158,7 @@ export function bible_glyph_chapter_isa09() {
           "For",
           "every",
           "trampling",
-          "boot",
+          "$hiking_boot+shield",
           "of",
           "battle",
           "and",
