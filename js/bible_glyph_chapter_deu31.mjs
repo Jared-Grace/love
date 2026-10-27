@@ -221,7 +221,7 @@ export function bible_glyph_chapter_deu31() {
           "and",
           "$superhero,",
           "$pointing",
-          "you",
+          "$you",
           "will",
           "$footprints",
           "with",
