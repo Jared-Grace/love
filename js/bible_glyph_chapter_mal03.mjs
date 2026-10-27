@@ -364,7 +364,7 @@ export function bible_glyph_chapter_mal03() {
           "I",
           "will",
           "$no_entry",
-          "open",
+          "$unlocked",
           "the",
           "windows",
           "of",
