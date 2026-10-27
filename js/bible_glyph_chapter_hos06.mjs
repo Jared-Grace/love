@@ -30,7 +30,7 @@ export function bible_glyph_chapter_hos06() {
           "but",
           "He",
           "will",
-          "heal",
+          "$bandage",
           "us;",
           "He",
           "has",
