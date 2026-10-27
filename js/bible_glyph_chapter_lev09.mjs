@@ -101,7 +101,7 @@ export function bible_glyph_chapter_lev09() {
           "a",
           "$peace+gift",
           "offering",
-          "before",
+          "$face",
           "$i_am,",
           "and",
           "$grain_offering",
