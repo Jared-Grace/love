@@ -104,7 +104,7 @@ export function bible_glyph_chapter_1ki02() {
           "and",
           "wherever",
           "you",
-          "turn.",
+          "$curving_right+doing.",
         ],
       },
       {
