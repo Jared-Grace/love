@@ -342,7 +342,7 @@ export function bible_glyph_chapter_mic01() {
       {
         verse_number: 11,
         words: [
-          "Depart",
+          "$bridge",
           "in",
           "shameful",
           "nakedness,",
