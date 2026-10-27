@@ -446,7 +446,7 @@ export function bible_glyph_chapter_2ki11() {
           "she",
           "$footprints",
           "out",
-          "to",
+          "$toward",
           "the",
           "$family",
           "in",
