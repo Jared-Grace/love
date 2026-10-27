@@ -423,7 +423,7 @@ export function bible_glyph_chapter_zep01() {
           "$person+house",
           "them,",
           "and",
-          "plant",
+          "$sprout+down_arrow+doing",
           "vineyards",
           "but",
           "$no_entry",
