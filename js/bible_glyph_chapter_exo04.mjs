@@ -687,7 +687,7 @@ export function bible_glyph_chapter_exo04() {
           "But",
           "I",
           "will",
-          "harden",
+          "$might+up_arrow",
           "his",
           "$heart_organ,",
           "so",
