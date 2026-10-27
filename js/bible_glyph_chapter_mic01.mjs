@@ -22,7 +22,7 @@ export function bible_glyph_chapter_mic01() {
           "$i_am",
           "that",
           "$link",
-          "to",
+          "$toward",
           "$proper_name$Micah",
           "the",
           "$proper_name$Moreshite",
