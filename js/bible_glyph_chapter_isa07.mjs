@@ -331,7 +331,7 @@ export function bible_glyph_chapter_isa07() {
       {
         verse_number: 11,
         words: [
-          '"Ask',
+          '"$question',
           "the",
           "$i_am",
           "your",
