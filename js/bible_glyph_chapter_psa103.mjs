@@ -230,7 +230,7 @@ export function bible_glyph_chapter_psa103() {
           "$satellite+doing",
           "as",
           "the",
-          "east",
+          "$east",
           "is",
           "$tray_out",
           "the",
