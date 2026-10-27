@@ -86,7 +86,7 @@ export function bible_glyph_chapter_ecc01() {
         words: [
           "The",
           "sun",
-          "rises",
+          "$sun+up_arrow+doing",
           "and",
           "the",
           "sun",
