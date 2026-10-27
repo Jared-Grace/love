@@ -552,7 +552,7 @@ export function bible_glyph_chapter_exo21() {
           "$fist",
           "his",
           "$kneeling",
-          "or",
+          "$shuffle",
           "his",
           "maidservant",
           "with",
