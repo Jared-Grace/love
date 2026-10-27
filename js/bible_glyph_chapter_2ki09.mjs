@@ -971,7 +971,7 @@ export function bible_glyph_chapter_2ki09() {
           "this",
           "plot",
           "of",
-          "ground,",
+          "$field+pizza,",
           "$microphone",
           "the",
           "$i_am.",
