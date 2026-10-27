@@ -139,7 +139,7 @@ export function bible_glyph_chapter_jer17() {
           "it",
           "will",
           "burn",
-          "forever.",
+          "$finish.",
         ],
       },
       {
