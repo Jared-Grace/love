@@ -261,7 +261,7 @@ export function bible_glyph_chapter_isa40() {
           "do",
           "$no_entry",
           "be",
-          "afraid.",
+          "$fear+doing.",
           "$speech",
           "to",
           "the",
