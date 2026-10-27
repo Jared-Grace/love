@@ -767,7 +767,7 @@ export function bible_glyph_chapter_exo33() {
           "will",
           "$eye",
           "My",
-          "back,",
+          "$last_track,",
           "but",
           "My",
           "face",
