@@ -534,7 +534,7 @@ export function bible_glyph_chapter_1ki22() {
           "$me",
           "make",
           "you",
-          "swear",
+          "$raised_back_of_hand+doing",
           "$no_entry",
           "to",
           "$mouth",
