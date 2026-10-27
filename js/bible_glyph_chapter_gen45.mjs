@@ -100,7 +100,7 @@ export function bible_glyph_chapter_gen45() {
           "terrified",
           "in",
           "his",
-          "presence.",
+          "$face.",
         ],
       },
       {
