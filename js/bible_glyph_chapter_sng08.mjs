@@ -200,7 +200,7 @@ export function bible_glyph_chapter_sng08() {
       {
         verse_number: 7,
         words: [
-          "Mighty",
+          "$multiply",
           "$water",
           "$no_entry",
           "quench",
