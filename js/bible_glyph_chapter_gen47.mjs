@@ -1008,7 +1008,7 @@ export function bible_glyph_chapter_gen47() {
           "in",
           "your",
           "$eyes,",
-          "put",
+          "$palm_down",
           "your",
           "$hand",
           "under",
