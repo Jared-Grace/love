@@ -290,7 +290,7 @@ export function bible_glyph_chapter_ecc01() {
           "by",
           "$wisdom",
           "$all",
-          "that",
+          "$back+flashlight",
           "is",
           "$hammer+doing",
           "under",
