@@ -241,7 +241,7 @@ export function bible_glyph_chapter_exo30() {
           "are",
           "$no_entry",
           "to",
-          "pour",
+          "$pouring_liquid+wine",
           "a",
           "drink",
           "offering",
