@@ -86,7 +86,7 @@ export function bible_glyph_chapter_hab03() {
           "and",
           "His",
           "$clapping_hands+thing",
-          "filled",
+          "$battery",
           "the",
           "$earth.",
         ],
