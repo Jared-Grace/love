@@ -642,7 +642,7 @@ export function bible_glyph_chapter_pro08() {
           "at",
           "my",
           "doors,",
-          "waiting",
+          "$guard",
           "at",
           "the",
           "posts",
