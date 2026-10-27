@@ -186,7 +186,7 @@ export function bible_glyph_chapter_deu06() {
         words: [
           "$flashlight+flashlight",
           "$speech",
-          "I",
+          "$me",
           "am",
           "commanding",
           "you",
