@@ -1633,7 +1633,7 @@ export function bible_glyph_chapter_deu04() {
           "of",
           "the",
           "$proper_name$Amorites,",
-          "who",
+          "$back+flashlight",
           "$person+house",
           "in",
           "$proper_name$Heshbon",
