@@ -204,7 +204,7 @@ export function bible_glyph_chapter_gen33() {
           "mean",
           "by",
           "the",
-          "whole",
+          "$all",
           "$camp",
           "I",
           "met?",
