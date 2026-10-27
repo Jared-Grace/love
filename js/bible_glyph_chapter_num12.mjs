@@ -99,7 +99,7 @@ export function bible_glyph_chapter_num12() {
           "three",
           "come",
           "out",
-          "to",
+          "$toward",
           "the",
           "$tent",
           "of",
