@@ -750,7 +750,7 @@ export function bible_glyph_chapter_lam03() {
           "sinned",
           "and",
           "rebelled;",
-          "You",
+          "$you",
           "have",
           "$no_entry",
           "forgiven.",
