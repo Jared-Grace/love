@@ -536,7 +536,7 @@ export function bible_glyph_chapter_deu19() {
       {
         verse_number: 16,
         words: [
-          "If",
+          "$pointing",
           "a",
           "false",
           "$witness",
