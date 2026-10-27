@@ -13,7 +13,7 @@ export function bible_glyph_chapter_2ki05() {
         verse_number: 1,
         words: [
           "Now",
-          "Naaman,",
+          "$smile+describing+proper_name,",
           "the",
           "commander",
           "of",
