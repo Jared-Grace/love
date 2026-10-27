@@ -668,7 +668,7 @@ export function bible_glyph_chapter_dan09() {
           "of",
           "Your",
           "great",
-          "compassion.",
+          "$hugging_face.",
         ],
       },
       {
