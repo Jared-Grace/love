@@ -885,7 +885,7 @@ export function bible_glyph_chapter_1sa17() {
           "have",
           "I",
           "$hammer+doing",
-          "now?",
+          "$watch?",
           "$speech",
           "$two_hearts+proper_name.",
           "Was",
