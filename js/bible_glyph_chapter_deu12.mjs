@@ -1056,7 +1056,7 @@ export function bible_glyph_chapter_deu12() {
           "for",
           "their",
           "$moai",
-          "every",
+          "$all",
           "abomination",
           "which",
           "the",
