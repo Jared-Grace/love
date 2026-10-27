@@ -41,7 +41,7 @@ export function bible_glyph_chapter_1sa25() {
           "out",
           "and",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "the",
           "$wilderness",
