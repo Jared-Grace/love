@@ -780,7 +780,7 @@ export function bible_glyph_chapter_gen37() {
           "$walking,",
           "let",
           "us",
-          "sell",
+          "$coin+hands_giving",
           "him",
           "to",
           "the",
