@@ -207,7 +207,7 @@ export function bible_glyph_chapter_lev17() {
           "and",
           "$incense+doing",
           "the",
-          "fat",
+          "$bacon",
           "as",
           "a",
           "pleasing",
