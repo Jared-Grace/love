@@ -606,7 +606,7 @@ export function bible_glyph_chapter_gen05() {
           "$flashlight",
           "one",
           "will",
-          "comfort",
+          "$hug+doing",
           "us",
           "from",
           "our",
