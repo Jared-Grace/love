@@ -255,7 +255,7 @@ export function bible_glyph_chapter_gen37() {
           "to",
           "his",
           "$brother.",
-          "Look,",
+          "$exclamation,",
           "he",
           "$speech,",
           "I",
