@@ -336,7 +336,7 @@ export function bible_glyph_chapter_zec03() {
           "under",
           "your",
           "own",
-          "vine",
+          "$vine",
           "and",
           "fig",
           "tree.",
