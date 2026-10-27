@@ -1136,7 +1136,7 @@ export function bible_glyph_chapter_2ch34() {
           "the",
           "$king",
           "$hand_sending",
-          "all",
+          "$all",
           "the",
           "elders",
           "of",
