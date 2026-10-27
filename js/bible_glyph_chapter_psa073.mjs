@@ -310,7 +310,7 @@ export function bible_glyph_chapter_psa073() {
           "I",
           "$footprints",
           "the",
-          "sanctuary",
+          "$sparkle+house",
           "of",
           "$heart_on_fire,",
           "then",
