@@ -1064,7 +1064,7 @@ export function bible_glyph_chapter_num22() {
           "turned",
           "away,",
           "by",
-          "now",
+          "$watch",
           "I",
           "would",
           "surely",
