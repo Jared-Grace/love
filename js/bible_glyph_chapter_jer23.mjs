@@ -865,7 +865,7 @@ export function bible_glyph_chapter_jer23() {
           "and",
           "the",
           "$earth,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am?",
         ],
