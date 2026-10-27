@@ -964,7 +964,7 @@ export function bible_glyph_chapter_dan09() {
           "the",
           "$sparkle+thing.",
           "The",
-          "end",
+          "$stop_sign",
           "will",
           "come",
           "like",
