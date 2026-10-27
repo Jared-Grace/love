@@ -544,7 +544,7 @@ export function bible_glyph_chapter_deu12() {
           "$ten+hands_giving",
           "of",
           "your",
-          "grain",
+          "$wheat+barley",
           "or",
           "new",
           "$wine",
