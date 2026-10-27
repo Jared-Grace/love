@@ -469,7 +469,7 @@ export function bible_glyph_chapter_isa11() {
           "$son",
           "of",
           "the",
-          "east.",
+          "$compass+right_arrow.",
           "They",
           "will",
           "lay",
