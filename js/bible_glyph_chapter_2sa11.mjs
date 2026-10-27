@@ -530,7 +530,7 @@ export function bible_glyph_chapter_2sa11() {
           "of",
           "the",
           "fiercest",
-          "battle,",
+          "$crossed_swords,",
           "then",
           "$turn_back",
           "from",
