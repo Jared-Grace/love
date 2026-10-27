@@ -742,7 +742,7 @@ export function bible_glyph_chapter_jdg07() {
           "The",
           "three",
           "companies",
-          "blew",
+          "$trumpet+doing",
           "their",
           "horns",
           "and",
