@@ -243,7 +243,7 @@ export function bible_glyph_chapter_hos02() {
           "does",
           "$no_entry",
           "$lightbulb",
-          "that",
+          "$pointing",
           "it",
           "was",
           "I",
