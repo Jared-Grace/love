@@ -854,7 +854,7 @@ export function bible_glyph_chapter_num15() {
           "But",
           "the",
           "$person_other",
-          "who",
+          "$back+flashlight",
           "$hammer+doing",
           "with",
           "a",
