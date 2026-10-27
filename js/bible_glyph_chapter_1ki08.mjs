@@ -356,7 +356,7 @@ export function bible_glyph_chapter_1ki08() {
           "there",
           "to",
           "$bellhop_bell+doing",
-          "because",
+          "$face",
           "of",
           "the",
           "cloud;",
