@@ -234,7 +234,7 @@ export function bible_glyph_chapter_gen14() {
       {
         verse_number: 9,
         words: [
-          "against",
+          "$safety_pin",
           "$proper_name$Chedorlaomer",
           "$king",
           "of",
