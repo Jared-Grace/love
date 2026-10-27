@@ -1081,7 +1081,7 @@ export function bible_glyph_chapter_jdg06() {
           "$you",
           "trying",
           "to",
-          "save",
+          "$rescue",
           "him?",
           "Whoever",
           "pleads",
