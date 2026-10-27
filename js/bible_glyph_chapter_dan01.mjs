@@ -260,7 +260,7 @@ export function bible_glyph_chapter_dan01() {
           "with",
           "the",
           "$king",
-          "food",
+          "$crown+bread",
           "or",
           "$wine.",
           "So",
