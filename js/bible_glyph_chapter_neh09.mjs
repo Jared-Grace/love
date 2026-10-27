@@ -624,7 +624,7 @@ export function bible_glyph_chapter_neh09() {
       {
         verse_number: 18,
         words: [
-          "Even",
+          "$plus+exclamation",
           "when",
           "they",
           "$hammer+doing",
