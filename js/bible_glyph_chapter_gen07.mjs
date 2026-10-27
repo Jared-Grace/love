@@ -119,7 +119,7 @@ export function bible_glyph_chapter_gen07() {
           "I",
           "will",
           "send",
-          "rain",
+          "$rain+doing",
           "on",
           "the",
           "$earth",
