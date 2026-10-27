@@ -433,7 +433,7 @@ export function bible_glyph_chapter_2sa07() {
         words: [
           "$pointing_back",
           "will",
-          "build",
+          "$brick",
           "a",
           "$house",
           "for",
