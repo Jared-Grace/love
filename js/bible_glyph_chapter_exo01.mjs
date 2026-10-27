@@ -173,7 +173,7 @@ export function bible_glyph_chapter_exo01() {
       {
         verse_number: 10,
         words: [
-          "Come,",
+          "$hands_giving+up_arrow,",
           "let",
           "us",
           "deal",
