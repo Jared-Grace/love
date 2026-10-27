@@ -1213,7 +1213,7 @@ export function bible_glyph_chapter_deu28() {
           "You",
           "will",
           "sow",
-          "much",
+          "$multiply",
           "$seed",
           "in",
           "the",
