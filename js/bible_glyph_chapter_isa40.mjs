@@ -42,7 +42,7 @@ export function bible_glyph_chapter_isa40() {
           "completed,",
           "that",
           "her",
-          "iniquity",
+          "$cyclone",
           "has",
           "been",
           "pardoned;",
