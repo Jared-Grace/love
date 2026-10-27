@@ -373,7 +373,7 @@ export function bible_glyph_chapter_exo05() {
           "gather",
           "$fallen_leaf+wheat",
           "for",
-          "straw.",
+          "$wheat+scissors.",
         ],
       },
       {
