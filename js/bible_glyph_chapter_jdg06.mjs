@@ -1257,7 +1257,7 @@ export function bible_glyph_chapter_jdg06() {
         verse_number: 37,
         words: [
           "then",
-          "behold,",
+          "$exclamation,",
           "I",
           "will",
           "place",
