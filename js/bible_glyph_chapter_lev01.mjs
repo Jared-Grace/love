@@ -188,7 +188,7 @@ export function bible_glyph_chapter_lev01() {
           "$hands_giving",
           "a",
           "$fire",
-          "on",
+          "$pointing_up",
           "$altar",
           "and",
           "arrange",
