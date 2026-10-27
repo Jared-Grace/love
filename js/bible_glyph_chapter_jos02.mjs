@@ -692,7 +692,7 @@ export function bible_glyph_chapter_jos02() {
           "$smiling_face_with_halo+describing",
           "from",
           "the",
-          "oath",
+          "$raised_back_of_hand",
           "you",
           "made",
           "us",
