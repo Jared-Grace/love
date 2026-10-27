@@ -330,7 +330,7 @@ export function bible_glyph_chapter_gen14() {
           "Abram,",
           "and",
           "his",
-          "possessions,",
+          "$package+money_bag,",
           "and",
           "$walking,",
           "since",
