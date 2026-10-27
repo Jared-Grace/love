@@ -198,7 +198,7 @@ export function bible_glyph_chapter_lam01() {
       {
         verse_number: 6,
         words: [
-          "All",
+          "$all",
           "the",
           "splendor",
           "has",
