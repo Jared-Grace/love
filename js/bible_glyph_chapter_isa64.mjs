@@ -38,7 +38,7 @@ export function bible_glyph_chapter_isa64() {
         words: [
           "as",
           "$fire",
-          "kindles",
+          "$fire+candle+doing",
           "the",
           "brushwood",
           "and",
