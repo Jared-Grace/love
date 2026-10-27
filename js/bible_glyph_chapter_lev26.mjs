@@ -261,7 +261,7 @@ export function bible_glyph_chapter_lev26() {
           "I",
           "will",
           "$curving_right+doing",
-          "toward",
+          "$toward",
           "you",
           "and",
           "make",
