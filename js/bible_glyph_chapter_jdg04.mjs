@@ -50,7 +50,7 @@ export function bible_glyph_chapter_jdg04() {
           "in",
           "$proper_name$Hazor.",
           "The",
-          "commander",
+          "$military_medal",
           "of",
           "his",
           "forces",
