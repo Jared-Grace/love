@@ -532,7 +532,7 @@ export function bible_glyph_chapter_1ki01() {
           "to",
           "your",
           "$broom,",
-          "Surely",
+          "$pointing",
           "$peace+proper_name",
           "your",
           "$son",
