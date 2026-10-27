@@ -384,7 +384,7 @@ export function bible_glyph_chapter_lev21() {
         words: [
           "The",
           "$woman",
-          "he",
+          "$pointing_back",
           "$hand_receiving",
           "must",
           "be",
