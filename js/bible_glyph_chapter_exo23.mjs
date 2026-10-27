@@ -83,7 +83,7 @@ export function bible_glyph_chapter_exo23() {
         words: [
           "$pointing",
           "you",
-          "encounter",
+          "$toward+person+doing",
           "the",
           "$ox",
           "of",
