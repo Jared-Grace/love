@@ -898,7 +898,7 @@ export function bible_glyph_chapter_jdg06() {
           "$wood+imp",
           "pole",
           "you",
-          "cut",
+          "$scissors",
           "down.",
         ],
       },
