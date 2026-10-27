@@ -324,7 +324,7 @@ export function bible_glyph_chapter_pro03() {
           "$hand+away",
           "hand",
           "are",
-          "riches",
+          "$money_bag",
           "and",
           "$star.",
         ],
