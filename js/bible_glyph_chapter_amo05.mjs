@@ -475,7 +475,7 @@ export function bible_glyph_chapter_amo05() {
           "cries",
           "of",
           "$crying_face+speech!",
-          "Alas!",
+          "$crying_face+speech!",
           "in",
           "all",
           "the",
