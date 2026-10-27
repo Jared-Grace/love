@@ -958,7 +958,7 @@ export function bible_glyph_chapter_2ch20() {
           "assembled",
           "in",
           "the",
-          "Valley",
+          "$valley",
           "of",
           "$proper_name$Beracah,",
           "where",
