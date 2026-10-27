@@ -655,7 +655,7 @@ export function bible_glyph_chapter_lam04() {
           "He",
           "will",
           "$no_entry",
-          "prolong",
+          "$plus+doing",
           "your",
           "exile.",
           "But",
