@@ -470,7 +470,7 @@ export function bible_glyph_chapter_pro08() {
           "any",
           "of",
           "the",
-          "dust",
+          "$dust",
           "of",
           "the",
           "$globe.",
