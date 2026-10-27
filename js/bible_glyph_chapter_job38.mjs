@@ -124,7 +124,7 @@ export function bible_glyph_chapter_job38() {
         words: [
           "while",
           "the",
-          "morning",
+          "$morning",
           "$star_plain",
           "$partying_face",
           "$linked_paperclips+manner",
