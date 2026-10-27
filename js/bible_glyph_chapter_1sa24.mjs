@@ -630,7 +630,7 @@ export function bible_glyph_chapter_1sa24() {
           "you",
           "did",
           "$no_entry",
-          "kill",
+          "$fist+skull",
           "me.",
         ],
       },
