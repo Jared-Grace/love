@@ -150,7 +150,7 @@ export function bible_glyph_chapter_mic05() {
           "$pointing",
           "then",
           "His",
-          "greatness",
+          "$top+doing",
           "will",
           "extend",
           "to",
