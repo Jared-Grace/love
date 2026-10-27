@@ -565,7 +565,7 @@ export function bible_glyph_chapter_gen27() {
           "Then",
           "$laughing+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$hand+foot,",
           '"Please',
           "come",
