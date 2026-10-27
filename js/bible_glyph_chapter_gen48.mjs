@@ -451,7 +451,7 @@ export function bible_glyph_chapter_gen48() {
           "$proper_name$Manasseh",
           "was",
           "the",
-          "firstborn.",
+          "$first_place+baby.",
         ],
       },
       {
