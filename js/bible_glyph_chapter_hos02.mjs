@@ -549,7 +549,7 @@ export function bible_glyph_chapter_hos02() {
           "her",
           "lips;",
           "$no_entry",
-          "longer",
+          "$repeat",
           "will",
           "their",
           "names",
