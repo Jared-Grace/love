@@ -463,7 +463,7 @@ export function bible_glyph_chapter_ezk03() {
           "and",
           "remained",
           "there",
-          "among",
+          "$radio_button",
           "them",
           "$seven",
           "$sun,",
