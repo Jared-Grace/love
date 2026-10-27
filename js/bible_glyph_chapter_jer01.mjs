@@ -504,7 +504,7 @@ export function bible_glyph_chapter_jer01() {
           "$all",
           "$back+flashlight",
           "I",
-          "command",
+          "$speech+scroll",
           "you.",
           "Do",
           "$no_entry",
