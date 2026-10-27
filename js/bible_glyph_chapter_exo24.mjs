@@ -51,7 +51,7 @@ export function bible_glyph_chapter_exo24() {
         verse_number: 2,
         words: [
           "$fishing_pole+proper_name",
-          "alone",
+          "$one+person",
           "shall",
           "approach",
           "$i_am,",
