@@ -502,7 +502,7 @@ export function bible_glyph_chapter_jer31() {
           "$ear",
           "in",
           "$proper_name$Ramah,",
-          "mourning",
+          "$loudly_crying+loudspeaker+thing",
           "and",
           "great",
           "weeping,",
