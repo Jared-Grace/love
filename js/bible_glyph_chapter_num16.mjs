@@ -1261,7 +1261,7 @@ export function bible_glyph_chapter_num16() {
           "next",
           "day",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "the",
