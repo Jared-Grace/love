@@ -122,7 +122,7 @@ export function bible_glyph_chapter_job03() {
           "May",
           "it",
           "$no_entry",
-          "appear",
+          "$confetti_ball+doing",
           "among",
           "the",
           "$sun",
