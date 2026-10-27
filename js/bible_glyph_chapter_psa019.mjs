@@ -134,7 +134,7 @@ export function bible_glyph_chapter_psa019() {
           "to",
           "the",
           "other;",
-          "nothing",
+          "$dotted_line_face",
           "is",
           "deprived",
           "of",
