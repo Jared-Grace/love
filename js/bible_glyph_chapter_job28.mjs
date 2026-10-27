@@ -406,7 +406,7 @@ export function bible_glyph_chapter_job28() {
           "the",
           "$eyes",
           "of",
-          "every",
+          "$all",
           "$sprout",
           "and",
           "concealed",
