@@ -562,7 +562,7 @@ export function bible_glyph_chapter_2sa07() {
           "$footprints",
           "in,",
           "$person+house",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "and",
