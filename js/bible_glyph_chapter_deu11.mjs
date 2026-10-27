@@ -61,7 +61,7 @@ export function bible_glyph_chapter_deu11() {
           "$no_entry",
           "$eye",
           "the",
-          "discipline",
+          "$teacher+exclamation",
           "of",
           "the",
           "$i_am",
