@@ -1960,7 +1960,7 @@ export function bible_glyph_chapter_gen24() {
           "Then",
           "the",
           "$kneeling",
-          "told",
+          "$abacus",
           "$laughing+proper_name",
           "all",
           "that",
