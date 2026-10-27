@@ -652,7 +652,7 @@ export function bible_glyph_chapter_2sa05() {
           "up,",
           "but",
           "circle",
-          "around",
+          "$toward",
           "behind",
           "them",
           "and",
