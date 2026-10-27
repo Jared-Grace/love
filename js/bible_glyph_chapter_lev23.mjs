@@ -560,7 +560,7 @@ export function bible_glyph_chapter_lev23() {
           "shall",
           "also",
           "$hammer+doing",
-          "one",
+          "$one",
           "male",
           "$goat",
           "as",
