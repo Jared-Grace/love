@@ -63,7 +63,7 @@ export function bible_glyph_chapter_lev03() {
           "Then",
           "$son",
           "of",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$priest",
           "shall",
           "splatter",
