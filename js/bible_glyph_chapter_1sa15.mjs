@@ -138,7 +138,7 @@ export function bible_glyph_chapter_1sa15() {
           "two",
           "hundred",
           "thousand",
-          "foot",
+          "$foot+doer",
           "soldiers",
           "and",
           "ten",
