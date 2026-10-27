@@ -977,7 +977,7 @@ export function bible_glyph_chapter_2ch34() {
           "poured",
           "out",
           "upon",
-          "this",
+          "$flashlight",
           "$place",
           "and",
           "will",
