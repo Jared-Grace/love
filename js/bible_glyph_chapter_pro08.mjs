@@ -188,7 +188,7 @@ export function bible_glyph_chapter_pro08() {
           "rather",
           "than",
           "choice",
-          "gold.",
+          "$kitchen_knife+leg.",
         ],
       },
       {
