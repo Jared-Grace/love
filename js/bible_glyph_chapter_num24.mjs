@@ -299,7 +299,7 @@ export function bible_glyph_chapter_num24() {
           "my",
           "$enemy,",
           "but",
-          "behold,",
+          "$exclamation,",
           "you",
           "have",
           "$speech+thumbs_up",
