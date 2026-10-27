@@ -156,7 +156,7 @@ export function bible_glyph_chapter_lev14() {
           "$blood",
           "of",
           "the",
-          "bird",
+          "$bird+pinching_hand",
           "that",
           "was",
           "$sprout",
