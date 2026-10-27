@@ -740,7 +740,7 @@ export function bible_glyph_chapter_2ki09() {
           "Again",
           "the",
           "watchman",
-          "reported,",
+          "$newspaper,",
           "$speech,",
           "He",
           "$footprints",
