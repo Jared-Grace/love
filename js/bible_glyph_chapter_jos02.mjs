@@ -392,7 +392,7 @@ export function bible_glyph_chapter_jos02() {
           "on",
           "the",
           "$earth",
-          "below.",
+          "$down_arrow.",
         ],
       },
       {
