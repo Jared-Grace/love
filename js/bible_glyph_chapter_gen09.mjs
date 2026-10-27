@@ -328,7 +328,7 @@ export function bible_glyph_chapter_gen09() {
           "And",
           "$heart_on_fire",
           "$speech,",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "sign",
