@@ -281,7 +281,7 @@ export function bible_glyph_chapter_gen48() {
           "So",
           "Jacob",
           "$speech,",
-          "Please",
+          "$pleading",
           "$hand_receiving",
           "them",
           "to",
