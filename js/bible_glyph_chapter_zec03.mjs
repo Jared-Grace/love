@@ -22,7 +22,7 @@ export function bible_glyph_chapter_zec03() {
           "the",
           "high",
           "$priest",
-          "standing",
+          "$person+round_pushpin",
           "before",
           "the",
           "$angel",
