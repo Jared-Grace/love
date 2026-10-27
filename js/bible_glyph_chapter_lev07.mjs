@@ -342,7 +342,7 @@ export function bible_glyph_chapter_lev07() {
           "he",
           "must",
           "$magnet+doing",
-          "one",
+          "$one",
           "portion",
           "of",
           "the",
