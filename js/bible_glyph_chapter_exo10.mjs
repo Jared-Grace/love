@@ -973,7 +973,7 @@ export function bible_glyph_chapter_exo10() {
           "$plus+doing",
           "$eye",
           "your",
-          "face.",
+          "$face.",
         ],
       },
     ],
