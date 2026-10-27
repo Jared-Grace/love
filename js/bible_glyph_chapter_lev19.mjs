@@ -341,7 +341,7 @@ export function bible_glyph_chapter_lev19() {
           "block",
           "$face",
           "the",
-          "blind,",
+          "$person_with_white_cane+describing,",
           "but",
           "you",
           "shall",
