@@ -113,7 +113,7 @@ export function bible_glyph_chapter_jdg16() {
           "pulled",
           "them",
           "out,",
-          "bar",
+          "$door+locked",
           "and",
           "all.",
           "Then",
