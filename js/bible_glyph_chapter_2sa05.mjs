@@ -30,7 +30,7 @@ export function bible_glyph_chapter_2sa05() {
           "$speech,",
           "$speech,",
           "$exclamation",
-          "we",
+          "$me",
           "are,",
           "your",
           "own",
