@@ -264,7 +264,7 @@ export function bible_glyph_chapter_isa11() {
           "reach",
           "into",
           "the",
-          "nest",
+          "$light+hole",
           "of",
           "the",
           "viper.",
