@@ -262,7 +262,7 @@ export function bible_glyph_chapter_mic05() {
           "$back+flashlight",
           "do",
           "$no_entry",
-          "wait",
+          "$crossed_fingers+doing",
           "for",
           "$man_beard",
           "$no_entry",
