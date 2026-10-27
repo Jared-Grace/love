@@ -772,7 +772,7 @@ export function bible_glyph_chapter_deu12() {
           "$one+check",
           "be",
           "sure",
-          "not",
+          "$zero+manner",
           "to",
           "$eating",
           "the",
