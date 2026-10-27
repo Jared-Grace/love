@@ -167,7 +167,7 @@ export function bible_glyph_chapter_psa063() {
           "You",
           "are",
           "my",
-          "help;",
+          "$rescue+hand+thing;",
           "in",
           "the",
           "shadow",
