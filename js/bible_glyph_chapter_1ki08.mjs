@@ -1275,7 +1275,7 @@ export function bible_glyph_chapter_1ki08() {
           "or",
           "$wilted_flower+wind",
           "or",
-          "mildew",
+          "$microbe+wheat",
           "or",
           "locusts",
           "or",
