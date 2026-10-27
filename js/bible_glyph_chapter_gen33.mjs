@@ -338,7 +338,7 @@ export function bible_glyph_chapter_gen33() {
           "My",
           "$crown",
           "$lightbulb",
-          "that",
+          "$pointing",
           "the",
           "$child",
           "are",
