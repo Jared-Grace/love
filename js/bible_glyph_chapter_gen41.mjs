@@ -1474,7 +1474,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "When",
           "the",
-          "seven",
+          "$seven",
           "$year",
           "of",
           "abundance",
