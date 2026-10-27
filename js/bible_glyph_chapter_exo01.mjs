@@ -361,7 +361,7 @@ export function bible_glyph_chapter_exo01() {
           "The",
           "midwives,",
           "however,",
-          "feared",
+          "$fear+doing",
           "$heart_on_fire",
           "and",
           "did",
