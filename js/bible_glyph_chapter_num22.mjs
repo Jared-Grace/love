@@ -1037,7 +1037,7 @@ export function bible_glyph_chapter_num22() {
           "your",
           "$road",
           "is",
-          "perverse",
+          "$running+down_arrow+doing",
           "before",
           "me.",
         ],
