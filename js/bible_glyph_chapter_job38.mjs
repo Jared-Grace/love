@@ -86,7 +86,7 @@ export function bible_glyph_chapter_job38() {
       {
         verse_number: 5,
         words: [
-          "Who",
+          "$person+question",
           "fixed",
           "its",
           "measurements?",
