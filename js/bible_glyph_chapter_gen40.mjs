@@ -420,7 +420,7 @@ export function bible_glyph_chapter_gen40() {
           "$proper_name$Hebrews,",
           "and",
           "even",
-          "here",
+          "$flashlight+round_pushpin",
           "I",
           "have",
           "$no_entry",
