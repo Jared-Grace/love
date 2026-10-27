@@ -1341,7 +1341,7 @@ export function bible_glyph_chapter_1ki08() {
           "And",
           "may",
           "You",
-          "forgive",
+          "$sponge",
           "and",
           "$hammer+doing",
           "and",
