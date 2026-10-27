@@ -1243,7 +1243,7 @@ export function bible_glyph_chapter_1sa20() {
           "boy,",
           "Run",
           "and",
-          "find",
+          "$magnifying_glass+exclamation",
           "the",
           "arrows",
           "I",
