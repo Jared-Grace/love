@@ -527,7 +527,7 @@ export function bible_glyph_chapter_1ki21() {
           "the",
           "$proper_name$Jezreelite,",
           "$back+flashlight",
-          "refused",
+          "$person_gesturing_no+doing",
           "to",
           "$hands_giving",
           "it",
