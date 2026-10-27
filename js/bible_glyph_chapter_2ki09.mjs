@@ -1222,7 +1222,7 @@ export function bible_glyph_chapter_2ki09() {
           "Take",
           "care",
           "of",
-          "this",
+          "$flashlight",
           "$speech+thumbs_down",
           "woman",
           "and",
