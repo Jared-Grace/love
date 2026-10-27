@@ -374,7 +374,7 @@ export function bible_glyph_chapter_jos06() {
           "and",
           "spent",
           "the",
-          "night",
+          "$night+doing",
           "there.",
         ],
       },
