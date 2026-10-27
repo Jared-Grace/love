@@ -401,7 +401,7 @@ export function bible_glyph_chapter_jer29() {
           "$magnifying_glass",
           "Me",
           "and",
-          "find",
+          "$magnifying_glass+exclamation",
           "Me",
           "when",
           "you",
