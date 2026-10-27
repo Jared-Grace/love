@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_deu12() {
           "$kneeling+doing",
           "their",
           "$moai?",
-          "I",
+          "$me",
           "will",
           "$hammer+doing",
           "$plus.",
