@@ -172,7 +172,7 @@ export function bible_glyph_chapter_gen27() {
           "your",
           "$father",
           "$mouth",
-          "to",
+          "$toward",
           "your",
           "$brother",
           "$proper_name$Esau,",
