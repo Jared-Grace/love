@@ -378,7 +378,7 @@ export function bible_glyph_chapter_exo19() {
           "for",
           "the",
           "$family",
-          "around",
+          "$around",
           "the",
           "mountain",
           "and",
