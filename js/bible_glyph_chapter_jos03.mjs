@@ -578,7 +578,7 @@ export function bible_glyph_chapter_jos03() {
           "crossed",
           "over",
           "the",
-          "dry",
+          "$desert+brown_square",
           "ground",
           "until",
           "the",
