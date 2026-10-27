@@ -1586,7 +1586,7 @@ export function bible_glyph_chapter_deu28() {
           "leave",
           "you",
           "$no_entry",
-          "grain",
+          "$wheat+barley",
           "or",
           "new",
           "$wine",
