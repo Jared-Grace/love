@@ -242,7 +242,7 @@ export function bible_glyph_chapter_hab01() {
           "$footprints",
           "bent",
           "on",
-          "violence;",
+          "$boxing_glove;",
           "their",
           "hordes",
           "advance",
