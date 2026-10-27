@@ -528,7 +528,7 @@ export function bible_glyph_chapter_1sa25() {
           "both",
           "$night",
           "and",
-          "day,",
+          "$sun+manner,",
           "the",
           "whole",
           "$sun",
