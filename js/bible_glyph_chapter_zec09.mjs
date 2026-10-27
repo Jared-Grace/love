@@ -166,7 +166,7 @@ export function bible_glyph_chapter_zec09() {
         verse_number: 6,
         words: [
           "A",
-          "mixed",
+          "$baby+foreigner",
           "race",
           "will",
           "occupy",
