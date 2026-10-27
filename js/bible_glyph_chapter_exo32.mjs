@@ -319,7 +319,7 @@ export function bible_glyph_chapter_exo32() {
           "$flashlight",
           "$family,",
           "and",
-          "they",
+          "$pointing_back",
           "are",
           "indeed",
           "a",
