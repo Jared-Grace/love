@@ -657,7 +657,7 @@ export function bible_glyph_chapter_num32() {
           "$turn_back",
           "and",
           "be",
-          "free",
+          "$smiling_face_with_halo+describing",
           "of",
           "obligation",
           "to",
