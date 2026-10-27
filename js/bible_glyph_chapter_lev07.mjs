@@ -566,7 +566,7 @@ export function bible_glyph_chapter_lev07() {
           "or",
           "an",
           "$soap+no_entry",
-          "animal",
+          "$paw_prints",
           "or",
           "any",
           "$soap+no_entry",
