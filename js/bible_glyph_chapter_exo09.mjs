@@ -575,7 +575,7 @@ export function bible_glyph_chapter_exo09() {
           "Every",
           "$person",
           "or",
-          "beast",
+          "$paw_prints",
           "that",
           "remains",
           "in",
