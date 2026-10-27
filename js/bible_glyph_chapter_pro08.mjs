@@ -322,7 +322,7 @@ export function bible_glyph_chapter_pro08() {
           "$money_bag",
           "and",
           "$star,",
-          "enduring",
+          "$hourglass+gem_stone",
           "$money_bag+more",
           "and",
           "$ruler+thing.",
