@@ -1538,7 +1538,7 @@ export function bible_glyph_chapter_1ki22() {
           "did",
           "$no_entry",
           "$walking,",
-          "because",
+          "$pointing",
           "they",
           "were",
           "wrecked",
