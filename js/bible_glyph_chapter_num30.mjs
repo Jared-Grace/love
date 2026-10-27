@@ -469,7 +469,7 @@ export function bible_glyph_chapter_num30() {
           "then",
           "he",
           "confirms",
-          "all",
+          "$all",
           "the",
           "vows",
           "and",
