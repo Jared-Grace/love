@@ -318,7 +318,7 @@ export function bible_glyph_chapter_ecc01() {
           "I",
           "have",
           "$eye",
-          "all",
+          "$all",
           "the",
           "things",
           "that",
