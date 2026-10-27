@@ -583,7 +583,7 @@ export function bible_glyph_chapter_job01() {
           "struck",
           "the",
           "$four",
-          "corners",
+          "$triangular_ruler+brick",
           "of",
           "the",
           "$house.",
