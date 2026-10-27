@@ -894,7 +894,7 @@ export function bible_glyph_chapter_jos07() {
           "from",
           "inside",
           "the",
-          "tent",
+          "$tent",
           "and",
           "$footprints",
           "them",
