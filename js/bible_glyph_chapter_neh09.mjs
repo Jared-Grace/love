@@ -1388,7 +1388,7 @@ export function bible_glyph_chapter_neh09() {
           "our",
           "$bow.",
           "They",
-          "rule",
+          "$joystick",
           "over",
           "our",
           "bodies",
