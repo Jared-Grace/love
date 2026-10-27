@@ -1117,7 +1117,7 @@ export function bible_glyph_chapter_1ki01() {
           "have",
           "appointed",
           "him",
-          "ruler",
+          "$first_place+person",
           "over",
           "$wrestling+heart_on_fire",
           "and",
