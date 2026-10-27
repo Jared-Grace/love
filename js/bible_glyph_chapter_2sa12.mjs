@@ -566,7 +566,7 @@ export function bible_glyph_chapter_2sa12() {
           "and",
           "would",
           "$no_entry",
-          "eat",
+          "$milky_way+doing",
           "anything",
           "with",
           "them.",
