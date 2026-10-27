@@ -771,7 +771,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "sacrificed",
           "an",
-          "abundance",
+          "$multiply+thing",
           "of",
           "oxen,",
           "fattened",
