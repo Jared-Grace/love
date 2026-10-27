@@ -403,7 +403,7 @@ export function bible_glyph_chapter_isa02() {
           "lifted",
           "up,",
           "and",
-          "against",
+          "$pointing_up",
           "all",
           "the",
           "oaks",
