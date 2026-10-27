@@ -17,7 +17,7 @@ export function bible_glyph_chapter_pro02() {
         words: [
           "My",
           "$son,",
-          "if",
+          "$traffic_light",
           "you",
           "$hand_receiving",
           "my",
