@@ -284,7 +284,7 @@ export function bible_glyph_chapter_exo28() {
           "of",
           "their",
           "$name_tag",
-          "on",
+          "$pointing_up",
           "one",
           "$stone",
           "and",
