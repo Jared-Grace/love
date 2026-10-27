@@ -232,7 +232,7 @@ export function bible_glyph_chapter_2ki11() {
         words: [
           "and",
           "the",
-          "two",
+          "$two",
           "divisions",
           "that",
           "would",
