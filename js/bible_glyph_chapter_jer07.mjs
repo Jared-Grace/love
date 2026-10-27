@@ -77,7 +77,7 @@ export function bible_glyph_chapter_jer07() {
           "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire:",
-          "Correct",
+          "$thumbs_up+doing",
           "your",
           "$road",
           "and",
