@@ -235,7 +235,7 @@ export function bible_glyph_chapter_gen18() {
           "$hand_receiving",
           "$milk+brick",
           "and",
-          "milk",
+          "$milk",
           "and",
           "the",
           "$son",
