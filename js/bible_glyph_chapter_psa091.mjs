@@ -152,7 +152,7 @@ export function bible_glyph_chapter_psa091() {
           "a",
           "thousand",
           "may",
-          "fall",
+          "$person+pointing_down",
           "at",
           "your",
           "side,",
