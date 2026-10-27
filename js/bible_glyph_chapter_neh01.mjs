@@ -273,7 +273,7 @@ export function bible_glyph_chapter_neh01() {
           "$pleading,",
           "the",
           "$speech",
-          "that",
+          "$back+flashlight",
           "You",
           "commanded",
           "$fishing_pole+proper_name",
