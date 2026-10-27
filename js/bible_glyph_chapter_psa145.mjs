@@ -340,7 +340,7 @@ export function bible_glyph_chapter_psa145() {
         verse_number: 16,
         words: [
           "You",
-          "open",
+          "$unlocked",
           "Your",
           "$hand",
           "and",
