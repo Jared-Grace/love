@@ -445,7 +445,7 @@ export function bible_glyph_chapter_ezk01() {
           "$gem_stone+water_wave,",
           "and",
           "all",
-          "four",
+          "$four",
           "had",
           "the",
           "same",
