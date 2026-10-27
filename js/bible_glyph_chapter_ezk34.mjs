@@ -873,7 +873,7 @@ export function bible_glyph_chapter_ezk34() {
           "secure",
           "in",
           "their",
-          "land.",
+          "$brown_square.",
           "Then",
           "they",
           "will",
