@@ -625,7 +625,7 @@ export function bible_glyph_chapter_jer07() {
           "and",
           "it",
           "will",
-          "burn",
+          "$fire+wood",
           "and",
           "$no_entry",
           "be",
