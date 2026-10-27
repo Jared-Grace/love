@@ -623,7 +623,7 @@ export function bible_glyph_chapter_jer18() {
           "$son",
           "$hands_giving",
           "to",
-          "famine;",
+          "$famine;",
           "pour",
           "out",
           "upon",
