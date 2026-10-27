@@ -932,7 +932,7 @@ export function bible_glyph_chapter_num18() {
           "of",
           "Israel",
           "the",
-          "tithe",
+          "$ten+hands_giving",
           "that",
           "$hands_giving",
           "you",
