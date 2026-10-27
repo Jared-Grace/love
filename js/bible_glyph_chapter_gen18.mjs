@@ -770,7 +770,7 @@ export function bible_glyph_chapter_gen18() {
           "$magnifying_glass+exclamation",
           "$five+zero",
           "$ruler",
-          "within",
+          "$radio_button",
           "the",
           "$city",
           "of",
