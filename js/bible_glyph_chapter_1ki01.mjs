@@ -1524,7 +1524,7 @@ export function bible_glyph_chapter_1ki01() {
           "$bowing",
           "on",
           "his",
-          "bed",
+          "$bed",
         ],
       },
       {
