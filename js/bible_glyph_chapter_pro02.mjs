@@ -114,7 +114,7 @@ export function bible_glyph_chapter_pro02() {
           "$wisdom.",
           "From",
           "His",
-          "mouth",
+          "$face_with_open_mouth",
           "come",
           "knowledge",
           "and",
