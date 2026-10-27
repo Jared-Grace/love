@@ -1095,7 +1095,7 @@ export function bible_glyph_chapter_1sa20() {
           "$you",
           "nor",
           "your",
-          "kingdom",
+          "$castle",
           "shall",
           "be",
           "established.",
