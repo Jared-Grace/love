@@ -50,7 +50,7 @@ export function bible_glyph_chapter_1sa17() {
           "camped",
           "in",
           "the",
-          "Valley",
+          "$valley",
           "of",
           "$proper_name$Elah,",
           "arraying",
