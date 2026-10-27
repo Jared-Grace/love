@@ -683,7 +683,7 @@ export function bible_glyph_chapter_exo08() {
           "$clamp+person",
           "will",
           "be",
-          "full",
+          "$battery",
           "of",
           "flies,",
           "and",
