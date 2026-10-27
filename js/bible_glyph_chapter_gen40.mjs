@@ -38,7 +38,7 @@ export function bible_glyph_chapter_gen40() {
         words: [
           "$house+proper_name",
           "was",
-          "angry",
+          "$angry_face+collision+doing",
           "with",
           "his",
           "two",
