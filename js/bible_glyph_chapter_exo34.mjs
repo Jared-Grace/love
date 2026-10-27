@@ -214,7 +214,7 @@ export function bible_glyph_chapter_exo34() {
           "$ten+all",
           "generations,",
           "$lifting",
-          "iniquity,",
+          "$cyclone,",
           "transgression,",
           "and",
           "$bow.",
