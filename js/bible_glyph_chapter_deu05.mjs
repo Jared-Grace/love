@@ -32,7 +32,7 @@ export function bible_glyph_chapter_deu05() {
           "and",
           "$scales+thing",
           "$back+flashlight",
-          "I",
+          "$me",
           "$mouth",
           "in",
           "your",
