@@ -27,7 +27,7 @@ export function bible_glyph_chapter_dan09() {
           "$proper_name$Mede",
           "by",
           "descent,",
-          "who",
+          "$back+flashlight",
           "was",
           "made",
           "$castle+doing",
