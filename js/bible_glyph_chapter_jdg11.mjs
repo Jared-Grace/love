@@ -378,7 +378,7 @@ export function bible_glyph_chapter_jdg11() {
           "have",
           "against",
           "me,",
-          "that",
+          "$pointing",
           "you",
           "have",
           "$footprints",
