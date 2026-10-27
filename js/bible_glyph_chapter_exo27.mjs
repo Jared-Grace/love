@@ -520,7 +520,7 @@ export function bible_glyph_chapter_exo27() {
           "$hand_receiving",
           "you",
           "pure",
-          "oil",
+          "$lotion_bottle",
           "of",
           "pressed",
           "$olive",
