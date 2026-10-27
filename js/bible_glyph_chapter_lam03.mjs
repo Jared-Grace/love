@@ -409,7 +409,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "They",
           "are",
-          "new",
+          "$new_button",
           "every",
           "morning;",
           "great",
