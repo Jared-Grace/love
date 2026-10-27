@@ -217,7 +217,7 @@ export function bible_glyph_chapter_lev22() {
           "he",
           "will",
           "become",
-          "clean,",
+          "$soap+doing,",
           "and",
           "then",
           "he",
