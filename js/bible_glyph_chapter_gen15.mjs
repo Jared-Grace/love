@@ -154,7 +154,7 @@ export function bible_glyph_chapter_gen15() {
           "$traffic_light",
           "you",
           "are",
-          "able.",
+          "$might+doing.",
           "Then",
           "He",
           "$speech",
