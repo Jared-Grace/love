@@ -218,7 +218,7 @@ export function bible_glyph_chapter_deu07() {
           "$family",
           "$pointing_up",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth.",
