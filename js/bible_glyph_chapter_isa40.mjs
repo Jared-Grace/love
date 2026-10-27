@@ -531,7 +531,7 @@ export function bible_glyph_chapter_isa40() {
         words: [
           "To",
           "an",
-          "idol",
+          "$nesting_dolls",
           "that",
           "a",
           "craftsman",
