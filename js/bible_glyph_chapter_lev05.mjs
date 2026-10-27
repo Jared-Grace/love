@@ -243,7 +243,7 @@ export function bible_glyph_chapter_lev05() {
           "$priest,",
           "who",
           "shall",
-          "first",
+          "$first_place",
           "$magnet+doing",
           "the",
           "one",
