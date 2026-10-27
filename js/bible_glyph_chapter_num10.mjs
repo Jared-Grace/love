@@ -937,7 +937,7 @@ export function bible_glyph_chapter_num10() {
           "it",
           "came",
           "to",
-          "rest,",
+          "$seat+doing,",
           "he",
           "would",
           "$speech,",
