@@ -304,7 +304,7 @@ export function bible_glyph_chapter_gen48() {
           "were",
           "heavy",
           "with",
-          "old",
+          "$old_man+thing",
           "age,",
           "and",
           "he",
