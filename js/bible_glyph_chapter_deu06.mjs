@@ -650,7 +650,7 @@ export function bible_glyph_chapter_deu06() {
           "great",
           "and",
           "$thumbs_down",
-          "signs",
+          "$placard",
           "and",
           "wonders",
           "on",
