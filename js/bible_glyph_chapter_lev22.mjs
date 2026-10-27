@@ -41,7 +41,7 @@ export function bible_glyph_chapter_lev22() {
           "they",
           "do",
           "$no_entry",
-          "profane",
+          "$sewing_needle",
           "My",
           "$sparkle+doing",
           "$name_tag.",
