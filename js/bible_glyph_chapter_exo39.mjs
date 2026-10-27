@@ -376,7 +376,7 @@ export function bible_glyph_chapter_exo39() {
           "they",
           "$hammer",
           "braided",
-          "chains",
+          "$thread+repeat",
           "of",
           "pure",
           "$gold,",
