@@ -316,7 +316,7 @@ export function bible_glyph_chapter_1sa03() {
           "$ear+heart_on_fire",
           "$speech,",
           "$mouth,",
-          "for",
+          "$pointing",
           "Your",
           "$kneeling",
           "is",
