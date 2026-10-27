@@ -69,7 +69,7 @@ export function bible_glyph_chapter_exo10() {
           "of",
           "your",
           "$son,",
-          "how",
+          "$back+flashlight",
           "severely",
           "I",
           "dealt",
