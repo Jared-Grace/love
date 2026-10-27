@@ -487,7 +487,7 @@ export function bible_glyph_chapter_isa02() {
       },
       {
         verse_number: 18,
-        words: ["And", "the", "idols", "will", "completely", "vanish."],
+        words: ["And", "the", "idols", "will", "$all+describing", "vanish."],
       },
       {
         verse_number: 19,
