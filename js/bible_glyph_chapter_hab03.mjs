@@ -267,7 +267,7 @@ export function bible_glyph_chapter_hab03() {
           "and",
           "$moon",
           "stood",
-          "still",
+          "$person+round_pushpin",
           "in",
           "their",
           "places,",
