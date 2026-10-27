@@ -383,7 +383,7 @@ export function bible_glyph_chapter_exo29() {
         verse_number: 14,
         words: [
           "But",
-          "burn",
+          "$fire+doing",
           "the",
           "$meat",
           "of",
