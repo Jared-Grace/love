@@ -183,7 +183,7 @@ export function bible_glyph_chapter_1sa08() {
           "$family",
           "in",
           "all",
-          "that",
+          "$back+flashlight",
           "they",
           "$speech",
           "to",
