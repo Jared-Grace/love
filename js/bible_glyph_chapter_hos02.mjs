@@ -213,7 +213,7 @@ export function bible_glyph_chapter_hos02() {
           "them",
           "but",
           "$no_entry",
-          "find",
+          "$magnifying_glass+exclamation",
           "them.",
           "Then",
           "she",
