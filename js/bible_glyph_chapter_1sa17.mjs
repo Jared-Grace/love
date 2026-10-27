@@ -1228,7 +1228,7 @@ export function bible_glyph_chapter_1sa17() {
           "$stone",
           "$tray_out",
           "the",
-          "brook,",
+          "$national_park,",
           "and",
           "put",
           "them",
