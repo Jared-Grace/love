@@ -529,7 +529,7 @@ export function bible_glyph_chapter_lev08() {
           "$hand",
           "$pointing_up",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "$ram.",
         ],
