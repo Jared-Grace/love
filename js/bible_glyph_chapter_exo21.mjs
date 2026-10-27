@@ -624,7 +624,7 @@ export function bible_glyph_chapter_exo21() {
           "is",
           "$no_entry",
           "further",
-          "injury,",
+          "$face_with_head_bandage+thing,",
           "he",
           "shall",
           "surely",
