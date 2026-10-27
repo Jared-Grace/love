@@ -539,7 +539,7 @@ export function bible_glyph_chapter_gen41() {
           "the",
           "thin,",
           "$thumbs_down",
-          "cows",
+          "$bull",
           "$eating",
           "the",
           "seven",
