@@ -210,7 +210,7 @@ export function bible_glyph_chapter_exo38() {
           "$military_helmet+doing",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "$tent",
