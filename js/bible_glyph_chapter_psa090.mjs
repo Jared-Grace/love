@@ -182,7 +182,7 @@ export function bible_glyph_chapter_psa090() {
         verse_number: 9,
         words: [
           "$pointing",
-          "all",
+          "$all",
           "our",
           "$sun",
           "decline",
