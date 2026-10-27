@@ -439,7 +439,7 @@ export function bible_glyph_chapter_gen04() {
           "And",
           "the",
           "$i_am",
-          "placed",
+          "$palm_down",
           "a",
           "mark",
           "on",
