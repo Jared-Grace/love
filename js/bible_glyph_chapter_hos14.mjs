@@ -194,7 +194,7 @@ export function bible_glyph_chapter_hos14() {
           "$cherry_blossom",
           "like",
           "the",
-          "vine.",
+          "$vine.",
           "His",
           "renown",
           "will",
