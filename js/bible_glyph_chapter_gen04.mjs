@@ -309,7 +309,7 @@ export function bible_glyph_chapter_gen04() {
           "$tray_out",
           "the",
           "$brown_square,",
-          "which",
+          "$back+flashlight",
           "has",
           "opened",
           "its",
