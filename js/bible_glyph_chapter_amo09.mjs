@@ -517,7 +517,7 @@ export function bible_glyph_chapter_amo09() {
           "$family",
           "$wrestling+heart_on_fire",
           "from",
-          "captivity;",
+          "$turn_back+chains;",
           "they",
           "will",
           "rebuild",
