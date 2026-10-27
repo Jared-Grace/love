@@ -35,7 +35,7 @@ export function bible_glyph_chapter_gen31() {
           "$father's",
           "he",
           "$hammer+doing",
-          "all",
+          "$all",
           "this",
           "$star.",
         ],
