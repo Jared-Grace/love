@@ -240,7 +240,7 @@ export function bible_glyph_chapter_neh09() {
       {
         verse_number: 7,
         words: [
-          "You",
+          "$you",
           "are",
           "the",
           "$i_am",
