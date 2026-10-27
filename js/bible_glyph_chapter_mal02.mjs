@@ -448,7 +448,7 @@ export function bible_glyph_chapter_mal02() {
           "because",
           "He",
           "no",
-          "longer",
+          "$repeat",
           "regards",
           "your",
           "offerings",
