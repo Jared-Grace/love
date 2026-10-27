@@ -746,7 +746,7 @@ export function bible_glyph_chapter_2ki04() {
           "pace",
           "for",
           "me",
-          "unless",
+          "$traffic_light",
           "I",
           "$speech",
           "you.",
