@@ -125,7 +125,7 @@ export function bible_glyph_chapter_exo38() {
         words: [
           "He",
           "$pouring_liquid+fire",
-          "four",
+          "$four",
           "$ring",
           "at",
           "the",
