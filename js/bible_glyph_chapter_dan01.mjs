@@ -469,7 +469,7 @@ export function bible_glyph_chapter_dan01() {
         words: [
           "So",
           "the",
-          "steward",
+          "$key+person",
           "continued",
           "to",
           "withhold",
