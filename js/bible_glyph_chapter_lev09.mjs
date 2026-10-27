@@ -567,7 +567,7 @@ export function bible_glyph_chapter_lev09() {
           "$star",
           "$i_am",
           "$eye",
-          "to",
+          "$toward",
           "all",
           "$family.",
         ],
