@@ -446,7 +446,7 @@ export function bible_glyph_chapter_zec14() {
           "$sun",
           "a",
           "great",
-          "panic",
+          "$megaphone+crowd+thing",
           "from",
           "$i_am",
           "will",
