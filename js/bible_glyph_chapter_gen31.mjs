@@ -1557,7 +1557,7 @@ export function bible_glyph_chapter_gen31() {
         words: [
           "And",
           "$hand+foot",
-          "offered",
+          "$sacrifice",
           "a",
           "$sacrifice",
           "on",
