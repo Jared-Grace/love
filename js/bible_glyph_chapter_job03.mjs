@@ -366,7 +366,7 @@ export function bible_glyph_chapter_job03() {
           "of",
           "$lightning",
           "find",
-          "rest.",
+          "$seat+doing.",
         ],
       },
       {
