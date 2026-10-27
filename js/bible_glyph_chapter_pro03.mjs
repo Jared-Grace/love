@@ -71,7 +71,7 @@ export function bible_glyph_chapter_pro03() {
           "them",
           "on",
           "the",
-          "tablet",
+          "$stone+writing_hand",
           "of",
           "your",
           "$heart_organ.",
