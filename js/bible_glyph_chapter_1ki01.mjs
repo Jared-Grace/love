@@ -1237,7 +1237,7 @@ export function bible_glyph_chapter_1ki01() {
           "horn",
           "of",
           "$lotion_bottle",
-          "from",
+          "$tray_out",
           "the",
           "tabernacle",
           "and",
