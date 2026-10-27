@@ -342,7 +342,7 @@ export function bible_glyph_chapter_est04() {
           "$lightbulb",
           "that",
           "$one",
-          "law",
+          "$scroll+crown",
           "applies",
           "to",
           "every",
