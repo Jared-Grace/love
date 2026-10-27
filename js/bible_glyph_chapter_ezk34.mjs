@@ -33,7 +33,7 @@ export function bible_glyph_chapter_ezk34() {
           "of",
           "$person,",
           "$megaphone+doing",
-          "against",
+          "$pointing_up",
           "the",
           "shepherds",
           "of",
