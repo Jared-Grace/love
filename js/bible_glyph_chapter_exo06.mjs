@@ -545,7 +545,7 @@ export function bible_glyph_chapter_exo06() {
           "$proper_name$Mahli",
           "and",
           "$proper_name$Mushi.",
-          "These",
+          "$flashlight+flashlight",
           "were",
           "the",
           "clans",
