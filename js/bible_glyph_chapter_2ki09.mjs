@@ -120,7 +120,7 @@ export function bible_glyph_chapter_2ki09() {
           "Then",
           "$unlocked",
           "the",
-          "door",
+          "$door+thing",
           "and",
           "run.",
           "Do",
