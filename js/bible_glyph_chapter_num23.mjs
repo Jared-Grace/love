@@ -371,7 +371,7 @@ export function bible_glyph_chapter_num23() {
           "with",
           "me",
           "to",
-          "another",
+          "$plus+one",
           "$place",
           "where",
           "you",
