@@ -515,7 +515,7 @@ export function bible_glyph_chapter_gen22() {
           "and",
           "I",
           "will",
-          "multiply",
+          "$multiply+doing",
           "your",
           "$seed",
           "like",
