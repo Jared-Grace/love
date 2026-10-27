@@ -463,7 +463,7 @@ export function bible_glyph_chapter_isa26() {
           "out",
           "in",
           "pain,",
-          "so",
+          "$right_arrow",
           "were",
           "we",
           "in",
