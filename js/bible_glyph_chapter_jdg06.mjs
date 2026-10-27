@@ -827,7 +827,7 @@ export function bible_glyph_chapter_jdg06() {
           "him,",
           "$hand_receiving",
           "the",
-          "bull",
+          "$bull",
           "of",
           "your",
           "$father",
