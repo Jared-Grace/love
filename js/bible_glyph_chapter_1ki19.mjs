@@ -688,7 +688,7 @@ export function bible_glyph_chapter_1ki19() {
           "plowing",
           "with",
           "twelve",
-          "teams",
+          "$ox+two",
           "of",
           "oxen,",
           "and",
