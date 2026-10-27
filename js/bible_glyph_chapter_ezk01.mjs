@@ -28,7 +28,7 @@ export function bible_glyph_chapter_ezk01() {
           "while",
           "I",
           "was",
-          "among",
+          "$radio_button",
           "the",
           "exiles",
           "by",
