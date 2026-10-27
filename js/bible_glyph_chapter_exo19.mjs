@@ -680,7 +680,7 @@ export function bible_glyph_chapter_exo19() {
           "the",
           "$i_am,",
           "lest",
-          "many",
+          "$multiply",
           "$tray_out",
           "them",
           "$person+pointing_down.",
