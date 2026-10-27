@@ -710,7 +710,7 @@ export function bible_glyph_chapter_jos06() {
           "They",
           "devoted",
           "to",
-          "destruction",
+          "$bomb+altar+doing",
           "everything",
           "in",
           "the",
