@@ -52,7 +52,7 @@ export function app_code_lesson_quiz_pieces_select(
         ("2026-10-14, at the human's asking: a refused piece goes back to exactly how it looked before, once a right one is tapped - its red edge too, which the plain dark style never touched, so a border stayed red. Saved before the red goes on, and put back newest first, so a piece refused twice ends as it was before the first red. Not picked: adding the border to the plain style, which would be one more property for every reset to remember");
         let restore = html_styles_inline_restore_later(b);
         list_add(restores, restore);
-        app_code_lesson_quiz_token_select_wrong_show(
+        app_code_lesson_quiz_token_select_wrong_show({
           b,
           note_div,
           chosen,
@@ -60,7 +60,7 @@ export function app_code_lesson_quiz_pieces_select(
           tokens_unique,
           on_wrong,
           variations,
-        );
+        });
         return;
       }
       html_text_content_set(note_div, "");
