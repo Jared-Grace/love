@@ -575,7 +575,7 @@ export function bible_glyph_chapter_lev22() {
           "offer",
           "an",
           "unblemished",
-          "male",
+          "$reminder_ribbon+thing",
           "from",
           "the",
           "cattle,",
