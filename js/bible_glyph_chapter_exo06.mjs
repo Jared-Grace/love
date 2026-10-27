@@ -19,7 +19,7 @@ export function bible_glyph_chapter_exo06() {
           "$speech",
           "to",
           "$fishing_pole+proper_name,",
-          "Now",
+          "$watch",
           "you",
           "will",
           "$eye",
