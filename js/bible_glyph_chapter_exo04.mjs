@@ -418,7 +418,7 @@ export function bible_glyph_chapter_exo04() {
           "But",
           "Moses",
           "$speech,",
-          '"Please,',
+          '"$pleading_face+manner,',
           "$crown,",
           "$hand_sending",
           "someone",
