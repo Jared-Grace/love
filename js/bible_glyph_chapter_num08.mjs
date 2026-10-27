@@ -246,7 +246,7 @@ export function bible_glyph_chapter_num08() {
           "$crutch",
           "their",
           "$hand",
-          "upon",
+          "$pointing_up",
           "them.",
         ],
       },
