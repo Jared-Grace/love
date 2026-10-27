@@ -542,7 +542,7 @@ export function bible_glyph_chapter_deu16() {
           "in",
           "all",
           "your",
-          "produce",
+          "$fruit+basket",
           "and",
           "in",
           "all",
