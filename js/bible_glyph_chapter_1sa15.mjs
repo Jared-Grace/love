@@ -1068,7 +1068,7 @@ export function bible_glyph_chapter_1sa15() {
           "$proper_name$Agag",
           "to",
           "$kitchen_knife+collision+doing",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "at",
