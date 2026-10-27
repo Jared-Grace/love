@@ -577,7 +577,7 @@ export function bible_glyph_chapter_exo08() {
           "This",
           "is",
           "the",
-          "finger",
+          "$index_pointing_up",
           "of",
           "$heart_on_fire.",
           "But",
