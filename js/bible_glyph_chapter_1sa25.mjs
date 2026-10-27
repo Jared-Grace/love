@@ -1395,7 +1395,7 @@ export function bible_glyph_chapter_1sa25() {
           "onto",
           "his",
           "own",
-          "head.",
+          "$person_gesturing_ok.",
           "Then",
           "$two_hearts+proper_name",
           "$hand_sending",
