@@ -382,7 +382,7 @@ export function bible_glyph_chapter_gen15() {
         verse_number: 14,
         words: [
           "But",
-          "I",
+          "$me",
           "will",
           "$scales+speech+doing",
           "the",
