@@ -560,7 +560,7 @@ export function bible_glyph_chapter_deu33() {
           "to",
           "the",
           "$mountain.",
-          "There",
+          "$telescope",
           "they",
           "will",
           "offer",
