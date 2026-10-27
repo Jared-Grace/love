@@ -662,7 +662,7 @@ export function bible_glyph_chapter_2ki03() {
           "of",
           "the",
           "$grain_offering,",
-          "suddenly",
+          "$exclamation",
           "$water",
           "$footprints",
           "from",
