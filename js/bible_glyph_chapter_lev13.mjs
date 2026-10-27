@@ -1824,7 +1824,7 @@ export function bible_glyph_chapter_lev13() {
           "mildew",
           "has",
           "faded",
-          "after",
+          "$next_track",
           "it",
           "has",
           "been",
