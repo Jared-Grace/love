@@ -652,7 +652,7 @@ export function bible_glyph_chapter_exo40() {
           "$umbrella+door",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "tabernacle.",
