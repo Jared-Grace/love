@@ -132,7 +132,7 @@ export function bible_glyph_chapter_num11() {
         verse_number: 5,
         words: [
           "We",
-          "remember",
+          "$reminder_ribbon",
           "the",
           "$fish",
           "we",
