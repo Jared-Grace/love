@@ -319,7 +319,7 @@ export function bible_glyph_chapter_mal02() {
           "$no_entry",
           "all",
           "have",
-          "one",
+          "$one",
           "$father?",
           "Did",
           "$no_entry",
