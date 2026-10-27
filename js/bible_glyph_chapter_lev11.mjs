@@ -926,7 +926,7 @@ export function bible_glyph_chapter_lev11() {
           "it,",
           "it",
           "is",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "you.",
         ],
