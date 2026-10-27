@@ -1231,7 +1231,7 @@ export function bible_glyph_chapter_jer23() {
           "each",
           "$man_beard",
           "$speech",
-          "becomes",
+          "$link",
           "the",
           "burden,",
           "so",
