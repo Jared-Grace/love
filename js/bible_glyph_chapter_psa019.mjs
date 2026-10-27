@@ -22,7 +22,7 @@ export function bible_glyph_chapter_psa019() {
           "$heart_on_fire;",
           "the",
           "skies",
-          "proclaim",
+          "$newspaper",
           "the",
           "work",
           "of",
