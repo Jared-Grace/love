@@ -83,7 +83,7 @@ export function bible_glyph_chapter_lev10() {
           "those",
           "who",
           "come",
-          "near",
+          "$magnet",
           "Me",
           "$sparkle+doing,",
           "and",
