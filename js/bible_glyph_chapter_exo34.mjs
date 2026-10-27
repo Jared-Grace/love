@@ -154,7 +154,7 @@ export function bible_glyph_chapter_exo34() {
           "And",
           "the",
           "$i_am",
-          "descended",
+          "$walking+pointing_down",
           "in",
           "a",
           "cloud",
