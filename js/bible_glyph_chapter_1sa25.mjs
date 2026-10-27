@@ -1258,7 +1258,7 @@ export function bible_glyph_chapter_1sa25() {
         verse_number: 36,
         words: [
           "When",
-          "Abigail",
+          "$father+woman_dancing+proper_name",
           "$footprints",
           "to",
           "$proper_name$Nabal,",
