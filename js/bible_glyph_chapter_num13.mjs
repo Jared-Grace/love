@@ -578,7 +578,7 @@ export function bible_glyph_chapter_num13() {
           "$speech",
           "for",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "and",
           "$eye",
