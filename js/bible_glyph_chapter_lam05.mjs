@@ -334,7 +334,7 @@ export function bible_glyph_chapter_lam05() {
           "$throne",
           "endures",
           "from",
-          "generation",
+          "$dna",
           "to",
           "generation.",
         ],
