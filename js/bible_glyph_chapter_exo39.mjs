@@ -752,7 +752,7 @@ export function bible_glyph_chapter_exo39() {
         words: [
           "and",
           "the",
-          "sash",
+          "$ribbon+garment",
           "of",
           "finely",
           "spun",
