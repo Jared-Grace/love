@@ -21,7 +21,7 @@ export function bible_glyph_chapter_job03() {
           "$proper_name$Job",
           "$unlocked",
           "his",
-          "mouth",
+          "$face_with_open_mouth",
           "and",
           "$speech+thumbs_down",
           "the",
