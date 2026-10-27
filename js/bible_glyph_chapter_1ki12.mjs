@@ -21,7 +21,7 @@ export function bible_glyph_chapter_1ki12() {
           "$walking",
           "to",
           "$proper_name$Shechem,",
-          "for",
+          "$pointing",
           "all",
           "$wrestling+heart_on_fire",
           "had",
