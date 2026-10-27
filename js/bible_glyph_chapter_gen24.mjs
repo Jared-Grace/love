@@ -1889,7 +1889,7 @@ export function bible_glyph_chapter_gen24() {
           "the",
           "$field",
           "to",
-          "meditate,",
+          "$thinking+walking+doing,",
           "and",
           "looking",
           "up,",
