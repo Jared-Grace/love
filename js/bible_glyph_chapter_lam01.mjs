@@ -747,7 +747,7 @@ export function bible_glyph_chapter_lam01() {
           "$sun_behind_small_cloud",
           "the",
           "$sword",
-          "bereaves;",
+          "$baby+no_entry+doing;",
           "$house",
           "there",
           "is",
