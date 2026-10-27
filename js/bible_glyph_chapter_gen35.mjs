@@ -591,7 +591,7 @@ export function bible_glyph_chapter_gen35() {
       {
         verse_number: 22,
         words: [
-          "While",
+          "$link",
           "$wrestling+heart_on_fire",
           "was",
           "living",
