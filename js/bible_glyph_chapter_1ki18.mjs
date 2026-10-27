@@ -449,7 +449,7 @@ export function bible_glyph_chapter_1ki18() {
           "here.",
           "He",
           "will",
-          "kill",
+          "$fist+skull",
           "me!",
         ],
       },
