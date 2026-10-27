@@ -344,7 +344,7 @@ export function bible_glyph_chapter_deu12() {
           "His",
           "$name_tag.",
           "And",
-          "there",
+          "$telescope",
           "you",
           "are",
           "to",
