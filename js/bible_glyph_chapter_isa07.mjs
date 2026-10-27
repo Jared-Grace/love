@@ -749,7 +749,7 @@ export function bible_glyph_chapter_isa07() {
           "the",
           "$sprout+axe,",
           "for",
-          "fear",
+          "$fear",
           "of",
           "the",
           "briers",
