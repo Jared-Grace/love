@@ -29,7 +29,7 @@ export function bible_glyph_chapter_exo16() {
           "$wilderness",
           "of",
           "$proper_name$Sin,",
-          "which",
+          "$back+flashlight",
           "is",
           "between",
           "$proper_name$Elim",
