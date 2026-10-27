@@ -1734,7 +1734,7 @@ export function bible_glyph_chapter_lev13() {
           "$yarn+round_pushpin,",
           "$yarn+plus,",
           "$shuffle",
-          "leather",
+          "$cow_face+coat",
           "$toolbox,",
         ],
       },
