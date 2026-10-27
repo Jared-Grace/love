@@ -566,7 +566,7 @@ export function bible_glyph_chapter_exo27() {
           "$sunset",
           "$finish",
           "$morning",
-          "before",
+          "$face",
           "$i_am.",
           "This",
           "is",
