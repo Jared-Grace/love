@@ -153,7 +153,7 @@ export function bible_glyph_chapter_ezr01() {
           "And",
           "let",
           "every",
-          "survivor,",
+          "$puzzle_piece+doing,",
           "wherever",
           "he",
           "lives,",
