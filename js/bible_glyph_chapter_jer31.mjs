@@ -16,7 +16,7 @@ export function bible_glyph_chapter_jer31() {
         words: [
           "At",
           "that",
-          "time,",
+          "$clock,",
           "declares",
           "the",
           "$i_am,",
