@@ -637,7 +637,7 @@ export function bible_glyph_chapter_gen07() {
           "him",
           "in",
           "the",
-          "ark",
+          "$package",
           "$puzzle_piece+doing.",
         ],
       },
