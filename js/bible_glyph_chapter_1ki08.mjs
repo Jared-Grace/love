@@ -1498,7 +1498,7 @@ export function bible_glyph_chapter_1ki08() {
           "will",
           "$lightbulb",
           "$pointing",
-          "this",
+          "$flashlight",
           "$house",
           "I",
           "have",
