@@ -123,7 +123,7 @@ export function bible_glyph_chapter_nam02() {
           "around",
           "the",
           "plazas,",
-          "appearing",
+          "$eyes+thing",
           "like",
           "torches,",
           "darting",
