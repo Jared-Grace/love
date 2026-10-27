@@ -110,7 +110,7 @@ export function bible_glyph_chapter_1sa08() {
           "$exclamation,",
           "$you",
           "are",
-          "old,",
+          "$old_man+doing,",
           "and",
           "your",
           "$son",
