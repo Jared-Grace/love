@@ -198,7 +198,7 @@ export function bible_glyph_chapter_psa116() {
           "I",
           "am",
           "greatly",
-          "afflicted.",
+          "$persevering_face+doing.",
         ],
       },
       {
