@@ -185,7 +185,7 @@ export function bible_glyph_chapter_mic07() {
       {
         verse_number: 6,
         words: [
-          "For",
+          "$pointing",
           "a",
           "$son",
           "dishonors",
