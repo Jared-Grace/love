@@ -1391,7 +1391,7 @@ export function bible_glyph_chapter_1ki18() {
           "$palm_down",
           "his",
           "$face",
-          "between",
+          "$brain+arrow_both_ways",
           "his",
           "knees.",
         ],
