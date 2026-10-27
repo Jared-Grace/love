@@ -534,7 +534,7 @@ export function bible_glyph_chapter_exo03() {
           "$name_tag",
           "$hourglass,",
           "and",
-          "this",
+          "$flashlight",
           "is",
           "how",
           "I",
