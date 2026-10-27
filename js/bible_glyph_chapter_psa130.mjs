@@ -165,7 +165,7 @@ export function bible_glyph_chapter_psa130() {
         verse_number: 8,
         words: [
           "And",
-          "He",
+          "$pointing_back",
           "will",
           "redeem",
           "$wrestling+heart_on_fire",
