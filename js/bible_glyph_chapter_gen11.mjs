@@ -133,7 +133,7 @@ export function bible_glyph_chapter_gen11() {
           "the",
           "$i_am",
           "came",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$eye",
           "the",
