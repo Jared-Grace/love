@@ -434,7 +434,7 @@ export function bible_glyph_chapter_gen20() {
           "$speech",
           "to",
           "her,",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$gift",
