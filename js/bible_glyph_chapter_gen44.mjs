@@ -74,7 +74,7 @@ export function bible_glyph_chapter_gen44() {
           "$silver",
           "for",
           "his",
-          "grain.",
+          "$wheat+coin.",
           "So",
           "he",
           "$hammer+doing",
