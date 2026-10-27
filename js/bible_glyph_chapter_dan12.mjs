@@ -245,7 +245,7 @@ export function bible_glyph_chapter_dan12() {
           "his",
           "$hand+away",
           "hand",
-          "toward",
+          "$toward",
           "$sky,",
           "and",
           "I",
