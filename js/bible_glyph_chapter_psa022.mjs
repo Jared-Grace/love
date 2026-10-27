@@ -599,7 +599,7 @@ export function bible_glyph_chapter_psa022() {
           "$toward",
           "the",
           "$i_am.",
-          "All",
+          "$all",
           "the",
           "families",
           "of",
