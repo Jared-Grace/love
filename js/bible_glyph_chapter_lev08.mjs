@@ -192,7 +192,7 @@ export function bible_glyph_chapter_lev08() {
           "front",
           "of",
           "the",
-          "turban,",
+          "$person_wearing_turban,",
           "as",
           "$i_am",
           "had",
