@@ -594,7 +594,7 @@ export function bible_glyph_chapter_gen30() {
           "add",
           "to",
           "me",
-          "another",
+          "$plus+one",
           "$son.",
         ],
       },
