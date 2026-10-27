@@ -315,7 +315,7 @@ export function bible_glyph_chapter_gen13() {
           "himself",
           "the",
           "$all",
-          "plain",
+          "$flying_disc",
           "of",
           "the",
           "$pointing_down+proper_name",
