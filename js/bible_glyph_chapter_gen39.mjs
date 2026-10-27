@@ -268,7 +268,7 @@ export function bible_glyph_chapter_gen39() {
       {
         verse_number: 9,
         words: [
-          "No",
+          "$dotted_line_face",
           "one",
           "in",
           "this",
