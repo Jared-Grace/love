@@ -487,7 +487,7 @@ export function bible_glyph_chapter_exo29() {
           "on",
           "the",
           "$altar.",
-          "It",
+          "$pointing_back",
           "is",
           "a",
           "$burnt_offering",
