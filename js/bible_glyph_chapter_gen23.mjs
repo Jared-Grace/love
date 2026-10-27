@@ -58,7 +58,7 @@ export function bible_glyph_chapter_gen23() {
           "$father+map",
           "$footprints",
           "to",
-          "mourn",
+          "$crying_face+doing",
           "for",
           "her",
           "and",
