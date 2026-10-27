@@ -414,7 +414,7 @@ export function bible_glyph_chapter_2ch06() {
           "it",
           "in",
           "the",
-          "middle",
+          "$radio_button",
           "of",
           "the",
           "courtyard.",
