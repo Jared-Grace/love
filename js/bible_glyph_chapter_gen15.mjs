@@ -220,7 +220,7 @@ export function bible_glyph_chapter_gen15() {
           "$speech,",
           "$crown",
           "$i_am,",
-          "how",
+          "$flashlight+question",
           "can",
           "I",
           "$lightbulb",
