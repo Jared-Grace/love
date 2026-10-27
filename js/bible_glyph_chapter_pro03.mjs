@@ -575,7 +575,7 @@ export function bible_glyph_chapter_pro03() {
           "$no_entry",
           "devise",
           "$thumbs_down",
-          "against",
+          "$pointing_up",
           "your",
           "neighbor,",
           "for",
