@@ -166,7 +166,7 @@ export function bible_glyph_chapter_gen13() {
           "there",
           "was",
           "quarrelling",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "$person+sheep",
           "of",
