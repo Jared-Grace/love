@@ -298,7 +298,7 @@ export function bible_glyph_chapter_lev07() {
           "with",
           "oil,",
           "and",
-          "cakes",
+          "$bagel",
           "$flour",
           "well",
           "kneaded",
