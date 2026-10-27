@@ -642,7 +642,7 @@ export function bible_glyph_chapter_amo05() {
           "you",
           "offer",
           "Me",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "and",
           "grain",
