@@ -757,7 +757,7 @@ export function bible_glyph_chapter_deu15() {
           "$eating",
           "the",
           "$blood;",
-          "pour",
+          "$jar+down_arrow+doing",
           "it",
           "on",
           "the",
