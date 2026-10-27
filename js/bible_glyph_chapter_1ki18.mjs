@@ -786,7 +786,7 @@ export function bible_glyph_chapter_1ki18() {
           "$megaphone",
           "of",
           "Baal,",
-          "Since",
+          "$pointing",
           "you",
           "are",
           "so",
