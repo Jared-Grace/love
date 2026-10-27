@@ -795,7 +795,7 @@ export function bible_glyph_chapter_lev16() {
           "them",
           "on",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "the",
           "goat",
