@@ -115,7 +115,7 @@ export function bible_glyph_chapter_exo29() {
           "of",
           "$alarm_clock",
           "and",
-          "wash",
+          "$bathtub+doing",
           "them",
           "with",
           "$water.",
