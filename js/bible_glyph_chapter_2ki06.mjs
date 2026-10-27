@@ -574,7 +574,7 @@ export function bible_glyph_chapter_2ki06() {
           "these",
           "$map",
           "with",
-          "blindness.",
+          "$person_with_white_cane+thing.",
           "So",
           "He",
           "struck",
