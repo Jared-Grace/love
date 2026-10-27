@@ -475,7 +475,7 @@ export function bible_glyph_chapter_gen28() {
           "you",
           "$toward",
           "this",
-          "land.",
+          "$brown_square.",
           "For",
           "I",
           "will",
