@@ -1267,7 +1267,7 @@ export function bible_glyph_chapter_gen27() {
           "and",
           "$speech",
           "him,",
-          '"Look,',
+          '"$exclamation,',
           "your",
           "$brother",
           "$proper_name$Esau",
