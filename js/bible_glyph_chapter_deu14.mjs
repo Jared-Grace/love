@@ -623,7 +623,7 @@ export function bible_glyph_chapter_deu14() {
           "on",
           "anything",
           "you",
-          "desire:",
+          "$heart_eyes+hand_receiving+doing:",
           "cattle,",
           "$sheep,",
           "$wine,",
