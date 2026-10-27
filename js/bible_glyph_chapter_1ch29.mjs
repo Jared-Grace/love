@@ -778,7 +778,7 @@ export function bible_glyph_chapter_1ch29() {
           "the",
           "$i_am,",
           "a",
-          "thousand",
+          "$ten+all",
           "$bull,",
           "a",
           "thousand",
