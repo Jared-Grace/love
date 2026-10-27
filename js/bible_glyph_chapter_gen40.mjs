@@ -171,7 +171,7 @@ export function bible_glyph_chapter_gen40() {
           "officials",
           "of",
           "$house+proper_name",
-          "who",
+          "$back+flashlight",
           "were",
           "in",
           "custody",
