@@ -400,7 +400,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "$house+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$i_am+plus,",
           '"I',
           "had",
