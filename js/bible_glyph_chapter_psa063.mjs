@@ -132,7 +132,7 @@ export function bible_glyph_chapter_psa063() {
           "joyful",
           "$kiss_mark",
           "my",
-          "mouth",
+          "$face_with_open_mouth",
           "will",
           "$clapping_hands",
           "You.",
