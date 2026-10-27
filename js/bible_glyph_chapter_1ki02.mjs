@@ -918,7 +918,7 @@ export function bible_glyph_chapter_1ki02() {
           "you",
           "carried",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$crown",
