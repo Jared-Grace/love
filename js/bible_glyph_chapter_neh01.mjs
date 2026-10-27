@@ -329,7 +329,7 @@ export function bible_glyph_chapter_neh01() {
           "$telescope",
           "I",
           "will",
-          "gather",
+          "$tray_in+doing",
           "them",
           "and",
           "$footprints",
