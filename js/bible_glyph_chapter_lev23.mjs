@@ -971,7 +971,7 @@ export function bible_glyph_chapter_lev23() {
           "of",
           "the",
           "seventh",
-          "month",
+          "$new_moon",
           "the",
           "Feast",
           "of",
