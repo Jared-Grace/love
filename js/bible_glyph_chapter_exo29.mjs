@@ -137,7 +137,7 @@ export function bible_glyph_chapter_exo29() {
           "$cloak",
           "of",
           "the",
-          "ephod,",
+          "$safety_vest,",
           "the",
           "ephod",
           "itself",
