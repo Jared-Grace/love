@@ -195,7 +195,7 @@ export function bible_glyph_chapter_mal02() {
           "found",
           "on",
           "his",
-          "lips.",
+          "$kiss_mark.",
           "He",
           "$walking",
           "with",
