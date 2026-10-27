@@ -401,7 +401,7 @@ export function bible_glyph_chapter_gen23() {
           "$speech,",
           "But",
           "$traffic_light",
-          "you",
+          "$you",
           "will,",
           "$ear",
           "me.",
