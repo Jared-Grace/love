@@ -82,7 +82,7 @@ export function bible_glyph_chapter_jer18() {
           "$hammer+doing",
           "from",
           "the",
-          "clay",
+          "$brown_square+water",
           "was",
           "flawed",
           "in",
