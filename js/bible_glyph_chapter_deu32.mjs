@@ -1275,7 +1275,7 @@ export function bible_glyph_chapter_deu32() {
           "$palm_down",
           "to",
           "$heart_organ",
-          "all",
+          "$all",
           "the",
           "$speech",
           "I",
