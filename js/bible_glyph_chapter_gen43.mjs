@@ -422,7 +422,7 @@ export function bible_glyph_chapter_gen43() {
           "$hands_giving",
           "you",
           "$hugging_face",
-          "before",
+          "$face",
           "the",
           "$man_beard,",
           "that",
