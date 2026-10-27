@@ -125,7 +125,7 @@ export function bible_glyph_chapter_exo25() {
           "set",
           "in",
           "the",
-          "ephod",
+          "$safety_vest",
           "and",
           "in",
           "the",
