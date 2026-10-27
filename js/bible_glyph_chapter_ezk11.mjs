@@ -729,7 +729,7 @@ export function bible_glyph_chapter_ezk11() {
           "of",
           "$wrestling+heart_on_fire",
           "was",
-          "above",
+          "$pointing_up",
           "them.",
         ],
       },
