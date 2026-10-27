@@ -234,7 +234,7 @@ export function bible_glyph_chapter_isa64() {
         verse_number: 8,
         words: [
           "But",
-          "now,",
+          "$watch,",
           "O",
           "$i_am,",
           "You",
