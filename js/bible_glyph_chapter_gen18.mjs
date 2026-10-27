@@ -254,7 +254,7 @@ export function bible_glyph_chapter_gen18() {
           "the",
           "men",
           "and",
-          "stood",
+          "$person+round_pushpin",
           "by",
           "them",
           "under",
