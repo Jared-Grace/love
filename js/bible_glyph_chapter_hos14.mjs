@@ -136,7 +136,7 @@ export function bible_glyph_chapter_hos14() {
           "$wrestling+heart_on_fire;",
           "he",
           "will",
-          "blossom",
+          "$cherry_blossom",
           "like",
           "the",
           "lily",
