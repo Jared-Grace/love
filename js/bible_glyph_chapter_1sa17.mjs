@@ -228,7 +228,7 @@ export function bible_glyph_chapter_1sa17() {
           "$kneeling",
           "of",
           "$proper_name$Saul?",
-          "Choose",
+          "$check_box+doing",
           "one",
           "of",
           "your",
