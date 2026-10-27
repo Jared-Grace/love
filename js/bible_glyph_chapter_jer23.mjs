@@ -826,7 +826,7 @@ export function bible_glyph_chapter_jer23() {
           "only",
           "a",
           "$heart_on_fire",
-          "nearby,",
+          "$magnet,",
           "declares",
           "the",
           "$i_am,",
