@@ -261,7 +261,7 @@ export function bible_glyph_chapter_gen17() {
           "$seed",
           "after",
           "you:",
-          "Every",
+          "$all",
           "male",
           "among",
           "you",
