@@ -945,7 +945,7 @@ export function bible_glyph_chapter_lev19() {
           "$earth",
           "of",
           "$clamp+proper_name.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
