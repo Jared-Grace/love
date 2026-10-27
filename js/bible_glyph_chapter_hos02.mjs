@@ -164,7 +164,7 @@ export function bible_glyph_chapter_hos02() {
           "linen,",
           "$lotion_bottle",
           "and",
-          "drink.",
+          "$cup+hands_giving+thing.",
         ],
       },
       {
