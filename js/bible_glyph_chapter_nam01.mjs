@@ -247,7 +247,7 @@ export function bible_glyph_chapter_nam01() {
           "$toward",
           "the",
           "$i_am,",
-          "He",
+          "$pointing_back",
           "will",
           "$hammer+doing",
           "to",
