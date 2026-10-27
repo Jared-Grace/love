@@ -258,7 +258,7 @@ export function bible_glyph_chapter_mic03() {
           "and",
           "courage,",
           "to",
-          "declare",
+          "$newspaper",
           "to",
           "$hand+foot",
           "his",
