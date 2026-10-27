@@ -496,7 +496,7 @@ export function bible_glyph_chapter_num18() {
           "in",
           "their",
           "$earth",
-          "that",
+          "$back+flashlight",
           "they",
           "$footprints",
           "to",
