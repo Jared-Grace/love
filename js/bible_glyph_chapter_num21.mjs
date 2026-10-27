@@ -494,7 +494,7 @@ export function bible_glyph_chapter_num21() {
         words: [
           "$telescope+clock",
           "$wrestling+heart_on_fire",
-          "sang",
+          "$song+doing",
           "this",
           "song:",
           "Spring",
