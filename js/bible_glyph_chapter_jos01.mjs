@@ -114,7 +114,7 @@ export function bible_glyph_chapter_jos01() {
           "$top",
           "$water+national_park",
           "$proper_name$Euphrates,",
-          "all",
+          "$all",
           "the",
           "$earth",
           "of",
