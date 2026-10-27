@@ -106,7 +106,7 @@ export function bible_glyph_chapter_exo40() {
           "front",
           "of",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$witness+thing,",
