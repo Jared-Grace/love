@@ -1153,7 +1153,7 @@ export function bible_glyph_chapter_1sa02() {
           "you",
           "as",
           "a",
-          "sign",
+          "$placard",
           "concerning",
           "your",
           "two",
