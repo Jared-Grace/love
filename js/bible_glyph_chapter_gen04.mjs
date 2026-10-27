@@ -630,7 +630,7 @@ export function bible_glyph_chapter_gen04() {
           "$iron.",
           "And",
           "the",
-          "sister",
+          "$sister",
           "of",
           "Tubal-cain",
           "was",
