@@ -17,7 +17,7 @@ export function bible_glyph_chapter_pro08() {
           "Does",
           "$no_entry",
           "$wisdom",
-          "call",
+          "$waving_hand",
           "out,",
           "and",
           "understanding",
