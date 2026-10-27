@@ -170,7 +170,7 @@ export function bible_glyph_chapter_exo35() {
         verse_number: 7,
         words: [
           "$ram",
-          "skins",
+          "$cow_face+coat",
           "dyed",
           "red",
           "and",
