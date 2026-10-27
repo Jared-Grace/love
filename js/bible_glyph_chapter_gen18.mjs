@@ -52,7 +52,7 @@ export function bible_glyph_chapter_gen18() {
           "$eye",
           "$three",
           "$man_beard",
-          "standing",
+          "$person+up_arrow",
           "nearby.",
           "When",
           "he",
