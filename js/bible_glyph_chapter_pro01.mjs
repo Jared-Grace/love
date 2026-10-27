@@ -156,7 +156,7 @@ export function bible_glyph_chapter_pro01() {
         verse_number: 9,
         words: [
           "$pointing",
-          "they",
+          "$pointing_back",
           "are",
           "a",
           "garland",
