@@ -483,7 +483,7 @@ export function bible_glyph_chapter_gen08() {
           "fruitful",
           "and",
           "multiply",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth.",
         ],
