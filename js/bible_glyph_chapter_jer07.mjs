@@ -360,7 +360,7 @@ export function bible_glyph_chapter_jer07() {
           "$all",
           "$flashlight+flashlight",
           "things,",
-          "declares",
+          "$microphone",
           "$i_am,",
           "and",
           "because",
