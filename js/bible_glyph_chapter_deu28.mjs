@@ -663,7 +663,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "make",
           "the",
-          "plague",
+          "$face_with_medical_mask",
           "$paperclip",
           "to",
           "you",
