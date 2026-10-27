@@ -293,7 +293,7 @@ export function bible_glyph_chapter_deu33() {
           "before",
           "You",
           "and",
-          "whole",
+          "$all+describing",
           "burnt",
           "offerings",
           "on",
