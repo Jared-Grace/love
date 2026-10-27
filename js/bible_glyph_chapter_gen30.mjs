@@ -955,7 +955,7 @@ export function bible_glyph_chapter_gen30() {
           "he",
           "set",
           "a",
-          "three",
+          "$three",
           "$sun",
           "$road",
           "between",
