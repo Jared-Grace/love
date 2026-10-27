@@ -1281,7 +1281,7 @@ export function bible_glyph_chapter_neh09() {
           "$scroll",
           "or",
           "$ear_with_hearing_aid",
-          "to",
+          "$toward",
           "Your",
           "$scroll",
           "and",
