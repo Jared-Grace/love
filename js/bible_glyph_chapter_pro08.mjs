@@ -204,7 +204,7 @@ export function bible_glyph_chapter_pro08() {
           "nothing",
           "you",
           "desire",
-          "compares",
+          "$scales+likeness+doing",
           "with",
           "her.",
         ],
