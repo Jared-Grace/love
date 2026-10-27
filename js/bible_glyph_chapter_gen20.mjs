@@ -160,7 +160,7 @@ export function bible_glyph_chapter_gen20() {
           "hands",
           "I",
           "$hammer+doing",
-          "this.",
+          "$flashlight.",
         ],
       },
       {
