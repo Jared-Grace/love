@@ -279,7 +279,7 @@ export function bible_glyph_chapter_lev12() {
           "she",
           "shall",
           "$hand_receiving",
-          "two",
+          "$two",
           "turtledoves",
           "or",
           "two",
