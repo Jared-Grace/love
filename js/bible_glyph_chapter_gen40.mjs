@@ -468,7 +468,7 @@ export function bible_glyph_chapter_gen40() {
           "bread",
           "on",
           "my",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
