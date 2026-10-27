@@ -52,7 +52,7 @@ export function bible_glyph_chapter_num21() {
           "$wrestling+heart_on_fire",
           "$saluting_face+doing",
           "a",
-          "vow",
+          "$saluting_face",
           "to",
           "the",
           "$i_am,",
