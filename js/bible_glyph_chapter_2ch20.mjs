@@ -105,7 +105,7 @@ export function bible_glyph_chapter_2ch20() {
           "people",
           "of",
           "$hands_raised+proper_name",
-          "gathered",
+          "$tray_in+doing",
           "to",
           "seek",
           "the",
