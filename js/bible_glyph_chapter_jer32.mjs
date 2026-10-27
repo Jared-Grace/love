@@ -193,7 +193,7 @@ export function bible_glyph_chapter_jer32() {
           "he",
           "will",
           "stay",
-          "until",
+          "$finish",
           "I",
           "attend",
           "to",
