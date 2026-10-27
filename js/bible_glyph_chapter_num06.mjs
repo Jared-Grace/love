@@ -619,7 +619,7 @@ export function bible_glyph_chapter_num06() {
           "$bagel",
           "$tray_out",
           "the",
-          "basket,",
+          "$basket,",
           "and",
           "$one",
           "$flatbread",
