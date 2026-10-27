@@ -346,7 +346,7 @@ export function bible_glyph_chapter_gen24() {
           "camels",
           "kneel",
           "down",
-          "near",
+          "$toward",
           "the",
           "well",
           "$sun_behind_small_cloud",
