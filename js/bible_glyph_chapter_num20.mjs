@@ -687,7 +687,7 @@ export function bible_glyph_chapter_num20() {
           "from",
           "$proper_name$Kadesh,",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "$wrestling+heart_on_fire",
