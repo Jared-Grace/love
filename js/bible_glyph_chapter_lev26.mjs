@@ -449,7 +449,7 @@ export function bible_glyph_chapter_lev26() {
         verse_number: 16,
         words: [
           "then",
-          "this",
+          "$flashlight",
           "is",
           "what",
           "I",
