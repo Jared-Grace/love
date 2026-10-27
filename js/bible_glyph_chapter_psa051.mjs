@@ -424,7 +424,7 @@ export function bible_glyph_chapter_psa051() {
           "$burnt_offering",
           "offerings;",
           "$telescope+clock",
-          "bulls",
+          "$bull",
           "will",
           "be",
           "offered",
