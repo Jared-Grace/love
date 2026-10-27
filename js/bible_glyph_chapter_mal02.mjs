@@ -27,7 +27,7 @@ export function bible_glyph_chapter_mal02() {
       {
         verse_number: 2,
         words: [
-          "If",
+          "$traffic_light",
           "you",
           "do",
           "$no_entry",
