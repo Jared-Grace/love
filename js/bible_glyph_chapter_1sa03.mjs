@@ -393,7 +393,7 @@ export function bible_glyph_chapter_1sa03() {
           "$hourglass",
           "for",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "which",
           "he",
