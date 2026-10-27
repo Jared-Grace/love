@@ -216,7 +216,7 @@ export function bible_glyph_chapter_ezk01() {
           "$pointing_up",
           "their",
           "$four",
-          "sides",
+          "$four+divide",
           "they",
           "had",
           "$person",
