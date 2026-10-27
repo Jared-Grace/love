@@ -560,7 +560,7 @@ export function bible_glyph_chapter_jos06() {
           "$i_am",
           "for",
           "destruction.",
-          "Only",
+          "$one+check",
           "$proper_name$Rahab",
           "the",
           "prostitute",
