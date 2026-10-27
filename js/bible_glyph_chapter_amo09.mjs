@@ -317,7 +317,7 @@ export function bible_glyph_chapter_amo09() {
           "it",
           "from",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth.",
