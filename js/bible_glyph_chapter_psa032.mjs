@@ -238,7 +238,7 @@ export function bible_glyph_chapter_psa032() {
           "to",
           "make",
           "them",
-          "come",
+          "$magnet+doing",
           "to",
           "you.",
         ],
