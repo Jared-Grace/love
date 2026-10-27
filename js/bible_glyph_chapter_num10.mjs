@@ -105,7 +105,7 @@ export function bible_glyph_chapter_num10() {
           "lie",
           "on",
           "the",
-          "east",
+          "$compass+right_arrow",
           "side",
           "are",
           "to",
