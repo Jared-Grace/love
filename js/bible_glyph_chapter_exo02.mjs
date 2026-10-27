@@ -465,7 +465,7 @@ export function bible_glyph_chapter_exo02() {
           "$fishing_pole+proper_name.",
           "But",
           "$fishing_pole+proper_name",
-          "fled",
+          "$dashing_away",
           "from",
           "$house+proper_name",
           "and",
