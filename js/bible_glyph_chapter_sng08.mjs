@@ -370,7 +370,7 @@ export function bible_glyph_chapter_sng08() {
           "$peace+proper_name,",
           "and",
           "two",
-          "hundred",
+          "$input_numbers+all",
           "are",
           "for",
           "those",
