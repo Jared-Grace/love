@@ -559,7 +559,7 @@ export function bible_glyph_chapter_gen29() {
           "me",
           "my",
           "$woman,",
-          "for",
+          "$pointing",
           "my",
           "$sun",
           "is",
