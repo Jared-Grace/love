@@ -311,7 +311,7 @@ export function bible_glyph_chapter_2sa05() {
           "the",
           "way",
           "$around,",
-          "from",
+          "$tray_out",
           "the",
           "supporting",
           "terraces",
