@@ -425,7 +425,7 @@ export function bible_glyph_chapter_num18() {
           "with",
           "all",
           "the",
-          "wave",
+          "$hand+up_down_arrow+thing",
           "offerings",
           "of",
           "the",
