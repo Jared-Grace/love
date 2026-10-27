@@ -495,7 +495,7 @@ export function bible_glyph_chapter_num14() {
           "$flashlight",
           "$family",
           "as",
-          "one",
+          "$one",
           "$man_beard,",
           "the",
           "$map",
