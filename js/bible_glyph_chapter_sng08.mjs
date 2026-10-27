@@ -112,7 +112,7 @@ export function bible_glyph_chapter_sng08() {
           "or",
           "awaken",
           "$heart_red",
-          "until",
+          "$finish",
           "the",
           "time",
           "is",
