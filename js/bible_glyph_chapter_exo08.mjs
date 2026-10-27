@@ -531,7 +531,7 @@ export function bible_glyph_chapter_exo08() {
           "$earth",
           "turned",
           "into",
-          "gnats",
+          "$mosquito",
           "throughout",
           "the",
           "$earth",
