@@ -340,7 +340,7 @@ export function bible_glyph_chapter_deu18() {
           "For",
           "whoever",
           "$hammer+doing",
-          "these",
+          "$flashlight+flashlight",
           "things",
           "is",
           "$vomiting",
