@@ -473,7 +473,7 @@ export function bible_glyph_chapter_num18() {
           "new",
           "$wine",
           "and",
-          "grain,",
+          "$wheat+barley,",
           "the",
           "firstfruits",
           "that",
