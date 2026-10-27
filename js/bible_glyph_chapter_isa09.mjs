@@ -584,7 +584,7 @@ export function bible_glyph_chapter_isa09() {
           "the",
           "$earth",
           "is",
-          "scorched,",
+          "$fire+desert+doing,",
           "and",
           "the",
           "$family",
