@@ -61,7 +61,7 @@ export function bible_glyph_chapter_gen22() {
           "burnt",
           "offering",
           "on",
-          "one",
+          "$one",
           "of",
           "the",
           "$mountain",
