@@ -847,7 +847,7 @@ export function bible_glyph_chapter_lev19() {
           "You",
           "must",
           "$no_entry",
-          "turn",
+          "$curving_right+doing",
           "to",
           "mediums",
           "or",
