@@ -216,7 +216,7 @@ export function bible_glyph_chapter_1ki17() {
           "$proper_name$Sidon,",
           "and",
           "stay",
-          "there.",
+          "$telescope.",
           "Behold,",
           "I",
           "have",
