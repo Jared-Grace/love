@@ -1218,7 +1218,7 @@ export function bible_glyph_chapter_jer31() {
           "that",
           "its",
           "waves",
-          "roar",
+          "$crowd+loudspeaker+doing",
           "-",
           "the",
           "$i_am",
