@@ -230,7 +230,7 @@ export function bible_glyph_chapter_1sa07() {
           "the",
           "$proper_name$Philistines",
           "$ear",
-          "that",
+          "$pointing",
           "the",
           "$son",
           "of",
