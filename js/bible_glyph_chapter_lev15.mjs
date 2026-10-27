@@ -48,7 +48,7 @@ export function bible_glyph_chapter_lev15() {
           "the",
           "discharge",
           "is",
-          "unclean.",
+          "$soap+no_entry.",
         ],
       },
       {
