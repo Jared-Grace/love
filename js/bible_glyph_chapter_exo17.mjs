@@ -285,7 +285,7 @@ export function bible_glyph_chapter_exo17() {
           "$speech",
           "to",
           "$i_am+rescue,",
-          "Choose",
+          "$check_box",
           "some",
           "of",
           "our",
