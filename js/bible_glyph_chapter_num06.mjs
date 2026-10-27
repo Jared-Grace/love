@@ -157,7 +157,7 @@ export function bible_glyph_chapter_num06() {
           "hair",
           "of",
           "his",
-          "head",
+          "$person_gesturing_ok",
           "grow",
           "long.",
         ],
