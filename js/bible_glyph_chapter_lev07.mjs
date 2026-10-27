@@ -562,7 +562,7 @@ export function bible_glyph_chapter_lev07() {
           "$soap+no_entry,",
           "whether",
           "$person",
-          "uncleanness",
+          "$soap+no_entry+thing",
           "or",
           "an",
           "$soap+no_entry",
