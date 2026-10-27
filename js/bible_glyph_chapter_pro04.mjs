@@ -391,7 +391,7 @@ export function bible_glyph_chapter_pro04() {
           "they",
           "$no_entry",
           "$lightbulb",
-          "what",
+          "$flashlight+question",
           "makes",
           "them",
           "stumble.",
