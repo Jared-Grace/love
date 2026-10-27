@@ -578,7 +578,7 @@ export function bible_glyph_chapter_exo26() {
           "to",
           "be",
           "$two+baby",
-          "together",
+          "$linked_paperclips+manner",
           "at",
           "the",
           "$down_arrow+manner",
