@@ -184,7 +184,7 @@ export function bible_glyph_chapter_pro04() {
           "you",
           "with",
           "a",
-          "crown",
+          "$crown+thing",
           "of",
           "beauty.",
         ],
