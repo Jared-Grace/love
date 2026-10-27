@@ -994,7 +994,7 @@ export function bible_glyph_chapter_dan09() {
           "a",
           "$covenant",
           "with",
-          "many",
+          "$multiply",
           "for",
           "one",
           "week,",
