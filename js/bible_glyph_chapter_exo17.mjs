@@ -483,7 +483,7 @@ export function bible_glyph_chapter_exo17() {
           "$i_am",
           "Is",
           "My",
-          "Banner.",
+          "$triangular_flag+up_arrow.",
         ],
       },
       {
