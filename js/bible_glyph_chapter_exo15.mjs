@@ -21,7 +21,7 @@ export function bible_glyph_chapter_exo15() {
           "of",
           "Israel",
           "sang",
-          "this",
+          "$flashlight",
           "$song",
           "to",
           "the",
