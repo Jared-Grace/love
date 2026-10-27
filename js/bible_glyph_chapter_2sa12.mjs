@@ -231,7 +231,7 @@ export function bible_glyph_chapter_2sa12() {
           "of",
           "$wrestling+heart_on_fire,",
           "$speech:",
-          "I",
+          "$me",
           "$oil+doing",
           "you",
           "$king",
