@@ -617,7 +617,7 @@ export function bible_glyph_chapter_gen24() {
           "for",
           "your",
           "camels,",
-          "until",
+          "$finish",
           "they",
           "have",
           "had",
