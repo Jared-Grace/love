@@ -572,7 +572,7 @@ export function bible_glyph_chapter_pro08() {
           "in",
           "His",
           "$face",
-          "always,",
+          "$all,",
         ],
       },
       {
