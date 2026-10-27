@@ -147,7 +147,7 @@ export function bible_glyph_chapter_psa063() {
           "You",
           "$pointing_up",
           "my",
-          "bed,",
+          "$bed+thing,",
           "I",
           "think",
           "of",
