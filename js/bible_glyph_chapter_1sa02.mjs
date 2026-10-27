@@ -266,7 +266,7 @@ export function bible_glyph_chapter_1sa02() {
           "$no_entry",
           "$man_beard",
           "shall",
-          "prevail",
+          "$might+man_beard+doing",
           "by",
           "his",
           "own",
