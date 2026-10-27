@@ -77,7 +77,7 @@ export function bible_glyph_chapter_gen25() {
           "and",
           "$proper_name$Eldaah.",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "were",
           "$son",
           "of",
