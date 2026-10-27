@@ -988,7 +988,7 @@ export function bible_glyph_chapter_1sa20() {
           "be",
           "there.",
           "So",
-          "now,",
+          "$watch,",
           "if",
           "I",
           "have",
