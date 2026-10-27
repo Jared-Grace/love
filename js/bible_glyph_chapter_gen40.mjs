@@ -534,7 +534,7 @@ export function bible_glyph_chapter_gen40() {
           "off",
           "you,",
           "and",
-          "hang",
+          "$thread+up_arrow+doing",
           "you",
           "on",
           "a",
