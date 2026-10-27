@@ -292,7 +292,7 @@ export function bible_glyph_chapter_ezk37() {
           "and",
           "breathe",
           "into",
-          "these",
+          "$flashlight+flashlight",
           "$fist+skull,",
           "so",
           "that",
