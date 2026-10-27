@@ -223,7 +223,7 @@ export function bible_glyph_chapter_gen35() {
           "El",
           "Bethel,",
           "because",
-          "there",
+          "$telescope",
           "$heart_on_fire",
           "had",
           "shown",
