@@ -943,7 +943,7 @@ export function bible_glyph_chapter_num35() {
           "you",
           "$hand_receiving",
           "a",
-          "ransom",
+          "$umbrella+coin",
           "for",
           "the",
           "person",
