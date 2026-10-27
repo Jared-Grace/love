@@ -24,7 +24,7 @@ export function bible_glyph_chapter_jdg11() {
           "man",
           "of",
           "$raised_fist.",
-          "He",
+          "$pointing_back",
           "was",
           "the",
           "$son",
