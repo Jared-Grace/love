@@ -326,7 +326,7 @@ export function bible_glyph_chapter_isa61() {
           "them",
           "will",
           "acknowledge",
-          "that",
+          "$pointing",
           "they",
           "are",
           "a",
