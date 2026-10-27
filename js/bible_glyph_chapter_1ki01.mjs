@@ -336,7 +336,7 @@ export function bible_glyph_chapter_1ki01() {
           "Then",
           "Nathan",
           "$speech",
-          "to",
+          "$toward",
           "Bathsheba,",
           "the",
           "$mother",
