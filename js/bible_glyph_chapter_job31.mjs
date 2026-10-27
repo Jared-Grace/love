@@ -270,7 +270,7 @@ export function bible_glyph_chapter_job31() {
           "made",
           "a",
           "complaint",
-          "against",
+          "$linked_paperclips",
           "me,",
         ],
       },
