@@ -65,7 +65,7 @@ export function bible_glyph_chapter_exo15() {
           "has",
           "become",
           "my",
-          "salvation.",
+          "$rescue+thing.",
           "He",
           "is",
           "my",
