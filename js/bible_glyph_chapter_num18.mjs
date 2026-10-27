@@ -546,7 +546,7 @@ export function bible_glyph_chapter_num18() {
           "offered",
           "to",
           "$i_am",
-          "belongs",
+          "$link",
           "to",
           "you.",
           "But",
