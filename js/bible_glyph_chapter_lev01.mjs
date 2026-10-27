@@ -193,7 +193,7 @@ export function bible_glyph_chapter_lev01() {
           "and",
           "arrange",
           "$tree",
-          "on",
+          "$pointing_up",
           "the",
           "$fire.",
         ],
