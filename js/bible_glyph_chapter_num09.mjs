@@ -424,7 +424,7 @@ export function bible_glyph_chapter_num09() {
           "$pointing",
           "a",
           "$foreigner",
-          "dwelling",
+          "$luggage",
           "among",
           "you",
           "wants",
