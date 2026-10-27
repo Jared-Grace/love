@@ -601,7 +601,7 @@ export function bible_glyph_chapter_exo22() {
         verse_number: 19,
         words: [
           "$all",
-          "lies",
+          "$bed+doing",
           "with",
           "an",
           "animal",
