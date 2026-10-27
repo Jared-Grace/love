@@ -766,7 +766,7 @@ export function bible_glyph_chapter_lam02() {
           "like",
           "a",
           "river",
-          "day",
+          "$sun+manner",
           "and",
           "$night.",
           "$hands_giving",
