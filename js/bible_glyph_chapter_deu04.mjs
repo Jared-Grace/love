@@ -13,7 +13,7 @@ export function bible_glyph_chapter_deu04() {
         verse_number: 1,
         words: [
           "$ear",
-          "now,",
+          "$watch,",
           "O",
           "Israel,",
           "the",
