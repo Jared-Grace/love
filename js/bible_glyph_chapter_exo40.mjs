@@ -337,7 +337,7 @@ export function bible_glyph_chapter_exo40() {
           "they",
           "may",
           "also",
-          "serve",
+          "$priest+doing",
           "Me",
           "as",
           "priests.",
