@@ -704,7 +704,7 @@ export function bible_glyph_chapter_num22() {
           "and",
           "his",
           "$two",
-          "servants",
+          "$child+flexed_biceps",
           "were",
           "with",
           "him.",
