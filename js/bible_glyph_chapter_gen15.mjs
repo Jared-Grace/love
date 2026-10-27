@@ -454,7 +454,7 @@ export function bible_glyph_chapter_gen15() {
           "had",
           "$footprints",
           "and",
-          "darkness",
+          "$sunset+cloud",
           "had",
           "fallen,",
           "behold,",
