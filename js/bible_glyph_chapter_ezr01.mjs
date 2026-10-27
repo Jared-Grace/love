@@ -375,7 +375,7 @@ export function bible_glyph_chapter_ezr01() {
           "of",
           "$gold",
           "and",
-          "silver.",
+          "$silver.",
           "$proper_name$Sheshbazzar",
           "brought",
           "all",
