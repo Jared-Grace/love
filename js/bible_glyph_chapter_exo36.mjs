@@ -622,7 +622,7 @@ export function bible_glyph_chapter_exo36() {
           "and",
           "he",
           "$hammer+doing",
-          "all",
+          "$all",
           "the",
           "frames",
           "of",
