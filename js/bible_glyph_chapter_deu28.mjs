@@ -1430,7 +1430,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "be",
           "a",
-          "sign",
+          "$placard",
           "and",
           "a",
           "wonder",
