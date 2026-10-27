@@ -237,7 +237,7 @@ export function bible_glyph_chapter_jdg07() {
           "to",
           "their",
           "mouths",
-          "was",
+          "$link",
           "three",
           "hundred",
           "$man_beard.",
