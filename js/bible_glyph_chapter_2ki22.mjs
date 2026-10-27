@@ -242,7 +242,7 @@ export function bible_glyph_chapter_2ki22() {
           "$thinking+doing",
           "for",
           "the",
-          "money",
+          "$silver",
           "$hands_giving",
           "into",
           "their",
