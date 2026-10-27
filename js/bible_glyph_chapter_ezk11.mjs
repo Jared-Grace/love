@@ -325,7 +325,7 @@ export function bible_glyph_chapter_ezk11() {
           "city",
           "will",
           "$no_entry",
-          "be",
+          "$link",
           "a",
           "pot",
           "for",
