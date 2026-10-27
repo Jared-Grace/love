@@ -370,7 +370,7 @@ export function bible_glyph_chapter_gen20() {
           "myself,",
           "There",
           "is",
-          "surely",
+          "$one+check",
           "no",
           "fear",
           "of",
