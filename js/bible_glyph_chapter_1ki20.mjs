@@ -1465,7 +1465,7 @@ export function bible_glyph_chapter_1ki20() {
           "Guard",
           "$flashlight",
           "$man_beard.",
-          "If",
+          "$traffic_light",
           "for",
           "any",
           "reason",
