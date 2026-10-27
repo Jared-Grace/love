@@ -161,7 +161,7 @@ export function bible_glyph_chapter_num27() {
           "$magnet+doing",
           "their",
           "$scales+thing",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
