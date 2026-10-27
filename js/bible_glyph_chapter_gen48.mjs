@@ -595,7 +595,7 @@ export function bible_glyph_chapter_gen48() {
           "one",
           "is",
           "the",
-          "firstborn.",
+          "$first_place+baby.",
           "Put",
           "your",
           "right",
