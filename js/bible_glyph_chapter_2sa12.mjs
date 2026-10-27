@@ -343,7 +343,7 @@ export function bible_glyph_chapter_2sa12() {
           "$sword",
           "will",
           "$no_entry",
-          "depart",
+          "$away+doing",
           "from",
           "your",
           "$house,",
