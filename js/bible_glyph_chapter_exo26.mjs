@@ -214,7 +214,7 @@ export function bible_glyph_chapter_exo26() {
           "$triangular_ruler",
           "$arrow_both_ways,",
           "all",
-          "eleven",
+          "$one+plus",
           "curtains",
           "the",
           "same",
