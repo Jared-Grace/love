@@ -237,7 +237,7 @@ export function bible_glyph_chapter_isa40() {
           "up",
           "on",
           "a",
-          "high",
+          "$giraffe",
           "$mountain,",
           "O",
           "Zion,",
