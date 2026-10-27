@@ -1294,7 +1294,7 @@ export function bible_glyph_chapter_gen27() {
           "at",
           "once",
           "and",
-          "flee",
+          "$dashing_away",
           "to",
           "my",
           "$brother",
