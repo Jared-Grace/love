@@ -461,7 +461,7 @@ export function bible_glyph_chapter_mal03() {
           "Yet",
           "you",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "have",
           "we",
           "$mouth",
