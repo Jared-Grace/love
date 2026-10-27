@@ -368,7 +368,7 @@ export function bible_glyph_chapter_jdg04() {
           "Sisera",
           "was",
           "told",
-          "that",
+          "$pointing",
           "$proper_name$Barak",
           "$son",
           "of",
