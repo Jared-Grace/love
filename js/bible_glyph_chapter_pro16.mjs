@@ -370,7 +370,7 @@ export function bible_glyph_chapter_pro16() {
       {
         verse_number: 18,
         words: [
-          "Pride",
+          "$peacock",
           "goes",
           "before",
           "$broken_chain+thing,",
