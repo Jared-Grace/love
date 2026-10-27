@@ -572,7 +572,7 @@ export function bible_glyph_chapter_isa40() {
           "set",
           "up",
           "an",
-          "idol",
+          "$nesting_dolls",
           "that",
           "will",
           "$no_entry",
