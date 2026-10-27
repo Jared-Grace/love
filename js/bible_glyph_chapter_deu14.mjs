@@ -62,7 +62,7 @@ export function bible_glyph_chapter_deu14() {
           "for",
           "His",
           "prized",
-          "possession",
+          "$heart_red+gem_stone",
           "out",
           "of",
           "all",
