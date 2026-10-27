@@ -155,7 +155,7 @@ export function bible_glyph_chapter_1sa17() {
           "a",
           "javelin",
           "of",
-          "bronze",
+          "$bronze",
           "slung",
           "between",
           "his",
