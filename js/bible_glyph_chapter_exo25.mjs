@@ -596,7 +596,7 @@ export function bible_glyph_chapter_exo25() {
           "a",
           "rim",
           "a",
-          "handbreadth",
+          "$raised_back_of_hand+straight_ruler",
           "wide",
           "around,",
           "and",
