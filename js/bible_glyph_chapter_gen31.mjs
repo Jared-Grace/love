@@ -449,7 +449,7 @@ export function bible_glyph_chapter_gen31() {
           "and",
           "his",
           "$woman",
-          "on",
+          "$pointing_up",
           "$camel.",
         ],
       },
