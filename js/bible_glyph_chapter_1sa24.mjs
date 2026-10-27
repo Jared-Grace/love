@@ -701,7 +701,7 @@ export function bible_glyph_chapter_1sa24() {
         verse_number: 21,
         words: [
           "So",
-          "now",
+          "$watch",
           "swear",
           "to",
           "me",
