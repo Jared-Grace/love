@@ -624,7 +624,7 @@ export function bible_glyph_chapter_lev08() {
           "the",
           "fat",
           "tail,",
-          "all",
+          "$all",
           "the",
           "fat",
           "that",
