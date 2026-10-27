@@ -93,7 +93,7 @@ export function bible_glyph_chapter_jdg02() {
           "$ear",
           "My",
           "$voice.",
-          "What",
+          "$flashlight+question",
           "is",
           "$flashlight",
           "you",
