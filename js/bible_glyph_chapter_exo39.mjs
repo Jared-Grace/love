@@ -246,7 +246,7 @@ export function bible_glyph_chapter_exo39() {
           "over",
           "$page_with_curl+doing,",
           "a",
-          "span",
+          "$hand_with_fingers_splayed+straight_ruler",
           "long",
           "and",
           "a",
