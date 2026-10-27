@@ -557,7 +557,7 @@ export function bible_glyph_chapter_gen24() {
           "$kneeling",
           "$running",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "her",
           "and",
           "$speech,",
