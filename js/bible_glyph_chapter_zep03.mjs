@@ -566,7 +566,7 @@ export function bible_glyph_chapter_zep03() {
           "grieve",
           "over",
           "the",
-          "appointed",
+          "$alarm_clock",
           "feasts,",
           "so",
           "that",
