@@ -172,7 +172,7 @@ export function bible_glyph_chapter_pro08() {
           "those",
           "who",
           "$magnifying_glass+exclamation",
-          "knowledge.",
+          "$lightbulb+thing.",
         ],
       },
       {
