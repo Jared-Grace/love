@@ -986,7 +986,7 @@ export function bible_glyph_chapter_num21() {
           "him,",
           "along",
           "with",
-          "all",
+          "$all",
           "his",
           "$family",
           "and",
