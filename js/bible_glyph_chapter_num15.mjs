@@ -371,7 +371,7 @@ export function bible_glyph_chapter_num15() {
           "a",
           "$foreigner",
           "$luggage",
-          "with",
+          "$safety_pin",
           "you",
           "or",
           "someone",
