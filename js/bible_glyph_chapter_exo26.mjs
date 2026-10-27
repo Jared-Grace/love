@@ -677,7 +677,7 @@ export function bible_glyph_chapter_exo26() {
           "$door+locked",
           "in",
           "the",
-          "middle",
+          "$radio_button",
           "of",
           "the",
           "frames",
