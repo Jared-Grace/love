@@ -1171,7 +1171,7 @@ export function bible_glyph_chapter_2ch20() {
           "had",
           "$no_entry",
           "yet",
-          "set",
+          "$pin+doing",
           "their",
           "$heart_organ",
           "on",
