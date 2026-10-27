@@ -32,7 +32,7 @@ export function bible_glyph_chapter_pro01() {
           "$lightbulb",
           "$wisdom",
           "and",
-          "discipline,",
+          "$teacher+exclamation,",
           "for",
           "comprehending",
           "words",
