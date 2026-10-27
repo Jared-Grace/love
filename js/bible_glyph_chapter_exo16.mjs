@@ -161,7 +161,7 @@ export function bible_glyph_chapter_exo16() {
           "way",
           "I",
           "will",
-          "test",
+          "$test_tube",
           "whether",
           "or",
           "$no_entry",
