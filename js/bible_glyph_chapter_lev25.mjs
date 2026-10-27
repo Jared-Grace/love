@@ -1401,7 +1401,7 @@ export function bible_glyph_chapter_lev25() {
           "$no_entry",
           "$man_beard",
           "may",
-          "rule",
+          "$crown+footprints+doing",
           "over",
           "his",
           "$brother",
