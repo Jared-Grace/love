@@ -468,7 +468,7 @@ export function bible_glyph_chapter_jer18() {
           "scorn;",
           "$all",
           "who",
-          "pass",
+          "$bridge",
           "by",
           "will",
           "be",
