@@ -1217,7 +1217,7 @@ export function bible_glyph_chapter_2ch34() {
           "So",
           "the",
           "$king",
-          "stood",
+          "$person+round_pushpin",
           "by",
           "the",
           "pillar",
