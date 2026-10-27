@@ -292,7 +292,7 @@ export function bible_glyph_chapter_2ki10() {
         words: [
           "When",
           "the",
-          "messenger",
+          "$angel",
           "$footprints,",
           "he",
           "$speech",
