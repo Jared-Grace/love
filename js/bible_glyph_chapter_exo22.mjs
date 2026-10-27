@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo22() {
       {
         verse_number: 1,
         words: [
-          "If",
+          "$pointing",
           "a",
           "$man_beard",
           "steals",
