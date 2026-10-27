@@ -305,7 +305,7 @@ export function bible_glyph_chapter_deu18() {
           "$fire,",
           "who",
           "practices",
-          "divination",
+          "$crystal_ball",
           "or",
           "conjury,",
           "interprets",
