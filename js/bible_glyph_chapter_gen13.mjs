@@ -395,7 +395,7 @@ export function bible_glyph_chapter_gen13() {
           "him,",
           "$lifting",
           "up",
-          "now",
+          "$pleading",
           "your",
           "$eyes",
           "and",
