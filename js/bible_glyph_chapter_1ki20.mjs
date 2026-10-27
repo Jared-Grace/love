@@ -1531,7 +1531,7 @@ export function bible_glyph_chapter_1ki20() {
           "the",
           "prophet",
           "quickly",
-          "removed",
+          "$away+doing",
           "the",
           "bandage",
           "from",
