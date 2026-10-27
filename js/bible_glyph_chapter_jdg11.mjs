@@ -337,7 +337,7 @@ export function bible_glyph_chapter_jdg11() {
           "made",
           "him",
           "their",
-          "leader",
+          "$person_gesturing_ok",
           "and",
           "commander.",
           "And",
