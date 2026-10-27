@@ -310,7 +310,7 @@ export function bible_glyph_chapter_gen09() {
           "flood,",
           "and",
           "$no_entry",
-          "again",
+          "$repeat",
           "will",
           "there",
           "be",
