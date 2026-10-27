@@ -707,7 +707,7 @@ export function bible_glyph_chapter_deu06() {
           "$locked_with_pen",
           "and",
           "to",
-          "fear",
+          "$fear+doing",
           "the",
           "$i_am",
           "our",
