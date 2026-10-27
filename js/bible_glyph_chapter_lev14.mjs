@@ -306,7 +306,7 @@ export function bible_glyph_chapter_lev14() {
           "is",
           "to",
           "$hand_receiving",
-          "two",
+          "$two",
           "unblemished",
           "male",
           "$lamb,",
