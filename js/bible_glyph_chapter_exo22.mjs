@@ -238,7 +238,7 @@ export function bible_glyph_chapter_exo22() {
           "then",
           "if",
           "the",
-          "thief",
+          "$ninja",
           "is",
           "$magnifying_glass+exclamation",
           "he",
