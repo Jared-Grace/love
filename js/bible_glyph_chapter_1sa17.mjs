@@ -120,7 +120,7 @@ export function bible_glyph_chapter_1sa17() {
           "had",
           "a",
           "bronze",
-          "helmet",
+          "$military_helmet+top",
           "on",
           "his",
           "head,",
