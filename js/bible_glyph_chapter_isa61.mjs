@@ -368,7 +368,7 @@ export function bible_glyph_chapter_isa61() {
           "me",
           "in",
           "a",
-          "robe",
+          "$cloak",
           "of",
           "$ruler+thing,",
           "as",
