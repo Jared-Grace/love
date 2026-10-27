@@ -569,7 +569,7 @@ export function bible_glyph_chapter_gen06() {
           "and",
           "crawling",
           "creature,",
-          "two",
+          "$two",
           "of",
           "each",
           "will",
