@@ -25,7 +25,7 @@ export function bible_glyph_chapter_lev21() {
           "the",
           "$son",
           "of",
-          "Aaron,",
+          "$white_cane+blossom+proper_name,",
           "and",
           "$speech",
           "to",
