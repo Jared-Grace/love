@@ -299,7 +299,7 @@ export function bible_glyph_chapter_num18() {
           "to",
           "$proper_name$Aaron,",
           "Behold,",
-          "I",
+          "$me",
           "have",
           "$hands_giving",
           "you",
