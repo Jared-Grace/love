@@ -133,7 +133,7 @@ export function bible_glyph_chapter_num27() {
           "of",
           "our",
           "$father",
-          "disappear",
+          "$scissors+down_arrow+doing",
           "from",
           "his",
           "clan",
