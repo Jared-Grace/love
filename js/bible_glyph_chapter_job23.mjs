@@ -248,7 +248,7 @@ export function bible_glyph_chapter_job23() {
           "words",
           "of",
           "His",
-          "mouth",
+          "$face_with_open_mouth",
           "more",
           "than",
           "my",
