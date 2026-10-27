@@ -728,7 +728,7 @@ export function bible_glyph_chapter_gen48() {
           "one",
           "who",
           "is",
-          "above",
+          "$pointing_up",
           "your",
           "$brother,",
           "I",
