@@ -341,7 +341,7 @@ export function bible_glyph_chapter_1sa20() {
           "if",
           "I",
           "$lightbulb",
-          "that",
+          "$pointing",
           "my",
           "$father",
           "intends",
