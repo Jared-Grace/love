@@ -695,7 +695,7 @@ export function bible_glyph_chapter_num23() {
           "a",
           "$lion,",
           "$no_entry",
-          "resting",
+          "$bed+doing",
           "until",
           "they",
           "$eating",
