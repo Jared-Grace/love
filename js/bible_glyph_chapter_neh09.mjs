@@ -641,7 +641,7 @@ export function bible_glyph_chapter_neh09() {
           "is",
           "your",
           "God",
-          "who",
+          "$back+flashlight",
           "brought",
           "you",
           "up",
