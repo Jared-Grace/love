@@ -796,7 +796,7 @@ export function bible_glyph_chapter_isa43() {
           "argue",
           "the",
           "matter",
-          "together.",
+          "$linked_paperclips+manner.",
           "State",
           "your",
           "case,",
