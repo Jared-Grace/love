@@ -517,7 +517,7 @@ export function bible_glyph_chapter_exo38() {
       {
         verse_number: 20,
         words: [
-          "All",
+          "$all",
           "the",
           "tent",
           "pegs",
