@@ -792,7 +792,7 @@ export function bible_glyph_chapter_lev14() {
         words: [
           "and",
           "two",
-          "turtledoves",
+          "$dove+ring",
           "or",
           "two",
           "$son",
