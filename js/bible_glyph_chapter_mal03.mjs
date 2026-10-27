@@ -91,7 +91,7 @@ export function bible_glyph_chapter_mal03() {
           "like",
           "a",
           "launderer",
-          "soap.",
+          "$soap+droplet.",
         ],
       },
       {
