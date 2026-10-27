@@ -157,7 +157,7 @@ export function bible_glyph_chapter_1ki21() {
           "down",
           "on",
           "his",
-          "bed,",
+          "$bed,",
           "turned",
           "his",
           "face",
