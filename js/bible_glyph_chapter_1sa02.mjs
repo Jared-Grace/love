@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_1sa02() {
           "the",
           "$i_am",
           "$microphone:",
-          "Far",
+          "$person_gesturing_no+exclamation",
           "be",
           "it",
           "from",
