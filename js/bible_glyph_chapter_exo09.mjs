@@ -162,7 +162,7 @@ export function bible_glyph_chapter_exo09() {
           "$hammer+doing",
           "just",
           "that.",
-          "All",
+          "$all",
           "the",
           "livestock",
           "of",
