@@ -681,7 +681,7 @@ export function bible_glyph_chapter_lev26() {
         verse_number: 23,
         words: [
           "And",
-          "if",
+          "$traffic_light",
           "in",
           "spite",
           "of",
