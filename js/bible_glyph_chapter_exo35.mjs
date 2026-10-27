@@ -33,7 +33,7 @@ export function bible_glyph_chapter_exo35() {
           "are",
           "the",
           "$speech",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "has",
           "commanded",
