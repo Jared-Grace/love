@@ -1095,7 +1095,7 @@ export function bible_glyph_chapter_lev26() {
           "of",
           "a",
           "windblown",
-          "leaf",
+          "$leaf",
           "will",
           "put",
           "them",
