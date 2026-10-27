@@ -544,7 +544,7 @@ export function bible_glyph_chapter_deu08() {
         verse_number: 18,
         words: [
           "But",
-          "remember",
+          "$reminder_ribbon",
           "that",
           "it",
           "is",
