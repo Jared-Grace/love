@@ -401,7 +401,7 @@ export function bible_glyph_chapter_psa073() {
           "was",
           "a",
           "brute",
-          "beast",
+          "$paw_prints",
           "before",
           "You.",
         ],
