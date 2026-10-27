@@ -37,7 +37,7 @@ export function bible_glyph_chapter_deu32() {
           "Let",
           "my",
           "teaching",
-          "fall",
+          "$dew+down_arrow+doing",
           "like",
           "rain",
           "and",
