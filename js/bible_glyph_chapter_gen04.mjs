@@ -623,7 +623,7 @@ export function bible_glyph_chapter_gen04() {
           "forger",
           "of",
           "$all",
-          "implement",
+          "$hammer_and_wrench+doer",
           "of",
           "bronze",
           "and",
