@@ -73,7 +73,7 @@ export function bible_glyph_chapter_num22() {
           "numerous.",
           "Indeed,",
           "$father+proper_name",
-          "dreaded",
+          "$nauseated_face+heart_red+doing",
           "the",
           "$son",
           "of",
