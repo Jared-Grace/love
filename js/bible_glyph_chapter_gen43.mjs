@@ -408,7 +408,7 @@ export function bible_glyph_chapter_gen43() {
           "$turn_back",
           "at",
           "once",
-          "to",
+          "$toward",
           "the",
           "$man_beard.",
         ],
