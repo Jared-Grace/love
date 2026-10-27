@@ -897,7 +897,7 @@ export function bible_glyph_chapter_exo34() {
           "Moses",
           "was",
           "$telescope",
-          "with",
+          "$linked_paperclips",
           "the",
           "$i_am",
           "forty",
