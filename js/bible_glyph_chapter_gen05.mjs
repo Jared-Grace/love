@@ -620,7 +620,7 @@ export function bible_glyph_chapter_gen05() {
           "$hand,",
           "$tray_out",
           "the",
-          "ground",
+          "$brown_square",
           "that",
           "$i_am",
           "$speech+thumbs_down.",
