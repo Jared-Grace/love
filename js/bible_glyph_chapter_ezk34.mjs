@@ -195,7 +195,7 @@ export function bible_glyph_chapter_ezk34() {
       {
         verse_number: 7,
         words: [
-          "Therefore,",
+          "$right_arrow,",
           "you",
           "$person+sheep,",
           "$ear",
