@@ -131,7 +131,7 @@ export function bible_glyph_chapter_1sa02() {
         words: [
           "The",
           "well-fed",
-          "hire",
+          "$coin+hammer+doing",
           "themselves",
           "out",
           "for",
