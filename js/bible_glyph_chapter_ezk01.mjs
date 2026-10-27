@@ -615,7 +615,7 @@ export function bible_glyph_chapter_ezk01() {
           "$sprout",
           "was",
           "the",
-          "likeness",
+          "$likeness+thing",
           "of",
           "an",
           "awesome",
