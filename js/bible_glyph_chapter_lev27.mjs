@@ -927,7 +927,7 @@ export function bible_glyph_chapter_lev27() {
         words: [
           "Thus",
           "any",
-          "tithe",
+          "$ten+hands_giving",
           "from",
           "the",
           "$earth,",
