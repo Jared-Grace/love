@@ -526,7 +526,7 @@ export function bible_glyph_chapter_hos02() {
           "$man_beard,",
           "and",
           "$no_entry",
-          "longer",
+          "$repeat",
           "$waving_hand",
           "Me",
           "my",
