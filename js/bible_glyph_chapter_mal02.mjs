@@ -444,7 +444,7 @@ export function bible_glyph_chapter_mal02() {
           "with",
           "weeping",
           "and",
-          "groaning,",
+          "$tired_face,",
           "because",
           "He",
           "no",
