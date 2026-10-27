@@ -493,7 +493,7 @@ export function bible_glyph_chapter_exo01() {
           "Hebrews",
           "you",
           "must",
-          "throw",
+          "$throwing",
           "into",
           "the",
           "$crocodile,",
