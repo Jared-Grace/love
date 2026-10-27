@@ -678,7 +678,7 @@ export function bible_glyph_chapter_lev13() {
           "out",
           "in",
           "the",
-          "boil.",
+          "$fire+microbe.",
         ],
       },
       {
