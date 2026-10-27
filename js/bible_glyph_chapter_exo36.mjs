@@ -638,7 +638,7 @@ export function bible_glyph_chapter_exo36() {
         words: [
           "He",
           "$hammer+doing",
-          "twenty",
+          "$two+zero",
           "frames",
           "for",
           "the",
