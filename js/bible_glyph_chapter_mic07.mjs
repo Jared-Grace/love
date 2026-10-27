@@ -578,7 +578,7 @@ export function bible_glyph_chapter_mic07() {
           "$cyclone",
           "and",
           "passes",
-          "over",
+          "$pointing_up",
           "the",
           "transgression",
           "of",
