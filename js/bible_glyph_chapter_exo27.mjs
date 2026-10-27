@@ -49,7 +49,7 @@ export function bible_glyph_chapter_exo27() {
           "of",
           "its",
           "$four",
-          "corners,",
+          "$triangular_ruler+brick,",
           "so",
           "that",
           "the",
