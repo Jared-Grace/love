@@ -445,7 +445,7 @@ export function bible_glyph_chapter_isa02() {
         verse_number: 16,
         words: [
           "against",
-          "every",
+          "$all",
           "$ship",
           "of",
           "$proper_name$Tarshish",
