@@ -13,7 +13,7 @@ export function bible_glyph_chapter_jos01() {
       {
         verse_number: 1,
         words: [
-          "Now",
+          "$link",
           "after",
           "the",
           "$skull",
