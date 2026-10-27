@@ -294,7 +294,7 @@ export function bible_glyph_chapter_job03() {
       {
         verse_number: 14,
         words: [
-          "with",
+          "$linked_paperclips",
           "$king",
           "and",
           "counselors",
