@@ -139,7 +139,7 @@ export function bible_glyph_chapter_psa116() {
           "O",
           "my",
           "$person_other,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "has",
