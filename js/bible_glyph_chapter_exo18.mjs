@@ -608,7 +608,7 @@ export function bible_glyph_chapter_exo18() {
       {
         verse_number: 20,
         words: [
-          "Teach",
+          "$rotating_light+doing",
           "them",
           "the",
           "statutes",
