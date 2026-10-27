@@ -244,7 +244,7 @@ export function bible_glyph_chapter_1ki02() {
           "$no_entry",
           "let",
           "his",
-          "gray",
+          "$older_person",
           "head",
           "go",
           "down",
