@@ -427,7 +427,7 @@ export function bible_glyph_chapter_jer23() {
       {
         verse_number: 12,
         words: [
-          "Therefore",
+          "$right_arrow",
           "their",
           "$road",
           "will",
