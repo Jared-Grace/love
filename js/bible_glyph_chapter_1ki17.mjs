@@ -581,7 +581,7 @@ export function bible_glyph_chapter_1ki17() {
           "me",
           "of",
           "my",
-          "iniquity",
+          "$cyclone",
           "and",
           "cause",
           "the",
