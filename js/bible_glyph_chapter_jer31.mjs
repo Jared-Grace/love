@@ -153,7 +153,7 @@ export function bible_glyph_chapter_jer31() {
       {
         verse_number: 6,
         words: [
-          "For",
+          "$pointing",
           "there",
           "will",
           "be",
