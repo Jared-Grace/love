@@ -750,7 +750,7 @@ export function bible_glyph_chapter_gen41() {
           "$fire+wheat+doing",
           "by",
           "the",
-          "east",
+          "$compass+right_arrow+thing",
           "wind:",
           "they",
           "are",
