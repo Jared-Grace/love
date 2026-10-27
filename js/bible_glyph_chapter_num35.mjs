@@ -647,7 +647,7 @@ export function bible_glyph_chapter_num35() {
           "$no_entry",
           "hostility,",
           "$shuffle",
-          "throws",
+          "$throwing",
           "an",
           "object",
           "at",
