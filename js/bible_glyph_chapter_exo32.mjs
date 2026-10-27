@@ -809,7 +809,7 @@ export function bible_glyph_chapter_exo32() {
           "them,",
           "$person+question",
           "has",
-          "gold,",
+          "$gold,",
           "let",
           "him",
           "take",
