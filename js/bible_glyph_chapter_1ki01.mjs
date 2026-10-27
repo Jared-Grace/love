@@ -316,7 +316,7 @@ export function bible_glyph_chapter_1ki01() {
           "he",
           "did",
           "$no_entry",
-          "invite",
+          "$waving_hand",
           "$proper_name$Nathan",
           "the",
           "$megaphone,",
