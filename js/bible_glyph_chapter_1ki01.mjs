@@ -155,7 +155,7 @@ export function bible_glyph_chapter_1ki01() {
           "exalt",
           "himself,",
           "$speech,",
-          "I",
+          "$me",
           "will",
           "$castle+doing.",
           "And",
