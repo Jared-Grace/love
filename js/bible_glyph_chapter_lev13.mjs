@@ -1941,7 +1941,7 @@ export function bible_glyph_chapter_lev13() {
           "pronouncing",
           "it",
           "clean",
-          "or",
+          "$shuffle",
           "unclean.",
         ],
       },
