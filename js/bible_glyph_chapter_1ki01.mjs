@@ -201,7 +201,7 @@ export function bible_glyph_chapter_1ki01() {
           "Adonijah",
           "was",
           "$plus",
-          "very",
+          "$double_exclamation",
           "$thumbs_up",
           "to",
           "look",
