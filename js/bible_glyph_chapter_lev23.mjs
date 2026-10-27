@@ -742,7 +742,7 @@ export function bible_glyph_chapter_lev23() {
           "blasts,",
           "a",
           "$sparkle+thing",
-          "assembly.",
+          "$waving_hand+thing.",
         ],
       },
       {
