@@ -294,7 +294,7 @@ export function bible_glyph_chapter_zec03() {
           "it",
           "an",
           "inscription,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am",
           "of",
