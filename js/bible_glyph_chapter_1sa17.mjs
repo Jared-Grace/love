@@ -1409,7 +1409,7 @@ export function bible_glyph_chapter_1sa17() {
           "into",
           "my",
           "$hand.",
-          "This",
+          "$flashlight",
           "$sun",
           "I",
           "will",
