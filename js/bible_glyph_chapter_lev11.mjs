@@ -789,7 +789,7 @@ export function bible_glyph_chapter_lev11() {
           "it",
           "will",
           "be",
-          "unclean;",
+          "$soap+no_entry;",
           "you",
           "must",
           "break",
