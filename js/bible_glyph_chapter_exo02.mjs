@@ -493,7 +493,7 @@ export function bible_glyph_chapter_exo02() {
           "of",
           "$proper_name$Midian",
           "had",
-          "seven",
+          "$seven",
           "$woman,",
           "and",
           "they",
