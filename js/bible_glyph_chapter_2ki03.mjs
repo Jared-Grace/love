@@ -824,7 +824,7 @@ export function bible_glyph_chapter_2ki03() {
           "on",
           "$all",
           "$thumbs_up",
-          "field",
+          "$field+pizza",
           "until",
           "it",
           "was",
