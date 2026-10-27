@@ -96,7 +96,7 @@ export function bible_glyph_chapter_num16() {
           "have",
           "taken",
           "too",
-          "much",
+          "$multiply",
           "upon",
           "yourselves.",
           "The",
