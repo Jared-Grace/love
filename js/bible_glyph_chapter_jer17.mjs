@@ -48,7 +48,7 @@ export function bible_glyph_chapter_jer17() {
           "Even",
           "their",
           "$son",
-          "remember",
+          "$reminder_ribbon",
           "their",
           "$altar",
           "and",
