@@ -663,7 +663,7 @@ export function bible_glyph_chapter_num18() {
           "just",
           "as",
           "the",
-          "breast",
+          "$heart_organ+meat",
           "of",
           "the",
           "wave",
