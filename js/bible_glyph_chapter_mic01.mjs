@@ -112,7 +112,7 @@ export function bible_glyph_chapter_mic01() {
           "The",
           "$mountain",
           "will",
-          "melt",
+          "$melting_face",
           "beneath",
           "Him,",
           "and",
