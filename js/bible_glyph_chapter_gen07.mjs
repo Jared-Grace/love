@@ -187,7 +187,7 @@ export function bible_glyph_chapter_gen07() {
           "$seat+proper_name",
           "$footprints",
           "the",
-          "ark,",
+          "$package,",
           "and",
           "$safety_pin",
           "him",
