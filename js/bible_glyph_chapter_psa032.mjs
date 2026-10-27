@@ -139,7 +139,7 @@ export function bible_glyph_chapter_psa032() {
       {
         verse_number: 6,
         words: [
-          "Therefore",
+          "$pointing_up",
           "let",
           "all",
           "the",
