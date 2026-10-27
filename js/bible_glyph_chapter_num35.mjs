@@ -638,7 +638,7 @@ export function bible_glyph_chapter_num35() {
         verse_number: 22,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "anyone",
           "suddenly",
           "pushes",
