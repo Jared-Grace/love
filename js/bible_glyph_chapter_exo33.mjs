@@ -244,7 +244,7 @@ export function bible_glyph_chapter_exo33() {
           "of",
           "$alarm_clock,",
           "and",
-          "anyone",
+          "$all",
           "inquiring",
           "of",
           "the",
