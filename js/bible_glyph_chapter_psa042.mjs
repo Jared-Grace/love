@@ -97,7 +97,7 @@ export function bible_glyph_chapter_psa042() {
       {
         verse_number: 4,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "things",
           "come",
           "to",
