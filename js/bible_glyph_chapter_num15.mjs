@@ -1138,7 +1138,7 @@ export function bible_glyph_chapter_num15() {
       {
         verse_number: 41,
         words: [
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
