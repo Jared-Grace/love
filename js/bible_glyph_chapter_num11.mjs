@@ -624,7 +624,7 @@ export function bible_glyph_chapter_num11() {
           "or",
           "$ten,",
           "or",
-          "twenty",
+          "$two+zero",
           "$sun.",
         ],
       },
