@@ -34,7 +34,7 @@ export function bible_glyph_chapter_lev02() {
           "it",
           "and",
           "$hands_giving",
-          "frankincense",
+          "$white_circle+incense",
           "on",
           "it.",
         ],
