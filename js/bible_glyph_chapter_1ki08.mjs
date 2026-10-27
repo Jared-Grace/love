@@ -1931,7 +1931,7 @@ export function bible_glyph_chapter_1ki08() {
           "and",
           "blessed",
           "the",
-          "whole",
+          "$all",
           "$church",
           "of",
           "$wrestling+heart_on_fire",
