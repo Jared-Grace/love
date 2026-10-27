@@ -974,7 +974,7 @@ export function bible_glyph_chapter_1ki22() {
           "into",
           "$crossed_swords,",
           "but",
-          "you",
+          "$you",
           "wear",
           "your",
           "royal",
