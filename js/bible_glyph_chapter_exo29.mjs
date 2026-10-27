@@ -258,7 +258,7 @@ export function bible_glyph_chapter_exo29() {
           "You",
           "are",
           "to",
-          "present",
+          "$magnet+doing",
           "the",
           "$bull",
           "at",
