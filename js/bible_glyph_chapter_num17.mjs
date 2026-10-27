@@ -76,7 +76,7 @@ export function bible_glyph_chapter_num17() {
           "there",
           "must",
           "be",
-          "one",
+          "$one",
           "$white_cane",
           "for",
           "the",
