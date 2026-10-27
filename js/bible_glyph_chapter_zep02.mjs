@@ -497,7 +497,7 @@ export function bible_glyph_chapter_zep02() {
           "and",
           "there",
           "is",
-          "none",
+          "$end_arrow+zero",
           "besides",
           "me",
           "-",
