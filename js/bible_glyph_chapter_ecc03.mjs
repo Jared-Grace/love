@@ -330,7 +330,7 @@ export function bible_glyph_chapter_ecc03() {
           "I",
           "$lightbulb",
           "that",
-          "everything",
+          "$all",
           "$heart_on_fire",
           "$hammer+doing",
           "endures",
