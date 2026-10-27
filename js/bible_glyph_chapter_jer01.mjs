@@ -328,7 +328,7 @@ export function bible_glyph_chapter_jer01() {
           "You",
           "have",
           "$eye",
-          "correctly,",
+          "$thumbs_up+doing,",
           "for",
           "I",
           "am",
