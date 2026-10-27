@@ -81,7 +81,7 @@ export function bible_glyph_chapter_lev03() {
           "From",
           "$sacrifice",
           "of",
-          "peace",
+          "$peace+gift",
           "he",
           "is",
           "to",
