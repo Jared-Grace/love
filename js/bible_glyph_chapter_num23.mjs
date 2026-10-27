@@ -67,7 +67,7 @@ export function bible_glyph_chapter_num23() {
           "$speech",
           "to",
           "$proper_name$Balak,",
-          "Stay",
+          "$person+round_pushpin+anchor+doing",
           "here",
           "by",
           "your",
