@@ -59,7 +59,7 @@ export function bible_glyph_chapter_job28() {
           "the",
           "$darkness;",
           "$pointing_back",
-          "probes",
+          "$detective+doing",
           "the",
           "farthest",
           "recesses",
