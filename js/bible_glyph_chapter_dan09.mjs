@@ -996,7 +996,7 @@ export function bible_glyph_chapter_dan09() {
           "with",
           "$multiply",
           "for",
-          "one",
+          "$one",
           "week,",
           "but",
           "in",
