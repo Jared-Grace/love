@@ -329,7 +329,7 @@ export function bible_glyph_chapter_psa051() {
         words: [
           "O",
           "$crown,",
-          "open",
+          "$unlocked",
           "my",
           "$kiss_mark,",
           "and",
