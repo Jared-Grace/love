@@ -1283,7 +1283,7 @@ export function bible_glyph_chapter_2ch20() {
           "have",
           "allied",
           "yourself",
-          "with",
+          "$linked_paperclips",
           "$proper_name$Ahaziah,",
           "the",
           "$i_am",
