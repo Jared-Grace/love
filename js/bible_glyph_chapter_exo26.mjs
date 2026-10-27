@@ -28,7 +28,7 @@ export function bible_glyph_chapter_exo26() {
           "$blue_circle,",
           "$purple_circle",
           "and",
-          "scarlet",
+          "$worm",
           "yarn,",
           "and",
           "$cherub",
