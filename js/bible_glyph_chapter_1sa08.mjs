@@ -72,7 +72,7 @@ export function bible_glyph_chapter_1sa08() {
           "aside",
           "$next_track",
           "dishonest",
-          "gain,",
+          "$money_bag+hand_receiving,",
           "$hand_receiving",
           "bribes",
           "and",
