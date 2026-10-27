@@ -800,7 +800,7 @@ export function bible_glyph_chapter_2ki04() {
           "Please",
           "run",
           "out",
-          "now",
+          "$watch",
           "to",
           "meet",
           "her",
