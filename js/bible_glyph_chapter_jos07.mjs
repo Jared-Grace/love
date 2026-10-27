@@ -429,7 +429,7 @@ export function bible_glyph_chapter_jos07() {
           "have",
           "stolen",
           "and",
-          "lied,",
+          "$lying_face+doing,",
           "and",
           "they",
           "have",
