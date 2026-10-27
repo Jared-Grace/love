@@ -47,7 +47,7 @@ export function bible_glyph_chapter_2ki04() {
           "But",
           "now",
           "his",
-          "creditor",
+          "$coin+hand_sending+doing",
           "is",
           "$footprints",
           "to",
