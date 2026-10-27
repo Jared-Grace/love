@@ -1016,7 +1016,7 @@ export function bible_glyph_chapter_1ch29() {
           "$king",
           "$two_hearts+proper_name,",
           "from",
-          "first",
+          "$first_place",
           "to",
           "last,",
           "are",
