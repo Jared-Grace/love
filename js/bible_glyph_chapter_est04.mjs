@@ -109,7 +109,7 @@ export function bible_glyph_chapter_est04() {
           "in",
           "$sackcloth",
           "and",
-          "ashes.",
+          "$ashes.",
         ],
       },
       {
