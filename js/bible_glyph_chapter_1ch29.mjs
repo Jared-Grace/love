@@ -439,7 +439,7 @@ export function bible_glyph_chapter_1ch29() {
           "are",
           "exalted",
           "as",
-          "head",
+          "$person_gesturing_ok",
           "over",
           "all.",
         ],
