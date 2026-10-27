@@ -795,7 +795,7 @@ export function bible_glyph_chapter_1ki18() {
           "for",
           "yourselves",
           "one",
-          "bull",
+          "$bull",
           "and",
           "$hammer+doing",
           "it",
