@@ -85,7 +85,7 @@ export function bible_glyph_chapter_neh01() {
           "me,",
           "The",
           "remnant",
-          "who",
+          "$back+flashlight",
           "survived",
           "the",
           "exile",
