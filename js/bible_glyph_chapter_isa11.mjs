@@ -408,7 +408,7 @@ export function bible_glyph_chapter_isa11() {
           "$hands_raised+proper_name",
           "from",
           "the",
-          "four",
+          "$four",
           "corners",
           "of",
           "the",
