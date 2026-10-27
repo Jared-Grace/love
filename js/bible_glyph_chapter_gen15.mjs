@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen15() {
         verse_number: 1,
         words: [
           "$next_track",
-          "these",
+          "$flashlight+flashlight",
           "$speech,",
           "the",
           "$speech",
