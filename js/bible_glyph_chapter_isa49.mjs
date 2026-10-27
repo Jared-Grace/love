@@ -384,7 +384,7 @@ export function bible_glyph_chapter_isa49() {
           "They",
           "will",
           "$no_entry",
-          "hunger",
+          "$famine+person+doing",
           "or",
           "thirst,",
           "$no_entry",
