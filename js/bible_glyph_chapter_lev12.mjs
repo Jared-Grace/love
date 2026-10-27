@@ -151,7 +151,7 @@ export function bible_glyph_chapter_lev12() {
           "her",
           "$blood",
           "for",
-          "sixty",
+          "$six+zero",
           "$sun",
           "and",
           "six",
