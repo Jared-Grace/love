@@ -1886,7 +1886,7 @@ export function bible_glyph_chapter_lev13() {
           "If",
           "the",
           "mildew",
-          "disappears",
+          "$away+doing",
           "from",
           "the",
           "$garment,",
