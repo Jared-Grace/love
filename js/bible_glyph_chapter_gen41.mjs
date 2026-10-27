@@ -1509,7 +1509,7 @@ export function bible_glyph_chapter_gen41() {
           "although",
           "there",
           "was",
-          "famine",
+          "$famine",
           "in",
           "every",
           "$earth,",
