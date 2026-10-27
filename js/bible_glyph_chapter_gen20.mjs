@@ -174,7 +174,7 @@ export function bible_glyph_chapter_gen20() {
           "in",
           "the",
           "$dream,",
-          "Yes,",
+          "$plus,",
           "I",
           "$lightbulb",
           "that",
