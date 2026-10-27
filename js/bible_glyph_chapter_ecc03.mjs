@@ -122,7 +122,7 @@ export function bible_glyph_chapter_ecc03() {
           "embrace",
           "and",
           "a",
-          "time",
+          "$clock",
           "to",
           "refrain",
           "from",
