@@ -578,7 +578,7 @@ export function bible_glyph_chapter_amo05() {
           "rests",
           "his",
           "$hand",
-          "against",
+          "$pointing_up",
           "the",
           "wall",
           "only",
