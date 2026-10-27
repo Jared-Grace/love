@@ -704,7 +704,7 @@ export function bible_glyph_chapter_2ki05() {
           "and",
           "$pointing_back",
           "$crutch+doing",
-          "on",
+          "$pointing_up",
           "my",
           "$hand,",
           "and",
