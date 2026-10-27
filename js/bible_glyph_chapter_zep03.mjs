@@ -47,7 +47,7 @@ export function bible_glyph_chapter_zep03() {
           "$no_entry",
           "drawn",
           "near",
-          "to",
+          "$toward",
           "her",
           "$heart_on_fire.",
         ],
