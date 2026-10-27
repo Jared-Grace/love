@@ -1371,7 +1371,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "$spear+pinching_hand,",
           "but",
-          "I",
+          "$me",
           "$footprints",
           "against",
           "you",
