@@ -408,7 +408,7 @@ export function bible_glyph_chapter_exo09() {
         verse_number: 14,
         words: [
           "Otherwise",
-          "I",
+          "$me",
           "will",
           "$hand_sending",
           "all",
