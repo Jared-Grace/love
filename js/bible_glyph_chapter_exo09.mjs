@@ -738,7 +738,7 @@ export function bible_glyph_chapter_exo09() {
           "through",
           "it.",
           "The",
-          "hail",
+          "$ice",
           "was",
           "so",
           "severe",
