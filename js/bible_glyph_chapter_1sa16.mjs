@@ -696,7 +696,7 @@ export function bible_glyph_chapter_1sa16() {
           "David",
           "became",
           "his",
-          "armor-bearer.",
+          "$lifting.",
         ],
       },
       {
