@@ -354,7 +354,7 @@ export function bible_glyph_chapter_2ch06() {
           "$back+flashlight",
           "He",
           "made",
-          "with",
+          "$linked_paperclips",
           "the",
           "$son",
           "of",
