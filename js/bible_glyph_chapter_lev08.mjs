@@ -461,7 +461,7 @@ export function bible_glyph_chapter_lev08() {
         verse_number: 20,
         words: [
           "$fishing_pole+proper_name",
-          "cut",
+          "$kitchen_knife+meat+doing",
           "$ram",
           "into",
           "pieces",
