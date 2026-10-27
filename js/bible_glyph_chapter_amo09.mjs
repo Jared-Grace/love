@@ -137,7 +137,7 @@ export function bible_glyph_chapter_amo09() {
           "the",
           "$snake",
           "to",
-          "bite",
+          "$tooth+doing",
           "them.",
         ],
       },
