@@ -75,7 +75,7 @@ export function bible_glyph_chapter_dan09() {
           "$city+peace",
           "would",
           "last",
-          "seventy",
+          "$seven+zero",
           "years.",
         ],
       },
