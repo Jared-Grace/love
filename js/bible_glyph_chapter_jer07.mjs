@@ -279,7 +279,7 @@ export function bible_glyph_chapter_jer07() {
           "can",
           "$hammer+doing",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$vomiting?",
         ],
       },
