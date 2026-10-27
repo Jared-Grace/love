@@ -87,7 +87,7 @@ export function bible_glyph_chapter_num11() {
           "was",
           "called",
           "$proper_name$Taberah,",
-          "because",
+          "$pointing",
           "the",
           "$fire",
           "of",
