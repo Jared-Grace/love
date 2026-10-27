@@ -102,7 +102,7 @@ export function bible_glyph_chapter_num22() {
           "us,",
           "as",
           "an",
-          "ox",
+          "$ox",
           "licks",
           "up",
           "the",
