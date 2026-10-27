@@ -252,7 +252,7 @@ export function bible_glyph_chapter_exo11() {
           "makes",
           "a",
           "distinction",
-          "between",
+          "$brain+arrow_both_ways",
           "$clamp+proper_name",
           "and",
           "$wrestling+heart_on_fire.",
