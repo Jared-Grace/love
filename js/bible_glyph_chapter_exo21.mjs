@@ -843,7 +843,7 @@ export function bible_glyph_chapter_exo21() {
           "stoned,",
           "and",
           "its",
-          "owner",
+          "$key",
           "must",
           "also",
           "be",
