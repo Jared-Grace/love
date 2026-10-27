@@ -335,7 +335,7 @@ export function bible_glyph_chapter_deu14() {
           "screech",
           "$bird+night,",
           "the",
-          "gull,",
+          "$bird+straight_ruler,",
           "any",
           "kind",
           "of",
