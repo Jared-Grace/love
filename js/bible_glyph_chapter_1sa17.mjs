@@ -852,7 +852,7 @@ export function bible_glyph_chapter_1sa17() {
           "whom",
           "did",
           "you",
-          "leave",
+          "$hand_with_fingers_splayed+doing",
           "those",
           "few",
           "$sheep",
