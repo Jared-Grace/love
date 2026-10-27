@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa121() {
           "$wrestling+heart_on_fire",
           "will",
           "$no_entry",
-          "slumber",
+          "$sleeping_face+eye+doing",
           "$no_entry",
           "sleep.",
         ],
