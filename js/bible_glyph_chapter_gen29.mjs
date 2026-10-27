@@ -596,7 +596,7 @@ export function bible_glyph_chapter_gen29() {
         words: [
           "But",
           "when",
-          "evening",
+          "$sunset",
           "came,",
           "Laban",
           "$hand_receiving",
