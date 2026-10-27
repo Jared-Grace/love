@@ -699,7 +699,7 @@ export function bible_glyph_chapter_deu07() {
           "even",
           "the",
           "survivors",
-          "hiding",
+          "$see_no_evil_monkey",
           "from",
           "you",
           "have",
