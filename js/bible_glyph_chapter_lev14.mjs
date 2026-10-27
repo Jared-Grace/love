@@ -588,7 +588,7 @@ export function bible_glyph_chapter_lev14() {
           "$takeout_box",
           "in",
           "his",
-          "palm",
+          "$hand_with_fingers_splayed",
           "on",
           "the",
           "right",
