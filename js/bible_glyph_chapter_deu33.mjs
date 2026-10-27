@@ -488,7 +488,7 @@ export function bible_glyph_chapter_deu33() {
           "is",
           "like",
           "a",
-          "firstborn",
+          "$first_place+baby",
           "$ox,",
           "and",
           "his",
