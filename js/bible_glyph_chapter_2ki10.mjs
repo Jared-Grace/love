@@ -1097,7 +1097,7 @@ export function bible_glyph_chapter_2ki10() {
           "of",
           "the",
           "golden",
-          "calves",
+          "$calf",
           "at",
           "Bethel",
           "and",
