@@ -176,7 +176,7 @@ export function bible_glyph_chapter_isa64() {
           "$ruler+thing",
           "are",
           "like",
-          "filthy",
+          "$garment+red_circle",
           "$garment.",
           "We",
           "all",
