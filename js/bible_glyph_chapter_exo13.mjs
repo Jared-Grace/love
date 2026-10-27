@@ -13,7 +13,7 @@ export function bible_glyph_chapter_exo13() {
     verses: [
       {
         verse_number: 1,
-        words: ["$i_am", "$mouth", "to", "$fishing_pole+proper_name,"],
+        words: ["$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 2,
