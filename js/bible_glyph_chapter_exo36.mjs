@@ -695,7 +695,7 @@ export function bible_glyph_chapter_exo36() {
           "side,",
           "he",
           "$hammer+doing",
-          "twenty",
+          "$two+zero",
           "frames,",
         ],
       },
