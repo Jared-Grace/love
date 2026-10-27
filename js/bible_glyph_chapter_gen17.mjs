@@ -335,7 +335,7 @@ export function bible_glyph_chapter_gen17() {
           "$detective+thing,",
           "even",
           "those",
-          "who",
+          "$back+flashlight",
           "are",
           "$no_entry",
           "your",
