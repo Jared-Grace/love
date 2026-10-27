@@ -821,7 +821,7 @@ export function bible_glyph_chapter_gen45() {
           "$son",
           "$i_am+plus",
           "is",
-          "still",
+          "$repeat",
           "$sprout!",
           "I",
           "will",
