@@ -466,7 +466,7 @@ export function bible_glyph_chapter_exo18() {
           "$pointing_up",
           "you",
           "$tray_out",
-          "morning",
+          "$morning",
           "till",
           "evening?",
         ],
