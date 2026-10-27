@@ -793,7 +793,7 @@ export function bible_glyph_chapter_ezk37() {
           "their",
           "$moai",
           "or",
-          "detestable",
+          "$moai+thumbs_down",
           "images",
           "or",
           "with",
