@@ -46,7 +46,7 @@ export function bible_glyph_chapter_exo26() {
           "shall",
           "be",
           "twenty",
-          "eight",
+          "$eight",
           "cubits",
           "$up_down_arrow",
           "and",
