@@ -37,7 +37,7 @@ export function bible_glyph_chapter_pro03() {
           "$pointing",
           "they",
           "will",
-          "add",
+          "$plus+doing",
           "$up_down_arrow",
           "to",
           "your",
