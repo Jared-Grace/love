@@ -919,7 +919,7 @@ export function bible_glyph_chapter_jer17() {
           "$sun",
           "$sparkle+doing",
           "by",
-          "not",
+          "$zero+manner",
           "$lifting",
           "a",
           "load",
