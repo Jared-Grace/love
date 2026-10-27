@@ -1315,7 +1315,7 @@ export function bible_glyph_chapter_exo12() {
           "$all",
           "the",
           "$i_am",
-          "divisions",
+          "$military_helmet",
           "went",
           "out",
           "of",
