@@ -203,7 +203,7 @@ export function bible_glyph_chapter_psa103() {
         words: [
           "For",
           "as",
-          "high",
+          "$giraffe+doing",
           "as",
           "the",
           "$sky",
