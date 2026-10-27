@@ -342,7 +342,7 @@ export function bible_glyph_chapter_num09() {
           "any",
           "$tray_out",
           "it",
-          "until",
+          "$finish",
           "$morning,",
           "$no_entry",
           "break",
