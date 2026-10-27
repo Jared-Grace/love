@@ -253,7 +253,7 @@ export function bible_glyph_chapter_est01() {
           "drinking,",
           "and",
           "$all",
-          "official",
+          "$multiply",
           "of",
           "his",
           "$house",
