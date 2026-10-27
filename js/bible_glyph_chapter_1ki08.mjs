@@ -1836,7 +1836,7 @@ export function bible_glyph_chapter_1ki08() {
           "$ear",
           "to",
           "them",
-          "whenever",
+          "$all",
           "they",
           "call",
           "to",
