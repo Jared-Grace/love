@@ -317,7 +317,7 @@ export function bible_glyph_chapter_pro01() {
           "to",
           "spread",
           "the",
-          "net",
+          "$net",
           "where",
           "any",
           "bird",
