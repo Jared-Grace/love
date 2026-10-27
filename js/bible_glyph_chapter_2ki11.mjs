@@ -213,7 +213,7 @@ export function bible_glyph_chapter_2ki11() {
           "$third_place",
           "at",
           "the",
-          "gate",
+          "$gate",
           "behind",
           "the",
           "guards.",
