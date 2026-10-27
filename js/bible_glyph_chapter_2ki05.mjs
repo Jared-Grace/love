@@ -801,7 +801,7 @@ export function bible_glyph_chapter_2ki05() {
           "$proper_name$Naaman",
           "$eye",
           "him",
-          "running",
+          "$running",
           "toward",
           "him,",
           "he",
