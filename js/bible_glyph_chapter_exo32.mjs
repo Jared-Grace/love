@@ -1061,7 +1061,7 @@ export function bible_glyph_chapter_exo32() {
           "have",
           "committed",
           "a",
-          "great",
+          "$top",
           "$bow+doing.",
           "They",
           "have",
