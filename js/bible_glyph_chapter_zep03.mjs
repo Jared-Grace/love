@@ -575,7 +575,7 @@ export function bible_glyph_chapter_zep03() {
           "no",
           "longer",
           "suffer",
-          "reproach.",
+          "$face_with_rolling_eyes.",
         ],
       },
       {
