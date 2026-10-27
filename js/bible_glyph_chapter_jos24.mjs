@@ -527,7 +527,7 @@ export function bible_glyph_chapter_jos24() {
           "your",
           "$father",
           "$kneeling+doing",
-          "beyond",
+          "$bridge+thing",
           "the",
           "Euphrates,",
           "or",
