@@ -530,7 +530,7 @@ export function bible_glyph_chapter_exo40() {
           "$poultry_leg",
           "of",
           "the",
-          "tabernacle,",
+          "$tent+house,",
           "outside",
           "the",
           "veil.",
