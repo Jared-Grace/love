@@ -1378,7 +1378,7 @@ export function bible_glyph_chapter_lev25() {
           "$next_track",
           "you",
           "to",
-          "inherit",
+          "$triangular_flag",
           "as",
           "property",
           "for",
