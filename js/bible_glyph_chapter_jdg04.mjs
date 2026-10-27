@@ -386,7 +386,7 @@ export function bible_glyph_chapter_jdg04() {
           "he",
           "$loudspeaker+mouth",
           "all",
-          "nine",
+          "$nine",
           "hundred",
           "of",
           "his",
