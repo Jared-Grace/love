@@ -491,7 +491,7 @@ export function bible_glyph_chapter_exo38() {
         verse_number: 19,
         words: [
           "with",
-          "four",
+          "$four",
           "$candle",
           "and",
           "four",
