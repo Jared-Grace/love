@@ -693,7 +693,7 @@ export function bible_glyph_chapter_exo19() {
           "the",
           "$priest",
           "who",
-          "approach",
+          "$walking+toward",
           "the",
           "$i_am",
           "must",
