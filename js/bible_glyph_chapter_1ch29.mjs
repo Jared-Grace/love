@@ -166,7 +166,7 @@ export function bible_glyph_chapter_1ch29() {
           "$ten+all",
           "$flying_disc",
           "of",
-          "gold,",
+          "$gold,",
           "the",
           "gold",
           "of",
