@@ -370,7 +370,7 @@ export function bible_glyph_chapter_exo23() {
       {
         verse_number: 14,
         words: [
-          "Three",
+          "$three",
           "$foot",
           "a",
           "$year",
