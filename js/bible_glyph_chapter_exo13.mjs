@@ -707,7 +707,7 @@ export function bible_glyph_chapter_exo13() {
         words: [
           "$no_entry",
           "the",
-          "pillar",
+          "$candle",
           "of",
           "$cloud",
           "by",
