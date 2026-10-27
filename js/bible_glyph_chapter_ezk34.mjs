@@ -103,7 +103,7 @@ export function bible_glyph_chapter_ezk34() {
           "$might+up_arrow",
           "the",
           "weak,",
-          "healed",
+          "$bandage",
           "the",
           "sick,",
           "bound",
