@@ -755,7 +755,7 @@ export function bible_glyph_chapter_exo21() {
           "the",
           "servant",
           "go",
-          "free",
+          "$broken_chain+person",
           "as",
           "compensation",
           "for",
