@@ -582,7 +582,7 @@ export function bible_glyph_chapter_gen17() {
           "and",
           "$multiply+doing",
           "him",
-          "greatly.",
+          "$double_exclamation.",
           "He",
           "will",
           "become",
