@@ -713,7 +713,7 @@ export function bible_glyph_chapter_num24() {
         words: [
           "Then",
           "Balaam",
-          "arose,",
+          "$person+pointing_up,",
           "$walking",
           "and",
           "$turn_back",
