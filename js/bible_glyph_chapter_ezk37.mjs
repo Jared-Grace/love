@@ -43,7 +43,7 @@ export function bible_glyph_chapter_ezk37() {
           "of",
           "the",
           "valley;",
-          "it",
+          "$pointing_back",
           "was",
           "full",
           "of",
