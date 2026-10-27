@@ -920,7 +920,7 @@ export function bible_glyph_chapter_2ki09() {
           "$reminder_ribbon",
           "that",
           "when",
-          "you",
+          "$you",
           "and",
           "$me",
           "were",
