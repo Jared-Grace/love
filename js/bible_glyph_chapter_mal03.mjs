@@ -322,7 +322,7 @@ export function bible_glyph_chapter_mal03() {
           "$you",
           "-",
           "the",
-          "whole",
+          "$all",
           "$map",
           "-",
           "are",
