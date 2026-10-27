@@ -355,7 +355,7 @@ export function bible_glyph_chapter_ezk03() {
           "$next_track",
           "me",
           "a",
-          "great",
+          "$top",
           "$earth+up_down_arrow+thing",
           "$voice,",
           "$speech+thumbs_up",
