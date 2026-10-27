@@ -524,7 +524,7 @@ export function bible_glyph_chapter_num30() {
           "are",
           "the",
           "statutes",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "commanded",
           "$fishing_pole+proper_name",
