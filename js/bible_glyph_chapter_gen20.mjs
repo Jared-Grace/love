@@ -559,7 +559,7 @@ export function bible_glyph_chapter_gen20() {
           "$heart_on_fire,",
           "and",
           "$heart_on_fire",
-          "healed",
+          "$bandage",
           "$father+king",
           "and",
           "his",
