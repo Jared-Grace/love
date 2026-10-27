@@ -701,7 +701,7 @@ export function bible_glyph_chapter_gen09() {
           "He",
           "also",
           "$speech,",
-          "Blessed",
+          "$speech+thumbs_up",
           "be",
           "the",
           "$i_am,",
