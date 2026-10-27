@@ -100,7 +100,7 @@ export function bible_glyph_chapter_neh01() {
           "and",
           "disgrace.",
           "The",
-          "wall",
+          "$brick+shield",
           "of",
           "$city+peace",
           "is",
