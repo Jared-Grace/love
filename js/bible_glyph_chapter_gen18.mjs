@@ -298,7 +298,7 @@ export function bible_glyph_chapter_gen18() {
           "you",
           "at",
           "this",
-          "time",
+          "$clock",
           "next",
           "year,",
           "and",
