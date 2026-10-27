@@ -307,7 +307,7 @@ export function bible_glyph_chapter_1sa03() {
           "and",
           "stood",
           "there,",
-          "calling",
+          "$waving_hand",
           "as",
           "before,",
           "$ear+heart_on_fire,",
