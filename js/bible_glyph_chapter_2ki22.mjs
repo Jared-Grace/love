@@ -372,7 +372,7 @@ export function bible_glyph_chapter_2ki22() {
           "it",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$king.",
