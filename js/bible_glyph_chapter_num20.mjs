@@ -284,7 +284,7 @@ export function bible_glyph_chapter_num20() {
           "to",
           "them,",
           "$ear",
-          "now,",
+          "$pleading,",
           "you",
           "rebels,",
           "must",
