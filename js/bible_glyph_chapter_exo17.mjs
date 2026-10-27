@@ -421,7 +421,7 @@ export function bible_glyph_chapter_exo17() {
         words: [
           "So",
           "$i_am+rescue",
-          "overwhelmed",
+          "$person+down_arrow+doing",
           "$proper_name$Amalek",
           "and",
           "his",
