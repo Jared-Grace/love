@@ -596,7 +596,7 @@ export function bible_glyph_chapter_1sa25() {
           "$harp+ten",
           "of",
           "$wine,",
-          "five",
+          "$five",
           "$sheep",
           "she",
           "had",
