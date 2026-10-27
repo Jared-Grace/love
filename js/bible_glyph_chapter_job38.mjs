@@ -49,7 +49,7 @@ export function bible_glyph_chapter_job38() {
           "yourself",
           "like",
           "a",
-          "man;",
+          "$might+man_beard;",
           "I",
           "will",
           "question",
