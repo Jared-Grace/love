@@ -473,7 +473,7 @@ export function bible_glyph_chapter_jdg16() {
           "her,",
           "$traffic_light",
           "you",
-          "weave",
+          "$yarn+doing",
           "the",
           "seven",
           "braids",
