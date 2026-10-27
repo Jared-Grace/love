@@ -365,7 +365,7 @@ export function bible_glyph_chapter_num22() {
           "I",
           "may",
           "be",
-          "able",
+          "$might+doing",
           "to",
           "fight",
           "against",
