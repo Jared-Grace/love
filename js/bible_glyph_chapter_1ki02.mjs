@@ -923,7 +923,7 @@ export function bible_glyph_chapter_1ki02() {
           "the",
           "$crown",
           "$i_am",
-          "before",
+          "$face",
           "$two_hearts+proper_name",
           "my",
           "$father,",
