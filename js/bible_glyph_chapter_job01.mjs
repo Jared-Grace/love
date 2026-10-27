@@ -421,7 +421,7 @@ export function bible_glyph_chapter_job01() {
           "the",
           "oxen",
           "were",
-          "plowing",
+          "$shushing_face",
           "and",
           "the",
           "donkeys",
