@@ -877,7 +877,7 @@ export function bible_glyph_chapter_jos07() {
           "hidden",
           "in",
           "his",
-          "tent",
+          "$tent",
           "with",
           "the",
           "silver",
