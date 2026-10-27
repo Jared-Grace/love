@@ -133,7 +133,7 @@ export function bible_glyph_chapter_mal04() {
       {
         verse_number: 4,
         words: [
-          "Remember",
+          "$reminder_ribbon",
           "the",
           "$scroll",
           "of",
