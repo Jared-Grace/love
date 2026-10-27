@@ -311,7 +311,7 @@ export function bible_glyph_chapter_lev24() {
           "they",
           "$footprints",
           "him",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name.",
           "The",
           "$name_tag",
