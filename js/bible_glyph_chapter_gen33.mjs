@@ -547,7 +547,7 @@ export function bible_glyph_chapter_gen33() {
           "$backpack+mountain+proper_name,",
           "for",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "pieces",
           "of",
           "silver.",
