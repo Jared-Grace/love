@@ -361,7 +361,7 @@ export function bible_glyph_chapter_lev03() {
           "its",
           "$person_gesturing_ok",
           "and",
-          "slaughter",
+          "$kitchen_knife+doing",
           "it",
           "in",
           "front",
