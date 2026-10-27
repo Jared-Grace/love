@@ -1302,7 +1302,7 @@ export function bible_glyph_chapter_lev14() {
           "green",
           "or",
           "red",
-          "depressions",
+          "$brick+down_arrow",
           "that",
           "appear",
           "to",
