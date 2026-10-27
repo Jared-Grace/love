@@ -1064,7 +1064,7 @@ export function bible_glyph_chapter_num11() {
           "less",
           "than",
           "$ten",
-          "homers,",
+          "$brown_square+water,",
           "and",
           "they",
           "spread",
