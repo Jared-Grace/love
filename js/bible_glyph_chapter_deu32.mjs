@@ -371,7 +371,7 @@ export function bible_glyph_chapter_deu32() {
         verse_number: 14,
         words: [
           "with",
-          "curds",
+          "$milk+brick",
           "from",
           "the",
           "herd",
