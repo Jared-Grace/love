@@ -233,7 +233,7 @@ export function bible_glyph_chapter_est01() {
           "to",
           "the",
           "$king",
-          "bounty.",
+          "$hand.",
         ],
       },
       {
