@@ -1027,7 +1027,7 @@ export function bible_glyph_chapter_num35() {
           "where",
           "$me",
           "$tent+doing.",
-          "For",
+          "$pointing",
           "$me,",
           "$i_am,",
           "$tent+doing",
