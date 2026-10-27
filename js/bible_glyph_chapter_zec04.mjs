@@ -293,7 +293,7 @@ export function bible_glyph_chapter_zec04() {
           "which",
           "$walking+shuffle+doing",
           "the",
-          "whole",
+          "$all",
           "$earth.",
         ],
       },
