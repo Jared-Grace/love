@@ -1187,7 +1187,7 @@ export function bible_glyph_chapter_exo28() {
           "for",
           "them",
           "linen",
-          "undergarments",
+          "$briefs+two",
           "to",
           "cover",
           "their",
