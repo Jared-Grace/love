@@ -757,7 +757,7 @@ export function bible_glyph_chapter_gen42() {
           "$sackcloth",
           "to",
           "$hands_giving",
-          "feed",
+          "$wheat+donkey",
           "for",
           "his",
           "$donkey,",
