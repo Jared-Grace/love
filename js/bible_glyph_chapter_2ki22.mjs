@@ -496,7 +496,7 @@ export function bible_glyph_chapter_2ki22() {
         verse_number: 14,
         words: [
           "So",
-          "Hilkiah",
+          "$pizza+i_am",
           "the",
           "$priest,",
           "$proper_name$Ahikam,",
