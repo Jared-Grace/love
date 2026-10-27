@@ -1033,7 +1033,7 @@ export function bible_glyph_chapter_2ki17() {
           "$house",
           "on",
           "the",
-          "high",
+          "$snow_capped_mountain",
           "places",
           "that",
           "the",
