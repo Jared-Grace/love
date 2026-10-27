@@ -402,7 +402,7 @@ export function bible_glyph_chapter_num11() {
       {
         verse_number: 14,
         words: [
-          "I",
+          "$me",
           "$no_entry",
           "$lifting",
           "all",
