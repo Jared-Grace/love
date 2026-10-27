@@ -214,7 +214,7 @@ export function bible_glyph_chapter_exo01() {
           "Egyptians",
           "appointed",
           "taskmasters",
-          "over",
+          "$pointing_up",
           "the",
           "Israelites",
           "to",
