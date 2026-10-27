@@ -683,7 +683,7 @@ export function bible_glyph_chapter_exo06() {
           "bore",
           "him",
           "$proper_name$Phinehas.",
-          "These",
+          "$flashlight+flashlight",
           "were",
           "the",
           "heads",
