@@ -584,7 +584,7 @@ export function bible_glyph_chapter_lev17() {
           "he",
           "does",
           "$no_entry",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "his",
           "clothes",
           "and",
