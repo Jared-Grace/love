@@ -309,7 +309,7 @@ export function bible_glyph_chapter_gen31() {
           "$black_circle+describing",
           "and",
           "$ice+rain+describing,",
-          "for",
+          "$pointing",
           "I",
           "$eye",
           "all",
