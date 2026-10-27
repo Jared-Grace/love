@@ -603,7 +603,7 @@ export function bible_glyph_chapter_isa40() {
           "Have",
           "you",
           "$no_entry",
-          "understood",
+          "$brain",
           "since",
           "the",
           "foundation",
