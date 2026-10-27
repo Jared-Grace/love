@@ -591,7 +591,7 @@ export function bible_glyph_chapter_hab02() {
           "$speech",
           "to",
           "$tree,",
-          "Awake!",
+          "$sun+eyes!",
           "or",
           "to",
           "silent",
