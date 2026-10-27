@@ -772,7 +772,7 @@ export function bible_glyph_chapter_1ch29() {
           "sacrifices",
           "and",
           "presented",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "to",
           "the",
