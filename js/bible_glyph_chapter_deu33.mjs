@@ -617,7 +617,7 @@ export function bible_glyph_chapter_deu33() {
           "$hand+might",
           "or",
           "a",
-          "head.",
+          "$hair+up_arrow.",
         ],
       },
       {
