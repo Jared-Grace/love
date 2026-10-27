@@ -538,7 +538,7 @@ export function bible_glyph_chapter_jer01() {
           "$city,",
           "an",
           "iron",
-          "pillar,",
+          "$candle,",
           "and",
           "bronze",
           "walls",
