@@ -817,7 +817,7 @@ export function bible_glyph_chapter_exo39() {
           "it",
           "on",
           "the",
-          "turban,",
+          "$person_wearing_turban,",
           "just",
           "as",
           "$i_am",
