@@ -958,7 +958,7 @@ export function bible_glyph_chapter_1sa17() {
           "on",
           "account",
           "of",
-          "this",
+          "$flashlight",
           "$proper_name$Philistine.",
           "Your",
           "$kneeling",
