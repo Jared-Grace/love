@@ -609,7 +609,7 @@ export function bible_glyph_chapter_num09() {
           "the",
           "$cloud",
           "$straight_ruler+clock+doing",
-          "over",
+          "$pointing_up",
           "the",
           "tabernacle",
           "for",
