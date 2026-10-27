@@ -476,7 +476,7 @@ export function bible_glyph_chapter_lam02() {
           "children",
           "and",
           "infants",
-          "faint",
+          "$fog+doing",
           "in",
           "the",
           "streets",
