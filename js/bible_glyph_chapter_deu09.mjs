@@ -694,7 +694,7 @@ export function bible_glyph_chapter_deu09() {
       {
         verse_number: 19,
         words: [
-          "For",
+          "$pointing",
           "I",
           "was",
           "afraid",
