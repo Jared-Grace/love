@@ -506,7 +506,7 @@ export function bible_glyph_chapter_num32() {
           "$son",
           "of",
           "Israel",
-          "until",
+          "$finish",
           "we",
           "have",
           "$footprints",
