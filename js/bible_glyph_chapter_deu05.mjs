@@ -596,7 +596,7 @@ export function bible_glyph_chapter_deu05() {
           "$speech",
           "to",
           "your",
-          "whole",
+          "$all",
           "$church",
           "on",
           "the",
