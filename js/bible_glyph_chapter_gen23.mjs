@@ -442,7 +442,7 @@ export function bible_glyph_chapter_gen23() {
           "$earth",
           "worth",
           "$four",
-          "hundred",
+          "$input_numbers+all",
           "shekels",
           "of",
           "$silver,",
