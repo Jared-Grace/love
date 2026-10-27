@@ -289,7 +289,7 @@ export function bible_glyph_chapter_job42() {
           "his",
           "$brother",
           "and",
-          "sisters",
+          "$sister",
           "and",
           "everyone",
           "who",
