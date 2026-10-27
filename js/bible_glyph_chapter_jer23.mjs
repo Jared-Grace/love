@@ -736,7 +736,7 @@ export function bible_glyph_chapter_jer23() {
           "will",
           "$no_entry",
           "$turn_back",
-          "until",
+          "$finish",
           "He",
           "has",
           "fully",
