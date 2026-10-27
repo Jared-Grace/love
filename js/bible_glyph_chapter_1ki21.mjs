@@ -976,7 +976,7 @@ export function bible_glyph_chapter_1ki21() {
           "Have",
           "you",
           "$eye",
-          "how",
+          "$pointing",
           "$proper_name$Ahab",
           "has",
           "humbled",
