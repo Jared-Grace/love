@@ -249,7 +249,7 @@ export function bible_glyph_chapter_1sa25() {
       {
         verse_number: 8,
         words: [
-          "Ask",
+          "$question",
           "your",
           "young",
           "men",
