@@ -597,7 +597,7 @@ export function bible_glyph_chapter_exo10() {
         words: [
           "$house+proper_name",
           "$fast_forward+doing",
-          "summoned",
+          "$waving_hand",
           "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
