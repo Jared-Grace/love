@@ -352,7 +352,7 @@ export function bible_glyph_chapter_1sa24() {
           "was",
           "$speech",
           "to",
-          "kill",
+          "$fist+skull",
           "you,",
           "but",
           "I",
