@@ -153,7 +153,7 @@ export function bible_glyph_chapter_zec14() {
           "half",
           "to",
           "the",
-          "south.",
+          "$compass+down_arrow.",
         ],
       },
       {
