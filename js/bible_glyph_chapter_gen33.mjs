@@ -24,7 +24,7 @@ export function bible_glyph_chapter_gen33() {
           "$footprints",
           "with",
           "$four",
-          "hundred",
+          "$input_numbers+all",
           "$man_beard.",
           "So",
           "he",
