@@ -689,7 +689,7 @@ export function bible_glyph_chapter_exo08() {
           "and",
           "$plus",
           "the",
-          "ground",
+          "$brown_square",
           "where",
           "they",
           "stand.",
