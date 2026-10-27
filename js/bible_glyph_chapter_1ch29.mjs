@@ -879,7 +879,7 @@ export function bible_glyph_chapter_1ch29() {
       {
         verse_number: 24,
         words: [
-          "All",
+          "$all",
           "the",
           "officials",
           "and",
