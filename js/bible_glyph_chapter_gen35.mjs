@@ -31,7 +31,7 @@ export function bible_glyph_chapter_gen35() {
           "$hammer+doing",
           "an",
           "$altar",
-          "there",
+          "$telescope",
           "to",
           "the",
           "$heart_on_fire",
