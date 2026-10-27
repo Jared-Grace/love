@@ -279,7 +279,7 @@ export function bible_glyph_chapter_isa43() {
           "the",
           "$map",
           "$tray_in+doing",
-          "together",
+          "$linked_paperclips+manner",
           "and",
           "the",
           "peoples",
