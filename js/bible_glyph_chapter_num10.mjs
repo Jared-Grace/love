@@ -206,7 +206,7 @@ export function bible_glyph_chapter_num10() {
           "in",
           "your",
           "$earth",
-          "against",
+          "$pointing_up",
           "an",
           "adversary",
           "who",
