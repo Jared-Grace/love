@@ -33,7 +33,7 @@ export function bible_glyph_chapter_deu01() {
           "-",
           "in",
           "the",
-          "Arabah",
+          "$desert+proper_name",
           "opposite",
           "$proper_name$Suph",
           "-",
