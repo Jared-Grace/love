@@ -535,7 +535,7 @@ export function bible_glyph_chapter_neh09() {
           "possess",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "You",
           "had",
           "sworn",
