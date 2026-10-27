@@ -340,7 +340,7 @@ export function bible_glyph_chapter_1ki12() {
           "than",
           "my",
           "$father",
-          "waist.",
+          "$briefs+round_pushpin.",
         ],
       },
       {
