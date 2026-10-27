@@ -300,7 +300,7 @@ export function bible_glyph_chapter_jer31() {
           "they",
           "will",
           "$no_entry",
-          "stumble.",
+          "$hiking_boot+rock.",
           "For",
           "I",
           "am",
