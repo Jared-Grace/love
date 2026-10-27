@@ -124,7 +124,7 @@ export function bible_glyph_chapter_psa034() {
       {
         verse_number: 6,
         words: [
-          "This",
+          "$flashlight",
           "poor",
           "man",
           "called",
