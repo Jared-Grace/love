@@ -101,7 +101,7 @@ export function bible_glyph_chapter_gen07() {
           "offspring",
           "$pointing_up",
           "the",
-          "face",
+          "$face",
           "of",
           "all",
           "the",
