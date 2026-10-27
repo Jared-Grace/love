@@ -437,7 +437,7 @@ export function bible_glyph_chapter_lev21() {
           "among",
           "his",
           "$family,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "$i_am",
