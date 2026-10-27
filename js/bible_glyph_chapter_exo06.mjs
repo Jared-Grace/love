@@ -530,7 +530,7 @@ export function bible_glyph_chapter_exo06() {
           "$proper_name$Uzziel.",
           "$proper_name$Kohath",
           "$sprout",
-          "133",
+          "$three",
           "years.",
         ],
       },
