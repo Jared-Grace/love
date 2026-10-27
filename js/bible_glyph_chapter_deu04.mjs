@@ -1254,7 +1254,7 @@ export function bible_glyph_chapter_deu04() {
           "and",
           "an",
           "outstretched",
-          "arm,",
+          "$hand+might,",
           "and",
           "by",
           "great",
