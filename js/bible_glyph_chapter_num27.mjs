@@ -115,7 +115,7 @@ export function bible_glyph_chapter_num27() {
           "of",
           "his",
           "own",
-          "sin,",
+          "$bow+thing,",
           "and",
           "he",
           "had",
