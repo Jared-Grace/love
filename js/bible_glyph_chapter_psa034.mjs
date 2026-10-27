@@ -62,7 +62,7 @@ export function bible_glyph_chapter_psa034() {
           "oppressed",
           "$ear",
           "and",
-          "rejoice.",
+          "$beaming+doing.",
         ],
       },
       {
