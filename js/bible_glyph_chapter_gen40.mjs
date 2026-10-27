@@ -529,7 +529,7 @@ export function bible_glyph_chapter_gen40() {
           "$lifting",
           "up",
           "your",
-          "head",
+          "$person_gesturing_ok",
           "from",
           "off",
           "you,",
