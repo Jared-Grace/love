@@ -635,7 +635,7 @@ export function bible_glyph_chapter_jos02() {
           "goes",
           "out",
           "the",
-          "door",
+          "$door+thing",
           "of",
           "your",
           "$house",
