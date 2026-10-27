@@ -421,7 +421,7 @@ export function bible_glyph_chapter_isa61() {
           "spring",
           "up",
           "before",
-          "all",
+          "$all",
           "the",
           "$map.",
         ],
