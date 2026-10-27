@@ -113,7 +113,7 @@ export function bible_glyph_chapter_num18() {
           "must",
           "$no_entry",
           "come",
-          "near",
+          "$magnet+doing",
           "the",
           "furnishings",
           "of",
