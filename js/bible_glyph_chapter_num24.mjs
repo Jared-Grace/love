@@ -275,7 +275,7 @@ export function bible_glyph_chapter_num24() {
         words: [
           "Then",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "Balak",
           "$angry_face+doing",
