@@ -219,7 +219,7 @@ export function bible_glyph_chapter_lev05() {
           "$bow+doing",
           "$two",
           "$dove+ring",
-          "or",
+          "$shuffle",
           "$two",
           "$son",
           "$dove",
