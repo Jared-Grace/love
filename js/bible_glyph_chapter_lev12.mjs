@@ -243,7 +243,7 @@ export function bible_glyph_chapter_lev12() {
           "flow",
           "of",
           "$blood.",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$scroll",
