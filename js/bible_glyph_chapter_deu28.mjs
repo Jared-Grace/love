@@ -2159,7 +2159,7 @@ export function bible_glyph_chapter_deu28() {
           "afraid",
           "$night",
           "and",
-          "day,",
+          "$sun+manner,",
           "$no_entry",
           "$anchor",
           "in",
