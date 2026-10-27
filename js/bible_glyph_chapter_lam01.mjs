@@ -707,7 +707,7 @@ export function bible_glyph_chapter_lam01() {
           "in",
           "the",
           "$city",
-          "while",
+          "$pointing",
           "they",
           "searched",
           "for",
