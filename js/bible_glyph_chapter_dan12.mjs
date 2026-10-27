@@ -280,7 +280,7 @@ export function bible_glyph_chapter_dan12() {
           "been",
           "$collision+doing,",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "things",
           "will",
           "be",
