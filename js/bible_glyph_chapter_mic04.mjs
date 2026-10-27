@@ -450,7 +450,7 @@ export function bible_glyph_chapter_mic04() {
           "the",
           "$i_am",
           "$no_entry",
-          "understand",
+          "$brain",
           "His",
           "plan,",
           "for",
