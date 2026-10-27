@@ -519,7 +519,7 @@ export function bible_glyph_chapter_lev06() {
       {
         verse_number: 20,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "the",
           "offering",
