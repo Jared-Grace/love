@@ -316,7 +316,7 @@ export function bible_glyph_chapter_exo39() {
         words: [
           "And",
           "the",
-          "fourth",
+          "$four+describing",
           "$straight_ruler+repeat",
           "had",
           "a",
