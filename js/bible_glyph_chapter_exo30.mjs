@@ -618,7 +618,7 @@ export function bible_glyph_chapter_exo30() {
           "shekels",
           "of",
           "liquid",
-          "myrrh,",
+          "$lemon+droplet,",
           "half",
           "that",
           "amount,",
