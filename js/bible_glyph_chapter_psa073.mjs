@@ -347,7 +347,7 @@ export function bible_glyph_chapter_psa073() {
           "are",
           "laid",
           "waste,",
-          "completely",
+          "$full_moon+doing",
           "swept",
           "away",
           "$tray_out",
