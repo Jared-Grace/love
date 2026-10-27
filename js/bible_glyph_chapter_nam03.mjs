@@ -170,7 +170,7 @@ export function bible_glyph_chapter_nam03() {
         verse_number: 7,
         words: [
           "Then",
-          "all",
+          "$all",
           "who",
           "$eye",
           "you",
