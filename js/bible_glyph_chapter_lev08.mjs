@@ -675,7 +675,7 @@ export function bible_glyph_chapter_lev08() {
           "$bread",
           "made",
           "with",
-          "oil,",
+          "$lotion_bottle,",
           "and",
           "$one",
           "wafer,",
