@@ -755,7 +755,7 @@ export function bible_glyph_chapter_exo15() {
           "on",
           "the",
           "$clamp+proper_name.",
-          "For",
+          "$pointing",
           "I",
           "am",
           "the",
