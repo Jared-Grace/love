@@ -635,7 +635,7 @@ export function bible_glyph_chapter_jer32() {
           "and",
           "mighty",
           "in",
-          "deed,",
+          "$hammer+repeat,",
           "whose",
           "$eyes",
           "are",
