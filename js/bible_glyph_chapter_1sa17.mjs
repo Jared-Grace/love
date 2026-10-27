@@ -443,7 +443,7 @@ export function bible_glyph_chapter_1sa17() {
           "every",
           "morning",
           "and",
-          "evening",
+          "$sunset+doing",
           "to",
           "take",
           "his",
