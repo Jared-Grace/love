@@ -239,7 +239,7 @@ export function bible_glyph_chapter_num17() {
           "$blossom+doing,",
           "and",
           "produced",
-          "almonds.",
+          "$tree+blossom+first_place.",
         ],
       },
       {
