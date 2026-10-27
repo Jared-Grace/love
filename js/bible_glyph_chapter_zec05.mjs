@@ -47,7 +47,7 @@ export function bible_glyph_chapter_zec05() {
           "I",
           "$eye",
           "a",
-          "flying",
+          "$bird+doing",
           "$page_with_curl,",
           "twenty",
           "cubits",
