@@ -473,7 +473,7 @@ export function bible_glyph_chapter_exo21() {
         verse_number: 18,
         words: [
           "$pointing",
-          "men",
+          "$man_beard",
           "are",
           "quarreling",
           "and",
