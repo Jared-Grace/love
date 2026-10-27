@@ -752,7 +752,7 @@ export function bible_glyph_chapter_gen11() {
           "she",
           "had",
           "$dotted_line_face",
-          "children.",
+          "$child.",
         ],
       },
       {
