@@ -653,7 +653,7 @@ export function bible_glyph_chapter_1ki12() {
           "all",
           "$wrestling+heart_on_fire",
           "$ear",
-          "that",
+          "$pointing",
           "$proper_name$Jeroboam",
           "had",
           "$turn_back,",
