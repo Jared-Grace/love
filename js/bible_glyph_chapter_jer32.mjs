@@ -369,7 +369,7 @@ export function bible_glyph_chapter_jer32() {
           "weighed",
           "out",
           "the",
-          "silver",
+          "$silver",
           "on",
           "the",
           "scales.",
