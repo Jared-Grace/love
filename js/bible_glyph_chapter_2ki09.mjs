@@ -95,7 +95,7 @@ export function bible_glyph_chapter_2ki09() {
           "Then",
           "$hand_receiving",
           "the",
-          "flask",
+          "$amphora+droplet",
           "of",
           "oil,",
           "pour",
