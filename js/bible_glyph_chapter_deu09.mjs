@@ -83,7 +83,7 @@ export function bible_glyph_chapter_deu09() {
         words: [
           "But",
           "$lightbulb",
-          "that",
+          "$pointing",
           "$sun",
           "$i_am",
           "your",
