@@ -500,7 +500,7 @@ export function bible_glyph_chapter_lev10() {
           "and",
           "$proper_name$Ithamar,",
           "the",
-          "remaining",
+          "$takeout_box+doing",
           "$son",
           "of",
           "$white_cane+blossom+proper_name,",
