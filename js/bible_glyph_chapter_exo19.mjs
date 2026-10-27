@@ -601,7 +601,7 @@ export function bible_glyph_chapter_exo19() {
           "the",
           "whole",
           "$mountain",
-          "quaked",
+          "$fear+vibration_mode+doing",
           "violently.",
         ],
       },
