@@ -554,7 +554,7 @@ export function bible_glyph_chapter_1sa25() {
           "$hammer+doing,",
           "$pointing",
           "$thumbs_down",
-          "looms",
+          "$end_arrow",
           "over",
           "our",
           "$crown",
