@@ -479,7 +479,7 @@ export function bible_glyph_chapter_deu04() {
           "to",
           "$hammer+doing,",
           "the",
-          "Ten",
+          "$ten",
           "$speech,",
           "and",
           "He",
