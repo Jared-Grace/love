@@ -762,7 +762,7 @@ export function bible_glyph_chapter_1sa01() {
           "with",
           "a",
           "three-year-old",
-          "bull,",
+          "$bull,",
           "an",
           "ephah",
           "of",
