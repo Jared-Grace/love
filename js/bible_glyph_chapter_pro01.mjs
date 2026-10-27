@@ -533,7 +533,7 @@ export function bible_glyph_chapter_pro01() {
           "a",
           "$tornado+wind,",
           "when",
-          "distress",
+          "$clamp",
           "and",
           "anguish",
           "$footprints",
