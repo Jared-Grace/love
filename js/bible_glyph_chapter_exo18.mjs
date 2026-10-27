@@ -198,7 +198,7 @@ export function bible_glyph_chapter_exo18() {
           "his",
           "father",
           "in",
-          "law",
+          "$man_in_tuxedo+family",
           "and",
           "$bowing",
           "down",
