@@ -551,7 +551,7 @@ export function bible_glyph_chapter_gen28() {
       {
         verse_number: 18,
         words: [
-          "Early",
+          "$morning+doing",
           "the",
           "next",
           "morning",
