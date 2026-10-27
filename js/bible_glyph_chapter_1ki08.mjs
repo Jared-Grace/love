@@ -1754,7 +1754,7 @@ export function bible_glyph_chapter_1ki08() {
           "$sponge",
           "Your",
           "$family",
-          "who",
+          "$back+flashlight",
           "have",
           "$bow+doing",
           "against",
