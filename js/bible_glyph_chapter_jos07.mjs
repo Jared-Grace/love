@@ -320,7 +320,7 @@ export function bible_glyph_chapter_jos07() {
       {
         verse_number: 8,
         words: [
-          "O",
+          "$pleading_face+manner",
           "$crown,",
           "what",
           "can",
