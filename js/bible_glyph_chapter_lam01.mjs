@@ -181,7 +181,7 @@ export function bible_glyph_chapter_lam01() {
           "because",
           "of",
           "her",
-          "many",
+          "$multiply+thing",
           "transgressions.",
           "Her",
           "children",
