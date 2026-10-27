@@ -280,7 +280,7 @@ export function bible_glyph_chapter_1ch29() {
           "$hands_giving",
           "five",
           "thousand",
-          "talents",
+          "$flying_disc",
           "and",
           "ten",
           "thousand",
