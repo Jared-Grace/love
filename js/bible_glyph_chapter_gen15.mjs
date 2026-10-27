@@ -284,7 +284,7 @@ export function bible_glyph_chapter_gen15() {
           "$hands_giving",
           "the",
           "halves",
-          "opposite",
+          "$footprints+toward+doing",
           "each",
           "other.",
           "The",
