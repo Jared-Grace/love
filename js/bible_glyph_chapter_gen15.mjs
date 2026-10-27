@@ -432,7 +432,7 @@ export function bible_glyph_chapter_gen15() {
           "descendants",
           "will",
           "$turn_back",
-          "here,",
+          "$round_pushpin+pointing_down,",
           "for",
           "the",
           "iniquity",
