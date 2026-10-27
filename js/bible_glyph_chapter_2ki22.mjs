@@ -354,7 +354,7 @@ export function bible_glyph_chapter_2ki22() {
           "Shaphan",
           "the",
           "scribe",
-          "told",
+          "$newspaper",
           "the",
           "$king,",
           "$speech,",
