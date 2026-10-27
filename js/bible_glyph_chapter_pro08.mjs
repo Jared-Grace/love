@@ -606,7 +606,7 @@ export function bible_glyph_chapter_pro08() {
           "are",
           "those",
           "who",
-          "keep",
+          "$guard",
           "my",
           "$road.",
         ],
