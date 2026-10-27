@@ -220,7 +220,7 @@ export function bible_glyph_chapter_jos01() {
           "you.",
           "Do",
           "$no_entry",
-          "turn",
+          "$away+doing",
           "$tray_out",
           "it",
           "to",
