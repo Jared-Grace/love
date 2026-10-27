@@ -845,7 +845,7 @@ export function bible_glyph_chapter_exo04() {
           "$i_am",
           "had",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Aaron,",
           '"$walking',
           "and",
