@@ -394,7 +394,7 @@ export function bible_glyph_chapter_isa53() {
           "and",
           "He",
           "will",
-          "bear",
+          "$package+down_arrow+doing",
           "their",
           "iniquities.",
         ],
