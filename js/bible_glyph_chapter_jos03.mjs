@@ -134,7 +134,7 @@ export function bible_glyph_chapter_jos03() {
           "$road",
           "to",
           "$walking,",
-          "since",
+          "$pointing",
           "you",
           "have",
           "$no_entry",
