@@ -842,7 +842,7 @@ export function bible_glyph_chapter_job31() {
           "$walking+tray_out",
           "instead",
           "of",
-          "wheat",
+          "$wheat",
           "and",
           "stinkweed",
           "instead",
