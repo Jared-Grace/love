@@ -584,7 +584,7 @@ export function bible_glyph_chapter_num35() {
           "object",
           "at",
           "him",
-          "intentionally",
+          "$ninja+eye+thing",
           "and",
           "$skull+doing",
           "him,",
