@@ -876,7 +876,7 @@ export function bible_glyph_chapter_num18() {
           "$son",
           "of",
           "Israel",
-          "present",
+          "$up_arrow",
           "to",
           "$i_am",
           "as",
