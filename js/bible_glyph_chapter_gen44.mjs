@@ -987,7 +987,7 @@ export function bible_glyph_chapter_gen44() {
           "to",
           "my",
           "$father",
-          "without",
+          "$dotted_line_face",
           "the",
           "boy?",
           "I",
