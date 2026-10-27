@@ -911,7 +911,7 @@ export function bible_glyph_chapter_jos06() {
           "$face",
           "the",
           "$i_am",
-          "who",
+          "$back+flashlight",
           "rises",
           "up",
           "and",
