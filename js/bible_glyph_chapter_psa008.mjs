@@ -92,7 +92,7 @@ export function bible_glyph_chapter_psa008() {
       {
         verse_number: 4,
         words: [
-          "what",
+          "$flashlight+question",
           "is",
           "man",
           "that",
