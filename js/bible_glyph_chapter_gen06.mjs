@@ -471,7 +471,7 @@ export function bible_glyph_chapter_gen06() {
           "will",
           "$footprints",
           "$water_wave+earth",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth,",
           "to",
