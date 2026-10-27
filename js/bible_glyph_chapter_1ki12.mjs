@@ -780,7 +780,7 @@ export function bible_glyph_chapter_1ki12() {
       {
         verse_number: 24,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "what",
           "the",
