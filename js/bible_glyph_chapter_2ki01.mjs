@@ -490,7 +490,7 @@ export function bible_glyph_chapter_2ki01() {
           "and",
           "sent",
           "a",
-          "third",
+          "$third_place",
           "$military_medal",
           "with",
           "his",
