@@ -945,7 +945,7 @@ export function bible_glyph_chapter_jer32() {
           "the",
           "$i_am",
           "$speech,",
-          "Behold,",
+          "$exclamation,",
           "I",
           "am",
           "about",
