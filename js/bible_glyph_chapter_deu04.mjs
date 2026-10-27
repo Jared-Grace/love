@@ -106,7 +106,7 @@ export function bible_glyph_chapter_deu04() {
           "$hammer+doing",
           "at",
           "Baal-peor,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "your",
