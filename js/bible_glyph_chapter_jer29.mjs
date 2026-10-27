@@ -551,7 +551,7 @@ export function bible_glyph_chapter_jer29() {
           "$hands_giving",
           "them",
           "like",
-          "rotten",
+          "$nauseated_face+fig",
           "$fig",
           "so",
           "bad",
