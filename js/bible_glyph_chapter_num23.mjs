@@ -231,7 +231,7 @@ export function bible_glyph_chapter_num23() {
           "has",
           "$no_entry",
           "cursed?",
-          "How",
+          "$flashlight+question",
           "can",
           "I",
           "denounce",
