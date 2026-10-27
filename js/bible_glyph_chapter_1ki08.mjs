@@ -1265,7 +1265,7 @@ export function bible_glyph_chapter_1ki08() {
         verse_number: 37,
         words: [
           "When",
-          "famine",
+          "$famine",
           "or",
           "plague",
           "comes",
