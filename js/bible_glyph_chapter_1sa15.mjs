@@ -83,7 +83,7 @@ export function bible_glyph_chapter_1sa15() {
       {
         verse_number: 3,
         words: [
-          "Now",
+          "$watch",
           "$walking",
           "and",
           "attack",
