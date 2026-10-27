@@ -590,7 +590,7 @@ export function bible_glyph_chapter_gen08() {
           "I",
           "$balloon+speech+doing",
           "the",
-          "ground",
+          "$brown_square",
           "because",
           "of",
           "$person,",
