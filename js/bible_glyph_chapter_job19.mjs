@@ -391,7 +391,7 @@ export function bible_glyph_chapter_job19() {
           "friends,",
           "have",
           "pity,",
-          "for",
+          "$pointing",
           "the",
           "$hand",
           "of",
