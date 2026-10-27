@@ -611,7 +611,7 @@ export function bible_glyph_chapter_dan09() {
           "$kneeling.",
           "For",
           "Your",
-          "sake,",
+          "$right_arrow+toward,",
           "O",
           "$crown,",
           "cause",
