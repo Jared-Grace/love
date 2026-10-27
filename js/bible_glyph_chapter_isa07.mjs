@@ -250,7 +250,7 @@ export function bible_glyph_chapter_isa07() {
           "it",
           "will",
           "$no_entry",
-          "happen.",
+          "$link.",
         ],
       },
       {
