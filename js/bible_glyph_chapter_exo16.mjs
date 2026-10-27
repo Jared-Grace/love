@@ -244,7 +244,7 @@ export function bible_glyph_chapter_exo16() {
           "and",
           "in",
           "the",
-          "morning",
+          "$morning",
           "you",
           "will",
           "$eye",
