@@ -453,7 +453,7 @@ export function bible_glyph_chapter_2ch20() {
           "of",
           "the",
           "$i_am",
-          "came",
+          "$link",
           "upon",
           "$proper_name$Jahaziel",
           "$son",
