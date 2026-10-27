@@ -506,7 +506,7 @@ export function bible_glyph_chapter_1sa02() {
           "you",
           "may",
           "$hand_receiving",
-          "whatever",
+          "$back+flashlight",
           "you",
           "want,",
           "the",
