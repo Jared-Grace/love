@@ -371,7 +371,7 @@ export function bible_glyph_chapter_zep01() {
           "And",
           "at",
           "that",
-          "time",
+          "$clock",
           "I",
           "will",
           "search",
