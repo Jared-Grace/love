@@ -355,7 +355,7 @@ export function bible_glyph_chapter_isa56() {
           "they",
           "$no_entry",
           "can",
-          "bark;",
+          "$dog+loudspeaker+doing;",
           "they",
           "are",
           "dreamers",
