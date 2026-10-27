@@ -333,7 +333,7 @@ export function bible_glyph_chapter_zec04() {
           "$flashlight+question",
           "are",
           "the",
-          "two",
+          "$two",
           "olive",
           "branches",
           "$hand",
