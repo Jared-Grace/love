@@ -56,7 +56,7 @@ export function bible_glyph_chapter_2ki06() {
           "can",
           "$hand_receiving",
           "a",
-          "log,",
+          "$house+wood,",
           "so",
           "we",
           "can",
