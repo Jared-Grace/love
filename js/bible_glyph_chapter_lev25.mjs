@@ -1297,7 +1297,7 @@ export function bible_glyph_chapter_lev25() {
           "$crown+footprints+doing",
           "over",
           "them",
-          "harshly,",
+          "$collision+thing,",
           "but",
           "you",
           "shall",
