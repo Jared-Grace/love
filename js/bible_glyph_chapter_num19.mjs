@@ -366,7 +366,7 @@ export function bible_glyph_chapter_num19() {
           "water",
           "on",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "and",
           "on",
