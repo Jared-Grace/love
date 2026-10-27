@@ -854,7 +854,7 @@ export function bible_glyph_chapter_1sa17() {
           "you",
           "$hand_with_fingers_splayed+doing",
           "those",
-          "few",
+          "$pinching_hand+input_numbers",
           "$sheep",
           "in",
           "the",
