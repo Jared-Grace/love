@@ -188,7 +188,7 @@ export function bible_glyph_chapter_num21() {
           "the",
           "$i_am",
           "$hand_sending",
-          "venomous",
+          "$fire+snake",
           "$snake",
           "among",
           "the",
