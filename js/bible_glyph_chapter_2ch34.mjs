@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_2ch34() {
           "His",
           "$speech",
           "against",
-          "this",
+          "$flashlight",
           "$place",
           "and",
           "against",
