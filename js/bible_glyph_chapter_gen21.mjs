@@ -17,7 +17,7 @@ export function bible_glyph_chapter_gen21() {
           "Now",
           "the",
           "$i_am",
-          "attended",
+          "$clipboard+doing",
           "to",
           "$proper_name$Sarah",
           "as",
