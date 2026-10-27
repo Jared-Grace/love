@@ -321,7 +321,7 @@ export function bible_glyph_chapter_2ki04() {
           "in",
           "it",
           "a",
-          "bed,",
+          "$bed,",
           "a",
           "table,",
           "a",
