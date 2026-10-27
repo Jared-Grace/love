@@ -432,7 +432,7 @@ export function bible_glyph_chapter_lev13() {
           "so",
           "that",
           "it",
-          "covers",
+          "$coat+doing",
           "all",
           "the",
           "skin",
