@@ -246,7 +246,7 @@ export function bible_glyph_chapter_isa07() {
           "'It",
           "will",
           "$no_entry",
-          "arise,",
+          "$person+pointing_up,",
           "it",
           "will",
           "$no_entry",
