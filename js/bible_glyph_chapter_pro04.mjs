@@ -344,7 +344,7 @@ export function bible_glyph_chapter_pro04() {
           "of",
           "$thumbs_down+person+thing",
           "and",
-          "drink",
+          "$cup_with_straw",
           "the",
           "$wine",
           "of",
