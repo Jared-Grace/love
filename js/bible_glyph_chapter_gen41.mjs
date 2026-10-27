@@ -881,7 +881,7 @@ export function bible_glyph_chapter_gen41() {
           "and",
           "$heart_on_fire",
           "will",
-          "shortly",
+          "$fast_forward+doing",
           "$hammer+doing",
           "it.",
         ],
