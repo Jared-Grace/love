@@ -278,7 +278,7 @@ export function bible_glyph_chapter_gen07() {
         words: [
           "In",
           "the",
-          "six",
+          "$six",
           "hundredth",
           "year",
           "of",
