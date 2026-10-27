@@ -715,7 +715,7 @@ export function bible_glyph_chapter_exo08() {
           "where",
           "My",
           "$family",
-          "live;",
+          "$person+round_pushpin;",
           "no",
           "swarms",
           "of",
