@@ -63,7 +63,7 @@ export function bible_glyph_chapter_gen23() {
           "her",
           "and",
           "to",
-          "weep",
+          "$loudly_crying",
           "for",
           "her.",
         ],
