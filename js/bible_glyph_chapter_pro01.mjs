@@ -441,7 +441,7 @@ export function bible_glyph_chapter_pro01() {
           "$turn_back",
           "at",
           "my",
-          "rebuke,",
+          "$you+exclamation+thing,",
           "then",
           "surely",
           "I",
