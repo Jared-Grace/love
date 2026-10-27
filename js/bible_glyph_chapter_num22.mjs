@@ -703,7 +703,7 @@ export function bible_glyph_chapter_num22() {
           "$donkey,",
           "and",
           "his",
-          "two",
+          "$two",
           "servants",
           "were",
           "with",
