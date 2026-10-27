@@ -448,7 +448,7 @@ export function bible_glyph_chapter_lev25() {
           "he",
           "is",
           "to",
-          "sell",
+          "$coin+hands_giving",
           "to",
           "you",
           "according",
