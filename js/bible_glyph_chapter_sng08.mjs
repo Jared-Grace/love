@@ -300,7 +300,7 @@ export function bible_glyph_chapter_sng08() {
           "I",
           "am",
           "a",
-          "wall,",
+          "$brick+shield,",
           "and",
           "my",
           "breasts",
