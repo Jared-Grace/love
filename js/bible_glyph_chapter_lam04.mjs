@@ -435,7 +435,7 @@ export function bible_glyph_chapter_lam04() {
           "they",
           "fled",
           "and",
-          "wandered.",
+          "$up_down_arrow+doing.",
           "Among",
           "the",
           "$map",
