@@ -649,7 +649,7 @@ export function bible_glyph_chapter_exo37() {
           "and",
           "two",
           "cubits",
-          "high,",
+          "$person+pointing_up,",
           "its",
           "$horn",
           "$tray_out",
