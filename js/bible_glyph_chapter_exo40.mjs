@@ -402,7 +402,7 @@ export function bible_glyph_chapter_exo40() {
           "set",
           "up",
           "the",
-          "tabernacle,",
+          "$tent+house,",
           "he",
           "$hands_giving",
           "its",
