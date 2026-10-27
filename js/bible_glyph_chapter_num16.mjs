@@ -547,7 +547,7 @@ export function bible_glyph_chapter_num16() {
           "in",
           "it,",
           "and",
-          "present",
+          "$magnet+doing",
           "it",
           "before",
           "the",
