@@ -64,7 +64,7 @@ export function bible_glyph_chapter_psa116() {
           "the",
           "anguish",
           "of",
-          "Sheol",
+          "$pointing_down+skull",
           "overcame",
           "me;",
           "I",
