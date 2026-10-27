@@ -781,7 +781,7 @@ export function bible_glyph_chapter_gen44() {
           "$woman",
           "$baby",
           "me",
-          "two",
+          "$two",
           "sons.",
         ],
       },
