@@ -74,7 +74,7 @@ export function bible_glyph_chapter_hab01() {
           "$hot_face?",
           "$bomb+flexed_biceps+thing",
           "and",
-          "violence",
+          "$boxing_glove",
           "are",
           "before",
           "me.",
