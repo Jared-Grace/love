@@ -379,7 +379,7 @@ export function bible_glyph_chapter_deu09() {
           "$writing_hand",
           "by",
           "the",
-          "finger",
+          "$index_pointing_up",
           "of",
           "$heart_on_fire,",
           "with",
