@@ -1,4 +1,3 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_url_stage_local } from "./app_shared_url_stage_local.mjs";
 import { app_a } from "./app_a.mjs";
@@ -7,6 +6,7 @@ import { not } from "./not.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { subtract } from "./subtract.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 export async function app_a_tests_load_timings(stage_name) {
   "$plain stage_name";
@@ -16,6 +16,7 @@ export async function app_a_tests_load_timings(stage_name) {
   let started = null;
   let names_arrived = null;
   let screen_ready = null;
+  let screen_ready_again = null;
   let buttons = null;
   async function on_page(page) {
     function on_response(response) {
@@ -42,11 +43,20 @@ export async function app_a_tests_load_timings(stage_name) {
     let left3 = date_now_milliseconds();
     screen_ready = subtract(left3, started);
     buttons = await page.locator("button").count();
+    ("A second visit has the names already, so what it still takes is the drawing alone.");
+    let again = date_now_milliseconds();
+    await page.reload();
+    await input.waitFor({
+      timeout: 600000,
+    });
+    let left4 = date_now_milliseconds();
+    screen_ready_again = subtract(left4, again);
   }
   await playwright_test_blank(on_page);
   let r = {
     names_arrived,
     screen_ready,
+    screen_ready_again,
     buttons,
   };
   return r;
