@@ -618,7 +618,7 @@ export function bible_glyph_chapter_exo10() {
       {
         verse_number: 17,
         words: [
-          "Now",
+          "$watch",
           "$lifting",
           "my",
           "$bow",
