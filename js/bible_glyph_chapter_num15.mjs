@@ -759,7 +759,7 @@ export function bible_glyph_chapter_num15() {
         words: [
           "Also,",
           "$traffic_light",
-          "one",
+          "$one",
           "$person_other",
           "$bow+doing",
           "unintentionally,",
