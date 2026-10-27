@@ -1276,7 +1276,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 40,
         words: [
           "$proper_name$Balak",
-          "sacrificed",
+          "$sacrifice",
           "cattle",
           "and",
           "$sheep,",
