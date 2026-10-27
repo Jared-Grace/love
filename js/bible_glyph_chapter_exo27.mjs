@@ -196,7 +196,7 @@ export function bible_glyph_chapter_exo27() {
           "$hammer+doing",
           "the",
           "altar",
-          "hollow,",
+          "$hole+describing,",
           "with",
           "boards,",
           "just",
