@@ -656,7 +656,7 @@ export function bible_glyph_chapter_num21() {
           "he",
           "$crowd+doing",
           "his",
-          "whole",
+          "$all",
           "$family",
           "and",
           "went",
