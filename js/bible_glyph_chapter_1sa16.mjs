@@ -36,7 +36,7 @@ export function bible_glyph_chapter_1sa16() {
           "$wrestling+heart_on_fire?",
           "Fill",
           "your",
-          "horn",
+          "$horn",
           "with",
           "oil",
           "and",
