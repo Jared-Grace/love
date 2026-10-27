@@ -166,7 +166,7 @@ export function bible_glyph_chapter_1ki20() {
         verse_number: 6,
         words: [
           "But",
-          "about",
+          "$traffic_light",
           "this",
           "time",
           "tomorrow",
