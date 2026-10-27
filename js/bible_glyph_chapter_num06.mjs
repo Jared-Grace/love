@@ -208,7 +208,7 @@ export function bible_glyph_chapter_num06() {
           "the",
           "crown",
           "of",
-          "consecration",
+          "$crown+soap",
           "to",
           "his",
           "$heart_on_fire",
