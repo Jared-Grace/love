@@ -612,7 +612,7 @@ export function bible_glyph_chapter_2ki09() {
           "and",
           "he",
           "$speech,",
-          "I",
+          "$me",
           "$eye",
           "a",
           "company",
