@@ -638,7 +638,7 @@ export function bible_glyph_chapter_amo05() {
         verse_number: 22,
         words: [
           "$pointing",
-          "though",
+          "$traffic_light",
           "you",
           "offer",
           "Me",
