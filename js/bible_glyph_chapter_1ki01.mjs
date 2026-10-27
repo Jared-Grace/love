@@ -67,7 +67,7 @@ export function bible_glyph_chapter_1ki01() {
           "the",
           "$king",
           "and",
-          "care",
+          "$repeat+person+doing",
           "for",
           "him,",
           "and",
