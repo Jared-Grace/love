@@ -76,7 +76,7 @@ export function bible_glyph_chapter_job01() {
           "he",
           "was",
           "the",
-          "greatest",
+          "$top",
           "$man_beard",
           "of",
           "all",
