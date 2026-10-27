@@ -1248,7 +1248,7 @@ export function bible_glyph_chapter_lev13() {
           "$no_entry",
           "look",
           "for",
-          "yellow",
+          "$gold+describing",
           "$hair;",
           "the",
           "person",
