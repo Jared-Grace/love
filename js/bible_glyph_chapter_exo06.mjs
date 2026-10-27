@@ -426,7 +426,7 @@ export function bible_glyph_chapter_exo06() {
           "of",
           "$eyes+son,",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "$wrestling+heart_on_fire,",
           "were",
