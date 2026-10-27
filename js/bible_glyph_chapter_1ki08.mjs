@@ -2288,7 +2288,7 @@ export function bible_glyph_chapter_1ki08() {
           "our",
           "$heart_on_fire",
           "for",
-          "seven",
+          "$seven",
           "$sun",
           "and",
           "seven",
