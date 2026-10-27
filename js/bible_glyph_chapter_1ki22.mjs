@@ -694,7 +694,7 @@ export function bible_glyph_chapter_1ki22() {
           "came",
           "forward",
           "and",
-          "stood",
+          "$person+round_pushpin",
           "before",
           "the",
           "$i_am",
