@@ -1132,7 +1132,7 @@ export function bible_glyph_chapter_deu32() {
           "repay",
           "those",
           "who",
-          "hate",
+          "$heart_red+thumbs_down",
           "Me.",
         ],
       },
