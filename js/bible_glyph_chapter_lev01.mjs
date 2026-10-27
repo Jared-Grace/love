@@ -390,7 +390,7 @@ export function bible_glyph_chapter_lev01() {
           "he",
           "is",
           "to",
-          "present",
+          "$magnet+doing",
           "$tray_out",
           "a",
           "turtledove",
