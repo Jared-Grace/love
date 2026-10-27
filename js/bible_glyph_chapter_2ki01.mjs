@@ -264,7 +264,7 @@ export function bible_glyph_chapter_2ki01() {
           "$mouth",
           "to",
           "them,",
-          "What",
+          "$flashlight+question",
           "$scales+thing",
           "of",
           "$man_beard",
