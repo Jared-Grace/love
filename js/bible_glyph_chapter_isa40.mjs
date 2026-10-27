@@ -519,7 +519,7 @@ export function bible_glyph_chapter_isa40() {
           "$heart_on_fire?",
           "To",
           "what",
-          "image",
+          "$likeness+thing",
           "will",
           "you",
           "compare",
