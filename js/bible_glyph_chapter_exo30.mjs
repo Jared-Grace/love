@@ -1007,7 +1007,7 @@ export function bible_glyph_chapter_exo30() {
           "$back+flashlight",
           "$hammer+doing",
           "something",
-          "like",
+          "$likeness",
           "it",
           "to",
           "enjoy",
