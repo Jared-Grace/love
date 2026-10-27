@@ -146,7 +146,7 @@ export function bible_glyph_chapter_nam01() {
           "and",
           "the",
           "hills",
-          "melt",
+          "$ice+droplet+doing",
           "away;",
           "the",
           "$earth",
