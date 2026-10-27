@@ -260,7 +260,7 @@ export function bible_glyph_chapter_gen22() {
           "$son.",
           "And",
           "the",
-          "two",
+          "$two",
           "$walking",
           "together.",
         ],
