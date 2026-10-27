@@ -17,7 +17,7 @@ export function bible_glyph_chapter_num23() {
           "Then",
           "$foreigner+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Balak,",
           "Build",
           "for",
