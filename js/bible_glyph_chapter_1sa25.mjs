@@ -614,7 +614,7 @@ export function bible_glyph_chapter_1sa25() {
           "raisins,",
           "and",
           "two",
-          "hundred",
+          "$input_numbers+all",
           "cakes",
           "of",
           "figs,",
