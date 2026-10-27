@@ -435,7 +435,7 @@ export function bible_glyph_chapter_mic06() {
         words: [
           "You",
           "will",
-          "sow",
+          "$seed+doing",
           "but",
           "$no_entry",
           "reap;",
