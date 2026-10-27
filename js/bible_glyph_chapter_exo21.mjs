@@ -862,7 +862,7 @@ export function bible_glyph_chapter_exo21() {
           "instead,",
           "he",
           "may",
-          "redeem",
+          "$coin+turn_back+money_bag",
           "his",
           "$person_other",
           "by",
