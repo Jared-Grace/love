@@ -488,7 +488,7 @@ export function bible_glyph_chapter_exo05() {
           "are",
           "$speech,",
           "$hammer+doing",
-          "bricks.",
+          "$white_circle+brick.",
           "Look,",
           "your",
           "$kneeling",
