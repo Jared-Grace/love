@@ -224,7 +224,7 @@ export function bible_glyph_chapter_gen48() {
           "the",
           "$road,",
           "some",
-          "distance",
+          "$road+straight_ruler",
           "from",
           "$proper_name$Ephrath.",
           "So",
