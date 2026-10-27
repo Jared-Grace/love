@@ -490,7 +490,7 @@ export function bible_glyph_chapter_amo05() {
           "and",
           "the",
           "$lightbulb",
-          "to",
+          "$toward",
           "wail.",
         ],
       },
