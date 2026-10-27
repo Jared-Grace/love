@@ -183,7 +183,7 @@ export function bible_glyph_chapter_2sa11() {
           "to",
           "$two_hearts+proper_name,",
           "$speech,",
-          "I",
+          "$me",
           "am",
           "pregnant.",
         ],
