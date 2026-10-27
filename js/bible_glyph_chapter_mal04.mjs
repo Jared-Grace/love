@@ -110,7 +110,7 @@ export function bible_glyph_chapter_mal04() {
           "they",
           "will",
           "be",
-          "ashes",
+          "$ashes",
           "under",
           "the",
           "soles",
