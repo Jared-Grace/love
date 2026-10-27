@@ -196,7 +196,7 @@ export function bible_glyph_chapter_lev27() {
           "$coin",
           "for",
           "the",
-          "female.",
+          "$female_sign.",
         ],
       },
       {
