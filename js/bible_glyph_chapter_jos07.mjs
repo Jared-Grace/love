@@ -832,7 +832,7 @@ export function bible_glyph_chapter_jos07() {
           "a",
           "$tongue",
           "of",
-          "gold",
+          "$gold",
           "weighing",
           "fifty",
           "$coin,",
