@@ -938,7 +938,7 @@ export function bible_glyph_chapter_1sa02() {
       {
         verse_number: 29,
         words: [
-          "Why",
+          "$flashlight+question",
           "then",
           "do",
           "you",
