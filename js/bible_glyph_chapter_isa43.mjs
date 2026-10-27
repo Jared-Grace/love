@@ -284,7 +284,7 @@ export function bible_glyph_chapter_isa43() {
           "the",
           "peoples",
           "$crowd+doing.",
-          "Who",
+          "$person+question",
           "among",
           "them",
           "can",
