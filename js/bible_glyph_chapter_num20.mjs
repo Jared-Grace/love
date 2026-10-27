@@ -876,7 +876,7 @@ export function bible_glyph_chapter_num20() {
           "whole",
           "$witness+crowd",
           "$eye",
-          "that",
+          "$pointing",
           "$proper_name$Aaron",
           "had",
           "died,",
