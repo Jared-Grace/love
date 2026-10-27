@@ -499,7 +499,7 @@ export function bible_glyph_chapter_num14() {
           "$man_beard,",
           "the",
           "$map",
-          "who",
+          "$back+flashlight",
           "have",
           "$ear",
           "of",
