@@ -935,7 +935,7 @@ export function bible_glyph_chapter_gen30() {
           "it,",
           "and",
           "$all",
-          "dark",
+          "$brown_square+describing",
           "lamb,",
           "and",
           "$hands_giving",
