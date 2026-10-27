@@ -791,7 +791,7 @@ export function bible_glyph_chapter_lev23() {
           "hold",
           "a",
           "$sparkle+thing",
-          "assembly,",
+          "$waving_hand+thing,",
           "and",
           "humble",
           "$person_other,",
