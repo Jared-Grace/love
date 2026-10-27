@@ -712,7 +712,7 @@ export function bible_glyph_chapter_2ki03() {
           "stationed",
           "at",
           "the",
-          "border.",
+          "$passport_control.",
         ],
       },
       {
