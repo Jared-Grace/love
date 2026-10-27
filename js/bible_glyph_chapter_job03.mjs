@@ -336,7 +336,7 @@ export function bible_glyph_chapter_job03() {
           "was",
           "I",
           "$no_entry",
-          "hidden",
+          "$pick+tray_in+doing",
           "like",
           "a",
           "stillborn",
