@@ -869,7 +869,7 @@ export function bible_glyph_chapter_num22() {
           "her",
           "with",
           "his",
-          "staff.",
+          "$wood+leaf.",
         ],
       },
       {
