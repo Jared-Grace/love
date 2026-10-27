@@ -712,7 +712,7 @@ export function bible_glyph_chapter_gen42() {
           "to",
           "$hands_giving",
           "them",
-          "provisions",
+          "$backpack+bread",
           "for",
           "their",
           "$road.",
