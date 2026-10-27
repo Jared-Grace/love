@@ -1004,7 +1004,7 @@ export function bible_glyph_chapter_exo32() {
           "$hands_giving",
           "you",
           "a",
-          "blessing",
+          "$speech+thumbs_up",
           "this",
           "$sun.",
         ],
