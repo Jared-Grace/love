@@ -760,7 +760,7 @@ export function bible_glyph_chapter_1ki18() {
           "answers",
           "by",
           "$fire,",
-          "He",
+          "$pointing_back",
           "is",
           "$heart_on_fire.",
           "And",
