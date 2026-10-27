@@ -229,7 +229,7 @@ export function bible_glyph_chapter_lev14() {
           "be",
           "ceremonially",
           "clean.",
-          "Afterward",
+          "$next_track",
           "he",
           "may",
           "$footprints",
