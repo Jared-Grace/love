@@ -137,7 +137,7 @@ export function bible_glyph_chapter_isa58() {
         verse_number: 4,
         words: [
           "You",
-          "fast",
+          "$eating+locked+doing",
           "with",
           "contention",
           "and",
