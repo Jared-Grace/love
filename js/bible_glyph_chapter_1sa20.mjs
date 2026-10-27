@@ -719,7 +719,7 @@ export function bible_glyph_chapter_1sa20() {
           "$speech,",
           "$walking",
           "and",
-          "find",
+          "$magnifying_glass+exclamation",
           "the",
           "arrows.",
           "Now",
