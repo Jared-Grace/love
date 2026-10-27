@@ -1235,7 +1235,7 @@ export function bible_glyph_chapter_deu32() {
           "$proper_name$Nun",
           "and",
           "$mouth",
-          "all",
+          "$all",
           "the",
           "$speech",
           "of",
