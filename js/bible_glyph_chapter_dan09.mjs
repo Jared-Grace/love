@@ -433,7 +433,7 @@ export function bible_glyph_chapter_dan09() {
           "of",
           "$fishing_pole+proper_name,",
           "$all",
-          "this",
+          "$flashlight",
           "$thumbs_down",
           "has",
           "$footprints",
