@@ -32,7 +32,7 @@ export function bible_glyph_chapter_psa027() {
           "$i_am",
           "is",
           "the",
-          "stronghold",
+          "$shield+house",
           "of",
           "my",
           "$sprout",
