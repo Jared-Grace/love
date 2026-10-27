@@ -376,7 +376,7 @@ export function bible_glyph_chapter_exo32() {
           "does",
           "Your",
           "anger",
-          "burn",
+          "$angry_face+doing",
           "against",
           "Your",
           "$family,",
