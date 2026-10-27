@@ -538,7 +538,7 @@ export function bible_glyph_chapter_lev21() {
           "has",
           "an",
           "$eyes",
-          "defect,",
+          "$eye+cloud,",
           "or",
           "a",
           "festering",
