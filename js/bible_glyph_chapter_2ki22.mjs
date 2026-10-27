@@ -609,7 +609,7 @@ export function bible_glyph_chapter_2ki22() {
       {
         verse_number: 17,
         words: [
-          "because",
+          "$down_arrow",
           "they",
           "have",
           "forsaken",
