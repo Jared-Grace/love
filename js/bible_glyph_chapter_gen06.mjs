@@ -212,7 +212,7 @@ export function bible_glyph_chapter_gen06() {
           "every",
           "$person,",
           "and",
-          "beast,",
+          "$paw_prints,",
           "and",
           "crawling",
           "creature,",
