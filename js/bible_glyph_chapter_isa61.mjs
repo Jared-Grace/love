@@ -105,7 +105,7 @@ export function bible_glyph_chapter_isa61() {
           "the",
           "$lotion_bottle",
           "of",
-          "joy",
+          "$grinning_face",
           "for",
           "mourning,",
           "and",
