@@ -689,7 +689,7 @@ export function bible_glyph_chapter_jer18() {
           "and",
           "have",
           "hidden",
-          "snares",
+          "$snare+bird",
           "for",
           "my",
           "feet.",
