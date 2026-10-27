@@ -483,7 +483,7 @@ export function bible_glyph_chapter_2ki10() {
           "$speech,",
           "$person+question",
           "are",
-          "you?",
+          "$you?",
           "They",
           "$speech,",
           "We",
