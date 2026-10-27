@@ -559,7 +559,7 @@ export function bible_glyph_chapter_zep01() {
           "$dust",
           "and",
           "their",
-          "flesh",
+          "$meat+person",
           "like",
           "dung.",
         ],
