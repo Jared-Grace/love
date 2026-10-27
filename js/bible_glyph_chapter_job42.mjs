@@ -100,7 +100,7 @@ export function bible_glyph_chapter_job42() {
           "of",
           "You,",
           "but",
-          "now",
+          "$watch",
           "my",
           "$eyes",
           "have",
