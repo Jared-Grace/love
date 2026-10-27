@@ -294,7 +294,7 @@ export function bible_glyph_chapter_gen08() {
         words: [
           "And",
           "the",
-          "dove",
+          "$dove",
           "$footprints",
           "to",
           "him",
