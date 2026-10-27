@@ -340,7 +340,7 @@ export function bible_glyph_chapter_exo16() {
           "$face",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "He",
           "has",
           "$ear",
