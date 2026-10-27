@@ -495,7 +495,7 @@ export function bible_glyph_chapter_lam04() {
           "in",
           "vain",
           "for",
-          "help.",
+          "$rescue+hand+thing.",
           "We",
           "watched",
           "from",
