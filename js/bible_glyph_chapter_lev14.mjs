@@ -113,7 +113,7 @@ export function bible_glyph_chapter_lev14() {
           "shall",
           "command",
           "that",
-          "one",
+          "$one",
           "of",
           "the",
           "birds",
