@@ -385,7 +385,7 @@ export function bible_glyph_chapter_num06() {
           "not",
           "be",
           "counted,",
-          "because",
+          "$pointing",
           "his",
           "separation",
           "was",
