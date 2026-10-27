@@ -414,7 +414,7 @@ export function bible_glyph_chapter_deu31() {
           "your",
           "$heart_on_fire",
           "and",
-          "carefully",
+          "$guard",
           "$hammer+doing",
           "all",
           "the",
