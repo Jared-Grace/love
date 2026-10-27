@@ -382,7 +382,7 @@ export function bible_glyph_chapter_num32() {
           "$finish",
           "the",
           "$all",
-          "generation",
+          "$dna",
           "who",
           "had",
           "$hammer+doing",
