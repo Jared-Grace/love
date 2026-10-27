@@ -251,7 +251,7 @@ export function bible_glyph_chapter_jer18() {
           "$eyes",
           "and",
           "does",
-          "not",
+          "$zero+manner",
           "$ear",
           "to",
           "My",
