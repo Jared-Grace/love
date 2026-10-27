@@ -882,7 +882,7 @@ export function bible_glyph_chapter_jdg06() {
           "$hand_receiving",
           "the",
           "second",
-          "bull",
+          "$bull",
           "and",
           "offer",
           "it",
