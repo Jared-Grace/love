@@ -313,7 +313,7 @@ export function bible_glyph_chapter_num20() {
           "twice",
           "with",
           "his",
-          "staff,",
+          "$white_cane,",
           "and",
           "a",
           "great",
