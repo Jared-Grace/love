@@ -299,7 +299,7 @@ export function bible_glyph_chapter_num14() {
           "whole",
           "$witness+crowd",
           "$speech",
-          "to",
+          "$toward",
           "$rock+right_arrow+doing",
           "them",
           "with",
