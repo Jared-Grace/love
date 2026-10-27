@@ -1821,7 +1821,7 @@ export function bible_glyph_chapter_gen24() {
           "may",
           "your",
           "offspring",
-          "possess",
+          "$triangular_flag",
           "the",
           "gates",
           "of",
