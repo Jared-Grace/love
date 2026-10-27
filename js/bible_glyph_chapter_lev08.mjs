@@ -71,7 +71,7 @@ export function bible_glyph_chapter_lev08() {
           "$church+doing",
           "at",
           "the",
-          "entrance",
+          "$door",
           "$tent",
           "of",
           "Meeting.",
