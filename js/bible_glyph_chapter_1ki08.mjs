@@ -1891,7 +1891,7 @@ export function bible_glyph_chapter_1ki08() {
           "had",
           "finished",
           "$hands_praying",
-          "this",
+          "$flashlight",
           "$all",
           "$hands_praying+thing",
           "and",
