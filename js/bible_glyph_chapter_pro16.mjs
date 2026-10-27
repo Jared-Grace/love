@@ -250,7 +250,7 @@ export function bible_glyph_chapter_pro16() {
           "Wicked",
           "$hammer+doing",
           "is",
-          "detestable",
+          "$vomiting",
           "to",
           "$king,",
           "for",
