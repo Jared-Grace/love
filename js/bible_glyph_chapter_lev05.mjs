@@ -276,7 +276,7 @@ export function bible_glyph_chapter_lev05() {
           "$blood",
           "of",
           "$bow",
-          "on",
+          "$pointing_up",
           "$wall",
           "of",
           "$altar,",
