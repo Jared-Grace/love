@@ -750,7 +750,7 @@ export function bible_glyph_chapter_exo07() {
           "$water",
           "to",
           "$cup_with_straw,",
-          "because",
+          "$pointing",
           "they",
           "could",
           "$no_entry",
