@@ -263,7 +263,7 @@ export function bible_glyph_chapter_1ki21() {
           "$castle",
           "$pointing_up",
           "$wrestling+heart_on_fire?",
-          "Get",
+          "$person+pointing_up",
           "up,",
           "$eating",
           "some",
