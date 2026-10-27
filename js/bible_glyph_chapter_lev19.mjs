@@ -401,7 +401,7 @@ export function bible_glyph_chapter_lev19() {
           "You",
           "must",
           "$no_entry",
-          "endanger",
+          "$person+round_pushpin",
           "the",
           "$blood",
           "of",
