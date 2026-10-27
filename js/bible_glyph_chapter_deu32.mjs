@@ -297,7 +297,7 @@ export function bible_glyph_chapter_deu32() {
           "hovers",
           "over",
           "its",
-          "young,",
+          "$hatching_chick,",
           "He",
           "spread",
           "His",
