@@ -356,7 +356,7 @@ export function bible_glyph_chapter_deu10() {
           "$no_entry",
           "willing",
           "to",
-          "destroy",
+          "$collision",
           "you.",
         ],
       },
