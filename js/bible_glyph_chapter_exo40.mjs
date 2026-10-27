@@ -313,7 +313,7 @@ export function bible_glyph_chapter_exo40() {
           "Bring",
           "his",
           "$son",
-          "forward",
+          "$magnet+doing",
           "and",
           "clothe",
           "them",
