@@ -1119,7 +1119,7 @@ export function bible_glyph_chapter_jer32() {
           "Me",
           "to",
           "anger,",
-          "they,",
+          "$pointing_back,",
           "their",
           "$king,",
           "their",
