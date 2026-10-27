@@ -442,7 +442,7 @@ export function bible_glyph_chapter_mic06() {
           "you",
           "will",
           "press",
-          "olives",
+          "$olive",
           "but",
           "$no_entry",
           "anoint",
