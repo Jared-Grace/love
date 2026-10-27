@@ -909,7 +909,7 @@ export function bible_glyph_chapter_deu07() {
           "and",
           "$vomiting+doing",
           "it,",
-          "because",
+          "$pointing",
           "it",
           "is",
           "set",
