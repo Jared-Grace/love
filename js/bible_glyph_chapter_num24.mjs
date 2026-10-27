@@ -459,7 +459,7 @@ export function bible_glyph_chapter_num24() {
           "prophecy",
           "of",
           "a",
-          "man",
+          "$might+man_beard",
           "whose",
           "$eyes",
           "are",
