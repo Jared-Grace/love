@@ -877,7 +877,7 @@ export function bible_glyph_chapter_1ki12() {
           "in",
           "his",
           "$heart_organ,",
-          "Now",
+          "$watch",
           "the",
           "$castle",
           "might",
