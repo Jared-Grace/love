@@ -80,7 +80,7 @@ export function bible_glyph_chapter_psa121() {
           "$no_entry",
           "$sleeping_face+eye+doing",
           "$no_entry",
-          "sleep.",
+          "$sleeping_face+doing.",
         ],
       },
       {
