@@ -926,7 +926,7 @@ export function bible_glyph_chapter_lev22() {
           "and",
           "$hammer+doing",
           "them.",
-          "I",
+          "$me",
           "am",
           "$i_am.",
         ],
