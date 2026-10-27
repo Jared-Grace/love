@@ -288,7 +288,7 @@ export function bible_glyph_chapter_isa07() {
         verse_number: 9,
         words: [
           "The",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "$fruit",
           "is",
