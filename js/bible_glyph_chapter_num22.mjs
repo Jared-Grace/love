@@ -526,7 +526,7 @@ export function bible_glyph_chapter_num22() {
           "will",
           "$hammer+doing.",
           "So",
-          "please",
+          "$pleading",
           "$walking",
           "and",
           "put",
