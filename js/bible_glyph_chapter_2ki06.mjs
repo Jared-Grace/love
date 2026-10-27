@@ -888,7 +888,7 @@ export function bible_glyph_chapter_2ki06() {
           "$no_entry",
           "help",
           "you,",
-          "where",
+          "$question+round_pushpin+tray_out",
           "can",
           "I",
           "find",
