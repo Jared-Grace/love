@@ -390,7 +390,7 @@ export function bible_glyph_chapter_1ki12() {
           "$footprints",
           "to",
           "$proper_name$Rehoboam,",
-          "since",
+          "$back+flashlight",
           "the",
           "$king",
           "had",
