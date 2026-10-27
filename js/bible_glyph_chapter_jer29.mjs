@@ -605,7 +605,7 @@ export function bible_glyph_chapter_jer29() {
           "to",
           "which",
           "I",
-          "banish",
+          "$leftwards_pushing_hand",
           "them.",
         ],
       },
