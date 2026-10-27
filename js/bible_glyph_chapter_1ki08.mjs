@@ -28,7 +28,7 @@ export function bible_glyph_chapter_1ki08() {
           "$wrestling+heart_on_fire,",
           "$all",
           "the",
-          "heads",
+          "$person_gesturing_ok",
           "of",
           "the",
           "tribes",
