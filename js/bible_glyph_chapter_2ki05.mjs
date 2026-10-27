@@ -243,7 +243,7 @@ export function bible_glyph_chapter_2ki05() {
           "and",
           "$speech,",
           "Am",
-          "I",
+          "$me",
           "$heart_on_fire,",
           "$skull+doing",
           "and",
