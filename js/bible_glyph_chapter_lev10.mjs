@@ -40,7 +40,7 @@ export function bible_glyph_chapter_lev10() {
           "$i_am,",
           "$no_entry",
           "His",
-          "command.",
+          "$speech+scroll.",
         ],
       },
       {
