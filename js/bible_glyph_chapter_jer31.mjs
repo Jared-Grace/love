@@ -419,7 +419,7 @@ export function bible_glyph_chapter_jer31() {
           "a",
           "well",
           "watered",
-          "garden,",
+          "$garden,",
           "and",
           "$no_entry",
           "again",
