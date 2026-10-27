@@ -677,7 +677,7 @@ export function bible_glyph_chapter_exo15() {
           "And",
           "when",
           "he",
-          "cast",
+          "$throwing",
           "it",
           "into",
           "the",
