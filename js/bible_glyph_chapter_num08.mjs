@@ -472,7 +472,7 @@ export function bible_glyph_chapter_num08() {
           "down",
           "all",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "in",
           "the",
           "$earth",
