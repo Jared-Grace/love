@@ -1614,7 +1614,7 @@ export function bible_glyph_chapter_1sa17() {
           "him,",
           "and",
           "he",
-          "cut",
+          "$scissors",
           "off",
           "his",
           "head",
