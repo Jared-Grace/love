@@ -476,7 +476,7 @@ export function bible_glyph_chapter_jdg06() {
         words: [
           "Gideon",
           "$speech,",
-          "Please,",
+          "$pleading_face+manner,",
           "my",
           "$crown,",
           "how",
