@@ -120,7 +120,7 @@ export function bible_glyph_chapter_mal04() {
           "on",
           "the",
           "$sun",
-          "I",
+          "$me",
           "am",
           "$hammer+doing,",
           "$speech",
