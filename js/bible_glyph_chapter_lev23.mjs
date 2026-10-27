@@ -1059,7 +1059,7 @@ export function bible_glyph_chapter_lev23() {
       {
         verse_number: 37,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "appointed",
