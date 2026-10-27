@@ -68,7 +68,7 @@ export function bible_glyph_chapter_hos02() {
       {
         verse_number: 3,
         words: [
-          "Otherwise",
+          "$no_entry+traffic_light",
           "I",
           "will",
           "strip",
