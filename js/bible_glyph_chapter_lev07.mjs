@@ -303,7 +303,7 @@ export function bible_glyph_chapter_lev07() {
           "well",
           "kneaded",
           "and",
-          "mixed",
+          "$spoon+cyclone",
           "with",
           "oil.",
         ],
