@@ -130,7 +130,7 @@ export function bible_glyph_chapter_exo03() {
           "$thorns+herb,",
           "$fishing_pole+proper_name,",
           "$fishing_pole+proper_name!",
-          "Here",
+          "$exclamation",
           "I",
           "am,",
           "he",
