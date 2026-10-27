@@ -820,7 +820,7 @@ export function bible_glyph_chapter_gen30() {
           "$sheep",
           "$sun,",
           "and",
-          "remove",
+          "$away+doing",
           "from",
           "them",
           "every",
