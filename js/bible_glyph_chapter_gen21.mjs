@@ -796,7 +796,7 @@ export function bible_glyph_chapter_gen21() {
           "$place",
           "was",
           "called",
-          "Beersheba,",
+          "$well+seven+proper_name,",
           "because",
           "it",
           "was",
