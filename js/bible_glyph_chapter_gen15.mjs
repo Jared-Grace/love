@@ -306,7 +306,7 @@ export function bible_glyph_chapter_gen15() {
           "birds",
           "of",
           "prey",
-          "descended",
+          "$walking+pointing_down",
           "on",
           "the",
           "carcasses,",
