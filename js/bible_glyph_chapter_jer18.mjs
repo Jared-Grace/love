@@ -716,7 +716,7 @@ export function bible_glyph_chapter_jer18() {
           "their",
           "guilt",
           "$no_entry",
-          "blot",
+          "$broom+doing",
           "out",
           "their",
           "$bow",
