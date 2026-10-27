@@ -77,7 +77,7 @@ export function bible_glyph_chapter_psa008() {
           "Your",
           "fingers,",
           "the",
-          "moon",
+          "$moon",
           "and",
           "the",
           "stars,",
