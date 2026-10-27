@@ -123,7 +123,7 @@ export function bible_glyph_chapter_isa61() {
           "will",
           "be",
           "called",
-          "oaks",
+          "$ram",
           "of",
           "$ruler+thing,",
           "the",
