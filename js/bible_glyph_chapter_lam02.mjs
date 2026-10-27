@@ -463,7 +463,7 @@ export function bible_glyph_chapter_lam02() {
           "on",
           "the",
           "$earth",
-          "over",
+          "$pointing_up",
           "the",
           "destruction",
           "of",
