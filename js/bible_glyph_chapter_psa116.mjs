@@ -296,7 +296,7 @@ export function bible_glyph_chapter_psa116() {
           "$pleading_face+exclamation,",
           "O",
           "$i_am,",
-          "I",
+          "$me",
           "am",
           "Your",
           "$kneeling;",
