@@ -1128,7 +1128,7 @@ export function bible_glyph_chapter_gen42() {
           "there",
           "with",
           "you,",
-          "for",
+          "$pointing",
           "his",
           "$brother",
           "is",
