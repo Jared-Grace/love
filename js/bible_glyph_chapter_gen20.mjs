@@ -381,7 +381,7 @@ export function bible_glyph_chapter_gen20() {
           "and",
           "they",
           "will",
-          "kill",
+          "$fist+skull",
           "me",
           "over",
           "my",
