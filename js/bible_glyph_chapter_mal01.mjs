@@ -459,7 +459,7 @@ export function bible_glyph_chapter_mal01() {
           "as",
           "for",
           "its",
-          "fruit,",
+          "$fruit+up_arrow,",
           "its",
           "food",
           "is",
