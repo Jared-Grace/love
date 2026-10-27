@@ -186,7 +186,7 @@ export function bible_glyph_chapter_exo19() {
           "a",
           "$sparkle",
           "$map.",
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "$speech",
