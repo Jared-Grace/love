@@ -900,7 +900,7 @@ export function bible_glyph_chapter_2ki05() {
           "$silver",
           "in",
           "two",
-          "bags,",
+          "$money_bag+hole,",
           "along",
           "with",
           "two",
