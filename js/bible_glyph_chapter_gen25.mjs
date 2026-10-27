@@ -414,7 +414,7 @@ export function bible_glyph_chapter_gen25() {
         verse_number: 20,
         words: [
           "$laughing+proper_name",
-          "was",
+          "$link",
           "forty",
           "$son",
           "old",
