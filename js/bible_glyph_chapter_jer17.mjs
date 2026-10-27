@@ -864,7 +864,7 @@ export function bible_glyph_chapter_jer17() {
           "and",
           "the",
           "places",
-          "around",
+          "$around",
           "$city+peace,",
           "from",
           "the",
