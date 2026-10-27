@@ -520,7 +520,7 @@ export function bible_glyph_chapter_deu31() {
           "$tent",
           "in",
           "a",
-          "pillar",
+          "$candle",
           "of",
           "$cloud,",
           "and",
