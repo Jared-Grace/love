@@ -286,7 +286,7 @@ export function bible_glyph_chapter_gen15() {
           "halves",
           "$footprints+toward+doing",
           "each",
-          "other.",
+          "$person+sheep.",
           "The",
           "birds,",
           "however,",
