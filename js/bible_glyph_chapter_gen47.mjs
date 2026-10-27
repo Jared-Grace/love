@@ -298,7 +298,7 @@ export function bible_glyph_chapter_gen47() {
           "they",
           "have",
           "$no_entry",
-          "matched",
+          "$running+hand_receiving+doing",
           "the",
           "$sun",
           "of",
