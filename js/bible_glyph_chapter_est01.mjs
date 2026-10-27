@@ -186,7 +186,7 @@ export function bible_glyph_chapter_est01() {
           "the",
           "marble",
           "$candle.",
-          "Gold",
+          "$gold",
           "and",
           "$silver",
           "$bed",
