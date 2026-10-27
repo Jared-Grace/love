@@ -748,7 +748,7 @@ export function bible_glyph_chapter_gen11() {
           "But",
           "$military_medal+proper_name",
           "$link",
-          "barren;",
+          "$pregnant_woman+no_entry+describing;",
           "she",
           "had",
           "no",
