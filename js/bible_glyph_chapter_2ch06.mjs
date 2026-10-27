@@ -991,7 +991,7 @@ export function bible_glyph_chapter_2ch06() {
           "$famine",
           "or",
           "plague",
-          "comes",
+          "$link",
           "upon",
           "the",
           "$earth,",
