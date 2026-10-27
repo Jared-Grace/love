@@ -60,7 +60,7 @@ export function bible_glyph_chapter_psa042() {
           "$footprints",
           "and",
           "$eye",
-          "in",
+          "$face",
           "the",
           "presence",
           "of",
