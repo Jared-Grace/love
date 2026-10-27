@@ -619,7 +619,7 @@ export function bible_glyph_chapter_ezk01() {
           "of",
           "an",
           "awesome",
-          "expanse,",
+          "$sky+arrow_both_ways,",
           "$eyes",
           "like",
           "crystal.",
