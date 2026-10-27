@@ -488,7 +488,7 @@ export function bible_glyph_chapter_gen42() {
         verse_number: 19,
         words: [
           "$traffic_light",
-          "you",
+          "$you",
           "are",
           "honest,",
           "leave",
