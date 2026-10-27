@@ -134,7 +134,7 @@ export function bible_glyph_chapter_psa063() {
           "my",
           "mouth",
           "will",
-          "praise",
+          "$clapping_hands",
           "You.",
         ],
       },
