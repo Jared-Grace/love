@@ -32,7 +32,7 @@ export function bible_glyph_chapter_zec09() {
           "its",
           "resting",
           "place,",
-          "for",
+          "$pointing",
           "the",
           "$eyes",
           "of",
