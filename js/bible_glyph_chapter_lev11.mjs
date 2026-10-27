@@ -792,7 +792,7 @@ export function bible_glyph_chapter_lev11() {
           "$soap+no_entry;",
           "you",
           "must",
-          "break",
+          "$broken_chain",
           "the",
           "pot.",
         ],
