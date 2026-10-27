@@ -154,7 +154,7 @@ export function bible_glyph_chapter_psa110() {
           "dead;",
           "He",
           "will",
-          "crush",
+          "$axe+collision+doing",
           "the",
           "leaders",
           "far",
