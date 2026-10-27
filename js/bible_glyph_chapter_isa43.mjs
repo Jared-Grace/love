@@ -777,7 +777,7 @@ export function bible_glyph_chapter_isa43() {
           "for",
           "My",
           "own",
-          "sake",
+          "$right_arrow+toward",
           "and",
           "remembers",
           "your",
