@@ -456,7 +456,7 @@ export function bible_glyph_chapter_exo02() {
           "$house+proper_name",
           "$ear",
           "about",
-          "this",
+          "$flashlight",
           "matter,",
           "he",
           "sought",
