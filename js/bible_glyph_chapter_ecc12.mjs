@@ -392,7 +392,7 @@ export function bible_glyph_chapter_ecc12() {
           "His",
           "$scroll,",
           "for",
-          "this",
+          "$flashlight",
           "is",
           "the",
           "whole",
