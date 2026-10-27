@@ -431,7 +431,7 @@ export function bible_glyph_chapter_jer18() {
           "that",
           "make",
           "them",
-          "stumble",
+          "$hiking_boot+rock",
           "in",
           "their",
           "$road",
