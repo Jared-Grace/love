@@ -32,7 +32,7 @@ export function bible_glyph_chapter_exo40() {
           "of",
           "the",
           "first",
-          "month",
+          "$new_moon",
           "you",
           "are",
           "to",
