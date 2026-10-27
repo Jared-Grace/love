@@ -538,7 +538,7 @@ export function bible_glyph_chapter_num27() {
           "that",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "the",
           "$son",
