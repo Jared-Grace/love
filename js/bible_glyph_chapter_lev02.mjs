@@ -188,7 +188,7 @@ export function bible_glyph_chapter_lev02() {
           "$hammer+doing",
           "$flour",
           "with",
-          "oil.",
+          "$lotion_bottle.",
         ],
       },
       {
