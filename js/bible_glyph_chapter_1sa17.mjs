@@ -101,7 +101,7 @@ export function bible_glyph_chapter_1sa17() {
           "from",
           "the",
           "$proper_name$Philistine",
-          "camp.",
+          "$camp.",
           "He",
           "was",
           "six",
