@@ -92,7 +92,7 @@ export function bible_glyph_chapter_jdg11() {
         words: [
           "So",
           "$unlocked+proper_name",
-          "fled",
+          "$dashing_away",
           "from",
           "his",
           "$brother",
