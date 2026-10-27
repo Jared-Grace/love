@@ -387,7 +387,7 @@ export function bible_glyph_chapter_gen45() {
       {
         verse_number: 13,
         words: [
-          "Tell",
+          "$newspaper",
           "my",
           "$father",
           "about",
