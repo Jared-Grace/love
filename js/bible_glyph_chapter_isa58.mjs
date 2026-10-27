@@ -341,7 +341,7 @@ export function bible_glyph_chapter_isa58() {
           "answer;",
           "you",
           "will",
-          "cry",
+          "$sos_button+doing",
           "out,",
           "and",
           "He",
