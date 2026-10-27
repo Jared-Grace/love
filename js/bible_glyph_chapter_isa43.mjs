@@ -716,7 +716,7 @@ export function bible_glyph_chapter_isa43() {
           "with",
           "offerings,",
           "$no_entry",
-          "wearied",
+          "$weary_face+doing",
           "you",
           "with",
           "frankincense.",
