@@ -42,7 +42,7 @@ export function bible_glyph_chapter_gen39() {
           "from",
           "the",
           "$proper_name$Ishmaelites",
-          "who",
+          "$back+flashlight",
           "had",
           "taken",
           "him",
