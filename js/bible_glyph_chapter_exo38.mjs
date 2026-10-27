@@ -886,7 +886,7 @@ export function bible_glyph_chapter_exo38() {
           "and",
           "all",
           "the",
-          "tent",
+          "$tent+wood",
           "pegs",
           "for",
           "the",
