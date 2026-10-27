@@ -161,7 +161,7 @@ export function bible_glyph_chapter_lev22() {
           "makes",
           "him",
           "unclean,",
-          "or",
+          "$shuffle",
           "a",
           "$person",
           "who",
