@@ -1086,7 +1086,7 @@ export function bible_glyph_chapter_exo34() {
           "would",
           "$away+doing",
           "the",
-          "veil",
+          "$veil+face",
           "until",
           "he",
           "came",
