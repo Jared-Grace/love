@@ -291,7 +291,7 @@ export function bible_glyph_chapter_psa103() {
         words: [
           "As",
           "for",
-          "man,",
+          "$man_beard,",
           "his",
           "$sun",
           "are",
