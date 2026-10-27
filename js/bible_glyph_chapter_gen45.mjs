@@ -675,7 +675,7 @@ export function bible_glyph_chapter_gen45() {
           "of",
           "$clamp+proper_name,",
           "and",
-          "ten",
+          "$ten",
           "female",
           "donkeys",
           "$lifting",
