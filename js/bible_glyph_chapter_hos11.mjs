@@ -105,7 +105,7 @@ export function bible_glyph_chapter_hos11() {
           "I",
           "lifted",
           "the",
-          "yoke",
+          "$yoke",
           "from",
           "their",
           "necks",
