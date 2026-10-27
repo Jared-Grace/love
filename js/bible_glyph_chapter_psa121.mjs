@@ -112,7 +112,7 @@ export function bible_glyph_chapter_psa121() {
           "$fist",
           "you",
           "by",
-          "day,",
+          "$sun+manner,",
           "nor",
           "the",
           "moon",
