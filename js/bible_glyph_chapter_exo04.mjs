@@ -364,7 +364,7 @@ export function bible_glyph_chapter_exo04() {
           "$speech",
           "to",
           "him,",
-          '"Who',
+          '"$person+question',
           "gave",
           "$person",
           "his",
