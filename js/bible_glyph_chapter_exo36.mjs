@@ -416,7 +416,7 @@ export function bible_glyph_chapter_exo36() {
           "$gold",
           "$hook+link",
           "to",
-          "join",
+          "$link+doing",
           "the",
           "curtains",
           "together,",
