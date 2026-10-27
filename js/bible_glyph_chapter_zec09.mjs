@@ -70,7 +70,7 @@ export function bible_glyph_chapter_zec09() {
           "they",
           "are",
           "very",
-          "shrewd.",
+          "$wisdom+doing.",
         ],
       },
       {
