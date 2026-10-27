@@ -26,7 +26,7 @@ export function bible_glyph_chapter_nam03() {
           "of",
           "$divide+road,",
           "$no_entry",
-          "without",
+          "$walking+away+doing",
           "prey.",
         ],
       },
