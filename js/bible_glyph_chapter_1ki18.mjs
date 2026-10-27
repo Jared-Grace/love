@@ -86,7 +86,7 @@ export function bible_glyph_chapter_1ki18() {
           "$house.",
           "Now",
           "$kneeling+i_am",
-          "greatly",
+          "$double_exclamation",
           "$fear+describing",
           "the",
           "$i_am,",
