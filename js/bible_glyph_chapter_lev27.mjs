@@ -843,7 +843,7 @@ export function bible_glyph_chapter_lev27() {
           "it",
           "is",
           "$no_entry",
-          "redeemed,",
+          "$currency_exchange,",
           "then",
           "it",
           "shall",
