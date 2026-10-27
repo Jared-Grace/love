@@ -349,7 +349,7 @@ export function bible_glyph_chapter_exo10() {
           "and",
           "our",
           "herds,",
-          "for",
+          "$pointing",
           "we",
           "must",
           "hold",
