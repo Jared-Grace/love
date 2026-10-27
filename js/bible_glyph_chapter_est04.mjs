@@ -379,7 +379,7 @@ export function bible_glyph_chapter_est04() {
           "person",
           "$sprout+doing.",
           "But",
-          "I",
+          "$me",
           "have",
           "$no_entry",
           "been",
