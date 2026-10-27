@@ -1303,7 +1303,7 @@ export function bible_glyph_chapter_1ki22() {
         verse_number: 40,
         words: [
           "And",
-          "Ahab",
+          "$brother+father+proper_name",
           "$bed+doing",
           "with",
           "his",
