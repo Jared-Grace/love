@@ -17,7 +17,7 @@ export function bible_glyph_chapter_mal02() {
           "$watch,",
           "O",
           "$priest,",
-          "this",
+          "$flashlight",
           "$scroll",
           "is",
           "for",
