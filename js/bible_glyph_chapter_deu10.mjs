@@ -303,7 +303,7 @@ export function bible_glyph_chapter_deu10() {
           "$handshake",
           "has",
           "$no_entry",
-          "portion",
+          "$pizza",
           "or",
           "inheritance",
           "among",
