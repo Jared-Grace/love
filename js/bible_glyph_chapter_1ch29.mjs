@@ -144,7 +144,7 @@ export function bible_glyph_chapter_1ch29() {
           "of",
           "$gold",
           "and",
-          "silver,",
+          "$silver,",
           "over",
           "and",
           "above",
