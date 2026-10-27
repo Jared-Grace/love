@@ -806,7 +806,7 @@ export function bible_glyph_chapter_exo09() {
         verse_number: 26,
         words: [
           "The",
-          "only",
+          "$one+check",
           "place",
           "where",
           "it",
