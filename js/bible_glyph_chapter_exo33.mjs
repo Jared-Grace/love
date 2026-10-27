@@ -600,7 +600,7 @@ export function bible_glyph_chapter_exo33() {
           "you",
           "have",
           "$mouth,",
-          "for",
+          "$pointing",
           "you",
           "have",
           "found",
