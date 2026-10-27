@@ -706,7 +706,7 @@ export function bible_glyph_chapter_gen24() {
           "$gold",
           "$hand+ring",
           "$coin+thing",
-          "ten",
+          "$ten",
           "shekels",
           "for",
           "her",
