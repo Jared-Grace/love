@@ -79,7 +79,7 @@ export function bible_glyph_chapter_zep03() {
           "$megaphone",
           "are",
           "$water+bubbles+doing,",
-          "faithless",
+          "$performing_arts+multiply",
           "men.",
           "Her",
           "$priest",
