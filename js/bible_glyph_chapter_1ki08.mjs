@@ -2282,7 +2282,7 @@ export function bible_glyph_chapter_1ki08() {
           "kept",
           "the",
           "$party_popper",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "our",
