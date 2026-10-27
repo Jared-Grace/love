@@ -97,7 +97,7 @@ export function bible_glyph_chapter_lev15() {
           "lies",
           "will",
           "be",
-          "unclean,",
+          "$soap+no_entry,",
           "and",
           "any",
           "furniture",
