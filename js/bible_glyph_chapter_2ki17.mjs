@@ -539,7 +539,7 @@ export function bible_glyph_chapter_2ki17() {
         words: [
           "They",
           "abandoned",
-          "all",
+          "$all",
           "the",
           "$scroll",
           "of",
