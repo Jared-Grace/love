@@ -801,7 +801,7 @@ export function bible_glyph_chapter_job38() {
         verse_number: 41,
         words: [
           "$person+question",
-          "provides",
+          "$pin+doing",
           "food",
           "for",
           "the",
