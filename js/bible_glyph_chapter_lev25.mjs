@@ -1578,7 +1578,7 @@ export function bible_glyph_chapter_lev25() {
           "a",
           "$pinching_hand+input_numbers",
           "years",
-          "remain",
+          "$puzzle_piece+doing",
           "until",
           "the",
           "Year",
