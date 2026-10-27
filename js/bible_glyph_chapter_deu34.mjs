@@ -240,7 +240,7 @@ export function bible_glyph_chapter_deu34() {
           "$son",
           "of",
           "Israel",
-          "grieved",
+          "$loudly_crying",
           "for",
           "$fishing_pole+proper_name",
           "in",
