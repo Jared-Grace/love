@@ -366,7 +366,7 @@ export function bible_glyph_chapter_psa103() {
           "His",
           "$covenant",
           "and",
-          "remember",
+          "$reminder_ribbon",
           "His",
           "precepts",
           "to",
