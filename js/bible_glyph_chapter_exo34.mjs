@@ -1133,7 +1133,7 @@ export function bible_glyph_chapter_exo34() {
           "would",
           "put",
           "the",
-          "veil",
+          "$veil+face",
           "$turn_back",
           "over",
           "his",
