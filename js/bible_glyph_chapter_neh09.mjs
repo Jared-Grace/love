@@ -1319,7 +1319,7 @@ export function bible_glyph_chapter_neh09() {
           "and",
           "fertile",
           "$earth",
-          "that",
+          "$back+flashlight",
           "You",
           "had",
           "$hands_giving",
