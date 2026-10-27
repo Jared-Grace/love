@@ -493,7 +493,7 @@ export function bible_glyph_chapter_lev23() {
           "leaven,",
           "as",
           "the",
-          "firstfruits",
+          "$first_place+sprout",
           "to",
           "$i_am.",
         ],
