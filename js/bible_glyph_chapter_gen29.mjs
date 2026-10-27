@@ -794,7 +794,7 @@ export function bible_glyph_chapter_gen29() {
           "the",
           "$i_am",
           "$eye",
-          "that",
+          "$pointing",
           "$proper_name$Leah",
           "was",
           "unloved,",
