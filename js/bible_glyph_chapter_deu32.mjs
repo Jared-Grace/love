@@ -171,7 +171,7 @@ export function bible_glyph_chapter_deu32() {
       {
         verse_number: 7,
         words: [
-          "Remember",
+          "$reminder_ribbon",
           "the",
           "$sun",
           "of",
