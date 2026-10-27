@@ -578,7 +578,7 @@ export function bible_glyph_chapter_num35() {
           "maliciously",
           "pushes",
           "another",
-          "or",
+          "$shuffle",
           "throws",
           "an",
           "object",
