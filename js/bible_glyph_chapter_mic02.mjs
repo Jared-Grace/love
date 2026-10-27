@@ -191,7 +191,7 @@ export function bible_glyph_chapter_mic02() {
           "Do",
           "$no_entry",
           "preach",
-          "these",
+          "$flashlight+flashlight",
           "things;",
           "disgrace",
           "will",
