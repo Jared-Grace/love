@@ -458,7 +458,7 @@ export function bible_glyph_chapter_1sa08() {
           "and",
           "your",
           "$thumbs_up",
-          "cattle",
+          "$check_box+thing",
           "and",
           "donkeys,",
           "and",
