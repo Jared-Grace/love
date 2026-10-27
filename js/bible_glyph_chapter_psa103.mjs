@@ -148,7 +148,7 @@ export function bible_glyph_chapter_psa103() {
           "The",
           "$i_am",
           "is",
-          "compassionate",
+          "$hugging_face+describing",
           "and",
           "gracious,",
           "slow",
