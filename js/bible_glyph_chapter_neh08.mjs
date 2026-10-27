@@ -634,7 +634,7 @@ export function bible_glyph_chapter_neh08() {
         verse_number: 17,
         words: [
           "The",
-          "whole",
+          "$all",
           "$church",
           "that",
           "had",
