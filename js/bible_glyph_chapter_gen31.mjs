@@ -517,7 +517,7 @@ export function bible_glyph_chapter_gen31() {
           "the",
           "$proper_name$Aramean,",
           "in",
-          "that",
+          "$pointing",
           "he",
           "did",
           "$zero+thing",
