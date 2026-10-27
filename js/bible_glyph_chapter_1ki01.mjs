@@ -1161,7 +1161,7 @@ export function bible_glyph_chapter_1ki01() {
           "the",
           "$i_am",
           "was",
-          "with",
+          "$linked_paperclips",
           "my",
           "$crown",
           "the",
