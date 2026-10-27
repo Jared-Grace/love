@@ -568,7 +568,7 @@ export function bible_glyph_chapter_deu33() {
           "$sacrifice",
           "of",
           "$ruler+thing.",
-          "For",
+          "$pointing",
           "they",
           "will",
           "feast",
