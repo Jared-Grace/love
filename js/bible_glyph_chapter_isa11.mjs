@@ -315,7 +315,7 @@ export function bible_glyph_chapter_isa11() {
           "of",
           "$proper_name$Jesse",
           "will",
-          "stand",
+          "$person+round_pushpin",
           "as",
           "a",
           "banner",
