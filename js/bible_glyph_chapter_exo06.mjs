@@ -343,7 +343,7 @@ export function bible_glyph_chapter_exo06() {
           "$mouth",
           "before",
           "$i_am,",
-          "If",
+          "$exclamation",
           "the",
           "$son",
           "of",
