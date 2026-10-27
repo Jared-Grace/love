@@ -1007,7 +1007,7 @@ export function bible_glyph_chapter_deu32() {
           "which",
           "they",
           "took",
-          "refuge,",
+          "$hut,",
         ],
       },
       {
