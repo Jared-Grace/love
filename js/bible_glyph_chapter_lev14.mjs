@@ -555,7 +555,7 @@ export function bible_glyph_chapter_lev14() {
           "$lotion_bottle",
           "in",
           "his",
-          "left",
+          "$hand+away+describing",
           "$hand_with_fingers_splayed",
           "and",
           "sprinkle",
