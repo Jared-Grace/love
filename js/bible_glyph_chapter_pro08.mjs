@@ -508,7 +508,7 @@ export function bible_glyph_chapter_pro08() {
           "established",
           "the",
           "clouds",
-          "above",
+          "$walking+pointing_up",
           "and",
           "gushed",
           "forth",
