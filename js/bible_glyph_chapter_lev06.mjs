@@ -528,7 +528,7 @@ export function bible_glyph_chapter_lev06() {
           "and",
           "$son",
           "must",
-          "present",
+          "$magnet+doing",
           "$i_am",
           "$sun",
           "$oil+doing:",
