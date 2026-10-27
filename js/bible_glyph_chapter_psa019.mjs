@@ -269,7 +269,7 @@ export function bible_glyph_chapter_psa019() {
         words: [
           "$person+question",
           "can",
-          "discern",
+          "$brain",
           "his",
           "own",
           "errors?",
