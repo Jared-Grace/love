@@ -940,7 +940,7 @@ export function bible_glyph_chapter_1sa15() {
           "$wrestling+heart_on_fire",
           "does",
           "$no_entry",
-          "lie",
+          "$handshake+lying_face+doing",
           "and",
           "does",
           "$no_entry",
