@@ -212,7 +212,7 @@ export function bible_glyph_chapter_lev22() {
         words: [
           "When",
           "the",
-          "sun",
+          "$sun_with_face",
           "$footprints,",
           "he",
           "will",
