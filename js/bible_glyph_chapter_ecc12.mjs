@@ -179,7 +179,7 @@ export function bible_glyph_chapter_ecc12() {
           "then",
           "$person",
           "$walking",
-          "to",
+          "$toward",
           "his",
           "eternal",
           "$house,",
