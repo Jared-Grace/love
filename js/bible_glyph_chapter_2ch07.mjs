@@ -458,7 +458,7 @@ export function bible_glyph_chapter_2ch07() {
           "I",
           "command",
           "the",
-          "locust",
+          "$locusts+pinching_hand",
           "to",
           "$eating",
           "the",
