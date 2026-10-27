@@ -767,7 +767,7 @@ export function bible_glyph_chapter_1sa25() {
           "the",
           "$donkey,",
           "$person+pointing_down",
-          "facedown",
+          "$face",
           "before",
           "$two_hearts+proper_name,",
           "and",
