@@ -833,7 +833,7 @@ export function bible_glyph_chapter_exo40() {
           "$tent",
           "of",
           "$alarm_clock,",
-          "because",
+          "$pointing",
           "the",
           "cloud",
           "had",
