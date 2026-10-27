@@ -22,7 +22,7 @@ export function bible_glyph_chapter_psa090() {
           "of",
           "$heart_on_fire.",
           "$crown,",
-          "You",
+          "$you",
           "have",
           "been",
           "our",
