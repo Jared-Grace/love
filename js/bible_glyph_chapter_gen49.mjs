@@ -604,7 +604,7 @@ export function bible_glyph_chapter_gen49() {
           "of",
           "the",
           "$sky",
-          "above,",
+          "$pointing_up,",
           "$speech+thumbs_up",
           "of",
           "the",
