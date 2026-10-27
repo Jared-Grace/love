@@ -1175,7 +1175,7 @@ export function bible_glyph_chapter_lev23() {
           "rest",
           "on",
           "the",
-          "first",
+          "$first_place",
           "$sun",
           "and",
           "also",
