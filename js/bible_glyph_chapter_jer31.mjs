@@ -742,7 +742,7 @@ export function bible_glyph_chapter_jer31() {
           "O",
           "faithless",
           "$girl+family?",
-          "For",
+          "$pointing",
           "the",
           "$i_am",
           "has",
