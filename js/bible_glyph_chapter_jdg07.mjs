@@ -239,7 +239,7 @@ export function bible_glyph_chapter_jdg07() {
           "mouths",
           "$link",
           "$three",
-          "hundred",
+          "$input_numbers+all",
           "$man_beard.",
           "All",
           "the",
