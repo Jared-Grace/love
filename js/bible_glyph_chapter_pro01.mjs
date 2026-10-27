@@ -237,7 +237,7 @@ export function bible_glyph_chapter_pro01() {
         words: [
           "We",
           "will",
-          "find",
+          "$magnifying_glass+exclamation",
           "all",
           "manner",
           "of",
