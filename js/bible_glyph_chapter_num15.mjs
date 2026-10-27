@@ -1144,7 +1144,7 @@ export function bible_glyph_chapter_num15() {
           "$i_am",
           "your",
           "$heart_on_fire,",
-          "who",
+          "$back+flashlight",
           "brought",
           "you",
           "out",
