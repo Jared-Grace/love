@@ -84,7 +84,7 @@ export function bible_glyph_chapter_deu32() {
           "He",
           "is",
           "the",
-          "Rock,",
+          "$rock,",
           "His",
           "work",
           "is",
