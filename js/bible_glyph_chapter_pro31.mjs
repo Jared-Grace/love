@@ -620,7 +620,7 @@ export function bible_glyph_chapter_pro31() {
           "let",
           "her",
           "works",
-          "praise",
+          "$clapping_hands",
           "her",
           "at",
           "the",
