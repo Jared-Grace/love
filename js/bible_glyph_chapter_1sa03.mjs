@@ -435,7 +435,7 @@ export function bible_glyph_chapter_1sa03() {
           "by",
           "$sacrifice",
           "or",
-          "offering.",
+          "$grain_offering.",
         ],
       },
       {
