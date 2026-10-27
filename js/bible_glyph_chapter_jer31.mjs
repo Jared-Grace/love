@@ -571,7 +571,7 @@ export function bible_glyph_chapter_jer31() {
           "So",
           "there",
           "is",
-          "hope",
+          "$crossed_fingers",
           "for",
           "your",
           "future,",
