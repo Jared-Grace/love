@@ -71,7 +71,7 @@ export function bible_glyph_chapter_mic04() {
           "of",
           "the",
           "$i_am,",
-          "to",
+          "$toward",
           "the",
           "$house",
           "of",
