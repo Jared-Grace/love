@@ -260,7 +260,7 @@ export function bible_glyph_chapter_ecc03() {
           "yet",
           "they",
           "$no_entry",
-          "fathom",
+          "$magnifying_glass+exclamation",
           "the",
           "work",
           "that",
