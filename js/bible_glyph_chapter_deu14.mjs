@@ -608,7 +608,7 @@ export function bible_glyph_chapter_deu14() {
           "your",
           "$heart_on_fire",
           "will",
-          "choose.",
+          "$check_box.",
         ],
       },
       {
