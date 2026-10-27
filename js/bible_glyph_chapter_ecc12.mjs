@@ -299,7 +299,7 @@ export function bible_glyph_chapter_ecc12() {
           "$magnifying_glass",
           "to",
           "$magnifying_glass+exclamation",
-          "delightful",
+          "$smiling_face_with_hearts",
           "$speech,",
           "and",
           "to",
