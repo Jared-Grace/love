@@ -249,7 +249,7 @@ export function bible_glyph_chapter_num24() {
           "$lion,",
           "like",
           "a",
-          "lioness.",
+          "$lion+female_sign.",
           "Who",
           "dares",
           "to",
