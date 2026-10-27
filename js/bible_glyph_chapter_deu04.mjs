@@ -1258,7 +1258,7 @@ export function bible_glyph_chapter_deu04() {
           "and",
           "by",
           "great",
-          "terrors,",
+          "$fear+thing,",
           "as",
           "the",
           "$i_am",
