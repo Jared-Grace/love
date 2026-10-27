@@ -1002,7 +1002,7 @@ export function bible_glyph_chapter_jdg06() {
           "$man_beard",
           "$toward",
           "$person+sheep,",
-          "Who",
+          "$person+question",
           "did",
           "this?",
           "And",
