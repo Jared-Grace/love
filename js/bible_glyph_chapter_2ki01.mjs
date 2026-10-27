@@ -68,7 +68,7 @@ export function bible_glyph_chapter_2ki01() {
           "$sprout+doing",
           "from",
           "this",
-          "injury.",
+          "$thermometer_face+thing.",
         ],
       },
       {
