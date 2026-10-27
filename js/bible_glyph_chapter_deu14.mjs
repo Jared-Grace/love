@@ -188,7 +188,7 @@ export function bible_glyph_chapter_deu14() {
           "they",
           "chew",
           "the",
-          "cud,",
+          "$cow_face+clockwise_arrows+thing,",
           "they",
           "do",
           "$no_entry",
