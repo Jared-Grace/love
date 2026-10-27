@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_2ki09() {
           "$window+eyes+doing",
           "from",
           "a",
-          "window.",
+          "$window.",
         ],
       },
       {
