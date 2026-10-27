@@ -688,7 +688,7 @@ export function bible_glyph_chapter_num06() {
           "the",
           "Nazirite",
           "may",
-          "drink",
+          "$cup_with_straw",
           "$wine.",
         ],
       },
