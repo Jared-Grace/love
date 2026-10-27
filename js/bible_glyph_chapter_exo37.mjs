@@ -72,7 +72,7 @@ export function bible_glyph_chapter_exo37() {
           "And",
           "he",
           "$pouring_liquid+fire",
-          "four",
+          "$four",
           "$gold",
           "$ring",
           "for",
