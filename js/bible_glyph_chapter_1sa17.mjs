@@ -347,7 +347,7 @@ export function bible_glyph_chapter_1sa17() {
           "$hands_raised+proper_name,",
           "who",
           "had",
-          "eight",
+          "$eight",
           "$son.",
           "And",
           "in",
