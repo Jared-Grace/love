@@ -535,7 +535,7 @@ export function bible_glyph_chapter_isa40() {
           "that",
           "a",
           "craftsman",
-          "casts",
+          "$pouring_liquid+wine",
           "and",
           "a",
           "metalworker",
