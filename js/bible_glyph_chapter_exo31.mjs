@@ -441,7 +441,7 @@ export function bible_glyph_chapter_exo31() {
           "$hourglass,",
           "$pointing",
           "in",
-          "six",
+          "$six",
           "$sun",
           "$i_am",
           "$hammer+doing",
