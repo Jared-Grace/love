@@ -187,7 +187,7 @@ export function bible_glyph_chapter_gen28() {
           "a",
           "$woman",
           "$telescope,",
-          "commanding",
+          "$speech+scroll",
           "him,",
           "Do",
           "$no_entry",
