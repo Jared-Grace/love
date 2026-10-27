@@ -164,7 +164,7 @@ export function bible_glyph_chapter_2ki17() {
           "besieged",
           "it",
           "for",
-          "three",
+          "$three",
           "$year.",
         ],
       },
