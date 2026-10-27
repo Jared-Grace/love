@@ -27,7 +27,7 @@ export function bible_glyph_chapter_isa35() {
           "will",
           "$woman_dancing",
           "and",
-          "blossom",
+          "$cherry_blossom",
           "like",
           "a",
           "rose.",
