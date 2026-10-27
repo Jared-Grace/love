@@ -456,7 +456,7 @@ export function bible_glyph_chapter_ezk01() {
           "like",
           "a",
           "wheel",
-          "within",
+          "$radio_button",
           "a",
           "wheel.",
         ],
