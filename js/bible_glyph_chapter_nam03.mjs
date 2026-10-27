@@ -55,7 +55,7 @@ export function bible_glyph_chapter_nam03() {
         words: [
           "$walking+pointing_up",
           "$horse+doer,",
-          "flashing",
+          "$fire+tongue",
           "$sword,",
           "shining",
           "$spear,",
