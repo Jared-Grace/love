@@ -363,7 +363,7 @@ export function bible_glyph_chapter_1ki22() {
           "$i_am",
           "$speech.",
           "With",
-          "these",
+          "$flashlight+flashlight",
           "you",
           "shall",
           "gore",
