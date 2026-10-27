@@ -415,7 +415,7 @@ export function bible_glyph_chapter_lev02() {
           "$priest",
           "shall",
           "then",
-          "burn",
+          "$incense+doing",
           "the",
           "memorial",
           "portion",
