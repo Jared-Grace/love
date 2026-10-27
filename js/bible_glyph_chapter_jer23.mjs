@@ -987,7 +987,7 @@ export function bible_glyph_chapter_jer23() {
           "compared",
           "to",
           "$wheat+wind?",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
