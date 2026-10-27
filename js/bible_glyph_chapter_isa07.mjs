@@ -697,7 +697,7 @@ export function bible_glyph_chapter_isa07() {
           "vines",
           "worth",
           "a",
-          "thousand",
+          "$ten+all",
           "shekels",
           "of",
           "silver,",
