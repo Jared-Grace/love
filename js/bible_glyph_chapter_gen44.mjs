@@ -904,7 +904,7 @@ export function bible_glyph_chapter_gen44() {
           "$father,",
           "$walking+pointing_down",
           "to",
-          "Sheol",
+          "$pointing_down+skull",
           "in",
           "$crying_face+thing.",
         ],
