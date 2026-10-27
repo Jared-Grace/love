@@ -796,7 +796,7 @@ export function bible_glyph_chapter_jer29() {
           "in",
           "My",
           "$name_tag,",
-          "which",
+          "$back+flashlight",
           "I",
           "did",
           "$no_entry",
