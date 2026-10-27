@@ -660,7 +660,7 @@ export function bible_glyph_chapter_jdg06() {
           "$flashlight+double_exclamation",
           "$person_climbing,",
           "and",
-          "pour",
+          "$jar+down_arrow+doing",
           "out",
           "the",
           "broth.",
