@@ -25,7 +25,7 @@ export function bible_glyph_chapter_2ki10() {
           "So",
           "$i_am+pointing_back",
           "$writing_hand",
-          "letters",
+          "$closed_book",
           "and",
           "sent",
           "them",
