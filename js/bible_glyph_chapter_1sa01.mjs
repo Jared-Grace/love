@@ -126,7 +126,7 @@ export function bible_glyph_chapter_1sa01() {
           "he",
           "would",
           "$hands_giving",
-          "portions",
+          "$input_numbers+thing",
           "to",
           "$proper_name$Peninnah",
           "his",
