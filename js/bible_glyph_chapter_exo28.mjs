@@ -1063,7 +1063,7 @@ export function bible_glyph_chapter_exo28() {
           "may",
           "$lifting",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "the",
           "$sparkle+thing",
