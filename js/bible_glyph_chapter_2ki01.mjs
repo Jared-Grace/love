@@ -236,7 +236,7 @@ export function bible_glyph_chapter_2ki01() {
           "$moai",
           "of",
           "$proper_name$Ekron?",
-          "Therefore",
+          "$right_arrow",
           "you",
           "will",
           "$no_entry",
