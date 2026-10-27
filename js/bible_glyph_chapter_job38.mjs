@@ -391,7 +391,7 @@ export function bible_glyph_chapter_job38() {
           "it",
           "to",
           "its",
-          "border?",
+          "$passport_control?",
           "Do",
           "you",
           "know",
