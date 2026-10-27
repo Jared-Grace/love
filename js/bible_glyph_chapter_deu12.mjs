@@ -264,7 +264,7 @@ export function bible_glyph_chapter_deu12() {
       {
         verse_number: 9,
         words: [
-          "For",
+          "$pointing",
           "you",
           "have",
           "$no_entry",
