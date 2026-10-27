@@ -1104,7 +1104,7 @@ export function bible_glyph_chapter_1sa15() {
           "$no_entry",
           "$eye",
           "$proper_name$Saul",
-          "again",
+          "$plus+doing",
           "to",
           "the",
           "$sun",
