@@ -477,7 +477,7 @@ export function bible_glyph_chapter_ezk03() {
           "the",
           "end",
           "of",
-          "seven",
+          "$seven",
           "$sun,",
           "the",
           "$speech",
