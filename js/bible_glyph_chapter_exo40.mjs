@@ -427,7 +427,7 @@ export function bible_glyph_chapter_exo40() {
           "he",
           "$folding_hand_fan",
           "the",
-          "tent",
+          "$tent",
           "over",
           "the",
           "tabernacle",
