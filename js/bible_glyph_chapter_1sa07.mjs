@@ -309,7 +309,7 @@ export function bible_glyph_chapter_1sa07() {
           "and",
           "offered",
           "it",
-          "whole",
+          "$all+describing",
           "as",
           "a",
           "$burnt_offering",
