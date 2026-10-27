@@ -21,7 +21,7 @@ export function bible_glyph_chapter_exo11() {
           "I",
           "will",
           "$footprints",
-          "one",
+          "$one",
           "$repeat",
           "$face_with_head_bandage",
           "upon",
