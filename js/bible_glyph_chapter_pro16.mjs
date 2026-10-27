@@ -628,7 +628,7 @@ export function bible_glyph_chapter_pro16() {
           "hair",
           "is",
           "a",
-          "crown",
+          "$crown+thing",
           "of",
           "glory;",
           "it",
