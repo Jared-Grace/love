@@ -222,7 +222,7 @@ export function bible_glyph_chapter_psa095() {
           "$dna;",
           "I",
           "$speech,",
-          "They",
+          "$pointing_back",
           "are",
           "a",
           "$family",
