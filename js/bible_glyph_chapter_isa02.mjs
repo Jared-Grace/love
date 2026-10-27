@@ -536,7 +536,7 @@ export function bible_glyph_chapter_isa02() {
           "$sun",
           "$person",
           "will",
-          "cast",
+          "$throwing",
           "away",
           "their",
           "idols",
