@@ -431,7 +431,7 @@ export function bible_glyph_chapter_gen28() {
           "$compass+right_arrow",
           "and",
           "the",
-          "north",
+          "$compass+up_arrow",
           "and",
           "the",
           "south.",
