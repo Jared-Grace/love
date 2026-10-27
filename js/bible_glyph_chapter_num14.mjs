@@ -520,7 +520,7 @@ export function bible_glyph_chapter_num14() {
           "unable",
           "to",
           "$footprints",
-          "this",
+          "$flashlight",
           "$family",
           "into",
           "the",
