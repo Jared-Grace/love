@@ -377,7 +377,7 @@ export function bible_glyph_chapter_neh09() {
           "that",
           "endures",
           "to",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
