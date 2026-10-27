@@ -1049,7 +1049,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "take",
           "him",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$proper_name$Gihon.",
         ],
