@@ -242,7 +242,7 @@ export function bible_glyph_chapter_gen24() {
         verse_number: 8,
         words: [
           "And",
-          "if",
+          "$traffic_light",
           "the",
           "$woman",
           "is",
