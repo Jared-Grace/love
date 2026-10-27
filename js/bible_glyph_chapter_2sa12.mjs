@@ -637,7 +637,7 @@ export function bible_glyph_chapter_2sa12() {
           "When",
           "$two_hearts+proper_name",
           "$eye",
-          "that",
+          "$pointing",
           "his",
           "$kneeling",
           "were",
