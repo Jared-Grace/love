@@ -134,7 +134,7 @@ export function bible_glyph_chapter_isa02() {
           "He",
           "will",
           "judge",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "$map",
           "and",
