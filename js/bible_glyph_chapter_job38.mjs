@@ -769,7 +769,7 @@ export function bible_glyph_chapter_job38() {
           "prey",
           "for",
           "a",
-          "lioness",
+          "$lion+female_sign",
           "or",
           "satisfy",
           "the",
