@@ -189,7 +189,7 @@ export function bible_glyph_chapter_isa11() {
           "$lamb,",
           "and",
           "the",
-          "leopard",
+          "$leopard",
           "will",
           "lie",
           "down",
