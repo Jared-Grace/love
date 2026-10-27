@@ -579,7 +579,7 @@ export function bible_glyph_chapter_deu10() {
           "and",
           "$hand_receiving",
           "$no_entry",
-          "bribe.",
+          "$money_bag+hand_sending.",
         ],
       },
       {
