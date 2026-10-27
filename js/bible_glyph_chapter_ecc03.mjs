@@ -579,7 +579,7 @@ export function bible_glyph_chapter_ecc03() {
           "his",
           "lot.",
           "For",
-          "who",
+          "$person+question",
           "can",
           "$footprints",
           "him",
