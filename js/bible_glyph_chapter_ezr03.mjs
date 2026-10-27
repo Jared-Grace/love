@@ -69,7 +69,7 @@ export function bible_glyph_chapter_ezr03() {
           "$brother,",
           "to",
           "sacrifice",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "on",
           "it,",
