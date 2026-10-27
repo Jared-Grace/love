@@ -83,7 +83,7 @@ export function bible_glyph_chapter_1ki01() {
           "$king",
           "will",
           "be",
-          "warm.",
+          "$hand+fire+doing.",
         ],
       },
       {
