@@ -732,7 +732,7 @@ export function bible_glyph_chapter_jdg11() {
           "from",
           "the",
           "$wilderness",
-          "to",
+          "$finish",
           "the",
           "$pointing_down+proper_name.",
         ],
