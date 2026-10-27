@@ -337,7 +337,7 @@ export function bible_glyph_chapter_ezk34() {
           "$i_am",
           "$speech:",
           "$exclamation,",
-          "I",
+          "$me",
           "Myself",
           "will",
           "search",
