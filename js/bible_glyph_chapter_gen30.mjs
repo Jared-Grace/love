@@ -618,7 +618,7 @@ export function bible_glyph_chapter_gen30() {
           "I",
           "may",
           "$walking",
-          "to",
+          "$toward",
           "my",
           "own",
           "$place",
