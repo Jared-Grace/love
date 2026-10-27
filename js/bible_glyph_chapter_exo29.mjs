@@ -776,7 +776,7 @@ export function bible_glyph_chapter_exo29() {
           "$ram",
           "of",
           "the",
-          "ordination",
+          "$battery+thing",
           "of",
           "Aaron",
           "and",
