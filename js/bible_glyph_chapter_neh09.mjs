@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_neh09() {
           "delivered",
           "them",
           "$multiply",
-          "times",
+          "$clock",
           "in",
           "Your",
           "$hugging_face.",
