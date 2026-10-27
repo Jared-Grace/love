@@ -482,7 +482,7 @@ export function bible_glyph_chapter_num16() {
           "$i_am,",
           "Do",
           "$no_entry",
-          "regard",
+          "$curving_right+doing",
           "their",
           "offering.",
           "I",
