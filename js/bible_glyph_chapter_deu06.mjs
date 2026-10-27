@@ -37,7 +37,7 @@ export function bible_glyph_chapter_deu06() {
           "in",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "you",
           "are",
           "about",
