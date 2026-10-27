@@ -534,7 +534,7 @@ export function bible_glyph_chapter_gen31() {
         words: [
           "So",
           "he",
-          "fled",
+          "$dashing_away",
           "with",
           "all",
           "he",
