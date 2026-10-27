@@ -826,7 +826,7 @@ export function bible_glyph_chapter_gen41() {
           "forgotten,",
           "and",
           "the",
-          "famine",
+          "$famine",
           "will",
           "devastate",
           "the",
