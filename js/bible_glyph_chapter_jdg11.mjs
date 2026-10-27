@@ -725,7 +725,7 @@ export function bible_glyph_chapter_jdg11() {
           "from",
           "the",
           "$proper_name$Arnon",
-          "to",
+          "$finish",
           "the",
           "$proper_name$Jabbok,",
           "and",
