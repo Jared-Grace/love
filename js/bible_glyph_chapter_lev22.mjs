@@ -602,7 +602,7 @@ export function bible_glyph_chapter_lev22() {
           "will",
           "$no_entry",
           "be",
-          "accepted",
+          "$smiling_face_with_smiling_eyes",
           "on",
           "your",
           "behalf.",
