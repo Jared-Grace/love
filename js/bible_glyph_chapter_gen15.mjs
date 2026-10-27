@@ -334,7 +334,7 @@ export function bible_glyph_chapter_gen15() {
           "and",
           "suddenly",
           "great",
-          "terror",
+          "$fearful_face+thing",
           "and",
           "darkness",
           "overwhelmed",
