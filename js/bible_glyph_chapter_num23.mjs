@@ -264,7 +264,7 @@ export function bible_glyph_chapter_num23() {
           "$exclamation,",
           "a",
           "$family",
-          "dwelling",
+          "$tent+doing",
           "$person+one+describing,",
           "$no_entry",
           "reckoning",
