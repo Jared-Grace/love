@@ -283,7 +283,7 @@ export function bible_glyph_chapter_pro08() {
         words: [
           "By",
           "me",
-          "princes",
+          "$military_medal",
           "rule,",
           "and",
           "all",
