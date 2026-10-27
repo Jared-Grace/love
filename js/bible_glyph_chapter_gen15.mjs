@@ -190,7 +190,7 @@ export function bible_glyph_chapter_gen15() {
           "also",
           "$speech",
           "him,",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am,",
