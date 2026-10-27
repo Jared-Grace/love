@@ -707,7 +707,7 @@ export function bible_glyph_chapter_exo21() {
           "of",
           "his",
           "$kneeling",
-          "or",
+          "$shuffle",
           "the",
           "$eyes",
           "of",
