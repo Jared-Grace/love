@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_1sa20() {
         words: [
           "Then",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "Saul",
           "$angry_face+doing",
