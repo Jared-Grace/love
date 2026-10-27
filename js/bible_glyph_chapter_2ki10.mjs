@@ -690,7 +690,7 @@ export function bible_glyph_chapter_2ki10() {
           "$speech,",
           "$proper_name$Ahab",
           "$kneeling+doing",
-          "Baal",
+          "$key+proper_name",
           "a",
           "little,",
           "but",
