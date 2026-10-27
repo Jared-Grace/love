@@ -836,7 +836,7 @@ export function bible_glyph_chapter_exo28() {
           "will",
           "also",
           "be",
-          "over",
+          "$pointing_up",
           "the",
           "$heart_organ",
           "of",
