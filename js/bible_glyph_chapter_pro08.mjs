@@ -571,7 +571,7 @@ export function bible_glyph_chapter_pro08() {
           "$laughing",
           "in",
           "His",
-          "presence",
+          "$face",
           "always,",
         ],
       },
