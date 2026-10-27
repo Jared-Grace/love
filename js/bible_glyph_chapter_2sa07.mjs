@@ -125,7 +125,7 @@ export function bible_glyph_chapter_2sa07() {
           "$i_am",
           "$speech:",
           "Are",
-          "you",
+          "$you",
           "the",
           "one",
           "to",
