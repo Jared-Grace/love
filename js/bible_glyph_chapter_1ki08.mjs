@@ -2210,7 +2210,7 @@ export function bible_glyph_chapter_1ki08() {
           "$king",
           "$sparkle+doing",
           "the",
-          "middle",
+          "$radio_button",
           "of",
           "the",
           "courtyard",
