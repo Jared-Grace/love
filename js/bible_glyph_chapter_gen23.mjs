@@ -185,7 +185,7 @@ export function bible_glyph_chapter_gen23() {
         words: [
           "Then",
           "$father+map",
-          "rose",
+          "$person+pointing_up",
           "and",
           "$bowing",
           "to",
