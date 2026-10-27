@@ -434,7 +434,7 @@ export function bible_glyph_chapter_isa07() {
           "$waving_hand",
           "His",
           "$name_tag",
-          "Immanuel.",
+          "$linked_paperclips+heart_on_fire+proper_name.",
         ],
       },
       {
