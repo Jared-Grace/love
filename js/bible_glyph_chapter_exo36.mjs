@@ -435,7 +435,7 @@ export function bible_glyph_chapter_exo36() {
           "He",
           "then",
           "$hammer+doing",
-          "curtains",
+          "$thread+tent",
           "of",
           "$goat",
           "hair",
