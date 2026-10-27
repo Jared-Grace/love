@@ -806,7 +806,7 @@ export function bible_glyph_chapter_1ki02() {
         verse_number: 24,
         words: [
           "And",
-          "now,",
+          "$watch,",
           "as",
           "surely",
           "as",
