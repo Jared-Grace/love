@@ -963,7 +963,7 @@ export function bible_glyph_chapter_exo09() {
           "$barley",
           "were",
           "destroyed,",
-          "since",
+          "$pointing",
           "the",
           "$barley",
           "was",
