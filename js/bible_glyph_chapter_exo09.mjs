@@ -592,7 +592,7 @@ export function bible_glyph_chapter_exo09() {
           "the",
           "hail",
           "comes",
-          "down",
+          "$walking+pointing_down",
           "upon",
           "them.",
         ],
