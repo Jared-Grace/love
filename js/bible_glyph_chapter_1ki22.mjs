@@ -22,7 +22,7 @@ export function bible_glyph_chapter_1ki22() {
           "$person+house",
           "$dotted_line_face",
           "$crossed_swords",
-          "between",
+          "$brain+arrow_both_ways",
           "$proper_name$Aram",
           "and",
           "$wrestling+heart_on_fire.",
