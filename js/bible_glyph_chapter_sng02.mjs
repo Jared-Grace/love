@@ -112,7 +112,7 @@ export function bible_glyph_chapter_sng02() {
           "with",
           "apples,",
           "$pointing",
-          "I",
+          "$me",
           "am",
           "faint",
           "with",
