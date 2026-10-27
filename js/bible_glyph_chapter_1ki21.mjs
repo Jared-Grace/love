@@ -275,7 +275,7 @@ export function bible_glyph_chapter_1ki21() {
           "be",
           "cheerful,",
           "for",
-          "I",
+          "$me",
           "will",
           "$hands_giving",
           "you",
