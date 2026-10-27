@@ -284,7 +284,7 @@ export function bible_glyph_chapter_jdg16() {
           "$walking+pointing_up",
           "her",
           "$seven",
-          "fresh",
+          "$new_button+describing",
           "$takeout_box",
           "that",
           "had",
