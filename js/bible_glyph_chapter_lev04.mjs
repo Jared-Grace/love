@@ -612,7 +612,7 @@ export function bible_glyph_chapter_lev04() {
           "to",
           "be",
           "$hammer+doing,",
-          "unintentionally,",
+          "$footprints+question+thing,",
           "he",
           "incurs",
           "guilt.",
