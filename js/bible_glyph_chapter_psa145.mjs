@@ -23,7 +23,7 @@ export function bible_glyph_chapter_psa145() {
           "$two_hearts+proper_name.",
           "I",
           "will",
-          "exalt",
+          "$up_arrow",
           "You,",
           "my",
           "$heart_on_fire",
