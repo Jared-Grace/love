@@ -458,7 +458,7 @@ export function bible_glyph_chapter_exo29() {
           "the",
           "$ram",
           "into",
-          "pieces,",
+          "$kitchen_knife+meat,",
           "wash",
           "the",
           "entrails",
