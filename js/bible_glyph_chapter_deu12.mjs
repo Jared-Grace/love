@@ -68,7 +68,7 @@ export function bible_glyph_chapter_deu12() {
           "-",
           "atop",
           "the",
-          "high",
+          "$up_arrow",
           "$mountain$s,",
           "on",
           "the",
