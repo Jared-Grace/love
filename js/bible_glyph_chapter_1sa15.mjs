@@ -757,7 +757,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 23,
         words: [
           "$pointing",
-          "rebellion",
+          "$raised_fist+up_arrow+thing",
           "is",
           "like",
           "the",
