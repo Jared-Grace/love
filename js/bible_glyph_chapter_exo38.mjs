@@ -207,7 +207,7 @@ export function bible_glyph_chapter_exo38() {
           "the",
           "women",
           "who",
-          "served",
+          "$military_helmet+doing",
           "at",
           "the",
           "entrance",
