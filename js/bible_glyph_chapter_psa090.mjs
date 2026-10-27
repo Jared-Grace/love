@@ -244,7 +244,7 @@ export function bible_glyph_chapter_psa090() {
           "power",
           "of",
           "Your",
-          "anger?",
+          "$nose+fire?",
           "Your",
           "wrath",
           "matches",
