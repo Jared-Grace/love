@@ -22,7 +22,7 @@ export function bible_glyph_chapter_1ki12() {
           "to",
           "$proper_name$Shechem,",
           "$pointing",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire",
           "had",
           "$footprints",
