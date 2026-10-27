@@ -468,7 +468,7 @@ export function bible_glyph_chapter_isa26() {
           "we",
           "in",
           "Your",
-          "presence,",
+          "$face,",
           "O",
           "$i_am.",
         ],
