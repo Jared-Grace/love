@@ -242,7 +242,7 @@ export function bible_glyph_chapter_ezk11() {
         verse_number: 8,
         words: [
           "You",
-          "fear",
+          "$fear+doing",
           "the",
           "$sword,",
           "so",
