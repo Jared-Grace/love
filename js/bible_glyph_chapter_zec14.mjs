@@ -478,7 +478,7 @@ export function bible_glyph_chapter_zec14() {
           "$hands_raised+proper_name",
           "will",
           "also",
-          "fight",
+          "$crossed_swords+doing",
           "at",
           "$city+peace,",
           "and",
