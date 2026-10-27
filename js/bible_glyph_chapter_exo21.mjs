@@ -1037,7 +1037,7 @@ export function bible_glyph_chapter_exo21() {
           "it",
           "was",
           "$lightbulb",
-          "that",
+          "$pointing",
           "the",
           "$ox",
           "had",
