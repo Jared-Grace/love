@@ -208,7 +208,7 @@ export function bible_glyph_chapter_dan09() {
           "belongs",
           "$ruler+thing,",
           "but",
-          "this",
+          "$flashlight",
           "$sun",
           "we",
           "are",
