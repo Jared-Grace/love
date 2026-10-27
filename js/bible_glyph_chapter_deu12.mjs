@@ -87,7 +87,7 @@ export function bible_glyph_chapter_deu12() {
           "down",
           "their",
           "$altar$s,",
-          "smash",
+          "$broken_chain",
           "their",
           "sacred",
           "pillars,",
