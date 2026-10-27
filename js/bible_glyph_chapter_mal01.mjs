@@ -193,7 +193,7 @@ export function bible_glyph_chapter_mal01() {
           "My",
           "$star?",
           "And",
-          "if",
+          "$traffic_light",
           "I",
           "am",
           "a",
