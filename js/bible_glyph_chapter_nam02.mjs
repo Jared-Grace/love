@@ -103,7 +103,7 @@ export function bible_glyph_chapter_nam02() {
           "the",
           "spears",
           "of",
-          "cypress",
+          "$tree+harp",
           "have",
           "been",
           "brandished.",
