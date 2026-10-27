@@ -956,7 +956,7 @@ export function bible_glyph_chapter_exo21() {
           "and",
           "an",
           "$ox",
-          "or",
+          "$shuffle",
           "a",
           "$donkey",
           "falls",
