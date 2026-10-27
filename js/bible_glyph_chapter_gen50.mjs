@@ -591,7 +591,7 @@ export function bible_glyph_chapter_gen50() {
           "a",
           "$sun",
           "like",
-          "this,",
+          "$flashlight,",
           "to",
           "preserve",
           "the",
