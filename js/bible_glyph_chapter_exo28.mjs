@@ -985,7 +985,7 @@ export function bible_glyph_chapter_exo28() {
           "the",
           "$sparkle+thing",
           "place",
-          "before",
+          "$face",
           "$i_am",
           "or",
           "exits,",
