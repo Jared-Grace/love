@@ -246,7 +246,7 @@ export function bible_glyph_chapter_ecc03() {
           "$face+sparkle",
           "in",
           "its",
-          "time.",
+          "$clock.",
           "He",
           "has",
           "also",
