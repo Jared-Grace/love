@@ -459,7 +459,7 @@ export function bible_glyph_chapter_deu12() {
           "$hammer+doing",
           "$all",
           "$back+flashlight",
-          "I",
+          "$me",
           "command",
           "you.",
         ],
