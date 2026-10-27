@@ -714,7 +714,7 @@ export function bible_glyph_chapter_exo13() {
           "$sun",
           "nor",
           "the",
-          "pillar",
+          "$candle",
           "of",
           "$fire",
           "by",
