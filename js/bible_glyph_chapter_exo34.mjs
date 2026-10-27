@@ -876,7 +876,7 @@ export function bible_glyph_chapter_exo34() {
           "in",
           "accordance",
           "with",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "I",
           "have",
