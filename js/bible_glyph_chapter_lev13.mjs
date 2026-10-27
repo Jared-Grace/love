@@ -263,7 +263,7 @@ export function bible_glyph_chapter_lev13() {
           "$garment",
           "and",
           "be",
-          "clean.",
+          "$soap+doing.",
         ],
       },
       {
