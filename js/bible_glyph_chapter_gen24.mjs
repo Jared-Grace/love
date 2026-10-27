@@ -144,7 +144,7 @@ export function bible_glyph_chapter_gen24() {
           "$walking",
           "me",
           "to",
-          "this",
+          "$flashlight",
           "$earth?",
           "Shall",
           "I",
