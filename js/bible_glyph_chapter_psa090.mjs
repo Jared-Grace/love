@@ -52,7 +52,7 @@ export function bible_glyph_chapter_psa090() {
           "$globe,",
           "from",
           "$hourglass",
-          "to",
+          "$finish",
           "$hourglass",
           "You",
           "are",
