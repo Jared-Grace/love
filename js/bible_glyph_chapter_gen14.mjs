@@ -696,7 +696,7 @@ export function bible_glyph_chapter_gen14() {
           "$proper_name$Eshcol",
           "and",
           "$proper_name$Mamre.",
-          "They",
+          "$pointing_back",
           "may",
           "$hand_receiving",
           "their",
