@@ -638,7 +638,7 @@ export function bible_glyph_chapter_exo37() {
           "$tree,",
           "a",
           "cubit",
-          "long",
+          "$up_down_arrow",
           "and",
           "a",
           "cubit",
