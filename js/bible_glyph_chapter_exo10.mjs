@@ -493,7 +493,7 @@ export function bible_glyph_chapter_exo10() {
           "By",
           "$morning",
           "the",
-          "east",
+          "$compass+right_arrow+thing",
           "$wind",
           "had",
           "brought",
