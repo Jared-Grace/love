@@ -362,7 +362,7 @@ export function bible_glyph_chapter_exo05() {
           "So",
           "the",
           "$family",
-          "scattered",
+          "$confetti_ball",
           "all",
           "over",
           "the",
