@@ -1622,7 +1622,7 @@ export function bible_glyph_chapter_deu04() {
           "$bridge+thing",
           "the",
           "$pointing_down+proper_name",
-          "facing",
+          "$vs_button",
           "Beth-peor,",
           "in",
           "the",
