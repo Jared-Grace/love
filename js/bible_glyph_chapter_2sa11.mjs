@@ -84,7 +84,7 @@ export function bible_glyph_chapter_2sa11() {
           "And",
           "from",
           "the",
-          "roof",
+          "$house+top",
           "he",
           "$eye",
           "a",
