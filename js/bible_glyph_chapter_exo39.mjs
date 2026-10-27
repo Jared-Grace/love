@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_exo39() {
           "and",
           "bases,",
           "the",
-          "curtain",
+          "$umbrella+door",
           "$gate",
           "of",
           "the",
