@@ -801,7 +801,7 @@ export function bible_glyph_chapter_exo03() {
           "her",
           "$house",
           "for",
-          "silver",
+          "$silver",
           "and",
           "gold",
           "$toolbox",
