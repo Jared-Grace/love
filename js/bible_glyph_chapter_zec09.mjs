@@ -285,7 +285,7 @@ export function bible_glyph_chapter_zec09() {
           "$woman",
           "of",
           "$city+peace!",
-          "See,",
+          "$exclamation,",
           "your",
           "$king",
           "$footprints",
