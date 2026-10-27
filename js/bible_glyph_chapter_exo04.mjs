@@ -786,7 +786,7 @@ export function bible_glyph_chapter_exo04() {
           "Zipporah",
           "$hand_receiving",
           "a",
-          "flint",
+          "$rock+kitchen_knife",
           "knife,",
           "cut",
           "off",
