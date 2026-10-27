@@ -257,7 +257,7 @@ export function bible_glyph_chapter_lev15() {
           "Whoever",
           "touches",
           "anything",
-          "that",
+          "$back+flashlight",
           "was",
           "under",
           "him",
