@@ -137,7 +137,7 @@ export function bible_glyph_chapter_neh08() {
         words: [
           "$proper_name$Ezra",
           "the",
-          "scribe",
+          "$abacus",
           "$person+round_pushpin",
           "on",
           "a",
