@@ -113,7 +113,7 @@ export function bible_glyph_chapter_2ch34() {
           "$snow_capped_mountain",
           "places,",
           "the",
-          "Asherah",
+          "$wood+imp",
           "poles,",
           "the",
           "carved",
