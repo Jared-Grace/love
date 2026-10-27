@@ -620,7 +620,7 @@ export function bible_glyph_chapter_job01() {
           "and",
           "shaved",
           "his",
-          "head.",
+          "$person_gesturing_ok.",
           "He",
           "fell",
           "to",
