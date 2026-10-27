@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_jer32() {
           "by",
           "pouring",
           "out",
-          "drink",
+          "$pouring_liquid+wine+thing",
           "offerings",
           "to",
           "other",
