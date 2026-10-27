@@ -548,7 +548,7 @@ export function bible_glyph_chapter_1sa17() {
           "$morning+doing",
           "in",
           "the",
-          "morning,",
+          "$morning,",
           "left",
           "the",
           "$sheep",
