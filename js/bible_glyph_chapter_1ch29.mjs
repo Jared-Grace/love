@@ -339,7 +339,7 @@ export function bible_glyph_chapter_1ch29() {
           "And",
           "the",
           "$family",
-          "rejoiced",
+          "$beaming+doing",
           "at",
           "the",
           "willing",
