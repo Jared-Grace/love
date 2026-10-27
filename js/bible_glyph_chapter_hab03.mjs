@@ -85,7 +85,7 @@ export function bible_glyph_chapter_hab03() {
           "$sky,",
           "and",
           "His",
-          "praise",
+          "$clapping_hands+thing",
           "filled",
           "the",
           "$earth.",
