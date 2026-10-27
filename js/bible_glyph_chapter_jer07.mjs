@@ -445,7 +445,7 @@ export function bible_glyph_chapter_jer07() {
           "I",
           "$throwing",
           "out",
-          "all",
+          "$all",
           "your",
           "$brother,",
           "all",
