@@ -648,7 +648,7 @@ export function bible_glyph_chapter_pro08() {
           "posts",
           "of",
           "my",
-          "doorway.",
+          "$door.",
         ],
       },
       {
