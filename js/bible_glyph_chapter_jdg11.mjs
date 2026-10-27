@@ -287,7 +287,7 @@ export function bible_glyph_chapter_jdg11() {
           "really",
           "be",
           "your",
-          "leader?",
+          "$person_gesturing_ok?",
         ],
       },
       {
