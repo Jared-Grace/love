@@ -575,7 +575,7 @@ export function bible_glyph_chapter_jer31() {
           "for",
           "your",
           "future,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "and",
