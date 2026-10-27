@@ -67,7 +67,7 @@ export function bible_glyph_chapter_pro03() {
           "around",
           "your",
           "neck,",
-          "write",
+          "$writing_hand",
           "them",
           "on",
           "the",
