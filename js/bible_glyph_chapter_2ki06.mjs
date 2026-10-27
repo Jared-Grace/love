@@ -230,7 +230,7 @@ export function bible_glyph_chapter_2ki06() {
           "be",
           "in",
           "such",
-          "and",
+          "$joker+shushing_face",
           "such",
           "a",
           "$place.",
