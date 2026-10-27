@@ -349,7 +349,7 @@ export function bible_glyph_chapter_lev22() {
       {
         verse_number: 12,
         words: [
-          "If",
+          "$pointing",
           "the",
           "$woman",
           "of",
