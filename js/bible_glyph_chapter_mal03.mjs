@@ -298,7 +298,7 @@ export function bible_glyph_chapter_mal03() {
           "But",
           "you",
           "$speech,",
-          "How",
+          "$flashlight+question",
           "do",
           "we",
           "rob",
