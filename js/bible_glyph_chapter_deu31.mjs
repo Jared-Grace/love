@@ -936,7 +936,7 @@ export function bible_glyph_chapter_deu31() {
         words: [
           "$hand_receiving",
           "this",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "$scroll",
