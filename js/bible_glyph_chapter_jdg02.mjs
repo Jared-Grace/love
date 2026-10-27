@@ -461,7 +461,7 @@ export function bible_glyph_chapter_jdg02() {
           "their",
           "enemies",
           "all",
-          "around,",
+          "$around,",
           "whom",
           "they",
           "were",
