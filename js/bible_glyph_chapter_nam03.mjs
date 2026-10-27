@@ -313,7 +313,7 @@ export function bible_glyph_chapter_nam03() {
           "are",
           "$fig",
           "trees",
-          "with",
+          "$linked_paperclips",
           "the",
           "first",
           "ripe",
