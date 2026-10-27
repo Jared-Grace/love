@@ -978,7 +978,7 @@ export function bible_glyph_chapter_lev04() {
           "just",
           "as",
           "the",
-          "fat",
+          "$bacon",
           "of",
           "the",
           "lamb",
