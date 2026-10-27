@@ -403,7 +403,7 @@ export function bible_glyph_chapter_zec14() {
           "which",
           "$i_am",
           "$fist+microbe",
-          "all",
+          "$all",
           "the",
           "$family",
           "who",
