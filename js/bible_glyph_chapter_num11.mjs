@@ -492,7 +492,7 @@ export function bible_glyph_chapter_num11() {
           "have",
           "them",
           "$person+round_pushpin+anchor+doing",
-          "there",
+          "$telescope",
           "with",
           "you.",
         ],
