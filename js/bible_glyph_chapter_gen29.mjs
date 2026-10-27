@@ -202,7 +202,7 @@ export function bible_glyph_chapter_gen29() {
           "$crowd+doing",
           "the",
           "livestock.",
-          "Water",
+          "$cup+hands_giving",
           "the",
           "$sheep",
           "and",
