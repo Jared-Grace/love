@@ -162,7 +162,7 @@ export function bible_glyph_chapter_isa07() {
           "$heart_organ",
           "over",
           "these",
-          "two",
+          "$two",
           "smoldering",
           "stubs",
           "of",
