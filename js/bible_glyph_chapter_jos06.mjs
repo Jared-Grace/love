@@ -827,7 +827,7 @@ export function bible_glyph_chapter_jos06() {
           "everything",
           "in",
           "it.",
-          "However,",
+          "$one+check,",
           "the",
           "silver",
           "and",
