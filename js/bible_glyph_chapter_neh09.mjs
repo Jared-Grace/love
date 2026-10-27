@@ -736,7 +736,7 @@ export function bible_glyph_chapter_neh09() {
         verse_number: 21,
         words: [
           "For",
-          "forty",
+          "$four+zero",
           "$year",
           "You",
           "sustained",
