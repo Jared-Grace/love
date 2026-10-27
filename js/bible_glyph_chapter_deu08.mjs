@@ -171,7 +171,7 @@ export function bible_glyph_chapter_deu08() {
           "in",
           "your",
           "$heart_organ",
-          "that",
+          "$pointing",
           "just",
           "as",
           "a",
