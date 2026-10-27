@@ -580,7 +580,7 @@ export function bible_glyph_chapter_exo28() {
           "of",
           "the",
           "twelve",
-          "tribes.",
+          "$wood.",
         ],
       },
       {
