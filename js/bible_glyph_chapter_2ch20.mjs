@@ -214,7 +214,7 @@ export function bible_glyph_chapter_2ch20() {
           "the",
           "inhabitants",
           "of",
-          "this",
+          "$flashlight",
           "$earth",
           "before",
           "Your",
