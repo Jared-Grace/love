@@ -343,7 +343,7 @@ export function bible_glyph_chapter_jdg11() {
           "And",
           "$unlocked+proper_name",
           "$mouth",
-          "all",
+          "$all",
           "his",
           "$speech",
           "in",
