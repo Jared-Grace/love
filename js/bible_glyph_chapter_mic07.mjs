@@ -571,7 +571,7 @@ export function bible_glyph_chapter_mic07() {
           "is",
           "a",
           "$heart_on_fire",
-          "like",
+          "$likeness",
           "You,",
           "who",
           "pardons",
