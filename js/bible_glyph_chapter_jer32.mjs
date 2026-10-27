@@ -1007,7 +1007,7 @@ export function bible_glyph_chapter_jer32() {
           "anger",
           "by",
           "burning",
-          "incense",
+          "$incense+doing",
           "on",
           "their",
           "rooftops",
