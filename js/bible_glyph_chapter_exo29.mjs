@@ -598,7 +598,7 @@ export function bible_glyph_chapter_exo29() {
           "anointing",
           "$lotion_bottle,",
           "and",
-          "sprinkle",
+          "$droplet+hand+doing",
           "it",
           "on",
           "$proper_name$Aaron",
