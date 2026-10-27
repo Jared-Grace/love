@@ -36,7 +36,7 @@ export function bible_glyph_chapter_gen31() {
           "he",
           "$hammer+doing",
           "$all",
-          "this",
+          "$flashlight",
           "$star.",
         ],
       },
