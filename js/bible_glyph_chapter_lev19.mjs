@@ -849,7 +849,7 @@ export function bible_glyph_chapter_lev19() {
           "$no_entry",
           "$curving_right+doing",
           "to",
-          "mediums",
+          "$ghost+person",
           "or",
           "spiritists.",
           "Do",
