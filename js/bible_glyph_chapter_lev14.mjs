@@ -279,7 +279,7 @@ export function bible_glyph_chapter_lev14() {
           "$hair.",
           "He",
           "must",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "his",
           "$garment",
           "and",
