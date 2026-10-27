@@ -491,7 +491,7 @@ export function bible_glyph_chapter_gen45() {
           "$hammer+doing",
           "as",
           "follows:",
-          "Load",
+          "$package+donkey+doing",
           "your",
           "animals",
           "and",
