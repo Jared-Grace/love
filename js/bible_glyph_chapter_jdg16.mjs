@@ -482,7 +482,7 @@ export function bible_glyph_chapter_jdg16() {
           "$person_gesturing_ok",
           "into",
           "the",
-          "web",
+          "$thread+straight_ruler",
           "of",
           "a",
           "loom",
