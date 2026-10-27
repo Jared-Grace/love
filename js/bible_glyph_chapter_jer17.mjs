@@ -580,7 +580,7 @@ export function bible_glyph_chapter_jer17() {
           "$thumbs_down",
           "with",
           "$two+multiply",
-          "destruction,",
+          "$broken_chain+heart_red,",
           "and",
           "shatter",
           "them.",
