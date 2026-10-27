@@ -23,7 +23,7 @@ export function bible_glyph_chapter_gen50() {
           "his",
           "$father's",
           "$face,",
-          "wept",
+          "$loudly_crying",
           "over",
           "him,",
           "and",
