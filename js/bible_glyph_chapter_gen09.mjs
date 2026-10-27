@@ -562,7 +562,7 @@ export function bible_glyph_chapter_gen09() {
           "to",
           "$sprout+down_arrow+doing",
           "a",
-          "vineyard.",
+          "$vineyard.",
         ],
       },
       {
