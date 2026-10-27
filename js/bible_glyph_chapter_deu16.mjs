@@ -230,7 +230,7 @@ export function bible_glyph_chapter_deu16() {
           "this",
           "in",
           "the",
-          "evening",
+          "$sunset",
           "as",
           "the",
           "sun",
