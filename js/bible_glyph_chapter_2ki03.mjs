@@ -568,7 +568,7 @@ export function bible_glyph_chapter_2ki03() {
           "will",
           "$no_entry",
           "$eye",
-          "rain,",
+          "$rain+water_wave,",
           "but",
           "the",
           "valley",
