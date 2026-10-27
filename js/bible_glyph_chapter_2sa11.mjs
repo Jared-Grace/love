@@ -675,7 +675,7 @@ export function bible_glyph_chapter_2sa11() {
           "from",
           "atop",
           "the",
-          "wall?",
+          "$brick+shield?",
         ],
       },
       {
