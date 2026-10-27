@@ -609,7 +609,7 @@ export function bible_glyph_chapter_jer18() {
           "to",
           "$turn_back",
           "Your",
-          "wrath",
+          "$angry_face",
           "from",
           "them.",
         ],
