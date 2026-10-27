@@ -461,7 +461,7 @@ export function bible_glyph_chapter_exo38() {
           "was",
           "embroidered",
           "with",
-          "blue,",
+          "$blue_circle,",
           "purple",
           "and",
           "scarlet",
