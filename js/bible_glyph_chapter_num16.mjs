@@ -605,7 +605,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 19,
         words: [
           "When",
-          "Korah",
+          "$hair+no_entry+proper_name",
           "had",
           "gathered",
           "his",
