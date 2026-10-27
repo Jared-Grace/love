@@ -1367,7 +1367,7 @@ export function bible_glyph_chapter_jdg06() {
           "the",
           "fleece",
           "be",
-          "dry,",
+          "$desert+sun,",
           "and",
           "the",
           "$earth",
