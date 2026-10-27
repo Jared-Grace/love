@@ -297,7 +297,7 @@ export function bible_glyph_chapter_amo05() {
           "$information",
           "you",
           "$foot+wheat+collision+doing",
-          "on",
+          "$pointing_up",
           "the",
           "poor",
           "and",
