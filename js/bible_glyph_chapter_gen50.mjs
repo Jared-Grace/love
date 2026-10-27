@@ -303,7 +303,7 @@ export function bible_glyph_chapter_gen50() {
           "$earth",
           "$eye",
           "the",
-          "mourning",
+          "$loudly_crying+coffin+thing",
           "at",
           "the",
           "threshing",
