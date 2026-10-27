@@ -280,7 +280,7 @@ export function bible_glyph_chapter_num25() {
           "$skull+doing",
           "in",
           "the",
-          "plague",
+          "$fist+microbe+thing",
           "numbered",
           "twenty",
           "four",
