@@ -1059,7 +1059,7 @@ export function bible_glyph_chapter_exo16() {
           "Then",
           "place",
           "it",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "to",
