@@ -597,7 +597,7 @@ export function bible_glyph_chapter_gen18() {
           "$proper_name$Gomorrah",
           "is",
           "great,",
-          "because",
+          "$pointing",
           "their",
           "$bow",
           "is",
