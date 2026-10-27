@@ -380,7 +380,7 @@ export function bible_glyph_chapter_deu12() {
           "And",
           "you",
           "shall",
-          "rejoice",
+          "$beaming+doing",
           "before",
           "the",
           "$i_am",
