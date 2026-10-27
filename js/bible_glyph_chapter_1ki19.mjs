@@ -259,7 +259,7 @@ export function bible_glyph_chapter_1ki19() {
           "$eating+thing,",
           "he",
           "$walking",
-          "forty",
+          "$four+zero",
           "$sun",
           "and",
           "forty",
