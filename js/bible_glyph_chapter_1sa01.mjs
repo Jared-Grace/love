@@ -430,7 +430,7 @@ export function bible_glyph_chapter_1sa01() {
           "will",
           "you",
           "be",
-          "drunk?",
+          "$woozy_face+doing?",
           "Put",
           "away",
           "your",
