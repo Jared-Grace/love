@@ -298,7 +298,7 @@ export function bible_glyph_chapter_pro03() {
           "She",
           "is",
           "more",
-          "precious",
+          "$gem_stone+describing",
           "than",
           "rubies;",
           "nothing",
