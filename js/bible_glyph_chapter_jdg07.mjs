@@ -460,7 +460,7 @@ export function bible_glyph_chapter_jdg07() {
           "as",
           "the",
           "$sea+brown_square",
-          "on",
+          "$pointing_up",
           "the",
           "seashore.",
         ],
