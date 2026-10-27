@@ -159,7 +159,7 @@ export function bible_glyph_chapter_exo34() {
           "a",
           "$cloud",
           "and",
-          "stood",
+          "$person+round_pushpin+anchor+doing",
           "with",
           "him",
           "there,",
