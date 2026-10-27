@@ -705,7 +705,7 @@ export function bible_glyph_chapter_num24() {
           "they",
           "will",
           "perish",
-          "forever.",
+          "$finish.",
         ],
       },
       {
