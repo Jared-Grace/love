@@ -30,7 +30,7 @@ export function bible_glyph_chapter_job38() {
         words: [
           "Who",
           "is",
-          "this",
+          "$flashlight",
           "who",
           "obscures",
           "My",
