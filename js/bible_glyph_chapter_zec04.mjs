@@ -243,7 +243,7 @@ export function bible_glyph_chapter_zec04() {
           "you",
           "will",
           "$lightbulb",
-          "that",
+          "$pointing",
           "the",
           "$i_am",
           "of",
