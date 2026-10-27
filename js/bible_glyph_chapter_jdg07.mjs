@@ -298,7 +298,7 @@ export function bible_glyph_chapter_jdg07() {
         words: [
           "So",
           "the",
-          "three",
+          "$three",
           "hundred",
           "$hand_receiving",
           "the",
