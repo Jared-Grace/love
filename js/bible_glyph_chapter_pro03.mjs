@@ -301,7 +301,7 @@ export function bible_glyph_chapter_pro03() {
           "$gem_stone+describing",
           "than",
           "rubies;",
-          "nothing",
+          "$all",
           "you",
           "desire",
           "compares",
