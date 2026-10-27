@@ -432,7 +432,7 @@ export function bible_glyph_chapter_jdg02() {
         words: [
           "Then",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "the",
           "$i_am",
