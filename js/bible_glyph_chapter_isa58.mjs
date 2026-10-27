@@ -494,7 +494,7 @@ export function bible_glyph_chapter_isa58() {
           "$sun,",
           "if",
           "you",
-          "call",
+          "$waving_hand",
           "the",
           "$sabbath",
           "a",
