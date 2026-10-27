@@ -983,7 +983,7 @@ export function bible_glyph_chapter_lev23() {
           "it",
           "continues",
           "for",
-          "seven",
+          "$seven",
           "$sun.",
         ],
       },
