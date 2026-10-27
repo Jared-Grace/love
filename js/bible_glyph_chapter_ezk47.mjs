@@ -775,7 +775,7 @@ export function bible_glyph_chapter_ezk47() {
           "be",
           "allotted",
           "an",
-          "inheritance",
+          "$inheritance",
           "among",
           "the",
           "tribes",
