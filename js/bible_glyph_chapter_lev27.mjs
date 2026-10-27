@@ -685,7 +685,7 @@ export function bible_glyph_chapter_lev27() {
           "he",
           "has",
           "purchased,",
-          "which",
+          "$back+flashlight",
           "is",
           "$no_entry",
           "a",
