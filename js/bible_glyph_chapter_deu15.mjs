@@ -700,7 +700,7 @@ export function bible_glyph_chapter_deu15() {
           "a",
           "defect,",
           "is",
-          "lame",
+          "$manual_wheelchair",
           "or",
           "blind,",
           "or",
