@@ -448,7 +448,7 @@ export function bible_glyph_chapter_nam01() {
           "fulfill",
           "your",
           "vows.",
-          "For",
+          "$pointing",
           "the",
           "wicked",
           "will",
