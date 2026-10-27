@@ -234,7 +234,7 @@ export function bible_glyph_chapter_nam03() {
           "were",
           "her",
           "boundless",
-          "strength;",
+          "$bone+might+thing;",
           "$proper_name$Put",
           "and",
           "$proper_name$Libya",
