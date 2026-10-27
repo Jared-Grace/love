@@ -737,7 +737,7 @@ export function bible_glyph_chapter_num13() {
           "$no_entry",
           "go",
           "up",
-          "against",
+          "$toward",
           "the",
           "$family,",
           "for",
