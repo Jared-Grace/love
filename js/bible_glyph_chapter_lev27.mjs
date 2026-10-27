@@ -638,7 +638,7 @@ export function bible_glyph_chapter_lev27() {
           "be",
           "redeemed",
           "any",
-          "longer.",
+          "$repeat.",
         ],
       },
       {
