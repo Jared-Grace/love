@@ -1009,7 +1009,7 @@ export function bible_glyph_chapter_exo09() {
           "the",
           "$city",
           "and",
-          "spread",
+          "$folding_hand_fan",
           "out",
           "his",
           "hands",
