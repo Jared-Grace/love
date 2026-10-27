@@ -793,7 +793,7 @@ export function bible_glyph_chapter_2sa12() {
           "I",
           "$turn_back",
           "him",
-          "again?",
+          "$repeat?",
           "I",
           "will",
           "$walking",
