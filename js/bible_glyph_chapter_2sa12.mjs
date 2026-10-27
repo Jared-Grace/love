@@ -238,7 +238,7 @@ export function bible_glyph_chapter_2sa12() {
           "over",
           "$wrestling+heart_on_fire,",
           "and",
-          "I",
+          "$me",
           "delivered",
           "you",
           "from",
