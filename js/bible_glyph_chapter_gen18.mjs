@@ -891,7 +891,7 @@ export function bible_glyph_chapter_gen18() {
           "$mouth",
           "further.",
           "Suppose",
-          "thirty",
+          "$three+zero",
           "are",
           "found",
           "$telescope.",
