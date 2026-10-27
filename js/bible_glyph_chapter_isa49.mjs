@@ -706,7 +706,7 @@ export function bible_glyph_chapter_isa49() {
           "me?",
           "I",
           "was",
-          "bereaved",
+          "$baby+no_entry+person",
           "and",
           "barren;",
           "I",
