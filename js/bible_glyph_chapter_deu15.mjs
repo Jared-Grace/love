@@ -547,7 +547,7 @@ export function bible_glyph_chapter_deu15() {
           "then",
           "$hand_receiving",
           "an",
-          "awl",
+          "$sewing_needle+ear",
           "and",
           "pierce",
           "it",
