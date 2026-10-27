@@ -42,8 +42,8 @@ export function bible_glyph_roots_split_families() {
       });
       throw new Error(json);
     }
-    let root = found[0];
-    return root;
+    let chosen = found[0];
+    return chosen;
   }
   ("ONLY A ROOT OF THE SAME LANGUAGE COUNTS AS ANOTHER ROOT DRAWING IT. A Hebrew verse seats only Hebrew roots, so a Greek root sharing a picture cannot be what a Hebrew page meant. Asked across both tables, the Hebrew word for word was refused its own picture, the voice, because a Greek root draws the voice too, and every speech mark it left behind stayed.");
   function drawn_elsewhere(glyph, sharers, own) {
