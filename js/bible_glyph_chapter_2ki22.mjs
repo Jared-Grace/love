@@ -623,7 +623,7 @@ export function bible_glyph_chapter_2ki22() {
           "$right_arrow+toward",
           "they",
           "might",
-          "provoke",
+          "$face_steam+right_anger_bubble",
           "Me",
           "to",
           "anger",
