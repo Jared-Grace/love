@@ -651,7 +651,7 @@ export function bible_glyph_chapter_pro01() {
           "to",
           "me",
           "will",
-          "dwell",
+          "$tent+doing",
           "in",
           "safety,",
           "secure",
