@@ -525,7 +525,7 @@ export function bible_glyph_chapter_jer23() {
           "$thumbs_down.",
           "They",
           "are",
-          "all",
+          "$all",
           "like",
           "$proper_name$Sodom",
           "to",
