@@ -312,7 +312,7 @@ export function bible_glyph_chapter_zec14() {
       {
         verse_number: 10,
         words: [
-          "All",
+          "$all",
           "the",
           "$earth",
           "will",
