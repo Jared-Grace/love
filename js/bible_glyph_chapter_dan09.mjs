@@ -935,7 +935,7 @@ export function bible_glyph_chapter_dan09() {
           "the",
           "sixty",
           "two",
-          "weeks",
+          "$seven+sun",
           "the",
           "$oil",
           "will",
