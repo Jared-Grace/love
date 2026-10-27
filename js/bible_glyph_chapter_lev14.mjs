@@ -793,7 +793,7 @@ export function bible_glyph_chapter_lev14() {
           "and",
           "two",
           "$dove+ring",
-          "or",
+          "$shuffle",
           "two",
           "$son",
           "of",
