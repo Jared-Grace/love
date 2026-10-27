@@ -412,7 +412,7 @@ export function bible_glyph_chapter_1sa16() {
           "the",
           "$i_am",
           "$speech,",
-          "Rise",
+          "$person+pointing_up",
           "and",
           "$oil+doing",
           "him,",
