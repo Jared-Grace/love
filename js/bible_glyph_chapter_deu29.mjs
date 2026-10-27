@@ -449,7 +449,7 @@ export function bible_glyph_chapter_deu29() {
           "of",
           "$clamp+proper_name",
           "and",
-          "how",
+          "$back+flashlight",
           "we",
           "passed",
           "through",
