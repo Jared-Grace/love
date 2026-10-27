@@ -362,7 +362,7 @@ export function bible_glyph_chapter_exo26() {
           "the",
           "$tent",
           "$link",
-          "hang",
+          "$veil+down_arrow+doing",
           "over",
           "the",
           "sides",
