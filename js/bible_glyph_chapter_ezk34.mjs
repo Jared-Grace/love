@@ -701,7 +701,7 @@ export function bible_glyph_chapter_ezk34() {
           "have",
           "scattered",
           "them",
-          "abroad,",
+          "$sun_behind_small_cloud,",
         ],
       },
       {
