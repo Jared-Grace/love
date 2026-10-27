@@ -76,7 +76,7 @@ export function bible_glyph_chapter_1ch29() {
           "$gold",
           "for",
           "the",
-          "gold",
+          "$gold",
           "articles,",
           "silver",
           "for",
