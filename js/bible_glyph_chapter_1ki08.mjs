@@ -450,7 +450,7 @@ export function bible_glyph_chapter_1ki08() {
           "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire,",
-          "who",
+          "$back+flashlight",
           "with",
           "His",
           "own",
