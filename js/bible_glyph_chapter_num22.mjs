@@ -193,7 +193,7 @@ export function bible_glyph_chapter_num22() {
           "they",
           "are",
           "too",
-          "mighty",
+          "$bone+describing",
           "for",
           "me.",
           "Perhaps",
