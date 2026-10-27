@@ -146,7 +146,7 @@ export function bible_glyph_chapter_lev02() {
           "prepared",
           "on",
           "a",
-          "griddle,",
+          "$cooking+bread,",
           "it",
           "must",
           "be",
