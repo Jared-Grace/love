@@ -889,7 +889,7 @@ export function bible_glyph_chapter_lev15() {
           "to",
           "$hand_receiving",
           "$two",
-          "turtledoves",
+          "$dove+ring",
           "or",
           "$two",
           "$son",
