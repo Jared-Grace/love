@@ -240,7 +240,7 @@ export function bible_glyph_chapter_1sa02() {
           "them",
           "He",
           "has",
-          "set",
+          "$palm_down+round_pushpin+doing",
           "the",
           "$globe.",
         ],
