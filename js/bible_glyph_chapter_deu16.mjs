@@ -470,7 +470,7 @@ export function bible_glyph_chapter_deu16() {
           "floor",
           "and",
           "your",
-          "winepress.",
+          "$grapes+foot.",
         ],
       },
       {
