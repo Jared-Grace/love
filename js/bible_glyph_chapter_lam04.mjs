@@ -347,7 +347,7 @@ export function bible_glyph_chapter_lam04() {
           "of",
           "the",
           "$globe,",
-          "that",
+          "$pointing",
           "an",
           "enemy",
           "or",
