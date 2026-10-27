@@ -82,7 +82,7 @@ export function bible_glyph_chapter_exo29() {
           "a",
           "$basket",
           "and",
-          "present",
+          "$magnet+doing",
           "them",
           "in",
           "the",
