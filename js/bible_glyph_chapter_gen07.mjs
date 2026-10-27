@@ -99,7 +99,7 @@ export function bible_glyph_chapter_gen07() {
           "$sprout+doing",
           "their",
           "offspring",
-          "on",
+          "$pointing_up",
           "the",
           "face",
           "of",
