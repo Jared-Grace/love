@@ -656,7 +656,7 @@ export function bible_glyph_chapter_deu05() {
           "blazing",
           "with",
           "$fire,",
-          "all",
+          "$all",
           "the",
           "heads",
           "of",
