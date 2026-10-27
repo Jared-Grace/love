@@ -394,7 +394,7 @@ export function bible_glyph_chapter_mal03() {
           "it",
           "will",
           "$no_entry",
-          "destroy",
+          "$collision",
           "the",
           "fruits",
           "of",
