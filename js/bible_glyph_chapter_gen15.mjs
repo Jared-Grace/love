@@ -357,7 +357,7 @@ export function bible_glyph_chapter_gen15() {
           "$seed",
           "will",
           "be",
-          "strangers",
+          "$foreigner",
           "in",
           "a",
           "$earth",
