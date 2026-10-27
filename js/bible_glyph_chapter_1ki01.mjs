@@ -170,7 +170,7 @@ export function bible_glyph_chapter_1ki01() {
           "$five+zero",
           "$man_beard",
           "to",
-          "run",
+          "$running",
           "ahead",
           "of",
           "him.",
