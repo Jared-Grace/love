@@ -348,7 +348,7 @@ export function bible_glyph_chapter_1ki20() {
           "and",
           "more",
           "also,",
-          "if",
+          "$traffic_light",
           "the",
           "dust",
           "of",
