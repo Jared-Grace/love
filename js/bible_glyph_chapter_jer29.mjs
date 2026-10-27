@@ -1084,7 +1084,7 @@ export function bible_glyph_chapter_jer29() {
           "$eye",
           "the",
           "$thumbs_up",
-          "that",
+          "$back+flashlight",
           "I",
           "will",
           "$hammer+doing",
