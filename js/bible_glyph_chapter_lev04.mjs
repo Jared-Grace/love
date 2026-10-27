@@ -124,7 +124,7 @@ export function bible_glyph_chapter_lev04() {
           "$priest",
           "is",
           "to",
-          "dip",
+          "$down_arrow+water+doing",
           "his",
           "finger",
           "in",
