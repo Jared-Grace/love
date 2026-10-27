@@ -697,7 +697,7 @@ export function bible_glyph_chapter_2ch34() {
           "$hands_giving",
           "me",
           "a",
-          "book.",
+          "$closed_book.",
           "And",
           "Shaphan",
           "read",
