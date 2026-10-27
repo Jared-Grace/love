@@ -412,7 +412,7 @@ export function bible_glyph_chapter_1sa01() {
           "$ear.",
           "So",
           "$pointing_up+proper_name",
-          "thought",
+          "$thinking+doing",
           "she",
           "was",
           "drunk",
