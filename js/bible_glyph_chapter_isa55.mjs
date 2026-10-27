@@ -230,7 +230,7 @@ export function bible_glyph_chapter_isa55() {
           "to",
           "our",
           "$heart_on_fire,",
-          "for",
+          "$pointing",
           "He",
           "will",
           "freely",
