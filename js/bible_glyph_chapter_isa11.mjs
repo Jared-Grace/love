@@ -278,7 +278,7 @@ export function bible_glyph_chapter_isa11() {
           "$no_entry",
           "harm",
           "$no_entry",
-          "destroy",
+          "$collision",
           "on",
           "all",
           "My",
