@@ -444,7 +444,7 @@ export function bible_glyph_chapter_exo18() {
           "What",
           "is",
           "this",
-          "that",
+          "$back+flashlight",
           "you",
           "are",
           "$hammer+doing",
