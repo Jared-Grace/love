@@ -957,7 +957,7 @@ export function bible_glyph_chapter_dan09() {
           "to",
           "$footprints",
           "will",
-          "destroy",
+          "$collision",
           "the",
           "$city",
           "and",
