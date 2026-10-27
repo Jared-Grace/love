@@ -1042,7 +1042,7 @@ export function bible_glyph_chapter_exo09() {
           "the",
           "$rain",
           "and",
-          "hail",
+          "$ice",
           "and",
           "$voice",
           "had",
