@@ -171,7 +171,7 @@ export function bible_glyph_chapter_jer07() {
           "$no_entry",
           "$walking",
           "after",
-          "other",
+          "$plus+one",
           "$moai",
           "to",
           "your",
