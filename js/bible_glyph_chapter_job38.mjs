@@ -509,7 +509,7 @@ export function bible_glyph_chapter_job38() {
         words: [
           "to",
           "bring",
-          "rain",
+          "$rain+doing",
           "on",
           "a",
           "barren",
