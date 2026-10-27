@@ -176,7 +176,7 @@ export function bible_glyph_chapter_pro02() {
           "equity,",
           "$all",
           "$thumbs_up",
-          "path.",
+          "$road+wheel.",
         ],
       },
       {
