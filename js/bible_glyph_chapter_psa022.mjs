@@ -567,7 +567,7 @@ export function bible_glyph_chapter_psa022() {
           "$eating",
           "and",
           "be",
-          "satisfied;",
+          "$eating+top;",
           "those",
           "who",
           "seek",
