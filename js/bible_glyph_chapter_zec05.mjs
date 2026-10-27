@@ -189,7 +189,7 @@ export function bible_glyph_chapter_zec05() {
           "$speech,",
           "$flashlight+question",
           "is",
-          "it?",
+          "$pointing_back?",
           "And",
           "he",
           "$speech,",
