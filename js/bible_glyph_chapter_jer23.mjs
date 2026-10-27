@@ -704,7 +704,7 @@ export function bible_glyph_chapter_jer23() {
         words: [
           "$exclamation,",
           "the",
-          "storm",
+          "$tornado",
           "of",
           "the",
           "$i_am",
