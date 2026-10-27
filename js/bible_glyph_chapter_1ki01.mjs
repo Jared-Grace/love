@@ -92,7 +92,7 @@ export function bible_glyph_chapter_1ki01() {
           "Then",
           "they",
           "searched",
-          "throughout",
+          "$all",
           "$wrestling+heart_on_fire",
           "for",
           "a",
