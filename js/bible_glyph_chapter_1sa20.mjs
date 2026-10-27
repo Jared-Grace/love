@@ -270,7 +270,7 @@ export function bible_glyph_chapter_1sa20() {
           "is",
           "safe.",
           "But",
-          "if",
+          "$traffic_light",
           "he",
           "is",
           "enraged,",
