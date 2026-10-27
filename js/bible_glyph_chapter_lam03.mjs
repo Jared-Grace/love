@@ -784,7 +784,7 @@ export function bible_glyph_chapter_lam03() {
           "Yourself",
           "with",
           "a",
-          "cloud",
+          "$cloud",
           "that",
           "no",
           "$hands_praying+thing",
