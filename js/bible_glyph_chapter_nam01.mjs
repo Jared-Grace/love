@@ -461,7 +461,7 @@ export function bible_glyph_chapter_nam01() {
           "will",
           "be",
           "utterly",
-          "cut",
+          "$scissors",
           "off.",
         ],
       },
