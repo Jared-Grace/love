@@ -315,7 +315,7 @@ export function bible_glyph_chapter_jer29() {
           "$speech:",
           "When",
           "$face_spiral",
-          "seventy",
+          "$seven+zero",
           "$year",
           "are",
           "complete,",
