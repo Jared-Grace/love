@@ -448,7 +448,7 @@ export function bible_glyph_chapter_pro04() {
           "health",
           "to",
           "the",
-          "whole",
+          "$all",
           "$meat.",
         ],
       },
