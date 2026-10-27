@@ -355,7 +355,7 @@ export function bible_glyph_chapter_lev02() {
           "of",
           "$grain_offering;",
           "to",
-          "each",
+          "$all",
           "of",
           "your",
           "offerings",
