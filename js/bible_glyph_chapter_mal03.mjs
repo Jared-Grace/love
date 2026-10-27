@@ -350,7 +350,7 @@ export function bible_glyph_chapter_mal03() {
           "in",
           "My",
           "$house.",
-          "Test",
+          "$microscope",
           "Me",
           "in",
           "this,",
