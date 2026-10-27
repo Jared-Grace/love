@@ -304,7 +304,7 @@ export function bible_glyph_chapter_isa49() {
           "$speech:",
           "In",
           "the",
-          "time",
+          "$clock",
           "of",
           "favor",
           "I",
