@@ -259,7 +259,7 @@ export function bible_glyph_chapter_num08() {
           "present",
           "the",
           "$handshake",
-          "before",
+          "$face",
           "$i_am",
           "as",
           "a",
