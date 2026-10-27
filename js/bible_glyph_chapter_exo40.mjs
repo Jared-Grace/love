@@ -407,7 +407,7 @@ export function bible_glyph_chapter_exo40() {
           "$hands_giving",
           "its",
           "bases,",
-          "positioned",
+          "$palm_down",
           "its",
           "frames,",
           "$hands_giving",
