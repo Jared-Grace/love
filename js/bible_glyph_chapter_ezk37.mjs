@@ -408,7 +408,7 @@ export function bible_glyph_chapter_ezk37() {
           "back",
           "to",
           "the",
-          "land",
+          "$brown_square",
           "of",
           "$wrestling+heart_on_fire.",
         ],
