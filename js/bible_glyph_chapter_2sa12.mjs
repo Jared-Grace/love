@@ -681,7 +681,7 @@ export function bible_glyph_chapter_2sa12() {
           "$bathtub+doing,",
           "anointed",
           "himself,",
-          "changed",
+          "$clockwise_arrows+doing",
           "his",
           "clothes,",
           "and",
