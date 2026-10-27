@@ -437,7 +437,7 @@ export function bible_glyph_chapter_hos02() {
           "Me",
           "she",
           "forgot,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
