@@ -215,7 +215,7 @@ export function bible_glyph_chapter_ezk01() {
           "wings",
           "$pointing_up",
           "their",
-          "four",
+          "$four",
           "sides",
           "they",
           "had",
