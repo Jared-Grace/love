@@ -766,7 +766,7 @@ export function bible_glyph_chapter_1sa01() {
           "an",
           "$bucket+input_numbers",
           "of",
-          "flour",
+          "$wheat+flour",
           "and",
           "a",
           "skin",
