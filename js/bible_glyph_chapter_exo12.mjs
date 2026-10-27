@@ -320,7 +320,7 @@ export function bible_glyph_chapter_exo12() {
           "$eating",
           "it",
           "in",
-          "haste.",
+          "$running+fast_forward.",
           "It",
           "is",
           "the",
