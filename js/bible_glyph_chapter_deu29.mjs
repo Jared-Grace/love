@@ -598,7 +598,7 @@ export function bible_glyph_chapter_deu29() {
           "to",
           "$sponge",
           "him.",
-          "Instead,",
+          "$pointing,",
           "$i_am",
           "anger",
           "and",
