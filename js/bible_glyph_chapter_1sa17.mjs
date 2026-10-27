@@ -215,7 +215,7 @@ export function bible_glyph_chapter_1sa17() {
           "array",
           "yourselves",
           "for",
-          "battle?",
+          "$crossed_swords?",
           "Am",
           "I",
           "$no_entry",
