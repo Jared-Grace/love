@@ -399,7 +399,7 @@ export function bible_glyph_chapter_deu05() {
           "$broom,",
           "nor",
           "your",
-          "ox",
+          "$ox",
           "or",
           "donkey",
           "or",
