@@ -706,7 +706,7 @@ export function bible_glyph_chapter_jer18() {
           "$all",
           "their",
           "$skull",
-          "plots",
+          "$person_tipping_hand",
           "against",
           "me.",
           "Do",
