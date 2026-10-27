@@ -1425,7 +1425,7 @@ export function bible_glyph_chapter_1sa20() {
           "$peace,",
           "for",
           "the",
-          "two",
+          "$two",
           "of",
           "us",
           "have",
