@@ -1264,7 +1264,7 @@ export function bible_glyph_chapter_deu28() {
           "have",
           "olive",
           "trees",
-          "throughout",
+          "$all",
           "your",
           "territory,",
           "but",
