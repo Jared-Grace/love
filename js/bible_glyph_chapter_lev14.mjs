@@ -799,7 +799,7 @@ export function bible_glyph_chapter_lev14() {
           "of",
           "the",
           "$dove,",
-          "whichever",
+          "$back+flashlight",
           "his",
           "$hand",
           "can",
