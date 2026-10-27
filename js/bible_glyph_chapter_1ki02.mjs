@@ -1341,7 +1341,7 @@ export function bible_glyph_chapter_1ki02() {
           "$bridge",
           "the",
           "$proper_name$Kidron",
-          "Valley,",
+          "$national_park,",
           "$lightbulb",
           "for",
           "certain",
