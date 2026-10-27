@@ -232,7 +232,7 @@ export function bible_glyph_chapter_zec14() {
           "unique",
           "$sun",
           "$lightbulb",
-          "only",
+          "$one",
           "to",
           "$i_am,",
           "$no_entry",
