@@ -508,7 +508,7 @@ export function bible_glyph_chapter_lev09() {
           "and",
           "the",
           "right",
-          "thigh",
+          "$leg",
           "he",
           "waved",
           "as",
