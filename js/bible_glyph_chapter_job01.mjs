@@ -54,7 +54,7 @@ export function bible_glyph_chapter_job01() {
           "$sheep,",
           "three",
           "thousand",
-          "camels,",
+          "$camel,",
           "five",
           "hundred",
           "yoke",
