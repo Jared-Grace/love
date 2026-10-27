@@ -144,7 +144,7 @@ export function bible_glyph_chapter_gen35() {
           "ears,",
           "and",
           "$hand+foot",
-          "buried",
+          "$pick+tray_in+doing",
           "them",
           "under",
           "the",
