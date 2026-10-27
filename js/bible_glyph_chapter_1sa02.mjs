@@ -204,7 +204,7 @@ export function bible_glyph_chapter_1sa02() {
           "poor",
           "from",
           "the",
-          "dust",
+          "$dust",
           "and",
           "lifts",
           "the",
