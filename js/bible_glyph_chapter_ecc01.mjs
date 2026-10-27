@@ -293,7 +293,7 @@ export function bible_glyph_chapter_ecc01() {
           "$back+flashlight",
           "is",
           "$hammer+doing",
-          "under",
+          "$down_arrow",
           "$sky.",
           "What",
           "a",
