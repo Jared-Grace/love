@@ -265,7 +265,7 @@ export function bible_glyph_chapter_isa61() {
           "$earth,",
           "and",
           "$hourglass",
-          "joy",
+          "$beaming",
           "will",
           "be",
           "theirs.",
