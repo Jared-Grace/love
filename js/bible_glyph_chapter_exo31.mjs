@@ -439,7 +439,7 @@ export function bible_glyph_chapter_exo31() {
           "of",
           "Israel",
           "$hourglass,",
-          "for",
+          "$pointing",
           "in",
           "six",
           "$sun",
