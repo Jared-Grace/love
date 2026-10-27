@@ -669,7 +669,7 @@ export function bible_glyph_chapter_lev22() {
           "or",
           "$broken_chain+thing",
           "or",
-          "maimed,",
+          "$kitchen_knife+leg,",
           "or",
           "anything",
           "with",
