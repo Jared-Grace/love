@@ -374,7 +374,7 @@ export function bible_glyph_chapter_job38() {
           "of",
           "$light?",
           "And",
-          "where",
+          "$question+round_pushpin",
           "does",
           "$darkness",
           "reside,",
