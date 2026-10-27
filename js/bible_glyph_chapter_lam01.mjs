@@ -290,7 +290,7 @@ export function bible_glyph_chapter_lam01() {
           "object",
           "of",
           "scorn.",
-          "All",
+          "$all",
           "who",
           "honored",
           "her",
