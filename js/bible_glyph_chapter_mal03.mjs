@@ -226,7 +226,7 @@ export function bible_glyph_chapter_mal03() {
           "do",
           "$no_entry",
           "$two+repeat+doing,",
-          "you,",
+          "$you,",
           "O",
           "$son",
           "of",
