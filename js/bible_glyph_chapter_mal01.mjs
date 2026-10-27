@@ -350,7 +350,7 @@ export function bible_glyph_chapter_mal01() {
           "of",
           "you",
           "would",
-          "shut",
+          "$locked+doing",
           "the",
           "temple",
           "doors,",
