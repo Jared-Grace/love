@@ -249,7 +249,7 @@ export function bible_glyph_chapter_num06() {
           "defiles",
           "his",
           "consecrated",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "hair,",
           "he",
