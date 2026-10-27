@@ -1170,7 +1170,7 @@ export function bible_glyph_chapter_jer31() {
           "For",
           "I",
           "will",
-          "forgive",
+          "$sponge",
           "their",
           "iniquities",
           "and",
