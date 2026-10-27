@@ -159,7 +159,7 @@ export function bible_glyph_chapter_gen08() {
         verse_number: 6,
         words: [
           "After",
-          "forty",
+          "$four+zero",
           "$sun",
           "$proper_name$Noah",
           "opened",
