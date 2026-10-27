@@ -767,7 +767,7 @@ export function bible_glyph_chapter_exo22() {
           "you",
           "take",
           "the",
-          "cloak",
+          "$dress",
           "of",
           "your",
           "neighbour",
