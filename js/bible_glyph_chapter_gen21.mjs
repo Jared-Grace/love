@@ -256,7 +256,7 @@ export function bible_glyph_chapter_gen21() {
           "$speech",
           "$thumbs_down+doing",
           "$father+map",
-          "greatly",
+          "$double_exclamation",
           "because",
           "it",
           "concerned",
