@@ -684,7 +684,7 @@ export function bible_glyph_chapter_1sa01() {
           "him",
           "to",
           "$eye",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "and",
