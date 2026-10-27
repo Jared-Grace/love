@@ -260,7 +260,7 @@ export function bible_glyph_chapter_nam03() {
           "were",
           "dashed",
           "to",
-          "pieces",
+          "$collision+down_arrow+doing",
           "at",
           "the",
           "head",
