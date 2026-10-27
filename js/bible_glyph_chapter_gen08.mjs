@@ -331,7 +331,7 @@ export function bible_glyph_chapter_gen08() {
           "And",
           "Noah",
           "waited",
-          "seven",
+          "$seven",
           "more",
           "$sun",
           "and",
