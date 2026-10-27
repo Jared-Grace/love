@@ -286,7 +286,7 @@ export function bible_glyph_chapter_num14() {
           "Do",
           "$no_entry",
           "be",
-          "afraid",
+          "$fear+doing",
           "of",
           "them.",
         ],
