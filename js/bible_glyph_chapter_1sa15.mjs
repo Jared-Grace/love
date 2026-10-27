@@ -328,7 +328,7 @@ export function bible_glyph_chapter_1sa15() {
           "the",
           "$i_am",
           "$link",
-          "to",
+          "$toward",
           "$ear+heart_on_fire,",
           "$speech,",
         ],
