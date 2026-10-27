@@ -373,7 +373,7 @@ export function bible_glyph_chapter_isa49() {
           "find",
           "pasture",
           "on",
-          "every",
+          "$all",
           "barren",
           "hill.",
         ],
