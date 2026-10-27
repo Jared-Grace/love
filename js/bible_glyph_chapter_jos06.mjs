@@ -76,7 +76,7 @@ export function bible_glyph_chapter_jos06() {
           "the",
           "men",
           "of",
-          "war,",
+          "$crossed_swords,",
           "circling",
           "the",
           "$city",
