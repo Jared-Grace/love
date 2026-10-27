@@ -321,7 +321,7 @@ export function bible_glyph_chapter_lev19() {
           "a",
           "hired",
           "hand",
-          "until",
+          "$finish",
           "morning.",
         ],
       },
