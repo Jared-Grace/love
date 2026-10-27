@@ -400,7 +400,7 @@ export function bible_glyph_chapter_num35() {
           "the",
           "$pointing_down+proper_name",
           "and",
-          "three",
+          "$three",
           "$city",
           "to",
           "$hands_giving",
