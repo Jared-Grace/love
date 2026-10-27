@@ -394,7 +394,7 @@ export function bible_glyph_chapter_isa06() {
           "it",
           "will",
           "be",
-          "burned",
+          "$fire+wood",
           "$turn_back.",
           "As",
           "the",
