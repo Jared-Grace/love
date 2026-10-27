@@ -927,7 +927,7 @@ export function bible_glyph_chapter_1ki18() {
           "$finish",
           "the",
           "$blood",
-          "gushed",
+          "$jar+down_arrow+doing",
           "over",
           "them.",
         ],
