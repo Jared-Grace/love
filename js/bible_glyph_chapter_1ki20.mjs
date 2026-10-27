@@ -241,7 +241,7 @@ export function bible_glyph_chapter_1ki20() {
           "$silver",
           "and",
           "my",
-          "gold,",
+          "$gold,",
           "I",
           "did",
           "$no_entry",
