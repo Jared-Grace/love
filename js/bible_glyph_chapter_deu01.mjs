@@ -1158,7 +1158,7 @@ export function bible_glyph_chapter_deu01() {
           "$speech",
           "would",
           "become",
-          "captives",
+          "$pirate_flag+thing",
           "-",
           "your",
           "$son$s",
