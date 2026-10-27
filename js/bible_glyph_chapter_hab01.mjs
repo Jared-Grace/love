@@ -122,7 +122,7 @@ export function bible_glyph_chapter_hab01() {
           "$map",
           "and",
           "observe",
-          "-",
+          "$confounded_face+doing",
           "be",
           "utterly",
           "astounded!",
