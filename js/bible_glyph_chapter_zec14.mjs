@@ -589,7 +589,7 @@ export function bible_glyph_chapter_zec14() {
           "Hosts,",
           "then",
           "the",
-          "rain",
+          "$rain+water_wave",
           "will",
           "$no_entry",
           "fall",
