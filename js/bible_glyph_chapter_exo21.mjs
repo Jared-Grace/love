@@ -903,7 +903,7 @@ export function bible_glyph_chapter_exo21() {
       {
         verse_number: 32,
         words: [
-          "If",
+          "$traffic_light",
           "the",
           "$ox",
           "gores",
