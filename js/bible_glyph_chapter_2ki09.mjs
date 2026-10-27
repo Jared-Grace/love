@@ -648,7 +648,7 @@ export function bible_glyph_chapter_2ki09() {
           "$walking",
           "off",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "$proper_name$Jehu",
           "and",
           "$speech,",
