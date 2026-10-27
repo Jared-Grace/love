@@ -324,7 +324,7 @@ export function bible_glyph_chapter_gen13() {
           "out",
           "toward",
           "the",
-          "east.",
+          "$compass+right_arrow.",
           "And",
           "they",
           "parted,",
