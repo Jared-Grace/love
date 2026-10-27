@@ -436,7 +436,7 @@ export function bible_glyph_chapter_num11() {
           "me",
           "right",
           "now,",
-          "if",
+          "$traffic_light",
           "I",
           "have",
           "found",
