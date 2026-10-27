@@ -1300,7 +1300,7 @@ export function bible_glyph_chapter_num16() {
           "$curving_right+doing",
           "$toward",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting,",
           "and",
