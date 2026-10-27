@@ -535,7 +535,7 @@ export function bible_glyph_chapter_gen39() {
           "left",
           "his",
           "cloak",
-          "beside",
+          "$children_crossing",
           "me",
           "and",
           "ran",
