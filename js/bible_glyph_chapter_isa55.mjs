@@ -294,7 +294,7 @@ export function bible_glyph_chapter_isa55() {
           "as",
           "$rain+water_wave",
           "and",
-          "snow",
+          "$snow",
           "$walking+pointing_down",
           "$tray_out",
           "the",
