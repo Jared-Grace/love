@@ -1214,7 +1214,7 @@ export function bible_glyph_chapter_num16() {
           "who",
           "is",
           "an",
-          "outsider,",
+          "$alien,",
           "who",
           "is",
           "$no_entry",
