@@ -120,7 +120,7 @@ export function bible_glyph_chapter_isa55() {
       {
         verse_number: 4,
         words: [
-          "Behold,",
+          "$exclamation,",
           "I",
           "have",
           "$hands_giving",
