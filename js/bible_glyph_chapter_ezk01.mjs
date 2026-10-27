@@ -715,7 +715,7 @@ export function bible_glyph_chapter_ezk01() {
           "with",
           "their",
           "wings",
-          "lowered.",
+          "$palm_down+doing.",
         ],
       },
       {
