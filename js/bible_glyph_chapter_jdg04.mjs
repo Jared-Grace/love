@@ -77,7 +77,7 @@ export function bible_glyph_chapter_jdg04() {
           "Jabin",
           "had",
           "$nine",
-          "hundred",
+          "$input_numbers+all",
           "chariots",
           "of",
           "iron,",
