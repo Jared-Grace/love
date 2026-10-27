@@ -724,7 +724,7 @@ export function bible_glyph_chapter_exo32() {
           "$hammer+doing",
           "to",
           "you,",
-          "that",
+          "$pointing",
           "you",
           "have",
           "$footprints",
