@@ -50,7 +50,7 @@ export function bible_glyph_chapter_gen37() {
           "tending",
           "the",
           "$sheep",
-          "with",
+          "$safety_pin",
           "his",
           "$brother,",
           "the",
