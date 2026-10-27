@@ -191,7 +191,7 @@ export function bible_glyph_chapter_jdg16() {
           "overpower",
           "him",
           "to",
-          "tie",
+          "$knot",
           "him",
           "up",
           "and",
