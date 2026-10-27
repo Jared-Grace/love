@@ -70,7 +70,7 @@ export function bible_glyph_chapter_ezk03() {
           "$person,",
           "eat",
           "and",
-          "fill",
+          "$battery",
           "your",
           "stomach",
           "with",
