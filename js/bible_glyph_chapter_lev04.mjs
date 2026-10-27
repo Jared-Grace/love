@@ -306,7 +306,7 @@ export function bible_glyph_chapter_lev04() {
           "he",
           "must",
           "take",
-          "all",
+          "$all",
           "the",
           "rest",
           "of",
