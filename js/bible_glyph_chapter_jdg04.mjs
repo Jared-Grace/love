@@ -415,7 +415,7 @@ export function bible_glyph_chapter_jdg04() {
           "$toward",
           "$proper_name$Barak,",
           "Arise!",
-          "For",
+          "$pointing",
           "this",
           "is",
           "the",
