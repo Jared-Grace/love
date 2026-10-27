@@ -303,7 +303,7 @@ export function bible_glyph_chapter_gen07() {
           "of",
           "the",
           "great",
-          "deep",
+          "$sea+down_arrow",
           "burst",
           "forth,",
           "and",
