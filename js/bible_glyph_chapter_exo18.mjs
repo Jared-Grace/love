@@ -689,7 +689,7 @@ export function bible_glyph_chapter_exo18() {
           "you,",
           "but",
           "all",
-          "minor",
+          "$pinching_hand",
           "cases",
           "they",
           "can",
