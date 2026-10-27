@@ -264,7 +264,7 @@ export function bible_glyph_chapter_num12() {
           "suddenly",
           "$proper_name$Miriam",
           "became",
-          "leprous,",
+          "$microbe+describing,",
           "as",
           "white",
           "as",
