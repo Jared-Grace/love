@@ -471,7 +471,7 @@ export function bible_glyph_chapter_deu07() {
           "$sheep,",
           "in",
           "the",
-          "land",
+          "$brown_square",
           "He",
           "swore",
           "to",
