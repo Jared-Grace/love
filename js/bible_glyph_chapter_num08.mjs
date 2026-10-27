@@ -40,7 +40,7 @@ export function bible_glyph_chapter_num08() {
           "the",
           "area",
           "in",
-          "front",
+          "$vs_button",
           "of",
           "the",
           "lampstand.",
