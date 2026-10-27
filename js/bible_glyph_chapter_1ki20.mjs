@@ -1039,7 +1039,7 @@ export function bible_glyph_chapter_1ki20() {
           "$input_numbers+all",
           "$ten+all",
           "Aramean",
-          "foot",
+          "$foot+doer",
           "soldiers",
           "in",
           "one",
