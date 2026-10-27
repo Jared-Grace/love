@@ -115,7 +115,7 @@ export function bible_glyph_chapter_1sa07() {
           "the",
           "$proper_name$Ashtoreths,",
           "and",
-          "prepare",
+          "$pin+doing",
           "your",
           "$heart_organ",
           "for",
