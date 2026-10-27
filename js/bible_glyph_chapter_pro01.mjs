@@ -179,7 +179,7 @@ export function bible_glyph_chapter_pro01() {
           "My",
           "$son,",
           "$traffic_light",
-          "sinners",
+          "$bow+doer",
           "$fishing_pole+doing",
           "you,",
           "$no_entry",
