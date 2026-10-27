@@ -397,7 +397,7 @@ export function bible_glyph_chapter_exo12() {
           "over",
           "you.",
           "$no_entry",
-          "plague",
+          "$fist+microbe+thing",
           "will",
           "fall",
           "on",
