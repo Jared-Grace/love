@@ -347,7 +347,7 @@ export function bible_glyph_chapter_exo36() {
           "$hammer+doing",
           "$curly_loop",
           "of",
-          "blue",
+          "$blue_circle",
           "on",
           "the",
           "edge",
