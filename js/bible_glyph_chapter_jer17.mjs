@@ -500,7 +500,7 @@ export function bible_glyph_chapter_jer17() {
           "have",
           "I",
           "$no_entry",
-          "desired",
+          "$heart_eyes+hand_receiving+doing",
           "the",
           "$sun",
           "of",
