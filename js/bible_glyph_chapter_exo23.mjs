@@ -904,7 +904,7 @@ export function bible_glyph_chapter_exo23() {
           "from",
           "the",
           "$wilderness",
-          "to",
+          "$finish",
           "the",
           "River.",
           "For",
