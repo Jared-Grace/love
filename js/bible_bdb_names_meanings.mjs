@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { http_get_large } from "./http_get_large.mjs";
 import { bible_bdb_openscriptures_url } from "./bible_bdb_openscriptures_url.mjs";
@@ -9,13 +10,11 @@ export async function bible_bdb_names_meanings() {
   ("AN EMPTY LIST IS AN ANSWER, NOT A FAILURE. This layout of the lexicon is an outline, and for most names it carries the headword and who the person was with no meaning at all - about one name in four has one. A name with nothing here was not given a meaning by this source, which says nothing about whether it has one.");
   ("ONLY A BRACKET HOLDING A MEANING IS TAKEN. Brackets in an entry also hold cross-references and readings of other words; the lexicon marks a meaning with its own tag, so a bracket is kept exactly when that tag is inside it. The abbreviation י׳, which is how the lexicon writes Yahweh, is left as written rather than spelled out, so what is kept is the source's own words with the markup taken off.");
   ("Two files are joined because neither alone answers. The lexicon is keyed by its own entry codes and never names a Strong's number; the index names both, and also says which entries are proper names. One entry can serve several numbers - Joshua and Jeshua are one entry - so each number is given the entry's meaning.");
-  let index_buffer = await http_get_large(
-    bible_bdb_openscriptures_url("LexicalIndex.xml"),
-  );
+  let url = bible_bdb_openscriptures_url("LexicalIndex.xml");
+  let index_buffer = await http_get_large(url);
   let index_text = buffer_text_to(index_buffer);
-  let lexicon_buffer = await http_get_large(
-    bible_bdb_openscriptures_url("BrownDriverBriggs.xml"),
-  );
+  let url2 = bible_bdb_openscriptures_url("BrownDriverBriggs.xml");
+  let lexicon_buffer = await http_get_large(url2);
   let lexicon_text = buffer_text_to(lexicon_buffer);
   let entries = {};
   for (let m of lexicon_text.matchAll(
@@ -33,7 +32,8 @@ export async function bible_bdb_names_meanings() {
       let meanings = [];
       for (let p of head.matchAll(/\(([^()]*)\)/g)) {
         let inside = p[1];
-        if (!inside.includes("<def>")) {
+        let b = inside.includes("<def>");
+        if (not(b)) {
           continue;
         }
         let plain = inside
