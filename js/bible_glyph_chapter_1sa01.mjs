@@ -231,7 +231,7 @@ export function bible_glyph_chapter_1sa01() {
           "to",
           "her,",
           "$proper_name$Hannah,",
-          "why",
+          "$flashlight+question",
           "are",
           "you",
           "crying?",
