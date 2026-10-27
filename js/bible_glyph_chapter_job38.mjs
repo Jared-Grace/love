@@ -111,7 +111,7 @@ export function bible_glyph_chapter_job38() {
           "were",
           "its",
           "foundations",
-          "set,",
+          "$down_arrow+sea+doing,",
           "or",
           "who",
           "laid",
