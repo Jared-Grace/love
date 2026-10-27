@@ -709,7 +709,7 @@ export function bible_glyph_chapter_exo36() {
           "$two",
           "$down_arrow",
           "each",
-          "frame.",
+          "$skateboard.",
         ],
       },
       {
