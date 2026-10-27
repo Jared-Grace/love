@@ -367,7 +367,7 @@ export function bible_glyph_chapter_exo25() {
           "and",
           "a",
           "$divide",
-          "long",
+          "$up_down_arrow",
           "and",
           "a",
           "cubit",
