@@ -281,7 +281,7 @@ export function bible_glyph_chapter_hos02() {
           "will",
           "$turn_back",
           "My",
-          "grain",
+          "$wheat+barley",
           "in",
           "its",
           "time",
