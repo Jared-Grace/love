@@ -1078,7 +1078,7 @@ export function bible_glyph_chapter_1ki18() {
           "$kitchen_knife+meat+doing",
           "up",
           "the",
-          "bull,",
+          "$bull,",
           "and",
           "placed",
           "it",
