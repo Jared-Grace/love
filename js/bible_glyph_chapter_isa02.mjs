@@ -617,7 +617,7 @@ export function bible_glyph_chapter_isa02() {
           "what",
           "$thinking+doing",
           "is",
-          "he?",
+          "$pointing_back?",
         ],
       },
     ],
