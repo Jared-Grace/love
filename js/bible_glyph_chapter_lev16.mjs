@@ -56,7 +56,7 @@ export function bible_glyph_chapter_lev16() {
           "$no_entry",
           "to",
           "$footprints",
-          "freely",
+          "$all",
           "into",
           "the",
           "$sparkle+thing",
