@@ -117,7 +117,7 @@ export function bible_glyph_chapter_gen11() {
           "not",
           "be",
           "scattered",
-          "over",
+          "$pointing_up",
           "the",
           "face",
           "of",
