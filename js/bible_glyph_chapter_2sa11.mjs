@@ -89,7 +89,7 @@ export function bible_glyph_chapter_2sa11() {
           "$eye",
           "a",
           "$woman",
-          "bathing,",
+          "$bathtub+doing,",
           "and",
           "the",
           "$woman",
