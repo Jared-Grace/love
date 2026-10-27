@@ -884,7 +884,7 @@ export function bible_glyph_chapter_deu32() {
           "of",
           "$proper_name$Gomorrah.",
           "Their",
-          "grapes",
+          "$grapes",
           "are",
           "poisonous;",
           "their",
