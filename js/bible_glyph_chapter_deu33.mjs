@@ -111,7 +111,7 @@ export function bible_glyph_chapter_deu33() {
           "$hand_receiving+brown_square+thing",
           "of",
           "the",
-          "assembly",
+          "$church+thing",
           "of",
           "$hand+foot.",
         ],
