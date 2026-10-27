@@ -615,7 +615,7 @@ export function bible_glyph_chapter_gen06() {
         verse_number: 22,
         words: [
           "So",
-          "Noah",
+          "$seat+proper_name",
           "$hammer+doing",
           "everything",
           "precisely",
