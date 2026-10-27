@@ -530,7 +530,7 @@ export function bible_glyph_chapter_jos01() {
           "on",
           "the",
           "east",
-          "side",
+          "$bridge+thing",
           "of",
           "the",
           "$pointing_down+proper_name.",
