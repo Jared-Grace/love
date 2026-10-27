@@ -487,7 +487,7 @@ export function bible_glyph_chapter_gen13() {
           "in",
           "its",
           "breadth,",
-          "for",
+          "$pointing",
           "I",
           "will",
           "$hands_giving",
