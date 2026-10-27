@@ -448,7 +448,7 @@ export function bible_glyph_chapter_lev16() {
           "the",
           "$bull",
           "and",
-          "sprinkle",
+          "$droplet+hand+doing",
           "it",
           "with",
           "his",
