@@ -282,7 +282,7 @@ export function bible_glyph_chapter_num13() {
           "$earth.",
           "And",
           "$fishing_pole+proper_name",
-          "gave",
+          "$waving_hand",
           "to",
           "$rescue+proper_name",
           "$son",
