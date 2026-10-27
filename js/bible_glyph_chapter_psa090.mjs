@@ -130,7 +130,7 @@ export function bible_glyph_chapter_psa090() {
           "it",
           "springs",
           "up",
-          "new,",
+          "$clockwise_arrows+doing,",
           "but",
           "by",
           "evening",
