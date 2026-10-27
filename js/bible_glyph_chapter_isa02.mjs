@@ -404,7 +404,7 @@ export function bible_glyph_chapter_isa02() {
           "up,",
           "and",
           "$pointing_up",
-          "all",
+          "$all",
           "the",
           "oaks",
           "of",
