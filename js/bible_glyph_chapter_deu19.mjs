@@ -571,7 +571,7 @@ export function bible_glyph_chapter_deu19() {
           "$priest$s",
           "and",
           "judges",
-          "who",
+          "$back+flashlight",
           "are",
           "in",
           "office",
