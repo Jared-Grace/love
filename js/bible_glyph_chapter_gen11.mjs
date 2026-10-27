@@ -293,7 +293,7 @@ export function bible_glyph_chapter_gen11() {
           "years",
           "$next_track",
           "the",
-          "flood,",
+          "$water_wave+earth,",
           "he",
           "became",
           "the",
