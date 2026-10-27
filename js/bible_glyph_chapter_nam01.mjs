@@ -303,7 +303,7 @@ export function bible_glyph_chapter_nam01() {
           "plotter",
           "of",
           "$thumbs_down",
-          "against",
+          "$pointing_up",
           "the",
           "$i_am,",
           "a",
