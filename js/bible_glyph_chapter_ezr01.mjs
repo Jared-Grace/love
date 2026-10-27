@@ -104,7 +104,7 @@ export function bible_glyph_chapter_ezr01() {
       {
         verse_number: 3,
         words: [
-          "Whoever",
+          "$person+question",
           "among",
           "you",
           "belongs",
