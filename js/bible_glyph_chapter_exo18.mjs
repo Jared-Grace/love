@@ -443,7 +443,7 @@ export function bible_glyph_chapter_exo18() {
           "$speech,",
           "$flashlight+question",
           "is",
-          "this",
+          "$flashlight",
           "$back+flashlight",
           "you",
           "are",
