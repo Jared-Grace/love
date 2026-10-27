@@ -932,7 +932,7 @@ export function bible_glyph_chapter_gen37() {
           "is",
           "your",
           "$son",
-          "robe",
+          "$dress+thread",
           "or",
           "$no_entry.",
         ],
