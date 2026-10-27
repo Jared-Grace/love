@@ -43,7 +43,7 @@ export function bible_glyph_chapter_exo05() {
           "may",
           "hold",
           "a",
-          "feast",
+          "$party_popper+doing",
           "to",
           "Me",
           "in",
