@@ -273,7 +273,7 @@ export function bible_glyph_chapter_nam01() {
           "entangled",
           "as",
           "with",
-          "thorns",
+          "$pot_of_food",
           "and",
           "consumed",
           "like",
