@@ -47,7 +47,7 @@ export function bible_glyph_chapter_job42() {
           "who",
           "conceals",
           "My",
-          "counsel",
+          "$person_tipping_hand",
           "without",
           "knowledge?",
           "Surely",
