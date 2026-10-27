@@ -674,7 +674,7 @@ export function bible_glyph_chapter_jos24() {
           "You",
           "are",
           "$no_entry",
-          "able",
+          "$might+doing",
           "to",
           "$kneeling+doing",
           "the",
