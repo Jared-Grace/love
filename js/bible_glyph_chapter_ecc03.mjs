@@ -144,7 +144,7 @@ export function bible_glyph_chapter_ecc03() {
           "as",
           "lost,",
           "a",
-          "time",
+          "$clock",
           "to",
           "keep",
           "and",
