@@ -194,7 +194,7 @@ export function bible_glyph_chapter_deu04() {
           "$hammer+doing",
           "them",
           "$guard,",
-          "for",
+          "$pointing",
           "this",
           "will",
           "show",
