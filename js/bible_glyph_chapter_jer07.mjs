@@ -29,7 +29,7 @@ export function bible_glyph_chapter_jer07() {
       {
         verse_number: 2,
         words: [
-          "Stand",
+          "$person+round_pushpin",
           "in",
           "the",
           "$gate",
