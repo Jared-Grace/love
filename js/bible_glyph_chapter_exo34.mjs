@@ -820,7 +820,7 @@ export function bible_glyph_chapter_exo34() {
           "from",
           "the",
           "Passover",
-          "Feast",
+          "$party_popper",
           "remain",
           "until",
           "$morning.",
