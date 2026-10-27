@@ -42,7 +42,7 @@ export function bible_glyph_chapter_jdg02() {
           "into",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "had",
           "promised",
