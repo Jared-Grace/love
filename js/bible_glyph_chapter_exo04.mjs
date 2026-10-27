@@ -826,7 +826,7 @@ export function bible_glyph_chapter_exo04() {
           "When",
           "she",
           "$speech",
-          '"bridegroom',
+          '"$man_in_tuxedo',
           "of",
           '$blood,"',
           "she",
