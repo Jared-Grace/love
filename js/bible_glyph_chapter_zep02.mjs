@@ -99,7 +99,7 @@ export function bible_glyph_chapter_zep02() {
       {
         verse_number: 4,
         words: [
-          "For",
+          "$pointing",
           "$proper_name$Gaza",
           "will",
           "be",
