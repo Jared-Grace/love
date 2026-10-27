@@ -144,7 +144,7 @@ export function bible_glyph_chapter_lev03() {
           "Aaron",
           "are",
           "to",
-          "burn",
+          "$incense+doing",
           "it",
           "$altar",
           "atop",
