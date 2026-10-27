@@ -448,7 +448,7 @@ export function bible_glyph_chapter_num22() {
           "princes",
           "of",
           "$father+proper_name",
-          "arose",
+          "$person+pointing_up",
           "and",
           "$footprints",
           "to",
