@@ -345,7 +345,7 @@ export function bible_glyph_chapter_deu33() {
           "$speech,",
           "May",
           "the",
-          "beloved",
+          "$two_hearts+describing",
           "of",
           "$i_am",
           "rest",
