@@ -1144,7 +1144,7 @@ export function bible_glyph_chapter_deu32() {
           "make",
           "My",
           "arrows",
-          "drunk",
+          "$woozy_face+doing",
           "with",
           "$blood,",
           "while",
