@@ -1087,7 +1087,7 @@ export function bible_glyph_chapter_deu12() {
           "you",
           "$hammer+doing",
           "$all",
-          "I",
+          "$me",
           "command",
           "you;",
           "do",
