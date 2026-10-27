@@ -84,7 +84,7 @@ export function bible_glyph_chapter_jos07() {
           "$house+thumbs_down+hole+proper_name",
           "to",
           "the",
-          "east",
+          "$compass+right_arrow",
           "of",
           "Bethel,",
           "and",
