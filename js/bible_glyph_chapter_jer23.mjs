@@ -272,7 +272,7 @@ export function bible_glyph_chapter_jer23() {
       {
         verse_number: 8,
         words: [
-          "Instead",
+          "$pointing",
           "they",
           "will",
           "say,",
