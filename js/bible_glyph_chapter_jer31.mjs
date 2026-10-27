@@ -725,7 +725,7 @@ export function bible_glyph_chapter_jer31() {
           "$wrestling+heart_on_fire,",
           "$turn_back",
           "$toward",
-          "these",
+          "$flashlight+flashlight",
           "$city",
           "of",
           "yours.",
