@@ -104,7 +104,7 @@ export function bible_glyph_chapter_est04() {
           "and",
           "lamented,",
           "and",
-          "many",
+          "$multiply",
           "$bed+arrow_both_ways+doing",
           "in",
           "$sackcloth",
