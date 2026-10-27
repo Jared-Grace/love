@@ -30,7 +30,7 @@ export function bible_glyph_chapter_gen08() {
           "him",
           "in",
           "the",
-          "ark.",
+          "$package.",
           "And",
           "$heart_on_fire",
           "sent",
