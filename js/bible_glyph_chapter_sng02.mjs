@@ -397,7 +397,7 @@ export function bible_glyph_chapter_sng02() {
           "Before",
           "the",
           "$sun",
-          "breaks",
+          "$face_exhaling+wind+doing",
           "and",
           "the",
           "shadows",
