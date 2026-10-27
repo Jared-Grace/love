@@ -525,7 +525,7 @@ export function bible_glyph_chapter_gen21() {
           "the",
           "boy",
           "a",
-          "drink.",
+          "$cup+hands_giving.",
         ],
       },
       {
