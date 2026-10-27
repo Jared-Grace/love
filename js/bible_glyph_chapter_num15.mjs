@@ -597,7 +597,7 @@ export function bible_glyph_chapter_num15() {
       {
         verse_number: 23,
         words: [
-          "all",
+          "$all",
           "that",
           "$i_am",
           "has",
