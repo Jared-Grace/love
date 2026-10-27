@@ -860,7 +860,7 @@ export function bible_glyph_chapter_2ki17() {
           "they",
           "did",
           "$no_entry",
-          "worship",
+          "$fear+doing",
           "the",
           "$i_am,",
           "so",
