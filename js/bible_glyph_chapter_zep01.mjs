@@ -67,7 +67,7 @@ export function bible_glyph_chapter_zep01() {
           "of",
           "the",
           "earth,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
