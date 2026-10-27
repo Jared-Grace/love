@@ -410,7 +410,7 @@ export function bible_glyph_chapter_zep02() {
           "$hand",
           "$pointing_up",
           "the",
-          "north",
+          "$compass+up_arrow",
           "and",
           "destroy",
           "$proper_name$Assyria;",
