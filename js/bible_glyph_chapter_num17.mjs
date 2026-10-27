@@ -189,7 +189,7 @@ export function bible_glyph_chapter_num17() {
         words: [
           "Then",
           "$fishing_pole+proper_name",
-          "placed",
+          "$seat+doing",
           "the",
           "staffs",
           "before",
