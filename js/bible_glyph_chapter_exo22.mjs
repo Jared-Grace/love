@@ -581,7 +581,7 @@ export function bible_glyph_chapter_exo22() {
           "$coin+ring+thing",
           "of",
           "a",
-          "virgin.",
+          "$girl+white_flower.",
         ],
       },
       {
