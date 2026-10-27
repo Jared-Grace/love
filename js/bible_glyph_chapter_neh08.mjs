@@ -533,7 +533,7 @@ export function bible_glyph_chapter_neh08() {
           "booths",
           "during",
           "the",
-          "feast",
+          "$party_popper",
           "of",
           "the",
           "seventh",
