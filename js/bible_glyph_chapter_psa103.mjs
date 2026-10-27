@@ -165,7 +165,7 @@ export function bible_glyph_chapter_psa103() {
           "He",
           "will",
           "$no_entry",
-          "always",
+          "$clock+trophy",
           "accuse",
           "us,",
           "$no_entry",
