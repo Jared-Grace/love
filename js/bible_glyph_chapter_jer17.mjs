@@ -579,7 +579,7 @@ export function bible_glyph_chapter_jer17() {
           "of",
           "$thumbs_down",
           "with",
-          "double",
+          "$two+multiply",
           "destruction,",
           "and",
           "shatter",
