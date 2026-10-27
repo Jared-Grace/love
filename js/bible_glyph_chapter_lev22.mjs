@@ -841,7 +841,7 @@ export function bible_glyph_chapter_lev22() {
           "a",
           "food",
           "offering",
-          "presented",
+          "$magnet+gift",
           "to",
           "$i_am.",
         ],
