@@ -960,7 +960,7 @@ export function bible_glyph_chapter_1ch29() {
           "that",
           "David",
           "$castle+doing",
-          "over",
+          "$pointing_up",
           "$wrestling+heart_on_fire",
           "were",
           "forty",
