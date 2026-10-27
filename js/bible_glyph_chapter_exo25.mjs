@@ -776,7 +776,7 @@ export function bible_glyph_chapter_exo25() {
           "of",
           "its",
           "sides,",
-          "three",
+          "$three",
           "branches",
           "of",
           "the",
