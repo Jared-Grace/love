@@ -112,7 +112,7 @@ export function bible_glyph_chapter_jdg07() {
           "$mountain",
           "$proper_name$Gilead.",
           "So",
-          "twenty",
+          "$two+zero",
           "two",
           "thousand",
           "$turn_back,",
