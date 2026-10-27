@@ -727,7 +727,7 @@ export function bible_glyph_chapter_exo07() {
           "and",
           "did",
           "$no_entry",
-          "take",
+          "$palm_down+round_pushpin+doing",
           "any",
           "of",
           "this",
