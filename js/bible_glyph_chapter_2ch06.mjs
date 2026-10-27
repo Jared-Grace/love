@@ -57,7 +57,7 @@ export function bible_glyph_chapter_2ch06() {
           "the",
           "$king",
           "turned",
-          "around",
+          "$around+doing",
           "and",
           "$speech+thumbs_up",
           "the",
