@@ -598,7 +598,7 @@ export function bible_glyph_chapter_2sa12() {
           "for",
           "they",
           "$speech,",
-          "Look,",
+          "$exclamation,",
           "while",
           "the",
           "$child",
