@@ -1474,7 +1474,7 @@ export function bible_glyph_chapter_1sa25() {
         verse_number: 42,
         words: [
           "So",
-          "Abigail",
+          "$father+woman_dancing+proper_name",
           "$fast_forward+doing",
           "and",
           "got",
