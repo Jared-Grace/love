@@ -462,7 +462,7 @@ export function bible_glyph_chapter_jos01() {
           "for",
           "battle",
           "to",
-          "cross",
+          "$bridge",
           "over",
           "ahead",
           "of",
