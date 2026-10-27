@@ -1432,7 +1432,7 @@ export function bible_glyph_chapter_2ki04() {
           "$hands_giving",
           "twenty",
           "loaves",
-          "before",
+          "$face",
           "a",
           "hundred",
           "$man_beard?",
