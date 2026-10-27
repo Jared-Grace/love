@@ -354,7 +354,7 @@ export function bible_glyph_chapter_mic07() {
           "be",
           "$foot+person+down_arrow+thing",
           "like",
-          "mud",
+          "$dust+droplet",
           "in",
           "the",
           "streets.",
