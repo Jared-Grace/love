@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_num15() {
           "to",
           "$stone",
           "him",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp.",
         ],
