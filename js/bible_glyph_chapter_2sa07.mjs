@@ -275,7 +275,7 @@ export function bible_glyph_chapter_2sa07() {
           "have",
           "$scissors",
           "off",
-          "all",
+          "$all",
           "your",
           "enemies",
           "from",
