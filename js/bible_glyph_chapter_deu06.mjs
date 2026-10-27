@@ -325,7 +325,7 @@ export function bible_glyph_chapter_deu06() {
           "$house",
           "$battery+describing",
           "of",
-          "every",
+          "$all",
           "good",
           "thing",
           "with",
