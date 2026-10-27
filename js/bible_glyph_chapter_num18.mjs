@@ -158,7 +158,7 @@ export function bible_glyph_chapter_num18() {
           "$tent,",
           "but",
           "$no_entry",
-          "outsider",
+          "$alien",
           "may",
           "come",
           "near",
