@@ -208,7 +208,7 @@ export function bible_glyph_chapter_lev15() {
           "with",
           "the",
           "discharge",
-          "spits",
+          "$mouth+droplet+doing",
           "on",
           "one",
           "who",
