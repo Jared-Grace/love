@@ -1226,7 +1226,7 @@ export function bible_glyph_chapter_2ch20() {
       {
         verse_number: 35,
         words: [
-          "Later,",
+          "$next_track,",
           "$i_am+scales",
           "$king",
           "of",
