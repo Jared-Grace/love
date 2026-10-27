@@ -397,7 +397,7 @@ export function bible_glyph_chapter_1sa24() {
           "I",
           "cut",
           "it",
-          "off,",
+          "$scissors,",
           "but",
           "I",
           "did",
