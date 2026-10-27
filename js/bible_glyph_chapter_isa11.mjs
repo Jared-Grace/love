@@ -24,7 +24,7 @@ export function bible_glyph_chapter_isa11() {
           "up",
           "from",
           "the",
-          "stump",
+          "$tree+axe",
           "of",
           "$proper_name$Jesse,",
           "and",
