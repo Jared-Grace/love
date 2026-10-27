@@ -157,7 +157,7 @@ export function bible_glyph_chapter_gen04() {
           "$speech",
           "$toward",
           "$proper_name$Cain,",
-          "Why",
+          "$flashlight+question",
           "are",
           "you",
           "angry,",
