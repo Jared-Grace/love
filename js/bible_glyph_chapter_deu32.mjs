@@ -787,7 +787,7 @@ export function bible_glyph_chapter_deu32() {
           "is",
           "a",
           "$map",
-          "devoid",
+          "$wilted_flower",
           "of",
           "counsel,",
           "with",
