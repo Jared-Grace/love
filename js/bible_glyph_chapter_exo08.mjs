@@ -747,7 +747,7 @@ export function bible_glyph_chapter_exo08() {
           "make",
           "a",
           "distinction",
-          "between",
+          "$brain+arrow_both_ways",
           "My",
           "$family",
           "and",
