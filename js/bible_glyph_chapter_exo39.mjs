@@ -262,7 +262,7 @@ export function bible_glyph_chapter_exo39() {
           "mounted",
           "on",
           "it",
-          "four",
+          "$four",
           "rows",
           "of",
           "$stone.",
