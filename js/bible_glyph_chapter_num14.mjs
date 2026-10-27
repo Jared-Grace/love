@@ -634,7 +634,7 @@ export function bible_glyph_chapter_num14() {
           "forgiven",
           "$family",
           "$finish",
-          "since",
+          "$round_pushpin+pointing_down",
           "they",
           "left",
           "$clamp+proper_name.",
