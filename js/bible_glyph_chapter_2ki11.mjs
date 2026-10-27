@@ -77,7 +77,7 @@ export function bible_glyph_chapter_2ki11() {
           "him",
           "and",
           "his",
-          "nurse",
+          "$breast_feeding+doing",
           "in",
           "a",
           "bedroom",
