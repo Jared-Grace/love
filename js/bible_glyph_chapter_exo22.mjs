@@ -558,7 +558,7 @@ export function bible_glyph_chapter_exo22() {
       {
         verse_number: 17,
         words: [
-          "If",
+          "$traffic_light",
           "her",
           "$father",
           "absolutely",
