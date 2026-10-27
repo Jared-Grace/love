@@ -653,7 +653,7 @@ export function bible_glyph_chapter_num15() {
           "$burnt_offering,",
           "a",
           "pleasing",
-          "aroma",
+          "$nose",
           "to",
           "$i_am,",
           "with",
