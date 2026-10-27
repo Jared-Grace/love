@@ -835,7 +835,7 @@ export function bible_glyph_chapter_1sa01() {
           "I",
           "$hands_praying",
           "for",
-          "this",
+          "$flashlight",
           "$child+flexed_biceps,",
           "and",
           "since",
