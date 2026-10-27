@@ -456,7 +456,7 @@ export function bible_glyph_chapter_lev17() {
           "$tray_out",
           "any",
           "$foreigner",
-          "living",
+          "$luggage",
           "among",
           "them,",
           "hunts",
