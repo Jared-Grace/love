@@ -75,7 +75,7 @@ export function bible_glyph_chapter_isa61() {
           "of",
           "our",
           "$heart_on_fire",
-          "vengeance,",
+          "$sword+turn_back+thing,",
           "to",
           "comfort",
           "all",
