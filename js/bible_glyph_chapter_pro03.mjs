@@ -19,7 +19,7 @@ export function bible_glyph_chapter_pro03() {
           "$son,",
           "do",
           "$no_entry",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "my",
           "$scroll,",
           "but",
