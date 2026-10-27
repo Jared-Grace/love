@@ -370,7 +370,7 @@ export function bible_glyph_chapter_2ki10() {
         words: [
           "$lightbulb",
           "then",
-          "that",
+          "$pointing",
           "$no_entry",
           "one",
           "$speech",
