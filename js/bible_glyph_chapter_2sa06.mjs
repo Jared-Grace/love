@@ -23,7 +23,7 @@ export function bible_glyph_chapter_2sa06() {
           "men",
           "of",
           "$wrestling+heart_on_fire,",
-          "thirty",
+          "$three+zero",
           "thousand.",
         ],
       },
