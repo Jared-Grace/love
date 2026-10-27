@@ -80,7 +80,7 @@ export function bible_glyph_chapter_psa090() {
         words: [
           "For",
           "a",
-          "thousand",
+          "$ten+all",
           "$year",
           "in",
           "Your",
