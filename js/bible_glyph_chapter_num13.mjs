@@ -475,7 +475,7 @@ export function bible_glyph_chapter_num13() {
           "$footprints",
           "$finish",
           "the",
-          "Valley",
+          "$national_park",
           "of",
           "$proper_name$Eshcol,",
           "they",
