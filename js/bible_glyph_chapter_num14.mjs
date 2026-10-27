@@ -1265,7 +1265,7 @@ export function bible_glyph_chapter_num14() {
           "But",
           "$fishing_pole+proper_name",
           "$speech,",
-          "Why",
+          "$flashlight+question",
           "are",
           "you",
           "transgressing",
