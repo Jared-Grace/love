@@ -398,7 +398,7 @@ export function bible_glyph_chapter_jdg02() {
           "of",
           "the",
           "$family",
-          "around",
+          "$around",
           "them.",
           "They",
           "$bowing",
