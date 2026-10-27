@@ -223,7 +223,7 @@ export function bible_glyph_chapter_psa073() {
           "$person_in_lotus_position+describing",
           "as",
           "they",
-          "increase",
+          "$chart_increasing+up_arrow+doing",
           "their",
           "wealth.",
         ],
