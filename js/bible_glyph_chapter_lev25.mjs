@@ -1040,7 +1040,7 @@ export function bible_glyph_chapter_lev25() {
           "open",
           "$field",
           "of",
-          "pastureland",
+          "$herb+city",
           "around",
           "their",
           "$city",
