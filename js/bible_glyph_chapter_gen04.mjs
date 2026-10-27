@@ -132,7 +132,7 @@ export function bible_glyph_chapter_gen04() {
           "$proper_name$Cain",
           "and",
           "his",
-          "offering",
+          "$grain_offering",
           "He",
           "had",
           "$no_entry",
