@@ -1296,7 +1296,7 @@ export function bible_glyph_chapter_exo29() {
           "where",
           "I",
           "will",
-          "meet",
+          "$alarm_clock+doing",
           "you",
           "to",
           "$mouth",
