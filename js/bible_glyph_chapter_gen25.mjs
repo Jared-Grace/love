@@ -196,7 +196,7 @@ export function bible_glyph_chapter_gen25() {
           "$proper_name$Zohar",
           "the",
           "$proper_name$Hittite,",
-          "near",
+          "$pointing_up",
           "$proper_name$Mamre,",
         ],
       },
