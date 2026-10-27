@@ -225,7 +225,7 @@ export function bible_glyph_chapter_1sa08() {
           "out",
           "of",
           "$clamp+proper_name",
-          "until",
+          "$finish",
           "this",
           "$sun,",
           "forsaking",
