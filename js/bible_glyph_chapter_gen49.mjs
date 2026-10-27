@@ -242,7 +242,7 @@ export function bible_glyph_chapter_gen49() {
           "like",
           "a",
           "$lion+female_sign.",
-          "Who",
+          "$person+question",
           "dares",
           "to",
           "rouse",
