@@ -275,7 +275,7 @@ export function bible_glyph_chapter_isa64() {
           "$no_entry",
           "$reminder_ribbon",
           "our",
-          "iniquity",
+          "$cyclone",
           "$clock+all.",
           "Oh,",
           "look",
