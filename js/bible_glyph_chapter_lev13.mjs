@@ -984,7 +984,7 @@ export function bible_glyph_chapter_lev13() {
           "infection",
           "on",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "$shuffle",
           "$beard,",
         ],
