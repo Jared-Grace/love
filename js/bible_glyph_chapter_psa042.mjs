@@ -236,7 +236,7 @@ export function bible_glyph_chapter_psa042() {
           "at",
           "$night",
           "His",
-          "song",
+          "$song",
           "is",
           "with",
           "me,",
