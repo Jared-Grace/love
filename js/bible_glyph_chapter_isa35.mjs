@@ -142,7 +142,7 @@ export function bible_glyph_chapter_isa35() {
           "of",
           "the",
           "$deaf_person",
-          "unstopped.",
+          "$unlocked.",
         ],
       },
       {
