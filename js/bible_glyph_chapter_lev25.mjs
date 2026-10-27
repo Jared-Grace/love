@@ -653,7 +653,7 @@ export function bible_glyph_chapter_lev25() {
           "$fruit+basket,",
           "until",
           "the",
-          "harvest",
+          "$fruit+basket",
           "of",
           "the",
           "ninth",
