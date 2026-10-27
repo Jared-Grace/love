@@ -20,7 +20,7 @@ export function bible_glyph_chapter_1ki01() {
           "$king",
           "$two_hearts+proper_name",
           "was",
-          "old,",
+          "$old_man+doing,",
           "$footprints",
           "well",
           "into",
