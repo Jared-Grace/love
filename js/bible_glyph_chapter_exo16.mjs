@@ -131,7 +131,7 @@ export function bible_glyph_chapter_exo16() {
           "$speech",
           "to",
           "$fishing_pole+proper_name,",
-          "Behold,",
+          "$exclamation,",
           "I",
           "will",
           "rain",
