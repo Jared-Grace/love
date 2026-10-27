@@ -398,7 +398,7 @@ export function bible_glyph_chapter_jos02() {
       {
         verse_number: 12,
         words: [
-          "Now",
+          "$watch",
           "therefore,",
           "please",
           "swear",
