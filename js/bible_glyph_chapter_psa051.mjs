@@ -192,7 +192,7 @@ export function bible_glyph_chapter_psa051() {
           "Let",
           "me",
           "$ear",
-          "joy",
+          "$grinning_face",
           "and",
           "gladness;",
           "let",
