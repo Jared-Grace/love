@@ -768,7 +768,7 @@ export function bible_glyph_chapter_dan09() {
           "of",
           "the",
           "evening",
-          "sacrifice.",
+          "$grain_offering.",
         ],
       },
       {
