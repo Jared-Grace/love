@@ -370,7 +370,7 @@ export function bible_glyph_chapter_ezk34() {
           "his",
           "scattered",
           "$sheep,",
-          "so",
+          "$right_arrow",
           "I",
           "will",
           "seek",
