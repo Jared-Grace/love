@@ -77,7 +77,7 @@ export function bible_glyph_chapter_gen26() {
         words: [
           "$luggage",
           "in",
-          "this",
+          "$flashlight",
           "$earth",
           "and",
           "I",
