@@ -888,7 +888,7 @@ export function bible_glyph_chapter_2ki09() {
           "and",
           "he",
           "slumped",
-          "down",
+          "$leg+down_arrow+doing",
           "in",
           "his",
           "chariot.",
