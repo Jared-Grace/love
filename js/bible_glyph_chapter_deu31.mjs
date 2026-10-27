@@ -166,7 +166,7 @@ export function bible_glyph_chapter_deu31() {
         verse_number: 6,
         words: [
           "Be",
-          "strong",
+          "$might+up_arrow",
           "and",
           "courageous.",
           "$no_entry",
