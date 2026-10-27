@@ -328,7 +328,7 @@ export function bible_glyph_chapter_num09() {
           "unleavened",
           "bread",
           "and",
-          "bitter",
+          "$lemon+herb",
           "herbs.",
         ],
       },
