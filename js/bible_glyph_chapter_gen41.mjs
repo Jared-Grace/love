@@ -592,7 +592,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "In",
           "my",
-          "dream",
+          "$dream",
           "I",
           "also",
           "$eye",
