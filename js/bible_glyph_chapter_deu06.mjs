@@ -447,7 +447,7 @@ export function bible_glyph_chapter_deu06() {
           "$heart_on_fire.",
           "$no_entry+traffic_light",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "the",
           "$i_am",
