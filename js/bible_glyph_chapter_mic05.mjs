@@ -153,7 +153,7 @@ export function bible_glyph_chapter_mic05() {
           "$top+doing",
           "will",
           "extend",
-          "to",
+          "$finish",
           "the",
           "ends",
           "of",
