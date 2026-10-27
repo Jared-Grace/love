@@ -238,7 +238,7 @@ export function bible_glyph_chapter_ezr01() {
           "with",
           "articles",
           "of",
-          "silver",
+          "$silver",
           "and",
           "gold,",
           "with",
