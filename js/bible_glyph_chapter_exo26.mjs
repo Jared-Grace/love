@@ -93,7 +93,7 @@ export function bible_glyph_chapter_exo26() {
           "of",
           "$blue_circle",
           "material",
-          "on",
+          "$pointing_up",
           "the",
           "edge",
           "of",
