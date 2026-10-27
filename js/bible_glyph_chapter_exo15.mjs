@@ -104,7 +104,7 @@ export function bible_glyph_chapter_exo15() {
         verse_number: 4,
         words: [
           "$house+proper_name",
-          "chariots",
+          "$chariot",
           "and",
           "army",
           "He",
