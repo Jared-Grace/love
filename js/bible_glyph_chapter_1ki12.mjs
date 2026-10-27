@@ -947,7 +947,7 @@ export function bible_glyph_chapter_1ki12() {
           "$hammer+doing",
           "$two",
           "golden",
-          "calves",
+          "$calf",
           "and",
           "$speech",
           "to",
