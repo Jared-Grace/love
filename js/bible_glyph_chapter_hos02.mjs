@@ -496,7 +496,7 @@ export function bible_glyph_chapter_hos02() {
           "$sun",
           "of",
           "her",
-          "youth,",
+          "$child+flexed_biceps+thing,",
           "as",
           "in",
           "the",
