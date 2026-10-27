@@ -563,7 +563,7 @@ export function bible_glyph_chapter_deu16() {
       {
         verse_number: 16,
         words: [
-          "Three",
+          "$three",
           "times",
           "a",
           "$year",
