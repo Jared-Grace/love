@@ -653,7 +653,7 @@ export function bible_glyph_chapter_num24() {
           "$proper_name$Kain",
           "will",
           "be",
-          "destroyed",
+          "$fire+wood",
           "when",
           "$proper_name$Asshur",
           "takes",
