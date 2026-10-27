@@ -48,7 +48,7 @@ export function bible_glyph_chapter_gen42() {
           "that",
           "there",
           "is",
-          "grain",
+          "$wheat+coin",
           "in",
           "$clamp+proper_name.",
           "Go",
