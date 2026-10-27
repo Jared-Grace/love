@@ -1155,7 +1155,7 @@ export function bible_glyph_chapter_deu04() {
           "$sun",
           "$back+flashlight",
           "$heart_on_fire",
-          "created",
+          "$milky_way+doing",
           "$person",
           "on",
           "the",
