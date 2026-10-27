@@ -125,7 +125,7 @@ export function bible_glyph_chapter_num12() {
           "$candle",
           "of",
           "$cloud,",
-          "stood",
+          "$person+round_pushpin",
           "at",
           "the",
           "entrance",
