@@ -937,7 +937,7 @@ export function bible_glyph_chapter_deu04() {
           "you",
           "will",
           "quickly",
-          "perish",
+          "$wilted_flower",
           "from",
           "the",
           "$earth",
