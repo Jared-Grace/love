@@ -72,7 +72,7 @@ export function bible_glyph_chapter_num25() {
           "Peor,",
           "and",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "$i_am",
           "$angry_face+doing",
