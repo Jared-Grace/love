@@ -690,7 +690,7 @@ export function bible_glyph_chapter_1sa20() {
           "will",
           "shoot",
           "$three",
-          "arrows",
+          "$arrow",
           "to",
           "the",
           "side",
