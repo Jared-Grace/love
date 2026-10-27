@@ -525,7 +525,7 @@ export function bible_glyph_chapter_2sa07() {
           "will",
           "$anchor",
           "$hourglass",
-          "before",
+          "$face",
           "Me,",
           "and",
           "your",
