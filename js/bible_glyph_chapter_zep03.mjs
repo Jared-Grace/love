@@ -242,7 +242,7 @@ export function bible_glyph_chapter_zep03() {
           "My",
           "$pouting_face",
           "-",
-          "all",
+          "$all",
           "My",
           "burning",
           "anger.",
