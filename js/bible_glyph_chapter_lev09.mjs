@@ -63,7 +63,7 @@ export function bible_glyph_chapter_lev09() {
         words: [
           "Then",
           "$mouth",
-          "to",
+          "$toward",
           "$son",
           "of",
           "Israel",
