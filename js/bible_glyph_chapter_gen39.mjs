@@ -257,7 +257,7 @@ export function bible_glyph_chapter_gen39() {
           "he",
           "has",
           "$hands_giving",
-          "everything",
+          "$all",
           "he",
           "owns",
           "to",
