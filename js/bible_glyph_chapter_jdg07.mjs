@@ -558,7 +558,7 @@ export function bible_glyph_chapter_jdg07() {
         verse_number: 15,
         words: [
           "When",
-          "Gideon",
+          "$axe+proper_name",
           "$ear",
           "the",
           "dream",
