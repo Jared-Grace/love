@@ -252,7 +252,7 @@ export function bible_glyph_chapter_psa084() {
           "my",
           "$heart_on_fire",
           "than",
-          "dwell",
+          "$clockwise_arrows+house+doing",
           "in",
           "the",
           "tents",
