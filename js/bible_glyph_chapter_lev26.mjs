@@ -622,7 +622,7 @@ export function bible_glyph_chapter_lev26() {
           "toward",
           "Me",
           "in",
-          "hostility",
+          "$boxing_glove+footprints",
           "and",
           "are",
           "$no_entry",
