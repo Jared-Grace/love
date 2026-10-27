@@ -943,7 +943,7 @@ export function bible_glyph_chapter_deu28() {
           "a",
           "$woman,",
           "but",
-          "another",
+          "$plus+one",
           "$man_beard",
           "will",
           "violate",
