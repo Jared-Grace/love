@@ -351,7 +351,7 @@ export function bible_glyph_chapter_psa027() {
       {
         verse_number: 13,
         words: [
-          "Still",
+          "$crossed_fingers+no_entry",
           "I",
           "am",
           "$anchor",
