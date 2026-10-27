@@ -574,7 +574,7 @@ export function bible_glyph_chapter_gen18() {
           "$i_am",
           "may",
           "$footprints",
-          "upon",
+          "$pointing_up",
           "$father+map",
           "what",
           "He",
