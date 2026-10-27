@@ -691,7 +691,7 @@ export function bible_glyph_chapter_exo16() {
           "and",
           "when",
           "the",
-          "sun",
+          "$sun_with_face",
           "grew",
           "$hand+fire+doing,",
           "it",
