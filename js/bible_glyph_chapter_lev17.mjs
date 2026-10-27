@@ -102,7 +102,7 @@ export function bible_glyph_chapter_lev17() {
           "offering",
           "to",
           "$i_am",
-          "before",
+          "$face",
           "the",
           "tabernacle",
           "of",
