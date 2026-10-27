@@ -576,7 +576,7 @@ export function bible_glyph_chapter_exo21() {
         verse_number: 21,
         words: [
           "$check+exclamation,",
-          "if",
+          "$traffic_light",
           "the",
           "servant",
           "gets",
