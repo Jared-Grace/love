@@ -225,7 +225,7 @@ export function bible_glyph_chapter_isa55() {
           "He",
           "may",
           "have",
-          "compassion,",
+          "$hugging_face+doing,",
           "and",
           "to",
           "our",
