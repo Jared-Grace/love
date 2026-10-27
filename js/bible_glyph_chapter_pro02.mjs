@@ -297,7 +297,7 @@ export function bible_glyph_chapter_pro02() {
           "stranger",
           "with",
           "seductive",
-          "words,",
+          "$speech+thing,",
         ],
       },
       {
