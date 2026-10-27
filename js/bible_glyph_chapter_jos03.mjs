@@ -232,7 +232,7 @@ export function bible_glyph_chapter_jos03() {
           "they",
           "may",
           "$lightbulb",
-          "that",
+          "$pointing",
           "just",
           "as",
           "I",
