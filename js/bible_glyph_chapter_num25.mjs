@@ -484,7 +484,7 @@ export function bible_glyph_chapter_num25() {
           "they",
           "$clamp+doing",
           "you",
-          "deceitfully",
+          "$mouse_trap+thing",
           "when",
           "they",
           "seduced",
