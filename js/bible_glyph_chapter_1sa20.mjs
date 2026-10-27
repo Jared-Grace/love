@@ -1304,7 +1304,7 @@ export function bible_glyph_chapter_1sa20() {
           "haste,",
           "do",
           "$no_entry",
-          "delay.",
+          "$person+round_pushpin.",
           "So",
           "the",
           "boy",
