@@ -623,7 +623,7 @@ export function bible_glyph_chapter_exo07() {
           "$water",
           "of",
           "the",
-          "Nile",
+          "$crocodile",
           "$eyes",
           "of",
           "$house+proper_name",
