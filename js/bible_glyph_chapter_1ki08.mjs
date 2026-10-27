@@ -1445,7 +1445,7 @@ export function bible_glyph_chapter_1ki08() {
           "$footprints",
           "and",
           "$hands_praying",
-          "toward",
+          "$toward",
           "this",
           "$house,",
         ],
