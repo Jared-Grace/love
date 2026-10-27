@@ -350,7 +350,7 @@ export function bible_glyph_chapter_ezk37() {
           "$house",
           "of",
           "$wrestling+heart_on_fire.",
-          "Look,",
+          "$exclamation,",
           "$pointing_back",
           "are",
           "$speech,",
