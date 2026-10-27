@@ -741,7 +741,7 @@ export function bible_glyph_chapter_gen46() {
           "since",
           "you",
           "are",
-          "still",
+          "$repeat",
           "$sprout.",
         ],
       },
