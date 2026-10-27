@@ -686,7 +686,7 @@ export function bible_glyph_chapter_exo29() {
           "of",
           "$bread,",
           "$one",
-          "cake",
+          "$bagel",
           "of",
           "$bread",
           "made",
