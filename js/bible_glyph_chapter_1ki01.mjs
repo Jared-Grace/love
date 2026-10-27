@@ -819,7 +819,7 @@ export function bible_glyph_chapter_1ki01() {
           "he",
           "has",
           "$no_entry",
-          "invited",
+          "$waving_hand",
           "me,",
           "your",
           "$kneeling,",
