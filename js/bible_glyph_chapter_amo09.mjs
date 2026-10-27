@@ -486,7 +486,7 @@ export function bible_glyph_chapter_amo09() {
           "the",
           "treader",
           "of",
-          "grapes,",
+          "$grapes,",
           "the",
           "sower",
           "of",
