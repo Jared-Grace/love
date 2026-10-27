@@ -23,7 +23,7 @@ export function bible_glyph_chapter_psa103() {
           "my",
           "$person_other;",
           "and",
-          "all",
+          "$all",
           "that",
           "is",
           "within",
