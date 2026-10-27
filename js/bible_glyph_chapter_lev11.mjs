@@ -1176,7 +1176,7 @@ export function bible_glyph_chapter_lev11() {
           "and",
           "the",
           "clean,",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "$sprout",
           "that",
