@@ -663,7 +663,7 @@ export function bible_glyph_chapter_lev26() {
           "of",
           "your",
           "children,",
-          "destroy",
+          "$scissors",
           "your",
           "livestock",
           "and",
