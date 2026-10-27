@@ -325,7 +325,7 @@ export function bible_glyph_chapter_1sa01() {
           "$i_am",
           "of",
           "Hosts,",
-          "if",
+          "$traffic_light",
           "only",
           "You",
           "will",
