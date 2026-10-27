@@ -478,7 +478,7 @@ export function bible_glyph_chapter_zec12() {
         verse_number: 13,
         words: [
           "the",
-          "clan",
+          "$houses",
           "of",
           "the",
           "$house",
