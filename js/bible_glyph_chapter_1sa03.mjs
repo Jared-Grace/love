@@ -565,7 +565,7 @@ export function bible_glyph_chapter_1sa03() {
         words: [
           "And",
           "$ear+heart_on_fire",
-          "grew,",
+          "$top+doing,",
           "and",
           "the",
           "$i_am",
