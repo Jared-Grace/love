@@ -790,7 +790,7 @@ export function bible_glyph_chapter_1ki08() {
           "$mouth",
           "with",
           "Your",
-          "mouth",
+          "$face_with_open_mouth",
           "You",
           "have",
           "fulfilled",
