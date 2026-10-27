@@ -772,7 +772,7 @@ export function bible_glyph_chapter_exo26() {
           "$four",
           "$candle",
           "of",
-          "acacia",
+          "$tree+thorns",
           "wood",
           "overlaid",
           "with",
