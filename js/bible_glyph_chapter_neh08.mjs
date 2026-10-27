@@ -571,7 +571,7 @@ export function bible_glyph_chapter_neh08() {
           "olive,",
           "wild",
           "olive,",
-          "myrtle,",
+          "$herb+white_flower,",
           "palm,",
           "and",
           "other",
