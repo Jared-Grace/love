@@ -1310,7 +1310,7 @@ export function bible_glyph_chapter_jdg06() {
           "that",
           "is",
           "what",
-          "happened.",
+          "$link.",
           "When",
           "Gideon",
           "arose",
