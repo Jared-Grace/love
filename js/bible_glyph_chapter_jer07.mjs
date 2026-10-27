@@ -19,7 +19,7 @@ export function bible_glyph_chapter_jer07() {
           "$speech",
           "$back+flashlight",
           "$link",
-          "to",
+          "$toward",
           "$up_arrow+i_am",
           "from",
           "$i_am,",
