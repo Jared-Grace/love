@@ -27,7 +27,7 @@ export function bible_glyph_chapter_neh08() {
           "$face",
           "the",
           "$water",
-          "Gate,",
+          "$gate,",
           "and",
           "they",
           "$speech",
