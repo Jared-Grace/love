@@ -907,7 +907,7 @@ export function bible_glyph_chapter_lev22() {
           "any",
           "of",
           "it",
-          "until",
+          "$finish",
           "$morning.",
           "I",
           "am",
