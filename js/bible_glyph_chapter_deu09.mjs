@@ -656,7 +656,7 @@ export function bible_glyph_chapter_deu09() {
           "had",
           "done",
           "the",
-          "first",
+          "$first_place",
           "time.",
           "I",
           "ate",
