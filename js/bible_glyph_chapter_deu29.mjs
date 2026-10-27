@@ -138,7 +138,7 @@ export function bible_glyph_chapter_deu29() {
         verse_number: 5,
         words: [
           "For",
-          "forty",
+          "$four+zero",
           "$year",
           "I",
           "$walking",
