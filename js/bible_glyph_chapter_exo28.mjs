@@ -1052,7 +1052,7 @@ export function bible_glyph_chapter_exo28() {
           "will",
           "be",
           "worn",
-          "on",
+          "$pointing_up",
           "the",
           "forehead",
           "of",
