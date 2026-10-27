@@ -146,7 +146,7 @@ export function bible_glyph_chapter_exo13() {
           "shall",
           "$kneeling+doing",
           "this",
-          "service",
+          "$kneeling+thing",
           "in",
           "this",
           "month.",
