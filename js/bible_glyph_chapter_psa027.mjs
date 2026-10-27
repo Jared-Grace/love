@@ -184,7 +184,7 @@ export function bible_glyph_chapter_psa027() {
           "will",
           "be",
           "held",
-          "high",
+          "$up_arrow",
           "above",
           "my",
           "enemies",
