@@ -891,7 +891,7 @@ export function bible_glyph_chapter_2sa11() {
           "And",
           "when",
           "the",
-          "mourning",
+          "$loudly_crying+coffin+thing",
           "was",
           "over,",
           "$two_hearts+proper_name",
