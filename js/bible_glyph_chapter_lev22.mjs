@@ -902,7 +902,7 @@ export function bible_glyph_chapter_lev22() {
           "same",
           "$sun.",
           "$no_entry",
-          "leave",
+          "$takeout_box+doing",
           "$tray_out",
           "any",
           "of",
