@@ -325,7 +325,7 @@ export function bible_glyph_chapter_deu12() {
           "and",
           "you",
           "dwell",
-          "securely,",
+          "$anchor+thing,",
         ],
       },
       {
