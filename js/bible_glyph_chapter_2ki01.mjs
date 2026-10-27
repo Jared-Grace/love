@@ -173,7 +173,7 @@ export function bible_glyph_chapter_2ki01() {
           "$speech",
           "to",
           "them,",
-          "Why",
+          "$flashlight+question",
           "have",
           "you",
           "$turn_back?",
