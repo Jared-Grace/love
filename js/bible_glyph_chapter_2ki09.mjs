@@ -935,7 +935,7 @@ export function bible_glyph_chapter_2ki09() {
           "lifted",
           "up",
           "this",
-          "burden",
+          "$lifting+thing",
           "against",
           "him.",
         ],
