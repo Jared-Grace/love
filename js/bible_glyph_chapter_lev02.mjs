@@ -285,7 +285,7 @@ export function bible_glyph_chapter_lev02() {
           "$hammer+doing",
           "with",
           "leaven,",
-          "for",
+          "$pointing",
           "you",
           "are",
           "$no_entry",
