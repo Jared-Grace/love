@@ -898,7 +898,7 @@ export function bible_glyph_chapter_jos06() {
         words: [
           "At",
           "that",
-          "time",
+          "$clock",
           "$i_am+rescue",
           "invoked",
           "this",
