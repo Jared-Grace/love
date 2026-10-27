@@ -553,7 +553,7 @@ export function bible_glyph_chapter_ezk11() {
           "$speech:",
           "I",
           "will",
-          "gather",
+          "$tray_in+doing",
           "you",
           "$tray_out",
           "the",
