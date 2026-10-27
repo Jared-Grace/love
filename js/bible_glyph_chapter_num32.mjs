@@ -356,7 +356,7 @@ export function bible_glyph_chapter_num32() {
           "did",
           "follow",
           "$i_am",
-          "wholeheartedly.",
+          "$battery.",
         ],
       },
       {
