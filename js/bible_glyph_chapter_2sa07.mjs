@@ -618,7 +618,7 @@ export function bible_glyph_chapter_2sa07() {
           "Your",
           "$kneeling.",
           "Is",
-          "this",
+          "$flashlight",
           "Your",
           "$scroll",
           "with",
