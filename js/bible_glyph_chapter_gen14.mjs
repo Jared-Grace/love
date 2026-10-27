@@ -625,7 +625,7 @@ export function bible_glyph_chapter_gen14() {
           "raised",
           "my",
           "$hand",
-          "to",
+          "$toward",
           "$i_am,",
           "$heart_on_fire",
           "Most",
