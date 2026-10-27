@@ -211,7 +211,7 @@ export function bible_glyph_chapter_psa042() {
           "of",
           "Your",
           "waterfalls;",
-          "all",
+          "$all",
           "Your",
           "breakers",
           "and",
