@@ -159,7 +159,7 @@ export function bible_glyph_chapter_ezk03() {
           "$family",
           "of",
           "unfamiliar",
-          "speech",
+          "$kiss_mark",
           "and",
           "difficult",
           "language,",
