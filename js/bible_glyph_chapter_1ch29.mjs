@@ -908,7 +908,7 @@ export function bible_glyph_chapter_1ch29() {
         words: [
           "The",
           "$i_am",
-          "exalted",
+          "$top+doing",
           "$peace+proper_name",
           "highly",
           "in",
