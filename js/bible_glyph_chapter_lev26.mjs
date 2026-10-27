@@ -289,7 +289,7 @@ export function bible_glyph_chapter_lev26() {
           "be",
           "eating",
           "the",
-          "old",
+          "$hourglass_done+describing",
           "supply",
           "of",
           "grain",
