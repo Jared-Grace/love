@@ -933,7 +933,7 @@ export function bible_glyph_chapter_neh09() {
           "flung",
           "Your",
           "$scroll",
-          "behind",
+          "$next_track",
           "their",
           "backs.",
           "They",
