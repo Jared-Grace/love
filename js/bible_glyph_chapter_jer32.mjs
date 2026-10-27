@@ -1045,7 +1045,7 @@ export function bible_glyph_chapter_jer32() {
           "$eyes",
           "from",
           "their",
-          "youth;",
+          "$child+flexed_biceps+thing;",
           "indeed,",
           "they",
           "have",
