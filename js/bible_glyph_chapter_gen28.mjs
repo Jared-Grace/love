@@ -331,7 +331,7 @@ export function bible_glyph_chapter_gen28() {
           "he",
           "had",
           "a",
-          "dream",
+          "$dream+doing",
           "about",
           "a",
           "ladder",
