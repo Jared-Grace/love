@@ -221,7 +221,7 @@ export function bible_glyph_chapter_num11() {
           "in",
           "a",
           "cooking",
-          "pot",
+          "$pot_of_food+fire",
           "or",
           "$hammer+doing",
           "it",
