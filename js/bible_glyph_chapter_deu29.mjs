@@ -668,7 +668,7 @@ export function bible_glyph_chapter_deu29() {
         words: [
           "Then",
           "the",
-          "generation",
+          "$dna",
           "to",
           "come",
           "-",
