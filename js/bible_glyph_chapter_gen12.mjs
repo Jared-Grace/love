@@ -345,7 +345,7 @@ export function bible_glyph_chapter_gen12() {
           "$exclamation,",
           "I",
           "$lightbulb",
-          "that",
+          "$pointing",
           "you",
           "are",
           "a",
