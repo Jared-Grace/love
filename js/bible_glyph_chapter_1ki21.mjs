@@ -229,7 +229,7 @@ export function bible_glyph_chapter_1ki21() {
           "$hands_giving",
           "you",
           "another",
-          "vineyard",
+          "$vineyard",
           "in",
           "its",
           "place.",
