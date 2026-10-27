@@ -425,7 +425,7 @@ export function bible_glyph_chapter_lev02() {
           "$wheat+hammer",
           "and",
           "the",
-          "oil,",
+          "$lotion_bottle,",
           "together",
           "with",
           "all",
