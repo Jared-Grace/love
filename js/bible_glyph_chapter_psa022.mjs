@@ -176,7 +176,7 @@ export function bible_glyph_chapter_psa022() {
           "LORD",
           "rescue",
           "him,",
-          "since",
+          "$pointing",
           "He",
           "delights",
           "in",
