@@ -479,7 +479,7 @@ export function bible_glyph_chapter_gen42() {
           "will",
           "$sprout+doing,",
           "for",
-          "I",
+          "$me",
           "fear",
           "$heart_on_fire.",
         ],
