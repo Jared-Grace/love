@@ -552,7 +552,7 @@ export function bible_glyph_chapter_1ki21() {
           "when",
           "$proper_name$Ahab",
           "$ear",
-          "that",
+          "$pointing",
           "$proper_name$Naboth",
           "was",
           "$skull+doing,",
