@@ -481,7 +481,7 @@ export function bible_glyph_chapter_lam01() {
           "and",
           "$turn_back",
           "me",
-          "back.",
+          "$last_track.",
           "He",
           "$hands_giving",
           "me",
