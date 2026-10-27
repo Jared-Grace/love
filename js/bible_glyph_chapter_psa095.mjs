@@ -42,7 +42,7 @@ export function bible_glyph_chapter_psa095() {
           "us",
           "enter",
           "His",
-          "presence",
+          "$face",
           "with",
           "thanksgiving;",
           "let",
