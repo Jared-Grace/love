@@ -370,7 +370,7 @@ export function bible_glyph_chapter_1ki19() {
           "on",
           "the",
           "$mountain",
-          "before",
+          "$face",
           "the",
           "$i_am.",
           "Behold,",
