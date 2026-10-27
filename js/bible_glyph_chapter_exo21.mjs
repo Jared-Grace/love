@@ -219,7 +219,7 @@ export function bible_glyph_chapter_exo21() {
       {
         verse_number: 8,
         words: [
-          "If",
+          "$traffic_light",
           "she",
           "is",
           "$thumbs_down",
