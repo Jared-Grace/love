@@ -265,7 +265,7 @@ export function bible_glyph_chapter_isa56() {
           "will",
           "be",
           "accepted",
-          "on",
+          "$pointing_up",
           "My",
           "altar,",
           "for",
