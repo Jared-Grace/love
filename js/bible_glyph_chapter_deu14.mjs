@@ -222,7 +222,7 @@ export function bible_glyph_chapter_deu14() {
           "$no_entry",
           "chew",
           "the",
-          "cud.",
+          "$cow_face+clockwise_arrows+thing.",
           "It",
           "is",
           "unclean",
