@@ -107,7 +107,7 @@ export function bible_glyph_chapter_gen26() {
           "stand",
           "up",
           "the",
-          "oath",
+          "$raised_back_of_hand",
           "I",
           "swore",
           "to",
