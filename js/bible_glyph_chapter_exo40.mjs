@@ -101,7 +101,7 @@ export function bible_glyph_chapter_exo40() {
           "$gold",
           "$altar",
           "of",
-          "incense",
+          "$incense",
           "in",
           "front",
           "of",
