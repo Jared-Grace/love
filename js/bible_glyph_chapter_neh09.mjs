@@ -205,7 +205,7 @@ export function bible_glyph_chapter_neh09() {
           "with",
           "all",
           "their",
-          "host,",
+          "$military_helmet,",
           "the",
           "$earth",
           "and",
