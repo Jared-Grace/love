@@ -118,7 +118,7 @@ export function bible_glyph_chapter_dan09() {
           "$heart_on_fire",
           "and",
           "$hands_raised:",
-          "O",
+          "$pleading_face+exclamation",
           "$crown,",
           "the",
           "great",
