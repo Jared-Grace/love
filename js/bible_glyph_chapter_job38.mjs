@@ -209,7 +209,7 @@ export function bible_glyph_chapter_job38() {
           "$flashlight+round_pushpin",
           "your",
           "proud",
-          "waves",
+          "$stone+mountain",
           "must",
           "stop?",
         ],
