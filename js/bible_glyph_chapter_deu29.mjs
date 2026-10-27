@@ -747,7 +747,7 @@ export function bible_glyph_chapter_deu29() {
           "in",
           "His",
           "fierce",
-          "anger.",
+          "$nose+fire.",
         ],
       },
       {
