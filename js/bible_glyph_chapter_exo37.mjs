@@ -281,7 +281,7 @@ export function bible_glyph_chapter_exo37() {
           "$hammer+doing",
           "a",
           "$gold",
-          "molding",
+          "$crown+around",
           "around",
           "it.",
         ],
