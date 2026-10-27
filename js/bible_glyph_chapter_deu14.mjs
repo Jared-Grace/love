@@ -446,7 +446,7 @@ export function bible_glyph_chapter_deu14() {
           "You",
           "must",
           "$no_entry",
-          "cook",
+          "$pot_of_food+doing",
           "a",
           "young",
           "goat",
