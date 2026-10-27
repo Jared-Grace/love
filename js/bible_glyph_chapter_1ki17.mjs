@@ -445,7 +445,7 @@ export function bible_glyph_chapter_1ki17() {
           "$no_entry",
           "run",
           "dry,",
-          "until",
+          "$finish",
           "the",
           "$sun",
           "the",
