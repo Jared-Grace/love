@@ -639,7 +639,7 @@ export function bible_glyph_chapter_gen29() {
         words: [
           "When",
           "morning",
-          "came,",
+          "$link,",
           "there",
           "was",
           "$proper_name$Leah!",
