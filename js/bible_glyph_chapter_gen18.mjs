@@ -319,7 +319,7 @@ export function bible_glyph_chapter_gen18() {
           "to",
           "the",
           "$tent,",
-          "behind",
+          "$next_track",
           "him.",
         ],
       },
