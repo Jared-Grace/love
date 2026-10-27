@@ -1045,7 +1045,7 @@ export function bible_glyph_chapter_exo29() {
           "you",
           "are",
           "to",
-          "burn",
+          "$fire+doing",
           "up",
           "the",
           "remainder.",
