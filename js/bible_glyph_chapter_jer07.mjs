@@ -105,7 +105,7 @@ export function bible_glyph_chapter_jer07() {
           "$speech,",
           "$speech,",
           "The",
-          "temple",
+          "$classical_building",
           "of",
           "$i_am,",
           "the",
