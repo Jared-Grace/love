@@ -198,7 +198,7 @@ export function bible_glyph_chapter_exo21() {
           "if",
           "a",
           "$man_beard",
-          "sells",
+          "$coin+hands_giving",
           "his",
           "$woman",
           "as",
