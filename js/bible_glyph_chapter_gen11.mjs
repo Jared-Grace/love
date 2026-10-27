@@ -35,7 +35,7 @@ export function bible_glyph_chapter_gen11() {
           "as",
           "people",
           "journeyed",
-          "eastward,",
+          "$compass+right_arrow,",
           "they",
           "found",
           "a",
