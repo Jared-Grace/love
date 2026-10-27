@@ -233,7 +233,7 @@ export function bible_glyph_chapter_mal02() {
           "his",
           "$face_with_open_mouth,",
           "because",
-          "he",
+          "$pointing_back",
           "is",
           "the",
           "$angel",
