@@ -836,7 +836,7 @@ export function bible_glyph_chapter_exo18() {
           "and",
           "Jethro",
           "$walking",
-          "to",
+          "$toward",
           "his",
           "own",
           "$earth.",
