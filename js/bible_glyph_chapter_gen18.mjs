@@ -372,7 +372,7 @@ export function bible_glyph_chapter_gen18() {
           "my",
           "$crown",
           "is",
-          "old?",
+          "$old_man+doing?",
         ],
       },
       {
