@@ -598,7 +598,7 @@ export function bible_glyph_chapter_num20() {
           "main",
           "road,",
           "and",
-          "if",
+          "$traffic_light",
           "we",
           "or",
           "our",
