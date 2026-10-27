@@ -36,7 +36,7 @@ export function bible_glyph_chapter_deu31() {
           "$son",
           "of",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "and",
           "twenty",
           "years",
