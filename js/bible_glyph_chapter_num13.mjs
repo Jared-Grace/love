@@ -342,7 +342,7 @@ export function bible_glyph_chapter_num13() {
           "weak,",
           "$pinching_hand+input_numbers",
           "or",
-          "many.",
+          "$multiply.",
         ],
       },
       {
