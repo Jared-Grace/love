@@ -1192,7 +1192,7 @@ export function bible_glyph_chapter_jer31() {
           "who",
           "$hands_giving",
           "the",
-          "sun",
+          "$sun_with_face",
           "for",
           "$light",
           "by",
