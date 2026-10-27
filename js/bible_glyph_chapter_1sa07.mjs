@@ -305,7 +305,7 @@ export function bible_glyph_chapter_1sa07() {
           "$hand_receiving",
           "a",
           "$milk",
-          "lamb",
+          "$lamb+baby",
           "and",
           "offered",
           "it",
