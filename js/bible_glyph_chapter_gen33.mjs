@@ -211,7 +211,7 @@ export function bible_glyph_chapter_gen33() {
           "Jacob",
           "$speech,",
           "To",
-          "find",
+          "$magnifying_glass+exclamation",
           "favor",
           "in",
           "the",
