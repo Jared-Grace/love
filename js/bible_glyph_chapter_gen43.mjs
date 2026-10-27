@@ -268,7 +268,7 @@ export function bible_glyph_chapter_gen43() {
           "in",
           "my",
           "$hand.",
-          "If",
+          "$traffic_light",
           "I",
           "do",
           "$no_entry",
