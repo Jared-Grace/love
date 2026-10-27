@@ -460,7 +460,7 @@ export function bible_glyph_chapter_exo36() {
           "eleven",
           "curtains",
           "was",
-          "thirty",
+          "$three+zero",
           "cubits",
           "$up_down_arrow",
           "and",
