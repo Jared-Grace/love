@@ -474,7 +474,7 @@ export function bible_glyph_chapter_ezk01() {
           "of",
           "the",
           "$four",
-          "directions",
+          "$four+divide",
           "$no_entry",
           "pivoting",
           "as",
