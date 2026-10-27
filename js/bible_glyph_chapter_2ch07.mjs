@@ -452,7 +452,7 @@ export function bible_glyph_chapter_2ch07() {
           "there",
           "is",
           "$no_entry",
-          "rain,",
+          "$rain,",
           "or",
           "if",
           "I",
