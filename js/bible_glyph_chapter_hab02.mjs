@@ -606,7 +606,7 @@ export function bible_glyph_chapter_hab02() {
           "is",
           "$crab",
           "with",
-          "gold",
+          "$gold",
           "and",
           "silver,",
           "yet",
