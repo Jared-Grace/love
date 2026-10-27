@@ -1140,7 +1140,7 @@ export function bible_glyph_chapter_2ki04() {
           "The",
           "boy",
           "$nose+mouth+wind+doing",
-          "seven",
+          "$seven",
           "times",
           "and",
           "opened",
