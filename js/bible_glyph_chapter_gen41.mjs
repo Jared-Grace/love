@@ -860,7 +860,7 @@ export function bible_glyph_chapter_gen41() {
       {
         verse_number: 32,
         words: [
-          "Moreover,",
+          "$pointing_up,",
           "the",
           "dream",
           "was",
