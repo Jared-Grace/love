@@ -46,7 +46,7 @@ export function bible_glyph_chapter_deu11() {
           "$lightbulb",
           "this",
           "$sun",
-          "that",
+          "$pointing",
           "it",
           "is",
           "$no_entry",
