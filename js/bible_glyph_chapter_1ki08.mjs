@@ -2294,7 +2294,7 @@ export function bible_glyph_chapter_1ki08() {
           "$seven",
           "more",
           "$sun,",
-          "fourteen",
+          "$four",
           "$sun",
           "in",
           "all.",
