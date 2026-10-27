@@ -234,7 +234,7 @@ export function bible_glyph_chapter_mal01() {
           "presenting",
           "defiled",
           "$bread",
-          "on",
+          "$pointing_up",
           "My",
           "$altar.",
           "But",
