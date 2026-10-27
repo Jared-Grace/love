@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_1ki12() {
           "$one",
           "calf",
           "as",
-          "far",
+          "$finish",
           "as",
           "$proper_name$Dan.",
         ],
