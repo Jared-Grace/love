@@ -911,7 +911,7 @@ export function bible_glyph_chapter_exo10() {
         words: [
           "But",
           "$i_am",
-          "hardened",
+          "$might+up_arrow",
           "the",
           "$heart_organ",
           "of",
