@@ -352,7 +352,7 @@ export function bible_glyph_chapter_isa53() {
           "and",
           "the",
           "good",
-          "pleasure",
+          "$smiling_face_with_hearts",
           "of",
           "the",
           "$i_am",
