@@ -781,7 +781,7 @@ export function bible_glyph_chapter_lev26() {
           "$white_cane",
           "of",
           "$bread,",
-          "ten",
+          "$ten",
           "$woman",
           "will",
           "$bread+fire",
