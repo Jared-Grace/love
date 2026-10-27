@@ -195,7 +195,7 @@ export function bible_glyph_chapter_gen22() {
           "knife,",
           "and",
           "the",
-          "two",
+          "$two",
           "of",
           "them",
           "$walking",
