@@ -440,7 +440,7 @@ export function bible_glyph_chapter_deu33() {
         words: [
           "with",
           "the",
-          "choice",
+          "$gem_stone+gift",
           "gifts",
           "of",
           "the",
