@@ -857,7 +857,7 @@ export function bible_glyph_chapter_num22() {
           "$i_am,",
           "she",
           "lay",
-          "down",
+          "$sheep+down_arrow+doing",
           "under",
           "$proper_name$Balaam.",
           "And",
