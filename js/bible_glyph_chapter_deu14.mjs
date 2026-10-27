@@ -237,7 +237,7 @@ export function bible_glyph_chapter_deu14() {
           "or",
           "touch",
           "its",
-          "carcass.",
+          "$skull+bone.",
         ],
       },
       {
