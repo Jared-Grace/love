@@ -269,7 +269,7 @@ export function bible_glyph_chapter_pro31() {
           "$hammer+doing",
           "with",
           "eager",
-          "hands.",
+          "$hand_with_fingers_splayed.",
         ],
       },
       {
