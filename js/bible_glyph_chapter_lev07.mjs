@@ -786,7 +786,7 @@ export function bible_glyph_chapter_lev07() {
           "$altar,",
           "but",
           "the",
-          "breast",
+          "$heart_organ+meat",
           "belongs",
           "to",
           "$proper_name$Aaron",
