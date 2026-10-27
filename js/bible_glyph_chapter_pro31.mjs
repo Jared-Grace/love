@@ -474,7 +474,7 @@ export function bible_glyph_chapter_pro31() {
         words: [
           "She",
           "$hammer+doing",
-          "linen",
+          "$t_shirt+thread",
           "garments",
           "and",
           "sells",
