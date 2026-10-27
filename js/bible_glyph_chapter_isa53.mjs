@@ -226,7 +226,7 @@ export function bible_glyph_chapter_isa53() {
           "as",
           "a",
           "sheep",
-          "before",
+          "$face",
           "her",
           "shearers",
           "is",
