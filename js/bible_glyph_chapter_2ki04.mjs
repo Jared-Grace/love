@@ -798,7 +798,7 @@ export function bible_glyph_chapter_2ki04() {
         verse_number: 26,
         words: [
           "Please",
-          "run",
+          "$running",
           "out",
           "$watch",
           "to",
