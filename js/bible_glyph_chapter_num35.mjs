@@ -523,7 +523,7 @@ export function bible_glyph_chapter_num35() {
           "$hand",
           "a",
           "$skull+doing",
-          "object",
+          "$toolbox",
           "of",
           "$tree",
           "and",
