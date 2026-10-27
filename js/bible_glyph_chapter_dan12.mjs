@@ -172,7 +172,7 @@ export function bible_glyph_chapter_dan12() {
           "saw",
           "$two",
           "$plus+one",
-          "standing",
+          "$person+round_pushpin",
           "there,",
           "one",
           "on",
