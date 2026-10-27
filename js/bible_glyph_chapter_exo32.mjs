@@ -649,7 +649,7 @@ export function bible_glyph_chapter_exo32() {
           "he",
           "$angry_face+doing",
           "with",
-          "anger",
+          "$nose+fire",
           "and",
           "threw",
           "the",
