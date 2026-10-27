@@ -303,7 +303,7 @@ export function bible_glyph_chapter_1sa02() {
           "and",
           "will",
           "$hands_giving",
-          "power",
+          "$mechanical_arm",
           "to",
           "His",
           "$king;",
