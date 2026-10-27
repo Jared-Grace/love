@@ -543,7 +543,7 @@ export function bible_glyph_chapter_2ch34() {
           "bringing",
           "out",
           "the",
-          "money",
+          "$silver",
           "that",
           "had",
           "been",
