@@ -187,7 +187,7 @@ export function bible_glyph_chapter_jdg06() {
       {
         verse_number: 7,
         words: [
-          "Now",
+          "$link",
           "when",
           "the",
           "$son",
