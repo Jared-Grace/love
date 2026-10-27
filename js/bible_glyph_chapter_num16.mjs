@@ -912,7 +912,7 @@ export function bible_glyph_chapter_num16() {
           "and",
           "the",
           "ground",
-          "opens",
+          "$face_with_open_mouth+doing",
           "its",
           "mouth",
           "and",
