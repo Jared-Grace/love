@@ -102,7 +102,7 @@ export function bible_glyph_chapter_exo36() {
           "$all",
           "the",
           "contributions",
-          "that",
+          "$back+flashlight",
           "the",
           "$son",
           "of",
