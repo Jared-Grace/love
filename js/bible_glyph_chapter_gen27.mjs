@@ -988,7 +988,7 @@ export function bible_glyph_chapter_gen27() {
           "a",
           "loud",
           "and",
-          "bitter",
+          "$lemon",
           "cry",
           "and",
           "$speech",
