@@ -1270,7 +1270,7 @@ export function bible_glyph_chapter_deu28() {
           "but",
           "will",
           "$no_entry",
-          "anoint",
+          "$oil+droplet+doing",
           "yourself",
           "with",
           "the",
