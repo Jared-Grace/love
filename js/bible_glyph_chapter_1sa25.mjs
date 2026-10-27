@@ -947,7 +947,7 @@ export function bible_glyph_chapter_1sa25() {
           "$pleading",
           "$lifting",
           "the",
-          "offense",
+          "$black_flag",
           "of",
           "your",
           "servant,",
