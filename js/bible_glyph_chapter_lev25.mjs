@@ -1110,7 +1110,7 @@ export function bible_glyph_chapter_lev25() {
           "or",
           "profit,",
           "but",
-          "fear",
+          "$fear+doing",
           "your",
           "$heart_on_fire,",
           "so",
