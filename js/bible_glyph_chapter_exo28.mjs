@@ -1186,7 +1186,7 @@ export function bible_glyph_chapter_exo28() {
           "$hammer+doing",
           "for",
           "them",
-          "linen",
+          "$thread",
           "$briefs+two",
           "to",
           "cover",
