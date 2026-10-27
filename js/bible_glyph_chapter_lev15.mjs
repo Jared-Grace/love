@@ -487,7 +487,7 @@ export function bible_glyph_chapter_lev15() {
           "him,",
           "he",
           "must",
-          "bathe",
+          "$bathtub+doing",
           "his",
           "whole",
           "$meat",
