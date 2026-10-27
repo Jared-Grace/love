@@ -585,7 +585,7 @@ export function bible_glyph_chapter_isa43() {
           "to",
           "$hammer+doing",
           "something",
-          "new;",
+          "$new_button;",
           "even",
           "now",
           "it",
