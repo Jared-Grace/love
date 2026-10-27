@@ -157,7 +157,7 @@ export function bible_glyph_chapter_num32() {
           "$no_entry",
           "make",
           "us",
-          "cross",
+          "$bridge",
           "the",
           "$pointing_down+proper_name.",
         ],
