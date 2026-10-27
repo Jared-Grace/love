@@ -771,7 +771,7 @@ export function bible_glyph_chapter_num16() {
           "the",
           "tents",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "$thumbs_down",
           "men.",
           "Do",
