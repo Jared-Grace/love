@@ -117,7 +117,7 @@ export function bible_glyph_chapter_2sa11() {
           "was",
           "$speech,",
           "Is",
-          "this",
+          "$flashlight",
           "$no_entry",
           "Bathsheba,",
           "the",
