@@ -160,7 +160,7 @@ export function bible_glyph_chapter_exo29() {
         words: [
           "$palm_down",
           "the",
-          "turban",
+          "$person_wearing_turban",
           "on",
           "his",
           "head",
