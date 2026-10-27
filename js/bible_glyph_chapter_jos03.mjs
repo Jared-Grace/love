@@ -580,7 +580,7 @@ export function bible_glyph_chapter_jos03() {
           "the",
           "$desert+brown_square",
           "ground",
-          "until",
+          "$finish",
           "the",
           "entire",
           "$map",
