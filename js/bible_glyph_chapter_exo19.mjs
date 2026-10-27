@@ -789,7 +789,7 @@ export function bible_glyph_chapter_exo19() {
           "So",
           "$fishing_pole+proper_name",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "the",
           "$family",
