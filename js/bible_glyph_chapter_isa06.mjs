@@ -314,7 +314,7 @@ export function bible_glyph_chapter_isa06() {
           "with",
           "their",
           "ears,",
-          "understand",
+          "$brain",
           "with",
           "their",
           "$heart_organ,",
