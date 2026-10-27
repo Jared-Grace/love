@@ -909,7 +909,7 @@ export function bible_glyph_chapter_1sa25() {
           "against",
           "my",
           "$crown",
-          "be",
+          "$link",
           "like",
           "$proper_name$Nabal.",
         ],
