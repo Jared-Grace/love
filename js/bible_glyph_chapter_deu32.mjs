@@ -292,7 +292,7 @@ export function bible_glyph_chapter_deu32() {
           "stirs",
           "up",
           "its",
-          "nest",
+          "$nest_with_eggs",
           "and",
           "hovers",
           "over",
