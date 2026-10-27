@@ -855,7 +855,7 @@ export function bible_glyph_chapter_jer07() {
           "they",
           "will",
           "$no_entry",
-          "answer.",
+          "$speech+turn_back.",
         ],
       },
       {
