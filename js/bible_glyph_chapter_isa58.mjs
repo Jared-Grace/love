@@ -200,7 +200,7 @@ export function bible_glyph_chapter_isa58() {
           "Will",
           "you",
           "call",
-          "this",
+          "$flashlight",
           "a",
           "fast,",
           "and",
