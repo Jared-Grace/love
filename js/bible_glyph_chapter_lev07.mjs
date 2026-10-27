@@ -782,7 +782,7 @@ export function bible_glyph_chapter_lev07() {
           "to",
           "$incense+doing",
           "the",
-          "fat",
+          "$bacon",
           "$altar,",
           "but",
           "the",
