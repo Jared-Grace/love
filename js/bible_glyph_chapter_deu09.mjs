@@ -908,7 +908,7 @@ export function bible_glyph_chapter_deu09() {
           "And",
           "I",
           "$hands_praying",
-          "to",
+          "$toward",
           "$i_am",
           "and",
           "$speech:",
