@@ -74,7 +74,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "the",
           "$wrestling+heart_on_fire",
-          "stood",
+          "$person+round_pushpin",
           "on",
           "another,",
           "with",
