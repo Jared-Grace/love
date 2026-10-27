@@ -320,7 +320,7 @@ export function bible_glyph_chapter_jdg02() {
           "$toward",
           "their",
           "$father,",
-          "another",
+          "$plus+one",
           "$dna",
           "rose",
           "up",
