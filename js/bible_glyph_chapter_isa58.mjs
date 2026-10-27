@@ -333,7 +333,7 @@ export function bible_glyph_chapter_isa58() {
           "$telescope+clock",
           "you",
           "will",
-          "call,",
+          "$waving_hand,",
           "and",
           "the",
           "$i_am",
