@@ -29,7 +29,7 @@ export function bible_glyph_chapter_est01() {
           "$castle+doing",
           "from",
           "$proper_name$India",
-          "to",
+          "$finish",
           "$proper_name$Cush,",
           "127",
           "provinces.",
