@@ -444,7 +444,7 @@ export function bible_glyph_chapter_1sa25() {
           "$two_hearts+proper_name,",
           "while",
           "two",
-          "hundred",
+          "$input_numbers+all",
           "$person+house",
           "with",
           "the",
