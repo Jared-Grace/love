@@ -227,7 +227,7 @@ export function bible_glyph_chapter_psa103() {
         verse_number: 12,
         words: [
           "As",
-          "far",
+          "$satellite+doing",
           "as",
           "the",
           "east",
