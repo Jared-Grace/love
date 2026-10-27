@@ -143,7 +143,7 @@ export function bible_glyph_chapter_deu16() {
         verse_number: 4,
         words: [
           "$no_entry",
-          "leaven",
+          "$bubbles+bread+pinching_hand",
           "is",
           "to",
           "be",
