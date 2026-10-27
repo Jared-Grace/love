@@ -628,7 +628,7 @@ export function bible_glyph_chapter_pro03() {
           "$pointing",
           "the",
           "$i_am",
-          "detests",
+          "$vomiting",
           "the",
           "perverse,",
           "but",
