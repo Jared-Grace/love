@@ -1340,7 +1340,7 @@ export function bible_glyph_chapter_deu04() {
       {
         verse_number: 37,
         words: [
-          "Because",
+          "$down_arrow",
           "He",
           "$heart_red+doing",
           "your",
