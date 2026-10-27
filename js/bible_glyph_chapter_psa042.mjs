@@ -104,7 +104,7 @@ export function bible_glyph_chapter_psa042() {
           "mind",
           "as",
           "I",
-          "pour",
+          "$jar+down_arrow+doing",
           "out",
           "my",
           "$person_other:",
