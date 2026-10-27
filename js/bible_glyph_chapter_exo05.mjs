@@ -166,7 +166,7 @@ export function bible_glyph_chapter_exo05() {
           "$house+proper_name",
           "also",
           "$speech,",
-          "Look,",
+          "$exclamation,",
           "the",
           "$family",
           "of",
