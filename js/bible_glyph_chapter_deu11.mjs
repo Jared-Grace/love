@@ -871,7 +871,7 @@ export function bible_glyph_chapter_deu11() {
           "$speech+thumbs_up",
           "and",
           "a",
-          "curse.",
+          "$balloon+speech.",
         ],
       },
       {
