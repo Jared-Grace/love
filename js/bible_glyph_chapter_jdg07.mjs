@@ -13,7 +13,7 @@ export function bible_glyph_chapter_jdg07() {
       {
         verse_number: 1,
         words: [
-          "Early",
+          "$morning+doing",
           "in",
           "the",
           "morning,",
