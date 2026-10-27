@@ -82,7 +82,7 @@ export function bible_glyph_chapter_psa110() {
           "$hugging_face+baby",
           "of",
           "the",
-          "dawn,",
+          "$dawn,",
           "to",
           "You",
           "belongs",
