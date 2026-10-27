@@ -120,7 +120,7 @@ export function bible_glyph_chapter_deu05() {
         words: [
           "At",
           "that",
-          "time",
+          "$clock",
           "$me",
           "was",
           "standing",
