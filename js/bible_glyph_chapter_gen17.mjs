@@ -112,7 +112,7 @@ export function bible_glyph_chapter_gen17() {
           "will",
           "be",
           "$father+map,",
-          "for",
+          "$pointing",
           "I",
           "have",
           "$hands_giving",
