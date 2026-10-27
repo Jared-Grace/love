@@ -412,7 +412,7 @@ export function bible_glyph_chapter_gen22() {
           "and",
           "$hand_receiving",
           "the",
-          "ram",
+          "$ram",
           "and",
           "offered",
           "it",
