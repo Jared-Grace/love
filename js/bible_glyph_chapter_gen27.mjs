@@ -19,7 +19,7 @@ export function bible_glyph_chapter_gen27() {
         words: [
           "When",
           "$laughing+proper_name",
-          "was",
+          "$link",
           "old",
           "and",
           "his",
