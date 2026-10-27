@@ -73,7 +73,7 @@ export function bible_glyph_chapter_jdg07() {
           "into",
           "their",
           "$hand,",
-          "lest",
+          "$no_entry+traffic_light",
           "$wrestling+heart_on_fire",
           "glorify",
           "themselves",
