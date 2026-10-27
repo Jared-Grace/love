@@ -507,7 +507,7 @@ export function bible_glyph_chapter_lam04() {
           "that",
           "could",
           "$no_entry",
-          "save",
+          "$rescue",
           "us.",
         ],
       },
