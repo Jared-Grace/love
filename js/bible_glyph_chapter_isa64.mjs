@@ -269,7 +269,7 @@ export function bible_glyph_chapter_isa64() {
           "$angry_face+collision+doing,",
           "O",
           "$i_am,",
-          "beyond",
+          "$finish",
           "measure;",
           "do",
           "$no_entry",
