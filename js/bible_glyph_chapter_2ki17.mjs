@@ -948,7 +948,7 @@ export function bible_glyph_chapter_2ki17() {
           "$proper_name$Assyria",
           "$speech,",
           "Let",
-          "one",
+          "$one",
           "of",
           "the",
           "$priest",
