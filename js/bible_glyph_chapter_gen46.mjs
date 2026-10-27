@@ -695,7 +695,7 @@ export function bible_glyph_chapter_gen46() {
           "went",
           "up",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "$wrestling+heart_on_fire",
           "his",
           "$father",
