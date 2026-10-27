@@ -233,7 +233,7 @@ export function bible_glyph_chapter_psa073() {
         words: [
           "$check+exclamation",
           "in",
-          "vain",
+          "$tray_out+droplet+thing",
           "I",
           "have",
           "kept",
