@@ -1074,7 +1074,7 @@ export function bible_glyph_chapter_gen30() {
           "the",
           "$sheep",
           "to",
-          "face",
+          "$face",
           "the",
           "streaked",
           "and",
