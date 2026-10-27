@@ -600,7 +600,7 @@ export function bible_glyph_chapter_exo15() {
           "of",
           "$proper_name$Shur.",
           "For",
-          "three",
+          "$three",
           "$sun",
           "they",
           "$walking",
