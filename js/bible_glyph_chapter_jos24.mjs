@@ -1086,7 +1086,7 @@ export function bible_glyph_chapter_jos24() {
           "$proper_name$Shechem,",
           "for",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "pieces",
           "of",
           "silver.",
