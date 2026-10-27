@@ -156,7 +156,7 @@ export function bible_glyph_chapter_exo12() {
           "$new_moon,",
           "when",
           "the",
-          "whole",
+          "$all",
           "$church",
           "of",
           "the",
