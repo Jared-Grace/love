@@ -573,7 +573,7 @@ export function bible_glyph_chapter_num35() {
         verse_number: 20,
         words: [
           "Likewise,",
-          "if",
+          "$traffic_light",
           "anyone",
           "maliciously",
           "pushes",
