@@ -404,7 +404,7 @@ export function bible_glyph_chapter_gen27() {
           "older",
           "$son",
           "$proper_name$Esau",
-          "that",
+          "$back+flashlight",
           "belonged",
           "in",
           "the",
