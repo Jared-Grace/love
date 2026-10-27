@@ -566,7 +566,7 @@ export function bible_glyph_chapter_ezk47() {
           "as",
           "Hazer",
           "hatticon,",
-          "which",
+          "$back+flashlight",
           "is",
           "on",
           "the",
