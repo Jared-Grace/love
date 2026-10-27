@@ -380,7 +380,7 @@ export function bible_glyph_chapter_mic06() {
         verse_number: 13,
         words: [
           "$plus",
-          "I",
+          "$me",
           "am",
           "striking",
           "you",
