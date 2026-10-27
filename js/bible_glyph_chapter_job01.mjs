@@ -533,7 +533,7 @@ export function bible_glyph_chapter_job01() {
           "have",
           "escaped",
           "to",
-          "tell",
+          "$newspaper",
           "you.",
         ],
       },
