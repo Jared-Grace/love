@@ -483,7 +483,7 @@ export function bible_glyph_chapter_exo32() {
           "$hands_giving",
           "your",
           "$seed",
-          "all",
+          "$all",
           "this",
           "$earth",
           "that",
