@@ -239,7 +239,7 @@ export function bible_glyph_chapter_gen41() {
           "$house+proper_name,",
           "$speech,",
           '"$sun',
-          "I",
+          "$me",
           "recall",
           "my",
           "failures.",
