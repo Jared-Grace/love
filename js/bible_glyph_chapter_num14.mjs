@@ -460,7 +460,7 @@ export function bible_glyph_chapter_num14() {
           "$eyes,",
           "that",
           "Your",
-          "cloud",
+          "$cloud",
           "stands",
           "over",
           "them,",
