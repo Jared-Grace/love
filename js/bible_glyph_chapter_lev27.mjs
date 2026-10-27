@@ -989,7 +989,7 @@ export function bible_glyph_chapter_lev27() {
           "or",
           "the",
           "$sheep",
-          "that",
+          "$back+flashlight",
           "passes",
           "under",
           "the",
