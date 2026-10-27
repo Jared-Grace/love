@@ -140,7 +140,7 @@ export function bible_glyph_chapter_jdg11() {
           "of",
           "Ammon",
           "made",
-          "war",
+          "$crossed_swords+doing",
           "with",
           "them,",
           "the",
