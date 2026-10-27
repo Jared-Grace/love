@@ -183,7 +183,7 @@ export function bible_glyph_chapter_isa64() {
           "$fallen_leaf+doing",
           "like",
           "a",
-          "leaf,",
+          "$leaf,",
           "and",
           "our",
           "iniquities",
