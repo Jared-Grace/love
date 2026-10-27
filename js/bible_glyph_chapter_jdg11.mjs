@@ -1265,7 +1265,7 @@ export function bible_glyph_chapter_jdg11() {
           "$hand_sending",
           "for",
           "$two",
-          "months.",
+          "$new_moon.",
           "So",
           "she",
           "$walking",
