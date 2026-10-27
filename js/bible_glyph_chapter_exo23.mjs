@@ -417,7 +417,7 @@ export function bible_glyph_chapter_exo23() {
           "the",
           "month",
           "of",
-          "Abib,",
+          "$barley+sprout,",
           "because",
           "that",
           "was",
