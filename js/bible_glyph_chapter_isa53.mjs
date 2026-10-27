@@ -259,7 +259,7 @@ export function bible_glyph_chapter_isa53() {
           "For",
           "He",
           "was",
-          "cut",
+          "$axe+divide+doing",
           "off",
           "from",
           "the",
