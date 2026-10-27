@@ -802,7 +802,7 @@ export function bible_glyph_chapter_jdg06() {
           "Is",
           "$peace.",
           "To",
-          "this",
+          "$flashlight",
           "$sun",
           "it",
           "stands",
