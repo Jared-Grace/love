@@ -238,7 +238,7 @@ export function bible_glyph_chapter_exo23() {
           "your",
           "$earth",
           "and",
-          "gather",
+          "$crowd+doing",
           "its",
           "produce,",
         ],
