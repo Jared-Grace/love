@@ -401,7 +401,7 @@ export function bible_glyph_chapter_isa49() {
           "He",
           "who",
           "has",
-          "compassion",
+          "$hugging_face+doing",
           "on",
           "them",
           "will",
