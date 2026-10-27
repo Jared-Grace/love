@@ -714,7 +714,7 @@ export function bible_glyph_chapter_lev26() {
           "toward",
           "you",
           "with",
-          "hostility,",
+          "$boxing_glove+footprints,",
           "and",
           "$me",
           "will",
