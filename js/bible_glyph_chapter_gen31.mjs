@@ -23,7 +23,7 @@ export function bible_glyph_chapter_gen31() {
           "$speech,",
           "$hand+foot",
           "$hand_receiving",
-          "all",
+          "$all",
           "that",
           "was",
           "our",
