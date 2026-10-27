@@ -122,7 +122,7 @@ export function bible_glyph_chapter_2ki10() {
           "and",
           "$speech,",
           "$exclamation",
-          "two",
+          "$two",
           "$king",
           "could",
           "$no_entry",
