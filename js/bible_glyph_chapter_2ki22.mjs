@@ -596,7 +596,7 @@ export function bible_glyph_chapter_2ki22() {
           "$speech",
           "of",
           "the",
-          "book",
+          "$closed_book",
           "that",
           "the",
           "$king",
