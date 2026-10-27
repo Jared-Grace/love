@@ -976,7 +976,7 @@ export function bible_glyph_chapter_num21() {
           "$no_entry",
           "$fear+doing",
           "him,",
-          "for",
+          "$pointing",
           "into",
           "your",
           "$hand",
