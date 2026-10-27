@@ -495,7 +495,7 @@ export function bible_glyph_chapter_lev25() {
           "given",
           "number",
           "of",
-          "harvests",
+          "$fruit+basket",
           "he",
           "is",
           "selling",
