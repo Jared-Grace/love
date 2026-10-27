@@ -315,7 +315,7 @@ export function bible_glyph_chapter_job42() {
           "all",
           "the",
           "$thumbs_down",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
