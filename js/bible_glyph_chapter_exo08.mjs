@@ -508,7 +508,7 @@ export function bible_glyph_chapter_exo08() {
           "$hand",
           "with",
           "his",
-          "staff",
+          "$white_cane",
           "and",
           "struck",
           "the",
