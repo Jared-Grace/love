@@ -288,7 +288,7 @@ export function bible_glyph_chapter_deu09() {
           "$earth",
           "of",
           "$clamp+proper_name",
-          "until",
+          "$finish",
           "you",
           "$footprints",
           "this",
