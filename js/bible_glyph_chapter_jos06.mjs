@@ -842,7 +842,7 @@ export function bible_glyph_chapter_jos06() {
           "$hands_giving",
           "into",
           "the",
-          "treasury",
+          "$gem_stone+house",
           "$house",
           "of",
           "the",
