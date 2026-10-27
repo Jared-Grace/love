@@ -215,7 +215,7 @@ export function bible_glyph_chapter_lev25() {
           "And",
           "you",
           "shall",
-          "count",
+          "$abacus",
           "off",
           "seven",
           "$sabbath",
