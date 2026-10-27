@@ -929,7 +929,7 @@ export function bible_glyph_chapter_2ki05() {
           "When",
           "Gehazi",
           "$footprints",
-          "to",
+          "$toward",
           "the",
           "hill,",
           "he",
