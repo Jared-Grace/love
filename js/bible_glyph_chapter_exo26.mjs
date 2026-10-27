@@ -448,7 +448,7 @@ export function bible_glyph_chapter_exo26() {
           "be",
           "connected",
           "$woman",
-          "to",
+          "$toward",
           "$sister,",
           "and",
           "in",
