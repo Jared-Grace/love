@@ -903,7 +903,7 @@ export function bible_glyph_chapter_gen41() {
           "and",
           "$palm_down+round_pushpin+doing",
           "him",
-          "over",
+          "$pointing_up",
           "the",
           "$earth",
           "of",
