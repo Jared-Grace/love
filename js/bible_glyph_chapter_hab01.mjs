@@ -248,7 +248,7 @@ export function bible_glyph_chapter_hab01() {
           "advance",
           "like",
           "the",
-          "east",
+          "$compass+right_arrow+thing",
           "wind;",
           "they",
           "gather",
