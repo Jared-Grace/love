@@ -315,7 +315,7 @@ export function bible_glyph_chapter_lev07() {
           "with",
           "cakes",
           "of",
-          "leavened",
+          "$bread+bubbles",
           "$bread",
           "he",
           "is",
