@@ -201,7 +201,7 @@ export function bible_glyph_chapter_mal01() {
           "$question+round_pushpin",
           "is",
           "your",
-          "fear",
+          "$fear+thing",
           "of",
           "Me?",
           "$speech",
