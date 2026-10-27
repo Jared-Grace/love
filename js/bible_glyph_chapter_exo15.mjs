@@ -280,7 +280,7 @@ export function bible_glyph_chapter_exo15() {
       {
         verse_number: 11,
         words: [
-          "Who",
+          "$person+question",
           "is",
           "like",
           "You",
