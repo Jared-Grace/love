@@ -485,7 +485,7 @@ export function bible_glyph_chapter_lam01() {
           "He",
           "$hands_giving",
           "me",
-          "desolate,",
+          "$astonished+describing,",
           "faint",
           "all",
           "the",
