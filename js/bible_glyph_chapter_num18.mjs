@@ -633,7 +633,7 @@ export function bible_glyph_chapter_num18() {
           "splatter",
           "their",
           "$blood",
-          "on",
+          "$pointing_up",
           "the",
           "$altar",
           "and",
