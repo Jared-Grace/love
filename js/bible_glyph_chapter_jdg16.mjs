@@ -92,7 +92,7 @@ export function bible_glyph_chapter_jdg16() {
           "there",
           "only",
           "$finish",
-          "midnight,",
+          "$divide,",
           "when",
           "he",
           "got",
