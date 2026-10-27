@@ -543,7 +543,7 @@ export function bible_glyph_chapter_num16() {
           "his",
           "censer,",
           "$hands_giving",
-          "incense",
+          "$incense",
           "in",
           "it,",
           "and",
