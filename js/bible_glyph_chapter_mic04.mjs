@@ -333,7 +333,7 @@ export function bible_glyph_chapter_mic04() {
           "Why",
           "do",
           "you",
-          "now",
+          "$watch",
           "cry",
           "aloud?",
           "Is",
