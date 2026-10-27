@@ -372,7 +372,7 @@ export function bible_glyph_chapter_2ch20() {
           "of",
           "the",
           "$triangular_flag+thing",
-          "that",
+          "$back+flashlight",
           "You",
           "gave",
           "us",
