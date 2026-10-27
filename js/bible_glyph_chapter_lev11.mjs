@@ -518,7 +518,7 @@ export function bible_glyph_chapter_lev11() {
       {
         verse_number: 24,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "creatures",
           "will",
           "make",
