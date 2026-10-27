@@ -322,7 +322,7 @@ export function bible_glyph_chapter_pro02() {
       {
         verse_number: 18,
         words: [
-          "For",
+          "$pointing",
           "her",
           "$house",
           "sinks",
