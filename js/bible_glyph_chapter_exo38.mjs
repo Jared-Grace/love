@@ -552,7 +552,7 @@ export function bible_glyph_chapter_exo38() {
           "recorded",
           "at",
           "the",
-          "command",
+          "$face_with_open_mouth",
           "of",
           "$fishing_pole+proper_name",
           "by",
