@@ -75,7 +75,7 @@ export function bible_glyph_chapter_2ki03() {
       {
         verse_number: 3,
         words: [
-          "Nevertheless",
+          "$one+check",
           "he",
           "clung",
           "to",
