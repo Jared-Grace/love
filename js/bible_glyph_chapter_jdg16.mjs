@@ -659,7 +659,7 @@ export function bible_glyph_chapter_jdg16() {
           "of",
           "my",
           "$mother.",
-          "If",
+          "$traffic_light",
           "I",
           "am",
           "shaved,",
