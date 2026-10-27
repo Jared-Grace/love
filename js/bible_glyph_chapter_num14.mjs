@@ -615,7 +615,7 @@ export function bible_glyph_chapter_num14() {
           "I",
           "$pleading,",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "this",
           "$family,",
