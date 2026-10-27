@@ -1685,7 +1685,7 @@ export function bible_glyph_chapter_deu28() {
           "the",
           "$city+around+thing",
           "and",
-          "distress",
+          "$clamp+place",
           "that",
           "your",
           "$enemy",
