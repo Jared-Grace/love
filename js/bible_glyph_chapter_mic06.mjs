@@ -190,7 +190,7 @@ export function bible_glyph_chapter_mic06() {
           "to",
           "Him",
           "with",
-          "burnt",
+          "$burnt_offering",
           "offerings,",
           "with",
           "$son",
