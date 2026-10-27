@@ -452,7 +452,7 @@ export function bible_glyph_chapter_gen25() {
           "for",
           "his",
           "$woman,",
-          "because",
+          "$pointing",
           "she",
           "was",
           "barren.",
