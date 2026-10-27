@@ -326,7 +326,7 @@ export function bible_glyph_chapter_gen06() {
           "corrupted",
           "their",
           "$road",
-          "on",
+          "$pointing_up",
           "the",
           "$earth.",
         ],
