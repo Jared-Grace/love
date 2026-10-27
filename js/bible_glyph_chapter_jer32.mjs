@@ -1507,7 +1507,7 @@ export function bible_glyph_chapter_jer32() {
           "is",
           "a",
           "$astonished+thing,",
-          "without",
+          "$dotted_line_face",
           "$person",
           "or",
           "beast;",
