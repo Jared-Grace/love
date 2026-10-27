@@ -457,7 +457,7 @@ export function bible_glyph_chapter_jdg04() {
           "And",
           "the",
           "$i_am",
-          "routed",
+          "$crowd+tornado+doing",
           "$proper_name$Sisera",
           "and",
           "all",
