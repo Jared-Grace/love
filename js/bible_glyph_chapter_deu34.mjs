@@ -224,7 +224,7 @@ export function bible_glyph_chapter_deu34() {
           "$eyes",
           "were",
           "$no_entry",
-          "weak,",
+          "$dim_button+eye,",
           "and",
           "his",
           "vitality",
