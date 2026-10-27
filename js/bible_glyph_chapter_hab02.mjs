@@ -400,7 +400,7 @@ export function bible_glyph_chapter_hab02() {
           "and",
           "the",
           "nations",
-          "weary",
+          "$weary_face+wing+doing",
           "themselves",
           "in",
           "$tray_out+droplet+thing?",
