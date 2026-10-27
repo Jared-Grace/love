@@ -736,7 +736,7 @@ export function bible_glyph_chapter_num23() {
         verse_number: 26,
         words: [
           "But",
-          "Balaam",
+          "$foreigner+proper_name",
           "replied,",
           "$speech",
           "Did",
