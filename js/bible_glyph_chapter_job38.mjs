@@ -151,7 +151,7 @@ export function bible_glyph_chapter_job38() {
           "when",
           "it",
           "burst",
-          "forth",
+          "$fountain+doing",
           "from",
           "the",
           "womb,",
