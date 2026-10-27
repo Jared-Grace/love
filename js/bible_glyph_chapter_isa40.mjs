@@ -562,7 +562,7 @@ export function bible_glyph_chapter_isa40() {
           "that",
           "will",
           "$no_entry",
-          "rot.",
+          "$bone+microbe+doing.",
           "He",
           "seeks",
           "a",
