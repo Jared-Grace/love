@@ -225,7 +225,7 @@ export function bible_glyph_chapter_hab03() {
           "arrows.",
           "$pause_button.",
           "You",
-          "split",
+          "$carpentry_saw",
           "the",
           "$earth",
           "with",
