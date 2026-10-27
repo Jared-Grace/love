@@ -680,7 +680,7 @@ export function bible_glyph_chapter_exo18() {
           "$clock.",
           "Then",
           "any",
-          "major",
+          "$top",
           "issue",
           "they",
           "can",
