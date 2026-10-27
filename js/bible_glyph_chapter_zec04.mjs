@@ -387,7 +387,7 @@ export function bible_glyph_chapter_zec04() {
           "ones,",
           "who",
           "stand",
-          "beside",
+          "$pointing_up",
           "the",
           "$crown",
           "of",
