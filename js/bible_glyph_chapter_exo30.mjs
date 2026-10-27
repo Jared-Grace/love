@@ -551,7 +551,7 @@ export function bible_glyph_chapter_exo30() {
           "$shuffle",
           "when",
           "they",
-          "approach",
+          "$walking+toward",
           "the",
           "$altar",
           "to",
