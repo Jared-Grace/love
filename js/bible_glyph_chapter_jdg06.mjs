@@ -1032,7 +1032,7 @@ export function bible_glyph_chapter_jdg06() {
           "the",
           "$city",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Joash,",
           "$walking+tray_out",
           "out",
