@@ -926,7 +926,7 @@ export function bible_glyph_chapter_jer07() {
           "$dna",
           "of",
           "His",
-          "wrath.",
+          "$anger_symbol.",
         ],
       },
       {
