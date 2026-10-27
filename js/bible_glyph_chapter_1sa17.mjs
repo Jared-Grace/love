@@ -1080,7 +1080,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "$bear;",
           "this",
-          "uncircumcised",
+          "$no_entry+scissors+covenant",
           "$proper_name$Philistine",
           "will",
           "be",
