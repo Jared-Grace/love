@@ -1044,7 +1044,7 @@ export function bible_glyph_chapter_lam03() {
           "You",
           "have",
           "$eye",
-          "all",
+          "$all",
           "their",
           "malice,",
           "all",
