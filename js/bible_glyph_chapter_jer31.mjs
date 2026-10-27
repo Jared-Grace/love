@@ -606,7 +606,7 @@ export function bible_glyph_chapter_jer31() {
           "an",
           "$no_entry",
           "trained",
-          "calf.",
+          "$calf.",
           "$turn_back",
           "me,",
           "that",
