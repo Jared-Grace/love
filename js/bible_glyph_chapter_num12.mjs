@@ -361,7 +361,7 @@ export function bible_glyph_chapter_num12() {
           "$father",
           "had",
           "but",
-          "spit",
+          "$mouth+water+away+doing",
           "in",
           "her",
           "face,",
