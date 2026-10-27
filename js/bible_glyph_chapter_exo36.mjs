@@ -685,7 +685,7 @@ export function bible_glyph_chapter_exo36() {
         words: [
           "For",
           "the",
-          "second",
+          "$second_place",
           "side",
           "of",
           "the",
