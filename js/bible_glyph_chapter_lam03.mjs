@@ -504,7 +504,7 @@ export function bible_glyph_chapter_lam03() {
           "$person+one+describing",
           "in",
           "silence,",
-          "for",
+          "$pointing",
           "God",
           "has",
           "laid",
