@@ -116,7 +116,7 @@ export function bible_glyph_chapter_psa022() {
           "and",
           "were",
           "$no_entry",
-          "disappointed.",
+          "$flushed.",
         ],
       },
       {
