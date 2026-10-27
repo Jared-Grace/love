@@ -1279,7 +1279,7 @@ export function bible_glyph_chapter_gen24() {
           "I",
           "am,",
           "$person+up_arrow",
-          "beside",
+          "$pointing_up",
           "this",
           "spring.",
           "Now",
