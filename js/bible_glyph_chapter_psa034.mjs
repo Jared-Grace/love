@@ -279,7 +279,7 @@ export function bible_glyph_chapter_psa034() {
           "$thumbs_down",
           "and",
           "your",
-          "lips",
+          "$kiss_mark",
           "from",
           "deceitful",
           "$mouth.",
