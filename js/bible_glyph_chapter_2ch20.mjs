@@ -269,7 +269,7 @@ export function bible_glyph_chapter_2ch20() {
           "whether",
           "$sword",
           "or",
-          "judgment,",
+          "$scales+down_arrow,",
           "plague",
           "or",
           "famine,",
