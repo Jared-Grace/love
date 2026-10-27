@@ -354,7 +354,7 @@ export function bible_glyph_chapter_num09() {
           "must",
           "$hammer+doing",
           "the",
-          "Passover",
+          "$lamb+door",
           "according",
           "to",
           "all",
