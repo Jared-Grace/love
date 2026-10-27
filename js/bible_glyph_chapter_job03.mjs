@@ -16,7 +16,7 @@ export function bible_glyph_chapter_job03() {
       {
         verse_number: 1,
         words: [
-          "After",
+          "$next_track",
           "this,",
           "$proper_name$Job",
           "opened",
