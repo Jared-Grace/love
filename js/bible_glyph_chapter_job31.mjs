@@ -597,7 +597,7 @@ export function bible_glyph_chapter_job31() {
       {
         verse_number: 29,
         words: [
-          "If",
+          "$traffic_light",
           "I",
           "have",
           "rejoiced",
