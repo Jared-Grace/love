@@ -176,7 +176,7 @@ export function bible_glyph_chapter_lev09() {
           "$speech",
           "to",
           "$proper_name$Aaron,",
-          "Approach",
+          "$magnet+doing",
           "$altar",
           "$hammer+doing",
           "$bow",
