@@ -565,7 +565,7 @@ export function bible_glyph_chapter_lev07() {
           "uncleanness",
           "or",
           "an",
-          "unclean",
+          "$soap+no_entry",
           "animal",
           "or",
           "any",
