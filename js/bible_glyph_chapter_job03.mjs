@@ -331,7 +331,7 @@ export function bible_glyph_chapter_job03() {
       {
         verse_number: 16,
         words: [
-          "Or",
+          "$shuffle",
           "why",
           "was",
           "I",
