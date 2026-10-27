@@ -592,7 +592,7 @@ export function bible_glyph_chapter_exo37() {
           "also",
           "$hammer+doing",
           "its",
-          "seven",
+          "$seven",
           "$lamp,",
           "its",
           "wick",
