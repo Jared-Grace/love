@@ -263,7 +263,7 @@ export function bible_glyph_chapter_lev14() {
           "his",
           "$hair,",
           "his",
-          "head,",
+          "$person_gesturing_ok,",
           "his",
           "$beard,",
           "the",
