@@ -172,7 +172,7 @@ export function bible_glyph_chapter_exo37() {
           "$hammer+doing",
           "at",
           "the",
-          "ends",
+          "$end_arrow+triangular_ruler",
           "of",
           "the",
           "mercy",
