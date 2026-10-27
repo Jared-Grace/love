@@ -1608,7 +1608,7 @@ export function bible_glyph_chapter_deu28() {
           "caused",
           "you",
           "to",
-          "perish.",
+          "$wilted_flower.",
         ],
       },
       {
