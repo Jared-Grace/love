@@ -1419,7 +1419,7 @@ export function bible_glyph_chapter_1ki02() {
           "Shimei",
           "was",
           "$speech,",
-          "Look,",
+          "$exclamation,",
           "your",
           "$kneeling",
           "are",
