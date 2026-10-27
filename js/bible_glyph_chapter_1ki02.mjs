@@ -1437,7 +1437,7 @@ export function bible_glyph_chapter_1ki02() {
           "$donkey",
           "and",
           "$walking",
-          "to",
+          "$toward",
           "$proper_name$Achish",
           "at",
           "$proper_name$Gath",
