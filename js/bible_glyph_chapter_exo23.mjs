@@ -319,7 +319,7 @@ export function bible_glyph_chapter_exo23() {
           "your",
           "$donkey",
           "may",
-          "rest,",
+          "$seat+doing,",
           "and",
           "the",
           "$son",
