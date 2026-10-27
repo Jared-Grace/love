@@ -751,7 +751,7 @@ export function bible_glyph_chapter_isa40() {
           "starry",
           "host",
           "by",
-          "number;",
+          "$input_numbers;",
           "He",
           "calls",
           "each",
