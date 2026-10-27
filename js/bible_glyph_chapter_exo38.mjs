@@ -477,7 +477,7 @@ export function bible_glyph_chapter_exo38() {
           "long",
           "and",
           "five",
-          "cubits",
+          "$triangular_ruler",
           "high,",
           "like",
           "the",
