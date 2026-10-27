@@ -216,7 +216,7 @@ export function bible_glyph_chapter_est01() {
           "an",
           "array",
           "of",
-          "gold",
+          "$gold",
           "goblets,",
           "each",
           "with",
