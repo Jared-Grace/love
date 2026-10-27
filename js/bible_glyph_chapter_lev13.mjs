@@ -1386,7 +1386,7 @@ export function bible_glyph_chapter_lev13() {
           "on",
           "his",
           "forehead,",
-          "he",
+          "$pointing_back",
           "is",
           "still",
           "clean.",
