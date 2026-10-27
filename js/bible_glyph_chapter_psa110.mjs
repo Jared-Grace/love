@@ -167,7 +167,7 @@ export function bible_glyph_chapter_psa110() {
         words: [
           "He",
           "will",
-          "drink",
+          "$cup_with_straw",
           "from",
           "the",
           "$national_park",
