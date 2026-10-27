@@ -376,7 +376,7 @@ export function bible_glyph_chapter_jer29() {
           "Then",
           "you",
           "will",
-          "call",
+          "$waving_hand",
           "upon",
           "Me",
           "and",
