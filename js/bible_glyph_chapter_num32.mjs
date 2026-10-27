@@ -741,7 +741,7 @@ export function bible_glyph_chapter_num32() {
           "of",
           "Reuben",
           "$speech",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "$speech,",
           "$kneeling",
