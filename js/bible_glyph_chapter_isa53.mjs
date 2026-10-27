@@ -192,7 +192,7 @@ export function bible_glyph_chapter_isa53() {
           "upon",
           "Him",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "us",
           "all.",
