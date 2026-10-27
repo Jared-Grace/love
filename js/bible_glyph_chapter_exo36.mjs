@@ -128,7 +128,7 @@ export function bible_glyph_chapter_exo36() {
           "still",
           "$footprints",
           "him",
-          "freewill",
+          "$heart_red+gift",
           "offerings",
           "$morning",
           "after",
