@@ -631,7 +631,7 @@ export function bible_glyph_chapter_jdg04() {
           "Then",
           "he",
           "$speech,",
-          "Stand",
+          "$person+round_pushpin",
           "at",
           "the",
           "entrance",
