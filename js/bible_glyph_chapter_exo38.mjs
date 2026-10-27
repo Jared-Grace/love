@@ -299,7 +299,7 @@ export function bible_glyph_chapter_exo38() {
         verse_number: 12,
         words: [
           "The",
-          "side",
+          "$straight_ruler+round_pushpin",
           "toward",
           "the",
           "$sea",
