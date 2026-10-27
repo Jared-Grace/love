@@ -214,7 +214,7 @@ export function bible_glyph_chapter_mic04() {
           "their",
           "$moai,",
           "yet",
-          "we",
+          "$me",
           "will",
           "$walking",
           "in",
