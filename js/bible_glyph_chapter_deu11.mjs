@@ -904,7 +904,7 @@ export function bible_glyph_chapter_deu11() {
           "but",
           "the",
           "$balloon+speech",
-          "if",
+          "$traffic_light",
           "you",
           "do",
           "$no_entry",
