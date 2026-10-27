@@ -608,7 +608,7 @@ export function bible_glyph_chapter_exo40() {
           "Moses",
           "placed",
           "the",
-          "gold",
+          "$gold",
           "$altar",
           "in",
           "the",
