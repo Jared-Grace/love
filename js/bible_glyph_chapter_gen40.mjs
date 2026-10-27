@@ -233,7 +233,7 @@ export function bible_glyph_chapter_gen40() {
           "So",
           "the",
           "chief",
-          "cupbearer",
+          "$cup+hands_giving+doer",
           "$speech",
           "his",
           "$dream",
