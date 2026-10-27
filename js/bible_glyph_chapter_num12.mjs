@@ -371,7 +371,7 @@ export function bible_glyph_chapter_num12() {
           "have",
           "been",
           "in",
-          "disgrace",
+          "$disappointed_face",
           "for",
           "seven",
           "$sun?",
