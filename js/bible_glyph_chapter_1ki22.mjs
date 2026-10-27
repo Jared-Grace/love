@@ -741,7 +741,7 @@ export function bible_glyph_chapter_1ki22() {
           "You",
           "will",
           "surely",
-          "entice",
+          "$fishing_pole+doing",
           "him",
           "and",
           "prevail.",
