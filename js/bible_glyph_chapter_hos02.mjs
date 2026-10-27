@@ -50,7 +50,7 @@ export function bible_glyph_chapter_hos02() {
           "$man_beard.",
           "Let",
           "her",
-          "remove",
+          "$away+doing",
           "the",
           "adultery",
           "from",
