@@ -915,7 +915,7 @@ export function bible_glyph_chapter_gen27() {
           "$father",
           "$laughing+proper_name",
           "$speech,",
-          '"Who',
+          '"$person+question',
           "are",
           'you?"',
           '"I',
