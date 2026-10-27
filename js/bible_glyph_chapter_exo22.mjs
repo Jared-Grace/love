@@ -390,7 +390,7 @@ export function bible_glyph_chapter_exo22() {
           "parties",
           "to",
           "determine",
-          "whether",
+          "$traffic_light",
           "or",
           "$no_entry",
           "the",
