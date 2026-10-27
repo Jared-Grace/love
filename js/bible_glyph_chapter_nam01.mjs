@@ -94,7 +94,7 @@ export function bible_glyph_chapter_nam01() {
           "the",
           "$tornado+wind",
           "and",
-          "storm,",
+          "$tornado+fearful_face+thing,",
           "and",
           "clouds",
           "are",
