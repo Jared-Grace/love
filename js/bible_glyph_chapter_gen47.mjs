@@ -889,7 +889,7 @@ export function bible_glyph_chapter_gen47() {
         words: [
           "So",
           "$i_am+plus",
-          "established",
+          "$palm_down",
           "a",
           "law",
           "that",
