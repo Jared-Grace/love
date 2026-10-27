@@ -520,7 +520,7 @@ export function bible_glyph_chapter_hos02() {
           "$i_am,",
           "you",
           "will",
-          "call",
+          "$waving_hand",
           "Me",
           "my",
           "$man_beard,",
