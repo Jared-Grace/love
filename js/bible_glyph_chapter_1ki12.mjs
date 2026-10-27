@@ -533,7 +533,7 @@ export function bible_glyph_chapter_1ki12() {
           "$speech,",
           "$speech,",
           "$flashlight+question",
-          "portion",
+          "$pizza",
           "do",
           "we",
           "have",
