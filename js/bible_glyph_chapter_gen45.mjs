@@ -407,7 +407,7 @@ export function bible_glyph_chapter_gen45() {
           "$father",
           "down",
           "here",
-          "quickly.",
+          "$fast_forward+doing.",
         ],
       },
       {
