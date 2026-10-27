@@ -680,7 +680,7 @@ export function bible_glyph_chapter_gen44() {
           "younger",
           "$brother",
           "comes",
-          "down",
+          "$walking+pointing_down",
           "with",
           "you,",
           "you",
