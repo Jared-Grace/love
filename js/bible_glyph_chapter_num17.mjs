@@ -72,7 +72,7 @@ export function bible_glyph_chapter_num17() {
           "$white_cane",
           "of",
           "$handshake+proper_name,",
-          "because",
+          "$pointing",
           "there",
           "must",
           "be",
