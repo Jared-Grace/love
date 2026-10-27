@@ -248,7 +248,7 @@ export function bible_glyph_chapter_1sa03() {
           "me.",
           "Then",
           "$pointing_up+proper_name",
-          "realized",
+          "$brain",
           "that",
           "it",
           "was",
