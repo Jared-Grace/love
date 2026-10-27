@@ -728,7 +728,7 @@ export function bible_glyph_chapter_num20() {
           "will",
           "be",
           "gathered",
-          "to",
+          "$toward",
           "his",
           "$family.",
           "He",
