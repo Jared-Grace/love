@@ -683,7 +683,7 @@ export function bible_glyph_chapter_exo19() {
           "many",
           "$tray_out",
           "them",
-          "perish.",
+          "$person+pointing_down.",
         ],
       },
       {
