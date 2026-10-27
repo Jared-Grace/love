@@ -35,7 +35,7 @@ export function bible_glyph_chapter_mic05() {
           "will",
           "$fist",
           "the",
-          "cheek",
+          "$face+bone",
           "of",
           "the",
           "judge",
