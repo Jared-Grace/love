@@ -157,7 +157,7 @@ export function bible_glyph_chapter_lev22() {
           "a",
           "crawling",
           "creature",
-          "that",
+          "$back+flashlight",
           "makes",
           "him",
           "unclean,",
