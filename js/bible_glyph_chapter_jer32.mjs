@@ -496,7 +496,7 @@ export function bible_glyph_chapter_jer32() {
           "in",
           "a",
           "clay",
-          "jar",
+          "$toolbox",
           "to",
           "preserve",
           "them",
