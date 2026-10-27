@@ -1063,7 +1063,7 @@ export function bible_glyph_chapter_num11() {
           "gathered",
           "less",
           "than",
-          "ten",
+          "$ten",
           "homers,",
           "and",
           "they",
