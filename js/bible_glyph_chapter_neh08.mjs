@@ -602,7 +602,7 @@ export function bible_glyph_chapter_neh08() {
           "$hut+leaf",
           "$man_beard",
           "$pointing_up",
-          "rooftops,",
+          "$house+top,",
           "in",
           "their",
           "courtyards,",
