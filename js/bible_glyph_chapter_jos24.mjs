@@ -863,7 +863,7 @@ export function bible_glyph_chapter_jos24() {
           "$speech",
           "in",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "$scroll",
