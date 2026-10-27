@@ -303,7 +303,7 @@ export function bible_glyph_chapter_lev05() {
         words: [
           "And",
           "the",
-          "second",
+          "$second_place",
           "bird",
           "he",
           "must",
