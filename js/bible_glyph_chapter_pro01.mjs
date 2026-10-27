@@ -155,7 +155,7 @@ export function bible_glyph_chapter_pro01() {
       {
         verse_number: 9,
         words: [
-          "For",
+          "$pointing",
           "they",
           "are",
           "a",
