@@ -18,7 +18,7 @@ export function bible_glyph_chapter_2ki09() {
         verse_number: 1,
         words: [
           "Now",
-          "Elisha",
+          "$heart_on_fire+rescue",
           "the",
           "$megaphone",
           "summoned",
