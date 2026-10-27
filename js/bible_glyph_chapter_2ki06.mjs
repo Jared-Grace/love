@@ -1138,7 +1138,7 @@ export function bible_glyph_chapter_2ki06() {
           "the",
           "king",
           "$speech,",
-          "This",
+          "$flashlight",
           "$thumbs_down",
           "is",
           "from",
