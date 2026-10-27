@@ -505,7 +505,7 @@ export function bible_glyph_chapter_exo32() {
           "So",
           "the",
           "$i_am",
-          "relented",
+          "$hug+doing",
           "from",
           "the",
           "$thumbs_down",
