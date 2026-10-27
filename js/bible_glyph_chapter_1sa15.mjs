@@ -164,7 +164,7 @@ export function bible_glyph_chapter_1sa15() {
           "wait",
           "in",
           "the",
-          "valley.",
+          "$national_park.",
         ],
       },
       {
