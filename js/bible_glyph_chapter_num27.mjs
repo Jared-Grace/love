@@ -72,7 +72,7 @@ export function bible_glyph_chapter_num27() {
           "leaders",
           "and",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "at",
           "the",
