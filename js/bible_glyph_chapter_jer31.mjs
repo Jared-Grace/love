@@ -310,7 +310,7 @@ export function bible_glyph_chapter_jer31() {
           "$fruit",
           "is",
           "My",
-          "firstborn.",
+          "$first_place+baby.",
         ],
       },
       {
