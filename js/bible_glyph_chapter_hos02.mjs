@@ -692,7 +692,7 @@ export function bible_glyph_chapter_hos02() {
           "respond",
           "to",
           "the",
-          "grain,",
+          "$wheat+barley,",
           "to",
           "the",
           "new",
