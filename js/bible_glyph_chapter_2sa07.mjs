@@ -402,7 +402,7 @@ export function bible_glyph_chapter_2sa07() {
           "and",
           "you",
           "rest",
-          "with",
+          "$safety_pin",
           "your",
           "$father,",
           "I",
