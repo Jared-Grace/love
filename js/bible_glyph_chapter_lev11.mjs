@@ -210,7 +210,7 @@ export function bible_glyph_chapter_lev11() {
           "carcasses;",
           "they",
           "are",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "you.",
         ],
