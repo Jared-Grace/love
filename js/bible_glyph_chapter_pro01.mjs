@@ -114,7 +114,7 @@ export function bible_glyph_chapter_pro01() {
         verse_number: 7,
         words: [
           "The",
-          "fear",
+          "$fear",
           "of",
           "the",
           "$i_am",
