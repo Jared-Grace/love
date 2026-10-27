@@ -307,7 +307,7 @@ export function bible_glyph_chapter_gen12() {
           "So",
           "Abram",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$clamp+proper_name",
           "to",
