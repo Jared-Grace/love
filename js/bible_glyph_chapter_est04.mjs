@@ -335,7 +335,7 @@ export function bible_glyph_chapter_est04() {
           "$family",
           "of",
           "the",
-          "provinces",
+          "$map+crown",
           "of",
           "the",
           "$king",
