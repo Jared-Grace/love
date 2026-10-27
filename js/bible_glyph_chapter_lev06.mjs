@@ -245,7 +245,7 @@ export function bible_glyph_chapter_lev06() {
           "$thread",
           "$triangular_ruler+dress",
           "and",
-          "linen",
+          "$thread",
           "undergarments",
           "next",
           "to",
