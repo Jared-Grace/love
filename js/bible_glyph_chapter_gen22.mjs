@@ -564,7 +564,7 @@ export function bible_glyph_chapter_gen22() {
           "have",
           "$ear+loudspeaker",
           "My",
-          "$voice.",
+          "$loudspeaker.",
         ],
       },
       {

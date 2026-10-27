@@ -23,7 +23,7 @@ export function bible_glyph_chapter_pro08() {
           "understanding",
           "$hands_giving",
           "her",
-          "$voice?",
+          "$loudspeaker?",
         ],
       },
       {
@@ -73,7 +73,7 @@ export function bible_glyph_chapter_pro08() {
           "out,",
           "and",
           "my",
-          "$voice",
+          "$loudspeaker",
           "is",
           "to",
           "the",

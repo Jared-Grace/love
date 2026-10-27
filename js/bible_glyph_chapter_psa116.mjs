@@ -22,7 +22,7 @@ export function bible_glyph_chapter_psa116() {
           "has",
           "$ear+loudspeaker",
           "my",
-          "$voice,",
+          "$loudspeaker,",
           "my",
           "appeal",
           "for",

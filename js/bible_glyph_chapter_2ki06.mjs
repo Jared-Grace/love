@@ -1109,7 +1109,7 @@ export function bible_glyph_chapter_2ki06() {
           "Is",
           "$no_entry",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "his",
           "$crown",

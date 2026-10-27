@@ -567,7 +567,7 @@ export function bible_glyph_chapter_1sa24() {
           "lifted",
           "up",
           "his",
-          "$voice",
+          "$loudspeaker",
           "and",
           "$loudly_crying.",
         ],

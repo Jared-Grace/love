@@ -1144,7 +1144,7 @@ export function bible_glyph_chapter_num22() {
           "$voice+doing",
           "$end_arrow+zero",
           "the",
-          "$speech",
+          "$voice",
           "that",
           "I",
           "$voice+doing",

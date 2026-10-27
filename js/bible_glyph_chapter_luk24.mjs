@@ -274,7 +274,7 @@ export function bible_glyph_chapter_luk24() {
           "bending",
           "down,",
           "he",
-          "$eyes",
+          "$eyes+toward",
           "$one+describing",
           "the",
           "linen",

@@ -24,7 +24,7 @@ export function bible_glyph_chapter_num14() {
           "and",
           "$hands_giving",
           "their",
-          "$voice,",
+          "$loudspeaker,",
           "and",
           "the",
           "$family",
@@ -718,7 +718,7 @@ export function bible_glyph_chapter_num14() {
           "$no_entry",
           "$ear+loudspeaker",
           "My",
-          "$voice,",
+          "$loudspeaker,",
         ],
       },
       {

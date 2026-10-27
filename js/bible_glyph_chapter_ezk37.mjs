@@ -216,7 +216,7 @@ export function bible_glyph_chapter_ezk37() {
           "there",
           "was",
           "a",
-          "$voice,",
+          "$loudspeaker,",
           "a",
           "rattling,",
           "and",

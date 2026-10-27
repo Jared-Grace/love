@@ -18,7 +18,7 @@ export function bible_glyph_chapter_lev05() {
           "$person_other",
           "$bow+doing",
           "$ear+loudspeaker",
-          "$voice",
+          "$loudspeaker",
           "$speech+raised_back_of_hand",
           "about",
           "something",

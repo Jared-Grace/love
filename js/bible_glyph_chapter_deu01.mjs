@@ -1375,7 +1375,7 @@ export function bible_glyph_chapter_deu01() {
           "$ear",
           "to",
           "your",
-          "$voice",
+          "$loudspeaker",
           "$no_entry",
           "give",
           "ear",

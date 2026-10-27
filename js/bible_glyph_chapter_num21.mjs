@@ -82,7 +82,7 @@ export function bible_glyph_chapter_num21() {
           "$i_am",
           "$ear+loudspeaker",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "Israel",
           "and",

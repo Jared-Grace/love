@@ -855,7 +855,7 @@ export function bible_glyph_chapter_deu09() {
           "$no_entry",
           "$ear+loudspeaker",
           "His",
-          "$voice.",
+          "$loudspeaker.",
         ],
       },
       {

@@ -299,7 +299,7 @@ export function bible_glyph_chapter_lam02() {
           "have",
           "$hands_giving",
           "a",
-          "$voice",
+          "$loudspeaker",
           "in",
           "the",
           "$house",

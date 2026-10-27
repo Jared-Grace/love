@@ -1091,7 +1091,7 @@ export function bible_glyph_chapter_lev26() {
           "that",
           "even",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "a",
           "windblown",

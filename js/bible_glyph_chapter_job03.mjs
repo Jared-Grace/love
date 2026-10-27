@@ -382,7 +382,7 @@ export function bible_glyph_chapter_job03() {
           "$no_entry",
           "$ear+loudspeaker",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "oppressor.",

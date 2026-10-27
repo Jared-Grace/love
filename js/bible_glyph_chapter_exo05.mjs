@@ -65,7 +65,7 @@ export function bible_glyph_chapter_exo05() {
           "should",
           "$ear+loudspeaker",
           "His",
-          "$voice",
+          "$loudspeaker",
           "and",
           "let",
           "$wrestling+heart_on_fire",

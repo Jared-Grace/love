@@ -405,7 +405,7 @@ export function bible_glyph_chapter_1sa01() {
           "were",
           "moving,",
           "her",
-          "$voice",
+          "$loudspeaker",
           "could",
           "$no_entry",
           "be",

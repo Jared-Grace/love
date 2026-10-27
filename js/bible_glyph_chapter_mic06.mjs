@@ -33,7 +33,7 @@ export function bible_glyph_chapter_mic06() {
           "hills",
           "$ear+loudspeaker",
           "your",
-          "$voice.",
+          "$loudspeaker.",
         ],
       },
       {
@@ -279,7 +279,7 @@ export function bible_glyph_chapter_mic06() {
         verse_number: 9,
         words: [
           "The",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",

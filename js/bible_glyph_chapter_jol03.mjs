@@ -445,7 +445,7 @@ export function bible_glyph_chapter_jol03() {
           "and",
           "$hands_giving",
           "His",
-          "$voice",
+          "$loudspeaker",
           "from",
           "$city+peace;",
           "$sky",

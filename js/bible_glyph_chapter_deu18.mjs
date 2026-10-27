@@ -463,7 +463,7 @@ export function bible_glyph_chapter_deu18() {
           "$no_entry",
           "$ear+loudspeaker",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",

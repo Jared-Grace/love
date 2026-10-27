@@ -676,7 +676,7 @@ export function bible_glyph_chapter_2sa05() {
           "you",
           "$ear+loudspeaker",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "marching",
           "in",

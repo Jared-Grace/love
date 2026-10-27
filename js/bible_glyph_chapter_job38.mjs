@@ -498,7 +498,7 @@ export function bible_glyph_chapter_job38() {
           "$road",
           "for",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "thunderbolt,",

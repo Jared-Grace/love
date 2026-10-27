@@ -824,7 +824,7 @@ export function bible_glyph_chapter_jos24() {
           "and",
           "$ear+loudspeaker",
           "His",
-          "$voice.",
+          "$loudspeaker.",
         ],
       },
       {

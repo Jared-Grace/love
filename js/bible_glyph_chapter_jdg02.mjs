@@ -92,7 +92,7 @@ export function bible_glyph_chapter_jdg02() {
           "$no_entry",
           "$ear+loudspeaker",
           "My",
-          "$voice.",
+          "$loudspeaker.",
           "$flashlight+question",
           "is",
           "$flashlight",
@@ -716,7 +716,7 @@ export function bible_glyph_chapter_jdg02() {
           "$no_entry",
           "$ear+loudspeaker",
           "My",
-          "$voice,",
+          "$loudspeaker,",
         ],
       },
       {

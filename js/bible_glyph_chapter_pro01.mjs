@@ -380,7 +380,7 @@ export function bible_glyph_chapter_pro01() {
           "she",
           "$hands_giving",
           "her",
-          "$voice",
+          "$loudspeaker",
           "in",
           "the",
           "square.",

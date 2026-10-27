@@ -686,7 +686,7 @@ export function bible_glyph_chapter_2ch20() {
           "a",
           "very",
           "loud",
-          "$voice.",
+          "$loudspeaker.",
         ],
       },
       {

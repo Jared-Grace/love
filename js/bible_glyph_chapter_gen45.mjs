@@ -460,7 +460,7 @@ export function bible_glyph_chapter_gen45() {
         words: [
           "When",
           "the",
-          "$voice",
+          "$loudspeaker",
           "$ear+loudspeaker",
           "$house+proper_name's",
           "$house",

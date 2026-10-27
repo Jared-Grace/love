@@ -232,7 +232,7 @@ export function bible_glyph_chapter_rev10() {
           "$sun",
           "of",
           "$pin",
-          "$voice",
+          "$loudspeaker",
           "of",
           "$pin",
           "$seven+describing",

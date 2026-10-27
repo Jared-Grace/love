@@ -1938,7 +1938,7 @@ export function bible_glyph_chapter_1ki08() {
           "in",
           "a",
           "loud",
-          "$voice,",
+          "$loudspeaker,",
           "$speech,",
         ],
       },

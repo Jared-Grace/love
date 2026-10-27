@@ -715,7 +715,7 @@ export function bible_glyph_chapter_exo15() {
           "carefully",
           "to",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",

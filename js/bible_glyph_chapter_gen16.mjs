@@ -69,7 +69,7 @@ export function bible_glyph_chapter_gen16() {
           "$proper_name$Abram",
           "$ear+loudspeaker",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "$military_medal+proper_name.",
         ],

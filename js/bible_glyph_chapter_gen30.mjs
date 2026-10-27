@@ -142,7 +142,7 @@ export function bible_glyph_chapter_gen30() {
           "also",
           "$ear+loudspeaker",
           "my",
-          "$voice",
+          "$loudspeaker",
           "and",
           "$hands_giving",
           "me",

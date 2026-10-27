@@ -551,7 +551,7 @@ export function bible_glyph_chapter_neh08() {
           "and",
           "spread",
           "this",
-          "$voice",
+          "$loudspeaker",
           "$all",
           "their",
           "$city",

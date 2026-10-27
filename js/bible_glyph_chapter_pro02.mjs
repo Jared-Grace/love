@@ -61,7 +61,7 @@ export function bible_glyph_chapter_pro02() {
           "and",
           "$hands_giving",
           "your",
-          "$voice",
+          "$loudspeaker",
           "to",
           "understanding,",
         ],

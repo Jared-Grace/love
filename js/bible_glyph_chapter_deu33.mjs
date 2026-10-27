@@ -169,7 +169,7 @@ export function bible_glyph_chapter_deu33() {
           "O",
           "$i_am,",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "$hands_raised+proper_name,",
           "and",

@@ -134,7 +134,7 @@ export function bible_glyph_chapter_neh09() {
           "in",
           "a",
           "loud",
-          "$voice",
+          "$loudspeaker",
           "$toward",
           "the",
           "$i_am",

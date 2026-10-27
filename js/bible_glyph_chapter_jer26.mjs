@@ -471,7 +471,7 @@ export function bible_glyph_chapter_jer26() {
           "and",
           "$ear+loudspeaker",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",

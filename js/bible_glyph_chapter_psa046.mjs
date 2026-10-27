@@ -144,7 +144,7 @@ export function bible_glyph_chapter_psa046() {
           "He",
           "$hands_giving",
           "His",
-          "$voice.",
+          "$loudspeaker.",
         ],
       },
       {

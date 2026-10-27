@@ -410,7 +410,7 @@ export function bible_glyph_chapter_ezk11() {
           "in",
           "a",
           "loud",
-          "$voice,",
+          "$loudspeaker,",
           "$speech,",
           "$crying_face+speech,",
           "$crown",

@@ -208,7 +208,7 @@ export function bible_glyph_chapter_2ki10() {
           "will",
           "$ear+loudspeaker",
           "my",
-          "$voice,",
+          "$loudspeaker,",
           "then",
           "$hand_receiving",
           "the",

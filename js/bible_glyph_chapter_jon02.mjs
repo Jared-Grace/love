@@ -54,7 +54,7 @@ export function bible_glyph_chapter_jon02() {
           "You",
           "$ear+loudspeaker",
           "my",
-          "$voice.",
+          "$loudspeaker.",
         ],
       },
       {
@@ -219,7 +219,7 @@ export function bible_glyph_chapter_jon02() {
           "I,",
           "with",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "thanksgiving,",
           "will",

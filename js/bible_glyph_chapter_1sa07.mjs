@@ -356,7 +356,7 @@ export function bible_glyph_chapter_1sa07() {
           "with",
           "a",
           "loud",
-          "$voice",
+          "$loudspeaker",
           "against",
           "the",
           "$proper_name$Philistines",

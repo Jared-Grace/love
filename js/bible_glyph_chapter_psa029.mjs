@@ -61,7 +61,7 @@ export function bible_glyph_chapter_psa029() {
         verse_number: 3,
         words: [
           "The",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",
@@ -86,14 +86,14 @@ export function bible_glyph_chapter_psa029() {
         verse_number: 4,
         words: [
           "The",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",
           "is",
           "$lightning;",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",
@@ -105,7 +105,7 @@ export function bible_glyph_chapter_psa029() {
         verse_number: 5,
         words: [
           "The",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",
@@ -144,7 +144,7 @@ export function bible_glyph_chapter_psa029() {
         verse_number: 7,
         words: [
           "The",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",
@@ -159,7 +159,7 @@ export function bible_glyph_chapter_psa029() {
         verse_number: 8,
         words: [
           "The",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",
@@ -179,7 +179,7 @@ export function bible_glyph_chapter_psa029() {
         verse_number: 9,
         words: [
           "The",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$i_am",

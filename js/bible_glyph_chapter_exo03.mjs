@@ -648,7 +648,7 @@ export function bible_glyph_chapter_exo03() {
           "$ear+loudspeaker",
           "to",
           "your",
-          "$voice,",
+          "$loudspeaker,",
           "and",
           "$you",
           "must",

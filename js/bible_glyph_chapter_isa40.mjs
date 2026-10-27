@@ -67,7 +67,7 @@ export function bible_glyph_chapter_isa40() {
         verse_number: 3,
         words: [
           "A",
-          "$voice",
+          "$loudspeaker",
           "of",
           "one",
           "calling",
@@ -155,7 +155,7 @@ export function bible_glyph_chapter_isa40() {
         verse_number: 6,
         words: [
           "A",
-          "$voice",
+          "$loudspeaker",
           "$speech,",
           "Cry",
           "out.",
@@ -247,7 +247,7 @@ export function bible_glyph_chapter_isa40() {
           "news.",
           "Raise",
           "your",
-          "$voice",
+          "$loudspeaker",
           "loudly,",
           "O",
           "$city+peace,",

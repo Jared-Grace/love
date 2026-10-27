@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_num16() {
         words: [
           "At",
           "their",
-          "$voice",
+          "$loudspeaker",
           "$all",
           "the",
           "people",

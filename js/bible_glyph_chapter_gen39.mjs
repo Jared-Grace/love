@@ -448,7 +448,7 @@ export function bible_glyph_chapter_gen39() {
           "I",
           "screamed",
           "as",
-          "$voice",
+          "$loudspeaker",
           "as",
           "I",
           "could.",

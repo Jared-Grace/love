@@ -621,7 +621,7 @@ export function bible_glyph_chapter_mrk04() {
           "$speech",
           "to",
           "$pointing_back,",
-          "$eyes",
+          "$eyes+toward",
           "$flashlight+question",
           "you",
           "$ear+loudspeaker.",

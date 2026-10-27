@@ -235,7 +235,7 @@ export function bible_glyph_chapter_isa06() {
           "I",
           "$ear+loudspeaker",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "the",
           "$crown",

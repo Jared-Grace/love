@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_2ki04() {
           "there",
           "was",
           "no",
-          "$voice",
+          "$loudspeaker",
           "and",
           "no",
           "$ear_with_hearing_aid+thing.",

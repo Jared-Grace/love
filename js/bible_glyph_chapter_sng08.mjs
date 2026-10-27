@@ -395,7 +395,7 @@ export function bible_glyph_chapter_sng08() {
           "listening",
           "for",
           "your",
-          "$voice.",
+          "$loudspeaker.",
           "Let",
           "me",
           "$ear+loudspeaker",

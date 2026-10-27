@@ -156,7 +156,7 @@ export function bible_glyph_chapter_jol02() {
         words: [
           "With",
           "a",
-          "$voice",
+          "$loudspeaker",
           "like",
           "that",
           "of",
@@ -168,7 +168,7 @@ export function bible_glyph_chapter_jol02() {
           "$mountain,",
           "like",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "$fire",
           "$eating",

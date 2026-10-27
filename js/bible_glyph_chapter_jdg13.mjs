@@ -327,7 +327,7 @@ export function bible_glyph_chapter_jdg13() {
           "$heart_on_fire",
           "$ear+loudspeaker",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "$proper_name$Manoah,",
           "and",

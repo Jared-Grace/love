@@ -454,7 +454,7 @@ export function bible_glyph_chapter_zep02() {
           "her",
           "pillars.",
           "Their",
-          "$voice",
+          "$loudspeaker",
           "will",
           "sound",
           "from",

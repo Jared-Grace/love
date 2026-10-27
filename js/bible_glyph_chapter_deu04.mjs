@@ -1203,7 +1203,7 @@ export function bible_glyph_chapter_deu04() {
           "ever",
           "$ear+loudspeaker",
           "the",
-          "$voice",
+          "$loudspeaker",
           "of",
           "$heart_on_fire",
           "$voice+doing",

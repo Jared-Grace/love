@@ -202,7 +202,7 @@ export function bible_glyph_chapter_exo36() {
           "they",
           "sent",
           "a",
-          "$voice",
+          "$loudspeaker",
           "through",
           "the",
           "$camp,",

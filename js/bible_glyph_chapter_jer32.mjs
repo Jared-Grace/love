@@ -782,7 +782,7 @@ export function bible_glyph_chapter_jer32() {
           "$no_entry",
           "$ear+loudspeaker",
           "Your",
-          "$voice",
+          "$loudspeaker",
           "or",
           "$walking",
           "in",

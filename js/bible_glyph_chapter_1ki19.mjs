@@ -449,7 +449,7 @@ export function bible_glyph_chapter_1ki19() {
           "a",
           "$shushing_face+pause_button+thing,",
           "$pinching_hand+describing",
-          "$voice.",
+          "$loudspeaker.",
         ],
       },
       {
@@ -479,7 +479,7 @@ export function bible_glyph_chapter_1ki19() {
           "$cave.",
           "$exclamation",
           "a",
-          "$voice",
+          "$loudspeaker",
           "came",
           "to",
           "him",

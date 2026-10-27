@@ -436,7 +436,7 @@ export function bible_glyph_chapter_2ki11() {
           "Athaliah",
           "$ear+loudspeaker",
           "the",
-          "$voice",
+          "$loudspeaker",
           "from",
           "the",
           "guards",

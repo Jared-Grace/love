@@ -975,7 +975,7 @@ export function bible_glyph_chapter_exo28() {
           "ministers,",
           "and",
           "its",
-          "$voice",
+          "$loudspeaker",
           "will",
           "be",
           "$ear+loudspeaker",
