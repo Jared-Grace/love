@@ -801,7 +801,7 @@ export function bible_glyph_chapter_deu29() {
           "of",
           "their",
           "$father$s,",
-          "which",
+          "$back+flashlight",
           "He",
           "made",
           "with",
