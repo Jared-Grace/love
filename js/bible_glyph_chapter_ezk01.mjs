@@ -425,7 +425,7 @@ export function bible_glyph_chapter_ezk01() {
           "$sprout",
           "with",
           "its",
-          "four",
+          "$four",
           "faces.",
         ],
       },
