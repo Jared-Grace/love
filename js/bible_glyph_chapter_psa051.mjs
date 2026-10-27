@@ -169,7 +169,7 @@ export function bible_glyph_chapter_psa051() {
           "$bow+doing",
           "me",
           "with",
-          "hyssop,",
+          "$herb+bouquet,",
           "and",
           "I",
           "will",
