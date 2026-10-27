@@ -416,7 +416,7 @@ export function bible_glyph_chapter_num06() {
           "$footprints",
           "to",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "Tent",
