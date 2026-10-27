@@ -752,7 +752,7 @@ export function bible_glyph_chapter_gen50() {
           "bones",
           "up",
           "from",
-          "this",
+          "$flashlight",
           "place.",
         ],
       },
