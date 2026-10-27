@@ -947,7 +947,7 @@ export function bible_glyph_chapter_exo21() {
           "if",
           "a",
           "$man_beard",
-          "digs",
+          "$pick+hole+doing",
           "one",
           "and",
           "$no_entry",
