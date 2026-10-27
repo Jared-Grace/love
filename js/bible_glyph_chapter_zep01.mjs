@@ -508,7 +508,7 @@ export function bible_glyph_chapter_zep01() {
           "a",
           "$sun",
           "of",
-          "horn",
+          "$trumpet",
           "blast",
           "and",
           "battle",
