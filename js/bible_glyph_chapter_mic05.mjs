@@ -184,7 +184,7 @@ export function bible_glyph_chapter_mic05() {
           "raise",
           "against",
           "it",
-          "seven",
+          "$seven",
           "shepherds,",
           "even",
           "eight",
