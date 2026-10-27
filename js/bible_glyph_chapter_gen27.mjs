@@ -1370,7 +1370,7 @@ export function bible_glyph_chapter_gen27() {
           "Then",
           "Rebekah",
           "$speech",
-          "to",
+          "$toward",
           "$laughing+proper_name,",
           '"I',
           "am",
