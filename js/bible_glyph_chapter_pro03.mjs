@@ -321,7 +321,7 @@ export function bible_glyph_chapter_pro03() {
           "hand;",
           "in",
           "her",
-          "left",
+          "$hand+away",
           "hand",
           "are",
           "riches",
