@@ -713,7 +713,7 @@ export function bible_glyph_chapter_jdg07() {
           "of",
           "the",
           "middle",
-          "watch,",
+          "$guard+night,",
           "just",
           "after",
           "the",
