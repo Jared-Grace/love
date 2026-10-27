@@ -644,7 +644,7 @@ export function bible_glyph_chapter_2ki06() {
           "the",
           "$eyes",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "men,",
           "that",
           "they",
