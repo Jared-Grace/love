@@ -353,7 +353,7 @@ export function bible_glyph_chapter_1sa20() {
           "would",
           "I",
           "$no_entry",
-          "tell",
+          "$newspaper",
           "you?",
         ],
       },
