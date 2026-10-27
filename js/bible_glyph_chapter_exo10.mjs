@@ -187,7 +187,7 @@ export function bible_glyph_chapter_exo10() {
           "devour",
           "whatever",
           "is",
-          "left",
+          "$puzzle_piece+doing",
           "$tray_out",
           "the",
           "hail,",
