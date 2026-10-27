@@ -532,7 +532,7 @@ export function bible_glyph_chapter_1sa17() {
           "$valley",
           "of",
           "$proper_name$Elah,",
-          "fighting",
+          "$crossed_swords+doing",
           "against",
           "the",
           "$proper_name$Philistines.",
