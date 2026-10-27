@@ -754,7 +754,7 @@ export function bible_glyph_chapter_gen41() {
           "wind:",
           "they",
           "are",
-          "seven",
+          "$seven",
           "$year",
           "of",
           "famine.",
