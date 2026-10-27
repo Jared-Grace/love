@@ -71,7 +71,7 @@ export function bible_glyph_chapter_1sa03() {
         words: [
           "Before",
           "the",
-          "lamp",
+          "$lamp",
           "of",
           "$heart_on_fire",
           "had",
