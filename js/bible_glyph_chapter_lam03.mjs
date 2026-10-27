@@ -580,7 +580,7 @@ export function bible_glyph_chapter_lam03() {
           "He",
           "will",
           "show",
-          "compassion",
+          "$hugging_face+doing",
           "according",
           "to",
           "His",
