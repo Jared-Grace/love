@@ -749,7 +749,7 @@ export function bible_glyph_chapter_deu28() {
           "your",
           "$earth",
           "into",
-          "dust",
+          "$dust+wind",
           "and",
           "powder,",
           "and",
