@@ -141,7 +141,7 @@ export function bible_glyph_chapter_lev15() {
         words: [
           "Whoever",
           "sits",
-          "on",
+          "$pointing_up",
           "furniture",
           "on",
           "which",
