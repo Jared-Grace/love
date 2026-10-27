@@ -654,7 +654,7 @@ export function bible_glyph_chapter_pro01() {
           "$tent+doing",
           "in",
           "safety,",
-          "secure",
+          "$face_exhaling+check+doing",
           "from",
           "the",
           "fear",
