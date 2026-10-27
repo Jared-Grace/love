@@ -374,7 +374,7 @@ export function bible_glyph_chapter_mic04() {
           "in",
           "labor.",
           "$pointing",
-          "now",
+          "$watch",
           "you",
           "will",
           "leave",
