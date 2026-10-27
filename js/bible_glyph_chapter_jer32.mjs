@@ -51,7 +51,7 @@ export function bible_glyph_chapter_jer32() {
           "that",
           "time",
           "the",
-          "army",
+          "$raised_fist",
           "of",
           "the",
           "$king",
