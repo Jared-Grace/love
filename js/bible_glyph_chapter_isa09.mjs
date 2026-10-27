@@ -124,7 +124,7 @@ export function bible_glyph_chapter_isa09() {
       {
         verse_number: 4,
         words: [
-          "For",
+          "$pointing",
           "as",
           "in",
           "the",
