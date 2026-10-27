@@ -571,7 +571,7 @@ export function bible_glyph_chapter_gen26() {
           "$person+sheep",
           "of",
           "$proper_name$Gerar",
-          "quarreled",
+          "$wrestling+doing",
           "with",
           "the",
           "$person+sheep",
