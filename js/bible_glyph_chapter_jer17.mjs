@@ -880,7 +880,7 @@ export function bible_glyph_chapter_jer17() {
           "and",
           "$tray_out",
           "the",
-          "Negev,",
+          "$compass+down_arrow,",
           "$footprints",
           "burnt",
           "offerings",
