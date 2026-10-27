@@ -24,7 +24,7 @@ export function bible_glyph_chapter_lev16() {
           "$skull",
           "of",
           "the",
-          "two",
+          "$two",
           "$son",
           "of",
           "Aaron,",
