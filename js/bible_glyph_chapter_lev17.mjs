@@ -236,7 +236,7 @@ export function bible_glyph_chapter_lev17() {
           "they",
           "have",
           "prostituted",
-          "themselves.",
+          "$next_track.",
           "This",
           "will",
           "be",
