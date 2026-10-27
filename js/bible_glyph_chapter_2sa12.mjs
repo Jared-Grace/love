@@ -992,7 +992,7 @@ export function bible_glyph_chapter_2sa12() {
           "was",
           "set",
           "with",
-          "precious",
+          "$gem_stone+describing",
           "$stone,",
           "and",
           "it",
