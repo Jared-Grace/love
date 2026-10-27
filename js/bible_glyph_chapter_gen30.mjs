@@ -283,7 +283,7 @@ export function bible_glyph_chapter_gen30() {
           "Happy",
           "am",
           "I,",
-          "for",
+          "$pointing",
           "the",
           "$woman",
           "will",
