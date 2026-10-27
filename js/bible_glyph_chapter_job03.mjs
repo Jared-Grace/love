@@ -376,7 +376,7 @@ export function bible_glyph_chapter_job03() {
           "captives",
           "$linked_paperclips+manner",
           "their",
-          "ease.",
+          "$face_exhaling+check+doing.",
           "They",
           "do",
           "$no_entry",
