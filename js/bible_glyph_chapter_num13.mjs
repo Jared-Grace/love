@@ -522,7 +522,7 @@ export function bible_glyph_chapter_num13() {
           "because",
           "of",
           "the",
-          "cluster",
+          "$grapes+bouquet",
           "of",
           "grapes",
           "the",
