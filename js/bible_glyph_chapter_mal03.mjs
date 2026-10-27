@@ -207,7 +207,7 @@ export function bible_glyph_chapter_mal03() {
           "who",
           "do",
           "$no_entry",
-          "fear",
+          "$fear+doing",
           "Me,",
           "$speech",
           "the",
