@@ -215,7 +215,7 @@ export function bible_glyph_chapter_gen09() {
           "the",
           "$earth",
           "and",
-          "multiply",
+          "$multiply+doing",
           "upon",
           "it.",
         ],
