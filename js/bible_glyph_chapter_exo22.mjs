@@ -219,7 +219,7 @@ export function bible_glyph_chapter_exo22() {
           "$hands_giving",
           "$silver",
           "$shuffle",
-          "goods",
+          "$toolbox",
           "to",
           "his",
           "neighbour",
