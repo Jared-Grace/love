@@ -596,7 +596,7 @@ export function bible_glyph_chapter_isa43() {
           "$no_entry",
           "$lightbulb",
           "it?",
-          "Indeed,",
+          "$plus+exclamation,",
           "I",
           "will",
           "make",
