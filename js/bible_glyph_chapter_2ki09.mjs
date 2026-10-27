@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_2ki09() {
           "$speech,",
           "$fist",
           "him",
-          "too.",
+          "$plus.",
           "So",
           "they",
           "shot",
