@@ -713,7 +713,7 @@ export function bible_glyph_chapter_zec08() {
           "will",
           "$footprints",
           "to",
-          "seek",
+          "$magnifying_glass",
           "the",
           "$i_am",
           "of",
