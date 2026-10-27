@@ -1146,7 +1146,7 @@ export function bible_glyph_chapter_deu04() {
           "about",
           "the",
           "$sun",
-          "that",
+          "$back+flashlight",
           "$first_place",
           "preceded",
           "you,",
