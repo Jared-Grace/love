@@ -247,7 +247,7 @@ export function bible_glyph_chapter_ezk01() {
           "$walking;",
           "$man_beard",
           "$walking",
-          "straight",
+          "$bridge+thing",
           "ahead.",
         ],
       },
