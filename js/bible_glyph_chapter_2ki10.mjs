@@ -734,7 +734,7 @@ export function bible_glyph_chapter_2ki10() {
           "have",
           "a",
           "great",
-          "sacrifice",
+          "$sacrifice",
           "for",
           "Baal.",
           "Whoever",
