@@ -1292,7 +1292,7 @@ export function bible_glyph_chapter_2ki04() {
           "up",
           "into",
           "the",
-          "pot",
+          "$pot_of_food",
           "of",
           "stew,",
           "though",
