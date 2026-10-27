@@ -65,7 +65,7 @@ export function bible_glyph_chapter_exo12() {
           "tenth",
           "day",
           "of",
-          "this",
+          "$flashlight",
           "$new_moon",
           "each",
           "$man_beard",
