@@ -594,7 +594,7 @@ export function bible_glyph_chapter_hos02() {
           "I",
           "will",
           "abolish",
-          "bow",
+          "$bow+wood",
           "and",
           "$sword",
           "and",
