@@ -466,7 +466,7 @@ export function bible_glyph_chapter_pro01() {
       {
         verse_number: 24,
         words: [
-          "Because",
+          "$information",
           "you",
           "refused",
           "my",
