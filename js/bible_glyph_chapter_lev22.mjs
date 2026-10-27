@@ -45,7 +45,7 @@ export function bible_glyph_chapter_lev22() {
           "My",
           "$sparkle+doing",
           "$name_tag.",
-          "I",
+          "$me",
           "am",
           "$i_am.",
         ],
