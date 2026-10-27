@@ -963,7 +963,7 @@ export function bible_glyph_chapter_deu11() {
           "$hands_giving",
           "the",
           "$speech+thumbs_up",
-          "on",
+          "$pointing_up",
           "$mountain",
           "$proper_name$Gerizim",
           "and",
