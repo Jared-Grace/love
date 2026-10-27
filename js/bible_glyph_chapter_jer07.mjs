@@ -165,7 +165,7 @@ export function bible_glyph_chapter_jer07() {
           "$smiling_face_with_halo+describing",
           "$blood",
           "in",
-          "this",
+          "$flashlight",
           "$place,",
           "and",
           "$no_entry",
