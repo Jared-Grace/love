@@ -240,7 +240,7 @@ export function bible_glyph_chapter_exo35() {
         verse_number: 11,
         words: [
           "the",
-          "tabernacle",
+          "$tent+house",
           "with",
           "its",
           "$tent",
