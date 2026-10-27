@@ -203,7 +203,7 @@ export function bible_glyph_chapter_lev17() {
           "the",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "and",
           "burn",
           "the",
