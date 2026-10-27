@@ -674,7 +674,7 @@ export function bible_glyph_chapter_lev19() {
         words: [
           "In",
           "the",
-          "fourth",
+          "$four+describing",
           "$year",
           "all",
           "its",
