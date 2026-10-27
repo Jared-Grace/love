@@ -749,7 +749,7 @@ export function bible_glyph_chapter_2ki22() {
       {
         verse_number: 20,
         words: [
-          "Therefore",
+          "$right_arrow",
           "I",
           "will",
           "indeed",
