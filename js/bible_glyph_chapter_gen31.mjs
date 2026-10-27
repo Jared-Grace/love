@@ -123,7 +123,7 @@ export function bible_glyph_chapter_gen31() {
           "it",
           "is",
           "not",
-          "toward",
+          "$toward",
           "me",
           "as",
           "before.",
