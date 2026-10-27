@@ -185,7 +185,7 @@ export function bible_glyph_chapter_num15() {
         words: [
           "and",
           "a",
-          "third",
+          "$third_place",
           "of",
           "a",
           "hin",
