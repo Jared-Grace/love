@@ -309,7 +309,7 @@ export function bible_glyph_chapter_lev19() {
           "your",
           "neighbour",
           "$no_entry",
-          "rob",
+          "$supervillain",
           "him.",
           "You",
           "must",
