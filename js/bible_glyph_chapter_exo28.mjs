@@ -314,7 +314,7 @@ export function bible_glyph_chapter_exo28() {
           "$hammer_and_wrench+doer",
           "$rock+writing_hand+thing",
           "a",
-          "seal,",
+          "$ring+locked+thing,",
           "engrave",
           "on",
           "the",
