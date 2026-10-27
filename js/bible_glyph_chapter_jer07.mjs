@@ -40,7 +40,7 @@ export function bible_glyph_chapter_jer07() {
           "$i_am",
           "and",
           "proclaim",
-          "this",
+          "$flashlight",
           "$speech",
           "there,",
           "$speech,",
