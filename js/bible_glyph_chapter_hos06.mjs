@@ -279,7 +279,7 @@ export function bible_glyph_chapter_hos06() {
           "$house",
           "of",
           "$wrestling+heart_on_fire;",
-          "there",
+          "$telescope",
           "$fruit",
           "practices",
           "prostitution",
