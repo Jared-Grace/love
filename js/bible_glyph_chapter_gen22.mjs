@@ -17,7 +17,7 @@ export function bible_glyph_chapter_gen22() {
           "time",
           "later",
           "$heart_on_fire",
-          "tested",
+          "$test_tube",
           "$father+map",
           "and",
           "$speech",
