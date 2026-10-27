@@ -570,7 +570,7 @@ export function bible_glyph_chapter_lev10() {
         verse_number: 19,
         words: [
           "But",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$mouth",
           "to",
           "$fishing_pole+proper_name,",
