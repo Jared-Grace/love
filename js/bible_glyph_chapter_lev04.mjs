@@ -397,7 +397,7 @@ export function bible_glyph_chapter_lev04() {
           "$face",
           "$tent",
           "of",
-          "Meeting.",
+          "$alarm_clock.",
         ],
       },
       {
