@@ -747,7 +747,7 @@ export function bible_glyph_chapter_exo32() {
           "enraged,",
           "my",
           "$crown.",
-          "You",
+          "$you",
           "yourself",
           "$lightbulb",
           "that",
