@@ -122,7 +122,7 @@ export function bible_glyph_chapter_psa063() {
           "$person_other",
           "is",
           "satisfied",
-          "as",
+          "$likeness",
           "with",
           "the",
           "richest",
