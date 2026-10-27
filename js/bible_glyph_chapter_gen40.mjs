@@ -642,7 +642,7 @@ export function bible_glyph_chapter_gen40() {
           "Yet",
           "the",
           "chief",
-          "cupbearer",
+          "$cup+hands_giving+doer",
           "did",
           "$no_entry",
           "$reminder_ribbon",
