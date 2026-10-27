@@ -345,7 +345,7 @@ export function bible_glyph_chapter_mic01() {
           "$bridge",
           "in",
           "shameful",
-          "nakedness,",
+          "$face_with_peeking_eye,",
           "O",
           "dwellers",
           "of",
