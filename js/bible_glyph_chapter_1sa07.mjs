@@ -155,7 +155,7 @@ export function bible_glyph_chapter_1sa07() {
           "and",
           "$kneeling+doing",
           "$i_am",
-          "only.",
+          "$one+person.",
         ],
       },
       {
