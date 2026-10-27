@@ -576,7 +576,7 @@ export function bible_glyph_chapter_1sa03() {
           "He",
           "let",
           "$no_entry",
-          "of",
+          "$all",
           "Samuels",
           "$speech",
           "$person+pointing_down",
