@@ -355,7 +355,7 @@ export function bible_glyph_chapter_num16() {
           "$white_cane+blossom+proper_name,",
           "who",
           "is",
-          "he",
+          "$pointing_back",
           "that",
           "you",
           "should",
