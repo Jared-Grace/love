@@ -247,7 +247,7 @@ export function bible_glyph_chapter_lam01() {
           "$all",
           "the",
           "treasures",
-          "that",
+          "$back+flashlight",
           "were",
           "hers",
           "in",
