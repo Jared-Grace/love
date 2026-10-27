@@ -884,7 +884,7 @@ export function bible_glyph_chapter_jdg07() {
           "$speech,",
           "Come",
           "down",
-          "against",
+          "$footprints+toward+doing",
           "the",
           "$proper_name$Midianites",
           "and",
