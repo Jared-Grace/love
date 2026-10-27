@@ -1359,7 +1359,7 @@ export function bible_glyph_chapter_deu04() {
           "$clamp+proper_name",
           "by",
           "His",
-          "presence",
+          "$face",
           "and",
           "great",
           "$lightning,",
