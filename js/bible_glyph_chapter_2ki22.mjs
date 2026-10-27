@@ -481,7 +481,7 @@ export function bible_glyph_chapter_2ki22() {
           "$speech",
           "of",
           "this",
-          "book,",
+          "$closed_book,",
           "by",
           "$hammer+doing",
           "$all",
