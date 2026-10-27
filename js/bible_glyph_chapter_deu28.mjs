@@ -2074,7 +2074,7 @@ export function bible_glyph_chapter_deu28() {
           "of",
           "the",
           "$earth",
-          "to",
+          "$finish",
           "the",
           "other",
           "end",
