@@ -231,7 +231,7 @@ export function bible_glyph_chapter_psa095() {
           "go",
           "astray,",
           "and",
-          "they",
+          "$pointing_back",
           "have",
           "$no_entry",
           "$lightbulb",
