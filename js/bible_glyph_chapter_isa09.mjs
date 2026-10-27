@@ -563,7 +563,7 @@ export function bible_glyph_chapter_isa09() {
           "$herb+knot,",
           "which",
           "roll",
-          "upward",
+          "$cyclone+up_arrow+doing",
           "in",
           "billows",
           "of",
