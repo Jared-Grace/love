@@ -282,7 +282,7 @@ export function bible_glyph_chapter_2ch20() {
           "and",
           "before",
           "You,",
-          "for",
+          "$pointing",
           "Your",
           "$name_tag",
           "is",
