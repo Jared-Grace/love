@@ -1697,7 +1697,7 @@ export function bible_glyph_chapter_deu04() {
           "of",
           "the",
           "$proper_name$Arnon",
-          "Valley",
+          "$national_park",
           "as",
           "far",
           "as",
