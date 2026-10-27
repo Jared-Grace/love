@@ -896,7 +896,7 @@ export function bible_glyph_chapter_deu31() {
           "$fishing_pole+proper_name",
           "had",
           "finished",
-          "writing",
+          "$writing_hand",
           "in",
           "a",
           "book",
