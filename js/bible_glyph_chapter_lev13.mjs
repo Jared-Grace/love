@@ -1380,7 +1380,7 @@ export function bible_glyph_chapter_lev13() {
           "hairline",
           "$hair+away+doing",
           "and",
-          "he",
+          "$pointing_back",
           "is",
           "$face+top+hair+no_entry",
           "on",
