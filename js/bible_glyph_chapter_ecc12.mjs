@@ -298,7 +298,7 @@ export function bible_glyph_chapter_ecc12() {
           "Teacher",
           "$magnifying_glass",
           "to",
-          "find",
+          "$magnifying_glass+exclamation",
           "delightful",
           "$speech,",
           "and",
