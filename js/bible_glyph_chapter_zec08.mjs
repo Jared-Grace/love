@@ -73,7 +73,7 @@ export function bible_glyph_chapter_zec08() {
           "$toward",
           "$proper_name$Zion",
           "and",
-          "dwell",
+          "$tent+doing",
           "in",
           "$city+peace.",
           "Then",
