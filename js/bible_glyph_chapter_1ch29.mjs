@@ -488,7 +488,7 @@ export function bible_glyph_chapter_1ch29() {
           "$hands_raised",
           "and",
           "we",
-          "praise",
+          "$clapping_hands",
           "Your",
           "glorious",
           "$name_tag.",
