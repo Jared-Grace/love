@@ -1411,7 +1411,7 @@ export function bible_glyph_chapter_deu04() {
           "and",
           "$turn_back",
           "it",
-          "to",
+          "$toward",
           "your",
           "$heart_organ,",
           "that",
