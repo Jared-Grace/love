@@ -949,7 +949,7 @@ export function bible_glyph_chapter_lev08() {
           "$tent",
           "of",
           "$alarm_clock",
-          "day",
+          "$sun+manner",
           "$night",
           "for",
           "seven",
