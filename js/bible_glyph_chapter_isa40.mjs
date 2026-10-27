@@ -835,7 +835,7 @@ export function bible_glyph_chapter_isa40() {
           "He",
           "will",
           "$no_entry",
-          "grow",
+          "$weary_face+wing+doing",
           "tired",
           "or",
           "weary;",
