@@ -260,7 +260,7 @@ export function bible_glyph_chapter_jos06() {
           "horns,",
           "and",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$covenant",
