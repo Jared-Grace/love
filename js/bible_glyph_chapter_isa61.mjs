@@ -22,7 +22,7 @@ export function bible_glyph_chapter_isa61() {
           "is",
           "on",
           "Me,",
-          "because",
+          "$information",
           "the",
           "$i_am",
           "has",
