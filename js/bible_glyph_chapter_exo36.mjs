@@ -513,7 +513,7 @@ export function bible_glyph_chapter_exo36() {
           "set,",
           "and",
           "$hammer+doing",
-          "fifty",
+          "$five+zero",
           "$curly_loop",
           "along",
           "the",
