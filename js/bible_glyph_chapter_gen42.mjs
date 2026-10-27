@@ -427,7 +427,7 @@ export function bible_glyph_chapter_gen42() {
           "The",
           "rest",
           "of",
-          "you",
+          "$you",
           "will",
           "be",
           "confined,",
