@@ -366,7 +366,7 @@ export function bible_glyph_chapter_mic06() {
           "its",
           "residents",
           "$mouth",
-          "lies;",
+          "$lying_face;",
           "their",
           "tongues",
           "are",
