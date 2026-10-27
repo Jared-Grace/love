@@ -1243,7 +1243,7 @@ export function bible_glyph_chapter_lev26() {
         verse_number: 41,
         words: [
           "and",
-          "I",
+          "$me",
           "$walking",
           "toward",
           "them",
