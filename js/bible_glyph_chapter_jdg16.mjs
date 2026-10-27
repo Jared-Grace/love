@@ -1033,7 +1033,7 @@ export function bible_glyph_chapter_jdg16() {
           "men",
           "and",
           "$woman;",
-          "all",
+          "$all",
           "the",
           "lords",
           "of",
