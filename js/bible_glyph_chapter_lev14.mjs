@@ -313,7 +313,7 @@ export function bible_glyph_chapter_lev14() {
           "an",
           "$full_moon+describing",
           "ewe",
-          "lamb",
+          "$lamb+female_sign",
           "that",
           "is",
           "a",
