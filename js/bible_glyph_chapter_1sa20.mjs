@@ -1227,7 +1227,7 @@ export function bible_glyph_chapter_1sa20() {
           "and",
           "a",
           "small",
-          "boy",
+          "$child+flexed_biceps",
           "was",
           "with",
           "him.",
