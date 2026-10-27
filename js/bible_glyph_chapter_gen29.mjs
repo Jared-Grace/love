@@ -409,7 +409,7 @@ export function bible_glyph_chapter_gen29() {
           "with",
           "him",
           "a",
-          "month.",
+          "$new_moon.",
         ],
       },
       {
