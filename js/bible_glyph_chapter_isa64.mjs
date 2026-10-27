@@ -198,7 +198,7 @@ export function bible_glyph_chapter_isa64() {
       {
         verse_number: 7,
         words: [
-          "No",
+          "$dotted_line_face",
           "one",
           "calls",
           "on",
