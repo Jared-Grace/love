@@ -132,7 +132,7 @@ export function bible_glyph_chapter_2ki04() {
           "your",
           "$son,",
           "and",
-          "pour",
+          "$pouring_liquid+fire",
           "the",
           "oil",
           "into",
