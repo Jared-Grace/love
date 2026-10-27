@@ -598,7 +598,7 @@ export function bible_glyph_chapter_num19() {
           "sprinkle",
           "the",
           "$tent,",
-          "all",
+          "$all",
           "the",
           "furnishings,",
           "and",
