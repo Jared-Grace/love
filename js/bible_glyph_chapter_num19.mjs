@@ -171,7 +171,7 @@ export function bible_glyph_chapter_num19() {
           "$radio_button",
           "the",
           "burning",
-          "heifer.",
+          "$bull.",
         ],
       },
       {
