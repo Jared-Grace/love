@@ -269,7 +269,7 @@ export function bible_glyph_chapter_exo19() {
           "I",
           "will",
           "$footprints",
-          "to",
+          "$toward",
           "you",
           "in",
           "a",
