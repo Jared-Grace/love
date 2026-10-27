@@ -361,7 +361,7 @@ export function bible_glyph_chapter_psa051() {
           "$no_entry",
           "pleasure",
           "in",
-          "burnt",
+          "$burnt_offering",
           "offerings.",
         ],
       },
