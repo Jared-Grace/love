@@ -187,7 +187,7 @@ export function bible_glyph_chapter_job01() {
           "the",
           "$i_am,",
           "and",
-          "Satan",
+          "$smiling_face_with_horns",
           "$footprints",
           "with",
           "them.",
