@@ -532,7 +532,7 @@ export function bible_glyph_chapter_jdg04() {
           "$proper_name$Heber",
           "the",
           "$proper_name$Kenite,",
-          "because",
+          "$pointing",
           "there",
           "was",
           "$peace",
