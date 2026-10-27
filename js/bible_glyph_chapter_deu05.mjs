@@ -701,7 +701,7 @@ export function bible_glyph_chapter_deu05() {
           "we",
           "have",
           "$eye",
-          "that",
+          "$pointing",
           "$heart_on_fire",
           "may",
           "$mouth",
