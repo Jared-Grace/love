@@ -934,7 +934,7 @@ export function bible_glyph_chapter_jer29() {
           "have",
           "you",
           "$no_entry",
-          "rebuked",
+          "$pointing+anger_symbol+doing",
           "$up_arrow+i_am",
           "of",
           "$proper_name$Anathoth,",
