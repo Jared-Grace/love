@@ -1296,7 +1296,7 @@ export function bible_glyph_chapter_jer31() {
           "they",
           "have",
           "$hammer+doing,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
