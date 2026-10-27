@@ -417,7 +417,7 @@ export function bible_glyph_chapter_exo33() {
           "$speech",
           "me,",
           "$walking+pointing_up",
-          "this",
+          "$flashlight",
           "$family",
           "up.",
           "But",
