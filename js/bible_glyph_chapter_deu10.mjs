@@ -337,7 +337,7 @@ export function bible_glyph_chapter_deu10() {
           "the",
           "$first_place",
           "$sun,",
-          "forty",
+          "$four+zero",
           "$sun",
           "and",
           "forty",
