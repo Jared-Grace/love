@@ -256,7 +256,7 @@ export function bible_glyph_chapter_isa61() {
           "so",
           "they",
           "will",
-          "inherit",
+          "$triangular_flag",
           "a",
           "$two+multiply",
           "portion",
