@@ -1170,7 +1170,7 @@ export function bible_glyph_chapter_2ki09() {
           "three",
           "eunuchs",
           "looked",
-          "down",
+          "$window+eyes+doing",
           "at",
           "him.",
         ],
