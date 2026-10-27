@@ -981,7 +981,7 @@ export function bible_glyph_chapter_lev19() {
           "$stone,",
           "an",
           "$ruler+thing",
-          "ephah,",
+          "$bucket+input_numbers,",
           "and",
           "an",
           "$ruler+thing",
