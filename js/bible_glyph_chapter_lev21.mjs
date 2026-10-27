@@ -544,7 +544,7 @@ export function bible_glyph_chapter_lev21() {
           "festering",
           "rash",
           "or",
-          "scabs,",
+          "$microbe+snow,",
           "or",
           "a",
           "crushed",
