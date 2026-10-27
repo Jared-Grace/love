@@ -108,7 +108,7 @@ export function bible_glyph_chapter_lev10() {
         verse_number: 4,
         words: [
           "$fishing_pole+proper_name",
-          "summoned",
+          "$waving_hand",
           "$proper_name$Mishael",
           "and",
           "$proper_name$Elzaphan,",
