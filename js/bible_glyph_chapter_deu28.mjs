@@ -2249,7 +2249,7 @@ export function bible_glyph_chapter_deu28() {
           "no",
           "one",
           "will",
-          "buy",
+          "$coin+hand_receiving",
           "you.",
         ],
       },
