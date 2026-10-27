@@ -475,7 +475,7 @@ export function bible_glyph_chapter_isa49() {
           "break",
           "forth",
           "in",
-          "song,",
+          "$partying_face+thing,",
           "O",
           "$mountain$s!",
           "For",
