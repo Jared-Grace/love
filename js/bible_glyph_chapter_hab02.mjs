@@ -358,7 +358,7 @@ export function bible_glyph_chapter_hab02() {
       {
         verse_number: 12,
         words: [
-          "Woe",
+          "$weary_face",
           "to",
           "him",
           "who",
