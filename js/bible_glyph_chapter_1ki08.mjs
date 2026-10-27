@@ -47,7 +47,7 @@ export function bible_glyph_chapter_1ki08() {
           "$walking+pointing_up",
           "up",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$covenant",
