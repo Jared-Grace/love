@@ -54,7 +54,7 @@ export function bible_glyph_chapter_gen08() {
           "springs",
           "of",
           "the",
-          "deep",
+          "$sea+down_arrow",
           "and",
           "the",
           "floodgates",
