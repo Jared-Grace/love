@@ -447,7 +447,7 @@ export function bible_glyph_chapter_deu31() {
           "all",
           "the",
           "$sun",
-          "you",
+          "$you",
           "$sprout",
           "in",
           "the",
