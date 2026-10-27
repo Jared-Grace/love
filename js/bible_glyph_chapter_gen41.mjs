@@ -1169,7 +1169,7 @@ export function bible_glyph_chapter_gen41() {
           "placed",
           "a",
           "gold",
-          "chain",
+          "$gold+link",
           "around",
           "his",
           "neck.",
