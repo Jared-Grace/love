@@ -442,7 +442,7 @@ export function bible_glyph_chapter_zec08() {
           "$right_arrow",
           "I",
           "will",
-          "save",
+          "$rescue",
           "you,",
           "and",
           "you",
