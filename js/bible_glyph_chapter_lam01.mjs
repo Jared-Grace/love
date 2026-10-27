@@ -128,7 +128,7 @@ export function bible_glyph_chapter_lam01() {
           "$road",
           "to",
           "$proper_name$Zion",
-          "mourn,",
+          "$loudly_crying+coffin+describing,",
           "because",
           "no",
           "one",
