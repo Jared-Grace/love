@@ -847,7 +847,7 @@ export function bible_glyph_chapter_job31() {
           "stinkweed",
           "instead",
           "of",
-          "barley.",
+          "$barley.",
           "Thus",
           "conclude",
           "the",
