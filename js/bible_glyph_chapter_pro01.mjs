@@ -217,7 +217,7 @@ export function bible_glyph_chapter_pro01() {
         words: [
           "let",
           "us",
-          "swallow",
+          "$whale",
           "them",
           "$sprout",
           "like",
