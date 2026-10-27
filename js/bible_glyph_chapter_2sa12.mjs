@@ -928,7 +928,7 @@ export function bible_glyph_chapter_2sa12() {
           "the",
           "$city,",
           "and",
-          "capture",
+          "$net+doing",
           "it.",
           "Otherwise",
           "I",
