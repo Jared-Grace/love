@@ -479,7 +479,7 @@ export function bible_glyph_chapter_num13() {
           "of",
           "$proper_name$Eshcol,",
           "they",
-          "cut",
+          "$scissors",
           "down",
           "a",
           "branch",
