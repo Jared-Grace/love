@@ -125,7 +125,7 @@ export function bible_glyph_chapter_lev14() {
           "in",
           "a",
           "clay",
-          "pot.",
+          "$toolbox.",
         ],
       },
       {
