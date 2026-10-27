@@ -43,7 +43,7 @@ export function bible_glyph_chapter_num27() {
           "of",
           "$i_am+plus,",
           "approached.",
-          "These",
+          "$flashlight+flashlight",
           "were",
           "the",
           "$name_tag",
