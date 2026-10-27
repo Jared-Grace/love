@@ -511,7 +511,7 @@ export function bible_glyph_chapter_pro01() {
           "will",
           "sneer",
           "when",
-          "terror",
+          "$fearful_face",
           "$footprints",
           "you,",
         ],
