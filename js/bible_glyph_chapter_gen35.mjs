@@ -74,7 +74,7 @@ export function bible_glyph_chapter_gen35() {
           "Purify",
           "yourselves",
           "and",
-          "change",
+          "$clockwise_arrows+doing",
           "your",
           "clothes.",
         ],
