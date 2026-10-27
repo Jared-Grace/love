@@ -839,7 +839,7 @@ export function bible_glyph_chapter_2ki06() {
           "$wheat+jar",
           "of",
           "doves",
-          "dung",
+          "$pile_of_poo+thing",
           "sold",
           "for",
           "five",
