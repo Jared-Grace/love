@@ -467,7 +467,7 @@ export function bible_glyph_chapter_exo37() {
         words: [
           "There",
           "were",
-          "three",
+          "$three",
           "cups",
           "shaped",
           "like",
