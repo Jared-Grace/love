@@ -1401,7 +1401,7 @@ export function bible_glyph_chapter_1ki02() {
           "$three",
           "$year,",
           "$link,",
-          "two",
+          "$two",
           "$kneeling",
           "of",
           "Shimei",
