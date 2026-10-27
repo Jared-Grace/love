@@ -585,7 +585,7 @@ export function bible_glyph_chapter_zep01() {
           "of",
           "the",
           "$i_am",
-          "wrath.",
+          "$anger_symbol.",
           "The",
           "whole",
           "$earth",
