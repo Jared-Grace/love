@@ -757,7 +757,7 @@ export function bible_glyph_chapter_lev16() {
           "is",
           "to",
           "lay",
-          "both",
+          "$two",
           "$hand",
           "on",
           "the",
