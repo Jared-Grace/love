@@ -253,7 +253,7 @@ export function bible_glyph_chapter_lev16() {
         verse_number: 8,
         words: [
           "After",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$hands_giving",
           "lots",
           "for",
