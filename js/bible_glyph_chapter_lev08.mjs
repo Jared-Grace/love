@@ -155,7 +155,7 @@ export function bible_glyph_chapter_lev08() {
           "$palm_down",
           "the",
           "breastpiece",
-          "on",
+          "$pointing_up",
           "him,",
           "and",
           "$hands_giving",
