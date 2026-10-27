@@ -69,7 +69,7 @@ export function bible_glyph_chapter_jer23() {
           "attended",
           "to",
           "them.",
-          "Behold,",
+          "$exclamation,",
           "I",
           "will",
           "attend",
