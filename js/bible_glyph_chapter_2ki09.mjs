@@ -925,7 +925,7 @@ export function bible_glyph_chapter_2ki09() {
           "$me",
           "were",
           "riding",
-          "together",
+          "$ox+two",
           "behind",
           "$proper_name$Ahab",
           "his",
