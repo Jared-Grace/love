@@ -190,7 +190,7 @@ export function bible_glyph_chapter_gen26() {
           "of",
           "the",
           "$place",
-          "asked",
+          "$question",
           "about",
           "his",
           "$woman,",
