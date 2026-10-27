@@ -629,7 +629,7 @@ export function bible_glyph_chapter_exo40() {
           "he",
           "burned",
           "fragrant",
-          "incense",
+          "$incense",
           "on",
           "it,",
           "just",
