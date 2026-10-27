@@ -326,7 +326,7 @@ export function bible_glyph_chapter_mic03() {
           "$money_bag+hand_sending,",
           "her",
           "$priest",
-          "teach",
+          "$bow+toward",
           "for",
           "a",
           "$receipt+coin,",
