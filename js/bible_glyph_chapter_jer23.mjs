@@ -249,7 +249,7 @@ export function bible_glyph_chapter_jer23() {
           "$no_entry",
           "$speech",
           "any",
-          "longer,",
+          "$repeat,",
           "As",
           "surely",
           "as",
