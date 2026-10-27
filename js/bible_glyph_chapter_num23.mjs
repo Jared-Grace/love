@@ -506,7 +506,7 @@ export function bible_glyph_chapter_num23() {
           "$father+proper_name.",
           "$proper_name$Balak",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "did",
           "$i_am",
           "$mouth?",
