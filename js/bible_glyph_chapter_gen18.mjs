@@ -545,7 +545,7 @@ export function bible_glyph_chapter_gen18() {
           "that",
           "he",
           "will",
-          "command",
+          "$speech+scroll",
           "his",
           "$son",
           "and",
