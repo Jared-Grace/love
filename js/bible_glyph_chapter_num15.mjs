@@ -1120,7 +1120,7 @@ export function bible_glyph_chapter_num15() {
           "Then",
           "you",
           "will",
-          "remember",
+          "$reminder_ribbon",
           "and",
           "$hammer+doing",
           "all",
