@@ -289,7 +289,7 @@ export function bible_glyph_chapter_job23() {
           "and",
           "He",
           "has",
-          "many",
+          "$multiply",
           "such",
           "plans.",
         ],
