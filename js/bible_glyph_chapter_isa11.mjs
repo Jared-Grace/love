@@ -253,7 +253,7 @@ export function bible_glyph_chapter_isa11() {
           "play",
           "by",
           "the",
-          "den",
+          "$hole+snake",
           "of",
           "the",
           "cobra,",
