@@ -94,7 +94,7 @@ export function bible_glyph_chapter_job03() {
           "it.",
           "May",
           "a",
-          "cloud",
+          "$cloud",
           "$tent+doing",
           "over",
           "it.",
