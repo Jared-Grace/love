@@ -813,7 +813,7 @@ export function bible_glyph_chapter_jdg11() {
           "he",
           "ever",
           "contend",
-          "with",
+          "$linked_paperclips",
           "$wrestling+heart_on_fire,",
           "or",
           "fight",
