@@ -636,7 +636,7 @@ export function bible_glyph_chapter_1sa25() {
           "her",
           "young",
           "men,",
-          "Go",
+          "$bridge",
           "on",
           "ahead",
           "of",
