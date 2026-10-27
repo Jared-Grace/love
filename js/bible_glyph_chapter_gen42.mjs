@@ -81,7 +81,7 @@ export function bible_glyph_chapter_gen42() {
           "$walking+pointing_down",
           "to",
           "buy",
-          "grain",
+          "$wheat+wind",
           "from",
           "$clamp+proper_name.",
         ],
