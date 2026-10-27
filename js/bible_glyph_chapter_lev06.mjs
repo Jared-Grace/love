@@ -349,7 +349,7 @@ export function bible_glyph_chapter_lev06() {
           "be",
           "kept",
           "$fire+alarm_clock+doing",
-          "on",
+          "$pointing_up",
           "$altar",
           "$clock+infinity.",
           "It",
