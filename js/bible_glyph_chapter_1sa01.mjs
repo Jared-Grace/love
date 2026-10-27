@@ -712,7 +712,7 @@ export function bible_glyph_chapter_1sa01() {
           "and",
           "stay",
           "here",
-          "until",
+          "$finish",
           "you",
           "have",
           "weaned",
