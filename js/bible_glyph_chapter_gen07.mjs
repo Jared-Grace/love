@@ -175,7 +175,7 @@ export function bible_glyph_chapter_gen07() {
           "the",
           "floodwaters",
           "$link",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth.",
         ],
