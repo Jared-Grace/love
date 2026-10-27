@@ -1044,7 +1044,7 @@ export function bible_glyph_chapter_jer29() {
           "has",
           "made",
           "you",
-          "trust",
+          "$anchor+doing",
           "in",
           "a",
           "lie,",
