@@ -441,7 +441,7 @@ export function bible_glyph_chapter_psa022() {
           "me",
           "from",
           "the",
-          "mouth",
+          "$face_with_open_mouth",
           "of",
           "the",
           "lion;",
