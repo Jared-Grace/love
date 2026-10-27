@@ -841,7 +841,7 @@ export function bible_glyph_chapter_jer17() {
           "of",
           "$city+peace,",
           "and",
-          "this",
+          "$flashlight",
           "$city",
           "will",
           "be",
