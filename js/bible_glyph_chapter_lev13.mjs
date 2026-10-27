@@ -1548,7 +1548,7 @@ export function bible_glyph_chapter_lev13() {
           "mildew,",
           "whether",
           "a",
-          "wool",
+          "$yarn",
           "$garment",
           "or",
           "a",
