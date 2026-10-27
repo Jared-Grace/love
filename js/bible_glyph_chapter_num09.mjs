@@ -537,7 +537,7 @@ export function bible_glyph_chapter_num09() {
           "was",
           "lifted",
           "from",
-          "above",
+          "$pointing_up",
           "the",
           "$tent,",
           "the",
