@@ -628,7 +628,7 @@ export function bible_glyph_chapter_2ki09() {
           "him",
           "out",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "them",
           "and",
           "$speech,",
