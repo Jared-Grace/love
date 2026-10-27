@@ -101,7 +101,7 @@ export function bible_glyph_chapter_exo29() {
         verse_number: 4,
         words: [
           "Then",
-          "present",
+          "$magnet+doing",
           "$proper_name$Aaron",
           "and",
           "his",
