@@ -661,7 +661,7 @@ export function bible_glyph_chapter_gen27() {
           "And",
           "he",
           "$speech,",
-          '"I',
+          '"$me',
           'am."',
         ],
       },
