@@ -459,7 +459,7 @@ export function bible_glyph_chapter_2ki06() {
           "and",
           "went",
           "out,",
-          "behold,",
+          "$exclamation,",
           "an",
           "army",
           "with",
