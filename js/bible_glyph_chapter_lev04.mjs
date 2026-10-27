@@ -83,7 +83,7 @@ export function bible_glyph_chapter_lev04() {
           "$tent",
           "of",
           "$alarm_clock",
-          "before",
+          "$face",
           "$i_am,",
           "lay",
           "$hand",
