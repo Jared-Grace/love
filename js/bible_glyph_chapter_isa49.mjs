@@ -538,7 +538,7 @@ export function bible_glyph_chapter_isa49() {
           "she",
           "could",
           "$reminder_ribbon+no_entry,",
-          "I",
+          "$me",
           "will",
           "$no_entry",
           "$reminder_ribbon+no_entry",
