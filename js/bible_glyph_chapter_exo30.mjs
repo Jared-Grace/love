@@ -94,7 +94,7 @@ export function bible_glyph_chapter_exo30() {
         verse_number: 4,
         words: [
           "$hammer+doing",
-          "two",
+          "$two",
           "$gold",
           "$ring",
           "below",
