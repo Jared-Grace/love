@@ -185,7 +185,7 @@ export function bible_glyph_chapter_1ki19() {
           "there",
           "by",
           "his",
-          "head",
+          "$person_gesturing_ok+place",
           "was",
           "a",
           "cake",
