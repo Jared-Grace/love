@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_jos07() {
           "which",
           "remains",
           "to",
-          "this",
+          "$flashlight",
           "$sun.",
           "So",
           "the",
