@@ -1385,7 +1385,7 @@ export function bible_glyph_chapter_2ki17() {
           "So",
           "$flashlight+flashlight",
           "$map",
-          "worshiped",
+          "$fear+describing",
           "the",
           "$i_am,",
           "but",
