@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_1sa25() {
           "$running+toward",
           "you",
           "and",
-          "seek",
+          "$magnifying_glass",
           "your",
           "$person_other,",
           "then",
