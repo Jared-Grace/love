@@ -1072,7 +1072,7 @@ export function bible_glyph_chapter_jer23() {
           "who",
           "prophesy",
           "false",
-          "dreams,",
+          "$dream,",
           "declares",
           "the",
           "$i_am,",
