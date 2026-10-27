@@ -650,7 +650,7 @@ export function bible_glyph_chapter_num32() {
           "$earth",
           "is",
           "subdued",
-          "before",
+          "$face",
           "$i_am,",
           "you",
           "may",
