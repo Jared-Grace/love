@@ -98,7 +98,7 @@ export function bible_glyph_chapter_gen50() {
           "in",
           "your",
           "$eyes,",
-          "please",
+          "$pleading",
           "$mouth",
           "to",
           "$house+proper_name",
