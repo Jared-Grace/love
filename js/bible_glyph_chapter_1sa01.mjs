@@ -742,7 +742,7 @@ export function bible_glyph_chapter_1sa01() {
       {
         verse_number: 24,
         words: [
-          "Once",
+          "$back+flashlight",
           "she",
           "had",
           "weaned",
