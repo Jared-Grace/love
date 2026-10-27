@@ -16,7 +16,7 @@ export function bible_glyph_chapter_exo11() {
         words: [
           "$i_am",
           "$speech",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "I",
           "will",
