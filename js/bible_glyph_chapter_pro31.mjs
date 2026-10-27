@@ -228,7 +228,7 @@ export function bible_glyph_chapter_pro31() {
           "of",
           "her",
           "husband",
-          "trusts",
+          "$anchor+doing",
           "in",
           "her,",
           "and",
