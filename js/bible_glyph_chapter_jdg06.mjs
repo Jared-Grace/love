@@ -1336,7 +1336,7 @@ export function bible_glyph_chapter_jdg06() {
         verse_number: 39,
         words: [
           "Then",
-          "Gideon",
+          "$axe+proper_name",
           "$speech",
           "to",
           "$heart_on_fire,",
