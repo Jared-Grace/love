@@ -523,7 +523,7 @@ export function bible_glyph_chapter_exo23() {
           "$bacon",
           "of",
           "My",
-          "feast",
+          "$party_popper",
           "$night+doing",
           "until",
           "$morning.",
