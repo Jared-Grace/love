@@ -306,7 +306,7 @@ export function bible_glyph_chapter_jer18() {
           "and",
           "devising",
           "a",
-          "plan",
+          "$thinking+thing",
           "against",
           "you.",
           "So",
