@@ -1407,7 +1407,7 @@ export function bible_glyph_chapter_lev13() {
           "bald",
           "head",
           "$shuffle",
-          "forehead,",
+          "$face+top+hair+no_entry+thing,",
           "it",
           "is",
           "an",
