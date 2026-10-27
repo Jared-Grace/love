@@ -727,7 +727,7 @@ export function bible_glyph_chapter_exo39() {
         words: [
           "And",
           "the",
-          "turban",
+          "$person_wearing_turban",
           "of",
           "fine",
           "linen,",
