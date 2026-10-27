@@ -481,7 +481,7 @@ export function bible_glyph_chapter_jos01() {
           "$i_am",
           "gives",
           "them",
-          "rest,",
+          "$seat+doing,",
           "as",
           "He",
           "has",
