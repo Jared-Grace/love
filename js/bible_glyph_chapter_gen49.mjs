@@ -256,7 +256,7 @@ export function bible_glyph_chapter_gen49() {
           "scepter",
           "will",
           "$no_entry",
-          "depart",
+          "$away+doing",
           "from",
           "$hands_raised+proper_name,",
           "nor",
