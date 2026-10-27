@@ -314,7 +314,7 @@ export function bible_glyph_chapter_num25() {
           "has",
           "$turn_back",
           "My",
-          "wrath",
+          "$angry_face",
           "away",
           "from",
           "the",
