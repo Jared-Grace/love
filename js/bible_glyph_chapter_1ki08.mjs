@@ -2223,7 +2223,7 @@ export function bible_glyph_chapter_1ki08() {
           "the",
           "$i_am,",
           "and",
-          "there",
+          "$telescope",
           "he",
           "offered",
           "the",
