@@ -373,7 +373,7 @@ export function bible_glyph_chapter_lev16() {
           "full",
           "of",
           "burning",
-          "coals",
+          "$fire+black_circle",
           "from",
           "the",
           "$altar",
