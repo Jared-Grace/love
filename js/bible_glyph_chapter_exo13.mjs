@@ -82,7 +82,7 @@ export function bible_glyph_chapter_exo13() {
           "His",
           "$hand.",
           "$no_entry",
-          "leavened",
+          "$bread+bubbles",
           "shall",
           "be",
           "eaten.",
