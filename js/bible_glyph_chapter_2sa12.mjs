@@ -502,7 +502,7 @@ export function bible_glyph_chapter_2sa12() {
           "$fist+microbe",
           "the",
           "$child",
-          "that",
+          "$back+flashlight",
           "$proper_name$Uriah's",
           "$woman",
           "had",
