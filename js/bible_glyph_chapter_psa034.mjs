@@ -195,7 +195,7 @@ export function bible_glyph_chapter_psa034() {
           "His",
           "$sparkle",
           "ones,",
-          "for",
+          "$pointing",
           "those",
           "who",
           "fear",
