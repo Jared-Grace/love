@@ -597,7 +597,7 @@ export function bible_glyph_chapter_jer31() {
           "$ear",
           "$ear",
           "$fruit's",
-          "moaning:",
+          "$walking+around+doing:",
           "You",
           "disciplined",
           "me",
