@@ -442,7 +442,7 @@ export function bible_glyph_chapter_gen09() {
           "whenever",
           "the",
           "rainbow",
-          "appears",
+          "$link",
           "in",
           "the",
           "clouds,",
