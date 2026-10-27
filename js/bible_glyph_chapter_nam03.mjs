@@ -473,7 +473,7 @@ export function bible_glyph_chapter_nam03() {
           "walls",
           "on",
           "a",
-          "cold",
+          "$cold_face+thing",
           "$sun.",
           "When",
           "the",
