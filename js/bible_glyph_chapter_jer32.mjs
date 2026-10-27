@@ -833,7 +833,7 @@ export function bible_glyph_chapter_jer32() {
           "and",
           "$famine",
           "and",
-          "plague,",
+          "$face_with_medical_mask,",
           "the",
           "$city",
           "has",
