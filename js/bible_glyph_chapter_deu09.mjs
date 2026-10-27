@@ -297,7 +297,7 @@ export function bible_glyph_chapter_deu09() {
           "have",
           "been",
           "$raised_fist+up_arrow+doing",
-          "against",
+          "$linked_paperclips",
           "$i_am.",
         ],
       },
