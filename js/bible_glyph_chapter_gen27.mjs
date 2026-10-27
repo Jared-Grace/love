@@ -866,7 +866,7 @@ export function bible_glyph_chapter_gen27() {
           "$footprints",
           "from",
           "the",
-          "hunt.",
+          "$net+deer.",
         ],
       },
       {
