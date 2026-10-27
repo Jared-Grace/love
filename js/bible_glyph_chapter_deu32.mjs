@@ -1039,7 +1039,7 @@ export function bible_glyph_chapter_deu32() {
           "them",
           "give",
           "you",
-          "shelter!",
+          "$see_no_evil_monkey+thing!",
         ],
       },
       {
