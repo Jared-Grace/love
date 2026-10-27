@@ -269,7 +269,7 @@ export function bible_glyph_chapter_ecc12() {
         words: [
           "Not",
           "only",
-          "was",
+          "$link",
           "the",
           "Teacher",
           "wise,",
