@@ -533,7 +533,7 @@ export function bible_glyph_chapter_2sa06() {
           "the",
           "$i_am",
           "and",
-          "set",
+          "$hand+round_pushpin+doing",
           "it",
           "in",
           "its",
