@@ -731,7 +731,7 @@ export function bible_glyph_chapter_jdg06() {
           "Gideon",
           "$eye",
           "$pointing",
-          "it",
+          "$pointing_back",
           "was",
           "the",
           "$angel",
