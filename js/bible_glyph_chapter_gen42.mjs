@@ -225,7 +225,7 @@ export function bible_glyph_chapter_gen42() {
           "$proper_name$Canaan,",
           "to",
           "buy",
-          "food.",
+          "$eating+thing.",
         ],
       },
       {
