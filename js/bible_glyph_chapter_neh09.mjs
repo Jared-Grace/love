@@ -950,7 +950,7 @@ export function bible_glyph_chapter_neh09() {
           "You;",
           "they",
           "$hammer+doing",
-          "terrible",
+          "$top",
           "$thumbs_down+eyes+thing.",
         ],
       },
