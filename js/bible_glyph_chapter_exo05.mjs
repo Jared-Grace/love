@@ -449,7 +449,7 @@ export function bible_glyph_chapter_exo05() {
         words: [
           "So",
           "the",
-          "foremen",
+          "$guard+scroll",
           "of",
           "the",
           "$son",
