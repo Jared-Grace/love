@@ -226,7 +226,7 @@ export function bible_glyph_chapter_jdg06() {
           "of",
           "$wrestling+heart_on_fire,",
           "$speech:",
-          "I",
+          "$me",
           "$walking+pointing_up",
           "you",
           "up",
