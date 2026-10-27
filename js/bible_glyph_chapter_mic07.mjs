@@ -509,7 +509,7 @@ export function bible_glyph_chapter_mic07() {
           "might.",
           "They",
           "will",
-          "put",
+          "$palm_down",
           "their",
           "$hand",
           "over",
