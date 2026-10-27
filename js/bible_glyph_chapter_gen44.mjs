@@ -478,7 +478,7 @@ export function bible_glyph_chapter_gen44() {
           "But",
           "Joseph",
           "$speech,",
-          "Far",
+          "$person_gesturing_no+exclamation",
           "be",
           "it",
           "from",
