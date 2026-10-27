@@ -830,7 +830,7 @@ export function bible_glyph_chapter_gen30() {
           "one,",
           "and",
           "every",
-          "dark",
+          "$brown_square+describing",
           "lamb,",
           "and",
           "the",
