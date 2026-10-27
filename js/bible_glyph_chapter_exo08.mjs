@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_exo08() {
         words: [
           "But",
           "$house+proper_name",
-          "hardened",
+          "$star+doing",
           "his",
           "$heart_organ",
           "this",
