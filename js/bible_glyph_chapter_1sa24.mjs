@@ -155,7 +155,7 @@ export function bible_glyph_chapter_1sa24() {
           "up",
           "and",
           "stealthily",
-          "cut",
+          "$scissors",
           "off",
           "a",
           "corner",
