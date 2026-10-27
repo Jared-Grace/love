@@ -719,7 +719,7 @@ export function bible_glyph_chapter_isa43() {
           "$weary_face+doing",
           "you",
           "with",
-          "frankincense.",
+          "$white_circle+incense.",
         ],
       },
       {
