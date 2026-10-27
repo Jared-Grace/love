@@ -303,7 +303,7 @@ export function bible_glyph_chapter_dan01() {
           "to",
           "$proper_name$Daniel,",
           "I",
-          "fear",
+          "$fear+describing",
           "my",
           "$crown",
           "the",
