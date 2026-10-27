@@ -43,7 +43,7 @@ export function bible_glyph_chapter_psa032() {
           "$i_am",
           "does",
           "$no_entry",
-          "count",
+          "$thinking+doing",
           "against",
           "him,",
           "in",
