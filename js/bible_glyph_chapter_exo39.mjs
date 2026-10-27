@@ -287,7 +287,7 @@ export function bible_glyph_chapter_exo39() {
           "$straight_ruler+repeat",
           "had",
           "a",
-          "turquoise,",
+          "$gem_stone+fire,",
           "a",
           "sapphire,",
           "and",
