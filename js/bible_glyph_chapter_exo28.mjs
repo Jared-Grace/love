@@ -692,7 +692,7 @@ export function bible_glyph_chapter_exo28() {
           "$gem_stone+t_shirt,",
           "on",
           "the",
-          "edge",
+          "$kiss_mark",
           "next",
           "to",
           "the",
