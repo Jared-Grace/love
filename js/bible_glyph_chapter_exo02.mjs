@@ -263,7 +263,7 @@ export function bible_glyph_chapter_exo02() {
           "to",
           "her,",
           "and",
-          "I",
+          "$me",
           "will",
           "$hands_giving",
           "you",
