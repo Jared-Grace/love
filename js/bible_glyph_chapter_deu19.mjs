@@ -124,7 +124,7 @@ export function bible_glyph_chapter_deu19() {
           "the",
           "manslayer",
           "$back+flashlight",
-          "flees",
+          "$running+dashing_away",
           "to",
           "one",
           "of",
