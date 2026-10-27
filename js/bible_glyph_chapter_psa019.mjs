@@ -45,7 +45,7 @@ export function bible_glyph_chapter_psa019() {
           "$night",
           "they",
           "reveal",
-          "knowledge.",
+          "$lightbulb+thing.",
         ],
       },
       {
