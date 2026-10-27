@@ -219,7 +219,7 @@ export function bible_glyph_chapter_mic02() {
           "$i_am",
           "$sheaf_of_rice+scissors+doing?",
           "Are",
-          "these",
+          "$flashlight+flashlight",
           "the",
           "things",
           "He",
