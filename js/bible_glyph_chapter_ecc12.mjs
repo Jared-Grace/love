@@ -288,7 +288,7 @@ export function bible_glyph_chapter_ecc12() {
           "and",
           "arranged",
           "many",
-          "proverbs.",
+          "$speech+likeness.",
         ],
       },
       {
