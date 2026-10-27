@@ -307,7 +307,7 @@ export function bible_glyph_chapter_lam04() {
           "has",
           "exhausted",
           "His",
-          "wrath;",
+          "$angry_face;",
           "He",
           "has",
           "poured",
