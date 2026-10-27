@@ -300,7 +300,7 @@ export function bible_glyph_chapter_exo17() {
           "$sun+next_track",
           "$me",
           "will",
-          "stand",
+          "$person+up_arrow",
           "on",
           "the",
           "hilltop",
