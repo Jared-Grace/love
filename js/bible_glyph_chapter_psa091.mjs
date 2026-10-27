@@ -60,7 +60,7 @@ export function bible_glyph_chapter_psa091() {
       {
         verse_number: 3,
         words: [
-          "Surely",
+          "$pointing",
           "He",
           "will",
           "deliver",
