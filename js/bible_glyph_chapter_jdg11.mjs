@@ -844,7 +844,7 @@ export function bible_glyph_chapter_jdg11() {
           "all",
           "the",
           "$city",
-          "along",
+          "$pointing_up",
           "the",
           "banks",
           "of",
