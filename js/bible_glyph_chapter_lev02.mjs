@@ -164,7 +164,7 @@ export function bible_glyph_chapter_lev02() {
           "it",
           "and",
           "$pouring_liquid+fire",
-          "oil",
+          "$lotion_bottle",
           "on",
           "it;",
           "it",
