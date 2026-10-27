@@ -195,7 +195,7 @@ export function bible_glyph_chapter_isa11() {
           "down",
           "$linked_paperclips",
           "the",
-          "goat;",
+          "$goat+child;",
           "the",
           "calf",
           "and",
