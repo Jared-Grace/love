@@ -1327,7 +1327,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "During",
           "those",
-          "seven",
+          "$seven",
           "$year,",
           "Joseph",
           "collected",
