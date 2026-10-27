@@ -2230,7 +2230,7 @@ export function bible_glyph_chapter_1ki08() {
           "burnt",
           "offerings,",
           "the",
-          "grain",
+          "$grain_offering",
           "offerings,",
           "and",
           "the",
