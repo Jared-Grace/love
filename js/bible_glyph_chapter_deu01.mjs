@@ -20,7 +20,7 @@ export function bible_glyph_chapter_deu01() {
           "$back+flashlight",
           "$fishing_pole+proper_name",
           "$mouth",
-          "to",
+          "$toward",
           "all",
           "$wrestling+heart_on_fire",
           "in",
