@@ -309,7 +309,7 @@ export function bible_glyph_chapter_exo34() {
           "the",
           "LORD",
           "$speech,",
-          "Behold,",
+          "$exclamation,",
           "I",
           "am",
           "making",
