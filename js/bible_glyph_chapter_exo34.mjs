@@ -444,7 +444,7 @@ export function bible_glyph_chapter_exo34() {
       {
         verse_number: 14,
         words: [
-          "For",
+          "$pointing",
           "you",
           "must",
           "$no_entry",
