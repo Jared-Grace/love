@@ -782,7 +782,7 @@ export function bible_glyph_chapter_deu09() {
           "$dust,",
           "and",
           "I",
-          "cast",
+          "$throwing",
           "the",
           "$dust",
           "into",
