@@ -47,7 +47,7 @@ export function bible_glyph_chapter_exo11() {
           "go",
           "he",
           "will",
-          "drive",
+          "$door+leftwards_pushing_hand+doing",
           "you",
           "out",
           "$end_arrow+thing.",
