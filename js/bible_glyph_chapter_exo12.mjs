@@ -30,7 +30,7 @@ export function bible_glyph_chapter_exo12() {
       {
         verse_number: 2,
         words: [
-          "This",
+          "$flashlight",
           "month",
           "is",
           "the",
