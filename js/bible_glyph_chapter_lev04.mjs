@@ -710,7 +710,7 @@ export function bible_glyph_chapter_lev04() {
           "burn",
           "$all",
           "its",
-          "fat",
+          "$bacon",
           "$altar",
           "like",
           "the",
