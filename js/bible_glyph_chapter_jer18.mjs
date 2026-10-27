@@ -684,7 +684,7 @@ export function bible_glyph_chapter_jer18() {
           "a",
           "pit",
           "to",
-          "capture",
+          "$net+doing",
           "me",
           "and",
           "have",
