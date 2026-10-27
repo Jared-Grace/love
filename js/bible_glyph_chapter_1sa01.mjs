@@ -717,7 +717,7 @@ export function bible_glyph_chapter_1sa01() {
           "have",
           "weaned",
           "him.",
-          "Only",
+          "$check+exclamation",
           "may",
           "the",
           "$i_am",
