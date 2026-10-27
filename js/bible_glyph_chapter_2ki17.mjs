@@ -526,7 +526,7 @@ export function bible_glyph_chapter_2ki17() {
           "had",
           "commanded",
           "them",
-          "not",
+          "$zero+manner",
           "to",
           "$hammer+doing",
           "as",
