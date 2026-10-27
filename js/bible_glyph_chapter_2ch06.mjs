@@ -401,7 +401,7 @@ export function bible_glyph_chapter_2ch06() {
           "$five",
           "cubits",
           "long,",
-          "five",
+          "$five",
           "cubits",
           "wide",
           "and",
