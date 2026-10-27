@@ -85,7 +85,7 @@ export function bible_glyph_chapter_jos06() {
           "$hammer+doing",
           "$flashlight+manner",
           "for",
-          "six",
+          "$six",
           "$sun.",
         ],
       },
