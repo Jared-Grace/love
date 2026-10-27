@@ -317,7 +317,7 @@ export function bible_glyph_chapter_zec08() {
           "there",
           "were",
           "$no_entry",
-          "wages",
+          "$coin+hammer",
           "for",
           "$person",
           "nor",
