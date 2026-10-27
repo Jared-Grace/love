@@ -538,7 +538,7 @@ export function bible_glyph_chapter_jer32() {
       {
         verse_number: 16,
         words: [
-          "After",
+          "$next_track",
           "I",
           "had",
           "$hands_giving",
