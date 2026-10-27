@@ -116,7 +116,7 @@ export function bible_glyph_chapter_isa35() {
           "$turn_back+gift+thing",
           "of",
           "$heart_on_fire",
-          "He",
+          "$pointing_back",
           "will",
           "$footprints",
           "to",
