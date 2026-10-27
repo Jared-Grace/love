@@ -335,7 +335,7 @@ export function bible_glyph_chapter_psa073() {
           "them",
           "down",
           "into",
-          "ruin.",
+          "$tornado+derelict_house.",
         ],
       },
       {
