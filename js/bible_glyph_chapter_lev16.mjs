@@ -487,7 +487,7 @@ export function bible_glyph_chapter_lev16() {
           "Aaron",
           "shall",
           "then",
-          "slaughter",
+          "$kitchen_knife+doing",
           "the",
           "goat",
           "for",
