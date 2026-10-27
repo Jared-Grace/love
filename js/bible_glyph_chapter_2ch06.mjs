@@ -1517,7 +1517,7 @@ export function bible_glyph_chapter_2ch06() {
         words: [
           "$watch",
           "therefore",
-          "arise,",
+          "$person+pointing_up,",
           "O",
           "$i_am",
           "$heart_on_fire,",
