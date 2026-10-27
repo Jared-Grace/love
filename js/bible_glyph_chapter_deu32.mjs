@@ -669,7 +669,7 @@ export function bible_glyph_chapter_deu32() {
           "by",
           "pestilence",
           "and",
-          "bitter",
+          "$lemon+describing",
           "$bomb+thing;",
           "I",
           "will",
