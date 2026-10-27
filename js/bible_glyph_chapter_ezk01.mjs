@@ -380,7 +380,7 @@ export function bible_glyph_chapter_ezk01() {
           "was",
           "bright,",
           "and",
-          "lightning",
+          "$cloud_with_lightning",
           "$walking+tray_out",
           "$tray_out",
           "it.",
