@@ -348,7 +348,7 @@ export function bible_glyph_chapter_mic04() {
           "$wilted_flower,",
           "so",
           "that",
-          "anguish",
+          "$pregnant_woman+dizzy",
           "grips",
           "you",
           "like",
