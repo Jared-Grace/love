@@ -355,7 +355,7 @@ export function bible_glyph_chapter_num17() {
           "perishing.",
           "We",
           "are",
-          "lost;",
+          "$wilted_flower;",
           "we",
           "are",
           "all",
