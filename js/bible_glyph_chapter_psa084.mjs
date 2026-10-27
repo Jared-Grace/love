@@ -45,7 +45,7 @@ export function bible_glyph_chapter_psa084() {
           "$person_other",
           "$heart_eyes+hourglass+doing,",
           "$plus",
-          "faints,",
+          "$end_arrow,",
           "for",
           "the",
           "courts",
