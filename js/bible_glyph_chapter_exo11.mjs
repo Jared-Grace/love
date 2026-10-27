@@ -268,7 +268,7 @@ export function bible_glyph_chapter_exo11() {
           "of",
           "yours",
           "will",
-          "come",
+          "$walking+pointing_down",
           "down",
           "to",
           "me",
