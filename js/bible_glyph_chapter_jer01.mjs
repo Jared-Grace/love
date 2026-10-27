@@ -584,7 +584,7 @@ export function bible_glyph_chapter_jer01() {
           "to",
           "deliver",
           "you,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
