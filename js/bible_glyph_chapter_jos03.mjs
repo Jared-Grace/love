@@ -43,7 +43,7 @@ export function bible_glyph_chapter_jos03() {
           "they",
           "camped",
           "there",
-          "before",
+          "$clock+back",
           "crossing",
           "over.",
         ],
