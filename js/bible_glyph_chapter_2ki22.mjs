@@ -316,7 +316,7 @@ export function bible_glyph_chapter_2ki22() {
           "paid",
           "out",
           "the",
-          "money",
+          "$silver",
           "that",
           "was",
           "found",
