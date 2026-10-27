@@ -944,7 +944,7 @@ export function bible_glyph_chapter_num15() {
           "him",
           "gathering",
           "$tree",
-          "brought",
+          "$magnet+doing",
           "him",
           "to",
           "$fishing_pole+proper_name",
