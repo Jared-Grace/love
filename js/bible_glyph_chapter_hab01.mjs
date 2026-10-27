@@ -151,7 +151,7 @@ export function bible_glyph_chapter_hab01() {
         verse_number: 6,
         words: [
           "$pointing",
-          "behold,",
+          "$exclamation,",
           "I",
           "am",
           "raising",
