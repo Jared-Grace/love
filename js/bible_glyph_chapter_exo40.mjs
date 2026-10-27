@@ -151,7 +151,7 @@ export function bible_glyph_chapter_exo40() {
           "And",
           "$hands_giving",
           "the",
-          "basin",
+          "$bucket+soap",
           "between",
           "the",
           "Tent",
