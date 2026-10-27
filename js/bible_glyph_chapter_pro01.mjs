@@ -87,7 +87,7 @@ export function bible_glyph_chapter_pro01() {
           "and",
           "the",
           "discerning",
-          "acquire",
+          "$coin+hand_receiving",
           "wise",
           "$ship+thread",
         ],
