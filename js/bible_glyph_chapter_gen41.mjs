@@ -221,7 +221,7 @@ export function bible_glyph_chapter_gen41() {
           "no",
           "one",
           "could",
-          "interpret",
+          "$dream+unlocked+doing",
           "them",
           "for",
           "him.",
