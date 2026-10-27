@@ -736,7 +736,7 @@ export function bible_glyph_chapter_lam03() {
           "$heart_organ",
           "and",
           "hands",
-          "to",
+          "$toward",
           "$heart_on_fire",
           "in",
           "$sky:",
