@@ -218,7 +218,7 @@ export function bible_glyph_chapter_gen11() {
           "them",
           "from",
           "$telescope",
-          "over",
+          "$pointing_up",
           "the",
           "face",
           "of",
