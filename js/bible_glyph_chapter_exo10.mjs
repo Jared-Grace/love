@@ -841,7 +841,7 @@ export function bible_glyph_chapter_exo10() {
           "But",
           "$fishing_pole+proper_name",
           "$speech,",
-          "You",
+          "$you",
           "must",
           "also",
           "$hands_giving",
