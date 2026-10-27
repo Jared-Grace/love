@@ -83,7 +83,7 @@ export function bible_glyph_chapter_pro16() {
           "$i_am",
           "has",
           "made",
-          "everything",
+          "$all",
           "for",
           "His",
           "purpose,",
