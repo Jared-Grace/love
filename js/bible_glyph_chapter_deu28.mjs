@@ -2185,7 +2185,7 @@ export function bible_glyph_chapter_deu28() {
           "And",
           "in",
           "the",
-          "evening",
+          "$sunset",
           "you",
           "will",
           "$speech,",
