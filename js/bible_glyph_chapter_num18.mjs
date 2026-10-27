@@ -446,7 +446,7 @@ export function bible_glyph_chapter_num18() {
           "as",
           "a",
           "$hourglass",
-          "statute.",
+          "$locked_with_pen.",
           "Every",
           "clean",
           "person",
