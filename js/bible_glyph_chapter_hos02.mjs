@@ -467,7 +467,7 @@ export function bible_glyph_chapter_hos02() {
       {
         verse_number: 15,
         words: [
-          "There",
+          "$telescope",
           "I",
           "will",
           "$hands_giving",
