@@ -516,7 +516,7 @@ export function bible_glyph_chapter_hab02() {
           "you,",
           "and",
           "the",
-          "destruction",
+          "$bomb+flexed_biceps+thing",
           "of",
           "the",
           "animals",
