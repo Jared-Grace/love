@@ -301,7 +301,7 @@ export function bible_glyph_chapter_exo08() {
       {
         verse_number: 10,
         words: [
-          "Tomorrow,",
+          "$sun+next_track,",
           "Pharaoh",
           "$speech.",
           "Moses",
