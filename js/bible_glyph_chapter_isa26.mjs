@@ -432,7 +432,7 @@ export function bible_glyph_chapter_isa26() {
           "You",
           "in",
           "their",
-          "distress;",
+          "$clamp+thing;",
           "when",
           "You",
           "disciplined",
