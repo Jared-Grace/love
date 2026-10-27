@@ -311,7 +311,7 @@ export function bible_glyph_chapter_lev14() {
           "male",
           "$lamb,",
           "an",
-          "unblemished",
+          "$full_moon+describing",
           "ewe",
           "lamb",
           "that",
