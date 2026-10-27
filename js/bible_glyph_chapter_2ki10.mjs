@@ -131,7 +131,7 @@ export function bible_glyph_chapter_2ki10() {
           "him,",
           "$question+likeness",
           "can",
-          "we?",
+          "$me?",
         ],
       },
       {
