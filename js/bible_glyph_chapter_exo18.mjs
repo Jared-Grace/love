@@ -64,7 +64,7 @@ export function bible_glyph_chapter_exo18() {
           "$fishing_pole+proper_name's",
           "father",
           "in",
-          "law",
+          "$man_in_tuxedo+family",
           "$proper_name$Jethro",
           "had",
           "$hand_receiving",
