@@ -994,7 +994,7 @@ export function bible_glyph_chapter_num16() {
           "and",
           "all",
           "their",
-          "possessions.",
+          "$package+money_bag.",
         ],
       },
       {
