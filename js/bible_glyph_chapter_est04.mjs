@@ -534,7 +534,7 @@ export function bible_glyph_chapter_est04() {
           "$no_entry",
           "$eating",
           "or",
-          "drink",
+          "$cup_with_straw",
           "for",
           "three",
           "$sun,",
