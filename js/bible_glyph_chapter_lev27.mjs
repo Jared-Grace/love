@@ -784,7 +784,7 @@ export function bible_glyph_chapter_lev27() {
         words: [
           "But",
           "a",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "the",
           "livestock",
