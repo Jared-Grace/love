@@ -1058,7 +1058,7 @@ export function bible_glyph_chapter_deu12() {
           "$moai",
           "$all",
           "$vomiting",
-          "which",
+          "$back+flashlight",
           "the",
           "$i_am",
           "hates.",
