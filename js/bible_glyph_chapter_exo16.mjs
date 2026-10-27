@@ -665,7 +665,7 @@ export function bible_glyph_chapter_exo16() {
           "maggots",
           "and",
           "began",
-          "to",
+          "$toward",
           "smell.",
           "So",
           "$fishing_pole+proper_name",
