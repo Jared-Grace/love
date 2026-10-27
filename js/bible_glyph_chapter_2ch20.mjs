@@ -1043,7 +1043,7 @@ export function bible_glyph_chapter_2ch20() {
           "fear",
           "of",
           "$heart_on_fire",
-          "came",
+          "$link",
           "upon",
           "all",
           "the",
