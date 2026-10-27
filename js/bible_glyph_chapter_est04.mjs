@@ -59,7 +59,7 @@ export function bible_glyph_chapter_est04() {
           "of",
           "the",
           "$king,",
-          "because",
+          "$pointing",
           "the",
           "law",
           "prohibited",
