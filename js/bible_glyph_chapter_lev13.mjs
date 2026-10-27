@@ -453,7 +453,7 @@ export function bible_glyph_chapter_lev13() {
           "the",
           "$priest",
           "can",
-          "see,",
+          "$eyes+thing,",
         ],
       },
       {
