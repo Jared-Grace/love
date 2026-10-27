@@ -491,7 +491,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "have",
           "them",
-          "stand",
+          "$person+round_pushpin+anchor+doing",
           "there",
           "with",
           "you.",
