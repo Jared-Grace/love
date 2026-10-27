@@ -639,7 +639,7 @@ export function bible_glyph_chapter_1ki20() {
           "them",
           "$sprout.",
           "Even",
-          "if",
+          "$traffic_light",
           "they",
           "have",
           "marched",
