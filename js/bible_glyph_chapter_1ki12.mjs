@@ -1009,7 +1009,7 @@ export function bible_glyph_chapter_1ki12() {
           "the",
           "$family",
           "$walking",
-          "before",
+          "$face",
           "the",
           "one",
           "calf",
