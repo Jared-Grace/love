@@ -282,7 +282,7 @@ export function bible_glyph_chapter_num18() {
           "outsider",
           "who",
           "comes",
-          "near",
+          "$magnet+describing",
           "must",
           "be",
           "put",
