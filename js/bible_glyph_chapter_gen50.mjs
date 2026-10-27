@@ -503,7 +503,7 @@ export function bible_glyph_chapter_gen50() {
           "to",
           "you.",
           "So",
-          "now,",
+          "$watch,",
           "$pleading",
           "$lifting",
           "the",
