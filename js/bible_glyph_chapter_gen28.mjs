@@ -334,7 +334,7 @@ export function bible_glyph_chapter_gen28() {
           "$dream+doing",
           "$exclamation",
           "a",
-          "ladder",
+          "$wood+up_arrow",
           "that",
           "rested",
           "on",
