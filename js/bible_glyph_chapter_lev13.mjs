@@ -542,7 +542,7 @@ export function bible_glyph_chapter_lev13() {
         verse_number: 16,
         words: [
           "But",
-          "if",
+          "$pointing",
           "the",
           "$sprout",
           "$meat",
