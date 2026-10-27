@@ -779,7 +779,7 @@ export function bible_glyph_chapter_lev13() {
           "there",
           "is",
           "a",
-          "burn",
+          "$fire+adhesive_bandage",
           "on",
           "the",
           "skin",
