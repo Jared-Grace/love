@@ -138,7 +138,7 @@ export function bible_glyph_chapter_deu05() {
           "of",
           "the",
           "$i_am,",
-          "because",
+          "$pointing",
           "you",
           "were",
           "afraid",
