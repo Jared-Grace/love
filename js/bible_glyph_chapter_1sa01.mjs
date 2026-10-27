@@ -574,7 +574,7 @@ export function bible_glyph_chapter_1sa01() {
           "$morning+doing",
           "to",
           "$bowing",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "and",
