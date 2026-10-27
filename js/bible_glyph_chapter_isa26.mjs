@@ -567,7 +567,7 @@ export function bible_glyph_chapter_isa26() {
           "a",
           "little",
           "$winking_face",
-          "until",
+          "$finish",
           "the",
           "wrath",
           "has",
