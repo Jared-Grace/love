@@ -140,7 +140,7 @@ export function bible_glyph_chapter_exo34() {
           "him,",
           "$hand_receiving",
           "the",
-          "two",
+          "$two",
           "$stone",
           "tablets",
           "in",
