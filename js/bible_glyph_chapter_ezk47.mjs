@@ -346,7 +346,7 @@ export function bible_glyph_chapter_ezk47() {
           "eglaim",
           "they",
           "will",
-          "spread",
+          "$arrow_both_ways+field+place",
           "their",
           "nets",
           "to",
