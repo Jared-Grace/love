@@ -869,7 +869,7 @@ export function bible_glyph_chapter_jer29() {
           "$priest,",
           "and",
           "to",
-          "all",
+          "$all",
           "the",
           "$priest.",
           "You",
