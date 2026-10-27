@@ -99,7 +99,7 @@ export function bible_glyph_chapter_exo21() {
           "bears",
           "him",
           "$son",
-          "or",
+          "$shuffle",
           "$woman,",
           "the",
           "$woman",
