@@ -1383,7 +1383,7 @@ export function bible_glyph_chapter_2ki17() {
         verse_number: 41,
         words: [
           "So",
-          "these",
+          "$flashlight+flashlight",
           "$map",
           "worshiped",
           "the",
