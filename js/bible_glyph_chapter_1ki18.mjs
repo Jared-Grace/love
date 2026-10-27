@@ -1512,7 +1512,7 @@ export function bible_glyph_chapter_1ki18() {
           "of",
           "the",
           "$i_am",
-          "came",
+          "$link",
           "upon",
           "$heart_on_fire+i_am,",
           "and",
