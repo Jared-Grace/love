@@ -447,7 +447,7 @@ export function bible_glyph_chapter_lev05() {
           "$pointing",
           "$person_other",
           "$handshake+broken_chain+doing",
-          "unfaithfully",
+          "$handshake+broken_chain+thing",
           "and",
           "$bow+doing",
           "unintentionally",
