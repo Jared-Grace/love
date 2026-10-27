@@ -668,7 +668,7 @@ export function bible_glyph_chapter_gen26() {
       },
       {
         verse_number: 23,
-        words: ["And", "he", "went", "up", "from", "there", "to", "Beersheba."],
+        words: ["And", "he", "went", "up", "from", "$telescope", "to", "Beersheba."],
       },
       {
         verse_number: 24,
