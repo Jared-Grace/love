@@ -144,7 +144,7 @@ export function bible_glyph_chapter_num27() {
           "$son?",
           "$hands_giving",
           "us",
-          "property",
+          "$hand+clamp+thing",
           "among",
           "the",
           "$brother",
