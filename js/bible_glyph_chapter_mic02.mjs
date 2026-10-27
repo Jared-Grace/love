@@ -388,7 +388,7 @@ export function bible_glyph_chapter_mic02() {
           "of",
           "its",
           "pasture",
-          "-",
+          "$tray_in+doing",
           "a",
           "noisy",
           "$person.",
