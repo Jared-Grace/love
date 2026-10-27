@@ -1001,7 +1001,7 @@ export function bible_glyph_chapter_2ki17() {
           "to",
           "$bow+toward",
           "them",
-          "how",
+          "$question+likeness",
           "they",
           "should",
           "worship",
