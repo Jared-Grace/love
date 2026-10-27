@@ -597,7 +597,7 @@ export function bible_glyph_chapter_lev15() {
           "be",
           "unclean",
           "$finish",
-          "evening.",
+          "$sunset.",
         ],
       },
       {
