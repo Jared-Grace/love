@@ -49,7 +49,7 @@ export function bible_glyph_chapter_ezk03() {
           "I",
           "opened",
           "my",
-          "mouth,",
+          "$face_with_open_mouth,",
           "and",
           "He",
           "fed",
