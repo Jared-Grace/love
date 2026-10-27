@@ -498,7 +498,7 @@ export function bible_glyph_chapter_psa073() {
           "$all",
           "who",
           "are",
-          "unfaithful",
+          "$broken_heart",
           "to",
           "You.",
         ],
