@@ -642,7 +642,7 @@ export function bible_glyph_chapter_deu07() {
         verse_number: 19,
         words: [
           "the",
-          "great",
+          "$top",
           "$test_tube+thing",
           "that",
           "your",
