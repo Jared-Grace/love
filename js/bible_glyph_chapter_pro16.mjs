@@ -284,7 +284,7 @@ export function bible_glyph_chapter_pro16() {
         verse_number: 14,
         words: [
           "The",
-          "wrath",
+          "$angry_face",
           "of",
           "a",
           "$king",
