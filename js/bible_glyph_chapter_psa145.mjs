@@ -434,7 +434,7 @@ export function bible_glyph_chapter_psa145() {
           "$thumbs_down",
           "He",
           "will",
-          "destroy.",
+          "$bomb.",
         ],
       },
       {
