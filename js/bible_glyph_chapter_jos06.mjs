@@ -14,7 +14,7 @@ export function bible_glyph_chapter_jos06() {
         verse_number: 1,
         words: [
           "Now",
-          "Jericho",
+          "$city+moon",
           "was",
           "tightly",
           "shut",
