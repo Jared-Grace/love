@@ -149,7 +149,7 @@ export function bible_glyph_chapter_hab03() {
           "the",
           "$hourglass",
           "hills",
-          "collapsed.",
+          "$bowing+hole+doing.",
           "His",
           "ways",
           "are",
