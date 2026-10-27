@@ -350,7 +350,7 @@ export function bible_glyph_chapter_1sa03() {
           "$ear",
           "it",
           "will",
-          "tingle.",
+          "$ear+vibration_mode+doing.",
         ],
       },
       {
