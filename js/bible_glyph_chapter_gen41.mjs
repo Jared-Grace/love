@@ -1586,7 +1586,7 @@ export function bible_glyph_chapter_gen41() {
           "$clamp+proper_name,",
           "for",
           "the",
-          "famine",
+          "$famine",
           "was",
           "severe",
           "in",
