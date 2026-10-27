@@ -830,7 +830,7 @@ export function bible_glyph_chapter_gen18() {
           "the",
           "lack",
           "of",
-          "five?",
+          "$five?",
           "He",
           "$speech,",
           "If",
