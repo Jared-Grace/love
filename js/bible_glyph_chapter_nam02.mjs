@@ -300,7 +300,7 @@ export function bible_glyph_chapter_nam02() {
           "the",
           "lion",
           "and",
-          "lioness",
+          "$lion+female_sign",
           "$walking",
           "with",
           "their",
