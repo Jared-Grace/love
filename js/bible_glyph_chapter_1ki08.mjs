@@ -1518,7 +1518,7 @@ export function bible_glyph_chapter_1ki08() {
           "$family",
           "$walking+tray_out",
           "to",
-          "war",
+          "$crossed_swords",
           "against",
           "their",
           "enemies,",
