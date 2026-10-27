@@ -899,7 +899,7 @@ export function bible_glyph_chapter_1ki12() {
           "up",
           "to",
           "$hammer+doing",
-          "sacrifices",
+          "$sacrifice",
           "in",
           "the",
           "$house",
