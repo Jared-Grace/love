@@ -1039,7 +1039,7 @@ export function bible_glyph_chapter_deu04() {
           "But",
           "if",
           "from",
-          "there",
+          "$telescope",
           "you",
           "seek",
           "the",
