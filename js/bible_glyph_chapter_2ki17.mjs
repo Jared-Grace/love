@@ -97,7 +97,7 @@ export function bible_glyph_chapter_2ki17() {
           "$king",
           "of",
           "$proper_name$Assyria",
-          "discovered",
+          "$magnifying_glass+exclamation",
           "that",
           "$rescue+proper_name",
           "had",
