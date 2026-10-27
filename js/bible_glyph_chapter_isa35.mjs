@@ -100,7 +100,7 @@ export function bible_glyph_chapter_isa35() {
           "anxious",
           "$heart_organ,",
           "Be",
-          "strong,",
+          "$might+up_arrow,",
           "do",
           "$no_entry",
           "fear!",
