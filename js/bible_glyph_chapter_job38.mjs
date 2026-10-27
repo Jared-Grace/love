@@ -314,7 +314,7 @@ export function bible_glyph_chapter_job38() {
           "trenches",
           "of",
           "the",
-          "deep?",
+          "$sea+down_arrow?",
         ],
       },
       {
