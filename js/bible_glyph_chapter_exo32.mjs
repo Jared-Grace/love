@@ -175,7 +175,7 @@ export function bible_glyph_chapter_exo32() {
           "calf",
           "and",
           "proclaimed,",
-          "Tomorrow",
+          "$sun+next_track",
           "shall",
           "be",
           "a",
