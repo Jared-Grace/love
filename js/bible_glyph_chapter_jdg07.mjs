@@ -916,7 +916,7 @@ export function bible_glyph_chapter_jdg07() {
           "the",
           "$water",
           "as",
-          "far",
+          "$finish",
           "as",
           "Beth-barah",
           "and",
