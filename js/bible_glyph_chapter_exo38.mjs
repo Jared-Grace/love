@@ -239,7 +239,7 @@ export function bible_glyph_chapter_exo38() {
           "spun",
           "$thread+white_circle",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "cubits",
           "long,",
         ],
