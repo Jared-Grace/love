@@ -73,7 +73,7 @@ export function bible_glyph_chapter_gen42() {
         verse_number: 3,
         words: [
           "So",
-          "ten",
+          "$ten",
           "of",
           "$i_am+plus",
           "$brother",
