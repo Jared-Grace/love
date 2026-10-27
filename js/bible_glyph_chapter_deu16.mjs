@@ -182,7 +182,7 @@ export function bible_glyph_chapter_deu16() {
           "are",
           "$no_entry",
           "to",
-          "sacrifice",
+          "$sacrifice",
           "the",
           "Passover",
           "animal",
