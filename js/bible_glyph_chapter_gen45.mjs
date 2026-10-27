@@ -266,7 +266,7 @@ export function bible_glyph_chapter_gen45() {
         words: [
           "Now",
           "return",
-          "quickly",
+          "$fast_forward+doing",
           "to",
           "my",
           "$father",
