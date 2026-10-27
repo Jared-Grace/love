@@ -1112,7 +1112,7 @@ export function bible_glyph_chapter_exo28() {
           "linen,",
           "$hammer+doing",
           "the",
-          "turban",
+          "$person_wearing_turban",
           "of",
           "fine",
           "linen,",
