@@ -651,7 +651,7 @@ export function bible_glyph_chapter_2ki04() {
           "$heart_on_fire.",
           "Then",
           "she",
-          "shut",
+          "$locked+doing",
           "the",
           "door",
           "and",
