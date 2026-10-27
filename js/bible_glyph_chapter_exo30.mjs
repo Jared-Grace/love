@@ -619,7 +619,7 @@ export function bible_glyph_chapter_exo30() {
           "of",
           "liquid",
           "$lemon+droplet,",
-          "half",
+          "$divide+thing",
           "that",
           "amount,",
           "two",
