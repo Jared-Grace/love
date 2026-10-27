@@ -547,7 +547,7 @@ export function bible_glyph_chapter_jdg07() {
           "$proper_name$Midian",
           "and",
           "the",
-          "whole",
+          "$all",
           "camp",
           "into",
           "his",
