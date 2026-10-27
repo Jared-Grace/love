@@ -191,7 +191,7 @@ export function bible_glyph_chapter_exo13() {
           "$seven",
           "$sun.",
           "$no_entry",
-          "leavened",
+          "$bread+bubbles",
           "may",
           "be",
           "$eye",
