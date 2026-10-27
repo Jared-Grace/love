@@ -834,7 +834,7 @@ export function bible_glyph_chapter_gen49() {
           "$hand+foot",
           "had",
           "finished",
-          "instructing",
+          "$speech+scroll",
           "his",
           "$son,",
           "he",
