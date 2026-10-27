@@ -287,7 +287,7 @@ export function bible_glyph_chapter_2ch20() {
           "$name_tag",
           "is",
           "in",
-          "this",
+          "$flashlight",
           "$house.",
           "We",
           "will",
