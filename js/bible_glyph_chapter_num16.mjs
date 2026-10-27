@@ -962,7 +962,7 @@ export function bible_glyph_chapter_num16() {
           "$speech,",
           "the",
           "$brown_square",
-          "beneath",
+          "$down_arrow",
           "them",
           "$carpentry_saw",
           "open.",
