@@ -706,7 +706,7 @@ export function bible_glyph_chapter_exo02() {
           "$reminder_ribbon",
           "His",
           "$covenant",
-          "with",
+          "$safety_pin",
           "$father+map,",
           "$laughing+proper_name,",
           "and",
