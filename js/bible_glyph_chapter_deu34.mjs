@@ -230,7 +230,7 @@ export function bible_glyph_chapter_deu34() {
           "vitality",
           "had",
           "$no_entry",
-          "diminished.",
+          "$running+dashing_away.",
         ],
       },
       {
