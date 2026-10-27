@@ -245,7 +245,7 @@ export function bible_glyph_chapter_psa027() {
           "$i_am,",
           "I",
           "will",
-          "seek.",
+          "$magnifying_glass.",
         ],
       },
       {
