@@ -90,7 +90,7 @@ export function bible_glyph_chapter_num12() {
           "$lightning+manner",
           "$i_am",
           "$speech",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "$proper_name$Aaron",
           "and",
