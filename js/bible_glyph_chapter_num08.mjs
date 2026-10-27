@@ -30,7 +30,7 @@ export function bible_glyph_chapter_num08() {
           "set",
           "up",
           "the",
-          "seven",
+          "$seven",
           "$lamp,",
           "the",
           "$lamp",
