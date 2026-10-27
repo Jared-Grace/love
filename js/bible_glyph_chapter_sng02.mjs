@@ -205,7 +205,7 @@ export function bible_glyph_chapter_sng02() {
           "$exclamation,",
           "he",
           "$person+round_pushpin",
-          "behind",
+          "$next_track",
           "our",
           "wall,",
           "gazing",
