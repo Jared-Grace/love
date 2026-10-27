@@ -629,7 +629,7 @@ export function bible_glyph_chapter_2sa05() {
           "out",
           "in",
           "the",
-          "Valley",
+          "$valley",
           "of",
           "$proper_name$Rephaim.",
         ],
