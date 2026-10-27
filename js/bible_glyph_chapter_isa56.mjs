@@ -267,7 +267,7 @@ export function bible_glyph_chapter_isa56() {
           "accepted",
           "$pointing_up",
           "My",
-          "altar,",
+          "$altar,",
           "for",
           "My",
           "$house",
