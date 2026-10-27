@@ -221,7 +221,7 @@ export function bible_glyph_chapter_pro03() {
           "$no_entry",
           "reject",
           "the",
-          "discipline",
+          "$teacher+exclamation",
           "of",
           "the",
           "$i_am,",
