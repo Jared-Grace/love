@@ -173,7 +173,7 @@ export function bible_glyph_chapter_lev12() {
           "for",
           "a",
           "$son",
-          "or",
+          "$shuffle",
           "for",
           "a",
           "$woman,",
