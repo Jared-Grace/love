@@ -67,7 +67,7 @@ export function bible_glyph_chapter_1sa17() {
         words: [
           "The",
           "Philistines",
-          "stood",
+          "$person+round_pushpin",
           "on",
           "one",
           "$mountain",
