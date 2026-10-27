@@ -71,7 +71,7 @@ export function bible_glyph_chapter_gen50() {
           "$loudly_crying",
           "for",
           "him",
-          "seventy",
+          "$seven+zero",
           "$sun.",
         ],
       },
