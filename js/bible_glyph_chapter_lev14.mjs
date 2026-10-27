@@ -214,7 +214,7 @@ export function bible_glyph_chapter_lev14() {
           "$bubbles+t_shirt+doing",
           "his",
           "$garment,",
-          "shave",
+          "$razor+doing",
           "off",
           "all",
           "his",
