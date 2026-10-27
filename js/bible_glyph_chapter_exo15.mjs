@@ -686,7 +686,7 @@ export function bible_glyph_chapter_exo15() {
           "$water",
           "were",
           "sweetened.",
-          "There",
+          "$telescope",
           "the",
           "LORD",
           "made",
