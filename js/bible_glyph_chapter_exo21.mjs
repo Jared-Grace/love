@@ -917,7 +917,7 @@ export function bible_glyph_chapter_exo21() {
           "must",
           "$hands_giving",
           "$three+zero",
-          "shekels",
+          "$coin",
           "of",
           "$silver",
           "to",
