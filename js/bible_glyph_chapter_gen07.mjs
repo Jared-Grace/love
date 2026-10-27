@@ -512,7 +512,7 @@ export function bible_glyph_chapter_gen07() {
           "the",
           "$giraffe",
           "$mountain",
-          "under",
+          "$down_arrow",
           "all",
           "the",
           "$sky",
