@@ -88,7 +88,7 @@ export function bible_glyph_chapter_jos01() {
           "your",
           "$foot",
           "will",
-          "tread,",
+          "$hiking_boot,",
           "just",
           "as",
           "I",
