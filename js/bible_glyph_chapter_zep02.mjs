@@ -412,7 +412,7 @@ export function bible_glyph_chapter_zep02() {
           "the",
           "$compass+up_arrow",
           "and",
-          "destroy",
+          "$wilted_flower",
           "$proper_name$Assyria;",
           "He",
           "will",
