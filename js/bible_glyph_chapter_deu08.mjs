@@ -71,7 +71,7 @@ export function bible_glyph_chapter_deu08() {
           "humble",
           "you",
           "and",
-          "test",
+          "$test_tube",
           "you,",
           "in",
           "order",
