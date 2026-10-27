@@ -60,7 +60,7 @@ export function bible_glyph_chapter_zep01() {
           "completely",
           "sweep",
           "away",
-          "everything",
+          "$all",
           "from",
           "the",
           "face",
