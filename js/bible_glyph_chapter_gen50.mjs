@@ -524,7 +524,7 @@ export function bible_glyph_chapter_gen50() {
           "to",
           "him,",
           "$i_am+plus",
-          "wept.",
+          "$loudly_crying.",
         ],
       },
       {
