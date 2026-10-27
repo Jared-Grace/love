@@ -213,7 +213,7 @@ export function bible_glyph_chapter_isa26() {
           "in",
           "the",
           "$night;",
-          "indeed,",
+          "$plus+exclamation,",
           "my",
           "$wind",
           "seeks",
