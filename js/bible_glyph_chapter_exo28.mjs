@@ -572,7 +572,7 @@ export function bible_glyph_chapter_exo28() {
           "$rock+writing_hand+thing",
           "like",
           "a",
-          "seal,",
+          "$ring+locked+thing,",
           "each",
           "$name_tag",
           "for",
