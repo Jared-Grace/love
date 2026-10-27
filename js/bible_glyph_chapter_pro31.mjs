@@ -149,7 +149,7 @@ export function bible_glyph_chapter_pro31() {
           "his",
           "poverty,",
           "and",
-          "remember",
+          "$reminder_ribbon",
           "his",
           "misery",
           "$no_entry",
