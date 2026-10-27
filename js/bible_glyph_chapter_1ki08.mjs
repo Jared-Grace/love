@@ -2166,7 +2166,7 @@ export function bible_glyph_chapter_1ki08() {
         words: [
           "And",
           "$peace+proper_name",
-          "offered",
+          "$sacrifice",
           "as",
           "peace",
           "offerings",
