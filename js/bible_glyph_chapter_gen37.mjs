@@ -538,7 +538,7 @@ export function bible_glyph_chapter_gen37() {
           "$exclamation",
           "$footprints",
           "that",
-          "dreamer!",
+          "$key!",
           "they",
           "$speech",
           "$toward",
