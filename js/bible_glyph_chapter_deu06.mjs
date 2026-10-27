@@ -673,7 +673,7 @@ export function bible_glyph_chapter_deu06() {
           "us",
           "out",
           "from",
-          "there",
+          "$telescope",
           "to",
           "$footprints",
           "us",
