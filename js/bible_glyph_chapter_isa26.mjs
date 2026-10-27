@@ -560,7 +560,7 @@ export function bible_glyph_chapter_isa26() {
           "$locked+doing",
           "your",
           "doors",
-          "behind",
+          "$back+person",
           "you.",
           "Hide",
           "yourselves",
