@@ -597,7 +597,7 @@ export function bible_glyph_chapter_lev22() {
           "with",
           "a",
           "defect,",
-          "because",
+          "$pointing",
           "it",
           "will",
           "$no_entry",
