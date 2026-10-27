@@ -627,7 +627,7 @@ export function bible_glyph_chapter_lev21() {
           "must",
           "$no_entry",
           "$footprints",
-          "near",
+          "$toward",
           "the",
           "$veil",
           "$no_entry",
