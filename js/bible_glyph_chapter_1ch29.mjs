@@ -196,7 +196,7 @@ export function bible_glyph_chapter_1ch29() {
           "work",
           "and",
           "the",
-          "silver",
+          "$silver",
           "work,",
           "and",
           "for",
