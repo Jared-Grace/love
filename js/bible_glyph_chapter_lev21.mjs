@@ -532,7 +532,7 @@ export function bible_glyph_chapter_lev21() {
           "hunchback",
           "or",
           "a",
-          "dwarf,",
+          "$pinching_hand+describing,",
           "or",
           "who",
           "has",
