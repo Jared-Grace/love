@@ -384,7 +384,7 @@ export function bible_glyph_chapter_2ki11() {
           "and",
           "the",
           "$house,",
-          "surrounding",
+          "$around",
           "the",
           "$king.",
         ],
