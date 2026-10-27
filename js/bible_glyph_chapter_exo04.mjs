@@ -276,7 +276,7 @@ export function bible_glyph_chapter_exo04() {
         verse_number: 9,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "they",
           "$no_entry",
           "$anchor",
