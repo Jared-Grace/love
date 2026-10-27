@@ -690,7 +690,7 @@ export function bible_glyph_chapter_neh08() {
           "$sun,",
           "$tray_out",
           "the",
-          "first",
+          "$first_place",
           "$sun",
           "to",
           "the",
