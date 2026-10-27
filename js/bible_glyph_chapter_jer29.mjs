@@ -749,7 +749,7 @@ export function bible_glyph_chapter_jer29() {
           "will",
           "use",
           "this",
-          "curse:",
+          "$balloon+speech:",
           "May",
           "the",
           "$i_am",
