@@ -143,7 +143,7 @@ export function bible_glyph_chapter_num19() {
           "$blood",
           "and",
           "its",
-          "dung",
+          "$pile_of_poo",
           "are",
           "all",
           "to",
