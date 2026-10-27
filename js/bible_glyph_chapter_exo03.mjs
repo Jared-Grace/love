@@ -97,7 +97,7 @@ export function bible_glyph_chapter_exo03() {
           "$flashlight",
           "$top",
           "sight.",
-          "Why",
+          "$flashlight+question+lightbulb",
           "is",
           "the",
           "bush",
