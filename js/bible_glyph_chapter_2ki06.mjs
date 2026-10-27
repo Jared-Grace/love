@@ -826,7 +826,7 @@ export function bible_glyph_chapter_2ki06() {
           "that",
           "a",
           "donkeys",
-          "head",
+          "$person_gesturing_ok",
           "sold",
           "for",
           "eighty",
