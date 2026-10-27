@@ -269,7 +269,7 @@ export function bible_glyph_chapter_gen50() {
           "floor",
           "of",
           "Atad,",
-          "which",
+          "$back+flashlight",
           "is",
           "across",
           "the",
