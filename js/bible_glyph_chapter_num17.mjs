@@ -284,7 +284,7 @@ export function bible_glyph_chapter_num17() {
           "$fishing_pole+proper_name,",
           "$turn_back",
           "the",
-          "staff",
+          "$white_cane",
           "of",
           "Aaron",
           "in",
