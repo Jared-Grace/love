@@ -57,7 +57,7 @@ export function bible_glyph_chapter_gen29() {
           "flocks",
           "were",
           "watered",
-          "from",
+          "$tray_out",
           "that",
           "well.",
           "And",
