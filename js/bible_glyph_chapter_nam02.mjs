@@ -21,7 +21,7 @@ export function bible_glyph_chapter_nam02() {
           "you,",
           "O",
           "Nineveh.",
-          "Guard",
+          "$guard+shield+doing",
           "the",
           "fortress!",
           "Watch",
