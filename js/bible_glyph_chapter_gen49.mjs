@@ -145,7 +145,7 @@ export function bible_glyph_chapter_gen49() {
           "their",
           "$nose+fire",
           "they",
-          "kill",
+          "$fist+skull",
           "$man_beard,",
           "and",
           "on",
