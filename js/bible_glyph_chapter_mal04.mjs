@@ -89,7 +89,7 @@ export function bible_glyph_chapter_mal04() {
           "$walking+tray_out",
           "out",
           "and",
-          "leap",
+          "$person_cartwheeling+doing",
           "like",
           "calves",
           "from",
