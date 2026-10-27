@@ -848,7 +848,7 @@ export function bible_glyph_chapter_lev25() {
           "$pointing",
           "a",
           "$man_beard",
-          "sells",
+          "$coin+hands_giving",
           "a",
           "$house",
           "in",
