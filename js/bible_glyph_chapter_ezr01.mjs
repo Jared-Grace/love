@@ -204,7 +204,7 @@ export function bible_glyph_chapter_ezr01() {
           "$priest",
           "and",
           "$handshake,",
-          "everyone",
+          "$all",
           "whose",
           "$wind",
           "$heart_on_fire",
