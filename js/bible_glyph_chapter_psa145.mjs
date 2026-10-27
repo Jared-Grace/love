@@ -68,7 +68,7 @@ export function bible_glyph_chapter_psa145() {
           "the",
           "$i_am,",
           "and",
-          "greatly",
+          "$double_exclamation",
           "to",
           "be",
           "praised,",
