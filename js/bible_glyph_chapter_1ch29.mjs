@@ -635,7 +635,7 @@ export function bible_glyph_chapter_1ch29() {
           "who",
           "are",
           "present",
-          "here",
+          "$flashlight+round_pushpin",
           "I",
           "have",
           "$eye",
