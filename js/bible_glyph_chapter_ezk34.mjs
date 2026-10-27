@@ -664,7 +664,7 @@ export function bible_glyph_chapter_ezk34() {
           "to",
           "them:",
           "$exclamation,",
-          "I",
+          "$me",
           "Myself",
           "will",
           "judge",
