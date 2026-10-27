@@ -53,7 +53,7 @@ export function bible_glyph_chapter_psa034() {
         words: [
           "My",
           "$person_other",
-          "boasts",
+          "$clapping_hands",
           "in",
           "the",
           "$i_am;",
