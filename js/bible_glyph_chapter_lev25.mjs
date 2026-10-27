@@ -440,7 +440,7 @@ export function bible_glyph_chapter_lev25() {
           "$input_numbers",
           "of",
           "years",
-          "since",
+          "$next_track",
           "the",
           "last",
           "Jubilee,",
