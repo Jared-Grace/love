@@ -547,7 +547,7 @@ export function bible_glyph_chapter_gen07() {
           "$meat",
           "that",
           "moved",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth",
           "$wind+skull+doing,",
