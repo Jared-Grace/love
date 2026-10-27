@@ -869,7 +869,7 @@ export function bible_glyph_chapter_exo26() {
           "table",
           "$pointing_up",
           "the",
-          "north",
+          "$compass+up_arrow",
           "$x_ray.",
         ],
       },
