@@ -879,7 +879,7 @@ export function bible_glyph_chapter_1ki18() {
           "$speech,",
           "$waving_hand",
           "$top,",
-          "for",
+          "$pointing",
           "he",
           "is",
           "a",
