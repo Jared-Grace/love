@@ -579,7 +579,7 @@ export function bible_glyph_chapter_1ki19() {
           "$proper_name$Hazael",
           "as",
           "$king",
-          "over",
+          "$pointing_up",
           "$proper_name$Aram.",
         ],
       },
