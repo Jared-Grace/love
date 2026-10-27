@@ -1384,7 +1384,7 @@ export function bible_glyph_chapter_jer31() {
           "$triangular_ruler+brick",
           "of",
           "the",
-          "Horse",
+          "$horse",
           "$gate,",
           "will",
           "be",
