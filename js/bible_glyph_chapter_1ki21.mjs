@@ -420,7 +420,7 @@ export function bible_glyph_chapter_1ki21() {
           "They",
           "proclaimed",
           "a",
-          "fast",
+          "$eating+locked",
           "and",
           "gave",
           "$proper_name$Naboth",
