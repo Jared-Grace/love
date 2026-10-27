@@ -587,7 +587,7 @@ export function bible_glyph_chapter_exo02() {
         verse_number: 20,
         words: [
           "So",
-          "where",
+          "$question+round_pushpin",
           "is",
           "he?",
           "their",
