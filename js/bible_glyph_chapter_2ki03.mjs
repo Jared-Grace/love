@@ -133,7 +133,7 @@ export function bible_glyph_chapter_2ki03() {
           "of",
           "a",
           "$input_numbers+all",
-          "thousand",
+          "$ten+all",
           "$ram.",
         ],
       },
