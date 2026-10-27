@@ -60,7 +60,7 @@ export function bible_glyph_chapter_exo09() {
           "them",
           "go",
           "and",
-          "continue",
+          "$repeat",
           "to",
           "restrain",
           "them,",
