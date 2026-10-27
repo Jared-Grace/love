@@ -145,7 +145,7 @@ export function bible_glyph_chapter_2sa12() {
           "he",
           "$hand_receiving",
           "the",
-          "poor",
+          "$money_bag+no_entry+person",
           "$man_beard",
           "$lamb+female_sign",
           "and",
