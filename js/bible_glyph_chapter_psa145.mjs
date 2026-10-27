@@ -52,7 +52,7 @@ export function bible_glyph_chapter_psa145() {
           "and",
           "I",
           "will",
-          "praise",
+          "$clapping_hands",
           "Your",
           "$name_tag",
           "$hourglass",
