@@ -1293,7 +1293,7 @@ export function bible_glyph_chapter_gen31() {
           "cut",
           "a",
           "$covenant,",
-          "I",
+          "$me",
           "and",
           "you,",
           "and",
