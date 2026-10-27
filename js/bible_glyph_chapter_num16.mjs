@@ -964,7 +964,7 @@ export function bible_glyph_chapter_num16() {
           "ground",
           "beneath",
           "them",
-          "split",
+          "$carpentry_saw",
           "open.",
         ],
       },
