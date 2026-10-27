@@ -38,7 +38,7 @@ export function bible_glyph_chapter_2sa11() {
           "$kneeling",
           "with",
           "the",
-          "whole",
+          "$all",
           "army",
           "of",
           "$wrestling+heart_on_fire.",
