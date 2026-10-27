@@ -196,7 +196,7 @@ export function bible_glyph_chapter_1sa07() {
           "poured",
           "it",
           "out",
-          "before",
+          "$face",
           "$i_am.",
           "On",
           "that",
