@@ -293,7 +293,7 @@ export function bible_glyph_chapter_gen40() {
           "the",
           "$grapes",
           "and",
-          "squeezed",
+          "$grapes+fist+doing",
           "them",
           "into",
           "his",
