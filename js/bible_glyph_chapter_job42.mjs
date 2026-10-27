@@ -74,7 +74,7 @@ export function bible_glyph_chapter_job42() {
           "You",
           "said,",
           "$ear",
-          "now,",
+          "$pleading,",
           "and",
           "I",
           "will",
