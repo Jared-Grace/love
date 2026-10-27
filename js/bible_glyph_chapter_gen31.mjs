@@ -1269,7 +1269,7 @@ export function bible_glyph_chapter_gen31() {
           "$hammer+doing",
           "$sun",
           "to",
-          "these",
+          "$flashlight+flashlight",
           "$woman",
           "of",
           "mine,",
