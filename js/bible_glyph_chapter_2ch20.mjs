@@ -583,7 +583,7 @@ export function bible_glyph_chapter_2ch20() {
           "need",
           "$no_entry",
           "$crossed_swords+doing",
-          "this",
+          "$flashlight",
           "battle.",
           "Take",
           "up",
