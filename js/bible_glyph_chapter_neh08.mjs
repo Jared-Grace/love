@@ -456,7 +456,7 @@ export function bible_glyph_chapter_neh08() {
           "$hammer+doing",
           "to",
           "$beaming",
-          "greatly,",
+          "$top,",
           "because",
           "they",
           "understood",
