@@ -473,7 +473,7 @@ export function bible_glyph_chapter_jos02() {
           "the",
           "men",
           "$speech.",
-          "If",
+          "$traffic_light",
           "you",
           "do",
           "$no_entry",
