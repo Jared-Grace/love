@@ -525,7 +525,7 @@ export function bible_glyph_chapter_jer17() {
         words: [
           "Do",
           "$no_entry",
-          "become",
+          "$link",
           "a",
           "terror",
           "to",
