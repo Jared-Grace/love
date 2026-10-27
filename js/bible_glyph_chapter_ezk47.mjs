@@ -533,7 +533,7 @@ export function bible_glyph_chapter_ezk47() {
           "extend",
           "$tray_out",
           "the",
-          "Great",
+          "$top",
           "$sea",
           "by",
           "$road",
