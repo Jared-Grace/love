@@ -1219,7 +1219,7 @@ export function bible_glyph_chapter_exo28() {
           "$tent",
           "of",
           "$alarm_clock",
-          "or",
+          "$shuffle",
           "approach",
           "the",
           "$altar",
