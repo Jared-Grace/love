@@ -686,7 +686,7 @@ export function bible_glyph_chapter_gen29() {
           "daughter",
           "in",
           "marriage",
-          "before",
+          "$face",
           "the",
           "older.",
         ],
