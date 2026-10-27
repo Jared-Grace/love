@@ -538,7 +538,7 @@ export function bible_glyph_chapter_exo35() {
           "they",
           "all",
           "$man_beard",
-          "presented",
+          "$hand+up_down_arrow+doing",
           "their",
           "$gold",
           "as",
