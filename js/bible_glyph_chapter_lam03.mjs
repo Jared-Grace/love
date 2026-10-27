@@ -144,7 +144,7 @@ export function bible_glyph_chapter_lam03() {
           "$plus",
           "when",
           "I",
-          "cry",
+          "$loudspeaker+mouth",
           "out",
           "and",
           "plead",
