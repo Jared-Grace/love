@@ -77,7 +77,7 @@ export function bible_glyph_chapter_isa58() {
           "their",
           "$heart_on_fire.",
           "They",
-          "ask",
+          "$question",
           "Me",
           "for",
           "$ruler+thing",
