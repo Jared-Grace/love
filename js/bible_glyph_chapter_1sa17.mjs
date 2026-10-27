@@ -489,7 +489,7 @@ export function bible_glyph_chapter_1sa17() {
           "$footprints",
           "also",
           "these",
-          "ten",
+          "$ten",
           "portions",
           "of",
           "cheese",
