@@ -45,7 +45,7 @@ export function bible_glyph_chapter_1sa17() {
           "$man_beard",
           "of",
           "$wrestling+heart_on_fire",
-          "assembled",
+          "$crowd+doing",
           "and",
           "camped",
           "in",
