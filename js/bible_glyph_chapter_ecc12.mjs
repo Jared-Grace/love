@@ -198,7 +198,7 @@ export function bible_glyph_chapter_ecc12() {
           "before",
           "the",
           "silver",
-          "cord",
+          "$knot+thread",
           "is",
           "snapped",
           "and",
