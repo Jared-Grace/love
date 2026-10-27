@@ -1191,7 +1191,7 @@ export function bible_glyph_chapter_exo28() {
           "to",
           "$coat+doing",
           "their",
-          "bare",
+          "$face_with_peeking_eye",
           "$meat,",
           "extending",
           "from",
