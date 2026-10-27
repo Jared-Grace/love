@@ -748,7 +748,7 @@ export function bible_glyph_chapter_jer31() {
           "has",
           "created",
           "a",
-          "new",
+          "$new_button",
           "thing",
           "in",
           "the",
