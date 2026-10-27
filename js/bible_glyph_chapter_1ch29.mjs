@@ -609,7 +609,7 @@ export function bible_glyph_chapter_1ch29() {
           "$heart_on_fire,",
           "$pointing",
           "You",
-          "test",
+          "$microscope",
           "the",
           "$heart_organ",
           "and",
