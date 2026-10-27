@@ -675,7 +675,7 @@ export function bible_glyph_chapter_deu05() {
           "and",
           "you",
           "$speech:",
-          "Behold,",
+          "$exclamation,",
           "the",
           "$i_am",
           "our",
