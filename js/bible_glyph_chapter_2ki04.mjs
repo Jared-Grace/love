@@ -437,7 +437,7 @@ export function bible_glyph_chapter_2ki04() {
           "have",
           "a",
           "home",
-          "among",
+          "$radio_button",
           "my",
           "own",
           "$family.",
