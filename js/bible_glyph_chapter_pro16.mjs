@@ -533,7 +533,7 @@ export function bible_glyph_chapter_pro16() {
           "A",
           "worker",
           "$person_other",
-          "works",
+          "$hot_face+doing",
           "for",
           "him,",
           "because",
