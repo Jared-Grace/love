@@ -644,7 +644,7 @@ export function bible_glyph_chapter_deu15() {
           "to",
           "put",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "your",
           "$ox",
