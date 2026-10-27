@@ -397,7 +397,7 @@ export function bible_glyph_chapter_mal01() {
           "the",
           "sun",
           "rises",
-          "to",
+          "$finish",
           "where",
           "it",
           "sets,",
