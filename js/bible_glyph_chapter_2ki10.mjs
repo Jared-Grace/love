@@ -912,7 +912,7 @@ export function bible_glyph_chapter_2ki10() {
           "$i_am+pointing_back",
           "had",
           "stationed",
-          "eighty",
+          "$eight+zero",
           "$man_beard",
           "$sun_behind_small_cloud",
           "and",
