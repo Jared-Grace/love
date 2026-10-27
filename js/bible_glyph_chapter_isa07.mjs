@@ -615,7 +615,7 @@ export function bible_glyph_chapter_isa07() {
           "to",
           "$razor+doing",
           "your",
-          "head",
+          "$person_gesturing_ok",
           "and",
           "the",
           "hair",
