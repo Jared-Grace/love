@@ -566,7 +566,7 @@ export function bible_glyph_chapter_lev14() {
           "with",
           "his",
           "finger",
-          "seven",
+          "$seven",
           "times",
           "before",
           "$i_am.",
