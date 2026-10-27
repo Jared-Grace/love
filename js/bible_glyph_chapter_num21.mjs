@@ -151,7 +151,7 @@ export function bible_glyph_chapter_num21() {
           "and",
           "against",
           "$fishing_pole+proper_name.",
-          "Why",
+          "$flashlight+question",
           "have",
           "you",
           "led",
