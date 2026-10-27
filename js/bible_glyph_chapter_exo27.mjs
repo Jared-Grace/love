@@ -256,7 +256,7 @@ export function bible_glyph_chapter_exo27() {
           "$down_arrow+brick,",
           "and",
           "$silver",
-          "hooks",
+          "$hook",
           "and",
           "bands",
           "on",
