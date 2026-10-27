@@ -265,7 +265,7 @@ export function bible_glyph_chapter_hab03() {
         words: [
           "$sun_with_face",
           "and",
-          "moon",
+          "$moon",
           "stood",
           "still",
           "in",
