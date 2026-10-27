@@ -390,7 +390,7 @@ export function bible_glyph_chapter_gen43() {
           "your",
           "sacks.",
           "Perhaps",
-          "it",
+          "$pointing_back",
           "was",
           "a",
           "mistake.",
