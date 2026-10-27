@@ -739,7 +739,7 @@ export function bible_glyph_chapter_zec14() {
           "some",
           "pots",
           "and",
-          "cook",
+          "$pot_of_food+doing",
           "in",
           "them.",
           "And",
