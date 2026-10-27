@@ -527,7 +527,7 @@ export function bible_glyph_chapter_gen20() {
           "to",
           "your",
           "$brother.",
-          "It",
+          "$pointing_back",
           "is",
           "a",
           "covering",
