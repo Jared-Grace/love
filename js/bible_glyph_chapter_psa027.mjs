@@ -169,7 +169,7 @@ export function bible_glyph_chapter_psa027() {
           "will",
           "set",
           "me",
-          "high",
+          "$up_arrow",
           "upon",
           "a",
           "$rock.",
