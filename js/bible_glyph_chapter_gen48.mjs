@@ -438,7 +438,7 @@ export function bible_glyph_chapter_gen48() {
           "he",
           "put",
           "his",
-          "left",
+          "$hand+away",
           "on",
           "the",
           "$person_gesturing_ok",
