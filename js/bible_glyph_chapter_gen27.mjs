@@ -975,7 +975,7 @@ export function bible_glyph_chapter_gen27() {
         verse_number: 34,
         words: [
           "When",
-          "Esau",
+          "$hair+proper_name",
           "$ear",
           "the",
           "$speech",
