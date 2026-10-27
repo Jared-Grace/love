@@ -853,7 +853,7 @@ export function bible_glyph_chapter_jer23() {
           "$no_entry",
           "$eye",
           "him,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am?",
           "Do",
