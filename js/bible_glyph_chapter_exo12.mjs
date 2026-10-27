@@ -164,7 +164,7 @@ export function bible_glyph_chapter_exo12() {
           "of",
           "$wrestling+heart_on_fire",
           "will",
-          "slaughter",
+          "$kitchen_knife+doing",
           "the",
           "animals",
           "at",
