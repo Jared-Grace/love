@@ -483,7 +483,7 @@ export function bible_glyph_chapter_hab03() {
           "yet",
           "I",
           "will",
-          "exult",
+          "$partying_face+up_arrow+doing",
           "in",
           "the",
           "$i_am;",
