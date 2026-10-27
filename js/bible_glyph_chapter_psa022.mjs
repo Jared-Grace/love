@@ -273,7 +273,7 @@ export function bible_glyph_chapter_psa022() {
           "like",
           "lions",
           "that",
-          "roar",
+          "$lion+loudspeaker",
           "and",
           "maul.",
         ],
