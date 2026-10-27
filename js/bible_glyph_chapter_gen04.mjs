@@ -465,7 +465,7 @@ export function bible_glyph_chapter_gen04() {
           "out",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am",
