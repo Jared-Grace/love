@@ -562,7 +562,7 @@ export function bible_glyph_chapter_isa26() {
           "doors",
           "$back+person",
           "you.",
-          "Hide",
+          "$see_no_evil_monkey+doing",
           "yourselves",
           "a",
           "little",
