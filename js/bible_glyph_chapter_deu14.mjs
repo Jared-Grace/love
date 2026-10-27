@@ -637,7 +637,7 @@ export function bible_glyph_chapter_deu14() {
           "are",
           "to",
           "feast",
-          "there",
+          "$telescope",
           "in",
           "the",
           "presence",
