@@ -584,7 +584,7 @@ export function bible_glyph_chapter_num21() {
           "$wrestling+heart_on_fire",
           "$hand_sending",
           "$angel",
-          "to",
+          "$toward",
           "$proper_name$Sihon",
           "$king",
           "of",
