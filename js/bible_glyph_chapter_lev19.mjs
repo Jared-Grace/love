@@ -248,7 +248,7 @@ export function bible_glyph_chapter_lev19() {
           "and",
           "the",
           "$foreigner.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
