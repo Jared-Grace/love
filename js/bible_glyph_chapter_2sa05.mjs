@@ -660,7 +660,7 @@ export function bible_glyph_chapter_2sa05() {
           "at",
           "them",
           "in",
-          "front",
+          "$vs_button",
           "of",
           "the",
           "balsam",
