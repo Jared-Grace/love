@@ -168,7 +168,7 @@ export function bible_glyph_chapter_pro02() {
           "$telescope+clock",
           "you",
           "will",
-          "discern",
+          "$brain",
           "$ruler+thing",
           "and",
           "$scales+thing",
