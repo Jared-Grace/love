@@ -270,7 +270,7 @@ export function bible_glyph_chapter_1ki08() {
           "and",
           "they",
           "are",
-          "there",
+          "$telescope",
           "to",
           "this",
           "$sun.",
