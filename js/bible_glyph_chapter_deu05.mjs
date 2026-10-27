@@ -918,7 +918,7 @@ export function bible_glyph_chapter_deu05() {
           "But",
           "you",
           "stand",
-          "here",
+          "$flashlight+round_pushpin",
           "with",
           "Me,",
           "that",
