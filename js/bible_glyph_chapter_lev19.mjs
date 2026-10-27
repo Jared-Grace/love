@@ -29,7 +29,7 @@ export function bible_glyph_chapter_lev19() {
           "them,",
           "$link",
           "$sparkle",
-          "because",
+          "$pointing",
           "I,",
           "the",
           "$i_am",
