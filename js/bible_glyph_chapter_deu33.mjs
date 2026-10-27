@@ -349,7 +349,7 @@ export function bible_glyph_chapter_deu33() {
           "of",
           "$i_am",
           "rest",
-          "secure",
+          "$anchor+thing",
           "in",
           "Him.",
           "He",
