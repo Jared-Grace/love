@@ -1071,7 +1071,7 @@ export function bible_glyph_chapter_jer32() {
         verse_number: 31,
         words: [
           "$pointing",
-          "this",
+          "$flashlight",
           "$city",
           "has",
           "aroused",
