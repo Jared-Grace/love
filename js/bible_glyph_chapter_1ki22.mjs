@@ -1557,7 +1557,7 @@ export function bible_glyph_chapter_1ki22() {
           "of",
           "$proper_name$Ahab",
           "$speech",
-          "to",
+          "$toward",
           "$i_am+scales,",
           "Let",
           "my",
