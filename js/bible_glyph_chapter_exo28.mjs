@@ -513,7 +513,7 @@ export function bible_glyph_chapter_exo28() {
           "in",
           "the",
           "third",
-          "row",
+          "$straight_ruler+repeat",
           "a",
           "jacinth,",
           "an",
