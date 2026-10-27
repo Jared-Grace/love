@@ -218,7 +218,7 @@ export function bible_glyph_chapter_lev06() {
           "hearth",
           "of",
           "$altar",
-          "all",
+          "$all",
           "$night",
           "until",
           "$morning,",
