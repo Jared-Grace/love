@@ -471,7 +471,7 @@ export function bible_glyph_chapter_exo37() {
           "$cup+silver",
           "shaped",
           "like",
-          "almond",
+          "$tree+blossom+first_place+describing",
           "blossoms",
           "on",
           "the",
