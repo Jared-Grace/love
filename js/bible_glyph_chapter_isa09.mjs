@@ -208,7 +208,7 @@ export function bible_glyph_chapter_isa09() {
           "called",
           "$star_struck+thing",
           "$person_tipping_hand+doing,",
-          "Mighty",
+          "$might+person",
           "$heart_on_fire,",
           "Everlasting",
           "$father,",
