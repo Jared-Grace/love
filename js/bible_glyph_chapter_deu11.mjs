@@ -763,7 +763,7 @@ export function bible_glyph_chapter_deu11() {
           "drive",
           "out",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$map",
           "before",
           "you,",
