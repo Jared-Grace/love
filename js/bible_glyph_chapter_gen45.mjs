@@ -230,7 +230,7 @@ export function bible_glyph_chapter_gen45() {
           "it",
           "was",
           "$no_entry",
-          "you",
+          "$you",
           "who",
           "sent",
           "me",
