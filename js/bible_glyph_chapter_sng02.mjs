@@ -265,7 +265,7 @@ export function bible_glyph_chapter_sng02() {
           "the",
           "$earth,",
           "the",
-          "season",
+          "$clock",
           "of",
           "singing",
           "has",
