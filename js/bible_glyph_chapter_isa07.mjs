@@ -50,7 +50,7 @@ export function bible_glyph_chapter_isa07() {
           "$city+peace",
           "to",
           "wage",
-          "war",
+          "$crossed_swords",
           "against",
           "it,",
           "but",
