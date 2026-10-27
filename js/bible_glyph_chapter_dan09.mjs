@@ -801,7 +801,7 @@ export function bible_glyph_chapter_dan09() {
         words: [
           "At",
           "the",
-          "beginning",
+          "$first_place+sun",
           "of",
           "your",
           "petitions,",
