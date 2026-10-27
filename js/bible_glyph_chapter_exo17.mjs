@@ -392,7 +392,7 @@ export function bible_glyph_chapter_exo17() {
           "on",
           "it.",
           "Then",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "and",
           "$proper_name$Hur",
           "held",
