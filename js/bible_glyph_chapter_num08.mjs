@@ -646,7 +646,7 @@ export function bible_glyph_chapter_num08() {
           "$alarm_clock",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "$proper_name$Aaron",
           "and",
