@@ -567,7 +567,7 @@ export function bible_glyph_chapter_1ki22() {
           "$mountain",
           "like",
           "$sheep",
-          "without",
+          "$dotted_line_face",
           "a",
           "$person+sheep.",
           "And",
