@@ -884,7 +884,7 @@ export function bible_glyph_chapter_exo26() {
           "$tent",
           "$hammer",
           "a",
-          "curtain",
+          "$umbrella+door",
           "of",
           "blue,",
           "purple",
