@@ -311,7 +311,7 @@ export function bible_glyph_chapter_lev16() {
           "be",
           "presented",
           "$sprout",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "to",
