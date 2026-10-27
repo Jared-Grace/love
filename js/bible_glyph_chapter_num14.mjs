@@ -543,7 +543,7 @@ export function bible_glyph_chapter_num14() {
         verse_number: 17,
         words: [
           "So",
-          "now,",
+          "$watch,",
           "I",
           "pray,",
           "may",
