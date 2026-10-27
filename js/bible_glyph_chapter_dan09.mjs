@@ -859,7 +859,7 @@ export function bible_glyph_chapter_dan09() {
           "make",
           "atonement",
           "for",
-          "iniquity,",
+          "$cyclone,",
           "to",
           "$footprints",
           "$hourglass",
