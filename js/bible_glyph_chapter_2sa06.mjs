@@ -86,7 +86,7 @@ export function bible_glyph_chapter_2sa06() {
           "$heart_on_fire",
           "on",
           "a",
-          "new",
+          "$new_button",
           "$wheel",
           "and",
           "brought",
