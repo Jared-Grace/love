@@ -1223,7 +1223,7 @@ export function bible_glyph_chapter_deu04() {
       {
         verse_number: 34,
         words: [
-          "Or",
+          "$shuffle",
           "has",
           "any",
           "$moai",
