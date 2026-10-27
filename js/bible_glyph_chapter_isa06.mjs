@@ -39,7 +39,7 @@ export function bible_glyph_chapter_isa06() {
           "robe",
           "$battery",
           "the",
-          "temple.",
+          "$classical_building.",
         ],
       },
       {
