@@ -320,7 +320,7 @@ export function bible_glyph_chapter_exo39() {
           "$straight_ruler+repeat",
           "had",
           "a",
-          "beryl,",
+          "$gem_stone+water_wave,",
           "an",
           "onyx,",
           "and",
