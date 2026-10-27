@@ -277,7 +277,7 @@ export function bible_glyph_chapter_num22() {
           "$speech",
           "to",
           "you",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "$mouth",
