@@ -226,7 +226,7 @@ export function bible_glyph_chapter_isa11() {
           "graze",
           "with",
           "the",
-          "bear,",
+          "$bear,",
           "their",
           "$child",
           "will",
