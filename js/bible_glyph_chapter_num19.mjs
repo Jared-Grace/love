@@ -529,7 +529,7 @@ export function bible_glyph_chapter_num19() {
           "of",
           "natural",
           "causes,",
-          "or",
+          "$shuffle",
           "the",
           "bone",
           "of",
