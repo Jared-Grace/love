@@ -735,7 +735,7 @@ export function bible_glyph_chapter_est01() {
           "in",
           "their",
           "own",
-          "language,",
+          "$tongue,",
           "$mouth",
           "that",
           "every",
