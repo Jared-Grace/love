@@ -546,7 +546,7 @@ export function bible_glyph_chapter_job38() {
         words: [
           "Does",
           "the",
-          "rain",
+          "$rain",
           "have",
           "a",
           "$father?",
