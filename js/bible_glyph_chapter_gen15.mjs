@@ -333,7 +333,7 @@ export function bible_glyph_chapter_gen15() {
           "sleep,",
           "and",
           "suddenly",
-          "great",
+          "$top",
           "$fearful_face+thing",
           "and",
           "$darkness+thing",
