@@ -491,7 +491,7 @@ export function bible_glyph_chapter_mal03() {
           "requirements",
           "and",
           "$walking",
-          "mournfully",
+          "$black_heart+manner",
           "before",
           "the",
           "$i_am",
