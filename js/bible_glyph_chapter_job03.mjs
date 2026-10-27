@@ -504,7 +504,7 @@ export function bible_glyph_chapter_job03() {
       {
         verse_number: 25,
         words: [
-          "For",
+          "$pointing",
           "the",
           "thing",
           "I",
