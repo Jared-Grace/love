@@ -20,7 +20,7 @@ export function bible_glyph_chapter_gen24() {
           "now",
           "$father+map",
           "was",
-          "old",
+          "$old_man+doing",
           "and",
           "$footprints",
           "in",
