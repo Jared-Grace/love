@@ -609,7 +609,7 @@ export function bible_glyph_chapter_amo05() {
           "gloom",
           "with",
           "$no_entry",
-          "brightness",
+          "$sun+sparkles+thing",
           "in",
           "it?",
         ],
