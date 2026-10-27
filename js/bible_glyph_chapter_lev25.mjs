@@ -1001,7 +1001,7 @@ export function bible_glyph_chapter_lev25() {
           "and",
           "a",
           "$house",
-          "sold",
+          "$coin+hands_giving+thing",
           "in",
           "a",
           "$city",
