@@ -853,7 +853,7 @@ export function bible_glyph_chapter_exo21() {
       {
         verse_number: 30,
         words: [
-          "If",
+          "$traffic_light",
           "payment",
           "is",
           "demanded",
