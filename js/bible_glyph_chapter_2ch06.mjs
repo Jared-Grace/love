@@ -675,7 +675,7 @@ export function bible_glyph_chapter_2ch06() {
           "$toward",
           "$flashlight",
           "$house",
-          "day",
+          "$sun+manner",
           "and",
           "$night,",
           "$toward",
