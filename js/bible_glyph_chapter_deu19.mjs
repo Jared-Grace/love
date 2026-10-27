@@ -646,7 +646,7 @@ export function bible_glyph_chapter_deu19() {
           "$ear",
           "and",
           "be",
-          "afraid,",
+          "$fear+doing,",
           "and",
           "they",
           "will",
