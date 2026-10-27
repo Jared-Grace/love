@@ -467,7 +467,7 @@ export function bible_glyph_chapter_1ki02() {
           "of",
           "$proper_name$Haggith",
           "$footprints",
-          "to",
+          "$toward",
           "Bathsheba",
           "the",
           "$mother",
