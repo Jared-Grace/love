@@ -558,7 +558,7 @@ export function bible_glyph_chapter_amo09() {
           "own",
           "$brown_square,",
           "$no_entry",
-          "again",
+          "$repeat",
           "to",
           "be",
           "uprooted",
