@@ -61,7 +61,7 @@ export function bible_glyph_chapter_jer17() {
           "and",
           "on",
           "the",
-          "high",
+          "$giraffe",
           "$mountain+pinching_hand.",
         ],
       },
