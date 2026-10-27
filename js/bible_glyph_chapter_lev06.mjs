@@ -484,7 +484,7 @@ export function bible_glyph_chapter_lev06() {
         verse_number: 18,
         words: [
           "Any",
-          "male",
+          "$reminder_ribbon+thing",
           "$son",
           "of",
           "$proper_name$Aaron",
