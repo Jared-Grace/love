@@ -32,7 +32,7 @@ export function bible_glyph_chapter_lev16() {
           "they",
           "approached",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$i_am",
