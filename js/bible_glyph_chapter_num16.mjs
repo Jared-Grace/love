@@ -1521,7 +1521,7 @@ export function bible_glyph_chapter_num16() {
           "$alarm_clock,",
           "since",
           "the",
-          "plague",
+          "$fist+microbe+thing",
           "had",
           "been",
           "halted.",
