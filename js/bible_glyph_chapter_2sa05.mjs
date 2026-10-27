@@ -134,7 +134,7 @@ export function bible_glyph_chapter_2sa05() {
           "and",
           "he",
           "$castle+doing",
-          "forty",
+          "$four+zero",
           "years.",
         ],
       },
