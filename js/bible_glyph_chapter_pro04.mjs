@@ -455,7 +455,7 @@ export function bible_glyph_chapter_pro04() {
       {
         verse_number: 23,
         words: [
-          "Guard",
+          "$guard+shield+doing",
           "your",
           "$heart_organ",
           "with",
