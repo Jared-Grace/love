@@ -90,7 +90,7 @@ export function bible_glyph_chapter_ezk11() {
           "$thumbs_down",
           "$person_tipping_hand",
           "in",
-          "this",
+          "$flashlight",
           "$city.",
         ],
       },
