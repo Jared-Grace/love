@@ -617,7 +617,7 @@ export function bible_glyph_chapter_gen18() {
           "if",
           "their",
           "$hammer+doing",
-          "fully",
+          "$end_arrow+thing",
           "justify",
           "the",
           "outcry",
