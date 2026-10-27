@@ -16,7 +16,7 @@ export function bible_glyph_chapter_gen06() {
           "$link",
           "when",
           "$person",
-          "began",
+          "$sewing_needle",
           "to",
           "multiply",
           "on",
