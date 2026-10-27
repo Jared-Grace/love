@@ -1030,7 +1030,7 @@ export function bible_glyph_chapter_1sa02() {
           "but",
           "those",
           "who",
-          "despise",
+          "$unamused_face+doing",
           "Me",
           "will",
           "be",
