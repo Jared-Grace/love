@@ -867,7 +867,7 @@ export function bible_glyph_chapter_lev13() {
           "$hair",
           "in",
           "the",
-          "spot",
+          "$white_circle+round_pushpin",
           "and",
           "it",
           "is",
