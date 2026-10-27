@@ -358,7 +358,7 @@ export function bible_glyph_chapter_deu15() {
       {
         verse_number: 11,
         words: [
-          "For",
+          "$pointing",
           "there",
           "will",
           "$no_entry",
