@@ -58,7 +58,7 @@ export function bible_glyph_chapter_deu12() {
           "where",
           "the",
           "$map",
-          "you",
+          "$you",
           "are",
           "dispossessing",
           "have",
