@@ -496,7 +496,7 @@ export function bible_glyph_chapter_jdg04() {
           "$proper_name$Harosheth-hagoyim,",
           "and",
           "the",
-          "whole",
+          "$all",
           "army",
           "of",
           "$proper_name$Sisera",
