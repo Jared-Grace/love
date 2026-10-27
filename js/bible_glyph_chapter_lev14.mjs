@@ -18,7 +18,7 @@ export function bible_glyph_chapter_lev14() {
       {
         verse_number: 2,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$scroll",
