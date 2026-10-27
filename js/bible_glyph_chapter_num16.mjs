@@ -842,7 +842,7 @@ export function bible_glyph_chapter_num16() {
           "Then",
           "$fishing_pole+proper_name",
           "$speech,",
-          "This",
+          "$flashlight",
           "is",
           "how",
           "you",
