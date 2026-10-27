@@ -479,7 +479,7 @@ export function bible_glyph_chapter_pro16() {
           "$face_with_open_mouth",
           "and",
           "adds",
-          "persuasiveness",
+          "$hand_receiving+open_book",
           "to",
           "his",
           "$kiss_mark.",
