@@ -264,7 +264,7 @@ export function bible_glyph_chapter_lev22() {
           "The",
           "priests",
           "must",
-          "keep",
+          "$guard",
           "My",
           "charge,",
           "$no_entry",
