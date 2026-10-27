@@ -375,7 +375,7 @@ export function bible_glyph_chapter_pro03() {
         words: [
           "The",
           "$i_am",
-          "founded",
+          "$brick+round_pushpin+doing",
           "the",
           "$earth",
           "by",
