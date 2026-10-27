@@ -159,7 +159,7 @@ export function bible_glyph_chapter_deu19() {
           "his",
           "neighbor",
           "to",
-          "cut",
+          "$axe+doing",
           "$tree,",
           "and",
           "swings",
