@@ -523,7 +523,7 @@ export function bible_glyph_chapter_1ki01() {
           "$crown,",
           "$you",
           "yourself",
-          "swore",
+          "$raised_back_of_hand+doing",
           "by",
           "the",
           "$i_am",
