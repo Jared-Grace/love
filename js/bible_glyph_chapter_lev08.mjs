@@ -262,7 +262,7 @@ export function bible_glyph_chapter_lev08() {
           "the",
           "anointing",
           "$lotion_bottle",
-          "on",
+          "$pointing_up",
           "the",
           "head",
           "of",
