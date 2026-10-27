@@ -829,7 +829,7 @@ export function bible_glyph_chapter_gen21() {
           "$military_medal",
           "of",
           "his",
-          "army",
+          "$military_helmet",
           "got",
           "up",
           "and",
