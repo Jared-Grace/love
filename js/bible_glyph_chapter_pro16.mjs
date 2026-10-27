@@ -158,7 +158,7 @@ export function bible_glyph_chapter_pro16() {
           "$i_am,",
           "He",
           "makes",
-          "even",
+          "$plus",
           "his",
           "enemies",
           "live",
