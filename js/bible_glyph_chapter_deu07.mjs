@@ -787,7 +787,7 @@ export function bible_glyph_chapter_deu07() {
           "$crowd+tornado+doing",
           "them",
           "into",
-          "great",
+          "$top",
           "$megaphone+crowd+thing",
           "until",
           "they",
