@@ -488,7 +488,7 @@ export function bible_glyph_chapter_pro16() {
       {
         verse_number: 24,
         words: [
-          "Pleasant",
+          "$smile+describing+thing",
           "words",
           "are",
           "a",
