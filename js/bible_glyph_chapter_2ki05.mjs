@@ -49,7 +49,7 @@ export function bible_glyph_chapter_2ki05() {
           "he",
           "was",
           "a",
-          "mighty",
+          "$might+person",
           "$man_beard",
           "of",
           "valor,",
