@@ -789,7 +789,7 @@ export function bible_glyph_chapter_gen44() {
         verse_number: 28,
         words: [
           "When",
-          "one",
+          "$one",
           "of",
           "them",
           "was",
