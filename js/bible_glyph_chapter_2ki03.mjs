@@ -343,7 +343,7 @@ export function bible_glyph_chapter_2ki03() {
           "that",
           "we",
           "may",
-          "inquire",
+          "$magnifying_glass+question",
           "of",
           "$i_am",
           "through",
