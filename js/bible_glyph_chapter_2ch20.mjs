@@ -1159,7 +1159,7 @@ export function bible_glyph_chapter_2ch20() {
         verse_number: 33,
         words: [
           "The",
-          "high",
+          "$snow_capped_mountain",
           "places,",
           "$check+exclamation,",
           "were",
