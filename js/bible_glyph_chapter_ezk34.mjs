@@ -481,7 +481,7 @@ export function bible_glyph_chapter_ezk34() {
           "$person+sheep",
           "in",
           "rich",
-          "pasture",
+          "$person+sheep+place",
           "on",
           "the",
           "$mountain",
