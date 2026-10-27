@@ -551,7 +551,7 @@ export function bible_glyph_chapter_amo09() {
           "I",
           "will",
           "firmly",
-          "plant",
+          "$sprout+down_arrow+doing",
           "them",
           "in",
           "their",
