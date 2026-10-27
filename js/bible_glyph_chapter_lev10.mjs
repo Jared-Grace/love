@@ -277,7 +277,7 @@ export function bible_glyph_chapter_lev10() {
           "You",
           "must",
           "distinguish",
-          "between",
+          "$brain+arrow_both_ways",
           "$sparkle+thing",
           "and",
           "the",
