@@ -318,7 +318,7 @@ export function bible_glyph_chapter_exo31() {
           "may",
           "$lightbulb",
           "that",
-          "I",
+          "$me",
           "am",
           "$i_am",
           "who",
