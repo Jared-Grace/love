@@ -98,7 +98,7 @@ export function bible_glyph_chapter_exo01() {
           "and",
           "all",
           "that",
-          "generation",
+          "$dna",
           "$skull+doing,",
         ],
       },
