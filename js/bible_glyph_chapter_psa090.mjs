@@ -300,7 +300,7 @@ export function bible_glyph_chapter_psa090() {
           "us",
           "in",
           "the",
-          "morning",
+          "$morning",
           "with",
           "Your",
           "$gift,",
