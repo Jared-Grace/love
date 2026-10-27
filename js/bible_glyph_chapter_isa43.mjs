@@ -455,7 +455,7 @@ export function bible_glyph_chapter_isa43() {
           "$wrestling+heart_on_fire:",
           "For",
           "your",
-          "sake",
+          "$right_arrow+toward",
           "I",
           "will",
           "$hand_sending",
