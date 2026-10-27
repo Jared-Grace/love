@@ -302,7 +302,7 @@ export function bible_glyph_chapter_exo35() {
           "the",
           "lampstand",
           "for",
-          "light",
+          "$light+thing",
           "with",
           "its",
           "accessories",
