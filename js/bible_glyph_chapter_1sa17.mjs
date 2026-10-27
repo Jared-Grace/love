@@ -178,7 +178,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "its",
           "iron",
-          "point",
+          "$fire+tongue",
           "weighed",
           "six",
           "hundred",
