@@ -445,7 +445,7 @@ export function bible_glyph_chapter_num35() {
           "who",
           "kills",
           "$person_other",
-          "unintentionally",
+          "$footprints+question+thing",
           "may",
           "$running+dashing_away",
           "$telescope.",
