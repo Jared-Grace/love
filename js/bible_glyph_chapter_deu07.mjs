@@ -604,7 +604,7 @@ export function bible_glyph_chapter_deu07() {
           "$tray_out",
           "we",
           "are.",
-          "How",
+          "$question+likeness",
           "can",
           "we",
           "drive",
