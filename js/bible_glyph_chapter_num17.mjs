@@ -170,7 +170,7 @@ export function bible_glyph_chapter_num17() {
           "of",
           "the",
           "$father,",
-          "twelve",
+          "$two",
           "staffs",
           "in",
           "all.",
