@@ -37,7 +37,7 @@ export function bible_glyph_chapter_num18() {
           "the",
           "sanctuary.",
           "And",
-          "you",
+          "$you",
           "and",
           "your",
           "$son",
