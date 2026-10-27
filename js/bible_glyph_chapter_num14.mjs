@@ -870,7 +870,7 @@ export function bible_glyph_chapter_num14() {
           "as",
           "I",
           "$sprout,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "exactly",
