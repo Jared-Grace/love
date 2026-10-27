@@ -347,7 +347,7 @@ export function bible_glyph_chapter_1ch29() {
           "of",
           "their",
           "leaders,",
-          "for",
+          "$pointing",
           "with",
           "a",
           "whole",
