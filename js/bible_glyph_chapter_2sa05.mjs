@@ -195,7 +195,7 @@ export function bible_glyph_chapter_2sa05() {
           "$no_entry",
           "$footprints",
           "in",
-          "here.",
+          "$round_pushpin+pointing_down.",
           "For",
           "they",
           "$speech,",
