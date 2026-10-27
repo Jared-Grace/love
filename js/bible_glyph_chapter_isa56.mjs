@@ -136,7 +136,7 @@ export function bible_glyph_chapter_isa56() {
           "My",
           "Sabbaths,",
           "who",
-          "choose",
+          "$check_box",
           "what",
           "pleases",
           "Me",
