@@ -208,7 +208,7 @@ export function bible_glyph_chapter_gen42() {
           "$mouth",
           "to",
           "them",
-          "harshly.",
+          "$mechanical_arm+describing.",
           "He",
           "$speech,",
           "Where",
