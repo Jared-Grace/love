@@ -124,7 +124,7 @@ export function bible_glyph_chapter_sng08() {
         words: [
           "$person+question",
           "is",
-          "this",
+          "$flashlight",
           "coming",
           "up",
           "$tray_out",
