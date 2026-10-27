@@ -44,7 +44,7 @@ export function bible_glyph_chapter_exo07() {
           "to",
           "$mouth",
           "$all",
-          "that",
+          "$back+flashlight",
           "I",
           "command",
           "you,",
