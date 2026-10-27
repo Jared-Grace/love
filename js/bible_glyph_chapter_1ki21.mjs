@@ -469,7 +469,7 @@ export function bible_glyph_chapter_1ki21() {
           "they",
           "took",
           "him",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$city",
           "and",
