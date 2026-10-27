@@ -446,7 +446,7 @@ export function bible_glyph_chapter_exo13() {
           "us",
           "go,",
           "$i_am",
-          "killed",
+          "$fist+skull",
           "every",
           "firstborn",
           "in",
