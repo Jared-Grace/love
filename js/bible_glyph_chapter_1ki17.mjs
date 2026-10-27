@@ -299,7 +299,7 @@ export function bible_glyph_chapter_1ki17() {
           "$hand_receiving",
           "me",
           "a",
-          "piece",
+          "$bread+pinching_hand",
           "of",
           "$bread.",
         ],
