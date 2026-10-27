@@ -98,7 +98,7 @@ export function bible_glyph_chapter_pro04() {
           "$coin+hand_receiving",
           "$brain+thing;",
           "$no_entry",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "my",
           "words",
           "or",
