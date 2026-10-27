@@ -947,7 +947,7 @@ export function bible_glyph_chapter_jer07() {
           "$i_am.",
           "They",
           "have",
-          "set",
+          "$palm_down",
           "up",
           "their",
           "abominations",
