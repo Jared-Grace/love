@@ -317,7 +317,7 @@ export function bible_glyph_chapter_2ki17() {
           "$city,",
           "from",
           "watchtower",
-          "to",
+          "$finish",
           "fortified",
           "$city.",
         ],
