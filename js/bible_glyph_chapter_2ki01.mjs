@@ -503,7 +503,7 @@ export function bible_glyph_chapter_2ki01() {
           "$footprints",
           "up",
           "and",
-          "fell",
+          "$leg+down_arrow+doing",
           "on",
           "his",
           "knees",
