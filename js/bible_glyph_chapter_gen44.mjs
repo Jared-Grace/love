@@ -978,7 +978,7 @@ export function bible_glyph_chapter_gen44() {
       {
         verse_number: 34,
         words: [
-          "For",
+          "$pointing",
           "how",
           "can",
           "I",
