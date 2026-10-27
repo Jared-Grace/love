@@ -121,7 +121,7 @@ export function bible_glyph_chapter_exo28() {
           "a",
           "$cloak,",
           "a",
-          "woven",
+          "$yarn+gem_stone+thing",
           "$dress+thread,",
           "a",
           "turban",
