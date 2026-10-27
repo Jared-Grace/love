@@ -179,7 +179,7 @@ export function bible_glyph_chapter_psa019() {
           "are",
           "right,",
           "bringing",
-          "joy",
+          "$beaming+doing",
           "to",
           "the",
           "$heart_organ;",
