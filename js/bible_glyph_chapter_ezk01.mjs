@@ -41,7 +41,7 @@ export function bible_glyph_chapter_ezk01() {
           "and",
           "I",
           "$eye",
-          "visions",
+          "$eyes+thing",
           "of",
           "$heart_on_fire.",
         ],
