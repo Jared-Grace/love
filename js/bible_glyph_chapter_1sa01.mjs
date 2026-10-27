@@ -337,7 +337,7 @@ export function bible_glyph_chapter_1sa01() {
           "Your",
           "maidservant",
           "and",
-          "remember",
+          "$reminder_ribbon",
           "me,",
           "$no_entry",
           "forgetting",
