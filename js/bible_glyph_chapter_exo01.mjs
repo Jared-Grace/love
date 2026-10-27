@@ -450,7 +450,7 @@ export function bible_glyph_chapter_exo01() {
           "and",
           "the",
           "$family",
-          "multiplied",
+          "$multiply+doing",
           "and",
           "became",
           "even",
