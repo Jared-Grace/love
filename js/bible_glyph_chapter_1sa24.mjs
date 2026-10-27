@@ -82,7 +82,7 @@ export function bible_glyph_chapter_1sa24() {
           "the",
           "$road,",
           "where",
-          "there",
+          "$telescope",
           "was",
           "a",
           "cave,",
