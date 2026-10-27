@@ -442,7 +442,7 @@ export function bible_glyph_chapter_2sa07() {
           "and",
           "I",
           "will",
-          "establish",
+          "$pin+doing",
           "the",
           "$throne",
           "of",
