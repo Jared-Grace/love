@@ -220,7 +220,7 @@ export function bible_glyph_chapter_1sa03() {
         verse_number: 8,
         words: [
           "Once",
-          "again,",
+          "$plus+doing,",
           "for",
           "the",
           "third",
