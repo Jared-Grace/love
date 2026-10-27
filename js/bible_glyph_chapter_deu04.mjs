@@ -1324,7 +1324,7 @@ export function bible_glyph_chapter_deu04() {
           "you",
           "$eye",
           "His",
-          "great",
+          "$top",
           "$fire,",
           "and",
           "you",
