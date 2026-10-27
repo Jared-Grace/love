@@ -139,7 +139,7 @@ export function bible_glyph_chapter_1ki18() {
           "the",
           "$earth",
           "to",
-          "every",
+          "$all",
           "spring",
           "and",
           "every",
