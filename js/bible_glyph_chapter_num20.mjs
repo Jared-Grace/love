@@ -621,7 +621,7 @@ export function bible_glyph_chapter_num20() {
           "$one+check",
           "let",
           "us",
-          "pass",
+          "$bridge",
           "through",
           "on",
           "$foot.",
