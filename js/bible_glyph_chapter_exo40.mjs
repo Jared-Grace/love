@@ -646,7 +646,7 @@ export function bible_glyph_chapter_exo40() {
         words: [
           "Then",
           "he",
-          "put",
+          "$palm_down",
           "up",
           "the",
           "curtain",
