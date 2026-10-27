@@ -2329,7 +2329,7 @@ export function bible_glyph_chapter_1ki08() {
           "$all",
           "the",
           "$thumbs_up",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
