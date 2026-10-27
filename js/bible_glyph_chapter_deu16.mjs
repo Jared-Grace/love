@@ -765,7 +765,7 @@ export function bible_glyph_chapter_deu16() {
           "a",
           "sacred",
           "pillar,",
-          "which",
+          "$back+flashlight",
           "the",
           "$i_am",
           "your",
