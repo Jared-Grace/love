@@ -253,7 +253,7 @@ export function bible_glyph_chapter_lam01() {
           "in",
           "$sun",
           "of",
-          "old.",
+          "$compass+right_arrow.",
           "When",
           "her",
           "$family",
