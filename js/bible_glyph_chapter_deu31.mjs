@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_deu31() {
           "utterly",
           "$collision",
           "and",
-          "turn",
+          "$away+doing",
           "$tray_out",
           "the",
           "$road",
