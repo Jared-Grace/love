@@ -822,7 +822,7 @@ export function bible_glyph_chapter_jer23() {
         verse_number: 23,
         words: [
           "Am",
-          "I",
+          "$me",
           "only",
           "a",
           "$heart_on_fire",
