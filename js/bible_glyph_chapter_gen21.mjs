@@ -190,7 +190,7 @@ export function bible_glyph_chapter_gen21() {
           "$father+map",
           "$hammer+doing",
           "a",
-          "great",
+          "$top",
           "$cup_with_straw+thing.",
         ],
       },
