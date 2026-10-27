@@ -283,7 +283,7 @@ export function bible_glyph_chapter_nam01() {
           "a",
           "drunkard,",
           "like",
-          "stubble",
+          "$fallen_leaf+wheat",
           "that",
           "is",
           "fully",
