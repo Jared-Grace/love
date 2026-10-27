@@ -697,7 +697,7 @@ export function bible_glyph_chapter_gen49() {
           "of",
           "$wrestling+heart_on_fire,",
           "and",
-          "this",
+          "$flashlight",
           "is",
           "what",
           "their",
