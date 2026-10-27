@@ -720,7 +720,7 @@ export function bible_glyph_chapter_jos06() {
           "$woman,",
           "$child+flexed_biceps",
           "and",
-          "old,",
+          "$old_man,",
           "oxen,",
           "sheep",
           "and",
