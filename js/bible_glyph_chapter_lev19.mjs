@@ -711,7 +711,7 @@ export function bible_glyph_chapter_lev19() {
           "will",
           "be",
           "increased.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
