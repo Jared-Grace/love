@@ -184,7 +184,7 @@ export function bible_glyph_chapter_num08() {
           "of",
           "fine",
           "$flour",
-          "mixed",
+          "$spoon+cyclone",
           "with",
           "oil,",
           "and",
