@@ -459,7 +459,7 @@ export function bible_glyph_chapter_gen41() {
           "Then",
           "$house+proper_name",
           "$mouth",
-          "to",
+          "$toward",
           "$i_am+plus,",
           '"In',
           "my",
