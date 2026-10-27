@@ -71,7 +71,7 @@ export function bible_glyph_chapter_exo28() {
           "are",
           "to",
           "$mouth",
-          "all",
+          "$all",
           "the",
           "skilled",
           "of",
