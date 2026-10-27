@@ -382,7 +382,7 @@ export function bible_glyph_chapter_zep01() {
           "punish",
           "the",
           "men",
-          "settled",
+          "$ice+doing",
           "in",
           "complacency,",
           "who",
