@@ -137,7 +137,7 @@ export function bible_glyph_chapter_num35() {
           "$city",
           "two",
           "$ten+all",
-          "cubits",
+          "$triangular_ruler",
           "on",
           "the",
           "$compass+right_arrow,",
