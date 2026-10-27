@@ -278,7 +278,7 @@ export function bible_glyph_chapter_deu31() {
           "and",
           "$no_entry",
           "be",
-          "discouraged.",
+          "$anxious_face_with_sweat.",
         ],
       },
       {
