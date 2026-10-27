@@ -545,7 +545,7 @@ export function bible_glyph_chapter_exo40() {
           "$bread",
           "on",
           "it",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "just",
