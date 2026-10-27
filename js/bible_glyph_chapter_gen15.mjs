@@ -248,7 +248,7 @@ export function bible_glyph_chapter_gen15() {
           "$goat,",
           "and",
           "a",
-          "ram,",
+          "$ram,",
           "each",
           "three",
           "years",
