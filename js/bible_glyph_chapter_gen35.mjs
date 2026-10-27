@@ -131,7 +131,7 @@ export function bible_glyph_chapter_gen35() {
           "$hand+foot",
           "$all",
           "the",
-          "foreign",
+          "$detective+thing",
           "$moai",
           "in",
           "their",
