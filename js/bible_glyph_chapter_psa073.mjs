@@ -231,7 +231,7 @@ export function bible_glyph_chapter_psa073() {
       {
         verse_number: 13,
         words: [
-          "Surely",
+          "$check+exclamation",
           "in",
           "vain",
           "I",
