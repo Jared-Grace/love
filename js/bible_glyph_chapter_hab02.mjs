@@ -28,7 +28,7 @@ export function bible_glyph_chapter_hab02() {
           "ramparts.",
           "I",
           "will",
-          "watch",
+          "$guard+telescope+doing",
           "to",
           "$eye",
           "what",
