@@ -1345,7 +1345,7 @@ export function bible_glyph_chapter_exo12() {
           "$earth",
           "of",
           "$clamp+proper_name,",
-          "this",
+          "$flashlight",
           "same",
           "$night",
           "is",
