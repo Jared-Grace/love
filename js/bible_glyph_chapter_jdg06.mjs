@@ -684,7 +684,7 @@ export function bible_glyph_chapter_jdg06() {
           "tip",
           "of",
           "the",
-          "staff",
+          "$white_cane+walking",
           "that",
           "was",
           "in",
