@@ -190,7 +190,7 @@ export function bible_glyph_chapter_exo02() {
           "him",
           "and",
           "$speech,",
-          "This",
+          "$flashlight",
           "is",
           "one",
           "of",
