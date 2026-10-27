@@ -121,7 +121,7 @@ export function bible_glyph_chapter_2ki06() {
         verse_number: 5,
         words: [
           "As",
-          "one",
+          "$one",
           "of",
           "them",
           "was",
