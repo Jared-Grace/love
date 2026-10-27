@@ -137,7 +137,7 @@ export function bible_glyph_chapter_exo02() {
           "$bathtub+doing",
           "in",
           "the",
-          "Nile,",
+          "$crocodile,",
           "and",
           "her",
           "attendants",
