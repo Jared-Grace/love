@@ -87,7 +87,7 @@ export function bible_glyph_chapter_lev04() {
           "$i_am,",
           "$crutch",
           "$hand",
-          "on",
+          "$pointing_up",
           "the",
           "head",
           "of",
