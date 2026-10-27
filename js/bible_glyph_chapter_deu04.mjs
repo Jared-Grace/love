@@ -662,7 +662,7 @@ export function bible_glyph_chapter_deu04() {
           "stars,",
           "all",
           "the",
-          "host",
+          "$military_helmet",
           "of",
           "the",
           "$sky,",
