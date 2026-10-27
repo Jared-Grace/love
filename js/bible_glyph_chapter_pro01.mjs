@@ -486,7 +486,7 @@ export function bible_glyph_chapter_pro01() {
           "because",
           "you",
           "neglected",
-          "all",
+          "$all",
           "my",
           "counsel,",
           "and",
