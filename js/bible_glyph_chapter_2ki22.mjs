@@ -462,7 +462,7 @@ export function bible_glyph_chapter_2ki22() {
           "$top",
           "is",
           "the",
-          "wrath",
+          "$angry_face",
           "of",
           "the",
           "$i_am",
