@@ -1170,7 +1170,7 @@ export function bible_glyph_chapter_neh09() {
           "$no_entry",
           "$derelict_house+doing",
           "them,",
-          "for",
+          "$pointing",
           "You",
           "are",
           "a",
