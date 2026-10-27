@@ -796,7 +796,7 @@ export function bible_glyph_chapter_exo06() {
           "of",
           "$clamp+proper_name",
           "everything",
-          "I",
+          "$me",
           "$mouth",
           "to",
           "you.",
