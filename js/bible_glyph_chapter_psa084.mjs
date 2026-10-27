@@ -26,7 +26,7 @@ export function bible_glyph_chapter_psa084() {
           "$son",
           "of",
           "$proper_name$Korah.",
-          "How",
+          "$flashlight+question",
           "lovely",
           "is",
           "Your",
