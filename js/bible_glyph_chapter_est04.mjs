@@ -490,7 +490,7 @@ export function bible_glyph_chapter_est04() {
           "a",
           "$clock",
           "as",
-          "this",
+          "$flashlight",
           "you",
           "have",
           "come",
