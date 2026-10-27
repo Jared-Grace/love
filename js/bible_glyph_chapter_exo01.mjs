@@ -399,7 +399,7 @@ export function bible_glyph_chapter_exo01() {
           "have",
           "you",
           "$hammer+doing",
-          "this?",
+          "$flashlight?",
           "Why",
           "have",
           "you",
