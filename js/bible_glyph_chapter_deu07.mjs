@@ -625,7 +625,7 @@ export function bible_glyph_chapter_deu07() {
           "Be",
           "sure",
           "to",
-          "remember",
+          "$reminder_ribbon",
           "what",
           "$i_am",
           "your",
