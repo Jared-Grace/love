@@ -77,7 +77,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "$running+hand_receiving+doing",
           "you,",
-          "if",
+          "$pointing",
           "you",
           "will",
           "$ear",
