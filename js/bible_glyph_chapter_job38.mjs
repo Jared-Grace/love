@@ -444,7 +444,7 @@ export function bible_glyph_chapter_job38() {
       {
         verse_number: 23,
         words: [
-          "which",
+          "$back+flashlight",
           "I",
           "hold",
           "in",
