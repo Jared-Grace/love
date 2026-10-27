@@ -721,7 +721,7 @@ export function bible_glyph_chapter_1sa02() {
           "the",
           "$tent",
           "of",
-          "Meeting.",
+          "$alarm_clock.",
         ],
       },
       {
