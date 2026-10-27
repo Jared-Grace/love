@@ -593,7 +593,7 @@ export function bible_glyph_chapter_1sa03() {
           "$wrestling+heart_on_fire,",
           "from",
           "$proper_name$Dan",
-          "to",
+          "$finish",
           "Beersheba,",
           "$lightbulb",
           "that",
