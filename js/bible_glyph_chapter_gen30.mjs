@@ -792,7 +792,7 @@ export function bible_glyph_chapter_gen30() {
           "you",
           "will",
           "$hammer+doing",
-          "this",
+          "$flashlight",
           "$speech",
           "for",
           "me,",
