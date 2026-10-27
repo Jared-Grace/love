@@ -291,7 +291,7 @@ export function bible_glyph_chapter_gen23() {
           "$proper_name$Ephron",
           "was",
           "sitting",
-          "among",
+          "$radio_button",
           "the",
           "$son",
           "of",
