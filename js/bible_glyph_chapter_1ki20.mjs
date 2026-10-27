@@ -930,7 +930,7 @@ export function bible_glyph_chapter_1ki20() {
           "before",
           "them",
           "like",
-          "two",
+          "$two",
           "small",
           "flocks",
           "of",
