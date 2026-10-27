@@ -379,7 +379,7 @@ export function bible_glyph_chapter_nam01() {
           "has",
           "issued",
           "a",
-          "command",
+          "$speech+scroll",
           "concerning",
           "you,",
           "O",
