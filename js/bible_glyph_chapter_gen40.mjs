@@ -333,7 +333,7 @@ export function bible_glyph_chapter_gen40() {
         verse_number: 13,
         words: [
           "$repeat",
-          "three",
+          "$three",
           "$sun",
           "$house+proper_name",
           "will",
