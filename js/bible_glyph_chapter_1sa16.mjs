@@ -454,7 +454,7 @@ export function bible_glyph_chapter_1sa16() {
           "from",
           "that",
           "$sun",
-          "forward.",
+          "$walking+pointing_up.",
           "Then",
           "$ear+heart_on_fire",
           "set",
