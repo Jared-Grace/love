@@ -550,7 +550,7 @@ export function bible_glyph_chapter_num22() {
           "$kneeling",
           "of",
           "$proper_name$Balak,",
-          "If",
+          "$traffic_light",
           "$proper_name$Balak",
           "were",
           "to",
