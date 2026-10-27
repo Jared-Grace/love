@@ -247,7 +247,7 @@ export function bible_glyph_chapter_hab03() {
           "swept",
           "by.",
           "The",
-          "deep",
+          "$sea+down_arrow",
           "$hands_giving",
           "with",
           "its",
