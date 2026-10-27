@@ -142,7 +142,7 @@ export function bible_glyph_chapter_hos06() {
           "like",
           "a",
           "morning",
-          "mist,",
+          "$cloud,",
           "like",
           "the",
           "early",
