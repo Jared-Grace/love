@@ -299,7 +299,7 @@ export function bible_glyph_chapter_jdg11() {
           "of",
           "$proper_name$Gilead",
           "$speech",
-          "to",
+          "$toward",
           "$unlocked+proper_name,",
           "The",
           "$i_am",
