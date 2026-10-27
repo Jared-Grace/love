@@ -203,7 +203,7 @@ export function bible_glyph_chapter_ezk01() {
           "$calf,",
           "$sparkles+star+doing",
           "$eyes",
-          "polished",
+          "$coin+sparkles",
           "$bronze.",
         ],
       },
