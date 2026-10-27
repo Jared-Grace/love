@@ -1300,7 +1300,7 @@ export function bible_glyph_chapter_lev14() {
           "consists",
           "of",
           "$leaf+lemon+describing",
-          "or",
+          "$shuffle",
           "red",
           "$brick+down_arrow",
           "that",
