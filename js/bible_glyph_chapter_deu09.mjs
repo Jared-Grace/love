@@ -734,7 +734,7 @@ export function bible_glyph_chapter_deu09() {
           "with",
           "$proper_name$Aaron",
           "to",
-          "destroy",
+          "$bomb",
           "him,",
           "but",
           "at",
