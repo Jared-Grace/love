@@ -436,7 +436,7 @@ export function bible_glyph_chapter_isa02() {
           "$tower",
           "and",
           "$pointing_up",
-          "every",
+          "$all",
           "fortified",
           "wall;",
         ],
