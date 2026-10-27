@@ -111,7 +111,7 @@ export function bible_glyph_chapter_psa019() {
           "champion",
           "$grinning_face+doing",
           "to",
-          "run",
+          "$running",
           "his",
           "course.",
         ],
