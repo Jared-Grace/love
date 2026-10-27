@@ -206,7 +206,7 @@ export function bible_glyph_chapter_jer17() {
           "desert,",
           "in",
           "a",
-          "salt",
+          "$salt+earth",
           "$earth",
           "where",
           "$no_entry",
