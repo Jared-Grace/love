@@ -936,7 +936,7 @@ export function bible_glyph_chapter_gen42() {
           "$speech",
           "to",
           "us,",
-          "This",
+          "$flashlight",
           "is",
           "how",
           "I",
