@@ -727,7 +727,7 @@ export function bible_glyph_chapter_gen41() {
           "Moreover,",
           "the",
           "$seven",
-          "thin,",
+          "$bone+down_arrow+describing,",
           "$thumbs_down",
           "$bull",
           "that",
