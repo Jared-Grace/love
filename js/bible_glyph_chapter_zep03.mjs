@@ -139,7 +139,7 @@ export function bible_glyph_chapter_zep03() {
           "the",
           "$map;",
           "their",
-          "corner",
+          "$triangular_ruler+brick",
           "towers",
           "are",
           "destroyed.",
