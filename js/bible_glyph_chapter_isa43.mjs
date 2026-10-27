@@ -283,7 +283,7 @@ export function bible_glyph_chapter_isa43() {
           "and",
           "the",
           "peoples",
-          "assemble.",
+          "$crowd+doing.",
           "Who",
           "among",
           "them",
