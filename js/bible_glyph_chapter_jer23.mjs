@@ -755,7 +755,7 @@ export function bible_glyph_chapter_jer23() {
           "will",
           "$brain",
           "this",
-          "clearly.",
+          "$brain+thing.",
         ],
       },
       {
