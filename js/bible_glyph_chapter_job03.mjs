@@ -362,7 +362,7 @@ export function bible_glyph_chapter_job03() {
           "and",
           "$telescope",
           "the",
-          "weary",
+          "$weary_face+hammer+person",
           "of",
           "$lightning",
           "find",
