@@ -600,7 +600,7 @@ export function bible_glyph_chapter_lev23() {
           "$bread",
           "of",
           "the",
-          "firstfruits",
+          "$first_place+sprout",
           "as",
           "a",
           "wave",
