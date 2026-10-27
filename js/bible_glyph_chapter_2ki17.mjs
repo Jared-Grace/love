@@ -563,7 +563,7 @@ export function bible_glyph_chapter_2ki17() {
           "They",
           "$bowing",
           "to",
-          "all",
+          "$all",
           "the",
           "host",
           "of",
