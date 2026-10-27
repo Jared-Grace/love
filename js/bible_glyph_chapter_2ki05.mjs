@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_2ki05() {
           "$face,",
           "he",
           "was",
-          "leprous,",
+          "$microbe+describing,",
           "as",
           "white",
           "as",
