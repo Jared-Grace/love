@@ -149,7 +149,7 @@ export function bible_glyph_chapter_dan12() {
           "of",
           "the",
           "$stop_sign.",
-          "Many",
+          "$multiply",
           "will",
           "roam",
           "to",
