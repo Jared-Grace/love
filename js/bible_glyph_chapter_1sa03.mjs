@@ -37,7 +37,7 @@ export function bible_glyph_chapter_1sa03() {
           "and",
           "visions",
           "were",
-          "scarce.",
+          "$wall+collision+doing.",
         ],
       },
       {
