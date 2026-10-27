@@ -27,7 +27,7 @@ export function bible_glyph_chapter_lev03() {
           "male",
           "or",
           "female,",
-          "he",
+          "$pointing_back",
           "must",
           "present",
           "it",
