@@ -386,7 +386,7 @@ export function bible_glyph_chapter_1ki19() {
           "great",
           "and",
           "mighty",
-          "wind",
+          "$wind",
           "tore",
           "into",
           "the",
