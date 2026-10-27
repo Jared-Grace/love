@@ -809,7 +809,7 @@ export function bible_glyph_chapter_ezk34() {
           "they",
           "may",
           "$person+house",
-          "securely",
+          "$anchor+thing",
           "in",
           "the",
           "$wilderness",
