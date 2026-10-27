@@ -382,7 +382,7 @@ export function bible_glyph_chapter_lev24() {
           "have",
           "the",
           "whole",
-          "assembly",
+          "$witness+crowd",
           "$rock+right_arrow+doing",
           "him.",
         ],
