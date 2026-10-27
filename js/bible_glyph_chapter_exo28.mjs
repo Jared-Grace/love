@@ -1087,7 +1087,7 @@ export function bible_glyph_chapter_exo28() {
           "be",
           "$pointing_up",
           "his",
-          "forehead,",
+          "$face+top,",
           "so",
           "that",
           "they",
