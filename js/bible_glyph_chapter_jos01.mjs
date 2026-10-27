@@ -382,7 +382,7 @@ export function bible_glyph_chapter_jos01() {
           "$proper_name$Gadites,",
           "and",
           "the",
-          "half",
+          "$divide",
           "tribe",
           "of",
           "$proper_name$Manasseh,",
