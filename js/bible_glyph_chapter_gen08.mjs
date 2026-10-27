@@ -302,7 +302,7 @@ export function bible_glyph_chapter_gen08() {
           "the",
           "evening,",
           "and",
-          "behold,",
+          "$exclamation,",
           "in",
           "her",
           "beak",
