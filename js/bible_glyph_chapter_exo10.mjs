@@ -448,7 +448,7 @@ export function bible_glyph_chapter_exo10() {
           "and",
           "$eating",
           "every",
-          "plant",
+          "$herb",
           "in",
           "the",
           "$earth,",
