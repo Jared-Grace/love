@@ -631,7 +631,7 @@ export function bible_glyph_chapter_deu15() {
           "$heart_on_fire",
           "$all",
           "$first_place+baby",
-          "male",
+          "$reminder_ribbon+thing",
           "$baby",
           "by",
           "your",
