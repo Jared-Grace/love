@@ -399,7 +399,7 @@ export function bible_glyph_chapter_lev10() {
           "offering",
           "and",
           "the",
-          "thigh",
+          "$leg",
           "of",
           "the",
           "contribution",
