@@ -267,7 +267,7 @@ export function bible_glyph_chapter_gen48() {
           "to",
           "his",
           "$father,",
-          "They",
+          "$pointing_back",
           "are",
           "the",
           "$son",
