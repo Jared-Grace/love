@@ -84,7 +84,7 @@ export function bible_glyph_chapter_num14() {
           "$footprints",
           "us",
           "into",
-          "this",
+          "$flashlight",
           "$earth",
           "to",
           "fall",
