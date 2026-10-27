@@ -159,7 +159,7 @@ export function bible_glyph_chapter_mic04() {
           "train",
           "$repeat",
           "for",
-          "war.",
+          "$crossed_swords.",
         ],
       },
       {
