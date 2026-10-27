@@ -262,7 +262,7 @@ export function bible_glyph_chapter_gen22() {
           "the",
           "$two",
           "$walking",
-          "together.",
+          "$linked_paperclips+manner.",
         ],
       },
       {
