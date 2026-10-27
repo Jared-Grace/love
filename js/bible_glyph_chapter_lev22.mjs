@@ -197,7 +197,7 @@ export function bible_glyph_chapter_lev22() {
           "$tray_out",
           "the",
           "$sparkle+thing",
-          "unless",
+          "$pointing",
           "he",
           "has",
           "bathed",
