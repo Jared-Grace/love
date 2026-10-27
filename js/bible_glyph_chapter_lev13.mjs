@@ -594,7 +594,7 @@ export function bible_glyph_chapter_lev13() {
         words: [
           "When",
           "a",
-          "boil",
+          "$fire+microbe",
           "$link",
           "on",
           "the",
