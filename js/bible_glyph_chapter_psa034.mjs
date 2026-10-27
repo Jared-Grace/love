@@ -75,7 +75,7 @@ export function bible_glyph_chapter_psa034() {
           "me;",
           "let",
           "us",
-          "exalt",
+          "$up_arrow",
           "His",
           "$name_tag",
           "together.",
