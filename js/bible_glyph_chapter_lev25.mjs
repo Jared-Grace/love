@@ -443,7 +443,7 @@ export function bible_glyph_chapter_lev25() {
           "$next_track",
           "the",
           "last",
-          "Jubilee,",
+          "$horn+party_popper,",
           "and",
           "he",
           "is",
