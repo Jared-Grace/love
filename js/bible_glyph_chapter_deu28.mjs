@@ -2092,7 +2092,7 @@ export function bible_glyph_chapter_deu28() {
           "$tree",
           "and",
           "$stone,",
-          "which",
+          "$back+flashlight",
           "$no_entry",
           "you",
           "nor",
