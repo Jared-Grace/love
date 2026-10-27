@@ -142,7 +142,7 @@ export function bible_glyph_chapter_isa11() {
           "rod",
           "of",
           "His",
-          "mouth,",
+          "$face_with_open_mouth,",
           "and",
           "with",
           "the",
