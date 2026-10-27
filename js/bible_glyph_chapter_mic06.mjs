@@ -68,7 +68,7 @@ export function bible_glyph_chapter_mic06() {
           "will",
           "argue",
           "it",
-          "against",
+          "$linked_paperclips",
           "$wrestling+heart_on_fire.",
         ],
       },
