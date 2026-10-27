@@ -1611,7 +1611,7 @@ export function bible_glyph_chapter_gen41() {
           "$wheat+coin+doing",
           "from",
           "$i_am+plus,",
-          "because",
+          "$pointing",
           "the",
           "famine",
           "was",
