@@ -304,7 +304,7 @@ export function bible_glyph_chapter_num35() {
           "to",
           "them:",
           "When",
-          "you",
+          "$you",
           "cross",
           "the",
           "$pointing_down+proper_name",
