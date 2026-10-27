@@ -769,7 +769,7 @@ export function bible_glyph_chapter_deu31() {
         words: [
           "And",
           "when",
-          "many",
+          "$multiply",
           "$thumbs_down",
           "and",
           "afflictions",
