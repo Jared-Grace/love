@@ -242,7 +242,7 @@ export function bible_glyph_chapter_nam02() {
           "There",
           "is",
           "no",
-          "end",
+          "$end_arrow+round_pushpin",
           "to",
           "the",
           "treasure,",
