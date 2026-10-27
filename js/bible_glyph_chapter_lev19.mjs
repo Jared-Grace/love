@@ -222,7 +222,7 @@ export function bible_glyph_chapter_lev19() {
           "gleanings",
           "of",
           "your",
-          "harvest.",
+          "$harvest.",
         ],
       },
       {
