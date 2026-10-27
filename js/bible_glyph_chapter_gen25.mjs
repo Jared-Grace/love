@@ -575,7 +575,7 @@ export function bible_glyph_chapter_gen25() {
       {
         verse_number: 26,
         words: [
-          "After",
+          "$next_track",
           "that",
           "his",
           "$brother",
