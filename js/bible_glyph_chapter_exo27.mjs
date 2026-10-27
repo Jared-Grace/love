@@ -511,7 +511,7 @@ export function bible_glyph_chapter_exo27() {
           "you",
           "are",
           "to",
-          "command",
+          "$speech+scroll",
           "the",
           "$son",
           "of",
