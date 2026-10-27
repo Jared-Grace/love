@@ -309,7 +309,7 @@ export function bible_glyph_chapter_isa53() {
           "$lying_face+mouse_trap",
           "in",
           "His",
-          "mouth.",
+          "$face_with_open_mouth.",
         ],
       },
       {
