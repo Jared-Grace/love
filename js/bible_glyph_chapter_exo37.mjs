@@ -634,7 +634,7 @@ export function bible_glyph_chapter_exo37() {
           "$incense",
           "out",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
           "a",
           "cubit",
