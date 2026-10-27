@@ -377,7 +377,7 @@ export function bible_glyph_chapter_sng02() {
         verse_number: 16,
         words: [
           "My",
-          "beloved",
+          "$two_hearts",
           "is",
           "mine",
           "and",
