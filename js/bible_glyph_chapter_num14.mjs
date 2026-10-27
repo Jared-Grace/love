@@ -314,7 +314,7 @@ export function bible_glyph_chapter_num14() {
           "$eye",
           "at",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting",
           "by",
