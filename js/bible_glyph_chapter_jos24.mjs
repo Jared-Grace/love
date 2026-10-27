@@ -880,7 +880,7 @@ export function bible_glyph_chapter_jos24() {
           "it",
           "up",
           "$telescope",
-          "under",
+          "$down_arrow",
           "the",
           "oak",
           "near",
