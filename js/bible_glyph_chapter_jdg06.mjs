@@ -1242,7 +1242,7 @@ export function bible_glyph_chapter_jdg06() {
           "are",
           "going",
           "to",
-          "save",
+          "$rescue",
           "$wrestling+heart_on_fire",
           "by",
           "my",
