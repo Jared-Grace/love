@@ -504,7 +504,7 @@ export function bible_glyph_chapter_jer29() {
           "$two_hearts+proper_name",
           "$throne",
           "and",
-          "all",
+          "$all",
           "the",
           "$family",
           "who",
