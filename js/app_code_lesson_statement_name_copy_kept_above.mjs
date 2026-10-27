@@ -1,4 +1,3 @@
-import { app_code_js_written_that_text } from "./app_code_js_written_that_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
@@ -18,6 +17,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
+import { app_code_js_written_that_text } from "./app_code_js_written_that_text.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   arguments_assert(arguments, 2);
@@ -149,7 +149,9 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
     [
       "Cup ",
       name_copy,
-      " was filled once, and that line changed cup ",
+      " was filled once, and ",
+      changed,
+      " changed cup ",
       name_first,
       " only",
     ],
