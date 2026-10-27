@@ -337,7 +337,7 @@ export function bible_glyph_chapter_num13() {
           "its",
           "$family",
           "are",
-          "strong",
+          "$might+up_arrow",
           "or",
           "weak,",
           "few",
