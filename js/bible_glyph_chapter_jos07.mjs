@@ -777,7 +777,7 @@ export function bible_glyph_chapter_jos07() {
           "$no_entry",
           "$hand+tray_in+doing",
           "it",
-          "from",
+          "$tray_out",
           "me.",
         ],
       },
