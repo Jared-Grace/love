@@ -387,7 +387,7 @@ export function bible_glyph_chapter_psa022() {
           "them,",
           "and",
           "cast",
-          "lots",
+          "$lots",
           "for",
           "my",
           "clothing.",
