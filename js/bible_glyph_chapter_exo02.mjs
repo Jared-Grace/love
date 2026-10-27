@@ -44,7 +44,7 @@ export function bible_glyph_chapter_exo02() {
           "she",
           "$eye",
           "$pointing",
-          "he",
+          "$pointing_back",
           "was",
           "a",
           "$thumbs_up",
