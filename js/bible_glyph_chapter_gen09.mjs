@@ -557,7 +557,7 @@ export function bible_glyph_chapter_gen09() {
           "$man_beard",
           "of",
           "the",
-          "soil,",
+          "$brown_square,",
           "$sewing_needle",
           "to",
           "plant",
