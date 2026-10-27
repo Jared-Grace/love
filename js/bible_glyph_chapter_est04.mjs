@@ -258,7 +258,7 @@ export function bible_glyph_chapter_est04() {
           "of",
           "the",
           "written",
-          "decree",
+          "$scroll+crown",
           "$hands_giving",
           "in",
           "$proper_name$Susa",
