@@ -322,7 +322,7 @@ export function bible_glyph_chapter_isa53() {
           "$i_am",
           "will",
           "to",
-          "crush",
+          "$stone+dust+doing",
           "Him",
           "and",
           "to",
