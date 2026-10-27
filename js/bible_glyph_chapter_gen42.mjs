@@ -20,7 +20,7 @@ export function bible_glyph_chapter_gen42() {
           "$pointing",
           "there",
           "was",
-          "grain",
+          "$wheat+coin",
           "in",
           "$clamp+proper_name,",
           "he",
