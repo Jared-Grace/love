@@ -33,7 +33,7 @@ export function bible_glyph_chapter_ezk47() {
           "from",
           "under",
           "the",
-          "threshold",
+          "$door+down_arrow",
           "of",
           "the",
           "$house",
