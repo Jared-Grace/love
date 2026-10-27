@@ -361,7 +361,7 @@ export function bible_glyph_chapter_gen06() {
           "$exclamation,",
           "I",
           "will",
-          "destroy",
+          "$collision",
           "both",
           "them",
           "and",
