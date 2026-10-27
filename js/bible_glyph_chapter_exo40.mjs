@@ -154,7 +154,7 @@ export function bible_glyph_chapter_exo40() {
           "$bucket+soap",
           "$brain+arrow_both_ways",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting",
           "and",
