@@ -55,7 +55,7 @@ export function bible_glyph_chapter_ezk01() {
           "day",
           "of",
           "the",
-          "month,",
+          "$new_moon,",
           "it",
           "was",
           "the",
