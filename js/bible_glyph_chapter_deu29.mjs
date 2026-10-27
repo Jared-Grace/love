@@ -613,7 +613,7 @@ export function bible_glyph_chapter_deu29() {
           "$speech+raised_back_of_hand",
           "$writing_hand",
           "in",
-          "this",
+          "$flashlight",
           "$closed_book",
           "will",
           "fall",
