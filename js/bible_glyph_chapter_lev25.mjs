@@ -628,7 +628,7 @@ export function bible_glyph_chapter_lev25() {
           "crop",
           "sufficient",
           "for",
-          "three",
+          "$three",
           "years.",
         ],
       },
