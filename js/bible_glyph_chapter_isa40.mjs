@@ -576,7 +576,7 @@ export function bible_glyph_chapter_isa40() {
           "that",
           "will",
           "$no_entry",
-          "topple.",
+          "$vibration_mode+doing.",
         ],
       },
       {
