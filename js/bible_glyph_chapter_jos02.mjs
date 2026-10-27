@@ -575,7 +575,7 @@ export function bible_glyph_chapter_jos02() {
           "bound",
           "by",
           "this",
-          "oath",
+          "$raised_back_of_hand",
           "you",
           "made",
           "us",
