@@ -541,7 +541,7 @@ export function bible_glyph_chapter_exo09() {
           "$back+flashlight",
           "has",
           "$no_entry",
-          "fallen",
+          "$link",
           "on",
           "$clamp+proper_name",
           "$tray_out",
