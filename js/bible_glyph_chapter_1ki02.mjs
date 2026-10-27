@@ -1549,7 +1549,7 @@ export function bible_glyph_chapter_1ki02() {
           "and",
           "the",
           "$scroll",
-          "that",
+          "$back+flashlight",
           "I",
           "gave",
           "you?",
