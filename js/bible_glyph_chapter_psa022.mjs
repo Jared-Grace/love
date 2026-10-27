@@ -520,7 +520,7 @@ export function bible_glyph_chapter_psa022() {
           "He",
           "has",
           "$no_entry",
-          "hidden",
+          "$see_no_evil_monkey",
           "His",
           "face",
           "$tray_out",
