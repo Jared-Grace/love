@@ -328,7 +328,7 @@ export function bible_glyph_chapter_deu05() {
       {
         verse_number: 12,
         words: [
-          "Observe",
+          "$guard",
           "the",
           "$sabbath",
           "$sun",
