@@ -214,7 +214,7 @@ export function bible_glyph_chapter_exo23() {
           "of",
           "the",
           "$foreigner,",
-          "for",
+          "$pointing",
           "you",
           "were",
           "$foreigner",
