@@ -56,7 +56,7 @@ export function bible_glyph_chapter_num16() {
           "they",
           "rose",
           "up",
-          "against",
+          "$face",
           "$fishing_pole+proper_name",
           "with",
           "250",
