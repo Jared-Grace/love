@@ -221,7 +221,7 @@ export function bible_glyph_chapter_pro01() {
           "them",
           "$sprout",
           "like",
-          "Sheol,",
+          "$pointing_down+skull,",
           "and",
           "whole",
           "like",
