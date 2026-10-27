@@ -515,7 +515,7 @@ export function bible_glyph_chapter_zep01() {
           "cry",
           "against",
           "the",
-          "fortified",
+          "$wall+locked+describing",
           "$city",
           "and",
           "against",
