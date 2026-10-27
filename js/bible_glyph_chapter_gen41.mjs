@@ -961,7 +961,7 @@ export function bible_glyph_chapter_gen41() {
           "up",
           "the",
           "grain",
-          "under",
+          "$down_arrow",
           "the",
           "$hand",
           "of",
