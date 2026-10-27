@@ -400,7 +400,7 @@ export function bible_glyph_chapter_num09() {
           "$no_entry",
           "present",
           "the",
-          "offering",
+          "$magnet+gift",
           "of",
           "$i_am",
           "at",
