@@ -419,7 +419,7 @@ export function bible_glyph_chapter_deu05() {
           "your",
           "$kneeling",
           "and",
-          "maidservant",
+          "$broom",
           "may",
           "rest",
           "as",
