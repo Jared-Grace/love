@@ -393,7 +393,7 @@ export function bible_glyph_chapter_exo04() {
       {
         verse_number: 12,
         words: [
-          "Now",
+          "$watch",
           "$walking!",
           "I",
           "will",
