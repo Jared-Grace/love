@@ -883,7 +883,7 @@ export function bible_glyph_chapter_num32() {
           "$proper_name$Gilead",
           "as",
           "a",
-          "possession.",
+          "$hand+clamp+thing.",
         ],
       },
       {
