@@ -459,7 +459,7 @@ export function bible_glyph_chapter_exo31() {
           "rested",
           "and",
           "was",
-          "refreshed.",
+          "$face_exhaling+seat+doing.",
         ],
       },
       {
