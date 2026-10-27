@@ -780,7 +780,7 @@ export function bible_glyph_chapter_1sa17() {
           "who",
           "is",
           "this",
-          "uncircumcised",
+          "$no_entry+scissors+covenant",
           "$proper_name$Philistine,",
           "$pointing",
           "he",
