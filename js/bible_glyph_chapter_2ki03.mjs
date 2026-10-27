@@ -173,7 +173,7 @@ export function bible_glyph_chapter_2ki03() {
           "$guard+proper_name",
           "and",
           "mobilized",
-          "all",
+          "$all",
           "$wrestling+heart_on_fire.",
         ],
       },
