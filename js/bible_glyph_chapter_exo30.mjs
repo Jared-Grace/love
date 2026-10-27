@@ -838,7 +838,7 @@ export function bible_glyph_chapter_exo30() {
           "$no_entry",
           "$hammer+doing",
           "anything",
-          "like",
+          "$likeness",
           "it",
           "with",
           "the",
