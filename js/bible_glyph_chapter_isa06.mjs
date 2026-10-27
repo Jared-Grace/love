@@ -145,7 +145,7 @@ export function bible_glyph_chapter_isa06() {
           "a",
           "$man_beard",
           "of",
-          "unclean",
+          "$soap+no_entry",
           "lips",
           "$person+house",
           "among",
