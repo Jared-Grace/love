@@ -760,7 +760,7 @@ export function bible_glyph_chapter_exo23() {
           "miscarry",
           "or",
           "be",
-          "barren.",
+          "$pregnant_woman+no_entry+describing.",
           "I",
           "will",
           "fulfill",
