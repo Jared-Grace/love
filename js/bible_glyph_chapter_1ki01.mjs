@@ -1590,7 +1590,7 @@ export function bible_glyph_chapter_1ki01() {
           "But",
           "Adonijah,",
           "in",
-          "fear",
+          "$fear+doing",
           "of",
           "$peace+proper_name,",
           "got",
