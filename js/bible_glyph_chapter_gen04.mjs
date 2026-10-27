@@ -734,7 +734,7 @@ export function bible_glyph_chapter_gen04() {
           "And",
           "to",
           "Seth",
-          "also",
+          "$plus",
           "a",
           "$son",
           "was",
