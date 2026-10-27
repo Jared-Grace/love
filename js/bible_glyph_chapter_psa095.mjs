@@ -29,7 +29,7 @@ export function bible_glyph_chapter_psa095() {
           "triumph",
           "to",
           "the",
-          "Rock",
+          "$rock",
           "of",
           "our",
           "salvation.",
