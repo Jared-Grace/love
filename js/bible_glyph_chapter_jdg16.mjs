@@ -383,7 +383,7 @@ export function bible_glyph_chapter_jdg16() {
           "up",
           "with",
           "new",
-          "ropes",
+          "$thread+repeat",
           "that",
           "have",
           "$no_entry",
