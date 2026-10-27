@@ -583,7 +583,7 @@ export function bible_glyph_chapter_num24() {
           "from",
           "$hand+foot",
           "and",
-          "destroy",
+          "$wilted_flower",
           "the",
           "survivors",
           "of",
