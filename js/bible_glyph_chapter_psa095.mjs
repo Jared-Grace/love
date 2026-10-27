@@ -212,7 +212,7 @@ export function bible_glyph_chapter_psa095() {
         verse_number: 10,
         words: [
           "For",
-          "forty",
+          "$four+zero",
           "$year",
           "I",
           "was",
