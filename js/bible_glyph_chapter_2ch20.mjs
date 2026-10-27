@@ -53,7 +53,7 @@ export function bible_glyph_chapter_2ch20() {
           "$speech,",
           '"A',
           "vast",
-          "army",
+          "$crowd+loudspeaker",
           "is",
           "$footprints",
           "against",
