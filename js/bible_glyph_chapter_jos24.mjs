@@ -603,7 +603,7 @@ export function bible_glyph_chapter_jos24() {
           "$kneeling,",
           "and",
           "$hammer+doing",
-          "these",
+          "$flashlight+flashlight",
           "$top",
           "$placard",
           "before",
