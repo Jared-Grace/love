@@ -266,7 +266,7 @@ export function bible_glyph_chapter_pro16() {
         verse_number: 13,
         words: [
           "$ruler+thing",
-          "lips",
+          "$kiss_mark",
           "are",
           "a",
           "$king",
