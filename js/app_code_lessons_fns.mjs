@@ -339,6 +339,7 @@ import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
+import { app_code_lesson_while_halve } from "./app_code_lesson_while_halve.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 export function app_code_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
@@ -685,6 +686,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_while,
     app_code_lesson_while_log,
     app_code_lesson_while_down,
+    app_code_lesson_while_halve,
     app_code_lesson_while_total,
   ];
   return fns;

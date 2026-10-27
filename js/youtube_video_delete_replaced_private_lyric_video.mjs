@@ -1,12 +1,12 @@
-import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { youtube_channel_lyric_videos } from "./youtube_channel_lyric_videos.mjs";
 import { youtube_video_record } from "./youtube_video_record.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
+import { equal } from "./equal.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { less_than } from "./less_than.mjs";
 import { youtube_video_delete } from "./youtube_video_delete.mjs";
 export async function youtube_video_delete_replaced_private_lyric_video(
   video_id_old,
@@ -50,7 +50,8 @@ export async function youtube_video_delete_replaced_private_lyric_video(
   let [snippet_old, snippet_new] = snippets;
   let title_old = property_get(snippet_old, "title");
   let title_new = property_get(snippet_new, "title");
-  let lyric = text_ends_with(title_old, " (BSB) lyric video");
+  ('A SONG NUMBER MAY FOLLOW THE WORDS, as in "Psalm 114:1-8 (BSB) lyric video, song 3", so the title only has to hold them.');
+  let lyric = text_includes(title_old, " (BSB) lyric video");
   assert_json(lyric, {
     hint: "only a video titled as a lyric video is deleted",
     video_id_old,
