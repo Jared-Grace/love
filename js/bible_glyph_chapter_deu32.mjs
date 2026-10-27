@@ -1390,7 +1390,7 @@ export function bible_glyph_chapter_deu32() {
           "as",
           "their",
           "own",
-          "possession.",
+          "$hand+clamp+thing.",
         ],
       },
       {
