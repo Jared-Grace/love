@@ -424,7 +424,7 @@ export function bible_glyph_chapter_jdg06() {
           "of",
           "$clamp+proper_name?",
           "But",
-          "now",
+          "$watch",
           "the",
           "$i_am",
           "has",
