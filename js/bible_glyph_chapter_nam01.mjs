@@ -140,7 +140,7 @@ export function bible_glyph_chapter_nam01() {
         words: [
           "The",
           "$mountain",
-          "quake",
+          "$earth+up_down_arrow+doing",
           "$tray_out",
           "Him,",
           "and",
