@@ -908,7 +908,7 @@ export function bible_glyph_chapter_dan09() {
           "$seven",
           "$seven+sun",
           "and",
-          "sixty",
+          "$six+zero",
           "two",
           "$seven+sun.",
           "It",
