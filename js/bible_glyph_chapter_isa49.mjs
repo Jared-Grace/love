@@ -386,7 +386,7 @@ export function bible_glyph_chapter_isa49() {
           "$no_entry",
           "$famine+person+doing",
           "or",
-          "thirst,",
+          "$tongue+desert+doing,",
           "$no_entry",
           "will",
           "scorching",
