@@ -528,7 +528,7 @@ export function bible_glyph_chapter_jer01() {
           "behold,",
           "this",
           "$sun",
-          "I",
+          "$me",
           "have",
           "$hands_giving",
           "you",
