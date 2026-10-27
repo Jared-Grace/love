@@ -560,7 +560,7 @@ export function bible_glyph_chapter_hab02() {
           "-",
           "or",
           "an",
-          "image,",
+          "$pouring_liquid+moai,",
           "a",
           "teacher",
           "of",
