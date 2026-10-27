@@ -871,7 +871,7 @@ export function bible_glyph_chapter_gen47() {
           "We",
           "have",
           "found",
-          "favor",
+          "$heart_orange",
           "in",
           "our",
           "$crown",
