@@ -141,7 +141,7 @@ export function bible_glyph_chapter_isa56() {
           "pleases",
           "Me",
           "and",
-          "hold",
+          "$might+up_arrow",
           "fast",
           "to",
           "My",
