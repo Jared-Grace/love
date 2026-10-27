@@ -963,7 +963,7 @@ export function bible_glyph_chapter_deu28() {
           "will",
           "plant",
           "a",
-          "vineyard,",
+          "$vineyard,",
           "but",
           "will",
           "$no_entry",
