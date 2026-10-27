@@ -464,7 +464,7 @@ export function bible_glyph_chapter_gen15() {
           "and",
           "a",
           "flaming",
-          "torch",
+          "$fire+hand+wood",
           "appeared",
           "and",
           "passed",
