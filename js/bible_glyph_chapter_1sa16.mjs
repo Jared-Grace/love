@@ -593,7 +593,7 @@ export function bible_glyph_chapter_1sa16() {
           "of",
           "$proper_name$Jesse",
           "of",
-          "Bethlehem",
+          "$house+bread+proper_name+person",
           "who",
           "$lightbulb",
           "how",
