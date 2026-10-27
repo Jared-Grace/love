@@ -660,7 +660,7 @@ export function bible_glyph_chapter_lev13() {
           "it",
           "has",
           "turned",
-          "white,",
+          "$white_circle,",
           "the",
           "$priest",
           "shall",
