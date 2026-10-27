@@ -279,7 +279,7 @@ export function bible_glyph_chapter_psa032() {
           "shout",
           "for",
           "joy,",
-          "all",
+          "$all",
           "you",
           "upright",
           "in",
