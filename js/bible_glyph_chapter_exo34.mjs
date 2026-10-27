@@ -797,7 +797,7 @@ export function bible_glyph_chapter_exo34() {
         words: [
           "Do",
           "$no_entry",
-          "offer",
+          "$kitchen_knife+doing",
           "the",
           "$blood",
           "of",
