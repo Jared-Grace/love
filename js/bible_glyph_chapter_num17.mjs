@@ -311,7 +311,7 @@ export function bible_glyph_chapter_num17() {
           "end",
           "to",
           "their",
-          "grumbling",
+          "$pouting_face+voice",
           "against",
           "Me",
           "and",
