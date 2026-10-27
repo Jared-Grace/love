@@ -788,7 +788,7 @@ export function bible_glyph_chapter_exo36() {
           "$silver",
           "$down_arrow+brick,",
           "$two",
-          "under",
+          "$down_arrow",
           "each",
           "frame.",
         ],
