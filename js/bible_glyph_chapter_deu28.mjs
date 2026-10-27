@@ -1497,7 +1497,7 @@ export function bible_glyph_chapter_deu28() {
           "$yoke",
           "on",
           "your",
-          "neck",
+          "$scarf",
           "until",
           "He",
           "has",
