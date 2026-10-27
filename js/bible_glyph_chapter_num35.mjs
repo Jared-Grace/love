@@ -953,7 +953,7 @@ export function bible_glyph_chapter_num35() {
           "a",
           "$city",
           "of",
-          "refuge",
+          "$house+ring_buoy",
           "and",
           "$turn_back",
           "him",
