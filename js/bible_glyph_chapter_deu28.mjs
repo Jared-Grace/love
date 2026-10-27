@@ -379,7 +379,7 @@ export function bible_glyph_chapter_deu28() {
           "to",
           "$hands_giving",
           "the",
-          "rain",
+          "$rain",
           "of",
           "your",
           "$earth",
