@@ -135,7 +135,7 @@ export function bible_glyph_chapter_pro02() {
           "He",
           "is",
           "a",
-          "shield",
+          "$shield",
           "to",
           "those",
           "who",
