@@ -342,7 +342,7 @@ export function bible_glyph_chapter_lev02() {
           "your",
           "$grain_offering",
           "with",
-          "salt.",
+          "$salt.",
           "You",
           "$no_entry",
           "leave",
