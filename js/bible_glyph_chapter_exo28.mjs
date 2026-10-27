@@ -569,7 +569,7 @@ export function bible_glyph_chapter_exo28() {
           "$name_tag",
           "of",
           "$man_beard",
-          "engraved",
+          "$rock+writing_hand+thing",
           "like",
           "a",
           "seal,",
