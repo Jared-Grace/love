@@ -325,7 +325,7 @@ export function bible_glyph_chapter_lev16() {
           "$wilderness",
           "as",
           "the",
-          "scapegoat.",
+          "$goat+away.",
         ],
       },
       {
