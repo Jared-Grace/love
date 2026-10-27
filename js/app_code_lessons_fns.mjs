@@ -341,6 +341,8 @@ import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 import { app_code_lesson_while_halve } from "./app_code_lesson_while_halve.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
+import { app_code_lesson_while_total_step } from "./app_code_lesson_while_total_step.mjs";
+import { app_code_lesson_while_total_squares } from "./app_code_lesson_while_total_squares.mjs";
 export function app_code_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
@@ -688,6 +690,8 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_down,
     app_code_lesson_while_halve,
     app_code_lesson_while_total,
+    app_code_lesson_while_total_step,
+    app_code_lesson_while_total_squares,
   ];
   return fns;
 }
