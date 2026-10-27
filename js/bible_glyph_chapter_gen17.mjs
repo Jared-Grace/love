@@ -251,7 +251,7 @@ export function bible_glyph_chapter_gen17() {
           "you",
           "are",
           "to",
-          "keep,",
+          "$guard,",
           "between",
           "Me",
           "and",
