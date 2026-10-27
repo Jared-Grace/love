@@ -495,7 +495,7 @@ export function bible_glyph_chapter_num09() {
           "$morning",
           "it",
           "appeared",
-          "above",
+          "$pointing_up",
           "the",
           "tabernacle",
           "like",
