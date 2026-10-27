@@ -466,7 +466,7 @@ export function bible_glyph_chapter_deu33() {
           "$footprints",
           "on",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "$i_am+plus,",
           "on",
