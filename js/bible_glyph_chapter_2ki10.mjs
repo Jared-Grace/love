@@ -430,7 +430,7 @@ export function bible_glyph_chapter_2ki10() {
           "as",
           "all",
           "his",
-          "great",
+          "$top",
           "men",
           "and",
           "those",
