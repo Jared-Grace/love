@@ -1092,7 +1092,7 @@ export function bible_glyph_chapter_deu12() {
           "you;",
           "do",
           "$no_entry",
-          "add",
+          "$plus+doing",
           "to",
           "it",
           "or",
