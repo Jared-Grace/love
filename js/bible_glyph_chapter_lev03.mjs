@@ -459,7 +459,7 @@ export function bible_glyph_chapter_lev03() {
           "a",
           "$nose+thumbs_up",
           "$nose.",
-          "All",
+          "$all",
           "the",
           "fat",
           "belongs",
