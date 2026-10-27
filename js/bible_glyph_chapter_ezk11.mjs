@@ -416,7 +416,7 @@ export function bible_glyph_chapter_ezk11() {
           "$crown",
           "$i_am,",
           "will",
-          "You",
+          "$you",
           "$hammer+doing",
           "the",
           "remnant",
