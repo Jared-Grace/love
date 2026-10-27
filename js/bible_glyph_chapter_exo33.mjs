@@ -310,7 +310,7 @@ export function bible_glyph_chapter_exo33() {
           "come",
           "down",
           "and",
-          "remain",
+          "$person+round_pushpin",
           "at",
           "the",
           "entrance,",
