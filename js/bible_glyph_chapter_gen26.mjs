@@ -396,7 +396,7 @@ export function bible_glyph_chapter_gen26() {
           "$walking",
           "on",
           "growing",
-          "until",
+          "$finish",
           "he",
           "was",
           "very",
