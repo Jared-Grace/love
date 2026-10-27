@@ -385,7 +385,7 @@ export function bible_glyph_chapter_lev04() {
           "then",
           "$church",
           "must",
-          "bring",
+          "$magnet+doing",
           "$son",
           "of",
           "$bull",
