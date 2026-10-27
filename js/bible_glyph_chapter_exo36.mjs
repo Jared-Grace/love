@@ -281,7 +281,7 @@ export function bible_glyph_chapter_exo36() {
           "spun",
           "$thread+white_circle",
           "and",
-          "blue,",
+          "$blue_circle,",
           "purple",
           "and",
           "scarlet",
