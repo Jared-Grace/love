@@ -1357,7 +1357,7 @@ export function bible_glyph_chapter_num14() {
           "though",
           "$no_entry",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$covenant",
