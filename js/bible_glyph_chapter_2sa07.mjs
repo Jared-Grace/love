@@ -448,7 +448,7 @@ export function bible_glyph_chapter_2sa07() {
           "of",
           "his",
           "$castle",
-          "forever.",
+          "$finish.",
         ],
       },
       {
