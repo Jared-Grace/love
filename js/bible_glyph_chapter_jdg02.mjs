@@ -475,7 +475,7 @@ export function bible_glyph_chapter_jdg02() {
       {
         verse_number: 15,
         words: [
-          "Wherever",
+          "$all",
           "Israel",
           "marched",
           "out,",
