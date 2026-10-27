@@ -1001,7 +1001,7 @@ export function bible_glyph_chapter_1ki12() {
         verse_number: 30,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "$link",
           "a",
           "$bow,",
