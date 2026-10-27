@@ -105,7 +105,7 @@ export function bible_glyph_chapter_exo25() {
           "for",
           "the",
           "anointing",
-          "oil",
+          "$lotion_bottle",
           "and",
           "for",
           "the",
