@@ -767,7 +767,7 @@ export function bible_glyph_chapter_2sa12() {
           "$i_am",
           "may",
           "be",
-          "gracious",
+          "$heart_orange+doing",
           "to",
           "me",
           "and",
