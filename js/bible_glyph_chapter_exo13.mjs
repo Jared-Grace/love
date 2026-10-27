@@ -149,7 +149,7 @@ export function bible_glyph_chapter_exo13() {
           "$kneeling+thing",
           "in",
           "$flashlight",
-          "month.",
+          "$new_moon.",
         ],
       },
       {
