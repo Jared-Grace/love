@@ -1111,7 +1111,7 @@ export function bible_glyph_chapter_2ch06() {
           "that",
           "they",
           "may",
-          "fear",
+          "$fear+doing",
           "You",
           "and",
           "$walking",
