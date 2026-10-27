@@ -224,7 +224,7 @@ export function bible_glyph_chapter_exo08() {
           "$proper_name$Aaron",
           "and",
           "$speech,",
-          "Pray",
+          "$hands_praying+incense+doing",
           "to",
           "$i_am",
           "to",
