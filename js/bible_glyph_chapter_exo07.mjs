@@ -534,7 +534,7 @@ export function bible_glyph_chapter_exo07() {
           "be",
           "unable",
           "to",
-          "drink",
+          "$cup_with_straw",
           "$water",
           "$tray_out",
           "it.",
