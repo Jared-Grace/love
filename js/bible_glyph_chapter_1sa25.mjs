@@ -256,7 +256,7 @@ export function bible_glyph_chapter_1sa25() {
           "and",
           "they",
           "will",
-          "tell",
+          "$newspaper",
           "you.",
           "So",
           "let",
