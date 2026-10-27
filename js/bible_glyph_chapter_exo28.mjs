@@ -919,7 +919,7 @@ export function bible_glyph_chapter_exo28() {
           "$hammer+doing",
           "$fruit+red_circle",
           "of",
-          "blue,",
+          "$blue_circle,",
           "purple",
           "and",
           "scarlet",
