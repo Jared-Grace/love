@@ -686,7 +686,7 @@ export function bible_glyph_chapter_1ki20() {
           "So",
           "the",
           "Arameans",
-          "fled",
+          "$running+dashing_away",
           "with",
           "the",
           "$wrestling+heart_on_fire",
