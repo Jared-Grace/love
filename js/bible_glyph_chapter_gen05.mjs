@@ -621,7 +621,7 @@ export function bible_glyph_chapter_gen05() {
           "$tray_out",
           "the",
           "$brown_square",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "$speech+thumbs_down.",
         ],
