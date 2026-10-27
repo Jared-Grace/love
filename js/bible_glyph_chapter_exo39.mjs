@@ -214,7 +214,7 @@ export function bible_glyph_chapter_exo39() {
           "He",
           "$hammer",
           "the",
-          "breastpiece",
+          "$gem_stone+t_shirt",
           "with",
           "the",
           "same",
