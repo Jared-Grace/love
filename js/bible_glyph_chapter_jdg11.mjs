@@ -718,7 +718,7 @@ export function bible_glyph_chapter_jdg11() {
       {
         verse_number: 22,
         words: [
-          "seizing",
+          "$triangular_flag",
           "all",
           "the",
           "land",
