@@ -472,7 +472,7 @@ export function bible_glyph_chapter_lev09() {
           "the",
           "entrails,",
           "the",
-          "kidneys",
+          "$heart_organ+two",
           "and",
           "the",
           "lobe",
