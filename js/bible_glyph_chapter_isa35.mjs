@@ -41,7 +41,7 @@ export function bible_glyph_chapter_isa35() {
           "bloom",
           "profusely",
           "and",
-          "rejoice",
+          "$woman_dancing",
           "with",
           "joy",
           "and",
