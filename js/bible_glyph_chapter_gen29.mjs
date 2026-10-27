@@ -863,7 +863,7 @@ export function bible_glyph_chapter_gen29() {
           "$i_am",
           "has",
           "$ear",
-          "that",
+          "$pointing",
           "I",
           "am",
           "unloved,",
