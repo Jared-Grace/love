@@ -54,7 +54,7 @@ export function bible_glyph_chapter_mic06() {
           "of",
           "the",
           "$earth.",
-          "For",
+          "$pointing",
           "the",
           "$i_am",
           "has",
