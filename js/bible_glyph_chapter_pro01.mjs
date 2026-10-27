@@ -569,7 +569,7 @@ export function bible_glyph_chapter_pro01() {
       {
         verse_number: 29,
         words: [
-          "For",
+          "$pointing",
           "they",
           "hated",
           "knowledge",
