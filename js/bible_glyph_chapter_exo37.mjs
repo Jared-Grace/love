@@ -119,7 +119,7 @@ export function bible_glyph_chapter_exo37() {
           "into",
           "the",
           "$ring",
-          "on",
+          "$pointing_up",
           "the",
           "sides",
           "of",
