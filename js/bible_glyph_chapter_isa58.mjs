@@ -15,7 +15,7 @@ export function bible_glyph_chapter_isa58() {
         verse_number: 1,
         words: [
           "$waving_hand",
-          "aloud,",
+          "$tongue+down_arrow,",
           "do",
           "$no_entry",
           "hold",
