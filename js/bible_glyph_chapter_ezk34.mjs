@@ -716,7 +716,7 @@ export function bible_glyph_chapter_ezk34() {
           "they",
           "will",
           "$no_entry",
-          "longer",
+          "$repeat",
           "$link",
           "prey.",
           "I",
