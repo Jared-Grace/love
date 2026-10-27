@@ -356,7 +356,7 @@ export function bible_glyph_chapter_jdg07() {
           "against",
           "the",
           "$camp,",
-          "for",
+          "$pointing",
           "I",
           "have",
           "$hands_giving",
