@@ -342,7 +342,7 @@ export function bible_glyph_chapter_neh09() {
         words: [
           "You",
           "$hands_giving",
-          "signs",
+          "$placard",
           "and",
           "wonders",
           "against",
