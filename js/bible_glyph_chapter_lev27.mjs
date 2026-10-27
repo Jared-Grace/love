@@ -54,7 +54,7 @@ export function bible_glyph_chapter_lev27() {
           "a",
           "male",
           "from",
-          "twenty",
+          "$two+zero",
           "$son",
           "to",
           "sixty",
