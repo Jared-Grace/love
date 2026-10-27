@@ -527,7 +527,7 @@ export function bible_glyph_chapter_lev23() {
           "the",
           "herd,",
           "and",
-          "two",
+          "$two",
           "$ram.",
           "They",
           "will",
