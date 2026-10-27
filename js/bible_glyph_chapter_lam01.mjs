@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lam01() {
       {
         verse_number: 1,
         words: [
-          "How",
+          "$question+likeness",
           "lonely",
           "$person+house",
           "the",
