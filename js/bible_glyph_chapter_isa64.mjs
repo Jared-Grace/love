@@ -273,7 +273,7 @@ export function bible_glyph_chapter_isa64() {
           "$double_exclamation;",
           "do",
           "$no_entry",
-          "remember",
+          "$reminder_ribbon",
           "our",
           "iniquity",
           "$clock+all.",
