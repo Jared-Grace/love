@@ -131,7 +131,7 @@ export function bible_glyph_chapter_1sa17() {
           "$t_shirt+chains",
           "of",
           "mail",
-          "weighing",
+          "$coin+thing",
           "five",
           "thousand",
           "shekels",
