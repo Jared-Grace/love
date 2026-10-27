@@ -452,7 +452,7 @@ export function bible_glyph_chapter_jos01() {
           "But",
           "all",
           "your",
-          "mighty",
+          "$might+person",
           "men",
           "of",
           "valor",
