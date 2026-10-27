@@ -236,7 +236,7 @@ export function bible_glyph_chapter_amo05() {
           "them",
           "$pointing_up",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "$earth",
