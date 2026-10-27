@@ -391,7 +391,7 @@ export function bible_glyph_chapter_neh08() {
           "those",
           "who",
           "have",
-          "nothing",
+          "$dotted_line_face",
           "prepared,",
           "since",
           "$sun",
