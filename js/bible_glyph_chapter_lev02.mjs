@@ -133,7 +133,7 @@ export function bible_glyph_chapter_lev02() {
           "wafers",
           "$oil+doing",
           "with",
-          "oil.",
+          "$lotion_bottle.",
         ],
       },
       {
