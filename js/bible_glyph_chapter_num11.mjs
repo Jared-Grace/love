@@ -311,7 +311,7 @@ export function bible_glyph_chapter_num11() {
           "have",
           "I",
           "$no_entry",
-          "found",
+          "$magnifying_glass+exclamation",
           "favor",
           "in",
           "Your",
