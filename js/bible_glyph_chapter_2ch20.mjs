@@ -272,7 +272,7 @@ export function bible_glyph_chapter_2ch20() {
           "$scales+down_arrow,",
           "$face_with_medical_mask",
           "or",
-          "famine,",
+          "$famine,",
           "we",
           "will",
           "stand",
