@@ -952,7 +952,7 @@ export function bible_glyph_chapter_lev11() {
           "$skull+bone",
           "will",
           "be",
-          "unclean",
+          "$soap+no_entry",
           "until",
           "evening.",
         ],
