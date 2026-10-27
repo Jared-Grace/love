@@ -1680,7 +1680,7 @@ export function bible_glyph_chapter_1ki01() {
           "the",
           "$earth.",
           "But",
-          "if",
+          "$traffic_light",
           "$thumbs_down",
           "is",
           "found",
