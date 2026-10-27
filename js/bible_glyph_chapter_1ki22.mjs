@@ -1670,7 +1670,7 @@ export function bible_glyph_chapter_1ki22() {
           "$son",
           "of",
           "$proper_name$Nebat,",
-          "who",
+          "$back+flashlight",
           "had",
           "caused",
           "$wrestling+heart_on_fire",
