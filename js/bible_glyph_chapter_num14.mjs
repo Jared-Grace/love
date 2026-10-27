@@ -141,7 +141,7 @@ export function bible_glyph_chapter_num14() {
           "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
-          "fell",
+          "$person+pointing_down",
           "facedown",
           "before",
           "the",
