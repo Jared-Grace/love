@@ -1788,7 +1788,7 @@ export function bible_glyph_chapter_lev13() {
           "$eyes,",
           "it",
           "is",
-          "unclean.",
+          "$soap+no_entry.",
           "Even",
           "though",
           "the",
