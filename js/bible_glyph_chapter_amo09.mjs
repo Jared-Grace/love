@@ -364,7 +364,7 @@ export function bible_glyph_chapter_amo09() {
           "sifted",
           "in",
           "a",
-          "sieve,",
+          "$wheat+hole+knot,",
           "but",
           "$no_entry",
           "a",
