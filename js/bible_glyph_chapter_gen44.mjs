@@ -171,7 +171,7 @@ export function bible_glyph_chapter_gen44() {
           "them,",
           "he",
           "$mouth",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "to",
           "them.",
