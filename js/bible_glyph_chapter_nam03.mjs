@@ -333,7 +333,7 @@ export function bible_glyph_chapter_nam03() {
       {
         verse_number: 13,
         words: [
-          "Look",
+          "$exclamation",
           "at",
           "your",
           "$family",
