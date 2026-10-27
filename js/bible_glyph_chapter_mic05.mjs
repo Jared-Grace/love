@@ -381,7 +381,7 @@ export function bible_glyph_chapter_mic05() {
           "and",
           "tear",
           "down",
-          "all",
+          "$all",
           "your",
           "strongholds.",
         ],
