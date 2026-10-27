@@ -298,7 +298,7 @@ export function bible_glyph_chapter_2ki01() {
           "around",
           "his",
           "$briefs+round_pushpin.",
-          "It",
+          "$pointing_back",
           "was",
           "$heart_on_fire+i_am",
           "the",
