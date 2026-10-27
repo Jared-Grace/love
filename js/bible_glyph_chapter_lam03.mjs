@@ -179,7 +179,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 10,
         words: [
-          "He",
+          "$pointing_back",
           "is",
           "a",
           "$bear",
