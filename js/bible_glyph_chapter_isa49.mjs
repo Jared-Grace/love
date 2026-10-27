@@ -323,7 +323,7 @@ export function bible_glyph_chapter_isa49() {
           "You;",
           "I",
           "will",
-          "keep",
+          "$guard+shield+doing",
           "You",
           "and",
           "$hands_giving",
