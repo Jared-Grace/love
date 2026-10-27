@@ -491,7 +491,7 @@ export function bible_glyph_chapter_pro08() {
           "He",
           "inscribed",
           "a",
-          "circle",
+          "$compass+thing",
           "on",
           "the",
           "face",
