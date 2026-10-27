@@ -917,7 +917,7 @@ export function bible_glyph_chapter_deu09() {
           "$i_am,",
           "do",
           "$no_entry",
-          "destroy",
+          "$collision",
           "Your",
           "$family,",
           "Your",
