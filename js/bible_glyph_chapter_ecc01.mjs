@@ -324,7 +324,7 @@ export function bible_glyph_chapter_ecc01() {
           "that",
           "are",
           "$hammer",
-          "under",
+          "$down_arrow",
           "the",
           "sun,",
           "and",
