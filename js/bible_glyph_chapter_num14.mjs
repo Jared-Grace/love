@@ -397,7 +397,7 @@ export function bible_glyph_chapter_num14() {
           "But",
           "$fishing_pole+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$i_am,",
           "The",
