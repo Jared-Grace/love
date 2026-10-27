@@ -412,7 +412,7 @@ export function bible_glyph_chapter_deu07() {
           "your",
           "$heart_on_fire",
           "will",
-          "keep",
+          "$guard",
           "His",
           "$covenant",
           "and",
