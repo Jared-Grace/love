@@ -145,7 +145,7 @@ export function bible_glyph_chapter_exo13() {
           "you",
           "shall",
           "$kneeling+doing",
-          "this",
+          "$flashlight",
           "$kneeling+thing",
           "in",
           "this",
