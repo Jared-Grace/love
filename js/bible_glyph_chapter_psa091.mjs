@@ -196,7 +196,7 @@ export function bible_glyph_chapter_psa091() {
         verse_number: 9,
         words: [
           "$pointing",
-          "you",
+          "$you",
           "have",
           "made",
           "the",
