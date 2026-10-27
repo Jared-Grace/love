@@ -538,7 +538,7 @@ export function bible_glyph_chapter_2sa06() {
           "in",
           "its",
           "$place",
-          "inside",
+          "$radio_button",
           "the",
           "tent",
           "that",
