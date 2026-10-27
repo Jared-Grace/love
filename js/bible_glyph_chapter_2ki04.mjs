@@ -461,7 +461,7 @@ export function bible_glyph_chapter_2ki04() {
           "Well,",
           "she",
           "has",
-          "no",
+          "$dotted_line_face",
           "$son,",
           "and",
           "her",
