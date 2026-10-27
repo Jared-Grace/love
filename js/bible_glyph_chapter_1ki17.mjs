@@ -157,7 +157,7 @@ export function bible_glyph_chapter_1ki17() {
           "the",
           "$morning",
           "and",
-          "evening,",
+          "$sunset,",
           "and",
           "he",
           "would",
