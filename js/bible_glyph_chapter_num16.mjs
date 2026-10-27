@@ -1029,7 +1029,7 @@ export function bible_glyph_chapter_num16() {
           "At",
           "their",
           "$voice",
-          "all",
+          "$all",
           "the",
           "people",
           "of",
