@@ -114,7 +114,7 @@ export function bible_glyph_chapter_exo32() {
           "and",
           "$footprints",
           "them",
-          "to",
+          "$toward",
           "$proper_name$Aaron.",
         ],
       },
