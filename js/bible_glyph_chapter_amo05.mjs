@@ -508,7 +508,7 @@ export function bible_glyph_chapter_amo05() {
           "$pointing",
           "I",
           "will",
-          "pass",
+          "$bridge",
           "through",
           "your",
           "midst,",
