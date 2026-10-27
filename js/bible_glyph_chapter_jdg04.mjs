@@ -471,7 +471,7 @@ export function bible_glyph_chapter_jdg04() {
           "the",
           "$sword.",
           "$proper_name$Sisera",
-          "abandoned",
+          "$walking+pointing_down",
           "his",
           "chariot",
           "and",
