@@ -45,7 +45,7 @@ export function bible_glyph_chapter_amo05() {
           "She",
           "lies",
           "abandoned",
-          "on",
+          "$pointing_up",
           "her",
           "land,",
           "with",
