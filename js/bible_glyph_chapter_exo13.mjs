@@ -569,7 +569,7 @@ export function bible_glyph_chapter_exo13() {
           "led",
           "the",
           "$family",
-          "around",
+          "$around+doing",
           "by",
           "the",
           "$road",
