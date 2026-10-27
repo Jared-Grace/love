@@ -1090,7 +1090,7 @@ export function bible_glyph_chapter_jer32() {
           "Therefore",
           "I",
           "will",
-          "remove",
+          "$away+doing",
           "it",
           "from",
           "My",
