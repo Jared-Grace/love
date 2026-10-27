@@ -88,7 +88,7 @@ export function bible_glyph_chapter_exo17() {
           "the",
           "$family",
           "$tongue+desert+doing",
-          "there",
+          "$telescope",
           "for",
           "$water,",
           "and",
