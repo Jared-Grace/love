@@ -144,7 +144,7 @@ export function bible_glyph_chapter_exo29() {
           "and",
           "the",
           "breastpiece.",
-          "Fasten",
+          "$safety_vest+doing",
           "the",
           "$safety_vest",
           "on",
