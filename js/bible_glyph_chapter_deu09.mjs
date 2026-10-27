@@ -483,7 +483,7 @@ export function bible_glyph_chapter_deu09() {
           "themselves",
           "a",
           "molten",
-          "image.",
+          "$pouring_liquid+moai.",
         ],
       },
       {
