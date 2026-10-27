@@ -579,7 +579,7 @@ export function bible_glyph_chapter_pro03() {
           "your",
           "neighbor,",
           "for",
-          "he",
+          "$pointing_back",
           "$person+house",
           "trustfully",
           "beside",
