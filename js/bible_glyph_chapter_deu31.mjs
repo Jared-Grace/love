@@ -983,7 +983,7 @@ export function bible_glyph_chapter_deu31() {
           "you",
           "have",
           "been",
-          "rebelling",
+          "$raised_fist+up_arrow+doing",
           "$linked_paperclips",
           "$i_am",
           "while",
