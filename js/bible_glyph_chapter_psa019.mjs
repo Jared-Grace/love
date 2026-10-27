@@ -284,7 +284,7 @@ export function bible_glyph_chapter_psa019() {
       {
         verse_number: 13,
         words: [
-          "Keep",
+          "$hand+pause_button+doing",
           "Your",
           "$kneeling",
           "$plus",
