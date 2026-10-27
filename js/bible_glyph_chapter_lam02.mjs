@@ -172,7 +172,7 @@ export function bible_glyph_chapter_lam02() {
           "poured",
           "out",
           "His",
-          "wrath",
+          "$angry_face",
           "like",
           "$fire",
           "on",
