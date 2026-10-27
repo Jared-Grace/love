@@ -146,7 +146,7 @@ export function bible_glyph_chapter_hos06() {
           "like",
           "the",
           "early",
-          "dew",
+          "$dew",
           "that",
           "$walking.",
         ],
