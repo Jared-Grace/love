@@ -512,7 +512,7 @@ export function bible_glyph_chapter_neh08() {
           "And",
           "they",
           "found",
-          "written",
+          "$writing_hand",
           "in",
           "the",
           "$scroll,",
