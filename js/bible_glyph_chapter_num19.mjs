@@ -786,7 +786,7 @@ export function bible_glyph_chapter_num19() {
           "it",
           "will",
           "be",
-          "unclean",
+          "$soap+no_entry",
           "until",
           "evening.",
         ],
