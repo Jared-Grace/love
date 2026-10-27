@@ -344,7 +344,7 @@ export function bible_glyph_chapter_2ch34() {
           "$house",
           "of",
           "$heart_on_fire,",
-          "which",
+          "$back+flashlight",
           "the",
           "$handshake",
           "who",
