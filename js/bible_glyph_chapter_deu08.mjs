@@ -19,7 +19,7 @@ export function bible_glyph_chapter_deu08() {
           "$hammer+doing",
           "$all",
           "$scroll",
-          "I",
+          "$me",
           "am",
           "giving",
           "you",
