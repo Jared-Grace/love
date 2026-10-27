@@ -443,7 +443,7 @@ export function bible_glyph_chapter_2ki09() {
       {
         verse_number: 13,
         words: [
-          "Quickly",
+          "$fast_forward+doing",
           "each",
           "$man_beard",
           "$hand_receiving",
