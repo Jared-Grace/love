@@ -94,7 +94,7 @@ export function bible_glyph_chapter_gen45() {
           "to",
           "$speech+turn_back",
           "him,",
-          "because",
+          "$pointing",
           "they",
           "were",
           "terrified",
