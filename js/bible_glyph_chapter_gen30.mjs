@@ -518,7 +518,7 @@ export function bible_glyph_chapter_gen30() {
           "have",
           "borne",
           "him",
-          "six",
+          "$six",
           "$son.",
           "So",
           "she",
