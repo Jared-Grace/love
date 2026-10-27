@@ -128,7 +128,7 @@ export function bible_glyph_chapter_1sa24() {
           "to",
           "you,",
           "'Behold,",
-          "I",
+          "$me",
           "will",
           "$hands_giving",
           "your",
