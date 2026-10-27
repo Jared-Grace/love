@@ -26,7 +26,7 @@ export function bible_glyph_chapter_jer17() {
           "with",
           "a",
           "diamond",
-          "point",
+          "$hand_with_fingers_splayed+pin",
           "on",
           "the",
           "tablets",
