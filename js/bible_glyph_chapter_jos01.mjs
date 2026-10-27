@@ -253,7 +253,7 @@ export function bible_glyph_chapter_jos01() {
           "$walking+away+doing",
           "from",
           "your",
-          "mouth;",
+          "$face_with_open_mouth;",
           "meditate",
           "on",
           "it",
