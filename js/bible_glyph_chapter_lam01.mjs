@@ -90,7 +90,7 @@ export function bible_glyph_chapter_lam01() {
           "has",
           "gone",
           "into",
-          "exile",
+          "$luggage+chains+doing",
           "under",
           "affliction",
           "and",
