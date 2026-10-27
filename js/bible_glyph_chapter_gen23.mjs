@@ -387,7 +387,7 @@ export function bible_glyph_chapter_gen23() {
           "And",
           "he",
           "$mouth",
-          "to",
+          "$toward",
           "$proper_name$Ephron",
           "in",
           "the",
