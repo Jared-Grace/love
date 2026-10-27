@@ -708,7 +708,7 @@ export function bible_glyph_chapter_isa49() {
           "was",
           "$baby+no_entry+person",
           "and",
-          "barren;",
+          "$pregnant_woman+no_entry;",
           "I",
           "was",
           "exiled",
