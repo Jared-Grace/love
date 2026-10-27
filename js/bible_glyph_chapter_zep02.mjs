@@ -467,7 +467,7 @@ export function bible_glyph_chapter_zep02() {
           "on",
           "the",
           "$door+pointing_down,",
-          "for",
+          "$pointing",
           "He",
           "will",
           "expose",
