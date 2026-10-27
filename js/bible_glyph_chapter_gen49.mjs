@@ -495,7 +495,7 @@ export function bible_glyph_chapter_gen49() {
           "$proper_name$Naphtali",
           "is",
           "a",
-          "doe",
+          "$deer+female_sign",
           "set",
           "free",
           "that",
