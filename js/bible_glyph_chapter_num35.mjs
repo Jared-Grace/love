@@ -447,7 +447,7 @@ export function bible_glyph_chapter_num35() {
           "$person_other",
           "unintentionally",
           "may",
-          "flee",
+          "$running+dashing_away",
           "there.",
         ],
       },
