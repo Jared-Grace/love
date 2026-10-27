@@ -55,7 +55,7 @@ export function bible_glyph_chapter_exo29() {
           "$bread,",
           "$flatbread",
           "$bagel",
-          "mixed",
+          "$spoon+cyclone",
           "with",
           "oil,",
           "and",
