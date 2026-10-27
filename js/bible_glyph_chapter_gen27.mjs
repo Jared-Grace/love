@@ -213,7 +213,7 @@ export function bible_glyph_chapter_gen27() {
       {
         verse_number: 8,
         words: [
-          "Now,",
+          "$watch,",
           "my",
           "$son,",
           "$ear",
