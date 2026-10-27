@@ -796,7 +796,7 @@ export function bible_glyph_chapter_exo39() {
           "inscription",
           "on",
           "a",
-          "seal,",
+          "$ring+locked+thing,",
           "$sparkle+thing",
           "$i_am.",
         ],
