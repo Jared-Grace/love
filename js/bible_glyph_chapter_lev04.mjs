@@ -848,7 +848,7 @@ export function bible_glyph_chapter_lev04() {
           "is",
           "to",
           "remove",
-          "all",
+          "$all",
           "the",
           "fat",
           "just",
