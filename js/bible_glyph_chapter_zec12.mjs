@@ -446,7 +446,7 @@ export function bible_glyph_chapter_zec12() {
           "The",
           "$earth",
           "will",
-          "mourn,",
+          "$crying_face+doing,",
           "each",
           "clan",
           "on",
