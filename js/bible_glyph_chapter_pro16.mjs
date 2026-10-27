@@ -215,7 +215,7 @@ export function bible_glyph_chapter_pro16() {
           "a",
           "$king;",
           "his",
-          "mouth",
+          "$face_with_open_mouth",
           "must",
           "$no_entry",
           "$handshake+broken_chain+doing",
