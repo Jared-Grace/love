@@ -830,7 +830,7 @@ export function bible_glyph_chapter_gen37() {
           "$two+zero",
           "shekels",
           "of",
-          "silver",
+          "$silver",
           "to",
           "the",
           "$proper_name$Ishmaelites,",
