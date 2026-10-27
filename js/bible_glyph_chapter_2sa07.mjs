@@ -653,7 +653,7 @@ export function bible_glyph_chapter_2sa07() {
         words: [
           "For",
           "the",
-          "sake",
+          "$information+toward",
           "of",
           "Your",
           "$speech",
