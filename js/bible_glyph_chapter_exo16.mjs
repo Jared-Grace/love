@@ -1107,7 +1107,7 @@ export function bible_glyph_chapter_exo16() {
           "$flashlight+question+thing",
           "$four+zero",
           "$year,",
-          "until",
+          "$finish",
           "they",
           "$footprints",
           "to",
