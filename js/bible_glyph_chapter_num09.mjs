@@ -175,7 +175,7 @@ export function bible_glyph_chapter_num09() {
           "$no_entry",
           "$hammer+doing",
           "the",
-          "Passover",
+          "$lamb+door",
           "on",
           "that",
           "$sun.",
