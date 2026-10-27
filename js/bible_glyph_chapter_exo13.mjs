@@ -408,7 +408,7 @@ export function bible_glyph_chapter_exo13() {
           "you,",
           "$flashlight+question",
           "does",
-          "this",
+          "$flashlight",
           "$speech?",
           "you",
           "are",
