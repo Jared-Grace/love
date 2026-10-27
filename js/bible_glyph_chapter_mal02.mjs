@@ -602,7 +602,7 @@ export function bible_glyph_chapter_mal02() {
           "yet",
           "you",
           "$speech,",
-          "How",
+          "$flashlight+question",
           "have",
           "we",
           "wearied",
