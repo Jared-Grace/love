@@ -478,7 +478,7 @@ export function bible_glyph_chapter_num06() {
           "$basket",
           "of",
           "$flatbread",
-          "cakes",
+          "$bagel",
           "made",
           "from",
           "fine",
