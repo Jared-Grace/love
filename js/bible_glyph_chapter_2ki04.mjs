@@ -786,7 +786,7 @@ export function bible_glyph_chapter_2ki04() {
           "$proper_name$Gehazi",
           "his",
           "servant,",
-          "Look,",
+          "$exclamation,",
           "there",
           "is",
           "the",
