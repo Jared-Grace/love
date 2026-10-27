@@ -418,7 +418,7 @@ export function bible_glyph_chapter_exo18() {
           "$fishing_pole+proper_name",
           "$tray_out",
           "$morning",
-          "until",
+          "$finish",
           "evening.",
         ],
       },
