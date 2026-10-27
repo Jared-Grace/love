@@ -27,7 +27,7 @@ export function bible_glyph_chapter_1ki21() {
           "$proper_name$Jezreelite",
           "owned",
           "a",
-          "vineyard",
+          "$vineyard",
           "in",
           "$proper_name$Jezreel,",
           "next",
