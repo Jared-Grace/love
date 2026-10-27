@@ -615,7 +615,7 @@ export function bible_glyph_chapter_2ch20() {
           "out",
           "$sun+next_track",
           "and",
-          "face",
+          "$face",
           "them,",
           "for",
           "the",
