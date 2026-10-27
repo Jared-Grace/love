@@ -78,7 +78,7 @@ export function bible_glyph_chapter_neh09() {
           "read",
           "from",
           "the",
-          "Book",
+          "$closed_book",
           "of",
           "the",
           "$scroll",
