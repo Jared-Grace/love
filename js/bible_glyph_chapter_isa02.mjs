@@ -393,7 +393,7 @@ export function bible_glyph_chapter_isa02() {
         verse_number: 13,
         words: [
           "$pointing_up",
-          "all",
+          "$all",
           "the",
           "cedars",
           "of",
