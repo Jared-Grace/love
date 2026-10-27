@@ -18,7 +18,7 @@ export function bible_glyph_chapter_gen06() {
           "$person",
           "$sewing_needle",
           "to",
-          "multiply",
+          "$multiply+crowd+doing",
           "on",
           "the",
           "face",
