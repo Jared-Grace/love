@@ -988,7 +988,7 @@ export function bible_glyph_chapter_ezk37() {
           "My",
           "sanctuary",
           "$link",
-          "among",
+          "$radio_button",
           "them",
           "$hourglass.",
         ],
