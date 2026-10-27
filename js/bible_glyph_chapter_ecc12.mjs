@@ -331,7 +331,7 @@ export function bible_glyph_chapter_ecc12() {
           "like",
           "firmly",
           "embedded",
-          "nails,",
+          "$round_pushpin,",
           "$hands_giving",
           "by",
           "a",
