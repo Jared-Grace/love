@@ -221,7 +221,7 @@ export function bible_glyph_chapter_gen29() {
           "$speech,",
           "We",
           "$no_entry",
-          "until",
+          "$finish",
           "all",
           "the",
           "flocks",
