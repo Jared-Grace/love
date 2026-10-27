@@ -343,7 +343,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 19,
         words: [
-          "Remember",
+          "$reminder_ribbon",
           "my",
           "affliction",
           "and",
