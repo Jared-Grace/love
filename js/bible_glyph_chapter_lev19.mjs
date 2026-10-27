@@ -604,7 +604,7 @@ export function bible_glyph_chapter_lev19() {
           "behalf",
           "with",
           "the",
-          "ram",
+          "$ram",
           "of",
           "the",
           "guilt",
