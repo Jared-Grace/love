@@ -230,7 +230,7 @@ export function bible_glyph_chapter_psa022() {
         words: [
           "Be",
           "$no_entry",
-          "far",
+          "$satellite+doing",
           "$tray_out",
           "me,",
           "for",
