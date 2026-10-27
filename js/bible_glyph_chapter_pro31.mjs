@@ -481,7 +481,7 @@ export function bible_glyph_chapter_pro31() {
           "them;",
           "she",
           "$hands_giving",
-          "sashes",
+          "$briefs+thing",
           "to",
           "the",
           "merchants.",
