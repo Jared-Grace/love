@@ -30,7 +30,7 @@ export function bible_glyph_chapter_zec03() {
           "the",
           "$i_am,",
           "with",
-          "Satan",
+          "$smiling_face_with_horns",
           "$person+round_pushpin",
           "at",
           "his",
