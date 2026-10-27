@@ -794,7 +794,7 @@ export function bible_glyph_chapter_1sa01() {
           "$footprints",
           "the",
           "boy",
-          "to",
+          "$toward",
           "$pointing_up+proper_name.",
         ],
       },
