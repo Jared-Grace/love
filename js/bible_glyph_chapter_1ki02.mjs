@@ -1609,7 +1609,7 @@ export function bible_glyph_chapter_1ki02() {
           "will",
           "remain",
           "$pin+doing",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "$hourglass.",
