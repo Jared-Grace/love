@@ -580,7 +580,7 @@ export function bible_glyph_chapter_lev04() {
           "he",
           "burned",
           "the",
-          "first",
+          "$first_place",
           "$bull.",
           "It",
           "is",
