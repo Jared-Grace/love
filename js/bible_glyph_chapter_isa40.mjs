@@ -189,7 +189,7 @@ export function bible_glyph_chapter_isa40() {
         words: [
           "The",
           "grass",
-          "withers",
+          "$fallen_leaf",
           "and",
           "the",
           "flowers",
