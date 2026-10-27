@@ -650,7 +650,7 @@ export function bible_glyph_chapter_1ki22() {
           "Him",
           "on",
           "His",
-          "right",
+          "$hand+right_arrow",
           "and",
           "on",
           "His",
