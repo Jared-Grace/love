@@ -208,14 +208,14 @@ export function app_code_lesson_else_if_twice() {
     "Two else ifs",
     "else if ... else if ...",
   );
-  let lesson = app_code_lesson_cases_logged(
+  let lesson = app_code_lesson_cases_logged({
     fruits,
     cases_get,
     program_lines,
-    5,
+    word_count: 5,
     values_changed,
     above,
     name_id,
-  );
+  });
   return lesson;
 }

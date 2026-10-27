@@ -182,14 +182,14 @@ export function app_code_lesson_else_if_order() {
     "Else if in order",
     "else if (n < 100)",
   );
-  let lesson = app_code_lesson_cases_logged(
+  let lesson = app_code_lesson_cases_logged({
     fruits,
     cases_get,
     program_lines,
-    4,
+    word_count: 4,
     values_changed,
     above,
     name_id,
-  );
+  });
   return lesson;
 }

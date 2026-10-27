@@ -15,7 +15,7 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_cases_logged(
+export function app_code_lesson_cases_logged({
   fruits,
   cases_get,
   program_lines,
@@ -23,7 +23,7 @@ export function app_code_lesson_cases_logged(
   values_changed,
   above,
   name_id,
-) {
+}) {
   "a lesson on programs that set some values and then write out words, one program for each case: cases_get hands back the values of each program on a screen, program_lines(values, words) writes one out, and values_changed(values) gives values that make the same program write out something else";
   "fruits is the lesson's own list, shared with above: the batch shuffles it in place, and above reads its first words.";
   "A wrong answer is the same program written again from other values, so the values and words are read back off the code: each let line holds a value after = and each console.log line holds a word in its parentheses. Not picked: remembering each program as it is written, since a quiz screen is put back from storage after a reload, so it can show a program this page never wrote.";
