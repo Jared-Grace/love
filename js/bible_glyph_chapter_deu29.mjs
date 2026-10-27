@@ -577,7 +577,7 @@ export function bible_glyph_chapter_deu29() {
           "disaster",
           "on",
           "the",
-          "watered",
+          "$cup_with_straw+describing",
           "land",
           "as",
           "well",
