@@ -1507,7 +1507,7 @@ export function bible_glyph_chapter_num16() {
         verse_number: 50,
         words: [
           "Then",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$turn_back",
           "to",
           "$fishing_pole+proper_name",
