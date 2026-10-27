@@ -344,7 +344,7 @@ export function bible_glyph_chapter_gen44() {
           "found",
           "in",
           "$proper_name$Benjamins",
-          "sack.",
+          "$backpack.",
         ],
       },
       {
