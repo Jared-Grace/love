@@ -150,7 +150,7 @@ export function bible_glyph_chapter_hab01() {
       {
         verse_number: 6,
         words: [
-          "For",
+          "$pointing",
           "behold,",
           "I",
           "am",
