@@ -349,7 +349,7 @@ export function bible_glyph_chapter_gen24() {
           "near",
           "the",
           "well",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$city;",
           "it",
