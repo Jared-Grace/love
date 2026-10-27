@@ -1167,7 +1167,7 @@ export function bible_glyph_chapter_num14() {
           "by",
           "a",
           "$fist+microbe+thing",
-          "before",
+          "$face",
           "the",
           "$i_am.",
         ],
