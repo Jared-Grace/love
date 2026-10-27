@@ -1098,7 +1098,7 @@ export function bible_glyph_chapter_exo39() {
           "And",
           "$fishing_pole+proper_name",
           "$eye",
-          "all",
+          "$all",
           "$tools",
           "and",
           "saw",
