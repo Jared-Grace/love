@@ -192,7 +192,7 @@ export function bible_glyph_chapter_exo39() {
           "pieces",
           "of",
           "the",
-          "ephod",
+          "$safety_vest",
           "as",
           "memorial",
           "$stone",
