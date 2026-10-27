@@ -125,7 +125,7 @@ export function bible_glyph_chapter_zep01() {
         words: [
           "I",
           "will",
-          "stretch",
+          "$white_cane+doing",
           "out",
           "My",
           "$hand",
