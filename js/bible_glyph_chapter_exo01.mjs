@@ -425,7 +425,7 @@ export function bible_glyph_chapter_exo01() {
           "the",
           "$clamp+person",
           "$woman;",
-          "they",
+          "$pointing_back+crowd",
           "are",
           "vigorous",
           "and",
