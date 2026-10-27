@@ -115,7 +115,7 @@ export function bible_glyph_chapter_deu06() {
           "prosper",
           "and",
           "$multiply+doing",
-          "greatly",
+          "$double_exclamation",
           "in",
           "an",
           "$earth",
