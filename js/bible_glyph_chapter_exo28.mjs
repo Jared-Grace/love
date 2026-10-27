@@ -345,7 +345,7 @@ export function bible_glyph_chapter_exo28() {
           "$palm_down",
           "both",
           "$stone",
-          "on",
+          "$pointing_up",
           "the",
           "shoulder",
           "pieces",
