@@ -52,7 +52,7 @@ export function bible_glyph_chapter_dan12() {
           "beginning",
           "of",
           "$map",
-          "until",
+          "$finish",
           "that",
           "$clock.",
           "But",
