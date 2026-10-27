@@ -562,7 +562,7 @@ export function bible_glyph_chapter_num13() {
           "and",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "$wrestling+heart_on_fire",
           "in",
