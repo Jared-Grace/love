@@ -124,7 +124,7 @@ export function bible_glyph_chapter_gen13() {
           "$walking",
           "with",
           "$proper_name$Abram,",
-          "also",
+          "$plus",
           "had",
           "$sheep",
           "and",
