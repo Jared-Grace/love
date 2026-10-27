@@ -74,7 +74,7 @@ export function bible_glyph_chapter_isa40() {
           "in",
           "the",
           "$wilderness,",
-          "Prepare",
+          "$curving_right+doing",
           "the",
           "$road",
           "for",
