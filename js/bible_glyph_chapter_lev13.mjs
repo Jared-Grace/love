@@ -1589,7 +1589,7 @@ export function bible_glyph_chapter_lev13() {
           "weave,",
           "knit,",
           "$shuffle",
-          "leather",
+          "$cow_face+coat",
           "article",
           "is",
           "$leaf+lemon+describing",
