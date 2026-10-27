@@ -337,7 +337,7 @@ export function bible_glyph_chapter_lev14() {
           "$lotion_bottle,",
           "and",
           "one",
-          "log",
+          "$jar+pinching_hand",
           "of",
           "olive",
           "$lotion_bottle.",
