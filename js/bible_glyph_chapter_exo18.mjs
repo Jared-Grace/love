@@ -80,7 +80,7 @@ export function bible_glyph_chapter_exo18() {
           "$two",
           "$son.",
           "One",
-          "son",
+          "$back+flashlight",
           "was",
           "$name_tag",
           "$proper_name$Gershom,",
