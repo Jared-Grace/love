@@ -300,7 +300,7 @@ export function bible_glyph_chapter_zep01() {
           "their",
           "$crown",
           "with",
-          "violence",
+          "$boxing_glove",
           "and",
           "deceit.",
         ],
