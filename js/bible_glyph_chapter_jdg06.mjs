@@ -538,7 +538,7 @@ export function bible_glyph_chapter_jdg06() {
           "I",
           "have",
           "found",
-          "favor",
+          "$heart_orange",
           "in",
           "Your",
           "$eyes,",
