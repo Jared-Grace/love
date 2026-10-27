@@ -440,7 +440,7 @@ export function bible_glyph_chapter_num32() {
           "will",
           "once",
           "again",
-          "leave",
+          "$seat+doing",
           "them",
           "in",
           "the",
