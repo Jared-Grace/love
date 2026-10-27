@@ -505,7 +505,7 @@ export function bible_glyph_chapter_amo05() {
           "all",
           "the",
           "vineyards,",
-          "for",
+          "$pointing",
           "I",
           "will",
           "pass",
