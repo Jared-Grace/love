@@ -686,7 +686,7 @@ export function bible_glyph_chapter_jer07() {
           "to",
           "them",
           "or",
-          "command",
+          "$speech+scroll",
           "them",
           "about",
           "$burnt_offering",
