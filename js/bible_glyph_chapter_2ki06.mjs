@@ -180,7 +180,7 @@ export function bible_glyph_chapter_2ki06() {
           "and",
           "made",
           "the",
-          "iron",
+          "$iron",
           "$water_wave+up_arrow+doing.",
         ],
       },
