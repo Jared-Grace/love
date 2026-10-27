@@ -427,7 +427,7 @@ export function bible_glyph_chapter_2ki06() {
           "and",
           "a",
           "great",
-          "army.",
+          "$raised_fist.",
           "They",
           "$footprints",
           "there",
