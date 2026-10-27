@@ -146,7 +146,7 @@ export function bible_glyph_chapter_gen35() {
           "$hand+foot",
           "$pick+tray_in+doing",
           "them",
-          "under",
+          "$down_arrow",
           "the",
           "tree",
           "at",
