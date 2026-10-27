@@ -302,7 +302,7 @@ export function bible_glyph_chapter_psa103() {
           "blooms",
           "like",
           "a",
-          "flower",
+          "$blossom",
           "of",
           "the",
           "$field;",
