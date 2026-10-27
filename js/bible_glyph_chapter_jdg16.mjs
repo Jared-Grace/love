@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_jdg16() {
           "the",
           "$house",
           "was",
-          "full",
+          "$battery+describing",
           "of",
           "men",
           "and",
