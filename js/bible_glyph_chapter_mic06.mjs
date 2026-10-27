@@ -215,7 +215,7 @@ export function bible_glyph_chapter_mic06() {
           "with",
           "ten",
           "thousand",
-          "rivers",
+          "$national_park",
           "of",
           "oil?",
           "Shall",
