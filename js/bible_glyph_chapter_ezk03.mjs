@@ -630,7 +630,7 @@ export function bible_glyph_chapter_ezk03() {
           "$ruler+thing",
           "and",
           "$hammer+doing",
-          "iniquity,",
+          "$scales+thumbs_down,",
           "and",
           "I",
           "$hands_giving",
