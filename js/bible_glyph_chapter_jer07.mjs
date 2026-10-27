@@ -229,7 +229,7 @@ export function bible_glyph_chapter_jer07() {
         words: [
           "Will",
           "you",
-          "steal",
+          "$ninja+doing",
           "and",
           "murder,",
           "commit",
