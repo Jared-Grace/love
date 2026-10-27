@@ -780,7 +780,7 @@ export function bible_glyph_chapter_num32() {
         words: [
           "but",
           "$kneeling,",
-          "every",
+          "$all",
           "man",
           "equipped",
           "for",
