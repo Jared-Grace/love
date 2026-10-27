@@ -258,7 +258,7 @@ export function bible_glyph_chapter_1ki12() {
           "He",
           "$speech",
           "them,",
-          "What",
+          "$flashlight+question",
           "word",
           "do",
           "you",
