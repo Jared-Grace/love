@@ -47,7 +47,7 @@ export function bible_glyph_chapter_ezk37() {
           "was",
           "$battery+describing",
           "of",
-          "bones.",
+          "$bone.",
         ],
       },
       {
