@@ -491,7 +491,7 @@ export function bible_glyph_chapter_pro03() {
           "Do",
           "$no_entry",
           "$fear+doing",
-          "sudden",
+          "$lightning+manner",
           "$fearful_face",
           "or",
           "the",
