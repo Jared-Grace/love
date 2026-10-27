@@ -745,7 +745,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 42,
         words: [
-          "We",
+          "$me",
           "have",
           "sinned",
           "and",
