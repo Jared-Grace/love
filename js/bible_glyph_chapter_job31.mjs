@@ -70,7 +70,7 @@ export function bible_glyph_chapter_job31() {
           "the",
           "workers",
           "of",
-          "iniquity?",
+          "$thumbs_down+hole?",
         ],
       },
       {
