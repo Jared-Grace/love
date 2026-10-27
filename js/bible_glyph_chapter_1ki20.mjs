@@ -168,7 +168,7 @@ export function bible_glyph_chapter_1ki20() {
           "But",
           "$traffic_light",
           "this",
-          "time",
+          "$clock",
           "tomorrow",
           "I",
           "will",
