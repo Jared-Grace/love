@@ -693,7 +693,7 @@ export function bible_glyph_chapter_1sa15() {
           "of",
           "the",
           "things",
-          "devoted",
+          "$bomb+altar+thing",
           "to",
           "destruction,",
           "in",
