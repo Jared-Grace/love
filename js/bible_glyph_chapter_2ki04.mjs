@@ -1358,7 +1358,7 @@ export function bible_glyph_chapter_2ki04() {
           "it",
           "into",
           "the",
-          "pot",
+          "$pot_of_food",
           "and",
           "$speech,",
           "Pour",
