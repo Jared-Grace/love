@@ -186,7 +186,7 @@ export function bible_glyph_chapter_exo37() {
           "$cherub",
           "on",
           "one",
-          "end",
+          "$end_arrow+triangular_ruler",
           "and",
           "one",
           "$cherub",
