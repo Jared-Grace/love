@@ -670,7 +670,7 @@ export function bible_glyph_chapter_exo07() {
           "there",
           "was",
           "$blood",
-          "throughout",
+          "$all",
           "the",
           "$earth",
           "of",
