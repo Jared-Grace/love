@@ -603,7 +603,7 @@ export function bible_glyph_chapter_neh09() {
           "a",
           "forgiving",
           "God,",
-          "gracious",
+          "$heart_orange+describing",
           "and",
           "compassionate,",
           "slow",
