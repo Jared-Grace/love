@@ -651,7 +651,7 @@ export function bible_glyph_chapter_exo18() {
           "averse",
           "to",
           "dishonest",
-          "gain.",
+          "$money_bag+hand_receiving.",
           "Appoint",
           "them",
           "as",
