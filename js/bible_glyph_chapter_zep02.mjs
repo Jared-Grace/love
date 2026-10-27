@@ -325,7 +325,7 @@ export function bible_glyph_chapter_zep02() {
       {
         verse_number: 10,
         words: [
-          "This",
+          "$flashlight",
           "they",
           "shall",
           "have",
