@@ -171,7 +171,7 @@ export function bible_glyph_chapter_lev19() {
           "will",
           "$lifting",
           "his",
-          "iniquity,",
+          "$cyclone,",
           "for",
           "he",
           "has",
