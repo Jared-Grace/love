@@ -648,7 +648,7 @@ export function bible_glyph_chapter_lev04() {
           "$person_gesturing_ok",
           "of",
           "the",
-          "goat",
+          "$goat+man_beard",
           "and",
           "slaughter",
           "it",
