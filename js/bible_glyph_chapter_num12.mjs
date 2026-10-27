@@ -326,7 +326,7 @@ export function bible_glyph_chapter_num12() {
           "out",
           "of",
           "the",
-          "womb",
+          "$hugging_face+baby",
           "of",
           "his",
           "$mother.",
