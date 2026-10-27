@@ -277,7 +277,7 @@ export function bible_glyph_chapter_num11() {
           "tents,",
           "and",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "the",
           "$i_am",
