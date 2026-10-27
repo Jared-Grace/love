@@ -18,7 +18,7 @@ export function bible_glyph_chapter_exo21() {
           "are",
           "the",
           "$scales+thing",
-          "that",
+          "$back+flashlight",
           "you",
           "are",
           "to",
