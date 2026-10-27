@@ -28,7 +28,7 @@ export function bible_glyph_chapter_num17() {
           "$hand_receiving",
           "from",
           "them",
-          "twelve",
+          "$two",
           "staffs,",
           "one",
           "from",
