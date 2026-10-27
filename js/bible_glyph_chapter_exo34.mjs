@@ -802,7 +802,7 @@ export function bible_glyph_chapter_exo34() {
           "$blood",
           "of",
           "a",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "Me",
           "along",
