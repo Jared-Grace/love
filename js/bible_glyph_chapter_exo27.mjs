@@ -240,7 +240,7 @@ export function bible_glyph_chapter_exo27() {
           "$triangular_ruler",
           "$up_down_arrow",
           "on",
-          "one",
+          "$one",
           "$straight_ruler+round_pushpin,",
         ],
       },
