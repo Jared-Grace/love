@@ -104,7 +104,7 @@ export function bible_glyph_chapter_num30() {
           "$father",
           "during",
           "her",
-          "youth,",
+          "$child+flexed_biceps+thing,",
         ],
       },
       {
