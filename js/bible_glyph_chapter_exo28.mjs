@@ -504,7 +504,7 @@ export function bible_glyph_chapter_exo28() {
           "$gem_stone+blue_circle",
           "and",
           "a",
-          "diamond;",
+          "$gem_stone+hammer;",
         ],
       },
       {
