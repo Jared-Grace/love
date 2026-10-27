@@ -276,7 +276,7 @@ export function bible_glyph_chapter_deu33() {
         words: [
           "He",
           "will",
-          "teach",
+          "$bow+toward",
           "Your",
           "$scales+thing",
           "to",
