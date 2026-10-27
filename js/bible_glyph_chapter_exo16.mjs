@@ -432,7 +432,7 @@ export function bible_glyph_chapter_exo16() {
           "That",
           "$sunset",
           "the",
-          "quail",
+          "$bird+meat",
           "$walking+pointing_up",
           "and",
           "covered",
