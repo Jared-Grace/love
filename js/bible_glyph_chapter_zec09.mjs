@@ -469,7 +469,7 @@ export function bible_glyph_chapter_zec09() {
           "$walking+tray_out",
           "forth",
           "like",
-          "lightning.",
+          "$cloud_with_lightning.",
           "The",
           "$crown",
           "$i_am",
