@@ -252,7 +252,7 @@ export function bible_glyph_chapter_2sa07() {
           "be",
           "the",
           "ruler",
-          "over",
+          "$pointing_up",
           "My",
           "$family",
           "$wrestling+heart_on_fire.",
