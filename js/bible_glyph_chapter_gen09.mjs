@@ -279,7 +279,7 @@ export function bible_glyph_chapter_gen09() {
           "out",
           "of",
           "the",
-          "ark",
+          "$package",
           "with",
           "you.",
         ],
