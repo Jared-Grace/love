@@ -1170,7 +1170,7 @@ export function bible_glyph_chapter_1ki01() {
           "may",
           "He",
           "be",
-          "with",
+          "$linked_paperclips",
           "$peace+proper_name,",
           "and",
           "make",
