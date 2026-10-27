@@ -676,7 +676,7 @@ export function bible_glyph_chapter_neh09() {
           "the",
           "$candle",
           "of",
-          "cloud",
+          "$cloud",
           "$no_entry",
           "turned",
           "away",
