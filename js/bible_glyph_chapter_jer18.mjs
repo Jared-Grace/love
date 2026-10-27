@@ -259,7 +259,7 @@ export function bible_glyph_chapter_jer18() {
           "then",
           "I",
           "will",
-          "relent",
+          "$hug+doing",
           "of",
           "the",
           "$thumbs_up",
