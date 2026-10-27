@@ -369,7 +369,7 @@ export function bible_glyph_chapter_2ch06() {
           "stood",
           "$face",
           "the",
-          "altar",
+          "$altar",
           "of",
           "the",
           "$i_am",
