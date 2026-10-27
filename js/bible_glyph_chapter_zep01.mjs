@@ -204,7 +204,7 @@ export function bible_glyph_chapter_zep01() {
           "the",
           "$i_am,",
           "$no_entry",
-          "seeking",
+          "$magnifying_glass",
           "the",
           "$i_am",
           "$no_entry",
