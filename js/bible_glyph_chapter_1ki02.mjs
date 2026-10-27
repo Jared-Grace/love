@@ -394,7 +394,7 @@ export function bible_glyph_chapter_1ki02() {
         words: [
           "Then",
           "$two_hearts+proper_name",
-          "rested",
+          "$bed+doing",
           "with",
           "his",
           "$father,",
