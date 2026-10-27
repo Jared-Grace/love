@@ -741,7 +741,7 @@ export function bible_glyph_chapter_exo37() {
           "and",
           "the",
           "pure,",
-          "fragrant",
+          "$herb+nose",
           "$incense,",
           "the",
           "work",
