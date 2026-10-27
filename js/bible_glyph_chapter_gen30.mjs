@@ -609,7 +609,7 @@ export function bible_glyph_chapter_gen30() {
           "$i_am+plus,",
           "$hand+foot",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Laban,",
           "$hand_sending",
           "me",
