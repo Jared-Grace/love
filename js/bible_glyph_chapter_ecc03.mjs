@@ -45,7 +45,7 @@ export function bible_glyph_chapter_ecc03() {
           "a",
           "$clock",
           "to",
-          "plant",
+          "$sprout+down_arrow+doing",
           "and",
           "a",
           "$clock",
