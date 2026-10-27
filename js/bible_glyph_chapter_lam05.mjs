@@ -120,7 +120,7 @@ export function bible_glyph_chapter_lam05() {
           "more,",
           "but",
           "$me",
-          "bear",
+          "$package+down_arrow+doing",
           "their",
           "punishment.",
         ],
