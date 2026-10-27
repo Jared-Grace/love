@@ -419,7 +419,7 @@ export function bible_glyph_chapter_zep02() {
           "make",
           "$proper_name$Nineveh",
           "a",
-          "desolation,",
+          "$astonished+thing,",
           "as",
           "dry",
           "as",
