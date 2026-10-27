@@ -130,7 +130,7 @@ export function bible_glyph_chapter_deu10() {
           "had",
           "been",
           "written",
-          "previously,",
+          "$first_place,",
           "the",
           "Ten",
           "$speech",
