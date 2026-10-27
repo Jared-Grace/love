@@ -256,7 +256,7 @@ export function bible_glyph_chapter_psa063() {
           "Him",
           "will",
           "exult,",
-          "for",
+          "$pointing",
           "the",
           "mouths",
           "of",
