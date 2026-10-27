@@ -162,7 +162,7 @@ export function bible_glyph_chapter_hab02() {
           "he",
           "is",
           "$no_entry",
-          "satisfied.",
+          "$eating+top.",
           "He",
           "gathers",
           "all",
