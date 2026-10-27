@@ -264,7 +264,7 @@ export function bible_glyph_chapter_gen40() {
           "$grapes+curly_loop.",
           "As",
           "$pointing_back",
-          "budded,",
+          "$cherry_blossom,",
           "its",
           "blossoms",
           "$walking+pointing_up,",
