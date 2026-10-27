@@ -304,7 +304,7 @@ export function bible_glyph_chapter_ecc12() {
           "and",
           "to",
           "record",
-          "accurate",
+          "$straight_ruler+thumbs_up+thing",
           "$speech",
           "of",
           "$check.",
