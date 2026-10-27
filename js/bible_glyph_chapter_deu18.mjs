@@ -299,7 +299,7 @@ export function bible_glyph_chapter_deu18() {
           "his",
           "$son",
           "or",
-          "daughter",
+          "$girl+family",
           "in",
           "the",
           "$fire,",
