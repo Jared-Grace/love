@@ -790,7 +790,7 @@ export function bible_glyph_chapter_1ch29() {
           "along",
           "with",
           "their",
-          "drink",
+          "$pouring_liquid+wine+thing",
           "offerings",
           "and",
           "other",
