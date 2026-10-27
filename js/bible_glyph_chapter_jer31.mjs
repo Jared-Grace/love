@@ -431,7 +431,7 @@ export function bible_glyph_chapter_jer31() {
       {
         verse_number: 13,
         words: [
-          "Then",
+          "$telescope+clock",
           "the",
           "maidens",
           "will",
