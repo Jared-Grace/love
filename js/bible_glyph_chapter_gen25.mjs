@@ -52,7 +52,7 @@ export function bible_glyph_chapter_gen25() {
           "$son",
           "of",
           "$proper_name$Dedan",
-          "were",
+          "$link",
           "the",
           "$proper_name$Asshurites,",
           "the",
