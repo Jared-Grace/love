@@ -66,7 +66,7 @@ export function bible_glyph_chapter_psa090() {
           "$turn_back",
           "man",
           "$finish",
-          "dust,",
+          "$stone+dust+describing,",
           "$speech,",
           "$turn_back,",
           "O",
