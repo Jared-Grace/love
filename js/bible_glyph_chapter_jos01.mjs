@@ -276,7 +276,7 @@ export function bible_glyph_chapter_jos01() {
           "$telescope+clock",
           "you",
           "will",
-          "prosper",
+          "$chart_increasing",
           "and",
           "succeed",
           "in",
