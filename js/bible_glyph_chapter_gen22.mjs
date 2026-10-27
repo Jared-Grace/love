@@ -83,7 +83,7 @@ export function bible_glyph_chapter_gen22() {
           "the",
           "next",
           "$morning,",
-          "saddled",
+          "$adhesive_bandage+doing",
           "his",
           "donkey,",
           "and",
