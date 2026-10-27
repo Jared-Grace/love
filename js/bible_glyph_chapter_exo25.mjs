@@ -500,7 +500,7 @@ export function bible_glyph_chapter_exo25() {
         verse_number: 22,
         words: [
           "And",
-          "there",
+          "$telescope",
           "I",
           "will",
           "$alarm_clock+doing",
