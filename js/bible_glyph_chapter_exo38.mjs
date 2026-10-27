@@ -494,7 +494,7 @@ export function bible_glyph_chapter_exo38() {
           "$four",
           "$candle",
           "and",
-          "four",
+          "$four",
           "$bronze",
           "bases.",
           "Their",
