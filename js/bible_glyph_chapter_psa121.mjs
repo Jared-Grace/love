@@ -144,7 +144,7 @@ export function bible_glyph_chapter_psa121() {
           "The",
           "$i_am",
           "will",
-          "watch",
+          "$guard",
           "over",
           "your",
           "$footprints",
