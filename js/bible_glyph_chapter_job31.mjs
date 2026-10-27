@@ -560,7 +560,7 @@ export function bible_glyph_chapter_job31() {
           "$heart_organ",
           "was",
           "secretly",
-          "enticed",
+          "$fishing_pole+doing",
           "and",
           "my",
           "$hand",
