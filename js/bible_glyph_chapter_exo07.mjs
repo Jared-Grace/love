@@ -298,7 +298,7 @@ export function bible_glyph_chapter_exo07() {
         words: [
           "But",
           "$house+proper_name",
-          "called",
+          "$waving_hand",
           "the",
           "wise",
           "men",
