@@ -457,7 +457,7 @@ export function bible_glyph_chapter_2ki09() {
           "on",
           "the",
           "bare",
-          "steps.",
+          "$walking+pointing_up.",
           "Then",
           "they",
           "blew",
