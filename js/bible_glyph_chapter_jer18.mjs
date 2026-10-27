@@ -56,7 +56,7 @@ export function bible_glyph_chapter_jer18() {
           "So",
           "I",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "the",
           "potter's",
