@@ -138,7 +138,7 @@ export function bible_glyph_chapter_exo39() {
           "same",
           "work,",
           "$gold,",
-          "blue,",
+          "$blue_circle,",
           "purple,",
           "and",
           "scarlet",
