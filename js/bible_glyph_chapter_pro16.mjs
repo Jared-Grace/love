@@ -585,7 +585,7 @@ export function bible_glyph_chapter_pro16() {
           "A",
           "violent",
           "$man_beard",
-          "entices",
+          "$fishing_pole+doing",
           "his",
           "neighbor",
           "and",
