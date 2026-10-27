@@ -1142,7 +1142,7 @@ export function bible_glyph_chapter_deu04() {
         words: [
           "$pointing,",
           "$question",
-          "now",
+          "$pleading",
           "about",
           "the",
           "$sun",
