@@ -407,7 +407,7 @@ export function bible_glyph_chapter_num16() {
           "with",
           "$milk",
           "and",
-          "honey",
+          "$honey",
           "to",
           "$skull+doing",
           "us",
