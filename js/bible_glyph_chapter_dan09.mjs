@@ -31,7 +31,7 @@ export function bible_glyph_chapter_dan09() {
           "was",
           "made",
           "$castle+doing",
-          "over",
+          "$pointing_up",
           "the",
           "kingdom",
           "of",
