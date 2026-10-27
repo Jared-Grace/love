@@ -231,7 +231,7 @@ export function bible_glyph_chapter_zec04() {
           "the",
           "foundation",
           "of",
-          "this",
+          "$flashlight",
           "$house,",
           "and",
           "his",
