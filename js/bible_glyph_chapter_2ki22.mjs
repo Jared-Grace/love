@@ -247,7 +247,7 @@ export function bible_glyph_chapter_2ki22() {
           "into",
           "their",
           "$hand,",
-          "since",
+          "$pointing",
           "they",
           "$hammer+doing",
           "with",
