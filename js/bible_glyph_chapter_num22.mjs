@@ -498,7 +498,7 @@ export function bible_glyph_chapter_num22() {
           "of",
           "$proper_name$Zippor",
           "$speech,",
-          "Please",
+          "$pleading",
           "let",
           "$no_entry",
           "hinder",
