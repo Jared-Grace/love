@@ -1108,7 +1108,7 @@ export function bible_glyph_chapter_num22() {
           "me.",
           "And",
           "$watch,",
-          "if",
+          "$traffic_light",
           "this",
           "is",
           "displeasing",
