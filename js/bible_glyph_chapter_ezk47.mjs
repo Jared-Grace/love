@@ -99,7 +99,7 @@ export function bible_glyph_chapter_ezk47() {
           "$tray_out",
           "the",
           "south",
-          "side.",
+          "$person_shrugging.",
         ],
       },
       {
