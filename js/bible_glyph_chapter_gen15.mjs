@@ -396,7 +396,7 @@ export function bible_glyph_chapter_gen15() {
           "depart",
           "with",
           "many",
-          "possessions.",
+          "$package+money_bag.",
         ],
       },
       {
