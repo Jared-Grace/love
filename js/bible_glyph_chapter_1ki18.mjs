@@ -629,7 +629,7 @@ export function bible_glyph_chapter_1ki18() {
           "between",
           "$two",
           "$thinking+divide?",
-          "If",
+          "$traffic_light",
           "the",
           "$i_am",
           "is",
