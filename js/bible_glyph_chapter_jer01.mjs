@@ -187,7 +187,7 @@ export function bible_glyph_chapter_jer01() {
           "only",
           "a",
           "child.",
-          "For",
+          "$pointing",
           "to",
           "everyone",
           "I",
