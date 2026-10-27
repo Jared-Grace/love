@@ -572,7 +572,7 @@ export function bible_glyph_chapter_num21() {
           "top",
           "of",
           "$proper_name$Pisgah",
-          "overlooks",
+          "$window+eyes+doing",
           "the",
           "wasteland.",
         ],
