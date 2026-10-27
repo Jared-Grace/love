@@ -817,7 +817,7 @@ export function bible_glyph_chapter_exo21() {
           "goring,",
           "and",
           "its",
-          "owner",
+          "$key",
           "has",
           "been",
           "$witness+doing",
