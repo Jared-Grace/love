@@ -610,7 +610,7 @@ export function bible_glyph_chapter_num18() {
         words: [
           "But",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "an",
           "$ox",
