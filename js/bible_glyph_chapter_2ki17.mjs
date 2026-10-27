@@ -1250,7 +1250,7 @@ export function bible_glyph_chapter_2ki17() {
       {
         verse_number: 36,
         words: [
-          "Instead,",
+          "$pointing,",
           "worship",
           "the",
           "$i_am,",
