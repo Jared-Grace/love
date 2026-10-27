@@ -404,7 +404,7 @@ export function bible_glyph_chapter_isa55() {
           "the",
           "$thorns+wood,",
           "the",
-          "cypress",
+          "$tree+harp",
           "will",
           "grow,",
           "and",
