@@ -630,7 +630,7 @@ export function bible_glyph_chapter_deu33() {
           "land",
           "for",
           "himself,",
-          "because",
+          "$pointing",
           "there",
           "the",
           "portion",
