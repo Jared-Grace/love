@@ -187,7 +187,7 @@ export function bible_glyph_chapter_gen18() {
           "$bucket+input_numbers+baby",
           "of",
           "fine",
-          "flour,",
+          "$wheat+flour,",
           "knead",
           "it,",
           "and",
