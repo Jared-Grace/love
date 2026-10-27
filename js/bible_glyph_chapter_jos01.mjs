@@ -342,7 +342,7 @@ export function bible_glyph_chapter_jos01() {
           "$family,",
           "$pin+doing",
           "your",
-          "provisions,",
+          "$backpack+bread,",
           "for",
           "within",
           "three",
