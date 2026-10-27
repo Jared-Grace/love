@@ -626,7 +626,7 @@ export function bible_glyph_chapter_2ch34() {
           "again,",
           "$speech,",
           "$all",
-          "that",
+          "$back+flashlight",
           "was",
           "$hands_giving",
           "into",
