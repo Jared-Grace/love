@@ -596,7 +596,7 @@ export function bible_glyph_chapter_gen48() {
           "is",
           "the",
           "$first_place+baby.",
-          "Put",
+          "$palm_down",
           "your",
           "right",
           "hand",
