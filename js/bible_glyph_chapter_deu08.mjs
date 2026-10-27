@@ -609,7 +609,7 @@ export function bible_glyph_chapter_deu08() {
           "you",
           "will",
           "surely",
-          "perish.",
+          "$wilted_flower.",
         ],
       },
       {
