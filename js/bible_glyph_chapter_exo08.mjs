@@ -805,7 +805,7 @@ export function bible_glyph_chapter_exo08() {
         words: [
           "Then",
           "$house+proper_name",
-          "summoned",
+          "$waving_hand",
           "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
