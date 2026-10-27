@@ -294,7 +294,7 @@ export function bible_glyph_chapter_2ki01() {
           "with",
           "a",
           "leather",
-          "belt",
+          "$briefs",
           "around",
           "his",
           "waist.",
