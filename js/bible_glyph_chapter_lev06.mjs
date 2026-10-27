@@ -182,7 +182,7 @@ export function bible_glyph_chapter_lev06() {
           "be",
           "forgiven",
           "for",
-          "anything",
+          "$one",
           "he",
           "may",
           "have",
