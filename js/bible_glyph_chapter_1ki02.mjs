@@ -932,7 +932,7 @@ export function bible_glyph_chapter_1ki02() {
           "suffered",
           "through",
           "all",
-          "that",
+          "$back+flashlight",
           "my",
           "$father",
           "suffered.",
