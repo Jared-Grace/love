@@ -547,7 +547,7 @@ export function bible_glyph_chapter_num20() {
           "to",
           "the",
           "$hand+away",
-          "until",
+          "$finish",
           "we",
           "have",
           "passed",
