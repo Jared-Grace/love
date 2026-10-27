@@ -308,7 +308,7 @@ export function bible_glyph_chapter_gen26() {
           "And",
           "$father+king",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "is",
           "this",
           "you",
