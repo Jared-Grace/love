@@ -1935,7 +1935,7 @@ export function bible_glyph_chapter_gen24() {
           "$field",
           "$walking",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "us?",
           "It",
           "is",
