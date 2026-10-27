@@ -71,7 +71,7 @@ export function bible_glyph_chapter_isa06() {
           "$two",
           "they",
           "were",
-          "flying.",
+          "$bird+doing.",
         ],
       },
       {
