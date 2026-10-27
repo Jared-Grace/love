@@ -329,7 +329,7 @@ export function bible_glyph_chapter_num27() {
           "$fishing_pole+proper_name:",
           "$walking+pointing_up",
           "up",
-          "this",
+          "$flashlight",
           "$mountain",
           "of",
           "the",
