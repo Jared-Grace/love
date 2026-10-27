@@ -67,7 +67,7 @@ export function bible_glyph_chapter_deu06() {
           "and",
           "$scroll",
           "that",
-          "I",
+          "$me",
           "give",
           "you,",
           "you",
