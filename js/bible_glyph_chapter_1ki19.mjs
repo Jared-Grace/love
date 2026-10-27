@@ -476,7 +476,7 @@ export function bible_glyph_chapter_1ki19() {
           "mouth",
           "of",
           "the",
-          "cave.",
+          "$cave.",
           "Suddenly",
           "a",
           "$voice",
