@@ -1242,7 +1242,7 @@ export function bible_glyph_chapter_gen41() {
         verse_number: 45,
         words: [
           "$house+proper_name",
-          "gave",
+          "$waving_hand",
           "$i_am+plus",
           "the",
           "$name_tag",
