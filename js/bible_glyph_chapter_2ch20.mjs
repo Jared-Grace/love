@@ -496,7 +496,7 @@ export function bible_glyph_chapter_2ch20() {
           "he",
           "$speech,",
           '"$ear_with_hearing_aid,',
-          "all",
+          "$all",
           "you",
           "people",
           "of",
