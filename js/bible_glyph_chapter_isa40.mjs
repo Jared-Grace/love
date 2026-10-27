@@ -82,7 +82,7 @@ export function bible_glyph_chapter_isa40() {
           "$i_am;",
           "make",
           "a",
-          "straight",
+          "$straight_ruler+thumbs_up+doing",
           "highway",
           "in",
           "the",
