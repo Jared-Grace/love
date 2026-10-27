@@ -692,7 +692,7 @@ export function bible_glyph_chapter_1ki02() {
           "request,",
           "my",
           "$mother,",
-          "for",
+          "$pointing",
           "I",
           "will",
           "$no_entry",
