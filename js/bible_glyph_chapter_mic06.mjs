@@ -217,7 +217,7 @@ export function bible_glyph_chapter_mic06() {
           "thousand",
           "$national_park",
           "of",
-          "oil?",
+          "$lotion_bottle?",
           "Shall",
           "I",
           "$hands_giving",
