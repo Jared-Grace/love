@@ -563,7 +563,7 @@ export function bible_glyph_chapter_amo05() {
           "flees",
           "from",
           "a",
-          "lion",
+          "$lion",
           "only",
           "to",
           "encounter",
