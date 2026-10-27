@@ -660,7 +660,7 @@ export function bible_glyph_chapter_zec14() {
           "all",
           "the",
           "$map",
-          "that",
+          "$back+flashlight",
           "do",
           "$no_entry",
           "$walking+pointing_up",
