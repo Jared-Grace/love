@@ -51,7 +51,7 @@ export function bible_glyph_chapter_lev26() {
           "to",
           "it.",
           "For",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
