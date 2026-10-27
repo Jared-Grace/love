@@ -192,7 +192,7 @@ export function bible_glyph_chapter_num32() {
       {
         verse_number: 7,
         words: [
-          "Why",
+          "$flashlight+question",
           "are",
           "you",
           "discouraging",
