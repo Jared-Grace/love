@@ -225,7 +225,7 @@ export function bible_glyph_chapter_psa090() {
           "labor",
           "and",
           "sorrow,",
-          "for",
+          "$pointing",
           "they",
           "quickly",
           "pass,",
