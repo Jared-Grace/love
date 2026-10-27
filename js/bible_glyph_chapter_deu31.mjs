@@ -861,7 +861,7 @@ export function bible_glyph_chapter_deu31() {
           "and",
           "$speech,",
           "Be",
-          "strong",
+          "$might+up_arrow",
           "and",
           "courageous,",
           "for",
