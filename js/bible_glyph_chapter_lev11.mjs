@@ -111,7 +111,7 @@ export function bible_glyph_chapter_lev11() {
           "have",
           "a",
           "divided",
-          "hoof;",
+          "$cow_face+foot;",
           "it",
           "is",
           "unclean",
