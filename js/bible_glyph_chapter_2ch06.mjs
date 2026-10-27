@@ -377,7 +377,7 @@ export function bible_glyph_chapter_2ch06() {
           "front",
           "of",
           "the",
-          "whole",
+          "$all",
           "$church",
           "of",
           "$wrestling+heart_on_fire",
