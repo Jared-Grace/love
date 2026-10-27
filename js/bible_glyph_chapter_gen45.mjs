@@ -713,7 +713,7 @@ export function bible_glyph_chapter_gen45() {
           "them,",
           "Do",
           "$no_entry",
-          "quarrel",
+          "$vibration_mode",
           "on",
           "the",
           "$road!",
