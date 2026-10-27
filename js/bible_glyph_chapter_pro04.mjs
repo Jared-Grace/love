@@ -460,7 +460,7 @@ export function bible_glyph_chapter_pro04() {
           "$heart_organ",
           "with",
           "all",
-          "diligence,",
+          "$guard+thing,",
           "for",
           "from",
           "it",
