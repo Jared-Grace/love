@@ -514,7 +514,7 @@ export function bible_glyph_chapter_num30() {
           "will",
           "$lifting",
           "her",
-          "iniquity.",
+          "$cyclone.",
         ],
       },
       {
