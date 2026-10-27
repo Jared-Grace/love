@@ -191,7 +191,7 @@ export function bible_glyph_chapter_lam04() {
           "brighter",
           "than",
           "$snow,",
-          "whiter",
+          "$white_circle+sparkles+doing",
           "than",
           "milk;",
           "their",
