@@ -91,7 +91,7 @@ export function bible_glyph_chapter_1ki21() {
           "$hands_giving",
           "you",
           "its",
-          "value",
+          "$receipt+coin",
           "in",
           "$silver.",
         ],
