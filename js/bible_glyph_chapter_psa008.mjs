@@ -164,7 +164,7 @@ export function bible_glyph_chapter_psa008() {
           "and",
           "oxen,",
           "and",
-          "even",
+          "$plus",
           "the",
           "beasts",
           "of",
