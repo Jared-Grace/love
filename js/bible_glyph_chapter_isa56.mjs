@@ -315,7 +315,7 @@ export function bible_glyph_chapter_isa56() {
         verse_number: 9,
         words: [
           "Come,",
-          "all",
+          "$all",
           "you",
           "$sprout",
           "of",
