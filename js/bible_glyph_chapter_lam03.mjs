@@ -610,7 +610,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "To",
           "$stone+dust+doing",
-          "underfoot",
+          "$down_arrow",
           "all",
           "the",
           "prisoners",
