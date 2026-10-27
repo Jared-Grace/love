@@ -108,7 +108,7 @@ export function bible_glyph_chapter_jdg16() {
           "$gate",
           "and",
           "both",
-          "gateposts,",
+          "$door+wood,",
           "and",
           "pulled",
           "them",
