@@ -192,7 +192,7 @@ export function bible_glyph_chapter_1ch29() {
         words: [
           "for",
           "the",
-          "gold",
+          "$gold",
           "work",
           "and",
           "the",
