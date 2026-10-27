@@ -797,7 +797,7 @@ export function bible_glyph_chapter_2ki09() {
           "in",
           "his",
           "own",
-          "chariot,",
+          "$chariot,",
           "and",
           "they",
           "met",
