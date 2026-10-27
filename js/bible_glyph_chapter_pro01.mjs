@@ -292,7 +292,7 @@ export function bible_glyph_chapter_pro01() {
       {
         verse_number: 16,
         words: [
-          "For",
+          "$pointing",
           "their",
           "feet",
           "run",
