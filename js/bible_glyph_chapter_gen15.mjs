@@ -194,7 +194,7 @@ export function bible_glyph_chapter_gen15() {
           "am",
           "the",
           "$i_am,",
-          "who",
+          "$back+flashlight",
           "brought",
           "you",
           "out",
