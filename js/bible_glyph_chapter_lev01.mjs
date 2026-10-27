@@ -108,7 +108,7 @@ export function bible_glyph_chapter_lev01() {
           "$hand",
           "on",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "$burnt_offering,",
           "and",
           "it",
