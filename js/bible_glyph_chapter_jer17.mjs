@@ -936,7 +936,7 @@ export function bible_glyph_chapter_jer17() {
           "then",
           "I",
           "will",
-          "kindle",
+          "$fire+hand",
           "an",
           "unquenchable",
           "$fire",
