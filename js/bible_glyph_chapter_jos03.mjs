@@ -369,7 +369,7 @@ export function bible_glyph_chapter_jos03() {
           "$hand_receiving",
           "for",
           "yourselves",
-          "twelve",
+          "$two",
           "$man_beard",
           "from",
           "the",
