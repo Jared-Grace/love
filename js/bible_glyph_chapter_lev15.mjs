@@ -258,7 +258,7 @@ export function bible_glyph_chapter_lev15() {
           "touches",
           "anything",
           "$back+flashlight",
-          "was",
+          "$link",
           "under",
           "him",
           "will",
