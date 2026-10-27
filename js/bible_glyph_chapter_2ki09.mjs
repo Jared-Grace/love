@@ -41,7 +41,7 @@ export function bible_glyph_chapter_2ki09() {
           "belt,",
           "$hand_receiving",
           "this",
-          "flask",
+          "$amphora+droplet",
           "of",
           "oil",
           "in",
