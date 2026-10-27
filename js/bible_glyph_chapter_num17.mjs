@@ -99,7 +99,7 @@ export function bible_glyph_chapter_num17() {
           "the",
           "$tent",
           "of",
-          "Meeting",
+          "$alarm_clock",
           "in",
           "front",
           "of",
