@@ -63,7 +63,7 @@ export function bible_glyph_chapter_zep03() {
           "her",
           "judges",
           "are",
-          "evening",
+          "$sunset",
           "$wolf,",
           "leaving",
           "$no_entry",
