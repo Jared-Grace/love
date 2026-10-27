@@ -835,7 +835,7 @@ export function bible_glyph_chapter_exo08() {
           "to",
           "$hammer+doing",
           "that,",
-          "because",
+          "$pointing",
           "the",
           "sacrifices",
           "we",
