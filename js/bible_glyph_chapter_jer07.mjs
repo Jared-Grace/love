@@ -972,7 +972,7 @@ export function bible_glyph_chapter_jer07() {
           "have",
           "built",
           "the",
-          "high",
+          "$snow_capped_mountain",
           "places",
           "of",
           "$proper_name$Topheth",
