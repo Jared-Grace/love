@@ -420,7 +420,7 @@ export function bible_glyph_chapter_gen08() {
       },
       {
         verse_number: 15,
-        words: ["Then", "$heart_on_fire", "$mouth", "to", "$proper_name$Noah,"],
+        words: ["Then", "$heart_on_fire", "$mouth", "$toward", "$proper_name$Noah,"],
       },
       {
         verse_number: 16,
