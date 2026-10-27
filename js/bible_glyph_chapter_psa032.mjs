@@ -147,7 +147,7 @@ export function bible_glyph_chapter_psa032() {
           "$hands_praying",
           "to",
           "You",
-          "while",
+          "$clock",
           "You",
           "may",
           "be",
