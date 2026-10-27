@@ -171,7 +171,7 @@ export function bible_glyph_chapter_psa103() {
           "$no_entry",
           "harbor",
           "His",
-          "anger",
+          "$guard+anger_symbol+doing",
           "$hourglass.",
         ],
       },
