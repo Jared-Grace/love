@@ -83,7 +83,7 @@ export function bible_glyph_chapter_pro01() {
           "$ear",
           "and",
           "gain",
-          "instruction,",
+          "$hand_receiving+open_book,",
           "and",
           "the",
           "discerning",
