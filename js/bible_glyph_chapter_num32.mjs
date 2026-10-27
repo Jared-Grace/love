@@ -245,7 +245,7 @@ export function bible_glyph_chapter_num32() {
           "up",
           "$finish",
           "the",
-          "Valley",
+          "$national_park",
           "of",
           "$proper_name$Eshcol",
           "and",
