@@ -308,7 +308,7 @@ export function bible_glyph_chapter_dan12() {
           "the",
           "outcome",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "things?",
         ],
       },
