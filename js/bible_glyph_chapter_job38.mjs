@@ -532,7 +532,7 @@ export function bible_glyph_chapter_job38() {
           "satisfy",
           "the",
           "parched",
-          "wasteland",
+          "$tornado+derelict_house",
           "and",
           "make",
           "the",
