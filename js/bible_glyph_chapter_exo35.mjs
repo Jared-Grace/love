@@ -252,7 +252,7 @@ export function bible_glyph_chapter_exo35() {
           "frames,",
           "its",
           "crossbars,",
-          "posts",
+          "$candle",
           "and",
           "bases,",
         ],
