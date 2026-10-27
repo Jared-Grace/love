@@ -133,7 +133,7 @@ export function bible_glyph_chapter_jdg07() {
           "$proper_name$Gideon,",
           "There",
           "are",
-          "still",
+          "$repeat",
           "too",
           "many",
           "$family.",
