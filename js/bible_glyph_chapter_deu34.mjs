@@ -183,7 +183,7 @@ export function bible_glyph_chapter_deu34() {
           "him",
           "in",
           "a",
-          "valley",
+          "$valley",
           "in",
           "the",
           "$earth",
