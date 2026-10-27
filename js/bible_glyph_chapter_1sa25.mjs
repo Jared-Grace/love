@@ -997,7 +997,7 @@ export function bible_glyph_chapter_1sa25() {
           "rise",
           "up",
           "to",
-          "pursue",
+          "$running+toward",
           "you",
           "and",
           "seek",
