@@ -618,7 +618,7 @@ export function bible_glyph_chapter_isa07() {
           "$person_gesturing_ok",
           "and",
           "the",
-          "hair",
+          "$hair",
           "of",
           "your",
           "legs,",
