@@ -609,7 +609,7 @@ export function bible_glyph_chapter_exo37() {
         words: [
           "From",
           "a",
-          "talent",
+          "$flying_disc",
           "of",
           "pure",
           "$gold",
