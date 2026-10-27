@@ -886,7 +886,7 @@ export function bible_glyph_chapter_jer17() {
           "offerings",
           "and",
           "sacrifices,",
-          "grain",
+          "$grain_offering",
           "offerings",
           "and",
           "frankincense",
