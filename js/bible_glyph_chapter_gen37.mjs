@@ -847,7 +847,7 @@ export function bible_glyph_chapter_gen37() {
           "When",
           "$eyes+son",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "pit",
           "and",
