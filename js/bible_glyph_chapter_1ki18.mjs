@@ -1234,7 +1234,7 @@ export function bible_glyph_chapter_1ki18() {
           "$heart_on_fire,",
           "and",
           "that",
-          "You",
+          "$you",
           "have",
           "turned",
           "their",
