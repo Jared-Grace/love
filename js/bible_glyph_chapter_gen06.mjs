@@ -19,7 +19,7 @@ export function bible_glyph_chapter_gen06() {
           "$sewing_needle",
           "to",
           "$multiply+crowd+doing",
-          "on",
+          "$pointing_up",
           "the",
           "face",
           "of",
