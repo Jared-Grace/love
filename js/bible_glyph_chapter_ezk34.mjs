@@ -366,7 +366,7 @@ export function bible_glyph_chapter_ezk34() {
           "that",
           "he",
           "is",
-          "among",
+          "$radio_button",
           "his",
           "scattered",
           "$sheep,",
