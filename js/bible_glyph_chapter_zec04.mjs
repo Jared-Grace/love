@@ -51,7 +51,7 @@ export function bible_glyph_chapter_zec04() {
           "$eye",
           "a",
           "solid",
-          "gold",
+          "$gold",
           "$lamp+thing",
           "with",
           "a",
