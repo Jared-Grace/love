@@ -126,7 +126,7 @@ export function bible_glyph_chapter_gen29() {
           "shepherds,",
           "My",
           "$brother,",
-          "where",
+          "$question+round_pushpin+tray_out",
           "are",
           "you",
           "from?",
