@@ -485,7 +485,7 @@ export function bible_glyph_chapter_pro04() {
           "far",
           "from",
           "your",
-          "lips.",
+          "$kiss_mark.",
         ],
       },
       {
