@@ -684,7 +684,7 @@ export function bible_glyph_chapter_exo21() {
       {
         verse_number: 25,
         words: [
-          "burn",
+          "$fire+name_tag",
           "for",
           "burn,",
           "wound",
