@@ -700,7 +700,7 @@ export function bible_glyph_chapter_2ki04() {
         words: [
           "He",
           "$speech,",
-          "Why",
+          "$flashlight+question+lightbulb",
           "would",
           "you",
           "$walking",
