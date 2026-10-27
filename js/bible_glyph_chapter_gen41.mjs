@@ -918,7 +918,7 @@ export function bible_glyph_chapter_gen41() {
           "$hammer+doing",
           "and",
           "appoint",
-          "commissioners",
+          "$clipboard+doer",
           "over",
           "the",
           "$earth",
