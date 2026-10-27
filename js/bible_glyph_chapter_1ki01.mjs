@@ -1278,7 +1278,7 @@ export function bible_glyph_chapter_1ki01() {
           "rejoicing",
           "with",
           "such",
-          "great",
+          "$top",
           "$beaming",
           "that",
           "the",
