@@ -692,7 +692,7 @@ export function bible_glyph_chapter_lev16() {
           "He",
           "is",
           "to",
-          "sprinkle",
+          "$droplet+hand+doing",
           "on",
           "it",
           "$tray_out",
