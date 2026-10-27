@@ -430,7 +430,7 @@ export function bible_glyph_chapter_lev02() {
           "with",
           "$all",
           "its",
-          "frankincense,",
+          "$white_circle+incense,",
           "as",
           "a",
           "food",
