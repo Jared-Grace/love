@@ -895,7 +895,7 @@ export function bible_glyph_chapter_num18() {
           "$speech",
           "them",
           "that",
-          "among",
+          "$radio_button",
           "the",
           "$son",
           "of",
