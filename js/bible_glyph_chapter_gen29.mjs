@@ -191,7 +191,7 @@ export function bible_glyph_chapter_gen29() {
           "it",
           "is",
           "$repeat",
-          "broad",
+          "$top",
           "$sun;",
           "it",
           "is",
