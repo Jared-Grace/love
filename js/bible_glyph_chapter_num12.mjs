@@ -96,7 +96,7 @@ export function bible_glyph_chapter_num12() {
           "and",
           "$proper_name$Miriam,",
           "You",
-          "three",
+          "$three",
           "come",
           "out",
           "$toward",
