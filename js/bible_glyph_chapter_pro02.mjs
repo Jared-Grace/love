@@ -174,7 +174,7 @@ export function bible_glyph_chapter_pro02() {
           "$scales+thing",
           "and",
           "equity,",
-          "every",
+          "$all",
           "$thumbs_up",
           "path.",
         ],
