@@ -838,7 +838,7 @@ export function bible_glyph_chapter_1ki18() {
           "of",
           "Baal",
           "from",
-          "morning",
+          "$morning",
           "until",
           "noon,",
           "$speech,",
