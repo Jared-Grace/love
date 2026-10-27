@@ -1617,7 +1617,7 @@ export function bible_glyph_chapter_1sa17() {
           "$scissors",
           "off",
           "his",
-          "head",
+          "$person_gesturing_ok",
           "with",
           "the",
           "sword.",
