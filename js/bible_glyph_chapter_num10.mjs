@@ -902,7 +902,7 @@ export function bible_glyph_chapter_num10() {
       {
         verse_number: 35,
         words: [
-          "Whenever",
+          "$link",
           "the",
           "$ark",
           "set",
