@@ -278,7 +278,7 @@ export function bible_glyph_chapter_deu14() {
           "fins",
           "and",
           "scales;",
-          "it",
+          "$pointing_back",
           "is",
           "$soap+no_entry",
           "for",
