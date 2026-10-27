@@ -217,7 +217,7 @@ export function bible_glyph_chapter_1ki17() {
           "and",
           "stay",
           "$telescope.",
-          "Behold,",
+          "$exclamation,",
           "I",
           "have",
           "commanded",
