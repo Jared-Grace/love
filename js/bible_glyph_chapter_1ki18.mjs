@@ -870,7 +870,7 @@ export function bible_glyph_chapter_1ki18() {
         verse_number: 27,
         words: [
           "At",
-          "noon",
+          "$sun+top",
           "$heart_on_fire+i_am",
           "began",
           "to",
