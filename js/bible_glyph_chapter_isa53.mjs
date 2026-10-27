@@ -56,7 +56,7 @@ export function bible_glyph_chapter_isa53() {
           "had",
           "$no_entry",
           "stately",
-          "form",
+          "$person+dotted_line_face",
           "or",
           "majesty",
           "that",
