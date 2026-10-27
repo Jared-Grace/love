@@ -225,7 +225,7 @@ export function bible_glyph_chapter_exo30() {
           "must",
           "$no_entry",
           "$walking+pointing_up",
-          "unauthorized",
+          "$alien",
           "$incense",
           "on",
           "this",
