@@ -141,7 +141,7 @@ export function bible_glyph_chapter_pro08() {
       {
         verse_number: 8,
         words: [
-          "All",
+          "$all",
           "the",
           "words",
           "of",
