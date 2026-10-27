@@ -429,7 +429,7 @@ export function bible_glyph_chapter_ezk03() {
           "$wind,",
           "with",
           "the",
-          "strong",
+          "$might+up_arrow",
           "$hand",
           "of",
           "the",
