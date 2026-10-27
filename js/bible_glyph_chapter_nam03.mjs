@@ -388,7 +388,7 @@ export function bible_glyph_chapter_nam03() {
       {
         verse_number: 15,
         words: [
-          "There",
+          "$telescope",
           "the",
           "$fire",
           "will",
