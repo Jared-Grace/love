@@ -399,7 +399,7 @@ export function bible_glyph_chapter_gen44() {
         words: [
           "$i_am+plus",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "deed",
           "is",
           "this",
