@@ -945,7 +945,7 @@ export function bible_glyph_chapter_lev15() {
           "for",
           "her",
           "unclean",
-          "discharge.",
+          "$water+right_arrow+thing.",
         ],
       },
       {
