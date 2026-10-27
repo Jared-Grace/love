@@ -15,7 +15,7 @@ export function bible_glyph_chapter_psa130() {
         verse_number: 1,
         words: [
           "A",
-          "song",
+          "$song",
           "of",
           "ascents.",
           "Out",
