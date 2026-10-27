@@ -96,7 +96,7 @@ export function bible_glyph_chapter_exo17() {
           "grumbled",
           "$pointing_up",
           "$fishing_pole+proper_name.",
-          "Why",
+          "$flashlight+question",
           "have",
           "you",
           "brought",
