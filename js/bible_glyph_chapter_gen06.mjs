@@ -119,7 +119,7 @@ export function bible_glyph_chapter_gen06() {
           "who",
           "became",
           "the",
-          "mighty",
+          "$might+person",
           "men",
           "of",
           "$hourglass,",
