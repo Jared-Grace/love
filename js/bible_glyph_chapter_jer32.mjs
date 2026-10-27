@@ -807,7 +807,7 @@ export function bible_glyph_chapter_jer32() {
           "upon",
           "them",
           "$all",
-          "this",
+          "$flashlight",
           "$thumbs_down.",
         ],
       },
