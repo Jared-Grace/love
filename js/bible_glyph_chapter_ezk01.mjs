@@ -121,7 +121,7 @@ export function bible_glyph_chapter_ezk01() {
           "$footprints",
           "$tray_out",
           "the",
-          "north,",
+          "$compass+up_arrow,",
           "a",
           "great",
           "cloud",
