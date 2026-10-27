@@ -60,7 +60,7 @@ export function bible_glyph_chapter_1ki21() {
           "as",
           "a",
           "vegetable",
-          "garden,",
+          "$garden,",
           "since",
           "it",
           "is",
