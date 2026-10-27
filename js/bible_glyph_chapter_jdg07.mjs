@@ -791,7 +791,7 @@ export function bible_glyph_chapter_jdg07() {
           "entire",
           "Midianite",
           "army",
-          "fled,",
+          "$running,",
           "crying",
           "out",
           "as",
