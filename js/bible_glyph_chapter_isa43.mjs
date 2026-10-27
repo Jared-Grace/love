@@ -698,7 +698,7 @@ export function bible_glyph_chapter_isa43() {
           "$no_entry",
           "$footprints",
           "Me",
-          "sheep",
+          "$sheep+one",
           "for",
           "burnt",
           "offerings,",
