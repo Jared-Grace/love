@@ -693,7 +693,7 @@ export function bible_glyph_chapter_deu33() {
           "abounding",
           "with",
           "favor,",
-          "full",
+          "$battery+describing",
           "of",
           "the",
           "$speech+thumbs_up",
