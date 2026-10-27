@@ -1148,7 +1148,7 @@ export function bible_glyph_chapter_1ki02() {
           "upon",
           "his",
           "own",
-          "head,",
+          "$person_gesturing_ok,",
           "for",
           "he",
           "struck",
