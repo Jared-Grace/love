@@ -310,7 +310,7 @@ export function bible_glyph_chapter_deu33() {
           "O",
           "$i_am,",
           "and",
-          "accept",
+          "$smiling_face_with_smiling_eyes+doing",
           "the",
           "work",
           "of",
