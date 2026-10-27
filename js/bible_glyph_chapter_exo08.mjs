@@ -723,7 +723,7 @@ export function bible_glyph_chapter_exo08() {
           "will",
           "be",
           "found",
-          "there.",
+          "$telescope.",
           "In",
           "this",
           "way",
