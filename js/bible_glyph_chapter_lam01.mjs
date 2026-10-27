@@ -92,7 +92,7 @@ export function bible_glyph_chapter_lam01() {
           "into",
           "$luggage+chains+doing",
           "under",
-          "affliction",
+          "$persevering_face+thing",
           "and",
           "harsh",
           "slavery;",
