@@ -340,7 +340,7 @@ export function bible_glyph_chapter_num13() {
           "$might+up_arrow",
           "or",
           "weak,",
-          "few",
+          "$pinching_hand+input_numbers",
           "or",
           "many.",
         ],
