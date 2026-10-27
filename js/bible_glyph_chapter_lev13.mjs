@@ -624,7 +624,7 @@ export function bible_glyph_chapter_lev13() {
           "$place",
           "where",
           "the",
-          "boil",
+          "$fire+microbe",
           "was,",
           "he",
           "must",
