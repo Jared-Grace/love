@@ -358,7 +358,7 @@ export function bible_glyph_chapter_job42() {
           "6,000",
           "$camel,",
           "1,000",
-          "yoke",
+          "$ox+two",
           "of",
           "oxen,",
           "and",
