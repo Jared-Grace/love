@@ -207,7 +207,7 @@ export function bible_glyph_chapter_num35() {
           "these,",
           "$hands_giving",
           "them",
-          "forty",
+          "$four+zero",
           "two",
           "other",
           "$city.",
