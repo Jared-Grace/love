@@ -472,7 +472,7 @@ export function bible_glyph_chapter_gen31() {
           "in",
           "$proper_name$Paddan-aram,",
           "$footprints",
-          "to",
+          "$toward",
           "$laughing+proper_name",
           "his",
           "$father",
