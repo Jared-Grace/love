@@ -965,7 +965,7 @@ export function bible_glyph_chapter_exo12() {
           "as",
           "all",
           "the",
-          "firstborn",
+          "$first_place+baby",
           "among",
           "the",
           "livestock.",
