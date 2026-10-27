@@ -874,7 +874,7 @@ export function bible_glyph_chapter_jos06() {
           "she",
           "has",
           "lived",
-          "among",
+          "$magnet+thing",
           "Israel",
           "to",
           "this",
