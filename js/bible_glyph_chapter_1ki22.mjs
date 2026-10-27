@@ -666,7 +666,7 @@ export function bible_glyph_chapter_1ki22() {
           "$speech,",
           "$person+question",
           "will",
-          "entice",
+          "$fishing_pole+doing",
           "$proper_name$Ahab",
           "to",
           "march",
