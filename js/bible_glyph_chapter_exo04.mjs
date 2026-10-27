@@ -750,7 +750,7 @@ export function bible_glyph_chapter_exo04() {
           "$exclamation,",
           "I",
           "will",
-          "kill",
+          "$fist+skull",
           "your",
           "firstborn",
           '$son."',
