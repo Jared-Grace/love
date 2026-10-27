@@ -156,7 +156,7 @@ export function bible_glyph_chapter_job31() {
         words: [
           "then",
           "may",
-          "another",
+          "$plus+one",
           "$eating",
           "what",
           "I",
