@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_deu32() {
           "up",
           "My",
           "$hand",
-          "to",
+          "$toward",
           "$sky",
           "and",
           "$speech:",
