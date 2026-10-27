@@ -275,7 +275,7 @@ export function bible_glyph_chapter_1ki17() {
           "that",
           "I",
           "may",
-          "drink.",
+          "$cup_with_straw.",
         ],
       },
       {
