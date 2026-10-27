@@ -979,7 +979,7 @@ export function bible_glyph_chapter_lev16() {
         verse_number: 27,
         words: [
           "The",
-          "bull",
+          "$bull",
           "for",
           "the",
           "$bow",
