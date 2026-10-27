@@ -289,7 +289,7 @@ export function bible_glyph_chapter_lev01() {
           "it",
           "on",
           "the",
-          "north",
+          "$compass+up_arrow",
           "$poultry_leg",
           "of",
           "$altar",
