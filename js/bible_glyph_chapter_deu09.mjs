@@ -602,7 +602,7 @@ export function bible_glyph_chapter_deu09() {
           "had",
           "turned",
           "$away+doing",
-          "quickly",
+          "$fast_forward+manner",
           "$tray_out",
           "the",
           "$road",
