@@ -135,7 +135,7 @@ export function bible_glyph_chapter_jos01() {
           "one",
           "$man_beard",
           "shall",
-          "stand",
+          "$person+round_pushpin+anchor+doing",
           "against",
           "you",
           "all",
