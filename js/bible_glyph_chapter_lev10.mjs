@@ -97,7 +97,7 @@ export function bible_glyph_chapter_lev10() {
           "will",
           "reveal",
           "My",
-          "glory.",
+          "$star+doing.",
           "But",
           "$proper_name$Aaron",
           "remained",
