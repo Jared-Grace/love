@@ -99,7 +99,7 @@ export function bible_glyph_chapter_psa091() {
           "$check",
           "is",
           "a",
-          "shield",
+          "$shield+person",
           "and",
           "rampart.",
         ],
