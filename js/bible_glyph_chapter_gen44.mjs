@@ -410,7 +410,7 @@ export function bible_glyph_chapter_gen44() {
           "you",
           "$no_entry",
           "$lightbulb",
-          "that",
+          "$pointing",
           "a",
           "$man_beard",
           "like",
