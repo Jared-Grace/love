@@ -214,7 +214,7 @@ export function bible_glyph_chapter_psa051() {
           "my",
           "sins,",
           "and",
-          "blot",
+          "$broom+doing",
           "out",
           "$all",
           "my",
