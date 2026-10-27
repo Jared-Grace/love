@@ -1479,7 +1479,7 @@ export function bible_glyph_chapter_1sa17() {
           "that",
           "the",
           "$i_am",
-          "saves,",
+          "$rescue,",
           "for",
           "the",
           "battle",
