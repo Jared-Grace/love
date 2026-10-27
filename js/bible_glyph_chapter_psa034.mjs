@@ -78,7 +78,7 @@ export function bible_glyph_chapter_psa034() {
           "$up_arrow",
           "His",
           "$name_tag",
-          "together.",
+          "$linked_paperclips+manner.",
         ],
       },
       {
