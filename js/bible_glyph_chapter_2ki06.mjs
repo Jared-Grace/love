@@ -832,7 +832,7 @@ export function bible_glyph_chapter_2ki06() {
           "$eight+zero",
           "shekels",
           "of",
-          "silver,",
+          "$silver,",
           "and",
           "a",
           "quarter",
