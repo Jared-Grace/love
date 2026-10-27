@@ -414,7 +414,7 @@ export function bible_glyph_chapter_pro08() {
           "before",
           "the",
           "$earth",
-          "began.",
+          "$compass+right_arrow.",
         ],
       },
       {
