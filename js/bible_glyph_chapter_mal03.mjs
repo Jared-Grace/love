@@ -225,7 +225,7 @@ export function bible_glyph_chapter_mal03() {
           "$i_am,",
           "do",
           "$no_entry",
-          "change,",
+          "$two+repeat+doing,",
           "you,",
           "O",
           "$son",
