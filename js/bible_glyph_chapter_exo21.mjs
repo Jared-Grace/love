@@ -299,7 +299,7 @@ export function bible_glyph_chapter_exo21() {
           "$no_entry",
           "reduce",
           "the",
-          "food,",
+          "$meat+fork_and_knife,",
           "the",
           "clothing,",
           "or",
