@@ -157,7 +157,7 @@ export function bible_glyph_chapter_deu04() {
           "have",
           "taught",
           "you",
-          "statutes",
+          "$locked_with_pen",
           "and",
           "$scales+thing",
           "just",
