@@ -966,7 +966,7 @@ export function bible_glyph_chapter_2ch20() {
           "$speech+thumbs_up",
           "the",
           "$i_am.",
-          "Therefore",
+          "$pointing_up",
           "that",
           "$place",
           "is",
