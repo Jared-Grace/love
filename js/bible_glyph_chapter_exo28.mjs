@@ -209,7 +209,7 @@ export function bible_glyph_chapter_exo28() {
           "pieces",
           "attached",
           "at",
-          "two",
+          "$two",
           "of",
           "its",
           "corners,",
