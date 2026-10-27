@@ -301,7 +301,7 @@ export function bible_glyph_chapter_deu28() {
           "$earth",
           "will",
           "$eye",
-          "that",
+          "$pointing",
           "you",
           "are",
           "called",
