@@ -54,7 +54,7 @@ export function bible_glyph_chapter_1ki19() {
           "ever",
           "so",
           "$plus+doing,",
-          "if",
+          "$pointing",
           "by",
           "this",
           "time",
