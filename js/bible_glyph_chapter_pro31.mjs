@@ -264,7 +264,7 @@ export function bible_glyph_chapter_pro31() {
           "selects",
           "$yarn",
           "and",
-          "flax,",
+          "$herb+thread+thing,",
           "and",
           "$hammer+doing",
           "with",
