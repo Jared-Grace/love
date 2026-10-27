@@ -189,7 +189,7 @@ export function bible_glyph_chapter_hos06() {
           "desire",
           "$gift,",
           "$no_entry",
-          "sacrifice,",
+          "$sacrifice,",
           "and",
           "the",
           "knowledge",
