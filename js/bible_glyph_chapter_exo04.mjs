@@ -385,7 +385,7 @@ export function bible_glyph_chapter_exo04() {
           "Is",
           "it",
           "$no_entry",
-          "I,",
+          "$me,",
           "the",
           "$i_am?",
         ],
