@@ -297,7 +297,7 @@ export function bible_glyph_chapter_num16() {
           "and",
           "to",
           "$person+round_pushpin",
-          "before",
+          "$face",
           "the",
           "congregation",
           "to",
