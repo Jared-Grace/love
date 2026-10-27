@@ -31,7 +31,7 @@ export function bible_glyph_chapter_est01() {
           "$proper_name$India",
           "$finish",
           "$proper_name$Cush,",
-          "127",
+          "$seven",
           "provinces.",
         ],
       },
