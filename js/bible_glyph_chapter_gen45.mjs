@@ -551,7 +551,7 @@ export function bible_glyph_chapter_gen45() {
           "tell",
           "them:",
           "$hand_receiving",
-          "wagons",
+          "$wheel",
           "from",
           "the",
           "$earth",
