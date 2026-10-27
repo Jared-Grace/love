@@ -88,7 +88,7 @@ export function bible_glyph_chapter_mic06() {
           "I",
           "wearied",
           "you?",
-          "Testify",
+          "$speech+turn_back",
           "against",
           "Me.",
         ],
