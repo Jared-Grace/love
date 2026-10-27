@@ -1366,7 +1366,7 @@ export function bible_glyph_chapter_jer23() {
           "$face_with_rolling_eyes",
           "and",
           "$hourglass",
-          "humiliation",
+          "$disappointed_face+thing",
           "that",
           "will",
           "$no_entry",
