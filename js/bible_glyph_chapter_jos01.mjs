@@ -61,7 +61,7 @@ export function bible_glyph_chapter_jos01() {
           "into",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "am",
           "$hands_giving",
