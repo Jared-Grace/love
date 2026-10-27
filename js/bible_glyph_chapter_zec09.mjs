@@ -234,7 +234,7 @@ export function bible_glyph_chapter_zec09() {
           "But",
           "I",
           "will",
-          "camp",
+          "$camp+doing",
           "around",
           "My",
           "$house",
