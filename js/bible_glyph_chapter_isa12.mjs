@@ -133,7 +133,7 @@ export function bible_glyph_chapter_isa12() {
           "to",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "He",
           "has",
           "$hammer+doing",
