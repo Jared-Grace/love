@@ -38,7 +38,7 @@ export function bible_glyph_chapter_hab01() {
           "I",
           "call",
           "for",
-          "help",
+          "$sos_button+doing",
           "but",
           "You",
           "do",
