@@ -511,7 +511,7 @@ export function bible_glyph_chapter_exo37() {
           "lampstand",
           "were",
           "$four",
-          "cups",
+          "$cup+silver",
           "shaped",
           "like",
           "almond",
