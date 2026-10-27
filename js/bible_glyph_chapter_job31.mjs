@@ -706,7 +706,7 @@ export function bible_glyph_chapter_job31() {
           "$pointing",
           "I",
           "greatly",
-          "feared",
+          "$fearful_face+shaking_face+doing",
           "the",
           "crowds",
           "and",
