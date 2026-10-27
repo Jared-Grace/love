@@ -176,7 +176,7 @@ export function bible_glyph_chapter_2sa11() {
           "And",
           "the",
           "$woman",
-          "conceived",
+          "$pregnant_woman+doing",
           "and",
           "sent",
           "word",
