@@ -93,7 +93,7 @@ export function bible_glyph_chapter_amo05() {
           "will",
           "have",
           "but",
-          "ten",
+          "$ten",
           "$puzzle_piece+doing",
           "in",
           "the",
