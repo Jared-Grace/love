@@ -672,7 +672,7 @@ export function bible_glyph_chapter_ezk37() {
           "on",
           "which",
           "you",
-          "write",
+          "$writing_hand",
           "are",
           "in",
           "your",
