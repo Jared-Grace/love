@@ -770,7 +770,7 @@ export function bible_glyph_chapter_exo28() {
           "waistband",
           "of",
           "the",
-          "ephod",
+          "$safety_vest",
           "and",
           "does",
           "$no_entry",
