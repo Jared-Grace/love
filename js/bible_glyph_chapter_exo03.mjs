@@ -100,7 +100,7 @@ export function bible_glyph_chapter_exo03() {
           "$flashlight+question+lightbulb",
           "is",
           "the",
-          "bush",
+          "$thorns+herb",
           "$no_entry",
           "burning",
           "up?",
