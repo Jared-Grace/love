@@ -313,7 +313,7 @@ export function bible_glyph_chapter_zep02() {
           "$pirate_flag+doing",
           "them;",
           "the",
-          "remainder",
+          "$takeout_box",
           "of",
           "My",
           "$map",
