@@ -412,7 +412,7 @@ export function bible_glyph_chapter_job42() {
           "be",
           "found",
           "as",
-          "beautiful",
+          "$face+sparkle",
           "as",
           "$proper_name$Job's",
           "$woman,",
