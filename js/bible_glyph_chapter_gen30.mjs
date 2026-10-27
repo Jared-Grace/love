@@ -921,7 +921,7 @@ export function bible_glyph_chapter_gen30() {
           "male",
           "goats,",
           "and",
-          "every",
+          "$all",
           "speckled",
           "and",
           "$black_circle+white_circle+doing",
