@@ -446,7 +446,7 @@ export function bible_glyph_chapter_exo36() {
           "the",
           "tabernacle,",
           "eleven",
-          "curtains",
+          "$thread+tent",
           "he",
           "$hammer+doing.",
         ],
