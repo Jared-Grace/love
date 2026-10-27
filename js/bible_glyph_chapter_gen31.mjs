@@ -1347,7 +1347,7 @@ export function bible_glyph_chapter_gen31() {
           "and",
           "they",
           "ate",
-          "there",
+          "$telescope",
           "by",
           "the",
           "heap.",
