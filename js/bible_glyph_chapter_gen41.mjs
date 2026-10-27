@@ -870,7 +870,7 @@ export function bible_glyph_chapter_gen41() {
           "in",
           "two",
           "versions",
-          "because",
+          "$pointing",
           "the",
           "$speech",
           "has",
