@@ -240,7 +240,7 @@ export function bible_glyph_chapter_1sa01() {
           "you",
           "$no_entry",
           "$eating?",
-          "Why",
+          "$flashlight+question",
           "is",
           "your",
           "$heart_organ",
