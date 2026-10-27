@@ -40,7 +40,7 @@ export function bible_glyph_chapter_lev12() {
           "be",
           "unclean",
           "for",
-          "seven",
+          "$seven",
           "$sun,",
           "as",
           "she",
