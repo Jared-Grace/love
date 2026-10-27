@@ -588,7 +588,7 @@ export function bible_glyph_chapter_ezk37() {
           "explain",
           "to",
           "us",
-          "what",
+          "$flashlight+question",
           "you",
           "mean",
           "by",
