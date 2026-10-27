@@ -312,7 +312,7 @@ export function bible_glyph_chapter_mal01() {
         words: [
           "But",
           "ask",
-          "now",
+          "$watch",
           "for",
           "the",
           "favor",
