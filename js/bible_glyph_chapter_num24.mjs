@@ -527,7 +527,7 @@ export function bible_glyph_chapter_num24() {
           "a",
           "scepter",
           "will",
-          "arise",
+          "$person+pointing_up",
           "from",
           "$wrestling+heart_on_fire.",
           "He",
