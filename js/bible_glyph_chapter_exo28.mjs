@@ -726,7 +726,7 @@ export function bible_glyph_chapter_exo28() {
           "$safety_vest",
           "on",
           "its",
-          "front,",
+          "$vs_button,",
           "near",
           "its",
           "seam",
