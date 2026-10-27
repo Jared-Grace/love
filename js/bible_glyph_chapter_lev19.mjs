@@ -369,7 +369,7 @@ export function bible_glyph_chapter_lev19() {
           "partiality",
           "to",
           "the",
-          "poor",
+          "$pinching_hand+person",
           "$no_entry",
           "favouritism",
           "to",
