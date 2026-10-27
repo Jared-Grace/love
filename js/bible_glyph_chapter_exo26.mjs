@@ -468,7 +468,7 @@ export function bible_glyph_chapter_exo26() {
         words: [
           "$hammer+doing",
           "$two+zero",
-          "frames",
+          "$skateboard",
           "of",
           "the",
           "tabernacle",
