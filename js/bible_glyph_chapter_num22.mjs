@@ -1016,7 +1016,7 @@ export function bible_glyph_chapter_num22() {
           "$i_am",
           "$speech",
           "him,",
-          "Why",
+          "$pointing_up",
           "have",
           "you",
           "beaten",
