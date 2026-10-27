@@ -53,7 +53,7 @@ export function bible_glyph_chapter_isa12() {
           "salvation;",
           "I",
           "will",
-          "trust",
+          "$anchor+doing",
           "and",
           "$no_entry",
           "be",
