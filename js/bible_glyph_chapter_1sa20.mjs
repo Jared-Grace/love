@@ -189,7 +189,7 @@ export function bible_glyph_chapter_1sa20() {
           "to",
           "him,",
           "$exclamation,",
-          "tomorrow",
+          "$sun+next_track",
           "is",
           "the",
           "New",
