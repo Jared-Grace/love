@@ -90,7 +90,7 @@ export function bible_glyph_chapter_ezr01() {
           "appointed",
           "me",
           "to",
-          "build",
+          "$brick",
           "a",
           "$house",
           "for",
