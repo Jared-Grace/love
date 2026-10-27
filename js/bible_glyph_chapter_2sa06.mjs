@@ -651,7 +651,7 @@ export function bible_glyph_chapter_2sa06() {
           "him",
           "and",
           "$speech,",
-          "How",
+          "$flashlight+question",
           "the",
           "$king",
           "of",
