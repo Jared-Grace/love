@@ -213,7 +213,7 @@ export function bible_glyph_chapter_jer01() {
           "Do",
           "$no_entry",
           "be",
-          "afraid",
+          "$fear+doing",
           "of",
           "them,",
           "for",
