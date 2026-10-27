@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_exo12() {
           "$night",
           "and",
           "$speech,",
-          "Get",
+          "$person+pointing_up",
           "up,",
           "$walking+tray_out",
           "my",
