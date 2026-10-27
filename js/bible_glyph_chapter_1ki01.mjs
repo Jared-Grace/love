@@ -743,7 +743,7 @@ export function bible_glyph_chapter_1ki01() {
           "the",
           "$king,",
           "did",
-          "you",
+          "$you",
           "$speech,",
           "$proper_name$Adonijah",
           "will",
