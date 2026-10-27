@@ -152,7 +152,7 @@ export function bible_glyph_chapter_lev11() {
           "it",
           "$walking+pointing_up",
           "the",
-          "cud,",
+          "$cow_face+clockwise_arrows+thing,",
           "does",
           "$no_entry",
           "have",
