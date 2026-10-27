@@ -321,7 +321,7 @@ export function bible_glyph_chapter_jer23() {
           "in",
           "their",
           "own",
-          "land.",
+          "$brown_square.",
         ],
       },
       {
