@@ -176,7 +176,7 @@ export function bible_glyph_chapter_jdg02() {
           "$proper_name$Bochim,",
           "and",
           "they",
-          "offered",
+          "$sacrifice",
           "sacrifices",
           "there",
           "to",
