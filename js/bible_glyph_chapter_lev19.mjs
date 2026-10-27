@@ -904,7 +904,7 @@ export function bible_glyph_chapter_lev19() {
           "When",
           "a",
           "foreigner",
-          "resides",
+          "$luggage",
           "with",
           "you",
           "in",
