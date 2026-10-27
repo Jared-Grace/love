@@ -364,7 +364,7 @@ export function bible_glyph_chapter_lev22() {
           "the",
           "priestly",
           "family,",
-          "she",
+          "$pointing_back",
           "is",
           "$no_entry",
           "to",
