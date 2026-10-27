@@ -467,7 +467,7 @@ export function bible_glyph_chapter_2ki01() {
           "$heart_on_fire",
           "came",
           "down",
-          "from",
+          "$tray_out",
           "the",
           "$sky",
           "and",
