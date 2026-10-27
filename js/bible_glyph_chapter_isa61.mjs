@@ -354,7 +354,7 @@ export function bible_glyph_chapter_isa61() {
           "in",
           "my",
           "$heart_on_fire.",
-          "For",
+          "$pointing",
           "He",
           "has",
           "clothed",
