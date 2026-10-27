@@ -741,7 +741,7 @@ export function bible_glyph_chapter_1sa16() {
           "would",
           "$hand_receiving",
           "his",
-          "harp",
+          "$harp",
           "and",
           "play,",
           "and",
