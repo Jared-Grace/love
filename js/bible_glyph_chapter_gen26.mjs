@@ -249,7 +249,7 @@ export function bible_glyph_chapter_gen26() {
           "the",
           "$proper_name$Philistines",
           "looked",
-          "down",
+          "$window+eyes+doing",
           "through",
           "the",
           "$window",
