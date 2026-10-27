@@ -16,7 +16,7 @@ export function bible_glyph_chapter_job38() {
           "Then",
           "the",
           "$i_am",
-          "answered",
+          "$speech+turn_back",
           "$proper_name$Job",
           "$tray_out",
           "the",
