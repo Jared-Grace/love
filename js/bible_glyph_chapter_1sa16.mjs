@@ -288,7 +288,7 @@ export function bible_glyph_chapter_1sa16() {
           "has",
           "$no_entry",
           "chosen",
-          "this",
+          "$flashlight",
           "one",
           "either.",
         ],
