@@ -292,7 +292,7 @@ export function bible_glyph_chapter_gen39() {
           "his",
           "$woman.",
           "So",
-          "how",
+          "$question+likeness",
           "could",
           "I",
           "$hammer+doing",
