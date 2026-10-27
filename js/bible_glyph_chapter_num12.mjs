@@ -339,7 +339,7 @@ export function bible_glyph_chapter_num12() {
           "$fishing_pole+proper_name",
           "cried",
           "out",
-          "to",
+          "$toward",
           "$i_am,",
           "$speech",
           "$heart_on_fire,",
