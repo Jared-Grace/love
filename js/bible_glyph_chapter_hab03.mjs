@@ -381,7 +381,7 @@ export function bible_glyph_chapter_hab03() {
           "with",
           "Your",
           "horses,",
-          "churning",
+          "$brown_square+water",
           "the",
           "great",
           "$water.",
