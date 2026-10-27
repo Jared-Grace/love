@@ -1526,7 +1526,7 @@ export function bible_glyph_chapter_2ch06() {
           "Your",
           "resting",
           "place,",
-          "You",
+          "$you",
           "and",
           "the",
           "ark",
