@@ -703,7 +703,7 @@ export function bible_glyph_chapter_deu12() {
           "$name_tag",
           "is",
           "too",
-          "far",
+          "$satellite+doing",
           "$tray_out",
           "you,",
           "then",
