@@ -1836,7 +1836,7 @@ export function bible_glyph_chapter_deu28() {
           "$son",
           "she",
           "bears,",
-          "because",
+          "$pointing",
           "for",
           "lack",
           "of",
