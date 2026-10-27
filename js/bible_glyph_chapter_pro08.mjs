@@ -524,7 +524,7 @@ export function bible_glyph_chapter_pro08() {
         words: [
           "when",
           "He",
-          "set",
+          "$palm_down",
           "a",
           "boundary",
           "for",
