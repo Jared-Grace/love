@@ -93,7 +93,7 @@ export function bible_glyph_chapter_1sa07() {
           "of",
           "$wrestling+heart_on_fire,",
           "$speech,",
-          "If",
+          "$traffic_light",
           "you",
           "are",
           "$turn_back",
