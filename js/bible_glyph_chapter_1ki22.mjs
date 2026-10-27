@@ -1109,7 +1109,7 @@ export function bible_glyph_chapter_1ki22() {
           "to",
           "his",
           "charioteer,",
-          "Turn",
+          "$upside_down_face",
           "your",
           "$hand",
           "and",
