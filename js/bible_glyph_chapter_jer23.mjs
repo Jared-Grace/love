@@ -93,7 +93,7 @@ export function bible_glyph_chapter_jer23() {
           "I",
           "Myself",
           "will",
-          "gather",
+          "$tray_in+doing",
           "the",
           "remnant",
           "of",
