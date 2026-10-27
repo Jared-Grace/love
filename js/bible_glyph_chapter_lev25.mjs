@@ -1434,7 +1434,7 @@ export function bible_glyph_chapter_lev25() {
           "to",
           "the",
           "$foreigner,",
-          "or",
+          "$shuffle",
           "to",
           "a",
           "member",
