@@ -154,7 +154,7 @@ export function bible_glyph_chapter_gen07() {
           "$seat+proper_name",
           "$hammer+doing",
           "$all",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
