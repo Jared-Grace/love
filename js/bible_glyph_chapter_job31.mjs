@@ -639,7 +639,7 @@ export function bible_glyph_chapter_job31() {
         words: [
           "$traffic_light",
           "the",
-          "men",
+          "$man_beard+crowd",
           "of",
           "my",
           "house",
