@@ -383,7 +383,7 @@ export function bible_glyph_chapter_num12() {
           "the",
           "$camp",
           "for",
-          "seven",
+          "$seven",
           "$sun,",
           "and",
           "after",
