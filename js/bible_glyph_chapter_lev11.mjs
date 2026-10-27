@@ -492,7 +492,7 @@ export function bible_glyph_chapter_lev11() {
           "kind",
           "of",
           "$locusts,",
-          "katydid,",
+          "$locusts+rock,",
           "cricket,",
           "or",
           "grasshopper.",
