@@ -294,7 +294,7 @@ export function bible_glyph_chapter_psa073() {
           "to",
           "$lightbulb",
           "all",
-          "this,",
+          "$flashlight,",
           "it",
           "was",
           "troublesome",
