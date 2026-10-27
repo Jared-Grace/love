@@ -859,7 +859,7 @@ export function bible_glyph_chapter_jer23() {
           "Do",
           "$me",
           "$no_entry",
-          "fill",
+          "$battery",
           "the",
           "$sky",
           "and",
