@@ -551,7 +551,7 @@ export function bible_glyph_chapter_deu18() {
           "does",
           "$no_entry",
           "$ear",
-          "to",
+          "$toward",
           "My",
           "$speech",
           "that",
