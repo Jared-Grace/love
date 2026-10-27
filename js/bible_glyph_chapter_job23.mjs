@@ -336,7 +336,7 @@ export function bible_glyph_chapter_job23() {
           "I",
           "am",
           "$no_entry",
-          "silenced",
+          "$scissors+no_entry+doing",
           "by",
           "the",
           "$darkness,",
