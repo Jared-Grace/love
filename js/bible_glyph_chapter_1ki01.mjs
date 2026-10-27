@@ -55,7 +55,7 @@ export function bible_glyph_chapter_1ki01() {
           "for",
           "a",
           "$girl",
-          "virgin",
+          "$girl+white_flower",
           "for",
           "our",
           "$crown",
