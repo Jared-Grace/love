@@ -169,7 +169,7 @@ export function bible_glyph_chapter_1ki12() {
           "$speech,",
           "$question+likeness",
           "do",
-          "you",
+          "$you",
           "advise",
           "me",
           "to",
