@@ -346,7 +346,7 @@ export function bible_glyph_chapter_lev17() {
           "will",
           "$hands_giving",
           "My",
-          "face",
+          "$face",
           "against",
           "the",
           "$person_other",
