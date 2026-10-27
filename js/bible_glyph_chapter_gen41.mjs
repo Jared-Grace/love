@@ -1300,7 +1300,7 @@ export function bible_glyph_chapter_gen41() {
           "$face",
           "and",
           "traveled",
-          "throughout",
+          "$all",
           "the",
           "$earth",
           "of",
