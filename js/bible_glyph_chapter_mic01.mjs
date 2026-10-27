@@ -264,7 +264,7 @@ export function bible_glyph_chapter_mic01() {
         words: [
           "Because",
           "of",
-          "this",
+          "$flashlight",
           "I",
           "will",
           "lament",
