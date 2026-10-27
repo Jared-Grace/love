@@ -467,7 +467,7 @@ export function bible_glyph_chapter_num35() {
           "and",
           "$skull+doing",
           "him,",
-          "he",
+          "$pointing_back",
           "is",
           "a",
           "murderer;",
