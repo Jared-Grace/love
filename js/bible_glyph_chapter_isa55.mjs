@@ -333,7 +333,7 @@ export function bible_glyph_chapter_isa55() {
           "$walking+tray_out",
           "from",
           "My",
-          "mouth",
+          "$face_with_open_mouth",
           "will",
           "$no_entry",
           "$turn_back",
