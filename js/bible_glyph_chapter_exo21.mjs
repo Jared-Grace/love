@@ -686,7 +686,7 @@ export function bible_glyph_chapter_exo21() {
         words: [
           "$fire+name_tag",
           "for",
-          "burn,",
+          "$fire+name_tag,",
           "wound",
           "for",
           "wound,",
