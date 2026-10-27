@@ -812,7 +812,7 @@ export function bible_glyph_chapter_jdg07() {
           "$trumpet+doing,",
           "the",
           "$i_am",
-          "set",
+          "$palm_down",
           "the",
           "$sword",
           "of",
