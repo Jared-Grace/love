@@ -311,7 +311,7 @@ export function bible_glyph_chapter_2ki04() {
           "us",
           "$hammer+doing",
           "a",
-          "small",
+          "$pinching_hand",
           "room",
           "upstairs",
           "for",
