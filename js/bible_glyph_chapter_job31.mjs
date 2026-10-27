@@ -760,7 +760,7 @@ export function bible_glyph_chapter_job31() {
       {
         verse_number: 36,
         words: [
-          "Surely",
+          "$traffic_light",
           "I",
           "would",
           "$lifting",
