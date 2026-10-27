@@ -1395,7 +1395,7 @@ export function bible_glyph_chapter_2ki04() {
           "$heart_on_fire",
           "with",
           "a",
-          "sack",
+          "$package+knot",
           "of",
           "$two+zero",
           "$bread",
