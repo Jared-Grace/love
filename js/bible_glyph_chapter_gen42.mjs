@@ -894,7 +894,7 @@ export function bible_glyph_chapter_gen42() {
       {
         verse_number: 32,
         words: [
-          "We",
+          "$me",
           "are",
           "twelve",
           "$brother,",
