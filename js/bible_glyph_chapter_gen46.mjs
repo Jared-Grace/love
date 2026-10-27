@@ -728,7 +728,7 @@ export function bible_glyph_chapter_gen46() {
           "$speech",
           "$toward",
           "$i_am+plus,",
-          "Now",
+          "$drum",
           "let",
           "me",
           "$skull+doing,",
