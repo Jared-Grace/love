@@ -296,7 +296,7 @@ export function bible_glyph_chapter_ecc12() {
         words: [
           "The",
           "Teacher",
-          "searched",
+          "$magnifying_glass",
           "to",
           "find",
           "delightful",
