@@ -1182,7 +1182,7 @@ export function bible_glyph_chapter_1sa25() {
           "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire",
-          "who",
+          "$back+flashlight",
           "has",
           "restrained",
           "me",
