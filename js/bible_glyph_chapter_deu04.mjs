@@ -1140,7 +1140,7 @@ export function bible_glyph_chapter_deu04() {
       {
         verse_number: 32,
         words: [
-          "Indeed,",
+          "$pointing,",
           "ask",
           "now",
           "about",
