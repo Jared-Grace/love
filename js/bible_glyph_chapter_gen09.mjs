@@ -487,7 +487,7 @@ export function bible_glyph_chapter_gen09() {
           "of",
           "the",
           "$covenant",
-          "that",
+          "$back+flashlight",
           "I",
           "have",
           "established",
