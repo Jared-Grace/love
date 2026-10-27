@@ -34,7 +34,7 @@ export function bible_glyph_chapter_exo24() {
           "$seven+zero",
           "of",
           "the",
-          "elders",
+          "$old_man",
           "of",
           "$wrestling+heart_on_fire,",
           "and",
