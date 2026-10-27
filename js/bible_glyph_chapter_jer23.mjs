@@ -300,7 +300,7 @@ export function bible_glyph_chapter_jer23() {
           "$earth",
           "of",
           "the",
-          "north",
+          "$compass+up_arrow",
           "and",
           "all",
           "the",
