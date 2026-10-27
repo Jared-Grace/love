@@ -186,7 +186,7 @@ export function bible_glyph_chapter_gen28() {
           "$hand_receiving",
           "a",
           "$woman",
-          "there,",
+          "$telescope,",
           "commanding",
           "him,",
           "Do",
