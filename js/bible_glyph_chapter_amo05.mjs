@@ -438,7 +438,7 @@ export function bible_glyph_chapter_amo05() {
           "Hosts,",
           "will",
           "be",
-          "gracious",
+          "$heart_orange+doing",
           "to",
           "the",
           "remnant",
