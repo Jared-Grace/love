@@ -1439,7 +1439,7 @@ export function bible_glyph_chapter_lev13() {
           "his",
           "$back+hair+no_entry+thing",
           "head",
-          "or",
+          "$shuffle",
           "forehead",
           "is",
           "reddish-white",
