@@ -139,7 +139,7 @@ export function bible_glyph_chapter_num06() {
           "must",
           "be",
           "$sparkle",
-          "until",
+          "$finish",
           "the",
           "$sun",
           "of",
