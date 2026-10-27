@@ -261,7 +261,7 @@ export function bible_glyph_chapter_num23() {
           "I",
           "watch",
           "them.",
-          "Behold,",
+          "$exclamation,",
           "a",
           "$family",
           "dwelling",
