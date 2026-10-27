@@ -408,7 +408,7 @@ export function bible_glyph_chapter_num25() {
           "who",
           "was",
           "slain",
-          "with",
+          "$safety_pin",
           "the",
           "$proper_name$Midianite",
           "woman",
