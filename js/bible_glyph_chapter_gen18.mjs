@@ -963,7 +963,7 @@ export function bible_glyph_chapter_gen18() {
           "once",
           "more.",
           "Suppose",
-          "ten",
+          "$ten",
           "are",
           "found",
           "$telescope.",
