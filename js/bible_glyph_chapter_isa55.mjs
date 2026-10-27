@@ -163,7 +163,7 @@ export function bible_glyph_chapter_isa55() {
           "$running",
           "to",
           "you.",
-          "For",
+          "$pointing",
           "the",
           "$i_am",
           "your",
