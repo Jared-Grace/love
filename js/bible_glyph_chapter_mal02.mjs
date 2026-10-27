@@ -133,7 +133,7 @@ export function bible_glyph_chapter_mal02() {
           "that",
           "My",
           "$covenant",
-          "with",
+          "$safety_pin",
           "$handshake+proper_name",
           "may",
           "continue,",
