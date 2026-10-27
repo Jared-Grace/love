@@ -159,7 +159,7 @@ export function bible_glyph_chapter_psa095() {
           "His",
           "$hand.",
           "$sun,",
-          "if",
+          "$traffic_light",
           "you",
           "$ear",
           "His",
