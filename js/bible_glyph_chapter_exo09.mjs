@@ -516,7 +516,7 @@ export function bible_glyph_chapter_exo09() {
           "$family",
           "and",
           "do",
-          "not",
+          "$zero+manner",
           "allow",
           "them",
           "to",
