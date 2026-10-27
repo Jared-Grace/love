@@ -461,7 +461,7 @@ export function bible_glyph_chapter_gen07() {
           "and",
           "lifted",
           "the",
-          "ark",
+          "$package",
           "high",
           "above",
           "the",
