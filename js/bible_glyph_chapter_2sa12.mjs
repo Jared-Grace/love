@@ -534,7 +534,7 @@ export function bible_glyph_chapter_2sa12() {
           "and",
           "spent",
           "the",
-          "night",
+          "$night+doing",
           "lying",
           "on",
           "the",
