@@ -788,7 +788,7 @@ export function bible_glyph_chapter_exo10() {
           "his",
           "place,",
           "for",
-          "three",
+          "$three",
           "$sun.",
           "Yet",
           "all",
