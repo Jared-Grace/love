@@ -6,7 +6,7 @@ export function bible_glyph_roots_split_pairs() {
     ["check", "aletheia", "amen"],
     ["check", "aman", "emeth"],
     ["lightbulb", "ginosko", "horao"],
-    ["no_entry", "al", "lo"],
+    ["no_entry", "al:not", "lo"],
     ["no_entry", "me", "ou"],
     ["oil", "chrisma", "christos"],
     ["oil", "mashach", "mashiach"],
