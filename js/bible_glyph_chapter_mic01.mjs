@@ -502,7 +502,7 @@ export function bible_glyph_chapter_mic01() {
           "bald",
           "as",
           "an",
-          "eagle,",
+          "$eagle,",
           "for",
           "they",
           "will",
