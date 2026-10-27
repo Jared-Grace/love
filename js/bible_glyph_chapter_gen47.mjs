@@ -517,7 +517,7 @@ export function bible_glyph_chapter_gen47() {
           "me",
           "your",
           "livestock.",
-          "Since",
+          "$traffic_light",
           "the",
           "$silver",
           "is",
