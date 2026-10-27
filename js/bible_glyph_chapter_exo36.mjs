@@ -758,7 +758,7 @@ export function bible_glyph_chapter_exo36() {
           "from",
           "bottom",
           "to",
-          "top",
+          "$person_gesturing_ok",
           "and",
           "fitted",
           "into",
