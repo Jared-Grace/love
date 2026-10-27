@@ -87,7 +87,7 @@ export function bible_glyph_chapter_exo25() {
           "$ram",
           "$cow_face+coat",
           "dyed",
-          "red,",
+          "$red_circle+doing,",
           "fine",
           "leather,",
           "acacia",
