@@ -1096,7 +1096,7 @@ export function bible_glyph_chapter_1ki20() {
           "$speech",
           "to",
           "him,",
-          "Look,",
+          "$exclamation,",
           "we",
           "have",
           "$ear",
