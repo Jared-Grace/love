@@ -31,7 +31,7 @@ export function bible_glyph_chapter_mic02() {
           "they",
           "$hammer+doing",
           "it",
-          "because",
+          "$pointing",
           "the",
           "$heart_on_fire",
           "is",
