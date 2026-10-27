@@ -131,7 +131,7 @@ export function bible_glyph_chapter_lev19() {
           "remains",
           "until",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "must",
           "be",
