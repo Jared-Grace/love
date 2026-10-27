@@ -544,7 +544,7 @@ export function bible_glyph_chapter_exo04() {
         words: [
           "But",
           "$hand_receiving",
-          "this",
+          "$flashlight",
           "$white_cane",
           "in",
           "your",
