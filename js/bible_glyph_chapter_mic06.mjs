@@ -15,7 +15,7 @@ export function bible_glyph_chapter_mic06() {
         verse_number: 1,
         words: [
           "$ear",
-          "now",
+          "$pleading",
           "what",
           "the",
           "$i_am",
