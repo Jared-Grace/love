@@ -1319,7 +1319,7 @@ export function bible_glyph_chapter_1ki18() {
           "a",
           "single",
           "$man_beard",
-          "escape!",
+          "$parachute!",
           "So",
           "they",
           "seized",
