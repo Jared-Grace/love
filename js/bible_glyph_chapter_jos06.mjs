@@ -510,7 +510,7 @@ export function bible_glyph_chapter_jos06() {
           "the",
           "$city",
           "$seven",
-          "times.",
+          "$drum.",
         ],
       },
       {
