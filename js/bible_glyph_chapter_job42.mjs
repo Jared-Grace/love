@@ -395,7 +395,7 @@ export function bible_glyph_chapter_job42() {
           "$proper_name$Keziah,",
           "and",
           "his",
-          "third",
+          "$third_place",
           "Keren-happuch.",
         ],
       },
