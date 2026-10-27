@@ -39,7 +39,7 @@ export function bible_glyph_chapter_lev23() {
           "as",
           "$sparkle+thing",
           "$waving_hand+thing.",
-          "These",
+          "$flashlight+flashlight",
           "are",
           "My",
           "appointed",
