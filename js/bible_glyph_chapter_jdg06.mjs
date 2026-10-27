@@ -484,7 +484,7 @@ export function bible_glyph_chapter_jdg06() {
           "I",
           "$rescue",
           "$wrestling+heart_on_fire?",
-          "Indeed,",
+          "$exclamation,",
           "my",
           "clan",
           "is",
