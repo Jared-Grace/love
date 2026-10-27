@@ -91,7 +91,7 @@ export function bible_glyph_chapter_1sa02() {
           "from",
           "your",
           "$face_with_open_mouth,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "is",
