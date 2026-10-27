@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo03() {
         words: [
           "Now",
           "$fishing_pole+proper_name",
-          "was",
+          "$link",
           "$person+sheep",
           "the",
           "$sheep",
