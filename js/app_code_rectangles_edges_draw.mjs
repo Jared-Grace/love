@@ -11,7 +11,7 @@ export function app_code_rectangles_edges_draw({
 }) {
   arguments_assert(arguments, 1);
   ("a picture of two rectangles of squares with their edges numbered, and no squares marked beyond the ones both cover");
-  let grid = app_code_rectangles_edges_marked_draw(
+  let grid = app_code_rectangles_edges_marked_draw({
     parent,
     columns,
     rows,
@@ -19,7 +19,7 @@ export function app_code_rectangles_edges_draw({
     second,
     across,
     down,
-    null,
-  );
+    marked: null,
+  });
   return grid;
 }

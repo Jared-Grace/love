@@ -286,16 +286,16 @@ export function app_code_lesson_statement_name_shared_squares_none() {
   ]);
   function solved_draw(box) {
     "the same two rectangles, with the square a wrong answer counts between them filled in the overlap colour, asked by the human 2026-10-04";
-    app_code_rectangles_edges_marked_draw(
-      box,
-      5,
-      5,
-      [0, 2, 0, 2],
-      [3, 5, 3, 5],
-      [3, 2],
-      [3, 2],
-      [2, 3, 2, 3],
-    );
+    app_code_rectangles_edges_marked_draw({
+      parent: box,
+      columns: 5,
+      rows: 5,
+      first: [0, 2, 0, 2],
+      second: [3, 5, 3, 5],
+      across: [3, 2],
+      down: [3, 2],
+      marked: [2, 3, 2, 3],
+    });
   }
   let try_said = app_code_explain_said([
     "But what happens if we try to solve the ",

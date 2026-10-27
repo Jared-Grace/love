@@ -2,7 +2,7 @@ import { null_is } from "./null_is.mjs";
 import { app_code_rectangles_edges_colored_draw } from "./app_code_rectangles_edges_colored_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
-export function app_code_rectangles_edges_marked_draw(
+export function app_code_rectangles_edges_marked_draw({
   parent,
   columns,
   rows,
@@ -11,8 +11,8 @@ export function app_code_rectangles_edges_marked_draw(
   across,
   down,
   marked,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   ("a picture of two rectangles of squares, with the lines between squares numbered as a ruler is, so a rectangle's edges can be read off it: the numbers across the top count the lines from the left, the numbers down the left count them from the top. first and second are each [left, right, top, bottom] in those numbers, and the squares both cover are filled with the overlap colour");
   ("across and down are each [start, end] of the shared part, whose numbers wear the start and end colours of the meetings lessons, or null to leave every number plain");
   ("marked is [left, right, top, bottom] of squares filled with the overlap colour whether or not both rectangles cover them, or null for none - asked by the human 2026-10-04 to show the square a wrong answer counts, between two rectangles that share none");
