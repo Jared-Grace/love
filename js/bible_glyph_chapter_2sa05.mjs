@@ -619,7 +619,7 @@ export function bible_glyph_chapter_2sa05() {
         verse_number: 22,
         words: [
           "Once",
-          "again",
+          "$plus+doing",
           "the",
           "$proper_name$Philistines",
           "came",
