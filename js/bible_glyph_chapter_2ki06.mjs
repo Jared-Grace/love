@@ -330,7 +330,7 @@ export function bible_glyph_chapter_2ki06() {
           "$speech",
           "to",
           "them,",
-          "Tell",
+          "$newspaper",
           "me,",
           "which",
           "one",
