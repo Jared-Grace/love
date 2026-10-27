@@ -244,7 +244,7 @@ export function bible_glyph_chapter_num15() {
           "a",
           "$grain_offering",
           "of",
-          "three",
+          "$three",
           "tenths",
           "of",
           "an",
