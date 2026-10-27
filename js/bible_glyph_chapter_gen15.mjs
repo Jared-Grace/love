@@ -322,7 +322,7 @@ export function bible_glyph_chapter_gen15() {
         words: [
           "As",
           "the",
-          "sun",
+          "$sun_with_face",
           "$link",
           "$footprints,",
           "$proper_name$Abram",
