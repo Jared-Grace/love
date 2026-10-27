@@ -182,7 +182,7 @@ export function bible_glyph_chapter_neh08() {
           "$proper_name$Ezra",
           "opened",
           "the",
-          "book",
+          "$closed_book",
           "in",
           "full",
           "$eyes",
