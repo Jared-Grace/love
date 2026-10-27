@@ -508,7 +508,7 @@ export function bible_glyph_chapter_exo29() {
         words: [
           "$hand_receiving",
           "the",
-          "second",
+          "$second_place",
           "$ram,",
           "and",
           "$proper_name$Aaron",
