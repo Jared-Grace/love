@@ -251,7 +251,7 @@ export function bible_glyph_chapter_hos02() {
           "$hands_giving",
           "her",
           "the",
-          "grain,",
+          "$wheat+barley,",
           "the",
           "new",
           "$wine,",
