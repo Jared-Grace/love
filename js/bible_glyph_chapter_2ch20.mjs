@@ -522,7 +522,7 @@ export function bible_glyph_chapter_2ch20() {
           "because",
           "of",
           "this",
-          "vast",
+          "$multiply",
           "$crowd+loudspeaker,",
           "for",
           "the",
