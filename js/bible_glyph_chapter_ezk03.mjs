@@ -268,7 +268,7 @@ export function bible_glyph_chapter_ezk03() {
           "$anxious_face_with_sweat",
           "at",
           "their",
-          "presence,",
+          "$face,",
           "even",
           "though",
           "they",
