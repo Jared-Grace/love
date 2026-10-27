@@ -102,7 +102,7 @@ export function bible_glyph_chapter_gen39() {
         words: [
           "$i_am+plus",
           "$magnifying_glass+exclamation",
-          "favor",
+          "$heart_orange",
           "in",
           "his",
           "$eyes",
