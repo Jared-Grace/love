@@ -865,7 +865,7 @@ export function bible_glyph_chapter_exo09() {
           "there",
           "has",
           "been",
-          "enough",
+          "$multiply",
           "$voice",
           "of",
           "$heart_on_fire",
