@@ -831,7 +831,7 @@ export function bible_glyph_chapter_2ki10() {
           "keeper",
           "of",
           "the",
-          "wardrobe,",
+          "$garment+house,",
           "Bring",
           "out",
           "garments",
