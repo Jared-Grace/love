@@ -209,7 +209,7 @@ export function bible_glyph_chapter_psa084() {
         words: [
           "$eye",
           "our",
-          "shield,",
+          "$shield,",
           "O",
           "$heart_on_fire,",
           "and",
