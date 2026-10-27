@@ -399,7 +399,7 @@ export function bible_glyph_chapter_lev25() {
       {
         verse_number: 14,
         words: [
-          "If",
+          "$pointing",
           "you",
           "make",
           "a",
