@@ -1183,7 +1183,7 @@ export function bible_glyph_chapter_2ch34() {
           "$family",
           "$top",
           "and",
-          "small,",
+          "$pinching_hand,",
           "and",
           "in",
           "their",
