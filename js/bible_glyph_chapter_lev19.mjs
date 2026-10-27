@@ -786,7 +786,7 @@ export function bible_glyph_chapter_lev19() {
           "or",
           "put",
           "tattoo",
-          "marks",
+          "$writing_hand+fire",
           "on",
           "yourselves.",
           "I",
