@@ -509,7 +509,7 @@ export function bible_glyph_chapter_pro04() {
           "Make",
           "a",
           "$scales+road+doing",
-          "path",
+          "$road+wheel",
           "for",
           "your",
           "feet,",
