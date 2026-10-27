@@ -1038,7 +1038,7 @@ export function bible_glyph_chapter_exo09() {
           "When",
           "$house+proper_name",
           "$eye",
-          "that",
+          "$pointing",
           "the",
           "$rain",
           "and",
