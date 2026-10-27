@@ -136,7 +136,7 @@ export function bible_glyph_chapter_exo01() {
           "a",
           "$new_button",
           "$king,",
-          "who",
+          "$back+flashlight",
           "did",
           "$no_entry",
           "$lightbulb",
