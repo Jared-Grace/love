@@ -637,7 +637,7 @@ export function bible_glyph_chapter_exo04() {
           "$son,",
           "put",
           "them",
-          "on",
+          "$pointing_up",
           "a",
           "donkey,",
           "and",
