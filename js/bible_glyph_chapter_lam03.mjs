@@ -345,7 +345,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "$reminder_ribbon",
           "my",
-          "affliction",
+          "$persevering_face+thing",
           "and",
           "wandering,",
           "the",
