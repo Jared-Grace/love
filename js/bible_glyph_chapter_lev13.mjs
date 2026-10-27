@@ -1378,7 +1378,7 @@ export function bible_glyph_chapter_lev13() {
           "$traffic_light",
           "his",
           "hairline",
-          "recedes",
+          "$hair+away+doing",
           "and",
           "he",
           "is",
