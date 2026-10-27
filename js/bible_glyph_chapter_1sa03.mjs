@@ -614,7 +614,7 @@ export function bible_glyph_chapter_1sa03() {
           "And",
           "the",
           "$i_am",
-          "continued",
+          "$plus+doing",
           "to",
           "$eye",
           "at",
