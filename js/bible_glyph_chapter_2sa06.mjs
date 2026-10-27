@@ -266,7 +266,7 @@ export function bible_glyph_chapter_2sa06() {
           "That",
           "$sun",
           "$two_hearts+proper_name",
-          "feared",
+          "$fear+doing",
           "the",
           "$i_am",
           "and",
