@@ -567,7 +567,7 @@ export function bible_glyph_chapter_1sa01() {
         words: [
           "The",
           "next",
-          "morning",
+          "$morning",
           "they",
           "got",
           "up",
