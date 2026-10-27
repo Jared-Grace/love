@@ -575,7 +575,7 @@ export function bible_glyph_chapter_mic07() {
           "You,",
           "who",
           "pardons",
-          "iniquity",
+          "$cyclone",
           "and",
           "passes",
           "over",
