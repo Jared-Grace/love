@@ -126,7 +126,7 @@ export function bible_glyph_chapter_nam03() {
           "skirts",
           "over",
           "your",
-          "face;",
+          "$face;",
           "I",
           "will",
           "$eye",
