@@ -1577,7 +1577,7 @@ export function bible_glyph_chapter_deu28() {
           "of",
           "your",
           "$brown_square",
-          "until",
+          "$finish",
           "you",
           "are",
           "destroyed.",
