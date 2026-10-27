@@ -230,7 +230,7 @@ export function bible_glyph_chapter_hab02() {
           "$no_entry",
           "your",
           "creditors",
-          "suddenly",
+          "$eye+lightning",
           "arise",
           "and",
           "those",
