@@ -276,7 +276,7 @@ export function bible_glyph_chapter_isa06() {
           "$ear,",
           "but",
           "$no_entry",
-          "understanding;",
+          "$brain;",
           "be",
           "ever",
           "$eye",
