@@ -177,7 +177,7 @@ export function bible_glyph_chapter_lam02() {
           "$fire",
           "on",
           "the",
-          "tent",
+          "$tent",
           "of",
           "the",
           "$woman",
