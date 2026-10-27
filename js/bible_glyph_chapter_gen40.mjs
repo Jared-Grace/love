@@ -18,7 +18,7 @@ export function bible_glyph_chapter_gen40() {
           "time",
           "later",
           "the",
-          "cupbearer",
+          "$cup+hands_giving+doer",
           "and",
           "the",
           "baker",
