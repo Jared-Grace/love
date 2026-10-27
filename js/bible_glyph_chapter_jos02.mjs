@@ -145,7 +145,7 @@ export function bible_glyph_chapter_jos02() {
           "did",
           "$no_entry",
           "$lightbulb",
-          "where",
+          "$question+round_pushpin+tray_out",
           "they",
           "had",
           "come",
