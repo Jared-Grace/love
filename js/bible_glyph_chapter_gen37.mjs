@@ -813,7 +813,7 @@ export function bible_glyph_chapter_gen37() {
           "when",
           "the",
           "Midianite",
-          "traders",
+          "$coin+walking+doing",
           "passed",
           "by,",
           "his",
