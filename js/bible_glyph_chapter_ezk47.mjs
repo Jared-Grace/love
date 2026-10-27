@@ -552,7 +552,7 @@ export function bible_glyph_chapter_ezk47() {
           "$proper_name$Berothah",
           "and",
           "$proper_name$Sibraim,",
-          "which",
+          "$back+flashlight",
           "is",
           "on",
           "the",
