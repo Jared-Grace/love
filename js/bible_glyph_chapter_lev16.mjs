@@ -952,7 +952,7 @@ export function bible_glyph_chapter_lev16() {
           "who",
           "released",
           "the",
-          "goat",
+          "$goat+man_beard",
           "as",
           "the",
           "scapegoat",
