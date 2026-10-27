@@ -133,7 +133,7 @@ export function bible_glyph_chapter_jos02() {
           "So",
           "she",
           "$speech,",
-          "Yes,",
+          "$right_arrow,",
           "the",
           "men",
           "did",
