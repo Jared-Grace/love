@@ -472,7 +472,7 @@ export function bible_glyph_chapter_gen41() {
           "bank",
           "of",
           "the",
-          "Nile,",
+          "$crocodile,",
         ],
       },
       {
