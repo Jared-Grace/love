@@ -716,7 +716,7 @@ export function bible_glyph_chapter_gen21() {
           "$hand_receiving",
           "$sheep",
           "and",
-          "cattle",
+          "$cow_face",
           "and",
           "$hands_giving",
           "them",
