@@ -696,7 +696,7 @@ export function bible_glyph_chapter_exo12() {
           "and",
           "$kitchen_knife+doing",
           "the",
-          "Passover",
+          "$lamb+door",
           "lamb.",
         ],
       },
