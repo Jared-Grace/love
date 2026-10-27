@@ -705,7 +705,7 @@ export function bible_glyph_chapter_jer31() {
           "the",
           "road",
           "markers,",
-          "put",
+          "$palm_down",
           "up",
           "the",
           "signposts.",
