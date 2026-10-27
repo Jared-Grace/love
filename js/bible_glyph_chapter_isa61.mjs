@@ -80,7 +80,7 @@ export function bible_glyph_chapter_isa61() {
           "$hug+doing",
           "$all",
           "who",
-          "mourn,",
+          "$loudly_crying+coffin+describing,",
         ],
       },
       {
