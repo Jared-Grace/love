@@ -642,7 +642,7 @@ export function bible_glyph_chapter_gen08() {
           "heat,",
           "$harvest+sun",
           "and",
-          "winter,",
+          "$snowman,",
           "$sun",
           "and",
           "$night",
