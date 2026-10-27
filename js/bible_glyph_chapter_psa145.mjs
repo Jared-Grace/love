@@ -412,7 +412,7 @@ export function bible_glyph_chapter_psa145() {
           "He",
           "$ear",
           "their",
-          "cry",
+          "$voice+waving_hand",
           "and",
           "saves",
           "them.",
