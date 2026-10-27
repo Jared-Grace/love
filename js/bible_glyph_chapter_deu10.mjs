@@ -313,7 +313,7 @@ export function bible_glyph_chapter_deu10() {
           "$i_am",
           "is",
           "his",
-          "inheritance,",
+          "$inheritance,",
           "as",
           "the",
           "$i_am",
