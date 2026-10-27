@@ -60,7 +60,7 @@ export function bible_glyph_chapter_psa095() {
       {
         verse_number: 3,
         words: [
-          "For",
+          "$pointing",
           "the",
           "$i_am",
           "is",
