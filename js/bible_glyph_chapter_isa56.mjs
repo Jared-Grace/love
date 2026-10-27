@@ -20,7 +20,7 @@ export function bible_glyph_chapter_isa56() {
           "the",
           "$i_am",
           "$speech:",
-          "Maintain",
+          "$guard",
           "$scales+thing",
           "and",
           "$hammer+doing",
