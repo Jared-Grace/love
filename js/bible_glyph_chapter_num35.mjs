@@ -796,7 +796,7 @@ export function bible_glyph_chapter_num35() {
           "$blood",
           "$magnifying_glass+exclamation",
           "him",
-          "outside",
+          "$sun_behind_small_cloud",
           "his",
           "$city",
           "of",
