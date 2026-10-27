@@ -422,7 +422,7 @@ export function bible_glyph_chapter_2ki06() {
           "of",
           "Aram",
           "sent",
-          "horses,",
+          "$horse,",
           "chariots,",
           "and",
           "a",
