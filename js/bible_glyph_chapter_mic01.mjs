@@ -399,7 +399,7 @@ export function bible_glyph_chapter_mic01() {
       {
         verse_number: 13,
         words: [
-          "Harness",
+          "$horse+link+doing",
           "the",
           "chariot",
           "horses,",
