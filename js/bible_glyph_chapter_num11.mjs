@@ -949,7 +949,7 @@ export function bible_glyph_chapter_num11() {
           "$fishing_pole+proper_name",
           "$speech,",
           "Are",
-          "you",
+          "$you",
           "$face_steam+doing",
           "on",
           "my",
