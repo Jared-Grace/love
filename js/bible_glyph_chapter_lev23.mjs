@@ -413,7 +413,7 @@ export function bible_glyph_chapter_lev23() {
         words: [
           "From",
           "the",
-          "day",
+          "$sun+next_track+thing",
           "after",
           "the",
           "$sabbath,",
