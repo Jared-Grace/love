@@ -421,7 +421,7 @@ export function bible_glyph_chapter_zec09() {
           "$hands_raised+proper_name",
           "as",
           "My",
-          "bow",
+          "$bow+wood",
           "and",
           "fit",
           "it",
