@@ -141,7 +141,7 @@ export function bible_glyph_chapter_sng08() {
           "I",
           "roused",
           "you;",
-          "there",
+          "$telescope",
           "your",
           "$mother",
           "conceived",
