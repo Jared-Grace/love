@@ -939,7 +939,7 @@ export function bible_glyph_chapter_gen26() {
           "and",
           "told",
           "him",
-          "about",
+          "$pointing_up",
           "the",
           "$well",
           "they",
