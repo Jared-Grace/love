@@ -419,7 +419,7 @@ export function bible_glyph_chapter_jer23() {
           "found",
           "their",
           "$thumbs_down,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
