@@ -257,7 +257,7 @@ export function bible_glyph_chapter_lam04() {
           "who",
           "die",
           "of",
-          "hunger,",
+          "$famine,",
           "who",
           "waste",
           "away,",
