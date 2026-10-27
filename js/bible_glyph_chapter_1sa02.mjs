@@ -1197,7 +1197,7 @@ export function bible_glyph_chapter_1sa02() {
           "And",
           "I",
           "will",
-          "build",
+          "$brick",
           "for",
           "him",
           "an",
