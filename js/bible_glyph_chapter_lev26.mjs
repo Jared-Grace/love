@@ -199,7 +199,7 @@ export function bible_glyph_chapter_lev26() {
           "$no_entry",
           "$sword",
           "will",
-          "pass",
+          "$bridge",
           "through",
           "your",
           "$earth.",
