@@ -113,7 +113,7 @@ export function bible_glyph_chapter_jos06() {
           "around",
           "the",
           "$city",
-          "seven",
+          "$seven",
           "times",
           "while",
           "the",
