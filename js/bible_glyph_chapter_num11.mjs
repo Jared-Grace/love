@@ -664,7 +664,7 @@ export function bible_glyph_chapter_num11() {
           "before",
           "Him,",
           "$speech,",
-          "Why",
+          "$flashlight+question",
           "did",
           "we",
           "ever",
