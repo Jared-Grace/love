@@ -1296,7 +1296,7 @@ export function bible_glyph_chapter_1ki18() {
           "$heart_on_fire!",
           "The",
           "$i_am,",
-          "He",
+          "$pointing_back",
           "is",
           "$heart_on_fire!",
         ],
