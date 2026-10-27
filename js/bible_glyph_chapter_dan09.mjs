@@ -560,7 +560,7 @@ export function bible_glyph_chapter_dan09() {
           "Your",
           "$nose+fire",
           "and",
-          "wrath",
+          "$angry_face",
           "may",
           "$turn_back",
           "from",
