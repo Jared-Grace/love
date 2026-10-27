@@ -793,7 +793,7 @@ export function bible_glyph_chapter_exo40() {
           "courtyard.",
           "So",
           "Moses",
-          "finished",
+          "$end_arrow",
           "the",
           "$tools.",
         ],
