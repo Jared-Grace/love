@@ -21,7 +21,7 @@ export function bible_glyph_chapter_job28() {
           "a",
           "mine",
           "for",
-          "silver",
+          "$silver",
           "and",
           "a",
           "$place",
