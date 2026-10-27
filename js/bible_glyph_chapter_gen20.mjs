@@ -394,7 +394,7 @@ export function bible_glyph_chapter_gen20() {
           "And",
           "$plus,",
           "she",
-          "really",
+          "$anchor+check+manner",
           "is",
           "my",
           "$sister,",
