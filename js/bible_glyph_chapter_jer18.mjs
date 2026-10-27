@@ -624,7 +624,7 @@ export function bible_glyph_chapter_jer18() {
           "$hands_giving",
           "to",
           "$famine;",
-          "pour",
+          "$water_wave+down_arrow+hand+doing",
           "out",
           "upon",
           "them",
