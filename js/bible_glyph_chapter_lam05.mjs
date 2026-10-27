@@ -382,7 +382,7 @@ export function bible_glyph_chapter_lam05() {
       {
         verse_number: 22,
         words: [
-          "unless",
+          "$pointing",
           "You",
           "have",
           "utterly",
