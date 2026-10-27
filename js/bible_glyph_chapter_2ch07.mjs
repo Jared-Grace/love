@@ -502,7 +502,7 @@ export function bible_glyph_chapter_2ch07() {
           "$thumbs_down",
           "$road,",
           "then",
-          "I",
+          "$me",
           "will",
           "$ear",
           "$tray_out",
