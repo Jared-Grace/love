@@ -346,7 +346,7 @@ export function bible_glyph_chapter_gen31() {
           "$person+pointing_up",
           "up,",
           "$tray_out",
-          "this",
+          "$flashlight",
           "$earth,",
           "and",
           "$turn_back",
