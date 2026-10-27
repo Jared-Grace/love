@@ -852,7 +852,7 @@ export function bible_glyph_chapter_deu29() {
         words: [
           "Therefore",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "the",
           "$i_am",
