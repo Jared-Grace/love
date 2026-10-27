@@ -796,7 +796,7 @@ export function bible_glyph_chapter_deu28() {
           "from",
           "them",
           "on",
-          "seven",
+          "$seven",
           "$road,",
           "and",
           "you",
