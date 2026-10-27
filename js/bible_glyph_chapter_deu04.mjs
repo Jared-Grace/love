@@ -1724,7 +1724,7 @@ export function bible_glyph_chapter_deu04() {
           "$pointing_down+proper_name,",
           "and",
           "as",
-          "far",
+          "$finish",
           "as",
           "the",
           "$sea",
