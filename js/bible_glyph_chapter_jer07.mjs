@@ -324,7 +324,7 @@ export function bible_glyph_chapter_jer07() {
           "$proper_name$Shiloh,",
           "where",
           "I",
-          "first",
+          "$first_place",
           "made",
           "a",
           "dwelling",
