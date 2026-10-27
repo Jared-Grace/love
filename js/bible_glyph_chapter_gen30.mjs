@@ -192,7 +192,7 @@ export function bible_glyph_chapter_gen30() {
           "and",
           "I",
           "have",
-          "won.",
+          "$might+doing.",
           "So",
           "she",
           "called",
