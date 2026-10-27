@@ -523,7 +523,7 @@ export function bible_glyph_chapter_jer07() {
           "$tree,",
           "the",
           "$father",
-          "light",
+          "$fire+wood",
           "the",
           "$fire,",
           "and",
