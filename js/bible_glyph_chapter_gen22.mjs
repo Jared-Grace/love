@@ -366,7 +366,7 @@ export function bible_glyph_chapter_gen22() {
           "the",
           "angel,",
           "for",
-          "now",
+          "$watch",
           "I",
           "$lightbulb",
           "that",
