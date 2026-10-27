@@ -932,7 +932,7 @@ export function bible_glyph_chapter_jos07() {
           "the",
           "$silver,",
           "the",
-          "cloak,",
+          "$cloak+sparkles,",
           "the",
           "bar",
           "of",
