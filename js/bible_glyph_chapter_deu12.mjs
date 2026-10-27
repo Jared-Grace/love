@@ -453,7 +453,7 @@ export function bible_glyph_chapter_deu12() {
           "tribal",
           "territories,",
           "and",
-          "there",
+          "$telescope",
           "you",
           "shall",
           "$hammer+doing",
