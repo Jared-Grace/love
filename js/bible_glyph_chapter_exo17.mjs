@@ -297,7 +297,7 @@ export function bible_glyph_chapter_exo17() {
           "fight",
           "the",
           "$proper_name$Amalekites.",
-          "Tomorrow",
+          "$sun+next_track",
           "I",
           "will",
           "stand",
