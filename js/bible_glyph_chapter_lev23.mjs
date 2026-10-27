@@ -1153,7 +1153,7 @@ export function bible_glyph_chapter_lev23() {
           "have",
           "gathered",
           "the",
-          "produce",
+          "$fruit+basket",
           "of",
           "the",
           "$earth,",
