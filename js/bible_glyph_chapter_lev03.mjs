@@ -179,7 +179,7 @@ export function bible_glyph_chapter_lev03() {
           "$sheep,",
           "he",
           "must",
-          "present",
+          "$magnet+doing",
           "a",
           "male",
           "$shuffle",
