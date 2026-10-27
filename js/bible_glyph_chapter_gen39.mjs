@@ -81,7 +81,7 @@ export function bible_glyph_chapter_gen39() {
           "his",
           "$crown",
           "$eye",
-          "that",
+          "$pointing",
           "the",
           "$i_am",
           "was",
