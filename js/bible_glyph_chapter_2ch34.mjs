@@ -89,7 +89,7 @@ export function bible_glyph_chapter_2ch34() {
           "Josiah",
           "began",
           "to",
-          "seek",
+          "$magnifying_glass+question",
           "the",
           "$heart_on_fire",
           "of",
