@@ -1485,7 +1485,7 @@ export function bible_glyph_chapter_deu32() {
           "the",
           "land",
           "$back+flashlight",
-          "I",
+          "$me",
           "am",
           "$hands_giving",
           "the",
