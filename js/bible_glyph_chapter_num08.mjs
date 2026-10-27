@@ -415,7 +415,7 @@ export function bible_glyph_chapter_num08() {
           "to",
           "Me",
           "from",
-          "among",
+          "$radio_button",
           "$son",
           "of",
           "$wrestling+heart_on_fire.",
