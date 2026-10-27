@@ -387,7 +387,7 @@ export function bible_glyph_chapter_2sa11() {
           "to",
           "$eating",
           "and",
-          "drink",
+          "$cup_with_straw",
           "and",
           "sleep",
           "with",
