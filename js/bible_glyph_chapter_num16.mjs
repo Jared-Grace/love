@@ -313,7 +313,7 @@ export function bible_glyph_chapter_num16() {
           "has",
           "brought",
           "you",
-          "near,",
+          "$magnet+doing,",
           "you",
           "and",
           "all",
