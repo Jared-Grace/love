@@ -395,7 +395,7 @@ export function bible_glyph_chapter_exo27() {
           "shall",
           "be",
           "a",
-          "curtain",
+          "$umbrella+door",
           "twenty",
           "cubits",
           "long,",
