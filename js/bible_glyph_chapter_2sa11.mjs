@@ -425,7 +425,7 @@ export function bible_glyph_chapter_2sa11() {
           "more",
           "$sun,",
           "and",
-          "tomorrow",
+          "$sun+next_track",
           "I",
           "will",
           "$hand_sending",
