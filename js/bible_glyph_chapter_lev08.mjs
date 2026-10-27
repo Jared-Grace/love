@@ -280,7 +280,7 @@ export function bible_glyph_chapter_lev08() {
           "$magnet+doing",
           "$son",
           "of",
-          "Aaron,",
+          "$white_cane+blossom+proper_name,",
           "put",
           "tunics",
           "on",
