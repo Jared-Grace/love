@@ -1026,7 +1026,7 @@ export function bible_glyph_chapter_num22() {
           "$three",
           "$foot?",
           "$exclamation,",
-          "I",
+          "$me",
           "have",
           "$walking+tray_out",
           "out",
