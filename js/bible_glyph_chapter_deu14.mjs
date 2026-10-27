@@ -141,7 +141,7 @@ export function bible_glyph_chapter_deu14() {
           "that",
           "has",
           "a",
-          "split",
+          "$palm_up_hand+divide+thing",
           "$cow_face+foot",
           "$palm_up_hand+divide+doing",
           "in",
