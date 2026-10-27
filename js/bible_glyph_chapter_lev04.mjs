@@ -417,7 +417,7 @@ export function bible_glyph_chapter_lev04() {
           "$person_gesturing_ok",
           "of",
           "$bull",
-          "before",
+          "$face",
           "$i_am,",
           "and",
           "$bull",
