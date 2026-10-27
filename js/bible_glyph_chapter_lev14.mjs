@@ -556,7 +556,7 @@ export function bible_glyph_chapter_lev14() {
           "in",
           "his",
           "left",
-          "palm",
+          "$hand_with_fingers_splayed",
           "and",
           "sprinkle",
           "some",
