@@ -73,7 +73,7 @@ export function bible_glyph_chapter_exo17() {
           "contend",
           "with",
           "me?",
-          "Why",
+          "$flashlight+question",
           "do",
           "you",
           "test",
