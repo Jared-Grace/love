@@ -242,7 +242,7 @@ export function bible_glyph_chapter_isa58() {
           "oppressed",
           "$broken_chain+person,",
           "and",
-          "tear",
+          "$broken_chain+hand+doing",
           "off",
           "$all",
           "$cow_face+wood?",
