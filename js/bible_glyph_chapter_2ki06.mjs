@@ -902,7 +902,7 @@ export function bible_glyph_chapter_2ki06() {
           "$shuffle",
           "$tray_out",
           "the",
-          "winepress?",
+          "$grapes+foot?",
         ],
       },
       {
