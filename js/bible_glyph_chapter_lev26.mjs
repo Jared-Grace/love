@@ -483,7 +483,7 @@ export function bible_glyph_chapter_lev26() {
           "your",
           "$seed",
           "in",
-          "vain,",
+          "$tray_out+droplet+thing,",
           "because",
           "your",
           "enemies",
