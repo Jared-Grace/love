@@ -269,7 +269,7 @@ export function bible_glyph_chapter_zep03() {
           "I",
           "will",
           "restore",
-          "pure",
+          "$wheat+wind+doing",
           "$kiss_mark",
           "to",
           "the",
