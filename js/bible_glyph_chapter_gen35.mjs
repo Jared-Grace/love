@@ -616,7 +616,7 @@ export function bible_glyph_chapter_gen35() {
           "it.",
           "$hand+foot",
           "had",
-          "twelve",
+          "$two",
           "$son.",
         ],
       },
