@@ -419,7 +419,7 @@ export function bible_glyph_chapter_gen13() {
         verse_number: 15,
         words: [
           "$pointing",
-          "all",
+          "$all",
           "the",
           "$earth",
           "that",
