@@ -284,7 +284,7 @@ export function bible_glyph_chapter_isa26() {
           "but",
           "they",
           "do",
-          "not",
+          "$zero",
           "see",
           "it.",
           "They",
