@@ -441,7 +441,7 @@ export function bible_glyph_chapter_gen06() {
           "its",
           "walls",
           "a",
-          "cubit",
+          "$triangular_ruler",
           "from",
           "the",
           "top.",
