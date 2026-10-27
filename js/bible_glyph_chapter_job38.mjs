@@ -205,7 +205,7 @@ export function bible_glyph_chapter_job38() {
           "$finish,",
           "but",
           "$no_entry",
-          "farther;",
+          "$plus+doing;",
           "here",
           "your",
           "proud",
