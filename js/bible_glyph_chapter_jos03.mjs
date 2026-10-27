@@ -510,7 +510,7 @@ export function bible_glyph_chapter_jos03() {
           "backed",
           "up",
           "as",
-          "far",
+          "$satellite+doing",
           "upstream",
           "as",
           "$person+proper_name,",
