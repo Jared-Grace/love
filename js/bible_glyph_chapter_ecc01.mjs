@@ -147,7 +147,7 @@ export function bible_glyph_chapter_ecc01() {
           "streams",
           "$walking,",
           "$telescope",
-          "they",
+          "$pointing_back",
           "$walking",
           "$turn_back.",
         ],
