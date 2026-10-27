@@ -411,7 +411,7 @@ export function bible_glyph_chapter_lev08() {
           "$pile_of_poo",
           "he",
           "burned",
-          "outside",
+          "$sun_behind_small_cloud",
           "$camp,",
           "as",
           "$i_am",
