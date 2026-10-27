@@ -661,7 +661,7 @@ export function bible_glyph_chapter_exo36() {
           "put",
           "under",
           "the",
-          "twenty",
+          "$two+zero",
           "frames,",
           "two",
           "$down_arrow+brick",
