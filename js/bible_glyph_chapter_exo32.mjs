@@ -352,7 +352,7 @@ export function bible_glyph_chapter_exo32() {
           "you",
           "into",
           "a",
-          "great",
+          "$top",
           "$map.",
         ],
       },
