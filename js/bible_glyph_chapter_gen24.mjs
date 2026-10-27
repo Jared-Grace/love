@@ -983,7 +983,7 @@ export function bible_glyph_chapter_gen24() {
           "and",
           "$water",
           "to",
-          "wash",
+          "$bathtub+doing",
           "his",
           "feet",
           "and",
