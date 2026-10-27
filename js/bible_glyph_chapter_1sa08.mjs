@@ -454,7 +454,7 @@ export function bible_glyph_chapter_1sa08() {
           "your",
           "$kneeling",
           "and",
-          "maidservants",
+          "$houses+female_sign",
           "and",
           "your",
           "$thumbs_up",
