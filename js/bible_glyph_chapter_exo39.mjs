@@ -960,7 +960,7 @@ export function bible_glyph_chapter_exo39() {
           "utensils,",
           "and",
           "the",
-          "oil",
+          "$lotion_bottle",
           "for",
           "the",
           "light;",
