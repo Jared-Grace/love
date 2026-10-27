@@ -707,7 +707,7 @@ export function bible_glyph_chapter_lev11() {
           "crawling",
           "creatures.",
           "Whoever",
-          "touches",
+          "$hand+doing",
           "them",
           "when",
           "they",
