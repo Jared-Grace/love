@@ -1326,7 +1326,7 @@ export function bible_glyph_chapter_gen27() {
         words: [
           "$finish",
           "the",
-          "rage",
+          "$nose+fire",
           "of",
           "your",
           "$brother",
