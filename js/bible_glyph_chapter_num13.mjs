@@ -496,7 +496,7 @@ export function bible_glyph_chapter_num13() {
           "a",
           "pole",
           "between",
-          "two",
+          "$two",
           "men.",
           "They",
           "also",
