@@ -22,7 +22,7 @@ export function bible_glyph_chapter_2ch07() {
           "$hands_praying,",
           "$fire",
           "came",
-          "down",
+          "$walking+pointing_down",
           "from",
           "$sky",
           "and",
