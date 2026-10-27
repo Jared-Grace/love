@@ -401,7 +401,7 @@ export function bible_glyph_chapter_zec09() {
           "$plus",
           "$sun",
           "I",
-          "declare",
+          "$newspaper",
           "that",
           "I",
           "will",
