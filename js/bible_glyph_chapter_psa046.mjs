@@ -134,7 +134,7 @@ export function bible_glyph_chapter_psa046() {
         verse_number: 6,
         words: [
           "$map",
-          "rage,",
+          "$crowd+loudspeaker+doing,",
           "$castle",
           "crumble;",
           "the",
