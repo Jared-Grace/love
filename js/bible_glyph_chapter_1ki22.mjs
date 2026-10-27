@@ -414,7 +414,7 @@ export function bible_glyph_chapter_1ki22() {
           "Then",
           "the",
           "$angel",
-          "who",
+          "$back+flashlight",
           "had",
           "$walking",
           "to",
