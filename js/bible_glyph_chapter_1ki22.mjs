@@ -1233,7 +1233,7 @@ export function bible_glyph_chapter_1ki22() {
           "where",
           "the",
           "prostitutes",
-          "bathed,",
+          "$bathtub+doing,",
           "and",
           "the",
           "dogs",
