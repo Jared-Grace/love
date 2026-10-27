@@ -192,7 +192,7 @@ export function bible_glyph_chapter_lev16() {
           "$bow",
           "offering",
           "and",
-          "one",
+          "$one",
           "$ram",
           "for",
           "a",
