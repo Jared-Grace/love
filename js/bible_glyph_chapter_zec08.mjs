@@ -439,7 +439,7 @@ export function bible_glyph_chapter_zec08() {
           "$house",
           "of",
           "$wrestling+heart_on_fire,",
-          "so",
+          "$right_arrow",
           "I",
           "will",
           "save",
