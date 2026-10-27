@@ -78,7 +78,7 @@ export function bible_glyph_chapter_jer01() {
           "until",
           "the",
           "fifth",
-          "month",
+          "$new_moon",
           "of",
           "the",
           "eleventh",
