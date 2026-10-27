@@ -302,7 +302,7 @@ export function bible_glyph_chapter_exo11() {
           "a",
           "burning",
           "of",
-          "anger.",
+          "$nose+fire.",
         ],
       },
       {
