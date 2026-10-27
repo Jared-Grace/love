@@ -741,7 +741,7 @@ export function bible_glyph_chapter_num13() {
           "the",
           "$family,",
           "$pointing",
-          "they",
+          "$pointing_back",
           "are",
           "stronger",
           "$tray_out",
