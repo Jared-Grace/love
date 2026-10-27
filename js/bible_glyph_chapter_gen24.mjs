@@ -1248,7 +1248,7 @@ export function bible_glyph_chapter_gen24() {
           "when",
           "I",
           "$footprints",
-          "to",
+          "$toward",
           "the",
           "spring",
           "$sun,",
