@@ -122,7 +122,7 @@ export function bible_glyph_chapter_exo28() {
           "$cloak,",
           "a",
           "woven",
-          "tunic,",
+          "$dress+thread,",
           "a",
           "turban",
           "and",
