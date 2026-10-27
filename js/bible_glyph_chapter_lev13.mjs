@@ -553,7 +553,7 @@ export function bible_glyph_chapter_lev13() {
           "he",
           "must",
           "$footprints",
-          "to",
+          "$toward",
           "the",
           "$priest.",
         ],
