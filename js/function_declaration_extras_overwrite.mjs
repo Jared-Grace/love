@@ -18,7 +18,11 @@ export async function function_declaration_extras_overwrite(
   "What is handed in is the whole of the file's top line besides its imports: an empty list writes a file holding the function alone, and anything the file held before and the list leaves out is gone. Deciding that is the caller's, which is why the caller hands the list in.";
   "A name that already has a file is written over in that file, in whichever repository it sits, and its imports are worked out from that file's folder; a new name lands in the repository being worked in.";
   arguments_assert(arguments, 3);
-  let codes = extras.map(js_unparse);
+  function lambda(item) {
+    let code = js_unparse(item);
+    return code;
+  }
+  let codes = extras.map(lambda);
   let code_declaration = js_unparse(declaration);
   let code_export = js_code_export(code_declaration);
   let contents = [...codes, code_export].join("\n");
