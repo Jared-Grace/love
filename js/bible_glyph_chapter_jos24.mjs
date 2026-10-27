@@ -216,7 +216,7 @@ export function bible_glyph_chapter_jos24() {
           "and",
           "He",
           "$palm_down",
-          "darkness",
+          "$new_moon+fog",
           "between",
           "you",
           "and",
