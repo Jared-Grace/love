@@ -312,7 +312,7 @@ export function bible_glyph_chapter_jdg02() {
         words: [
           "After",
           "that",
-          "whole",
+          "$all",
           "generation",
           "had",
           "been",
