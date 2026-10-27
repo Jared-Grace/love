@@ -466,7 +466,7 @@ export function bible_glyph_chapter_1sa15() {
           "the",
           "$voice",
           "of",
-          "cattle",
+          "$cow_face",
           "that",
           "I",
           "$ear?",
