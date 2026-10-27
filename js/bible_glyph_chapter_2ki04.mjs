@@ -36,7 +36,7 @@ export function bible_glyph_chapter_2ki04() {
           "is",
           "$skull+doing,",
           "and",
-          "you",
+          "$you",
           "$lightbulb",
           "that",
           "your",
