@@ -247,7 +247,7 @@ export function bible_glyph_chapter_zep03() {
           "burning",
           "anger.",
           "For",
-          "all",
+          "$all",
           "the",
           "$earth",
           "will",
