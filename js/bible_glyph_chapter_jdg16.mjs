@@ -265,7 +265,7 @@ export function bible_glyph_chapter_jdg16() {
           "will",
           "become",
           "as",
-          "weak",
+          "$thermometer_face+doing",
           "as",
           "any",
           "other",
