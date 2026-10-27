@@ -500,7 +500,7 @@ export function bible_glyph_chapter_mal01() {
           "$thermometer_face+doing!",
           "Should",
           "I",
-          "accept",
+          "$smiling_face_with_smiling_eyes+doing",
           "these",
           "from",
           "your",
