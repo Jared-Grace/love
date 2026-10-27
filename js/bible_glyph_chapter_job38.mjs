@@ -712,7 +712,7 @@ export function bible_glyph_chapter_job38() {
           "heart,",
           "$shuffle",
           "$hands_giving",
-          "understanding",
+          "$brain+thing",
           "to",
           "the",
           "$brain+eyes?",
