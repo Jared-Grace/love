@@ -351,7 +351,7 @@ export function bible_glyph_chapter_deu18() {
           "because",
           "of",
           "these",
-          "detestable",
+          "$vomiting",
           "things,",
           "the",
           "$i_am",
