@@ -746,7 +746,7 @@ export function bible_glyph_chapter_gen26() {
           "dug",
           "a",
           "$well",
-          "there.",
+          "$telescope.",
         ],
       },
       {
