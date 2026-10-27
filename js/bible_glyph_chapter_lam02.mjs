@@ -108,7 +108,7 @@ export function bible_glyph_chapter_lam02() {
           "$axe+tree+doing",
           "off",
           "$all",
-          "horn",
+          "$horn",
           "of",
           "$wrestling+heart_on_fire",
           "and",
