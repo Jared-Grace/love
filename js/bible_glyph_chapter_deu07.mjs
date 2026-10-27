@@ -695,7 +695,7 @@ export function bible_glyph_chapter_deu07() {
           "$fly+sewing_needle",
           "against",
           "them",
-          "until",
+          "$finish",
           "even",
           "the",
           "survivors",
