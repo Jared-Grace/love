@@ -549,7 +549,7 @@ export function bible_glyph_chapter_1ki02() {
         words: [
           "So",
           "$watch",
-          "I",
+          "$me",
           "have",
           "just",
           "$one",
