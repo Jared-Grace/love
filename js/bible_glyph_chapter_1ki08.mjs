@@ -596,7 +596,7 @@ export function bible_glyph_chapter_1ki08() {
           "the",
           "one",
           "to",
-          "build",
+          "$brick",
           "it;",
           "but",
           "your",
