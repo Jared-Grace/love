@@ -255,7 +255,7 @@ export function bible_glyph_chapter_dan01() {
           "he",
           "would",
           "$no_entry",
-          "defile",
+          "$nauseated_face+doing",
           "himself",
           "with",
           "the",
