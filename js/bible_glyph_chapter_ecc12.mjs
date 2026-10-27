@@ -92,7 +92,7 @@ export function bible_glyph_chapter_ecc12() {
           "when",
           "those",
           "grinding",
-          "cease",
+          "$hammer+stop_sign+doing",
           "because",
           "they",
           "are",
