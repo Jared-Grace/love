@@ -846,7 +846,7 @@ export function bible_glyph_chapter_deu07() {
           "$moai.",
           "Do",
           "$no_entry",
-          "covet",
+          "$heart_eyes+doing",
           "the",
           "$silver",
           "and",
