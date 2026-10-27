@@ -28,7 +28,7 @@ export function bible_glyph_chapter_deu32() {
           "words",
           "of",
           "my",
-          "mouth.",
+          "$face_with_open_mouth.",
         ],
       },
       {
