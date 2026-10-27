@@ -493,7 +493,7 @@ export function bible_glyph_chapter_zec14() {
           "be",
           "collected:",
           "$gold,",
-          "silver,",
+          "$silver,",
           "and",
           "apparel",
           "in",
