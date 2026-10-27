@@ -1010,7 +1010,7 @@ export function bible_glyph_chapter_gen30() {
           "he",
           "$hand+round_pushpin+doing",
           "the",
-          "branches",
+          "$wood+leaf",
           "he",
           "had",
           "peeled",
