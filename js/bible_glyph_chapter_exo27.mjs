@@ -316,7 +316,7 @@ export function bible_glyph_chapter_exo27() {
           "$candle",
           "and",
           "$ten",
-          "bases.",
+          "$down_arrow+brick.",
         ],
       },
       {
