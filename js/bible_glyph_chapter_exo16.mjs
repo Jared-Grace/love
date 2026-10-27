@@ -898,7 +898,7 @@ export function bible_glyph_chapter_exo16() {
           "you",
           "$person_gesturing_no+doing",
           "to",
-          "keep",
+          "$guard",
           "My",
           "$scroll",
           "and",
