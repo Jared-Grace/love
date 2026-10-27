@@ -1625,7 +1625,7 @@ export function bible_glyph_chapter_deu28() {
           "$earth",
           "$finish",
           "the",
-          "high",
+          "$giraffe",
           "and",
           "fortified",
           "$brick+shield",
