@@ -563,7 +563,7 @@ export function bible_glyph_chapter_lev11() {
         verse_number: 26,
         words: [
           "Every",
-          "animal",
+          "$paw_prints",
           "with",
           "hooves",
           "not",
