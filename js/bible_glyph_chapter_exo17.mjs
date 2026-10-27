@@ -510,7 +510,7 @@ export function bible_glyph_chapter_exo17() {
           "against",
           "$proper_name$Amalek",
           "from",
-          "generation",
+          "$dna",
           "to",
           "generation.",
         ],
