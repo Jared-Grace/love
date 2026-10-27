@@ -138,7 +138,7 @@ export function bible_glyph_chapter_neh08() {
           "$proper_name$Ezra",
           "the",
           "scribe",
-          "stood",
+          "$person+round_pushpin",
           "on",
           "a",
           "high",
