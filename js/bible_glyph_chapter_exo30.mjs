@@ -783,7 +783,7 @@ export function bible_glyph_chapter_exo30() {
           "$sparkle+doing",
           "them",
           "to",
-          "serve",
+          "$priest+doing",
           "me",
           "as",
           "priests.",
