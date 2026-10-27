@@ -66,7 +66,7 @@ export function bible_glyph_chapter_zec04() {
           "it,",
           "with",
           "$seven",
-          "spouts",
+          "$pouring_liquid+fire+thing",
           "to",
           "the",
           "lamps.",
