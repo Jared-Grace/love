@@ -312,7 +312,7 @@ export function bible_glyph_chapter_2ch20() {
         verse_number: 10,
         words: [
           "And",
-          "now,",
+          "$watch,",
           "here",
           "are",
           "the",
