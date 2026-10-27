@@ -346,7 +346,7 @@ export function bible_glyph_chapter_gen40() {
           "you",
           "to",
           "your",
-          "position,",
+          "$pin+thing,",
           "and",
           "you",
           "will",
