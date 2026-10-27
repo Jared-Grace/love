@@ -114,7 +114,7 @@ export function bible_glyph_chapter_zec14() {
           "His",
           "feet",
           "will",
-          "stand",
+          "$person+round_pushpin",
           "on",
           "the",
           "$mountain",
