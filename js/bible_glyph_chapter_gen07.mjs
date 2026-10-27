@@ -401,7 +401,7 @@ export function bible_glyph_chapter_gen07() {
           "entered",
           "the",
           "$package,",
-          "two",
+          "$two",
           "by",
           "two",
           "of",
