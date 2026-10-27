@@ -426,7 +426,7 @@ export function bible_glyph_chapter_gen15() {
         words: [
           "In",
           "the",
-          "fourth",
+          "$four+describing",
           "$dna",
           "your",
           "descendants",
