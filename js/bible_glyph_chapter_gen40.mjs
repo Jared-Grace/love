@@ -452,7 +452,7 @@ export function bible_glyph_chapter_gen40() {
           "$thumbs_up,",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "$i_am+plus,",
           "I",
           "also",
