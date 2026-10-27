@@ -261,7 +261,7 @@ export function bible_glyph_chapter_psa103() {
           "the",
           "$i_am",
           "has",
-          "compassion",
+          "$hugging_face+doing",
           "on",
           "those",
           "who",
