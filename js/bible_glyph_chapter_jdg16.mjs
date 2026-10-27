@@ -655,7 +655,7 @@ export function bible_glyph_chapter_jdg16() {
           "$heart_on_fire",
           "from",
           "the",
-          "womb",
+          "$baby+house",
           "of",
           "my",
           "$mother.",
