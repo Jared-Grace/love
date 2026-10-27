@@ -342,7 +342,7 @@ export function bible_glyph_chapter_zec12() {
           "out",
           "to",
           "$bomb",
-          "all",
+          "$all",
           "the",
           "$map",
           "that",
