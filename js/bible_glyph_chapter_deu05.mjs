@@ -876,7 +876,7 @@ export function bible_glyph_chapter_deu05() {
           "$fear+doing",
           "Me",
           "and",
-          "keep",
+          "$guard",
           "all",
           "My",
           "$scroll",
