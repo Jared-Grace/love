@@ -1916,7 +1916,7 @@ export function bible_glyph_chapter_1ki08() {
           "with",
           "his",
           "hands",
-          "spread",
+          "$folding_hand_fan",
           "out",
           "toward",
           "$sky.",
