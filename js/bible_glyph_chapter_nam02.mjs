@@ -275,7 +275,7 @@ export function bible_glyph_chapter_nam02() {
           "$dizzy+pregnant_woman,",
           "and",
           "$all",
-          "face",
+          "$face",
           "grows",
           "pale.",
         ],
