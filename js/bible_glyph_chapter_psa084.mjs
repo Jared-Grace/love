@@ -201,7 +201,7 @@ export function bible_glyph_chapter_psa084() {
           "$heart_on_fire",
           "of",
           "$hand+foot.",
-          "Selah",
+          "$pause_button",
         ],
       },
       {
