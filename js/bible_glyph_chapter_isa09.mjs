@@ -246,7 +246,7 @@ export function bible_glyph_chapter_isa09() {
           "his",
           "$castle,",
           "to",
-          "establish",
+          "$pin+doing",
           "and",
           "sustain",
           "it",
