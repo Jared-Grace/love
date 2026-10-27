@@ -264,7 +264,7 @@ export function bible_glyph_chapter_job01() {
       {
         verse_number: 9,
         words: [
-          "Satan",
+          "$smiling_face_with_horns",
           "answered",
           "the",
           "$i_am,",
