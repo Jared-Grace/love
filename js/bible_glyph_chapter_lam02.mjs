@@ -496,7 +496,7 @@ export function bible_glyph_chapter_lam02() {
           "$question+round_pushpin",
           "is",
           "the",
-          "grain",
+          "$wheat+barley",
           "and",
           "$wine?",
           "as",
