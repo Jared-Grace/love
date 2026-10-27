@@ -777,7 +777,7 @@ export function bible_glyph_chapter_ezk34() {
           "prince",
           "among",
           "them.",
-          "I,",
+          "$me,",
           "the",
           "$i_am,",
           "have",
