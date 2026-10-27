@@ -264,7 +264,7 @@ export function bible_glyph_chapter_lev07() {
           "$back+flashlight",
           "one",
           "may",
-          "present",
+          "$magnet+doing",
           "$i_am.",
         ],
       },
