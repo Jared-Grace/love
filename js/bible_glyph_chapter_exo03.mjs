@@ -349,7 +349,7 @@ export function bible_glyph_chapter_exo03() {
           "$fishing_pole+proper_name",
           "$speech",
           "$heart_on_fire,",
-          "Who",
+          "$person+question",
           "am",
           "I,",
           "that",
