@@ -300,7 +300,7 @@ export function bible_glyph_chapter_lev16() {
         words: [
           "But",
           "the",
-          "goat",
+          "$goat+man_beard",
           "$walking+pointing_up",
           "by",
           "lot",
