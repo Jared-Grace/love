@@ -345,7 +345,7 @@ export function bible_glyph_chapter_job28() {
       {
         verse_number: 18,
         words: [
-          "Coral",
+          "$red_circle+gem_stone",
           "and",
           "quartz",
           "are",
