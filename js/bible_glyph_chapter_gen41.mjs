@@ -1400,7 +1400,7 @@ export function bible_glyph_chapter_gen41() {
           "of",
           "famine",
           "$footprints,",
-          "two",
+          "$two",
           "$son",
           "were",
           "born",
