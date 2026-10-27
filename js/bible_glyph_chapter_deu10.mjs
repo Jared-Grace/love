@@ -566,7 +566,7 @@ export function bible_glyph_chapter_deu10() {
           "of",
           "$crown,",
           "the",
-          "great",
+          "$top",
           "and",
           "mighty",
           "and",
