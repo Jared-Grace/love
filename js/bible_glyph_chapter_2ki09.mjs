@@ -900,7 +900,7 @@ export function bible_glyph_chapter_2ki09() {
           "And",
           "Jehu",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Bidkar",
           "his",
           "officer,",
