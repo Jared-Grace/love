@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_jdg06() {
           "$speech",
           "one",
           "$man_beard",
-          "to",
+          "$toward",
           "another,",
           "Who",
           "did",
