@@ -221,7 +221,7 @@ export function bible_glyph_chapter_neh08() {
           "$top",
           "$heart_on_fire,",
           "and",
-          "all",
+          "$all",
           "the",
           "$family",
           "said,",
