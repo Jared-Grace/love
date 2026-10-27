@@ -579,7 +579,7 @@ export function bible_glyph_chapter_deu05() {
           "$donkey,",
           "or",
           "anything",
-          "that",
+          "$back+flashlight",
           "belongs",
           "to",
           "your",
