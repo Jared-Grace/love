@@ -744,7 +744,7 @@ export function bible_glyph_chapter_exo28() {
           "$ring",
           "of",
           "the",
-          "breastpiece",
+          "$gem_stone+t_shirt",
           "shall",
           "be",
           "tied",
