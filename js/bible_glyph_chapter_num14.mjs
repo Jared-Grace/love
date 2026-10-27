@@ -1008,7 +1008,7 @@ export function bible_glyph_chapter_num14() {
           "the",
           "$wilderness",
           "for",
-          "forty",
+          "$four+zero",
           "$year,",
           "and",
           "they",
