@@ -731,7 +731,7 @@ export function bible_glyph_chapter_deu15() {
           "both",
           "the",
           "ceremonially",
-          "unclean",
+          "$soap+no_entry",
           "and",
           "clean",
           "may",
