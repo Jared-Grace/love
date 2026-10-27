@@ -328,7 +328,7 @@ export function bible_glyph_chapter_zec04() {
           "I",
           "questioned",
           "him",
-          "further,",
+          "$second_place,",
           "$speech,",
           "What",
           "are",
