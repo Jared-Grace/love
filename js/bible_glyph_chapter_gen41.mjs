@@ -1215,7 +1215,7 @@ export function bible_glyph_chapter_gen41() {
           "$speech",
           "$toward",
           "$i_am+plus,",
-          '"I',
+          '"$me',
           "am",
           "$house+proper_name,",
           "but",
