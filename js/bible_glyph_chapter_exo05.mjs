@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo05() {
         verse_number: 16,
         words: [
           "No",
-          "straw",
+          "$wheat+scissors",
           "has",
           "been",
           "$hands_giving",
