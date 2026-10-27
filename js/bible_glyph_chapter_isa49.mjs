@@ -757,7 +757,7 @@ export function bible_glyph_chapter_isa49() {
           "raise",
           "My",
           "banner",
-          "to",
+          "$toward",
           "the",
           "$family$s.",
           "They",
