@@ -793,7 +793,7 @@ export function bible_glyph_chapter_jdg02() {
           "driven",
           "them",
           "out",
-          "immediately",
+          "$fast_forward+manner",
           "by",
           "$hands_giving",
           "them",
