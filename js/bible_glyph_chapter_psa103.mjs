@@ -262,7 +262,7 @@ export function bible_glyph_chapter_psa103() {
           "$i_am",
           "has",
           "$hugging_face+doing",
-          "on",
+          "$pointing_up",
           "those",
           "who",
           "fear",
