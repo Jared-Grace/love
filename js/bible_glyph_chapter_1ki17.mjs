@@ -164,7 +164,7 @@ export function bible_glyph_chapter_1ki17() {
           "drink",
           "$tray_out",
           "the",
-          "brook.",
+          "$national_park.",
         ],
       },
       {
