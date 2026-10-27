@@ -118,7 +118,7 @@ export function bible_glyph_chapter_psa091() {
           "$night,",
           "nor",
           "the",
-          "arrow",
+          "$arrow",
           "that",
           "flies",
           "by",
