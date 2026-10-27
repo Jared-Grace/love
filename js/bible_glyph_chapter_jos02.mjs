@@ -587,7 +587,7 @@ export function bible_glyph_chapter_jos02() {
         words: [
           "unless,",
           "when",
-          "we",
+          "$me",
           "$footprints",
           "the",
           "$earth,",
