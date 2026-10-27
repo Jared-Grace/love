@@ -238,7 +238,7 @@ export function bible_glyph_chapter_num06() {
       {
         verse_number: 9,
         words: [
-          "If",
+          "$pointing",
           "someone",
           "suddenly",
           "$skull+doing",
