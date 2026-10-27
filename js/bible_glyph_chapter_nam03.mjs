@@ -71,7 +71,7 @@ export function bible_glyph_chapter_nam03() {
           "$end_arrow+round_pushpin",
           "-",
           "they",
-          "stumble",
+          "$hiking_boot+rock",
           "over",
           "their",
           "dead.",
