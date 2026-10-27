@@ -1487,7 +1487,7 @@ export function bible_glyph_chapter_num16() {
           "$skull+doing",
           "from",
           "the",
-          "plague",
+          "$fist+microbe+thing",
           "numbered",
           "14,700,",
           "in",
