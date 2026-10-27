@@ -466,7 +466,7 @@ export function bible_glyph_chapter_gen21() {
           "the",
           "boy",
           "where",
-          "he",
+          "$pointing_back",
           "lies.",
         ],
       },
