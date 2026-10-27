@@ -54,7 +54,7 @@ export function bible_glyph_chapter_psa042() {
           "the",
           "$sprout",
           "$heart_on_fire.",
-          "When",
+          "$question+clock",
           "shall",
           "I",
           "$footprints",
