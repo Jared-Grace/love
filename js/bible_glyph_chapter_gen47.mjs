@@ -428,7 +428,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 14,
         words: [
           "$i_am+plus",
-          "collected",
+          "$hand+sheaf_of_rice+doing",
           "all",
           "the",
           "$silver",
