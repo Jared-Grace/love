@@ -321,7 +321,7 @@ export function bible_glyph_chapter_psa034() {
           "inclined",
           "to",
           "their",
-          "cry.",
+          "$voice+waving_hand.",
         ],
       },
       {
