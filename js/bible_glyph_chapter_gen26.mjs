@@ -605,7 +605,7 @@ export function bible_glyph_chapter_gen26() {
           "Then",
           "they",
           "dug",
-          "another",
+          "$plus+one",
           "$well",
           "and",
           "quarreled",
