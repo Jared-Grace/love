@@ -520,7 +520,7 @@ export function bible_glyph_chapter_zep01() {
           "and",
           "against",
           "the",
-          "high",
+          "$giraffe",
           "$triangular_ruler+brick",
           "towers.",
         ],
