@@ -211,7 +211,7 @@ export function bible_glyph_chapter_exo29() {
       {
         verse_number: 9,
         words: [
-          "Wrap",
+          "$briefs+doing",
           "the",
           "sashes",
           "around",
