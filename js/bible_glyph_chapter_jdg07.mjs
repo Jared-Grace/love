@@ -370,7 +370,7 @@ export function bible_glyph_chapter_jdg07() {
         verse_number: 10,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "you",
           "are",
           "afraid",
