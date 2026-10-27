@@ -454,7 +454,7 @@ export function bible_glyph_chapter_lev25() {
           "according",
           "to",
           "the",
-          "number",
+          "$input_numbers",
           "of",
           "harvest",
           "years",
