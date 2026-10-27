@@ -121,7 +121,7 @@ export function bible_glyph_chapter_gen04() {
           "$proper_name$Abel",
           "and",
           "his",
-          "offering,",
+          "$grain_offering,",
         ],
       },
       {
