@@ -579,7 +579,7 @@ export function bible_glyph_chapter_jdg04() {
           "he",
           "entered",
           "her",
-          "tent,",
+          "$tent,",
           "and",
           "she",
           "covered",
