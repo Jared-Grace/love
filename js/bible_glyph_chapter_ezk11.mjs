@@ -113,7 +113,7 @@ export function bible_glyph_chapter_ezk11() {
           "is",
           "the",
           "cooking",
-          "pot,",
+          "$pot_of_food,",
           "and",
           "we",
           "are",
