@@ -666,7 +666,7 @@ export function bible_glyph_chapter_num32() {
           "to",
           "$wrestling+heart_on_fire.",
           "And",
-          "this",
+          "$flashlight",
           "$earth",
           "will",
           "belong",
