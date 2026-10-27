@@ -623,7 +623,7 @@ export function bible_glyph_chapter_num14() {
           "keeping",
           "with",
           "the",
-          "greatness",
+          "$top+thing",
           "of",
           "Your",
           "$gift,",
