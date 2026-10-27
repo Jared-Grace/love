@@ -142,7 +142,7 @@ export function bible_glyph_chapter_gen22() {
           "$flashlight+round_pushpin",
           "$linked_paperclips",
           "the",
-          "donkey,",
+          "$donkey,",
           "$father+map",
           "$speech",
           "his",
