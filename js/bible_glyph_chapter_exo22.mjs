@@ -578,7 +578,7 @@ export function bible_glyph_chapter_exo22() {
           "to",
           "the",
           "bridal",
-          "price",
+          "$coin+ring+thing",
           "of",
           "a",
           "virgin.",
