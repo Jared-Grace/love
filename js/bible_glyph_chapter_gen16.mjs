@@ -412,7 +412,7 @@ export function bible_glyph_chapter_gen16() {
           "$mouth",
           "to",
           "her,",
-          "You",
+          "$you",
           "are",
           "the",
           "$heart_on_fire",
