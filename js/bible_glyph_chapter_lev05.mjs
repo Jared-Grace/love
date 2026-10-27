@@ -259,7 +259,7 @@ export function bible_glyph_chapter_lev05() {
           "$vs_button",
           "of",
           "its",
-          "neck",
+          "$back+scarf",
           "$no_entry",
           "severing",
           "it.",
