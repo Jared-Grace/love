@@ -380,7 +380,7 @@ export function bible_glyph_chapter_gen21() {
           "left",
           "the",
           "$child",
-          "under",
+          "$down_arrow",
           "one",
           "of",
           "the",
