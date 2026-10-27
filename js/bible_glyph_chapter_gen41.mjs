@@ -133,7 +133,7 @@ export function bible_glyph_chapter_gen41() {
           "$seven",
           "heads",
           "of",
-          "grain,",
+          "$wheat+top,",
           "plump",
           "and",
           "$thumbs_up,",
