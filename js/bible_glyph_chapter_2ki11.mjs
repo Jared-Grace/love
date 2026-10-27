@@ -374,7 +374,7 @@ export function bible_glyph_chapter_2ki11() {
           "of",
           "the",
           "$house",
-          "to",
+          "$finish",
           "the",
           "north",
           "$person_shrugging,",
