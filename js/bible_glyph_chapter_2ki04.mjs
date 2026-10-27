@@ -185,7 +185,7 @@ export function bible_glyph_chapter_2ki04() {
           "$battery,",
           "she",
           "$speech",
-          "to",
+          "$toward",
           "her",
           "$son,",
           "Bring",
