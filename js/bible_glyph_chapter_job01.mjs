@@ -512,7 +512,7 @@ export function bible_glyph_chapter_job01() {
           "The",
           "Chaldeans",
           "$palm_down",
-          "three",
+          "$three",
           "bands,",
           "raided",
           "the",
