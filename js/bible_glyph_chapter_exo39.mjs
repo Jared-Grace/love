@@ -60,7 +60,7 @@ export function bible_glyph_chapter_exo39() {
           "and",
           "finely",
           "spun",
-          "linen.",
+          "$thread+white_circle.",
         ],
       },
       {
