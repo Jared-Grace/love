@@ -22,7 +22,7 @@ export function bible_glyph_chapter_pro31() {
           "$proper_name$Lemuel,",
           "the",
           "burden",
-          "that",
+          "$back+flashlight",
           "his",
           "$mother",
           "taught",
