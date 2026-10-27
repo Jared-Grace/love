@@ -435,7 +435,7 @@ export function bible_glyph_chapter_gen06() {
           "roof",
           "for",
           "the",
-          "ark,",
+          "$package,",
           "and",
           "finish",
           "its",
