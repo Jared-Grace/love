@@ -1608,7 +1608,7 @@ export function bible_glyph_chapter_1ki02() {
           "$two_hearts+proper_name",
           "will",
           "remain",
-          "secure",
+          "$pin+doing",
           "before",
           "the",
           "$i_am",
