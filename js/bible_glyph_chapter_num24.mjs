@@ -638,7 +638,7 @@ export function bible_glyph_chapter_num24() {
           "secure,",
           "and",
           "your",
-          "nest",
+          "$nest_with_eggs",
           "is",
           "$palm_down",
           "in",
