@@ -79,7 +79,7 @@ export function bible_glyph_chapter_gen30() {
           "Then",
           "she",
           "$speech,",
-          "Here",
+          "$exclamation",
           "is",
           "my",
           "maidservant",
