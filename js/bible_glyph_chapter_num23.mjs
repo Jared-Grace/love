@@ -462,7 +462,7 @@ export function bible_glyph_chapter_num23() {
         words: [
           "And",
           "$i_am",
-          "met",
+          "$footprints+lots+doing",
           "with",
           "$proper_name$Balaam",
           "and",
