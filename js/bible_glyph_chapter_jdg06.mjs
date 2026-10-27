@@ -329,7 +329,7 @@ export function bible_glyph_chapter_jdg06() {
           "oak",
           "in",
           "$proper_name$Ophrah",
-          "that",
+          "$back+flashlight",
           "belonged",
           "to",
           "$proper_name$Joash",
