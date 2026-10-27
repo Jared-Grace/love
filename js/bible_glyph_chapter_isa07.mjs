@@ -574,7 +574,7 @@ export function bible_glyph_chapter_isa07() {
           "in",
           "the",
           "steep",
-          "ravines",
+          "$national_park",
           "and",
           "in",
           "the",
