@@ -424,7 +424,7 @@ export function bible_glyph_chapter_exo26() {
           "is",
           "to",
           "be",
-          "ten",
+          "$ten",
           "cubits",
           "long",
           "and",
