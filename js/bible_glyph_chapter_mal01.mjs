@@ -289,7 +289,7 @@ export function bible_glyph_chapter_mal01() {
           "them",
           "to",
           "your",
-          "governor!",
+          "$crown+city!",
           "Would",
           "he",
           "be",
