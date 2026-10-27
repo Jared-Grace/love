@@ -754,7 +754,7 @@ export function bible_glyph_chapter_gen37() {
           "Then",
           "Judah",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "$brother,",
           "What",
