@@ -1004,7 +1004,7 @@ export function bible_glyph_chapter_deu01() {
           "for",
           "you",
           "to",
-          "camp",
+          "$camp+doing",
           "and",
           "to",
           "$eye",
