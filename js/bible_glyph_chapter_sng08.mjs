@@ -215,7 +215,7 @@ export function bible_glyph_chapter_sng08() {
           "were",
           "to",
           "$hands_giving",
-          "all",
+          "$all",
           "the",
           "wealth",
           "of",
