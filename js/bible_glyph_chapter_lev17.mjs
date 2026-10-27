@@ -237,7 +237,7 @@ export function bible_glyph_chapter_lev17() {
           "have",
           "prostituted",
           "$next_track.",
-          "This",
+          "$flashlight",
           "will",
           "be",
           "a",
