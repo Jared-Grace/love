@@ -226,7 +226,7 @@ export function bible_glyph_chapter_psa027() {
           "be",
           "merciful",
           "and",
-          "answer",
+          "$speech+turn_back",
           "me.",
         ],
       },
