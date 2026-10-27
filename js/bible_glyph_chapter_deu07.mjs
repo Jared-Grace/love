@@ -174,7 +174,7 @@ export function bible_glyph_chapter_deu07() {
           "cut",
           "down",
           "their",
-          "Asherah",
+          "$wood+imp",
           "poles,",
           "and",
           "burn",
