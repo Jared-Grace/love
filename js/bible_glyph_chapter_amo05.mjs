@@ -541,7 +541,7 @@ export function bible_glyph_chapter_amo05() {
           "be",
           "for",
           "you?",
-          "It",
+          "$pointing_back",
           "will",
           "be",
           "$darkness",
