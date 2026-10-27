@@ -382,7 +382,7 @@ export function bible_glyph_chapter_gen44() {
           "$house,",
           "$pointing_back",
           "was",
-          "still",
+          "$repeat",
           "there,",
           "and",
           "they",
