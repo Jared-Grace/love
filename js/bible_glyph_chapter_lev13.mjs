@@ -1674,7 +1674,7 @@ export function bible_glyph_chapter_lev13() {
           "the",
           "article",
           "is",
-          "unclean.",
+          "$soap+no_entry.",
         ],
       },
       {
