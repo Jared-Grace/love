@@ -1048,7 +1048,7 @@ export function bible_glyph_chapter_2ki04() {
           "$bed+doing",
           "$pointing_up",
           "his",
-          "bed.",
+          "$bed.",
         ],
       },
       {
