@@ -353,7 +353,7 @@ export function bible_glyph_chapter_exo29() {
           "$hand_receiving",
           "$all",
           "the",
-          "fat",
+          "$bacon",
           "that",
           "covers",
           "the",
