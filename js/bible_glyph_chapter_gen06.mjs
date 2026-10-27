@@ -596,7 +596,7 @@ export function bible_glyph_chapter_gen06() {
           "kind",
           "of",
           "food",
-          "that",
+          "$back+flashlight",
           "is",
           "eaten,",
           "and",
