@@ -543,7 +543,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 18,
         words: [
           "But",
-          "Balaam",
+          "$foreigner+proper_name",
           "$speech",
           "to",
           "the",
