@@ -1065,7 +1065,7 @@ export function bible_glyph_chapter_gen41() {
           "$speech",
           "to",
           "$i_am+plus,",
-          '"Since',
+          '"$next_track',
           "$heart_on_fire",
           "has",
           "made",
