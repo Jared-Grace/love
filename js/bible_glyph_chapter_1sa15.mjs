@@ -882,7 +882,7 @@ export function bible_glyph_chapter_1sa15() {
         words: [
           "As",
           "$ear+heart_on_fire",
-          "turned",
+          "$around+doing",
           "to",
           "$walking,",
           "Saul",
