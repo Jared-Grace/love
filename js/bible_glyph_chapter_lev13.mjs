@@ -1905,7 +1905,7 @@ export function bible_glyph_chapter_lev13() {
           "to",
           "be",
           "washed",
-          "again,",
+          "$second_place,",
           "and",
           "it",
           "will",
