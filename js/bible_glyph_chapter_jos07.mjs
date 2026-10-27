@@ -586,7 +586,7 @@ export function bible_glyph_chapter_jos07() {
           "and",
           "the",
           "$house",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "selects",
