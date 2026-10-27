@@ -463,7 +463,7 @@ export function bible_glyph_chapter_gen50() {
           "$toward",
           "$i_am+plus,",
           "$speech,",
-          "Before",
+          "$face",
           "he",
           "$skull,",
           "your",
