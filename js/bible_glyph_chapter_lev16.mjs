@@ -1007,7 +1007,7 @@ export function bible_glyph_chapter_lev16() {
           "taken",
           "$toward",
           "the",
-          "camp;",
+          "$camp;",
           "their",
           "hides,",
           "their",
