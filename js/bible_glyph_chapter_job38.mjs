@@ -809,7 +809,7 @@ export function bible_glyph_chapter_job38() {
           "when",
           "its",
           "$child",
-          "cry",
+          "$sos_button+doing",
           "out",
           "to",
           "$heart_on_fire",
