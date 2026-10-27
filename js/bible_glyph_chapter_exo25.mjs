@@ -848,7 +848,7 @@ export function bible_glyph_chapter_exo25() {
           "the",
           "lampstand",
           "itself",
-          "four",
+          "$four",
           "cups",
           "shaped",
           "like",
