@@ -94,7 +94,7 @@ export function bible_glyph_chapter_job38() {
           "you",
           "$lightbulb!",
           "Or",
-          "who",
+          "$person+question",
           "stretched",
           "a",
           "measuring",
