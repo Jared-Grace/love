@@ -399,7 +399,7 @@ export function bible_glyph_chapter_amo09() {
           "draw",
           "near",
           "or",
-          "confront",
+          "$face+round_pushpin+doing",
           "us.",
         ],
       },
