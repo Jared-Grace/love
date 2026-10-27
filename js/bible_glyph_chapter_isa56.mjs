@@ -390,7 +390,7 @@ export function bible_glyph_chapter_isa56() {
           "do",
           "$no_entry",
           "$lightbulb",
-          "discernment;",
+          "$brain;",
           "they",
           "all",
           "turn",
