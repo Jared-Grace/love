@@ -305,7 +305,7 @@ export function bible_glyph_chapter_exo38() {
           "$sea",
           "had",
           "curtains",
-          "fifty",
+          "$five+zero",
           "cubits",
           "long,",
           "with",
