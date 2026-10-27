@@ -387,7 +387,7 @@ export function bible_glyph_chapter_psa090() {
           "$hand",
           "-",
           "yes,",
-          "establish",
+          "$pin+doing",
           "the",
           "work",
           "of",
