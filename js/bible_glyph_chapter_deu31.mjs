@@ -659,7 +659,7 @@ export function bible_glyph_chapter_deu31() {
           "$face,",
           "because",
           "of",
-          "all",
+          "$all",
           "the",
           "$thumbs_down",
           "they",
