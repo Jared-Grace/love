@@ -637,7 +637,7 @@ export function bible_glyph_chapter_1ki18() {
           "$walking",
           "Him.",
           "But",
-          "if",
+          "$traffic_light",
           "Baal",
           "is",
           "God,",
