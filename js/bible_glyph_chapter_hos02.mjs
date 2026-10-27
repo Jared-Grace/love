@@ -417,7 +417,7 @@ export function bible_glyph_chapter_hos02() {
           "when",
           "she",
           "burned",
-          "incense",
+          "$incense+doing",
           "to",
           "them,",
           "when",
