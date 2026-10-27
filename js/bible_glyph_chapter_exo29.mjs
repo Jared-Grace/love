@@ -181,7 +181,7 @@ export function bible_glyph_chapter_exo29() {
           "$hand_receiving",
           "the",
           "anointing",
-          "oil",
+          "$lotion_bottle",
           "and",
           "$oil+doing",
           "him",
