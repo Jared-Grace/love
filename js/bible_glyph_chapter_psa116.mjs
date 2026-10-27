@@ -207,7 +207,7 @@ export function bible_glyph_chapter_psa116() {
           "In",
           "my",
           "alarm",
-          "I",
+          "$me",
           "$speech,",
           "All",
           "$person",
