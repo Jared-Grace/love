@@ -228,7 +228,7 @@ export function bible_glyph_chapter_gen11() {
           "and",
           "they",
           "stopped",
-          "building",
+          "$brick",
           "the",
           "$city.",
         ],
