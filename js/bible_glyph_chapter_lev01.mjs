@@ -357,7 +357,7 @@ export function bible_glyph_chapter_lev01() {
           "and",
           "$priest",
           "shall",
-          "present",
+          "$magnet+doing",
           "all",
           "of",
           "it",
