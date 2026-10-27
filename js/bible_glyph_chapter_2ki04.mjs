@@ -1352,7 +1352,7 @@ export function bible_glyph_chapter_2ki04() {
           "$speech,",
           "$hand_receiving",
           "some",
-          "flour.",
+          "$wheat+flour.",
           "He",
           "threw",
           "it",
