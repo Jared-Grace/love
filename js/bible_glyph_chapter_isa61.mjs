@@ -408,7 +408,7 @@ export function bible_glyph_chapter_isa61() {
           "to",
           "spring",
           "up,",
-          "so",
+          "$right_arrow",
           "the",
           "$crown",
           "$i_am",
