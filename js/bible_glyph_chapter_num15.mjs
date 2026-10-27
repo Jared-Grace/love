@@ -116,7 +116,7 @@ export function bible_glyph_chapter_num15() {
           "with",
           "a",
           "quarter",
-          "hin",
+          "$jar+straight_ruler",
           "of",
           "olive",
           "oil.",
