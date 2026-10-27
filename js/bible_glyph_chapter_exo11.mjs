@@ -152,7 +152,7 @@ export function bible_glyph_chapter_exo11() {
         words: [
           "and",
           "every",
-          "firstborn",
+          "$first_place+baby",
           "in",
           "the",
           "$earth",
