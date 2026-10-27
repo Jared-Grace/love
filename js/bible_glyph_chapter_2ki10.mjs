@@ -733,7 +733,7 @@ export function bible_glyph_chapter_2ki10() {
           "I",
           "have",
           "a",
-          "great",
+          "$top",
           "$sacrifice",
           "for",
           "Baal.",
