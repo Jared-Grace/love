@@ -121,7 +121,7 @@ export function bible_glyph_chapter_job42() {
           "in",
           "$dust",
           "and",
-          "ashes.",
+          "$ashes.",
         ],
       },
       {
