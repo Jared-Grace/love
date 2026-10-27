@@ -415,7 +415,7 @@ export function bible_glyph_chapter_isa43() {
       {
         verse_number: 13,
         words: [
-          "Even",
+          "$plus",
           "from",
           "the",
           "$sun",
