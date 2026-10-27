@@ -602,7 +602,7 @@ export function bible_glyph_chapter_exo22() {
         words: [
           "$all",
           "$bed+doing",
-          "with",
+          "$linked_paperclips",
           "an",
           "animal",
           "must",
