@@ -405,7 +405,7 @@ export function bible_glyph_chapter_1ki19() {
           "$no_entry",
           "in",
           "the",
-          "wind.",
+          "$wind.",
           "After",
           "the",
           "wind",
