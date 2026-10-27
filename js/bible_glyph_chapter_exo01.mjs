@@ -345,7 +345,7 @@ export function bible_glyph_chapter_exo01() {
           "$skull+doing",
           "him;",
           "but",
-          "if",
+          "$traffic_light",
           "it",
           "is",
           "a",
