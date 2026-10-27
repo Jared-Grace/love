@@ -439,7 +439,7 @@ export function bible_glyph_chapter_1ki20() {
           "Meanwhile",
           "a",
           "$megaphone",
-          "approached",
+          "$walking+toward",
           "$proper_name$Ahab",
           "$king",
           "of",
