@@ -81,7 +81,7 @@ export function bible_glyph_chapter_1sa02() {
         words: [
           "Do",
           "$no_entry",
-          "boast",
+          "$multiply+doing",
           "so",
           "proudly,",
           "or",
