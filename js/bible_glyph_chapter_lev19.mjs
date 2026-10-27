@@ -936,7 +936,7 @@ export function bible_glyph_chapter_lev19() {
           "him",
           "as",
           "yourself,",
-          "for",
+          "$pointing",
           "you",
           "were",
           "foreigners",
