@@ -347,7 +347,7 @@ export function bible_glyph_chapter_2sa12() {
           "from",
           "your",
           "$house,",
-          "because",
+          "$foot+end_arrow+manner",
           "you",
           "have",
           "despised",
