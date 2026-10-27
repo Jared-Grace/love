@@ -1417,7 +1417,7 @@ export function bible_glyph_chapter_lev25() {
           "residing",
           "among",
           "you",
-          "prospers",
+          "$running+hand_receiving+doing",
           "in",
           "$hand,",
           "but",
