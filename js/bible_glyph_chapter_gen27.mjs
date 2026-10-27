@@ -1277,7 +1277,7 @@ export function bible_glyph_chapter_gen27() {
           "by",
           "plotting",
           "to",
-          "kill",
+          "$fist+skull",
           "you.",
         ],
       },
