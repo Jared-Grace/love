@@ -605,7 +605,7 @@ export function bible_glyph_chapter_neh09() {
           "God,",
           "$heart_orange+describing",
           "and",
-          "compassionate,",
+          "$hugging_face+describing,",
           "slow",
           "to",
           "anger",
