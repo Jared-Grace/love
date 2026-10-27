@@ -168,7 +168,7 @@ export function bible_glyph_chapter_ezk03() {
           "you",
           "$no_entry",
           "$ear.",
-          "Surely",
+          "$traffic_light",
           "if",
           "I",
           "had",
