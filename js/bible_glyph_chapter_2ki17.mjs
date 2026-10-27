@@ -619,7 +619,7 @@ export function bible_glyph_chapter_2ki17() {
           "$i_am",
           "was",
           "very",
-          "angry",
+          "$nose+face_steam+doing",
           "with",
           "$wrestling+heart_on_fire,",
           "and",
