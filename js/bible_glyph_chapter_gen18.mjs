@@ -768,7 +768,7 @@ export function bible_glyph_chapter_gen18() {
           "$traffic_light",
           "I",
           "$magnifying_glass+exclamation",
-          "fifty",
+          "$five+zero",
           "$ruler",
           "within",
           "the",
