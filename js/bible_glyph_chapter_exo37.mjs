@@ -645,7 +645,7 @@ export function bible_glyph_chapter_exo37() {
           "$arrow_both_ways.",
           "It",
           "was",
-          "square,",
+          "$four+straight_ruler+describing,",
           "and",
           "two",
           "cubits",
