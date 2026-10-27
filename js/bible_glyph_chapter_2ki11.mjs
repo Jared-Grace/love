@@ -175,7 +175,7 @@ export function bible_glyph_chapter_2ki11() {
           "and",
           "commanded",
           "them,",
-          "This",
+          "$flashlight",
           "is",
           "what",
           "you",
