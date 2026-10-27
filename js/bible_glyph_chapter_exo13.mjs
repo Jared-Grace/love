@@ -492,7 +492,7 @@ export function bible_glyph_chapter_exo13() {
           "serve",
           "as",
           "a",
-          "sign",
+          "$placard",
           "on",
           "your",
           "$hand",
