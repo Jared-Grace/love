@@ -324,7 +324,7 @@ export function bible_glyph_chapter_psa019() {
           "of",
           "my",
           "$heart_organ",
-          "be",
+          "$link",
           "pleasing",
           "in",
           "Your",
