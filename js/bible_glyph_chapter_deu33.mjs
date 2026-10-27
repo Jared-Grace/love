@@ -631,7 +631,7 @@ export function bible_glyph_chapter_deu33() {
           "for",
           "himself,",
           "$pointing",
-          "there",
+          "$telescope",
           "the",
           "portion",
           "of",
