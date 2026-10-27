@@ -112,7 +112,7 @@ export function bible_glyph_chapter_num15() {
           "ephah",
           "of",
           "$flour",
-          "mixed",
+          "$spoon+cyclone",
           "with",
           "a",
           "quarter",
