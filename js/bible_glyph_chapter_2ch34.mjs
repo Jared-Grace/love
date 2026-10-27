@@ -130,7 +130,7 @@ export function bible_glyph_chapter_2ch34() {
           "Then",
           "in",
           "his",
-          "presence",
+          "$face",
           "the",
           "$altar",
           "of",
