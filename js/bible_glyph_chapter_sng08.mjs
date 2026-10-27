@@ -158,7 +158,7 @@ export function bible_glyph_chapter_sng08() {
       {
         verse_number: 6,
         words: [
-          "Set",
+          "$palm_down",
           "me",
           "as",
           "a",
