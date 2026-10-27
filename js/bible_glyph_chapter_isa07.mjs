@@ -728,7 +728,7 @@ export function bible_glyph_chapter_isa07() {
           "be",
           "covered",
           "with",
-          "briers",
+          "$thorns+gem_stone",
           "and",
           "thorns.",
         ],
