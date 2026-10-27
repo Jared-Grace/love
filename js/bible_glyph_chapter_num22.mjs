@@ -657,7 +657,7 @@ export function bible_glyph_chapter_num22() {
           "up",
           "in",
           "the",
-          "morning,",
+          "$morning,",
           "saddled",
           "his",
           "donkey,",
