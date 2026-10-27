@@ -447,7 +447,7 @@ export function bible_glyph_chapter_gen48() {
           "crossing",
           "his",
           "$hand,",
-          "although",
+          "$pointing",
           "$proper_name$Manasseh",
           "was",
           "the",
