@@ -316,7 +316,7 @@ export function bible_glyph_chapter_gen25() {
           "of",
           "$ear+heart_on_fire,",
           "and",
-          "these",
+          "$flashlight+flashlight",
           "were",
           "their",
           "$name_tag",
