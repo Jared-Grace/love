@@ -253,7 +253,7 @@ export function bible_glyph_chapter_exo33() {
           "$walking+tray_out",
           "to",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting",
           "outside",
