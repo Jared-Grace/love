@@ -52,7 +52,7 @@ export function bible_glyph_chapter_exo09() {
         verse_number: 2,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "you",
           "refuse",
           "to",
