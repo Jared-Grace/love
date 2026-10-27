@@ -255,7 +255,7 @@ export function bible_glyph_chapter_gen24() {
           "are",
           "released",
           "from",
-          "this",
+          "$flashlight",
           "$raised_back_of_hand",
           "of",
           "mine.",
