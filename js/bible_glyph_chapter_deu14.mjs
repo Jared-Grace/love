@@ -113,7 +113,7 @@ export function bible_glyph_chapter_deu14() {
           "the",
           "deer,",
           "the",
-          "gazelle,",
+          "$deer+sparkles,",
           "the",
           "roe",
           "deer,",
