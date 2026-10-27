@@ -119,7 +119,7 @@ export function bible_glyph_chapter_hos02() {
           "her",
           "$son,",
           "$pointing",
-          "they",
+          "$pointing_back",
           "are",
           "the",
           "$son",
