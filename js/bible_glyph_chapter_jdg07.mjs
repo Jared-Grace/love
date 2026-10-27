@@ -92,7 +92,7 @@ export function bible_glyph_chapter_jdg07() {
         verse_number: 3,
         words: [
           "Now",
-          "therefore",
+          "$watch",
           "proclaim",
           "in",
           "the",
