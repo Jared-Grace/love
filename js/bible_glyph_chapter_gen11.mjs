@@ -59,7 +59,7 @@ export function bible_glyph_chapter_gen11() {
           "one",
           "$man_beard",
           "$toward",
-          "another,",
+          "$person+sheep,",
           "Come,",
           "let",
           "us",
