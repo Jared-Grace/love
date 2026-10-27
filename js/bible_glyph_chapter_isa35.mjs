@@ -87,7 +87,7 @@ export function bible_glyph_chapter_isa35() {
           "steady",
           "the",
           "feeble",
-          "knees.",
+          "$kneeling+leg.",
         ],
       },
       {
