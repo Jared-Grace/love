@@ -16,7 +16,7 @@ export function bible_glyph_chapter_mic07() {
           "Woe",
           "is",
           "me!",
-          "For",
+          "$pointing",
           "I",
           "am",
           "like",
