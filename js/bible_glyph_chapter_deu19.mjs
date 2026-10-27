@@ -189,7 +189,7 @@ export function bible_glyph_chapter_deu19() {
           "to",
           "$one",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "$city$s",
           "to",
           "save",
