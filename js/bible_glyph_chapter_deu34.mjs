@@ -256,7 +256,7 @@ export function bible_glyph_chapter_deu34() {
           "of",
           "weeping",
           "and",
-          "mourning",
+          "$loudly_crying+coffin+thing",
           "for",
           "$fishing_pole+proper_name",
           "came",
