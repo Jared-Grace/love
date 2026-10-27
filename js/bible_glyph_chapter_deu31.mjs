@@ -311,7 +311,7 @@ export function bible_glyph_chapter_deu31() {
           "$i_am,",
           "and",
           "to",
-          "all",
+          "$all",
           "the",
           "elders",
           "of",
