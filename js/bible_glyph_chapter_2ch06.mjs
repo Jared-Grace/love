@@ -262,7 +262,7 @@ export function bible_glyph_chapter_2ch06() {
       {
         verse_number: 9,
         words: [
-          "Nevertheless,",
+          "$one+check,",
           "you",
           "are",
           "$no_entry",
