@@ -888,7 +888,7 @@ export function bible_glyph_chapter_isa49() {
           "and",
           "$me",
           "will",
-          "save",
+          "$rescue",
           "your",
           "$son$s.",
         ],
