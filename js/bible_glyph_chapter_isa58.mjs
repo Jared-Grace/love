@@ -162,7 +162,7 @@ export function bible_glyph_chapter_isa58() {
           "be",
           "$ear",
           "on",
-          "high.",
+          "$up_arrow+thing.",
         ],
       },
       {
