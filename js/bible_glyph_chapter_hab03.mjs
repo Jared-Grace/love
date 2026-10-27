@@ -223,7 +223,7 @@ export function bible_glyph_chapter_hab03() {
           "for",
           "many",
           "arrows.",
-          "Selah.",
+          "$pause_button.",
           "You",
           "split",
           "the",
