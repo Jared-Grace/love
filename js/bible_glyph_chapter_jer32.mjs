@@ -527,7 +527,7 @@ export function bible_glyph_chapter_jer32() {
           "and",
           "vineyards",
           "will",
-          "again",
+          "$repeat",
           "be",
           "bought",
           "in",
