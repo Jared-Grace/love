@@ -365,7 +365,7 @@ export function bible_glyph_chapter_1sa07() {
           "them",
           "into",
           "such",
-          "confusion",
+          "$crowd+tornado+doing",
           "that",
           "they",
           "fled",
