@@ -207,7 +207,7 @@ export function bible_glyph_chapter_gen18() {
           "herd,",
           "$hand_receiving",
           "a",
-          "tender",
+          "$baby+heart_red+describing",
           "and",
           "$thumbs_up",
           "$son",
