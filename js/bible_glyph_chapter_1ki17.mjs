@@ -99,7 +99,7 @@ export function bible_glyph_chapter_1ki17() {
           "you",
           "are",
           "to",
-          "drink",
+          "$cup_with_straw",
           "from",
           "the",
           "$national_park,",
