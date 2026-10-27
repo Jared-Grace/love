@@ -703,7 +703,7 @@ export function bible_glyph_chapter_jos02() {
         verse_number: 21,
         words: [
           "Let",
-          "it",
+          "$pointing_back",
           "be",
           "as",
           "you",
