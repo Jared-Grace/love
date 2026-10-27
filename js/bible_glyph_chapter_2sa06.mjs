@@ -15,7 +15,7 @@ export function bible_glyph_chapter_2sa06() {
         verse_number: 1,
         words: [
           "$two_hearts+proper_name",
-          "again",
+          "$repeat",
           "$crowd+doing",
           "all",
           "the",
