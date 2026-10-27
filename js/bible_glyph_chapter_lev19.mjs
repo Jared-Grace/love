@@ -851,7 +851,7 @@ export function bible_glyph_chapter_lev19() {
           "to",
           "$ghost+person",
           "or",
-          "spiritists.",
+          "$lightbulb+ghost.",
           "Do",
           "$no_entry",
           "seek",
