@@ -535,7 +535,7 @@ export function bible_glyph_chapter_ezr03() {
           "the",
           "shouts",
           "of",
-          "joy",
+          "$beaming",
           "from",
           "the",
           "$voice",
