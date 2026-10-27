@@ -762,7 +762,7 @@ export function bible_glyph_chapter_2ki17() {
           "$no_entry",
           "$away+doing",
           "away",
-          "from",
+          "$tray_out",
           "them.",
         ],
       },
