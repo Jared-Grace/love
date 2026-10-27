@@ -583,7 +583,7 @@ export function bible_glyph_chapter_2sa11() {
           "out",
           "and",
           "fought",
-          "against",
+          "$safety_pin",
           "$i_am+father,",
           "some",
           "of",
