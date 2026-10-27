@@ -720,7 +720,7 @@ export function bible_glyph_chapter_lam03() {
           "$road,",
           "and",
           "$turn_back",
-          "to",
+          "$finish",
           "the",
           "$i_am.",
         ],
