@@ -728,7 +728,7 @@ export function bible_glyph_chapter_exo09() {
         verse_number: 24,
         words: [
           "The",
-          "hail",
+          "$ice",
           "fell",
           "and",
           "the",
