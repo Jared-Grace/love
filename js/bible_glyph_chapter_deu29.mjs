@@ -675,7 +675,7 @@ export function bible_glyph_chapter_deu29() {
           "your",
           "$son$s",
           "who",
-          "follow",
+          "$person+pointing_up",
           "you",
           "and",
           "the",
