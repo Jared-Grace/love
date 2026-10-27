@@ -335,7 +335,7 @@ export function bible_glyph_chapter_num22() {
       {
         verse_number: 11,
         words: [
-          "Behold,",
+          "$exclamation,",
           "a",
           "$family",
           "has",
