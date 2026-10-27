@@ -20,7 +20,7 @@ export function bible_glyph_chapter_jer23() {
           "the",
           "shepherds",
           "who",
-          "destroy",
+          "$wilted_flower",
           "and",
           "scatter",
           "the",
