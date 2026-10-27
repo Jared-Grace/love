@@ -30,7 +30,7 @@ export function bible_glyph_chapter_deu18() {
           "$pizza",
           "or",
           "$inheritance",
-          "with",
+          "$linked_paperclips",
           "$wrestling+heart_on_fire.",
           "They",
           "are",
