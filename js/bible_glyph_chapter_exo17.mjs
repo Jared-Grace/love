@@ -364,7 +364,7 @@ export function bible_glyph_chapter_exo17() {
           "his",
           "$hand,",
           "$proper_name$Amalek",
-          "prevailed.",
+          "$might+man_beard+doing.",
         ],
       },
       {
