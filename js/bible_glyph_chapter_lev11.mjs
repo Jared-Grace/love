@@ -126,7 +126,7 @@ export function bible_glyph_chapter_lev11() {
           "rock",
           "$badger,",
           "$pointing",
-          "it",
+          "$pointing_back",
           "$walking+pointing_up",
           "the",
           "$cow_face+clockwise_arrows+thing,",
