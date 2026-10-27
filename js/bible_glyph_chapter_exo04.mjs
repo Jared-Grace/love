@@ -370,7 +370,7 @@ export function bible_glyph_chapter_exo04() {
           "his",
           "mouth?",
           "Or",
-          "who",
+          "$person+question",
           "makes",
           "the",
           "mute",
