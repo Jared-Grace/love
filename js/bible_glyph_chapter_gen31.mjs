@@ -738,7 +738,7 @@ export function bible_glyph_chapter_gen31() {
           "and",
           "my",
           "$woman.",
-          "Now",
+          "$watch",
           "you",
           "have",
           "$hammer+doing",
