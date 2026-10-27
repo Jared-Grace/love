@@ -290,7 +290,7 @@ export function bible_glyph_chapter_job38() {
           "and",
           "their",
           "upraised",
-          "arm",
+          "$hand+might",
           "is",
           "broken.",
         ],
