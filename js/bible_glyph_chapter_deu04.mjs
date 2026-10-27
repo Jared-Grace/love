@@ -111,7 +111,7 @@ export function bible_glyph_chapter_deu04() {
           "$i_am",
           "your",
           "$heart_on_fire",
-          "destroyed",
+          "$bomb",
           "from",
           "among",
           "you",
