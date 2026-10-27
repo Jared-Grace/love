@@ -54,7 +54,7 @@ export function bible_glyph_chapter_hab02() {
           "$i_am",
           "answered",
           "me:",
-          "Write",
+          "$writing_hand",
           "down",
           "this",
           "vision",
