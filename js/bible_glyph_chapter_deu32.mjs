@@ -323,7 +323,7 @@ export function bible_glyph_chapter_deu32() {
           "him,",
           "and",
           "no",
-          "foreign",
+          "$detective+thing",
           "$moai",
           "was",
           "with",
