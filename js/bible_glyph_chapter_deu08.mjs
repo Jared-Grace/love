@@ -149,7 +149,7 @@ export function bible_glyph_chapter_deu08() {
           "clothing",
           "did",
           "$no_entry",
-          "wear",
+          "$garment+hole+doing",
           "out",
           "and",
           "your",
