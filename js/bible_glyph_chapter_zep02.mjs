@@ -310,7 +310,7 @@ export function bible_glyph_chapter_zep02() {
           "My",
           "$family",
           "will",
-          "plunder",
+          "$pirate_flag+doing",
           "them;",
           "the",
           "remainder",
