@@ -614,7 +614,7 @@ export function bible_glyph_chapter_deu33() {
           "tears",
           "off",
           "an",
-          "arm",
+          "$hand+might",
           "or",
           "a",
           "head.",
