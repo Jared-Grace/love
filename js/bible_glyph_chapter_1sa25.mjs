@@ -505,7 +505,7 @@ export function bible_glyph_chapter_1sa25() {
           "went",
           "missing",
           "the",
-          "whole",
+          "$all",
           "$sun",
           "we",
           "$walking",
