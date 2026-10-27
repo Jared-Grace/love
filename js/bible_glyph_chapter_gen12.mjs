@@ -178,7 +178,7 @@ export function bible_glyph_chapter_gen12() {
         verse_number: 6,
         words: [
           "$proper_name$Abram",
-          "traveled",
+          "$bridge",
           "through",
           "the",
           "$earth",
