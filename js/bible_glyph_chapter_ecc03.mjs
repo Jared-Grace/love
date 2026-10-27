@@ -269,7 +269,7 @@ export function bible_glyph_chapter_ecc03() {
           "$hammer+doing",
           "from",
           "beginning",
-          "to",
+          "$finish",
           "end.",
         ],
       },
