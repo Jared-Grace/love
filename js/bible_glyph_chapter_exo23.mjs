@@ -117,7 +117,7 @@ export function bible_glyph_chapter_exo23() {
           "hates",
           "you",
           "$sheep+down_arrow+doing",
-          "under",
+          "$down_arrow",
           "its",
           "load,",
           "do",
