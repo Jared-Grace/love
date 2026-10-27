@@ -413,7 +413,7 @@ export function bible_glyph_chapter_deu11() {
           "of",
           "the",
           "$year",
-          "to",
+          "$finish",
           "its",
           "end.",
         ],
