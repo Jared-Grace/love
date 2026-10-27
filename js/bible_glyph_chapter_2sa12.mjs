@@ -981,7 +981,7 @@ export function bible_glyph_chapter_2sa12() {
           "$king",
           "from",
           "his",
-          "head.",
+          "$person_gesturing_ok.",
           "It",
           "weighed",
           "a",
