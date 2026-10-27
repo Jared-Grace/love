@@ -334,7 +334,7 @@ export function bible_glyph_chapter_exo35() {
           "fragrant",
           "$incense,",
           "the",
-          "curtain",
+          "$umbrella+door",
           "for",
           "the",
           "doorway",
