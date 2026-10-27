@@ -716,7 +716,7 @@ export function bible_glyph_chapter_1sa02() {
           "served",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "Tent",
