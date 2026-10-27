@@ -252,7 +252,7 @@ export function bible_glyph_chapter_sng08() {
           "$hammer+doing",
           "for",
           "our",
-          "sister",
+          "$sister",
           "on",
           "the",
           "$sun",
