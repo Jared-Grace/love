@@ -194,7 +194,7 @@ export function bible_glyph_chapter_lev10() {
           "congregation.",
           "$brother,",
           "the",
-          "whole",
+          "$all",
           "$house",
           "of",
           "$wrestling+heart_on_fire,",
