@@ -504,7 +504,7 @@ export function bible_glyph_chapter_num30() {
           "he",
           "nullifies",
           "them",
-          "after",
+          "$next_track",
           "he",
           "$ear",
           "of",
