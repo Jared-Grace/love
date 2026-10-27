@@ -934,7 +934,7 @@ export function bible_glyph_chapter_2ch34() {
           "read",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$king",
