@@ -204,7 +204,7 @@ export function bible_glyph_chapter_lam05() {
       {
         verse_number: 12,
         words: [
-          "Princes",
+          "$military_medal",
           "have",
           "been",
           "hung",
