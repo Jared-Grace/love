@@ -283,7 +283,7 @@ export function bible_glyph_chapter_exo09() {
           "So",
           "they",
           "$hand_receiving",
-          "soot",
+          "$dust+dashing_away",
           "from",
           "the",
           "furnace",
