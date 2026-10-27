@@ -811,7 +811,7 @@ export function bible_glyph_chapter_exo39() {
           "it",
           "a",
           "blue",
-          "cord",
+          "$wrestling+thread",
           "to",
           "$hands_giving",
           "it",
