@@ -139,7 +139,7 @@ export function bible_glyph_chapter_num32() {
           "we",
           "have",
           "found",
-          "favor",
+          "$heart_orange",
           "in",
           "your",
           "$eyes,",
