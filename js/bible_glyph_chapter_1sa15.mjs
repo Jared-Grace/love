@@ -381,7 +381,7 @@ export function bible_glyph_chapter_1sa15() {
           "Early",
           "in",
           "the",
-          "morning",
+          "$morning",
           "$ear+heart_on_fire",
           "got",
           "up",
