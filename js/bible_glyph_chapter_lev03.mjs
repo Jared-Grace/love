@@ -461,7 +461,7 @@ export function bible_glyph_chapter_lev03() {
           "$nose.",
           "$all",
           "the",
-          "fat",
+          "$bacon",
           "belongs",
           "to",
           "$i_am.",
