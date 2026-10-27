@@ -446,7 +446,7 @@ export function bible_glyph_chapter_jos03() {
           "broke",
           "camp",
           "to",
-          "cross",
+          "$bridge",
           "the",
           "$pointing_down+proper_name,",
           "the",
