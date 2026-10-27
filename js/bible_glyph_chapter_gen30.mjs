@@ -82,7 +82,7 @@ export function bible_glyph_chapter_gen30() {
           "$exclamation",
           "is",
           "my",
-          "maidservant",
+          "$broom",
           "$proper_name$Bilhah.",
           "$footprints",
           "her,",
