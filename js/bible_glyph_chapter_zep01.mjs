@@ -327,7 +327,7 @@ export function bible_glyph_chapter_zep01() {
           "$crying_face+loudspeaker+thing",
           "$tray_out",
           "the",
-          "Second",
+          "$two+multiply",
           "District,",
           "and",
           "a",
