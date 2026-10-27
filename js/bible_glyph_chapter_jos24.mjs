@@ -441,7 +441,7 @@ export function bible_glyph_chapter_jos24() {
           "you",
           "did",
           "$no_entry",
-          "build,",
+          "$brick,",
           "and",
           "now",
           "you",
