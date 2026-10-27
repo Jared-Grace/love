@@ -220,7 +220,7 @@ export function bible_glyph_chapter_num14() {
           "$traffic_light",
           "the",
           "$i_am",
-          "delights",
+          "$smiling_face_with_hearts+doing",
           "in",
           "us,",
           "He",
