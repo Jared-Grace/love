@@ -1123,7 +1123,7 @@ export function bible_glyph_chapter_num15() {
           "$reminder_ribbon",
           "and",
           "$hammer+doing",
-          "all",
+          "$all",
           "My",
           "$scroll,",
           "and",
