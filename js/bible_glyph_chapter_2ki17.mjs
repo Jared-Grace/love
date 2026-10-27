@@ -1254,7 +1254,7 @@ export function bible_glyph_chapter_2ki17() {
           "worship",
           "the",
           "$i_am,",
-          "who",
+          "$back+flashlight",
           "$walking+pointing_up",
           "you",
           "out",
