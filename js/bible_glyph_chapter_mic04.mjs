@@ -186,7 +186,7 @@ export function bible_glyph_chapter_mic04() {
           "to",
           "frighten",
           "him.",
-          "For",
+          "$pointing",
           "the",
           "mouth",
           "of",
