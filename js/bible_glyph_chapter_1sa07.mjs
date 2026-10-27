@@ -424,7 +424,7 @@ export function bible_glyph_chapter_1sa07() {
           "name",
           "Ebenezer,",
           "$speech,",
-          "Thus",
+          "$round_pushpin+pointing_down",
           "$finish",
           "$i_am",
           "has",
