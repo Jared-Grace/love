@@ -211,7 +211,7 @@ export function bible_glyph_chapter_amo05() {
           "who",
           "$hammer+doing",
           "the",
-          "Pleiades",
+          "$star+seven",
           "and",
           "Orion,",
           "who",
