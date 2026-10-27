@@ -618,7 +618,7 @@ export function bible_glyph_chapter_gen21() {
           "me",
           "before",
           "$heart_on_fire",
-          "here",
+          "$round_pushpin+pointing_down",
           "that",
           "you",
           "will",
