@@ -771,7 +771,7 @@ export function bible_glyph_chapter_exo12() {
           "doorframe",
           "and",
           "will",
-          "pass",
+          "$leg+up_arrow+doing",
           "over",
           "that",
           "doorway,",
