@@ -581,7 +581,7 @@ export function bible_glyph_chapter_pro03() {
           "for",
           "$pointing_back",
           "$person+house",
-          "trustfully",
+          "$anchor+thing",
           "beside",
           "you.",
         ],
