@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_lev26() {
           "lies",
           "desolate,",
           "while",
-          "you",
+          "$you",
           "are",
           "in",
           "the",
