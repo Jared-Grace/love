@@ -223,7 +223,7 @@ export function bible_glyph_chapter_lev12() {
           "the",
           "priest",
           "will",
-          "present",
+          "$magnet+doing",
           "them",
           "before",
           "$i_am",
