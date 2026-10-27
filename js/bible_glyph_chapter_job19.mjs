@@ -556,7 +556,7 @@ export function bible_glyph_chapter_job19() {
           "$sword",
           "yourselves,",
           "$pointing",
-          "wrath",
+          "$angry_face",
           "brings",
           "punishment",
           "by",
