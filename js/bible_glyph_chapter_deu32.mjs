@@ -1258,7 +1258,7 @@ export function bible_glyph_chapter_deu32() {
           "finished",
           "$mouth",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "to",
           "$all",
