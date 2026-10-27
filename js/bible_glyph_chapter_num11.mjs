@@ -796,7 +796,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "had",
           "them",
-          "stand",
+          "$person+round_pushpin",
           "around",
           "the",
           "tent.",
