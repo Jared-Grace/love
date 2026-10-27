@@ -110,7 +110,7 @@ export function bible_glyph_chapter_lev24() {
           "$bread+fire",
           "twelve",
           "loaves,",
-          "using",
+          "$link",
           "two",
           "tenths",
           "of",
