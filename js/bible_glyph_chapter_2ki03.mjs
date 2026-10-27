@@ -875,7 +875,7 @@ export function bible_glyph_chapter_2ki03() {
           "$eye",
           "$pointing",
           "the",
-          "battle",
+          "$crossed_swords",
           "was",
           "too",
           "fierce",
