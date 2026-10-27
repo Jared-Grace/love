@@ -826,7 +826,7 @@ export function bible_glyph_chapter_num22() {
           "stood",
           "in",
           "a",
-          "narrow",
+          "$clamp+thing",
           "$place",
           "where",
           "there",
