@@ -809,7 +809,7 @@ export function bible_glyph_chapter_num23() {
           "Then",
           "$foreigner+proper_name",
           "$speech,",
-          "Build",
+          "$brick",
           "for",
           "me",
           "here",
