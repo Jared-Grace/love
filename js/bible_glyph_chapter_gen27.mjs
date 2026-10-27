@@ -776,7 +776,7 @@ export function bible_glyph_chapter_gen27() {
           "$hands_giving",
           "you",
           "the",
-          "dew",
+          "$dew",
           "of",
           "$sky",
           "and",
