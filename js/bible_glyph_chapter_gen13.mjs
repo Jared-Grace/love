@@ -422,7 +422,7 @@ export function bible_glyph_chapter_gen13() {
           "$all",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "you",
           "$eye,",
           "I",
