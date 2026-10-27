@@ -1773,7 +1773,7 @@ export function bible_glyph_chapter_1ki08() {
           "You",
           "$hands_giving",
           "them",
-          "compassion",
+          "$hugging_face",
           "in",
           "the",
           "eyes",
