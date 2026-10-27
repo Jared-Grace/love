@@ -855,7 +855,7 @@ export function bible_glyph_chapter_gen18() {
           "to",
           "Him,",
           "Suppose",
-          "forty",
+          "$four+zero",
           "are",
           "found",
           "$telescope.",
