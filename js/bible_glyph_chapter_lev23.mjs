@@ -1162,7 +1162,7 @@ export function bible_glyph_chapter_lev23() {
           "to",
           "celebrate",
           "a",
-          "feast",
+          "$party_popper",
           "to",
           "$i_am",
           "for",
