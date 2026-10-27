@@ -178,7 +178,7 @@ export function bible_glyph_chapter_isa49() {
           "and",
           "My",
           "$heart_on_fire",
-          "is",
+          "$link",
           "My",
           "strength",
           "-",
