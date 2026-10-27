@@ -117,7 +117,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "the",
           "$son",
-          "wept",
+          "$loudly_crying",
           "$turn_back",
           "and",
           "$speech,",
