@@ -418,7 +418,7 @@ export function bible_glyph_chapter_1ki20() {
           "and",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "$kneeling,",
           "Take",
