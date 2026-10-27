@@ -172,7 +172,7 @@ export function bible_glyph_chapter_mic07() {
           "doors",
           "of",
           "your",
-          "mouth",
+          "$face_with_open_mouth",
           "from",
           "her",
           "who",
