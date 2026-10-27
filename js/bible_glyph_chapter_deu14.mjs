@@ -684,7 +684,7 @@ export function bible_glyph_chapter_deu14() {
           "end",
           "of",
           "every",
-          "three",
+          "$three",
           "years,",
           "$walking+tray_out",
           "a",
