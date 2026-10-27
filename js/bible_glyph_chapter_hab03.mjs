@@ -115,7 +115,7 @@ export function bible_glyph_chapter_hab03() {
       {
         verse_number: 5,
         words: [
-          "Plague",
+          "$face_with_medical_mask",
           "$walking",
           "before",
           "Him,",
