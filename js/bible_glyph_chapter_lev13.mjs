@@ -755,7 +755,7 @@ export function bible_glyph_chapter_lev13() {
           "does",
           "$no_entry",
           "$microbe+arrow_both_ways+doing,",
-          "it",
+          "$pointing_back",
           "is",
           "only",
           "the",
