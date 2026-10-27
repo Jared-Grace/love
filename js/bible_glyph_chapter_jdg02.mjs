@@ -757,7 +757,7 @@ export function bible_glyph_chapter_jdg02() {
           "$no_entry",
           "$wrestling+heart_on_fire",
           "will",
-          "keep",
+          "$guard",
           "the",
           "$road",
           "of",
