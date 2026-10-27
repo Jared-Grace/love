@@ -17,7 +17,7 @@ export function bible_glyph_chapter_deu09() {
         words: [
           "$ear,",
           "O",
-          "Israel:",
+          "$wrestling+heart_on_fire:",
           "$sun",
           "you",
           "are",
