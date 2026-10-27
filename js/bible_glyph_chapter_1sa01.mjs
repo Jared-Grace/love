@@ -284,7 +284,7 @@ export function bible_glyph_chapter_1sa01() {
           "chair",
           "by",
           "the",
-          "doorpost",
+          "$door+wood",
           "of",
           "the",
           "temple",
