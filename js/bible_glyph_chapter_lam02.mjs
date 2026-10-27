@@ -659,7 +659,7 @@ export function bible_glyph_chapter_lam02() {
           "All",
           "your",
           "enemies",
-          "open",
+          "$face_with_open_mouth+doing",
           "their",
           "mouths",
           "against",
