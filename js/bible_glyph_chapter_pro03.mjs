@@ -127,7 +127,7 @@ export function bible_glyph_chapter_pro03() {
           "$lightbulb",
           "Him,",
           "and",
-          "He",
+          "$pointing_back",
           "will",
           "make",
           "your",
