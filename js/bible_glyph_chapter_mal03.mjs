@@ -360,7 +360,7 @@ export function bible_glyph_chapter_mal03() {
           "of",
           "Hosts.",
           "See",
-          "if",
+          "$traffic_light",
           "I",
           "will",
           "$no_entry",
