@@ -770,7 +770,7 @@ export function bible_glyph_chapter_num18() {
           "$son",
           "of",
           "Levi",
-          "all",
+          "$all",
           "the",
           "tithes",
           "in",
