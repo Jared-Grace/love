@@ -1186,7 +1186,7 @@ export function bible_glyph_chapter_2ki10() {
           "from",
           "the",
           "$bow",
-          "that",
+          "$back+flashlight",
           "$proper_name$Jeroboam",
           "had",
           "caused",
