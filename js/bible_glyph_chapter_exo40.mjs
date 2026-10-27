@@ -119,7 +119,7 @@ export function bible_glyph_chapter_exo40() {
           "$door",
           "to",
           "the",
-          "tabernacle.",
+          "$tent+house.",
         ],
       },
       {
