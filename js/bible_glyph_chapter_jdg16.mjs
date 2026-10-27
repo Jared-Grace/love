@@ -1007,7 +1007,7 @@ export function bible_glyph_chapter_jdg16() {
           "where",
           "I",
           "can",
-          "feel",
+          "$hand_with_fingers_splayed+eyes+doing",
           "the",
           "pillars",
           "supporting",
