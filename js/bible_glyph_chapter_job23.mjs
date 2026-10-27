@@ -240,7 +240,7 @@ export function bible_glyph_chapter_job23() {
           "$scroll",
           "of",
           "His",
-          "lips;",
+          "$kiss_mark;",
           "I",
           "have",
           "treasured",
