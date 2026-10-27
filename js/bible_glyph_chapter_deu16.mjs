@@ -479,7 +479,7 @@ export function bible_glyph_chapter_deu16() {
           "And",
           "you",
           "shall",
-          "rejoice",
+          "$beaming+doing",
           "in",
           "your",
           "feast",
