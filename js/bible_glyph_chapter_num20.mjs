@@ -737,7 +737,7 @@ export function bible_glyph_chapter_num20() {
           "$footprints",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "have",
           "$hands_giving",
