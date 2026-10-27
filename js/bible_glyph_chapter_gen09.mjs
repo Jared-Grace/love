@@ -188,7 +188,7 @@ export function bible_glyph_chapter_gen09() {
           "$blood",
           "be",
           "shed,",
-          "for",
+          "$pointing",
           "in",
           "His",
           "own",
