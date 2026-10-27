@@ -528,7 +528,7 @@ export function bible_glyph_chapter_1ki17() {
       {
         verse_number: 17,
         words: [
-          "Later",
+          "$next_track",
           "the",
           "$son",
           "of",
