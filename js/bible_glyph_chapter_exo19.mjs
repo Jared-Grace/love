@@ -494,7 +494,7 @@ export function bible_glyph_chapter_exo19() {
           "$no_entry",
           "draw",
           "near",
-          "to",
+          "$toward",
           "a",
           "$woman.",
         ],
