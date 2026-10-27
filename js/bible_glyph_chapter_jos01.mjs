@@ -254,7 +254,7 @@ export function bible_glyph_chapter_jos01() {
           "from",
           "your",
           "$face_with_open_mouth;",
-          "meditate",
+          "$thinking+speech+doing",
           "on",
           "it",
           "day",
