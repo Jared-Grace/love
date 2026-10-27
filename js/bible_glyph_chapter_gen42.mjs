@@ -473,7 +473,7 @@ export function bible_glyph_chapter_gen42() {
           "to",
           "them,",
           "$hammer+doing",
-          "this",
+          "$flashlight",
           "and",
           "you",
           "will",
