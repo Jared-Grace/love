@@ -256,7 +256,7 @@ export function bible_glyph_chapter_2ki04() {
           "lived,",
           "and",
           "she",
-          "persuaded",
+          "$might+up_arrow",
           "him",
           "to",
           "have",
