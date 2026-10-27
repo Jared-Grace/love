@@ -570,7 +570,7 @@ export function bible_glyph_chapter_lev06() {
           "well",
           "kneaded,",
           "and",
-          "present",
+          "$magnet+doing",
           "it",
           "$bread+fire+divide",
           "in",
