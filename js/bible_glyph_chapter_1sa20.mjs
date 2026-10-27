@@ -974,7 +974,7 @@ export function bible_glyph_chapter_1sa20() {
           "is",
           "holding",
           "a",
-          "sacrifice",
+          "$sacrifice",
           "in",
           "the",
           "$city,",
