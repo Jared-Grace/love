@@ -736,7 +736,7 @@ export function bible_glyph_chapter_lev23() {
           "day",
           "of",
           "rest,",
-          "announced",
+          "$reminder_ribbon+thing",
           "by",
           "trumpet",
           "blasts,",
