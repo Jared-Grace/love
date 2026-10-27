@@ -783,7 +783,7 @@ export function bible_glyph_chapter_jdg07() {
           "$person+round_pushpin",
           "his",
           "position",
-          "around",
+          "$around",
           "the",
           "camp,",
           "and",
