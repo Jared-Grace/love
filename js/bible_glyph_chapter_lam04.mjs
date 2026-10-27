@@ -41,7 +41,7 @@ export function bible_glyph_chapter_lam04() {
       {
         verse_number: 2,
         words: [
-          "How",
+          "$question+likeness",
           "the",
           "$gem_stone+describing",
           "$son",
