@@ -572,7 +572,7 @@ export function bible_glyph_chapter_exo40() {
           "$alarm_clock",
           "$face+toward",
           "the",
-          "table,",
+          "$hand_sending+thing,",
           "on",
           "the",
           "south",
