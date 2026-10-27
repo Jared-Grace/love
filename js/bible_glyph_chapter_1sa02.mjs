@@ -738,7 +738,7 @@ export function bible_glyph_chapter_1sa02() {
           "$hammer+doing",
           "$flashlight+flashlight",
           "$speech?",
-          "I",
+          "$me",
           "$ear",
           "$pointing_down",
           "your",
