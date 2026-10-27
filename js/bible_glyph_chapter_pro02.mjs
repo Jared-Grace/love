@@ -76,7 +76,7 @@ export function bible_glyph_chapter_pro02() {
           "like",
           "$silver",
           "and",
-          "search",
+          "$performing_arts+doing",
           "it",
           "out",
           "like",
