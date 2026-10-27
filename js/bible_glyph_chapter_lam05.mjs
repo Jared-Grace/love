@@ -266,7 +266,7 @@ export function bible_glyph_chapter_lam05() {
           "has",
           "turned",
           "to",
-          "mourning.",
+          "$loudly_crying+coffin+thing.",
         ],
       },
       {
