@@ -92,7 +92,7 @@ export function bible_glyph_chapter_exo22() {
           "$traffic_light",
           "he",
           "has",
-          "nothing,",
+          "$dotted_line_face,",
           "he",
           "himself",
           "shall",
