@@ -80,7 +80,7 @@ export function bible_glyph_chapter_mal03() {
           "when",
           "He",
           "$eye?",
-          "For",
+          "$pointing",
           "He",
           "will",
           "be",
