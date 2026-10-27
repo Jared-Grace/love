@@ -355,7 +355,7 @@ export function bible_glyph_chapter_gen33() {
           "they",
           "are",
           "driven",
-          "hard",
+          "$fist+door+doing",
           "for",
           "one",
           "$sun,",
