@@ -512,7 +512,7 @@ export function bible_glyph_chapter_isa09() {
           "fatherless",
           "and",
           "$widow;",
-          "for",
+          "$pointing",
           "every",
           "one",
           "of",
