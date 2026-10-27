@@ -48,7 +48,7 @@ export function bible_glyph_chapter_num19() {
           "you",
           "a",
           "red",
-          "heifer",
+          "$bull",
           "without",
           "blemish,",
           "one",
