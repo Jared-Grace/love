@@ -1239,7 +1239,7 @@ export function bible_glyph_chapter_1ki18() {
           "turned",
           "their",
           "$heart_organ",
-          "back",
+          "$last_track+footprints",
           "again.",
         ],
       },
