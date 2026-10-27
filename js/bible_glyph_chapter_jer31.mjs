@@ -1233,7 +1233,7 @@ export function bible_glyph_chapter_jer31() {
         verse_number: 36,
         words: [
           "Only",
-          "if",
+          "$traffic_light",
           "this",
           "fixed",
           "order",
