@@ -619,7 +619,7 @@ export function bible_glyph_chapter_deu18() {
           "$lightbulb",
           "a",
           "$speech",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "has",
