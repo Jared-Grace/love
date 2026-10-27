@@ -29,7 +29,7 @@ export function bible_glyph_chapter_zec05() {
           "me",
           "a",
           "flying",
-          "scroll.",
+          "$page_with_curl.",
         ],
       },
       {
