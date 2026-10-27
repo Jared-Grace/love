@@ -937,7 +937,7 @@ export function bible_glyph_chapter_jer31() {
           "over",
           "them",
           "to",
-          "build",
+          "$brick",
           "and",
           "to",
           "plant,",
