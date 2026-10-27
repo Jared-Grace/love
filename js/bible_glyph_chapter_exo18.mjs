@@ -812,7 +812,7 @@ export function bible_glyph_chapter_exo18() {
           "$fishing_pole+proper_name,",
           "but",
           "any",
-          "minor",
+          "$pinching_hand",
           "issue",
           "they",
           "would",
