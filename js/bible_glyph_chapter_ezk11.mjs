@@ -424,7 +424,7 @@ export function bible_glyph_chapter_ezk11() {
           "$wrestling+heart_on_fire",
           "to",
           "a",
-          "complete",
+          "$end_arrow+thing",
           "end?",
         ],
       },
