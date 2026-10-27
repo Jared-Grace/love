@@ -415,7 +415,7 @@ export function bible_glyph_chapter_gen08() {
           "$earth",
           "was",
           "fully",
-          "dry.",
+          "$fallen_leaf.",
         ],
       },
       {
