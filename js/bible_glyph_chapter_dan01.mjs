@@ -407,7 +407,7 @@ export function bible_glyph_chapter_dan01() {
           "the",
           "royal",
           "$king",
-          "food,",
+          "$crown+bread,",
           "and",
           "according",
           "to",
