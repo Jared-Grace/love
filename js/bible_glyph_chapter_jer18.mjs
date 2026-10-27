@@ -637,7 +637,7 @@ export function bible_glyph_chapter_jer18() {
           "their",
           "$woman",
           "$link",
-          "childless",
+          "$baby+no_entry+person",
           "and",
           "widowed;",
           "let",
