@@ -65,7 +65,7 @@ export function bible_glyph_chapter_psa090() {
           "You",
           "$turn_back",
           "man",
-          "to",
+          "$finish",
           "dust,",
           "$speech,",
           "$turn_back,",
