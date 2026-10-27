@@ -1677,7 +1677,7 @@ export function bible_glyph_chapter_deu04() {
           "$two",
           "$proper_name$Amorite",
           "$king",
-          "across",
+          "$bridge+thing",
           "the",
           "$pointing_down+proper_name",
           "to",
