@@ -699,7 +699,7 @@ export function bible_glyph_chapter_jdg02() {
           "He",
           "$speech,",
           "$information",
-          "this",
+          "$flashlight",
           "$map",
           "has",
           "transgressed",
