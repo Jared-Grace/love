@@ -464,7 +464,7 @@ export function bible_glyph_chapter_zec08() {
       {
         verse_number: 14,
         words: [
-          "For",
+          "$pointing",
           "this",
           "is",
           "what",
