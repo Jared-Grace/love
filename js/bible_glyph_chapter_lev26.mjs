@@ -755,7 +755,7 @@ export function bible_glyph_chapter_lev26() {
           "$hand_sending",
           "a",
           "$face_with_medical_mask",
-          "among",
+          "$radio_button",
           "you,",
           "and",
           "you",
