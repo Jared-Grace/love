@@ -296,7 +296,7 @@ export function bible_glyph_chapter_gen04() {
           "Me",
           "$tray_out",
           "the",
-          "ground.",
+          "$brown_square.",
         ],
       },
       {
