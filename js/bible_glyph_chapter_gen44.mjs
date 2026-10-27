@@ -118,7 +118,7 @@ export function bible_glyph_chapter_gen44() {
           "to",
           "his",
           "steward,",
-          "Pursue",
+          "$running+toward",
           "the",
           "men",
           "at",
