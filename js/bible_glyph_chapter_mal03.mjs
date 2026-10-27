@@ -402,7 +402,7 @@ export function bible_glyph_chapter_mal03() {
           "$brown_square,",
           "and",
           "the",
-          "vine",
+          "$vine",
           "in",
           "your",
           "$field",
