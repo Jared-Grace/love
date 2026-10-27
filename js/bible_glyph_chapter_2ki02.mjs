@@ -891,7 +891,7 @@ export function bible_glyph_chapter_2ki02() {
           "Then",
           "he",
           "turned",
-          "around,",
+          "$next_track,",
           "$eye",
           "them,",
           "and",
