@@ -28,7 +28,7 @@ export function bible_glyph_chapter_num06() {
           "$speech",
           "them",
           "that",
-          "if",
+          "$pointing",
           "a",
           "$man_beard",
           "$shuffle",
