@@ -1123,7 +1123,7 @@ export function bible_glyph_chapter_lev23() {
           "to",
           "all",
           "your",
-          "vow",
+          "$saluting_face",
           "offerings,",
           "and",
           "to",
