@@ -455,7 +455,7 @@ export function bible_glyph_chapter_lev01() {
           "in",
           "$place",
           "for",
-          "ashes.",
+          "$bacon+ashes.",
         ],
       },
       {
