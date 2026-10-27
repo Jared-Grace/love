@@ -1118,7 +1118,7 @@ export function bible_glyph_chapter_1ki02() {
           "him,",
           "and",
           "so",
-          "remove",
+          "$away+doing",
           "from",
           "me",
           "and",
