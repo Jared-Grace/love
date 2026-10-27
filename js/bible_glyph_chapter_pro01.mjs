@@ -229,7 +229,7 @@ export function bible_glyph_chapter_pro01() {
           "descending",
           "into",
           "the",
-          "Pit.",
+          "$hole+droplet.",
         ],
       },
       {
