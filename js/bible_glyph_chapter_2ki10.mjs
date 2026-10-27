@@ -633,7 +633,7 @@ export function bible_glyph_chapter_2ki10() {
           "he",
           "had",
           "him",
-          "ride",
+          "$horse_racing+doing",
           "in",
           "his",
           "chariot.",
