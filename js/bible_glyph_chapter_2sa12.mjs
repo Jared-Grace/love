@@ -482,7 +482,7 @@ export function bible_glyph_chapter_2sa12() {
           "$speech,",
           "the",
           "$son",
-          "born",
+          "$baby+describing",
           "to",
           "you",
           "will",
