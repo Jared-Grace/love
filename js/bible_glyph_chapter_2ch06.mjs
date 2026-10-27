@@ -555,7 +555,7 @@ export function bible_glyph_chapter_2ch06() {
           "of",
           "$wrestling+heart_on_fire,",
           "if",
-          "only",
+          "$one+check",
           "your",
           "$son",
           "guard",
