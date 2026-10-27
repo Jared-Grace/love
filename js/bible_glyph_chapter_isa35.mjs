@@ -120,7 +120,7 @@ export function bible_glyph_chapter_isa35() {
           "will",
           "$footprints",
           "to",
-          "save",
+          "$rescue",
           "you.",
         ],
       },
