@@ -294,7 +294,7 @@ export function bible_glyph_chapter_exo04() {
           "$water",
           "from",
           "the",
-          "Nile",
+          "$crocodile",
           "and",
           "pour",
           "it",
