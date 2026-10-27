@@ -810,7 +810,7 @@ export function bible_glyph_chapter_exo03() {
           "and",
           "you",
           "will",
-          "put",
+          "$palm_down",
           "them",
           "on",
           "your",
