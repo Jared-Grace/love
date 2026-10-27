@@ -179,7 +179,7 @@ export function bible_glyph_chapter_jdg06() {
           "$wrestling+heart_on_fire",
           "cried",
           "out",
-          "to",
+          "$toward",
           "the",
           "$i_am.",
         ],
