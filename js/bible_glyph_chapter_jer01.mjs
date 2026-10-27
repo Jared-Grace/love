@@ -118,7 +118,7 @@ export function bible_glyph_chapter_jer01() {
       {
         verse_number: 5,
         words: [
-          "Before",
+          "$clock+back",
           "I",
           "formed",
           "you",
