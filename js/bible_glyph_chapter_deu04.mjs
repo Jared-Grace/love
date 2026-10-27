@@ -576,7 +576,7 @@ export function bible_glyph_chapter_deu04() {
           "$nesting_dolls",
           "of",
           "any",
-          "form",
+          "$framed_picture+person",
           "or",
           "shape,",
           "whether",
