@@ -651,7 +651,7 @@ export function bible_glyph_chapter_lev25() {
           "the",
           "previous",
           "$fruit+basket,",
-          "until",
+          "$finish",
           "the",
           "$fruit+basket",
           "of",
