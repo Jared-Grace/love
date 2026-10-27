@@ -504,7 +504,7 @@ export function bible_glyph_chapter_zec08() {
       {
         verse_number: 15,
         words: [
-          "so",
+          "$right_arrow",
           "$turn_back",
           "now",
           "I",
