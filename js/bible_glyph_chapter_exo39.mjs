@@ -482,7 +482,7 @@ export function bible_glyph_chapter_exo39() {
           "the",
           "other",
           "$two",
-          "corners",
+          "$end_arrow+triangular_ruler",
           "of",
           "the",
           "breastpiece,",
