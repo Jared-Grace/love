@@ -523,7 +523,7 @@ export function bible_glyph_chapter_deu29() {
           "there",
           "is",
           "no",
-          "root",
+          "$ginger_root",
           "among",
           "you",
           "that",
