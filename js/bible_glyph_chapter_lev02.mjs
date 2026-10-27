@@ -404,7 +404,7 @@ export function bible_glyph_chapter_lev02() {
           "on",
           "it",
           "and",
-          "frankincense;",
+          "$white_circle+incense;",
           "it",
           "$grain_offering.",
         ],
