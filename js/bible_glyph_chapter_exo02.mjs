@@ -390,7 +390,7 @@ export function bible_glyph_chapter_exo02() {
           "saw",
           "$two",
           "$proper_name$Hebrews",
-          "fighting.",
+          "$boxing_glove+two+doing.",
           "He",
           "$speech",
           "the",
