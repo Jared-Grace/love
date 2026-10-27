@@ -220,7 +220,7 @@ export function bible_glyph_chapter_num08() {
           "assemble",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "of",
           "$son",
           "of",
