@@ -641,7 +641,7 @@ export function bible_glyph_chapter_gen49() {
           "of",
           "the",
           "$hourglass",
-          "hills.",
+          "$mountain+pinching_hand.",
           "May",
           "they",
           "rest",
