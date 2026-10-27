@@ -661,7 +661,7 @@ export function bible_glyph_chapter_deu32() {
           "They",
           "will",
           "be",
-          "wasted",
+          "$famine+weary_face",
           "from",
           "hunger",
           "and",
