@@ -781,7 +781,7 @@ export function bible_glyph_chapter_jer23() {
           "to",
           "them,",
           "yet",
-          "they",
+          "$pointing_back",
           "have",
           "prophesied.",
         ],
