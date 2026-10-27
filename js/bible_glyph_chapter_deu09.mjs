@@ -342,7 +342,7 @@ export function bible_glyph_chapter_deu09() {
           "$covenant",
           "$back+flashlight",
           "$i_am",
-          "made",
+          "$scissors",
           "with",
           "you,",
           "I",
