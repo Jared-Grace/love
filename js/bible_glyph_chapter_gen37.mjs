@@ -271,7 +271,7 @@ export function bible_glyph_chapter_gen37() {
           "$moon",
           "and",
           "eleven",
-          "stars",
+          "$star_plain",
           "were",
           "$bowing",
           "to",
