@@ -601,7 +601,7 @@ export function bible_glyph_chapter_exo18() {
           "$footprints",
           "their",
           "$speech",
-          "to",
+          "$toward",
           "$heart_on_fire.",
         ],
       },
