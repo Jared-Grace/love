@@ -141,7 +141,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 8,
         words: [
-          "Even",
+          "$plus",
           "when",
           "I",
           "cry",
