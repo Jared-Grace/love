@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo16() {
         verse_number: 1,
         words: [
           "The",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "$wrestling+heart_on_fire",
