@@ -403,7 +403,7 @@ export function bible_glyph_chapter_isa56() {
           "seeking",
           "his",
           "own",
-          "gain.",
+          "$money_bag+hand_receiving.",
         ],
       },
       {
