@@ -1181,7 +1181,7 @@ export function bible_glyph_chapter_2ki17() {
           "their",
           "former",
           "$scales+thing.",
-          "None",
+          "$dotted_line_face",
           "of",
           "them",
           "worship",
