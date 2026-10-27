@@ -68,7 +68,7 @@ export function bible_glyph_chapter_lam05() {
           "the",
           "$water",
           "we",
-          "drink;",
+          "$cup_with_straw;",
           "our",
           "$tree",
           "$footprints",
