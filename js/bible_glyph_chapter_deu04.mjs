@@ -1177,7 +1177,7 @@ export function bible_glyph_chapter_deu04() {
           "Has",
           "anything",
           "as",
-          "great",
+          "$top",
           "as",
           "this",
           "$speech",
