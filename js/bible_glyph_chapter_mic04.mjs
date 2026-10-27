@@ -241,7 +241,7 @@ export function bible_glyph_chapter_mic04() {
           "$i_am,",
           "I",
           "will",
-          "gather",
+          "$crowd+doing",
           "the",
           "lame;",
           "I",
