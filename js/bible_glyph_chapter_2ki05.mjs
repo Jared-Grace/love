@@ -897,7 +897,7 @@ export function bible_glyph_chapter_2ki05() {
           "two",
           "talents",
           "of",
-          "silver",
+          "$silver",
           "in",
           "two",
           "bags,",
