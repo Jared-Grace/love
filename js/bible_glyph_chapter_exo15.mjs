@@ -184,7 +184,7 @@ export function bible_glyph_chapter_exo15() {
           "consumed",
           "them",
           "like",
-          "stubble.",
+          "$fallen_leaf+wheat.",
         ],
       },
       {
