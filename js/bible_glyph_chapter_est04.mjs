@@ -65,7 +65,7 @@ export function bible_glyph_chapter_est04() {
           "prohibited",
           "anyone",
           "wearing",
-          "sackcloth",
+          "$sackcloth",
           "from",
           "$footprints",
           "the",
