@@ -519,7 +519,7 @@ export function bible_glyph_chapter_exo25() {
           "from",
           "$brain+arrow_both_ways",
           "the",
-          "two",
+          "$two",
           "$cherub",
           "that",
           "are",
