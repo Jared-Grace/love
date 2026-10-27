@@ -506,7 +506,7 @@ export function bible_glyph_chapter_exo17() {
           "The",
           "$i_am",
           "will",
-          "war",
+          "$crossed_swords",
           "against",
           "$proper_name$Amalek",
           "from",
