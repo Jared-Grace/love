@@ -625,7 +625,7 @@ export function bible_glyph_chapter_exo28() {
           "Then",
           "$hands_giving",
           "the",
-          "two",
+          "$two",
           "$gold",
           "chains",
           "to",
