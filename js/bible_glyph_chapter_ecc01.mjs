@@ -269,7 +269,7 @@ export function bible_glyph_chapter_ecc01() {
           "Teacher,",
           "$link",
           "$king",
-          "over",
+          "$pointing_up",
           "$wrestling+heart_on_fire",
           "in",
           "$city+peace.",
