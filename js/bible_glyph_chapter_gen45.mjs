@@ -226,7 +226,7 @@ export function bible_glyph_chapter_gen45() {
       {
         verse_number: 8,
         words: [
-          "Therefore",
+          "$watch",
           "it",
           "was",
           "$no_entry",
