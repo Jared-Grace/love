@@ -25,7 +25,7 @@ export function bible_glyph_chapter_1ki17() {
           "of",
           "$proper_name$Gilead,",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Ahab,",
           "As",
           "surely",
