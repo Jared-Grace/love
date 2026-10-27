@@ -250,7 +250,7 @@ export function bible_glyph_chapter_exo13() {
           "for",
           "you",
           "a",
-          "sign",
+          "$placard",
           "on",
           "your",
           "$hand",
