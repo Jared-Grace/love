@@ -1242,7 +1242,7 @@ export function bible_glyph_chapter_1sa17() {
           "And",
           "with",
           "his",
-          "sling",
+          "$door+thread",
           "in",
           "$hand,",
           "he",
