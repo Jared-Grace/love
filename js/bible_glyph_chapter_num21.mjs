@@ -1024,7 +1024,7 @@ export function bible_glyph_chapter_num21() {
           "$son",
           "and",
           "his",
-          "whole",
+          "$all",
           "$family,",
           "until",
           "no",
