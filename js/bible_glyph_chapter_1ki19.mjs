@@ -743,7 +743,7 @@ export function bible_glyph_chapter_1ki19() {
           "$turn_back,",
           "$proper_name$Elijah",
           "replied,",
-          "for",
+          "$pointing",
           "what",
           "have",
           "I",
