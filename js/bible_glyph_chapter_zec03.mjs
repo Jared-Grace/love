@@ -277,7 +277,7 @@ export function bible_glyph_chapter_zec03() {
           "I",
           "have",
           "$hands_giving",
-          "before",
+          "$face",
           "$i_am+rescue;",
           "on",
           "that",
