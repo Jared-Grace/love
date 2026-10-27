@@ -598,7 +598,7 @@ export function bible_glyph_chapter_1ki12() {
           "sent",
           "out",
           "$proper_name$Adoram,",
-          "who",
+          "$back+flashlight",
           "was",
           "in",
           "charge",
