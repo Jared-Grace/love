@@ -165,7 +165,7 @@ export function bible_glyph_chapter_lev08() {
           "Thummim",
           "in",
           "the",
-          "breastpiece.",
+          "$gem_stone+t_shirt.",
         ],
       },
       {
