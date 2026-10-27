@@ -60,7 +60,7 @@ export function bible_glyph_chapter_hos14() {
           "fruit",
           "of",
           "our",
-          "lips.",
+          "$kiss_mark.",
         ],
       },
       {
