@@ -605,7 +605,7 @@ export function bible_glyph_chapter_isa02() {
           "trust",
           "$tray_out",
           "$person,",
-          "who",
+          "$back+flashlight",
           "has",
           "only",
           "the",
