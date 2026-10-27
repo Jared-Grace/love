@@ -732,7 +732,7 @@ export function bible_glyph_chapter_exo18() {
           "to",
           "$person+round_pushpin,",
           "and",
-          "all",
+          "$all",
           "these",
           "$family",
           "can",
