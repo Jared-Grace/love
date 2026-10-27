@@ -847,7 +847,7 @@ export function bible_glyph_chapter_jer31() {
           "will",
           "refresh",
           "the",
-          "weary",
+          "$weary_face+describing",
           "$person_other",
           "and",
           "replenish",
