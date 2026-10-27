@@ -819,7 +819,7 @@ export function bible_glyph_chapter_2ki03() {
           "and",
           "each",
           "$man_beard",
-          "threw",
+          "$throwing",
           "$stone",
           "on",
           "$all",
