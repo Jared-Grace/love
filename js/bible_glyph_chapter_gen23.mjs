@@ -300,7 +300,7 @@ export function bible_glyph_chapter_gen23() {
           "$proper_name$Ephron",
           "the",
           "$proper_name$Hittite",
-          "answered",
+          "$speech+turn_back",
           "$father+map",
           "in",
           "the",
