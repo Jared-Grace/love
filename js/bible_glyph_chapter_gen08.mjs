@@ -283,7 +283,7 @@ export function bible_glyph_chapter_gen08() {
           "sent",
           "out",
           "the",
-          "dove",
+          "$dove",
           "$tray_out",
           "the",
           "ark.",
