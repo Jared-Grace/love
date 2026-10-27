@@ -355,7 +355,7 @@ export function bible_glyph_chapter_deu11() {
           "the",
           "$earth",
           "that",
-          "you",
+          "$you",
           "are",
           "crossing",
           "the",
