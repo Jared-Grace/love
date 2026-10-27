@@ -1874,7 +1874,7 @@ export function bible_glyph_chapter_lev13() {
           "spreading.",
           "You",
           "must",
-          "burn",
+          "$fire+doing",
           "the",
           "contaminated",
           "article.",
