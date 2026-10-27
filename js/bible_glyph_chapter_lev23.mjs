@@ -541,7 +541,7 @@ export function bible_glyph_chapter_lev23() {
           "their",
           "$grain_offering",
           "and",
-          "drink",
+          "$pouring_liquid+wine+thing",
           "offerings,",
           "a",
           "food",
