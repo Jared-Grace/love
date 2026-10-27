@@ -264,7 +264,7 @@ export function bible_glyph_chapter_num21() {
           "and",
           "mount",
           "it",
-          "on",
+          "$pointing_up",
           "a",
           "pole.",
           "When",
