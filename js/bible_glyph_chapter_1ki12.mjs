@@ -167,7 +167,7 @@ export function bible_glyph_chapter_1ki12() {
           "$sprout.",
           "He",
           "$speech,",
-          "How",
+          "$question+likeness",
           "do",
           "you",
           "advise",
