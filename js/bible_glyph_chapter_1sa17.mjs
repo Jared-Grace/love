@@ -1430,7 +1430,7 @@ export function bible_glyph_chapter_1sa17() {
           "of",
           "the",
           "$proper_name$Philistine",
-          "army",
+          "$camp",
           "to",
           "the",
           "$bird",
