@@ -174,7 +174,7 @@ export function bible_glyph_chapter_hab01() {
           "$earth",
           "to",
           "seize",
-          "dwellings",
+          "$tent+house",
           "$no_entry",
           "their",
           "own.",
