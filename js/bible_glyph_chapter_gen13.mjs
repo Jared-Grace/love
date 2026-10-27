@@ -271,7 +271,7 @@ export function bible_glyph_chapter_gen13() {
           "$eye",
           "that",
           "the",
-          "whole",
+          "$all",
           "plain",
           "of",
           "the",
