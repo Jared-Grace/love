@@ -864,7 +864,7 @@ export function bible_glyph_chapter_deu31() {
           "$might+up_arrow",
           "and",
           "$superhero,",
-          "for",
+          "$pointing",
           "you",
           "will",
           "$footprints",
