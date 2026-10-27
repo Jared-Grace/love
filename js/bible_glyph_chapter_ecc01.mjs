@@ -298,7 +298,7 @@ export function bible_glyph_chapter_ecc01() {
           "What",
           "a",
           "$thumbs_down",
-          "task",
+          "$persevering_face+thing",
           "$heart_on_fire",
           "has",
           "$hands_giving",
