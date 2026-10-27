@@ -398,7 +398,7 @@ export function bible_glyph_chapter_gen48() {
           "$proper_name$Manasseh",
           "in",
           "his",
-          "left",
+          "$hand+away",
           "hand",
           "toward",
           "the",
