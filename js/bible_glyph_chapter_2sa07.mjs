@@ -103,7 +103,7 @@ export function bible_glyph_chapter_2sa07() {
           "the",
           "$i_am",
           "$link",
-          "to",
+          "$toward",
           "$proper_name$Nathan,",
           "$speech,",
         ],
