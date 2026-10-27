@@ -315,7 +315,7 @@ export function bible_glyph_chapter_deu09() {
           "angry",
           "enough",
           "to",
-          "destroy",
+          "$bomb",
           "you.",
         ],
       },
