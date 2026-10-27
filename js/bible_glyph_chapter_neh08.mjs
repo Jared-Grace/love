@@ -267,7 +267,7 @@ export function bible_glyph_chapter_neh08() {
           "and",
           "$proper_name$Pelaiah",
           "-",
-          "instructed",
+          "$brain",
           "the",
           "$family",
           "in",
