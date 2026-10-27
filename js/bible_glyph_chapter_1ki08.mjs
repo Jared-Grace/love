@@ -387,7 +387,7 @@ export function bible_glyph_chapter_1ki08() {
           "that",
           "He",
           "would",
-          "dwell",
+          "$tent+doing",
           "in",
           "the",
           "thick",
