@@ -808,7 +808,7 @@ export function bible_glyph_chapter_ezk03() {
           "$footprints,",
           "$locked+doing",
           "yourself",
-          "inside",
+          "$radio_button",
           "your",
           "$house.",
         ],
