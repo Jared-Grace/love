@@ -893,7 +893,7 @@ export function bible_glyph_chapter_neh09() {
           "$hole+droplet",
           "already",
           "dug,",
-          "vineyards,",
+          "$vineyard,",
           "olive",
           "groves,",
           "and",
