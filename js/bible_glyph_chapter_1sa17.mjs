@@ -488,7 +488,7 @@ export function bible_glyph_chapter_1sa17() {
         words: [
           "$footprints",
           "also",
-          "these",
+          "$flashlight+flashlight",
           "$ten",
           "$kitchen_knife+thing",
           "of",
