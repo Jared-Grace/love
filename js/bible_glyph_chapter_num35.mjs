@@ -337,7 +337,7 @@ export function bible_glyph_chapter_num35() {
           "unintentionally",
           "may",
           "$running+dashing_away",
-          "there.",
+          "$telescope.",
         ],
       },
       {
