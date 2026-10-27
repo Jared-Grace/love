@@ -466,7 +466,7 @@ export function bible_glyph_chapter_exo07() {
           "$wilderness.",
           "But",
           "$finish",
-          "now",
+          "$flashlight+manner",
           "you",
           "have",
           "$no_entry",
