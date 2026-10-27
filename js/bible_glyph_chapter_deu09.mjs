@@ -955,7 +955,7 @@ export function bible_glyph_chapter_deu09() {
           "the",
           "stubbornness",
           "of",
-          "this",
+          "$flashlight",
           "$family,",
           "nor",
           "upon",
