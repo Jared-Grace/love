@@ -414,7 +414,7 @@ export function bible_glyph_chapter_2sa12() {
       {
         verse_number: 12,
         words: [
-          "You",
+          "$you",
           "have",
           "$hammer+doing",
           "this",
