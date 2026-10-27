@@ -284,7 +284,7 @@ export function bible_glyph_chapter_2ki05() {
           "of",
           "$heart_on_fire",
           "$ear",
-          "that",
+          "$pointing",
           "the",
           "$king",
           "of",
