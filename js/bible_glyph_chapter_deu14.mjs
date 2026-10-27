@@ -123,7 +123,7 @@ export function bible_glyph_chapter_deu14() {
           "the",
           "ibex,",
           "the",
-          "antelope,",
+          "$deer+white_circle,",
           "and",
           "the",
           "mountain",
