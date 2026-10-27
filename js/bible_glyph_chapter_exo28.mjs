@@ -1199,7 +1199,7 @@ export function bible_glyph_chapter_exo28() {
           "$briefs+round_pushpin",
           "to",
           "the",
-          "thigh.",
+          "$poultry_leg.",
         ],
       },
       {
