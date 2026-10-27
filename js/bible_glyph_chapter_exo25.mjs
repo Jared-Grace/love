@@ -191,7 +191,7 @@ export function bible_glyph_chapter_exo25() {
           "an",
           "$ark",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
           "two",
           "cubits",
