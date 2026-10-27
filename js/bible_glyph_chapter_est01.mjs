@@ -501,7 +501,7 @@ export function bible_glyph_chapter_est01() {
           "wronged",
           "the",
           "$king",
-          "only,",
+          "$one+person,",
           "but",
           "all",
           "the",
