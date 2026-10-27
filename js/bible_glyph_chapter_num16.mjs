@@ -490,7 +490,7 @@ export function bible_glyph_chapter_num16() {
           "$no_entry",
           "$lifting",
           "one",
-          "donkey",
+          "$donkey",
           "from",
           "them,",
           "and",
