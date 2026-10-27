@@ -41,7 +41,7 @@ export function bible_glyph_chapter_mic07() {
           "fig",
           "that",
           "$person_other",
-          "crave.",
+          "$heart_eyes+hand_receiving+doing.",
         ],
       },
       {
