@@ -90,7 +90,7 @@ export function bible_glyph_chapter_psa095() {
           "and",
           "the",
           "$mountain",
-          "peaks",
+          "$tired_face+money_bag",
           "belong",
           "to",
           "Him.",
