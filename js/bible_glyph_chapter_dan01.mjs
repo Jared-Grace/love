@@ -82,7 +82,7 @@ export function bible_glyph_chapter_dan01() {
           "them",
           "in",
           "the",
-          "treasury",
+          "$gem_stone+house",
           "of",
           "his",
           "$moai.",
