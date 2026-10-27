@@ -572,7 +572,7 @@ export function bible_glyph_chapter_lev06() {
           "and",
           "present",
           "it",
-          "broken",
+          "$bread+fire+divide",
           "in",
           "pieces",
           "as",
