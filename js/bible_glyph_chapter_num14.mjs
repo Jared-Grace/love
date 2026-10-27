@@ -371,7 +371,7 @@ export function bible_glyph_chapter_num14() {
           "them",
           "with",
           "a",
-          "plague",
+          "$face_with_medical_mask",
           "and",
           "destroy",
           "them,",
