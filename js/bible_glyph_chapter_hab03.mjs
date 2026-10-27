@@ -23,7 +23,7 @@ export function bible_glyph_chapter_hab03() {
           "$megaphone,",
           "according",
           "to",
-          "Shigionoth:",
+          "$road+woozy_face+musical_score:",
         ],
       },
       {
