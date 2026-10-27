@@ -482,7 +482,7 @@ export function bible_glyph_chapter_mic06() {
           "$walking",
           "their",
           "counsel.",
-          "Therefore",
+          "$right_arrow+toward",
           "I",
           "will",
           "$hands_giving",
