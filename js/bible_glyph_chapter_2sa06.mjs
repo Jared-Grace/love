@@ -736,7 +736,7 @@ export function bible_glyph_chapter_2sa06() {
           "even",
           "$repeat",
           "than",
-          "this,",
+          "$flashlight,",
           "and",
           "humble",
           "myself",
