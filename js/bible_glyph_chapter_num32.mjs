@@ -750,7 +750,7 @@ export function bible_glyph_chapter_num32() {
           "just",
           "as",
           "$crown",
-          "commands.",
+          "$speech+scroll.",
         ],
       },
       {
