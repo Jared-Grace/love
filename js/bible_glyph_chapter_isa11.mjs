@@ -350,7 +350,7 @@ export function bible_glyph_chapter_isa11() {
           "His",
           "$hand",
           "a",
-          "second",
+          "$second_place",
           "time",
           "to",
           "recover",
