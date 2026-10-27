@@ -122,7 +122,7 @@ export function bible_glyph_chapter_gen27() {
           "may",
           "$speech+thumbs_up",
           "you",
-          "before",
+          "$clock+back",
           "I",
           '$skull+doing."',
         ],
