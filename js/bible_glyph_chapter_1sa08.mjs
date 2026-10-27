@@ -627,7 +627,7 @@ export function bible_glyph_chapter_1sa08() {
           "$man_beard",
           "of",
           "$wrestling+heart_on_fire,",
-          "Everyone",
+          "$man_beard",
           "must",
           "$walking",
           "back",
