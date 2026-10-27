@@ -23,7 +23,7 @@ export function bible_glyph_chapter_gen08() {
           "$sprout",
           "and",
           "the",
-          "livestock",
+          "$paw_prints",
           "that",
           "were",
           "with",
