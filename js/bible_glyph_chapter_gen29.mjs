@@ -694,7 +694,7 @@ export function bible_glyph_chapter_gen29() {
       {
         verse_number: 27,
         words: [
-          "Finish",
+          "$battery",
           "this",
           "week",
           "celebration,",
