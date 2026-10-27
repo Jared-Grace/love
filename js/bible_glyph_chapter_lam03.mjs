@@ -627,7 +627,7 @@ export function bible_glyph_chapter_lam03() {
           "$scales+thing",
           "to",
           "a",
-          "man",
+          "$might+man_beard",
           "before",
           "the",
           "Most",
