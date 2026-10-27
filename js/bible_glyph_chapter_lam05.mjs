@@ -193,7 +193,7 @@ export function bible_glyph_chapter_lam05() {
           "ravished",
           "in",
           "$proper_name$Zion,",
-          "virgins",
+          "$girl+white_flower",
           "in",
           "the",
           "$city",
