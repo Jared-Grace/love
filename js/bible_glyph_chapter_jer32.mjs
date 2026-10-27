@@ -574,7 +574,7 @@ export function bible_glyph_chapter_jer32() {
           "$earth",
           "by",
           "Your",
-          "great",
+          "$top",
           "$lightning",
           "and",
           "outstretched",
