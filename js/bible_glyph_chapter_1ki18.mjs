@@ -662,7 +662,7 @@ export function bible_glyph_chapter_1ki18() {
           "$toward",
           "the",
           "$family,",
-          "I",
+          "$me",
           "am",
           "the",
           "only",
