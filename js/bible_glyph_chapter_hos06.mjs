@@ -197,7 +197,7 @@ export function bible_glyph_chapter_hos06() {
           "$heart_on_fire",
           "rather",
           "than",
-          "burnt",
+          "$burnt_offering",
           "offerings.",
         ],
       },
