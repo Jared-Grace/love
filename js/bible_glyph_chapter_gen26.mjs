@@ -629,7 +629,7 @@ export function bible_glyph_chapter_gen26() {
           "moved",
           "on",
           "from",
-          "there",
+          "$telescope",
           "and",
           "dug",
           "another",
