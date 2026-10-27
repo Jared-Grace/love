@@ -1047,7 +1047,7 @@ export function bible_glyph_chapter_exo16() {
           "$proper_name$Aaron,",
           "$hand_receiving",
           "a",
-          "jar",
+          "$amphora+pinching_hand",
           "and",
           "$hands_giving",
           "it",
