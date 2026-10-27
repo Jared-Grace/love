@@ -478,7 +478,7 @@ export function bible_glyph_chapter_jos24() {
           "and",
           "$check.",
           "Cast",
-          "aside",
+          "$away+doing",
           "the",
           "$moai",
           "your",
