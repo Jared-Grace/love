@@ -376,7 +376,7 @@ export function bible_glyph_chapter_jdg16() {
         words: [
           "He",
           "$speech,",
-          "If",
+          "$traffic_light",
           "they",
           "tie",
           "me",
