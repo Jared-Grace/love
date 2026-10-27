@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_gen41() {
           "$earth",
           "will",
           "$no_entry",
-          "perish",
+          "$scissors",
           "in",
           "the",
           "$famine",
