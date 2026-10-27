@@ -431,7 +431,7 @@ export function bible_glyph_chapter_2sa07() {
       {
         verse_number: 13,
         words: [
-          "He",
+          "$pointing_back",
           "will",
           "build",
           "a",
