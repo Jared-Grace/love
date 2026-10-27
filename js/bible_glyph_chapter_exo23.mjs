@@ -972,7 +972,7 @@ export function bible_glyph_chapter_exo23() {
           "it",
           "will",
           "surely",
-          "be",
+          "$link",
           "a",
           "$snare",
           "to",
