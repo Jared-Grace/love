@@ -16,7 +16,7 @@ export function bible_glyph_chapter_exo39() {
         words: [
           "$tray_out",
           "the",
-          "blue,",
+          "$blue_circle,",
           "purple,",
           "and",
           "scarlet",
