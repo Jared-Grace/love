@@ -835,7 +835,7 @@ export function bible_glyph_chapter_2ch34() {
           "had",
           "designated",
           "$walking",
-          "to",
+          "$toward",
           "$proper_name$Huldah",
           "the",
           "prophetess,",
