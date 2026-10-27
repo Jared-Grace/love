@@ -129,7 +129,7 @@ export function bible_glyph_chapter_1ki08() {
           "$all",
           "its",
           "$sparkle+thing",
-          "furnishings.",
+          "$toolbox.",
           "So",
           "the",
           "$priest",
