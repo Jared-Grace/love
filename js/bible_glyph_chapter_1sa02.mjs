@@ -807,7 +807,7 @@ export function bible_glyph_chapter_1sa02() {
           "to",
           "their",
           "$father,",
-          "since",
+          "$pointing",
           "the",
           "$i_am",
           "intended",
