@@ -101,7 +101,7 @@ export function bible_glyph_chapter_deu08() {
           "and",
           "in",
           "your",
-          "hunger",
+          "$famine+person+doing",
           "He",
           "gave",
           "you",
