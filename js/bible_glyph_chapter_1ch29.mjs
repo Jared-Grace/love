@@ -317,7 +317,7 @@ export function bible_glyph_chapter_1ch29() {
           "them",
           "to",
           "the",
-          "treasury",
+          "$gem_stone+house",
           "of",
           "the",
           "$house",
