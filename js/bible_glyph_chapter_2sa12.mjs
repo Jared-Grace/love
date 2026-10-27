@@ -985,7 +985,7 @@ export function bible_glyph_chapter_2sa12() {
           "It",
           "weighed",
           "a",
-          "talent",
+          "$flying_disc",
           "of",
           "gold",
           "and",
