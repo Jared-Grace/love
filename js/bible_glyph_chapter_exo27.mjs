@@ -324,7 +324,7 @@ export function bible_glyph_chapter_exo27() {
         words: [
           "The",
           "east",
-          "side",
+          "$straight_ruler+round_pushpin",
           "of",
           "the",
           "courtyard,",
