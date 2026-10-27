@@ -510,7 +510,7 @@ export function bible_glyph_chapter_gen12() {
         words: [
           "So",
           "$house+proper_name",
-          "summoned",
+          "$waving_hand",
           "$proper_name$Abram",
           "and",
           "$speech,",
