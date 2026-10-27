@@ -834,7 +834,7 @@ export function bible_glyph_chapter_jer23() {
           "$no_entry",
           "a",
           "$heart_on_fire",
-          "far",
+          "$satellite",
           "away?",
         ],
       },
