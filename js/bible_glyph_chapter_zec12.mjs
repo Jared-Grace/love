@@ -426,7 +426,7 @@ export function bible_glyph_chapter_zec12() {
           "will",
           "be",
           "as",
-          "great",
+          "$top+doing",
           "as",
           "the",
           "wailing",
