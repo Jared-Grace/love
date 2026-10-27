@@ -255,7 +255,7 @@ export function bible_glyph_chapter_ezk11() {
           "$footprints",
           "against",
           "you,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am.",
