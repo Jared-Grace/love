@@ -240,7 +240,7 @@ export function bible_glyph_chapter_exo22() {
           "the",
           "thief",
           "is",
-          "caught",
+          "$magnifying_glass+exclamation",
           "he",
           "must",
           "pay",
