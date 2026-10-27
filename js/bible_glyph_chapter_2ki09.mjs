@@ -137,7 +137,7 @@ export function bible_glyph_chapter_2ki09() {
           "$megaphone",
           "$walking",
           "to",
-          "Ramoth",
+          "$up_arrow+compass+down_arrow+proper_name",
           "gilead.",
         ],
       },
