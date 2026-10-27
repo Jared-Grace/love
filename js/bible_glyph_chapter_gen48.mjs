@@ -390,7 +390,7 @@ export function bible_glyph_chapter_gen48() {
           "hand",
           "toward",
           "the",
-          "left",
+          "$hand+away",
           "hand",
           "of",
           "$wrestling+heart_on_fire,",
