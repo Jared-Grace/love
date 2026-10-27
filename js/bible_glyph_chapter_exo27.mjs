@@ -352,7 +352,7 @@ export function bible_glyph_chapter_exo27() {
           "entrance",
           "shall",
           "be",
-          "fifteen",
+          "$five",
           "cubits",
           "long,",
           "with",
