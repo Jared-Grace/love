@@ -60,7 +60,7 @@ export function bible_glyph_chapter_2ki17() {
           "$king",
           "of",
           "$wrestling+heart_on_fire",
-          "who",
+          "$back+flashlight",
           "came",
           "before",
           "him.",
