@@ -362,7 +362,7 @@ export function bible_glyph_chapter_psa103() {
           "to",
           "those",
           "who",
-          "keep",
+          "$guard",
           "His",
           "$covenant",
           "and",
