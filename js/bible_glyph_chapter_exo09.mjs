@@ -537,7 +537,7 @@ export function bible_glyph_chapter_exo09() {
           "down",
           "the",
           "worst",
-          "hail",
+          "$ice",
           "that",
           "has",
           "$no_entry",
