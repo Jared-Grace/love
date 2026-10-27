@@ -465,7 +465,7 @@ export function bible_glyph_chapter_lam04() {
           "regards",
           "them",
           "$no_entry",
-          "more.",
+          "$plus+doing.",
           "The",
           "$priest",
           "are",
