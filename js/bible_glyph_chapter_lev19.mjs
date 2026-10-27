@@ -573,7 +573,7 @@ export function bible_glyph_chapter_lev19() {
           "must",
           "$footprints",
           "a",
-          "ram",
+          "$ram",
           "as",
           "his",
           "guilt",
