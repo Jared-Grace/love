@@ -288,7 +288,7 @@ export function bible_glyph_chapter_lev10() {
           "$soap+no_entry",
           "and",
           "the",
-          "clean.",
+          "$soap+describing.",
         ],
       },
       {
