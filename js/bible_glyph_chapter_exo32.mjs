@@ -792,7 +792,7 @@ export function bible_glyph_chapter_exo32() {
           "do",
           "$no_entry",
           "$lightbulb",
-          "what",
+          "$flashlight+question",
           "has",
           "happened",
           "to",
