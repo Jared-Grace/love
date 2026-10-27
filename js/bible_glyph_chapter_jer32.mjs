@@ -561,7 +561,7 @@ export function bible_glyph_chapter_jer32() {
       {
         verse_number: 17,
         words: [
-          "Oh,",
+          "$crying_face+speech,",
           "$crown",
           "$i_am!",
           "You",
