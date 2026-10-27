@@ -102,7 +102,7 @@ export function bible_glyph_chapter_pro08() {
         verse_number: 6,
         words: [
           "$ear,",
-          "for",
+          "$pointing",
           "I",
           "$mouth",
           "of",
