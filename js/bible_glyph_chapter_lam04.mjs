@@ -74,7 +74,7 @@ export function bible_glyph_chapter_lam04() {
         words: [
           "$plus",
           "$dragon",
-          "offer",
+          "$hand+tray_out+doing",
           "their",
           "breasts",
           "to",
