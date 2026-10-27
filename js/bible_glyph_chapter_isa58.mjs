@@ -498,7 +498,7 @@ export function bible_glyph_chapter_isa58() {
           "the",
           "$sabbath",
           "a",
-          "delight",
+          "$beaming+couch_and_lamp+thing",
           "and",
           "the",
           "$i_am",
