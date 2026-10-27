@@ -796,7 +796,7 @@ export function bible_glyph_chapter_jer23() {
           "stood",
           "in",
           "My",
-          "council,",
+          "$shushing_face+crowd,",
           "they",
           "would",
           "have",
