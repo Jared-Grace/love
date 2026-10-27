@@ -544,7 +544,7 @@ export function bible_glyph_chapter_2sa05() {
           "$speech,",
           "$walking+pointing_up",
           "up,",
-          "for",
+          "$pointing",
           "$hands_giving",
           "I",
           "will",
