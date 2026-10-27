@@ -203,7 +203,7 @@ export function bible_glyph_chapter_zec09() {
           "teeth.",
           "Then",
           "they",
-          "too",
+          "$plus",
           "will",
           "become",
           "a",
