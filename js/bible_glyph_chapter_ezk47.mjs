@@ -87,7 +87,7 @@ export function bible_glyph_chapter_ezk47() {
           "outer",
           "$gate",
           "$curving_right+doing",
-          "east,",
+          "$compass+right_arrow+thing,",
           "and",
           "there",
           "I",
