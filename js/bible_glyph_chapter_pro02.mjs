@@ -54,7 +54,7 @@ export function bible_glyph_chapter_pro02() {
           "$traffic_light",
           "you",
           "$pointing",
-          "call",
+          "$waving_hand",
           "out",
           "to",
           "insight",
