@@ -571,7 +571,7 @@ export function bible_glyph_chapter_deu31() {
           "$footprints.",
           "They",
           "will",
-          "forsake",
+          "$derelict_house+doing",
           "Me",
           "and",
           "break",
