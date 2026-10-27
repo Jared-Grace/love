@@ -114,7 +114,7 @@ export function bible_glyph_chapter_job19() {
           "I",
           "get",
           "$no_entry",
-          "response;",
+          "$speech+turn_back;",
           "though",
           "I",
           "call",
