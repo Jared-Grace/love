@@ -825,7 +825,7 @@ export function bible_glyph_chapter_gen44() {
           "from",
           "me,",
           "and",
-          "harm",
+          "$face_with_head_bandage+thing",
           "comes",
           "to",
           "him,",
