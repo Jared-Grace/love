@@ -122,7 +122,7 @@ export function bible_glyph_chapter_gen13() {
           "who",
           "was",
           "$walking",
-          "with",
+          "$safety_pin",
           "$proper_name$Abram,",
           "$plus",
           "had",
