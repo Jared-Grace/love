@@ -414,7 +414,7 @@ export function bible_glyph_chapter_gen06() {
           "be",
           "300",
           "$triangular_ruler",
-          "long,",
+          "$up_down_arrow,",
           "50",
           "$triangular_ruler",
           "wide,",
