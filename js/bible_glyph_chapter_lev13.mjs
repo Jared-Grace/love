@@ -762,7 +762,7 @@ export function bible_glyph_chapter_lev13() {
           "$fire+face_with_head_bandage",
           "from",
           "the",
-          "boil,",
+          "$fire+microbe,",
           "and",
           "the",
           "$priest",
