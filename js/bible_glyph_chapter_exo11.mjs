@@ -94,7 +94,7 @@ export function bible_glyph_chapter_exo11() {
           "of",
           "the",
           "$clamp+person.",
-          "Moreover",
+          "$plus",
           "the",
           "$man_beard",
           "$fishing_pole+proper_name",
