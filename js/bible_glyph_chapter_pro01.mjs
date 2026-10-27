@@ -623,7 +623,7 @@ export function bible_glyph_chapter_pro01() {
       {
         verse_number: 32,
         words: [
-          "For",
+          "$pointing",
           "the",
           "waywardness",
           "of",
