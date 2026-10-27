@@ -126,7 +126,7 @@ export function bible_glyph_chapter_mic04() {
           "for",
           "strong",
           "$map",
-          "far",
+          "$satellite",
           "and",
           "wide.",
           "Then",
