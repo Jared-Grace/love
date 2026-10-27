@@ -1112,7 +1112,7 @@ export function bible_glyph_chapter_gen27() {
         words: [
           "$proper_name$Esau",
           "$speech",
-          "to",
+          "$toward",
           "his",
           "$father,",
           '"Do',
