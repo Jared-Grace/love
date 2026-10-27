@@ -901,7 +901,7 @@ export function bible_glyph_chapter_1ki21() {
           "acts",
           "by",
           "$walking",
-          "after",
+          "$next_track",
           "$moai,",
           "just",
           "like",
