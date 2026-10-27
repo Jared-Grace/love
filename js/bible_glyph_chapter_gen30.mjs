@@ -170,7 +170,7 @@ export function bible_glyph_chapter_gen30() {
           "bore",
           "$hand+foot",
           "a",
-          "second",
+          "$second_place",
           "$son.",
         ],
       },
