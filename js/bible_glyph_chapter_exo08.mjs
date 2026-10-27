@@ -882,7 +882,7 @@ export function bible_glyph_chapter_exo08() {
           "the",
           "$wilderness",
           "and",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "$i_am",
           "our",
