@@ -414,7 +414,7 @@ export function bible_glyph_chapter_psa034() {
         words: [
           "He",
           "protects",
-          "all",
+          "$all",
           "his",
           "bones;",
           "$no_entry",
