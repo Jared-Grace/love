@@ -339,7 +339,7 @@ export function bible_glyph_chapter_exo22() {
       {
         verse_number: 10,
         words: [
-          "If",
+          "$pointing",
           "a",
           "$man_beard",
           "$hands_giving",
