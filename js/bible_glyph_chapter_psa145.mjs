@@ -348,7 +348,7 @@ export function bible_glyph_chapter_psa145() {
           "the",
           "desire",
           "of",
-          "every",
+          "$all",
           "$sprout",
           "thing.",
         ],
