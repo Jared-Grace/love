@@ -313,7 +313,7 @@ export function bible_glyph_chapter_deu08() {
           "$eating",
           "and",
           "are",
-          "satisfied,",
+          "$eating+top,",
           "you",
           "are",
           "to",
