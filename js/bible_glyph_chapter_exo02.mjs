@@ -599,7 +599,7 @@ export function bible_glyph_chapter_exo02() {
           "leave",
           "the",
           "$man_beard",
-          "behind?",
+          "$derelict_house+doing?",
           "Invite",
           "him",
           "to",
