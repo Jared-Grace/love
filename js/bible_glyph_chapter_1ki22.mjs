@@ -325,7 +325,7 @@ export function bible_glyph_chapter_1ki22() {
           "floor",
           "by",
           "the",
-          "entrance",
+          "$door",
           "of",
           "the",
           "gate",
