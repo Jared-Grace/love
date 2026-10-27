@@ -188,7 +188,7 @@ export function bible_glyph_chapter_nam03() {
           "$walking+around+doing",
           "for",
           "her?",
-          "Where",
+          "$question+round_pushpin+tray_out",
           "can",
           "I",
           "find",
