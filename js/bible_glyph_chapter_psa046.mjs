@@ -33,7 +33,7 @@ export function bible_glyph_chapter_psa046() {
           "$mechanical_arm,",
           "an",
           "ever-present",
-          "help",
+          "$rescue+hand+thing",
           "in",
           "times",
           "of",
