@@ -49,7 +49,7 @@ export function bible_glyph_chapter_psa063() {
           "a",
           "$sun+desert",
           "and",
-          "weary",
+          "$weary_face+describing",
           "$earth",
           "without",
           "$water.",
