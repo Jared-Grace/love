@@ -261,7 +261,7 @@ export function bible_glyph_chapter_lev08() {
           "of",
           "the",
           "anointing",
-          "oil",
+          "$lotion_bottle",
           "on",
           "the",
           "head",
