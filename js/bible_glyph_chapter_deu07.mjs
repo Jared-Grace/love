@@ -119,7 +119,7 @@ export function bible_glyph_chapter_deu07() {
       {
         verse_number: 4,
         words: [
-          "because",
+          "$pointing",
           "they",
           "will",
           "turn",
