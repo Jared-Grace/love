@@ -839,7 +839,7 @@ export function bible_glyph_chapter_lev27() {
           "of",
           "its",
           "value.",
-          "If",
+          "$traffic_light",
           "it",
           "is",
           "$no_entry",
