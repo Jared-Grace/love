@@ -267,7 +267,7 @@ export function bible_glyph_chapter_psa073() {
       {
         verse_number: 15,
         words: [
-          "If",
+          "$traffic_light",
           "I",
           "had",
           "$speech,",
