@@ -809,7 +809,7 @@ export function bible_glyph_chapter_gen42() {
           "$speech,",
           "$flashlight+question",
           "is",
-          "this",
+          "$flashlight",
           "that",
           "$heart_on_fire",
           "has",
