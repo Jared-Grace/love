@@ -276,7 +276,7 @@ export function bible_glyph_chapter_num13() {
           "$fishing_pole+proper_name",
           "$hand_sending",
           "to",
-          "spy",
+          "$telescope+walking+doing",
           "out",
           "the",
           "$earth.",
