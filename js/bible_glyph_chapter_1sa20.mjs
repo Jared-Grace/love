@@ -659,7 +659,7 @@ export function bible_glyph_chapter_1sa20() {
           "stayed",
           "$three+doing",
           "days,",
-          "hurry",
+          "$double_exclamation",
           "$walking+pointing_down",
           "and",
           "$footprints",
