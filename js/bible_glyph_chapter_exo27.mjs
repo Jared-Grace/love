@@ -20,7 +20,7 @@ export function bible_glyph_chapter_exo27() {
           "of",
           "$tree+thorns",
           "$tree,",
-          "five",
+          "$five",
           "cubits",
           "long",
           "and",
