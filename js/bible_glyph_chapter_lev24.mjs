@@ -413,7 +413,7 @@ export function bible_glyph_chapter_lev24() {
           "consequences",
           "of",
           "his",
-          "sin.",
+          "$bow+thing.",
         ],
       },
       {
