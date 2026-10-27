@@ -363,7 +363,7 @@ export function bible_glyph_chapter_lev02() {
           "are",
           "to",
           "add",
-          "salt.",
+          "$salt.",
         ],
       },
       {
