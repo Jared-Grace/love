@@ -596,7 +596,7 @@ export function bible_glyph_chapter_deu29() {
           "be",
           "$heart_red+check+doing",
           "to",
-          "forgive",
+          "$sponge",
           "him.",
           "Instead,",
           "$i_am",
