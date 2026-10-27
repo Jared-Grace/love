@@ -53,7 +53,7 @@ export function bible_glyph_chapter_num17() {
           "of",
           "each",
           "$man_beard",
-          "on",
+          "$pointing_up",
           "his",
           "staff.",
         ],
