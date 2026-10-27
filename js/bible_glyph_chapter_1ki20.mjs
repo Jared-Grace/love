@@ -926,7 +926,7 @@ export function bible_glyph_chapter_1ki20() {
           "$son",
           "of",
           "Israel",
-          "camped",
+          "$camp+doing",
           "before",
           "them",
           "like",
