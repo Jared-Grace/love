@@ -448,7 +448,7 @@ export function bible_glyph_chapter_1sa16() {
           "of",
           "the",
           "$i_am",
-          "rushed",
+          "$chart_increasing",
           "upon",
           "$two_hearts+proper_name",
           "from",
