@@ -386,7 +386,7 @@ export function bible_glyph_chapter_psa073() {
           "I",
           "was",
           "pierced",
-          "within,",
+          "$heart_organ+two,",
         ],
       },
       {
