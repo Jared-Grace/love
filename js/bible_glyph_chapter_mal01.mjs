@@ -184,7 +184,7 @@ export function bible_glyph_chapter_mal01() {
           "$crown.",
           "But",
           "$traffic_light",
-          "I",
+          "$me",
           "am",
           "a",
           "$father,",
