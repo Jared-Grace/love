@@ -498,7 +498,7 @@ export function bible_glyph_chapter_gen40() {
           "$basket",
           "on",
           "my",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
