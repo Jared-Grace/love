@@ -832,7 +832,7 @@ export function bible_glyph_chapter_deu09() {
           "possess",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "have",
           "$hands_giving",
