@@ -204,7 +204,7 @@ export function bible_glyph_chapter_2sa12() {
           "pay",
           "for",
           "the",
-          "lamb",
+          "$lamb+female_sign",
           "four",
           "times",
           "over.",
