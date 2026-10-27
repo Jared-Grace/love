@@ -424,7 +424,7 @@ export function bible_glyph_chapter_exo27() {
       {
         verse_number: 17,
         words: [
-          "All",
+          "$all",
           "the",
           "posts",
           "around",
