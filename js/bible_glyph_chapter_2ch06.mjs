@@ -554,7 +554,7 @@ export function bible_glyph_chapter_2ch06() {
           "$throne",
           "of",
           "$wrestling+heart_on_fire,",
-          "if",
+          "$traffic_light",
           "$one+check",
           "your",
           "$son",
