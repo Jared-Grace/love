@@ -183,7 +183,7 @@ export function bible_glyph_chapter_deu14() {
           "or",
           "the",
           "rock",
-          "badger.",
+          "$badger.",
           "Although",
           "they",
           "chew",
