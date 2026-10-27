@@ -410,7 +410,7 @@ export function bible_glyph_chapter_1sa02() {
           "$shuffle",
           "$pot_of_food+basket",
           "$shuffle",
-          "cauldron",
+          "$pot_of_food+three",
           "$shuffle",
           "cooking",
           "pot.",
