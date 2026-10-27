@@ -656,7 +656,7 @@ export function bible_glyph_chapter_jer17() {
           "$footprints",
           "through",
           "these",
-          "gates.",
+          "$gate.",
         ],
       },
       {
