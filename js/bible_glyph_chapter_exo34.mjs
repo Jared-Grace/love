@@ -951,7 +951,7 @@ export function bible_glyph_chapter_exo34() {
           "did",
           "not",
           "$lightbulb",
-          "that",
+          "$pointing",
           "his",
           "face",
           "had",
