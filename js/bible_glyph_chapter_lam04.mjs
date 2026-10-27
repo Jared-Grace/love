@@ -627,7 +627,7 @@ export function bible_glyph_chapter_lam04() {
           "the",
           "$cup",
           "will",
-          "pass",
+          "$bridge",
           "to",
           "you",
           "as",
