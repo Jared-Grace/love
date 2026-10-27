@@ -386,7 +386,7 @@ export function bible_glyph_chapter_lev16() {
           "of",
           "finely",
           "ground",
-          "fragrant",
+          "$herb+nose",
           "$incense,",
           "and",
           "$footprints",
