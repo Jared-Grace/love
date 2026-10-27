@@ -499,7 +499,7 @@ export function bible_glyph_chapter_isa26() {
           "the",
           "$earth,",
           "nor",
-          "brought",
+          "$person+pointing_down",
           "any",
           "life",
           "into",
