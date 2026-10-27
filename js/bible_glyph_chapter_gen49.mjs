@@ -785,7 +785,7 @@ export function bible_glyph_chapter_gen49() {
       {
         verse_number: 31,
         words: [
-          "There",
+          "$telescope",
           "$father+map",
           "and",
           "his",
