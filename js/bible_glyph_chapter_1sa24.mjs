@@ -506,7 +506,7 @@ export function bible_glyph_chapter_1sa24() {
           "$running+toward?",
           "A",
           "$skull+doing",
-          "dog?",
+          "$dog?",
           "A",
           "flea?",
         ],
