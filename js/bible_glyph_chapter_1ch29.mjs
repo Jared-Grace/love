@@ -735,7 +735,7 @@ export function bible_glyph_chapter_1ch29() {
           "$heart_on_fire.",
           "So",
           "the",
-          "whole",
+          "$all",
           "$church",
           "$speech+thumbs_up",
           "the",
