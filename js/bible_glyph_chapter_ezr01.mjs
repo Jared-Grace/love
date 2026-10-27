@@ -352,7 +352,7 @@ export function bible_glyph_chapter_ezr01() {
           "ten",
           "matching",
           "silver",
-          "bowls,",
+          "$snow+umbrella,",
           "and",
           "a",
           "thousand",
