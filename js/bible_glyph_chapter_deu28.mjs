@@ -441,7 +441,7 @@ export function bible_glyph_chapter_deu28() {
           "$i_am",
           "your",
           "$heart_on_fire,",
-          "which",
+          "$back+flashlight",
           "I",
           "am",
           "giving",
