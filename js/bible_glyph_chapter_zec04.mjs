@@ -269,7 +269,7 @@ export function bible_glyph_chapter_zec04() {
           "things?",
           "But",
           "these",
-          "seven",
+          "$seven",
           "will",
           "$beaming+doing",
           "when",
