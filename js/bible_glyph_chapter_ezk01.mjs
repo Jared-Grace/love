@@ -631,7 +631,7 @@ export function bible_glyph_chapter_ezk01() {
           "And",
           "under",
           "the",
-          "expanse",
+          "$sky+arrow_both_ways",
           "their",
           "wings",
           "stretched",
