@@ -601,7 +601,7 @@ export function bible_glyph_chapter_gen30() {
       {
         verse_number: 25,
         words: [
-          "Now",
+          "$link",
           "when",
           "$proper_name$Rachel",
           "had",
