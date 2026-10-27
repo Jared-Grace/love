@@ -830,7 +830,7 @@ export function bible_glyph_chapter_lev23() {
           "made",
           "for",
           "you",
-          "before",
+          "$face",
           "$i_am",
           "your",
           "$heart_on_fire.",
