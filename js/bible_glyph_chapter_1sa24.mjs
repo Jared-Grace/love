@@ -43,7 +43,7 @@ export function bible_glyph_chapter_1sa24() {
           "$hand_receiving",
           "$three",
           "$ten+all",
-          "chosen",
+          "$check_box",
           "$man_beard",
           "from",
           "all",
