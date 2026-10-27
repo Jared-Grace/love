@@ -596,7 +596,7 @@ export function bible_glyph_chapter_deu04() {
         words: [
           "of",
           "any",
-          "beast",
+          "$paw_prints",
           "that",
           "is",
           "on",
