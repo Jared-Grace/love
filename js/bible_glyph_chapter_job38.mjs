@@ -20,7 +20,7 @@ export function bible_glyph_chapter_job38() {
           "$proper_name$Job",
           "$tray_out",
           "the",
-          "whirlwind",
+          "$tornado",
           "and",
           "$speech:",
         ],
