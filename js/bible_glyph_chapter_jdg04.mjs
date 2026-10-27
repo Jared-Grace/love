@@ -754,7 +754,7 @@ export function bible_glyph_chapter_jdg04() {
           "that",
           "$sun",
           "$heart_on_fire",
-          "subdued",
+          "$down_arrow+person+doing",
           "$proper_name$Jabin",
           "$king",
           "of",
