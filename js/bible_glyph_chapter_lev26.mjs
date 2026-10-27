@@ -720,7 +720,7 @@ export function bible_glyph_chapter_lev26() {
           "will",
           "$fist",
           "you",
-          "sevenfold",
+          "$seven",
           "for",
           "your",
           "$bow.",
