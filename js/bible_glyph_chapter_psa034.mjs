@@ -37,7 +37,7 @@ export function bible_glyph_chapter_psa034() {
           "$i_am",
           "at",
           "all",
-          "times;",
+          "$clock;",
           "His",
           "praise",
           "will",
