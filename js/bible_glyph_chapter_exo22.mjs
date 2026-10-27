@@ -72,7 +72,7 @@ export function bible_glyph_chapter_exo22() {
         verse_number: 3,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "it",
           "happens",
           "after",
