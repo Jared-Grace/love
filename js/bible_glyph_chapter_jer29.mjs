@@ -621,7 +621,7 @@ export function bible_glyph_chapter_jer29() {
           "have",
           "$no_entry",
           "$ear",
-          "to",
+          "$toward",
           "My",
           "$speech,",
           "declares",
