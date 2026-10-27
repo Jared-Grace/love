@@ -585,7 +585,7 @@ export function bible_glyph_chapter_lev10() {
           "$i_am,",
           "and",
           "since",
-          "these",
+          "$flashlight+flashlight",
           "things",
           "have",
           "happened",
