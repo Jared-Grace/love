@@ -44,7 +44,7 @@ export function bible_glyph_chapter_gen05() {
         words: [
           "$reminder_ribbon+thing",
           "and",
-          "female",
+          "$female_sign",
           "he",
           "created",
           "them,",
