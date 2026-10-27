@@ -213,7 +213,7 @@ export function bible_glyph_chapter_lev15() {
           "one",
           "who",
           "is",
-          "clean,",
+          "$soap+describing,",
           "that",
           "person",
           "must",
