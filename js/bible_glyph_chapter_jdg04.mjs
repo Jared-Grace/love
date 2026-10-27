@@ -390,7 +390,7 @@ export function bible_glyph_chapter_jdg04() {
           "$input_numbers+all",
           "of",
           "his",
-          "iron",
+          "$iron",
           "$chariot",
           "and",
           "all",
