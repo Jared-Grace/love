@@ -523,7 +523,7 @@ export function bible_glyph_chapter_gen26() {
           "$proper_name$Philistines",
           "stopped",
           "up",
-          "after",
+          "$next_track",
           "$father+map",
           "$skull.",
           "And",
