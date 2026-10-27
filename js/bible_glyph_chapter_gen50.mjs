@@ -714,7 +714,7 @@ export function bible_glyph_chapter_gen50() {
           "He",
           "promised",
           "on",
-          "oath",
+          "$raised_back_of_hand+doing",
           "to",
           "$father+map,",
           "$laughing+proper_name,",
