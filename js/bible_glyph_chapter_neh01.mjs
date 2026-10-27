@@ -93,7 +93,7 @@ export function bible_glyph_chapter_neh01() {
           "$telescope",
           "in",
           "the",
-          "province,",
+          "$map+crown,",
           "in",
           "great",
           "$thumbs_down",
