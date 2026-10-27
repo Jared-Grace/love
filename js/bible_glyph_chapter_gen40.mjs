@@ -86,7 +86,7 @@ export function bible_glyph_chapter_gen40() {
           "of",
           "the",
           "guard",
-          "assigned",
+          "$clipboard+doing",
           "$i_am+plus",
           "to",
           "them,",
