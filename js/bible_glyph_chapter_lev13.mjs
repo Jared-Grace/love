@@ -138,7 +138,7 @@ export function bible_glyph_chapter_lev13() {
           "$traffic_light,",
           "however,",
           "the",
-          "spot",
+          "$white_circle+round_pushpin",
           "on",
           "the",
           "skin",
