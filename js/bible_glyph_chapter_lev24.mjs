@@ -488,7 +488,7 @@ export function bible_glyph_chapter_lev24() {
       {
         verse_number: 19,
         words: [
-          "If",
+          "$pointing",
           "a",
           "$man_beard",
           "$hands_giving",
