@@ -865,7 +865,7 @@ export function bible_glyph_chapter_1ki08() {
         verse_number: 26,
         words: [
           "And",
-          "now,",
+          "$watch,",
           "O",
           "$heart_on_fire",
           "of",
