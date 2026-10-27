@@ -675,7 +675,7 @@ export function bible_glyph_chapter_exo25() {
           "$gold,",
           "and",
           "the",
-          "table",
+          "$hand_sending+thing",
           "shall",
           "be",
           "carried",
