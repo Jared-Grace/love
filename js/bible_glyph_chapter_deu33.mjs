@@ -739,7 +739,7 @@ export function bible_glyph_chapter_deu33() {
           "his",
           "$foot",
           "in",
-          "oil.",
+          "$lotion_bottle.",
         ],
       },
       {
