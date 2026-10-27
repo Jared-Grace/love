@@ -630,7 +630,7 @@ export function bible_glyph_chapter_exo15() {
           "$pointing",
           "it",
           "was",
-          "bitter.",
+          "$lemon.",
           "That",
           "is",
           "why",
