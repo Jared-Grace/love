@@ -252,7 +252,7 @@ export function bible_glyph_chapter_exo12() {
           "its",
           "$person_gesturing_ok",
           "and",
-          "legs",
+          "$leg+down_arrow",
           "and",
           "inner",
           "parts.",
