@@ -267,7 +267,7 @@ export function bible_glyph_chapter_jos24() {
           "$proper_name$Amorites",
           "who",
           "lived",
-          "beyond",
+          "$bridge+thing",
           "the",
           "$pointing_down+proper_name.",
           "They",
