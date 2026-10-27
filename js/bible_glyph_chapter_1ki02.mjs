@@ -328,7 +328,7 @@ export function bible_glyph_chapter_1ki02() {
           "came",
           "down",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "me",
           "at",
           "the",
