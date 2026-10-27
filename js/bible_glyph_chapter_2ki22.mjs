@@ -640,7 +640,7 @@ export function bible_glyph_chapter_2ki22() {
           "be",
           "kindled",
           "against",
-          "this",
+          "$flashlight",
           "$place",
           "and",
           "will",
