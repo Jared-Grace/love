@@ -155,7 +155,7 @@ export function bible_glyph_chapter_gen21() {
           "that",
           "$proper_name$Sarah",
           "would",
-          "nurse",
+          "$breast_feeding+doing",
           "$son?",
           "Yet",
           "I",
