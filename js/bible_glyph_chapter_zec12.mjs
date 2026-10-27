@@ -379,7 +379,7 @@ export function bible_glyph_chapter_zec12() {
           "and",
           "they",
           "will",
-          "look",
+          "$face_with_monocle",
           "on",
           "Me,",
           "the",
