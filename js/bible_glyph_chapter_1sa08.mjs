@@ -70,7 +70,7 @@ export function bible_glyph_chapter_1sa08() {
           "They",
           "turned",
           "aside",
-          "toward",
+          "$next_track",
           "dishonest",
           "gain,",
           "$hand_receiving",
