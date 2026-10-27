@@ -23,7 +23,7 @@ export function bible_glyph_chapter_jdg02() {
           "$i_am",
           "went",
           "up",
-          "from",
+          "$tray_out",
           "$proper_name$Gilgal",
           "to",
           "$proper_name$Bochim",
