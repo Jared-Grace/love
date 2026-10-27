@@ -533,7 +533,7 @@ export function bible_glyph_chapter_exo35() {
           "kinds",
           "of",
           "$gold",
-          "jewelry.",
+          "$toolbox.",
           "And",
           "they",
           "all",
