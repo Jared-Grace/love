@@ -236,7 +236,7 @@ export function bible_glyph_chapter_lam04() {
           "has",
           "become",
           "as",
-          "dry",
+          "$fallen_leaf",
           "as",
           "a",
           "$tree.",
