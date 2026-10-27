@@ -1494,7 +1494,7 @@ export function bible_glyph_chapter_lev13() {
           "his",
           "hair",
           "hang",
-          "loose,",
+          "$broken_chain+doing,",
           "and",
           "he",
           "must",
