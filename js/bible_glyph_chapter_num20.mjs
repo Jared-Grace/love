@@ -450,7 +450,7 @@ export function bible_glyph_chapter_num20() {
           "we",
           "lived",
           "there",
-          "many",
+          "$multiply",
           "$sun.",
           "The",
           "Egyptians",
