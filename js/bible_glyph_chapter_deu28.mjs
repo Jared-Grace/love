@@ -1623,7 +1623,7 @@ export function bible_glyph_chapter_deu28() {
           "throughout",
           "your",
           "$earth",
-          "until",
+          "$finish",
           "the",
           "high",
           "and",
