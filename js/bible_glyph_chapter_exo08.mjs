@@ -687,7 +687,7 @@ export function bible_glyph_chapter_exo08() {
           "of",
           "flies,",
           "and",
-          "even",
+          "$plus",
           "the",
           "ground",
           "where",
