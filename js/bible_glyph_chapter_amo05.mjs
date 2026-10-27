@@ -568,7 +568,7 @@ export function bible_glyph_chapter_amo05() {
           "to",
           "$toward+person+doing",
           "a",
-          "bear,",
+          "$bear,",
           "or",
           "who",
           "$footprints",
