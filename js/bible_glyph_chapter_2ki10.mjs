@@ -536,7 +536,7 @@ export function bible_glyph_chapter_2ki10() {
           "of",
           "Beth",
           "eked,",
-          "forty",
+          "$four+zero",
           "two",
           "$man_beard.",
           "He",
