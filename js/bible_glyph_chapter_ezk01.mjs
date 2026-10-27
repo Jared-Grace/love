@@ -312,7 +312,7 @@ export function bible_glyph_chapter_ezk01() {
           "had",
           "$two",
           "wings",
-          "touching",
+          "$link+doing",
           "the",
           "wings",
           "of",
