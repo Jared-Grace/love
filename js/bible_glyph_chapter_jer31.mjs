@@ -195,7 +195,7 @@ export function bible_glyph_chapter_jer31() {
           "$speech:",
           "$partying_face",
           "with",
-          "joy",
+          "$beaming",
           "for",
           "$hand+foot;",
           "shout",
