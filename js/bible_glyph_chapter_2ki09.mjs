@@ -282,7 +282,7 @@ export function bible_glyph_chapter_2ki09() {
           "of",
           "$proper_name$Ahab",
           "will",
-          "perish,",
+          "$wilted_flower,",
           "and",
           "I",
           "will",
