@@ -49,7 +49,7 @@ export function bible_glyph_chapter_sng08() {
         words: [
           "I",
           "would",
-          "lead",
+          "$horse+right_arrow+doing",
           "you",
           "and",
           "$footprints",
