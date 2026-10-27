@@ -166,7 +166,7 @@ export function bible_glyph_chapter_hab03() {
           "of",
           "$proper_name$Cushan",
           "in",
-          "distress;",
+          "$thumbs_down+hole;",
           "the",
           "curtains",
           "of",
