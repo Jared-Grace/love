@@ -278,7 +278,7 @@ export function bible_glyph_chapter_gen22() {
           "had",
           "$speech,",
           "$father+map",
-          "built",
+          "$brick",
           "the",
           "$altar",
           "there",
