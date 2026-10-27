@@ -724,7 +724,7 @@ export function bible_glyph_chapter_jos02() {
           "tied",
           "the",
           "scarlet",
-          "cord",
+          "$crossed_fingers",
           "in",
           "the",
           "window.",
