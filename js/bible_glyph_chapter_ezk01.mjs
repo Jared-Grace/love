@@ -322,7 +322,7 @@ export function bible_glyph_chapter_ezk01() {
           "either",
           "side,",
           "and",
-          "two",
+          "$two",
           "wings",
           "covering",
           "its",
