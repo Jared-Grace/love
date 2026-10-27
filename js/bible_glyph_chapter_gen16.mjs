@@ -426,7 +426,7 @@ export function bible_glyph_chapter_gen16() {
           "I",
           "really",
           "$eye",
-          "here",
+          "$pointing_down+round_pushpin",
           "the",
           "One",
           "who",
