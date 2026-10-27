@@ -268,7 +268,7 @@ export function bible_glyph_chapter_lev26() {
           "you",
           "fruitful",
           "and",
-          "multiply",
+          "$multiply+doing",
           "you,",
           "and",
           "I",
