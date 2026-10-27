@@ -740,7 +740,7 @@ export function bible_glyph_chapter_1sa25() {
           "ever",
           "so",
           "$plus+doing,",
-          "if",
+          "$traffic_light",
           "by",
           "morning",
           "I",
