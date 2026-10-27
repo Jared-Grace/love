@@ -210,7 +210,7 @@ export function bible_glyph_chapter_lev26() {
         words: [
           "You",
           "will",
-          "pursue",
+          "$running+toward",
           "your",
           "enemies,",
           "and",
