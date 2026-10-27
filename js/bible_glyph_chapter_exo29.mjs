@@ -1231,7 +1231,7 @@ export function bible_glyph_chapter_exo29() {
           "of",
           "a",
           "quarter",
-          "hin",
+          "$jar+straight_ruler",
           "of",
           "$wine.",
         ],
