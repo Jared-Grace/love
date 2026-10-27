@@ -467,7 +467,7 @@ export function bible_glyph_chapter_jos06() {
           "$turn_back",
           "to",
           "the",
-          "camp.",
+          "$camp.",
           "They",
           "$hammer+doing",
           "this",
