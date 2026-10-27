@@ -102,7 +102,7 @@ export function bible_glyph_chapter_zec14() {
           "the",
           "$sun",
           "of",
-          "battle.",
+          "$crossed_swords+magnet.",
         ],
       },
       {
