@@ -272,7 +272,7 @@ export function bible_glyph_chapter_exo40() {
           "of",
           "$alarm_clock",
           "and",
-          "wash",
+          "$bathtub+doing",
           "them",
           "with",
           "$water.",
