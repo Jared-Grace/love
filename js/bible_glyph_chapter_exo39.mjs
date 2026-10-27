@@ -592,7 +592,7 @@ export function bible_glyph_chapter_exo39() {
           "weaver,",
           "all",
           "of",
-          "blue",
+          "$blue_circle",
           "cloth.",
         ],
       },
