@@ -581,7 +581,7 @@ export function bible_glyph_chapter_lev10() {
           "$bow",
           "and",
           "$burnt_offering",
-          "before",
+          "$face",
           "$i_am,",
           "and",
           "since",
