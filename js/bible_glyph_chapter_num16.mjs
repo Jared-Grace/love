@@ -521,7 +521,7 @@ export function bible_glyph_chapter_num16() {
           "are",
           "to",
           "appear",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "tomorrow,",
