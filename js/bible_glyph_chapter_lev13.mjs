@@ -872,7 +872,7 @@ export function bible_glyph_chapter_lev13() {
           "it",
           "is",
           "not",
-          "beneath",
+          "$down_arrow+mountain+describing",
           "$tray_out",
           "the",
           "skin",
