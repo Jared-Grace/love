@@ -719,7 +719,7 @@ export function bible_glyph_chapter_deu29() {
           "of",
           "$fire+rock",
           "and",
-          "salt,",
+          "$salt,",
           "unsown",
           "and",
           "unproductive,",
