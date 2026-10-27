@@ -82,7 +82,7 @@ export function bible_glyph_chapter_num15() {
           "$tray_out",
           "the",
           "herd",
-          "or",
+          "$shuffle",
           "$tray_out",
           "the",
           "$sheep,",
