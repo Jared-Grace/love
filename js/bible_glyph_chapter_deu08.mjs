@@ -563,7 +563,7 @@ export function bible_glyph_chapter_deu08() {
           "in",
           "order",
           "to",
-          "confirm",
+          "$person+pointing_up",
           "His",
           "$covenant",
           "that",
