@@ -201,7 +201,7 @@ export function bible_glyph_chapter_psa019() {
         verse_number: 9,
         words: [
           "The",
-          "fear",
+          "$fear",
           "of",
           "the",
           "$i_am",
