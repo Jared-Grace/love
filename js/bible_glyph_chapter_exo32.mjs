@@ -807,7 +807,7 @@ export function bible_glyph_chapter_exo32() {
           "$speech",
           "to",
           "them,",
-          "Whoever",
+          "$person+question",
           "has",
           "gold,",
           "let",
