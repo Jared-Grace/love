@@ -685,7 +685,7 @@ export function bible_glyph_chapter_job38() {
           "you",
           "$hand_sending",
           "the",
-          "lightning",
+          "$cloud_with_lightning",
           "bolts",
           "on",
           "their",
