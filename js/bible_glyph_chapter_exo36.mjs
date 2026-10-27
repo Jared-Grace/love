@@ -984,7 +984,7 @@ export function bible_glyph_chapter_exo36() {
           "together",
           "with",
           "its",
-          "five",
+          "$five",
           "posts",
           "and",
           "their",
