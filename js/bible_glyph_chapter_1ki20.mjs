@@ -24,7 +24,7 @@ export function bible_glyph_chapter_1ki20() {
           "$tray_in+doing",
           "his",
           "entire",
-          "army.",
+          "$raised_fist.",
           "Thirty",
           "two",
           "$king",
