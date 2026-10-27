@@ -397,7 +397,7 @@ export function bible_glyph_chapter_job31() {
           "have",
           "$eye",
           "one",
-          "perish",
+          "$wilted_flower",
           "for",
           "lack",
           "of",
