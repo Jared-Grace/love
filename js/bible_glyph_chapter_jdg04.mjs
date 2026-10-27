@@ -355,7 +355,7 @@ export function bible_glyph_chapter_jdg04() {
           "tree",
           "of",
           "$proper_name$Zaanannim,",
-          "which",
+          "$back+flashlight",
           "was",
           "near",
           "$sparkle+proper_name.",
