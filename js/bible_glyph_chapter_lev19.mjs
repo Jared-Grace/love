@@ -881,7 +881,7 @@ export function bible_glyph_chapter_lev19() {
           "rise",
           "in",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "elderly,",
