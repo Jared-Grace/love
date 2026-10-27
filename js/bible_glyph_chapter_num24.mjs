@@ -602,7 +602,7 @@ export function bible_glyph_chapter_num24() {
           "lifted",
           "up",
           "an",
-          "oracle,",
+          "$speech+likeness,",
           "$speech,",
           "$proper_name$Amalek",
           "was",
