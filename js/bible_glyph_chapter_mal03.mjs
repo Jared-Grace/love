@@ -48,7 +48,7 @@ export function bible_glyph_chapter_mal03() {
           "in",
           "whom",
           "$you",
-          "delight",
+          "$smiling_face_with_hearts+doer",
           "-",
           "see,",
           "He",
