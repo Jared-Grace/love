@@ -516,7 +516,7 @@ export function bible_glyph_chapter_gen20() {
           "$proper_name$Sarah",
           "he",
           "$speech,",
-          "See,",
+          "$exclamation,",
           "I",
           "have",
           "$hands_giving",
