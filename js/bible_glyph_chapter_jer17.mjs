@@ -196,7 +196,7 @@ export function bible_glyph_chapter_jer17() {
           "$footprints.",
           "He",
           "will",
-          "dwell",
+          "$tent+doing",
           "in",
           "the",
           "parched",
