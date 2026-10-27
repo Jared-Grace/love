@@ -182,7 +182,7 @@ export function bible_glyph_chapter_1sa01() {
           "would",
           "provoke",
           "her",
-          "viciously,",
+          "$face_steam+right_anger_bubble+thing,",
           "to",
           "taunt",
           "her.",
