@@ -406,7 +406,7 @@ export function bible_glyph_chapter_deu10() {
           "And",
           "$watch,",
           "$wrestling+heart_on_fire,",
-          "what",
+          "$flashlight+question",
           "does",
           "the",
           "$i_am",
