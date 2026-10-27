@@ -519,7 +519,7 @@ export function bible_glyph_chapter_num18() {
       {
         verse_number: 14,
         words: [
-          "Every",
+          "$all",
           "devoted",
           "thing",
           "in",
