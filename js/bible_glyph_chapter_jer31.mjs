@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_jer31() {
           "$covenant",
           "I",
           "made",
-          "with",
+          "$safety_pin",
           "their",
           "$father",
           "when",
