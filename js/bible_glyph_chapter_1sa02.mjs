@@ -262,7 +262,7 @@ export function bible_glyph_chapter_1sa02() {
           "$shushing_face+pause_button",
           "in",
           "$darkness;",
-          "for",
+          "$pointing",
           "$no_entry",
           "$man_beard",
           "shall",
