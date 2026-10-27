@@ -580,7 +580,7 @@ export function bible_glyph_chapter_amo05() {
           "$hand",
           "$pointing_up",
           "the",
-          "wall",
+          "$brick+shield",
           "only",
           "to",
           "be",
