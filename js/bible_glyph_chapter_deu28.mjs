@@ -1498,7 +1498,7 @@ export function bible_glyph_chapter_deu28() {
           "on",
           "your",
           "$scarf",
-          "until",
+          "$finish",
           "He",
           "has",
           "destroyed",
