@@ -628,7 +628,7 @@ export function bible_glyph_chapter_1ki20() {
         words: [
           "He",
           "$speech,",
-          "If",
+          "$traffic_light",
           "they",
           "have",
           "marched",
