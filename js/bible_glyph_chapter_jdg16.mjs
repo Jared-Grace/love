@@ -1010,7 +1010,7 @@ export function bible_glyph_chapter_jdg16() {
           "$hand_with_fingers_splayed+eyes+doing",
           "the",
           "pillars",
-          "supporting",
+          "$pin+doing",
           "the",
           "$house,",
           "so",
