@@ -439,7 +439,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 17,
         words: [
-          "Two",
+          "$two",
           "$hand",
           "for",
           "each",
