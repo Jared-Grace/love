@@ -519,7 +519,7 @@ export function bible_glyph_chapter_mal03() {
           "$microscope",
           "$heart_on_fire",
           "and",
-          "escape.",
+          "$parachute.",
         ],
       },
       {
