@@ -425,7 +425,7 @@ export function bible_glyph_chapter_1sa20() {
           "$father",
           "by",
           "this",
-          "time",
+          "$clock",
           "tomorrow",
           "or",
           "the",
