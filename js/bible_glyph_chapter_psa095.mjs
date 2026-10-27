@@ -104,7 +104,7 @@ export function bible_glyph_chapter_psa095() {
           "is",
           "His,",
           "for",
-          "He",
+          "$pointing_back",
           "$hammer+doing",
           "it,",
           "and",
