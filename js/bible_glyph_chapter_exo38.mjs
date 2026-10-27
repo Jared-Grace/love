@@ -124,7 +124,7 @@ export function bible_glyph_chapter_exo38() {
         verse_number: 5,
         words: [
           "He",
-          "cast",
+          "$pouring_liquid+fire",
           "four",
           "$ring",
           "at",
