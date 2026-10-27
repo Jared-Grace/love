@@ -33,7 +33,7 @@ export function bible_glyph_chapter_lam04() {
           "lie",
           "scattered",
           "on",
-          "every",
+          "$all",
           "street",
           "$person_gesturing_ok.",
         ],
