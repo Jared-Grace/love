@@ -193,7 +193,7 @@ export function bible_glyph_chapter_lam04() {
           "$snow,",
           "$white_circle+sparkles+doing",
           "than",
-          "milk;",
+          "$milk;",
           "their",
           "bodies",
           "were",
