@@ -194,7 +194,7 @@ export function bible_glyph_chapter_neh08() {
           "he",
           "was",
           "standing",
-          "above",
+          "$pointing_up",
           "them",
           "all,",
           "and",
