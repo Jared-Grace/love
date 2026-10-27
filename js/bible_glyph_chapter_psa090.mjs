@@ -313,7 +313,7 @@ export function bible_glyph_chapter_psa090() {
           "and",
           "be",
           "glad",
-          "all",
+          "$all",
           "our",
           "$sun.",
         ],
