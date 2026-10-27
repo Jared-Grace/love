@@ -1512,7 +1512,7 @@ export function bible_glyph_chapter_exo12() {
           "he",
           "may",
           "come",
-          "near",
+          "$magnet+doing",
           "to",
           "$hammer+doing",
           "it,",
