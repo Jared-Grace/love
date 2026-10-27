@@ -708,7 +708,7 @@ export function bible_glyph_chapter_exo15() {
         verse_number: 26,
         words: [
           "$speech,",
-          "If",
+          "$traffic_light",
           "you",
           "will",
           "$ear",
