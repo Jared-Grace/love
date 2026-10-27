@@ -204,7 +204,7 @@ export function bible_glyph_chapter_jdg11() {
           "my",
           "$father",
           "$house?",
-          "Why",
+          "$flashlight+question+lightbulb",
           "then",
           "have",
           "you",
