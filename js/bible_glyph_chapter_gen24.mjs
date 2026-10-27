@@ -303,7 +303,7 @@ export function bible_glyph_chapter_gen24() {
           "the",
           "$kneeling",
           "$hand_receiving",
-          "ten",
+          "$ten",
           "of",
           "his",
           "$crown",
