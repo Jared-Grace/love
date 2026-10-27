@@ -99,7 +99,7 @@ export function bible_glyph_chapter_jer31() {
       {
         verse_number: 4,
         words: [
-          "Again",
+          "$repeat",
           "I",
           "will",
           "build",
