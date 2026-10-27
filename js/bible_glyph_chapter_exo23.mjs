@@ -844,7 +844,7 @@ export function bible_glyph_chapter_exo23() {
           "$earth",
           "would",
           "become",
-          "desolate,",
+          "$astonished+thing,",
           "and",
           "the",
           "$sprout",
