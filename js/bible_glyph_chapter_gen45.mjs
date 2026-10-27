@@ -187,7 +187,7 @@ export function bible_glyph_chapter_gen45() {
           "will",
           "be",
           "five",
-          "more",
+          "$repeat",
           "years",
           "without",
           "plowing",
