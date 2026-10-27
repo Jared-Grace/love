@@ -1286,7 +1286,7 @@ export function bible_glyph_chapter_jdg11() {
         words: [
           "After",
           "$two",
-          "months",
+          "$new_moon",
           "she",
           "$turn_back",
           "to",
