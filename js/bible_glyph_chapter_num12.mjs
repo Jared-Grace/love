@@ -106,7 +106,7 @@ export function bible_glyph_chapter_num12() {
           "Meeting.",
           "So",
           "the",
-          "three",
+          "$three",
           "of",
           "them",
           "went",
