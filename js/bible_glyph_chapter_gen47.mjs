@@ -90,7 +90,7 @@ export function bible_glyph_chapter_gen47() {
           "of",
           "$sheep,",
           "both",
-          "we",
+          "$me",
           "and",
           "our",
           "$father.",
