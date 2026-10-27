@@ -105,7 +105,7 @@ export function bible_glyph_chapter_lev11() {
           "it",
           "chews",
           "the",
-          "cud,",
+          "$cow_face+clockwise_arrows+thing,",
           "does",
           "not",
           "have",
