@@ -508,7 +508,7 @@ export function bible_glyph_chapter_exo22() {
           "restitution",
           "is",
           "required.",
-          "If",
+          "$traffic_light",
           "the",
           "animal",
           "was",
