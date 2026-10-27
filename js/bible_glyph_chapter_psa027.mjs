@@ -373,7 +373,7 @@ export function bible_glyph_chapter_psa027() {
       {
         verse_number: 14,
         words: [
-          "Wait",
+          "$crossed_fingers+doing",
           "patiently",
           "for",
           "the",
