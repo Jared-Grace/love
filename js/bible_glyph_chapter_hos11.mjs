@@ -256,7 +256,7 @@ export function bible_glyph_chapter_hos11() {
           "will",
           "$no_entry",
           "$turn_back",
-          "destroy",
+          "$collision",
           "$fruit.",
           "For",
           "I",
