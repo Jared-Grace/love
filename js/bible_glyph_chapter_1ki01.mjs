@@ -259,7 +259,7 @@ export function bible_glyph_chapter_1ki01() {
           "men",
           "would",
           "$no_entry",
-          "join",
+          "$linked_paperclips",
           "$proper_name$Adonijah.",
         ],
       },
