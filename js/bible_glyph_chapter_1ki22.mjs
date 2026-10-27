@@ -217,7 +217,7 @@ export function bible_glyph_chapter_1ki22() {
           "whom",
           "we",
           "can",
-          "inquire?",
+          "$magnifying_glass+question?",
         ],
       },
       {
