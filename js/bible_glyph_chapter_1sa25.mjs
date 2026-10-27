@@ -1148,7 +1148,7 @@ export function bible_glyph_chapter_1sa25() {
           "$speech+thumbs_up",
           "are",
           "you,",
-          "because",
+          "$back+flashlight",
           "this",
           "$sun",
           "you",
