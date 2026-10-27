@@ -384,7 +384,7 @@ export function bible_glyph_chapter_jos06() {
           "$i_am+rescue",
           "got",
           "up",
-          "early",
+          "$morning+doing",
           "the",
           "next",
           "morning,",
