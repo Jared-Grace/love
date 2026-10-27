@@ -458,7 +458,7 @@ export function bible_glyph_chapter_jer17() {
           "You",
           "are",
           "my",
-          "praise.",
+          "$clapping_hands+thing.",
         ],
       },
       {
