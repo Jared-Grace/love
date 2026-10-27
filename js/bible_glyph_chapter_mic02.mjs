@@ -271,7 +271,7 @@ export function bible_glyph_chapter_mic02() {
         verse_number: 9,
         words: [
           "You",
-          "drive",
+          "$door+leftwards_pushing_hand+doing",
           "the",
           "$woman",
           "of",
