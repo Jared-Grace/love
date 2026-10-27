@@ -436,7 +436,7 @@ export function bible_glyph_chapter_zep02() {
           "down",
           "in",
           "her",
-          "midst,",
+          "$radio_button,",
           "$sprout",
           "of",
           "every",
