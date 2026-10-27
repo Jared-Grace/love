@@ -1197,7 +1197,7 @@ export function bible_glyph_chapter_exo12() {
           "with",
           "about",
           "600,000",
-          "men",
+          "$might+man_beard",
           "on",
           "$foot+doer,",
           "besides",
