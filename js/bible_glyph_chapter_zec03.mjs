@@ -194,7 +194,7 @@ export function bible_glyph_chapter_zec03() {
           "of",
           "Hosts",
           "$speech:",
-          "If",
+          "$traffic_light",
           "you",
           "$walking",
           "in",
