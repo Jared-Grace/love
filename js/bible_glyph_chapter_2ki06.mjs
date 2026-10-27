@@ -452,7 +452,7 @@ export function bible_glyph_chapter_2ki06() {
           "$heart_on_fire",
           "got",
           "up",
-          "early",
+          "$morning+doing",
           "in",
           "the",
           "morning",
