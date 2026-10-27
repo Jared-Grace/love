@@ -986,7 +986,7 @@ export function bible_glyph_chapter_jer31() {
           "for",
           "his",
           "own",
-          "iniquity.",
+          "$cyclone.",
           "If",
           "anyone",
           "$eating",
