@@ -68,7 +68,7 @@ export function bible_glyph_chapter_deu14() {
           "all",
           "the",
           "$family$s",
-          "on",
+          "$pointing_up",
           "the",
           "face",
           "of",
