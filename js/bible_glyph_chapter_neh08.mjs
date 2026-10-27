@@ -496,7 +496,7 @@ export function bible_glyph_chapter_neh08() {
           "$toward",
           "$proper_name$Ezra",
           "the",
-          "scribe",
+          "$abacus",
           "to",
           "study",
           "the",
