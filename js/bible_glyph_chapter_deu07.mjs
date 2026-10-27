@@ -446,7 +446,7 @@ export function bible_glyph_chapter_deu07() {
           "$fruit",
           "of",
           "your",
-          "womb",
+          "$baby+house",
           "and",
           "the",
           "$fruit",
