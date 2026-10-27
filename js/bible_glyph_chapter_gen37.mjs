@@ -984,7 +984,7 @@ export function bible_glyph_chapter_gen37() {
           "for",
           "his",
           "$son",
-          "many",
+          "$multiply",
           "$sun.",
         ],
       },
