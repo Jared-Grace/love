@@ -436,7 +436,7 @@ export function bible_glyph_chapter_exo30() {
         words: [
           "$hand_receiving",
           "the",
-          "atonement",
+          "$umbrella+thing",
           "$silver",
           "from",
           "the",
