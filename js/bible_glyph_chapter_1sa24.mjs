@@ -175,7 +175,7 @@ export function bible_glyph_chapter_1sa24() {
           "$pointing_up",
           "he",
           "had",
-          "cut",
+          "$scissors",
           "off",
           "the",
           "corner",
