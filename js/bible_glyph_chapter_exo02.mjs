@@ -416,7 +416,7 @@ export function bible_glyph_chapter_exo02() {
           "$person+question",
           "$palm_down",
           "you",
-          "ruler",
+          "$military_medal",
           "and",
           "judge",
           "over",
