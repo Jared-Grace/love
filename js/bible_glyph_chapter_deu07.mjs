@@ -324,7 +324,7 @@ export function bible_glyph_chapter_deu07() {
           "$gift",
           "for",
           "a",
-          "thousand",
+          "$ten+all",
           "generations",
           "of",
           "those",
