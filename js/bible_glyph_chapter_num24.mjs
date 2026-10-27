@@ -686,7 +686,7 @@ export function bible_glyph_chapter_num24() {
       {
         verse_number: 24,
         words: [
-          "Ships",
+          "$ship+anchor",
           "will",
           "come",
           "from",
