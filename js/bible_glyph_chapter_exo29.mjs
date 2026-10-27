@@ -495,7 +495,7 @@ export function bible_glyph_chapter_exo29() {
           "$i_am,",
           "a",
           "pleasing",
-          "aroma,",
+          "$nose,",
           "a",
           "food",
           "offering",
