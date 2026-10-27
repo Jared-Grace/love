@@ -786,7 +786,7 @@ export function bible_glyph_chapter_jer31() {
           "they",
           "will",
           "once",
-          "again",
+          "$repeat",
           "$speech",
           "this",
           "$speech",
