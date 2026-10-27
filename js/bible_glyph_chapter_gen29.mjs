@@ -835,7 +835,7 @@ export function bible_glyph_chapter_gen29() {
           "$eye",
           "my",
           "$persevering_face+thing.",
-          "Now",
+          "$watch",
           "my",
           "$man_beard",
           "will",
