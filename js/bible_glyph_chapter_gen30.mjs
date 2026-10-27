@@ -30,7 +30,7 @@ export function bible_glyph_chapter_gen30() {
           "$sister,",
           "and",
           "$speech",
-          "to",
+          "$toward",
           "$hand+foot,",
           "Give",
           "me",
