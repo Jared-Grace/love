@@ -985,7 +985,7 @@ export function bible_glyph_chapter_1ki08() {
           "$kneeling",
           "$hands_praying",
           "$toward",
-          "this",
+          "$flashlight",
           "$place.",
         ],
       },
