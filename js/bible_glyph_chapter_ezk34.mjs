@@ -396,7 +396,7 @@ export function bible_glyph_chapter_ezk34() {
           "of",
           "clouds",
           "and",
-          "darkness.",
+          "$cloud+black_circle.",
         ],
       },
       {
