@@ -720,7 +720,7 @@ export function bible_glyph_chapter_deu11() {
         verse_number: 22,
         words: [
           "$pointing",
-          "if",
+          "$traffic_light",
           "you",
           "carefully",
           "keep",
