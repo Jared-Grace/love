@@ -606,7 +606,7 @@ export function bible_glyph_chapter_deu05() {
           "the",
           "$fire,",
           "the",
-          "cloud,",
+          "$cloud,",
           "and",
           "the",
           "deep",
