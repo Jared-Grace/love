@@ -642,7 +642,7 @@ export function bible_glyph_chapter_dan09() {
           "and",
           "$eye",
           "the",
-          "desolation",
+          "$astonished+doing",
           "of",
           "the",
           "$city",
