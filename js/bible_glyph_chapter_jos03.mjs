@@ -568,7 +568,7 @@ export function bible_glyph_chapter_jos03() {
           "ground",
           "in",
           "the",
-          "middle",
+          "$radio_button",
           "of",
           "the",
           "$pointing_down+proper_name,",
