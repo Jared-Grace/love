@@ -219,7 +219,7 @@ export function bible_glyph_chapter_1ki21() {
           "your",
           "$vineyard",
           "for",
-          "silver,",
+          "$silver,",
           "or",
           "if",
           "you",
