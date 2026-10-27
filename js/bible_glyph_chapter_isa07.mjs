@@ -170,7 +170,7 @@ export function bible_glyph_chapter_isa07() {
           "over",
           "the",
           "fierce",
-          "anger",
+          "$nose+fire",
           "of",
           "$proper_name$Rezin",
           "and",
