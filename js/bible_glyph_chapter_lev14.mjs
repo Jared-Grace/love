@@ -591,7 +591,7 @@ export function bible_glyph_chapter_lev14() {
           "$hand_with_fingers_splayed",
           "on",
           "the",
-          "right",
+          "$hand+right_arrow+describing",
           "$ear",
           "of",
           "the",
