@@ -1402,7 +1402,7 @@ export function bible_glyph_chapter_exo29() {
           "I",
           "might",
           "dwell",
-          "among",
+          "$radio_button",
           "them.",
           "I",
           "am",
