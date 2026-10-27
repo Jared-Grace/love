@@ -1203,7 +1203,7 @@ export function bible_glyph_chapter_deu28() {
           "the",
           "$i_am",
           "will",
-          "drive",
+          "$horse+right_arrow+doing",
           "you.",
         ],
       },
