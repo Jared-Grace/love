@@ -827,7 +827,7 @@ export function bible_glyph_chapter_exo26() {
           "the",
           "mercy",
           "seat",
-          "on",
+          "$pointing_up",
           "the",
           "$ark",
           "of",
