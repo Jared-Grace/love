@@ -102,7 +102,7 @@ export function bible_glyph_chapter_pro31() {
         words: [
           "$no_entry+traffic_light",
           "they",
-          "drink",
+          "$cup_with_straw",
           "and",
           "forget",
           "what",
