@@ -144,7 +144,7 @@ export function bible_glyph_chapter_gen31() {
         words: [
           "$you",
           "$lightbulb",
-          "that",
+          "$pointing",
           "with",
           "all",
           "my",
