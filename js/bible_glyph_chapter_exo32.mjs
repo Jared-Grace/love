@@ -868,7 +868,7 @@ export function bible_glyph_chapter_exo32() {
         words: [
           "So",
           "$fishing_pole+proper_name",
-          "stood",
+          "$person+round_pushpin",
           "at",
           "the",
           "entrance",
