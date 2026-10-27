@@ -540,7 +540,7 @@ export function bible_glyph_chapter_dan09() {
           "we",
           "have",
           "acted",
-          "wickedly.",
+          "$thumbs_down+person+doing.",
         ],
       },
       {
