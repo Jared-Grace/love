@@ -141,7 +141,7 @@ export function bible_glyph_chapter_job23() {
           "If",
           "I",
           "$walking",
-          "east,",
+          "$compass+right_arrow,",
           "He",
           "is",
           "not",
