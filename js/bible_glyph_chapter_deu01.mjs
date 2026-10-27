@@ -254,7 +254,7 @@ export function bible_glyph_chapter_deu01() {
           "$back+flashlight",
           "the",
           "$i_am",
-          "swore",
+          "$raised_back_of_hand+doing",
           "He",
           "would",
           "$hands_giving",
