@@ -1218,7 +1218,7 @@ export function bible_glyph_chapter_exo28() {
           "the",
           "$tent",
           "of",
-          "Meeting",
+          "$alarm_clock",
           "or",
           "approach",
           "the",
