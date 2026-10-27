@@ -386,7 +386,7 @@ export function bible_glyph_chapter_exo28() {
         words: [
           "and",
           "$two",
-          "chains",
+          "$link+chains",
           "of",
           "pure",
           "$gold,",
