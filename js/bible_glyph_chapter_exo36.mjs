@@ -928,7 +928,7 @@ export function bible_glyph_chapter_exo36() {
           "$hammer+doing",
           "for",
           "it",
-          "four",
+          "$four",
           "posts",
           "of",
           "acacia",
