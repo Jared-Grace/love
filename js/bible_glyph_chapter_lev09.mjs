@@ -34,7 +34,7 @@ export function bible_glyph_chapter_lev09() {
         verse_number: 2,
         words: [
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Aaron,",
           "$hand_receiving",
           "for",
