@@ -202,7 +202,7 @@ export function bible_glyph_chapter_lev04() {
           "remove",
           "$all",
           "the",
-          "fat",
+          "$bacon",
           "$tray_out",
           "$bull",
           "$bow,",
