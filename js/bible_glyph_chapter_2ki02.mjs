@@ -833,7 +833,7 @@ export function bible_glyph_chapter_2ki02() {
           "been",
           "healthy",
           "to",
-          "this",
+          "$flashlight",
           "$sun,",
           "according",
           "to",
