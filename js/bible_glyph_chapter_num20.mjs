@@ -618,7 +618,7 @@ export function bible_glyph_chapter_num20() {
           "$speech",
           "about",
           "it,",
-          "only",
+          "$one+check",
           "let",
           "us",
           "pass",
