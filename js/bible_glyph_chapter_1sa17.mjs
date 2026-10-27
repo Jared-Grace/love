@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_1sa17() {
           "lamb",
           "from",
           "the",
-          "flock,",
+          "$sheep+crowd,",
         ],
       },
       {
