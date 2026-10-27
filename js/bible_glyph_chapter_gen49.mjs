@@ -140,7 +140,7 @@ export function bible_glyph_chapter_gen49() {
           "$linked_paperclips+doing",
           "their",
           "$church.",
-          "For",
+          "$pointing",
           "in",
           "their",
           "anger",
