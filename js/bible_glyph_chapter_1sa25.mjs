@@ -465,7 +465,7 @@ export function bible_glyph_chapter_1sa25() {
           "$proper_name$Nabal's",
           "$woman,",
           "$speech,",
-          "Look,",
+          "$exclamation,",
           "$two_hearts+proper_name",
           "$hand_sending",
           "messengers",
