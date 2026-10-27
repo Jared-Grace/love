@@ -111,7 +111,7 @@ export function bible_glyph_chapter_deu11() {
           "to",
           "the",
           "$clamp+proper_name",
-          "army,",
+          "$raised_fist,",
           "to",
           "their",
           "$horse",
