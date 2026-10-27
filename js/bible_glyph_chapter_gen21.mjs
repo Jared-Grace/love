@@ -328,7 +328,7 @@ export function bible_glyph_chapter_gen21() {
           "Early",
           "in",
           "the",
-          "morning",
+          "$morning",
           "$father+map",
           "got",
           "up,",
