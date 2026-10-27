@@ -1034,7 +1034,7 @@ export function bible_glyph_chapter_lev15() {
           "$man_beard",
           "who",
           "lies",
-          "with",
+          "$linked_paperclips",
           "an",
           "unclean",
           "woman.",
