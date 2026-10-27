@@ -362,7 +362,7 @@ export function bible_glyph_chapter_lev01() {
           "of",
           "it",
           "and",
-          "burn",
+          "$incense+doing",
           "it",
           "$altar.",
           "It",
