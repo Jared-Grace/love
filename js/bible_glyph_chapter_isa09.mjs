@@ -537,7 +537,7 @@ export function bible_glyph_chapter_isa09() {
           "His",
           "$hand",
           "is",
-          "still",
+          "$repeat",
           "upraised.",
         ],
       },
