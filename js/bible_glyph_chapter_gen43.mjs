@@ -298,7 +298,7 @@ export function bible_glyph_chapter_gen43() {
           "we",
           "had",
           "not",
-          "delayed,",
+          "$flashlight+question+doing,",
           "by",
           "now",
           "we",
