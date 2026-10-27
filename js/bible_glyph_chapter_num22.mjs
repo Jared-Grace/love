@@ -840,7 +840,7 @@ export function bible_glyph_chapter_num22() {
           "$hand+right_arrow",
           "or",
           "the",
-          "left.",
+          "$hand+away.",
         ],
       },
       {
