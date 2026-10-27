@@ -593,7 +593,7 @@ export function bible_glyph_chapter_lev22() {
           "must",
           "$no_entry",
           "present",
-          "anything",
+          "$all",
           "with",
           "a",
           "defect,",
