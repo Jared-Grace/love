@@ -176,7 +176,7 @@ export function bible_glyph_chapter_exo02() {
           "the",
           "$child,",
           "and",
-          "behold,",
+          "$exclamation,",
           "the",
           "little",
           "boy",
