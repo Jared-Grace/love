@@ -759,7 +759,7 @@ export function bible_glyph_chapter_gen30() {
           "set",
           "$foot.",
           "But",
-          "now,",
+          "$watch,",
           "when",
           "shall",
           "I",
