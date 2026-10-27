@@ -153,7 +153,7 @@ export function bible_glyph_chapter_lev02() {
           "$flour",
           "$spoon+cyclone",
           "with",
-          "oil,",
+          "$lotion_bottle,",
           "unleavened.",
         ],
       },
