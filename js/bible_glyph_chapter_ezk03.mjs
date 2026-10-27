@@ -584,7 +584,7 @@ export function bible_glyph_chapter_ezk03() {
         words: [
           "But",
           "if",
-          "you",
+          "$you",
           "warn",
           "a",
           "$thumbs_down",
