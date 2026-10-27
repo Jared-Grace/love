@@ -197,7 +197,7 @@ export function bible_glyph_chapter_job28() {
           "$eyes",
           "$eye",
           "$all",
-          "treasure.",
+          "$gem_stone+crown.",
         ],
       },
       {
