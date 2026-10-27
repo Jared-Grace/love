@@ -1675,7 +1675,7 @@ export function bible_glyph_chapter_1ki01() {
           "of",
           "his",
           "will",
-          "fall",
+          "$person+pointing_down",
           "to",
           "the",
           "$earth.",
