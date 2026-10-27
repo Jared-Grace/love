@@ -52,7 +52,7 @@ export function bible_glyph_chapter_lam05() {
           "have",
           "become",
           "fatherless",
-          "orphans;",
+          "$child+father+no_entry;",
           "our",
           "mothers",
           "are",
