@@ -43,7 +43,7 @@ export function bible_glyph_chapter_neh08() {
           "$scroll",
           "of",
           "$fishing_pole+proper_name,",
-          "which",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
