@@ -181,7 +181,7 @@ export function bible_glyph_chapter_est01() {
           "material",
           "to",
           "silver",
-          "rings",
+          "$ring+door",
           "on",
           "the",
           "marble",
