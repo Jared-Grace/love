@@ -1057,7 +1057,7 @@ export function bible_glyph_chapter_deu12() {
           "their",
           "$moai",
           "$all",
-          "abomination",
+          "$vomiting",
           "which",
           "the",
           "$i_am",
