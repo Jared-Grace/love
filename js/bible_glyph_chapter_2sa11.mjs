@@ -648,7 +648,7 @@ export function bible_glyph_chapter_2sa11() {
           "$traffic_light",
           "the",
           "$king",
-          "anger",
+          "$angry_face",
           "$walking+pointing_up,",
           "he",
           "may",
