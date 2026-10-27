@@ -161,7 +161,7 @@ export function bible_glyph_chapter_num20() {
           "$footprints",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "the",
           "$church",
