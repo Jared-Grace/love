@@ -147,7 +147,7 @@ export function bible_glyph_chapter_2ki22() {
           "of",
           "the",
           "$i_am,",
-          "which",
+          "$back+flashlight",
           "the",
           "doorkeepers",
           "have",
