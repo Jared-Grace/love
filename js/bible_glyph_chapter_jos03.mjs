@@ -56,7 +56,7 @@ export function bible_glyph_chapter_jos03() {
           "$sun",
           "the",
           "officers",
-          "went",
+          "$bridge",
           "through",
           "the",
           "camp",
