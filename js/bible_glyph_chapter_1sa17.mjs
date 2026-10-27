@@ -549,7 +549,7 @@ export function bible_glyph_chapter_1sa17() {
           "in",
           "the",
           "$morning,",
-          "left",
+          "$hand_with_fingers_splayed+doing",
           "the",
           "$sheep",
           "with",
