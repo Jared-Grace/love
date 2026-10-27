@@ -267,7 +267,7 @@ export function bible_glyph_chapter_exo34() {
         words: [
           "He",
           "$speech,",
-          "If",
+          "$traffic_light",
           "I",
           "have",
           "indeed",
