@@ -66,7 +66,7 @@ export function bible_glyph_chapter_1sa20() {
           "will",
           "$no_entry",
           "$skull+doing.",
-          "Indeed,",
+          "$exclamation,",
           "my",
           "$father",
           "$hammer+doing",
