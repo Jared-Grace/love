@@ -43,7 +43,7 @@ export function bible_glyph_chapter_hab02() {
           "should",
           "$turn_back",
           "when",
-          "corrected.",
+          "$you+exclamation+thing.",
         ],
       },
       {
