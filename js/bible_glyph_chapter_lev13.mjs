@@ -1732,7 +1732,7 @@ export function bible_glyph_chapter_lev13() {
           "the",
           "$garment,",
           "$yarn+round_pushpin,",
-          "knit,",
+          "$yarn+plus,",
           "$shuffle",
           "leather",
           "article,",
