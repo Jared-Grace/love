@@ -187,7 +187,7 @@ export function bible_glyph_chapter_2ki06() {
       {
         verse_number: 7,
         words: [
-          "Lift",
+          "$up_arrow",
           "it",
           "out,",
           "he",
