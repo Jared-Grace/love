@@ -296,7 +296,7 @@ export function bible_glyph_chapter_exo15() {
           "$sparkles+up_arrow+doing",
           "in",
           "$sparkle+thing,",
-          "revered",
+          "$fear+doing",
           "with",
           "praises,",
           "$hammer+doing",
