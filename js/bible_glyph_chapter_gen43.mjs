@@ -325,7 +325,7 @@ export function bible_glyph_chapter_gen43() {
           "so,",
           "then",
           "$hammer+doing",
-          "this.",
+          "$flashlight.",
           "$hand_receiving",
           "some",
           "of",
