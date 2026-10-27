@@ -342,7 +342,7 @@ export function bible_glyph_chapter_pro04() {
           "the",
           "$bread",
           "of",
-          "wickedness",
+          "$thumbs_down+person+thing",
           "and",
           "drink",
           "the",
