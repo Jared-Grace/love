@@ -237,7 +237,7 @@ export function bible_glyph_chapter_num14() {
           "us,",
           "an",
           "$earth",
-          "flowing",
+          "$water+right_arrow",
           "with",
           "milk",
           "and",
