@@ -87,7 +87,7 @@ export function bible_glyph_chapter_lev05() {
           "touches",
           "$person",
           "$soap+no_entry+thing,",
-          "anything",
+          "$all",
           "by",
           "which",
           "one",
