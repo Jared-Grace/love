@@ -983,7 +983,7 @@ export function bible_glyph_chapter_jdg06() {
           "and",
           "the",
           "second",
-          "bull",
+          "$bull",
           "offered",
           "up",
           "on",
