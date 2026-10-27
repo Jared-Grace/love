@@ -717,7 +717,7 @@ export function bible_glyph_chapter_gen35() {
       },
       {
         verse_number: 28,
-        words: ["$laughing+proper_name", "lived", "a", "hundred", "and", "eighty", "$sun."],
+        words: ["$laughing+proper_name", "$link", "a", "hundred", "and", "eighty", "$sun."],
       },
       {
         verse_number: 29,
