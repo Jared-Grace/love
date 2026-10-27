@@ -108,7 +108,7 @@ export function bible_glyph_chapter_amo09() {
           "they",
           "hide",
           "themselves",
-          "atop",
+          "$person_gesturing_ok",
           "$proper_name$Carmel,",
           "there",
           "I",
