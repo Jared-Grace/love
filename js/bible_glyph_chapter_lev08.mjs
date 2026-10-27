@@ -115,7 +115,7 @@ export function bible_glyph_chapter_lev08() {
         words: [
           "$hands_giving",
           "the",
-          "tunic",
+          "$dress+thread",
           "on",
           "Aaron,",
           "tied",
