@@ -319,7 +319,7 @@ export function bible_glyph_chapter_1sa01() {
           "she",
           "made",
           "a",
-          "vow,",
+          "$saluting_face,",
           "$speech,",
           "O",
           "$i_am",
