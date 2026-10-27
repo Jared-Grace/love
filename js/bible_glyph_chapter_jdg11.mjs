@@ -1285,7 +1285,7 @@ export function bible_glyph_chapter_jdg11() {
         verse_number: 39,
         words: [
           "After",
-          "two",
+          "$two",
           "months",
           "she",
           "$turn_back",
