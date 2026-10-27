@@ -426,7 +426,7 @@ export function bible_glyph_chapter_2ch06() {
           "down",
           "before",
           "the",
-          "whole",
+          "$all",
           "$church",
           "of",
           "$wrestling+heart_on_fire,",
