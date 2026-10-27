@@ -191,7 +191,7 @@ export function bible_glyph_chapter_gen21() {
           "$hammer+doing",
           "a",
           "great",
-          "feast.",
+          "$cup_with_straw+thing.",
         ],
       },
       {
