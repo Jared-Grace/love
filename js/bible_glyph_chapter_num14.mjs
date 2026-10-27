@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_num14() {
           "$lifting",
           "your",
           "guilt",
-          "forty",
+          "$four+zero",
           "years,",
           "and",
           "you",
