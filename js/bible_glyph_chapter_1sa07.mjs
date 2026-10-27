@@ -563,7 +563,7 @@ export function bible_glyph_chapter_1sa07() {
           "his",
           "$house",
           "was",
-          "there,",
+          "$telescope,",
           "and",
           "there",
           "he",
