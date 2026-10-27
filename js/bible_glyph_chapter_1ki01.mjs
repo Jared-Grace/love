@@ -1671,7 +1671,7 @@ export function bible_glyph_chapter_1ki01() {
           "$no_entry",
           "a",
           "single",
-          "hair",
+          "$hair+female_sign",
           "of",
           "his",
           "will",
