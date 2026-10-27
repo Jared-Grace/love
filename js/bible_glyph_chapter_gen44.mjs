@@ -380,7 +380,7 @@ export function bible_glyph_chapter_gen44() {
           "$footprints",
           "$i_am+plus",
           "$house,",
-          "he",
+          "$pointing_back",
           "was",
           "still",
           "there,",
