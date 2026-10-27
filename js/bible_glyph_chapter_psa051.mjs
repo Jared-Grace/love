@@ -251,7 +251,7 @@ export function bible_glyph_chapter_psa051() {
           "away",
           "from",
           "Your",
-          "presence;",
+          "$face;",
           "do",
           "$no_entry",
           "$hand_receiving",
