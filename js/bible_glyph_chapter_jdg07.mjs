@@ -114,7 +114,7 @@ export function bible_glyph_chapter_jdg07() {
           "So",
           "$two+zero",
           "two",
-          "thousand",
+          "$ten+all",
           "$turn_back,",
           "but",
           "ten",
