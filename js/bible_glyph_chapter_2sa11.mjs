@@ -874,7 +874,7 @@ export function bible_glyph_chapter_2sa11() {
           "of",
           "Uriah",
           "$ear",
-          "that",
+          "$pointing",
           "her",
           "$man_beard",
           "was",
