@@ -784,7 +784,7 @@ export function bible_glyph_chapter_deu07() {
           "to",
           "you",
           "and",
-          "throw",
+          "$crowd+tornado+doing",
           "them",
           "into",
           "great",
