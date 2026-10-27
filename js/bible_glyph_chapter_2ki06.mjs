@@ -368,7 +368,7 @@ export function bible_glyph_chapter_2ki06() {
           "$megaphone",
           "in",
           "$wrestling+heart_on_fire,",
-          "tells",
+          "$newspaper",
           "the",
           "$king",
           "of",
