@@ -724,7 +724,7 @@ export function bible_glyph_chapter_gen26() {
           "built",
           "an",
           "$altar",
-          "there",
+          "$telescope",
           "and",
           "called",
           "on",
