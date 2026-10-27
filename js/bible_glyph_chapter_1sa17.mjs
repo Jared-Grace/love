@@ -447,7 +447,7 @@ export function bible_glyph_chapter_1sa17() {
           "to",
           "take",
           "his",
-          "stand.",
+          "$person+round_pushpin+anchor+doing.",
         ],
       },
       {
