@@ -58,7 +58,7 @@ export function bible_glyph_chapter_num08() {
           "up",
           "the",
           "$lamp",
-          "facing",
+          "$face",
           "$toward",
           "the",
           "$vs_button",
