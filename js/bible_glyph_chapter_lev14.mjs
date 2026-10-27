@@ -172,7 +172,7 @@ export function bible_glyph_chapter_lev14() {
       {
         verse_number: 7,
         words: [
-          "Seven",
+          "$seven",
           "times",
           "he",
           "shall",
