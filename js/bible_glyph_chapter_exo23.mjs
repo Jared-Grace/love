@@ -181,7 +181,7 @@ export function bible_glyph_chapter_exo23() {
           "$no_entry",
           "$hand_receiving",
           "a",
-          "bribe,",
+          "$money_bag+hand_sending,",
           "for",
           "a",
           "bribe",
