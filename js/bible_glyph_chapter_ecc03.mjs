@@ -72,7 +72,7 @@ export function bible_glyph_chapter_ecc03() {
           "down",
           "and",
           "a",
-          "time",
+          "$clock",
           "to",
           "build,",
         ],
