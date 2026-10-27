@@ -956,7 +956,7 @@ export function bible_glyph_chapter_1ki08() {
           "be",
           "$unlocked",
           "$toward",
-          "this",
+          "$flashlight",
           "$house",
           "$night",
           "and",
