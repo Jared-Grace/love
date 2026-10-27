@@ -1014,7 +1014,7 @@ export function bible_glyph_chapter_lev16() {
           "$meat",
           "and",
           "their",
-          "dung",
+          "$pile_of_poo",
           "must",
           "be",
           "burned",
