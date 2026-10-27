@@ -921,7 +921,7 @@ export function bible_glyph_chapter_lev11() {
           "and",
           "a",
           "carcass",
-          "falls",
+          "$person+pointing_down",
           "on",
           "it,",
           "it",
