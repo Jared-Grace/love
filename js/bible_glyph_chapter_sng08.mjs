@@ -417,7 +417,7 @@ export function bible_glyph_chapter_sng08() {
           "$shuffle",
           "a",
           "young",
-          "stag",
+          "$deer",
           "on",
           "the",
           "$mountain",
