@@ -270,7 +270,7 @@ export function bible_glyph_chapter_2ch20() {
           "$sword",
           "or",
           "$scales+down_arrow,",
-          "plague",
+          "$face_with_medical_mask",
           "or",
           "famine,",
           "we",
