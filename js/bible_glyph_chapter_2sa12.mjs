@@ -421,7 +421,7 @@ export function bible_glyph_chapter_2sa12() {
           "in",
           "$see_no_evil_monkey+thing,",
           "but",
-          "I",
+          "$me",
           "will",
           "$hammer+doing",
           "this",
