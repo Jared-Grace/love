@@ -855,7 +855,7 @@ export function bible_glyph_chapter_num21() {
           "his",
           "$woman",
           "into",
-          "captivity,",
+          "$turn_back+chains,",
           "to",
           "$proper_name$Sihon",
           "$king",
