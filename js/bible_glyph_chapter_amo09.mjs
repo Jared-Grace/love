@@ -313,7 +313,7 @@ export function bible_glyph_chapter_amo09() {
           "and",
           "I",
           "will",
-          "destroy",
+          "$bomb",
           "it",
           "from",
           "the",
