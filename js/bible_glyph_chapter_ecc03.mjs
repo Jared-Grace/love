@@ -111,7 +111,7 @@ export function bible_glyph_chapter_ecc03() {
           "stones",
           "and",
           "a",
-          "time",
+          "$clock",
           "to",
           "gather",
           "stones",
