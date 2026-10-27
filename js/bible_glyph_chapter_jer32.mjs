@@ -1573,7 +1573,7 @@ export function bible_glyph_chapter_jer32() {
           "$turn_back",
           "them",
           "from",
-          "captivity,",
+          "$turn_back+chains,",
           "declares",
           "the",
           "$i_am.",
