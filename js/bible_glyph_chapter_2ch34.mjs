@@ -781,7 +781,7 @@ export function bible_glyph_chapter_2ch34() {
           "$speech",
           "in",
           "the",
-          "book",
+          "$closed_book",
           "that",
           "has",
           "been",
