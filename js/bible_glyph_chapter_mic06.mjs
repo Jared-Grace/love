@@ -406,7 +406,7 @@ export function bible_glyph_chapter_mic06() {
           "$eating+top,",
           "and",
           "your",
-          "hunger",
+          "$fork_and_knife+hole",
           "will",
           "remain",
           "with",
