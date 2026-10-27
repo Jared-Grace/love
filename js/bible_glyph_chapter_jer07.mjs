@@ -593,7 +593,7 @@ export function bible_glyph_chapter_jer07() {
           "$i_am:",
           "$exclamation,",
           "My",
-          "anger",
+          "$nose+fire",
           "and",
           "My",
           "fury",
