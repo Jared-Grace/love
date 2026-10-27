@@ -34,7 +34,7 @@ export function bible_glyph_chapter_deu01() {
           "in",
           "the",
           "$desert+proper_name",
-          "opposite",
+          "$vs_button",
           "$proper_name$Suph",
           "-",
           "between",
