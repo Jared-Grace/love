@@ -640,7 +640,7 @@ export function bible_glyph_chapter_num16() {
           "the",
           "$i_am",
           "$mouth",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron,",
