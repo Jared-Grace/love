@@ -690,7 +690,7 @@ export function bible_glyph_chapter_2ki17() {
           "$hand",
           "of",
           "plunderers,",
-          "until",
+          "$finish",
           "He",
           "had",
           "banished",
