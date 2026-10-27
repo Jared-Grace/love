@@ -372,7 +372,7 @@ export function bible_glyph_chapter_deu07() {
         verse_number: 11,
         words: [
           "So",
-          "keep",
+          "$guard",
           "the",
           "$scroll",
           "and",
