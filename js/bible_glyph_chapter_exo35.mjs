@@ -856,7 +856,7 @@ export function bible_glyph_chapter_exo35() {
           "the",
           "ability",
           "to",
-          "teach",
+          "$bow+toward",
           "others,",
           "both",
           "him",
