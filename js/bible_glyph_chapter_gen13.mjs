@@ -22,7 +22,7 @@ export function bible_glyph_chapter_gen13() {
           "$clamp+proper_name",
           "to",
           "the",
-          "Negev,",
+          "$compass+down_arrow,",
           "$pointing_back",
           "and",
           "his",
