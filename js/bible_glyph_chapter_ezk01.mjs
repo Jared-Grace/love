@@ -23,7 +23,7 @@ export function bible_glyph_chapter_ezk01() {
           "day",
           "of",
           "the",
-          "fourth",
+          "$four+describing",
           "month,",
           "while",
           "I",
