@@ -278,7 +278,7 @@ export function bible_glyph_chapter_gen50() {
           "lamented",
           "and",
           "wailed",
-          "loudly,",
+          "$top,",
           "and",
           "Joseph",
           "$hammer+doing",
