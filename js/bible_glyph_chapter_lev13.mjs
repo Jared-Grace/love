@@ -204,7 +204,7 @@ export function bible_glyph_chapter_lev13() {
           "and",
           "has",
           "$no_entry",
-          "spread",
+          "$microbe+arrow_both_ways+doing",
           "on",
           "the",
           "skin,",
