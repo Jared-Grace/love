@@ -188,7 +188,7 @@ export function bible_glyph_chapter_mal01() {
           "am",
           "a",
           "$father,",
-          "where",
+          "$question+round_pushpin",
           "is",
           "My",
           "$star?",
