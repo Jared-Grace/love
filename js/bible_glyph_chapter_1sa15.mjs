@@ -721,7 +721,7 @@ export function bible_glyph_chapter_1sa15() {
           "$i_am",
           "$smiling_face_with_hearts",
           "in",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "and",
           "sacrifices",
