@@ -65,7 +65,7 @@ export function bible_glyph_chapter_mal02() {
           "curse",
           "your",
           "blessings.",
-          "Yes,",
+          "$plus,",
           "I",
           "have",
           "already",
