@@ -396,7 +396,7 @@ export function bible_glyph_chapter_mal02() {
           "may",
           "the",
           "$i_am",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "the",
