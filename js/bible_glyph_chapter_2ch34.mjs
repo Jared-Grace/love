@@ -120,7 +120,7 @@ export function bible_glyph_chapter_2ch34() {
           "idols",
           "and",
           "the",
-          "cast",
+          "$pouring_liquid+moai",
           "images.",
         ],
       },
