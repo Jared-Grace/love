@@ -799,7 +799,7 @@ export function bible_glyph_chapter_lev04() {
           "of",
           "$bow",
           "and",
-          "slaughter",
+          "$kitchen_knife+doing",
           "$bow",
           "$place",
           "of",
