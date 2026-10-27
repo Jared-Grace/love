@@ -79,7 +79,7 @@ export function bible_glyph_chapter_gen22() {
           "$father+map",
           "got",
           "up",
-          "early",
+          "$morning+doing",
           "the",
           "next",
           "morning,",
