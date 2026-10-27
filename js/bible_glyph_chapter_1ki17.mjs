@@ -253,7 +253,7 @@ export function bible_glyph_chapter_1ki17() {
           "$telescope",
           "was",
           "a",
-          "widow",
+          "$widow",
           "gathering",
           "$tree.",
           "Elijah",
