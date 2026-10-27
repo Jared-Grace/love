@@ -203,7 +203,7 @@ export function bible_glyph_chapter_gen47() {
           "of",
           "$proper_name$Goshen.",
           "And",
-          "if",
+          "$traffic_light",
           "you",
           "$lightbulb",
           "of",
