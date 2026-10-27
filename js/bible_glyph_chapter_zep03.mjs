@@ -210,7 +210,7 @@ export function bible_glyph_chapter_zep03() {
       {
         verse_number: 8,
         words: [
-          "Therefore",
+          "$right_arrow",
           "wait",
           "for",
           "Me,",
