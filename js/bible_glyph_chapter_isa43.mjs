@@ -764,7 +764,7 @@ export function bible_glyph_chapter_isa43() {
       {
         verse_number: 25,
         words: [
-          "I,",
+          "$me,",
           "yes",
           "I,",
           "am",
