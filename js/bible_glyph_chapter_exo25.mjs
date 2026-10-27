@@ -521,7 +521,7 @@ export function bible_glyph_chapter_exo25() {
           "the",
           "$two",
           "$cherub",
-          "that",
+          "$back+flashlight",
           "are",
           "on",
           "the",
