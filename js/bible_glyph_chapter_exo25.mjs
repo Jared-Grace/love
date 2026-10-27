@@ -517,7 +517,7 @@ export function bible_glyph_chapter_exo25() {
           "the",
           "lid,",
           "from",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "two",
           "$cherub",
