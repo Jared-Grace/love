@@ -320,7 +320,7 @@ export function bible_glyph_chapter_lev07() {
           "he",
           "is",
           "to",
-          "present",
+          "$magnet+doing",
           "his",
           "offering",
           "with",
