@@ -271,7 +271,7 @@ export function bible_glyph_chapter_deu29() {
           "are",
           "standing",
           "$sun",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "your",
