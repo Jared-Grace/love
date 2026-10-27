@@ -143,7 +143,7 @@ export function bible_glyph_chapter_gen49() {
           "$pointing",
           "in",
           "their",
-          "anger",
+          "$nose+fire",
           "they",
           "kill",
           "$man_beard,",
