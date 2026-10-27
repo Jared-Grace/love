@@ -545,7 +545,7 @@ export function bible_glyph_chapter_1sa07() {
           "$scales",
           "$wrestling+heart_on_fire",
           "in",
-          "all",
+          "$all",
           "these",
           "$place.",
         ],
