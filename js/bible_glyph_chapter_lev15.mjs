@@ -768,7 +768,7 @@ export function bible_glyph_chapter_lev15() {
           "will",
           "be",
           "unclean",
-          "all",
+          "$all",
           "the",
           "$sun",
           "of",
