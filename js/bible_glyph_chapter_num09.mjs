@@ -531,7 +531,7 @@ export function bible_glyph_chapter_num09() {
       {
         verse_number: 17,
         words: [
-          "Whenever",
+          "$face_with_open_mouth",
           "the",
           "$cloud",
           "was",
