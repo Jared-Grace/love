@@ -170,7 +170,7 @@ export function bible_glyph_chapter_ezk34() {
           "and",
           "every",
           "high",
-          "hill.",
+          "$mountain+pinching_hand.",
           "They",
           "were",
           "scattered",
