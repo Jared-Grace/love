@@ -835,7 +835,7 @@ export function bible_glyph_chapter_jos07() {
           "gold",
           "weighing",
           "fifty",
-          "shekels,",
+          "$coin,",
           "I",
           "coveted",
           "them",
