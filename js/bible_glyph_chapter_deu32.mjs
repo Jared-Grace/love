@@ -1410,7 +1410,7 @@ export function bible_glyph_chapter_deu32() {
           "and",
           "be",
           "gathered",
-          "to",
+          "$toward",
           "your",
           "$family,",
           "just",
