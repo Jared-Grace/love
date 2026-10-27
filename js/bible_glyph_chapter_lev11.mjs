@@ -1090,7 +1090,7 @@ export function bible_glyph_chapter_lev11() {
           "You",
           "must",
           "$no_entry",
-          "defile",
+          "$soap+no_entry",
           "your",
           "$person_other",
           "by",
