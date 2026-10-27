@@ -408,7 +408,7 @@ export function bible_glyph_chapter_jos02() {
           "the",
           "$i_am",
           "that,",
-          "because",
+          "$pointing",
           "I",
           "showed",
           "you",
