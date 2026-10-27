@@ -924,7 +924,7 @@ export function bible_glyph_chapter_deu32() {
           "up",
           "within",
           "My",
-          "vaults?",
+          "$gem_stone+house?",
         ],
       },
       {
