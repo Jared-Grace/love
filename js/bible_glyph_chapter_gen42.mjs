@@ -637,7 +637,7 @@ export function bible_glyph_chapter_gen42() {
       {
         verse_number: 23,
         words: [
-          "They",
+          "$pointing_back",
           "did",
           "$no_entry",
           "$lightbulb",
