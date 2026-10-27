@@ -310,7 +310,7 @@ export function bible_glyph_chapter_2sa05() {
           "all",
           "the",
           "way",
-          "around,",
+          "$around,",
           "from",
           "the",
           "supporting",
