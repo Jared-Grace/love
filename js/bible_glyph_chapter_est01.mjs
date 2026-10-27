@@ -713,7 +713,7 @@ export function bible_glyph_chapter_est01() {
         words: [
           "He",
           "sent",
-          "letters",
+          "$closed_book",
           "to",
           "all",
           "the",
