@@ -220,7 +220,7 @@ export function bible_glyph_chapter_lev06() {
           "$altar",
           "$all",
           "$night",
-          "until",
+          "$finish",
           "$morning,",
           "and",
           "the",
