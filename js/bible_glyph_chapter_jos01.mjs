@@ -27,7 +27,7 @@ export function bible_glyph_chapter_jos01() {
           "the",
           "$i_am",
           "$speech",
-          "to",
+          "$toward",
           "$i_am+rescue",
           "$son",
           "of",
