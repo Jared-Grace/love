@@ -254,7 +254,7 @@ export function bible_glyph_chapter_num17() {
           "staffs",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "$i_am",
           "to",
