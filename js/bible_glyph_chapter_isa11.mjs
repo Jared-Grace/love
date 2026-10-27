@@ -232,7 +232,7 @@ export function bible_glyph_chapter_isa11() {
           "will",
           "lie",
           "down",
-          "together,",
+          "$linked_paperclips+manner,",
           "and",
           "the",
           "lion",
