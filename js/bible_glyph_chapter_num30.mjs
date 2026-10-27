@@ -433,7 +433,7 @@ export function bible_glyph_chapter_num30() {
           "$saluting_face",
           "or",
           "any",
-          "sworn",
+          "$raised_back_of_hand",
           "pledge",
           "to",
           "deny",
