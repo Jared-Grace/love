@@ -257,7 +257,7 @@ export function bible_glyph_chapter_jos01() {
           "$thinking+speech+doing",
           "on",
           "it",
-          "day",
+          "$sun+manner",
           "and",
           "$night,",
           "so",
