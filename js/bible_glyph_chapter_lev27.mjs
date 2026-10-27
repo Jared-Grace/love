@@ -675,7 +675,7 @@ export function bible_glyph_chapter_lev27() {
         verse_number: 22,
         words: [
           "Now",
-          "if",
+          "$traffic_light",
           "he",
           "$sparkle+doing",
           "to",
