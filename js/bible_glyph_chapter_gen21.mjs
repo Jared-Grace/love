@@ -736,7 +736,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "$father+map",
           "$person+up_arrow",
-          "seven",
+          "$seven",
           "ewe",
           "lambs",
           "from",
