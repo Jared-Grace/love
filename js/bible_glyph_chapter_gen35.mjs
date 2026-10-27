@@ -581,7 +581,7 @@ export function bible_glyph_chapter_gen35() {
           "pitched",
           "his",
           "$tent",
-          "beyond",
+          "$telescope+right_arrow",
           "the",
           "tower",
           "of",
