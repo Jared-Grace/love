@@ -1535,7 +1535,7 @@ export function bible_glyph_chapter_lev25() {
           "determined",
           "by",
           "the",
-          "number",
+          "$input_numbers",
           "of",
           "years,",
           "based",
