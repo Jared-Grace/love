@@ -385,7 +385,7 @@ export function bible_glyph_chapter_exo35() {
           "bases,",
           "and",
           "the",
-          "curtain",
+          "$umbrella+door",
           "for",
           "the",
           "$gate",
