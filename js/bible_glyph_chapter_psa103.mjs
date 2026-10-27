@@ -253,7 +253,7 @@ export function bible_glyph_chapter_psa103() {
           "a",
           "$father",
           "has",
-          "compassion",
+          "$hugging_face+doing",
           "on",
           "his",
           "$son,",
