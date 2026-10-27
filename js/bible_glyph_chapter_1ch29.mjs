@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_1ch29() {
           "and",
           "the",
           "circumstances",
-          "that",
+          "$back+flashlight",
           "came",
           "upon",
           "him",
