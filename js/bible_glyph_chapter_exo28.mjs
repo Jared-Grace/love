@@ -226,7 +226,7 @@ export function bible_glyph_chapter_exo28() {
           "And",
           "the",
           "skillfully",
-          "woven",
+          "$ribbon+yarn",
           "waistband",
           "of",
           "the",
