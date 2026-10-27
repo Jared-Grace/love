@@ -255,7 +255,7 @@ export function bible_glyph_chapter_num25() {
           "on",
           "through",
           "the",
-          "belly",
+          "$person+hole",
           "of",
           "the",
           "$woman.",
