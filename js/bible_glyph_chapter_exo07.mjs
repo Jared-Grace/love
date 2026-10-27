@@ -43,7 +43,7 @@ export function bible_glyph_chapter_exo07() {
           "are",
           "to",
           "$mouth",
-          "all",
+          "$all",
           "that",
           "I",
           "command",
