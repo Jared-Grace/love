@@ -1916,7 +1916,7 @@ export function bible_glyph_chapter_gen24() {
           "down",
           "from",
           "her",
-          "camel",
+          "$camel",
         ],
       },
       {
