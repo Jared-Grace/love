@@ -228,7 +228,7 @@ export function bible_glyph_chapter_gen08() {
           "But",
           "the",
           "dove",
-          "found",
+          "$magnifying_glass+exclamation",
           "$no_entry",
           "place",
           "to",
