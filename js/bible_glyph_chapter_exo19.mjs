@@ -602,7 +602,7 @@ export function bible_glyph_chapter_exo19() {
           "whole",
           "$mountain",
           "$fear+vibration_mode+doing",
-          "violently.",
+          "$double_exclamation.",
         ],
       },
       {
