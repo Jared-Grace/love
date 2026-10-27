@@ -329,7 +329,7 @@ export function bible_glyph_chapter_num23() {
           "my",
           "$enemy,",
           "and",
-          "behold,",
+          "$exclamation,",
           "you",
           "have",
           "only",
