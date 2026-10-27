@@ -255,7 +255,7 @@ export function bible_glyph_chapter_lev16() {
           "After",
           "$white_cane+blossom+proper_name",
           "$hands_giving",
-          "lots",
+          "$lots",
           "for",
           "the",
           "$two",
