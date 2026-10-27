@@ -80,7 +80,7 @@ export function bible_glyph_chapter_2sa05() {
           "you",
           "will",
           "be",
-          "ruler",
+          "$first_place+person",
           "over",
           "them.",
         ],
