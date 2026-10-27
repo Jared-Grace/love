@@ -137,7 +137,7 @@ export function bible_glyph_chapter_num27() {
           "from",
           "his",
           "$houses",
-          "because",
+          "$pointing",
           "he",
           "had",
           "no",
