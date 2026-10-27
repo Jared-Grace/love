@@ -38,7 +38,7 @@ export function bible_glyph_chapter_gen44() {
           "can",
           "$lifting,",
           "and",
-          "put",
+          "$palm_down",
           "each",
           "$man_beard",
           "$silver",
