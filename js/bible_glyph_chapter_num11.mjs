@@ -307,7 +307,7 @@ export function bible_glyph_chapter_num11() {
           "on",
           "Your",
           "$kneeling?",
-          "Why",
+          "$flashlight+question",
           "have",
           "I",
           "$no_entry",
