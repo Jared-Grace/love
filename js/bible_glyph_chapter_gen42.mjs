@@ -593,7 +593,7 @@ export function bible_glyph_chapter_gen42() {
           "That",
           "is",
           "why",
-          "this",
+          "$flashlight",
           "distress",
           "has",
           "$footprints",
