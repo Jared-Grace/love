@@ -140,7 +140,7 @@ export function bible_glyph_chapter_dan12() {
           "these",
           "$speech",
           "and",
-          "seal",
+          "$ring+locked",
           "the",
           "book",
           "until",
