@@ -441,7 +441,7 @@ export function bible_glyph_chapter_deu15() {
           "send",
           "him",
           "away",
-          "empty-handed.",
+          "$hand+zero+manner.",
         ],
       },
       {
