@@ -118,7 +118,7 @@ export function bible_glyph_chapter_lev10() {
           "the",
           "$two_hearts",
           "of",
-          "Aaron,",
+          "$white_cane+blossom+proper_name,",
           "$speech",
           "to",
           "them,",
