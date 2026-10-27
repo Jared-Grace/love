@@ -546,7 +546,7 @@ export function bible_glyph_chapter_jer32() {
           "deed",
           "of",
           "purchase",
-          "to",
+          "$toward",
           "$proper_name$Baruch",
           "$son",
           "of",
