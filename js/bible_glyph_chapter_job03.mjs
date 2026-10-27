@@ -248,7 +248,7 @@ export function bible_glyph_chapter_job03() {
           "came",
           "from",
           "the",
-          "womb?",
+          "$baby+house?",
         ],
       },
       {
