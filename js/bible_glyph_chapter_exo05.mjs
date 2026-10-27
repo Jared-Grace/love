@@ -314,7 +314,7 @@ export function bible_glyph_chapter_exo05() {
           "out",
           "and",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$family,",
           "This",
