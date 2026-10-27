@@ -636,7 +636,7 @@ export function bible_glyph_chapter_est01() {
           "again",
           "$footprints",
           "the",
-          "presence",
+          "$face",
           "of",
           "$king",
           "$proper_name$Xerxes,",
