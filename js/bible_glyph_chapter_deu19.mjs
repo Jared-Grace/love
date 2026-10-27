@@ -280,7 +280,7 @@ export function bible_glyph_chapter_deu19() {
           "and",
           "$hands_giving",
           "you",
-          "all",
+          "$all",
           "the",
           "$earth",
           "He",
