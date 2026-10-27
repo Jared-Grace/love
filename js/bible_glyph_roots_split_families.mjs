@@ -16,8 +16,10 @@ export function bible_glyph_roots_split_families() {
   arguments_assert(arguments, 0);
   ("For every picture two roots used to share, every other picture the roots that shared it are drawn by now and no other root is, keyed by the old picture's name.");
   ("A ROOT IS NAMED BY ITS WORD, AND TWO HEBREW ROOTS ARE BOTH WRITTEN al - the one that means not, and the one that means upon. A pair that wrote the bare name took both, and the first reading built on it offered the upward pointer as what a no entry sign on the word not should become. So a name may carry the start of its gloss after a colon, and then only the root whose gloss starts that way answers to it. A name that still answers to more than one root, or to none, is refused rather than guessed at.");
+  let greek = bible_glyph_roots();
+  let hebrew = bible_glyph_roots_hebrew();
   ("A PICTURE ANOTHER ROOT ALSO DRAWS IS LEFT OUT, because a mark becoming it would be a guess about which root the page meant. Naming the right al was not enough: the root for not itself files words drawn by the upward pointer, the same picture the root for upon is drawn by, and a verse seating upon and drawing a no entry sign would have had the sign turned into a pointer.");
-  let roots = [...bible_glyph_roots(), ...bible_glyph_roots_hebrew()];
+  let roots = [...greek, ...hebrew];
   function root_find(written) {
     let [name, gloss_start] = written.split(":");
     function lambda(root) {
@@ -43,8 +45,10 @@ export function bible_glyph_roots_split_families() {
     let root = found[0];
     return root;
   }
-  function drawn_elsewhere(glyph, sharers) {
-    for (let root of roots) {
+  ("ONLY A ROOT OF THE SAME LANGUAGE COUNTS AS ANOTHER ROOT DRAWING IT. A Hebrew verse seats only Hebrew roots, so a Greek root sharing a picture cannot be what a Hebrew page meant. Asked across both tables, the Hebrew word for word was refused its own picture, the voice, because a Greek root draws the voice too, and every speech mark it left behind stayed.");
+  function drawn_elsewhere(glyph, sharers, own) {
+    let language = list_includes(greek, own) ? greek : hebrew;
+    for (let root of language) {
       if (list_includes(sharers, root)) {
         continue;
       }
@@ -79,7 +83,7 @@ export function bible_glyph_roots_split_families() {
         let fresh =
           not_equal(word.glyph, glyph) &&
           not(list_includes(family, word.glyph)) &&
-          not(drawn_elsewhere(word.glyph, sharers));
+          not(drawn_elsewhere(word.glyph, sharers, root));
         if (fresh) {
           list_add(family, word.glyph);
         }
