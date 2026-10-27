@@ -796,7 +796,7 @@ export function bible_glyph_chapter_lev26() {
           "your",
           "$bread",
           "by",
-          "weight,",
+          "$coin+thing,",
           "so",
           "that",
           "you",
