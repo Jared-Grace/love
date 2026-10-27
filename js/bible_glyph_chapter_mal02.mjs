@@ -259,7 +259,7 @@ export function bible_glyph_chapter_mal02() {
           "$scroll",
           "has",
           "caused",
-          "many",
+          "$multiply",
           "to",
           "$hiking_boot+rock.",
           "You",
