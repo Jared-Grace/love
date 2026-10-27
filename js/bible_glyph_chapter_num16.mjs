@@ -115,7 +115,7 @@ export function bible_glyph_chapter_num16() {
           "in",
           "their",
           "$radio_button.",
-          "Why",
+          "$flashlight+question+lightbulb",
           "then",
           "do",
           "you",
