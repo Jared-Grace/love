@@ -368,7 +368,7 @@ export function bible_glyph_chapter_jos24() {
           "people",
           "of",
           "$proper_name$Jericho",
-          "fought",
+          "$crossed_swords+doing",
           "against",
           "you,",
           "as",
