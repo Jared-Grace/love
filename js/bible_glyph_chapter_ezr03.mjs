@@ -493,7 +493,7 @@ export function bible_glyph_chapter_ezr03() {
         verse_number: 12,
         words: [
           "But",
-          "many",
+          "$multiply",
           "of",
           "the",
           "older",
