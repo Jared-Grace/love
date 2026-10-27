@@ -291,7 +291,7 @@ export function bible_glyph_chapter_psa027() {
           "$father",
           "and",
           "$mother",
-          "forsake",
+          "$derelict_house+doing",
           "me,",
           "the",
           "$i_am",
