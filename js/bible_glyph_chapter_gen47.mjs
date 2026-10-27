@@ -503,7 +503,7 @@ export function bible_glyph_chapter_gen47() {
           "our",
           "$silver",
           "has",
-          "run",
+          "$dotted_line_face+doing",
           "out.",
         ],
       },
