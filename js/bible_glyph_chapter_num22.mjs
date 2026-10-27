@@ -1248,7 +1248,7 @@ export function bible_glyph_chapter_num22() {
           "$speech",
           "that",
           "$heart_on_fire",
-          "puts",
+          "$palm_down",
           "in",
           "my",
           "mouth,",
