@@ -419,7 +419,7 @@ export function bible_glyph_chapter_2ki22() {
           "$proper_name$Micaiah,",
           "Shaphan",
           "the",
-          "scribe,",
+          "$abacus,",
           "and",
           "$proper_name$Asaiah",
           "the",
