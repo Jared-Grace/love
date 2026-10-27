@@ -456,7 +456,7 @@ export function bible_glyph_chapter_exo37() {
           "one",
           "side",
           "and",
-          "three",
+          "$three",
           "on",
           "the",
           "other.",
