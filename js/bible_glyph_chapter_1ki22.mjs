@@ -287,7 +287,7 @@ export function bible_glyph_chapter_1ki22() {
           "officials",
           "and",
           "$speech,",
-          "Bring",
+          "$fast_forward+doing",
           "$proper_name$Micaiah",
           "$son",
           "of",
