@@ -117,7 +117,7 @@ export function bible_glyph_chapter_lev23() {
           "fourteenth",
           "of",
           "the",
-          "first",
+          "$first_place",
           "month,",
           "at",
           "twilight,",
