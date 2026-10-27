@@ -1573,7 +1573,7 @@ export function bible_glyph_chapter_deu04() {
           "$scroll",
           "$back+flashlight",
           "$fishing_pole+proper_name",
-          "set",
+          "$palm_down",
           "before",
           "the",
           "$son",
