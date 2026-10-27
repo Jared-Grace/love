@@ -47,7 +47,7 @@ export function bible_glyph_chapter_hos14() {
           "away",
           "$all",
           "our",
-          "iniquity",
+          "$cyclone",
           "and",
           "$hand_receiving",
           "us",
