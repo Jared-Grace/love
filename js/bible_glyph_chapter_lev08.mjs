@@ -178,7 +178,7 @@ export function bible_glyph_chapter_lev08() {
           "$person_wearing_turban",
           "on",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "of",
           "Aaron,",
           "and",
