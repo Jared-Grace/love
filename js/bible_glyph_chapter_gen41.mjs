@@ -566,7 +566,7 @@ export function bible_glyph_chapter_gen41() {
           "could",
           "$no_entry",
           "$lightbulb",
-          "that",
+          "$pointing",
           "they",
           "had",
           "$footprints",
