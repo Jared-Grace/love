@@ -357,7 +357,7 @@ export function bible_glyph_chapter_nam01() {
           "For",
           "I",
           "will",
-          "now",
+          "$watch",
           "break",
           "their",
           "yoke",
