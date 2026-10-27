@@ -563,7 +563,7 @@ export function bible_glyph_chapter_lev05() {
         verse_number: 18,
         words: [
           "$footprints",
-          "to",
+          "$toward",
           "$priest",
           "an",
           "unblemished",
