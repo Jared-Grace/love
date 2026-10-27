@@ -75,7 +75,7 @@ export function bible_glyph_chapter_lev23() {
           "$hammer+doing",
           "any",
           "$tools.",
-          "It",
+          "$pointing_back",
           "is",
           "a",
           "$sabbath",
