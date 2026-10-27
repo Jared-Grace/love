@@ -634,7 +634,7 @@ export function bible_glyph_chapter_lev22() {
           "from",
           "the",
           "herd",
-          "or",
+          "$shuffle",
           "the",
           "$sheep,",
           "it",
