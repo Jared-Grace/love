@@ -15,7 +15,7 @@ export function bible_glyph_chapter_exo29() {
         verse_number: 1,
         words: [
           "Now",
-          "this",
+          "$flashlight",
           "$speech",
           "is",
           "what",
