@@ -548,7 +548,7 @@ export function bible_glyph_chapter_gen11() {
         verse_number: 22,
         words: [
           "When",
-          "Serug",
+          "$vine+proper_name",
           "had",
           "$sprout+doing",
           "thirty",
