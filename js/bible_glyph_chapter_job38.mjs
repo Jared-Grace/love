@@ -114,7 +114,7 @@ export function bible_glyph_chapter_job38() {
           "$down_arrow+sea+doing,",
           "$shuffle",
           "$person+question",
-          "laid",
+          "$bow+toward",
           "its",
           "cornerstone,",
         ],
