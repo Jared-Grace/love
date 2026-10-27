@@ -1437,7 +1437,7 @@ export function bible_glyph_chapter_lev13() {
           "infection",
           "on",
           "his",
-          "bald",
+          "$back+hair+no_entry+thing",
           "head",
           "or",
           "forehead",
