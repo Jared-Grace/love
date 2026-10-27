@@ -663,7 +663,7 @@ export function bible_glyph_chapter_exo36() {
           "the",
           "$two+zero",
           "frames,",
-          "two",
+          "$two",
           "$down_arrow+brick",
           "for",
           "each",
