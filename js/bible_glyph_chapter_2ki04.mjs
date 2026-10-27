@@ -306,7 +306,7 @@ export function bible_glyph_chapter_2ki04() {
       {
         verse_number: 10,
         words: [
-          "Please",
+          "$pleading",
           "let",
           "us",
           "$hammer+doing",
