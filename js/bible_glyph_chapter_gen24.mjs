@@ -561,7 +561,7 @@ export function bible_glyph_chapter_gen24() {
           "her",
           "and",
           "$speech,",
-          "Please",
+          "$pleading",
           "let",
           "me",
           "have",
