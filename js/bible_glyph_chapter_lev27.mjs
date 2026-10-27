@@ -49,7 +49,7 @@ export function bible_glyph_chapter_lev27() {
         words: [
           "if",
           "the",
-          "valuation",
+          "$receipt",
           "concerns",
           "a",
           "male",
