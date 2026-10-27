@@ -260,7 +260,7 @@ export function bible_glyph_chapter_hab01() {
       {
         verse_number: 10,
         words: [
-          "They",
+          "$pointing_back",
           "scoff",
           "at",
           "$king",
