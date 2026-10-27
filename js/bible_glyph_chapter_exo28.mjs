@@ -1235,7 +1235,7 @@ export function bible_glyph_chapter_exo28() {
           "will",
           "$no_entry",
           "$lifting",
-          "guilt",
+          "$cyclone",
           "and",
           "$skull+doing.",
           "This",
