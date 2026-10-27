@@ -499,7 +499,7 @@ export function bible_glyph_chapter_2ch34() {
           "other",
           "$handshake,",
           "$all",
-          "skilled",
+          "$brain",
           "with",
           "musical",
           "instruments.",
