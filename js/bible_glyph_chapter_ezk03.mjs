@@ -738,7 +738,7 @@ export function bible_glyph_chapter_ezk03() {
           "the",
           "plain,",
           "and",
-          "there",
+          "$telescope",
           "I",
           "will",
           "$mouth",
