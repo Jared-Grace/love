@@ -1496,7 +1496,7 @@ export function bible_glyph_chapter_jer32() {
           "be",
           "bought",
           "in",
-          "this",
+          "$flashlight",
           "$earth",
           "about",
           "which",
