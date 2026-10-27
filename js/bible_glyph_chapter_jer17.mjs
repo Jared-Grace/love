@@ -777,7 +777,7 @@ export function bible_glyph_chapter_jer17() {
           "the",
           "gates",
           "of",
-          "this",
+          "$flashlight",
           "$city",
           "on",
           "the",
