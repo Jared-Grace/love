@@ -336,7 +336,7 @@ export function bible_glyph_chapter_gen16() {
           "$speech",
           "to",
           "her,",
-          "Behold,",
+          "$exclamation,",
           "you",
           "have",
           "conceived",
