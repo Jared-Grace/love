@@ -479,7 +479,7 @@ export function bible_glyph_chapter_exo12() {
           "$bread+bubbles",
           "must",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "$wrestling+heart_on_fire,",
