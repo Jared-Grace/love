@@ -220,7 +220,7 @@ export function bible_glyph_chapter_isa56() {
           "be",
           "His",
           "$kneeling,",
-          "all",
+          "$all",
           "who",
           "keep",
           "the",
