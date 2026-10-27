@@ -541,7 +541,7 @@ export function bible_glyph_chapter_exo36() {
           "join",
           "the",
           "$tent",
-          "together",
+          "$link+doing",
           "as",
           "a",
           "unit.",
