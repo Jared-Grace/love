@@ -1071,7 +1071,7 @@ export function bible_glyph_chapter_gen42() {
           "to",
           "$hand_receiving",
           "$son+right_arrow.",
-          "Everything",
+          "$all",
           "is",
           "going",
           "against",
