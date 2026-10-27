@@ -580,7 +580,7 @@ export function bible_glyph_chapter_est04() {
           "$bridge",
           "and",
           "$hammer+doing",
-          "all",
+          "$all",
           "that",
           "$proper_name$Esther",
           "had",
