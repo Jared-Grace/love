@@ -335,7 +335,7 @@ export function bible_glyph_chapter_zec04() {
           "the",
           "$two",
           "olive",
-          "branches",
+          "$wheat+top",
           "$hand",
           "the",
           "$two",
