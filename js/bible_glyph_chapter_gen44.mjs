@@ -948,7 +948,7 @@ export function bible_glyph_chapter_gen44() {
       {
         verse_number: 33,
         words: [
-          "Now",
+          "$watch",
           "please",
           "let",
           "your",
