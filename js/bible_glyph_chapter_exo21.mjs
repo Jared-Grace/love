@@ -397,7 +397,7 @@ export function bible_glyph_chapter_exo21() {
           "his",
           "neighbour",
           "and",
-          "schemes",
+          "$fox+thing",
           "to",
           "kill",
           "him,",
