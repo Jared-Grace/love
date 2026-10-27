@@ -1028,7 +1028,7 @@ export function bible_glyph_chapter_1sa20() {
           "anger",
           "of",
           "Saul",
-          "burned",
+          "$angry_face+doing",
           "against",
           "$i_am+hands_giving,",
           "and",
