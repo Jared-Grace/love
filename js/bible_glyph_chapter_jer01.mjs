@@ -576,7 +576,7 @@ export function bible_glyph_chapter_jer01() {
           "$no_entry",
           "$might+doing",
           "you,",
-          "since",
+          "$pointing",
           "I",
           "am",
           "with",
