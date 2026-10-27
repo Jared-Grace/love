@@ -666,7 +666,7 @@ export function bible_glyph_chapter_1ki18() {
           "am",
           "the",
           "only",
-          "remaining",
+          "$takeout_box+doing",
           "$megaphone",
           "of",
           "the",
