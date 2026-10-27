@@ -253,7 +253,7 @@ export function bible_glyph_chapter_hab02() {
           "you",
           "have",
           "plundered",
-          "many",
+          "$multiply",
           "$map,",
           "the",
           "remnant",
