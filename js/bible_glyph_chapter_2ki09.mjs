@@ -1064,7 +1064,7 @@ export function bible_glyph_chapter_2ki09() {
           "him",
           "in",
           "his",
-          "tomb",
+          "$tomb+thing",
           "with",
           "his",
           "$father",
