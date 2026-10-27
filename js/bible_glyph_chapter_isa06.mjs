@@ -148,7 +148,7 @@ export function bible_glyph_chapter_isa06() {
           "$soap+no_entry",
           "$kiss_mark",
           "$person+house",
-          "among",
+          "$radio_button",
           "a",
           "$family",
           "of",
