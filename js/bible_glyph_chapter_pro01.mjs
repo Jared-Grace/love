@@ -593,7 +593,7 @@ export function bible_glyph_chapter_pro01() {
           "$person_tipping_hand;",
           "they",
           "despised",
-          "all",
+          "$all",
           "my",
           "reproof.",
         ],
