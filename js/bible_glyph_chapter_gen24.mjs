@@ -1808,7 +1808,7 @@ export function bible_glyph_chapter_gen24() {
           "to",
           "her,",
           "Our",
-          "sister,",
+          "$sister,",
           "may",
           "you",
           "become",
