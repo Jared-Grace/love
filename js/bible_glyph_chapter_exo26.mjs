@@ -782,7 +782,7 @@ export function bible_glyph_chapter_exo26() {
           "hooks,",
           "standing",
           "on",
-          "four",
+          "$four",
           "$silver",
           "bases.",
         ],
