@@ -292,7 +292,7 @@ export function bible_glyph_chapter_isa55() {
           "For",
           "just",
           "as",
-          "rain",
+          "$rain+water_wave",
           "and",
           "snow",
           "$walking+pointing_down",
