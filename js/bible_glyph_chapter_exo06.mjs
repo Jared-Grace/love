@@ -126,7 +126,7 @@ export function bible_glyph_chapter_exo06() {
       {
         verse_number: 5,
         words: [
-          "Furthermore",
+          "$plus",
           "I",
           "have",
           "$ear",
