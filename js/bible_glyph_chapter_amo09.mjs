@@ -452,7 +452,7 @@ export function bible_glyph_chapter_amo09() {
           "the",
           "$map",
           "that",
-          "bear",
+          "$waving_hand",
           "My",
           "$name_tag,",
           "declares",
