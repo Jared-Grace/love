@@ -1113,7 +1113,7 @@ export function bible_glyph_chapter_1sa15() {
           "$skull,",
           "but",
           "$ear+heart_on_fire",
-          "mourned",
+          "$loudly_crying+coffin",
           "for",
           "$proper_name$Saul.",
           "And",
