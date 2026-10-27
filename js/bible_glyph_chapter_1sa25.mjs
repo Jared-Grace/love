@@ -845,7 +845,7 @@ export function bible_glyph_chapter_1sa25() {
           "goes",
           "with",
           "him.",
-          "I,",
+          "$me,",
           "your",
           "servant,",
           "did",
