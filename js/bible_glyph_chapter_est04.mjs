@@ -79,7 +79,7 @@ export function bible_glyph_chapter_est04() {
         verse_number: 3,
         words: [
           "In",
-          "every",
+          "$all",
           "province",
           "to",
           "which",
