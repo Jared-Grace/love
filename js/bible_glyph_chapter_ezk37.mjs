@@ -342,7 +342,7 @@ export function bible_glyph_chapter_ezk37() {
           "$son",
           "of",
           "$person,",
-          "these",
+          "$flashlight+flashlight",
           "bones",
           "are",
           "the",
