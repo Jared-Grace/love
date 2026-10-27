@@ -191,7 +191,7 @@ export function bible_glyph_chapter_lev10() {
           "with",
           "the",
           "$all",
-          "congregation.",
+          "$witness+crowd.",
           "$brother,",
           "the",
           "$all",
