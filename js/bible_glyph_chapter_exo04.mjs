@@ -374,7 +374,7 @@ export function bible_glyph_chapter_exo04() {
           "makes",
           "the",
           "mute",
-          "or",
+          "$shuffle",
           "the",
           "deaf,",
           "the",
