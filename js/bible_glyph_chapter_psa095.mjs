@@ -70,7 +70,7 @@ export function bible_glyph_chapter_psa095() {
           "a",
           "$top",
           "$king",
-          "above",
+          "$pointing_up",
           "all",
           "$moai.",
         ],
