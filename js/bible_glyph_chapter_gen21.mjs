@@ -315,7 +315,7 @@ export function bible_glyph_chapter_gen21() {
           "a",
           "great",
           "$map,",
-          "because",
+          "$pointing",
           "he",
           "is",
           "your",
