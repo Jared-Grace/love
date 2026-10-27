@@ -1414,7 +1414,7 @@ export function bible_glyph_chapter_deu04() {
           "$toward",
           "your",
           "$heart_organ,",
-          "that",
+          "$pointing",
           "the",
           "$i_am",
           "is",
