@@ -242,7 +242,7 @@ export function bible_glyph_chapter_deu15() {
           "you",
           "are",
           "to",
-          "open",
+          "$unlocked",
           "your",
           "$hand",
           "to",
