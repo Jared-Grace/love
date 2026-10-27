@@ -198,7 +198,7 @@ export function bible_glyph_chapter_jer01() {
           "$walking,",
           "and",
           "all",
-          "that",
+          "$back+flashlight",
           "I",
           "command",
           "you,",
