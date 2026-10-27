@@ -516,7 +516,7 @@ export function bible_glyph_chapter_ezr03() {
           "the",
           "foundation",
           "of",
-          "this",
+          "$flashlight",
           "$house,",
           "but",
           "$multiply",
