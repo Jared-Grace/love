@@ -22,7 +22,7 @@ export function bible_glyph_chapter_lev03() {
           "$peace+gift",
           "$tray_out",
           "the",
-          "herd,",
+          "$cow_face,",
           "whether",
           "male",
           "or",
