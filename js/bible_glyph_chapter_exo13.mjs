@@ -54,7 +54,7 @@ export function bible_glyph_chapter_exo13() {
           "to",
           "the",
           "$family,",
-          "Remember",
+          "$reminder_ribbon",
           "this",
           "$sun,",
           "the",
