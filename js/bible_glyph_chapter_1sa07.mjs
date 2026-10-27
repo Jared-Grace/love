@@ -542,7 +542,7 @@ export function bible_glyph_chapter_1sa07() {
           "$proper_name$Gilgal",
           "to",
           "$proper_name$Mizpah,",
-          "judging",
+          "$scales",
           "$wrestling+heart_on_fire",
           "in",
           "all",
