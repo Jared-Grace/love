@@ -734,7 +734,7 @@ export function bible_glyph_chapter_isa43() {
           "cane",
           "with",
           "your",
-          "silver,",
+          "$silver,",
           "nor",
           "satisfied",
           "Me",
