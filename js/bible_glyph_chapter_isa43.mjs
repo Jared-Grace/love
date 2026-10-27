@@ -812,7 +812,7 @@ export function bible_glyph_chapter_isa43() {
         verse_number: 27,
         words: [
           "Your",
-          "first",
+          "$first_place",
           "$father",
           "$bow+doing,",
           "and",
