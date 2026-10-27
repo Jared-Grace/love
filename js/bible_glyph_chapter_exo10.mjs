@@ -652,7 +652,7 @@ export function bible_glyph_chapter_exo10() {
           "$house+proper_name",
           "and",
           "appealed",
-          "to",
+          "$toward",
           "$i_am.",
         ],
       },
