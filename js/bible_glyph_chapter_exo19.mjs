@@ -757,7 +757,7 @@ export function bible_glyph_chapter_exo19() {
           "bring",
           "$proper_name$Aaron",
           "with",
-          "you.",
+          "$you.",
           "But",
           "the",
           "$priest",
