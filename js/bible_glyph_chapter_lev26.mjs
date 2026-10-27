@@ -1124,7 +1124,7 @@ export function bible_glyph_chapter_lev26() {
         words: [
           "They",
           "will",
-          "stumble,",
+          "$hiking_boot+rock,",
           "a",
           "$man_beard",
           "over",
