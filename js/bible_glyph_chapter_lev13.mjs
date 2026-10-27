@@ -792,7 +792,7 @@ export function bible_glyph_chapter_lev13() {
           "area",
           "of",
           "the",
-          "burn",
+          "$fire+adhesive_bandage",
           "becomes",
           "reddish-white",
           "or",
