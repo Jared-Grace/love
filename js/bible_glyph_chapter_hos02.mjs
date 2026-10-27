@@ -430,7 +430,7 @@ export function bible_glyph_chapter_hos02() {
           "jewelry",
           "and",
           "$walking",
-          "after",
+          "$next_track",
           "her",
           "$heart_red+doing.",
           "But",
