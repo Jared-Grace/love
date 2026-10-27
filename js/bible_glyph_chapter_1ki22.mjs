@@ -841,7 +841,7 @@ export function bible_glyph_chapter_1ki22() {
           "inner",
           "room",
           "and",
-          "hide.",
+          "$see_no_evil_monkey+doing.",
         ],
       },
       {
