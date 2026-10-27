@@ -147,7 +147,7 @@ export function bible_glyph_chapter_jer23() {
           "be",
           "$fear+doing",
           "any",
-          "longer,",
+          "$repeat,",
           "$no_entry",
           "dismayed,",
           "nor",
