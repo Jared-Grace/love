@@ -249,7 +249,7 @@ export function bible_glyph_chapter_psa095() {
           "$raised_back_of_hand+doing",
           "in",
           "My",
-          "anger,",
+          "$nose+fire,",
           "They",
           "shall",
           "never",
