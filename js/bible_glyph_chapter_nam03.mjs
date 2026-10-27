@@ -501,7 +501,7 @@ export function bible_glyph_chapter_nam03() {
           "$sleeping_face+eye+doing;",
           "your",
           "officers",
-          "sleep.",
+          "$tent+doing.",
           "Your",
           "$family",
           "are",
