@@ -645,7 +645,7 @@ export function bible_glyph_chapter_num19() {
           "to",
           "$droplet+hand+doing",
           "the",
-          "unclean",
+          "$soap+no_entry",
           "one",
           "on",
           "the",
