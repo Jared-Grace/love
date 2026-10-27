@@ -744,7 +744,7 @@ export function bible_glyph_chapter_num15() {
           "will",
           "be",
           "forgiven,",
-          "since",
+          "$pointing",
           "it",
           "happened",
           "to",
