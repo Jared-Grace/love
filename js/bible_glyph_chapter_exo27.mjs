@@ -179,7 +179,7 @@ export function bible_glyph_chapter_exo27() {
           "poles",
           "are",
           "on",
-          "two",
+          "$two",
           "sides",
           "of",
           "the",
