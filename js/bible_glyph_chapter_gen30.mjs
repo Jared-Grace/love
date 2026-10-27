@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_gen30() {
           "$sheep",
           "bore",
           "$knot+describing,",
-          "speckled",
+          "$black_circle+describing",
           "and",
           "spotted",
           "young.",
