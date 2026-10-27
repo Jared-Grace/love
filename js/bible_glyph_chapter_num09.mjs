@@ -653,7 +653,7 @@ export function bible_glyph_chapter_num09() {
           "$i_am",
           "they",
           "would",
-          "camp,",
+          "$camp+doing,",
           "and",
           "at",
           "the",
