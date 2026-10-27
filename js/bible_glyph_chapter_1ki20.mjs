@@ -822,7 +822,7 @@ export function bible_glyph_chapter_1ki20() {
           "$flashlight",
           "$speech",
           "$hammer+doing.",
-          "Dismiss",
+          "$away+doing",
           "the",
           "$king,",
           "each",
