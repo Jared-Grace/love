@@ -696,7 +696,7 @@ export function bible_glyph_chapter_deu12() {
           "$i_am",
           "your",
           "$heart_on_fire",
-          "chooses",
+          "$check_box",
           "to",
           "put",
           "His",
