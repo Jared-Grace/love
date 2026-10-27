@@ -451,7 +451,7 @@ export function bible_glyph_chapter_exo38() {
         verse_number: 18,
         words: [
           "The",
-          "curtain",
+          "$umbrella+door",
           "for",
           "the",
           "$gate",
