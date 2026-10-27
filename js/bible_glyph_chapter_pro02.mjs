@@ -74,7 +74,7 @@ export function bible_glyph_chapter_pro02() {
           "$magnifying_glass",
           "it",
           "like",
-          "silver",
+          "$silver",
           "and",
           "search",
           "it",
