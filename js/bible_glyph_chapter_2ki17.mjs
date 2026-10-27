@@ -1172,7 +1172,7 @@ export function bible_glyph_chapter_2ki17() {
         verse_number: 34,
         words: [
           "$finish",
-          "this",
+          "$flashlight",
           "$sun",
           "they",
           "are",
