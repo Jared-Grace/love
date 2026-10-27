@@ -227,7 +227,7 @@ export function bible_glyph_chapter_lam05() {
           "at",
           "millstones;",
           "$child+flexed_biceps",
-          "stagger",
+          "$hiking_boot+rock",
           "under",
           "loads",
           "of",
