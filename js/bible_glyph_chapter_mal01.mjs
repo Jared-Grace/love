@@ -454,7 +454,7 @@ export function bible_glyph_chapter_mal01() {
           "the",
           "$crown",
           "is",
-          "defiled,",
+          "$nauseated_face+doing,",
           "and",
           "as",
           "for",
