@@ -212,7 +212,7 @@ export function bible_glyph_chapter_psa090() {
           "-",
           "or",
           "eighty",
-          "if",
+          "$traffic_light",
           "we",
           "are",
           "strong",
