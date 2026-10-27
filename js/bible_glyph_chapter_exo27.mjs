@@ -85,7 +85,7 @@ export function bible_glyph_chapter_exo27() {
           "its",
           "firepans;",
           "$hammer+doing",
-          "all",
+          "$all",
           "its",
           "utensils",
           "of",
