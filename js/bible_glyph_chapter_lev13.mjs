@@ -1406,7 +1406,7 @@ export function bible_glyph_chapter_lev13() {
           "the",
           "bald",
           "head",
-          "or",
+          "$shuffle",
           "forehead,",
           "it",
           "is",
