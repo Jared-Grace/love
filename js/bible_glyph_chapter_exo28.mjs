@@ -1094,7 +1094,7 @@ export function bible_glyph_chapter_exo28() {
           "may",
           "be",
           "acceptable",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
