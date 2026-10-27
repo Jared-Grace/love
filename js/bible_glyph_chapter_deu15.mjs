@@ -83,7 +83,7 @@ export function bible_glyph_chapter_deu15() {
           "you",
           "must",
           "forgive",
-          "whatever",
+          "$back+flashlight",
           "your",
           "$brother",
           "owes",
