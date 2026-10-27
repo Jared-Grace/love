@@ -352,7 +352,7 @@ export function bible_glyph_chapter_num23() {
           "exactly",
           "what",
           "$i_am",
-          "puts",
+          "$palm_down",
           "in",
           "my",
           "mouth?",
