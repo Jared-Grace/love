@@ -545,7 +545,7 @@ export function bible_glyph_chapter_gen35() {
           "$proper_name$Ephrath,",
           "that",
           "is",
-          "Bethlehem.",
+          "$house+bread+proper_name.",
         ],
       },
       {
