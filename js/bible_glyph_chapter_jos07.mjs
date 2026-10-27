@@ -418,7 +418,7 @@ export function bible_glyph_chapter_jos07() {
           "have",
           "$hand_receiving",
           "some",
-          "of",
+          "$tray_out",
           "what",
           "was",
           "devoted",
