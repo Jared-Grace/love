@@ -330,7 +330,7 @@ export function bible_glyph_chapter_zec04() {
           "him",
           "$second_place,",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "are",
           "the",
           "two",
