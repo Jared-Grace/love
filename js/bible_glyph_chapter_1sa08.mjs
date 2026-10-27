@@ -121,7 +121,7 @@ export function bible_glyph_chapter_1sa08() {
           "your",
           "$road.",
           "$watch",
-          "appoint",
+          "$palm_down",
           "a",
           "$king",
           "to",
