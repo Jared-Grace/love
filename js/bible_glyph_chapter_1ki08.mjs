@@ -124,7 +124,7 @@ export function bible_glyph_chapter_1ki08() {
           "the",
           "Tent",
           "of",
-          "Meeting",
+          "$alarm_clock",
           "with",
           "all",
           "its",
