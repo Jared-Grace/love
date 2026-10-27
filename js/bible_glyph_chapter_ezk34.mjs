@@ -119,7 +119,7 @@ export function bible_glyph_chapter_ezk34() {
           "searched",
           "for",
           "the",
-          "lost.",
+          "$wilted_flower.",
           "Instead",
           "you",
           "have",
