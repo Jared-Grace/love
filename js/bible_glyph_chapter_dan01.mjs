@@ -124,7 +124,7 @@ export function bible_glyph_chapter_dan01() {
         verse_number: 4,
         words: [
           "$child",
-          "without",
+          "$dotted_line_face",
           "blemish,",
           "$thumbs_up",
           "in",
