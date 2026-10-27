@@ -357,7 +357,7 @@ export function bible_glyph_chapter_gen43() {
           "$honey,",
           "$herb+droplet",
           "and",
-          "myrrh,",
+          "$tree+droplet,",
           "pistachios",
           "and",
           "almonds.",
