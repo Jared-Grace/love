@@ -540,7 +540,7 @@ export function bible_glyph_chapter_2ch06() {
           "You",
           "will",
           "$no_entry",
-          "fail",
+          "$scissors",
           "to",
           "have",
           "a",
