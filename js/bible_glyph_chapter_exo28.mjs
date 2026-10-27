@@ -532,7 +532,7 @@ export function bible_glyph_chapter_exo28() {
           "$four+describing",
           "$straight_ruler+repeat",
           "a",
-          "beryl,",
+          "$gem_stone+water_wave,",
           "an",
           "onyx",
           "and",
