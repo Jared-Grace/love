@@ -945,7 +945,7 @@ export function bible_glyph_chapter_lev22() {
           "must",
           "be",
           "$sparkle+doing",
-          "among",
+          "$radio_button",
           "the",
           "$son",
           "of",
