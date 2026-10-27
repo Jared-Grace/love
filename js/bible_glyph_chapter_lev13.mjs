@@ -1107,7 +1107,7 @@ export function bible_glyph_chapter_lev13() {
           "there",
           "is",
           "$no_entry",
-          "yellow",
+          "$gold+describing",
           "$hair",
           "in",
           "it",
