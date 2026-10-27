@@ -449,7 +449,7 @@ export function bible_glyph_chapter_hab02() {
           "from",
           "the",
           "wineskin",
-          "until",
+          "$plus+exclamation",
           "they",
           "are",
           "drunk,",
