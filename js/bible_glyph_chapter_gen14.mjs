@@ -167,7 +167,7 @@ export function bible_glyph_chapter_gen14() {
           "and",
           "$footprints",
           "to",
-          "En-mishpat,",
+          "$fountain+scales+proper_name,",
           "that",
           "is",
           "$proper_name$Kadesh,",
