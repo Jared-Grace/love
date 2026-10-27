@@ -432,7 +432,7 @@ export function bible_glyph_chapter_exo18() {
           "$man_in_tuxedo+family",
           "$eye",
           "all",
-          "that",
+          "$back+flashlight",
           "Moses",
           "was",
           "$hammer+doing",
