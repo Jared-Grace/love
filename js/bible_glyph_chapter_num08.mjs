@@ -87,7 +87,7 @@ export function bible_glyph_chapter_num08() {
           "was",
           "made",
           "of",
-          "hammered",
+          "$hammer+curly_loop",
           "$gold",
           "from",
           "its",
