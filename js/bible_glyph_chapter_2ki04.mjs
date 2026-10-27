@@ -905,7 +905,7 @@ export function bible_glyph_chapter_2ki04() {
           "$no_entry",
           "$speech,",
           "$no_entry",
-          "deceive",
+          "$lying_face+road+doing",
           "me?",
         ],
       },
