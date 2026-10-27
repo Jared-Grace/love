@@ -662,7 +662,7 @@ export function bible_glyph_chapter_lam03() {
           "$speech",
           "and",
           "it",
-          "came",
+          "$link",
           "to",
           "pass,",
           "$no_entry",
