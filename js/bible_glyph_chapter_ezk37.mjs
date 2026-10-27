@@ -120,7 +120,7 @@ export function bible_glyph_chapter_ezk37() {
           "and",
           "$speech",
           "them,",
-          "Dry",
+          "$fallen_leaf+describing",
           "$bone,",
           "$ear",
           "the",
