@@ -760,7 +760,7 @@ export function bible_glyph_chapter_num13() {
           "about",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "they",
           "had",
           "spied",
