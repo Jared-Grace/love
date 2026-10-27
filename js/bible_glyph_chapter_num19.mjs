@@ -432,7 +432,7 @@ export function bible_glyph_chapter_num19() {
           "off",
           "from",
           "$wrestling+heart_on_fire,",
-          "because",
+          "$pointing",
           "the",
           "$water",
           "of",
