@@ -718,7 +718,7 @@ export function bible_glyph_chapter_ezk11() {
           "with",
           "the",
           "wheels",
-          "beside",
+          "$arrow_both_ways+round_pushpin",
           "them,",
           "and",
           "the",
