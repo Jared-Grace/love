@@ -403,7 +403,7 @@ export function bible_glyph_chapter_deu04() {
         words: [
           "You",
           "came",
-          "near",
+          "$magnet+doing",
           "and",
           "stood",
           "at",
