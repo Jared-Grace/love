@@ -174,7 +174,7 @@ export function bible_glyph_chapter_gen45() {
         words: [
           "$pointing",
           "the",
-          "famine",
+          "$famine",
           "has",
           "covered",
           "the",
