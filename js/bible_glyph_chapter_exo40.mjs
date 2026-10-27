@@ -51,7 +51,7 @@ export function bible_glyph_chapter_exo40() {
         words: [
           "$palm_down",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$witness+thing",
