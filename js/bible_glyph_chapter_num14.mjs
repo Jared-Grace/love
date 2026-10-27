@@ -1334,7 +1334,7 @@ export function bible_glyph_chapter_num14() {
           "$i_am",
           "will",
           "$no_entry",
-          "be",
+          "$link",
           "with",
           "you.",
         ],
