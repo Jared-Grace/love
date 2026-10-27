@@ -353,7 +353,7 @@ export function bible_glyph_chapter_1sa08() {
           "thousands",
           "and",
           "of",
-          "fifties,",
+          "$five+zero,",
           "and",
           "others",
           "to",
