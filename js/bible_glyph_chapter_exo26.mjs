@@ -618,7 +618,7 @@ export function bible_glyph_chapter_exo26() {
           "bases,",
           "$two",
           "bases",
-          "under",
+          "$down_arrow",
           "each",
           "frame.",
         ],
