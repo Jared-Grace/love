@@ -105,7 +105,7 @@ export function bible_glyph_chapter_lam02() {
           "anger",
           "He",
           "has",
-          "cut",
+          "$axe+tree+doing",
           "off",
           "every",
           "horn",
