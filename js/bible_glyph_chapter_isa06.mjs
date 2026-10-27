@@ -97,7 +97,7 @@ export function bible_glyph_chapter_isa06() {
           "the",
           "$earth",
           "is",
-          "full",
+          "$battery+thing",
           "of",
           "His",
           "$star.",
