@@ -790,7 +790,7 @@ export function bible_glyph_chapter_jer23() {
         verse_number: 22,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "they",
           "had",
           "stood",
