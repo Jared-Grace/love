@@ -800,7 +800,7 @@ export function bible_glyph_chapter_1ki08() {
           "as",
           "it",
           "is",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
