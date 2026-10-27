@@ -48,7 +48,7 @@ export function bible_glyph_chapter_sng02() {
         words: [
           "Like",
           "an",
-          "apple",
+          "$red_apple",
           "tree",
           "among",
           "the",
