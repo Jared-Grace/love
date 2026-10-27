@@ -376,7 +376,7 @@ export function bible_glyph_chapter_num11() {
       {
         verse_number: 13,
         words: [
-          "Where",
+          "$question+round_pushpin+tray_out",
           "can",
           "I",
           "get",
