@@ -934,7 +934,7 @@ export function bible_glyph_chapter_gen30() {
           "on",
           "it,",
           "and",
-          "every",
+          "$all",
           "dark",
           "lamb,",
           "and",
