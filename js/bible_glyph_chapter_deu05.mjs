@@ -190,7 +190,7 @@ export function bible_glyph_chapter_deu05() {
           "shall",
           "have",
           "$no_entry",
-          "other",
+          "$plus+one",
           "$moai",
           "before",
           "Me.",
