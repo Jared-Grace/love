@@ -429,7 +429,7 @@ export function bible_glyph_chapter_2ch20() {
           "$hands_raised+proper_name",
           "were",
           "standing",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "with",
