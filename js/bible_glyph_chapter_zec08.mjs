@@ -690,7 +690,7 @@ export function bible_glyph_chapter_zec08() {
           "$i_am",
           "and",
           "to",
-          "seek",
+          "$magnifying_glass",
           "the",
           "$i_am",
           "of",
