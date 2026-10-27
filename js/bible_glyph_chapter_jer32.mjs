@@ -1238,7 +1238,7 @@ export function bible_glyph_chapter_jer32() {
           "$hammer+doing",
           "such",
           "an",
-          "abomination",
+          "$vomiting",
           "and",
           "cause",
           "$hands_raised+proper_name",
