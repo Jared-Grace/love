@@ -609,7 +609,7 @@ export function bible_glyph_chapter_num16() {
           "had",
           "gathered",
           "his",
-          "whole",
+          "$all",
           "assembly",
           "against",
           "them",
