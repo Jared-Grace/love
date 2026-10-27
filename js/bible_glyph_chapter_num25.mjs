@@ -482,7 +482,7 @@ export function bible_glyph_chapter_num25() {
         words: [
           "$pointing",
           "they",
-          "assailed",
+          "$clamp+doing",
           "you",
           "deceitfully",
           "when",
