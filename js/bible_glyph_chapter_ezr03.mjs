@@ -278,7 +278,7 @@ export function bible_glyph_chapter_ezr03() {
         words: [
           "In",
           "the",
-          "second",
+          "$second_place",
           "month",
           "of",
           "the",
