@@ -371,7 +371,7 @@ export function bible_glyph_chapter_jdg07() {
         words: [
           "But",
           "$traffic_light",
-          "you",
+          "$you",
           "are",
           "$fear+describing",
           "to",
