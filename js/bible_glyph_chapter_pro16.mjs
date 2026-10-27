@@ -253,7 +253,7 @@ export function bible_glyph_chapter_pro16() {
           "$vomiting",
           "to",
           "$king,",
-          "for",
+          "$pointing",
           "a",
           "$throne",
           "is",
