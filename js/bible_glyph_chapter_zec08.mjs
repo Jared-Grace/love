@@ -498,7 +498,7 @@ export function bible_glyph_chapter_zec08() {
           "I",
           "did",
           "$no_entry",
-          "relent,",
+          "$hug+doing,",
         ],
       },
       {
