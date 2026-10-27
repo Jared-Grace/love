@@ -598,7 +598,7 @@ export function bible_glyph_chapter_num32() {
           "$fishing_pole+proper_name",
           "$speech",
           "them,",
-          "If",
+          "$traffic_light",
           "you",
           "will",
           "$hammer+doing",
