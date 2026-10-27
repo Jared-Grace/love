@@ -670,7 +670,7 @@ export function bible_glyph_chapter_exo21() {
           "$eyes",
           "for",
           "$eyes,",
-          "tooth",
+          "$tooth",
           "for",
           "tooth,",
           "$hand",
