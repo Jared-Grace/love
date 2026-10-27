@@ -135,7 +135,7 @@ export function bible_glyph_chapter_lam01() {
           "$footprints",
           "to",
           "her",
-          "appointed",
+          "$alarm_clock",
           "feasts.",
           "All",
           "her",
