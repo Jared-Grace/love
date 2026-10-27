@@ -940,7 +940,7 @@ export function bible_glyph_chapter_gen43() {
         verse_number: 30,
         words: [
           "$i_am+plus",
-          "hurried",
+          "$fast_forward+doing",
           "out,",
           "because",
           "his",
