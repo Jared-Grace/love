@@ -866,7 +866,7 @@ export function bible_glyph_chapter_jdg16() {
         words: [
           "However,",
           "the",
-          "hair",
+          "$hair",
           "of",
           "his",
           "head",
