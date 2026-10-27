@@ -895,7 +895,7 @@ export function bible_glyph_chapter_gen37() {
           "$kitchen_knife+doing",
           "a",
           "young",
-          "goat,",
+          "$goat+man_beard,",
           "and",
           "dipped",
           "the",
