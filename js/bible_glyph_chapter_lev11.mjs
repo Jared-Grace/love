@@ -575,7 +575,7 @@ export function bible_glyph_chapter_lev11() {
           "not",
           "$walking+pointing_up",
           "the",
-          "cud",
+          "$cow_face+clockwise_arrows+thing",
           "is",
           "unclean",
           "for",
