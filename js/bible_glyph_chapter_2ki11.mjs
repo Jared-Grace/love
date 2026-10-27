@@ -30,7 +30,7 @@ export function bible_glyph_chapter_2ki11() {
           "proceeded",
           "to",
           "annihilate",
-          "all",
+          "$all",
           "the",
           "$castle",
           "$seed.",
