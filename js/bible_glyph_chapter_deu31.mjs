@@ -451,7 +451,7 @@ export function bible_glyph_chapter_deu31() {
           "$sprout",
           "in",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "$you",
           "are",
