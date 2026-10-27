@@ -75,7 +75,7 @@ export function bible_glyph_chapter_zec05() {
           "out",
           "$pointing_up",
           "the",
-          "face",
+          "$face",
           "of",
           "all",
           "the",
