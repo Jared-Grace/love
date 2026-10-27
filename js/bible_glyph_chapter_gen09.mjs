@@ -88,7 +88,7 @@ export function bible_glyph_chapter_gen09() {
           "moves",
           "will",
           "be",
-          "food",
+          "$eating+thing",
           "for",
           "you.",
           "Just",
