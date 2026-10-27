@@ -32,7 +32,7 @@ export function bible_glyph_chapter_job01() {
           "$full_moon+person",
           "and",
           "upright,",
-          "fearing",
+          "$fear+describing",
           "$heart_on_fire",
           "and",
           "shunning",
