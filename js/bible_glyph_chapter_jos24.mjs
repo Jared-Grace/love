@@ -912,7 +912,7 @@ export function bible_glyph_chapter_jos24() {
           "witness",
           "against",
           "us,",
-          "for",
+          "$pointing",
           "it",
           "has",
           "$ear",
