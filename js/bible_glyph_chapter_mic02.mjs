@@ -311,7 +311,7 @@ export function bible_glyph_chapter_mic02() {
           "brings",
           "destruction,",
           "a",
-          "grievous",
+          "$bandage+fire+doing",
           "destruction.",
         ],
       },
