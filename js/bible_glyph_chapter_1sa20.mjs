@@ -37,7 +37,7 @@ export function bible_glyph_chapter_1sa20() {
           "What",
           "is",
           "my",
-          "iniquity?",
+          "$cyclone?",
           "How",
           "have",
           "I",
