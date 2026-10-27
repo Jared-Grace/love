@@ -53,7 +53,7 @@ export function bible_glyph_chapter_exo26() {
           "$four",
           "$triangular_ruler",
           "$arrow_both_ways,",
-          "all",
+          "$all",
           "the",
           "curtains",
           "the",
