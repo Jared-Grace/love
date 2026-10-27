@@ -130,7 +130,7 @@ export function bible_glyph_chapter_lev02() {
           "$lotion_bottle",
           "or",
           "$flatbread",
-          "wafers",
+          "$flatbread+oil",
           "$oil+doing",
           "with",
           "$lotion_bottle.",
