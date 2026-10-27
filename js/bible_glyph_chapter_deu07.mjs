@@ -418,7 +418,7 @@ export function bible_glyph_chapter_deu07() {
           "and",
           "the",
           "$gift",
-          "that",
+          "$back+flashlight",
           "He",
           "swore",
           "to",
