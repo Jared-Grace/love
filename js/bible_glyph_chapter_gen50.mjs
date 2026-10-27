@@ -699,7 +699,7 @@ export function bible_glyph_chapter_gen50() {
           "$heart_on_fire",
           "will",
           "surely",
-          "visit",
+          "$clipboard+doing",
           "you",
           "and",
           "$walking+pointing_up",
