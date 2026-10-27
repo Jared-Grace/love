@@ -397,7 +397,7 @@ export function bible_glyph_chapter_lev27() {
           "owner",
           "decides",
           "to",
-          "redeem",
+          "$currency_exchange",
           "the",
           "animal,",
           "he",
