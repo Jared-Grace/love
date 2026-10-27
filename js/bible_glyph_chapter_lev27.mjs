@@ -826,7 +826,7 @@ export function bible_glyph_chapter_lev27() {
           "then",
           "he",
           "may",
-          "redeem",
+          "$coin+turn_back",
           "it",
           "according",
           "to",
