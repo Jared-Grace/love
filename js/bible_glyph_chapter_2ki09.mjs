@@ -934,7 +934,7 @@ export function bible_glyph_chapter_2ki09() {
           "$i_am",
           "lifted",
           "up",
-          "this",
+          "$flashlight",
           "$lifting+thing",
           "against",
           "him.",
