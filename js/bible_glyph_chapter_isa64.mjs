@@ -81,7 +81,7 @@ export function bible_glyph_chapter_isa64() {
           "$crossed_fingers+doing,",
           "You",
           "came",
-          "down,",
+          "$walking+pointing_down,",
           "and",
           "the",
           "$mountain",
