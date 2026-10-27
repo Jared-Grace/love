@@ -509,7 +509,7 @@ export function bible_glyph_chapter_num11() {
           "$mouth",
           "with",
           "you",
-          "there,",
+          "$telescope,",
           "and",
           "I",
           "will",
