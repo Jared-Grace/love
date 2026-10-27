@@ -1750,7 +1750,7 @@ export function bible_glyph_chapter_1sa17() {
           "to",
           "$father+lamp",
           "the",
-          "commander",
+          "$military_medal",
           "of",
           "the",
           "army,",
