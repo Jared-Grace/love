@@ -835,7 +835,7 @@ export function bible_glyph_chapter_exo40() {
           "$alarm_clock,",
           "$pointing",
           "the",
-          "cloud",
+          "$cloud",
           "had",
           "settled",
           "on",
