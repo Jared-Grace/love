@@ -579,7 +579,7 @@ export function bible_glyph_chapter_1sa03() {
           "of",
           "Samuels",
           "$speech",
-          "fall",
+          "$person+pointing_down",
           "to",
           "the",
           "$earth.",
