@@ -190,7 +190,7 @@ export function bible_glyph_chapter_exo29() {
           "it",
           "on",
           "his",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
