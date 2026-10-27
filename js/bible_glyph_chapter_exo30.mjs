@@ -536,7 +536,7 @@ export function bible_glyph_chapter_exo30() {
           "the",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "they",
           "must",
           "wash",
