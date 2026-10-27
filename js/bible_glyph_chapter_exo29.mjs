@@ -1168,7 +1168,7 @@ export function bible_glyph_chapter_exo29() {
           "$pointing_up",
           "the",
           "$altar",
-          "regularly:",
+          "$clock+infinity:",
           "$two",
           "$lamb",
           "a",
