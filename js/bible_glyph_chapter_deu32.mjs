@@ -396,7 +396,7 @@ export function bible_glyph_chapter_deu32() {
           "choicest",
           "$heart_organ+two",
           "of",
-          "wheat.",
+          "$wheat.",
           "From",
           "the",
           "$blood",
