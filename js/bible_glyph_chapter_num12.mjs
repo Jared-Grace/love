@@ -217,7 +217,7 @@ export function bible_glyph_chapter_num12() {
           "he",
           "sees",
           "the",
-          "form",
+          "$framed_picture+person",
           "of",
           "$i_am.",
           "Why",
