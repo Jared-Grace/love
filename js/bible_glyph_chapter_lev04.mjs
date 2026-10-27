@@ -134,7 +134,7 @@ export function bible_glyph_chapter_lev04() {
           "$tray_out",
           "$blood",
           "$seven",
-          "times",
+          "$drum",
           "before",
           "$i_am,",
           "in",
