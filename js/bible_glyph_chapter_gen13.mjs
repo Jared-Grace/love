@@ -214,7 +214,7 @@ export function bible_glyph_chapter_gen13() {
           "my",
           "$person+sheep,",
           "for",
-          "we",
+          "$me",
           "are",
           "$brother.",
         ],
