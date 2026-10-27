@@ -323,7 +323,7 @@ export function bible_glyph_chapter_isa26() {
           "for",
           "us.",
           "For",
-          "all",
+          "$all",
           "that",
           "we",
           "have",
