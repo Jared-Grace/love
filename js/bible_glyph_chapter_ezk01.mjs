@@ -123,7 +123,7 @@ export function bible_glyph_chapter_ezk01() {
           "the",
           "$compass+up_arrow,",
           "a",
-          "great",
+          "$top",
           "$cloud",
           "with",
           "$fire",
