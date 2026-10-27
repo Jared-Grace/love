@@ -396,7 +396,7 @@ export function bible_glyph_chapter_lam03() {
           "we",
           "are",
           "$no_entry",
-          "consumed,",
+          "$full_moon+doing,",
           "for",
           "His",
           "mercies",
