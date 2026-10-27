@@ -662,7 +662,7 @@ export function bible_glyph_chapter_deu11() {
       {
         verse_number: 20,
         words: [
-          "Write",
+          "$writing_hand",
           "them",
           "on",
           "the",
