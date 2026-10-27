@@ -401,7 +401,7 @@ export function bible_glyph_chapter_gen47() {
           "all",
           "that",
           "$earth,",
-          "because",
+          "$pointing",
           "the",
           "$famine",
           "was",
