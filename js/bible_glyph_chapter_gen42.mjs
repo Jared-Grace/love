@@ -699,7 +699,7 @@ export function bible_glyph_chapter_gen42() {
           "their",
           "bags",
           "with",
-          "grain,",
+          "$wheat+wind,",
           "to",
           "$turn_back",
           "each",
