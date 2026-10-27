@@ -517,7 +517,7 @@ export function bible_glyph_chapter_2ki06() {
           "$hands_praying,",
           "O",
           "$i_am,",
-          "please",
+          "$pleading",
           "open",
           "his",
           "$eyes",
