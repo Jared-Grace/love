@@ -334,7 +334,7 @@ export function bible_glyph_chapter_ezk47() {
         words: [
           "Fishermen",
           "will",
-          "stand",
+          "$person+round_pushpin",
           "by",
           "the",
           "shore;",
