@@ -172,7 +172,7 @@ export function bible_glyph_chapter_hab02() {
           "himself",
           "and",
           "collects",
-          "all",
+          "$all",
           "the",
           "$family",
           "as",
