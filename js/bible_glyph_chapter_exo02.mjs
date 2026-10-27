@@ -204,7 +204,7 @@ export function bible_glyph_chapter_exo02() {
         words: [
           "Then",
           "his",
-          "sister",
+          "$sister",
           "$speech",
           "to",
           "$house+proper_name",
