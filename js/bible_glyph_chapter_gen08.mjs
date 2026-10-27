@@ -356,7 +356,7 @@ export function bible_glyph_chapter_gen08() {
         words: [
           "In",
           "the",
-          "six",
+          "$six",
           "hundred",
           "and",
           "first",
