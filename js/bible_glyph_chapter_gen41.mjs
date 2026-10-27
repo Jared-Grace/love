@@ -196,7 +196,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "In",
           "the",
-          "morning",
+          "$morning",
           "his",
           "$wind",
           "was",
