@@ -288,7 +288,7 @@ export function bible_glyph_chapter_mic05() {
           "the",
           "midst",
           "of",
-          "many",
+          "$multiply",
           "$family",
           "like",
           "a",
