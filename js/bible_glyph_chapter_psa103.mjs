@@ -59,7 +59,7 @@ export function bible_glyph_chapter_psa103() {
           "He",
           "who",
           "forgives",
-          "all",
+          "$all",
           "your",
           "iniquities",
           "and",
