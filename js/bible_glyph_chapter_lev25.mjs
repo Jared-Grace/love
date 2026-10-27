@@ -934,7 +934,7 @@ export function bible_glyph_chapter_lev25() {
           "with",
           "$dotted_line_face",
           "$wall",
-          "around",
+          "$around",
           "them",
           "are",
           "to",
