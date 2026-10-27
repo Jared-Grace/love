@@ -234,7 +234,7 @@ export function bible_glyph_chapter_lev08() {
           "oil",
           "on",
           "$altar",
-          "seven",
+          "$seven",
           "times,",
           "$oil+doing",
           "$altar",
