@@ -742,7 +742,7 @@ export function bible_glyph_chapter_2ki03() {
           "$eye",
           "the",
           "$water",
-          "red",
+          "$red_circle+describing",
           "as",
           "$blood.",
         ],
