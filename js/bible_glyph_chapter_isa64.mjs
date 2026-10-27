@@ -282,7 +282,7 @@ export function bible_glyph_chapter_isa64() {
           "upon",
           "us,",
           "we",
-          "pray;",
+          "$pleading;",
           "we",
           "are",
           "all",
