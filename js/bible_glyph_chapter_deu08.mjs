@@ -618,7 +618,7 @@ export function bible_glyph_chapter_deu08() {
           "Like",
           "the",
           "$map",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "has",
