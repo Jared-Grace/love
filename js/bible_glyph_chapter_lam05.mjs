@@ -13,7 +13,7 @@ export function bible_glyph_chapter_lam05() {
       {
         verse_number: 1,
         words: [
-          "Remember,",
+          "$reminder_ribbon,",
           "O",
           "$i_am,",
           "what",
