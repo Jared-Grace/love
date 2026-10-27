@@ -407,7 +407,7 @@ export function bible_glyph_chapter_psa145() {
           "of",
           "those",
           "who",
-          "fear",
+          "$fear+describing",
           "Him.",
           "He",
           "$ear",
