@@ -1,11 +1,14 @@
+import { folder_js } from "./folder_js.mjs";
+import { repo_love_path } from "./repo_love_path.mjs";
 import { folder_read_recursive_skipped_paths_async } from "./folder_read_recursive_skipped_paths_async.mjs";
-import { json_extension } from "./json_extension.mjs";
-import { repos_folder } from "./repos_folder.mjs";
-import { list_filter_ends_with_any } from "./list_filter_ends_with_any.mjs";
-import { html_extension } from "./html_extension.mjs";
 import { function_name_extension } from "./function_name_extension.mjs";
+import { html_extension } from "./html_extension.mjs";
+import { json_extension } from "./json_extension.mjs";
+import { list_filter_ends_with_any } from "./list_filter_ends_with_any.mjs";
 export async function app_a_download_paths() {
-  let path_folder = repos_folder();
+  "Only this repo's code folder is handed to the page. Every repo's code, pages and data together came to fourteen gigabytes once tools began leaving their output beside the code, and the page's first load never finished asking for it.";
+  let js = folder_js();
+  let path_folder = repo_love_path(js);
   let combineds = await folder_read_recursive_skipped_paths_async(path_folder, [
     "node_modules",
     ".git",
