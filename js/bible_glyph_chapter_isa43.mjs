@@ -818,7 +818,7 @@ export function bible_glyph_chapter_isa43() {
           "and",
           "your",
           "spokesmen",
-          "rebelled",
+          "$black_flag+doing",
           "against",
           "Me.",
         ],
