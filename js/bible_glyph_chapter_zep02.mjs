@@ -67,7 +67,7 @@ export function bible_glyph_chapter_zep02() {
           "$magnifying_glass",
           "the",
           "$i_am,",
-          "all",
+          "$all",
           "you",
           "humble",
           "of",
