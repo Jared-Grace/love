@@ -136,7 +136,7 @@ export function bible_glyph_chapter_num27() {
           "$scissors+down_arrow+doing",
           "from",
           "his",
-          "clan",
+          "$houses",
           "because",
           "he",
           "had",
