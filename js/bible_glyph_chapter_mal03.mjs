@@ -34,7 +34,7 @@ export function bible_glyph_chapter_mal03() {
           "you",
           "seek",
           "will",
-          "suddenly",
+          "$lightning+manner",
           "$footprints",
           "to",
           "His",
