@@ -765,7 +765,7 @@ export function bible_glyph_chapter_lev16() {
           "of",
           "the",
           "$sprout",
-          "goat",
+          "$goat+man_beard",
           "and",
           "$hands_raised",
           "over",
