@@ -840,7 +840,7 @@ export function bible_glyph_chapter_exo16() {
         verse_number: 26,
         words: [
           "For",
-          "six",
+          "$six",
           "$sun",
           "you",
           "may",
