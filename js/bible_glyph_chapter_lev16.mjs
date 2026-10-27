@@ -673,7 +673,7 @@ export function bible_glyph_chapter_lev16() {
           "$blood",
           "of",
           "the",
-          "goat",
+          "$goat+man_beard",
           "and",
           "$hands_giving",
           "it",
