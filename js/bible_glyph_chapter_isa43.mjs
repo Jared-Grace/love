@@ -768,7 +768,7 @@ export function bible_glyph_chapter_isa43() {
           "yes",
           "$me,",
           "am",
-          "He",
+          "$pointing_back",
           "who",
           "blots",
           "out",
