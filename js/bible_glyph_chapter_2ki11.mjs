@@ -300,7 +300,7 @@ export function bible_glyph_chapter_2ki11() {
           "hundreds",
           "$hammer+doing",
           "$all",
-          "that",
+          "$back+flashlight",
           "$i_am+lightbulb",
           "the",
           "$priest",
