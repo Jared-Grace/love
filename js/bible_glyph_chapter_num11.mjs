@@ -1049,7 +1049,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "all",
           "the",
-          "next",
+          "$sun+next_track+thing",
           "$sun,",
           "the",
           "$family",
