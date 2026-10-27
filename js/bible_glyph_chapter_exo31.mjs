@@ -406,7 +406,7 @@ export function bible_glyph_chapter_exo31() {
           "of",
           "Israel",
           "must",
-          "keep",
+          "$guard",
           "the",
           "$sabbath,",
           "to",
