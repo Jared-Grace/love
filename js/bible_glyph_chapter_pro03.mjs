@@ -62,7 +62,7 @@ export function bible_glyph_chapter_pro03() {
           "$check",
           "leave",
           "you;",
-          "bind",
+          "$knot+crowd+doing",
           "them",
           "around",
           "your",
