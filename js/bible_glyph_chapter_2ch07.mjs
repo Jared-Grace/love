@@ -276,7 +276,7 @@ export function bible_glyph_chapter_2ch07() {
           "the",
           "$party_popper",
           "for",
-          "seven",
+          "$seven",
           "$sun,",
           "and",
           "all",
