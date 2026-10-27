@@ -368,7 +368,7 @@ export function bible_glyph_chapter_nam03() {
           "$water",
           "for",
           "the",
-          "siege;",
+          "$city+around+thing;",
           "strengthen",
           "your",
           "fortresses.",
