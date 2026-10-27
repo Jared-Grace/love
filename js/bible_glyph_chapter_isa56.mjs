@@ -325,7 +325,7 @@ export function bible_glyph_chapter_isa56() {
           "and",
           "$eating",
           "greedily,",
-          "all",
+          "$all",
           "you",
           "$sprout",
           "of",
