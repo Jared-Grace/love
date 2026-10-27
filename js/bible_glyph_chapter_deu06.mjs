@@ -704,7 +704,7 @@ export function bible_glyph_chapter_deu06() {
           "$hammer+doing",
           "all",
           "these",
-          "statutes",
+          "$locked_with_pen",
           "and",
           "to",
           "fear",
