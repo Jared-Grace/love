@@ -284,7 +284,7 @@ export function bible_glyph_chapter_pro08() {
           "By",
           "me",
           "$military_medal",
-          "rule,",
+          "$crown+hand+doing,",
           "and",
           "all",
           "nobles",
