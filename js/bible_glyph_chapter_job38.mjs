@@ -34,7 +34,7 @@ export function bible_glyph_chapter_job38() {
           "who",
           "obscures",
           "My",
-          "counsel",
+          "$person_tipping_hand",
           "by",
           "words",
           "without",
