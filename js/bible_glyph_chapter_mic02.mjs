@@ -305,7 +305,7 @@ export function bible_glyph_chapter_mic02() {
           "place",
           "of",
           "$seat+thing,",
-          "because",
+          "$information+toward",
           "its",
           "defilement",
           "brings",
