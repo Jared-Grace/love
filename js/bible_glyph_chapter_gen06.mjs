@@ -196,7 +196,7 @@ export function bible_glyph_chapter_gen06() {
           "$speech,",
           "I",
           "will",
-          "blot",
+          "$broom+doing",
           "out",
           "$person,",
           "whom",
