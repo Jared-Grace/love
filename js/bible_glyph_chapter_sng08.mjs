@@ -269,7 +269,7 @@ export function bible_glyph_chapter_sng08() {
           "she",
           "is",
           "a",
-          "wall,",
+          "$brick+shield,",
           "we",
           "will",
           "build",
