@@ -771,7 +771,7 @@ export function bible_glyph_chapter_lev06() {
           "into",
           "$tent",
           "of",
-          "Meeting",
+          "$alarm_clock",
           "to",
           "make",
           "atonement",
