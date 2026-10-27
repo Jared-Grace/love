@@ -986,7 +986,7 @@ export function bible_glyph_chapter_lev19() {
           "an",
           "$ruler+thing",
           "$jar+straight_ruler.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
