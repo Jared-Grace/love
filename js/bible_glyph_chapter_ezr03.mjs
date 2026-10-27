@@ -531,7 +531,7 @@ export function bible_glyph_chapter_ezr03() {
           "$family",
           "could",
           "not",
-          "distinguish",
+          "$detective",
           "the",
           "shouts",
           "of",
