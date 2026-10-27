@@ -459,7 +459,7 @@ export function bible_glyph_chapter_job19() {
         verse_number: 25,
         words: [
           "But",
-          "I",
+          "$me",
           "$lightbulb",
           "that",
           "my",
