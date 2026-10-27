@@ -303,7 +303,7 @@ export function bible_glyph_chapter_num20() {
         words: [
           "Then",
           "$fishing_pole+proper_name",
-          "raised",
+          "$up_arrow",
           "his",
           "$hand",
           "and",
