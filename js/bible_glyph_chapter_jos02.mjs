@@ -177,7 +177,7 @@ export function bible_glyph_chapter_jos02() {
           "way",
           "they",
           "$walking.",
-          "Pursue",
+          "$running+toward",
           "them",
           "quickly,",
           "and",
