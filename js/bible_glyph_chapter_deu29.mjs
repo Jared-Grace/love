@@ -244,7 +244,7 @@ export function bible_glyph_chapter_deu29() {
         verse_number: 9,
         words: [
           "So",
-          "keep",
+          "$guard",
           "and",
           "$hammer+doing",
           "the",
