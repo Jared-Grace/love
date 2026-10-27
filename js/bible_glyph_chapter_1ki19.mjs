@@ -535,7 +535,7 @@ export function bible_glyph_chapter_1ki19() {
           "the",
           "only",
           "one",
-          "left,",
+          "$takeout_box+doing,",
           "and",
           "they",
           "are",
