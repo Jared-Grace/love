@@ -168,7 +168,7 @@ export function bible_glyph_chapter_jos07() {
         words: [
           "So",
           "about",
-          "three",
+          "$three",
           "thousand",
           "$man_beard",
           "of",
