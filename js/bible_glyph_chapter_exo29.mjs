@@ -368,7 +368,7 @@ export function bible_glyph_chapter_exo29() {
           "kidneys",
           "with",
           "the",
-          "fat",
+          "$bacon",
           "on",
           "them,",
           "and",
