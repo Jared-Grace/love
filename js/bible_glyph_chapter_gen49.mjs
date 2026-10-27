@@ -169,7 +169,7 @@ export function bible_glyph_chapter_gen49() {
           "strong,",
           "and",
           "their",
-          "wrath,",
+          "$anger_symbol,",
           "$pointing",
           "it",
           "is",
