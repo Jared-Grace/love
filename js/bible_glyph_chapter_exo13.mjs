@@ -719,7 +719,7 @@ export function bible_glyph_chapter_exo13() {
           "$fire",
           "by",
           "$night",
-          "left",
+          "$walking+away+doing",
           "its",
           "place",
           "before",
