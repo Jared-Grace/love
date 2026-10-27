@@ -361,7 +361,7 @@ export function bible_glyph_chapter_zep01() {
           "silver",
           "will",
           "be",
-          "cut",
+          "$scissors",
           "off.",
         ],
       },
