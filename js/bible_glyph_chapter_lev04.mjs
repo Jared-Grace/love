@@ -482,7 +482,7 @@ export function bible_glyph_chapter_lev04() {
           "$horn",
           "of",
           "$altar",
-          "that",
+          "$back+flashlight",
           "is",
           "before",
           "$i_am",
