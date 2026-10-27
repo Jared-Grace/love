@@ -336,7 +336,7 @@ export function bible_glyph_chapter_psa027() {
           "of",
           "my",
           "foes,",
-          "for",
+          "$pointing",
           "false",
           "$witness",
           "rise",
