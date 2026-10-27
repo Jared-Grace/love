@@ -124,7 +124,7 @@ export function bible_glyph_chapter_exo28() {
           "$yarn+gem_stone+thing",
           "$dress+thread,",
           "a",
-          "turban",
+          "$person_wearing_turban",
           "and",
           "a",
           "sash.",
