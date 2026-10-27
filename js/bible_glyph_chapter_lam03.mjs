@@ -238,7 +238,7 @@ export function bible_glyph_chapter_lam03() {
           "He",
           "$footprints",
           "my",
-          "kidneys",
+          "$heart_organ+two",
           "with",
           "the",
           "$son",
