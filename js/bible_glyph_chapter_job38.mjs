@@ -93,7 +93,7 @@ export function bible_glyph_chapter_job38() {
           "$pointing",
           "you",
           "$lightbulb!",
-          "Or",
+          "$shuffle",
           "$person+question",
           "stretched",
           "a",
