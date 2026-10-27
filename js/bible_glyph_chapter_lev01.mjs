@@ -293,7 +293,7 @@ export function bible_glyph_chapter_lev01() {
           "$poultry_leg",
           "of",
           "$altar",
-          "before",
+          "$face",
           "$i_am,",
           "and",
           "$son",
