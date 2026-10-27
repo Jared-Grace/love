@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen09() {
         words: [
           "Then",
           "$heart_on_fire",
-          "blessed",
+          "$speech+thumbs_up",
           "$proper_name$Noah",
           "and",
           "his",
