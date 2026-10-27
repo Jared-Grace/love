@@ -361,7 +361,7 @@ export function bible_glyph_chapter_exo40() {
           "So",
           "$fishing_pole+proper_name",
           "$hammer+doing",
-          "everything",
+          "$all",
           "just",
           "as",
           "the",
