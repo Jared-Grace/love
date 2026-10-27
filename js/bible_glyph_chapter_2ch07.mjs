@@ -112,7 +112,7 @@ export function bible_glyph_chapter_2ch07() {
           "to",
           "the",
           "$i_am:",
-          "For",
+          "$pointing",
           "He",
           "is",
           "$thumbs_up;",
