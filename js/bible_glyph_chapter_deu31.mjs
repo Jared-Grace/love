@@ -746,7 +746,7 @@ export function bible_glyph_chapter_deu31() {
           "then",
           "they",
           "will",
-          "turn",
+          "$curving_right+doing",
           "to",
           "other",
           "$moai",
