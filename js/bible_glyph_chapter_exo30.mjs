@@ -488,7 +488,7 @@ export function bible_glyph_chapter_exo30() {
           "with",
           "a",
           "$bronze",
-          "stand",
+          "$pin+thing",
           "for",
           "washing.",
           "$hands_giving",
