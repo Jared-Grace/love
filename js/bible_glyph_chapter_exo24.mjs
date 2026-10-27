@@ -488,7 +488,7 @@ export function bible_glyph_chapter_exo24() {
           "covered",
           "it",
           "for",
-          "six",
+          "$six",
           "$sun.",
           "On",
           "the",
