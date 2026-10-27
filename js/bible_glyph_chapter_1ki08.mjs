@@ -743,7 +743,7 @@ export function bible_glyph_chapter_1ki08() {
           "is",
           "no",
           "$heart_on_fire",
-          "like",
+          "$likeness",
           "You",
           "in",
           "$sky",
