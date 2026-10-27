@@ -150,7 +150,7 @@ export function bible_glyph_chapter_gen22() {
           "The",
           "boy",
           "and",
-          "I",
+          "$me",
           "will",
           "$walking",
           "over",
