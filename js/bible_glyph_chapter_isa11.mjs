@@ -101,7 +101,7 @@ export function bible_glyph_chapter_isa11() {
           "He",
           "will",
           "$no_entry",
-          "decide",
+          "$you+exclamation",
           "by",
           "what",
           "His",
