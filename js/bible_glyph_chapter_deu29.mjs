@@ -305,7 +305,7 @@ export function bible_glyph_chapter_deu29() {
           "your",
           "$camp$s",
           "who",
-          "cut",
+          "$axe+doing",
           "your",
           "$tree",
           "and",
