@@ -1,17 +1,17 @@
-import { object_property_names } from "./object_property_names.mjs";
-import { equal } from "./equal.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_roots_split_families } from "./bible_glyph_roots_split_families.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { bible_glyph_verse_glyph_counts } from "./bible_glyph_verse_glyph_counts.mjs";
+import { equal } from "./equal.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { not } from "./not.mjs";
+import { less_than } from "./less_than.mjs";
 import { bible_glyph_gloss_english_absent_is } from "./bible_glyph_gloss_english_absent_is.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 export async function bible_glyph_chapters_split_marks_planned() {
   arguments_assert(arguments, 0);
   ("Every verse that still draws a picture two roots used to share more often than the table now seats it, and which mark each of those drawn pictures should become - or why it cannot be said.");
