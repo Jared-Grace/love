@@ -328,7 +328,7 @@ export function bible_glyph_chapter_1ki22() {
           "$door",
           "of",
           "the",
-          "gate",
+          "$gate",
           "of",
           "$guard+proper_name,",
           "with",
