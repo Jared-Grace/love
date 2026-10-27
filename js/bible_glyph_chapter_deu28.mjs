@@ -1249,7 +1249,7 @@ export function bible_glyph_chapter_deu28() {
           "$sheaf_of_rice+tray_in+doing",
           "the",
           "grapes,",
-          "because",
+          "$pointing",
           "worms",
           "will",
           "$eating",
