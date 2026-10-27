@@ -214,7 +214,7 @@ export function bible_glyph_chapter_ezk34() {
           "as",
           "$me",
           "$sprout,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am,",
