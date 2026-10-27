@@ -922,7 +922,7 @@ export function bible_glyph_chapter_gen30() {
           "goats,",
           "and",
           "$all",
-          "speckled",
+          "$black_circle+describing",
           "and",
           "$black_circle+white_circle+doing",
           "$goat,",
