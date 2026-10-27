@@ -409,7 +409,7 @@ export function bible_glyph_chapter_exo28() {
         words: [
           "$hammer+doing",
           "a",
-          "breastpiece",
+          "$gem_stone+t_shirt",
           "of",
           "$scales+thing",
           "with",
