@@ -79,7 +79,7 @@ export function bible_glyph_chapter_1sa17() {
           "another,",
           "with",
           "the",
-          "valley",
+          "$valley",
           "between",
           "them.",
         ],
