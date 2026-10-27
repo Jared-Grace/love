@@ -1241,7 +1241,7 @@ export function bible_glyph_chapter_2ch20() {
           "$wrestling+heart_on_fire,",
           "who",
           "$hammer+doing",
-          "wickedly.",
+          "$thumbs_down+person+doing.",
         ],
       },
       {
