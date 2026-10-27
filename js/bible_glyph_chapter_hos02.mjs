@@ -702,7 +702,7 @@ export function bible_glyph_chapter_hos02() {
           "the",
           "$oil+new_button,",
           "and",
-          "they",
+          "$pointing_back",
           "will",
           "respond",
           "to",
