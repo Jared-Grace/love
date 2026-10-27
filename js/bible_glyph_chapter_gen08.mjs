@@ -386,7 +386,7 @@ export function bible_glyph_chapter_gen08() {
           "covering",
           "from",
           "the",
-          "ark",
+          "$package",
           "and",
           "$eye",
           "that",
