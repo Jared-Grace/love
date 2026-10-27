@@ -299,7 +299,7 @@ export function bible_glyph_chapter_amo05() {
           "$foot+wheat+collision+doing",
           "$pointing_up",
           "the",
-          "poor",
+          "$pinching_hand+person",
           "and",
           "$hand_receiving",
           "$tray_out",
