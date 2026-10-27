@@ -289,7 +289,7 @@ export function bible_glyph_chapter_jer31() {
           "them",
           "$walking",
           "$toward",
-          "streams",
+          "$national_park",
           "of",
           "$water,",
           "on",
