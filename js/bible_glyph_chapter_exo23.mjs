@@ -456,7 +456,7 @@ export function bible_glyph_chapter_exo23() {
           "of",
           "what",
           "you",
-          "sow",
+          "$seed+doing",
           "in",
           "the",
           "$field.",
