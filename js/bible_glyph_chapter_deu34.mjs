@@ -269,7 +269,7 @@ export function bible_glyph_chapter_deu34() {
         verse_number: 9,
         words: [
           "Now",
-          "Joshua",
+          "$i_am+rescue",
           "$son",
           "of",
           "$proper_name$Nun",
