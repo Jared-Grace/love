@@ -63,7 +63,7 @@ export function bible_glyph_chapter_jdg16() {
           "at",
           "the",
           "$city",
-          "gate.",
+          "$gate.",
           "They",
           "were",
           "quiet",
