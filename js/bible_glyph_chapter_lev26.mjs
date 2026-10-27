@@ -1368,7 +1368,7 @@ export function bible_glyph_chapter_lev26() {
           "I",
           "will",
           "$no_entry",
-          "reject",
+          "$gesturing_no+throwing+doing",
           "them",
           "$no_entry",
           "despise",
