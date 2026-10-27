@@ -238,7 +238,7 @@ export function bible_glyph_chapter_gen27() {
           "and",
           "$hand_receiving",
           "me",
-          "two",
+          "$two",
           "$thumbs_up",
           "young",
           "goats,",
