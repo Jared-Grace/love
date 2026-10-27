@@ -1460,7 +1460,7 @@ export function bible_glyph_chapter_1ki22() {
           "waged",
           "$crossed_swords+doing,",
           "are",
-          "they",
+          "$pointing_back",
           "$no_entry",
           "written",
           "in",
