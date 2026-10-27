@@ -551,7 +551,7 @@ export function bible_glyph_chapter_exo39() {
           "a",
           "cord",
           "of",
-          "blue",
+          "$blue_circle",
           "yarn,",
           "so",
           "it",
