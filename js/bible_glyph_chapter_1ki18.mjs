@@ -787,7 +787,7 @@ export function bible_glyph_chapter_1ki18() {
           "of",
           "Baal,",
           "$pointing",
-          "you",
+          "$you",
           "are",
           "so",
           "numerous,",
