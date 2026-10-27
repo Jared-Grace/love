@@ -480,7 +480,7 @@ export function bible_glyph_chapter_jer07() {
           "and",
           "do",
           "$no_entry",
-          "beg",
+          "$toward+person+doing",
           "Me,",
           "for",
           "I",
