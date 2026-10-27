@@ -175,7 +175,7 @@ export function bible_glyph_chapter_job42() {
           "$watch",
           "$hand_receiving",
           "$seven",
-          "bulls",
+          "$bull",
           "and",
           "$seven",
           "rams,",
