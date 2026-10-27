@@ -234,7 +234,7 @@ export function bible_glyph_chapter_mic02() {
           "him",
           "who",
           "$walking",
-          "uprightly?",
+          "$up_arrow+ruler?",
         ],
       },
       {
