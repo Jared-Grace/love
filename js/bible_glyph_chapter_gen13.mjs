@@ -283,7 +283,7 @@ export function bible_glyph_chapter_gen13() {
           "before",
           "the",
           "$i_am",
-          "destroyed",
+          "$collision",
           "$proper_name$Sodom",
           "and",
           "$proper_name$Gomorrah,",
