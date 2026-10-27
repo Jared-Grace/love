@@ -591,7 +591,7 @@ export function bible_glyph_chapter_lev26() {
           "be",
           "spent",
           "in",
-          "vain,",
+          "$tray_out+droplet+thing,",
           "for",
           "your",
           "$earth",
