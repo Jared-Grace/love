@@ -240,7 +240,7 @@ export function bible_glyph_chapter_lev14() {
           "he",
           "must",
           "$person+house",
-          "outside",
+          "$sun_behind_small_cloud",
           "his",
           "$tent",
           "for",
