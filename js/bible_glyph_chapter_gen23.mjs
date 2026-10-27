@@ -81,7 +81,7 @@ export function bible_glyph_chapter_gen23() {
           "$skull+doing",
           "and",
           "$mouth",
-          "to",
+          "$toward",
           "the",
           "$son",
           "of",
