@@ -613,7 +613,7 @@ export function bible_glyph_chapter_gen25() {
           "grew",
           "up.",
           "$proper_name$Esau",
-          "became",
+          "$link",
           "a",
           "$lightbulb",
           "hunter,",
