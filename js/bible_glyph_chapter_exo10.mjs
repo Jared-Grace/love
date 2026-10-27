@@ -970,7 +970,7 @@ export function bible_glyph_chapter_exo10() {
           "I",
           "will",
           "$no_entry",
-          "again",
+          "$plus+doing",
           "$eye",
           "your",
           "face.",
