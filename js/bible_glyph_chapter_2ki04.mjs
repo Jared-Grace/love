@@ -1434,7 +1434,7 @@ export function bible_glyph_chapter_2ki04() {
           "loaves",
           "$face",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "$man_beard?",
           "$hands_giving",
           "it",
