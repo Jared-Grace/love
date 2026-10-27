@@ -143,7 +143,7 @@ export function bible_glyph_chapter_exo05() {
           "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron,",
-          "why",
+          "$flashlight+question",
           "do",
           "you",
           "draw",
