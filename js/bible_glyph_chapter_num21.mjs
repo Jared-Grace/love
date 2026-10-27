@@ -363,7 +363,7 @@ export function bible_glyph_chapter_num21() {
           "camped",
           "in",
           "the",
-          "Valley",
+          "$national_park",
           "of",
           "Zered.",
         ],
