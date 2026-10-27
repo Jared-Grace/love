@@ -137,7 +137,7 @@ export function bible_glyph_chapter_isa49() {
         verse_number: 5,
         words: [
           "And",
-          "now",
+          "$watch",
           "$speech",
           "the",
           "$i_am,",
