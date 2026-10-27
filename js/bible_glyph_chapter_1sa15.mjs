@@ -933,7 +933,7 @@ export function bible_glyph_chapter_1sa15() {
       {
         verse_number: 29,
         words: [
-          "Moreover,",
+          "$plus,",
           "the",
           "Glory",
           "of",
