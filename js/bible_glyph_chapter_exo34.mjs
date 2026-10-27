@@ -808,7 +808,7 @@ export function bible_glyph_chapter_exo34() {
           "along",
           "with",
           "anything",
-          "leavened,",
+          "$bread+bubbles,",
           "and",
           "do",
           "$no_entry",
