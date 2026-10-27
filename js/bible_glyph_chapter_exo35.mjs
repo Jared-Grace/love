@@ -18,7 +18,7 @@ export function bible_glyph_chapter_exo35() {
           "$fishing_pole+proper_name",
           "$church+doing",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "the",
