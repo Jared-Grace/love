@@ -671,7 +671,7 @@ export function bible_glyph_chapter_job31() {
           "street,",
           "for",
           "my",
-          "door",
+          "$door+thing",
           "has",
           "been",
           "open",
