@@ -13,7 +13,7 @@ export function bible_glyph_chapter_deu14() {
       {
         verse_number: 1,
         words: [
-          "You",
+          "$you",
           "are",
           "$son$s",
           "of",
