@@ -753,7 +753,7 @@ export function bible_glyph_chapter_jer23() {
           "come",
           "you",
           "will",
-          "understand",
+          "$brain",
           "this",
           "clearly.",
         ],
