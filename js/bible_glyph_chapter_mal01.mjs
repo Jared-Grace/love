@@ -495,7 +495,7 @@ export function bible_glyph_chapter_mal01() {
           "that",
           "are",
           "stolen,",
-          "lame,",
+          "$manual_wheelchair,",
           "or",
           "sick!",
           "Should",
