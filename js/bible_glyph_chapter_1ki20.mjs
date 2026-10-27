@@ -857,7 +857,7 @@ export function bible_glyph_chapter_1ki20() {
           "for",
           "$horse",
           "and",
-          "chariot",
+          "$chariot",
           "for",
           "chariot,",
           "so",
