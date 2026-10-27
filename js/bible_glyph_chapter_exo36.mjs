@@ -799,7 +799,7 @@ export function bible_glyph_chapter_exo36() {
           "He",
           "also",
           "$hammer+doing",
-          "five",
+          "$five",
           "$door+locked",
           "of",
           "$tree+thorns",
