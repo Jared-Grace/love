@@ -156,7 +156,7 @@ export function bible_glyph_chapter_exo13() {
         verse_number: 6,
         words: [
           "For",
-          "seven",
+          "$seven",
           "$sun",
           "you",
           "are",
