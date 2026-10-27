@@ -41,7 +41,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "So",
           "Sarah",
-          "conceived",
+          "$pregnant_woman+doing",
           "and",
           "bore",
           "a",
