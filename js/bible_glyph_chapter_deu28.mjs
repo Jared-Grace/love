@@ -68,7 +68,7 @@ export function bible_glyph_chapter_deu28() {
         words: [
           "And",
           "all",
-          "these",
+          "$flashlight+flashlight",
           "$speech+thumbs_up",
           "will",
           "$footprints",
