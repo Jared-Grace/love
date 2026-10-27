@@ -506,7 +506,7 @@ export function bible_glyph_chapter_gen25() {
           "your",
           "womb,",
           "and",
-          "two",
+          "$two",
           "peoples",
           "from",
           "inside",
