@@ -163,7 +163,7 @@ export function bible_glyph_chapter_ecc03() {
           "tear",
           "and",
           "a",
-          "time",
+          "$clock",
           "to",
           "mend,",
           "a",
