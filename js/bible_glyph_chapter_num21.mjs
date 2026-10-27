@@ -477,7 +477,7 @@ export function bible_glyph_chapter_num21() {
           "$speech",
           "to",
           "$fishing_pole+proper_name,",
-          "Gather",
+          "$crowd+doing",
           "the",
           "$family",
           "so",
