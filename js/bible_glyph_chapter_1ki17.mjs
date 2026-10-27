@@ -623,7 +623,7 @@ export function bible_glyph_chapter_1ki17() {
           "and",
           "laid",
           "him",
-          "on",
+          "$pointing_up",
           "his",
           "own",
           "bed.",
