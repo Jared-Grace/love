@@ -20,7 +20,7 @@ export function bible_glyph_chapter_jos02() {
           "$son",
           "of",
           "$proper_name$Nun",
-          "secretly",
+          "$shushing_face+magic_wand",
           "$hand_sending",
           "$two",
           "$foot+doing",
