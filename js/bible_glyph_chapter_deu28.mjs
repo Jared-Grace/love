@@ -822,7 +822,7 @@ export function bible_glyph_chapter_deu28() {
           "corpses",
           "will",
           "be",
-          "food",
+          "$eating+thing",
           "for",
           "all",
           "the",
