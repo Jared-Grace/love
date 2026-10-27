@@ -849,7 +849,7 @@ export function bible_glyph_chapter_exo29() {
           "as",
           "a",
           "$hourglass",
-          "portion",
+          "$locked_with_pen",
           "from",
           "the",
           "$son",
