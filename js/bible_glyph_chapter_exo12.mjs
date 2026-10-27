@@ -1389,7 +1389,7 @@ export function bible_glyph_chapter_exo12() {
           "$statute",
           "of",
           "the",
-          "Passover:",
+          "$lamb+door:",
           "No",
           "foreign",
           "$son",
