@@ -24,7 +24,7 @@ export function bible_glyph_chapter_nam02() {
           "$guard+shield+doing",
           "the",
           "fortress!",
-          "Watch",
+          "$guard+telescope+doing",
           "the",
           "$road!",
           "Brace",
