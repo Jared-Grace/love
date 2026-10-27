@@ -934,7 +934,7 @@ export function bible_glyph_chapter_exo28() {
           "with",
           "$gold",
           "$bell",
-          "between",
+          "$radio_button",
           "them,",
         ],
       },
