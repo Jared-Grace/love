@@ -1113,7 +1113,7 @@ export function bible_glyph_chapter_deu28() {
           "you",
           "with",
           "$thumbs_down",
-          "boils",
+          "$fire+microbe",
           "on",
           "your",
           "knees",
