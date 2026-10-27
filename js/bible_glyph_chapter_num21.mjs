@@ -824,7 +824,7 @@ export function bible_glyph_chapter_num21() {
           "rulers",
           "of",
           "the",
-          "heights",
+          "$snow_capped_mountain",
           "of",
           "Arnon.",
         ],
