@@ -740,7 +740,7 @@ export function bible_glyph_chapter_isa43() {
           "Me",
           "with",
           "the",
-          "fat",
+          "$bacon",
           "of",
           "your",
           "sacrifices.",
