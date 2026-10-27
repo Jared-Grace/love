@@ -349,7 +349,7 @@ export function bible_glyph_chapter_pro16() {
         verse_number: 17,
         words: [
           "The",
-          "highway",
+          "$road+up_arrow",
           "of",
           "the",
           "upright",
