@@ -383,7 +383,7 @@ export function bible_glyph_chapter_isa09() {
           "$wrestling+heart_on_fire",
           "with",
           "open",
-          "mouths.",
+          "$face_with_open_mouth.",
           "Despite",
           "all",
           "this,",
