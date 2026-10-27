@@ -396,7 +396,7 @@ export function bible_glyph_chapter_num06() {
         verse_number: 13,
         words: [
           "Now",
-          "this",
+          "$flashlight",
           "is",
           "the",
           "$scroll",
