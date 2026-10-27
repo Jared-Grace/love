@@ -623,7 +623,7 @@ export function bible_glyph_chapter_exo12() {
           "in",
           "your",
           "$house.",
-          "If",
+          "$pointing",
           "anyone",
           "$eating",
           "something",
