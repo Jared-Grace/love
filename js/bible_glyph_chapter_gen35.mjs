@@ -271,7 +271,7 @@ export function bible_glyph_chapter_gen35() {
           "$eye",
           "$toward",
           "Jacob",
-          "again",
+          "$repeat",
           "after",
           "he",
           "$footprints",
