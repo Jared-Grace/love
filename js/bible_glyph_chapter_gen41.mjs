@@ -746,7 +746,7 @@ export function bible_glyph_chapter_gen41() {
           "worthless",
           "heads",
           "of",
-          "grain",
+          "$wheat+top",
           "scorched",
           "by",
           "the",
