@@ -558,7 +558,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 31,
         words: [
-          "For",
+          "$pointing",
           "the",
           "$crown",
           "will",
