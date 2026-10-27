@@ -150,7 +150,7 @@ export function bible_glyph_chapter_1ki02() {
           "you",
           "will",
           "$no_entry",
-          "fail",
+          "$scissors",
           "to",
           "have",
           "a",
