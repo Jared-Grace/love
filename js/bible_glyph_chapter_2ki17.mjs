@@ -551,7 +551,7 @@ export function bible_glyph_chapter_2ki17() {
           "$hammer+doing",
           "for",
           "themselves",
-          "two",
+          "$two",
           "$pouring_liquid+moai",
           "calves,",
           "and",
