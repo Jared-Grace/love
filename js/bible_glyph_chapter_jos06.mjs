@@ -642,7 +642,7 @@ export function bible_glyph_chapter_jos06() {
           "of",
           "$bronze",
           "and",
-          "iron",
+          "$iron",
           "are",
           "$sparkle+thing",
           "to",
