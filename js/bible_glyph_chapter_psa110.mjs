@@ -115,7 +115,7 @@ export function bible_glyph_chapter_psa110() {
           "the",
           "order",
           "of",
-          "Melchizedek.",
+          "$king+ruler+proper_name.",
         ],
       },
       {
