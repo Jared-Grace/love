@@ -41,7 +41,7 @@ export function bible_glyph_chapter_1ki22() {
           "of",
           "$hands_raised+proper_name",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "visit",
           "the",
