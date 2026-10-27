@@ -1154,7 +1154,7 @@ export function bible_glyph_chapter_1sa20() {
           "So",
           "$i_am+hands_giving",
           "$lightbulb",
-          "that",
+          "$pointing",
           "his",
           "$father",
           "was",
