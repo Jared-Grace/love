@@ -480,7 +480,7 @@ export function bible_glyph_chapter_lev01() {
           "$incense+doing",
           "it",
           "$altar,",
-          "atop",
+          "$pointing_up",
           "$tree",
           "on",
           "the",
