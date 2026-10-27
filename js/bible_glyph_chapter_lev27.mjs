@@ -821,7 +821,7 @@ export function bible_glyph_chapter_lev27() {
           "is",
           "among",
           "the",
-          "unclean",
+          "$soap+no_entry",
           "$paw_prints,",
           "then",
           "he",
