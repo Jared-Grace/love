@@ -343,7 +343,7 @@ export function bible_glyph_chapter_gen31() {
           "to",
           "me.",
           "$watch",
-          "get",
+          "$person+pointing_up",
           "up,",
           "$tray_out",
           "this",
