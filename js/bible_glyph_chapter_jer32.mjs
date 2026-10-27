@@ -1537,7 +1537,7 @@ export function bible_glyph_chapter_jer32() {
           "will",
           "be",
           "signed,",
-          "sealed,",
+          "$ring+locked,",
           "and",
           "$witness",
           "in",
