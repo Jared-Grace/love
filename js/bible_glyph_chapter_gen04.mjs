@@ -428,7 +428,7 @@ export function bible_glyph_chapter_gen04() {
           "$i_am.",
           "If",
           "anyone",
-          "slays",
+          "$fist+skull",
           "$proper_name$Cain,",
           "then",
           "$proper_name$Cain",
