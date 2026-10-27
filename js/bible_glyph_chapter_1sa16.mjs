@@ -201,7 +201,7 @@ export function bible_glyph_chapter_1sa16() {
           "them",
           "to",
           "the",
-          "sacrifice.",
+          "$sacrifice.",
         ],
       },
       {
