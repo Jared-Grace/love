@@ -803,7 +803,7 @@ export function bible_glyph_chapter_lev25() {
           "$hand",
           "can",
           "$no_entry",
-          "obtain",
+          "$magnifying_glass+exclamation",
           "enough",
           "to",
           "$turn_back",
