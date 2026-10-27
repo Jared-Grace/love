@@ -924,7 +924,7 @@ export function bible_glyph_chapter_1ki18() {
           "was",
           "their",
           "$scales+thing,",
-          "until",
+          "$finish",
           "the",
           "$blood",
           "gushed",
