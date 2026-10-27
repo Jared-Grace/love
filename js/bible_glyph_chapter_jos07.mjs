@@ -421,7 +421,7 @@ export function bible_glyph_chapter_jos07() {
           "$tray_out",
           "what",
           "was",
-          "devoted",
+          "$bomb+altar+thing",
           "to",
           "destruction.",
           "Indeed",
