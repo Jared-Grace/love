@@ -110,7 +110,7 @@ export function bible_glyph_chapter_2ki01() {
           "in",
           "$wrestling+heart_on_fire",
           "that",
-          "you",
+          "$you",
           "are",
           "on",
           "your",
