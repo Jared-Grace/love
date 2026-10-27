@@ -910,7 +910,7 @@ export function bible_glyph_chapter_isa40() {
           "and",
           "$no_entry",
           "grow",
-          "weary;",
+          "$weary_face+doing;",
           "they",
           "will",
           "$walking",
