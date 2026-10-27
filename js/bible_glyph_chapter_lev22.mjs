@@ -67,7 +67,7 @@ export function bible_glyph_chapter_lev22() {
           "of",
           "their",
           "$seed",
-          "approaches",
+          "$magnet+doing",
           "the",
           "$sparkle+thing",
           "that",
