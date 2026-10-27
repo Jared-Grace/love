@@ -794,7 +794,7 @@ export function bible_glyph_chapter_1ki18() {
           "$check_box",
           "for",
           "yourselves",
-          "one",
+          "$one",
           "$bull",
           "and",
           "$hammer+doing",
