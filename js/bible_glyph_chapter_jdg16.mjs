@@ -218,7 +218,7 @@ export function bible_glyph_chapter_jdg16() {
           "So",
           "$battery+down_arrow+female_sign+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Samson,",
           "Please",
           "tell",
