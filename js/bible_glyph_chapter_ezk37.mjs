@@ -141,7 +141,7 @@ export function bible_glyph_chapter_ezk37() {
           "$i_am",
           "$speech",
           "to",
-          "these",
+          "$flashlight+flashlight",
           "$bone:",
           "I",
           "will",
