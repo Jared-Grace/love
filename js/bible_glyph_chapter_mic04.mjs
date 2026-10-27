@@ -202,7 +202,7 @@ export function bible_glyph_chapter_mic04() {
         verse_number: 5,
         words: [
           "$pointing",
-          "all",
+          "$all",
           "the",
           "$family",
           "may",
