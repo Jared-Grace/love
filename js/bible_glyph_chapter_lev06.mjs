@@ -23,7 +23,7 @@ export function bible_glyph_chapter_lev06() {
           "$bow+doing",
           "and",
           "acts",
-          "unfaithfully",
+          "$handshake+broken_chain+thing",
           "$i_am",
           "by",
           "deceiving",
