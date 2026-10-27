@@ -866,7 +866,7 @@ export function bible_glyph_chapter_lam03() {
           "$no_entry",
           "ceasing,",
           "$dotted_line_face",
-          "relief,",
+          "$heart_red+cold_face+thing,",
         ],
       },
       {
