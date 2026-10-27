@@ -23,7 +23,7 @@ export function bible_glyph_chapter_exo26() {
           "of",
           "finely",
           "spun",
-          "linen,",
+          "$thread+white_circle,",
           "with",
           "blue,",
           "purple",
