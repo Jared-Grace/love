@@ -414,7 +414,7 @@ export function bible_glyph_chapter_pro16() {
           "heeds",
           "$speech",
           "will",
-          "find",
+          "$magnifying_glass+exclamation",
           "$thumbs_up,",
           "and",
           "$gift+smile",
