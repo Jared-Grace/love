@@ -1224,7 +1224,7 @@ export function bible_glyph_chapter_lev14() {
           "shall",
           "$footprints",
           "and",
-          "tell",
+          "$newspaper",
           "the",
           "$priest,",
           "$speech,",
