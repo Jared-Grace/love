@@ -89,7 +89,7 @@ export function bible_glyph_chapter_deu10() {
           "I",
           "$hammer+doing",
           "an",
-          "ark",
+          "$ark",
           "of",
           "acacia",
           "$tree,",
