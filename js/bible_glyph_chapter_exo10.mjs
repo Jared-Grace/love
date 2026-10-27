@@ -239,7 +239,7 @@ export function bible_glyph_chapter_exo10() {
           "the",
           "$sun",
           "they",
-          "came",
+          "$link",
           "into",
           "this",
           "land.",
