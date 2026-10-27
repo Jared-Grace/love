@@ -532,7 +532,7 @@ export function bible_glyph_chapter_pro16() {
         words: [
           "A",
           "worker",
-          "appetite",
+          "$person_other",
           "works",
           "for",
           "him,",
