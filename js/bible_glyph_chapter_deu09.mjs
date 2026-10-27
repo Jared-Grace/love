@@ -643,7 +643,7 @@ export function bible_glyph_chapter_deu09() {
           "I",
           "fell",
           "down",
-          "before",
+          "$face",
           "$i_am",
           "for",
           "forty",
