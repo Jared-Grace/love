@@ -101,7 +101,7 @@ export function bible_glyph_chapter_psa116() {
           "The",
           "$i_am",
           "is",
-          "gracious",
+          "$heart_orange+describing",
           "and",
           "$ruler;",
           "our",
