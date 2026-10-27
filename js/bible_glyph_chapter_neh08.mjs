@@ -101,7 +101,7 @@ export function bible_glyph_chapter_neh08() {
           "before",
           "the",
           "$water",
-          "Gate,",
+          "$gate,",
           "$tray_out",
           "$light",
           "until",
