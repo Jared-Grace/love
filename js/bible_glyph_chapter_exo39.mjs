@@ -130,7 +130,7 @@ export function bible_glyph_chapter_exo39() {
           "waistband",
           "of",
           "the",
-          "ephod",
+          "$safety_vest+thing",
           "$tray_out",
           "it,",
           "of",
