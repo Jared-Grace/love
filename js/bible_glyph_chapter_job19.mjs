@@ -450,7 +450,7 @@ export function bible_glyph_chapter_job19() {
           "by",
           "an",
           "iron",
-          "stylus",
+          "$writing_hand+sewing_needle",
           "on",
           "lead!",
         ],
