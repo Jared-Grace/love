@@ -673,7 +673,7 @@ export function bible_glyph_chapter_2ki17() {
           "So",
           "the",
           "$i_am",
-          "rejected",
+          "$gesturing_no+throwing+doing",
           "all",
           "the",
           "$seed",
