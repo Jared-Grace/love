@@ -327,7 +327,7 @@ export function bible_glyph_chapter_exo19() {
           "$sun+next_track.",
           "They",
           "must",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "their",
           "clothes",
         ],
