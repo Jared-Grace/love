@@ -593,7 +593,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "the",
           "$proper_name$Philistines",
-          "arrayed",
+          "$card_index_dividers",
           "in",
           "formation",
           "against",
