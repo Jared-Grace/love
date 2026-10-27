@@ -684,7 +684,7 @@ export function bible_glyph_chapter_deu31() {
           "this",
           "$song",
           "and",
-          "teach",
+          "$learner+doing",
           "it",
           "to",
           "the",
