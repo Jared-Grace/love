@@ -528,7 +528,7 @@ export function bible_glyph_chapter_job31() {
           "had",
           "gained",
           "so",
-          "much,",
+          "$more+knot+describing,",
         ],
       },
       {
