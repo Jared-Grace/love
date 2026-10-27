@@ -268,7 +268,7 @@ export function bible_glyph_chapter_num15() {
           "$magnet+doing",
           "$divide",
           "a",
-          "hin",
+          "$jar+straight_ruler",
           "of",
           "$wine",
           "as",
