@@ -238,7 +238,7 @@ export function bible_glyph_chapter_exo27() {
           "a",
           "$input_numbers+all",
           "$triangular_ruler",
-          "long",
+          "$up_down_arrow",
           "on",
           "one",
           "$straight_ruler+round_pushpin,",
