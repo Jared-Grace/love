@@ -862,7 +862,7 @@ export function bible_glyph_chapter_num20() {
           "and",
           "$proper_name$Eleazar",
           "came",
-          "down",
+          "$walking+pointing_down",
           "$tray_out",
           "the",
           "$mountain.",
