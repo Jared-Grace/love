@@ -190,7 +190,7 @@ export function bible_glyph_chapter_jos06() {
           "$covenant,",
           "and",
           "have",
-          "seven",
+          "$seven",
           "$priest",
           "carry",
           "seven",
