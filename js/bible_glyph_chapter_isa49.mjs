@@ -810,7 +810,7 @@ export function bible_glyph_chapter_isa49() {
           "will",
           "$lightbulb",
           "$pointing",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am;",
