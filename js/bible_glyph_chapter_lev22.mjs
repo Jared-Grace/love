@@ -180,7 +180,7 @@ export function bible_glyph_chapter_lev22() {
         words: [
           "the",
           "$person_other",
-          "who",
+          "$back+flashlight",
           "touches",
           "any",
           "of",
