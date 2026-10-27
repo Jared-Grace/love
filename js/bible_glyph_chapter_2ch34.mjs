@@ -515,7 +515,7 @@ export function bible_glyph_chapter_2ch34() {
           "laborers",
           "and",
           "supervised",
-          "all",
+          "$all",
           "who",
           "$hammer+doing",
           "the",
