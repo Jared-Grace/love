@@ -356,7 +356,7 @@ export function bible_glyph_chapter_amo05() {
           "$ruler",
           "by",
           "$hand_receiving",
-          "bribes,",
+          "$umbrella+coin,",
           "and",
           "you",
           "deprive",
