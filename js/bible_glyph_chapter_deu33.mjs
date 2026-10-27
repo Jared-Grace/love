@@ -735,7 +735,7 @@ export function bible_glyph_chapter_deu33() {
           "his",
           "$brother",
           "and",
-          "dip",
+          "$down_arrow+water+doing",
           "his",
           "$foot",
           "in",
