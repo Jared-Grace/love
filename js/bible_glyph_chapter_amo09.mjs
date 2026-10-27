@@ -461,7 +461,7 @@ export function bible_glyph_chapter_amo09() {
           "who",
           "will",
           "$hammer+doing",
-          "this.",
+          "$flashlight.",
         ],
       },
       {
