@@ -215,7 +215,7 @@ export function bible_glyph_chapter_hab02() {
           "with",
           "many",
           "loans!",
-          "How",
+          "$finish",
           "long",
           "will",
           "this",
