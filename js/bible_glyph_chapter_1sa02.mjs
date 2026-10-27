@@ -543,7 +543,7 @@ export function bible_glyph_chapter_1sa02() {
           "these",
           "young",
           "men",
-          "was",
+          "$link",
           "severe",
           "in",
           "the",
