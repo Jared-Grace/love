@@ -81,7 +81,7 @@ export function bible_glyph_chapter_num24() {
           "lifted",
           "up",
           "an",
-          "oracle,",
+          "$speech+likeness,",
           "$speech,",
           "This",
           "is",
