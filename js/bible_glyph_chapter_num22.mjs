@@ -425,7 +425,7 @@ export function bible_glyph_chapter_num22() {
           "your",
           "own",
           "$earth,",
-          "because",
+          "$pointing",
           "the",
           "$i_am",
           "has",
