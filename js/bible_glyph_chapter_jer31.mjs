@@ -402,7 +402,7 @@ export function bible_glyph_chapter_jer31() {
           "new",
           "$wine,",
           "the",
-          "oil,",
+          "$oil+new_button,",
           "and",
           "the",
           "$son",
