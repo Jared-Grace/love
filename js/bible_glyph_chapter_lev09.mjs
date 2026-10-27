@@ -52,7 +52,7 @@ export function bible_glyph_chapter_lev09() {
           "without",
           "blemish,",
           "and",
-          "present",
+          "$magnet+doing",
           "them",
           "before",
           "$i_am.",
