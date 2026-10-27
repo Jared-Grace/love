@@ -259,7 +259,7 @@ export function bible_glyph_chapter_pro02() {
           "$hammer+doing",
           "$thumbs_down",
           "and",
-          "rejoice",
+          "$woman_dancing",
           "in",
           "the",
           "twistedness",
