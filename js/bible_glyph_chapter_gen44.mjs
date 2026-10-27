@@ -820,7 +820,7 @@ export function bible_glyph_chapter_gen44() {
           "you",
           "also",
           "$hand_receiving",
-          "this",
+          "$flashlight",
           "one",
           "from",
           "me,",
