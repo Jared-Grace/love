@@ -392,7 +392,7 @@ export function bible_glyph_chapter_jos07() {
           "up.",
           "$flashlight+question",
           "have",
-          "you",
+          "$you",
           "fallen",
           "on",
           "your",
