@@ -46,7 +46,7 @@ export function bible_glyph_chapter_zec14() {
           "$toward",
           "$city+peace",
           "for",
-          "battle.",
+          "$crossed_swords.",
           "The",
           "$city",
           "will",
