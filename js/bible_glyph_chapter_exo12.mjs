@@ -692,7 +692,7 @@ export function bible_glyph_chapter_exo12() {
           "$sheep",
           "for",
           "each",
-          "family",
+          "$houses",
           "and",
           "slaughter",
           "the",
