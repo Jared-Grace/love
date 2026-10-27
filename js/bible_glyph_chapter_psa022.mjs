@@ -340,7 +340,7 @@ export function bible_glyph_chapter_psa022() {
         verse_number: 16,
         words: [
           "$pointing",
-          "dogs",
+          "$dog",
           "surround",
           "me;",
           "a",
