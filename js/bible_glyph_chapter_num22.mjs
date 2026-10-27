@@ -1242,7 +1242,7 @@ export function bible_glyph_chapter_num22() {
           "I",
           "$mouth",
           "just",
-          "anything?",
+          "$package+question?",
           "Only",
           "the",
           "$speech",
