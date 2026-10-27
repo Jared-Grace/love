@@ -491,7 +491,7 @@ export function bible_glyph_chapter_num09() {
           "$witness+thing.",
           "From",
           "$sunset",
-          "until",
+          "$finish",
           "$morning",
           "it",
           "appeared",
