@@ -170,7 +170,7 @@ export function bible_glyph_chapter_deu15() {
           "will",
           "lend",
           "to",
-          "many",
+          "$multiply",
           "$map",
           "but",
           "borrow",
