@@ -649,7 +649,7 @@ export function bible_glyph_chapter_exo38() {
           "the",
           "wave",
           "offering,",
-          "totaled",
+          "$link",
           "twenty",
           "nine",
           "talents",
