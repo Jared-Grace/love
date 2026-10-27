@@ -127,7 +127,7 @@ export function bible_glyph_chapter_1sa07() {
           "And",
           "He",
           "will",
-          "deliver",
+          "$hand+rescue",
           "you",
           "from",
           "the",
