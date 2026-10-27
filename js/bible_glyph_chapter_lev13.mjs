@@ -1592,7 +1592,7 @@ export function bible_glyph_chapter_lev13() {
           "leather",
           "article",
           "is",
-          "green",
+          "$leaf+lemon+describing",
           "or",
           "red,",
           "then",
