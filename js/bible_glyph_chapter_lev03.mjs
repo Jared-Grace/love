@@ -24,7 +24,7 @@ export function bible_glyph_chapter_lev03() {
           "the",
           "$cow_face,",
           "whether",
-          "male",
+          "$reminder_ribbon+thing",
           "or",
           "female,",
           "$pointing_back",
