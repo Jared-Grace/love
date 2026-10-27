@@ -545,7 +545,7 @@ export function bible_glyph_chapter_1sa03() {
           "And",
           "Eli",
           "$speech,",
-          "He",
+          "$pointing_back",
           "is",
           "the",
           "$i_am.",
