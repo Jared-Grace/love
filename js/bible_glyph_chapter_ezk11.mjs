@@ -403,7 +403,7 @@ export function bible_glyph_chapter_ezk11() {
           "Then",
           "I",
           "fell",
-          "facedown",
+          "$pointing_up",
           "and",
           "cried",
           "out",
