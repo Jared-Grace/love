@@ -186,7 +186,7 @@ export function bible_glyph_chapter_pro31() {
         words: [
           "$unlocked",
           "your",
-          "mouth,",
+          "$face_with_open_mouth,",
           "judge",
           "$ruler+thing,",
           "and",
