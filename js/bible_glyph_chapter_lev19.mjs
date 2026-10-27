@@ -913,7 +913,7 @@ export function bible_glyph_chapter_lev19() {
           "you",
           "must",
           "$no_entry",
-          "oppress",
+          "$raised_fist+pointing_down+doing",
           "him.",
         ],
       },
