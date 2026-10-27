@@ -272,7 +272,7 @@ export function bible_glyph_chapter_1ki08() {
           "are",
           "$telescope",
           "$finish",
-          "this",
+          "$flashlight",
           "$sun.",
         ],
       },
