@@ -1623,7 +1623,7 @@ export function bible_glyph_chapter_lev25() {
           "$crown+footprints+doing",
           "over",
           "him",
-          "harshly",
+          "$collision+thing",
           "in",
           "your",
           "$eyes.",
