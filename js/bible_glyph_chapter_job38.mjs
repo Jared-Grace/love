@@ -202,7 +202,7 @@ export function bible_glyph_chapter_job38() {
           "may",
           "$footprints",
           "this",
-          "far,",
+          "$finish,",
           "but",
           "$no_entry",
           "farther;",
