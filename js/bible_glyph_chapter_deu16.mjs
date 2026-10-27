@@ -153,7 +153,7 @@ export function bible_glyph_chapter_deu16() {
           "your",
           "land",
           "for",
-          "seven",
+          "$seven",
           "$sun,",
           "and",
           "$no_entry",
