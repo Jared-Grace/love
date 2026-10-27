@@ -102,7 +102,7 @@ export function bible_glyph_chapter_gen37() {
           "$hammer+doing",
           "him",
           "a",
-          "robe",
+          "$dress+thread",
           "of",
           "many",
           "colors.",
