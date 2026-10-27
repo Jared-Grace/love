@@ -68,7 +68,7 @@ export function bible_glyph_chapter_psa095() {
           "$top",
           "$heart_on_fire,",
           "a",
-          "great",
+          "$top",
           "$king",
           "above",
           "all",
