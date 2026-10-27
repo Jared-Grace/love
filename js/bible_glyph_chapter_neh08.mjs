@@ -640,7 +640,7 @@ export function bible_glyph_chapter_neh08() {
           "had",
           "$turn_back",
           "$tray_out",
-          "exile",
+          "$chains+person",
           "$hammer+doing",
           "booths",
           "and",
