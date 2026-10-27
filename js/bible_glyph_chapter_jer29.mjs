@@ -929,7 +929,7 @@ export function bible_glyph_chapter_jer29() {
         verse_number: 27,
         words: [
           "So",
-          "now,",
+          "$watch,",
           "why",
           "have",
           "you",
