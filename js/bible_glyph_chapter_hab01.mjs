@@ -254,7 +254,7 @@ export function bible_glyph_chapter_hab01() {
           "$crowd+doing",
           "prisoners",
           "like",
-          "sand.",
+          "$sea+brown_square.",
         ],
       },
       {
