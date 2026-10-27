@@ -278,7 +278,7 @@ export function bible_glyph_chapter_1sa07() {
           "stop",
           "crying",
           "$tray_out",
-          "to",
+          "$toward",
           "$i_am",
           "our",
           "$heart_on_fire",
