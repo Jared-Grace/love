@@ -222,7 +222,7 @@ export function bible_glyph_chapter_ecc01() {
           "$flashlight",
           "is",
           "$new_button?",
-          "It",
+          "$pointing_back",
           "has",
           "already",
           "existed",
