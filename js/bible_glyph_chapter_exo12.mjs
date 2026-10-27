@@ -715,7 +715,7 @@ export function bible_glyph_chapter_exo12() {
           "$blood",
           "in",
           "the",
-          "basin,",
+          "$door+pointing_down,",
           "and",
           "brush",
           "the",
