@@ -445,7 +445,7 @@ export function bible_glyph_chapter_deu06() {
           "a",
           "$face_steam+describing",
           "$heart_on_fire.",
-          "Otherwise",
+          "$no_entry+traffic_light",
           "the",
           "anger",
           "of",
