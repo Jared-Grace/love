@@ -112,7 +112,7 @@ export function bible_glyph_chapter_est01() {
           "$gem_stone+crown",
           "of",
           "his",
-          "greatness",
+          "$top+thing",
           "for",
           "a",
           "full",
