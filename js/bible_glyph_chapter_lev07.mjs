@@ -824,7 +824,7 @@ export function bible_glyph_chapter_lev07() {
           "$blood",
           "of",
           "the",
-          "peace",
+          "$peace+gift",
           "offering",
           "and",
           "the",
