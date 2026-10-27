@@ -222,7 +222,7 @@ export function bible_glyph_chapter_ezk01() {
           "$person",
           "$hand.",
           "All",
-          "four",
+          "$four",
           "had",
           "faces",
           "and",
