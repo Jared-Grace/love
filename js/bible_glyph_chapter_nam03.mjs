@@ -114,7 +114,7 @@ export function bible_glyph_chapter_nam03() {
           "am",
           "against",
           "you,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am",
           "of",
