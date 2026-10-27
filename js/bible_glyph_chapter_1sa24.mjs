@@ -85,7 +85,7 @@ export function bible_glyph_chapter_1sa24() {
           "$telescope",
           "was",
           "a",
-          "cave,",
+          "$cave,",
           "and",
           "he",
           "$footprints",
