@@ -81,7 +81,7 @@ export function bible_glyph_chapter_2sa06() {
           "They",
           "set",
           "the",
-          "ark",
+          "$ark",
           "of",
           "$heart_on_fire",
           "on",
