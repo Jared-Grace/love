@@ -703,7 +703,7 @@ export function bible_glyph_chapter_num19() {
           "$person_other",
           "will",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "the",
