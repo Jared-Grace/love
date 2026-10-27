@@ -913,7 +913,7 @@ export function bible_glyph_chapter_gen47() {
           "belongs",
           "to",
           "$house+proper_name.",
-          "Only",
+          "$one+check",
           "the",
           "$priest",
           "$brown_square",
