@@ -306,7 +306,7 @@ export function bible_glyph_chapter_mic01() {
           "has",
           "approached",
           "the",
-          "gate",
+          "$gate",
           "of",
           "my",
           "$family,",
