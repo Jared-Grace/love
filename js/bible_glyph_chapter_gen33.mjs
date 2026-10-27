@@ -359,7 +359,7 @@ export function bible_glyph_chapter_gen33() {
           "for",
           "one",
           "$sun,",
-          "all",
+          "$all",
           "the",
           "$sheep",
           "will",
