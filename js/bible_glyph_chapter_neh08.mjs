@@ -566,7 +566,7 @@ export function bible_glyph_chapter_neh08() {
           "$mountain",
           "and",
           "$footprints",
-          "branches",
+          "$leaf",
           "of",
           "olive,",
           "wild",
