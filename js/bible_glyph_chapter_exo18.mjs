@@ -209,7 +209,7 @@ export function bible_glyph_chapter_exo18() {
           "$man_beard",
           "greeted",
           "the",
-          "other,",
+          "$person+sheep,",
           "and",
           "they",
           "$footprints",
