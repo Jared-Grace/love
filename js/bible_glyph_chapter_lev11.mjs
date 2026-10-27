@@ -205,7 +205,7 @@ export function bible_glyph_chapter_lev11() {
           "you",
           "must",
           "$no_entry",
-          "touch",
+          "$hand+doing",
           "their",
           "carcasses;",
           "they",
