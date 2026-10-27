@@ -32,7 +32,7 @@ export function bible_glyph_chapter_num23() {
           "$seven",
           "$bull",
           "and",
-          "seven",
+          "$seven",
           "$ram.",
         ],
       },
