@@ -62,7 +62,7 @@ export function bible_glyph_chapter_isa58() {
           "like",
           "a",
           "$map",
-          "that",
+          "$back+flashlight",
           "$hammer+doing",
           "what",
           "is",
