@@ -1494,7 +1494,7 @@ export function bible_glyph_chapter_deu28() {
           "$hands_giving",
           "an",
           "iron",
-          "yoke",
+          "$yoke",
           "on",
           "your",
           "neck",
