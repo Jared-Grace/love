@@ -40,7 +40,7 @@ export function bible_glyph_chapter_exo29() {
           "the",
           "herd,",
           "and",
-          "two",
+          "$two",
           "$ram",
           "without",
           "blemish,",
