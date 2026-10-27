@@ -133,7 +133,7 @@ export function bible_glyph_chapter_ecc03() {
         verse_number: 6,
         words: [
           "a",
-          "time",
+          "$clock",
           "to",
           "search",
           "and",
