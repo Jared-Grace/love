@@ -96,7 +96,7 @@ export function bible_glyph_chapter_psa032() {
           "the",
           "$harvest+sun",
           "$desert+fire.",
-          "Selah",
+          "$pause_button",
         ],
       },
       {
