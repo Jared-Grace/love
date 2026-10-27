@@ -17,7 +17,7 @@ export function bible_glyph_chapter_lev24() {
       {
         verse_number: 2,
         words: [
-          "Command",
+          "$speech+scroll",
           "the",
           "$son",
           "of",
