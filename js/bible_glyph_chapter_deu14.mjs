@@ -270,7 +270,7 @@ export function bible_glyph_chapter_deu14() {
           "may",
           "$no_entry",
           "$eating",
-          "anything",
+          "$all",
           "that",
           "does",
           "not",
