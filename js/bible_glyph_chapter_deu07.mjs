@@ -530,7 +530,7 @@ export function bible_glyph_chapter_deu07() {
           "of",
           "the",
           "$thumbs_down",
-          "diseases",
+          "$thermometer_face+blood+thing",
           "of",
           "$clamp+proper_name",
           "that",
