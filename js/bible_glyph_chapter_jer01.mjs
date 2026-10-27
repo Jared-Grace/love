@@ -364,7 +364,7 @@ export function bible_glyph_chapter_jer01() {
           "$eye",
           "a",
           "boiling",
-          "pot,",
+          "$pot_of_food,",
           "and",
           "it",
           "is",
