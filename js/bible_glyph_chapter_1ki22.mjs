@@ -529,7 +529,7 @@ export function bible_glyph_chapter_1ki22() {
           "him,",
           "How",
           "many",
-          "times",
+          "$drum",
           "must",
           "I",
           "make",
