@@ -649,7 +649,7 @@ export function bible_glyph_chapter_1sa16() {
           "Jesse",
           "$hand_receiving",
           "a",
-          "donkey",
+          "$donkey",
           "loaded",
           "with",
           "$bread,",
