@@ -387,7 +387,7 @@ export function bible_glyph_chapter_num19() {
           "$bow+doing",
           "on",
           "the",
-          "third",
+          "$third_place",
           "$sun",
           "and",
           "the",
