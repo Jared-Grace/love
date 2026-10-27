@@ -301,7 +301,7 @@ export function bible_glyph_chapter_job38() {
           "Have",
           "you",
           "$footprints",
-          "to",
+          "$finish",
           "the",
           "vents",
           "of",
