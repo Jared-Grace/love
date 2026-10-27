@@ -353,7 +353,7 @@ export function bible_glyph_chapter_gen18() {
         words: [
           "So",
           "she",
-          "laughed",
+          "$laughing",
           "to",
           "herself,",
           "$speech,",
