@@ -331,7 +331,7 @@ export function bible_glyph_chapter_exo26() {
           "left",
           "over",
           "shall",
-          "hang",
+          "$veil+down_arrow+doing",
           "down",
           "over",
           "the",
