@@ -153,7 +153,7 @@ export function bible_glyph_chapter_job42() {
           "your",
           "$two",
           "$person+sheep,",
-          "for",
+          "$pointing",
           "you",
           "have",
           "$no_entry",
