@@ -169,7 +169,7 @@ export function bible_glyph_chapter_isa64() {
           "become",
           "like",
           "something",
-          "unclean,",
+          "$soap+no_entry,",
           "and",
           "all",
           "our",
