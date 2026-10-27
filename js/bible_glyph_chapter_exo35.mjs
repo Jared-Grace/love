@@ -522,7 +522,7 @@ export function bible_glyph_chapter_exo35() {
           "$footprints",
           "and",
           "$footprints",
-          "brooches",
+          "$hook+nose",
           "and",
           "earrings,",
           "$ring",
