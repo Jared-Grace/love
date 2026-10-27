@@ -473,7 +473,7 @@ export function bible_glyph_chapter_1sa24() {
           "$compass+right_arrow+describing",
           "$speech+likeness",
           "$speech,",
-          "'Wickedness",
+          "$thumbs_down+person+thing",
           "$walking+tray_out",
           "from",
           "the",
