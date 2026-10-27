@@ -493,7 +493,7 @@ export function bible_glyph_chapter_lev11() {
           "of",
           "$locusts,",
           "$locusts+rock,",
-          "cricket,",
+          "$locusts+up_arrow,",
           "or",
           "grasshopper.",
         ],
