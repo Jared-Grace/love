@@ -508,7 +508,7 @@ export function bible_glyph_chapter_deu28() {
           "by",
           "carefully",
           "$hammer+doing",
-          "all",
+          "$all",
           "His",
           "$scroll",
           "and",
