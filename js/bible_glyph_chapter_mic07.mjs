@@ -451,7 +451,7 @@ export function bible_glyph_chapter_mic07() {
           "$inheritance.",
           "They",
           "live",
-          "alone",
+          "$person+one+describing",
           "in",
           "a",
           "woodland",
