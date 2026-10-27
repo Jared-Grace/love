@@ -435,7 +435,7 @@ export function bible_glyph_chapter_exo02() {
           "Then",
           "$fishing_pole+proper_name",
           "was",
-          "afraid",
+          "$fear+doing",
           "and",
           "$speech,",
           "This",
