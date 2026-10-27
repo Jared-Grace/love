@@ -153,7 +153,7 @@ export function bible_glyph_chapter_1sa02() {
           "she",
           "who",
           "has",
-          "many",
+          "$multiply",
           "$son",
           "pines",
           "away.",
