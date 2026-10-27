@@ -251,7 +251,7 @@ export function bible_glyph_chapter_exo39() {
           "and",
           "a",
           "$hand_with_fingers_splayed+straight_ruler",
-          "wide.",
+          "$arrow_both_ways.",
         ],
       },
       {
