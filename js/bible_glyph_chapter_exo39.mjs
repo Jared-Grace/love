@@ -419,7 +419,7 @@ export function bible_glyph_chapter_exo39() {
           "they",
           "$hands_giving",
           "the",
-          "two",
+          "$two",
           "$gold",
           "chains",
           "to",
