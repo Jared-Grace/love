@@ -245,7 +245,7 @@ export function bible_glyph_chapter_pro08() {
           "$road,",
           "and",
           "perverse",
-          "speech.",
+          "$face_with_open_mouth.",
         ],
       },
       {
