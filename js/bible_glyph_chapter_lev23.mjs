@@ -343,7 +343,7 @@ export function bible_glyph_chapter_lev23() {
           "$flour",
           "$spoon+cyclone",
           "with",
-          "oil,",
+          "$lotion_bottle,",
           "a",
           "food",
           "offering",
