@@ -399,7 +399,7 @@ export function bible_glyph_chapter_1sa15() {
           "to",
           "$proper_name$Carmel,",
           "and",
-          "behold,",
+          "$exclamation,",
           "he",
           "has",
           "set",
