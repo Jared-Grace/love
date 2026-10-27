@@ -272,7 +272,7 @@ export function bible_glyph_chapter_exo24() {
           "accordance",
           "with",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$speech.",
         ],
       },
