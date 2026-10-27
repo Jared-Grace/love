@@ -683,7 +683,7 @@ export function bible_glyph_chapter_gen28() {
           "and",
           "of",
           "all",
-          "that",
+          "$back+flashlight",
           "You",
           "$hands_giving",
           "me",
