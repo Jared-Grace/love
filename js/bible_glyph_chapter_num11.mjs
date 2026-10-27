@@ -854,7 +854,7 @@ export function bible_glyph_chapter_num11() {
       {
         verse_number: 26,
         words: [
-          "Two",
+          "$two",
           "men,",
           "however,",
           "had",
