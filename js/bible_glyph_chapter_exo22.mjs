@@ -306,7 +306,7 @@ export function bible_glyph_chapter_exo22() {
           "any",
           "$wilted_flower+thing",
           "item",
-          "that",
+          "$back+flashlight",
           "someone",
           "$speech",
           "is",
