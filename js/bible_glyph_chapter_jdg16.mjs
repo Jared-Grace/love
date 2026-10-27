@@ -995,7 +995,7 @@ export function bible_glyph_chapter_jdg16() {
         words: [
           "$proper_name$Samson",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "servant",
           "who",
