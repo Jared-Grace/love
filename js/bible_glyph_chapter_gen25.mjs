@@ -555,7 +555,7 @@ export function bible_glyph_chapter_gen25() {
         verse_number: 25,
         words: [
           "The",
-          "first",
+          "$first_place",
           "came",
           "out",
           "red,",
