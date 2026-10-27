@@ -77,7 +77,7 @@ export function bible_glyph_chapter_gen11() {
           "of",
           "$stone,",
           "and",
-          "tar",
+          "$black_circle+oil",
           "instead",
           "of",
           "mortar.",
