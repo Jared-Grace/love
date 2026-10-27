@@ -205,7 +205,7 @@ export function bible_glyph_chapter_hos02() {
           "$heart_red+doing",
           "but",
           "$no_entry",
-          "catch",
+          "$running+hand_receiving+doing",
           "them;",
           "she",
           "will",
