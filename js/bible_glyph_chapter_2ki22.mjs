@@ -435,7 +435,7 @@ export function bible_glyph_chapter_2ki22() {
         words: [
           "$walking",
           "and",
-          "inquire",
+          "$magnifying_glass+question",
           "of",
           "the",
           "$i_am",
