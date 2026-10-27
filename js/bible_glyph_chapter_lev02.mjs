@@ -112,7 +112,7 @@ export function bible_glyph_chapter_lev02() {
           "Now",
           "if",
           "you",
-          "bring",
+          "$magnet+doing",
           "$grain_offering",
           "baked",
           "in",
