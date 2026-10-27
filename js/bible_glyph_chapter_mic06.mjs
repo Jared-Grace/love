@@ -20,7 +20,7 @@ export function bible_glyph_chapter_mic06() {
           "the",
           "$i_am",
           "$speech:",
-          "Arise,",
+          "$person+pointing_up,",
           "plead",
           "your",
           "case",
