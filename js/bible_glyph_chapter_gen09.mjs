@@ -578,7 +578,7 @@ export function bible_glyph_chapter_gen09() {
           "$wine,",
           "he",
           "became",
-          "drunk",
+          "$woozy_face+doing",
           "and",
           "uncovered",
           "himself",
