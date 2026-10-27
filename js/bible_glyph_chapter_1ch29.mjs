@@ -572,7 +572,7 @@ export function bible_glyph_chapter_1ch29() {
           "our",
           "$heart_on_fire,",
           "all",
-          "this",
+          "$flashlight",
           "$crowd+loudspeaker",
           "that",
           "we",
