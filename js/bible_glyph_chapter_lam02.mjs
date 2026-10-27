@@ -571,7 +571,7 @@ export function bible_glyph_chapter_lam02() {
           "$person+question",
           "can",
           "ever",
-          "heal",
+          "$bandage",
           "you?",
         ],
       },
