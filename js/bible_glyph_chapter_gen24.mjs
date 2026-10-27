@@ -525,7 +525,7 @@ export function bible_glyph_chapter_gen24() {
           "very",
           "$thumbs_up,",
           "a",
-          "virgin",
+          "$girl+white_flower",
           "who",
           "had",
           "not",
