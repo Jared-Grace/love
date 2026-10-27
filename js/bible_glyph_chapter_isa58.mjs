@@ -244,7 +244,7 @@ export function bible_glyph_chapter_isa58() {
           "and",
           "tear",
           "off",
-          "every",
+          "$all",
           "$cow_face+wood?",
         ],
       },
