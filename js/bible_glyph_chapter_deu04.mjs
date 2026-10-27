@@ -782,7 +782,7 @@ export function bible_glyph_chapter_deu04() {
           "crossing",
           "the",
           "$pointing_down+proper_name,",
-          "because",
+          "$pointing",
           "I",
           "must",
           "$skull+doing",
