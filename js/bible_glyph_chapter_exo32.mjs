@@ -891,7 +891,7 @@ export function bible_glyph_chapter_exo32() {
           "$son",
           "of",
           "Levi",
-          "gathered",
+          "$crowd+doing",
           "around",
           "him.",
         ],
