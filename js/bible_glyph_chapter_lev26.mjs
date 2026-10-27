@@ -240,7 +240,7 @@ export function bible_glyph_chapter_lev26() {
           "of",
           "you",
           "will",
-          "pursue",
+          "$running+toward",
           "ten",
           "thousand,",
           "and",
