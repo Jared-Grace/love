@@ -557,7 +557,7 @@ export function bible_glyph_chapter_exo18() {
           "wear",
           "yourselves",
           "out,",
-          "because",
+          "$pointing",
           "the",
           "task",
           "is",
