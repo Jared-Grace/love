@@ -349,7 +349,7 @@ export function bible_glyph_chapter_num09() {
           "any",
           "of",
           "its",
-          "bones.",
+          "$bone.",
           "They",
           "must",
           "$hammer+doing",
