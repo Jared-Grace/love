@@ -657,7 +657,7 @@ export function bible_glyph_chapter_gen22() {
       {
         verse_number: 24,
         words: [
-          "Moreover,",
+          "$plus,",
           "his",
           "$woman+second_place,",
           "whose",
