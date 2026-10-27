@@ -193,7 +193,7 @@ export function bible_glyph_chapter_2ch34() {
           "of",
           "the",
           "$priest",
-          "on",
+          "$pointing_up",
           "their",
           "$altar,",
           "and",
