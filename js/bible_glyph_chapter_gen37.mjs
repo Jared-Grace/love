@@ -266,7 +266,7 @@ export function bible_glyph_chapter_gen37() {
           "this",
           "time",
           "the",
-          "sun",
+          "$sun_with_face",
           "and",
           "moon",
           "and",
