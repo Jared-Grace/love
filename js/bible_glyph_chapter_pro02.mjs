@@ -332,7 +332,7 @@ export function bible_glyph_chapter_pro02() {
           "and",
           "her",
           "tracks",
-          "to",
+          "$toward",
           "the",
           "departed",
           "spirits.",
