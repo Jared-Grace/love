@@ -762,7 +762,7 @@ export function bible_glyph_chapter_1ki01() {
       {
         verse_number: 25,
         words: [
-          "For",
+          "$pointing",
           "he",
           "has",
           "gone",
