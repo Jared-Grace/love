@@ -315,7 +315,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 10,
         words: [
           "And",
-          "Balaam",
+          "$foreigner+proper_name",
           "$speech",
           "to",
           "$heart_on_fire,",
