@@ -721,7 +721,7 @@ export function bible_glyph_chapter_deu01() {
           "$footprints",
           "$finish",
           "the",
-          "Valley",
+          "$national_park",
           "of",
           "$proper_name$Eshcol",
           "and",
