@@ -481,7 +481,7 @@ export function bible_glyph_chapter_2ki03() {
           "before",
           "whom",
           "I",
-          "stand,",
+          "$person+round_pushpin,",
           "were",
           "it",
           "not",
