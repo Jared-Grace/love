@@ -155,7 +155,7 @@ export function bible_glyph_chapter_zep02() {
           "$proper_name$Philistines:",
           "I",
           "will",
-          "destroy",
+          "$wilted_flower",
           "you,",
           "and",
           "no",
