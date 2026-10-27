@@ -1838,7 +1838,7 @@ export function bible_glyph_chapter_1ki08() {
           "them",
           "$all",
           "they",
-          "call",
+          "$waving_hand",
           "to",
           "You.",
         ],
