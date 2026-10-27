@@ -569,7 +569,7 @@ export function bible_glyph_chapter_job31() {
           "$face_blowing_a_kiss",
           "from",
           "my",
-          "mouth,",
+          "$face_with_open_mouth,",
         ],
       },
       {
