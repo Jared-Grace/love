@@ -303,7 +303,7 @@ export function bible_glyph_chapter_zec04() {
           "Then",
           "I",
           "asked,",
-          "What",
+          "$flashlight+question",
           "are",
           "the",
           "two",
