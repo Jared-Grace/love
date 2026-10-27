@@ -223,7 +223,7 @@ export function bible_glyph_chapter_isa35() {
           "be",
           "a",
           "highway",
-          "called",
+          "$waving_hand",
           "the",
           "$road",
           "of",
