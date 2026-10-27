@@ -117,7 +117,7 @@ export function bible_glyph_chapter_jdg06() {
           "They",
           "left",
           "$no_entry",
-          "sustenance",
+          "$sprout+bread",
           "in",
           "$wrestling+heart_on_fire,",
           "neither",
