@@ -275,7 +275,7 @@ export function bible_glyph_chapter_jos07() {
         words: [
           "$i_am+rescue",
           "$speech,",
-          "O",
+          "$crying_face+speech",
           "$crown",
           "$i_am,",
           "why",
