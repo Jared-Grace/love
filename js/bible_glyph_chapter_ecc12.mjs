@@ -134,7 +134,7 @@ export function bible_glyph_chapter_ecc12() {
           "$voice",
           "of",
           "a",
-          "bird,",
+          "$bird+pinching_hand,",
           "and",
           "all",
           "the",
