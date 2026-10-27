@@ -162,7 +162,7 @@ export function bible_glyph_chapter_isa40() {
           "And",
           "I",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "should",
           "I",
           "cry",
