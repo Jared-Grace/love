@@ -635,7 +635,7 @@ export function bible_glyph_chapter_num11() {
           "for",
           "a",
           "whole",
-          "month,",
+          "$new_moon,",
           "until",
           "it",
           "comes",
