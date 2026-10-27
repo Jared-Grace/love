@@ -91,7 +91,7 @@ export function bible_glyph_chapter_2ki22() {
       {
         verse_number: 3,
         words: [
-          "Now",
+          "$link",
           "in",
           "the",
           "eighteenth",
