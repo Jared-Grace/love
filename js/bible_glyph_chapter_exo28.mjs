@@ -858,7 +858,7 @@ export function bible_glyph_chapter_exo28() {
           "$son",
           "of",
           "$wrestling+heart_on_fire",
-          "over",
+          "$pointing_up",
           "his",
           "$heart_organ",
           "before",
