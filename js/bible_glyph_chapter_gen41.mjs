@@ -865,7 +865,7 @@ export function bible_glyph_chapter_gen41() {
           "$dream",
           "was",
           "given",
-          "to",
+          "$toward",
           "$house+proper_name",
           "in",
           "two",
