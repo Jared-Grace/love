@@ -81,7 +81,7 @@ export function bible_glyph_chapter_exo38() {
           "$toolbox,",
           "its",
           "pots,",
-          "shovels,",
+          "$ashes+spoon,",
           "sprinkling",
           "bowls,",
           "meat",
