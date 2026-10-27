@@ -384,7 +384,7 @@ export function bible_glyph_chapter_lev11() {
           "$bird+desert,",
           "the",
           "screech",
-          "owl,",
+          "$bird+night,",
           "the",
           "gull,",
           "any",
