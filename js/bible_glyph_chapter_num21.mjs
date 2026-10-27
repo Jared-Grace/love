@@ -492,7 +492,7 @@ export function bible_glyph_chapter_num21() {
       {
         verse_number: 17,
         words: [
-          "Then",
+          "$telescope+clock",
           "$wrestling+heart_on_fire",
           "sang",
           "this",
