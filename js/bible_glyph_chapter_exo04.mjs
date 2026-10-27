@@ -513,7 +513,7 @@ export function bible_glyph_chapter_exo04() {
       {
         verse_number: 16,
         words: [
-          "He",
+          "$pointing_back",
           "will",
           "$mouth",
           "to",
