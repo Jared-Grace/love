@@ -317,7 +317,7 @@ export function bible_glyph_chapter_2ki04() {
           "for",
           "him",
           "and",
-          "put",
+          "$palm_down",
           "in",
           "it",
           "a",
