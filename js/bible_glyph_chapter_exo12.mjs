@@ -1105,7 +1105,7 @@ export function bible_glyph_chapter_exo12() {
           "$lifting",
           "their",
           "$flour+water",
-          "before",
+          "$clock+back",
           "it",
           "was",
           "leavened,",
