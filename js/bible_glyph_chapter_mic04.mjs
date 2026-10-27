@@ -492,7 +492,7 @@ export function bible_glyph_chapter_mic04() {
           "break",
           "to",
           "pieces",
-          "many",
+          "$multiply",
           "$family.",
           "Then",
           "you",
