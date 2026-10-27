@@ -1362,7 +1362,7 @@ export function bible_glyph_chapter_neh09() {
           "and",
           "goodness;",
           "here",
-          "we",
+          "$me",
           "are",
           "as",
           "$kneeling.",
