@@ -112,7 +112,7 @@ export function bible_glyph_chapter_ezr03() {
           "the",
           "$morning",
           "and",
-          "evening",
+          "$sunset",
           "offerings,",
           "even",
           "though",
