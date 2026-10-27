@@ -232,7 +232,7 @@ export function bible_glyph_chapter_num20() {
           "rock",
           "and",
           "provide",
-          "drink",
+          "$cup+hands_giving",
           "for",
           "the",
           "congregation",
