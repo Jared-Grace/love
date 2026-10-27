@@ -236,7 +236,7 @@ export function bible_glyph_chapter_gen42() {
           "recognized",
           "his",
           "$brother,",
-          "they",
+          "$pointing_back",
           "did",
           "$no_entry",
           "recognize",
