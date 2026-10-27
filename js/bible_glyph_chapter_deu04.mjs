@@ -1422,7 +1422,7 @@ export function bible_glyph_chapter_deu04() {
           "in",
           "the",
           "$sky",
-          "above",
+          "$walking+pointing_up",
           "and",
           "on",
           "the",
