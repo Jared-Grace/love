@@ -474,7 +474,7 @@ export function bible_glyph_chapter_gen28() {
           "$turn_back",
           "you",
           "$toward",
-          "this",
+          "$flashlight",
           "$brown_square.",
           "For",
           "I",
