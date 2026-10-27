@@ -33,7 +33,7 @@ export function bible_glyph_chapter_neh08() {
           "$speech",
           "$proper_name$Ezra",
           "the",
-          "scribe",
+          "$abacus",
           "to",
           "$footprints",
           "the",
