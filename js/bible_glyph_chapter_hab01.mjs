@@ -297,7 +297,7 @@ export function bible_glyph_chapter_hab01() {
           "the",
           "$wind",
           "and",
-          "pass",
+          "$bridge",
           "through.",
           "They",
           "are",
