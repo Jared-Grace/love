@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen08() {
         words: [
           "But",
           "$heart_on_fire",
-          "remembered",
+          "$reminder_ribbon",
           "$proper_name$Noah",
           "and",
           "all",
