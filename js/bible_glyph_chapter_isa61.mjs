@@ -373,7 +373,7 @@ export function bible_glyph_chapter_isa61() {
           "$ruler+thing,",
           "as",
           "a",
-          "bridegroom",
+          "$man_in_tuxedo",
           "wears",
           "a",
           "priestly",
