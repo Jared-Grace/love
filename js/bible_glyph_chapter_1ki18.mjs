@@ -824,7 +824,7 @@ export function bible_glyph_chapter_1ki18() {
           "$hand_receiving",
           "the",
           "$bull",
-          "that",
+          "$back+flashlight",
           "was",
           "$hands_giving",
           "them,",
