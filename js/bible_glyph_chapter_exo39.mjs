@@ -982,7 +982,7 @@ export function bible_glyph_chapter_exo39() {
           "$umbrella+door",
           "for",
           "the",
-          "entrance",
+          "$door",
           "$tent;",
         ],
       },
