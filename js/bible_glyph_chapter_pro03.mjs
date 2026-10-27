@@ -460,7 +460,7 @@ export function bible_glyph_chapter_pro03() {
           "$foot",
           "will",
           "$no_entry",
-          "stumble.",
+          "$fist+microbe.",
         ],
       },
       {
