@@ -379,7 +379,7 @@ export function bible_glyph_chapter_mal02() {
           "$woman",
           "of",
           "a",
-          "foreign",
+          "$detective+thing",
           "$moai.",
         ],
       },
