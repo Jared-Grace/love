@@ -155,7 +155,7 @@ export function bible_glyph_chapter_jer23() {
           "any",
           "go",
           "missing,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
