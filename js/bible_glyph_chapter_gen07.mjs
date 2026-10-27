@@ -436,7 +436,7 @@ export function bible_glyph_chapter_gen07() {
           "Then",
           "the",
           "$i_am",
-          "shut",
+          "$locked+doing",
           "him",
           "in.",
         ],
