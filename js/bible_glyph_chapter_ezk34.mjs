@@ -670,7 +670,7 @@ export function bible_glyph_chapter_ezk34() {
           "judge",
           "between",
           "the",
-          "fat",
+          "$meat_on_bone+plus",
           "$sheep+one",
           "and",
           "the",
