@@ -69,7 +69,7 @@ export function bible_glyph_chapter_gen07() {
           "kind",
           "of",
           "unclean",
-          "animal,",
+          "$paw_prints,",
           "a",
           "$man_beard",
           "and",
