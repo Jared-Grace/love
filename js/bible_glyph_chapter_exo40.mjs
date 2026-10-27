@@ -258,7 +258,7 @@ export function bible_glyph_chapter_exo40() {
         verse_number: 12,
         words: [
           "Then",
-          "bring",
+          "$magnet+doing",
           "$proper_name$Aaron",
           "and",
           "his",
