@@ -280,7 +280,7 @@ export function bible_glyph_chapter_exo05() {
           "the",
           "labor",
           "heavier",
-          "on",
+          "$pointing_up",
           "the",
           "men",
           "so",
