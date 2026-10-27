@@ -45,7 +45,7 @@ export function bible_glyph_chapter_hab01() {
           "$no_entry",
           "$ear,",
           "or",
-          "cry",
+          "$loudspeaker+mouth",
           "out",
           "to",
           "You,",
