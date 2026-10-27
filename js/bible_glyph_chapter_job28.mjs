@@ -535,7 +535,7 @@ export function bible_glyph_chapter_job28() {
           "$person,",
           "$exclamation,",
           "the",
-          "fear",
+          "$fear",
           "of",
           "the",
           "$crown,",
