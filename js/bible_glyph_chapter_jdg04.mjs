@@ -592,7 +592,7 @@ export function bible_glyph_chapter_jdg04() {
       {
         verse_number: 19,
         words: [
-          "Please",
+          "$pleading",
           "give",
           "me",
           "a",
