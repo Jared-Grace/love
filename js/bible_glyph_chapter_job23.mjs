@@ -234,7 +234,7 @@ export function bible_glyph_chapter_job23() {
           "I",
           "have",
           "$no_entry",
-          "departed",
+          "$walking+away+doing",
           "from",
           "the",
           "$scroll",
