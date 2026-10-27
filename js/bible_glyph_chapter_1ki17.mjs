@@ -390,7 +390,7 @@ export function bible_glyph_chapter_1ki17() {
           "$hammer+doing",
           "me",
           "a",
-          "small",
+          "$pinching_hand",
           "cake",
           "of",
           "bread",
