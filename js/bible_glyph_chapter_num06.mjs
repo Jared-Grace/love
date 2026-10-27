@@ -534,7 +534,7 @@ export function bible_glyph_chapter_num06() {
           "also",
           "$hammer+doing",
           "the",
-          "ram",
+          "$ram",
           "as",
           "a",
           "peace",
