@@ -885,7 +885,7 @@ export function bible_glyph_chapter_num20() {
           "$house",
           "of",
           "$wrestling+heart_on_fire",
-          "mourned",
+          "$loudly_crying",
           "for",
           "him",
           "thirty",
