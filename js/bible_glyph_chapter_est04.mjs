@@ -26,7 +26,7 @@ export function bible_glyph_chapter_est04() {
           "$garment,",
           "put",
           "on",
-          "sackcloth",
+          "$sackcloth",
           "and",
           "ashes,",
           "and",
