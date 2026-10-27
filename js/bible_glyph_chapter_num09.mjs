@@ -128,7 +128,7 @@ export function bible_glyph_chapter_num09() {
           "$sun",
           "of",
           "the",
-          "first",
+          "$first_place",
           "month,",
           "at",
           "twilight,",
