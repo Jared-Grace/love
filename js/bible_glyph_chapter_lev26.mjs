@@ -233,7 +233,7 @@ export function bible_glyph_chapter_lev26() {
           "will",
           "$running+toward",
           "a",
-          "hundred,",
+          "$input_numbers+all,",
           "and",
           "a",
           "hundred",
