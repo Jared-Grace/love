@@ -1491,7 +1491,7 @@ export function bible_glyph_chapter_deu04() {
           "aside",
           "$three",
           "$city",
-          "across",
+          "$bridge+thing",
           "the",
           "$pointing_down+proper_name",
           "to",
