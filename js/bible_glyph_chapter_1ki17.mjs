@@ -83,7 +83,7 @@ export function bible_glyph_chapter_1ki17() {
           "yourself",
           "by",
           "the",
-          "Brook",
+          "$national_park",
           "of",
           "$proper_name$Cherith,",
           "east",
