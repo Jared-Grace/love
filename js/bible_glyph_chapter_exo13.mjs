@@ -384,7 +384,7 @@ export function bible_glyph_chapter_exo13() {
           "its",
           "neck.",
           "And",
-          "every",
+          "$all",
           "firstborn",
           "$person",
           "among",
