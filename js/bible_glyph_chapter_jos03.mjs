@@ -74,7 +74,7 @@ export function bible_glyph_chapter_jos03() {
           "you",
           "$eye",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$covenant",
