@@ -114,7 +114,7 @@ export function bible_glyph_chapter_gen31() {
           "$speech",
           "to",
           "them,",
-          "I",
+          "$me",
           "$eye",
           "your",
           "$father's",
