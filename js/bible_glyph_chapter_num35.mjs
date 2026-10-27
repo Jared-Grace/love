@@ -396,7 +396,7 @@ export function bible_glyph_chapter_num35() {
           "$city",
           "to",
           "$hands_giving",
-          "across",
+          "$bridge+thing",
           "the",
           "$pointing_down+proper_name",
           "and",
