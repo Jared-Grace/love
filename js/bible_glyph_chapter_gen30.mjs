@@ -1035,7 +1035,7 @@ export function bible_glyph_chapter_gen30() {
           "they",
           "$footprints",
           "to",
-          "drink.",
+          "$cup_with_straw.",
         ],
       },
       {
