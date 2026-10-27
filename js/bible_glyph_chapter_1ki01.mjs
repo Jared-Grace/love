@@ -1637,7 +1637,7 @@ export function bible_glyph_chapter_1ki01() {
           "Let",
           "$king",
           "$peace+proper_name",
-          "swear",
+          "$raised_back_of_hand+doing",
           "to",
           "me",
           "$sun",
