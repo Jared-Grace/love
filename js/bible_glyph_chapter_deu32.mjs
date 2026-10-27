@@ -62,7 +62,7 @@ export function bible_glyph_chapter_deu32() {
       {
         verse_number: 3,
         words: [
-          "For",
+          "$pointing",
           "I",
           "will",
           "proclaim",
