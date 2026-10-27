@@ -221,7 +221,7 @@ export function bible_glyph_chapter_pro08() {
           "and",
           "I",
           "find",
-          "knowledge",
+          "$lightbulb+thing",
           "and",
           "discretion.",
         ],
