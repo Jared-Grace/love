@@ -341,7 +341,7 @@ export function bible_glyph_chapter_exo11() {
           "$hammer+doing",
           "$all",
           "these",
-          "wonders",
+          "$shooting_star",
           "before",
           "$house+proper_name,",
           "but",
