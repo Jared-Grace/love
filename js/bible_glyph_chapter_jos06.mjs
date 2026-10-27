@@ -331,7 +331,7 @@ export function bible_glyph_chapter_jos06() {
           "out",
           "of",
           "your",
-          "mouth,",
+          "$face_with_open_mouth,",
           "until",
           "the",
           "$sun",
