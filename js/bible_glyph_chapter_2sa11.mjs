@@ -253,7 +253,7 @@ export function bible_glyph_chapter_2sa11() {
           "your",
           "$house",
           "and",
-          "wash",
+          "$bathtub+doing",
           "your",
           "feet.",
           "So",
