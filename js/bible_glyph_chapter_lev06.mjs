@@ -550,7 +550,7 @@ export function bible_glyph_chapter_lev06() {
           "$divide+thing",
           "in",
           "the",
-          "evening.",
+          "$sunset.",
         ],
       },
       {
