@@ -73,7 +73,7 @@ export function bible_glyph_chapter_1ki08() {
           "$wrestling+heart_on_fire",
           "came",
           "together",
-          "to",
+          "$toward",
           "$king",
           "$peace+proper_name",
           "at",
