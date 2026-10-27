@@ -597,7 +597,7 @@ export function bible_glyph_chapter_dan01() {
           "he",
           "found",
           "them",
-          "ten",
+          "$ten",
           "$hand",
           "better",
           "than",
