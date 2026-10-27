@@ -315,7 +315,7 @@ export function bible_glyph_chapter_exo28() {
           "$rock+writing_hand+thing",
           "a",
           "$ring+locked+thing,",
-          "engrave",
+          "$unlocked",
           "on",
           "the",
           "two",
