@@ -583,7 +583,7 @@ export function bible_glyph_chapter_num06() {
           "$razor+doing",
           "his",
           "consecrated",
-          "head,",
+          "$person_gesturing_ok,",
           "$hand_receiving",
           "the",
           "hair,",
