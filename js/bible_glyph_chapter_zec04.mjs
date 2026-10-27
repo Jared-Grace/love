@@ -359,7 +359,7 @@ export function bible_glyph_chapter_zec04() {
           "$no_entry",
           "$lightbulb",
           "$flashlight+question",
-          "these",
+          "$flashlight+flashlight",
           "are?",
           "I",
           "$speech,",
