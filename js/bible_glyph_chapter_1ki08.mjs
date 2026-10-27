@@ -1113,7 +1113,7 @@ export function bible_glyph_chapter_1ki08() {
           "$face",
           "an",
           "$enemy",
-          "because",
+          "$back+flashlight",
           "they",
           "have",
           "$bow+doing",
