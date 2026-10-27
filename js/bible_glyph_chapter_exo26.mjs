@@ -646,7 +646,7 @@ export function bible_glyph_chapter_exo26() {
       {
         verse_number: 27,
         words: [
-          "five",
+          "$five",
           "for",
           "those",
           "on",
