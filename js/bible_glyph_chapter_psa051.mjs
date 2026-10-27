@@ -200,7 +200,7 @@ export function bible_glyph_chapter_psa051() {
           "bones",
           "You",
           "have",
-          "crushed",
+          "$clamp+collision+doing",
           "$woman_dancing.",
         ],
       },
