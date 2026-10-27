@@ -279,7 +279,7 @@ export function bible_glyph_chapter_2ch06() {
           "own",
           "offspring,",
           "will",
-          "build",
+          "$brick",
           "the",
           "$house",
           "for",
