@@ -565,7 +565,7 @@ export function bible_glyph_chapter_lev11() {
           "Every",
           "$paw_prints",
           "with",
-          "hooves",
+          "$cow_face+foot",
           "not",
           "completely",
           "divided",
