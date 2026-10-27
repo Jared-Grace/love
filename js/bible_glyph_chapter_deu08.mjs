@@ -534,7 +534,7 @@ export function bible_glyph_chapter_deu08() {
           "$hand",
           "have",
           "$hammer+doing",
-          "this",
+          "$flashlight",
           "$raised_fist",
           "for",
           "me.",
