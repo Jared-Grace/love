@@ -99,7 +99,7 @@ export function bible_glyph_chapter_gen30() {
           "I",
           "too",
           "can",
-          "build",
+          "$brick",
           "a",
           "family.",
         ],
