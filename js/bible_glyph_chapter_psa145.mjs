@@ -95,7 +95,7 @@ export function bible_glyph_chapter_psa145() {
           "will",
           "proclaim",
           "Your",
-          "mighty",
+          "$might+thing",
           "acts.",
         ],
       },
