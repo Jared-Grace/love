@@ -151,7 +151,7 @@ export function bible_glyph_chapter_num08() {
           "them",
           "shave",
           "their",
-          "whole",
+          "$all",
           "$meat,",
           "and",
           "wash",
