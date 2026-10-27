@@ -485,7 +485,7 @@ export function bible_glyph_chapter_ezk11() {
           "us",
           "as",
           "a",
-          "possession.",
+          "$hand_receiving+brown_square+thing.",
         ],
       },
       {
