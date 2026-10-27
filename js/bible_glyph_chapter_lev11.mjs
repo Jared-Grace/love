@@ -642,7 +642,7 @@ export function bible_glyph_chapter_lev11() {
           "$soap+no_entry",
           "$finish",
           "$sunset.",
-          "They",
+          "$pointing_back",
           "are",
           "$soap+no_entry",
           "for",
