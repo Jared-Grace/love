@@ -597,7 +597,7 @@ export function bible_glyph_chapter_gen50() {
           "the",
           "$sprout+doing",
           "of",
-          "many",
+          "$multiply",
           "$family.",
         ],
       },
