@@ -585,7 +585,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 19,
         words: [
           "So",
-          "now",
+          "$watch",
           "please",
           "$person+house",
           "here",
