@@ -1128,7 +1128,7 @@ export function bible_glyph_chapter_deu04() {
           "with",
           "your",
           "$father,",
-          "which",
+          "$back+flashlight",
           "He",
           "swore",
           "to",
