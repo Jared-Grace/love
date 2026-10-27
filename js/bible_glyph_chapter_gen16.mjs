@@ -45,7 +45,7 @@ export function bible_glyph_chapter_gen16() {
           "$speech",
           "$toward",
           "$proper_name$Abram,",
-          "Look,",
+          "$exclamation,",
           "$i_am",
           "has",
           "kept",
