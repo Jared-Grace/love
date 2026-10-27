@@ -463,7 +463,7 @@ export function bible_glyph_chapter_num11() {
           "$speech",
           "to",
           "$fishing_pole+proper_name,",
-          "Bring",
+          "$crowd+doing",
           "Me",
           "seventy",
           "of",
