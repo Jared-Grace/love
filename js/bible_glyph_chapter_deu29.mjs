@@ -708,7 +708,7 @@ export function bible_glyph_chapter_deu29() {
       {
         verse_number: 23,
         words: [
-          "All",
+          "$all",
           "its",
           "$earth",
           "will",
