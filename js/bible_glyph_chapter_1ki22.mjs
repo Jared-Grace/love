@@ -1227,7 +1227,7 @@ export function bible_glyph_chapter_1ki22() {
           "washed",
           "at",
           "the",
-          "pool",
+          "$camel+water_wave",
           "of",
           "$guard+proper_name",
           "where",
