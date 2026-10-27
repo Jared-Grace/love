@@ -1124,7 +1124,7 @@ export function bible_glyph_chapter_jer23() {
           "$shuffle",
           "a",
           "$megaphone",
-          "or",
+          "$shuffle",
           "a",
           "$priest",
           "asks",
