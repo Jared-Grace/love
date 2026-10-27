@@ -910,7 +910,7 @@ export function bible_glyph_chapter_jos07() {
           "spread",
           "them",
           "out",
-          "before",
+          "$face",
           "the",
           "$i_am.",
         ],
