@@ -524,7 +524,7 @@ export function bible_glyph_chapter_gen08() {
           "everything",
           "that",
           "moves",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth,",
           "kind",
