@@ -1483,7 +1483,7 @@ export function bible_glyph_chapter_1sa25() {
           "$donkey,",
           "and",
           "with",
-          "five",
+          "$five",
           "of",
           "her",
           "maidens",
