@@ -177,7 +177,7 @@ export function bible_glyph_chapter_exo36() {
           "$family",
           "are",
           "$footprints",
-          "more",
+          "$multiply+doing",
           "than",
           "enough",
           "for",
