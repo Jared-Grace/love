@@ -204,7 +204,7 @@ export function bible_glyph_chapter_deu12() {
       {
         verse_number: 7,
         words: [
-          "There,",
+          "$telescope,",
           "in",
           "the",
           "presence",
