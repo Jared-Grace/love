@@ -542,7 +542,7 @@ export function bible_glyph_chapter_gen09() {
           "from",
           "them",
           "the",
-          "whole",
+          "$all",
           "$earth",
           "was",
           "populated.",
