@@ -553,7 +553,7 @@ export function bible_glyph_chapter_isa49() {
           "have",
           "inscribed",
           "you",
-          "on",
+          "$pointing_up",
           "the",
           "palms",
           "of",
