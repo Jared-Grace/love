@@ -33,7 +33,7 @@ export function bible_glyph_chapter_num24() {
           "$no_entry",
           "$walking",
           "after",
-          "omens",
+          "$crystal_ball+thing",
           "as",
           "on",
           "previous",
