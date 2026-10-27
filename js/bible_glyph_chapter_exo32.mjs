@@ -424,7 +424,7 @@ export function bible_glyph_chapter_exo32() {
           "them",
           "from",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth?",
