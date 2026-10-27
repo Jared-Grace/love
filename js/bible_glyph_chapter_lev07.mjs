@@ -872,7 +872,7 @@ export function bible_glyph_chapter_lev07() {
           "$son",
           "as",
           "$hourglass",
-          "portion",
+          "$locked_with_pen",
           "from",
           "$son",
           "of",
