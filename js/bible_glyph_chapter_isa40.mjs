@@ -567,7 +567,7 @@ export function bible_glyph_chapter_isa40() {
           "seeks",
           "a",
           "skilled",
-          "craftsman",
+          "$hammer_and_wrench+doer",
           "to",
           "set",
           "up",
