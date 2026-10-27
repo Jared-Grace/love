@@ -248,7 +248,7 @@ export function bible_glyph_chapter_exo38() {
         verse_number: 10,
         words: [
           "with",
-          "twenty",
+          "$two+zero",
           "posts",
           "and",
           "twenty",
