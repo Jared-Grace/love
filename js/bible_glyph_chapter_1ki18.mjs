@@ -526,7 +526,7 @@ export function bible_glyph_chapter_1ki18() {
           "I",
           "have",
           "$no_entry",
-          "troubled",
+          "$water+brown_square+doing",
           "$wrestling+heart_on_fire,",
           "Elijah",
           "$speech,",
