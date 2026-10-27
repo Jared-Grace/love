@@ -754,7 +754,7 @@ export function bible_glyph_chapter_exo29() {
           "a",
           "$nose+thumbs_up",
           "$nose",
-          "before",
+          "$face",
           "$i_am.",
           "It",
           "is",
