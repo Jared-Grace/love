@@ -256,7 +256,7 @@ export function bible_glyph_chapter_deu04() {
           "us",
           "$all",
           "we",
-          "call",
+          "$waving_hand",
           "on",
           "Him?",
         ],
