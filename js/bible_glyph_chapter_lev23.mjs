@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_lev23() {
           "$sparkle+thing",
           "assembly",
           "and",
-          "present",
+          "$magnet+doing",
           "a",
           "food",
           "offering",
