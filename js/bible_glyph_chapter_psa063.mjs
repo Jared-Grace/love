@@ -143,7 +143,7 @@ export function bible_glyph_chapter_psa063() {
         words: [
           "When",
           "I",
-          "remember",
+          "$reminder_ribbon",
           "You",
           "on",
           "my",
