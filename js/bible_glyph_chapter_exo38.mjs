@@ -474,7 +474,7 @@ export function bible_glyph_chapter_exo38() {
           "was",
           "$two+zero",
           "$triangular_ruler",
-          "long",
+          "$up_down_arrow",
           "and",
           "five",
           "$triangular_ruler",
