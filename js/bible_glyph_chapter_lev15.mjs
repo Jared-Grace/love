@@ -408,7 +408,7 @@ export function bible_glyph_chapter_lev15() {
           "$hand_receiving",
           "$two",
           "$dove+ring",
-          "or",
+          "$shuffle",
           "$two",
           "$son",
           "of",
