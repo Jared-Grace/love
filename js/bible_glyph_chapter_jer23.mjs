@@ -1083,7 +1083,7 @@ export function bible_glyph_chapter_jer23() {
           "lead",
           "My",
           "$family",
-          "astray",
+          "$shaking_face",
           "with",
           "their",
           "reckless",
