@@ -402,7 +402,7 @@ export function bible_glyph_chapter_exo36() {
           "lined",
           "up",
           "one",
-          "opposite",
+          "$toward",
           "another.",
         ],
       },
