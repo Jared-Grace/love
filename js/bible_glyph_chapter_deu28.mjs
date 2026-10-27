@@ -789,7 +789,7 @@ export function bible_glyph_chapter_deu28() {
           "against",
           "them",
           "on",
-          "one",
+          "$one",
           "$road",
           "but",
           "flee",
