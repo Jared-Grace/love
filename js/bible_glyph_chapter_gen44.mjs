@@ -502,7 +502,7 @@ export function bible_glyph_chapter_gen44() {
           "The",
           "rest",
           "of",
-          "you",
+          "$you",
           "may",
           "return",
           "$peace",
