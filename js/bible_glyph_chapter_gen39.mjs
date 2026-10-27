@@ -623,7 +623,7 @@ export function bible_glyph_chapter_gen39() {
           "$eyes",
           "of",
           "the",
-          "warden",
+          "$military_medal",
           "of",
           "the",
           "$house.",
