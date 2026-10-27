@@ -1817,7 +1817,7 @@ export function bible_glyph_chapter_1ki08() {
           "May",
           "Your",
           "$eyes",
-          "be",
+          "$link",
           "open",
           "to",
           "the",
