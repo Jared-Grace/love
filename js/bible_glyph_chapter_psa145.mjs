@@ -269,7 +269,7 @@ export function bible_glyph_chapter_psa145() {
         verse_number: 13,
         words: [
           "Your",
-          "kingdom",
+          "$castle",
           "is",
           "an",
           "$hourglass",
