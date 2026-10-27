@@ -986,7 +986,7 @@ export function bible_glyph_chapter_exo25() {
           "$hammer+doing,",
           "with",
           "all",
-          "these",
+          "$flashlight+flashlight",
           "vessels.",
         ],
       },
