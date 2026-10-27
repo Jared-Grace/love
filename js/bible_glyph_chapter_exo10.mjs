@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo10() {
           "$clamp+proper_name,",
           "and",
           "$i_am",
-          "sent",
+          "$horse+right_arrow+doing",
           "an",
           "east",
           "$wind",
