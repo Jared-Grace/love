@@ -813,7 +813,7 @@ export function bible_glyph_chapter_2ki02() {
           "this",
           "$water.",
           "$no_entry",
-          "longer",
+          "$repeat",
           "will",
           "it",
           "cause",
