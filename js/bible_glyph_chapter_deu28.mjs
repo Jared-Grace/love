@@ -534,7 +534,7 @@ export function bible_glyph_chapter_deu28() {
       {
         verse_number: 16,
         words: [
-          "You",
+          "$you",
           "will",
           "be",
           "$speech+thumbs_down",
