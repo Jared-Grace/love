@@ -667,7 +667,7 @@ export function bible_glyph_chapter_num20() {
           "passage",
           "through",
           "their",
-          "territory,",
+          "$passport_control,",
           "and",
           "$wrestling+heart_on_fire",
           "turned",
