@@ -278,7 +278,7 @@ export function bible_glyph_chapter_jer01() {
           "tear",
           "$wall+down_arrow+doing,",
           "to",
-          "destroy",
+          "$wilted_flower",
           "and",
           "overthrow,",
           "to",
