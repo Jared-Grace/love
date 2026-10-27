@@ -57,7 +57,7 @@ export function bible_glyph_chapter_isa55() {
           "$bread,",
           "and",
           "your",
-          "labor",
+          "$weary_face+thing",
           "on",
           "that",
           "which",
