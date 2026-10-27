@@ -141,7 +141,7 @@ export function bible_glyph_chapter_pro02() {
           "who",
           "$walking",
           "with",
-          "integrity,",
+          "$full_moon+heart_red,",
         ],
       },
       {
