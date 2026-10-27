@@ -50,7 +50,7 @@ export function bible_glyph_chapter_exo38() {
           "each",
           "of",
           "its",
-          "four",
+          "$four",
           "corners,",
           "so",
           "that",
