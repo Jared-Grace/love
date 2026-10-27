@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_1ki22() {
           "$chariot",
           "$military_medal",
           "$eye",
-          "that",
+          "$pointing",
           "he",
           "was",
           "$no_entry",
