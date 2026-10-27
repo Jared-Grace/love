@@ -635,7 +635,7 @@ export function bible_glyph_chapter_exo35() {
           "had",
           "spun,",
           "$blue_circle,",
-          "purple",
+          "$purple_circle",
           "or",
           "scarlet",
           "yarn,",
