@@ -829,7 +829,7 @@ export function bible_glyph_chapter_2ki06() {
           "$person_gesturing_ok",
           "sold",
           "for",
-          "eighty",
+          "$eight+zero",
           "shekels",
           "of",
           "silver,",
