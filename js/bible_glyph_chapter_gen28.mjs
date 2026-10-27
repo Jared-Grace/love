@@ -172,7 +172,7 @@ export function bible_glyph_chapter_gen28() {
           "Now",
           "$hair+proper_name",
           "$eye",
-          "that",
+          "$pointing",
           "$laughing+proper_name",
           "had",
           "$speech+thumbs_up",
