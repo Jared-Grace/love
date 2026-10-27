@@ -102,7 +102,7 @@ export function bible_glyph_chapter_lam02() {
         words: [
           "In",
           "fierce",
-          "anger",
+          "$nose+fire",
           "He",
           "has",
           "$axe+tree+doing",
