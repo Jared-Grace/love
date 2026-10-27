@@ -538,7 +538,7 @@ export function bible_glyph_chapter_exo05() {
           "and",
           "$kneeling+doing.",
           "$no_entry",
-          "straw",
+          "$wheat+scissors",
           "will",
           "be",
           "$hands_giving",
