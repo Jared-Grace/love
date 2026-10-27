@@ -310,7 +310,7 @@ export function bible_glyph_chapter_exo27() {
           "be",
           "fifty",
           "cubits",
-          "wide,",
+          "$arrow_both_ways,",
           "with",
           "ten",
           "posts",
