@@ -654,7 +654,7 @@ export function bible_glyph_chapter_exo15() {
           "are",
           "we",
           "to",
-          "drink?",
+          "$cup_with_straw?",
         ],
       },
       {
