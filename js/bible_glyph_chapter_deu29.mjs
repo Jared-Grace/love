@@ -494,7 +494,7 @@ export function bible_glyph_chapter_deu29() {
           "$man_beard",
           "or",
           "$woman,",
-          "clan",
+          "$houses",
           "or",
           "tribe",
           "among",
