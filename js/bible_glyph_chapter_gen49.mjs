@@ -390,7 +390,7 @@ export function bible_glyph_chapter_gen49() {
           "he",
           "bent",
           "his",
-          "shoulder",
+          "$backpack+person",
           "to",
           "the",
           "burden",
