@@ -232,7 +232,7 @@ export function bible_glyph_chapter_hos02() {
           "$thumbs_up",
           "then",
           "than",
-          "now.",
+          "$watch.",
         ],
       },
       {
