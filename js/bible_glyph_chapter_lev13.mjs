@@ -60,7 +60,7 @@ export function bible_glyph_chapter_lev13() {
           "must",
           "be",
           "$footprints",
-          "to",
+          "$toward",
           "$proper_name$Aaron",
           "the",
           "$priest,",
