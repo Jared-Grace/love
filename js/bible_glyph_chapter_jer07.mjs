@@ -766,7 +766,7 @@ export function bible_glyph_chapter_jer07() {
           "$heart_organ.",
           "They",
           "went",
-          "backward",
+          "$last_track",
           "and",
           "$no_entry",
           "forward.",
