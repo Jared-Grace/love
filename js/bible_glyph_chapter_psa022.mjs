@@ -596,7 +596,7 @@ export function bible_glyph_chapter_psa022() {
           "$reminder_ribbon",
           "and",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "$i_am.",
           "All",
