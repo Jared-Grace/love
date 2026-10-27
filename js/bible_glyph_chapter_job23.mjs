@@ -270,7 +270,7 @@ export function bible_glyph_chapter_job23() {
           "Him?",
           "What",
           "He",
-          "desires,",
+          "$heart_eyes+hand_receiving+doing,",
           "He",
           "$hammer+doing.",
         ],
