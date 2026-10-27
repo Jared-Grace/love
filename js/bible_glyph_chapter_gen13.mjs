@@ -118,7 +118,7 @@ export function bible_glyph_chapter_gen13() {
         verse_number: 5,
         words: [
           "Now",
-          "Lot,",
+          "$veil+proper_name,",
           "who",
           "was",
           "$walking",
