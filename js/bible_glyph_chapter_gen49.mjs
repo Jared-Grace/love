@@ -137,7 +137,7 @@ export function bible_glyph_chapter_gen49() {
           "my",
           "$star",
           "$no_entry",
-          "join",
+          "$linked_paperclips+doing",
           "their",
           "$church.",
           "For",
