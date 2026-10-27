@@ -195,7 +195,7 @@ export function bible_glyph_chapter_exo38() {
           "$hammer+doing",
           "the",
           "$bronze",
-          "basin",
+          "$bucket+soap",
           "and",
           "its",
           "$bronze",
