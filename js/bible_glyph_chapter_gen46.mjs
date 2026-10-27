@@ -841,7 +841,7 @@ export function bible_glyph_chapter_gen46() {
           "our",
           "$child+flexed_biceps+thing,",
           "both",
-          "we",
+          "$me",
           "and",
           "our",
           "$father.",
