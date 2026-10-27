@@ -70,7 +70,7 @@ export function bible_glyph_chapter_zec03() {
           "man",
           "a",
           "$wood+fire",
-          "snatched",
+          "$hand+rescue",
           "from",
           "the",
           "$fire?",
