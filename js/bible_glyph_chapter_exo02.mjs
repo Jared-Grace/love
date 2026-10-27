@@ -116,7 +116,7 @@ export function bible_glyph_chapter_exo02() {
           "distance",
           "to",
           "$lightbulb",
-          "what",
+          "$flashlight+question",
           "would",
           "$hammer+doing",
           "to",
