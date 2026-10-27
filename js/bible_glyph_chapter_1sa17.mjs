@@ -545,7 +545,7 @@ export function bible_glyph_chapter_1sa17() {
           "$two_hearts+proper_name",
           "got",
           "up",
-          "early",
+          "$morning+doing",
           "in",
           "the",
           "morning,",
