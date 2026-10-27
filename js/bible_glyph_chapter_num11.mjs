@@ -642,7 +642,7 @@ export function bible_glyph_chapter_num11() {
           "out",
           "of",
           "your",
-          "nostrils",
+          "$nose+fire",
           "and",
           "makes",
           "you",
