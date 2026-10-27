@@ -276,7 +276,7 @@ export function bible_glyph_chapter_gen43() {
           "him",
           "back",
           "and",
-          "set",
+          "$hand+round_pushpin+doing",
           "him",
           "before",
           "you,",
