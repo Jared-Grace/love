@@ -967,7 +967,7 @@ export function bible_glyph_chapter_jer32() {
           "$face_spiral,",
           "who",
           "will",
-          "capture",
+          "$net+doing",
           "it.",
         ],
       },
