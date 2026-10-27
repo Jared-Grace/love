@@ -271,7 +271,7 @@ export function bible_glyph_chapter_lev03() {
           "close",
           "to",
           "the",
-          "backbone,",
+          "$bone+back,",
           "the",
           "fat",
           "that",
