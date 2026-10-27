@@ -48,7 +48,7 @@ export function bible_glyph_chapter_exo08() {
           "But",
           "$traffic_light",
           "you",
-          "refuse",
+          "$person_gesturing_no+describing",
           "to",
           "let",
           "them",
