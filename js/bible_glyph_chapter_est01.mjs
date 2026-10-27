@@ -166,7 +166,7 @@ export function bible_glyph_chapter_est01() {
           "Hangings",
           "of",
           "white",
-          "linen",
+          "$thread+herb",
           "and",
           "blue",
           "were",
