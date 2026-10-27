@@ -513,7 +513,7 @@ export function bible_glyph_chapter_nam03() {
           "no",
           "one",
           "to",
-          "gather",
+          "$tray_in+doing",
           "them.",
         ],
       },
