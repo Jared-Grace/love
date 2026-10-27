@@ -300,7 +300,7 @@ export function bible_glyph_chapter_job19() {
           "$tray_in",
           "my",
           "own",
-          "mouth.",
+          "$face_with_open_mouth.",
         ],
       },
       {
