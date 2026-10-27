@@ -1322,7 +1322,7 @@ export function bible_glyph_chapter_2ki17() {
         words: [
           "Do",
           "$no_entry",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "the",
           "$covenant",
           "I",
