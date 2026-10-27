@@ -666,7 +666,7 @@ export function bible_glyph_chapter_exo29() {
           "and",
           "the",
           "right",
-          "thigh,",
+          "$leg,",
           "since",
           "this",
           "is",
