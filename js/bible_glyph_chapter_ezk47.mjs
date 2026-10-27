@@ -489,7 +489,7 @@ export function bible_glyph_chapter_ezk47() {
           "equally",
           "among",
           "them.",
-          "Because",
+          "$back+flashlight",
           "I",
           "swore",
           "with",
