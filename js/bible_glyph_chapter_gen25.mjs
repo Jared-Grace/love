@@ -16,7 +16,7 @@ export function bible_glyph_chapter_gen25() {
         words: [
           "$father+map",
           "$hand_receiving",
-          "another",
+          "$plus+doing",
           "$woman,",
           "$name_tag",
           "$proper_name$Keturah.",
