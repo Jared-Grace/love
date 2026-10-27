@@ -1280,7 +1280,7 @@ export function bible_glyph_chapter_neh09() {
           "Your",
           "$scroll",
           "or",
-          "listen",
+          "$ear_with_hearing_aid",
           "to",
           "Your",
           "$scroll",
