@@ -887,7 +887,7 @@ export function bible_glyph_chapter_num22() {
           "$speech",
           "to",
           "$proper_name$Balaam,",
-          "What",
+          "$flashlight+question",
           "have",
           "I",
           "$hammer+doing",
