@@ -93,7 +93,7 @@ export function bible_glyph_chapter_ezk03() {
           "honey",
           "in",
           "my",
-          "mouth.",
+          "$face_with_open_mouth.",
         ],
       },
       {
