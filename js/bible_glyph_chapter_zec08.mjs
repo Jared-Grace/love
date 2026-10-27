@@ -592,7 +592,7 @@ export function bible_glyph_chapter_zec08() {
           "$i_am",
           "of",
           "Hosts",
-          "came",
+          "$link",
           "to",
           "me,",
           "$speech,",
