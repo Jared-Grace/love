@@ -542,7 +542,7 @@ export function bible_glyph_chapter_jos02() {
           "pursuers",
           "will",
           "not",
-          "find",
+          "$toward+person+doing",
           "you.",
           "Hide",
           "yourselves",
