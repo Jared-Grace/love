@@ -492,7 +492,7 @@ export function bible_glyph_chapter_exo38() {
         words: [
           "with",
           "four",
-          "posts",
+          "$candle",
           "and",
           "four",
           "$bronze",
