@@ -1170,7 +1170,7 @@ export function bible_glyph_chapter_gen31() {
           "$two",
           "$woman",
           "and",
-          "six",
+          "$six",
           "$year",
           "for",
           "your",
