@@ -88,7 +88,7 @@ export function bible_glyph_chapter_mic07() {
           "at",
           "$thumbs_down;",
           "the",
-          "prince",
+          "$military_medal",
           "demands",
           "a",
           "bribe",
