@@ -180,7 +180,7 @@ export function bible_glyph_chapter_1sa17() {
           "iron",
           "$fire+tongue",
           "weighed",
-          "six",
+          "$six",
           "hundred",
           "shekels.",
           "In",
