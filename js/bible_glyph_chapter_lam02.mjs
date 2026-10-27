@@ -428,7 +428,7 @@ export function bible_glyph_chapter_lam02() {
           "and",
           "put",
           "on",
-          "sackcloth.",
+          "$sackcloth.",
           "The",
           "young",
           "women",
