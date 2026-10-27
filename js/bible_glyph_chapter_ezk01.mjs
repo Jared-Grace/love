@@ -33,7 +33,7 @@ export function bible_glyph_chapter_ezk01() {
           "exiles",
           "by",
           "the",
-          "River",
+          "$water+national_park",
           "$proper_name$Kebar,",
           "the",
           "$sky",
