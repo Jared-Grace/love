@@ -987,7 +987,7 @@ export function bible_glyph_chapter_exo09() {
           "were",
           "$no_entry",
           "$fist,",
-          "because",
+          "$pointing",
           "they",
           "are",
           "late",
