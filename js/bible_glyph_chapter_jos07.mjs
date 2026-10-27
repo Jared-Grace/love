@@ -868,7 +868,7 @@ export function bible_glyph_chapter_jos07() {
           "ran",
           "to",
           "the",
-          "tent,",
+          "$tent,",
           "and",
           "there",
           "it",
