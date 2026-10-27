@@ -332,7 +332,7 @@ export function bible_glyph_chapter_lev06() {
           "on",
           "it",
           "the",
-          "fat",
+          "$bacon",
           "portions",
           "of",
           "the",
