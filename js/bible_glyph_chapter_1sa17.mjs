@@ -997,7 +997,7 @@ export function bible_glyph_chapter_1sa17() {
           "$man_beard",
           "from",
           "his",
-          "youth.",
+          "$child+flexed_biceps+thing.",
         ],
       },
       {
