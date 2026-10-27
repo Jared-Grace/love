@@ -480,7 +480,7 @@ export function bible_glyph_chapter_jdg07() {
           "friend",
           "about",
           "a",
-          "dream.",
+          "$dream.",
           "He",
           "$speech,",
           "Behold,",
