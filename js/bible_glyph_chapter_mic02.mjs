@@ -196,7 +196,7 @@ export function bible_glyph_chapter_mic02() {
           "disgrace",
           "will",
           "$no_entry",
-          "overtake",
+          "$back+walking+doing",
           "us.",
         ],
       },
