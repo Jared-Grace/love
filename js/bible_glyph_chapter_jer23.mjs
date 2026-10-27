@@ -857,7 +857,7 @@ export function bible_glyph_chapter_jer23() {
           "the",
           "$i_am?",
           "Do",
-          "I",
+          "$me",
           "$no_entry",
           "fill",
           "the",
