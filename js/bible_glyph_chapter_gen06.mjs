@@ -384,7 +384,7 @@ export function bible_glyph_chapter_gen06() {
           "rooms",
           "in",
           "the",
-          "ark,",
+          "$package,",
           "and",
           "coat",
           "it",
