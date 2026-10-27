@@ -609,7 +609,7 @@ export function bible_glyph_chapter_gen26() {
           "$well",
           "and",
           "quarreled",
-          "over",
+          "$pointing_up",
           "that",
           "one",
           "too,",
