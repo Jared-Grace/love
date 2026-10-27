@@ -69,7 +69,7 @@ export function bible_glyph_chapter_hab02() {
           "a",
           "herald",
           "may",
-          "run",
+          "$running",
           "with",
           "it.",
         ],
