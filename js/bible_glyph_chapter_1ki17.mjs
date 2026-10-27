@@ -47,7 +47,7 @@ export function bible_glyph_chapter_1ki17() {
           "$traffic_light",
           "$dew",
           "nor",
-          "rain",
+          "$rain",
           "in",
           "$flashlight+flashlight",
           "$year",
