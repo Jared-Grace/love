@@ -381,7 +381,7 @@ export function bible_glyph_chapter_mic02() {
           "pen,",
           "like",
           "a",
-          "flock",
+          "$sheep+crowd",
           "in",
           "the",
           "midst",
