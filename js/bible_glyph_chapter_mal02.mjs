@@ -406,7 +406,7 @@ export function bible_glyph_chapter_mal02() {
           "everyone",
           "who",
           "is",
-          "awake",
+          "$rooster",
           "and",
           "aware,",
           "even",
