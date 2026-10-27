@@ -424,7 +424,7 @@ export function bible_glyph_chapter_lev15() {
           "the",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "and",
           "$hands_giving",
           "them",
