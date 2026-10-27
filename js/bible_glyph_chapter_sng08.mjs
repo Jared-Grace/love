@@ -35,7 +35,7 @@ export function bible_glyph_chapter_sng08() {
           "$sun_behind_small_cloud,",
           "I",
           "would",
-          "kiss",
+          "$face_blowing_a_kiss",
           "you,",
           "and",
           "$no_entry",
