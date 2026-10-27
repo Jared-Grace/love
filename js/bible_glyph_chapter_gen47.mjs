@@ -898,7 +898,7 @@ export function bible_glyph_chapter_gen47() {
           "effect",
           "in",
           "the",
-          "land",
+          "$brown_square",
           "of",
           "$clamp+proper_name",
           "to",
