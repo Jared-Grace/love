@@ -525,7 +525,7 @@ export function bible_glyph_chapter_hab03() {
           "heights.",
           "For",
           "the",
-          "choirmaster.",
+          "$musical_score.",
           "With",
           "stringed",
           "instruments.",
