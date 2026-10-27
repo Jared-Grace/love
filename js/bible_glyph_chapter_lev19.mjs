@@ -528,7 +528,7 @@ export function bible_glyph_chapter_lev19() {
           "a",
           "slave",
           "girl",
-          "promised",
+          "$face_with_rolling_eyes+doing",
           "to",
           "another",
           "$man_beard",
