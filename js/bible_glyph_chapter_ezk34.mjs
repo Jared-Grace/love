@@ -688,7 +688,7 @@ export function bible_glyph_chapter_ezk34() {
           "flank",
           "and",
           "$person_shrugging,",
-          "butting",
+          "$ox+horn+doing",
           "all",
           "the",
           "weak",
