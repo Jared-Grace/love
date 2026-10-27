@@ -429,7 +429,7 @@ export function bible_glyph_chapter_isa58() {
           "like",
           "a",
           "well-watered",
-          "garden,",
+          "$garden,",
           "like",
           "a",
           "spring",
