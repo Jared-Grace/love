@@ -169,7 +169,7 @@ export function bible_glyph_chapter_1sa20() {
           "$speech",
           "$toward",
           "$two_hearts+proper_name,",
-          "Whatever",
+          "$flashlight+question",
           "your",
           "$person_other",
           "$speech,",
