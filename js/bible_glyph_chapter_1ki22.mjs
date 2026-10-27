@@ -1009,7 +1009,7 @@ export function bible_glyph_chapter_1ki22() {
           "$speech,",
           "Do",
           "$no_entry",
-          "fight",
+          "$crossed_swords+doing",
           "with",
           "anyone",
           "small",
