@@ -200,7 +200,7 @@ export function bible_glyph_chapter_jdg07() {
           "$speech",
           "to",
           "him,",
-          "Separate",
+          "$hand+round_pushpin+doing",
           "those",
           "who",
           "$tongue+droplet+doing",
