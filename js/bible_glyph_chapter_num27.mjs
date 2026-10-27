@@ -216,7 +216,7 @@ export function bible_glyph_chapter_num27() {
           "of",
           "Israel,",
           "$speech:",
-          "If",
+          "$pointing",
           "a",
           "$man_beard",
           "$skull+doing",
