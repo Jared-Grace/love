@@ -539,7 +539,7 @@ export function bible_glyph_chapter_hos02() {
           "For",
           "I",
           "will",
-          "remove",
+          "$away+doing",
           "the",
           "names",
           "of",
