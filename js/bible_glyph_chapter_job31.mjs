@@ -545,7 +545,7 @@ export function bible_glyph_chapter_job31() {
           "radiance",
           "or",
           "the",
-          "moon",
+          "$moon",
           "$walking",
           "in",
           "splendor,",
