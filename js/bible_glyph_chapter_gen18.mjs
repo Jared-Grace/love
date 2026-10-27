@@ -858,7 +858,7 @@ export function bible_glyph_chapter_gen18() {
           "forty",
           "are",
           "found",
-          "there.",
+          "$telescope.",
           "He",
           "$speech,",
           "On",
