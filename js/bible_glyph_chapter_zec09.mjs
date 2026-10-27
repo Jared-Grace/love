@@ -88,7 +88,7 @@ export function bible_glyph_chapter_zec09() {
           "up",
           "$silver",
           "like",
-          "dust",
+          "$dust",
           "and",
           "gold",
           "like",
