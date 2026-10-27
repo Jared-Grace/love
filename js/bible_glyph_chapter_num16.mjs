@@ -1002,7 +1002,7 @@ export function bible_glyph_chapter_num16() {
         words: [
           "They",
           "went",
-          "down",
+          "$walking+pointing_down",
           "$sprout",
           "into",
           "Sheol",
