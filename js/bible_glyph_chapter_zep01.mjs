@@ -571,7 +571,7 @@ export function bible_glyph_chapter_zep01() {
           "$silver",
           "nor",
           "their",
-          "gold",
+          "$gold",
           "will",
           "$no_entry",
           "be",
