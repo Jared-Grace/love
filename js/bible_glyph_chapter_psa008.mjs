@@ -95,7 +95,7 @@ export function bible_glyph_chapter_psa008() {
           "$flashlight+question",
           "is",
           "$man_beard",
-          "that",
+          "$pointing",
           "You",
           "are",
           "mindful",
