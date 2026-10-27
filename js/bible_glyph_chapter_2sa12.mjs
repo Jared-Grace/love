@@ -162,7 +162,7 @@ export function bible_glyph_chapter_2sa12() {
           "$two_hearts+proper_name",
           "$angry_face+doing",
           "with",
-          "anger",
+          "$nose+fire",
           "against",
           "the",
           "$man_beard",
