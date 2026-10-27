@@ -166,7 +166,7 @@ export function bible_glyph_chapter_num19() {
           "$red_circle",
           "wool,",
           "and",
-          "throw",
+          "$throwing",
           "them",
           "onto",
           "the",
