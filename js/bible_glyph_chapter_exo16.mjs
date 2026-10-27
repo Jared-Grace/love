@@ -605,7 +605,7 @@ export function bible_glyph_chapter_exo16() {
           "little",
           "had",
           "$no_entry",
-          "shortfall.",
+          "$empty_nest+doing.",
           "Each",
           "$man_beard",
           "gathered",
