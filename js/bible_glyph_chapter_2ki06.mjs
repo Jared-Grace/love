@@ -475,7 +475,7 @@ export function bible_glyph_chapter_2ki06() {
           "$speech",
           "to",
           "Elisha,",
-          "Oh,",
+          "$crying_face+speech,",
           "my",
           "$crown,",
           "what",
