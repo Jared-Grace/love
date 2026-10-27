@@ -518,7 +518,7 @@ export function bible_glyph_chapter_isa07() {
           "the",
           "$sun",
           "$fruit",
-          "separated",
+          "$away+doing",
           "from",
           "$hands_raised+proper_name;",
           "He",
