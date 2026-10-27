@@ -627,7 +627,7 @@ export function bible_glyph_chapter_gen40() {
           "hanged",
           "the",
           "chief",
-          "baker,",
+          "$bread+fire,",
           "just",
           "as",
           "$i_am+plus",
