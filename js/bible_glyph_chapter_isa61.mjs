@@ -78,7 +78,7 @@ export function bible_glyph_chapter_isa61() {
           "$sword+turn_back+thing,",
           "to",
           "$hug+doing",
-          "all",
+          "$all",
           "who",
           "mourn,",
         ],
