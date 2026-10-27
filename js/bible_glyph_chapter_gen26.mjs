@@ -632,7 +632,7 @@ export function bible_glyph_chapter_gen26() {
           "$telescope",
           "and",
           "dug",
-          "another",
+          "$plus+one",
           "$well,",
           "and",
           "over",
