@@ -317,7 +317,7 @@ export function bible_glyph_chapter_2sa11() {
           "$proper_name$Uriah",
           "did",
           "$no_entry",
-          "go",
+          "$walking+pointing_down",
           "down",
           "to",
           "his",
