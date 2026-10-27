@@ -220,7 +220,7 @@ export function bible_glyph_chapter_pro08() {
           "prudence,",
           "and",
           "I",
-          "find",
+          "$magnifying_glass+exclamation",
           "$lightbulb+thing",
           "and",
           "discretion.",
