@@ -45,7 +45,7 @@ export function bible_glyph_chapter_deu31() {
           "I",
           "am",
           "$no_entry",
-          "longer",
+          "$repeat",
           "able",
           "to",
           "go",
