@@ -709,7 +709,7 @@ export function bible_glyph_chapter_dan09() {
         verse_number: 20,
         words: [
           "$repeat",
-          "I",
+          "$me",
           "was",
           "$mouth,",
           "$hands_praying,",
