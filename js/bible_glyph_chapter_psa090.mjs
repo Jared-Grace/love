@@ -133,7 +133,7 @@ export function bible_glyph_chapter_psa090() {
           "$clockwise_arrows+doing,",
           "but",
           "by",
-          "evening",
+          "$sunset",
           "it",
           "fades",
           "and",
