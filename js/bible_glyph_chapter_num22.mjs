@@ -953,7 +953,7 @@ export function bible_glyph_chapter_num22() {
           "all",
           "your",
           "life",
-          "until",
+          "$finish",
           "this",
           "$sun?",
           "Have",
