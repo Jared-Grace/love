@@ -216,7 +216,7 @@ export function bible_glyph_chapter_2ch20() {
           "of",
           "$flashlight",
           "$earth",
-          "before",
+          "$face",
           "Your",
           "$family",
           "$wrestling+heart_on_fire,",
