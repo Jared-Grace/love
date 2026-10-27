@@ -182,7 +182,7 @@ export function bible_glyph_chapter_exo38() {
           "He",
           "$hammer+doing",
           "it",
-          "hollow,",
+          "$hole+describing,",
           "with",
           "boards.",
         ],
