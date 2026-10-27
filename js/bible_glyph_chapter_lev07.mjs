@@ -207,7 +207,7 @@ export function bible_glyph_chapter_lev07() {
           "baked",
           "in",
           "an",
-          "oven",
+          "$brick+fire",
           "or",
           "$hammer+doing",
           "in",
