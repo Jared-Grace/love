@@ -1099,7 +1099,7 @@ export function bible_glyph_chapter_1sa20() {
           "shall",
           "be",
           "established.",
-          "Now",
+          "$watch",
           "$hand_sending",
           "and",
           "$hand_receiving",
