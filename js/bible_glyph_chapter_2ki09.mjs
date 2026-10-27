@@ -1283,7 +1283,7 @@ export function bible_glyph_chapter_2ki09() {
           "of",
           "the",
           "$i_am",
-          "which",
+          "$back+flashlight",
           "He",
           "$mouth",
           "by",
