@@ -89,7 +89,7 @@ export function bible_glyph_chapter_deu32() {
           "work",
           "is",
           "perfect;",
-          "all",
+          "$all",
           "His",
           "$road",
           "are",
