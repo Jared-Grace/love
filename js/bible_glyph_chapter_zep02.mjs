@@ -73,7 +73,7 @@ export function bible_glyph_chapter_zep02() {
           "of",
           "the",
           "$earth",
-          "who",
+          "$back+flashlight",
           "carry",
           "out",
           "His",
