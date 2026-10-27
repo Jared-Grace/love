@@ -1384,7 +1384,7 @@ export function bible_glyph_chapter_lev26() {
           "$covenant",
           "with",
           "them,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "the",
