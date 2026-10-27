@@ -711,7 +711,7 @@ export function bible_glyph_chapter_jos06() {
           "devoted",
           "to",
           "$bomb+altar+doing",
-          "everything",
+          "$all",
           "in",
           "the",
           "$city,",
