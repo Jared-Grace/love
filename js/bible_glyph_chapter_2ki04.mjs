@@ -399,7 +399,7 @@ export function bible_glyph_chapter_2ki04() {
           "$speech",
           "to",
           "her,",
-          "Look,",
+          "$exclamation,",
           "you",
           "have",
           "gone",
