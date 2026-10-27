@@ -1166,7 +1166,7 @@ export function bible_glyph_chapter_1ki01() {
           "$crown",
           "the",
           "$king,",
-          "so",
+          "$right_arrow",
           "may",
           "He",
           "be",
