@@ -586,7 +586,7 @@ export function bible_glyph_chapter_gen46() {
           "his",
           "$woman",
           "$proper_name$Rachel,",
-          "seven",
+          "$seven",
           "$person_other",
           "in",
           "all.",
