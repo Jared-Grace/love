@@ -294,7 +294,7 @@ export function bible_glyph_chapter_gen37() {
           "him",
           "and",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "is",
           "this",
           "dream",
