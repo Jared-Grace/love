@@ -118,7 +118,7 @@ export function bible_glyph_chapter_zec08() {
           "old",
           "women",
           "will",
-          "again",
+          "$repeat",
           "$person+house",
           "along",
           "the",
