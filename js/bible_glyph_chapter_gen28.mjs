@@ -529,7 +529,7 @@ export function bible_glyph_chapter_gen28() {
           "$flashlight+question",
           "awesome",
           "is",
-          "this",
+          "$flashlight",
           "$place!",
           "This",
           "is",
