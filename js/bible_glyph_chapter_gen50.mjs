@@ -241,7 +241,7 @@ export function bible_glyph_chapter_gen50() {
       {
         verse_number: 9,
         words: [
-          "Chariots",
+          "$chariot",
           "and",
           "horsemen",
           "alike",
