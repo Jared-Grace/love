@@ -775,7 +775,7 @@ export function bible_glyph_chapter_jos07() {
           "$hammer+doing.",
           "Do",
           "$no_entry",
-          "hide",
+          "$hand+tray_in+doing",
           "it",
           "from",
           "me.",
