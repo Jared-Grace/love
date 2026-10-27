@@ -397,7 +397,7 @@ export function bible_glyph_chapter_isa49() {
           "down",
           "on",
           "them.",
-          "For",
+          "$pointing",
           "He",
           "who",
           "has",
