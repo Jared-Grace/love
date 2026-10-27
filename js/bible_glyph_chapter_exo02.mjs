@@ -572,7 +572,7 @@ export function bible_glyph_chapter_exo02() {
           "they",
           "$speech.",
           "He",
-          "even",
+          "$plus",
           "drew",
           "water",
           "for",
