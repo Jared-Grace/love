@@ -491,7 +491,7 @@ export function bible_glyph_chapter_exo40() {
           "$palm_down",
           "up",
           "the",
-          "veil",
+          "$veil",
           "for",
           "the",
           "screen,",
