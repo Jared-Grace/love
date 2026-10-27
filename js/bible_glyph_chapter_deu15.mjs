@@ -142,7 +142,7 @@ export function bible_glyph_chapter_deu15() {
           "careful",
           "to",
           "$hammer+doing",
-          "all",
+          "$all",
           "these",
           "$scroll",
           "I",
