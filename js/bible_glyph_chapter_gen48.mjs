@@ -380,7 +380,7 @@ export function bible_glyph_chapter_gen48() {
           "And",
           "$i_am+plus",
           "$hand_receiving",
-          "both",
+          "$two",
           "of",
           "them,",
           "$fruit",
