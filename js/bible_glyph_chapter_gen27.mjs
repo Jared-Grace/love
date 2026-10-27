@@ -653,7 +653,7 @@ export function bible_glyph_chapter_gen27() {
           "he",
           "$speech,",
           '"Are',
-          "you",
+          "$you",
           "really",
           "my",
           "$son",
