@@ -1507,7 +1507,7 @@ export function bible_glyph_chapter_deu04() {
           "a",
           "manslayer",
           "could",
-          "flee",
+          "$running+dashing_away",
           "after",
           "killing",
           "his",
