@@ -264,7 +264,7 @@ export function bible_glyph_chapter_jos02() {
           "Rahab",
           "went",
           "up",
-          "on",
+          "$pointing_up",
           "the",
           "roof",
         ],
