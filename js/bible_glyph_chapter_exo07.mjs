@@ -281,7 +281,7 @@ export function bible_glyph_chapter_exo07() {
           "his",
           "$white_cane",
           "down",
-          "before",
+          "$face",
           "$house+proper_name",
           "and",
           "his",
