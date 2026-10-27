@@ -86,7 +86,7 @@ export function bible_glyph_chapter_psa027() {
           "out",
           "against",
           "me,",
-          "I",
+          "$me",
           "will",
           "keep",
           "my",
