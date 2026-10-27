@@ -467,7 +467,7 @@ export function bible_glyph_chapter_gen22() {
           "of",
           "the",
           "$i_am",
-          "called",
+          "$waving_hand",
           "to",
           "$father+map",
           "$tray_out",
