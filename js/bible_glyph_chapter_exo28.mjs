@@ -733,7 +733,7 @@ export function bible_glyph_chapter_exo28() {
           "just",
           "above",
           "its",
-          "woven",
+          "$ribbon+yarn",
           "waistband.",
         ],
       },
