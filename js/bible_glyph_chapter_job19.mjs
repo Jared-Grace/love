@@ -326,7 +326,7 @@ export function bible_glyph_chapter_job19() {
       {
         verse_number: 18,
         words: [
-          "Even",
+          "$plus",
           "little",
           "boys",
           "scorn",
