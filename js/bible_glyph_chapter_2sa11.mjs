@@ -440,7 +440,7 @@ export function bible_glyph_chapter_2sa11() {
           "$sun",
           "and",
           "the",
-          "next.",
+          "$sun+next_track+thing.",
         ],
       },
       {
