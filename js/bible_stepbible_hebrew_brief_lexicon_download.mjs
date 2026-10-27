@@ -14,10 +14,11 @@ export async function bible_stepbible_hebrew_brief_lexicon_download() {
   let path = folder_gitignore_join("stepbible_tbesh.txt");
   let exists = await file_exists(path);
   if (exists) {
-    return {
+    let r = {
       path,
       fetched: false,
     };
+    return r;
   }
   let url =
     "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/master/Lexicons/TBESH%20-%20Translators%20Brief%20lexicon%20of%20Extended%20Strongs%20for%20Hebrew%20-%20STEPBible.org%20CC%20BY.txt";
@@ -29,8 +30,9 @@ export async function bible_stepbible_hebrew_brief_lexicon_download() {
     hint: "the lexicon could not be fetched - has the address moved?",
   });
   await file_overwrite(path, text);
-  return {
+  let r2 = {
     path,
     fetched: true,
   };
+  return r2;
 }
