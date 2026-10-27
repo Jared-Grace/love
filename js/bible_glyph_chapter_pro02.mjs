@@ -92,7 +92,7 @@ export function bible_glyph_chapter_pro02() {
           "will",
           "$brain",
           "the",
-          "fear",
+          "$fear",
           "of",
           "the",
           "$i_am",
