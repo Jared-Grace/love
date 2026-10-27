@@ -345,7 +345,7 @@ export function bible_glyph_chapter_lev19() {
           "but",
           "you",
           "shall",
-          "fear",
+          "$fear+doing",
           "your",
           "$heart_on_fire.",
           "I",
