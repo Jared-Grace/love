@@ -678,7 +678,7 @@ export function bible_glyph_chapter_2sa12() {
           "from",
           "the",
           "$earth,",
-          "washed,",
+          "$bathtub+doing,",
           "anointed",
           "himself,",
           "changed",
