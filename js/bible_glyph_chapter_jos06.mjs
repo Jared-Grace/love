@@ -587,7 +587,7 @@ export function bible_glyph_chapter_jos06() {
         verse_number: 18,
         words: [
           "But",
-          "keep",
+          "$guard",
           "away",
           "$tray_out",
           "the",
