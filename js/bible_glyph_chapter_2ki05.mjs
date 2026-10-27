@@ -762,7 +762,7 @@ export function bible_glyph_chapter_2ki05() {
           "$crown",
           "has",
           "spared",
-          "this",
+          "$flashlight",
           "$proper_name$Aramean",
           "$proper_name$Naaman",
           "by",
