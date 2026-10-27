@@ -430,7 +430,7 @@ export function bible_glyph_chapter_isa09() {
           "the",
           "$i_am",
           "will",
-          "cut",
+          "$scissors",
           "off",
           "$wrestling+heart_on_fire's",
           "head",
