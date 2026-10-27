@@ -182,7 +182,7 @@ export function bible_glyph_chapter_exo23() {
           "$hand_receiving",
           "a",
           "$money_bag+hand_sending,",
-          "for",
+          "$pointing",
           "a",
           "$money_bag+hand_sending",
           "blinds",
