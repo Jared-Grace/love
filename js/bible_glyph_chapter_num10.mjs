@@ -296,7 +296,7 @@ export function bible_glyph_chapter_num10() {
           "month",
           "of",
           "the",
-          "second",
+          "$second_place",
           "$year,",
           "the",
           "$cloud",
