@@ -182,7 +182,7 @@ export function bible_glyph_chapter_exo18() {
           "$woman",
           "and",
           "her",
-          "two",
+          "$two",
           "$son.",
         ],
       },
