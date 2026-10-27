@@ -293,7 +293,7 @@ export function bible_glyph_chapter_lev07() {
           "olive",
           "$lotion_bottle,",
           "$flatbread",
-          "wafers",
+          "$flatbread+oil",
           "$oil+doing",
           "with",
           "$lotion_bottle,",
