@@ -1033,7 +1033,7 @@ export function bible_glyph_chapter_1ki22() {
           "$i_am+scales,",
           "they",
           "$speech,",
-          "Surely",
+          "$check+exclamation",
           "this",
           "is",
           "the",
