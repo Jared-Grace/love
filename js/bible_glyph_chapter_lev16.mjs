@@ -957,7 +957,7 @@ export function bible_glyph_chapter_lev16() {
           "the",
           "$goat+away",
           "must",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "his",
           "$garment",
           "and",
