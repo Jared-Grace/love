@@ -199,7 +199,7 @@ export function bible_glyph_chapter_isa56() {
           "the",
           "foreigner",
           "who",
-          "join",
+          "$paperclip+doing",
           "themselves",
           "to",
           "the",
