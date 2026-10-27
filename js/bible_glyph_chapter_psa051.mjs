@@ -209,7 +209,7 @@ export function bible_glyph_chapter_psa051() {
         words: [
           "$see_no_evil_monkey",
           "Your",
-          "face",
+          "$face",
           "from",
           "my",
           "sins,",
