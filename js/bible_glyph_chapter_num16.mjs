@@ -1413,7 +1413,7 @@ export function bible_glyph_chapter_num16() {
           "$i_am",
           "and",
           "the",
-          "plague",
+          "$fist+microbe+thing",
           "has",
           "begun.",
         ],
