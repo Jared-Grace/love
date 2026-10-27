@@ -396,7 +396,7 @@ export function bible_glyph_chapter_neh09() {
           "through",
           "$sea",
           "on",
-          "dry",
+          "$fallen_leaf+brown_square",
           "ground.",
           "You",
           "hurled",
