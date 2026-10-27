@@ -772,7 +772,7 @@ export function bible_glyph_chapter_num19() {
         words: [
           "$all",
           "the",
-          "unclean",
+          "$soap+no_entry",
           "person",
           "touches",
           "will",
