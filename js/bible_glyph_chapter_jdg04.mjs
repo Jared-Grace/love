@@ -400,7 +400,7 @@ export function bible_glyph_chapter_jdg04() {
           "him,",
           "from",
           "$proper_name$Harosheth-hagoyim",
-          "to",
+          "$toward",
           "the",
           "River",
           "$proper_name$Kishon.",
