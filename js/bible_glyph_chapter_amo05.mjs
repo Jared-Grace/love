@@ -117,7 +117,7 @@ export function bible_glyph_chapter_amo05() {
           "$house",
           "of",
           "$wrestling+heart_on_fire:",
-          "Seek",
+          "$magnifying_glass+question",
           "Me",
           "and",
           "$sprout+doing.",
