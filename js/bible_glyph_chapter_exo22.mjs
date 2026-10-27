@@ -37,7 +37,7 @@ export function bible_glyph_chapter_exo22() {
           "the",
           "$ox,",
           "and",
-          "four",
+          "$four",
           "$sheep",
           "for",
           "the",
