@@ -200,7 +200,7 @@ export function bible_glyph_chapter_isa40() {
           "of",
           "the",
           "$i_am",
-          "blows",
+          "$wind+away+doing",
           "on",
           "them;",
           "indeed,",
