@@ -1069,7 +1069,7 @@ export function bible_glyph_chapter_2ki06() {
           "$man_beard",
           "$face,",
           "but",
-          "before",
+          "$clock+back",
           "$angel",
           "$footprints,",
           "Elisha",
