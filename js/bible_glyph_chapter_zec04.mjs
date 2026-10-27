@@ -79,7 +79,7 @@ export function bible_glyph_chapter_zec04() {
           "are",
           "also",
           "$two",
-          "olive",
+          "$olive",
           "trees",
           "beside",
           "it,",
