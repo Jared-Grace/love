@@ -804,7 +804,7 @@ export function bible_glyph_chapter_1sa15() {
           "have",
           "transgressed",
           "the",
-          "commandment",
+          "$face_with_open_mouth",
           "of",
           "the",
           "$i_am",
