@@ -510,7 +510,7 @@ export function bible_glyph_chapter_lev04() {
           "entrance",
           "$tent",
           "of",
-          "Meeting.",
+          "$alarm_clock.",
         ],
       },
       {
