@@ -280,7 +280,7 @@ export function bible_glyph_chapter_lev19() {
           "You",
           "must",
           "$no_entry",
-          "swear",
+          "$raised_back_of_hand+doing",
           "falsely",
           "by",
           "My",
