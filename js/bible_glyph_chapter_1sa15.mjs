@@ -540,7 +540,7 @@ export function bible_glyph_chapter_1sa15() {
           "And",
           "$ear+heart_on_fire",
           "$speech,",
-          "Although",
+          "$traffic_light",
           "you",
           "were",
           "once",
