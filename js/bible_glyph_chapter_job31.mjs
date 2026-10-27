@@ -628,7 +628,7 @@ export function bible_glyph_chapter_job31() {
           "asking",
           "for",
           "his",
-          "life",
+          "$person_other",
           "with",
           "a",
           "curse,",
