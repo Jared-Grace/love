@@ -614,7 +614,7 @@ export function bible_glyph_chapter_jdg04() {
           "a",
           "container",
           "of",
-          "milk,",
+          "$milk,",
           "gave",
           "him",
           "a",
