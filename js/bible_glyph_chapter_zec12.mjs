@@ -409,7 +409,7 @@ export function bible_glyph_chapter_zec12() {
           "grieves",
           "for",
           "a",
-          "firstborn",
+          "$first_place+baby",
           "son.",
         ],
       },
