@@ -481,7 +481,7 @@ export function bible_glyph_chapter_exo19() {
           "And",
           "he",
           "$speech",
-          "to",
+          "$toward",
           "the",
           "$family,",
           "Be",
