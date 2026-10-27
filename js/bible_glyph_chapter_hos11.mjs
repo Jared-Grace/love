@@ -355,7 +355,7 @@ export function bible_glyph_chapter_hos11() {
           "$lying_face+mouse_trap;",
           "but",
           "$hands_raised+proper_name",
-          "still",
+          "$repeat",
           "walks",
           "with",
           "$heart_on_fire",
