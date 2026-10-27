@@ -21,7 +21,7 @@ export function bible_glyph_chapter_neh09() {
           "of",
           "the",
           "same",
-          "month,",
+          "$new_moon,",
           "the",
           "$son",
           "gathered",
