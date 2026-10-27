@@ -607,7 +607,7 @@ export function bible_glyph_chapter_gen41() {
           "on",
           "a",
           "single",
-          "stalk.",
+          "$tanabata_tree.",
         ],
       },
       {
