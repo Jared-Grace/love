@@ -696,7 +696,7 @@ export function bible_glyph_chapter_zec08() {
           "of",
           "Hosts.",
           "I",
-          "myself",
+          "$plus",
           "am",
           "$walking.",
         ],
