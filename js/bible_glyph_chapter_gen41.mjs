@@ -1528,7 +1528,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "When",
           "extreme",
-          "hunger",
+          "$famine+person+doing",
           "came",
           "to",
           "all",
