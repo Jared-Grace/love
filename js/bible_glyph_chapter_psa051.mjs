@@ -48,7 +48,7 @@ export function bible_glyph_chapter_psa051() {
           "to",
           "Your",
           "great",
-          "compassion,",
+          "$hugging_face,",
           "blot",
           "out",
           "my",
