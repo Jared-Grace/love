@@ -433,7 +433,7 @@ export function bible_glyph_chapter_1sa03() {
           "atoned",
           "for",
           "by",
-          "sacrifice",
+          "$sacrifice",
           "or",
           "offering.",
         ],
