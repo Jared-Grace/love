@@ -670,7 +670,7 @@ export function bible_glyph_chapter_2ki11() {
           "the",
           "$priest",
           "$palm_down",
-          "guards",
+          "$clipboard+thing",
           "for",
           "the",
           "$house",
