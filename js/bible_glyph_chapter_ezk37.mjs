@@ -511,7 +511,7 @@ export function bible_glyph_chapter_ezk37() {
           "single",
           "$tree",
           "and",
-          "write",
+          "$writing_hand",
           "on",
           "it:",
           "Belonging",
