@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_exo21() {
           "of",
           "one",
           "$man_beard",
-          "injures",
+          "$fist+microbe",
           "the",
           "$ox",
           "of",
