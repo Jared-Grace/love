@@ -508,7 +508,7 @@ export function bible_glyph_chapter_1sa24() {
           "$skull+doing",
           "$dog?",
           "A",
-          "flea?",
+          "$mosquito+leg?",
         ],
       },
       {
