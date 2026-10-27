@@ -269,7 +269,7 @@ export function bible_glyph_chapter_gen35() {
         words: [
           "$heart_on_fire",
           "$eye",
-          "to",
+          "$toward",
           "Jacob",
           "again",
           "after",
