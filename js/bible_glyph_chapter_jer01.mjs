@@ -163,7 +163,7 @@ export function bible_glyph_chapter_jer01() {
           "how",
           "to",
           "$mouth,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "only",
