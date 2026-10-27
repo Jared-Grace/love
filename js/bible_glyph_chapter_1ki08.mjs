@@ -1964,7 +1964,7 @@ export function bible_glyph_chapter_1ki08() {
           "He",
           "$mouth.",
           "$no_entry",
-          "one",
+          "$one",
           "$speech",
           "has",
           "failed",
