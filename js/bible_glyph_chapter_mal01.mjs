@@ -23,7 +23,7 @@ export function bible_glyph_chapter_mal01() {
           "of",
           "the",
           "$i_am",
-          "to",
+          "$toward",
           "$wrestling+heart_on_fire",
           "$hand",
           "$proper_name$Malachi:",
