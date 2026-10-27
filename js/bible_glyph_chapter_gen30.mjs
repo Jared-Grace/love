@@ -380,7 +380,7 @@ export function bible_glyph_chapter_gen30() {
           "$night",
           "for",
           "the",
-          "mandrakes",
+          "$ginger_root+heart_red",
           "of",
           "your",
           "$son.",
