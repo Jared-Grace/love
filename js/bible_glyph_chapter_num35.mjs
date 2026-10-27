@@ -318,7 +318,7 @@ export function bible_glyph_chapter_num35() {
       {
         verse_number: 11,
         words: [
-          "designate",
+          "$footprints+lots+doing",
           "$city",
           "to",
           "serve",
