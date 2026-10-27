@@ -541,7 +541,7 @@ export function bible_glyph_chapter_deu18() {
         verse_number: 19,
         words: [
           "And",
-          "I",
+          "$me",
           "will",
           "hold",
           "accountable",
