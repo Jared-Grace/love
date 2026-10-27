@@ -306,7 +306,7 @@ export function bible_glyph_chapter_lev16() {
           "$lots",
           "as",
           "the",
-          "scapegoat",
+          "$goat+away",
           "shall",
           "be",
           "presented",
