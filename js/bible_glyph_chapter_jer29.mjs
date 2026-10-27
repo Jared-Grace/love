@@ -965,7 +965,7 @@ export function bible_glyph_chapter_jer29() {
           "will",
           "be",
           "lengthy,",
-          "build",
+          "$brick",
           "$house",
           "and",
           "settle",
