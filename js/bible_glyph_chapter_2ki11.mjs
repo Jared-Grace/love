@@ -202,7 +202,7 @@ export function bible_glyph_chapter_2ki11() {
         verse_number: 6,
         words: [
           "a",
-          "third",
+          "$third_place",
           "at",
           "the",
           "Gate",
