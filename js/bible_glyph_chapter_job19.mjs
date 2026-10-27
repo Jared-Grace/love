@@ -519,7 +519,7 @@ export function bible_glyph_chapter_job19() {
           "How",
           "my",
           "heart",
-          "yearns",
+          "$end_arrow",
           "within",
           "me!",
         ],
