@@ -509,7 +509,7 @@ export function bible_glyph_chapter_num19() {
       {
         verse_number: 16,
         words: [
-          "Anyone",
+          "$all",
           "who",
           "touches,",
           "in",
