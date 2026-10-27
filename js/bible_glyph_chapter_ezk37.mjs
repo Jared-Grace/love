@@ -162,7 +162,7 @@ export function bible_glyph_chapter_ezk37() {
           "I",
           "will",
           "$hands_giving",
-          "tendons",
+          "$thread+leg",
           "to",
           "you",
           "and",
