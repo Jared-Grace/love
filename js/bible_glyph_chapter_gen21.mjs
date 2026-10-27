@@ -87,7 +87,7 @@ export function bible_glyph_chapter_gen21() {
           "$son",
           "$laughing+proper_name",
           "was",
-          "eight",
+          "$eight",
           "$sun",
           "old,",
           "$father+map",
