@@ -410,7 +410,7 @@ export function bible_glyph_chapter_exo26() {
           "the",
           "tabernacle",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
           "standing",
           "upright.",
