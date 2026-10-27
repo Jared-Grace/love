@@ -525,7 +525,7 @@ export function bible_glyph_chapter_jer01() {
         verse_number: 18,
         words: [
           "Now",
-          "behold,",
+          "$exclamation,",
           "this",
           "$sun",
           "$me",
