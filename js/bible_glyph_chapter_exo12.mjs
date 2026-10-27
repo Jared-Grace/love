@@ -993,7 +993,7 @@ export function bible_glyph_chapter_exo12() {
           "there",
           "was",
           "loud",
-          "wailing",
+          "$loudspeaker+mouth",
           "in",
           "Egypt,",
           "for",
