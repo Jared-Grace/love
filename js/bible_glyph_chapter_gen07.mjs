@@ -421,7 +421,7 @@ export function bible_glyph_chapter_gen07() {
           "The",
           "male",
           "and",
-          "female",
+          "$female_sign",
           "of",
           "every",
           "living",
