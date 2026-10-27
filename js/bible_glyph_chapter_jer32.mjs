@@ -1465,7 +1465,7 @@ export function bible_glyph_chapter_jer32() {
           "I",
           "have",
           "$footprints",
-          "all",
+          "$all",
           "this",
           "great",
           "$thumbs_down",
