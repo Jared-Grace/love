@@ -569,7 +569,7 @@ export function bible_glyph_chapter_2ch20() {
           "of",
           "the",
           "$national_park",
-          "facing",
+          "$face",
           "the",
           "$wilderness",
           "of",
