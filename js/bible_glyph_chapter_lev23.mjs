@@ -913,7 +913,7 @@ export function bible_glyph_chapter_lev23() {
       {
         verse_number: 32,
         words: [
-          "It",
+          "$pointing_back",
           "will",
           "be",
           "a",
