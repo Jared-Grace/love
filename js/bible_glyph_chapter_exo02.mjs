@@ -110,7 +110,7 @@ export function bible_glyph_chapter_exo02() {
           "And",
           "his",
           "sister",
-          "stood",
+          "$person+round_pushpin+anchor+doing",
           "at",
           "a",
           "distance",
