@@ -335,7 +335,7 @@ export function bible_glyph_chapter_exo26() {
           "down",
           "over",
           "the",
-          "back",
+          "$last_track",
           "of",
           "the",
           "tabernacle.",
