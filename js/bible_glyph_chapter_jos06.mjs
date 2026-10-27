@@ -292,7 +292,7 @@ export function bible_glyph_chapter_jos06() {
           "guard",
           "$walking",
           "the",
-          "ark,",
+          "$ark,",
           "while",
           "the",
           "horns",
