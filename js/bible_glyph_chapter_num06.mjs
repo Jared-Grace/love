@@ -452,7 +452,7 @@ export function bible_glyph_chapter_num06() {
           "burnt",
           "offering,",
           "an",
-          "unblemished",
+          "$full_moon+describing",
           "year",
           "old",
           "female",
