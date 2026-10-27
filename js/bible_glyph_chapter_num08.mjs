@@ -219,7 +219,7 @@ export function bible_glyph_chapter_num08() {
           "and",
           "assemble",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "$son",
