@@ -832,7 +832,7 @@ export function bible_glyph_chapter_exo25() {
           "so",
           "for",
           "the",
-          "six",
+          "$six",
           "branches",
           "coming",
           "$tray_out",
