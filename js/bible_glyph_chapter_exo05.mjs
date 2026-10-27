@@ -218,7 +218,7 @@ export function bible_glyph_chapter_exo05() {
           "$family",
           "for",
           "making",
-          "bricks,",
+          "$white_circle+brick,",
           "as",
           "before.",
           "They",
