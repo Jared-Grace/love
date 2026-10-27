@@ -71,7 +71,7 @@ export function bible_glyph_chapter_psa121() {
       {
         verse_number: 4,
         words: [
-          "Behold,",
+          "$exclamation,",
           "the",
           "Protector",
           "of",
