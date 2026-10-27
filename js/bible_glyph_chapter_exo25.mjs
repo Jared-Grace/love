@@ -278,7 +278,7 @@ export function bible_glyph_chapter_exo25() {
         words: [
           "And",
           "$hammer+doing",
-          "poles",
+          "$one+person",
           "of",
           "acacia",
           "$tree",
