@@ -21,7 +21,7 @@ export function bible_glyph_chapter_2ki09() {
           "$heart_on_fire+rescue",
           "the",
           "$megaphone",
-          "summoned",
+          "$waving_hand",
           "one",
           "of",
           "the",
