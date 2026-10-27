@@ -754,7 +754,7 @@ export function bible_glyph_chapter_jdg07() {
           "torches",
           "in",
           "their",
-          "left",
+          "$hand+away",
           "$hand",
           "and",
           "the",
