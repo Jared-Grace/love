@@ -979,7 +979,7 @@ export function bible_glyph_chapter_ezk37() {
           "will",
           "$lightbulb",
           "$pointing",
-          "I",
+          "$me",
           "the",
           "$i_am",
           "$sparkle+doing",
