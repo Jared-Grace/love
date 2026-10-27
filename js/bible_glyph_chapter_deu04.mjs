@@ -1313,7 +1313,7 @@ export function bible_glyph_chapter_deu04() {
           "the",
           "$sky",
           "to",
-          "discipline",
+          "$teacher+exclamation+doing",
           "you,",
           "and",
           "on",
