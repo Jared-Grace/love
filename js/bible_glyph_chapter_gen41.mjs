@@ -463,7 +463,7 @@ export function bible_glyph_chapter_gen41() {
           "$i_am+plus,",
           '"In',
           "my",
-          "dream",
+          "$dream",
           "I",
           "was",
           "standing",
