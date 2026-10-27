@@ -686,7 +686,7 @@ export function bible_glyph_chapter_2ch06() {
           "$speech",
           "You",
           "would",
-          "put",
+          "$palm_down",
           "Your",
           "$name_tag,",
           "so",
