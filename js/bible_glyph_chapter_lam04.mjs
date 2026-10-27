@@ -213,7 +213,7 @@ export function bible_glyph_chapter_lam04() {
           "But",
           "now",
           "their",
-          "appearance",
+          "$person+dotted_line_face",
           "is",
           "blacker",
           "than",
