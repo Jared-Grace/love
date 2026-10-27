@@ -398,7 +398,7 @@ export function bible_glyph_chapter_exo16() {
           "$mouth",
           "them,",
           "At",
-          "twilight",
+          "$sunset",
           "you",
           "will",
           "$eating",
