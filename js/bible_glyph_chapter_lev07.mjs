@@ -559,7 +559,7 @@ export function bible_glyph_chapter_lev07() {
           "$person_other",
           "touches",
           "anything",
-          "unclean,",
+          "$soap+no_entry,",
           "whether",
           "$person",
           "uncleanness",
