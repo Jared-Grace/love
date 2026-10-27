@@ -341,7 +341,7 @@ export function bible_glyph_chapter_jdg06() {
           "$proper_name$Gideon",
           "was",
           "threshing",
-          "wheat",
+          "$wheat",
           "in",
           "a",
           "winepress",
