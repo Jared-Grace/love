@@ -740,7 +740,7 @@ export function bible_glyph_chapter_lev08() {
           "ordination",
           "offering,",
           "a",
-          "pleasing",
+          "$nose+thumbs_up",
           "$nose,",
           "a",
           "food",
