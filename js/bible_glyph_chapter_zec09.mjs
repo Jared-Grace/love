@@ -259,7 +259,7 @@ export function bible_glyph_chapter_zec09() {
           "overrun",
           "My",
           "people,",
-          "for",
+          "$pointing",
           "now",
           "I",
           "$eye",
