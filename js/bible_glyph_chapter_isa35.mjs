@@ -313,7 +313,7 @@ export function bible_glyph_chapter_isa35() {
           "and",
           "sighing",
           "will",
-          "flee.",
+          "$running+dashing_away.",
         ],
       },
     ],
