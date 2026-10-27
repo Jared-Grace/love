@@ -640,7 +640,7 @@ export function bible_glyph_chapter_num35() {
           "But",
           "$traffic_light",
           "anyone",
-          "suddenly",
+          "$eye+lightning",
           "pushes",
           "a",
           "person",
