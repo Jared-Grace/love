@@ -685,7 +685,7 @@ export function bible_glyph_chapter_lev08() {
           "them",
           "on",
           "the",
-          "fat",
+          "$bacon",
           "portions",
           "and",
           "on",
