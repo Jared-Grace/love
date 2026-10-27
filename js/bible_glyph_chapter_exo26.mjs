@@ -853,7 +853,7 @@ export function bible_glyph_chapter_exo26() {
           "and",
           "the",
           "lampstand",
-          "opposite",
+          "$face+toward",
           "the",
           "table",
           "on",
