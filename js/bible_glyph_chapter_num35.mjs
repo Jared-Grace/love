@@ -142,7 +142,7 @@ export function bible_glyph_chapter_num35() {
           "the",
           "$compass+right_arrow,",
           "two",
-          "thousand",
+          "$ten+all",
           "on",
           "the",
           "south,",
