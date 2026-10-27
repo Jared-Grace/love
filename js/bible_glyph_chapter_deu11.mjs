@@ -127,7 +127,7 @@ export function bible_glyph_chapter_deu11() {
           "the",
           "Red",
           "$sea",
-          "engulf",
+          "$water_wave+up_arrow+doing",
           "them",
           "as",
           "they",
