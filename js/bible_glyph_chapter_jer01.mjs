@@ -313,7 +313,7 @@ export function bible_glyph_chapter_jer01() {
           "branch",
           "of",
           "an",
-          "almond",
+          "$tree+blossom+first_place",
           "tree.",
         ],
       },
