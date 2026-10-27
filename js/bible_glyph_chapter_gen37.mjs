@@ -115,7 +115,7 @@ export function bible_glyph_chapter_gen37() {
           "Joseph's",
           "$brother",
           "$eye",
-          "that",
+          "$pointing",
           "their",
           "$father",
           "$heart_red+doing",
