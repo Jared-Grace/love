@@ -461,7 +461,7 @@ export function bible_glyph_chapter_deu15() {
           "floor,",
           "and",
           "your",
-          "winepress.",
+          "$grapes+foot.",
           "You",
           "shall",
           "$hands_giving",
