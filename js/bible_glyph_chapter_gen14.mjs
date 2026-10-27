@@ -148,7 +148,7 @@ export function bible_glyph_chapter_gen14() {
           "of",
           "$proper_name$Seir",
           "as",
-          "far",
+          "$finish",
           "as",
           "El-paran,",
           "which",
