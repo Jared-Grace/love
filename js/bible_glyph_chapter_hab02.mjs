@@ -80,7 +80,7 @@ export function bible_glyph_chapter_hab02() {
           "For",
           "the",
           "vision",
-          "awaits",
+          "$repeat",
           "an",
           "appointed",
           "time;",
