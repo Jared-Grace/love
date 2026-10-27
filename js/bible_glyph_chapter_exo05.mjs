@@ -677,7 +677,7 @@ export function bible_glyph_chapter_exo05() {
           "on",
           "this",
           "$family?",
-          "Why",
+          "$flashlight+question",
           "is",
           "it",
           "that",
