@@ -126,7 +126,7 @@ export function bible_glyph_chapter_mal03() {
           "they",
           "will",
           "present",
-          "offerings",
+          "$grain_offering",
           "to",
           "the",
           "$i_am",
