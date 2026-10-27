@@ -78,7 +78,7 @@ export function bible_glyph_chapter_1sa24() {
           "to",
           "the",
           "$sheep",
-          "along",
+          "$pointing_up",
           "the",
           "$road,",
           "where",
