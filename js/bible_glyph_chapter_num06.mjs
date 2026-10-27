@@ -573,7 +573,7 @@ export function bible_glyph_chapter_num06() {
           "$door",
           "to",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting,",
           "the",
