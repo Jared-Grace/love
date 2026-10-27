@@ -147,7 +147,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "She",
           "$speech,",
-          "Who",
+          "$person+question",
           "would",
           "have",
           "told",
