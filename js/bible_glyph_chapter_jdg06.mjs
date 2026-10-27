@@ -106,7 +106,7 @@ export function bible_glyph_chapter_jdg06() {
           "and",
           "destroyed",
           "the",
-          "produce",
+          "$earth+fruit",
           "of",
           "the",
           "$earth",
