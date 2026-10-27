@@ -598,7 +598,7 @@ export function bible_glyph_chapter_hos02() {
           "and",
           "$sword",
           "and",
-          "battle",
+          "$crossed_swords",
           "in",
           "the",
           "$earth,",
