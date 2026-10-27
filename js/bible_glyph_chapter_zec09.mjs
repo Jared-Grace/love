@@ -297,7 +297,7 @@ export function bible_glyph_chapter_zec09() {
           "$persevering_face+describing",
           "and",
           "riding",
-          "on",
+          "$pointing_up",
           "a",
           "donkey,",
           "on",
