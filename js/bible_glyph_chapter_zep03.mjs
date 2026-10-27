@@ -530,7 +530,7 @@ export function bible_glyph_chapter_zep03() {
           "is",
           "$might+person",
           "to",
-          "save.",
+          "$rescue.",
           "He",
           "will",
           "rejoice",
