@@ -18,7 +18,7 @@ export function bible_glyph_chapter_num24() {
           "when",
           "$foreigner+proper_name",
           "$eye",
-          "that",
+          "$pointing",
           "it",
           "pleased",
           "the",
