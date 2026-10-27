@@ -559,7 +559,7 @@ export function bible_glyph_chapter_2ki05() {
           "his",
           "attendants",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "$man_beard",
           "of",
