@@ -246,7 +246,7 @@ export function bible_glyph_chapter_1ki17() {
           "$footprints",
           "at",
           "the",
-          "gate",
+          "$door",
           "of",
           "the",
           "$city,",
