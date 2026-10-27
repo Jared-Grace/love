@@ -331,7 +331,7 @@ export function bible_glyph_chapter_exo30() {
           "so",
           "that",
           "$no_entry",
-          "plague",
+          "$fist+microbe+thing",
           "will",
           "come",
           "upon",
