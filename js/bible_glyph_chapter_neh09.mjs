@@ -308,7 +308,7 @@ export function bible_glyph_chapter_neh09() {
           "kept",
           "Your",
           "$speech,",
-          "because",
+          "$pointing",
           "You",
           "are",
           "$ruler.",
