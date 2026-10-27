@@ -439,7 +439,7 @@ export function bible_glyph_chapter_isa40() {
       {
         verse_number: 15,
         words: [
-          "Surely",
+          "$exclamation",
           "the",
           "$map",
           "are",
