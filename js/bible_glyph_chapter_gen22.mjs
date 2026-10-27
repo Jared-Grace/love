@@ -398,7 +398,7 @@ export function bible_glyph_chapter_gen22() {
           "behind",
           "him",
           "a",
-          "ram",
+          "$ram",
           "in",
           "the",
           "thicket,",
