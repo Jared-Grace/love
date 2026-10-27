@@ -912,7 +912,7 @@ export function bible_glyph_chapter_2ki03() {
           "he",
           "$hand_receiving",
           "his",
-          "firstborn",
+          "$first_place+baby",
           "$son,",
           "who",
           "was",
