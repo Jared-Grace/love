@@ -414,7 +414,7 @@ export function bible_glyph_chapter_mic05() {
           "$scissors",
           "off",
           "the",
-          "carved",
+          "$carpentry_saw+moai",
           "images",
           "and",
           "sacred",
