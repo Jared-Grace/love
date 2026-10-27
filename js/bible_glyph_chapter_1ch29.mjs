@@ -796,7 +796,7 @@ export function bible_glyph_chapter_1ch29() {
           "other",
           "sacrifices",
           "in",
-          "abundance",
+          "$multiply+thing",
           "for",
           "all",
           "$wrestling+heart_on_fire.",
