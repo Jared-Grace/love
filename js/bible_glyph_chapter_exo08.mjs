@@ -651,7 +651,7 @@ export function bible_glyph_chapter_exo08() {
         verse_number: 21,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "you",
           "will",
           "not",
