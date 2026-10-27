@@ -135,7 +135,7 @@ export function bible_glyph_chapter_pro08() {
           "$vomiting",
           "to",
           "my",
-          "lips.",
+          "$kiss_mark.",
         ],
       },
       {
