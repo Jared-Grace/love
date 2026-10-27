@@ -894,7 +894,7 @@ export function bible_glyph_chapter_num14() {
           "Your",
           "bodies",
           "will",
-          "fall",
+          "$person+pointing_down",
           "in",
           "$flashlight",
           "$wilderness,",
