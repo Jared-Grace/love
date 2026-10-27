@@ -175,7 +175,7 @@ export function bible_glyph_chapter_ecc01() {
           "$no_entry",
           "the",
           "ear",
-          "content",
+          "$battery",
           "with",
           "$ear.",
         ],
