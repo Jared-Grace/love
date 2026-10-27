@@ -176,7 +176,7 @@ export function bible_glyph_chapter_2ki05() {
           "$ten",
           "$flying_disc",
           "of",
-          "silver,",
+          "$silver,",
           "six",
           "thousand",
           "shekels",
