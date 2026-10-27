@@ -828,7 +828,7 @@ export function bible_glyph_chapter_1sa15() {
         words: [
           "$watch",
           "therefore,",
-          "please",
+          "$pleading",
           "$lifting",
           "my",
           "$bow",
