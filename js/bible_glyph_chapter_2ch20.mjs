@@ -919,7 +919,7 @@ export function bible_glyph_chapter_2ch20() {
           "they",
           "found",
           "an",
-          "abundance",
+          "$multiply+thing",
           "of",
           "goods",
           "and",
