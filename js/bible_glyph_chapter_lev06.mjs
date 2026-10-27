@@ -99,7 +99,7 @@ export function bible_glyph_chapter_lev06() {
           "him,",
           "$shuffle",
           "the",
-          "lost",
+          "$wilted_flower+thing",
           "property",
           "he",
           "found,",
