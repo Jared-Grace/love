@@ -37,7 +37,7 @@ export function bible_glyph_chapter_nam03() {
           "$voice",
           "of",
           "the",
-          "whip,",
+          "$thread+collision,",
           "the",
           "$voice",
           "of",
