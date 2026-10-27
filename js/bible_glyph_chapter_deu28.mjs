@@ -1965,7 +1965,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "plague",
           "$no_entry",
-          "recorded",
+          "$writing_hand",
           "in",
           "this",
           "Book",
