@@ -236,7 +236,7 @@ export function bible_glyph_chapter_1sa15() {
           "$proper_name$Shur,",
           "which",
           "is",
-          "east",
+          "$face",
           "of",
           "$clamp+proper_name.",
         ],
