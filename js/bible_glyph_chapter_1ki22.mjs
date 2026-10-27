@@ -1222,7 +1222,7 @@ export function bible_glyph_chapter_1ki22() {
         words: [
           "And",
           "the",
-          "chariot",
+          "$chariot",
           "was",
           "washed",
           "at",
