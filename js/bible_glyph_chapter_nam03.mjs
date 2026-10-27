@@ -538,7 +538,7 @@ export function bible_glyph_chapter_nam03() {
           "news",
           "of",
           "you",
-          "applaud",
+          "$trumpet+doing",
           "your",
           "downfall,",
           "for",
