@@ -308,7 +308,7 @@ export function bible_glyph_chapter_ezk34() {
           "For",
           "I",
           "will",
-          "deliver",
+          "$hand+rescue",
           "My",
           "$sheep",
           "from",
