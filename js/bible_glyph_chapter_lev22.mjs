@@ -751,7 +751,7 @@ export function bible_glyph_chapter_lev22() {
           "are",
           "bruised,",
           "$hammer+down_arrow+doing,",
-          "torn,",
+          "$broken_chain+hand+doing,",
           "or",
           "cut.",
           "You",
