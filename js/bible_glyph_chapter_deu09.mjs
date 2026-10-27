@@ -927,7 +927,7 @@ export function bible_glyph_chapter_deu09() {
           "redeemed",
           "through",
           "Your",
-          "greatness",
+          "$top+thing",
           "and",
           "brought",
           "out",
