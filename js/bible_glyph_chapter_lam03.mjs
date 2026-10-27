@@ -848,7 +848,7 @@ export function bible_glyph_chapter_lam03() {
           "$eyes",
           "$pointing_up",
           "the",
-          "destruction",
+          "$broken_chain+thing",
           "of",
           "the",
           "$woman",
