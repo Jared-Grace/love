@@ -490,7 +490,7 @@ export function bible_glyph_chapter_exo23() {
           "$drum",
           "a",
           "$year",
-          "all",
+          "$all",
           "your",
           "males",
           "are",
