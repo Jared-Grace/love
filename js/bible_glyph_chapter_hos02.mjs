@@ -295,7 +295,7 @@ export function bible_glyph_chapter_hos02() {
           "I",
           "will",
           "take",
-          "away",
+          "$hand+rescue",
           "My",
           "wool",
           "and",
