@@ -836,7 +836,7 @@ export function bible_glyph_chapter_2ki06() {
           "and",
           "a",
           "quarter",
-          "cab",
+          "$wheat+jar",
           "of",
           "doves",
           "dung",
