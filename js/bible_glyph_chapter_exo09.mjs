@@ -716,7 +716,7 @@ export function bible_glyph_chapter_exo09() {
           "$i_am",
           "rained",
           "down",
-          "hail",
+          "$ice",
           "upon",
           "the",
           "$earth",
