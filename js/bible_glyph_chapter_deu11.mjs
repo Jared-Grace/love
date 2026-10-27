@@ -68,7 +68,7 @@ export function bible_glyph_chapter_deu11() {
           "your",
           "$heart_on_fire,",
           "His",
-          "greatness,",
+          "$top+thing,",
           "His",
           "mighty",
           "$hand",
