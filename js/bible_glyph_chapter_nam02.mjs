@@ -189,7 +189,7 @@ export function bible_glyph_chapter_nam02() {
           "away;",
           "her",
           "maidservants",
-          "moan",
+          "$horse+right_arrow+doing",
           "$voice",
           "doves",
           "and",
