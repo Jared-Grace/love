@@ -145,7 +145,7 @@ export function bible_glyph_chapter_lam02() {
           "has",
           "bent",
           "His",
-          "bow",
+          "$bow+wood",
           "like",
           "an",
           "$enemy;",
