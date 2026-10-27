@@ -16,7 +16,7 @@ export function bible_glyph_chapter_1sa17() {
           "Now",
           "the",
           "Philistines",
-          "gathered",
+          "$crowd+doing",
           "their",
           "forces",
           "for",
