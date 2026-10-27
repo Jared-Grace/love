@@ -377,7 +377,7 @@ export function bible_glyph_chapter_lev16() {
           "from",
           "the",
           "$altar",
-          "before",
+          "$face",
           "the",
           "$i_am,",
           "and",
