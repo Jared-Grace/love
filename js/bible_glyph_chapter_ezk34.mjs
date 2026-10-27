@@ -57,7 +57,7 @@ export function bible_glyph_chapter_ezk34() {
           "shepherds",
           "of",
           "$wrestling+heart_on_fire",
-          "who",
+          "$back+flashlight",
           "only",
           "feed",
           "$pointing_down!",
