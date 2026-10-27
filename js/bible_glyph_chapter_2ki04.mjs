@@ -893,7 +893,7 @@ export function bible_glyph_chapter_2ki04() {
           "$speech,",
           "Did",
           "I",
-          "ask",
+          "$question",
           "you",
           "for",
           "a",
