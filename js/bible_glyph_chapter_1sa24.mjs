@@ -167,7 +167,7 @@ export function bible_glyph_chapter_1sa24() {
       {
         verse_number: 5,
         words: [
-          "Afterward,",
+          "$next_track,",
           "$two_hearts+proper_name's",
           "$heart_organ",
           "troubled",
