@@ -904,7 +904,7 @@ export function bible_glyph_chapter_2ki05() {
           "along",
           "with",
           "two",
-          "sets",
+          "$clockwise_arrows+thing",
           "of",
           "clothing,",
           "and",
