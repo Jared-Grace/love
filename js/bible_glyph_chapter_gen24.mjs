@@ -1840,7 +1840,7 @@ export function bible_glyph_chapter_gen24() {
           "girls",
           "got",
           "ready,",
-          "mounted",
+          "$horse_racing+doing",
           "the",
           "camels,",
           "and",
