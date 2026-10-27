@@ -304,7 +304,7 @@ export function bible_glyph_chapter_mic02() {
           "your",
           "place",
           "of",
-          "rest,",
+          "$seat+thing,",
           "because",
           "its",
           "defilement",
