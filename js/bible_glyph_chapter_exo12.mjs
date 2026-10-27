@@ -1199,7 +1199,7 @@ export function bible_glyph_chapter_exo12() {
           "600,000",
           "men",
           "on",
-          "foot,",
+          "$foot+doer,",
           "besides",
           "women",
           "and",
