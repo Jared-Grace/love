@@ -220,7 +220,7 @@ export function bible_glyph_chapter_1ki02() {
           "belt",
           "around",
           "his",
-          "waist",
+          "$briefs+round_pushpin",
           "and",
           "on",
           "the",
