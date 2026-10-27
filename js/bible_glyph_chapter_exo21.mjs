@@ -994,7 +994,7 @@ export function bible_glyph_chapter_exo21() {
       {
         verse_number: 35,
         words: [
-          "If",
+          "$pointing",
           "the",
           "$ox",
           "of",
