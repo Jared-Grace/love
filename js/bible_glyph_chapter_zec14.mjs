@@ -39,7 +39,7 @@ export function bible_glyph_chapter_zec14() {
           "For",
           "I",
           "will",
-          "gather",
+          "$crowd+doing",
           "all",
           "the",
           "$map",
