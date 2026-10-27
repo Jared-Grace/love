@@ -474,6 +474,16 @@ meaning. `$fn bible_bdb_names_meanings_cache` holds the join.
 for Joshua, with no Yahweh in it — and it is keyed by English spelling, not by
 number. Kept as a fallback, not used.
 
+**New Testament names: Strong's Greek dictionary, joined on to BDB.** Thayer's
+(1889) is no longer among CrossWire's modules, and Strong's does the job better
+here anyway. For a Greek or Latin name it often states the meaning itself
+("Pilatus: close-pressed, i.e. firm"). For a name from Hebrew it gives the Hebrew
+Strong's number, which leads straight to BDB. The 1890 text is public domain.
+The copy on disk is Open Scriptures' JSON (CC BY-SA), and morphgnt publishes a CC0
+XML of the same text if share-alike ever matters. `$fn bible_greek_name_meanings`
+does the join. Abbott-Smith (1922, public domain, also on CrossWire with Strong's
+numbers) is a better lexicon, but it says little about what names mean.
+
 ## A recorded reading has two licences, not one — read 2026-08-23
 
 A generated audio file is downstream of **the words** and **the engine that spoke
