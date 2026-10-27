@@ -703,7 +703,7 @@ export function bible_glyph_chapter_jer18() {
           "O",
           "$i_am,",
           "$lightbulb",
-          "all",
+          "$all",
           "their",
           "$skull",
           "plots",
