@@ -474,7 +474,7 @@ export function bible_glyph_chapter_pro16() {
           "the",
           "wise",
           "man",
-          "instructs",
+          "$nerd_face",
           "his",
           "mouth",
           "and",
