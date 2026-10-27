@@ -300,7 +300,7 @@ export function bible_glyph_chapter_num14() {
           "$witness+crowd",
           "$speech",
           "to",
-          "stone",
+          "$rock+right_arrow+doing",
           "them",
           "with",
           "stones.",
