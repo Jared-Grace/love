@@ -403,7 +403,7 @@ export function bible_glyph_chapter_neh01() {
           "Give",
           "Your",
           "$kneeling",
-          "success",
+          "$chart_increasing",
           "this",
           "$sun,",
           "and",
