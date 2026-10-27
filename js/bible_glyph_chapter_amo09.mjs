@@ -556,7 +556,7 @@ export function bible_glyph_chapter_amo09() {
           "in",
           "their",
           "own",
-          "land,",
+          "$brown_square,",
           "$no_entry",
           "again",
           "to",
