@@ -1196,7 +1196,7 @@ export function bible_glyph_chapter_jer31() {
           "for",
           "$light",
           "by",
-          "day,",
+          "$sun+manner,",
           "who",
           "sets",
           "in",
