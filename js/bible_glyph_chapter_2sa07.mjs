@@ -266,7 +266,7 @@ export function bible_glyph_chapter_2sa07() {
           "been",
           "with",
           "you",
-          "wherever",
+          "$back+flashlight",
           "you",
           "have",
           "$walking,",
