@@ -692,7 +692,7 @@ export function bible_glyph_chapter_gen21() {
           "has",
           "$hammer+doing",
           "$flashlight.",
-          "You",
+          "$you",
           "did",
           "$no_entry",
           "tell",
