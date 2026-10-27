@@ -827,7 +827,7 @@ export function bible_glyph_chapter_num20() {
           "$eyes",
           "of",
           "the",
-          "whole",
+          "$all",
           "congregation.",
         ],
       },
