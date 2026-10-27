@@ -1062,7 +1062,7 @@ export function bible_glyph_chapter_deu11() {
           "the",
           "$scales+thing",
           "$back+flashlight",
-          "I",
+          "$me",
           "am",
           "$hands_giving",
           "before",
