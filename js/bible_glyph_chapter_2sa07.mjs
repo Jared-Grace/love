@@ -593,7 +593,7 @@ export function bible_glyph_chapter_2sa07() {
           "And",
           "as",
           "if",
-          "this",
+          "$flashlight",
           "was",
           "a",
           "$baby+down_arrow+doing",
