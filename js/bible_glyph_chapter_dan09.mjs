@@ -700,7 +700,7 @@ export function bible_glyph_chapter_dan09() {
           "and",
           "Your",
           "$family",
-          "bear",
+          "$waving_hand",
           "Your",
           "$name_tag.",
         ],
