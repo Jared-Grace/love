@@ -106,7 +106,7 @@ export function bible_glyph_chapter_psa008() {
           "$son",
           "of",
           "$person",
-          "that",
+          "$pointing",
           "You",
           "care",
           "for",
