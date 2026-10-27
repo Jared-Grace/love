@@ -161,7 +161,7 @@ export function bible_glyph_chapter_2sa06() {
           "stringed",
           "instruments,",
           "$tambourine,",
-          "sistrums",
+          "$bell+up_down_arrow",
           "and",
           "cymbals.",
         ],
