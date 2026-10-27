@@ -836,7 +836,7 @@ export function bible_glyph_chapter_lev13() {
           "out",
           "in",
           "the",
-          "burn.",
+          "$fire+adhesive_bandage.",
           "The",
           "$priest",
           "must",
