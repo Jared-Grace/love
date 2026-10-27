@@ -122,7 +122,7 @@ export function bible_glyph_chapter_pro08() {
       {
         verse_number: 7,
         words: [
-          "For",
+          "$pointing",
           "my",
           "mouth",
           "will",
