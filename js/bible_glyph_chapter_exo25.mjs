@@ -976,7 +976,7 @@ export function bible_glyph_chapter_exo25() {
         words: [
           "Of",
           "a",
-          "talent",
+          "$flying_disc",
           "of",
           "pure",
           "$gold",
