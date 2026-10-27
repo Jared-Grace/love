@@ -584,7 +584,7 @@ export function bible_glyph_chapter_num08() {
           "the",
           "$handshake",
           "everything",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "had",
           "commanded",
