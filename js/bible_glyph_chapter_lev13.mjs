@@ -1935,7 +1935,7 @@ export function bible_glyph_chapter_lev13() {
           "$yarn+plus,",
           "$shuffle",
           "any",
-          "leather",
+          "$cow_face+coat",
           "$toolbox,",
           "for",
           "pronouncing",
