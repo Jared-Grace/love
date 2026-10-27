@@ -987,7 +987,7 @@ export function bible_glyph_chapter_exo34() {
           "were",
           "$fear+doing",
           "to",
-          "approach",
+          "$walking+toward",
           "him.",
         ],
       },
