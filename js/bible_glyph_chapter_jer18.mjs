@@ -115,7 +115,7 @@ export function bible_glyph_chapter_jer18() {
           "of",
           "the",
           "$i_am",
-          "came",
+          "$link",
           "to",
           "me,",
           "$speech,",
