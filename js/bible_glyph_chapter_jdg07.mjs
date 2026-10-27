@@ -48,7 +48,7 @@ export function bible_glyph_chapter_jdg07() {
           "Moreh",
           "in",
           "the",
-          "valley.",
+          "$valley.",
         ],
       },
       {
