@@ -351,7 +351,7 @@ export function bible_glyph_chapter_exo12() {
           "both",
           "$person",
           "and",
-          "beast,",
+          "$paw_prints,",
           "and",
           "I",
           "will",
