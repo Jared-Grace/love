@@ -106,7 +106,7 @@ export function bible_glyph_chapter_exo23() {
       {
         verse_number: 5,
         words: [
-          "If",
+          "$pointing",
           "you",
           "$eye",
           "the",
