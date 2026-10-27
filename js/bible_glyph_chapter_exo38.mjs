@@ -130,7 +130,7 @@ export function bible_glyph_chapter_exo38() {
           "at",
           "the",
           "$four",
-          "corners",
+          "$end_arrow+straight_ruler",
           "of",
           "the",
           "$bronze",
