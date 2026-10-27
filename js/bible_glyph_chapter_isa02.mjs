@@ -421,7 +421,7 @@ export function bible_glyph_chapter_isa02() {
           "$mountain",
           "and",
           "$pointing_up",
-          "all",
+          "$all",
           "the",
           "high",
           "hills;",
