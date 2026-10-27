@@ -181,7 +181,7 @@ export function bible_glyph_chapter_2ki17() {
           "$king",
           "of",
           "$proper_name$Assyria",
-          "captured",
+          "$net+doing",
           "$guard+proper_name",
           "and",
           "carried",
