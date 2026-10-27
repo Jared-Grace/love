@@ -979,7 +979,7 @@ export function bible_glyph_chapter_lev08() {
           "and",
           "$son",
           "$hammer+doing",
-          "everything",
+          "$all",
           "$speech",
           "$i_am",
           "had",
