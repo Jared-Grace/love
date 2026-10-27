@@ -1363,7 +1363,7 @@ export function bible_glyph_chapter_1sa25() {
           "be",
           "the",
           "$i_am,",
-          "who",
+          "$back+flashlight",
           "has",
           "pleaded",
           "the",
