@@ -780,7 +780,7 @@ export function bible_glyph_chapter_lev22() {
           "foreigner",
           "shall",
           "you",
-          "present",
+          "$magnet+doing",
           "the",
           "$bread",
           "of",
