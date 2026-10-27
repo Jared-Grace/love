@@ -195,7 +195,7 @@ export function bible_glyph_chapter_exo24() {
           "and",
           "the",
           "other",
-          "half",
+          "$divide",
           "of",
           "the",
           "$blood",
