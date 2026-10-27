@@ -712,7 +712,7 @@ export function bible_glyph_chapter_deu14() {
           "the",
           "$handshake",
           "-",
-          "because",
+          "$pointing",
           "he",
           "has",
           "no",
