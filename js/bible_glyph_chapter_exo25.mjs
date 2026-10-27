@@ -783,7 +783,7 @@ export function bible_glyph_chapter_exo25() {
           "lampstand",
           "out",
           "of",
-          "one",
+          "$one",
           "side",
           "and",
           "$three",
