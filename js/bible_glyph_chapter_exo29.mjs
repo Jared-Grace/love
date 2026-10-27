@@ -1291,7 +1291,7 @@ export function bible_glyph_chapter_exo29() {
           "$tent",
           "of",
           "$alarm_clock",
-          "before",
+          "$face",
           "$i_am,",
           "where",
           "I",
