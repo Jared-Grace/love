@@ -912,7 +912,7 @@ export function bible_glyph_chapter_exo29() {
         words: [
           "The",
           "$son",
-          "who",
+          "$back+flashlight",
           "succeeds",
           "him",
           "as",
