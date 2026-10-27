@@ -222,7 +222,7 @@ export function bible_glyph_chapter_deu18() {
           "$brother",
           "$handshake",
           "who",
-          "stand",
+          "$person+round_pushpin",
           "there",
           "before",
           "the",
