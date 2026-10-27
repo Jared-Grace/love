@@ -204,7 +204,7 @@ export function bible_glyph_chapter_deu31() {
         words: [
           "Then",
           "$fishing_pole+proper_name",
-          "called",
+          "$waving_hand",
           "$i_am+rescue",
           "and",
           "$speech",
