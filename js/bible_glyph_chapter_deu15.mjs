@@ -251,7 +251,7 @@ export function bible_glyph_chapter_deu15() {
           "freely",
           "loan",
           "him",
-          "whatever",
+          "$check+all",
           "he",
           "needs.",
         ],
