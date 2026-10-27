@@ -177,7 +177,7 @@ export function bible_glyph_chapter_gen41() {
           "up",
           "the",
           "$seven",
-          "plump,",
+          "$meat+describing,",
           "ripe",
           "ones.",
           "Then",
