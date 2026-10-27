@@ -178,7 +178,7 @@ export function bible_glyph_chapter_mic06() {
           "$i_am",
           "when",
           "I",
-          "bow",
+          "$curving_up+person+doing",
           "before",
           "the",
           "$heart_on_fire",
