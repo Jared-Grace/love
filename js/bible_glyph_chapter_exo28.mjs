@@ -366,7 +366,7 @@ export function bible_glyph_chapter_exo28() {
           "$lifting",
           "their",
           "$name_tag",
-          "before",
+          "$face",
           "$i_am",
           "$pointing_up",
           "his",
