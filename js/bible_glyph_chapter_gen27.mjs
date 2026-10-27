@@ -1125,7 +1125,7 @@ export function bible_glyph_chapter_gen27() {
           "$father?",
           "$speech+thumbs_up",
           "me",
-          "too,",
+          "$plus,",
           "O",
           "my",
           '$father!"',
