@@ -270,7 +270,7 @@ export function bible_glyph_chapter_deu09() {
           "and",
           "$no_entry",
           "$reminder_ribbon+no_entry",
-          "how",
+          "$back+flashlight",
           "you",
           "provoked",
           "$i_am",
