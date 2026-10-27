@@ -861,7 +861,7 @@ export function bible_glyph_chapter_lev25() {
           "right",
           "of",
           "redemption",
-          "until",
+          "$finish",
           "a",
           "full",
           "$year",
