@@ -233,7 +233,7 @@ export function bible_glyph_chapter_num08() {
           "You",
           "are",
           "to",
-          "present",
+          "$magnet+doing",
           "the",
           "$handshake",
           "before",
