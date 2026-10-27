@@ -218,7 +218,7 @@ export function bible_glyph_chapter_deu09() {
           "the",
           "$speech",
           "$i_am",
-          "swore",
+          "$raised_back_of_hand+doing",
           "to",
           "your",
           "$father,",
