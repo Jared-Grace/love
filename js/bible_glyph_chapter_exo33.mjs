@@ -383,7 +383,7 @@ export function bible_glyph_chapter_exo33() {
           "$proper_name$Moses",
           "would",
           "$turn_back",
-          "to",
+          "$toward",
           "the",
           "camp,",
           "but",
