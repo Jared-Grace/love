@@ -374,7 +374,7 @@ export function bible_glyph_chapter_gen07() {
           "them",
           "every",
           "kind",
-          "of",
+          "$seed+repeat",
           "wild",
           "$sprout",
           "and",
