@@ -1356,7 +1356,7 @@ export function bible_glyph_chapter_1ki02() {
           "on",
           "your",
           "own",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
