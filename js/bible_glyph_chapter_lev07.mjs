@@ -404,7 +404,7 @@ export function bible_glyph_chapter_lev07() {
           "is",
           "a",
           "$saluting_face",
-          "or",
+          "$shuffle",
           "a",
           "freewill",
           "offering,",
