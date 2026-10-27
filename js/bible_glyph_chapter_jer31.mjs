@@ -1385,7 +1385,7 @@ export function bible_glyph_chapter_jer31() {
           "of",
           "the",
           "Horse",
-          "Gate,",
+          "$gate,",
           "will",
           "be",
           "$sparkle+thing",
