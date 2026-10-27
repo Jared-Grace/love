@@ -568,7 +568,7 @@ export function bible_glyph_chapter_deu15() {
           "And",
           "$hammer+doing",
           "your",
-          "maidservant",
+          "$broom",
           "the",
           "same",
           "way.",
