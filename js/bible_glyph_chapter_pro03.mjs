@@ -161,7 +161,7 @@ export function bible_glyph_chapter_pro03() {
           "This",
           "will",
           "bring",
-          "healing",
+          "$bandage+thing",
           "to",
           "your",
           "body",
