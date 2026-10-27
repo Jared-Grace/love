@@ -948,7 +948,7 @@ export function bible_glyph_chapter_1sa02() {
           "$sacrifice",
           "and",
           "offering",
-          "that",
+          "$back+flashlight",
           "I",
           "have",
           "prescribed",
