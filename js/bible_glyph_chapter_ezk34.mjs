@@ -382,7 +382,7 @@ export function bible_glyph_chapter_ezk34() {
           "rescue",
           "them",
           "from",
-          "all",
+          "$all",
           "the",
           "places",
           "to",
