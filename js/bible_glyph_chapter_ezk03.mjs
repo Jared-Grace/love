@@ -163,7 +163,7 @@ export function bible_glyph_chapter_ezk03() {
           "and",
           "difficult",
           "$tongue,",
-          "whose",
+          "$back+flashlight",
           "$speech",
           "you",
           "$no_entry",
