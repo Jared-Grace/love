@@ -513,7 +513,7 @@ export function bible_glyph_chapter_gen42() {
           "$walking",
           "and",
           "$footprints",
-          "grain",
+          "$wheat+coin",
           "back",
           "to",
           "relieve",
