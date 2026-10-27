@@ -672,7 +672,7 @@ export function bible_glyph_chapter_num06() {
           "addition",
           "to",
           "the",
-          "breast",
+          "$heart_organ+meat",
           "of",
           "the",
           "wave",
