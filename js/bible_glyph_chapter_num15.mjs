@@ -119,7 +119,7 @@ export function bible_glyph_chapter_num15() {
           "$jar+straight_ruler",
           "of",
           "olive",
-          "oil.",
+          "$lotion_bottle.",
         ],
       },
       {
