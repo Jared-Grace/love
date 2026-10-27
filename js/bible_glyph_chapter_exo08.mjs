@@ -247,7 +247,7 @@ export function bible_glyph_chapter_exo08() {
           "that",
           "they",
           "may",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "$i_am.",
         ],
