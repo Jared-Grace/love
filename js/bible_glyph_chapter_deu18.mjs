@@ -324,7 +324,7 @@ export function bible_glyph_chapter_deu18() {
           "or",
           "$question",
           "a",
-          "medium",
+          "$ghost+person",
           "or",
           "spiritist,",
           "or",
