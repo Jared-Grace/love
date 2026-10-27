@@ -204,7 +204,7 @@ export function bible_glyph_chapter_gen26() {
           "For",
           "he",
           "was",
-          "afraid",
+          "$fear+doing",
           "to",
           "$speech,",
           "She",
