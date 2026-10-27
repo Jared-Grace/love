@@ -304,7 +304,7 @@ export function bible_glyph_chapter_isa55() {
           "$no_entry",
           "$turn_back",
           "without",
-          "watering",
+          "$cup_with_straw+check+doing",
           "the",
           "$earth,",
           "making",
