@@ -546,7 +546,7 @@ export function bible_glyph_chapter_gen20() {
           "you.",
           "You",
           "are",
-          "cleared.",
+          "$you+exclamation.",
         ],
       },
       {
