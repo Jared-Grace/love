@@ -397,7 +397,7 @@ export function bible_glyph_chapter_est01() {
           "for",
           "it",
           "was",
-          "customary",
+          "$right_arrow",
           "for",
           "$king",
           "to",
