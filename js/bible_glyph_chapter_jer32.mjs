@@ -793,7 +793,7 @@ export function bible_glyph_chapter_jer32() {
           "to",
           "$hammer+doing",
           "$all",
-          "that",
+          "$back+flashlight",
           "You",
           "commanded",
           "them",
