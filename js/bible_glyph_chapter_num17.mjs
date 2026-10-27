@@ -297,7 +297,7 @@ export function bible_glyph_chapter_num17() {
           "kept",
           "as",
           "a",
-          "sign",
+          "$placard",
           "for",
           "the",
           "rebellious",
