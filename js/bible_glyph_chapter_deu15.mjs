@@ -37,7 +37,7 @@ export function bible_glyph_chapter_deu15() {
           "of",
           "remission:",
           "$all",
-          "creditor",
+          "$key",
           "shall",
           "cancel",
           "what",
