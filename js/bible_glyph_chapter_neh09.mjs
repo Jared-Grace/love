@@ -15,7 +15,7 @@ export function bible_glyph_chapter_neh09() {
         words: [
           "On",
           "the",
-          "twenty",
+          "$two+zero",
           "fourth",
           "$sun",
           "of",
