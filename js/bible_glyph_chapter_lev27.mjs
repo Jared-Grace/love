@@ -661,7 +661,7 @@ export function bible_glyph_chapter_lev27() {
           "like",
           "a",
           "$field",
-          "devoted.",
+          "$bomb+altar+thing.",
           "It",
           "becomes",
           "the",
