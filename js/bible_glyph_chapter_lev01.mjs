@@ -323,7 +323,7 @@ export function bible_glyph_chapter_lev01() {
           "$kitchen_knife+meat,",
           "including",
           "the",
-          "head",
+          "$person_gesturing_ok",
           "and",
           "the",
           "fat,",
