@@ -171,7 +171,7 @@ export function bible_glyph_chapter_nam01() {
           "withstand",
           "His",
           "$pouting_face?",
-          "Who",
+          "$person+question",
           "can",
           "endure",
           "His",
