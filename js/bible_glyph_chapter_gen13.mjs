@@ -195,7 +195,7 @@ export function bible_glyph_chapter_gen13() {
           "So",
           "Abram",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Lot,",
           "Let",
           "there",
