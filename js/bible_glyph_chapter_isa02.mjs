@@ -162,7 +162,7 @@ export function bible_glyph_chapter_isa02() {
           "up",
           "the",
           "$sword",
-          "against",
+          "$toward",
           "$map,",
           "$no_entry",
           "will",
