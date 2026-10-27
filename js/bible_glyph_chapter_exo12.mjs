@@ -356,7 +356,7 @@ export function bible_glyph_chapter_exo12() {
           "I",
           "will",
           "$hammer+doing",
-          "judgment",
+          "$scales+thing",
           "against",
           "all",
           "the",
