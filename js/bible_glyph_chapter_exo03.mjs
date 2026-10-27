@@ -169,7 +169,7 @@ export function bible_glyph_chapter_exo03() {
           "Then",
           "He",
           "$speech,",
-          "I",
+          "$me",
           "am",
           "the",
           "$heart_on_fire",
