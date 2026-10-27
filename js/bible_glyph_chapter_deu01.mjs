@@ -719,7 +719,7 @@ export function bible_glyph_chapter_deu01() {
           "$mountain,",
           "and",
           "$footprints",
-          "to",
+          "$finish",
           "the",
           "Valley",
           "of",
