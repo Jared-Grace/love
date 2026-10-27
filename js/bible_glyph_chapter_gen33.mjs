@@ -45,7 +45,7 @@ export function bible_glyph_chapter_gen33() {
         verse_number: 2,
         words: [
           "He",
-          "put",
+          "$palm_down",
           "the",
           "servants",
           "and",
