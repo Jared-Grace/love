@@ -49,7 +49,7 @@ export function bible_glyph_chapter_psa027() {
           "When",
           "the",
           "wicked",
-          "came",
+          "$magnet+doing",
           "upon",
           "me",
           "to",
