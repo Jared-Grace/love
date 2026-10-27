@@ -154,7 +154,7 @@ export function bible_glyph_chapter_exo02() {
           "basket",
           "$radio_button",
           "the",
-          "reeds,",
+          "$sea+leaf,",
           "she",
           "sent",
           "her",
