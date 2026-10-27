@@ -313,7 +313,7 @@ export function bible_glyph_chapter_exo27() {
           "$arrow_both_ways,",
           "with",
           "ten",
-          "posts",
+          "$candle",
           "and",
           "ten",
           "bases.",
