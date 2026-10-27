@@ -548,7 +548,7 @@ export function bible_glyph_chapter_exo30() {
           "will",
           "$no_entry",
           "$skull+doing,",
-          "or",
+          "$shuffle",
           "when",
           "they",
           "approach",
