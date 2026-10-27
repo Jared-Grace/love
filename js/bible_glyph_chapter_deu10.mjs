@@ -111,7 +111,7 @@ export function bible_glyph_chapter_deu10() {
           "with",
           "the",
           "$two",
-          "tablets",
+          "$stone+writing_hand",
           "in",
           "my",
           "$hand.",
