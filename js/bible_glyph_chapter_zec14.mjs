@@ -343,7 +343,7 @@ export function bible_glyph_chapter_zec14() {
           "from",
           "the",
           "$son+right_arrow",
-          "Gate",
+          "$gate",
           "to",
           "the",
           "site",
