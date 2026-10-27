@@ -139,7 +139,7 @@ export function bible_glyph_chapter_gen47() {
           "$proper_name$Canaan.",
           "So",
           "$watch,",
-          "please",
+          "$pleading",
           "allow",
           "your",
           "$kneeling",
