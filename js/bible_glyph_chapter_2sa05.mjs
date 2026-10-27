@@ -529,7 +529,7 @@ export function bible_glyph_chapter_2sa05() {
           "I",
           "$walking+pointing_up",
           "up",
-          "against",
+          "$toward",
           "the",
           "$proper_name$Philistines?",
           "Will",
