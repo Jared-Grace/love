@@ -664,7 +664,7 @@ export function bible_glyph_chapter_deu18() {
           "$megaphone",
           "has",
           "$mouth",
-          "presumptuously.",
+          "$peacock+fire.",
           "Do",
           "$no_entry",
           "be",
