@@ -132,7 +132,7 @@ export function bible_glyph_chapter_exo29() {
           "$proper_name$Aaron",
           "with",
           "the",
-          "tunic,",
+          "$dress+thread,",
           "the",
           "$cloak",
           "of",
