@@ -349,7 +349,7 @@ export function bible_glyph_chapter_2ki10() {
           "$ruler.",
           "It",
           "was",
-          "I",
+          "$me",
           "who",
           "conspired",
           "against",
