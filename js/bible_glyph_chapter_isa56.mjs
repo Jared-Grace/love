@@ -50,7 +50,7 @@ export function bible_glyph_chapter_isa56() {
           "man",
           "who",
           "$hammer+doing",
-          "this,",
+          "$flashlight,",
           "and",
           "the",
           "$son",
