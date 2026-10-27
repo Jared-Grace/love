@@ -949,7 +949,7 @@ export function bible_glyph_chapter_gen44() {
         verse_number: 33,
         words: [
           "$watch",
-          "please",
+          "$pleading",
           "let",
           "your",
           "$kneeling",
