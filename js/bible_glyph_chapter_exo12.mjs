@@ -1498,7 +1498,7 @@ export function bible_glyph_chapter_exo12() {
           "$hammer+doing",
           "the",
           "$i_am",
-          "Passover,",
+          "$lamb+door,",
           "all",
           "the",
           "males",
