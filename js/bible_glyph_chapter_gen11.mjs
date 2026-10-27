@@ -157,7 +157,7 @@ export function bible_glyph_chapter_gen11() {
           "the",
           "$i_am",
           "$speech,",
-          "If",
+          "$exclamation",
           "as",
           "one",
           "$family",
