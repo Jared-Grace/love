@@ -351,7 +351,7 @@ export function bible_glyph_chapter_psa073() {
           "swept",
           "away",
           "$tray_out",
-          "terrors!",
+          "$heart_organ+vibration_mode+thing!",
         ],
       },
       {
