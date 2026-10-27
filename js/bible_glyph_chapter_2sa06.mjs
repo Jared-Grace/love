@@ -553,7 +553,7 @@ export function bible_glyph_chapter_2sa06() {
           "$burnt_offering",
           "offerings",
           "and",
-          "peace",
+          "$peace+gift",
           "offerings",
           "$face",
           "the",
