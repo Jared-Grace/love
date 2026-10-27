@@ -238,7 +238,7 @@ export function bible_glyph_chapter_job01() {
           "My",
           "$kneeling",
           "$proper_name$Job?",
-          "For",
+          "$pointing",
           "there",
           "is",
           "no",
