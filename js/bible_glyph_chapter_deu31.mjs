@@ -394,7 +394,7 @@ export function bible_glyph_chapter_deu31() {
           "the",
           "$woman,",
           "the",
-          "children,",
+          "$child+crowd,",
           "and",
           "the",
           "$foreigner",
