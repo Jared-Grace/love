@@ -541,7 +541,7 @@ export function bible_glyph_chapter_ecc03() {
           "of",
           "$son",
           "$walking+pointing_up",
-          "upward",
+          "$walking+pointing_up",
           "and",
           "the",
           "$wind",
