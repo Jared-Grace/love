@@ -148,7 +148,7 @@ export function bible_glyph_chapter_exo25() {
           "I",
           "may",
           "$tent+doing",
-          "among",
+          "$radio_button",
           "them.",
         ],
       },
