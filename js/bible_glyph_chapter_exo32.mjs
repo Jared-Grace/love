@@ -706,7 +706,7 @@ export function bible_glyph_chapter_exo32() {
           "of",
           "Israel",
           "to",
-          "drink",
+          "$cup+hands_giving",
           "it.",
         ],
       },
