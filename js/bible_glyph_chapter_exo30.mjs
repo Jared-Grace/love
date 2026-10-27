@@ -629,7 +629,7 @@ export function bible_glyph_chapter_exo30() {
           "shekels,",
           "of",
           "fragrant",
-          "cinnamon,",
+          "$wood+curly_loop,",
           "two",
           "hundred",
           "and",
