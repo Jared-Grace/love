@@ -380,7 +380,7 @@ export function bible_glyph_chapter_exo27() {
           "$three",
           "$candle",
           "and",
-          "three",
+          "$three",
           "bases.",
         ],
       },
