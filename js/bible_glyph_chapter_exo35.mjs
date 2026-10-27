@@ -679,7 +679,7 @@ export function bible_glyph_chapter_exo35() {
           "the",
           "$safety_vest",
           "and",
-          "breastpiece,",
+          "$gem_stone+t_shirt,",
         ],
       },
       {
