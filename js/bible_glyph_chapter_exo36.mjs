@@ -560,7 +560,7 @@ export function bible_glyph_chapter_exo36() {
           "covering",
           "of",
           "$ram",
-          "skins",
+          "$cow_face+coat",
           "dyed",
           "red,",
           "and",
