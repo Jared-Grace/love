@@ -84,7 +84,7 @@ export function bible_glyph_chapter_gen35() {
         words: [
           "Let",
           "us",
-          "arise",
+          "$person+pointing_up",
           "and",
           "$walking+pointing_up",
           "up",
