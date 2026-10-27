@@ -204,7 +204,7 @@ export function bible_glyph_chapter_jos01() {
           "$might+up_arrow",
           "and",
           "very",
-          "courageous.",
+          "$superhero.",
           "Be",
           "careful",
           "to",
