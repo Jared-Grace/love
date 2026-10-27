@@ -68,7 +68,7 @@ export function bible_glyph_chapter_jos06() {
         verse_number: 3,
         words: [
           "March",
-          "around",
+          "$around+doing",
           "the",
           "$city",
           "with",
