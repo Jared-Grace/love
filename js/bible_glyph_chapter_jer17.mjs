@@ -124,7 +124,7 @@ export function bible_glyph_chapter_jer17() {
           "in",
           "a",
           "$earth",
-          "that",
+          "$back+flashlight",
           "you",
           "do",
           "$no_entry",
