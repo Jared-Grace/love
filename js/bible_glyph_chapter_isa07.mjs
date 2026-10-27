@@ -356,7 +356,7 @@ export function bible_glyph_chapter_isa07() {
         verse_number: 12,
         words: [
           "But",
-          "Ahaz",
+          "$hand+clamp+proper_name",
           "$speech,",
           '"I',
           "will",
