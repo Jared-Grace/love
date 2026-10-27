@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_2ki17() {
           "the",
           "$city",
           "where",
-          "they",
+          "$pointing_back",
           "had",
           "settled.",
         ],
