@@ -225,7 +225,7 @@ export function bible_glyph_chapter_jos01() {
           "it",
           "to",
           "the",
-          "right",
+          "$hand+right_arrow",
           "or",
           "to",
           "the",
