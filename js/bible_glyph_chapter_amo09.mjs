@@ -79,7 +79,7 @@ export function bible_glyph_chapter_amo09() {
           "to",
           "$pointing_down+skull,",
           "from",
-          "there",
+          "$telescope",
           "My",
           "$hand",
           "will",
