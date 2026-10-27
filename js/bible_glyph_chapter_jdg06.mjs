@@ -878,7 +878,7 @@ export function bible_glyph_chapter_jdg06() {
           "top",
           "of",
           "this",
-          "stronghold.",
+          "$shield+house.",
           "$hand_receiving",
           "the",
           "second",
