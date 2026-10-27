@@ -171,7 +171,7 @@ export function bible_glyph_chapter_isa06() {
         verse_number: 6,
         words: [
           "Then",
-          "one",
+          "$one",
           "$tray_out",
           "the",
           "seraphim",
