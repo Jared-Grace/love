@@ -667,7 +667,7 @@ export function bible_glyph_chapter_lev23() {
         words: [
           "When",
           "you",
-          "reap",
+          "$sheaf_of_rice+scissors+doing",
           "the",
           "$harvest",
           "of",
