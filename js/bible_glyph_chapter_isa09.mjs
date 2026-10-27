@@ -575,7 +575,7 @@ export function bible_glyph_chapter_isa09() {
         words: [
           "By",
           "the",
-          "wrath",
+          "$anger_symbol",
           "of",
           "the",
           "$i_am",
