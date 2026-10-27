@@ -419,7 +419,7 @@ export function bible_glyph_chapter_neh01() {
           "At",
           "that",
           "time",
-          "I",
+          "$me",
           "was",
           "the",
           "cupbearer",
