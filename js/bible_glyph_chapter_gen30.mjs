@@ -61,7 +61,7 @@ export function bible_glyph_chapter_gen30() {
           "place",
           "of",
           "$heart_on_fire,",
-          "who",
+          "$back+flashlight",
           "has",
           "withheld",
           "$tray_out",
