@@ -182,7 +182,7 @@ export function bible_glyph_chapter_gen31() {
       {
         verse_number: 8,
         words: [
-          "If",
+          "$traffic_light",
           "he",
           "$speech,",
           "The",
