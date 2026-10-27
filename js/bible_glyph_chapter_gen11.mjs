@@ -185,7 +185,7 @@ export function bible_glyph_chapter_gen11() {
       {
         verse_number: 7,
         words: [
-          "Come,",
+          "$hands_giving+up_arrow,",
           "let",
           "Us",
           "go",
