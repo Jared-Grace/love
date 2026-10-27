@@ -81,7 +81,7 @@ export function bible_glyph_chapter_isa12() {
         verse_number: 3,
         words: [
           "With",
-          "joy",
+          "$grinning_face",
           "you",
           "will",
           "$bucket+doing",
