@@ -648,7 +648,7 @@ export function bible_glyph_chapter_exo29() {
           "tail,",
           "the",
           "fat",
-          "covering",
+          "$coat+doing",
           "the",
           "entrails,",
           "the",
