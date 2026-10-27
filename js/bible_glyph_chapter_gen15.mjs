@@ -450,7 +450,7 @@ export function bible_glyph_chapter_gen15() {
         words: [
           "When",
           "the",
-          "sun",
+          "$sun_with_face",
           "had",
           "$footprints",
           "and",
