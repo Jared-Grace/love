@@ -532,7 +532,7 @@ export function bible_glyph_chapter_dan09() {
           "$name_tag",
           "renowned",
           "to",
-          "this",
+          "$flashlight",
           "$sun,",
           "we",
           "have",
