@@ -390,7 +390,7 @@ export function bible_glyph_chapter_deu31() {
           "the",
           "$family,",
           "the",
-          "men,",
+          "$man_beard,",
           "the",
           "$woman,",
           "the",
