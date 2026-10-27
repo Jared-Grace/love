@@ -201,7 +201,7 @@ export function bible_glyph_chapter_psa034() {
           "fear",
           "Him",
           "lack",
-          "nothing.",
+          "$dotted_line_face.",
         ],
       },
       {
