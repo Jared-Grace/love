@@ -80,7 +80,7 @@ export function bible_glyph_chapter_hab03() {
           "$pause_button.",
           "His",
           "glory",
-          "covered",
+          "$coat+doing",
           "the",
           "$sky,",
           "and",
