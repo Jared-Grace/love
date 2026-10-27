@@ -33,7 +33,7 @@ export function bible_glyph_chapter_1sa03() {
           "the",
           "$i_am",
           "$link",
-          "rare",
+          "$gem_stone+describing",
           "and",
           "visions",
           "were",
