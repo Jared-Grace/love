@@ -760,7 +760,7 @@ export function bible_glyph_chapter_num35() {
           "with",
           "the",
           "$sparkle+thing",
-          "oil.",
+          "$lotion_bottle.",
         ],
       },
       {
