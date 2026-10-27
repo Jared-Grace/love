@@ -220,7 +220,7 @@ export function bible_glyph_chapter_lev14() {
           "his",
           "$hair,",
           "and",
-          "bathe",
+          "$bathtub+doing",
           "with",
           "$water;",
           "then",
