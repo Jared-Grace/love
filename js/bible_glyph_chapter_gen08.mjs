@@ -111,7 +111,7 @@ export function bible_glyph_chapter_gen08() {
           "seventh",
           "month,",
           "the",
-          "ark",
+          "$package",
           "came",
           "to",
           "$seat+doing",
