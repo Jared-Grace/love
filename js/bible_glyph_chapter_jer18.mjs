@@ -672,7 +672,7 @@ export function bible_glyph_chapter_jer18() {
           "$house",
           "when",
           "You",
-          "suddenly",
+          "$lightning+manner",
           "$footprints",
           "$crowd+sword",
           "against",
