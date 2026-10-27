@@ -772,7 +772,7 @@ export function bible_glyph_chapter_2ki17() {
           "Finally",
           "the",
           "$i_am",
-          "removed",
+          "$away+doing",
           "$wrestling+heart_on_fire",
           "from",
           "His",
