@@ -698,7 +698,7 @@ export function bible_glyph_chapter_jdg02() {
           "and",
           "He",
           "$speech,",
-          "Because",
+          "$information",
           "this",
           "$map",
           "has",
