@@ -247,7 +247,7 @@ export function bible_glyph_chapter_gen17() {
           "is",
           "My",
           "$covenant,",
-          "which",
+          "$back+flashlight",
           "you",
           "are",
           "to",
