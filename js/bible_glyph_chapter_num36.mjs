@@ -478,7 +478,7 @@ export function bible_glyph_chapter_num36() {
           "and",
           "the",
           "$scales+thing",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "gave",
           "to",
