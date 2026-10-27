@@ -96,7 +96,7 @@ export function bible_glyph_chapter_jer32() {
           "imprisoned",
           "him,",
           "$speech,",
-          "Why",
+          "$flashlight+question+lightbulb",
           "are",
           "you",
           "prophesying",
