@@ -531,7 +531,7 @@ export function bible_glyph_chapter_num19() {
           "causes,",
           "$shuffle",
           "the",
-          "bone",
+          "$bone",
           "of",
           "a",
           "$person,",
