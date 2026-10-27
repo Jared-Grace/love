@@ -1070,7 +1070,7 @@ export function bible_glyph_chapter_jer32() {
       {
         verse_number: 31,
         words: [
-          "For",
+          "$pointing",
           "this",
           "$city",
           "has",
