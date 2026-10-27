@@ -438,7 +438,7 @@ export function bible_glyph_chapter_1ki21() {
         words: [
           "And",
           "the",
-          "two",
+          "$two",
           "men,",
           "$son",
           "of",
