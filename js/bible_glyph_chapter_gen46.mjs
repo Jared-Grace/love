@@ -863,7 +863,7 @@ export function bible_glyph_chapter_gen46() {
           "of",
           "$sheep",
           "is",
-          "detestable",
+          "$vomiting",
           "to",
           "the",
           "$clamp+person.",
