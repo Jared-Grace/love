@@ -208,7 +208,7 @@ export function bible_glyph_chapter_nam03() {
           "$person+house",
           "by",
           "the",
-          "Nile",
+          "$crocodile",
           "with",
           "$water",
           "around",
