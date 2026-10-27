@@ -641,7 +641,7 @@ export function bible_glyph_chapter_gen25() {
           "$laughing+proper_name",
           "$heart_red+doing",
           "$proper_name$Esau,",
-          "because",
+          "$pointing",
           "the",
           "game",
           "was",
