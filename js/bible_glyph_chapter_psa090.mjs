@@ -154,7 +154,7 @@ export function bible_glyph_chapter_psa090() {
           "terrified",
           "by",
           "Your",
-          "wrath.",
+          "$angry_face.",
         ],
       },
       {
