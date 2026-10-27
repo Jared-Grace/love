@@ -393,7 +393,7 @@ export function bible_glyph_chapter_isa56() {
           "$brain;",
           "they",
           "all",
-          "turn",
+          "$curving_right+doing",
           "to",
           "their",
           "own",
