@@ -176,7 +176,7 @@ export function bible_glyph_chapter_gen16() {
           "$eyes.",
           "May",
           "$i_am",
-          "judge",
+          "$scales",
           "between",
           "you",
           "and",
