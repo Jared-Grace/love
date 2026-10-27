@@ -518,7 +518,7 @@ export function bible_glyph_chapter_exo05() {
           "That",
           "is",
           "why",
-          "you",
+          "$you",
           "keep",
           "$speech,",
           "Let",
