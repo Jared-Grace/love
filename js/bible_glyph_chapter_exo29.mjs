@@ -296,7 +296,7 @@ export function bible_glyph_chapter_exo29() {
           "$kitchen_knife+doing",
           "the",
           "$bull",
-          "before",
+          "$face",
           "$i_am",
           "at",
           "the",
