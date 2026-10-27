@@ -1335,7 +1335,7 @@ export function bible_glyph_chapter_lev26() {
           "for",
           "their",
           "$cyclone,",
-          "because",
+          "$information",
           "they",
           "rejected",
           "My",
