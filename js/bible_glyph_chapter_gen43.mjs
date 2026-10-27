@@ -458,7 +458,7 @@ export function bible_glyph_chapter_gen43() {
           "$grain_offering,",
           "along",
           "with",
-          "double",
+          "$two+multiply",
           "the",
           "amount",
           "of",
