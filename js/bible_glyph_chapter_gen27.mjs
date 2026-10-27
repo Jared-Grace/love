@@ -83,7 +83,7 @@ export function bible_glyph_chapter_gen27() {
           "your",
           "$arrow+package",
           "and",
-          "bow,",
+          "$bow+wood,",
           "and",
           "$walking+tray_out",
           "out",
