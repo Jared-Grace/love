@@ -419,7 +419,7 @@ export function bible_glyph_chapter_1ki02() {
           "over",
           "$wrestling+heart_on_fire",
           "were",
-          "forty",
+          "$four+zero",
           "$year.",
           "He",
           "$castle+doing",
