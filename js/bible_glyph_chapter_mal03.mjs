@@ -107,7 +107,7 @@ export function bible_glyph_chapter_mal03() {
           "and",
           "purifier",
           "of",
-          "silver;",
+          "$silver;",
           "He",
           "will",
           "purify",
