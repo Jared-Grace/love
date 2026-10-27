@@ -1260,7 +1260,7 @@ export function bible_glyph_chapter_1sa25() {
           "When",
           "$father+woman_dancing+proper_name",
           "$footprints",
-          "to",
+          "$toward",
           "$proper_name$Nabal,",
           "he",
           "was",
