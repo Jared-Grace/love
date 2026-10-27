@@ -56,7 +56,7 @@ export function bible_glyph_chapter_num30() {
           "$shuffle",
           "$raised_back_of_hand+doing",
           "an",
-          "oath",
+          "$raised_back_of_hand",
           "to",
           "obligate",
           "$person_other",
