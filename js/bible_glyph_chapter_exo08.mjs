@@ -295,7 +295,7 @@ export function bible_glyph_chapter_exo08() {
           "those",
           "in",
           "the",
-          "Nile?",
+          "$crocodile?",
         ],
       },
       {
