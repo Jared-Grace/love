@@ -981,7 +981,7 @@ export function bible_glyph_chapter_num11() {
           "Then",
           "$fishing_pole+proper_name",
           "$crowd+doing",
-          "to",
+          "$toward",
           "the",
           "camp,",
           "along",
