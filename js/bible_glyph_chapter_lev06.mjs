@@ -54,7 +54,7 @@ export function bible_glyph_chapter_lev06() {
         words: [
           "$shuffle",
           "$magnifying_glass+exclamation",
-          "lost",
+          "$wilted_flower+thing",
           "property",
           "and",
           "lies",
