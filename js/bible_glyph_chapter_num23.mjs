@@ -602,7 +602,7 @@ export function bible_glyph_chapter_num23() {
           "He",
           "considers",
           "$no_entry",
-          "disaster",
+          "$thumbs_down+hole",
           "for",
           "$hand+foot.",
           "He",
