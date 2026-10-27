@@ -16,7 +16,7 @@ export function bible_glyph_chapter_num24() {
         words: [
           "And",
           "when",
-          "Balaam",
+          "$foreigner+proper_name",
           "$eye",
           "that",
           "it",
