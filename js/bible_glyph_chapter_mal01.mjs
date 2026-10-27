@@ -472,7 +472,7 @@ export function bible_glyph_chapter_mal01() {
           "You",
           "also",
           "$speech,",
-          "Oh,",
+          "$exclamation,",
           "what",
           "a",
           "nuisance!",
