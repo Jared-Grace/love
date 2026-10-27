@@ -703,7 +703,7 @@ export function bible_glyph_chapter_exo23() {
           "$hammer",
           "their",
           "practices.",
-          "Instead,",
+          "$pointing,",
           "you",
           "are",
           "to",
