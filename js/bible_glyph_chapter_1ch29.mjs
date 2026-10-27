@@ -579,7 +579,7 @@ export function bible_glyph_chapter_1ch29() {
           "have",
           "provided",
           "to",
-          "build",
+          "$brick",
           "You",
           "a",
           "$house",
