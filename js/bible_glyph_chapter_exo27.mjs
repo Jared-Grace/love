@@ -251,7 +251,7 @@ export function bible_glyph_chapter_exo27() {
           "$two+zero",
           "posts",
           "and",
-          "twenty",
+          "$two+zero",
           "$bronze",
           "bases,",
           "and",
