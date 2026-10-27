@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_1ki18() {
           "$son",
           "of",
           "$hand+foot,",
-          "to",
+          "$toward",
           "whom",
           "the",
           "$speech",
