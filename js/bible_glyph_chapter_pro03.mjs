@@ -228,7 +228,7 @@ export function bible_glyph_chapter_pro03() {
           "and",
           "do",
           "$no_entry",
-          "loathe",
+          "$nauseated_face+heart_red+doing",
           "His",
           "rebuke;",
         ],
