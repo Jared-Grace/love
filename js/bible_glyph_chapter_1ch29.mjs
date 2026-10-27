@@ -89,7 +89,7 @@ export function bible_glyph_chapter_1ch29() {
           "$iron",
           "for",
           "the",
-          "iron,",
+          "$iron,",
           "and",
           "$tree",
           "for",
