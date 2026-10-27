@@ -358,7 +358,7 @@ export function bible_glyph_chapter_exo36() {
           "in",
           "the",
           "first",
-          "set,",
+          "$link+thread,",
           "and",
           "$hammer+doing",
           "the",
