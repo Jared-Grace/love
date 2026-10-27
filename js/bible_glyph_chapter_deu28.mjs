@@ -1885,7 +1885,7 @@ export function bible_glyph_chapter_deu28() {
           "written",
           "in",
           "this",
-          "book,",
+          "$closed_book,",
           "that",
           "you",
           "may",
