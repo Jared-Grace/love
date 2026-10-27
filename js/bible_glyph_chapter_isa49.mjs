@@ -520,7 +520,7 @@ export function bible_glyph_chapter_isa49() {
           "Can",
           "a",
           "$woman",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "her",
           "nursing",
           "child,",
