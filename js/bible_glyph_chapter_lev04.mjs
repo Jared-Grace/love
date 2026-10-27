@@ -290,7 +290,7 @@ export function bible_glyph_chapter_lev04() {
           "$meat,",
           "with",
           "its",
-          "head",
+          "$person_gesturing_ok",
           "and",
           "legs",
           "and",
