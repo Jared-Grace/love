@@ -537,7 +537,7 @@ export function bible_glyph_chapter_1sa03() {
           "and",
           "did",
           "$no_entry",
-          "hide",
+          "$hand+tray_in+doing",
           "a",
           "thing",
           "$tray_out",
