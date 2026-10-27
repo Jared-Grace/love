@@ -413,7 +413,7 @@ export function bible_glyph_chapter_gen44() {
           "$pointing",
           "a",
           "$man_beard",
-          "like",
+          "$likeness",
           "me",
           "can",
           "surely",
