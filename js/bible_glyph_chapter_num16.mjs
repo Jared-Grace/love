@@ -694,7 +694,7 @@ export function bible_glyph_chapter_num16() {
           "will",
           "You",
           "be",
-          "angry",
+          "$angry_face+collision+doing",
           "with",
           "the",
           "whole",
