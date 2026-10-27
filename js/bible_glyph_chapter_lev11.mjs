@@ -420,7 +420,7 @@ export function bible_glyph_chapter_lev11() {
           "of",
           "$bird+angry_face,",
           "the",
-          "hoopoe,",
+          "$bird+crown,",
           "and",
           "the",
           "bat.",
