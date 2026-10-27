@@ -560,7 +560,7 @@ export function bible_glyph_chapter_1ch29() {
           "like",
           "a",
           "shadow,",
-          "without",
+          "$dotted_line_face",
           "hope.",
         ],
       },
