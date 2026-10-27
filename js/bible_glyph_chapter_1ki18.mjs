@@ -615,7 +615,7 @@ export function bible_glyph_chapter_1ki18() {
         words: [
           "Then",
           "$heart_on_fire+i_am",
-          "approached",
+          "$walking+toward",
           "all",
           "the",
           "$family",
