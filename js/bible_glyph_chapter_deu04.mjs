@@ -1118,7 +1118,7 @@ export function bible_glyph_chapter_deu04() {
           "you",
           "or",
           "$no_entry",
-          "destroy",
+          "$collision",
           "you",
           "or",
           "$no_entry",
