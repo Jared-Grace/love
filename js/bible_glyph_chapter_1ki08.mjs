@@ -1161,7 +1161,7 @@ export function bible_glyph_chapter_1ki08() {
           "them",
           "to",
           "the",
-          "land",
+          "$brown_square",
           "You",
           "$hands_giving",
           "to",
