@@ -1250,7 +1250,7 @@ export function bible_glyph_chapter_2ch06() {
           "$walking+tray_out",
           "to",
           "$crossed_swords",
-          "against",
+          "$pointing_up",
           "their",
           "enemies,",
           "by",
