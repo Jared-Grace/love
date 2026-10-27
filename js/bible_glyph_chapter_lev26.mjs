@@ -784,7 +784,7 @@ export function bible_glyph_chapter_lev26() {
           "ten",
           "$woman",
           "will",
-          "bake",
+          "$bread+fire",
           "your",
           "$bread",
           "in",
