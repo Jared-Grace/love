@@ -268,7 +268,7 @@ export function bible_glyph_chapter_zec04() {
           "$pinching_hand",
           "things?",
           "But",
-          "these",
+          "$flashlight+flashlight",
           "$seven",
           "will",
           "$beaming+doing",
