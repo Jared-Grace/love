@@ -1126,7 +1126,7 @@ export function bible_glyph_chapter_1sa17() {
           "the",
           "$hand",
           "of",
-          "this",
+          "$flashlight",
           "$proper_name$Philistine.",
           "And",
           "$proper_name$Saul",
