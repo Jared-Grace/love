@@ -336,7 +336,7 @@ export function bible_glyph_chapter_2ki17() {
           "$wood+imp",
           "poles",
           "on",
-          "every",
+          "$all",
           "high",
           "hill",
           "and",
