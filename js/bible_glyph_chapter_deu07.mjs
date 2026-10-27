@@ -395,7 +395,7 @@ export function bible_glyph_chapter_deu07() {
       {
         verse_number: 12,
         words: [
-          "If",
+          "$foot+end_arrow+manner",
           "you",
           "$ear",
           "these",
