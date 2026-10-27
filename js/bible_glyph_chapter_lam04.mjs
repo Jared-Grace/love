@@ -78,7 +78,7 @@ export function bible_glyph_chapter_lam04() {
           "their",
           "breasts",
           "to",
-          "nurse",
+          "$breast_feeding+doing",
           "their",
           "young,",
           "but",
