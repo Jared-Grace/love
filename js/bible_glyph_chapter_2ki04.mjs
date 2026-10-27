@@ -283,7 +283,7 @@ export function bible_glyph_chapter_2ki04() {
           "$toward",
           "her",
           "husband,",
-          "Behold,",
+          "$exclamation,",
           "now",
           "I",
           "$lightbulb",
