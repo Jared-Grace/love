@@ -847,7 +847,7 @@ export function bible_glyph_chapter_1ki01() {
           "the",
           "$king",
           "let",
-          "this",
+          "$flashlight",
           "$speech",
           "$link,",
           "and",
