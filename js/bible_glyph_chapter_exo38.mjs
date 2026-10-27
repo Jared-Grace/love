@@ -587,7 +587,7 @@ export function bible_glyph_chapter_exo38() {
           "of",
           "$hands_raised+proper_name,",
           "$hammer+doing",
-          "everything",
+          "$all",
           "that",
           "$i_am",
           "had",
