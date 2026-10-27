@@ -589,7 +589,7 @@ export function bible_glyph_chapter_num16() {
           "stood",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "Tent",
