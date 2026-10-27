@@ -441,7 +441,7 @@ export function bible_glyph_chapter_isa53() {
           "He",
           "$lifting",
           "the",
-          "sin",
+          "$bow+thing",
           "of",
           "many",
           "and",
