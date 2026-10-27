@@ -517,7 +517,7 @@ export function bible_glyph_chapter_exo30() {
           "$son",
           "are",
           "to",
-          "wash",
+          "$bathtub+doing",
           "their",
           "$hand",
           "and",
