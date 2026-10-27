@@ -245,7 +245,7 @@ export function bible_glyph_chapter_lev15() {
           "with",
           "the",
           "discharge",
-          "rides",
+          "$horse_racing+doing",
           "will",
           "be",
           "unclean.",
