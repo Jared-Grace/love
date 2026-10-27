@@ -494,7 +494,7 @@ export function bible_glyph_chapter_jdg07() {
           "a",
           "loaf",
           "of",
-          "barley",
+          "$barley",
           "$bread",
           "tumbling",
           "into",
