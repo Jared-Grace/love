@@ -569,7 +569,7 @@ export function bible_glyph_chapter_2ki06() {
           "to",
           "the",
           "$i_am,",
-          "Please",
+          "$pleading",
           "strike",
           "these",
           "$map",
