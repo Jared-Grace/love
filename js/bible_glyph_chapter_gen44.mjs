@@ -586,7 +586,7 @@ export function bible_glyph_chapter_gen44() {
           "$child",
           "of",
           "his",
-          "old",
+          "$old_man+thing",
           "age,",
           "a",
           "younger",
