@@ -222,7 +222,7 @@ export function bible_glyph_chapter_nam01() {
           "with",
           "an",
           "overwhelming",
-          "flood",
+          "$water_wave+thing",
           "He",
           "will",
           "$hammer+doing",
