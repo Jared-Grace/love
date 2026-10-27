@@ -609,7 +609,7 @@ export function bible_glyph_chapter_dan01() {
           "in",
           "his",
           "entire",
-          "kingdom.",
+          "$castle.",
         ],
       },
       {
