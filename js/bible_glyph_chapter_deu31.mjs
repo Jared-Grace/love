@@ -677,7 +677,7 @@ export function bible_glyph_chapter_deu31() {
         words: [
           "$watch",
           "therefore",
-          "write",
+          "$writing_hand",
           "down",
           "for",
           "yourselves",
