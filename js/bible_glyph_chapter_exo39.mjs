@@ -161,7 +161,7 @@ export function bible_glyph_chapter_exo39() {
           "They",
           "$hammer+doing",
           "the",
-          "onyx",
+          "$gem_stone+stone",
           "$stone",
           "in",
           "$gold",
