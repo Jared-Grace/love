@@ -76,7 +76,7 @@ export function bible_glyph_chapter_1ki17() {
         words: [
           "$walking",
           "here,",
-          "turn",
+          "$curving_right+doing",
           "eastward,",
           "and",
           "hide",
