@@ -356,7 +356,7 @@ export function bible_glyph_chapter_mal02() {
           "broken",
           "faith;",
           "an",
-          "abomination",
+          "$vomiting",
           "has",
           "been",
           "$hammer+doing",
