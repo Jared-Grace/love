@@ -128,7 +128,7 @@ export function bible_glyph_chapter_sng02() {
           "is",
           "under",
           "my",
-          "head,",
+          "$person_gesturing_ok,",
           "and",
           "his",
           "right",
