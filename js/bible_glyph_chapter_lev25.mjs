@@ -1637,7 +1637,7 @@ export function bible_glyph_chapter_lev25() {
           "he",
           "is",
           "$no_entry",
-          "redeemed",
+          "$currency_exchange",
           "in",
           "any",
           "of",
