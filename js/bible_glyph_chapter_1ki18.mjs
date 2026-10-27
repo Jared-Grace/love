@@ -1144,7 +1144,7 @@ export function bible_glyph_chapter_1ki18() {
           "the",
           "$water",
           "$walking",
-          "around",
+          "$around",
           "the",
           "$altar",
           "and",
