@@ -43,7 +43,7 @@ export function bible_glyph_chapter_gen16() {
           "So",
           "$military_medal+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Abram,",
           "Look,",
           "$i_am",
