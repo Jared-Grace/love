@@ -206,7 +206,7 @@ export function bible_glyph_chapter_1sa17() {
           "ranks",
           "of",
           "$wrestling+heart_on_fire,",
-          "Why",
+          "$flashlight+question",
           "do",
           "you",
           "come",
