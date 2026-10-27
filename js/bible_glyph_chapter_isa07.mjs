@@ -256,7 +256,7 @@ export function bible_glyph_chapter_isa07() {
       {
         verse_number: 8,
         words: [
-          "For",
+          "$pointing",
           "the",
           "head",
           "of",
