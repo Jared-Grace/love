@@ -816,7 +816,7 @@ export function bible_glyph_chapter_1sa20() {
         words: [
           "So",
           "$two_hearts+proper_name",
-          "hid",
+          "$see_no_evil_monkey",
           "in",
           "the",
           "$field.",
