@@ -273,7 +273,7 @@ export function bible_glyph_chapter_deu10() {
           "the",
           "$i_am,",
           "to",
-          "stand",
+          "$person+round_pushpin",
           "before",
           "the",
           "$i_am",
