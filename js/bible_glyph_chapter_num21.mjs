@@ -306,7 +306,7 @@ export function bible_glyph_chapter_num21() {
           "looked",
           "at",
           "the",
-          "bronze",
+          "$bronze",
           "snake,",
           "he",
           "would",
