@@ -256,7 +256,7 @@ export function bible_glyph_chapter_1ki19() {
           "$lightning",
           "by",
           "that",
-          "food,",
+          "$eating+thing,",
           "he",
           "$walking",
           "forty",
