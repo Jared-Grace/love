@@ -515,7 +515,7 @@ export function bible_glyph_chapter_zec14() {
           "and",
           "mules,",
           "the",
-          "camels",
+          "$camel",
           "and",
           "donkeys,",
           "and",
