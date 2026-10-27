@@ -265,7 +265,7 @@ export function bible_glyph_chapter_exo18() {
         verse_number: 9,
         words: [
           "And",
-          "Jethro",
+          "$trophy+proper_name",
           "$confetti_ball+doing",
           "over",
           "all",
