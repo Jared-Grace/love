@@ -544,7 +544,7 @@ export function bible_glyph_chapter_lam02() {
           "of",
           "$city+peace?",
           "To",
-          "what",
+          "$flashlight+question",
           "can",
           "I",
           "liken",
