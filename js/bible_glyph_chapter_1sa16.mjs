@@ -398,7 +398,7 @@ export function bible_glyph_chapter_1sa16() {
           "$footprints",
           "him",
           "in.",
-          "He",
+          "$pointing_back",
           "was",
           "ruddy,",
           "with",
