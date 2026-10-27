@@ -749,7 +749,7 @@ export function bible_glyph_chapter_jdg07() {
           "shattered",
           "their",
           "jars.",
-          "Holding",
+          "$might+up_arrow",
           "the",
           "torches",
           "in",
