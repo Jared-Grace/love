@@ -144,7 +144,7 @@ export function bible_glyph_chapter_job03() {
       {
         verse_number: 7,
         words: [
-          "Behold,",
+          "$exclamation,",
           "may",
           "that",
           "$night",
