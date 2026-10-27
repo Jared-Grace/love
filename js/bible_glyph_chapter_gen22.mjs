@@ -231,7 +231,7 @@ export function bible_glyph_chapter_gen22() {
           "$speech",
           "Isaac,",
           "but",
-          "where",
+          "$question+round_pushpin",
           "is",
           "the",
           "lamb",
