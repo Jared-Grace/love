@@ -284,7 +284,7 @@ export function bible_glyph_chapter_exo39() {
         words: [
           "The",
           "second",
-          "row",
+          "$straight_ruler+repeat",
           "had",
           "a",
           "turquoise,",
