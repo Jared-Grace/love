@@ -487,7 +487,7 @@ export function bible_glyph_chapter_psa073() {
         verse_number: 27,
         words: [
           "Those",
-          "far",
+          "$satellite+describing",
           "$tray_out",
           "You",
           "will",
