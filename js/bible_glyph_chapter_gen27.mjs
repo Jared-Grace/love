@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_gen27() {
           "has",
           "cheated",
           "me",
-          "twice.",
+          "$drum.",
           "He",
           "$hand_receiving",
           "my",
