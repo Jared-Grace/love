@@ -67,7 +67,7 @@ export function bible_glyph_chapter_lev24() {
           "$morning",
           "$face",
           "$i_am",
-          "continually.",
+          "$clock+infinity.",
           "This",
           "is",
           "to",
