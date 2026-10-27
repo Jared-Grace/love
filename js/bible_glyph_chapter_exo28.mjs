@@ -1189,7 +1189,7 @@ export function bible_glyph_chapter_exo28() {
           "$thread",
           "$briefs+two",
           "to",
-          "cover",
+          "$coat+doing",
           "their",
           "bare",
           "$meat,",
