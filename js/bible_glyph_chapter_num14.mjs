@@ -63,7 +63,7 @@ export function bible_glyph_chapter_num14() {
           "$earth",
           "of",
           "$clamp+proper_name,",
-          "or",
+          "$shuffle",
           "if",
           "only",
           "we",
