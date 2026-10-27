@@ -913,7 +913,7 @@ export function bible_glyph_chapter_2ch06() {
           "and",
           "they",
           "$hands_praying",
-          "toward",
+          "$toward",
           "this",
           "$place",
           "and",
