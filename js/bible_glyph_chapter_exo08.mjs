@@ -904,7 +904,7 @@ export function bible_glyph_chapter_exo08() {
           "you",
           "go",
           "to",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "$i_am",
           "your",
