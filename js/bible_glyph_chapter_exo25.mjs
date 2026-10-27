@@ -34,7 +34,7 @@ export function bible_glyph_chapter_exo25() {
           "From",
           "$all",
           "$man_beard",
-          "whose",
+          "$back+flashlight",
           "$heart_organ",
           "moves",
           "him",
