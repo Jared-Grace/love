@@ -726,7 +726,7 @@ export function bible_glyph_chapter_1sa17() {
           "will",
           "give",
           "great",
-          "riches.",
+          "$money_bag.",
           "And",
           "he",
           "will",
