@@ -123,7 +123,7 @@ export function bible_glyph_chapter_1ki01() {
           "beauty,",
           "and",
           "she",
-          "cared",
+          "$repeat+person+doing",
           "for",
           "the",
           "$king",
