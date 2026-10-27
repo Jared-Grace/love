@@ -112,7 +112,7 @@ export function bible_glyph_chapter_num19() {
           "that",
           "$blood",
           "$seven",
-          "times",
+          "$drum",
           "$toward",
           "the",
           "front",
