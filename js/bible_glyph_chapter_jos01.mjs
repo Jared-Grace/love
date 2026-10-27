@@ -161,7 +161,7 @@ export function bible_glyph_chapter_jos01() {
           "leave",
           "you",
           "$no_entry",
-          "forsake",
+          "$derelict_house+doing",
           "you.",
         ],
       },
