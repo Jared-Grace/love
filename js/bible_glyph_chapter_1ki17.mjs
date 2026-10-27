@@ -321,7 +321,7 @@ export function bible_glyph_chapter_1ki17() {
           "I",
           "have",
           "no",
-          "bread,",
+          "$flatbread+fire+thing,",
           "only",
           "a",
           "handful",
