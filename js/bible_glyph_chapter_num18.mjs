@@ -763,7 +763,7 @@ export function bible_glyph_chapter_num18() {
       {
         verse_number: 21,
         words: [
-          "Behold,",
+          "$exclamation,",
           "$hands_giving",
           "to",
           "the",
