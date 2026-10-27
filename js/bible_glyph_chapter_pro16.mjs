@@ -319,7 +319,7 @@ export function bible_glyph_chapter_pro16() {
           "like",
           "a",
           "rain",
-          "cloud",
+          "$cloud",
           "in",
           "spring.",
         ],
