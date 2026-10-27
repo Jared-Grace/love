@@ -259,7 +259,7 @@ export function bible_glyph_chapter_jdg06() {
           "the",
           "$hand",
           "of",
-          "all",
+          "$all",
           "your",
           "oppressors.",
           "I",
