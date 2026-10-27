@@ -416,7 +416,7 @@ export function bible_glyph_chapter_zec14() {
           "will",
           "rot",
           "while",
-          "they",
+          "$pointing_back",
           "stand",
           "on",
           "their",
