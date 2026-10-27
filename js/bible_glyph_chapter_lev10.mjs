@@ -442,7 +442,7 @@ export function bible_glyph_chapter_lev10() {
           "contribution",
           "and",
           "the",
-          "breast",
+          "$heart_organ+meat",
           "of",
           "the",
           "wave",
