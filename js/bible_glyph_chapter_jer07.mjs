@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_jer07() {
           "$sun",
           "are",
           "$footprints,",
-          "declares",
+          "$microphone",
           "$i_am,",
           "when",
           "this",
