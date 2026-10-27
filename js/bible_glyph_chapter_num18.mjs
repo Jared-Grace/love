@@ -623,7 +623,7 @@ export function bible_glyph_chapter_num18() {
           "you",
           "must",
           "$no_entry",
-          "redeem.",
+          "$coin+turn_back.",
           "They",
           "are",
           "$sparkle+thing.",
