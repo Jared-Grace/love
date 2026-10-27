@@ -97,7 +97,7 @@ export function bible_glyph_chapter_lev06() {
           "entrusted",
           "to",
           "him,",
-          "or",
+          "$shuffle",
           "the",
           "lost",
           "property",
