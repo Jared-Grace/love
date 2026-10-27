@@ -377,7 +377,7 @@ export function bible_glyph_chapter_exo12() {
           "will",
           "be",
           "a",
-          "sign",
+          "$placard",
           "on",
           "the",
           "$house",
