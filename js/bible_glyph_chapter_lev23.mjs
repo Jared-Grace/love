@@ -611,7 +611,7 @@ export function bible_glyph_chapter_lev23() {
           "bread",
           "and",
           "the",
-          "two",
+          "$two",
           "$lamb",
           "shall",
           "be",
