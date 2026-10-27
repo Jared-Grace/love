@@ -164,7 +164,7 @@ export function bible_glyph_chapter_gen30() {
           "servant",
           "of",
           "Rachel,",
-          "conceived",
+          "$pregnant_woman+doing",
           "again",
           "and",
           "bore",
