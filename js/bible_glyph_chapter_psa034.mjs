@@ -152,7 +152,7 @@ export function bible_glyph_chapter_psa034() {
           "the",
           "$i_am",
           "$camp+doing",
-          "around",
+          "$around",
           "those",
           "who",
           "fear",
