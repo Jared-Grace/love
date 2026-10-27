@@ -143,7 +143,7 @@ export function bible_glyph_chapter_jer32() {
           "$hands_raised+proper_name",
           "will",
           "$no_entry",
-          "escape",
+          "$parachute",
           "from",
           "the",
           "$hand",
