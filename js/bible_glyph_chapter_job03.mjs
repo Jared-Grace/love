@@ -529,7 +529,7 @@ export function bible_glyph_chapter_job03() {
           "am",
           "$no_entry",
           "at",
-          "ease,",
+          "$couch_and_lamp+doing,",
           "I",
           "am",
           "$no_entry",
