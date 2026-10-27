@@ -106,7 +106,7 @@ export function bible_glyph_chapter_isa11() {
           "what",
           "His",
           "ears",
-          "hear.",
+          "$ear+loudspeaker+thing.",
         ],
       },
       {
