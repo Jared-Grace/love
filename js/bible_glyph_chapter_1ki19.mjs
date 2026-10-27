@@ -663,7 +663,7 @@ export function bible_glyph_chapter_1ki19() {
           "Baal",
           "and",
           "whose",
-          "mouths",
+          "$face_with_open_mouth",
           "have",
           "$no_entry",
           "kissed",
