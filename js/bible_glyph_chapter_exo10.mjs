@@ -368,7 +368,7 @@ export function bible_glyph_chapter_exo10() {
           "them,",
           "May",
           "$i_am",
-          "be",
+          "$link",
           "with",
           "you,",
           "if",
