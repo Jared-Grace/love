@@ -264,7 +264,7 @@ export function bible_glyph_chapter_num19() {
           "$camp",
           "in",
           "a",
-          "clean",
+          "$soap+describing",
           "$place.",
           "They",
           "must",
