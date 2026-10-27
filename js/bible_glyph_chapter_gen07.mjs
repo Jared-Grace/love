@@ -112,7 +112,7 @@ export function bible_glyph_chapter_gen07() {
         verse_number: 4,
         words: [
           "For",
-          "seven",
+          "$seven",
           "$sun",
           "from",
           "now",
