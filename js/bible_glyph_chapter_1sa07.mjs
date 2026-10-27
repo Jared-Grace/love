@@ -43,7 +43,7 @@ export function bible_glyph_chapter_1sa07() {
           "his",
           "$son",
           "to",
-          "guard",
+          "$guard",
           "the",
           "$ark",
           "of",
