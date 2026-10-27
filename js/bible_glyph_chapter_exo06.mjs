@@ -187,7 +187,7 @@ export function bible_glyph_chapter_exo06() {
           "and",
           "I",
           "will",
-          "redeem",
+          "$currency_exchange",
           "you",
           "with",
           "an",
