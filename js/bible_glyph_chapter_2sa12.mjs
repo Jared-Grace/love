@@ -198,7 +198,7 @@ export function bible_glyph_chapter_2sa12() {
           "has",
           "shown",
           "$no_entry",
-          "pity,",
+          "$pleading_face+doing,",
           "he",
           "must",
           "pay",
