@@ -131,7 +131,7 @@ export function bible_glyph_chapter_2ch20() {
         words: [
           "Then",
           "$i_am+scales",
-          "stood",
+          "$person+round_pushpin",
           "in",
           "the",
           "$church",
