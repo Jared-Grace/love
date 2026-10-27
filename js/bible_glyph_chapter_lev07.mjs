@@ -500,7 +500,7 @@ export function bible_glyph_chapter_lev07() {
           "$back+flashlight",
           "touches",
           "anything",
-          "unclean",
+          "$soap+no_entry",
           "$no_entry",
           "be",
           "eaten.",
