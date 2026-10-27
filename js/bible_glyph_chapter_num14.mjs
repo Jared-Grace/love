@@ -1327,7 +1327,7 @@ export function bible_glyph_chapter_num14() {
           "you",
           "have",
           "$turn_back",
-          "away",
+          "$next_track",
           "from",
           "the",
           "$i_am,",
