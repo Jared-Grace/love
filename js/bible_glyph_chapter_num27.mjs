@@ -73,7 +73,7 @@ export function bible_glyph_chapter_num27() {
           "and",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "at",
           "the",
           "entrance",
