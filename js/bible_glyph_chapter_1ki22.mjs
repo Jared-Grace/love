@@ -1059,7 +1059,7 @@ export function bible_glyph_chapter_1ki22() {
           "And",
           "when",
           "the",
-          "chariot",
+          "$chariot",
           "$military_medal",
           "$eye",
           "that",
