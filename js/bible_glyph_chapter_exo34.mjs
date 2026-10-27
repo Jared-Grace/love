@@ -50,7 +50,7 @@ export function bible_glyph_chapter_exo34() {
         verse_number: 2,
         words: [
           "$link",
-          "ready",
+          "$pin+doing",
           "in",
           "the",
           "morning,",
