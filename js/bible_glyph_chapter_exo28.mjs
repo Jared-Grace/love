@@ -418,7 +418,7 @@ export function bible_glyph_chapter_exo28() {
           "workmanship",
           "as",
           "the",
-          "ephod;",
+          "$safety_vest;",
           "$hammer",
           "it",
           "of",
