@@ -809,7 +809,7 @@ export function bible_glyph_chapter_jos06() {
           "them",
           "$sun_behind_small_cloud",
           "the",
-          "camp",
+          "$camp",
           "of",
           "$wrestling+heart_on_fire.",
         ],
