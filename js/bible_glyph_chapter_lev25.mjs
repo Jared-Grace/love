@@ -63,7 +63,7 @@ export function bible_glyph_chapter_lev25() {
         verse_number: 3,
         words: [
           "For",
-          "six",
+          "$six",
           "$year",
           "you",
           "may",
