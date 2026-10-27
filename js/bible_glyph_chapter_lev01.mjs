@@ -437,7 +437,7 @@ export function bible_glyph_chapter_lev01() {
           "he",
           "is",
           "to",
-          "remove",
+          "$away+doing",
           "the",
           "crop",
           "with",
