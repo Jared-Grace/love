@@ -472,7 +472,7 @@ export function bible_glyph_chapter_exo38() {
           "$thread+white_circle.",
           "It",
           "was",
-          "twenty",
+          "$two+zero",
           "cubits",
           "long",
           "and",
