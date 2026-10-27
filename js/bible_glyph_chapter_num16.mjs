@@ -1454,7 +1454,7 @@ export function bible_glyph_chapter_num16() {
           "$incense",
           "and",
           "made",
-          "atonement",
+          "$umbrella+doing",
           "for",
           "the",
           "$family.",
