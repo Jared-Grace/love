@@ -328,7 +328,7 @@ export function bible_glyph_chapter_mic06() {
           "and",
           "the",
           "short",
-          "ephah,",
+          "$bucket+input_numbers,",
           "which",
           "is",
           "accursed?",
