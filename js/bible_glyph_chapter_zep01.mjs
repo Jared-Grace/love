@@ -358,7 +358,7 @@ export function bible_glyph_chapter_zep01() {
           "who",
           "weigh",
           "out",
-          "silver",
+          "$silver",
           "will",
           "be",
           "$scissors",
