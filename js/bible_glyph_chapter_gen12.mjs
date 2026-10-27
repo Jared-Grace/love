@@ -245,7 +245,7 @@ export function bible_glyph_chapter_gen12() {
         verse_number: 8,
         words: [
           "From",
-          "there",
+          "$telescope",
           "Abram",
           "moved",
           "on",
