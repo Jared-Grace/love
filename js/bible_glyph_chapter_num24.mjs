@@ -421,7 +421,7 @@ export function bible_glyph_chapter_num24() {
           "warn",
           "you",
           "what",
-          "this",
+          "$flashlight",
           "$family",
           "will",
           "$hammer+doing",
