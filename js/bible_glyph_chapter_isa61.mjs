@@ -47,7 +47,7 @@ export function bible_glyph_chapter_isa61() {
           "$heart_organ,",
           "to",
           "proclaim",
-          "liberty",
+          "$broken_chain+describing",
           "to",
           "the",
           "captives",
