@@ -737,7 +737,7 @@ export function bible_glyph_chapter_isa40() {
           "your",
           "$eyes",
           "on",
-          "high",
+          "$up_arrow+thing",
           "and",
           "$eye:",
           "Who",
