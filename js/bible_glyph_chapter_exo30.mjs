@@ -123,7 +123,7 @@ export function bible_glyph_chapter_exo30() {
           "the",
           "poles",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree",
           "and",
           "overlay",
