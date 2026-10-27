@@ -238,7 +238,7 @@ export function bible_glyph_chapter_deu16() {
           "at",
           "the",
           "same",
-          "time",
+          "$alarm_clock",
           "you",
           "departed",
           "from",
