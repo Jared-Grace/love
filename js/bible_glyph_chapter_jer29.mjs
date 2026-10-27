@@ -950,7 +950,7 @@ export function bible_glyph_chapter_jer29() {
       {
         verse_number: 28,
         words: [
-          "For",
+          "$pointing",
           "he",
           "has",
           "sent",
