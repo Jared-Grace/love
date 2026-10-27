@@ -487,7 +487,7 @@ export function bible_glyph_chapter_deu11() {
           "$wine",
           "and",
           "your",
-          "oil.",
+          "$oil+new_button.",
         ],
       },
       {
