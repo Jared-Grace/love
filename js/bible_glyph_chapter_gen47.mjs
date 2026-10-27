@@ -692,7 +692,7 @@ export function bible_glyph_chapter_gen47() {
           "$coin+hand_receiving",
           "all",
           "the",
-          "land",
+          "$brown_square",
           "in",
           "$clamp+proper_name",
           "for",
