@@ -488,7 +488,7 @@ export function bible_glyph_chapter_psa022() {
           "$i_am,",
           "$clapping_hands",
           "Him!",
-          "All",
+          "$all",
           "descendants",
           "of",
           "$hand+foot,",
