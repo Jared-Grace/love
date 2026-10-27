@@ -644,7 +644,7 @@ export function bible_glyph_chapter_1sa17() {
           "$mouth",
           "with",
           "them,",
-          "suddenly",
+          "$exclamation",
           "the",
           "$man_beard",
           "$name_tag",
