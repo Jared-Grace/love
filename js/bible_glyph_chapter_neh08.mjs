@@ -350,7 +350,7 @@ export function bible_glyph_chapter_neh08() {
           "$loudly_crying+coffin",
           "or",
           "weep.",
-          "For",
+          "$pointing",
           "all",
           "the",
           "$family",
