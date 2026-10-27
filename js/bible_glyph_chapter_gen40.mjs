@@ -41,7 +41,7 @@ export function bible_glyph_chapter_gen40() {
           "$angry_face+collision+doing",
           "with",
           "his",
-          "two",
+          "$two",
           "officers,",
           "the",
           "chief",
