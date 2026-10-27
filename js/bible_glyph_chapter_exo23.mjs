@@ -611,7 +611,7 @@ export function bible_glyph_chapter_exo23() {
           "will",
           "$no_entry",
           "$lifting",
-          "rebellion,",
+          "$black_flag,",
           "since",
           "My",
           "$name_tag",
