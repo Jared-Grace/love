@@ -750,7 +750,7 @@ export function bible_glyph_chapter_lev13() {
           "the",
           "spot",
           "remains",
-          "unchanged",
+          "$down_arrow",
           "and",
           "does",
           "$no_entry",
