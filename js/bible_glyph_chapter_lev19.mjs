@@ -57,7 +57,7 @@ export function bible_glyph_chapter_lev19() {
           "$guard",
           "My",
           "Sabbaths.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
