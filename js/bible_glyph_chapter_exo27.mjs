@@ -396,7 +396,7 @@ export function bible_glyph_chapter_exo27() {
           "be",
           "a",
           "$umbrella+door",
-          "twenty",
+          "$two+zero",
           "cubits",
           "long,",
           "with",
