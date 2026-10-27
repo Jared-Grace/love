@@ -146,7 +146,7 @@ export function bible_glyph_chapter_num23() {
           "the",
           "$face_with_open_mouth",
           "of",
-          "Balaam,",
+          "$foreigner+proper_name,",
           "$speech,",
           "$turn_back",
           "to",
