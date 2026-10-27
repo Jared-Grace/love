@@ -288,7 +288,7 @@ export function bible_glyph_chapter_isa43() {
           "among",
           "them",
           "can",
-          "declare",
+          "$newspaper",
           "this,",
           "and",
           "$ear",
