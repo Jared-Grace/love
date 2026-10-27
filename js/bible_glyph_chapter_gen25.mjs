@@ -453,7 +453,7 @@ export function bible_glyph_chapter_gen25() {
           "his",
           "$woman,",
           "$pointing",
-          "she",
+          "$pointing_back",
           "was",
           "$pregnant_woman+no_entry+describing.",
           "$i_am",
