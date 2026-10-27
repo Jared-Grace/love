@@ -165,7 +165,7 @@ export function bible_glyph_chapter_hab02() {
           "$eating+top.",
           "He",
           "gathers",
-          "all",
+          "$all",
           "the",
           "$map",
           "to",
