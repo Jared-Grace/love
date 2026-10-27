@@ -136,7 +136,7 @@ export function bible_glyph_chapter_num24() {
       {
         verse_number: 5,
         words: [
-          "How",
+          "$flashlight+question",
           "lovely",
           "are",
           "your",
