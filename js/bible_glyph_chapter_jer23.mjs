@@ -180,7 +180,7 @@ export function bible_glyph_chapter_jer23() {
           "$two_hearts+proper_name",
           "a",
           "$ruler",
-          "Branch,",
+          "$sprout+up_arrow+thing,",
           "and",
           "He",
           "will",
