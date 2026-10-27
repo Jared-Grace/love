@@ -214,7 +214,7 @@ export function bible_glyph_chapter_psa073() {
       {
         verse_number: 12,
         words: [
-          "Behold,",
+          "$exclamation,",
           "these",
           "are",
           "the",
