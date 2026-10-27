@@ -479,7 +479,7 @@ export function bible_glyph_chapter_jos07() {
           "will",
           "$no_entry",
           "be",
-          "with",
+          "$linked_paperclips",
           "you",
           "any",
           "$plus+doing",
