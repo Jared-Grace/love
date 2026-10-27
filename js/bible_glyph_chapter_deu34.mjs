@@ -113,7 +113,7 @@ export function bible_glyph_chapter_deu34() {
           "is",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "I",
           "swore",
           "to",
