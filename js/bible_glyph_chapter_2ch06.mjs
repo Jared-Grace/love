@@ -1142,7 +1142,7 @@ export function bible_glyph_chapter_2ch06() {
           "for",
           "the",
           "foreigner",
-          "who",
+          "$back+flashlight",
           "is",
           "$no_entry",
           "of",
