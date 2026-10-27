@@ -344,7 +344,7 @@ export function bible_glyph_chapter_lev03() {
           "he",
           "is",
           "to",
-          "present",
+          "$magnet+doing",
           "it",
           "before",
           "$i_am.",
