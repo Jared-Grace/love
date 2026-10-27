@@ -220,7 +220,7 @@ export function bible_glyph_chapter_psa046() {
           "still",
           "and",
           "$lightbulb",
-          "that",
+          "$pointing",
           "I",
           "am",
           "$heart_on_fire;",
