@@ -516,7 +516,7 @@ export function bible_glyph_chapter_exo23() {
           "$sacrifice",
           "with",
           "anything",
-          "leavened,",
+          "$bread+bubbles,",
           "$no_entry",
           "may",
           "the",
