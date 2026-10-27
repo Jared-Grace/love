@@ -369,7 +369,7 @@ export function bible_glyph_chapter_lev06() {
           "$grain_offering.",
           "$son",
           "of",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "shall",
           "$magnet+doing",
           "it",
