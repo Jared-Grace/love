@@ -44,7 +44,7 @@ export function bible_glyph_chapter_lev24() {
       {
         verse_number: 3,
         words: [
-          "Outside",
+          "$sun_behind_small_cloud",
           "the",
           "$veil",
           "of",
