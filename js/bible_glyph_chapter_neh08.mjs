@@ -382,7 +382,7 @@ export function bible_glyph_chapter_neh08() {
           "$cup_with_straw",
           "what",
           "is",
-          "sweet,",
+          "$honey+thing,",
           "and",
           "$hand_sending",
           "out",
