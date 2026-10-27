@@ -286,7 +286,7 @@ export function bible_glyph_chapter_jos03() {
           "of",
           "Israel,",
           "$walking+toward",
-          "here",
+          "$round_pushpin+pointing_down",
           "and",
           "$ear",
           "the",
