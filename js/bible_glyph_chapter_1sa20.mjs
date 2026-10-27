@@ -561,7 +561,7 @@ export function bible_glyph_chapter_1sa20() {
           "$two_hearts+proper_name",
           "from",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "earth.",
