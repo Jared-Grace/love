@@ -193,7 +193,7 @@ export function bible_glyph_chapter_isa11() {
           "will",
           "lie",
           "down",
-          "with",
+          "$linked_paperclips",
           "the",
           "goat;",
           "the",
