@@ -1013,7 +1013,7 @@ export function bible_glyph_chapter_exo09() {
           "out",
           "his",
           "hands",
-          "to",
+          "$toward",
           "$i_am.",
           "The",
           "$voice",
