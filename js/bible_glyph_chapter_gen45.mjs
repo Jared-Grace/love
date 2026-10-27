@@ -373,7 +373,7 @@ export function bible_glyph_chapter_gen45() {
           "$son+right_arrow",
           "can",
           "$eye",
-          "that",
+          "$pointing",
           "I,",
           "Joseph,",
           "am",
