@@ -38,7 +38,7 @@ export function bible_glyph_chapter_pro03() {
           "they",
           "will",
           "add",
-          "length",
+          "$up_down_arrow",
           "to",
           "your",
           "$sun,",
