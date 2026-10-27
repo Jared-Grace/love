@@ -1385,7 +1385,7 @@ export function bible_glyph_chapter_jdg06() {
           "$right_arrow",
           "that",
           "$night.",
-          "Only",
+          "$one+person",
           "the",
           "fleece",
           "was",
