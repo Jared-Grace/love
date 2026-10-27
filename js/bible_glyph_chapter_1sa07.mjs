@@ -107,7 +107,7 @@ export function bible_glyph_chapter_1sa07() {
           "put",
           "away",
           "the",
-          "foreign",
+          "$detective+thing",
           "$moai",
           "among",
           "you",
