@@ -868,7 +868,7 @@ export function bible_glyph_chapter_jer31() {
           "$eye",
           "around.",
           "My",
-          "sleep",
+          "$sleeping_face+thing",
           "had",
           "been",
           "most",
