@@ -714,7 +714,7 @@ export function bible_glyph_chapter_exo30() {
           "the",
           "$hand_sending+thing",
           "and",
-          "all",
+          "$all",
           "its",
           "utensils,",
           "the",
