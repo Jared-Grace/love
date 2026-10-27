@@ -432,7 +432,7 @@ export function bible_glyph_chapter_exo26() {
           "cubit",
           "and",
           "a",
-          "half",
+          "$divide",
           "wide.",
         ],
       },
