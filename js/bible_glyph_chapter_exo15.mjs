@@ -389,7 +389,7 @@ export function bible_glyph_chapter_exo15() {
           "in",
           "$proper_name$Canaan",
           "will",
-          "melt",
+          "$ice+droplet+doing",
           "away.",
         ],
       },
