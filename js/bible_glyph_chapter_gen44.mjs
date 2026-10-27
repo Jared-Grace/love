@@ -902,7 +902,7 @@ export function bible_glyph_chapter_gen44() {
           "$kneeling,",
           "our",
           "$father,",
-          "down",
+          "$walking+pointing_down",
           "to",
           "Sheol",
           "in",
