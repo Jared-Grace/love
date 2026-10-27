@@ -99,7 +99,7 @@ export function bible_glyph_chapter_hab01() {
           "$no_entry",
           "goes",
           "forth.",
-          "For",
+          "$pointing",
           "the",
           "$thumbs_down",
           "hem",
