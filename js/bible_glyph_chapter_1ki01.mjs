@@ -1446,7 +1446,7 @@ export function bible_glyph_chapter_1ki01() {
           "gone",
           "up",
           "from",
-          "there",
+          "$telescope",
           "with",
           "rejoicing",
           "that",
