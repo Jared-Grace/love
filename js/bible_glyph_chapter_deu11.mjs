@@ -627,7 +627,7 @@ export function bible_glyph_chapter_deu11() {
       {
         verse_number: 19,
         words: [
-          "Teach",
+          "$learner+doing",
           "them",
           "to",
           "your",
