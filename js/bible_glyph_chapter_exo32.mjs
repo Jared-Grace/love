@@ -570,7 +570,7 @@ export function bible_glyph_chapter_exo32() {
           "writing",
           "of",
           "$heart_on_fire,",
-          "engraved",
+          "$writing_hand+stone+doing",
           "on",
           "the",
           "tablets.",
