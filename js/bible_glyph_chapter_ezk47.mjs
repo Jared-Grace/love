@@ -74,7 +74,7 @@ export function bible_glyph_chapter_ezk47() {
           "out",
           "$road",
           "the",
-          "north",
+          "$compass+up_arrow",
           "$gate",
           "and",
           "led",
