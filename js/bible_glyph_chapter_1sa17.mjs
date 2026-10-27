@@ -1827,7 +1827,7 @@ export function bible_glyph_chapter_1sa17() {
           "$person+question",
           "$son",
           "are",
-          "you,",
+          "$you,",
           "young",
           "man?",
           "$proper_name$Saul",
