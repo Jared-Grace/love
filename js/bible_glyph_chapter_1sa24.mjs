@@ -172,7 +172,7 @@ export function bible_glyph_chapter_1sa24() {
           "$heart_organ",
           "troubled",
           "him",
-          "because",
+          "$pointing_up",
           "he",
           "had",
           "cut",
