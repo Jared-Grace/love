@@ -417,7 +417,7 @@ export function bible_glyph_chapter_ezk47() {
           "will",
           "bear",
           "fruit,",
-          "because",
+          "$pointing",
           "the",
           "$water",
           "$tray_out",
