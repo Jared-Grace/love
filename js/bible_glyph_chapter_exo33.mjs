@@ -738,7 +738,7 @@ export function bible_glyph_chapter_exo33() {
           "$rock+hole",
           "of",
           "the",
-          "rock",
+          "$rock",
           "and",
           "cover",
           "you",
