@@ -705,7 +705,7 @@ export function bible_glyph_chapter_lev06() {
           "$garment,",
           "you",
           "must",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "it",
           "in",
           "$sparkle",
