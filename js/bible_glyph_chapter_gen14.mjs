@@ -150,7 +150,7 @@ export function bible_glyph_chapter_gen14() {
           "as",
           "$finish",
           "as",
-          "El-paran,",
+          "$tree+flexed_biceps+crown+sparkle+proper_name,",
           "which",
           "is",
           "near",
