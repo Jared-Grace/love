@@ -110,7 +110,7 @@ export function bible_glyph_chapter_isa35() {
           "will",
           "$footprints",
           "with",
-          "vengeance.",
+          "$sword+turn_back+thing.",
           "With",
           "the",
           "retribution",
