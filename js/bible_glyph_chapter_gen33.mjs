@@ -74,7 +74,7 @@ export function bible_glyph_chapter_gen33() {
           "himself",
           "went",
           "on",
-          "ahead",
+          "$face",
           "of",
           "them",
           "and",
