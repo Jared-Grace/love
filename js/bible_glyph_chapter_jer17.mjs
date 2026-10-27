@@ -129,7 +129,7 @@ export function bible_glyph_chapter_jer17() {
           "do",
           "$no_entry",
           "$lightbulb,",
-          "for",
+          "$pointing",
           "you",
           "have",
           "kindled",
