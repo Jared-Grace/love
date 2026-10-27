@@ -20,7 +20,7 @@ export function bible_glyph_chapter_psa145() {
           "of",
           "$clapping_hands+thing.",
           "Of",
-          "David.",
+          "$two_hearts+proper_name.",
           "I",
           "will",
           "exalt",
