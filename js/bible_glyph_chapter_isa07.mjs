@@ -450,7 +450,7 @@ export function bible_glyph_chapter_isa07() {
           "$gesturing_no+throwing+doing",
           "$thumbs_down",
           "and",
-          "choose",
+          "$check_box",
           "$thumbs_up,",
           "He",
           "will",
