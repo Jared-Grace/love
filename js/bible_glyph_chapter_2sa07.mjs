@@ -539,7 +539,7 @@ export function bible_glyph_chapter_2sa07() {
       {
         verse_number: 17,
         words: [
-          "So",
+          "$right_arrow",
           "$proper_name$Nathan",
           "$mouth",
           "to",
