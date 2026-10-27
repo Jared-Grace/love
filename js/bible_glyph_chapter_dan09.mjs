@@ -267,7 +267,7 @@ export function bible_glyph_chapter_dan09() {
           "our",
           "$father",
           "-",
-          "because",
+          "$back+flashlight",
           "we",
           "have",
           "$bow+doing",
