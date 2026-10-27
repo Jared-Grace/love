@@ -1,11 +1,12 @@
-import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
+import { equal } from "./equal.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
+import { text_get } from "./text_get.mjs";
 import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 export function app_code_brace_pair_wrong_say(question, answer, choice) {
@@ -21,18 +22,19 @@ export function app_code_brace_pair_wrong_say(question, answer, choice) {
   }
   let left = js_code_brace_left();
   let right = js_code_brace_right();
-  let own = code[index];
+  let own = text_get(code, index);
   let partner = js_code_brace_partner_index(code, index);
   let step = equal(own, left) ? 1 : -1;
   let other = equal(own, left) ? right : left;
   let counts = [];
   let count = 0;
   for (let i = index; not_equal(i, partner + step); i += step) {
-    if (equal(code[i], own)) {
+    let c = text_get(code, i);
+    if (equal(c, own)) {
       count += 1;
       let item = String(count);
       list_add(counts, item);
-    } else if (equal(code[i], other)) {
+    } else if (equal(c, other)) {
       count -= 1;
       let item2 = String(count);
       list_add(counts, item2);
