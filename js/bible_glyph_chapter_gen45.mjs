@@ -802,7 +802,7 @@ export function bible_glyph_chapter_gen45() {
           "him",
           "$pointing_down,",
           "the",
-          "spirit",
+          "$wind",
           "of",
           "their",
           "$father",
