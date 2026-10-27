@@ -143,7 +143,7 @@ export function bible_glyph_chapter_amo05() {
           "surely",
           "go",
           "into",
-          "exile,",
+          "$luggage+chains+doing,",
           "and",
           "Bethel",
           "will",
