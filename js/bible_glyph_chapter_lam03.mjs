@@ -432,7 +432,7 @@ export function bible_glyph_chapter_lam03() {
           "$pointing_up",
           "I",
           "will",
-          "hope",
+          "$hourglass+crossed_fingers",
           "in",
           "Him.",
         ],
