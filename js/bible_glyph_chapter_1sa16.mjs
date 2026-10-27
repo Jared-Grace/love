@@ -323,7 +323,7 @@ export function bible_glyph_chapter_1sa16() {
           "of",
           "his",
           "$son",
-          "pass",
+          "$bridge",
           "before",
           "$ear+heart_on_fire,",
           "but",
