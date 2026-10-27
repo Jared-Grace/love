@@ -281,7 +281,7 @@ export function bible_glyph_chapter_num06() {
           "$footprints",
           "$two",
           "$dove+ring",
-          "or",
+          "$shuffle",
           "$two",
           "$son",
           "of",
