@@ -612,7 +612,7 @@ export function bible_glyph_chapter_num27() {
           "had",
           "him",
           "$person+round_pushpin",
-          "before",
+          "$face",
           "$proper_name$Eleazar",
           "the",
           "$priest",
