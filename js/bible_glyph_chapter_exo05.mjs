@@ -654,7 +654,7 @@ export function bible_glyph_chapter_exo05() {
           "their",
           "$hand",
           "to",
-          "kill",
+          "$fist+skull",
           "us.",
         ],
       },
