@@ -339,7 +339,7 @@ export function bible_glyph_chapter_gen31() {
           "you",
           "made",
           "a",
-          "vow",
+          "$saluting_face",
           "to",
           "me.",
           "Now",
