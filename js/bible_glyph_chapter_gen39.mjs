@@ -489,7 +489,7 @@ export function bible_glyph_chapter_gen39() {
           "cloak",
           "$children_crossing",
           "her",
-          "until",
+          "$finish",
           "his",
           "$crown",
           "$footprints",
