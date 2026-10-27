@@ -776,7 +776,7 @@ export function bible_glyph_chapter_2ki17() {
           "$wrestling+heart_on_fire",
           "from",
           "His",
-          "presence,",
+          "$face,",
           "as",
           "He",
           "had",
