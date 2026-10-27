@@ -762,7 +762,7 @@ export function bible_glyph_chapter_2ch34() {
         words: [
           "$walking",
           "and",
-          "inquire",
+          "$magnifying_glass+question",
           "of",
           "the",
           "$i_am",
