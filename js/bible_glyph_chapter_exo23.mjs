@@ -184,7 +184,7 @@ export function bible_glyph_chapter_exo23() {
           "$money_bag+hand_sending,",
           "for",
           "a",
-          "bribe",
+          "$money_bag+hand_sending",
           "blinds",
           "those",
           "who",
