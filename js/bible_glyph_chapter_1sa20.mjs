@@ -796,7 +796,7 @@ export function bible_glyph_chapter_1sa20() {
           "$speech",
           "you",
           "and",
-          "I",
+          "$me",
           "have",
           "$mouth,",
           "the",
