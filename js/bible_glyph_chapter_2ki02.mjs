@@ -848,7 +848,7 @@ export function bible_glyph_chapter_2ki02() {
         verse_number: 23,
         words: [
           "From",
-          "there",
+          "$telescope",
           "Elisha",
           "went",
           "up",
