@@ -643,7 +643,7 @@ export function bible_glyph_chapter_num15() {
           "is",
           "to",
           "$hammer+doing",
-          "one",
+          "$one",
           "$son",
           "of",
           "the",
