@@ -30,7 +30,7 @@ export function bible_glyph_chapter_exo04() {
           "to",
           "my",
           "$voice?",
-          "For",
+          "$pointing",
           "they",
           "may",
           "$speech,",
