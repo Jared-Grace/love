@@ -397,7 +397,7 @@ export function bible_glyph_chapter_gen04() {
           "hidden",
           "from",
           "Your",
-          "face.",
+          "$face.",
           "I",
           "will",
           "be",
