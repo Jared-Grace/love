@@ -406,7 +406,7 @@ export function bible_glyph_chapter_job31() {
           "a",
           "needy",
           "man",
-          "without",
+          "$dotted_line_face",
           "a",
           "cloak,",
         ],
