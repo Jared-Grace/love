@@ -719,7 +719,7 @@ export function bible_glyph_chapter_1sa15() {
           "Does",
           "the",
           "$i_am",
-          "delight",
+          "$smiling_face_with_hearts",
           "in",
           "burnt",
           "offerings",
