@@ -699,7 +699,7 @@ export function bible_glyph_chapter_1sa15() {
           "in",
           "order",
           "to",
-          "sacrifice",
+          "$sacrifice",
           "them",
           "to",
           "the",
