@@ -513,7 +513,7 @@ export function bible_glyph_chapter_lev24() {
         words: [
           "$broken_chain+thing",
           "for",
-          "fracture,",
+          "$broken_chain+thing,",
           "$eyes",
           "for",
           "$eyes,",
