@@ -63,7 +63,7 @@ export function bible_glyph_chapter_jdg11() {
           "they",
           "drove",
           "$unlocked+proper_name",
-          "out",
+          "$door+leftwards_pushing_hand+doing",
           "and",
           "$speech",
           "to",
