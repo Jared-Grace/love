@@ -981,7 +981,7 @@ export function bible_glyph_chapter_deu11() {
           "these",
           "mountains",
           "$no_entry",
-          "across",
+          "$bridge+thing",
           "the",
           "$pointing_down+proper_name,",
           "west",
