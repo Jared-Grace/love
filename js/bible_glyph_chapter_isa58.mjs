@@ -307,7 +307,7 @@ export function bible_glyph_chapter_isa58() {
           "healing",
           "will",
           "come",
-          "quickly.",
+          "$fast_forward+thing.",
           "Your",
           "$ruler+thing",
           "will",
