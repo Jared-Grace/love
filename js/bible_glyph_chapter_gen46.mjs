@@ -726,7 +726,7 @@ export function bible_glyph_chapter_gen46() {
           "Then",
           "$wrestling+heart_on_fire",
           "$speech",
-          "to",
+          "$toward",
           "$i_am+plus,",
           "Now",
           "let",
