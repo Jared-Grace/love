@@ -548,7 +548,7 @@ export function bible_glyph_chapter_ezk03() {
           "$mouth",
           "out",
           "to",
-          "warn",
+          "$rotating_light+doing",
           "the",
           "$thumbs_down",
           "man",
