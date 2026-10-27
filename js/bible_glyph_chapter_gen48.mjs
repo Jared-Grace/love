@@ -545,7 +545,7 @@ export function bible_glyph_chapter_gen48() {
           "had",
           "placed",
           "his",
-          "right",
+          "$hand+right_arrow",
           "$hand",
           "on",
           "the",
