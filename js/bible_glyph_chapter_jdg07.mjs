@@ -809,7 +809,7 @@ export function bible_glyph_chapter_jdg07() {
           "hundred",
           "rams",
           "horns",
-          "sounded,",
+          "$trumpet+doing,",
           "the",
           "$i_am",
           "set",
