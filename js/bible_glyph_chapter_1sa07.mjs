@@ -35,7 +35,7 @@ export function bible_glyph_chapter_1sa07() {
           "$father+heart_hands+proper_name",
           "on",
           "the",
-          "hill.",
+          "$mountain+pinching_hand.",
           "And",
           "they",
           "$sparkle+doing",
