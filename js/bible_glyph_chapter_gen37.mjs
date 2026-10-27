@@ -787,7 +787,7 @@ export function bible_glyph_chapter_gen37() {
           "$proper_name$Ishmaelites",
           "and",
           "$no_entry",
-          "lay",
+          "$link",
           "a",
           "$hand",
           "on",
