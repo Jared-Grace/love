@@ -97,7 +97,7 @@ export function bible_glyph_chapter_num14() {
           "children",
           "will",
           "become",
-          "plunder.",
+          "$pirate_flag+thing.",
           "Would",
           "it",
           "$no_entry",
