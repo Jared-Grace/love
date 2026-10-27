@@ -225,7 +225,7 @@ export function bible_glyph_chapter_lam01() {
           "$walking",
           "in",
           "the",
-          "face",
+          "$face",
           "of",
           "the",
           "hunter.",
