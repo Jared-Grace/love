@@ -503,7 +503,7 @@ export function bible_glyph_chapter_1sa07() {
           "there",
           "was",
           "$peace",
-          "between",
+          "$brain+arrow_both_ways",
           "$wrestling+heart_on_fire",
           "and",
           "the",
