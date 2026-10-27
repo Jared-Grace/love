@@ -100,7 +100,7 @@ export function bible_glyph_chapter_dan09() {
           "petition,",
           "with",
           "fasting,",
-          "sackcloth,",
+          "$sackcloth,",
           "and",
           "ashes.",
         ],
