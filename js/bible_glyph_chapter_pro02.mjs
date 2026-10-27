@@ -51,7 +51,7 @@ export function bible_glyph_chapter_pro02() {
       {
         verse_number: 3,
         words: [
-          "if",
+          "$traffic_light",
           "you",
           "$pointing",
           "call",
