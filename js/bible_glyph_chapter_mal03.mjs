@@ -618,7 +618,7 @@ export function bible_glyph_chapter_mal03() {
           "and",
           "the",
           "$thumbs_down,",
-          "between",
+          "$brain+arrow_both_ways",
           "those",
           "who",
           "$kneeling+doing",
