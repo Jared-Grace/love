@@ -405,7 +405,7 @@ export function bible_glyph_chapter_2ki04() {
           "gone",
           "to",
           "all",
-          "this",
+          "$flashlight",
           "$fear+vibration_mode+doing",
           "for",
           "us.",
