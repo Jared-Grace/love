@@ -648,7 +648,7 @@ export function bible_glyph_chapter_exo21() {
         verse_number: 23,
         words: [
           "But",
-          "if",
+          "$traffic_light",
           "a",
           "serious",
           "injury",
