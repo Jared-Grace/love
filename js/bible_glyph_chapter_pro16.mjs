@@ -364,7 +364,7 @@ export function bible_glyph_chapter_pro16() {
           "$road",
           "$guard",
           "his",
-          "life.",
+          "$person_other.",
         ],
       },
       {
