@@ -386,7 +386,7 @@ export function bible_glyph_chapter_zep02() {
       {
         verse_number: 12,
         words: [
-          "You",
+          "$you",
           "too,",
           "O",
           "Cushites,",
