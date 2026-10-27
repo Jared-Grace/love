@@ -186,7 +186,7 @@ export function bible_glyph_chapter_gen31() {
           "he",
           "$speech,",
           "The",
-          "speckled",
+          "$black_circle+describing",
           "will",
           "be",
           "your",
