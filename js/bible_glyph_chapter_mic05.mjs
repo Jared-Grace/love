@@ -302,7 +302,7 @@ export function bible_glyph_chapter_mic05() {
           "like",
           "a",
           "young",
-          "lion",
+          "$lion",
           "among",
           "flocks",
           "of",
