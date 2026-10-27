@@ -631,7 +631,7 @@ export function bible_glyph_chapter_neh09() {
           "for",
           "themselves",
           "an",
-          "image",
+          "$pouring_liquid+moai",
           "of",
           "a",
           "$calf",
