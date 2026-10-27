@@ -615,7 +615,7 @@ export function bible_glyph_chapter_num08() {
           "a",
           "wave",
           "offering",
-          "before",
+          "$face",
           "$i_am.",
           "$proper_name$Aaron",
           "also",
