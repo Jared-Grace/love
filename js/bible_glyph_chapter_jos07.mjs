@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jos07() {
           "So",
           "about",
           "$three",
-          "thousand",
+          "$ten+all",
           "$man_beard",
           "of",
           "the",
