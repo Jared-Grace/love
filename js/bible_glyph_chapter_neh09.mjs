@@ -1174,7 +1174,7 @@ export function bible_glyph_chapter_neh09() {
           "You",
           "are",
           "a",
-          "gracious",
+          "$heart_orange+describing",
           "and",
           "compassionate",
           "$heart_on_fire.",
