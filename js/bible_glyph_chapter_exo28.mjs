@@ -106,7 +106,7 @@ export function bible_glyph_chapter_exo28() {
       {
         verse_number: 4,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "$garment",
