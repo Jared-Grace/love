@@ -723,7 +723,7 @@ export function bible_glyph_chapter_zec08() {
           "and",
           "to",
           "plead",
-          "before",
+          "$face",
           "the",
           "$i_am.",
         ],
