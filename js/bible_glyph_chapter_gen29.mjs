@@ -303,7 +303,7 @@ export function bible_glyph_chapter_gen29() {
           "away",
           "from",
           "the",
-          "mouth",
+          "$face_with_open_mouth",
           "of",
           "the",
           "well",
