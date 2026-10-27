@@ -504,7 +504,7 @@ export function bible_glyph_chapter_deu15() {
           "am",
           "giving",
           "you",
-          "this",
+          "$flashlight",
           "$speech",
           "$sun.",
         ],
