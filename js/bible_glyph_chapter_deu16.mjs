@@ -554,7 +554,7 @@ export function bible_glyph_chapter_deu16() {
           "so",
           "that",
           "your",
-          "joy",
+          "$beaming+describing",
           "will",
           "be",
           "$check+exclamation.",
