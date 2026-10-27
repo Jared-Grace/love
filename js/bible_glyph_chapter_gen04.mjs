@@ -553,7 +553,7 @@ export function bible_glyph_chapter_gen04() {
           "$hand_receiving",
           "$two",
           "$woman,",
-          "one",
+          "$one",
           "named",
           "$proper_name$Adah",
           "and",
