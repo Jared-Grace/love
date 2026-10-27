@@ -370,7 +370,7 @@ export function bible_glyph_chapter_deu28() {
           "The",
           "$i_am",
           "will",
-          "open",
+          "$unlocked",
           "His",
           "good",
           "storehouse,",
