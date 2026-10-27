@@ -65,7 +65,7 @@ export function bible_glyph_chapter_lev13() {
           "the",
           "$priest,",
           "$shuffle",
-          "to",
+          "$toward",
           "one",
           "of",
           "his",
