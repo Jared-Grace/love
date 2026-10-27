@@ -240,7 +240,7 @@ export function bible_glyph_chapter_ezk34() {
           "shepherds",
           "did",
           "$no_entry",
-          "search",
+          "$magnifying_glass+question",
           "for",
           "My",
           "$sheep",
