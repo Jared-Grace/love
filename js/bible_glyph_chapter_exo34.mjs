@@ -1084,7 +1084,7 @@ export function bible_glyph_chapter_exo34() {
           "Him,",
           "he",
           "would",
-          "remove",
+          "$away+doing",
           "the",
           "veil",
           "until",
