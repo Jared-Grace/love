@@ -298,7 +298,7 @@ export function bible_glyph_chapter_lev15() {
           "the",
           "discharge",
           "touches",
-          "anyone",
+          "$all",
           "and",
           "has",
           "$no_entry",
