@@ -593,7 +593,7 @@ export function bible_glyph_chapter_exo12() {
           "bread",
           "from",
           "the",
-          "evening",
+          "$sunset",
           "of",
           "the",
           "fourteenth",
