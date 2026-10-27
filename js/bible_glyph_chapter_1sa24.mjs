@@ -65,7 +65,7 @@ export function bible_glyph_chapter_1sa24() {
           "Rocks",
           "of",
           "the",
-          "Wild",
+          "$goat+person_climbing",
           "Goats.",
         ],
       },
