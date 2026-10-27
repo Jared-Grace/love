@@ -20,7 +20,7 @@ export function bible_glyph_roots_split_pairs() {
     ["thumbs_down", "ra", "rasha"],
     ["thumbs_up", "agathos", "kalos"],
     ["walking", "peripateo", "poreuomai"],
-    ["woman", "bath", "ishshah"],
+    ["woman", "bath:daughter", "ishshah"],
   ];
   return pairs;
 }
