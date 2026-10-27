@@ -15,7 +15,7 @@ export function bible_glyph_chapter_job28() {
       {
         verse_number: 1,
         words: [
-          "Surely",
+          "$pointing",
           "there",
           "is",
           "a",
