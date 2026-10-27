@@ -219,7 +219,7 @@ export function bible_glyph_chapter_gen45() {
           "$sprout+doing",
           "by",
           "a",
-          "great",
+          "$top",
           "$door+running.",
         ],
       },
