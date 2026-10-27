@@ -207,7 +207,7 @@ export function bible_glyph_chapter_isa35() {
           "there",
           "will",
           "be",
-          "grass",
+          "$herb+thing",
           "and",
           "reeds",
           "and",
