@@ -1178,7 +1178,7 @@ export function bible_glyph_chapter_1ki02() {
           "$son",
           "of",
           "$lamp+proper_name,",
-          "commander",
+          "$military_medal",
           "of",
           "the",
           "army",
