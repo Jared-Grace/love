@@ -242,7 +242,7 @@ export function bible_glyph_chapter_num12() {
           "anger",
           "of",
           "$i_am",
-          "burned",
+          "$angry_face+doing",
           "against",
           "them,",
           "and",
