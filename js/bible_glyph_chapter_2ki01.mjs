@@ -336,7 +336,7 @@ export function bible_glyph_chapter_2ki01() {
           "was",
           "sitting",
           "on",
-          "top",
+          "$person_gesturing_ok",
           "of",
           "the",
           "$mountain,",
