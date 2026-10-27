@@ -60,7 +60,7 @@ export function bible_glyph_chapter_lev02() {
           "$lotion_bottle,",
           "together",
           "with",
-          "all",
+          "$all",
           "the",
           "frankincense,",
           "and",
