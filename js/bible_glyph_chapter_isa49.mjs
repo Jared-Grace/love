@@ -728,7 +728,7 @@ export function bible_glyph_chapter_isa49() {
           "so",
           "$map+question",
           "did",
-          "they",
+          "$pointing_back",
           "come",
           "from?",
         ],
