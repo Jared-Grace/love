@@ -114,7 +114,7 @@ export function bible_glyph_chapter_ezr01() {
           "may",
           "his",
           "$heart_on_fire",
-          "be",
+          "$link",
           "with",
           "him,",
           "and",
