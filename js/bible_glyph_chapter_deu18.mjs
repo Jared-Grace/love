@@ -531,7 +531,7 @@ export function bible_glyph_chapter_deu18() {
           "will",
           "$mouth",
           "them",
-          "everything",
+          "$all",
           "I",
           "command",
           "him.",
