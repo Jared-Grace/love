@@ -360,7 +360,7 @@ export function bible_glyph_chapter_hab03() {
           "to",
           "$confetti_ball",
           "us,",
-          "gloating",
+          "$partying_face+multiply+thing",
           "as",
           "though",
           "ready",
