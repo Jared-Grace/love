@@ -742,7 +742,7 @@ export function bible_glyph_chapter_1sa20() {
           "them,",
           "then",
           "$footprints,",
-          "because",
+          "$pointing",
           "it",
           "is",
           "safe",
