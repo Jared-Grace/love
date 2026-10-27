@@ -519,7 +519,7 @@ export function bible_glyph_chapter_jdg11() {
           "of",
           "$proper_name$Edom,",
           "$speech,",
-          "Please",
+          "$pleading",
           "let",
           "us",
           "$bridge",
