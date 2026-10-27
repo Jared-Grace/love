@@ -431,7 +431,7 @@ export function bible_glyph_chapter_gen33() {
           "that?",
           "Let",
           "me",
-          "find",
+          "$magnifying_glass+exclamation",
           "favor",
           "in",
           "the",
