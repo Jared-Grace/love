@@ -804,7 +804,7 @@ export function bible_glyph_chapter_gen11() {
           "$proper_name$Haran,",
           "they",
           "settled",
-          "there.",
+          "$telescope.",
         ],
       },
       {
