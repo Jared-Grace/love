@@ -483,7 +483,7 @@ export function bible_glyph_chapter_gen40() {
           "kinds",
           "of",
           "baked",
-          "goods",
+          "$eating+thing",
           "for",
           "$house+proper_name,",
           "but",
