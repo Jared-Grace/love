@@ -516,7 +516,7 @@ export function bible_glyph_chapter_1ch29() {
           "as",
           "generously",
           "as",
-          "this?",
+          "$flashlight?",
           "For",
           "everything",
           "comes",
