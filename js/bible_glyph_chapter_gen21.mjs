@@ -873,7 +873,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "And",
           "$father+map",
-          "resided",
+          "$luggage",
           "in",
           "the",
           "$earth",
