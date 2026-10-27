@@ -286,7 +286,7 @@ export function bible_glyph_chapter_2ki09() {
           "and",
           "I",
           "will",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "$proper_name$Ahab",
