@@ -156,7 +156,7 @@ export function bible_glyph_chapter_1ki12() {
           "consulted",
           "the",
           "elders",
-          "who",
+          "$back+flashlight",
           "had",
           "served",
           "his",
