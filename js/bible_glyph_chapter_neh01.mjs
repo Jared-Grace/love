@@ -149,7 +149,7 @@ export function bible_glyph_chapter_neh01() {
           "Then",
           "I",
           "$speech,",
-          "O",
+          "$pleading_face+exclamation",
           "$i_am,",
           "$heart_on_fire",
           "of",
