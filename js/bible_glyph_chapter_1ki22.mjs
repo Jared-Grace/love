@@ -1412,7 +1412,7 @@ export function bible_glyph_chapter_1ki22() {
           "the",
           "$family",
           "$repeat",
-          "sacrificed",
+          "$sacrifice",
           "and",
           "burned",
           "incense",
