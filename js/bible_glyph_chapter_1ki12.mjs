@@ -261,7 +261,7 @@ export function bible_glyph_chapter_1ki12() {
           "$flashlight+question",
           "word",
           "do",
-          "you",
+          "$you",
           "advise",
           "that",
           "we",
