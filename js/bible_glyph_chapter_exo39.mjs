@@ -401,7 +401,7 @@ export function bible_glyph_chapter_exo39() {
           "and",
           "$hands_giving",
           "the",
-          "two",
+          "$two",
           "$ring",
           "to",
           "the",
