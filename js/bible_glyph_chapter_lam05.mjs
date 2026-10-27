@@ -243,7 +243,7 @@ export function bible_glyph_chapter_lam05() {
           "left",
           "the",
           "city",
-          "gate;",
+          "$gate;",
           "the",
           "young",
           "men",
