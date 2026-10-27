@@ -123,7 +123,7 @@ export function bible_glyph_chapter_num10() {
           "short",
           "blasts",
           "a",
-          "second",
+          "$second_place",
           "time,",
           "the",
           "$camp",
