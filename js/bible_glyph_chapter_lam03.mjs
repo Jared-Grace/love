@@ -939,7 +939,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "The",
           "$water",
-          "flowed",
+          "$water_wave+up_arrow+doing",
           "over",
           "my",
           "head,",
