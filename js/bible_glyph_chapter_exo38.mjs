@@ -330,7 +330,7 @@ export function bible_glyph_chapter_exo38() {
         words: [
           "And",
           "the",
-          "side",
+          "$straight_ruler+round_pushpin",
           "toward",
           "the",
           "$east",
