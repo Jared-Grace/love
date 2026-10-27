@@ -841,7 +841,7 @@ export function bible_glyph_chapter_lev26() {
           "I",
           "will",
           "$walking",
-          "against",
+          "$boxing_glove+footprints",
           "you",
           "in",
           "fury,",
