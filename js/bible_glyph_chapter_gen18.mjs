@@ -669,7 +669,7 @@ export function bible_glyph_chapter_gen18() {
           "away",
           "the",
           "$ruler",
-          "with",
+          "$linked_paperclips",
           "the",
           "$thumbs_down?",
         ],
