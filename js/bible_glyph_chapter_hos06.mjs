@@ -307,7 +307,7 @@ export function bible_glyph_chapter_hos06() {
           "My",
           "$family",
           "from",
-          "captivity.",
+          "$turn_back+chains.",
         ],
       },
     ],
