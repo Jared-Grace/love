@@ -934,7 +934,7 @@ export function bible_glyph_chapter_2ki10() {
           "your",
           "$hand",
           "to",
-          "escape,",
+          "$parachute,",
           "he",
           "will",
           "forfeit",
