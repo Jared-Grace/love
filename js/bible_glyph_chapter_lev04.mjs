@@ -354,7 +354,7 @@ export function bible_glyph_chapter_lev04() {
           "unintentionally",
           "and",
           "$speech",
-          "escapes",
+          "$eyes+locked+doing",
           "$eyes",
           "of",
           "$church,",
