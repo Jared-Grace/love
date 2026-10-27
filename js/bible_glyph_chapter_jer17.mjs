@@ -382,7 +382,7 @@ export function bible_glyph_chapter_jer17() {
           "A",
           "$star",
           "$throne,",
-          "exalted",
+          "$up_arrow+thing",
           "from",
           "the",
           "beginning,",
