@@ -140,7 +140,7 @@ export function bible_glyph_chapter_zep01() {
           "$city+peace.",
           "I",
           "will",
-          "cut",
+          "$scissors",
           "off",
           "$tray_out",
           "this",
