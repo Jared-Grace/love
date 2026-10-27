@@ -212,7 +212,7 @@ export function bible_glyph_chapter_jer07() {
         verse_number: 8,
         words: [
           "But",
-          "look,",
+          "$exclamation,",
           "you",
           "keep",
           "trusting",
