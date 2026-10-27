@@ -636,7 +636,7 @@ export function bible_glyph_chapter_gen43() {
           "time",
           "to",
           "buy",
-          "food.",
+          "$eating+thing.",
         ],
       },
       {
