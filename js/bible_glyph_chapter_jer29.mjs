@@ -521,7 +521,7 @@ export function bible_glyph_chapter_jer29() {
           "with",
           "you",
           "into",
-          "exile.",
+          "$luggage+chains.",
         ],
       },
       {
