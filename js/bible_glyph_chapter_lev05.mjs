@@ -124,7 +124,7 @@ export function bible_glyph_chapter_lev05() {
           "$shuffle",
           "to",
           "do",
-          "good,",
+          "$thumbs_up+doing,",
           "in",
           "whatever",
           "matter",
