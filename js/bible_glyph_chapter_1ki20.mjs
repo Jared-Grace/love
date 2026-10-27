@@ -1157,7 +1157,7 @@ export function bible_glyph_chapter_1ki20() {
           "heads",
           "they",
           "$footprints",
-          "to",
+          "$toward",
           "the",
           "$king",
           "of",
