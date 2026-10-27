@@ -1173,7 +1173,7 @@ export function bible_glyph_chapter_1ki22() {
         words: [
           "As",
           "the",
-          "sun",
+          "$sun_with_face",
           "was",
           "$footprints,",
           "the",
