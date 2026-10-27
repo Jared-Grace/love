@@ -269,7 +269,7 @@ export function bible_glyph_chapter_lev23() {
           "And",
           "he",
           "shall",
-          "wave",
+          "$hand+up_down_arrow+doing",
           "the",
           "sheaf",
           "before",
