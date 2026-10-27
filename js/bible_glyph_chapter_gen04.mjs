@@ -627,7 +627,7 @@ export function bible_glyph_chapter_gen04() {
           "of",
           "$bronze",
           "and",
-          "iron.",
+          "$iron.",
           "And",
           "the",
           "sister",
