@@ -172,7 +172,7 @@ export function bible_glyph_chapter_hag02() {
           "$person+round_pushpin",
           "$radio_button",
           "you;",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing.",
         ],

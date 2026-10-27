@@ -724,7 +724,7 @@ export function bible_glyph_chapter_gen43() {
           "to",
           "you.",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing.",
           "Your",

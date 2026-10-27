@@ -501,7 +501,7 @@ export function bible_glyph_chapter_1sa03() {
           "$mouth",
           "you?",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$hand+tray_in+doing",
           "it",
           "$tray_out",

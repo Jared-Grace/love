@@ -573,7 +573,7 @@ export function bible_glyph_chapter_jdg02() {
           "obedience,",
           "$ear",
           "the",
-          "$scroll",
+          "$scroll+exclamation",
           "of",
           "the",
           "$i_am.",

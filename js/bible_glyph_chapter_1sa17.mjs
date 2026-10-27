@@ -951,7 +951,7 @@ export function bible_glyph_chapter_1sa17() {
           "$toward",
           "$proper_name$Saul,",
           "Let",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$person",
           "$heart_organ",
           "$person+pointing_down",

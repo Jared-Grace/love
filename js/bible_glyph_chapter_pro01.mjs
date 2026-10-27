@@ -182,7 +182,7 @@ export function bible_glyph_chapter_pro01() {
           "$bow+doer",
           "$fishing_pole+doing",
           "you,",
-          "$no_entry",
+          "$no_entry+exclamation",
           "yield",
           "to",
           "them.",
@@ -274,7 +274,7 @@ export function bible_glyph_chapter_pro01() {
         words: [
           "my",
           "$son,",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$walking",
           "in",
           "the",

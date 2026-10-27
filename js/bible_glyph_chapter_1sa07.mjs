@@ -274,7 +274,7 @@ export function bible_glyph_chapter_1sa07() {
           "$toward",
           "$ear+heart_on_fire,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$shushing_face",
           "crying",
           "$tray_out",

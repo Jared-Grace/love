@@ -375,7 +375,7 @@ export function bible_glyph_chapter_1ki17() {
           "to",
           "her,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing.",
           "$footprints",

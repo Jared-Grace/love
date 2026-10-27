@@ -742,7 +742,7 @@ export function bible_glyph_chapter_exo32() {
           "$proper_name$Aaron",
           "$speech,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "enraged,",
           "my",

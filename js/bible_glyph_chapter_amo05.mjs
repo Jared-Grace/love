@@ -392,7 +392,7 @@ export function bible_glyph_chapter_amo05() {
         words: [
           "$magnifying_glass+question",
           "$thumbs_up,",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$thumbs_down,",
           "so",
           "that",

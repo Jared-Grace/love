@@ -572,7 +572,7 @@ export function bible_glyph_chapter_jdg04() {
           "with",
           "me.",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing.",
           "So",

@@ -116,7 +116,7 @@ export function bible_glyph_chapter_psa034() {
           "their",
           "faces",
           "shall",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "ashamed.",
         ],

@@ -17,7 +17,7 @@ export function bible_glyph_chapter_isa58() {
           "$waving_hand",
           "$tongue+down_arrow,",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "hold",
           "back!",
           "$up_arrow",

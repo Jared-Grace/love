@@ -170,7 +170,7 @@ export function bible_glyph_chapter_psa095() {
         verse_number: 8,
         words: [
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$mechanical_arm+doing",
           "your",
           "$heart_organ,",

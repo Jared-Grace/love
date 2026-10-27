@@ -534,7 +534,7 @@ export function bible_glyph_chapter_rev01() {
           "me",
           "$speech,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$fear+doing.",
           "I",
           "$link",

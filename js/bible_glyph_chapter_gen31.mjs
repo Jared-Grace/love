@@ -959,7 +959,7 @@ export function bible_glyph_chapter_gen31() {
           "$toward",
           "her",
           "$father,",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "angry",
           "in",

@@ -121,7 +121,7 @@ export function bible_glyph_chapter_jos03() {
           "the",
           "ark.",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "go",
           "$magnet+doing",
           "it,",

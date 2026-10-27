@@ -533,7 +533,7 @@ export function bible_glyph_chapter_gen44() {
           "my",
           "$crown.",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "angry",
           "with",

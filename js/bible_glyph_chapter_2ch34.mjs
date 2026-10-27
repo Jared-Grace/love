@@ -1237,7 +1237,7 @@ export function bible_glyph_chapter_2ch34() {
           "to",
           "$guard",
           "His",
-          "$scroll,",
+          "$scroll+exclamation,",
           "His",
           "$witness+thing",
           "and",

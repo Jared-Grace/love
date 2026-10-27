@@ -716,7 +716,7 @@ export function bible_glyph_chapter_2ki02() {
           "to",
           "you,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$walking?",
         ],
       },

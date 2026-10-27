@@ -1053,7 +1053,7 @@ export function bible_glyph_chapter_lev27() {
           "$flashlight+flashlight",
           "are",
           "the",
-          "$scroll",
+          "$scroll+exclamation",
           "$back+flashlight",
           "$i_am",
           "gave",

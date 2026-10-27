@@ -165,7 +165,7 @@ export function bible_glyph_chapter_psa085() {
           "but",
           "let",
           "them",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$turn_back",
           "to",
           "folly.",

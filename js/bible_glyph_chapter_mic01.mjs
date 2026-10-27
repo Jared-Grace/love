@@ -321,7 +321,7 @@ export function bible_glyph_chapter_mic01() {
         verse_number: 10,
         words: [
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$newspaper",
           "it",
           "in",

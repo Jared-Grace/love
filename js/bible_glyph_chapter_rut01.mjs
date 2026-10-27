@@ -397,7 +397,7 @@ export function bible_glyph_chapter_rut01() {
           "from",
           "$link",
           "$man_beard?",
-          "$no_entry,",
+          "$no_entry+exclamation,",
           "my",
           "$girl+family,",
           "it",
@@ -471,7 +471,7 @@ export function bible_glyph_chapter_rut01() {
           "But",
           "Ruth",
           "$speech:",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$toward+person+doing",
           "me",
           "to",
@@ -612,7 +612,7 @@ export function bible_glyph_chapter_rut01() {
       {
         verse_number: 20,
         words: [
-          "$no_entry",
+          "$no_entry+exclamation",
           "$waving_hand",
           "me",
           "$proper_name$Naomi,",

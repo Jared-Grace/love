@@ -477,7 +477,7 @@ export function bible_glyph_chapter_1sa01() {
         verse_number: 16,
         words: [
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "take",
           "your",
           "servant",

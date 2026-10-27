@@ -789,7 +789,7 @@ export function bible_glyph_chapter_num10() {
           "Moses",
           "$speech,",
           "$pleading",
-          "$no_entry",
+          "$no_entry+exclamation",
           "leave",
           "us,",
           "$pointing",

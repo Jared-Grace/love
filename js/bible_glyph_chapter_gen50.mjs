@@ -555,7 +555,7 @@ export function bible_glyph_chapter_gen50() {
           "$i_am+plus",
           "$speech,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing.",
           "Am",
@@ -606,7 +606,7 @@ export function bible_glyph_chapter_gen50() {
         words: [
           "$watch",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing.",
           "$me",

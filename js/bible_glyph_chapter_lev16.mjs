@@ -53,7 +53,7 @@ export function bible_glyph_chapter_lev16() {
           "$proper_name$Aaron",
           "your",
           "$brother",
-          "$no_entry",
+          "$no_entry+exclamation",
           "to",
           "$footprints",
           "$all",

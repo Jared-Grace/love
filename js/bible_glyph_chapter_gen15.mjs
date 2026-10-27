@@ -29,7 +29,7 @@ export function bible_glyph_chapter_gen15() {
           "a",
           "vision:",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing,",
           "$proper_name$Abram.",

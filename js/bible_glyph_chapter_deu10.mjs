@@ -455,7 +455,7 @@ export function bible_glyph_chapter_deu10() {
           "to",
           "$guard",
           "the",
-          "$scroll",
+          "$scroll+exclamation",
           "of",
           "the",
           "$i_am",

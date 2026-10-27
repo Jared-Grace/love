@@ -45,7 +45,7 @@ export function bible_glyph_chapter_psa103() {
           "$person_other,",
           "and",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$reminder_ribbon+no_entry",
           "$all",
           "His",

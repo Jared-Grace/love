@@ -242,7 +242,7 @@ export function bible_glyph_chapter_gen33() {
         words: [
           "$hand+foot",
           "$speech,",
-          "$no_entry,",
+          "$no_entry+exclamation,",
           "$pleading.",
           "$traffic_light",
           "I",

@@ -537,7 +537,7 @@ export function bible_glyph_chapter_lev05() {
           "$hammer+doing",
           "any",
           "of",
-          "$scroll",
+          "$scroll+exclamation",
           "of",
           "$i_am",
           "$no_entry",

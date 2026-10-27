@@ -84,7 +84,7 @@ export function bible_glyph_chapter_jer26() {
           "commanded",
           "you;",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$scissors+down_arrow+doing",
           "a",
           "$voice+doing.",

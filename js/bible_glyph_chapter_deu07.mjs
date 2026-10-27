@@ -334,7 +334,7 @@ export function bible_glyph_chapter_deu07() {
           "and",
           "keep",
           "His",
-          "$scroll.",
+          "$scroll+exclamation.",
         ],
       },
       {
@@ -374,7 +374,7 @@ export function bible_glyph_chapter_deu07() {
           "So",
           "$guard",
           "the",
-          "$scroll",
+          "$scroll+exclamation",
           "and",
           "the",
           "$locked_with_pen",

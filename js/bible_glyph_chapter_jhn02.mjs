@@ -425,7 +425,7 @@ export function bible_glyph_chapter_jhn02() {
           "out",
           "of",
           "$round_pushpin+tray_out!",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$hammer",
           "the",
           "$house",

@@ -229,7 +229,7 @@ export function bible_glyph_chapter_psa022() {
         verse_number: 11,
         words: [
           "Be",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$satellite+doing",
           "$tray_out",
           "me,",
@@ -401,7 +401,7 @@ export function bible_glyph_chapter_psa022() {
           "O",
           "$i_am,",
           "be",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$satellite+doing",
           "off;",
           "O",

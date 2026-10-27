@@ -474,7 +474,7 @@ export function bible_glyph_chapter_num36() {
           "$flashlight+flashlight",
           "are",
           "the",
-          "$scroll",
+          "$scroll+exclamation",
           "and",
           "the",
           "$scales+thing",

@@ -361,7 +361,7 @@ export function bible_glyph_chapter_job01() {
           "but",
           "you",
           "must",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$hand_sending",
           "a",
           "$hand",

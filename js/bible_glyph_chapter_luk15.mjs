@@ -774,7 +774,7 @@ export function bible_glyph_chapter_luk15() {
         "never",
         "$children_crossing+footprints",
         "a",
-        "$scroll",
+        "$scroll+exclamation",
         "of",
         "yours.",
         "$plus",

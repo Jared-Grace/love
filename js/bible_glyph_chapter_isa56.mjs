@@ -80,7 +80,7 @@ export function bible_glyph_chapter_isa56() {
       {
         verse_number: 3,
         words: [
-          "$no_entry",
+          "$no_entry+exclamation",
           "let",
           "the",
           "$son",
@@ -105,7 +105,7 @@ export function bible_glyph_chapter_isa56() {
           "His",
           "$family.",
           "And",
-          "$no_entry",
+          "$no_entry+exclamation",
           "let",
           "the",
           "eunuch",

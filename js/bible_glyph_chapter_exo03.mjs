@@ -141,7 +141,7 @@ export function bible_glyph_chapter_exo03() {
         verse_number: 5,
         words: [
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$magnet+doing",
           "any",
           "closer,",

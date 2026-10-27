@@ -922,7 +922,7 @@ export function bible_glyph_chapter_lev22() {
           "to",
           "$guard",
           "My",
-          "$scroll",
+          "$scroll+exclamation",
           "and",
           "$hammer+doing",
           "them.",

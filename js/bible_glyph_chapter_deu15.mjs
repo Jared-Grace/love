@@ -144,7 +144,7 @@ export function bible_glyph_chapter_deu15() {
           "$hammer+doing",
           "$all",
           "these",
-          "$scroll",
+          "$scroll+exclamation",
           "$me",
           "am",
           "giving",

@@ -148,7 +148,7 @@ export function bible_glyph_chapter_deu33() {
           "Reuben",
           "$sprout+doing",
           "and",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$skull+doing,",
           "nor",
           "his",

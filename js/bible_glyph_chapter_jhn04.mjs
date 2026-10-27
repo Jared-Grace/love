@@ -270,7 +270,7 @@ export function bible_glyph_chapter_jhn04() {
       {
         verse_number: 12,
         words: [
-          "$no_entry",
+          "$no_entry+exclamation",
           "$link",
           "$you",
           "$top",
@@ -371,7 +371,7 @@ export function bible_glyph_chapter_jhn04() {
           "that",
           "I",
           "will",
-          "$no_entry",
+          "$no_entry+exclamation",
           "get",
           "thirsty",
           "and",
@@ -788,7 +788,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "$arrow_both_ways,",
           "“Could",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$joker",
           "have",
           "brought",

@@ -548,7 +548,7 @@ export function bible_glyph_chapter_2ki11() {
           "$speech,",
           "She",
           "must",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "put",
           "to",

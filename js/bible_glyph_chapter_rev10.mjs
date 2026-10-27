@@ -148,7 +148,7 @@ export function bible_glyph_chapter_rev10() {
           "$mouth,",
           "$plus",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "write",
           "$pointing_back",
           "down.",

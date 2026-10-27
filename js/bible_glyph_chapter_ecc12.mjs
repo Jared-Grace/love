@@ -390,7 +390,7 @@ export function bible_glyph_chapter_ecc12() {
           "and",
           "$guard",
           "His",
-          "$scroll,",
+          "$scroll+exclamation,",
           "for",
           "$flashlight",
           "is",

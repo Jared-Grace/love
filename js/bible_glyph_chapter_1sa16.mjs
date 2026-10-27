@@ -235,7 +235,7 @@ export function bible_glyph_chapter_1sa16() {
           "$toward",
           "$ear+heart_on_fire,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$face_with_monocle",
           "his",
           "appearance",

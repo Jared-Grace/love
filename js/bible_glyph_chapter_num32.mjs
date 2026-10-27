@@ -154,7 +154,7 @@ export function bible_glyph_chapter_num32() {
           "a",
           "$hand+clamp+thing.",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "make",
           "us",
           "$bridge",

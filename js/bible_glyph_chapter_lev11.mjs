@@ -1050,7 +1050,7 @@ export function bible_glyph_chapter_lev11() {
         verse_number: 43,
         words: [
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$nauseated_face+no_entry+doing",
           "your",
           "$person_other",

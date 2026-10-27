@@ -734,7 +734,7 @@ export function bible_glyph_chapter_exo15() {
           "attention",
           "to",
           "His",
-          "$scroll",
+          "$scroll+exclamation",
           "and",
           "$guard",
           "all",

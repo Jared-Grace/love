@@ -29,7 +29,7 @@ export function bible_glyph_chapter_psa112() {
           "$smiling_face_with_hearts+doing",
           "in",
           "His",
-          "$scroll.",
+          "$scroll+exclamation.",
         ],
       },
       {

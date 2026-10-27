@@ -973,7 +973,7 @@ export function bible_glyph_chapter_num21() {
           "to",
           "$fishing_pole+proper_name,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$fear+doing",
           "him,",
           "$pointing",

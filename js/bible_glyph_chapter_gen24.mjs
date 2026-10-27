@@ -1706,7 +1706,7 @@ export function bible_glyph_chapter_gen24() {
           "he",
           "$speech,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "delay",
           "me,",
           "since",

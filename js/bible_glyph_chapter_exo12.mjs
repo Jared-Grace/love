@@ -231,7 +231,7 @@ export function bible_glyph_chapter_exo12() {
         verse_number: 9,
         words: [
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$eating",
           "any",
           "$tray_out",

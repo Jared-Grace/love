@@ -488,7 +488,7 @@ export function bible_glyph_chapter_2ki06() {
       {
         verse_number: 16,
         words: [
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing,",
           "Elisha",
@@ -885,7 +885,7 @@ export function bible_glyph_chapter_2ki06() {
           "the",
           "$i_am",
           "does",
-          "$no_entry",
+          "$no_entry+exclamation",
           "help",
           "you,",
           "$question+round_pushpin+tray_out",

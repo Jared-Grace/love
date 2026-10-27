@@ -818,7 +818,7 @@ export function bible_glyph_chapter_1sa25() {
           "My",
           "$crown",
           "should",
-          "$no_entry",
+          "$no_entry+exclamation",
           "set",
           "his",
           "$heart_organ",

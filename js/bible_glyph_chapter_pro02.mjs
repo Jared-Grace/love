@@ -25,7 +25,7 @@ export function bible_glyph_chapter_pro02() {
           "and",
           "hide",
           "my",
-          "$scroll",
+          "$scroll+exclamation",
           "within",
           "you,",
         ],

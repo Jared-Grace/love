@@ -200,7 +200,7 @@ export function bible_glyph_chapter_gen13() {
           "Let",
           "there",
           "be",
-          "$no_entry",
+          "$no_entry+exclamation",
           "quarrelling",
           "between",
           "you",

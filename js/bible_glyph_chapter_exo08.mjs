@@ -961,7 +961,7 @@ export function bible_glyph_chapter_exo08() {
           "But",
           "$house+proper_name",
           "must",
-          "$no_entry",
+          "$no_entry+exclamation",
           "act",
           "deceitfully",
           "$plus+doing",

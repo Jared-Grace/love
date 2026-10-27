@@ -995,7 +995,7 @@ export function bible_glyph_chapter_jhn09() {
           "those",
           "who",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$eyes",
           "may",
           "$eyes,",

@@ -298,7 +298,7 @@ export function bible_glyph_chapter_isa02() {
           "is",
           "humbled.",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$lifting",
           "them.",
         ],

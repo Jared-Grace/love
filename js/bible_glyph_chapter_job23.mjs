@@ -237,7 +237,7 @@ export function bible_glyph_chapter_job23() {
           "$walking+away+doing",
           "from",
           "the",
-          "$scroll",
+          "$scroll+exclamation",
           "of",
           "His",
           "$kiss_mark;",

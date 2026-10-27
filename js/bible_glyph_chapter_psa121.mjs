@@ -55,7 +55,7 @@ export function bible_glyph_chapter_psa121() {
         words: [
           "He",
           "will",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$hands_giving",
           "your",
           "$foot",
@@ -64,7 +64,7 @@ export function bible_glyph_chapter_psa121() {
           "your",
           "Protector",
           "will",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$sleeping_face+eye+doing.",
         ],
       },

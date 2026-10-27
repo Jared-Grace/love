@@ -53,7 +53,7 @@ export function bible_glyph_chapter_psa146() {
         verse_number: 3,
         words: [
           "Put",
-          "$no_entry",
+          "$no_entry+exclamation",
           "your",
           "$anchor+doing",
           "in",

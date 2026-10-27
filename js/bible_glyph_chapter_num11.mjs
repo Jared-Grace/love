@@ -447,7 +447,7 @@ export function bible_glyph_chapter_num11() {
           "and",
           "let",
           "me",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$eye",
           "my",
           "own",

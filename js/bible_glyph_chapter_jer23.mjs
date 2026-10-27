@@ -593,7 +593,7 @@ export function bible_glyph_chapter_jer23() {
           "Hosts",
           "$speech:",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$ear",
           "to",
           "the",

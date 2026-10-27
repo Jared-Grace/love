@@ -245,7 +245,7 @@ export function bible_glyph_chapter_psa051() {
         verse_number: 11,
         words: [
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$throwing",
           "me",
           "away",
@@ -253,7 +253,7 @@ export function bible_glyph_chapter_psa051() {
           "Your",
           "$face;",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$hand_receiving",
           "Your",
           "$sparkle+thing",

@@ -545,7 +545,7 @@ export function bible_glyph_chapter_2ki09() {
           "wants,",
           "then",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "let",
           "anyone",
           "$door+running+person",

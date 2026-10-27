@@ -290,7 +290,7 @@ export function bible_glyph_chapter_exo05() {
           "it",
           "and",
           "pay",
-          "$no_entry",
+          "$no_entry+exclamation",
           "attention",
           "to",
           "$speech",

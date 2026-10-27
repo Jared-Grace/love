@@ -298,7 +298,7 @@ export function bible_glyph_chapter_deu19() {
           "$guard",
           "all",
           "these",
-          "$scroll",
+          "$scroll+exclamation",
           "$me",
           "am",
           "giving",

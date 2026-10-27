@@ -526,7 +526,7 @@ export function bible_glyph_chapter_exo33() {
           "with",
           "us,",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "lead",
           "us",
           "up",

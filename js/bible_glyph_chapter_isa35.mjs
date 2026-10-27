@@ -102,7 +102,7 @@ export function bible_glyph_chapter_isa35() {
           "Be",
           "$might+up_arrow,",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$fear+doing!",
           "$exclamation,",
           "your",

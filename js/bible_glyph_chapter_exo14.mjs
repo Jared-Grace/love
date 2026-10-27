@@ -374,7 +374,7 @@ export function bible_glyph_chapter_exo14() {
           "the",
           "$family,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing.",
           "Stand",

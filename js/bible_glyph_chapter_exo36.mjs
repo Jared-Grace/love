@@ -211,7 +211,7 @@ export function bible_glyph_chapter_exo36() {
           "and",
           "$woman",
           "are",
-          "$no_entry",
+          "$no_entry+exclamation",
           "to",
           "$hammer+doing",
           "any",

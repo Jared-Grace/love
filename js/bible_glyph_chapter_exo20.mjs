@@ -156,7 +156,7 @@ export function bible_glyph_chapter_exo20() {
           "and",
           "$guard",
           "My",
-          "$scroll.",
+          "$scroll+exclamation.",
         ],
       },
       {
@@ -452,7 +452,7 @@ export function bible_glyph_chapter_exo20() {
           "$fishing_pole+proper_name.",
           "But",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "let",
           "$heart_on_fire",
           "$mouth",
@@ -468,7 +468,7 @@ export function bible_glyph_chapter_exo20() {
         verse_number: 20,
         words: [
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing,",
           "$fishing_pole+proper_name",

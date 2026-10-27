@@ -38,7 +38,7 @@ export function bible_glyph_chapter_pro04() {
           "you",
           "$thumbs_up",
           "$hand_receiving+open_book;",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$derelict_house+doing",
           "my",
           "$scroll.",
@@ -83,7 +83,7 @@ export function bible_glyph_chapter_pro04() {
           "$speech;",
           "$guard",
           "my",
-          "$scroll",
+          "$scroll+exclamation",
           "and",
           "you",
           "will",
@@ -97,7 +97,7 @@ export function bible_glyph_chapter_pro04() {
           "$wisdom,",
           "$coin+hand_receiving",
           "$brain+thing;",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$reminder_ribbon+no_entry",
           "my",
           "words",
@@ -110,7 +110,7 @@ export function bible_glyph_chapter_pro04() {
       {
         verse_number: 6,
         words: [
-          "$no_entry",
+          "$no_entry+exclamation",
           "$derelict_house+doing",
           "wisdom,",
           "and",
@@ -259,7 +259,7 @@ export function bible_glyph_chapter_pro04() {
           "on",
           "to",
           "instruction;",
-          "$no_entry",
+          "$no_entry+exclamation",
           "let",
           "go.",
           "Guard",
@@ -274,7 +274,7 @@ export function bible_glyph_chapter_pro04() {
       {
         verse_number: 14,
         words: [
-          "$no_entry",
+          "$no_entry+exclamation",
           "set",
           "$footprints",
           "on",
@@ -283,7 +283,7 @@ export function bible_glyph_chapter_pro04() {
           "of",
           "the",
           "$thumbs_down+person,",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$gift+smile+doing",
           "in",
           "the",
@@ -297,7 +297,7 @@ export function bible_glyph_chapter_pro04() {
         words: [
           "Avoid",
           "it;",
-          "$no_entry",
+          "$no_entry+exclamation",
           "travel",
           "on",
           "it.",
@@ -418,7 +418,7 @@ export function bible_glyph_chapter_pro04() {
       {
         verse_number: 21,
         words: [
-          "$no_entry",
+          "$no_entry+exclamation",
           "let",
           "them",
           "out",
@@ -525,7 +525,7 @@ export function bible_glyph_chapter_pro04() {
       {
         verse_number: 27,
         words: [
-          "$no_entry",
+          "$no_entry+exclamation",
           "$white_cane+doing",
           "to",
           "the",

@@ -1561,7 +1561,7 @@ export function bible_glyph_chapter_2ch06() {
           "$i_am",
           "$heart_on_fire,",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$turn_back",
           "away",
           "the",

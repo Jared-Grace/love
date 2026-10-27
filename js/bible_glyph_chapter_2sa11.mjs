@@ -835,7 +835,7 @@ export function bible_glyph_chapter_2sa11() {
           "to",
           "$i_am+father,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "let",
           "$speech",
           "be",

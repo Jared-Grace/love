@@ -390,7 +390,7 @@ export function bible_glyph_chapter_jer32() {
           "copy",
           "with",
           "its",
-          "$scroll",
+          "$scroll+exclamation",
           "and",
           "conditions,",
           "as",

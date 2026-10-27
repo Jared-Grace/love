@@ -200,7 +200,7 @@ export function bible_glyph_chapter_psa138() {
           "endures",
           "$hourglass",
           "-",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$palm_down+doing",
           "the",
           "works",

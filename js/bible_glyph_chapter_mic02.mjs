@@ -184,7 +184,7 @@ export function bible_glyph_chapter_mic02() {
         verse_number: 6,
         words: [
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "preach,",
           "they",
           "preach.",

@@ -753,7 +753,7 @@ export function bible_glyph_chapter_1sa02() {
       {
         verse_number: 24,
         words: [
-          "$no_entry",
+          "$no_entry+exclamation",
           "my",
           "$son,",
           "it",

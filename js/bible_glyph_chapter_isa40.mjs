@@ -259,7 +259,7 @@ export function bible_glyph_chapter_isa40() {
           "it",
           "up,",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing.",
           "$speech",

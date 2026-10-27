@@ -290,7 +290,7 @@ export function bible_glyph_chapter_num12() {
           "$fishing_pole+proper_name,",
           "$crown,",
           "$pleading",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$palm_down+round_pushpin+doing",
           "against",
           "us",
@@ -308,7 +308,7 @@ export function bible_glyph_chapter_num12() {
         verse_number: 12,
         words: [
           "$pleading",
-          "$no_entry",
+          "$no_entry+exclamation",
           "let",
           "her",
           "be",

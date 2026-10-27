@@ -216,7 +216,7 @@ export function bible_glyph_chapter_psa032() {
       {
         verse_number: 9,
         words: [
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "like",
           "the",

@@ -493,7 +493,7 @@ export function bible_glyph_chapter_gen35() {
           "to",
           "her,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing,",
           "$pointing",

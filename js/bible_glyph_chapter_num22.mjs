@@ -500,7 +500,7 @@ export function bible_glyph_chapter_num22() {
           "$speech,",
           "$pleading",
           "let",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$locked+hand+doing",
           "you",
           "from",

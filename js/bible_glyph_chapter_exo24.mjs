@@ -388,7 +388,7 @@ export function bible_glyph_chapter_exo24() {
           "$scroll",
           "and",
           "the",
-          "$scroll",
+          "$scroll+exclamation",
           "I",
           "have",
           "written",

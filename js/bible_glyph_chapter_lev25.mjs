@@ -414,7 +414,7 @@ export function bible_glyph_chapter_lev25() {
           "him,",
           "you",
           "must",
-          "$no_entry",
+          "$no_entry+exclamation",
           "take",
           "advantage,",
           "a",
@@ -1101,7 +1101,7 @@ export function bible_glyph_chapter_lev25() {
         verse_number: 36,
         words: [
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$hand_receiving",
           "from",
           "him",

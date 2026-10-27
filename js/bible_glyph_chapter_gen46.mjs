@@ -79,7 +79,7 @@ export function bible_glyph_chapter_gen46() {
           "your",
           "$father.",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$fear+doing",
           "to",

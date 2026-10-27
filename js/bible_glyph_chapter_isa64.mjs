@@ -264,7 +264,7 @@ export function bible_glyph_chapter_isa64() {
         verse_number: 9,
         words: [
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "be",
           "$angry_face+collision+doing,",
           "O",
@@ -272,7 +272,7 @@ export function bible_glyph_chapter_isa64() {
           "$finish",
           "$double_exclamation;",
           "do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$reminder_ribbon",
           "our",
           "$cyclone",

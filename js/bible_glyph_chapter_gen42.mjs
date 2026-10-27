@@ -615,7 +615,7 @@ export function bible_glyph_chapter_gen42() {
           "you",
           "$speech,",
           "Do",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$bow+doing",
           "against",
           "the",

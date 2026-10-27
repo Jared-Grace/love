@@ -268,7 +268,7 @@ export function bible_glyph_chapter_3jn01() {
         verse_number: 11,
         words: [
           "$heart_red+describing,",
-          "$no_entry",
+          "$no_entry+exclamation",
           "$footprints+likeness+doing",
           "what",
           "is",
