@@ -726,7 +726,7 @@ export function bible_glyph_chapter_gen49() {
           "$speech",
           "to",
           "them,",
-          "I",
+          "$me",
           "am",
           "about",
           "to",
