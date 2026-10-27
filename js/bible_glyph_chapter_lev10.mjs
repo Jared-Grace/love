@@ -202,7 +202,7 @@ export function bible_glyph_chapter_lev10() {
           "mourn",
           "the",
           "$fire",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "has",
           "ignited.",
