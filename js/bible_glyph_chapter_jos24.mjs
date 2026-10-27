@@ -46,7 +46,7 @@ export function bible_glyph_chapter_jos24() {
           "And",
           "$i_am+rescue",
           "$speech",
-          "to",
+          "$toward",
           "all",
           "the",
           "$family,",
