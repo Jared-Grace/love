@@ -253,7 +253,7 @@ export function bible_glyph_chapter_1ki18() {
           "have",
           "I",
           "$bow+doing,",
-          "that",
+          "$pointing",
           "you",
           "are",
           "$hands_giving",
