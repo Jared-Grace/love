@@ -409,7 +409,7 @@ export function bible_glyph_chapter_gen42() {
           "youngest",
           "$brother",
           "$footprints",
-          "here.",
+          "$round_pushpin+pointing_down.",
         ],
       },
       {
