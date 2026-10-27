@@ -62,7 +62,7 @@ export function bible_glyph_chapter_pro16() {
       {
         verse_number: 3,
         words: [
-          "Commit",
+          "$stone+wheel+doing",
           "your",
           "works",
           "to",
