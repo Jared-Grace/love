@@ -63,7 +63,7 @@ export function bible_glyph_chapter_jer31() {
           "$wrestling+heart_on_fire",
           "$walking",
           "to",
-          "find",
+          "$water_wave+fast_forward+doing",
           "rest.",
         ],
       },
