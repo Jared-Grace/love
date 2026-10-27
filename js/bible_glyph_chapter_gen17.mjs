@@ -485,7 +485,7 @@ export function bible_glyph_chapter_gen17() {
           "a",
           "man",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "years",
           "old?",
           "Can",
