@@ -262,7 +262,7 @@ export function bible_glyph_chapter_gen41() {
           "and",
           "the",
           "chief",
-          "baker",
+          "$bread+fire",
           "into",
           "custody",
           "in",
