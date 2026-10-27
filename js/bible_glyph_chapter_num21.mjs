@@ -50,7 +50,7 @@ export function bible_glyph_chapter_num21() {
         words: [
           "So",
           "$wrestling+heart_on_fire",
-          "made",
+          "$saluting_face+doing",
           "a",
           "vow",
           "to",
