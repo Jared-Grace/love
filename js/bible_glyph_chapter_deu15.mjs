@@ -480,7 +480,7 @@ export function bible_glyph_chapter_deu15() {
       {
         verse_number: 15,
         words: [
-          "Remember",
+          "$reminder_ribbon",
           "that",
           "you",
           "were",
