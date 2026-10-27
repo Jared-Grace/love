@@ -987,7 +987,7 @@ export function bible_glyph_chapter_gen30() {
           "and",
           "almond",
           "and",
-          "plane,",
+          "$tree+fallen_leaf,",
           "and",
           "peeled",
           "white",
