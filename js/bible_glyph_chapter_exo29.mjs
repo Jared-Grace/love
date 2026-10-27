@@ -710,7 +710,7 @@ export function bible_glyph_chapter_exo29() {
       {
         verse_number: 24,
         words: [
-          "Put",
+          "$palm_down",
           "all",
           "these",
           "in",
