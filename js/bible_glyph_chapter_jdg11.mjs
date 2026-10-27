@@ -326,7 +326,7 @@ export function bible_glyph_chapter_jdg11() {
           "So",
           "$unlocked+proper_name",
           "$walking",
-          "with",
+          "$linked_paperclips",
           "the",
           "elders",
           "of",
