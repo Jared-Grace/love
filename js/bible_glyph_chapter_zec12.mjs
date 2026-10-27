@@ -373,7 +373,7 @@ export function bible_glyph_chapter_zec12() {
           "a",
           "$wind",
           "of",
-          "grace",
+          "$heart_orange",
           "and",
           "prayer,",
           "and",
