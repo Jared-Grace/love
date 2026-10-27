@@ -413,7 +413,7 @@ export function bible_glyph_chapter_mic02() {
           "break",
           "through",
           "the",
-          "gate",
+          "$gate",
           "and",
           "go",
           "out",
