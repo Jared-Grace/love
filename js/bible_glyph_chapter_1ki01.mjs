@@ -766,7 +766,7 @@ export function bible_glyph_chapter_1ki01() {
           "he",
           "has",
           "gone",
-          "down",
+          "$walking+pointing_down",
           "$sun",
           "and",
           "sacrificed",
