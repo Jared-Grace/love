@@ -179,7 +179,7 @@ export function bible_glyph_chapter_exo31() {
         verse_number: 8,
         words: [
           "the",
-          "table",
+          "$hand_sending+thing",
           "with",
           "its",
           "utensils,",
