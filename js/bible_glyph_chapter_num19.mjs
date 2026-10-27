@@ -588,7 +588,7 @@ export function bible_glyph_chapter_num19() {
           "to",
           "$hand_receiving",
           "some",
-          "hyssop,",
+          "$herb+bouquet,",
           "dip",
           "it",
           "in",
