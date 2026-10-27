@@ -805,7 +805,7 @@ export function bible_glyph_chapter_deu28() {
           "an",
           "object",
           "of",
-          "horror",
+          "$shaking_face+anger_symbol+thing",
           "to",
           "all",
           "the",
