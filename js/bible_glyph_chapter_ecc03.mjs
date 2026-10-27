@@ -222,7 +222,7 @@ export function bible_glyph_chapter_ecc03() {
           "$eye",
           "the",
           "burden",
-          "that",
+          "$back+flashlight",
           "$heart_on_fire",
           "has",
           "$hands_giving",
