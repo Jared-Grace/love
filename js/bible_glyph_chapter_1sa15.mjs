@@ -93,7 +93,7 @@ export function bible_glyph_chapter_1sa15() {
           "devote",
           "to",
           "destruction",
-          "all",
+          "$all",
           "that",
           "belongs",
           "to",
