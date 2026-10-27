@@ -624,7 +624,7 @@ export function bible_glyph_chapter_deu14() {
           "anything",
           "you",
           "$heart_eyes+hand_receiving+doing:",
-          "cattle,",
+          "$cow_face,",
           "$sheep,",
           "$wine,",
           "strong",
