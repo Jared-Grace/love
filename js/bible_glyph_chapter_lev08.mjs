@@ -291,7 +291,7 @@ export function bible_glyph_chapter_lev08() {
           "them,",
           "and",
           "tied",
-          "headbands",
+          "$person_wearing_turban+mountain",
           "on",
           "them,",
           "just",
