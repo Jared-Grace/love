@@ -693,7 +693,7 @@ export function bible_glyph_chapter_lev22() {
           "any",
           "of",
           "these",
-          "on",
+          "$pointing_up",
           "the",
           "$altar",
           "to",
