@@ -630,7 +630,7 @@ export function bible_glyph_chapter_jer29() {
           "which",
           "I",
           "sent",
-          "to",
+          "$toward",
           "them",
           "again",
           "and",
