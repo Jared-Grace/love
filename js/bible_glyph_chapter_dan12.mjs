@@ -165,7 +165,7 @@ export function bible_glyph_chapter_dan12() {
         verse_number: 5,
         words: [
           "Then",
-          "I,",
+          "$me,",
           "$proper_name$Daniel,",
           "$eye,",
           "and",
