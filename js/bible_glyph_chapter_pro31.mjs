@@ -153,7 +153,7 @@ export function bible_glyph_chapter_pro31() {
           "his",
           "misery",
           "$no_entry",
-          "more.",
+          "$repeat.",
         ],
       },
       {
