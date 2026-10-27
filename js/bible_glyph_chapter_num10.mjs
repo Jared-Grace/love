@@ -275,7 +275,7 @@ export function bible_glyph_chapter_num10() {
           "$face",
           "your",
           "$heart_on_fire.",
-          "I",
+          "$me",
           "am",
           "the",
           "$i_am",
