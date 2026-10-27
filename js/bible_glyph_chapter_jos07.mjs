@@ -390,7 +390,7 @@ export function bible_glyph_chapter_jos07() {
           "$i_am+rescue,",
           "Stand",
           "up.",
-          "Why",
+          "$flashlight+question",
           "have",
           "you",
           "fallen",
