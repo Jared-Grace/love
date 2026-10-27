@@ -106,7 +106,7 @@ export function bible_glyph_chapter_deu19() {
           "any",
           "manslayer",
           "can",
-          "flee",
+          "$running+dashing_away",
           "to",
           "these",
           "cities.",
