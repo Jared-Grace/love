@@ -990,7 +990,7 @@ export function bible_glyph_chapter_1sa02() {
           "$heart_on_fire",
           "of",
           "$wrestling+heart_on_fire,",
-          "declares:",
+          "$microphone:",
           "I",
           "did",
           "indeed",
