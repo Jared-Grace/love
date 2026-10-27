@@ -794,7 +794,7 @@ export function bible_glyph_chapter_jer07() {
           "have",
           "sent",
           "you",
-          "all",
+          "$all",
           "My",
           "$kneeling",
           "the",
