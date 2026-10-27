@@ -67,7 +67,7 @@ export function bible_glyph_chapter_exo17() {
           "said.",
           "$fishing_pole+proper_name",
           "$speech,",
-          "Why",
+          "$flashlight+question",
           "do",
           "you",
           "contend",
