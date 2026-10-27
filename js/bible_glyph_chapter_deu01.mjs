@@ -150,7 +150,7 @@ export function bible_glyph_chapter_deu01() {
           "of",
           "$father+proper_name,",
           "$fishing_pole+proper_name",
-          "began",
+          "$person_gesturing_ok+doing",
           "to",
           "explain",
           "this",
