@@ -139,7 +139,7 @@ export function bible_glyph_chapter_gen07() {
           "of",
           "the",
           "earth",
-          "every",
+          "$all",
           "living",
           "thing",
           "I",
