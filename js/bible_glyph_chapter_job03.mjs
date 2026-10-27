@@ -453,7 +453,7 @@ export function bible_glyph_chapter_job03() {
           "$beaming+describing",
           "and",
           "greatly",
-          "exult",
+          "$grinning_face+doing",
           "when",
           "they",
           "reach",
