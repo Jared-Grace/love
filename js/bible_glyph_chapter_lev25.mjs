@@ -1134,7 +1134,7 @@ export function bible_glyph_chapter_lev25() {
           "your",
           "$silver",
           "at",
-          "interest,",
+          "$coin+chart_increasing,",
           "$no_entry",
           "$hands_giving",
           "him",
