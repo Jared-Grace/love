@@ -962,7 +962,7 @@ export function bible_glyph_chapter_1ki12() {
           "$multiply",
           "for",
           "you.",
-          "Here",
+          "$exclamation",
           "are",
           "your",
           "$moai,",
