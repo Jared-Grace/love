@@ -590,7 +590,7 @@ export function bible_glyph_chapter_jdg02() {
       {
         verse_number: 18,
         words: [
-          "Whenever",
+          "$pointing",
           "the",
           "$i_am",
           "raised",
