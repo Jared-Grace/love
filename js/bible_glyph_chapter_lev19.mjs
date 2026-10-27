@@ -925,7 +925,7 @@ export function bible_glyph_chapter_lev19() {
           "treat",
           "the",
           "foreigner",
-          "living",
+          "$luggage",
           "among",
           "you",
           "as",
