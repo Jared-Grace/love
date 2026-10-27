@@ -183,7 +183,7 @@ export function bible_glyph_chapter_exo11() {
           "mill,",
           "and",
           "every",
-          "firstborn",
+          "$first_place+baby",
           "of",
           "the",
           "cattle.",
