@@ -710,7 +710,7 @@ export function bible_glyph_chapter_exo38() {
           "person,",
           "that",
           "is",
-          "half",
+          "$divide+thing",
           "a",
           "shekel,",
           "by",
