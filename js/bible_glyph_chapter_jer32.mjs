@@ -613,7 +613,7 @@ export function bible_glyph_chapter_jer32() {
           "O",
           "$top",
           "and",
-          "mighty",
+          "$might+person",
           "$heart_on_fire",
           "whose",
           "$name_tag",
