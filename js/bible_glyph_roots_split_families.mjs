@@ -1,19 +1,20 @@
-import { json_to } from "./json_to.mjs";
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_roots } from "./bible_glyph_roots.mjs";
 import { bible_glyph_roots_hebrew } from "./bible_glyph_roots_hebrew.mjs";
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { json_to } from "./json_to.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { bible_glyph_roots_split_pairs } from "./bible_glyph_roots_split_pairs.mjs";
 import { property_exists } from "./property_exists.mjs";
+import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 export function bible_glyph_roots_split_families() {
   arguments_assert(arguments, 0);
-  ("For every picture two roots used to share, every other picture those two roots are drawn by now and no other root is, keyed by the old picture's name.");
+  ("For every picture two roots used to share, every other picture the roots that shared it are drawn by now and no other root is, keyed by the old picture's name.");
   ("A ROOT IS NAMED BY ITS WORD, AND TWO HEBREW ROOTS ARE BOTH WRITTEN al - the one that means not, and the one that means upon. A pair that wrote the bare name took both, and the first reading built on it offered the upward pointer as what a no entry sign on the word not should become. So a name may carry the start of its gloss after a colon, and then only the root whose gloss starts that way answers to it. A name that still answers to more than one root, or to none, is refused rather than guessed at.");
   ("A PICTURE ANOTHER ROOT ALSO DRAWS IS LEFT OUT, because a mark becoming it would be a guess about which root the page meant. Naming the right al was not enough: the root for not itself files words drawn by the upward pointer, the same picture the root for upon is drawn by, and a verse seating upon and drawing a no entry sign would have had the sign turned into a pointer.");
   let roots = [...bible_glyph_roots(), ...bible_glyph_roots_hebrew()];
@@ -55,16 +56,24 @@ export function bible_glyph_roots_split_families() {
     }
     return false;
   }
-  let families = {};
+  ("EVERY ROOT OF EVERY PAIR UNDER ONE OLD PICTURE COUNTS AS ITS OWN, NOT ONLY THE TWO OF ONE PAIR. The Greek and the Hebrew word for commandment are both drawn by the scroll with an exclamation mark, on purpose, and each sat in a different pair under the scroll. Asked pair by pair, each was another root drawing the other's picture, so the picture was left out of both and not one scroll mark could be redrawn.");
+  let sharers_by_glyph = {};
   for (let [glyph, first, second] of bible_glyph_roots_split_pairs()) {
-    let b = property_exists(families, glyph);
+    let b = property_exists(sharers_by_glyph, glyph);
     if (not(b)) {
-      property_set(families, glyph, []);
+      property_set(sharers_by_glyph, glyph, []);
     }
-    let family = property_get(families, glyph);
-    let v = root_find(first);
-    let v2 = root_find(second);
-    let sharers = [v, v2];
+    let found_sharers = property_get(sharers_by_glyph, glyph);
+    let item = root_find(first);
+    list_add(found_sharers, item);
+    let item2 = root_find(second);
+    list_add(found_sharers, item2);
+  }
+  let families = {};
+  for (let glyph of object_property_names(sharers_by_glyph)) {
+    let family = [];
+    property_set(families, glyph, family);
+    let sharers = property_get(sharers_by_glyph, glyph);
     for (let root of sharers) {
       for (let word of root.words) {
         let fresh =
