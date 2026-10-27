@@ -415,7 +415,7 @@ export function bible_glyph_chapter_exo05() {
           "Israel,",
           "whom",
           "the",
-          "taskmasters",
+          "$crown+fist+doing",
           "of",
           "$house+proper_name",
           "had",
