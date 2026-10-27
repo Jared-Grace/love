@@ -700,7 +700,7 @@ export function bible_glyph_chapter_isa43() {
           "Me",
           "$sheep+one",
           "for",
-          "burnt",
+          "$burnt_offering",
           "offerings,",
           "nor",
           "honored",
