@@ -799,7 +799,7 @@ export function bible_glyph_chapter_exo12() {
           "you",
           "are",
           "to",
-          "keep",
+          "$guard",
           "this",
           "$speech",
           "as",
