@@ -520,7 +520,7 @@ export function bible_glyph_chapter_2ki17() {
           "$map",
           "around",
           "them",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
