@@ -442,7 +442,7 @@ export function bible_glyph_chapter_pro04() {
           "to",
           "those",
           "who",
-          "find",
+          "$magnifying_glass+exclamation",
           "them,",
           "and",
           "health",
