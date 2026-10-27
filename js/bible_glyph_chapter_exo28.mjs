@@ -424,7 +424,7 @@ export function bible_glyph_chapter_exo28() {
           "of",
           "$gold,",
           "with",
-          "blue,",
+          "$blue_circle,",
           "purple",
           "and",
           "scarlet",
