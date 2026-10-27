@@ -179,7 +179,7 @@ export function bible_glyph_chapter_dan09() {
           "$kneeling",
           "the",
           "$megaphone,",
-          "who",
+          "$back+flashlight",
           "$mouth",
           "in",
           "Your",
