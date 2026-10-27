@@ -221,7 +221,7 @@ export function bible_glyph_chapter_2ki22() {
           "and",
           "masons,",
           "to",
-          "buy",
+          "$coin+hand_receiving",
           "$tree",
           "and",
           "dressed",
