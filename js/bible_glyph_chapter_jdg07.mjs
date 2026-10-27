@@ -119,7 +119,7 @@ export function bible_glyph_chapter_jdg07() {
           "but",
           "$ten",
           "$ten+all",
-          "remained.",
+          "$puzzle_piece+doing.",
         ],
       },
       {
