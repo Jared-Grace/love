@@ -671,7 +671,7 @@ export function bible_glyph_chapter_exo34() {
       {
         verse_number: 21,
         words: [
-          "Six",
+          "$six",
           "$sun",
           "you",
           "shall",
