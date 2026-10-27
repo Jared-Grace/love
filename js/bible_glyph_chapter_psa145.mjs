@@ -450,7 +450,7 @@ export function bible_glyph_chapter_psa145() {
           "the",
           "$i_am.",
           "Let",
-          "every",
+          "$all",
           "$meat",
           "$speech+thumbs_up",
           "His",
