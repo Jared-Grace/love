@@ -548,7 +548,7 @@ export function bible_glyph_chapter_gen30() {
         words: [
           "Then",
           "$heart_on_fire",
-          "remembered",
+          "$reminder_ribbon",
           "$proper_name$Rachel,",
           "and",
           "$heart_on_fire",
