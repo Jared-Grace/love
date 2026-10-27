@@ -913,7 +913,7 @@ export function bible_glyph_chapter_2ki02() {
           "woods",
           "and",
           "mauled",
-          "forty",
+          "$four+zero",
           "two",
           "of",
           "the",
