@@ -131,7 +131,7 @@ export function bible_glyph_chapter_num09() {
           "$first_place",
           "$new_moon,",
           "at",
-          "twilight,",
+          "$sunset,",
           "in",
           "the",
           "$wilderness",
