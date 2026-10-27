@@ -117,7 +117,7 @@ export function bible_glyph_chapter_1ki18() {
           "$five+zero",
           "$man_beard",
           "per",
-          "cave,",
+          "$cave,",
           "providing",
           "them",
           "with",
