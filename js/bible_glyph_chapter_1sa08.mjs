@@ -330,7 +330,7 @@ export function bible_glyph_chapter_1sa08() {
           "and",
           "they",
           "will",
-          "run",
+          "$running",
           "in",
           "front",
           "of",
