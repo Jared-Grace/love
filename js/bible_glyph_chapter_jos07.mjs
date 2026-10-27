@@ -208,7 +208,7 @@ export function bible_glyph_chapter_jos07() {
           "the",
           "$gate",
           "as",
-          "far",
+          "$finish",
           "as",
           "the",
           "quarries",
