@@ -184,7 +184,7 @@ export function bible_glyph_chapter_lev16() {
           "he",
           "shall",
           "$hand_receiving",
-          "two",
+          "$two",
           "male",
           "goats",
           "for",
