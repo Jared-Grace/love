@@ -1048,7 +1048,7 @@ export function bible_glyph_chapter_1sa20() {
           "I",
           "$no_entry",
           "$lightbulb",
-          "that",
+          "$pointing",
           "you",
           "have",
           "chosen",
