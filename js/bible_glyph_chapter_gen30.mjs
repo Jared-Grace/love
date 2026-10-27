@@ -788,7 +788,7 @@ export function bible_glyph_chapter_gen30() {
           "$hands_giving",
           "me",
           "$package+question.",
-          "If",
+          "$traffic_light",
           "you",
           "will",
           "$hammer+doing",
