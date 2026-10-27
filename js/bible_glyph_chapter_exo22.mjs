@@ -89,7 +89,7 @@ export function bible_glyph_chapter_exo22() {
           "make",
           "full",
           "restitution.",
-          "If",
+          "$traffic_light",
           "he",
           "has",
           "nothing,",
