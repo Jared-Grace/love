@@ -600,7 +600,7 @@ export function bible_glyph_chapter_1ki21() {
           "go",
           "down",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "$proper_name$Ahab",
           "$king",
           "of",
