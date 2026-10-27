@@ -270,7 +270,7 @@ export function bible_glyph_chapter_nam02() {
           "$heart_organ",
           "$melting_face,",
           "knees",
-          "knock,",
+          "$leg+shaking_face,",
           "bodies",
           "tremble,",
           "and",
