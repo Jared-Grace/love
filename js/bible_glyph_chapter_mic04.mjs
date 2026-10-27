@@ -311,7 +311,7 @@ export function bible_glyph_chapter_mic04() {
           "$proper_name$Zion,",
           "the",
           "former",
-          "dominion",
+          "$joystick+thing",
           "will",
           "be",
           "restored",
