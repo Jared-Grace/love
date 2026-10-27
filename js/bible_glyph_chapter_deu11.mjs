@@ -479,7 +479,7 @@ export function bible_glyph_chapter_deu11() {
           "that",
           "you",
           "may",
-          "gather",
+          "$crowd+doing",
           "your",
           "grain,",
           "your",
