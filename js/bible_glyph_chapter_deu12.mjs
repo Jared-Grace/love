@@ -647,7 +647,7 @@ export function bible_glyph_chapter_deu12() {
           "live",
           "in",
           "your",
-          "land.",
+          "$brown_square.",
         ],
       },
       {
