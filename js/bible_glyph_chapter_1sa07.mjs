@@ -369,7 +369,7 @@ export function bible_glyph_chapter_1sa07() {
           "that",
           "they",
           "fled",
-          "before",
+          "$face",
           "$wrestling+heart_on_fire.",
         ],
       },
