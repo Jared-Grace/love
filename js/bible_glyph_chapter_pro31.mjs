@@ -327,7 +327,7 @@ export function bible_glyph_chapter_pro31() {
           "she",
           "plants",
           "a",
-          "vineyard.",
+          "$vineyard.",
         ],
       },
       {
