@@ -134,7 +134,7 @@ export function bible_glyph_chapter_exo16() {
           "$exclamation,",
           "I",
           "will",
-          "rain",
+          "$rain+doing",
           "down",
           "$bread",
           "for",
