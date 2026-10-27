@@ -48,7 +48,7 @@ export function bible_glyph_chapter_ezr03() {
           "his",
           "$brother",
           "$priest",
-          "began",
+          "$person+pointing_up",
           "to",
           "build",
           "the",
