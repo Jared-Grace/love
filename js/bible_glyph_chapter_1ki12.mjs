@@ -1040,7 +1040,7 @@ export function bible_glyph_chapter_1ki12() {
           "the",
           "$family,",
           "$back+flashlight",
-          "were",
+          "$link",
           "$no_entry",
           "$son",
           "of",
