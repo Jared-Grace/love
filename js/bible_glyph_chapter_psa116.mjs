@@ -209,7 +209,7 @@ export function bible_glyph_chapter_psa116() {
           "$running+fearful_face+doing",
           "$me",
           "$speech,",
-          "All",
+          "$all",
           "$person",
           "are",
           "liars.",
