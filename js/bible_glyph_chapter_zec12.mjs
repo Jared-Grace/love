@@ -217,7 +217,7 @@ export function bible_glyph_chapter_zec12() {
           "like",
           "a",
           "flaming",
-          "torch",
+          "$fire+hand+wood",
           "among",
           "the",
           "sheaves;",
