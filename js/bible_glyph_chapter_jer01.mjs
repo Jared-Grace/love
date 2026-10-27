@@ -444,7 +444,7 @@ export function bible_glyph_chapter_jer01() {
           "all",
           "her",
           "surrounding",
-          "walls",
+          "$brick+shield",
           "and",
           "all",
           "the",
