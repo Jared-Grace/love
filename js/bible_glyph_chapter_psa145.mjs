@@ -333,7 +333,7 @@ export function bible_glyph_chapter_psa145() {
           "their",
           "food",
           "in",
-          "season.",
+          "$clock.",
         ],
       },
       {
