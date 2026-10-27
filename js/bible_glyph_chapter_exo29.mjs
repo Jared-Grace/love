@@ -1012,7 +1012,7 @@ export function bible_glyph_chapter_exo29() {
           "their",
           "$sparkle+doing.",
           "$no_entry",
-          "outsider",
+          "$alien",
           "may",
           "$eating",
           "them,",
