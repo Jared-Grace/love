@@ -750,7 +750,7 @@ export function bible_glyph_chapter_isa49() {
           "up",
           "My",
           "$hand",
-          "to",
+          "$toward",
           "the",
           "$map,",
           "and",
