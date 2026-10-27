@@ -429,7 +429,7 @@ export function bible_glyph_chapter_1ki22() {
           "of",
           "the",
           "$megaphone",
-          "accord",
+          "$face_with_open_mouth",
           "with",
           "one",
           "another",
