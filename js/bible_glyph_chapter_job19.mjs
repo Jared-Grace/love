@@ -119,7 +119,7 @@ export function bible_glyph_chapter_job19() {
           "I",
           "call",
           "for",
-          "help,",
+          "$sos_button+doing,",
           "there",
           "is",
           "no",
