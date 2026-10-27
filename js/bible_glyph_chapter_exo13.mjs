@@ -352,7 +352,7 @@ export function bible_glyph_chapter_exo13() {
           "males",
           "of",
           "your",
-          "livestock",
+          "$paw_prints",
           "belong",
           "to",
           "$i_am.",
