@@ -556,7 +556,7 @@ export function bible_glyph_chapter_1ki18() {
       {
         verse_number: 19,
         words: [
-          "Now",
+          "$watch",
           "$hand_sending",
           "all",
           "$wrestling+heart_on_fire",
