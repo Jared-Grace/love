@@ -352,7 +352,7 @@ export function bible_glyph_chapter_1ki08() {
           "$priest",
           "could",
           "$no_entry",
-          "stand",
+          "$person+round_pushpin",
           "there",
           "to",
           "minister",
