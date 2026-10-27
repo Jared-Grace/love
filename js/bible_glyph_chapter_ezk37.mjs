@@ -235,7 +235,7 @@ export function bible_glyph_chapter_ezk37() {
           "As",
           "I",
           "$eye,",
-          "tendons",
+          "$thread+leg",
           "$exclamation",
           "on",
           "them,",
