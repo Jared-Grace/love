@@ -33,7 +33,7 @@ export function bible_glyph_chapter_lev13() {
           "has",
           "a",
           "swelling",
-          "or",
+          "$shuffle",
           "rash",
           "or",
           "bright",
