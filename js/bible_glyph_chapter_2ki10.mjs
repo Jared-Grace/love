@@ -270,7 +270,7 @@ export function bible_glyph_chapter_2ki10() {
           "and",
           "slaughtered",
           "all",
-          "seventy",
+          "$seven+zero",
           "$man_beard.",
           "They",
           "put",
