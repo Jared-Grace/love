@@ -312,7 +312,7 @@ export function bible_glyph_chapter_exo27() {
           "$triangular_ruler",
           "$arrow_both_ways,",
           "with",
-          "ten",
+          "$ten",
           "$candle",
           "and",
           "ten",
