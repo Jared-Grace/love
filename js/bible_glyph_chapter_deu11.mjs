@@ -606,7 +606,7 @@ export function bible_glyph_chapter_deu11() {
           "in",
           "your",
           "$person_other,",
-          "tie",
+          "$knot+crowd+doing",
           "them",
           "as",
           "reminders",
