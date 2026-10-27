@@ -525,7 +525,7 @@ export function bible_glyph_chapter_mal01() {
           "male",
           "in",
           "his",
-          "flock",
+          "$sheep+crowd",
           "and",
           "vows",
           "to",
