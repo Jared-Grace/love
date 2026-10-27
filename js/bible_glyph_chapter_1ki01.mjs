@@ -163,7 +163,7 @@ export function bible_glyph_chapter_1ki01() {
           "$hammer+doing",
           "for",
           "himself",
-          "chariots",
+          "$chariot",
           "and",
           "horsemen,",
           "and",
