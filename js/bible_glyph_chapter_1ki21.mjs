@@ -328,7 +328,7 @@ export function bible_glyph_chapter_1ki21() {
           "she",
           "wrote,",
           "$speech,",
-          "Proclaim",
+          "$waving_hand",
           "a",
           "fast",
           "and",
