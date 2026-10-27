@@ -263,7 +263,7 @@ export function bible_glyph_chapter_1ki08() {
           "but",
           "$no_entry",
           "from",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "Holy",
           "Place;",
