@@ -87,7 +87,7 @@ export function bible_glyph_chapter_gen18() {
           "I",
           "have",
           "found",
-          "favor",
+          "$heart_orange",
           "in",
           "your",
           "$eyes,",
