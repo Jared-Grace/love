@@ -571,7 +571,7 @@ export function bible_glyph_chapter_deu05() {
           "his",
           "$kneeling",
           "or",
-          "maidservant,",
+          "$broom,",
           "or",
           "his",
           "ox",
