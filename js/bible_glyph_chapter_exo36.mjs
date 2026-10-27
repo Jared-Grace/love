@@ -292,7 +292,7 @@ export function bible_glyph_chapter_exo36() {
           "worked",
           "into",
           "them",
-          "skillfully.",
+          "$thinking+doing.",
         ],
       },
       {
