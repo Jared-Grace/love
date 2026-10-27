@@ -12,7 +12,7 @@ import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizz
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code_instead_could_write } from "./html_div_cycle_code_instead_could_write.mjs";
+import { app_code_div_cycle_code_instead_could_write } from "./app_code_div_cycle_code_instead_could_write.mjs";
 import { equal_0 } from "./equal_0.mjs";
 import { each_index } from "./each_index.mjs";
 import { js_operator_first_code_call } from "./js_operator_first_code_call.mjs";
@@ -82,7 +82,7 @@ export function app_code_lesson_functions_arithmetic() {
       let code = property_get(r, "call");
       let expression = property_get(r, "expression");
       let c2 = app_code_container_light_blue(root);
-      html_div_cycle_code_instead_could_write(c2, expression, code);
+      app_code_div_cycle_code_instead_could_write(c2, expression, code);
       equal_0(index);
     }
     each_index(operators, lambda);

@@ -1,5 +1,5 @@
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-export function html_div_cycle_code_instead_could_write(
+export function app_code_div_cycle_code_instead_could_write(
   parent,
   code_a,
   code_b,
