@@ -529,7 +529,7 @@ export function bible_glyph_chapter_jos01() {
           "you",
           "on",
           "the",
-          "east",
+          "$east",
           "$bridge+thing",
           "of",
           "the",
