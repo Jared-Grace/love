@@ -77,7 +77,7 @@ export function bible_glyph_chapter_mic05() {
           "origins",
           "are",
           "of",
-          "old,",
+          "$compass+right_arrow,",
           "from",
           "the",
           "$sun",
