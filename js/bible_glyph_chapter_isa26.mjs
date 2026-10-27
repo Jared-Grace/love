@@ -414,7 +414,7 @@ export function bible_glyph_chapter_isa26() {
           "You",
           "have",
           "extended",
-          "all",
+          "$all",
           "the",
           "borders",
           "of",
