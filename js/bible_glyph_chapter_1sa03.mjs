@@ -423,7 +423,7 @@ export function bible_glyph_chapter_1sa03() {
           "of",
           "$pointing_up+proper_name,",
           "The",
-          "iniquity",
+          "$cyclone",
           "of",
           "$proper_name$Elis",
           "$house",
