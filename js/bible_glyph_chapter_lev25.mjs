@@ -1228,7 +1228,7 @@ export function bible_glyph_chapter_lev25() {
           "the",
           "$year",
           "of",
-          "Jubilee.",
+          "$horn+party_popper.",
         ],
       },
       {
