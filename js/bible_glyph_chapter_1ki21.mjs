@@ -203,7 +203,7 @@ export function bible_glyph_chapter_1ki21() {
           "$mouth",
           "to",
           "her,",
-          "Because",
+          "$pointing",
           "I",
           "$mouth",
           "to",
