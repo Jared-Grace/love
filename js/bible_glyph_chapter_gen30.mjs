@@ -125,7 +125,7 @@ export function bible_glyph_chapter_gen30() {
       },
       {
         verse_number: 5,
-        words: ["And", "$proper_name$Bilhah", "conceived", "and", "bore", "Jacob", "$son."],
+        words: ["And", "$proper_name$Bilhah", "$pregnant_woman+doing", "and", "bore", "Jacob", "$son."],
       },
       {
         verse_number: 6,
