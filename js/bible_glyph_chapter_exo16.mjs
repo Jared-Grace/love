@@ -792,7 +792,7 @@ export function bible_glyph_chapter_exo16() {
           "it",
           "aside",
           "$finish",
-          "morning,",
+          "$morning,",
           "as",
           "$fishing_pole+proper_name",
           "had",
