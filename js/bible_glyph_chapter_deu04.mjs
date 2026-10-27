@@ -1167,7 +1167,7 @@ export function bible_glyph_chapter_deu04() {
           "of",
           "the",
           "$sky",
-          "to",
+          "$finish",
           "the",
           "other",
           "end",
