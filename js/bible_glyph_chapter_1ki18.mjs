@@ -1445,7 +1445,7 @@ export function bible_glyph_chapter_1ki18() {
           "a",
           "$cloud",
           "as",
-          "small",
+          "$pinching_hand",
           "as",
           "a",
           "$man_beard",
