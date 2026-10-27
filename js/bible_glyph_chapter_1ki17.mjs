@@ -766,7 +766,7 @@ export function bible_glyph_chapter_1ki17() {
           "$speech",
           "$toward",
           "$heart_on_fire+i_am,",
-          "Now",
+          "$watch",
           "I",
           "$lightbulb",
           "that",
