@@ -390,7 +390,7 @@ export function bible_glyph_chapter_2sa11() {
           "$cup_with_straw",
           "and",
           "sleep",
-          "with",
+          "$linked_paperclips",
           "my",
           "$woman?",
           "As",
