@@ -568,7 +568,7 @@ export function bible_glyph_chapter_zep01() {
         verse_number: 18,
         words: [
           "Their",
-          "silver",
+          "$silver",
           "nor",
           "their",
           "gold",
