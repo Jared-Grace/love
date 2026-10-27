@@ -1057,7 +1057,7 @@ export function bible_glyph_chapter_1ki01() {
       {
         verse_number: 34,
         words: [
-          "There",
+          "$telescope",
           "$ruler+proper_name",
           "the",
           "$priest",
