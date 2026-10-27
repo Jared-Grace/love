@@ -573,7 +573,7 @@ export function bible_glyph_chapter_exo40() {
           "$face+toward",
           "the",
           "$hand_sending+thing,",
-          "on",
+          "$pointing_up",
           "the",
           "south",
           "side",
