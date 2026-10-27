@@ -275,7 +275,7 @@ export function bible_glyph_chapter_2ki01() {
           "you",
           "and",
           "$mouth",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "to",
           "you?",
