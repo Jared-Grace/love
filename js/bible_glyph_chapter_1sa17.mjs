@@ -1078,7 +1078,7 @@ export function bible_glyph_chapter_1sa17() {
           "killed",
           "$lion",
           "and",
-          "bears;",
+          "$bear;",
           "this",
           "uncircumcised",
           "$proper_name$Philistine",
