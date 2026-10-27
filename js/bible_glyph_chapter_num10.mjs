@@ -20,7 +20,7 @@ export function bible_glyph_chapter_num10() {
         words: [
           "$hammer+doing",
           "$two",
-          "trumpets",
+          "$trumpet+thing",
           "of",
           "$hammer+doing",
           "$silver,",
