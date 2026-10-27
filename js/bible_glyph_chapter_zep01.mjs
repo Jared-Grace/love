@@ -521,7 +521,7 @@ export function bible_glyph_chapter_zep01() {
           "against",
           "the",
           "high",
-          "corner",
+          "$triangular_ruler+brick",
           "towers.",
         ],
       },
