@@ -414,7 +414,7 @@ export function bible_glyph_chapter_zec09() {
       {
         verse_number: 13,
         words: [
-          "For",
+          "$pointing",
           "I",
           "will",
           "bend",
