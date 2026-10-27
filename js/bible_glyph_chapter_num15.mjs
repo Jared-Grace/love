@@ -631,7 +631,7 @@ export function bible_glyph_chapter_num15() {
           "it",
           "was",
           "$hammer+doing",
-          "unintentionally,",
+          "$footprints+question+thing,",
           "$eyes",
           "of",
           "the",
