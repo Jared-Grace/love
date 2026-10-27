@@ -636,7 +636,7 @@ export function bible_glyph_chapter_num06() {
           "who",
           "has",
           "just",
-          "shaved",
+          "$razor+doing",
           "the",
           "hair",
           "of",
