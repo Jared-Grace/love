@@ -174,7 +174,7 @@ export function bible_glyph_chapter_lev13() {
           "infected",
           "person",
           "for",
-          "seven",
+          "$seven",
           "$sun.",
         ],
       },
