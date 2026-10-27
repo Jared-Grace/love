@@ -606,7 +606,7 @@ export function bible_glyph_chapter_deu09() {
           "$tray_out",
           "the",
           "$road",
-          "that",
+          "$back+flashlight",
           "$i_am",
           "had",
           "commanded",
