@@ -181,7 +181,7 @@ export function bible_glyph_chapter_lam05() {
           "$anger_symbol+fire",
           "from",
           "our",
-          "hunger.",
+          "$famine.",
         ],
       },
       {
