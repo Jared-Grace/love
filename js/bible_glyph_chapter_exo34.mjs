@@ -742,7 +742,7 @@ export function bible_glyph_chapter_exo34() {
           "are",
           "to",
           "$eye",
-          "before",
+          "$face",
           "the",
           "$crown",
           "$i_am,",
