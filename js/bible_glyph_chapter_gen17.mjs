@@ -411,7 +411,7 @@ export function bible_glyph_chapter_gen17() {
           "$woman,",
           "do",
           "$no_entry",
-          "call",
+          "$waving_hand",
           "her",
           "$name_tag",
           "$military_medal+proper_name,",
