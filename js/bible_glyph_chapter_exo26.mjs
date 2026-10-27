@@ -774,7 +774,7 @@ export function bible_glyph_chapter_exo26() {
           "of",
           "$tree+thorns",
           "wood",
-          "overlaid",
+          "$top+brown_square+doing",
           "with",
           "$gold,",
           "with",
