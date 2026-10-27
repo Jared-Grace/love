@@ -458,7 +458,7 @@ export function bible_glyph_chapter_1ki20() {
           "all",
           "this",
           "great",
-          "army?",
+          "$crowd+loudspeaker?",
           "Behold,",
           "I",
           "will",
