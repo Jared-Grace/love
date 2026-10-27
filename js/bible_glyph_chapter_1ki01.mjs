@@ -482,7 +482,7 @@ export function bible_glyph_chapter_1ki01() {
           "$king",
           "was",
           "very",
-          "old,",
+          "$old_man+doing,",
           "$proper_name$Abishag",
           "the",
           "$proper_name$Shunammite",
