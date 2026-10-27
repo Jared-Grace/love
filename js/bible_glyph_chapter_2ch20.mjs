@@ -935,7 +935,7 @@ export function bible_glyph_chapter_2ch20() {
           "away.",
           "They",
           "were",
-          "three",
+          "$three",
           "$sun",
           "gathering",
           "the",
