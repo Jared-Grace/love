@@ -509,7 +509,7 @@ export function bible_glyph_chapter_lev23() {
           "are",
           "to",
           "$magnet+doing",
-          "seven",
+          "$seven",
           "unblemished",
           "$lamb,",
           "each",
