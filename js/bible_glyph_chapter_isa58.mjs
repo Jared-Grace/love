@@ -194,7 +194,7 @@ export function bible_glyph_chapter_isa58() {
           "to",
           "spread",
           "out",
-          "sackcloth",
+          "$sackcloth",
           "and",
           "ashes?",
           "Will",
