@@ -41,7 +41,7 @@ export function bible_glyph_chapter_psa130() {
           "Let",
           "Your",
           "ears",
-          "be",
+          "$link",
           "attentive",
           "to",
           "the",
