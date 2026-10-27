@@ -836,7 +836,7 @@ export function bible_glyph_chapter_num18() {
           "of",
           "$alarm_clock,",
           "and",
-          "they",
+          "$pointing_back",
           "must",
           "$lifting",
           "their",
