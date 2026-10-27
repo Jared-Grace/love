@@ -61,7 +61,7 @@ export function bible_glyph_chapter_nam03() {
           "$spear,",
           "$multiply+thing",
           "of",
-          "slain,",
+          "$sword+skull,",
           "mounds",
           "of",
           "corpses,",
