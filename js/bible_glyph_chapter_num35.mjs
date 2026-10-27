@@ -830,7 +830,7 @@ export function bible_glyph_chapter_num35() {
           "$city",
           "of",
           "$house+ring_buoy",
-          "until",
+          "$finish",
           "the",
           "$skull",
           "of",
