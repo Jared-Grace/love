@@ -34,7 +34,7 @@ export function bible_glyph_chapter_exo38() {
           "was",
           "$four+straight_ruler+describing,",
           "and",
-          "three",
+          "$three",
           "$triangular_ruler",
           "high.",
         ],
