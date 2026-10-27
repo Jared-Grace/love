@@ -201,7 +201,7 @@ export function bible_glyph_chapter_1sa02() {
           "He",
           "raises",
           "the",
-          "poor",
+          "$pinching_hand+person",
           "from",
           "the",
           "$dust",
