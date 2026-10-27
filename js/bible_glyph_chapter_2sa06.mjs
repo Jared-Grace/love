@@ -112,7 +112,7 @@ export function bible_glyph_chapter_2sa06() {
           "guiding",
           "the",
           "new",
-          "cart.",
+          "$wheel.",
         ],
       },
       {
