@@ -979,7 +979,7 @@ export function bible_glyph_chapter_exo34() {
           "$fishing_pole+proper_name,",
           "$exclamation,",
           "his",
-          "face",
+          "$face",
           "was",
           "radiant,",
           "and",
