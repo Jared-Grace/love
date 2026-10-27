@@ -351,7 +351,7 @@ export function bible_glyph_chapter_1ki01() {
           "you",
           "$no_entry",
           "$ear",
-          "that",
+          "$pointing",
           "$proper_name$Adonijah",
           "$son",
           "of",
