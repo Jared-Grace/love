@@ -1166,7 +1166,7 @@ export function bible_glyph_chapter_num14() {
           "$skull+doing",
           "by",
           "a",
-          "plague",
+          "$fist+microbe+thing",
           "before",
           "the",
           "$i_am.",
