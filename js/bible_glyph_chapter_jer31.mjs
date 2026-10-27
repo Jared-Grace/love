@@ -1175,7 +1175,7 @@ export function bible_glyph_chapter_jer31() {
           "iniquities",
           "and",
           "will",
-          "remember",
+          "$reminder_ribbon",
           "their",
           "$bow",
           "$no_entry",
