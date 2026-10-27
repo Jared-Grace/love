@@ -450,7 +450,7 @@ export function bible_glyph_chapter_psa022() {
           "horns",
           "of",
           "the",
-          "wild",
+          "$water_buffalo",
           "oxen",
           "You",
           "have",
