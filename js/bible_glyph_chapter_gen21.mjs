@@ -656,7 +656,7 @@ export function bible_glyph_chapter_gen21() {
       },
       {
         verse_number: 24,
-        words: ["And", "$father+map", "$speech,", "I", "swear", "it."],
+        words: ["And", "$father+map", "$speech,", "$me", "swear", "it."],
       },
       {
         verse_number: 25,
