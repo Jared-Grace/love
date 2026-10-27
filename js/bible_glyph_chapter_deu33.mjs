@@ -471,7 +471,7 @@ export function bible_glyph_chapter_deu33() {
           "$i_am+plus,",
           "on",
           "the",
-          "crown",
+          "$hair+up_arrow",
           "of",
           "the",
           "prince",
