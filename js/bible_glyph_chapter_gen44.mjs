@@ -906,7 +906,7 @@ export function bible_glyph_chapter_gen44() {
           "to",
           "Sheol",
           "in",
-          "sorrow.",
+          "$crying_face+thing.",
         ],
       },
       {
