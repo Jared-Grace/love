@@ -186,7 +186,7 @@ export function bible_glyph_chapter_num32() {
           "while",
           "$you",
           "$person+house",
-          "here?",
+          "$flashlight+round_pushpin?",
         ],
       },
       {
