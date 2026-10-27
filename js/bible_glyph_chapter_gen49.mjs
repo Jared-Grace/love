@@ -486,7 +486,7 @@ export function bible_glyph_chapter_gen49() {
           "shall",
           "$hands_giving",
           "$king",
-          "delicacies.",
+          "$smile+sparkles+bread.",
         ],
       },
       {
