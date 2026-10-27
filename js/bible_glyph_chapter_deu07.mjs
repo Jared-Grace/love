@@ -823,7 +823,7 @@ export function bible_glyph_chapter_deu07() {
           "be",
           "able",
           "to",
-          "stand",
+          "$person+round_pushpin+anchor+doing",
           "against",
           "you;",
           "you",
