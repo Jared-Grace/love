@@ -476,7 +476,7 @@ export function bible_glyph_chapter_ezk01() {
           "$four",
           "$four+divide",
           "$no_entry",
-          "pivoting",
+          "$around+doing",
           "as",
           "they",
           "$walking.",
