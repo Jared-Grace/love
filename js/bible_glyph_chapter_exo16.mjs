@@ -211,7 +211,7 @@ export function bible_glyph_chapter_exo16() {
           "and",
           "$proper_name$Aaron",
           "$speech",
-          "to",
+          "$toward",
           "all",
           "the",
           "$son",
