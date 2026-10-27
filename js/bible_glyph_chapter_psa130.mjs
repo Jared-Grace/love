@@ -171,7 +171,7 @@ export function bible_glyph_chapter_psa130() {
           "$wrestling+heart_on_fire",
           "from",
           "all",
-          "iniquity.",
+          "$cyclone.",
         ],
       },
     ],
