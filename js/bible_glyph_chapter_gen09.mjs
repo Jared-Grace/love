@@ -584,7 +584,7 @@ export function bible_glyph_chapter_gen09() {
           "himself",
           "$radio_button",
           "his",
-          "tent.",
+          "$tent.",
         ],
       },
       {
