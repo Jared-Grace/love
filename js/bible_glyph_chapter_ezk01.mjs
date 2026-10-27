@@ -548,7 +548,7 @@ export function bible_glyph_chapter_ezk01() {
           "rise",
           "alongside",
           "them,",
-          "because",
+          "$pointing",
           "the",
           "$wind",
           "of",
