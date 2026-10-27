@@ -99,7 +99,7 @@ export function bible_glyph_chapter_deu29() {
           "$eyes",
           "the",
           "great",
-          "trials,",
+          "$test_tube+thing,",
           "and",
           "those",
           "miraculous",
