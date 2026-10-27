@@ -79,7 +79,7 @@ export function bible_glyph_chapter_psa084() {
           "the",
           "swallow",
           "a",
-          "nest",
+          "$nest_with_eggs",
           "for",
           "herself,",
           "where",
