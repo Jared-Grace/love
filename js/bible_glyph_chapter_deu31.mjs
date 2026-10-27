@@ -529,7 +529,7 @@ export function bible_glyph_chapter_deu31() {
           "$person+round_pushpin",
           "$pointing_up",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "$tent.",
