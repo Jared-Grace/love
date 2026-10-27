@@ -119,7 +119,7 @@ export function bible_glyph_chapter_mic04() {
           "will",
           "judge",
           "$brain+arrow_both_ways",
-          "many",
+          "$multiply",
           "$family",
           "and",
           "arbitrate",
