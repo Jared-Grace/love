@@ -549,7 +549,7 @@ export function bible_glyph_chapter_jer07() {
           "$plus+one",
           "$moai",
           "to",
-          "provoke",
+          "$face_steam+right_anger_bubble",
           "Me",
           "to",
           "anger.",
