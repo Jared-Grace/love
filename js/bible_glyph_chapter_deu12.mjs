@@ -277,7 +277,7 @@ export function bible_glyph_chapter_deu12() {
           "and",
           "the",
           "$inheritance",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "your",
