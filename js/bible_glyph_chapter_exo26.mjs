@@ -577,7 +577,7 @@ export function bible_glyph_chapter_exo26() {
           "are",
           "to",
           "be",
-          "coupled",
+          "$two+baby",
           "together",
           "at",
           "the",
