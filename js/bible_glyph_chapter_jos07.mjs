@@ -648,7 +648,7 @@ export function bible_glyph_chapter_jos07() {
           "$morning+doing",
           "the",
           "next",
-          "morning",
+          "$morning",
           "and",
           "had",
           "$wrestling+heart_on_fire",
