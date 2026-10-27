@@ -166,7 +166,7 @@ export function bible_glyph_chapter_gen31() {
           "and",
           "changed",
           "my",
-          "wages",
+          "$coin+hammer+thing",
           "ten",
           "times,",
           "but",
