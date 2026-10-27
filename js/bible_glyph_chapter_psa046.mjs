@@ -24,7 +24,7 @@ export function bible_glyph_chapter_psa046() {
           "to",
           "$girl+veil+musical_score.",
           "A",
-          "song.",
+          "$song.",
           "$heart_on_fire",
           "is",
           "our",
