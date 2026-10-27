@@ -185,7 +185,7 @@ export function bible_glyph_chapter_isa56() {
           "will",
           "$no_entry",
           "be",
-          "cut",
+          "$scissors",
           "off.",
         ],
       },
