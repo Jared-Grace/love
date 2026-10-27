@@ -372,7 +372,7 @@ export function bible_glyph_chapter_exo32() {
           "$speech,",
           "O",
           "$i_am,",
-          "why",
+          "$flashlight+question",
           "does",
           "Your",
           "anger",
