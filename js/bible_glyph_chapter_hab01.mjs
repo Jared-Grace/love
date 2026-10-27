@@ -401,7 +401,7 @@ export function bible_glyph_chapter_hab01() {
           "the",
           "$sea,",
           "like",
-          "creeping",
+          "$lizard",
           "things",
           "that",
           "have",
