@@ -930,7 +930,7 @@ export function bible_glyph_chapter_1ki22() {
           "$speech,",
           "$ear",
           "this,",
-          "all",
+          "$all",
           "you",
           "$family.",
         ],
