@@ -586,7 +586,7 @@ export function bible_glyph_chapter_1ki20() {
           "$king",
           "who",
           "were",
-          "allied",
+          "$rescue+hand+doing",
           "with",
           "him.",
         ],
