@@ -484,7 +484,7 @@ export function bible_glyph_chapter_gen24() {
       {
         verse_number: 15,
         words: [
-          "Before",
+          "$clock+back",
           "he",
           "had",
           "finished",
