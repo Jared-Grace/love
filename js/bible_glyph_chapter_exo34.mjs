@@ -714,7 +714,7 @@ export function bible_glyph_chapter_exo34() {
           "$first_place+sprout",
           "of",
           "the",
-          "wheat",
+          "$wheat",
           "$harvest,",
           "and",
           "the",
