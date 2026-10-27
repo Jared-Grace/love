@@ -368,7 +368,7 @@ export function bible_glyph_chapter_pro08() {
       {
         verse_number: 21,
         words: [
-          "bestowing",
+          "$inheritance+doing",
           "wealth",
           "on",
           "those",
