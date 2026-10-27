@@ -930,7 +930,7 @@ export function bible_glyph_chapter_1ki01() {
           "I",
           "will",
           "$hammer+doing",
-          "this",
+          "$flashlight",
           "very",
           "$sun",
           "exactly",
