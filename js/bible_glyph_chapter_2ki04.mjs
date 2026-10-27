@@ -1331,7 +1331,7 @@ export function bible_glyph_chapter_2ki04() {
           "$skull",
           "in",
           "the",
-          "pot,",
+          "$pot_of_food,",
           "O",
           "$man_beard",
           "of",
