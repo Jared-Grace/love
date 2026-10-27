@@ -675,7 +675,7 @@ export function bible_glyph_chapter_pro03() {
           "mockers,",
           "but",
           "$hands_giving",
-          "grace",
+          "$heart_orange",
           "to",
           "the",
           "humble.",
