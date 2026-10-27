@@ -546,7 +546,7 @@ export function bible_glyph_chapter_exo32() {
           "inscribed",
           "on",
           "both",
-          "sides,",
+          "$bridge+thing,",
           "front",
           "and",
           "back.",
