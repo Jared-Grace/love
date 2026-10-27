@@ -55,7 +55,7 @@ export function bible_glyph_chapter_2ki10() {
         verse_number: 2,
         words: [
           "When",
-          "this",
+          "$flashlight",
           "$closed_book",
           "$footprints,",
           "$watch",
