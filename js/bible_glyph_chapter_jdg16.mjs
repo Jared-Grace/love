@@ -285,7 +285,7 @@ export function bible_glyph_chapter_jdg16() {
           "her",
           "$seven",
           "fresh",
-          "bowstrings",
+          "$takeout_box",
           "that",
           "had",
           "$no_entry",
