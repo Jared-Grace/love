@@ -227,7 +227,7 @@ export function bible_glyph_chapter_deu01() {
           "to",
           "$proper_name$Lebanon,",
           "as",
-          "far",
+          "$finish",
           "as",
           "the",
           "great",
