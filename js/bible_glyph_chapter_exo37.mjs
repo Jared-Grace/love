@@ -213,7 +213,7 @@ export function bible_glyph_chapter_exo37() {
           "And",
           "the",
           "$cherub",
-          "spread",
+          "$folding_hand_fan",
           "their",
           "wings",
           "upward,",
