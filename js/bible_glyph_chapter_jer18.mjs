@@ -664,7 +664,7 @@ export function bible_glyph_chapter_jer18() {
         words: [
           "Let",
           "a",
-          "cry",
+          "$loudspeaker+mouth",
           "be",
           "$ear",
           "from",
