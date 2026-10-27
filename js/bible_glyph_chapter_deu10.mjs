@@ -593,7 +593,7 @@ export function bible_glyph_chapter_deu10() {
           "fatherless",
           "and",
           "the",
-          "widow,",
+          "$widow,",
           "and",
           "$heart_red+doing",
           "the",
