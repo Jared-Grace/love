@@ -172,7 +172,7 @@ export function bible_glyph_chapter_sng08() {
           "upon",
           "your",
           "$hand+might.",
-          "For",
+          "$pointing",
           "$heart_red",
           "is",
           "as",
