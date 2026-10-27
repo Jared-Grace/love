@@ -429,7 +429,7 @@ export function bible_glyph_chapter_gen47() {
         words: [
           "$i_am+plus",
           "$hand+sheaf_of_rice+doing",
-          "all",
+          "$all",
           "the",
           "$silver",
           "to",
