@@ -614,7 +614,7 @@ export function bible_glyph_chapter_lev07() {
           "any",
           "of",
           "the",
-          "fat",
+          "$bacon",
           "of",
           "$ox,",
           "a",
