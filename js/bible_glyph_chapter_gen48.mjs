@@ -737,7 +737,7 @@ export function bible_glyph_chapter_gen48() {
           "$backpack+person",
           "of",
           "land",
-          "that",
+          "$back+flashlight",
           "I",
           "$hand_receiving",
           "from",
