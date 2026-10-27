@@ -1249,7 +1249,7 @@ export function bible_glyph_chapter_deu04() {
           "$crossed_swords,",
           "by",
           "a",
-          "strong",
+          "$might+up_arrow",
           "$hand",
           "and",
           "an",
