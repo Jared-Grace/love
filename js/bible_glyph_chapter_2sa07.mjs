@@ -331,7 +331,7 @@ export function bible_glyph_chapter_2sa07() {
           "$no_entry",
           "$repeat.",
           "$no_entry",
-          "longer",
+          "$plus+doing",
           "will",
           "the",
           "$son",
