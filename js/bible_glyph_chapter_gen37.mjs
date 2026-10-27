@@ -298,7 +298,7 @@ export function bible_glyph_chapter_gen37() {
           "is",
           "$flashlight",
           "dream",
-          "that",
+          "$back+flashlight",
           "you",
           "have",
           "had?",
