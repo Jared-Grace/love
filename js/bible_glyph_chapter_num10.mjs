@@ -532,7 +532,7 @@ export function bible_glyph_chapter_num10() {
           "objects,",
           "and",
           "the",
-          "tabernacle",
+          "$tent+house",
           "was",
           "to",
           "be",
