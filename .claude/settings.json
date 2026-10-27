@@ -2739,6 +2739,7 @@
       "Bash(node scripts/ai.mjs bible_glyph_chapters_marks_group_misread_lines:*)",
       "Bash(node scripts/ai.mjs bible_stepbible_hebrew_brief_lexicon_download:*)",
       "Bash(node scripts/ai.mjs bible_glyph_chapters_collision_marks_ruled:*)",
+      "Bash(node scripts/ai.mjs bible_glyph_roots_split_families:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5364,6 +5365,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_chapters_marks_group_misread_lines:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_stepbible_hebrew_brief_lexicon_download:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_chapters_collision_marks_ruled:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_roots_split_families:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7988,6 +7990,7 @@
       "Bash(node scripts/aig.mjs bible_glyph_chapters_marks_group_misread_lines:*)",
       "Bash(node scripts/aig.mjs bible_stepbible_hebrew_brief_lexicon_download:*)",
       "Bash(node scripts/aig.mjs bible_glyph_chapters_collision_marks_ruled:*)",
+      "Bash(node scripts/aig.mjs bible_glyph_roots_split_families:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10612,7 +10615,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args psalms_songs_folder_channel_compare:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_marks_group_misread_lines:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_stepbible_hebrew_brief_lexicon_download:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_collision_marks_ruled:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_collision_marks_ruled:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_roots_split_families:*)"
     ],
     "defaultMode": "acceptEdits"
   },
