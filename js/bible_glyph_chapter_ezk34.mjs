@@ -100,7 +100,7 @@ export function bible_glyph_chapter_ezk34() {
           "You",
           "have",
           "$no_entry",
-          "strengthened",
+          "$might+up_arrow",
           "the",
           "weak,",
           "healed",
