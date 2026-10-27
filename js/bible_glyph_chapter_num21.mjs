@@ -243,7 +243,7 @@ export function bible_glyph_chapter_num21() {
           "So",
           "$fishing_pole+proper_name",
           "$hands_praying",
-          "for",
+          "$back+person",
           "the",
           "$family.",
         ],
