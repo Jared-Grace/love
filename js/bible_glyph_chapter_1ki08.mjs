@@ -1337,7 +1337,7 @@ export function bible_glyph_chapter_1ki08() {
           "$sky,",
           "Your",
           "dwelling",
-          "place.",
+          "$pin+place.",
           "And",
           "may",
           "You",
