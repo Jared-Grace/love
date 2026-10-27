@@ -757,7 +757,7 @@ export function bible_glyph_chapter_gen37() {
           "$toward",
           "his",
           "$brother,",
-          "What",
+          "$flashlight+question",
           "profit",
           "will",
           "we",
