@@ -138,7 +138,7 @@ export function bible_glyph_chapter_job01() {
           "$morning+doing",
           "in",
           "the",
-          "morning",
+          "$morning",
           "to",
           "offer",
           "burnt",
