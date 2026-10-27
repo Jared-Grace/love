@@ -474,7 +474,7 @@ export function bible_glyph_chapter_num16() {
           "$fishing_pole+proper_name",
           "became",
           "very",
-          "angry",
+          "$angry_face+doing",
           "and",
           "$speech",
           "to",
