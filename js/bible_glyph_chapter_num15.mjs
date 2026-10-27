@@ -766,7 +766,7 @@ export function bible_glyph_chapter_num15() {
           "he",
           "is",
           "to",
-          "present",
+          "$magnet+doing",
           "a",
           "female",
           "$goat,",
