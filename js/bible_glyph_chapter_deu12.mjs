@@ -470,7 +470,7 @@ export function bible_glyph_chapter_deu12() {
           "But",
           "whenever",
           "you",
-          "want,",
+          "$heart_eyes+hand_receiving+thing,",
           "you",
           "may",
           "slaughter",
