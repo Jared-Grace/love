@@ -14,7 +14,7 @@ export function bible_glyph_chapter_psa034() {
         verse_number: 1,
         words: [
           "Of",
-          "David,",
+          "$two_hearts+proper_name,",
           "when",
           "he",
           "pretended",
