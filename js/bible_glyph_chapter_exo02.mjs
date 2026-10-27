@@ -374,7 +374,7 @@ export function bible_glyph_chapter_exo02() {
           "body",
           "in",
           "the",
-          "sand.",
+          "$sea+brown_square.",
         ],
       },
       {
