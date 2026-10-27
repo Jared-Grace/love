@@ -619,7 +619,7 @@ export function bible_glyph_chapter_num09() {
           "$son",
           "of",
           "Israel",
-          "kept",
+          "$guard",
           "the",
           "charge",
           "of",
