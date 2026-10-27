@@ -433,7 +433,7 @@ export function bible_glyph_chapter_gen15() {
           "will",
           "$turn_back",
           "$round_pushpin+pointing_down,",
-          "for",
+          "$pointing",
           "the",
           "iniquity",
           "of",
