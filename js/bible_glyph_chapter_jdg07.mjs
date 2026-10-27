@@ -527,7 +527,7 @@ export function bible_glyph_chapter_jdg07() {
           "replied,",
           "This",
           "is",
-          "nothing",
+          "$dotted_line_face",
           "less",
           "than",
           "the",
