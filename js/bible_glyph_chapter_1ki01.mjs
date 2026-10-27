@@ -192,7 +192,7 @@ export function bible_glyph_chapter_1ki01() {
           "$sun",
           "by",
           "$speech,",
-          "Why",
+          "$flashlight+question+lightbulb",
           "do",
           "you",
           "$hammer+doing",
