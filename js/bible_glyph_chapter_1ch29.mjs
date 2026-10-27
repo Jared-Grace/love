@@ -301,7 +301,7 @@ export function bible_glyph_chapter_1ch29() {
           "a",
           "hundred",
           "thousand",
-          "talents",
+          "$flying_disc",
           "of",
           "iron.",
         ],
