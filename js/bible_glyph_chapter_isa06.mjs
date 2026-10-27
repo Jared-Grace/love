@@ -354,7 +354,7 @@ export function bible_glyph_chapter_isa06() {
           "unoccupied",
           "and",
           "the",
-          "land",
+          "$brown_square",
           "is",
           "desolate",
           "and",
