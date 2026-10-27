@@ -1367,7 +1367,7 @@ export function bible_glyph_chapter_jer23() {
           "and",
           "$hourglass",
           "$disappointed_face+thing",
-          "that",
+          "$back+flashlight",
           "will",
           "$no_entry",
           "be",
