@@ -24,7 +24,7 @@ export function bible_glyph_chapter_isa53() {
           "whom",
           "has",
           "the",
-          "arm",
+          "$hand+might",
           "of",
           "the",
           "$i_am",
