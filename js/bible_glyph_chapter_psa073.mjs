@@ -369,7 +369,7 @@ export function bible_glyph_chapter_psa073() {
           "$crown,",
           "$rooster",
           "and",
-          "despise",
+          "$unamused_face+doing",
           "their",
           "form.",
         ],
