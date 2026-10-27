@@ -1170,7 +1170,7 @@ export function bible_glyph_chapter_jdg06() {
           "camped",
           "in",
           "the",
-          "Valley",
+          "$valley",
           "of",
           "$proper_name$Jezreel.",
         ],
