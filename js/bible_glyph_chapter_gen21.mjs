@@ -613,7 +613,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "$watch,",
           "therefore,",
-          "swear",
+          "$raised_back_of_hand+doing",
           "to",
           "me",
           "before",
