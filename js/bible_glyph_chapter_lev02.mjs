@@ -309,7 +309,7 @@ export function bible_glyph_chapter_lev02() {
         words: [
           "You",
           "may",
-          "bring",
+          "$magnet+doing",
           "them",
           "$i_am",
           "as",
