@@ -664,7 +664,7 @@ export function bible_glyph_chapter_gen21() {
           "But",
           "when",
           "$father+map",
-          "complained",
+          "$you+exclamation",
           "to",
           "$father+king",
           "about",
