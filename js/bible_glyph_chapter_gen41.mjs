@@ -169,7 +169,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "And",
           "the",
-          "thin",
+          "$pinching_hand+describing",
           "heads",
           "of",
           "grain",
