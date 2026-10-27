@@ -463,7 +463,7 @@ export function bible_glyph_chapter_job31() {
           "may",
           "my",
           "arm",
-          "fall",
+          "$person+pointing_down",
           "from",
           "my",
           "$backpack+person+bone",
