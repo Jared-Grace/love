@@ -1328,7 +1328,7 @@ export function bible_glyph_chapter_1ki18() {
           "$heart_on_fire+i_am",
           "brought",
           "them",
-          "down",
+          "$walking+pointing_down",
           "to",
           "the",
           "$proper_name$Kishon",
