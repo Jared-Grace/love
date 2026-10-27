@@ -515,7 +515,7 @@ export function bible_glyph_chapter_1sa08() {
           "$i_am",
           "will",
           "$no_entry",
-          "answer",
+          "$speech+turn_back",
           "you",
           "on",
           "that",
