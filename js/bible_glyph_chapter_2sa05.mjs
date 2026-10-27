@@ -478,7 +478,7 @@ export function bible_glyph_chapter_2sa05() {
           "over",
           "$wrestling+heart_on_fire,",
           "they",
-          "all",
+          "$all",
           "went",
           "in",
           "search",
