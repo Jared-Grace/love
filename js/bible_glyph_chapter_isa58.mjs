@@ -436,7 +436,7 @@ export function bible_glyph_chapter_isa58() {
           "whose",
           "$water",
           "$no_entry",
-          "fail.",
+          "$speech+crossed_fingers+doing.",
         ],
       },
       {
