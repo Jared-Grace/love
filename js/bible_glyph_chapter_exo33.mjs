@@ -622,7 +622,7 @@ export function bible_glyph_chapter_exo33() {
           "Then",
           "Moses",
           "$speech,",
-          "Please",
+          "$pleading",
           "$eye",
           "me",
           "Your",
