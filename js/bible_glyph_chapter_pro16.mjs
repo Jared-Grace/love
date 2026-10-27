@@ -128,7 +128,7 @@ export function bible_glyph_chapter_pro16() {
           "$gift",
           "and",
           "$check",
-          "iniquity",
+          "$cyclone",
           "is",
           "atoned",
           "for,",
