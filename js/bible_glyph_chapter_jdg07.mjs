@@ -450,7 +450,7 @@ export function bible_glyph_chapter_jdg07() {
           "a",
           "swarm",
           "of",
-          "locusts,",
+          "$locusts,",
           "and",
           "their",
           "camels",
