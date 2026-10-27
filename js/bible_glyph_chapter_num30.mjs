@@ -48,7 +48,7 @@ export function bible_glyph_chapter_num30() {
           "$pointing",
           "a",
           "$man_beard",
-          "makes",
+          "$saluting_face+doing",
           "a",
           "vow",
           "to",
