@@ -621,7 +621,7 @@ export function bible_glyph_chapter_neh08() {
           "by",
           "the",
           "$water",
-          "Gate",
+          "$gate",
           "and",
           "by",
           "the",
