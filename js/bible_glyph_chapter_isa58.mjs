@@ -113,7 +113,7 @@ export function bible_glyph_chapter_isa58() {
           "have",
           "$no_entry",
           "$lightbulb?",
-          "Behold,",
+          "$exclamation,",
           "on",
           "the",
           "$sun",
