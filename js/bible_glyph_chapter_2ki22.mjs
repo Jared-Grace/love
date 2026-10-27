@@ -264,7 +264,7 @@ export function bible_glyph_chapter_2ki22() {
           "$priest",
           "$speech",
           "to",
-          "Shaphan",
+          "$badger",
           "the",
           "scribe,",
           "I",
