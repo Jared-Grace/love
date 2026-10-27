@@ -51,7 +51,7 @@ export function bible_glyph_chapter_lam05() {
           "We",
           "have",
           "become",
-          "fatherless",
+          "$dotted_line_face",
           "$child+father+no_entry;",
           "our",
           "mothers",
