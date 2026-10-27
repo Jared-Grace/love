@@ -576,7 +576,7 @@ export function bible_glyph_chapter_zec08() {
           "$all",
           "$flashlight+flashlight",
           "things,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
