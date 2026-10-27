@@ -577,7 +577,7 @@ export function bible_glyph_chapter_gen20() {
       {
         verse_number: 18,
         words: [
-          "For",
+          "$pointing",
           "$i_am",
           "had",
           "shut",
