@@ -521,7 +521,7 @@ export function bible_glyph_chapter_gen44() {
           "and",
           "$speech,",
           "$crown,",
-          "please",
+          "$pleading",
           "let",
           "your",
           "$kneeling",
