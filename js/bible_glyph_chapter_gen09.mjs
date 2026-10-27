@@ -62,7 +62,7 @@ export function bible_glyph_chapter_gen09() {
           "$lizard+doing",
           "on",
           "the",
-          "ground,",
+          "$brown_square,",
           "and",
           "all",
           "the",
