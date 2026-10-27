@@ -235,7 +235,7 @@ export function bible_glyph_chapter_zep03() {
           "assemble",
           "$castle,",
           "to",
-          "pour",
+          "$jar+down_arrow+doing",
           "out",
           "upon",
           "them",
