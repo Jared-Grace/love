@@ -559,7 +559,7 @@ export function bible_glyph_chapter_gen22() {
           "will",
           "be",
           "$speech+thumbs_up,",
-          "because",
+          "$foot+end_arrow+manner",
           "you",
           "have",
           "$ear",
