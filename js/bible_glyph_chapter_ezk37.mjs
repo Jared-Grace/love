@@ -386,7 +386,7 @@ export function bible_glyph_chapter_ezk37() {
           "$crown",
           "$i_am",
           "$speech:",
-          "O",
+          "$exclamation",
           "My",
           "$family,",
           "I",
