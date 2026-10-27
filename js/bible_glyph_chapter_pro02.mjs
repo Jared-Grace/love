@@ -90,7 +90,7 @@ export function bible_glyph_chapter_pro02() {
           "$telescope+clock",
           "you",
           "will",
-          "discern",
+          "$brain",
           "the",
           "fear",
           "of",
