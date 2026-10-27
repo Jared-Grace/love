@@ -332,7 +332,7 @@ export function bible_glyph_chapter_zep01() {
           "and",
           "a",
           "loud",
-          "crashing",
+          "$broken_chain+thing",
           "from",
           "the",
           "hills.",
