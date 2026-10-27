@@ -253,7 +253,7 @@ export function bible_glyph_chapter_isa55() {
           "$road",
           "My",
           "$road,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
