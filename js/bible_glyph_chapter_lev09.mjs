@@ -487,7 +487,7 @@ export function bible_glyph_chapter_lev09() {
           "and",
           "placed",
           "these",
-          "on",
+          "$pointing_up",
           "the",
           "breasts,",
           "and",
