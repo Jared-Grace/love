@@ -600,7 +600,7 @@ export function bible_glyph_chapter_exo12() {
           "$sun",
           "until",
           "the",
-          "evening",
+          "$sunset",
           "of",
           "the",
           "twenty",
