@@ -1037,7 +1037,7 @@ export function bible_glyph_chapter_gen24() {
           "The",
           "$i_am",
           "has",
-          "greatly",
+          "$double_exclamation",
           "$speech+thumbs_up",
           "my",
           "$crown,",
