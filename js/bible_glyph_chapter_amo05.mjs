@@ -134,7 +134,7 @@ export function bible_glyph_chapter_amo05() {
           "to",
           "$proper_name$Gilgal;",
           "$no_entry",
-          "journey",
+          "$bridge",
           "to",
           "Beersheba.",
           "For",
