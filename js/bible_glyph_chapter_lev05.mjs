@@ -92,7 +92,7 @@ export function bible_glyph_chapter_lev05() {
           "which",
           "one",
           "becomes",
-          "unclean,",
+          "$soap+no_entry,",
           "even",
           "if",
           "he",
