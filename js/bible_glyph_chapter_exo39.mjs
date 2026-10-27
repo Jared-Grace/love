@@ -409,7 +409,7 @@ export function bible_glyph_chapter_exo39() {
           "$end_arrow+triangular_ruler",
           "of",
           "the",
-          "breastpiece.",
+          "$gem_stone+t_shirt.",
         ],
       },
       {
