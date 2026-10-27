@@ -250,7 +250,7 @@ export function bible_glyph_chapter_jos01() {
           "$scroll",
           "must",
           "$no_entry",
-          "depart",
+          "$walking+away+doing",
           "from",
           "your",
           "mouth;",
