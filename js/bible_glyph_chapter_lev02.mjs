@@ -290,7 +290,7 @@ export function bible_glyph_chapter_lev02() {
           "are",
           "$no_entry",
           "to",
-          "burn",
+          "$incense+doing",
           "any",
           "leaven",
           "or",
