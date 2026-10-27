@@ -1468,7 +1468,7 @@ export function bible_glyph_chapter_deu04() {
           "$sun",
           "in",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "the",
           "$i_am",
