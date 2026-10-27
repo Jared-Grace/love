@@ -1338,7 +1338,7 @@ export function bible_glyph_chapter_jdg06() {
           "Then",
           "$axe+proper_name",
           "$speech",
-          "to",
+          "$toward",
           "$heart_on_fire,",
           "Do",
           "$no_entry",
