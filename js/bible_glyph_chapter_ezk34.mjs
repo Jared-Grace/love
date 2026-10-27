@@ -959,7 +959,7 @@ export function bible_glyph_chapter_ezk34() {
           "$no_entry",
           "$repeat",
           "$link",
-          "victims",
+          "$crowd+doing",
           "of",
           "famine",
           "in",
