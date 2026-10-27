@@ -149,7 +149,7 @@ export function bible_glyph_chapter_ecc03() {
           "keep",
           "and",
           "a",
-          "time",
+          "$clock",
           "to",
           "discard,",
         ],
