@@ -591,7 +591,7 @@ export function bible_glyph_chapter_gen48() {
           "$right_arrow,",
           "my",
           "$father.",
-          "This",
+          "$flashlight",
           "one",
           "is",
           "the",
