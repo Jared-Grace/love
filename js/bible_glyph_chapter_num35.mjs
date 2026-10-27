@@ -157,7 +157,7 @@ export function bible_glyph_chapter_num35() {
           "$ten+all",
           "on",
           "the",
-          "north,",
+          "$compass+up_arrow,",
           "with",
           "the",
           "$city",
