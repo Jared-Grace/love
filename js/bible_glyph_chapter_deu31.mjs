@@ -1053,7 +1053,7 @@ export function bible_glyph_chapter_deu31() {
           "I",
           "$lightbulb",
           "that",
-          "after",
+          "$next_track",
           "my",
           "$skull",
           "you",
