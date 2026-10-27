@@ -141,7 +141,7 @@ export function bible_glyph_chapter_isa40() {
           "$eye",
           "it",
           "$linked_paperclips+manner.",
-          "For",
+          "$pointing",
           "the",
           "$mouth",
           "of",
