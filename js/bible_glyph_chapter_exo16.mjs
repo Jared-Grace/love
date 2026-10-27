@@ -332,7 +332,7 @@ export function bible_glyph_chapter_exo16() {
           "$proper_name$Aaron,",
           "$speech",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "$wrestling+heart_on_fire,",
