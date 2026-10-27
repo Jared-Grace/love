@@ -367,7 +367,7 @@ export function bible_glyph_chapter_1sa15() {
           "he",
           "cried",
           "out",
-          "to",
+          "$toward",
           "the",
           "$i_am",
           "all",
