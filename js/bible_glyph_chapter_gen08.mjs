@@ -114,7 +114,7 @@ export function bible_glyph_chapter_gen08() {
           "ark",
           "came",
           "to",
-          "rest",
+          "$seat+doing",
           "on",
           "the",
           "$mountain",
