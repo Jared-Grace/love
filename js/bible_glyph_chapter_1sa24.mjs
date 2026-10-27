@@ -483,7 +483,7 @@ export function bible_glyph_chapter_1sa24() {
           "$hand",
           "will",
           "$no_entry",
-          "be",
+          "$link",
           "against",
           "you.",
         ],
