@@ -387,7 +387,7 @@ export function bible_glyph_chapter_psa103() {
           "$sky,",
           "and",
           "His",
-          "kingdom",
+          "$castle",
           "rules",
           "over",
           "all.",
