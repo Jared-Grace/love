@@ -672,7 +672,7 @@ export function bible_glyph_chapter_exo02() {
           "$skull+doing.",
           "The",
           "Israelites",
-          "groaned",
+          "$face_exhaling+voice+doing",
           "under",
           "their",
           "burden",
