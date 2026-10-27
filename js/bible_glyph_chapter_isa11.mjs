@@ -213,7 +213,7 @@ export function bible_glyph_chapter_isa11() {
           "little",
           "child",
           "will",
-          "lead",
+          "$horse+right_arrow+doing",
           "them.",
         ],
       },
