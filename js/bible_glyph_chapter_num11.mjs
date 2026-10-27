@@ -336,7 +336,7 @@ export function bible_glyph_chapter_num11() {
           "Did",
           "$me",
           "$pregnant_woman+doing",
-          "all",
+          "$all",
           "these",
           "$family?",
           "Did",
