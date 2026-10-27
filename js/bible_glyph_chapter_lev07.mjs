@@ -497,7 +497,7 @@ export function bible_glyph_chapter_lev07() {
         verse_number: 19,
         words: [
           "$meat",
-          "that",
+          "$back+flashlight",
           "touches",
           "anything",
           "unclean",
