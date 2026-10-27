@@ -518,7 +518,7 @@ export function bible_glyph_chapter_lev25() {
           "$fear+doing",
           "your",
           "$heart_on_fire,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "$i_am",
