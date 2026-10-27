@@ -528,7 +528,7 @@ export function bible_glyph_chapter_2ki09() {
           "$proper_name$Arameans",
           "in",
           "the",
-          "battle",
+          "$crossed_swords+doing",
           "against",
           "$proper_name$Hazael",
           "their",
