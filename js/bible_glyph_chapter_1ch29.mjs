@@ -405,7 +405,7 @@ export function bible_glyph_chapter_1ch29() {
           "$i_am,",
           "is",
           "the",
-          "greatness",
+          "$top+thing",
           "and",
           "the",
           "power",
