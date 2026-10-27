@@ -620,7 +620,7 @@ export function bible_glyph_chapter_gen28() {
           "over",
           "me",
           "on",
-          "this",
+          "$flashlight",
           "$road,",
           "and",
           "if",
