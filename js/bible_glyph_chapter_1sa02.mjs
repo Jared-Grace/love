@@ -34,7 +34,7 @@ export function bible_glyph_chapter_1sa02() {
           "the",
           "$i_am.",
           "My",
-          "mouth",
+          "$face_with_open_mouth",
           "speaks",
           "boldly",
           "against",
