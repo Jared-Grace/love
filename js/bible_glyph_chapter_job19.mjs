@@ -57,7 +57,7 @@ export function bible_glyph_chapter_job19() {
           "gone",
           "$road+woozy_face+doing,",
           "my",
-          "error",
+          "$road+confounded_face",
           "concerns",
           "me",
           "$safety_pin.",
