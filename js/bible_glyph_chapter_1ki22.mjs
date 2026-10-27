@@ -1415,7 +1415,7 @@ export function bible_glyph_chapter_1ki22() {
           "$sacrifice",
           "and",
           "burned",
-          "incense",
+          "$incense+doing",
           "on",
           "the",
           "$snow_capped_mountain",
