@@ -496,7 +496,7 @@ export function bible_glyph_chapter_deu29() {
           "$woman,",
           "$houses",
           "or",
-          "tribe",
+          "$wood",
           "among",
           "you",
           "$sun",
