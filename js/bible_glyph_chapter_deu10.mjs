@@ -633,7 +633,7 @@ export function bible_glyph_chapter_deu10() {
           "You",
           "are",
           "to",
-          "fear",
+          "$fear+doing",
           "the",
           "$i_am",
           "your",
