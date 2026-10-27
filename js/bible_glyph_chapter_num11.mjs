@@ -647,7 +647,7 @@ export function bible_glyph_chapter_num11() {
           "makes",
           "you",
           "$nauseated_face+thing,",
-          "because",
+          "$information",
           "you",
           "have",
           "rejected",
