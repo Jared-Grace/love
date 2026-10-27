@@ -609,7 +609,7 @@ export function bible_glyph_chapter_lam03() {
         verse_number: 34,
         words: [
           "To",
-          "crush",
+          "$stone+dust+doing",
           "underfoot",
           "all",
           "the",
