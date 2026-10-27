@@ -391,7 +391,7 @@ export function bible_glyph_chapter_1sa08() {
           "be",
           "perfumers",
           "and",
-          "cooks",
+          "$cook+female_sign",
           "and",
           "bakers.",
         ],
