@@ -118,7 +118,7 @@ export function bible_glyph_chapter_2ki09() {
           "over",
           "$wrestling+heart_on_fire.",
           "Then",
-          "open",
+          "$unlocked",
           "the",
           "door",
           "and",
