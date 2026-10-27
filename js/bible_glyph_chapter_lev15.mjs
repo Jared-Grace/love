@@ -510,7 +510,7 @@ export function bible_glyph_chapter_lev15() {
           "or",
           "leather",
           "on",
-          "which",
+          "$back+flashlight",
           "there",
           "is",
           "an",
