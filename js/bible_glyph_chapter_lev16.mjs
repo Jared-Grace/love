@@ -1086,7 +1086,7 @@ export function bible_glyph_chapter_lev16() {
           "$foreigner",
           "who",
           "resides",
-          "among",
+          "$radio_button",
           "you.",
         ],
       },
