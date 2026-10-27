@@ -937,7 +937,7 @@ export function bible_glyph_chapter_1sa20() {
           "the",
           "$bread,",
           "either",
-          "yesterday",
+          "$sun+back",
           "or",
           "this",
           "$sun?",
