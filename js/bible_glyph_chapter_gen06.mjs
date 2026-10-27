@@ -545,7 +545,7 @@ export function bible_glyph_chapter_gen06() {
           "every",
           "$sprout",
           "$meat,",
-          "male",
+          "$reminder_ribbon+thing",
           "and",
           "female,",
           "to",
