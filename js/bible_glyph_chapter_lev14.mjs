@@ -562,7 +562,7 @@ export function bible_glyph_chapter_lev14() {
           "some",
           "$tray_out",
           "the",
-          "oil",
+          "$lotion_bottle",
           "with",
           "his",
           "finger",
