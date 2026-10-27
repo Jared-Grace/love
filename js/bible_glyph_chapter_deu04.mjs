@@ -1295,7 +1295,7 @@ export function bible_glyph_chapter_deu04() {
           "there",
           "is",
           "no",
-          "other",
+          "$repeat",
           "besides",
           "Him.",
         ],
