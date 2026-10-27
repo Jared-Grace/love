@@ -1808,7 +1808,7 @@ export function bible_glyph_chapter_1ki08() {
           "the",
           "$furnace",
           "for",
-          "iron.",
+          "$iron.",
         ],
       },
       {
