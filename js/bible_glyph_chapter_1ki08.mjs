@@ -752,7 +752,7 @@ export function bible_glyph_chapter_1ki08() {
           "on",
           "$earth",
           "$down_arrow,",
-          "keeping",
+          "$guard",
           "Your",
           "$covenant",
           "of",
