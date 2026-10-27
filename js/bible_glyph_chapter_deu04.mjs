@@ -1374,7 +1374,7 @@ export function bible_glyph_chapter_deu04() {
           "before",
           "you",
           "$map",
-          "greater",
+          "$top",
           "and",
           "mightier",
           "$tray_out",
