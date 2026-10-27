@@ -702,7 +702,7 @@ export function bible_glyph_chapter_2ki09() {
           "out",
           "a",
           "second",
-          "horseman,",
+          "$horse_racing+doing,",
           "who",
           "$footprints",
           "to",
