@@ -112,7 +112,7 @@ export function bible_glyph_chapter_lev27() {
           "$son,",
           "then",
           "your",
-          "valuation",
+          "$receipt",
           "shall",
           "be",
           "$two+zero",
