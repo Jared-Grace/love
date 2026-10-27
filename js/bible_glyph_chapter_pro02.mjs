@@ -69,7 +69,7 @@ export function bible_glyph_chapter_pro02() {
       {
         verse_number: 4,
         words: [
-          "if",
+          "$traffic_light",
           "you",
           "seek",
           "it",
