@@ -497,7 +497,7 @@ export function bible_glyph_chapter_mic04() {
           "Then",
           "you",
           "will",
-          "devote",
+          "$bomb+altar+doing",
           "their",
           "gain",
           "to",
