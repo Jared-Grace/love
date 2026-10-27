@@ -33,7 +33,7 @@ export function bible_glyph_chapter_exo26() {
           "and",
           "$cherub",
           "$hammer",
-          "skillfully",
+          "$thinking+doing",
           "into",
           "them.",
         ],
