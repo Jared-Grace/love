@@ -1084,7 +1084,7 @@ export function bible_glyph_chapter_exo29() {
           "commanded",
           "you,",
           "taking",
-          "seven",
+          "$seven",
           "$sun",
           "to",
           "fill",
