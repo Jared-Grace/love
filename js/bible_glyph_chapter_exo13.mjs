@@ -474,7 +474,7 @@ export function bible_glyph_chapter_exo13() {
           "every",
           "$hugging_face+baby,",
           "but",
-          "redeem",
+          "$coin+turn_back",
           "all",
           "the",
           "firstborn",
