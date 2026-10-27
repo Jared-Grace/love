@@ -305,7 +305,7 @@ export function bible_glyph_chapter_num15() {
           "for",
           "each",
           "$lamb",
-          "or",
+          "$shuffle",
           "$goat.",
         ],
       },
