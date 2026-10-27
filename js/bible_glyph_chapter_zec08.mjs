@@ -427,7 +427,7 @@ export function bible_glyph_chapter_zec08() {
           "have",
           "been",
           "a",
-          "curse",
+          "$balloon+speech",
           "among",
           "the",
           "$map,",
