@@ -906,7 +906,7 @@ export function bible_glyph_chapter_lam02() {
           "$sun",
           "of",
           "Your",
-          "anger;",
+          "$nose+fire;",
           "You",
           "have",
           "slaughtered",
