@@ -177,7 +177,7 @@ export function bible_glyph_chapter_num27() {
           "of",
           "$proper_name$Zelophehad",
           "$mouth",
-          "correctly.",
+          "$right_arrow.",
           "You",
           "must",
           "certainly",
