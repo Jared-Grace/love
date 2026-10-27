@@ -626,7 +626,7 @@ export function bible_glyph_chapter_mic07() {
           "$bow",
           "into",
           "the",
-          "depths",
+          "$water_wave+hole",
           "of",
           "the",
           "$sea.",
