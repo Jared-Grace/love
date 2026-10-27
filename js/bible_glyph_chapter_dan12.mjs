@@ -182,7 +182,7 @@ export function bible_glyph_chapter_dan12() {
           "the",
           "river",
           "and",
-          "one",
+          "$one",
           "on",
           "the",
           "opposite",
