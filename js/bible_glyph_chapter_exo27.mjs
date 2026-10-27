@@ -492,7 +492,7 @@ export function bible_glyph_chapter_exo27() {
           "pegs",
           "and",
           "the",
-          "tent",
+          "$tent+wood",
           "pegs",
           "of",
           "the",
