@@ -866,7 +866,7 @@ export function bible_glyph_chapter_exo12() {
           "is",
           "the",
           "Passover",
-          "sacrifice",
+          "$sacrifice",
           "to",
           "the",
           "$i_am,",
