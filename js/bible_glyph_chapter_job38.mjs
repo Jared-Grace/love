@@ -703,7 +703,7 @@ export function bible_glyph_chapter_job38() {
       {
         verse_number: 36,
         words: [
-          "Who",
+          "$person+question",
           "has",
           "put",
           "$wisdom",
