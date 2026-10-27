@@ -460,7 +460,7 @@ export function bible_glyph_chapter_1sa25() {
           "the",
           "young",
           "men",
-          "informed",
+          "$newspaper",
           "$proper_name$Abigail,",
           "$proper_name$Nabal's",
           "$woman,",
