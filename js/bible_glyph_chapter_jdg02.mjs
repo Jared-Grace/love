@@ -655,7 +655,7 @@ export function bible_glyph_chapter_jdg02() {
           "become",
           "even",
           "more",
-          "corrupt",
+          "$collision",
           "than",
           "their",
           "$father,",
