@@ -374,7 +374,7 @@ export function bible_glyph_chapter_zep01() {
           "$clock",
           "I",
           "will",
-          "search",
+          "$performing_arts+doing",
           "$city+peace",
           "with",
           "lamps",
