@@ -70,7 +70,7 @@ export function bible_glyph_chapter_zec08() {
           "I",
           "will",
           "$turn_back",
-          "to",
+          "$toward",
           "$proper_name$Zion",
           "and",
           "dwell",
