@@ -958,7 +958,7 @@ export function bible_glyph_chapter_deu31() {
           "it",
           "may",
           "remain",
-          "there",
+          "$telescope",
           "as",
           "a",
           "$witness",
