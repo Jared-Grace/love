@@ -525,7 +525,7 @@ export function bible_glyph_chapter_exo04() {
           "will",
           "be",
           "your",
-          "spokesman,",
+          "$face_with_open_mouth,",
           "and",
           "it",
           "will",
