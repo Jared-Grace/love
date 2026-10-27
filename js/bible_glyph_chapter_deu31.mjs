@@ -38,7 +38,7 @@ export function bible_glyph_chapter_deu31() {
           "a",
           "$input_numbers+all",
           "and",
-          "twenty",
+          "$two+zero",
           "years",
           "this",
           "$sun.",
