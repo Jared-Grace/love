@@ -591,7 +591,7 @@ export function bible_glyph_chapter_jer07() {
           "the",
           "$crown",
           "$i_am:",
-          "Behold,",
+          "$exclamation,",
           "My",
           "anger",
           "and",
