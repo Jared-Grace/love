@@ -362,7 +362,7 @@ export function bible_glyph_chapter_dan12() {
           "the",
           "$thumbs_down",
           "will",
-          "understand,",
+          "$brain,",
           "but",
           "the",
           "wise",
