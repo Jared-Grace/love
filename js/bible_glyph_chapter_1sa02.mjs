@@ -1207,7 +1207,7 @@ export function bible_glyph_chapter_1sa02() {
           "he",
           "will",
           "$walking",
-          "before",
+          "$face",
           "My",
           "$oil",
           "for",
