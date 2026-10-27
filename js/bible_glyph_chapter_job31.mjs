@@ -122,7 +122,7 @@ export function bible_glyph_chapter_job31() {
           "may",
           "$lightbulb",
           "my",
-          "integrity.",
+          "$full_moon+heart_red.",
         ],
       },
       {
