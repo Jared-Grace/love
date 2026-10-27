@@ -482,7 +482,7 @@ export function bible_glyph_chapter_isa07() {
           "the",
           "two",
           "$king",
-          "you",
+          "$you",
           "dread",
           "will",
           "be",
