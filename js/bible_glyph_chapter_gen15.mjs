@@ -484,7 +484,7 @@ export function bible_glyph_chapter_gen15() {
           "$scissors",
           "a",
           "$covenant",
-          "with",
+          "$safety_pin",
           "$proper_name$Abram,",
           "$speech,",
           "To",
