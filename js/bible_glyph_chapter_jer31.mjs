@@ -1077,7 +1077,7 @@ export function bible_glyph_chapter_jer31() {
           "husband",
           "to",
           "them,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
