@@ -238,7 +238,7 @@ export function bible_glyph_chapter_1sa25() {
           "was",
           "missing",
           "the",
-          "whole",
+          "$all",
           "$sun",
           "they",
           "were",
