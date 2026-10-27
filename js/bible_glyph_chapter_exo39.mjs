@@ -303,7 +303,7 @@ export function bible_glyph_chapter_exo39() {
           "$straight_ruler+repeat",
           "had",
           "a",
-          "jacinth,",
+          "$gem_stone+heart_orange,",
           "an",
           "agate,",
           "and",
