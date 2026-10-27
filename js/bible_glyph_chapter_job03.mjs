@@ -394,7 +394,7 @@ export function bible_glyph_chapter_job03() {
           "Both",
           "$pinching_hand",
           "and",
-          "great",
+          "$top",
           "are",
           "there,",
           "and",
