@@ -679,7 +679,7 @@ export function bible_glyph_chapter_gen49() {
           "and",
           "in",
           "the",
-          "evening",
+          "$sunset",
           "he",
           "divides",
           "the",
