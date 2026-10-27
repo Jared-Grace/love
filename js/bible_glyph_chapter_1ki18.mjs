@@ -801,7 +801,7 @@ export function bible_glyph_chapter_1ki18() {
           "it",
           "$first_place.",
           "Then",
-          "call",
+          "$waving_hand",
           "on",
           "the",
           "$name_tag",
