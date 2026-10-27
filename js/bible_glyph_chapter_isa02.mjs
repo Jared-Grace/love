@@ -615,7 +615,7 @@ export function bible_glyph_chapter_isa02() {
           "$nose+fire.",
           "Of",
           "what",
-          "account",
+          "$thinking+doing",
           "is",
           "he?",
         ],
