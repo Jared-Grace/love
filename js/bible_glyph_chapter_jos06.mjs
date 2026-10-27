@@ -250,7 +250,7 @@ export function bible_glyph_chapter_jos06() {
           "$seven",
           "rams",
           "horns",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "advanced",
