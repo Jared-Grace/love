@@ -311,7 +311,7 @@ export function bible_glyph_chapter_exo28() {
           "way",
           "a",
           "$stone",
-          "cutter",
+          "$hammer_and_wrench+doer",
           "engraves",
           "a",
           "seal,",
