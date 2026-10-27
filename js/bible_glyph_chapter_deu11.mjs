@@ -782,7 +782,7 @@ export function bible_glyph_chapter_deu11() {
       {
         verse_number: 24,
         words: [
-          "Every",
+          "$all",
           "$place",
           "where",
           "the",
