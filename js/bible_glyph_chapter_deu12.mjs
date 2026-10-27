@@ -351,7 +351,7 @@ export function bible_glyph_chapter_deu12() {
           "$footprints",
           "everything",
           "$me",
-          "command",
+          "$speech+scroll",
           "you:",
           "your",
           "$burnt_offering$s",
