@@ -1265,7 +1265,7 @@ export function bible_glyph_chapter_exo12() {
           "they",
           "could",
           "$no_entry",
-          "delay,",
+          "$flashlight+question+doing,",
           "and",
           "they",
           "had",
