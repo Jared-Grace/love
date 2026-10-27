@@ -96,7 +96,7 @@ export function bible_glyph_chapter_psa027() {
       {
         verse_number: 4,
         words: [
-          "One",
+          "$one",
           "thing",
           "I",
           "have",
