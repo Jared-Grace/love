@@ -315,7 +315,7 @@ export function bible_glyph_chapter_deu06() {
           "you",
           "did",
           "$no_entry",
-          "build,",
+          "$brick,",
         ],
       },
       {
