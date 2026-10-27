@@ -1017,7 +1017,7 @@ export function bible_glyph_chapter_gen43() {
           "since",
           "that",
           "was",
-          "detestable",
+          "$vomiting",
           "to",
           "them.",
         ],
