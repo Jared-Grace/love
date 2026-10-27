@@ -532,7 +532,7 @@ export function bible_glyph_chapter_jos06() {
           "the",
           "$family,",
           "$public_address!",
-          "For",
+          "$pointing",
           "the",
           "$i_am",
           "has",
