@@ -681,7 +681,7 @@ export function bible_glyph_chapter_num11() {
           "Here",
           "I",
           "am",
-          "among",
+          "$magnet+thing",
           "$six",
           "$family",
           "on",
