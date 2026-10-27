@@ -1358,7 +1358,7 @@ export function bible_glyph_chapter_1ki01() {
           "a",
           "$man_beard",
           "of",
-          "valor.",
+          "$raised_fist.",
           "You",
           "must",
           "be",
