@@ -844,7 +844,7 @@ export function bible_glyph_chapter_jos07() {
           "them.",
           "They",
           "are",
-          "hidden",
+          "$pick+tray_in+doing",
           "in",
           "the",
           "$earth",
