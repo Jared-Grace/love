@@ -590,7 +590,7 @@ export function bible_glyph_chapter_lam02() {
           "they",
           "did",
           "$no_entry",
-          "expose",
+          "$luggage+chains+doing",
           "your",
           "guilt",
           "to",
