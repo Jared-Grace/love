@@ -223,7 +223,7 @@ export function bible_glyph_chapter_gen27() {
           "do",
           "exactly",
           "as",
-          "I",
+          "$me",
           "tell",
           "you.",
         ],
