@@ -598,7 +598,7 @@ export function bible_glyph_chapter_zep01() {
           "of",
           "His",
           "$face_steam.",
-          "For",
+          "$pointing",
           "indeed,",
           "He",
           "will",
