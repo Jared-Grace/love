@@ -88,7 +88,7 @@ export function bible_glyph_chapter_zep03() {
           "$sparkle+thing;",
           "they",
           "do",
-          "violence",
+          "$boxing_glove+hand+doing",
           "to",
           "the",
           "$scroll.",
