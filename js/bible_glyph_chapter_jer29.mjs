@@ -298,7 +298,7 @@ export function bible_glyph_chapter_jer29() {
           "$no_entry",
           "sent",
           "them,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
