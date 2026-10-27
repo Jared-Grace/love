@@ -428,7 +428,7 @@ export function bible_glyph_chapter_est01() {
           "$proper_name$Memucan,",
           "the",
           "$seven",
-          "princes",
+          "$military_medal",
           "of",
           "$proper_name$Persia",
           "and",
