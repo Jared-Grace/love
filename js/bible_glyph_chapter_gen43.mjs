@@ -623,7 +623,7 @@ export function bible_glyph_chapter_gen43() {
         words: [
           "They",
           "$speech,",
-          "Please,",
+          "$pleading_face+manner,",
           "$crown,",
           "we",
           "really",
