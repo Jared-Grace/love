@@ -1323,7 +1323,7 @@ export function bible_glyph_chapter_2ki10() {
           "that",
           "$i_am+pointing_back",
           "$castle+doing",
-          "over",
+          "$pointing_up",
           "$wrestling+heart_on_fire",
           "in",
           "$guard+proper_name",
