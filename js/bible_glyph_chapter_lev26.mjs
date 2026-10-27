@@ -409,7 +409,7 @@ export function bible_glyph_chapter_lev26() {
           "$no_entry",
           "$hammer+doing",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "$scroll,",
         ],
       },
