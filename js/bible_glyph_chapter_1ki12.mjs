@@ -360,7 +360,7 @@ export function bible_glyph_chapter_1ki12() {
           "add",
           "to",
           "your",
-          "yoke.",
+          "$yoke.",
           "Whereas",
           "my",
           "$father",
