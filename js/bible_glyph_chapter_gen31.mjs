@@ -1180,7 +1180,7 @@ export function bible_glyph_chapter_gen31() {
           "changed",
           "my",
           "$coin+hammer+thing",
-          "ten",
+          "$ten",
           "times.",
         ],
       },
