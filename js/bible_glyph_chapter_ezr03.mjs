@@ -541,7 +541,7 @@ export function bible_glyph_chapter_ezr03() {
           "$voice",
           "of",
           "weeping,",
-          "because",
+          "$pointing",
           "the",
           "$family",
           "made",
