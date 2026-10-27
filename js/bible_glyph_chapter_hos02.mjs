@@ -71,7 +71,7 @@ export function bible_glyph_chapter_hos02() {
           "$no_entry+traffic_light",
           "I",
           "will",
-          "strip",
+          "$garment+tray_out+doing",
           "her",
           "naked",
           "and",
