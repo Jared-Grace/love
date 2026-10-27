@@ -673,7 +673,7 @@ export function bible_glyph_chapter_num24() {
           "$speech+likeness,",
           "$speech,",
           "$weary_face,",
-          "who",
+          "$person+question",
           "can",
           "$sprout+doing",
           "unless",
