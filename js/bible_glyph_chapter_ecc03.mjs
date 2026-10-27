@@ -533,7 +533,7 @@ export function bible_glyph_chapter_ecc03() {
       {
         verse_number: 21,
         words: [
-          "Who",
+          "$person+question",
           "$lightbulb",
           "if",
           "the",
