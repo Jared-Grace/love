@@ -834,7 +834,7 @@ export function bible_glyph_chapter_jos24() {
           "that",
           "$sun",
           "$i_am+rescue",
-          "made",
+          "$scissors",
           "a",
           "$covenant",
           "for",
