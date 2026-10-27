@@ -1072,7 +1072,7 @@ export function bible_glyph_chapter_lev11() {
         verse_number: 44,
         words: [
           "For",
-          "I",
+          "$me",
           "am",
           "$i_am",
           "your",
