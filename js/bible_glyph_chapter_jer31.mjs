@@ -1140,7 +1140,7 @@ export function bible_glyph_chapter_jer31() {
           "will",
           "each",
           "$man_beard",
-          "teach",
+          "$learner+doing",
           "his",
           "neighbor",
           "or",
