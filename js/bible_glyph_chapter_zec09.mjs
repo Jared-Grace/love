@@ -541,7 +541,7 @@ export function bible_glyph_chapter_zec09() {
           "their",
           "$heart_on_fire",
           "will",
-          "save",
+          "$rescue",
           "them",
           "as",
           "the",
