@@ -388,7 +388,7 @@ export function bible_glyph_chapter_ecc12() {
           "$fear+doing",
           "$heart_on_fire",
           "and",
-          "keep",
+          "$guard",
           "His",
           "$scroll,",
           "for",
