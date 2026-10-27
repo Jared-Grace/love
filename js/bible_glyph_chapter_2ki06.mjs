@@ -1005,7 +1005,7 @@ export function bible_glyph_chapter_2ki06() {
           "$family",
           "$eye",
           "the",
-          "sackcloth",
+          "$sackcloth",
           "next",
           "to",
           "his",
