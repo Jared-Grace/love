@@ -889,7 +889,7 @@ export function bible_glyph_chapter_jer17() {
           "$grain_offering",
           "offerings",
           "and",
-          "frankincense",
+          "$white_circle+incense",
           "and",
           "thank",
           "offerings,",
