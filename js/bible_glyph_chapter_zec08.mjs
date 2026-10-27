@@ -168,7 +168,7 @@ export function bible_glyph_chapter_zec08() {
           "of",
           "Hosts",
           "$speech:",
-          "If",
+          "$pointing",
           "this",
           "is",
           "impossible",
