@@ -878,7 +878,7 @@ export function bible_glyph_chapter_1ki01() {
           "$king",
           "$two_hearts+proper_name",
           "$speech,",
-          "Call",
+          "$waving_hand",
           "in",
           "Bathsheba",
           "for",
