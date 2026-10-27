@@ -1018,7 +1018,7 @@ export function bible_glyph_chapter_exo09() {
           "The",
           "$voice",
           "and",
-          "hail",
+          "$ice",
           "$stop_button,",
           "and",
           "the",
