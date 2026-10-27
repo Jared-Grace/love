@@ -247,7 +247,7 @@ export function bible_glyph_chapter_gen11() {
           "there",
           "the",
           "$i_am",
-          "confused",
+          "$spoon+cyclone",
           "the",
           "language",
           "of",
