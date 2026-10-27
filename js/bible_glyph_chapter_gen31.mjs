@@ -672,7 +672,7 @@ export function bible_glyph_chapter_gen31() {
           "$speech",
           "to",
           "$hand+foot,",
-          "What",
+          "$flashlight+question",
           "have",
           "you",
           "$hammer+doing?",
