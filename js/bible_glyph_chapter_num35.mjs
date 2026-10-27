@@ -649,7 +649,7 @@ export function bible_glyph_chapter_num35() {
           "$shuffle",
           "$throwing",
           "an",
-          "object",
+          "$toolbox",
           "at",
           "him",
           "$no_entry",
