@@ -173,7 +173,7 @@ export function bible_glyph_chapter_job28() {
           "miner",
           "strikes",
           "the",
-          "flint;",
+          "$rock+lightning;",
           "he",
           "overturns",
           "$mountain",
