@@ -1189,7 +1189,7 @@ export function bible_glyph_chapter_gen27() {
           "rebel,",
           "you",
           "will",
-          "tear",
+          "$broken_chain+away+doing",
           "his",
           "yoke",
           "from",
