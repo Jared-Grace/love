@@ -229,7 +229,7 @@ export function bible_glyph_chapter_exo15() {
           "$running+toward,",
           "I",
           "will",
-          "overtake,",
+          "$running+hand_receiving+doing,",
           "I",
           "will",
           "divide",
