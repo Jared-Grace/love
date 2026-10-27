@@ -86,7 +86,7 @@ export function bible_glyph_chapter_gen49() {
       {
         verse_number: 4,
         words: [
-          "Uncontrolled",
+          "$water+bubbles",
           "as",
           "the",
           "$water,",
