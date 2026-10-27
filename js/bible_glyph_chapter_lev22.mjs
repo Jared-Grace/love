@@ -150,7 +150,7 @@ export function bible_glyph_chapter_lev22() {
       {
         verse_number: 5,
         words: [
-          "or",
+          "$shuffle",
           "$man_beard",
           "who",
           "touches",
