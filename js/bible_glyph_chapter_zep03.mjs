@@ -441,7 +441,7 @@ export function bible_glyph_chapter_zep03() {
           "$woman",
           "of",
           "$proper_name$Zion;",
-          "shout",
+          "$public_address",
           "aloud,",
           "O",
           "$wrestling+heart_on_fire!",
