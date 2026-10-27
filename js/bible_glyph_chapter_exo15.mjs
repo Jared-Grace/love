@@ -22,7 +22,7 @@ export function bible_glyph_chapter_exo15() {
           "Israel",
           "sang",
           "this",
-          "song",
+          "$song",
           "to",
           "the",
           "$i_am:",
