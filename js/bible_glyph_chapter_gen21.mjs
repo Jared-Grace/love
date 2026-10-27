@@ -316,7 +316,7 @@ export function bible_glyph_chapter_gen21() {
           "great",
           "$map,",
           "$pointing",
-          "he",
+          "$pointing_back",
           "is",
           "your",
           "offspring.",
