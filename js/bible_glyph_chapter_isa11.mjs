@@ -464,7 +464,7 @@ export function bible_glyph_chapter_isa11() {
           "$linked_paperclips+manner",
           "they",
           "will",
-          "plunder",
+          "$pirate_flag+doing",
           "the",
           "$son",
           "of",
