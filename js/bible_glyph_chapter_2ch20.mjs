@@ -366,7 +366,7 @@ export function bible_glyph_chapter_2ch20() {
           "by",
           "$footprints",
           "to",
-          "drive",
+          "$door+leftwards_pushing_hand+doing",
           "us",
           "out",
           "of",
