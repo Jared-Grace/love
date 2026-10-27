@@ -759,7 +759,7 @@ export function bible_glyph_chapter_jdg16() {
           "$razor+doing",
           "off",
           "the",
-          "seven",
+          "$seven",
           "braids",
           "of",
           "his",
