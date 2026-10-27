@@ -247,7 +247,7 @@ export function bible_glyph_chapter_1ki12() {
           "grown",
           "up",
           "with,",
-          "who",
+          "$back+flashlight",
           "served",
           "him.",
         ],
