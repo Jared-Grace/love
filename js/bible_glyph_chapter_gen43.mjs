@@ -505,7 +505,7 @@ export function bible_glyph_chapter_gen43() {
           "to",
           "my",
           "$house.",
-          "Slaughter",
+          "$meat_on_bone+doing",
           "an",
           "animal",
           "and",
