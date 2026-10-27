@@ -131,7 +131,7 @@ export function bible_glyph_chapter_psa022() {
           "$no_entry",
           "a",
           "$man_beard,",
-          "scorned",
+          "$face_with_rolling_eyes",
           "by",
           "$person",
           "and",
