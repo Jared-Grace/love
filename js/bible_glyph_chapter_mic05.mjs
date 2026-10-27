@@ -471,7 +471,7 @@ export function bible_glyph_chapter_mic05() {
           "upon",
           "the",
           "$map",
-          "that",
+          "$back+flashlight",
           "have",
           "$no_entry",
           "$ear",
