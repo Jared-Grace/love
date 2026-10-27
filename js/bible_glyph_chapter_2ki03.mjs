@@ -402,7 +402,7 @@ export function bible_glyph_chapter_2ki03() {
           "of",
           "$proper_name$Edom",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "him.",
         ],
