@@ -946,7 +946,7 @@ export function bible_glyph_chapter_gen42() {
           "$you",
           "are",
           "honest.",
-          "Leave",
+          "$seat+doing",
           "$one",
           "$brother",
           "with",
