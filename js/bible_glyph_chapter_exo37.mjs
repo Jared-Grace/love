@@ -98,7 +98,7 @@ export function bible_glyph_chapter_exo37() {
           "Then",
           "he",
           "$hammer+doing",
-          "poles",
+          "$one+person",
           "of",
           "acacia",
           "$tree",
