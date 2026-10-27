@@ -479,7 +479,7 @@ export function bible_glyph_chapter_gen07() {
           "surge",
           "and",
           "rise",
-          "greatly",
+          "$double_exclamation",
           "on",
           "the",
           "$earth,",
