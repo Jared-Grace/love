@@ -1137,7 +1137,7 @@ export function bible_glyph_chapter_1ki01() {
           "$king,",
           "$speech,",
           "$check+manner.",
-          "So",
+          "$right_arrow",
           "may",
           "the",
           "$i_am,",
