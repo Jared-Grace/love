@@ -65,7 +65,7 @@ export function bible_glyph_chapter_jos24() {
           "your",
           "$father",
           "$person+house",
-          "beyond",
+          "$bridge+thing",
           "the",
           "Euphrates,",
           "including",
