@@ -390,7 +390,7 @@ export function bible_glyph_chapter_exo39() {
           "They",
           "also",
           "$hammer+doing",
-          "two",
+          "$two",
           "$gold",
           "filigree",
           "settings",
