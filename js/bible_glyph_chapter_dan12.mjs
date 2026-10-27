@@ -431,7 +431,7 @@ export function bible_glyph_chapter_dan12() {
           "$stop_sign.",
           "You",
           "will",
-          "rest,",
+          "$seat+doing,",
           "and",
           "then",
           "you",
