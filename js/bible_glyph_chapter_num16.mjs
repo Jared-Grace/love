@@ -1298,7 +1298,7 @@ export function bible_glyph_chapter_num16() {
           "and",
           "$proper_name$Aaron",
           "$curving_right+doing",
-          "toward",
+          "$toward",
           "the",
           "Tent",
           "of",
