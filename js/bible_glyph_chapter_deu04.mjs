@@ -280,7 +280,7 @@ export function bible_glyph_chapter_deu04() {
           "this",
           "$all",
           "$scroll",
-          "I",
+          "$me",
           "$hands_giving",
           "before",
           "you",
