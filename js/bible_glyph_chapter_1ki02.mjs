@@ -708,7 +708,7 @@ export function bible_glyph_chapter_1ki02() {
           "she",
           "$speech,",
           "Let",
-          "Abishag",
+          "$father+woozy_face+proper_name",
           "the",
           "$proper_name$Shunammite",
           "be",
