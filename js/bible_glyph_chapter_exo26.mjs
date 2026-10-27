@@ -191,7 +191,7 @@ export function bible_glyph_chapter_exo26() {
           "$pointing_up",
           "the",
           "tabernacle,",
-          "eleven",
+          "$one+plus",
           "curtains",
           "shall",
           "you",
