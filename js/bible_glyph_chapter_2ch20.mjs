@@ -1164,7 +1164,7 @@ export function bible_glyph_chapter_2ch20() {
           "$check+exclamation,",
           "were",
           "$no_entry",
-          "removed,",
+          "$away+doing,",
           "for",
           "the",
           "$family",
