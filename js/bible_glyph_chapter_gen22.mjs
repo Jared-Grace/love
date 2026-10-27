@@ -199,7 +199,7 @@ export function bible_glyph_chapter_gen22() {
           "of",
           "them",
           "$walking",
-          "together.",
+          "$linked_paperclips+manner.",
         ],
       },
       {
