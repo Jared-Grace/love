@@ -388,7 +388,7 @@ export function bible_glyph_chapter_gen14() {
           "when",
           "Abram",
           "$ear",
-          "that",
+          "$pointing",
           "his",
           "$brother",
           "had",
