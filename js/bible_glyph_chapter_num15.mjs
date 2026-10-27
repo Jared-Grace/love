@@ -965,7 +965,7 @@ export function bible_glyph_chapter_num15() {
           "him",
           "in",
           "custody,",
-          "because",
+          "$pointing",
           "it",
           "had",
           "$no_entry",
