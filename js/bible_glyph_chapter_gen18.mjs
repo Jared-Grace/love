@@ -765,7 +765,7 @@ export function bible_glyph_chapter_gen18() {
           "the",
           "$i_am",
           "$speech,",
-          "If",
+          "$traffic_light",
           "I",
           "find",
           "fifty",
