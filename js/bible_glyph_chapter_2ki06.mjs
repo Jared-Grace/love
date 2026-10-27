@@ -42,7 +42,7 @@ export function bible_glyph_chapter_2ki06() {
       {
         verse_number: 2,
         words: [
-          "Please",
+          "$pleading",
           "let",
           "us",
           "$walking",
