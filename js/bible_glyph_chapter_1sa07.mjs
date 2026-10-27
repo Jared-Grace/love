@@ -240,7 +240,7 @@ export function bible_glyph_chapter_1sa07() {
           "at",
           "$proper_name$Mizpah,",
           "their",
-          "rulers",
+          "$crown+five",
           "marched",
           "up",
           "toward",
