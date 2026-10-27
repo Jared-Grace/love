@@ -508,7 +508,7 @@ export function bible_glyph_chapter_1sa02() {
           "$hand_receiving",
           "$back+flashlight",
           "you",
-          "want,",
+          "$heart_eyes+hand_receiving+doing,",
           "the",
           "servant",
           "would",
