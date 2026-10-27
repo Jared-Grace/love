@@ -320,7 +320,7 @@ export function bible_glyph_chapter_exo21() {
           "does",
           "$no_entry",
           "$hammer+doing",
-          "these",
+          "$flashlight+flashlight",
           "$three",
           "things",
           "for",
