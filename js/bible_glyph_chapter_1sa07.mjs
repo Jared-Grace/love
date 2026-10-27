@@ -243,7 +243,7 @@ export function bible_glyph_chapter_1sa07() {
           "$crown+five",
           "marched",
           "up",
-          "toward",
+          "$toward",
           "$wrestling+heart_on_fire.",
           "And",
           "when",
