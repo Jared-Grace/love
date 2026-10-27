@@ -966,7 +966,7 @@ export function bible_glyph_chapter_gen18() {
           "ten",
           "are",
           "found",
-          "there.",
+          "$telescope.",
           "And",
           "He",
           "$speech,",
