@@ -548,7 +548,7 @@ export function bible_glyph_chapter_deu29() {
           "$speech",
           "of",
           "this",
-          "oath,",
+          "$speech+raised_back_of_hand,",
           "he",
           "invokes",
           "a",
