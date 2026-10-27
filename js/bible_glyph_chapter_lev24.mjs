@@ -95,7 +95,7 @@ export function bible_glyph_chapter_lev24() {
           "pure",
           "gold",
           "lampstand",
-          "before",
+          "$face",
           "$i_am",
           "continually.",
         ],
