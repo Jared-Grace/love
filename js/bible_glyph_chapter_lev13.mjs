@@ -1649,7 +1649,7 @@ export function bible_glyph_chapter_lev13() {
           "the",
           "mildew",
           "has",
-          "spread",
+          "$microbe+arrow_both_ways+doing",
           "in",
           "the",
           "$garment,",
