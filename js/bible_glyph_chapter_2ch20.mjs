@@ -645,7 +645,7 @@ export function bible_glyph_chapter_2ch20() {
           "$city+peace",
           "fell",
           "down",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "to",
