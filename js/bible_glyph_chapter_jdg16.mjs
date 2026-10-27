@@ -91,7 +91,7 @@ export function bible_glyph_chapter_jdg16() {
           "lay",
           "there",
           "only",
-          "until",
+          "$finish",
           "midnight,",
           "when",
           "he",
