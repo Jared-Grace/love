@@ -63,7 +63,7 @@ export function bible_glyph_chapter_num11() {
           "$family",
           "cried",
           "out",
-          "to",
+          "$toward",
           "$fishing_pole+proper_name,",
           "and",
           "$fishing_pole+proper_name",
