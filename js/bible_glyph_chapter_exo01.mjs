@@ -197,7 +197,7 @@ export function bible_glyph_chapter_exo01() {
           "join",
           "our",
           "enemies,",
-          "fight",
+          "$crossed_swords+doing",
           "against",
           "us,",
           "and",
