@@ -31,7 +31,7 @@ export function bible_glyph_chapter_deu16() {
           "because",
           "in",
           "the",
-          "month",
+          "$new_moon",
           "of",
           "Abib",
           "the",
