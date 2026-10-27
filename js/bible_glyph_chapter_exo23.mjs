@@ -350,7 +350,7 @@ export function bible_glyph_chapter_exo23() {
           "You",
           "must",
           "$no_entry",
-          "invoke",
+          "$reminder_ribbon",
           "the",
           "$name_tag",
           "of",
