@@ -361,7 +361,7 @@ export function bible_glyph_chapter_mic06() {
           "are",
           "$battery",
           "of",
-          "violence,",
+          "$boxing_glove,",
           "and",
           "its",
           "residents",
