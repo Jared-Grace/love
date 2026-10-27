@@ -389,7 +389,7 @@ export function bible_glyph_chapter_gen50() {
       {
         verse_number: 14,
         words: [
-          "After",
+          "$next_track",
           "he",
           "had",
           "buried",
