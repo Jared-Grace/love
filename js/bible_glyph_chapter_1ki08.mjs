@@ -1358,7 +1358,7 @@ export function bible_glyph_chapter_1ki08() {
           "$lightbulb",
           "his",
           "$heart_organ;",
-          "for",
+          "$pointing",
           "You",
           "alone",
           "$lightbulb",
