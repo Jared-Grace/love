@@ -373,7 +373,7 @@ export function bible_glyph_chapter_gen47() {
         words: [
           "$i_am+plus",
           "also",
-          "provided",
+          "$package+hand+doing",
           "his",
           "$father",
           "and",
