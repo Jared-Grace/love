@@ -688,7 +688,7 @@ export function bible_glyph_chapter_deu10() {
           "Your",
           "$father",
           "went",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$clamp+proper_name",
           "$seven+zero",
