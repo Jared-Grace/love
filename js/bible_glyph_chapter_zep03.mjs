@@ -240,7 +240,7 @@ export function bible_glyph_chapter_zep03() {
           "upon",
           "them",
           "My",
-          "indignation",
+          "$pouting_face",
           "-",
           "all",
           "My",
