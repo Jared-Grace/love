@@ -770,7 +770,7 @@ export function bible_glyph_chapter_gen49() {
           "of",
           "$proper_name$Canaan.",
           "$father+map",
-          "purchased",
+          "$coin+hand_receiving",
           "this",
           "$field",
           "from",
