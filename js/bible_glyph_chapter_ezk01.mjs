@@ -847,7 +847,7 @@ export function bible_glyph_chapter_ezk01() {
           "it,",
           "I",
           "fell",
-          "facedown",
+          "$pointing_up",
           "and",
           "$ear",
           "a",
