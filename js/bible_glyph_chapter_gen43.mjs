@@ -929,7 +929,7 @@ export function bible_glyph_chapter_gen43() {
           "May",
           "$heart_on_fire",
           "be",
-          "gracious",
+          "$heart_orange+doing",
           "to",
           "you,",
           "my",
