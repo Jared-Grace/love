@@ -463,7 +463,7 @@ export function bible_glyph_chapter_deu10() {
           "His",
           "$statute",
           "$back+flashlight",
-          "I",
+          "$me",
           "am",
           "giving",
           "you",
