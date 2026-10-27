@@ -490,7 +490,7 @@ export function bible_glyph_chapter_pro31() {
       {
         verse_number: 25,
         words: [
-          "Strength",
+          "$mechanical_arm",
           "and",
           "honor",
           "are",
