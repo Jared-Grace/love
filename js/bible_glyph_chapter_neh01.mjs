@@ -95,7 +95,7 @@ export function bible_glyph_chapter_neh01() {
           "the",
           "$map+crown,",
           "in",
-          "great",
+          "$top",
           "$thumbs_down",
           "and",
           "disgrace.",
