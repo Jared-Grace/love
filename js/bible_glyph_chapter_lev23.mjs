@@ -334,7 +334,7 @@ export function bible_glyph_chapter_lev23() {
           "its",
           "$grain_offering",
           "of",
-          "two",
+          "$two",
           "tenths",
           "of",
           "an",
