@@ -459,7 +459,7 @@ export function bible_glyph_chapter_jdg07() {
           "countless",
           "as",
           "the",
-          "sand",
+          "$sea+brown_square",
           "on",
           "the",
           "seashore.",
