@@ -286,7 +286,7 @@ export function bible_glyph_chapter_gen33() {
           "$pleading,",
           "my",
           "$speech+thumbs_up",
-          "that",
+          "$back+flashlight",
           "was",
           "$footprints",
           "to",
