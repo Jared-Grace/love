@@ -429,7 +429,7 @@ export function bible_glyph_chapter_psa145() {
           "$heart_red+doing",
           "Him,",
           "but",
-          "all",
+          "$all",
           "the",
           "$thumbs_down",
           "He",
