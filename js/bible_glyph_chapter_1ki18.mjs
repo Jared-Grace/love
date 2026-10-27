@@ -1481,7 +1481,7 @@ export function bible_glyph_chapter_1ki18() {
           "the",
           "$sky",
           "grew",
-          "dark",
+          "$black_heart+doing",
           "with",
           "clouds",
           "and",
