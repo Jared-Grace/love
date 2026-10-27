@@ -297,7 +297,7 @@ export function bible_glyph_chapter_mal02() {
           "you",
           "have",
           "not",
-          "kept",
+          "$guard",
           "My",
           "$road,",
           "but",
