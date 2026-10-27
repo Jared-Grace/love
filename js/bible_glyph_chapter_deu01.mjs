@@ -651,7 +651,7 @@ export function bible_glyph_chapter_deu01() {
           "all",
           "of",
           "you",
-          "approached",
+          "$magnet+doing",
           "me",
           "and",
           "$speech,",
