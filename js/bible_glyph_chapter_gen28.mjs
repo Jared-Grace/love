@@ -480,7 +480,7 @@ export function bible_glyph_chapter_gen28() {
           "I",
           "will",
           "$no_entry",
-          "leave",
+          "$derelict_house+doing",
           "you",
           "until",
           "I",
