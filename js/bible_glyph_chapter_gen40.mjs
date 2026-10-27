@@ -271,7 +271,7 @@ export function bible_glyph_chapter_gen40() {
           "and",
           "its",
           "clusters",
-          "ripened",
+          "$pot_of_food+doing",
           "into",
           "$grapes.",
         ],
