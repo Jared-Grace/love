@@ -576,7 +576,7 @@ export function bible_glyph_chapter_1sa02() {
           "boy",
           "$briefs+doing",
           "a",
-          "linen",
+          "$thread",
           "$safety_vest.",
         ],
       },
