@@ -181,7 +181,7 @@ export function bible_glyph_chapter_hos11() {
           "Me.",
           "Though",
           "they",
-          "call",
+          "$waving_hand",
           "$toward",
           "the",
           "Most",
