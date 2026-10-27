@@ -548,7 +548,7 @@ export function bible_glyph_chapter_isa11() {
           "His",
           "$family",
           "who",
-          "remain",
+          "$puzzle_piece+doing",
           "from",
           "$proper_name$Assyria,",
           "as",
