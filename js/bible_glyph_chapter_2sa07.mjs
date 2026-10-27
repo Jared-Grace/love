@@ -631,7 +631,7 @@ export function bible_glyph_chapter_2sa07() {
       {
         verse_number: 20,
         words: [
-          "What",
+          "$flashlight+question",
           "more",
           "can",
           "$two_hearts+proper_name",
