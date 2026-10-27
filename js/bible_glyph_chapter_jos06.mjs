@@ -61,7 +61,7 @@ export function bible_glyph_chapter_jos06() {
           "$might+person",
           "men",
           "of",
-          "valor.",
+          "$raised_fist.",
         ],
       },
       {
