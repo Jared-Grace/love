@@ -118,7 +118,7 @@ export function bible_glyph_chapter_1ki20() {
           "along",
           "with",
           "all",
-          "that",
+          "$back+flashlight",
           "I",
           "have.",
         ],
