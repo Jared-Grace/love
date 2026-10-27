@@ -584,7 +584,7 @@ export function bible_glyph_chapter_gen24() {
           "and",
           "she",
           "quickly",
-          "lowered",
+          "$walking+pointing_down",
           "her",
           "$jar",
           "to",
