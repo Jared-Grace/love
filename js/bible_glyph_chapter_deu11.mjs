@@ -469,7 +469,7 @@ export function bible_glyph_chapter_deu11() {
           "your",
           "$earth",
           "in",
-          "season,",
+          "$clock,",
           "the",
           "autumn",
           "and",
