@@ -344,7 +344,7 @@ export function bible_glyph_chapter_num12() {
           "$speech",
           "$heart_on_fire,",
           "$pleading",
-          "heal",
+          "$bandage",
           "her.",
         ],
       },
