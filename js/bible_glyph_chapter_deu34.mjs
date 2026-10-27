@@ -33,7 +33,7 @@ export function bible_glyph_chapter_deu34() {
           "of",
           "$proper_name$Pisgah,",
           "$back+flashlight",
-          "faces",
+          "$pointing_up",
           "$proper_name$Jericho.",
           "And",
           "the",
