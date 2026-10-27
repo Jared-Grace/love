@@ -912,7 +912,7 @@ export function bible_glyph_chapter_gen44() {
       {
         verse_number: 32,
         words: [
-          "Indeed",
+          "$pointing",
           "your",
           "$kneeling",
           "guaranteed",
