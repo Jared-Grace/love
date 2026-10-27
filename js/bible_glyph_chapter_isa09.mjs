@@ -611,7 +611,7 @@ export function bible_glyph_chapter_isa09() {
           "is",
           "on",
           "the",
-          "right,",
+          "$hand+right_arrow,",
           "but",
           "they",
           "are",
