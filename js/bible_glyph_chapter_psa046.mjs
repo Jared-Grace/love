@@ -136,7 +136,7 @@ export function bible_glyph_chapter_psa046() {
           "$map",
           "$crowd+loudspeaker+doing,",
           "$castle",
-          "crumble;",
+          "$vibration_mode+doing;",
           "the",
           "$earth",
           "melts",
