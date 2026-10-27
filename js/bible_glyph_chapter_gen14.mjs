@@ -271,7 +271,7 @@ export function bible_glyph_chapter_gen14() {
           "upon",
           "$well",
           "of",
-          "tar,",
+          "$black_circle+oil,",
           "and",
           "as",
           "the",
