@@ -291,7 +291,7 @@ export function bible_glyph_chapter_lev21() {
           "the",
           "anointing",
           "oil",
-          "poured",
+          "$pouring_liquid+fire",
           "on",
           "his",
           "head,",
