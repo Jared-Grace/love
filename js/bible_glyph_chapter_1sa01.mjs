@@ -369,7 +369,7 @@ export function bible_glyph_chapter_1sa01() {
           "ever",
           "touch",
           "his",
-          "head.",
+          "$person_gesturing_ok.",
         ],
       },
       {
