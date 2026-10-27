@@ -959,7 +959,7 @@ export function bible_glyph_chapter_exo21() {
           "$shuffle",
           "a",
           "$donkey",
-          "falls",
+          "$person+pointing_down",
           "into",
           "it,",
         ],
