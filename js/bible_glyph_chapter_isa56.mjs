@@ -351,7 +351,7 @@ export function bible_glyph_chapter_isa56() {
           "are",
           "all",
           "mute",
-          "dogs,",
+          "$dog,",
           "they",
           "$no_entry",
           "can",
