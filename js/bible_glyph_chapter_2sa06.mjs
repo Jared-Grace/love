@@ -440,7 +440,7 @@ export function bible_glyph_chapter_2sa06() {
           "$face",
           "the",
           "$i_am,",
-          "wearing",
+          "$briefs+doing",
           "a",
           "linen",
           "ephod,",
