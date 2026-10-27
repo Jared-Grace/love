@@ -762,7 +762,7 @@ export function bible_glyph_chapter_num15() {
           "$one",
           "$person_other",
           "$bow+doing",
-          "unintentionally,",
+          "$footprints+question+thing,",
           "he",
           "is",
           "to",
