@@ -351,7 +351,7 @@ export function bible_glyph_chapter_deu28() {
           "$brown_square,",
           "in",
           "the",
-          "land",
+          "$brown_square",
           "that",
           "the",
           "$i_am",
