@@ -110,7 +110,7 @@ export function bible_glyph_chapter_1sa15() {
           "$man_beard",
           "and",
           "$woman,",
-          "children",
+          "$baby_bottle",
           "and",
           "infants,",
           "oxen",
