@@ -1040,7 +1040,7 @@ export function bible_glyph_chapter_2ch06() {
           "$family",
           "$wrestling+heart_on_fire",
           "may",
-          "make,",
+          "$link,",
           "each",
           "$man_beard",
           "$lightbulb",
