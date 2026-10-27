@@ -490,7 +490,7 @@ export function bible_glyph_chapter_2ki06() {
         words: [
           "$no_entry",
           "be",
-          "afraid,",
+          "$fear+doing,",
           "Elisha",
           "$speech,",
           "for",
