@@ -255,7 +255,7 @@ export function bible_glyph_chapter_psa095() {
           "never",
           "$footprints",
           "My",
-          "rest.",
+          "$seat+thing.",
         ],
       },
     ],
