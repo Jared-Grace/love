@@ -373,7 +373,7 @@ export function bible_glyph_chapter_num32() {
           "He",
           "made",
           "them",
-          "wander",
+          "$up_down_arrow+doing",
           "in",
           "the",
           "$wilderness",
