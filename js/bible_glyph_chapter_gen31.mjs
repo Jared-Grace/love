@@ -787,7 +787,7 @@ export function bible_glyph_chapter_gen31() {
         verse_number: 30,
         words: [
           "And",
-          "now",
+          "$watch",
           "you",
           "$walking",
           "$walking",
