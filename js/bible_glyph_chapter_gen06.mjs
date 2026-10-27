@@ -292,7 +292,7 @@ export function bible_glyph_chapter_gen06() {
           "the",
           "$earth",
           "was",
-          "corrupt",
+          "$collision",
           "in",
           "the",
           "sight",
