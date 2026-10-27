@@ -270,7 +270,7 @@ export function bible_glyph_chapter_gen15() {
           "Abram",
           "$hand_receiving",
           "$all",
-          "these",
+          "$flashlight+flashlight",
           "to",
           "Him,",
           "split",
