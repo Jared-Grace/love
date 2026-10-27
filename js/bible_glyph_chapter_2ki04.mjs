@@ -1237,7 +1237,7 @@ export function bible_glyph_chapter_2ki04() {
           "on",
           "the",
           "large",
-          "pot",
+          "$pot_of_food",
           "and",
           "boil",
           "some",
