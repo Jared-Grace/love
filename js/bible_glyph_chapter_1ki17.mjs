@@ -322,7 +322,7 @@ export function bible_glyph_chapter_1ki17() {
           "have",
           "no",
           "$flatbread+fire+thing,",
-          "only",
+          "$pointing",
           "a",
           "handful",
           "of",
