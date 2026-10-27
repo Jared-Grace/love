@@ -199,7 +199,7 @@ export function bible_glyph_chapter_psa073() {
           "The",
           "wicked",
           "$speech,",
-          "How",
+          "$question+likeness",
           "can",
           "$heart_on_fire",
           "$lightbulb?",
