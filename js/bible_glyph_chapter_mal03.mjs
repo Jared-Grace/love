@@ -612,7 +612,7 @@ export function bible_glyph_chapter_mal03() {
           "will",
           "$turn_back",
           "$eye",
-          "between",
+          "$brain+arrow_both_ways",
           "the",
           "$ruler",
           "and",
