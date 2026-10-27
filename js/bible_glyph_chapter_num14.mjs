@@ -1132,7 +1132,7 @@ export function bible_glyph_chapter_num14() {
           "and",
           "made",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "grumble",
           "against",
