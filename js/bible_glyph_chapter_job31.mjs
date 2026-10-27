@@ -453,7 +453,7 @@ export function bible_glyph_chapter_job31() {
           "support",
           "in",
           "the",
-          "gate,",
+          "$gate,",
         ],
       },
       {
