@@ -694,7 +694,7 @@ export function bible_glyph_chapter_dan09() {
           "do",
           "$no_entry",
           "$turtle+doing,",
-          "because",
+          "$pointing",
           "Your",
           "$city",
           "and",
