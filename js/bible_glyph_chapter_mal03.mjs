@@ -116,7 +116,7 @@ export function bible_glyph_chapter_mal03() {
           "of",
           "$handshake+proper_name",
           "and",
-          "refine",
+          "$fire+droplet+doing",
           "them",
           "like",
           "gold",
