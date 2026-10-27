@@ -492,7 +492,7 @@ export function bible_glyph_chapter_mal02() {
           "broken",
           "faith,",
           "though",
-          "she",
+          "$pointing_back",
           "is",
           "your",
           "companion",
