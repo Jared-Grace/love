@@ -73,7 +73,7 @@ export function bible_glyph_chapter_mal04() {
           "My",
           "$name_tag,",
           "the",
-          "sun",
+          "$sun_with_face",
           "of",
           "$ruler+thing",
           "will",
