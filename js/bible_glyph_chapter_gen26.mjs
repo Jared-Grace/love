@@ -769,7 +769,7 @@ export function bible_glyph_chapter_gen26() {
           "captain",
           "of",
           "his",
-          "army.",
+          "$military_helmet.",
         ],
       },
       {
