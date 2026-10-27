@@ -221,7 +221,7 @@ export function bible_glyph_chapter_exo39() {
           "work",
           "as",
           "the",
-          "ephod,",
+          "$safety_vest,",
           "$gold,",
           "blue,",
           "purple,",
