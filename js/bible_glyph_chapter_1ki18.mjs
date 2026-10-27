@@ -219,7 +219,7 @@ export function bible_glyph_chapter_1ki18() {
           "$speech,",
           "Is",
           "it",
-          "you,",
+          "$you,",
           "my",
           "$crown",
           "$heart_on_fire+i_am?",
