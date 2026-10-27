@@ -243,7 +243,7 @@ export function bible_glyph_chapter_num08() {
           "$son",
           "of",
           "Israel",
-          "lay",
+          "$crutch",
           "their",
           "$hand",
           "upon",
