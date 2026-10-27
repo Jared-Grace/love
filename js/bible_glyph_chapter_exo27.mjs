@@ -481,7 +481,7 @@ export function bible_glyph_chapter_exo27() {
           "utensils",
           "of",
           "the",
-          "tabernacle",
+          "$tent+house",
           "for",
           "every",
           "use,",
