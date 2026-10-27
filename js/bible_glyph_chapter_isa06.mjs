@@ -45,7 +45,7 @@ export function bible_glyph_chapter_isa06() {
       {
         verse_number: 2,
         words: [
-          "Above",
+          "$walking+pointing_up",
           "Him",
           "$person+round_pushpin",
           "$fire+snake,",
