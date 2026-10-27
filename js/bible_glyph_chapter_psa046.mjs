@@ -28,7 +28,7 @@ export function bible_glyph_chapter_psa046() {
           "$heart_on_fire",
           "is",
           "our",
-          "refuge",
+          "$hut+place",
           "and",
           "strength,",
           "an",
