@@ -1542,7 +1542,7 @@ export function bible_glyph_chapter_1ki20() {
           "$king",
           "of",
           "$wrestling+heart_on_fire",
-          "recognized",
+          "$detective",
           "him",
           "as",
           "one",
