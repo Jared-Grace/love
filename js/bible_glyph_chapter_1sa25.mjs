@@ -468,7 +468,7 @@ export function bible_glyph_chapter_1sa25() {
           "$exclamation,",
           "$two_hearts+proper_name",
           "$hand_sending",
-          "messengers",
+          "$angel",
           "from",
           "the",
           "$wilderness",
