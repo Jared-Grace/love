@@ -1224,7 +1224,7 @@ export function bible_glyph_chapter_lev25() {
           "$kneeling+doing",
           "for",
           "you",
-          "until",
+          "$finish",
           "the",
           "$year",
           "of",
