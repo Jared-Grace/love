@@ -98,7 +98,7 @@ export function bible_glyph_chapter_gen24() {
           "of",
           "the",
           "$proper_name$Canaanites,",
-          "among",
+          "$magnet+thing",
           "whom",
           "I",
           "am",
