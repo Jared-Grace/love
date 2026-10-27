@@ -1246,7 +1246,7 @@ export function bible_glyph_chapter_neh09() {
           "are",
           "$ruler",
           "in",
-          "all",
+          "$all",
           "that",
           "has",
           "$footprints",
