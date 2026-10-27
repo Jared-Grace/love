@@ -890,7 +890,7 @@ export function bible_glyph_chapter_deu33() {
           "shall",
           "trample",
           "their",
-          "high",
+          "$snow_capped_mountain",
           "places.",
         ],
       },
