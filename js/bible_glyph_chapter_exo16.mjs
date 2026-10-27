@@ -765,7 +765,7 @@ export function bible_glyph_chapter_exo16() {
           "to",
           "$bread+fire",
           "and",
-          "boil",
+          "$pot_of_food+doing",
           "what",
           "you",
           "want",
