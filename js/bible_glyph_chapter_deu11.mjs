@@ -241,7 +241,7 @@ export function bible_glyph_chapter_deu11() {
           "shall",
           "therefore",
           "$guard",
-          "every",
+          "$all",
           "$scroll",
           "I",
           "am",
