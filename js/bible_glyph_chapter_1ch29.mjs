@@ -448,7 +448,7 @@ export function bible_glyph_chapter_1ch29() {
         verse_number: 12,
         words: [
           "Both",
-          "riches",
+          "$money_bag",
           "and",
           "$star",
           "come",
