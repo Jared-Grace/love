@@ -1273,7 +1273,7 @@ export function bible_glyph_chapter_1sa20() {
           "$place",
           "where",
           "the",
-          "arrow",
+          "$arrow+thing",
           "of",
           "$i_am+hands_giving",
           "had",
