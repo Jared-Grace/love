@@ -126,7 +126,7 @@ export function bible_glyph_chapter_psa090() {
         words: [
           "in",
           "the",
-          "morning",
+          "$morning",
           "it",
           "springs",
           "up",
