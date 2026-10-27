@@ -520,7 +520,7 @@ export function bible_glyph_chapter_2ch07() {
       {
         verse_number: 15,
         words: [
-          "Now",
+          "$watch",
           "My",
           "$eyes",
           "will",
