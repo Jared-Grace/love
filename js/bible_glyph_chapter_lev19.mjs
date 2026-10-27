@@ -992,7 +992,7 @@ export function bible_glyph_chapter_lev19() {
           "$i_am",
           "your",
           "$heart_on_fire,",
-          "who",
+          "$back+flashlight",
           "$walking+tray_out",
           "you",
           "out",
