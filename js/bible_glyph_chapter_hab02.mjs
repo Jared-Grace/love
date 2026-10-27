@@ -185,7 +185,7 @@ export function bible_glyph_chapter_hab02() {
         words: [
           "Will",
           "$no_entry",
-          "all",
+          "$all",
           "of",
           "$flashlight+flashlight",
           "$lifting",
