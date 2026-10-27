@@ -695,7 +695,7 @@ export function bible_glyph_chapter_lev11() {
       {
         verse_number: 31,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "animals",
           "are",
           "unclean",
