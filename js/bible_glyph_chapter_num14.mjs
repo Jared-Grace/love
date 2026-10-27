@@ -217,7 +217,7 @@ export function bible_glyph_chapter_num14() {
       {
         verse_number: 8,
         words: [
-          "If",
+          "$traffic_light",
           "the",
           "$i_am",
           "delights",
