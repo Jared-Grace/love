@@ -681,7 +681,7 @@ export function bible_glyph_chapter_ezk34() {
       {
         verse_number: 21,
         words: [
-          "Since",
+          "$information",
           "you",
           "shove",
           "with",
