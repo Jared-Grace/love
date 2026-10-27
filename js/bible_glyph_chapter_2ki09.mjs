@@ -529,7 +529,7 @@ export function bible_glyph_chapter_2ki09() {
           "in",
           "the",
           "$crossed_swords+doing",
-          "against",
+          "$safety_pin",
           "$proper_name$Hazael",
           "their",
           "$king.",
