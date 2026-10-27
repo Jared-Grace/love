@@ -750,7 +750,7 @@ export function bible_glyph_chapter_deu05() {
       {
         verse_number: 26,
         words: [
-          "For",
+          "$pointing",
           "who",
           "of",
           "all",
