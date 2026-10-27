@@ -260,7 +260,7 @@ export function bible_glyph_chapter_jer32() {
           "the",
           "$scales+thing",
           "of",
-          "redemption",
+          "$currency_exchange+thing",
           "to",
           "$coin+hand_receiving",
           "it.",
