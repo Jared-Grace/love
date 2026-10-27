@@ -68,7 +68,7 @@ export function bible_glyph_chapter_gen11() {
           "and",
           "bake",
           "them",
-          "thoroughly.",
+          "$fire+thing.",
           "So",
           "they",
           "used",
