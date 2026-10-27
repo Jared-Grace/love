@@ -489,7 +489,7 @@ export function bible_glyph_chapter_gen22() {
           "$microphone",
           "the",
           "$i_am,",
-          "that",
+          "$pointing",
           "because",
           "you",
           "have",
