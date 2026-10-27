@@ -653,7 +653,7 @@ export function bible_glyph_chapter_deu04() {
           "and",
           "$eye",
           "the",
-          "sun",
+          "$sun_with_face",
           "and",
           "the",
           "$moon",
