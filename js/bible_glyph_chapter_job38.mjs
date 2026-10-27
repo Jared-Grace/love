@@ -726,7 +726,7 @@ export function bible_glyph_chapter_job38() {
           "the",
           "$wisdom",
           "to",
-          "count",
+          "$abacus",
           "the",
           "clouds?",
           "Or",
