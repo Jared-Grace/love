@@ -115,7 +115,7 @@ export function bible_glyph_chapter_exo16() {
           "$wilderness",
           "to",
           "starve",
-          "this",
+          "$flashlight",
           "whole",
           "$church",
           "to",
