@@ -194,7 +194,7 @@ export function bible_glyph_chapter_exo11() {
         words: [
           "Then",
           "a",
-          "great",
+          "$top",
           "$loudspeaker+mouth",
           "will",
           "go",
