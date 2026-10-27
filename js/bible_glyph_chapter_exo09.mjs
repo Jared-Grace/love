@@ -813,7 +813,7 @@ export function bible_glyph_chapter_exo09() {
           "did",
           "$no_entry",
           "hail",
-          "was",
+          "$link",
           "in",
           "the",
           "$earth",
