@@ -689,7 +689,7 @@ export function bible_glyph_chapter_num22() {
           "of",
           "the",
           "$i_am",
-          "stood",
+          "$person+round_pushpin+anchor+doing",
           "in",
           "the",
           "$road",
