@@ -151,7 +151,7 @@ export function bible_glyph_chapter_gen23() {
           "prince",
           "of",
           "$heart_on_fire",
-          "among",
+          "$radio_button",
           "us.",
           "Bury",
           "your",
