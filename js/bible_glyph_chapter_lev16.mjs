@@ -63,7 +63,7 @@ export function bible_glyph_chapter_lev16() {
           "Place",
           "$house",
           "the",
-          "veil,",
+          "$veil,",
           "in",
           "front",
           "of",
