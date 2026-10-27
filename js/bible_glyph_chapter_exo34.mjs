@@ -272,7 +272,7 @@ export function bible_glyph_chapter_exo34() {
           "have",
           "indeed",
           "found",
-          "favor",
+          "$heart_orange",
           "in",
           "Your",
           "$eyes,",
