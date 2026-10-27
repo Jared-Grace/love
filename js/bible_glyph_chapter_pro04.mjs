@@ -533,7 +533,7 @@ export function bible_glyph_chapter_pro04() {
           "or",
           "to",
           "the",
-          "left;",
+          "$hand+away;",
           "turn",
           "your",
           "feet",
