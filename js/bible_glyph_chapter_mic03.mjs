@@ -223,7 +223,7 @@ export function bible_glyph_chapter_mic03() {
           "They",
           "will",
           "all",
-          "cover",
+          "$veil+doing",
           "their",
           "mouths",
           "because",
