@@ -376,7 +376,7 @@ export function bible_glyph_chapter_exo40() {
         words: [
           "So",
           "the",
-          "tabernacle",
+          "$tent+house",
           "was",
           "set",
           "up",
