@@ -620,7 +620,7 @@ export function bible_glyph_chapter_gen41() {
           "heads",
           "of",
           "$wheat+top",
-          "sprouted,",
+          "$sprout+up_arrow+doing,",
           "$wilted_flower+doing",
           "and",
           "$pinching_hand+describing",
