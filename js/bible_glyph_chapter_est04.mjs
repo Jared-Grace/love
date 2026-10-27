@@ -55,7 +55,7 @@ export function bible_glyph_chapter_est04() {
           "far",
           "as",
           "the",
-          "gate",
+          "$gate",
           "of",
           "the",
           "$king,",
