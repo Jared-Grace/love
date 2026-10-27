@@ -774,7 +774,7 @@ export function bible_glyph_chapter_exo18() {
           "$hands_giving",
           "them",
           "as",
-          "heads",
+          "$person_gesturing_ok",
           "over",
           "the",
           "$family,",
