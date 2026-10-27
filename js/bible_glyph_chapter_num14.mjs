@@ -838,7 +838,7 @@ export function bible_glyph_chapter_num14() {
           "How",
           "long",
           "will",
-          "this",
+          "$flashlight",
           "$thumbs_down",
           "$witness+crowd",
           "grumble",
