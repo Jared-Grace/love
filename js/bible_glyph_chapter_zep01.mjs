@@ -256,7 +256,7 @@ export function bible_glyph_chapter_zep01() {
           "of",
           "the",
           "$i_am",
-          "sacrifice",
+          "$sacrifice",
           "I",
           "will",
           "punish",
