@@ -639,7 +639,7 @@ export function bible_glyph_chapter_exo36() {
           "He",
           "$hammer+doing",
           "$two+zero",
-          "frames",
+          "$skateboard",
           "for",
           "the",
           "south",
