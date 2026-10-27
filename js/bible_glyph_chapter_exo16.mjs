@@ -500,7 +500,7 @@ export function bible_glyph_chapter_exo16() {
           "What",
           "is",
           "it?",
-          "For",
+          "$pointing",
           "they",
           "did",
           "$no_entry",
