@@ -110,7 +110,7 @@ export function bible_glyph_chapter_psa034() {
           "to",
           "Him",
           "are",
-          "radiant",
+          "$sparkles+face+doing",
           "with",
           "joy;",
           "their",
