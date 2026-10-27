@@ -636,7 +636,7 @@ export function bible_glyph_chapter_hab02() {
           "the",
           "$earth",
           "be",
-          "silent",
+          "$shushing_face+crowd+doing",
           "before",
           "Him.",
         ],
