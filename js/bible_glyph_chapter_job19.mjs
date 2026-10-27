@@ -194,7 +194,7 @@ export function bible_glyph_chapter_job19() {
         words: [
           "His",
           "anger",
-          "burns",
+          "$angry_face+doing",
           "against",
           "me,",
           "and",
