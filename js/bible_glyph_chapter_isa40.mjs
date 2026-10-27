@@ -546,7 +546,7 @@ export function bible_glyph_chapter_isa40() {
           "fits",
           "with",
           "silver",
-          "chains?",
+          "$chains+link?",
         ],
       },
       {
