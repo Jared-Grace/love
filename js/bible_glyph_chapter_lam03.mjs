@@ -382,7 +382,7 @@ export function bible_glyph_chapter_lam03() {
           "therefore",
           "I",
           "have",
-          "hope:",
+          "$hourglass+crossed_fingers:",
         ],
       },
       {
