@@ -48,7 +48,7 @@ export function bible_glyph_chapter_jdg06() {
           "$hand",
           "of",
           "$proper_name$Midian",
-          "prevailed",
+          "$flexed_biceps+up_arrow+doing",
           "against",
           "$wrestling+heart_on_fire.",
           "Because",
