@@ -138,7 +138,7 @@ export function bible_glyph_chapter_mic02() {
           "has",
           "changed",
           "the",
-          "portion",
+          "$pizza",
           "of",
           "my",
           "$family.",
