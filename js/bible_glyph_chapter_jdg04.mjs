@@ -744,7 +744,7 @@ export function bible_glyph_chapter_jdg04() {
           "peg",
           "through",
           "his",
-          "temple.",
+          "$face+ear+round_pushpin.",
         ],
       },
       {
