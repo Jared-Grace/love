@@ -666,7 +666,7 @@ export function bible_glyph_chapter_exo22() {
           "any",
           "$widow",
           "or",
-          "orphan.",
+          "$child+father+no_entry.",
         ],
       },
       {
