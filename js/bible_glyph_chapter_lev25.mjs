@@ -1352,7 +1352,7 @@ export function bible_glyph_chapter_lev25() {
           "living",
           "among",
           "you",
-          "who",
+          "$back+flashlight",
           "are",
           "born",
           "in",
