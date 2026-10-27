@@ -93,7 +93,7 @@ export function bible_glyph_chapter_1ki21() {
           "its",
           "value",
           "in",
-          "silver.",
+          "$silver.",
         ],
       },
       {
