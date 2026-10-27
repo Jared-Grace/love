@@ -970,7 +970,7 @@ export function bible_glyph_chapter_exo09() {
           "ripe",
           "and",
           "the",
-          "flax",
+          "$herb+thread",
           "was",
           "in",
           "bloom.",
