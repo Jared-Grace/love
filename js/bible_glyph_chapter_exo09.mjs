@@ -664,7 +664,7 @@ export function bible_glyph_chapter_exo09() {
           "$sky,",
           "so",
           "that",
-          "hail",
+          "$ice",
           "may",
           "fall",
           "on",
