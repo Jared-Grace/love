@@ -242,7 +242,7 @@ export function bible_glyph_chapter_pro01() {
           "manner",
           "of",
           "precious",
-          "goods;",
+          "$money_bag+more;",
           "we",
           "will",
           "fill",
