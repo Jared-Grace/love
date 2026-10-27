@@ -2250,7 +2250,7 @@ export function bible_glyph_chapter_1ki08() {
           "too",
           "$pinching_hand",
           "to",
-          "contain",
+          "$package+hand+doing",
           "all",
           "these",
           "offerings.",
