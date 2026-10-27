@@ -159,7 +159,7 @@ export function bible_glyph_chapter_num11() {
         verse_number: 6,
         words: [
           "But",
-          "now",
+          "$watch",
           "our",
           "appetite",
           "is",
