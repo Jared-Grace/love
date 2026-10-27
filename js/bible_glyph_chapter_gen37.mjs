@@ -95,7 +95,7 @@ export function bible_glyph_chapter_gen37() {
           "him",
           "in",
           "his",
-          "old",
+          "$old_man+thing",
           "age;",
           "so",
           "he",
