@@ -793,7 +793,7 @@ export function bible_glyph_chapter_gen49() {
           "$proper_name$Sarah",
           "are",
           "buried.",
-          "There",
+          "$telescope",
           "$laughing+proper_name",
           "and",
           "his",
