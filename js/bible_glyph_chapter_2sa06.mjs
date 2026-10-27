@@ -432,7 +432,7 @@ export function bible_glyph_chapter_2sa06() {
         words: [
           "And",
           "David",
-          "danced",
+          "$man_dancing+clockwise_arrows+doing",
           "with",
           "all",
           "his",
