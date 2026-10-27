@@ -431,7 +431,7 @@ export function bible_glyph_chapter_exo24() {
           "here",
           "for",
           "us",
-          "until",
+          "$finish",
           "we",
           "$turn_back",
           "to",
