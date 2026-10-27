@@ -790,7 +790,7 @@ export function bible_glyph_chapter_1ki21() {
           "$son",
           "of",
           "$proper_name$Ahijah,",
-          "because",
+          "$toward",
           "you",
           "have",
           "provoked",
