@@ -1006,7 +1006,7 @@ export function bible_glyph_chapter_jer31() {
       {
         verse_number: 31,
         words: [
-          "Behold,",
+          "$exclamation,",
           "the",
           "$sun",
           "are",
