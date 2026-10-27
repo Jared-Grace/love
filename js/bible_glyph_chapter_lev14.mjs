@@ -196,7 +196,7 @@ export function bible_glyph_chapter_lev14() {
           "release",
           "the",
           "$sprout",
-          "bird",
+          "$bird+pinching_hand",
           "into",
           "the",
           "open",
