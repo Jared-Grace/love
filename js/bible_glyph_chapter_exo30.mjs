@@ -409,7 +409,7 @@ export function bible_glyph_chapter_exo30() {
           "more",
           "and",
           "the",
-          "poor",
+          "$pinching_hand+person",
           "shall",
           "$no_entry",
           "give",
