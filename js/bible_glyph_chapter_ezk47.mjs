@@ -616,7 +616,7 @@ export function bible_glyph_chapter_ezk47() {
           "east",
           "side",
           "the",
-          "border",
+          "$passport_control",
           "will",
           "run",
           "between",
