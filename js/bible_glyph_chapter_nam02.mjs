@@ -287,7 +287,7 @@ export function bible_glyph_chapter_nam02() {
           "is",
           "the",
           "lions",
-          "lair,",
+          "$house+bed,",
           "or",
           "the",
           "feeding",
