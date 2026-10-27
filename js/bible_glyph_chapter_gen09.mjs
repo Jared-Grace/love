@@ -343,7 +343,7 @@ export function bible_glyph_chapter_gen09() {
           "and",
           "you",
           "and",
-          "every",
+          "$all",
           "$person_other",
           "that",
           "$sprout",
