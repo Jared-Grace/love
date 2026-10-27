@@ -17,7 +17,7 @@ export function bible_glyph_chapter_deu08() {
           "must",
           "carefully",
           "$hammer+doing",
-          "every",
+          "$all",
           "$scroll",
           "I",
           "am",
