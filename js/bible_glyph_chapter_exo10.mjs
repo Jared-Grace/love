@@ -573,7 +573,7 @@ export function bible_glyph_chapter_exo10() {
           "$takeout_box+doing",
           "behind.",
           "$no_entry",
-          "green",
+          "$leaf+describing",
           "was",
           "$takeout_box+doing",
           "on",
