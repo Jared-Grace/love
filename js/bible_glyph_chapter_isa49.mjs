@@ -886,7 +886,7 @@ export function bible_glyph_chapter_isa49() {
           "with",
           "you,",
           "and",
-          "I",
+          "$me",
           "will",
           "save",
           "your",
