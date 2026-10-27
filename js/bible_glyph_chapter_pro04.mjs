@@ -37,7 +37,7 @@ export function bible_glyph_chapter_pro04() {
           "$hands_giving",
           "you",
           "$thumbs_up",
-          "teaching;",
+          "$hand_receiving+open_book;",
           "$no_entry",
           "abandon",
           "my",
