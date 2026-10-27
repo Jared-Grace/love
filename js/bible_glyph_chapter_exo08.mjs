@@ -517,7 +517,7 @@ export function bible_glyph_chapter_exo08() {
           "the",
           "$earth,",
           "and",
-          "gnats",
+          "$mosquito",
           "came",
           "upon",
           "$person",
