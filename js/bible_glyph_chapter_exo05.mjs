@@ -489,7 +489,7 @@ export function bible_glyph_chapter_exo05() {
           "$speech,",
           "$hammer+doing",
           "$white_circle+brick.",
-          "Look,",
+          "$exclamation,",
           "your",
           "$kneeling",
           "are",
