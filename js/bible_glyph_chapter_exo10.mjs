@@ -190,7 +190,7 @@ export function bible_glyph_chapter_exo10() {
           "$puzzle_piece+doing",
           "$tray_out",
           "the",
-          "hail,",
+          "$ice,",
           "and",
           "eat",
           "every",
