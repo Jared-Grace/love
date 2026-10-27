@@ -959,7 +959,7 @@ export function bible_glyph_chapter_2ch34() {
           "$right_arrow+toward",
           "they",
           "might",
-          "provoke",
+          "$face_steam+right_anger_bubble",
           "Me",
           "to",
           "anger",
