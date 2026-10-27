@@ -73,7 +73,7 @@ export function bible_glyph_chapter_hos02() {
           "will",
           "$garment+tray_out+doing",
           "her",
-          "naked",
+          "$garment+no_entry+describing",
           "and",
           "expose",
           "her",
