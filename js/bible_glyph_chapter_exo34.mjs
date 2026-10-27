@@ -1123,7 +1123,7 @@ export function bible_glyph_chapter_exo34() {
           "$eye",
           "that",
           "the",
-          "face",
+          "$face",
           "of",
           "$fishing_pole+proper_name",
           "was",
