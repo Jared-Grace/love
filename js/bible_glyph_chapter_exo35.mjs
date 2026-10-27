@@ -891,7 +891,7 @@ export function bible_glyph_chapter_exo35() {
           "$tools,",
           "as",
           "engravers,",
-          "designers,",
+          "$thinking+doing,",
           "embroiderers",
           "in",
           "blue,",
