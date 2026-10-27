@@ -559,7 +559,7 @@ export function bible_glyph_chapter_num08() {
           "$son",
           "of",
           "Israel",
-          "approach",
+          "$walking+toward",
           "the",
           "$sparkle+thing",
           "sanctuary.",
