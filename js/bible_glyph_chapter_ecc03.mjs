@@ -64,7 +64,7 @@ export function bible_glyph_chapter_ecc03() {
           "a",
           "$clock",
           "to",
-          "heal,",
+          "$bandage,",
           "a",
           "$clock",
           "to",
