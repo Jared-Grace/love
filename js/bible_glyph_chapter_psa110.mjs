@@ -130,7 +130,7 @@ export function bible_glyph_chapter_psa110() {
           "hand;",
           "He",
           "will",
-          "crush",
+          "$axe+collision+doing",
           "$king",
           "in",
           "the",
