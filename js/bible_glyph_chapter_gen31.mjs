@@ -868,7 +868,7 @@ export function bible_glyph_chapter_gen31() {
           "$hand+foot",
           "$no_entry",
           "$lightbulb",
-          "that",
+          "$pointing",
           "$proper_name$Rachel",
           "had",
           "stolen",
