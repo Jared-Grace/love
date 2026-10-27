@@ -1262,7 +1262,7 @@ export function bible_glyph_chapter_num22() {
         verse_number: 39,
         words: [
           "So",
-          "Balaam",
+          "$foreigner+proper_name",
           "$walking",
           "$proper_name$Balak,",
           "and",
