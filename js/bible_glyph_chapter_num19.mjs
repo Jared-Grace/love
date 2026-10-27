@@ -450,7 +450,7 @@ export function bible_glyph_chapter_num19() {
           "his",
           "uncleanness",
           "is",
-          "still",
+          "$repeat",
           "on",
           "him.",
         ],
