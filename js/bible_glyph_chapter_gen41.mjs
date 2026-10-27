@@ -1569,7 +1569,7 @@ export function bible_glyph_chapter_gen41() {
           "had",
           "spread",
           "$pointing_up",
-          "all",
+          "$all",
           "the",
           "$earth,",
           "$i_am+plus",
