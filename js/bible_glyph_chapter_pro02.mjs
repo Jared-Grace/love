@@ -215,7 +215,7 @@ export function bible_glyph_chapter_pro02() {
         verse_number: 12,
         words: [
           "to",
-          "deliver",
+          "$hand+rescue",
           "you",
           "from",
           "the",
