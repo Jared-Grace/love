@@ -636,7 +636,7 @@ export function bible_glyph_chapter_exo21() {
           "of",
           "the",
           "$woman",
-          "demands",
+          "$palm_down+round_pushpin+doing",
           "and",
           "as",
           "the",
