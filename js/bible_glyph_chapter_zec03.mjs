@@ -89,7 +89,7 @@ export function bible_glyph_chapter_zec03() {
           "as",
           "he",
           "stood",
-          "before",
+          "$face",
           "the",
           "$angel.",
         ],
