@@ -930,7 +930,7 @@ export function bible_glyph_chapter_deu11() {
           "by",
           "$walking",
           "after",
-          "other",
+          "$plus+one",
           "$moai",
           "which",
           "you",
