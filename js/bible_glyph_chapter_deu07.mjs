@@ -306,7 +306,7 @@ export function bible_glyph_chapter_deu07() {
         words: [
           "$lightbulb",
           "therefore",
-          "that",
+          "$pointing",
           "$i_am",
           "your",
           "$heart_on_fire",
