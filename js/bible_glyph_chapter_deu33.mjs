@@ -815,7 +815,7 @@ export function bible_glyph_chapter_deu33() {
           "you",
           "and",
           "$speech,",
-          "Destroy",
+          "$bomb",
           "him.",
         ],
       },
