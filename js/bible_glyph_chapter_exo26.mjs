@@ -631,7 +631,7 @@ export function bible_glyph_chapter_exo26() {
           "of",
           "$tree+thorns",
           "$tree,",
-          "five",
+          "$five",
           "for",
           "the",
           "frames",
