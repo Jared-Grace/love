@@ -567,7 +567,7 @@ export function bible_glyph_chapter_deu16() {
           "$drum",
           "a",
           "$year",
-          "all",
+          "$all",
           "your",
           "men",
           "are",
