@@ -843,7 +843,7 @@ export function bible_glyph_chapter_2sa11() {
           "in",
           "your",
           "$eyes,",
-          "for",
+          "$pointing",
           "the",
           "$sword",
           "$eating",
