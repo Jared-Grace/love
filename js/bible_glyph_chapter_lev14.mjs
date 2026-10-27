@@ -390,7 +390,7 @@ export function bible_glyph_chapter_lev14() {
           "male",
           "$lamb",
           "and",
-          "present",
+          "$magnet+doing",
           "it",
           "as",
           "a",
