@@ -1714,7 +1714,7 @@ export function bible_glyph_chapter_deu04() {
           "including",
           "all",
           "the",
-          "Arabah",
+          "$desert+proper_name",
           "on",
           "the",
           "$east",
