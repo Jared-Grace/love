@@ -82,7 +82,7 @@ export function bible_glyph_chapter_gen16() {
           "$proper_name$Abram",
           "had",
           "lived",
-          "ten",
+          "$ten",
           "$year",
           "in",
           "the",
