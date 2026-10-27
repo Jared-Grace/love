@@ -98,7 +98,7 @@ export function bible_glyph_chapter_2ki09() {
           "$amphora+droplet",
           "of",
           "$lotion_bottle,",
-          "pour",
+          "$pouring_liquid+fire",
           "it",
           "on",
           "his",
