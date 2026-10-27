@@ -111,7 +111,7 @@ export function bible_glyph_chapter_gen40() {
           "these",
           "$man_beard,",
           "the",
-          "cupbearer",
+          "$cup+hands_giving+doer",
           "and",
           "the",
           "baker",
