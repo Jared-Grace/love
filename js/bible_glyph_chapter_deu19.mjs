@@ -61,7 +61,7 @@ export function bible_glyph_chapter_deu19() {
           "$radio_button",
           "the",
           "$earth",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "your",
