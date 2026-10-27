@@ -1111,7 +1111,7 @@ export function bible_glyph_chapter_lev26() {
           "the",
           "$sword,",
           "and",
-          "fall",
+          "$person+pointing_down",
           "when",
           "no",
           "one",
