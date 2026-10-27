@@ -100,7 +100,7 @@ export function bible_glyph_chapter_num23() {
           "to",
           "a",
           "barren",
-          "height.",
+          "$mountain+razor.",
         ],
       },
       {
