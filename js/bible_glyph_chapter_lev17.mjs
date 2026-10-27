@@ -566,7 +566,7 @@ export function bible_glyph_chapter_lev17() {
           "he",
           "will",
           "be",
-          "unclean",
+          "$soap+no_entry",
           "until",
           "evening;",
           "then",
