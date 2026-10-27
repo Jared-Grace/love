@@ -38,7 +38,7 @@ export function bible_glyph_chapter_jdg07() {
           "of",
           "$proper_name$Midian",
           "$link",
-          "north",
+          "$compass+up_arrow",
           "of",
           "them,",
           "near",
