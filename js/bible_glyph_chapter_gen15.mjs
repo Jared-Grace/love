@@ -384,7 +384,7 @@ export function bible_glyph_chapter_gen15() {
           "But",
           "I",
           "will",
-          "judge",
+          "$scales+speech+doing",
           "the",
           "$map",
           "they",
