@@ -66,7 +66,7 @@ export function bible_glyph_chapter_ecc03() {
           "to",
           "heal,",
           "a",
-          "time",
+          "$clock",
           "to",
           "break",
           "down",
