@@ -107,7 +107,7 @@ export function bible_glyph_chapter_num25() {
           "that",
           "the",
           "$angry_face+thing",
-          "anger",
+          "$nose+fire",
           "of",
           "$i_am",
           "may",
