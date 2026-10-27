@@ -760,7 +760,7 @@ export function bible_glyph_chapter_jer17() {
         verse_number: 24,
         words: [
           "If",
-          "however",
+          "$link",
           "you",
           "$ear",
           "carefully",
