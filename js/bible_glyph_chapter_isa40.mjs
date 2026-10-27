@@ -657,7 +657,7 @@ export function bible_glyph_chapter_isa40() {
           "the",
           "princes",
           "to",
-          "nothing",
+          "$dotted_line_face",
           "and",
           "$hammer+doing",
           "the",
