@@ -398,7 +398,7 @@ export function bible_glyph_chapter_gen18() {
           "when",
           "I",
           "am",
-          "old?",
+          "$old_man+doing?",
         ],
       },
       {
