@@ -573,7 +573,7 @@ export function bible_glyph_chapter_zec08() {
           "$pointing",
           "I",
           "hate",
-          "all",
+          "$all",
           "these",
           "things,",
           "declares",
