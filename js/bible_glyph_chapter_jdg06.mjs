@@ -292,7 +292,7 @@ export function bible_glyph_chapter_jdg06() {
           "You",
           "must",
           "$no_entry",
-          "fear",
+          "$fear+doing",
           "the",
           "$moai",
           "of",
