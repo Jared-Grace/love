@@ -198,7 +198,7 @@ export function bible_glyph_chapter_deu14() {
           "$cow_face+foot.",
           "They",
           "are",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "you,",
         ],
