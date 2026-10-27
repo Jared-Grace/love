@@ -379,7 +379,7 @@ export function bible_glyph_chapter_deu04() {
           "to",
           "$fear+doing",
           "Me",
-          "all",
+          "$all",
           "the",
           "$sun",
           "they",
