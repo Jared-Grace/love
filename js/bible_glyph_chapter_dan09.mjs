@@ -726,7 +726,7 @@ export function bible_glyph_chapter_dan09() {
           "presenting",
           "my",
           "petition",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "my",
