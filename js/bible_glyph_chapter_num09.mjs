@@ -53,7 +53,7 @@ export function bible_glyph_chapter_num09() {
           "Israel",
           "$hammer+doing",
           "the",
-          "Passover",
+          "$lamb+door",
           "at",
           "its",
           "appointed",
