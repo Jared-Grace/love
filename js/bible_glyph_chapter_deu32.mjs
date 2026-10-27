@@ -874,7 +874,7 @@ export function bible_glyph_chapter_deu32() {
           "is",
           "from",
           "the",
-          "vine",
+          "$vine",
           "of",
           "$proper_name$Sodom",
           "and",
