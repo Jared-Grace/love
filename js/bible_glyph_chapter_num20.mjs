@@ -189,7 +189,7 @@ export function bible_glyph_chapter_num20() {
       },
       {
         verse_number: 7,
-        words: ["And", "the", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,"],
+        words: ["And", "the", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 8,
