@@ -403,7 +403,7 @@ export function bible_glyph_chapter_deu08() {
           "increase",
           "and",
           "all",
-          "that",
+          "$back+flashlight",
           "you",
           "have",
           "is",
