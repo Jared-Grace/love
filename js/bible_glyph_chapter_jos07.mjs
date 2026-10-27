@@ -332,7 +332,7 @@ export function bible_glyph_chapter_jos07() {
           "has",
           "turned",
           "its",
-          "back",
+          "$back+scarf",
           "and",
           "run",
           "from",
