@@ -500,7 +500,7 @@ export function bible_glyph_chapter_jdg07() {
           "into",
           "the",
           "$proper_name$Midianite",
-          "camp.",
+          "$camp.",
           "It",
           "$footprints",
           "to",
