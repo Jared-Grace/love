@@ -373,7 +373,7 @@ export function bible_glyph_chapter_jer01() {
           "us",
           "from",
           "the",
-          "north.",
+          "$compass+up_arrow.",
         ],
       },
       {
