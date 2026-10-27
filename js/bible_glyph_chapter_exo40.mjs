@@ -905,7 +905,7 @@ export function bible_glyph_chapter_exo40() {
       {
         verse_number: 38,
         words: [
-          "For",
+          "$pointing",
           "the",
           "cloud",
           "of",
