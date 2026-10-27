@@ -298,7 +298,7 @@ export function bible_glyph_chapter_jos02() {
           "us,",
           "so",
           "that",
-          "all",
+          "$all",
           "who",
           "$person+house",
           "in",
