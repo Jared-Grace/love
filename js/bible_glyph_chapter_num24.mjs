@@ -658,7 +658,7 @@ export function bible_glyph_chapter_num24() {
           "$proper_name$Asshur",
           "takes",
           "you",
-          "captive.",
+          "$chains+person+doing.",
         ],
       },
       {
