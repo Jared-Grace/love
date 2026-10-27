@@ -561,7 +561,7 @@ export function bible_glyph_chapter_gen37() {
           "$throwing",
           "him",
           "into",
-          "one",
+          "$one",
           "of",
           "the",
           "pits.",
