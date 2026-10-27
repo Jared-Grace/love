@@ -197,7 +197,7 @@ export function bible_glyph_chapter_exo34() {
           "$straight_ruler+clock+describing",
           "to",
           "$nose+fire,",
-          "abounding",
+          "$multiply",
           "in",
           "$gift",
           "and",
