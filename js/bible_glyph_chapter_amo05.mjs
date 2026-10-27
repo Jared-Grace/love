@@ -155,7 +155,7 @@ export function bible_glyph_chapter_amo05() {
       {
         verse_number: 6,
         words: [
-          "Seek",
+          "$magnifying_glass+question",
           "the",
           "$i_am",
           "and",
