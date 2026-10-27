@@ -164,7 +164,7 @@ export function bible_glyph_chapter_1sa07() {
           "Then",
           "$ear+heart_on_fire",
           "$speech,",
-          "Gather",
+          "$tray_in+doing",
           "all",
           "$wrestling+heart_on_fire",
           "to",
