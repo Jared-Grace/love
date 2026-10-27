@@ -1122,7 +1122,7 @@ export function bible_glyph_chapter_deu04() {
           "you",
           "or",
           "$no_entry",
-          "forget",
+          "$reminder_ribbon+no_entry",
           "the",
           "$covenant",
           "with",
