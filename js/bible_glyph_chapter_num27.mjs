@@ -81,7 +81,7 @@ export function bible_glyph_chapter_num27() {
           "the",
           "$tent",
           "of",
-          "Meeting,",
+          "$alarm_clock,",
           "and",
           "$speech:",
         ],
