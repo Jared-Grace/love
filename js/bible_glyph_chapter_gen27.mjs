@@ -1147,7 +1147,7 @@ export function bible_glyph_chapter_gen27() {
           "$laughing+proper_name",
           "$speech",
           "him,",
-          '"Behold,',
+          '"$exclamation,',
           "your",
           "dwelling",
           "place",
