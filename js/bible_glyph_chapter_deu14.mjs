@@ -216,7 +216,7 @@ export function bible_glyph_chapter_deu14() {
           "has",
           "a",
           "divided",
-          "hoof,",
+          "$cow_face+foot,",
           "it",
           "does",
           "$no_entry",
