@@ -83,7 +83,7 @@ export function bible_glyph_chapter_1sa20() {
           "$luggage+chains+doing",
           "me.",
           "So",
-          "why",
+          "$flashlight+question+lightbulb",
           "would",
           "my",
           "$father",
