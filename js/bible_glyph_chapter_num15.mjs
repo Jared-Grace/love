@@ -491,7 +491,7 @@ export function bible_glyph_chapter_num15() {
           "$earth",
           "to",
           "which",
-          "I",
+          "$me",
           "am",
           "$footprints",
           "you,",
