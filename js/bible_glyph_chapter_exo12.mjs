@@ -271,7 +271,7 @@ export function bible_glyph_chapter_exo12() {
           "$morning;",
           "before",
           "the",
-          "morning",
+          "$morning",
           "you",
           "must",
           "burn",
