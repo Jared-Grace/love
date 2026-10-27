@@ -42,7 +42,7 @@ export function bible_glyph_chapter_psa130() {
           "Your",
           "ears",
           "$link",
-          "attentive",
+          "$ear_with_hearing_aid+describing",
           "to",
           "the",
           "$voice",
