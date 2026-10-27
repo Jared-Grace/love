@@ -655,7 +655,7 @@ export function bible_glyph_chapter_exo23() {
       {
         verse_number: 23,
         words: [
-          "For",
+          "$pointing",
           "My",
           "$angel",
           "will",
