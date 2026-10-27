@@ -789,7 +789,7 @@ export function bible_glyph_chapter_deu32() {
           "$map",
           "$wilted_flower",
           "of",
-          "counsel,",
+          "$person_tipping_hand,",
           "with",
           "no",
           "understanding",
