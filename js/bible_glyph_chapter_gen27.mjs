@@ -405,7 +405,7 @@ export function bible_glyph_chapter_gen27() {
           "$son",
           "$proper_name$Esau",
           "$back+flashlight",
-          "belonged",
+          "$safety_pin",
           "in",
           "the",
           "$house,",
