@@ -136,7 +136,7 @@ export function bible_glyph_chapter_exo27() {
           "the",
           "$net",
           "$link",
-          "halfway",
+          "$divide",
           "$finish",
           "the",
           "$altar.",
