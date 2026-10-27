@@ -480,7 +480,7 @@ export function bible_glyph_chapter_exo31() {
           "him",
           "the",
           "$two",
-          "tablets",
+          "$stone+writing_hand",
           "of",
           "the",
           "$witness+thing,",
