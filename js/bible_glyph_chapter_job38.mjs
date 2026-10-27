@@ -594,7 +594,7 @@ export function bible_glyph_chapter_job38() {
           "surface",
           "of",
           "the",
-          "deep",
+          "$sea+down_arrow",
           "is",
           "frozen?",
         ],
