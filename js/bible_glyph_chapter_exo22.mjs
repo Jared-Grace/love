@@ -530,7 +530,7 @@ export function bible_glyph_chapter_exo22() {
           "$man_beard",
           "$fishing_pole+doing",
           "a",
-          "virgin",
+          "$girl+white_flower",
           "who",
           "is",
           "$no_entry",
