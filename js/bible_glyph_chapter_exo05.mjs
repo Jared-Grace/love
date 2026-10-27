@@ -192,7 +192,7 @@ export function bible_glyph_chapter_exo05() {
           "same",
           "$sun",
           "$house+proper_name",
-          "commanded",
+          "$speech+scroll",
           "the",
           "taskmasters",
           "of",
