@@ -338,7 +338,7 @@ export function bible_glyph_chapter_psa051() {
           "will",
           "$newspaper",
           "Your",
-          "praise.",
+          "$clapping_hands+thing.",
         ],
       },
       {
