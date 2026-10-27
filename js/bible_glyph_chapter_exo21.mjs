@@ -546,7 +546,7 @@ export function bible_glyph_chapter_exo21() {
       {
         verse_number: 20,
         words: [
-          "If",
+          "$pointing",
           "a",
           "$man_beard",
           "$fist",
