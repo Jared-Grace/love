@@ -141,7 +141,7 @@ export function bible_glyph_chapter_exo32() {
           "And",
           "they",
           "$speech,",
-          "These",
+          "$flashlight+flashlight",
           "are",
           "your",
           "$moai,",
