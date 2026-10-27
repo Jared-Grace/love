@@ -555,7 +555,7 @@ export function bible_glyph_chapter_2sa06() {
           "and",
           "peace",
           "offerings",
-          "before",
+          "$face",
           "the",
           "$i_am.",
         ],
