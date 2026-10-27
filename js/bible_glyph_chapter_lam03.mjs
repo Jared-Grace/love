@@ -839,7 +839,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 48,
         words: [
-          "Streams",
+          "$divide+water",
           "of",
           "$water",
           "flow",
