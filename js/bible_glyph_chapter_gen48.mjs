@@ -29,7 +29,7 @@ export function bible_glyph_chapter_gen48() {
           "he",
           "$hand_receiving",
           "his",
-          "two",
+          "$two",
           "$son",
           "with",
           "him,",
