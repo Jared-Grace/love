@@ -207,7 +207,7 @@ export function bible_glyph_chapter_isa40() {
           "the",
           "$family",
           "are",
-          "grass.",
+          "$herb+thing.",
         ],
       },
       {
