@@ -796,7 +796,7 @@ export function bible_glyph_chapter_gen44() {
           "gone,",
           "I",
           "$speech,",
-          "Surely",
+          "$check+exclamation",
           "he",
           "has",
           "been",
