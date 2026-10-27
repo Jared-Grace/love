@@ -907,7 +907,7 @@ export function bible_glyph_chapter_lev13() {
           "$traffic_light",
           "it",
           "has",
-          "spread",
+          "$microbe+arrow_both_ways+doing",
           "further",
           "on",
           "the",
