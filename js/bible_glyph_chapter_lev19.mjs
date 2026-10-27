@@ -266,7 +266,7 @@ export function bible_glyph_chapter_lev19() {
           "You",
           "must",
           "$no_entry",
-          "lie",
+          "$lying_face+doing",
           "or",
           "deceive",
           "one",
