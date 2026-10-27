@@ -185,7 +185,7 @@ export function bible_glyph_chapter_ezr03() {
           "as",
           "all",
           "the",
-          "freewill",
+          "$heart_red+gift",
           "offerings",
           "$heart_hands+doing",
           "to",
