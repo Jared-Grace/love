@@ -1339,7 +1339,7 @@ export function bible_glyph_chapter_1ki01() {
           "he",
           "was",
           "$mouth,",
-          "suddenly",
+          "$exclamation",
           "$proper_name$Jonathan",
           "the",
           "$son",
