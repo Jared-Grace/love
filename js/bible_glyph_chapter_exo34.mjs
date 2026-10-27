@@ -157,7 +157,7 @@ export function bible_glyph_chapter_exo34() {
           "$walking+pointing_down",
           "in",
           "a",
-          "cloud",
+          "$cloud",
           "and",
           "stood",
           "with",
