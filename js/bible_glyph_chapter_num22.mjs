@@ -1251,7 +1251,7 @@ export function bible_glyph_chapter_num22() {
           "$palm_down",
           "in",
           "my",
-          "mouth,",
+          "$face_with_open_mouth,",
           "that",
           "I",
           "must",
