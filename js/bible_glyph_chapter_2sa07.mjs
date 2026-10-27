@@ -368,7 +368,7 @@ export function bible_glyph_chapter_2sa07() {
           "will",
           "give",
           "you",
-          "rest",
+          "$seat+doing",
           "from",
           "all",
           "your",
