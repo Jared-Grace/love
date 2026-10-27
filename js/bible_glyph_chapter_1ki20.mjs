@@ -819,7 +819,7 @@ export function bible_glyph_chapter_1ki20() {
         verse_number: 24,
         words: [
           "And",
-          "this",
+          "$flashlight",
           "$speech",
           "$hammer+doing.",
           "Dismiss",
