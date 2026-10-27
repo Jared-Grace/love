@@ -126,7 +126,7 @@ export function bible_glyph_chapter_exo26() {
           "loops",
           "on",
           "one",
-          "curtain,",
+          "$thread+tent,",
           "and",
           "$hammer+doing",
           "$five+zero",
