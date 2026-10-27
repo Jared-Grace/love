@@ -649,7 +649,7 @@ export function bible_glyph_chapter_exo40() {
           "$palm_down",
           "up",
           "the",
-          "curtain",
+          "$umbrella+door",
           "at",
           "the",
           "entrance",
