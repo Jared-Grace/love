@@ -113,7 +113,7 @@ export function bible_glyph_chapter_num06() {
           "the",
           "seeds",
           "or",
-          "skins.",
+          "$grapes+coat.",
         ],
       },
       {
