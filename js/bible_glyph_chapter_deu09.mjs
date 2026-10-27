@@ -296,7 +296,7 @@ export function bible_glyph_chapter_deu09() {
           "you",
           "have",
           "been",
-          "rebelling",
+          "$raised_fist+up_arrow+doing",
           "against",
           "$i_am.",
         ],
