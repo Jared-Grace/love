@@ -422,7 +422,7 @@ export function bible_glyph_chapter_isa56() {
           "strong",
           "drink,",
           "and",
-          "tomorrow",
+          "$sun+next_track",
           "will",
           "be",
           "like",
