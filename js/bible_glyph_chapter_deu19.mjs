@@ -387,7 +387,7 @@ export function bible_glyph_chapter_deu19() {
           "and",
           "then",
           "flees",
-          "to",
+          "$toward",
           "one",
           "of",
           "these",
