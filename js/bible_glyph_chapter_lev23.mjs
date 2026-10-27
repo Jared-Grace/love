@@ -351,7 +351,7 @@ export function bible_glyph_chapter_lev23() {
           "$i_am,",
           "a",
           "pleasing",
-          "aroma,",
+          "$nose,",
           "and",
           "its",
           "drink",
