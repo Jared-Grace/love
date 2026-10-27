@@ -270,7 +270,7 @@ export function bible_glyph_chapter_isa64() {
           "O",
           "$i_am,",
           "$finish",
-          "measure;",
+          "$double_exclamation;",
           "do",
           "$no_entry",
           "remember",
