@@ -124,7 +124,7 @@ export function bible_glyph_chapter_psa027() {
           "my",
           "$sprout,",
           "to",
-          "gaze",
+          "$eye+doing",
           "on",
           "the",
           "beauty",
