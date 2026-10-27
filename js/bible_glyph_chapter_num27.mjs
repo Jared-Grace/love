@@ -433,7 +433,7 @@ export function bible_glyph_chapter_num27() {
           "of",
           "all",
           "$meat,",
-          "appoint",
+          "$clipboard+doing",
           "a",
           "$man_beard",
           "over",
