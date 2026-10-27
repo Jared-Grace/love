@@ -183,7 +183,7 @@ export function bible_glyph_chapter_job38() {
           "its",
           "boundaries",
           "and",
-          "set",
+          "$palm_down",
           "in",
           "place",
           "its",
