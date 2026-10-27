@@ -189,7 +189,7 @@ export function bible_glyph_chapter_lev08() {
           "diadem,",
           "on",
           "the",
-          "front",
+          "$vs_button",
           "of",
           "the",
           "$person_wearing_turban,",
