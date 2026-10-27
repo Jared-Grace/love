@@ -277,7 +277,7 @@ export function bible_glyph_chapter_lev16() {
         words: [
           "he",
           "shall",
-          "present",
+          "$magnet+doing",
           "the",
           "goat",
           "$walking+pointing_up",
