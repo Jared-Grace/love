@@ -772,7 +772,7 @@ export function bible_glyph_chapter_1sa15() {
           "wickedness",
           "of",
           "idolatry.",
-          "Because",
+          "$information",
           "you",
           "have",
           "rejected",
