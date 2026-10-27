@@ -297,7 +297,7 @@ export function bible_glyph_chapter_psa042() {
           "$speech",
           "to",
           "me",
-          "all",
+          "$all",
           "$sun",
           "long,",
           "Where",
