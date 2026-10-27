@@ -686,7 +686,7 @@ export function bible_glyph_chapter_ezk01() {
           "When",
           "they",
           "stood",
-          "still,",
+          "$person+round_pushpin,",
           "they",
           "lowered",
           "their",
