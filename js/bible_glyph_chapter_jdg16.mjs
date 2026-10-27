@@ -359,7 +359,7 @@ export function bible_glyph_chapter_jdg16() {
           "$mouth",
           "to",
           "me.",
-          "Now",
+          "$watch",
           "please",
           "tell",
           "me",
