@@ -1328,7 +1328,7 @@ export function bible_glyph_chapter_jer23() {
           "I",
           "will",
           "surely",
-          "forget",
+          "$reminder_ribbon+away+doing",
           "you",
           "and",
           "will",
