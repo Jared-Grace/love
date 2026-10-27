@@ -373,7 +373,7 @@ export function bible_glyph_chapter_gen15() {
           "$kneeling+doing",
           "and",
           "mistreated",
-          "four",
+          "$four",
           "hundred",
           "$year.",
         ],
