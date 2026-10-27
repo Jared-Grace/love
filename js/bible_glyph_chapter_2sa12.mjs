@@ -466,7 +466,7 @@ export function bible_glyph_chapter_2sa12() {
         verse_number: 14,
         words: [
           "$end_arrow+zero,",
-          "because",
+          "$pointing",
           "you",
           "have",
           "shown",
