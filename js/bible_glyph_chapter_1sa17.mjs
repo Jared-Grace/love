@@ -1573,7 +1573,7 @@ export function bible_glyph_chapter_1sa17() {
           "and",
           "a",
           "$stone;",
-          "without",
+          "$dotted_line_face",
           "a",
           "$sword",
           "in",
