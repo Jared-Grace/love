@@ -61,7 +61,7 @@ export function bible_glyph_chapter_gen27() {
           '"I',
           "am",
           "now",
-          "old,",
+          "$old_man+doing,",
           "and",
           "I",
           "do",
