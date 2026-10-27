@@ -358,7 +358,7 @@ export function bible_glyph_chapter_mic01() {
           "$no_entry",
           "$walking+tray_out",
           "out.",
-          "Beth-ezel",
+          "$house+children_crossing+proper_name",
           "is",
           "in",
           "mourning;",
