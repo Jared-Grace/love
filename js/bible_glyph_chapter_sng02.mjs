@@ -173,7 +173,7 @@ export function bible_glyph_chapter_sng02() {
         words: [
           "$voice!",
           "My",
-          "beloved",
+          "$two_hearts",
           "approaches.",
           "Look,",
           "here",
