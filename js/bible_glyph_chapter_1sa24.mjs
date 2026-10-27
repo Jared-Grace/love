@@ -42,7 +42,7 @@ export function bible_glyph_chapter_1sa24() {
           "Saul",
           "$hand_receiving",
           "$three",
-          "thousand",
+          "$ten+all",
           "chosen",
           "$man_beard",
           "from",
