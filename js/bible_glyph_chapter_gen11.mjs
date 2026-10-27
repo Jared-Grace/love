@@ -589,7 +589,7 @@ export function bible_glyph_chapter_gen11() {
         verse_number: 24,
         words: [
           "When",
-          "Nahor",
+          "$sleeping_face+proper_name",
           "had",
           "$sprout+doing",
           "twenty",
