@@ -582,7 +582,7 @@ export function bible_glyph_chapter_2ki04() {
           "My",
           "$person_gesturing_ok!",
           "My",
-          "head!",
+          "$person_gesturing_ok!",
           "he",
           "$speech",
           "$toward",
