@@ -324,7 +324,7 @@ export function bible_glyph_chapter_ezk47() {
           "the",
           "river",
           "$footprints,",
-          "everything",
+          "$all",
           "will",
           "$sprout+doing.",
         ],
