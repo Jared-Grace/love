@@ -291,7 +291,7 @@ export function bible_glyph_chapter_2ch20() {
           "$house.",
           "We",
           "will",
-          "cry",
+          "$loudspeaker+mouth",
           "out",
           "to",
           "You",
