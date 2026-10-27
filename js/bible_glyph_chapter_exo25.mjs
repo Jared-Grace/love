@@ -101,7 +101,7 @@ export function bible_glyph_chapter_exo25() {
           "for",
           "the",
           "$light+thing,",
-          "spices",
+          "$nose+herb",
           "for",
           "the",
           "anointing",
