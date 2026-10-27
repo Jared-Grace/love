@@ -492,7 +492,7 @@ export function bible_glyph_chapter_1sa07() {
           "delivered",
           "the",
           "surrounding",
-          "territory",
+          "$passport_control",
           "from",
           "the",
           "$hand",
