@@ -307,7 +307,7 @@ export function bible_glyph_chapter_gen15() {
           "of",
           "prey",
           "$walking+pointing_down",
-          "on",
+          "$pointing_up",
           "the",
           "carcasses,",
           "but",
