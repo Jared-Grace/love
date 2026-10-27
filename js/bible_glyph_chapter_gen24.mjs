@@ -944,7 +944,7 @@ export function bible_glyph_chapter_gen24() {
           "standing",
           "out",
           "here?",
-          "I",
+          "$me",
           "have",
           "prepared",
           "the",
