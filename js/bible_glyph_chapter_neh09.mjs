@@ -184,7 +184,7 @@ export function bible_glyph_chapter_neh09() {
           "$all",
           "blessing",
           "and",
-          "praise.",
+          "$clapping_hands+thing.",
         ],
       },
       {
