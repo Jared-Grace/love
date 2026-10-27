@@ -237,7 +237,7 @@ export function bible_glyph_chapter_isa53() {
           "$no_entry",
           "$unlocked",
           "His",
-          "mouth.",
+          "$face_with_open_mouth.",
         ],
       },
       {
