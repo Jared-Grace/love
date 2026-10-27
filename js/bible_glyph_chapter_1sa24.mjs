@@ -369,7 +369,7 @@ export function bible_glyph_chapter_1sa24() {
           "against",
           "my",
           "$crown,",
-          "since",
+          "$pointing",
           "he",
           "is",
           "the",
