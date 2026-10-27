@@ -114,7 +114,7 @@ export function bible_glyph_chapter_psa051() {
           "$ruler+doing",
           "when",
           "You",
-          "$mouth",
+          "$voice+doing",
           "and",
           "blameless",
           "when",
@@ -191,7 +191,7 @@ export function bible_glyph_chapter_psa051() {
         words: [
           "Let",
           "me",
-          "$ear",
+          "$ear+loudspeaker",
           "$grinning_face",
           "and",
           "gladness;",

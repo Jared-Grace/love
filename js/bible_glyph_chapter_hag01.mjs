@@ -369,7 +369,7 @@ export function bible_glyph_chapter_hag01() {
           "of",
           "the",
           "$family,",
-          "$ear",
+          "$ear+loudspeaker",
           "the",
           "$voice",
           "of",

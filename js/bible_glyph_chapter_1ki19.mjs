@@ -80,7 +80,7 @@ export function bible_glyph_chapter_1ki19() {
           "And",
           "Elijah",
           "was",
-          "$eye,",
+          "$eyes,",
           "and",
           "he",
           "$walking",
@@ -457,7 +457,7 @@ export function bible_glyph_chapter_1ki19() {
         words: [
           "When",
           "$heart_on_fire+i_am",
-          "$ear",
+          "$ear+loudspeaker",
           "it,",
           "he",
           "wrapped",

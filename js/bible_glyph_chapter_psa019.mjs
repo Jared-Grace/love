@@ -60,7 +60,7 @@ export function bible_glyph_chapter_psa019() {
           "$voice",
           "to",
           "be",
-          "$ear,",
+          "$ear+loudspeaker,",
         ],
       },
       {

@@ -410,7 +410,7 @@ export function bible_glyph_chapter_psa103() {
           "His",
           "$voice,",
           "who",
-          "$ear",
+          "$ear+loudspeaker",
           "to",
           "the",
           "$voice",

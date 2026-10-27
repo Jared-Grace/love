@@ -63,7 +63,7 @@ export function bible_glyph_chapter_isa35() {
           "$proper_name$Sharon.",
           "$pointing_back",
           "will",
-          "$eye",
+          "$eyes",
           "the",
           "$star",
           "of",

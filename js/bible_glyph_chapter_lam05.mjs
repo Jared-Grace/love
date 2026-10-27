@@ -23,7 +23,7 @@ export function bible_glyph_chapter_lam05() {
           "us.",
           "$face_with_monocle",
           "and",
-          "$eye",
+          "$eyes",
           "our",
           "disgrace!",
         ],

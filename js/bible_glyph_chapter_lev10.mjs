@@ -77,7 +77,7 @@ export function bible_glyph_chapter_lev10() {
           "is",
           "what",
           "$i_am",
-          "$mouth",
+          "$voice+doing",
           "$speech",
           "To",
           "those",
@@ -155,7 +155,7 @@ export function bible_glyph_chapter_lev10() {
           "$camp,",
           "as",
           "$fishing_pole+proper_name",
-          "$mouth.",
+          "$voice+doing.",
         ],
       },
       {
@@ -238,7 +238,7 @@ export function bible_glyph_chapter_lev10() {
       },
       {
         verse_number: 8,
-        words: ["Then", "$i_am", "$mouth", "$toward", "$proper_name$Aaron", "$speech."],
+        words: ["Then", "$i_am", "$voice+doing", "$toward", "$proper_name$Aaron", "$speech."],
       },
       {
         verse_number: 9,
@@ -307,7 +307,7 @@ export function bible_glyph_chapter_lev10() {
           "statutes",
           "that",
           "$i_am",
-          "$mouth",
+          "$voice+doing",
           "them",
           "$hand",
           "$fishing_pole+proper_name.",
@@ -318,7 +318,7 @@ export function bible_glyph_chapter_lev10() {
         words: [
           "And",
           "$fishing_pole+proper_name",
-          "$mouth",
+          "$voice+doing",
           "$toward",
           "$proper_name$Aaron",
           "and",
@@ -571,7 +571,7 @@ export function bible_glyph_chapter_lev10() {
         words: [
           "But",
           "$white_cane+blossom+proper_name",
-          "$mouth",
+          "$voice+doing",
           "to",
           "$fishing_pole+proper_name,",
           "$exclamation,",
@@ -612,7 +612,7 @@ export function bible_glyph_chapter_lev10() {
           "And",
           "when",
           "$fishing_pole+proper_name",
-          "$ear",
+          "$ear+loudspeaker",
           "this,",
           "he",
           "was",

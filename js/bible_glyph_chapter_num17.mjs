@@ -13,12 +13,12 @@ export function bible_glyph_chapter_num17() {
     verses: [
       {
         verse_number: 1,
-        words: ["$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
+        words: ["$i_am", "$voice+doing", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
         words: [
-          "$mouth",
+          "$voice+doing",
           "$toward",
           "the",
           "$son",
@@ -148,7 +148,7 @@ export function bible_glyph_chapter_num17() {
         words: [
           "So",
           "$fishing_pole+proper_name",
-          "$mouth",
+          "$voice+doing",
           "$toward",
           "the",
           "$son",
@@ -264,7 +264,7 @@ export function bible_glyph_chapter_num17() {
           "of",
           "Israel.",
           "They",
-          "$eye",
+          "$eyes",
           "them,",
           "and",
           "each",

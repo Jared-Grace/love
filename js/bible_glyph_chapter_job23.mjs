@@ -180,7 +180,7 @@ export function bible_glyph_chapter_job23() {
           "south,",
           "I",
           "$no_entry",
-          "$eye",
+          "$eyes",
           "Him.",
         ],
       },

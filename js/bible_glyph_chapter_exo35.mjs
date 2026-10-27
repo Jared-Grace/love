@@ -759,7 +759,7 @@ export function bible_glyph_chapter_exo35() {
           "$son",
           "of",
           "Israel,",
-          "$eye,",
+          "$eyes,",
           "$i_am",
           "has",
           "called",

@@ -458,7 +458,7 @@ export function bible_glyph_chapter_hos02() {
           "the",
           "$wilderness,",
           "and",
-          "$mouth",
+          "$voice+doing",
           "to",
           "her",
           "$heart_organ.",

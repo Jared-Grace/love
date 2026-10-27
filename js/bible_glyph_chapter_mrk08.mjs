@@ -822,7 +822,7 @@ export function bible_glyph_chapter_mrk08() {
         words: [
           "$plus",
           "He",
-          "$mouth",
+          "$voice",
           "this",
           "$speech",
           "quite",
@@ -846,7 +846,7 @@ export function bible_glyph_chapter_mrk08() {
           "Jesus",
           "$turn_back",
           "$plus",
-          "$eye",
+          "$eyes",
           "at",
           "$pointing_back",
           "$learner,",

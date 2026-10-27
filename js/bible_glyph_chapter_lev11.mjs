@@ -15,7 +15,7 @@ export function bible_glyph_chapter_lev11() {
         verse_number: 1,
         words: [
           "$i_am",
-          "$mouth",
+          "$voice+doing",
           "again",
           "to",
           "$fishing_pole+proper_name",
@@ -29,7 +29,7 @@ export function bible_glyph_chapter_lev11() {
       {
         verse_number: 2,
         words: [
-          "$mouth",
+          "$voice+doing",
           "$toward",
           "the",
           "$son",

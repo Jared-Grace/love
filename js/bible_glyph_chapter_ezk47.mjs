@@ -219,7 +219,7 @@ export function bible_glyph_chapter_ezk47() {
           "$person,",
           "do",
           "you",
-          "$eye",
+          "$eyes",
           "this?",
           "Then",
           "he",

@@ -16,7 +16,7 @@ export function bible_glyph_chapter_zec03() {
           "Then",
           "the",
           "angel",
-          "$eye",
+          "$eyes",
           "me",
           "$i_am+rescue",
           "the",
@@ -116,7 +116,7 @@ export function bible_glyph_chapter_zec03() {
           "$speech",
           "to",
           "Joshua,",
-          "$eye,",
+          "$eyes,",
           "I",
           "have",
           "removed",
@@ -236,7 +236,7 @@ export function bible_glyph_chapter_zec03() {
       {
         verse_number: 8,
         words: [
-          "$ear",
+          "$ear+loudspeaker",
           "$pleading,",
           "O",
           "$i_am+rescue",

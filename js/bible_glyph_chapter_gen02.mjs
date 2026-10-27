@@ -555,7 +555,7 @@ export function bible_glyph_chapter_gen02() {
           "the",
           "$person",
           "to",
-          "$eye",
+          "$eyes",
           "$flashlight+question",
           "he",
           "would",

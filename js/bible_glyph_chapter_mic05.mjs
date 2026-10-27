@@ -474,7 +474,7 @@ export function bible_glyph_chapter_mic05() {
           "$back+flashlight",
           "have",
           "$no_entry",
-          "$ear",
+          "$ear+loudspeaker",
           "Me.",
         ],
       },

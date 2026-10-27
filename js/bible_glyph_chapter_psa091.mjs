@@ -359,7 +359,7 @@ export function bible_glyph_chapter_psa091() {
           "satisfy",
           "him,",
           "and",
-          "$eye",
+          "$eyes",
           "him",
           "My",
           "salvation.",

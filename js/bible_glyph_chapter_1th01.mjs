@@ -236,7 +236,7 @@ export function bible_glyph_chapter_1th01() {
           "$no_entry+exclamation",
           "$sos_button",
           "to",
-          "$mouth",
+          "$voice",
           "$joker",
           "more.",
         ],

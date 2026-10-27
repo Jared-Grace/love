@@ -391,7 +391,7 @@ export function bible_glyph_chapter_nam02() {
           "$no_entry",
           "longer",
           "be",
-          "$ear.",
+          "$ear+loudspeaker.",
         ],
       },
     ],

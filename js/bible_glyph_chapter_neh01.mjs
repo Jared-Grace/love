@@ -121,7 +121,7 @@ export function bible_glyph_chapter_neh01() {
         words: [
           "When",
           "I",
-          "$ear",
+          "$ear+loudspeaker",
           "$flashlight+flashlight",
           "$voice,",
           "I",

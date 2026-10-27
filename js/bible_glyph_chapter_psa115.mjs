@@ -93,7 +93,7 @@ export function bible_glyph_chapter_psa115() {
           "mouths,",
           "but",
           "$no_entry",
-          "$mouth;",
+          "$voice+doing;",
           "they",
           "have",
           "$eyes,",

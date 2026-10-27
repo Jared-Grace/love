@@ -14,7 +14,7 @@ export function bible_glyph_chapter_amo09() {
         verse_number: 1,
         words: [
           "I",
-          "$eye",
+          "$eyes",
           "the",
           "$crown",
           "$person+up_arrow",

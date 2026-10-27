@@ -1299,7 +1299,7 @@ export function bible_glyph_chapter_exo29() {
           "$alarm_clock+doing",
           "you",
           "to",
-          "$mouth",
+          "$voice+doing",
           "with",
           "you.",
         ],

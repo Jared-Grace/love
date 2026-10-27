@@ -172,7 +172,7 @@ export function bible_glyph_chapter_rut01() {
         words: [
           "When",
           "Naomi",
-          "$ear",
+          "$ear+loudspeaker",
           "in",
           "$father+proper_name",
           "that",
@@ -551,7 +551,7 @@ export function bible_glyph_chapter_rut01() {
         words: [
           "When",
           "Naomi",
-          "$eye",
+          "$eyes",
           "$pointing",
           "Ruth",
           "was",
@@ -568,7 +568,7 @@ export function bible_glyph_chapter_rut01() {
           "her",
           "with",
           "her",
-          "$mouth.",
+          "$voice+doing.",
         ],
       },
       {

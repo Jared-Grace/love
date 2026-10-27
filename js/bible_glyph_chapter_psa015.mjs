@@ -42,7 +42,7 @@ export function bible_glyph_chapter_psa015() {
           "practices",
           "$ruler+thing,",
           "who",
-          "$mouth",
+          "$voice+doing",
           "the",
           "$check",
           "from",

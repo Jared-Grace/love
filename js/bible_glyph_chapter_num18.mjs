@@ -295,7 +295,7 @@ export function bible_glyph_chapter_num18() {
         words: [
           "Then",
           "$i_am",
-          "$mouth",
+          "$voice+doing",
           "to",
           "$proper_name$Aaron,",
           "$exclamation,",
@@ -910,12 +910,12 @@ export function bible_glyph_chapter_num18() {
       },
       {
         verse_number: 25,
-        words: ["And", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
+        words: ["And", "$i_am", "$voice+doing", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 26,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$handshake",

@@ -335,7 +335,7 @@ export function bible_glyph_chapter_job19() {
           "I",
           "appear,",
           "they",
-          "$mouth",
+          "$voice+doing",
           "me.",
         ],
       },

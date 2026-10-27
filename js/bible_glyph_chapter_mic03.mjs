@@ -16,7 +16,7 @@ export function bible_glyph_chapter_mic03() {
           "Then",
           "I",
           "$speech:",
-          "$ear",
+          "$ear+loudspeaker",
           "$pleading,",
           "O",
           "leaders",
@@ -274,7 +274,7 @@ export function bible_glyph_chapter_mic03() {
         verse_number: 9,
         words: [
           "$pleading",
-          "$ear",
+          "$ear+loudspeaker",
           "$flashlight,",
           "O",
           "leaders",

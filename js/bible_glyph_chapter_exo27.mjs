@@ -203,7 +203,7 @@ export function bible_glyph_chapter_exo27() {
           "as",
           "you",
           "were",
-          "$eye",
+          "$eyes",
           "on",
           "the",
           "$mountain;",

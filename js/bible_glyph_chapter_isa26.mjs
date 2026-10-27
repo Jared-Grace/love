@@ -264,7 +264,7 @@ export function bible_glyph_chapter_isa26() {
           "and",
           "fails",
           "to",
-          "$eye",
+          "$eyes",
           "the",
           "majesty",
           "of",

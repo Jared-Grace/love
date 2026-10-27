@@ -322,7 +322,7 @@ export function bible_glyph_chapter_isa61() {
           "$family.",
           "$all",
           "who",
-          "$eye",
+          "$eyes",
           "them",
           "will",
           "acknowledge",

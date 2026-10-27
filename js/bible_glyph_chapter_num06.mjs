@@ -13,12 +13,12 @@ export function bible_glyph_chapter_num06() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "the", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,"],
+        words: ["Then", "the", "$i_am", "$voice+doing", "to", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 2,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",
@@ -738,12 +738,12 @@ export function bible_glyph_chapter_num06() {
       },
       {
         verse_number: 22,
-        words: ["Then", "the", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,"],
+        words: ["Then", "the", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 23,
         words: [
-          "$mouth",
+          "$voice+doing",
           "$proper_name$Aaron",
           "and",
           "his",

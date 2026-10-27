@@ -20,7 +20,7 @@ export function bible_glyph_chapter_jhn17() {
         words: [
           "$flashlight",
           "things",
-          "$mouth",
+          "$voice",
           "$cross,",
           "$plus",
           "lifting",
@@ -389,7 +389,7 @@ export function bible_glyph_chapter_jhn17() {
           "$flashlight",
           "things",
           "I",
-          "$mouth",
+          "$voice",
           "$tray_in",
           "$pin",
           "$globe,",

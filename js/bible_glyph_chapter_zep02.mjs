@@ -238,7 +238,7 @@ export function bible_glyph_chapter_zep02() {
         words: [
           "I",
           "have",
-          "$ear",
+          "$ear+loudspeaker",
           "the",
           "reproach",
           "of",

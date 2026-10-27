@@ -295,7 +295,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 11,
-        words: ["Then", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech,"],
+        words: ["Then", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech,"],
       },
       {
         verse_number: 12,
@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 17,
-        words: ["And", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech,"],
+        words: ["And", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech,"],
       },
       {
         verse_number: 18,
@@ -604,7 +604,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 22,
-        words: ["Then", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech,"],
+        words: ["Then", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech,"],
       },
       {
         verse_number: 23,
@@ -796,7 +796,7 @@ export function bible_glyph_chapter_exo30() {
           "you",
           "are",
           "to",
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",

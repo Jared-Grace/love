@@ -13,7 +13,7 @@ export function bible_glyph_chapter_isa49() {
       {
         verse_number: 1,
         words: [
-          "$ear",
+          "$ear+loudspeaker",
           "to",
           "Me,",
           "O",
@@ -267,7 +267,7 @@ export function bible_glyph_chapter_isa49() {
           "rulers:",
           "$king$s",
           "will",
-          "$eye",
+          "$eyes",
           "You",
           "and",
           "rise,",

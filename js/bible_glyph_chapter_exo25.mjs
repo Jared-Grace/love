@@ -13,12 +13,12 @@ export function bible_glyph_chapter_exo25() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech,"],
+        words: ["Then", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech,"],
       },
       {
         verse_number: 2,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",
@@ -160,7 +160,7 @@ export function bible_glyph_chapter_exo25() {
           "all",
           "that",
           "$me",
-          "$eye",
+          "$eyes",
           "you,",
           "the",
           "pattern",
@@ -509,7 +509,7 @@ export function bible_glyph_chapter_exo25() {
           "and",
           "I",
           "will",
-          "$mouth",
+          "$voice+doing",
           "with",
           "you",
           "from",
@@ -994,7 +994,7 @@ export function bible_glyph_chapter_exo25() {
         verse_number: 40,
         words: [
           "And",
-          "$eye",
+          "$eyes",
           "that",
           "you",
           "$hammer+doing",
@@ -1005,7 +1005,7 @@ export function bible_glyph_chapter_exo25() {
           "which",
           "you",
           "were",
-          "$eye",
+          "$eyes",
           "on",
           "the",
           "$mountain.",

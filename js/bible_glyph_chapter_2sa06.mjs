@@ -503,7 +503,7 @@ export function bible_glyph_chapter_2sa06() {
           "a",
           "$window",
           "and",
-          "$eye",
+          "$eyes",
           "$king",
           "$two_hearts+proper_name",
           "$gold+fire+might+doing",

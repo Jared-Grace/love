@@ -689,7 +689,7 @@ export function bible_glyph_chapter_lam02() {
           "have",
           "lived",
           "to",
-          "$eye",
+          "$eyes",
           "it!",
         ],
       },
@@ -836,7 +836,7 @@ export function bible_glyph_chapter_lam02() {
       {
         verse_number: 20,
         words: [
-          "$eye,",
+          "$eyes,",
           "O",
           "$i_am,",
           "and",

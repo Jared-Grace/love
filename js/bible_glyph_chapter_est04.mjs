@@ -266,7 +266,7 @@ export function bible_glyph_chapter_est04() {
           "their",
           "destruction,",
           "to",
-          "$eye",
+          "$eyes",
           "to",
           "$proper_name$Esther",
           "and",

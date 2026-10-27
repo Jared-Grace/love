@@ -31,7 +31,7 @@ export function bible_glyph_chapter_mal02() {
           "you",
           "do",
           "$no_entry",
-          "$ear,",
+          "$ear+loudspeaker,",
           "and",
           "$traffic_light",
           "you",

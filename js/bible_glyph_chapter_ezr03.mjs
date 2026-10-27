@@ -552,7 +552,7 @@ export function bible_glyph_chapter_ezr03() {
           "the",
           "$voice",
           "was",
-          "$ear",
+          "$ear+loudspeaker",
           "from",
           "$satellite.",
         ],

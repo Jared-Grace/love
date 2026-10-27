@@ -909,7 +909,7 @@ export function bible_glyph_chapter_jol02() {
           "young",
           "men",
           "will",
-          "$eye",
+          "$eyes",
           "visions.",
         ],
       },

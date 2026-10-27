@@ -152,7 +152,7 @@ export function bible_glyph_chapter_gen08() {
           "$mountain",
           "could",
           "be",
-          "$eye.",
+          "$eyes.",
         ],
       },
       {
@@ -208,7 +208,7 @@ export function bible_glyph_chapter_gen08() {
           "a",
           "$dove",
           "to",
-          "$eye",
+          "$eyes",
           "if",
           "the",
           "$water",
@@ -388,7 +388,7 @@ export function bible_glyph_chapter_gen08() {
           "the",
           "$package",
           "and",
-          "$eye",
+          "$eyes",
           "that",
           "the",
           "surface",
@@ -420,7 +420,7 @@ export function bible_glyph_chapter_gen08() {
       },
       {
         verse_number: 15,
-        words: ["Then", "$heart_on_fire", "$mouth", "$toward", "$proper_name$Noah,"],
+        words: ["Then", "$heart_on_fire", "$voice+doing", "$toward", "$proper_name$Noah,"],
       },
       {
         verse_number: 16,

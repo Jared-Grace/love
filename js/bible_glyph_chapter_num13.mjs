@@ -12,7 +12,7 @@ export function bible_glyph_chapter_num13() {
     verses: [
       {
         verse_number: 1,
-        words: ["The", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,"],
+        words: ["The", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 2,
@@ -325,7 +325,7 @@ export function bible_glyph_chapter_num13() {
       {
         verse_number: 18,
         words: [
-          "$eye",
+          "$eyes",
           "the",
           "$earth,",
           "$flashlight+question",
@@ -581,7 +581,7 @@ export function bible_glyph_chapter_num13() {
           "$all",
           "$witness+crowd",
           "and",
-          "$eye",
+          "$eyes",
           "them",
           "the",
           "$fruit",
@@ -648,7 +648,7 @@ export function bible_glyph_chapter_num13() {
           "fortified.",
           "We",
           "even",
-          "$eye",
+          "$eyes",
           "the",
           "descendants",
           "of",
@@ -782,7 +782,7 @@ export function bible_glyph_chapter_num13() {
           "the",
           "$family",
           "we",
-          "$eye",
+          "$eyes",
           "there",
           "are",
           "great",

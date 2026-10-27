@@ -29,7 +29,7 @@ export function bible_glyph_chapter_rut04() {
           "whom",
           "he",
           "had",
-          "$mouth",
+          "$voice+doing",
           "came",
           "along,",
           "and",

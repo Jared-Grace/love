@@ -14,7 +14,7 @@ export function bible_glyph_chapter_mic06() {
       {
         verse_number: 1,
         words: [
-          "$ear",
+          "$ear+loudspeaker",
           "$pleading",
           "what",
           "the",
@@ -31,7 +31,7 @@ export function bible_glyph_chapter_mic06() {
           "let",
           "the",
           "hills",
-          "$ear",
+          "$ear+loudspeaker",
           "your",
           "$voice.",
         ],
@@ -39,7 +39,7 @@ export function bible_glyph_chapter_mic06() {
       {
         verse_number: 2,
         words: [
-          "$ear",
+          "$ear+loudspeaker",
           "the",
           "indictment",
           "of",
@@ -294,10 +294,10 @@ export function bible_glyph_chapter_mic06() {
           "sound",
           "wisdom",
           "to",
-          "$eye",
+          "$eyes",
           "Your",
           "$name_tag.",
-          "$ear",
+          "$ear+loudspeaker",
           "the",
           "rod,",
           "and",
@@ -365,7 +365,7 @@ export function bible_glyph_chapter_mic06() {
           "and",
           "its",
           "residents",
-          "$mouth",
+          "$voice+doing",
           "$lying_face;",
           "their",
           "tongues",

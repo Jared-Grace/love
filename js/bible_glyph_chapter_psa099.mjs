@@ -141,7 +141,7 @@ export function bible_glyph_chapter_psa099() {
         verse_number: 7,
         words: [
           "He",
-          "$mouth",
+          "$voice+doing",
           "to",
           "them",
           "from",

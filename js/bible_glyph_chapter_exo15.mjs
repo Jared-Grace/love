@@ -353,7 +353,7 @@ export function bible_glyph_chapter_exo15() {
           "The",
           "$family",
           "will",
-          "$ear",
+          "$ear+loudspeaker",
           "and",
           "$vibration_mode;",
           "$pregnant_woman+dizzy",

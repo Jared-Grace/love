@@ -17,7 +17,7 @@ export function bible_glyph_chapter_exo40() {
           "Then",
           "the",
           "$i_am",
-          "$mouth",
+          "$voice+doing",
           "$toward",
           "$fishing_pole+proper_name,",
         ],

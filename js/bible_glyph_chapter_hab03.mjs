@@ -137,7 +137,7 @@ export function bible_glyph_chapter_hab03() {
           "the",
           "$earth;",
           "He",
-          "$eye",
+          "$eyes",
           "and",
           "startled",
           "the",
@@ -160,7 +160,7 @@ export function bible_glyph_chapter_hab03() {
         verse_number: 7,
         words: [
           "I",
-          "$eye",
+          "$eyes",
           "the",
           "tents",
           "of",
@@ -237,7 +237,7 @@ export function bible_glyph_chapter_hab03() {
         words: [
           "The",
           "$mountain",
-          "$eye",
+          "$eyes",
           "You",
           "and",
           "quaked;",
@@ -391,7 +391,7 @@ export function bible_glyph_chapter_hab03() {
         verse_number: 16,
         words: [
           "I",
-          "$ear",
+          "$ear+loudspeaker",
           "and",
           "trembled",
           "$baby+house;",

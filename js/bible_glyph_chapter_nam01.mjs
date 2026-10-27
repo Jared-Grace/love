@@ -438,7 +438,7 @@ export function bible_glyph_chapter_nam01() {
           "good",
           "news,",
           "who",
-          "$ear",
+          "$ear+loudspeaker",
           "$peace!",
           "$party_popper+doing",
           "your",

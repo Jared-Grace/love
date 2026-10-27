@@ -49,7 +49,7 @@ export function bible_glyph_chapter_mic01() {
       {
         verse_number: 2,
         words: [
-          "$ear,",
+          "$ear+loudspeaker,",
           "O",
           "$family,",
           "all",

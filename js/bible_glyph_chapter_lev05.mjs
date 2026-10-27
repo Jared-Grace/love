@@ -17,7 +17,7 @@ export function bible_glyph_chapter_lev05() {
           "$pointing",
           "$person_other",
           "$bow+doing",
-          "$ear",
+          "$ear+loudspeaker",
           "$voice",
           "$speech+raised_back_of_hand",
           "about",
@@ -25,7 +25,7 @@ export function bible_glyph_chapter_lev05() {
           "he",
           "$witness,",
           "whether",
-          "$eye",
+          "$eyes",
           "or",
           "$lightbulb,",
           "and",
@@ -439,7 +439,7 @@ export function bible_glyph_chapter_lev05() {
       },
       {
         verse_number: 14,
-        words: ["Then", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech"],
+        words: ["Then", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 15,

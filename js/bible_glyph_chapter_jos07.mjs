@@ -353,7 +353,7 @@ export function bible_glyph_chapter_jos07() {
           "in",
           "the",
           "$earth",
-          "$ear",
+          "$ear+loudspeaker",
           "about",
           "this,",
           "they",
@@ -814,7 +814,7 @@ export function bible_glyph_chapter_jos07() {
         words: [
           "When",
           "I",
-          "$eye",
+          "$eyes",
           "among",
           "the",
           "spoils",

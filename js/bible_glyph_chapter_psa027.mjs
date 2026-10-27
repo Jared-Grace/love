@@ -215,7 +215,7 @@ export function bible_glyph_chapter_psa027() {
       {
         verse_number: 7,
         words: [
-          "$ear,",
+          "$ear+loudspeaker,",
           "O",
           "$i_am,",
           "my",
@@ -356,7 +356,7 @@ export function bible_glyph_chapter_psa027() {
           "am",
           "$anchor",
           "to",
-          "$eye",
+          "$eyes",
           "the",
           "goodness",
           "of",

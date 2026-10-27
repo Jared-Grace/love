@@ -274,7 +274,7 @@ export function bible_glyph_chapter_pro16() {
           "and",
           "he",
           "who",
-          "$mouth",
+          "$voice+doing",
           "$up_arrow+ruler",
           "is",
           "$heart_red+doing.",

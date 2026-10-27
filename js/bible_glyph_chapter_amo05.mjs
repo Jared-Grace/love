@@ -15,7 +15,7 @@ export function bible_glyph_chapter_amo05() {
       {
         verse_number: 1,
         words: [
-          "$ear",
+          "$ear+loudspeaker",
           "this",
           "$voice,",
           "this",
@@ -285,7 +285,7 @@ export function bible_glyph_chapter_amo05() {
           "despise",
           "him",
           "who",
-          "$mouth",
+          "$voice+doing",
           "with",
           "integrity.",
         ],
@@ -681,7 +681,7 @@ export function bible_glyph_chapter_amo05() {
           "I",
           "will",
           "$no_entry",
-          "$ear",
+          "$ear+loudspeaker",
           "to",
           "the",
           "music",

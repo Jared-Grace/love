@@ -246,7 +246,7 @@ export function bible_glyph_chapter_1sa08() {
         verse_number: 9,
         words: [
           "$watch",
-          "$ear",
+          "$ear+loudspeaker",
           "to",
           "their",
           "$voice,",
@@ -591,7 +591,7 @@ export function bible_glyph_chapter_1sa08() {
           "the",
           "$family",
           "and",
-          "$mouth",
+          "$voice",
           "them",
           "in",
           "the",

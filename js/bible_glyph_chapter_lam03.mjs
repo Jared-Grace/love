@@ -21,7 +21,7 @@ export function bible_glyph_chapter_lam03() {
           "$might+man_beard",
           "who",
           "has",
-          "$eye",
+          "$eyes",
           "$persevering_face+thing",
           "under",
           "the",
@@ -651,7 +651,7 @@ export function bible_glyph_chapter_lam03() {
           "$crown",
           "does",
           "$no_entry",
-          "$eye.",
+          "$eyes.",
         ],
       },
       {
@@ -880,7 +880,7 @@ export function bible_glyph_chapter_lam03() {
           "from",
           "$sky",
           "and",
-          "$eye.",
+          "$eyes.",
         ],
       },
       {
@@ -1025,7 +1025,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "You",
           "have",
-          "$eye,",
+          "$eyes,",
           "O",
           "$i_am,",
           "the",
@@ -1043,7 +1043,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "You",
           "have",
-          "$eye",
+          "$eyes",
           "$all",
           "their",
           "malice,",
@@ -1059,7 +1059,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "You",
           "have",
-          "$ear",
+          "$ear+loudspeaker",
           "their",
           "insults,",
           "O",

@@ -720,7 +720,7 @@ export function bible_glyph_chapter_jdg04() {
           "and",
           "I",
           "will",
-          "$eye",
+          "$eyes",
           "you",
           "the",
           "$man_beard",

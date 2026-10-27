@@ -633,7 +633,7 @@ export function bible_glyph_chapter_deu08() {
           "you",
           "do",
           "$no_entry",
-          "$ear",
+          "$ear+loudspeaker",
           "the",
           "$voice",
           "of",

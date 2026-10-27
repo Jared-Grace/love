@@ -99,7 +99,7 @@ export function bible_glyph_chapter_deu06() {
       {
         verse_number: 3,
         words: [
-          "$ear,",
+          "$ear+loudspeaker,",
           "O",
           "$wrestling+heart_on_fire,",
           "and",
@@ -134,14 +134,14 @@ export function bible_glyph_chapter_deu06() {
           "your",
           "$father,",
           "has",
-          "$mouth",
+          "$voice+doing",
           "you.",
         ],
       },
       {
         verse_number: 4,
         words: [
-          "$ear,",
+          "$ear+loudspeaker,",
           "O",
           "$wrestling+heart_on_fire:",
           "The",
@@ -212,7 +212,7 @@ export function bible_glyph_chapter_deu06() {
           "your",
           "$son",
           "and",
-          "$mouth",
+          "$voice+doing",
           "of",
           "them",
           "when",
@@ -571,7 +571,7 @@ export function bible_glyph_chapter_deu06() {
           "the",
           "$i_am",
           "has",
-          "$mouth.",
+          "$voice+doing.",
         ],
       },
       {

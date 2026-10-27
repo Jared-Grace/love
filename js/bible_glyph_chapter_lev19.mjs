@@ -12,12 +12,12 @@ export function bible_glyph_chapter_lev19() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "the", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,"],
+        words: ["Then", "the", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 2,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$all",

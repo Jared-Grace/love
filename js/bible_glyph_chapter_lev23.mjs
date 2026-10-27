@@ -12,12 +12,12 @@ export function bible_glyph_chapter_lev23() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech"],
+        words: ["Then", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",
@@ -217,12 +217,12 @@ export function bible_glyph_chapter_lev23() {
       },
       {
         verse_number: 9,
-        words: ["And", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech"],
+        words: ["And", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 10,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",
@@ -708,12 +708,12 @@ export function bible_glyph_chapter_lev23() {
       },
       {
         verse_number: 23,
-        words: ["$i_am", "also", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech"],
+        words: ["$i_am", "also", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 24,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",
@@ -769,7 +769,7 @@ export function bible_glyph_chapter_lev23() {
       },
       {
         verse_number: 26,
-        words: ["Again", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech"],
+        words: ["Again", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 27,
@@ -952,12 +952,12 @@ export function bible_glyph_chapter_lev23() {
       },
       {
         verse_number: 33,
-        words: ["And", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech"],
+        words: ["And", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 34,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",
@@ -1335,7 +1335,7 @@ export function bible_glyph_chapter_lev23() {
         words: [
           "So",
           "$fishing_pole+proper_name",
-          "$mouth",
+          "$voice+doing",
           "the",
           "$alarm_clock",
           "feasts",

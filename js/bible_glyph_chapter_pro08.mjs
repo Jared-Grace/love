@@ -101,10 +101,10 @@ export function bible_glyph_chapter_pro08() {
       {
         verse_number: 6,
         words: [
-          "$ear,",
+          "$ear+loudspeaker,",
           "$pointing",
           "I",
-          "$mouth",
+          "$voice+doing",
           "of",
           "noble",
           "things,",
@@ -599,7 +599,7 @@ export function bible_glyph_chapter_pro08() {
           "therefore,",
           "my",
           "$son,",
-          "$ear",
+          "$ear+loudspeaker",
           "to",
           "me;",
           "$gift+smile",
@@ -614,7 +614,7 @@ export function bible_glyph_chapter_pro08() {
       {
         verse_number: 33,
         words: [
-          "$ear",
+          "$ear+loudspeaker",
           "to",
           "instruction",
           "and",
@@ -634,7 +634,7 @@ export function bible_glyph_chapter_pro08() {
           "the",
           "$person",
           "who",
-          "$ear",
+          "$ear+loudspeaker",
           "to",
           "me,",
           "watching",

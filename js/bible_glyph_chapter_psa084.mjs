@@ -177,7 +177,7 @@ export function bible_glyph_chapter_psa084() {
           "$raised_fist,",
           "until",
           "each",
-          "$eye",
+          "$eyes",
           "before",
           "$heart_on_fire",
           "in",
@@ -192,7 +192,7 @@ export function bible_glyph_chapter_psa084() {
           "$heart_on_fire",
           "of",
           "Hosts,",
-          "$ear",
+          "$ear+loudspeaker",
           "my",
           "$hands_praying+thing;",
           "give",
@@ -207,7 +207,7 @@ export function bible_glyph_chapter_psa084() {
       {
         verse_number: 9,
         words: [
-          "$eye",
+          "$eyes",
           "our",
           "$shield,",
           "O",

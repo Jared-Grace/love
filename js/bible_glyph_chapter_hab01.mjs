@@ -43,7 +43,7 @@ export function bible_glyph_chapter_hab01() {
           "You",
           "do",
           "$no_entry",
-          "$ear,",
+          "$ear+loudspeaker,",
           "or",
           "$loudspeaker+mouth",
           "out",
@@ -65,7 +65,7 @@ export function bible_glyph_chapter_hab01() {
           "You",
           "make",
           "me",
-          "$eye",
+          "$eyes",
           "$thumbs_down+hole?",
           "Why",
           "do",
@@ -116,7 +116,7 @@ export function bible_glyph_chapter_hab01() {
       {
         verse_number: 5,
         words: [
-          "$eye",
+          "$eyes",
           "at",
           "the",
           "$map",

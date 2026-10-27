@@ -15,7 +15,7 @@ export function bible_glyph_chapter_num09() {
         verse_number: 1,
         words: [
           "$i_am",
-          "$mouth",
+          "$voice+doing",
           "to",
           "$fishing_pole+proper_name",
           "in",
@@ -101,7 +101,7 @@ export function bible_glyph_chapter_num09() {
         words: [
           "So",
           "$fishing_pole+proper_name",
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",
@@ -243,7 +243,7 @@ export function bible_glyph_chapter_num09() {
           "here",
           "until",
           "I",
-          "$ear",
+          "$ear+loudspeaker",
           "$flashlight+question",
           "$i_am",
           "$speech+scroll",
@@ -253,12 +253,12 @@ export function bible_glyph_chapter_num09() {
       },
       {
         verse_number: 9,
-        words: ["Then", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech"],
+        words: ["Then", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 10,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",

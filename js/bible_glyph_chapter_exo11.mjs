@@ -56,7 +56,7 @@ export function bible_glyph_chapter_exo11() {
       {
         verse_number: 2,
         words: [
-          "$mouth",
+          "$voice+doing",
           "$pleading",
           "to",
           "the",
@@ -315,7 +315,7 @@ export function bible_glyph_chapter_exo11() {
           "$house+proper_name",
           "will",
           "$no_entry",
-          "$ear",
+          "$ear+loudspeaker",
           "to",
           "you,",
           "so",

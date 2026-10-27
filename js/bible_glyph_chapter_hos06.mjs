@@ -270,7 +270,7 @@ export function bible_glyph_chapter_hos06() {
         words: [
           "I",
           "have",
-          "$eye",
+          "$eyes",
           "a",
           "horrible",
           "thing",

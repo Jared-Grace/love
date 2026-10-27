@@ -15,7 +15,7 @@ export function bible_glyph_chapter_num19() {
         verse_number: 1,
         words: [
           "$i_am",
-          "$mouth",
+          "$voice+doing",
           "$toward",
           "$fishing_pole+proper_name",
           "and",
@@ -38,7 +38,7 @@ export function bible_glyph_chapter_num19() {
           "has",
           "commanded,",
           "$speech:",
-          "$mouth",
+          "$voice+doing",
           "the",
           "$son",
           "of",

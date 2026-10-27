@@ -28,7 +28,7 @@ export function bible_glyph_chapter_zep03() {
         verse_number: 2,
         words: [
           "She",
-          "$ear",
+          "$ear+loudspeaker",
           "$no_entry",
           "$voice;",
           "she",
@@ -403,7 +403,7 @@ export function bible_glyph_chapter_zep03() {
           "$hammer+doing",
           "wrong",
           "$no_entry",
-          "$mouth",
+          "$voice+doing",
           "$speech+crossed_fingers,",
           "$no_entry",
           "will",

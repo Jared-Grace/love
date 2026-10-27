@@ -13,7 +13,7 @@ export function bible_glyph_chapter_pro04() {
       {
         verse_number: 1,
         words: [
-          "$ear,",
+          "$ear+loudspeaker,",
           "my",
           "$son,",
           "to",
@@ -192,7 +192,7 @@ export function bible_glyph_chapter_pro04() {
       {
         verse_number: 10,
         words: [
-          "$ear,",
+          "$ear+loudspeaker,",
           "my",
           "$son,",
           "and",

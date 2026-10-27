@@ -13,7 +13,7 @@ export function bible_glyph_chapter_exo13() {
     verses: [
       {
         verse_number: 1,
-        words: ["$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,"],
+        words: ["$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 2,
@@ -194,7 +194,7 @@ export function bible_glyph_chapter_exo13() {
           "$bread+bubbles",
           "may",
           "be",
-          "$eye",
+          "$eyes",
           "among",
           "you,",
           "$no_entry",
@@ -202,7 +202,7 @@ export function bible_glyph_chapter_exo13() {
           "your",
           "$bubbles+bread+pinching_hand",
           "be",
-          "$eye",
+          "$eyes",
           "anywhere",
           "within",
           "your",
@@ -553,7 +553,7 @@ export function bible_glyph_chapter_exo13() {
           "minds",
           "if",
           "they",
-          "$eye",
+          "$eyes",
           "$crossed_swords,",
           "and",
           "$turn_back",

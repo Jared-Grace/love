@@ -226,7 +226,7 @@ export function bible_glyph_chapter_pro02() {
           "the",
           "$man_beard",
           "who",
-          "$mouth",
+          "$voice+doing",
           "$upside_down_face+speech+thing,",
         ],
       },

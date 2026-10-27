@@ -13,12 +13,12 @@ export function bible_glyph_chapter_num15() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,", "$speech"],
+        words: ["Then", "$i_am", "$voice+doing", "$toward", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 2,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",
@@ -469,12 +469,12 @@ export function bible_glyph_chapter_num15() {
       },
       {
         verse_number: 17,
-        words: ["Then", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,", "$speech"],
+        words: ["Then", "$i_am", "$voice+doing", "to", "$fishing_pole+proper_name,", "$speech"],
       },
       {
         verse_number: 18,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",
@@ -589,7 +589,7 @@ export function bible_glyph_chapter_num15() {
           "$back+flashlight",
           "$i_am",
           "has",
-          "$mouth",
+          "$voice+doing",
           "$toward",
           "$fishing_pole+proper_name,",
         ],
@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_num15() {
       {
         verse_number: 38,
         words: [
-          "$mouth",
+          "$voice+doing",
           "to",
           "the",
           "$son",

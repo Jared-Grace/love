@@ -462,7 +462,7 @@ export function bible_glyph_chapter_job28() {
           "the",
           "$earth",
           "and",
-          "$eye",
+          "$eyes",
           "$all",
           "$down_arrow",
           "the",
@@ -511,7 +511,7 @@ export function bible_glyph_chapter_job28() {
         words: [
           "$telescope+clock",
           "He",
-          "$eye",
+          "$eyes",
           "wisdom",
           "and",
           "appraised",

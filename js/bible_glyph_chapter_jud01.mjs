@@ -493,7 +493,7 @@ export function bible_glyph_chapter_jud01() {
           "ungodly",
           "$bow+doer",
           "have",
-          "$mouth",
+          "$voice",
           "against",
           "$pointing_back.",
         ],

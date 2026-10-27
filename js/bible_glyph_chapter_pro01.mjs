@@ -80,7 +80,7 @@ export function bible_glyph_chapter_pro01() {
           "let",
           "the",
           "wise",
-          "$ear",
+          "$ear+loudspeaker",
           "and",
           "gain",
           "$hand_receiving+open_book,",
@@ -134,7 +134,7 @@ export function bible_glyph_chapter_pro01() {
       {
         verse_number: 8,
         words: [
-          "$ear,",
+          "$ear+loudspeaker,",
           "my",
           "$son,",
           "to",
@@ -647,7 +647,7 @@ export function bible_glyph_chapter_pro01() {
         words: [
           "But",
           "whoever",
-          "$ear",
+          "$ear+loudspeaker",
           "to",
           "me",
           "will",

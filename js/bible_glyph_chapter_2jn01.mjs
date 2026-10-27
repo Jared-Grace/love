@@ -170,7 +170,7 @@ export function bible_glyph_chapter_2jn01() {
           "as",
           "you",
           "have",
-          "$ear",
+          "$ear+loudspeaker",
           "$away",
           "the",
           "beginning,",

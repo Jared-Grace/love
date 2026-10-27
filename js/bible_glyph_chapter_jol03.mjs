@@ -254,7 +254,7 @@ export function bible_glyph_chapter_jol03() {
           "the",
           "$i_am",
           "has",
-          "$mouth.",
+          "$voice+doing.",
         ],
       },
       {

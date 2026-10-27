@@ -31,7 +31,7 @@ export function bible_glyph_chapter_gen07() {
           "$pointing",
           "I",
           "have",
-          "$eye",
+          "$eyes",
           "you",
           "$ruler",
           "in",

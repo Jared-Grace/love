@@ -798,7 +798,7 @@ export function bible_glyph_chapter_1sa20() {
           "and",
           "$me",
           "have",
-          "$mouth,",
+          "$voice,",
           "the",
           "$i_am",
           "is",
@@ -869,7 +869,7 @@ export function bible_glyph_chapter_1sa20() {
         verse_number: 26,
         words: [
           "$proper_name$Saul",
-          "$mouth",
+          "$voice+doing",
           "$no_entry",
           "a",
           "thing",
