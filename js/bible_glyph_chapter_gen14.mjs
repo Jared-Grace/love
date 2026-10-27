@@ -175,7 +175,7 @@ export function bible_glyph_chapter_gen14() {
           "they",
           "conquered",
           "the",
-          "whole",
+          "$all",
           "$field",
           "of",
           "the",
