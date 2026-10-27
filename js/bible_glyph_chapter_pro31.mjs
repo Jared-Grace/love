@@ -79,7 +79,7 @@ export function bible_glyph_chapter_pro31() {
           "for",
           "$king,",
           "O",
-          "Lemuel,",
+          "$toward+gift+heart_on_fire,",
           "it",
           "is",
           "$no_entry",
