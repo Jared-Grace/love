@@ -227,7 +227,7 @@ export function bible_glyph_chapter_ezk34() {
           "and",
           "has",
           "become",
-          "prey",
+          "$pirate_flag+thing",
           "and",
           "food",
           "for",
