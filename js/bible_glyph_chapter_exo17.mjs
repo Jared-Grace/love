@@ -197,7 +197,7 @@ export function bible_glyph_chapter_exo17() {
           "you",
           "by",
           "the",
-          "rock",
+          "$rock",
           "at",
           "$proper_name$Horeb.",
           "When",
