@@ -494,7 +494,7 @@ export function bible_glyph_chapter_gen09() {
           "between",
           "Me",
           "and",
-          "every",
+          "$all",
           "$meat",
           "on",
           "the",
