@@ -526,7 +526,7 @@ export function bible_glyph_chapter_isa49() {
           "child,",
           "or",
           "lack",
-          "compassion",
+          "$hugging_face+doing",
           "for",
           "the",
           "$son",
