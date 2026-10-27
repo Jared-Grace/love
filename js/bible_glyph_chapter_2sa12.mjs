@@ -66,7 +66,7 @@ export function bible_glyph_chapter_2sa12() {
           "$money_bag+no_entry+person",
           "man",
           "had",
-          "nothing",
+          "$dotted_line_face",
           "except",
           "one",
           "small",
