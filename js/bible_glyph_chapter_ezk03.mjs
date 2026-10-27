@@ -685,7 +685,7 @@ export function bible_glyph_chapter_ezk03() {
           "the",
           "$ruler",
           "man",
-          "not",
+          "$zero+manner",
           "to",
           "$bow+doing,",
           "and",
