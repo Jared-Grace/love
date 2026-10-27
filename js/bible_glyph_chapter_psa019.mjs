@@ -101,7 +101,7 @@ export function bible_glyph_chapter_psa019() {
         words: [
           "Like",
           "a",
-          "bridegroom",
+          "$man_in_tuxedo",
           "$walking+tray_out",
           "from",
           "his",
