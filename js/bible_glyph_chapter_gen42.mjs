@@ -100,7 +100,7 @@ export function bible_glyph_chapter_gen42() {
           "$safety_pin",
           "his",
           "$brother,",
-          "for",
+          "$pointing",
           "he",
           "$speech,",
           "I",
