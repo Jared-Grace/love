@@ -619,7 +619,7 @@ export function bible_glyph_chapter_job31() {
           "I",
           "have",
           "$no_entry",
-          "allowed",
+          "$hands_giving",
           "my",
           "mouth",
           "to",
