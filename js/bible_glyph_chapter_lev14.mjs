@@ -84,7 +84,7 @@ export function bible_glyph_chapter_lev14() {
           "shall",
           "order",
           "that",
-          "two",
+          "$two",
           "$sprout",
           "clean",
           "birds,",
