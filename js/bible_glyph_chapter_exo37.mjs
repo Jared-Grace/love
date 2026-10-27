@@ -578,7 +578,7 @@ export function bible_glyph_chapter_exo37() {
           "piece",
           "with",
           "it,",
-          "hammered",
+          "$hammer+curly_loop",
           "out",
           "of",
           "pure",
