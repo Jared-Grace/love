@@ -730,7 +730,7 @@ export function bible_glyph_chapter_lev15() {
           "lies",
           "will",
           "become",
-          "unclean.",
+          "$soap+no_entry.",
         ],
       },
       {
