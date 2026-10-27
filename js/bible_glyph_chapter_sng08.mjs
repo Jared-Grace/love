@@ -408,7 +408,7 @@ export function bible_glyph_chapter_sng08() {
           "Come",
           "away,",
           "my",
-          "beloved,",
+          "$two_hearts,",
           "and",
           "be",
           "like",
