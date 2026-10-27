@@ -416,7 +416,7 @@ export function bible_glyph_chapter_ezk01() {
           "I",
           "saw",
           "a",
-          "wheel",
+          "$wheel+counterclockwise_arrows_button",
           "on",
           "the",
           "$earth",
