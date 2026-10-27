@@ -953,7 +953,7 @@ export function bible_glyph_chapter_2ki04() {
           "$pointing_up",
           "the",
           "boy's",
-          "face.",
+          "$face.",
         ],
       },
       {
