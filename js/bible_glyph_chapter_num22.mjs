@@ -470,7 +470,7 @@ export function bible_glyph_chapter_num22() {
           "Balak",
           "$hand_sending",
           "$plus+doing",
-          "princes,",
+          "$military_medal,",
           "more",
           "numerous",
           "and",
