@@ -793,7 +793,7 @@ export function bible_glyph_chapter_lev04() {
           "to",
           "lay",
           "$hand",
-          "on",
+          "$pointing_up",
           "the",
           "head",
           "of",
