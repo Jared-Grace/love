@@ -711,7 +711,7 @@ export function bible_glyph_chapter_num08() {
           "age,",
           "$son",
           "of",
-          "fifty",
+          "$five+zero",
           "years,",
           "they",
           "must",
