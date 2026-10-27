@@ -567,7 +567,7 @@ export function bible_glyph_chapter_exo35() {
           "$goat",
           "hair,",
           "$ram",
-          "skins",
+          "$cow_face+coat",
           "dyed",
           "red",
           "or",
