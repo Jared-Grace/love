@@ -321,7 +321,7 @@ export function bible_glyph_chapter_deu19() {
           "you",
           "are",
           "to",
-          "add",
+          "$plus+doing",
           "three",
           "more",
           "$city$s",
