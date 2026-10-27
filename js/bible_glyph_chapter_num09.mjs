@@ -345,7 +345,7 @@ export function bible_glyph_chapter_num09() {
           "$finish",
           "$morning,",
           "$no_entry",
-          "break",
+          "$broken_chain",
           "any",
           "of",
           "its",
