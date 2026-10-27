@@ -907,7 +907,7 @@ export function bible_glyph_chapter_1sa02() {
           "My",
           "$altar,",
           "to",
-          "burn",
+          "$incense+doing",
           "incense,",
           "and",
           "to",
