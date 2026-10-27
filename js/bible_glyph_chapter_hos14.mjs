@@ -139,7 +139,7 @@ export function bible_glyph_chapter_hos14() {
           "$cherry_blossom",
           "like",
           "the",
-          "lily",
+          "$white_flower",
           "and",
           "take",
           "root",
