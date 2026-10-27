@@ -394,7 +394,7 @@ export function bible_glyph_chapter_exo29() {
           "hide",
           "and",
           "$pile_of_poo",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp.",
           "It",
