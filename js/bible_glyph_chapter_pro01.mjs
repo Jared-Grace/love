@@ -241,7 +241,7 @@ export function bible_glyph_chapter_pro01() {
           "all",
           "manner",
           "of",
-          "precious",
+          "$gem_stone+describing",
           "$money_bag+more;",
           "we",
           "will",
