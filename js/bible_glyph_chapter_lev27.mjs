@@ -495,7 +495,7 @@ export function bible_glyph_chapter_lev27() {
           "$i_am,",
           "then",
           "your",
-          "valuation",
+          "$receipt",
           "shall",
           "be",
           "proportional",
