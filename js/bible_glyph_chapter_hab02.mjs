@@ -601,7 +601,7 @@ export function bible_glyph_chapter_hab02() {
           "it",
           "give",
           "guidance?",
-          "Behold,",
+          "$exclamation,",
           "it",
           "is",
           "overlaid",
