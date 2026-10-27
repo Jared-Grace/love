@@ -399,7 +399,7 @@ export function bible_glyph_chapter_2ki05() {
           "out,",
           "$person+round_pushpin",
           "and",
-          "call",
+          "$waving_hand",
           "on",
           "the",
           "$name_tag",
