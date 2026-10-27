@@ -248,7 +248,7 @@ export function bible_glyph_chapter_jdg11() {
           "Ammon,",
           "and",
           "become",
-          "leader",
+          "$person_gesturing_ok",
           "over",
           "all",
           "who",
