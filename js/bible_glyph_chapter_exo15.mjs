@@ -56,7 +56,7 @@ export function bible_glyph_chapter_exo15() {
           "LORD",
           "is",
           "my",
-          "strength",
+          "$mechanical_arm",
           "and",
           "my",
           "song,",
