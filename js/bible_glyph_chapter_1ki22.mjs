@@ -70,7 +70,7 @@ export function bible_glyph_chapter_1ki22() {
           "is",
           "ours,",
           "but",
-          "we",
+          "$me",
           "have",
           "failed",
           "to",
