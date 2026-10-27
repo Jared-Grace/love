@@ -689,7 +689,7 @@ export function bible_glyph_chapter_exo19() {
       {
         verse_number: 22,
         words: [
-          "Even",
+          "$plus",
           "the",
           "$priest",
           "who",
