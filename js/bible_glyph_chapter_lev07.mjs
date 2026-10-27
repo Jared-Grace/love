@@ -261,7 +261,7 @@ export function bible_glyph_chapter_lev07() {
           "the",
           "$peace+gift",
           "offering",
-          "that",
+          "$back+flashlight",
           "one",
           "may",
           "present",
