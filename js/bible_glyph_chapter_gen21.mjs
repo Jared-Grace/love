@@ -284,7 +284,7 @@ export function bible_glyph_chapter_gen21() {
           "your",
           "$broom.",
           "$ear",
-          "everything",
+          "$all",
           "that",
           "$proper_name$Sarah",
           "$speech",
