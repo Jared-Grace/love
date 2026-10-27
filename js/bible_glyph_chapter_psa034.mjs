@@ -177,7 +177,7 @@ export function bible_glyph_chapter_psa034() {
           "$gift+smile",
           "is",
           "the",
-          "man",
+          "$might+man_beard",
           "who",
           "takes",
           "refuge",
