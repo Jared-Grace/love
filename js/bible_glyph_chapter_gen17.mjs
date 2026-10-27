@@ -143,7 +143,7 @@ export function bible_glyph_chapter_gen17() {
           "$king",
           "will",
           "descend",
-          "from",
+          "$tray_out",
           "you.",
         ],
       },
