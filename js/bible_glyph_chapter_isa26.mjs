@@ -448,7 +448,7 @@ export function bible_glyph_chapter_isa26() {
       {
         verse_number: 17,
         words: [
-          "As",
+          "$likeness",
           "a",
           "woman",
           "with",
