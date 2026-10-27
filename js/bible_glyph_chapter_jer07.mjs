@@ -849,7 +849,7 @@ export function bible_glyph_chapter_jer07() {
           "you.",
           "When",
           "you",
-          "call",
+          "$waving_hand",
           "to",
           "them,",
           "they",
