@@ -39,7 +39,7 @@ export function bible_glyph_chapter_psa034() {
           "all",
           "$clock;",
           "His",
-          "praise",
+          "$clapping_hands+thing",
           "will",
           "always",
           "be",
