@@ -550,7 +550,7 @@ export function bible_glyph_chapter_exo09() {
           "it",
           "was",
           "founded",
-          "until",
+          "$finish",
           "now.",
         ],
       },
