@@ -503,7 +503,7 @@ export function bible_glyph_chapter_gen07() {
           "$water",
           "$might+man_beard+doing",
           "$double_exclamation",
-          "upon",
+          "$pointing_up",
           "the",
           "$earth,",
           "so",
