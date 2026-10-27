@@ -116,7 +116,7 @@ export function bible_glyph_chapter_hos14() {
           "them,",
           "$pointing",
           "My",
-          "anger",
+          "$nose+fire",
           "has",
           "$turn_back",
           "$tray_out",
