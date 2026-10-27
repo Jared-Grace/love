@@ -343,7 +343,7 @@ export function bible_glyph_chapter_exo35() {
           "entrance",
           "to",
           "the",
-          "tabernacle,",
+          "$tent+house,",
         ],
       },
       {
