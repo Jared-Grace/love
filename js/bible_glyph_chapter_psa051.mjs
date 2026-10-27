@@ -420,7 +420,7 @@ export function bible_glyph_chapter_psa051() {
           "$ruler+thing",
           "$sacrifice,",
           "in",
-          "whole",
+          "$all+describing",
           "$burnt_offering",
           "offerings;",
           "$telescope+clock",
