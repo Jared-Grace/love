@@ -961,7 +961,7 @@ export function bible_glyph_chapter_lev15() {
           "separate",
           "from",
           "their",
-          "uncleanness,",
+          "$soap+no_entry+thing,",
           "so",
           "that",
           "they",
