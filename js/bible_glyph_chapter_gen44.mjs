@@ -383,7 +383,7 @@ export function bible_glyph_chapter_gen44() {
           "$pointing_back",
           "was",
           "$repeat",
-          "there,",
+          "$telescope,",
           "and",
           "they",
           "fell",
