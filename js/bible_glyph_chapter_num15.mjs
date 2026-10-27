@@ -995,7 +995,7 @@ export function bible_glyph_chapter_num15() {
           "$skull+doing.",
           "The",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "is",
           "to",
           "$stone",
