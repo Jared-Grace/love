@@ -105,7 +105,7 @@ export function bible_glyph_chapter_neh08() {
           "$tray_out",
           "$light",
           "$finish",
-          "noon,",
+          "$divide+thing,",
           "in",
           "front",
           "of",
