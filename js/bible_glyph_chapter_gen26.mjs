@@ -290,7 +290,7 @@ export function bible_glyph_chapter_gen26() {
           "$speech",
           "to",
           "him,",
-          "Because",
+          "$pointing",
           "I",
           "$speech",
           "to",
