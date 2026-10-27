@@ -943,7 +943,7 @@ export function bible_glyph_chapter_deu32() {
           "$foot",
           "will",
           "slip,",
-          "for",
+          "$pointing",
           "their",
           "$sun",
           "of",
