@@ -258,7 +258,7 @@ export function bible_glyph_chapter_isa56() {
           "of",
           "$hands_praying+thing.",
           "Their",
-          "burnt",
+          "$burnt_offering",
           "offerings",
           "and",
           "sacrifices",
