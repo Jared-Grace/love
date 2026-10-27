@@ -201,7 +201,7 @@ export function bible_glyph_chapter_deu09() {
           "the",
           "$thumbs_down+person+thing",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "$map",
           "that",
           "$i_am",
