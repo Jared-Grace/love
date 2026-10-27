@@ -497,7 +497,7 @@ export function bible_glyph_chapter_deu14() {
           "new",
           "$wine,",
           "and",
-          "oil,",
+          "$oil+new_button,",
           "and",
           "the",
           "firstborn",
