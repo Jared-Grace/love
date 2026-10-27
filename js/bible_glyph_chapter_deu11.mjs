@@ -595,7 +595,7 @@ export function bible_glyph_chapter_deu11() {
         verse_number: 18,
         words: [
           "$palm_down",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "of",
           "mine",
