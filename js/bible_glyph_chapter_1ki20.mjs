@@ -403,7 +403,7 @@ export function bible_glyph_chapter_1ki20() {
           "Ben",
           "hadad",
           "$ear",
-          "this",
+          "$flashlight",
           "$speech",
           "while",
           "he",
