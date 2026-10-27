@@ -14,7 +14,7 @@ export function bible_glyph_chapter_lev05() {
       {
         verse_number: 1,
         words: [
-          "If",
+          "$pointing",
           "$person_other",
           "$bow+doing",
           "$ear",
