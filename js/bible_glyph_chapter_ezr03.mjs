@@ -378,7 +378,7 @@ export function bible_glyph_chapter_ezr03() {
           "$brother,",
           "all",
           "$handshake,",
-          "joined",
+          "$person+round_pushpin",
           "together",
           "to",
           "supervise",
