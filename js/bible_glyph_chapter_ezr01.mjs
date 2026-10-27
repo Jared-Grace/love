@@ -141,7 +141,7 @@ export function bible_glyph_chapter_ezr01() {
           "is",
           "the",
           "$heart_on_fire",
-          "who",
+          "$back+flashlight",
           "is",
           "in",
           "$city+peace.",
