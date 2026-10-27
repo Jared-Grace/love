@@ -251,7 +251,7 @@ export function bible_glyph_chapter_dan12() {
           "I",
           "$ear",
           "him",
-          "swear",
+          "$raised_back_of_hand+doing",
           "by",
           "Him",
           "who",
