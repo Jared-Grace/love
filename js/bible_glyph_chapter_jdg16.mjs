@@ -74,7 +74,7 @@ export function bible_glyph_chapter_jdg16() {
           "Let",
           "us",
           "wait",
-          "until",
+          "$finish",
           "$light,",
           "then",
           "we",
