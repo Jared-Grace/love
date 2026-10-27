@@ -159,7 +159,7 @@ export function bible_glyph_chapter_mal01() {
           "The",
           "$i_am",
           "is",
-          "great",
+          "$top+doing",
           "-",
           "even",
           "beyond",
