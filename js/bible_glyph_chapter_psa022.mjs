@@ -641,7 +641,7 @@ export function bible_glyph_chapter_psa022() {
           "feast",
           "and",
           "$bowing;",
-          "all",
+          "$all",
           "who",
           "go",
           "down",
