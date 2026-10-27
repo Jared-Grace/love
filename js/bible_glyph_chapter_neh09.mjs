@@ -1235,7 +1235,7 @@ export function bible_glyph_chapter_neh09() {
           "$king",
           "of",
           "$proper_name$Assyria",
-          "until",
+          "$finish",
           "today.",
         ],
       },
