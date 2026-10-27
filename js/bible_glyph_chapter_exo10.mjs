@@ -667,7 +667,7 @@ export function bible_glyph_chapter_exo10() {
           "into",
           "a",
           "very",
-          "strong",
+          "$might+up_arrow",
           "$sea",
           "$wind,",
           "which",
