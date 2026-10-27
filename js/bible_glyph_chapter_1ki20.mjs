@@ -1480,7 +1480,7 @@ export function bible_glyph_chapter_1ki20() {
           "for",
           "his",
           "$person_other,",
-          "or",
+          "$shuffle",
           "you",
           "will",
           "weigh",
