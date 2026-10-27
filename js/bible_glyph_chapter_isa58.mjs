@@ -119,7 +119,7 @@ export function bible_glyph_chapter_isa58() {
           "$sun",
           "of",
           "your",
-          "fast",
+          "$eating+locked",
           "you",
           "do",
           "as",
