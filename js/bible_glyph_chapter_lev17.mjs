@@ -73,7 +73,7 @@ export function bible_glyph_chapter_lev17() {
           "or",
           "slaughters",
           "it",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$camp,",
         ],
