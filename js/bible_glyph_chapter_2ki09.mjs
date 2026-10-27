@@ -678,7 +678,7 @@ export function bible_glyph_chapter_2ki09() {
           "And",
           "the",
           "watchman",
-          "reported,",
+          "$newspaper,",
           "$speech,",
           "The",
           "messenger",
