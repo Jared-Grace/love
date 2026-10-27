@@ -226,7 +226,7 @@ export function bible_glyph_chapter_gen17() {
           "$father+map,",
           '"You',
           "must",
-          "keep",
+          "$guard",
           "My",
           "$covenant,",
           "you",
