@@ -519,7 +519,7 @@ export function bible_glyph_chapter_jos06() {
           "After",
           "the",
           "seventh",
-          "time",
+          "$drum",
           "around,",
           "the",
           "$priest",
