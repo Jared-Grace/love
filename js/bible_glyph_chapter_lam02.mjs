@@ -555,7 +555,7 @@ export function bible_glyph_chapter_lam02() {
           "console",
           "you,",
           "O",
-          "Virgin",
+          "$girl+white_flower",
           "$woman",
           "of",
           "$proper_name$Zion?",
