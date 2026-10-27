@@ -687,7 +687,7 @@ export function bible_glyph_chapter_dan09() {
           "$hammer+doing!",
           "For",
           "Your",
-          "sake,",
+          "$right_arrow+toward,",
           "O",
           "my",
           "$heart_on_fire,",
