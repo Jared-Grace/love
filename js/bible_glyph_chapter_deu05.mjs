@@ -610,7 +610,7 @@ export function bible_glyph_chapter_deu05() {
           "and",
           "the",
           "deep",
-          "darkness,",
+          "$cloud+black_circle,",
           "in",
           "a",
           "loud",
