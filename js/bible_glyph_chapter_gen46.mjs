@@ -171,7 +171,7 @@ export function bible_glyph_chapter_gen46() {
           "the",
           "livestock",
           "and",
-          "possessions",
+          "$package+money_bag",
           "they",
           "had",
           "acquired",
