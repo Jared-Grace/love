@@ -556,7 +556,7 @@ export function bible_glyph_chapter_gen33() {
       {
         verse_number: 20,
         words: [
-          "There",
+          "$telescope",
           "he",
           "set",
           "up",
