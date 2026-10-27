@@ -574,7 +574,7 @@ export function bible_glyph_chapter_jer01() {
           "but",
           "will",
           "$no_entry",
-          "overcome",
+          "$might+doing",
           "you,",
           "since",
           "I",
