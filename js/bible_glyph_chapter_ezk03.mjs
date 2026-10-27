@@ -716,7 +716,7 @@ export function bible_glyph_chapter_ezk03() {
         verse_number: 22,
         words: [
           "And",
-          "there",
+          "$telescope",
           "the",
           "$hand",
           "of",
