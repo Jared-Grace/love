@@ -387,7 +387,7 @@ export function bible_glyph_chapter_zec14() {
           "$city+peace",
           "will",
           "dwell",
-          "securely.",
+          "$anchor+thing.",
         ],
       },
       {
