@@ -948,7 +948,7 @@ export function bible_glyph_chapter_jos07() {
           "and",
           "$sheep,",
           "his",
-          "tent",
+          "$tent",
           "and",
           "everything",
           "else",
