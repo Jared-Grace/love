@@ -561,7 +561,7 @@ export function bible_glyph_chapter_deu12() {
           "of",
           "the",
           "offerings",
-          "that",
+          "$back+flashlight",
           "you",
           "have",
           "vowed",
