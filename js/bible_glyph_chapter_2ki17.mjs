@@ -351,7 +351,7 @@ export function bible_glyph_chapter_2ki17() {
         words: [
           "They",
           "burned",
-          "incense",
+          "$incense+doing",
           "on",
           "all",
           "the",
