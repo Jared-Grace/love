@@ -173,7 +173,7 @@ export function bible_glyph_chapter_ezk47() {
           "measured",
           "off",
           "a",
-          "thousand",
+          "$ten+all",
           "cubits,",
           "but",
           "now",
