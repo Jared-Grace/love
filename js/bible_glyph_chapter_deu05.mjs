@@ -730,7 +730,7 @@ export function bible_glyph_chapter_deu05() {
           "will",
           "$eating",
           "us.",
-          "If",
+          "$traffic_light",
           "we",
           "$ear",
           "the",
