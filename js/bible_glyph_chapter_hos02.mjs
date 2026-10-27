@@ -263,7 +263,7 @@ export function bible_glyph_chapter_hos02() {
           "on",
           "her",
           "the",
-          "silver",
+          "$silver",
           "and",
           "gold",
           "which",
