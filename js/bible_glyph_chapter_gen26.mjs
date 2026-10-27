@@ -75,7 +75,7 @@ export function bible_glyph_chapter_gen26() {
       {
         verse_number: 3,
         words: [
-          "Stay",
+          "$luggage",
           "in",
           "this",
           "$earth",
