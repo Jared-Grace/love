@@ -159,7 +159,7 @@ export function bible_glyph_chapter_num25() {
           "$wrestling+heart_on_fire",
           "$footprints",
           "and",
-          "brought",
+          "$magnet+doing",
           "a",
           "$proper_name$Midianite",
           "woman",
