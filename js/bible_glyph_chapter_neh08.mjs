@@ -702,7 +702,7 @@ export function bible_glyph_chapter_neh08() {
           "the",
           "$party_popper",
           "for",
-          "seven",
+          "$seven",
           "$sun,",
           "and",
           "on",
