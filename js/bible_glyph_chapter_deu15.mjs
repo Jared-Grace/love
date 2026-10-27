@@ -332,7 +332,7 @@ export function bible_glyph_chapter_deu15() {
           "And",
           "because",
           "of",
-          "this",
+          "$flashlight",
           "the",
           "$i_am",
           "your",
