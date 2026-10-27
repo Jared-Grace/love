@@ -804,7 +804,7 @@ export function bible_glyph_chapter_2ch20() {
           "the",
           "$i_am",
           "set",
-          "ambushes",
+          "$ninja+hourglass_not_done+doing",
           "against",
           "the",
           "$son",
