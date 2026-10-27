@@ -577,7 +577,7 @@ export function bible_glyph_chapter_pro01() {
           "chose",
           "$no_entry",
           "to",
-          "fear",
+          "$fear",
           "the",
           "$i_am.",
         ],
