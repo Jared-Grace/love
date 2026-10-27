@@ -551,7 +551,7 @@ export function bible_glyph_chapter_1sa02() {
           "of",
           "the",
           "$i_am,",
-          "for",
+          "$pointing",
           "they",
           "were",
           "treating",
