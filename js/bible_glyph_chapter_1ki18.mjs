@@ -364,7 +364,7 @@ export function bible_glyph_chapter_1ki18() {
           "I",
           "$footprints",
           "and",
-          "tell",
+          "$newspaper",
           "$proper_name$Ahab",
           "and",
           "he",
