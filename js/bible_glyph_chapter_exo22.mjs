@@ -194,7 +194,7 @@ export function bible_glyph_chapter_exo22() {
           "$shuffle",
           "standing",
           "grain,",
-          "or",
+          "$shuffle",
           "the",
           "whole",
           "$field,",
