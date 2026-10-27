@@ -28,7 +28,7 @@ export function bible_glyph_chapter_psa110() {
           "My",
           "right",
           "hand",
-          "until",
+          "$finish",
           "I",
           "make",
           "Your",
