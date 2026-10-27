@@ -206,7 +206,7 @@ export function bible_glyph_chapter_lev16() {
           "$proper_name$Aaron",
           "is",
           "to",
-          "present",
+          "$magnet+doing",
           "the",
           "bull",
           "for",
