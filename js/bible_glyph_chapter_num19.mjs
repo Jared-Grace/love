@@ -26,7 +26,7 @@ export function bible_glyph_chapter_num19() {
       {
         verse_number: 2,
         words: [
-          "This",
+          "$flashlight",
           "is",
           "the",
           "$statute",
