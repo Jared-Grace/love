@@ -472,7 +472,7 @@ export function bible_glyph_chapter_lam01() {
           "my",
           "bones.",
           "He",
-          "spread",
+          "$folding_hand_fan",
           "a",
           "net",
           "for",
