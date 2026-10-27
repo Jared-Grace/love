@@ -528,7 +528,7 @@ export function bible_glyph_chapter_mal02() {
           "$heart_on_fire",
           "$seed.",
           "So",
-          "guard",
+          "$guard",
           "yourselves",
           "in",
           "your",
