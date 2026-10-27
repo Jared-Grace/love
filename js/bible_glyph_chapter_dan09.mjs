@@ -693,7 +693,7 @@ export function bible_glyph_chapter_dan09() {
           "$heart_on_fire,",
           "do",
           "$no_entry",
-          "delay,",
+          "$turtle+doing,",
           "because",
           "Your",
           "$city",
