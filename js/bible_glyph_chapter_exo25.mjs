@@ -85,7 +85,7 @@ export function bible_glyph_chapter_exo25() {
         verse_number: 5,
         words: [
           "$ram",
-          "skins",
+          "$cow_face+coat",
           "dyed",
           "red,",
           "fine",
