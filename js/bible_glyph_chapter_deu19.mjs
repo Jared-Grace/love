@@ -86,7 +86,7 @@ export function bible_glyph_chapter_deu19() {
           "and",
           "divide",
           "into",
-          "three",
+          "$three+doing",
           "regions",
           "the",
           "$earth",
