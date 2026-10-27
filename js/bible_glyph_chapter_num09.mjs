@@ -71,7 +71,7 @@ export function bible_glyph_chapter_num09() {
           "$flashlight",
           "$new_moon,",
           "at",
-          "twilight.",
+          "$sunset.",
           "You",
           "$hammer+doing",
           "it",
