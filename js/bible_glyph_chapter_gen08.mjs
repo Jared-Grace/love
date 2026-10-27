@@ -588,7 +588,7 @@ export function bible_glyph_chapter_gen08() {
           "again",
           "will",
           "I",
-          "curse",
+          "$balloon+speech+doing",
           "the",
           "ground",
           "because",
