@@ -44,7 +44,7 @@ export function bible_glyph_chapter_mic02() {
         verse_number: 2,
         words: [
           "They",
-          "covet",
+          "$heart_eyes+doing",
           "$field",
           "and",
           "seize",
