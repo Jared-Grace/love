@@ -885,7 +885,7 @@ export function bible_glyph_chapter_num15() {
       {
         verse_number: 31,
         words: [
-          "because",
+          "$pointing",
           "he",
           "has",
           "despised",
