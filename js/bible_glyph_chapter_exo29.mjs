@@ -1146,7 +1146,7 @@ export function bible_glyph_chapter_exo29() {
           "of",
           "$sparkle+thing,",
           "and",
-          "whatever",
+          "$all",
           "touches",
           "the",
           "$altar",
