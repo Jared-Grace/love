@@ -141,7 +141,7 @@ export function bible_glyph_chapter_lev27() {
           "one",
           "$new_moon",
           "$finish",
-          "five",
+          "$five",
           "$son",
           "of",
           "age,",
