@@ -230,7 +230,7 @@ export function bible_glyph_chapter_pro08() {
         verse_number: 13,
         words: [
           "To",
-          "fear",
+          "$fear",
           "the",
           "$i_am",
           "is",
