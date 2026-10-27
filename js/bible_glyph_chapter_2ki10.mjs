@@ -18,7 +18,7 @@ export function bible_glyph_chapter_2ki10() {
           "Now",
           "$proper_name$Ahab",
           "had",
-          "seventy",
+          "$seven+zero",
           "$son",
           "in",
           "$guard+proper_name.",
