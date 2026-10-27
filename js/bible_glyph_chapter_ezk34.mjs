@@ -775,7 +775,7 @@ export function bible_glyph_chapter_ezk34() {
           "be",
           "a",
           "prince",
-          "among",
+          "$radio_button",
           "them.",
           "$me,",
           "the",
