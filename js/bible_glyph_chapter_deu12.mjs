@@ -447,7 +447,7 @@ export function bible_glyph_chapter_deu12() {
           "will",
           "$check_box",
           "in",
-          "one",
+          "$one",
           "of",
           "your",
           "tribal",
