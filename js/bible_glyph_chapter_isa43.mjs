@@ -462,7 +462,7 @@ export function bible_glyph_chapter_isa43() {
           "to",
           "$face_spiral",
           "and",
-          "bring",
+          "$walking+pointing_down",
           "them",
           "all",
           "down",
