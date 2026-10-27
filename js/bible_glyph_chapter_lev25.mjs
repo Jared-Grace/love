@@ -112,7 +112,7 @@ export function bible_glyph_chapter_lev25() {
           "$field,",
           "$no_entry",
           "to",
-          "prune",
+          "$scissors+vine+doing",
           "your",
           "$vineyard.",
         ],
