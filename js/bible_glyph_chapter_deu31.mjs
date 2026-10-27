@@ -546,7 +546,7 @@ export function bible_glyph_chapter_deu31() {
           "You",
           "will",
           "soon",
-          "rest",
+          "$bed+doing",
           "with",
           "your",
           "$father,",
