@@ -31,7 +31,7 @@ export function bible_glyph_chapter_gen15() {
           "Do",
           "$no_entry",
           "be",
-          "afraid,",
+          "$fear+doing,",
           "$proper_name$Abram.",
           "I",
           "am",
