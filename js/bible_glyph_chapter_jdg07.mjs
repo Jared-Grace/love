@@ -505,7 +505,7 @@ export function bible_glyph_chapter_jdg07() {
           "$footprints",
           "to",
           "the",
-          "tent",
+          "$tent",
           "and",
           "struck",
           "it",
