@@ -865,7 +865,7 @@ export function bible_glyph_chapter_gen18() {
           "account",
           "of",
           "the",
-          "forty,",
+          "$four+zero,",
           "I",
           "will",
           "$no_entry",
