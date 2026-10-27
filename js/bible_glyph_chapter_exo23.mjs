@@ -397,7 +397,7 @@ export function bible_glyph_chapter_exo23() {
           "Unleavened",
           "Bread.",
           "For",
-          "seven",
+          "$seven",
           "$sun",
           "you",
           "are",
