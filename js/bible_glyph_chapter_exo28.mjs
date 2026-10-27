@@ -1054,7 +1054,7 @@ export function bible_glyph_chapter_exo28() {
           "worn",
           "$pointing_up",
           "the",
-          "forehead",
+          "$face+top",
           "of",
           "Aaron,",
           "so",
