@@ -45,7 +45,7 @@ export function bible_glyph_chapter_gen40() {
           "$castle+kneeling,",
           "the",
           "chief",
-          "cupbearer",
+          "$cup+hands_giving+doer",
           "and",
           "the",
           "chief",
