@@ -888,7 +888,7 @@ export function bible_glyph_chapter_deu29() {
           "$nose+fire,",
           "$angry_face,",
           "and",
-          "great",
+          "$top",
           "$angry_face+collision,",
           "and",
           "He",
