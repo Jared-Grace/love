@@ -194,7 +194,7 @@ export function bible_glyph_chapter_isa35() {
           "the",
           "thirsty",
           "land",
-          "springs",
+          "$fountain+thing",
           "of",
           "$water.",
           "In",
