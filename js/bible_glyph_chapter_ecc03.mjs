@@ -397,7 +397,7 @@ export function bible_glyph_chapter_ecc03() {
           "$place",
           "of",
           "$scales+thing",
-          "there",
+          "$telescope",
           "is",
           "wickedness,",
           "and",
