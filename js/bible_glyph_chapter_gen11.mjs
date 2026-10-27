@@ -243,7 +243,7 @@ export function bible_glyph_chapter_gen11() {
           "is",
           "called",
           "$face_spiral,",
-          "for",
+          "$pointing",
           "there",
           "the",
           "$i_am",
