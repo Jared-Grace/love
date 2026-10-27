@@ -195,7 +195,7 @@ export function bible_glyph_chapter_exo32() {
           "they",
           "arose,",
           "$walking+pointing_up",
-          "burnt",
+          "$burnt_offering",
           "offerings,",
           "and",
           "presented",
