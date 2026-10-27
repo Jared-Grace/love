@@ -190,7 +190,7 @@ export function bible_glyph_chapter_lev23() {
           "you",
           "are",
           "to",
-          "present",
+          "$magnet+doing",
           "a",
           "food",
           "offering",
