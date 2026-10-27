@@ -36,7 +36,7 @@ export function bible_glyph_chapter_hos02() {
           "$mother,",
           "rebuke",
           "her,",
-          "for",
+          "$pointing",
           "she",
           "is",
           "$no_entry",
