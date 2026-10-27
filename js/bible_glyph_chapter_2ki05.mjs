@@ -88,7 +88,7 @@ export function bible_glyph_chapter_2ki05() {
           "she",
           "was",
           "serving",
-          "Naaman",
+          "$smile+describing+proper_name",
           "$woman.",
         ],
       },
