@@ -230,7 +230,7 @@ export function bible_glyph_chapter_neh08() {
           "with",
           "their",
           "$hand",
-          "uplifted.",
+          "$hand+pointing_up+thing.",
           "Then",
           "they",
           "$bowing",
