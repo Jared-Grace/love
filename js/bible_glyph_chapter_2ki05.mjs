@@ -26,7 +26,7 @@ export function bible_glyph_chapter_2ki05() {
           "$proper_name$Aram,",
           "was",
           "a",
-          "great",
+          "$top",
           "$man_beard",
           "in",
           "his",
