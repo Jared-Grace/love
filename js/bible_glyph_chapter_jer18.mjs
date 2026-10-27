@@ -594,7 +594,7 @@ export function bible_glyph_chapter_jer18() {
           "pit",
           "for",
           "me.",
-          "Remember",
+          "$reminder_ribbon",
           "how",
           "I",
           "stood",
