@@ -219,7 +219,7 @@ export function bible_glyph_chapter_exo19() {
           "$palm_down",
           "$face",
           "them",
-          "all",
+          "$all",
           "these",
           "$speech",
           "that",
