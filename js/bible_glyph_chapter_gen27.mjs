@@ -1094,7 +1094,7 @@ export function bible_glyph_chapter_gen27() {
           "and",
           "new",
           "$wine.",
-          "What",
+          "$flashlight+question",
           "is",
           "left",
           "that",
