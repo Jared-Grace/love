@@ -379,7 +379,7 @@ export function bible_glyph_chapter_num32() {
           "$wilderness",
           "$four+zero",
           "$year,",
-          "until",
+          "$finish",
           "the",
           "whole",
           "generation",
