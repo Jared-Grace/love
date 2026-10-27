@@ -702,7 +702,7 @@ export function bible_glyph_chapter_jer29() {
           "who",
           "are",
           "prophesying",
-          "lies",
+          "$lying_face",
           "to",
           "you",
           "in",
