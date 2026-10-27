@@ -1107,7 +1107,7 @@ export function bible_glyph_chapter_1sa17() {
           "$speech,",
           "The",
           "$i_am,",
-          "who",
+          "$back+flashlight",
           "delivered",
           "me",
           "from",
