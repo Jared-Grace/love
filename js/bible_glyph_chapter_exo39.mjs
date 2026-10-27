@@ -513,7 +513,7 @@ export function bible_glyph_chapter_exo39() {
           "bottom",
           "of",
           "the",
-          "two",
+          "$two",
           "shoulder",
           "pieces",
           "of",
