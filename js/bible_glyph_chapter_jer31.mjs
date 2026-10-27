@@ -418,7 +418,7 @@ export function bible_glyph_chapter_jer31() {
           "like",
           "a",
           "well",
-          "watered",
+          "$cup_with_straw+describing",
           "$garden,",
           "and",
           "$no_entry",
