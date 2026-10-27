@@ -187,7 +187,7 @@ export function bible_glyph_chapter_lev10() {
           "LORD",
           "will",
           "be",
-          "angry",
+          "$angry_face+collision+doing",
           "with",
           "the",
           "$all",
