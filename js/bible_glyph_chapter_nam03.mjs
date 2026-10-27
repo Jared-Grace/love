@@ -83,7 +83,7 @@ export function bible_glyph_chapter_nam03() {
           "because",
           "of",
           "the",
-          "many",
+          "$multiply+thing",
           "harlotries",
           "of",
           "the",
