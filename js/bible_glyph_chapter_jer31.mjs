@@ -979,7 +979,7 @@ export function bible_glyph_chapter_jer31() {
       {
         verse_number: 30,
         words: [
-          "Instead,",
+          "$pointing,",
           "$man_beard",
           "will",
           "$skull+doing",
