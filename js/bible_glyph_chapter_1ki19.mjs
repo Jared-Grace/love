@@ -373,7 +373,7 @@ export function bible_glyph_chapter_1ki19() {
           "$face",
           "the",
           "$i_am.",
-          "Behold,",
+          "$exclamation,",
           "the",
           "$i_am",
           "is",
