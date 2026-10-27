@@ -1102,7 +1102,7 @@ export function bible_glyph_chapter_jer32() {
         words: [
           "because",
           "of",
-          "all",
+          "$all",
           "the",
           "$thumbs_down",
           "the",
