@@ -337,7 +337,7 @@ export function bible_glyph_chapter_1sa25() {
           "$proper_name$Jesse?",
           "These",
           "$sun",
-          "many",
+          "$multiply+crowd+doing",
           "$kneeling",
           "are",
           "breaking",
