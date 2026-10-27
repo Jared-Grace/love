@@ -60,7 +60,7 @@ export function bible_glyph_chapter_gen11() {
           "$man_beard",
           "$toward",
           "$person+sheep,",
-          "Come,",
+          "$hands_giving+up_arrow,",
           "let",
           "us",
           "make",
