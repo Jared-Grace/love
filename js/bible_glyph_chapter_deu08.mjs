@@ -285,7 +285,7 @@ export function bible_glyph_chapter_deu08() {
           "where",
           "you",
           "will",
-          "lack",
+          "$empty_nest+doing",
           "$no_entry,",
           "an",
           "$earth",
