@@ -865,7 +865,7 @@ export function bible_glyph_chapter_deu29() {
           "$footprints",
           "upon",
           "it",
-          "every",
+          "$all",
           "curse",
           "written",
           "in",
