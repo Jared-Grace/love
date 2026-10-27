@@ -280,7 +280,7 @@ export function bible_glyph_chapter_exo25() {
           "$hammer+doing",
           "$one+person",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree",
           "and",
           "overlay",
