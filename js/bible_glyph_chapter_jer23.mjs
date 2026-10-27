@@ -485,7 +485,7 @@ export function bible_glyph_chapter_jer23() {
           "My",
           "$family",
           "$wrestling+heart_on_fire",
-          "astray.",
+          "$shaking_face.",
         ],
       },
       {
