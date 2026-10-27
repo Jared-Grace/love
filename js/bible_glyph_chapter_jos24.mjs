@@ -936,7 +936,7 @@ export function bible_glyph_chapter_jos24() {
           "if",
           "you",
           "ever",
-          "deny",
+          "$lying_face+doing",
           "your",
           "$heart_on_fire.",
         ],
