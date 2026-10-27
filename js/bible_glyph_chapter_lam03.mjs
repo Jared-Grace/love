@@ -657,7 +657,7 @@ export function bible_glyph_chapter_lam03() {
       {
         verse_number: 37,
         words: [
-          "Who",
+          "$person+question",
           "has",
           "$speech",
           "and",
