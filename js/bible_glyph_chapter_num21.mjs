@@ -24,7 +24,7 @@ export function bible_glyph_chapter_num21() {
           "the",
           "$compass+down_arrow,",
           "$ear",
-          "that",
+          "$pointing",
           "$wrestling+heart_on_fire",
           "was",
           "$footprints",
