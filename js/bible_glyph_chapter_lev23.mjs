@@ -518,7 +518,7 @@ export function bible_glyph_chapter_lev23() {
           "of",
           "a",
           "year,",
-          "one",
+          "$one",
           "young",
           "$bull,",
           "a",
