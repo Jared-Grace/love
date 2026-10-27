@@ -755,7 +755,7 @@ export function bible_glyph_chapter_lev07() {
           "offerings",
           "$i_am,",
           "the",
-          "fat",
+          "$bacon",
           "together",
           "with",
           "the",
