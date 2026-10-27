@@ -287,7 +287,7 @@ export function bible_glyph_chapter_lev25() {
           "$year",
           "and",
           "proclaim",
-          "liberty",
+          "$broken_chain+describing",
           "in",
           "the",
           "$earth",
