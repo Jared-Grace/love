@@ -775,7 +775,7 @@ export function bible_glyph_chapter_gen30() {
         words: [
           "Laban",
           "$speech,",
-          "What",
+          "$flashlight+question",
           "shall",
           "I",
           "$hands_giving",
