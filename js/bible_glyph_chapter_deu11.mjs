@@ -772,7 +772,7 @@ export function bible_glyph_chapter_deu11() {
           "will",
           "dispossess",
           "$map",
-          "greater",
+          "$top",
           "and",
           "stronger",
           "than",
