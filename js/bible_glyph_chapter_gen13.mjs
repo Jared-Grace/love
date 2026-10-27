@@ -372,7 +372,7 @@ export function bible_glyph_chapter_gen13() {
           "were",
           "$thumbs_down,",
           "$bow+doer",
-          "greatly",
+          "$double_exclamation",
           "against",
           "the",
           "$i_am.",
