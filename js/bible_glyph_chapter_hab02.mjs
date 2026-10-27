@@ -608,7 +608,7 @@ export function bible_glyph_chapter_hab02() {
           "with",
           "$gold",
           "and",
-          "silver,",
+          "$silver,",
           "yet",
           "there",
           "is",
