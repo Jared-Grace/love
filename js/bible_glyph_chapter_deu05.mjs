@@ -724,7 +724,7 @@ export function bible_glyph_chapter_deu05() {
           "we",
           "$skull+doing?",
           "$pointing",
-          "this",
+          "$flashlight",
           "$top",
           "$fire",
           "will",
