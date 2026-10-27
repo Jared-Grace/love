@@ -178,7 +178,7 @@ export function bible_glyph_chapter_nam01() {
           "burning",
           "anger?",
           "His",
-          "wrath",
+          "$angry_face",
           "is",
           "poured",
           "out",
