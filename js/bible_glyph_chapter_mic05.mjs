@@ -129,7 +129,7 @@ export function bible_glyph_chapter_mic05() {
           "flock",
           "in",
           "the",
-          "strength",
+          "$mechanical_arm",
           "of",
           "the",
           "$i_am,",
