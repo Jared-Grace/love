@@ -276,7 +276,7 @@ export function bible_glyph_chapter_lev22() {
           "$skull+doing",
           "$pointing",
           "they",
-          "profane",
+          "$sewing_needle",
           "it.",
           "I",
           "am",
