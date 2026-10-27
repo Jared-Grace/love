@@ -339,7 +339,7 @@ export function bible_glyph_chapter_hab02() {
           "the",
           "stones",
           "will",
-          "cry",
+          "$loudspeaker+mouth",
           "out",
           "from",
           "the",
