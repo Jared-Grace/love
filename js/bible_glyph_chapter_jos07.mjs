@@ -944,7 +944,7 @@ export function bible_glyph_chapter_jos07() {
           "his",
           "oxen",
           "and",
-          "donkeys",
+          "$donkey",
           "and",
           "$sheep,",
           "his",
