@@ -753,7 +753,7 @@ export function bible_glyph_chapter_jer17() {
           "or",
           "$hand_receiving",
           "My",
-          "discipline.",
+          "$teacher+exclamation.",
         ],
       },
       {
