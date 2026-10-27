@@ -947,7 +947,7 @@ export function bible_glyph_chapter_1sa20() {
         verse_number: 28,
         words: [
           "$i_am+hands_giving",
-          "answered,",
+          "$speech+turn_back,",
           "$two_hearts+proper_name",
           "urgently",
           "asked",
