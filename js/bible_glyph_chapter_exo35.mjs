@@ -356,7 +356,7 @@ export function bible_glyph_chapter_exo35() {
           "with",
           "its",
           "$bronze",
-          "grate,",
+          "$net+bronze,",
           "its",
           "poles",
           "and",
