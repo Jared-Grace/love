@@ -941,7 +941,7 @@ export function bible_glyph_chapter_jer31() {
           "and",
           "to",
           "$sprout+down_arrow+doing,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
