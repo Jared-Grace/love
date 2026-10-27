@@ -244,7 +244,7 @@ export function bible_glyph_chapter_isa56() {
           "will",
           "$footprints",
           "them",
-          "to",
+          "$toward",
           "My",
           "$sparkle+thing",
           "$mountain",
