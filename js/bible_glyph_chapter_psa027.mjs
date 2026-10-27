@@ -343,7 +343,7 @@ export function bible_glyph_chapter_psa027() {
           "up",
           "against",
           "me,",
-          "breathing",
+          "$face_exhaling+thing",
           "out",
           "violence.",
         ],
