@@ -623,7 +623,7 @@ export function bible_glyph_chapter_num06() {
           "and",
           "$one",
           "$flatbread",
-          "wafer,",
+          "$flatbread+oil,",
           "and",
           "$hands_giving",
           "them",
