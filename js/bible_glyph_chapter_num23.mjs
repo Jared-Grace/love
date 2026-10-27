@@ -395,7 +395,7 @@ export function bible_glyph_chapter_num23() {
           "them.",
           "And",
           "from",
-          "there",
+          "$telescope",
           "$speech+kitchen_knife+doing",
           "them",
           "for",
