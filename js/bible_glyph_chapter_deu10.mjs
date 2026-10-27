@@ -349,7 +349,7 @@ export function bible_glyph_chapter_deu10() {
           "to",
           "me",
           "that",
-          "time",
+          "$drum",
           "also,",
           "and",
           "was",
