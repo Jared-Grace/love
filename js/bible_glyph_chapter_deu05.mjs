@@ -288,7 +288,7 @@ export function bible_glyph_chapter_deu05() {
           "$heart_red+doing",
           "Me",
           "and",
-          "keep",
+          "$guard",
           "My",
           "$scroll.",
         ],
