@@ -297,7 +297,7 @@ export function bible_glyph_chapter_psa019() {
           "$joystick",
           "over",
           "me.",
-          "Then",
+          "$telescope+clock",
           "I",
           "will",
           "be",
