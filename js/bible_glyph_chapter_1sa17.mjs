@@ -835,7 +835,7 @@ export function bible_glyph_chapter_1sa17() {
           "the",
           "men,",
           "his",
-          "anger",
+          "$nose+fire",
           "$angry_face+doing",
           "against",
           "$two_hearts+proper_name.",
