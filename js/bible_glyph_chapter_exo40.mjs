@@ -437,7 +437,7 @@ export function bible_glyph_chapter_exo40() {
           "covering",
           "over",
           "the",
-          "tent,",
+          "$tent,",
           "just",
           "as",
           "the",
