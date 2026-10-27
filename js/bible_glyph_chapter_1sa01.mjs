@@ -425,7 +425,7 @@ export function bible_glyph_chapter_1sa01() {
           "$speech",
           "to",
           "her,",
-          "How",
+          "$finish",
           "long",
           "will",
           "you",
