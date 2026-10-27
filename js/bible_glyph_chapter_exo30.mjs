@@ -763,7 +763,7 @@ export function bible_glyph_chapter_exo30() {
           "$sparkle+thing",
           "of",
           "$sparkle+thing.",
-          "Whatever",
+          "$all",
           "touches",
           "them",
           "shall",
