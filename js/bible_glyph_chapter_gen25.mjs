@@ -384,7 +384,7 @@ export function bible_glyph_chapter_gen25() {
           "in",
           "hostility",
           "toward",
-          "all",
+          "$all",
           "their",
           "$brother.",
         ],
