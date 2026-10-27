@@ -608,7 +608,7 @@ export function bible_glyph_chapter_num23() {
           "He",
           "$eye",
           "$no_entry",
-          "trouble",
+          "$hot_face",
           "for",
           "$wrestling+heart_on_fire.",
           "The",
