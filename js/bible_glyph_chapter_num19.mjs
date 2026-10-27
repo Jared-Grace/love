@@ -55,7 +55,7 @@ export function bible_glyph_chapter_num19() {
           "$back+flashlight",
           "has",
           "no",
-          "defect",
+          "$person+black_circle",
           "and",
           "has",
           "$no_entry",
