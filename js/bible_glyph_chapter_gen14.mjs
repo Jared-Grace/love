@@ -666,7 +666,7 @@ export function bible_glyph_chapter_gen14() {
           "I",
           "made",
           "$proper_name$Abram",
-          "rich.",
+          "$money_bag+doing.",
         ],
       },
       {
