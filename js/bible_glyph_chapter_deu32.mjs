@@ -663,7 +663,7 @@ export function bible_glyph_chapter_deu32() {
           "be",
           "$famine+weary_face",
           "from",
-          "hunger",
+          "$famine",
           "and",
           "ravaged",
           "by",
