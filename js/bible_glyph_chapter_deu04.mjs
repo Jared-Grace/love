@@ -268,7 +268,7 @@ export function bible_glyph_chapter_deu04() {
           "what",
           "$map",
           "is",
-          "great",
+          "$top",
           "enough",
           "to",
           "have",
