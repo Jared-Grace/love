@@ -168,7 +168,7 @@ export function bible_glyph_chapter_neh09() {
           "$heart_on_fire",
           "$tray_out",
           "$hourglass",
-          "to",
+          "$finish",
           "$hourglass.",
           "Blessed",
           "be",
