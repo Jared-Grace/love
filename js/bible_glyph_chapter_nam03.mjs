@@ -43,7 +43,7 @@ export function bible_glyph_chapter_nam03() {
           "of",
           "the",
           "$wheel+counterclockwise_arrows_button,",
-          "galloping",
+          "$horse+dashing_away+doing",
           "$horse",
           "and",
           "bounding",
