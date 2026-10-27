@@ -517,7 +517,7 @@ export function bible_glyph_chapter_num22() {
           "will",
           "honor",
           "you",
-          "richly,",
+          "$double_exclamation,",
           "and",
           "whatever",
           "you",
