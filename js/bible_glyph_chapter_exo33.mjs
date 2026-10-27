@@ -484,7 +484,7 @@ export function bible_glyph_chapter_exo33() {
           "$eyes.",
           "$eye",
           "that",
-          "this",
+          "$flashlight",
           "$map",
           "is",
           "Your",
