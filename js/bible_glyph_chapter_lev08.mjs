@@ -565,7 +565,7 @@ export function bible_glyph_chapter_lev08() {
           "toe",
           "of",
           "his",
-          "right",
+          "$hand+right_arrow+describing",
           "$foot.",
         ],
       },
