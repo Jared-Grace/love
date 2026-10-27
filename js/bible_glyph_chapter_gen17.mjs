@@ -132,7 +132,7 @@ export function bible_glyph_chapter_gen17() {
           "make",
           "you",
           "exceedingly",
-          "fruitful;",
+          "$fruit;",
           "I",
           "will",
           "$hands_giving",
