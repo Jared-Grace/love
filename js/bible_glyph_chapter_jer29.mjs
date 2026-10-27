@@ -624,7 +624,7 @@ export function bible_glyph_chapter_jer29() {
           "$toward",
           "My",
           "$speech,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am,",
           "which",
