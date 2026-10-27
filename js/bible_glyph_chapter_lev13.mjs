@@ -1727,7 +1727,7 @@ export function bible_glyph_chapter_lev13() {
           "mildew",
           "has",
           "$no_entry",
-          "spread",
+          "$microbe+arrow_both_ways+doing",
           "in",
           "the",
           "$garment,",
