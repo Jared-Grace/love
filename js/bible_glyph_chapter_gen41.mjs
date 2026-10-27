@@ -1554,7 +1554,7 @@ export function bible_glyph_chapter_gen41() {
           "$i_am+plus,",
           "and",
           "$hammer+doing",
-          "whatever",
+          "$back+flashlight",
           "he",
           "$speech",
           'you."',
