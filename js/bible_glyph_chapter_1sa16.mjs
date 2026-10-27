@@ -499,7 +499,7 @@ export function bible_glyph_chapter_1sa16() {
           "$speech",
           "to",
           "him,",
-          "Surely",
+          "$exclamation",
           "a",
           "$wind",
           "of",
