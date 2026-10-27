@@ -155,7 +155,7 @@ export function bible_glyph_chapter_1ki17() {
           "$meat",
           "in",
           "the",
-          "morning",
+          "$morning",
           "and",
           "evening,",
           "and",
