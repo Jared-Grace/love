@@ -308,7 +308,7 @@ export function bible_glyph_chapter_pro16() {
           "When",
           "a",
           "$king",
-          "face",
+          "$face",
           "$light",
           "there",
           "is",
