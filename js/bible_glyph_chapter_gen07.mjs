@@ -207,7 +207,7 @@ export function bible_glyph_chapter_gen07() {
           "$water",
           "of",
           "the",
-          "flood.",
+          "$water_wave+earth.",
         ],
       },
       {
