@@ -311,7 +311,7 @@ export function bible_glyph_chapter_deu11() {
       {
         verse_number: 10,
         words: [
-          "For",
+          "$pointing",
           "the",
           "$earth",
           "that",
