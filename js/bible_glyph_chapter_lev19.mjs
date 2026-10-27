@@ -186,7 +186,7 @@ export function bible_glyph_chapter_lev19() {
           "$person_other",
           "must",
           "be",
-          "cut",
+          "$scissors",
           "off",
           "from",
           "his",
