@@ -69,7 +69,7 @@ export function bible_glyph_chapter_exo21() {
           "to",
           "leave",
           "alone.",
-          "If",
+          "$traffic_light",
           "he",
           "comes",
           "with",
