@@ -499,7 +499,7 @@ export function bible_glyph_chapter_pro04() {
           "fix",
           "your",
           "gaze",
-          "straight",
+          "$straight_ruler+thumbs_up+doing",
           "ahead.",
         ],
       },
