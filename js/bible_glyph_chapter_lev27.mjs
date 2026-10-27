@@ -833,7 +833,7 @@ export function bible_glyph_chapter_lev27() {
           "your",
           "$receipt",
           "and",
-          "add",
+          "$plus+doing",
           "a",
           "fifth",
           "of",
