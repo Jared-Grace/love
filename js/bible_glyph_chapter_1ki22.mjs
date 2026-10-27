@@ -900,7 +900,7 @@ export function bible_glyph_chapter_1ki22() {
           "$bread",
           "and",
           "$water",
-          "until",
+          "$finish",
           "I",
           "$footprints",
           "$peace.",
