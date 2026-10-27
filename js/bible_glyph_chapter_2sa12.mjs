@@ -721,7 +721,7 @@ export function bible_glyph_chapter_2sa12() {
           "$speech,",
           "What",
           "is",
-          "this",
+          "$flashlight",
           "you",
           "have",
           "$hammer+doing?",
