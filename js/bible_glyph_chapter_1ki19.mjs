@@ -217,7 +217,7 @@ export function bible_glyph_chapter_1ki19() {
         words: [
           "$turn_back",
           "a",
-          "second",
+          "$second_place",
           "time,",
           "the",
           "$angel",
