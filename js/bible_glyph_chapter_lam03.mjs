@@ -563,7 +563,7 @@ export function bible_glyph_chapter_lam03() {
           "$crown",
           "will",
           "$no_entry",
-          "cast",
+          "$thumbs_down+away+doing",
           "us",
           "off",
           "$hourglass.",
