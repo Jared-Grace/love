@@ -162,7 +162,7 @@ export function bible_glyph_chapter_gen08() {
           "$four+zero",
           "$sun",
           "$proper_name$Noah",
-          "opened",
+          "$unlocked",
           "the",
           "window",
           "he",
