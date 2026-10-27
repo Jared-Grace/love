@@ -421,7 +421,7 @@ export function bible_glyph_chapter_zep02() {
           "a",
           "$astonished+thing,",
           "as",
-          "dry",
+          "$sun+desert",
           "as",
           "a",
           "$wilderness.",
