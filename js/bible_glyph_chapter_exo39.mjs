@@ -332,7 +332,7 @@ export function bible_glyph_chapter_exo39() {
           "in",
           "$gold",
           "$yarn+gem_stone",
-          "settings.",
+          "$battery+gem_stone.",
         ],
       },
       {
