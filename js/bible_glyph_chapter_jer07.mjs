@@ -301,7 +301,7 @@ export function bible_glyph_chapter_jer07() {
           "in",
           "your",
           "$eyes?",
-          "Yes,",
+          "$exclamation,",
           "$me",
           "$plus",
           "have",
