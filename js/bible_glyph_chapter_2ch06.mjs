@@ -1529,7 +1529,7 @@ export function bible_glyph_chapter_2ch06() {
           "$you",
           "and",
           "the",
-          "ark",
+          "$ark",
           "of",
           "Your",
           "might.",
