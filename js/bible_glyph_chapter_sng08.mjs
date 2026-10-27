@@ -32,7 +32,7 @@ export function bible_glyph_chapter_sng08() {
           "I",
           "found",
           "you",
-          "outdoors,",
+          "$sun_behind_small_cloud,",
           "I",
           "would",
           "kiss",
