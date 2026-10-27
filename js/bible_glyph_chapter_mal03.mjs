@@ -507,7 +507,7 @@ export function bible_glyph_chapter_mal03() {
           "$me",
           "call",
           "the",
-          "arrogant",
+          "$peacock+fire+describing",
           "$gift+smile+doing.",
           "Not",
           "only",
