@@ -57,7 +57,7 @@ export function bible_glyph_chapter_num10() {
           "you",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "$tent",
