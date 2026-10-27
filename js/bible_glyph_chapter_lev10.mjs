@@ -285,7 +285,7 @@ export function bible_glyph_chapter_lev10() {
           "and",
           "$brain+arrow_both_ways",
           "the",
-          "unclean",
+          "$soap+no_entry",
           "and",
           "the",
           "clean.",
