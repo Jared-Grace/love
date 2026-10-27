@@ -1080,7 +1080,7 @@ export function bible_glyph_chapter_exo12() {
           "to",
           "$hand_sending",
           "them",
-          "quickly",
+          "$fast_forward+doing",
           "$tray_out",
           "the",
           "$earth.",
