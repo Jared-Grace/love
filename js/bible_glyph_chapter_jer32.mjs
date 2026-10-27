@@ -1313,7 +1313,7 @@ export function bible_glyph_chapter_jer32() {
           "$nose+fire",
           "and",
           "great",
-          "wrath,",
+          "$angry_face+collision,",
           "and",
           "I",
           "will",
