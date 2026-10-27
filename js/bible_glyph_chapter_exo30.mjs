@@ -653,7 +653,7 @@ export function bible_glyph_chapter_exo30() {
           "to",
           "the",
           "$sparkle+thing",
-          "shekel,",
+          "$coin,",
           "and",
           "a",
           "hin",
