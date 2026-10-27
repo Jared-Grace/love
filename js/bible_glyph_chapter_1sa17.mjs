@@ -1399,7 +1399,7 @@ export function bible_glyph_chapter_1sa17() {
       {
         verse_number: 46,
         words: [
-          "This",
+          "$flashlight",
           "$sun",
           "the",
           "$i_am",
