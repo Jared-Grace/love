@@ -1216,7 +1216,7 @@ export function bible_glyph_chapter_deu32() {
           "will",
           "cleanse",
           "His",
-          "land",
+          "$brown_square",
           "and",
           "His",
           "$family.",
