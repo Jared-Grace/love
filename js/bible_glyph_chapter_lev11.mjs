@@ -838,7 +838,7 @@ export function bible_glyph_chapter_lev11() {
           "$person+pointing_down",
           "will",
           "be",
-          "unclean.",
+          "$soap+no_entry.",
           "If",
           "it",
           "is",
