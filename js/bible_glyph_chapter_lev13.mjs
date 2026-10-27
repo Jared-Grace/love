@@ -1389,7 +1389,7 @@ export function bible_glyph_chapter_lev13() {
           "$pointing_back",
           "is",
           "still",
-          "clean.",
+          "$soap+describing.",
         ],
       },
       {
