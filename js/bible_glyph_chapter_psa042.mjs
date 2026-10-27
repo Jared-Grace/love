@@ -309,7 +309,7 @@ export function bible_glyph_chapter_psa042() {
       {
         verse_number: 11,
         words: [
-          "Why",
+          "$flashlight+question",
           "are",
           "you",
           "downcast,",
