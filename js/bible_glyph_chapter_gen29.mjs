@@ -898,7 +898,7 @@ export function bible_glyph_chapter_gen29() {
           "and",
           "she",
           "$speech,",
-          "Now",
+          "$watch",
           "at",
           "last",
           "my",
