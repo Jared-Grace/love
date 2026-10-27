@@ -583,7 +583,7 @@ export function bible_glyph_chapter_lev16() {
           "them",
           "in",
           "the",
-          "midst",
+          "$radio_button",
           "of",
           "their",
           "impurities.",
