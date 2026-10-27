@@ -772,7 +772,7 @@ export function bible_glyph_chapter_deu29() {
           "$earth?",
           "Why",
           "$flashlight",
-          "great",
+          "$top",
           "$angry_face+fire",
           "of",
           "$nose+fire?",
