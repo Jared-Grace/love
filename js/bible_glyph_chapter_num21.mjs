@@ -42,7 +42,7 @@ export function bible_glyph_chapter_num21() {
           "of",
           "them",
           "as",
-          "prisoners.",
+          "$chains+person.",
         ],
       },
       {
