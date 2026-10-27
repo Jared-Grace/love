@@ -552,7 +552,7 @@ export function bible_glyph_chapter_1sa08() {
         words: [
           "so",
           "that",
-          "we",
+          "$me",
           "will",
           "$link",
           "like",
