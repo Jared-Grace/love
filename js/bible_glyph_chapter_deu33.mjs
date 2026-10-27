@@ -394,7 +394,7 @@ export function bible_glyph_chapter_deu33() {
           "waters",
           "that",
           "$sheep+down_arrow+doing",
-          "beneath,",
+          "$down_arrow,",
         ],
       },
       {
