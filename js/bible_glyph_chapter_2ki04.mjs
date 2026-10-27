@@ -406,7 +406,7 @@ export function bible_glyph_chapter_2ki04() {
           "to",
           "all",
           "this",
-          "trouble",
+          "$fear+vibration_mode+doing",
           "for",
           "us.",
           "What",
