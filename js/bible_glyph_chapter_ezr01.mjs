@@ -210,7 +210,7 @@ export function bible_glyph_chapter_ezr01() {
           "$heart_on_fire",
           "had",
           "stirred,",
-          "prepared",
+          "$person+pointing_up",
           "to",
           "$walking+pointing_up",
           "up",
