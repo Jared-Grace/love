@@ -1497,7 +1497,7 @@ export function bible_glyph_chapter_lev25() {
           "$hand,",
           "he",
           "may",
-          "redeem",
+          "$currency_exchange",
           "himself.",
         ],
       },
