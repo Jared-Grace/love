@@ -1001,7 +1001,7 @@ export function bible_glyph_chapter_ezk34() {
           "are",
           "My",
           "$family,",
-          "declares",
+          "$microphone",
           "the",
           "$crown",
           "$i_am.",
