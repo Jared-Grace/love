@@ -2281,7 +2281,7 @@ export function bible_glyph_chapter_1ki08() {
           "$clamp+proper_name,",
           "kept",
           "the",
-          "feast",
+          "$party_popper",
           "before",
           "the",
           "$i_am",
