@@ -41,7 +41,7 @@ export function bible_glyph_chapter_exo23() {
           "You",
           "shall",
           "$no_entry",
-          "follow",
+          "$link",
           "the",
           "crowd",
           "in",
