@@ -295,7 +295,7 @@ export function bible_glyph_chapter_deu19() {
           "if",
           "you",
           "carefully",
-          "keep",
+          "$guard",
           "all",
           "these",
           "$scroll",
