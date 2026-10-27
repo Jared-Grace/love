@@ -1268,7 +1268,7 @@ export function bible_glyph_chapter_num14() {
           "$flashlight+question",
           "are",
           "$you",
-          "transgressing",
+          "$bridge",
           "the",
           "commandment",
           "of",
