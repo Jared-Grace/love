@@ -478,7 +478,7 @@ export function bible_glyph_chapter_gen09() {
           "So",
           "$heart_on_fire",
           "$speech",
-          "to",
+          "$toward",
           "$proper_name$Noah,",
           "This",
           "is",
