@@ -539,7 +539,7 @@ export function bible_glyph_chapter_mal01() {
           "to",
           "the",
           "$crown.",
-          "For",
+          "$pointing",
           "I",
           "am",
           "a",
