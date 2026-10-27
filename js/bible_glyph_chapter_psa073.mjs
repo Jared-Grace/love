@@ -495,7 +495,7 @@ export function bible_glyph_chapter_psa073() {
           "$wilted_flower;",
           "You",
           "$scissors+no_entry+doing",
-          "all",
+          "$all",
           "who",
           "are",
           "unfaithful",
