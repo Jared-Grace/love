@@ -68,7 +68,7 @@ export function bible_glyph_chapter_2ch34() {
           "or",
           "to",
           "the",
-          "left.",
+          "$hand+away.",
         ],
       },
       {
