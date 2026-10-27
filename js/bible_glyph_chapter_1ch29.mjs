@@ -853,7 +853,7 @@ export function bible_glyph_chapter_1ch29() {
           "So",
           "$peace+proper_name",
           "$person+house",
-          "on",
+          "$pointing_up",
           "the",
           "$throne",
           "of",
