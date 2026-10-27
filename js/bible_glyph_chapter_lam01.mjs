@@ -770,7 +770,7 @@ export function bible_glyph_chapter_lam01() {
           "to",
           "$hug+doing",
           "me.",
-          "All",
+          "$all",
           "my",
           "enemies",
           "have",
