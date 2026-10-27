@@ -344,7 +344,7 @@ export function bible_glyph_chapter_jdg06() {
           "$wheat",
           "in",
           "a",
-          "winepress",
+          "$grapes+foot+amphora",
           "to",
           "hide",
           "it",
