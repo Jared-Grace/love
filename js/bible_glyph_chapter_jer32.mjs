@@ -1567,7 +1567,7 @@ export function bible_glyph_chapter_jer32() {
           "and",
           "the",
           "$compass+down_arrow,",
-          "because",
+          "$pointing",
           "I",
           "will",
           "$turn_back",
