@@ -963,7 +963,7 @@ export function bible_glyph_chapter_1ki22() {
           "of",
           "$wrestling+heart_on_fire",
           "$speech",
-          "to",
+          "$toward",
           "$i_am+scales,",
           "I",
           "will",
