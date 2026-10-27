@@ -669,7 +669,7 @@ export function bible_glyph_chapter_lev21() {
           "$son,",
           "and",
           "to",
-          "all",
+          "$all",
           "the",
           "$son",
           "of",
