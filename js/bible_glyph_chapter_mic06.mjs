@@ -379,7 +379,7 @@ export function bible_glyph_chapter_mic06() {
       {
         verse_number: 13,
         words: [
-          "Therefore",
+          "$plus",
           "I",
           "am",
           "striking",
