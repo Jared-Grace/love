@@ -72,7 +72,7 @@ export function bible_glyph_chapter_exo25() {
           "and",
           "$purple_circle",
           "and",
-          "scarlet",
+          "$worm",
           "yarn,",
           "fine",
           "linen",
