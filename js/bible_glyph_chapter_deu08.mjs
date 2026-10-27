@@ -292,7 +292,7 @@ export function bible_glyph_chapter_deu08() {
           "whose",
           "rocks",
           "are",
-          "iron",
+          "$iron",
           "and",
           "whose",
           "hills",
