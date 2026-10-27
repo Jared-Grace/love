@@ -540,7 +540,7 @@ export function bible_glyph_chapter_exo19() {
           "in",
           "the",
           "camp",
-          "trembled.",
+          "$fear+vibration_mode+doing.",
         ],
       },
       {
