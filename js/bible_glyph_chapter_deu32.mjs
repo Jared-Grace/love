@@ -1345,7 +1345,7 @@ export function bible_glyph_chapter_deu32() {
         words: [
           "On",
           "that",
-          "same",
+          "$bone",
           "$sun",
           "the",
           "$i_am",
