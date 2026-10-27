@@ -748,7 +748,7 @@ export function bible_glyph_chapter_exo21() {
           "tooth",
           "of",
           "his",
-          "maidservant,",
+          "$broom,",
           "he",
           "must",
           "let",
