@@ -462,7 +462,7 @@ export function bible_glyph_chapter_zep01() {
           "mighty",
           "will",
           "be",
-          "bitter.",
+          "$lemon.",
         ],
       },
       {
