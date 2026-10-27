@@ -365,7 +365,7 @@ export function bible_glyph_chapter_isa07() {
           "I",
           "will",
           "$no_entry",
-          "test",
+          "$test_tube",
           "the",
           '$i_am."',
         ],
