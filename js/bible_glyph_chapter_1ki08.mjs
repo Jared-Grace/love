@@ -305,7 +305,7 @@ export function bible_glyph_chapter_1ki08() {
           "made",
           "a",
           "covenant",
-          "with",
+          "$linked_paperclips",
           "the",
           "$son",
           "after",
