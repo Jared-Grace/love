@@ -813,7 +813,7 @@ export function bible_glyph_chapter_gen29() {
         words: [
           "And",
           "Leah",
-          "conceived",
+          "$pregnant_woman+doing",
           "and",
           "gave",
           "birth",
