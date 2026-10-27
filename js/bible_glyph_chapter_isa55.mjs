@@ -380,7 +380,7 @@ export function bible_glyph_chapter_isa55() {
           "will",
           "burst",
           "into",
-          "song",
+          "$partying_face+thing",
           "before",
           "you,",
           "and",
