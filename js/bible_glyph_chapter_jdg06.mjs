@@ -558,7 +558,7 @@ export function bible_glyph_chapter_jdg06() {
       {
         verse_number: 18,
         words: [
-          "Please",
+          "$pleading",
           "do",
           "$no_entry",
           "depart",
