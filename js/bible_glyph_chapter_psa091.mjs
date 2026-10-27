@@ -227,7 +227,7 @@ export function bible_glyph_chapter_psa091() {
           "will",
           "approach",
           "your",
-          "tent.",
+          "$tent.",
         ],
       },
       {
