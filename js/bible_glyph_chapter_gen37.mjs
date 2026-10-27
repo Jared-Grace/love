@@ -827,7 +827,7 @@ export function bible_glyph_chapter_gen37() {
           "sold",
           "him",
           "for",
-          "twenty",
+          "$two+zero",
           "shekels",
           "of",
           "silver",
