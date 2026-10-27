@@ -129,7 +129,7 @@ export function bible_glyph_chapter_jer01() {
           "$lightbulb",
           "you,",
           "and",
-          "before",
+          "$clock+back",
           "you",
           "were",
           "born",
