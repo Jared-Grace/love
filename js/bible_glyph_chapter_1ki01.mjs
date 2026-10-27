@@ -880,7 +880,7 @@ export function bible_glyph_chapter_1ki01() {
           "$speech,",
           "$waving_hand",
           "in",
-          "Bathsheba",
+          "$girl+family+raised_back_of_hand+proper_name",
           "for",
           "me.",
           "So",
