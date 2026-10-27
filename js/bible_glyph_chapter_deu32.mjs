@@ -949,7 +949,7 @@ export function bible_glyph_chapter_deu32() {
           "of",
           "disaster",
           "is",
-          "near,",
+          "$magnet,",
           "and",
           "their",
           "doom",
