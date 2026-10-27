@@ -1403,7 +1403,7 @@ export function bible_glyph_chapter_1ki22() {
           "$i_am.",
           "$check+exclamation,",
           "the",
-          "high",
+          "$snow_capped_mountain",
           "places",
           "were",
           "$no_entry",
