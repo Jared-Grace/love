@@ -1369,7 +1369,7 @@ export function bible_glyph_chapter_deu04() {
         verse_number: 38,
         words: [
           "to",
-          "drive",
+          "$triangular_flag",
           "out",
           "before",
           "you",
