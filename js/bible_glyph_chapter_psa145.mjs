@@ -309,7 +309,7 @@ export function bible_glyph_chapter_psa145() {
           "and",
           "lifts",
           "up",
-          "all",
+          "$all",
           "who",
           "are",
           "bowed",
