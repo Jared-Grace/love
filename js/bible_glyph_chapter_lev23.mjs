@@ -1282,7 +1282,7 @@ export function bible_glyph_chapter_lev23() {
           "for",
           "$seven",
           "$sun.",
-          "All",
+          "$all",
           "the",
           "native",
           "born",
