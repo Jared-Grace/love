@@ -461,7 +461,7 @@ export function bible_glyph_chapter_lev22() {
           "priests",
           "must",
           "$no_entry",
-          "profane",
+          "$sewing_needle",
           "the",
           "$sparkle+thing",
           "that",
