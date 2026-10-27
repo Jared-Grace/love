@@ -263,7 +263,7 @@ export function bible_glyph_chapter_deu19() {
         verse_number: 8,
         words: [
           "And",
-          "if",
+          "$traffic_light",
           "the",
           "$i_am",
           "your",
