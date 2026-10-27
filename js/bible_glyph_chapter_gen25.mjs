@@ -326,7 +326,7 @@ export function bible_glyph_chapter_gen25() {
           "and",
           "their",
           "camps,",
-          "twelve",
+          "$two",
           "leaders",
           "of",
           "their",
