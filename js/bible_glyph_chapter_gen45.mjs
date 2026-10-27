@@ -437,7 +437,7 @@ export function bible_glyph_chapter_gen45() {
         words: [
           "Joseph",
           "kissed",
-          "each",
+          "$all",
           "of",
           "his",
           "$brother",
