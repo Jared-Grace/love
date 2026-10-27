@@ -761,7 +761,7 @@ export function bible_glyph_chapter_lev15() {
           "if",
           "it",
           "continues",
-          "beyond",
+          "$pointing_up",
           "her",
           "period,",
           "she",
