@@ -587,7 +587,7 @@ export function bible_glyph_chapter_exo32() {
           "of",
           "the",
           "$family",
-          "shouting,",
+          "$public_address+thing,",
           "he",
           "$speech",
           "to",
