@@ -1551,7 +1551,7 @@ export function bible_glyph_chapter_deu28() {
           "$lifting",
           "for",
           "the",
-          "old",
+          "$old_man",
           "and",
           "$no_entry",
           "pity",
