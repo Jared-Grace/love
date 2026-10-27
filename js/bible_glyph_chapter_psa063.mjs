@@ -58,7 +58,7 @@ export function bible_glyph_chapter_psa063() {
       {
         verse_number: 2,
         words: [
-          "So",
+          "$right_arrow",
           "I",
           "have",
           "$eye",
