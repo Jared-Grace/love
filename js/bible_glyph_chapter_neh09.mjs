@@ -124,7 +124,7 @@ export function bible_glyph_chapter_neh09() {
           "and",
           "$proper_name$Chenani",
           "$person+pointing_up",
-          "on",
+          "$pointing_up",
           "the",
           "raised",
           "platform",
