@@ -419,7 +419,7 @@ export function bible_glyph_chapter_gen16() {
           "who",
           "$eye",
           "me.",
-          "For",
+          "$pointing",
           "she",
           "$speech,",
           "Have",
