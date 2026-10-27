@@ -440,7 +440,7 @@ export function bible_glyph_chapter_pro16() {
           "and",
           "pleasant",
           "$kiss_mark",
-          "promotes",
+          "$plus+doing",
           "instruction.",
         ],
       },
