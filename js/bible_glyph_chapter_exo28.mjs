@@ -117,7 +117,7 @@ export function bible_glyph_chapter_exo28() {
           "a",
           "$gem_stone+t_shirt,",
           "an",
-          "ephod,",
+          "$safety_vest,",
           "a",
           "$cloak,",
           "a",
