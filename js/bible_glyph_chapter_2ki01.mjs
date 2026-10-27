@@ -734,7 +734,7 @@ export function bible_glyph_chapter_2ki01() {
           "are",
           "$pointing_back",
           "$no_entry",
-          "written",
+          "$writing_hand",
           "in",
           "the",
           "Book",
