@@ -304,7 +304,7 @@ export function bible_glyph_chapter_exo22() {
           "garment,",
           "or",
           "any",
-          "lost",
+          "$wilted_flower+thing",
           "item",
           "that",
           "someone",
