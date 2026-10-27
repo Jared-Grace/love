@@ -1291,7 +1291,7 @@ export function bible_glyph_chapter_1ki08() {
           "whatever",
           "plague",
           "or",
-          "sickness",
+          "$thermometer_face+thing",
           "may",
           "come,",
         ],
