@@ -587,7 +587,7 @@ export function bible_glyph_chapter_num27() {
           "him,",
           "the",
           "entire",
-          "congregation,",
+          "$witness+crowd,",
           "will",
           "$walking+tray_out",
           "out",
