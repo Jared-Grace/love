@@ -316,7 +316,7 @@ export function bible_glyph_chapter_job03() {
         words: [
           "$shuffle",
           "with",
-          "princes",
+          "$military_medal",
           "who",
           "had",
           "gold,",
