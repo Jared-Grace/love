@@ -670,7 +670,7 @@ export function bible_glyph_chapter_gen24() {
           "$shushing_face",
           "to",
           "$lightbulb",
-          "whether",
+          "$traffic_light",
           "or",
           "$no_entry",
           "the",
