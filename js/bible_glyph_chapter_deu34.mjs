@@ -41,7 +41,7 @@ export function bible_glyph_chapter_deu34() {
           "$eye",
           "him",
           "the",
-          "whole",
+          "$all",
           "$earth,",
           "from",
           "$proper_name$Gilead",
