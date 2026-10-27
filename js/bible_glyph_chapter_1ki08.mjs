@@ -2044,7 +2044,7 @@ export function bible_glyph_chapter_1ki08() {
         words: [
           "And",
           "may",
-          "these",
+          "$flashlight+flashlight",
           "$speech",
           "with",
           "which",
