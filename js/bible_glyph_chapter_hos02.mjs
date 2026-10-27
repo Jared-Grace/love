@@ -700,7 +700,7 @@ export function bible_glyph_chapter_hos02() {
           "and",
           "to",
           "the",
-          "oil,",
+          "$oil+new_button,",
           "and",
           "they",
           "will",
