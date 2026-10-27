@@ -190,7 +190,7 @@ export function bible_glyph_chapter_lam01() {
           "$walking",
           "as",
           "captives",
-          "before",
+          "$face",
           "the",
           "enemy.",
         ],
