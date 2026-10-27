@@ -195,7 +195,7 @@ export function bible_glyph_chapter_1sa24() {
           "men,",
           '"The',
           "$i_am",
-          "forbid",
+          "$person_gesturing_no+exclamation",
           "that",
           "I",
           "should",
