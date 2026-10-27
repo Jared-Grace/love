@@ -580,7 +580,7 @@ export function bible_glyph_chapter_2ki06() {
           "struck",
           "them",
           "with",
-          "blindness,",
+          "$person_with_white_cane+thing,",
           "according",
           "to",
           "the",
