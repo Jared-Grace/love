@@ -1057,7 +1057,7 @@ export function bible_glyph_chapter_num11() {
           "up",
           "gathering",
           "the",
-          "quail.",
+          "$bird+meat.",
           "No",
           "one",
           "gathered",
