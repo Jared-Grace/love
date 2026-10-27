@@ -501,7 +501,7 @@ export function bible_glyph_chapter_2sa11() {
           "$writing_hand",
           "a",
           "letter",
-          "to",
+          "$toward",
           "$i_am+father",
           "and",
           "sent",
