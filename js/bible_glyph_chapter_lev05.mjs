@@ -188,7 +188,7 @@ export function bible_glyph_chapter_lev05() {
           "$sheep,",
           "a",
           "$lamb+woman",
-          "or",
+          "$shuffle",
           "a",
           "$goat,",
           "as",
