@@ -298,7 +298,7 @@ export function bible_glyph_chapter_num18() {
           "$mouth",
           "to",
           "$proper_name$Aaron,",
-          "Behold,",
+          "$exclamation,",
           "$me",
           "have",
           "$hands_giving",
