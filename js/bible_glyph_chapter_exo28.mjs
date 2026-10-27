@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_exo28() {
       {
         verse_number: 37,
         words: [
-          "Fasten",
+          "$palm_down",
           "to",
           "it",
           "a",
