@@ -899,7 +899,7 @@ export function bible_glyph_chapter_deu31() {
           "$writing_hand",
           "in",
           "a",
-          "book",
+          "$closed_book",
           "the",
           "$speech",
           "of",
