@@ -465,7 +465,7 @@ export function bible_glyph_chapter_mic05() {
           "$hammer+doing",
           "vengeance",
           "in",
-          "anger",
+          "$nose+fire",
           "and",
           "wrath",
           "upon",
