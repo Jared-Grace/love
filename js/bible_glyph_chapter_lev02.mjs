@@ -127,7 +127,7 @@ export function bible_glyph_chapter_lev02() {
           "$bagel",
           "$spoon+cyclone",
           "with",
-          "oil",
+          "$lotion_bottle",
           "or",
           "$flatbread",
           "wafers",
