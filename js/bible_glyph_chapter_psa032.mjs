@@ -184,7 +184,7 @@ export function bible_glyph_chapter_psa032() {
           "songs",
           "of",
           "deliverance.",
-          "Selah",
+          "$pause_button",
         ],
       },
       {
