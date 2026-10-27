@@ -566,7 +566,7 @@ export function bible_glyph_chapter_jer23() {
           "poisoned",
           "$water",
           "to",
-          "drink,",
+          "$cup+hands_giving,",
           "for",
           "from",
           "the",
