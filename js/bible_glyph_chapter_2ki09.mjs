@@ -482,7 +482,7 @@ export function bible_glyph_chapter_2ki09() {
           "$son",
           "of",
           "$proper_name$Nimshi,",
-          "conspired",
+          "$knot+crowd+doing",
           "against",
           "$proper_name$Joram.",
           "Now",
