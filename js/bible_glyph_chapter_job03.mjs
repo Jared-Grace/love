@@ -396,7 +396,7 @@ export function bible_glyph_chapter_job03() {
           "and",
           "$top",
           "are",
-          "there,",
+          "$telescope,",
           "and",
           "the",
           "$kneeling",
