@@ -212,7 +212,7 @@ export function bible_glyph_chapter_hos06() {
           "transgressed",
           "the",
           "$covenant;",
-          "there",
+          "$telescope",
           "they",
           "were",
           "unfaithful",
