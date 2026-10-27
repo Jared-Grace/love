@@ -19,7 +19,7 @@ export function bible_glyph_chapter_gen35() {
           "$speech",
           "to",
           "$hand+foot,",
-          "Arise,",
+          "$person+pointing_up,",
           "$walking+pointing_up",
           "up",
           "to",
