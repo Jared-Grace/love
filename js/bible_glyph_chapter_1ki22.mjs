@@ -1144,7 +1144,7 @@ export function bible_glyph_chapter_1ki22() {
           "in",
           "his",
           "$chariot",
-          "facing",
+          "$face+toward",
           "the",
           "$proper_name$Arameans.",
           "And",
