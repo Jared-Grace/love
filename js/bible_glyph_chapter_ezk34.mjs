@@ -162,7 +162,7 @@ export function bible_glyph_chapter_ezk34() {
           "My",
           "$sheep",
           "went",
-          "astray",
+          "$road+woozy_face+doing",
           "on",
           "all",
           "the",
