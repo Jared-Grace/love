@@ -519,7 +519,7 @@ export function bible_glyph_chapter_deu14() {
           "$place",
           "He",
           "will",
-          "choose",
+          "$check_box",
           "as",
           "a",
           "dwelling",
