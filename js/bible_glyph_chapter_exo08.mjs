@@ -347,7 +347,7 @@ export function bible_glyph_chapter_exo08() {
           "and",
           "your",
           "$family;",
-          "only",
+          "$one+check",
           "in",
           "the",
           "Nile",
