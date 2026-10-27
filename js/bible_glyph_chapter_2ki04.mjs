@@ -424,7 +424,7 @@ export function bible_glyph_chapter_2ki04() {
           "to",
           "the",
           "$king",
-          "or",
+          "$shuffle",
           "to",
           "the",
           "commander",
