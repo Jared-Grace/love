@@ -193,7 +193,7 @@ export function bible_glyph_chapter_mic07() {
           "$father,",
           "a",
           "$woman",
-          "rises",
+          "$person+pointing_up",
           "against",
           "her",
           "$mother,",
