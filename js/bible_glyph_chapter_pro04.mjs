@@ -475,7 +475,7 @@ export function bible_glyph_chapter_pro04() {
         verse_number: 24,
         words: [
           "$tray_out",
-          "deception",
+          "$curly_loop+mouth",
           "from",
           "your",
           "mouth;",
