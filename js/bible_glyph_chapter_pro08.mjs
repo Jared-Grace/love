@@ -309,7 +309,7 @@ export function bible_glyph_chapter_pro08() {
           "me",
           "early",
           "shall",
-          "find",
+          "$magnifying_glass+exclamation",
           "me.",
         ],
       },
