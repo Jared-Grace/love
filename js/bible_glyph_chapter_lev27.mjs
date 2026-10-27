@@ -81,7 +81,7 @@ export function bible_glyph_chapter_lev27() {
         words: [
           "Or",
           "$traffic_light",
-          "it",
+          "$pointing_back",
           "is",
           "a",
           "$female_sign,",
