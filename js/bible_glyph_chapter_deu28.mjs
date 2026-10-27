@@ -704,7 +704,7 @@ export function bible_glyph_chapter_deu28() {
           "drought,",
           "and",
           "with",
-          "blight",
+          "$wilted_flower+wind",
           "and",
           "mildew,",
           "and",
