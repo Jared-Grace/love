@@ -155,7 +155,7 @@ export function bible_glyph_chapter_zec03() {
           "placed",
           "$pointing_up",
           "his",
-          "head,",
+          "$person_gesturing_ok,",
           "and",
           "they",
           "clothed",
