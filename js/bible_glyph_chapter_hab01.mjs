@@ -66,7 +66,7 @@ export function bible_glyph_chapter_hab01() {
           "make",
           "me",
           "$eye",
-          "iniquity?",
+          "$thumbs_down+hole?",
           "Why",
           "do",
           "You",
