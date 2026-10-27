@@ -67,7 +67,7 @@ export function bible_glyph_chapter_exo03() {
           "from",
           "within",
           "a",
-          "bush.",
+          "$thorns+herb.",
           "Moses",
           "$eye",
           "the",
