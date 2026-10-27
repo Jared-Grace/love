@@ -839,7 +839,7 @@ export function bible_glyph_chapter_gen46() {
           "ever",
           "since",
           "our",
-          "youth,",
+          "$child+flexed_biceps+thing,",
           "both",
           "we",
           "and",
