@@ -335,7 +335,7 @@ export function bible_glyph_chapter_deu10() {
           "$mountain",
           "like",
           "the",
-          "first",
+          "$first_place",
           "$sun,",
           "forty",
           "$sun",
