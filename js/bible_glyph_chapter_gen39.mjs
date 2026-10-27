@@ -241,7 +241,7 @@ export function bible_glyph_chapter_gen39() {
           "his",
           "$crown",
           "$woman,",
-          "Look,",
+          "$exclamation,",
           "my",
           "$crown",
           "does",
