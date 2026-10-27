@@ -489,7 +489,7 @@ export function bible_glyph_chapter_mic06() {
           "you",
           "over",
           "to",
-          "desolation,",
+          "$astonished+thing,",
           "and",
           "your",
           "inhabitants",
