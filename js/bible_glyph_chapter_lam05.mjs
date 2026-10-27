@@ -282,7 +282,7 @@ export function bible_glyph_chapter_lam05() {
           "$weary_face",
           "to",
           "us,",
-          "for",
+          "$pointing",
           "we",
           "have",
           "$bow+doing!",
