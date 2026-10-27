@@ -282,7 +282,7 @@ export function bible_glyph_chapter_exo15() {
         words: [
           "$person+question",
           "is",
-          "like",
+          "$likeness",
           "You",
           "among",
           "the",
