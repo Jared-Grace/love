@@ -1115,7 +1115,7 @@ export function bible_glyph_chapter_1ki20() {
           "Let",
           "us",
           "put",
-          "sackcloth",
+          "$sackcloth",
           "around",
           "our",
           "waists",
