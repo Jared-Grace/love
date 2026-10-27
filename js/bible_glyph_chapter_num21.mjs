@@ -372,7 +372,7 @@ export function bible_glyph_chapter_num21() {
         verse_number: 13,
         words: [
           "From",
-          "there",
+          "$telescope",
           "they",
           "moved",
           "on",
