@@ -1683,7 +1683,7 @@ export function bible_glyph_chapter_deu28() {
           "you,",
           "in",
           "the",
-          "siege",
+          "$city+around+thing",
           "and",
           "distress",
           "that",
