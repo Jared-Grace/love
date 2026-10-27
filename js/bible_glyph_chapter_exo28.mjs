@@ -910,7 +910,7 @@ export function bible_glyph_chapter_exo28() {
           "it",
           "will",
           "$no_entry",
-          "tear.",
+          "$t_shirt+scissors+doing.",
         ],
       },
       {
