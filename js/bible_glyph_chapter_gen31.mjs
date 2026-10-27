@@ -956,7 +956,7 @@ export function bible_glyph_chapter_gen31() {
           "And",
           "she",
           "$speech",
-          "to",
+          "$toward",
           "her",
           "$father,",
           "$no_entry",
