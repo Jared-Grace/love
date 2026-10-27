@@ -495,7 +495,7 @@ export function bible_glyph_chapter_pro04() {
           "your",
           "$eyes",
           "look",
-          "forward;",
+          "$face+toward;",
           "fix",
           "your",
           "gaze",
