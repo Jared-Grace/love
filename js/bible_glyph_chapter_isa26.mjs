@@ -365,7 +365,7 @@ export function bible_glyph_chapter_isa26() {
           "The",
           "$skull+doing",
           "will",
-          "not",
+          "$zero",
           "$sprout+doing;",
           "the",
           "departed",
