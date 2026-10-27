@@ -533,7 +533,7 @@ export function bible_glyph_chapter_exo25() {
           "all",
           "$back+flashlight",
           "I",
-          "command",
+          "$speech+scroll",
           "you",
           "for",
           "the",
