@@ -230,7 +230,7 @@ export function bible_glyph_chapter_gen08() {
           "$dove",
           "$magnifying_glass+exclamation",
           "$no_entry",
-          "place",
+          "$seat+round_pushpin",
           "to",
           "rest",
           "her",
