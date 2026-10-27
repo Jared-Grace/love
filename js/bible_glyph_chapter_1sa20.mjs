@@ -1330,7 +1330,7 @@ export function bible_glyph_chapter_1sa20() {
           "$no_entry",
           "$lightbulb",
           "$package+question.",
-          "Only",
+          "$check+exclamation",
           "$i_am+hands_giving",
           "and",
           "$two_hearts+proper_name",
