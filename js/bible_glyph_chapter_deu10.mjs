@@ -230,7 +230,7 @@ export function bible_glyph_chapter_deu10() {
         verse_number: 7,
         words: [
           "From",
-          "there",
+          "$telescope",
           "they",
           "travelled",
           "to",
