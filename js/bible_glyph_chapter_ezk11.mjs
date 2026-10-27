@@ -327,7 +327,7 @@ export function bible_glyph_chapter_ezk11() {
           "$no_entry",
           "$link",
           "a",
-          "pot",
+          "$pot_of_food",
           "for",
           "you,",
           "nor",
