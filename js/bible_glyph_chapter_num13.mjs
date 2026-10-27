@@ -695,7 +695,7 @@ export function bible_glyph_chapter_num13() {
         words: [
           "Then",
           "$dog+proper_name",
-          "quieted",
+          "$shushing_face+crowd+doing",
           "the",
           "$family",
           "before",
