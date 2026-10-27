@@ -961,7 +961,7 @@ export function bible_glyph_chapter_num16() {
           "these",
           "$speech,",
           "the",
-          "ground",
+          "$brown_square",
           "beneath",
           "them",
           "$carpentry_saw",
