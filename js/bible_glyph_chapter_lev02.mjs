@@ -374,7 +374,7 @@ export function bible_glyph_chapter_lev02() {
           "bring",
           "$grain_offering",
           "of",
-          "firstfruits",
+          "$first_place+sprout",
           "$i_am,",
           "you",
           "shall",
