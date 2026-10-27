@@ -449,7 +449,7 @@ export function bible_glyph_chapter_lev01() {
           "to",
           "the",
           "east",
-          "side",
+          "$children_crossing",
           "of",
           "$altar,",
           "in",
