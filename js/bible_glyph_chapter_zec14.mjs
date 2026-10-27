@@ -601,7 +601,7 @@ export function bible_glyph_chapter_zec14() {
         verse_number: 18,
         words: [
           "And",
-          "if",
+          "$traffic_light",
           "the",
           "people",
           "of",
