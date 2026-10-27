@@ -874,7 +874,7 @@ export function bible_glyph_chapter_lev26() {
           "$meat",
           "of",
           "your",
-          "daughters.",
+          "$girl+family.",
         ],
       },
       {
