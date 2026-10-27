@@ -47,7 +47,7 @@ export function bible_glyph_chapter_amo05() {
           "abandoned",
           "$pointing_up",
           "her",
-          "land,",
+          "$brown_square,",
           "with",
           "no",
           "one",
