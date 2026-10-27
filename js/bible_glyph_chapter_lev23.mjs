@@ -865,7 +865,7 @@ export function bible_glyph_chapter_lev23() {
           "And",
           "any",
           "$person_other",
-          "who",
+          "$back+flashlight",
           "$hammer+doing",
           "any",
           "$tools",
