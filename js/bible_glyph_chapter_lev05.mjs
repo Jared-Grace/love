@@ -117,7 +117,7 @@ export function bible_glyph_chapter_lev05() {
           "thoughtlessly",
           "with",
           "his",
-          "lips",
+          "$kiss_mark",
           "to",
           "do",
           "evil",
