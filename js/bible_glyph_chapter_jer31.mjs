@@ -482,7 +482,7 @@ export function bible_glyph_chapter_jer31() {
           "with",
           "My",
           "goodness,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
