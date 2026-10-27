@@ -670,7 +670,7 @@ export function bible_glyph_chapter_num14() {
           "surely",
           "as",
           "the",
-          "whole",
+          "$all",
           "$earth",
           "is",
           "filled",
