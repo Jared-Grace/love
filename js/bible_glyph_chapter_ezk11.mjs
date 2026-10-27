@@ -88,7 +88,7 @@ export function bible_glyph_chapter_ezk11() {
           "and",
           "give",
           "$thumbs_down",
-          "counsel",
+          "$person_tipping_hand",
           "in",
           "this",
           "$city.",
