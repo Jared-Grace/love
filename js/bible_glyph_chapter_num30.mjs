@@ -430,7 +430,7 @@ export function bible_glyph_chapter_num30() {
         verse_number: 13,
         words: [
           "Any",
-          "vow",
+          "$saluting_face",
           "or",
           "any",
           "sworn",
