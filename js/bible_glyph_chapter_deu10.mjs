@@ -453,7 +453,7 @@ export function bible_glyph_chapter_deu10() {
         words: [
           "and",
           "to",
-          "keep",
+          "$guard",
           "the",
           "$scroll",
           "of",
