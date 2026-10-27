@@ -263,7 +263,7 @@ export function bible_glyph_chapter_deu06() {
       {
         verse_number: 9,
         words: [
-          "Write",
+          "$writing_hand",
           "them",
           "on",
           "the",
