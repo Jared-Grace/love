@@ -94,7 +94,7 @@ export function bible_glyph_chapter_psa091() {
           "you",
           "will",
           "find",
-          "refuge.",
+          "$hut.",
           "His",
           "$check",
           "is",
