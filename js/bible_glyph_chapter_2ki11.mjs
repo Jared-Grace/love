@@ -40,7 +40,7 @@ export function bible_glyph_chapter_2ki11() {
         verse_number: 2,
         words: [
           "But",
-          "Jehosheba,",
+          "$i_am+raised_back_of_hand,",
           "the",
           "$woman",
           "of",
