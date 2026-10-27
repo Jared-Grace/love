@@ -444,7 +444,7 @@ export function bible_glyph_chapter_zep01() {
           "is",
           "$magnet",
           "-",
-          "near",
+          "$magnet",
           "and",
           "coming",
           "quickly.",
