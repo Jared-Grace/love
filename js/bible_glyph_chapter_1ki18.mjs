@@ -346,7 +346,7 @@ export function bible_glyph_chapter_1ki18() {
           "$walking",
           "you,",
           "the",
-          "Spirit",
+          "$wind",
           "of",
           "the",
           "$i_am",
