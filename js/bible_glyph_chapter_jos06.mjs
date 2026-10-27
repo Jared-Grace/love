@@ -278,7 +278,7 @@ export function bible_glyph_chapter_jos06() {
           "armed",
           "troops",
           "$walking",
-          "ahead",
+          "$face",
           "of",
           "the",
           "$priest",
