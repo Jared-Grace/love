@@ -26,7 +26,7 @@ export function bible_glyph_chapter_lev03() {
           "whether",
           "$reminder_ribbon+thing",
           "or",
-          "female,",
+          "$female_sign,",
           "$pointing_back",
           "must",
           "present",
