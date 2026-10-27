@@ -416,7 +416,7 @@ export function bible_glyph_chapter_2sa05() {
           "$proper_name$Hebron,",
           "$two_hearts+proper_name",
           "$hand_receiving",
-          "more",
+          "$repeat",
           "concubines",
           "and",
           "$woman",
