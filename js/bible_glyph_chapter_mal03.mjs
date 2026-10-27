@@ -384,7 +384,7 @@ export function bible_glyph_chapter_mal03() {
         words: [
           "I",
           "will",
-          "rebuke",
+          "$pointing+anger_symbol+doing",
           "the",
           "devourer",
           "for",
