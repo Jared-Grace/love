@@ -146,7 +146,7 @@ export function bible_glyph_chapter_jdg06() {
           "great",
           "$check+all",
           "of",
-          "locusts.",
+          "$locusts.",
           "They",
           "and",
           "their",
