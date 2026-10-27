@@ -335,7 +335,7 @@ export function bible_glyph_chapter_jos01() {
           "Go",
           "through",
           "the",
-          "camp",
+          "$camp",
           "and",
           "tell",
           "the",
