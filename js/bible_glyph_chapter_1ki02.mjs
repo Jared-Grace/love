@@ -1278,7 +1278,7 @@ export function bible_glyph_chapter_1ki02() {
           "$i_am+lightbulb",
           "over",
           "the",
-          "army",
+          "$military_helmet",
           "in",
           "the",
           "place",
