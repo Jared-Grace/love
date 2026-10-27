@@ -365,7 +365,7 @@ export function bible_glyph_chapter_ezk01() {
           "appearance",
           "of",
           "glowing",
-          "coals",
+          "$fire+black_circle",
           "of",
           "$fire,",
           "or",
