@@ -322,7 +322,7 @@ export function bible_glyph_chapter_2sa06() {
         words: [
           "Thus",
           "the",
-          "ark",
+          "$ark",
           "of",
           "the",
           "$i_am",
