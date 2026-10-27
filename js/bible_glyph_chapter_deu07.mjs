@@ -398,7 +398,7 @@ export function bible_glyph_chapter_deu07() {
           "$foot+end_arrow+manner",
           "you",
           "$ear",
-          "these",
+          "$flashlight+flashlight",
           "$scales+thing",
           "and",
           "keep",
