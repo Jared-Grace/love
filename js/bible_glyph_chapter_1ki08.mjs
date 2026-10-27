@@ -507,7 +507,7 @@ export function bible_glyph_chapter_1ki08() {
           "$name_tag",
           "would",
           "be",
-          "there.",
+          "$telescope.",
           "But",
           "I",
           "have",
