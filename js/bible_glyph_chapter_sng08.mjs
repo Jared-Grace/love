@@ -168,7 +168,7 @@ export function bible_glyph_chapter_sng08() {
           "$heart_organ,",
           "as",
           "a",
-          "seal",
+          "$ring+locked+thing",
           "upon",
           "your",
           "arm.",
