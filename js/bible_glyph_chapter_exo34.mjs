@@ -711,7 +711,7 @@ export function bible_glyph_chapter_exo34() {
           "Weeks",
           "with",
           "the",
-          "firstfruits",
+          "$first_place+sprout",
           "of",
           "the",
           "wheat",
