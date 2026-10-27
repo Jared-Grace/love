@@ -57,7 +57,7 @@ export function bible_glyph_chapter_nam03() {
           "$horse+doer,",
           "$fire+tongue",
           "$sword,",
-          "shining",
+          "$cloud_with_lightning",
           "$spear,",
           "heaps",
           "of",
