@@ -609,7 +609,7 @@ export function bible_glyph_chapter_gen49() {
           "of",
           "the",
           "depths",
-          "below,",
+          "$down_arrow,",
           "$speech+thumbs_up",
           "of",
           "the",
