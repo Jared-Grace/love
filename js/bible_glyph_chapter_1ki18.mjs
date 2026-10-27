@@ -404,7 +404,7 @@ export function bible_glyph_chapter_1ki18() {
           "$hammer+doing",
           "when",
           "$proper_name$Jezebel",
-          "slaughtered",
+          "$fist+skull",
           "the",
           "$megaphone",
           "of",
