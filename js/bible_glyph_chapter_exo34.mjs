@@ -896,7 +896,7 @@ export function bible_glyph_chapter_exo34() {
           "So",
           "Moses",
           "was",
-          "there",
+          "$telescope",
           "with",
           "the",
           "$i_am",
