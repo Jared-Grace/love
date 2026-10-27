@@ -908,7 +908,7 @@ export function bible_glyph_chapter_deu28() {
           "You",
           "will",
           "$no_entry",
-          "prosper",
+          "$chart_increasing",
           "in",
           "your",
           "$road,",
