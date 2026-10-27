@@ -476,7 +476,7 @@ export function bible_glyph_chapter_num14() {
           "of",
           "$cloud",
           "by",
-          "day",
+          "$sun+manner",
           "and",
           "a",
           "$candle",
