@@ -598,7 +598,7 @@ export function bible_glyph_chapter_jer32() {
           "but",
           "lay",
           "the",
-          "iniquity",
+          "$cyclone",
           "of",
           "the",
           "$father",
