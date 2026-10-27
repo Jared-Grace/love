@@ -261,7 +261,7 @@ export function bible_glyph_chapter_deu05() {
           "$son",
           "to",
           "the",
-          "third",
+          "$child+three",
           "and",
           "fourth",
           "generations",
