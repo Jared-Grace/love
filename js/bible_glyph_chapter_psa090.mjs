@@ -90,7 +90,7 @@ export function bible_glyph_chapter_psa090() {
           "a",
           "$sun",
           "that",
-          "passes,",
+          "$bridge,",
           "or",
           "a",
           "watch",
