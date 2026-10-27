@@ -205,7 +205,7 @@ export function bible_glyph_chapter_nam01() {
           "the",
           "$sun",
           "of",
-          "distress;",
+          "$clamp;",
           "He",
           "$lightbulb",
           "those",
