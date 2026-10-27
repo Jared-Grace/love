@@ -405,7 +405,7 @@ export function bible_glyph_chapter_exo04() {
           "and",
           "I",
           "will",
-          "teach",
+          "$bow+toward",
           "you",
           "what",
           "to",
