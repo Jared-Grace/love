@@ -419,7 +419,7 @@ export function bible_glyph_chapter_lev26() {
           "and",
           "if",
           "you",
-          "reject",
+          "$gesturing_no+throwing+doing",
           "My",
           "statutes,",
           "and",
