@@ -544,7 +544,7 @@ export function bible_glyph_chapter_2ki01() {
           "has",
           "come",
           "down",
-          "from",
+          "$tray_out",
           "the",
           "$sky",
           "and",
