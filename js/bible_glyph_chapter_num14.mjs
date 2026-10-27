@@ -873,7 +873,7 @@ export function bible_glyph_chapter_num14() {
           "$microphone",
           "the",
           "$i_am,",
-          "exactly",
+          "$traffic_light",
           "as",
           "you",
           "$mouth",
