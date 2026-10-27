@@ -858,7 +858,7 @@ export function bible_glyph_chapter_isa49() {
           "the",
           "$i_am",
           "$speech:",
-          "Even",
+          "$plus",
           "the",
           "captives",
           "of",
