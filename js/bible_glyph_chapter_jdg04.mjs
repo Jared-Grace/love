@@ -311,7 +311,7 @@ export function bible_glyph_chapter_jdg04() {
           "and",
           "$proper_name$Naphtali,",
           "and",
-          "ten",
+          "$ten",
           "thousand",
           "$man_beard",
           "followed",
