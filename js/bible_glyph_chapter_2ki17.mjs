@@ -418,7 +418,7 @@ export function bible_glyph_chapter_2ki17() {
           "His",
           "$megaphone",
           "and",
-          "seers,",
+          "$eye+doer,",
           "$speech,",
           "$turn_back",
           "from",
