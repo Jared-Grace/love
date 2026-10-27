@@ -663,7 +663,7 @@ export function bible_glyph_chapter_jer07() {
       {
         verse_number: 22,
         words: [
-          "For",
+          "$pointing",
           "when",
           "I",
           "brought",
