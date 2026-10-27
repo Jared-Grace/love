@@ -253,7 +253,7 @@ export function bible_glyph_chapter_exo02() {
           "$flashlight",
           "$child",
           "and",
-          "nurse",
+          "$breast_feeding+doing",
           "him",
           "for",
           "me,",
