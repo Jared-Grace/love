@@ -762,7 +762,7 @@ export function bible_glyph_chapter_lam02() {
           "your",
           "tears",
           "run",
-          "down",
+          "$walking+pointing_down",
           "like",
           "a",
           "river",
