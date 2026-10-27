@@ -534,7 +534,7 @@ export function bible_glyph_chapter_jer07() {
           "$flour+water",
           "to",
           "$hammer+doing",
-          "cakes",
+          "$flatbread+sparkle",
           "for",
           "the",
           "Queen",
