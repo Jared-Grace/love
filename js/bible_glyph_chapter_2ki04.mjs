@@ -141,7 +141,7 @@ export function bible_glyph_chapter_2ki04() {
           "$toolbox,",
           "setting",
           "the",
-          "full",
+          "$battery+describing",
           "ones",
           "aside.",
         ],
