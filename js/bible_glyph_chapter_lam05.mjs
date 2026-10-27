@@ -16,7 +16,7 @@ export function bible_glyph_chapter_lam05() {
           "$reminder_ribbon,",
           "O",
           "$i_am,",
-          "what",
+          "$flashlight+question",
           "has",
           "happened",
           "to",
