@@ -43,7 +43,7 @@ export function bible_glyph_chapter_exo12() {
           "shall",
           "be",
           "the",
-          "first",
+          "$first_place",
           "month",
           "of",
           "your",
