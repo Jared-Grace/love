@@ -643,7 +643,7 @@ export function bible_glyph_chapter_hos02() {
           "And",
           "I",
           "will",
-          "betroth",
+          "$ring+doing",
           "you",
           "in",
           "faithfulness,",
