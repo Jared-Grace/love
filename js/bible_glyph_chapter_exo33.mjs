@@ -177,7 +177,7 @@ export function bible_glyph_chapter_exo33() {
           "for",
           "a",
           "single",
-          "moment,",
+          "$winking_face,",
           "I",
           "would",
           "destroy",
