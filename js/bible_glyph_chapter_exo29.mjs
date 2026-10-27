@@ -728,7 +728,7 @@ export function bible_glyph_chapter_exo29() {
           "a",
           "wave",
           "offering",
-          "before",
+          "$face",
           "$i_am.",
         ],
       },
