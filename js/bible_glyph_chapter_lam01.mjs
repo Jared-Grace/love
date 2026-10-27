@@ -239,7 +239,7 @@ export function bible_glyph_chapter_lam01() {
           "$sun",
           "of",
           "her",
-          "affliction",
+          "$persevering_face+thing",
           "and",
           "wandering,",
           "$city+peace",
