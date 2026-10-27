@@ -717,7 +717,7 @@ export function bible_glyph_chapter_exo39() {
           "a",
           "weaver,",
           "for",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "and",
           "$son.",
         ],
