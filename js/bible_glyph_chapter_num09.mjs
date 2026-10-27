@@ -314,7 +314,7 @@ export function bible_glyph_chapter_num09() {
           "of",
           "the",
           "second",
-          "month,",
+          "$new_moon,",
           "at",
           "twilight.",
           "They",
