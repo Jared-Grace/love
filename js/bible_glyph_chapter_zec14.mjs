@@ -263,7 +263,7 @@ export function bible_glyph_chapter_zec14() {
           "out",
           "from",
           "$city+peace,",
-          "half",
+          "$divide",
           "of",
           "it",
           "toward",
