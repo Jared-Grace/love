@@ -531,7 +531,7 @@ export function bible_glyph_chapter_hab02() {
           "$person",
           "and",
           "your",
-          "violence",
+          "$boxing_glove",
           "against",
           "the",
           "$earth,",
