@@ -286,7 +286,7 @@ export function bible_glyph_chapter_exo11() {
           "$back+flashlight",
           "$foot",
           "you.",
-          "After",
+          "$next_track",
           "that",
           "I",
           "will",
