@@ -184,7 +184,7 @@ export function bible_glyph_chapter_gen04() {
           "be",
           "accepted?",
           "But",
-          "if",
+          "$traffic_light",
           "you",
           "will",
           "$no_entry",
