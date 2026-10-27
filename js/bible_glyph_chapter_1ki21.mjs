@@ -864,7 +864,7 @@ export function bible_glyph_chapter_1ki21() {
       {
         verse_number: 25,
         words: [
-          "Surely",
+          "$one+check",
           "there",
           "was",
           "$no_entry",
