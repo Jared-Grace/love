@@ -135,7 +135,7 @@ export function bible_glyph_chapter_deu07() {
           "$moai.",
           "Then",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "$i_am",
           "will",
