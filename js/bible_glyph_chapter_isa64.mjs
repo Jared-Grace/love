@@ -142,7 +142,7 @@ export function bible_glyph_chapter_isa64() {
           "$exclamation",
           "You",
           "were",
-          "angry,",
+          "$angry_face+collision+doing,",
           "for",
           "we",
           "$bow+doing.",
