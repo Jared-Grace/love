@@ -90,7 +90,7 @@ export function bible_glyph_chapter_1sa02() {
           "$walking+tray_out",
           "from",
           "your",
-          "mouth,",
+          "$face_with_open_mouth,",
           "for",
           "the",
           "$i_am",
