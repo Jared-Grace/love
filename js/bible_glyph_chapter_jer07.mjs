@@ -259,7 +259,7 @@ export function bible_glyph_chapter_jer07() {
           "then",
           "$footprints",
           "and",
-          "stand",
+          "$person+round_pushpin",
           "before",
           "Me",
           "in",
