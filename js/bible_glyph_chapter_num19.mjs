@@ -168,7 +168,7 @@ export function bible_glyph_chapter_num19() {
           "and",
           "$throwing",
           "them",
-          "onto",
+          "$radio_button",
           "the",
           "burning",
           "heifer.",
