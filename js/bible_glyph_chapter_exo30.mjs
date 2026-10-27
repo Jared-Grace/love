@@ -386,7 +386,7 @@ export function bible_glyph_chapter_exo30() {
           "a",
           "$son",
           "of",
-          "twenty",
+          "$two+zero",
           "years",
           "or",
           "older,",
