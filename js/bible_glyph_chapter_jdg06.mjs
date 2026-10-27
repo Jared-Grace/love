@@ -168,7 +168,7 @@ export function bible_glyph_chapter_jdg06() {
         words: [
           "$wrestling+heart_on_fire",
           "was",
-          "greatly",
+          "$double_exclamation",
           "$battery+down_arrow+doing",
           "by",
           "$proper_name$Midian,",
