@@ -95,7 +95,7 @@ export function bible_glyph_chapter_psa032() {
           "in",
           "the",
           "summer",
-          "heat.",
+          "$desert+fire.",
           "Selah",
         ],
       },
