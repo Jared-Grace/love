@@ -491,7 +491,7 @@ export function bible_glyph_chapter_hab02() {
           "hand",
           "will",
           "come",
-          "around",
+          "$around+doing",
           "to",
           "you,",
           "and",
