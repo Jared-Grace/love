@@ -507,7 +507,7 @@ export function bible_glyph_chapter_gen33() {
           "$footprints",
           "from",
           "Paddan",
-          "Aram,",
+          "$up_arrow+earth+proper_name,",
           "and",
           "he",
           "camped",
