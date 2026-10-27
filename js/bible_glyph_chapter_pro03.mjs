@@ -149,7 +149,7 @@ export function bible_glyph_chapter_pro03() {
           "the",
           "$i_am",
           "and",
-          "turn",
+          "$away+doing",
           "away",
           "from",
           "$thumbs_down.",
