@@ -430,7 +430,7 @@ export function bible_glyph_chapter_gen25() {
           "$proper_name$Aramean",
           "from",
           "Paddan",
-          "Aram,",
+          "$up_arrow+earth+proper_name,",
           "the",
           "$sister",
           "of",
