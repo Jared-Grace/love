@@ -142,7 +142,7 @@ export function bible_glyph_chapter_hos14() {
           "$white_flower",
           "and",
           "take",
-          "root",
+          "$ginger_root",
           "like",
           "the",
           "cedars",
