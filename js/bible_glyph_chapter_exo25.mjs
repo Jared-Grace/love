@@ -603,7 +603,7 @@ export function bible_glyph_chapter_exo25() {
           "$hammer+doing",
           "a",
           "$gold",
-          "molding",
+          "$crown+around",
           "for",
           "the",
           "rim",
