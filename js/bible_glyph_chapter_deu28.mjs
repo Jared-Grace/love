@@ -1945,7 +1945,7 @@ export function bible_glyph_chapter_deu28() {
           "and",
           "they",
           "will",
-          "cling",
+          "$paperclip",
           "to",
           "you.",
         ],
