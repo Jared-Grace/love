@@ -127,7 +127,7 @@ export function bible_glyph_chapter_gen25() {
           "$earth",
           "of",
           "the",
-          "east.",
+          "$compass+right_arrow.",
         ],
       },
       {
