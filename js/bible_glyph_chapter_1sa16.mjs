@@ -319,7 +319,7 @@ export function bible_glyph_chapter_1sa16() {
           "Thus",
           "Jesse",
           "made",
-          "seven",
+          "$seven",
           "of",
           "his",
           "$son",
