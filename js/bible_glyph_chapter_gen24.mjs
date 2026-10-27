@@ -53,7 +53,7 @@ export function bible_glyph_chapter_gen24() {
           "all",
           "he",
           "owned,",
-          "Place",
+          "$palm_down",
           "your",
           "$hand",
           "under",
