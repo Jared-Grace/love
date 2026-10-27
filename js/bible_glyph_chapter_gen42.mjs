@@ -354,7 +354,7 @@ export function bible_glyph_chapter_gen42() {
           "youngest",
           "is",
           "$sun",
-          "with",
+          "$safety_pin",
           "our",
           "$father,",
           "and",
