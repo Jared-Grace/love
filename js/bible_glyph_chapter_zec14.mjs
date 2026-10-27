@@ -130,7 +130,7 @@ export function bible_glyph_chapter_zec14() {
           "Olives",
           "will",
           "be",
-          "split",
+          "$carpentry_saw",
           "in",
           "two",
           "from",
