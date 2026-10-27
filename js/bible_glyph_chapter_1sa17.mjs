@@ -1783,7 +1783,7 @@ export function bible_glyph_chapter_1sa17() {
           "out",
           "$person+question",
           "$son",
-          "this",
+          "$flashlight",
           "young",
           "man",
           "is!",
