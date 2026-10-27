@@ -327,7 +327,7 @@ export function bible_glyph_chapter_gen29() {
           "$hand+foot",
           "told",
           "$proper_name$Rachel",
-          "that",
+          "$pointing",
           "he",
           "was",
           "a",
