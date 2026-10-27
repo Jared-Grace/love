@@ -1161,7 +1161,7 @@ export function bible_glyph_chapter_jer31() {
           "least",
           "of",
           "them",
-          "to",
+          "$finish",
           "the",
           "greatest,",
           "declares",
