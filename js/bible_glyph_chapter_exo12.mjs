@@ -39,7 +39,7 @@ export function bible_glyph_chapter_exo12() {
           "months",
           "for",
           "you;",
-          "it",
+          "$pointing_back",
           "shall",
           "be",
           "the",
