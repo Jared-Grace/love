@@ -704,7 +704,7 @@ export function bible_glyph_chapter_gen18() {
           "the",
           "$five+zero",
           "$ruler",
-          "who",
+          "$back+flashlight",
           "are",
           "there?",
         ],
