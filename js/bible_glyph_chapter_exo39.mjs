@@ -372,7 +372,7 @@ export function bible_glyph_chapter_exo39() {
         words: [
           "For",
           "the",
-          "breastpiece",
+          "$gem_stone+t_shirt",
           "they",
           "$hammer",
           "braided",
