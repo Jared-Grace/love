@@ -629,7 +629,7 @@ export function bible_glyph_chapter_exo26() {
           "$hammer+doing",
           "$door+locked",
           "of",
-          "acacia",
+          "$tree+thorns",
           "$tree,",
           "five",
           "for",
