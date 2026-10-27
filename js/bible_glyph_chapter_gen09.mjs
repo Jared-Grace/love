@@ -480,7 +480,7 @@ export function bible_glyph_chapter_gen09() {
           "$speech",
           "$toward",
           "$proper_name$Noah,",
-          "This",
+          "$flashlight",
           "is",
           "the",
           "sign",
