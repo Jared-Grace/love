@@ -273,7 +273,7 @@ export function bible_glyph_chapter_2ki10() {
           "$seven+zero",
           "$man_beard.",
           "They",
-          "put",
+          "$palm_down",
           "their",
           "heads",
           "in",
