@@ -397,7 +397,7 @@ export function bible_glyph_chapter_neh01() {
           "who",
           "delight",
           "to",
-          "revere",
+          "$fear+doing",
           "Your",
           "$name_tag.",
           "Give",
