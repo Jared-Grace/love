@@ -645,7 +645,7 @@ export function bible_glyph_chapter_pro03() {
         verse_number: 33,
         words: [
           "The",
-          "curse",
+          "$speech+thumbs_down+thing",
           "of",
           "the",
           "$i_am",
