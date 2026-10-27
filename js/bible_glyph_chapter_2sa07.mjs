@@ -46,7 +46,7 @@ export function bible_glyph_chapter_2sa07() {
           "the",
           "$megaphone,",
           "$eye",
-          "I",
+          "$me",
           "am,",
           "living",
           "in",
