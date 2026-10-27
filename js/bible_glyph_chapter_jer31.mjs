@@ -692,7 +692,7 @@ export function bible_glyph_chapter_jer31() {
           "$hugging_face+doing",
           "for",
           "him,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
