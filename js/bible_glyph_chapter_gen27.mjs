@@ -431,7 +431,7 @@ export function bible_glyph_chapter_gen27() {
           "of",
           "the",
           "$goat+child",
-          "goats",
+          "$goat",
           "on",
           "his",
           "$hand",
