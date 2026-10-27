@@ -764,7 +764,7 @@ export function bible_glyph_chapter_dan09() {
           "flight",
           "about",
           "the",
-          "time",
+          "$clock",
           "of",
           "the",
           "evening",
