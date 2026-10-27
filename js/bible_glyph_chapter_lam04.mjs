@@ -104,7 +104,7 @@ export function bible_glyph_chapter_lam04() {
           "The",
           "nursing",
           "infant",
-          "tongue",
+          "$tongue",
           "$paperclip",
           "in",
           "thirst",
