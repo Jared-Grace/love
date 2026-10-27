@@ -125,7 +125,7 @@ export function bible_glyph_chapter_lev02() {
           "either",
           "$flatbread",
           "$bagel",
-          "mixed",
+          "$spoon+cyclone",
           "with",
           "oil",
           "or",
