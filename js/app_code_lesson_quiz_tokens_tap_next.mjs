@@ -11,14 +11,14 @@ export function app_code_lesson_quiz_tokens_tap_next(
 ) {
   "tapping the tokens of a program in the order they are read, with nothing shown to follow, after the guided quiz has shown the order one token at a time; it stands where a quiz draws its answer, so it takes what every quiz there is handed";
   let rows = app_code_tokens_rows_all();
-  app_code_lesson_quiz_tokens_tap(
-    answers_div,
+  app_code_lesson_quiz_tokens_tap({
+    parent: answers_div,
     qa,
     on_success,
     on_wrong,
     correction_code_set,
-    false,
+    guided: false,
     rows,
-    false,
-  );
+    colored: false,
+  });
 }

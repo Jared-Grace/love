@@ -42,7 +42,7 @@ import { app_code_expression_chosen_style_assign } from "./app_code_expression_c
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { each_index } from "./each_index.mjs";
 import { text_slice_from } from "./text_slice_from.mjs";
-export function app_code_lesson_quiz_tokens_tap(
+export function app_code_lesson_quiz_tokens_tap({
   parent,
   qa,
   on_success,
@@ -51,8 +51,8 @@ export function app_code_lesson_quiz_tokens_tap(
   guided,
   rows,
   colored,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   ("a program drawn as it stands, where every token can be tapped, and the learner taps them in the order they are read, left to right and then top to bottom; under it the tokens tapped so far are written out in that order, so the order is seen growing. Asked for by the human 2026-10-10.");
   ("Under the code is one written-out line for each of rows, one under the other: each row has a label and a kept, and only the tokens its kept says to keep are written on its line, so a quiz may gather only one kind of token, such as the braces, into its order while every token is still tapped, and may show that beside the order of every token, as the human asked 2026-10-10.");
   ("When guided, the token to tap next wears the blue every pointing in this app leads with, so the learner is first shown the order one token at a time, and only later asked for it with nothing to follow.");

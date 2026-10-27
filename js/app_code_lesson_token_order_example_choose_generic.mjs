@@ -23,14 +23,14 @@ export function app_code_lesson_token_order_example_choose_generic(
     "the same praise a worked example in lesson 41 ends with, as the human asked 2026-10-10";
     app_shared_success_message(component);
   }
-  app_code_lesson_quiz_tokens_tap(
-    component,
+  app_code_lesson_quiz_tokens_tap({
+    parent: component,
     qa,
-    finished,
-    noop,
-    noop,
+    on_success: finished,
+    on_wrong: noop,
+    correction_code_set: noop,
     guided,
     rows,
     colored,
-  );
+  });
 }
