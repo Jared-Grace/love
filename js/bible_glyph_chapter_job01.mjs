@@ -582,7 +582,7 @@ export function bible_glyph_chapter_job01() {
           "and",
           "struck",
           "the",
-          "four",
+          "$four",
           "corners",
           "of",
           "the",
