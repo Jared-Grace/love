@@ -446,7 +446,7 @@ export function bible_glyph_chapter_exo32() {
       {
         verse_number: 13,
         words: [
-          "Remember",
+          "$reminder_ribbon",
           "$father+map,",
           "$laughing+proper_name,",
           "and",
