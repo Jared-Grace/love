@@ -509,7 +509,7 @@ export function bible_glyph_chapter_lev15() {
           "$garment",
           "or",
           "leather",
-          "on",
+          "$pointing_up",
           "$back+flashlight",
           "there",
           "is",
