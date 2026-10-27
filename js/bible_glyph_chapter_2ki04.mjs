@@ -881,7 +881,7 @@ export function bible_glyph_chapter_2ki04() {
           "and",
           "has",
           "$no_entry",
-          "told",
+          "$newspaper",
           "me.",
         ],
       },
