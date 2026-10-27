@@ -803,7 +803,7 @@ export function bible_glyph_chapter_jos06() {
           "out",
           "her",
           "whole",
-          "family",
+          "$houses",
           "and",
           "settled",
           "them",
