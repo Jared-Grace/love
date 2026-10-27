@@ -663,7 +663,7 @@ export function bible_glyph_chapter_1sa20() {
           "$walking+pointing_down",
           "and",
           "$footprints",
-          "to",
+          "$toward",
           "the",
           "$place",
           "where",
