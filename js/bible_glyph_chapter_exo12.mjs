@@ -968,7 +968,7 @@ export function bible_glyph_chapter_exo12() {
           "$first_place+baby",
           "among",
           "the",
-          "livestock.",
+          "$paw_prints.",
         ],
       },
       {
