@@ -15,7 +15,7 @@ export function bible_glyph_chapter_jer23() {
       {
         verse_number: 1,
         words: [
-          "Woe",
+          "$weary_face",
           "to",
           "the",
           "shepherds",
