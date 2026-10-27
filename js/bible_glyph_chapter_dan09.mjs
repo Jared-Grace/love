@@ -1011,7 +1011,7 @@ export function bible_glyph_chapter_dan09() {
           "an",
           "end",
           "to",
-          "sacrifice",
+          "$sacrifice",
           "and",
           "offering.",
           "And",
