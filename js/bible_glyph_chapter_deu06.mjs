@@ -746,7 +746,7 @@ export function bible_glyph_chapter_deu06() {
           "of",
           "these",
           "$scroll",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "our",
