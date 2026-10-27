@@ -856,7 +856,7 @@ export function bible_glyph_chapter_2ki02() {
           "Bethel,",
           "and",
           "as",
-          "he",
+          "$pointing_back",
           "was",
           "walking",
           "up",
