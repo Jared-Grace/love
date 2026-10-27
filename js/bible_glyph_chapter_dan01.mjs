@@ -163,7 +163,7 @@ export function bible_glyph_chapter_dan01() {
         words: [
           "The",
           "$king",
-          "assigned",
+          "$input_numbers+doing",
           "them",
           "a",
           "daily",
