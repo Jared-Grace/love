@@ -122,7 +122,7 @@ export function bible_glyph_chapter_lev07() {
           "food",
           "offering",
           "$i_am.",
-          "It",
+          "$pointing_back",
           "is",
           "a",
           "guilt",
