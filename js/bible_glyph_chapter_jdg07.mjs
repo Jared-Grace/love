@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jdg07() {
           "$back+flashlight",
           "I",
           "$speech,",
-          "This",
+          "$flashlight",
           "one",
           "shall",
           "$no_entry",
