@@ -487,7 +487,7 @@ export function bible_glyph_chapter_ecc03() {
           "As",
           "one",
           "$skull,",
-          "so",
+          "$right_arrow",
           "$skull",
           "the",
           "other",
