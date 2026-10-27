@@ -26,7 +26,7 @@ export function bible_glyph_chapter_hos14() {
           "stumbled",
           "by",
           "your",
-          "iniquity.",
+          "$cyclone.",
         ],
       },
       {
