@@ -390,7 +390,7 @@ export function bible_glyph_chapter_jdg06() {
           "if",
           "the",
           "$i_am",
-          "is",
+          "$link",
           "with",
           "us,",
           "why",
