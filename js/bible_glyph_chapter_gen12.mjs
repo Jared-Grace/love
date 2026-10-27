@@ -441,7 +441,7 @@ export function bible_glyph_chapter_gen12() {
           "they",
           "commended",
           "her",
-          "to",
+          "$toward",
           "$proper_name$Pharaoh,",
           "and",
           "the",
