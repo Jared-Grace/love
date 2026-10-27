@@ -317,7 +317,7 @@ export function bible_glyph_chapter_isa02() {
           "$dust",
           "from",
           "the",
-          "terror",
+          "$fearful_face",
           "of",
           "the",
           "$i_am",
