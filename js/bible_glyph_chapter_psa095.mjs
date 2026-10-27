@@ -130,7 +130,7 @@ export function bible_glyph_chapter_psa095() {
           "let",
           "us",
           "kneel",
-          "before",
+          "$face",
           "the",
           "$i_am",
           "our",
