@@ -1570,7 +1570,7 @@ export function bible_glyph_chapter_deu28() {
           "offspring",
           "of",
           "your",
-          "livestock",
+          "$paw_prints",
           "and",
           "the",
           "produce",
