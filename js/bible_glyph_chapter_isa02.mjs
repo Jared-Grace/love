@@ -239,7 +239,7 @@ export function bible_glyph_chapter_isa02() {
           "of",
           "$silver",
           "and",
-          "gold,",
+          "$gold,",
           "with",
           "no",
           "limit",
