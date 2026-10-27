@@ -614,7 +614,7 @@ export function bible_glyph_chapter_lev16() {
           "the",
           "$sparkle+thing",
           "Place",
-          "until",
+          "$finish",
           "he",
           "leaves,",
           "after",
