@@ -1388,7 +1388,7 @@ export function bible_glyph_chapter_exo29() {
           "$i_am",
           "their",
           "$heart_on_fire,",
-          "who",
+          "$back+flashlight",
           "brought",
           "them",
           "out",
