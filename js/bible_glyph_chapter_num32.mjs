@@ -947,7 +947,7 @@ export function bible_glyph_chapter_num32() {
         words: [
           "We",
           "will",
-          "cross",
+          "$bridge",
           "over",
           "armed",
           "before",
