@@ -499,7 +499,7 @@ export function bible_glyph_chapter_gen14() {
           "went",
           "out",
           "to",
-          "meet",
+          "$footprints+toward+doing",
           "him",
           "in",
           "the",
