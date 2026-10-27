@@ -49,7 +49,7 @@ export function bible_glyph_chapter_exo34() {
       {
         verse_number: 2,
         words: [
-          "Be",
+          "$link",
           "ready",
           "in",
           "the",
