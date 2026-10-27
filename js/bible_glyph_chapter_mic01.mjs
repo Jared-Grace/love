@@ -238,7 +238,7 @@ export function bible_glyph_chapter_mic01() {
           "I",
           "will",
           "destroy",
-          "all",
+          "$all",
           "her",
           "idols.",
           "Since",
