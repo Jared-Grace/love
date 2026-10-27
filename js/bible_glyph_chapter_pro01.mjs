@@ -89,7 +89,7 @@ export function bible_glyph_chapter_pro01() {
           "discerning",
           "acquire",
           "wise",
-          "counsel",
+          "$ship+thread",
         ],
       },
       {
