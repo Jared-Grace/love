@@ -541,7 +541,7 @@ export function bible_glyph_chapter_mal03() {
           "and",
           "the",
           "$i_am",
-          "listened",
+          "$ear_with_hearing_aid",
           "and",
           "$ear",
           "them.",
