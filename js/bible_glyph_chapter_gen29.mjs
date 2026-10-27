@@ -293,7 +293,7 @@ export function bible_glyph_chapter_gen29() {
           "$sheep",
           "of",
           "$proper_name$Laban,",
-          "he",
+          "$hand+foot",
           "went",
           "up",
           "and",
