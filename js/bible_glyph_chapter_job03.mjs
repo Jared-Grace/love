@@ -471,7 +471,7 @@ export function bible_glyph_chapter_job03() {
           "to",
           "a",
           "$might+man_beard",
-          "whose",
+          "$back+flashlight",
           "$road",
           "is",
           "hidden,",
