@@ -401,7 +401,7 @@ export function bible_glyph_chapter_1sa01() {
           "and",
           "though",
           "her",
-          "lips",
+          "$kiss_mark",
           "were",
           "moving,",
           "her",
