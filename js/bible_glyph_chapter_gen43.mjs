@@ -473,7 +473,7 @@ export function bible_glyph_chapter_gen43() {
           "Then",
           "they",
           "hurried",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$clamp+proper_name",
           "and",
