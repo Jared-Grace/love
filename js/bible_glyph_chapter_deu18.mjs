@@ -421,7 +421,7 @@ export function bible_glyph_chapter_deu18() {
           "you",
           "a",
           "$megaphone",
-          "like",
+          "$likeness",
           "me",
           "from",
           "among",
