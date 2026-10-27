@@ -251,7 +251,7 @@ export function bible_glyph_chapter_pro08() {
       {
         verse_number: 14,
         words: [
-          "Counsel",
+          "$person_tipping_hand",
           "and",
           "sound",
           "judgment",
