@@ -457,7 +457,7 @@ export function bible_glyph_chapter_isa26() {
           "to",
           "give",
           "birth",
-          "writhes",
+          "$dizzy",
           "and",
           "cries",
           "out",
