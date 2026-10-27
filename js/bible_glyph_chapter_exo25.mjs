@@ -626,7 +626,7 @@ export function bible_glyph_chapter_exo25() {
           "$ring",
           "on",
           "the",
-          "four",
+          "$four",
           "corners",
           "that",
           "are",
