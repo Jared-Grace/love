@@ -449,7 +449,7 @@ export function bible_glyph_chapter_job19() {
           "forever",
           "by",
           "an",
-          "iron",
+          "$iron",
           "$writing_hand+sewing_needle",
           "on",
           "lead!",
