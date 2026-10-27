@@ -573,7 +573,7 @@ export function bible_glyph_chapter_exo18() {
       {
         verse_number: 19,
         words: [
-          "Now",
+          "$watch",
           "$ear",
           "my",
           "$voice.",
