@@ -30,7 +30,7 @@ export function bible_glyph_chapter_jer29() {
           "to",
           "the",
           "surviving",
-          "elders",
+          "$old_man",
           "among",
           "the",
           "exiles,",
