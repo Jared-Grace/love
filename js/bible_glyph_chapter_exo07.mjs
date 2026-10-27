@@ -84,7 +84,7 @@ export function bible_glyph_chapter_exo07() {
           "though",
           "I",
           "will",
-          "multiply",
+          "$multiply+doing",
           "My",
           "signs",
           "and",
