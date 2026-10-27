@@ -1074,7 +1074,7 @@ export function bible_glyph_chapter_jdg11() {
           "keramim.",
           "With",
           "a",
-          "great",
+          "$top",
           "$fist+thing",
           "the",
           "$son",
