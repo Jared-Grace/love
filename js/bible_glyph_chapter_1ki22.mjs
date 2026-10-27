@@ -1004,7 +1004,7 @@ export function bible_glyph_chapter_1ki22() {
           "ordered",
           "his",
           "thirty-two",
-          "chariot",
+          "$chariot",
           "$military_medal,",
           "$speech,",
           "Do",
