@@ -489,7 +489,7 @@ export function bible_glyph_chapter_gen47() {
           "$i_am+plus",
           "and",
           "$speech,",
-          "Give",
+          "$hands_giving+up_arrow",
           "us",
           "$bread.",
           "Why",
