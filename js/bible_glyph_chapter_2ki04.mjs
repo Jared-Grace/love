@@ -702,7 +702,7 @@ export function bible_glyph_chapter_2ki04() {
           "$speech,",
           "$flashlight+question+lightbulb",
           "would",
-          "you",
+          "$you",
           "$walking",
           "to",
           "him",
