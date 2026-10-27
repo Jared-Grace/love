@@ -125,7 +125,7 @@ export function bible_glyph_chapter_lev22() {
           "$finish",
           "he",
           "is",
-          "clean.",
+          "$soap+doing.",
           "Whoever",
           "touches",
           "anything",
