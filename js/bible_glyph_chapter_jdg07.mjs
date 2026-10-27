@@ -335,7 +335,7 @@ export function bible_glyph_chapter_jdg07() {
           "him",
           "in",
           "the",
-          "valley.",
+          "$valley.",
         ],
       },
       {
