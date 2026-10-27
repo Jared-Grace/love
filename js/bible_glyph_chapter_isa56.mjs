@@ -132,7 +132,7 @@ export function bible_glyph_chapter_isa56() {
           "the",
           "eunuchs",
           "who",
-          "keep",
+          "$guard",
           "My",
           "Sabbaths,",
           "who",
