@@ -778,7 +778,7 @@ export function bible_glyph_chapter_exo29() {
           "the",
           "$battery+thing",
           "of",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "and",
           "wave",
           "it",
