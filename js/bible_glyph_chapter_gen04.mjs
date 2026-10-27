@@ -87,7 +87,7 @@ export function bible_glyph_chapter_gen04() {
           "$fruit",
           "of",
           "the",
-          "soil",
+          "$brown_square",
           "as",
           "an",
           "offering",
