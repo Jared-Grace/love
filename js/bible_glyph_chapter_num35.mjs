@@ -186,7 +186,7 @@ export function bible_glyph_chapter_num35() {
           "$hands_giving",
           "the",
           "$handshake,",
-          "six",
+          "$six",
           "are",
           "to",
           "be",
