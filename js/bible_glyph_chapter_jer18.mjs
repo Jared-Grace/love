@@ -674,7 +674,7 @@ export function bible_glyph_chapter_jer18() {
           "You",
           "suddenly",
           "$footprints",
-          "raiders",
+          "$crowd+sword",
           "against",
           "them,",
           "for",
