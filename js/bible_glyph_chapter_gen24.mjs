@@ -69,7 +69,7 @@ export function bible_glyph_chapter_gen24() {
           "will",
           "have",
           "you",
-          "swear",
+          "$raised_back_of_hand+doing",
           "by",
           "the",
           "$i_am,",
