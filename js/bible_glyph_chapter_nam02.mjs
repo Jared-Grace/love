@@ -347,7 +347,7 @@ export function bible_glyph_chapter_nam02() {
       {
         verse_number: 13,
         words: [
-          "Behold,",
+          "$exclamation,",
           "I",
           "am",
           "against",
