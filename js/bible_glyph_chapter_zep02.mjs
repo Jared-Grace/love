@@ -474,7 +474,7 @@ export function bible_glyph_chapter_zep02() {
           "the",
           "beams",
           "of",
-          "cedar.",
+          "$cedar+female_sign.",
         ],
       },
       {
