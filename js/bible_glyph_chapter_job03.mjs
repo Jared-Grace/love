@@ -356,7 +356,7 @@ export function bible_glyph_chapter_job03() {
           "$telescope",
           "the",
           "$thumbs_down",
-          "cease",
+          "$stop_button",
           "from",
           "raging,",
           "and",
