@@ -107,7 +107,7 @@ export function bible_glyph_chapter_2ki04() {
           "empty",
           "jars",
           "$tray_out",
-          "all",
+          "$all",
           "your",
           "neighbors.",
           "$no_entry",
