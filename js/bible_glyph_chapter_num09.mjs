@@ -675,7 +675,7 @@ export function bible_glyph_chapter_num09() {
           "remained",
           "only",
           "from",
-          "evening",
+          "$sunset",
           "until",
           "$morning,",
           "and",
