@@ -1362,7 +1362,7 @@ export function bible_glyph_chapter_gen24() {
           "$jar",
           "$pointing_up",
           "her",
-          "shoulder,",
+          "$backpack+person,",
           "and",
           "she",
           "went",
