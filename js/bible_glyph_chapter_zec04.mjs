@@ -65,7 +65,7 @@ export function bible_glyph_chapter_zec04() {
           "on",
           "it,",
           "with",
-          "seven",
+          "$seven",
           "spouts",
           "to",
           "the",
