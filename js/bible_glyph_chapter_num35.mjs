@@ -131,7 +131,7 @@ export function bible_glyph_chapter_num35() {
           "are",
           "also",
           "to",
-          "measure",
+          "$triangular_ruler+doing",
           "outside",
           "the",
           "$city",
