@@ -583,7 +583,7 @@ export function bible_glyph_chapter_jer07() {
       {
         verse_number: 20,
         words: [
-          "Therefore",
+          "$right_arrow",
           "this",
           "is",
           "what",
