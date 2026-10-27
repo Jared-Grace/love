@@ -200,7 +200,7 @@ export function bible_glyph_chapter_num24() {
           "$proper_name$Agag,",
           "and",
           "his",
-          "kingdom",
+          "$castle",
           "will",
           "be",
           "exalted.",
