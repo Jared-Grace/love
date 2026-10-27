@@ -106,7 +106,7 @@ export function bible_glyph_chapter_lev12() {
           "into",
           "the",
           "sanctuary,",
-          "until",
+          "$finish",
           "the",
           "$sun",
           "of",
