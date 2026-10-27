@@ -409,7 +409,7 @@ export function bible_glyph_chapter_job19() {
           "you",
           "persecute",
           "me",
-          "as",
+          "$likeness",
           "$heart_on_fire",
           "does?",
           "Will",
