@@ -767,7 +767,7 @@ export function bible_glyph_chapter_1sa20() {
           "the",
           "young",
           "man,",
-          "Look,",
+          "$exclamation,",
           "the",
           "arrows",
           "are",
