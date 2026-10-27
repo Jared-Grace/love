@@ -1608,7 +1608,7 @@ export function bible_glyph_chapter_gen41() {
           "$clamp+proper_name",
           "to",
           "buy",
-          "grain",
+          "$wheat+coin+doing",
           "from",
           "$i_am+plus,",
           "because",
