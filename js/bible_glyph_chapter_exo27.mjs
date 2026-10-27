@@ -360,7 +360,7 @@ export function bible_glyph_chapter_exo27() {
           "$candle",
           "and",
           "$three",
-          "bases,",
+          "$down_arrow+brick,",
         ],
       },
       {
