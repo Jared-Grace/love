@@ -658,7 +658,7 @@ export function bible_glyph_chapter_jdg11() {
           "$bridge",
           "through",
           "his",
-          "territory.",
+          "$passport_control.",
           "So",
           "he",
           "gathered",
