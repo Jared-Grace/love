@@ -397,7 +397,7 @@ export function bible_glyph_chapter_zec09() {
           "O",
           "prisoners",
           "of",
-          "hope;",
+          "$crossed_fingers;",
           "even",
           "$sun",
           "I",
