@@ -1376,7 +1376,7 @@ export function bible_glyph_chapter_2ki04() {
           "$thumbs_down",
           "in",
           "the",
-          "pot.",
+          "$pot_of_food.",
         ],
       },
       {
