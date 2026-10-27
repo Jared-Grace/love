@@ -49,7 +49,11 @@ export async function function_edit_safe_refusals(
   let source_existing = await function_read(f_name);
   let ast = js_parse(source_existing);
   let codes_existing = js_module_extras_codes(ast);
-  let codes = extras.map(js_unparse);
+  function lambda5(item) {
+    let code2 = js_unparse(item);
+    return code2;
+  }
+  let codes = extras.map(lambda5);
   let same = json_equal(codes, codes_existing);
   if (not(same)) {
     refusals.push("the draft changes what the file keeps outside its function");
