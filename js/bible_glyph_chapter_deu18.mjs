@@ -276,7 +276,7 @@ export function bible_glyph_chapter_deu18() {
           "to",
           "$hammer+doing",
           "the",
-          "detestable",
+          "$vomiting",
           "ways",
           "of",
           "the",
