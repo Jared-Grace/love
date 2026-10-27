@@ -445,7 +445,7 @@ export function bible_glyph_chapter_exo37() {
       {
         verse_number: 18,
         words: [
-          "Six",
+          "$six",
           "branches",
           "$walking+tray_out",
           "from",
