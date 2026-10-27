@@ -768,7 +768,7 @@ export function bible_glyph_chapter_deu29() {
           "a",
           "thing",
           "to",
-          "this",
+          "$flashlight",
           "$earth?",
           "Why",
           "this",
