@@ -752,7 +752,7 @@ export function bible_glyph_chapter_exo29() {
           "$burnt_offering,",
           "as",
           "a",
-          "pleasing",
+          "$nose+thumbs_up",
           "$nose",
           "before",
           "$i_am.",
