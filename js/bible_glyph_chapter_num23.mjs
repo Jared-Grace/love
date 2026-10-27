@@ -681,7 +681,7 @@ export function bible_glyph_chapter_num23() {
       {
         verse_number: 24,
         words: [
-          "Behold,",
+          "$exclamation,",
           "the",
           "$family",
           "rise",
