@@ -554,7 +554,7 @@ export function bible_glyph_chapter_exo25() {
           "$tree,",
           "two",
           "cubits",
-          "long,",
+          "$up_down_arrow,",
           "a",
           "cubit",
           "wide",
