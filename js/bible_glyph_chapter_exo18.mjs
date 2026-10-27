@@ -242,7 +242,7 @@ export function bible_glyph_chapter_exo18() {
           "$clamp+proper_name",
           "for",
           "$wrestling+heart_on_fire",
-          "sake,",
+          "$clockwise_arrows+manner,",
           "$all",
           "the",
           "hardships",
