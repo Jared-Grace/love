@@ -642,7 +642,7 @@ export function bible_glyph_chapter_1ki22() {
           "and",
           "all",
           "the",
-          "host",
+          "$military_helmet",
           "of",
           "$sky",
           "standing",
