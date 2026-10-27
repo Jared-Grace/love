@@ -306,7 +306,7 @@ export function bible_glyph_chapter_lev11() {
           "and",
           "you",
           "must",
-          "detest",
+          "$nauseated_face+no_entry+doing",
           "their",
           "carcasses.",
         ],
