@@ -636,7 +636,7 @@ export function bible_glyph_chapter_gen08() {
           "last,",
           "$seed",
           "and",
-          "harvest,",
+          "$harvest,",
           "cold",
           "and",
           "heat,",
