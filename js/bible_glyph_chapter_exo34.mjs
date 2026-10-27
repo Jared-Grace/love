@@ -665,7 +665,7 @@ export function bible_glyph_chapter_exo34() {
           "$eye",
           "before",
           "Me",
-          "empty-handed.",
+          "$hand+zero+manner.",
         ],
       },
       {
