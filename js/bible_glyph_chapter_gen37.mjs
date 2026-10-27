@@ -470,7 +470,7 @@ export function bible_glyph_chapter_gen37() {
           "$newspaper",
           "me",
           "$map+question",
-          "they",
+          "$pointing_back",
           "are",
           "$person+sheep?",
         ],
