@@ -57,7 +57,7 @@ export function bible_glyph_chapter_exo19() {
           "$proper_name$Sinai",
           "and",
           "camped",
-          "there,",
+          "$telescope,",
           "and",
           "$wrestling+heart_on_fire",
           "camped",
