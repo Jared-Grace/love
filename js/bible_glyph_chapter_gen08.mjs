@@ -132,7 +132,7 @@ export function bible_glyph_chapter_gen08() {
           "to",
           "$walking",
           "down",
-          "until",
+          "$finish",
           "the",
           "tenth",
           "month,",
