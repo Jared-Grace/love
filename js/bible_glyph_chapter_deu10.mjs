@@ -404,7 +404,7 @@ export function bible_glyph_chapter_deu10() {
         verse_number: 12,
         words: [
           "And",
-          "now,",
+          "$watch,",
           "Israel,",
           "what",
           "does",
