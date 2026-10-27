@@ -29,7 +29,7 @@ export function bible_glyph_chapter_job01() {
           "this",
           "$man_beard",
           "was",
-          "blameless",
+          "$full_moon+person",
           "and",
           "upright,",
           "fearing",
