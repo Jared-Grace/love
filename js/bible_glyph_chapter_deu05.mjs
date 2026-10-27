@@ -241,7 +241,7 @@ export function bible_glyph_chapter_deu05() {
           "$kneeling+doing",
           "them;",
           "$pointing",
-          "I,",
+          "$me,",
           "the",
           "$i_am",
           "your",
