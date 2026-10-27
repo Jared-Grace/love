@@ -561,7 +561,7 @@ export function bible_glyph_chapter_num09() {
           "of",
           "Israel",
           "would",
-          "camp.",
+          "$camp+doing.",
         ],
       },
       {
