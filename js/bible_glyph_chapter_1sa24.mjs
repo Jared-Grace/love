@@ -217,7 +217,7 @@ export function bible_glyph_chapter_1sa24() {
           "$hand",
           "against",
           "him,",
-          "since",
+          "$pointing",
           "he",
           "is",
           "the",
