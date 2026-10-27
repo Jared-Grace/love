@@ -170,7 +170,7 @@ export function bible_glyph_chapter_exo39() {
           "$unlocked",
           "like",
           "a",
-          "seal",
+          "$ring+locked+thing",
           "with",
           "$name_tag",
           "of",
