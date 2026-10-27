@@ -1078,7 +1078,7 @@ export function bible_glyph_chapter_exo29() {
           "based",
           "on",
           "all",
-          "that",
+          "$back+flashlight",
           "I",
           "have",
           "commanded",
