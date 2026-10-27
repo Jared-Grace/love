@@ -814,7 +814,7 @@ export function bible_glyph_chapter_1sa01() {
           "$sprout,",
           "my",
           "$crown,",
-          "I",
+          "$me",
           "am",
           "the",
           "$woman",
