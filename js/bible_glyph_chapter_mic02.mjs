@@ -373,7 +373,7 @@ export function bible_glyph_chapter_mic02() {
           "will",
           "bring",
           "them",
-          "together",
+          "$linked_paperclips+manner",
           "like",
           "$sheep",
           "in",
