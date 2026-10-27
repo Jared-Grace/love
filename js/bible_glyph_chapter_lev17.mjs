@@ -467,7 +467,7 @@ export function bible_glyph_chapter_lev17() {
           "or",
           "a",
           "$bird",
-          "that",
+          "$back+flashlight",
           "may",
           "be",
           "eaten,",
