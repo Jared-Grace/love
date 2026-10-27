@@ -2047,7 +2047,7 @@ export function bible_glyph_chapter_deu28() {
           "uprooted",
           "from",
           "the",
-          "land",
+          "$brown_square",
           "you",
           "are",
           "$footprints",
