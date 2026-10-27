@@ -1026,7 +1026,7 @@ export function bible_glyph_chapter_exo32() {
           "a",
           "$top",
           "$bow+doing.",
-          "Now",
+          "$watch",
           "I",
           "will",
           "$walking+pointing_up",
