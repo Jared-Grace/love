@@ -868,7 +868,7 @@ export function bible_glyph_chapter_exo34() {
           "$speech",
           "$toward",
           "$fishing_pole+proper_name,",
-          "Write",
+          "$writing_hand",
           "down",
           "these",
           "$speech,",
