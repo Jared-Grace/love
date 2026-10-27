@@ -50,7 +50,7 @@ export function bible_glyph_chapter_isa49() {
           "$face_with_open_mouth",
           "like",
           "a",
-          "sharp",
+          "$kitchen_knife+sparkle+describing",
           "$sword;",
           "He",
           "hid",
