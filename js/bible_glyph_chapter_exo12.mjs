@@ -846,7 +846,7 @@ export function bible_glyph_chapter_exo12() {
           "$son",
           "$speech",
           "you,",
-          "What",
+          "$flashlight+question",
           "does",
           "this",
           "service",
