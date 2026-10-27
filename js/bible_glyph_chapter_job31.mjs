@@ -674,7 +674,7 @@ export function bible_glyph_chapter_job31() {
           "$door+thing",
           "has",
           "been",
-          "open",
+          "$unlocked",
           "to",
           "the",
           "traveler,",
