@@ -1163,7 +1163,7 @@ export function bible_glyph_chapter_gen31() {
           "I",
           "$kneeling+doing",
           "you",
-          "fourteen",
+          "$four",
           "$year",
           "for",
           "your",
