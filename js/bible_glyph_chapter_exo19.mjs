@@ -446,7 +446,7 @@ export function bible_glyph_chapter_exo19() {
           "long",
           "blast",
           "may",
-          "they",
+          "$pointing_back",
           "$walking+pointing_up",
           "the",
           "$mountain.",
