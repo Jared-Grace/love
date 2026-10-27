@@ -1613,7 +1613,7 @@ export function bible_glyph_chapter_gen41() {
           "$i_am+plus,",
           "$pointing",
           "the",
-          "famine",
+          "$famine",
           "was",
           "severe",
           "over",
