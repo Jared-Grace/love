@@ -32,7 +32,7 @@ export function bible_glyph_chapter_lam05() {
         verse_number: 2,
         words: [
           "Our",
-          "inheritance",
+          "$inheritance",
           "has",
           "been",
           "turned",
