@@ -361,7 +361,7 @@ export function bible_glyph_chapter_jdg16() {
           "me.",
           "$watch",
           "please",
-          "tell",
+          "$newspaper",
           "me",
           "how",
           "you",
