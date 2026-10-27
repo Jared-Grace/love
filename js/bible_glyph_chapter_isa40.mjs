@@ -277,7 +277,7 @@ export function bible_glyph_chapter_isa40() {
       {
         verse_number: 10,
         words: [
-          "Behold,",
+          "$exclamation,",
           "the",
           "$crown",
           "$i_am",
