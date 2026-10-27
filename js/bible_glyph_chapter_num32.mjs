@@ -278,7 +278,7 @@ export function bible_glyph_chapter_num32() {
         words: [
           "So",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "$i_am",
           "was",
