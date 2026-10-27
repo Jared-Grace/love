@@ -101,7 +101,7 @@ export function bible_glyph_chapter_deu15() {
           "among",
           "you,",
           "$end_arrow+zero,",
-          "because",
+          "$pointing",
           "the",
           "$i_am",
           "will",
