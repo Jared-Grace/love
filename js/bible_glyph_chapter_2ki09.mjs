@@ -536,7 +536,7 @@ export function bible_glyph_chapter_2ki09() {
           "So",
           "$i_am+pointing_back",
           "$speech,",
-          "If",
+          "$traffic_light",
           "this",
           "is",
           "what",
