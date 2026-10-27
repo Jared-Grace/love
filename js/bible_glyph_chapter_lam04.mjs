@@ -134,7 +134,7 @@ export function bible_glyph_chapter_lam04() {
           "who",
           "once",
           "ate",
-          "delicacies",
+          "$smile+sparkles+bread",
           "are",
           "destitute",
           "in",
