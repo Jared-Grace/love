@@ -443,7 +443,7 @@ export function bible_glyph_chapter_ecc03() {
       {
         verse_number: 18,
         words: [
-          "I",
+          "$me",
           "$speech",
           "to",
           "$heart_organ,",
