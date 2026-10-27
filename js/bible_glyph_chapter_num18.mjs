@@ -506,7 +506,7 @@ export function bible_glyph_chapter_num18() {
           "to",
           "you.",
           "Every",
-          "clean",
+          "$soap+describing",
           "person",
           "in",
           "your",
