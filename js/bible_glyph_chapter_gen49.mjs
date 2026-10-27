@@ -552,7 +552,7 @@ export function bible_glyph_chapter_gen49() {
           "he",
           "steadied",
           "his",
-          "bow,",
+          "$bow+wood,",
           "and",
           "his",
           "strong",
