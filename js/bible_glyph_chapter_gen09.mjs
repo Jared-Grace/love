@@ -335,7 +335,7 @@ export function bible_glyph_chapter_gen09() {
           "of",
           "the",
           "$covenant",
-          "I",
+          "$me",
           "am",
           "$hands_giving",
           "between",
