@@ -178,7 +178,7 @@ export function bible_glyph_chapter_exo15() {
           "You",
           "unleashed",
           "Your",
-          "burning",
+          "$angry_face+thing",
           "wrath;",
           "it",
           "consumed",
