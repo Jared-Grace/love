@@ -1084,7 +1084,7 @@ export function bible_glyph_chapter_1sa02() {
           "place.",
           "Despite",
           "all",
-          "that",
+          "$back+flashlight",
           "is",
           "good",
           "in",
