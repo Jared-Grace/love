@@ -926,7 +926,7 @@ export function bible_glyph_chapter_lam03() {
           "$sprout",
           "into",
           "a",
-          "pit",
+          "$hole+droplet",
           "and",
           "$hands_raised",
           "$stone",
