@@ -302,7 +302,7 @@ export function bible_glyph_chapter_exo31() {
           "will",
           "be",
           "a",
-          "sign",
+          "$placard",
           "between",
           "me",
           "and",
