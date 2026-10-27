@@ -42,7 +42,7 @@ export function bible_glyph_chapter_psa116() {
           "me,",
           "I",
           "will",
-          "call",
+          "$waving_hand",
           "on",
           "Him",
           "as",
