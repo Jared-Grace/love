@@ -388,7 +388,7 @@ export function bible_glyph_chapter_isa40() {
       {
         verse_number: 13,
         words: [
-          "Who",
+          "$person+question",
           "has",
           "directed",
           "the",
