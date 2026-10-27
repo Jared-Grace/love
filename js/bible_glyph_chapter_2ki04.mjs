@@ -104,7 +104,7 @@ export function bible_glyph_chapter_2ki04() {
           "$speech,",
           "$walking,",
           "$question",
-          "empty",
+          "$tray_out+droplet+describing",
           "$toolbox",
           "$tray_out",
           "$all",
