@@ -36,7 +36,7 @@ export function bible_glyph_chapter_1sa08() {
           "$name_tag",
           "of",
           "his",
-          "firstborn",
+          "$first_place+baby",
           "$son",
           "was",
           "$i_am+heart_on_fire,",
