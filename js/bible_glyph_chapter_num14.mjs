@@ -492,7 +492,7 @@ export function bible_glyph_chapter_num14() {
           "If",
           "You",
           "$skull+doing",
-          "this",
+          "$flashlight",
           "$family",
           "as",
           "one",
