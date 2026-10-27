@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_num11() {
           "them",
           "near",
           "the",
-          "camp,",
+          "$camp,",
           "a",
           "$sun",
           "of",
