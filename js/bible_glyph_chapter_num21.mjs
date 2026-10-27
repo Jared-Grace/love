@@ -711,7 +711,7 @@ export function bible_glyph_chapter_num21() {
           "$son",
           "of",
           "Ammon,",
-          "because",
+          "$pointing",
           "it",
           "was",
           "fortified.",
