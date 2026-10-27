@@ -305,7 +305,7 @@ export function bible_glyph_chapter_1sa24() {
           "$speech",
           "to",
           "$proper_name$Saul,",
-          '"Why',
+          '"$flashlight+question',
           "do",
           "you",
           "$ear",
