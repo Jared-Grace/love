@@ -397,7 +397,7 @@ export function bible_glyph_chapter_gen21() {
           "and",
           "sat",
           "down",
-          "nearby,",
+          "$newspaper+thing,",
           "about",
           "a",
           "bowshot",
