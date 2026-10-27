@@ -460,7 +460,7 @@ export function bible_glyph_chapter_exo35() {
           "$walking+tray_out",
           "from",
           "the",
-          "presence",
+          "$face",
           "of",
           "$fishing_pole+proper_name.",
         ],
