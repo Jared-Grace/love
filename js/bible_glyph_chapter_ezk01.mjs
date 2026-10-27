@@ -764,7 +764,7 @@ export function bible_glyph_chapter_ezk01() {
           "be",
           "His",
           "$briefs+round_pushpin",
-          "up,",
+          "$walking+pointing_up,",
           "I",
           "$eye",
           "a",
