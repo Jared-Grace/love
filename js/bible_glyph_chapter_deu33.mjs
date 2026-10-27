@@ -296,7 +296,7 @@ export function bible_glyph_chapter_deu33() {
           "$all+describing",
           "burnt",
           "offerings",
-          "on",
+          "$pointing_up",
           "Your",
           "$altar.",
         ],
