@@ -465,7 +465,7 @@ export function bible_glyph_chapter_ezk03() {
           "there",
           "among",
           "them",
-          "seven",
+          "$seven",
           "$sun,",
           "overwhelmed.",
         ],
