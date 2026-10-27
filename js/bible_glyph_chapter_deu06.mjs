@@ -496,7 +496,7 @@ export function bible_glyph_chapter_deu06() {
           "are",
           "to",
           "diligently",
-          "keep",
+          "$guard",
           "the",
           "$scroll",
           "of",
