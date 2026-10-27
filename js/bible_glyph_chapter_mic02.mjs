@@ -120,7 +120,7 @@ export function bible_glyph_chapter_mic02() {
           "$lifting",
           "up",
           "a",
-          "proverb",
+          "$speech+likeness",
           "against",
           "you",
           "and",
