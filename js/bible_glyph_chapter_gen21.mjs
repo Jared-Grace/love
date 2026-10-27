@@ -803,7 +803,7 @@ export function bible_glyph_chapter_gen21() {
           "$telescope",
           "that",
           "the",
-          "two",
+          "$two",
           "of",
           "them",
           "swore",
