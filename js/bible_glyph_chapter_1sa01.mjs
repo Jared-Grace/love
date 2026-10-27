@@ -235,7 +235,7 @@ export function bible_glyph_chapter_1sa01() {
           "are",
           "you",
           "crying?",
-          "Why",
+          "$flashlight+question",
           "will",
           "you",
           "$no_entry",
