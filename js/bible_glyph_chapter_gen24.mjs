@@ -288,7 +288,7 @@ export function bible_glyph_chapter_gen24() {
           "and",
           "swore",
           "an",
-          "oath",
+          "$raised_back_of_hand+doing",
           "to",
           "him",
           "concerning",
