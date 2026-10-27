@@ -927,7 +927,7 @@ export function bible_glyph_chapter_exo22() {
           "You",
           "are",
           "to",
-          "throw",
+          "$throwing",
           "it",
           "to",
           "the",
