@@ -78,7 +78,7 @@ export function bible_glyph_chapter_zec04() {
           "There",
           "are",
           "also",
-          "two",
+          "$two",
           "olive",
           "trees",
           "beside",
