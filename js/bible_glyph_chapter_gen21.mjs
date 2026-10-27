@@ -517,7 +517,7 @@ export function bible_glyph_chapter_gen21() {
           "and",
           "filled",
           "the",
-          "skin",
+          "$goat+amphora",
           "with",
           "$water",
           "and",
