@@ -1930,7 +1930,7 @@ export function bible_glyph_chapter_lev13() {
           "$shuffle",
           "$herb+thread+thing",
           "$garment,",
-          "weave",
+          "$yarn+round_pushpin",
           "$shuffle",
           "knit,",
           "$shuffle",
