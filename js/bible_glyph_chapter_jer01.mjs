@@ -501,7 +501,7 @@ export function bible_glyph_chapter_jer01() {
           "and",
           "$mouth",
           "them",
-          "everything",
+          "$all",
           "that",
           "I",
           "command",
