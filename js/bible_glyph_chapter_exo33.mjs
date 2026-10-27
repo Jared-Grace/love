@@ -761,7 +761,7 @@ export function bible_glyph_chapter_exo33() {
           "take",
           "My",
           "hand",
-          "away,",
+          "$away+doing,",
           "and",
           "you",
           "will",
