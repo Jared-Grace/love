@@ -454,7 +454,7 @@ export function bible_glyph_chapter_jer17() {
           "will",
           "be",
           "saved,",
-          "for",
+          "$pointing",
           "You",
           "are",
           "my",
