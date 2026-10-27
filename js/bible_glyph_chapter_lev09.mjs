@@ -19,7 +19,7 @@ export function bible_glyph_chapter_lev09() {
           "eighth",
           "$sun",
           "$fishing_pole+proper_name",
-          "summoned",
+          "$waving_hand",
           "$proper_name$Aaron",
           "and",
           "$son",
