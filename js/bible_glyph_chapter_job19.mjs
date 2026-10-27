@@ -99,7 +99,7 @@ export function bible_glyph_chapter_job19() {
           "drawn",
           "His",
           "net",
-          "around",
+          "$fist+around+doing",
           "me.",
         ],
       },
