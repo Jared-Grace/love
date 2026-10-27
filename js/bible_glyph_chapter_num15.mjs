@@ -844,7 +844,7 @@ export function bible_glyph_chapter_num15() {
           "a",
           "$foreigner",
           "$luggage",
-          "among",
+          "$radio_button",
           "you.",
         ],
       },
