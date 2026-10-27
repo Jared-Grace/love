@@ -145,7 +145,7 @@ export function bible_glyph_chapter_psa110() {
         words: [
           "He",
           "will",
-          "judge",
+          "$scales+speech+doing",
           "the",
           "$map,",
           "heaping",
