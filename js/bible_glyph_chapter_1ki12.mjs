@@ -541,7 +541,7 @@ export function bible_glyph_chapter_1ki12() {
           "$two_hearts+proper_name?",
           "And",
           "$no_entry",
-          "inheritance",
+          "$inheritance",
           "in",
           "the",
           "$son",
