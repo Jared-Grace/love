@@ -1203,7 +1203,7 @@ export function bible_glyph_chapter_gen27() {
           "$proper_name$Esau",
           "held",
           "a",
-          "grudge",
+          "$angry_face+person+doing",
           "against",
           "$hand+foot",
           "because",
