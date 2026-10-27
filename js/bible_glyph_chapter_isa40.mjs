@@ -355,7 +355,7 @@ export function bible_glyph_chapter_isa40() {
           "$sky",
           "with",
           "the",
-          "span",
+          "$hand_with_fingers_splayed+straight_ruler",
           "of",
           "his",
           "hand?",
