@@ -98,7 +98,7 @@ export function bible_glyph_chapter_lev23() {
           "$i_am,",
           "the",
           "$sparkle+thing",
-          "assemblies",
+          "$waving_hand+thing",
           "you",
           "are",
           "to",
