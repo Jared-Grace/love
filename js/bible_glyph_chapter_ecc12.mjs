@@ -355,7 +355,7 @@ export function bible_glyph_chapter_ecc12() {
           "$hammer+doing",
           "of",
           "many",
-          "books",
+          "$closed_book",
           "there",
           "is",
           "no",
