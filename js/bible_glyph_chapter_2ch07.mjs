@@ -274,7 +274,7 @@ export function bible_glyph_chapter_2ch07() {
           "$peace+proper_name",
           "$hammer+doing",
           "the",
-          "feast",
+          "$party_popper",
           "for",
           "seven",
           "$sun,",
