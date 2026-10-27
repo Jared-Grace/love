@@ -460,7 +460,7 @@ export function bible_glyph_chapter_1sa07() {
           "against",
           "the",
           "$proper_name$Philistines",
-          "all",
+          "$all",
           "the",
           "$sun",
           "of",
