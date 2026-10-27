@@ -149,7 +149,7 @@ export function bible_glyph_chapter_jer23() {
           "any",
           "$repeat,",
           "$no_entry",
-          "dismayed,",
+          "$anxious_face_with_sweat,",
           "nor",
           "will",
           "any",
