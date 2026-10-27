@@ -386,7 +386,7 @@ export function bible_glyph_chapter_2ki09() {
           "right?",
           "$flashlight+question+lightbulb",
           "did",
-          "this",
+          "$flashlight",
           "$face_spiral+doing",
           "$footprints",
           "to",
