@@ -319,7 +319,7 @@ export function bible_glyph_chapter_zec09() {
           "cut",
           "off",
           "the",
-          "chariot",
+          "$chariot",
           "from",
           "$fruit",
           "and",
