@@ -414,7 +414,7 @@ export function bible_glyph_chapter_2ch07() {
           "the",
           "$i_am",
           "$eye",
-          "to",
+          "$toward",
           "him",
           "at",
           "$night",
