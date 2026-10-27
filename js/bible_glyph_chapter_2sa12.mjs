@@ -1032,7 +1032,7 @@ export function bible_glyph_chapter_2sa12() {
           "work",
           "with",
           "saws,",
-          "picks,",
+          "$kitchen_knife+thing,",
           "and",
           "iron",
           "axes,",
