@@ -401,7 +401,7 @@ export function bible_glyph_chapter_exo32() {
       {
         verse_number: 12,
         words: [
-          "Why",
+          "$flashlight+question",
           "should",
           "the",
           "Egyptians",
