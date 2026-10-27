@@ -156,7 +156,7 @@ export function bible_glyph_chapter_gen18() {
           "your",
           "$kneeling",
           "way.",
-          "Yes,",
+          "$right_arrow,",
           "they",
           "$speech,",
           "you",
