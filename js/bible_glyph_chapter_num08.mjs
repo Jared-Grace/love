@@ -740,7 +740,7 @@ export function bible_glyph_chapter_num08() {
           "at",
           "$tent",
           "of",
-          "Meeting",
+          "$alarm_clock",
           "in",
           "fulfilling",
           "their",
