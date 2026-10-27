@@ -345,7 +345,7 @@ export function bible_glyph_chapter_isa07() {
           "depths",
           "of",
           "$pointing_down+skull",
-          "or",
+          "$shuffle",
           "the",
           "heights",
           "of",
