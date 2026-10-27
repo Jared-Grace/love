@@ -685,7 +685,7 @@ export function bible_glyph_chapter_lev15() {
           "$shuffle",
           "$toolbox",
           "$pointing_up",
-          "which",
+          "$back+flashlight",
           "she",
           "was",
           "sitting,",
