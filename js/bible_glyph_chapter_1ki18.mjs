@@ -1272,7 +1272,7 @@ export function bible_glyph_chapter_1ki18() {
           "$water",
           "in",
           "the",
-          "trench.",
+          "$water_wave+up_arrow+road.",
         ],
       },
       {
