@@ -582,7 +582,7 @@ export function bible_glyph_chapter_jer01() {
           "with",
           "you",
           "to",
-          "deliver",
+          "$hand+rescue",
           "you,",
           "$microphone",
           "the",
