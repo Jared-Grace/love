@@ -986,7 +986,7 @@ export function bible_glyph_chapter_deu32() {
           "no",
           "one",
           "remains,",
-          "slave",
+          "$stop_sign+doing",
           "or",
           "free.",
         ],
