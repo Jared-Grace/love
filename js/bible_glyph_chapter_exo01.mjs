@@ -15,7 +15,7 @@ export function bible_glyph_chapter_exo01() {
       {
         verse_number: 1,
         words: [
-          "These",
+          "$flashlight+flashlight",
           "are",
           "the",
           "$name_tag",
