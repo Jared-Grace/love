@@ -403,7 +403,7 @@ export function bible_glyph_chapter_lev10() {
           "of",
           "the",
           "contribution",
-          "you",
+          "$you",
           "and",
           "$son",
           "and",
