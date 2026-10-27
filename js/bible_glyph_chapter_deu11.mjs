@@ -922,7 +922,7 @@ export function bible_glyph_chapter_deu11() {
           "$tray_out",
           "the",
           "$road",
-          "I",
+          "$me",
           "command",
           "you",
           "this",
