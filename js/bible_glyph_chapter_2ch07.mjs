@@ -285,7 +285,7 @@ export function bible_glyph_chapter_2ch07() {
           "him,",
           "a",
           "very",
-          "great",
+          "$top",
           "$church,",
           "from",
           "$proper_name$Lebo-hamath",
