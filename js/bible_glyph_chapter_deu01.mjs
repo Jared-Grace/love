@@ -890,7 +890,7 @@ export function bible_glyph_chapter_deu01() {
           "be",
           "$fearful_face+shaking_face+doing",
           "or",
-          "afraid",
+          "$fear+doing",
           "of",
           "them!",
         ],
