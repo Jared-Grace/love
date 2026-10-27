@@ -344,7 +344,7 @@ export function bible_glyph_chapter_lev04() {
         verse_number: 13,
         words: [
           "Now",
-          "if",
+          "$traffic_light",
           "the",
           "whole",
           "congregation",
