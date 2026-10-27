@@ -228,7 +228,7 @@ export function bible_glyph_chapter_ezk11() {
           "city",
           "is",
           "the",
-          "pot,",
+          "$pot_of_food,",
           "but",
           "I",
           "will",
