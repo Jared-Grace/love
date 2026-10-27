@@ -1500,7 +1500,7 @@ export function bible_glyph_chapter_jer32() {
           "$earth",
           "about",
           "which",
-          "you",
+          "$you",
           "are",
           "$speech,",
           "It",
