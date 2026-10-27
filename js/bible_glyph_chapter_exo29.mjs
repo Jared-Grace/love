@@ -742,7 +742,7 @@ export function bible_glyph_chapter_exo29() {
           "their",
           "$hand",
           "and",
-          "burn",
+          "$incense+doing",
           "them",
           "on",
           "the",
