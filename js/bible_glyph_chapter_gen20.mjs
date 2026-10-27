@@ -204,7 +204,7 @@ export function bible_glyph_chapter_gen20() {
           "$hands_giving",
           "you",
           "to",
-          "touch",
+          "$hand+doing",
           "her.",
         ],
       },
