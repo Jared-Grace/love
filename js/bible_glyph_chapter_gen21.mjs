@@ -66,7 +66,7 @@ export function bible_glyph_chapter_gen21() {
         words: [
           "And",
           "$father+map",
-          "gave",
+          "$waving_hand",
           "the",
           "$name_tag",
           "$laughing+proper_name",
