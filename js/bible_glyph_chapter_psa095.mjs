@@ -171,7 +171,7 @@ export function bible_glyph_chapter_psa095() {
         words: [
           "do",
           "$no_entry",
-          "harden",
+          "$mechanical_arm+doing",
           "your",
           "$heart_organ,",
           "as",
