@@ -1235,7 +1235,7 @@ export function bible_glyph_chapter_2ch34() {
           "$i_am",
           "and",
           "to",
-          "keep",
+          "$guard",
           "His",
           "$scroll,",
           "His",
