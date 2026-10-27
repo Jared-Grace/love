@@ -275,7 +275,7 @@ export function bible_glyph_chapter_2ch20() {
           "$famine,",
           "we",
           "will",
-          "stand",
+          "$person+round_pushpin",
           "before",
           "this",
           "$house",
