@@ -554,7 +554,7 @@ export function bible_glyph_chapter_exo35() {
         words: [
           "$all",
           "$man_beard",
-          "who",
+          "$back+flashlight",
           "had",
           "blue,",
           "purple",
