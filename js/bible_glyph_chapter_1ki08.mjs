@@ -1048,7 +1048,7 @@ export function bible_glyph_chapter_1ki08() {
           "take",
           "an",
           "oath",
-          "before",
+          "$face",
           "Your",
           "$altar",
           "in",
