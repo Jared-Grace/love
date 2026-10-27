@@ -910,7 +910,7 @@ export function bible_glyph_chapter_1ch29() {
           "$i_am",
           "$top+doing",
           "$peace+proper_name",
-          "highly",
+          "$walking+pointing_up",
           "in",
           "the",
           "$eyes",
