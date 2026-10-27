@@ -1389,7 +1389,7 @@ export function bible_glyph_chapter_num14() {
           "the",
           "$mountain",
           "came",
-          "down,",
+          "$walking+pointing_down,",
           "attacked",
           "them,",
           "and",
