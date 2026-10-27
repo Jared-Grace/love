@@ -991,7 +991,7 @@ export function bible_glyph_chapter_1ki20() {
           "I",
           "will",
           "$hands_giving",
-          "all",
+          "$all",
           "this",
           "great",
           "army",
