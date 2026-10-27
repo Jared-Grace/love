@@ -674,7 +674,7 @@ export function bible_glyph_chapter_deu19() {
           "$eyes",
           "for",
           "$eyes,",
-          "tooth",
+          "$tooth",
           "for",
           "tooth,",
           "$hand",
