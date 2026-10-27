@@ -84,7 +84,7 @@ export function bible_glyph_chapter_jer17() {
           "your",
           "treasures",
           "as",
-          "plunder,",
+          "$pirate_flag+thing,",
           "along",
           "with",
           "your",
