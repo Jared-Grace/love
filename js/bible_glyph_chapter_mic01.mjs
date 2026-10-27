@@ -378,7 +378,7 @@ export function bible_glyph_chapter_mic01() {
           "dwellers",
           "of",
           "$proper_name$Maroth",
-          "pined",
+          "$dizzy",
           "for",
           "$thumbs_up,",
           "but",
