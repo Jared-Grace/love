@@ -401,7 +401,7 @@ export function bible_glyph_chapter_jdg06() {
           "to",
           "us?",
           "And",
-          "where",
+          "$question+round_pushpin",
           "are",
           "all",
           "His",
