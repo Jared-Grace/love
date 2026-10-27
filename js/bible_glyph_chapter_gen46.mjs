@@ -239,7 +239,7 @@ export function bible_glyph_chapter_gen46() {
           "his",
           "$son.",
           "$hand+foot",
-          "firstborn",
+          "$first_place+baby",
           "was",
           "$eyes+son.",
         ],
