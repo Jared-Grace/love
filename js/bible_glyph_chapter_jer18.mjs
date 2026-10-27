@@ -734,7 +734,7 @@ export function bible_glyph_chapter_jer18() {
           "them",
           "in",
           "the",
-          "time",
+          "$clock",
           "of",
           "Your",
           "anger.",
