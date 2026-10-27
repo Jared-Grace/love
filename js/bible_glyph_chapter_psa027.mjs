@@ -180,7 +180,7 @@ export function bible_glyph_chapter_psa027() {
         words: [
           "Then",
           "my",
-          "head",
+          "$person_gesturing_ok",
           "will",
           "be",
           "held",
