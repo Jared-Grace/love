@@ -185,7 +185,7 @@ export function bible_glyph_chapter_job03() {
           "May",
           "its",
           "morning",
-          "stars",
+          "$star_plain",
           "grow",
           "dark.",
           "May",
