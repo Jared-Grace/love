@@ -139,7 +139,7 @@ export function bible_glyph_chapter_lev02() {
       {
         verse_number: 5,
         words: [
-          "If",
+          "$traffic_light",
           "your",
           "offering",
           "$grain_offering",
