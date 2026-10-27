@@ -68,7 +68,7 @@ export function bible_glyph_chapter_num22() {
           "the",
           "$family,",
           "$pointing",
-          "they",
+          "$pointing_back",
           "were",
           "numerous.",
           "Indeed,",
