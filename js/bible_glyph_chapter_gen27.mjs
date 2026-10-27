@@ -232,7 +232,7 @@ export function bible_glyph_chapter_gen27() {
         verse_number: 9,
         words: [
           "$walking",
-          "to",
+          "$toward",
           "the",
           "$sheep",
           "and",
