@@ -452,7 +452,7 @@ export function bible_glyph_chapter_job19() {
           "$iron",
           "$writing_hand+sewing_needle",
           "on",
-          "lead!",
+          "$anchor+dust!",
         ],
       },
       {
