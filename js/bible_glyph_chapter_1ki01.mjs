@@ -167,7 +167,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "horsemen,",
           "and",
-          "fifty",
+          "$five+zero",
           "$man_beard",
           "to",
           "run",
