@@ -465,7 +465,7 @@ export function bible_glyph_chapter_exo30() {
           "$son",
           "of",
           "Israel",
-          "before",
+          "$face",
           "$i_am,",
           "to",
           "atone",
