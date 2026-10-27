@@ -383,7 +383,7 @@ export function bible_glyph_chapter_zec04() {
           "the",
           "oil,",
           "the",
-          "anointed",
+          "$oil+new_button",
           "ones,",
           "who",
           "stand",
