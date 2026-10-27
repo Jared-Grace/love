@@ -537,7 +537,7 @@ export function bible_glyph_chapter_mal03() {
           "with",
           "one",
           "$man_beard",
-          "another,",
+          "$person+sheep,",
           "and",
           "the",
           "$i_am",
