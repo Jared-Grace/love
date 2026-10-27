@@ -55,7 +55,7 @@ export function bible_glyph_chapter_zec05() {
           "and",
           "ten",
           "$triangular_ruler",
-          "wide.",
+          "$arrow_both_ways.",
         ],
       },
       {
