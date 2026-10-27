@@ -1252,7 +1252,7 @@ export function bible_glyph_chapter_exo12() {
           "they",
           "had",
           "$no_entry",
-          "leaven,",
+          "$bread+bubbles+doing,",
           "for",
           "when",
           "they",
