@@ -153,7 +153,7 @@ export function bible_glyph_chapter_exo12() {
           "$sun",
           "of",
           "the",
-          "month,",
+          "$new_moon,",
           "when",
           "the",
           "whole",
