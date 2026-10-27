@@ -364,7 +364,7 @@ export function bible_glyph_chapter_job38() {
       {
         verse_number: 19,
         words: [
-          "Where",
+          "$question+round_pushpin",
           "is",
           "the",
           "$road",
