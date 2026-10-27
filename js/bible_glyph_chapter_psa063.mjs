@@ -130,7 +130,7 @@ export function bible_glyph_chapter_psa063() {
           "foods;",
           "with",
           "joyful",
-          "lips",
+          "$kiss_mark",
           "my",
           "mouth",
           "will",
