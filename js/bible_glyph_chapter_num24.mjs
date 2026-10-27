@@ -517,7 +517,7 @@ export function bible_glyph_chapter_num24() {
           "$no_entry",
           "$magnet.",
           "A",
-          "star",
+          "$star_plain",
           "will",
           "come",
           "forth",
