@@ -926,7 +926,7 @@ export function bible_glyph_chapter_exo30() {
           "seasoned",
           "with",
           "$salt+doing,",
-          "pure",
+          "$soap+describing",
           "and",
           "$sparkle+thing.",
         ],
