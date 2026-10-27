@@ -351,7 +351,7 @@ export function bible_glyph_chapter_lev05() {
           "tenth",
           "of",
           "an",
-          "ephah",
+          "$bucket+input_numbers",
           "$flour",
           "as",
           "$bow.",
