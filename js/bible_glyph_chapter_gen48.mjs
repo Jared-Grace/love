@@ -96,7 +96,7 @@ export function bible_glyph_chapter_gen48() {
           "$speech",
           "to",
           "me,",
-          "Behold,",
+          "$exclamation,",
           "I",
           "will",
           "make",
