@@ -1289,7 +1289,7 @@ export function bible_glyph_chapter_1sa17() {
           "just",
           "a",
           "boy,",
-          "ruddy",
+          "$red_circle+baby",
           "and",
           "handsome.",
         ],
