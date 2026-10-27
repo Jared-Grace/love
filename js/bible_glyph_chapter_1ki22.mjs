@@ -672,7 +672,7 @@ export function bible_glyph_chapter_1ki22() {
           "march",
           "up",
           "and",
-          "fall",
+          "$person+pointing_down",
           "at",
           "$proper_name$Ramoth-gilead?",
           "And",
