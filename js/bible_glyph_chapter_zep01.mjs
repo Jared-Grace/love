@@ -324,7 +324,7 @@ export function bible_glyph_chapter_zep01() {
           "$fish",
           "$gate,",
           "a",
-          "wail",
+          "$crying_face+loudspeaker+thing",
           "$tray_out",
           "the",
           "Second",
