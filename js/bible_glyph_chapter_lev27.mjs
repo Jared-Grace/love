@@ -947,7 +947,7 @@ export function bible_glyph_chapter_lev27() {
           "belongs",
           "to",
           "$i_am.",
-          "It",
+          "$pointing_back",
           "is",
           "$sparkle+thing",
           "to",
