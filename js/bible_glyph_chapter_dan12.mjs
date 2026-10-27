@@ -201,7 +201,7 @@ export function bible_glyph_chapter_dan12() {
           "$man_beard",
           "$garment+doing",
           "in",
-          "linen,",
+          "$thread,",
           "who",
           "was",
           "above",
