@@ -630,7 +630,7 @@ export function bible_glyph_chapter_2ch20() {
         words: [
           "Then",
           "$i_am+scales",
-          "bowed",
+          "$bowing+down_arrow+doing",
           "facedown",
           "to",
           "the",
