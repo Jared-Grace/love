@@ -188,7 +188,7 @@ export function bible_glyph_chapter_zec09() {
         words: [
           "I",
           "will",
-          "remove",
+          "$away+doing",
           "the",
           "$blood",
           "from",
