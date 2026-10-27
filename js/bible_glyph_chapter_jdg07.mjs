@@ -660,7 +660,7 @@ export function bible_glyph_chapter_jdg07() {
         verse_number: 18,
         words: [
           "When",
-          "I",
+          "$me",
           "and",
           "all",
           "who",
