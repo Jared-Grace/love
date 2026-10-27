@@ -616,7 +616,7 @@ export function bible_glyph_chapter_gen28() {
           "with",
           "me",
           "and",
-          "watch",
+          "$guard",
           "over",
           "me",
           "on",
