@@ -1923,7 +1923,7 @@ export function bible_glyph_chapter_lev13() {
           "concerning",
           "a",
           "mildew",
-          "contamination",
+          "$face_with_head_bandage",
           "in",
           "a",
           "wool",
