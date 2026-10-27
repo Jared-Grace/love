@@ -106,7 +106,7 @@ export function bible_glyph_chapter_sng02() {
           "Sustain",
           "me",
           "with",
-          "raisins,",
+          "$grapes+flatbread,",
           "refresh",
           "me",
           "with",
