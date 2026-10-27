@@ -126,7 +126,7 @@ export function bible_glyph_chapter_1ki21() {
           "into",
           "his",
           "$house",
-          "sullen",
+          "$pouting_face+back+describing",
           "and",
           "angry,",
           "because",
