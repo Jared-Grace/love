@@ -253,7 +253,7 @@ export function bible_glyph_chapter_psa022() {
           "bulls",
           "surround",
           "me;",
-          "strong",
+          "$flexed_biceps+wing",
           "bulls",
           "of",
           "$proper_name$Bashan",
