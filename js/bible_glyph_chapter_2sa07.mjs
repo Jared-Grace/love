@@ -548,7 +548,7 @@ export function bible_glyph_chapter_2sa07() {
           "the",
           "$speech",
           "of",
-          "this",
+          "$flashlight",
           "entire",
           "revelation.",
         ],
