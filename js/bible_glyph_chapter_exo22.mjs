@@ -499,7 +499,7 @@ export function bible_glyph_chapter_exo22() {
       {
         verse_number: 15,
         words: [
-          "If",
+          "$traffic_light",
           "the",
           "owner",
           "was",
