@@ -358,7 +358,7 @@ export function bible_glyph_chapter_exo16() {
           "$mouth",
           "to",
           "the",
-          "whole",
+          "$all",
           "congregation",
           "of",
           "$wrestling+heart_on_fire,",
