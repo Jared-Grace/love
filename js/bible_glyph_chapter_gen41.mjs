@@ -1497,7 +1497,7 @@ export function bible_glyph_chapter_gen41() {
           "$year",
           "of",
           "famine",
-          "began",
+          "$sewing_needle",
           "to",
           "$footprints,",
           "just",
