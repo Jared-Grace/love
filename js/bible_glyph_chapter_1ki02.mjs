@@ -750,7 +750,7 @@ export function bible_glyph_chapter_1ki02() {
           "for",
           "him,",
           "$pointing",
-          "he",
+          "$pointing_back",
           "is",
           "my",
           "older",
