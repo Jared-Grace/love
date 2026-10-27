@@ -154,7 +154,7 @@ export function bible_glyph_chapter_num06() {
           "must",
           "let",
           "the",
-          "hair",
+          "$hair",
           "of",
           "his",
           "$person_gesturing_ok",
