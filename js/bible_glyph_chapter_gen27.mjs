@@ -353,7 +353,7 @@ export function bible_glyph_chapter_gen27() {
           "me,",
           "my",
           "$son.",
-          "Just",
+          "$check+exclamation",
           "$ear",
           "my",
           "$voice",
