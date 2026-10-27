@@ -132,7 +132,7 @@ export function bible_glyph_chapter_num35() {
           "also",
           "to",
           "$triangular_ruler+doing",
-          "outside",
+          "$sun_behind_small_cloud",
           "the",
           "$city",
           "two",
