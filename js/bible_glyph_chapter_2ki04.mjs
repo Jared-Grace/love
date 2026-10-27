@@ -580,7 +580,7 @@ export function bible_glyph_chapter_2ki04() {
         verse_number: 19,
         words: [
           "My",
-          "head!",
+          "$person_gesturing_ok!",
           "My",
           "head!",
           "he",
