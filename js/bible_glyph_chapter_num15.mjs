@@ -942,7 +942,7 @@ export function bible_glyph_chapter_num15() {
           "who",
           "found",
           "him",
-          "gathering",
+          "$fallen_leaf+wheat+doing",
           "$tree",
           "$magnet+doing",
           "him",
