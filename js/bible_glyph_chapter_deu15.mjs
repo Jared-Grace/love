@@ -588,7 +588,7 @@ export function bible_glyph_chapter_deu15() {
           "set",
           "your",
           "servant",
-          "free,",
+          "$broken_chain+person,",
           "because",
           "his",
           "six",
