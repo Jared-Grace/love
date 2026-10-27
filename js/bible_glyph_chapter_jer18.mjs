@@ -498,7 +498,7 @@ export function bible_glyph_chapter_jer18() {
           "show",
           "them",
           "My",
-          "back",
+          "$back+scarf",
           "and",
           "$no_entry",
           "My",
