@@ -727,7 +727,7 @@ export function bible_glyph_chapter_jos02() {
           "$crossed_fingers",
           "in",
           "the",
-          "window.",
+          "$window.",
         ],
       },
       {
