@@ -819,7 +819,7 @@ export function bible_glyph_chapter_gen18() {
           "$five+zero",
           "$ruler",
           "lack",
-          "five.",
+          "$five.",
           "Will",
           "You",
           "destroy",
