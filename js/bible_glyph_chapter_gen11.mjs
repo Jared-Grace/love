@@ -264,7 +264,7 @@ export function bible_glyph_chapter_gen11() {
           "them",
           "over",
           "the",
-          "face",
+          "$face",
           "of",
           "all",
           "the",
