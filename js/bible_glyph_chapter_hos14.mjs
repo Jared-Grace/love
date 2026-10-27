@@ -69,7 +69,7 @@ export function bible_glyph_chapter_hos14() {
           "$proper_name$Assyria",
           "will",
           "$no_entry",
-          "save",
+          "$rescue",
           "us,",
           "nor",
           "will",
