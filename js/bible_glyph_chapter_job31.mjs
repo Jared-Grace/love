@@ -773,7 +773,7 @@ export function bible_glyph_chapter_job31() {
           "it",
           "like",
           "a",
-          "crown.",
+          "$crown+thing.",
         ],
       },
       {
