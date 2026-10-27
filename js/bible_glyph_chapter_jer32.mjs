@@ -866,7 +866,7 @@ export function bible_glyph_chapter_jer32() {
         verse_number: 25,
         words: [
           "Yet",
-          "You,",
+          "$you,",
           "O",
           "$crown",
           "$i_am,",
