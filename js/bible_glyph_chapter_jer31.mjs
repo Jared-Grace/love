@@ -940,7 +940,7 @@ export function bible_glyph_chapter_jer31() {
           "$brick",
           "and",
           "to",
-          "plant,",
+          "$sprout+down_arrow+doing,",
           "declares",
           "the",
           "$i_am.",
