@@ -981,7 +981,7 @@ export function bible_glyph_chapter_exo29() {
           "$basket",
           "at",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "$tent",
