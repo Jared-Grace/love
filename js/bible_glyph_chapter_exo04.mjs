@@ -213,7 +213,7 @@ export function bible_glyph_chapter_exo04() {
           "your",
           "$hand",
           "$turn_back",
-          "inside",
+          "$toward",
           "your",
           'cloak,"',
           "$speech",
