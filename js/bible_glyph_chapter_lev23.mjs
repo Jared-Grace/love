@@ -271,7 +271,7 @@ export function bible_glyph_chapter_lev23() {
           "shall",
           "$hand+up_down_arrow+doing",
           "the",
-          "sheaf",
+          "$wheat+knot",
           "before",
           "$i_am",
           "so",
