@@ -104,7 +104,7 @@ export function bible_glyph_chapter_ezk11() {
           "the",
           "time",
           "$no_entry",
-          "near",
+          "$magnet",
           "to",
           "build",
           "$house?",
