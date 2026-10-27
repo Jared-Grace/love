@@ -405,7 +405,7 @@ export function bible_glyph_chapter_neh09() {
           "into",
           "the",
           "$water_wave+hole",
-          "like",
+          "$likeness",
           "a",
           "$stone",
           "into",
