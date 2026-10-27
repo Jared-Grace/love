@@ -1610,7 +1610,7 @@ export function bible_glyph_chapter_gen24() {
           "out",
           "$toolbox",
           "of",
-          "silver",
+          "$silver",
           "and",
           "gold,",
           "and",
