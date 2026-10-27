@@ -303,7 +303,7 @@ export function bible_glyph_chapter_jdg11() {
           "$unlocked+proper_name,",
           "The",
           "$i_am",
-          "is",
+          "$link",
           "the",
           "one",
           "who",
