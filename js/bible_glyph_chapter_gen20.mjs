@@ -392,7 +392,7 @@ export function bible_glyph_chapter_gen20() {
         verse_number: 12,
         words: [
           "And",
-          "besides,",
+          "$plus,",
           "she",
           "really",
           "is",
