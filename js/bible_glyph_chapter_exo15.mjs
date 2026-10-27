@@ -529,7 +529,7 @@ export function bible_glyph_chapter_exo15() {
           "Miriam",
           "the",
           "prophetess,",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$sister,",
           "$hand_receiving",
           "a",
