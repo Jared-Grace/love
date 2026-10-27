@@ -26,7 +26,7 @@ export function bible_glyph_chapter_ezk03() {
           "$eating",
           "what",
           "you",
-          "find",
+          "$magnifying_glass+exclamation",
           "here.",
           "$eating",
           "this",
