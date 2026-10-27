@@ -56,7 +56,7 @@ export function bible_glyph_chapter_psa130() {
       {
         verse_number: 3,
         words: [
-          "If",
+          "$traffic_light",
           "You,",
           "O",
           "LORD,",
