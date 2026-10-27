@@ -762,7 +762,7 @@ export function bible_glyph_chapter_2sa12() {
           "$pointing",
           "I",
           "$speech,",
-          "Who",
+          "$person+question",
           "$lightbulb?",
           "$i_am",
           "may",
