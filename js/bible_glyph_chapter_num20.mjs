@@ -499,7 +499,7 @@ export function bible_glyph_chapter_num20() {
           "$end_arrow+round_pushpin",
           "of",
           "your",
-          "territory.",
+          "$passport_control.",
         ],
       },
       {
