@@ -241,7 +241,7 @@ export function bible_glyph_chapter_zec05() {
           "$speech,",
           "$flashlight",
           "is",
-          "Wickedness.",
+          "$thumbs_down+person+thing.",
           "And",
           "he",
           "shoved",
