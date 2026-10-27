@@ -934,7 +934,7 @@ export function bible_glyph_chapter_lev26() {
           "$no_entry",
           "smell",
           "the",
-          "pleasing",
+          "$nose+thumbs_up",
           "$nose",
           "of",
           "your",
