@@ -153,7 +153,7 @@ export function bible_glyph_chapter_nam01() {
           "$lifting",
           "at",
           "His",
-          "presence",
+          "$face",
           "-",
           "the",
           "$globe",
