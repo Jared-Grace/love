@@ -497,7 +497,7 @@ export function bible_glyph_chapter_1sa25() {
           "We",
           "were",
           "$no_entry",
-          "harassed,",
+          "$disappointed_face,",
           "and",
           "$no_entry",
           "of",
