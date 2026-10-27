@@ -291,7 +291,7 @@ export function bible_glyph_chapter_exo31() {
           "of",
           "Israel,",
           "$speech,",
-          "Surely",
+          "$check+exclamation",
           "you",
           "must",
           "keep",
