@@ -379,7 +379,7 @@ export function bible_glyph_chapter_exo04() {
           "deaf,",
           "the",
           "sighted",
-          "or",
+          "$shuffle",
           "the",
           "blind?",
           "Is",
