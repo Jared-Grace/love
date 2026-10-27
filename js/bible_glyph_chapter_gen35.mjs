@@ -108,7 +108,7 @@ export function bible_glyph_chapter_gen35() {
           "$sun",
           "of",
           "my",
-          "distress",
+          "$clamp",
           "and",
           "has",
           "been",
