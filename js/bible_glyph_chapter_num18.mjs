@@ -805,7 +805,7 @@ export function bible_glyph_chapter_num18() {
           "$son",
           "of",
           "Israel",
-          "come",
+          "$toward",
           "$magnet+doing",
           "the",
           "$tent",
