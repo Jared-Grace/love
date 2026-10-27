@@ -21,7 +21,7 @@ export function bible_glyph_chapter_2ki11() {
           "of",
           "$proper_name$Ahaziah",
           "$eye",
-          "that",
+          "$pointing",
           "her",
           "$son",
           "was",
