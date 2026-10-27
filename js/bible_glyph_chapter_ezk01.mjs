@@ -210,7 +210,7 @@ export function bible_glyph_chapter_ezk01() {
       {
         verse_number: 8,
         words: [
-          "Under",
+          "$down_arrow",
           "their",
           "wings",
           "on",
