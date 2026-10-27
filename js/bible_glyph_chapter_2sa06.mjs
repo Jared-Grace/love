@@ -201,7 +201,7 @@ export function bible_glyph_chapter_2sa06() {
         words: [
           "And",
           "the",
-          "anger",
+          "$nose+fire",
           "of",
           "the",
           "$i_am",
