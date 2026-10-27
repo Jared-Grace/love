@@ -253,7 +253,7 @@ export function bible_glyph_chapter_gen04() {
           "$speech",
           "$toward",
           "$proper_name$Cain,",
-          "Where",
+          "$question+round_pushpin",
           "is",
           "your",
           "$brother",
