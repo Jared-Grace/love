@@ -539,7 +539,7 @@ export function bible_glyph_chapter_dan01() {
           "$king,",
           "the",
           "chief",
-          "official",
+          "$castle+kneeling",
           "$footprints",
           "them",
           "to",
