@@ -952,7 +952,7 @@ export function bible_glyph_chapter_num15() {
           "$proper_name$Aaron",
           "and",
           "the",
-          "whole",
+          "$all",
           "congregation,",
         ],
       },
