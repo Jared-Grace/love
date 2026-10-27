@@ -268,7 +268,7 @@ export function bible_glyph_chapter_neh01() {
       {
         verse_number: 8,
         words: [
-          "Remember,",
+          "$reminder_ribbon,",
           "I",
           "pray,",
           "the",
