@@ -42,7 +42,7 @@ export function bible_glyph_chapter_gen40() {
           "with",
           "his",
           "$two",
-          "officers,",
+          "$castle+kneeling,",
           "the",
           "chief",
           "cupbearer",
