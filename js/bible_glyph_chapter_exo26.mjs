@@ -654,7 +654,7 @@ export function bible_glyph_chapter_exo26() {
           "other",
           "side,",
           "and",
-          "five",
+          "$five",
           "for",
           "those",
           "on",
