@@ -43,7 +43,7 @@ export function bible_glyph_chapter_ezk47() {
           "$pointing",
           "the",
           "$house",
-          "faced",
+          "$face",
           "$compass+right_arrow+thing.",
           "The",
           "$water",
