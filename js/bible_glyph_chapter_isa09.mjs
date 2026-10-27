@@ -206,7 +206,7 @@ export function bible_glyph_chapter_isa09() {
           "will",
           "be",
           "called",
-          "Wonderful",
+          "$star_struck+thing",
           "Counselor,",
           "Mighty",
           "$heart_on_fire,",
