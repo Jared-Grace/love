@@ -409,7 +409,7 @@ export function bible_glyph_chapter_2ki01() {
           "$turn_back",
           "and",
           "sent",
-          "another",
+          "$plus+one",
           "captain",
           "with",
           "his",
