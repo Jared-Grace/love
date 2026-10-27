@@ -94,7 +94,7 @@ export function bible_glyph_chapter_jer18() {
           "it",
           "into",
           "another",
-          "vessel,",
+          "$toolbox,",
           "as",
           "it",
           "seemed",
