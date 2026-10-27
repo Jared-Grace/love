@@ -488,7 +488,7 @@ export function bible_glyph_chapter_num06() {
           "$oil+doing,",
           "and",
           "$flatbread",
-          "wafers",
+          "$flatbread+oil",
           "coated",
           "with",
           "oil,",
