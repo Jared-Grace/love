@@ -479,7 +479,7 @@ export function bible_glyph_chapter_exo31() {
           "$hands_giving",
           "him",
           "the",
-          "two",
+          "$two",
           "tablets",
           "of",
           "the",
