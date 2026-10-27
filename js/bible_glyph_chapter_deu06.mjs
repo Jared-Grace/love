@@ -54,7 +54,7 @@ export function bible_glyph_chapter_deu06() {
           "that",
           "you",
           "may",
-          "fear",
+          "$fear+doing",
           "the",
           "$i_am",
           "your",
