@@ -957,7 +957,7 @@ export function bible_glyph_chapter_exo28() {
           "around",
           "the",
           "lower",
-          "hem",
+          "$dress+down_arrow",
           "of",
           "the",
           "$cloak.",
