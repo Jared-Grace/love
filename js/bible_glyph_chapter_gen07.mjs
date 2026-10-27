@@ -638,7 +638,7 @@ export function bible_glyph_chapter_gen07() {
           "in",
           "the",
           "ark",
-          "remained.",
+          "$puzzle_piece+doing.",
         ],
       },
       {
