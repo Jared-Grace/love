@@ -437,7 +437,7 @@ export function bible_glyph_chapter_num10() {
           "tabernacle",
           "was",
           "taken",
-          "down,",
+          "$walking+pointing_down,",
           "and",
           "the",
           "$son",
