@@ -164,7 +164,7 @@ export function bible_glyph_chapter_num24() {
           "a",
           "stream,",
           "like",
-          "aloes",
+          "$wood+incense",
           "$i_am",
           "has",
           "planted,",
