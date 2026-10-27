@@ -244,7 +244,7 @@ export function bible_glyph_chapter_nam01() {
           "$flashlight+question",
           "you",
           "plot",
-          "against",
+          "$toward",
           "the",
           "$i_am,",
           "He",
