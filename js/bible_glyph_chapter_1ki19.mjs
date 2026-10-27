@@ -137,7 +137,7 @@ export function bible_glyph_chapter_1ki19() {
           "$hand_receiving",
           "my",
           "$person_other,",
-          "for",
+          "$pointing",
           "I",
           "am",
           "$no_entry",
