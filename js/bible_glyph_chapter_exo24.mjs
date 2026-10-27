@@ -96,7 +96,7 @@ export function bible_glyph_chapter_exo24() {
           "all",
           "responded",
           "with",
-          "one",
+          "$one",
           "$voice,",
           "$speech,",
           "All",
