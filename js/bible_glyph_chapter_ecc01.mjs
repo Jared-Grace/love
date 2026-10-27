@@ -117,7 +117,7 @@ export function bible_glyph_chapter_ecc01() {
           "$walking,",
           "ever",
           "$turn_back",
-          "on",
+          "$pointing_up",
           "$wind",
           "course.",
         ],
