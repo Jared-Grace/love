@@ -581,7 +581,7 @@ export function bible_glyph_chapter_deu08() {
       {
         verse_number: 19,
         words: [
-          "If",
+          "$traffic_light",
           "you",
           "ever",
           "forget",
