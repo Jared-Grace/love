@@ -608,7 +608,7 @@ export function bible_glyph_chapter_gen39() {
           "the",
           "$i_am",
           "$link",
-          "with",
+          "$safety_pin",
           "him",
           "and",
           "extended",
