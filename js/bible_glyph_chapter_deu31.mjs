@@ -605,7 +605,7 @@ export function bible_glyph_chapter_deu31() {
           "and",
           "hide",
           "My",
-          "face",
+          "$face",
           "from",
           "them,",
           "so",
