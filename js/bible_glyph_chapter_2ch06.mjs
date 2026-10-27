@@ -518,7 +518,7 @@ export function bible_glyph_chapter_2ch06() {
         verse_number: 16,
         words: [
           "Therefore",
-          "now,",
+          "$watch,",
           "O",
           "$i_am,",
           "$heart_on_fire",
