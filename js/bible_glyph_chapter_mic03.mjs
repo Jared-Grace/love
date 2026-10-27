@@ -100,7 +100,7 @@ export function bible_glyph_chapter_mic03() {
       {
         verse_number: 4,
         words: [
-          "Then",
+          "$telescope+clock",
           "they",
           "will",
           "cry",
