@@ -608,7 +608,7 @@ export function bible_glyph_chapter_gen50() {
           "do",
           "$no_entry",
           "be",
-          "afraid.",
+          "$fear+doing.",
           "I",
           "will",
           "provide",
