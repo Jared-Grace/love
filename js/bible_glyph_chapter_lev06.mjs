@@ -542,7 +542,7 @@ export function bible_glyph_chapter_lev06() {
           "a",
           "regular",
           "$grain_offering,",
-          "half",
+          "$divide+thing",
           "of",
           "it",
           "$morning",
