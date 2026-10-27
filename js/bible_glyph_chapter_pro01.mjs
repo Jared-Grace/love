@@ -531,7 +531,7 @@ export function bible_glyph_chapter_pro01() {
           "destruction",
           "like",
           "a",
-          "whirlwind,",
+          "$tornado+wind,",
           "when",
           "distress",
           "and",
