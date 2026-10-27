@@ -976,7 +976,7 @@ export function bible_glyph_chapter_num16() {
           "$earth",
           "$unlocked",
           "its",
-          "mouth",
+          "$face_with_open_mouth",
           "and",
           "swallowed",
           "them",
