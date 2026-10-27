@@ -518,7 +518,7 @@ export function bible_glyph_chapter_1ch29() {
           "as",
           "$flashlight?",
           "For",
-          "everything",
+          "$all",
           "comes",
           "from",
           "You,",
