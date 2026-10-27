@@ -542,7 +542,7 @@ export function bible_glyph_chapter_gen08() {
         words: [
           "Then",
           "Noah",
-          "built",
+          "$brick",
           "an",
           "$altar",
           "to",
