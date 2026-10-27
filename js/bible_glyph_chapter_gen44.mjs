@@ -359,7 +359,7 @@ export function bible_glyph_chapter_gen44() {
           "and",
           "each",
           "$man_beard",
-          "loaded",
+          "$package+up_arrow+doing",
           "his",
           "$donkey",
           "and",
