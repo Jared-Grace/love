@@ -47,7 +47,7 @@ export function bible_glyph_chapter_psa046() {
           "we",
           "will",
           "$no_entry",
-          "fear,",
+          "$fear+doing,",
           "though",
           "the",
           "$earth",
