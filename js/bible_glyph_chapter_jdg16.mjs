@@ -323,7 +323,7 @@ export function bible_glyph_chapter_jdg16() {
           "snapped",
           "the",
           "bowstrings",
-          "like",
+          "$back+flashlight",
           "a",
           "strand",
           "of",
