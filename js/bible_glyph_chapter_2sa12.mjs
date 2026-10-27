@@ -931,7 +931,7 @@ export function bible_glyph_chapter_2sa12() {
           "$net+doing",
           "it.",
           "$no_entry+traffic_light",
-          "I",
+          "$me",
           "will",
           "$net+doing",
           "the",
