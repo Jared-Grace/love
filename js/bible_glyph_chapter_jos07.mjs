@@ -198,7 +198,7 @@ export function bible_glyph_chapter_jos07() {
           "struck",
           "down",
           "about",
-          "thirty",
+          "$three+zero",
           "six",
           "of",
           "them,",
