@@ -404,7 +404,7 @@ export function bible_glyph_chapter_zep03() {
           "wrong",
           "$no_entry",
           "$mouth",
-          "lies,",
+          "$speech+crossed_fingers,",
           "$no_entry",
           "will",
           "a",
