@@ -230,7 +230,7 @@ export function bible_glyph_chapter_exo18() {
           "in",
           "$man_in_tuxedo+family",
           "$all",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "had",
