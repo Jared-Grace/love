@@ -199,7 +199,7 @@ export function bible_glyph_chapter_jer29() {
           "and",
           "$woman.",
           "$multiply+doing",
-          "there;",
+          "$telescope;",
           "do",
           "$no_entry",
           "decrease.",
