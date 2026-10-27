@@ -455,7 +455,7 @@ export function bible_glyph_chapter_gen21() {
           "Do",
           "$no_entry",
           "be",
-          "afraid,",
+          "$fear+doing,",
           "for",
           "$heart_on_fire",
           "has",
