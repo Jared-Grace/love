@@ -695,7 +695,7 @@ export function bible_glyph_chapter_deu01() {
           "so",
           "I",
           "$hand_receiving",
-          "twelve",
+          "$two",
           "$man_beard$s",
           "from",
           "among",
