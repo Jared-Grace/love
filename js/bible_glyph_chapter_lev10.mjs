@@ -415,7 +415,7 @@ export function bible_glyph_chapter_lev10() {
           "ceremonially",
           "$soap+describing",
           "$place,",
-          "because",
+          "$pointing",
           "these",
           "portions",
           "$hands_giving",
