@@ -494,7 +494,7 @@ export function bible_glyph_chapter_lev10() {
           "up.",
           "He",
           "was",
-          "angry",
+          "$angry_face+collision+doing",
           "with",
           "$proper_name$Eleazar",
           "and",
