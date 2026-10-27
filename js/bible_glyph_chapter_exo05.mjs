@@ -339,7 +339,7 @@ export function bible_glyph_chapter_exo05() {
           "$hand_receiving",
           "your",
           "own",
-          "straw",
+          "$wheat+scissors",
           "wherever",
           "you",
           "can",
