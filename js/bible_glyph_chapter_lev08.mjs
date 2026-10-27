@@ -647,7 +647,7 @@ export function bible_glyph_chapter_lev08() {
           "well",
           "as",
           "the",
-          "right",
+          "$hand+right_arrow",
           "$leg.",
         ],
       },
