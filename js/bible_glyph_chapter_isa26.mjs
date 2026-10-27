@@ -373,7 +373,7 @@ export function bible_glyph_chapter_isa26() {
           "will",
           "$zero",
           "$person+pointing_up.",
-          "Therefore",
+          "$right_arrow",
           "You",
           "have",
           "punished",
