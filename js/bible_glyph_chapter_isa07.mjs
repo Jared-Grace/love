@@ -546,7 +546,7 @@ export function bible_glyph_chapter_isa07() {
           "at",
           "the",
           "farthest",
-          "streams",
+          "$crocodile",
           "of",
           "the",
           "$clamp+proper_name,",
