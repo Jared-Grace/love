@@ -225,7 +225,7 @@ export function bible_glyph_chapter_deu12() {
           "all",
           "you",
           "do,",
-          "because",
+          "$back+flashlight",
           "the",
           "$i_am",
           "your",
