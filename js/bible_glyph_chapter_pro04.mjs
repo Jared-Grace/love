@@ -264,7 +264,7 @@ export function bible_glyph_chapter_pro04() {
           "go.",
           "Guard",
           "it,",
-          "for",
+          "$pointing",
           "it",
           "is",
           "your",
