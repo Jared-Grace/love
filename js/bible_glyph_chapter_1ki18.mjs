@@ -1227,7 +1227,7 @@ export function bible_glyph_chapter_1ki18() {
           "will",
           "$lightbulb",
           "that",
-          "You,",
+          "$you,",
           "the",
           "$i_am,",
           "are",
