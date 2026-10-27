@@ -1815,7 +1815,7 @@ export function bible_glyph_chapter_1sa17() {
           "holding",
           "the",
           "Philistine's",
-          "head",
+          "$person_gesturing_ok",
           "in",
           "his",
           "$hand.",
