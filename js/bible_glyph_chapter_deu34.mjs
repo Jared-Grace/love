@@ -211,7 +211,7 @@ export function bible_glyph_chapter_deu34() {
           "$fishing_pole+proper_name",
           "was",
           "a",
-          "hundred",
+          "$input_numbers+all",
           "and",
           "twenty",
           "years",
