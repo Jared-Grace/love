@@ -707,7 +707,7 @@ export function bible_glyph_chapter_1sa17() {
           "you",
           "$eye",
           "how",
-          "this",
+          "$flashlight",
           "$man_beard",
           "keeps",
           "coming",
