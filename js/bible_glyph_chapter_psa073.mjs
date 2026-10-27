@@ -306,7 +306,7 @@ export function bible_glyph_chapter_psa073() {
       {
         verse_number: 17,
         words: [
-          "until",
+          "$finish",
           "I",
           "$footprints",
           "the",
