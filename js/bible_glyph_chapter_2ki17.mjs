@@ -982,7 +982,7 @@ export function bible_glyph_chapter_2ki17() {
         verse_number: 28,
         words: [
           "So",
-          "one",
+          "$one",
           "of",
           "the",
           "$priest",
