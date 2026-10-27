@@ -773,7 +773,7 @@ export function bible_glyph_chapter_num06() {
           "$speech+thumbs_up",
           "you",
           "and",
-          "keep",
+          "$guard",
           "you;",
         ],
       },
