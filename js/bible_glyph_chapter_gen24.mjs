@@ -1231,7 +1231,7 @@ export function bible_glyph_chapter_gen24() {
           "her",
           "to",
           "you,",
-          "then",
+          "$telescope+clock",
           "you",
           "will",
           "be",
