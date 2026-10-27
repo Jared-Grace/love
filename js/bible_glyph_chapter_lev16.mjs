@@ -598,7 +598,7 @@ export function bible_glyph_chapter_lev16() {
           "be",
           "in",
           "the",
-          "Tent",
+          "$tent",
           "of",
           "Meeting",
           "from",
