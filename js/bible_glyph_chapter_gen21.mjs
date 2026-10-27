@@ -800,7 +800,7 @@ export function bible_glyph_chapter_gen21() {
           "$pointing",
           "it",
           "was",
-          "there",
+          "$telescope",
           "that",
           "the",
           "two",
