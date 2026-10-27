@@ -1437,7 +1437,7 @@ export function bible_glyph_chapter_jer32() {
           "$sprout+down_arrow+doing",
           "them",
           "in",
-          "this",
+          "$flashlight",
           "$earth",
           "with",
           "all",
