@@ -73,7 +73,7 @@ export function bible_glyph_chapter_isa49() {
           "Me",
           "in",
           "His",
-          "quiver.",
+          "$arrow+bucket.",
         ],
       },
       {
