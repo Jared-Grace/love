@@ -395,7 +395,7 @@ export function bible_glyph_chapter_gen29() {
           "Then",
           "Laban",
           "$speech,",
-          "You",
+          "$you",
           "are",
           "$check+exclamation",
           "my",
