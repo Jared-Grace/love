@@ -448,7 +448,7 @@ export function bible_glyph_chapter_lev23() {
           "$sun",
           "$finish",
           "the",
-          "day",
+          "$sun+next_track+thing",
           "after",
           "the",
           "seventh",
