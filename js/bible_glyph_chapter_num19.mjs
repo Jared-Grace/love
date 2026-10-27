@@ -770,7 +770,7 @@ export function bible_glyph_chapter_num19() {
       {
         verse_number: 22,
         words: [
-          "Anything",
+          "$all",
           "the",
           "unclean",
           "person",
