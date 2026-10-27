@@ -344,7 +344,7 @@ export function bible_glyph_chapter_gen07() {
           "$proper_name$Noah",
           "$footprints",
           "the",
-          "ark,",
+          "$package,",
           "together",
           "with",
           "his",
