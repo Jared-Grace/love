@@ -204,7 +204,7 @@ export function bible_glyph_chapter_num06() {
           "$no_entry",
           "defile",
           "himself,",
-          "because",
+          "$pointing",
           "the",
           "crown",
           "of",
