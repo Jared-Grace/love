@@ -94,7 +94,7 @@ export function bible_glyph_chapter_2ki10() {
           "of",
           "your",
           "$crown,",
-          "set",
+          "$palm_down",
           "him",
           "on",
           "the",
