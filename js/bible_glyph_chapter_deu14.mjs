@@ -383,7 +383,7 @@ export function bible_glyph_chapter_deu14() {
           "flying",
           "$lizard+crowd",
           "are",
-          "unclean",
+          "$soap+no_entry",
           "for",
           "you;",
           "they",
