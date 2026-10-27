@@ -365,7 +365,7 @@ export function bible_glyph_chapter_1sa20() {
           "$speech",
           "to",
           "$i_am+hands_giving,",
-          "Who",
+          "$person+question",
           "will",
           "tell",
           "me",
