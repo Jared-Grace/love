@@ -761,7 +761,7 @@ export function bible_glyph_chapter_gen27() {
           "of",
           "a",
           "$field",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "has",
