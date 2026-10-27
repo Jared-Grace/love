@@ -90,7 +90,7 @@ export function bible_glyph_chapter_deu05() {
           "who",
           "are",
           "$sprout",
-          "here",
+          "$flashlight+round_pushpin",
           "this",
           "$sun.",
         ],
