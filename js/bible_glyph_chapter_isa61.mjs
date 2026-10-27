@@ -327,7 +327,7 @@ export function bible_glyph_chapter_isa61() {
           "will",
           "acknowledge",
           "$pointing",
-          "they",
+          "$pointing_back",
           "are",
           "a",
           "people",
