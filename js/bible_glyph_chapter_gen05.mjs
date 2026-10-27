@@ -677,7 +677,7 @@ export function bible_glyph_chapter_gen05() {
         words: [
           "And",
           "$proper_name$Noah",
-          "was",
+          "$link",
           "a",
           "$son",
           "of",
