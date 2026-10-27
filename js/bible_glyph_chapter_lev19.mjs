@@ -339,7 +339,7 @@ export function bible_glyph_chapter_lev19() {
           "a",
           "stumbling",
           "block",
-          "before",
+          "$face",
           "the",
           "blind,",
           "but",
