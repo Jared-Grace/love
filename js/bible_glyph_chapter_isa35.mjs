@@ -301,7 +301,7 @@ export function bible_glyph_chapter_isa35() {
           "crowned",
           "with",
           "$hourglass",
-          "joy.",
+          "$beaming.",
           "Gladness",
           "and",
           "joy",
