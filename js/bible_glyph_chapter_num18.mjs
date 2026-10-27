@@ -1067,7 +1067,7 @@ export function bible_glyph_chapter_num18() {
           "you",
           "as",
           "the",
-          "produce",
+          "$fruit+basket",
           "of",
           "the",
           "threshing",
