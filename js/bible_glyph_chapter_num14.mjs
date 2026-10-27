@@ -449,7 +449,7 @@ export function bible_glyph_chapter_num14() {
           "$flashlight",
           "$family,",
           "that",
-          "You,",
+          "$you,",
           "O",
           "$i_am,",
           "have",
