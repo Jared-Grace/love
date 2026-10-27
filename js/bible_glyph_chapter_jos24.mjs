@@ -1117,7 +1117,7 @@ export function bible_glyph_chapter_jos24() {
           "him",
           "at",
           "Gibeah,",
-          "which",
+          "$back+flashlight",
           "had",
           "been",
           "$hands_giving",
