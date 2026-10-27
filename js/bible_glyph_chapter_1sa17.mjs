@@ -380,7 +380,7 @@ export function bible_glyph_chapter_1sa17() {
           "into",
           "$crossed_swords:",
           "The",
-          "firstborn",
+          "$first_place+baby",
           "was",
           "$heart_on_fire+father,",
           "the",
