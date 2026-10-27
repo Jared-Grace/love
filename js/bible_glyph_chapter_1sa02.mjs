@@ -574,7 +574,7 @@ export function bible_glyph_chapter_1sa02() {
           "$i_am,",
           "a",
           "boy",
-          "wearing",
+          "$briefs+doing",
           "a",
           "linen",
           "ephod.",
