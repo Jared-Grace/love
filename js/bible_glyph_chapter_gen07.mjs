@@ -502,7 +502,7 @@ export function bible_glyph_chapter_gen07() {
           "the",
           "$water",
           "$might+man_beard+doing",
-          "completely",
+          "$double_exclamation",
           "upon",
           "the",
           "$earth,",
