@@ -420,7 +420,7 @@ export function bible_glyph_chapter_exo15() {
           "$finish",
           "Your",
           "$family",
-          "pass",
+          "$bridge",
           "by,",
           "O",
           "$i_am,",
