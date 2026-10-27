@@ -824,7 +824,7 @@ export function bible_glyph_chapter_num11() {
           "$tray_out",
           "the",
           "$wind",
-          "that",
+          "$back+flashlight",
           "was",
           "on",
           "Moses",
