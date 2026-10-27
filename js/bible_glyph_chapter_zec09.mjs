@@ -300,7 +300,7 @@ export function bible_glyph_chapter_zec09() {
           "$pointing_up",
           "a",
           "donkey,",
-          "on",
+          "$pointing_up",
           "a",
           "colt,",
           "the",
