@@ -835,7 +835,7 @@ export function bible_glyph_chapter_gen18() {
           "$speech,",
           "$traffic_light",
           "I",
-          "find",
+          "$magnifying_glass+exclamation",
           "forty-five",
           "there,",
           "I",
