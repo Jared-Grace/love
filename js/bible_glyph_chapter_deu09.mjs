@@ -1035,7 +1035,7 @@ export function bible_glyph_chapter_deu09() {
           "$lightning",
           "and",
           "outstretched",
-          "arm.",
+          "$hand+might.",
         ],
       },
     ],
