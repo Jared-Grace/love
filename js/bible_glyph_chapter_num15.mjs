@@ -919,7 +919,7 @@ export function bible_glyph_chapter_num15() {
           "$son",
           "of",
           "Israel",
-          "were",
+          "$link",
           "in",
           "the",
           "$wilderness,",
