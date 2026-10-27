@@ -64,7 +64,7 @@ export function bible_glyph_chapter_zep02() {
       {
         verse_number: 3,
         words: [
-          "Seek",
+          "$magnifying_glass",
           "the",
           "$i_am,",
           "all",
