@@ -275,7 +275,7 @@ export function bible_glyph_chapter_psa116() {
       {
         verse_number: 15,
         words: [
-          "Precious",
+          "$gem_stone+describing",
           "in",
           "the",
           "$eyes",
