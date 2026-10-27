@@ -59,7 +59,7 @@ export function bible_glyph_chapter_isa11() {
           "the",
           "$wind",
           "of",
-          "counsel",
+          "$person_tipping_hand",
           "and",
           "strength,",
           "the",
