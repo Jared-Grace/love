@@ -851,7 +851,7 @@ export function bible_glyph_chapter_jdg06() {
           "your",
           "$father,",
           "and",
-          "cut",
+          "$scissors",
           "down",
           "the",
           "$wood+imp",
