@@ -159,7 +159,7 @@ export function bible_glyph_chapter_2ki11() {
           "put",
           "them",
           "under",
-          "oath,",
+          "$raised_back_of_hand+doing,",
           "and",
           "he",
           "$eye",
