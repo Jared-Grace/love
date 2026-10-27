@@ -731,7 +731,7 @@ export function bible_glyph_chapter_1ki02() {
           "his",
           "$mother,",
           "$speech,",
-          "Why",
+          "$flashlight+question",
           "do",
           "you",
           "request",
