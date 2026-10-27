@@ -1196,7 +1196,7 @@ export function bible_glyph_chapter_exo28() {
           "extending",
           "from",
           "the",
-          "waist",
+          "$briefs+round_pushpin",
           "to",
           "the",
           "thigh.",
