@@ -445,7 +445,7 @@ export function bible_glyph_chapter_jdg06() {
         words: [
           "The",
           "$i_am",
-          "turned",
+          "$curving_right+doing",
           "to",
           "him",
           "and",
