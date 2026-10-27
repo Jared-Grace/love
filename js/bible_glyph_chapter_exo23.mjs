@@ -537,7 +537,7 @@ export function bible_glyph_chapter_exo23() {
           "best",
           "of",
           "the",
-          "firstfruits",
+          "$first_place+sprout",
           "of",
           "your",
           "soil",
