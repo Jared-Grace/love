@@ -200,7 +200,7 @@ export function bible_glyph_chapter_job31() {
           "my",
           "own",
           "$woman",
-          "grind",
+          "$flour+stone+doing",
           "for",
           "another,",
           "and",
