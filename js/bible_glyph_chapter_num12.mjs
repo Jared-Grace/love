@@ -122,7 +122,7 @@ export function bible_glyph_chapter_num12() {
           "$walking+pointing_down",
           "in",
           "a",
-          "pillar",
+          "$candle",
           "of",
           "$cloud,",
           "stood",
