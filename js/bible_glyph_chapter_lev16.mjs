@@ -259,7 +259,7 @@ export function bible_glyph_chapter_lev16() {
           "for",
           "the",
           "$two",
-          "goats,",
+          "$goat+man_beard,",
           "one",
           "for",
           "the",
