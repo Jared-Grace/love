@@ -205,7 +205,7 @@ export function bible_glyph_chapter_job23() {
           "$walking+tray_out",
           "forth",
           "as",
-          "gold.",
+          "$gold.",
         ],
       },
       {
