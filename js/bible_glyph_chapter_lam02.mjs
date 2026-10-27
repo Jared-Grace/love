@@ -32,7 +32,7 @@ export function bible_glyph_chapter_lam02() {
           "has",
           "$throwing",
           "the",
-          "glory",
+          "$ribbon",
           "of",
           "$wrestling+heart_on_fire",
           "from",
