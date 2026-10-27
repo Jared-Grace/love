@@ -637,7 +637,7 @@ export function bible_glyph_chapter_exo39() {
           "$dress+down_arrow",
           "of",
           "$cloak",
-          "pomegranates",
+          "$fruit+red_circle",
           "of",
           "blue,",
           "purple,",
