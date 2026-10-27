@@ -260,7 +260,7 @@ export function bible_glyph_chapter_nam01() {
           "up",
           "a",
           "second",
-          "time.",
+          "$drum.",
         ],
       },
       {
