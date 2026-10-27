@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_jer07() {
           "place",
           "will",
           "$no_entry",
-          "longer",
+          "$repeat",
           "be",
           "$speech",
           "$proper_name$Topheth",
