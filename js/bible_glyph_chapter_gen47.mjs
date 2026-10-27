@@ -616,7 +616,7 @@ export function bible_glyph_chapter_gen47() {
           "There",
           "is",
           "$no_entry",
-          "left",
+          "$puzzle_piece+doing",
           "for",
           "our",
           "$crown",
