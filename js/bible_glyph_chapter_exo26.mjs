@@ -756,7 +756,7 @@ export function bible_glyph_chapter_exo26() {
           "spun",
           "$thread+white_circle,",
           "$hammer",
-          "skillfully",
+          "$thinking+doing",
           "with",
           "$cherub",
           "into",
