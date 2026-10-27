@@ -93,7 +93,7 @@ export function bible_glyph_chapter_1sa08() {
           "together",
           "and",
           "$footprints",
-          "to",
+          "$toward",
           "$ear+heart_on_fire",
           "at",
           "$proper_name$Ramah.",
