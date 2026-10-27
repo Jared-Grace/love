@@ -320,7 +320,7 @@ export function bible_glyph_chapter_neh09() {
           "You",
           "$eye",
           "the",
-          "affliction",
+          "$persevering_face+thing",
           "of",
           "our",
           "$father",
