@@ -176,7 +176,7 @@ export function bible_glyph_chapter_exo21() {
           "his",
           "$crown",
           "shall",
-          "pierce",
+          "$sewing_needle+ear+doing",
           "his",
           "ear",
           "with",
