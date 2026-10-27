@@ -1344,7 +1344,7 @@ export function bible_glyph_chapter_jer31() {
           "$newspaper+thing",
           "to",
           "the",
-          "hill",
+          "$mountain+pinching_hand",
           "of",
           "$proper_name$Gareb",
           "and",
