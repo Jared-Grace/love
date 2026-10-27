@@ -458,7 +458,7 @@ export function bible_glyph_chapter_jos07() {
           "their",
           "enemies.",
           "They",
-          "turn",
+          "$curving_right+doing",
           "their",
           "backs",
           "and",
