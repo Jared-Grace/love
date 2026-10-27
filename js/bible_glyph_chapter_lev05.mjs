@@ -420,7 +420,7 @@ export function bible_glyph_chapter_lev05() {
           "for",
           "any",
           "of",
-          "these",
+          "$flashlight+flashlight",
           "$bow",
           "$bow+doing,",
           "and",
