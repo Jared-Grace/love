@@ -179,7 +179,7 @@ export function bible_glyph_chapter_psa046() {
           "$i_am,",
           "$back+flashlight",
           "$palm_down",
-          "devastation",
+          "$astonished+thing",
           "upon",
           "the",
           "$earth.",
