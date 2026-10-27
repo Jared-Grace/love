@@ -123,7 +123,7 @@ export function bible_glyph_chapter_isa06() {
           "was",
           "filled",
           "with",
-          "smoke.",
+          "$fire+cloud.",
         ],
       },
       {
