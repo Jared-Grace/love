@@ -639,7 +639,7 @@ export function bible_glyph_chapter_lev08() {
           "$meat+brown_square,",
           "and",
           "both",
-          "kidneys",
+          "$heart_organ+two",
           "with",
           "their",
           "fat,",
