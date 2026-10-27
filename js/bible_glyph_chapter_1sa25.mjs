@@ -746,7 +746,7 @@ export function bible_glyph_chapter_1sa25() {
           "I",
           "leave",
           "alive",
-          "one",
+          "$all",
           "male",
           "belonging",
           "to",
