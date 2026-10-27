@@ -98,7 +98,7 @@ export function bible_glyph_chapter_ezk01() {
           "$water+national_park",
           "$proper_name$Kebar.",
           "And",
-          "there",
+          "$telescope",
           "the",
           "$hand",
           "of",
