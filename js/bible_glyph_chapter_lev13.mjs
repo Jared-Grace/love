@@ -759,7 +759,7 @@ export function bible_glyph_chapter_lev13() {
           "is",
           "only",
           "the",
-          "scar",
+          "$fire+face_with_head_bandage",
           "from",
           "the",
           "boil,",
