@@ -242,7 +242,7 @@ export function bible_glyph_chapter_1sa16() {
           "or",
           "his",
           "height,",
-          "for",
+          "$pointing",
           "I",
           "have",
           "rejected",
