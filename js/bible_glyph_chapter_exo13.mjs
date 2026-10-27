@@ -188,7 +188,7 @@ export function bible_glyph_chapter_exo13() {
           "eaten",
           "during",
           "those",
-          "seven",
+          "$seven",
           "$sun.",
           "$no_entry",
           "leavened",
