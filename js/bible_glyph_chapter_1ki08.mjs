@@ -216,7 +216,7 @@ export function bible_glyph_chapter_1ki08() {
       {
         verse_number: 7,
         words: [
-          "For",
+          "$pointing",
           "the",
           "cherubim",
           "spread",
