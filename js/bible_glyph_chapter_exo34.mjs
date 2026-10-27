@@ -787,7 +787,7 @@ export function bible_glyph_chapter_exo34() {
           "your",
           "$heart_on_fire",
           "$three",
-          "times",
+          "$drum",
           "a",
           "$year.",
         ],
