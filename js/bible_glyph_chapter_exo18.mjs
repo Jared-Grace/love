@@ -483,7 +483,7 @@ export function bible_glyph_chapter_exo18() {
           "to",
           "me",
           "to",
-          "inquire",
+          "$magnifying_glass+question",
           "of",
           "$heart_on_fire.",
         ],
