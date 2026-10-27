@@ -51,7 +51,7 @@ export function bible_glyph_chapter_1ki17() {
           "in",
           "$flashlight+flashlight",
           "$year",
-          "except",
+          "$pointing",
           "at",
           "my",
           "$speech.",
