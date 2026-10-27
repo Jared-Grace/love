@@ -670,7 +670,7 @@ export function bible_glyph_chapter_2ki05() {
           "$sacrifice",
           "to",
           "any",
-          "other",
+          "$plus+one",
           "$moai",
           "but",
           "the",
