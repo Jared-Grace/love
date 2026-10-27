@@ -1191,7 +1191,7 @@ export function bible_glyph_chapter_gen27() {
           "will",
           "$broken_chain+away+doing",
           "his",
-          "yoke",
+          "$yoke",
           "from",
           "your",
           'neck."',
