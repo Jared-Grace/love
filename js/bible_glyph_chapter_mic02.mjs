@@ -18,7 +18,7 @@ export function bible_glyph_chapter_mic02() {
           "those",
           "who",
           "devise",
-          "iniquity",
+          "$thumbs_down+hole",
           "and",
           "plot",
           "$thumbs_down",
