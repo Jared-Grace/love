@@ -17,7 +17,7 @@ export function bible_glyph_chapter_hab01() {
           "is",
           "the",
           "burden",
-          "that",
+          "$back+flashlight",
           "$proper_name$Habakkuk",
           "the",
           "$megaphone",
