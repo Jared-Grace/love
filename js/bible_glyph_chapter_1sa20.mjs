@@ -1256,7 +1256,7 @@ export function bible_glyph_chapter_1sa20() {
           "Jonathan",
           "shot",
           "an",
-          "arrow",
+          "$arrow+thing",
           "beyond",
           "him.",
         ],
