@@ -202,7 +202,7 @@ export function bible_glyph_chapter_sng02() {
           "a",
           "young",
           "$deer.",
-          "Look,",
+          "$exclamation,",
           "he",
           "stands",
           "behind",
