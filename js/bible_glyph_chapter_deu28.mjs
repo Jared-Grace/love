@@ -1343,7 +1343,7 @@ export function bible_glyph_chapter_deu28() {
           "while",
           "you",
           "sink",
-          "down",
+          "$walking+pointing_down",
           "lower",
           "and",
           "lower.",
