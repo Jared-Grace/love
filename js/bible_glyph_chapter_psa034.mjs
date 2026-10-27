@@ -21,7 +21,7 @@ export function bible_glyph_chapter_psa034() {
           "to",
           "be",
           "insane",
-          "before",
+          "$face",
           "$father+king,",
           "so",
           "that",
