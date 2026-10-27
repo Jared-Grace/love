@@ -764,7 +764,7 @@ export function bible_glyph_chapter_lam03() {
           "covered",
           "Yourself",
           "in",
-          "anger",
+          "$nose+fire",
           "and",
           "pursued",
           "us;",
