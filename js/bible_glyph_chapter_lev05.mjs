@@ -338,7 +338,7 @@ export function bible_glyph_chapter_lev05() {
           "$hand",
           "$no_entry",
           "$running+hand_receiving+doing",
-          "two",
+          "$two",
           "turtledoves",
           "or",
           "two",
