@@ -875,7 +875,7 @@ export function bible_glyph_chapter_exo04() {
         words: [
           "And",
           "$fishing_pole+proper_name",
-          "told",
+          "$newspaper",
           "$proper_name$Aaron",
           "everything",
           "the",
