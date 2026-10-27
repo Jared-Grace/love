@@ -209,7 +209,7 @@ export function bible_glyph_chapter_num08() {
       {
         verse_number: 9,
         words: [
-          "Bring",
+          "$magnet+doing",
           "the",
           "$handshake",
           "before",
