@@ -87,7 +87,7 @@ export function bible_glyph_chapter_deu07() {
           "show",
           "them",
           "$no_entry",
-          "mercy.",
+          "$heart_orange+doing.",
         ],
       },
       {
