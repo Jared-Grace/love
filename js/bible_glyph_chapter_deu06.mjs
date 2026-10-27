@@ -80,7 +80,7 @@ export function bible_glyph_chapter_deu06() {
           "of",
           "your",
           "$son,",
-          "all",
+          "$all",
           "the",
           "$sun",
           "of",
