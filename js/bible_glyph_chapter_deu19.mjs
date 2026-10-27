@@ -155,7 +155,7 @@ export function bible_glyph_chapter_deu19() {
           "into",
           "the",
           "forest",
-          "with",
+          "$safety_pin",
           "his",
           "neighbor",
           "to",
