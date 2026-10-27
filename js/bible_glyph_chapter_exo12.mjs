@@ -101,7 +101,7 @@ export function bible_glyph_chapter_exo12() {
           "with",
           "the",
           "nearest",
-          "neighbor",
+          "$tent+doer",
           "based",
           "on",
           "the",
