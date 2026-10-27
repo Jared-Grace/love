@@ -258,7 +258,7 @@ export function bible_glyph_chapter_exo22() {
           "$no_entry",
           "$magnifying_glass+exclamation,",
           "the",
-          "owner",
+          "$key",
           "of",
           "the",
           "$house",
