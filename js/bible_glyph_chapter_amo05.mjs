@@ -216,7 +216,7 @@ export function bible_glyph_chapter_amo05() {
           "Orion,",
           "who",
           "turns",
-          "darkness",
+          "$skull+darkness",
           "into",
           "dawn",
           "and",
