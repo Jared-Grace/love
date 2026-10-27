@@ -312,7 +312,7 @@ export function bible_glyph_chapter_gen30() {
           "$walking",
           "and",
           "found",
-          "mandrakes",
+          "$ginger_root+heart_red",
           "in",
           "the",
           "$field,",
