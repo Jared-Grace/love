@@ -338,7 +338,7 @@ export function bible_glyph_chapter_job01() {
           "You",
           "to",
           "Your",
-          "face.",
+          "$face.",
         ],
       },
       {
