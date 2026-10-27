@@ -426,7 +426,7 @@ export function bible_glyph_chapter_gen33() {
           "you.",
           "Jacob",
           "$speech,",
-          "Why",
+          "$flashlight+question",
           "do",
           "that?",
           "Let",
