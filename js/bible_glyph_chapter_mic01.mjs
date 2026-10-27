@@ -122,7 +122,7 @@ export function bible_glyph_chapter_mic01() {
           "$carpentry_saw",
           "apart,",
           "like",
-          "wax",
+          "$candle+droplet",
           "before",
           "the",
           "$fire,",
