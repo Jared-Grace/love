@@ -140,7 +140,7 @@ export function bible_glyph_chapter_nam02() {
           "his",
           "nobles;",
           "they",
-          "stumble",
+          "$hiking_boot+rock",
           "as",
           "they",
           "advance.",
