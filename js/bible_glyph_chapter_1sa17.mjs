@@ -1482,7 +1482,7 @@ export function bible_glyph_chapter_1sa17() {
           "$rescue,",
           "for",
           "the",
-          "battle",
+          "$crossed_swords",
           "is",
           "the",
           "$i_am,",
