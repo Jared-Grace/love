@@ -160,7 +160,7 @@ export function bible_glyph_chapter_exo10() {
           "$locusts",
           "into",
           "your",
-          "territory.",
+          "$passport_control.",
         ],
       },
       {
