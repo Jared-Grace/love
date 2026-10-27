@@ -681,7 +681,7 @@ export function bible_glyph_chapter_est01() {
           "from",
           "the",
           "least",
-          "to",
+          "$finish",
           "the",
           "greatest.",
         ],
