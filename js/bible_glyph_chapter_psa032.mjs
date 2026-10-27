@@ -220,7 +220,7 @@ export function bible_glyph_chapter_psa032() {
           "be",
           "like",
           "the",
-          "horse",
+          "$horse",
           "or",
           "$mule,",
           "which",
