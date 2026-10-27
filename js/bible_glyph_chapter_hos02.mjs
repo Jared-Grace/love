@@ -276,7 +276,7 @@ export function bible_glyph_chapter_hos02() {
       {
         verse_number: 9,
         words: [
-          "Therefore",
+          "$right_arrow",
           "I",
           "will",
           "$turn_back",
