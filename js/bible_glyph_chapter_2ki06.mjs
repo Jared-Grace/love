@@ -861,7 +861,7 @@ export function bible_glyph_chapter_2ki06() {
           "by",
           "$pointing_up",
           "the",
-          "wall,",
+          "$brick+shield,",
           "a",
           "$woman",
           "cried",
