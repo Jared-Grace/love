@@ -526,7 +526,7 @@ export function bible_glyph_chapter_1ki21() {
           "$proper_name$Naboth",
           "the",
           "$proper_name$Jezreelite,",
-          "who",
+          "$back+flashlight",
           "refused",
           "to",
           "$hands_giving",
