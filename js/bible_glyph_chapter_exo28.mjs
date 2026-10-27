@@ -748,7 +748,7 @@ export function bible_glyph_chapter_exo28() {
           "shall",
           "be",
           "tied",
-          "to",
+          "$toward",
           "the",
           "$ring",
           "of",
