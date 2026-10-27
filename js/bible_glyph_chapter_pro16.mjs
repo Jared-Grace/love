@@ -654,7 +654,7 @@ export function bible_glyph_chapter_pro16() {
           "$nose+fire",
           "than",
           "a",
-          "warrior,",
+          "$might+person,",
           "and",
           "he",
           "who",
