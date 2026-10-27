@@ -447,7 +447,7 @@ export function bible_glyph_chapter_zep01() {
           "$magnet",
           "and",
           "coming",
-          "quickly.",
+          "$double_exclamation.",
           "$voice,",
           "the",
           "$sun",
