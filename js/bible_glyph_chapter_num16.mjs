@@ -629,7 +629,7 @@ export function bible_glyph_chapter_num16() {
           "$eye",
           "to",
           "the",
-          "whole",
+          "$all",
           "congregation.",
         ],
       },
