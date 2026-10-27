@@ -308,7 +308,7 @@ export function bible_glyph_chapter_psa091() {
           "will",
           "deliver",
           "him;",
-          "because",
+          "$pointing",
           "he",
           "$lightbulb",
           "My",
