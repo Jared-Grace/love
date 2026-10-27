@@ -97,7 +97,7 @@ export function bible_glyph_chapter_ecc01() {
           "to",
           "where",
           "it",
-          "rises.",
+          "$sun+up_arrow+doing.",
         ],
       },
       {
