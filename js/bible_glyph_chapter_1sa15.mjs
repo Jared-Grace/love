@@ -413,7 +413,7 @@ export function bible_glyph_chapter_1sa15() {
           "turned",
           "and",
           "gone",
-          "down",
+          "$walking+pointing_down",
           "to",
           "$proper_name$Gilgal.",
         ],
