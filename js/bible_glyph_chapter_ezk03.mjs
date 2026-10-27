@@ -542,7 +542,7 @@ export function bible_glyph_chapter_ezk03() {
           "you",
           "do",
           "$no_entry",
-          "warn",
+          "$rotating_light+doing",
           "him",
           "$no_entry",
           "$mouth",
