@@ -29,7 +29,7 @@ export function bible_glyph_chapter_gen18() {
           "sitting",
           "at",
           "the",
-          "entrance",
+          "$door",
           "of",
           "his",
           "tent",
