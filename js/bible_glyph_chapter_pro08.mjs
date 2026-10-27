@@ -240,7 +240,7 @@ export function bible_glyph_chapter_pro08() {
           "I",
           "hate",
           "arrogant",
-          "pride,",
+          "$mountain+up_arrow+thing,",
           "$thumbs_down",
           "$road,",
           "and",
