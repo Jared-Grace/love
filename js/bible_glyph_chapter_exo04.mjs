@@ -573,7 +573,7 @@ export function bible_glyph_chapter_exo04() {
           "$speech",
           "to",
           "him,",
-          '"Please',
+          '"$pleading',
           "let",
           "me",
           "$turn_back",
