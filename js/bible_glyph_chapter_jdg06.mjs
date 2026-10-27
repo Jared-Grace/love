@@ -787,7 +787,7 @@ export function bible_glyph_chapter_jdg06() {
         words: [
           "So",
           "Gideon",
-          "built",
+          "$brick",
           "an",
           "$altar",
           "there",
