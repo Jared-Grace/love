@@ -883,7 +883,7 @@ export function bible_glyph_chapter_1ki21() {
           "of",
           "the",
           "$i_am,",
-          "incited",
+          "$magnet+heart_red+doing",
           "by",
           "$proper_name$Jezebel",
           "his",
