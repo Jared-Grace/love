@@ -309,7 +309,7 @@ export function bible_glyph_chapter_exo06() {
       },
       {
         verse_number: 10,
-        words: ["So", "$i_am", "$mouth", "to", "$fishing_pole+proper_name,"],
+        words: ["So", "$i_am", "$mouth", "$toward", "$fishing_pole+proper_name,"],
       },
       {
         verse_number: 11,
