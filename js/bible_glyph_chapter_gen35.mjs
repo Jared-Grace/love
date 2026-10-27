@@ -512,7 +512,7 @@ export function bible_glyph_chapter_gen35() {
           "was",
           "going",
           "out,",
-          "for",
+          "$pointing",
           "she",
           "was",
           "$skull+doing,",
