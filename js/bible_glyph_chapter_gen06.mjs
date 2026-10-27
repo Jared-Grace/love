@@ -358,7 +358,7 @@ export function bible_glyph_chapter_gen06() {
           "through",
           "them.",
           "Now",
-          "behold,",
+          "$exclamation,",
           "I",
           "will",
           "destroy",
