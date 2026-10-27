@@ -129,7 +129,7 @@ export function bible_glyph_chapter_mic02() {
           "with",
           "this",
           "bitter",
-          "lamentation:",
+          "$loudly_crying+loudspeaker+thing:",
           "We",
           "are",
           "utterly",
