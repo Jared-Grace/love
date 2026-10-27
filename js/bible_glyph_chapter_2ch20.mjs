@@ -1081,7 +1081,7 @@ export function bible_glyph_chapter_2ch20() {
           "had",
           "given",
           "him",
-          "rest",
+          "$seat+doing",
           "on",
           "every",
           "side.",
