@@ -371,7 +371,7 @@ export function bible_glyph_chapter_gen13() {
           "$proper_name$Sodom",
           "were",
           "$thumbs_down,",
-          "sinning",
+          "$bow+doer",
           "greatly",
           "against",
           "the",
