@@ -151,7 +151,7 @@ export function bible_glyph_chapter_gen15() {
           "$abacus",
           "the",
           "stars,",
-          "if",
+          "$traffic_light",
           "you",
           "are",
           "able.",
