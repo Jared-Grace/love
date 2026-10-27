@@ -64,7 +64,7 @@ export function bible_glyph_chapter_isa12() {
           "$i_am",
           "is",
           "my",
-          "strength",
+          "$mechanical_arm",
           "and",
           "my",
           "song,",
