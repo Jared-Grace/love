@@ -352,7 +352,7 @@ export function bible_glyph_chapter_exo04() {
           "of",
           "speech",
           "and",
-          'tongue."',
+          "$tongue",
         ],
       },
       {
