@@ -1051,7 +1051,7 @@ export function bible_glyph_chapter_jdg06() {
           "of",
           "Baal",
           "and",
-          "cut",
+          "$scissors",
           "down",
           "the",
           "Asherah",
