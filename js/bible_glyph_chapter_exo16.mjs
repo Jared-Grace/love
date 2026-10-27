@@ -791,7 +791,7 @@ export function bible_glyph_chapter_exo16() {
           "set",
           "it",
           "aside",
-          "until",
+          "$finish",
           "morning,",
           "as",
           "$fishing_pole+proper_name",
