@@ -598,7 +598,7 @@ export function bible_glyph_chapter_jos01() {
         words: [
           "Anyone",
           "who",
-          "rebels",
+          "$raised_fist+up_arrow+doing",
           "against",
           "your",
           "order",
