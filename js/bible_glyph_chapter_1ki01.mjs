@@ -913,7 +913,7 @@ export function bible_glyph_chapter_1ki01() {
           "the",
           "$i_am",
           "$sprout,",
-          "who",
+          "$back+flashlight",
           "has",
           "redeemed",
           "my",
