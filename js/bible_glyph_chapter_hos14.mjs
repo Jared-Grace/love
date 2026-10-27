@@ -189,7 +189,7 @@ export function bible_glyph_chapter_hos14() {
           "they",
           "will",
           "$sprout+doing",
-          "grain",
+          "$wheat+barley",
           "and",
           "blossom",
           "like",
