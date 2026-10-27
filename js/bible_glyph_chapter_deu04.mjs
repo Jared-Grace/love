@@ -414,7 +414,7 @@ export function bible_glyph_chapter_deu04() {
           "$mountain,",
           "a",
           "$mountain",
-          "blazing",
+          "$fire+wood",
           "with",
           "$fire",
           "to",
