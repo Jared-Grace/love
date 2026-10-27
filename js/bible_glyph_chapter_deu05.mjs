@@ -356,7 +356,7 @@ export function bible_glyph_chapter_deu05() {
           "$kneeling+doing",
           "and",
           "$hammer+doing",
-          "all",
+          "$all",
           "your",
           "$tools,",
         ],
