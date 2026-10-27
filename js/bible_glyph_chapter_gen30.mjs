@@ -824,7 +824,7 @@ export function bible_glyph_chapter_gen30() {
           "from",
           "them",
           "every",
-          "speckled",
+          "$black_circle+describing",
           "and",
           "spotted",
           "one,",
