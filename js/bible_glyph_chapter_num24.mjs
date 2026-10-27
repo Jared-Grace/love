@@ -42,7 +42,7 @@ export function bible_glyph_chapter_num24() {
           "he",
           "turned",
           "his",
-          "face",
+          "$face",
           "$toward",
           "the",
           "$wilderness.",
