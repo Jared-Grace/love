@@ -924,7 +924,7 @@ export function bible_glyph_chapter_2ch34() {
           "all",
           "the",
           "curses",
-          "written",
+          "$writing_hand",
           "in",
           "the",
           "book",
