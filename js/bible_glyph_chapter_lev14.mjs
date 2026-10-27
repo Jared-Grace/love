@@ -1673,7 +1673,7 @@ export function bible_glyph_chapter_lev14() {
           "and",
           "he",
           "shall",
-          "slaughter",
+          "$kitchen_knife+doing",
           "one",
           "of",
           "the",
