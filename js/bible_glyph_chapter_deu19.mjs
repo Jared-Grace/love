@@ -322,7 +322,7 @@ export function bible_glyph_chapter_deu19() {
           "are",
           "to",
           "$plus+doing",
-          "three",
+          "$three",
           "$repeat",
           "$city$s",
           "to",
