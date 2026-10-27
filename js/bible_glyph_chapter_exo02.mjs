@@ -616,7 +616,7 @@ export function bible_glyph_chapter_exo02() {
           "$person_gesturing_ok+doing",
           "to",
           "stay",
-          "with",
+          "$safety_pin",
           "the",
           "$man_beard,",
           "and",
