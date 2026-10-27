@@ -612,7 +612,7 @@ export function bible_glyph_chapter_exo04() {
           "$turn_back",
           "to",
           "$clamp+proper_name,",
-          "for",
+          "$pointing",
           "all",
           "the",
           "men",
