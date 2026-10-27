@@ -519,7 +519,7 @@ export function bible_glyph_chapter_exo33() {
           "$speech,",
           "$traffic_light",
           "Your",
-          "Presence",
+          "$face",
           "does",
           "not",
           "$walking",
