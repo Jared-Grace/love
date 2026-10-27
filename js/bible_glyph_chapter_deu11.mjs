@@ -795,7 +795,7 @@ export function bible_glyph_chapter_deu11() {
           "be",
           "yours.",
           "Your",
-          "territory",
+          "$passport_control",
           "will",
           "extend",
           "$tray_out",
