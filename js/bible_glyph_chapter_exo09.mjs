@@ -742,7 +742,7 @@ export function bible_glyph_chapter_exo09() {
           "was",
           "so",
           "$star+describing",
-          "that",
+          "$back+flashlight",
           "$no_entry",
           "like",
           "it",
