@@ -269,7 +269,7 @@ export function bible_glyph_chapter_num30() {
           "he",
           "nullifies",
           "the",
-          "vow",
+          "$saluting_face",
           "that",
           "binds",
           "her,",
