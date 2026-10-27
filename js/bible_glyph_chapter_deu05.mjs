@@ -130,7 +130,7 @@ export function bible_glyph_chapter_deu05() {
           "and",
           "you",
           "to",
-          "declare",
+          "$newspaper",
           "to",
           "you",
           "the",
