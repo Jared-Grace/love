@@ -111,7 +111,7 @@ export function bible_glyph_chapter_2ki22() {
           "of",
           "$proper_name$Meshullam,",
           "the",
-          "scribe,",
+          "$abacus,",
           "to",
           "the",
           "$house",
