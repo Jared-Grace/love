@@ -185,7 +185,7 @@ export function bible_glyph_chapter_deu10() {
           "had",
           "$hammer+doing,",
           "and",
-          "there",
+          "$telescope",
           "they",
           "have",
           "remained,",
