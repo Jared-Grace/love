@@ -53,7 +53,7 @@ export function bible_glyph_chapter_lev04() {
           "$priest",
           "$bow+doing",
           "bringing",
-          "guilt",
+          "$sacrifice+scales+thing",
           "$family,",
           "then",
           "let",
