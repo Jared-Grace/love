@@ -182,7 +182,7 @@ export function bible_glyph_chapter_jdg16() {
           "source",
           "of",
           "his",
-          "great",
+          "$top",
           "$lightning,",
           "and",
           "how",
