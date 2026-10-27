@@ -265,7 +265,7 @@ export function bible_glyph_chapter_exo40() {
           "$son",
           "to",
           "the",
-          "entrance",
+          "$door",
           "to",
           "the",
           "Tent",
