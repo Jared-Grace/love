@@ -1221,7 +1221,7 @@ export function bible_glyph_chapter_lev26() {
           "their",
           "$father,",
           "the",
-          "unfaithfulness",
+          "$handshake+broken_chain+thing",
           "that",
           "they",
           "practiced",
