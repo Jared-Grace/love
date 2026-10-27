@@ -860,7 +860,7 @@ export function bible_glyph_chapter_2ch20() {
           "$man_beard",
           "helped",
           "to",
-          "destroy",
+          "$collision+person",
           "his",
           "neighbor.",
         ],
