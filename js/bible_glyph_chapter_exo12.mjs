@@ -168,7 +168,7 @@ export function bible_glyph_chapter_exo12() {
           "the",
           "animals",
           "at",
-          "twilight.",
+          "$sunset.",
         ],
       },
       {
