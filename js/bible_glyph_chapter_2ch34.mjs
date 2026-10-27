@@ -806,7 +806,7 @@ export function bible_glyph_chapter_2ch34() {
           "$father",
           "have",
           "$no_entry",
-          "kept",
+          "$guard",
           "the",
           "$speech",
           "of",
