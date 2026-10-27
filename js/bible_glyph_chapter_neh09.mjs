@@ -471,7 +471,7 @@ export function bible_glyph_chapter_neh09() {
           "$check",
           "$scroll,",
           "$thumbs_up",
-          "statutes",
+          "$locked_with_pen",
           "and",
           "$scroll.",
         ],
