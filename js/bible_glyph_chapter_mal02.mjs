@@ -433,7 +433,7 @@ export function bible_glyph_chapter_mal02() {
           "you",
           "$hammer+doing:",
           "You",
-          "cover",
+          "$coat+doing",
           "the",
           "$altar",
           "of",
