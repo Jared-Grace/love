@@ -983,7 +983,7 @@ export function bible_glyph_chapter_1sa02() {
       {
         verse_number: 30,
         words: [
-          "Therefore",
+          "$right_arrow",
           "the",
           "$i_am,",
           "the",
