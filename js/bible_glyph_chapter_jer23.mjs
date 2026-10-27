@@ -883,7 +883,7 @@ export function bible_glyph_chapter_jer23() {
           "$megaphone",
           "who",
           "prophesy",
-          "lies",
+          "$lying_face",
           "in",
           "My",
           "$name_tag:",
