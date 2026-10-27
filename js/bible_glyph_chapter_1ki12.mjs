@@ -280,7 +280,7 @@ export function bible_glyph_chapter_1ki12() {
           "$speech,",
           "$balloon+speech+doing",
           "the",
-          "yoke",
+          "$yoke",
           "your",
           "$father",
           "$hands_giving",
