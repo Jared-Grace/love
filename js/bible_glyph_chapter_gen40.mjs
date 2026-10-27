@@ -260,7 +260,7 @@ export function bible_glyph_chapter_gen40() {
           "the",
           "$vine",
           "were",
-          "three",
+          "$three",
           "branches.",
           "As",
           "it",
