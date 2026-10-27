@@ -55,7 +55,7 @@ export function bible_glyph_chapter_mic01() {
           "all",
           "of",
           "you;",
-          "listen,",
+          "$ear_with_hearing_aid,",
           "O",
           "$earth",
           "and",
