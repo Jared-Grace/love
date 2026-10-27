@@ -157,7 +157,7 @@ export function bible_glyph_chapter_est01() {
           "of",
           "the",
           "$king",
-          "palace.",
+          "$house+multiply.",
         ],
       },
       {
