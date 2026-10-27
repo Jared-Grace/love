@@ -615,7 +615,7 @@ export function bible_glyph_chapter_deu10() {
           "$heart_red+doing",
           "the",
           "foreigner,",
-          "since",
+          "$pointing",
           "you",
           "yourselves",
           "were",
