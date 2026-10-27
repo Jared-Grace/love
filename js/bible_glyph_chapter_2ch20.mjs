@@ -71,7 +71,7 @@ export function bible_glyph_chapter_2ch20() {
           'Hazazon-tamar"',
           "(that",
           "is,",
-          "En-gedi).",
+          "$eye+goat+child+proper_name).",
         ],
       },
       {
