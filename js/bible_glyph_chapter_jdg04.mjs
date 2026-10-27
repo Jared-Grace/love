@@ -651,7 +651,7 @@ export function bible_glyph_chapter_jdg04() {
           "$man_beard",
           "$flashlight+round_pushpin?",
           "$speech,",
-          "No.",
+          "$dotted_line_face.",
         ],
       },
       {
