@@ -619,7 +619,7 @@ export function bible_glyph_chapter_1sa03() {
           "$eye",
           "at",
           "$proper_name$Shiloh,",
-          "because",
+          "$pointing",
           "there",
           "$i_am",
           "revealed",
