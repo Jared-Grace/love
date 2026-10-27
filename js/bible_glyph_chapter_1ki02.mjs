@@ -356,7 +356,7 @@ export function bible_glyph_chapter_1ki02() {
       {
         verse_number: 9,
         words: [
-          "Now",
+          "$watch",
           "therefore,",
           "do",
           "$no_entry",
