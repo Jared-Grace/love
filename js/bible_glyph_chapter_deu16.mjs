@@ -191,7 +191,7 @@ export function bible_glyph_chapter_deu16() {
           "of",
           "the",
           "$gate",
-          "that",
+          "$back+flashlight",
           "the",
           "$i_am",
           "your",
