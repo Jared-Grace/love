@@ -741,7 +741,7 @@ export function bible_glyph_chapter_jer31() {
           "wander,",
           "O",
           "faithless",
-          "daughter?",
+          "$girl+family?",
           "For",
           "the",
           "$i_am",
