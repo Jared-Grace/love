@@ -942,7 +942,7 @@ export function bible_glyph_chapter_gen42() {
           "I",
           "will",
           "$lightbulb",
-          "whether",
+          "$pointing",
           "you",
           "are",
           "honest.",
