@@ -310,7 +310,7 @@ export function bible_glyph_chapter_exo36() {
           "$triangular_ruler",
           "$arrow_both_ways,",
           "and",
-          "all",
+          "$all",
           "the",
           "curtains",
           "were",
