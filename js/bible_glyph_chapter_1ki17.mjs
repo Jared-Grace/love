@@ -567,7 +567,7 @@ export function bible_glyph_chapter_1ki17() {
           "$man_beard",
           "of",
           "$heart_on_fire,",
-          "what",
+          "$flashlight+question",
           "have",
           "you",
           "done",
