@@ -660,7 +660,7 @@ export function bible_glyph_chapter_num35() {
       {
         verse_number: 23,
         words: [
-          "or",
+          "$shuffle",
           "$no_entry",
           "$eye",
           "drops",
