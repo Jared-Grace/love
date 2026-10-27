@@ -223,7 +223,7 @@ export function bible_glyph_chapter_1ki17() {
           "commanded",
           "a",
           "widow",
-          "there",
+          "$telescope",
           "to",
           "provide",
           "for",
