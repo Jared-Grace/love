@@ -444,7 +444,7 @@ export function bible_glyph_chapter_pro31() {
           "fine",
           "linen",
           "and",
-          "purple.",
+          "$purple_circle.",
         ],
       },
       {
