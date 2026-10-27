@@ -89,7 +89,7 @@ export function bible_glyph_chapter_mic02() {
           "$back+flashlight",
           "you",
           "$no_entry",
-          "free",
+          "$walking+away+doing",
           "your",
           "necks.",
           "Then",
