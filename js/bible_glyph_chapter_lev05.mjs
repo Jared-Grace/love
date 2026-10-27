@@ -59,7 +59,7 @@ export function bible_glyph_chapter_lev05() {
           "of",
           "unclean",
           "livestock,",
-          "or",
+          "$shuffle",
           "of",
           "an",
           "unclean",
