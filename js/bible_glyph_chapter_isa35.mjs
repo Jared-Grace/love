@@ -245,7 +245,7 @@ export function bible_glyph_chapter_isa35() {
           "fools",
           "will",
           "$no_entry",
-          "stray",
+          "$shaking_face",
           "onto",
           "it.",
         ],
