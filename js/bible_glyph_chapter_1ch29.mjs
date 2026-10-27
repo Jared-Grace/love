@@ -573,7 +573,7 @@ export function bible_glyph_chapter_1ch29() {
           "$heart_on_fire,",
           "all",
           "this",
-          "abundance",
+          "$crowd+loudspeaker",
           "that",
           "we",
           "have",
