@@ -362,7 +362,7 @@ export function bible_glyph_chapter_deu15() {
           "there",
           "will",
           "$no_entry",
-          "cease",
+          "$stop_button",
           "to",
           "be",
           "$poor",
