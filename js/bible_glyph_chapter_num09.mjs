@@ -778,7 +778,7 @@ export function bible_glyph_chapter_num09() {
           "carried",
           "out",
           "the",
-          "charge",
+          "$guard+thing",
           "of",
           "$i_am",
           "according",
