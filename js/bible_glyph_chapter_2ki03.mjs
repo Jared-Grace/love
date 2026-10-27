@@ -763,7 +763,7 @@ export function bible_glyph_chapter_2ki03() {
           "and",
           "slaughtered",
           "$man_beard",
-          "another.",
+          "$person+sheep.",
           "Now",
           "to",
           "the",
