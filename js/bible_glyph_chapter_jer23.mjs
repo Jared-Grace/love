@@ -458,7 +458,7 @@ export function bible_glyph_chapter_jer23() {
           "of",
           "their",
           "$clipboard+thing,",
-          "declares",
+          "$microphone",
           "the",
           "$i_am.",
         ],
