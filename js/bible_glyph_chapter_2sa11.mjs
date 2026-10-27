@@ -68,7 +68,7 @@ export function bible_glyph_chapter_2sa11() {
           "up",
           "from",
           "his",
-          "bed",
+          "$bed",
           "and",
           "$walking",
           "around",
