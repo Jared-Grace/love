@@ -434,7 +434,7 @@ export function bible_glyph_chapter_exo29() {
           "You",
           "are",
           "to",
-          "slaughter",
+          "$kitchen_knife+doing",
           "the",
           "$ram,",
           "$hand_receiving",
