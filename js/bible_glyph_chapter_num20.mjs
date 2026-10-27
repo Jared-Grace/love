@@ -522,7 +522,7 @@ export function bible_glyph_chapter_num20() {
           "or",
           "$vineyard,",
           "$no_entry",
-          "drink",
+          "$cup_with_straw",
           "$water",
           "from",
           "any",
