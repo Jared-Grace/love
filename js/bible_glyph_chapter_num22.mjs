@@ -1186,7 +1186,7 @@ export function bible_glyph_chapter_num22() {
           "border,",
           "at",
           "the",
-          "edge",
+          "$end_arrow+round_pushpin",
           "of",
           "his",
           "territory.",
