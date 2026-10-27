@@ -459,7 +459,7 @@ export function bible_glyph_chapter_deu08() {
           "with",
           "its",
           "venomous",
-          "snakes",
+          "$snake",
           "and",
           "scorpions,",
           "a",
