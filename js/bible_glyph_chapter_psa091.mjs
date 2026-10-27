@@ -122,7 +122,7 @@ export function bible_glyph_chapter_psa091() {
           "that",
           "flies",
           "by",
-          "day,",
+          "$sun+manner,",
         ],
       },
       {
