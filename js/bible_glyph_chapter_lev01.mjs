@@ -416,7 +416,7 @@ export function bible_glyph_chapter_lev01() {
           "its",
           "$person_gesturing_ok,",
           "and",
-          "burn",
+          "$incense+doing",
           "it",
           "$altar;",
           "$blood",
