@@ -334,7 +334,7 @@ export function bible_glyph_chapter_lev14() {
           "$spoon+cyclone",
           "with",
           "olive",
-          "oil,",
+          "$lotion_bottle,",
           "and",
           "one",
           "log",
