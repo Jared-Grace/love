@@ -161,7 +161,7 @@ export function bible_glyph_chapter_num19() {
           "$hand_receiving",
           "$cedar",
           "$tree,",
-          "hyssop",
+          "$herb+bouquet",
           "and",
           "scarlet",
           "wool,",
