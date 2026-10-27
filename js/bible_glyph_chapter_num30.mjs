@@ -182,7 +182,7 @@ export function bible_glyph_chapter_num30() {
           "will",
           "absolve",
           "her,",
-          "because",
+          "$pointing",
           "her",
           "$father",
           "has",
