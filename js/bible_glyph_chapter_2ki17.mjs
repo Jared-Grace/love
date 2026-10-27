@@ -552,7 +552,7 @@ export function bible_glyph_chapter_2ki17() {
           "for",
           "themselves",
           "two",
-          "cast",
+          "$pouring_liquid+moai",
           "calves,",
           "and",
           "they",
