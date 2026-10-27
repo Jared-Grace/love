@@ -804,7 +804,7 @@ export function bible_glyph_chapter_gen46() {
           "herds",
           "and",
           "all",
-          "that",
+          "$back+flashlight",
           "they",
           "own.",
         ],
