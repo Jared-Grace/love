@@ -274,7 +274,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "fattened",
           "calves",
-          "near",
+          "$linked_paperclips",
           "the",
           "$stone",
           "of",
