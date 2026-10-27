@@ -96,7 +96,7 @@ export function bible_glyph_chapter_lev12() {
           "must",
           "$no_entry",
           "touch",
-          "anything",
+          "$all",
           "$sparkle+thing,",
           "and",
           "she",
