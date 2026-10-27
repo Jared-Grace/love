@@ -86,7 +86,7 @@ export function bible_glyph_chapter_job31() {
           "count",
           "my",
           "$all",
-          "step?",
+          "$foot+right_arrow+thing?",
         ],
       },
       {
