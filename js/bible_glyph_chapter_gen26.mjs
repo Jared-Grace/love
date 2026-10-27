@@ -1004,7 +1004,7 @@ export function bible_glyph_chapter_gen26() {
           "the",
           "$woman",
           "of",
-          "Elon",
+          "$tree+flexed_biceps+place+proper_name",
           "the",
           "$proper_name$Hittite.",
         ],
