@@ -579,7 +579,7 @@ export function bible_glyph_chapter_num13() {
           "for",
           "the",
           "$all",
-          "congregation",
+          "$witness+crowd",
           "and",
           "$eye",
           "them",
