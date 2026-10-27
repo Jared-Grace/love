@@ -436,7 +436,7 @@ export function bible_glyph_chapter_ecc03() {
           "$all",
           "activity",
           "and",
-          "every",
+          "$all",
           "deed.",
         ],
       },
