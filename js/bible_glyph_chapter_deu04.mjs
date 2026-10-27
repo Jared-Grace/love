@@ -278,7 +278,7 @@ export function bible_glyph_chapter_deu04() {
           "$scales+thing",
           "like",
           "this",
-          "entire",
+          "$all",
           "$scroll",
           "I",
           "$hands_giving",
