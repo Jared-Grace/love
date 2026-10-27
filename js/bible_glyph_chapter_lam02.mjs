@@ -796,7 +796,7 @@ export function bible_glyph_chapter_lam02() {
           "of",
           "the",
           "night.",
-          "Pour",
+          "$jar+down_arrow+doing",
           "out",
           "your",
           "$heart_organ",
