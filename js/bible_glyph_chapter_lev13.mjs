@@ -1936,7 +1936,7 @@ export function bible_glyph_chapter_lev13() {
           "$shuffle",
           "any",
           "leather",
-          "article,",
+          "$toolbox,",
           "for",
           "pronouncing",
           "it",
