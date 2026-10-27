@@ -374,7 +374,7 @@ export function bible_glyph_chapter_mal03() {
           "out",
           "for",
           "you",
-          "blessing",
+          "$speech+thumbs_up",
           "without",
           "measure.",
         ],
