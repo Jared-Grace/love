@@ -560,7 +560,7 @@ export function bible_glyph_chapter_gen09() {
           "$brown_square,",
           "$sewing_needle",
           "to",
-          "plant",
+          "$sprout+down_arrow+doing",
           "a",
           "vineyard.",
         ],
