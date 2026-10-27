@@ -1093,7 +1093,7 @@ export function bible_glyph_chapter_lev16() {
       {
         verse_number: 30,
         words: [
-          "because",
+          "$pointing",
           "on",
           "this",
           "$sun",
