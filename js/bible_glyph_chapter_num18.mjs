@@ -41,7 +41,7 @@ export function bible_glyph_chapter_num18() {
           "and",
           "your",
           "$son",
-          "alone",
+          "$safety_pin",
           "must",
           "$lifting",
           "the",
