@@ -58,7 +58,7 @@ export function bible_glyph_chapter_deu19() {
           "yourselves",
           "$three",
           "$city$s",
-          "within",
+          "$radio_button",
           "the",
           "$earth",
           "that",
