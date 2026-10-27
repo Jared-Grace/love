@@ -84,7 +84,7 @@ export function bible_glyph_chapter_nam02() {
           "are",
           "dressed",
           "in",
-          "scarlet.",
+          "$worm+red_circle+doing.",
           "The",
           "fittings",
           "of",
