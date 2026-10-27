@@ -927,7 +927,7 @@ export function bible_glyph_chapter_num15() {
           "$man_beard",
           "was",
           "found",
-          "gathering",
+          "$fallen_leaf+wheat+doing",
           "$tree",
           "on",
           "the",
