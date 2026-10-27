@@ -522,7 +522,7 @@ export function bible_glyph_chapter_exo39() {
           "on",
           "its",
           "$vs_button,",
-          "near",
+          "$arrow_both_ways+round_pushpin",
           "the",
           "seam",
           "just",
