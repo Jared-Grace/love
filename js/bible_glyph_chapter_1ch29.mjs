@@ -73,7 +73,7 @@ export function bible_glyph_chapter_1ch29() {
           "of",
           "my",
           "$heart_on_fire.",
-          "Gold",
+          "$gold",
           "for",
           "the",
           "gold",
