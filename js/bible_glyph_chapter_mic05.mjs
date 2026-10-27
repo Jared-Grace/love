@@ -147,7 +147,7 @@ export function bible_glyph_chapter_mic05() {
           "will",
           "$person+house",
           "securely,",
-          "for",
+          "$pointing",
           "then",
           "His",
           "greatness",
