@@ -512,7 +512,7 @@ export function bible_glyph_chapter_zep02() {
           "place",
           "for",
           "$sprout!",
-          "Everyone",
+          "$all",
           "who",
           "passes",
           "by",
