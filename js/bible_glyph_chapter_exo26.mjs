@@ -455,7 +455,7 @@ export function bible_glyph_chapter_exo26() {
           "this",
           "way",
           "$hammer+doing",
-          "all",
+          "$all",
           "the",
           "frames",
           "of",
