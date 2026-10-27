@@ -377,7 +377,7 @@ export function bible_glyph_chapter_deu04() {
           "may",
           "learn",
           "to",
-          "fear",
+          "$fear+doing",
           "Me",
           "all",
           "the",
