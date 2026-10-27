@@ -505,7 +505,7 @@ export function bible_glyph_chapter_num20() {
       {
         verse_number: 17,
         words: [
-          "Please",
+          "$pleading",
           "let",
           "us",
           "pass",
