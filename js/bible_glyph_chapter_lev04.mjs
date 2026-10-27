@@ -26,7 +26,7 @@ export function bible_glyph_chapter_lev04() {
           "When",
           "$person_other",
           "$bow+doing",
-          "unintentionally",
+          "$footprints+question+thing",
           "against",
           "any",
           "of",
