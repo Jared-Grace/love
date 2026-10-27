@@ -2326,7 +2326,7 @@ export function bible_glyph_chapter_1ki08() {
           "in",
           "$heart_organ",
           "for",
-          "all",
+          "$all",
           "the",
           "$thumbs_up",
           "that",
