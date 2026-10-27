@@ -741,7 +741,7 @@ export function bible_glyph_chapter_deu06() {
           "careful",
           "to",
           "$hammer+doing",
-          "every",
+          "$all",
           "one",
           "of",
           "these",
