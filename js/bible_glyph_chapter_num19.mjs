@@ -605,7 +605,7 @@ export function bible_glyph_chapter_num19() {
           "the",
           "$person_other",
           "who",
-          "were",
+          "$link",
           "there.",
           "He",
           "is",
