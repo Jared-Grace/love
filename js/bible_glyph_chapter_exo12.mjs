@@ -1312,7 +1312,7 @@ export function bible_glyph_chapter_exo12() {
           "the",
           "very",
           "$sun,",
-          "all",
+          "$all",
           "the",
           "$i_am",
           "divisions",
