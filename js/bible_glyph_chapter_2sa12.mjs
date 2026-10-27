@@ -499,7 +499,7 @@ export function bible_glyph_chapter_2sa12() {
           "$walking",
           "$house,",
           "$i_am",
-          "struck",
+          "$fist+microbe",
           "the",
           "$child",
           "that",
