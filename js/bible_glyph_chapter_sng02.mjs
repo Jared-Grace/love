@@ -230,7 +230,7 @@ export function bible_glyph_chapter_sng02() {
           "my",
           "darling,",
           "my",
-          "beautiful",
+          "$face+sparkle",
           "one,",
           "$walking",
           "with",
