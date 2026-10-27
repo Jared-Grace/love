@@ -370,7 +370,7 @@ export function bible_glyph_chapter_1sa08() {
           "his",
           "weapons",
           "of",
-          "war",
+          "$crossed_swords",
           "and",
           "equipment",
           "for",
