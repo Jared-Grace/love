@@ -988,7 +988,7 @@ export function bible_glyph_chapter_exo09() {
           "$no_entry",
           "$fist,",
           "$pointing",
-          "they",
+          "$pointing_back+crowd",
           "are",
           "$wheat+hourglass_not_done",
           "crops.",
