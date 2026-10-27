@@ -241,7 +241,7 @@ export function bible_glyph_chapter_jdg11() {
           "with",
           "us",
           "and",
-          "fight",
+          "$crossed_swords+doing",
           "the",
           "$son",
           "of",
