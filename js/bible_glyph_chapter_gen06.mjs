@@ -455,7 +455,7 @@ export function bible_glyph_chapter_gen06() {
           "the",
           "$package,",
           "and",
-          "lower,",
+          "$down_arrow+describing,",
           "middle,",
           "and",
           "upper",
