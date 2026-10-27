@@ -18,7 +18,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_div_code_multiple } from "./app_code_div_code_multiple.mjs";
 import { html_div_cycle_code_multiple } from "./html_div_cycle_code_multiple.mjs";
-import { html_div_code } from "./html_div_code.mjs";
+import { app_code_div_code } from "./app_code_div_code.mjs";
 import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_operator.mjs";
 export function app_code_lesson_operators_minus_generic({
   operator,
@@ -90,7 +90,7 @@ export function app_code_lesson_operators_minus_generic({
       ],
     ]);
     let combined5 = text_combine("invalid", operator);
-    html_div_code(c4, combined5);
+    app_code_div_code(c4, combined5);
   }
   let lesson = app_code_lesson_validity_operator(
     [math_name],

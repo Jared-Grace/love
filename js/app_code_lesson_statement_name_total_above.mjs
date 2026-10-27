@@ -11,7 +11,7 @@ import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_div_code } from "./html_div_code.mjs";
+import { app_code_div_code } from "./app_code_div_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
@@ -54,7 +54,7 @@ export function app_code_lesson_statement_name_total_above(root, context) {
     "):",
   ]);
   let code_total = js_code_let_statement(name_total, names_sum);
-  html_div_code(box_named, code_total);
+  app_code_div_code(box_named, code_total);
   html_div_cycle_code(box_named, [
     "Then we can log out the value of that name (",
     name_total,
@@ -77,10 +77,10 @@ export function app_code_lesson_statement_name_total_above(root, context) {
     total,
   ]);
   html_div_cycle_code(box_same, ["Earlier we wrote:"]);
-  html_div_code(box_same, code_total);
+  app_code_div_code(box_same, code_total);
   html_div_cycle_code(box_same, ["Instead we could have written:"]);
   let code_same = js_code_let_statement(name_total, total);
-  html_div_code(box_same, code_same);
+  app_code_div_code(box_same, code_same);
   html_div_cycle_code(box_same, [
     "And ",
     name_total,

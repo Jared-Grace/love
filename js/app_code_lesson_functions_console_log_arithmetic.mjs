@@ -1,6 +1,6 @@
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
-import { html_div_code } from "./html_div_code.mjs";
+import { app_code_div_code } from "./app_code_div_code.mjs";
 import { each } from "./each.mjs";
 import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_functions_console_log_arithmetic() {
       let e = js_operator_to_expression_only(o, number_next);
       let call = js_code_call_arg(f_name, e);
       let s = js_code_statement(call);
-      html_div_code(c, s);
+      app_code_div_code(c, s);
     }
     each(operators, lambda);
     app_code_container_light_blue_cycle_code(root, [

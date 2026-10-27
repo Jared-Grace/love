@@ -10,7 +10,7 @@ import { app_code_lesson_operators_minus_generic_container_both_sides } from "./
 import { html_span_text } from "./html_span_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_operators_arithmetic } from "./app_code_operators_arithmetic.mjs";
-import { html_div_code } from "./html_div_code.mjs";
+import { app_code_div_code } from "./app_code_div_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -40,7 +40,7 @@ export function app_code_lesson_operators_dot_numbers() {
       " can be used in numbers as a decimal point:",
     ]);
     let first3 = number_pi_truncated_text();
-    html_div_code(c4, first3);
+    app_code_div_code(c4, first3);
     let c = app_code_container_light_blue(root);
     let d = html_div_cycle_code(c, [
       "Besides decimal points, ",
@@ -76,11 +76,11 @@ export function app_code_lesson_operators_dot_numbers() {
     html_div_text(c3, "We cannot have a number on the right:");
     let right = digit_random();
     let first = js_code_binary("invalid", operator, right);
-    html_div_code(c3, first);
+    app_code_div_code(c3, first);
     html_div_text(c3, "And we cannot have a number directly on the left:");
     let left = digit_random();
     let first2 = js_code_binary(left, operator, "invalid");
-    html_div_code(c3, first2);
+    app_code_div_code(c3, first2);
   }
   let lesson = app_code_lesson_validity_operator(
     name_rights,

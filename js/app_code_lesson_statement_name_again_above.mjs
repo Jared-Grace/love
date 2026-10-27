@@ -13,7 +13,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { html_div_code } from "./html_div_code.mjs";
+import { app_code_div_code } from "./app_code_div_code.mjs";
 import { js_code_semicolon } from "./js_code_semicolon.mjs";
 import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
 export function app_code_lesson_statement_name_again_above(root, context) {
@@ -62,14 +62,14 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   let again = js_code_assign_statement(name, quoted_after);
   let logged = js_code_console_log_statement(name);
   html_div_cycle_code(box_code, ["In JS we make the cup like this:"]);
-  html_div_code(box_code, held);
+  app_code_div_code(box_code, held);
   ("THE CUP rather than IT. The line before it is about the cup and the line after it is about a word, so an it standing between them has two things it could be pointing at and the learner has to pick. Naming the cup costs one word and leaves nothing to pick.");
   html_div_cycle_code(box_code, [
     "We do not make the cup again, so we do not write ",
     "let",
     " a second time:",
   ]);
-  html_div_code(box_code, again);
+  app_code_div_code(box_code, again);
   html_div_cycle_code(box_code, [
     "We write out what is in the cup each time we put something in it:",
   ]);

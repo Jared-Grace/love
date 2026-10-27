@@ -14,7 +14,7 @@ import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_div_code } from "./html_div_code.mjs";
+import { app_code_div_code } from "./app_code_div_code.mjs";
 export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the line the screen before this one ended on, a name being given a new value, and then that same line with the new name taken out of it");
@@ -87,7 +87,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
     app_code_lesson_statement_name_total,
     ["we wrote:"],
   );
-  html_div_code(box_itself, code_total);
+  app_code_div_code(box_itself, code_total);
   ("The third name is named in the line that says we do not need it, and the name we already have is named in the line that offers it. Both lines are about which cup is being filled, and a learner reading them without the letters has to look back up at the code to find out which cups are meant - so the letters are put where the sentence needs them, drawn as code because that is what they are everywhere else on this screen.");
   html_div_cycle_code(box_itself, [
     "We do not need a new name (",
@@ -100,7 +100,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
     "):",
   ]);
   let given_sum = js_code_assign_statement(name_first, names_sum);
-  html_div_code(box_itself, given_sum);
+  app_code_div_code(box_itself, given_sum);
   ("the log line closes the box it belongs to. It reads the name that box just filled, so it is the end of that program rather than the start of the next point.");
   html_div_cycle_code(box_itself, [
     "Then we can log out the value of ",
