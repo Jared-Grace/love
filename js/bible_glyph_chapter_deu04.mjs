@@ -607,7 +607,7 @@ export function bible_glyph_chapter_deu04() {
           "any",
           "$bird+pinching_hand",
           "that",
-          "flies",
+          "$bird+doing",
           "in",
           "the",
           "$sky,",
