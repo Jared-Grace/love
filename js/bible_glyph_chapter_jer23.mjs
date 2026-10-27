@@ -341,7 +341,7 @@ export function bible_glyph_chapter_jer23() {
           "all",
           "my",
           "bones",
-          "tremble.",
+          "$bird+nest_with_eggs+doing.",
           "I",
           "have",
           "become",
