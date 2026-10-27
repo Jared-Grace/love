@@ -97,7 +97,7 @@ export function bible_glyph_chapter_1sa01() {
           "$proper_name$Shiloh,",
           "where",
           "$pointing_up+proper_name",
-          "two",
+          "$two",
           "$son,",
           "$proper_name$Hophni",
           "and",
