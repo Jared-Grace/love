@@ -218,7 +218,7 @@ export function bible_glyph_chapter_zep02() {
           "in",
           "the",
           "$sunset,",
-          "for",
+          "$pointing",
           "the",
           "$i_am",
           "their",
