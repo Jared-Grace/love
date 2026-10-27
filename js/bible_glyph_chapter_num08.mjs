@@ -140,7 +140,7 @@ export function bible_glyph_chapter_num08() {
           "to",
           "cleanse",
           "them.",
-          "Sprinkle",
+          "$droplet+hand+doing",
           "them",
           "with",
           "the",
