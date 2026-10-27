@@ -832,7 +832,7 @@ export function bible_glyph_chapter_exo21() {
           "$skull+doing",
           "a",
           "$man_beard",
-          "or",
+          "$shuffle",
           "a",
           "$woman,",
           "then",
