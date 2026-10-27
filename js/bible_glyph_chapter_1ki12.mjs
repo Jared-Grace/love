@@ -609,7 +609,7 @@ export function bible_glyph_chapter_1ki12() {
           "but",
           "all",
           "$wrestling+heart_on_fire",
-          "stoned",
+          "$rock+right_arrow+doing",
           "him",
           "to",
           "$skull+doing.",
