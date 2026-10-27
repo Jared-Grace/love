@@ -299,7 +299,7 @@ export function bible_glyph_chapter_exo39() {
         verse_number: 12,
         words: [
           "The",
-          "third",
+          "$third_place",
           "$straight_ruler+repeat",
           "had",
           "a",
