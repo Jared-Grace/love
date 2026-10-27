@@ -396,7 +396,7 @@ export function bible_glyph_chapter_job42() {
           "and",
           "his",
           "$third_place",
-          "Keren-happuch.",
+          "$horn+eye+black_circle+droplet+proper_name.",
         ],
       },
       {
