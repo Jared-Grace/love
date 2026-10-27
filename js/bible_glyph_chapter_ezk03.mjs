@@ -646,7 +646,7 @@ export function bible_glyph_chapter_ezk03() {
           "you",
           "did",
           "$no_entry",
-          "warn",
+          "$rotating_light+doing",
           "him,",
           "he",
           "will",
