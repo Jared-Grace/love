@@ -371,7 +371,7 @@ export function bible_glyph_chapter_gen22() {
           "$lightbulb",
           "that",
           "you",
-          "fear",
+          "$fear+describing",
           "$heart_on_fire,",
           "since",
           "you",
