@@ -442,7 +442,7 @@ export function bible_glyph_chapter_exo36() {
           "for",
           "the",
           "$tent",
-          "over",
+          "$pointing_up",
           "the",
           "tabernacle,",
           "eleven",
