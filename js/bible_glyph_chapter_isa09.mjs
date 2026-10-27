@@ -70,7 +70,7 @@ export function bible_glyph_chapter_isa09() {
           "have",
           "$eye",
           "a",
-          "great",
+          "$top",
           "$light;",
           "on",
           "those",
