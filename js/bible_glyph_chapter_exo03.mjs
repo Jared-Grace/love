@@ -409,7 +409,7 @@ export function bible_glyph_chapter_exo03() {
           "$kneeling+doing",
           "$heart_on_fire",
           "on",
-          "this",
+          "$flashlight",
           "$mountain.",
         ],
       },
