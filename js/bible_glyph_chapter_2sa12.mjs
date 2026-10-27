@@ -860,7 +860,7 @@ export function bible_glyph_chapter_2sa12() {
           "name",
           "him",
           "$proper_name$Jedidiah,",
-          "because",
+          "$information+toward",
           "$i_am",
           "loved",
           "him.",
