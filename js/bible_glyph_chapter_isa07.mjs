@@ -57,7 +57,7 @@ export function bible_glyph_chapter_isa07() {
           "they",
           "could",
           "$no_entry",
-          "overpower",
+          "$crossed_swords+doing",
           "it.",
         ],
       },
