@@ -497,7 +497,7 @@ export function bible_glyph_chapter_jer07() {
           "you",
           "not",
           "$eye",
-          "what",
+          "$flashlight+question",
           "they",
           "are",
           "$hammer+doing",
