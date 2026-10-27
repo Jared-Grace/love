@@ -254,7 +254,7 @@ export function bible_glyph_chapter_gen21() {
           "Now",
           "this",
           "$speech",
-          "distressed",
+          "$thumbs_down+doing",
           "$father+map",
           "greatly",
           "because",
