@@ -43,7 +43,7 @@ export function bible_glyph_chapter_1ch29() {
           "$top,",
           "because",
           "the",
-          "palace",
+          "$castle+crown",
           "is",
           "$no_entry",
           "for",
