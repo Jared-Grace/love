@@ -52,7 +52,7 @@ export function bible_glyph_chapter_jer17() {
           "their",
           "$altar",
           "and",
-          "Asherah",
+          "$wood+imp",
           "poles",
           "by",
           "the",
