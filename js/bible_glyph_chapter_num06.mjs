@@ -326,7 +326,7 @@ export function bible_glyph_chapter_num06() {
           "atonement",
           "for",
           "him,",
-          "because",
+          "$back+flashlight",
           "he",
           "has",
           "$bow+doing",
