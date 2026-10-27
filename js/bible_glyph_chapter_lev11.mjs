@@ -184,7 +184,7 @@ export function bible_glyph_chapter_lev11() {
           "$no_entry",
           "chew",
           "the",
-          "cud;",
+          "$cow_face+clockwise_arrows+thing;",
           "$pointing_back",
           "is",
           "unclean",
