@@ -1296,7 +1296,7 @@ export function bible_glyph_chapter_deu28() {
           "they",
           "will",
           "$no_entry",
-          "remain",
+          "$link",
           "yours,",
           "because",
           "they",
