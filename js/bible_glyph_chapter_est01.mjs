@@ -531,7 +531,7 @@ export function bible_glyph_chapter_est01() {
           "become",
           "known",
           "to",
-          "all",
+          "$all",
           "$woman,",
           "causing",
           "them",
