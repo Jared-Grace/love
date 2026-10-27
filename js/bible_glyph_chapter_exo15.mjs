@@ -491,7 +491,7 @@ export function bible_glyph_chapter_exo15() {
           "$house+proper_name",
           "$horse",
           "and",
-          "chariots",
+          "$chariot",
           "and",
           "horsemen",
           "$footprints",
