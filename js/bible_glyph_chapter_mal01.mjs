@@ -127,7 +127,7 @@ export function bible_glyph_chapter_mal01() {
           "the",
           "Land",
           "of",
-          "Wickedness,",
+          "$thumbs_down+person+thing,",
           "and",
           "a",
           "$family",
