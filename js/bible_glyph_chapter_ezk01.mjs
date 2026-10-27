@@ -179,7 +179,7 @@ export function bible_glyph_chapter_ezk01() {
       },
       {
         verse_number: 6,
-        words: ["But", "each", "had", "$four", "faces", "and", "$four", "wings."],
+        words: ["But", "each", "had", "$four", "$face", "and", "$four", "wings."],
       },
       {
         verse_number: 7,
