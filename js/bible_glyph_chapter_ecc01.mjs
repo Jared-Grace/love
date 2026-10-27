@@ -409,7 +409,7 @@ export function bible_glyph_chapter_ecc01() {
           "$lightbulb",
           "$wisdom,",
           "and",
-          "madness",
+          "$woozy_face+thing",
           "and",
           "folly;",
           "I",
