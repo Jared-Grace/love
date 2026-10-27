@@ -763,7 +763,7 @@ export function bible_glyph_chapter_exo16() {
           "you",
           "want",
           "to",
-          "bake",
+          "$bread+fire",
           "and",
           "boil",
           "what",
