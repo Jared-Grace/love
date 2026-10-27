@@ -515,7 +515,7 @@ export function bible_glyph_chapter_job19() {
           "$no_entry",
           "as",
           "a",
-          "stranger.",
+          "$alien.",
           "How",
           "my",
           "heart",
