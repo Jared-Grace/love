@@ -1683,7 +1683,7 @@ export function bible_glyph_chapter_lev13() {
           "He",
           "is",
           "to",
-          "burn",
+          "$fire+doing",
           "the",
           "$garment,",
           "weave,",
