@@ -880,7 +880,7 @@ export function bible_glyph_chapter_jer32() {
           "the",
           "$field",
           "with",
-          "silver",
+          "$silver",
           "and",
           "$witness+doing",
           "in",
