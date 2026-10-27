@@ -330,7 +330,7 @@ export function bible_glyph_chapter_gen50() {
           "$pointing_down+proper_name",
           "is",
           "called",
-          "Abel-mizraim.",
+          "$field+herb+clamp+proper_name.",
         ],
       },
       {
