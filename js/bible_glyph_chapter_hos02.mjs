@@ -265,7 +265,7 @@ export function bible_glyph_chapter_hos02() {
           "the",
           "$silver",
           "and",
-          "gold",
+          "$gold",
           "which",
           "they",
           "$hammer+doing",
