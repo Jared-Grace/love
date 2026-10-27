@@ -251,7 +251,7 @@ export function bible_glyph_chapter_deu08() {
           "an",
           "$earth",
           "of",
-          "wheat",
+          "$wheat",
           "and",
           "barley,",
           "of",
