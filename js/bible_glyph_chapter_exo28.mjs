@@ -699,7 +699,7 @@ export function bible_glyph_chapter_exo28() {
           "$house",
           "of",
           "the",
-          "ephod.",
+          "$safety_vest.",
         ],
       },
       {
