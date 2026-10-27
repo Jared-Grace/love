@@ -868,7 +868,7 @@ export function bible_glyph_chapter_num15() {
           "$tray_out",
           "a",
           "$foreigner,",
-          "blasphemes",
+          "$speech+axe+doing",
           "$i_am.",
           "That",
           "$person_other",
