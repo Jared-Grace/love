@@ -92,7 +92,7 @@ export function bible_glyph_chapter_nam01() {
           "is",
           "in",
           "the",
-          "whirlwind",
+          "$tornado+wind",
           "and",
           "storm,",
           "and",
