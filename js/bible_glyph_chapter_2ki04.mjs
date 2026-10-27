@@ -1241,7 +1241,7 @@ export function bible_glyph_chapter_2ki04() {
           "and",
           "$pot_of_food+doing",
           "some",
-          "stew",
+          "$pot_of_food+thing",
           "for",
           "the",
           "$son",
