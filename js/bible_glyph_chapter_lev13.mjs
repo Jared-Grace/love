@@ -1304,7 +1304,7 @@ export function bible_glyph_chapter_lev13() {
           "$woman",
           "has",
           "white",
-          "spots",
+          "$white_circle+round_pushpin",
           "on",
           "the",
           "skin",
