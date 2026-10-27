@@ -901,7 +901,7 @@ export function bible_glyph_chapter_gen41() {
           "wise",
           "$man_beard",
           "and",
-          "set",
+          "$palm_down+round_pushpin+doing",
           "him",
           "over",
           "the",
