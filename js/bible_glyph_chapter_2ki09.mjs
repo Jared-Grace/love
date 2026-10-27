@@ -873,7 +873,7 @@ export function bible_glyph_chapter_2ki09() {
           "$hand",
           "with",
           "the",
-          "bow",
+          "$bow+wood",
           "and",
           "shot",
           "$i_am+up_arrow",
