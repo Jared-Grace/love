@@ -433,7 +433,7 @@ export function bible_glyph_chapter_gen29() {
           "$heart_orange+manner?",
           "$newspaper",
           "me",
-          "what",
+          "$flashlight+question",
           "your",
           "wages",
           "should",
