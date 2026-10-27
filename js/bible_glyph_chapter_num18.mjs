@@ -1132,7 +1132,7 @@ export function bible_glyph_chapter_num18() {
           "you",
           "must",
           "$no_entry",
-          "defile",
+          "$sewing_needle",
           "the",
           "$sparkle+thing",
           "offerings",
