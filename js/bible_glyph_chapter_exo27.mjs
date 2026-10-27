@@ -415,7 +415,7 @@ export function bible_glyph_chapter_exo27() {
           "shall",
           "have",
           "four",
-          "posts",
+          "$candle",
           "and",
           "four",
           "bases.",
