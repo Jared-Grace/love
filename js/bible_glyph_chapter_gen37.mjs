@@ -86,7 +86,7 @@ export function bible_glyph_chapter_gen37() {
           "his",
           "other",
           "$son,",
-          "because",
+          "$pointing",
           "$i_am+plus",
           "had",
           "been",
