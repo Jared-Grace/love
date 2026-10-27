@@ -410,7 +410,7 @@ export function bible_glyph_chapter_num21() {
       {
         verse_number: 14,
         words: [
-          "Therefore",
+          "$pointing_up",
           "it",
           "is",
           "$speech",
