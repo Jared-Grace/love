@@ -381,7 +381,7 @@ export function bible_glyph_chapter_hab02() {
           "Is",
           "it",
           "$no_entry",
-          "indeed",
+          "$exclamation",
           "from",
           "the",
           "$i_am",
