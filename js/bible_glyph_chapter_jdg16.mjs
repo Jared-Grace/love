@@ -254,7 +254,7 @@ export function bible_glyph_chapter_jdg16() {
           "up",
           "with",
           "$seven",
-          "fresh",
+          "$new_button+describing",
           "$takeout_box",
           "that",
           "have",
