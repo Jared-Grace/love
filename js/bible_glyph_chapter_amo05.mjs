@@ -293,7 +293,7 @@ export function bible_glyph_chapter_amo05() {
       {
         verse_number: 11,
         words: [
-          "Therefore,",
+          "$right_arrow,",
           "because",
           "you",
           "trample",
