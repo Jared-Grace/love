@@ -187,7 +187,7 @@ export function bible_glyph_chapter_deu19() {
           "may",
           "$running+dashing_away",
           "to",
-          "one",
+          "$one",
           "of",
           "these",
           "$city$s",
