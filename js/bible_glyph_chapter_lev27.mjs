@@ -215,7 +215,7 @@ export function bible_glyph_chapter_lev27() {
           "to",
           "pay",
           "the",
-          "valuation,",
+          "$receipt,",
           "he",
           "is",
           "to",
