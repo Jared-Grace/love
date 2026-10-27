@@ -381,7 +381,7 @@ export function bible_glyph_chapter_deu14() {
         words: [
           "$all",
           "flying",
-          "insects",
+          "$lizard+crowd",
           "are",
           "unclean",
           "for",
