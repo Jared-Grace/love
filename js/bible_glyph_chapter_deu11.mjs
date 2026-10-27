@@ -530,7 +530,7 @@ export function bible_glyph_chapter_deu11() {
           "aside,",
           "to",
           "$kneeling+doing",
-          "other",
+          "$plus+one",
           "$moai",
           "and",
           "to",
