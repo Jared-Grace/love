@@ -47,7 +47,7 @@ export function bible_glyph_chapter_exo32() {
           "for",
           "this",
           "$fishing_pole+proper_name",
-          "who",
+          "$back+flashlight",
           "brought",
           "us",
           "up",
