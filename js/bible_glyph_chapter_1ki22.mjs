@@ -912,7 +912,7 @@ export function bible_glyph_chapter_1ki22() {
           "But",
           "Micaiah",
           "$speech,",
-          "If",
+          "$traffic_light",
           "you",
           "ever",
           "$turn_back",
