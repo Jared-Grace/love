@@ -290,7 +290,7 @@ export function bible_glyph_chapter_lev22() {
         verse_number: 10,
         words: [
           "$no_entry",
-          "one",
+          "$all",
           "outside",
           "the",
           "family",
