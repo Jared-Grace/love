@@ -125,7 +125,7 @@ export function bible_glyph_chapter_num06() {
           "$sun",
           "of",
           "his",
-          "vow",
+          "$saluting_face",
           "of",
           "separation,",
           "$no_entry",
