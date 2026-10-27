@@ -609,7 +609,7 @@ export function bible_glyph_chapter_1sa01() {
           "of",
           "$sun",
           "$proper_name$Hannah",
-          "conceived",
+          "$pregnant_woman+doing",
           "and",
           "gave",
           "birth",
