@@ -174,7 +174,7 @@ export function bible_glyph_chapter_dan12() {
           "$plus+one",
           "$person+round_pushpin",
           "there,",
-          "one",
+          "$one",
           "on",
           "this",
           "bank",
