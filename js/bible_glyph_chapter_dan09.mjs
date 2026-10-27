@@ -619,7 +619,7 @@ export function bible_glyph_chapter_dan09() {
           "$face",
           "to",
           "shine",
-          "upon",
+          "$pointing_up",
           "Your",
           "desolate",
           "sanctuary.",
