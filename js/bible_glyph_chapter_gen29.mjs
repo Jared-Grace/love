@@ -927,7 +927,7 @@ export function bible_glyph_chapter_gen29() {
         words: [
           "And",
           "once",
-          "more",
+          "$repeat",
           "she",
           "conceived",
           "and",
