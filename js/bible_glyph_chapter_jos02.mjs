@@ -253,7 +253,7 @@ export function bible_glyph_chapter_jos02() {
       {
         verse_number: 8,
         words: [
-          "Before",
+          "$clock+back",
           "the",
           "spies",
           "lay",
