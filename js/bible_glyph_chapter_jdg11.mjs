@@ -854,7 +854,7 @@ export function bible_glyph_chapter_jdg11() {
           "$three",
           "$input_numbers+all",
           "$year.",
-          "Why",
+          "$flashlight+question+lightbulb",
           "did",
           "you",
           "$no_entry",
