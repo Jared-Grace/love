@@ -27,7 +27,7 @@ export function bible_glyph_chapter_exo13() {
           "The",
           "first",
           "from",
-          "every",
+          "$all",
           "womb",
           "among",
           "the",
