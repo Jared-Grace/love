@@ -428,7 +428,7 @@ export function bible_glyph_chapter_gen26() {
           "$all",
           "the",
           "$well",
-          "that",
+          "$back+flashlight",
           "the",
           "$kneeling",
           "of",
