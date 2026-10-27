@@ -192,7 +192,7 @@ export function bible_glyph_chapter_2sa12() {
           "he",
           "has",
           "$hammer+doing",
-          "this",
+          "$flashlight",
           "$speech",
           "and",
           "has",
