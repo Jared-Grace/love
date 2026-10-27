@@ -708,7 +708,7 @@ export function bible_glyph_chapter_num19() {
           "from",
           "the",
           "$church,",
-          "because",
+          "$pointing",
           "he",
           "has",
           "defiled",
