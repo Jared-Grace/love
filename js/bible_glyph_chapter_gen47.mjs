@@ -902,7 +902,7 @@ export function bible_glyph_chapter_gen47() {
           "of",
           "$clamp+proper_name",
           "to",
-          "this",
+          "$flashlight",
           "$sun,",
           "that",
           "a",
