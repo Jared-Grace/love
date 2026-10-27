@@ -421,7 +421,7 @@ export function bible_glyph_chapter_exo39() {
           "the",
           "$two",
           "$gold",
-          "chains",
+          "$thread+repeat",
           "to",
           "the",
           "$two",
