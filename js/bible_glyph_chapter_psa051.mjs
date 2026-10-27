@@ -175,7 +175,7 @@ export function bible_glyph_chapter_psa051() {
           "will",
           "be",
           "$soap+doing;",
-          "wash",
+          "$bubbles+t_shirt+doing",
           "me,",
           "and",
           "I",
