@@ -2118,7 +2118,7 @@ export function bible_glyph_chapter_1ki08() {
           "let",
           "your",
           "$heart_organ",
-          "be",
+          "$link",
           "fully",
           "devoted",
           "to",
