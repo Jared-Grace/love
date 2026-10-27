@@ -136,7 +136,7 @@ export function bible_glyph_chapter_gen33() {
           "and",
           "he",
           "$speech,",
-          "Who",
+          "$person+question",
           "are",
           "these",
           "with",
