@@ -172,7 +172,7 @@ export function bible_glyph_chapter_zep01() {
           "to",
           "worship",
           "the",
-          "host",
+          "$military_helmet",
           "of",
           "$sky,",
           "those",
