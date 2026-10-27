@@ -430,7 +430,7 @@ export function bible_glyph_chapter_gen40() {
           "which",
           "they",
           "should",
-          "put",
+          "$palm_down",
           "me",
           "in",
           "this",
