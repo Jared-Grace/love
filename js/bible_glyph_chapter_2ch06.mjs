@@ -403,7 +403,7 @@ export function bible_glyph_chapter_2ch06() {
           "$up_down_arrow,",
           "$five",
           "$triangular_ruler",
-          "wide",
+          "$arrow_both_ways",
           "and",
           "three",
           "$triangular_ruler",
