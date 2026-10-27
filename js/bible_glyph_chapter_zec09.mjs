@@ -86,7 +86,7 @@ export function bible_glyph_chapter_zec09() {
           "has",
           "heaped",
           "up",
-          "silver",
+          "$silver",
           "like",
           "dust",
           "and",
