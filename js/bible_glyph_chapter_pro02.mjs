@@ -309,7 +309,7 @@ export function bible_glyph_chapter_pro02() {
           "partner",
           "of",
           "her",
-          "youth",
+          "$child+flexed_biceps+thing",
           "and",
           "forgets",
           "the",
