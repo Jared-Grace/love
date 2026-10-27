@@ -918,7 +918,7 @@ export function bible_glyph_chapter_gen27() {
           '"$person+question',
           "are",
           "$you",
-          '"I',
+          '"$me',
           "am",
           "$proper_name$Esau,",
           "your",
