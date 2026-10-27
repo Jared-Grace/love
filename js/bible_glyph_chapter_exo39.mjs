@@ -325,7 +325,7 @@ export function bible_glyph_chapter_exo39() {
           "$gem_stone+stone,",
           "and",
           "a",
-          "jasper.",
+          "$gem_stone+sparkles.",
           "They",
           "were",
           "mounted",
