@@ -264,7 +264,7 @@ export function bible_glyph_chapter_job31() {
           "my",
           "$kneeling",
           "or",
-          "maidservant",
+          "$broom",
           "when",
           "they",
           "made",
