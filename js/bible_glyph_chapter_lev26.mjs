@@ -467,7 +467,7 @@ export function bible_glyph_chapter_lev26() {
           "wasting",
           "disease",
           "and",
-          "fever",
+          "$thermometer_face+fire",
           "that",
           "will",
           "waste",
