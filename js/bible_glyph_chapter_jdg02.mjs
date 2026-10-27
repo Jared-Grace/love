@@ -204,7 +204,7 @@ export function bible_glyph_chapter_jdg02() {
           "to",
           "his",
           "own",
-          "inheritance,",
+          "$inheritance,",
           "to",
           "take",
           "possession",
