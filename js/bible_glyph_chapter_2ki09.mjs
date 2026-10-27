@@ -1090,7 +1090,7 @@ export function bible_glyph_chapter_2ki09() {
           "$proper_name$Ahaziah",
           "had",
           "$castle+doing",
-          "over",
+          "$pointing_up",
           "$hands_raised+proper_name.",
         ],
       },
