@@ -332,7 +332,7 @@ export function bible_glyph_chapter_1sa03() {
           "$speech",
           "to",
           "$ear+heart_on_fire,",
-          "I",
+          "$me",
           "am",
           "about",
           "to",
