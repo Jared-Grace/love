@@ -84,7 +84,7 @@ export function bible_glyph_chapter_gen45() {
           "Is",
           "my",
           "$father",
-          "still",
+          "$repeat",
           "$sprout?",
           "But",
           "they",
