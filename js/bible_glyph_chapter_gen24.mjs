@@ -215,7 +215,7 @@ export function bible_glyph_chapter_gen24() {
           "I",
           "will",
           "$hands_giving",
-          "this",
+          "$flashlight",
           "$earth,",
           "He",
           "will",
