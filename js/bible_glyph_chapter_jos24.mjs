@@ -812,7 +812,7 @@ export function bible_glyph_chapter_jos24() {
           "the",
           "$family",
           "$speech",
-          "to",
+          "$toward",
           "$i_am+rescue,",
           "We",
           "will",
