@@ -332,7 +332,7 @@ export function bible_glyph_chapter_exo37() {
           "corners",
           "at",
           "its",
-          "four",
+          "$four",
           "$foot.",
         ],
       },
