@@ -376,7 +376,7 @@ export function bible_glyph_chapter_jdg06() {
           "mighty",
           "man",
           "of",
-          "valor.",
+          "$raised_fist.",
         ],
       },
       {
