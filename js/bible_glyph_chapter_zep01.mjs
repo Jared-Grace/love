@@ -396,7 +396,7 @@ export function bible_glyph_chapter_zep01() {
           "do",
           "$no_entry,",
           "either",
-          "good",
+          "$thumbs_up+doing",
           "or",
           "bad.",
         ],
