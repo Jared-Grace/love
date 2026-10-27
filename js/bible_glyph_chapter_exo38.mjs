@@ -652,7 +652,7 @@ export function bible_glyph_chapter_exo38() {
           "$link",
           "twenty",
           "nine",
-          "talents",
+          "$flying_disc",
           "and",
           "seven",
           "hundred",
