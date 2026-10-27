@@ -352,7 +352,7 @@ export function bible_glyph_chapter_isa58() {
           "am.",
           "$traffic_light",
           "you",
-          "remove",
+          "$away+doing",
           "the",
           "yoke",
           "from",
