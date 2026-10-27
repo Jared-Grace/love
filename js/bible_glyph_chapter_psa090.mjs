@@ -114,7 +114,7 @@ export function bible_glyph_chapter_psa090() {
           "like",
           "the",
           "new",
-          "grass",
+          "$herb+thing",
           "of",
           "the",
           "$morning",
