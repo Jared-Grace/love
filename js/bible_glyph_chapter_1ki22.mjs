@@ -1578,7 +1578,7 @@ export function bible_glyph_chapter_1ki22() {
           "And",
           "$i_am+scales",
           "$bed+doing",
-          "with",
+          "$linked_paperclips",
           "his",
           "$father",
           "and",
