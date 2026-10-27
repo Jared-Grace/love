@@ -810,7 +810,7 @@ export function bible_glyph_chapter_deu31() {
           "this",
           "$sun,",
           "even",
-          "before",
+          "$clock+back",
           "I",
           "$footprints",
           "them",
