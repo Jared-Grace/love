@@ -1277,7 +1277,7 @@ export function bible_glyph_chapter_num22() {
         words: [
           "$proper_name$Balak",
           "$sacrifice",
-          "cattle",
+          "$cow_face",
           "and",
           "$sheep,",
           "and",
