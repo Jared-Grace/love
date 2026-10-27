@@ -851,7 +851,7 @@ export function bible_glyph_chapter_jdg16() {
           "and",
           "forced",
           "to",
-          "grind",
+          "$flour+stone+doing",
           "grain",
           "in",
           "the",
