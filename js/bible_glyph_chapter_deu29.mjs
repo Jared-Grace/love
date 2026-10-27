@@ -252,7 +252,7 @@ export function bible_glyph_chapter_deu29() {
           "of",
           "$flashlight",
           "$covenant,",
-          "that",
+          "$right_arrow+toward",
           "you",
           "may",
           "prosper",
