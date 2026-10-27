@@ -863,7 +863,7 @@ export function bible_glyph_chapter_exo30() {
           "$man_beard",
           "$back+flashlight",
           "mixes",
-          "perfume",
+          "$lotion_bottle+bouquet+doing",
           "like",
           "it,",
           "or",
