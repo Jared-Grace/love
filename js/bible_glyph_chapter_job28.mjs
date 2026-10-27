@@ -509,7 +509,7 @@ export function bible_glyph_chapter_job28() {
       {
         verse_number: 27,
         words: [
-          "then",
+          "$telescope+clock",
           "He",
           "$eye",
           "wisdom",
