@@ -208,7 +208,7 @@ export function bible_glyph_chapter_exo26() {
           "be",
           "thirty",
           "cubits",
-          "long",
+          "$up_down_arrow",
           "and",
           "four",
           "cubits",
