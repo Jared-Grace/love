@@ -270,7 +270,7 @@ export function bible_glyph_chapter_exo31() {
           "according",
           "to",
           "all",
-          "that",
+          "$back+flashlight",
           "I",
           "have",
           "commanded",
