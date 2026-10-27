@@ -176,7 +176,7 @@ export function bible_glyph_chapter_mic05() {
           "our",
           "$earth",
           "and",
-          "tramples",
+          "$hiking_boot",
           "our",
           "citadels.",
           "We",
