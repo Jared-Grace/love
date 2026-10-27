@@ -100,7 +100,7 @@ export function bible_glyph_chapter_2sa06() {
           "was",
           "on",
           "the",
-          "hill.",
+          "$mountain+pinching_hand.",
           "$proper_name$Uzzah",
           "and",
           "$proper_name$Ahio,",
