@@ -894,7 +894,7 @@ export function bible_glyph_chapter_jer23() {
           "I",
           "had",
           "a",
-          "dream.",
+          "$dream+doing.",
         ],
       },
       {
