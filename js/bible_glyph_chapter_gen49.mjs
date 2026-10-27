@@ -162,7 +162,7 @@ export function bible_glyph_chapter_gen49() {
           "$speech+thumbs_down",
           "be",
           "their",
-          "anger,",
+          "$nose+fire,",
           "for",
           "it",
           "is",
