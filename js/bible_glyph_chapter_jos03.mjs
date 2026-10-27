@@ -339,7 +339,7 @@ export function bible_glyph_chapter_jos03() {
       {
         verse_number: 11,
         words: [
-          "Behold,",
+          "$exclamation,",
           "the",
           "ark",
           "of",
