@@ -1130,7 +1130,7 @@ export function bible_glyph_chapter_1ki22() {
         verse_number: 35,
         words: [
           "The",
-          "battle",
+          "$crossed_swords",
           "$walking+pointing_up",
           "throughout",
           "that",
