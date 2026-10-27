@@ -1098,7 +1098,7 @@ export function bible_glyph_chapter_jer29() {
           "he",
           "has",
           "$mouth",
-          "rebellion",
+          "$away+thing",
           "against",
           "the",
           "$i_am.",
