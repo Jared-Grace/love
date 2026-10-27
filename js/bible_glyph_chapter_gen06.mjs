@@ -539,7 +539,7 @@ export function bible_glyph_chapter_gen06() {
           "$footprints",
           "into",
           "the",
-          "ark",
+          "$package",
           "$two",
           "of",
           "every",
