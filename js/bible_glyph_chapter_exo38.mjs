@@ -278,7 +278,7 @@ export function bible_glyph_chapter_exo38() {
           "cubits",
           "long,",
           "with",
-          "twenty",
+          "$two+zero",
           "posts",
           "and",
           "twenty",
