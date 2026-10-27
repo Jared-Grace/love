@@ -381,7 +381,7 @@ export function bible_glyph_chapter_deu07() {
           "and",
           "the",
           "$scales+thing",
-          "that",
+          "$back+flashlight",
           "I",
           "am",
           "giving",
