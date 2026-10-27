@@ -1080,7 +1080,7 @@ export function bible_glyph_chapter_gen30() {
           "and",
           "all",
           "the",
-          "dark",
+          "$brown_square+describing",
           "in",
           "the",
           "$sheep",
