@@ -473,7 +473,7 @@ export function bible_glyph_chapter_exo17() {
         words: [
           "And",
           "$fishing_pole+proper_name",
-          "built",
+          "$brick",
           "an",
           "$altar",
           "and",
