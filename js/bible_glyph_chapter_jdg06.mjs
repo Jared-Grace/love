@@ -881,7 +881,7 @@ export function bible_glyph_chapter_jdg06() {
           "$shield+house.",
           "$hand_receiving",
           "the",
-          "second",
+          "$second_place",
           "$bull",
           "and",
           "offer",
