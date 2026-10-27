@@ -402,7 +402,7 @@ export function bible_glyph_chapter_1sa24() {
           "I",
           "did",
           "$no_entry",
-          "kill",
+          "$fist+skull",
           "you.",
           "$lightbulb",
           "and",
