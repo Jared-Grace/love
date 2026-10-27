@@ -647,7 +647,7 @@ export function bible_glyph_chapter_2ch07() {
           "you",
           "$turn_back",
           "and",
-          "forsake",
+          "$derelict_house+doing",
           "the",
           "statutes",
           "and",
