@@ -93,7 +93,7 @@ export function bible_glyph_chapter_ezk37() {
           "$person,",
           "can",
           "these",
-          "bones",
+          "$bone",
           "$sprout+doing?",
           "O",
           "$crown",
