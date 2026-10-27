@@ -66,7 +66,7 @@ export function bible_glyph_chapter_zec09() {
           "$proper_name$Tyre",
           "and",
           "$proper_name$Sidon,",
-          "though",
+          "$pointing",
           "they",
           "are",
           "very",
