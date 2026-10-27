@@ -180,7 +180,7 @@ export function bible_glyph_chapter_est01() {
           "$purple_circle",
           "material",
           "to",
-          "silver",
+          "$silver",
           "$ring+door",
           "on",
           "the",
