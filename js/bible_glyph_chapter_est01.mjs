@@ -332,7 +332,7 @@ export function bible_glyph_chapter_est01() {
           "wearing",
           "her",
           "royal",
-          "crown,",
+          "$crown+ring,",
           "to",
           "$eye",
           "her",
