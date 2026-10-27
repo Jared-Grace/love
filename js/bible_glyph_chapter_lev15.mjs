@@ -1036,7 +1036,7 @@ export function bible_glyph_chapter_lev15() {
           "lies",
           "$linked_paperclips",
           "an",
-          "unclean",
+          "$soap+no_entry",
           "woman.",
         ],
       },
