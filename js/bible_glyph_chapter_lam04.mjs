@@ -538,7 +538,7 @@ export function bible_glyph_chapter_lam04() {
           "out,",
           "for",
           "our",
-          "end",
+          "$stop_sign",
           "had",
           "$footprints.",
         ],
