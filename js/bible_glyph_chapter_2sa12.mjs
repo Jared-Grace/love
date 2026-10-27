@@ -916,7 +916,7 @@ export function bible_glyph_chapter_2sa12() {
         words: [
           "$watch,",
           "therefore,",
-          "assemble",
+          "$crowd+doing",
           "the",
           "rest",
           "of",
