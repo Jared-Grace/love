@@ -654,7 +654,7 @@ export function bible_glyph_chapter_deu15() {
           "are",
           "you",
           "to",
-          "shear",
+          "$scissors+sheep+doing",
           "the",
           "$first_place+baby",
           "of",
