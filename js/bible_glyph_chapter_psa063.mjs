@@ -251,7 +251,7 @@ export function bible_glyph_chapter_psa063() {
           "$heart_on_fire;",
           "$all",
           "who",
-          "swear",
+          "$raised_back_of_hand+doing",
           "by",
           "Him",
           "will",
