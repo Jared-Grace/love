@@ -133,7 +133,7 @@ export function bible_glyph_chapter_neh01() {
           "mourned",
           "for",
           "$sun,",
-          "fasting",
+          "$eating+locked+doing",
           "and",
           "$hands_praying",
           "before",
