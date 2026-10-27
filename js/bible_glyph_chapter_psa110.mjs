@@ -79,7 +79,7 @@ export function bible_glyph_chapter_psa110() {
           "$crown+sparkles,",
           "from",
           "the",
-          "womb",
+          "$hugging_face+baby",
           "of",
           "the",
           "dawn,",
