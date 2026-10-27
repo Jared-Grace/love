@@ -153,7 +153,7 @@ export function bible_glyph_chapter_num22() {
           "his",
           "$family,",
           "$speech,",
-          "Behold,",
+          "$exclamation,",
           "a",
           "$family",
           "has",
