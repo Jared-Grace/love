@@ -176,7 +176,7 @@ export function bible_glyph_chapter_gen21() {
           "So",
           "the",
           "$child",
-          "grew",
+          "$top+doing",
           "and",
           "was",
           "weaned,",
