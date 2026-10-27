@@ -245,7 +245,7 @@ export function bible_glyph_chapter_1sa24() {
           "to",
           "rise",
           "up",
-          "against",
+          "$toward",
           "$proper_name$Saul.",
           "Then",
           "$proper_name$Saul",
