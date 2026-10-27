@@ -199,7 +199,7 @@ export function bible_glyph_chapter_hab02() {
           "and",
           "derision,",
           "$speech:",
-          "Woe",
+          "$weary_face",
           "to",
           "him",
           "who",
