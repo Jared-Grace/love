@@ -727,7 +727,7 @@ export function bible_glyph_chapter_gen44() {
           "buy",
           "us",
           "some",
-          "food.",
+          "$eating+thing.",
         ],
       },
       {
