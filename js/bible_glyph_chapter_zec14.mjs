@@ -168,7 +168,7 @@ export function bible_glyph_chapter_zec14() {
           "of",
           "My",
           "$mountain,",
-          "for",
+          "$pointing",
           "it",
           "will",
           "extend",
