@@ -256,7 +256,7 @@ export function bible_glyph_chapter_isa11() {
           "$hole+snake",
           "of",
           "the",
-          "cobra,",
+          "$snake+curly_loop,",
           "and",
           "the",
           "toddler",
