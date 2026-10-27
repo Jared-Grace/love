@@ -677,7 +677,7 @@ export function bible_glyph_chapter_exo35() {
           "mount",
           "on",
           "the",
-          "ephod",
+          "$safety_vest",
           "and",
           "breastpiece,",
         ],
