@@ -150,7 +150,7 @@ export function bible_glyph_chapter_isa35() {
         words: [
           "$telescope+clock",
           "the",
-          "lame",
+          "$manual_wheelchair",
           "will",
           "$leg+up_arrow+up_arrow+doing",
           "like",
