@@ -172,7 +172,7 @@ export function bible_glyph_chapter_exo24() {
           "sacrificed",
           "$bull",
           "as",
-          "peace",
+          "$peace+gift",
           "$sacrifice",
           "to",
           "$i_am.",
