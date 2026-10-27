@@ -1316,7 +1316,7 @@ export function bible_glyph_chapter_1ki20() {
           "companion,",
           "$fist",
           "me,",
-          "please.",
+          "$pleading.",
           "But",
           "the",
           "$man_beard",
