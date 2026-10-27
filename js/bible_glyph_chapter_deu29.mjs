@@ -743,7 +743,7 @@ export function bible_glyph_chapter_deu29() {
           "$back+flashlight",
           "the",
           "$i_am",
-          "overthrew",
+          "$upside_down_face",
           "in",
           "His",
           "fierce",
