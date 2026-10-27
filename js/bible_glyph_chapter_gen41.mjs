@@ -1046,7 +1046,7 @@ export function bible_glyph_chapter_gen41() {
           "$magnifying_glass+exclamation",
           "anyone",
           "like",
-          "this",
+          "$flashlight",
           "$man_beard,",
           "in",
           "whom",
