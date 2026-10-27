@@ -137,7 +137,7 @@ export function bible_glyph_chapter_lam01() {
           "her",
           "$alarm_clock",
           "feasts.",
-          "All",
+          "$all",
           "her",
           "gates",
           "are",
