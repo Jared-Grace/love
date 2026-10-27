@@ -886,7 +886,7 @@ export function bible_glyph_chapter_num21() {
           "far",
           "as",
           "$proper_name$Nophah,",
-          "which",
+          "$back+flashlight",
           "reaches",
           "to",
           "$proper_name$Medeba.",
