@@ -609,7 +609,7 @@ export function bible_glyph_chapter_ezk03() {
           "his",
           "iniquity,",
           "but",
-          "you",
+          "$you",
           "will",
           "have",
           "saved",
