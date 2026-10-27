@@ -28,7 +28,7 @@ export function bible_glyph_chapter_job42() {
           "and",
           "that",
           "$no_entry",
-          "plan",
+          "$thinking+map+thing",
           "$tray_out",
           "Yours",
           "can",
