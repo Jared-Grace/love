@@ -656,7 +656,7 @@ export function bible_glyph_chapter_jos24() {
           "the",
           "$i_am,",
           "$pointing",
-          "He",
+          "$pointing_back",
           "is",
           "our",
           "$heart_on_fire.",
