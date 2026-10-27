@@ -670,7 +670,7 @@ export function bible_glyph_chapter_exo06() {
           "the",
           "$son",
           "of",
-          "Aaron",
+          "$white_cane+blossom+proper_name",
           "$hand_receiving",
           "one",
           "of",
