@@ -133,7 +133,7 @@ export function bible_glyph_chapter_psa032() {
           "of",
           "my",
           "$bow.",
-          "Selah",
+          "$pause_button",
         ],
       },
       {
