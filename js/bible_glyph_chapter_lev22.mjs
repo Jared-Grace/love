@@ -538,7 +538,7 @@ export function bible_glyph_chapter_lev22() {
           "among",
           "them,",
           "$back+flashlight",
-          "presents",
+          "$magnet+doing",
           "a",
           "gift,",
           "whether",
