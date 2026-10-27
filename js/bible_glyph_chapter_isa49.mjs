@@ -595,7 +595,7 @@ export function bible_glyph_chapter_isa49() {
           "$around.",
           "They",
           "all",
-          "gather",
+          "$tray_in+doing",
           "together;",
           "they",
           "$footprints",
