@@ -517,7 +517,7 @@ export function bible_glyph_chapter_1sa24() {
           "May",
           "the",
           "$i_am",
-          "be",
+          "$link",
           "our",
           "judge",
           "and",
