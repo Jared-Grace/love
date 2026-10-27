@@ -128,7 +128,7 @@ export function bible_glyph_chapter_zec04() {
           "$no_entry",
           "$lightbulb",
           "$flashlight+question",
-          "they",
+          "$pointing_back",
           "are?",
           "I",
           "answered,",
