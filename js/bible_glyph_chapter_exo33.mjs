@@ -20,7 +20,7 @@ export function bible_glyph_chapter_exo33() {
           "to",
           "$fishing_pole+proper_name,",
           "$walking",
-          "this",
+          "$flashlight",
           "place,",
           "you",
           "and",
