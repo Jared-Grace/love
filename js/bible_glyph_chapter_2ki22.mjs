@@ -300,7 +300,7 @@ export function bible_glyph_chapter_2ki22() {
           "the",
           "$abacus",
           "$footprints",
-          "to",
+          "$toward",
           "the",
           "$king",
           "and",
