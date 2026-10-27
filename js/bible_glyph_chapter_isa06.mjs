@@ -217,7 +217,7 @@ export function bible_glyph_chapter_isa06() {
           "your",
           "$kiss_mark,",
           "your",
-          "iniquity",
+          "$cyclone",
           "is",
           "removed",
           "and",
