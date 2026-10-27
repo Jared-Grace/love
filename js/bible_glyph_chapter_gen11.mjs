@@ -291,7 +291,7 @@ export function bible_glyph_chapter_gen11() {
           "years,",
           "two",
           "years",
-          "after",
+          "$next_track",
           "the",
           "flood,",
           "he",
