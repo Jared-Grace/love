@@ -309,7 +309,7 @@ export function bible_glyph_chapter_exo07() {
           "magicians",
           "of",
           "$clamp+proper_name",
-          "also",
+          "$plus",
           "$hammer+doing",
           "the",
           "same",
