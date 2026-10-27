@@ -169,7 +169,7 @@ export function bible_glyph_chapter_gen06() {
           "And",
           "the",
           "$i_am",
-          "regretted",
+          "$hug+doing",
           "that",
           "He",
           "had",
