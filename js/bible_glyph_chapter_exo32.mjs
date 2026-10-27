@@ -38,7 +38,7 @@ export function bible_glyph_chapter_exo32() {
           "$hammer+doing",
           "us",
           "$moai",
-          "who",
+          "$back+flashlight",
           "will",
           "$walking",
           "before",
