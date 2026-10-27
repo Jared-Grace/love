@@ -659,7 +659,7 @@ export function bible_glyph_chapter_neh09() {
       {
         verse_number: 19,
         words: [
-          "You",
+          "$you",
           "in",
           "Your",
           "great",
