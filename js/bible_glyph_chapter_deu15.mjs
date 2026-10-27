@@ -629,7 +629,7 @@ export function bible_glyph_chapter_deu15() {
           "$i_am",
           "your",
           "$heart_on_fire",
-          "every",
+          "$all",
           "firstborn",
           "male",
           "$baby",
