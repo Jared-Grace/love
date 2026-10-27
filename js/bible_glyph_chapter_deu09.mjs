@@ -102,7 +102,7 @@ export function bible_glyph_chapter_deu09() {
           "$bomb",
           "them",
           "and",
-          "subdue",
+          "$down_arrow+person+doing",
           "them",
           "before",
           "you,",
