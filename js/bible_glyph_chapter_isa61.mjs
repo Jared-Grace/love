@@ -68,7 +68,7 @@ export function bible_glyph_chapter_isa61() {
           "of",
           "the",
           "$i_am",
-          "favor",
+          "$smiling_face_with_smiling_eyes",
           "and",
           "the",
           "$sun",
