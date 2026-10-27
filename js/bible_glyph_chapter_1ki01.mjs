@@ -1263,7 +1263,7 @@ export function bible_glyph_chapter_1ki01() {
       {
         verse_number: 40,
         words: [
-          "All",
+          "$all",
           "the",
           "$family",
           "followed",
