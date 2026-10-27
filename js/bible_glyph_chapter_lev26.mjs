@@ -896,7 +896,7 @@ export function bible_glyph_chapter_lev26() {
           "your",
           "lifeless",
           "bodies",
-          "on",
+          "$pointing_up",
           "the",
           "lifeless",
           "remains",
