@@ -110,7 +110,7 @@ export function bible_glyph_chapter_psa095() {
           "and",
           "His",
           "$hand",
-          "formed",
+          "$artist",
           "the",
           "dry",
           "land.",
