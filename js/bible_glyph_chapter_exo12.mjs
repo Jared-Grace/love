@@ -1508,7 +1508,7 @@ export function bible_glyph_chapter_exo12() {
           "must",
           "be",
           "circumcised;",
-          "then",
+          "$telescope+clock",
           "he",
           "may",
           "come",
