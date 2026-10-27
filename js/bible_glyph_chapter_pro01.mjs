@@ -470,7 +470,7 @@ export function bible_glyph_chapter_pro01() {
           "you",
           "refused",
           "my",
-          "call,",
+          "$waving_hand,",
           "and",
           "no",
           "one",
