@@ -364,7 +364,7 @@ export function bible_glyph_chapter_lev05() {
           "it",
           "$no_entry",
           "$hands_giving",
-          "frankincense",
+          "$white_circle+incense",
           "on",
           "it,",
           "because",
