@@ -286,7 +286,7 @@ export function bible_glyph_chapter_jdg16() {
           "$seven",
           "$new_button+describing",
           "$takeout_box",
-          "that",
+          "$back+flashlight",
           "had",
           "$no_entry",
           "been",
