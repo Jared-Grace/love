@@ -787,7 +787,7 @@ export function bible_glyph_chapter_gen25() {
           "$walking,",
           "and",
           "he",
-          "despised",
+          "$unamused_face+doing",
           "his",
           "birthright.",
         ],
