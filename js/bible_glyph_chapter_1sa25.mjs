@@ -402,7 +402,7 @@ export function bible_glyph_chapter_1sa25() {
           "reported",
           "to",
           "him",
-          "all",
+          "$all",
           "these",
           "$speech.",
         ],
