@@ -193,7 +193,7 @@ export function bible_glyph_chapter_exo10() {
           "$ice,",
           "and",
           "eat",
-          "every",
+          "$all",
           "$tree",
           "that",
           "grows",
