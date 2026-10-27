@@ -846,7 +846,7 @@ export function bible_glyph_chapter_ezk03() {
           "make",
           "your",
           "$tongue",
-          "stick",
+          "$paperclip",
           "to",
           "the",
           "roof",
