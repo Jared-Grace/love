@@ -258,7 +258,7 @@ export function bible_glyph_chapter_psa090() {
       {
         verse_number: 12,
         words: [
-          "So",
+          "$right_arrow",
           "$lightbulb",
           "us",
           "to",
