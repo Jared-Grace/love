@@ -1102,7 +1102,7 @@ export function bible_glyph_chapter_1ki18() {
           "water",
           "on",
           "the",
-          "offering",
+          "$burnt_offering",
           "and",
           "on",
           "the",
