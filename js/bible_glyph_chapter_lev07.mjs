@@ -171,7 +171,7 @@ export function bible_glyph_chapter_lev07() {
           "belongs",
           "to",
           "$priest",
-          "who",
+          "$back+flashlight",
           "makes",
           "atonement",
           "with",
