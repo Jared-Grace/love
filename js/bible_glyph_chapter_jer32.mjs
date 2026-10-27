@@ -171,7 +171,7 @@ export function bible_glyph_chapter_jer32() {
           "him",
           "$face_with_open_mouth",
           "to",
-          "face",
+          "$face_with_open_mouth",
           "and",
           "$eye",
           "him",
