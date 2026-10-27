@@ -318,7 +318,7 @@ export function bible_glyph_chapter_mic02() {
       {
         verse_number: 11,
         words: [
-          "If",
+          "$crossed_fingers+manner",
           "a",
           "$man_beard",
           "of",
