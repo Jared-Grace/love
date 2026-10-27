@@ -103,7 +103,7 @@ export function bible_glyph_chapter_gen25() {
           "while",
           "he",
           "was",
-          "still",
+          "$repeat",
           "$sprout,",
           "$father+map",
           "$hands_giving",
