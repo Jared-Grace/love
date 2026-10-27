@@ -1174,7 +1174,7 @@ export function bible_glyph_chapter_2ki17() {
           "$finish",
           "$flashlight",
           "$sun",
-          "they",
+          "$pointing_back",
           "are",
           "still",
           "$hammer+doing",
