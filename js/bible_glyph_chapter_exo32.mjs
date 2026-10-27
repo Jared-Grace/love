@@ -273,7 +273,7 @@ export function bible_glyph_chapter_exo32() {
           "themselves",
           "a",
           "molten",
-          "calf,",
+          "$calf,",
           "and",
           "have",
           "$bowing",
