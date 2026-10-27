@@ -467,7 +467,7 @@ export function bible_glyph_chapter_gen49() {
           "by",
           "raiders,",
           "but",
-          "he",
+          "$pointing_back",
           "will",
           "attack",
           "their",
