@@ -294,7 +294,7 @@ export function bible_glyph_chapter_num20() {
           "$water",
           "$tray_out",
           "of",
-          "this",
+          "$flashlight",
           "rock?",
         ],
       },
