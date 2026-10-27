@@ -392,7 +392,7 @@ export function bible_glyph_chapter_zep02() {
           "Cushites,",
           "will",
           "be",
-          "slain",
+          "$sword+skull",
           "by",
           "My",
           "$sword.",
