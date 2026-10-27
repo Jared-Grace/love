@@ -124,7 +124,7 @@ export function bible_glyph_chapter_1ch29() {
       {
         verse_number: 3,
         words: [
-          "Moreover,",
+          "$repeat,",
           "because",
           "of",
           "my",
