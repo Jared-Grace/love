@@ -503,7 +503,7 @@ export function bible_glyph_chapter_jos06() {
           "That",
           "was",
           "the",
-          "only",
+          "$one+check",
           "$sun",
           "they",
           "circled",
