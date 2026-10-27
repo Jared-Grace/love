@@ -307,7 +307,7 @@ export function bible_glyph_chapter_deu15() {
           "be",
           "guilty",
           "of",
-          "sin.",
+          "$bow+thing.",
         ],
       },
       {
