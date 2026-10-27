@@ -530,7 +530,7 @@ export function bible_glyph_chapter_mic07() {
           "will",
           "$tongue+herb+doing",
           "the",
-          "dust",
+          "$dust",
           "like",
           "a",
           "snake,",
