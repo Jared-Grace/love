@@ -340,7 +340,7 @@ export function bible_glyph_chapter_mic05() {
           "enemies",
           "will",
           "be",
-          "cut",
+          "$scissors",
           "off.",
         ],
       },
