@@ -1001,7 +1001,7 @@ export function bible_glyph_chapter_gen24() {
           "a",
           "meal",
           "was",
-          "set",
+          "$hand+down_arrow+doing",
           "before",
           "him,",
           "but",
