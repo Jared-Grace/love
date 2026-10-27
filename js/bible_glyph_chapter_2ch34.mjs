@@ -746,7 +746,7 @@ export function bible_glyph_chapter_2ch34() {
           "$proper_name$Micah,",
           "Shaphan",
           "the",
-          "scribe",
+          "$abacus",
           "and",
           "$proper_name$Asaiah",
           "the",
