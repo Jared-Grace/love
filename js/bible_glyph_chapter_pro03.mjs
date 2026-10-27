@@ -591,7 +591,7 @@ export function bible_glyph_chapter_pro03() {
         words: [
           "Do",
           "$no_entry",
-          "accuse",
+          "$wrestling+doing",
           "a",
           "$person",
           "without",
