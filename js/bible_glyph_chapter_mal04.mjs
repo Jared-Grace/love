@@ -165,7 +165,7 @@ export function bible_glyph_chapter_mal04() {
           "$heart_on_fire+i_am",
           "the",
           "$megaphone",
-          "before",
+          "$face",
           "the",
           "$footprints",
           "of",
