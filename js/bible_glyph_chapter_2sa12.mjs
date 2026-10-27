@@ -888,7 +888,7 @@ export function bible_glyph_chapter_2sa12() {
         verse_number: 27,
         words: [
           "Then",
-          "Joab",
+          "$i_am+father",
           "$hand_sending",
           "$angel",
           "to",
