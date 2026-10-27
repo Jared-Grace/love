@@ -810,7 +810,7 @@ export function bible_glyph_chapter_1sa02() {
           "$pointing",
           "the",
           "$i_am",
-          "intended",
+          "$smiling_face_with_hearts+doing",
           "to",
           "put",
           "them",
