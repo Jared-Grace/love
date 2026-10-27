@@ -61,7 +61,7 @@ export function bible_glyph_chapter_deu29() {
           "$speech",
           "to",
           "them,",
-          "You",
+          "$you",
           "have",
           "$eye",
           "with",
