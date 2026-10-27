@@ -352,7 +352,7 @@ export function bible_glyph_chapter_num16() {
           "$i_am.",
           "As",
           "for",
-          "Aaron,",
+          "$white_cane+blossom+proper_name,",
           "who",
           "is",
           "he",
