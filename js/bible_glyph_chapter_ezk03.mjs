@@ -394,7 +394,7 @@ export function bible_glyph_chapter_ezk03() {
           "of",
           "the",
           "wheels",
-          "beside",
+          "$arrow_both_ways+round_pushpin",
           "them,",
           "a",
           "great",
