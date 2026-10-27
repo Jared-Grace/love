@@ -302,7 +302,7 @@ export function bible_glyph_chapter_zep01() {
           "with",
           "$boxing_glove",
           "and",
-          "deceit.",
+          "$lying_face+mouse_trap.",
         ],
       },
       {
