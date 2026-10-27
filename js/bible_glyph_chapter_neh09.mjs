@@ -1398,7 +1398,7 @@ export function bible_glyph_chapter_neh09() {
           "as",
           "they",
           "please.",
-          "We",
+          "$me",
           "are",
           "in",
           "$top",
