@@ -611,7 +611,7 @@ export function bible_glyph_chapter_num14() {
       {
         verse_number: 19,
         words: [
-          "Pardon,",
+          "$sponge,",
           "I",
           "pray,",
           "the",
