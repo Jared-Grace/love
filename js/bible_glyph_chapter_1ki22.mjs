@@ -1334,7 +1334,7 @@ export function bible_glyph_chapter_1ki22() {
           "fourth",
           "$year",
           "of",
-          "Ahab",
+          "$brother+father+proper_name",
           "$king",
           "over",
           "$wrestling+heart_on_fire.",
