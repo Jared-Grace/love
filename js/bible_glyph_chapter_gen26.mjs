@@ -859,7 +859,7 @@ export function bible_glyph_chapter_gen26() {
           "we",
           "$hammer+doing",
           "you",
-          "only",
+          "$one+check",
           "$thumbs_up",
           "and",
           "sent",
