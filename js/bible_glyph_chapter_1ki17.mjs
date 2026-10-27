@@ -451,7 +451,7 @@ export function bible_glyph_chapter_1ki17() {
           "the",
           "$i_am",
           "$hands_giving",
-          "rain",
+          "$rain+water_wave",
           "upon",
           "the",
           "face",
