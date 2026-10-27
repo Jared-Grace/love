@@ -414,7 +414,7 @@ export function bible_glyph_chapter_1ki12() {
           "answered",
           "the",
           "$family",
-          "harshly.",
+          "$mechanical_arm+describing.",
           "He",
           "rejected",
           "the",
