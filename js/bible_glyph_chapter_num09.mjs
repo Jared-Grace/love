@@ -182,7 +182,7 @@ export function bible_glyph_chapter_num09() {
           "And",
           "they",
           "came",
-          "before",
+          "$face",
           "$fishing_pole+proper_name",
           "and",
           "$proper_name$Aaron",
