@@ -1316,7 +1316,7 @@ export function bible_glyph_chapter_deu32() {
           "to",
           "you,",
           "because",
-          "they",
+          "$pointing_back",
           "are",
           "your",
           "$sprout,",
