@@ -726,7 +726,7 @@ export function bible_glyph_chapter_1ki19() {
           "Please",
           "let",
           "me",
-          "kiss",
+          "$face_blowing_a_kiss",
           "my",
           "$father",
           "and",
