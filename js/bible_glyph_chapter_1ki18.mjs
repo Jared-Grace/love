@@ -114,7 +114,7 @@ export function bible_glyph_chapter_1ki18() {
           "and",
           "hidden",
           "them,",
-          "fifty",
+          "$five+zero",
           "$man_beard",
           "per",
           "cave,",
