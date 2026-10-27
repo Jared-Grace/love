@@ -986,7 +986,7 @@ export function bible_glyph_chapter_num22() {
           "of",
           "the",
           "$i_am",
-          "standing",
+          "$person+up_arrow",
           "in",
           "the",
           "$road",
