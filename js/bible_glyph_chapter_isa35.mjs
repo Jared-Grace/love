@@ -302,7 +302,7 @@ export function bible_glyph_chapter_isa35() {
           "with",
           "$hourglass",
           "$beaming.",
-          "Gladness",
+          "$grinning_face",
           "and",
           "$beaming",
           "will",
