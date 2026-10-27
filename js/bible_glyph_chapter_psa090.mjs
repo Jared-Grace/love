@@ -143,7 +143,7 @@ export function bible_glyph_chapter_psa090() {
       {
         verse_number: 7,
         words: [
-          "For",
+          "$pointing",
           "we",
           "are",
           "consumed",
