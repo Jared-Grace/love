@@ -1466,7 +1466,7 @@ export function bible_glyph_chapter_1ki01() {
       {
         verse_number: 46,
         words: [
-          "Moreover,",
+          "$plus,",
           "$peace+proper_name",
           "has",
           "taken",
