@@ -718,7 +718,7 @@ export function bible_glyph_chapter_lev04() {
           "of",
           "$sacrifice",
           "of",
-          "peace.",
+          "$peace+gift.",
           "Thus",
           "$priest",
           "will",
