@@ -687,7 +687,7 @@ export function bible_glyph_chapter_num11() {
           "on",
           "$foot+doer,",
           "yet",
-          "You",
+          "$you",
           "$speech,",
           "I",
           "will",
