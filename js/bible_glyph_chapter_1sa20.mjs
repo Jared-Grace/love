@@ -1107,7 +1107,7 @@ export function bible_glyph_chapter_1sa20() {
           "to",
           "me,",
           "$pointing",
-          "he",
+          "$pointing_back",
           "must",
           "surely",
           "be",
