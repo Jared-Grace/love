@@ -823,7 +823,7 @@ export function bible_glyph_chapter_lev22() {
           "it",
           "must",
           "remain",
-          "seven",
+          "$seven",
           "$sun",
           "with",
           "its",
