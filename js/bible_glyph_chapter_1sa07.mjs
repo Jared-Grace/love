@@ -352,7 +352,7 @@ export function bible_glyph_chapter_1sa07() {
           "that",
           "$sun",
           "$i_am",
-          "thundered",
+          "$loudspeaker+cloud_with_lightning+doing",
           "with",
           "a",
           "loud",
