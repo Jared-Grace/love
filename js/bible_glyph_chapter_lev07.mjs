@@ -95,7 +95,7 @@ export function bible_glyph_chapter_lev07() {
           "loins,",
           "and",
           "the",
-          "lobe",
+          "$meat+brown_square+takeout_box",
           "of",
           "the",
           "liver,",
