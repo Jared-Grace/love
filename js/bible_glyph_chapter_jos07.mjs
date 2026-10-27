@@ -396,7 +396,7 @@ export function bible_glyph_chapter_jos07() {
           "$person+pointing_down",
           "on",
           "your",
-          "face?",
+          "$face?",
         ],
       },
       {
