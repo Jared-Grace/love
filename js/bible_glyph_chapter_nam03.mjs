@@ -486,7 +486,7 @@ export function bible_glyph_chapter_nam03() {
           "$no_entry",
           "one",
           "$lightbulb",
-          "where.",
+          "$question+round_pushpin.",
         ],
       },
       {
