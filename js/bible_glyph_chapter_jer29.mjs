@@ -971,7 +971,7 @@ export function bible_glyph_chapter_jer29() {
           "settle",
           "down,",
           "$sprout+down_arrow+doing",
-          "gardens",
+          "$garden",
           "and",
           "$eating",
           "their",
