@@ -65,7 +65,7 @@ export function bible_glyph_chapter_isa53() {
           "$eye",
           "Him,",
           "$no_entry",
-          "beauty",
+          "$eyes+thing",
           "that",
           "we",
           "should",
