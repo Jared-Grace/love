@@ -277,7 +277,7 @@ export function bible_glyph_chapter_lev02() {
         words: [
           "No",
           "$grain_offering",
-          "that",
+          "$back+flashlight",
           "you",
           "present",
           "$i_am",
