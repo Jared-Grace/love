@@ -126,7 +126,7 @@ export function bible_glyph_chapter_lev09() {
           "$fishing_pole+proper_name",
           "had",
           "commanded",
-          "to",
+          "$toward",
           "the",
           "front",
           "$tent",
