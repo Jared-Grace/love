@@ -1,5 +1,5 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { firebase_public_expected_unchanged_assert } from "./firebase_public_expected_unchanged_assert.mjs";
 import { apps_frozen_names } from "./apps_frozen_names.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -9,11 +9,11 @@ import { folder_public_absolute } from "./folder_public_absolute.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { folder_copy_fresh } from "./folder_copy_fresh.mjs";
 import { cloudflare_pages_headers_text } from "./cloudflare_pages_headers_text.mjs";
-import { file_overwrite } from "./file_overwrite.mjs";
 import { path_join } from "./path_join.mjs";
+import { file_overwrite } from "./file_overwrite.mjs";
 import { cloudflare_pages_redirects_text } from "./cloudflare_pages_redirects_text.mjs";
 import { cloudflare_pages_project_name } from "./cloudflare_pages_project_name.mjs";
-import { folder_repo_love } from "./folder_repo_love.mjs";
+import { path_directory } from "./path_directory.mjs";
 import { firebase_deploy_deadline_ms } from "./firebase_deploy_deadline_ms.mjs";
 import { npx_run } from "./npx_run.mjs";
 import { retry_standard } from "./retry_standard.mjs";
@@ -44,16 +44,16 @@ export async function cloudflare_pages_deploy() {
     let project = cloudflare_pages_project_name();
     let words = [
       "wrangler",
-      "pages",
       "deploy",
+      "--assets",
       stage,
-      "--project-name",
+      "--name",
       project,
-      "--branch",
-      "main",
-      "--commit-dirty=true",
+      "--compatibility-date",
+      "2026-10-23",
     ];
-    let repo = folder_repo_love();
+    ("The folder is named outright and the command runs beside it rather than at the top of the repo: asked from the top with nothing named, this tool guesses at a build of its own, and that guess rewrote package.json and added files while failing.");
+    let repo = path_directory(stage);
     async function send() {
       let ms = firebase_deploy_deadline_ms();
       let out = await npx_run(
