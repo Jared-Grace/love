@@ -2,10 +2,10 @@ import { gloss_passage_entries_changed_set } from "./gloss_passage_entries_chang
 import { gloss_passage_words_bare } from "./gloss_passage_words_bare.mjs";
 import { gloss_entries_words_bare } from "./gloss_entries_words_bare.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
-import { text_words_replaced } from "./text_words_replaced.mjs";
+import { gloss_words_replaced } from "./gloss_words_replaced.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { text_punctuation_split } from "./text_punctuation_split.mjs";
+import { gloss_words_bare_split } from "./gloss_words_bare_split.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
@@ -39,11 +39,11 @@ export function gloss_passage_words_respell(passage, words_read) {
   let at = 0;
   function entry_respell(entry) {
     let word = property_get(entry, word_key);
-    let words = text_punctuation_split(word);
+    let words = gloss_words_bare_split(word);
     let size = list_size(words);
     let taken = list_slice_count(written, at, size);
     at = add(at, size);
-    let after = text_words_replaced(word, taken);
+    let after = gloss_words_replaced(word, taken);
     let same = equal(word, after);
     if (same) {
       return;
