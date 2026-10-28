@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { app_shared_name_prefix_without } from "./app_shared_name_prefix_without.mjs";
-import { file_name_html } from "./file_name_html.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { file_name_page_link } from "./file_name_page_link.mjs";
 import { app_shared_page_dev_build_is } from "./app_shared_page_dev_build_is.mjs";
 import { app_index_stage_card_generic } from "./app_index_stage_card_generic.mjs";
 export function app_index_built_card(root) {
@@ -11,7 +11,7 @@ export function app_index_built_card(root) {
   arguments_assert(arguments, 1);
   ("the address is built from this app's own name, so it follows a rename instead of having to be noticed and typed again");
   let name = app_shared_name_prefix_without(fn_name("app_index"));
-  let path = file_name_html(name);
+  let path = file_name_page_link(name);
   let shown = app_shared_page_dev_build_is();
   let label = "prod index";
   let text =
