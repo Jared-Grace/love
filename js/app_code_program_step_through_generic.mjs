@@ -1,10 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { app_code_program_step_trace } from "./app_code_program_step_trace.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_program_step_actions_solve_whole } from "./app_code_program_step_actions_solve_whole.mjs";
-import { object_copy_property_set } from "./object_copy_property_set.mjs";
-import { list_add } from "./list_add.mjs";
+import { equal } from "./equal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
@@ -13,6 +11,7 @@ import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
+import { list_add } from "./list_add.mjs";
 import { app_shared_code_padding_x } from "./app_shared_code_padding_x.mjs";
 import { html_style_bleed_x } from "./html_style_bleed_x.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -36,7 +35,6 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
@@ -110,6 +108,7 @@ import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
 import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { app_code_program_step_order_words } from "./app_code_program_step_order_words.mjs";
@@ -139,20 +138,15 @@ export function app_code_program_step_through_generic(
   ("2026-10-17, at the human's asking: an expression holding more than one operator is solved whole, as the expression lessons solve a line - the learner presses the operator that goes next and chooses what it comes to, until one value is left - and that value is written into the program's line; which expressions, and how their names are asked for first, is ",
     fn_name("app_code_program_step_actions_solve_whole"),
     "'s to say. This replaces the operators being asked for one after another in the order the computer takes them, which left the order to the program rather than to the learner");
-  let traced = app_code_program_trace(code);
-  let trace = [];
-  for (let traced_entry of traced) {
-    let traced_actions = property_get(traced_entry, "actions");
-    let grouped = app_code_program_step_actions_solve_whole(
-      code,
-      traced_actions,
-    );
-    let entry_grouped = object_copy_property_set(
-      traced_entry,
-      "actions",
-      grouped,
-    );
-    list_add(trace, entry_grouped);
+  let trace = app_code_program_step_trace(code);
+  let resets = false;
+  for (let trace_entry of trace) {
+    for (let step_action of property_get(trace_entry, "actions")) {
+      let left13 = property_get(step_action, "kind");
+      if (equal(left13, "reset")) {
+        resets = true;
+      }
+    }
   }
   let wrap = html_div(parent);
   html_flex_column_stretch(wrap);
@@ -676,6 +670,11 @@ export function app_code_program_step_through_generic(
   async function action_do(action, line_index) {
     "what the right answer to what this line does then does";
     let kind = property_get(action, "kind");
+    if (equal(kind, "reset")) {
+      ("2026-10-28, at the human's asking: a line run again is put back the way it is written, its names in place of the values solved into it the last time it ran");
+      line_restore(line_index);
+      return;
+    }
     if (equal(kind, "evaluate")) {
       let name = property_get(action, "name");
       let value = property_get(action, "value");
@@ -988,8 +987,19 @@ export function app_code_program_step_through_generic(
       ["assign", "Assign a value"],
       ["log", "Log a value to the console"],
       ["expand", "Write it the long way"],
+      ["reset", "Reset the line"],
       ["complete", "This line is complete; continue to the next line"],
     ];
+    ("2026-10-28: Reset the line is offered only in a program that runs a line twice, so the if lessons, where it is never right, keep the choices they had");
+    if (not(resets)) {
+      function reset_not_is(offered) {
+        let left17 = list_get(offered, 0);
+        let b10 = equal(left17, "reset");
+        let r = not(b10);
+        return r;
+      }
+      options = list_filter(options, reset_not_is);
+    }
     let right_words = null;
     for (let option of options) {
       let left11 = list_get(option, 0);

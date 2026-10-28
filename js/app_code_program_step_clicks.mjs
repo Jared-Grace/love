@@ -1,7 +1,6 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { app_code_program_trace } from "./app_code_program_trace.mjs";
+import { app_code_program_step_trace } from "./app_code_program_step_trace.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_value_code } from "./js_value_code.mjs";
@@ -9,10 +8,10 @@ import { property_exists } from "./property_exists.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { app_code_program_step_actions_solve_whole } from "./app_code_program_step_actions_solve_whole.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export function app_code_program_step_clicks(code) {
   arguments_assert(arguments, 1);
@@ -20,13 +19,14 @@ export function app_code_program_step_clicks(code) {
   ("The presses are the ones the step-through asks for, read off the same trace and the same grouping of an expression solved whole, so the two cannot come to disagree. An expression solved whole is one step, since the operators can be pressed in more than one right order. Not picked: one step per operator, which would name one order as the answer when another is right too");
   ("Each step is a list of pieces, each piece a text and its kind: words, code, or button - what is pressed as a button on the screen is drawn as one, at the human's asking the same day, so the learner sees the thing to press");
   let lines = text_split_newline(code);
-  let traced = app_code_program_trace(code);
+  let traced = app_code_program_step_trace(code);
   let options = {
     declare: "Declare a variable",
     evaluate: "Solve an expression",
     assign: "Assign a value",
     log: "Log a value to the console",
     expand: "Write it the long way",
+    reset: "Reset the line",
   };
   function words(text) {
     let r = {
@@ -84,11 +84,7 @@ export function app_code_program_step_clicks(code) {
     let v11 = words("Choose the line ");
     let v12 = code_piece(trimmed);
     list_add(clicks, [v11, v12]);
-    let traced_actions = property_get(traced_entry, "actions");
-    let actions = app_code_program_step_actions_solve_whole(
-      code,
-      traced_actions,
-    );
+    let actions = property_get(traced_entry, "actions");
     let k = 0;
     while (less_than(k, list_size(actions))) {
       let action = list_get(actions, k);

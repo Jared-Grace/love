@@ -2,9 +2,10 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_size } from "./list_size.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
-import { greater_than } from "./greater_than.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -25,7 +26,20 @@ export function app_code_program_step_guide_action(entry, k) {
   let complete = [
     "So choose: This line is complete; continue to the next line",
   ];
+  ("2026-10-28: a line run again starts by being reset, so what is said the first time a line is asked about is said at the step after the reset");
+  let start = 0;
+  if (
+    greater_than(size, 0) &&
+    equal(property_get(list_get(actions, 0), "kind"), "reset")
+  ) {
+    start = 1;
+  }
   let if_is = ["This is an ", "if", " statement"];
+  ("2026-10-28: a while line is said to be a while, read off the trace, which marks the condition of a loop");
+  let left = property_get_or(entry, "alternate", null);
+  if (equal(left, "loop")) {
+    if_is = ["This is a ", "while", " statement"];
+  }
   let if_solves = [
     "It solves the condition inside the ",
     "(...)",
@@ -63,7 +77,7 @@ export function app_code_program_step_guide_action(entry, k) {
   let assigns_only =
     list_includes(kinds, "assign") && not(list_includes(kinds, "declare"));
   let intro = [];
-  if (assigns_only && equal(k, 0)) {
+  if (assigns_only && equal(k, start)) {
     let assigned = list_last(actions);
     let name3 = property_get(assigned, "name");
     intro = [
@@ -75,6 +89,19 @@ export function app_code_program_step_guide_action(entry, k) {
       ],
       ["It will be given a value of whatever is to the right of the ", "="],
     ];
+  }
+  if (equal(kind, "reset")) {
+    ("2026-10-28, at the human's asking: a line run again still shows the values solved into it the last time it ran, and those values may no longer be true, so it is put back the way it is written first");
+    let r23 = [
+      [
+        "This line ran before, so it still shows the values solved into it then",
+      ],
+      [
+        "Those values may have changed since, so the line goes back to how it is written",
+      ],
+      ["First, choose: Reset the line"],
+    ];
+    return r23;
   }
   if (equal(kind, "expand")) {
     ("2026-10-15, at the human's asking: a += b; is said to be the shorter way to write a = a + b;, the words its lesson teaches it by. 2026-10-21, at the human's asking: writing it the long way is then chosen, and every step after is asked of the long line");
@@ -147,7 +174,7 @@ export function app_code_program_step_guide_action(entry, k) {
     return r7;
   }
   ("2026-10-15: what kind of line a log or an if is, is said only the first time the line is asked about; a line solving a name and then an operator would otherwise say it again before each");
-  let first = equal(k, 0);
+  let first = equal(k, start);
   let lead_log = first ? [logs] : [];
   let lead_if = first ? [if_is, if_solves] : [];
   let name = property_get(action, "name");
