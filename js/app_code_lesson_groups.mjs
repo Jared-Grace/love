@@ -9,7 +9,7 @@ import { app_code_lesson_expression_choose_order_compare } from "./app_code_less
 import { app_code_lesson_comment_note } from "./app_code_lesson_comment_note.mjs";
 import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
-import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
+import { app_code_lesson_step_while } from "./app_code_lesson_step_while.mjs";
 export function app_code_lesson_groups() {
   arguments_assert(arguments, 0);
   ("the groups the home list folds its lessons into, each named and starting at the lesson given, and running until the next one starts - the last runs to the end of the list");
@@ -17,6 +17,7 @@ export function app_code_lesson_groups() {
   ("Each name is its parts in turn, words then code then words, the way a lesson title with code in it is written - so console.log is shown as code, at the human's request.");
   ("2026-10-08: Statements split in three at the human's request: Statements, the lines one at a time, through the remainder at 193; Formulas from 194, the average onward, where a line works out a question about the world - clocks, seats, grids, meetings, rectangles; Branching from 240, the first if. Not picked for 194: Word problems, since the lessons there are code to read rather than stories to solve; nor Arithmetic, which the Operators group already is.");
   ("2026-10-11: Looping from 296, the first while, at the human's request, named as Branching is, a word then the keyword as code. Not picked: Loops, since Looping matches the roadmap's word for the stage.");
+  ("2026-10-28: Looping starts at Step by step: While, at the human's asking, since that lesson now comes straight before While and had fallen under Branching");
   let groups = [
     {
       parts: ["Identifiers"],
@@ -88,7 +89,7 @@ export function app_code_lesson_groups() {
     },
     {
       parts: ["Looping: ", "while"],
-      lesson: app_code_lesson_while,
+      lesson: app_code_lesson_step_while,
     },
   ];
   return groups;
