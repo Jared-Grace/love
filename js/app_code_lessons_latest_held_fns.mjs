@@ -1,6 +1,13 @@
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lesson_while_total_step } from "./app_code_lesson_while_total_step.mjs";
 import { app_code_lesson_while_total_squares } from "./app_code_lesson_while_total_squares.mjs";
+import { app_code_lesson_step_while } from "./app_code_lesson_step_while.mjs";
+import { app_code_lesson_step_while_log } from "./app_code_lesson_step_while_log.mjs";
+import { app_code_lesson_step_while_down } from "./app_code_lesson_step_while_down.mjs";
+import { app_code_lesson_step_while_halve } from "./app_code_lesson_step_while_halve.mjs";
+import { app_code_lesson_step_while_total } from "./app_code_lesson_step_while_total.mjs";
+import { app_code_lesson_step_while_total_step } from "./app_code_lesson_step_while_total_step.mjs";
+import { app_code_lesson_step_while_total_squares } from "./app_code_lesson_step_while_total_squares.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
   "A list of lessons rather than a cut at a number, for the same reason the released list is one: a lesson put in above would move a number, and a list names the lesson itself. Empty it to show every lesson on latest again. Since 2026-10-24 the working copy leaves these out too, so what this holds decides both.";
@@ -109,9 +116,17 @@ export function app_code_lessons_latest_held_fns() {
   ("2026-10-27: hold While halving, new at the human's asking straight after While counting down, until the human has read its first draft");
   ("2026-10-27: While halving released by the human, to read its first draft on the working copy: nothing held");
   ("2026-10-27: hold Counting by twos and threes and A running total of squares, new at the human's asking straight after A running total, until the human has read their first drafts");
+  ("2026-10-28: hold the seven while step lessons, new at the human's asking straight after each while lesson, until the human has read their first drafts");
   let fns = [
     app_code_lesson_while_total_step,
     app_code_lesson_while_total_squares,
+    app_code_lesson_step_while,
+    app_code_lesson_step_while_log,
+    app_code_lesson_step_while_down,
+    app_code_lesson_step_while_halve,
+    app_code_lesson_step_while_total,
+    app_code_lesson_step_while_total_step,
+    app_code_lesson_step_while_total_squares,
   ];
   return fns;
 }

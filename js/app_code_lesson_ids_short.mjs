@@ -398,6 +398,13 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_while_total: text_frozen("while_total"),
     app_code_lesson_while_total_step: text_frozen("while_step"),
     app_code_lesson_while_total_squares: text_frozen("while_squares"),
+    app_code_lesson_step_while: text_frozen("step_while"),
+    app_code_lesson_step_while_log: text_frozen("step_while_log"),
+    app_code_lesson_step_while_down: text_frozen("step_while_down"),
+    app_code_lesson_step_while_halve: text_frozen("step_while_halve"),
+    app_code_lesson_step_while_total: text_frozen("step_while_total"),
+    app_code_lesson_step_while_total_step: text_frozen("step_while_step"),
+    app_code_lesson_step_while_total_squares: text_frozen("step_while_sq"),
     app_code_lesson_statement_name_rectangles_rows_between:
       text_frozen("name_rect_rows"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
