@@ -290,7 +290,7 @@ export function bible_glyph_chapter_num13() {
           "$proper_name$Nun",
           "the",
           "name",
-          "$i_am+rescue.",
+          "$i_am+rescue+proper_name.",
         ],
       },
       {

@@ -390,7 +390,7 @@ export function bible_glyph_chapter_exo33() {
           "his",
           "young",
           "$bellhop_bell+doing",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$son",
           "of",
           "$proper_name$Nun",

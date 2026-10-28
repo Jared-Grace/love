@@ -284,7 +284,7 @@ export function bible_glyph_chapter_exo17() {
           "$fishing_pole+proper_name",
           "$speech",
           "to",
-          "$i_am+rescue,",
+          "$i_am+rescue+proper_name,",
           "$check_box",
           "some",
           "of",
@@ -317,7 +317,7 @@ export function bible_glyph_chapter_exo17() {
       {
         verse_number: 10,
         words: [
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$hammer+doing",
           "as",
           "$fishing_pole+proper_name",
@@ -420,7 +420,7 @@ export function bible_glyph_chapter_exo17() {
         verse_number: 13,
         words: [
           "So",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$person+down_arrow+doing",
           "$proper_name$Amalek",
           "and",
@@ -452,7 +452,7 @@ export function bible_glyph_chapter_exo17() {
           "recite",
           "it",
           "to",
-          "$i_am+rescue,",
+          "$i_am+rescue+proper_name,",
           "$pointing",
           "I",
           "will",

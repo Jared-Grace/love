@@ -405,7 +405,7 @@ export function bible_glyph_chapter_exo24() {
           "set",
           "out",
           "with",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "his",
           "attendant,",
           "and",

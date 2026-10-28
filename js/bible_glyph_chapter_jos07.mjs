@@ -71,7 +71,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 2,
         words: [
           "Meanwhile",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$hand_sending",
           "men",
           "from",
@@ -117,7 +117,7 @@ export function bible_glyph_chapter_jos07() {
           "On",
           "$turn_back",
           "to",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "they",
           "$speech,",
           "There",
@@ -236,7 +236,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 6,
         words: [
           "Then",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$t_shirt+scissors+doing",
           "his",
           "clothes",
@@ -273,7 +273,7 @@ export function bible_glyph_chapter_jos07() {
       {
         verse_number: 7,
         words: [
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$speech,",
           "$crying_face+speech",
           "$crown",
@@ -387,7 +387,7 @@ export function bible_glyph_chapter_jos07() {
           "$i_am",
           "$speech",
           "$toward",
-          "$i_am+rescue,",
+          "$i_am+rescue+proper_name,",
           "Stand",
           "up.",
           "$flashlight+question",
@@ -643,7 +643,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 16,
         words: [
           "So",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "arose",
           "$morning+doing",
           "the",
@@ -744,7 +744,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 19,
         words: [
           "So",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$speech",
           "to",
           "$proper_name$Achan,",
@@ -861,7 +861,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 22,
         words: [
           "So",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$hand_sending",
           "$angel,",
           "who",
@@ -899,7 +899,7 @@ export function bible_glyph_chapter_jos07() {
           "$footprints",
           "them",
           "$toward",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "and",
           "all",
           "the",
@@ -919,7 +919,7 @@ export function bible_glyph_chapter_jos07() {
         verse_number: 24,
         words: [
           "Then",
-          "$i_am+rescue,",
+          "$i_am+rescue+proper_name,",
           "together",
           "with",
           "all",
@@ -967,7 +967,7 @@ export function bible_glyph_chapter_jos07() {
       {
         verse_number: 25,
         words: [
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$speech,",
           "$flashlight+question",
           "have",

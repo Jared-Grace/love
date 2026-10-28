@@ -1123,7 +1123,7 @@ export function bible_glyph_chapter_deu01() {
       {
         verse_number: 38,
         words: [
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$son",
           "of",
           "$proper_name$Nun,",

@@ -40,7 +40,7 @@ export function bible_glyph_chapter_ezr03() {
         verse_number: 2,
         words: [
           "Then",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$son",
           "of",
           "$proper_name$Jozadak",
@@ -298,7 +298,7 @@ export function bible_glyph_chapter_ezr03() {
           "$son",
           "of",
           "$question+heart_on_fire,",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$son",
           "of",
           "$proper_name$Jozadak,",
@@ -351,7 +351,7 @@ export function bible_glyph_chapter_ezr03() {
         verse_number: 9,
         words: [
           "So",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "with",
           "his",
           "$son",

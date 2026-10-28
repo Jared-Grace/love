@@ -921,7 +921,7 @@ export function bible_glyph_chapter_num11() {
       {
         verse_number: 28,
         words: [
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$son",
           "of",
           "$proper_name$Nun,",

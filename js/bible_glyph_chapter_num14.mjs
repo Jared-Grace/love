@@ -160,7 +160,7 @@ export function bible_glyph_chapter_num14() {
       {
         verse_number: 6,
         words: [
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$son",
           "of",
           "$proper_name$Nun",
@@ -947,7 +947,7 @@ export function bible_glyph_chapter_num14() {
           "of",
           "$proper_name$Jephunneh",
           "and",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$son",
           "of",
           "$proper_name$Nun.",
@@ -1187,7 +1187,7 @@ export function bible_glyph_chapter_num14() {
           "the",
           "$earth,",
           "only",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$son",
           "of",
           "$proper_name$Nun",

@@ -580,7 +580,7 @@ export function bible_glyph_chapter_exo32() {
         verse_number: 17,
         words: [
           "When",
-          "$i_am+rescue",
+          "$i_am+rescue+proper_name",
           "$ear+loudspeaker",
           "the",
           "$loudspeaker",

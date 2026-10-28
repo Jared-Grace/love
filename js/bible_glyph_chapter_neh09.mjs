@@ -114,7 +114,7 @@ export function bible_glyph_chapter_neh09() {
         words: [
           "The",
           "$handshake",
-          "$i_am+rescue,",
+          "$i_am+rescue+proper_name,",
           "$brick+proper_name,",
           "$proper_name$Kadmiel,",
           "$proper_name$Shebaniah,",
@@ -148,7 +148,7 @@ export function bible_glyph_chapter_neh09() {
           "Then",
           "the",
           "$handshake",
-          "$i_am+rescue,",
+          "$i_am+rescue+proper_name,",
           "$proper_name$Kadmiel,",
           "$brick+proper_name,",
           "$proper_name$Hashabneiah,",
