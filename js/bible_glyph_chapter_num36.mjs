@@ -262,7 +262,7 @@ export function bible_glyph_chapter_num36() {
           "$thumbs_up",
           "in",
           "their",
-          "$eyes,",
+          "$eye,",
           "$check+exclamation",
           "the",
           "$woman",

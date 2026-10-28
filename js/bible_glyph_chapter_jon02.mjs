@@ -102,7 +102,7 @@ export function bible_glyph_chapter_jon02() {
           "banished",
           "from",
           "Your",
-          "$eyes;",
+          "$eye;",
           "yet",
           "I",
           "will",

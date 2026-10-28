@@ -280,7 +280,7 @@ export function bible_glyph_chapter_deu32() {
           "apple",
           "of",
           "His",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

@@ -640,7 +640,7 @@ export function bible_glyph_chapter_exo05() {
           "and",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "his",
           "$kneeling,",

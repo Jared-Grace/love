@@ -515,7 +515,7 @@ export function bible_glyph_chapter_jer26() {
           "right",
           "in",
           "your",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

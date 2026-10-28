@@ -182,7 +182,7 @@ export function bible_glyph_chapter_2ki10() {
           "$thumbs_up",
           "in",
           "your",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {
@@ -1125,7 +1125,7 @@ export function bible_glyph_chapter_2ki10() {
           "right",
           "in",
           "My",
-          "$eyes,",
+          "$eye,",
           "and",
           "have",
           "$hammer+doing",

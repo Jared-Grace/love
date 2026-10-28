@@ -357,7 +357,7 @@ export function bible_glyph_chapter_exo19() {
           "$proper_name$Sinai",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "all",
           "the",

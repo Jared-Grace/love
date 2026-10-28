@@ -633,7 +633,7 @@ export function bible_glyph_chapter_gen44() {
           "can",
           "set",
           "my",
-          "$eyes",
+          "$eye",
           "on",
           "him.",
         ],

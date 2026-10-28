@@ -529,7 +529,7 @@ export function bible_glyph_chapter_exo24() {
           "$mountain,",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$son",

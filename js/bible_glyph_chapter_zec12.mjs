@@ -145,7 +145,7 @@ export function bible_glyph_chapter_zec12() {
           "keep",
           "a",
           "watchful",
-          "$eyes",
+          "$eye",
           "on",
           "the",
           "$house",

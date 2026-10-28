@@ -505,7 +505,7 @@ export function bible_glyph_chapter_gen20() {
           "$thumbs_up",
           "in",
           "your",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {
@@ -533,7 +533,7 @@ export function bible_glyph_chapter_gen20() {
           "covering",
           "of",
           "the",
-          "$eyes",
+          "$eye",
           "for",
           "you",
           "in",

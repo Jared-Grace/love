@@ -486,7 +486,7 @@ export function bible_glyph_chapter_lam04() {
           "the",
           "while",
           "our",
-          "$eyes",
+          "$eye",
           "were",
           "failing",
           "as",

@@ -857,7 +857,7 @@ export function bible_glyph_chapter_exo08() {
           "that",
           "are",
           "$vomiting",
-          "$eyes",
+          "$eye",
           "the",
           "$clamp+proper_name,",
           "will",

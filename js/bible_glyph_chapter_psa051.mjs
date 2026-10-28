@@ -105,7 +105,7 @@ export function bible_glyph_chapter_psa051() {
           "$thumbs_down",
           "in",
           "Your",
-          "$eyes,",
+          "$eye,",
           "so",
           "that",
           "You",

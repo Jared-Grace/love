@@ -431,7 +431,7 @@ export function bible_glyph_chapter_mic04() {
           "us",
           "feast",
           "our",
-          "$eyes",
+          "$eye",
           "on",
           "$proper_name$Zion.",
         ],

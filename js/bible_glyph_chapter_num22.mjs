@@ -1114,7 +1114,7 @@ export function bible_glyph_chapter_num22() {
           "displeasing",
           "in",
           "your",
-          "$eyes,",
+          "$eye,",
           "I",
           "will",
           "$turn_back",

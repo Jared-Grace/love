@@ -346,7 +346,7 @@ export function bible_glyph_chapter_1ki03() {
           "good",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$crown,",

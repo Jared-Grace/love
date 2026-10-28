@@ -322,7 +322,7 @@ export function bible_glyph_chapter_pro01() {
           "any",
           "$key",
           "can",
-          "$eyes",
+          "$eye",
           "it!",
         ],
       },

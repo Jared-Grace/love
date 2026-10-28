@@ -400,7 +400,7 @@ export function bible_glyph_chapter_num27() {
           "$water",
           "before",
           "their",
-          "$eyes.",
+          "$eye.",
           "Those",
           "were",
           "the",
@@ -522,7 +522,7 @@ export function bible_glyph_chapter_num27() {
           "him",
           "before",
           "their",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

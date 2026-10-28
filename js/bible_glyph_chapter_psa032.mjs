@@ -208,7 +208,7 @@ export function bible_glyph_chapter_psa032() {
           "you",
           "counsel",
           "and",
-          "$eyes",
+          "$eye",
           "over",
           "you.",
         ],

@@ -320,7 +320,7 @@ export function bible_glyph_chapter_psa145() {
         verse_number: 15,
         words: [
           "The",
-          "$eyes",
+          "$eye",
           "of",
           "all",
           "$crossed_fingers+clock+doing",

@@ -171,7 +171,7 @@ export function bible_glyph_chapter_isa49() {
           "honored",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$i_am,",

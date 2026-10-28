@@ -768,7 +768,7 @@ export function bible_glyph_chapter_exo03() {
           "$heart_orange",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$clamp+person",

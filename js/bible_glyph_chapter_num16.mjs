@@ -456,7 +456,7 @@ export function bible_glyph_chapter_num16() {
           "gouge",
           "out",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "these",
           "men?",

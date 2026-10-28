@@ -314,7 +314,7 @@ export function bible_glyph_chapter_gen49() {
         verse_number: 12,
         words: [
           "His",
-          "$eyes",
+          "$eye",
           "are",
           "darker",
           "than",
@@ -517,7 +517,7 @@ export function bible_glyph_chapter_gen49() {
           "$son",
           "beside",
           "a",
-          "$eyes",
+          "$eye",
           "of",
           "water,",
           "whose",

@@ -1122,7 +1122,7 @@ export function bible_glyph_chapter_1sa02() {
           "will",
           "cause",
           "your",
-          "$eyes",
+          "$eye",
           "to",
           "fail",
           "and",

@@ -221,7 +221,7 @@ export function bible_glyph_chapter_exo17() {
           "this",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "elders",

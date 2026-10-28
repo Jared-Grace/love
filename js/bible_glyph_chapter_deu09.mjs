@@ -633,7 +633,7 @@ export function bible_glyph_chapter_deu09() {
           "them",
           "before",
           "your",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {
@@ -681,7 +681,7 @@ export function bible_glyph_chapter_deu09() {
           "$thumbs_down",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "$i_am",
           "and",

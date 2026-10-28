@@ -300,7 +300,7 @@ export function bible_glyph_chapter_psa073() {
           "troublesome",
           "in",
           "my",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

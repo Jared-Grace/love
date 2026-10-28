@@ -85,7 +85,7 @@ export function bible_glyph_chapter_psa015() {
           "vile",
           "in",
           "his",
-          "$eyes",
+          "$eye",
           "but",
           "$star+doing",
           "those",

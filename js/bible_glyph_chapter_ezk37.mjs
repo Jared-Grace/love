@@ -683,7 +683,7 @@ export function bible_glyph_chapter_ezk37() {
           "view",
           "of",
           "their",
-          "$eyes,",
+          "$eye,",
         ],
       },
       {

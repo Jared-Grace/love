@@ -533,7 +533,7 @@ export function bible_glyph_chapter_2ki01() {
           "$gem_stone+doing",
           "in",
           "your",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {
@@ -568,7 +568,7 @@ export function bible_glyph_chapter_2ki01() {
           "$gem_stone+doing",
           "in",
           "your",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

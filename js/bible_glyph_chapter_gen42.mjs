@@ -684,7 +684,7 @@ export function bible_glyph_chapter_gen42() {
           "bound",
           "before",
           "their",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

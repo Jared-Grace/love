@@ -659,7 +659,7 @@ export function bible_glyph_chapter_zep03() {
           "before",
           "your",
           "very",
-          "$eyes,",
+          "$eye,",
           "$speech",
           "the",
           "$i_am.",

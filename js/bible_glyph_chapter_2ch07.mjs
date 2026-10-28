@@ -522,7 +522,7 @@ export function bible_glyph_chapter_2ch07() {
         words: [
           "$watch",
           "My",
-          "$eyes",
+          "$eye",
           "will",
           "be",
           "$unlocked",
@@ -560,7 +560,7 @@ export function bible_glyph_chapter_2ch07() {
           "$telescope",
           "$finish.",
           "My",
-          "$eyes",
+          "$eye",
           "and",
           "My",
           "$heart_organ",

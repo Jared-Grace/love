@@ -267,7 +267,7 @@ export function bible_glyph_chapter_1sa25() {
           "$heart_orange",
           "in",
           "your",
-          "$eyes,",
+          "$eye,",
           "$pointing",
           "we",
           "have",

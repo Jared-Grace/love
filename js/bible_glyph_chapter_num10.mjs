@@ -808,7 +808,7 @@ export function bible_glyph_chapter_num10() {
           "serve",
           "as",
           "our",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

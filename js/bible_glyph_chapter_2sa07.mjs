@@ -600,7 +600,7 @@ export function bible_glyph_chapter_2sa07() {
           "thing",
           "in",
           "Your",
-          "$eyes,",
+          "$eye,",
           "O",
           "$crown",
           "$i_am,",

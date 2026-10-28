@@ -937,7 +937,7 @@ export function bible_glyph_chapter_exo04() {
           "signs",
           "before",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$family.",

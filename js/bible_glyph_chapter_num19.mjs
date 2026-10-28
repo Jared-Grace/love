@@ -134,7 +134,7 @@ export function bible_glyph_chapter_num19() {
           "burned",
           "before",
           "his",
-          "$eyes.",
+          "$eye.",
           "Its",
           "hide,",
           "its",

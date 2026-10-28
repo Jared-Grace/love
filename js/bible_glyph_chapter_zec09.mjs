@@ -34,7 +34,7 @@ export function bible_glyph_chapter_zec09() {
           "place,",
           "$pointing",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "$person",
           "and",

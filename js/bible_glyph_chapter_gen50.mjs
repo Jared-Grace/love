@@ -97,7 +97,7 @@ export function bible_glyph_chapter_gen50() {
           "$heart_orange",
           "in",
           "your",
-          "$eyes,",
+          "$eye,",
           "$pleading",
           "$voice+doing",
           "to",

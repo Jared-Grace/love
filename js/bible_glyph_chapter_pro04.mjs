@@ -424,7 +424,7 @@ export function bible_glyph_chapter_pro04() {
           "out",
           "of",
           "your",
-          "$eyes;",
+          "$eye;",
           "$guard",
           "them",
           "$radio_button",
@@ -493,7 +493,7 @@ export function bible_glyph_chapter_pro04() {
         words: [
           "Let",
           "your",
-          "$eyes",
+          "$eye",
           "$face_with_monocle",
           "$face+toward;",
           "fix",

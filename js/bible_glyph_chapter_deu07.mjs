@@ -567,7 +567,7 @@ export function bible_glyph_chapter_deu07() {
           "you.",
           "Do",
           "$no_entry",
-          "$eyes",
+          "$eye",
           "on",
           "them",
           "with",

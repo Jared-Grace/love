@@ -322,7 +322,7 @@ export function bible_glyph_chapter_gen27() {
           "revealed",
           "in",
           "his",
-          "$eyes",
+          "$eye",
           "as",
           "a",
           "deceiver,",

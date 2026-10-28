@@ -225,7 +225,7 @@ export function bible_glyph_chapter_job03() {
           "sorrow",
           "from",
           "my",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

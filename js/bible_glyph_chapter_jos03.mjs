@@ -224,7 +224,7 @@ export function bible_glyph_chapter_jos03() {
           "you",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "all",
           "$wrestling+heart_on_fire,",

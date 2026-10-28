@@ -90,7 +90,7 @@ export function bible_glyph_chapter_gen18() {
           "$heart_orange",
           "in",
           "your",
-          "$eyes,",
+          "$eye,",
           "$pleading",
           "do",
           "$no_entry+exclamation",

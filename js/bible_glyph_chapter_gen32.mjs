@@ -140,7 +140,7 @@ export function bible_glyph_chapter_gen32() {
           "$heart_orange",
           "in",
           "your",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

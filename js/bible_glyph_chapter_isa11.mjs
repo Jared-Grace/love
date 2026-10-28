@@ -95,7 +95,7 @@ export function bible_glyph_chapter_isa11() {
           "by",
           "what",
           "His",
-          "$eyes",
+          "$eye",
           "see,",
           "and",
           "He",

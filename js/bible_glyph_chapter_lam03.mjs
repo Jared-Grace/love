@@ -845,7 +845,7 @@ export function bible_glyph_chapter_lam03() {
           "$walking+pointing_down",
           "from",
           "my",
-          "$eyes",
+          "$eye",
           "$pointing_up",
           "the",
           "$broken_chain+thing",
@@ -861,7 +861,7 @@ export function bible_glyph_chapter_lam03() {
         verse_number: 49,
         words: [
           "My",
-          "$eyes",
+          "$eye",
           "$water_wave+down_arrow+hand+doing",
           "$no_entry",
           "ceasing,",
@@ -887,7 +887,7 @@ export function bible_glyph_chapter_lam03() {
         verse_number: 51,
         words: [
           "My",
-          "$eyes",
+          "$eye",
           "bring",
           "grief",
           "to",

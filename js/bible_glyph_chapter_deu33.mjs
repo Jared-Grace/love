@@ -827,7 +827,7 @@ export function bible_glyph_chapter_deu33() {
           "dwells",
           "$anchor+thing.",
           "The",
-          "$eyes",
+          "$eye",
           "of",
           "$hand+foot",
           "lives",

@@ -302,7 +302,7 @@ export function bible_glyph_chapter_lam05() {
           "of",
           "$flashlight+flashlight",
           "our",
-          "$eyes",
+          "$eye",
           "grow",
           "dim",
         ],

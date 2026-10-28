@@ -630,7 +630,7 @@ export function bible_glyph_chapter_1ki01() {
           "the",
           "$king,",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "all",
           "$wrestling+heart_on_fire",

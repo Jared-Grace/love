@@ -313,7 +313,7 @@ export function bible_glyph_chapter_sng08() {
           "become",
           "in",
           "his",
-          "$eyes",
+          "$eye",
           "like",
           "one",
           "who",

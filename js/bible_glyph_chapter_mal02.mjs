@@ -617,7 +617,7 @@ export function bible_glyph_chapter_mal02() {
           "$thumbs_up",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$i_am,",

@@ -257,7 +257,7 @@ export function bible_glyph_chapter_deu06() {
           "forehead",
           "between",
           "your",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {
@@ -526,7 +526,7 @@ export function bible_glyph_chapter_deu06() {
           "$thumbs_up",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$i_am,",
@@ -643,7 +643,7 @@ export function bible_glyph_chapter_deu06() {
         words: [
           "Before",
           "our",
-          "$eyes",
+          "$eye",
           "the",
           "$i_am",
           "$hands_giving",

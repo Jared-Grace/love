@@ -275,7 +275,7 @@ export function bible_glyph_chapter_exo34() {
           "$heart_orange",
           "in",
           "Your",
-          "$eyes,",
+          "$eye,",
           "O",
           "$crown,",
           "$pleading",

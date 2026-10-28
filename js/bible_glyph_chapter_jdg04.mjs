@@ -23,7 +23,7 @@ export function bible_glyph_chapter_jdg04() {
           "$thumbs_down",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$i_am.",

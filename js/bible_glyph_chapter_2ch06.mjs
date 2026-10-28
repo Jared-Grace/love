@@ -669,7 +669,7 @@ export function bible_glyph_chapter_2ch06() {
         words: [
           "May",
           "Your",
-          "$eyes",
+          "$eye",
           "be",
           "$unlocked",
           "$toward",
@@ -1496,7 +1496,7 @@ export function bible_glyph_chapter_2ch06() {
           "$heart_on_fire,",
           "may",
           "Your",
-          "$eyes",
+          "$eye",
           "$link",
           "$unlocked",
           "and",

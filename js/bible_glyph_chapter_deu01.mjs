@@ -913,7 +913,7 @@ export function bible_glyph_chapter_deu01() {
           "just",
           "as",
           "you",
-          "$eyes",
+          "$eye",
           "Him",
           "$hammer+doing",
           "for",

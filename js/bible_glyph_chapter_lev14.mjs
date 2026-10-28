@@ -270,7 +270,7 @@ export function bible_glyph_chapter_lev14() {
           "brows",
           "of",
           "his",
-          "$eyes,",
+          "$eye,",
           "and",
           "the",
           "rest",

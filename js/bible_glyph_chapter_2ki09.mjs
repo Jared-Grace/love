@@ -1111,7 +1111,7 @@ export function bible_glyph_chapter_2ki09() {
           "she",
           "painted",
           "her",
-          "$eyes,",
+          "$eye,",
           "$thumbs_up+doing",
           "her",
           "$person_gesturing_ok,",

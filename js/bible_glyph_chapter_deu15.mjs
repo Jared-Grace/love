@@ -282,7 +282,7 @@ export function bible_glyph_chapter_deu15() {
           "so",
           "that",
           "you",
-          "$eyes",
+          "$eye",
           "upon",
           "your",
           "$poor",
@@ -579,7 +579,7 @@ export function bible_glyph_chapter_deu15() {
         words: [
           "Do",
           "$no_entry",
-          "$eyes",
+          "$eye",
           "it",
           "as",
           "a",

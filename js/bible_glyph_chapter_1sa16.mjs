@@ -403,7 +403,7 @@ export function bible_glyph_chapter_1sa16() {
           "ruddy,",
           "with",
           "$face+sparkle",
-          "$eyes",
+          "$eye",
           "and",
           "a",
           "$thumbs_up",
@@ -722,7 +722,7 @@ export function bible_glyph_chapter_1sa16() {
           "favor",
           "in",
           "my",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

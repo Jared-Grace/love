@@ -143,7 +143,7 @@ export function bible_glyph_chapter_gen03() {
           "$tray_out",
           "it",
           "your",
-          "$eyes",
+          "$eye",
           "will",
           "be",
           "$eye+unlocked+doing,",
@@ -216,7 +216,7 @@ export function bible_glyph_chapter_gen03() {
         words: [
           "Then",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "both",
           "of",

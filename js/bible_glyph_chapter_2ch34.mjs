@@ -44,7 +44,7 @@ export function bible_glyph_chapter_2ch34() {
           "right",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$i_am",

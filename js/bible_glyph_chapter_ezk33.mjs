@@ -916,7 +916,7 @@ export function bible_glyph_chapter_ezk33() {
           "$lifting",
           "up",
           "your",
-          "$eyes",
+          "$eye",
           "to",
           "your",
           "$moai,",

@@ -557,7 +557,7 @@ export function bible_glyph_chapter_1sa03() {
           "$thumbs_up",
           "in",
           "His",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

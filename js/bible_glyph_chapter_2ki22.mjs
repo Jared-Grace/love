@@ -60,7 +60,7 @@ export function bible_glyph_chapter_2ki22() {
           "right",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$i_am",

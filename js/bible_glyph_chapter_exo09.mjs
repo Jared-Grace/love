@@ -244,7 +244,7 @@ export function bible_glyph_chapter_exo09() {
           "into",
           "the",
           "$sky",
-          "$eyes",
+          "$eye",
           "$house+proper_name.",
         ],
       },

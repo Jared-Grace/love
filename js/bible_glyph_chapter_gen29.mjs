@@ -467,7 +467,7 @@ export function bible_glyph_chapter_gen29() {
           "$proper_name$Leah",
           "had",
           "weak",
-          "$eyes,",
+          "$eye,",
           "but",
           "$proper_name$Rachel",
           "$link",

@@ -837,7 +837,7 @@ export function bible_glyph_chapter_ezk36() {
           "you",
           "before",
           "their",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {
@@ -1166,7 +1166,7 @@ export function bible_glyph_chapter_ezk36() {
           "desolate",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "all",
           "who",

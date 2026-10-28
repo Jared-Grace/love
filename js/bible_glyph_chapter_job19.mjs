@@ -277,7 +277,7 @@ export function bible_glyph_chapter_job19() {
           "foreigner",
           "in",
           "their",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

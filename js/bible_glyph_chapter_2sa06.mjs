@@ -667,7 +667,7 @@ export function bible_glyph_chapter_2sa06() {
           "$sun",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "maidservants",

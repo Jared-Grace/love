@@ -355,7 +355,7 @@ export function bible_glyph_chapter_lev04() {
           "and",
           "$voice",
           "$eyes+locked+doing",
-          "$eyes",
+          "$eye",
           "of",
           "$church,",
           "so",

@@ -154,7 +154,7 @@ export function bible_glyph_chapter_1sa08() {
           "displeasing",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "$ear+heart_on_fire,",
           "so",

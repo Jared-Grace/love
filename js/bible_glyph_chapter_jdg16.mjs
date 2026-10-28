@@ -834,7 +834,7 @@ export function bible_glyph_chapter_jdg16() {
           "gouged",
           "out",
           "his",
-          "$eyes,",
+          "$eye,",
           "and",
           "brought",
           "him",
@@ -1097,7 +1097,7 @@ export function bible_glyph_chapter_jdg16() {
           "for",
           "my",
           "$two",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

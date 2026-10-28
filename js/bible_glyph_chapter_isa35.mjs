@@ -129,7 +129,7 @@ export function bible_glyph_chapter_isa35() {
         words: [
           "$telescope+clock",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$person_with_white_cane+describing",

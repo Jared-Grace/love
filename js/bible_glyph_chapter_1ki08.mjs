@@ -952,7 +952,7 @@ export function bible_glyph_chapter_1ki08() {
         words: [
           "May",
           "Your",
-          "$eyes",
+          "$eye",
           "be",
           "$unlocked",
           "$toward",
@@ -1816,7 +1816,7 @@ export function bible_glyph_chapter_1ki08() {
         words: [
           "May",
           "Your",
-          "$eyes",
+          "$eye",
           "$link",
           "$unlocked",
           "to",

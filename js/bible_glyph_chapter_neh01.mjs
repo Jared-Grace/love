@@ -181,7 +181,7 @@ export function bible_glyph_chapter_neh01() {
         words: [
           "Let",
           "Your",
-          "$eyes",
+          "$eye",
           "$link",
           "$unlocked",
           "and",

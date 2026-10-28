@@ -540,7 +540,7 @@ export function bible_glyph_chapter_exo10() {
           "They",
           "covered",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "all",
           "the",

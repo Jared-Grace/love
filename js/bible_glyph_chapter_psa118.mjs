@@ -463,7 +463,7 @@ export function bible_glyph_chapter_psa118() {
           "marvelous",
           "in",
           "our",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

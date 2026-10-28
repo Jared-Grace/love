@@ -148,7 +148,7 @@ export function bible_glyph_chapter_1sa24() {
           "good",
           "in",
           "your",
-          "$eyes.'\"",
+          "$eye.'\"",
           "Then",
           "$two_hearts+proper_name",
           "crept",

@@ -84,7 +84,7 @@ export function bible_glyph_chapter_psa090() {
           "$year",
           "in",
           "Your",
-          "$eyes",
+          "$eye",
           "are",
           "but",
           "a",

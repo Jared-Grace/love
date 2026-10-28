@@ -397,7 +397,7 @@ export function bible_glyph_chapter_deu11() {
           "$heart_on_fire",
           "$magnifying_glass+question.",
           "The",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$i_am",
@@ -621,7 +621,7 @@ export function bible_glyph_chapter_deu11() {
           "forehead",
           "between",
           "your",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

@@ -728,7 +728,7 @@ export function bible_glyph_chapter_jer29() {
           "before",
           "your",
           "very",
-          "$eyes.",
+          "$eye.",
         ],
       },
       {

@@ -334,7 +334,7 @@ export function bible_glyph_chapter_isa02() {
         words: [
           "The",
           "proud",
-          "$eyes",
+          "$eye",
           "of",
           "$person",
           "will",

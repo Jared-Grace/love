@@ -632,7 +632,7 @@ export function bible_glyph_chapter_num15() {
           "was",
           "$hammer+doing",
           "$footprints+question+thing,",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "congregation,",

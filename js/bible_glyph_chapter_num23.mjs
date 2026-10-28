@@ -772,7 +772,7 @@ export function bible_glyph_chapter_num23() {
           "will",
           "please",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "$heart_on_fire",
           "that",

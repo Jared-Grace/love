@@ -1164,7 +1164,7 @@ export function bible_glyph_chapter_exo12() {
           "$heart_orange",
           "in",
           "the",
-          "$eyes",
+          "$eye",
           "of",
           "the",
           "$clamp+proper_name",
