@@ -141,7 +141,7 @@ export function bible_glyph_chapter_num13() {
           "$proper_name$Igal",
           "$son",
           "of",
-          "$i_am+plus;",
+          "$i_am+plus+proper_name;",
         ],
       },
       {
@@ -193,7 +193,7 @@ export function bible_glyph_chapter_num13() {
           "the",
           "tribe",
           "of",
-          "$i_am+plus,",
+          "$i_am+plus+proper_name,",
           "that",
           "is",
           "the",

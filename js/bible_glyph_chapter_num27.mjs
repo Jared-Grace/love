@@ -41,7 +41,7 @@ export function bible_glyph_chapter_num27() {
           "$proper_name$Manasseh",
           "$son",
           "of",
-          "$i_am+plus,",
+          "$i_am+plus+proper_name,",
           "approached.",
           "$flashlight+flashlight",
           "were",

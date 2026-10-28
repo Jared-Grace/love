@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 1,
         words: [
           "So",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "$footprints",
           "and",
           "told",
@@ -158,7 +158,7 @@ export function bible_glyph_chapter_gen47() {
           "$house+proper_name",
           "$speech",
           "to",
-          "$i_am+plus,",
+          "$i_am+plus+proper_name,",
           "$speech,",
           "Now",
           "that",
@@ -226,7 +226,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 7,
         words: [
           "Then",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "$footprints",
           "$hand+foot",
           "his",
@@ -336,7 +336,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 11,
         words: [
           "So",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "$person+house",
           "his",
           "$father",
@@ -371,7 +371,7 @@ export function bible_glyph_chapter_gen47() {
       {
         verse_number: 12,
         words: [
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "also",
           "$package+hand+doing",
           "his",
@@ -427,7 +427,7 @@ export function bible_glyph_chapter_gen47() {
       {
         verse_number: 14,
         words: [
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "$hand+sheaf_of_rice+doing",
           "$all",
           "the",
@@ -486,7 +486,7 @@ export function bible_glyph_chapter_gen47() {
           "$clamp+person",
           "$footprints",
           "$toward",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "and",
           "$speech,",
           "$hands_giving+up_arrow",
@@ -511,7 +511,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 16,
         words: [
           "Then",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "$speech,",
           "Bring",
           "me",
@@ -543,7 +543,7 @@ export function bible_glyph_chapter_gen47() {
           "their",
           "livestock",
           "$toward",
-          "$i_am+plus,",
+          "$i_am+plus+proper_name,",
           "and",
           "he",
           "$hands_giving",
@@ -688,7 +688,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 20,
         words: [
           "So",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "$coin+hand_receiving",
           "all",
           "the",
@@ -786,7 +786,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 23,
         words: [
           "Then",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "$speech",
           "to",
           "the",
@@ -888,7 +888,7 @@ export function bible_glyph_chapter_gen47() {
         verse_number: 26,
         words: [
           "So",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "$palm_down",
           "a",
           "law",
@@ -995,7 +995,7 @@ export function bible_glyph_chapter_gen47() {
           "called",
           "his",
           "$son",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "and",
           "$speech",
           "to",

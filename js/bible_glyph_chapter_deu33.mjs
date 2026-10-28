@@ -371,7 +371,7 @@ export function bible_glyph_chapter_deu33() {
         verse_number: 13,
         words: [
           "Concerning",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "he",
           "$speech,",
           "May",
@@ -468,7 +468,7 @@ export function bible_glyph_chapter_deu33() {
           "the",
           "$person_gesturing_ok",
           "of",
-          "$i_am+plus,",
+          "$i_am+plus+proper_name,",
           "on",
           "the",
           "$hair+up_arrow",

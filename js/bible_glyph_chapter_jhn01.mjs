@@ -1061,7 +1061,7 @@ export function bible_glyph_chapter_jhn01() {
           "the",
           "$son",
           "of",
-          "$i_am+plus.”",
+          "$i_am+plus+proper_name.”",
         ],
       },
       {

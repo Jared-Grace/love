@@ -994,7 +994,7 @@ export function bible_glyph_chapter_num32() {
           "$proper_name$Manasseh",
           "$son",
           "of",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "the",
           "$castle",
           "of",

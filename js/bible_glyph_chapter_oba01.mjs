@@ -586,7 +586,7 @@ export function bible_glyph_chapter_oba01() {
           "the",
           "$house",
           "of",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "a",
           "burning",
           "$fire+tongue;",

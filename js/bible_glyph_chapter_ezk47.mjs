@@ -472,7 +472,7 @@ export function bible_glyph_chapter_ezk47() {
           "of",
           "$wrestling+heart_on_fire,",
           "with",
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "receiving",
           "two",
           "portions.",

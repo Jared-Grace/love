@@ -170,7 +170,7 @@ export function bible_glyph_chapter_amo05() {
           "the",
           "$house",
           "of",
-          "$i_am+plus;",
+          "$i_am+plus+proper_name;",
           "it",
           "will",
           "$eating",
@@ -443,7 +443,7 @@ export function bible_glyph_chapter_amo05() {
           "the",
           "remnant",
           "of",
-          "$i_am+plus.",
+          "$i_am+plus+proper_name.",
         ],
       },
       {

@@ -1050,7 +1050,7 @@ export function bible_glyph_chapter_jos24() {
           "the",
           "bones",
           "of",
-          "$i_am+plus,",
+          "$i_am+plus+proper_name,",
           "which",
           "the",
           "$son",
@@ -1099,7 +1099,7 @@ export function bible_glyph_chapter_jos24() {
           "the",
           "$son",
           "of",
-          "$i_am+plus.",
+          "$i_am+plus+proper_name.",
         ],
       },
       {

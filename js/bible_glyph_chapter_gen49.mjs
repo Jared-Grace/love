@@ -507,7 +507,7 @@ export function bible_glyph_chapter_gen49() {
       {
         verse_number: 22,
         words: [
-          "$i_am+plus",
+          "$i_am+plus+proper_name",
           "is",
           "a",
           "fruitful",
@@ -649,7 +649,7 @@ export function bible_glyph_chapter_gen49() {
           "the",
           "$person_gesturing_ok",
           "of",
-          "$i_am+plus,",
+          "$i_am+plus+proper_name,",
           "on",
           "the",
           "brow",

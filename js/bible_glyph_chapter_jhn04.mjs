@@ -95,7 +95,7 @@ export function bible_glyph_chapter_jhn04() {
           "to",
           "$pointing_back",
           "$son",
-          "$i_am+plus.",
+          "$i_am+plus+proper_name.",
         ],
       },
       {
