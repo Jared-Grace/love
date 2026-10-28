@@ -3612,7 +3612,7 @@ export function bible_glyph_roots_hebrew_drafted() {
       "Iye-abarim, ruins of the crossers",
     ],
     ["5864", "iy_ruin", "derelict_house+thing+proper_name", "Iim, ruins"],
-    ["5881", "ayin", "eye+describing+proper_name", "Enan, having eyes"],
+    ["5881", "ayin:eye", "eye+describing+proper_name", "Enan, having eyes"],
     ["5918", "akar", "water+brown_square+doer+proper_name", "Ocran, muddler"],
     ["5988", "am", "family+heart_on_fire+proper_name", "Ammiel, people of God"],
     [
@@ -4442,7 +4442,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ],
     ["6008", "amad", "family+clock+all+proper_name", "Amad, people of time"],
     ["6024", "enab", "grapes+proper_name", "Anab, fruit"],
-    ["6044", "ayin", "eye+eye+proper_name", "Anim, fountains"],
+    ["6044", "ayin:eye", "eye+eye+proper_name", "Anim, fountains"],
     ["6068", "anah", "speech+turn_back+proper_name", "Anathoth"],
     [
       "6084",
@@ -7231,7 +7231,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["5796", "ez", "goat", "a goat"],
     ["5830", "ezrah", "rescue+hand+thing", "Ezra"],
     ["5831", "ezrah", "rescue+hand+thing", "Ezra"],
-    ["5870", "ayin", "eye", "an eye"],
+    ["5870", "ayin:eye", "eye", "an eye"],
     ["5928", "olah", "burnt_offering", "a burnt offering"],
     ["5962", "alam", "eyes+locked+proper_name+person", "an Elamite"],
     ["5972", "am", "family", "a people"],

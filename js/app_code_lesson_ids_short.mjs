@@ -10,6 +10,7 @@ export function app_code_lesson_ids_short() {
   ("The shape follows the function name rather than the sentence a learner reads, so a lesson that chooses which operator to solve first opens with order, one about brackets opens with brackets, and one that gives a value a name opens with name. That grouping is what makes a hundred and thirty-three of them scannable at all.");
   ("★ EIGHTEEN OF THEM WERE SHORTENED IN ONE PASS, AND THE MOMENT IS WHY. The longest was twenty one characters and the longest now is sixteen. That edit is free today and expensive at any later date: the shortened ids exist only in this repo and in a dev build, so nobody is holding one, while after a deploy each of these words is a key on somebody's device and moving it takes their finished work with it. So the pass was taken while it still cost nothing rather than left as tidying.");
   ("Eleven were over the old ceiling and seven more were dragged along to keep a family reading one way. Renaming the brackets lesson on both sides of a comparison and leaving the choose-order one beside it spelled the long way would have made the group unreadable, which is worse than either spelling on its own. So both sides moved: what was both_sides is sides throughout, what was true_false is gives, and a pair of operators is named by its first one.");
+  ("A third pass, 2026-10-27, shortened fifty four that had arrived above the ceiling, at the human's asking and for the same reason: none was in prod's released list yet, so only the one person on latest held them. A family drops its long word for a short one rather than its group word - rect, meet and sq under name; the braces walk and step lessons as run and step, the way step_if_true already was; the token order lessons as token. Not picked: dropping name from the rectangle and meeting lessons, which would split them off from every other lesson that gives a value a name.");
   let short = {
     app_code_lesson_symbols_digits_numbered: text_frozen("digits_numbered"),
     app_code_lesson_symbols_digit_number: text_frozen("digits_in_number"),
@@ -279,56 +280,40 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_even: text_frozen("name_even"),
     app_code_lesson_statement_name_page_start: text_frozen("name_page_start"),
     app_code_lesson_statement_name_clamp: text_frozen("name_clamp"),
-    app_code_lesson_statement_name_meetings_overlap: text_frozen(
-      "name_meetings_overlap",
-    ),
+    app_code_lesson_statement_name_meetings_overlap:
+      text_frozen("name_meet_clash"),
     app_code_lesson_statement_name_overlap_hours:
-      text_frozen("name_overlap_hours"),
-    app_code_lesson_statement_name_meetings_join:
-      text_frozen("name_meetings_join"),
-    app_code_lesson_statement_name_rectangles_overlap: text_frozen(
-      "name_rectangles_overlap",
-    ),
-    app_code_lesson_statement_name_shared_squares: text_frozen(
-      "name_shared_squares",
-    ),
-    app_code_lesson_statement_name_shared_squares_none: text_frozen(
-      "name_shared_squares_none",
-    ),
-    app_code_lesson_statement_name_square_in_rectangle: text_frozen(
-      "name_square_in_rectangle",
-    ),
-    app_code_lesson_statement_name_meeting_inside: text_frozen(
-      "name_meeting_inside",
-    ),
-    app_code_lesson_statement_name_rectangle_inside: text_frozen(
-      "name_rectangle_inside",
-    ),
+      text_frozen("name_clash_hours"),
+    app_code_lesson_statement_name_meetings_join: text_frozen("name_meet_join"),
+    app_code_lesson_statement_name_rectangles_overlap:
+      text_frozen("name_rect_clash"),
+    app_code_lesson_statement_name_shared_squares:
+      text_frozen("name_sq_shared"),
+    app_code_lesson_statement_name_shared_squares_none:
+      text_frozen("name_sq_none"),
+    app_code_lesson_statement_name_square_in_rectangle:
+      text_frozen("name_sq_in_rect"),
+    app_code_lesson_statement_name_meeting_inside:
+      text_frozen("name_meet_inside"),
+    app_code_lesson_statement_name_rectangle_inside:
+      text_frozen("name_rect_inside"),
     app_code_lesson_statement_name_meeting_ended:
-      text_frozen("name_meeting_ended"),
-    app_code_lesson_statement_name_meetings_free:
-      text_frozen("name_meetings_free"),
-    app_code_lesson_statement_name_rectangle_above: text_frozen(
-      "name_rectangle_above",
-    ),
-    app_code_lesson_statement_name_rectangles_columns_between: text_frozen(
-      "name_rectangles_columns_between",
-    ),
-    app_code_lesson_statement_name_rectangles_join_down: text_frozen(
-      "name_rectangles_join_down",
-    ),
-    app_code_lesson_statement_name_rectangles_join_across: text_frozen(
-      "name_rectangles_join_across",
-    ),
-    app_code_lesson_statement_name_rectangles_cover_together: text_frozen(
-      "name_rectangles_cover_together",
-    ),
-    app_code_lesson_statement_name_rectangles_cover_edges: text_frozen(
-      "name_rectangles_cover_edges",
-    ),
-    app_code_lesson_statement_name_rectangle_wide_as_tall: text_frozen(
-      "name_rectangle_wide_as_tall",
-    ),
+      text_frozen("name_meet_ended"),
+    app_code_lesson_statement_name_meetings_free: text_frozen("name_meet_free"),
+    app_code_lesson_statement_name_rectangle_above:
+      text_frozen("name_rect_above"),
+    app_code_lesson_statement_name_rectangles_columns_between:
+      text_frozen("name_rect_cols"),
+    app_code_lesson_statement_name_rectangles_join_down:
+      text_frozen("name_rect_down"),
+    app_code_lesson_statement_name_rectangles_join_across:
+      text_frozen("name_rect_across"),
+    app_code_lesson_statement_name_rectangles_cover_together:
+      text_frozen("name_rect_cover"),
+    app_code_lesson_statement_name_rectangles_cover_edges:
+      text_frozen("name_rect_edges"),
+    app_code_lesson_statement_name_rectangle_wide_as_tall:
+      text_frozen("name_rect_square"),
     app_code_lesson_if_true: text_frozen("if_true"),
     app_code_lesson_braces_step_if_true: text_frozen("step_if_true"),
     app_code_lesson_if_false: text_frozen("if_false"),
@@ -336,7 +321,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_if_less_than: text_frozen("if_less_than"),
     app_code_lesson_if_name: text_frozen("if_name"),
     app_code_lesson_braces_step_if_name: text_frozen("step_if_name"),
-    app_code_lesson_if_names_less_than: text_frozen("if_names_less_than"),
+    app_code_lesson_if_names_less_than: text_frozen("if_names_less"),
     app_code_lesson_if_not: text_frozen("if_not"),
     app_code_lesson_if_steps: text_frozen("if_steps"),
     app_code_lesson_number_text_plus: text_frozen("number_text_plus"),
@@ -353,87 +338,50 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_if_else_once: text_frozen("if_else_once"),
     app_code_lesson_if_halve_even: text_frozen("if_halve_even"),
     app_code_lesson_if_else_change: text_frozen("if_else_change"),
-    app_code_lesson_if_halve_or_triple: text_frozen("if_halve_or_triple"),
+    app_code_lesson_if_halve_or_triple: text_frozen("if_halve_triple"),
     app_code_lesson_if_nested: text_frozen("if_nested"),
     app_code_lesson_braces_run: text_frozen("braces_run"),
-    app_code_lesson_braces_run_if_else: text_frozen("braces_run_if_else"),
-    app_code_lesson_braces_run_nested: text_frozen("braces_run_nested"),
-    app_code_lesson_braces_run_after_nested: text_frozen(
-      "braces_run_after_nested",
-    ),
-    app_code_lesson_braces_run_if_else_in_if: text_frozen(
-      "braces_run_if_else_in_if",
-    ),
-    app_code_lesson_braces_run_if_in_else: text_frozen("braces_run_if_in_else"),
-    app_code_lesson_braces_run_else_if: text_frozen("braces_run_else_if"),
-    app_code_lesson_braces_run_if_else_in_if_else: text_frozen(
-      "braces_run_if_else_in_if_else",
-    ),
-    app_code_lesson_braces_step_if_else_in_if_else: text_frozen(
-      "braces_step_if_else_in_if_else",
-    ),
-    app_code_lesson_braces_run_if_else_in_else: text_frozen(
-      "braces_run_if_else_in_else",
-    ),
-    app_code_lesson_braces_step_if_else_in_else: text_frozen(
-      "braces_step_if_else_in_else",
-    ),
-    app_code_lesson_braces_run_else_if_twice: text_frozen(
-      "braces_run_else_if_twice",
-    ),
-    app_code_lesson_braces_run_else_if_else: text_frozen(
-      "braces_run_else_if_else",
-    ),
-    app_code_lesson_braces_run_thrice: text_frozen("braces_run_thrice"),
+    app_code_lesson_braces_run_if_else: text_frozen("run_if_else"),
+    app_code_lesson_braces_run_nested: text_frozen("run_nested"),
+    app_code_lesson_braces_run_after_nested: text_frozen("run_after_nest"),
+    app_code_lesson_braces_run_if_else_in_if: text_frozen("run_else_in_if"),
+    app_code_lesson_braces_run_if_in_else: text_frozen("run_if_in_else"),
+    app_code_lesson_braces_run_else_if: text_frozen("run_else_if"),
+    app_code_lesson_braces_run_if_else_in_if_else:
+      text_frozen("run_nest_ifelse"),
+    app_code_lesson_braces_step_if_else_in_if_else:
+      text_frozen("step_nest_ifelse"),
+    app_code_lesson_braces_run_if_else_in_else: text_frozen("run_two_elses"),
+    app_code_lesson_braces_step_if_else_in_else: text_frozen("step_two_elses"),
+    app_code_lesson_braces_run_else_if_twice: text_frozen("run_else_ifs"),
+    app_code_lesson_braces_run_else_if_else: text_frozen("run_chain_else"),
+    app_code_lesson_braces_run_thrice: text_frozen("run_thrice"),
     app_code_lesson_braces_step: text_frozen("braces_step"),
-    app_code_lesson_braces_step_if_else: text_frozen("braces_step_if_else"),
-    app_code_lesson_braces_step_nested: text_frozen("braces_step_nested"),
-    app_code_lesson_braces_step_after_nested: text_frozen(
-      "braces_step_after_nested",
-    ),
-    app_code_lesson_braces_step_if_else_in_if: text_frozen(
-      "braces_step_if_else_in_if",
-    ),
-    app_code_lesson_braces_step_if_in_else: text_frozen(
-      "braces_step_if_in_else",
-    ),
-    app_code_lesson_braces_step_else_if: text_frozen("braces_step_else_if"),
-    app_code_lesson_braces_step_else_if_twice: text_frozen(
-      "braces_step_else_if_twice",
-    ),
-    app_code_lesson_braces_step_else_if_else: text_frozen(
-      "braces_step_else_if_else",
-    ),
-    app_code_lesson_braces_step_thrice: text_frozen("braces_step_thrice"),
+    app_code_lesson_braces_step_if_else: text_frozen("step_if_else"),
+    app_code_lesson_braces_step_nested: text_frozen("step_nested"),
+    app_code_lesson_braces_step_after_nested: text_frozen("step_after_nest"),
+    app_code_lesson_braces_step_if_else_in_if: text_frozen("step_else_in_if"),
+    app_code_lesson_braces_step_if_in_else: text_frozen("step_if_in_else"),
+    app_code_lesson_braces_step_else_if: text_frozen("step_else_if"),
+    app_code_lesson_braces_step_else_if_twice: text_frozen("step_else_ifs"),
+    app_code_lesson_braces_step_else_if_else: text_frozen("step_chain_else"),
+    app_code_lesson_braces_step_thrice: text_frozen("step_thrice"),
     app_code_lesson_if_after_nested: text_frozen("if_after_nested"),
     app_code_lesson_brace_pair: text_frozen("brace_pair"),
     app_code_lesson_brace_pair_two: text_frozen("brace_pair_two"),
     app_code_lesson_brace_lines_two: text_frozen("brace_lines_two"),
-    app_code_lesson_brace_lines_two_nested: text_frozen(
-      "brace_lines_two_nested",
-    ),
+    app_code_lesson_brace_lines_two_nested: text_frozen("brace_lines_nest"),
     app_code_lesson_brace_lines: text_frozen("brace_lines"),
     app_code_lesson_token_order: text_frozen("token_order"),
-    app_code_lesson_token_order_alone: text_frozen("token_order_alone"),
-    app_code_lesson_token_order_braces: text_frozen("token_order_braces"),
-    app_code_lesson_token_order_braces_plain: text_frozen(
-      "token_order_braces_plain",
-    ),
-    app_code_lesson_token_order_braces_three: text_frozen(
-      "token_order_braces_three",
-    ),
-    app_code_lesson_token_order_braces_three_plain: text_frozen(
-      "token_order_braces_three_plain",
-    ),
-    app_code_lesson_token_order_braces_colored: text_frozen(
-      "token_order_braces_colored",
-    ),
-    app_code_lesson_token_order_braces_only: text_frozen(
-      "token_order_braces_only",
-    ),
-    app_code_lesson_token_order_braces_two: text_frozen(
-      "token_order_braces_two",
-    ),
+    app_code_lesson_token_order_alone: text_frozen("token_alone"),
+    app_code_lesson_token_order_braces: text_frozen("token_braces"),
+    app_code_lesson_token_order_braces_plain: text_frozen("token_plain"),
+    app_code_lesson_token_order_braces_three: text_frozen("token_braces_3"),
+    app_code_lesson_token_order_braces_three_plain:
+      text_frozen("token_plain_3"),
+    app_code_lesson_token_order_braces_colored: text_frozen("token_colored"),
+    app_code_lesson_token_order_braces_only: text_frozen("token_brace_only"),
+    app_code_lesson_token_order_braces_two: text_frozen("token_braces_2"),
     app_code_lesson_if_else_in_if: text_frozen("if_else_in_if"),
     app_code_lesson_if_else_in_if_else: text_frozen("if_else_outer"),
     app_code_lesson_if_in_else: text_frozen("if_in_else"),
@@ -450,9 +398,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_while_total: text_frozen("while_total"),
     app_code_lesson_while_total_step: text_frozen("while_step"),
     app_code_lesson_while_total_squares: text_frozen("while_squares"),
-    app_code_lesson_statement_name_rectangles_rows_between: text_frozen(
-      "name_rectangles_rows_between",
-    ),
+    app_code_lesson_statement_name_rectangles_rows_between:
+      text_frozen("name_rect_rows"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
     app_code_lesson_statement_name_greater: text_frozen("name_greater"),
     app_code_lesson_statement_name_smaller_equal:
@@ -473,8 +420,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_statement_name_number: text_frozen("name_number"),
     app_code_lesson_statement_name_minus_one: text_frozen("name_minus_one"),
     app_code_lesson_statement_name_plus_one: text_frozen("name_plus_one"),
-    app_code_lesson_step_name_plus_one: text_frozen("step_name_plus_one"),
-    app_code_lesson_step_name_one_more: text_frozen("step_name_one_more"),
+    app_code_lesson_step_name_plus_one: text_frozen("step_name_plus"),
+    app_code_lesson_step_name_one_more: text_frozen("step_name_more"),
     app_code_lesson_step_name_copy_kept: text_frozen("step_copy_kept"),
     app_code_lesson_step_name_swap_try: text_frozen("step_swap_try"),
     app_code_lesson_step_if_change: text_frozen("step_if_change"),
