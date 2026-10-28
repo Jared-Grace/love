@@ -708,7 +708,7 @@ export function bible_glyph_chapter_2ki01() {
           "$i_am+up_arrow",
           "$son",
           "of",
-          "$i_am+scales",
+          "$i_am+scales+proper_name",
           "$king",
           "of",
           "$hands_raised+proper_name.",
