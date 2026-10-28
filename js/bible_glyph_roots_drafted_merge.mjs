@@ -1,11 +1,12 @@
+import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { json_to } from "./json_to.mjs";
+import { not_equal } from "./not_equal.mjs";
 export function bible_glyph_roots_drafted_merge(roots, drafted) {
   arguments_assert(arguments, 2);
   ("$plain roots");
@@ -30,9 +31,23 @@ export function bible_glyph_roots_drafted_merge(roots, drafted) {
     }
   }
   ("A DRAFTED WORD MAY NAME ITS ROW AS name:gloss_start, because two hand-written rows can share a name and the first one would take every word spelled that way. The Hebrew ayin is both there is no and the eye, and the Aramaic eye, Enan and Anim were filed under there is no; split readings then saw the eye drawn by a second family and would not hand it back to the marks the eye root had worn. The colon form answers only to the one row of that name whose gloss starts that way, and is refused when that is not exactly one row.");
+  ("A BARE NAME THAT SEVERAL ROWS SHARE IS REFUSED, because the first row taking it silently is how nineteen words came to sit under the wrong meaning: shepherding under seeing, upon under not, you under now. The refusal makes the choice a written one.");
   function row_named(written) {
     let [name, gloss_start] = written.split(":");
     if (equal(gloss_start, undefined)) {
+      function same_name(row) {
+        let b = equal(row.root, name);
+        return b;
+      }
+      let shared = merged.filter(same_name);
+      if (greater_than(shared.length, 1)) {
+        let json_shared = json_to({
+          written,
+          found: shared.length,
+          hint: "a drafted word names a root that several rows share; write it name:gloss_start",
+        });
+        throw new Error(json_shared);
+      }
       let found_by_name = property_get_or_null(by_root, name);
       return found_by_name;
     }
