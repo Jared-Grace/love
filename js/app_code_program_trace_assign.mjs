@@ -6,6 +6,9 @@ import { property_exists_assert } from "./property_exists_assert.mjs";
 import { text_size } from "./text_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_slice } from "./text_slice.mjs";
+import { equal } from "./equal.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { app_code_program_trace_long_way } from "./app_code_program_trace_long_way.mjs";
 import { app_code_program_trace_value } from "./app_code_program_trace_value.mjs";
 import { list_add } from "./list_add.mjs";
@@ -38,9 +41,16 @@ export function app_code_program_trace_assign(
     let to4 = subtract(left, 1);
     ("the right side is a name or a value written out, as in every lesson on these operators; an operator there would need ( ) around it in the long way, a *= b + 1 being a = a * (b + 1), so it is refused rather than written out wrong");
     let right_type = property_get(right, "type");
+    let symbol = text_slice(operator2, 0, to4);
+    ("2026-10-28: a * / or % right of a += or -= needs no ( ), since it is solved before the + or - anyway: total += n * n is total = total + n * n. Let in for A running total of squares, stepped through a line at a time.");
+    let tighter =
+      equal(right_type, "BinaryExpression") &&
+      list_includes(["+", "-"], symbol) &&
+      list_includes(["*", "/", "%"], property_get(right, "operator"));
     if (
       not_equal(right_type, "Identifier") &&
-      not_equal(right_type, "Literal")
+      not_equal(right_type, "Literal") &&
+      not(tighter)
     ) {
       error({
         message:
@@ -49,7 +59,6 @@ export function app_code_program_trace_assign(
         right_type,
       });
     }
-    let symbol = text_slice(operator2, 0, to4);
     let right_from = property_get(right, "start");
     let right_to = property_get(right, "end");
     let right_text = text_slice(code, right_from, right_to);
