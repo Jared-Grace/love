@@ -526,7 +526,7 @@ export function bible_glyph_chapter_gen35() {
           "$father",
           "called",
           "him",
-          "$son+right_arrow.",
+          "$son+right_arrow+proper_name.",
         ],
       },
       {
@@ -642,7 +642,7 @@ export function bible_glyph_chapter_gen35() {
       },
       {
         verse_number: 24,
-        words: ["The", "$son", "of", "$proper_name$Rachel:", "$i_am+plus+proper_name", "and", "$son+right_arrow."],
+        words: ["The", "$son", "of", "$proper_name$Rachel:", "$i_am+plus+proper_name", "and", "$son+right_arrow+proper_name."],
       },
       {
         verse_number: 25,

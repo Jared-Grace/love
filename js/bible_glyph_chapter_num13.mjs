@@ -165,7 +165,7 @@ export function bible_glyph_chapter_num13() {
           "the",
           "tribe",
           "of",
-          "$son+right_arrow,",
+          "$son+right_arrow+proper_name,",
           "$proper_name$Palti",
           "$son",
           "of",

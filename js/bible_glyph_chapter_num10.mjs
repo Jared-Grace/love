@@ -605,7 +605,7 @@ export function bible_glyph_chapter_num10() {
           "tribe",
           "of",
           "$son",
-          "$son+right_arrow.",
+          "$son+right_arrow+proper_name.",
         ],
       },
       {

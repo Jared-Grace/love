@@ -870,7 +870,7 @@ export function bible_glyph_chapter_jer17() {
           "the",
           "$earth",
           "of",
-          "$son+right_arrow,",
+          "$son+right_arrow+proper_name,",
           "$tray_out",
           "the",
           "foothills,",

@@ -657,7 +657,7 @@ export function bible_glyph_chapter_oba01() {
           "and",
           "$guard+proper_name,",
           "and",
-          "$son+right_arrow",
+          "$son+right_arrow+proper_name",
           "will",
           "possess",
           "$proper_name$Gilead.",

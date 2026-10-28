@@ -478,7 +478,7 @@ export function bible_glyph_chapter_gen46() {
           "were",
           "$i_am+plus+proper_name",
           "and",
-          "$son+right_arrow.",
+          "$son+right_arrow+proper_name.",
         ],
       },
       {
@@ -514,7 +514,7 @@ export function bible_glyph_chapter_gen46() {
           "The",
           "$son",
           "of",
-          "$son+right_arrow",
+          "$son+right_arrow+proper_name",
           "were",
           "$proper_name$Bela,",
           "$proper_name$Becher,",

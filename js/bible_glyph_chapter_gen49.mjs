@@ -664,7 +664,7 @@ export function bible_glyph_chapter_gen49() {
       {
         verse_number: 27,
         words: [
-          "$son+right_arrow",
+          "$son+right_arrow+proper_name",
           "is",
           "a",
           "ravenous",

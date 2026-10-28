@@ -29,7 +29,7 @@ export function bible_glyph_chapter_jer01() {
           "the",
           "$earth",
           "of",
-          "$son+right_arrow.",
+          "$son+right_arrow+proper_name.",
         ],
       },
       {

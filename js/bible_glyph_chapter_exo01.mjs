@@ -52,7 +52,7 @@ export function bible_glyph_chapter_exo01() {
           "$proper_name$Issachar,",
           "$proper_name$Zebulun,",
           "and",
-          "$son+right_arrow;",
+          "$son+right_arrow+proper_name;",
         ],
       },
       {

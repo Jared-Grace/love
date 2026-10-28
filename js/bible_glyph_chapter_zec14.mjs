@@ -342,7 +342,7 @@ export function bible_glyph_chapter_zec14() {
           "place,",
           "from",
           "the",
-          "$son+right_arrow",
+          "$son+right_arrow+proper_name",
           "$gate",
           "to",
           "the",

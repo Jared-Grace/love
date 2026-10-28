@@ -197,7 +197,7 @@ export function bible_glyph_chapter_ezr01() {
           "of",
           "$hands_raised+proper_name",
           "and",
-          "$son+right_arrow,",
+          "$son+right_arrow+proper_name,",
           "along",
           "with",
           "the",
