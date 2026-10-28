@@ -129,6 +129,12 @@ export function app_code_program_step_order_words(
       ];
       return r11;
     }
+    if (equal(step_kind, "reset")) {
+      let r22 = [
+        "This line still shows the values solved into it the last time it ran, so it has not been reset",
+      ];
+      return r22;
+    }
     let r12 = ["This line is still written the short way"];
     return r12;
   }
@@ -171,6 +177,12 @@ export function app_code_program_step_order_words(
         ", so it has already been logged",
       ];
       return r16;
+    }
+    if (equal(step_kind, "reset")) {
+      let r23 = [
+        "This line is already back to how it is written, so it has already been reset",
+      ];
+      return r23;
     }
     let r17 = ["This line is already written the long way"];
     return r17;
@@ -235,6 +247,16 @@ export function app_code_program_step_order_words(
       ],
     };
     return r21;
+  }
+  if (equal(at, -1) && equal(option_kind, "reset")) {
+    ("2026-10-28: Reset the line, chosen on a line running for the first time, says why there is nothing to put back");
+    let r24 = {
+      reason: "reset_none",
+      words: [
+        "Only a line that ran before still shows values solved into it. This line has not run before, so there is nothing to reset",
+      ],
+    };
+    return r24;
   }
   if (equal(at, -1)) {
     return null;
