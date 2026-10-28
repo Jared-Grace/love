@@ -1206,7 +1206,7 @@ export function bible_glyph_chapter_2ch20() {
           "the",
           "$voice",
           "of",
-          "$i_am+pointing_back",
+          "$i_am+pointing_back+proper_name",
           "$son",
           "of",
           "$proper_name$Hanani,",
