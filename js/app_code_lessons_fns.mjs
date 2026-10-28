@@ -336,8 +336,8 @@ import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.m
 import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
 import { app_code_lesson_braces_step_thrice } from "./app_code_lesson_braces_step_thrice.mjs";
 import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
-import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_step_while } from "./app_code_lesson_step_while.mjs";
+import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_step_while_log } from "./app_code_lesson_step_while_log.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
@@ -353,6 +353,7 @@ import { app_code_lesson_step_while_total_squares } from "./app_code_lesson_step
 export function app_code_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
+  "2026-10-28: Step by step: While put straight before While, at the human's asking. Not picked: moving the other six while step lessons before theirs too, since the human named only the one";
   let fns = [
     app_code_lesson_symbols_digits_numbered,
     app_code_lesson_symbols_digit_number,
@@ -692,8 +693,8 @@ export function app_code_lessons_fns() {
     app_code_lesson_braces_run_thrice,
     app_code_lesson_braces_step_thrice,
     app_code_lesson_if_thrice,
-    app_code_lesson_while,
     app_code_lesson_step_while,
+    app_code_lesson_while,
     app_code_lesson_while_log,
     app_code_lesson_step_while_log,
     app_code_lesson_while_down,
