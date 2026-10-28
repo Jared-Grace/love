@@ -18,7 +18,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 1,
         words: [
           "Then",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$speech",
           "to",
           "$proper_name$Saul,",
@@ -329,7 +329,7 @@ export function bible_glyph_chapter_1sa15() {
           "$i_am",
           "$link",
           "$toward",
-          "$ear+heart_on_fire,",
+          "$ear+heart_on_fire+proper_name,",
           "$speech,",
         ],
       },
@@ -360,7 +360,7 @@ export function bible_glyph_chapter_1sa15() {
           "My",
           "$voice.",
           "And",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "was",
           "distressed,",
           "and",
@@ -382,7 +382,7 @@ export function bible_glyph_chapter_1sa15() {
           "in",
           "the",
           "$morning",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "got",
           "up",
           "to",
@@ -422,7 +422,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 13,
         words: [
           "When",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$footprints",
           "to",
           "him,",
@@ -450,7 +450,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 14,
         words: [
           "But",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$speech,",
           "Then",
           "what",
@@ -512,7 +512,7 @@ export function bible_glyph_chapter_1sa15() {
       {
         verse_number: 16,
         words: [
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$speech,",
           "$palm_down+doing.",
           "Let",
@@ -538,7 +538,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 17,
         words: [
           "And",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$speech,",
           "$traffic_light",
           "you",
@@ -714,7 +714,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 22,
         words: [
           "But",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$speech,",
           "Does",
           "the",
@@ -796,7 +796,7 @@ export function bible_glyph_chapter_1sa15() {
           "Saul",
           "$speech",
           "to",
-          "$ear+heart_on_fire,",
+          "$ear+heart_on_fire+proper_name,",
           "I",
           "have",
           "$bow+doing.",
@@ -848,7 +848,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 26,
         words: [
           "But",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$speech,",
           "I",
           "will",
@@ -881,7 +881,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 27,
         words: [
           "As",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$around+doing",
           "to",
           "$walking,",
@@ -901,7 +901,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 28,
         words: [
           "So",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$speech",
           "to",
           "him,",
@@ -1000,7 +1000,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 31,
         words: [
           "So",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$turn_back",
           "with",
           "$proper_name$Saul,",
@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 32,
         words: [
           "Then",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$speech,",
           "$walking+toward",
           "me",
@@ -1045,7 +1045,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 33,
         words: [
           "But",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$speech,",
           "As",
           "your",
@@ -1063,7 +1063,7 @@ export function bible_glyph_chapter_1sa15() {
           "among",
           "$woman.",
           "And",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "hacked",
           "$proper_name$Agag",
           "to",
@@ -1079,7 +1079,7 @@ export function bible_glyph_chapter_1sa15() {
         verse_number: 34,
         words: [
           "Then",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$walking",
           "to",
           "$proper_name$Ramah,",
@@ -1099,7 +1099,7 @@ export function bible_glyph_chapter_1sa15() {
       {
         verse_number: 35,
         words: [
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "did",
           "$no_entry",
           "$eyes",
@@ -1112,7 +1112,7 @@ export function bible_glyph_chapter_1sa15() {
           "his",
           "$skull,",
           "but",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "$loudly_crying+coffin",
           "for",
           "$proper_name$Saul.",

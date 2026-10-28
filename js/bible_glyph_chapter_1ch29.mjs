@@ -1026,7 +1026,7 @@ export function bible_glyph_chapter_1ch29() {
           "the",
           "$voice",
           "of",
-          "$ear+heart_on_fire",
+          "$ear+heart_on_fire+proper_name",
           "the",
           "Seer,",
           "in",

@@ -619,7 +619,7 @@ export function bible_glyph_chapter_1sa01() {
           "She",
           "named",
           "him",
-          "$ear+heart_on_fire,",
+          "$ear+heart_on_fire+proper_name,",
           "saying,",
           "$pointing",
           "I",
