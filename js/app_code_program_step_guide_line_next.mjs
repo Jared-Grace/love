@@ -9,7 +9,9 @@ import { subtract } from "./subtract.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { add } from "./add.mjs";
+import { less_than } from "./less_than.mjs";
 export function app_code_program_step_guide_line_next(lines, trace, index) {
   arguments_assert(arguments, 3);
   ("what a guided example says while it asks which line runs next: why that line, and then which to choose. Each sentence is a list of parts, words and code taking turns, the way every sentence in this app that holds code is written.");
@@ -39,6 +41,29 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
     let said = text_to(value);
     let alternate = property_get(before, "alternate");
     let braces = app_code_braces_dots();
+    ("2026-10-28: a while line is not an if and has no else, so its two outcomes are said in its own words: true runs the { ... } for the while, false ends the loop. Found reading the first while step lesson, which said the else was not run.");
+    if (equal(alternate, "loop")) {
+      let loop_runs = [
+        "The condition is ",
+        said,
+        ", so the ",
+        braces,
+        " for the ",
+        "while",
+      ];
+      if (value) {
+        let concated = list_concat(loop_runs, [" is run"]);
+        let r11 = [concated, choose];
+        return r11;
+      }
+      let concated2 = list_concat(loop_runs, [" is not run"]);
+      let r12 = [
+        concated2,
+        ["The loop is done, so the computer goes on below the ", "}"],
+        choose,
+      ];
+      return r12;
+    }
     ("2026-10-14, the human asked the if and else explained more, in these words for a false condition with an else: the { ... } for the if is not ran, so the { ... } for the else is ran, instead. Written with run for ran. The true case and the other two shapes after an if are said the same way, so the four read as one rule");
     let runs = [
       "The condition is ",
@@ -119,6 +144,20 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
     return r5;
   }
   let r10 = app_code_braces_dots();
+  ("2026-10-28: a line above the one before it is reached only by a loop going round again, so it is said as going back up, not on below.");
+  if (less_than(line, line_before)) {
+    let r13 = [
+      [
+        "Nothing more runs inside this ",
+        r10,
+        ", so the computer goes back up to the ",
+        "while",
+        " line, to check its condition again",
+      ],
+      choose,
+    ];
+    return r13;
+  }
   let r6 = [
     [
       "Nothing more runs inside this ",
