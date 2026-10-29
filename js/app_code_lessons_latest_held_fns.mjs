@@ -1,6 +1,4 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_while_total_step } from "./app_code_lesson_while_total_step.mjs";
-import { app_code_lesson_while_total_squares } from "./app_code_lesson_while_total_squares.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
   "A list of lessons rather than a cut at a number, for the same reason the released list is one: a lesson put in above would move a number, and a list names the lesson itself. Empty it to show every lesson on latest again. Since 2026-10-24 the working copy leaves these out too, so what this holds decides both.";
@@ -111,9 +109,7 @@ export function app_code_lessons_latest_held_fns() {
   ("2026-10-27: hold Counting by twos and threes and A running total of squares, new at the human's asking straight after A running total, until the human has read their first drafts");
   ("2026-10-28: hold the seven while step lessons, new at the human's asking straight after each while lesson, until the human has read their first drafts");
   ("2026-10-29: the seven while step lessons released by the human");
-  let fns = [
-    app_code_lesson_while_total_step,
-    app_code_lesson_while_total_squares,
-  ];
+  ("2026-10-29: Counting by twos and threes and A running total of squares released by the human, so each while step lesson on latest has its lesson after it: nothing held");
+  let fns = [];
   return fns;
 }
