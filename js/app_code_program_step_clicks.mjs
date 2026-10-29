@@ -26,7 +26,7 @@ export function app_code_program_step_clicks(code) {
     assign: "Assign a value",
     log: "Log a value to the console",
     expand: "Write it the long way",
-    reset: "Reset the line",
+    reset: "Reset the block",
   };
   function words(text) {
     let r = {

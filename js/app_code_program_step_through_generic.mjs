@@ -676,7 +676,9 @@ export function app_code_program_step_through_generic(
     let kind = property_get(action, "kind");
     if (equal(kind, "reset")) {
       ("2026-10-28, at the human's asking: a line run again is put back the way it is written, its names in place of the values solved into it the last time it ran");
-      line_restore(line_index);
+      ("2026-10-29, at the human's asking: a while line run again puts back its whole block, every line the reset names");
+      let lines = property_get(action, "lines");
+      each(lines, line_restore);
       return;
     }
     if (equal(kind, "evaluate")) {
@@ -994,7 +996,7 @@ export function app_code_program_step_through_generic(
       ["assign", "Assign a value"],
       ["log", "Log a value to the console"],
       ["expand", "Write it the long way"],
-      ["reset", "Reset the line"],
+      ["reset", "Reset the block"],
       ["complete", "This line is complete; continue to the next line"],
     ];
     ("2026-10-28: Reset the line is offered only in a program that runs a line twice, so the if lessons, where it is never right, keep the choices they had");

@@ -188,7 +188,7 @@ export function bible_glyph_chapter_gen44() {
           "does",
           "my",
           "$crown",
-          "$mouth",
+          "$voice+doing",
           "$flashlight+flashlight",
           "$speech?",
           "Your",

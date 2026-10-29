@@ -556,7 +556,7 @@ export function bible_glyph_chapter_gen32() {
           "You",
           "are",
           "to",
-          "$mouth",
+          "$voice+doing",
           "the",
           "same",
           "$speech",

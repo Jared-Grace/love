@@ -94,12 +94,12 @@ export function app_code_program_step_guide_action(entry, k) {
     ("2026-10-28, at the human's asking: a line run again still shows the values solved into it the last time it ran, and those values may no longer be true, so it is put back the way it is written first");
     let r23 = [
       [
-        "This line ran before, so it still shows the values solved into it then",
+        "This while ran before, so it and the lines inside its { } still show the values solved into them then",
       ],
       [
-        "Those values may have changed since, so the line goes back to how it is written",
+        "Those values may have changed since, so the whole block goes back to how it is written",
       ],
-      ["First, choose: Reset the line"],
+      ["First, choose: Reset the block"],
     ];
     return r23;
   }

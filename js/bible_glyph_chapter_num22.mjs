@@ -1240,7 +1240,7 @@ export function bible_glyph_chapter_num22() {
           "But",
           "can",
           "I",
-          "$mouth",
+          "$voice+doing",
           "just",
           "$package+question?",
           "Only",
@@ -1255,7 +1255,7 @@ export function bible_glyph_chapter_num22() {
           "that",
           "I",
           "must",
-          "$mouth.",
+          "$voice+doing.",
         ],
       },
       {

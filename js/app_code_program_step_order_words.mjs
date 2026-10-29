@@ -131,7 +131,7 @@ export function app_code_program_step_order_words(
     }
     if (equal(step_kind, "reset")) {
       let r22 = [
-        "This line still shows the values solved into it the last time it ran, so it has not been reset",
+        "This block still shows the values solved into it the last time it ran, so it has not been reset",
       ];
       return r22;
     }
@@ -180,7 +180,7 @@ export function app_code_program_step_order_words(
     }
     if (equal(step_kind, "reset")) {
       let r23 = [
-        "This line is already back to how it is written, so it has already been reset",
+        "This block is already back to how it is written, so it has already been reset",
       ];
       return r23;
     }
@@ -253,7 +253,7 @@ export function app_code_program_step_order_words(
     let r24 = {
       reason: "reset_none",
       words: [
-        "Only a line that ran before still shows values solved into it. This line has not run before, so there is nothing to reset",
+        "Only a while that ran before still shows values solved into its block, and the whole block is reset there, at the while. There is nothing to reset here",
       ],
     };
     return r24;

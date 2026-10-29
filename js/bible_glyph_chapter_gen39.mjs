@@ -501,7 +501,7 @@ export function bible_glyph_chapter_gen39() {
         words: [
           "Then",
           "she",
-          "$mouth",
+          "$voice+doing",
           "him",
           "the",
           "same",
@@ -556,7 +556,7 @@ export function bible_glyph_chapter_gen39() {
           "$speech",
           "his",
           "$woman",
-          "$mouth",
+          "$voice+doing",
           "him,",
           "$speech,",
           "This",
