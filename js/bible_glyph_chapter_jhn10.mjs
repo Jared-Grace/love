@@ -83,7 +83,7 @@ export function bible_glyph_chapter_jhn10() {
           "$sheep",
           "$ear+loudspeaker",
           "$pointing_back",
-          "$voice.",
+          "$loudspeaker.",
           "He",
           "calls",
           "his",
