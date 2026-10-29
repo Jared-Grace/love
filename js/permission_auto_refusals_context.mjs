@@ -1,11 +1,12 @@
 import { permission_grant_refusals_context } from "./permission_grant_refusals_context.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { functions_outside_irreversible_seams } from "./functions_outside_irreversible_seams.mjs";
 import { functions_permission_seams } from "./functions_permission_seams.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_seams_reached_paths_confined_memo } from "./function_seams_reached_paths_confined_memo.mjs";
+import { functions_outside_irreversible_fenced } from "./functions_outside_irreversible_fenced.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_add } from "./list_add.mjs";
 import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
@@ -23,10 +24,11 @@ export async function permission_auto_refusals_context(unaliased, context) {
   let b2 = functions_permission_seams();
   let seams = list_concat(a, b2);
   let remembered = property_get(context, "remembered");
+  let confined = functions_outside_irreversible_fenced();
   let paths = await function_seams_reached_paths_confined_memo(
     unaliased,
     seams,
-    [],
+    confined,
     remembered,
   );
   let reached = object_property_names(paths);
