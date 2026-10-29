@@ -836,10 +836,10 @@ export function bible_glyph_chapter_jer07() {
         words: [
           "When",
           "you",
-          "$voice",
+          "$voice+doing",
           "$all",
           "$flashlight+flashlight",
-          "$voice+doing",
+          "$voice",
           "to",
           "them,",
           "they",

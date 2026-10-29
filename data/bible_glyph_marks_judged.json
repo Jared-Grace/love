@@ -41,5 +41,15 @@
   { "chapter_code": "EXO04", "verse_number": 10, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
   { "chapter_code": "EXO04", "verse_number": 15, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
   { "chapter_code": "EXO19", "verse_number": 6, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
-  { "chapter_code": "EXO19", "verse_number": 9, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] }
+  { "chapter_code": "EXO19", "verse_number": 9, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "EXO24", "verse_number": 3, "was": ["voice+doing", "voice", "voice+doing", "voice+doing", "voice"], "now": ["voice", "loudspeaker", "speech", "voice", "voice+doing"] },
+  { "chapter_code": "EXO33", "verse_number": 17, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "EZK03", "verse_number": 10, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "EZK03", "verse_number": 4, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "GEN20", "verse_number": 8, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "GEN44", "verse_number": 18, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "GEN44", "verse_number": 6, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "JDG11", "verse_number": 11, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "JER07", "verse_number": 27, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "JER23", "verse_number": 16, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] }
 ]
