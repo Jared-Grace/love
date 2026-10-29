@@ -70,7 +70,9 @@ export function app_code_lesson_while_down() {
       "while",
       " can add to ",
       name,
-      " until what it asks is false:",
+      " until what it asks is ",
+      "false",
+      ":",
     ]);
     let code = js_code_let_statement(name, 1);
     let condition = js_code_binary_spaced_nb(name, less, 9);

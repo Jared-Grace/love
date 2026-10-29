@@ -189,7 +189,9 @@ export function app_code_lesson_while_total() {
         "while",
         " runs the lines inside its ",
         "{ ... }",
-        " again and again, while what it asks is true.",
+        " again and again, while what it asks is ",
+        "true",
+        ".",
       ],
     );
     let box_two = app_code_container_light_blue(root);

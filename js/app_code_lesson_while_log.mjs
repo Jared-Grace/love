@@ -26,8 +26,8 @@ import { subtract } from "./subtract.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -189,7 +189,9 @@ export function app_code_lesson_while_log() {
       "while",
       " runs the lines inside its ",
       "{ ... }",
-      " again and again, while what it asks is true.",
+      " again and again, while what it asks is ",
+      "true",
+      ".",
     ]);
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
