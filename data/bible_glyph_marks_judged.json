@@ -79,5 +79,16 @@
   { "chapter_code": "GEN44", "verse_number": 7, "was": ["speech", "voice+doing", "speech", "speech"], "now": ["speech", "voice+doing", "voice", "voice"] },
   { "chapter_code": "DEU04", "verse_number": 30, "was": ["speech", "voice"], "now": ["voice", "loudspeaker"] },
   { "chapter_code": "DEU04", "verse_number": 36, "was": ["voice", "speech"], "now": ["loudspeaker", "voice"] },
-  { "chapter_code": "DEU05", "verse_number": 28, "was": ["voice", "speech", "voice+doing", "speech", "voice", "speech", "voice+doing", "voice+doing"], "now": ["loudspeaker", "voice", "voice+doing", "speech", "loudspeaker", "voice", "voice+doing", "voice+doing"] }
+  { "chapter_code": "DEU05", "verse_number": 28, "was": ["voice", "speech", "voice+doing", "speech", "voice", "speech", "voice+doing", "voice+doing"], "now": ["loudspeaker", "voice", "voice+doing", "speech", "loudspeaker", "voice", "voice+doing", "voice+doing"] },
+  { "chapter_code": "2KI01", "verse_number": 16, "was": ["voice", "voice+doing", "speech"], "now": ["voice+doing", "speech", "voice"] },
+  { "chapter_code": "JOS02", "verse_number": 21, "was": ["speech", "voice"], "now": ["voice", "speech"] },
+  { "chapter_code": "1KI02", "verse_number": 14, "was": ["speech", "speech", "voice+doing", "voice"], "now": ["speech", "voice", "speech", "voice+doing"] },
+  { "chapter_code": "1KI20", "verse_number": 35, "was": ["speech", "voice"], "now": ["voice", "speech"] },
+  { "chapter_code": "NUM23", "verse_number": 16, "was": ["speech", "voice+doing", "voice"], "now": ["voice", "speech", "voice+doing"] },
+  { "chapter_code": "DEU31", "verse_number": 28, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "ECC01", "verse_number": 8, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "EST01", "verse_number": 18, "was": ["speech", "voice"], "now": ["voice", "speech"] },
+  { "chapter_code": "1SA08", "verse_number": 6, "was": ["voice", "speech"], "now": ["speech", "voice"] },
+  { "chapter_code": "LEV17", "verse_number": 2, "was": ["voice", "voice+doing", "speech", "speech"], "now": ["voice+doing", "speech", "voice", "speech"] },
+  { "chapter_code": "NUM23", "verse_number": 5, "was": ["speech", "voice+doing", "voice"], "now": ["voice", "speech", "voice+doing"] }
 ]
