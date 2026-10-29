@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { functions_outside_direct } from "./functions_outside_direct.mjs";
 import { functions_outside_direct_harmless } from "./functions_outside_direct_harmless.mjs";
 import { list_difference } from "./list_difference.mjs";
@@ -22,7 +23,8 @@ export async function functions_outside_direct_unlisted() {
       confined,
       remembered,
     );
-    let refused = !object_empty_is(paths);
+    let b = object_empty_is(paths);
+    let refused = not(b);
     if (refused) {
       return null;
     }
