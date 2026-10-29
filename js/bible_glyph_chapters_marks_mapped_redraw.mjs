@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_marks_mapped_planned } from "./bible_glyph_chapters_marks_mapped_planned.mjs";
-import { bible_glyph_chapters_seat_split_decided_write } from "./bible_glyph_chapters_seat_split_decided_write.mjs";
+import { bible_glyph_chapters_decided_redraw } from "./bible_glyph_chapters_decided_redraw.mjs";
 export async function bible_glyph_chapters_marks_mapped_redraw(
   froms_comma,
   tos_comma,
@@ -20,9 +20,7 @@ export async function bible_glyph_chapters_marks_mapped_redraw(
     tos_comma,
     testament_name,
   );
-  let written = await bible_glyph_chapters_seat_split_decided_write(
-    plan.decided,
-  );
+  let written = await bible_glyph_chapters_decided_redraw(plan.decided);
   let r = {
     testament_name,
     chapters_written: written.chapters_written,
