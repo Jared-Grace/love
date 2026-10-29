@@ -23,6 +23,7 @@ export function functions_outside_irreversible_seams() {
     fn_name("git_purge_only_after"),
     fn_name("firebase_upload_blob_browser_quiet_custom"),
     fn_name("firebase_upload_text_browser_quiet"),
+    fn_name("permission_auto_pin_write"),
   ];
   return names;
 }

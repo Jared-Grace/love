@@ -1,7 +1,9 @@
 import { permission_grant_refusals_context } from "./permission_grant_refusals_context.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { functions_outside_irreversible_seams } from "./functions_outside_irreversible_seams.mjs";
+import { functions_permission_seams } from "./functions_permission_seams.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_seams_reached_paths_confined_memo } from "./function_seams_reached_paths_confined_memo.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -16,7 +18,10 @@ export async function permission_auto_refusals_context(unaliased, context) {
   if (not(b)) {
     return refusals;
   }
-  let seams = functions_outside_irreversible_seams();
+  ("Writing permission rules asks too, arguments or none. The grant check lets an argument-free writer through because its rules come from committed source a person can read; nobody reads this one, and a self-grant that could grant a rule writer would approve every grant after it.");
+  let a = functions_outside_irreversible_seams();
+  let b2 = functions_permission_seams();
+  let seams = list_concat(a, b2);
   let remembered = property_get(context, "remembered");
   let paths = await function_seams_reached_paths_confined_memo(
     unaliased,
@@ -30,7 +35,7 @@ export async function permission_auto_refusals_context(unaliased, context) {
     list_add(
       refusals,
       unaliased +
-        " reaches something outside the repo that git cannot hand back, so a person must see it: " +
+        " reaches something outside the repo that git cannot hand back, or writes permission rules, so a person must see it: " +
         permission_grant_seam_chains_text(paths),
     );
   }
