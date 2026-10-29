@@ -2743,6 +2743,7 @@
       "Bash(node scripts/ai.mjs bible_glyph_chapters_verse_marks_overdrawn_walked:*)",
       "Bash(node scripts/ai.mjs app_en_learn_bible_gloss_urdu_write_file:*)",
       "Bash(node scripts/ai.mjs app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_wrong:*)",
+      "Bash(node scripts/ai.mjs permission_grant_add_auto:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5372,6 +5373,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_chapters_verse_marks_overdrawn_walked:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_write_file:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_wrong:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args permission_grant_add_auto:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -8000,6 +8002,7 @@
       "Bash(node scripts/aig.mjs bible_glyph_chapters_verse_marks_overdrawn_walked:*)",
       "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_write_file:*)",
       "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_wrong:*)",
+      "Bash(node scripts/aig.mjs permission_grant_add_auto:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10628,7 +10631,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_roots_split_families:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_verse_marks_overdrawn_walked:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_write_file:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_wrong:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_wrong:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args permission_grant_add_auto:*)"
     ],
     "defaultMode": "acceptEdits"
   },

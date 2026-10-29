@@ -199,6 +199,10 @@
   {
    "name": "g_sermon_pull",
    "refusals": 2
+  },
+  {
+   "name": "permission_grant_add_auto",
+   "refusals": 1
   }
  ]
 }
