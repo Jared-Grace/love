@@ -1,3 +1,4 @@
+import { functions_outside_direct_gate_run } from "./functions_outside_direct_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -1283,6 +1284,7 @@ export function qa_gates() {
     app_code_quiz_lines_order_indent_gate_run,
     app_code_program_step_presses_gate_run,
     bible_glyph_chapters_note_glyph_gate_run,
+    functions_outside_direct_gate_run,
   ];
   return gates;
 }
