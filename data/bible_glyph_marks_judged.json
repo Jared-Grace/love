@@ -1,0 +1,23 @@
+[
+  { "chapter_code": "1KI01", "verse_number": 14, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "1KI02", "verse_number": 4, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1KI02", "verse_number": 23, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "1KI02", "verse_number": 27, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1KI02", "verse_number": 38, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1KI08", "verse_number": 56, "was": ["voice", "voice+doing", "voice+doing", "voice"], "now": ["voice+doing", "voice", "voice", "voice+doing"] },
+  { "chapter_code": "1KI12", "verse_number": 9, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1KI12", "verse_number": 15, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1KI13", "verse_number": 11, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1KI13", "verse_number": 18, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "1KI13", "verse_number": 26, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1KI17", "verse_number": 16, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1KI21", "verse_number": 4, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1KI22", "verse_number": 13, "was": ["voice", "voice+doing", "voice+doing", "voice+doing", "voice+doing", "voice"], "now": ["voice+doing", "speech", "voice", "voice", "voice", "voice+doing"] },
+  { "chapter_code": "1KI22", "verse_number": 38, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1SA03", "verse_number": 17, "was": ["voice+doing", "voice", "voice+doing", "voice"], "now": ["voice", "voice+doing", "voice", "voice+doing"] },
+  { "chapter_code": "1SA08", "verse_number": 21, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1SA20", "verse_number": 23, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "1SA25", "verse_number": 9, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "1SA25", "verse_number": 24, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "2CH06", "verse_number": 17, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] }
+]

@@ -447,7 +447,7 @@ export function bible_glyph_chapter_1ki01() {
           "you",
           "are",
           "$repeat",
-          "$voice",
+          "$voice+doing",
           "$telescope",
           "$linked_paperclips",
           "the",
@@ -461,7 +461,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "confirm",
           "your",
-          "$voice+doing.",
+          "$voice.",
         ],
       },
       {
