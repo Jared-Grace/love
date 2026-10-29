@@ -534,7 +534,8 @@ export function app_code_program_step_through_generic(
     "the learner says which line runs next, or that the program is complete";
     html_clear(ask);
     let index = property_get(state, "index");
-    let r = app_code_program_step_guide_line_next(lines, trace, index);
+    ("2026-10-29, at the human's asking: the line to choose is named as it reads on the screen now, so a while run again is named while (true) {, the way it shows, and not as it is written");
+    let r = app_code_program_step_guide_line_next(shown, trace, index);
     let b3 = list_size(trace);
     let done = greater_than_equal(index, b3);
     let holder = {
