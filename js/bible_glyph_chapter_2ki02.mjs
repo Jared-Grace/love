@@ -838,10 +838,10 @@ export function bible_glyph_chapter_2ki02() {
           "according",
           "to",
           "the",
-          "$voice+doing",
+          "$voice",
           "that",
           "$heart_on_fire+rescue",
-          "$voice.",
+          "$voice+doing.",
         ],
       },
       {
