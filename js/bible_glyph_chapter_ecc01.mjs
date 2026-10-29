@@ -156,7 +156,7 @@ export function bible_glyph_chapter_ecc01() {
         verse_number: 8,
         words: [
           "$all",
-          "$voice+doing",
+          "$voice",
           "are",
           "wearisome,",
           "$no_entry",
@@ -164,7 +164,7 @@ export function bible_glyph_chapter_ecc01() {
           "than",
           "$man_beard",
           "can",
-          "$voice;",
+          "$voice+doing;",
           "the",
           "$eyes",
           "is",
