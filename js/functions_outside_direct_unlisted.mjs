@@ -1,17 +1,21 @@
-import { not } from "./not.mjs";
 import { functions_outside_direct } from "./functions_outside_direct.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { functions_outside_direct_harmless } from "./functions_outside_direct_harmless.mjs";
+import { functions_outside_transports } from "./functions_outside_transports.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { functions_auto_seams } from "./functions_auto_seams.mjs";
 import { functions_outside_irreversible_fenced } from "./functions_outside_irreversible_fenced.mjs";
 import { function_seams_reached_paths_confined_memo } from "./function_seams_reached_paths_confined_memo.mjs";
 import { object_empty_is } from "./object_empty_is.mjs";
+import { not } from "./not.mjs";
 import { list_map_async_filter_null_not_is } from "./list_map_async_filter_null_not_is.mjs";
 export async function functions_outside_direct_unlisted() {
   "The functions that go outside directly and nobody has decided about yet - not refused by the check, because they reach none of what an unseen grant must not reach, and not marked harmless either. Each one is a place the walk is blind and the self-grant would let through.";
   "Refused is asked the way the check asks it, from the same lists and the same fence, so this cannot call a name covered that the check would let through. A name that is itself on a list reaches itself, so being listed and reaching a listed name are one answer rather than two.";
   let direct = await functions_outside_direct();
-  let names = functions_outside_direct_harmless();
+  let a = functions_outside_direct_harmless();
+  let b2 = functions_outside_transports();
+  let names = list_concat(a, b2);
   let open = list_difference(direct, names);
   let seams = functions_auto_seams();
   let confined = functions_outside_irreversible_fenced();

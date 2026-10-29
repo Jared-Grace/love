@@ -7,7 +7,10 @@ export function functions_outside_direct_harmless() {
   "Text for somewhere else to run: a page script, a service worker, a paste for a signed-in tab. Making the text sends nothing; whatever ships or pastes it is the step a person sees.";
   "Reads: a fixed address asked with no body, or a file fetched beside the page. Pictures and Bible text come down, nothing goes up.";
   "Local programs: a sound or video tool, a search, a hook or guard run over a fixed input, a browser window or server on this machine, desktop keys set from where the repo stands.";
-  "Not here on purpose: a transport whose caller chooses the method. Reading it once cannot decide it, because the next caller can send through it and that caller never goes outside directly itself.";
+  ("Not here on purpose: a transport whose caller chooses the method. Those are listed in ",
+    fn_name("functions_outside_transports"),
+    ", and their callers are decided here one by one.");
+  ("Callers of a transport that fix a read: a plain GET, a page of a storage listing, a local server's data. Porkbun's price list is asked for with POST and an empty body, because that is how its open interface is spelled; it carries no key and changes nothing.");
   let names = [
     fn_name("app_en_learn_bible_gloss_urdu_plural_noun_explains"),
     fn_name("bible_glyph_artwork_names"),
@@ -17,6 +20,7 @@ export function functions_outside_direct_harmless() {
     fn_name("bible_glyph_roots_greek_drafted"),
     fn_name("bible_glyph_roots_hebrew"),
     fn_name("functions_outside_direct"),
+    fn_name("functions_outside_direct_harmless"),
     fn_name("js_code_confined_cases"),
     fn_name("js_flow_machine_methods_data"),
     fn_name("js_flow_machine_power_cases"),
@@ -47,6 +51,30 @@ export function functions_outside_direct_harmless() {
     fn_name("g_verify_books_chrome_open"),
     fn_name("http_status_answering_server"),
     fn_name("workspace_shortcuts_ensure"),
+    fn_name("bfl_draw_status"),
+    fn_name("bfl_draw_wait"),
+    fn_name("berean_usfm_download"),
+    fn_name("binisaya_word_text"),
+    fn_name("door43_version_download"),
+    fn_name("ebible_version_usfm_download"),
+    fn_name("fal_price"),
+    fn_name("http_buffer_file_overwrite"),
+    fn_name("http_error_message_absent_is_cases_gate_run"),
+    fn_name("http"),
+    fn_name("http_get_large"),
+    fn_name("http_text_or_null"),
+    fn_name("sword_version_download"),
+    fn_name("url_available_is"),
+    fn_name("http_json_browser_quiet"),
+    fn_name("giveaway_archive_item_read_or_null"),
+    fn_name("youtube_oauth_access_token_allows"),
+    fn_name("youtube_oauth_access_token_info"),
+    fn_name("domain_porkbun_pricing"),
+    fn_name("firebase_storage_list_page"),
+    fn_name("firebase_storage_object_metadata"),
+    fn_name("http_json_memoized_on_success"),
+    fn_name("server_data_get"),
+    fn_name("youtube_api_get"),
   ];
   return names;
 }
