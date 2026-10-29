@@ -1108,7 +1108,7 @@ export function bible_glyph_chapter_deu31() {
         words: [
           "Then",
           "$fishing_pole+proper_name",
-          "$voice",
+          "$voice+doing",
           "in",
           "the",
           "hearing",
@@ -1119,7 +1119,7 @@ export function bible_glyph_chapter_deu31() {
           "of",
           "$wrestling+heart_on_fire",
           "the",
-          "$voice+doing",
+          "$voice",
           "of",
           "$flashlight",
           "$song",
