@@ -21,6 +21,8 @@ export function functions_outside_irreversible_seams() {
     fn_name("domain_porkbun_post"),
     fn_name("http_post_options"),
     fn_name("git_purge_only_after"),
+    fn_name("firebase_upload_blob_browser_quiet_custom"),
+    fn_name("firebase_upload_text_browser_quiet"),
   ];
   return names;
 }
