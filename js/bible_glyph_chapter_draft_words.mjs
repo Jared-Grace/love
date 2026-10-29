@@ -5,6 +5,7 @@ import { add } from "./add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
+import { bible_glyph_word_false_god_is } from "./bible_glyph_word_false_god_is.mjs";
 import { list_add } from "./list_add.mjs";
 export async function bible_glyph_chapter_draft_words(
   chapter_code,
@@ -17,6 +18,7 @@ export async function bible_glyph_chapter_draft_words(
   "SO THE TABLE HAS TO BE READABLE BEFORE THE SENTENCE IS WRITTEN, and until now it was not. The draft LINES show the glyphs in order with a mark for every gap, which answers whether a verse carries at all but never which word each picture came from - so an author was left matching pictures back to words by counting, and a miscount seats a glyph on the wrong word with nothing anywhere to catch it.";
   "IT ANSWERS FOR EVERY WORD, drawn or not, because the undrawn ones are half the decision. A word with no glyph is a word the sentence has to carry in English, and seeing which ones those are is what tells an author whether the verse will read as scripture or as pictures strung on nothing.";
   "IT IS AN AID AND NEVER A CHAPTER. Nothing here is scripture and nothing here ships; it is the table an author reads once, in one sitting, and what they write from it is the chapter.";
+  "A GOD OF THE NATIONS IS SEATED AS THE IDOL HERE AND NOT IN THE ROOT TABLE, because the table gives one number one picture and elohim is both the God of Israel and the gods; which one a word is depends on its verse, and this is where a word first stands in one.";
   let roots = bible_glyph_roots_testament_table(testament_name);
   let drawn = bible_glyph_roots_drawn_lookup(roots);
   let verses = await bible_interlinear_chapter_words(chapter_code);
@@ -39,6 +41,9 @@ export async function bible_glyph_chapter_draft_words(
         strong: word.strong,
         glyph,
       };
+      if (bible_glyph_word_false_god_is(chapter_code, verse_number, entry)) {
+        entry.glyph = "moai";
+      }
       list_add(words, entry);
     }
     let row = {
