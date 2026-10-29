@@ -406,7 +406,7 @@ export function bible_glyph_chapter_pro04() {
           "attention",
           "to",
           "my",
-          "$speech;",
+          "$voice;",
           "$white_cane+doing",
           "your",
           "ear",

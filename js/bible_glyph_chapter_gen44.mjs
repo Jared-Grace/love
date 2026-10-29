@@ -190,7 +190,7 @@ export function bible_glyph_chapter_gen44() {
           "$crown",
           "$voice+doing",
           "$flashlight+flashlight",
-          "$speech?",
+          "$voice?",
           "Your",
           "$kneeling",
           "could",
@@ -199,7 +199,7 @@ export function bible_glyph_chapter_gen44() {
           "$hammer+doing",
           "such",
           "a",
-          "$speech.",
+          "$voice.",
         ],
       },
       {

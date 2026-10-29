@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_gen24() {
           "I",
           "came",
           "to",
-          "$speech.",
+          "$voice.",
           "Please",
           "$voice+doing,",
           "$speech",

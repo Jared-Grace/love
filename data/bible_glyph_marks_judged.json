@@ -62,5 +62,22 @@
   { "chapter_code": "NUM22", "verse_number": 20, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
   { "chapter_code": "NUM22", "verse_number": 7, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
   { "chapter_code": "NUM22", "verse_number": 8, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
-  { "chapter_code": "ZEC08", "verse_number": 16, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] }
+  { "chapter_code": "ZEC08", "verse_number": 16, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "EZK33", "verse_number": 32, "was": ["voice", "speech"], "now": ["loudspeaker", "voice"] },
+  { "chapter_code": "HAG01", "verse_number": 12, "was": ["voice", "speech"], "now": ["loudspeaker", "voice"] },
+  { "chapter_code": "JOL02", "verse_number": 11, "was": ["voice", "speech"], "now": ["loudspeaker", "voice"] },
+  { "chapter_code": "JOB42", "verse_number": 7, "was": ["voice+doing", "speech", "speech", "voice+doing"], "now": ["voice+doing", "voice", "speech", "voice+doing"] },
+  { "chapter_code": "PRO04", "verse_number": 20, "was": ["speech"], "now": ["voice"] },
+  { "chapter_code": "GEN39", "verse_number": 19, "was": ["speech", "voice+doing", "speech", "speech"], "now": ["voice", "voice+doing", "speech", "voice"] },
+  { "chapter_code": "GEN24", "verse_number": 33, "was": ["speech", "voice+doing", "speech", "voice+doing", "speech"], "now": ["speech", "voice+doing", "voice", "voice+doing", "speech"] },
+  { "chapter_code": "EZR01", "verse_number": 1, "was": ["speech", "voice", "speech"], "now": ["voice", "loudspeaker", "speech"] },
+  { "chapter_code": "NUM22", "verse_number": 38, "was": ["speech", "voice+doing", "speech", "voice+doing"], "now": ["speech", "voice+doing", "voice", "voice+doing"] },
+  { "chapter_code": "1SA15", "verse_number": 1, "was": ["speech", "voice", "speech"], "now": ["speech", "loudspeaker", "voice"] },
+  { "chapter_code": "1SA15", "verse_number": 24, "was": ["speech", "speech", "voice"], "now": ["speech", "voice", "loudspeaker"] },
+  { "chapter_code": "EXO18", "verse_number": 19, "was": ["voice", "speech"], "now": ["loudspeaker", "voice"] },
+  { "chapter_code": "JER07", "verse_number": 23, "was": ["speech", "speech", "voice"], "now": ["voice", "speech", "loudspeaker"] },
+  { "chapter_code": "GEN44", "verse_number": 7, "was": ["speech", "voice+doing", "speech", "speech"], "now": ["speech", "voice+doing", "voice", "voice"] },
+  { "chapter_code": "DEU04", "verse_number": 30, "was": ["speech", "voice"], "now": ["voice", "loudspeaker"] },
+  { "chapter_code": "DEU04", "verse_number": 36, "was": ["voice", "speech"], "now": ["loudspeaker", "voice"] },
+  { "chapter_code": "DEU05", "verse_number": 28, "was": ["voice", "speech", "voice+doing", "speech", "voice", "speech", "voice+doing", "voice+doing"], "now": ["loudspeaker", "voice", "voice+doing", "speech", "loudspeaker", "voice", "voice+doing", "voice+doing"] }
 ]

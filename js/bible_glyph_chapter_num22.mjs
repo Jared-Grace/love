@@ -1245,7 +1245,7 @@ export function bible_glyph_chapter_num22() {
           "$package+question?",
           "Only",
           "the",
-          "$speech",
+          "$voice",
           "that",
           "$heart_on_fire",
           "$palm_down",

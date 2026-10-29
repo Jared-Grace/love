@@ -698,7 +698,7 @@ export function bible_glyph_chapter_jer07() {
         verse_number: 23,
         words: [
           "But",
-          "$speech",
+          "$voice",
           "is",
           "what",
           "I",
@@ -707,7 +707,7 @@ export function bible_glyph_chapter_jer07() {
           "$speech,",
           "$ear+loudspeaker",
           "My",
-          "$voice,",
+          "$loudspeaker,",
           "and",
           "I",
           "will",
