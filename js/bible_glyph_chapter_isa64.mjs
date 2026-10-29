@@ -100,7 +100,7 @@ export function bible_glyph_chapter_isa64() {
           "$no_entry",
           "one",
           "has",
-          "$ear,",
+          "$ear+loudspeaker,",
           "$no_entry",
           "ear",
           "has",

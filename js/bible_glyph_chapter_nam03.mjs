@@ -533,7 +533,7 @@ export function bible_glyph_chapter_nam03() {
           "severe.",
           "$all",
           "who",
-          "$ear",
+          "$ear+loudspeaker",
           "the",
           "news",
           "of",

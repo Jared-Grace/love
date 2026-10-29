@@ -566,7 +566,7 @@ export function bible_glyph_chapter_gen17() {
           "$ear+heart_on_fire+proper_name,",
           "I",
           "have",
-          "$ear",
+          "$ear+loudspeaker",
           "you.",
           "Behold,",
           "I",

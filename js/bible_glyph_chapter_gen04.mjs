@@ -649,7 +649,7 @@ export function bible_glyph_chapter_gen04() {
           "$proper_name$Adah",
           "and",
           "$proper_name$Zillah,",
-          "$ear",
+          "$ear+loudspeaker",
           "my",
           "$loudspeaker,",
           "you",

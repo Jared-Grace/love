@@ -285,7 +285,7 @@ export function bible_glyph_chapter_1sa03() {
           "Your",
           "$kneeling",
           "is",
-          "$ear.",
+          "$ear+loudspeaker.",
           "So",
           "$ear+heart_on_fire+proper_name",
           "$walking",
@@ -320,7 +320,7 @@ export function bible_glyph_chapter_1sa03() {
           "Your",
           "$kneeling",
           "is",
-          "$ear.",
+          "$ear+loudspeaker.",
         ],
       },
       {

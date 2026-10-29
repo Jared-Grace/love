@@ -353,7 +353,7 @@ export function bible_glyph_chapter_gen29() {
         words: [
           "When",
           "Laban",
-          "$ear",
+          "$ear+loudspeaker",
           "the",
           "news",
           "about",
@@ -862,7 +862,7 @@ export function bible_glyph_chapter_gen29() {
           "the",
           "$i_am",
           "has",
-          "$ear",
+          "$ear+loudspeaker",
           "$pointing",
           "$me",
           "am",

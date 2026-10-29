@@ -501,7 +501,7 @@ export function bible_glyph_chapter_num14() {
           "$map",
           "$back+flashlight",
           "have",
-          "$ear",
+          "$ear+loudspeaker",
           "of",
           "Your",
           "fame",

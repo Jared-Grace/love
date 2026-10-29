@@ -30,7 +30,7 @@ export function bible_glyph_chapter_oba01() {
           "$proper_name$Edom.",
           "We",
           "have",
-          "$ear",
+          "$ear+loudspeaker",
           "a",
           "message",
           "from",

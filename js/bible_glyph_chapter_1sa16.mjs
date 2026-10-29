@@ -73,7 +73,7 @@ export function bible_glyph_chapter_1sa16() {
           "$walking?",
           "$proper_name$Saul",
           "will",
-          "$ear",
+          "$ear+loudspeaker",
           "of",
           "it",
           "and",

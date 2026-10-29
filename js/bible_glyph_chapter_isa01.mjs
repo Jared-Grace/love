@@ -43,7 +43,7 @@ export function bible_glyph_chapter_isa01() {
       {
         verse_number: 2,
         words: [
-          "$ear,",
+          "$ear+loudspeaker,",
           "O",
           "$sky,",
           "and",
@@ -290,7 +290,7 @@ export function bible_glyph_chapter_isa01() {
       {
         verse_number: 10,
         words: [
-          "$ear",
+          "$ear+loudspeaker",
           "the",
           "$voice",
           "of",

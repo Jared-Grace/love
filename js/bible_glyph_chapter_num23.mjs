@@ -526,7 +526,7 @@ export function bible_glyph_chapter_num23() {
           "O",
           "Balak,",
           "and",
-          "$ear.",
+          "$ear+loudspeaker.",
           "Give",
           "ear",
           "to",

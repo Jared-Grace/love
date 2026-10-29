@@ -21,7 +21,7 @@ export function bible_glyph_chapter_deu32() {
           "I",
           "will",
           "$voice+doing;",
-          "$ear,",
+          "$ear+loudspeaker,",
           "O",
           "$earth,",
           "the",

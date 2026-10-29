@@ -355,7 +355,7 @@ export function bible_glyph_chapter_gen16() {
           "because",
           "$i_am",
           "has",
-          "$ear",
+          "$ear+loudspeaker",
           "your",
           "$persevering_face+thing.",
         ],

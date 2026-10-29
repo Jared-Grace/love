@@ -1372,7 +1372,7 @@ export function bible_glyph_chapter_deu01() {
           "$i_am",
           "would",
           "$no_entry",
-          "$ear",
+          "$ear+loudspeaker",
           "to",
           "your",
           "$loudspeaker",

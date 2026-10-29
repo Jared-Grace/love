@@ -711,7 +711,7 @@ export function bible_glyph_chapter_exo15() {
           "$traffic_light",
           "you",
           "will",
-          "$ear",
+          "$ear+loudspeaker",
           "carefully",
           "to",
           "the",
