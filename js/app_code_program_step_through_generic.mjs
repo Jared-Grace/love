@@ -22,6 +22,16 @@ import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_values } from "./object_values.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
+import { less_than } from "./less_than.mjs";
+import { list_size } from "./list_size.mjs";
+import { number_is } from "./number_is.mjs";
+import { subtract } from "./subtract.mjs";
+import { add } from "./add.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_random_item } from "./list_random_item.mjs";
 import { app_code_expression_chosen_background_color } from "./app_code_expression_chosen_background_color.mjs";
 import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -35,11 +45,9 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { subtract } from "./subtract.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
 import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { app_shared_color_code_font } from "./app_shared_color_code_font.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
@@ -52,7 +60,6 @@ import { property_set } from "./property_set.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_size } from "./list_size.mjs";
 import { modulo } from "./modulo.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -65,7 +72,6 @@ import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
-import { less_than } from "./less_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_code_program_step_line_press_words } from "./app_code_program_step_line_press_words.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -108,11 +114,9 @@ import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
 import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { app_code_program_step_order_words } from "./app_code_program_step_order_words.mjs";
-import { add } from "./add.mjs";
 import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 export function app_code_program_step_through_generic(
@@ -233,6 +237,24 @@ export function app_code_program_step_through_generic(
       }
     }
     list_remove_if_exists(decoys, value);
+    ("2026-10-29, at the human's asking: a number with fewer than two wrong choices is also offered one just next to it, one more or one less, picked at random and never below 0. With one name and no value before, the only wrong choice was the name written as a string, so the number could be picked without reading the note above the line. This replaces the earlier Not picked: made-up values, for this case only");
+    let a = list_size(decoys);
+    let few = less_than(a, 2);
+    if (few && number_is(value)) {
+      let difference = subtract(value, 1);
+      let sum = add(value, 1);
+      let neighbors = [difference, sum];
+      function neighbor_fits(neighbor) {
+        let fits =
+          less_than_equal(0, neighbor) && not(list_includes(decoys, neighbor));
+        return fits;
+      }
+      let fitting = list_filter(neighbors, neighbor_fits);
+      if (list_empty_not_is(fitting)) {
+        let near = list_random_item(fitting);
+        list_add(decoys, near);
+      }
+    }
     return decoys;
   }
   let highlight = app_code_expression_chosen_background_color();
