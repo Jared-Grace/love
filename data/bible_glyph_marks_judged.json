@@ -19,5 +19,16 @@
   { "chapter_code": "1SA20", "verse_number": 23, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
   { "chapter_code": "1SA25", "verse_number": 9, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
   { "chapter_code": "1SA25", "verse_number": 24, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
-  { "chapter_code": "2CH06", "verse_number": 17, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] }
+  { "chapter_code": "2CH06", "verse_number": 17, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "2KI01", "verse_number": 17, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "2KI02", "verse_number": 22, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "2KI06", "verse_number": 12, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "2KI09", "verse_number": 36, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "2KI10", "verse_number": 17, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "2SA07", "verse_number": 17, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "2SA07", "verse_number": 28, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "2SA11", "verse_number": 19, "was": ["voice", "voice+doing"], "now": ["voice+doing", "voice"] },
+  { "chapter_code": "DAN09", "verse_number": 12, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "DEU01", "verse_number": 1, "was": ["voice+doing", "voice"], "now": ["voice", "voice+doing"] },
+  { "chapter_code": "DEU04", "verse_number": 12, "was": ["mouth", "voice", "voice+doing", "voice"], "now": ["voice+doing", "loudspeaker", "voice", "loudspeaker"] }
 ]
