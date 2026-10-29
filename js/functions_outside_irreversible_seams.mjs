@@ -11,6 +11,7 @@ export function functions_outside_irreversible_seams() {
   let names = [
     fn_name("youtube_api_delete"),
     fn_name("youtube_api_put"),
+    fn_name("youtube_api_post"),
     fn_name("firebase_delete"),
     fn_name("firebase_storage_delete"),
     fn_name("app_shared_open_app_dates_delete"),
