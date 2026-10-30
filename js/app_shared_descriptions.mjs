@@ -46,7 +46,7 @@ export function app_shared_descriptions() {
       "Look through one folder of receipts, a day to a card, with nothing that can be added or changed. For sending to somebody who should see what was bought.",
     chapter_group:
       "Divide a chapter of the Bible into groups of verses, and copy the words or the name of any group. Every phone that types the same folder code works on the same division.",
-    privacy_policy:
+    privacy:
       "What these apps do with anything you give them. There is nothing to sign up for and nothing is tracked, and what an app remembers is kept on your own device.",
   };
   return r;
