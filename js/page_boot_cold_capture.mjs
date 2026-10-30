@@ -1,14 +1,17 @@
-import { playwright_test_blank } from "./playwright_test_blank.mjs";
-import { page_boot_wait_ms } from "./page_boot_wait_ms.mjs";
-import { page_boot_poll_ms } from "./page_boot_poll_ms.mjs";
-import { page_boot_reasons } from "./page_boot_reasons.mjs";
-import { catch_error_text_or_null_async } from "./catch_error_text_or_null_async.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
+import { catch_error_text_or_null_async } from "./catch_error_text_or_null_async.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
+import { page_boot_wait_ms } from "./page_boot_wait_ms.mjs";
+import { page_boot_poll_ms } from "./page_boot_poll_ms.mjs";
 import { less_than } from "./less_than.mjs";
 import { add } from "./add.mjs";
+import { page_drawn_text } from "./page_drawn_text.mjs";
+import { page_boot_reasons } from "./page_boot_reasons.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { playwright_error_records } from "./playwright_error_records.mjs";
+import { property_get } from "./property_get.mjs";
+import { playwright_test_blank } from "./playwright_test_blank.mjs";
 export async function page_boot_cold_capture(url) {
   "open one page the way a stranger opens it - a browser that has never been here, no hash after the address, nothing remembered - and hand back what it threw on the way in and what it had drawn once it stopped changing.";
   "COLD is the whole point and it is why a browser is launched for each page rather than one browser walking them all. every dev page is served from the same host, so they share one origin and therefore one localStorage: a page walked second would be reading whatever the page before it wrote, which is the opposite of the arrival being tested. a fresh browser costs about a second and buys a guarantee that no ordering of the sweep can change its answer.";
@@ -41,12 +44,18 @@ export async function page_boot_cold_capture(url) {
     while (less_than(waited, deadline)) {
       await page.waitForTimeout(step);
       waited = add(waited, step);
-      body_text = await page.innerText("body");
+      body_text = await page_drawn_text(page);
       let reasons = page_boot_reasons(body_text, []);
       let arrived = list_empty_is(reasons);
       if (arrived) {
-        return;
+        break;
       }
+    }
+    ("what the page caught and wrote down counts as well as what it threw. an app that catches its own failure shows a sorry notice instead of throwing, and that notice is not blank and not the loading message - so without these the page reads as arrived. next did exactly that on the published site, when the file store refused to let it read the bible.");
+    let records = await playwright_error_records(page);
+    for (let record of records) {
+      let text = property_get(record, "text");
+      list_add(errors, text);
     }
   }
   await playwright_test_blank(on_page);
