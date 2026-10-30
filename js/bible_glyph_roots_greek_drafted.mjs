@@ -6430,7 +6430,7 @@ export function bible_glyph_roots_greek_drafted() {
     ["2403", "izebel", "question+crown+proper_name", "Jezebel"],
     ["3481", "nathan", "hands_giving+proper_name", "Nathan, given"],
     ["4590", "shem", "name_tag+proper_name", "Shem, name"],
-    ["2497", "yehoram", "i_am+up_arrow+proper_name", "Jorim, Yah is exalted"],
+    ["2497", "rum", "i_am+up_arrow+proper_name", "Jorim, Yah is exalted"],
     ["5116", "pitdah", "gem_stone+sun", "topaz"],
     ["760", "asa", "face_with_medical_mask+proper_name", "Asa, healer"],
     ["4503", "reuth", "handshake+heart_red+proper_name", "Ruth, friend"],
