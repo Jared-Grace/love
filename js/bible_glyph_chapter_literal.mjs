@@ -1,8 +1,8 @@
 import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { bible_glyph_roots_drawn_lookup } from "./bible_glyph_roots_drawn_lookup.mjs";
 import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { bible_glyph_word_false_god_is } from "./bible_glyph_word_false_god_is.mjs";
 export async function bible_glyph_chapter_literal(
   chapter_code,
@@ -17,6 +17,7 @@ export async function bible_glyph_chapter_literal(
   "AND IS THE PLUS AND THE HOOK. Plus alone was set aside because gam, also, already wears it; the hook alone because it is the tabernacle hook, the very word vav; the link because it is there is. The plus says and, the hook says which and, and together they are a sequence nothing else wears.";
   "THE RELATIVE SHE- IS THE FINGER POINTING BACK AND THE FLASHLIGHT, set beside asher's back and flashlight, because they do the same work and are not the same word, and two words never share one sequence. The question he- is the question and the exclamation, because the question alone is to ask.";
   "AN ENDING IS ITS PERSON: me for the first person, you for the second, the finger pointing back for the third. The paragogic nun stands for no word at all, so it is the one piece drawn as nothing. A piece with no picture yet is left as its parsing code, so the gap is seen rather than hidden.";
+  "A PREPOSITION THE INTERLINEAR NAMES ONLY AS A PREPOSITION is read off its own first letter. To him, to me, in it and for you come with no root number and no letter in their parsing - lo, li, bo, lakem - so the lamed, bet, kaf or mem that opens the word, after any and, is what says which of the four it is, and it is drawn as that one. A pronoun standing with no root number is drawn as its person, the same way an ending is.";
   "ORIGINAL ORDER AND NOT ENGLISH ORDER, because a picture belongs to no language and the order is the one thing the original fixes; the English order is a translation's choice laid on top.";
   let prefixes = {
     "Conj-w": "plus+hook",
@@ -26,6 +27,7 @@ export async function bible_glyph_chapter_literal(
     "Prep-m": "tray_out",
     "Prep-l": "toward+gift",
     Pr: "pointing_back+flashlight",
+    "Pro-r": "pointing_back+flashlight",
     Pg: "question+exclamation",
   };
   let suffixes = {
@@ -46,9 +48,31 @@ export async function bible_glyph_chapter_literal(
     "3fp": "pointing_back",
     Pn: "",
   };
-  function pieces_draw(text, table, words) {
+  let letters = {
+    ל: "Prep-l",
+    ב: "Prep-b",
+    כ: "Prep-k",
+    מ: "Prep-m",
+  };
+  function preposition_code(original, front) {
+    let consonants = original.replace(/[^א-ת]/g, "");
+    let and = front.includes("Conj-w") && consonants.startsWith("ו");
+    if (and) {
+      consonants = consonants.slice(1);
+    }
+    let code = letters[consonants[0]];
+    if (equal(code, undefined)) {
+      let r3 = "Prep";
+      return r3;
+    }
+    return code;
+  }
+  function pieces_draw(text, table, words, original, front) {
     for (let code of text.split(",")) {
       code = code.trim();
+      if (equal(code, "Prep")) {
+        code = preposition_code(original, front);
+      }
       let mark = table[code];
       if (equal(mark, undefined)) {
         words.push(code);
@@ -76,8 +100,10 @@ export async function bible_glyph_chapter_literal(
       let parts = word.parsing.split("|").map(lambda);
       let front = "";
       let ending = "";
+      let main = parts[0];
       if (equal(parts.length, 3)) {
         front = parts[0];
+        main = parts[1];
         ending = parts[2];
       }
       if (equal(parts.length, 2)) {
@@ -86,10 +112,27 @@ export async function bible_glyph_chapter_literal(
           ending = parts[1];
         } else {
           front = parts[0];
+          main = parts[1];
         }
       }
       if (not_equal(front, "")) {
-        pieces_draw(front, prefixes, words);
+        pieces_draw(front, prefixes, words, word.original, front);
+      }
+      let rootless = equal(word.strong, "");
+      if (rootless && equal(main, "Prep")) {
+        pieces_draw(main, prefixes, words, word.original, front);
+        if (not_equal(ending, "")) {
+          pieces_draw(ending, suffixes, words, word.original, front);
+        }
+        continue;
+      }
+      if (rootless && main.startsWith("Pro-")) {
+        let v = main.slice(4);
+        pieces_draw(v, suffixes, words, word.original, front);
+        if (not_equal(ending, "")) {
+          pieces_draw(ending, suffixes, words, word.original, front);
+        }
+        continue;
       }
       let glyph = drawn[word.strong];
       let entry = {
@@ -105,7 +148,7 @@ export async function bible_glyph_chapter_literal(
         words.push("$" + glyph);
       }
       if (not_equal(ending, "")) {
-        pieces_draw(ending, suffixes, words);
+        pieces_draw(ending, suffixes, words, word.original, front);
       }
     }
     rows.push({
