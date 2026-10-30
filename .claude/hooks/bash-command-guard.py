@@ -2263,6 +2263,25 @@ def is_safe_curl_read(words):
     return is_safe_curl_read_url(url)
 
 
+SANDBOX_HEAP_FLAG_RE = re.compile(r"--max-old-space-size=[1-9][0-9]{0,5}")
+
+
+def sandbox_words_without_heap_flag(words):
+    """The sandbox templates with one extra word taken out: a heap size
+    written straight after --permission. A throwaway reading a big cache
+    runs out of memory without it, and adding it turned the sanctioned
+    prompt-free line into a prompt for the human. It only sets how much
+    memory node may use - it grants no read, write, process or network -
+    so the shape underneath is the one the templates already check. Only
+    that one place and a plain number are accepted; anything else is left
+    in and fails the exact match as before."""
+    if len(words) < 7 or words[5] != "--permission":
+        return words
+    if not SANDBOX_HEAP_FLAG_RE.fullmatch(words[6]):
+        return words
+    return words[:6] + words[7:]
+
+
 def is_safe_sandboxed_node_eval(words):
     """Recognize exactly one template: an ad-hoc `node -e` snippet run
     under real OS/runtime sandboxing rather than trusted by verb prefix.
@@ -2271,7 +2290,9 @@ def is_safe_sandboxed_node_eval(words):
     out-of-repo read path, additional --allow-* grants, trailing args -
     is rejected; this only ever matches the one exact shape that was
     actually verified to block fs write, out-of-scope fs read,
-    child_process, and network."""
+    child_process, and network. The one word let in is a heap size - see
+    sandbox_words_without_heap_flag."""
+    words = sandbox_words_without_heap_flag(words)
     if len(words) != 9:
         return False
     if words[0:5] != ["unshare", "--net", "--map-root-user", "--", "node"]:
@@ -2318,6 +2339,7 @@ def is_safe_sandboxed_node_script(words):
     between runs. Each argument still has to be one plain word by the same
     character allowlist the script path uses, so nothing the tokenizer read
     as a single word can carry shell punctuation into the line."""
+    words = sandbox_words_without_heap_flag(words)
     if len(words) < 8:
         return False
     for argument in words[8:]:
@@ -2354,6 +2376,7 @@ def sandbox_read_path_near_miss(words):
     too so this never shadows them). The `--net` requirement is part of the
     prefix, so the no-`--net` variant - a real sandbox weakening, not a typo -
     is deliberately NOT treated as a simple near-miss."""
+    words = sandbox_words_without_heap_flag(words)
     if len(words) < 7:
         return None
     if words[0:6] != ["unshare", "--net", "--map-root-user", "--", "node", "--permission"]:

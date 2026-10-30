@@ -5,9 +5,6 @@ import { property_get } from "./property_get.mjs";
 import { list_includes_assert_json } from "./list_includes_assert_json.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not_assert_json } from "./not_assert_json.mjs";
-import { ai_git_noted } from "./ai_git_noted.mjs";
-import { function_call_commit } from "./function_call_commit.mjs";
-import { html_public_remove } from "./html_public_remove.mjs";
 import { equal } from "./equal.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { or } from "./or.mjs";
@@ -17,6 +14,7 @@ import { app_name_keyed_tables } from "./app_name_keyed_tables.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { function_call_commit } from "./function_call_commit.mjs";
 import { function_select_apply_args_auto } from "./function_select_apply_args_auto.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
@@ -28,14 +26,13 @@ import { file_exists } from "./file_exists.mjs";
 import { file_delete } from "./file_delete.mjs";
 import { app_renames_path } from "./app_renames_path.mjs";
 import { app_route } from "./app_route.mjs";
-import { app_renames_redirects_write } from "./app_renames_redirects_write.mjs";
 export async function app_rename(a_name_before, a_name_after) {
   "$plain a_name_before";
   "$plain a_name_after";
   arguments_assert(arguments, 2);
   ("Gives an app a new short name, and so a new address - the name is the address, so a different address is always a rename and never a lookup table between the two.");
   ("Moves everything that spells the name: every function named after the app, the keys of every table that is keyed by app names, the list of apps, and the app's dev stamp. Settings people saved follow the functions that own them, because each function rename records itself for the browser to carry across.");
-  ("The old address is already out in the world, so it is written down for good and sent on to the new one with a lasting redirect. The old built files are taken out of the served folder; building the app under its new name is a separate step, so this never sends anything to the internet.");
+  ("The old address is already out in the world, so it is written down for good. Nothing in the served folder is touched: the old page keeps being served until the app is built and promoted under its new name, and only then is the old page taken out and its address sent on - a redirect written now would send people to a page that does not exist yet.");
   let names_path = apps_names_file_path();
   let data = await file_read_json(names_path);
   let names = property_get(data, "names");
@@ -47,9 +44,6 @@ export async function app_rename(a_name_before, a_name_after) {
     hint: "the new name should not already be an app - pick a name nothing answers to",
     a_name_after,
   });
-  ("The old built files are found by the old name, so they are taken out before any function moves, and committed under their own command so the deletions are not filed under somebody else's.");
-  await ai_git_noted();
-  let removed = await function_call_commit(html_public_remove, [a_name_before]);
   let main_before = "app_" + a_name_before;
   let main_after = "app_" + a_name_after;
   let prefix = main_before + "_";
@@ -107,12 +101,9 @@ export async function app_rename(a_name_before, a_name_after) {
     source,
   });
   await file_overwrite_json(renames_path, renames);
-  let redirects = await app_renames_redirects_write();
   let r = {
-    removed,
     renamed,
     keys_moved,
-    redirects,
   };
   return r;
 }
