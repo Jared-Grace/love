@@ -26,7 +26,7 @@ export function app_shared_names() {
     designs_universal: "Designs",
     message: "Message",
     calendar: "Preaching Calendar",
-    privacy_policy: "Privacy Policy",
+    privacy: "Privacy Policy",
     sandbox: "Sandbox",
     g_bible: "g Bible",
     chapter_group: "Chapter Groups",
