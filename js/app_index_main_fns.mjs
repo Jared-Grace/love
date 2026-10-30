@@ -145,7 +145,7 @@ export function app_index_main_fns(about_opened) {
       category: more,
     },
     {
-      app_fn: fn_name("app_privacy_policy"),
+      app_fn: fn_name("app_privacy"),
       text: "What these apps do with anything you give them",
       category: more,
     },

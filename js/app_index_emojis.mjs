@@ -117,7 +117,7 @@ export function app_index_emojis() {
       emoji: emoji_email(),
     },
     {
-      app_fn: fn_name("app_privacy_policy"),
+      app_fn: fn_name("app_privacy"),
       emoji: emoji_secure(),
     },
     {
