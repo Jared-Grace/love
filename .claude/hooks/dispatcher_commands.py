@@ -2,4 +2,4 @@
 # Source of truth: js/dispatcher_commands_fn_named.mjs. Regenerate with
 # `node scripts/r.mjs python_mirrors_write`; drift fails `q`
 # via python_mirrors_assert.
-DISPATCHER_COMMANDS_FN_NAMED = {"ai_git_command_args"}
+DISPATCHER_COMMANDS_FN_NAMED = {}
