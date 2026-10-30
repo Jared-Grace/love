@@ -18,6 +18,7 @@ export async function bible_glyph_chapter_literal(
   "THE RELATIVE SHE- IS THE FINGER POINTING BACK AND THE FLASHLIGHT, set beside asher's back and flashlight, because they do the same work and are not the same word, and two words never share one sequence. The question he- is the question and the exclamation, because the question alone is to ask.";
   "AN ENDING IS ITS PERSON: me for the first person, you for the second, the finger pointing back for the third. The paragogic nun stands for no word at all, so it is the one piece drawn as nothing. A piece with no picture yet is left as its parsing code, so the gap is seen rather than hidden.";
   "A PREPOSITION THE INTERLINEAR NAMES ONLY AS A PREPOSITION is read off its own first letter. To him, to me, in it and for you come with no root number and no letter in their parsing - lo, li, bo, lakem - so the lamed, bet, kaf or mem that opens the word, after any and, is what says which of the four it is, and it is drawn as that one. A pronoun standing with no root number is drawn as its person, the same way an ending is.";
+  "A PREPOSITION WITH NO LETTER OF ITS OWN IS DRAWN AS NOTHING, like the paragogic nun, because no word stands under it. The interlinear splits a place name such as Bethel, Beersheba or Kiriath-jearim into two words and marks the second half with the preposition the first half carries, so the el of in Bethel is parsed as if it held the in. The in is written on the first half and drawn there; drawing it again on the second half would picture a word the original says once. Measured 2026-10-30, 165 Old Testament words, nearly all of them these second halves. Rejected: repeating the first half's preposition, which doubles it; leaving the parsing code showing, which marks as missing a piece that is not there.";
   "ORIGINAL ORDER AND NOT ENGLISH ORDER, because a picture belongs to no language and the order is the one thing the original fixes; the English order is a translation's choice laid on top.";
   let prefixes = {
     "Conj-w": "plus+hook",
@@ -29,6 +30,7 @@ export async function bible_glyph_chapter_literal(
     Pr: "pointing_back+flashlight",
     "Pro-r": "pointing_back+flashlight",
     Pg: "question+exclamation",
+    Prep: "",
   };
   let suffixes = {
     "1cs": "me",
