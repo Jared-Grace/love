@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
@@ -33,12 +34,14 @@ export async function app_original_bible_gloss_write_passage(
   let testament_name = bible_chapter_testament_name(chapter_code);
   async function verse_read(verse_number, index) {
     let property_name = verse_number_key();
-    let found = list_find_property_get(
-      verses_interlinear,
-      property_name,
-      verse_number,
-      "words",
-    );
+    let found = equal(originals[index], null)
+      ? []
+      : list_find_property_get(
+          verses_interlinear,
+          property_name,
+          verse_number,
+          "words",
+        );
     let counted = gloss_words_occurrence_added(tallies, chapter_code, found);
     let said = gloss_words_parsing_sentence_added(counted, testament_name);
     let words = await gloss_words_lexicon_added(chapter_code, said);
