@@ -13,8 +13,8 @@ export async function app_en_learn_bible_gloss_urdu_write_file(
   let passages_read = app_en_learn_bible_gloss_urdu_passages;
   let fn = app_en_learn_bible_gloss_urdu_generate;
   await app_en_learn_bible_gloss_urdu_write_file_misaligned_assert(
-    chapter_code2,
-    verse_key2,
+    chapter_code,
+    verse_key,
   );
   let r = await gloss_write_file_generic(
     chapter_code,
