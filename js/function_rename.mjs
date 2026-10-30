@@ -1,12 +1,12 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
+import { function_rename_check } from "./function_rename_check.mjs";
 import { folders_function_named_rename_check } from "./folders_function_named_rename_check.mjs";
-import { folders_function_named_rename } from "./folders_function_named_rename.mjs";
-import { storage_local_key_names_rename_report } from "./storage_local_key_names_rename_report.mjs";
+import { function_rename_inner } from "./function_rename_inner.mjs";
 import { permission_settings_allow_rename_report } from "./permission_settings_allow_rename_report.mjs";
 import { memory_fn_references_rename_report } from "./memory_fn_references_rename_report.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { function_rename_inner } from "./function_rename_inner.mjs";
-import { function_rename_check } from "./function_rename_check.mjs";
-import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
+import { storage_local_key_owner_renamed_record } from "./storage_local_key_owner_renamed_record.mjs";
+import { folders_function_named_rename } from "./folders_function_named_rename.mjs";
 export async function function_rename(f_name_before, f_name_after) {
   arguments_assert(arguments, 2);
   equal_not_assert_json(f_name_before, f_name_after, {
@@ -20,8 +20,8 @@ export async function function_rename(f_name_before, f_name_after) {
   permission_settings_allow_rename_report(f_name_before, f_name_after);
   ("aliases already follow a rename; memory notes are the other named referrer, so marked pointers follow too and bare mentions are reported for a human to weigh");
   await memory_fn_references_rename_report(f_name_before, f_name_after);
-  ("a browser storage key is the owning function's own name, so this is the one rename that loses data, and it loses it where no gate can see until somebody runs one");
-  await storage_local_key_names_rename_report(f_name_before, f_name_after);
+  ("a browser storage key is the owning function's own name, so settings people saved are filed under the old name. The rename is recorded, and the browser carries those settings across to the new name the first time it reads them");
+  await storage_local_key_owner_renamed_record(f_name_before, f_name_after);
   ("a store on this disk is reachable, so it is moved rather than reported - the sentence a browser key gets is only a sentence because nothing here can reach that disk");
   await folders_function_named_rename(f_name_before, f_name_after);
   return f_name_before;
