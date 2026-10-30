@@ -1,3 +1,4 @@
+import { gloss_passages_original_present } from "./gloss_passages_original_present.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { bible_passages_grouped } from "./bible_passages_grouped.mjs";
 export async function app_original_bible_gloss_passages(chapter_code) {
@@ -9,5 +10,6 @@ export async function app_original_bible_gloss_passages(chapter_code) {
   let bible_folders = [bible_folder];
   let chapters_codes = [chapter_code];
   let groups = await bible_passages_grouped(bible_folders, chapters_codes);
-  return groups;
+  let present = gloss_passages_original_present(groups);
+  return present;
 }
