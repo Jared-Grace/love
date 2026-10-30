@@ -28,7 +28,7 @@ export function app_shared_taglines() {
     designs_universal: "every arrangement of six colours, side by side",
     message: "write to the person who made these apps, and be answered",
     calendar: "ask for a visit to come and preach",
-    privacy_policy: "what these apps do with anything you give them",
+    privacy: "what these apps do with anything you give them",
     sandbox: "previews of the pieces these apps are built from",
     g_bible: "the Bible chapter by chapter, with notes you can edit",
   };
