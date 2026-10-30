@@ -20,12 +20,14 @@ import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { property_set } from "./property_set.mjs";
-import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { json_format_to_spaces } from "./json_format_to_spaces.mjs";
+import { file_overwrite } from "./file_overwrite.mjs";
 import { app_shared_dev_stamp_path } from "./app_shared_dev_stamp_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_delete } from "./file_delete.mjs";
 import { app_renames_path } from "./app_renames_path.mjs";
 import { app_route } from "./app_route.mjs";
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function app_rename(a_name_before, a_name_after) {
   "$plain a_name_before";
   "$plain a_name_after";
@@ -86,7 +88,8 @@ export async function app_rename(a_name_before, a_name_after) {
   let moved = list_map(names, name_lambda);
   let sorted = list_sort_text(moved);
   property_set(data, "names", sorted);
-  await file_overwrite_json(names_path, data);
+  let names_text = json_format_to_spaces(data, 1) + "\n";
+  await file_overwrite(names_path, names_text);
   let stamp_path = app_shared_dev_stamp_path(a_name_before);
   let stamped = await file_exists(stamp_path);
   if (stamped) {
