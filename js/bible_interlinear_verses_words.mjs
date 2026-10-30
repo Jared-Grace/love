@@ -1,7 +1,7 @@
+import { list_find_property_get_or } from "./list_find_property_get_or.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { each } from "./each.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { list_find_property_get } from "./list_find_property_get.mjs";
 export function bible_interlinear_verses_words(
   verses_interlinear,
   verse_numbers,
@@ -11,11 +11,12 @@ export function bible_interlinear_verses_words(
   let words_all = [];
   function verse_read(verse_number) {
     let property_name = verse_number_key();
-    let words = list_find_property_get(
+    let words = list_find_property_get_or(
       verses_interlinear,
       property_name,
       verse_number,
       "words",
+      [],
     );
     list_add_multiple(words_all, words);
   }
