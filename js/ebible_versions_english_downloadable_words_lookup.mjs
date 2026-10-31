@@ -2,6 +2,7 @@ import { bible_search_symbols_plain } from "./bible_search_symbols_plain.mjs";
 import { ebible_versions_english_downloadable_cache } from "./ebible_versions_english_downloadable_cache.mjs";
 import { ebible_version_chapters_numbering_matching } from "./ebible_version_chapters_numbering_matching.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { bible_search_words } from "./bible_search_words.mjs";
@@ -13,7 +14,7 @@ import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { each } from "./each.mjs";
 import { ebible_chapters_each_verses_check_with } from "./ebible_chapters_each_verses_check_with.mjs";
 import { each_async } from "./each_async.mjs";
-import { not } from "./not.mjs";
+import { bible_search_words_lookup_keys_add } from "./bible_search_words_lookup_keys_add.mjs";
 export async function ebible_versions_english_downloadable_words_lookup() {
   "Every word of every English bible this repo can download, under the chapter and verse it stands in, and under which bibles spell it there.";
   "A verse is only taken from a bible that numbers that chapter the way the bible the reader is shown does. An address read out of a differently numbered bible names somebody else's verse - the Douay-Rheims Psalm ten is the Psalm eleven a reader is looking at - so the words it promised are not in what comes up, and one such bible spoils the search for every reader of the others.";
@@ -54,5 +55,7 @@ export async function ebible_versions_english_downloadable_words_lookup() {
     await ebible_chapters_each_verses_check_with(bible_folder, lambda);
   }
   await each_async(bible_folders, lambda2);
+  ("every word is also filed under its key, so swam and swimming are found by a search for swim");
+  bible_search_words_lookup_keys_add(result);
   return result;
 }

@@ -1,5 +1,5 @@
-import { object_property_names } from "./object_property_names.mjs";
 import { text_split_space } from "./text_split_space.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 export function word_root_irregulars_built() {
   "Every English word whose root cannot be reached by cutting an ending off it, paired with the root it belongs to.";
   "Written the readable way round - one root, then the forms that belong to it - and turned inside out before it is handed back, because every reader of this wants to go from a form to its root.";
@@ -66,6 +66,7 @@ export function word_root_irregulars_built() {
     throw: "throws threw thrown throwing",
     wear: "wears wore worn wearing",
     win: "wins won winning",
+    swim: "swims swam swum swimming",
     good: "better best",
     bad: "worse worst",
     wife: "wives",
