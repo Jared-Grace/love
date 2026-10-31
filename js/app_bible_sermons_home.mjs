@@ -1,5 +1,5 @@
 import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
-import { g_sermon_generate_download } from "./g_sermon_generate_download.mjs";
+import { app_bible_sermons_download } from "./app_bible_sermons_download.mjs";
 import { app_bible_sermons } from "./app_bible_sermons.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_last_property } from "./list_last_property.mjs";
@@ -11,7 +11,7 @@ export async function app_bible_sermons_home(context) {
   "The same sermons the game's own bible edits, drawn from the same place, but as plain text: nobody here signs in, so nobody here can save, and a box that takes typing would only lose what was typed.";
   let r = await app_shared_bible_home_inner(
     context,
-    g_sermon_generate_download,
+    app_bible_sermons_download,
     app_bible_sermons,
   );
   let passages = property_get(r, "passages");

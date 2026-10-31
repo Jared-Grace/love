@@ -1,17 +1,18 @@
-import { multiply } from "./multiply.mjs";
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { path_join } from "./path_join.mjs";
+import { not } from "./not.mjs";
 import { gloss_write_folder } from "./gloss_write_folder.mjs";
+import { path_join } from "./path_join.mjs";
+import { multiply } from "./multiply.mjs";
+import { equal } from "./equal.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
 import { json_to } from "./json_to.mjs";
 import { date_now_iso } from "./date_now_iso.mjs";
 import { storage_function_path_json } from "./storage_function_path_json.mjs";
+import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
 import { json_extension } from "./json_extension.mjs";
 import { list_size } from "./list_size.mjs";
 export async function gloss_book_claim_next_generic(
@@ -26,6 +27,7 @@ export async function gloss_book_claim_next_generic(
   ("★ SEVERAL AUTHORS WORK ONE STORE AT ONCE, AND NONE OF THEM CAN SEE THE OTHERS. Each would otherwise read the same published list and pick the same next chapter, and two authors writing one chapter in turn store whichever wrote last - a chapter's worth of work thrown away with nothing red anywhere.");
   ("★ A BOOK IS HANDED OUT, NOT A CHAPTER. An author works through a book in order, so a chapter mark keeps them apart for one chapter and then walks them back into each other. A book also carries its own words - its names, its places, the way its speakers are referred to - and one author keeps those the same from chapter to chapter where two would not.");
   ("A book is being worked in while its mark, or any of its chapters in the store, was written within the last two hours. The store's clock counts as much as the mark: an author who began before marks existed, or chose a book by hand, leaves no mark but does write the store every few minutes, and every author writing keeps their own book held without asking again. Two hours idle is several times the longest one chapter has taken, so a book an author has stopped in without saying so is handed on rather than left unfinished forever.");
+  ("The store is read for every chapter of the book, published ones too. An author who has held a book past two hours has an old mark, and between publishing one chapter and storing the next their only fresh writes are to published chapters - so reading only the waiting ones makes the book look idle, and a second author is handed it mid-book.");
   ("The mark is a file per book, created only if no file stands under that name, so between two authors asking in the same instant the disk decides and exactly one creation succeeds. A stale mark is moved aside before it is replaced, and moving is decided by the disk too, so two authors finding the same stale mark cannot both take it.");
   ("Publishing is what finishes a chapter, so a published chapter is never handed out whatever marks remain, and nothing has to remember to give a mark back.");
   ("Marks sit in a folder inside the store's own handover folder: the readers of that folder read only its files, so a folder beside them is never mistaken for a handover.");
@@ -113,7 +115,8 @@ export async function gloss_book_claim_next_generic(
       let path2 = storage_function_path_json(c, fn.name);
       return path2;
     }
-    let stored = chapters.map(lambda);
+    let chapters_all = list_filter_starts_with(chapter_codes, book_code);
+    let stored = chapters_all.map(lambda);
     let claim = path_join([folder, book_code + json_extension()]);
     let busy = await recent([claim, ...stored]);
     if (busy) {
