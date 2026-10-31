@@ -2640,6 +2640,7 @@ export function permission_grant_names() {
     fn_name("permission_grant_add_auto"),
     fn_name("bible_glyph_chapters_seat_split_redraw_was"),
     fn_name("lyric_video_document_pictures_copy_write"),
+    fn_name("app_en_learn_bible_gloss_tagalog_book_claim_next"),
   ];
   return names;
 }
