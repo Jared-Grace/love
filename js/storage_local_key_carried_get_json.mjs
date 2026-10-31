@@ -6,6 +6,7 @@ import { text_starts_with } from "./text_starts_with.mjs";
 import { not } from "./not.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { storage_local_specify_get_text } from "./storage_local_specify_get_text.mjs";
 import { null_is } from "./null_is.mjs";
 import { storage_local_specify_set_text } from "./storage_local_specify_set_text.mjs";
 export function storage_local_key_carried_get_json(storage_local_key) {
@@ -26,7 +27,7 @@ export function storage_local_key_carried_get_json(storage_local_key) {
     }
     let rest = text_prefix_without(storage_local_key, prefix);
     let key_before = text_combine_multiple([before, " ", rest]);
-    let text = localStorage.getItem(key_before);
+    let text = storage_local_specify_get_text(key_before);
     if (null_is(text)) {
       continue;
     }
