@@ -1,4 +1,3 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -6,8 +5,9 @@ import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { multiply } from "./multiply.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { subtract } from "./subtract.mjs";
 import { json_to } from "./json_to.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -138,6 +138,7 @@ export function app_code_lesson_if_steps() {
       [6, 2, 7],
     ],
     parts_get,
+    false,
   );
   return lesson;
 }

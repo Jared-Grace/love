@@ -2,8 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { json_to } from "./json_to.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { not } from "./not.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -125,6 +125,7 @@ export function app_code_lesson_if_not() {
     above,
     ["a", "b"],
     parts_get,
+    false,
   );
   return lesson;
 }

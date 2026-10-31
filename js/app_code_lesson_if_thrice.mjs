@@ -216,6 +216,7 @@ export function app_code_lesson_if_thrice() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,

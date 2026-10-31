@@ -1,12 +1,12 @@
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { multiply } from "./multiply.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -188,6 +188,7 @@ export function app_code_lesson_if_false() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,

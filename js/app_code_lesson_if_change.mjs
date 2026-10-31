@@ -1,5 +1,3 @@
-import { text_integers } from "./text_integers.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -16,9 +14,11 @@ import { list_map } from "./list_map.mjs";
 import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { text_integers } from "./text_integers.mjs";
 import { json_to } from "./json_to.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
+import { less_than } from "./less_than.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_plus_assign } from "./app_code_lesson_statement_name_plus_assign.mjs";
@@ -199,6 +199,7 @@ export function app_code_lesson_if_change() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,

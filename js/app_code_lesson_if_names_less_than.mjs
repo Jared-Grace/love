@@ -3,8 +3,8 @@ import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { json_to } from "./json_to.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -145,6 +145,7 @@ export function app_code_lesson_if_names_less_than() {
       [5, 8],
     ],
     parts_get,
+    false,
   );
   return lesson;
 }

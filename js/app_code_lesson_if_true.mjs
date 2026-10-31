@@ -139,6 +139,7 @@ export function app_code_lesson_if_true() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps: true,
     decoys: null,
     backwards_decoys,
     backwards_wrong_say,

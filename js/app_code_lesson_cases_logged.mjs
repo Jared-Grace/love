@@ -23,6 +23,7 @@ export function app_code_lesson_cases_logged({
   values_changed,
   above,
   name_id,
+  steps,
 }) {
   "a lesson on programs that set some values and then write out words, one program for each case: cases_get hands back the values of each program on a screen, program_lines(values, words) writes one out, and values_changed(values) gives values that make the same program write out something else";
   "fruits is the lesson's own list, shared with above: the batch shuffles it in place, and above reads its first words.";
@@ -112,6 +113,7 @@ export function app_code_lesson_cases_logged({
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,

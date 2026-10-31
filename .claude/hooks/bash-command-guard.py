@@ -2862,7 +2862,91 @@ def check_statements(tokens, safe_verbs, safe_exact_commands):
     return found_command
 
 
+FOR_UNROLL_RE = re.compile(
+    r"^(?P<before>(?:.*?[;&\n])?\s*)for\s+(?P<var>[A-Za-z_][A-Za-z0-9_]*)\s+in\s+"
+    r"(?P<words>[^;\n'\"]*?)\s*[;\n]\s*do\s+(?P<body>.*?)\s*[;\n]\s*done(?P<after>\s*(?:(?:;|&&|\n).*)?)$",
+    re.S,
+)
+LOOP_CONTROL_WORD_RE = re.compile(r"(?<![A-Za-z0-9_$-])(for|while|until|if|case|done|read)(?![A-Za-z0-9_-])")
+
+
+def _var_inside_single_quotes(text, var):
+    """Whether `$var` occurs anywhere bash would leave it unexpanded: inside
+    a single-quoted span that is not itself inside double quotes."""
+    reference = re.compile(r"\$(\{" + re.escape(var) + r"\}|" + re.escape(var) + r"(?![A-Za-z0-9_]))")
+    quote = None
+    i = 0
+    while i < len(text):
+        c = text[i]
+        if quote == "'":
+            if c == "'":
+                quote = None
+            elif reference.match(text, i):
+                return True
+        elif c == "\\" and quote != "'":
+            i += 1
+        elif c == "'" and quote is None:
+            quote = "'"
+        elif c == '"':
+            quote = None if quote == '"' else '"'
+        i += 1
+    return False
+
+
+def for_loop_unrolled_text(command):
+    """The command with its one `for` loop written out as the statements it
+    runs - the body once per list word, the variable replaced by that word -
+    or None when that cannot be done faithfully.
+
+    check_for_loop already does this on tokens, but only after the whole
+    line has been tokenized, and a `$(...)` is validated DURING tokenizing:
+    so `for u in A B; do echo "$u $(curl -s $u)"; done` had its inner curl
+    judged with `$u` unresolved, an address nobody could vouch for, and the
+    loop prompted although both written-out lines are approved on their own.
+    Unrolling the text first lets the substitution see the word.
+
+    It is an identity, not a widening, under the conditions checked here:
+    exactly one loop and no other block or `read` in the body (so the
+    variable means one thing throughout and the expansion count stays one
+    list long); list words from the same plain charset the token expansion
+    accepts, so a word cannot split, glob or expand further; no reference to
+    the variable inside single quotes, where bash would leave it literal; and
+    nothing but a statement separator after `done`, since a pipe or redirect
+    there would apply to the loop as a whole rather than to its last pass.
+    Only the body is substituted - a reference before or after the loop
+    keeps its `$` and is judged unresolved, as before."""
+    if len(re.findall(r"(?<![A-Za-z0-9_$-])for(?![A-Za-z0-9_-])", command)) != 1:
+        return None
+    m = FOR_UNROLL_RE.match(command)
+    if not m:
+        return None
+    var, body = m.group("var"), m.group("body")
+    words = m.group("words").split()
+    if not words or len(words) > LOOP_EXPANSION_LIMIT:
+        return None
+    if not all(LOOP_LIST_WORD_RE.match(w) for w in words):
+        return None
+    if LOOP_CONTROL_WORD_RE.search(body):
+        return None
+    if re.search(r"(?<![A-Za-z0-9_])" + re.escape(var) + r"=", body):
+        return None
+    if _var_inside_single_quotes(body, var):
+        return None
+    plain = re.compile(r"\$" + re.escape(var) + r"(?![A-Za-z0-9_])")
+    braced = "${" + var + "}"
+    passes = [plain.sub(lambda _: w, body.replace(braced, w)) for w in words]
+    after = m.group("after").strip()
+    return m.group("before") + "; ".join(passes) + (" " + after if after else "")
+
+
 def is_safe(command, safe_verbs, safe_exact_commands, outer_vars=None):
+    unrolled = for_loop_unrolled_text(command)
+    if unrolled is not None:
+        try:
+            if is_safe(unrolled, safe_verbs, safe_exact_commands, outer_vars):
+                return True
+        except Unsupported:
+            pass
     # A `VAR=<literal path>` assignment belongs to the whole command line, so
     # the map is carried INTO each `$(...)` as well: `S=/tmp/...; echo "$(wc -c
     # < $S/f)"` reads the same file whether or not a substitution wraps it, and
