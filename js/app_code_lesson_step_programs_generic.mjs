@@ -8,14 +8,13 @@ import { html_div_first } from "./html_div_first.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
 import { app_code_program_step_through_generic } from "./app_code_program_step_through_generic.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
-import { app_code_program_step_correction } from "./app_code_program_step_correction.mjs";
+import { app_code_lesson_quiz_step_info } from "./app_code_lesson_quiz_step_info.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { property_set } from "./property_set.mjs";
 export function app_code_lesson_step_programs_generic(
   title,
   title_code,
@@ -64,39 +63,6 @@ export function app_code_lesson_step_programs_generic(
       step_none,
     );
   }
-  function step_quiz(
-    parent,
-    info,
-    qa,
-    on_success,
-    on_wrong,
-    batch_get,
-    correction_code_set,
-  ) {
-    "the quiz: the same answering as the worked example";
-    let question = property_get(qa, "question");
-    ("the answer shown is the list of presses, so what is handed to it is how many of them are done, and it is drawn again with each one; 2026-10-23, at the human's asking, so the steps pressed turn green and the next one glows");
-    let pressed = {
-      done: 0,
-      look_here: null,
-    };
-    function on_step() {
-      property_set(pressed, "done", property_get(pressed, "done") + 1);
-      correction_code_set(pressed);
-    }
-    let stepping = app_code_program_step_through_generic(
-      parent,
-      question,
-      on_wrong,
-      on_success,
-      null,
-      on_step,
-    );
-    ("the step-through hands back how to point at its choice only once it is drawn, so the answer is drawn after it");
-    let value = property_get(stepping, "look_here");
-    property_set(pressed, "look_here", value);
-    correction_code_set(pressed);
-  }
   let forwards = {
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
@@ -104,6 +70,7 @@ export function app_code_lesson_step_programs_generic(
     answer_on_button: app_code_brace_marked_div,
     answer_count_override: null,
   };
+  let info = app_code_lesson_quiz_step_info();
   let quizzes_get = app_code_lesson_quizzes_generic({
     lines: false,
     forwards,
@@ -113,15 +80,7 @@ export function app_code_lesson_step_programs_generic(
     forwards_include: false,
     batch_get: batch,
     forwards_code: false,
-    builds_more: [
-      {
-        question_label: "",
-        on_question: app_code_lesson_quiz_question_none,
-        answer_label: "",
-        on_answer: step_quiz,
-        correction: app_code_program_step_correction,
-      },
-    ],
+    builds_more: [info],
   });
   let name_id = app_code_lesson_statement_title_name_id(title, title_code);
   let lesson = app_code_lesson_base(
