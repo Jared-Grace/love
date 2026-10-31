@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
+import { equal } from "./equal.mjs";
+import { bible_search_word_key } from "./bible_search_word_key.mjs";
 import { bible_search_word_download } from "./bible_search_word_download.mjs";
 import { bible_search_language_word_download } from "./bible_search_language_word_download.mjs";
 export async function app_search_language_word_download(language_code, word) {
@@ -11,7 +12,9 @@ export async function app_search_language_word_download(language_code, word) {
   let right = ebible_language_en_code();
   let english = equal(language_code, right);
   if (english) {
-    let value_english = await bible_search_word_download(word);
+    ("an English word is asked for by its key, the file every form of it was filed under, so swimming finds swam");
+    let key = bible_search_word_key(word);
+    let value_english = await bible_search_word_download(key);
     return value_english;
   }
   let value = await bible_search_language_word_download(language_code, word);
