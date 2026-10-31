@@ -1,5 +1,9 @@
-import { app_shared_search_books_text } from "./app_shared_search_books_text.mjs";
 import { app_shared_bible_books_render } from "./app_shared_bible_books_render.mjs";
+import { app_shared_bible_books_question_text } from "./app_shared_bible_books_question_text.mjs";
+import { html_div_text_centered } from "./html_div_text_centered.mjs";
+import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_shared_search_books_text } from "./app_shared_search_books_text.mjs";
 import { app_shared_search_render } from "./app_shared_search_render.mjs";
 export function app_shared_bible_books_search_render(
   content,
@@ -18,6 +22,11 @@ export function app_shared_bible_books_search_render(
       current_book_code,
     );
   }
+  ("the picker opens with the question it is asking, above the search box, the same way the chapter and verse pickers do");
+  let question = app_shared_bible_books_question_text();
+  let question_div = html_div_text_centered(content, question);
+  let color = app_shared_color_blue_dark();
+  html_font_color_set(question_div, color);
   let search_text = app_shared_search_books_text();
   app_shared_search_render(content, search_text, on_query);
 }
