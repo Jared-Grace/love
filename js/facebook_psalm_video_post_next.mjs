@@ -62,6 +62,8 @@ export async function facebook_psalm_video_post_next() {
       steps: r.steps,
       cover: r.cover,
       cover_error: r.cover_error,
+      comment: r.comment,
+      comment_error: r.comment_error,
       youtube_error,
     };
     return r4;
