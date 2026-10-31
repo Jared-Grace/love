@@ -339,18 +339,11 @@
   "step_thrice",
   "if_thrice",
   "while",
-  "step_while",
   "while_log",
-  "step_while_log",
   "while_down",
-  "step_while_down",
   "while_halve",
-  "step_while_halve",
   "while_total",
-  "step_while_total",
   "while_step",
-  "step_while_step",
-  "while_squares",
-  "step_while_sq"
+  "while_squares"
  ]
 }
