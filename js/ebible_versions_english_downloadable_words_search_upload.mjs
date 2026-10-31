@@ -1,14 +1,15 @@
+import { ebible_versions_english_downloadable_words_lookup_cache } from "./ebible_versions_english_downloadable_words_lookup_cache.mjs";
+import { object_words_to_list } from "./object_words_to_list.mjs";
 import { firebase_upload_object_compressed_chunked_changed } from "./firebase_upload_object_compressed_chunked_changed.mjs";
 import { date_time_zone_now_iso } from "./date_time_zone_now_iso.mjs";
 import { bible_search_built_upload } from "./bible_search_built_upload.mjs";
-import { object_to_list } from "./object_to_list.mjs";
+import { bible_search_word_path } from "./bible_search_word_path.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { object_values_map } from "./object_values_map.mjs";
-import { bible_search_word_path } from "./bible_search_word_path.mjs";
-import { ebible_versions_english_downloadable_words_lookup_cache } from "./ebible_versions_english_downloadable_words_lookup_cache.mjs";
 export async function ebible_versions_english_downloadable_words_search_upload() {
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
-  let v2 = object_to_list(result);
+  ("the index is keyed by every word the bibles hold, constructor among them, so it is listed by a reader that lets those words through");
+  let v2 = object_words_to_list(result);
   await firebase_upload_object_compressed_chunked_changed(v2, get);
   ("the build is marked last, once every word of it is up there, and that mark is what tells a reader the copies they saved came from an index that no longer exists");
   let built = date_time_zone_now_iso();
