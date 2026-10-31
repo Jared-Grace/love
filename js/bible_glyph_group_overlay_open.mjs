@@ -1,9 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { html_document_body } from "./html_document_body.mjs";
+import { html_overlay_card_fixed } from "./html_overlay_card_fixed.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { html_z_max } from "./html_z_max.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { bible_glyph_name_draw_html } from "./bible_glyph_name_draw_html.mjs";
 import { bible_glyph_names_spoken } from "./bible_glyph_names_spoken.mjs";
@@ -23,7 +21,6 @@ import { app_shared_gloss_bible_word_sound } from "./app_shared_gloss_bible_word
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { html_stop_propagation } from "./html_stop_propagation.mjs";
-import { html_remove } from "./html_remove.mjs";
 export function bible_glyph_group_overlay_open(
   names,
   lookup,
@@ -54,33 +51,10 @@ export function bible_glyph_group_overlay_open(
   ("THE MEANING IS GIVEN ONLY WHEN IT IS ASKED FOR. The page itself still tells nobody what a picture means; a reader who taps one word has asked about that word and nothing else, so this answers that one word and goes away.");
   ("THE PICTURES ARE DRAWN BIG FIRST AND THEIR NAMES UNDER THEM, because the names are how the pictures were chosen - a reader who sees that the word is a heart and a fire can read the next such word without tapping.");
   ("A group holding more than one meaning, such as a Hebrew word with and and his joined to it, gets one line per piece, each with its own pictures, so the reader sees which pictures say which part.");
-  ("The overlay is fixed to the screen rather than placed in the page, so it opens over whatever part of the chapter the reader has scrolled to and nothing on the page moves.");
-  let body = html_document_body();
-  let backdrop = html_div(body);
-  html_style_assign(backdrop, {
-    position: "fixed",
-    inset: "0",
-    background: "rgba(0,0,0,0.5)",
-    display: "flex",
-    "align-items": "center",
-    "justify-content": "center",
-    padding: "1em",
-    "box-sizing": "border-box",
-    "z-index": html_z_max(),
-  });
-  let card = html_div(backdrop);
-  html_style_assign(card, {
-    background: "Canvas",
-    color: "CanvasText",
-    "border-radius": "0.5em",
-    padding: "1em",
-    width: "100%",
-    "max-width": "30em",
-    "max-height": "100%",
-    "overflow-y": "auto",
-    "box-sizing": "border-box",
-    "text-align": "center",
-  });
+  ("The card and the dimmed screen behind it are ",
+    fn_name("html_overlay_card_fixed"),
+    ", the same one the bible reader opens over a tapped word.");
+  let card = html_overlay_card_fixed();
   let big = html_div(card);
   html_style_set(big, "fontSize", "4em");
   for (let name of names) {
@@ -178,8 +152,4 @@ export function bible_glyph_group_overlay_open(
     }
     html_on_click(word_line, html_stop_propagation);
   }
-  function close() {
-    html_remove(backdrop);
-  }
-  html_on_click(backdrop, close);
 }
