@@ -150,6 +150,18 @@ export function word_root_cases() {
       why: "thing keeps its ing, which the same guard used to allow it to lose",
     },
     {
+      a: "swim",
+      b: "swam",
+      meet: true,
+      why: "a past that changes its vowel, which no ending reaches, so a search for swim finds swam",
+    },
+    {
+      a: "theist",
+      b: "atheist",
+      meet: false,
+      why: "nothing is cut from the front of a word, because an a or an un in front can turn it into its opposite",
+    },
+    {
       a: "form",
       b: "formed",
       meet: true,
