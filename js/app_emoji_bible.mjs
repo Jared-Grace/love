@@ -1,5 +1,6 @@
-import { app_shared_bible_page_start_hash } from "./app_shared_bible_page_start_hash.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { app_shared_bible_page_start_hash } from "./app_shared_bible_page_start_hash.mjs";
+import { null_is } from "./null_is.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_shared_bible_font_size } from "./app_shared_bible_font_size.mjs";
 import { app_shared_mobile_default_font_size_generic } from "./app_shared_mobile_default_font_size_generic.mjs";
@@ -7,7 +8,6 @@ import { app_shared_bar_content_root_sticky_padded } from "./app_shared_bar_cont
 import { property_get } from "./property_get.mjs";
 import { bible_glyph_chapter_references_browser } from "./bible_glyph_chapter_references_browser.mjs";
 import { app_emoji_bible_chapter_chosen } from "./app_emoji_bible_chapter_chosen.mjs";
-import { null_is } from "./null_is.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { app_emoji_bible_settings_button } from "./app_emoji_bible_settings_button.mjs";
 import { app_emoji_bible_chapter_index } from "./app_emoji_bible_chapter_index.mjs";
@@ -72,6 +72,7 @@ export async function app_emoji_bible(context) {
   let tradition = property_get(chosen_views, "tradition");
   let key_shown = property_get(chosen_views, "key_shown");
   let english_shown = property_get(chosen_views, "english_shown");
+  let literal_shown = property_get(chosen_views, "literal_shown");
   app_emoji_bible_settings_button(bar, context);
   let traditions = app_emoji_bible_traditions(tradition);
   let chapter_code = property_get(chosen, "chapter_code");
@@ -81,6 +82,7 @@ export async function app_emoji_bible(context) {
     traditions,
     key_shown,
     english_shown,
+    literal_shown,
   );
   app_emoji_bible_words_button(content, chapter_code);
   app_shared_footer(content);
