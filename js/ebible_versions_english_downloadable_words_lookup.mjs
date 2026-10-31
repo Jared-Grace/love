@@ -1,5 +1,6 @@
 import { bible_search_symbols_plain } from "./bible_search_symbols_plain.mjs";
 import { ebible_versions_english_downloadable_cache } from "./ebible_versions_english_downloadable_cache.mjs";
+import { object_words_new } from "./object_words_new.mjs";
 import { ebible_version_chapters_numbering_matching } from "./ebible_version_chapters_numbering_matching.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -20,7 +21,8 @@ export async function ebible_versions_english_downloadable_words_lookup() {
   "A verse is only taken from a bible that numbers that chapter the way the bible the reader is shown does. An address read out of a differently numbered bible names somebody else's verse - the Douay-Rheims Psalm ten is the Psalm eleven a reader is looking at - so the words it promised are not in what comes up, and one such bible spoils the search for every reader of the others.";
   let plain = bible_search_symbols_plain();
   let bible_folders = await ebible_versions_english_downloadable_cache();
-  let result = {};
+  ("The table of words is made with no parent, because the bibles really do say constructor - the Darby, at Hebrews 11:10 - and an ordinary record refuses that name as a key.");
+  let result = object_words_new();
   async function lambda2(bible_folder) {
     let numbered_alike =
       await ebible_version_chapters_numbering_matching(bible_folder);
