@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { permission_auto_pin_assert } from "./permission_auto_pin_assert.mjs";
-import { functions_names } from "./functions_names.mjs";
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { permission_grant_names } from "./permission_grant_names.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { not } from "./not.mjs";
@@ -20,7 +20,7 @@ export async function permission_grant_add_auto_gates_ungranted() {
   "It writes Claude's own allow rules, so do NOT grant it a standing approval.";
   arguments_assert(arguments, 0);
   await permission_auto_pin_assert();
-  let names = await functions_names();
+  let names = await repo_love_functions_names();
   let granted = permission_grant_names();
   function lambda(name) {
     let gate = text_ends_with(name, "_gate_run");
