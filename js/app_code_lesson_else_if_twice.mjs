@@ -216,6 +216,7 @@ export function app_code_lesson_else_if_twice() {
     values_changed,
     above,
     name_id,
+    steps: true,
   });
   return lesson;
 }
