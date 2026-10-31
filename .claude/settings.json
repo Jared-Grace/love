@@ -2913,6 +2913,7 @@
       "Bash(node scripts/ai.mjs app_en_learn_bible_gloss_urdu_write_files_stale_from_store:*)",
       "Bash(node scripts/ai.mjs gotquestions_word_articles_unavailable:*)",
       "Bash(node scripts/ai.mjs app_shared_url_dev_local:*)",
+      "Bash(node scripts/ai.mjs bible_search_words_english:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5710,7 +5711,8 @@
       "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_write_files_stale:*)",
       "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_write_files_stale_from_store:*)",
       "Bash(node scripts/aig.mjs gotquestions_word_articles_unavailable:*)",
-      "Bash(node scripts/aig.mjs app_shared_url_dev_local:*)"
+      "Bash(node scripts/aig.mjs app_shared_url_dev_local:*)",
+      "Bash(node scripts/aig.mjs bible_search_words_english:*)"
     ],
     "defaultMode": "acceptEdits"
   },
