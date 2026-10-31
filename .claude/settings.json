@@ -2907,6 +2907,7 @@
       "Bash(node scripts/ai.mjs words_dash_pieces_absent_gate_run:*)",
       "Bash(node scripts/ai.mjs http_text_or_null:*)",
       "Bash(node scripts/ai.mjs bible_glyph_chapter_literal:*)",
+      "Bash(node scripts/ai.mjs permission_auto_refusals:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5698,7 +5699,8 @@
       "Bash(node scripts/aig.mjs web_assets_storage_prefix_granted_gate_run:*)",
       "Bash(node scripts/aig.mjs words_dash_pieces_absent_gate_run:*)",
       "Bash(node scripts/aig.mjs http_text_or_null:*)",
-      "Bash(node scripts/aig.mjs bible_glyph_chapter_literal:*)"
+      "Bash(node scripts/aig.mjs bible_glyph_chapter_literal:*)",
+      "Bash(node scripts/aig.mjs permission_auto_refusals:*)"
     ],
     "defaultMode": "acceptEdits"
   },
