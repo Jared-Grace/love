@@ -2910,6 +2910,7 @@
       "Bash(node scripts/ai.mjs permission_auto_refusals:*)",
       "Bash(node scripts/ai.mjs app_en_learn_bible_gloss_urdu_write_coverage:*)",
       "Bash(node scripts/ai.mjs app_en_learn_bible_gloss_urdu_write_files_stale:*)",
+      "Bash(node scripts/ai.mjs app_en_learn_bible_gloss_urdu_write_files_stale_from_store:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5704,7 +5705,8 @@
       "Bash(node scripts/aig.mjs bible_glyph_chapter_literal:*)",
       "Bash(node scripts/aig.mjs permission_auto_refusals:*)",
       "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_write_coverage:*)",
-      "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_write_files_stale:*)"
+      "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_write_files_stale:*)",
+      "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_write_files_stale_from_store:*)"
     ],
     "defaultMode": "acceptEdits"
   },
