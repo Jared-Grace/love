@@ -12,7 +12,7 @@ import { html_span } from "./html_span.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_style_italic } from "./html_style_italic.mjs";
-import { app_shared_bible_on_click_google_define } from "./app_shared_bible_on_click_google_define.mjs";
+import { app_shared_bible_words_on_click_overlay } from "./app_shared_bible_words_on_click_overlay.mjs";
 export function app_shared_bible_verse_line(parent, name, text, color) {
   "a verse the translation printed no words for arrives here carrying the token that says so, and the token is not words: the sentence that says so takes its place before anything measures or draws it, the reading direction included, which would otherwise be worked out from a mark belonging to no language at all";
   let words_none = bible_verse_words_none_token_is(text);
@@ -42,6 +42,6 @@ export function app_shared_bible_verse_line(parent, name, text, color) {
     html_style_italic(text_holder);
     return line;
   }
-  app_shared_bible_on_click_google_define(text_holder, shown);
+  app_shared_bible_words_on_click_overlay(text_holder, shown);
   return line;
 }
