@@ -2905,6 +2905,7 @@
       "Bash(node scripts/ai.mjs urdu_glued_words_gate_run:*)",
       "Bash(node scripts/ai.mjs web_assets_storage_prefix_granted_gate_run:*)",
       "Bash(node scripts/ai.mjs words_dash_pieces_absent_gate_run:*)",
+      "Bash(node scripts/ai.mjs http_text_or_null:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5694,7 +5695,8 @@
       "Bash(node scripts/aig.mjs text_word_plain_canonical_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs urdu_glued_words_gate_run:*)",
       "Bash(node scripts/aig.mjs web_assets_storage_prefix_granted_gate_run:*)",
-      "Bash(node scripts/aig.mjs words_dash_pieces_absent_gate_run:*)"
+      "Bash(node scripts/aig.mjs words_dash_pieces_absent_gate_run:*)",
+      "Bash(node scripts/aig.mjs http_text_or_null:*)"
     ],
     "defaultMode": "acceptEdits"
   },
