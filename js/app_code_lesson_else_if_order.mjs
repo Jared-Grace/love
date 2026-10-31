@@ -1,4 +1,3 @@
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
@@ -10,6 +9,7 @@ import { app_code_word_console_log_statement } from "./app_code_word_console_log
 import { js_code_if_else_if_with_else_lines_multiple } from "./js_code_if_else_if_with_else_lines_multiple.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_random_item } from "./list_random_item.mjs";
+import { less_than } from "./less_than.mjs";
 import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -190,6 +190,7 @@ export function app_code_lesson_else_if_order() {
     values_changed,
     above,
     name_id,
+    steps: false,
   });
   return lesson;
 }
