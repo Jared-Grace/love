@@ -1,27 +1,34 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { gotquestions_word_articles_fetched } from "./gotquestions_word_articles_fetched.mjs";
+import { gotquestions_word_articles_matching } from "./gotquestions_word_articles_matching.mjs";
 import { html_overlay_card_fixed } from "./html_overlay_card_fixed.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { window_open_google_define } from "./window_open_google_define.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { window_open } from "./window_open.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { window_open_google_define } from "./window_open_google_define.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { llms_query_url_prefixes } from "./llms_query_url_prefixes.mjs";
 import { window_open_url_prefix_query } from "./window_open_url_prefix_query.mjs";
-export function app_shared_bible_word_overlay_open(word) {
+export async function app_shared_bible_word_overlay_articles_open(word) {
   arguments_assert(arguments, 1);
   ("$plain word");
   ("the word is one tapped word of a verse with its punctuation already taken off; it is shown and looked up, and nothing in it runs.");
-  ("One tapped word of the bible reader shown large over the page, with the ways to find out what it means: a Google search, or a question to one of the AI chat sites, each named.");
+  ("One tapped word of the bible reader shown large over the page, with the ways to find out what it means: an article about it when one is known, a Google search, or a question to one of the AI chat sites, each named.");
   ("THE WORD IS SHOWN FIRST, so the reader sees which word was tapped before choosing - a finger on a phone can land on the word beside the one it meant.");
   ("The card and the dimmed screen behind it are ",
     fn_name("html_overlay_card_fixed"),
     ", the same one the picture Bible opens over a tapped word. A tap anywhere closes it, a choice included, because the choice opens in a new tab and the reader comes back to the verse.");
+  ("THE ARTICLES ARE FETCHED BEFORE THE CARD IS DRAWN. The table of articles is loaded only when a word is tapped, so a reader who never taps one never downloads it; waiting for it first means the buttons below never jump down when it arrives.");
+  ("A name can mean more than one person - John is the Baptist and the apostle - so every article it names is offered, each saying who it is about.");
   ("The Google search asks for the word as scripture uses it, the same search a tapped word made before this choice existed. The AI sites are asked the same thing as a plain question, because a chat answers a sentence better than a search phrase.");
+  let table = await gotquestions_word_articles_fetched();
+  let articles = gotquestions_word_articles_matching(table, word);
   let card = html_overlay_card_fixed();
   let big = html_div_text(card, word);
   html_attribute_set(big, "dir", "auto");
@@ -36,6 +43,20 @@ export function app_shared_bible_word_overlay_open(word) {
     "flex-direction": "column",
     gap: "0.5em",
   });
+  for (let article of articles) {
+    let about = article[1];
+    let file = article[2];
+    function read() {
+      let url = text_combine("https://www.gotquestions.org/", file);
+      window_open(url);
+    }
+    let label = text_combine_multiple([
+      "Open article about ",
+      about,
+      " on GotQuestions.org",
+    ]);
+    app_shared_button(choices, label, read);
+  }
   function google() {
     let search_term = text_combine(word, " (Bible)");
     window_open_google_define(search_term);
