@@ -2342,9 +2342,14 @@ def is_safe_sandboxed_node_script(words):
     words = sandbox_words_without_heap_flag(words)
     if len(words) < 8:
         return False
+    # A quoted argument of plain words joined by single spaces ("MAT20 26")
+    # is as inert as the words themselves - argv cannot escalate here - and
+    # it is what a loop over such pairs hands the script when the loop
+    # variable is quoted (see for_loop_spaced_readings).
     for argument in words[8:]:
-        if not SAFE_TEMP_SCRIPT_PATH_RE.match(argument):
-            return False
+        for piece in argument.split(" "):
+            if not SAFE_TEMP_SCRIPT_PATH_RE.match(piece):
+                return False
     if words[0:5] != ["unshare", "--net", "--map-root-user", "--", "node"]:
         return False
     if words[5] != "--permission":
@@ -2622,6 +2627,48 @@ def for_loop_expansions(var, list_words, body):
     return expansions
 
 
+def for_loop_spaced_readings(var, list_words, body):
+    """Both possible runs of a loop whose list holds quoted plain words
+    joined by single spaces (`for c in "MAT20 26" "PHP04 7"`) - or None when
+    the list is not that shape.
+
+    The tokenizer strips quotes, so `$c` and `"$c"` in the body read the
+    same here, while the shell runs them differently: unquoted, the item
+    splits into separate words; quoted, it stays one word holding a space.
+    Which one runs cannot be told from the tokens, so both are returned and
+    the caller approves only when every command of both readings is
+    approved on its own. That is never wider than either reading: a verb
+    that would treat `"a b"` and `a b` differently is judged on each.
+
+    The split reading is only defined where the variable is a whole token;
+    one glued into a larger word (`x$c`) splits in ways not worth modelling,
+    so that refuses."""
+    if not any(" " in word for word in list_words):
+        return None
+    for word in list_words:
+        for piece in word.split(" "):
+            if not LOOP_LIST_WORD_RE.match(piece):
+                return None
+    plain = re.compile(r"\$" + re.escape(var) + r"(?![A-Za-z0-9_])")
+    braced = "${" + var + "}"
+    whole = {"$" + var, braced}
+    for token in body:
+        if token not in whole and (plain.search(token) or braced in token):
+            return None
+    joined = for_loop_expansions(var, [w.replace(" ", "_") for w in list_words], body)
+    if joined is None:
+        return None
+    readings = []
+    for word in list_words:
+        unsplit = [word if token in whole else token for token in body]
+        split = []
+        for token in body:
+            split.extend(word.split(" ") if token in whole else [token])
+        readings.append(unsplit)
+        readings.append(split)
+    return readings
+
+
 def check_for_loop(tokens, safe_verbs, safe_exact_commands):
     """Validate a single `for VAR in LIST ; do BODY done` loop. The body may
     itself contain nested for/if blocks (and break/continue), so it's handed
@@ -2660,6 +2707,8 @@ def check_for_loop(tokens, safe_verbs, safe_exact_commands):
         raise Unsupported("trailing content after 'done'")
     body = tokens[body_start:i]
     expansions = for_loop_expansions(tokens[1], list_words, body)
+    if expansions is None:
+        expansions = for_loop_spaced_readings(tokens[1], list_words, body)
     if expansions is not None:
         for one in expansions:
             if not check_statements(one, safe_verbs, safe_exact_commands):
