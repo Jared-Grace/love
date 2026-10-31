@@ -336,24 +336,18 @@ import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.m
 import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
 import { app_code_lesson_braces_step_thrice } from "./app_code_lesson_braces_step_thrice.mjs";
 import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
-import { app_code_lesson_step_while } from "./app_code_lesson_step_while.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
-import { app_code_lesson_step_while_log } from "./app_code_lesson_step_while_log.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
-import { app_code_lesson_step_while_down } from "./app_code_lesson_step_while_down.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
-import { app_code_lesson_step_while_halve } from "./app_code_lesson_step_while_halve.mjs";
 import { app_code_lesson_while_halve } from "./app_code_lesson_while_halve.mjs";
-import { app_code_lesson_step_while_total } from "./app_code_lesson_step_while_total.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
-import { app_code_lesson_step_while_total_step } from "./app_code_lesson_step_while_total_step.mjs";
 import { app_code_lesson_while_total_step } from "./app_code_lesson_while_total_step.mjs";
-import { app_code_lesson_step_while_total_squares } from "./app_code_lesson_step_while_total_squares.mjs";
 import { app_code_lesson_while_total_squares } from "./app_code_lesson_while_total_squares.mjs";
 export function app_code_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
   "2026-10-28: Step by step: While put straight before While, at the human's asking. Then, asked again: each pair has its step by step first, so the other six while step lessons went before theirs too";
+  "2026-10-31, at the human's asking - step by step is just one quiz type: the seven while step lessons taken out, each while lesson ending in a step-by-step quiz of its own programs instead";
   let fns = [
     app_code_lesson_symbols_digits_numbered,
     app_code_lesson_symbols_digit_number,
@@ -693,19 +687,12 @@ export function app_code_lessons_fns() {
     app_code_lesson_braces_run_thrice,
     app_code_lesson_braces_step_thrice,
     app_code_lesson_if_thrice,
-    app_code_lesson_step_while,
     app_code_lesson_while,
-    app_code_lesson_step_while_log,
     app_code_lesson_while_log,
-    app_code_lesson_step_while_down,
     app_code_lesson_while_down,
-    app_code_lesson_step_while_halve,
     app_code_lesson_while_halve,
-    app_code_lesson_step_while_total,
     app_code_lesson_while_total,
-    app_code_lesson_step_while_total_step,
     app_code_lesson_while_total_step,
-    app_code_lesson_step_while_total_squares,
     app_code_lesson_while_total_squares,
   ];
   return fns;

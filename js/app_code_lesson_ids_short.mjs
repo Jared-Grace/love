@@ -11,6 +11,7 @@ export function app_code_lesson_ids_short() {
   ("★ EIGHTEEN OF THEM WERE SHORTENED IN ONE PASS, AND THE MOMENT IS WHY. The longest was twenty one characters and the longest now is sixteen. That edit is free today and expensive at any later date: the shortened ids exist only in this repo and in a dev build, so nobody is holding one, while after a deploy each of these words is a key on somebody's device and moving it takes their finished work with it. So the pass was taken while it still cost nothing rather than left as tidying.");
   ("Eleven were over the old ceiling and seven more were dragged along to keep a family reading one way. Renaming the brackets lesson on both sides of a comparison and leaving the choose-order one beside it spelled the long way would have made the group unreadable, which is worse than either spelling on its own. So both sides moved: what was both_sides is sides throughout, what was true_false is gives, and a pair of operators is named by its first one.");
   ("A third pass, 2026-10-27, shortened fifty four that had arrived above the ceiling, at the human's asking and for the same reason: none was in prod's released list yet, so only the one person on latest held them. A family drops its long word for a short one rather than its group word - rect, meet and sq under name; the braces walk and step lessons as run and step, the way step_if_true already was; the token order lessons as token. Not picked: dropping name from the rectangle and meeting lessons, which would split them off from every other lesson that gives a value a name.");
+  ("2026-10-31, at the human's asking - step by step is just one quiz type: the seven while step lessons taken out, their stepping now the last quiz of each while lesson. Their ids - step_while, step_while_log, step_while_down, step_while_halve, step_while_total, step_while_step and step_while_sq - were only ever on latest, held by its one person, and are never to be handed to another lesson, since a device may still hold one. Not picked: carrying their finished records over to the while lessons, since finishing the stepping of a lesson is not finishing the lesson");
   let short = {
     app_code_lesson_symbols_digits_numbered: text_frozen("digits_numbered"),
     app_code_lesson_symbols_digit_number: text_frozen("digits_in_number"),
@@ -398,13 +399,6 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_while_total: text_frozen("while_total"),
     app_code_lesson_while_total_step: text_frozen("while_step"),
     app_code_lesson_while_total_squares: text_frozen("while_squares"),
-    app_code_lesson_step_while: text_frozen("step_while"),
-    app_code_lesson_step_while_log: text_frozen("step_while_log"),
-    app_code_lesson_step_while_down: text_frozen("step_while_down"),
-    app_code_lesson_step_while_halve: text_frozen("step_while_halve"),
-    app_code_lesson_step_while_total: text_frozen("step_while_total"),
-    app_code_lesson_step_while_total_step: text_frozen("step_while_step"),
-    app_code_lesson_step_while_total_squares: text_frozen("step_while_sq"),
     app_code_lesson_statement_name_rectangles_rows_between:
       text_frozen("name_rect_rows"),
     app_code_lesson_statement_name_remainder: text_frozen("name_remainder"),
