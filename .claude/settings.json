@@ -2917,6 +2917,7 @@
       "Bash(node scripts/ai.mjs messages_real_quoted_gate_run:*)",
       "Bash(node scripts/ai.mjs smart_self_test_recent_gate_run:*)",
       "Bash(node scripts/ai.mjs web_assets_version_stale_gate_run:*)",
+      "Bash(node scripts/ai.mjs ebible_versions_english_downloadable_words_lookup_cache_clear:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5718,7 +5719,8 @@
       "Bash(node scripts/aig.mjs bible_search_words_english:*)",
       "Bash(node scripts/aig.mjs messages_real_quoted_gate_run:*)",
       "Bash(node scripts/aig.mjs smart_self_test_recent_gate_run:*)",
-      "Bash(node scripts/aig.mjs web_assets_version_stale_gate_run:*)"
+      "Bash(node scripts/aig.mjs web_assets_version_stale_gate_run:*)",
+      "Bash(node scripts/aig.mjs ebible_versions_english_downloadable_words_lookup_cache_clear:*)"
     ],
     "defaultMode": "acceptEdits"
   },
