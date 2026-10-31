@@ -94,7 +94,7 @@ export function app_code_lesson_quizzes_generic(params) {
   let steps = property_get_or(params, "steps", false);
   if (steps) {
     let step_info = app_code_lesson_quiz_step_info();
-    list_add(infos, step_info);
+    build_more_add(step_info);
   }
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {
