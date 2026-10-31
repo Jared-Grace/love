@@ -21,8 +21,8 @@ import { add } from "./add.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { json_from } from "./json_from.mjs";
 import { list_size } from "./list_size.mjs";
-import { subtract } from "./subtract.mjs";
 import { list_last } from "./list_last.mjs";
+import { subtract } from "./subtract.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { json_to } from "./json_to.mjs";
@@ -268,6 +268,7 @@ export function app_code_lesson_while_total_step() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,

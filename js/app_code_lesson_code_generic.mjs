@@ -124,6 +124,8 @@ export function app_code_lesson_code_generic(params) {
   let backwards_include = property_get_or(params, "backwards_include", true);
   ("a lesson whose code stands on more than one line may ask for the two quizzes about lines: putting them in order, and building the one that is missing");
   let lines = property_get_or(params, "lines", false);
+  ("2026-10-31, at the human's asking: a lesson may ask for the step-by-step quiz too, so stepping through its programs is one of its own quizzes rather than a lesson of its own");
+  let steps = property_get_or(params, "steps", false);
   let quizzes_get = app_code_lesson_quizzes_unscramble({
     batch_get,
     forwards,
@@ -132,6 +134,7 @@ export function app_code_lesson_code_generic(params) {
     unscramble,
     backwards_include,
     lines,
+    steps,
   });
   let lesson = app_code_lesson_base(
     name_id,

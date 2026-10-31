@@ -1,14 +1,15 @@
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
+import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
 import { list_add } from "./list_add.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { object_assign } from "./object_assign.mjs";
-import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { each } from "./each.mjs";
 import { app_code_lesson_quizzes_lines_add } from "./app_code_lesson_quizzes_lines_add.mjs";
+import { app_code_lesson_quiz_step_info } from "./app_code_lesson_quiz_step_info.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_quizzes_generic(params) {
@@ -88,6 +89,12 @@ export function app_code_lesson_quizzes_generic(params) {
   let lines = property_get_or(params, "lines", false);
   if (lines) {
     app_code_lesson_quizzes_lines_add(infos, backwards);
+  }
+  ("2026-10-31, at the human's asking - step by step is just one quiz type: THE STEP-BY-STEP QUIZ COMES AFTER EVEN THE QUIZZES ABOUT LINES, for the same reason they come last, so every quiz a lesson already had keeps its place. Not picked: putting it first, as the step lessons came first, which would move every quiz after it and the progress kept against their places");
+  let steps = property_get_or(params, "steps", false);
+  if (steps) {
+    let step_info = app_code_lesson_quiz_step_info();
+    list_add(infos, step_info);
   }
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {

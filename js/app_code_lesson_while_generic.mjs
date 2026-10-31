@@ -21,8 +21,8 @@ import { list_unique } from "./list_unique.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -151,6 +151,7 @@ export function app_code_lesson_while_generic(params) {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,
