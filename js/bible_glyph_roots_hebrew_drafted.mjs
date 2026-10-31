@@ -11584,7 +11584,7 @@ export function bible_glyph_roots_hebrew_drafted() {
     ["390", "akkad", "castle+brick+proper_name", "Accad, fortress"],
     ["401", "akal", "eating+person+proper_name", "Ucal, devoured"],
     ["435", "elul", "new_moon+six+proper_name", "Elul"],
-    ["462", "ayin", "toward+i_am+eye+proper_name", "Elienai"],
+    ["462", "ayin:eye", "toward+i_am+eye+proper_name", "Elienai"],
     ["512", "elqoshi", "hug+place+proper_name+person", "Elkoshite"],
     ["532", "amon_craft", "construction+person+proper_name", "Ami"],
     [
