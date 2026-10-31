@@ -26,9 +26,14 @@ export async function bible_glyph_chapter_literal_fetched(chapter_code) {
   );
   let verses = [];
   for (let verse of literal.verses) {
+    let words = [];
+    for (let word of verse.words) {
+      let r = bible_glyph_word_parse(word);
+      words.push(r);
+    }
     verses.push({
       verse_number: verse.verse_number,
-      words: verse.words.map(bible_glyph_word_parse),
+      words,
       originals: verse.originals,
     });
   }
