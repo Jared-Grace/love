@@ -1,12 +1,15 @@
-import { subtract } from "./subtract.mjs";
-import { add } from "./add.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { word_root_endings } from "./word_root_endings.mjs";
+import { word_root_irregulars } from "./word_root_irregulars.mjs";
+import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_first } from "./list_first.mjs";
-import { word_root_endings } from "./word_root_endings.mjs";
+import { add } from "./add.mjs";
+import { equal } from "./equal.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { word_root_e_drop } from "./word_root_e_drop.mjs";
 export function word_root_ending_cut(w) {
   "The word left when a plain English ending is cut off it - the plural s, the past ed, the ing, the ly.";
   "An ending is only cut where enough of the word is left standing, and how much is enough is the ending's own business - it is carried beside it as keep.";
@@ -21,7 +24,9 @@ export function word_root_ending_cut(w) {
     fn_name("word_root"),
     ", which is the one seam its callers know, so a fuller stemmer can take its place there without a single caller changing.");
   let cut = w;
+  ("A cut stops the moment it reaches a word the irregular list holds as its OWN root. Honestly gives up its ly and reaches honest, which is frozen there, so it stops at honest rather than going on to lose est and become hon. Only a root stops it, never a form, because a form met halfway through a cut can be a different word that only shares the spelling.");
   let endings = word_root_endings();
+  let irregulars = word_root_irregulars();
   function ending_matches(ending) {
     let held = cut.endsWith(ending.end);
     let keep = subtract(cut.length, ending.drop);
@@ -39,9 +44,16 @@ export function word_root_ending_cut(w) {
       let keep = subtract(cut.length, ending.drop);
       let left = cut.slice(0, keep);
       let shorter = add(left, ending.add);
-      if (not(equal(shorter, cut))) {
+      let b2 = equal(shorter, cut);
+      if (not(b2)) {
         cut = shorter;
         more = true;
+        let own =
+          property_exists(irregulars, cut) && equal(irregulars[cut], cut);
+        if (own) {
+          let frozen = word_root_e_drop(cut);
+          return frozen;
+        }
       }
     }
   }
@@ -52,8 +64,6 @@ export function word_root_ending_cut(w) {
   if (doubled && not(kept) && greater_than(cut.length, 3)) {
     cut = cut.slice(0, -1);
   }
-  if (cut.endsWith("e") && greater_than(cut.length, 3)) {
-    cut = cut.slice(0, -1);
-  }
-  return cut;
+  let dropped = word_root_e_drop(cut);
+  return dropped;
 }
