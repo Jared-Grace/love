@@ -5,7 +5,8 @@ export function text_split_dashes_kept(t) {
   "the text is words to cut, and nothing in it runs.";
   "THE DASHES ARE KEPT rather than thrown away, because a reader that draws the pieces must still draw the dash between them; dropping it would turn a-b into ab on the screen.";
   "Nothing empty comes back, so a dash at either end gives one dash piece and no blank one beside it.";
-  let parts = t.split(/([-‐-―−﹘﹣－]+)/u);
+  "THE HEBREW MAQAF IS A DASH TOO: it joins two words into one run the way a hyphen does, and the interlinear counts them as two.";
+  let parts = t.split(/([-‐-―−﹘﹣－־]+)/u);
   let pieces = list_filter_text_empty_not_is(parts);
   return pieces;
 }

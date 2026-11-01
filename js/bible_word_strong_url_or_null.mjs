@@ -5,7 +5,7 @@ import { bible_glyph_chapter_built_destination } from "./bible_glyph_chapter_bui
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { firebase_storage_download_json_decompress_cache } from "./firebase_storage_download_json_decompress_cache.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
-import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
+import { equal } from "./equal.mjs";
 import { bible_original_words_strong_or_null } from "./bible_original_words_strong_or_null.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
 import { biblehub_strong_url } from "./biblehub_strong_url.mjs";
@@ -44,12 +44,16 @@ export async function bible_word_strong_url_or_null(
   if (null_is(built)) {
     return null;
   }
-  let property_value = String(verse_number);
-  let verse = list_find_property_or_null(
-    built.verses,
-    "verse_number",
-    property_value,
-  );
+  ("THE VERSE IS FOUND BY ITS NUMBER READ AS TEXT ON BOTH SIDES. Measured 2026-11-01: the built chapter stores verse one as the number 1 and a reader hands it on as the text 1, so asking for either one as it came found nothing, and every word answered null.");
+  let wanted = String(verse_number);
+  let verse = null;
+  for (let candidate of built.verses) {
+    let left = String(candidate.verse_number);
+    if (equal(left, wanted)) {
+      verse = candidate;
+      break;
+    }
+  }
   if (null_is(verse)) {
     return null;
   }

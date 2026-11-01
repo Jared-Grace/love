@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_verse_words_none_token_is } from "./bible_verse_words_none_token_is.mjs";
 import { app_shared_bible_verse_text_shown } from "./app_shared_bible_verse_text_shown.mjs";
 import { html_div } from "./html_div.mjs";
@@ -13,8 +14,17 @@ import { html_attribute_set } from "./html_attribute_set.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_style_italic } from "./html_style_italic.mjs";
 import { app_shared_bible_words_on_click_overlay } from "./app_shared_bible_words_on_click_overlay.mjs";
-export function app_shared_bible_verse_line(parent, name, text, color) {
-  "a verse the translation printed no words for arrives here carrying the token that says so, and the token is not words: the sentence that says so takes its place before anything measures or draws it, the reading direction included, which would otherwise be worked out from a mark belonging to no language at all";
+export function app_shared_bible_verse_line(
+  parent,
+  name,
+  text,
+  color,
+  chapter_code,
+  verse_number,
+) {
+  arguments_assert(arguments, 6);
+  ("the chapter code and verse number say which verse this line is, so a tapped original word can be found by its number; the code is null where the caller does not know.");
+  ("a verse the translation printed no words for arrives here carrying the token that says so, and the token is not words: the sentence that says so takes its place before anything measures or draws it, the reading direction included, which would otherwise be worked out from a mark belonging to no language at all");
   let words_none = bible_verse_words_none_token_is(text);
   let shown = app_shared_bible_verse_text_shown(text);
   let line = html_div(parent);
@@ -42,6 +52,11 @@ export function app_shared_bible_verse_line(parent, name, text, color) {
     html_style_italic(text_holder);
     return line;
   }
-  app_shared_bible_words_on_click_overlay(text_holder, shown);
+  app_shared_bible_words_on_click_overlay(
+    text_holder,
+    shown,
+    chapter_code,
+    verse_number,
+  );
   return line;
 }

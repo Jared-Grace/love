@@ -82,6 +82,7 @@ export async function app_shared_bible_read_verse_row(
     select_persist,
     languages_verses,
     show_language_names,
+    verse_chapter_code,
   );
   let update = property_get(r, "update");
   let copy = property_get(r, "copy");

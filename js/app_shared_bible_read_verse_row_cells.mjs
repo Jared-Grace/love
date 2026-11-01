@@ -16,8 +16,9 @@ export function app_shared_bible_read_verse_row_cells(
   select_persist,
   languages_verses,
   show_language_names,
+  chapter_code,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
   let number = app_shared_button(p, verse_number_v, select_persist);
   ("each verse row is its own grid, so the number gutter is a fixed track and the button inside it used to size itself to its digits - a one-digit button came out narrower than a two-digit one. Stretching the button across the whole track is what makes every verse number button the same width, zero side padding keeps a three-digit number (Psalm 119) inside that width, and centering puts the digits in the middle of the button");
   html_style_justify_self(number, "stretch");
@@ -26,6 +27,7 @@ export function app_shared_bible_read_verse_row_cells(
   let text_cell = html_div(p);
   let entries = app_shared_bible_verse_entries(
     languages_verses,
+    chapter_code,
     verse_number_v,
     show_language_names,
   );

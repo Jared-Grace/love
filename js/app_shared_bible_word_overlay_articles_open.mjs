@@ -7,6 +7,9 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
+import { not } from "./not.mjs";
+import { null_is } from "./null_is.mjs";
+import { app_shared_biblehub_word_button } from "./app_shared_biblehub_word_button.mjs";
 import { gotquestions_article_url } from "./gotquestions_article_url.mjs";
 import { window_open } from "./window_open.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -20,8 +23,16 @@ import { app_shared_bible_word_question_text_get } from "./app_shared_bible_word
 import { llms_query_url_prefixes } from "./llms_query_url_prefixes.mjs";
 import { window_open_url_prefix_query } from "./window_open_url_prefix_query.mjs";
 import { app_shared_bible_word_ask_llm_text_get } from "./app_shared_bible_word_ask_llm_text_get.mjs";
-export async function app_shared_bible_word_overlay_articles_open(word) {
-  arguments_assert(arguments, 1);
+export async function app_shared_bible_word_overlay_articles_open(
+  word,
+  strong_url,
+) {
+  arguments_assert(arguments, 2);
+  ("$plain strong_url");
+  ("the address is BibleHub's page for the tapped word's Strong's number, or null when the word has none that could be found. It is opened and nothing here runs it.");
+  ("A HEBREW OR GREEK WORD WITH A NUMBER IS OFFERED ON BIBLEHUB FIRST, asked for by the human, by ",
+    fn_name("app_shared_biblehub_word_button"),
+    " - the same button the picture Bible's card draws. It comes first because it is the one choice about this word in this verse rather than about any word spelled the same.");
   ("$plain word");
   ("the word is one tapped word of a verse with its punctuation already taken off; it is shown and looked up, and nothing in it runs.");
   ("One tapped word of the bible reader shown large over the page, with the ways to find out what it means: an article about it when one is known, a Google search, or a question to one of the AI chat sites, each named.");
@@ -48,6 +59,10 @@ export async function app_shared_bible_word_overlay_articles_open(word) {
     "flex-direction": "column",
     gap: "0.5em",
   });
+  let b = null_is(strong_url);
+  if (not(b)) {
+    app_shared_biblehub_word_button(choices, strong_url);
+  }
   for (let article of articles) {
     let about = article[1];
     let file = article[2];

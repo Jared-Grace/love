@@ -13,7 +13,10 @@ export function app_emoji_bible_verse_key_draw(
   original_shown,
   english_shown,
   lookup,
+  chapter_code,
 ) {
+  "$plain chapter_code";
+  "the code names the chapter the verse is in, handed on so a tapped original word in a band is offered on BibleHub.";
   "$plain row";
   "$plain original_shown";
   "$plain english_shown";
@@ -28,7 +31,7 @@ export function app_emoji_bible_verse_key_draw(
   "$plain lookup";
   "the lookup is a glyph name to character table, data to draw.";
   "THE PICTURE LINE IS DRAWN WORD BY WORD, the same way the pictures alone are, so a tap on a word here opens it with its meaning there too. It used to arrive as one finished line of text, which looked the same and gave a tap nothing to land on.";
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
   let verse = bible_glyph_verse_paragraph_draw_html(
     content,
     row.verse_number,
@@ -54,7 +57,13 @@ export function app_emoji_bible_verse_key_draw(
   let colors = app_shared_bible_verse_colors(texts);
   function band_draw(text, index) {
     let color = colored ? list_get(colors, index) : null;
-    app_emoji_bible_verse_key_band(content, text, color);
+    app_emoji_bible_verse_key_band(
+      content,
+      text,
+      color,
+      chapter_code,
+      row.verse_number,
+    );
   }
   each_index(texts, band_draw);
   return verse;

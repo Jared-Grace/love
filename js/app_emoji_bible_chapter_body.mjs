@@ -1,8 +1,8 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { or } from "./or.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { bible_glyph_chapter_literal_fetched } from "./bible_glyph_chapter_literal_fetched.mjs";
+import { not } from "./not.mjs";
 import { bible_glyph_chapter_draw_html } from "./bible_glyph_chapter_draw_html.mjs";
 import { bible_glyph_chapter_built_fetched } from "./bible_glyph_chapter_built_fetched.mjs";
 import { bible_glyph_chapter_rosetta_verses } from "./bible_glyph_chapter_rosetta_verses.mjs";
@@ -52,6 +52,7 @@ export async function app_emoji_bible_chapter_body(
         key_shown,
         english_shown,
         lookup,
+        chapter_code,
       );
     }
     bible_glyph_words_tap_listen(content, chapter_code, lookup);
@@ -67,6 +68,7 @@ export async function app_emoji_bible_chapter_body(
         key_shown,
         english_shown,
         lookup,
+        chapter_code,
       );
     }
     bible_glyph_words_tap_listen(content, chapter_code, lookup);
