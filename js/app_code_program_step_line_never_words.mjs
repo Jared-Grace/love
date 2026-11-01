@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_program_line_enclosing } from "./app_code_program_line_enclosing.mjs";
 import { not } from "./not.mjs";
+import { app_code_program_line_enclosing } from "./app_code_program_line_enclosing.mjs";
 import { equal } from "./equal.mjs";
 export function app_code_program_step_line_never_words(lines, trace, pressed) {
   arguments_assert(arguments, 3);
@@ -14,31 +14,38 @@ export function app_code_program_step_line_never_words(lines, trace, pressed) {
     return r4;
   }
   let runs = trace.map(lambda);
+  let pressed_text = list_get(lines, pressed).trim();
+  ("2026-11-01: a } else if (...) { line that never runs is an else too - it runs only when every if before it is false - so it is asked about like a } else { line: itself when it is the line pressed, and as the { } around a line inside it. Not picked: new words for it, since } else if is else { if ... } written short, and these words were chosen by the human");
+  let else_if_head = pressed_text.startsWith("} else if (");
   if (
     runs.includes(pressed) ||
-    list_get(lines, pressed).trim().startsWith("}")
+    (pressed_text.startsWith("}") && not(else_if_head))
   ) {
     return null;
   }
-  for (let j of app_code_program_line_enclosing(lines, pressed)) {
+  let candidates = else_if_head
+    ? [pressed]
+    : app_code_program_line_enclosing(lines, pressed);
+  for (let j of candidates) {
     let text = list_get(lines, j).trim();
     let entered = runs.includes(j + 1);
-    if (text.startsWith("} else {")) {
+    let else_never = text.startsWith("} else if (") && not(runs.includes(j));
+    if (text.startsWith("} else {") || else_never) {
       ("the ifs of the chain this else ends, found by walking back along each } to the line whose { it closes");
-      let heads = [];
+      let heads_count = 0;
       let k = j;
       while (list_get(lines, k).trim().startsWith("}")) {
         k = app_code_program_line_enclosing(lines, k)[0];
-        heads.push(k);
+        heads_count = heads_count + 1;
       }
       let b = runs.includes(k);
       if (not(b)) {
         continue;
       }
-      if (entered) {
+      if (entered && not(else_never)) {
         return null;
       }
-      if (equal(heads.length, 1)) {
+      if (equal(heads_count, 1)) {
         let r = {
           reason: "never_runs_else",
           words: [
