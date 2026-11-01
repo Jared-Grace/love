@@ -304,6 +304,7 @@ import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 import { app_code_lesson_while_halve } from "./app_code_lesson_while_halve.mjs";
+import { app_code_lesson_while_count } from "./app_code_lesson_while_count.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_code_lesson_while_total_step } from "./app_code_lesson_while_total_step.mjs";
 import { app_code_lesson_while_total_squares } from "./app_code_lesson_while_total_squares.mjs";
@@ -622,6 +623,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_log,
     app_code_lesson_while_down,
     app_code_lesson_while_halve,
+    app_code_lesson_while_count,
     app_code_lesson_while_total,
     app_code_lesson_while_total_step,
     app_code_lesson_while_total_squares,
