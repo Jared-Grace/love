@@ -4686,6 +4686,17 @@ def js_text_replace_deny_reason(name):
     )
 
 
+# Programs that hold no rule because some of their forms change things, but
+# whose one reading form a granted function runs unasked - so the hint names
+# that function instead of the generic "run it sandboxed". Only the text of a
+# hint: nothing here decides what is approved. A renamed function is not
+# followed here, so the guard cases pin each name the hint gives.
+GRANTED_READER_FOR_VERB = {
+    "crontab": "crontab_list",
+    "tmux": "tmux_sessions_list",
+}
+
+
 def untrusted_piece_hint(words, safe_verbs):
     """One sentence on how to reword the refused part `words`, or "" when
     there is nothing better to say than its name."""
@@ -4735,6 +4746,14 @@ def untrusted_piece_hint(words, safe_verbs):
                 "scratchpad (a path relative to an earlier `cd` is not "
                 "followed, so write it in full). Another site is added by "
                 "naming it in js/curl_read_hosts_reference.mjs."
+            )
+        granted_reader = GRANTED_READER_FOR_VERB.get(verb)
+        if granted_reader:
+            return (
+                f"`{verb}` has no allow rule, because its other forms change "
+                "things. Its reading form is granted under a name and runs "
+                f"unasked: `node scripts/ai.mjs {granted_reader}`, as its own "
+                "Bash call."
             )
         if verb in ("mkdir", "rm", "mv"):
             return (

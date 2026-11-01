@@ -567,6 +567,8 @@
     { "command": "ls | while read f; do rm $f; done", "decision": "ask", "why": "a trusted read does not lend its trust to an untrusted body" },
     { "command": "IFS= grep x y", "decision": "silent", "why": "IFS= in front of any verb but read still fails closed" },
     { "command": "cd /home/j/.claude/projects/-home-j-a-repos-love/ && jq -r 'select(.type==\"user\" and (.message.content|type)==\"string\") | .timestamp + \" U: \" + (.message.content|.[0:400])' x.jsonl | grep -av '<command' | tail -40", "decision": "allow", "why": "jq only reads and prints - it has no flag that writes and no way to run another program - so a transcript read through it needs no person" },
-    { "command": "jq . a.json > out.json", "decision": "deny", "why": "a trusted reader does not make a redirect into a repo file trusted" }
+    { "command": "jq . a.json > out.json", "decision": "deny", "why": "a trusted reader does not make a redirect into a repo file trusted" },
+    { "command": "tail -c 4000 /home/j/a/user/facebook_post.log; echo; crontab -l | grep -a facebook", "decision": "ask", "reason_includes": "crontab_list", "why": "crontab holds no rule because its other forms replace or delete the schedule; the hint names the granted function that only lists it" },
+    { "command": "ls -t /home/j/x | head -40; tmux ls 2>&1 | head", "decision": "ask", "reason_includes": "tmux_sessions_list", "why": "tmux holds no rule because its other forms type into or kill a session; the hint names the granted function that only lists them" }
   ]
 }
