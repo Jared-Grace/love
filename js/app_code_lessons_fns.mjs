@@ -308,6 +308,7 @@ import { app_code_lesson_while_count } from "./app_code_lesson_while_count.mjs";
 import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_code_lesson_while_total_step } from "./app_code_lesson_while_total_step.mjs";
 import { app_code_lesson_while_total_squares } from "./app_code_lesson_while_total_squares.mjs";
+import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
 import { app_code_lesson_for } from "./app_code_lesson_for.mjs";
 export function app_code_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
@@ -628,6 +629,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_total,
     app_code_lesson_while_total_step,
     app_code_lesson_while_total_squares,
+    app_code_lesson_while_if,
     app_code_lesson_for,
   ];
   return fns;
