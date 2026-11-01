@@ -28,11 +28,11 @@ export function app_shared_overlay_card_closable() {
     }
   }
   html_on_click(backdrop, on_backdrop);
-  ("THE X SHARES A ROW WITH THE TITLE, asked for by the human 2026-11-01, so it takes no line of its own: the title fills the row and the X sits at its end.");
+  ("THE X SHARES A ROW WITH THE TITLE, asked for by the human 2026-11-01, so it takes no line of its own: the title fills the row and the X sits at its end, held to the top of the row - the corner where a reader looks for a way out - rather than centred against a title that may be tall or run onto two lines.");
   let top = html_div(card);
   html_style_assign(top, {
     display: "flex",
-    "align-items": "center",
+    "align-items": "flex-start",
     gap: "0.5em",
   });
   let title = html_div(top);
