@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
 import { bible_word_articles_matching } from "./bible_word_articles_matching.mjs";
+import { bible_word_articles_placed } from "./bible_word_articles_placed.mjs";
 import { app_shared_overlay_card_closable } from "./app_shared_overlay_card_closable.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -36,8 +37,16 @@ export async function app_shared_bible_word_overlay_articles_open(
   strong_url,
   words,
   index,
+  chapter_code,
+  verse_number,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 6);
+  ("$plain chapter_code");
+  ("$plain verse_number");
+  ("the code is a chapter's name, like JHN04, and the number counts the tapped verse within it; they say where the verse stands, and nothing in them runs.");
+  ("A NAME SEVERAL PEOPLE SHARE OFFERS THE ONE THE PASSAGE IS ABOUT, by ",
+    fn_name("bible_word_articles_placed"),
+    " - Mary in Luke 10 opens Mary of Bethany, not Jesus' mother.");
   ("$plain words");
   ("$plain index");
   ("the words are the bare words of the tapped word's verse in order, and the index says which of them was tapped; they are looked up and nothing in them runs.");
@@ -66,7 +75,12 @@ export async function app_shared_bible_word_overlay_articles_open(
   let offers = [];
   for (let site of sites) {
     let table = await site.table();
-    let articles = bible_word_articles_matching(table, words, index);
+    let matched = bible_word_articles_matching(table, words, index);
+    let articles = bible_word_articles_placed(
+      matched,
+      chapter_code,
+      verse_number,
+    );
     for (let article of articles) {
       offers.push({
         site,

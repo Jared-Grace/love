@@ -52,6 +52,8 @@ export function app_shared_bible_words_on_click_overlay(
           strong_url,
           words,
           index,
+          chapter_code,
+          verse_number,
         );
       }
       html_on_click(span, open);

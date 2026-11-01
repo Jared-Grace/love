@@ -1,5 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { window_open } from "./window_open.mjs";
+import { app_shared_biblehub_word_text_get } from "./app_shared_biblehub_word_text_get.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 export function app_shared_biblehub_word_button(parent, strong_url) {
   arguments_assert(arguments, 2);
@@ -10,6 +11,7 @@ export function app_shared_biblehub_word_button(parent, strong_url) {
   function open() {
     window_open(strong_url);
   }
-  let button = app_shared_button(parent, "Open word in BibleHub", open);
+  let label = app_shared_biblehub_word_text_get();
+  let button = app_shared_button(parent, label, open);
   return button;
 }
