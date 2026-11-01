@@ -1,8 +1,8 @@
 import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_shared_money_section_gifts_welcome() {
-  "The part of what this app does with money that answers when a reader is asked for anything, and how hard.";
-  "When the asking happens is said as plainly as whether it happens, because a reader deciding whether to start is really asking what this will be like later on.";
+  "The part of what this app does with money that answers whether a reader is pressed to give.";
+  "It names no schedule of asking, only the footing a gift stands on: given as the giver decided, never pressed out of them.";
   let texts = {
     en: {
       title: "Gifts are welcome and there is never pressure to give",

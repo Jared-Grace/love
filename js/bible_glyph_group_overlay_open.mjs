@@ -39,7 +39,7 @@ export function bible_glyph_group_overlay_open(
   ("the address is BibleHub's page for the word's Strong's number, or nothing when the word has none. It is opened in a new tab and nothing here runs it.");
   ("$plain reasons");
   ("the reasons map a picture's name to why that picture was chosen, as text. It is data to show and nothing that runs.");
-  ("WHY THESE PICTURES COMES LAST, one line per picture with the picture beside its reason, so a reader who wants only the meaning stops reading sooner. A picture used twice in one word is explained once. A picture with no reason written yet is left out rather than shown blank. See ",
+  ("WHY THESE PICTURES COMES LAST, one line per picture with the picture beside its reason, so a reader who wants only the meaning stops reading sooner. A picture used twice in one word is explained once. A picture with no reason written yet is still listed, with the words not explained yet in faint text, asked for by the human on 2026-11-01: leaving it out made a card of milky way and doing explain only the doing, and look finished. See ",
     fn_name("bible_glyph_reasons"),
     ".");
   ("$plain word_name");
@@ -174,7 +174,7 @@ export function bible_glyph_group_overlay_open(
   }
   let explained = [];
   for (let name of names) {
-    if (explained.includes(name) || not(property_exists(reasons, name))) {
+    if (explained.includes(name)) {
       continue;
     }
     explained.push(name);
@@ -195,6 +195,15 @@ export function bible_glyph_group_overlay_open(
       let picture = html_span(reason_line);
       html_style_set(picture, "fontSize", "1.5em");
       bible_glyph_name_draw_html(picture, name, lookup);
+      let written = property_exists(reasons, name);
+      if (not(written)) {
+        let missing = html_span_text_content(
+          reason_line,
+          " Not explained yet.",
+        );
+        app_shared_text_deemphasized(missing);
+        continue;
+      }
       html_span_text_content(reason_line, " " + property_get(reasons, name));
     }
   }

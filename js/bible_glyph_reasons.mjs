@@ -13,6 +13,8 @@ export function bible_glyph_reasons() {
       "A play button. Something is set going: it turns a picture into a verb, the doing of that thing.",
     thing:
       "A small blue diamond. It turns a picture into a thing or an idea: the thing itself, not the doing of it.",
+    milky_way:
+      "The Milky Way, a sky full of stars. It means create: in the beginning God created the heavens and the earth, and no person makes a sky. When the Hebrew word means create, the Bible only ever says it of God.",
     describing:
       "A small orange diamond, next to the blue one. It turns a picture into a describing word: what kind something is.",
     person:
@@ -200,6 +202,61 @@ export function bible_glyph_reasons() {
     likeness: "A mirror shows a likeness: like, as, the same as.",
     pin: "A pin fixes something firmly: to establish, to make firm, to prepare.",
     seat: "A seat: rest, sitting down.",
+    brother:
+      "Two brothers side by side: a brother, a kinsman. Many names begin with it, like Ahiram, brother of height.",
+    dashing_away:
+      "A puff of air dashing away: to flee, to escape. With a runner and a place, it is a refuge, somewhere to flee to.",
+    currency_exchange:
+      "Money changing hands: to redeem, to buy back what was lost. I know that my Redeemer lives (Job 19:25).",
+    hollow_circle:
+      "An empty ring: a circle, a hollow, an empty place. A threshing floor is a round floor, and Galilee means the circle.",
+    wine: "A glass of wine: wine, and the drink offering poured out to God.",
+    leg: "A leg: the leg, the thigh. With someone kneeling, it is the knee.",
+    leaf: "Leaves: branches and reeds, and the booths of leafy branches Israel lived in at the Feast of Booths (Leviticus 23:42).",
+    input_numbers:
+      "Number keys: a number, counting. With all, it is a hundred.",
+    ship: "A ship: ships, and sailing the sea.",
+    axe: "An axe: to cut, to hew, to cut down. Gideon's name means hewer.",
+    four: "The number four: four, fourth, fourfold.",
+    ten: "The number ten: ten. With all, it is a thousand; multiplied, it is ten thousand.",
+    eating: "A plate with a knife and fork: to eat, food.",
+    weary_face: "A weary face: tired, toil, grief, and the cry alas.",
+    telescope:
+      "A telescope looks far off: there, over there. With a guard, it is keeping watch.",
+    son: "A boy: a son, a child. Many names begin with it, like Benjamin, son of the right hand (Genesis 35:18).",
+    star: "A glowing star: glory, honor. The root means heavy: glory is weight, what matters most. The whole earth is full of His glory (Isaiah 6:3).",
+    red_circle:
+      "A red circle: red, scarlet, crimson. With a fruit, it is the pomegranate.",
+    nose: "A nose: the nose, the nostrils. With fire, it is anger, because in Hebrew anger burns in the nostrils. Slow to anger is, word for word, long of nostrils (Exodus 34:6).",
+    linked_paperclips: "Paperclips linked together: with, together, united.",
+    peace:
+      "A calm face: peace, whole, well. Not only no war, but everything as it should be.",
+    moai: "A carved stone head: an idol, a carved or cast image. You shall not make for yourself an idol (Exodus 20:4).",
+    horse: "A horse: a horse, a horseman, driving a chariot.",
+    grapes:
+      "Grapes: grapes, a cluster. With a foot or a fist, it is the winepress, where grapes are trodden.",
+    hair: "Hair: hair, and a hairy man. Esau means hairy (Genesis 25:25).",
+    thorns:
+      "A cactus: thorns. Thorns and thistles it shall bring forth for you (Genesis 3:18). With a tree, it is the acacia, a thorny tree.",
+    sleeping_face: "A sleeping face: sleep, sleepy.",
+    lying_face:
+      "A lying face with a growing nose: a lie, false, to deny. With a trap, it is deceit.",
+    ruler:
+      "A ruler measures straight: righteous, just, right. Amos was shown a plumb line (Amos 7:7-8): being righteous is being straight when held against God's line.",
+    loudly_crying: "A face crying loudly: weeping, to weep.",
+    triangular_ruler:
+      "A set square: to measure, and the cubit, the length of a forearm.",
+    battery: "A full battery: full, fullness, to fill.",
+    brown_square:
+      "A brown square: earth, the ground. Adam was formed from the dust of the ground, adamah (Genesis 2:7).",
+    broken_chain: "A broken chain: to break, broken, destruction.",
+    seed: "A seed: seed, to sow, and offspring. To your offspring I will give this land (Genesis 12:7).",
+    black_circle: "A black circle: black, dark.",
+    pointing: "A hand pointing: that, because, and the side something is on.",
+    derelict_house:
+      "A ruined house: to forsake, to leave, to abandon, and a ruin.",
+    fearful_face: "A frightened face: terror, fear, trembling, awe.",
+    puzzle_piece: "A puzzle piece: what is left over, the remnant, the rest.",
   };
   return r;
 }
