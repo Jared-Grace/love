@@ -4,7 +4,7 @@ import { gloss_write_folder } from "./gloss_write_folder.mjs";
 import { json_extension } from "./json_extension.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_exists_not_assert_json } from "./file_exists_not_assert_json.mjs";
-export async function gloss_write_file_comma_named_assert(
+export async function gloss_write_file_misnamed_assert(
   chapter_code,
   verse_key,
   fn,

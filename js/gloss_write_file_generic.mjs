@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { gloss_write_file_comma_named_assert } from "./gloss_write_file_comma_named_assert.mjs";
+import { gloss_write_file_misnamed_assert } from "./gloss_write_file_misnamed_assert.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { gloss_write_generic } from "./gloss_write_generic.mjs";
@@ -17,7 +17,7 @@ export async function gloss_write_file_generic(
   ("$plain chapter_code");
   ("$plain verse_key");
   ("both name text to read: a chapter of the Bible, and the verses a passage of it covers. Neither names anything that runs.");
-  await gloss_write_file_comma_named_assert(chapter_code, verse_key, fn);
+  await gloss_write_file_misnamed_assert(chapter_code, verse_key, fn);
   let path = gloss_write_file_path(chapter_code, verse_key, fn);
   let entries = await file_read_json(path);
   let r = await gloss_write_generic(
