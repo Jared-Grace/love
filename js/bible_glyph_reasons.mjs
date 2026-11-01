@@ -1,0 +1,92 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+export function bible_glyph_reasons() {
+  arguments_assert(arguments, 0);
+  ("Why each picture was chosen, keyed by the picture's name, in plain words a reader is shown when they tap a word.");
+  ("ONE REASON PER PICTURE AND NOT ONE PER SEQUENCE. A word drawn as several pictures is explained by showing each picture's reason in order, so the heart on fire says once why it is God, and every word built on it inherits that. Rejected: a reason written for each of the eleven thousand sequences, because the same sentence would be copied thousands of times and the copies would drift apart.");
+  ("A REASON SAYS WHY THE PICTURE FITS, NOT WHAT THE WORD MEANS. The definition is already shown beside it. Where Scripture is the reason, the reason names the book, so a reader can go and read it.");
+  ("THE REASONS WERE TAKEN FROM WHAT WAS RECORDED WHEN EACH PICTURE WAS SEATED wherever that was written down, in the prose of the root tables and the character table, rather than invented afresh, because the reason a picture was chosen is a fact about its history.");
+  ("IT IS A TABLE OF ITS OWN, sent for at the first tap like the meanings, so a page that draws a chapter never carries it.");
+  let r = {
+    proper_name:
+      "A name tag. It marks a word as a name, of a person or a place, rather than the ordinary word it is spelled from.",
+    doing:
+      "A play button. Something is set going: it turns a picture into a verb, the doing of that thing.",
+    thing:
+      "A small blue diamond. It turns a picture into a thing or an idea: the thing itself, not the doing of it.",
+    describing:
+      "A small orange diamond, next to the blue one. It turns a picture into a describing word: what kind something is.",
+    person:
+      "A standing person. A human being, or the one who is or does the picture beside it.",
+    up_arrow:
+      "Pointing up: high, lifted up, raised, great. God is called the Most High (Genesis 14:18).",
+    no_entry: "A no entry sign: not, no, do not.",
+    down_arrow: "Pointing down: low, under, beneath, brought low.",
+    hand: "An open hand. The hand is what a person acts with, so in Hebrew it also means power: the mighty hand of the LORD (Exodus 14:31).",
+    speech: "A speech bubble: saying, speaking, a word spoken.",
+    house:
+      "A house: a home, and the household or family who live in it. As for me and my house, we will serve the LORD (Joshua 24:15).",
+    i_am: "The LORD's covenant name is I AM (Exodus 3:14). The infinity sign says He has no beginning and no end (Psalm 90:2; Revelation 1:8).",
+    doer: "A worker. Put after a picture, it means the one who does that thing.",
+    pointing_down:
+      "A finger pointing down at something: here, this one, or the one something is done to.",
+    pointing_up: "A finger pointing up: on, upon, over, above, and rising up.",
+    heart_on_fire:
+      "God. God is love (1 John 4:8), and our God is a consuming fire (Hebrews 12:29). The burning heart is both at once.",
+    place: "A flag stuck in the ground marks a spot: a place.",
+    fire: "Fire: burning, and an offering made by fire.",
+    crown: "A crown: a king, his reign, his kingdom, a lord or master.",
+    manner:
+      "A wavy line. It turns a picture into a word of manner: how something is done.",
+    away: "An arrow going away: turning aside, removing, going away.",
+    crowd: "Two people standing together: a crowd, a group, gathering.",
+    tray_out:
+      "An out-tray: from, out of, coming out. The same box as the in-tray with the arrow reversed, so the pair teaches itself.",
+    city: "City buildings: a city or town.",
+    safety_pin:
+      "A safety pin holds two things together: with, beside, together.",
+    map: "A map shows lands and the peoples who live in them: a nation, the nations, a land or province.",
+    round_pushpin:
+      "A pin pushed in to hold a spot: to stand, to stay put, to set in place.",
+    tray_in:
+      "An in-tray: into, in, gathering in. The same box as the out-tray with the arrow reversed.",
+    heart_red: "A red heart: love, and the heart's will and desire.",
+    eyes: "Two eyes looking: to see, to look.",
+    scales: "Balance scales weigh things fairly: justice, judgment, a ruling.",
+    thumbs_up:
+      "A thumb up: good, pleasing, well done. Its mirror, the thumb down, is bad.",
+    coin: "A coin: a price, a payment, a wage, a reward, paying in full.",
+    mountain: "A mountain or hill country.",
+    toward: "A target: to, toward, for, the thing aimed at.",
+    running: "A person running: run, flee, chase.",
+    hole: "A hole in the ground: a pit, a hollow, digging, piercing.",
+    loudspeaker: "A loudspeaker: a voice, a sound, crying out loud.",
+    rock: "A rock, and the Rock that God is called (Deuteronomy 32:4; Psalm 18:2).",
+    water_wave: "A wave: rushing water, a flood, the sea and its breakers.",
+    sparkles: "Sparkles: shining, glorious, splendid, pure.",
+    hammer: "A hammer: making, doing work, a deed done.",
+    walking: "A person walking: to go, to walk, to come.",
+    droplet: "A drop of water: water, dew, sprinkling.",
+    baby: "A baby: being born, bearing a child, giving birth.",
+    tree: "A tree: a tree, and wood.",
+    question:
+      "A question mark: asking, and the asking words: who, what, where, when, how.",
+    hands_giving: "Two hands held out to give: to give, to hand over.",
+    check:
+      "A check mark: true, right, faithful, believed. Amen means it is true.",
+    thumbs_down:
+      "A thumb down: bad, evil, wicked, harm. The mirror of the thumb up, good.",
+    knot: "A knot: binding, tying, a rope, being captured.",
+    collision: "A crash: ruin, destruction, disaster.",
+    children_crossing:
+      "Two people walking side by side: beside, alongside, near.",
+    locked: "A lock: shut, closed, sealed, kept back.",
+    eye: "One eye: the eye, seeing, looking at.",
+    money_bag:
+      "A bag of money: riches, wealth, and the weight of what is heavy. In Hebrew glory is a word for weight.",
+    fist: "A fist striking: to strike, to beat, to kill.",
+    raised_fist: "A raised fist: strength, might, an army, courage.",
+    herb: "A green plant: grass, herbs, plants that grow.",
+    foot: "A foot: the foot, walking, stepping.",
+  };
+  return r;
+}
