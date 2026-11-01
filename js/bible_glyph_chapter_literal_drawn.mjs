@@ -58,8 +58,8 @@ export function bible_glyph_chapter_literal_drawn(chapter_code, verses, drawn) {
   };
   function preposition_code(original, front) {
     let consonants = original.replace(/[^א-ת]/g, "");
-    let and = front.includes("Conj-w") && consonants.startsWith("ו");
-    if (and) {
+    let conjunction_is = front.includes("Conj-w") && consonants.startsWith("ו");
+    if (conjunction_is) {
       consonants = consonants.slice(1);
     }
     let code = property_get_or(letters, consonants[0], undefined);
