@@ -290,7 +290,7 @@ export function reply_proposals() {
   ]);
   let town_out = {
     title: "answer somebody from a town the rules were never told about",
-    fn: fn_name("app_message_reply_from_country"),
+    fn: fn_name("app_shared_message_reply_from_country"),
     whole: [fn_name("reply_word_any")],
     diff: [
       combined17,
