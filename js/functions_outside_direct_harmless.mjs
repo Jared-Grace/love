@@ -14,6 +14,8 @@ export function functions_outside_direct_harmless() {
   let names = [
     fn_name("app_en_learn_bible_gloss_urdu_plural_noun_explains"),
     fn_name("bible_glyph_artwork_names"),
+    fn_name("easton_word_articles"),
+    fn_name("smith_word_articles"),
     fn_name("bible_glyph_chapter_hab01"),
     fn_name("bible_glyph_chapters_offline_download"),
     fn_name("bible_glyph_chapter_job19"),
