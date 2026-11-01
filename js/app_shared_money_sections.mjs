@@ -5,7 +5,6 @@ import { app_shared_money_section_never_used_for } from "./app_shared_money_sect
 import { app_shared_money_section_why_receive } from "./app_shared_money_section_why_receive.mjs";
 import { app_shared_money_section_purpose_love } from "./app_shared_money_section_purpose_love.mjs";
 import { app_shared_money_section_code_public } from "./app_shared_money_section_code_public.mjs";
-import { app_shared_money_section_large_download } from "./app_shared_money_section_large_download.mjs";
 export function app_shared_money_sections() {
   "What this app does with money, said plainly, each part under the question it answers.";
   "Written down where a reader can see it rather than kept as an understanding among the people running it, because a promise nobody can read is not one anybody can hold you to.";
@@ -18,7 +17,6 @@ export function app_shared_money_sections() {
   let section6 = app_shared_money_section_why_receive();
   let section7 = app_shared_money_section_purpose_love();
   let section8 = app_shared_money_section_code_public();
-  let section9 = app_shared_money_section_large_download();
   let sections = [
     section,
     section2,
@@ -27,7 +25,6 @@ export function app_shared_money_sections() {
     section6,
     section7,
     section8,
-    section9,
   ];
   return sections;
 }

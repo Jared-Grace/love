@@ -399,6 +399,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_while_log: text_frozen("while_log"),
     app_code_lesson_while_down: text_frozen("while_down"),
     app_code_lesson_while_less_equal: text_frozen("while_less_equal"),
+    app_code_lesson_while_greater_equal: text_frozen("while_greater_eq"),
     app_code_lesson_while_halve: text_frozen("while_halve"),
     app_code_lesson_while_count: text_frozen("while_count"),
     app_code_lesson_while_total: text_frozen("while_total"),
