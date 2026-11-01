@@ -1289,6 +1289,25 @@ GIT_SAFE_GLOBAL_FLAGS = {
 }
 
 
+# xargs flags weighed and found not to move anything: they decide only
+# WHETHER the command runs on empty input, never which command runs or
+# where its arguments land - unlike `-I{}`, which puts input anywhere.
+XARGS_WEIGHED_FLAGS = {"-r", "--no-run-if-empty"}
+
+
+def xargs_wrapper_skip(words):
+    """How many leading words `xargs` and its weighed flags occupy, when
+    a plain command word follows them; 0 otherwise."""
+    if not words or words[0] != "xargs":
+        return 0
+    i = 1
+    while i < len(words) and words[i] in XARGS_WEIGHED_FLAGS:
+        i += 1
+    if i < len(words) and not words[i].startswith("-"):
+        return i
+    return 0
+
+
 def transparent_wrapper_skip(words):
     """How many leading words a transparent wrapper occupies, or 0 if this
     command doesn't start with one.
@@ -1304,8 +1323,9 @@ def transparent_wrapper_skip(words):
     Single source of truth on purpose - these three shapes were previously
     spelled out in both callers, where they could drift apart and silently
     widen one path but not the other."""
-    if words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
-        return 1
+    skip = xargs_wrapper_skip(words)
+    if skip:
+        return skip
     skip = timeout_wrapper_skip(words)
     if skip:
         return skip
@@ -4623,8 +4643,9 @@ def untrusted_piece_hint(words, safe_verbs):
         plain = plain[1:]
     if not plain:
         return ""
-    if plain[0] == "xargs" and len(plain) >= 2 and not plain[1].startswith("-"):
-        plain = plain[1:]
+    skip = xargs_wrapper_skip(plain)
+    if skip:
+        plain = plain[skip:]
     if plain[0] in COMMAND_BUILDING_VERBS:
         return (
             f"`{plain[0]}` runs a command it puts together at run time, so no "
