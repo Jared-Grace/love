@@ -22,6 +22,7 @@ import { list_sort_text } from "./list_sort_text.mjs";
 import { property_set } from "./property_set.mjs";
 import { json_format_to_spaces } from "./json_format_to_spaces.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
+import { app_shared_description_baseline_rename } from "./app_shared_description_baseline_rename.mjs";
 import { app_shared_dev_stamp_path } from "./app_shared_dev_stamp_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_delete } from "./file_delete.mjs";
@@ -90,6 +91,10 @@ export async function app_rename(a_name_before, a_name_after) {
   property_set(data, "names", sorted);
   let names_text = json_format_to_spaces(data, 1) + "\n";
   await file_overwrite(names_path, names_text);
+  let description_moved = await app_shared_description_baseline_rename(
+    a_name_before,
+    a_name_after,
+  );
   let stamp_path = app_shared_dev_stamp_path(a_name_before);
   let stamped = await file_exists(stamp_path);
   if (stamped) {
@@ -107,6 +112,7 @@ export async function app_rename(a_name_before, a_name_after) {
   let r = {
     renamed,
     keys_moved,
+    description_moved,
   };
   return r;
 }

@@ -2,7 +2,6 @@ import { property_get } from "./property_get.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
-import { js_code_while_lines } from "./js_code_while_lines.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -38,13 +37,15 @@ export function app_code_lesson_while_generic(params) {
   let possible = property_get(params, "possible");
   let bound_past = property_get(params, "bound_past");
   let above_inner = property_get(params, "above");
+  ("2026-11-01, for the first for lesson: loop_lines writes the loop around its one changed line, handed the condition and that line, so a for holding only its condition is taught by the same lesson a while is");
+  let loop_lines = property_get(params, "loop_lines");
   let name = "n";
   function program_lines(start, bound, amount) {
     "let n = start; while (n comparison bound) { n change= amount; } console.log(n);";
     let code = js_code_let_statement(name, start);
     let condition = js_code_binary_spaced_nb(name, comparison, bound);
     let changed = js_code_assign_operator_statement(name, change, amount);
-    let while_lines = js_code_while_lines(condition, changed);
+    let while_lines = loop_lines(condition, changed);
     let statement = js_code_console_log_statement(name);
     let lines = list_concat_multiple([[code], while_lines, [statement]]);
     return lines;
