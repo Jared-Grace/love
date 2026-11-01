@@ -6,6 +6,7 @@ import { app_shared_bible_font_size } from "./app_shared_bible_font_size.mjs";
 import { app_shared_mobile_default_font_size_generic } from "./app_shared_mobile_default_font_size_generic.mjs";
 import { app_shared_bar_content_root_sticky_padded } from "./app_shared_bar_content_root_sticky_padded.mjs";
 import { property_get } from "./property_get.mjs";
+import { html_centered } from "./html_centered.mjs";
 import { bible_glyph_chapter_references_browser } from "./bible_glyph_chapter_references_browser.mjs";
 import { app_emoji_bible_chapter_chosen } from "./app_emoji_bible_chapter_chosen.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
@@ -54,6 +55,8 @@ export async function app_emoji_bible(context) {
   let frame = app_shared_bar_content_root_sticky_padded(root);
   let bar = property_get(frame, "bar");
   let content = property_get(frame, "content");
+  ("The bar is centred the way the bible reader's bar is, by the same call, so the two apps' bars line up with each other.");
+  html_centered(bar);
   let chapters = await bible_glyph_chapter_references_browser();
   let chosen = app_emoji_bible_chapter_chosen(chapters);
   let index_shown = null_is(chosen);
