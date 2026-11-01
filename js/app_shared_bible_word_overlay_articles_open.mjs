@@ -122,9 +122,9 @@ export async function app_shared_bible_word_overlay_articles_open(
     app_shared_button(choices, label, read);
   }
   ("A SITE THE READER HAS CHOSEN BEFORE COMES FIRST, under Recent, the one chosen last at the top; the rest follow under Others - asked for by the human 2026-11-01, so a Catholic reader who opens the Catholic Encyclopedia sees it first every time after. Before any choice there is nothing recent, so the articles show in the sites' usual order with no labels at all.");
-  function split_draw(split, draw) {
-    let recent_items = split.recent;
-    let other_items = split.others;
+  function split_draw(offers_split, draw) {
+    let recent_items = offers_split.recent;
+    let other_items = offers_split.others;
     let labelled = greater_than(recent_items.length, 0);
     if (labelled) {
       let text3 = app_shared_bible_word_sites_recent_text_get();
