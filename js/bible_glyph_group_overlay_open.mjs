@@ -26,15 +26,13 @@ import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 export function bible_glyph_group_overlay_open(
   names,
-  lookup,
-  meanings,
+  { lookup, meanings, reasons },
   original,
   sound,
   word_name,
-  reasons,
   strong_url,
 ) {
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 6);
   ("$plain strong_url");
   ("the address is BibleHub's page for the word's Strong's number, or nothing when the word has none. It is opened in a new tab and nothing here runs it.");
   ("$plain reasons");

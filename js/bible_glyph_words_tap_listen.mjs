@@ -66,12 +66,14 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
     }
     bible_glyph_group_overlay_open(
       names,
-      lookup,
-      meanings,
+      {
+        lookup,
+        meanings,
+        reasons,
+      },
       original,
       sound,
       name,
-      reasons,
       strong_url,
     );
   }
