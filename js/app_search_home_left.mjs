@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -9,6 +8,7 @@ import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
 import { app_shared_bible_offline_gear } from "./app_shared_bible_offline_gear.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
@@ -31,8 +31,9 @@ export function app_search_home_left(context, hash, search) {
   ("English once had its own exception here, 'except in English'. That was not true, save for œ, which that table lacks: the English index files a word written with an accent under its plain spelling as well, by ",
     fn_name("bible_search_symbols_plain"),
     ", so a reader typing maizoob finds Maizoöb. Asked by the human 2026-10-05, with 'don't matter' replaced by 'don't change the results'.");
+  ("THE WORDS MAY COME FROM DIFFERENT BIBLES. A language's index pools every Bible in it, one verse list per word, and a search keeps the verses every word's list shares - so one word can be found in one Bible and another word in a different Bible of the same language. 'One Bible in a language holds every word' said otherwise and was corrected 2026-11-01.");
   let search_instructions =
-    "What words would you like to search for? Separate by spaces. The search looks in the Bibles of the languages you chose. A verse matches if one Bible in a language holds every word. Accents don't change the results. Spelling does.";
+    "What words would you like to search for? Separate by spaces. The search looks in the Bibles of the languages you chose. A verse matches if every word appears in it in at least one Bible in that language. The words don't have to come from the same Bible. Accents don't change the results. Spelling does.";
   app_shared_text_body(content, search_instructions);
   let input = html_input_text(content, search_instructions);
   app_shared_input_style(input);
