@@ -526,6 +526,26 @@ DANGEROUS_ASSIGN_NAMES = {
 DANGEROUS_ASSIGN_PREFIXES = ("LD_", "DYLD_", "BASH_FUNC_")
 
 
+# `read` runs nothing: it takes one line from its input and stores it in
+# the variables it names. So it is trusted as a verb (2026-11-01), which is
+# what makes `... | while read f; do BODY; done` reachable - the body is still
+# checked like any other, with `$f` unexpanded, exactly as a
+# `for f in $(...)` body already is. Only `-r` is let in, and every name it
+# stores into must be a plain variable that is not one of the dangerous names
+# below: `read PATH` would change which program the body's next verb runs.
+READ_SAFE_FLAGS = {"-r"}
+READ_VAR_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+
+
+def is_safe_read(words):
+    for w in words[1:]:
+        if w in READ_SAFE_FLAGS:
+            continue
+        if not READ_VAR_RE.match(w) or is_dangerous_assignment_name(w):
+            return False
+    return True
+
+
 def is_dangerous_assignment_name(name):
     if name in DANGEROUS_ASSIGN_NAMES:
         return True
@@ -2527,12 +2547,22 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
         # to execution-influencing names (PATH, LD_*, IFS, ...) are the one
         # exception - they fail closed so they can't quietly change how a
         # following trusted verb is resolved or what it loads.
+        #
+        # `IFS=` in front of `read` is the one dangerous name let through:
+        # set that way it lasts for the `read` alone, and `read` only uses it
+        # to decide where one stored word ends. Anywhere else it still prompts.
+        rest = words
+        while rest and ASSIGN_RE.match(rest[0]):
+            rest = rest[1:]
+        verb_is_read = bool(rest) and rest[0] == "read"
         while words:
             m = ASSIGN_RE.match(words[0])
             if not m:
                 break
-            if is_dangerous_assignment_name(m.group(1)):
-                return False
+            name = m.group(1)
+            if is_dangerous_assignment_name(name):
+                if not (verb_is_read and name == "IFS"):
+                    return False
             words = words[1:]
         if not words:
             continue
@@ -2540,6 +2570,10 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             raise Unsupported(f"unsupported nested keyword {words[0]!r}")
         if words[0] in SAFE_BUILTINS:
             continue
+        if words[0] == "read":
+            if is_safe_read(words):
+                continue
+            return False
         if words[0] == "find" and any(w in FIND_EXEC_FLAGS for w in words[1:]):
             if not is_safe_find_exec(words, safe_verbs):
                 return False
