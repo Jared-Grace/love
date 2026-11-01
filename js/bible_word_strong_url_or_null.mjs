@@ -34,11 +34,11 @@ export async function bible_word_strong_url_or_null(
   async function built_fetch() {
     let destination = bible_glyph_chapter_built_destination(chapter_code);
     let project_url = firebase_storage_url_project_jg();
-    let built = await firebase_storage_download_json_decompress_cache(
+    let downloaded = await firebase_storage_download_json_decompress_cache(
       project_url,
       destination,
     );
-    return built;
+    return downloaded;
   }
   let built = await catch_null_async(built_fetch);
   if (null_is(built)) {
