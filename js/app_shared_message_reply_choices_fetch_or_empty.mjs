@@ -12,8 +12,8 @@ export async function app_shared_message_reply_choices_fetch_or_empty() {
   async function fetch() {
     let module = await import("./app_shared_message_reply_choices.mjs");
     let fn = property_get(module, fn_name("app_shared_message_reply_choices"));
-    let start = fn();
-    return start;
+    let choices = fn();
+    return choices;
   }
   let start = await catch_null_async(fetch);
   let failed = null_is(start);
