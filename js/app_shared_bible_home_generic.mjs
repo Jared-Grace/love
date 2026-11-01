@@ -60,6 +60,7 @@ export async function app_shared_bible_home_generic(
   let languages_available = property_get(r2, "languages_available");
   let verse_current = property_get(r2, "verse_current");
   let pictures_place = property_get(r2, "pictures_place");
+  let verse_number = property_get(r2, "verse_number");
   app_shared_bible_verse_arrows(context, chapter_code, verse_current, foot);
   list_add_multiple(languages_verses, languages_available);
   let v = {
@@ -67,6 +68,7 @@ export async function app_shared_bible_home_generic(
     lines_copy_extra,
     bottom,
     chapter_code,
+    verse_number,
     pictures_place,
   };
   return v;
