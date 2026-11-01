@@ -165,10 +165,8 @@ import { app_code_lesson_expression_choose_order_stop_early_and } from "./app_co
 import { app_code_lesson_expression_choose_order_stop_early_both } from "./app_code_lesson_expression_choose_order_stop_early_both.mjs";
 import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice.mjs";
 import { app_code_lesson_statement_name_again_last } from "./app_code_lesson_statement_name_again_last.mjs";
-import { app_code_lesson_step_name_copy_kept } from "./app_code_lesson_step_name_copy_kept.mjs";
 import { app_code_lesson_statement_name_plus_one } from "./app_code_lesson_statement_name_plus_one.mjs";
 import { app_code_lesson_statement_name_minus_one } from "./app_code_lesson_statement_name_minus_one.mjs";
-import { app_code_lesson_step_name_one_more } from "./app_code_lesson_step_name_one_more.mjs";
 import { app_code_lesson_statement_name_one_more_last } from "./app_code_lesson_statement_name_one_more_last.mjs";
 import { app_code_lesson_statement_name_one_less } from "./app_code_lesson_statement_name_one_less.mjs";
 import { app_code_lesson_statement_name_one_less_last } from "./app_code_lesson_statement_name_one_less_last.mjs";
@@ -185,7 +183,6 @@ import { app_code_lesson_statement_name_divide_assign } from "./app_code_lesson_
 import { app_code_lesson_statement_name_increment } from "./app_code_lesson_statement_name_increment.mjs";
 import { app_code_lesson_statement_name_decrement } from "./app_code_lesson_statement_name_decrement.mjs";
 import { app_code_lesson_statement_name_fill_from } from "./app_code_lesson_statement_name_fill_from.mjs";
-import { app_code_lesson_step_name_swap_try } from "./app_code_lesson_step_name_swap_try.mjs";
 import { app_code_lesson_statement_name_swap_try } from "./app_code_lesson_statement_name_swap_try.mjs";
 import { app_code_lesson_statement_name_temp_keep } from "./app_code_lesson_statement_name_temp_keep.mjs";
 import { app_code_lesson_statement_name_swap } from "./app_code_lesson_statement_name_swap.mjs";
@@ -198,9 +195,7 @@ import { app_code_lesson_statement_name_not } from "./app_code_lesson_statement_
 import { app_code_lesson_statement_name_or } from "./app_code_lesson_statement_name_or.mjs";
 import { app_code_lesson_statement_name_and } from "./app_code_lesson_statement_name_and.mjs";
 import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
-import { app_code_lesson_step_name_average_two } from "./app_code_lesson_step_name_average_two.mjs";
 import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
-import { app_code_lesson_step_name_average_three } from "./app_code_lesson_step_name_average_three.mjs";
 import { app_code_lesson_statement_name_average_three } from "./app_code_lesson_statement_name_average_three.mjs";
 import { app_code_lesson_statement_name_middle } from "./app_code_lesson_statement_name_middle.mjs";
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
@@ -223,7 +218,6 @@ import { app_code_lesson_statement_name_seat_one } from "./app_code_lesson_state
 import { app_code_lesson_statement_name_seat_zero } from "./app_code_lesson_statement_name_seat_zero.mjs";
 import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
 import { app_code_lesson_statement_name_king_steps } from "./app_code_lesson_statement_name_king_steps.mjs";
-import { app_code_lesson_step_name_grid_inside } from "./app_code_lesson_step_name_grid_inside.mjs";
 import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_statement_name_grid_inside.mjs";
 import { app_code_lesson_statement_name_clock_back } from "./app_code_lesson_statement_name_clock_back.mjs";
 import { app_code_lesson_statement_name_even } from "./app_code_lesson_statement_name_even.mjs";
@@ -315,6 +309,7 @@ export function app_code_lessons_released_fns() {
   "On 2026-10-27, at the human's asking, every lesson released except the while lessons: the 176 added after statement_name_compare are every lesson then in the lesson list that was not named here and is not a while lesson.";
   "2026-10-31, at the human's asking - step by step is just one quiz type: the seventeen step lessons of the branching stages taken out of the course and so out of here, each if lesson beside them ending in a step-by-step quiz instead. The built site's bundle had no if lesson when this was done, so only latest's one person could have finished one.";
   "2026-11-01, asked next: thirteen step lessons of the naming stage taken out the same way. Three - step_name_value, step_name_two and step_name_copy_single - were in the built site's bundle, so a learner there may have finished one; it leaves their list, and the lesson it stood after now ends in the same stepping.";
+  "2026-11-01, asked next: the six step lessons that came before their lesson taken out too, that lesson now opening with the same stepping as its first quiz.";
   let fns = [
     app_code_lesson_symbols_digits_numbered,
     app_code_lesson_symbols_digit_number,
@@ -483,10 +478,8 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_expression_choose_order_stop_early_both,
     app_code_lesson_step_log_twice,
     app_code_lesson_statement_name_again_last,
-    app_code_lesson_step_name_copy_kept,
     app_code_lesson_statement_name_plus_one,
     app_code_lesson_statement_name_minus_one,
-    app_code_lesson_step_name_one_more,
     app_code_lesson_statement_name_one_more_last,
     app_code_lesson_statement_name_one_less,
     app_code_lesson_statement_name_one_less_last,
@@ -503,7 +496,6 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_statement_name_increment,
     app_code_lesson_statement_name_decrement,
     app_code_lesson_statement_name_fill_from,
-    app_code_lesson_step_name_swap_try,
     app_code_lesson_statement_name_swap_try,
     app_code_lesson_statement_name_temp_keep,
     app_code_lesson_statement_name_swap,
@@ -516,9 +508,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_statement_name_or,
     app_code_lesson_statement_name_and,
     app_code_lesson_statement_name_remainder,
-    app_code_lesson_step_name_average_two,
     app_code_lesson_statement_name_average_two,
-    app_code_lesson_step_name_average_three,
     app_code_lesson_statement_name_average_three,
     app_code_lesson_statement_name_middle,
     app_code_lesson_statement_name_grid_row,
@@ -541,7 +531,6 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_statement_name_seat_zero,
     app_code_lesson_statement_name_seat_less,
     app_code_lesson_statement_name_king_steps,
-    app_code_lesson_step_name_grid_inside,
     app_code_lesson_statement_name_grid_inside,
     app_code_lesson_statement_name_clock_back,
     app_code_lesson_statement_name_even,
