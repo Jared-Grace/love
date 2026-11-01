@@ -1,13 +1,13 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_bible } from "./app_bible.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
-import { app_shared_bible_mode_switch } from "./app_shared_bible_mode_switch.mjs";
 import { app_shared_bible_mode_verse } from "./app_shared_bible_mode_verse.mjs";
+import { app_shared_bible_mode_switch } from "./app_shared_bible_mode_switch.mjs";
+import { app_bible } from "./app_bible.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
 export function app_bible_verse_switch_button(
   context,
-  actions,
+  { verse_buttons },
   chapter_code,
   verse_number,
 ) {
@@ -21,5 +21,6 @@ export function app_bible_verse_switch_button(
     let mode = app_shared_bible_mode_verse();
     await app_shared_bible_mode_switch(context, mode, app_bible);
   }
-  app_shared_button(actions, "🔎 This verse", to_verse_view);
+  ("it stands with the buttons shown only while one verse is picked: with several picked, there is no one verse for it to mean.");
+  app_shared_button(verse_buttons, "🔎 This verse", to_verse_view);
 }

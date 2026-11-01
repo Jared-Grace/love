@@ -25,7 +25,12 @@ export function app_chapter_group_main(context) {
   app_shared_folder_choose(root, app_name, on_folder);
   async function on_folder(folder_code, on_change) {
     let entries = [];
-    function verse_action(context_verse, actions, chapter_code, verse_number) {
+    function verse_action(
+      context_verse,
+      { actions },
+      chapter_code,
+      verse_number,
+    ) {
       app_chapter_group_verse_draw(entries, actions, verse_number);
     }
     async function chapter_action(content, chapter_code) {

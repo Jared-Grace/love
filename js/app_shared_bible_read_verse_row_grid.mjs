@@ -5,6 +5,7 @@ import { app_shared_bible_verse_number_gutter } from "./app_shared_bible_verse_n
 import { text_combine } from "./text_combine.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
+import { html_align_items_center } from "./html_align_items_center.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
 export function app_shared_bible_read_verse_row_grid(content, v) {
@@ -16,6 +17,8 @@ export function app_shared_bible_read_verse_row_grid(content, v) {
   html_style_set(p, "grid-template-columns", columns);
   let style_value = app_shared_spaced_small_gap();
   html_style_set(p, "column-gap", style_value);
+  ("the verse sits level with its number button: a one-line verse is shorter than the button, and left at the top of its row it read as hanging above the number. Rejected: lining up only the first line with the button - it keeps long verses starting at the top, but the human asked for the verse centered against its number.");
+  html_align_items_center(p);
   ("when the primary (spine) language reads right-to-left, mirror the whole verse row: direction rtl moves the number gutter to the right and flows the row right-to-left, matching the verse text's own detected direction, so an RTL reader gets RTL numbers too");
   let primary_text = property_get_or(v, "text", "");
   let row_rtl = text_rtl_is(primary_text);

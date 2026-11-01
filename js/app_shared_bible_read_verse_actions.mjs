@@ -31,7 +31,12 @@ export function app_shared_bible_read_verse_actions({
     verse_number_v,
   );
   ("the switch to the other reader stands right after the reference buttons and before copy, in the order the single-verse view puts the same row in, so moving between the two readers does not move the buttons under your thumb");
-  verse_action(context, actions, verse_chapter_code, verse_number_v);
+  ("The verse action is handed both places: the whole row of buttons, and the part of it shown only while a single verse is picked. A button about one verse - the switch to that verse alone - goes in the second, so it hides when several are picked, as the human asked; the chapter grouping needs the whole row, because it finds the verse drawn just before it.");
+  let places = {
+    actions,
+    verse_buttons,
+  };
+  verse_action(context, places, verse_chapter_code, verse_number_v);
   app_shared_button(actions, t, copy);
   async function share() {
     await app_shared_bible_share(

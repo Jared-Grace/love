@@ -1,8 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
 import { app_shared_bible_home_copy_button } from "./app_shared_bible_home_copy_button.mjs";
 import { app_shared_bible_home_share_button } from "./app_shared_bible_home_share_button.mjs";
+import { html_span } from "./html_span.mjs";
+import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_buttons.mjs";
+import { app_shared_bible_home_chapter_button } from "./app_shared_bible_home_chapter_button.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_bible_home_verse_texts } from "./app_shared_bible_home_verse_texts.mjs";
 import { html_p } from "./html_p.mjs";
@@ -28,12 +30,7 @@ export async function app_shared_bible_home_generic_lambda$a(
   let chapter_name = property_get(r, "chapter_name");
   let book_name = property_get(r, "book_name");
   let chapter_code = property_get(r, "chapter_code");
-  app_shared_bible_home_chapter_button(
-    context,
-    app_fn,
-    chapter_reader_is,
-    bottom,
-  );
+  ("The row under the verse reads: copy, share, in pictures, the three ways out to biblehub, whole chapter - the order the human asked for. What is done with this verse comes first, then where else it can be seen, then leaving it for the chapter.");
   app_shared_bible_home_copy_button(
     bottom,
     verse_number,
@@ -47,6 +44,20 @@ export async function app_shared_bible_home_generic_lambda$a(
     book_name,
     chapter_name,
     verse_number,
+    bottom,
+  );
+  ("The picture Bible is only known once the screen has answered, so its place is held here, between share and the biblehub buttons, and handed back for the app that has one to fill. An app without it leaves the place empty, which draws nothing.");
+  let pictures_place = html_span(bottom);
+  app_shared_bible_biblehub_buttons(
+    bottom,
+    chapter_name,
+    book_name,
+    verse_number,
+  );
+  app_shared_bible_home_chapter_button(
+    context,
+    app_fn,
+    chapter_reader_is,
     bottom,
   );
   ("the verse NUMBER is not printed above the text here: the bar already carries it as the verse-picker button, so a single-verse view would show it twice. the WHOLE-CHAPTER reader is different - it prints each verse's number inline (",
@@ -69,6 +80,7 @@ export async function app_shared_bible_home_generic_lambda$a(
     languages_available,
     languages_verses,
     chapter_code,
+    pictures_place,
   };
   return r2;
 }

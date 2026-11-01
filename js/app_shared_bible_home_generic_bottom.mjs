@@ -47,12 +47,7 @@ export async function app_shared_bible_home_generic_bottom(
   let r3 = app_shared_bible_verse_frame(content, text_languages);
   let top = property_get(r3, "top");
   let p_verse = property_get(r3, "p_verse");
-  let bottom = app_shared_bible_verse_buttons_row(
-    p_verse,
-    chapter_name,
-    book_name,
-    verse_number,
-  );
+  let bottom = app_shared_bible_verse_buttons_row(p_verse);
   let r4 = {
     chapter_code,
     book_name,
