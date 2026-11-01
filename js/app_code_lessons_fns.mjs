@@ -261,21 +261,16 @@ import { app_code_lesson_statement_name_rectangles_join_across } from "./app_cod
 import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
 import { app_code_lesson_statement_name_rectangle_wide_as_tall } from "./app_code_lesson_statement_name_rectangle_wide_as_tall.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
-import { app_code_lesson_braces_step_if_true } from "./app_code_lesson_braces_step_if_true.mjs";
 import { app_code_lesson_if_false } from "./app_code_lesson_if_false.mjs";
-import { app_code_lesson_braces_step_if_false } from "./app_code_lesson_braces_step_if_false.mjs";
 import { app_code_lesson_if_less_than } from "./app_code_lesson_if_less_than.mjs";
 import { app_code_lesson_if_name } from "./app_code_lesson_if_name.mjs";
-import { app_code_lesson_braces_step_if_name } from "./app_code_lesson_braces_step_if_name.mjs";
 import { app_code_lesson_if_names_less_than } from "./app_code_lesson_if_names_less_than.mjs";
 import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
 import { app_code_lesson_if_steps } from "./app_code_lesson_if_steps.mjs";
 import { app_code_lesson_number_text_plus } from "./app_code_lesson_number_text_plus.mjs";
 import { app_code_lesson_number_text_join } from "./app_code_lesson_number_text_join.mjs";
 import { app_code_lesson_if_even } from "./app_code_lesson_if_even.mjs";
-import { app_code_lesson_step_if_change } from "./app_code_lesson_step_if_change.mjs";
 import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
-import { app_code_lesson_step_if_two_lines } from "./app_code_lesson_step_if_two_lines.mjs";
 import { app_code_lesson_if_two_lines } from "./app_code_lesson_if_two_lines.mjs";
 import { app_code_lesson_if_two_changes } from "./app_code_lesson_if_two_changes.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
@@ -289,52 +284,40 @@ import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two
 import { app_code_lesson_brace_lines_two } from "./app_code_lesson_brace_lines_two.mjs";
 import { app_code_lesson_brace_lines_two_nested } from "./app_code_lesson_brace_lines_two_nested.mjs";
 import { app_code_lesson_braces_run } from "./app_code_lesson_braces_run.mjs";
-import { app_code_lesson_braces_step } from "./app_code_lesson_braces_step.mjs";
 import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
 import { app_code_lesson_if_two_bounds } from "./app_code_lesson_if_two_bounds.mjs";
 import { app_code_lesson_if_two_ifs } from "./app_code_lesson_if_two_ifs.mjs";
 import { app_code_lesson_if_and_if_not } from "./app_code_lesson_if_and_if_not.mjs";
 import { app_code_lesson_braces_run_if_else } from "./app_code_lesson_braces_run_if_else.mjs";
-import { app_code_lesson_braces_step_if_else } from "./app_code_lesson_braces_step_if_else.mjs";
 import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
 import { app_code_lesson_if_else_once } from "./app_code_lesson_if_else_once.mjs";
 import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
 import { app_code_lesson_if_else_change } from "./app_code_lesson_if_else_change.mjs";
 import { app_code_lesson_if_halve_or_triple } from "./app_code_lesson_if_halve_or_triple.mjs";
 import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
-import { app_code_lesson_braces_step_nested } from "./app_code_lesson_braces_step_nested.mjs";
 import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
 import { app_code_lesson_token_order_braces_three } from "./app_code_lesson_token_order_braces_three.mjs";
 import { app_code_lesson_token_order_braces_three_plain } from "./app_code_lesson_token_order_braces_three_plain.mjs";
 import { app_code_lesson_brace_pair } from "./app_code_lesson_brace_pair.mjs";
 import { app_code_lesson_brace_lines } from "./app_code_lesson_brace_lines.mjs";
 import { app_code_lesson_braces_run_after_nested } from "./app_code_lesson_braces_run_after_nested.mjs";
-import { app_code_lesson_braces_step_after_nested } from "./app_code_lesson_braces_step_after_nested.mjs";
 import { app_code_lesson_if_after_nested } from "./app_code_lesson_if_after_nested.mjs";
 import { app_code_lesson_braces_run_if_else_in_if } from "./app_code_lesson_braces_run_if_else_in_if.mjs";
-import { app_code_lesson_braces_step_if_else_in_if } from "./app_code_lesson_braces_step_if_else_in_if.mjs";
 import { app_code_lesson_if_else_in_if } from "./app_code_lesson_if_else_in_if.mjs";
 import { app_code_lesson_braces_run_if_else_in_if_else } from "./app_code_lesson_braces_run_if_else_in_if_else.mjs";
-import { app_code_lesson_braces_step_if_else_in_if_else } from "./app_code_lesson_braces_step_if_else_in_if_else.mjs";
 import { app_code_lesson_if_else_in_if_else } from "./app_code_lesson_if_else_in_if_else.mjs";
 import { app_code_lesson_braces_run_if_in_else } from "./app_code_lesson_braces_run_if_in_else.mjs";
-import { app_code_lesson_braces_step_if_in_else } from "./app_code_lesson_braces_step_if_in_else.mjs";
 import { app_code_lesson_if_in_else } from "./app_code_lesson_if_in_else.mjs";
 import { app_code_lesson_braces_run_else_if } from "./app_code_lesson_braces_run_else_if.mjs";
-import { app_code_lesson_braces_step_else_if } from "./app_code_lesson_braces_step_else_if.mjs";
 import { app_code_lesson_else_if } from "./app_code_lesson_else_if.mjs";
 import { app_code_lesson_braces_run_if_else_in_else } from "./app_code_lesson_braces_run_if_else_in_else.mjs";
-import { app_code_lesson_braces_step_if_else_in_else } from "./app_code_lesson_braces_step_if_else_in_else.mjs";
 import { app_code_lesson_if_else_in_else } from "./app_code_lesson_if_else_in_else.mjs";
 import { app_code_lesson_braces_run_else_if_else } from "./app_code_lesson_braces_run_else_if_else.mjs";
-import { app_code_lesson_braces_step_else_if_else } from "./app_code_lesson_braces_step_else_if_else.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
 import { app_code_lesson_braces_run_else_if_twice } from "./app_code_lesson_braces_run_else_if_twice.mjs";
-import { app_code_lesson_braces_step_else_if_twice } from "./app_code_lesson_braces_step_else_if_twice.mjs";
 import { app_code_lesson_else_if_twice } from "./app_code_lesson_else_if_twice.mjs";
 import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
 import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
-import { app_code_lesson_braces_step_thrice } from "./app_code_lesson_braces_step_thrice.mjs";
 import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
@@ -348,6 +331,7 @@ export function app_code_lessons_fns() {
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
   "2026-10-28: Step by step: While put straight before While, at the human's asking. Then, asked again: each pair has its step by step first, so the other six while step lessons went before theirs too";
   "2026-10-31, at the human's asking - step by step is just one quiz type: the seven while step lessons taken out, each while lesson ending in a step-by-step quiz of its own programs instead";
+  "2026-10-31, asked next: the seventeen step lessons of the branching stages taken out the same way, each if lesson they stood beside ending in a step-by-step quiz of its own programs instead. Twelve of them stepped through programs of their own shape rather than the if lesson's; the if lesson's own programs have that shape too, so its quiz steps through those. Their functions and ids are kept, as step_log_string's are. The Does this section run? lessons stay: that is a different question, and was not asked about. Not picked: also giving a step quiz to the if lessons that never had a step lesson beside them, which was not asked";
   let fns = [
     app_code_lesson_symbols_digits_numbered,
     app_code_lesson_symbols_digit_number,
@@ -612,21 +596,16 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_rectangles_cover_together,
     app_code_lesson_statement_name_rectangle_wide_as_tall,
     app_code_lesson_if_true,
-    app_code_lesson_braces_step_if_true,
     app_code_lesson_if_false,
-    app_code_lesson_braces_step_if_false,
     app_code_lesson_if_less_than,
     app_code_lesson_if_name,
-    app_code_lesson_braces_step_if_name,
     app_code_lesson_if_names_less_than,
     app_code_lesson_if_not,
     app_code_lesson_if_steps,
     app_code_lesson_number_text_plus,
     app_code_lesson_number_text_join,
     app_code_lesson_if_even,
-    app_code_lesson_step_if_change,
     app_code_lesson_if_change,
-    app_code_lesson_step_if_two_lines,
     app_code_lesson_if_two_lines,
     app_code_lesson_if_two_changes,
     app_code_lesson_token_order,
@@ -640,52 +619,40 @@ export function app_code_lessons_fns() {
     app_code_lesson_brace_lines_two,
     app_code_lesson_brace_lines_two_nested,
     app_code_lesson_braces_run,
-    app_code_lesson_braces_step,
     app_code_lesson_if_twice,
     app_code_lesson_if_two_bounds,
     app_code_lesson_if_two_ifs,
     app_code_lesson_if_and_if_not,
     app_code_lesson_braces_run_if_else,
-    app_code_lesson_braces_step_if_else,
     app_code_lesson_if_else,
     app_code_lesson_if_else_once,
     app_code_lesson_if_halve_even,
     app_code_lesson_if_else_change,
     app_code_lesson_if_halve_or_triple,
     app_code_lesson_braces_run_nested,
-    app_code_lesson_braces_step_nested,
     app_code_lesson_if_nested,
     app_code_lesson_token_order_braces_three,
     app_code_lesson_token_order_braces_three_plain,
     app_code_lesson_brace_pair,
     app_code_lesson_brace_lines,
     app_code_lesson_braces_run_after_nested,
-    app_code_lesson_braces_step_after_nested,
     app_code_lesson_if_after_nested,
     app_code_lesson_braces_run_if_else_in_if,
-    app_code_lesson_braces_step_if_else_in_if,
     app_code_lesson_if_else_in_if,
     app_code_lesson_braces_run_if_else_in_if_else,
-    app_code_lesson_braces_step_if_else_in_if_else,
     app_code_lesson_if_else_in_if_else,
     app_code_lesson_braces_run_if_in_else,
-    app_code_lesson_braces_step_if_in_else,
     app_code_lesson_if_in_else,
     app_code_lesson_braces_run_else_if,
-    app_code_lesson_braces_step_else_if,
     app_code_lesson_else_if,
     app_code_lesson_braces_run_if_else_in_else,
-    app_code_lesson_braces_step_if_else_in_else,
     app_code_lesson_if_else_in_else,
     app_code_lesson_braces_run_else_if_else,
-    app_code_lesson_braces_step_else_if_else,
     app_code_lesson_else_if_else,
     app_code_lesson_braces_run_else_if_twice,
-    app_code_lesson_braces_step_else_if_twice,
     app_code_lesson_else_if_twice,
     app_code_lesson_else_if_order,
     app_code_lesson_braces_run_thrice,
-    app_code_lesson_braces_step_thrice,
     app_code_lesson_if_thrice,
     app_code_lesson_while,
     app_code_lesson_while_log,

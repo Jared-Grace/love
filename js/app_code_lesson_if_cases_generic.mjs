@@ -1,5 +1,3 @@
-import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
-import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_first } from "./list_first.mjs";
@@ -9,9 +7,8 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_get } from "./list_get.mjs";
 import { multiply } from "./multiply.mjs";
-import { not } from "./not.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_map_index } from "./list_map_index.mjs";
+import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -21,7 +18,10 @@ import { list_map } from "./list_map.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_find } from "./list_find.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -31,8 +31,9 @@ export function app_code_lesson_if_cases_generic(
   above,
   seeds,
   parts_get,
+  steps,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
   ("an if lesson whose programs are an if around a line writing out one word, beside a line writing out another, after some setup lines: parts_get(seed, runs) hands back [setup lines, condition] for a program whose if runs when runs is true, and does not when it is false");
   ("Each screen asks four programs: two whose if runs and two whose if does not, and in each of those the if is first in one and last in the other, with eight different words. The four are put in two halves, each one that runs and one that does not and one with the if first and one with it last, so the two examples drawn together show both ways, as the human asked of If less than 2026-10-07.");
   ("Reading forwards, the wrong answers offered are the other two of the three things such a program could write out: both words, the word after the if alone, and the word inside the braces alone. They are found by running the same program with true and then false inside the parentheses, so they are right whatever the condition is.");
@@ -170,6 +171,7 @@ export function app_code_lesson_if_cases_generic(
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,

@@ -19,7 +19,6 @@ import { app_code_lesson_step_name_swap_try } from "./app_code_lesson_step_name_
 import { app_code_lesson_step_name_average_two } from "./app_code_lesson_step_name_average_two.mjs";
 import { app_code_lesson_step_name_average_three } from "./app_code_lesson_step_name_average_three.mjs";
 import { app_code_lesson_step_name_grid_inside } from "./app_code_lesson_step_name_grid_inside.mjs";
-import { app_code_lesson_step_if_change } from "./app_code_lesson_step_if_change.mjs";
 import { app_code_lesson_else_if_order } from "./app_code_lesson_else_if_order.mjs";
 import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_thrice.mjs";
 import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
@@ -50,7 +49,6 @@ export function app_code_course_new_fns() {
     app_code_lesson_step_name_average_two,
     app_code_lesson_step_name_average_three,
     app_code_lesson_step_name_grid_inside,
-    app_code_lesson_step_if_change,
     app_code_lesson_else_if_order,
     app_code_lesson_braces_run_thrice,
     app_code_lesson_if_thrice,
