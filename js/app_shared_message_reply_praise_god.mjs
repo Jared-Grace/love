@@ -3,7 +3,7 @@ import { reply_optional } from "./reply_optional.mjs";
 import { reply_word_god } from "./reply_word_god.mjs";
 import { reply_choices_praise } from "./reply_choices_praise.mjs";
 import { prayer_end } from "./prayer_end.mjs";
-export function app_message_reply_praise_god() {
+export function app_shared_message_reply_praise_god() {
   let v = prayer_end();
   let v2 = reply_choices_praise();
   let god = reply_word_god();
