@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
@@ -11,15 +12,20 @@ import { html_div } from "./html_div.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { app_shared_biblehub_word_button } from "./app_shared_biblehub_word_button.mjs";
+import { bible_word_article_site_chosen } from "./bible_word_article_site_chosen.mjs";
 import { window_open } from "./window_open.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
+import { bible_word_article_sites_recent } from "./bible_word_article_sites_recent.mjs";
+import { bible_word_article_offers_recent_split } from "./bible_word_article_offers_recent_split.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { app_shared_bible_word_sites_recent_text_get } from "./app_shared_bible_word_sites_recent_text_get.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { app_shared_bible_word_sites_others_text_get } from "./app_shared_bible_word_sites_others_text_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { window_open_google_define } from "./window_open_google_define.mjs";
 import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible_word_search_google_text_get.mjs";
 import { app_shared_bible_word_ask_ai_text_get } from "./app_shared_bible_word_ask_ai_text_get.mjs";
-import { html_div_text } from "./html_div_text.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_bible_word_question_text_get } from "./app_shared_bible_word_question_text_get.mjs";
 import { llms_query_url_prefixes } from "./llms_query_url_prefixes.mjs";
 import { window_open_url_prefix_query } from "./window_open_url_prefix_query.mjs";
@@ -87,17 +93,40 @@ export async function app_shared_bible_word_overlay_articles_open(
   if (not(b)) {
     app_shared_biblehub_word_button(choices, strong_url);
   }
-  for (let offer of offers) {
+  function offer_draw(offer) {
     let site = offer.site;
     let about = offer.article[1];
     let file = offer.article[2];
     function read() {
+      bible_word_article_site_chosen(site.name);
       let url = site.url(file);
       window_open(url);
     }
     ("the article's name is quoted, asked for by the human 2026-11-01, so a name of several words - Valley of Succoth - reads as one thing rather than running into the words around it");
     let label = text_combine_multiple(["Open “", about, "” on ", site.name]);
     app_shared_button(choices, label, read);
+  }
+  ("A SITE THE READER HAS CHOSEN BEFORE COMES FIRST, under Recent, the one chosen last at the top; the rest follow under Others - asked for by the human 2026-11-01, so a Catholic reader who opens the Catholic Encyclopedia sees it first every time after. Before any choice there is nothing recent, so the articles show in the sites' usual order with no labels at all.");
+  let recent_names = bible_word_article_sites_recent();
+  let split = bible_word_article_offers_recent_split(offers, recent_names);
+  let recent_offers = split.recent;
+  let other_offers = split.others;
+  let labelled = greater_than(recent_offers.length, 0);
+  if (labelled) {
+    let text3 = app_shared_bible_word_sites_recent_text_get();
+    let recent_label = html_div_text(choices, text3);
+    app_shared_text_deemphasized(recent_label);
+    for (let offer of recent_offers) {
+      offer_draw(offer);
+    }
+    if (greater_than(other_offers.length, 0)) {
+      let text4 = app_shared_bible_word_sites_others_text_get();
+      let others_label = html_div_text(choices, text4);
+      app_shared_text_deemphasized(others_label);
+    }
+  }
+  for (let offer of other_offers) {
+    offer_draw(offer);
   }
   function google() {
     let search_term = text_combine(word, " (Bible)");
