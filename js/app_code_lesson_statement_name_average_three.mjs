@@ -68,7 +68,7 @@ export function app_code_lesson_statement_name_average_three() {
     ],
     decoys: null,
     example_pointers: null,
-    steps_first: true,
+    steps: true,
   });
   return lesson;
 }

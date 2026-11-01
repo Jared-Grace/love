@@ -230,7 +230,7 @@ export function app_code_lesson_statement_name_grid_row() {
       [["row"], color3],
       [["columns"], color4],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

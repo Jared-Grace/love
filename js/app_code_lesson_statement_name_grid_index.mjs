@@ -217,7 +217,7 @@ export function app_code_lesson_statement_name_grid_index() {
       [["row"], color_row],
       [["column", "columns"], color_column],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

@@ -368,7 +368,7 @@ export function app_code_lesson_statement_name_meeting_inside() {
       [[e, e2, before, "11", "12"], end_color],
     ],
     answer_count: 2,
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

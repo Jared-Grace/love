@@ -280,7 +280,7 @@ export function app_code_lesson_statement_name_meetings_free() {
       [[e2, "12"], end_color],
       [[free, "1"], free_color],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

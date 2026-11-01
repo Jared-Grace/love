@@ -387,7 +387,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
       [[x, y, "2"], square_color],
     ],
     answer_count: 2,
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

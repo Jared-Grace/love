@@ -250,7 +250,7 @@ export function app_code_lesson_statement_name_rectangles_cover_together() {
       [[shared, "2"], overlap_color],
       [[total, together, "10", "8"], sum_color],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

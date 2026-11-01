@@ -50,7 +50,7 @@ export function app_code_lesson_statement_name_swap() {
       ],
       ["", name_a, " and ", name_b, " have swapped:"],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

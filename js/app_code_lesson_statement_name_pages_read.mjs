@@ -118,7 +118,7 @@ export function app_code_lesson_statement_name_pages_read() {
     ],
     decoys: null,
     example_pointers: null,
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

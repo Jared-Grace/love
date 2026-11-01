@@ -203,7 +203,7 @@ export function app_code_lesson_statement_name_meetings_join() {
       [[s, s2, start, "9", "10"], start_color],
       [[e, e2, end, "11", "12"], end_color],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

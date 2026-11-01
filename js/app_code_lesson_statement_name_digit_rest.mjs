@@ -172,7 +172,7 @@ export function app_code_lesson_statement_name_digit_rest() {
       [["12"], color],
       [["3"], color4],
     ]),
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

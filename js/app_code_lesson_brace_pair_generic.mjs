@@ -116,7 +116,6 @@ export function app_code_lesson_brace_pair_generic(
     backwards_include: false,
     lines: false,
     steps: false,
-    steps_first: false,
   });
   let lesson = app_code_lesson_base(
     name_id,

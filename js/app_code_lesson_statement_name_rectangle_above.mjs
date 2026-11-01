@@ -336,7 +336,7 @@ export function app_code_lesson_statement_name_rectangle_above() {
       [[b2, "6"], end_color],
     ],
     answer_count: 2,
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

@@ -238,7 +238,7 @@ export function app_code_lesson_statement_name_rectangles_cover_edges() {
       [[l, t, l2, t2, "1", "2"], start_color],
       [[r, b, r2, b2, "3", "4"], end_color],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

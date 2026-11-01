@@ -264,7 +264,7 @@ export function app_code_lesson_statement_name_meetings_overlap() {
       [[e, e2, end, "11", "12"], end_color],
     ],
     answer_count: 2,
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

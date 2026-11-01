@@ -369,7 +369,7 @@ export function app_code_lesson_statement_name_shared_squares_none() {
       [[width, height, "-1"], length_color],
       [[w, h, area, "0"], overlap_color],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

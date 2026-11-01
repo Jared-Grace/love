@@ -319,7 +319,7 @@ export function app_code_lesson_statement_name_grid_inside() {
       [["3", cols], columns_count_color],
     ],
     answer_count: 2,
-    steps_first: true,
+    steps: true,
   });
   return lesson;
 }

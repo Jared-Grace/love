@@ -60,7 +60,7 @@ export function app_code_lesson_statement_name_swap_try() {
       ],
       ["Both names end up holding the same number:"],
     ],
-    steps_first: true,
+    steps: true,
   });
   return lesson;
 }

@@ -59,7 +59,7 @@ export function app_code_lesson_statement_name_temp_keep() {
       ],
       ["After ", line_fill, ", ", temp, " still holds what ", name_a, " held:"],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

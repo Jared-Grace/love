@@ -222,7 +222,7 @@ export function app_code_lesson_statement_name_middle() {
       [ends, color],
       [["6"], color2],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

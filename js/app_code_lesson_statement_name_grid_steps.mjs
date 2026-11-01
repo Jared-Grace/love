@@ -313,7 +313,7 @@ export function app_code_lesson_statement_name_grid_steps() {
       [[rows], rows_count_color],
       [[cols], columns_count_color],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

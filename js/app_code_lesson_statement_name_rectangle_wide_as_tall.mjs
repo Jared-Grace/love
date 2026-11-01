@@ -310,7 +310,7 @@ export function app_code_lesson_statement_name_rectangle_wide_as_tall() {
       [[width, height, "2"], length_color],
     ],
     answer_count: 2,
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

@@ -296,7 +296,7 @@ export function app_code_lesson_statement_name_rectangles_columns_between() {
       [[r2, "6"], end_color],
       [[between, "1"], columns_color],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

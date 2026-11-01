@@ -51,7 +51,7 @@ export function app_code_lesson_statement_name_fill_from() {
       ],
       ["What ", name_a, " held before is gone:"],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

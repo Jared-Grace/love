@@ -38,7 +38,7 @@ export function app_code_lesson_statement_formula_answer_count({
   decoys,
   example_pointers,
   answer_count,
-  steps_first,
+  steps,
 }) {
   arguments_assert(arguments, 1);
   ("a lesson whose programs start some names with numbers, run a few short lines, and write out the names the lesson asks about: its title, the boxes read before the questions, and the questions");
@@ -146,7 +146,7 @@ export function app_code_lesson_statement_formula_answer_count({
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    steps_first,
+    steps,
     decoys,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: answer_count,

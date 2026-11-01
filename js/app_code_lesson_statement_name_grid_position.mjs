@@ -206,7 +206,7 @@ export function app_code_lesson_statement_name_grid_position() {
       [["1"], color4],
       [["column", "columns"], color4],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }

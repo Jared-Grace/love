@@ -260,7 +260,7 @@ export function app_code_lesson_statement_name_shared_squares() {
       [[right, bottom], end_color],
       [[width, height, area], overlap_color],
     ],
-    steps_first: false,
+    steps: false,
   });
   return lesson;
 }
