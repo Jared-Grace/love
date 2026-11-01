@@ -1,13 +1,15 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { text_split } from "./text_split.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_code_title_words_percent_paint } from "./app_code_title_words_percent_paint.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { app_code_operators_classed } from "./app_code_operators_classed.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { text_skip } from "./text_skip.mjs";
 import { text_size } from "./text_size.mjs";
+import { text_skip } from "./text_skip.mjs";
 import { text_letters_digits_none_is } from "./text_letters_digits_none_is.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
@@ -39,6 +41,15 @@ export function app_code_title_words_keywords_paint(parent, text) {
   }
   function keyword_get(word) {
     "the keyword the word is, with the s and marks after it as rest, or null when the word is not one";
+    let operators = app_code_operators_classed();
+    if (list_includes(operators, word)) {
+      ("an operator standing alone as a word, While asking <=, is painted as code too, asked for by the human 2026-11-01; only a whole word, so a dash or a mark inside other words stays plain");
+      let r2 = {
+        keyword: word,
+        rest: "",
+      };
+      return r2;
+    }
     let lower = text_lower_to(word);
     for (let keyword of keywords) {
       if (text_starts_with(lower, keyword)) {
