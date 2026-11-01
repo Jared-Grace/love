@@ -10,7 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { list_cartesian_product_self } from "./list_cartesian_product_self.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { multiply } from "./multiply.mjs";
-export function app_designs_universal(context) {
+export function app_design(context) {
   let root = property_get(context, "root");
   let size = "7px";
   html_style_background_color_set(root, "gray");

@@ -13,6 +13,10 @@ export function storage_local_key_owner_renames() {
       before: text_frozen("app_apps_all"),
       after: fn_name("app_app"),
     },
+    {
+      before: text_frozen("app_designs_universal"),
+      after: fn_name("app_design"),
+    },
   ];
   return r;
 }
