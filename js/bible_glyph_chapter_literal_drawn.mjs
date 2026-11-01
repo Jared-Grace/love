@@ -1,7 +1,8 @@
-import { less_than } from "./less_than.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { bible_glyph_word_false_god_is } from "./bible_glyph_word_false_god_is.mjs";
+import { less_than } from "./less_than.mjs";
 export function bible_glyph_chapter_literal_drawn(chapter_code, verses, drawn) {
   "One chapter drawn in pictures and nothing else, word for word from the original, in the order the original puts its words, from the chapter's interlinear verses and the picture each root number wears.";
   "$plain chapter_code";
@@ -61,7 +62,7 @@ export function bible_glyph_chapter_literal_drawn(chapter_code, verses, drawn) {
     if (and) {
       consonants = consonants.slice(1);
     }
-    let code = letters[consonants[0]];
+    let code = property_get_or(letters, consonants[0], undefined);
     if (equal(code, undefined)) {
       let r3 = "Prep";
       return r3;
@@ -74,7 +75,7 @@ export function bible_glyph_chapter_literal_drawn(chapter_code, verses, drawn) {
       if (equal(code, "Prep")) {
         code = preposition_code(original, front);
       }
-      let mark = table[code];
+      let mark = property_get_or(table, code, undefined);
       if (equal(mark, undefined)) {
         words.push(code);
         continue;
@@ -99,12 +100,12 @@ export function bible_glyph_chapter_literal_drawn(chapter_code, verses, drawn) {
   };
   function correction_mark(item) {
     if (/^\d+$/.test(item)) {
-      let r4 = drawn[item];
+      let r4 = property_get_or(drawn, item, undefined);
       return r4;
     }
-    let mark = prefixes[item];
+    let mark = property_get_or(prefixes, item, undefined);
     if (equal(mark, undefined)) {
-      mark = suffixes[item];
+      mark = property_get_or(suffixes, item, undefined);
     }
     return mark;
   }
@@ -115,8 +116,11 @@ export function bible_glyph_chapter_literal_drawn(chapter_code, verses, drawn) {
     let words = [];
     let originals = [];
     function word_draw(word) {
-      let correction =
-        corrections[chapter_code + ":" + verse_number + ":" + word.translit];
+      let correction = property_get_or(
+        corrections,
+        chapter_code + ":" + verse_number + ":" + word.translit,
+        undefined,
+      );
       if (not_equal(correction, undefined)) {
         for (let item of correction.split(",")) {
           let mark = correction_mark(item);
@@ -169,7 +173,7 @@ export function bible_glyph_chapter_literal_drawn(chapter_code, verses, drawn) {
         }
         return;
       }
-      let glyph = drawn[word.strong];
+      let glyph = property_get_or(drawn, word.strong, undefined);
       let entry = {
         gloss: word.gloss,
         strong: word.strong,
