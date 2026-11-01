@@ -16,7 +16,7 @@ export async function lyric_video_bible_description_file_write(
   ("★ THE FILE IS MADE BY A COMMAND SO NO TITLE IS EVER TYPED BY HAND. A hundred and fifty Psalms with several songs each are hundreds of titles, and a hand-typed one is where the shape drifts - a dropped verse range, a 'take' where 'song' belongs - with nothing anywhere to say it happened.");
   let title = await lyric_video_bible_title(chapter_number, song_number);
   let description = await lyric_video_bible_description(chapter_number);
-  let path_words = lyric_video_description_path(path_video2);
+  let path_words = lyric_video_description_path(path_video);
   let text = title + "\n" + description;
   await file_overwrite(path_words, text);
   let r = {

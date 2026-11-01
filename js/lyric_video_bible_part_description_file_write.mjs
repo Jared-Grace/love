@@ -1,3 +1,4 @@
+import { lyric_video_description_path } from "./lyric_video_description_path.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -52,7 +53,7 @@ export async function lyric_video_bible_part_description_file_write(
   let opening = await lyric_video_description_opening(named, pictures);
   let closing = passage + " runs to verse " + verse_last + ".";
   let description = youtube_description_verses(opening, verses, closing);
-  let path_words = path_video + ".description.txt";
+  let path_words = lyric_video_description_path(path_video);
   let text = title + "\n" + description;
   await file_overwrite(path_words, text);
   let r = {
