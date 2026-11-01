@@ -1,4 +1,5 @@
 import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
+import { property_set } from "./property_set.mjs";
 export function app_shared_money_section_large_download() {
   "The part of what this app does with money that answers the one case where a reader could cost anything worth mentioning.";
   "It stands last because it is about a program rather than a person, and almost nobody reading will ever be the one it describes.";
@@ -28,5 +29,6 @@ export function app_shared_money_section_large_download() {
     },
   };
   let section = app_shared_text_reader_language(texts);
+  property_set(section, "verses", []);
   return section;
 }

@@ -1,4 +1,5 @@
 import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
+import { property_set } from "./property_set.mjs";
 export function app_shared_money_section_purpose_love() {
   "The part of what this app does with money that names what the work is for, rather than what the money is for.";
   let texts = {
@@ -27,5 +28,6 @@ export function app_shared_money_section_purpose_love() {
     },
   };
   let section = app_shared_text_reader_language(texts);
+  property_set(section, "verses", ["Matthew 10:8"]);
   return section;
 }

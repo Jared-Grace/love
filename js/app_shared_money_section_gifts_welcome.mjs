@@ -1,4 +1,5 @@
 import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
+import { property_set } from "./property_set.mjs";
 export function app_shared_money_section_gifts_welcome() {
   "The part of what this app does with money that answers when a reader is asked for anything, and how hard.";
   "When the asking happens is said as plainly as whether it happens, because a reader deciding whether to start is really asking what this will be like later on.";
@@ -31,5 +32,6 @@ export function app_shared_money_section_gifts_welcome() {
     },
   };
   let section = app_shared_text_reader_language(texts);
+  property_set(section, "verses", ["2 Corinthians 9:7"]);
   return section;
 }

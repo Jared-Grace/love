@@ -1,4 +1,5 @@
 import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
+import { property_set } from "./property_set.mjs";
 export function app_shared_money_section_free() {
   "The part of what this app does with money that answers whether anything here has to be paid for.";
   "It stands first because it is the only part a reader who gives nothing needs, and they are most of the people this was built for.";
@@ -34,5 +35,6 @@ export function app_shared_money_section_free() {
     },
   };
   let section = app_shared_text_reader_language(texts);
+  property_set(section, "verses", []);
   return section;
 }

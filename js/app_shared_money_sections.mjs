@@ -10,7 +10,7 @@ import { app_shared_money_section_large_download } from "./app_shared_money_sect
 export function app_shared_money_sections() {
   "What this app does with money, said plainly, each part under the question it answers.";
   "Written down where a reader can see it rather than kept as an understanding among the people running it, because a promise nobody can read is not one anybody can hold you to.";
-  "The scriptures are named rather than quoted, because this app is a bible - a reader who wants the words can go and read them here, in whichever translation is theirs.";
+  "Each part lists the scriptures it rests on as plain references, apart from its words, so they can be quoted in full in the reader's own bible and linked rather than only named in passing. Naming them was tried first, on the reading that a reader of a bible app can go and look - but most will not, and a promise is weighed where it is read.";
   "Each part is asked for by name rather than written out here, so the order they are read in is the only thing this decides. A part is argued rather than listed, so it cannot be turned into another language a line at a time - what it says has to come across whole, in however many lines that language needs - and a part that can be handed over on its own is one that can be turned over on its own, and left alone when its neighbours change.";
   let section = app_shared_money_section_free();
   let section2 = app_shared_money_section_gifts_welcome();

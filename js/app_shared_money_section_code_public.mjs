@@ -1,4 +1,5 @@
 import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
+import { property_set } from "./property_set.mjs";
 export function app_shared_money_section_code_public() {
   "The part of what this app does with money that answers whether somebody else may take this and build it too.";
   "It belongs among the money answers rather than off on its own, because the one thing that would make the code worth keeping back is a wish to be paid for it.";
@@ -28,5 +29,6 @@ export function app_shared_money_section_code_public() {
     },
   };
   let section = app_shared_text_reader_language(texts);
+  property_set(section, "verses", ["1 Corinthians 6:1-8"]);
   return section;
 }

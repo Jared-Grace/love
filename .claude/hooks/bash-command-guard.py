@@ -4675,6 +4675,24 @@ def untrusted_piece_hint(words, safe_verbs):
                 "grant it by name (`node scripts/ai.mjs permission_grant_add "
                 f"{plain[2]}`)."
             )
+        if verb == "curl":
+            hosts = ", ".join(sorted(CURL_READ_HOSTS))
+            return (
+                "`curl` runs unasked only as a plain read: https to one of "
+                f"{hosts}; flags only from -s -S -i -I -f -o -w -H -m "
+                "--retry (so no -L, no -A); and -o naming /dev/null or a "
+                "WHOLE path inside your "
+                "scratchpad (a path relative to an earlier `cd` is not "
+                "followed, so write it in full). Another site is added by "
+                "naming it in js/curl_read_hosts_reference.mjs."
+            )
+        if verb in ("mkdir", "rm", "mv"):
+            return (
+                f"`{verb}` runs unasked only on WHOLE paths inside your "
+                "scratchpad. A path relative to an earlier `cd` is not "
+                "followed, so write each one in full from /tmp/claude-…, "
+                "and drop the `cd`."
+            )
         return (
             f"`{verb}` has no allow rule. Run the other parts as their own "
             "call; for this one, an already-allowed verb or a scripts/temp "
