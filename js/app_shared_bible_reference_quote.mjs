@@ -20,15 +20,16 @@ export function app_shared_bible_reference_quote(parent, reference) {
   "QUOTED, NOT ONLY NAMED. A reference alone asks the reader to go and look before they can weigh what is being said, and most will not - so the words are put where the claim is.";
   "THE WORDS COME IN THE READER'S OWN BIBLE, fetched after the page is drawn. The link is drawn at once, so a passage that fails to arrive, or one their version does not hold, still leaves somewhere to go - and the page around it never waits.";
   "A NEW TAB because the reader is in the middle of reading a promise, and checking its footing should not cost them their place in it.";
+  "THE WORDS ARE BOLD AND THE REFERENCE IS NOT: scripture is what carries the weight beside the prose around it, and the reference is only the way to it.";
   arguments_assert(arguments, 2);
   let url = app_shared_bible_reference_url(reference);
   let quote = html_div(parent);
   let value = app_shared_spaced_small_gap();
   html_style_margin_y(quote, value);
   let row = html_div(quote);
-  let label = html_a_href_text_new_tab(row, url, reference);
-  html_bold(label);
+  html_a_href_text_new_tab(row, url, reference);
   let words = html_div(quote);
+  html_bold(words);
   let language_code = app_shared_language_code_reader();
   let bible_folder = ebible_language_to_bible_folder(language_code);
   async function fill() {
