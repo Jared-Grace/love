@@ -7,8 +7,6 @@ import { ebible_licence_words } from "./ebible_licence_words.mjs";
 import { html_div_text_links } from "./html_div_text_links.mjs";
 import { ebible_bible_folder_changes } from "./ebible_bible_folder_changes.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_a_href_text } from "./html_a_href_text.mjs";
 export function app_shared_bible_licence_card(parent, credit) {
   "One translation credited the way the people who gave it away asked to be credited - what it is called, what it is, who it belongs to, on what terms, where it came from, and whether this app has altered it.";
   "The middle lines are the copyright holder's own words, carried across whole rather than retold, because that block is the thing the licence asks to travel with the text. Retelling it would be a summary of a legal notice, which is not the notice.";
@@ -39,10 +37,8 @@ export function app_shared_bible_licence_card(parent, credit) {
     }
     each(changed_lines, changed_lambda);
     let changes_url = property_get(changes, "url");
-    let changes_row = html_div(card);
-    html_a_href_text(changes_row, changes_url, changes_url);
+    html_div_text_links(card, changes_url);
   }
   let url = property_get(credit, "url");
-  let row = html_div(card);
-  html_a_href_text(row, url, url);
+  html_div_text_links(card, url);
 }
