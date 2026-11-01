@@ -22,6 +22,7 @@ export function permission_rules_other() {
   "one more Bible site was added for the licence statements it publishes rather than for its text. The question this repo keeps asking of it is who holds the rights to a translation and on what terms, which is the one thing a reader here has to get right before shipping anybody's words, and the answer is only ever on the publisher's own page. It reads as a widening and is not one: a search over the whole web is already granted above, so any page this could return was already reachable, and naming the site narrows what arrives rather than adding to it. Nothing fetched is run or written.";
   "seven more sites came across from the per-machine file, and the case for them is the one the file itself makes rather than a fresh judgement of each: every one of them was a standing approval already in force on this machine, so moving it grants nothing new and only puts it where a check can read it. Three are reference works this repo asks the same question of over and over - a university's archive of the morphological Hebrew and Greek, one more Bible publisher's licence page, and the documentation of the picture generator whose output stands in for art nobody has drawn yet. One is the commons where the freely licensed pictures are, which is where an image is looked for before one is generated at all. One is the code-hosting site's own documentation, which is the same site already granted above wearing the name it explains itself under. The last two are named nowhere in this repo at all - a database service and one hosted page - so nothing here records what they were ever read for. They are carried across as approvals a person gave rather than as a case anybody can check, and they are the first two to question if this list is ever narrowed. Nothing fetched from any of them is run or written.";
   "one more reader sits beside the file printer for the reason its neighbours do: it has no flag that writes. It prints a file or what is piped into it with each line numbered, and every option it takes only changes how the numbers look. It was asked for at the end of a pipe that searched one file, where the search was already granted and only the numbering stopped and waited for a person.";
+  "the JSON reader sits here for the same reason: it has no flag that writes and no way to run another program. It reads the files it is named, or what is piped into it, and prints what its query picks out of them; the options that name a second file only read that file too, as the file printer above already may. It was asked for over and over by sessions reading another session's transcript, where every prompt was a person approving a read.";
   let combined = text_combine_multiple([
     "Bash(pkill -f ai.mjs ",
     fn_name("qa_gate_run"),
@@ -37,6 +38,7 @@ export function permission_rules_other() {
     "Bash(grep:*)",
     "Bash(cat:*)",
     "Bash(nl:*)",
+    "Bash(jq:*)",
     "Bash(cut:*)",
     "Bash(cd:*)",
     "Bash(date:*)",
