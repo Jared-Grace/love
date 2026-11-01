@@ -1,9 +1,9 @@
+import { app_shared_bible_licence_words_reader } from "./app_shared_bible_licence_words_reader.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { app_shared_text_quiet_links } from "./app_shared_text_quiet_links.mjs";
 import { each } from "./each.mjs";
-import { ebible_licence_words } from "./ebible_licence_words.mjs";
 import { html_div_text_links } from "./html_div_text_links.mjs";
 import { ebible_bible_folder_changes } from "./ebible_bible_folder_changes.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -25,7 +25,7 @@ export function app_shared_bible_licence_card(parent, credit) {
   }
   each(lines, lambda);
   let licence = property_get(credit, "licence");
-  let words = ebible_licence_words(licence);
+  let words = app_shared_bible_licence_words_reader(licence);
   html_div_text_links(card, words);
   let bible_folder = property_get(credit, "bible_folder");
   let changes = ebible_bible_folder_changes(bible_folder);
