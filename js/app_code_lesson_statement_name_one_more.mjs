@@ -9,6 +9,6 @@ export function app_code_lesson_statement_name_one_more() {
   ("The screen exists for the line and not for the fact. Adding one to a name is how every count in every program is kept, and a learner meeting it for the first time inside a loop would be working out the loop and this line at once.");
   ("One name rather than two, because the number is written into the line and a second name would sit on the screen with nothing reading it.");
   let pair = app_code_lesson_statement_name_one_more_pair();
-  let lesson = app_code_lesson_statement_name_pair_first(pair, false, true);
+  let lesson = app_code_lesson_statement_name_pair_first(pair, true);
   return lesson;
 }

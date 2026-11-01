@@ -9,9 +9,8 @@ export function app_code_lesson_statement_name_watched_titled(
   pair,
   paint,
   steps,
-  steps_first,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 3);
   ("a lesson where a name takes new values, built from a pair's programs with the name written out after every change, under the pair's words and the title code handed in");
   let words = property_get(pair, "words");
   let name_id = app_code_lesson_statement_title_name_id_paint(words, paint);
@@ -26,7 +25,6 @@ export function app_code_lesson_statement_name_watched_titled(
     unscramble: false,
     lines: true,
     steps,
-    steps_first,
     decoys: app_code_lesson_statement_name_watch_decoys,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,

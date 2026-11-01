@@ -12,7 +12,7 @@ export function app_code_lesson_statement_name_swap_ladder({
   remember_parts,
   remember_lines,
   explain,
-  steps: steps,
+  steps,
 }) {
   arguments_assert(arguments, 1);
   ("one lesson of the ladder that builds up to swapping two names: its title, the boxes read before the questions, and questions whose programs start a and b with two numbers, run the lines the lesson is about, and write out the names it asks about");
@@ -34,7 +34,7 @@ export function app_code_lesson_statement_name_swap_ladder({
     explain,
     decoys: app_code_lesson_decoy_lines_starting_values,
     example_pointers: null,
-    steps: steps,
+    steps,
   });
   return lesson;
 }

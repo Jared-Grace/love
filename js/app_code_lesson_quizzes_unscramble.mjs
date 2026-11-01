@@ -10,11 +10,9 @@ export function app_code_lesson_quizzes_unscramble(params) {
   let backwards_include = property_get(params, "backwards_include");
   let lines = property_get(params, "lines");
   let steps = property_get(params, "steps");
-  let steps_first = property_get(params, "steps_first");
   let quizzes_get = app_code_lesson_quizzes_generic({
     lines,
     steps,
-    steps_first,
     forwards,
     backwards,
     backwards_code,

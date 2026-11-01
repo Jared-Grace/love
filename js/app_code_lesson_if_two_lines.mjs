@@ -240,7 +240,7 @@ export function app_code_lesson_if_two_lines() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    steps_first: true,
+    steps: true,
     decoys,
     backwards_decoys,
     quiz_backwards_answer_count_override: null,

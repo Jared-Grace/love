@@ -94,8 +94,7 @@ export function app_code_lesson_quizzes_generic(params) {
   ("2026-10-31, at the human's asking - step by step is just one quiz type. 2026-11-01, the human's rule for where it goes: THE STEP-BY-STEP QUIZ COMES FIRST, because going a line at a time is generally easier than working a program out all at once, and easier comes before harder. The one exception is where stepping is introduced, where it is unfamiliar and so comes second - and that is step_log_twice, a lesson of its own straight after the lesson whose programs it steps through, so no lesson here needs the step quiz last");
   ("Putting it first moves every quiz after it, and the progress kept against their places; the human accepted that. Not picked: the step quiz last, after even the quizzes about lines, which kept every place but asked the harder way first; nor fading the stepping out over a stage, which the human's rule did not ask for");
   let steps = property_get_or(params, "steps", false);
-  let steps_first = property_get_or(params, "steps_first", false);
-  if (steps || steps_first) {
+  if (steps) {
     let step_first_info = app_code_lesson_quiz_step_info();
     let step_first = object_copy(forwards);
     object_assign(step_first, step_first_info);
