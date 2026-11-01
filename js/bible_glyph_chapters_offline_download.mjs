@@ -47,7 +47,7 @@ export async function bible_glyph_chapters_offline_download(on_progress) {
     return true;
   }
   async function pass(codes) {
-    let missed = [];
+    let missed_now = [];
     let done = 0;
     let total = list_size(codes);
     let chunks = list_chunk(codes, size);
@@ -55,7 +55,7 @@ export async function bible_glyph_chapters_offline_download(on_progress) {
       async function one(chapter_code) {
         let saved = await chapter_save(chapter_code);
         if (not(saved)) {
-          list_add(missed, chapter_code);
+          list_add(missed_now, chapter_code);
         }
       }
       await list_map_unordered_async(chunk, one);
@@ -64,7 +64,7 @@ export async function bible_glyph_chapters_offline_download(on_progress) {
       on_progress(done, total);
     }
     await each_async(chunks, lambda_chunk);
-    return missed;
+    return missed_now;
   }
   let missed = await pass(chapter_codes);
   let missed2 = await pass(missed);
