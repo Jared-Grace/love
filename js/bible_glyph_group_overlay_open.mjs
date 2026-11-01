@@ -170,7 +170,12 @@ export function bible_glyph_group_overlay_open(
   if (greater_than(explained.length, 0)) {
     let why = html_div(card);
     html_style_set(why, "marginTop", "0.75em");
-    let why_label = html_div_text(why, "Why these pictures:");
+    ("ONE PICTURE IS CALLED THIS PICTURE, asked for by the human: the heading counts what is under it. The pointing word changes along with the noun, so a pluralizer that only adds an s would have written this pictures.");
+    let why_text = "Why these pictures:";
+    if (equal(explained.length, 1)) {
+      why_text = "Why this picture:";
+    }
+    let why_label = html_div_text(why, why_text);
     app_shared_text_deemphasized(why_label);
     for (let name of explained) {
       let reason_line = html_div(why);
