@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
-import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
+import { less_than } from "./less_than.mjs";
 import { error } from "./error.mjs";
 import { app_code_program_trace_statement } from "./app_code_program_trace_statement.mjs";
 import { app_code_program_trace_line } from "./app_code_program_trace_line.mjs";
@@ -43,7 +43,11 @@ export function app_code_program_trace(code) {
     };
     list_add(trace, entry);
     let type = property_get(node, "type");
-    if (equal(type, "IfStatement") || equal(type, "WhileStatement")) {
+    if (
+      equal(type, "IfStatement") ||
+      equal(type, "WhileStatement") ||
+      equal(type, "ForStatement")
+    ) {
       ("an if's line also says what its condition came to, since a condition written out as true or false is not evaluated and so is in none of its actions; a guide saying why the next line runs reads it here");
       let value = property_get(run, "condition");
       property_set(entry, "condition", value);
