@@ -1,5 +1,5 @@
 import { app_shared_message_reply_greeting } from "./app_shared_message_reply_greeting.mjs";
-import { app_message_reply_how_r_u } from "./app_message_reply_how_r_u.mjs";
+import { app_shared_message_reply_how_r_u } from "./app_shared_message_reply_how_r_u.mjs";
 import { app_message_reply_phrases_single } from "./app_message_reply_phrases_single.mjs";
 import { app_message_reply_praise_god } from "./app_message_reply_praise_god.mjs";
 import { app_message_reply_minister } from "./app_message_reply_minister.mjs";
@@ -26,7 +26,7 @@ import { reply_on_match_capture } from "./reply_on_match_capture.mjs";
 import { reply_last } from "./reply_last.mjs";
 export function app_shared_message_reply_choices() {
   let greeting = app_shared_message_reply_greeting();
-  let hru = app_message_reply_how_r_u();
+  let hru = app_shared_message_reply_how_r_u();
   let phrases_single = app_message_reply_phrases_single();
   let praise_god = app_message_reply_praise_god();
   let minister = app_message_reply_minister();
