@@ -2925,6 +2925,7 @@
       "Bash(node scripts/ai.mjs bible_glyph_chapter_literal_fetched:*)",
       "Bash(node scripts/ai.mjs bible_word_strong_url_or_null:*)",
       "Bash(node scripts/ai.mjs gotquestions_page_download:*)",
+      "Bash(node scripts/ai.mjs app_shared_description_baseline_rename:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5734,7 +5735,8 @@
       "Bash(node scripts/aig.mjs bible_glyph_chapter_built_fetched:*)",
       "Bash(node scripts/aig.mjs bible_glyph_chapter_literal_fetched:*)",
       "Bash(node scripts/aig.mjs bible_word_strong_url_or_null:*)",
-      "Bash(node scripts/aig.mjs gotquestions_page_download:*)"
+      "Bash(node scripts/aig.mjs gotquestions_page_download:*)",
+      "Bash(node scripts/aig.mjs app_shared_description_baseline_rename:*)"
     ],
     "defaultMode": "acceptEdits"
   },
