@@ -61,7 +61,7 @@ export function app_index_main_fns(about_opened) {
     },
     {
       app_fn: fn_name("app_reply"),
-      text: "Allows you to choose languages, multiple encouraging bible verses and responses to copy and paste as messages",
+      text: "Allows you to choose languages, multiple encouraging Bible verses and responses to copy and paste as messages",
       category: sharing,
     },
     {

@@ -4,10 +4,10 @@ import { text_combine } from "./text_combine.mjs";
 export function app_shared_bible_licences_text() {
   "What the way into the credits is called - said as what the reader will find rather than as the word licences, which is the name of the paperwork and not of the people.";
   let texts = {
-    en: " The bibles here, and who gave them",
+    en: " The Bibles here, and who gave them",
     ur: " یہاں کی بائبلیں، اور کن لوگوں نے دیں",
     translated_from: {
-      ur: " The bibles here, and who gave them",
+      ur: " The Bibles here, and who gave them",
     },
   };
   let label = app_shared_text_reader_language(texts);
