@@ -1,6 +1,6 @@
 import { app_shared_message_reply_greeting } from "./app_shared_message_reply_greeting.mjs";
 import { app_shared_message_reply_how_r_u } from "./app_shared_message_reply_how_r_u.mjs";
-import { app_message_reply_phrases_single } from "./app_message_reply_phrases_single.mjs";
+import { app_shared_message_reply_phrases_single } from "./app_shared_message_reply_phrases_single.mjs";
 import { app_message_reply_praise_god } from "./app_message_reply_praise_god.mjs";
 import { app_shared_message_reply_minister } from "./app_shared_message_reply_minister.mjs";
 import { app_shared_message_reply_from_country } from "./app_shared_message_reply_from_country.mjs";
@@ -27,7 +27,7 @@ import { reply_last } from "./reply_last.mjs";
 export function app_shared_message_reply_choices() {
   let greeting = app_shared_message_reply_greeting();
   let hru = app_shared_message_reply_how_r_u();
-  let phrases_single = app_message_reply_phrases_single();
+  let phrases_single = app_shared_message_reply_phrases_single();
   let praise_god = app_message_reply_praise_god();
   let minister = app_shared_message_reply_minister();
   let from_city_country = app_shared_message_reply_from_country();
