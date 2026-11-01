@@ -1,5 +1,10 @@
 gitignore/
 node_modules/
+
+# A video and the files written beside it (.mp4.description.txt, .mp4.faults.json)
+# belong together in Downloads. A bare file name typed from the repo root lands here.
+/*.mp4
+/*.mp4.*
 firebase-debug.log
 .parcel-cache/
 .firebase/
