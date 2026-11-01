@@ -5,7 +5,7 @@ import { list_slice } from "./list_slice.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { reply_on_match_output_add_multiple } from "./reply_on_match_output_add_multiple.mjs";
 import { each } from "./each.mjs";
-export function app_message_reply_choices_lambda(filtered, u) {
+export function app_shared_message_reply_choices_lambda(filtered, u) {
   arguments_assert(arguments, 2);
   function lambda2(possibility) {
     let tokens = property_get(possibility, "tokens");
