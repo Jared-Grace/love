@@ -257,6 +257,62 @@ export function bible_glyph_reasons() {
       "A ruined house: to forsake, to leave, to abandon, and a ruin.",
     fearful_face: "A frightened face: terror, fear, trembling, awe.",
     puzzle_piece: "A puzzle piece: what is left over, the remnant, the rest.",
+    magnifying_glass:
+      "A magnifying glass looks closely: with an eye, it is to seek, to inquire, to search out.",
+    fruit:
+      "Fruit: fruit, and being fruitful. Be fruitful and multiply (Genesis 1:28).",
+    cloud: "A cloud: a cloud, clouds gathering.",
+    microbe: "A germ: disease, leprosy, a plague.",
+    umbrella:
+      "An umbrella covers you: to cover, and so atonement, which in Hebrew is a covering over sin. With a seat, it is the mercy seat, the cover of the ark (Exodus 25:17).",
+    shopping_cart: "A shopping cart: to buy, to get, a purchase.",
+    tongue: "A tongue: the tongue, speech, a language.",
+    sea: "Waves of the sea: the sea, and the deep.",
+    angry_face:
+      "An angry face: anger. With a crash, it is wrath, anger that breaks out.",
+    trophy: "A trophy: honor, glory, victory, making great.",
+    lotion_bottle: "A bottle of oil: oil, and what oil means, fat and rich.",
+    heart_organ:
+      "The heart inside the body: the heart as the inner person, where thinking and choosing happen. With an in-tray, it is the inner parts.",
+    voice:
+      "A head speaking: a word, to speak, and the matter or cause spoken about.",
+    heart_eyes:
+      "A face with heart eyes: to desire, to delight in, to covet, and something desirable.",
+    crossed_swords: "Crossed swords: war, battle, strife. Midian means strife.",
+    curly_loop: "A curly loop: twisted, a loop, a twisting branch.",
+    first_place:
+      "A first place medal: first, the beginning, and the firstborn and firstfruits.",
+    wilted_flower:
+      "A wilted flower: to perish, to be lost, destruction. Abaddon, the place of destruction, is from this word.",
+    hand_sending: "A hand pushing out: to send, to send away, to stretch out.",
+    deer: "A deer: a deer, a gazelle.",
+    waving_hand:
+      "A hand waving to someone: to call, to call out, to read aloud, and an assembly called together.",
+    backpack:
+      "A backpack sits on the shoulder: the shoulder, a burden carried. Shechem means shoulder.",
+    face_exhaling:
+      "A face breathing out: to faint, to sigh, and to catch one's breath, to be refreshed.",
+    meat: "Meat: flesh, the body.",
+    wrestling:
+      "Two people wrestling: to strive, to prevail. With God, it is Israel, because Jacob wrestled with God and prevailed (Genesis 32:28).",
+    amphora: "A clay jar: pottery, a jar, and a measure of liquid.",
+    thermometer_face: "A sick face: sick, weak, disease.",
+    pointing_back:
+      "A finger pointing back at someone already named: he, him, that one.",
+    jar: "A jar: a flask, and pouring out what is in it.",
+    net: "A net: a net, a snare, catching, hunting.",
+    ninja: "A ninja hiding: lying in wait, an ambush.",
+    three: "The number three: three, third. With zero, it is thirty.",
+    reminder_ribbon: "A reminder ribbon: to remember, a memorial, a memory.",
+    lightning: "A lightning bolt: lightning, a flash, and suddenly.",
+    crying_face: "A crying face: mourning, and with a loudspeaker, wailing.",
+    hourglass:
+      "An hourglass: a long time, of old, forever. With crossed fingers, it is to wait and to hope.",
+    teacher:
+      "A teacher: instruction, discipline, correction, and the Preacher who teaches.",
+    bow: "A bow and arrow: sin. The Hebrew word first means to miss the mark, like an arrow that falls short. For all have sinned and fall short of the glory of God (Romans 3:23).",
+    gold: "A gold medal: gold, fine gold.",
+    lion: "A lion: a lion, a lion's cub.",
   };
   return r;
 }
