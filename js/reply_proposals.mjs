@@ -480,7 +480,7 @@ export function reply_proposals() {
   let street_out = {
     title:
       "stop needing to be told somebody's street before it will read their contact line",
-    fn: fn_name("app_message_reply_choices"),
+    fn: fn_name("app_shared_message_reply_choices"),
     whole: [fn_name("reply_word_any")],
     diff: [
       combined34,
