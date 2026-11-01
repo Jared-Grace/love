@@ -1,10 +1,11 @@
+import { app_shared_contact_send_unanswered } from "./app_shared_contact_send_unanswered.mjs";
+import { app_shared_contact_overlay_thread_draw } from "./app_shared_contact_overlay_thread_draw.mjs";
 import { app_shared_textarea_reader_direction } from "./app_shared_textarea_reader_direction.mjs";
 import { html_p_text_directed } from "./html_p_text_directed.mjs";
 import { app_shared_contact_prompt_text } from "./app_shared_contact_prompt_text.mjs";
 import { app_shared_contact_placeholder_text } from "./app_shared_contact_placeholder_text.mjs";
 import { app_shared_contact_send_text } from "./app_shared_contact_send_text.mjs";
 import { app_shared_close_text } from "./app_shared_close_text.mjs";
-import { app_shared_contact_overlay_thread_render } from "./app_shared_contact_overlay_thread_render.mjs";
 import { app_shared_contact_message_add } from "./app_shared_contact_message_add.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -18,10 +19,9 @@ import { text_empty_is } from "./text_empty_is.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { app_shared_button_green } from "./app_shared_button_green.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { app_shared_contact_send } from "./app_shared_contact_send.mjs";
 import { emoji_email } from "./emoji_email.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_shared_contact_overlay() {
+export async function app_shared_contact_overlay() {
   "an in-app contact screen: a full-screen panel over the current app, so the reader never leaves the PWA (each app is its own narrow-scope standalone PWA, so opening another page would eject them to the browser). Shows what they have written before above a box to write the next one, sends it to the developer's inbox, and keeps their copy. Close returns to the app.";
   "It used to thank them and forget, which read as though the message had gone nowhere. The thread is the same one from whichever app the panel is opened over, because it is filed under this shared code's own name rather than under any one app.";
   "The box starts empty. It used to open pre-filled '<app> app: ' so a reply knew which app they were writing about - but the send records the page address itself, which says that and more, and cannot be edited away by the person typing over it.";
@@ -64,8 +64,8 @@ export function app_shared_contact_overlay() {
     display: "flex",
     "flex-direction": "column",
   });
-  app_shared_contact_overlay_thread_render(thread);
   form();
+  await app_shared_contact_overlay_thread_draw(thread);
   function form() {
     let prompt = app_shared_contact_prompt_text();
     html_p_text_directed(card, prompt);
@@ -81,11 +81,11 @@ export function app_shared_contact_overlay() {
         html_focus(textarea);
         return;
       }
-      await app_shared_contact_send(message);
+      await app_shared_contact_send_unanswered(message);
       ("their copy is kept only once the send has gone through, so the thread shows what actually reached the developer rather than what was typed");
       app_shared_contact_message_add(message);
       html_value_set(textarea, "");
-      app_shared_contact_overlay_thread_render(thread);
+      await app_shared_contact_overlay_thread_draw(thread);
       html_focus(textarea);
     }
     let left2 = emoji_email();
