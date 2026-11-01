@@ -14,5 +14,5 @@ export function app_bible_pictures_verse_button(v) {
   ("It goes into the place the row kept for it after share, not onto the end of the row, so it stands where the human asked for it.");
   let pictures_place = property_get(v, "pictures_place");
   let chapter_code = property_get(v, "chapter_code");
-  app_bible_pictures_button(pictures_place, chapter_code);
+  app_bible_pictures_button(pictures_place, chapter_code, "In pictures");
 }

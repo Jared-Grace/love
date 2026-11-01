@@ -5,8 +5,9 @@ import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
 import { app_shared_bible_pictures_chapter_hash } from "./app_shared_bible_pictures_chapter_hash.mjs";
 import { window_open_app_hash_name } from "./window_open_app_hash_name.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-export function app_bible_pictures_button(parent, chapter_code) {
-  arguments_assert(arguments, 2);
+export function app_bible_pictures_button(parent, chapter_code, words) {
+  arguments_assert(arguments, 3);
+  ("The words are handed in, because the two places it stands say different things: beside copy and share under one verse a short label fits the row, while alone at the foot of a whole chapter it has room to say what it does.");
   ("The way from a chapter of the ordinary Bible into the same chapter of the picture Bible.");
   ("$plain chapter_code");
   ("IT STANDS ON EVERY CHAPTER, BECAUSE EVERY CHAPTER IS IN PICTURES. It was drawn only on the chapters written by hand while those were a few hundred of the canon, since a button on every chapter would have been a promise the rest could not keep. The picture Bible is now built from the interlinear for the whole canon, so there is no chapter left where it would lead nowhere, and asking would only cost a list.");
@@ -16,7 +17,7 @@ export function app_bible_pictures_button(parent, chapter_code) {
     " gives: the reader rewrites its own address as it settles, so the back button walks through those arrivals and never reaches where somebody started.");
   ("It hands back what it drew, so a caller can space it.");
   let sign = emoji_picture_frame();
-  let text = text_combine_middle_space(sign, "In pictures");
+  let text = text_combine_middle_space(sign, words);
   function lambda() {
     let chapter_hash = app_shared_bible_pictures_chapter_hash(chapter_code);
     window_open_app_hash_name(fn_name("app_emoji_bible"), chapter_hash);
