@@ -565,6 +565,8 @@
     { "command": "ls | while read -p x f; do wc -l $f; done", "decision": "ask", "why": "only -r is let in on read" },
     { "command": "ls | while read c; do $c; done", "decision": "ask", "why": "a verb taken from the input is not trusted, whatever read put in it" },
     { "command": "ls | while read f; do rm $f; done", "decision": "ask", "why": "a trusted read does not lend its trust to an untrusted body" },
-    { "command": "IFS= grep x y", "decision": "silent", "why": "IFS= in front of any verb but read still fails closed" }
+    { "command": "IFS= grep x y", "decision": "silent", "why": "IFS= in front of any verb but read still fails closed" },
+    { "command": "cd /home/j/.claude/projects/-home-j-a-repos-love/ && jq -r 'select(.type==\"user\" and (.message.content|type)==\"string\") | .timestamp + \" U: \" + (.message.content|.[0:400])' x.jsonl | grep -av '<command' | tail -40", "decision": "allow", "why": "jq only reads and prints - it has no flag that writes and no way to run another program - so a transcript read through it needs no person" },
+    { "command": "jq . a.json > out.json", "decision": "deny", "why": "a trusted reader does not make a redirect into a repo file trusted" }
   ]
 }

@@ -19,7 +19,7 @@ export function app_shared_bible_licence_words_reader(licence) {
       en: "Terms not read",
       ur: "شرائط پڑھی نہیں گئیں",
       translated_from: {
-        ur: "The terms were not read",
+        ur: "Terms not read",
       },
     };
     let said = app_shared_text_reader_language(texts);

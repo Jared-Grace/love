@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { app_shared_bible_reference_reading } from "./app_shared_bible_reference_reading.mjs";
-import { html_og_title_get } from "./html_og_title_get.mjs";
+import { html_title_initial_get } from "./html_title_initial_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_title_set } from "./html_title_set.mjs";
 export async function app_shared_bible_title_reference_set(
@@ -20,7 +20,7 @@ export async function app_shared_bible_title_reference_set(
       verse_numbers,
     );
   }
-  let name = html_og_title_get();
+  let name = html_title_initial_get();
   let title = text_combine_multiple([reference, " - ", name]);
   html_title_set(title);
 }
