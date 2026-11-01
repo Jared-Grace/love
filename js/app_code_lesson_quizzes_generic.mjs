@@ -91,15 +91,11 @@ export function app_code_lesson_quizzes_generic(params) {
   if (lines) {
     app_code_lesson_quizzes_lines_add(infos, backwards);
   }
-  ("2026-10-31, at the human's asking - step by step is just one quiz type: THE STEP-BY-STEP QUIZ COMES AFTER EVEN THE QUIZZES ABOUT LINES, for the same reason they come last, so every quiz a lesson already had keeps its place. Not picked: putting it first, as the step lessons came first, which would move every quiz after it and the progress kept against their places");
+  ("2026-10-31, at the human's asking - step by step is just one quiz type. 2026-11-01, the human's rule for where it goes: THE STEP-BY-STEP QUIZ COMES FIRST, because going a line at a time is generally easier than working a program out all at once, and easier comes before harder. The one exception is where stepping is introduced, where it is unfamiliar and so comes second - and that is step_log_twice, a lesson of its own straight after the lesson whose programs it steps through, so no lesson here needs the step quiz last");
+  ("Putting it first moves every quiz after it, and the progress kept against their places; the human accepted that. Not picked: the step quiz last, after even the quizzes about lines, which kept every place but asked the harder way first; nor fading the stepping out over a stage, which the human's rule did not ask for");
   let steps = property_get_or(params, "steps", false);
-  if (steps) {
-    let step_info = app_code_lesson_quiz_step_info();
-    build_more_add(step_info);
-  }
-  ("2026-11-01, at the human's asking: a lesson whose step lesson came before it, opening with its boxes, takes that stepping in as its FIRST quiz instead, so the learner still runs the programs a line at a time before working each one out whole - the order the human set on 2026-10-16. It moves every quiz after it, and the progress kept against their places, which the human accepted; it was only ever these lessons, on latest");
   let steps_first = property_get_or(params, "steps_first", false);
-  if (steps_first) {
+  if (steps || steps_first) {
     let step_first_info = app_code_lesson_quiz_step_info();
     let step_first = object_copy(forwards);
     object_assign(step_first, step_first_info);
