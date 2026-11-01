@@ -13,9 +13,13 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { window_open_google_define } from "./window_open_google_define.mjs";
+import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible_word_search_google_text_get.mjs";
+import { app_shared_bible_word_ask_ai_text_get } from "./app_shared_bible_word_ask_ai_text_get.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { app_shared_bible_word_question_text_get } from "./app_shared_bible_word_question_text_get.mjs";
 import { llms_query_url_prefixes } from "./llms_query_url_prefixes.mjs";
 import { window_open_url_prefix_query } from "./window_open_url_prefix_query.mjs";
+import { app_shared_bible_word_ask_llm_text_get } from "./app_shared_bible_word_ask_llm_text_get.mjs";
 export async function app_shared_bible_word_overlay_articles_open(word) {
   arguments_assert(arguments, 1);
   ("$plain word");
@@ -62,20 +66,18 @@ export async function app_shared_bible_word_overlay_articles_open(word) {
     let search_term = text_combine(word, " (Bible)");
     window_open_google_define(search_term);
   }
-  app_shared_button(choices, "Search Google", google);
-  let ask_label = html_div_text(choices, "Ask an AI:");
+  let text = app_shared_bible_word_search_google_text_get();
+  app_shared_button(choices, text, google);
+  let text2 = app_shared_bible_word_ask_ai_text_get();
+  let ask_label = html_div_text(choices, text2);
   app_shared_text_deemphasized(ask_label);
-  let question = text_combine_multiple([
-    'What does the word "',
-    word,
-    '" mean in the Bible?',
-  ]);
+  let question = app_shared_bible_word_question_text_get(word);
   let llms = llms_query_url_prefixes();
   for (let llm of llms) {
     function ask() {
       window_open_url_prefix_query(llm.prefix, question);
     }
-    let label = text_combine("Ask ", llm.name);
+    let label = app_shared_bible_word_ask_llm_text_get(llm.name);
     app_shared_button(choices, label, ask);
   }
 }
