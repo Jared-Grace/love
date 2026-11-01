@@ -16,6 +16,7 @@ import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_random_item } from "./list_random_item.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -43,7 +44,7 @@ export function app_code_lesson_while_log_skipped() {
   ("a console.log inside a while that never runs, and one after it: let n = 9; while (n < 5) { console.log(n); n += 2; } console.log(n); writes out only 9, from the console.log after the while");
   ("The one new fact is that when what a while asks is false from the start, the lines inside its { ... } never run, so a console.log inside it writes out nothing, and the code continues after it.");
   ("Asked for by the human 2026-11-01, to sit straight after A log inside a while, whose programs all run at least once because with only a console.log inside, a while that never runs would show an empty answer. The console.log after the while is what lets a program that never runs be asked about here.");
-  ("Each screen has one program from each of three counts of runs - none, one and two - so a learner cannot pass by always writing out only where n starts, and has to ask what the while asks every time.");
+  ("Each screen has three programs: two that never run and one that runs once or twice, in a shuffled order, asked for by the human 2026-11-01 - the skipped while is the point of the lesson, so it is most of what is asked, and the one that runs means a learner still cannot pass by always writing out only where n starts. Weighed: three of four skipped, a longer screen for the same lesson; one of each count of runs, as first drafted, where the skipped while was only a third.");
   ("No program runs more than twice, so the backwards wrong program, which runs once more, still runs no more than three times.");
   ("Reading forwards, the wrong answers are the lines one run fewer, one run more - for a while that never runs, that is the { ... } run once anyway - and every line inside written after n has changed; for a while that never runs, also n after one run written out alone, as if the { ... } ran but its console.log did not. Each once and never the answer.");
   ("Reading backwards, the wrong program is the same program compared against a number past where n ends, so it runs once more and writes out one line more.");
@@ -89,23 +90,23 @@ export function app_code_lesson_while_log_skipped() {
     return text;
   }
   function batch_get() {
-    "three programs, running none, one and two times";
-    let groups = [
-      [
-        [9, 5, 2],
-        [7, 4, 3],
-      ],
-      [
-        [3, 5, 4],
-        [2, 4, 3],
-      ],
-      [
-        [1, 6, 3],
-        [2, 5, 2],
-      ],
+    "three programs: two that never run and one that runs once or twice, in a shuffled order";
+    let skipped = [
+      [9, 5, 2],
+      [7, 4, 3],
+      [8, 3, 2],
+      [10, 4, 3],
     ];
-    let picked = list_shuffle_take(groups, 3);
-    let triples = list_map(picked, list_random_item);
+    let running = [
+      [3, 5, 4],
+      [2, 4, 3],
+      [1, 6, 3],
+      [2, 5, 2],
+    ];
+    let triples = list_shuffle_take(skipped, 2);
+    let ran = list_random_item(running);
+    list_add(triples, ran);
+    list_shuffle(triples);
     function program_of(triple) {
       let item = list_get(triple, 0);
       let item2 = list_get(triple, 1);
