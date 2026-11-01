@@ -23,7 +23,7 @@ export function app_shared_names() {
     code: "Code",
     replace: "Replace",
     examples: "Code Examples",
-    designs_universal: "Designs",
+    design: "Designs",
     message: "Message",
     calendar: "Preaching Calendar",
     privacy: "Privacy Policy",
