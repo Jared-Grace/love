@@ -21,6 +21,8 @@ import { app_shared_gloss_bible_word_sound } from "./app_shared_gloss_bible_word
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { html_stop_propagation } from "./html_stop_propagation.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { property_get } from "./property_get.mjs";
 export function bible_glyph_group_overlay_open(
   names,
   lookup,
@@ -28,8 +30,14 @@ export function bible_glyph_group_overlay_open(
   original,
   sound,
   word_name,
+  reasons,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 7);
+  ("$plain reasons");
+  ("the reasons map a picture's name to why that picture was chosen, as text. It is data to show and nothing that runs.");
+  ("WHY THESE PICTURES COMES LAST, one line per picture with the picture beside its reason, so a reader who wants only the meaning stops reading sooner. A picture used twice in one word is explained once. A picture with no reason written yet is left out rather than shown blank. See ",
+    fn_name("bible_glyph_reasons"),
+    ".");
   ("$plain word_name");
   ("the word name is what the tapped word means as a name and who or what it names, found by the word's own number, or null when the word is no name or its number is not known.");
   ("THE NAME GOES ON THE PIECE THAT HAS A ROOT, never on a small joined word such as and or the, because the name is the word the number belongs to.");
@@ -151,5 +159,26 @@ export function bible_glyph_group_overlay_open(
       html_span_text_content(pronounce_line, pronounced);
     }
     html_on_click(word_line, html_stop_propagation);
+  }
+  let explained = [];
+  for (let name of names) {
+    if (explained.includes(name) || not(property_exists(reasons, name))) {
+      continue;
+    }
+    explained.push(name);
+  }
+  if (greater_than(explained.length, 0)) {
+    let why = html_div(card);
+    html_style_set(why, "marginTop", "0.75em");
+    let why_label = html_div_text(why, "Why these pictures:");
+    app_shared_text_deemphasized(why_label);
+    for (let name of explained) {
+      let reason_line = html_div(why);
+      html_style_set(reason_line, "marginTop", "0.25em");
+      let picture = html_span(reason_line);
+      html_style_set(picture, "fontSize", "1.5em");
+      bible_glyph_name_draw_html(picture, name, lookup);
+      html_span_text_content(reason_line, " " + property_get(reasons, name));
+    }
   }
 }

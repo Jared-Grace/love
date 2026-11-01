@@ -22,6 +22,7 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
   let testament_name = bible_chapter_testament_name(chapter_code);
   let meanings = null;
   let names_table = null;
+  let reasons = null;
   let opening = false;
   async function on_tap(event) {
     let group = event.target.closest("[data-glyphs]");
@@ -38,6 +39,8 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
       meanings = tables.bible_glyph_testament_meanings(testament_name);
       let named = await import("./bible_glyph_testament_names.mjs");
       names_table = named.bible_glyph_testament_names(testament_name);
+      let why = await import("./bible_glyph_reasons.mjs");
+      reasons = why.bible_glyph_reasons();
       opening = false;
     }
     let spelled = group.closest("[data-original]");
@@ -61,6 +64,7 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
       original,
       sound,
       name,
+      reasons,
     );
   }
   html_on(parent, "click", on_tap);

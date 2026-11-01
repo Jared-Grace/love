@@ -1,6 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_verse_paragraph_draw_html } from "./bible_glyph_verse_paragraph_draw_html.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { app_shared_bible_verse_colors } from "./app_shared_bible_verse_colors.mjs";
+import { list_get } from "./list_get.mjs";
 import { app_emoji_bible_verse_key_band } from "./app_emoji_bible_verse_key_band.mjs";
+import { each_index } from "./each_index.mjs";
 export function app_emoji_bible_verse_key_draw(
   content,
   row,
@@ -30,11 +36,26 @@ export function app_emoji_bible_verse_key_draw(
     row.originals,
     lookup,
   );
+  ("TWO BANDS SHOWN TOGETHER TAKE TWO COLOURS, asked for by the human: the same rule the bible reader uses to tell translations apart, so a reader who meets both pages sees one rule. A band alone stays grey, since a colour there would tell it apart from nothing. Only bands with text are counted, or an empty English would still colour the lone original.");
+  let texts = [];
+  function text_add(text) {
+    let has = text_empty_not_is(text);
+    if (has) {
+      list_add(texts, text);
+    }
+  }
   if (original_shown) {
-    app_emoji_bible_verse_key_band(content, row.original);
+    text_add(row.original);
   }
   if (english_shown) {
-    app_emoji_bible_verse_key_band(content, row.english);
+    text_add(row.english);
   }
+  let colored = list_multiple_is(texts);
+  let colors = app_shared_bible_verse_colors(texts);
+  function band_draw(text, index) {
+    let color = colored ? list_get(colors, index) : null;
+    app_emoji_bible_verse_key_band(content, text, color);
+  }
+  each_index(texts, band_draw);
   return verse;
 }
