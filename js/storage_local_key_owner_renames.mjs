@@ -9,6 +9,10 @@ export function storage_local_key_owner_renames() {
       before: text_frozen("app_privacy_policy"),
       after: fn_name("app_privacy"),
     },
+    {
+      before: text_frozen("app_apps_all"),
+      after: fn_name("app_app"),
+    },
   ];
   return r;
 }

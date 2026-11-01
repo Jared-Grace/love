@@ -157,7 +157,7 @@ export function app_index_emojis() {
       emoji: emoji_check(),
     },
     {
-      app_fn: fn_name("app_apps_all"),
+      app_fn: fn_name("app_app"),
       emoji: emoji_mobile(),
     },
     {

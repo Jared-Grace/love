@@ -2,8 +2,8 @@ import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { app_index_generic } from "./app_index_generic.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_apps_all(context) {
-  app_shared_app_fn_set(context, app_apps_all);
+export function app_app(context) {
+  app_shared_app_fn_set(context, app_app);
   let fns = apps_all_main_fns();
   function lambda(fn) {
     let entry = {

@@ -3,7 +3,7 @@ export function apps_all_main_fns() {
   "Every app in the repo, named by the function that is its own front door.";
   let r = [
     fn_name("app_a"),
-    fn_name("app_apps_all"),
+    fn_name("app_app"),
     fn_name("app_autopray"),
     fn_name("app_bible"),
     fn_name("app_calendar"),

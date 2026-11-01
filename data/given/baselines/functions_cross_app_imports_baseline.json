@@ -1,6 +1,6 @@
 {
  "known": [
-  "app_apps_all -> app_index_generic",
+  "app_app -> app_index_generic",
   "app_calendar_contact -> app_a_button_wide",
   "app_calendar_contact -> app_calendar_paste_convert",
   "app_calendar_home -> app_a_button_wide",
