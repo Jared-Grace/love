@@ -64,6 +64,12 @@ export function app_code_lesson_if_true() {
     batch_get,
     eval_console_log_lines,
   );
+  function decoys(question, answer) {
+    "true, as if the if wrote out the value inside its parentheses: it stands in the code beside the word written out, so the right answer can no longer be picked as the one word on the screen";
+    "2026-11-01, when the step-by-step quiz joined this lesson and the gate over quizzes passable by reading found this one: every right answer was the only word in the code. Not picked: if (true) written whole, which no line writes out; and nothing at all, which is the next lesson's answer and is not yet shown here.";
+    let found = ["true"];
+    return found;
+  }
   function backwards_decoys(question, answer) {
     "the same program with false in place of true: it holds the very word the screen shows, so it can only be turned down by reading the value inside the parentheses";
     "Asked for by the human 2026-10-26, after the programs borrowed from the other questions were found to write out other words, so the right one could be picked by spotting the word. False is not taught until the next lesson, but the screen above says the lines inside run when the value is true, so turning it down is one step from what is shown. Not picked: the word written without quotes, which asks about strings rather than about the if; and no decoy at all, which left a choice that gives itself away.";
@@ -140,7 +146,7 @@ export function app_code_lesson_if_true() {
     unscramble: false,
     lines: true,
     steps: true,
-    decoys: null,
+    decoys,
     backwards_decoys,
     backwards_wrong_say,
     quiz_backwards_answer_count_override: null,
