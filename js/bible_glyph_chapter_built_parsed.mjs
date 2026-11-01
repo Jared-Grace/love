@@ -6,7 +6,7 @@ import { add } from "./add.mjs";
 import { bible_glyph_drawn_for_english } from "./bible_glyph_drawn_for_english.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { bible_glyph_keys_spelled } from "./bible_glyph_keys_spelled.mjs";
+import { bible_glyph_keys_word } from "./bible_glyph_keys_word.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
@@ -22,9 +22,9 @@ export function bible_glyph_chapter_built_parsed(built, drawn) {
   ("THE LOOKUP IS HANDED IN, and that is where a reader's own choices will go. The table's pictures are one lookup; a reader who prefers another picture for a word lays their choice over it and hands in the result, and nothing here needs to know which of the two a picture came from.");
   ("A WORD GOES THROUGH THE SAME PARSER A HAND-WRITTEN WORD DOES. It is spelled in the shorthand first - a dollar and the picture's name, or its English - and then parsed, so a built chapter and a written one cannot come out in two different shapes for the drawing to disagree about.");
   ("Each verse keeps its whole original line and its whole English line as they came, because the key under a verse reads them off the chapter it already holds rather than sending for them again.");
-  ("A word kept with the keys of its parts is spelled by ",
-    fn_name("bible_glyph_keys_spelled"),
-    ", the same rule the original-order line uses; a word kept as only its number and English, from a chapter stored before parts were kept, is spelled from its number alone.");
+  ("A word kept with the keys of its parts is drawn by ",
+    fn_name("bible_glyph_keys_word"),
+    ", each part its own picture with a small gap between them - the same gap the original-order drawing puts between the pieces of one original word, so the two orders draw one word the same way. A word kept as only its number and English, from a chapter stored before parts were kept, is spelled from its number alone.");
   ("Each word is drawn from ",
     fn_name("bible_glyph_drawn_for_english"),
     "'s table, so a word whose English says god or gods in small letters is drawn as an idol and not as God.");
@@ -43,21 +43,21 @@ export function bible_glyph_chapter_built_parsed(built, drawn) {
       index = add(index, 1);
       let strong = pair[0];
       let english = pair[1];
-      let spelled = null;
+      let item = null;
       let drawn_word = bible_glyph_drawn_for_english(drawn, english);
       let a = list_size(pair);
       if (greater_than(a, 2)) {
         let keys = list_get(pair, 2);
-        spelled = bible_glyph_keys_spelled(keys, english, drawn_word);
+        item = bible_glyph_keys_word(keys, english, drawn_word);
       } else {
         let glyph = property_get_or_null(drawn_word, strong);
         let undrawn = null_is(glyph) || equal(glyph, "");
-        spelled = undrawn ? english : text_combine("$", glyph);
+        let spelled = undrawn ? english : text_combine("$", glyph);
+        item = equal(spelled, "") ? "" : bible_glyph_word_parse(spelled);
       }
-      if (equal(spelled, "")) {
+      if (equal(item, "")) {
         continue;
       }
-      let item = bible_glyph_word_parse(spelled);
       list_add(words, item);
       list_add(originals, original);
     }
