@@ -5,7 +5,7 @@ import { reply_sequence_optional } from "./reply_sequence_optional.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_titles_ministry } from "./reply_titles_ministry.mjs";
 import { reply_phrase_i_am } from "./reply_phrase_i_am.mjs";
-export function app_message_reply_minister() {
+export function app_shared_message_reply_minister() {
   let iam = reply_phrase_i_am();
   let titles = reply_titles_ministry();
   let o_n = reply_optional("n");
