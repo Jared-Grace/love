@@ -1,8 +1,8 @@
-import { json_from } from "./json_from.mjs";
+import { http_text_or_null } from "./http_text_or_null.mjs";
 import { equal } from "./equal.mjs";
+import { json_from } from "./json_from.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { http_text_or_null } from "./http_text_or_null.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
@@ -38,13 +38,16 @@ export async function orthodoxwiki_titles_download() {
     }
   }
   function leads(query, found) {
-    for (let lead of query.redirects ?? []) {
-      found.push([lead.from, lead.to]);
+    for (let page of Object.values(query.pages ?? {})) {
+      for (let lead of page.redirects ?? []) {
+        found.push([lead.title, page.title]);
+      }
     }
   }
   let pages = await all("nonredirects", titles);
-  base = base + "&redirects=1";
-  let redirects = await all("redirects", leads);
+  ("THE WIKI ANSWERS WHICH NAMES LEAD TO EACH ARTICLE, not where each leading name goes - asked the second way it answered none at all, measured 2026-11-01.");
+  base = base + "&prop=redirects&rdnamespace=0&rdlimit=500";
+  let redirects = await all("nonredirects", leads);
   pages.sort();
   function lambda(a, b) {
     let r2 = less_than(a[0], b[0]) ? -1 : greater_than(a[0], b[0]) ? 1 : 0;
