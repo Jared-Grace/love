@@ -1,4 +1,3 @@
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
@@ -16,20 +15,22 @@ import { bible_word_article_site_chosen } from "./bible_word_article_site_chosen
 import { window_open } from "./window_open.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { bible_word_article_sites_recent } from "./bible_word_article_sites_recent.mjs";
-import { bible_word_article_offers_recent_split } from "./bible_word_article_offers_recent_split.mjs";
-import { html_div_text } from "./html_div_text.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { app_shared_bible_word_sites_recent_text_get } from "./app_shared_bible_word_sites_recent_text_get.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_bible_word_sites_others_text_get } from "./app_shared_bible_word_sites_others_text_get.mjs";
+import { bible_word_article_sites_recent } from "./bible_word_article_sites_recent.mjs";
+import { bible_word_article_offers_recent_split } from "./bible_word_article_offers_recent_split.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { window_open_google_define } from "./window_open_google_define.mjs";
 import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible_word_search_google_text_get.mjs";
 import { app_shared_bible_word_ask_ai_text_get } from "./app_shared_bible_word_ask_ai_text_get.mjs";
 import { app_shared_bible_word_question_text_get } from "./app_shared_bible_word_question_text_get.mjs";
-import { llms_query_url_prefixes } from "./llms_query_url_prefixes.mjs";
 import { window_open_url_prefix_query } from "./window_open_url_prefix_query.mjs";
 import { app_shared_bible_word_ask_llm_text_get } from "./app_shared_bible_word_ask_llm_text_get.mjs";
+import { llms_query_url_prefixes } from "./llms_query_url_prefixes.mjs";
+import { list_recent_split_by_names } from "./list_recent_split_by_names.mjs";
 export async function app_shared_bible_word_overlay_articles_open(
   word,
   strong_url,
@@ -107,27 +108,30 @@ export async function app_shared_bible_word_overlay_articles_open(
     app_shared_button(choices, label, read);
   }
   ("A SITE THE READER HAS CHOSEN BEFORE COMES FIRST, under Recent, the one chosen last at the top; the rest follow under Others - asked for by the human 2026-11-01, so a Catholic reader who opens the Catholic Encyclopedia sees it first every time after. Before any choice there is nothing recent, so the articles show in the sites' usual order with no labels at all.");
+  function split_draw(split, draw) {
+    let recent_items = split.recent;
+    let other_items = split.others;
+    let labelled = greater_than(recent_items.length, 0);
+    if (labelled) {
+      let text3 = app_shared_bible_word_sites_recent_text_get();
+      let recent_label = html_div_text(choices, text3);
+      app_shared_text_deemphasized(recent_label);
+      for (let item of recent_items) {
+        draw(item);
+      }
+      if (greater_than(other_items.length, 0)) {
+        let text4 = app_shared_bible_word_sites_others_text_get();
+        let others_label = html_div_text(choices, text4);
+        app_shared_text_deemphasized(others_label);
+      }
+    }
+    for (let item of other_items) {
+      draw(item);
+    }
+  }
   let recent_names = bible_word_article_sites_recent();
   let split = bible_word_article_offers_recent_split(offers, recent_names);
-  let recent_offers = split.recent;
-  let other_offers = split.others;
-  let labelled = greater_than(recent_offers.length, 0);
-  if (labelled) {
-    let text3 = app_shared_bible_word_sites_recent_text_get();
-    let recent_label = html_div_text(choices, text3);
-    app_shared_text_deemphasized(recent_label);
-    for (let offer of recent_offers) {
-      offer_draw(offer);
-    }
-    if (greater_than(other_offers.length, 0)) {
-      let text4 = app_shared_bible_word_sites_others_text_get();
-      let others_label = html_div_text(choices, text4);
-      app_shared_text_deemphasized(others_label);
-    }
-  }
-  for (let offer of other_offers) {
-    offer_draw(offer);
-  }
+  split_draw(split, offer_draw);
   function google() {
     let search_term = text_combine(word, " (Bible)");
     window_open_google_define(search_term);
@@ -138,12 +142,21 @@ export async function app_shared_bible_word_overlay_articles_open(
   let ask_label = html_div_text(choices, text2);
   app_shared_text_deemphasized(ask_label);
   let question = app_shared_bible_word_question_text_get(word);
-  let llms = llms_query_url_prefixes();
-  for (let llm of llms) {
+  function llm_draw(llm) {
     function ask() {
+      bible_word_article_site_chosen(llm.name);
       window_open_url_prefix_query(llm.prefix, question);
     }
     let label = app_shared_bible_word_ask_llm_text_get(llm.name);
     app_shared_button(choices, label, ask);
   }
+  ("AN AI THE READER HAS ASKED BEFORE COMES FIRST TOO, under its own Recent and Others below Ask an AI - asked for by the human 2026-11-01. The AIs are kept in the same list of names as the article sites, because no AI is named like a site.");
+  let llms = llms_query_url_prefixes();
+  function llm_name(llm) {
+    let name = llm.name;
+    return name;
+  }
+  let llm_names = llms.map(llm_name);
+  let llm_split = list_recent_split_by_names(llms, llm_names, recent_names);
+  split_draw(llm_split, llm_draw);
 }
