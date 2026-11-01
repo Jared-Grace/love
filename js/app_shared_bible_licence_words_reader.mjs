@@ -10,12 +10,13 @@ export function app_shared_bible_licence_words_reader(licence) {
   ("The terms of a translation as the reader of this app is shown them on its card.");
   ("A LICENCE THAT WAS RECOGNISED KEEPS ITS OWN NAME IN EVERY LANGUAGE, because that name is what somebody would search for or check against, and it is written the way its holder writes it.");
   ("ONLY THE ANSWER FOR TERMS NOTHING RECOGNISED IS TRANSLATED. That one is a sentence to the reader rather than a name, so a reader of Urdu is owed it in Urdu. It is translated here and not where it is spelled, because a gate over the generated files finds the English words by matching them, and the files are written for every reader at once.");
+  ("THE ENGLISH IS WRITTEN OUT AGAIN rather than handed on from where it is spelled, because the gate that checks every language is there reads the sayings off the page and cannot read a value worked out while the app runs. The rejected reading was handing on the spelled words, which keeps one spelling and leaves the saying unreadable to that gate.");
   let words = ebible_licence_words(licence);
   let unread = ebible_licence_words_unread();
   let not_read = equal(words, unread);
   if (not_read) {
     let texts = {
-      en: words,
+      en: "Terms not read",
       ur: "شرائط پڑھی نہیں گئیں",
       translated_from: {
         ur: "The terms were not read",
