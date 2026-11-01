@@ -1,5 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
+import { app_shared_bible_title_reference_set } from "./app_shared_bible_title_reference_set.mjs";
 import { app_shared_bible_book_chapter } from "./app_shared_bible_book_chapter.mjs";
 import { app_shared_bible_read_view_whole_chapter } from "./app_shared_bible_read_view_whole_chapter.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -36,6 +37,13 @@ export async function app_shared_bible_read_verse_here_is({
     context,
     chapter_code,
     verse_numbers_chosen,
+  );
+  ("The tab names the passage first, so a row of tabs reads as the passages open in them. An app that names its own tab does so when the chapter hook runs, after this, and so has the last word.");
+  await app_shared_bible_title_reference_set(
+    chapter_code,
+    verse_numbers_chosen,
+    ref_mode,
+    ref_line,
   );
   let languages_verses = [];
   let updates = [];
