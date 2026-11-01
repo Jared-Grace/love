@@ -1,13 +1,13 @@
 export function app_emoji_bible_key_shown_button_text(shown) {
   "$plain shown";
-  "the answer says whether the key is under each verse now. It is a yes or a no to read and nothing that runs.";
-  "What the button offering the key should say, worded as what pressing it does rather than as where the reader already is.";
+  "the answer says whether the original is under each verse now. It is a yes or a no to read and nothing that runs.";
+  "What the button offering the original should say, worded as what pressing it does rather than as where the reader already is.";
   "A control that names the state it is in reads as a label, and a control that names what it does reads as an offer. A reader meeting this page for the first time has no second state to compare a label against, so the label would tell them nothing.";
-  "It is called the KEY rather than the translation, because that is what it is for. Under each verse are the same verse in the language it was written in and in English, and a reader uses them to work the pictures out - which is a key. Calling it a translation would invite a reader to read the English and skip the pictures, which is the one way to use this page that teaches nobody anything.";
+  "IT NAMES THE ORIGINAL, the verse in the language it was written in, and the button beside it names the English, so each button names the one line it puts under the verse and the two can be had together or apart. Rejected: the key, which named what the lines are for rather than what they are, and stood for a stack of every line at once, so a reader could not tell from the button that the English beside it was a part of the same stack.";
   if (shown) {
-    let r = "Hide the key";
+    let r = "Hide original";
     return r;
   }
-  let r2 = "Show the key";
+  let r2 = "Show original";
   return r2;
 }
