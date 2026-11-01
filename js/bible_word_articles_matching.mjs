@@ -51,24 +51,45 @@ export function bible_word_articles_matching(table, words, index) {
     }
     return true;
   }
-  let r = [];
-  let files = [];
+  ("A NAME INSIDE A LONGER NAME THE VERSE SPELLS OUT GIVES WAY TO IT, asked for by the human 2026-11-01: in Mary Magdalene came to the tomb, a tap on Mary offers Mary Magdalene and not the other Marys the table files under Mary alone. Only a name standing wholly inside the longer run gives way; names that merely overlap it both stay.");
+  let found = [];
   for (let row of table) {
     let keys = text_split_space(row[0]);
-    let file = row[2];
     for (let offset = 0; less_than(offset, keys.length); offset++) {
       let start = subtract(index, offset);
+      let end = start + keys.length;
       let inside =
-        greater_than_equal(start, 0) &&
-        less_than_equal(start + keys.length, words.length);
+        greater_than_equal(start, 0) && less_than_equal(end, words.length);
       if (inside && at(keys, start)) {
-        let b2 = files.includes(file);
-        if (not(b2)) {
-          files.push(file);
-          r.push(row);
-        }
+        found.push({
+          row,
+          start,
+          end,
+        });
         break;
       }
+    }
+  }
+  function within(a, b) {
+    let w =
+      greater_than_equal(a.start, b.start) &&
+      less_than_equal(a.end, b.end) &&
+      less_than(subtract(a.end, a.start), subtract(b.end, b.start));
+    return w;
+  }
+  let r = [];
+  let files = [];
+  for (let f of found) {
+    function lambda(g) {
+      let r3 = within(f, g);
+      return r3;
+    }
+    let shorter = found.some(lambda);
+    ("One article placed on two people - the Catholic Encyclopedia's Mary Magdalen is placed on Mary of Bethany as well - is kept once for each, because which of them the verse means is settled later, by where it stands.");
+    let file = f.row[2] + "|" + (f.row[3] ?? "");
+    if (not(shorter) && not(files.includes(file))) {
+      files.push(file);
+      r.push(f.row);
     }
   }
   return r;
