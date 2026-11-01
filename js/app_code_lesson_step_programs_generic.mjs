@@ -3,17 +3,13 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
-import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { html_div_first } from "./html_div_first.mjs";
-import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
-import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
-import { app_code_program_step_through_generic } from "./app_code_program_step_through_generic.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
-import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_quiz_step_info } from "./app_code_lesson_quiz_step_info.mjs";
+import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_code_lesson_example_guided } from "./app_code_lesson_example_guided.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_code_lesson_step_programs_generic(
   title,
@@ -41,28 +37,6 @@ export function app_code_lesson_step_programs_generic(
     programs,
     app_code_if_blocks_kept,
   );
-  function example_choose(component, text, container) {
-    "a worked example answered on the page, with nothing to tell the lesson when an answer is wrong";
-    function wrong() {}
-    ("the worked example has no answer to show, so a press done is told to nobody");
-    function step_none() {}
-    function success() {
-      app_shared_success_message(component);
-    }
-    ("the guide stands on top of the card, above its Code: label, at the human's asking 2026-10-14");
-    let guide = html_div_first(container);
-    ("spaced as the order lesson's guide is, at the human's asking 2026-10-14: one sentence per line, no room between the lines, and the app's gap under the last one, above the Code label. Not picked: the gap the questions under the program have between them, which read as the sentences not belonging together");
-    html_flex_column_stretch(guide);
-    app_code_head_spaced_above_code(guide);
-    app_code_program_step_through_generic(
-      component,
-      text,
-      wrong,
-      success,
-      guide,
-      step_none,
-    );
-  }
   let forwards = {
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
@@ -88,7 +62,7 @@ export function app_code_lesson_step_programs_generic(
     above,
     1,
     batch,
-    example_choose,
+    app_code_lesson_example_guided,
     null,
     quizzes_get,
     "Code:",

@@ -12,6 +12,8 @@ import { app_code_forwards_wrong_say } from "./app_code_forwards_wrong_say.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_code_lesson_example_guided } from "./app_code_lesson_example_guided.mjs";
+import { property_set } from "./property_set.mjs";
 export function app_code_lesson_code_generic(params) {
   let value = property_get(params, "value");
   let batch_get = property_get(params, "batch_get");
@@ -136,6 +138,22 @@ export function app_code_lesson_code_generic(params) {
     lines,
     steps,
   });
+  ("2026-11-01, at the human's asking: a lesson with the step-by-step quiz guides its example step by step, as the step lessons it replaced did - the example says what to do and the learner chooses it, and the quiz then asks the same without guiding. So its example is the one guided program, drawn as theirs was, with no output under it, since running it is what writes the output. Not picked: keeping the solved examples as well, above or below the guided one, which shows the answer the guided program is about to work out; guiding every example, which walks the same steps twice before a quiz walks them a third time");
+  if (steps) {
+    let lesson_guided = app_code_lesson_base(
+      name_id,
+      above,
+      1,
+      batch_get,
+      app_code_lesson_example_guided,
+      null,
+      quizzes_get,
+      forwards_question_label,
+      app_code_style_normal_text,
+    );
+    property_set(lesson_guided, "examples_guided", true);
+    return lesson_guided;
+  }
   let lesson = app_code_lesson_base(
     name_id,
     above,
