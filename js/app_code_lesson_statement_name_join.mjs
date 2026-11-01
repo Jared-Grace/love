@@ -1,9 +1,9 @@
-import { app_code_lesson_statement_names_binary_decoys } from "./app_code_lesson_statement_names_binary_decoys.mjs";
-import { app_code_lesson_statement_name_join_decoys } from "./app_code_lesson_statement_name_join_decoys.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { app_code_lesson_statement_names_binary_decoys } from "./app_code_lesson_statement_names_binary_decoys.mjs";
 import { app_code_lesson_statement_name_join_pairs } from "./app_code_lesson_statement_name_join_pairs.mjs";
 import { app_code_lesson_expression_string_concat } from "./app_code_lesson_expression_string_concat.mjs";
+import { app_code_lesson_statement_name_join_decoys } from "./app_code_lesson_statement_name_join_decoys.mjs";
 export function app_code_lesson_statement_name_join() {
   arguments_assert(arguments, 0);
   ('two names holding text, joined: let a = "God"; let b = "love"; let joined = a + b; console.log(joined); writes out Godlove');
@@ -21,6 +21,7 @@ export function app_code_lesson_statement_name_join() {
     answer_name: "joined",
     answer_count: null,
     decoys: app_code_lesson_statement_name_join_decoys,
+    steps: true,
   });
   return lesson;
 }

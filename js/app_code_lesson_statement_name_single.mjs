@@ -9,7 +9,7 @@ export function app_code_lesson_statement_name_single(pair) {
   let lesson = app_code_lesson_statement_name_watched_titled(
     pair,
     fragment,
-    false,
+    true,
   );
   return lesson;
 }

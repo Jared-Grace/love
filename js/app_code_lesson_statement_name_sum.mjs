@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
+import { app_code_lesson_statement_names_binary_decoys } from "./app_code_lesson_statement_names_binary_decoys.mjs";
 import { app_code_lesson_statement_name_sum_number_pairs } from "./app_code_lesson_statement_name_sum_number_pairs.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
 export function app_code_lesson_statement_name_sum() {
@@ -12,7 +12,8 @@ export function app_code_lesson_statement_name_sum() {
   ("Numbers rather than the words the screens before use. A plus between two pieces of text does something a learner has never been told about, and it would be the second new thing on a screen that has one; a plus between two numbers is the sum they have solved since the operators lessons.");
   ("The same screen as every other lesson that puts one symbol between two names, at the human's asking, so the wording a learner reads here is the wording they read on each of the others. The pairs stay the ones the lessons after this one ask again with one more line.");
   let plus = js_operator_plus_symbol();
-  let lesson = app_code_lesson_statement_names_binary({
+  ("2026-11-01, at the human's asking, the step-by-step lesson that came after this one is its last quiz now; built on the twin that takes wrong answers, handed none, because that twin is the one that passes the step quiz on and the other twin's twelve lessons never had a step lesson beside them");
+  let lesson = app_code_lesson_statement_names_binary_decoys({
     words: "Adding two names",
     symbol: plus,
     pairs_get: app_code_lesson_statement_name_sum_number_pairs,
@@ -21,6 +22,8 @@ export function app_code_lesson_statement_name_sum() {
     remember_parts: ["we can add (", plus, ") two numbers together:"],
     answer_name: null,
     answer_count: null,
+    decoys: null,
+    steps: true,
   });
   return lesson;
 }

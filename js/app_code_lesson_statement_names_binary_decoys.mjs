@@ -16,6 +16,7 @@ export function app_code_lesson_statement_names_binary_decoys({
   remember_parts,
   answer_count,
   decoys,
+  steps,
 }) {
   arguments_assert(arguments, 1);
   ("a lesson about one symbol between two names, with the tempting wrong answers its forwards questions offer handed in; null leaves the other questions' answers as the only wrong ones");
@@ -59,6 +60,7 @@ export function app_code_lesson_statement_names_binary_decoys({
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps,
     decoys,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: answer_count,
