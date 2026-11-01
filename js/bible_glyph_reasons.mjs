@@ -313,6 +313,62 @@ export function bible_glyph_reasons() {
     bow: "A bow and arrow: sin. The Hebrew word first means to miss the mark, like an arrow that falls short. For all have sinned and fall short of the glory of God (Romans 3:23).",
     gold: "A gold medal: gold, fine gold.",
     lion: "A lion: a lion, a lion's cub.",
+    harp: "A stringed instrument: music, a song, singing praise, a psalm.",
+    military_helmet:
+      "A soldier's helmet: an army, a host, serving as a soldier. The LORD of hosts is the LORD of armies.",
+    bubbles:
+      "Bubbles: empty, vanity, worthless, gone when touched. With a shirt, it is washing.",
+    wheel: "A wheel: a wheel, a cart, rolling.",
+    lemon:
+      "A lemon: bitter, bitterness. Marah means bitter, for the water there was bitter (Exodus 15:23).",
+    nauseated_face:
+      "A sick, disgusted face: loathsome, unclean, defiled, a bad smell.",
+    anger_symbol: "An anger sign: wrath, rage, being vexed.",
+    bandage:
+      "A bandage: to heal, healing, a cure. I am the LORD who heals you (Exodus 15:26).",
+    cow_face: "A cow: cattle, a herd, a herdsman.",
+    crossed_fingers:
+      "Crossed fingers: hope. With an hourglass, it is to wait in hope.",
+    darkness: "A black square: darkness, dark.",
+    oil: "Oil pouring: oil, and anointing with oil.",
+    unlocked: "An open lock: to open, a key. Jephthah means he will open.",
+    sheaf_of_rice:
+      "A sheaf of grain: reaping and gleaning, gathering the harvest.",
+    sunset: "A sunset: evening, the west, growing dark.",
+    rain: "Rain: rain, showers.",
+    snake:
+      "A snake: a serpent. With fire, it is the fiery serpents of the wilderness (Numbers 21:6).",
+    ox: "An ox: an ox, a bull, cattle.",
+    veil: "A veil: a covering, to wrap up. Lot means covering.",
+    fear: "A face in fear: to fear, fearful, and the fear of the LORD.",
+    classical_building:
+      "A building with pillars: a temple, a pillar, a palace.",
+    guide_dog: "A guide dog: to lead.",
+    palm_up_hand: "A cupped hand: a handful, the hollow of the hand.",
+    abacus: "An abacus: to count, a number, a census, and a scribe.",
+    check_box:
+      "A checked box: to choose, chosen, the choicest, and a young man in his prime.",
+    fallen_leaf:
+      "A fallen leaf: dry, withered. With a person, it is a fool. Nabal means fool (1 Samuel 25:25).",
+    pouring_liquid:
+      "Liquid pouring: to pour out, a drink offering, and metal poured to cast an image.",
+    broken_heart:
+      "A broken heart: being unfaithful, as a husband or wife breaks the heart they promised to. With crying, it is grief.",
+    new_button: "A new button: new, fresh, to renew.",
+    lifting:
+      "Someone lifting a weight: to lift up, to carry, a burden, and one lifted up as a leader.",
+    witness: "A hand raised to speak: a witness, testimony, to testify.",
+    fish: "A fish: a fish, a fisherman, and Dagon the fish god.",
+    goat: "A goat: a goat, a young goat, a male goat.",
+    bucket: "A bucket: to draw water, and a dry measure like an ephah.",
+    t_shirt:
+      "A shirt: clothing. With scissors, it is tearing, as clothes were torn in grief.",
+    hand_with_fingers_splayed:
+      "An open hand with fingers spread: the palm, a span, letting go.",
+    next_track: "The skip-forward button: after, later, last, the other one.",
+    woozy_face: "A woozy face: drunk, drunkenness.",
+    cup: "A cup: a cup, and giving drink.",
+    yarn: "Yarn: wool, fleece.",
   };
   return r;
 }
