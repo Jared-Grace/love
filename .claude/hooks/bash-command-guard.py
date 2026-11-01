@@ -4637,8 +4637,9 @@ def ai_result_newest_deny_reason():
 
 def grep_list_while_read_deny_reason():
     return (
-        "`read` holds no rule, so a `grep -l ... | while read f` loop always "
-        "asks the human. One grep does the same unasked: grep over several "
+        "A `grep -l ... | while read f` loop is approved when everything in "
+        "its body is, and something in this one's body holds no rule. One "
+        "grep often does the same unasked: grep over several "
         "files already puts each file's name in front of what it found, e.g. "
         "`grep -a -o -m1 '<pattern>' <folder>/*` for the first match in each "
         "file, or `grep -a -c '<pattern>' <folder>/*` for a count. If the body "
