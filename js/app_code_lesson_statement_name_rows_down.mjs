@@ -116,6 +116,7 @@ export function app_code_lesson_statement_name_rows_down() {
     ],
     decoys: null,
     example_pointers: null,
+    steps_first: false,
   });
   return lesson;
 }

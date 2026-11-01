@@ -1,8 +1,8 @@
-import { property_get } from "./property_get.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { list_join_space } from "./list_join_space.mjs";
 import { app_code_lesson_statement_name_swap_number_pairs } from "./app_code_lesson_statement_name_swap_number_pairs.mjs";
 import { app_code_lesson_decoy_lines_starting_values } from "./app_code_lesson_decoy_lines_starting_values.mjs";
 export function app_code_lesson_statement_name_swap_ladder({
@@ -12,6 +12,7 @@ export function app_code_lesson_statement_name_swap_ladder({
   remember_parts,
   remember_lines,
   explain,
+  steps_first,
 }) {
   arguments_assert(arguments, 1);
   ("one lesson of the ladder that builds up to swapping two names: its title, the boxes read before the questions, and questions whose programs start a and b with two numbers, run the lines the lesson is about, and write out the names it asks about");
@@ -33,6 +34,7 @@ export function app_code_lesson_statement_name_swap_ladder({
     explain,
     decoys: app_code_lesson_decoy_lines_starting_values,
     example_pointers: null,
+    steps_first,
   });
   return lesson;
 }

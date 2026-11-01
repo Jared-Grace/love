@@ -1,5 +1,3 @@
-import { app_code_definition_term } from "./app_code_definition_term.mjs";
-import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
@@ -14,10 +12,12 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_code_line_ends_middle_draw } from "./app_code_line_ends_middle_draw.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_divide } from "./app_code_lesson_statement_name_divide.mjs";
 import { app_code_number_line_draw } from "./app_code_number_line_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
+import { app_code_definition_term } from "./app_code_definition_term.mjs";
+import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { app_code_lesson_statement_name_divide } from "./app_code_lesson_statement_name_divide.mjs";
+import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
 export function app_code_lesson_statement_name_average_two() {
   arguments_assert(arguments, 0);
   ("the average of two names, in two short lines: let sum = a + b; let average = sum / 2; console.log(average);");
@@ -139,6 +139,7 @@ export function app_code_lesson_statement_name_average_two() {
     ],
     decoys: null,
     example_pointers: null,
+    steps_first: true,
   });
   return lesson;
 }

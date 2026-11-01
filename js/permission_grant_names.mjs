@@ -2811,6 +2811,7 @@ export function permission_grant_names() {
     fn_name("smart_self_test_recent_gate_run"),
     fn_name("web_assets_version_stale_gate_run"),
     fn_name("ebible_versions_english_downloadable_words_lookup_cache_clear"),
+    fn_name("function_param_object_property_new"),
   ];
   return names;
 }

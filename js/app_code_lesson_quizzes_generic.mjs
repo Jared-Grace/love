@@ -10,6 +10,7 @@ import { object_assign } from "./object_assign.mjs";
 import { each } from "./each.mjs";
 import { app_code_lesson_quizzes_lines_add } from "./app_code_lesson_quizzes_lines_add.mjs";
 import { app_code_lesson_quiz_step_info } from "./app_code_lesson_quiz_step_info.mjs";
+import { list_add_first } from "./list_add_first.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_quizzes_generic(params) {
@@ -95,6 +96,14 @@ export function app_code_lesson_quizzes_generic(params) {
   if (steps) {
     let step_info = app_code_lesson_quiz_step_info();
     build_more_add(step_info);
+  }
+  ("2026-11-01, at the human's asking: a lesson whose step lesson came before it, opening with its boxes, takes that stepping in as its FIRST quiz instead, so the learner still runs the programs a line at a time before working each one out whole - the order the human set on 2026-10-16. It moves every quiz after it, and the progress kept against their places, which the human accepted; it was only ever these lessons, on latest");
+  let steps_first = property_get_or(params, "steps_first", false);
+  if (steps_first) {
+    let step_first_info = app_code_lesson_quiz_step_info();
+    let step_first = object_copy(forwards);
+    object_assign(step_first, step_first_info);
+    list_add_first(infos, step_first);
   }
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {

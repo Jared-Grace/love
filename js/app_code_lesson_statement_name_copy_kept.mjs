@@ -1,4 +1,3 @@
-import { app_code_lesson_decoy_code_words } from "./app_code_lesson_decoy_code_words.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_copy_kept_title_name_id } from "./app_code_lesson_statement_name_copy_kept_title_name_id.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
@@ -7,6 +6,7 @@ import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_lesson_statement_name_copy_kept_above } from "./app_code_lesson_statement_name_copy_kept_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
+import { app_code_lesson_decoy_code_words } from "./app_code_lesson_decoy_code_words.mjs";
 export function app_code_lesson_statement_name_copy_kept() {
   arguments_assert(arguments, 0);
   ('a name keeps what it was given after the name it was filled from changes: let a = "grapes"; let c = a; a = "olives"; console.log(c); writes out grapes');
@@ -28,6 +28,7 @@ export function app_code_lesson_statement_name_copy_kept() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps_first: true,
     decoys: app_code_lesson_decoy_code_words,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,

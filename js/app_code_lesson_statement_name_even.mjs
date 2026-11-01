@@ -194,6 +194,7 @@ export function app_code_lesson_statement_name_even() {
     decoys: null,
     example_pointers: example_draw,
     answer_count: 2,
+    steps_first: false,
   });
   return lesson;
 }
