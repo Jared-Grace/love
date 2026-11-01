@@ -3,7 +3,8 @@ import { fn_name } from "./fn_name.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
 import { bible_word_articles_matching } from "./bible_word_articles_matching.mjs";
 import { app_shared_overlay_card_closable } from "./app_shared_overlay_card_closable.mjs";
-import { html_div_text } from "./html_div_text.mjs";
+import { property_get } from "./property_get.mjs";
+import { html_text_set } from "./html_text_set.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
@@ -17,6 +18,7 @@ import { text_combine } from "./text_combine.mjs";
 import { window_open_google_define } from "./window_open_google_define.mjs";
 import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible_word_search_google_text_get.mjs";
 import { app_shared_bible_word_ask_ai_text_get } from "./app_shared_bible_word_ask_ai_text_get.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_bible_word_question_text_get } from "./app_shared_bible_word_question_text_get.mjs";
 import { llms_query_url_prefixes } from "./llms_query_url_prefixes.mjs";
@@ -65,8 +67,10 @@ export async function app_shared_bible_word_overlay_articles_open(
       });
     }
   }
-  let card = app_shared_overlay_card_closable();
-  let big = html_div_text(card, word);
+  let overlay = app_shared_overlay_card_closable();
+  let card = property_get(overlay, "body");
+  let big = property_get(overlay, "title");
+  html_text_set(big, word);
   html_attribute_set(big, "dir", "auto");
   html_style_assign(big, {
     "font-size": "2em",
@@ -91,7 +95,8 @@ export async function app_shared_bible_word_overlay_articles_open(
       let url = site.url(file);
       window_open(url);
     }
-    let label = text_combine_multiple(["Open ", about, " on ", site.name]);
+    ("the article's name is quoted, asked for by the human 2026-11-01, so a name of several words - Valley of Succoth - reads as one thing rather than running into the words around it");
+    let label = text_combine_multiple(["Open “", about, "” on ", site.name]);
     app_shared_button(choices, label, read);
   }
   function google() {
