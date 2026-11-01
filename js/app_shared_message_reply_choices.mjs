@@ -4,7 +4,7 @@ import { app_message_reply_phrases_single } from "./app_message_reply_phrases_si
 import { app_message_reply_praise_god } from "./app_message_reply_praise_god.mjs";
 import { app_message_reply_minister } from "./app_message_reply_minister.mjs";
 import { app_shared_message_reply_from_country } from "./app_shared_message_reply_from_country.mjs";
-import { app_message_reply_give } from "./app_message_reply_give.mjs";
+import { app_shared_message_reply_give } from "./app_shared_message_reply_give.mjs";
 import { reply_phrase_according_to_gods_will } from "./reply_phrase_according_to_gods_will.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_sequence_optional } from "./reply_sequence_optional.mjs";
@@ -31,7 +31,7 @@ export function app_shared_message_reply_choices() {
   let praise_god = app_message_reply_praise_god();
   let minister = app_message_reply_minister();
   let from_city_country = app_shared_message_reply_from_country();
-  let give = app_message_reply_give();
+  let give = app_shared_message_reply_give();
   let according_to_gods_will = reply_phrase_according_to_gods_will();
   let o_according_to_gods_will = reply_optional(according_to_gods_will);
   let o_come_and = reply_sequence_optional(["come", "and"]);
