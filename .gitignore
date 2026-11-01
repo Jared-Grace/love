@@ -5,6 +5,7 @@ node_modules/
 # belong together in Downloads. A bare file name typed from the repo root lands here.
 /*.mp4
 /*.mp4.*
+/.watch.log
 firebase-debug.log
 .parcel-cache/
 .firebase/

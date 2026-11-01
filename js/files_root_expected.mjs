@@ -8,7 +8,6 @@ export function files_root_expected() {
   let expected = [
     ".firebaserc",
     ".gitignore",
-    ".watch.log",
     "AGENTS.md",
     "CLAUDE.md",
     "LICENSE",
