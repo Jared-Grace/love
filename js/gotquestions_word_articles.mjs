@@ -644,6 +644,23 @@ export function gotquestions_word_articles() {
       "the Lion of the tribe of Judah",
       "lion-tribe-Judah.html",
     ],
+    ["faith", "faith", "definition-of-faith.html"],
+    ["grace", "grace", "definition-of-grace.html"],
+    ["hope", "hope", "definition-of-hope.html"],
+    ["sin", "sin", "what-is-sin.html"],
+    ["sins", "sin", "what-is-sin.html"],
+    ["mercy", "mercy", "definition-of-mercy.html"],
+    ["repentance", "repentance", "repentance.html"],
+    ["repent", "repentance", "repentance.html"],
+    ["righteousness", "righteousness", "righteousness.html"],
+    ["justification", "justification", "justification.html"],
+    ["justified", "justification", "justification.html"],
+    ["sanctification", "sanctification", "sanctification.html"],
+    ["sanctified", "sanctification", "sanctification.html"],
+    ["redemption", "redemption", "redemption.html"],
+    ["atonement", "atonement", "meaning-of-atonement.html"],
+    ["propitiation", "propitiation", "propitiation.html"],
+    ["glory of God", "the glory of God", "glory-of-God.html"],
   ];
   return r;
 }

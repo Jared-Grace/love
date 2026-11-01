@@ -1,7 +1,8 @@
+import { html_text_set } from "./html_text_set.mjs";
+import { app_shared_bible_settings_choose } from "./app_shared_bible_settings_choose.mjs";
 import { app_shared_gear_settings_text } from "./app_shared_gear_settings_text.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { app_shared_bible_settings_choose } from "./app_shared_bible_settings_choose.mjs";
-import { html_text_set } from "./html_text_set.mjs";
+import { app_shared_bible_search_button } from "./app_shared_bible_search_button.mjs";
 export function app_shared_bible_settings_gear(
   bar,
   content,
@@ -16,4 +17,6 @@ export function app_shared_bible_settings_gear(
   }
   let text = app_shared_gear_settings_text();
   app_shared_button(bar, text, on_gear);
+  ("the search button follows the gear wherever the gear is drawn, so the two are placed by one call and cannot drift apart");
+  app_shared_bible_search_button(bar);
 }
