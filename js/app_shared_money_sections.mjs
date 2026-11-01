@@ -1,7 +1,6 @@
 import { app_shared_money_section_free } from "./app_shared_money_section_free.mjs";
 import { app_shared_money_section_gifts_welcome } from "./app_shared_money_section_gifts_welcome.mjs";
 import { app_shared_money_section_used_for } from "./app_shared_money_section_used_for.mjs";
-import { app_shared_money_section_tithe } from "./app_shared_money_section_tithe.mjs";
 import { app_shared_money_section_never_used_for } from "./app_shared_money_section_never_used_for.mjs";
 import { app_shared_money_section_why_receive } from "./app_shared_money_section_why_receive.mjs";
 import { app_shared_money_section_purpose_love } from "./app_shared_money_section_purpose_love.mjs";
@@ -15,7 +14,6 @@ export function app_shared_money_sections() {
   let section = app_shared_money_section_free();
   let section2 = app_shared_money_section_gifts_welcome();
   let section3 = app_shared_money_section_used_for();
-  let section4 = app_shared_money_section_tithe();
   let section5 = app_shared_money_section_never_used_for();
   let section6 = app_shared_money_section_why_receive();
   let section7 = app_shared_money_section_purpose_love();
@@ -25,7 +23,6 @@ export function app_shared_money_sections() {
     section,
     section2,
     section3,
-    section4,
     section5,
     section6,
     section7,
