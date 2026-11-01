@@ -2,10 +2,10 @@ import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_emoji_bible } from "./app_emoji_bible.mjs";
 import { app_shared_bible_screen_open } from "./app_shared_bible_screen_open.mjs";
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_font_size_buttons } from "./app_shared_font_size_buttons.mjs";
 import { app_emoji_bible_tradition_picker } from "./app_emoji_bible_tradition_picker.mjs";
 import { app_emoji_bible_settings_choices } from "./app_emoji_bible_settings_choices.mjs";
-import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_emoji_bible_offline_row } from "./app_emoji_bible_offline_row.mjs";
 export function app_emoji_bible_settings(context) {
   "the gear on the picture Bible's bar opens this: the way back to what was being read, the one pair of buttons that grows and shrinks the text, which cross is drawn, and keeping the whole picture Bible on this device.";
@@ -20,11 +20,14 @@ export function app_emoji_bible_settings(context) {
     await app_emoji_bible(context);
   }
   let content = app_shared_bible_screen_open(context, back);
-  app_shared_font_size_buttons(content, context);
+  ("EVERY SETTING SITS IN ITS OWN BLUE CARD, asked for by the human, so where one setting ends and the next begins is drawn rather than guessed.");
+  let card_size = app_shared_container_blue(content);
+  app_shared_font_size_buttons(card_size, context);
   async function redraw() {
     await app_emoji_bible_settings(context);
   }
-  app_emoji_bible_tradition_picker(content, redraw);
+  let card_cross = app_shared_container_blue(content);
+  app_emoji_bible_tradition_picker(card_cross, redraw);
   app_emoji_bible_settings_choices(content, redraw);
   ("KEEPING THE PICTURE BIBLE ON THIS DEVICE IS HERE, asked for by the human, in the same blue card and the same row the bible reader keeps a language with, so a reader who saved one already knows the other.");
   let card = app_shared_container_blue(content);

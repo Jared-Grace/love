@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_emoji_bible_key_shown_get } from "./app_emoji_bible_key_shown_get.mjs";
 import { app_emoji_bible_key_shown_set } from "./app_emoji_bible_key_shown_set.mjs";
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_buttons_choice_pair } from "./app_shared_buttons_choice_pair.mjs";
 import { app_emoji_bible_english_shown_get } from "./app_emoji_bible_english_shown_get.mjs";
 import { app_emoji_bible_english_shown_set } from "./app_emoji_bible_english_shown_set.mjs";
@@ -15,13 +16,15 @@ export function app_emoji_bible_settings_choices(parent, fn_draw) {
   ("The three choices about what a chapter shows, each asked as a pair of buttons with the answer in force coloured: whether the original stands under each verse, whether the English does, and whose order the pictures follow.");
   ("THEY ARE IN SETTINGS, moved off the chapter's bar by the human, as a pair of buttons each rather than one button that flips, so a reader sees both answers and which one is theirs.");
   ("THE ORDER QUESTION NAMES THE MANUSCRIPT OF THE CHAPTER THE READER CAME FROM, read off the link, because settings opens over the page without changing the address; Greek in the New Testament and Hebrew/Aramaic in the Old.");
+  ("EACH QUESTION SITS IN ITS OWN BLUE CARD, asked for by the human, the same card every other setting on the screen sits in, so where one question ends and the next begins is drawn rather than guessed.");
   let key_shown = app_emoji_bible_key_shown_get();
   async function key_set(value) {
     app_emoji_bible_key_shown_set(value);
     await fn_draw();
   }
+  let card_key = app_shared_container_blue(parent);
   app_shared_buttons_choice_pair(
-    parent,
+    card_key,
     "Show original",
     "Hide original",
     key_shown,
@@ -32,14 +35,16 @@ export function app_emoji_bible_settings_choices(parent, fn_draw) {
     app_emoji_bible_english_shown_set(value);
     await fn_draw();
   }
+  let card_english = app_shared_container_blue(parent);
   app_shared_buttons_choice_pair(
-    parent,
+    card_english,
     "Show English",
     "Hide English",
     english_shown,
     english_set,
   );
-  html_div_text(parent, "What order should the emojis be in?");
+  let card_order = app_shared_container_blue(parent);
+  html_div_text(card_order, "What order should the emojis be in?");
   let hash = html_hash_object_get();
   let chapter_code = app_shared_bible_chapter_hash_get_or_empty(hash);
   let manuscript = app_emoji_bible_manuscript_text(chapter_code);
@@ -49,7 +54,7 @@ export function app_emoji_bible_settings_choices(parent, fn_draw) {
     await fn_draw();
   }
   app_shared_buttons_choice_pair(
-    parent,
+    card_order,
     manuscript,
     "English translation",
     literal_shown,
