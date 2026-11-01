@@ -7,10 +7,11 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { gotquestions_article_url } from "./gotquestions_article_url.mjs";
 import { window_open } from "./window_open.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { window_open_google_define } from "./window_open_google_define.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { llms_query_url_prefixes } from "./llms_query_url_prefixes.mjs";
@@ -47,7 +48,7 @@ export async function app_shared_bible_word_overlay_articles_open(word) {
     let about = article[1];
     let file = article[2];
     function read() {
-      let url = text_combine("https://www.gotquestions.org/", file);
+      let url = gotquestions_article_url(file);
       window_open(url);
     }
     let label = text_combine_multiple([
