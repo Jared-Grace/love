@@ -5,7 +5,7 @@ import { app_shared_font_size_refresh } from "./app_shared_font_size_refresh.mjs
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_message_reply_choices } from "./app_message_reply_choices.mjs";
-import { app_message_refresh } from "./app_message_refresh.mjs";
+import { app_shared_message_refresh } from "./app_shared_message_refresh.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_textarea_reader_direction } from "./app_shared_textarea_reader_direction.mjs";
@@ -39,7 +39,12 @@ export async function app_message(context) {
   html_font_sans_serif_set_html();
   let div_messages = html_div(root);
   let start = app_message_reply_choices();
-  await app_message_refresh(div_messages, context, messages_property, start);
+  await app_shared_message_refresh(
+    div_messages,
+    context,
+    messages_property,
+    start,
+  );
   let div = app_shared_container(root);
   html_div_text(div, "Please enter your message for me:");
   let textarea = app_shared_textarea_reader_direction(div);
@@ -66,7 +71,12 @@ export async function app_message(context) {
     let messages = app_shared_message_messages_get(context, messages_property);
     list_add(messages, message);
     storage_local_set_context(context, messages_property, messages);
-    await app_message_refresh(div_messages, context, messages_property, start);
+    await app_shared_message_refresh(
+      div_messages,
+      context,
+      messages_property,
+      start,
+    );
   }
   app_shared_footer_all_apps(root);
 }

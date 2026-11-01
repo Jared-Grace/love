@@ -11,7 +11,7 @@ import { app_shared_contact_received_text } from "./app_shared_contact_received_
 import { html_text_set_directed } from "./html_text_set_directed.mjs";
 import { list_map } from "./list_map.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
-export async function app_message_refresh(
+export async function app_shared_message_refresh(
   div_messages,
   context,
   messages_property,
