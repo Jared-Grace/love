@@ -15,7 +15,7 @@ import { app_emoji_bible_literal_shown_toggle } from "./app_emoji_bible_literal_
 import { app_emoji_bible_literal_shown_button_text } from "./app_emoji_bible_literal_shown_button_text.mjs";
 export function app_emoji_bible_view_buttons(bar, fn_draw) {
   arguments_assert(arguments, 2);
-  ("The four choices a reader makes about the chapter in front of them - how the cross is drawn, whether the key is under each verse, whether the English is, and whether the pictures follow English order or the original word for word - drawn onto the bar as buttons, with what they currently say handed back for the drawing of the chapter itself.");
+  ("The four choices a reader makes about the chapter in front of them - how the cross is drawn, whether the original is under each verse, whether the English is, and whether the pictures follow English order or the original's order - drawn onto the bar as buttons, with what they currently say handed back for the drawing of the chapter itself.");
   ("THEY ARE PUT UP TOGETHER BECAUSE THEY ARE ONE ROW AND ONE HABIT. Each of the four is read, named, drawn and hooked up the same way, and the order they sit in on the bar is a thing a reader learns; written out three times at the top of the page they were three chances to hook one button to another one's toggle in silence.");
   ("WHAT EACH ONE SAYS COMES BACK, because the chapter below the bar is drawn from exactly these four answers and reading them a second time would let the button and the chapter disagree.");
   ("THE PAGE HANDS IN ITS OWN WAY OF DRAWING ITSELF AGAIN rather than being reached for from here. ",
