@@ -1,5 +1,7 @@
 import { gotquestions_word_articles_fetched } from "./gotquestions_word_articles_fetched.mjs";
 import { gotquestions_article_url } from "./gotquestions_article_url.mjs";
+import { easton_word_articles_fetched } from "./easton_word_articles_fetched.mjs";
+import { easton_article_url } from "./easton_article_url.mjs";
 export function bible_word_article_sites() {
   "The sites a tapped bible word can be opened on, each with the name a button calls it by, its table of names and articles, and the whole address of one of its articles given the file its table names.";
   "ANOTHER SITE IS ONE MORE ENTRY HERE: a table of rows of a name, what an article is about and the article's file, loaded only when a word is tapped, and the function that turns that file into the site's whole address.";
@@ -9,6 +11,11 @@ export function bible_word_article_sites() {
       name: "GotQuestions.org",
       table: gotquestions_word_articles_fetched,
       url: gotquestions_article_url,
+    },
+    {
+      name: "Easton's Bible Dictionary",
+      table: easton_word_articles_fetched,
+      url: easton_article_url,
     },
   ];
   return r;
