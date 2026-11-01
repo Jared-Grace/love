@@ -143,7 +143,8 @@ export function app_code_lesson_while_if() {
       return t;
     }
     function skipped_is(value) {
-      let s = equal(through(value), false);
+      let left = through(value);
+      let s = equal(left, false);
       return s;
     }
     let kept = list_filter(values2, through);
@@ -182,7 +183,8 @@ export function app_code_lesson_while_if() {
     "value > threshold is true or false, so value is written out or skipped, then n becomes value + 2";
     let asked2 = js_code_binary_spaced_nb(value, greater, threshold);
     let through2 = greater_than(value, threshold);
-    let after = json_to(add(value, step));
+    let object = add(value, step);
+    let after = json_to(object);
     let shown = json_to(value);
     let middle = [", so ", shown, " is written out"];
     let truth = "true";
@@ -190,14 +192,12 @@ export function app_code_lesson_while_if() {
       middle = [", so the ", "if", "'s ", "{ ... }", " is skipped"];
       truth = "false";
     }
-    app_code_div_cycle_code(
-      root,
-      list_concat_multiple([
-        ["", asked2, " is ", truth],
-        middle,
-        [", then ", name, " becomes ", after],
-      ]),
-    );
+    let parts = list_concat_multiple([
+      ["", asked2, " is ", truth],
+      middle,
+      [", then ", name, " becomes ", after],
+    ]);
+    app_code_div_cycle_code(root, parts);
   }
   function above(root, context) {
     "While writing out each time remembered, then an if inside the while";
