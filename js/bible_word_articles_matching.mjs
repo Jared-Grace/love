@@ -14,6 +14,7 @@ export function bible_word_articles_matching(table, words, index) {
   "$plain index";
   "the table is rows of a name, what an article is about and the article's own address on its site; the words are the bare words of one verse in order and the index says which was tapped. All are data and none runs.";
   "ANY WORD OF A NAME OF SEVERAL WORDS OPENS IT. In Valley of Succoth, a tap on Valley, of or Succoth offers that article - but only where the whole name stands in the verse, so of alone never opens anything.";
+  "AN ORDINARY WORD, WRITTEN IN LOWER CASE IN THE TABLE, ALSO MATCHES WITH A CAPITAL FIRST LETTER, because a verse that starts with it prints it so - Faith is the substance.";
   "A NAME OF ONE WORD IS MATCHED BY ITS CAPITAL. The table spells a name the way a verse does, so a lower-case word - job, lot, will - never opens an article about Job or Lot. A word written all in capitals matches too, because some bibles print GOD and JESUS that way.";
   "A NAME OF SEVERAL WORDS IS MATCHED WHATEVER ITS CAPITALS, because a verse prints the valley of Succoth in lower case and the whole run of words already says which name it is.";
   "A possessive is matched by its name, so David's opens the article about David.";
@@ -31,7 +32,14 @@ export function bible_word_articles_matching(table, words, index) {
       return eq;
     }
     let r2 = equal(name, key) || equal(name, key.toUpperCase());
-    return r2;
+    if (r2) {
+      return true;
+    }
+    let right2 = text_lower_to(key);
+    let lower = equal(key, right2);
+    let capital = key.charAt(0).toUpperCase() + key.slice(1);
+    let first = lower && equal(name, capital);
+    return first;
   }
   function at(keys, start) {
     let several = greater_than(keys.length, 1);
