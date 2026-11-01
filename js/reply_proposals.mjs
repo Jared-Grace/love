@@ -59,7 +59,7 @@ export function reply_proposals() {
   ]);
   let time_of_day = {
     title: "answer good morning, good afternoon and good evening",
-    fn: fn_name("app_message_reply_greeting"),
+    fn: fn_name("app_shared_message_reply_greeting"),
     whole: [],
     diff: [
       combined,

@@ -4,7 +4,7 @@ import { reply_phrase_my_dear_brother } from "./reply_phrase_my_dear_brother.mjs
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_word_hello } from "./reply_word_hello.mjs";
 import { reply_response_greetings } from "./reply_response_greetings.mjs";
-export function app_message_reply_greeting() {
+export function app_shared_message_reply_greeting() {
   let greeting_response = reply_response_greetings();
   let hello = reply_word_hello();
   let time_of_day = reply_choice(["morning", "afternoon", "evening"]);
