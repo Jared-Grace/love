@@ -2187,6 +2187,7 @@ export function easton_word_articles() {
     ["Joezer", "Joezer", "joezer.html"],
     ["Johanan", "Johanan", "johanan.html"],
     ["John", "John", "john.html"],
+    ["John", "John the Baptist", "john-the-baptist.html", "john_baptist"],
     ["John the Baptist", "John the Baptist", "john-the-baptist.html"],
     [
       "First Epistle of John",
@@ -3611,6 +3612,7 @@ export function easton_word_articles() {
     ["Simeon", "Simeon", "simeon.html"],
     ["tribe of Simeon", "the tribe of Simeon", "simeon-the-tribe-of.html"],
     ["Simon", "Simon", "simon.html"],
+    ["Simon", "Peter", "peter.html", "simon_peter"],
     ["Simri", "Simri", "simri.html"],
     ["sin", "Sin", "sin.html"],
     ["Sin offering", "Sin-offering", "sin-offering.html"],
