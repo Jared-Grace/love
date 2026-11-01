@@ -105,7 +105,8 @@ export function app_code_lesson_while_generic(params) {
       value = step(value, amount3);
       runs = add(runs, 1);
     }
-    let v = bound_past(ended2);
+    ("2026-11-01, for While asking !==: bound_past is handed the amount too, since the bound !== stops on once more is one step past where n ends; a lesson whose bound needs only the end ignores it");
+    let v = bound_past(ended2, amount3);
     let a = app_code_while_runs_max();
     if (less_than_equal(a, runs)) {
       v = step_back(ended2, amount3);
