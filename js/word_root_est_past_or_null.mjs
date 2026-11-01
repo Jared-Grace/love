@@ -1,8 +1,9 @@
+import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { word_root_irregulars } from "./word_root_irregulars.mjs";
 import { property_exists } from "./property_exists.mjs";
+import { property_get } from "./property_get.mjs";
 export function word_root_est_past_or_null(letters) {
   "The root of an old second-person past - thou sentest, thou toldest, thou madest - or null where the word is not one.";
   "The King James Bible puts est on the past as well as on the present, and a past that changes shape has no ending left to cut once the est is gone: sentest loses its est and leaves sent, which only the irregular list knows belongs to send. So what is left is looked up there, as it stands, with an e put back (madest is made), and with a doubled letter undone (begannest is began).";
@@ -27,7 +28,7 @@ export function word_root_est_past_or_null(letters) {
   }
   let found = tries.find(known);
   if (found) {
-    let r2 = irregulars[found];
+    let r2 = property_get(irregulars, found);
     return r2;
   }
   return null;

@@ -9,6 +9,7 @@ import { list_first } from "./list_first.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { property_exists } from "./property_exists.mjs";
+import { property_get } from "./property_get.mjs";
 import { word_root_e_drop } from "./word_root_e_drop.mjs";
 export function word_root_ending_cut(w) {
   "The word left when a plain English ending is cut off it - the plural s, the past ed, the ing, the ly.";
@@ -49,7 +50,8 @@ export function word_root_ending_cut(w) {
         cut = shorter;
         more = true;
         let own =
-          property_exists(irregulars, cut) && equal(irregulars[cut], cut);
+          property_exists(irregulars, cut) &&
+          equal(property_get(irregulars, cut), cut);
         if (own) {
           let frozen = word_root_e_drop(cut);
           return frozen;
