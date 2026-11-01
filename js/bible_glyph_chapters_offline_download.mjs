@@ -31,11 +31,11 @@ export async function bible_glyph_chapters_offline_download(on_progress) {
     let destinations = bible_glyph_chapter_destinations(chapter_code);
     for (let destination of destinations) {
       async function fetch() {
-        let value = await firebase_storage_download_json_decompress(
+        let downloaded = await firebase_storage_download_json_decompress(
           project_url,
           destination,
         );
-        return value;
+        return downloaded;
       }
       let value = await catch_null_async(fetch);
       if (null_is(value)) {
