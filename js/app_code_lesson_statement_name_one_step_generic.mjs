@@ -24,6 +24,7 @@ export function app_code_lesson_statement_name_one_step_generic(
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
+    steps,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });

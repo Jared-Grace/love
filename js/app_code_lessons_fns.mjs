@@ -150,22 +150,17 @@ import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice
 import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
 import { app_code_lesson_comment_after_code } from "./app_code_lesson_comment_after_code.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
-import { app_code_lesson_step_name_value } from "./app_code_lesson_step_name_value.mjs";
 import { app_code_lesson_statement_name_number } from "./app_code_lesson_statement_name_number.mjs";
 import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
 import { app_code_lesson_statement_name_identifier } from "./app_code_lesson_statement_name_identifier.mjs";
 import { app_code_lesson_statement_name_two } from "./app_code_lesson_statement_name_two.mjs";
-import { app_code_lesson_step_name_two } from "./app_code_lesson_step_name_two.mjs";
 import { app_code_lesson_statement_name_copy_single } from "./app_code_lesson_statement_name_copy_single.mjs";
-import { app_code_lesson_step_name_copy_single } from "./app_code_lesson_step_name_copy_single.mjs";
 import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
-import { app_code_lesson_step_name_again } from "./app_code_lesson_step_name_again.mjs";
 import { app_code_lesson_statement_name_again_last } from "./app_code_lesson_statement_name_again_last.mjs";
 import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
 import { app_code_lesson_step_name_copy_kept } from "./app_code_lesson_step_name_copy_kept.mjs";
 import { app_code_lesson_statement_name_copy_kept } from "./app_code_lesson_statement_name_copy_kept.mjs";
 import { app_code_lesson_statement_name_plus_one } from "./app_code_lesson_statement_name_plus_one.mjs";
-import { app_code_lesson_step_name_plus_one } from "./app_code_lesson_step_name_plus_one.mjs";
 import { app_code_lesson_statement_name_minus_one } from "./app_code_lesson_statement_name_minus_one.mjs";
 import { app_code_lesson_step_name_one_more } from "./app_code_lesson_step_name_one_more.mjs";
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
@@ -173,10 +168,8 @@ import { app_code_lesson_statement_name_one_more_last } from "./app_code_lesson_
 import { app_code_lesson_statement_name_one_less } from "./app_code_lesson_statement_name_one_less.mjs";
 import { app_code_lesson_statement_name_one_less_last } from "./app_code_lesson_statement_name_one_less_last.mjs";
 import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
-import { app_code_lesson_step_name_sum } from "./app_code_lesson_step_name_sum.mjs";
 import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
 import { app_code_lesson_statement_name_join } from "./app_code_lesson_statement_name_join.mjs";
-import { app_code_lesson_step_name_join } from "./app_code_lesson_step_name_join.mjs";
 import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_statement_name_itself_sum.mjs";
 import { app_code_lesson_statement_name_itself_sum_last } from "./app_code_lesson_statement_name_itself_sum_last.mjs";
 import { app_code_lesson_statement_name_count } from "./app_code_lesson_statement_name_count.mjs";
@@ -185,17 +178,11 @@ import { app_code_lesson_statement_name_subtract } from "./app_code_lesson_state
 import { app_code_lesson_statement_name_multiply } from "./app_code_lesson_statement_name_multiply.mjs";
 import { app_code_lesson_statement_name_divide } from "./app_code_lesson_statement_name_divide.mjs";
 import { app_code_lesson_statement_name_plus_assign } from "./app_code_lesson_statement_name_plus_assign.mjs";
-import { app_code_lesson_step_name_plus_assign } from "./app_code_lesson_step_name_plus_assign.mjs";
 import { app_code_lesson_statement_name_minus_assign } from "./app_code_lesson_statement_name_minus_assign.mjs";
-import { app_code_lesson_step_name_minus_assign } from "./app_code_lesson_step_name_minus_assign.mjs";
 import { app_code_lesson_statement_name_times_assign } from "./app_code_lesson_statement_name_times_assign.mjs";
-import { app_code_lesson_step_name_times_assign } from "./app_code_lesson_step_name_times_assign.mjs";
 import { app_code_lesson_statement_name_divide_assign } from "./app_code_lesson_statement_name_divide_assign.mjs";
-import { app_code_lesson_step_name_divide_assign } from "./app_code_lesson_step_name_divide_assign.mjs";
 import { app_code_lesson_statement_name_increment } from "./app_code_lesson_statement_name_increment.mjs";
-import { app_code_lesson_step_name_increment } from "./app_code_lesson_step_name_increment.mjs";
 import { app_code_lesson_statement_name_decrement } from "./app_code_lesson_statement_name_decrement.mjs";
-import { app_code_lesson_step_name_decrement } from "./app_code_lesson_step_name_decrement.mjs";
 import { app_code_lesson_statement_name_fill_from } from "./app_code_lesson_statement_name_fill_from.mjs";
 import { app_code_lesson_step_name_swap_try } from "./app_code_lesson_step_name_swap_try.mjs";
 import { app_code_lesson_statement_name_swap_try } from "./app_code_lesson_statement_name_swap_try.mjs";
@@ -332,6 +319,7 @@ export function app_code_lessons_fns() {
   "2026-10-28: Step by step: While put straight before While, at the human's asking. Then, asked again: each pair has its step by step first, so the other six while step lessons went before theirs too";
   "2026-10-31, at the human's asking - step by step is just one quiz type: the seven while step lessons taken out, each while lesson ending in a step-by-step quiz of its own programs instead";
   "2026-10-31, asked next: the seventeen step lessons of the branching stages taken out the same way, each if lesson they stood beside ending in a step-by-step quiz of its own programs instead. Twelve of them stepped through programs of their own shape rather than the if lesson's; the if lesson's own programs have that shape too, so its quiz steps through those. Their functions and ids are kept, as step_log_string's are. The Does this section run? lessons stay: that is a different question, and was not asked about. Not picked: also giving a step quiz to the if lessons that never had a step lesson beside them, which was not asked";
+  "2026-11-01, asked next: the thirteen step lessons of the naming stage that stepped through the lesson before them taken out the same way, each lesson they stood after ending in a step-by-step quiz of its own programs instead. Kept: step_log_twice, the first step lesson, where a learner is taught to step at all, since a quiz is too quiet a place to meet a new skill; and the six step lessons that come before their lesson, opening with its boxes, since putting their stepping last would undo the human's order of 2026-10-16 - the line first, then stepping, then the whole program. Not picked: taking out step_log_twice too, which would make stepping's first appearance the fifth quiz of a lesson about something else";
   let fns = [
     app_code_lesson_symbols_digits_numbered,
     app_code_lesson_symbols_digit_number,
@@ -485,22 +473,17 @@ export function app_code_lessons_fns() {
     app_code_lesson_comment_skip_line,
     app_code_lesson_comment_after_code,
     app_code_lesson_statement_name_value,
-    app_code_lesson_step_name_value,
     app_code_lesson_statement_name_number,
     app_code_lesson_statement_name_true_false,
     app_code_lesson_statement_name_identifier,
     app_code_lesson_statement_name_two,
-    app_code_lesson_step_name_two,
     app_code_lesson_statement_name_copy_single,
-    app_code_lesson_step_name_copy_single,
     app_code_lesson_statement_name_again,
-    app_code_lesson_step_name_again,
     app_code_lesson_statement_name_again_last,
     app_code_lesson_statement_name_copy,
     app_code_lesson_step_name_copy_kept,
     app_code_lesson_statement_name_copy_kept,
     app_code_lesson_statement_name_plus_one,
-    app_code_lesson_step_name_plus_one,
     app_code_lesson_statement_name_minus_one,
     app_code_lesson_step_name_one_more,
     app_code_lesson_statement_name_one_more,
@@ -508,10 +491,8 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_one_less,
     app_code_lesson_statement_name_one_less_last,
     app_code_lesson_statement_name_sum,
-    app_code_lesson_step_name_sum,
     app_code_lesson_statement_name_total,
     app_code_lesson_statement_name_join,
-    app_code_lesson_step_name_join,
     app_code_lesson_statement_name_itself_sum,
     app_code_lesson_statement_name_itself_sum_last,
     app_code_lesson_statement_name_count,
@@ -520,17 +501,11 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_multiply,
     app_code_lesson_statement_name_divide,
     app_code_lesson_statement_name_plus_assign,
-    app_code_lesson_step_name_plus_assign,
     app_code_lesson_statement_name_minus_assign,
-    app_code_lesson_step_name_minus_assign,
     app_code_lesson_statement_name_times_assign,
-    app_code_lesson_step_name_times_assign,
     app_code_lesson_statement_name_divide_assign,
-    app_code_lesson_step_name_divide_assign,
     app_code_lesson_statement_name_increment,
-    app_code_lesson_step_name_increment,
     app_code_lesson_statement_name_decrement,
-    app_code_lesson_step_name_decrement,
     app_code_lesson_statement_name_fill_from,
     app_code_lesson_step_name_swap_try,
     app_code_lesson_statement_name_swap_try,

@@ -15,7 +15,7 @@ export function app_code_lesson_statement_name_pair_first(pair, steps) {
   let lesson = app_code_lesson_statement_name_watched_titled(
     pair,
     noted,
-    false,
+    steps,
   );
   return lesson;
 }
