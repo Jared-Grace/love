@@ -2,7 +2,7 @@ import { app_shared_bible_home_generic } from "./app_shared_bible_home_generic.m
 import { noop } from "./noop.mjs";
 import { app_bible } from "./app_bible.mjs";
 import { app_bible_pictures_verse_button } from "./app_bible_pictures_verse_button.mjs";
-import { app_bible_title_verse_set } from "./app_bible_title_verse_set.mjs";
+import { app_shared_bible_title_verse_set } from "./app_shared_bible_title_verse_set.mjs";
 export async function app_bible_home(context) {
   "verse mode: single verse with the sub-screen navigation framework; the first noop is the g-only passage hook and the second is the bar decorator, which this app asks for nothing extra in";
   "the true at the end says this app has a whole-chapter reader, so the verse view offers the way into it. it is the only one of the four bible apps that does";
@@ -15,5 +15,5 @@ export async function app_bible_home(context) {
     true,
   );
   app_bible_pictures_verse_button(v);
-  await app_bible_title_verse_set(v);
+  await app_shared_bible_title_verse_set(v);
 }
