@@ -112,6 +112,7 @@ export function app_code_lesson_while_down() {
     possible,
     bound_past,
     above,
+    loop_lines: js_code_while_lines,
   });
   return lesson;
 }

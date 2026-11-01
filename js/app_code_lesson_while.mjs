@@ -17,6 +17,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_generic } from "./app_code_lesson_while_generic.mjs";
 import { subtract } from "./subtract.mjs";
+import { js_code_while_lines } from "./js_code_while_lines.mjs";
 export function app_code_lesson_while() {
   arguments_assert(arguments, 0);
   ("the first while: let n = 1; while (n < 9) { n += 3; } console.log(n); writes out 10, the same as if (n < 9) { n += 3; } written three times");
@@ -128,6 +129,7 @@ export function app_code_lesson_while() {
     possible,
     bound_past,
     above,
+    loop_lines: js_code_while_lines,
   });
   return lesson;
 }

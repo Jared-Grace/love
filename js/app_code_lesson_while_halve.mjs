@@ -1,5 +1,5 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { text_slash_forward } from "./text_slash_forward.mjs";
@@ -121,6 +121,7 @@ export function app_code_lesson_while_halve() {
     possible,
     bound_past,
     above,
+    loop_lines: js_code_while_lines,
   });
   return lesson;
 }
