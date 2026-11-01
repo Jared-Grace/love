@@ -55,13 +55,13 @@ export async function app_shared_bible_settings_choose(bar, content, context) {
   async function on_history() {
     await app_shared_bible_history_panel(content, back, context);
   }
-  app_shared_bible_settings_render(
-    content,
-    on_history,
+  app_shared_bible_settings_render({
+    container: content,
+    open_history: on_history,
     open_languages,
-    on_offline,
-    on_licences,
-    on_money,
+    open_offline: on_offline,
+    open_licences: on_licences,
+    open_money: on_money,
     context,
-  );
+  });
 }

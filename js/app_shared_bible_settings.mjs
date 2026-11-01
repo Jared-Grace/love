@@ -31,13 +31,13 @@ export function app_shared_bible_settings(context) {
     app_shared_bible_licences,
   );
   let open_money = app_shared_screen_later(context, app_shared_bible_money);
-  app_shared_bible_settings_render(
-    root,
+  app_shared_bible_settings_render({
+    container: root,
     open_history,
     open_languages,
     open_offline,
     open_licences,
     open_money,
     context,
-  );
+  });
 }

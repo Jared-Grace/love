@@ -6,7 +6,7 @@ import { app_shared_bible_languages_text } from "./app_shared_bible_languages_te
 import { app_shared_bible_offline_text } from "./app_shared_bible_offline_text.mjs";
 import { app_shared_bible_licences_text } from "./app_shared_bible_licences_text.mjs";
 import { app_shared_money_text } from "./app_shared_money_text.mjs";
-export function app_shared_bible_settings_render(
+export function app_shared_bible_settings_render({
   container,
   open_history,
   open_languages,
@@ -14,7 +14,7 @@ export function app_shared_bible_settings_render(
   open_licences,
   open_money,
   context,
-) {
+}) {
   "the single source for what the settings menu offers and in what order; each reader supplies only how to open each entry — a screen for the verse reader, an in-place panel for the chapter reader";
   "the credits and what happens with money come last, because the entries above them change what the reader is reading and they do not. They used to sit one level down, behind an About entry of their own; the human moved them up here, because this menu and that one were both short, and a reader finds an entry they can see more easily than one behind another tap. The credits come before money, as they did in About: they are owed to somebody, and money is a promise about us that can wait one line.";
   "a reader with no way given to open the languages has none to choose from, and the entry is left out rather than shown leading nowhere";
