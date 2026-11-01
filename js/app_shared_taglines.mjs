@@ -25,7 +25,7 @@ export function app_shared_taglines() {
     code: "learn to program one step at a time",
     replace: "turn one row of symbols into another",
     examples: "worked examples of the code these apps are made of",
-    designs_universal: "every arrangement of six colours, side by side",
+    design: "every arrangement of six colours, side by side",
     message: "write to the person who made these apps, and be answered",
     calendar: "ask for a visit to come and preach",
     privacy: "what these apps do with anything you give them",
