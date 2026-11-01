@@ -4,7 +4,7 @@ import { reply_titles_ministry } from "./reply_titles_ministry.mjs";
 import { reply_once_or_more } from "./reply_once_or_more.mjs";
 import { reply_names } from "./reply_names.mjs";
 import { reply_choices_name } from "./reply_choices_name.mjs";
-export function app_message_reply_iam_titled_name() {
+export function app_shared_message_reply_iam_titled_name() {
   let response = reply_choices_name();
   let names = reply_names();
   let names_once_or_more = reply_once_or_more(names);

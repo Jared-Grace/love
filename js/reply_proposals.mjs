@@ -163,7 +163,7 @@ export function reply_proposals() {
   ]);
   let name_out = {
     title: "stop needing to be told somebody's name before it will answer them",
-    fn: fn_name("app_message_reply_iam_titled_name"),
+    fn: fn_name("app_shared_message_reply_iam_titled_name"),
     whole: [
       fn_name("reply_names_common"),
       fn_name("reply_names_bible"),

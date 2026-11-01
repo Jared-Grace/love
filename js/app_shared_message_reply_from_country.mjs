@@ -1,5 +1,5 @@
 import { reply_phrase_i_am } from "./reply_phrase_i_am.mjs";
-import { app_message_reply_iam_titled_name } from "./app_message_reply_iam_titled_name.mjs";
+import { app_shared_message_reply_iam_titled_name } from "./app_shared_message_reply_iam_titled_name.mjs";
 import { reply_word_in } from "./reply_word_in.mjs";
 import { reply_countries } from "./reply_countries.mjs";
 import { reply_optional } from "./reply_optional.mjs";
@@ -13,7 +13,7 @@ export function app_shared_message_reply_from_country() {
   "So the town is gone rather than widened, and the cost is named rather than hidden: a message naming a town before its country is no longer recognised by this rule, while `i am from kenya` now is - which it was not before, and which is the commonest shape of the two. What is never lost is a word of the reply, because the reply is a fixed sentence about where we are and never repeats back where they are.";
   "What this deliberately does NOT do is leave a slot open to any run of letters to catch the town again. A slot that matches anything matches the wrong thing somewhere, and an unrecognised town is the cheapest possible thing to be wrong about - the rule simply declines, and another rule may answer instead.";
   let iam = reply_phrase_i_am();
-  let iam_titled_name = app_message_reply_iam_titled_name();
+  let iam_titled_name = app_shared_message_reply_iam_titled_name();
   let n = reply_word_in();
   let r_countries = reply_countries();
   let o_n = reply_optional(n);
