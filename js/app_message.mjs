@@ -21,7 +21,7 @@ import { html_value_get } from "./html_value_get.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
 import { app_shared_contact_send } from "./app_shared_contact_send.mjs";
-import { app_message_messages_get } from "./app_message_messages_get.mjs";
+import { app_shared_message_messages_get } from "./app_shared_message_messages_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { app_shared_footer_all_apps } from "./app_shared_footer_all_apps.mjs";
@@ -63,7 +63,7 @@ export async function app_message(context) {
       ("no canned reply matched, so this is something for the developer to read — send it to the inbox, which records the page it was written from");
       await app_shared_contact_send(message);
     }
-    let messages = app_message_messages_get(context, messages_property);
+    let messages = app_shared_message_messages_get(context, messages_property);
     list_add(messages, message);
     storage_local_set_context(context, messages_property, messages);
     await app_message_refresh(div_messages, context, messages_property, start);

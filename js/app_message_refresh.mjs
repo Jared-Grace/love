@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_message_messages_get } from "./app_message_messages_get.mjs";
+import { app_shared_message_messages_get } from "./app_shared_message_messages_get.mjs";
 import { app_shared_contact_message_display } from "./app_shared_contact_message_display.mjs";
 import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -22,7 +22,7 @@ export async function app_message_refresh(
   ("★ A MESSAGE THAT BREAKS THE RULES STILL GETS AN ANSWER. The reply is worked out through the unit that keeps the three outcomes apart, and two of those three - no rule matched, and the rules broke - are shown here as the same standing answer on purpose. The person waiting is owed a reply either way, and which of the two it was is a thing for the people writing rules to read on their own screen rather than something to make somebody in another country work out from a bubble that never stops loading. Before this, a message the rules threw on sat on Loading for as long as the app was open.");
   ("Every message is put up saying Loading before any of them is worked out, and each is filled in as its own answer arrives. So the thread has its full shape immediately and the slow ones do not hold up the quick ones.");
   html_clear(div_messages);
-  let messages = app_message_messages_get(context, messages_property);
+  let messages = app_shared_message_messages_get(context, messages_property);
   function lambda(message) {
     app_shared_contact_message_display("left", message, div_messages);
     let right = app_shared_contact_message_display(
