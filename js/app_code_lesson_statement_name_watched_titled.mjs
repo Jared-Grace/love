@@ -26,6 +26,7 @@ export function app_code_lesson_statement_name_watched_titled(
     unscramble: false,
     lines: true,
     steps,
+    steps_first,
     decoys: app_code_lesson_statement_name_watch_decoys,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
