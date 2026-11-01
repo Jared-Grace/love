@@ -6,6 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { less_than } from "./less_than.mjs";
+import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop_keyword.mjs";
 import { not } from "./not.mjs";
 import { greater_than } from "./greater_than.mjs";
 export function app_code_program_step_line_while_words(
@@ -28,15 +29,16 @@ export function app_code_program_step_line_while_words(
   let previous_line = property_get(previous, "line");
   let alternate = property_get_or(entry, "alternate", null);
   if (equal(alternate, "loop") && less_than(due, previous_line)) {
+    let keyword = app_code_program_step_loop_keyword(lines, due);
     let r = {
       reason: "while_back",
       words: [
         "The end of the ",
-        "while",
+        keyword,
         "'s ",
         braces,
         " was reached, so the computer goes back up to the ",
-        "while",
+        keyword,
         " line to check its condition again",
       ],
     };
@@ -47,12 +49,13 @@ export function app_code_program_step_line_while_words(
     equal(previous_alternate, "loop") &&
     not(property_get(previous, "condition"))
   ) {
+    let keyword2 = app_code_program_step_loop_keyword(lines, previous_line);
     if (equal(pressed, previous_line)) {
       let r2 = {
         reason: "while_ran",
         words: [
           "The ",
-          "while",
+          keyword2,
           " line just ran and its condition was false, so the loop is done - the computer goes on below the ",
           "}",
         ],
@@ -64,7 +67,7 @@ export function app_code_program_step_line_while_words(
         reason: "while_false_skip",
         words: [
           "The ",
-          "while",
+          keyword2,
           "'s condition was false, so its ",
           braces,
           " is skipped - the loop is done",

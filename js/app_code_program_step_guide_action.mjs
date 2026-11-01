@@ -6,6 +6,7 @@ import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop_keyword.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -14,8 +15,9 @@ import { js_value_code } from "./js_value_code.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_exists } from "./property_exists.mjs";
-export function app_code_program_step_guide_action(entry, k) {
-  arguments_assert(arguments, 2);
+export function app_code_program_step_guide_action(lines, entry, k) {
+  arguments_assert(arguments, 3);
+  ("2026-11-01: lines, the program's lines, is handed in so a loop line is called by the word it starts with, while or for");
   let actions = property_get(entry, "actions");
   ("what a guided example says while it asks what a line does next: what kind of line it is, the first time it is asked about, and then which to choose. Each sentence is a list of parts, words and code taking turns.");
   ("Asked for by the human 2026-10-14, whose words for a let line are these: This is a let declaration and assign statement. These declare a variable. Then they solve the expression on the right if needed. Finally they assign a value. First, choose ... and then: This expression is already solved to a single value, so it doesn't need solving. So choose assign a value.");
@@ -38,7 +40,9 @@ export function app_code_program_step_guide_action(entry, k) {
   ("2026-10-28: a while line is said to be a while, read off the trace, which marks the condition of a loop");
   let left = property_get_or(entry, "alternate", null);
   if (equal(left, "loop")) {
-    if_is = ["This is a ", "while", " statement"];
+    let line = property_get(entry, "line");
+    let keyword = app_code_program_step_loop_keyword(lines, line);
+    if_is = ["This is a ", keyword, " statement"];
   }
   let if_solves = [
     "It solves the condition inside the ",
@@ -92,9 +96,13 @@ export function app_code_program_step_guide_action(entry, k) {
   }
   if (equal(kind, "reset")) {
     ("2026-10-28, at the human's asking: a line run again still shows the values solved into it the last time it ran, and those values may no longer be true, so it is put back the way it is written first");
+    let line2 = property_get(entry, "line");
+    let keyword2 = app_code_program_step_loop_keyword(lines, line2);
     let r23 = [
       [
-        "This while ran before, so it and the lines inside its { } still show the values solved into them then",
+        "This ",
+        keyword2,
+        " ran before, so it and the lines inside its { } still show the values solved into them then",
       ],
       [
         "Those values may have changed since, so the whole block goes back to how it is written",
