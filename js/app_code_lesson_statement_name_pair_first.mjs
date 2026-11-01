@@ -20,7 +20,7 @@ export function app_code_lesson_statement_name_pair_first(
     pair,
     noted,
     steps,
-    false,
+    steps_first,
   );
   return lesson;
 }

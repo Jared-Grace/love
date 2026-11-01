@@ -1,30 +1,37 @@
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { gloss_write_folder } from "./gloss_write_folder.mjs";
-import { json_extension } from "./json_extension.mjs";
-import { path_join } from "./path_join.mjs";
-import { file_exists_not_assert_json } from "./file_exists_not_assert_json.mjs";
+import { folder_read_files } from "./folder_read_files.mjs";
+import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { error_json } from "./error_json.mjs";
 export async function gloss_write_file_misnamed_assert(
   chapter_code,
   verse_key,
   fn,
 ) {
-  "Stop with the right name when a passage's hand-off file was saved with the comma its verses are typed with, rather than the dash the reader looks for.";
+  "Stop with the right name, and the names actually saved for the chapter, when a passage's hand-off file is not where the reader looks for it.";
   "$plain chapter_code";
   "$plain verse_key";
   "both name text to read: a chapter of the Bible, and the verses a passage of it covers. Neither names anything that runs.";
-  "The verses are typed with a comma on the command line and the file is named with a dash, so an author who names the file the way they typed it leaves it where nothing reads it. The reader then said only that the dashed file was missing, and the author renamed the file with mv, which asks the human every time. Measured 2026-11-01: three passages went that way.";
-  "It renames nothing itself: moving the file would mean deleting the comma copy, and a deleting command could not keep the grant that lets storing run unasked. Writing the file again under the right name needs no prompt at all, so that is what it asks for.";
-  "A dashed file that is there is read as before, whatever else sits beside it, so a passage named correctly is never stopped here.";
+  "The file is named with every verse of the passage joined by dashes, and authors keep guessing the name another way: the comma the verses are typed with (2,3 for 2-3), or a range (32-34 for 32-33-34). The reader then said only that the right file was missing, and the author moved or copied the file with mv or cp, which asks the human every time. Measured 2026-11-01: five passages went that way, in two different spellings.";
+  "So it shows the right name beside the files the chapter actually has, rather than guessing each wrong spelling in turn - a check for the comma alone was written first, and the next author wrote a range.";
+  "It renames nothing itself: moving the file would mean deleting the misnamed copy, and a deleting command could not keep the grant that lets storing run unasked. Writing the file again under the right name needs no prompt at all, so that is what it asks for.";
+  "A correctly named file is read as before, whatever else sits beside it. With nothing at all saved for the chapter it stays quiet too, and the read below says the file is missing, which is then the whole story.";
   let path = gloss_write_file_path(chapter_code, verse_key, fn);
   if (await file_exists(path)) {
     return;
   }
   let folder = gloss_write_folder(fn);
-  let name = "gloss_" + chapter_code + "_" + verse_key + json_extension();
-  let comma_path = path_join([folder, name]);
-  await file_exists_not_assert_json(comma_path, {
+  let names = await folder_read_files(folder);
+  let prefix = "gloss_" + chapter_code + "_";
+  let saved = list_filter_starts_with(names, prefix);
+  if (list_empty_is(saved)) {
+    return;
+  }
+  error_json({
     path,
-    hint: "this file was saved with a comma in its name, but it is read under the name with a dash - write it again under that name with the Write tool. Do not move or copy it with any shell command - mv, cp and the like all ask the human; only the Write tool runs unasked",
+    saved,
+    hint: "no file has the name this passage is read under. The name lists every verse of the passage joined by dashes - never a comma, never a range. Write it again under exactly that name with the Write tool. Do not move or copy a file with any shell command - mv, cp and the like all ask the human; only the Write tool runs unasked",
   });
 }
