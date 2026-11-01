@@ -1,5 +1,5 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { object_assign } from "./object_assign.mjs";
@@ -11,6 +11,7 @@ import { list_find_or_null } from "./list_find_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { function_params_new_generic } from "./function_params_new_generic.mjs";
 import { function_identifier_rename_checked } from "./function_identifier_rename_checked.mjs";
+import { function_transform } from "./function_transform.mjs";
 export async function function_param_object_property_rename(
   f_name,
   property_name,
@@ -23,7 +24,7 @@ export async function function_param_object_property_rename(
     ", which adds such a name; renaming is the step after two names turn out to mean one thing.");
   ("Reading it inside the function is renamed by ",
     fn_name("function_identifier_rename_checked"),
-    ", which refuses a name already taken there. That rename also reaches a shorthand key the function writes into an object of its own, so a name it hands on under the same name is handed on under the new one - which is what a rename made bottom-up through a chain of builders wants, and the reason to rename the innermost builder first.");
+    ", which refuses a name already taken there. That rename leaves the keys of any object the function writes alone - a name it hands on under the same name keeps the old key, written out as old: new - because the far end still answers to the old key; renaming that key is a rename of the far end's parameter, done there.");
   ("Refuses a function whose first parameter is not taken apart that way, and a call that hands in anything but an object written out in place. A call that leaves the name out is left alone, since there is nothing in it to rename.");
   function property_has_name(name) {
     function lambda(property) {
@@ -80,4 +81,17 @@ export async function function_param_object_property_rename(
     property_name,
     property_name_after,
   );
+  ("The name in the list is written short again once what it is read into carries the same name, so the list reads as it did before");
+  function on_declaration_short(ast) {
+    let declaration = js_flo(ast);
+    let params = property_get(declaration, "params");
+    let pattern = list_first(params);
+    let pattern_properties = property_get(pattern, "properties");
+    let lambda$item3 = property_has_name(property_name_after);
+    let property = list_find(pattern_properties, lambda$item3);
+    object_assign(property, {
+      shorthand: true,
+    });
+  }
+  await function_transform(f_name, on_declaration_short);
 }
