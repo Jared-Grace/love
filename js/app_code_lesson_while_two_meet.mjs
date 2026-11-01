@@ -5,7 +5,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
+import { js_code_update_statement } from "./js_code_update_statement.mjs";
 import { js_keyword_while } from "./js_keyword_while.mjs";
 import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -38,7 +38,8 @@ import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_while_two_meet() {
   arguments_assert(arguments, 0);
-  ("two numbers meeting: let a = 1; let b = 7; while (a < b) { a += 1; b -= 1; } console.log(a); console.log(b); writes out 4 and 4");
+  ("two numbers meeting: let a = 1; let b = 7; while (a < b) { a++; b--; } console.log(a); console.log(b); writes out 4 and 4");
+  ("2026-11-01, asked by the human: a++ and b-- rather than a += 1 and b -= 1, since ++ and -- are taught long before the while lessons and are the way one is added or taken away");
   ("The one new fact is that a while may change two names each run, and what it asks is about both, so each run both have to be followed before asking again. Started an odd distance apart they pass each other rather than landing together - 3 and 4 become 4 and 3 - which is what asking each time, rather than guessing where they meet, gets right.");
   ("Asked for by the human 2026-11-01, as a while lesson with a simple shape before An if inside a while.");
   ("Each screen has four programs, one from each of four counts of runs - none, one, two and three - no more than ",
@@ -53,12 +54,12 @@ export function app_code_lesson_while_two_meet() {
   let name_a = "a";
   let name_b = "b";
   function program_lines(start_a, start_b) {
-    "let a = start_a; let b = start_b; while (a < b) { a += 1; b -= 1; } console.log(a); console.log(b);";
+    "let a = start_a; let b = start_b; while (a < b) { a++; b--; } console.log(a); console.log(b);";
     let code_a = js_code_let_statement(name_a, start_a);
     let code_b = js_code_let_statement(name_b, start_b);
     let condition = js_code_binary_spaced_nb(name_a, less, name_b);
-    let grown = js_code_assign_operator_statement(name_a, plus, 1);
-    let shrunk = js_code_assign_operator_statement(name_b, minus, 1);
+    let grown = js_code_update_statement(name_a, plus);
+    let shrunk = js_code_update_statement(name_b, minus);
     let keyword = js_keyword_while();
     let while_lines = js_code_keyword_block_lines_multiple(keyword, condition, [
       grown,
