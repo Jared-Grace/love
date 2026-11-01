@@ -21,6 +21,8 @@ import { app_shared_gloss_bible_word_sound } from "./app_shared_gloss_bible_word
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { html_stop_propagation } from "./html_stop_propagation.mjs";
+import { window_open } from "./window_open.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 export function bible_glyph_group_overlay_open(
@@ -31,8 +33,11 @@ export function bible_glyph_group_overlay_open(
   sound,
   word_name,
   reasons,
+  strong_url,
 ) {
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 8);
+  ("$plain strong_url");
+  ("the address is BibleHub's page for the word's Strong's number, or nothing when the word has none. It is opened in a new tab and nothing here runs it.");
   ("$plain reasons");
   ("the reasons map a picture's name to why that picture was chosen, as text. It is data to show and nothing that runs.");
   ("WHY THESE PICTURES COMES LAST, one line per picture with the picture beside its reason, so a reader who wants only the meaning stops reading sooner. A picture used twice in one word is explained once. A picture with no reason written yet is left out rather than shown blank. See ",
@@ -159,6 +164,19 @@ export function bible_glyph_group_overlay_open(
       html_span_text_content(pronounce_line, pronounced);
     }
     html_on_click(word_line, html_stop_propagation);
+  }
+  let b3 = null_is(strong_url);
+  if (not(b3)) {
+    ("THE BIBLEHUB BUTTON SITS UNDER THE WORD IT LOOKS UP, asked for by the human, and opens in a new tab so the picture Bible is still there to come back to.");
+    function open_biblehub() {
+      window_open(strong_url);
+    }
+    let biblehub = app_shared_button(
+      card,
+      "Open word in BibleHub",
+      open_biblehub,
+    );
+    html_style_set(biblehub, "marginTop", "0.75em");
   }
   let explained = [];
   for (let name of names) {

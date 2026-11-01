@@ -4,6 +4,8 @@ import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
+import { text_empty_is } from "./text_empty_is.mjs";
+import { biblehub_strong_url } from "./biblehub_strong_url.mjs";
 import { bible_glyph_group_overlay_open } from "./bible_glyph_group_overlay_open.mjs";
 import { html_on } from "./html_on.mjs";
 export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
@@ -47,6 +49,7 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
     let original = null;
     let sound = null;
     let name = null;
+    let strong_url = null;
     let b = equal(spelled, null);
     if (not(b)) {
       original = spelled.dataset.original;
@@ -55,6 +58,10 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
       let b2 = equal(strong, null);
       if (not(b2)) {
         name = property_get_or_null(names_table, strong);
+      }
+      ("A WORD WITH A STRONG'S NUMBER GETS ITS BIBLEHUB PAGE, asked for by the human; a word drawn without one has no page to open, so it gets no button rather than a button to nowhere.");
+      if (not(b2) && not(text_empty_is(strong))) {
+        strong_url = biblehub_strong_url(testament_name, strong);
       }
     }
     bible_glyph_group_overlay_open(
@@ -65,6 +72,7 @@ export function bible_glyph_words_tap_listen(parent, chapter_code, lookup) {
       sound,
       name,
       reasons,
+      strong_url,
     );
   }
   html_on(parent, "click", on_tap);
