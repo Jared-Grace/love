@@ -1,9 +1,8 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { html_div_text } from "./html_div_text.mjs";
+import { app_shared_bible_verse_line } from "./app_shared_bible_verse_line.mjs";
+import { equal } from "./equal.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
 export function app_emoji_bible_verse_key_band(content, text, color) {
   "$plain text";
   "the text is one known reading of the verse above. It is text to draw and nothing that runs.";
@@ -18,10 +17,9 @@ export function app_emoji_bible_verse_key_band(content, text, color) {
   if (empty) {
     return;
   }
-  let band = html_div_text(content, text);
+  ("A BAND IS DRAWN BY THE BIBLE READER'S OWN VERSE LINE, asked for by the human, so a tap on any word of it opens the same card the reader opens - the word large, an article when one is known, a search and the AI sites - and the line reads in its own direction the same way. Rejected: making only the English tappable, which would need a second way of drawing a band that the reader does not have; the reader makes every translation's words tappable, the original's included.");
+  let band = app_shared_bible_verse_line(content, "", text, color);
   if (equal(color, null)) {
     app_shared_text_deemphasized(band);
-  } else {
-    html_font_color_set(band, color);
   }
 }
