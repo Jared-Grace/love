@@ -1,3 +1,4 @@
+import { files_root_gate_run } from "./files_root_gate_run.mjs";
 import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run } from "./app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run.mjs";
 import { functions_outside_direct_gate_run } from "./functions_outside_direct_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
@@ -1287,6 +1288,7 @@ export function qa_gates() {
     bible_glyph_chapters_note_glyph_gate_run,
     functions_outside_direct_gate_run,
     app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run,
+    files_root_gate_run,
   ];
   return gates;
 }
