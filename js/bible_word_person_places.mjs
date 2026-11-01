@@ -4,6 +4,7 @@ export function bible_word_person_places() {
   "EVERY VERSE THAT NAMES MARY IS PLACED, read from the World English Bible's New Testament 2026-11-01. Where one verse names two of them - Mary Magdalene and Mary the mother of James in Matthew 27:56 - both are placed there, and the verse's own words decide when they spell the longer name.";
   "Mary the wife of Clopas stands at the cross in John 19:25; Smith's and the Catholic Encyclopedia both take her for the mother of James and Joses, so their one article on her is placed at both.";
   "JOHN, JAMES, JUDAS, SIMON AND JOSEPH ARE PLACED THE SAME WAY, from every verse of the World English Bible's New Testament that names them, read 2026-11-01. A plain Simon in Luke 5 is Peter; Simon in Luke 7 is the Pharisee. A name in a verse no person here is placed on - Judas the son of James, the Simon who fathered Judas Iscariot - opens only the articles no person is placed on.";
+  "PHILIP, SIMEON, ANANIAS, LAZARUS, GAIUS, ZECHARIAH, MICAH AND ENOCH ARE PLACED FOR ORTHODOXWIKI, whose saints' pages each name one of several people who share the name, read from the whole World English Bible 2026-11-01. Philip of the Twelve is in the gospels, Philip of the Seventy preaches in Acts 8; Zechariah the father of John the Baptist is in Luke 1, Zechariah the prophet in Ezra and Zechariah; Micah of Judges 17 is not the prophet, nor is Enoch of Genesis 4 the one who walked with God.";
   let r = {
     mary_mother: [
       "MAT1",
@@ -276,6 +277,32 @@ export function bible_word_person_places() {
       "HEB11:21",
       "HEB11:22",
     ],
+    philip_apostle: [
+      "MAT10:3",
+      "MRK3:18",
+      "LUK6:14",
+      "JHN1:43",
+      "JHN1:44",
+      "JHN1:45",
+      "JHN1:46",
+      "JHN1:48",
+      "JHN6:5",
+      "JHN6:7",
+      "JHN12:21",
+      "JHN12:22",
+      "JHN14:8",
+      "JHN14:9",
+      "ACT1:13",
+    ],
+    philip_evangelist: ["ACT6:5", "ACT8", "ACT21:8"],
+    simeon_elder: ["LUK2"],
+    ananias_damascus: ["ACT9", "ACT22:12"],
+    lazarus_bethany: ["JHN11", "JHN12"],
+    gaius_ephesus: ["ROM16:23", "3JN1:1"],
+    zechariah_father: ["LUK1", "LUK3:2"],
+    zechariah_prophet: ["EZR5:1", "EZR6:14", "ZEC1", "ZEC7:1", "ZEC7:8"],
+    micah_prophet: ["JER26:18", "MIC1:1"],
+    enoch_patriarch: ["GEN5", "1CH1:3", "LUK3:37", "HEB11:5", "JUD1:14"],
   };
   return r;
 }
