@@ -5,8 +5,12 @@ import { app_code_batch_name_watched } from "./app_code_batch_name_watched.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_lesson_statement_name_watch_decoys } from "./app_code_lesson_statement_name_watch_decoys.mjs";
-export function app_code_lesson_statement_name_watched_titled(pair, paint) {
-  arguments_assert(arguments, 2);
+export function app_code_lesson_statement_name_watched_titled(
+  pair,
+  paint,
+  steps,
+) {
+  arguments_assert(arguments, 3);
   ("a lesson where a name takes new values, built from a pair's programs with the name written out after every change, under the pair's words and the title code handed in");
   let words = property_get(pair, "words");
   let name_id = app_code_lesson_statement_title_name_id_paint(words, paint);

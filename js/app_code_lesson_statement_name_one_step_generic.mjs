@@ -7,8 +7,9 @@ export function app_code_lesson_statement_name_one_step_generic(
   name_id,
   batch_fn,
   above,
+  steps,
 ) {
-  arguments_assert(arguments, 3);
+  arguments_assert(arguments, 4);
   ("a one-step lesson: one more or one less than a name, kept under a new name");
   ("Shared by the plus and minus twins, which differ only in their title, their programs and the boxes above.");
   let batch = app_code_batch_question_answer_fns(

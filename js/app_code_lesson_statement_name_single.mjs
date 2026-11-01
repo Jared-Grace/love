@@ -6,6 +6,10 @@ export function app_code_lesson_statement_name_single(pair) {
   ("a lesson where a name takes new values that has no second lesson writing out only the last value: the pair's programs, each with the name written out after every change, under a title with no note");
   ("NO (each logged) NOTE: the note is there to tell a lesson from its twin that writes out only the last value, and with no twin there is nothing to tell it from - so the note would be one more thing to read that says nothing, at the human's request, 2026-09-27.");
   let fragment = property_get(pair, "fragment");
-  let lesson = app_code_lesson_statement_name_watched_titled(pair, fragment);
+  let lesson = app_code_lesson_statement_name_watched_titled(
+    pair,
+    fragment,
+    false,
+  );
   return lesson;
 }
