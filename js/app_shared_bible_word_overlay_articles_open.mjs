@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
 import { bible_word_articles_matching } from "./bible_word_articles_matching.mjs";
-import { html_overlay_card_fixed } from "./html_overlay_card_fixed.mjs";
+import { app_shared_overlay_card_closable } from "./app_shared_overlay_card_closable.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -47,9 +47,9 @@ export async function app_shared_bible_word_overlay_articles_open(
   ("the word is one tapped word of a verse with its punctuation already taken off; it is shown and looked up, and nothing in it runs.");
   ("One tapped word of the bible reader shown large over the page, with the ways to find out what it means: an article about it when one is known, a Google search, or a question to one of the AI chat sites, each named.");
   ("THE WORD IS SHOWN FIRST, so the reader sees which word was tapped before choosing - a finger on a phone can land on the word beside the one it meant.");
-  ("The card and the dimmed screen behind it are ",
-    fn_name("html_overlay_card_fixed"),
-    ", the same one the picture Bible opens over a tapped word. A tap anywhere closes it, a choice included, because the choice opens in a new tab and the reader comes back to the verse.");
+  ("The card stays open after a choice, by ",
+    fn_name("app_shared_overlay_card_closable"),
+    ": each choice opens in a new tab, so a reader can open GotQuestions, then Easton's, then another, one after another. It closes by its X, its Close button, or a tap outside it. A tap anywhere used to close it, a choice included; changed at the human's asking 2026-11-01.");
   ("THE ARTICLES ARE FETCHED BEFORE THE CARD IS DRAWN. The table of articles is loaded only when a word is tapped, so a reader who never taps one never downloads it; waiting for it first means the buttons below never jump down when it arrives.");
   ("A name can mean more than one person - John is the Baptist and the apostle - so every article it names is offered, each saying who it is about.");
   ("The Google search asks for the word as scripture uses it, the same search a tapped word made before this choice existed. The AI sites are asked the same thing as a plain question, because a chat answers a sentence better than a search phrase.");
@@ -65,7 +65,7 @@ export async function app_shared_bible_word_overlay_articles_open(
       });
     }
   }
-  let card = html_overlay_card_fixed();
+  let card = app_shared_overlay_card_closable();
   let big = html_div_text(card, word);
   html_attribute_set(big, "dir", "auto");
   html_style_assign(big, {
