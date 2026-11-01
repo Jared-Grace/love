@@ -1,12 +1,13 @@
-import { app_shared_bible_history } from "./app_shared_bible_history.mjs";
-import { app_shared_bible_screen_open } from "./app_shared_bible_screen_open.mjs";
 import { app_shared_screen_set_home } from "./app_shared_screen_set_home.mjs";
+import { app_shared_bible_screen_open } from "./app_shared_bible_screen_open.mjs";
+import { app_shared_bible_languages_choosable_is } from "./app_shared_bible_languages_choosable_is.mjs";
 import { app_shared_screen_later } from "./app_shared_screen_later.mjs";
 import { app_shared_bible_languages } from "./app_shared_bible_languages.mjs";
-import { app_shared_bible_languages_choosable_is } from "./app_shared_bible_languages_choosable_is.mjs";
+import { app_shared_bible_history } from "./app_shared_bible_history.mjs";
 import { app_shared_bible_offline } from "./app_shared_bible_offline.mjs";
+import { app_shared_bible_licences } from "./app_shared_bible_licences.mjs";
+import { app_shared_bible_money } from "./app_shared_bible_money.mjs";
 import { app_shared_bible_settings_render } from "./app_shared_bible_settings_render.mjs";
-import { app_shared_bible_about } from "./app_shared_bible_about.mjs";
 export function app_shared_bible_settings(context) {
   "one gear on the reading bar opens this; language choice and keeping a bible on the device both live here so the bar stays about reading";
   async function lambda_back() {
@@ -25,13 +26,18 @@ export function app_shared_bible_settings(context) {
   }
   let open_history = app_shared_screen_later(context, app_shared_bible_history);
   let open_offline = app_shared_screen_later(context, app_shared_bible_offline);
-  let open_about = app_shared_screen_later(context, app_shared_bible_about);
+  let open_licences = app_shared_screen_later(
+    context,
+    app_shared_bible_licences,
+  );
+  let open_money = app_shared_screen_later(context, app_shared_bible_money);
   app_shared_bible_settings_render(
     root,
     open_history,
     open_languages,
     open_offline,
-    open_about,
+    open_licences,
+    open_money,
     context,
   );
 }

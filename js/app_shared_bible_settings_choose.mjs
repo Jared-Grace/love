@@ -1,16 +1,17 @@
-import { app_shared_bible_history_panel } from "./app_shared_bible_history_panel.mjs";
-import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
-import { app_shared_bible_language_codes_chosen } from "./app_shared_bible_language_codes_chosen.mjs";
-import { app_shared_bible_passage_kept_reference } from "./app_shared_bible_passage_kept_reference.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { app_shared_bible_passage_kept_reference } from "./app_shared_bible_passage_kept_reference.mjs";
 import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
 import { window_reload } from "./window_reload.mjs";
 import { app_shared_bible_languages_offered } from "./app_shared_bible_languages_offered.mjs";
-import { app_shared_bible_languages_choosable_is } from "./app_shared_bible_languages_choosable_is.mjs";
+import { app_shared_bible_language_codes_chosen } from "./app_shared_bible_language_codes_chosen.mjs";
 import { app_shared_bible_languages_choose } from "./app_shared_bible_languages_choose.mjs";
+import { app_shared_bible_languages_choosable_is } from "./app_shared_bible_languages_choosable_is.mjs";
+import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
 import { app_shared_bible_offline_panel } from "./app_shared_bible_offline_panel.mjs";
+import { app_shared_bible_licences_panel } from "./app_shared_bible_licences_panel.mjs";
+import { app_shared_bible_money_panel } from "./app_shared_bible_money_panel.mjs";
+import { app_shared_bible_history_panel } from "./app_shared_bible_history_panel.mjs";
 import { app_shared_bible_settings_render } from "./app_shared_bible_settings_render.mjs";
-import { app_shared_bible_about_panel } from "./app_shared_bible_about_panel.mjs";
 export async function app_shared_bible_settings_choose(bar, content, context) {
   "the chapter reader's in-place settings hub: language choice and offline downloads, each returning here; leaving the hub reloads back to the reading";
   "clear the reading bar too, so its verse-selecting hint and chapter nav do not linger over the settings menu";
@@ -45,8 +46,11 @@ export async function app_shared_bible_settings_choose(bar, content, context) {
     let languages = app_shared_bible_languages_chosen_get();
     app_shared_bible_offline_panel(content, languages, back);
   }
-  function on_about() {
-    app_shared_bible_about_panel(content, back);
+  async function on_licences() {
+    await app_shared_bible_licences_panel(content, back);
+  }
+  function on_money() {
+    app_shared_bible_money_panel(content, back);
   }
   async function on_history() {
     await app_shared_bible_history_panel(content, back, context);
@@ -56,7 +60,8 @@ export async function app_shared_bible_settings_choose(bar, content, context) {
     on_history,
     open_languages,
     on_offline,
-    on_about,
+    on_licences,
+    on_money,
     context,
   );
 }
