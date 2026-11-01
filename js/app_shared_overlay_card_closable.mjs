@@ -29,18 +29,22 @@ export function app_shared_overlay_card_closable() {
   }
   html_on_click(backdrop, on_backdrop);
   ("THE X SHARES A ROW WITH THE TITLE, asked for by the human 2026-11-01, so it takes no line of its own: the title fills the row and the X sits at its end, held to the top of the row - the corner where a reader looks for a way out - rather than centred against a title that may be tall or run onto two lines.");
+  ("THE TITLE STAYS IN THE MIDDLE OF THE CARD, asked for by the human 2026-11-01. The row is three columns, the outer two always equal, so the X in the right one does not push the title left: an empty left column balances it.");
   let top = html_div(card);
   html_style_assign(top, {
-    display: "flex",
-    "align-items": "flex-start",
+    display: "grid",
+    "grid-template-columns": "1fr auto 1fr",
+    "align-items": "start",
     gap: "0.5em",
   });
+  html_div(top);
   let title = html_div(top);
-  html_style_assign(title, {
-    flex: "1",
+  let end = html_div(top);
+  html_style_assign(end, {
+    "text-align": "end",
   });
   let x = emoji_x_red();
-  app_shared_button(top, x, close);
+  app_shared_button(end, x, close);
   let body = html_div(card);
   let text = app_shared_close_text();
   app_shared_button(card, text, close);
