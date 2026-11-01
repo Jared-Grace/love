@@ -2144,9 +2144,17 @@ def is_safe_curl_write_out(fmt):
 # apart, and a cluster of letters that are each valueless is still valueless.
 CURL_READ_VALUELESS_FLAGS = {
     "--silent", "--show-error", "--include", "--head", "--fail",
-    "--compressed",
+#
+# -L (follow a redirect) was absent at first, on the reasoning that it leaves
+# the pinned host. The human let it in (2026-11-01) once public reference sites
+# joined the host list, because a redirect is narrower than that sounds: the
+# next address is chosen by the site, not by the caller, so nothing the caller
+# holds rides along to it - no body is sent (-d/-T/-F stay absent), no cookie
+# or credential is attached, and the reply still lands only in /dev/null or the
+# scratch tree.
+    "--compressed", "--location",
 }
-CURL_READ_SHORT_CLUSTER_RE = re.compile(r"^-[sSiIf]+$")
+CURL_READ_SHORT_CLUSTER_RE = re.compile(r"^-[sSiIfL]+$")
 
 # Every flag that takes a value, each of which has its value checked below.
 # A flag outside both sets is not rejected by name - it is simply not in the
@@ -2154,7 +2162,13 @@ CURL_READ_SHORT_CLUSTER_RE = re.compile(r"^-[sSiIf]+$")
 CURL_READ_VALUE_FLAGS = {
     "-o", "--output", "-w", "--write-out", "-H", "--header",
     "-m", "--max-time", "--connect-timeout", "--retry",
+    "-A", "--user-agent",
 }
+
+# A browser name, which some reference sites demand before they answer. Only
+# plain words, version numbers and the punctuation browser names use, so no
+# quote, newline or shell character can ride along in it.
+CURL_READ_USER_AGENT_RE = re.compile(r"^[A-Za-z0-9 ._/();:,+-]{1,200}$")
 
 # A header that asks for a fresh copy rather than a cached one, or states what
 # the caller can read. Nothing here can carry a credential out or a body up;
@@ -2213,6 +2227,8 @@ def is_safe_curl_flag_value(name, value):
         return is_safe_curl_write_out(value)
     if name in ("-H", "--header"):
         return is_safe_curl_header(value)
+    if name in ("-A", "--user-agent"):
+        return bool(CURL_READ_USER_AGENT_RE.match(value))
     return bool(CURL_READ_NUMBER_RE.match(value))
 
 
@@ -4679,9 +4695,8 @@ def untrusted_piece_hint(words, safe_verbs):
             hosts = ", ".join(sorted(CURL_READ_HOSTS))
             return (
                 "`curl` runs unasked only as a plain read: https to one of "
-                f"{hosts}; flags only from -s -S -i -I -f -o -w -H -m "
-                "--retry (so no -L, no -A); and -o naming /dev/null or a "
-                "WHOLE path inside your "
+                f"{hosts}; flags only from -s -S -i -I -f -L -A -o -w -H -m "
+                "--retry; and -o naming /dev/null or a WHOLE path inside your "
                 "scratchpad (a path relative to an earlier `cd` is not "
                 "followed, so write it in full). Another site is added by "
                 "naming it in js/curl_read_hosts_reference.mjs."
