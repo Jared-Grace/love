@@ -1,10 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_statement_name_value_title_name_id } from "./app_code_lesson_statement_name_value_title_name_id.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_code_lesson_statement_name_value_batch } from "./app_code_lesson_statement_name_value_batch.mjs";
+import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_lesson_statement_name_value_above } from "./app_code_lesson_statement_name_value_above.mjs";
-import { app_code_lesson_statement_name_value_batch } from "./app_code_lesson_statement_name_value_batch.mjs";
-import { app_code_lesson_statement_name_value_title_name_id } from "./app_code_lesson_statement_name_value_title_name_id.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_statement_name_value() {
   arguments_assert(arguments, 0);
@@ -27,6 +27,7 @@ export function app_code_lesson_statement_name_value() {
     example_count: 1,
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
+    steps: true,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
