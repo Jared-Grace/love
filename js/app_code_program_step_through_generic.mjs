@@ -1020,7 +1020,7 @@ export function app_code_program_step_through_generic(
     let holder = {
       button: null,
     };
-    let r10 = app_code_program_step_guide_action(entry, k);
+    let r10 = app_code_program_step_guide_action(lines, entry, k);
     function action_get() {
       let button = property_get(holder, "button");
       return button;
