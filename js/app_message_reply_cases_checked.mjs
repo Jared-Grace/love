@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_cases } from "./reply_cases.mjs";
-import { app_message_reply_choices } from "./app_message_reply_choices.mjs";
+import { app_shared_message_reply_choices } from "./app_shared_message_reply_choices.mjs";
 import { property_get } from "./property_get.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
 import { json_equal } from "./json_equal.mjs";
@@ -12,7 +12,7 @@ export async function app_message_reply_cases_checked() {
   ("The rule set is built once and handed to every case, because building it is most of the work and it does not depend on the message.");
   ("★ THE BREAKING IS CARRIED THROUGH RATHER THAN FOLDED INTO NOT-MATCHING. A case whose rules throw part way through is a defect, and a case nobody has written a rule for yet is not; told apart here, the difference survives all the way to whoever reads it.");
   let cases = await reply_cases();
-  let start = app_message_reply_choices();
+  let start = app_shared_message_reply_choices();
   async function lambda(one) {
     let message = property_get(one, "message");
     let attempt = await reply_attempt(message, start);

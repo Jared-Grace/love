@@ -4,7 +4,7 @@ import { object_merge_set } from "./object_merge_set.mjs";
 import { app_shared_font_size_refresh } from "./app_shared_font_size_refresh.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_message_reply_choices } from "./app_message_reply_choices.mjs";
+import { app_shared_message_reply_choices } from "./app_shared_message_reply_choices.mjs";
 import { app_shared_message_refresh } from "./app_shared_message_refresh.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -38,7 +38,7 @@ export async function app_message(context) {
   app_shared_font_size_refresh(context);
   html_font_sans_serif_set_html();
   let div_messages = html_div(root);
-  let start = app_message_reply_choices();
+  let start = app_shared_message_reply_choices();
   await app_shared_message_refresh(
     div_messages,
     context,

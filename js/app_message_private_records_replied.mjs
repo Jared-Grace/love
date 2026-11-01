@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_message_private_records } from "./app_message_private_records.mjs";
-import { app_message_reply_choices } from "./app_message_reply_choices.mjs";
+import { app_shared_message_reply_choices } from "./app_shared_message_reply_choices.mjs";
 import { property_get } from "./property_get.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
@@ -12,7 +12,7 @@ export async function app_message_private_records_replied() {
   ("The rule set is built once here and handed to every message, because it is the same rule set for all of them and building it is most of the work.");
   ("It reads the disk and answers; it brings nothing down. What arrives is somebody else's command, so a page can say how many are new and then ask this for what they all say.");
   let records = await app_message_private_records();
-  let start = app_message_reply_choices();
+  let start = app_shared_message_reply_choices();
   async function lambda(record) {
     let message = property_get(record, "message");
     let attempt = await reply_attempt(message, start);

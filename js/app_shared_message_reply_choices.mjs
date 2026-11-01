@@ -24,7 +24,7 @@ import { reply_choice_optional } from "./reply_choice_optional.mjs";
 import { app_shared_message_reply_choices_lambda } from "./app_shared_message_reply_choices_lambda.mjs";
 import { reply_on_match_capture } from "./reply_on_match_capture.mjs";
 import { reply_last } from "./reply_last.mjs";
-export function app_message_reply_choices() {
+export function app_shared_message_reply_choices() {
   let greeting = app_message_reply_greeting();
   let hru = app_message_reply_how_r_u();
   let phrases_single = app_message_reply_phrases_single();
