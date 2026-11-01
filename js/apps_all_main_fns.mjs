@@ -11,7 +11,7 @@ export function apps_all_main_fns() {
     fn_name("app_ceb_bible"),
     fn_name("app_chapter_group"),
     fn_name("app_code"),
-    fn_name("app_designs_universal"),
+    fn_name("app_design"),
     fn_name("app_emoji_bible"),
     fn_name("app_en_learn_bible"),
     fn_name("app_examples"),

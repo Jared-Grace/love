@@ -134,7 +134,7 @@ export function app_index_main_fns(about_opened) {
       category: programming,
     },
     {
-      app_fn: fn_name("app_designs_universal"),
+      app_fn: fn_name("app_design"),
       text: "Displays different possible designs",
       category: more,
     },

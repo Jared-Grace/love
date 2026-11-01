@@ -101,7 +101,7 @@ export function app_index_emojis() {
       emoji: emoji_edit(),
     },
     {
-      app_fn: fn_name("app_designs_universal"),
+      app_fn: fn_name("app_design"),
       emoji: emoji_rainbow(),
     },
     {
