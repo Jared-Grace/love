@@ -1,4 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
+import { app_code_lesson_while_log_skipped } from "./app_code_lesson_while_log_skipped.mjs";
 import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
 import { app_code_lesson_for } from "./app_code_lesson_for.mjs";
 export function app_code_lessons_latest_held_fns() {
@@ -113,6 +114,11 @@ export function app_code_lessons_latest_held_fns() {
   ("2026-10-29: the seven while step lessons released by the human");
   ("2026-10-29: Counting by twos and threes and A running total of squares released by the human, so each while step lesson on latest has its lesson after it: nothing held");
   ("2026-11-01: hold An if inside a while and For, until the human has read their first drafts; While asking <= and While asking >= released to latest at the human's asking");
-  let fns = [app_code_lesson_while_if, app_code_lesson_for];
+  ("2026-11-01: hold A log inside a skipped while, new at the human's asking straight after A log inside a while, until the human has read its first draft");
+  let fns = [
+    app_code_lesson_while_log_skipped,
+    app_code_lesson_while_if,
+    app_code_lesson_for,
+  ];
   return fns;
 }
