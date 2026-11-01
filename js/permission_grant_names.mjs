@@ -2817,7 +2817,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_chapter_built_fetched"),
     fn_name("bible_glyph_chapter_literal_fetched"),
     fn_name("bible_word_strong_url_or_null"),
-    fn_name("app_en_learn_bible_gloss_tagalog_passages_words"),
+    fn_name("gotquestions_page_download"),
   ];
   return names;
 }
