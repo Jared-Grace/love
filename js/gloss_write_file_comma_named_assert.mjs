@@ -25,6 +25,6 @@ export async function gloss_write_file_comma_named_assert(
   let comma_path = path_join([folder, name]);
   await file_exists_not_assert_json(comma_path, {
     path,
-    hint: "this file was saved with a comma in its name, but it is read under the name with a dash - write it again under that name with the Write tool, and do not rename it with mv, which asks the human",
+    hint: "this file was saved with a comma in its name, but it is read under the name with a dash - write it again under that name with the Write tool. Do not move or copy it with any shell command - mv, cp and the like all ask the human; only the Write tool runs unasked",
   });
 }
