@@ -5,52 +5,91 @@ import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_index_of } from "./list_index_of.mjs";
-import { list_take } from "./list_take.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { app_code_lesson_braces_two_is } from "./app_code_lesson_braces_two_is.mjs";
-import { list_previous } from "./list_previous.mjs";
+import { list_slice } from "./list_slice.mjs";
 import { list_map } from "./list_map.mjs";
+import { app_code_batch_braces_two_is } from "./app_code_batch_braces_two_is.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { add_1 } from "./add_1.mjs";
+import { app_code_batch_kind_has } from "./app_code_batch_kind_has.mjs";
 import { list_max } from "./list_max.mjs";
+import { app_code_review_kind_run_is } from "./app_code_review_kind_run_is.mjs";
+import { app_code_review_kind_step_is } from "./app_code_review_kind_step_is.mjs";
+import { app_code_review_kind_line_missing_is } from "./app_code_review_kind_line_missing_is.mjs";
+import { app_code_review_kind_all_at_once_is } from "./app_code_review_kind_all_at_once_is.mjs";
 export function app_code_milestones() {
   arguments_assert(arguments, 0);
   ("the milestones: like a review, a mix of questions from many lessons, but chosen by what the lessons hold rather than by being the last ones before it - asked for by the human 2026-10-22, so a learner can practise one kind of program until it is easy");
-  ("The first gathers the lessons that run programs of two or more pairs of braces a line at a time, and the second the lesson straight before each, which asks what runs in the same kind of program without the steps - the same programs, all at once.");
-  ("The lesson before rather than one named, because each of these step lessons is put straight after the lesson that runs its shape all at once, measured 2026-11-02 for all 12: every one of them is a run quiz. Not picked: the lesson after, used until 2026-11-02, which was by then the twin of the next step lesson rather than of this one, left the last step lesson with no twin because While follows it, and took in token_braces_3, which runs nothing and only asks about braces. Not picked: only the question asking what the program logs, which is the closest to all at once but would pick a quiz out of the four by its place.");
+  ("2026-11-02, at the human's asking: three milestones over programs of two or more pairs of braces, each asking one way of reading them and no other. First whether each section runs, then a program a line at a time, then everything else about a whole program. Which quizzes each asks is decided per quiz, not per lesson, because a step lesson holds a step quiz and four others.");
+  ("All at once draws from the lessons holding the which-line-is-missing quiz, measured 2026-11-02 as 19: the 12 step lessons and the 7 that run programs without stepping. That quiz is the test because only lessons that run a whole program hold it. Not picked: every lesson with two pairs of braces, which would add 10 that only ask about the braces themselves and run nothing. Not picked: the 12 step lessons alone, which would leave those 7 programs out of every milestone. Not picked: the lesson before each step lesson, used until 2026-11-02, which is a does-this-section-run lesson and so asked the wrong quiz here.");
   let lessons = app_code_lessons();
   ("2026-11-02: only lessons before the first while, so both stand in Nested branches, at the human's asking. A step lesson with an if inside a while had joined them and pulled them to the end of Looping, and the lesson after the last if lesson is While itself. Stopping at the lesson the Looping group names, rather than testing each program for the word while, so for and any later loop stay out too.");
   let ids = app_code_lesson_ids_short();
   let loop_id = property_get(ids, fn_name("app_code_lesson_while"));
   let lesson_ids = list_map_property(lessons, "id");
   let branches_count = list_index_of(lesson_ids, loop_id);
-  let branches = list_take(lessons, branches_count);
-  let steps = list_filter(branches, app_code_lesson_braces_two_is);
-  function lesson_before(lesson) {
-    let previous = list_previous(lessons, lesson);
-    return previous;
+  ("Starting at the first lesson that runs a program of two pairs of braces, and drawing each lesson's batch once, because this is asked several times for each page: measured 2026-11-02, reading every one of the 302 lessons before While took 650 ms on a computer for each ask. A lesson put before this one would not join a milestone.");
+  let first_id = property_get(ids, fn_name("app_code_lesson_braces_run"));
+  let first_index = list_index_of(lesson_ids, first_id);
+  let branches = list_slice(lessons, first_index, branches_count);
+  function with_items(lesson) {
+    let batch = property_get(lesson, "batch");
+    let items = batch();
+    let entry = {
+      lesson,
+      items,
+    };
+    return entry;
   }
-  let at_once = list_map(steps, lesson_before);
-  ("Each stands after the last lesson either one draws from, so both are reached only once every lesson in them has been met; a twin stands before its step lesson, so the steps alone say where that is. The labels are drafts, not yet read by the human.");
+  let entries = list_map(branches, with_items);
+  function entry_braces_two_is(entry) {
+    let items = property_get(entry, "items");
+    let two = app_code_batch_braces_two_is(items);
+    return two;
+  }
+  let braces = list_filter(entries, entry_braces_two_is);
   function number_of(lesson) {
     let index = list_index_of(lessons, lesson);
     let number_inner = add_1(index);
     return number_inner;
   }
-  let numbers = list_map(steps, number_of);
-  let number = list_max(numbers);
-  let r = [
-    {
-      id: "milestone_braces_steps",
-      label: "braces, step by step",
+  ("Each stands after the last lesson it draws from, so it is reached only once every lesson in it has been met. The labels are drafts, not yet read by the human.");
+  function milestone(id, label, lesson_kind_is, kind_is) {
+    function entry_kept(entry) {
+      let items = property_get(entry, "items");
+      let kept = app_code_batch_kind_has(items, lesson_kind_is);
+      return kept;
+    }
+    let entries_kept = list_filter(braces, entry_kept);
+    let drawn = list_map_property(entries_kept, "lesson");
+    let numbers = list_map(drawn, number_of);
+    let number = list_max(numbers);
+    let m = {
+      id,
+      label,
       number,
-      lessons: steps,
-    },
-    {
-      id: "milestone_braces_at_once",
-      label: "braces, all at once",
-      number,
-      lessons: at_once,
-    },
-  ];
+      lessons: drawn,
+      kind_is,
+    };
+    return m;
+  }
+  let v = milestone(
+    "milestone_braces_run",
+    "braces, does this section run",
+    app_code_review_kind_run_is,
+    app_code_review_kind_run_is,
+  );
+  let v2 = milestone(
+    "milestone_braces_steps",
+    "braces, step by step",
+    app_code_review_kind_step_is,
+    app_code_review_kind_step_is,
+  );
+  let v3 = milestone(
+    "milestone_braces_at_once",
+    "braces, all at once",
+    app_code_review_kind_line_missing_is,
+    app_code_review_kind_all_at_once_is,
+  );
+  let r = [v, v2, v3];
   return r;
 }

@@ -16,7 +16,8 @@ export function app_code_review_next_lesson(context, root) {
   let number = property_get(checkpoint, "number");
   let checkpoint_key = property_get(checkpoint, "key");
   let covered = property_get(checkpoint, "lessons");
-  let loaded = app_code_review_load(context, checkpoint_key, covered);
+  let kind_is = property_get(checkpoint, "kind_is");
+  let loaded = app_code_review_load(context, checkpoint_key, covered, kind_is);
   let queue = property_get(loaded, "queue");
   let passed = property_get(loaded, "passed");
   let key = app_code_review_state_key(checkpoint_key);
