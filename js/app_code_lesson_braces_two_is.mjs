@@ -8,7 +8,7 @@ import { text_is } from "./text_is.mjs";
 import { text_occurrences_count } from "./text_occurrences_count.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_all } from "./list_all.mjs";
-export function app_code_lesson_steps_braces_is(lesson) {
+export function app_code_lesson_braces_two_is(lesson) {
   arguments_assert(arguments, 1);
   ("whether a lesson runs programs a line at a time and every one of its programs has two or more pairs of braces: the lessons the first milestone gathers, asked for by the human 2026-10-22");
   ("Read off the lesson rather than listed, because the human asked for a milestone chosen by what lessons hold, where a review is chosen by where they stand: a new lesson of this kind joins the milestone without anybody adding it. Measured 2026-10-22: 12 lessons, braces_step to braces_step_thrice.");

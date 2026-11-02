@@ -7,7 +7,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_code_lesson_steps_braces_is } from "./app_code_lesson_steps_braces_is.mjs";
+import { app_code_lesson_braces_two_is } from "./app_code_lesson_braces_two_is.mjs";
 import { list_previous } from "./list_previous.mjs";
 import { list_map } from "./list_map.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -24,7 +24,7 @@ export function app_code_milestones() {
   let lesson_ids = list_map_property(lessons, "id");
   let branches_count = list_index_of(lesson_ids, loop_id);
   let branches = list_take(lessons, branches_count);
-  let steps = list_filter(branches, app_code_lesson_steps_braces_is);
+  let steps = list_filter(branches, app_code_lesson_braces_two_is);
   function lesson_before(lesson) {
     let previous = list_previous(lessons, lesson);
     return previous;
