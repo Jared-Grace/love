@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { list_get } from "./list_get.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
@@ -16,7 +17,6 @@ import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { list_get } from "./list_get.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
@@ -49,8 +49,11 @@ export function app_code_lesson_while_log_after_change() {
   let less = js_operator_less_than_symbol();
   let plus = js_operator_plus_symbol();
   let name = "n";
-  function program_lines(start, bound, added) {
-    "let n = start; while (n < bound) { n += added; console.log(n); }";
+  function program_lines(numbers_program) {
+    "from [start, bound, added]: let n = start; while (n < bound) { n += added; console.log(n); }";
+    let start = list_get(numbers_program, 0);
+    let bound = list_get(numbers_program, 1);
+    let added = list_get(numbers_program, 2);
     let code = js_code_let_statement(name, start);
     let condition = js_code_binary_spaced_nb(name, less, bound);
     let changed = js_code_assign_operator_statement(name, plus, added);
@@ -63,13 +66,16 @@ export function app_code_lesson_while_log_after_change() {
     let lines = list_concat([code], while_lines);
     return lines;
   }
-  function program_get(start, bound, added) {
-    let lines2 = program_lines(start, bound, added);
+  function program_get(numbers_program) {
+    let lines2 = program_lines(numbers_program);
     let joined = list_join_newline(lines2);
     return joined;
   }
-  function values_before(start, bound, added) {
-    "every value n holds when the while asks and the answer is true";
+  function values_before(numbers_program) {
+    "from [start, bound, added]: every value n holds when the while asks and the answer is true";
+    let start = list_get(numbers_program, 0);
+    let bound = list_get(numbers_program, 1);
+    let added = list_get(numbers_program, 2);
     let values = [];
     let value = start;
     while (less_than(value, bound)) {
@@ -100,14 +106,7 @@ export function app_code_lesson_while_log_after_change() {
       ],
     ];
     let triples = list_shuffle_take_map(groups, 3, list_random_item);
-    function program_of(triple) {
-      let item = list_get(triple, 0);
-      let item2 = list_get(triple, 1);
-      let item3 = list_get(triple, 2);
-      let code2 = program_get(item, item2, item3);
-      return code2;
-    }
-    let codes = list_map(triples, program_of);
+    let codes = list_map(triples, program_get);
     return codes;
   }
   let batch = app_code_batch_question_answer_fns(
@@ -117,10 +116,8 @@ export function app_code_lesson_while_log_after_change() {
   function decoys(question, answer) {
     "the lines one run fewer, one run more, and every line written before n changes; each once and never the answer";
     let numbers = text_integers(question);
-    let start2 = list_get(numbers, 0);
-    let bound2 = list_get(numbers, 1);
     let added2 = list_get(numbers, 2);
-    let before = values_before(start2, bound2, added2);
+    let before = values_before(numbers);
     function after(value) {
       let a = add(value, added2);
       return a;
@@ -145,9 +142,8 @@ export function app_code_lesson_while_log_after_change() {
     "the same program compared against a number past the last line written out, so it runs once more; or, when it already runs as often as a while lesson allows, against the number n holds before its last run, so it runs once fewer";
     let numbers2 = text_integers(answer);
     let start3 = list_get(numbers2, 0);
-    let bound3 = list_get(numbers2, 1);
     let added3 = list_get(numbers2, 2);
-    let before2 = values_before(start3, bound3, added3);
+    let before2 = values_before(numbers2);
     let left = list_size(before2);
     let last2 = list_last(before2);
     let ended2 = add(last2, added3);
@@ -156,7 +152,7 @@ export function app_code_lesson_while_log_after_change() {
     if (less_than_equal(most, left)) {
       further = last2;
     }
-    let code4 = program_get(start3, further, added3);
+    let code4 = program_get([start3, further, added3]);
     let found2 = [code4];
     return found2;
   }
@@ -193,7 +189,7 @@ export function app_code_lesson_while_log_after_change() {
       name,
       " after it has changed:",
     ]);
-    let lines3 = program_lines(2, 5, 2);
+    let lines3 = program_lines([2, 5, 2]);
     let value2 = written([4, 6]);
     app_code_code_lines_writes_out(box_two, lines3, value2);
     said(box_two, 2, 5, 4);
