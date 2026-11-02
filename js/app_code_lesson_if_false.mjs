@@ -1,8 +1,7 @@
+import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -48,10 +47,8 @@ export function app_code_lesson_if_false() {
   let after_shown = list_get(fruits, 1);
   function program_lines(condition, inside_word, plain_word, if_first) {
     "an if around a line writing out one word, and a line writing out another, the if first or last";
-    let code2 = app_code_string_code(inside_word);
-    let inside = js_code_console_log_statement(code2);
-    let code3 = app_code_string_code(plain_word);
-    let plain = js_code_console_log_statement(code3);
+    let inside = app_code_word_console_log_statement(inside_word);
+    let plain = app_code_word_console_log_statement(plain_word);
     let if_lines = js_code_if_lines(condition, inside);
     if (if_first) {
       let first = list_concat(if_lines, [plain]);
@@ -163,8 +160,7 @@ export function app_code_lesson_if_false() {
       " do not run:",
     ]);
     let false_lines = program_lines("false", inside_shown, after_shown, true);
-    let after_code = app_code_string_code(after_shown);
-    let after_line = js_code_console_log_statement(after_code);
+    let after_line = app_code_word_console_log_statement(after_shown);
     app_code_code_lines_writes_out(box_two, false_lines, after_shown);
     app_code_div_cycle_code(box_two, [
       "",
