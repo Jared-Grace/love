@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { equal } from "./equal.mjs";
@@ -14,8 +15,7 @@ export async function function_local_unread_remove(f_name, name) {
     let identifiers = js_list_type(ast, "Identifier");
     function named(v) {
       let node = property_get(v, "node");
-      let left = property_get(node, "name");
-      let eq = equal(left, name);
+      let eq = property_equals(node, "name", name);
       return eq;
     }
     let mentions = identifiers.filter(named);
