@@ -7,7 +7,12 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_code_review_questions_cap } from "./app_code_review_questions_cap.mjs";
 import { app_code_review_seeds_gather } from "./app_code_review_seeds_gather.mjs";
-export function app_code_review_load(context, checkpoint_key, lessons) {
+export function app_code_review_load(
+  context,
+  checkpoint_key,
+  lessons,
+  kind_is,
+) {
   "$plain checkpoint_key";
   "checkpoint_key is what the checkpoint is filed under - a review's number or a milestone's id - and lessons what a fresh queue is gathered from";
   "resume the persisted seed queue when one is saved for this same checkpoint, otherwise gather a fresh shuffled queue";
@@ -19,7 +24,7 @@ export function app_code_review_load(context, checkpoint_key, lessons) {
   if (stored_present) {
     let queue_stored = property_get(stored, "seeds");
     let passed_stored = property_get(stored, "passed");
-    let queue_live = app_code_review_seeds_live(queue_stored);
+    let queue_live = app_code_review_seeds_live(queue_stored, kind_is);
     let live_any = list_empty_not_is(queue_live);
     let finished = list_empty_is(queue_stored);
     let usable = live_any || finished;
@@ -32,7 +37,7 @@ export function app_code_review_load(context, checkpoint_key, lessons) {
       return resumed;
     }
   }
-  let gathered = app_code_review_seeds_gather(lessons);
+  let gathered = app_code_review_seeds_gather(lessons, kind_is);
   let queue = app_code_review_questions_cap(context, gathered);
   let passed = 0;
   let fresh = {

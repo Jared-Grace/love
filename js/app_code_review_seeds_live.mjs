@@ -5,12 +5,14 @@ import { list_filter } from "./list_filter.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { app_code_review_items_by_id } from "./app_code_review_items_by_id.mjs";
 import { list_first_property } from "./list_first_property.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
+import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
-export function app_code_review_seeds_live(seeds) {
+import { not } from "./not.mjs";
+import { list_get } from "./list_get.mjs";
+export function app_code_review_seeds_live(seeds, kind_is) {
   "the seeds of a saved review queue that this page can still rebuild - the ones naming a lesson it hands out, and a quiz kind that lesson still has";
   "★ A SAVED QUEUE OUTLIVES THE LIST IT WAS GATHERED FROM. Its seeds are plain words written to a learner's own device, and what a page hands out is a decision made in this repo that moves without anyone looking at what is already saved on a device. So a seed can name something the page reading it back no longer has - and rebuilding one asks for exactly one lesson and throws on none, which kills the boot rather than the item. That is not a screen a learner can get off: every load reads the same saved queue and dies the same way, and no deploy reaches it, because the fault is in what is on their device rather than in what is served.";
   ("Measured 2026-09-04: a learner had been stuck on the did-not-finish-loading screen for days, on the built site and on latest alike, and the page reported the throw itself - an empty list asked for its one item, under ",
@@ -27,20 +29,26 @@ export function app_code_review_seeds_live(seeds) {
   }
   let by_name = list_filter(seeds, named_is);
   let wanted = list_map_property_unique(by_name, "lesson_id");
-  let counts = {};
-  function count_kinds(lesson_id) {
+  let kinds_by_id = {};
+  function kinds_read(lesson_id) {
     let items = app_code_review_items_by_id(lesson_id);
     let kinds = list_first_property(items, "exercises");
-    let count = list_size(kinds);
-    property_set(counts, lesson_id, count);
+    property_set(kinds_by_id, lesson_id, kinds);
   }
-  each(wanted, count_kinds);
+  each(wanted, kinds_read);
+  ("kind_is too, because which quizzes a checkpoint asks can change after a queue is saved: on 2026-11-02 the step-by-step milestone stopped asking the other quizzes of its lessons, and a queue saved before that would have gone on asking them.");
   function live_is(seed) {
     let lesson_id = property_get(seed, "lesson_id");
     let kind_index = property_get(seed, "kind_index");
-    let count = property_get(counts, lesson_id);
+    let kinds = property_get(kinds_by_id, lesson_id);
+    let count = list_size(kinds);
     let within = less_than(kind_index, count);
-    return within;
+    if (not(within)) {
+      return false;
+    }
+    let kind = list_get(kinds, kind_index);
+    let asked = kind_is(kind);
+    return asked;
   }
   let live = list_filter(by_name, live_is);
   return live;
