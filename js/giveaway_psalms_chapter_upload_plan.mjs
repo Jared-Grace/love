@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_psalms_record_path } from "./giveaway_psalms_record_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -16,7 +17,6 @@ import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_bytes_size } from "./text_bytes_size.mjs";
 import { file_size } from "./file_size.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { giveaway_psalms_item_title } from "./giveaway_psalms_item_title.mjs";
 import { giveaway_psalms_item_description } from "./giveaway_psalms_item_description.mjs";
 import { giveaway_licence_url } from "./giveaway_licence_url.mjs";
@@ -80,8 +80,7 @@ export async function giveaway_psalms_chapter_upload_plan(
     };
     list_add(files, file);
   }
-  let whole_is = list_empty_is(files_missing);
-  let gone_any_is = not(whole_is);
+  let gone_any_is = list_empty_not_is(files_missing);
   let withheld_why_gone = gone_any_is
     ? "a file it names is not on this disk"
     : null;
