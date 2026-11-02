@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_multiple_choice_next_get } from "./app_code_lesson_quiz_multiple_choice_next_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -22,8 +23,7 @@ export function app_code_lesson_quiz_multiple_choice(
   let distractor_count = property_get(r, "distractor_count");
   ("a lesson may say, for a wrong choice, what that choice gets wrong; wrong_say is handed the question shown, the right answer and the choice pressed, and answers parts taking turns between words and code, or null for a choice it has nothing to say about. Said underneath the choices, so the red stays on the choice and the reason sits where the eye goes next. Absent, a wrong press only turns red, as every quiz did before 2026-10-26");
   let wrong_say = property_get_or(info, "wrong_say", null);
-  let r3 = property_get(r, "r3");
-  let quiz_question_text = property_get(r3, "quiz_question_text");
+  let quiz_question_text = property_path_get_2(r, "r3", "quiz_question_text");
   let quiz_answer_text = property_get(r, "quiz_answer_text");
   let note = null;
   function on_wrong_choice(quiz_choice) {
