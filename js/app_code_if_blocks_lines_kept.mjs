@@ -1,3 +1,4 @@
+import { list_skip } from "./list_skip.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -11,8 +12,6 @@ import { list_add } from "./list_add.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_size } from "./text_size.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { text_get } from "./text_get.mjs";
 import { text_trim } from "./text_trim.mjs";
 export function app_code_if_blocks_lines_kept(code, blocks, count) {
@@ -69,8 +68,7 @@ export function app_code_if_blocks_lines_kept(code, blocks, count) {
         moved = moved + property_get(d, "size");
       }
     }
-    let to2 = list_size(written);
-    let outdented = list_slice(written, moved, to2);
+    let outdented = list_skip(written, moved);
     let text = "";
     for (let i of outdented) {
       text = text + text_get(code, i);
