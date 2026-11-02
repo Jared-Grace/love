@@ -11,6 +11,9 @@ import { list_filter } from "./list_filter.mjs";
 import { text_slice_from } from "./text_slice_from.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { js_parse } from "./js_parse.mjs";
+import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
+import { js_unparse } from "./js_unparse.mjs";
 import { function_source_formatted_overwrite } from "./function_source_formatted_overwrite.mjs";
 import { function_auto_checked } from "./function_auto_checked.mjs";
 import { reply_proposal_cases_record } from "./reply_proposal_cases_record.mjs";
@@ -45,7 +48,11 @@ export async function reply_proposal_apply(title) {
   let after_lines = list_map(kept, unsigned);
   let after = list_join_newline(after_lines);
   let f_name = property_get(proposal, "fn");
-  await function_source_formatted_overwrite(f_name, after);
+  ("★ THE IMPORTS GO IN BEFORE THE FILE IS WRITTEN, NOT AFTER. The canonicalizing pass below takes seconds, and written without them the rule could not run for those seconds: the review screen asked to redraw in that gap and showed a 500 over a change that had gone in correctly.");
+  let ast = js_parse(after);
+  await js_imports_missing_add_all(ast);
+  let whole = js_unparse(ast);
+  await function_source_formatted_overwrite(f_name, whole);
   let checked = await function_auto_checked(f_name);
   let ok = property_get(checked, "ok");
   assert_json(ok, {
