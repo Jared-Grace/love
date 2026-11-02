@@ -1,3 +1,4 @@
+import { numbers_apart } from "./numbers_apart.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_psalms_videos_paths } from "./giveaway_psalms_videos_paths.mjs";
@@ -10,8 +11,6 @@ import { durations_near_each } from "./durations_near_each.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
-import { subtract } from "./subtract.mjs";
-import { abs } from "./abs.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
@@ -60,8 +59,7 @@ export async function lyric_video_videos_unclaimed_duration_joined(
     }
     for (let row_audio of answer.near) {
       let recording = row_audio.path_audio;
-      let gap_signed = subtract(seconds, row_audio.seconds);
-      let gap = abs(gap_signed);
+      let gap = numbers_apart(seconds, row_audio.seconds);
       let joined_already_is = list_includes(recordings_joined, recording);
       let same_is = equal(gap, 0);
       if (not(same_is)) {
