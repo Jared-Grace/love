@@ -1,0 +1,1 @@
+{"f_name":"emoji_handshake","text":"+export function emoji_handshake() {\n+  let v = \"🤝\";\n+  return v;\n+}\n+"}

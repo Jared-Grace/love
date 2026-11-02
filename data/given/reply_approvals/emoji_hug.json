@@ -1,0 +1,1 @@
+{"f_name":"emoji_hug","text":"+export function emoji_hug() {\n+  let v = \"🫂\";\n+  return v;\n+}\n+"}
