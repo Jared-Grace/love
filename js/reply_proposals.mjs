@@ -508,7 +508,7 @@ export function reply_proposals() {
   ]);
   let combined55 = text_combine_multiple([
     "-  let names = ",
-    fn_name("reply_names"),
+    fn_name("reply_names_common"),
     "();",
   ]);
   let combined56 = text_combine_multiple([
