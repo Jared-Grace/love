@@ -9,17 +9,19 @@ import { html_style_margin } from "./html_style_margin.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { equal } from "./equal.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
-import { html_text_content_set } from "./html_text_content_set.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_color_green_deep } from "./app_shared_color_green_deep.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { not } from "./not.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
-import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 export function app_reply_rules_approve_button(
   root,
   f_name,
@@ -54,6 +56,15 @@ export function app_reply_rules_approve_button(
       html_text_content_set(said, text2);
       let green = app_shared_color_green_deep();
       html_font_color_set(said, green);
+      ("Put away is not gone: what was approved can be opened again from here, because a verdict is sometimes worth checking after it is given.");
+      let hidden = true;
+      function on_toggle() {
+        hidden = not(hidden);
+        html_display_none_or_block(hidden, diff);
+        let label_toggle = hidden ? "show" : "hide";
+        html_text_set(toggle, label_toggle);
+      }
+      let toggle = app_shared_button_uncolored(holder, "show", on_toggle);
       return;
     }
     let stale = equal(now, "stale");

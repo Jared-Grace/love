@@ -10,6 +10,8 @@ import { html_p_text } from "./html_p_text.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { app_reply_rules_cases_approved_show } from "./app_reply_rules_cases_approved_show.mjs";
 export function app_reply_rules_corpus_show(root, cases, approvals) {
   arguments_assert(arguments, 3);
   ("★ ONLY THE CASES THAT STILL NEED SOMETHING ARE DRAWN. A case is a unit test and is approved like code, so one that passes and is approved as it stands is a question answered. A case that has stopped matching is always drawn and is offered no button, because what is on the screen is what the rules say now and what a verdict would be stored against is what the case wants, and a person can only have meant what they were looking at.");
@@ -39,5 +41,11 @@ export function app_reply_rules_corpus_show(root, cases, approvals) {
     return line;
   }
   let all = list_map(cases, each_shown);
+  function ok_is(one) {
+    let ok = property_get(one, "ok");
+    return ok;
+  }
+  let passing = list_filter(cases, ok_is);
+  app_reply_rules_cases_approved_show(root, passing, approvals);
   return all;
 }
