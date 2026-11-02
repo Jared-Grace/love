@@ -1,3 +1,4 @@
+import { text_combine_3 } from "./text_combine_3.mjs";
 import { song_image_couplets_youtube } from "./song_image_couplets_youtube.mjs";
 import { app_music_youtube_link } from "./app_music_youtube_link.mjs";
 import { subtract } from "./subtract.mjs";
@@ -69,8 +70,11 @@ export async function app_music_song_image_couplets_show(parent, song) {
       let heading = text_combine("verse ", verse_shown);
       html_p_text_centered(parent, heading);
       let video_id = videos.verses[subtract(verse_shown, 1)];
-      let left = text_combine("Watch verse ", verse_shown);
-      let watch_link = text_combine(left, " on YouTube");
+      let watch_link = text_combine_3(
+        "Watch verse ",
+        verse_shown,
+        " on YouTube",
+      );
       app_music_youtube_link(parent, video_id, watch_link);
     }
     let words = song_image_couplet_sung(couplet.n);
