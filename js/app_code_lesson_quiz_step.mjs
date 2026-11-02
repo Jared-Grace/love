@@ -13,7 +13,7 @@ export function app_code_lesson_quiz_step(
   "the step-by-step quiz: the same answering as the worked example";
   "Its own named function, so a milestone can ask whether a quiz is this one by comparing the function itself. Its name read at run time would not do: a built page may shorten it.";
   let question = property_get(qa, "question");
-  ("the answer shown is the list of presses, so what is handed to it is how many of them are done, and it is handed again after each press, so a wrong answer shows the presses so far");
+  ("the answer shown is the list of presses, so what is handed to it is how many of them are done, and it is drawn again with each one; 2026-10-23, at the human's asking, so the steps pressed turn green and the next one glows");
   let pressed = {
     done: 0,
     look_here: null,

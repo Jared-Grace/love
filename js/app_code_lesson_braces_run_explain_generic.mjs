@@ -8,10 +8,10 @@ import { app_code_batch_question_answer_fns } from "./app_code_batch_question_an
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_code_braces_run_choose } from "./app_code_braces_run_choose.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
+import { app_code_lesson_quiz_braces_run } from "./app_code_lesson_quiz_braces_run.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 export function app_code_lesson_braces_run_explain_generic(
@@ -63,21 +63,6 @@ export function app_code_lesson_braces_run_explain_generic(
     }
     app_code_braces_run_choose(component, text, wrong, success);
   }
-  function run_quiz(
-    parent,
-    info,
-    qa,
-    on_success,
-    on_wrong,
-    batch_get,
-    correction_code_set,
-  ) {
-    "the quiz: the same answering as the worked example";
-    let question = property_get(qa, "question");
-    let answer = property_get(qa, "answer");
-    correction_code_set(answer);
-    app_code_braces_run_choose(parent, question, on_wrong, on_success);
-  }
   let forwards = {
     question_label: "",
     on_question: app_code_lesson_quiz_question_none,
@@ -99,7 +84,7 @@ export function app_code_lesson_braces_run_explain_generic(
         question_label: "",
         on_question: app_code_lesson_quiz_question_none,
         answer_label: "",
-        on_answer: run_quiz,
+        on_answer: app_code_lesson_quiz_braces_run,
       },
     ],
   });
