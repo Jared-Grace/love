@@ -1,9 +1,9 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { equal } from "./equal.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -19,8 +19,7 @@ export async function function_local_unread_remove(f_name, name) {
       return eq;
     }
     let mentions = identifiers.filter(named);
-    let left2 = list_size(mentions);
-    let b = equal(left2, 1);
+    let b = list_size_equal(mentions, 1);
     assert_json(b, {
       hint: "this word is mentioned more than once in the file, so it is not simply unread",
       f_name,
