@@ -1,4 +1,3 @@
-import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
@@ -12,6 +11,7 @@ import { app_code_batch_braces_two_is } from "./app_code_batch_braces_two_is.mjs
 import { list_filter } from "./list_filter.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_code_batch_kind_has } from "./app_code_batch_kind_has.mjs";
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { list_max } from "./list_max.mjs";
 import { app_code_review_kind_run_is } from "./app_code_review_kind_run_is.mjs";
 import { app_code_review_kind_step_is } from "./app_code_review_kind_step_is.mjs";
@@ -74,19 +74,19 @@ export function app_code_milestones() {
   }
   let v = milestone(
     "milestone_braces_run",
-    "braces, does this section run",
+    "does this section run?",
     app_code_review_kind_run_is,
     app_code_review_kind_run_is,
   );
   let v2 = milestone(
     "milestone_braces_steps",
-    "braces, step by step",
+    "step by step",
     app_code_review_kind_step_is,
     app_code_review_kind_step_is,
   );
   let v3 = milestone(
     "milestone_braces_at_once",
-    "braces, all at once",
+    "all at once",
     app_code_review_kind_line_missing_is,
     app_code_review_kind_all_at_once_is,
   );

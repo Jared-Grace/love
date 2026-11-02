@@ -1,0 +1,1 @@
+{"f_name":"reply_response_greetings","text":"+import { reply_response_dressed } from \"./reply_response_dressed.mjs\";\n+export function reply_response_greetings() {\n+  let greetings = reply_response_dressed(\n+    \"Greetings in the name of our LORD Jesus Christ!\",\n+  );\n+  return greetings;\n+}\n+"}
