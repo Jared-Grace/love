@@ -1065,29 +1065,30 @@ export function reply_proposals() {
     fn_name("reply_optional"),
     "(n);",
   ]);
-  let from_added_location = text_combine_multiple([
-    "+  let location = ",
-    fn_name("reply_word_any"),
+  let from_added_cities = text_combine_multiple([
+    "+  let cities = ",
+    fn_name("reply_cities"),
     "();",
   ]);
   let from_added_optional = text_combine_multiple([
-    "+  let o_location_in = ",
+    "+  let o_city_in = ",
     fn_name("reply_sequence_optional"),
-    "([location, n]);",
+    "([cities, n]);",
   ]);
   let from_town_country = {
-    title: "answer somebody who names a place and then in and their country",
+    title:
+      "answer somebody who names a listed city and then in and their country",
     fn: fn_name("app_shared_message_reply_from_country"),
-    whole: [fn_name("reply_word_any")],
+    whole: [fn_name("reply_cities"), fn_name("reply_cities_names")],
     diff: [
       '-  "So the town is gone rather than widened, and the cost is named rather than hidden: a message naming a town before its country is no longer recognised by this rule, while `i am from kenya` now is - which it was not before, and which is the commonest shape of the two. What is never lost is a word of the reply, because the reply is a fixed sentence about where we are and never repeats back where they are.";',
       '-  "What this deliberately does NOT do is leave a slot open to any run of letters to catch the town again. A slot that matches anything matches the wrong thing somewhere, and an unrecognised town is the cheapest possible thing to be wrong about - the rule simply declines, and another rule may answer instead.";',
-      '+  "So no town is written here and none is ever added. The shape is from, then optionally a location and the word in, then a country. Any run of letters may stand as the location, unread, which answers `i am from nairobi in kenya` and publishes nobody. The country is what decides, because it is the closed list: `i am from nairobi` with no country gets no reply. The reply is a fixed sentence about where we are and never repeats back where they are, so wrong letters in that slot cost nothing.";',
+      '+  "So no town from a message is written here and none is ever added. The shape is from, then optionally a city from a public list and the word in, then a country. A small town stays unmatched and goes to a human, which is the right answer to it. A slot open to any run of letters was tried and took a whole cry for help as a town: `i am from the hospital my wife died i need prayer i am in kenya` got only this sentence back, and so never reached anybody. A closed list cannot do that.";',
       from_removed_optional,
-      from_added_location,
+      from_added_cities,
       from_added_optional,
       '-    [iam_o_titled_name, "from", o_n, r_countries],',
-      '+    [iam_o_titled_name, "from", o_location_in, r_countries],',
+      '+    [iam_o_titled_name, "from", o_city_in, r_countries],',
     ],
     cases: [
       {
@@ -1127,6 +1128,26 @@ export function reply_proposals() {
         outputs: [],
       },
       {
+        from: "",
+        message: "am from Zzyzxville in Kenya",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message:
+          "I am from a poor family, please help me, my children are hungry and we are in Kenya",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message:
+          "I am from the hospital, my wife died, I need prayer, I am in Kenya",
+        answered: false,
+        outputs: [],
+      },
+      {
         from: "3d27ef64ea033e69",
         message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
         answered: true,
@@ -1134,10 +1155,11 @@ export function reply_proposals() {
       },
     ],
     decide: [
-      "this was taken out on purpose once. The old slot held two real home towns, which published people. This slot holds no town at all: any run of letters stands there unread, and the country after it decides.",
-      "spaces are ignored, so the slot takes any run of letters and not only one word. New York in America is heard, and so is am from the church in Ghana. The reply only says where we are, so that costs nothing. Is that acceptable?",
+      "this replaces the card that took any word as the town. That card answered two cries for help with only a location reply, so nobody would have read them. Both are tests here now and must get no reply.",
+      "the list is 926 places from Wikidata: every capital, old ones included, and every big city of half a million people or more. It is a public list and no message fed it, so it publishes nobody. Smaller towns get no reply and come to you. Is half a million the right line?",
+      "the city and the country are not checked against each other. Am from Paris in Kenya gets the same reply. The reply only says where we are, so that costs nothing. Is that acceptable?",
       "a place now needs the word in before the country. Am from Nairobi Kenya gets no reply, and neither does am from in Kenya, which got one before. No saved test writes either one.",
-      "a place with no country still gets no reply, because then nothing closed is checking the word. Should it stay that way?",
+      "a city with no country still gets no reply. Should it stay that way?",
       "approve this after the friend and teacher cards. The last test here is the full saved message, and it only gets all three replies once all three are in.",
       "measured on the whole rule set with all three cards in: seventeen of the eighteen saved tests give the same answer as before, and the eighteenth is that full message, which got nothing before. With this card alone all eighteen stay the same.",
     ],
