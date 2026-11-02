@@ -1,3 +1,4 @@
+import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -12,8 +13,6 @@ import { app_code_batch_question_answer_fns } from "./app_code_batch_question_an
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_first } from "./list_first.mjs";
-import { text_skip } from "./text_skip.mjs";
-import { text_size } from "./text_size.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -65,8 +64,7 @@ export function app_code_lesson_number_text_plus() {
     "[the number, the ending] read back from what is written out: the number is everything before the first space";
     let words = text_split(answer, " ");
     let number = list_first(words);
-    let skip_count = text_size(number);
-    let ending = text_skip(answer, skip_count);
+    let ending = text_prefix_without_inner(answer, number);
     let parts = [number, ending];
     return parts;
   }
