@@ -1,3 +1,4 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { list_last } from "./list_last.mjs";
@@ -27,8 +28,7 @@ export async function app_shared_bible_copy(
   list_sort_number_mapper(verse_numbers_chosen, integer_to_try);
   let primary = list_last(languages_verses);
   ("Verses are copied to be shared, so the reference names the book in the first bible, the one whose words the paste puts first - the language the audience is assumed to read most easily. It is not the reader's own screen language: they may not read the audience's language at all.");
-  let audience = list_first(languages_verses);
-  let audience_books = property_get(audience, "books");
+  let audience_books = list_first_property(languages_verses, "books");
   let item_property_name = verse_number_key();
   let primary_verse_numbers = property_list_map_property(
     primary,
