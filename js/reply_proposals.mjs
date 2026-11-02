@@ -5,6 +5,8 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { reply_choices_name } from "./reply_choices_name.mjs";
 import { reply_response_good_morning } from "./reply_response_good_morning.mjs";
+import { reply_response_good_afternoon } from "./reply_response_good_afternoon.mjs";
+import { reply_response_good_evening } from "./reply_response_good_evening.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -607,6 +609,10 @@ export function reply_proposals() {
   };
   let said2 = reply_response_good_morning();
   let morning_said = [said2];
+  let said3 = reply_response_good_afternoon();
+  let afternoon_said = [said3];
+  let said4 = reply_response_good_evening();
+  let evening_said = [said4];
   let combined17 = text_combine_multiple([
     "   let greeting_response = ",
     fn_name("reply_response_greetings"),
@@ -622,20 +628,20 @@ export function reply_proposals() {
     fn_name("reply_choice"),
     '(["morning", "afternoon", "evening"]);',
   ]);
-  let combined20 = text_combine_multiple([
-    "+  let time_of_day = ",
-    fn_name("reply_choice"),
-    '(["afternoon", "evening"]);',
-  ]);
   let combined21 = text_combine_multiple([
-    "   let good_time = ",
+    "-  let good_time = ",
     fn_name("reply_sequence"),
     '(["good", time_of_day]);',
   ]);
   let combined22 = text_combine_multiple([
-    "   let hi_word = ",
+    "-  let hi_word = ",
     fn_name("reply_choice"),
     '(["hi", hello, "hey", good_time]);',
+  ]);
+  let combined20 = text_combine_multiple([
+    "+  let hi_word = ",
+    fn_name("reply_choice"),
+    '(["hi", hello, "hey"]);',
   ]);
   let combined23 = text_combine_multiple([
     "   let my_dear_brother = ",
@@ -653,26 +659,55 @@ export function reply_proposals() {
     "();",
   ]);
   let combined26 = text_combine_multiple([
-    "+  let good_morning = ",
-    fn_name("reply_sequence_output"),
-    "(",
+    "+  let morning = ",
+    fn_name("reply_good_time"),
+    '("morning", morning_response);',
+  ]);
+  let combined26b = text_combine_multiple([
+    "+  let afternoon_response = ",
+    fn_name("reply_response_good_afternoon"),
+    "();",
+  ]);
+  let combined26c = text_combine_multiple([
+    "+  let afternoon = ",
+    fn_name("reply_good_time"),
+    '("afternoon", afternoon_response);',
+  ]);
+  let combined26d = text_combine_multiple([
+    "+  let evening_response = ",
+    fn_name("reply_response_good_evening"),
+    "();",
+  ]);
+  let combined26e = text_combine_multiple([
+    "+  let evening = ",
+    fn_name("reply_good_time"),
+    '("evening", evening_response);',
   ]);
   let combined27 = text_combine_multiple([
     "+  let greetings = ",
     fn_name("reply_choice"),
-    "([greeting, good_morning]);",
+    "([greeting, morning, afternoon, evening]);",
   ]);
   let good_morning_back = {
-    title: "say good morning back to good morning",
+    title: "say good morning, good afternoon and good evening back",
     fn: fn_name("app_shared_message_reply_greeting"),
-    whole: [fn_name("reply_response_good_morning")],
+    whole: [
+      fn_name("reply_response_dressed"),
+      fn_name("reply_response_greetings"),
+      fn_name("reply_response_good_morning"),
+      fn_name("reply_response_good_afternoon"),
+      fn_name("reply_response_good_evening"),
+      fn_name("reply_good_time"),
+      fn_name("emoji_sun"),
+      fn_name("emoji_sunset"),
+    ],
     diff: [
       combined17,
       combined18,
       combined19,
-      combined20,
       combined21,
       combined22,
+      combined20,
       combined23,
       combined24,
       "     [hi_word, my_dear_brother],",
@@ -681,9 +716,10 @@ export function reply_proposals() {
       "-  return greeting;",
       combined25,
       combined26,
-      '+    ["good", "morning", my_dear_brother],',
-      "+    morning_response,",
-      "+  );",
+      combined26b,
+      combined26c,
+      combined26d,
+      combined26e,
       combined27,
       "+  return greetings;",
     ],
@@ -710,6 +746,18 @@ export function reply_proposals() {
         from: "",
         message: "Good afternoon",
         answered: true,
+        outputs: afternoon_said,
+      },
+      {
+        from: "",
+        message: "Good evening",
+        answered: true,
+        outputs: evening_said,
+      },
+      {
+        from: "",
+        message: "Hello",
+        answered: true,
         outputs: said,
       },
       {
@@ -720,8 +768,8 @@ export function reply_proposals() {
       },
     ],
     decide: [
-      "good afternoon and good evening still get the greeting in the name of our LORD Jesus Christ. Should they get their own words too?",
-      "good morning no longer gets the greeting in the name of our LORD Jesus Christ. Only these words go back.",
+      "good morning, good afternoon and good evening no longer get the greeting in the name of our LORD Jesus Christ. Only these words go back.",
+      "good evening was not asked for and is included so that it does not stay the one time of day answered differently. Should it stay in?",
       "measured on the whole rule set: of the eighteen saved tests, only the two good morning ones change.",
     ],
   };
