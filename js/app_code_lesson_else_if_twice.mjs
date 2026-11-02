@@ -1,3 +1,4 @@
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
@@ -103,7 +104,7 @@ export function app_code_lesson_else_if_twice() {
       app_code_lesson_braces_run_else_if_twice,
       [
         "Once one ",
-        "{ ... }",
+        app_code_braces_dots(),
         " in an ",
         "if",
         " runs, the rest are not reached",
