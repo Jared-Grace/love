@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
@@ -65,8 +66,7 @@ export function app_code_lessons_above_repeated() {
         let object = property_get(next, "lesson");
         next_id = property_get(object, "id");
       }
-      let left = property_get(ids, taught);
-      let follows = equal(left, next_id);
+      let follows = property_equals(ids, taught, next_id);
       if (not(follows)) {
         let item = text_combine_multiple([
           d.name,
