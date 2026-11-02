@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { js_imports_local_names } from "./js_imports_local_names.mjs";
 import { js_array_methods_callback } from "./js_array_methods_callback.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
@@ -39,8 +40,7 @@ export function js_native_callback_imported_calls(ast) {
     if (not(bare)) {
       continue;
     }
-    let passed = property_get(argument, "name");
-    let from_elsewhere = list_includes(imported, passed);
+    let from_elsewhere = property_in_list(argument, "name", imported);
     if (not(from_elsewhere)) {
       continue;
     }
