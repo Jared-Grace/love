@@ -1,6 +1,5 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { less_than } from "./less_than.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { number_is } from "./number_is.mjs";
 import { subtract } from "./subtract.mjs";
@@ -15,8 +14,7 @@ import { list_concat } from "./list_concat.mjs";
 export function app_code_decoys_near_add(decoys, value) {
   arguments_assert(arguments, 2);
   ("the wrong choices decoys for the right answer value, with one more when value is a number and fewer than two wrong choices are left: a number just next to it, one more or one less, picked at random and never below 0 nor already on offer. Asked for by the human 2026-10-29: with one name and no value before, the only wrong choice was the name written as a string, and 2 + 2 had none at all, since 2 * 2 and the whole line both come to 4 - so the answer could be picked without reading the step");
-  let a = list_size(decoys);
-  let few = less_than(a, 2);
+  let few = list_size_less_than_value(decoys, 2);
   if (not(few && number_is(value))) {
     return decoys;
   }
