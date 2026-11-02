@@ -65,6 +65,14 @@ export function functions_gate_run_unwired_exempt() {
         " is in the list and belongs there, because cross-referencing is rare in that store and fifty of its fifty-six claims hold. putting this one back means first finding a way to see the silence - a sentence that named a verse without claiming the word stands in it",
       ]),
     },
+    {
+      name: fn_name("bible_glyph_groups_marks_repeated_gate_run"),
+      why: "the human took it out of the list on 2026-10-03, and its own prose says so and says why. it is kept as a report a person can still run",
+    },
+    {
+      name: fn_name("cloudflare_site_apps_boot_cold_gate_run"),
+      why: "it opens a real browser for each app against the live published site, so it is slow and needs the internet, and its own prose says it is deliberately not one of the repo-wide gates",
+    },
   ];
   return exempt;
 }
