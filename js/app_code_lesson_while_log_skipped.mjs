@@ -1,3 +1,4 @@
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -201,7 +202,7 @@ export function app_code_lesson_while_log_skipped() {
       " is ",
       "false",
       ", so the ",
-      "{ ... }",
+      app_code_braces_dots(),
       " is skipped, and the ",
       "console.log",
       " inside it writes out nothing",
