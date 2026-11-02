@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { list_get_property } from "./list_get_property.mjs";
@@ -598,8 +599,7 @@ export function app_code_program_step_through_generic(
       for (let k = index; less_than(k, size); k++) {
         let entry = list_get(trace, k);
         for (let action of property_get(entry, "actions")) {
-          let kind = property_get(action, "kind");
-          let b12 = list_includes(["evaluate", "complete"], kind);
+          let b12 = property_in_list(action, "kind", ["evaluate", "complete"]);
           if (not(b12)) {
             return false;
           }
