@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
@@ -39,8 +40,7 @@ export function app_reply_rules_cases_approved_show(root, cases, approvals) {
   let collapsed_set = property_get(fold, "collapsed_set");
   collapsed_set(true);
   function each_approved(one) {
-    let approval = property_get(one, "approval");
-    let name = property_get(approval, "name");
+    let name = property_path_get_2(one, "approval", "name");
     let card = app_reply_rules_file_card(body, "test", name);
     app_reply_rules_case_show(card, one);
   }
