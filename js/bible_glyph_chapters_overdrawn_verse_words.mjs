@@ -17,8 +17,8 @@ export async function bible_glyph_chapters_overdrawn_verse_words(glyph) {
       continue;
     }
     let both = await bible_glyph_chapter_rows_filed(offender.chapter_code);
-    function verse_is(row) {
-      let b = equal(row.verse_number, offender.verse_number);
+    function verse_is(candidate) {
+      let b = equal(candidate.verse_number, offender.verse_number);
       return b;
     }
     let row = both.rows.find(verse_is);
