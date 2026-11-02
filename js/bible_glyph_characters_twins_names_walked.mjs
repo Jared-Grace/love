@@ -1,8 +1,8 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_join_plus } from "./list_join_plus.mjs";
@@ -20,8 +20,7 @@ export function bible_glyph_characters_twins_names_walked() {
   let offenders = [];
   for (let group of groups) {
     let character = property_get(group, "key");
-    let items = property_get(group, "items");
-    let names = list_map_property(items, "name");
+    let names = property_list_map_property(group, "items", "name");
     if (greater_than(names.length, 1)) {
       let list = list_sort_text(names);
       let sharers = list_join_plus(list);
