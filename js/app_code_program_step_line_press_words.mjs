@@ -1,7 +1,6 @@
+import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_size } from "./list_size.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
@@ -17,8 +16,7 @@ import { app_code_program_step_line_never_words } from "./app_code_program_step_
 export function app_code_program_step_line_press_words(lines, trace, index, i) {
   arguments_assert(arguments, 4);
   ("Why line i is not the line to press next, in the program's lines, run in the order trace gives, with index lines run so far: a reason and its words, words and code taking turns, text first; or null where no rule says why. One function so the step-through screen and the gate over every program ask the same thing");
-  let b = list_size(trace);
-  let done = greater_than_equal(index, b);
+  let done = list_index_past_end_is(trace, index);
   ("2026-10-21, at the human's asking: a wrong press says why when the reason is a rule, and the rule is said rather than the answer, so the learner still finds the right line. The first is a line holding only }, which a learner may take for a step; said once each time the next line is asked for. Not picked: making } a step, which would be a press with nothing to do");
   let message = list_get(lines, i);
   let pressed_text = text_trim(message);
