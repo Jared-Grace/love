@@ -1,3 +1,4 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
@@ -85,8 +86,7 @@ export async function function_param_object_property_rename(
   function on_declaration_short(ast) {
     let declaration = js_flo(ast);
     let params = property_get(declaration, "params");
-    let pattern = list_first(params);
-    let pattern_properties = property_get(pattern, "properties");
+    let pattern_properties = list_first_property(params, "properties");
     let lambda$item3 = property_has_name(property_name_after);
     let property = list_find(pattern_properties, lambda$item3);
     object_assign(property, {
