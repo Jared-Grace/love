@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -47,8 +48,7 @@ export async function function_param_object_property_rename(
   }
   function on_declaration(ast) {
     let declaration = js_flo(ast);
-    let params = property_get(declaration, "params");
-    let pattern = list_first(params);
+    let pattern = property_list_first(declaration, "params");
     let type = property_get(pattern, "type");
     let b = equal(type, "ObjectPattern");
     assert_json(b, {
