@@ -1,4 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
+import { load_average_recent } from "./load_average_recent.mjs";
+import { function_call_timed_add } from "./function_call_timed_add.mjs";
 import { qa_app_commit_gate_run_at } from "./qa_app_commit_gate_run_at.mjs";
 import { property_get } from "./property_get.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
@@ -18,6 +21,7 @@ import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { qa_promoted_app_write } from "./qa_promoted_app_write.mjs";
+import { qa_promote_steps_log_add_try } from "./qa_promote_steps_log_add_try.mjs";
 export async function qa_app_commit_promote_judged(search, commit) {
   "$plain search";
   "$plain commit";
@@ -32,44 +36,70 @@ export async function qa_app_commit_promote_judged(search, commit) {
   "Which commit these pieces came out of is written down last, after they are actually in place, so a run that fell over partway through leaves no note claiming a build that did not finish.";
   "★ IT ALSO SAYS WHETHER THIS APP CAME OUT CARRYING ANYTHING NEW. What is on disk now is held against what was written down the last time this app went out, and when the two say the same thing the answer carries a word saying so. Nobody asked that before, which is how a run could prepare eight apps and report eight successes when five of them were the same code under a newer stamp - the run looked exactly as productive either way, so the waste had nothing to show it by. It is asked before the note is written rather than after, because writing it is what destroys the thing being compared against.";
   "★ IT IS SAID RATHER THAN ACTED ON. Being told an app changed nothing is worth having on its own, and stopping short here on the strength of it would be a much larger claim: the pieces are already standing in the folder the sending reads from, so refusing at this point would leave them there unaccounted for rather than leaving nothing behind. The saving that matters was already taken further up, where a page that would have differed by its stamp alone was left where it was.";
+  "★ EVERY SLOW STEP IS TIMED AND THE TIMES ARE KEPT, WHETHER THE RUN SUCCEEDS OR NOT. This takes the better part of an hour and until these were kept nothing could say which step that hour went to. Taking the load and writing the note can only ever cost the note, so neither changes what this does or what it throws.";
   arguments_assert(arguments, 2);
-  let judged = await qa_app_commit_gate_run_at(search, commit);
-  let deployable = property_get(judged, "deployable");
-  true_is_assert_json(deployable, judged);
-  let filed = property_get(judged, "filed");
-  true_is_assert_json(filed, judged);
-  let app_name = property_get(judged, "app");
-  let hashes = await qa_app_commit_promote(search, commit);
-  let file_names = properties_get(hashes);
-  let waiting = folder_web_latest_absolute();
-  await qa_stage_pieces_assert(waiting, file_names);
-  ("Before anything is put where the sending reads from, the app is walked the whole way through as somebody who gets every question right. Every gate there is reads code without ever opening a page, so a page that opens and cannot be used passes all of them: the replacing game drew every symbol as one no rule could touch, and so could not be played at all, for nine days with nothing red. An app with no walk of its own goes straight past.");
-  let stage_name = app_shared_name_latest_text();
-  await qa_app_e2e_happy_run(app_name, stage_name);
-  folder_public_root_noting_set(app_name);
-  async function lambda() {
-    let copied = await html_public_from_latest(search);
-    return copied;
+  let steps = [];
+  let ok = false;
+  let load_before = await catch_null_async(load_average_recent);
+  try {
+    let judged = await function_call_timed_add(
+      steps,
+      qa_app_commit_gate_run_at,
+      [search, commit],
+    );
+    let deployable = property_get(judged, "deployable");
+    true_is_assert_json(deployable, judged);
+    let filed = property_get(judged, "filed");
+    true_is_assert_json(filed, judged);
+    let app_name = property_get(judged, "app");
+    let hashes = await function_call_timed_add(steps, qa_app_commit_promote, [
+      search,
+      commit,
+    ]);
+    let file_names = properties_get(hashes);
+    let waiting = folder_web_latest_absolute();
+    await function_call_timed_add(steps, qa_stage_pieces_assert, [
+      waiting,
+      file_names,
+    ]);
+    ("Before anything is put where the sending reads from, the app is walked the whole way through as somebody who gets every question right. Every gate there is reads code without ever opening a page, so a page that opens and cannot be used passes all of them: the replacing game drew every symbol as one no rule could touch, and so could not be played at all, for nine days with nothing red. An app with no walk of its own goes straight past.");
+    let stage_name = app_shared_name_latest_text();
+    await function_call_timed_add(steps, qa_app_e2e_happy_run, [
+      app_name,
+      stage_name,
+    ]);
+    folder_public_root_noting_set(app_name);
+    async function lambda() {
+      let copied = await html_public_from_latest(search);
+      return copied;
+    }
+    await function_call_timed_add(steps, firebase_deploy_locked_generic, [
+      lambda,
+      qa_app_commit_promote_judged.name,
+    ]);
+    folder_public_root_noting_clear();
+    let promoted = await qa_promoted();
+    let note = property_get_or_null(promoted, app_name);
+    let unwritten = null_is(note);
+    let sent = {};
+    if (not(unwritten)) {
+      sent = property_get(note, "hashes");
+    }
+    let unchanged = json_equal(sent, hashes);
+    await function_call_timed_add(steps, qa_promoted_app_write, [
+      app_name,
+      commit,
+      hashes,
+    ]);
+    let r = {
+      app: app_name,
+      commit,
+      hashes,
+      unchanged,
+    };
+    ok = true;
+    return r;
+  } finally {
+    await qa_promote_steps_log_add_try(search, commit, ok, steps, load_before);
   }
-  await firebase_deploy_locked_generic(
-    lambda,
-    qa_app_commit_promote_judged.name,
-  );
-  folder_public_root_noting_clear();
-  let promoted = await qa_promoted();
-  let note = property_get_or_null(promoted, app_name);
-  let unwritten = null_is(note);
-  let sent = {};
-  if (not(unwritten)) {
-    sent = property_get(note, "hashes");
-  }
-  let unchanged = json_equal(sent, hashes);
-  await qa_promoted_app_write(app_name, commit, hashes);
-  let r = {
-    app: app_name,
-    commit,
-    hashes,
-    unchanged,
-  };
-  return r;
 }

@@ -26,10 +26,16 @@ export async function qa_shares_taken_log_report() {
     let missing = null_is(slowest_ms);
     let seconds = missing ? null : divide_round(slowest_ms, 1000);
     let solo_ms = property_get(row, "solo_ms");
+    function share_seconds(share_ms) {
+      let share_s = divide_round(share_ms, 1000);
+      return share_s;
+    }
+    let shares_seconds = list_map(shares_ms, share_seconds);
     let read = {
       at: property_get(row, "at"),
       shards: property_get(row, "shards"),
       seconds,
+      shares_seconds,
       solo_seconds: divide_round(solo_ms, 1000),
       load_before: property_get(row, "load_before"),
       load_after: property_get(row, "load_after"),

@@ -1,8 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_response_greetings } from "./reply_response_greetings.mjs";
 import { reply_choices_location } from "./reply_choices_location.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -112,7 +112,7 @@ export function reply_proposals() {
       "good morning gets the greeting that is already written rather than one matched to the time of day. A reply naming the morning would be new words, and new words are yours to write.",
     ],
   };
-  ("The four below are one change cut along the lines of the files it lands in. Three real people's details are written into these rules today - a name, a town and a street - and each one sits in a different function, so each gets its own set of lines to read. They were measured together and the measurements below are of all four applied at once; accepting only some of them leaves one of the three still written down here.");
+  ("The two below were written as one change of four, cut along the lines of the files it landed in. The other two took a town and a street out of these rules; both came out another way first, and on 2026-11-02 those two were taken off this list, out of date. The measurements below were taken with all four applied at once, the town rule among them, and have not been taken again.");
   ("★ WHAT IS BEING TAKEN OUT IS SOMEBODY ELSE'S NAME AND ADDRESS OUT OF A PUBLIC REPOSITORY, AND WHAT REPLACES IT IS A DICTIONARY OF NAMES MILLIONS OF PEOPLE HAVE. The rules had to be told a name before they could recognise one, so every person the rules answered was a person whose details had been published here to make it work. A dictionary recognises a great many people and publishes nobody, because every name in it would be in it if this correspondence had never happened.");
   ("A dictionary was chosen over the simpler thing, which was to accept any run of letters at all after a title. Any run of letters would also publish nobody, and it would recognise everybody rather than only the people whose names somebody thought to write down - but it would equally read I am pastor hungry as a name, and it would give the rules no way to tell a name from a word. The dictionary can be wrong about a person, and when it is, that person is on the list by the next commit; a rule that asks nothing can never be wrong and never be improved either.");
   let combined9 = text_combine_multiple([
@@ -125,10 +125,10 @@ export function reply_proposals() {
     fn_name("reply_names"),
     "();",
   ]);
-  let f_name11 = fn_name("reply_once_or_more");
+  let f_name = fn_name("reply_once_or_more");
   let combined11 = text_combine_multiple([
     "-  let names_once_or_more = ",
-    f_name11,
+    f_name,
     "(names);",
   ]);
   let combined12 = text_combine_multiple([
@@ -138,7 +138,7 @@ export function reply_proposals() {
   ]);
   let combined12b = text_combine_multiple([
     "+  let names_once_or_more = ",
-    f_name11,
+    f_name,
     "(names);",
   ]);
   let combined13 = text_combine_multiple([
@@ -231,118 +231,6 @@ export function reply_proposals() {
       "the messages above are made up in the shape of real ones rather than quoted from them, because the real ones are the thing being taken out of here. That claim was false when it was first written - the examples beside the word lists had been quoted, a town and a person's name among them, and a scrub that read the lists walked straight past them. Trivial openings like a bare greeting are the one exception: they identify nobody and stay.",
     ],
   };
-  let combined17 = text_combine_multiple([
-    "   let n = ",
-    fn_name("reply_word_in"),
-    "();",
-  ]);
-  let combined18 = text_combine_multiple([
-    "   let r_countries = ",
-    fn_name("reply_countries"),
-    "();",
-  ]);
-  let combined19 = text_combine_multiple([
-    "-  let r_cities = ",
-    fn_name("reply_cities"),
-    "();",
-  ]);
-  let combined20 = text_combine_multiple([
-    "   let o_n = ",
-    fn_name("reply_optional"),
-    "(n);",
-  ]);
-  let combined21 = text_combine_multiple([
-    "+  let any_word = ",
-    fn_name("reply_word_any"),
-    "();",
-  ]);
-  let combined22 = text_combine_multiple([
-    "+  let r_cities = ",
-    fn_name("reply_optional"),
-    "(",
-    fn_name("reply_sequence"),
-    "([any_word, o_n]));",
-  ]);
-  let combined23 = text_combine_multiple([
-    "+  let o_the = ",
-    fn_name("reply_choice_optional"),
-    '(["the"]);',
-  ]);
-  let combined24 = text_combine_multiple([
-    "   let item = ",
-    fn_name("reply_choices_location"),
-    "();",
-  ]);
-  let combined25 = text_combine_multiple([
-    "   let iam_o_titled_name = ",
-    fn_name("reply_choice"),
-    "([iam, iam_titled_name]);",
-  ]);
-  let combined26 = text_combine_multiple([
-    "   let from_city_country = ",
-    fn_name("reply_sequence_output"),
-    "(",
-  ]);
-  let combined27 = text_combine_multiple([
-    "the two towns this rule was told are then named by nothing, and ",
-    fn_name("reply_cities"),
-    " goes with them once the contact line below has stopped asking for it too.",
-  ]);
-  let town_out = {
-    title: "answer somebody from a town the rules were never told about",
-    fn: fn_name("app_shared_message_reply_from_country"),
-    whole: [fn_name("reply_word_any")],
-    diff: [
-      combined17,
-      combined18,
-      combined19,
-      combined20,
-      combined21,
-      combined22,
-      combined23,
-      combined24,
-      combined25,
-      combined26,
-      '-    [iam_o_titled_name, "from", r_cities, o_n, r_countries],',
-      '+    [iam_o_titled_name, "from", r_cities, o_the, r_countries],',
-      "     item,",
-      "   );",
-      "   return from_city_country;",
-    ],
-    cases: [
-      {
-        from: "3d27ef64ea033e69",
-        message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
-        answered: true,
-        outputs: located,
-      },
-      {
-        from: "40d47c1ec2a9759d",
-        message:
-          "I'mpastorSamuelAndrewMarkFromKarachiPakistancontact 92 03001234567MainRoadKarachiCity",
-        answered: true,
-        outputs: located,
-      },
-      {
-        from: "",
-        message: "I am from the uk",
-        answered: true,
-        outputs: located,
-      },
-      {
-        from: "",
-        message: "I am from Narnia",
-        answered: false,
-        outputs: [],
-      },
-    ],
-    decide: [
-      "the town becomes optional as well as unnamed, which is what lets I am from Kenya answer at all. Today the rule cannot match without a town, so somebody who names only their country gets nothing back.",
-      "I am from prison in Kenya is answered, and so is I am from hospital in Kenya. That is the price of not knowing the world's towns: anything at all can stand where a town stands. The reply says where the servant of God is from rather than repeating where they said they were from, so nothing wrong is quoted back at them - but it is still an answer to a sentence that was not really about a place. Is that price worth paying?",
-      combined27,
-      "the first two messages here are real ones and are shown beside what was really sent. They get nothing back today.",
-    ],
-  };
   let combined28 = text_combine_multiple([
     "+  let v = ",
     fn_name("list_concat_multiple"),
@@ -433,84 +321,6 @@ export function reply_proposals() {
       "three lists rather than one, kept apart by where the words came from. The first two are quotable to a public register of countries word for word; the third is thirty one words somebody chose, and it is the only one that is an opinion. It is the short one on purpose, so it is the one to argue with.",
       combined33,
       "three hundred and twenty words is four thousand bytes on every page that loads these rules. Nothing else on the page is charged for it, because only the reply rules read it.",
-    ],
-  };
-  let combined34 = text_combine_multiple([
-    "   let digits_oom = ",
-    fn_name("reply_once_or_more"),
-    "(rc_digits);",
-  ]);
-  let combined35 = text_combine_multiple([
-    "-  let r_roads = ",
-    fn_name("reply_roads"),
-    "();",
-  ]);
-  let combined36 = text_combine_multiple([
-    "-  let r_cities = ",
-    fn_name("reply_cities"),
-    "();",
-  ]);
-  let combined37 = text_combine_multiple([
-    "+  let road_kinds = ",
-    fn_name("reply_choice"),
-    "([",
-  ]);
-  let combined38 = text_combine_multiple([
-    "+  let r_roads = ",
-    fn_name("reply_sequence"),
-    "([",
-    fn_name("reply_word_any"),
-    "(), road_kinds]);",
-  ]);
-  let combined39 = text_combine_multiple([
-    "+  let r_cities = ",
-    fn_name("reply_word_any"),
-    "();",
-  ]);
-  let combined40 = text_combine_multiple([
-    "   let fn = ",
-    fn_name("reply_sequence"),
-    '(["contact", digits_oom, r_roads, r_cities]);',
-  ]);
-  let combined41 = text_combine_multiple([
-    "the seven words that say what kind of road it is move here out of ",
-    fn_name("reply_roads"),
-    ", which then holds nothing but one real street and is deleted. The street name itself was the only thing in it that had to be told in advance.",
-  ]);
-  let street_out = {
-    title:
-      "stop needing to be told somebody's street before it will read their contact line",
-    fn: fn_name("app_shared_message_reply_choices"),
-    whole: [fn_name("reply_word_any")],
-    diff: [
-      combined34,
-      combined35,
-      combined36,
-      combined37,
-      '+    "avenue",',
-      '+    "blvd",',
-      '+    "circle",',
-      '+    "lane",',
-      '+    "road",',
-      '+    "street",',
-      '+    "way",',
-      "+  ]);",
-      combined38,
-      combined39,
-      combined40,
-    ],
-    cases: [
-      {
-        from: "40d47c1ec2a9759d",
-        message:
-          "I'mpastorSamuelAndrewMarkFromKarachiPakistancontact 92 03001234567MainRoadKarachiCity",
-        answered: true,
-        outputs: located,
-      },
-    ],
-    decide: [
-      combined41,
-      "a contact line is read and then thrown away - nothing in the reply repeats an address back. Should it be read at all, or should a message that gives an address simply be left to the country rule beside it?",
     ],
   };
   ("The two below are one change in two places: the first makes a written-out word forgive the ways it gets mistyped, the second makes the cheapest reading of a message win. They are separate because the first is useful on its own and the second is not, and because the first is the one with numbers in it to argue with.");
@@ -647,7 +457,7 @@ export function reply_proposals() {
       combined50,
       combined51,
       "a letter missing and a letter too many are forgiven once per word however long the word is, and not once every five letters like everything else. At three, a message naming the Falkland Islands was also read as naming the Aland Islands, and would have been answered as such. Those two are the only mistakes that change how long a word is; every other kind keeps the length, so no number of them can walk one word into another.",
-      "measured on the eighteen real messages already saved: nothing that is answered today stops being answered, and eight misspelled messages that get nothing back today are answered. It was measured with the four changes above already applied, because that is the shape it would ship in.",
+      "measured on the eighteen real messages already saved: nothing that is answered today stops being answered, and eight misspelled messages that get nothing back today are answered. It was measured with four changes applied, because that was the shape it would have shipped in; two of those four have since been taken off this list, so these numbers have not been taken in the shape it would ship in now.",
       "it costs time. Those eighteen messages take about four tenths of a second in total today and about eight tenths with this on, and the slowest single message goes from about a seventh of a second to about half a second. That is a reply being written, not a page being drawn, so half a second is probably not felt - but it is roughly twice the work and it is worth knowing before it is on.",
       "of the three hundred and twenty country words, ten pairs can now be read as each other. Every one of them is the same country spelled two ways - guiana and guyana, romania and roumania and rumania, surinam and suriname, bermuda and bermudas, america and merica - so both readings give the same answer. No two different countries reach each other. Chad and Chile do not.",
       "of the one hundred and sixteen runs of letters that appear in the real messages, none newly reads as a country that it is not.",
@@ -691,9 +501,7 @@ export function reply_proposals() {
   let proposals = [
     time_of_day,
     name_out,
-    town_out,
     countries_in,
-    street_out,
     typo_layer,
     cheapest_reading,
   ];
