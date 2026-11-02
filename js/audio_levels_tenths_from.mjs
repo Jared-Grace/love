@@ -1,6 +1,5 @@
-import { round } from "./round.mjs";
+import { multiply_round } from "./multiply_round.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ffmpeg_words_run } from "./ffmpeg_words_run.mjs";
@@ -39,8 +38,7 @@ export async function audio_levels_tenths_from(path_audio, seconds_from) {
   let printed_text = await ffmpeg_words_run(command_words);
   let readings = ffmpeg_metadata_numbers(printed_text, key);
   function lambda(item) {
-    let n = multiply(item.second + from, 10);
-    let top = round(n);
+    let top = multiply_round(item.second + from, 10);
     let second = divide(top, 10);
     let r = {
       second,
