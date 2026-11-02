@@ -1,3 +1,4 @@
+import { property_text_to } from "./property_text_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -69,8 +70,7 @@ export function app_code_console_log_wrong_say(question, answer, choice) {
     for (let action of property_get(entry, "actions")) {
       let left4 = property_get(action, "kind");
       if (equal(left4, "log")) {
-        let input = property_get(action, "value");
-        let item = text_to(input);
+        let item = property_text_to(action, "value");
         list_add(logged, item);
       }
     }
