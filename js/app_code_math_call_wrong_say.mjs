@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -65,8 +66,7 @@ export function app_code_math_call_wrong_say(question, answer, choice) {
   }
   let name = text_slice(code, 0, open);
   function named(candidate) {
-    let left = property_get(candidate, "name");
-    let n = equal(left, name);
+    let n = property_equals(candidate, "name", name);
     return n;
   }
   let f = list_find_or_null(fns, named);
