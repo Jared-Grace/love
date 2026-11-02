@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_psalms_videos_paths } from "./giveaway_psalms_videos_paths.mjs";
 import { object_values } from "./object_values.mjs";
 import { path_basename } from "./path_basename.mjs";
-import { lyric_video_video_name_read_or_null } from "./lyric_video_video_name_read_or_null.mjs";
+import { lyric_video_name_read_or_null } from "./lyric_video_name_read_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
@@ -29,7 +29,7 @@ export async function lyric_video_videos_unclaimed_reckoned(folder_audio) {
   let claimed_unreadable = 0;
   for (let path_video of claimed) {
     let name_claimed = await path_basename(path_video);
-    let read_claimed = lyric_video_video_name_read_or_null(name_claimed);
+    let read_claimed = lyric_video_name_read_or_null(name_claimed);
     if (null_is(read_claimed)) {
       claimed_unreadable = add(claimed_unreadable, 1);
       continue;
@@ -51,7 +51,7 @@ export async function lyric_video_videos_unclaimed_reckoned(folder_audio) {
   let unreadable = [];
   for (let path_spare of spares) {
     let name_spare = await path_basename(path_spare);
-    let read_spare = lyric_video_video_name_read_or_null(name_spare);
+    let read_spare = lyric_video_name_read_or_null(name_spare);
     if (null_is(read_spare)) {
       list_add(unreadable, name_spare);
       continue;

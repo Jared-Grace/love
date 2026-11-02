@@ -10,7 +10,7 @@ import { text_index_of_last_try } from "./text_index_of_last_try.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { add } from "./add.mjs";
 import { text_index_last } from "./text_index_last.mjs";
-export function lyric_video_video_name_read_or_null(name_video) {
+export function lyric_video_name_read_or_null(name_video) {
   arguments_assert(arguments, 1);
   ("$plain name_video");
   ("What a lyric video's file name says about itself - the passage it sings, which singing of it this is, and the translation shelf mark - or nothing at all when the name was not built by this rule.");
