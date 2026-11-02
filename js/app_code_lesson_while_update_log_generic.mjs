@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -11,7 +12,6 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
@@ -93,8 +93,7 @@ export function app_code_lesson_while_update_log_generic(options) {
   }
   function batch_get() {
     "three programs, running one, two and three times";
-    let picked = list_shuffle_take(groups, 3);
-    let pairs = list_map(picked, list_random_item);
+    let pairs = list_shuffle_take_map(groups, 3, list_random_item);
     function program_of(pair) {
       let item = list_get(pair, 0);
       let item2 = list_get(pair, 1);
