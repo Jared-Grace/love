@@ -1,3 +1,4 @@
+import { text_includes_not } from "./text_includes_not.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
@@ -22,8 +23,6 @@ import { list_first } from "./list_first.mjs";
 import { app_code_if_boolean_flipped } from "./app_code_if_boolean_flipped.mjs";
 import { list_without } from "./list_without.mjs";
 import { text_between } from "./text_between.mjs";
-import { text_includes } from "./text_includes.mjs";
-import { not } from "./not.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
@@ -121,8 +120,7 @@ export function app_code_lesson_if_else_once() {
     let opening = list_get(lines4, 1);
     let name3 = text_between(opening, "(", ")");
     let words6 = words_of(answer);
-    let with_else2 = text_includes(answer, "else");
-    let n = not(with_else2);
+    let n = text_includes_not(answer, "else");
     let other = program_get(name3, words6, n);
     let found2 = [other];
     return found2;
