@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_video_address } from "./youtube_video_address.mjs";
@@ -16,8 +17,7 @@ export async function youtube_video_replaced_write(video_id, video_id_new) {
   arguments_assert(arguments, 2);
   let line = "Newer version: " + youtube_video_address(video_id_new);
   let record = await youtube_video_record(video_id);
-  let snippet = property_get(record, "snippet");
-  let description = property_get(snippet, "description");
+  let description = property_path_get_2(record, "snippet", "description");
   let present = text_starts_with(description, line);
   if (not(present)) {
     await youtube_video_description_write(
