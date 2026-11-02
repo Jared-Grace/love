@@ -1,5 +1,5 @@
+import { app_code_program_trace_line } from "./app_code_program_trace_line.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -17,7 +17,6 @@ import { null_is } from "./null_is.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { text_slice } from "./text_slice.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_index_of_last_try } from "./text_index_of_last_try.mjs";
@@ -122,10 +121,7 @@ export function app_code_if_blocks(code) {
         }
       }
     }
-    let start2 = property_get(test, "start");
-    let before = text_slice(code, 0, start2);
-    let lines = text_split_newline(before);
-    let line2 = list_size_subtract(lines, 1);
+    let line2 = app_code_program_trace_line(test, code);
     let b2 = property_exists(conditions, line2);
     if (not(b2)) {
       error({
