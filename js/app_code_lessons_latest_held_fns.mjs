@@ -1,6 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_while_not_equal } from "./app_code_lesson_while_not_equal.mjs";
-import { app_code_lesson_while_product } from "./app_code_lesson_while_product.mjs";
+import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet.mjs";
 import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
 import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
@@ -122,9 +121,9 @@ export function app_code_lessons_latest_held_fns() {
   ("2026-11-01: A log inside a skipped while and While doubling released to latest at the human's asking");
   ("2026-11-01: hold While asking !==, new at the human's asking straight after While asking >=, until the human has read its first draft");
   ("2026-11-01: hold A running product, new at the human's asking straight after A running total of squares, and While asking &&, straight after Two numbers meeting, until the human has read their first drafts");
+  ("2026-11-02: latest runs through Inside and outside and stops there, at the human's asking: While asking !== and A running product released, and Two names held along with everything after it");
   let fns = [
-    app_code_lesson_while_not_equal,
-    app_code_lesson_while_product,
+    app_code_lesson_while_two_names,
     app_code_lesson_while_two_meet,
     app_code_lesson_while_and,
     app_code_lesson_while_if,
