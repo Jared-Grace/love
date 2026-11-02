@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -118,8 +119,7 @@ export async function gloss_chapter_occurrence_claims_wrong_urdu_repair(
       : "expected_exact";
     let number = property_get(claim, rule_key);
     function spelling_is(written) {
-      let left = property_get(ordinals, written);
-      let eq2 = equal(left, number);
+      let eq2 = property_equals(ordinals, written, number);
       return eq2;
     }
     let spelled_alike = list_filter(spellings, spelling_is);
