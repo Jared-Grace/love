@@ -1,9 +1,9 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
 import { not } from "./not.mjs";
-import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -28,8 +28,7 @@ export function app_code_if_blocks_lines_kept(code, blocks, count) {
     if (not(b)) {
       continue;
     }
-    let block = list_get(blocks, n);
-    let steps = property_get(block, "steps");
+    let steps = list_get_property(blocks, n, "steps");
     for (let step of steps) {
       let fades = property_get(step, "fades");
       list_add_multiple(removed, fades);
