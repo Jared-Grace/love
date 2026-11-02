@@ -1,3 +1,4 @@
+import { buffer_to_json } from "./buffer_to_json.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_archive_send_waits } from "./giveaway_archive_send_waits.mjs";
@@ -6,8 +7,6 @@ import { sleep_seconds } from "./sleep_seconds.mjs";
 import { http_answer } from "./http_answer.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
-import { buffer_text_to } from "./buffer_text_to.mjs";
-import { json_from } from "./json_from.mjs";
 import { giveaway_archive_status_again_is } from "./giveaway_archive_status_again_is.mjs";
 export async function giveaway_archive_item_read_or_null(identifier) {
   arguments_assert(arguments, 1);
@@ -39,8 +38,7 @@ export async function giveaway_archive_item_read_or_null(identifier) {
       let status = answered.status;
       let good_is = equal(status, 200);
       if (good_is) {
-        let text = buffer_text_to(answered.bytes);
-        let box = json_from(text);
+        let box = buffer_to_json(answered.bytes);
         return box;
       }
       let again_is = giveaway_archive_status_again_is(status);
