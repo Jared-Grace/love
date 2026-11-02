@@ -1,9 +1,8 @@
+import { buffer_to_json } from "./buffer_to_json.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { ebible_version_chapters_all_upload_path } from "./ebible_version_chapters_all_upload_path.mjs";
 import { firebase_storage_download_generic } from "./firebase_storage_download_generic.mjs";
 import { http_get_large } from "./http_get_large.mjs";
-import { buffer_text_to } from "./buffer_text_to.mjs";
-import { json_from } from "./json_from.mjs";
 import { json_decompress_object } from "./json_decompress_object.mjs";
 export async function ebible_version_chapters_all_download_fresh(version) {
   "every chapter of one version in a single file, remembering nothing; the caller decides what to keep";
@@ -16,8 +15,7 @@ export async function ebible_version_chapters_all_download_fresh(version) {
     destination,
     http_get_large,
   );
-  let s = buffer_text_to(buffer);
-  let c = json_from(s);
+  let c = buffer_to_json(buffer);
   let chapters = await json_decompress_object(c);
   return chapters;
 }
