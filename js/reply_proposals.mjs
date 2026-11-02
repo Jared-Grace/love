@@ -8,6 +8,8 @@ import { reply_response_good_morning } from "./reply_response_good_morning.mjs";
 import { reply_response_good_afternoon } from "./reply_response_good_afternoon.mjs";
 import { reply_response_good_evening } from "./reply_response_good_evening.mjs";
 import { reply_response_greetings_friend } from "./reply_response_greetings_friend.mjs";
+import { reply_response_teaching } from "./reply_response_teaching.mjs";
+import { prayer_blessing } from "./prayer_blessing.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -918,6 +920,110 @@ export function reply_proposals() {
       "measured on the whole rule set: all eighteen saved tests give the same answer as before. That includes the full message this came from, which still gets no reply because of what follows the greeting.",
     ],
   };
+  let teaching_response = reply_response_teaching();
+  let teaching_said = [teaching_response];
+  let ministry_response = prayer_blessing("your ministry");
+  let ministry_said = [ministry_response];
+  let teacher_removed_titles = text_combine_multiple([
+    "-  let titles = ",
+    fn_name("reply_titles_ministry"),
+    "();",
+  ]);
+  let teacher_added_titles = text_combine_multiple([
+    "+  let titles = ",
+    fn_name("reply_titles_preaching"),
+    "();",
+  ]);
+  let teacher_kept_item = text_combine_multiple([
+    "   let item = ",
+    fn_name("prayer_blessing"),
+    '("your ministry");',
+  ]);
+  let teacher_kept_minister = text_combine_multiple([
+    "   let minister = ",
+    fn_name("reply_i_am_a_output"),
+    "(titles, item);",
+  ]);
+  let teacher_added_teaching = text_combine_multiple([
+    "+  let teaching = ",
+    fn_name("reply_response_teaching"),
+    "();",
+  ]);
+  let teacher_added_rule = text_combine_multiple([
+    "+  let teacher = ",
+    fn_name("reply_i_am_a_output"),
+    '("teacher", teaching);',
+  ]);
+  let teacher_added_choice = text_combine_multiple([
+    "+  let ministers = ",
+    fn_name("reply_choice"),
+    "([minister, teacher]);",
+  ]);
+  let teacher_blessed = {
+    title: "bless the teaching of somebody who says they are a teacher",
+    fn: fn_name("app_shared_message_reply_minister"),
+    whole: [
+      fn_name("reply_response_teaching"),
+      fn_name("prayer_wrap"),
+      fn_name("reply_i_am_a_output"),
+      fn_name("reply_titles_preaching"),
+    ],
+    diff: [
+      teacher_removed_titles,
+      teacher_added_titles,
+      teacher_kept_item,
+      teacher_kept_minister,
+      teacher_added_teaching,
+      teacher_added_rule,
+      teacher_added_choice,
+      "-  return minister;",
+      "+  return ministers;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "amteacher",
+        answered: true,
+        outputs: teaching_said,
+      },
+      {
+        from: "",
+        message: "am teacher",
+        answered: true,
+        outputs: teaching_said,
+      },
+      {
+        from: "",
+        message: "I am a teacher",
+        answered: true,
+        outputs: teaching_said,
+      },
+      {
+        from: "",
+        message: "I'm a teacher",
+        answered: true,
+        outputs: teaching_said,
+      },
+      {
+        from: "",
+        message: "I am a pastor",
+        answered: true,
+        outputs: ministry_said,
+      },
+      {
+        from: "",
+        message: "teacher",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "a teacher got the blessing on your ministry before this. Now only an apostle, evangelist, pastor or preacher does.",
+      "the words run straight into the end of the prayer: May God bless your teaching Amen! Nothing was added between them, because those are the words given.",
+      "this is any teacher, not only one in a church. Somebody who teaches school gets the same prayer.",
+      "measured on the whole rule set: all eighteen saved tests give the same answer as before.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -927,6 +1033,7 @@ export function reply_proposals() {
     name_piece,
     good_morning_back,
     friend_in_christ,
+    teacher_blessed,
   ];
   return proposals;
 }

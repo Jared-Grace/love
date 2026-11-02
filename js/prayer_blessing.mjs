@@ -1,14 +1,13 @@
-import { prayer_end } from "./prayer_end.mjs";
-import { text_lord_bless } from "./text_lord_bless.mjs";
-import { prayer_start } from "./prayer_start.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { text_lord_bless } from "./text_lord_bless.mjs";
+import { prayer_wrap } from "./prayer_wrap.mjs";
 export function prayer_blessing(blessed) {
-  let v = text_combine_multiple([
-    prayer_start(),
-    text_lord_bless(),
+  let v2 = text_lord_bless();
+  let prayer = text_combine_multiple([
+    v2,
     blessed,
     " exceedingly abundantly more than anyone can ask or think ",
-    prayer_end(),
   ]);
+  let v = prayer_wrap(prayer);
   return v;
 }
