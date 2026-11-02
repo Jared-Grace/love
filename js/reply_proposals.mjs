@@ -8,8 +8,8 @@ import { reply_response_good_morning } from "./reply_response_good_morning.mjs";
 import { reply_response_good_afternoon } from "./reply_response_good_afternoon.mjs";
 import { reply_response_good_evening } from "./reply_response_good_evening.mjs";
 import { reply_response_greetings_friend } from "./reply_response_greetings_friend.mjs";
-import { reply_response_teaching } from "./reply_response_teaching.mjs";
 import { prayer_blessing } from "./prayer_blessing.mjs";
+import { prayer_wrap } from "./prayer_wrap.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -920,7 +920,7 @@ export function reply_proposals() {
       "measured on the whole rule set: all eighteen saved tests give the same answer as before. That includes the full message this came from, which still gets no reply because of what follows the greeting.",
     ],
   };
-  let teaching_response = reply_response_teaching();
+  let teaching_response = prayer_blessing("your ministry and teaching");
   let teaching_said = [teaching_response];
   let ministry_response = prayer_blessing("your ministry");
   let ministry_said = [ministry_response];
@@ -946,8 +946,8 @@ export function reply_proposals() {
   ]);
   let teacher_added_teaching = text_combine_multiple([
     "+  let teaching = ",
-    fn_name("reply_response_teaching"),
-    "();",
+    fn_name("prayer_blessing"),
+    '("your ministry and teaching");',
   ]);
   let teacher_added_rule = text_combine_multiple([
     "+  let teacher = ",
@@ -960,11 +960,11 @@ export function reply_proposals() {
     "([minister, teacher]);",
   ]);
   let teacher_blessed = {
-    title: "bless the teaching of somebody who says they are a teacher",
+    title:
+      "bless the ministry and teaching of somebody who says they are a teacher",
     fn: fn_name("app_shared_message_reply_minister"),
     whole: [
-      fn_name("reply_response_teaching"),
-      fn_name("prayer_wrap"),
+      fn_name("prayer_blessing"),
       fn_name("reply_i_am_a_output"),
       fn_name("reply_titles_preaching"),
     ],
@@ -1018,9 +1018,55 @@ export function reply_proposals() {
       },
     ],
     decide: [
-      "a teacher got the blessing on your ministry before this. Now only an apostle, evangelist, pastor or preacher does.",
-      "the words run straight into the end of the prayer: May God bless your teaching Amen! Nothing was added between them, because those are the words given.",
-      "this is any teacher, not only one in a church. Somebody who teaches school gets the same prayer.",
+      "a teacher got the blessing on your ministry before this. Now a teacher gets the same prayer with your ministry and teaching, and an apostle, evangelist, pastor or preacher keeps your ministry.",
+      "this is any teacher, not only one in a church. Somebody who teaches school is also blessed in their ministry.",
+      "measured on the whole rule set: all eighteen saved tests give the same answer as before.",
+    ],
+  };
+  let blessing_kept_start = text_combine_multiple([
+    "   let v2 = ",
+    fn_name("text_lord_bless"),
+    "();",
+  ]);
+  let blessing_kept_combine = text_combine_multiple([
+    "   let prayer = ",
+    fn_name("text_combine_multiple"),
+    "([",
+  ]);
+  let blessing_kept_wrap = text_combine_multiple([
+    "   let v = ",
+    fn_name("prayer_wrap"),
+    "(prayer);",
+  ]);
+  let pastor_one_space = prayer_wrap(
+    "May the LORD bless your ministry exceedingly abundantly more than anyone can ask or think",
+  );
+  let blessing_one_space = {
+    title: "one space before Amen in the blessing prayer",
+    fn: fn_name("prayer_blessing"),
+    whole: [],
+    diff: [
+      blessing_kept_start,
+      blessing_kept_combine,
+      "     v2,",
+      "     blessed,",
+      '-    " exceedingly abundantly more than anyone can ask or think ",',
+      '+    " exceedingly abundantly more than anyone can ask or think",',
+      "   ]);",
+      blessing_kept_wrap,
+      "   return v;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "I am a pastor",
+        answered: true,
+        outputs: [pastor_one_space],
+      },
+    ],
+    decide: [
+      "two spaces sit before Amen today. This makes it one, as you wrote it.",
+      "the longer blessing on you, your family, your church and your country changes the same way, including in the reply app.",
       "measured on the whole rule set: all eighteen saved tests give the same answer as before.",
     ],
   };
@@ -1034,6 +1080,7 @@ export function reply_proposals() {
     good_morning_back,
     friend_in_christ,
     teacher_blessed,
+    blessing_one_space,
   ];
   return proposals;
 }
