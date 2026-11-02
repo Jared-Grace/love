@@ -21,6 +21,11 @@ import { app_reply_rules_whole_show } from "./app_reply_rules_whole_show.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_reply_rules_case_approve_show } from "./app_reply_rules_case_approve_show.mjs";
 import { app_reply_rules_cases_approved_show } from "./app_reply_rules_cases_approved_show.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_size } from "./list_size.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
+import { noop } from "./noop.mjs";
 export function app_reply_rules_proposal_show(root, proposal, approvals) {
   arguments_assert(arguments, 3);
   ("One change to the reply rules laid out to be said yes or no to: what it is for, the lines it would alter, the exchanges it was measured to produce, and the questions about it that nobody else can answer.");
@@ -91,13 +96,25 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   }
   list_map(cases, each_case);
   app_reply_rules_cases_approved_show(block, cases, approvals);
-  let decide_head = html_p_text(block, "Yours to decide");
-  html_style_margin_top(decide_head, "1.5em");
-  html_style_font_size(decide_head, "0.9em");
-  html_font_color_set(decide_head, gray);
+  ("The questions stay shut under one line that says how many there are, because a verdict does not wait on any of them, and each change on the page was otherwise followed by a wall of them. With none, nothing is drawn.");
   let decide = property_get(proposal, "decide");
+  let none = list_empty_is(decide);
+  if (none) {
+    let r2 = [];
+    return r2;
+  }
+  let decide_size = list_size(decide);
+  let decide_title = text_combine_multiple([
+    "Yours to decide (",
+    decide_size,
+    ")",
+  ]);
+  let fold = app_shared_container_blue_collapsible(block, decide_title, noop);
+  let decide_body = property_get(fold, "body");
+  let collapsed_set = property_get(fold, "collapsed_set");
+  collapsed_set(true);
   function each_question(question) {
-    let line = html_p_text(block, question);
+    let line = html_p_text(decide_body, question);
     html_style_font_size(line, "0.85em");
     return line;
   }
