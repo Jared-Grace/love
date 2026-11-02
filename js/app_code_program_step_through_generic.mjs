@@ -1,3 +1,4 @@
+import { property_text_to } from "./property_text_to.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
@@ -109,7 +110,6 @@ import { app_code_expression_value_choose_buttons_generic } from "./app_code_exp
 import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
-import { text_to } from "./text_to.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
@@ -947,8 +947,7 @@ export function app_code_program_step_through_generic(
     if (equal(kind, "log")) {
       ("2026-10-14, at the human's asking: what is logged comes in as the guide's words do - the room grows, and the words show once it has arrived - by the same function, so the two cannot come to move differently. Only what is new is hidden while it grows, so what was logged before stays readable");
       ("2026-10-14, at the human's asking: every line logged goes into the one box, under the one label, as the output of a program is drawn everywhere else in this course; the first log brings the label and the box, and each one after it adds a line to the box. Not picked: a box for each log, done first, which drew one output as several");
-      let value3 = property_get(action, "value");
-      let answer = text_to(value3);
+      let answer = property_text_to(action, "value");
       let duration3 = app_shared_animation_duration();
       let box2 = property_get(state, "logged_box");
       if (null_is(box2)) {
