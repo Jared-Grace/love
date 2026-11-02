@@ -1,9 +1,8 @@
-import { json_from } from "./json_from.mjs";
+import { buffer_to_json } from "./buffer_to_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_oauth_access_token } from "./youtube_oauth_access_token.mjs";
 import { http_answer } from "./http_answer.mjs";
 import { property_get } from "./property_get.mjs";
-import { buffer_text_to } from "./buffer_text_to.mjs";
 export async function youtube_oauth_access_token_allows() {
   arguments_assert(arguments, 0);
   ("What Google says the key the channel is opened with is allowed to do: the permissions it carries, how long it has left, and whether Google recognises it at all - never the key itself.");
@@ -15,12 +14,12 @@ export async function youtube_oauth_access_token_allows() {
     encodeURIComponent(access_token);
   let answer = await http_answer(url, {
     method: "GET",
-    headers: {}, body: null,
+    headers: {},
+    body: null,
   });
   let status = property_get(answer, "status");
   let buffer = property_get(answer, "bytes");
-  let said = buffer_text_to(buffer);
-  let info = json_from(said);
+  let info = buffer_to_json(buffer);
   let r = {
     status,
     scope: info.scope ?? null,
