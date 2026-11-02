@@ -1,3 +1,4 @@
+import { integer_even_is } from "./integer_even_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -55,7 +56,6 @@ import { null_is } from "./null_is.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
-import { modulo } from "./modulo.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_take } from "./list_take.mjs";
@@ -346,8 +346,7 @@ export function app_code_program_step_through_generic(
         let words = null_is(choose) ? null : property_get(choose, "words");
         let tail = list_last(sentence);
         let count = list_size(sentence);
-        let left10 = modulo(count, 2);
-        let tail_code = equal(left10, 0);
+        let tail_code = integer_even_is(count);
         ("the words to choose end the last sentence: at the end of its last run of words, or as the whole of its last run of code");
         let inline =
           equal(sentence, last) &&
