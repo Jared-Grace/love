@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -124,8 +125,7 @@ export function app_code_if_blocks(code) {
     let start2 = property_get(test, "start");
     let before = text_slice(code, 0, start2);
     let lines = text_split_newline(before);
-    let left4 = list_size(lines);
-    let line2 = subtract(left4, 1);
+    let line2 = list_size_subtract(lines, 1);
     let b2 = property_exists(conditions, line2);
     if (not(b2)) {
       error({
