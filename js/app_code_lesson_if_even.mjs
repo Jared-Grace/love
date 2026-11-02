@@ -1,3 +1,4 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
@@ -9,8 +10,6 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_first } from "./list_first.mjs";
@@ -64,8 +63,7 @@ export function app_code_lesson_if_even() {
     "the number named, written out, then written out again as even inside the if";
     let statement = logged(" is even");
     let if_lines = js_code_if_lines(even_check, statement);
-    let right3 = json_to(number);
-    let code2 = js_code_let_statement(name, right3);
+    let code2 = js_code_let_json_statement(name, number);
     let v = logged(" is a number");
     let lines = list_concat([code2, v], if_lines);
     return lines;
