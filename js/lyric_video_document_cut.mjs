@@ -1,9 +1,8 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { json_copy } from "./json_copy.mjs";
 import { math_max } from "./math_max.mjs";
-import { round } from "./round.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { number_is } from "./number_is.mjs";
 export function lyric_video_document_cut(document, seconds) {
@@ -17,8 +16,7 @@ export function lyric_video_document_cut(document, seconds) {
   function moved(moment) {
     let earlier = subtract(moment, seconds);
     let kept = math_max(earlier, 0);
-    let n = multiply(kept, 100000);
-    let top = round(n);
+    let top = multiply_round(kept, 100000);
     let r = divide(top, 100000);
     return r;
   }
