@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -6,7 +7,6 @@ import { text_trim } from "./text_trim.mjs";
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-import { property_get } from "./property_get.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { null_is } from "./null_is.mjs";
@@ -50,8 +50,7 @@ export function app_code_program_step_line_press_words(lines, trace, index, i) {
     ];
   } else if (not(done)) {
     ("2026-10-21, at the human's asking: the second is a line pressed below an if that is to run next - most likely if (false), whose { ... } the learner can already see will not run. The if line still runs first, since running it is how the computer finds that out. Not picked: taking the skip as right for a written false, which would teach skipping whenever the learner thinks they know the answer");
-    let object = list_get(trace, index);
-    let line_due = property_get(object, "line");
+    let line_due = list_get_property(trace, index, "line");
     let message3 = list_get(lines, line_due);
     let due_text = text_trim(message3);
     if (text_starts_with(due_text, "if (") && greater_than(i, line_due)) {
