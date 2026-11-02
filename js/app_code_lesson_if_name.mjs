@@ -1,8 +1,7 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { json_to } from "./json_to.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -26,8 +25,7 @@ export function app_code_lesson_if_name() {
   let after_shown = list_get(fruits, 1);
   function setup_get(name, value) {
     "let name = value;";
-    let right = json_to(value);
-    let line = js_code_let_statement(name, right);
+    let line = js_code_let_json_statement(name, value);
     let setup = [line];
     return setup;
   }
