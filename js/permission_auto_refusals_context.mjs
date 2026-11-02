@@ -1,3 +1,4 @@
+import { object_empty_is } from "./object_empty_is.mjs";
 import { functions_auto_seams } from "./functions_auto_seams.mjs";
 import { permission_grant_refusals_context } from "./permission_grant_refusals_context.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -5,7 +6,6 @@ import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { functions_outside_irreversible_fenced } from "./functions_outside_irreversible_fenced.mjs";
 import { function_seams_reached_paths_confined_memo } from "./function_seams_reached_paths_confined_memo.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { list_add } from "./list_add.mjs";
 import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
 export async function permission_auto_refusals_context(unaliased, context) {
@@ -28,8 +28,7 @@ export async function permission_auto_refusals_context(unaliased, context) {
     confined,
     remembered,
   );
-  let reached = object_property_names(paths);
-  let none = list_empty_is(reached);
+  let none = object_empty_is(paths);
   if (not(none)) {
     list_add(
       refusals,
