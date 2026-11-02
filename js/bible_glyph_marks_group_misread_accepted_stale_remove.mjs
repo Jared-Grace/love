@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
@@ -44,8 +45,7 @@ export async function bible_glyph_marks_group_misread_accepted_stale_remove() {
   function lambda(ast) {
     let arrays = js_list_type(ast, "ArrayExpression");
     function outer_is(v) {
-      let node_outer = property_get(v, "node");
-      let elements = property_get(node_outer, "elements");
+      let elements = property_path_get_2(v, "node", "elements");
       let a = list_size(elements);
       let r = greater_than(a, 0) && equal(elements[0].type, "ArrayExpression");
       return r;
