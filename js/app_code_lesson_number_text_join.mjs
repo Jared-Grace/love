@@ -1,6 +1,6 @@
+import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { app_code_lesson_number_text_plus } from "./app_code_lesson_number_text_plus.mjs";
-import { text_size } from "./text_size.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -15,7 +15,6 @@ import { list_map } from "./list_map.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_between } from "./text_between.mjs";
-import { text_skip } from "./text_skip.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -73,8 +72,7 @@ export function app_code_lesson_number_text_join() {
   function decoys(question, answer) {
     "the name written out in place of the number, and the two run together with no space";
     let number = text_between(question, "= ", ";");
-    let skip_count = text_size(number);
-    let ending = text_skip(answer, skip_count);
+    let ending = text_prefix_without_inner(answer, number);
     let named = text_combine(name, ending);
     let right3 = text_trim(ending);
     let no_space = text_combine(number, right3);
