@@ -1,3 +1,4 @@
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -34,12 +35,12 @@ export function app_code_lesson_braces_run_explain_generic(
     let box_steps = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_steps, [
       "When a ",
-      "{ ... }",
+      app_code_braces_dots(),
       " does not run, it is as if its lines were not there",
     ]);
     app_code_div_cycle_code(box_steps, [
       "When a ",
-      "{ ... }",
+      app_code_braces_dots(),
       " runs, it is as if only its lines were there",
     ]);
     ("2026-10-12, at the human's asking: then one program of the shape answered section by section, so the writing explains the exercise asked. Its program is the first of a fresh four, so it goes a different way from one visit to the next, as the examples do.");
@@ -88,7 +89,10 @@ export function app_code_lesson_braces_run_explain_generic(
       },
     ],
   });
-  let name_id = app_code_lesson_statement_title_name_id(title, "{ ... }");
+  let name_id = app_code_lesson_statement_title_name_id(
+    title,
+    app_code_braces_dots(),
+  );
   let lesson = app_code_lesson_base(
     name_id,
     above,
