@@ -963,11 +963,7 @@ export function reply_proposals() {
     title:
       "bless the ministry and teaching of somebody who says they are a teacher",
     fn: fn_name("app_shared_message_reply_minister"),
-    whole: [
-      fn_name("prayer_blessing"),
-      fn_name("reply_i_am_a_output"),
-      fn_name("reply_titles_preaching"),
-    ],
+    whole: [fn_name("reply_i_am_a_output"), fn_name("reply_titles_preaching")],
     diff: [
       teacher_removed_titles,
       teacher_added_titles,
