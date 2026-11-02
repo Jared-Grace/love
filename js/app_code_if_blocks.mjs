@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -46,8 +47,7 @@ export function app_code_if_blocks(code) {
     }
     let type = property_get(node, "type");
     if (equal(type, "VariableDeclarator")) {
-      let id = property_get(node, "id");
-      let name = property_get(id, "name");
+      let name = property_path_get_2(node, "id", "name");
       let init = property_get(node, "init");
       ("2026-10-15: a let may hold another name's value, let b = a;, read the way an if's test is, so the lessons that copy a name can be stepped through too. Not picked: reading only a value written out, which stopped at the copy");
       ("2026-10-15: a let may also give a sum, let b = a + 1;, which this does not solve; the name is noted as unread and stops the program only if an if asks it, so the lessons that add to a name can be stepped through. Not picked: solving the sum here, a second solver beside the trace's");
