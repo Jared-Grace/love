@@ -1,10 +1,9 @@
+import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_if_lines_multiple } from "./js_code_if_lines_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -58,8 +57,7 @@ export function app_code_lesson_if_two_lines() {
   }
   function logged(word) {
     'console.log("word");';
-    let code = app_code_string_code(word);
-    let statement = js_code_console_log_statement(code);
+    let statement = app_code_word_console_log_statement(word);
     return statement;
   }
   function program_lines(condition, words, if_first) {
