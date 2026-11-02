@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { permission_auto_pin_assert } from "./permission_auto_pin_assert.mjs";
@@ -5,7 +6,6 @@ import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { permission_grant_names } from "./permission_grant_names.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { not } from "./not.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { permission_grant_context } from "./permission_grant_context.mjs";
 import { permission_auto_refusals_context } from "./permission_auto_refusals_context.mjs";
@@ -28,8 +28,7 @@ export async function permission_grant_add_auto_gates_ungranted() {
     if (not(gate)) {
       return false;
     }
-    let held = list_includes(granted, name);
-    let n = not(held);
+    let n = list_includes_not(granted, name);
     return n;
   }
   let ungranted = list_filter(names, lambda);
