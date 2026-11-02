@@ -1,3 +1,4 @@
+import { text_skip } from "./text_skip.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_in_list } from "./property_in_list.mjs";
@@ -281,8 +282,7 @@ export function app_code_program_step_through_generic(
     html_span_text(row, text3);
     let text4 = text_slice(text, from, to);
     let piece = html_span_text(row, text4);
-    let to3 = text_size(text);
-    let text5 = text_slice(text, to, to3);
+    let text5 = text_skip(text, to);
     html_span_text(row, text5);
     return piece;
   }
