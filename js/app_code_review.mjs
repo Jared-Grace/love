@@ -14,6 +14,7 @@ import { app_code_review_go_home } from "./app_code_review_go_home.mjs";
 import { app_code_review_home_button } from "./app_code_review_home_button.mjs";
 import { app_code_review_present } from "./app_code_review_present.mjs";
 export function app_code_review(context) {
+  "The review screen at a checkpoint: the milestone intro on first arrival and otherwise the result with its restart and home buttons.";
   let root = html_clear_context(context);
   app_code_review_title_strip(root, context);
   let checkpoint = app_code_review_checkpoint(context);
