@@ -4987,6 +4987,34 @@ REWORD_DENY_LEAD = (
     "to the human."
 )
 
+DISPATCHER_NAME_VARIABLE_DENY_REASON = (
+    "This runs `node scripts/ai.mjs $name` over a name this hook cannot "
+    "know - a variable, or a list from a glob or `$(...)` - and an allow rule "
+    "matches written text, so no grant can ever cover it. Write the names "
+    "out: run the listing as its own call, then run each name literally. A "
+    "`for` over a written list of granted names runs with no prompt."
+)
+
+
+def dispatcher_name_variable_is(command, safe_verbs, safe_exact_commands):
+    """True when the refused part of `command` runs a dispatcher whose
+    function name is an unresolved variable. Asking the human about it buys
+    nothing: the human would be approving a name neither of you can see, and
+    writing the names out always works, so the agent is sent back instead.
+    A loop over a written list has its names substituted before this is
+    asked, so what still starts with `$` here truly cannot be known."""
+    try:
+        found = untrusted_piece(command, safe_verbs, safe_exact_commands)
+    except Exception:
+        return False
+    if found is None or found[0] is None:
+        return False
+    words = list(found[0])
+    for index in range(len(words) - 2):
+        if words[index] == "node" and words[index + 1] in NODE_DISPATCHER_SCRIPTS:
+            return words[index + 2].startswith("$")
+    return False
+
 
 def splittable_statements(command, safe_verbs, safe_exact_commands):
     """If `command` is a chain that would be better run as separate Bash calls,
@@ -6160,6 +6188,9 @@ def main():
             "granted once by name and never asked about again - a "
             "chain never can be."
         ))
+
+    if dispatcher_name_variable_is(command, safe_verbs, safe_exact_commands):
+        return decide("deny", DISPATCHER_NAME_VARIABLE_DENY_REASON)
 
     verb = matched_leading_verb(command, safe_verbs)
     if verb is not None and verb_matched_mid_word(command, verb):
