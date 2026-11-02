@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -29,8 +30,7 @@ export async function youtube_video_delete_replaced_private_lyric_video(
   let snippets = [];
   for (let video_id of ids) {
     let record = await youtube_video_record(video_id);
-    let status = property_get(record, "status");
-    let privacy = property_get(status, "privacyStatus");
+    let privacy = property_path_get_2(record, "status", "privacyStatus");
     let private_is = equal(privacy, "private");
     assert_json(private_is, {
       hint: "both videos must be private; a video anyone can see is taken down by a person",
