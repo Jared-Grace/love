@@ -677,8 +677,8 @@ export function app_code_program_step_through_generic(
     if (equal(kind, "reset")) {
       ("2026-10-28, at the human's asking: a line run again is put back the way it is written, its names in place of the values solved into it the last time it ran");
       ("2026-10-29, at the human's asking: a while line run again puts back its whole block, every line the reset names");
-      let lines = property_get(action, "lines");
-      each(lines, line_restore);
+      let action_lines = property_get(action, "lines");
+      each(action_lines, line_restore);
       return;
     }
     if (equal(kind, "evaluate")) {
