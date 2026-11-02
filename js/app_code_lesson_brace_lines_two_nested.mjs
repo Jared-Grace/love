@@ -1,3 +1,4 @@
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -45,7 +46,7 @@ export function app_code_lesson_brace_lines_two_nested() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "The lines between braces, one inside the other",
-    "{ ... }",
+    app_code_braces_dots(),
   );
   let lesson = app_code_lesson_brace_lines_generic(name_id, above, codes_get);
   return lesson;
