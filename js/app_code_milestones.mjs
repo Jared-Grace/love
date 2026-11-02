@@ -10,9 +10,9 @@ import { list_map } from "./list_map.mjs";
 import { app_code_batch_braces_two_is } from "./app_code_batch_braces_two_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { add_1 } from "./add_1.mjs";
+import { list_max } from "./list_max.mjs";
 import { app_code_batch_kind_has } from "./app_code_batch_kind_has.mjs";
 import { list_filter_map_property } from "./list_filter_map_property.mjs";
-import { list_max } from "./list_max.mjs";
 import { app_code_review_kind_run_is } from "./app_code_review_kind_run_is.mjs";
 import { app_code_review_kind_step_is } from "./app_code_review_kind_step_is.mjs";
 import { app_code_review_kind_line_missing_is } from "./app_code_review_kind_line_missing_is.mjs";
@@ -53,7 +53,10 @@ export function app_code_milestones() {
     let number_inner = add_1(index);
     return number_inner;
   }
-  ("Each stands after the last lesson it draws from, so it is reached only once every lesson in it has been met. The labels are drafts, not yet read by the human.");
+  ("All three stand together after the last of these lessons, so every lesson in any of them has been met first. 2026-11-02, at the human's asking: each used to stand after the last lesson it drew from itself, which put the does-this-section-run milestone between a does-this-section-run lesson and the lesson it is paired with.");
+  let braces_lessons = list_map_property(braces, "lesson");
+  let braces_numbers = list_map(braces_lessons, number_of);
+  let number = list_max(braces_numbers);
   function milestone(id, label, lesson_kind_is, kind_is) {
     function entry_kept(entry) {
       let items = property_get(entry, "items");
@@ -61,8 +64,6 @@ export function app_code_milestones() {
       return kept;
     }
     let drawn = list_filter_map_property(braces, entry_kept, "lesson");
-    let numbers = list_map(drawn, number_of);
-    let number = list_max(numbers);
     let m = {
       id,
       label,
