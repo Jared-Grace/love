@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -43,8 +44,7 @@ export function app_code_lines_wrong_say(question, answer, choice) {
     return r;
   }
   let picked_lines = text_split_newline(picked);
-  let left = list_size(picked_lines);
-  let size_same = equal(left, size);
+  let size_same = list_size_equal(picked_lines, size);
   if (not(size_same)) {
     return null;
   }
