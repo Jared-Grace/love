@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
@@ -11,7 +12,6 @@ import { list_size } from "./list_size.mjs";
 import { list_filter_property_path } from "./list_filter_property_path.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
 import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
@@ -63,8 +63,7 @@ export async function app_reply_rules_preview() {
     let r = app_reply_rules_file_outstanding_is(name, lines, approvals);
     return r;
   }
-  let outstanding = list_filter(cases, case_outstanding_is);
-  let count_outstanding = list_size(outstanding);
+  let count_outstanding = list_filter_size(cases, case_outstanding_is);
   let t_outstanding = text_from_number(count_outstanding);
   let said = text_combine_multiple([
     counted,
