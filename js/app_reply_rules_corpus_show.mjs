@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { property_get } from "./property_get.mjs";
+import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
+import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { app_reply_rules_case_approve_show } from "./app_reply_rules_case_approve_show.mjs";
 import { app_reply_rules_rewrite_changed_show } from "./app_reply_rules_rewrite_changed_show.mjs";
 import { app_reply_rules_case_show } from "./app_reply_rules_case_show.mjs";
@@ -19,6 +20,13 @@ export function app_reply_rules_corpus_show(root, cases, approvals) {
   ("★ WHAT WAS EXPECTED IS ONLY SHOWN WHEN IT IS NOT WHAT HAPPENED. On a case that is doing its job the expectation and the outcome are the same words, and printing both puts the same sentence on the screen twice for every case in the corpus - which is how a screen teaches a reader to stop reading it. Shown only on the ones that differ, the red line is the entire finding.");
   ("The corpus is shown at all because a change is reviewed against a rule set somebody believes is working. Reviewing one change while three cases have quietly gone wrong is reviewing a thing that is not there, and the cheapest way to be wrong about that is to have never put it on the screen.");
   ("The two red lines are different faults and are said separately. One is a case that has drifted from the rules; the other is a rule that has drifted from everybody except one person. Rolled into a single warning the second would be read as the first and fixed by rewriting the case, which is the exact opposite of what it needs.");
+  ("★ THE SHORTEST MESSAGE COMES FIRST. A short case takes a moment to read and the long ones would otherwise push it off the screen, so the quick verdicts are had before the slow ones.");
+  function message_size(one) {
+    let said = property_get(one, "message");
+    let size = said.length;
+    return size;
+  }
+  list_sort_number_mapper(cases, message_size);
   let red = app_shared_color_red();
   function each_shown(one) {
     let ok = property_get(one, "ok");
