@@ -1,4 +1,4 @@
-import { list_includes_not } from "./list_includes_not.mjs";
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_renames } from "./app_renames.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -28,8 +28,7 @@ export async function app_renames_redirects_write() {
   let hosting = property_get(config, "hosting");
   let redirects = property_get(hosting, "redirects");
   function other_is(redirect) {
-    let source = property_get(redirect, "source");
-    let n = list_includes_not(sources, source);
+    let n = property_in_list_not(redirect, "source", sources);
     return n;
   }
   let others = list_filter(redirects, other_is);
