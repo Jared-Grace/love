@@ -2932,6 +2932,7 @@
       "Bash(node scripts/ai.mjs reply_proposals_stale:*)",
       "Bash(node scripts/ai.mjs reply_proposals_unplaced:*)",
       "Bash(node scripts/ai.mjs notes_read:*)",
+      "Bash(node scripts/ai.mjs app_code_milestone_screen_screenshot:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5747,7 +5748,8 @@
       "Bash(node scripts/aig.mjs tmux_sessions_list:*)",
       "Bash(node scripts/aig.mjs reply_proposals_stale:*)",
       "Bash(node scripts/aig.mjs reply_proposals_unplaced:*)",
-      "Bash(node scripts/aig.mjs notes_read:*)"
+      "Bash(node scripts/aig.mjs notes_read:*)",
+      "Bash(node scripts/aig.mjs app_code_milestone_screen_screenshot:*)"
     ],
     "defaultMode": "acceptEdits"
   },

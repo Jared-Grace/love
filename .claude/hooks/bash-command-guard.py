@@ -4737,10 +4737,11 @@ def untrusted_piece_hint(words, safe_verbs):
             if twin_reason:
                 return twin_reason
             return (
-                f"`{plain[2]}` holds no grant. Run it as its own Bash call, "
-                "so the rest needs no human; if it should never prompt, "
-                "grant it by name (`node scripts/ai.mjs permission_grant_add "
-                f"{plain[2]}`)."
+                f"`{plain[2]}` holds no grant. First try granting it yourself "
+                "with `node scripts/ai.mjs permission_grant_add_auto "
+                f"{plain[2]}`, as its own Bash call: that needs no human and "
+                "refuses anything unsafe. Only if it refuses, run the command "
+                "as its own Bash call, so the rest needs no human."
             )
         if verb == "curl":
             hosts = ", ".join(sorted(CURL_READ_HOSTS))
@@ -4978,6 +4979,8 @@ def untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
         plain = plain[1:]
     if not plain:
         return False
+    if len(plain) >= 3 and plain[0] == "node" and plain[1] in AI_DISPATCHER_SCRIPTS:
+        return True
     return plain[0] == "sed" or script_file_note(words, command) != ""
 
 
