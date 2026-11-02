@@ -1,9 +1,9 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_version_book_text } from "./bible_usfm_version_book_text.mjs";
 import { usfm_chapters_verses } from "./usfm_chapters_verses.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { bible_usfm_chapter_verses_laid_out } from "./bible_usfm_chapter_verses_laid_out.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -24,8 +24,11 @@ export async function bible_usfm_version_book_verses_laid_out(
   let uncut = [];
   for (let book_chapter of book_chapters) {
     let chapter_number = property_get(book_chapter, "chapter_number");
-    let verses = property_get(book_chapter, "verses");
-    let verse_numbers = list_map_property(verses, number_key);
+    let verse_numbers = property_list_map_property(
+      book_chapter,
+      "verses",
+      number_key,
+    );
     let pieces = bible_usfm_chapter_verses_laid_out(
       usfm,
       chapter_number,
