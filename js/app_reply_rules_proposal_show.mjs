@@ -5,15 +5,18 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
+import { or } from "./or.mjs";
 import { app_reply_rules_file_card } from "./app_reply_rules_file_card.mjs";
 import { app_reply_rules_file_contents } from "./app_reply_rules_file_contents.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { not } from "./not.mjs";
 import { app_reply_rules_approve_button } from "./app_reply_rules_approve_button.mjs";
 import { app_reply_rules_file_notes } from "./app_reply_rules_file_notes.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { app_reply_rules_whole_show } from "./app_reply_rules_whole_show.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_reply_rules_case_show } from "./app_reply_rules_case_show.mjs";
@@ -34,34 +37,49 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   let gray = app_shared_color_gray_dark();
   let f_name = property_get(proposal, "fn");
   let lines = property_get(proposal, "lines");
-  let card = app_reply_rules_file_card(block, "changed file", f_name);
-  let diff = app_reply_rules_file_contents(card);
-  app_reply_rules_diff_show(diff, lines);
   let unplaced = property_get(proposal, "unplaced");
   let stale = list_empty_not_is(unplaced);
-  if (stale) {
-    let warned = html_p_text(
-      card,
-      "These lines are written into the change and are no longer in the file, so the change above is drawn without them and cannot be trusted as it stands:",
-    );
-    html_style_margin_top(warned, "1.5em");
-    html_style_font_size(warned, "0.9em");
-    let color = app_shared_color_red();
-    html_font_color_set(warned, color);
-    app_reply_rules_diff_show(card, unplaced);
+  ("★ ONLY THE CODE STILL NEEDING A VERDICT IS DRAWN. A file already approved as it stands is a question answered, so its card is left out when the page opens. A file approved in an older wording is drawn again, and so is an altered file with lines missing, however it was approved, because the warning about those lines is the one thing that means stop.");
+  let outstanding = app_reply_rules_file_outstanding_is(
+    f_name,
+    lines,
+    approvals,
+  );
+  if (or(stale, outstanding)) {
+    let card = app_reply_rules_file_card(block, "changed file", f_name);
+    let diff = app_reply_rules_file_contents(card);
+    app_reply_rules_diff_show(diff, lines);
+    if (stale) {
+      let warned = html_p_text(
+        card,
+        "These lines are written into the change and are no longer in the file, so the change above is drawn without them and cannot be trusted as it stands:",
+      );
+      html_style_margin_top(warned, "1.5em");
+      html_style_font_size(warned, "0.9em");
+      let color = app_shared_color_red();
+      html_font_color_set(warned, color);
+      app_reply_rules_diff_show(card, unplaced);
+    }
+    ("★ THE ALTERED FILE IS OFFERED NO VERDICT WHILE ANY OF ITS LINES ARE MISSING. What is drawn above in that case is the change with a piece taken out of it, and a yes recorded against it would be a yes to something nobody was shown. It is the one place on this bench where the button is withheld rather than left to the reader, because the reader cannot see what is not there.");
+    let whole_shown = not(stale);
+    if (whole_shown) {
+      app_reply_rules_approve_button(card, f_name, lines, approvals, diff);
+    }
+    app_reply_rules_file_notes(card, f_name);
   }
-  ("★ THE ALTERED FILE IS OFFERED NO VERDICT WHILE ANY OF ITS LINES ARE MISSING. What is drawn above in that case is the change with a piece taken out of it, and a yes recorded against it would be a yes to something nobody was shown. It is the one place on this bench where the button is withheld rather than left to the reader, because the reader cannot see what is not there.");
-  let whole_shown = not(stale);
-  if (whole_shown) {
-    app_reply_rules_approve_button(card, f_name, lines, approvals, diff);
-  }
-  app_reply_rules_file_notes(card, f_name);
   let whole = property_get(proposal, "whole");
+  function file_outstanding_is(file) {
+    let name = property_get(file, "name");
+    let file_lines = property_get(file, "lines");
+    let r = app_reply_rules_file_outstanding_is(name, file_lines, approvals);
+    return r;
+  }
+  let whole_outstanding = list_filter(whole, file_outstanding_is);
   function each_file(file) {
     let shown = app_reply_rules_whole_show(block, file, approvals);
     return shown;
   }
-  list_map(whole, each_file);
+  list_map(whole_outstanding, each_file);
   let cases_head = html_p_text(block, "What it would answer");
   html_style_margin_top(cases_head, "1.5em");
   html_style_font_size(cases_head, "0.9em");

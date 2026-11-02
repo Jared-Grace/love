@@ -2,13 +2,14 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_names_men } from "./bible_names_men.mjs";
 import { bible_names_women } from "./bible_names_women.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
+import { list_map } from "./list_map.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { text_includes } from "./text_includes.mjs";
+import { text_includes_not } from "./text_includes_not.mjs";
 import { text_size } from "./text_size.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-import { not } from "./not.mjs";
-import { each } from "./each.mjs";
-import { list_adder_unique_sorted } from "./list_adder_unique_sorted.mjs";
+import { and } from "./and.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 export function reply_names_bible() {
   "Every name of a person in the Bible, written the way somebody typing a message would write it: all in small letters, one spelling each, and only the ones that are a single plain word.";
   "★ IT PUBLISHES NOBODY, AND THAT IS THE WHOLE REASON IT IS THE FIRST SOURCE REACHED FOR. A list of the names the people writing in actually have is that list of people, put in a public repository, and it grows by one real person every time somebody new writes. These names have been in print for two thousand years, and a person recognised by one of them is recognised by a word that millions of people share.";
@@ -21,22 +22,15 @@ export function reply_names_bible() {
   let men = bible_names_men();
   let women = bible_names_women();
   let both = list_concat_multiple([men, women]);
-  function names_add(la) {
-    function each_name(name) {
-      let lower = text_lower_to(name);
-      let compound = text_includes(lower, "-");
-      if (compound) {
-        return;
-      }
-      let a = text_size(lower);
-      let long_enough = greater_than_equal(a, 3);
-      if (not(long_enough)) {
-        return;
-      }
-      la(lower);
-    }
-    each(both, each_name);
+  let lowered = list_map(both, text_lower_to);
+  function name_plain_is(name) {
+    let single = text_includes_not(name, "-");
+    let a = text_size(name);
+    let long_enough = greater_than_equal(a, 3);
+    let plain = and(single, long_enough);
+    return plain;
   }
-  let sorted = list_adder_unique_sorted(names_add);
+  let plain_names = list_filter(lowered, name_plain_is);
+  let sorted = list_unique_sorted(plain_names);
   return sorted;
 }
