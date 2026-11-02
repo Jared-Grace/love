@@ -3,6 +3,7 @@ import { reply_response_greetings } from "./reply_response_greetings.mjs";
 import { reply_choices_location } from "./reply_choices_location.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { reply_choices_name } from "./reply_choices_name.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -498,12 +499,118 @@ export function reply_proposals() {
       "it has no messages of its own to show, which is the honest thing to say about it. What it changes is which of two answers is picked when both are already possible, and no real message saved so far is read two ways.",
     ],
   };
+  let name_response = reply_choices_name();
+  let named_and_located = [name_response, t];
+  let combined54 = text_combine_multiple([
+    "   let response = ",
+    fn_name("reply_choices_name"),
+    "();",
+  ]);
+  let combined55 = text_combine_multiple([
+    "-  let names = ",
+    fn_name("reply_names"),
+    "();",
+  ]);
+  let combined56 = text_combine_multiple([
+    "-  let names_once_or_more = ",
+    fn_name("reply_once_or_more"),
+    "(names);",
+  ]);
+  let combined57 = text_combine_multiple([
+    "-  let titles = ",
+    fn_name("reply_titles_ministry"),
+    "();",
+  ]);
+  let combined58 = text_combine_multiple([
+    "+  let name = ",
+    fn_name("reply_name_title_optional"),
+    "();",
+  ]);
+  let combined59 = text_combine_multiple([
+    "   let iam = ",
+    fn_name("reply_phrase_i_am"),
+    "();",
+  ]);
+  let combined60 = text_combine_multiple([
+    "   let iam_titled_name = ",
+    fn_name("reply_sequence_output"),
+    "(",
+  ]);
+  let name_piece = {
+    title: "answer somebody who gives their name without a title",
+    fn: fn_name("app_shared_message_reply_iam_titled_name"),
+    whole: [fn_name("reply_name_title_optional")],
+    diff: [
+      combined54,
+      combined55,
+      combined56,
+      combined57,
+      combined58,
+      combined59,
+      combined60,
+      "-    [iam, titles, names_once_or_more],",
+      "+    [iam, name],",
+      "     response,",
+      "   );",
+      "   return iam_titled_name;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "I am Grace from Kenya",
+        answered: true,
+        outputs: named_and_located,
+      },
+      {
+        from: "",
+        message: "I'm Grace from Kenya",
+        answered: true,
+        outputs: named_and_located,
+      },
+      {
+        from: "",
+        message: "I am John Mark from Kenya",
+        answered: true,
+        outputs: named_and_located,
+      },
+      {
+        from: "",
+        message: "I am pastor Grace from Kenya",
+        answered: true,
+        outputs: named_and_located,
+      },
+      {
+        from: "",
+        message: "I am hungry from Kenya",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "I am pastor from Kenya",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "I am Grace",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "a word now counts as a name only because it is on the list of names. Glory, peace, joy, hope, grace, faith, mercy, gift, blessing and praise are all on it, so I am blessing from Kenya gets the same reply as I am Grace from Kenya. Is that acceptable?",
+      "I am Grace on its own still gets no reply. This rule is only reached when from and a country follow. Answering a bare name would be a separate rule that uses this same piece.",
+      "measured on the whole rule set: all eighteen saved tests give the same answer as before.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
     countries_in,
     typo_layer,
     cheapest_reading,
+    name_piece,
   ];
   return proposals;
 }

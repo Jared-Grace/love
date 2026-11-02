@@ -19,6 +19,7 @@ import { reply_names_spanish } from "./reply_names_spanish.mjs";
 import { reply_names_swahili } from "./reply_names_swahili.mjs";
 import { reply_names_yoruba } from "./reply_names_yoruba.mjs";
 import { reply_names_zulu } from "./reply_names_zulu.mjs";
+import { invoke_multiple } from "./invoke_multiple.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_unique_sorted } from "./list_unique_sorted.mjs";
 export function reply_names_authored() {
@@ -32,46 +33,28 @@ export function reply_names_authored() {
   ("★ WHAT IS MISSING HERE IS NOT A MISTAKE, IT IS THE PRICE. No list of names holds every name; somebody will always give a real name that is not written down here. A name that is missed costs a reply that does not know who it is talking to. A word that is wrongly taken for a name costs nothing at all, because the name is never said back - the answer is fixed text either way. The two costs are not equal, so where there is doubt the name goes in.");
   ("The one thing kept out for that reason is a word that finishes the sentence I am by itself. Blessed, fine, well, grateful, sorry, hungry - somebody writing those is telling you how they are, not what they are called, and no reading of the rest of the message will recover from taking it as a name. Grace and Faith and Hope are not in that class: nobody writes I am grace to say how they are.");
   ("Some of these are used as family names as well as given ones. That costs nothing here - the parser is asking whether a word is a name at all, not which of a person's names it is.");
-  let names = reply_names_akan();
-  let names2 = reply_names_arabic();
-  let names3 = reply_names_english();
-  let names4 = reply_names_filipino();
-  let names5 = reply_names_igbo();
-  let names6 = reply_names_kalenjin();
-  let names7 = reply_names_kamba();
-  let names8 = reply_names_kikuyu();
-  let names9 = reply_names_luhya();
-  let names10 = reply_names_luo();
-  let names11 = reply_names_mandinka();
-  let names12 = reply_names_persian();
-  let names13 = reply_names_sanskrit();
-  let names14 = reply_names_shona();
-  let names15 = reply_names_sotho();
-  let names16 = reply_names_spanish();
-  let names17 = reply_names_swahili();
-  let names18 = reply_names_yoruba();
-  let names19 = reply_names_zulu();
-  let groups = [
-    names,
-    names2,
-    names3,
-    names4,
-    names5,
-    names6,
-    names7,
-    names8,
-    names9,
-    names10,
-    names11,
-    names12,
-    names13,
-    names14,
-    names15,
-    names16,
-    names17,
-    names18,
-    names19,
+  let languages = [
+    reply_names_akan,
+    reply_names_arabic,
+    reply_names_english,
+    reply_names_filipino,
+    reply_names_igbo,
+    reply_names_kalenjin,
+    reply_names_kamba,
+    reply_names_kikuyu,
+    reply_names_luhya,
+    reply_names_luo,
+    reply_names_mandinka,
+    reply_names_persian,
+    reply_names_sanskrit,
+    reply_names_shona,
+    reply_names_sotho,
+    reply_names_spanish,
+    reply_names_swahili,
+    reply_names_yoruba,
+    reply_names_zulu,
   ];
+  let groups = invoke_multiple(languages);
   let all = list_concat_multiple(groups);
   let sorted = list_unique_sorted(all);
   return sorted;
