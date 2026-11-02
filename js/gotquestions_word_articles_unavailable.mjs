@@ -1,6 +1,6 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { gotquestions_word_articles } from "./gotquestions_word_articles.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { gotquestions_article_url } from "./gotquestions_article_url.mjs";
 import { http_text_or_null } from "./http_text_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -14,8 +14,7 @@ export async function gotquestions_word_articles_unavailable() {
     let file = row[2];
     return file;
   }
-  let list = list_map(rows, lambda$row);
-  let files = list_unique(list);
+  let files = list_map_unique(rows, lambda$row);
   let urls = list_map(files, gotquestions_article_url);
   async function lambda$url(url) {
     let text = await http_text_or_null(url);
