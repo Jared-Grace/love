@@ -70,11 +70,11 @@ export async function function_param_object_property_rename(
     });
     let object_properties = property_get(object, "properties");
     let lambda$item2 = property_has_name(property_name);
-    let property = list_find_or_null(object_properties, lambda$item2);
-    if (null_is(property)) {
+    let property_found = list_find_or_null(object_properties, lambda$item2);
+    if (null_is(property_found)) {
       return;
     }
-    key_rename(property);
+    key_rename(property_found);
   }
   await function_params_new_generic(on_declaration, on_call, f_name);
   await function_identifier_rename_checked(
