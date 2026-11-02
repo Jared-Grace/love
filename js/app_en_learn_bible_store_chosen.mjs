@@ -1,9 +1,9 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_en_learn_bible_stores } from "./app_en_learn_bible_stores.mjs";
 import { app_shared_bible_language_codes_chosen } from "./app_shared_bible_language_codes_chosen.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { list_find_or_null } from "./list_find_or_null.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -19,8 +19,7 @@ export function app_en_learn_bible_store_chosen() {
   function store_for(code) {
     function store_is(store) {
       let language = property_get(store, "language");
-      let language_code = property_get(language, property_name);
-      let matches = equal(language_code, code);
+      let matches = property_equals(language, property_name, code);
       return matches;
     }
     let found = list_find_or_null(stores, store_is);
