@@ -5,6 +5,7 @@ export async function playwright_url_presses_addresses(url, texts_comma) {
   "Opens a page, then presses the first thing showing each of these texts in turn - and hands back the address the page stood at once it had loaded and again after each press, so what a page writes into its own link is read off rather than guessed at.";
   "Only a thing that shows, and whose whole text is the one asked for, is pressed. The first run of this pressed a button the page was keeping out of sight, and reported what no reader could have done.";
   "The texts arrive as one word with commas between them, the way a command line hands a list over.";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let addresses = [];
   let texts = texts_comma.split(",");
   function press(element) {
