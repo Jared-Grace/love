@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { js_tokenizer_normalized_or_null } from "./js_tokenizer_normalized_or_null.mjs";
@@ -34,8 +35,7 @@ export function app_code_function_call_wrong_say(question, answer, choice) {
   }
   let symbol = list_get(sum, 1);
   function matches(candidate) {
-    let left2 = property_get(candidate, "operator");
-    let m = equal(left2, symbol);
+    let m = property_equals(candidate, "operator", symbol);
     return m;
   }
   let list = js_operators_arithmetic();
