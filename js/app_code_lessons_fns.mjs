@@ -314,6 +314,9 @@ import { app_code_lesson_while_total } from "./app_code_lesson_while_total.mjs";
 import { app_code_lesson_while_total_step } from "./app_code_lesson_while_total_step.mjs";
 import { app_code_lesson_while_total_squares } from "./app_code_lesson_while_total_squares.mjs";
 import { app_code_lesson_while_product } from "./app_code_lesson_while_product.mjs";
+import { app_code_lesson_while_increment } from "./app_code_lesson_while_increment.mjs";
+import { app_code_lesson_while_decrement } from "./app_code_lesson_while_decrement.mjs";
+import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet.mjs";
 import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
 import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
@@ -643,6 +646,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_total_step,
     app_code_lesson_while_total_squares,
     app_code_lesson_while_product,
+    app_code_lesson_while_increment,
+    app_code_lesson_while_decrement,
+    app_code_lesson_while_two_names,
     app_code_lesson_while_two_meet,
     app_code_lesson_while_and,
     app_code_lesson_while_if,
