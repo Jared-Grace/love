@@ -1,8 +1,8 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { js_operator_dot } from "./js_operator_dot.mjs";
 import { text_split } from "./text_split.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -17,8 +17,7 @@ export function app_code_dot_validity_wrong_say(question, answer, choice) {
   let right_answer = text_to(answer);
   let operator = js_operator_dot();
   let sides = text_split(line, operator);
-  let size = list_size(sides);
-  let two = equal(size, 2);
+  let two = list_size_equal(sides, 2);
   if (not(two)) {
     return null;
   }
