@@ -1,3 +1,4 @@
+import { list_first_is } from "./list_first_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_first } from "./list_first.mjs";
@@ -20,7 +21,6 @@ import { list_find } from "./list_find.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -149,8 +149,7 @@ export function app_code_lesson_if_cases_generic(
     }
     each(seeds, seed_each);
     function made(way_inner) {
-      let left = list_first(way_inner);
-      let m = equal(left, answer);
+      let m = list_first_is(way_inner, answer);
       return m;
     }
     let way = list_find(ways, made);
