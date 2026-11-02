@@ -1,3 +1,4 @@
+import { property_text_includes } from "./property_text_includes.mjs";
 import { property_list_first } from "./property_list_first.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -6,7 +7,6 @@ import { app_a } from "./app_a.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 import { list_first } from "./list_first.mjs";
@@ -32,8 +32,7 @@ export async function app_a_tests_run_e2e_sync(stage_name) {
     }
     ("A page that fails sends a report of the failure as a form rather than as json, so only json is read.");
     let headers = request.headers();
-    let type = property_get(headers, "content-type");
-    let json_is = text_includes(type, "json");
+    let json_is = property_text_includes(headers, "content-type", "json");
     if (not(json_is)) {
       return false;
     }
