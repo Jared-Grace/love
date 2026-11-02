@@ -21,8 +21,8 @@ export async function bible_glyph_chapters_seated_gloss_word_verses(
   function gloss_has(gloss) {
     let parts = gloss.split(/[^A-Za-z]+/);
     function wanted_is(part) {
-      let b = wanted.includes(part);
-      return b;
+      let part_wanted = wanted.includes(part);
+      return part_wanted;
     }
     let b = parts.some(wanted_is);
     return b;
