@@ -1,3 +1,4 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_flat_tree_of_code } from "./app_code_expression_flat_tree_of_code.mjs";
 import { app_code_expression_press_steps } from "./app_code_expression_press_steps.mjs";
@@ -5,8 +6,6 @@ import { list_map } from "./list_map.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_size } from "./list_size.mjs";
-import { less_than } from "./less_than.mjs";
 import { text_to } from "./text_to.mjs";
 import { list_last } from "./list_last.mjs";
 import { equal } from "./equal.mjs";
@@ -27,8 +26,7 @@ export function app_code_expression_wrong_say(question, answer, choice) {
   if (null_is(codes)) {
     return null;
   }
-  let size = list_size(codes);
-  let operator_none = less_than(size, 2);
+  let operator_none = list_size_less_than_value(codes, 2);
   if (operator_none) {
     return null;
   }
