@@ -1,9 +1,8 @@
+import { multiply_round } from "./multiply_round.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
-import { round } from "./round.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function html_move_duration_distance(rect_from, rect_to, duration) {
   arguments_assert(arguments, 3);
@@ -25,7 +24,6 @@ export function html_move_duration_distance(rect_from, rect_to, duration) {
   let b = Math.sqrt(divided);
   let b2 = math_max(1, b);
   let factor = math_min(most, b2);
-  let n = multiply(duration, factor);
-  let r = round(n);
+  let r = multiply_round(duration, factor);
   return r;
 }
