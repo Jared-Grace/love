@@ -21,7 +21,7 @@ export function app_code_lesson_while_not_equal() {
   ("The backwards wrong program is compared against a number n also lands on, one step further or, at the most runs, one step sooner, so it too always stops.");
   ("Reading forwards, the wrong answers are n after one run fewer, one run more, and where n starts; each once, never the answer, never below where n starts.");
   ("The writing is a first draft by Claude 2026-11-01.");
-  let not_equal = js_operator_bang_double_equal_symbol();
+  let not_equal_symbol = js_operator_bang_double_equal_symbol();
   let plus = js_operator_plus_symbol();
   let name = "n";
   let groups = [
@@ -72,7 +72,7 @@ export function app_code_lesson_while_not_equal() {
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "With ",
-      not_equal,
+      not_equal_symbol,
       ", a ",
       "while",
       " keeps going until ",
@@ -90,7 +90,7 @@ export function app_code_lesson_while_not_equal() {
       "If ",
       name,
       " stepped past the number without landing on it, ",
-      not_equal,
+      not_equal_symbol,
       " would stay ",
       "true",
       " and the ",
@@ -104,7 +104,7 @@ export function app_code_lesson_while_not_equal() {
   );
   let lesson = app_code_lesson_while_generic({
     name_id,
-    comparison: not_equal,
+    comparison: not_equal_symbol,
     change: plus,
     groups,
     step: add,
