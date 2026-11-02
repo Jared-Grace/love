@@ -5,11 +5,10 @@ import { list_add } from "./list_add.mjs";
 import { app_reply_love } from "./app_reply_love.mjs";
 export async function app_reply_love_all_click(
   languages_chosen_held,
-  languages_chosen_reset,
   languages,
   update,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 3);
   let languages_chosen_before = property_get(
     languages_chosen_held,
     "languages_chosen",

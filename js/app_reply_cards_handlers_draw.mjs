@@ -37,7 +37,6 @@ export function app_reply_cards_handlers_draw(
   async function love() {
     let r = await app_reply_love_all_click(
       languages_chosen_held,
-      languages_chosen_reset,
       languages,
       update,
     );
