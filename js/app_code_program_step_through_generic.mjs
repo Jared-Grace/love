@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
@@ -919,8 +920,7 @@ export function app_code_program_step_through_generic(
       ("2026-10-14, at the human's asking: the value in the note goes, and a copy of what is right of the = goes up into its place. What is right of the = is found from its two ends: it starts where it was written, and what follows it is untouched, so it ends that far from the end of the line as it now stands - which holds whether or not a name there was evaluated into a value");
       ("2026-10-14, at the human's asking: the value the note said before fades out first, so it is seen going rather than vanishing as the new one sets off. Not picked: hiding it at once and pausing before the new one sets off, offered by the human as the other way; a fade is how this note already comes in, so it goes the same way");
       ("2026-10-15, at the human's asking: a name given a new value on a later line, as a = 5; does, has it written into the note above the line that declared it, the one note saying what that name holds, so the guide pointing there stays true. Not picked: a second note above the later line, which would leave the first one saying a value the name no longer holds");
-      let declared2 = property_get(state, "declared");
-      let note_line = property_get(declared2, name2);
+      let note_line = property_path_get_2(state, "declared", name2);
       let old = list_get(noted, note_line);
       let old_spans = comment_draw(note_line, name2, old, "value");
       let duration2 = app_shared_animation_duration();
