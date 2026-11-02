@@ -1,0 +1,52 @@
+import { equal } from "./equal.mjs";
+import { js_list_type } from "./js_list_type.mjs";
+import { property_get } from "./property_get.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_single } from "./list_single.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { property_set } from "./property_set.mjs";
+import { function_transform } from "./function_transform.mjs";
+export async function function_local_unread_remove(f_name, name) {
+  "Take a binding off a step nothing reads, and leave the step doing what it does: let name = step() becomes step(). It is what the unread-locals gate asks for when the answer was never wanted.";
+  "Refuses when the word appears anywhere else in the file, so a mention it cannot judge stops the edit rather than being left reading a name that is gone.";
+  function lambda(ast) {
+    let identifiers = js_list_type(ast, "Identifier");
+    function named(v) {
+      let node = property_get(v, "node");
+      let left = property_get(node, "name");
+      let eq = equal(left, name);
+      return eq;
+    }
+    let mentions = identifiers.filter(named);
+    let left2 = list_size(mentions);
+    let b = equal(left2, 1);
+    assert_json(b, {
+      hint: "this word is mentioned more than once in the file, so it is not simply unread",
+      f_name,
+      name,
+    });
+    let declarations = js_list_type(ast, "VariableDeclaration");
+    function binds(v) {
+      let node = property_get(v, "node");
+      let declarators = property_get(node, "declarations");
+      let only = list_single(declarators);
+      let id = property_get(only, "id");
+      let left3 = property_get_or_null(id, "name");
+      let eq2 = equal(left3, name);
+      return eq2;
+    }
+    let list = declarations.filter(binds);
+    let found = list_single(list);
+    let declaration = property_get(found, "node");
+    let list2 = property_get(declaration, "declarations");
+    let only = list_single(list2);
+    let init = property_get(only, "init");
+    delete declaration.declarations;
+    delete declaration.kind;
+    property_set(declaration, "type", "ExpressionStatement");
+    property_set(declaration, "expression", init);
+  }
+  let r = await function_transform(f_name, lambda);
+  return r;
+}
