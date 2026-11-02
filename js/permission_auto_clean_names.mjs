@@ -19,8 +19,11 @@ export async function permission_auto_clean_names() {
   let clean = [];
   for (let f_name of ungranted) {
     async function refusals_one() {
-      let refusals = await permission_auto_refusals_context(f_name, context);
-      return refusals;
+      let refusals_found = await permission_auto_refusals_context(
+        f_name,
+        context,
+      );
+      return refusals_found;
     }
     let refusals = await catch_null_async(refusals_one);
     if (null_is(refusals)) {
