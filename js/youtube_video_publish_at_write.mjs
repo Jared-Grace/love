@@ -1,3 +1,4 @@
+import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_video_record } from "./youtube_video_record.mjs";
 import { property_get } from "./property_get.mjs";
@@ -24,8 +25,7 @@ export async function youtube_video_publish_at_write(video_id, publish_at) {
   let publish_at_before = property_get_or_null(status, "publishAt");
   property_set(status, "publishAt", publish_at);
   let answer = await youtube_video_record_write(record);
-  let status_after = property_get(answer, "status");
-  let publish_at_after = property_get_or_null(status_after, "publishAt");
+  let publish_at_after = property_nested_or_null(answer, "status", "publishAt");
   let r = {
     video_id,
     publish_at_before,
