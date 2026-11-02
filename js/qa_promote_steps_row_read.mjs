@@ -26,6 +26,8 @@ export function qa_promote_steps_row_read(row) {
     commit: property_get(row, "commit"),
     ok: property_get(row, "ok"),
     seconds: divide_round(total_ms, 1000),
+    load_before: property_get(row, "load_before"),
+    load_after: property_get(row, "load_after"),
     steps: steps_read,
   };
   return read;
