@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -23,8 +24,7 @@ export function psalms_song_file_read_or_null(file_name) {
     "i",
   );
   let session_found = file_name.match(session_shape);
-  let b = equal(session_found, null);
-  let session_is = not(b);
+  let session_is = equal_not(session_found, null);
   let name_plain = session_is
     ? session_found[1] + "." + session_found[3]
     : file_name;
