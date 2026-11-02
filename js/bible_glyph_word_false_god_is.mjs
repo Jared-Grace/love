@@ -34,8 +34,8 @@ export function bible_glyph_word_false_god_is(
   }
   let parts = word.gloss.split(/[^A-Za-z]+/);
   function small_god_is(part) {
-    let b = equal(part, "god") || equal(part, "gods");
-    return b;
+    let god_word_found = equal(part, "god") || equal(part, "gods");
+    return god_word_found;
   }
   let b = parts.some(small_god_is);
   return b;
