@@ -14,12 +14,11 @@ import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { list_random_item } from "./list_random_item.mjs";
-import { list_get } from "./list_get.mjs";
+import { app_code_while_word_programs } from "./app_code_while_word_programs.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
+import { list_get } from "./list_get.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
@@ -92,29 +91,7 @@ export function app_code_lesson_while_repeat_word() {
   }
   function batch_get() {
     "three programs, running one, two and three times";
-    let groups = [
-      [
-        [0, 1],
-        [4, 5],
-      ],
-      [
-        [0, 2],
-        [3, 5],
-      ],
-      [
-        [0, 3],
-        [1, 4],
-      ],
-    ];
-    let pairs = list_shuffle_take_map(groups, 3, list_random_item);
-    function program_of(pair) {
-      let item = list_get(pair, 0);
-      let item2 = list_get(pair, 1);
-      let chosen = list_random_item(fruits);
-      let code2 = program_get(item, item2, chosen);
-      return code2;
-    }
-    let codes = list_map(pairs, program_of);
+    let codes = app_code_while_word_programs(program_get);
     return codes;
   }
   let batch = app_code_batch_question_answer_fns(

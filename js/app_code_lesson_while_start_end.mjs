@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -11,22 +10,22 @@ import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_li
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { object_multiply } from "./object_multiply.mjs";
-import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { list_random_item } from "./list_random_item.mjs";
-import { list_get } from "./list_get.mjs";
-import { list_map } from "./list_map.mjs";
+import { app_code_while_word_programs } from "./app_code_while_word_programs.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
+import { list_get } from "./list_get.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_multiply } from "./list_multiply.mjs";
+import { list_map } from "./list_map.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_repeat_word } from "./app_code_lesson_while_repeat_word.mjs";
@@ -46,7 +45,6 @@ export function app_code_lesson_while_start_end() {
   ("The writing is a first draft by Claude 2026-11-02.");
   let less = js_operator_less_than_symbol();
   let plus = js_operator_plus_symbol();
-  let fruits = fruits_of_the_spirit();
   let name = "n";
   let word_before = "start";
   let word_after = "end";
@@ -78,29 +76,7 @@ export function app_code_lesson_while_start_end() {
   }
   function batch_get() {
     "three programs, running one, two and three times";
-    let groups = [
-      [
-        [0, 1],
-        [4, 5],
-      ],
-      [
-        [0, 2],
-        [3, 5],
-      ],
-      [
-        [0, 3],
-        [1, 4],
-      ],
-    ];
-    let pairs = list_shuffle_take_map(groups, 3, list_random_item);
-    function program_of(pair) {
-      let first = list_get(pair, 0);
-      let second = list_get(pair, 1);
-      let chosen = list_random_item(fruits);
-      let code2 = program_text(first, second, chosen);
-      return code2;
-    }
-    let codes = list_map(pairs, program_of);
+    let codes = app_code_while_word_programs(program_text);
     return codes;
   }
   let batch = app_code_batch_question_answer_fns(
@@ -159,6 +135,7 @@ export function app_code_lesson_while_start_end() {
   }
   function above(root, context) {
     "The same word each run remembered, then one line added on each side of the while, and which lines repeated";
+    let fruits = fruits_of_the_spirit();
     let joy = list_get(fruits, 1);
     let box_one = app_code_container_light_blue(root);
     app_code_remember_from_lesson(
