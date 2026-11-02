@@ -7,13 +7,18 @@ import { reply_response_greetings } from "./reply_response_greetings.mjs";
 export function app_shared_message_reply_greeting() {
   let greeting_response = reply_response_greetings();
   let hello = reply_word_hello();
-  let time_of_day = reply_choice(["morning", "afternoon", "evening"]);
-  let good_time = reply_sequence(["good", time_of_day]);
-  let hi_word = reply_choice(["hi", hello, "hey", good_time]);
+  let hi_word = reply_choice(["hi", hello, "hey"]);
   let my_dear_brother = reply_phrase_my_dear_brother();
   let greeting = reply_sequence_output(
     [hi_word, my_dear_brother],
     greeting_response,
   );
-  return greeting;
+  let morning_response = reply_response_good_morning();
+  let morning = reply_good_time("morning", morning_response);
+  let afternoon_response = reply_response_good_afternoon();
+  let afternoon = reply_good_time("afternoon", afternoon_response);
+  let evening_response = reply_response_good_evening();
+  let evening = reply_good_time("evening", evening_response);
+  let greetings = reply_choice([greeting, morning, afternoon, evening]);
+  return greetings;
 }

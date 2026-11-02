@@ -2827,6 +2827,7 @@ export function permission_grant_names() {
     fn_name("app_code_milestone_screen_screenshot"),
     fn_name("app_code_lesson_screens_screenshot"),
     fn_name("function_local_unread_remove"),
+    fn_name("bible_glyph_marks_group_misread_accepted_stale_remove"),
   ];
   return names;
 }
