@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -23,8 +24,7 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
     let r = [["No line is left to run"], ["Choose: The program is complete"]];
     return r;
   }
-  let entry = list_get(trace, index);
-  let line = property_get(entry, "line");
+  let line = list_get_property(trace, index, "line");
   let message = list_get(lines, line);
   let text = text_trim(message);
   let choose = ["Choose: ", text];
