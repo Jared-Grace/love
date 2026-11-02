@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -30,8 +31,7 @@ export async function function_param_object_property_rename(
   function property_has_name(name) {
     function lambda(property) {
       let key = property_get(property, "key");
-      let key_name = property_get(key, "name");
-      let eq = equal(key_name, name);
+      let eq = property_equals(key, "name", name);
       return eq;
     }
     return lambda;
