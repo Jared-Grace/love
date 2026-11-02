@@ -34,8 +34,8 @@ export async function bible_glyph_chapters_seated_gloss_word_verses(
     let parsed = bible_glyph_chapter(chapter_code);
     for (let verse of parsed.verses) {
       let verse_number = verse.verse_number;
-      function row_is(row) {
-        let b = equal(row.verse_number, verse_number);
+      function row_is(candidate) {
+        let b = equal(candidate.verse_number, verse_number);
         return b;
       }
       let row = both.rows.find(row_is);
