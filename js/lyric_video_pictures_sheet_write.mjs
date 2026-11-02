@@ -1,6 +1,5 @@
+import { divide_ceil } from "./divide_ceil.mjs";
 import { lyric_video_pictures_folder } from "./lyric_video_pictures_folder.mjs";
-import { ceil } from "./ceil.mjs";
-import { divide } from "./divide.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { error } from "./error.mjs";
@@ -47,8 +46,7 @@ export async function lyric_video_pictures_sheet_write(document_name) {
   }
   ("The glob is handed to ffmpeg rather than to a shell, and ffmpeg walks it in the same alphabetical order the folder was read in, so the names answered here are the tiles left to right and top to bottom.");
   let across = 4;
-  let p = divide(count, across);
-  let down = ceil(p);
+  let down = divide_ceil(count, across);
   let folder_sheets = "gitignore/lyric_video_picture_sheets";
   await folder_exists_ensure(folder_sheets);
   let combined = text_combine(document_name, ".jpg");
