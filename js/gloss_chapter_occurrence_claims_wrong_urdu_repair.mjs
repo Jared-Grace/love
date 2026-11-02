@@ -1,3 +1,4 @@
+import { property_list_get } from "./property_list_get.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
@@ -24,7 +25,6 @@ import { list_add } from "./list_add.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
-import { list_get } from "./list_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { json_format_to } from "./json_format_to.mjs";
@@ -132,8 +132,7 @@ export async function gloss_chapter_occurrence_claims_wrong_urdu_repair(
     let at = property_get(claim, "at");
     let spelled = property_get(claim, "spelled");
     let opening = entries_open(verses_key);
-    let list = property_get(opening, "entries");
-    let entry = list_get(list, at);
+    let entry = property_list_get(opening, "entries", at);
     let explain = property_get(entry, explain_key);
     let lead = text_combine_multiple(["'", word, "' اِس قِصّے میں "]);
     let from = text_combine_multiple([lead, spelled, " بار"]);
