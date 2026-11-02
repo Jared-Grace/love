@@ -1,11 +1,10 @@
+import { json_copy } from "./json_copy.mjs";
 import { math_max } from "./math_max.mjs";
 import { round } from "./round.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { json_from } from "./json_from.mjs";
-import { json_to } from "./json_to.mjs";
 import { number_is } from "./number_is.mjs";
 export function lyric_video_document_cut(document, seconds) {
   "$plain document";
@@ -14,8 +13,7 @@ export function lyric_video_document_cut(document, seconds) {
   "★ THE CUT IS MADE ON A COPY AT RENDER TIME, NEVER WRITTEN BACK. The document's times are measured against the recording as it was sung, and the hearings and the gates that check a document compare against that same recording. Written back shifted, every one of those checks would read the song as seconds out of time.";
   "A moment that lands before the new start is held at zero rather than going negative, so a picture that opened the film still opens it.";
   arguments_assert(arguments, 2);
-  let json = json_to(document);
-  let copy = json_from(json);
+  let copy = json_copy(document);
   function moved(moment) {
     let earlier = subtract(moment, seconds);
     let kept = math_max(earlier, 0);
