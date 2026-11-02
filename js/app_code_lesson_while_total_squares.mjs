@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -10,7 +11,6 @@ import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_li
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
@@ -95,8 +95,7 @@ export function app_code_lesson_while_total_squares() {
         [2, 5],
       ],
     ];
-    let picked = list_shuffle_take(groups, 4);
-    let pairs = list_map(picked, list_random_item);
+    let pairs = list_shuffle_take_map(groups, 4, list_random_item);
     function program_of(pair) {
       let start = list_get(pair, 0);
       let bound = list_get(pair, 1);
