@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
@@ -56,8 +57,7 @@ export function app_code_wrong_say_silent_walked() {
             distractor_count,
             next_get,
           );
-          let object = property_get(r, "r3");
-          let question = property_get(object, "quiz_question_text");
+          let question = property_path_get_2(r, "r3", "quiz_question_text");
           let answer = property_get(r, "quiz_answer_text");
           for (let choice of property_get(r2, "choices")) {
             if (equal(choice, answer)) {
