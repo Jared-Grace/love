@@ -1,8 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_take } from "./list_take.mjs";
@@ -22,7 +22,7 @@ export function app_code_milestones() {
   let lessons = app_code_lessons();
   ("2026-11-02: only lessons before the first while, so both stand in Nested branches, at the human's asking. A step lesson with an if inside a while had joined them and pulled them to the end of Looping, and the lesson after the last if lesson is While itself. Stopping at the lesson the Looping group names, rather than testing each program for the word while, so for and any later loop stay out too.");
   let ids = app_code_lesson_ids_short();
-  let loop_id = property_get(ids, app_code_lesson_while.name);
+  let loop_id = property_get(ids, fn_name("app_code_lesson_while"));
   let lesson_ids = list_map_property(lessons, "id");
   let branches_count = list_index_of(lesson_ids, loop_id);
   let branches = list_take(lessons, branches_count);
