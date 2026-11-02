@@ -1,15 +1,15 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { address_key_doors_callers } from "./address_key_doors_callers.mjs";
 import { property_get } from "./property_get.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { null_is } from "./null_is.mjs";
 import { function_ast } from "./function_ast.mjs";
 import { js_call_argument_forwarded_name_try } from "./js_call_argument_forwarded_name_try.mjs";
-import { js_flo_params_get } from "./js_flo_params_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
+import { null_is } from "./null_is.mjs";
+import { js_flo } from "./js_flo.mjs";
+import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_add } from "./list_add.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { not } from "./not.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_add } from "./list_add.mjs";
 export async function address_key_doors_wrapped() {
   "Every function that is a door onto the address of a page without being written down as one - a function handing a parameter of its own where the name of a field goes. Both halves of an address, the part after the hash and the part after the question mark. Read-only.";
   "A word written at a call to such a function is as published as one written at the door itself, and no reading of published address words would ever reach it, because they all look at calls to the doors that are written down. So an empty answer is what says the written-down set is still the whole set.";
@@ -30,8 +30,8 @@ export async function address_key_doors_wrapped() {
     if (written_here) {
       continue;
     }
-    let params = js_flo_params_get(tree);
-    let param_names = list_map_property(params, "name");
+    let declaration = js_flo(tree);
+    let param_names = js_function_declaration_params_names(declaration);
     let given = list_includes(param_names, variable);
     if (not(given)) {
       continue;

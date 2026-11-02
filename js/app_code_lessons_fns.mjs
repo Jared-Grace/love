@@ -302,6 +302,7 @@ import { app_code_lesson_braces_run_thrice } from "./app_code_lesson_braces_run_
 import { app_code_lesson_if_thrice } from "./app_code_lesson_if_thrice.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
+import { app_code_lesson_while_log_after_change } from "./app_code_lesson_while_log_after_change.mjs";
 import { app_code_lesson_while_log_skipped } from "./app_code_lesson_while_log_skipped.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 import { app_code_lesson_while_less_equal } from "./app_code_lesson_while_less_equal.mjs";
@@ -316,6 +317,7 @@ import { app_code_lesson_while_total_squares } from "./app_code_lesson_while_tot
 import { app_code_lesson_while_product } from "./app_code_lesson_while_product.mjs";
 import { app_code_lesson_while_increment } from "./app_code_lesson_while_increment.mjs";
 import { app_code_lesson_while_decrement } from "./app_code_lesson_while_decrement.mjs";
+import { app_code_lesson_while_repeat_word } from "./app_code_lesson_while_repeat_word.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet.mjs";
 import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
@@ -634,6 +636,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_if_thrice,
     app_code_lesson_while,
     app_code_lesson_while_log,
+    app_code_lesson_while_log_after_change,
     app_code_lesson_while_log_skipped,
     app_code_lesson_while_down,
     app_code_lesson_while_less_equal,
@@ -648,6 +651,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_product,
     app_code_lesson_while_increment,
     app_code_lesson_while_decrement,
+    app_code_lesson_while_repeat_word,
     app_code_lesson_while_two_names,
     app_code_lesson_while_two_meet,
     app_code_lesson_while_and,
