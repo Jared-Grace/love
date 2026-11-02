@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { property_get } from "./property_get.mjs";
@@ -17,14 +18,12 @@ export async function function_param_object_property_new(
   ("Refuses a function whose first parameter is not taken apart that way, and a call that hands in anything but an object written out in place, because there is nowhere to put the new name without guessing.");
   function property_first(code) {
     let expression = js_parse_expression(code);
-    let properties = property_get(expression, "properties");
-    let property = list_first(properties);
+    let property = property_list_first(expression, "properties");
     return property;
   }
   function function_transform_current_lambda(ast) {
     let declaration = js_flo(ast);
-    let params = property_get(declaration, "params");
-    let pattern = list_first(params);
+    let pattern = property_list_first(declaration, "params");
     let type = property_get(pattern, "type");
     let b = equal(type, "ObjectPattern");
     assert_json(b, {
