@@ -1,11 +1,7 @@
+import { functions_auto_seams } from "./functions_auto_seams.mjs";
 import { permission_grant_refusals_context } from "./permission_grant_refusals_context.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { functions_outside_irreversible_seams } from "./functions_outside_irreversible_seams.mjs";
-import { functions_permission_seams } from "./functions_permission_seams.mjs";
-import { functions_command_seams } from "./functions_command_seams.mjs";
-import { functions_dispatch_seams } from "./functions_dispatch_seams.mjs";
 import { property_get } from "./property_get.mjs";
 import { functions_outside_irreversible_fenced } from "./functions_outside_irreversible_fenced.mjs";
 import { function_seams_reached_paths_confined_memo } from "./function_seams_reached_paths_confined_memo.mjs";
@@ -23,11 +19,7 @@ export async function permission_auto_refusals_context(unaliased, context) {
   }
   ("Writing permission rules asks too, arguments or none. The grant check lets an argument-free writer through because its rules come from committed source a person can read; nobody reads this one, and a self-grant that could grant a rule writer would approve every grant after it.");
   ("So does running a command or a function by name, with fixed words or not. The grant check lets fixed words through because a person reads them before approving; here nobody does, and a fixed 'shutdown -r' is still a reboot nobody approved.");
-  let names = functions_outside_irreversible_seams();
-  let names2 = functions_permission_seams();
-  let names3 = functions_command_seams();
-  let names4 = functions_dispatch_seams();
-  let seams = list_concat_multiple([names, names2, names3, names4]);
+  let seams = functions_auto_seams();
   let remembered = property_get(context, "remembered");
   let confined = functions_outside_irreversible_fenced();
   let paths = await function_seams_reached_paths_confined_memo(
