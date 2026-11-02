@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
@@ -29,8 +30,7 @@ export function app_en_learn_bible_language_ask(context, on_chosen) {
   let stores = app_en_learn_bible_stores();
   let property_name = language_code_key();
   for (let store of stores) {
-    let language = property_get(store, "language");
-    let language_code = property_get(language, property_name);
+    let language_code = property_path_get_2(store, "language", property_name);
     let name = property_get(names, language_code);
     async function on_click() {
       app_en_learn_bible_language_code_save(language_code);
