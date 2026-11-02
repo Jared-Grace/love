@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_url_stage_local } from "./app_shared_url_stage_local.mjs";
@@ -93,8 +94,7 @@ export async function app_a_tests_run_e2e_sync(stage_name) {
     body = request.postDataJSON();
   }
   await playwright_test_blank(on_page);
-  let args = property_get(body, "args");
-  let deltas = list_first(args);
+  let deltas = property_list_first(body, "args");
   let delta = list_single(deltas);
   let key = property_get(delta, "key");
   let key_expected = text_combine_multiple([
