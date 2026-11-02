@@ -1,7 +1,6 @@
-import { floor } from "./floor.mjs";
+import { divide_floor } from "./divide_floor.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -63,8 +62,7 @@ export function app_code_whole_part_wrong_say(question, answer, choice) {
   if (not(b3) || not(Number.isInteger(n)) || not(Number.isInteger(d))) {
     return null;
   }
-  let divided = divide(n, d);
-  let quotient = floor(divided);
+  let quotient = divide_floor(n, d);
   let input = multiply(quotient, d);
   let whole_value = text_to(input);
   let division = js_code_binary_spaced_nb(dividend, "/", divisor);
