@@ -58,8 +58,8 @@ export async function app_rename(a_name_before, a_name_after) {
   }
   function name_change(f_name) {
     let rest = text_prefix_without(f_name, main_before);
-    let r = main_after + rest;
-    return r;
+    let name_changed = main_after + rest;
+    return name_changed;
   }
   let renamed = await functions_rename_generic(mine, name_change);
   let tables = app_name_keyed_tables();
