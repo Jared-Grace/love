@@ -7,6 +7,7 @@ import { reply_choices_name } from "./reply_choices_name.mjs";
 import { reply_response_good_morning } from "./reply_response_good_morning.mjs";
 import { reply_response_good_afternoon } from "./reply_response_good_afternoon.mjs";
 import { reply_response_good_evening } from "./reply_response_good_evening.mjs";
+import { reply_response_greetings_friend } from "./reply_response_greetings_friend.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -773,6 +774,150 @@ export function reply_proposals() {
       "measured on the whole rule set: of the eighteen saved tests, only the two good morning ones change.",
     ],
   };
+  let friend_response = reply_response_greetings_friend();
+  let friend_said = [friend_response];
+  let friend_kept_hi_word = text_combine_multiple([
+    "   let hi_word = ",
+    fn_name("reply_choice"),
+    '(["hi", hello, "hey"]);',
+  ]);
+  let friend_added_phrase = text_combine_multiple([
+    "+  let friend_phrase = ",
+    fn_name("reply_phrase_my_friend_in_christ"),
+    "();",
+  ]);
+  let friend_added_response = text_combine_multiple([
+    "+  let friend_response = ",
+    fn_name("reply_response_greetings_friend"),
+    "();",
+  ]);
+  let friend_added_rule = text_combine_multiple([
+    "+  let friend = ",
+    fn_name("reply_sequence_output"),
+    "([hi_word, friend_phrase], friend_response);",
+  ]);
+  let friend_kept_morning_response = text_combine_multiple([
+    "   let morning_response = ",
+    fn_name("reply_response_good_morning"),
+    "();",
+  ]);
+  let friend_kept_morning = text_combine_multiple([
+    "   let morning = ",
+    fn_name("reply_good_time"),
+    '("morning", morning_response);',
+  ]);
+  let friend_kept_afternoon_response = text_combine_multiple([
+    "   let afternoon_response = ",
+    fn_name("reply_response_good_afternoon"),
+    "();",
+  ]);
+  let friend_kept_afternoon = text_combine_multiple([
+    "   let afternoon = ",
+    fn_name("reply_good_time"),
+    '("afternoon", afternoon_response);',
+  ]);
+  let friend_kept_evening_response = text_combine_multiple([
+    "   let evening_response = ",
+    fn_name("reply_response_good_evening"),
+    "();",
+  ]);
+  let friend_kept_evening = text_combine_multiple([
+    "   let evening = ",
+    fn_name("reply_good_time"),
+    '("evening", evening_response);',
+  ]);
+  let friend_removed_greetings = text_combine_multiple([
+    "-  let greetings = ",
+    fn_name("reply_choice"),
+    "([greeting, morning, afternoon, evening]);",
+  ]);
+  let friend_added_greetings = text_combine_multiple([
+    "+  let greetings = ",
+    fn_name("reply_choice"),
+    "([greeting, friend, morning, afternoon, evening]);",
+  ]);
+  let friend_in_christ = {
+    title: "greet somebody who calls me a friend in Christ",
+    fn: fn_name("app_shared_message_reply_greeting"),
+    whole: [
+      fn_name("reply_phrase_my_friend_in_christ"),
+      fn_name("reply_response_greetings_friend"),
+      fn_name("reply_words_greetings"),
+      fn_name("reply_response_greetings"),
+    ],
+    diff: [
+      combined17,
+      combined18,
+      friend_kept_hi_word,
+      combined23,
+      combined24,
+      "     [hi_word, my_dear_brother],",
+      "     greeting_response,",
+      "   );",
+      friend_added_phrase,
+      friend_added_response,
+      friend_added_rule,
+      friend_kept_morning_response,
+      friend_kept_morning,
+      friend_kept_afternoon_response,
+      friend_kept_afternoon,
+      friend_kept_evening_response,
+      friend_kept_evening,
+      friend_removed_greetings,
+      friend_added_greetings,
+      "   return greetings;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "Hello myfriendinChrist",
+        answered: true,
+        outputs: friend_said,
+      },
+      {
+        from: "",
+        message: "Hello friend",
+        answered: true,
+        outputs: friend_said,
+      },
+      {
+        from: "",
+        message: "Hi my friend",
+        answered: true,
+        outputs: friend_said,
+      },
+      {
+        from: "",
+        message: "Hey friend in Christ",
+        answered: true,
+        outputs: friend_said,
+      },
+      {
+        from: "",
+        message: "Hello my dear brother",
+        answered: true,
+        outputs: said,
+      },
+      {
+        from: "",
+        message: "my friend",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "3d27ef64ea033e69",
+        message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "the new sentence goes after the greeting and before the cross, in one reply. I picked this. The rejected readings: after the cross, or as a second reply.",
+      "in Christ uses the same piece as my dear brother in Christ, so in Jesus and in Jesus Christ are heard too. Is that acceptable?",
+      "a greeting word has to come first, so my friend on its own gets no reply. Should it?",
+      "measured on the whole rule set: all eighteen saved tests give the same answer as before. That includes the full message this came from, which still gets no reply because of what follows the greeting.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -781,6 +926,7 @@ export function reply_proposals() {
     cheapest_reading,
     name_piece,
     good_morning_back,
+    friend_in_christ,
   ];
   return proposals;
 }
