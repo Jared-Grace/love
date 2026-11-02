@@ -13,6 +13,7 @@ import { playwright_test_blank } from "./playwright_test_blank.mjs";
 export async function app_a_tests_load_timings(stage_name) {
   "$plain stage_name";
   "How long the code editor's first visit takes in an empty browser, split where the time goes: until the list of file names has arrived, and until the first screen can be typed into.";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   arguments_assert(arguments, 1);
   let url = await app_shared_url_stage_local(app_a, stage_name);
   let started = null;
