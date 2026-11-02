@@ -1,3 +1,4 @@
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -208,7 +209,7 @@ export function app_code_lesson_while_two_meet() {
       " is ",
       "false",
       ", so the ",
-      "{ ... }",
+      app_code_braces_dots(),
       " is skipped, and the code continues after it",
     ]);
   }
@@ -219,7 +220,7 @@ export function app_code_lesson_while_two_meet() {
       "a ",
       "while",
       " runs its ",
-      "{ ... }",
+      app_code_braces_dots(),
       " again and again, while what it asks is ",
       "true",
       ".",
