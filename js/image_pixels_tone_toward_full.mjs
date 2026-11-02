@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { math_max } from "./math_max.mjs";
 import { math_min } from "./math_min.mjs";
 import { round } from "./round.mjs";
@@ -79,8 +80,7 @@ export function image_pixels_tone_toward_full(pixels, strength) {
       return value;
     }
     let left = subtract(value, low);
-    let top = multiply(left, 255);
-    let divided = divide(top, width);
+    let divided = multiply_divide(left, 255, width);
     return divided;
   }
   let ends_all = [0, 1, 2].map(channel_ends);
