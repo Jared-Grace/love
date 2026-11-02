@@ -1,3 +1,4 @@
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -196,7 +197,7 @@ export function app_code_lesson_while_count() {
       "Inside, it can change two names. Here ",
       count_name,
       " goes up by 1 each time, so it counts how many times the ",
-      "{ ... }",
+      app_code_braces_dots(),
       " runs:",
     ]);
     let lines3 = program_lines(16, 3);
@@ -211,14 +212,14 @@ export function app_code_lesson_while_count() {
       " is ",
       "false",
       ", so the ",
-      "{ ... }",
+      app_code_braces_dots(),
       " is skipped, and the code continues after it",
     ]);
     app_code_div_cycle_code(box_two, [
       "So ",
       count_name,
       " is 3: the ",
-      "{ ... }",
+      app_code_braces_dots(),
       " ran 3 times",
     ]);
   }
