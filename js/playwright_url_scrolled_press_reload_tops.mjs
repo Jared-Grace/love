@@ -12,6 +12,7 @@ export async function playwright_url_scrolled_press_reload_tops(
   "What is scrolled and read is the box the page scrolls inside when it has one, and the page itself when it has none. The first run of this read the page alone and answered nothing three times over, on a page that was scrolling inside a box the whole time.";
   "The press is made from inside the page and not by the browser's own hand, because that hand first scrolls the thing into view, and then the distance measured afterwards would be its doing.";
   "The distance arrives from a command line as writing, so it is made a number here.";
+  "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let tops = {};
   let asked = {
     name: html_scroll_body_attribute_name(),
