@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { app_shared_description } from "./app_shared_description.mjs";
@@ -34,8 +35,7 @@ export async function app_supper_tl_languages_gate_run() {
   let s = app_shared_description("supper_tl");
   let said = text_lower_to(s);
   let chosen = app_supper_tl_languages_chosen();
-  let left = list_size(chosen);
-  let b = equal(left, 2);
+  let b = list_size_equal(chosen, 2);
   if (not(b)) {
     wrong.push(
       "the page opens in " +
