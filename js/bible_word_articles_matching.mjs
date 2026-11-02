@@ -1,3 +1,4 @@
+import { text_lower_is } from "./text_lower_is.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -35,8 +36,7 @@ export function bible_word_articles_matching(table, words, index) {
     if (r2) {
       return true;
     }
-    let right2 = text_lower_to(key);
-    let lower = equal(key, right2);
+    let lower = text_lower_is(key);
     let capital = key.charAt(0).toUpperCase() + key.slice(1);
     let first = lower && equal(name, capital);
     return first;
