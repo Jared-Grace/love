@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { list_map_filter } from "./list_map_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
@@ -5,7 +6,6 @@ import { text_includes } from "./text_includes.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_split } from "./text_split.mjs";
@@ -28,15 +28,13 @@ export function app_code_operator_validity_wrong_say(question, answer, choice) {
   }
   let list = js_operators_arithmetic();
   let found = list_map_filter(list, symbol_get, in_line);
-  let left2 = list_size(found);
-  let one = equal(left2, 1);
+  let one = list_size_equal(found, 1);
   if (not(one)) {
     return null;
   }
   let operator = list_first(found);
   let sides = text_split(line, operator);
-  let left3 = list_size(sides);
-  let two = equal(left3, 2);
+  let two = list_size_equal(sides, 2);
   if (not(two)) {
     return null;
   }
