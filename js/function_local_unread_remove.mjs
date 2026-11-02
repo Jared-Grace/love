@@ -1,11 +1,10 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_single_property } from "./list_single_property.mjs";
-import { equal } from "./equal.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
 import { function_transform } from "./function_transform.mjs";
 export async function function_local_unread_remove(f_name, name) {
@@ -30,8 +29,7 @@ export async function function_local_unread_remove(f_name, name) {
       let node = property_get(v, "node");
       let declarators = property_get(node, "declarations");
       let id = list_single_property(declarators, "id");
-      let left3 = property_get_or_null(id, "name");
-      let eq2 = equal(left3, name);
+      let eq2 = property_get_or_null_equal(id, "name", name);
       return eq2;
     }
     let list = declarations.filter(binds);
