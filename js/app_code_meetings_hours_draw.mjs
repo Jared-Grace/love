@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { html_style_background } from "./html_style_background.mjs";
 import { html_scroll_across_faded } from "./html_scroll_across_faded.mjs";
 import { app_code_grid_edge_line_pair_draw } from "./app_code_grid_edge_line_pair_draw.mjs";
@@ -5,7 +6,6 @@ import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_grid_edge_line_draw } from "./app_code_grid_edge_line_draw.mjs";
-import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
@@ -126,8 +126,7 @@ export function app_code_meetings_hours_draw(
       let chip = app_code_explain_number_colored(t3, color);
       chip(cell);
     }
-    let b = equal(color, plain);
-    let colored = not(b);
+    let colored = equal_not(color, plain);
     let layer = colored ? "2" : "1";
     if (both) {
       app_code_grid_edge_line_pair_draw({
