@@ -1,3 +1,4 @@
+import { property_text_to } from "./property_text_to.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
@@ -82,8 +83,7 @@ export function app_code_comment_wrong_say(question, answer, choice) {
       if (not(b2)) {
         continue;
       }
-      let input = property_get(action, "value");
-      let written = text_to(input);
+      let written = property_text_to(action, "value");
       words = words + ", then ";
       let item2 = list_get(kept, index);
       code_add(item2);
