@@ -3,6 +3,8 @@ export function machine_path_literals_allowed() {
   "Named one at a time rather than counted. A count says how many are lived with and nothing about which, so the day a new one appears the count is the only thing that moves, and the reader has no way to tell the new one from the old ones. A name has to be added by somebody who can say why, and the why is here where they will read it.";
   "Six, and the sixth is the first one that reads like another. Four are each for a reason of their own; the last two are the same reason twice - practice material for a rule about paths, which cannot be written any other way. That was worth saying rather than smoothing over, because the test offered to whoever adds a seventh was whether it reads like any of these, and a kind with two members in it now answers yes honestly. If a third ever joins those two, the answer is one way of saying practice material rather than a third name.";
   let allowed = {
+    machine_user_config_folder:
+      "The one place this machine's own settings folder is spelled, for the same reason the store and the removable drive each have one. It sits outside the store, so neither of those can say it.",
     machine_path_prefixes:
       "It is the list of openings itself, so the reading finds its own words. Holding them somewhere else moves the same writing one step along and answers nothing.",
     folder_drive_removable:
