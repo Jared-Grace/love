@@ -304,10 +304,26 @@
   "if_thrice",
   "while",
   "while_log",
+  "while_log_after",
+  "while_log_skip",
   "while_down",
+  "while_less_equal",
+  "while_greater_eq",
+  "while_not_eq",
   "while_halve",
+  "while_double",
+  "while_count",
   "while_total",
   "while_step",
-  "while_squares"
+  "while_squares",
+  "while_product",
+  "while_increment",
+  "while_decrement",
+  "while_repeat_word",
+  "while_two_names",
+  "while_two_meet",
+  "while_and",
+  "while_if",
+  "for"
  ]
 }
