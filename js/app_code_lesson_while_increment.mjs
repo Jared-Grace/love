@@ -1,0 +1,54 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
+import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
+import { less_than } from "./less_than.mjs";
+import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { add } from "./add.mjs";
+import { subtract } from "./subtract.mjs";
+import { app_code_lesson_statement_name_increment } from "./app_code_lesson_statement_name_increment.mjs";
+export function app_code_lesson_while_increment() {
+  arguments_assert(arguments, 0);
+  ("n++ in a while: let n = 1; while (n < 4) { console.log(n); n++; } writes out 1, 2 and 3");
+  ("The one new fact is that the n++ already taught works inside a while, moving n one at a time.");
+  ("n always ends on the number it is compared against, since it moves by one, which is why every run is written out here.");
+  ("The writing is a first draft by Claude 2026-11-02.");
+  let name_id = app_code_lesson_statement_title_name_id(
+    "While adding one",
+    "while (n < 4) { n++; }",
+  );
+  let lesson = app_code_lesson_while_update_log_generic({
+    name_id,
+    comparison: js_operator_less_than_symbol(),
+    asks: less_than,
+    change: js_operator_plus_symbol(),
+    step: add,
+    step_back: subtract,
+    groups: [
+      [
+        [3, 4],
+        [6, 7],
+      ],
+      [
+        [2, 4],
+        [5, 7],
+      ],
+      [
+        [1, 4],
+        [4, 7],
+      ],
+    ],
+    remembered: app_code_lesson_statement_name_increment,
+    remembered_parts: ["", "n++", " adds one to ", "n", "."],
+    intro_parts: [
+      "Inside a ",
+      "while",
+      ", it adds one each time, and a ",
+      "console.log",
+      " shows every run:",
+    ],
+    start: 1,
+    bound: 4,
+  });
+  return lesson;
+}
