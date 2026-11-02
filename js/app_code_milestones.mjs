@@ -1,3 +1,4 @@
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
@@ -59,8 +60,7 @@ export function app_code_milestones() {
       let kept = app_code_batch_kind_has(items, lesson_kind_is);
       return kept;
     }
-    let entries_kept = list_filter(braces, entry_kept);
-    let drawn = list_map_property(entries_kept, "lesson");
+    let drawn = list_filter_map_property(braces, entry_kept, "lesson");
     let numbers = list_map(drawn, number_of);
     let number = list_max(numbers);
     let m = {
