@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -10,8 +11,7 @@ export function svg_side_by_side(svgs) {
   "IDS ARE MADE UNIQUE PER PICTURE, because the same picture placed twice would otherwise declare every gradient twice and the second would point at the first.";
   let count = svgs.length;
   let side = 32;
-  let top2 = multiply(2, side);
-  let size = divide(top2, count + 1);
+  let size = multiply_divide(2, side, count + 1);
   let top3 = subtract(side, size);
   let bottom = subtract(count, 1);
   let step = divide(top3, bottom);
