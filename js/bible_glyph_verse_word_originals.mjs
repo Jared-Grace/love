@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { list_get } from "./list_get.mjs";
@@ -24,8 +25,7 @@ export function bible_glyph_verse_word_originals(verse) {
     if (not(none)) {
       let index = 0;
       for (let word of written) {
-        let b = list_includes(taken, index);
-        let free = not(b);
+        let free = list_includes_not(taken, index);
         if (free && list_includes(word.slice(1), strong)) {
           let sound = null;
           let b2 = not(sounds);
