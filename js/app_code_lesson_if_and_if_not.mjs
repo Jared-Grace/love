@@ -1,3 +1,4 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_code_if_either_decoys } from "./app_code_if_either_decoys.mjs";
@@ -5,7 +6,6 @@ import { app_code_if_boolean_flipped } from "./app_code_if_boolean_flipped.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { json_to } from "./json_to.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
@@ -45,8 +45,7 @@ export function app_code_lesson_if_and_if_not() {
   }
   function program_lines(name, value, words) {
     "let name = value; if (name) { console.log(first word); } if (!name) { console.log(second word); }";
-    let right = json_to(value);
-    let setup = js_code_let_statement(name, right);
+    let setup = js_code_let_json_statement(name, value);
     let opposite = text_combine(bang, name);
     let item = list_get(words, 0);
     let statement2 = logged(item);
