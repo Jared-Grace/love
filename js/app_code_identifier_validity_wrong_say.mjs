@@ -1,3 +1,4 @@
+import { text_includes_not } from "./text_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
@@ -32,8 +33,7 @@ export function app_code_identifier_validity_wrong_say(
   let d = digits_text();
   let allowed = text_combine_multiple([combined, d, underscore, dollar]);
   function outside(character) {
-    let inside = text_includes(allowed, character);
-    let n = not(inside);
+    let n = text_includes_not(allowed, character);
     return n;
   }
   let first = list_first(characters);
