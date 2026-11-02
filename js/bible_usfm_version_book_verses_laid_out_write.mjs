@@ -1,3 +1,4 @@
+import { properties_size } from "./properties_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_version_book_verses_laid_out } from "./bible_usfm_version_book_verses_laid_out.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,8 +7,6 @@ import { web_assets_folder_join } from "./web_assets_folder_join.mjs";
 import { json_to } from "./json_to.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { web_assets_upload } from "./web_assets_upload.mjs";
-import { properties_get } from "./properties_get.mjs";
-import { list_size } from "./list_size.mjs";
 export async function bible_usfm_version_book_verses_laid_out_write(
   version,
   book_code,
@@ -25,8 +24,7 @@ export async function bible_usfm_version_book_verses_laid_out_write(
   let json = json_to(chapters);
   await file_overwrite(file_path, json);
   await web_assets_upload(path);
-  let chapter_numbers = properties_get(chapters);
-  let written = list_size(chapter_numbers);
+  let written = properties_size(chapters);
   let wrote = {
     path,
     written,
