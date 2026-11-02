@@ -1,5 +1,4 @@
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -12,8 +11,7 @@ export function cloudflare_pages_redirects_text(hosting) {
   function kept(redirect) {
     let source = property_get(redirect, "source");
     let destination = property_get(redirect, "destination");
-    let circle = equal(destination, source + ".html");
-    let n = not(circle);
+    let n = equal_not(destination, source + ".html");
     return n;
   }
   let wanted = list_filter(redirects, kept);
