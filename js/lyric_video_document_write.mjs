@@ -30,7 +30,7 @@ export async function lyric_video_document_write(
   await lyric_video_document_faults_write(document, path_output);
   let seconds_cut = document.audio_from || 0;
   let path_audio_cut = path_subtitles + ".wav";
-  let written = await lyric_video_document_audio_write(
+  await lyric_video_document_audio_write(
     path_audio,
     path_document,
     path_audio_cut,
