@@ -1,3 +1,4 @@
+import { numbers_apart } from "./numbers_apart.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -6,8 +7,6 @@ import { lyric_video_videos_unclaimed } from "./lyric_video_videos_unclaimed.mjs
 import { audio_file_duration } from "./audio_file_duration.mjs";
 import { list_add } from "./list_add.mjs";
 import { audio_loudness_envelope } from "./audio_loudness_envelope.mjs";
-import { abs } from "./abs.mjs";
-import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
 import { audio_loudness_envelope_or_null } from "./audio_loudness_envelope_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -56,8 +55,7 @@ export async function lyric_video_recording_video_recovered(folder_audio) {
     let path_best = null;
     let candidates = 0;
     for (let other of videos) {
-      let n = subtract(other.seconds, one.seconds);
-      let gap = abs(n);
+      let gap = numbers_apart(other.seconds, one.seconds);
       let near_is = less_than_equal(gap, seconds_most);
       if (not(near_is)) {
         continue;
