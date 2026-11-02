@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_step_trace } from "./app_code_program_step_trace.mjs";
@@ -1004,8 +1005,7 @@ export function app_code_program_step_through_generic(
     if (not(resets)) {
       function reset_not_is(offered) {
         let left17 = list_get(offered, 0);
-        let b10 = equal(left17, "reset");
-        let r = not(b10);
+        let r = equal_not(left17, "reset");
         return r;
       }
       options = list_filter(options, reset_not_is);
