@@ -11,6 +11,10 @@ import { reply_response_greetings_friend } from "./reply_response_greetings_frie
 import { prayer_blessing } from "./prayer_blessing.mjs";
 import { prayer_wrap } from "./prayer_wrap.mjs";
 import { reply_choices_give } from "./reply_choices_give.mjs";
+import { reply_prayer_bless_family } from "./reply_prayer_bless_family.mjs";
+import { reply_prayer_help_you } from "./reply_prayer_help_you.mjs";
+import { reply_prayer_feed_children } from "./reply_prayer_feed_children.mjs";
+import { prayer_lines_wrap } from "./prayer_lines_wrap.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -1166,7 +1170,29 @@ export function reply_proposals() {
     ],
   };
   let give_response = reply_choices_give();
-  let give_said = [give_response];
+  let line_family = reply_prayer_bless_family();
+  let line_help = reply_prayer_help_you();
+  let line_children = reply_prayer_feed_children();
+  let prayer_family_help_children = prayer_lines_wrap([
+    line_family,
+    line_help,
+    line_children,
+  ]);
+  let prayer_children_family_help = prayer_lines_wrap([
+    line_children,
+    line_family,
+    line_help,
+  ]);
+  let prayer_help_children_family = prayer_lines_wrap([
+    line_help,
+    line_children,
+    line_family,
+  ]);
+  let prayer_children_help_family = prayer_lines_wrap([
+    line_children,
+    line_help,
+    line_family,
+  ]);
   let poor_family_kept_give = text_combine_multiple([
     "   let give = ",
     fn_name("app_shared_message_reply_give"),
@@ -1184,6 +1210,10 @@ export function reply_proposals() {
     whole: [
       fn_name("app_shared_message_reply_poor_family"),
       fn_name("reply_any_order"),
+      fn_name("prayer_lines_wrap"),
+      fn_name("reply_prayer_bless_family"),
+      fn_name("reply_prayer_help_you"),
+      fn_name("reply_prayer_feed_children"),
     ],
     diff: [
       poor_family_kept_give,
@@ -1197,54 +1227,54 @@ export function reply_proposals() {
         message:
           "I am from a poor family, please help me, my children are hungry",
         answered: true,
-        outputs: give_said,
+        outputs: [prayer_family_help_children, give_response],
       },
       {
         from: "",
         message:
           "my children are hungry, I am from a poor family, please help me",
         answered: true,
-        outputs: give_said,
+        outputs: [prayer_children_family_help, give_response],
       },
       {
         from: "",
         message:
           "please help me, my children are hungry, I am from a poor family",
         answered: true,
-        outputs: give_said,
+        outputs: [prayer_help_children_family, give_response],
       },
       {
         from: "",
         message: "I am from a poor family, please help, my children are hungry",
         answered: true,
-        outputs: give_said,
+        outputs: [prayer_family_help_children, give_response],
       },
       {
         from: "",
         message:
           "I am from a poor family, please help me, my children need food",
         answered: true,
-        outputs: give_said,
+        outputs: [prayer_family_help_children, give_response],
       },
       {
         from: "",
         message: "my children need food, please help, I'm from a poor family",
         answered: true,
-        outputs: give_said,
+        outputs: [prayer_children_help_family, give_response],
       },
       {
         from: "",
         message:
           "Hello my dear brother, I am from a poor family, please help me, my children are hungry",
         answered: true,
-        outputs: [greeting, give_response],
+        outputs: [greeting, prayer_family_help_children, give_response],
       },
       {
         from: "",
         message:
           "I am from a poor family, please help me, my children are hungry, I am from Kenya",
         answered: true,
-        outputs: [give_response, t],
+        outputs: [prayer_family_help_children, give_response, t],
       },
       {
         from: "",
@@ -1280,9 +1310,10 @@ export function reply_proposals() {
       },
     ],
     decide: [
-      "a message that gets this reply does not reach your inbox. So a family asking for food gets this sentence and nobody reads what they wrote. Is that what you want for these messages?",
-      "the reply is the one already written for somebody asking for support: sorry, I have nothing that I can give you at this time, and then the prayer that the LORD provides. New words were the rejected choice, because the words are yours to write. Do these words fit a parent with hungry children?",
-      "all three parts must be there. A part on its own gets no reply and comes to you. Answering each part alone was the rejected reading, because a person could then get three replies, or get this one for saying only my children are hungry.",
+      "a message that gets this reply does not reach your inbox. So a family asking for food gets the prayer and the Give reply, and nobody reads what they wrote. Is that what you want for these messages?",
+      "the prayer and Give go as two replies, prayer first. One reply holding both was the rejected reading. Each line of the prayer is on its own line, as you wrote them, with Amen after the last line and no period between them.",
+      "Give is the same function the Give button sends in the reply app, so changing that wording changes it here too.",
+      "all three parts must be there. A part on its own gets no reply and comes to you. Answering each part alone was the rejected reading, because a person could then get three replies, or get Give for saying only my children are hungry.",
       "anything else in the message means no reply, so my wife died in the middle sends the whole message to you.",
       "only the words you gave are heard. Please help us, my child, our children and we are from a poor family get no reply. Should any of them?",
       "measured on the whole rule set: all eighteen saved tests give the same answer as before.",
