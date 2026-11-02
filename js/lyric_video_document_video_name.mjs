@@ -1,3 +1,4 @@
+import { lyric_video_file_name_ending } from "./lyric_video_file_name_ending.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
 import { text_replace } from "./text_replace.mjs";
@@ -17,6 +18,7 @@ export function lyric_video_document_video_name(document, version, mark) {
   let passage = text_replace(document.passage, ":", "_");
   let plain = equal(mark, "");
   let recording = plain ? "" : " (" + mark + ")";
-  let name = passage + recording + " (" + shelf_mark + ") lyric video.mp4";
+  let name =
+    passage + recording + " (" + shelf_mark + lyric_video_file_name_ending();
   return name;
 }
