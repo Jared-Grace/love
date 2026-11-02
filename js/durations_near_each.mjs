@@ -1,5 +1,4 @@
-import { abs } from "./abs.mjs";
-import { subtract } from "./subtract.mjs";
+import { numbers_apart } from "./numbers_apart.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
@@ -17,8 +16,7 @@ export function durations_near_each(rows, rows_other, seconds_tolerance) {
   for (let row of rows) {
     let near = [];
     for (let row_other of rows_other) {
-      let gap = subtract(row.seconds, row_other.seconds);
-      let gap_size = abs(gap);
+      let gap_size = numbers_apart(row.seconds, row_other.seconds);
       let near_is = less_than(gap_size, seconds_tolerance);
       if (near_is) {
         list_add(near, row_other);
