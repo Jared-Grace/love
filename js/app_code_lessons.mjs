@@ -1,9 +1,8 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns_shown } from "./app_code_lessons_fns_shown.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_lesson_fn_id_set } from "./app_code_lesson_fn_id_set.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { equal } from "./equal.mjs";
 import { app_code_course_new_is } from "./app_code_course_new_is.mjs";
 import { app_code_course_new_fns } from "./app_code_course_new_fns.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
@@ -19,8 +18,7 @@ export function app_code_lessons() {
   let fns = app_code_lessons_fns_shown();
   let lessons = list_map(fns, app_code_lesson_fn_id_set);
   function guided_is(lesson) {
-    let guided = property_get_or_null(lesson, "examples_guided");
-    let r = equal(guided, true);
+    let r = property_get_or_null_equal(lesson, "examples_guided", true);
     return r;
   }
   let added = app_code_course_new_is();
