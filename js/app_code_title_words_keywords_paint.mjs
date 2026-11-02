@@ -1,3 +1,4 @@
+import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_split } from "./text_split.mjs";
@@ -8,7 +9,6 @@ import { app_code_operators_classed } from "./app_code_operators_classed.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { text_size } from "./text_size.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { text_letters_digits_none_is } from "./text_letters_digits_none_is.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -54,8 +54,7 @@ export function app_code_title_words_keywords_paint(parent, text) {
     let lower = text_lower_to(word);
     for (let keyword of keywords) {
       if (text_starts_with(lower, keyword)) {
-        let skip_count = text_size(keyword);
-        let rest = text_skip(word, skip_count);
+        let rest = text_prefix_without_inner(word, keyword);
         let after = rest;
         if (text_starts_with(after, "s")) {
           after = text_skip(after, 1);
