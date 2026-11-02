@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
@@ -26,8 +27,7 @@ export async function function_local_unread_remove(f_name, name) {
     });
     let declarations = js_list_type(ast, "VariableDeclaration");
     function binds(v) {
-      let node = property_get(v, "node");
-      let declarators = property_get(node, "declarations");
+      let declarators = property_path_get_2(v, "node", "declarations");
       let id = list_single_property(declarators, "id");
       let eq2 = property_get_or_null_equal(id, "name", name);
       return eq2;
