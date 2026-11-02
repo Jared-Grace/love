@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns_shown } from "./app_code_lessons_fns_shown.mjs";
@@ -7,7 +8,6 @@ import { app_code_course_new_is } from "./app_code_course_new_is.mjs";
 import { app_code_course_new_fns } from "./app_code_course_new_fns.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_code_course_step_is } from "./app_code_course_step_is.mjs";
 export function app_code_lessons() {
@@ -32,8 +32,7 @@ export function app_code_lessons() {
     }
     let fresh_ids = list_map(fresh, fresh_id);
     function kept_is(lesson) {
-      let lesson_id = property_get(lesson, "id");
-      let included = list_includes(fresh_ids, lesson_id);
+      let included = property_in_list(lesson, "id", fresh_ids);
       let guided = guided_is(lesson);
       let r = included || guided;
       return r;
