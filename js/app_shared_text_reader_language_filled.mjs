@@ -1,10 +1,10 @@
+import { text_includes_not } from "./text_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
 import { text_replace } from "./text_replace.mjs";
 export function app_shared_text_reader_language_filled(texts, fills) {
   arguments_assert(arguments, 2);
@@ -26,8 +26,7 @@ export function app_shared_text_reader_language_filled(texts, fills) {
       hint: "the saying in the reader's language has no gap with this name, so the word meant for it would vanish; write the gap into that language's sentence",
     });
     let value = property_get(fills, name);
-    let braced = text_includes(value, "{");
-    let b = not(braced);
+    let b = text_includes_not(value, "{");
     assert_json(b, {
       name,
       value,
