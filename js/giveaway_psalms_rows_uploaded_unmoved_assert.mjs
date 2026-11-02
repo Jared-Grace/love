@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_psalms_chapters_uploaded } from "./giveaway_psalms_chapters_uploaded.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -7,8 +8,6 @@ import { giveaway_psalms_rows_uploaded_defects } from "./giveaway_psalms_rows_up
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { giveaway_passage_code_chapter_code } from "./giveaway_passage_code_chapter_code.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_size } from "./list_size.mjs";
 export async function giveaway_psalms_rows_uploaded_unmoved_assert(rows) {
   arguments_assert(arguments, 1);
   ("$plain rows");
@@ -43,8 +42,7 @@ export async function giveaway_psalms_rows_uploaded_unmoved_assert(rows) {
     let frozen = list_includes(chapters_uploaded, chapter_code);
     return frozen;
   }
-  let rows_frozen = list_filter(rows_before, row_frozen_is);
-  let names_frozen = list_size(rows_frozen);
+  let names_frozen = list_filter_size(rows_before, row_frozen_is);
   let held = {
     chapters_uploaded,
     names_frozen,
