@@ -1,10 +1,9 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { json_to } from "./json_to.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -30,10 +29,8 @@ export function app_code_lesson_if_names_less_than() {
   let condition = js_code_binary_spaced_nb("a", less, "b");
   function setup_get(left, right) {
     "let a = left; let b = right;";
-    let right2 = json_to(left);
-    let code = js_code_let_statement("a", right2);
-    let right3 = json_to(right);
-    let code2 = js_code_let_statement("b", right3);
+    let code = js_code_let_json_statement("a", left);
+    let code2 = js_code_let_json_statement("b", right);
     let setup = [code, code2];
     return setup;
   }
