@@ -3056,11 +3056,16 @@ def matched_leading_verb(command, safe_verbs):
     gap (e.g. "git status; rm -rf ~" has no space after "git status"
     before the ';'). A boundary-less match can only make this hook
     intervene *more* often than necessary, never less - the failure mode
-    of being wrong here is an extra "ask" prompt, not a missed hole."""
-    for verb in safe_verbs:
-        if command.startswith(verb):
-            return verb
-    return None
+    of being wrong here is an extra "ask" prompt, not a missed hole.
+
+    The longest match wins, because safe_verbs is a set and its order changes
+    per process. Taking the first hit let "function_auto_check" answer for a
+    command that really runs the also-granted "function_auto_checked", and the
+    mid-word branch then blamed the wrong word and said splitting cannot help."""
+    matches = [verb for verb in safe_verbs if command.startswith(verb)]
+    if not matches:
+        return None
+    return max(matches, key=len)
 
 
 VERB_WORD_CONTINUES_RE = re.compile(r"^[A-Za-z0-9_./-]")
