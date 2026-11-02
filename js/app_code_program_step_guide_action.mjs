@@ -1,3 +1,4 @@
+import { list_last_property } from "./list_last_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -10,7 +11,6 @@ import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop
 import { subtract } from "./subtract.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
-import { list_last } from "./list_last.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { null_is } from "./null_is.mjs";
@@ -82,8 +82,7 @@ export function app_code_program_step_guide_action(lines, entry, k) {
     list_includes(kinds, "assign") && not(list_includes(kinds, "declare"));
   let intro = [];
   if (assigns_only && equal(k, start)) {
-    let assigned = list_last(actions);
-    let name3 = property_get(assigned, "name");
+    let name3 = list_last_property(actions, "name");
     intro = [
       ["This is an assign (", "=", ") statement, with no ", "let"],
       [
