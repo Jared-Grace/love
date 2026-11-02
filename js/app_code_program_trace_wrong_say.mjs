@@ -1,3 +1,4 @@
+import { property_text_to } from "./property_text_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
 import { catch_null } from "./catch_null.mjs";
@@ -104,8 +105,7 @@ export function app_code_program_trace_wrong_say(question, answer, choice) {
         list_add(assigned, name);
       }
       if (equal(kind, "log")) {
-        let logged_value = property_get(action, "value");
-        let written = text_to(logged_value);
+        let written = property_text_to(action, "value");
         then_add();
         words = words + "it writes out ";
         code_add(written);
