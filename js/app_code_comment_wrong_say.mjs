@@ -1,3 +1,4 @@
+import { text_skip } from "./text_skip.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -7,7 +8,6 @@ import { text_index_of_try } from "./text_index_of_try.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_slice } from "./text_slice.mjs";
-import { text_size } from "./text_size.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { not } from "./not.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -34,8 +34,7 @@ export function app_code_comment_wrong_say(question, answer, choice) {
       list_add(kept, line);
       continue;
     }
-    let to = text_size(line);
-    let comment = text_slice(line, at, to);
+    let comment = text_skip(line, at);
     let item = text_trim(comment);
     list_add(comments, item);
     let message = text_slice(line, 0, at);
