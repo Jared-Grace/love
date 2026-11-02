@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_recording_video_notes } from "./lyric_video_recording_video_notes.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -35,8 +36,7 @@ export async function lyric_video_recording_video_notes_unsound() {
         list_add(recordings, other.recording);
       }
     }
-    let left = list_size(recordings);
-    let alone_is = equal(left, 1);
+    let alone_is = list_size_equal(recordings, 1);
     if (alone_is) {
       continue;
     }
