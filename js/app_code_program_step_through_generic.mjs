@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -519,8 +520,7 @@ export function app_code_program_step_through_generic(
     }
     let size3 = list_size(trace);
     let index4 = subtract(size3, 1);
-    let entry_last = list_get(trace, index4);
-    let line_end = property_get(entry_last, "line");
+    let line_end = list_get_property(trace, index4, "line");
     let message5 = list_get(lines, line_end);
     let text_end = text_trim(message5);
     let r12 = [
