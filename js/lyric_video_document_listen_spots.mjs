@@ -1,7 +1,6 @@
-import { round } from "./round.mjs";
+import { multiply_round } from "./multiply_round.mjs";
 import { abs } from "./abs.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -33,16 +32,13 @@ export async function lyric_video_document_listen_spots(
     let both = number_is(aligner) && number_is(heard);
     let n = subtract(aligner, heard);
     let left = abs(n);
-    let n2 = multiply(left, 100);
-    let top = round(n2);
+    let top = multiply_round(left, 100);
     let gap = both ? divide(top, 100) : null;
     if (both && less_than(gap, limit)) {
       return;
     }
-    let n3 = multiply(aligner, 100);
-    let top2 = round(n3);
-    let n4 = multiply(heard, 100);
-    let top3 = round(n4);
+    let top2 = multiply_round(aligner, 100);
+    let top3 = multiply_round(heard, 100);
     spots.push({
       line: index,
       text: line.text,
