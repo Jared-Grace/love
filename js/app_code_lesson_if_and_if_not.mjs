@@ -1,11 +1,10 @@
+import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_code_if_either_decoys } from "./app_code_if_either_decoys.mjs";
 import { app_code_if_boolean_flipped } from "./app_code_if_boolean_flipped.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -41,8 +40,7 @@ export function app_code_lesson_if_and_if_not() {
   let fruits = fruits_of_the_spirit();
   function logged(word) {
     'console.log("word");';
-    let code = app_code_string_code(word);
-    let statement = js_code_console_log_statement(code);
+    let statement = app_code_word_console_log_statement(word);
     return statement;
   }
   function program_lines(name, value, words) {
