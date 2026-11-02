@@ -4,6 +4,7 @@ import { reply_proposals_waiting } from "./reply_proposals_waiting.mjs";
 import { app_message_reply_cases_checked } from "./app_message_reply_cases_checked.mjs";
 import { property_get } from "./property_get.mjs";
 import { reply_case_real_or_null } from "./reply_case_real_or_null.mjs";
+import { reply_case_approval } from "./reply_case_approval.mjs";
 import { list_map } from "./list_map.mjs";
 import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
 import { list_add } from "./list_add.mjs";
@@ -22,11 +23,15 @@ export async function app_message_reply_proposals_shown() {
   function each_case(one) {
     let from = property_get(one, "from");
     let found = reply_case_real_or_null(by_key, from);
+    let message2 = property_get(one, "message");
+    let answered2 = property_get(one, "answered");
+    let outputs2 = property_get(one, "outputs");
     let carried = {
       from: from,
       message: property_get(one, "message"),
       answered: property_get(one, "answered"),
       outputs: property_get(one, "outputs"),
+      approval: reply_case_approval(message2, answered2, outputs2),
       real: found,
     };
     return carried;
@@ -49,6 +54,9 @@ export async function app_message_reply_proposals_shown() {
   function each_checked(one) {
     let from = property_get(one, "from");
     let found = reply_case_real_or_null(by_key, from);
+    let message3 = property_get(one, "message");
+    let answered3 = property_get(one, "answered_wanted");
+    let outputs3 = property_get(one, "outputs_wanted");
     let carried = {
       from: from,
       message: property_get(one, "message"),
@@ -57,6 +65,7 @@ export async function app_message_reply_proposals_shown() {
       answered: property_get(one, "answered"),
       outputs: property_get(one, "outputs"),
       outputs_wanted: property_get(one, "outputs_wanted"),
+      approval: reply_case_approval(message3, answered3, outputs3),
       real: found,
     };
     return carried;

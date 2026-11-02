@@ -4,12 +4,15 @@ import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.m
 import { html_style_overflow_wrap } from "./html_style_overflow_wrap.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_filter_property_path } from "./list_filter_property_path.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
+import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -18,7 +21,6 @@ import { list_map } from "./list_map.mjs";
 import { not } from "./not.mjs";
 import { app_reply_rules_corpus_show } from "./app_reply_rules_corpus_show.mjs";
 import { app_shared_buttons_mark_current } from "./app_shared_buttons_mark_current.mjs";
-import { text_from_number } from "./text_from_number.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_reply_rules_preview() {
@@ -54,13 +56,25 @@ export async function app_reply_rules_preview() {
   let counted = word_count_pluralize(count_proposals, "change");
   let counted_cases = word_count_pluralize(count_cases, "worked case");
   let counted_wrong = word_count_pluralize(count_wrong, "case");
+  function case_outstanding_is(one) {
+    let approval = property_get(one, "approval");
+    let name = property_get(approval, "name");
+    let lines = property_get(approval, "lines");
+    let r = app_reply_rules_file_outstanding_is(name, lines, approvals);
+    return r;
+  }
+  let outstanding = list_filter(cases, case_outstanding_is);
+  let count_outstanding = list_size(outstanding);
+  let t_outstanding = text_from_number(count_outstanding);
   let said = text_combine_multiple([
     counted,
     " waiting, measured against ",
     counted_cases,
     ", ",
     counted_wrong,
-    " no longer matching.",
+    " no longer matching, ",
+    t_outstanding,
+    " not approved yet.",
   ]);
   html_text_content_set(status, said);
   let buttons = [];
@@ -75,7 +89,7 @@ export async function app_reply_rules_preview() {
       list_map(proposals, each_shown);
     }
     if (not(wanted)) {
-      app_reply_rules_corpus_show(listed, cases);
+      app_reply_rules_corpus_show(listed, cases, approvals);
     }
     app_shared_buttons_mark_current(buttons, sides, wanted);
   }

@@ -19,7 +19,7 @@ import { app_reply_rules_file_notes } from "./app_reply_rules_file_notes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_reply_rules_whole_show } from "./app_reply_rules_whole_show.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_reply_rules_case_show } from "./app_reply_rules_case_show.mjs";
+import { app_reply_rules_case_approve_show } from "./app_reply_rules_case_approve_show.mjs";
 export function app_reply_rules_proposal_show(root, proposal, approvals) {
   arguments_assert(arguments, 3);
   ("One change to the reply rules laid out to be said yes or no to: what it is for, the lines it would alter, the exchanges it was measured to produce, and the questions about it that nobody else can answer.");
@@ -86,8 +86,7 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   html_font_color_set(cases_head, gray);
   let cases = property_get(proposal, "cases");
   function each_case(one) {
-    let drawn = app_reply_rules_case_show(block, one);
-    return drawn;
+    app_reply_rules_case_approve_show(block, one, approvals);
   }
   list_map(cases, each_case);
   let decide_head = html_p_text(block, "Yours to decide");
