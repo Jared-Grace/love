@@ -1,3 +1,4 @@
+import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
 import { equal_not } from "./equal_not.mjs";
@@ -69,7 +70,6 @@ import { html_on_click } from "./html_on_click.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { less_than } from "./less_than.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_code_program_step_line_press_words } from "./app_code_program_step_line_press_words.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_step_reasons_told } from "./app_code_step_reasons_told.mjs";
@@ -427,8 +427,7 @@ export function app_code_program_step_through_generic(
         next_line_ask();
       }
       let index = property_get(state, "index");
-      let b2 = list_size(trace);
-      let done = greater_than_equal(index, b2);
+      let done = list_index_past_end_is(trace, index);
       let right = not(done) && equal(i, property_get(entry_get(), "line"));
       if (not(right)) {
         ("why the press is wrong, where a rule says why; asked of the one function the gate over every program also asks");
@@ -536,8 +535,7 @@ export function app_code_program_step_through_generic(
     let index = property_get(state, "index");
     ("2026-10-29, at the human's asking: the line to choose is named as it reads on the screen now, so a while run again is named while (true) {, the way it shows, and not as it is written");
     let r = app_code_program_step_guide_line_next(shown, trace, index);
-    let b3 = list_size(trace);
-    let done = greater_than_equal(index, b3);
+    let done = list_index_past_end_is(trace, index);
     let holder = {
       button: null,
     };
