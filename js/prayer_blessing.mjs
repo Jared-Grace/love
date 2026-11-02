@@ -6,7 +6,7 @@ export function prayer_blessing(blessed) {
   let prayer = text_combine_multiple([
     v2,
     blessed,
-    " exceedingly abundantly more than anyone can ask or think ",
+    " exceedingly abundantly more than anyone can ask or think",
   ]);
   let v = prayer_wrap(prayer);
   return v;
