@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
@@ -13,7 +14,6 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { divide } from "./divide.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
@@ -110,8 +110,7 @@ export function app_code_lesson_while_count() {
         [32, 5],
       ],
     ];
-    let picked = list_shuffle_take(groups, 4);
-    let pairs = list_map(picked, list_random_item);
+    let pairs = list_shuffle_take_map(groups, 4, list_random_item);
     function program_of(pair) {
       let item = list_get(pair, 0);
       let item2 = list_get(pair, 1);
