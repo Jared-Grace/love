@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { property_get } from "./property_get.mjs";
@@ -231,8 +232,7 @@ export function app_code_if_blocks(code) {
       if (not_equal(ran, null)) {
         break;
       }
-      let object = list_get(sections, i);
-      let test = property_get(object, "test");
+      let test = list_get_property(sections, i, "test");
       let value = equal(test, null) ? true : condition_value(test);
       if (value) {
         ran = i;
@@ -265,8 +265,7 @@ export function app_code_if_blocks(code) {
           let item2 = fading([r3]);
           list_add(steps, item2);
         } else {
-          let object3 = list_get(sections, ran);
-          let block_ran = property_get(object3, "block");
+          let block_ran = list_get_property(sections, ran, "block");
           let after = property_get(block_ran, "end");
           if (less_than(after, end)) {
             let r4 = span(after, end);
