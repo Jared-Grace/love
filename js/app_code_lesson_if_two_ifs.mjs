@@ -1,10 +1,9 @@
+import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
@@ -44,8 +43,7 @@ export function app_code_lesson_if_two_ifs() {
   let fruits = fruits_of_the_spirit();
   function logged(word) {
     'console.log("word");';
-    let code = app_code_string_code(word);
-    let statement = js_code_console_log_statement(code);
+    let statement = app_code_word_console_log_statement(word);
     return statement;
   }
   function if_about(index, word) {
