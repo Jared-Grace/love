@@ -1,7 +1,7 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_song_file_read_or_null } from "./psalms_song_file_read_or_null.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export function psalms_song_file_chapter_take(file_name) {
   arguments_assert(arguments, 1);
   ("$plain file_name");
@@ -18,8 +18,7 @@ export function psalms_song_file_chapter_take(file_name) {
   if (read.session_is) {
     return null;
   }
-  let b = equal(read.verse_first, null);
-  let part_is = not(b);
+  let part_is = equal_not(read.verse_first, null);
   if (part_is) {
     return null;
   }
