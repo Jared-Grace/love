@@ -1,5 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 export function apps_all_main_fns() {
+  "Every app's main function by name: the generated list the gate checks against the real apps.";
   return [
     "app_a",
     "app_app",
