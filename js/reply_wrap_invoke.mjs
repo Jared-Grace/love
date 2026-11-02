@@ -1,7 +1,7 @@
+import { reply_word_cost } from "./reply_word_cost.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { integer_is_assert_json } from "./integer_is_assert_json.mjs";
-import { text_split_empty } from "./text_split_empty.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_size } from "./text_size.mjs";
 import { text_is } from "./text_is.mjs";
@@ -12,7 +12,6 @@ import { object_assign } from "./object_assign.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_is } from "./function_is.mjs";
-import { reply_sequence } from "./reply_sequence.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function reply_wrap_invoke(item, possibilities) {
   let fi = function_is(item);
@@ -25,8 +24,7 @@ export async function reply_wrap_invoke(item, possibilities) {
     if (si) {
       size = text_size(item);
       if (greater_than(size, 1)) {
-        let split = text_split_empty(item);
-        wrapped = reply_sequence(split);
+        wrapped = reply_word_cost(item);
       }
     }
     if (null_is(wrapped)) {
