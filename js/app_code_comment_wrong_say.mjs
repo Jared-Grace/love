@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -77,8 +78,7 @@ export function app_code_comment_wrong_say(question, answer, choice) {
     let actions = property_get(entry, "actions");
     let index = property_get(entry, "line");
     for (let action of actions) {
-      let kind = property_get(action, "kind");
-      let b2 = equal(kind, "log");
+      let b2 = property_equals(action, "kind", "log");
       if (not(b2)) {
         continue;
       }
