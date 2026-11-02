@@ -1,3 +1,4 @@
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -188,7 +189,13 @@ export function app_code_lesson_while_if() {
     let middle = [", so ", shown, " is written out"];
     let truth = "true";
     if (equal(through2, false)) {
-      middle = [", so the ", "if", "'s ", "{ ... }", " is skipped"];
+      middle = [
+        ", so the ",
+        "if",
+        "'s ",
+        app_code_braces_dots(),
+        " is skipped",
+      ];
       truth = "false";
     }
     let parts = list_concat_multiple([
