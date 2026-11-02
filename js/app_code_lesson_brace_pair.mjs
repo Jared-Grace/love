@@ -1,3 +1,4 @@
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { app_code_brace_pair_programs_three } from "./app_code_brace_pair_programs_three.mjs";
 import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two.mjs";
 import { app_code_lesson_brace_pair_generic } from "./app_code_lesson_brace_pair_generic.mjs";
@@ -180,7 +181,7 @@ export function app_code_lesson_brace_pair() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "Which brace pairs with which",
-    "{ ... }",
+    app_code_braces_dots(),
   );
   let lesson = app_code_lesson_brace_pair_generic(
     name_id,
