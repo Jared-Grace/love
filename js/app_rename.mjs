@@ -53,8 +53,8 @@ export async function app_rename(a_name_before, a_name_after) {
   function mine(f_name) {
     let main = equal(f_name, main_before);
     let under = text_starts_with(f_name, prefix);
-    let r = or(main, under);
-    return r;
+    let mine_found = or(main, under);
+    return mine_found;
   }
   function name_change(f_name) {
     let rest = text_prefix_without(f_name, main_before);
