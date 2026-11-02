@@ -81,7 +81,9 @@ export function app_code_lesson_while_greater_equal() {
       greater_equal,
       " is still ",
       "true",
-      ", so it runs once more:",
+      ", so the ",
+      "{ ... }",
+      " runs once more:",
     ]);
     let lines = program_lines(9, 3, 3);
     app_code_code_lines_writes_out(box_two, lines, "0");

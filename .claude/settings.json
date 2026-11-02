@@ -2929,6 +2929,8 @@
       "Bash(node scripts/ai.mjs app_shared_description_baseline_rename:*)",
       "Bash(node scripts/ai.mjs crontab_list:*)",
       "Bash(node scripts/ai.mjs tmux_sessions_list:*)",
+      "Bash(node scripts/ai.mjs reply_proposals_stale:*)",
+      "Bash(node scripts/ai.mjs reply_proposals_unplaced:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5741,7 +5743,9 @@
       "Bash(node scripts/aig.mjs gotquestions_page_download:*)",
       "Bash(node scripts/aig.mjs app_shared_description_baseline_rename:*)",
       "Bash(node scripts/aig.mjs crontab_list:*)",
-      "Bash(node scripts/aig.mjs tmux_sessions_list:*)"
+      "Bash(node scripts/aig.mjs tmux_sessions_list:*)",
+      "Bash(node scripts/aig.mjs reply_proposals_stale:*)",
+      "Bash(node scripts/aig.mjs reply_proposals_unplaced:*)"
     ],
     "defaultMode": "acceptEdits"
   },
