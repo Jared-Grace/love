@@ -1,11 +1,10 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_videos_unclaimed_duration_joined } from "./lyric_video_videos_unclaimed_duration_joined.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { lyric_video_recording_video_write } from "./lyric_video_recording_video_write.mjs";
 import { list_add } from "./list_add.mjs";
 import { giveaway_psalms_videos_paths } from "./giveaway_psalms_videos_paths.mjs";
-import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_size } from "./list_size.mjs";
 export async function lyric_video_recording_video_notes_from_duration_write(
@@ -34,8 +33,7 @@ export async function lyric_video_recording_video_notes_from_duration_write(
   let walk = await giveaway_psalms_videos_paths(folder_audio);
   let moved = [];
   for (let row of rows) {
-    let path_video = property_get(walk.paths, row.recording);
-    let taken_is = equal(path_video, row.video);
+    let taken_is = property_equals(walk.paths, row.recording, row.video);
     if (not(taken_is)) {
       continue;
     }
