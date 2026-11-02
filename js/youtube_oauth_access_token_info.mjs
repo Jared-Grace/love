@@ -1,8 +1,7 @@
+import { buffer_to_json } from "./buffer_to_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { http_answer } from "./http_answer.mjs";
 import { property_get } from "./property_get.mjs";
-import { buffer_text_to } from "./buffer_text_to.mjs";
-import { json_from } from "./json_from.mjs";
 export async function youtube_oauth_access_token_info(access_token) {
   arguments_assert(arguments, 1);
   ("What Google's sign-in service says about one key it handed over: the permissions it carries, how long it has left, and whether it recognises the key at all - never the key itself.");
@@ -17,8 +16,7 @@ export async function youtube_oauth_access_token_info(access_token) {
   });
   let status = property_get(answer, "status");
   let buffer = property_get(answer, "bytes");
-  let said = buffer_text_to(buffer);
-  let info = json_from(said);
+  let info = buffer_to_json(buffer);
   let r = {
     status,
     scope: info.scope ?? null,
