@@ -10,6 +10,7 @@ import { reply_response_good_evening } from "./reply_response_good_evening.mjs";
 import { reply_response_greetings_friend } from "./reply_response_greetings_friend.mjs";
 import { prayer_blessing } from "./prayer_blessing.mjs";
 import { prayer_wrap } from "./prayer_wrap.mjs";
+import { reply_choices_give } from "./reply_choices_give.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -1164,6 +1165,129 @@ export function reply_proposals() {
       "measured on the whole rule set with all three cards in: seventeen of the eighteen saved tests give the same answer as before, and the eighteenth is that full message, which got nothing before. With this card alone all eighteen stay the same.",
     ],
   };
+  let give_response = reply_choices_give();
+  let give_said = [give_response];
+  let poor_family_kept_give = text_combine_multiple([
+    "   let give = ",
+    fn_name("app_shared_message_reply_give"),
+    "();",
+  ]);
+  let poor_family_added_rule = text_combine_multiple([
+    "+  let poor_family = ",
+    fn_name("app_shared_message_reply_poor_family"),
+    "();",
+  ]);
+  let poor_family = {
+    title:
+      "answer somebody from a poor family asking for help for their hungry children",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [
+      fn_name("app_shared_message_reply_poor_family"),
+      fn_name("reply_any_order"),
+    ],
+    diff: [
+      poor_family_kept_give,
+      poor_family_added_rule,
+      "     give,",
+      "+    poor_family,",
+    ],
+    cases: [
+      {
+        from: "",
+        message:
+          "I am from a poor family, please help me, my children are hungry",
+        answered: true,
+        outputs: give_said,
+      },
+      {
+        from: "",
+        message:
+          "my children are hungry, I am from a poor family, please help me",
+        answered: true,
+        outputs: give_said,
+      },
+      {
+        from: "",
+        message:
+          "please help me, my children are hungry, I am from a poor family",
+        answered: true,
+        outputs: give_said,
+      },
+      {
+        from: "",
+        message: "I am from a poor family, please help, my children are hungry",
+        answered: true,
+        outputs: give_said,
+      },
+      {
+        from: "",
+        message:
+          "I am from a poor family, please help me, my children need food",
+        answered: true,
+        outputs: give_said,
+      },
+      {
+        from: "",
+        message: "my children need food, please help, I'm from a poor family",
+        answered: true,
+        outputs: give_said,
+      },
+      {
+        from: "",
+        message:
+          "Hello my dear brother, I am from a poor family, please help me, my children are hungry",
+        answered: true,
+        outputs: [greeting, give_response],
+      },
+      {
+        from: "",
+        message:
+          "I am from a poor family, please help me, my children are hungry, I am from Kenya",
+        answered: true,
+        outputs: [give_response, t],
+      },
+      {
+        from: "",
+        message: "I am from a poor family",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "my children are hungry",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "I am from a poor family, please help me",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message:
+          "I am from a poor family, please help me, my wife died, my children are hungry",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message:
+          "I am from a poor family, please help us, my children are hungry",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "a message that gets this reply does not reach your inbox. So a family asking for food gets this sentence and nobody reads what they wrote. Is that what you want for these messages?",
+      "the reply is the one already written for somebody asking for support: sorry, I have nothing that I can give you at this time, and then the prayer that the LORD provides. New words were the rejected choice, because the words are yours to write. Do these words fit a parent with hungry children?",
+      "all three parts must be there. A part on its own gets no reply and comes to you. Answering each part alone was the rejected reading, because a person could then get three replies, or get this one for saying only my children are hungry.",
+      "anything else in the message means no reply, so my wife died in the middle sends the whole message to you.",
+      "only the words you gave are heard. Please help us, my child, our children and we are from a poor family get no reply. Should any of them?",
+      "measured on the whole rule set: all eighteen saved tests give the same answer as before.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -1176,6 +1300,7 @@ export function reply_proposals() {
     teacher_blessed,
     blessing_one_space,
     from_town_country,
+    poor_family,
   ];
   return proposals;
 }
