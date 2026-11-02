@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_hand_times_read } from "./lyric_video_hand_times_read.mjs";
@@ -54,8 +55,7 @@ export async function lyric_video_hand_times_measure_folder(folder) {
   }
   let all = await list_map_async(names, measure_one);
   function present(read) {
-    let b = equal(read, null);
-    let p = not(b);
+    let p = equal_not(read, null);
     return p;
   }
   let reads = list_filter(all, present);
