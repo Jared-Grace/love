@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_psalms_videos_paths } from "./giveaway_psalms_videos_paths.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -48,8 +49,7 @@ export async function lyric_video_videos_unclaimed_duration_joined(
   for (let answer of answers) {
     let path_video = answer.row.path_audio;
     let seconds = answer.row.seconds;
-    let count = list_size(answer.near);
-    let nothing_is = equal(count, 0);
+    let nothing_is = list_size_equal(answer.near, 0);
     if (nothing_is) {
       let row_none = {
         video: path_video,
