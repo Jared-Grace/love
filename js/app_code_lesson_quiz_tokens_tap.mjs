@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
@@ -118,8 +119,7 @@ export function app_code_lesson_quiz_tokens_tap({
   function paint(index) {
     "on a brace, when coloured, the colour of its pair";
     let span = list_get(spans, index);
-    let place = list_get(places, index);
-    let start = property_get(place, "start");
+    let start = list_get_property(places, index, "start");
     let text2 = text_get(code, start);
     let brace = js_code_brace_is(text2);
     if (not(colored && brace)) {
