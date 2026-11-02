@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -12,7 +13,6 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
 import { add } from "./add.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
@@ -100,8 +100,7 @@ export function app_code_lesson_while_two_names() {
         [2, 5, 5],
       ],
     ];
-    let picked = list_shuffle_take(groups, 4);
-    let triples = list_map(picked, list_random_item);
+    let triples = list_shuffle_take_map(groups, 4, list_random_item);
     function program_of(triple) {
       let item = list_get(triple, 0);
       let item2 = list_get(triple, 1);
