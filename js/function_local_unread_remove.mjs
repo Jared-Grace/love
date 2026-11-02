@@ -1,9 +1,9 @@
+import { list_single_property } from "./list_single_property.mjs";
 import { equal } from "./equal.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_single } from "./list_single.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -30,18 +30,15 @@ export async function function_local_unread_remove(f_name, name) {
     function binds(v) {
       let node = property_get(v, "node");
       let declarators = property_get(node, "declarations");
-      let declarator_only = list_single(declarators);
-      let id = property_get(declarator_only, "id");
+      let id = list_single_property(declarators, "id");
       let left3 = property_get_or_null(id, "name");
       let eq2 = equal(left3, name);
       return eq2;
     }
     let list = declarations.filter(binds);
-    let found = list_single(list);
-    let declaration = property_get(found, "node");
+    let declaration = list_single_property(list, "node");
     let list2 = property_get(declaration, "declarations");
-    let only = list_single(list2);
-    let init = property_get(only, "init");
+    let init = list_single_property(list2, "init");
     delete declaration.declarations;
     delete declaration.kind;
     property_set(declaration, "type", "ExpressionStatement");
