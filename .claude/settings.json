@@ -2936,6 +2936,7 @@
       "Bash(node scripts/ai.mjs app_code_lesson_screens_screenshot:*)",
       "Bash(node scripts/ai.mjs function_local_unread_remove:*)",
       "Bash(node scripts/ai.mjs bible_glyph_marks_group_misread_accepted_stale_remove:*)",
+      "Bash(node scripts/ai.mjs qa_snapshot_timed_solo_told:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5755,7 +5756,8 @@
       "Bash(node scripts/aig.mjs app_code_milestone_screen_screenshot:*)",
       "Bash(node scripts/aig.mjs app_code_lesson_screens_screenshot:*)",
       "Bash(node scripts/aig.mjs function_local_unread_remove:*)",
-      "Bash(node scripts/aig.mjs bible_glyph_marks_group_misread_accepted_stale_remove:*)"
+      "Bash(node scripts/aig.mjs bible_glyph_marks_group_misread_accepted_stale_remove:*)",
+      "Bash(node scripts/aig.mjs qa_snapshot_timed_solo_told:*)"
     ],
     "defaultMode": "acceptEdits"
   },
