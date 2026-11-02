@@ -1,9 +1,9 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { youtube_video_record } from "./youtube_video_record.mjs";
-import { property_get } from "./property_get.mjs";
 import { youtube_channel_lyric_videos } from "./youtube_channel_lyric_videos.mjs";
 import { youtube_video_described_write } from "./youtube_video_described_write.mjs";
 export async function youtube_video_described_write_private_lyric_video(
@@ -22,16 +22,14 @@ export async function youtube_video_described_write_private_lyric_video(
     file_path,
   });
   let record = await youtube_video_record(video_id);
-  let status = property_get(record, "status");
-  let privacy = property_get(status, "privacyStatus");
+  let privacy = property_path_get_2(record, "status", "privacyStatus");
   let b = equal(privacy, "private");
   assert_json(b, {
     hint: "only a private video is written to; a video anyone can see asks a person first",
     video_id,
     privacy,
   });
-  let snippet = property_get(record, "snippet");
-  let channel_id = property_get(snippet, "channelId");
+  let channel_id = property_path_get_2(record, "snippet", "channelId");
   let right = youtube_channel_lyric_videos();
   let b2 = equal(channel_id, right);
   assert_json(b2, {
