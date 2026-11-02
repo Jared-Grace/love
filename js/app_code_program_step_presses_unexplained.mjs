@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -24,15 +25,13 @@ export function app_code_program_step_presses_unexplained() {
   let seen = [];
   let found = [];
   function on_exercise(exercise_visit) {
-    let exercise = property_get(exercise_visit, "exercise");
-    let info = property_get(exercise, "info");
+    let info = property_path_get_2(exercise_visit, "exercise", "info");
     let correction = property_get_or(info, "correction", null);
     let b = equal(correction, app_code_program_step_correction);
     if (not(b)) {
       return;
     }
-    let object = property_get(exercise_visit, "qa");
-    let code = property_get(object, "question");
+    let code = property_path_get_2(exercise_visit, "qa", "question");
     if (list_includes(seen, code)) {
       return;
     }
