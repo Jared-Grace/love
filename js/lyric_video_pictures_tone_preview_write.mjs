@@ -1,6 +1,5 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { divide_ceil } from "./divide_ceil.mjs";
-import { floor } from "./floor.mjs";
-import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { less_than } from "./less_than.mjs";
 import { modulo } from "./modulo.mjs";
@@ -57,8 +56,7 @@ export async function lyric_video_pictures_tone_preview_write(
     let left2 = modulo(index, pairs_per_row);
     let left3 = multiply(left2, cell_width);
     let x = multiply(left3, 2);
-    let p4 = divide(index, pairs_per_row);
-    let left4 = floor(p4);
+    let left4 = divide_floor(index, pairs_per_row);
     let y = multiply(left4, cell_height);
     sheet_ctx.drawImage(image, x, y, cell_width, cell_height);
     sheet_ctx.drawImage(after, x + cell_width, y, cell_width, cell_height);
