@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { permission_auto_pin_assert } from "./permission_auto_pin_assert.mjs";
 import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
@@ -48,8 +49,7 @@ export async function permission_grant_add_auto_gates_ungranted() {
     }
   }
   let added = null;
-  let b = list_empty_is(clean);
-  let any = not(b);
+  let any = list_empty_not_is(clean);
   if (any) {
     let names_comma = list_join_comma(clean);
     added = await permission_grant_add_multiple(names_comma);
