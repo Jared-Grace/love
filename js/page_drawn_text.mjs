@@ -1,7 +1,6 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
-import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function page_drawn_text(page) {
@@ -12,8 +11,7 @@ export async function page_drawn_text(page) {
   ("BROWSER-SERIALIZED - do NOT auto-canonicalize");
   let words = await page.innerText("body");
   let trimmed = text_trim(words);
-  let b = text_empty_is(trimmed);
-  let worded = not(b);
+  let worded = text_empty_not_is(trimmed);
   if (worded) {
     return words;
   }
