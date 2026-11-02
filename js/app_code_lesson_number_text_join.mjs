@@ -1,3 +1,4 @@
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { app_code_lesson_number_text_plus } from "./app_code_lesson_number_text_plus.mjs";
 import { text_size } from "./text_size.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -5,8 +6,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { json_to } from "./json_to.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -48,8 +47,7 @@ export function app_code_lesson_number_text_join() {
   }
   function program_get(left, number, ending) {
     "let n = number; console.log(left + ending);";
-    let right2 = json_to(number);
-    let code2 = js_code_let_statement(name, right2);
+    let code2 = js_code_let_json_statement(name, number);
     let code3 = joined(left, ending);
     let statement = js_code_console_log_statement(code3);
     let lines = [code2, statement];
