@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
@@ -517,8 +518,7 @@ export function app_code_program_step_through_generic(
       ];
       return r13;
     }
-    let size3 = list_size(trace);
-    let index4 = subtract(size3, 1);
+    let index4 = list_size_subtract(trace, 1);
     let line_end = list_get_property(trace, index4, "line");
     let message5 = list_get(lines, line_end);
     let text_end = text_trim(message5);
