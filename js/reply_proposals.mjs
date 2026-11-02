@@ -906,12 +906,6 @@ export function reply_proposals() {
         answered: false,
         outputs: [],
       },
-      {
-        from: "3d27ef64ea033e69",
-        message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
-        answered: false,
-        outputs: [],
-      },
     ],
     decide: [
       "the reply is the plain greeting exactly as it is, cross included, and then the new sentence with a handshake and a hug after it, all in one reply. A second reply was the rejected reading.",
