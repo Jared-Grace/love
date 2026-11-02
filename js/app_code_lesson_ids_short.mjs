@@ -402,7 +402,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_while_double: text_frozen("while_double"),
     app_code_lesson_while_increment: text_frozen("while_increment"),
     app_code_lesson_while_decrement: text_frozen("while_decrement"),
-    app_code_lesson_while_repeat_word: text_frozen("while_repeat_word"),
+    app_code_lesson_while_repeat_word: text_frozen("while_repeat"),
     app_code_lesson_while_two_names: text_frozen("while_two_names"),
     app_code_lesson_while_two_meet: text_frozen("while_two_meet"),
     app_code_lesson_while_product: text_frozen("while_product"),
