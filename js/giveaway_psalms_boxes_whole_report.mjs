@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { giveaway_psalms_chapters_uploaded } from "./giveaway_psalms_chapters_uploaded.mjs";
 import { giveaway_psalms_record_path } from "./giveaway_psalms_record_path.mjs";
@@ -62,8 +63,7 @@ export async function giveaway_psalms_boxes_whole_report(folder_media) {
           if (there_is) {
             let row = list_find_property(held, "name", one.path_in_item);
             let size_held = number_from_text(row.size);
-            let same_is = equal(size_held, one.size);
-            let off_is = not(same_is);
+            let off_is = equal_not(size_held, one.size);
             if (off_is) {
               list_add(sizes_off, {
                 path_in_item: one.path_in_item,
