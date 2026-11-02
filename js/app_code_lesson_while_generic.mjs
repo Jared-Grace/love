@@ -1,3 +1,4 @@
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -5,7 +6,6 @@ import { js_code_assign_operator_statement } from "./js_code_assign_operator_sta
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
@@ -57,8 +57,7 @@ export function app_code_lesson_while_generic(params) {
   }
   function batch_get() {
     "four programs, each from a different group, so each runs a different number of times";
-    let picked = list_shuffle_take(groups, 4);
-    let triples = list_map(picked, list_random_item);
+    let triples = list_shuffle_take_map(groups, 4, list_random_item);
     function program_of(triple) {
       let item = list_get(triple, 0);
       let item2 = list_get(triple, 1);
