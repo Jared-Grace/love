@@ -1,11 +1,10 @@
-import { greater_than } from "./greater_than.mjs";
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { list_to_indices } from "./list_to_indices.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_starts_with_not } from "./text_starts_with_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export function app_code_lines_code_indices(lines) {
   "The places in a program that hold code, as opposed to a comment - the lines a student could be asked to build.";
@@ -22,8 +21,7 @@ export function app_code_lines_code_indices(lines) {
     let line = list_get(lines, index);
     let tokens = app_code_quiz_tokens(line);
     let pieces = list_unique(tokens);
-    let a = list_size(pieces);
-    let several = greater_than(a, 1);
+    let several = list_size_greater_than(pieces, 1);
     return several;
   }
   let kept = list_filter(code, index_pieces_is);
