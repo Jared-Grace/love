@@ -44,8 +44,8 @@ export async function bible_glyph_marks_group_misread_accepted_stale_remove() {
   function lambda(ast) {
     let arrays = js_list_type(ast, "ArrayExpression");
     function outer_is(v) {
-      let node = property_get(v, "node");
-      let elements = property_get(node, "elements");
+      let node_outer = property_get(v, "node");
+      let elements = property_get(node_outer, "elements");
       let a = list_size(elements);
       let r = greater_than(a, 0) && equal(elements[0].type, "ArrayExpression");
       return r;
