@@ -1,10 +1,10 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_renames } from "./app_renames.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { firebase_json_path } from "./firebase_json_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_renames_page_ready } from "./app_renames_page_ready.mjs";
@@ -29,8 +29,7 @@ export async function app_renames_redirects_write() {
   let redirects = property_get(hosting, "redirects");
   function other_is(redirect) {
     let source = property_get(redirect, "source");
-    let recorded = list_includes(sources, source);
-    let n = not(recorded);
+    let n = list_includes_not(sources, source);
     return n;
   }
   let others = list_filter(redirects, other_is);
