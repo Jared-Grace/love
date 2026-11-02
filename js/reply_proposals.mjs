@@ -4,6 +4,7 @@ import { reply_choices_location } from "./reply_choices_location.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { reply_choices_name } from "./reply_choices_name.mjs";
+import { reply_response_good_morning } from "./reply_response_good_morning.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -604,6 +605,126 @@ export function reply_proposals() {
       "measured on the whole rule set: all eighteen saved tests give the same answer as before.",
     ],
   };
+  let said2 = reply_response_good_morning();
+  let morning_said = [said2];
+  let combined17 = text_combine_multiple([
+    "   let greeting_response = ",
+    fn_name("reply_response_greetings"),
+    "();",
+  ]);
+  let combined18 = text_combine_multiple([
+    "   let hello = ",
+    fn_name("reply_word_hello"),
+    "();",
+  ]);
+  let combined19 = text_combine_multiple([
+    "-  let time_of_day = ",
+    fn_name("reply_choice"),
+    '(["morning", "afternoon", "evening"]);',
+  ]);
+  let combined20 = text_combine_multiple([
+    "+  let time_of_day = ",
+    fn_name("reply_choice"),
+    '(["afternoon", "evening"]);',
+  ]);
+  let combined21 = text_combine_multiple([
+    "   let good_time = ",
+    fn_name("reply_sequence"),
+    '(["good", time_of_day]);',
+  ]);
+  let combined22 = text_combine_multiple([
+    "   let hi_word = ",
+    fn_name("reply_choice"),
+    '(["hi", hello, "hey", good_time]);',
+  ]);
+  let combined23 = text_combine_multiple([
+    "   let my_dear_brother = ",
+    fn_name("reply_phrase_my_dear_brother"),
+    "();",
+  ]);
+  let combined24 = text_combine_multiple([
+    "   let greeting = ",
+    fn_name("reply_sequence_output"),
+    "(",
+  ]);
+  let combined25 = text_combine_multiple([
+    "+  let morning_response = ",
+    fn_name("reply_response_good_morning"),
+    "();",
+  ]);
+  let combined26 = text_combine_multiple([
+    "+  let good_morning = ",
+    fn_name("reply_sequence_output"),
+    "(",
+  ]);
+  let combined27 = text_combine_multiple([
+    "+  let greetings = ",
+    fn_name("reply_choice"),
+    "([greeting, good_morning]);",
+  ]);
+  let good_morning_back = {
+    title: "say good morning back to good morning",
+    fn: fn_name("app_shared_message_reply_greeting"),
+    whole: [fn_name("reply_response_good_morning")],
+    diff: [
+      combined17,
+      combined18,
+      combined19,
+      combined20,
+      combined21,
+      combined22,
+      combined23,
+      combined24,
+      "     [hi_word, my_dear_brother],",
+      "     greeting_response,",
+      "   );",
+      "-  return greeting;",
+      combined25,
+      combined26,
+      '+    ["good", "morning", my_dear_brother],',
+      "+    morning_response,",
+      "+  );",
+      combined27,
+      "+  return greetings;",
+    ],
+    cases: [
+      {
+        from: "90a90a48e23dcc51",
+        message: "Good morning",
+        answered: true,
+        outputs: morning_said,
+      },
+      {
+        from: "69fb4a16808a5bf9",
+        message: "Good morningbrother",
+        answered: true,
+        outputs: morning_said,
+      },
+      {
+        from: "",
+        message: "Good morning my dear brother",
+        answered: true,
+        outputs: morning_said,
+      },
+      {
+        from: "",
+        message: "Good afternoon",
+        answered: true,
+        outputs: said,
+      },
+      {
+        from: "",
+        message: "Good night",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "good afternoon and good evening still get the greeting in the name of our LORD Jesus Christ. Should they get their own words too?",
+      "good morning no longer gets the greeting in the name of our LORD Jesus Christ. Only these words go back.",
+      "measured on the whole rule set: of the eighteen saved tests, only the two good morning ones change.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -611,6 +732,7 @@ export function reply_proposals() {
     typo_layer,
     cheapest_reading,
     name_piece,
+    good_morning_back,
   ];
   return proposals;
 }

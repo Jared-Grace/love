@@ -3,6 +3,7 @@ import { reply_proposals } from "./reply_proposals.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { data_given_reply_applied_folder } from "./data_given_reply_applied_folder.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
+import { reply_case_key } from "./reply_case_key.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
@@ -22,7 +23,9 @@ export async function reply_proposal_applied_record_write(title, reason) {
     f_name: f_name,
     reason: reason,
   };
-  let named = text_combine_multiple([f_name, ".json"]);
+  ("★ THE RECORD IS NAMED AFTER THE CHANGE AND NOT ONLY AFTER ITS FILE, because two changes can alter one file, and a second record under the file's name alone would overwrite the first and put a finished change back on the waiting list.");
+  let title_key = reply_case_key(title);
+  let named = text_combine_multiple([f_name, "_", title_key, ".json"]);
   let p = path_join([folder, named]);
   await file_overwrite_json(p, stored);
   return stored;
