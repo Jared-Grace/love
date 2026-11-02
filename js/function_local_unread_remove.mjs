@@ -30,8 +30,8 @@ export async function function_local_unread_remove(f_name, name) {
     function binds(v) {
       let node = property_get(v, "node");
       let declarators = property_get(node, "declarations");
-      let only = list_single(declarators);
-      let id = property_get(only, "id");
+      let declarator_only = list_single(declarators);
+      let id = property_get(declarator_only, "id");
       let left3 = property_get_or_null(id, "name");
       let eq2 = equal(left3, name);
       return eq2;
