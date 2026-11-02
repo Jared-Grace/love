@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
@@ -9,8 +10,7 @@ export function app_code_if_block_reached(blocks, index) {
   ("whether the section at index of the sections ",
     fn_name("app_code_if_blocks"),
     " finds is ever reached: it is not when it stands inside a section that does not run, because it went with that section");
-  let block = list_get(blocks, index);
-  let open = property_get(block, "open");
+  let open = list_get_property(blocks, index, "open");
   for (let j = 0; less_than(j, index); j++) {
     let outer = list_get(blocks, j);
     let runs = property_get(outer, "runs");
