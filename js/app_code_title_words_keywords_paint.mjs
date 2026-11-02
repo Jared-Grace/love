@@ -23,7 +23,8 @@ export function app_code_title_words_keywords_paint(parent, text) {
     fn_name("app_code_title_words_percent_paint"),
     " paints it; keywords next to each other, as in Else if, are one piece of code, else if");
   ("Asked for by the human 2026-10-11: if and else in a title name the keyword, so they look like it. A plural or a mark after the word, Two ifs, one name, paints the if and leaves the s and the comma plain. Weighed: Halve if even, whose if reads as English as well, and painted with the rest since its lesson is an if; a title that means the English word is a reason to reword it rather than to look the word up in a list.");
-  let keywords = ["if", "else"];
+  ("2026-11-02: while too, asked for by the human: a looping title names the keyword just as a branching one does.");
+  let keywords = ["if", "else", "while"];
   let words = text_split(text, " ");
   let plain = "";
   let code = "";
