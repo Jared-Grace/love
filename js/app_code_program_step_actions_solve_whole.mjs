@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -35,8 +35,7 @@ export function app_code_program_step_actions_solve_whole(code, actions) {
   let result = [];
   let run = [];
   function evaluate_is(action) {
-    let kind = property_get(action, "kind");
-    let r = equal(kind, "evaluate");
+    let r = property_equals(action, "kind", "evaluate");
     return r;
   }
   function operator_is(action) {
