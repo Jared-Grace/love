@@ -1,9 +1,9 @@
+import { integer_even_is } from "./integer_even_is.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
-import { modulo } from "./modulo.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_slash_forward } from "./text_slash_forward.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -23,7 +23,6 @@ import { app_code_batch_question_answer_fns } from "./app_code_batch_question_an
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_first } from "./list_first.mjs";
-import { equal } from "./equal.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_code_if_condition_set } from "./app_code_if_condition_set.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -88,8 +87,7 @@ export function app_code_lesson_if_halve_or_triple() {
     let halved = divide(start3, 2);
     let tripled = multiply(start3, 3);
     let stepped = tripled + 1;
-    let left = modulo(start3, 2);
-    let even = equal(left, 0);
+    let even = integer_even_is(start3);
     let found_numbers = [halved, tripled];
     if (even) {
       found_numbers = [stepped, start3];
