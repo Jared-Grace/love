@@ -843,6 +843,7 @@ export function reply_proposals() {
       fn_name("reply_phrase_my_friend_in_christ"),
       fn_name("reply_response_greetings_friend"),
       fn_name("emoji_handshake"),
+      fn_name("emoji_hug"),
     ],
     diff: [
       combined17,
@@ -911,7 +912,7 @@ export function reply_proposals() {
       },
     ],
     decide: [
-      "the reply is the plain greeting exactly as it is, cross included, and then the new sentence with a handshake after it, all in one reply. A second reply was the rejected reading.",
+      "the reply is the plain greeting exactly as it is, cross included, and then the new sentence with a handshake and a hug after it, all in one reply. A second reply was the rejected reading.",
       "in Christ uses the same piece as my dear brother in Christ, so in Jesus and in Jesus Christ are heard too. Is that acceptable?",
       "a greeting word has to come first, so my friend on its own gets no reply. Should it?",
       "measured on the whole rule set: all eighteen saved tests give the same answer as before. That includes the full message this came from, which still gets no reply because of what follows the greeting.",
