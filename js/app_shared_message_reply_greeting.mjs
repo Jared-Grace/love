@@ -1,4 +1,7 @@
-import { reply_sequence } from "./reply_sequence.mjs";
+import { reply_response_good_morning } from "./reply_response_good_morning.mjs";
+import { reply_good_time } from "./reply_good_time.mjs";
+import { reply_response_good_afternoon } from "./reply_response_good_afternoon.mjs";
+import { reply_response_good_evening } from "./reply_response_good_evening.mjs";
 import { reply_sequence_output } from "./reply_sequence_output.mjs";
 import { reply_phrase_my_dear_brother } from "./reply_phrase_my_dear_brother.mjs";
 import { reply_choice } from "./reply_choice.mjs";
