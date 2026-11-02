@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_home } from "./folder_home.mjs";
 import { path_join } from "./path_join.mjs";
@@ -107,8 +108,7 @@ export async function psalms_songs_superseded_report() {
       }
       let file_name = path_base(candidate.path_audio);
       let read = psalms_song_file_read_or_null(file_name);
-      let b = equal(read, null);
-      let given = not(b);
+      let given = equal_not(read, null);
       let settled_is = list_includes(settled, session);
       let handed_is = false;
       if (given) {
