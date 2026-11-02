@@ -23,11 +23,11 @@ export function bible_glyph_word_false_god_is(
   }
   function exception_is(exception) {
     let [code, number, strong] = exception;
-    let b =
+    let exception_matches =
       equal(code, chapter_code) &&
       equal(number, verse_number) &&
       equal(strong, word.strong);
-    return b;
+    return exception_matches;
   }
   if (exceptions.some(exception_is)) {
     return false;
