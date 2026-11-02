@@ -1,4 +1,4 @@
-import { ceil } from "./ceil.mjs";
+import { divide_ceil } from "./divide_ceil.mjs";
 import { floor } from "./floor.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -32,8 +32,7 @@ export async function lyric_video_pictures_tone_preview_write(
   let cell_width = 270;
   let cell_height = 480;
   let pairs_per_row = 4;
-  let p = divide(pictures.length, pairs_per_row);
-  let rows = ceil(p);
+  let rows = divide_ceil(pictures.length, pairs_per_row);
   let left = multiply(cell_width, 2);
   let p2 = multiply(left, pairs_per_row);
   let p3 = multiply(cell_height, rows);
