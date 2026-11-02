@@ -1,3 +1,4 @@
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
@@ -34,7 +35,7 @@ export function app_code_lesson_if_nested() {
         "An ",
         "if",
         " inside another's ",
-        "{ ... }",
+        app_code_braces_dots(),
         " is reached only when the outer one runs",
       ],
     );
