@@ -1,3 +1,4 @@
+import { gloss_root_word_own_is } from "./gloss_root_word_own_is.mjs";
 import { text_lower_is } from "./text_lower_is.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { equal } from "./equal.mjs";
@@ -28,8 +29,7 @@ export function bible_word_articles_matching(table, words, index) {
     let name = bare(word);
     if (several) {
       let left = text_lower_to(name);
-      let right = text_lower_to(key);
-      let eq = equal(left, right);
+      let eq = gloss_root_word_own_is(key, left);
       return eq;
     }
     let r2 = equal(name, key) || equal(name, key.toUpperCase());
