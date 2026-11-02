@@ -1,3 +1,4 @@
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_known_read } from "./baseline_known_read.mjs";
 import { entries_versus_baseline } from "./entries_versus_baseline.mjs";
@@ -5,7 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_empty_not_is_assert } from "./list_empty_not_is_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function baseline_entries_stale_drop(offenders, path, fields) {
   arguments_assert(arguments, 3);
@@ -17,8 +17,7 @@ export async function baseline_entries_stale_drop(offenders, path, fields) {
   let stale_names = list_map_property(stale, "name");
   list_empty_not_is_assert(stale_names);
   function lambda(entry) {
-    let name = property_get(entry, "name");
-    let n = list_includes_not(stale_names, name);
+    let n = property_in_list_not(entry, "name", stale_names);
     return n;
   }
   let kept = list_filter(known, lambda);
