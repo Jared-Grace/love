@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { less_than } from "./less_than.mjs";
 import { modulo } from "./modulo.mjs";
 import { divide } from "./divide.mjs";
@@ -69,8 +70,7 @@ export function app_code_repeated_wrong_say(question, answer, choice) {
     let left = list_first(short_tokens);
     let count = list_get(short_tokens, 2);
     for (let s of shorthands) {
-      let left4 = property_get(s, "short");
-      let b4 = equal(left4, symbol);
+      let b4 = property_equals(s, "short", symbol);
       if (not(b4)) {
         continue;
       }
