@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_url_stage_local } from "./app_shared_url_stage_local.mjs";
 import { app_a } from "./app_a.mjs";
@@ -36,8 +37,7 @@ export async function app_a_tests_run_e2e_sync(stage_name) {
       return false;
     }
     let posted = request.postDataJSON();
-    let f_name = property_get(posted, "f_name");
-    let eq = equal(f_name, fn_name("app_a_upload"));
+    let eq = property_equals(posted, "f_name", fn_name("app_a_upload"));
     return eq;
   }
   async function on_route(route) {
