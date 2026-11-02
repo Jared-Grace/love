@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
@@ -148,8 +149,7 @@ export function app_code_lesson_while_if() {
     }
     let kept = list_filter(values2, through);
     let skipped = list_filter(values2, skipped_is);
-    let size = list_size(kept);
-    let count = subtract(size, 1);
+    let count = list_size_subtract(kept, 1);
     let fewer = list_take(kept, count);
     let size2 = list_size(values2);
     let moved_by = multiply(size2, step);
