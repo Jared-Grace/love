@@ -1,3 +1,4 @@
+import { list_single_property } from "./list_single_property.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { bible_glyph_chapters_marks_group_misread } from "./bible_glyph_chapters_marks_group_misread.mjs";
@@ -7,7 +8,6 @@ import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_single } from "./list_single.mjs";
 import { property_set } from "./property_set.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -51,8 +51,7 @@ export async function bible_glyph_marks_group_misread_accepted_stale_remove() {
       return r;
     }
     let list = arrays.filter(outer_is);
-    let found_array = list_single(list);
-    let node = property_get(found_array, "node");
+    let node = list_single_property(list, "node");
     let value2 = property_get(node, "elements").filter(row_found_is);
     property_set(node, "elements", value2);
   }
