@@ -1,10 +1,10 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_recording_video_path_or_null } from "./lyric_video_recording_video_path_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { audio_file_duration_or_null } from "./audio_file_duration_or_null.mjs";
 import { and } from "./and.mjs";
-import { not } from "./not.mjs";
 export async function lyric_video_recording_video_path_chosen(
   path_audio,
   path_video_named,
@@ -39,8 +39,7 @@ export async function lyric_video_recording_video_path_chosen(
   let seconds_noted = await audio_file_duration_or_null(path_noted);
   let seconds_named = await audio_file_duration_or_null(path_video_named);
   let noted_exact_is = equal(seconds_noted, seconds_audio);
-  let named_exact_is = equal(seconds_named, seconds_audio);
-  let right = not(named_exact_is);
+  let right = equal_not(seconds_named, seconds_audio);
   let noted_only_is = and(noted_exact_is, right);
   if (noted_only_is) {
     return path_noted;
