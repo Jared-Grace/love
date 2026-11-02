@@ -1,7 +1,6 @@
+import { numbers_apart } from "./numbers_apart.mjs";
 import { multiply_round } from "./multiply_round.mjs";
-import { abs } from "./abs.mjs";
 import { divide } from "./divide.mjs";
-import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -30,8 +29,7 @@ export async function lyric_video_document_listen_spots(
     let aligner = hearing.starts[index];
     let heard = hearing.starts_heard[index];
     let both = number_is(aligner) && number_is(heard);
-    let n = subtract(aligner, heard);
-    let left = abs(n);
+    let left = numbers_apart(aligner, heard);
     let top = multiply_round(left, 100);
     let gap = both ? divide(top, 100) : null;
     if (both && less_than(gap, limit)) {
