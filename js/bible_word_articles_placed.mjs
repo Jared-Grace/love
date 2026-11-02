@@ -1,6 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { bible_word_person_places } from "./bible_word_person_places.mjs";
 import { equal } from "./equal.mjs";
+import { property_get } from "./property_get.mjs";
 import { bible_reference_in_places } from "./bible_reference_in_places.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
@@ -22,7 +23,8 @@ export function bible_word_articles_placed(rows, chapter_code, verse_number) {
     if (equal(person, undefined)) {
       continue;
     }
-    if (bible_reference_in_places(chapter_code, verse_number, places[person])) {
+    let places_person = property_get(places, person);
+    if (bible_reference_in_places(chapter_code, verse_number, places_person)) {
       kept.push(row);
       names_placed.push(row[0]);
     }
