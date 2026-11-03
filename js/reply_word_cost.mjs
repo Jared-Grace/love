@@ -1,4 +1,3 @@
-import { greater_than } from "./greater_than.mjs";
 import { reply_typo_budget } from "./reply_typo_budget.mjs";
 import { not } from "./not.mjs";
 import { reply_typo_ends } from "./reply_typo_ends.mjs";
@@ -21,9 +20,6 @@ export function reply_word_cost(word) {
         allowed,
       );
       for (let [ti, cost] of ends) {
-        if (possibility.exact_only && greater_than(cost, 0)) {
-          continue;
-        }
         let so_far = possibility.cost || 0;
         let fork = {
           ...possibility,

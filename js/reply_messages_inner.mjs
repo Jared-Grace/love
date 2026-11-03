@@ -19,27 +19,17 @@ export async function reply_messages_inner(message, start) {
   };
   let name_outputs = reply_property_outputs();
   let name_codes = reply_property_codes();
-  async function readings(exact_only) {
-    let possbility_start = {
-      tokens,
-      index: 0,
-      matches: true,
-      cost: 0,
-      exact_only,
-    };
-    object_merge_set(possbility_start, base);
-    property_set(possbility_start, name_outputs, []);
-    property_set(possbility_start, name_codes, []);
-    let possibilities = await start([possbility_start]);
-    let matched = reply_matches(possibilities);
-    return matched;
-  }
-  ("★ THE MESSAGE IS READ WITH NO TYPOS ALLOWED FIRST, AND ONLY READ AGAIN WITH THEM IF THAT FAILS. A reading with no typos already beat every reading with one, so when one exists the second read could not have changed the winner, and most of the work of a read is in trying the typos.");
-  let result = await readings(true);
-  let exact_none = list_empty_is(result);
-  if (exact_none) {
-    result = await readings(false);
-  }
+  let possbility_start = {
+    tokens,
+    index: 0,
+    matches: true,
+    cost: 0,
+  };
+  object_merge_set(possbility_start, base);
+  property_set(possbility_start, name_outputs, []);
+  property_set(possbility_start, name_codes, []);
+  let possibilities = await start([possbility_start]);
+  let result = reply_matches(possibilities);
   let e = list_empty_is(result);
   if (e) {
     result = {
