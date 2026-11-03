@@ -9,7 +9,7 @@ import { indexeddb_delete_list_backend } from "./indexeddb_delete_list_backend.m
 import { download_cache_database } from "./download_cache_database.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { app_emoji_bible_offline_saved_set } from "./app_emoji_bible_offline_saved_set.mjs";
-export async function app_emoji_bible_offline_free() {
+export async function app_bible_emoji_offline_free() {
   arguments_assert(arguments, 0);
   ("Give back the space the saved picture Bible takes: every chapter file the save wrote, gone in one write, and the device no longer named as holding it.");
   ("THE KEYS ARE BUILT FROM THE SAME LIST THE SAVE USED, rather than found by a prefix, because the store also holds every other download this site keeps, and a prefix wide enough to catch both kinds of chapter could carry off something else.");

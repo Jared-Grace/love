@@ -6,7 +6,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { app_emoji_bible_offline_saved_set } from "./app_emoji_bible_offline_saved_set.mjs";
 import { app_shared_offline_row_generic } from "./app_shared_offline_row_generic.mjs";
 import { app_emoji_bible_offline_saved_get } from "./app_emoji_bible_offline_saved_get.mjs";
-import { app_emoji_bible_offline_free } from "./app_emoji_bible_offline_free.mjs";
+import { app_bible_emoji_offline_free } from "./app_bible_emoji_offline_free.mjs";
 export function app_emoji_bible_offline_row(parent, on_change) {
   arguments_assert(arguments, 2);
   ("The offer to keep the whole picture Bible on this device, as the same row the bible reader offers a language with: save it and watch the chapters count, try again if it stops, or free the space once it is kept.");
@@ -31,7 +31,7 @@ export function app_emoji_bible_offline_row(parent, on_change) {
     name,
     app_emoji_bible_offline_saved_get,
     download,
-    app_emoji_bible_offline_free,
+    app_bible_emoji_offline_free,
     on_change,
   );
 }
