@@ -155,6 +155,7 @@ import { fn_name_literals_gate_run } from "./fn_name_literals_gate_run.mjs";
 import { apps_node_only_gate_run } from "./apps_node_only_gate_run.mjs";
 import { function_top_level_comment_gate_run } from "./function_top_level_comment_gate_run.mjs";
 import { functions_shadowing_gate_run } from "./functions_shadowing_gate_run.mjs";
+import { file_overwrite_unfenced_callers_gate_run } from "./file_overwrite_unfenced_callers_gate_run.mjs";
 import { functions_parameters_unread_gate_run } from "./functions_parameters_unread_gate_run.mjs";
 import { functions_locals_unread_gate_run } from "./functions_locals_unread_gate_run.mjs";
 import { functions_parameters_unread_computed_gate_run } from "./functions_parameters_unread_computed_gate_run.mjs";
@@ -804,6 +805,7 @@ export function qa_gates() {
     apps_node_only_gate_run,
     function_top_level_comment_gate_run,
     functions_shadowing_gate_run,
+    file_overwrite_unfenced_callers_gate_run,
     functions_parameters_unread_gate_run,
     functions_locals_unread_gate_run,
     functions_parameters_unread_computed_gate_run,
