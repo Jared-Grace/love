@@ -1,17 +1,17 @@
-import { permission_replay_events_function_keys } from "./permission_replay_events_function_keys.mjs";
-import { text_empty } from "./text_empty.mjs";
-import { property_set } from "./property_set.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { claude_transcript_paths_recent } from "./claude_transcript_paths_recent.mjs";
 import { permission_prompt_events_paths } from "./permission_prompt_events_paths.mjs";
 import { permission_replay_events_keyed } from "./permission_replay_events_keyed.mjs";
 import { permission_prompt_events_grouped_by } from "./permission_prompt_events_grouped_by.mjs";
-import { permission_prompt_rows_verdicts } from "./permission_prompt_rows_verdicts.mjs";
-import { permission_replay_summary } from "./permission_replay_summary.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
-import { list_add } from "./list_add.mjs";
+import { permission_prompt_rows_verdicts } from "./permission_prompt_rows_verdicts.mjs";
+import { list_slice } from "./list_slice.mjs";
+import { permission_replay_events_function_keys } from "./permission_replay_events_function_keys.mjs";
 import { property_get } from "./property_get.mjs";
+import { dispatcher_run_name } from "./dispatcher_run_name.mjs";
+import { property_set } from "./property_set.mjs";
 import { equal } from "./equal.mjs";
+import { list_add } from "./list_add.mjs";
+import { permission_replay_summary } from "./permission_replay_summary.mjs";
 export async function permission_replay_rows(days, count) {
   "every shape of command the transcripts show being run, ranked by how often, with what the rules as they stand today would decide about each — the shapes still answering ask or silent are the ones a grant could still take off the human";
   "replaying old commands under today's rules is what tells a solved prompt from a standing one. a shape somebody granted last week answers allow now and falls out by itself, so what is left is never work already done, and no list of past grants has to be read to work that out.";
@@ -26,13 +26,14 @@ export async function permission_replay_rows(days, count) {
   await permission_prompt_rows_verdicts(checking);
   let unchecked = list_slice(rows, checking.length, rows.length);
   ("a shape keyed by a function name is a shape one grant could answer, so the name is written onto the row for the grant reading to pick up. A shape keyed by a command line gets no name: no rule naming a function covers it, and offering one would promise a prompt gone that goes on happening.");
+  ("the exception is a command-line label that is itself a dispatcher call. Lines piped or chained are keyed that way, node scripts/ai.mjs followed by the function, and the guard folds a pipeline, so one grant does answer them. Measured 2026-11-03: every candidate was piped, so all thirteen read as nameless and the grant reading came back empty while ten of them passed the safety check.");
   let function_keys = permission_replay_events_function_keys(keyed);
   let already_allowed = [];
   let denied = [];
   let candidates = [];
   for (let row of checking) {
     let label = property_get(row, "label");
-    let run_name = text_empty();
+    let run_name = dispatcher_run_name(label);
     let named = function_keys.has(label);
     if (named) {
       run_name = label;
