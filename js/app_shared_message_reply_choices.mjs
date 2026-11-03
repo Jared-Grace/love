@@ -1,3 +1,4 @@
+import { app_shared_message_reply_poor_family } from "./app_shared_message_reply_poor_family.mjs";
 import { app_shared_message_reply_greeting } from "./app_shared_message_reply_greeting.mjs";
 import { app_shared_message_reply_how_r_u } from "./app_shared_message_reply_how_r_u.mjs";
 import { app_shared_message_reply_phrases_single } from "./app_shared_message_reply_phrases_single.mjs";
@@ -32,6 +33,7 @@ export function app_shared_message_reply_choices() {
   let minister = app_shared_message_reply_minister();
   let from_city_country = app_shared_message_reply_from_country();
   let give = app_shared_message_reply_give();
+  let poor_family = app_shared_message_reply_poor_family();
   let according_to_gods_will = reply_phrase_according_to_gods_will();
   let o_according_to_gods_will = reply_optional(according_to_gods_will);
   let o_come_and = reply_sequence_optional(["come", "and"]);
@@ -70,6 +72,7 @@ export function app_shared_message_reply_choices() {
     minister,
     from_city_country,
     give,
+    poor_family,
     visit_step,
     thanks,
     fn,
