@@ -1,5 +1,6 @@
 import { html_clear } from "./html_clear.mjs";
 import { app_receipts_convert_page } from "./app_receipts_convert_page.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { emoji_sync } from "./emoji_sync.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -7,7 +8,6 @@ import { html_div } from "./html_div.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_receipts_purchase_card } from "./app_receipts_purchase_card.mjs";
 import { app_receipts_purchases_list } from "./app_receipts_purchases_list.mjs";
-import { property_get } from "./property_get.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { app_receipts_purchases_pull } from "./app_receipts_purchases_pull.mjs";
 import { app_receipts_purchase_new } from "./app_receipts_purchase_new.mjs";
@@ -28,7 +28,9 @@ export async function app_receipts_purchases_screen(
   "Every phone given the same folder code sees the same purchases: what the others sent is brought down and kept here too.";
   "Hands back the function that sends, brings down, and redraws, so whoever opened the screen can run it when the internet returns.";
   html_clear(root);
-  let page = app_receipts_convert_page(root);
+  let convert = app_receipts_convert_page(root);
+  let page = property_get(convert, "page");
+  let button_add = property_get(convert, "button_add");
   ("The folder is a button so the way to change it is to press the thing that names it; on_change is handed the current code. The pencil comes first because it says what pressing does.");
   function on_folder() {
     on_change(folder_code);
@@ -36,6 +38,7 @@ export async function app_receipts_purchases_screen(
   app_shared_button_wide(page, "✏️ 📁 " + folder_code, on_folder);
   app_shared_button_wide(page, "➕ Add a purchase", on_add);
   app_shared_button_wide(page, emoji_sync() + " Sync", refresh);
+  button_add();
   let status = html_p_text(page, "");
   let list = html_div(page);
   app_shared_footer(page);

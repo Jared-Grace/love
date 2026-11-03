@@ -15,6 +15,9 @@ export async function app_receipts_convert_browser_check() {
         height: 800,
       },
     });
+    await context.addInitScript(
+      "window.copied_texts = []; if (navigator.clipboard) { navigator.clipboard.writeText = function (text) { window.copied_texts.push(text); return Promise.resolve(); }; }",
+    );
     let page = await context.newPage();
     let errors = [];
     function on_error(err) {
@@ -26,7 +29,7 @@ export async function app_receipts_convert_browser_check() {
     await button.waitFor({
       timeout: 60000,
     });
-    answer.first_button = await page.locator("button").first().innerText();
+    answer.buttons = await page.locator("button").allInnerTexts();
     await button.click();
     await page.waitForTimeout(6000);
     let inputs = page.locator("input");
@@ -34,7 +37,18 @@ export async function app_receipts_convert_browser_check() {
     answer.body = await page.innerText("body");
     let php = inputs.nth(0);
     let usd = inputs.nth(1);
+    let copies = page.getByRole("button", {
+      name: /Copy/,
+    });
+    answer.copy_buttons = await copies.count();
+    await copies.nth(0).click();
+    await page.waitForTimeout(200);
+    answer.copied_when_empty = await page.evaluate("window.copied_texts");
     await php.pressSequentially("1000");
+    await copies.nth(0).click();
+    await copies.nth(1).click();
+    await page.waitForTimeout(200);
+    answer.copied_after_typing = await page.evaluate("window.copied_texts");
     answer.php_typed = {
       php: await php.inputValue(),
       usd: await usd.inputValue(),

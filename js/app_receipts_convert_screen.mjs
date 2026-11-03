@@ -1,13 +1,15 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_button_back } from "./app_shared_button_back.mjs";
 import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
+import { html_value_get } from "./html_value_get.mjs";
+import { equal } from "./equal.mjs";
+import { clipboard_copy_try } from "./clipboard_copy_try.mjs";
+import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_input_amount } from "./app_shared_input_amount.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { text_amount_or_empty } from "./text_amount_or_empty.mjs";
-import { html_value_get } from "./html_value_get.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_receipts_php_per_usd_today } from "./app_receipts_php_per_usd_today.mjs";
-import { equal } from "./equal.mjs";
+import { property_get } from "./property_get.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
@@ -24,8 +26,20 @@ export async function app_receipts_convert_screen(parent, on_back) {
   arguments_assert(arguments, 2);
   app_shared_button_back(parent, on_back);
   let card = app_shared_container_blue_medium(parent);
+  function copy_button_add(input) {
+    async function on_copy() {
+      let value = html_value_get(input);
+      if (equal(value, "")) {
+        return;
+      }
+      await clipboard_copy_try(value);
+    }
+    app_shared_button_copy(card, on_copy);
+  }
   let php_input = app_shared_input_amount(card, "₱ PHP");
+  copy_button_add(php_input);
   let usd_input = app_shared_input_amount(card, "$ USD");
+  copy_button_add(usd_input);
   let rate_line = html_div_text(card, "");
   let php_typed_last = true;
   function amount_shown(amount) {

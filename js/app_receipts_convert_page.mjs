@@ -7,7 +7,7 @@ import { app_receipts_convert_screen } from "./app_receipts_convert_screen.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 export function app_receipts_convert_page(root) {
   "$plain root";
-  "Puts the button that opens the currency converter at the top of root and hands back the place below it where the screen draws everything else.";
+  "Makes the place in root where the screen draws everything, and hands it back as page, along with button_add, which puts the button that opens the currency converter in page at the moment it is called, so the screen decides where among its own buttons it stands.";
   "That screen is only hidden while the converter shows, never redrawn, so going back finds it exactly as it was left, whichever purchase was open and however far it was scrolled.";
   arguments_assert(arguments, 1);
   let page = html_div(root);
@@ -23,6 +23,12 @@ export function app_receipts_convert_page(root) {
     html_display_block(convert);
     await app_receipts_convert_screen(convert, on_back);
   }
-  app_shared_button_wide(page, "💱 Convert currency", on_convert);
-  return page;
+  function button_add() {
+    app_shared_button_wide(page, "💱 Convert currency", on_convert);
+  }
+  let r = {
+    page,
+    button_add,
+  };
+  return r;
 }
