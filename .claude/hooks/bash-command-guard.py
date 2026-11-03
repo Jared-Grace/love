@@ -1357,6 +1357,20 @@ def transparent_wrapper_skip(words):
     # flag stays unread, because those change how the command is launched.
     if words[0] in ("setsid", "nohup") and len(words) >= 2 and not words[1].startswith("-"):
         return 1
+    # `taskset -c <cpus>` runs exactly the command it is given, with its
+    # arguments: it only chooses which processors the command may use. So the
+    # command underneath is what gets judged, and every floor reads through it
+    # too. Only this one shape: the cpu list has to be digits, commas and dashes,
+    # so a miscount lands on a word no rule trusts, and `-p` (which changes a
+    # process already running) and every other flag stay unread.
+    if (
+        words[0] == "taskset"
+        and len(words) >= 4
+        and words[1] == "-c"
+        and re.fullmatch(r"[0-9][0-9,-]*", words[2])
+        and not words[3].startswith("-")
+    ):
+        return 3
     # `!` inverts the exit status of what follows and nothing else - it runs
     # exactly the same command, with the same arguments, reading and writing
     # the same things, and only the number bash reports afterwards differs.
@@ -2141,7 +2155,7 @@ CURL_WRITE_OUT_VAR_RE = re.compile(r"%\{[a-z_]+\}")
 CURL_WRITE_OUT_ALLOWED_VARS = {
     "http_code", "time_total", "size_download", "url_effective",
 }
-CURL_WRITE_OUT_LITERAL_RE = re.compile(r"^[A-Za-z0-9_ :./\\-]*$")
+CURL_WRITE_OUT_LITERAL_RE = re.compile(r"^[A-Za-z0-9_ :./\\\[\]-]*$")
 
 
 def is_safe_curl_write_out(fmt):

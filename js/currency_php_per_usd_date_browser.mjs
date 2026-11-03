@@ -1,3 +1,5 @@
+import { not_equal } from "./not_equal.mjs";
+import { less_than } from "./less_than.mjs";
 import { currency_php_per_usd_date_path } from "./currency_php_per_usd_date_path.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { firebase_storage_url } from "./firebase_storage_url.mjs";
@@ -19,13 +21,14 @@ export async function currency_php_per_usd_date_browser(date) {
     return kept_read_answer;
   }
   let kept = await catch_null_async(kept_read);
-  if (kept !== null) {
-    return kept.rate;
+  if (not_equal(kept, null)) {
+    let r = kept.rate;
+    return r;
   }
   let url_asked = "https://api.frankfurter.dev/v2/rate/USD/PHP?date=" + date;
   let asked = await http_json_browser_quiet(url_asked);
   let today = date_iso_to(new Date()).slice(0, 10);
-  if (date < today) {
+  if (less_than(date, today)) {
     let content = json_to(asked);
     async function keep() {
       await firebase_upload_text_browser_quiet(path, content);
@@ -33,5 +36,6 @@ export async function currency_php_per_usd_date_browser(date) {
     }
     await catch_null_async(keep);
   }
-  return asked.rate;
+  let r2 = asked.rate;
+  return r2;
 }
