@@ -1,13 +1,13 @@
-import { less_than } from "./less_than.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { prayer_lead_all_creation_verbs } from "./prayer_lead_all_creation_verbs.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
 import { prayer_lead_all_creation } from "./prayer_lead_all_creation.mjs";
+import { text_lower_to } from "./text_lower_to.mjs";
 import { app_shared_description } from "./app_shared_description.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_index_of_try } from "./text_index_of_try.mjs";
+import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { text_includes_not } from "./text_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_imports } from "./function_imports.mjs";
@@ -17,7 +17,7 @@ import { list_size } from "./list_size.mjs";
 export async function prayer_lead_all_creation_gate_run() {
   "The autopray card promises a page that prays over every verse of the Bible in turn, asking that all creation would hear, believe, obey, enjoy and proclaim the word of God. The five are spelled out twice over - once in the prayer the page shows and once in the sentence a stranger reads before opening it - so either could be reworded and leave the other saying something the app no longer does. This asks both the same way, against the one named list of the five, and then reads what the page really imports, because a prayer that is worded correctly promises nothing if the page has stopped showing it. It needs no Bible and no network, which is the whole reason it can be a gate.";
   arguments_assert(arguments, 0);
-  let app_name = "autopray";
+  let app_name = "pray_auto";
   let verbs = prayer_lead_all_creation_verbs();
   let s = prayer_lead_all_creation();
   let petition = text_lower_to(s);
