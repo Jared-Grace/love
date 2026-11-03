@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 export function reply_cities_wikidata_names() {
   arguments_assert(arguments, 0);
   ("Every city Wikidata gives at least 10000 people, in lower case with only the letters kept, apart from the ones the shorter list of capitals and big cities already holds.");

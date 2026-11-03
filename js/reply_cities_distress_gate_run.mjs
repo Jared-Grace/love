@@ -1,3 +1,6 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_cities_names } from "./reply_cities_names.mjs";
 import { reply_cities_wikidata_names } from "./reply_cities_wikidata_names.mjs";
@@ -12,7 +15,7 @@ export function reply_cities_distress_gate_run() {
   ("★ IT FIRST PROVES IT CAN SEE A TOWN AT ALL. A check that reads nothing would report no hardship forever, so one name from each list must read itself before the answer counts.");
   let controls = [reply_cities_names()[0], reply_cities_wikidata_names()[0]];
   let seen = reply_cities_distress_readings(controls, controls);
-  if (seen.length < 2) {
+  if (less_than(seen.length, 2)) {
     error_json({
       controls,
       seen,
@@ -24,11 +27,16 @@ export function reply_cities_distress_gate_run() {
   let readings = reply_cities_distress_readings(names, phrases);
   list_empty_is_assert_json(readings, {
     readings,
-    hint: "a word that is not a town reads as one. Remove the town from the list, or run reply_cities_wikidata_names_write again if it is on the longer list",
+    hint: text_combine_multiple([
+      "a word that is not a town reads as one. Remove the town from the list, or run ",
+      fn_name("reply_cities_wikidata_names_write"),
+      " again if it is on the longer list",
+    ]),
   });
-  return {
+  let r = {
     names: names.length,
     phrases: phrases.length,
     readings: 0,
   };
+  return r;
 }
