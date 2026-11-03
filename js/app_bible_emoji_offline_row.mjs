@@ -3,7 +3,7 @@ import { app_shared_offline_progress_text } from "./app_shared_offline_progress_
 import { html_text_set } from "./html_text_set.mjs";
 import { bible_glyph_chapters_offline_download } from "./bible_glyph_chapters_offline_download.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { app_emoji_bible_offline_saved_set } from "./app_emoji_bible_offline_saved_set.mjs";
+import { app_bible_emoji_offline_saved_set } from "./app_bible_emoji_offline_saved_set.mjs";
 import { app_shared_offline_row_generic } from "./app_shared_offline_row_generic.mjs";
 import { app_bible_emoji_offline_saved_get } from "./app_bible_emoji_offline_saved_get.mjs";
 import { app_bible_emoji_offline_free } from "./app_bible_emoji_offline_free.mjs";
@@ -21,7 +21,7 @@ export function app_bible_emoji_offline_row(parent, on_change) {
     let missed = await bible_glyph_chapters_offline_download(on_progress);
     let complete = list_empty_is(missed);
     if (complete) {
-      app_emoji_bible_offline_saved_set(true);
+      app_bible_emoji_offline_saved_set(true);
       return true;
     }
     return null;

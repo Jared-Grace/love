@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { app_bible_emoji_offline_saved_get } from "./app_bible_emoji_offline_saved_get.mjs";
-export function app_emoji_bible_offline_saved_set(saved) {
+export function app_bible_emoji_offline_saved_set(saved) {
   arguments_assert(arguments, 1);
   ("$plain saved");
   ("the answer says whether every chapter is now kept on this device. It is a yes or a no to remember and nothing that runs.");

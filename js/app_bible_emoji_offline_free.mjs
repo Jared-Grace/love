@@ -8,7 +8,7 @@ import { download_cache_store } from "./download_cache_store.mjs";
 import { indexeddb_delete_list_backend } from "./indexeddb_delete_list_backend.mjs";
 import { download_cache_database } from "./download_cache_database.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
-import { app_emoji_bible_offline_saved_set } from "./app_emoji_bible_offline_saved_set.mjs";
+import { app_bible_emoji_offline_saved_set } from "./app_bible_emoji_offline_saved_set.mjs";
 export async function app_bible_emoji_offline_free() {
   arguments_assert(arguments, 0);
   ("Give back the space the saved picture Bible takes: every chapter file the save wrote, gone in one write, and the device no longer named as holding it.");
@@ -29,5 +29,5 @@ export async function app_bible_emoji_offline_free() {
     await indexeddb_delete_list_backend(download_cache_database, store, keys);
   }
   await catch_null_async(clear);
-  app_emoji_bible_offline_saved_set(false);
+  app_bible_emoji_offline_saved_set(false);
 }
