@@ -1,5 +1,5 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { equal } from "./equal.mjs";
 import { youtube_video_record } from "./youtube_video_record.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -15,6 +15,7 @@ export async function youtube_video_status_set_write(
   ("$plain property_name");
   ("$plain value");
   ("Changes one setting in a published video's status - who may watch it, or whether it says it was made with AI - and gives back that setting as YouTube holds it afterwards.");
+  ("do NOT grant. The arguments pick any video and any setting, so one call can make a video public to the world, and that is a thing the human sees each time.");
   ("★ THE WHOLE RECORD IS READ FIRST AND ONLY THE ONE SETTING CHANGED, because putting a record back replaces every part it names entire; a status built from the one field in mind would empty every other setting, silently.");
   ("★ WHAT COMES BACK IS YOUTUBE'S OWN ANSWER, NOT THE VALUE ASKED FOR. A setting YouTube does not take - a channel not yet allowed to publish puts everything back to private - would otherwise be reported as done.");
   ("THE VALUE ARRIVES AS TEXT FROM A COMMAND LINE, so the words true and false are turned into the yes and no YouTube expects; every other value goes as written.");
