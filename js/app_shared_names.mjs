@@ -6,7 +6,7 @@ export function app_shared_names() {
   let r = {
     index: "Apps for reading the Bible and learning to program",
     bible: "Bible",
-    emoji_bible: "Emoji Bible",
+    bible_emoji: "Emoji Bible",
     search: "Bible Search",
     original_bible: "Greek and Hebrew Bible",
     ceb_bible: "Cebuano Bible",
