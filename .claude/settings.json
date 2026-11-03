@@ -2971,7 +2971,6 @@
       "Bash(node scripts/ai.mjs currency_php_per_usd_date_frankfurter:*)",
       "Bash(node scripts/ai.mjs cloudflare_pages_firebase_compare:*)",
       "Bash(node scripts/ai.mjs cloudflare_site_index_apps_boot_cold_report:*)",
-      "Bash(node scripts/ai.mjs cloudflare_site_app_replace_tests_run_e2e:*)",
       "Bash(node scripts/ai.mjs app_receipts_convert_browser_check:*)",
       "Bash(node scripts/ai.mjs cloudflare_site_app_replace_page_tests_run_e2e:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
@@ -5823,7 +5822,6 @@
       "Bash(node scripts/aig.mjs currency_php_per_usd_date_frankfurter:*)",
       "Bash(node scripts/aig.mjs cloudflare_pages_firebase_compare:*)",
       "Bash(node scripts/aig.mjs cloudflare_site_index_apps_boot_cold_report:*)",
-      "Bash(node scripts/aig.mjs cloudflare_site_app_replace_tests_run_e2e:*)",
       "Bash(node scripts/aig.mjs app_receipts_convert_browser_check:*)",
       "Bash(node scripts/aig.mjs cloudflare_site_app_replace_page_tests_run_e2e:*)"
     ],
