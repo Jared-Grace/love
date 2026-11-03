@@ -5,6 +5,10 @@ import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_les
 import { js_operator_to_code_call } from "./js_operator_to_code_call.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { list_find_or_null } from "./list_find_or_null.mjs";
+import { text_replace } from "./text_replace.mjs";
+import { list_without } from "./list_without.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_function_call_wrong_say } from "./app_code_function_call_wrong_say.mjs";
@@ -43,6 +47,38 @@ export function app_code_lesson_functions_arithmetic() {
   let quiz_backwards_label_answer =
     "Rewrite this function call using a math symbol: ";
   let quiz_backwards_answer_count_override = null;
+  ("The wrong answers hold the same two numbers as the right one, and differ only in which function or symbol they use. Filled from the other questions they held other numbers, so the one button with the numbers on the screen was the answer every time and could be picked without knowing what any function does.");
+  ("Not picked: the two numbers swapped, because add(2, 1) comes to the same as add(1, 2) and so would be a wrong answer that is not wrong.");
+  function others_in(answer, property) {
+    "the right answer with its function or symbol changed for each of the other three";
+    function word_of(o) {
+      let word = property_get(o, property);
+      return word;
+    }
+    let words = list_map(operators, word_of);
+    function holds(word) {
+      let held = text_includes(answer, word);
+      return held;
+    }
+    let own = list_find_or_null(words, holds);
+    function with_word(word) {
+      let replaced = text_replace(answer, own, word);
+      return replaced;
+    }
+    let others = list_without(words, own);
+    let found = list_map(others, with_word);
+    return found;
+  }
+  function decoys_forwards(question, answer) {
+    "the same call with each of the other three functions";
+    let found = others_in(answer, "verb");
+    return found;
+  }
+  function decoys_backwards(question, answer) {
+    "the same sum with each of the other three symbols";
+    let found = others_in(answer, "operator");
+    return found;
+  }
   let forwards = {
     question_label: example_question_label,
     on_question: html_text_set_code_dark,
@@ -50,6 +86,7 @@ export function app_code_lesson_functions_arithmetic() {
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
     wrong_say: app_code_function_call_wrong_say,
+    decoys: decoys_forwards,
   };
   let backwards = {
     question_label: "Function call: ",
@@ -58,6 +95,7 @@ export function app_code_lesson_functions_arithmetic() {
     answer_on_button: html_style_code_dark,
     answer_count_override: quiz_backwards_answer_count_override,
     wrong_say: app_code_function_call_wrong_say,
+    decoys: decoys_backwards,
   };
   let quizzes_get = app_code_lesson_quizzes_unscramble_both({
     batch_get,
