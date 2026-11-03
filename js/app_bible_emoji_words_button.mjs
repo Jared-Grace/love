@@ -6,7 +6,7 @@ import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.m
 import { app_shared_bible_open_hash_languages } from "./app_shared_bible_open_hash_languages.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
-export function app_emoji_bible_words_button(parent, chapter_code) {
+export function app_bible_emoji_words_button(parent, chapter_code) {
   arguments_assert(arguments, 2);
   ("$plain chapter_code");
   ("The way from a chapter of the picture Bible to the same chapter in the bible reader next door, in words.");

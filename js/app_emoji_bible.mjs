@@ -17,7 +17,7 @@ import { app_bible_emoji_chapter_bar } from "./app_bible_emoji_chapter_bar.mjs";
 import { app_bible_emoji_views_chosen } from "./app_bible_emoji_views_chosen.mjs";
 import { app_bible_emoji_traditions } from "./app_bible_emoji_traditions.mjs";
 import { app_bible_emoji_chapter_body } from "./app_bible_emoji_chapter_body.mjs";
-import { app_emoji_bible_words_button } from "./app_emoji_bible_words_button.mjs";
+import { app_bible_emoji_words_button } from "./app_bible_emoji_words_button.mjs";
 export async function app_emoji_bible(context) {
   "The picture Bible as a page: one chapter at a time, drawn with its pictures in place of its words, and the books and chapters to reach them by.";
   "THE PAGE READS ONE CHAPTER AT A TIME AND FINDS IT BY THE SAME WORD THE BIBLE READER NEXT DOOR USES. That word is taken from the reader's own key rather than spelled again here, so a link naming a chapter opens that chapter in either app, and the day the pictures become a version somebody picks inside the reader every link anybody saved goes on working.";
@@ -84,6 +84,6 @@ export async function app_emoji_bible(context) {
     english_shown,
     literal_shown,
   );
-  app_emoji_bible_words_button(content, chapter_code);
+  app_bible_emoji_words_button(content, chapter_code);
   app_shared_footer(content);
 }
