@@ -11,7 +11,7 @@ import { app_bible_emoji_key_shown_get } from "./app_bible_emoji_key_shown_get.m
 import { app_bible_emoji_key_shown_set } from "./app_bible_emoji_key_shown_set.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_emoji_bible_manuscript_text } from "./app_emoji_bible_manuscript_text.mjs";
-import { app_emoji_bible_literal_shown_get } from "./app_emoji_bible_literal_shown_get.mjs";
+import { app_bible_emoji_literal_shown_get } from "./app_bible_emoji_literal_shown_get.mjs";
 import { app_emoji_bible_literal_shown_set } from "./app_emoji_bible_literal_shown_set.mjs";
 export function app_emoji_bible_settings_choices(parent, fn_draw) {
   arguments_assert(arguments, 2);
@@ -54,7 +54,7 @@ export function app_emoji_bible_settings_choices(parent, fn_draw) {
   let card_order = app_shared_container_blue(parent);
   html_div_text(card_order, "What order should the emojis be in?");
   let manuscript = app_emoji_bible_manuscript_text(chapter_code);
-  let literal_shown = app_emoji_bible_literal_shown_get();
+  let literal_shown = app_bible_emoji_literal_shown_get();
   async function literal_set(value) {
     app_emoji_bible_literal_shown_set(value);
     await fn_draw();
