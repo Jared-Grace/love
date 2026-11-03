@@ -1,8 +1,8 @@
 import { app_replace_tests_run_e2e_deployed_url } from "./app_replace_tests_run_e2e_deployed_url.mjs";
 import { app_shared_card_image } from "./app_shared_card_image.mjs";
-import { playwright_url_screenshot } from "./playwright_url_screenshot.mjs";
 import { web_assets_app_img_path } from "./web_assets_app_img_path.mjs";
 import { web_assets_folder_join } from "./web_assets_folder_join.mjs";
+import { playwright_url_screenshot_anywhere } from "./playwright_url_screenshot_anywhere.mjs";
 import { web_assets_upload } from "./web_assets_upload.mjs";
 export async function app_replace_card_image_write() {
   "Takes the picture shown on the card a shared link to the puzzle turns into, saves it in the assets folder, and sends it up.";
@@ -16,7 +16,7 @@ export async function app_replace_card_image_write() {
   let f_path = web_assets_folder_join(path);
   let width = 1200;
   let height = 630;
-  await playwright_url_screenshot(url, f_path, width, height);
+  await playwright_url_screenshot_anywhere(url, f_path, width, height);
   let destination = await web_assets_upload(path);
   let r = {
     url,

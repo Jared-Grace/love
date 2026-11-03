@@ -1,4 +1,5 @@
 import { url_opened_unasked_assert } from "./url_opened_unasked_assert.mjs";
+import { picture_saved_unasked_assert } from "./picture_saved_unasked_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
@@ -17,6 +18,7 @@ export async function playwright_url_texts_click_screenshot(
   "Opens a page at a window of the size asked for, presses the first thing showing each of the texts in turn - texts is one comma-joined word, as every list handed over a command line is - and saves a picture of the whole page after the last press.";
   "It exists for screens that only appear after a press, such as a chooser opened from a button, which a picture of the page as it opens never shows.";
   url_opened_unasked_assert(url);
+  picture_saved_unasked_assert(f_path);
   let wait_ms = 1000;
   async function on_page(page) {
     let viewport = {
