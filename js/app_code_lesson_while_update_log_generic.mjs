@@ -1,7 +1,5 @@
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
-import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -13,6 +11,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_to } from "./json_to.mjs";
+import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
@@ -27,11 +26,13 @@ import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { each } from "./each.mjs";
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_while_update_log_generic(options) {
@@ -41,6 +42,7 @@ export function app_code_lesson_while_update_log_generic(options) {
   ("Each screen has one program from each of three counts of runs - one, two and three. None is left out, because a program that writes out nothing would show an empty answer.");
   ("Reading forwards, the wrong answers are the lines one run fewer, one run more, and every line written after n has changed rather than before; each once and never the answer.");
   ("Reading backwards, the wrong program is compared against a number one further on, so it runs once more; or, for a program already running as often as a while lesson allows, one nearer, so it runs once fewer.");
+  ("Reading backwards too, a second wrong program starts one further on, so it runs once fewer, and comparison_mistaken, when a lesson hands one in, is a third that compares the other way, the < for a <= lesson. Each holds the same numbers as the right program, and each runs a different number of times from the right one, so none writes out what the screen shows. Filled from the other questions they held other numbers, so in the lesson on <= the one program made of the numbers on the screen was the answer: measured 2026-11-03 at 76 in 100 against 25 by chance. A lesson on < or > hands in null, because the other comparison would run once more, past as often as a while lesson allows, and its right program holds a number that is not on the screen anyway.");
   let bound = property_get(options, "bound");
   let start = property_get(options, "start");
   let intro_parts = property_get(options, "intro_parts");
@@ -54,10 +56,11 @@ export function app_code_lesson_while_update_log_generic(options) {
   let comparison = property_get(options, "comparison");
   let name_id = property_get(options, "name_id");
   let name = "n";
-  function program_lines(start_value, bound_value) {
+  let comparison_mistaken = property_get(options, "comparison_mistaken");
+  function program_lines(compared, start_value, bound_value) {
     "let n = start_value; while (n < bound_value) { console.log(n); n++; }";
     let code = js_code_let_statement(name, start_value);
-    let condition = js_code_binary_spaced_nb(name, comparison, bound_value);
+    let condition = js_code_binary_spaced_nb(name, compared, bound_value);
     let logged = js_code_console_log_statement(name);
     let changed = js_code_update_statement(name, change);
     let keyword = js_keyword_while();
@@ -69,7 +72,7 @@ export function app_code_lesson_while_update_log_generic(options) {
     return lines;
   }
   function program_get(start_value, bound_value) {
-    let lines2 = program_lines(start_value, bound_value);
+    let lines2 = program_lines(comparison, start_value, bound_value);
     let joined = list_join_newline(lines2);
     return joined;
   }
@@ -143,7 +146,14 @@ export function app_code_lesson_while_update_log_generic(options) {
       bound4 = step_back(bound3, 1);
     }
     let code4 = program_get(start3, bound4);
-    let found2 = [code4];
+    let started_on = moved(start3);
+    let code5 = program_get(started_on, bound3);
+    let found2 = [code5, code4];
+    if (null_not_is(comparison_mistaken)) {
+      let lines5 = program_lines(comparison_mistaken, start3, bound3);
+      let code6 = list_join_newline(lines5);
+      list_add(found2, code6);
+    }
     return found2;
   }
   function said(root, value) {
@@ -176,7 +186,7 @@ export function app_code_lesson_while_update_log_generic(options) {
     );
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, intro_parts);
-    let lines3 = program_lines(start, bound);
+    let lines3 = program_lines(comparison, start, bound);
     let values4 = values_of(start, bound);
     let value2 = written(values4);
     app_code_code_lines_writes_out(box_two, lines3, value2);
@@ -187,13 +197,14 @@ export function app_code_lesson_while_update_log_generic(options) {
     let last2 = list_last(values4);
     let ended2 = moved(last2);
     let condition3 = js_code_binary_spaced_nb(ended2, comparison, bound);
+    let r = app_code_braces_dots();
     app_code_div_cycle_code(box_two, [
       "",
       condition3,
       " is ",
       "false",
       ", so the ",
-      app_code_braces_dots(),
+      r,
       " is skipped, and the code continues after it",
     ]);
   }

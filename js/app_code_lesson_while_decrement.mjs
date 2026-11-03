@@ -20,6 +20,7 @@ export function app_code_lesson_while_decrement() {
   let lesson = app_code_lesson_while_update_log_generic({
     name_id,
     comparison: js_operator_greater_than_symbol(),
+    comparison_mistaken: null,
     asks: greater_than,
     change: js_operator_minus_symbol(),
     step: subtract,
