@@ -8,6 +8,7 @@ import { reply_case_approval } from "./reply_case_approval.mjs";
 import { list_map } from "./list_map.mjs";
 import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
 import { list_add } from "./list_add.mjs";
+import { reply_cases_no_reply_yet_shown } from "./reply_cases_no_reply_yet_shown.mjs";
 export async function app_message_reply_proposals_shown() {
   arguments_assert(arguments, 0);
   ("Everything a person needs in front of them to say yes or no to a change to the reply rules: the lines it would change, the rewritten messages it was measured on with what they would then get, the real messages those were drawn from with what they get now, and the whole worked corpus in the same shape underneath.");
@@ -79,6 +80,7 @@ export async function app_message_reply_proposals_shown() {
   let shown = {
     proposals: listed,
     cases: corpus,
+    no_reply_yet: await reply_cases_no_reply_yet_shown(),
   };
   return shown;
 }

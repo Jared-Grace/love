@@ -1279,24 +1279,6 @@ export function reply_proposals() {
       },
       {
         from: "",
-        message: "I am from a poor family",
-        answered: false,
-        outputs: [],
-      },
-      {
-        from: "",
-        message: "my children are hungry",
-        answered: false,
-        outputs: [],
-      },
-      {
-        from: "",
-        message: "I am from a poor family, please help me",
-        answered: false,
-        outputs: [],
-      },
-      {
-        from: "",
         message:
           "I am from a poor family, please help me, my wife died, my children are hungry",
         answered: false,

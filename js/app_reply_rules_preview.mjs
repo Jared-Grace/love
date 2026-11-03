@@ -1,4 +1,3 @@
-import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
@@ -12,9 +11,11 @@ import { list_size } from "./list_size.mjs";
 import { list_filter_property_path } from "./list_filter_property_path.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
 import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
+import { list_filter_size } from "./list_filter_size.mjs";
 import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
+import { app_reply_rules_no_reply_yet_show } from "./app_reply_rules_no_reply_yet_show.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_reply_rules_proposal_show } from "./app_reply_rules_proposal_show.mjs";
 import { list_map } from "./list_map.mjs";
@@ -36,6 +37,7 @@ export async function app_reply_rules_preview() {
   html_style_overflow_wrap(root, "anywhere");
   html_p_text(root, "Changes to the reply rules, waiting on you.");
   let status = html_p_text(root, "Reading...");
+  let no_reply_yet = html_div(root);
   let chooser = html_div(root);
   let listed = html_div(root);
   ("Every change whose files are all approved is put into the code before anything is read, so a change finished on a visit that was cut off goes in now and is not offered again.");
@@ -76,6 +78,8 @@ export async function app_reply_rules_preview() {
     " not approved yet.",
   ]);
   html_text_content_set(status, said);
+  let rows_no_reply_yet = property_get(shown, "no_reply_yet");
+  app_reply_rules_no_reply_yet_show(no_reply_yet, rows_no_reply_yet);
   let buttons = [];
   let sides = [true, false];
   function side_show(wanted) {
