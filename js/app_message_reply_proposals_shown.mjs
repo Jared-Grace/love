@@ -1,11 +1,13 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_message_reply_records_by_key } from "./app_message_reply_records_by_key.mjs";
 import { reply_proposals_waiting } from "./reply_proposals_waiting.mjs";
 import { app_message_reply_cases_checked } from "./app_message_reply_cases_checked.mjs";
 import { property_get } from "./property_get.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { list_squash } from "./list_squash.mjs";
+import { list_map } from "./list_map.mjs";
+import { app_message_reply_records_by_keys } from "./app_message_reply_records_by_keys.mjs";
 import { reply_case_real_or_null } from "./reply_case_real_or_null.mjs";
 import { reply_case_approval } from "./reply_case_approval.mjs";
-import { list_map } from "./list_map.mjs";
 import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
 import { list_add } from "./list_add.mjs";
 import { reply_cases_no_reply_yet_shown } from "./reply_cases_no_reply_yet_shown.mjs";
@@ -18,9 +20,23 @@ export async function app_message_reply_proposals_shown() {
   ("★ THE FILES THAT DO NOT EXIST YET ARE THE HALF THAT USED TO REACH NOBODY. A change to these rules is usually a few lines in a function that is already there and several whole new files beside it, and only the few lines were ever shown - so what was being said yes or no to was the smaller and less consequential half. They are fetched by the names the change gives and drawn as lines it brings, which is what they are.");
   ("Lines the change names and its file no longer holds come through separately rather than being quietly dropped, so a change that has gone stale says so on the screen instead of drawing as though it still applied.");
   ("The corpus comes through checked rather than raw, so a case that has quietly stopped doing what it was written to do shows on the same screen as the change being proposed. A change is reviewed against a rule set somebody believes is working, and the cheapest way to be wrong about that is to have never looked.");
-  let by_key = await app_message_reply_records_by_key();
   let proposals = await reply_proposals_waiting();
   let checked = await app_message_reply_cases_checked();
+  function proposal_cases(proposal) {
+    let cases = property_get(proposal, "cases");
+    return cases;
+  }
+  function from_read(one) {
+    let from = property_get(one, "from");
+    return from;
+  }
+  let shown_cases = list_concat(
+    list_squash(list_map(proposals, proposal_cases)),
+    checked,
+  );
+  let by_key = await app_message_reply_records_by_keys(
+    list_map(shown_cases, from_read),
+  );
   function each_case(one) {
     let from = property_get(one, "from");
     let found = reply_case_real_or_null(by_key, from);

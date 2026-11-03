@@ -1,9 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_message_private_records } from "./app_message_private_records.mjs";
 import { app_shared_message_reply_choices } from "./app_shared_message_reply_choices.mjs";
-import { property_get } from "./property_get.mjs";
-import { reply_attempt } from "./reply_attempt.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
+import { app_message_private_record_replied } from "./app_message_private_record_replied.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 export async function app_message_private_records_replied() {
   arguments_assert(arguments, 0);
@@ -14,12 +12,7 @@ export async function app_message_private_records_replied() {
   let records = await app_message_private_records();
   let start = app_shared_message_reply_choices();
   async function lambda(record) {
-    let message = property_get(record, "message");
-    let attempt = await reply_attempt(message, start);
-    let carried = {
-      reply: attempt,
-    };
-    object_merge_set(carried, record);
+    let carried = await app_message_private_record_replied(record, start);
     return carried;
   }
   let replied = await list_map_async(records, lambda);
