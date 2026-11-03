@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { app_code_lesson_family_roots } from "./app_code_lesson_family_roots.mjs";
+import { app_code_lesson_family_neighbours } from "./app_code_lesson_family_neighbours.mjs";
 import { app_code_lesson_telling_shapes_missing_one } from "./app_code_lesson_telling_shapes_missing_one.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -12,11 +13,12 @@ export async function app_code_lesson_telling_shapes_missing() {
   ("The lessons are found by what they do rather than by a list kept here, so a lesson written tomorrow is judged the day it is written and no list can go stale behind it.");
   let names = await repo_love_functions_names();
   let roots = await app_code_lesson_family_roots(names);
+  let neighbours = app_code_lesson_family_neighbours(roots);
   let found = [];
   for (let root of roots) {
     let report = await app_code_lesson_telling_shapes_missing_one(
       root,
-      roots,
+      neighbours,
       names,
     );
     let some = null_not_is(report);

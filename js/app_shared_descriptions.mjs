@@ -25,7 +25,7 @@ export function app_shared_descriptions() {
       "Read the New Testament in Cebuano with every word explained: what it means, and the root word it comes from. For reading Cebuano Scripture closely, whether it is your own language or one you are learning.",
     original_bible:
       "Read the New Testament in the Greek it was written in, and the Old Testament in Hebrew from Genesis onwards, with every word explained in English: what it means, how it is being used in that sentence, and the number you can look it up by.",
-    emoji_bible:
+    bible_emoji:
       "The Bible written with pictures in place of its words, so a verse can be met without first knowing the language it was written in. A key under each verse shows the original words and the English beside them, and leaves the pictures for you to work out.",
     g: "A game where you walk a street and talk with the people you meet about Jesus. They ask hard questions and say what they do not believe, and you answer them from the Bible, matching each verse to the words that belong with it.",
     g_bless:
