@@ -38,42 +38,33 @@ export function app_code_lesson_statement_name_two() {
     "the other name written out, the two words swapped, and the name in quote marks";
     let ast = js_parse(answer);
     let words = js_strings(ast);
-    let word_first = app_code_string_code(list_first(words));
-    let word_last = app_code_string_code(list_last(words));
+    let word = list_first(words);
+    let word_first = app_code_string_code(word);
+    let word2 = list_last(words);
+    let word_last = app_code_string_code(word2);
     let names = js_declared_names(ast);
     let name_first = list_first(names);
     let name_last = list_last(names);
     let written = eval_console_log_lines(answer);
-    let first_written = equal(written, list_first(words));
+    let right = list_first(words);
+    let first_written = equal(written, right);
     let name_logged = ternary(first_written, name_first, name_last);
     let name_other = ternary(first_written, name_last, name_first);
     function program_of(held_first, held_last, logged) {
       "the three lines with the two words and the writing-out line handed in";
-      let lines = [
-        js_code_let_statement(name_first, held_first),
-        js_code_let_statement(name_last, held_last),
-        logged,
-      ];
+      let code2 = js_code_let_statement(name_first, held_first);
+      let code3 = js_code_let_statement(name_last, held_last);
+      let lines = [code2, code3, logged];
       let code = list_join_newline(lines);
       return code;
     }
-    let found = [
-      program_of(
-        word_first,
-        word_last,
-        js_code_console_log_statement(name_other),
-      ),
-      program_of(
-        word_last,
-        word_first,
-        js_code_console_log_statement(name_logged),
-      ),
-      program_of(
-        word_first,
-        word_last,
-        app_code_word_console_log_statement(name_logged),
-      ),
-    ];
+    let statement = js_code_console_log_statement(name_other);
+    let v = program_of(word_first, word_last, statement);
+    let statement2 = js_code_console_log_statement(name_logged);
+    let v2 = program_of(word_last, word_first, statement2);
+    let statement3 = app_code_word_console_log_statement(name_logged);
+    let v3 = program_of(word_first, word_last, statement3);
+    let found = [v, v2, v3];
     return found;
   }
   let lesson = app_code_lesson_code_logged({
