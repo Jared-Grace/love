@@ -15,6 +15,10 @@ import { reply_prayer_bless_family } from "./reply_prayer_bless_family.mjs";
 import { reply_prayer_help_you } from "./reply_prayer_help_you.mjs";
 import { reply_prayer_feed_children } from "./reply_prayer_feed_children.mjs";
 import { prayer_lines_wrap } from "./prayer_lines_wrap.mjs";
+import { reply_prayer_provide_ministry } from "./reply_prayer_provide_ministry.mjs";
+import { reply_pray_response } from "./reply_pray_response.mjs";
+import { reply_choices_will_done_fragment } from "./reply_choices_will_done_fragment.mjs";
+import { reply_choices_glory } from "./reply_choices_glory.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -1136,6 +1140,11 @@ export function reply_proposals() {
     fn_name("reply_cities_names_all"),
     "();",
   ]);
+  let combined35 = text_combine_multiple([
+    "-  let names = ",
+    fn_name("reply_cities_names"),
+    "();",
+  ]);
   let towns_wikidata = {
     title: "read every city of ten thousand people or more as a town",
     fn: fn_name("reply_cities"),
@@ -1143,14 +1152,7 @@ export function reply_proposals() {
       fn_name("reply_cities_names_all"),
       fn_name("reply_cities_wikidata_names"),
     ],
-    diff: [
-      text_combine_multiple([
-        "-  let names = ",
-        fn_name("reply_cities_names"),
-        "();",
-      ]),
-      combined34,
-    ],
+    diff: [combined35, combined34],
     cases: [
       {
         from: "",
@@ -1302,6 +1304,183 @@ export function reply_proposals() {
       "measured on the whole rule set: all eighteen saved tests give the same answer as before.",
     ],
   };
+  let combined36 = text_combine_multiple([
+    "-  let r = ",
+    fn_name("reply_sequence"),
+    "([room, last]);",
+  ]);
+  let combined37 = text_combine_multiple([
+    "+  let with_repeats = ",
+    fn_name("reply_sequence"),
+    "([room, last]);",
+  ]);
+  let combined38 = text_combine_multiple([
+    "+  let r = ",
+    fn_name("reply_outputs_mapped"),
+    "(with_repeats, ",
+    fn_name("list_unique"),
+    ");",
+  ]);
+  let card_repeats_once = {
+    title: "answer each thing said only once, however many times it is said",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_outputs_mapped")],
+    diff: [combined36, combined37, combined38],
+    cases: [
+      {
+        from: "ed34005fa45d9297",
+        message: "HelloHellHelloHellomyHelloHellom",
+        answered: true,
+        outputs: [greeting],
+      },
+      {
+        from: "",
+        message: "hello hello hello",
+        answered: true,
+        outputs: [greeting],
+      },
+      {
+        from: "",
+        message: "am from Kenya am from Kenya hello",
+        answered: true,
+        outputs: [t, greeting],
+      },
+    ],
+    decide: [
+      "this changes one saved test: the hello test goes from six greetings to one. It is the only saved test with repeats.",
+      "identical replies become one, and the first one keeps its place. So thanks, hello, thanks gets one glory line, then one greeting.",
+      "the check is on the words of the reply, not on what the person meant. Two different things said that happen to get the same reply also become one.",
+    ],
+  };
+  let line_ministry = reply_prayer_provide_ministry();
+  let pray_request = reply_choices_will_done_fragment();
+  let line_will_done = reply_pray_response(pray_request);
+  let line_glory = reply_choices_glory();
+  let combined39 = text_combine_multiple([
+    "-  let give = ",
+    fn_name("app_shared_message_reply_give"),
+    "();",
+  ]);
+  let combined40 = text_combine_multiple([
+    "-  let poor_family = ",
+    fn_name("app_shared_message_reply_poor_family"),
+    "();",
+  ]);
+  let combined41 = text_combine_multiple([
+    "+  let asks = ",
+    fn_name("app_shared_message_reply_asks"),
+    "();",
+  ]);
+  let combined61 = text_combine_multiple([
+    "-  let room = ",
+    fn_name("reply_once_or_more"),
+    "(choices_main);",
+  ]);
+  let combined62 = text_combine_multiple([
+    "+  let room_more = ",
+    fn_name("reply_once_or_more"),
+    "(choices_main);",
+  ]);
+  let combined63 = text_combine_multiple([
+    "+  let room = ",
+    fn_name("reply_outputs_mapped"),
+    "(room_more, ",
+    fn_name("reply_outputs_asks_gather"),
+    ");",
+  ]);
+  let wrapped = prayer_lines_wrap([line_ministry]);
+  let wrapped2 = prayer_lines_wrap([line_family]);
+  let wrapped3 = prayer_lines_wrap([line_children]);
+  let wrapped4 = prayer_lines_wrap([line_family, line_help]);
+  let wrapped5 = prayer_lines_wrap([line_ministry]);
+  let wrapped6 = prayer_lines_wrap([line_help, line_ministry, line_children]);
+  let wrapped7 = prayer_lines_wrap([line_family, line_children]);
+  let card_asks_gathered = {
+    title:
+      "give one prayer and one Sorry for a poor family, hungry children or a ministry, each said alone or together",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [
+      fn_name("app_shared_message_reply_asks"),
+      fn_name("reply_outputs_asks_gather"),
+      fn_name("reply_outputs_mapped"),
+      fn_name("reply_asks_lines"),
+      fn_name("reply_prayer_provide_ministry"),
+    ],
+    diff: [
+      combined39,
+      combined40,
+      combined41,
+      "-    give,",
+      "-    poor_family,",
+      "+    asks,",
+      combined61,
+      combined62,
+      combined63,
+    ],
+    cases: [
+      {
+        from: "31c5df9f5c22e68d",
+        message:
+          "come and fellowship with us, God's will, IAM request you to support in ministry, God's will, thank you.",
+        answered: true,
+        outputs: [line_will_done, wrapped, give_response, line_glory],
+      },
+      {
+        from: "",
+        message: "I am from a poor family",
+        answered: true,
+        outputs: [wrapped2, give_response],
+      },
+      {
+        from: "",
+        message: "my children are hungry",
+        answered: true,
+        outputs: [wrapped3, give_response],
+      },
+      {
+        from: "",
+        message: "I am from a poor family, please help me",
+        answered: true,
+        outputs: [wrapped4, give_response],
+      },
+      {
+        from: "",
+        message:
+          "I am from a poor family, please help me, my children are hungry",
+        answered: true,
+        outputs: [prayer_family_help_children, give_response],
+      },
+      {
+        from: "",
+        message:
+          "I am requesting you to support us in ministry according to God's will",
+        answered: true,
+        outputs: [wrapped5, give_response],
+      },
+      {
+        from: "",
+        message:
+          "please help, I am requesting you to support us in ministry according to God's will, my children are hungry",
+        answered: true,
+        outputs: [wrapped6, give_response],
+      },
+      {
+        from: "",
+        message: "I am from a poor family, hello, my children need food",
+        answered: true,
+        outputs: [wrapped7, give_response, greeting],
+      },
+    ],
+    decide: [
+      "this answers messages alone that used to reach you. I am from a poor family, and my children are hungry, now get a prayer and the Sorry line, and nobody reads them. That is what you asked for, and it was the rejected reading on the earlier card. All three of those messages left the no-reply list and are tests here.",
+      "please help on its own still gets no reply, because it is not one of the three things. Anything else in the message still means no reply, so my wife died in the middle still sends the whole message to you.",
+      "this changes one saved test. Test 1 goes from three replies to four: it gains the ministry prayer before the Sorry line.",
+      "the prayer says provide for your ministry, and the Sorry line right after it says May the LORD provide. So provide comes twice in a row. Is that acceptable?",
+      "the prayer comes where the first of these things was said, and the other replies keep their places. So family, hello, children gets the prayer, the Sorry line, then the greeting.",
+      "please help can come before or after each thing, as you wrote it. I did not write the repeating into this rule, because the rule set already repeats. That also lets other things be said in between, and a please help between two things cannot be read two ways that differ.",
+      "the two old rules and the piece that took three parts in any order are unused once this goes in. I would remove them after you approve.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -1316,6 +1495,8 @@ export function reply_proposals() {
     from_town_country,
     poor_family,
     towns_wikidata,
+    card_repeats_once,
+    card_asks_gathered,
   ];
   return proposals;
 }
