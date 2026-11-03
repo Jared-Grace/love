@@ -33,9 +33,12 @@ export async function app_receipts_rates_browser_check() {
     "new Promise(function (resolve, reject) {" +
     " let open = indexedDB.open(" +
     json_to(database) +
-    ");" +
+    ", 1);" +
     " open.onerror = function () { reject(open.error); };" +
-    " open.onsuccess = function () {" +
+    " open.onupgradeneeded = function () { open.result.createObjectStore(" +
+    json_to(store) +
+    ", { keyPath: 'key' }); };" +
+    " open.onsuccess = function () { try {" +
     " let tx = open.result.transaction(" +
     json_to(store) +
     ", 'readwrite');" +
@@ -44,10 +47,10 @@ export async function app_receipts_rates_browser_check() {
     ");" +
     " for (let p of " +
     json_to(purchases) +
-    ") { if (s.keyPath) { s.put(p); } else { s.put(p, p.key); } }" +
-    " tx.oncomplete = function () { resolve(true); };" +
+    ") { s.put(p); }" +
+    " tx.oncomplete = function () { open.result.close(); resolve(true); };" +
     " tx.onerror = function () { reject(tx.error); };" +
-    " }; })";
+    " } catch (e) { reject(e); } }; })";
   let launcher = await playwright_firefox();
   let engine = await launcher.launch({
     headless: true,
@@ -143,6 +146,8 @@ export async function app_receipts_rates_browser_check() {
     let failing = await visit_new(fail);
     answer.failing = await reload_read(failing, 40000);
     await failing.context.close();
+  } catch (e) {
+    answer.error = e.message;
   } finally {
     await engine.close();
   }
