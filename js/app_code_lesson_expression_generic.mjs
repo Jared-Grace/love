@@ -1,11 +1,11 @@
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
-import { app_code_batch_code_eval } from "./app_code_batch_code_eval.mjs";
-import { app_code_lesson_code_generic } from "./app_code_lesson_code_generic.mjs";
-import { app_code_lesson_name_id_words } from "./app_code_lesson_name_id_words.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_code_lesson_name_id_words } from "./app_code_lesson_name_id_words.mjs";
+import { app_code_batch_code_eval } from "./app_code_batch_code_eval.mjs";
+import { app_code_lesson_code_generic } from "./app_code_lesson_code_generic.mjs";
 export function app_code_lesson_expression_generic(params) {
   "a bare-expression lesson (no console.log wrapper): the question is the expression, the answer is its value; caller passes next_arg (produces expression code strings), an above intro, example_count, and either a name_id or (name_id_rights + category) for the title";
   let next_arg = property_get(params, "next_arg");
@@ -14,11 +14,8 @@ export function app_code_lesson_expression_generic(params) {
   let name_id = property_get_or_null(params, "name_id");
   let name_id_missing = null_is(name_id);
   if (name_id_missing) {
-    let category = property_get_or(
-      params,
-      "category",
-      app_code_category_expressions(),
-    );
+    let value_not = app_code_category_expressions();
+    let category = property_get_or(params, "category", value_not);
     let name_id_rights = property_get(params, "name_id_rights");
     name_id = app_code_lesson_name_id_words(category, name_id_rights);
   }
@@ -39,6 +36,7 @@ export function app_code_lesson_expression_generic(params) {
     null,
   );
   let decoys = property_get_or(params, "decoys", null);
+  let backwards_decoys = property_get_or(params, "backwards_decoys", null);
   let forwards_question_label = property_get_or(
     params,
     "forwards_question_label",
@@ -70,6 +68,7 @@ export function app_code_lesson_expression_generic(params) {
     quiz_backwards_answer_count_override,
     forwards_answer_count_override,
     decoys,
+    backwards_decoys,
     forwards_question_label,
     forwards_answer_label,
     backwards_question_label,

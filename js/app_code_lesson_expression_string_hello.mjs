@@ -1,9 +1,10 @@
-import { app_code_lesson_expression_string_hello_above } from "./app_code_lesson_expression_string_hello_above.mjs";
 import { js_string_quote } from "./js_string_quote.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_expression_string_hello_title_name_id } from "./app_code_lesson_expression_string_hello_title_name_id.mjs";
 import { app_code_lesson_expression_string_generic } from "./app_code_lesson_expression_string_generic.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
+import { app_code_lesson_expression_string_hello_above } from "./app_code_lesson_expression_string_hello_above.mjs";
 export function app_code_lesson_expression_string_hello() {
   "practice a string - text written inside quotes, the first value that is not a number. A quoted word evaluates to the text WITHOUT the quotes: the quotes are how you write it, not part of the value; the answer is the text with no quotes. The word source is the fruits of the Spirit.";
   let quote = js_string_quote();
@@ -13,10 +14,20 @@ export function app_code_lesson_expression_string_hello() {
     let r = [quoted];
     return r;
   }
+  ("Reading backwards the wrong answers hold the same word as the right one. Filled from the other questions they each held another word, so the one button with the word on the screen was the answer and could be picked without knowing a thing about strings.");
+  ("They are the word with no quote marks, which is the same mistake as the forward wrong answer turned around, and the word with only one of its two quote marks. Each is ruled out by the one fact this lesson gives, that a string is text in quotes, so no error has to have been met. Not picked: the word with changed capitals or a space added, because those ask for careful reading of the word and not for what quote marks do, and a space is the next lesson.");
+  function backwards_decoys(question, answer) {
+    "the word with no quote marks, with only the opening one, and with only the closing one";
+    let opened = text_combine_multiple([quote, question]);
+    let closed = text_combine_multiple([question, quote]);
+    let found = [question, opened, closed];
+    return found;
+  }
   let name_id = app_code_lesson_expression_string_hello_title_name_id();
   let lesson = app_code_lesson_expression_string_generic({
     words_get: fruits_of_the_spirit,
     decoys,
+    backwards_decoys,
     above,
     name_id,
   });
