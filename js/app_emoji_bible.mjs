@@ -10,7 +10,7 @@ import { html_centered } from "./html_centered.mjs";
 import { bible_glyph_chapter_references_browser } from "./bible_glyph_chapter_references_browser.mjs";
 import { app_bible_emoji_chapter_chosen } from "./app_bible_emoji_chapter_chosen.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
-import { app_emoji_bible_settings_button } from "./app_emoji_bible_settings_button.mjs";
+import { app_bible_emoji_settings_button } from "./app_bible_emoji_settings_button.mjs";
 import { app_bible_emoji_chapter_index } from "./app_bible_emoji_chapter_index.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_bible_emoji_chapter_bar } from "./app_bible_emoji_chapter_bar.mjs";
@@ -62,7 +62,7 @@ export async function app_emoji_bible(context) {
   let index_shown = null_is(chosen);
   if (index_shown) {
     html_div_text_bold(bar, "The Bible in pictures");
-    app_emoji_bible_settings_button(bar, context);
+    app_bible_emoji_settings_button(bar, context);
     app_bible_emoji_chapter_index(content, chapters);
     app_shared_footer(content);
     return;
@@ -73,7 +73,7 @@ export async function app_emoji_bible(context) {
   let key_shown = property_get(chosen_views, "key_shown");
   let english_shown = property_get(chosen_views, "english_shown");
   let literal_shown = property_get(chosen_views, "literal_shown");
-  app_emoji_bible_settings_button(bar, context);
+  app_bible_emoji_settings_button(bar, context);
   let traditions = app_emoji_bible_traditions(tradition);
   let chapter_code = property_get(chosen, "chapter_code");
   await app_bible_emoji_chapter_body(
