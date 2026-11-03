@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_bible_emoji_english_shown_get } from "./app_bible_emoji_english_shown_get.mjs";
-import { app_emoji_bible_english_shown_set } from "./app_emoji_bible_english_shown_set.mjs";
+import { app_bible_emoji_english_shown_set } from "./app_bible_emoji_english_shown_set.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_buttons_choice_pair } from "./app_shared_buttons_choice_pair.mjs";
 import { app_emoji_bible_original_language_text } from "./app_emoji_bible_original_language_text.mjs";
@@ -24,7 +24,7 @@ export function app_emoji_bible_settings_choices(parent, fn_draw) {
   let chapter_code = app_shared_bible_chapter_hash_get_or_empty(hash);
   let english_shown = app_bible_emoji_english_shown_get();
   async function english_set(value) {
-    app_emoji_bible_english_shown_set(value);
+    app_bible_emoji_english_shown_set(value);
     await fn_draw();
   }
   let card_english = app_shared_container_blue(parent);

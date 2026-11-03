@@ -1,6 +1,6 @@
 import { storage_local_set } from "./storage_local_set.mjs";
 import { app_bible_emoji_english_shown_get } from "./app_bible_emoji_english_shown_get.mjs";
-export function app_emoji_bible_english_shown_set(shown) {
+export function app_bible_emoji_english_shown_set(shown) {
   "$plain shown";
   "the answer says whether the reader wants the English under each verse. It is a yes or a no to remember and nothing that runs.";
   "Remember whether this reader wants the English under each verse.";
