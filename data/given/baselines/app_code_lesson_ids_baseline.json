@@ -319,6 +319,7 @@
   "while_product",
   "while_increment",
   "while_up_to",
+  "while_log_double",
   "while_decrement",
   "while_countdown",
   "while_repeat",
