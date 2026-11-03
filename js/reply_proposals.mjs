@@ -1310,8 +1310,7 @@ export function reply_proposals() {
       },
     ],
     decide: [
-      "a message that gets this reply does not reach your inbox. So a family asking for food gets the prayer and the Give reply, and nobody reads what they wrote. Is that what you want for these messages?",
-      "the prayer and Give go as two replies, prayer first. One reply holding both was the rejected reading. Each line of the prayer is on its own line, as you wrote them, with Amen after the last line and no period between them.",
+      "the prayer and Give go as two replies, prayer first. One reply holding both was the rejected reading. Each line of the prayer is on its own line, as you wrote them, each ending in an exclamation mark, with Amen after the last line.",
       "Give is the same function the Give button sends in the reply app, so changing that wording changes it here too.",
       "all three parts must be there. A part on its own gets no reply and comes to you. Answering each part alone was the rejected reading, because a person could then get three replies, or get Give for saying only my children are hungry.",
       "anything else in the message means no reply, so my wife died in the middle sends the whole message to you.",
