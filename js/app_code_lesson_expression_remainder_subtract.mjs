@@ -57,7 +57,8 @@ export function app_code_lesson_expression_remainder_subtract() {
     let terms = text_split(chain, " - ");
     let number = list_first(terms);
     let divisor = list_get(terms, 1);
-    let count = subtract(list_size(terms), 1);
+    let left = list_size(terms);
+    let count = subtract(left, 1);
     let parts = [number, divisor, count];
     return parts;
   }
