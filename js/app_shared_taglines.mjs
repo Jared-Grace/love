@@ -21,7 +21,7 @@ export function app_shared_taglines() {
     music: "the words of the songs, and the Scripture behind them",
     supper: "nine passages, one at a time, in the languages you choose",
     supper_tl: "nine passages, one at a time, with English beside them",
-    autopray: "leave it open and it prays over every verse of the Bible",
+    pray_auto: "leave it open and it prays over every verse of the Bible",
     code: "learn to program one step at a time",
     replace: "turn one row of symbols into another",
     examples: "worked examples of the code these apps are made of",
