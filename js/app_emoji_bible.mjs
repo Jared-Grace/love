@@ -13,7 +13,7 @@ import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { app_emoji_bible_settings_button } from "./app_emoji_bible_settings_button.mjs";
 import { app_emoji_bible_chapter_index } from "./app_emoji_bible_chapter_index.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
-import { app_emoji_bible_chapter_bar } from "./app_emoji_bible_chapter_bar.mjs";
+import { app_bible_emoji_chapter_bar } from "./app_bible_emoji_chapter_bar.mjs";
 import { app_emoji_bible_views_chosen } from "./app_emoji_bible_views_chosen.mjs";
 import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
 import { app_emoji_bible_chapter_body } from "./app_emoji_bible_chapter_body.mjs";
@@ -67,7 +67,7 @@ export async function app_emoji_bible(context) {
     app_shared_footer(content);
     return;
   }
-  app_emoji_bible_chapter_bar(bar, chapters, chosen);
+  app_bible_emoji_chapter_bar(bar, chapters, chosen);
   let chosen_views = app_emoji_bible_views_chosen();
   let tradition = property_get(chosen_views, "tradition");
   let key_shown = property_get(chosen_views, "key_shown");

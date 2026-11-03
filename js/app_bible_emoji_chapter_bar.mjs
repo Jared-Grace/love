@@ -9,7 +9,7 @@ import { app_shared_button_arrow_previous_notext } from "./app_shared_button_arr
 import { property_get } from "./property_get.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_arrow_next_notext } from "./app_shared_button_arrow_next_notext.mjs";
-export function app_emoji_bible_chapter_bar(bar, chapters, chosen) {
+export function app_bible_emoji_chapter_bar(bar, chapters, chosen) {
   arguments_assert(arguments, 3);
   ("Where in the picture Bible the reader is standing, and the three ways out of it: an arrow to each neighbouring written chapter, and the reference itself, which goes back to the list.");
   ("IT IS THE BIBLE READER'S OWN BAR, built out of the same two arrows and the same button rather than out of a copy of how they look. A reader who has used the other app has already learned this one, and a change to how a bar reads there arrives here without anybody carrying it over.");
