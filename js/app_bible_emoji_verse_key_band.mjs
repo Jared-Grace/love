@@ -3,7 +3,7 @@ import { text_empty_is } from "./text_empty_is.mjs";
 import { app_shared_bible_verse_line } from "./app_shared_bible_verse_line.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-export function app_emoji_bible_verse_key_band(
+export function app_bible_emoji_verse_key_band(
   content,
   text,
   color,

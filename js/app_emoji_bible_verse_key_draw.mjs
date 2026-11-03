@@ -5,7 +5,7 @@ import { list_add } from "./list_add.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { app_shared_bible_verse_colors } from "./app_shared_bible_verse_colors.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_emoji_bible_verse_key_band } from "./app_emoji_bible_verse_key_band.mjs";
+import { app_bible_emoji_verse_key_band } from "./app_bible_emoji_verse_key_band.mjs";
 import { each_index } from "./each_index.mjs";
 export function app_emoji_bible_verse_key_draw(
   content,
@@ -57,7 +57,7 @@ export function app_emoji_bible_verse_key_draw(
   let colors = app_shared_bible_verse_colors(texts);
   function band_draw(text, index) {
     let color = colored ? list_get(colors, index) : null;
-    app_emoji_bible_verse_key_band(
+    app_bible_emoji_verse_key_band(
       content,
       text,
       color,
