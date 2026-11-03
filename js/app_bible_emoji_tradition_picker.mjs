@@ -11,7 +11,7 @@ import { app_emoji_bible_tradition_set } from "./app_emoji_bible_tradition_set.m
 import { app_shared_button } from "./app_shared_button.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
-export function app_emoji_bible_tradition_picker(parent, fn_draw) {
+export function app_bible_emoji_tradition_picker(parent, fn_draw) {
   arguments_assert(arguments, 2);
   ("Which cross the picture Bible draws, asked as a choice between the crosses themselves: one button per cross, the chosen one coloured.");
   ("EVERY CROSS IS SHOWN AT ONCE, chosen by the human, so a reader sees both before picking and sees which one is theirs. Rejected: one button that swaps to the other cross, which showed only the cross a reader did not have and made them tap to find out what the other one looked like.");
