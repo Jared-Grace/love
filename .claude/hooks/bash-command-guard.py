@@ -5060,8 +5060,28 @@ GIT_MV_DECIDING_DENY_REASON = (
 )
 
 
-def git_subcommand_tail(words):
-    """The words after git's own subcommand when that subcommand is `mv`, else
+GIT_REFLOG_READ_DENY_REASON = (
+    "`git log -g` shows the same history as `git reflog` and runs unasked, with "
+    "`-n`, `-C <folder>` and `--format` as usual. Use that instead. `git reflog` "
+    "with words after it stays unapproved because some of its forms erase."
+)
+
+
+def git_reflog_read_is(command):
+    """A reflog read has a twin that is already approved, so handing it back
+    costs the agent one reword and costs the human nothing. The forms that
+    change or erase are left alone, so they still reach the person."""
+    for words in statements_words(command):
+        tail = git_subcommand_tail(words, "reflog")
+        if not tail:
+            continue
+        if tail[0] not in ("delete", "expire", "drop", "exists", "list", "write"):
+            return True
+    return False
+
+
+def git_subcommand_tail(words, subcommand):
+    """The words after git's own subcommand when it is the one named, else
     None. git's own options may stand first (`git -C . mv`, `git --no-pager mv`)
     and the prefix stripping does not reach every wrapper (`time git mv`), so
     git is looked for at any position and its options are walked past."""
@@ -5077,7 +5097,7 @@ def git_subcommand_tail(words):
                 i += 1
             else:
                 break
-        if i < len(words) and words[i] == "mv":
+        if i < len(words) and words[i] == subcommand:
             return words[i + 1:]
     return None
 
@@ -5096,7 +5116,7 @@ def git_mv_touches_deciding(command):
     statements = []
     for text in texts:
         statements.extend(statements_words(text))
-    tails = [git_subcommand_tail(words) for words in statements]
+    tails = [git_subcommand_tail(words, "mv") for words in statements]
     tails = [tail for tail in tails if tail is not None]
     if not tails:
         return False
@@ -6227,6 +6247,9 @@ def main():
     # that may not run unasked would be approved before anything below read it.
     if git_mv_touches_deciding(command):
         return decide("deny", GIT_MV_DECIDING_DENY_REASON)
+
+    if git_reflog_read_is(command):
+        return decide("deny", GIT_REFLOG_READ_DENY_REASON)
 
     if snapshot_detached_checkout_is(command):
         return decide("allow", (
