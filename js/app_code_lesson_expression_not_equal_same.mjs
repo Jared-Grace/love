@@ -9,6 +9,15 @@ import { property_text_to } from "./property_text_to.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { equal } from "./equal.mjs";
+import { text_split } from "./text_split.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_second } from "./list_second.mjs";
+import { list_last } from "./list_last.mjs";
+import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
+import { js_operator_less_than_equal_symbol } from "./js_operator_less_than_equal_symbol.mjs";
+import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symbol.mjs";
+import { js_operator_greater_than_equal_symbol } from "./js_operator_greater_than_equal_symbol.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_not_wrapped_wrong_say } from "./app_code_not_wrapped_wrong_say.mjs";
@@ -96,6 +105,60 @@ export function app_code_lesson_expression_not_equal_same() {
     bang_symbol,
     "? ",
   ]);
+  ("The wrong answers hold only the numbers on the screen, and every one comes to the opposite of the right answer. Filled from the other questions they held other numbers, so the one button with the numbers on the screen was the answer and could be picked without knowing what the ! does.");
+  ("With the same number on both sides, swapping the sides makes the same button twice, so the third wrong answer there uses another mark instead, chosen so it still comes to the opposite. Not picked: a ! around the answer asked for without one, because the question asks for no ! and that button goes without thinking.");
+  function opposite_of(mark) {
+    "the other of the two marks";
+    if (equal(mark, same_symbol)) {
+      return different_symbol;
+    }
+    return same_symbol;
+  }
+  function decoys_forwards(question, answer) {
+    "the mark kept inside the !, no ! at all, and a third that still comes to the opposite";
+    let parts = text_split(question, " ");
+    let left = list_first(parts);
+    let mark = list_second(parts);
+    let right = list_last(parts);
+    let opposite = opposite_of(mark);
+    let kept = long_form(left, right, mark);
+    let bare = short_form(left, right, opposite);
+    let third = long_form(right, left, mark);
+    if (equal(left, right)) {
+      let other = js_operator_less_than_symbol();
+      if (equal(mark, same_symbol)) {
+        other = js_operator_less_than_equal_symbol();
+      }
+      third = long_form(left, right, other);
+    }
+    let found = [kept, bare, third];
+    return found;
+  }
+  function decoys_backwards(question, answer) {
+    "the mark inside the ! kept with the ! taken away, and two more that come to the opposite";
+    let parts = text_split(answer, " ");
+    let left = list_first(parts);
+    let mark = list_second(parts);
+    let right = list_last(parts);
+    let opposite = opposite_of(mark);
+    let bare = short_form(left, right, opposite);
+    if (equal(left, right)) {
+      let lower = js_operator_less_than_symbol();
+      let upper = js_operator_greater_than_symbol();
+      if (equal(mark, different_symbol)) {
+        lower = js_operator_less_than_equal_symbol();
+        upper = js_operator_greater_than_equal_symbol();
+      }
+      let below = short_form(left, right, lower);
+      let above_it = short_form(left, right, upper);
+      let found_same = [bare, below, above_it];
+      return found_same;
+    }
+    let turned = short_form(right, left, opposite);
+    let own = short_form(left, left, mark);
+    let found = [bare, turned, own];
+    return found;
+  }
   let forwards = {
     question_label: example_question_label,
     on_question: html_text_set_code_dark,
@@ -103,6 +166,7 @@ export function app_code_lesson_expression_not_equal_same() {
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
     wrong_say: app_code_not_wrapped_wrong_say,
+    decoys: decoys_forwards,
   };
   let backwards = {
     question_label: written_with,
@@ -111,6 +175,7 @@ export function app_code_lesson_expression_not_equal_same() {
     answer_on_button: html_style_code_dark,
     answer_count_override: null,
     wrong_say: app_code_not_wrapped_wrong_say,
+    decoys: decoys_backwards,
   };
   let quizzes_get = app_code_lesson_quizzes_unscramble_both({
     batch_get,
