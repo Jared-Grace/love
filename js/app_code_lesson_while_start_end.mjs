@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -40,7 +41,7 @@ export function app_code_lesson_while_start_end() {
   ("The one new fact is the line between what repeats and what does not: lines inside the { ... } run every time, and lines outside it run once.");
   ("Recommended by Claude 2026-11-02 and chosen by the human, to sit straight after The same word each run, whose program is this one with a line added on each side.");
   ("Each screen has one program from each of three counts of runs - one, two and three - with the numbers of The same word each run.");
-  ("Reading forwards, the wrong answers are one run more, the whole program's writing repeated as though start and end were inside, and the word with no start or end; each once and never the answer.");
+  ("Reading forwards, the wrong answers are one run more, the whole program's writing repeated as though start and end were inside (with one run, start and end with no word instead), and the word with no start or end; each once and never the answer.");
   ("Reading backwards, the wrong program is compared against a number one further on, so it runs once more; or, when it already runs as often as a while lesson allows, one nearer, so it runs once fewer.");
   ("The writing is a first draft by Claude 2026-11-02.");
   let less = js_operator_less_than_symbol();
@@ -84,7 +85,7 @@ export function app_code_lesson_while_start_end() {
     eval_console_log_lines,
   );
   function decoys(question, answer) {
-    "one run more, start and end repeated as though inside, and the word alone; each once and never the answer";
+    "one run more, start and end repeated as though inside or, with one run, with no word, and the word alone; each once and never the answer";
     let numbers = text_integers(question);
     let left = list_get(numbers, 1);
     let right = list_get(numbers, 0);
@@ -93,6 +94,10 @@ export function app_code_lesson_while_start_end() {
     let answer_word = list_get(answer_lines, 1);
     let more = word_between(answer_word, runs2 + 1);
     let whole = list_multiply([word_before, answer_word, word_after], runs2);
+    if (equal(runs2, 1)) {
+      ("with one run, the whole program's writing once is the right answer, so its place goes to start and end with the word never written, as though the while were skipped - otherwise the quiz fills the place with another program's answer, whose different word is easy to rule out");
+      whole = [word_before, word_after];
+    }
     let alone = object_multiply(answer_word, runs2);
     let candidates = list_map([more, whole, alone], list_join_newline);
     let without = list_without(candidates, answer);
