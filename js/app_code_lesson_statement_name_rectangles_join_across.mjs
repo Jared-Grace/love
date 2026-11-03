@@ -21,6 +21,7 @@ import { app_code_explain_said } from "./app_code_explain_said.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_join_down } from "./app_code_lesson_statement_name_rectangles_join_down.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_code_lesson_statement_min_max_mixed_decoys } from "./app_code_lesson_statement_min_max_mixed_decoys.mjs";
 export function app_code_lesson_statement_name_rectangles_join_across() {
   arguments_assert(arguments, 0);
   ("where two rectangles together start and end going across: let left = Math.min(l1, l2); let right = Math.max(r1, r2); - picked by Claude 2026-10-06 as the across half of Where two rectangles together start and end going down, the lesson just before it, which left across for later so that no lesson starts eight names at once. Together the two are the box around two boxes, the smallest rectangle holding both.");
@@ -234,7 +235,7 @@ export function app_code_lesson_statement_name_rectangles_join_across() {
         "Here is code that finds where the two rectangles together start and end going across:",
       ],
     ],
-    decoys: null,
+    decoys: app_code_lesson_statement_min_max_mixed_decoys,
     example_pointers: [
       [[l, l2, left, "1", "2"], start_color],
       [[r, r2, right, "3", "4"], end_color],

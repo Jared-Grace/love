@@ -1,7 +1,3 @@
-import { html_div } from "./html_div.mjs";
-import { html_span_text_content } from "./html_span_text_content.mjs";
-import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
-import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -17,10 +13,15 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_code_explain_number_colored } from "./app_code_explain_number_colored.mjs";
 import { app_code_explain_code_colored_inline } from "./app_code_explain_code_colored_inline.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_code_explain_said } from "./app_code_explain_said.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text_content } from "./html_span_text_content.mjs";
+import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
+import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
+import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
+import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
+import { app_code_lesson_statement_min_max_mixed_decoys } from "./app_code_lesson_statement_min_max_mixed_decoys.mjs";
 export function app_code_lesson_statement_name_meetings_join() {
   arguments_assert(arguments, 0);
   ("when two overlapping meetings together start and end: let start = Math.min(s1, s2); let end = Math.max(e1, e2); - chosen by Claude 2026-10-04, when the human asked for another lesson building on the meetings lessons. In DSA it is the step of merging intervals: two ranges that overlap become one range, from the earlier start to the later end.");
@@ -198,7 +199,7 @@ export function app_code_lesson_statement_name_meetings_join() {
       draw5,
       ["Here is code that finds when the two meetings together start and end:"],
     ],
-    decoys: null,
+    decoys: app_code_lesson_statement_min_max_mixed_decoys,
     example_pointers: [
       [[s, s2, start, "9", "10"], start_color],
       [[e, e2, end, "11", "12"], end_color],

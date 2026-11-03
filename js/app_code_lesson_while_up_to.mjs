@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
 import { js_operator_less_than_equal_symbol } from "./js_operator_less_than_equal_symbol.mjs";
+import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
@@ -21,6 +22,7 @@ export function app_code_lesson_while_up_to() {
   let lesson = app_code_lesson_while_update_log_generic({
     name_id,
     comparison: js_operator_less_than_equal_symbol(),
+    comparison_mistaken: js_operator_less_than_symbol(),
     asks: less_than_equal,
     change: js_operator_plus_symbol(),
     step: add,
