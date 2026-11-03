@@ -3,7 +3,7 @@ import { app_bible_emoji_tradition_get } from "./app_bible_emoji_tradition_get.m
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_bible_emoji_tradition_base } from "./app_bible_emoji_tradition_base.mjs";
-import { app_emoji_bible_tradition_orthodox } from "./app_emoji_bible_tradition_orthodox.mjs";
+import { app_bible_emoji_tradition_orthodox } from "./app_bible_emoji_tradition_orthodox.mjs";
 import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { property_get } from "./property_get.mjs";
@@ -21,7 +21,7 @@ export function app_emoji_bible_tradition_picker(parent, fn_draw) {
   let row = html_div(parent);
   html_div_text(row, "Which cross should be shown?");
   let name2 = app_bible_emoji_tradition_base();
-  let name3 = app_emoji_bible_tradition_orthodox();
+  let name3 = app_bible_emoji_tradition_orthodox();
   let names = [name2, name3];
   for (let name of names) {
     let traditions = app_emoji_bible_traditions(name);
