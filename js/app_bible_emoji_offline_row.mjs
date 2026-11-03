@@ -5,7 +5,7 @@ import { bible_glyph_chapters_offline_download } from "./bible_glyph_chapters_of
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_emoji_bible_offline_saved_set } from "./app_emoji_bible_offline_saved_set.mjs";
 import { app_shared_offline_row_generic } from "./app_shared_offline_row_generic.mjs";
-import { app_emoji_bible_offline_saved_get } from "./app_emoji_bible_offline_saved_get.mjs";
+import { app_bible_emoji_offline_saved_get } from "./app_bible_emoji_offline_saved_get.mjs";
 import { app_bible_emoji_offline_free } from "./app_bible_emoji_offline_free.mjs";
 export function app_bible_emoji_offline_row(parent, on_change) {
   arguments_assert(arguments, 2);
@@ -29,7 +29,7 @@ export function app_bible_emoji_offline_row(parent, on_change) {
   app_shared_offline_row_generic(
     parent,
     name,
-    app_emoji_bible_offline_saved_get,
+    app_bible_emoji_offline_saved_get,
     download,
     app_bible_emoji_offline_free,
     on_change,
