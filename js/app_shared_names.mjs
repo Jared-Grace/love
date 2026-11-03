@@ -19,7 +19,7 @@ export function app_shared_names() {
     music: "Music",
     supper: "Lord's Supper",
     supper_tl: "Lord's Supper in Tagalog",
-    autopray: "Auto Pray",
+    pray_auto: "Auto Pray",
     code: "Code",
     replace: "Replace",
     examples: "Code Examples",
