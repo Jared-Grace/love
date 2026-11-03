@@ -207,6 +207,10 @@
   {
    "name": "app_en_learn_bible_gloss_tagalog_write_chapter_file",
    "refusals": 1
+  },
+  {
+   "name": "app_en_learn_bible_gloss_urdu_bible_quotes_mend_file",
+   "refusals": 1
   }
  ]
 }
