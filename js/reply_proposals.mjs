@@ -1490,6 +1490,7 @@ export function reply_proposals() {
       fn_name("reply_response_nothing_to_give"),
       fn_name("reply_prayer_will_done"),
       fn_name("reply_prayer_lead_provider"),
+      fn_name("reply_choices_lead_provider_fragment"),
       fn_name("reply_prayer_closing"),
     ],
     diff: [
