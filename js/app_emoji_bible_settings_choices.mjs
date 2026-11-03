@@ -12,7 +12,7 @@ import { app_bible_emoji_key_shown_set } from "./app_bible_emoji_key_shown_set.m
 import { html_div_text } from "./html_div_text.mjs";
 import { app_emoji_bible_manuscript_text } from "./app_emoji_bible_manuscript_text.mjs";
 import { app_bible_emoji_literal_shown_get } from "./app_bible_emoji_literal_shown_get.mjs";
-import { app_emoji_bible_literal_shown_set } from "./app_emoji_bible_literal_shown_set.mjs";
+import { app_bible_emoji_literal_shown_set } from "./app_bible_emoji_literal_shown_set.mjs";
 export function app_emoji_bible_settings_choices(parent, fn_draw) {
   arguments_assert(arguments, 2);
   ("The three choices about what a chapter shows, each asked as a pair of buttons with the answer in force coloured: whether the English stands under each verse, whether the original does, and whose order the pictures follow.");
@@ -56,7 +56,7 @@ export function app_emoji_bible_settings_choices(parent, fn_draw) {
   let manuscript = app_emoji_bible_manuscript_text(chapter_code);
   let literal_shown = app_bible_emoji_literal_shown_get();
   async function literal_set(value) {
-    app_emoji_bible_literal_shown_set(value);
+    app_bible_emoji_literal_shown_set(value);
     await fn_draw();
   }
   app_shared_buttons_choice_pair(
