@@ -1306,8 +1306,8 @@ export function reply_proposals() {
         from: "",
         message:
           "I am from a poor family, please help us, my children are hungry",
-        answered: false,
-        outputs: [],
+        answered: true,
+        outputs: [prayer_family_help_children, give_response],
       },
     ],
     decide: [
@@ -1315,7 +1315,7 @@ export function reply_proposals() {
       "Give is the same function the Give button sends in the reply app, so changing that wording changes it here too.",
       "all three parts must be there. A part on its own gets no reply and comes to you. Answering each part alone was the rejected reading, because a person could then get three replies, or get Give for saying only my children are hungry.",
       "anything else in the message means no reply, so my wife died in the middle sends the whole message to you.",
-      "only the words you gave are heard. Please help us, my child, our children and we are from a poor family get no reply. Should any of them?",
+      "only the words you gave are heard. My child, our children and we are from a poor family get no reply. Should any of them?",
       "measured on the whole rule set: all eighteen saved tests give the same answer as before.",
     ],
   };
