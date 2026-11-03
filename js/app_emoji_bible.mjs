@@ -8,7 +8,7 @@ import { app_shared_bar_content_root_sticky_padded } from "./app_shared_bar_cont
 import { property_get } from "./property_get.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { bible_glyph_chapter_references_browser } from "./bible_glyph_chapter_references_browser.mjs";
-import { app_emoji_bible_chapter_chosen } from "./app_emoji_bible_chapter_chosen.mjs";
+import { app_bible_emoji_chapter_chosen } from "./app_bible_emoji_chapter_chosen.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { app_emoji_bible_settings_button } from "./app_emoji_bible_settings_button.mjs";
 import { app_emoji_bible_chapter_index } from "./app_emoji_bible_chapter_index.mjs";
@@ -58,7 +58,7 @@ export async function app_emoji_bible(context) {
   ("The bar is centred the way the bible reader's bar is, by the same call, so the two apps' bars line up with each other.");
   html_centered(bar);
   let chapters = await bible_glyph_chapter_references_browser();
-  let chosen = app_emoji_bible_chapter_chosen(chapters);
+  let chosen = app_bible_emoji_chapter_chosen(chapters);
   let index_shown = null_is(chosen);
   if (index_shown) {
     html_div_text_bold(bar, "The Bible in pictures");

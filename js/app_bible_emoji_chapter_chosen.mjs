@@ -3,7 +3,7 @@ import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
-export function app_emoji_bible_chapter_chosen(chapters) {
+export function app_bible_emoji_chapter_chosen(chapters) {
   arguments_assert(arguments, 1);
   ("Which chapter of the picture Bible the link is asking for, or nothing at all when it asks for none and nothing when it asks for one this Bible has not reached yet.");
   ("$plain chapters");
