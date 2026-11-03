@@ -18,7 +18,7 @@ import { app_bible_emoji_views_chosen } from "./app_bible_emoji_views_chosen.mjs
 import { app_bible_emoji_traditions } from "./app_bible_emoji_traditions.mjs";
 import { app_bible_emoji_chapter_body } from "./app_bible_emoji_chapter_body.mjs";
 import { app_bible_emoji_words_button } from "./app_bible_emoji_words_button.mjs";
-export async function app_emoji_bible(context) {
+export async function app_bible_emoji(context) {
   "The picture Bible as a page: one chapter at a time, drawn with its pictures in place of its words, and the books and chapters to reach them by.";
   "THE PAGE READS ONE CHAPTER AT A TIME AND FINDS IT BY THE SAME WORD THE BIBLE READER NEXT DOOR USES. That word is taken from the reader's own key rather than spelled again here, so a link naming a chapter opens that chapter in either app, and the day the pictures become a version somebody picks inside the reader every link anybody saved goes on working.";
   "The whole Bible used to be poured onto one page, which was right while there was one chapter and had become wrong at twenty five. A picker costs the reader a tap; a page of twenty five chapters costs them the whole scroll every time they want the second one, and costs them any way at all of sending somebody a single chapter.";
@@ -41,7 +41,7 @@ export async function app_emoji_bible(context) {
   ("The reader's choices about a chapter are made in Settings, moved off the chapter's bar by the human, each as a pair of buttons. THE KEY AND THE ENGLISH ARE TWO CONTROLS AND NOT ONE: a reader who only wants to know what a verse says is not the reader who is learning what the pictures mean, and charging the first one three lines under every verse to answer a question they did not ask is how a page becomes unreadable. Asking for the English alone puts one line under each verse, and it is the same line the key would have shown, drawn by the same call - so the two views cannot drift apart. They are read by ",
     fn_name("app_bible_emoji_views_chosen"),
     " in one call, so the chapter is drawn from one reading of all of them.");
-  let hash = app_shared_bible_page_start_hash(context, app_emoji_bible);
+  let hash = app_shared_bible_page_start_hash(context, app_bible_emoji);
   let corrected = null_is(hash);
   if (corrected) {
     return;

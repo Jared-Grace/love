@@ -33,7 +33,7 @@ export function app_index_main_fns(about_opened) {
       category: reading,
     },
     {
-      app_fn: fn_name("app_emoji_bible"),
+      app_fn: fn_name("app_bible_emoji"),
       text: "Shows the Bible drawn in pictures instead of words, so a chapter can be read without knowing the language it is written in",
       category: reading,
     },

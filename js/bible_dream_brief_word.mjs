@@ -6,7 +6,7 @@ export function bible_dream_brief_word() {
   "★ THE PLAYER HEARS THE PASSAGE READ ALOUD, IN ORDER, BEFORE ANY OF IT IS ASKED OF THEM. That single decision is what makes the step possible without making it authoring: they have already received the words of God whole, and the screen is simply not repeating them in order. So putting the sentence back is remembering what was given, not inventing what to give. Starting with the Scripture rather than with the puzzle is also the rule this whole game is built on, and here the rule and the mechanic turn out to be the same thing.";
   "★ THE ORDER IS TOLD BY PICTURES AND THE WORDS ARE HANDED OVER SCRAMBLED. Go and tell Pharaoh is a walking, a joining, a speaking and a crown; the player is shown those four in order and the words out of order, and puts the words under the pictures. The pictures carry the order so that the words do not have to be on screen in it, which is the difference between carrying a message and copying one off a card.";
   ("★ THE PICTURES ARE NOT NEW ART - THE REPO ALREADY HAS THAT VOCABULARY. ",
-    fn_name("app_emoji_bible"),
+    fn_name("app_bible_emoji"),
     " renders whole verses as glyphs with a key beneath them, and ",
     fn_name("bible_glyph_referents"),
     " holds what each glyph refers to. Drawing a fresh set for this step would be a second vocabulary for the same Bible, and the two would disagree within a month. Whoever takes this step should start by reading what those already say and asking what is missing, not by choosing icons.");

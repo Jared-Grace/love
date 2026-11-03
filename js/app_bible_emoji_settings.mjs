@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_emoji_bible } from "./app_emoji_bible.mjs";
+import { app_bible_emoji } from "./app_bible_emoji.mjs";
 import { app_shared_bible_screen_open } from "./app_shared_bible_screen_open.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_font_size_buttons } from "./app_shared_font_size_buttons.mjs";
@@ -17,7 +17,7 @@ export function app_bible_emoji_settings(context) {
   ("The way out is the page drawn again from the top rather than a screen put away, because that is how this app moves between anything and anything else: it reads the address and draws what the address names.");
   arguments_assert(arguments, 1);
   async function back() {
-    await app_emoji_bible(context);
+    await app_bible_emoji(context);
   }
   let content = app_shared_bible_screen_open(context, back);
   ("EVERY SETTING SITS IN ITS OWN BLUE CARD, asked for by the human, so where one setting ends and the next begins is drawn rather than guessed.");

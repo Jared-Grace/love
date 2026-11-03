@@ -137,7 +137,7 @@ export function app_index_emojis() {
       emoji: emoji_arrow_right(),
     },
     {
-      app_fn: fn_name("app_emoji_bible"),
+      app_fn: fn_name("app_bible_emoji"),
       emoji: emoji_picture_frame(),
     },
     {
