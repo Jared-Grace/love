@@ -16,7 +16,7 @@ import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_bible_emoji_chapter_bar } from "./app_bible_emoji_chapter_bar.mjs";
 import { app_emoji_bible_views_chosen } from "./app_emoji_bible_views_chosen.mjs";
 import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
-import { app_emoji_bible_chapter_body } from "./app_emoji_bible_chapter_body.mjs";
+import { app_bible_emoji_chapter_body } from "./app_bible_emoji_chapter_body.mjs";
 import { app_emoji_bible_words_button } from "./app_emoji_bible_words_button.mjs";
 export async function app_emoji_bible(context) {
   "The picture Bible as a page: one chapter at a time, drawn with its pictures in place of its words, and the books and chapters to reach them by.";
@@ -76,7 +76,7 @@ export async function app_emoji_bible(context) {
   app_emoji_bible_settings_button(bar, context);
   let traditions = app_emoji_bible_traditions(tradition);
   let chapter_code = property_get(chosen, "chapter_code");
-  await app_emoji_bible_chapter_body(
+  await app_bible_emoji_chapter_body(
     content,
     chapter_code,
     traditions,

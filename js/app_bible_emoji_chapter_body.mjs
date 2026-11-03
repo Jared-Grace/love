@@ -9,7 +9,7 @@ import { bible_glyph_chapter_rosetta_verses } from "./bible_glyph_chapter_rosett
 import { app_emoji_bible_literal_rosetta_rows } from "./app_emoji_bible_literal_rosetta_rows.mjs";
 import { app_emoji_bible_verse_key_draw } from "./app_emoji_bible_verse_key_draw.mjs";
 import { bible_glyph_words_tap_listen } from "./bible_glyph_words_tap_listen.mjs";
-export async function app_emoji_bible_chapter_body(
+export async function app_bible_emoji_chapter_body(
   content,
   chapter_code,
   traditions,
