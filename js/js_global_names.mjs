@@ -58,6 +58,7 @@ export function js_global_names() {
   ];
   let browser = [
     "AbortController",
+    "AbortSignal",
     "Audio",
     "AudioContext",
     "Blob",
