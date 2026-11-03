@@ -1214,6 +1214,7 @@ export function reply_proposals() {
       fn_name("reply_prayer_bless_family"),
       fn_name("reply_prayer_help_you"),
       fn_name("reply_prayer_feed_children"),
+      fn_name("text_may_the_lord_combine"),
     ],
     diff: [
       poor_family_kept_give,

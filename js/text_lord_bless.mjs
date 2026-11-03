@@ -1,6 +1,5 @@
-import { text_may_the_lord } from "./text_may_the_lord.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { text_may_the_lord_combine } from "./text_may_the_lord_combine.mjs";
 export function text_lord_bless() {
-  let v = text_combine(text_may_the_lord(), "bless ");
+  let v = text_may_the_lord_combine("bless ");
   return v;
 }
