@@ -1442,9 +1442,9 @@ export function reply_proposals() {
       {
         from: "31c5df9f5c22e68d",
         message:
-          "come and fellowship with us, God's will, IAM request you to support in ministry, God's will, thank you.",
+          "I am requesting you to support in ministry, God's will, come and fellowship with us, God's will, thank you.",
         answered: true,
-        outputs: [line_will_done, give_response, line_glory, wrapped],
+        outputs: [give_response, line_will_done, line_glory, wrapped],
       },
       {
         from: "",
