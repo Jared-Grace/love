@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
-import { app_emoji_bible_english_shown_get } from "./app_emoji_bible_english_shown_get.mjs";
+import { app_bible_emoji_english_shown_get } from "./app_bible_emoji_english_shown_get.mjs";
 import { app_emoji_bible_english_shown_set } from "./app_emoji_bible_english_shown_set.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_buttons_choice_pair } from "./app_shared_buttons_choice_pair.mjs";
@@ -22,7 +22,7 @@ export function app_emoji_bible_settings_choices(parent, fn_draw) {
   ("EACH QUESTION SITS IN ITS OWN BLUE CARD, asked for by the human, the same card every other setting on the screen sits in, so where one question ends and the next begins is drawn rather than guessed.");
   let hash = html_hash_object_get();
   let chapter_code = app_shared_bible_chapter_hash_get_or_empty(hash);
-  let english_shown = app_emoji_bible_english_shown_get();
+  let english_shown = app_bible_emoji_english_shown_get();
   async function english_set(value) {
     app_emoji_bible_english_shown_set(value);
     await fn_draw();

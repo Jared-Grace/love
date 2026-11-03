@@ -21,6 +21,10 @@ export function storage_local_key_owner_renames() {
       before: text_frozen("app_autopray"),
       after: fn_name("app_pray_auto"),
     },
+    {
+      before: text_frozen("app_emoji_bible_english_shown_get"),
+      after: fn_name("app_bible_emoji_english_shown_get"),
+    },
   ];
   return r;
 }
