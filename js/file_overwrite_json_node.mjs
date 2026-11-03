@@ -1,7 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { file_path_deciding_refuse } from "./file_path_deciding_refuse.mjs";
 import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { file_path_temp } from "./file_path_temp.mjs";
 import { json_to_try } from "./json_to_try.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -17,6 +18,7 @@ export async function file_overwrite_json_node(file_path, object) {
   "Each write goes to a temp name and is then renamed, because a rename is the one thing a file system does all at once: a reader arriving mid-write sees the whole of the old file or the whole of the new one and never half of either. A failure takes the temp file away and lets the fault travel.";
   "★ A WRITE THAT LANDED IS NOTED FOR COMMITTING, THE SAME AS A TEXT WRITE. A command's commit takes exactly the files its writes noted, so a record written here without a note was left out of the commit that named its command and picked up later by somebody's sweep under a bare word - an applied change to the reply rules was committed while its record of being applied was not.";
   arguments_assert(arguments, 2);
+  await file_path_deciding_refuse(file_path);
   await file_parent_exists_ensure(file_path);
   text_combine_multiple([
     "Using ",

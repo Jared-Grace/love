@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { file_path_deciding_refuse } from "./file_path_deciding_refuse.mjs";
 import { folder_public_root_blocked_assert } from "./folder_public_root_blocked_assert.mjs";
 import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
 import { file_path_temp } from "./file_path_temp.mjs";
@@ -13,6 +14,7 @@ export async function file_overwrite_uncached_node(file_path, contents) {
   "The write goes to a temp name and is then renamed, because a rename is the one thing a file system does all at once: a reader arriving mid-write sees the whole of the old file or the whole of the new one and never half of either. A failure takes the temp file away and lets the fault travel, so a crash leaves no litter and no silence.";
   "The note of what to commit is taken only once the file is actually on disk, and only here: a browser keeps its files in its own store, where there is no commit for a note to serve.";
   arguments_assert(arguments, 2);
+  await file_path_deciding_refuse(file_path);
   await folder_public_root_blocked_assert(file_path);
   await file_parent_exists_ensure(file_path);
   let fs = await import("fs");

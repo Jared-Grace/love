@@ -49,6 +49,7 @@ export function functions_outside_irreversible_seams() {
     fn_name("node_run_lines_whole"),
     fn_name("function_worker_child_start"),
     fn_name("import_install"),
+    fn_name("function_new_from_temp_machine"),
   ];
   return names;
 }

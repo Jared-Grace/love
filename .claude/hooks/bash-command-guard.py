@@ -5051,6 +5051,46 @@ REWORD_DENY_LEAD = (
     "to the human."
 )
 
+GIT_MV_DECIDING_DENY_REASON = (
+    "`git mv` runs unasked only for an ordinary move. It may not force, use a "
+    "shell pattern or a variable, or touch `.claude` or the commands-only "
+    "switch, because a move onto one of those would change what runs without "
+    "asking. Those files are written by their own named commands, which a "
+    "person sees."
+)
+
+
+def git_mv_touches_deciding(command):
+    """A forced move replaces any file with any tracked file, so it could replace
+    a hook or a granted function with no check reading the new contents. A word
+    naming a deciding path anywhere in the chain counts, so `cd .claude` first
+    is the same answer. A word the shell would change cannot be read, so it
+    counts too."""
+    texts = [command]
+    unrolled = for_loop_unrolled_text(command)
+    if unrolled is not None:
+        texts.append(unrolled)
+    statements = []
+    for text in texts:
+        statements.extend(statements_words(text))
+    moves = [words for words in statements if words[:2] == ["git", "mv"]]
+    if not moves:
+        return False
+    for words in statements:
+        for word in words:
+            if ".claude" in word or "commands_only" in word:
+                return True
+    for words in moves:
+        for word in words[2:]:
+            if word == "--force":
+                return True
+            if word.startswith("-") and not word.startswith("--") and "f" in word:
+                return True
+            if any(mark in word for mark in "$*?[`~"):
+                return True
+    return False
+
+
 CURL_HELPER_DENY_LEAD = (
     "This curl is not a plain read of a listed site, so it comes back to you "
     "instead of going to the human. Write a named function in js/ that fixes "
@@ -6301,6 +6341,9 @@ def main():
 
     if dispatcher_name_variable_is(command, safe_verbs, safe_exact_commands):
         return decide("deny", DISPATCHER_NAME_VARIABLE_DENY_REASON)
+
+    if git_mv_touches_deciding(command):
+        return decide("deny", GIT_MV_DECIDING_DENY_REASON)
 
     if refused_piece_is_curl(command, safe_verbs, safe_exact_commands):
         return decide("deny", (

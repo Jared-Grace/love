@@ -6,6 +6,7 @@ export function permission_writers_grantable() {
   let names = [
     fn_name("permission_settings_allow_write"),
     fn_name("permission_grant_names_rewrite"),
+    fn_name("python_mirrors_write"),
   ];
   return names;
 }

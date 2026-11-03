@@ -13,6 +13,7 @@ export function functions_permission_seams() {
     fn_name("permission_settings_allow_write_from"),
     fn_name("permission_grant_names_write"),
     fn_name("permission_rule_grant_checked_context"),
+    fn_name("file_overwrite_deciding"),
   ];
   return names;
 }

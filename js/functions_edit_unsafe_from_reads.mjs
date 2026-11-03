@@ -254,6 +254,12 @@ export function functions_edit_unsafe_from_reads(reads) {
         mark(name, "hands on " + h);
         whys.push("hands on " + h);
         everything = true;
+        ("What it hands the function to is free to pass any value it holds into it, so everything given to any call here counts as steering. A list handed in beside a writer is where the writer's paths come from.");
+        for (let call of read.calls) {
+          for (let a of call.args) {
+            starts.push(a.data);
+          }
+        }
       }
     }
     let s = js_flow_slice(read, starts, whether, mutating);

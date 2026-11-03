@@ -1,6 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { file_path_deciding_refuse } from "./file_path_deciding_refuse.mjs";
 import { folder_public_root_blocked_assert } from "./folder_public_root_blocked_assert.mjs";
 import { file_to_commit_add_try } from "./file_to_commit_add_try.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 export async function file_delete_node(file_path) {
   "$plain file_path";
   "Taking one file off a real disk: the half of a removal that only a build machine can do.";
@@ -9,6 +10,7 @@ export async function file_delete_node(file_path) {
   "Taking a file away from the top of the folder that goes out is as much a change to it as writing one, so the block over that folder is asked about here on the same terms.";
   "A file taken away is as much a change to commit as one written, and the note a commit reads is a note of changes rather than of writing - without that line the command that removed it could name everything it did except the removal.";
   arguments_assert(arguments, 1);
+  await file_path_deciding_refuse(file_path);
   await folder_public_root_blocked_assert(file_path);
   let fs = await import("fs");
   await fs.promises.unlink(file_path);

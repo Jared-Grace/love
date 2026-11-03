@@ -1,8 +1,8 @@
-import { file_overwrite } from "./file_overwrite.mjs";
+import { permission_settings_shared_path } from "./permission_settings_shared_path.mjs";
 import { json_format_to_spaces_replaced } from "./json_format_to_spaces_replaced.mjs";
 import { newline } from "./newline.mjs";
-import { permission_settings_shared_path } from "./permission_settings_shared_path.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { file_overwrite_deciding } from "./file_overwrite_deciding.mjs";
 export async function permission_settings_shared_write(settings) {
   "$plain settings";
   "Writes the shared settings file, laid out the way the editor that also writes it lays it out.";
@@ -13,6 +13,6 @@ export async function permission_settings_shared_write(settings) {
   let json = json_format_to_spaces_replaced(settings, 2, null);
   let v = newline();
   let text = text_combine_multiple([json, v]);
-  await file_overwrite(path, text);
+  await file_overwrite_deciding(path, text);
   return path;
 }

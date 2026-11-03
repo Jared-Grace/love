@@ -1,5 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { json_to } from "./json_to.mjs";
+import { file_overwrite_deciding } from "./file_overwrite_deciding.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { permission_settings_local_dangling_remove_dangling_is } from "./permission_settings_local_dangling_remove_dangling_is.mjs";
@@ -12,7 +13,8 @@ export async function permission_settings_local_dangling_remove_r(
   removed,
 ) {
   arguments_assert(arguments, 5);
-  await file_overwrite_json(path, settings);
+  let text = json_to(settings);
+  await file_overwrite_deciding(path, text);
   ("Asked again off the file just written, so what comes back is what the gates will read rather than what this meant to leave. An empty remaining is the proof; anything else is a rule this could not account for and is worth reading");
   let after = await file_read_json(path);
   let after_allow = property_path_get_2(after, "permissions", "allow");
