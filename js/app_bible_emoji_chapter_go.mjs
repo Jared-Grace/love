@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_pictures_chapter_hash } from "./app_shared_bible_pictures_chapter_hash.mjs";
 import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
-export function app_emoji_bible_chapter_go(chapter) {
+export function app_bible_emoji_chapter_go(chapter) {
   arguments_assert(arguments, 1);
   ("Opens one chapter of the picture Bible: writes its name into the link, and loads the page standing on it.");
   ("$plain chapter");
