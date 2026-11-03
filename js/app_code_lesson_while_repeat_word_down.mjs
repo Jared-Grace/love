@@ -75,7 +75,7 @@ export function app_code_lesson_while_repeat_word_down() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "The same word, counting down",
-    'while (n > 0) { console.log("joy"); n--; }',
+    "while (n > 0) { ... n--; }",
   );
   let lesson = app_code_lesson_while_repeat_word_generic(
     program_lines,

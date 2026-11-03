@@ -5,8 +5,8 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_update_statement } from "./js_code_update_statement.mjs";
 import { js_keyword_while } from "./js_keyword_while.mjs";
-import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
 import { list_concat } from "./list_concat.mjs";
+import { js_code_keyword_block_lines_multiple } from "./js_code_keyword_block_lines_multiple.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -228,7 +228,7 @@ export function app_code_lesson_while_two_lines() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "Two lines each run",
-    '{ console.log("joy"); console.log(n); }',
+    '{ console.log("joy"); ... }',
   );
   let lesson = app_code_lesson_code_logged({
     above,

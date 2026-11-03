@@ -1,14 +1,15 @@
-import { json_from } from "./json_from.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { python_code_mirror } from "./python_code_mirror.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read } from "./file_read.mjs";
-import { fn_name } from "./fn_name.mjs";
+import { not } from "./not.mjs";
 import { curl_read_hosts } from "./curl_read_hosts.mjs";
+import { dispatcher_scripts } from "./dispatcher_scripts.mjs";
+import { equal } from "./equal.mjs";
+import { json_from } from "./json_from.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { file_overwrite_deciding } from "./file_overwrite_deciding.mjs";
 export async function python_mirror_write(mirror, approved) {
   arguments_assert(arguments, 2);
@@ -17,6 +18,9 @@ export async function python_mirror_write(mirror, approved) {
   ("The site list decides what may be fetched without asking, and its source is a function any edit can change. So a host the file does not hold yet needs naming in approved, which only ",
     fn_name("curl_read_hosts_approve"),
     " passes, and that command is not granted: the person sees the hosts in the prompt. Removing a host needs nothing, because that only asks more.");
+  ("The refused commands work the other way round, so there a name the file holds and the source has lost needs naming in approved, which only ",
+    fn_name("python_mirrors_removals_approve"),
+    " passes, and that is not granted either. Adding a refusal needs nothing, because that only refuses more. The dispatcher scripts count too, because the refusal only looks at commands run through one of them.");
   ("The comparison is here and not in a helper because this function reaches the deciding writer, so an edit to it cannot land unasked, while a helper could be edited to answer that nothing was new.");
   ("A refusal is returned and not thrown, so the other lists still get written. It cannot pass unnoticed: the list stays stale and the drift gate stays red until it is approved.");
   let path = property_get(mirror, "path");
@@ -33,7 +37,13 @@ export async function python_mirror_write(mirror, approved) {
     );
   }
   let hosts_path = ".claude/hooks/" + curl_read_hosts.name + ".py";
-  if (equal(path, hosts_path)) {
+  let refusing_paths = [
+    ".claude/hooks/denied_dispatcher_functions.py",
+    ".claude/hooks/" + dispatcher_scripts.name + ".py",
+  ];
+  let grows = equal(path, hosts_path);
+  let shrinks = refusing_paths.includes(path);
+  if (grows || shrinks) {
     let held = [];
     if (present) {
       let opener = " = {";
@@ -43,21 +53,26 @@ export async function python_mirror_write(mirror, approved) {
     }
     let source = property_get(mirror, "source");
     let names = source();
+    let from = names;
+    let against = held;
+    let approver = fn_name("curl_read_hosts_approve");
+    if (shrinks) {
+      from = held;
+      against = names;
+      approver = fn_name("python_mirrors_removals_approve");
+    }
     function lambda(name) {
-      let b = held.includes(name);
+      let b = against.includes(name);
       let r = not(b) && not(approved.includes(name));
       return r;
     }
-    let additions = names.filter(lambda);
-    if (greater_than(additions.length, 0)) {
+    let not_approved = from.filter(lambda);
+    if (greater_than(not_approved.length, 0)) {
       let refused = {
         refused: path,
-        additions,
+        not_approved,
         approve:
-          "node scripts/ai.mjs " +
-          fn_name("curl_read_hosts_approve") +
-          " " +
-          additions.join(","),
+          "node scripts/ai.mjs " + approver + " " + not_approved.join(","),
       };
       return refused;
     }
