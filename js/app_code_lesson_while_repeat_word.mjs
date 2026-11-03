@@ -44,7 +44,7 @@ export function app_code_lesson_while_repeat_word() {
   ("The one new fact is that n need not be what is written out: here it only counts the runs, which is the first time in the course a while repeats something that does not change.");
   ("Recommended by Claude 2026-11-02 and chosen by the human, to sit after n++ and n-- have come into a while, and before a while has two names in it.");
   ("Each screen has one program from each of three counts of runs - one, two and three. A program starts at zero, or at another number, so the count cannot always be copied off the number n is compared against.");
-  ("Reading forwards, the wrong answers are the word one run fewer, one run more, and the numbers n holds rather than the word; each once and never the answer.");
+  ("Reading forwards, the wrong answers are the word one run fewer (with one run, the number and the word together instead), one run more, and the numbers n holds rather than the word; each once and never the answer.");
   ("Reading backwards, the wrong program is compared against a number one further on, so it runs once more; or, when it already runs as often as a while lesson allows, one nearer, so it runs once fewer.");
   ("The writing is a first draft by Claude 2026-11-02.");
   let less = js_operator_less_than_symbol();
@@ -99,7 +99,7 @@ export function app_code_lesson_while_repeat_word() {
     eval_console_log_lines,
   );
   function decoys(question, answer) {
-    "the word one run fewer, one run more, and the numbers n holds rather than the word; each once and never the answer";
+    "the word one run fewer or, with one run, the number and the word together, one run more, and the numbers n holds rather than the word; each once and never the answer";
     let numbers = text_integers(question);
     let start2 = list_get(numbers, 0);
     let bound2 = list_get(numbers, 1);
@@ -112,7 +112,9 @@ export function app_code_lesson_while_repeat_word() {
     let more = words_of(v, answer_word);
     let held_texts = list_map(values2, json_to);
     let held = list_join_newline(held_texts);
-    let candidates = [more, held];
+    ("with one run there is no run fewer, so its place goes to the number and the word together, as though n were written out too, which is the one new fact of this lesson - otherwise the quiz fills the place with another program's answer, whose different word is easy to rule out; the word three times was the other choice, passed over because a second count teaches nothing the word twice does not");
+    let both = list_join_newline([held, answer_word]);
+    let candidates = [more, held, both];
     if (less_than(1, size)) {
       let count = subtract(size, 1);
       let fewer_values = list_take(values2, count);

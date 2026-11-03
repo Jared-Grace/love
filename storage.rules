@@ -43,7 +43,8 @@ service firebase.storage {
     // currency_rate: any browser may read a day's rate and may keep a day nobody has kept yet, but a kept day can never be changed
     match /currency_rate/USD_PHP/{file} {
       allow get;
-      allow create: if file.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}[.]json$')
+      allow create: if resource == null
+        && file.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}[.]json$')
         && request.resource.size < 200
         && request.resource.contentType == 'application/json';
     }
