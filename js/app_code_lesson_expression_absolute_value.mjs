@@ -1,13 +1,14 @@
-import { app_code_lesson_expression_absolute_value_title_name_id } from "./app_code_lesson_expression_absolute_value_title_name_id.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { subtract } from "./subtract.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { integer_even_is } from "./integer_even_is.mjs";
+import { text_to } from "./text_to.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { integer_even_is } from "./integer_even_is.mjs";
+import { subtract } from "./subtract.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
+import { app_code_lesson_expression_absolute_value_title_name_id } from "./app_code_lesson_expression_absolute_value_title_name_id.mjs";
+import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { integer_random } from "./integer_random.mjs";
-import { text_to } from "./text_to.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_absolute_value() {
@@ -40,6 +41,18 @@ export function app_code_lesson_expression_absolute_value() {
     let r2 = [answer_negated];
     return r2;
   }
+  function backwards_decoys(question, answer) {
+    "the three rounding functions, each given the same number with a minus sign";
+    "Every one holds only the number on the screen. Filled from the other questions they held other numbers, so the one button with this number was the answer and could be picked without knowing what Math.abs does.";
+    "Rounding a whole number changes nothing, so each comes to the number with its minus sign, and the point is that only Math.abs takes that sign away. Not picked: Math.abs with the sign the other way round, because Math.abs(-7) and Math.abs(7) are both 7, so that would be a wrong answer that is not wrong. Not picked: a minus in front of the call, -Math.abs(7), which holds Math.abs and so asks more, because no earlier lesson shows a minus in front of a call and it would go for being unknown.";
+    let number = text_to(question);
+    function rounded(fn_text) {
+      let code = text_combine_multiple([fn_text, "(-", number, ")"]);
+      return code;
+    }
+    let found = list_map(["Math.floor", "Math.ceil", "Math.round"], rounded);
+    return found;
+  }
   let next_arg = list_iterator_refillable(refill);
   let name_id = app_code_lesson_expression_absolute_value_title_name_id();
   let lesson = app_code_lesson_expression_generic({
@@ -48,6 +61,7 @@ export function app_code_lesson_expression_absolute_value() {
     next_arg,
     example_count: 2,
     decoys,
+    backwards_decoys,
     forwards_question_label: "Absolute value: ",
     forwards_answer_label: "positive value: ",
     backwards_question_label: "positive value: ",

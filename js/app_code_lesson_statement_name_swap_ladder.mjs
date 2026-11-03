@@ -1,7 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { app_code_lesson_statement_formula_backwards_decoys } from "./app_code_lesson_statement_formula_backwards_decoys.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { app_code_lesson_statement_name_swap_number_pairs } from "./app_code_lesson_statement_name_swap_number_pairs.mjs";
 import { app_code_lesson_decoy_lines_starting_values } from "./app_code_lesson_decoy_lines_starting_values.mjs";
@@ -21,7 +22,9 @@ export function app_code_lesson_statement_name_swap_ladder({
   ("The wrong answers are every way of writing the starting numbers on the answer's lines, because each mistake about swapping is one of those - see the decoy function's own note.");
   let names = app_code_lesson_statement_name_value_names();
   let list = property_get(step, "middle");
-  let lesson = app_code_lesson_statement_formula({
+  ("A step may hand in the wrong programs for its backward question. The first two lessons of the ladder do not: their programs write out one number twice, so the shared wrong programs can come to the right answer.");
+  let backwards_decoys = property_get_or_null(step, "backwards_decoys");
+  let lesson = app_code_lesson_statement_formula_backwards_decoys({
     words,
     title_code: list_join_space(list),
     names,
@@ -34,7 +37,9 @@ export function app_code_lesson_statement_name_swap_ladder({
     explain,
     decoys: app_code_lesson_decoy_lines_starting_values,
     example_pointers: null,
+    answer_count: null,
     steps,
+    backwards_decoys,
   });
   return lesson;
 }
