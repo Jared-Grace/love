@@ -1,3 +1,5 @@
+import { reply_outputs_mapped } from "./reply_outputs_mapped.mjs";
+import { list_unique } from "./list_unique.mjs";
 import { app_shared_message_reply_poor_family } from "./app_shared_message_reply_poor_family.mjs";
 import { app_shared_message_reply_greeting } from "./app_shared_message_reply_greeting.mjs";
 import { app_shared_message_reply_how_r_u } from "./app_shared_message_reply_how_r_u.mjs";
@@ -80,6 +82,7 @@ export function app_shared_message_reply_choices() {
   ]);
   let room = reply_once_or_more(choices_main);
   let last = reply_last();
-  let r = reply_sequence([room, last]);
+  let with_repeats = reply_sequence([room, last]);
+  let r = reply_outputs_mapped(with_repeats, list_unique);
   return r;
 }
