@@ -25,6 +25,10 @@ export function storage_local_key_owner_renames() {
       before: text_frozen("app_emoji_bible_english_shown_get"),
       after: fn_name("app_bible_emoji_english_shown_get"),
     },
+    {
+      before: text_frozen("app_emoji_bible_key_shown_get"),
+      after: fn_name("app_bible_emoji_key_shown_get"),
+    },
   ];
   return r;
 }
