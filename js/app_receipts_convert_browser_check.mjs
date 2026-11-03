@@ -64,7 +64,24 @@ export async function app_receipts_convert_browser_check() {
       php: await php.inputValue(),
       usd: await usd.inputValue(),
     };
-    await usd.pressSequentially("10");
+    await page
+      .getByRole("button", {
+        name: "₱10,000",
+      })
+      .click();
+    answer.pressed_10000 = {
+      php: await php.inputValue(),
+      usd: await usd.inputValue(),
+    };
+    await page
+      .getByRole("button", {
+        name: "₱20,000",
+      })
+      .click();
+    answer.pressed_20000 = {
+      php: await php.inputValue(),
+      usd: await usd.inputValue(),
+    };
     let picture = "gitignore/app_receipts_convert.png";
     await page.screenshot({
       path: picture,

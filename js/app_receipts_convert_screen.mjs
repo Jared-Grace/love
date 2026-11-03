@@ -6,11 +6,12 @@ import { equal } from "./equal.mjs";
 import { clipboard_copy_try } from "./clipboard_copy_try.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_shared_input_amount } from "./app_shared_input_amount.mjs";
+import { html_value_set } from "./html_value_set.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { text_amount_or_empty } from "./text_amount_or_empty.mjs";
 import { app_receipts_php_per_usd_today } from "./app_receipts_php_per_usd_today.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_value_set } from "./html_value_set.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { html_on } from "./html_on.mjs";
@@ -38,6 +39,15 @@ export async function app_receipts_convert_screen(parent, on_back) {
   }
   let php_input = app_shared_input_amount(card, "₱ PHP");
   copy_button_add(php_input);
+  function php_amount_button_add(label, amount) {
+    function on_amount() {
+      html_value_set(php_input, amount);
+      on_php();
+    }
+    app_shared_button(card, label, on_amount);
+  }
+  php_amount_button_add("₱10,000", "10000");
+  php_amount_button_add("₱20,000", "20000");
   let usd_input = app_shared_input_amount(card, "$ USD");
   copy_button_add(usd_input);
   let rate_line = html_div_text(card, "");
