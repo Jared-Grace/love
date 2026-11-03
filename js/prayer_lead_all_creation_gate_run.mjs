@@ -73,14 +73,14 @@ export async function prayer_lead_all_creation_gate_run() {
   let reaches = [
     {
       importer: fn_name("app_autopray"),
-      imported: fn_name("app_autopray_verse_show"),
+      imported: fn_name("app_pray_auto_verse_show"),
     },
     {
       importer: fn_name("app_autopray"),
       imported: fn_name("ebible_version_chapters_all_download"),
     },
     {
-      importer: fn_name("app_autopray_verse_show"),
+      importer: fn_name("app_pray_auto_verse_show"),
       imported: fn_name("prayer_lead_all_creation"),
     },
     {

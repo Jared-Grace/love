@@ -7,7 +7,7 @@ import { html_p_text_multiple } from "./html_p_text_multiple.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
 import { isaiah_chapters_count } from "./isaiah_chapters_count.mjs";
 import { sleep } from "./sleep.mjs";
-export async function app_autopray_verse_show(root, reference, verse_text) {
+export async function app_pray_auto_verse_show(root, reference, verse_text) {
   html_clear(root);
   let v = prayer_start();
   let v3 = prayer_end();

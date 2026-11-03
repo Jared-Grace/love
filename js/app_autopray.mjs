@@ -5,7 +5,7 @@ import { each_async } from "./each_async.mjs";
 import { ebible_version_chapters_all_download } from "./ebible_version_chapters_all_download.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
-import { app_autopray_verse_show } from "./app_autopray_verse_show.mjs";
+import { app_pray_auto_verse_show } from "./app_pray_auto_verse_show.mjs";
 export async function app_autopray(context) {
   let root = property_get(context, "root");
   let version = ebible_folder_english();
@@ -22,7 +22,7 @@ export async function app_autopray(context) {
         books,
         [verse_number],
       );
-      await app_autopray_verse_show(root, reference, verse_text);
+      await app_pray_auto_verse_show(root, reference, verse_text);
     }
     await each_async(verses, each_verse);
   }
