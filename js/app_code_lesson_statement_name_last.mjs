@@ -1,13 +1,13 @@
-import { js_console_log_name } from "./js_console_log_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_code_lines_writes_out_watched } from "./app_code_code_lines_writes_out_watched.mjs";
+import { js_console_log_name } from "./js_console_log_name.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -17,8 +17,9 @@ export function app_code_lesson_statement_name_last(
   batch_original,
   name_id,
   decoys,
+  backwards_decoys,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   ("a lesson that asks again about the programs of the lesson just before it, now writing the name out only at the end, so only its last value is written out");
   ("The human's order, 2026-09-27: a lesson where a name takes a new value first writes the name out after every change, and this one follows it. Seen first, every value is on the screen; here a learner carries the changes in their head and answers with where they end, with the lesson before as the help.");
   ("The programs are the lesson before's own without the writing-outs it adds, so the two lessons cannot drift apart. The wrong answers are what that lesson's programs were asked with before the order changed: the other programs' answers, or the words handed in.");
@@ -69,6 +70,7 @@ export function app_code_lesson_statement_name_last(
     unscramble: false,
     lines: true,
     decoys,
+    backwards_decoys,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });

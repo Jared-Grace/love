@@ -7,7 +7,7 @@ export async function app_receipts_rates_browser_check() {
   "Four visits, each answering one question. A new phone with the rate service slowed by three seconds: does the list draw first? A second new phone: does it read the finished months from the store and ask the service only for the running month? That phone again: does it ask nothing about months? A third new phone with the rate service failing: does it stop after the first month?";
   "Nothing is sent to the folder, because purchases placed in the store directly are never marked as waiting to send. A finished month it asks for really is kept in the shared store, which is what the first phone anywhere would do.";
   let folder = "rates_check";
-  let url = "http://localhost:8080/dev/receipts.html#" + folder;
+  let url = "http://localhost:8080/dev/receipts.html#folder=" + folder;
   let database = app_receipts_purchases_database_name();
   let store = app_receipts_purchases_store();
   function purchase_make(key, date) {
@@ -55,6 +55,7 @@ export async function app_receipts_rates_browser_check() {
   let engine = await launcher.launch({
     headless: true,
   });
+  let visit_last = null;
   async function visit_new(on_route) {
     let context = await engine.newContext();
     let page = await context.newPage();
@@ -100,6 +101,7 @@ export async function app_receipts_rates_browser_check() {
       asked,
       context,
     };
+    visit_last = r2;
     return r2;
   }
   async function reload_read(visit, wait) {
@@ -148,6 +150,11 @@ export async function app_receipts_rates_browser_check() {
     await failing.context.close();
   } catch (e) {
     answer.error = e.message;
+    if (visit_last !== null) {
+      answer.error_asked = visit_last.asked;
+      answer.error_errors = visit_last.errors;
+      answer.error_body = await visit_last.page.innerText("body");
+    }
   } finally {
     await engine.close();
   }
