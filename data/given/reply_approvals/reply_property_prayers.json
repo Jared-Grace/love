@@ -1,0 +1,1 @@
+{"f_name":"reply_property_prayers","text":"+import { arguments_assert } from \"./arguments_assert.mjs\";\n+export function reply_property_prayers() {\n+  arguments_assert(arguments, 0);\n+  (\"The name each reading of a message keeps its prayer lines under while the message is being read.\");\n+  let r = \"prayers\";\n+  return r;\n+}\n+"}
