@@ -7,6 +7,7 @@ import { html_div } from "./html_div.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
+import { reply_proposals_whole_once } from "./reply_proposals_whole_once.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_filter_property_path } from "./list_filter_property_path.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
@@ -46,7 +47,8 @@ export async function app_reply_rules_preview() {
     fn_name("app_message_reply_proposals_shown"),
     [],
   );
-  let proposals = property_get(shown, "proposals");
+  let proposals_all = property_get(shown, "proposals");
+  let proposals = reply_proposals_whole_once(proposals_all);
   let cases = property_get(shown, "cases");
   ("The verdicts already left are fetched once beside the changes and handed down, rather than each file asking after its own. A file's own asking would be a round trip for a few lines of text, repeated as many times as there are files, and every one of them would land after the page had already drawn.");
   let approvals = await app_shared_api_named(fn_name("reply_approved_all"), []);
