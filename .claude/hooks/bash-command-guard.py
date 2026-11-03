@@ -5237,10 +5237,40 @@ def splittable_statements(command, safe_verbs, safe_exact_commands):
     commands that happen to be adjacent - the second reads what the first set,
     so splitting it does not preserve it, and this is exactly where the guard
     means to fail closed."""
+    found = chain_trusted_and_one_blocked(command, safe_verbs, safe_exact_commands, 2)
+    if found is None or not ai_dispatcher_call_is(found[1]):
+        return None
+    return found
+
+
+CHAIN_ONE_UNKNOWN_PIECES_MINIMUM = 3
+
+
+def chain_one_unknown_piece(command, safe_verbs, safe_exact_commands):
+    """The trusted pieces and the one blocked piece of a long chain, or None.
+
+    Reading is what a long chain costs the human: every line has to be checked
+    to find the one that matters. Sending it back runs nothing, so it cannot be
+    less safe than asking; the piece still reaches the person if the agent still
+    wants it, now alone. This does not recommend that piece, which is what
+    splittable_statements refuses to do for anything but a dispatcher call, so
+    the message here asks whether it is needed at all.
+
+    A two-piece chain stays on the answer it had: it is already short to read."""
+    return chain_trusted_and_one_blocked(
+        command, safe_verbs, safe_exact_commands, CHAIN_ONE_UNKNOWN_PIECES_MINIMUM
+    )
+
+
+def chain_trusted_and_one_blocked(command, safe_verbs, safe_exact_commands, pieces_minimum):
+    """(trusted_pieces, the_one_blocked_piece) when `command` is a chain of at
+    least `pieces_minimum` independent statements with exactly one not allowed,
+    else None. A variable or an assignment means the pieces may depend on each
+    other, so those are not chains in this sense."""
     if "$" in command:
         return None
     pieces = split_top_level_statements_text(command)
-    if pieces is None or len(pieces) < 2:
+    if pieces is None or len(pieces) < pieces_minimum:
         return None
     for piece in pieces:
         head = piece.split()[0] if piece.split() else ""
@@ -5258,8 +5288,6 @@ def splittable_statements(command, safe_verbs, safe_exact_commands):
         else:
             blocked.append(piece)
     if len(blocked) != 1 or not trusted:
-        return None
-    if not ai_dispatcher_call_is(blocked[0]):
         return None
     return trusted, blocked[0]
 
@@ -6418,6 +6446,23 @@ def main():
     if verb is not None and untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
         return decide("deny", (
             REWORD_DENY_LEAD
+            + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
+        ))
+
+    long_chain = chain_one_unknown_piece(command, safe_verbs, safe_exact_commands)
+    if long_chain is not None:
+        trusted, blocked = long_chain
+        return decide("deny", (
+            "Nothing ran. All of this chain is allowed except one piece, so it "
+            "comes back to you rather than making the human read every line.\n"
+            + "".join(f"  already allowed: {t}\n" for t in trusted)
+            + f"  no rule of its own: {blocked}\n"
+            "Run the allowed parts as their own call. Then decide whether that "
+            "piece is needed at all: look for a named command first "
+            "(`node scripts/ai.mjs functions_search <words>`). If it is still "
+            "needed, run it alone, in the order the chain had it: it will ask "
+            "the human, who then reads one short command. Only `cd` carries "
+            "between calls, and a later piece may have relied on an earlier one."
             + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
         ))
 
