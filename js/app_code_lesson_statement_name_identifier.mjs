@@ -1,12 +1,21 @@
-import { app_code_lesson_decoy_code_names } from "./app_code_lesson_decoy_code_names.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_statement_name_identifier_title_name_id } from "./app_code_lesson_statement_name_identifier_title_name_id.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_code_lesson_statement_name_identifier_batch } from "./app_code_lesson_statement_name_identifier_batch.mjs";
+import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
+import { js_parse } from "./js_parse.mjs";
+import { list_first } from "./list_first.mjs";
+import { js_strings } from "./js_strings.mjs";
+import { js_declared_names } from "./js_declared_names.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
+import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_lesson_statement_name_identifier_above } from "./app_code_lesson_statement_name_identifier_above.mjs";
-import { app_code_lesson_statement_name_identifier_batch } from "./app_code_lesson_statement_name_identifier_batch.mjs";
-import { app_code_lesson_statement_name_identifier_title_name_id } from "./app_code_lesson_statement_name_identifier_title_name_id.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
+import { app_code_lesson_decoy_code_pieces } from "./app_code_lesson_decoy_code_pieces.mjs";
 export function app_code_lesson_statement_name_identifier() {
   arguments_assert(arguments, 0);
   ('the name a value is given can be any identifier, not only the one letter used so far: let joy = "peace"; on one line and console.log(joy); on the next writes out peace');
@@ -20,7 +29,29 @@ export function app_code_lesson_statement_name_identifier() {
     app_code_lesson_statement_name_identifier_batch,
     eval_console_log_to_list,
   );
+  ("Every wrong answer uses only this program's own two words, in both directions, so nothing on the buttons can be thrown out for holding a word the code does not. Reading backwards the two words are also swapped, which is why the words here are ones JS accepts as a name: the swapped program runs and writes out the other word.");
+  function backwards_decoys(question, answer) {
+    "the two words swapped, the name in quote marks, and the name written out twice";
+    let ast = js_parse(answer);
+    let list = js_strings(ast);
+    let word = list_first(list);
+    let list2 = js_declared_names(ast);
+    let name = list_first(list2);
+    let quoted = app_code_string_code(word);
+    let held = js_code_let_statement(name, quoted);
+    let logged = js_code_console_log_statement(name);
+    let right = app_code_string_code(name);
+    let code = js_code_let_statement(word, right);
+    let statement = js_code_console_log_statement(word);
+    let swapped = list_join_newline([code, statement]);
+    let statement2 = app_code_word_console_log_statement(name);
+    let name_written = list_join_newline([held, statement2]);
+    let written_twice = list_join_newline([held, logged, logged]);
+    let found = [swapped, name_written, written_twice];
+    return found;
+  }
   let lesson = app_code_lesson_code_logged({
+    backwards_decoys,
     above: app_code_lesson_statement_name_identifier_above,
     name_id,
     batch_get: batch,
@@ -28,7 +59,7 @@ export function app_code_lesson_statement_name_identifier() {
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
     lines: true,
-    decoys: app_code_lesson_decoy_code_names,
+    decoys: app_code_lesson_decoy_code_pieces,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
