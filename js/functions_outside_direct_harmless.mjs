@@ -70,6 +70,7 @@ export function functions_outside_direct_harmless() {
     fn_name("url_available_is"),
     fn_name("http_json_browser_quiet"),
     fn_name("giveaway_archive_item_read_or_null"),
+    fn_name("currency_php_per_usd_date_frankfurter"),
     fn_name("youtube_oauth_access_token_allows"),
     fn_name("youtube_oauth_access_token_info"),
     fn_name("domain_porkbun_pricing"),
