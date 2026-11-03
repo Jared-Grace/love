@@ -1177,6 +1177,7 @@ export function reply_proposals() {
       fn_name("reply_prayer_help_you"),
       fn_name("reply_prayer_feed_children"),
       fn_name("text_may_the_lord_combine"),
+      fn_name("text_may_the_lord_exclamation"),
     ],
     diff: [
       poor_family_kept_give,
