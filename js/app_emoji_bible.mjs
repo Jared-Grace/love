@@ -11,7 +11,7 @@ import { bible_glyph_chapter_references_browser } from "./bible_glyph_chapter_re
 import { app_bible_emoji_chapter_chosen } from "./app_bible_emoji_chapter_chosen.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { app_emoji_bible_settings_button } from "./app_emoji_bible_settings_button.mjs";
-import { app_emoji_bible_chapter_index } from "./app_emoji_bible_chapter_index.mjs";
+import { app_bible_emoji_chapter_index } from "./app_bible_emoji_chapter_index.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_bible_emoji_chapter_bar } from "./app_bible_emoji_chapter_bar.mjs";
 import { app_emoji_bible_views_chosen } from "./app_emoji_bible_views_chosen.mjs";
@@ -63,7 +63,7 @@ export async function app_emoji_bible(context) {
   if (index_shown) {
     html_div_text_bold(bar, "The Bible in pictures");
     app_emoji_bible_settings_button(bar, context);
-    app_emoji_bible_chapter_index(content, chapters);
+    app_bible_emoji_chapter_index(content, chapters);
     app_shared_footer(content);
     return;
   }

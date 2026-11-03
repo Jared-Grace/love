@@ -14,7 +14,7 @@ import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
 import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { app_shared_bible_chapters_card } from "./app_shared_bible_chapters_card.mjs";
-export function app_emoji_bible_chapter_index(content, chapters) {
+export function app_bible_emoji_chapter_index(content, chapters) {
   arguments_assert(arguments, 2);
   ("The way into the picture Bible: the books, and once a book is chosen, its chapters, each opening that chapter.");
   ("IT IS THE BIBLE READER'S OWN PICKER, as this list always said it would become. It listed only what had been written while the picture Bible was a few hundred hand-written chapters, because a canon picker would have offered chapters that opened on nothing. The chapters are now built from the interlinear, so every one of them exists and the departure has ended by itself.");
