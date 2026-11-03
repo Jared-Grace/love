@@ -2969,6 +2969,7 @@
       "Bash(node scripts/ai.mjs app_en_learn_bible_gloss_urdu_bible_quotes_mend_file:*)",
       "Bash(node scripts/ai.mjs qa_gate_timed_solo:*)",
       "Bash(node scripts/ai.mjs currency_php_per_usd_date_frankfurter:*)",
+      "Bash(node scripts/ai.mjs cloudflare_pages_firebase_compare:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5815,7 +5816,8 @@
       "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_tagalog_write_chapter_file:*)",
       "Bash(node scripts/aig.mjs app_en_learn_bible_gloss_urdu_bible_quotes_mend_file:*)",
       "Bash(node scripts/aig.mjs qa_gate_timed_solo:*)",
-      "Bash(node scripts/aig.mjs currency_php_per_usd_date_frankfurter:*)"
+      "Bash(node scripts/aig.mjs currency_php_per_usd_date_frankfurter:*)",
+      "Bash(node scripts/aig.mjs cloudflare_pages_firebase_compare:*)"
     ],
     "defaultMode": "acceptEdits"
   },
