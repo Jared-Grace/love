@@ -12,7 +12,9 @@ export async function page_links_answered(url) {
     await page.goto(url, {
       waitUntil: "domcontentloaded",
     });
-    await page.waitForSelector("a");
+    await page.waitForSelector("a", {
+      state: "attached",
+    });
     function read(anchors) {
       function one(a) {
         let r = {
