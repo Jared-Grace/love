@@ -1,21 +1,22 @@
+import { app_shared_message_reply_asks } from "./app_shared_message_reply_asks.mjs";
+import { reply_on_match_outputs_codes_multiple } from "./reply_on_match_outputs_codes_multiple.mjs";
+import { reply_prayer_will_done } from "./reply_prayer_will_done.mjs";
+import { reply_on_match_prayer } from "./reply_on_match_prayer.mjs";
+import { reply_cheapest_per_position } from "./reply_cheapest_per_position.mjs";
+import { reply_prayers_closed } from "./reply_prayers_closed.mjs";
 import { reply_outputs_mapped } from "./reply_outputs_mapped.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { app_shared_message_reply_poor_family } from "./app_shared_message_reply_poor_family.mjs";
 import { app_shared_message_reply_greeting } from "./app_shared_message_reply_greeting.mjs";
 import { app_shared_message_reply_how_r_u } from "./app_shared_message_reply_how_r_u.mjs";
 import { app_shared_message_reply_phrases_single } from "./app_shared_message_reply_phrases_single.mjs";
 import { app_shared_message_reply_praise_god } from "./app_shared_message_reply_praise_god.mjs";
 import { app_shared_message_reply_minister } from "./app_shared_message_reply_minister.mjs";
 import { app_shared_message_reply_from_country } from "./app_shared_message_reply_from_country.mjs";
-import { app_shared_message_reply_give } from "./app_shared_message_reply_give.mjs";
 import { reply_phrase_according_to_gods_will } from "./reply_phrase_according_to_gods_will.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_sequence_optional } from "./reply_sequence_optional.mjs";
-import { reply_choices_will_done_fragment } from "./reply_choices_will_done_fragment.mjs";
-import { reply_pray_response } from "./reply_pray_response.mjs";
 import { reply_word_us } from "./reply_word_us.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
-import { reply_on_match_output_code } from "./reply_on_match_output_code.mjs";
 import { reply_phrase_you } from "./reply_phrase_you.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { reply_choice_output } from "./reply_choice_output.mjs";
@@ -34,13 +35,10 @@ export function app_shared_message_reply_choices() {
   let praise_god = app_shared_message_reply_praise_god();
   let minister = app_shared_message_reply_minister();
   let from_city_country = app_shared_message_reply_from_country();
-  let give = app_shared_message_reply_give();
-  let poor_family = app_shared_message_reply_poor_family();
+  let asks = app_shared_message_reply_asks();
   let according_to_gods_will = reply_phrase_according_to_gods_will();
   let o_according_to_gods_will = reply_optional(according_to_gods_will);
   let o_come_and = reply_sequence_optional(["come", "and"]);
-  let pray_request = reply_choices_will_done_fragment();
-  let will_be_done = reply_pray_response(pray_request);
   let us = reply_word_us();
   let s_visit = reply_sequence([
     o_come_and,
@@ -49,7 +47,13 @@ export function app_shared_message_reply_choices() {
     us,
     o_according_to_gods_will,
   ]);
-  let visit_step = reply_on_match_output_code(s_visit, will_be_done, "todo()");
+  let visit_coded = reply_on_match_outputs_codes_multiple(
+    s_visit,
+    [],
+    ["todo()"],
+  );
+  let will_done = reply_prayer_will_done();
+  let visit_step = reply_on_match_prayer(visit_coded, will_done);
   let you = reply_phrase_you();
   let thank_you = reply_sequence(["thank", you]);
   let item = reply_choices_glory();
@@ -73,16 +77,17 @@ export function app_shared_message_reply_choices() {
     praise_god,
     minister,
     from_city_country,
-    give,
-    poor_family,
+    asks,
     visit_step,
     thanks,
     fn,
     matcher,
   ]);
-  let room = reply_once_or_more(choices_main);
+  let choices_cheapest = reply_cheapest_per_position(choices_main);
+  let room = reply_once_or_more(choices_cheapest);
   let last = reply_last();
   let with_repeats = reply_sequence([room, last]);
-  let r = reply_outputs_mapped(with_repeats, list_unique);
+  let said_once = reply_outputs_mapped(with_repeats, list_unique);
+  let r = reply_prayers_closed(said_once);
   return r;
 }
