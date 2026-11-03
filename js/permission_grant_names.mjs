@@ -2859,6 +2859,7 @@ export function permission_grant_names() {
     fn_name("cloudflare_site_index_apps_boot_cold_report"),
     fn_name("cloudflare_site_app_replace_tests_run_e2e"),
     fn_name("app_receipts_convert_browser_check"),
+    fn_name("cloudflare_site_app_replace_page_tests_run_e2e"),
   ];
   return names;
 }
