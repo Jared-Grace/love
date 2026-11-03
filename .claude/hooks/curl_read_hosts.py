@@ -2,4 +2,4 @@
 # Source of truth: js/curl_read_hosts.mjs. Regenerate with
 # `node scripts/r.mjs python_mirrors_write`; drift fails `q`
 # via python_mirrors_assert.
-CURL_READ_HOSTS = {"jared-grace.web.app", "firebasestorage.googleapis.com", "storage.googleapis.com", "www.gotquestions.org", "biblehub.com", "www.biblestudytools.com"}
+CURL_READ_HOSTS = {"jared-grace.web.app", "firebasestorage.googleapis.com", "storage.googleapis.com", "www.gotquestions.org", "biblehub.com", "www.biblestudytools.com", "api.frankfurter.dev"}
