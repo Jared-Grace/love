@@ -1,7 +1,8 @@
-import { firebase_apps_frozen_unchanged_assert_deploy } from "./firebase_apps_frozen_unchanged_assert_deploy.mjs";
-import { firebase_deploy_locked_generic } from "./firebase_deploy_locked_generic.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { qa_promoted_unaccounted } from "./qa_promoted_unaccounted.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { firebase_deploy_locked_generic } from "./firebase_deploy_locked_generic.mjs";
+import { firebase_apps_frozen_unchanged_assert_deploy } from "./firebase_apps_frozen_unchanged_assert_deploy.mjs";
+import { cloudflare_pages_deploy } from "./cloudflare_pages_deploy.mjs";
 export async function qa_promoted_publish() {
   "Sends out everything waiting in the folder the sending reads from, once every app standing there has been accounted for";
   "The sending was never about one app. It puts out the whole folder, so it is the same act whether one app was put there or five, and naming it after the one app somebody happened to come to send hid that. Split out here, it can be paid for once by a run that prepares several - which is where the saving is, because the upload walks the whole folder and the lock is held for the machine";
@@ -15,5 +16,11 @@ export async function qa_promoted_publish() {
     firebase_apps_frozen_unchanged_assert_deploy,
     qa_promoted_publish.name,
   );
-  return published;
+  ("2026-11-03, at the human's asking: a standard send reaches Firebase and Cloudflare together, so this folder goes to Cloudflare once Firebase has let go of the lock Cloudflare also takes.");
+  let cloudflare = await cloudflare_pages_deploy();
+  let r = {
+    published,
+    cloudflare,
+  };
+  return r;
 }

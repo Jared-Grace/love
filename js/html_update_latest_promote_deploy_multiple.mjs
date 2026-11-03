@@ -1,4 +1,3 @@
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { git_head_commit } from "./git_head_commit.mjs";
@@ -6,7 +5,9 @@ import { qa_app_commit_gate_run_reuse_at } from "./qa_app_commit_gate_run_reuse_
 import { property_get } from "./property_get.mjs";
 import { app_shared_build } from "./app_shared_build.mjs";
 import { html_public_from_latest } from "./html_public_from_latest.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { firebase_deploy_promote_generic } from "./firebase_deploy_promote_generic.mjs";
+import { cloudflare_pages_deploy } from "./cloudflare_pages_deploy.mjs";
 export async function html_update_latest_promote_deploy_multiple(
   searches_comma,
 ) {
@@ -40,14 +41,18 @@ export async function html_update_latest_promote_deploy_multiple(
     return copied;
   }
   let published = null;
+  let cloudflare = null;
   if (greater_than(sound.length, 0)) {
     published = await firebase_deploy_promote_generic(promote);
+    ("2026-11-03, at the human's asking: a standard send reaches Firebase and Cloudflare together, the same as the one-app sending beside this.");
+    cloudflare = await cloudflare_pages_deploy();
   }
   let r = {
     head,
     sent: sound,
     refused,
     published,
+    cloudflare,
   };
   return r;
 }
