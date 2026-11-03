@@ -1,17 +1,19 @@
-import { property_in_list_not } from "./property_in_list_not.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_renames } from "./app_renames.mjs";
+import { html_extension } from "./html_extension.mjs";
 import { list_map_property } from "./list_map_property.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { firebase_json_path } from "./firebase_json_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_renames_page_ready } from "./app_renames_page_ready.mjs";
+import { not } from "./not.mjs";
 import { app_renames_current } from "./app_renames_current.mjs";
 import { app_route } from "./app_route.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { property_set } from "./property_set.mjs";
 import { json_format_to_spaces } from "./json_format_to_spaces.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
@@ -22,7 +24,14 @@ export async function app_renames_redirects_write() {
   ("Each old address leads straight to today's name, never through a later old one - an app renamed twice sends both its old addresses to where it is now, so nobody is passed along twice.");
   ("Rules for other addresses are left as they are. Only rules whose source is a recorded old address are replaced, so running this again writes the same file.");
   let renames = await app_renames();
-  let sources = list_map_property(renames, "source");
+  ("An old address is sent on with and without .html. The sites only answer page.html by sending it to /page while the file is there, so once the old page is taken out its .html address would find nothing, and that spelling is still in older saved links and in what an installed app opens at. Measured 2026-11-03: /privacy_policy forwarded on both sites and /privacy_policy.html was not found on either.");
+  function source_html(source_short) {
+    let r = source_short + html_extension();
+    return r;
+  }
+  let sources_short = list_map_property(renames, "source");
+  let sources_html = list_map(sources_short, source_html);
+  let sources = list_concat(sources_short, sources_html);
   let path = firebase_json_path();
   let config = await file_read_json(path);
   let hosting = property_get(config, "hosting");
@@ -42,11 +51,18 @@ export async function app_renames_redirects_write() {
     let source = property_get(rename, "source");
     let current = app_renames_current(renames, before);
     let destination = app_route(current);
-    list_add(made, {
-      source,
-      destination,
-      type: 301,
-    });
+    list_add_multiple(made, [
+      {
+        source,
+        destination,
+        type: 301,
+      },
+      {
+        source: source_html(source),
+        destination,
+        type: 301,
+      },
+    ]);
   }
   let all = list_concat(others, made);
   property_set(hosting, "redirects", all);
