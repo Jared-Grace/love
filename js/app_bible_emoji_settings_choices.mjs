@@ -13,7 +13,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_bible_emoji_manuscript_text } from "./app_bible_emoji_manuscript_text.mjs";
 import { app_bible_emoji_literal_shown_get } from "./app_bible_emoji_literal_shown_get.mjs";
 import { app_bible_emoji_literal_shown_set } from "./app_bible_emoji_literal_shown_set.mjs";
-export function app_emoji_bible_settings_choices(parent, fn_draw) {
+export function app_bible_emoji_settings_choices(parent, fn_draw) {
   arguments_assert(arguments, 2);
   ("The three choices about what a chapter shows, each asked as a pair of buttons with the answer in force coloured: whether the English stands under each verse, whether the original does, and whose order the pictures follow.");
   ("THEY ARE IN SETTINGS, moved off the chapter's bar by the human, as a pair of buttons each rather than one button that flips, so a reader sees both answers and which one is theirs.");
