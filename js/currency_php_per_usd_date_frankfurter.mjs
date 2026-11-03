@@ -13,6 +13,6 @@ export async function currency_php_per_usd_date_frankfurter(date) {
     });
   }
   let url = "https://api.frankfurter.dev/v2/rate/USD/PHP?date=" + date;
-  let answer = await http_json(url);
+  let answer = await http_json(url, {});
   return answer;
 }

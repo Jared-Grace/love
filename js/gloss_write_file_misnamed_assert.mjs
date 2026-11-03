@@ -32,6 +32,6 @@ export async function gloss_write_file_misnamed_assert(
   error_json({
     path,
     saved,
-    hint: "no file has the name this passage is read under. The name lists every verse of the passage joined by dashes - never a comma, never a range. Write it again under exactly that name with the Write tool. Do not move or copy a file with any shell command - mv, cp and the like all ask the human; only the Write tool runs unasked",
+    hint: "no file has the name this passage is read under. The name lists every verse of the passage joined by dashes - never a comma, never a range. Rename it with mv as a call of its own, both paths written whole and no flags, or write it again under exactly that name with the Write tool. Those two run unasked; cp, or mv with anything chained to it that has no rule, asks the human",
   });
 }

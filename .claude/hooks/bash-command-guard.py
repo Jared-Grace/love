@@ -1773,6 +1773,10 @@ def is_safe_claude_temp_mkdir(words):
     scratchpad mkdir prompted anyway."""
     if not words or words[0] != "mkdir":
         return False
+    # The one folder outside the scratchpad: drafts go there, it is gitignored,
+    # and `scripts_temp_delete` can leave it missing. Only this exact spelling.
+    if words == ["mkdir", "-p", "scripts/temp"]:
+        return True
     paths = []
     for word in words[1:]:
         if word.startswith("-"):
@@ -4456,17 +4460,24 @@ def find_js_to_temp_copy(command):
     function_temp_write does unasked; else None."""
     js_prefixes = ("js/", REPO_ROOT + "/js/")
     temp_prefixes = ("scripts/temp/", REPO_ROOT + "/scripts/temp/")
-    for words in statements_words(command):
-        if len(words) != 3 or words[0] != "cp":
-            continue
-        source, target = words[1], words[2]
-        if not target.startswith(temp_prefixes):
-            continue
-        for prefix in js_prefixes:
-            if source.startswith(prefix) and source.endswith(".mjs"):
-                name = source[len(prefix):-len(".mjs")]
-                if FUNCTION_NAME_TEXT.match(name):
-                    return name
+    # A loop is read written out as well, because `js/$n.mjs` names no function
+    # until the list word is put in, and the loop would otherwise ask the human.
+    texts = [command]
+    unrolled = for_loop_unrolled_text(command)
+    if unrolled is not None:
+        texts.append(unrolled)
+    for text in texts:
+        for words in statements_words(text):
+            if len(words) != 3 or words[0] != "cp":
+                continue
+            source, target = words[1], words[2]
+            if not target.startswith(temp_prefixes):
+                continue
+            for prefix in js_prefixes:
+                if source.startswith(prefix) and source.endswith(".mjs"):
+                    name = source[len(prefix):-len(".mjs")]
+                    if FUNCTION_NAME_TEXT.match(name):
+                        return name
     return None
 
 
@@ -4475,7 +4486,8 @@ def js_to_temp_copy_deny_reason(name):
         f"Copying a function's file into scripts/temp has a named command "
         f"that needs no prompt: `node scripts/ai.mjs function_temp_write "
         f"{name}` writes scripts/temp/{name}.mjs. Edit the draft there, then "
-        f"promote it with `node scripts/ai.mjs function_overwrite_from_temp_edit_safe {name}`."
+        f"promote it with `node scripts/ai.mjs function_overwrite_from_temp_edit_safe {name}`. "
+        f"For several, a `for` over the written names runs it unasked too."
     )
 
 
@@ -4800,8 +4812,7 @@ def untrusted_piece_hint(words, safe_verbs):
                 f"{hosts}; flags only from -s -S -i -I -f -L -A -o -w -H -m "
                 "--retry; and -o naming /dev/null or a WHOLE path inside your "
                 "scratchpad (a path relative to an earlier `cd` is not "
-                "followed, so write it in full). Another site is added by "
-                "naming it in js/curl_read_hosts_reference.mjs."
+                "followed, so write it in full)."
             )
         granted_reader = GRANTED_READER_FOR_VERB.get(verb)
         if granted_reader:
@@ -5039,6 +5050,52 @@ REWORD_DENY_LEAD = (
     "that runs with no prompt, so this comes back to you instead of going "
     "to the human."
 )
+
+CURL_HELPER_DENY_LEAD = (
+    "This curl is not a plain read of a listed site, so it comes back to you "
+    "instead of going to the human. Write a named function in js/ that fixes "
+    "the site and the shape of the request in its code, and refuses any "
+    "argument that does not fit; look at "
+    "js/currency_php_per_usd_date_frankfurter.mjs for the shape. Then run "
+    "`node scripts/ai.mjs permission_grant_add_auto <its name>` as its own "
+    "Bash call, and it runs unasked from then on. For a real one-off that a "
+    "function would not repay, tell the human why and give them the curl to "
+    "run with `!`."
+)
+
+
+def refused_piece_is_curl(command, safe_verbs, safe_exact_commands):
+    """True when the part of `command` that nothing approved is a curl.
+
+    Asked only after the allow decision, so a plain read of a listed site, and
+    a loop whose written-out reads are all plain, have already run. What is
+    left would have asked the human, and a prompt shows its reason to the human
+    alone, so the agent never learns the better way. Sending it back does
+    nothing but deliver that: a function fixing one site and one shape of
+    request, which can be read, reused and granted once, in place of a request
+    that has to be read afresh every time.
+
+    It only turns a prompt into a refusal, so it can never let anything run.
+    The human can still run any curl themselves."""
+    try:
+        found = untrusted_piece(command, safe_verbs, safe_exact_commands)
+    except Exception:
+        return False
+    if found is None:
+        return False
+    words, _why = found
+    if words is None:
+        return False
+    plain = list(words)
+    while plain and ASSIGN_RE.match(plain[0]):
+        plain = plain[1:]
+    while plain:
+        skip = transparent_wrapper_skip(plain)
+        if not skip:
+            break
+        plain = plain[skip:]
+    return bool(plain) and os.path.basename(plain[0]) == "curl"
+
 
 DISPATCHER_NAME_VARIABLE_DENY_REASON = (
     "This runs `node scripts/ai.mjs $name` over a name this hook cannot "
@@ -6244,6 +6301,12 @@ def main():
 
     if dispatcher_name_variable_is(command, safe_verbs, safe_exact_commands):
         return decide("deny", DISPATCHER_NAME_VARIABLE_DENY_REASON)
+
+    if refused_piece_is_curl(command, safe_verbs, safe_exact_commands):
+        return decide("deny", (
+            CURL_HELPER_DENY_LEAD
+            + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
+        ))
 
     verb = matched_leading_verb(command, safe_verbs)
     if verb is not None and verb_matched_mid_word(command, verb):
