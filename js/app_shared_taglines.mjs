@@ -6,7 +6,7 @@ export function app_shared_taglines() {
   let r = {
     index: "all free, with nothing to sign up for",
     bible: "read it in your own language",
-    emoji_bible: "the Bible written with pictures in place of its words",
+    bible_emoji: "the Bible written with pictures in place of its words",
     search: "find a word anywhere in the Bible",
     original_bible:
       "every word explained in English, with the number to look it up by",
