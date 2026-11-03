@@ -1,0 +1,1 @@
+{"f_name":"text_may_the_lord_exclamation","text":"+import { text_may_the_lord_combine } from \"./text_may_the_lord_combine.mjs\";\n+import { text_combine } from \"./text_combine.mjs\";\n+export function text_may_the_lord_exclamation(request) {\n+  let line = text_may_the_lord_combine(request);\n+  let exclaimed = text_combine(line, \"!\");\n+  return exclaimed;\n+}\n+"}
