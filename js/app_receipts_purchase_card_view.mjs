@@ -1,9 +1,8 @@
-import { html_style_white_space } from "./html_style_white_space.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
 import { app_receipts_color_get } from "./app_receipts_color_get.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { property_get } from "./property_get.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { country_philippines } from "./country_philippines.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -11,20 +10,22 @@ import { date_year_month_day } from "./date_year_month_day.mjs";
 import { time_12_label } from "./time_12_label.mjs";
 import { app_receipts_purchase_usa_text } from "./app_receipts_purchase_usa_text.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { app_receipts_price_php_text } from "./app_receipts_price_php_text.mjs";
+import { app_receipts_purchase_php_per_usd } from "./app_receipts_purchase_php_per_usd.mjs";
 import { app_receipts_price_usd_text } from "./app_receipts_price_usd_text.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { app_receipts_price_php_text } from "./app_receipts_price_php_text.mjs";
 import { app_receipts_payment_get } from "./app_receipts_payment_get.mjs";
 import { equal } from "./equal.mjs";
 import { app_receipts_payment_emoji } from "./app_receipts_payment_emoji.mjs";
 import { app_shared_field_title } from "./app_shared_field_title.mjs";
+import { html_style_white_space } from "./html_style_white_space.mjs";
 import { app_receipts_photos_draw } from "./app_receipts_photos_draw.mjs";
-export function app_receipts_purchase_card_view(parent, purchase, php_per_usd) {
+export function app_receipts_purchase_card_view(parent, purchase) {
   "$plain parent";
   "$plain purchase";
-  "$plain php_per_usd";
-  "php_per_usd is how many pesos a dollar bought, or null when no rate is known, and then no dollars are shown.";
+  "Hands back a function that sets its dollars again, for when a peso rate lands.";
   "One purchase in a box, to be looked at and never changed: its date and time on both clocks, its price in pesos and dollars, how it was paid, its description, its photos, and the reviewer's notes, filled with the colour it is marked with. The same box the receipts app draws, with every box to type in and every button that changes something left out.";
-  arguments_assert(arguments, 3);
+  arguments_assert(arguments, 2);
   let card = app_shared_container_blue_medium(parent);
   let marked = app_receipts_color_get(purchase);
   let background = property_get(marked, "color");
@@ -45,13 +46,19 @@ export function app_receipts_purchase_card_view(parent, purchase, php_per_usd) {
     html_div_text(card, text2);
   }
   let price = property_get_or(purchase, "price", "");
+  let usd_line = null;
+  function usd_show() {
+    if (not_equal(usd_line, null)) {
+      let rate = app_receipts_purchase_php_per_usd(purchase);
+      let usd = app_receipts_price_usd_text(price, rate);
+      html_text_set(usd_line, usd);
+    }
+  }
   if (not_equal(price, "")) {
     let text3 = app_receipts_price_php_text(price);
     html_div_text(card, text3);
-    let usd = app_receipts_price_usd_text(price, php_per_usd);
-    if (not_equal(usd, "")) {
-      html_div_text(card, usd);
-    }
+    usd_line = html_div_text(card, "");
+    usd_show();
   }
   let payment = app_receipts_payment_get(purchase);
   let paid = equal(payment, "cash") ? "Cash" : "Credit";
@@ -69,4 +76,5 @@ export function app_receipts_purchase_card_view(parent, purchase, php_per_usd) {
   writing_show("Description", "description");
   app_receipts_photos_draw(card, purchase);
   writing_show("Notes", "notes");
+  return usd_show;
 }

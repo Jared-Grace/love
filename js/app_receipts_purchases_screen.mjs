@@ -38,8 +38,9 @@ export async function app_receipts_purchases_screen(
   let list = html_div(root);
   app_shared_footer(root);
   ("Under the buttons is either the list of every purchase, one line each, or the one purchase opened from it with a way back to the list above it.");
-  function card_draw(parent, purchase, php_per_usd) {
-    app_receipts_purchase_card(parent, purchase, sync_now, php_per_usd);
+  function card_draw(parent, purchase) {
+    let dollars_set = app_receipts_purchase_card(parent, purchase, sync_now);
+    return dollars_set;
   }
   let shown = app_receipts_purchases_list(
     list,

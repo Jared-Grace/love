@@ -16,6 +16,7 @@ import { property_get_or } from "./property_get_or.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { text_amount_or_empty } from "./text_amount_or_empty.mjs";
+import { app_receipts_purchase_php_per_usd } from "./app_receipts_purchase_php_per_usd.mjs";
 import { app_receipts_price_usd_text } from "./app_receipts_price_usd_text.mjs";
 import { html_on } from "./html_on.mjs";
 import { app_shared_textarea_label } from "./app_shared_textarea_label.mjs";
@@ -29,20 +30,14 @@ import { app_receipts_purchase_photo_add } from "./app_receipts_purchase_photo_a
 import { app_shared_button_wide_camera } from "./app_shared_button_wide_camera.mjs";
 import { emoji_camera } from "./emoji_camera.mjs";
 import { app_receipts_color_choose } from "./app_receipts_color_choose.mjs";
-export function app_receipts_purchase_card(
-  parent,
-  purchase,
-  on_saved,
-  php_per_usd,
-) {
+export function app_receipts_purchase_card(parent, purchase, on_saved) {
   "$plain parent";
   "$plain purchase";
   "$plain on_saved";
-  "$plain php_per_usd";
-  "php_per_usd is how many pesos a dollar bought, or null when no rate is known, and then no dollars are shown.";
+  "Hands back a function that sets its dollars again, for when a peso rate lands.";
   "One purchase in a box: its date, time, price and description, which can be changed, its photos, a button to add another photo, and the reviewer's notes and colour. Every change is kept at once and then on_saved is told, so whatever sends can send it.";
   "A photo taken on this phone is shown from the picture kept here; one taken on another phone is shown from where it is stored, so it needs the internet the first time.";
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 3);
   ("The box is a blue card like the day cards in the list, filled with the colour the purchase is marked with, which is blue until another is chosen at the bottom.");
   let card = app_shared_container_blue_medium(parent);
   function color_show() {
@@ -72,6 +67,7 @@ export function app_receipts_purchase_card(
     usa_show(date_entered, time_entered);
     property_set(purchase, "date", date_entered);
     property_set(purchase, "time", time_entered);
+    usd_show();
     await app_receipts_purchase_save(purchase);
     on_saved();
   }
@@ -89,7 +85,8 @@ export function app_receipts_purchase_card(
   function usd_show() {
     let text2 = html_value_get(price_input);
     let typed = text_amount_or_empty(text2);
-    let text3 = app_receipts_price_usd_text(typed, php_per_usd);
+    let rate = app_receipts_purchase_php_per_usd(purchase);
+    let text3 = app_receipts_price_usd_text(typed, rate);
     html_text_set(usd_line, text3);
   }
   usd_show();
@@ -172,4 +169,5 @@ export function app_receipts_purchase_card(
     on_saved();
   }
   app_receipts_color_choose(card, color, on_color);
+  return usd_show;
 }
