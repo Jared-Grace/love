@@ -1,4 +1,5 @@
 import { html_clear } from "./html_clear.mjs";
+import { app_receipts_convert_page } from "./app_receipts_convert_page.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { emoji_sync } from "./emoji_sync.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -27,16 +28,17 @@ export async function app_receipts_purchases_screen(
   "Every phone given the same folder code sees the same purchases: what the others sent is brought down and kept here too.";
   "Hands back the function that sends, brings down, and redraws, so whoever opened the screen can run it when the internet returns.";
   html_clear(root);
+  let page = app_receipts_convert_page(root);
   ("The folder is a button so the way to change it is to press the thing that names it; on_change is handed the current code. The pencil comes first because it says what pressing does.");
   function on_folder() {
     on_change(folder_code);
   }
-  app_shared_button_wide(root, "✏️ 📁 " + folder_code, on_folder);
-  app_shared_button_wide(root, "➕ Add a purchase", on_add);
-  app_shared_button_wide(root, emoji_sync() + " Sync", refresh);
-  let status = html_p_text(root, "");
-  let list = html_div(root);
-  app_shared_footer(root);
+  app_shared_button_wide(page, "✏️ 📁 " + folder_code, on_folder);
+  app_shared_button_wide(page, "➕ Add a purchase", on_add);
+  app_shared_button_wide(page, emoji_sync() + " Sync", refresh);
+  let status = html_p_text(page, "");
+  let list = html_div(page);
+  app_shared_footer(page);
   ("Under the buttons is either the list of every purchase, one line each, or the one purchase opened from it with a way back to the list above it.");
   function card_draw(parent, purchase) {
     let dollars_set = app_receipts_purchase_card(parent, purchase, sync_now);

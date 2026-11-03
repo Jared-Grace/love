@@ -1,5 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { app_receipts_convert_page } from "./app_receipts_convert_page.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { emoji_sync } from "./emoji_sync.mjs";
 import { html_div } from "./html_div.mjs";
@@ -17,13 +18,14 @@ export async function app_receipts_view_screen(root, folder_code, on_change) {
   "Pressing the folder's name hands on_change the current code, so another folder can be opened.";
   arguments_assert(arguments, 3);
   html_clear(root);
+  let page = app_receipts_convert_page(root);
   function on_folder() {
     on_change(folder_code);
   }
-  app_shared_button_wide(root, "✏️ 📁 " + folder_code, on_folder);
-  app_shared_button_wide(root, emoji_sync() + " Refresh", refresh);
-  let list = html_div(root);
-  app_shared_footer(root);
+  app_shared_button_wide(page, "✏️ 📁 " + folder_code, on_folder);
+  app_shared_button_wide(page, emoji_sync() + " Refresh", refresh);
+  let list = html_div(page);
+  app_shared_footer(page);
   let shown = app_receipts_purchases_list(
     list,
     folder_code,
