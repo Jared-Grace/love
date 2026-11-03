@@ -1,10 +1,11 @@
-import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_prayer_will_done } from "./reply_prayer_will_done.mjs";
 import { reply_prayer_lead_provider } from "./reply_prayer_lead_provider.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { prayer_start } from "./prayer_start.mjs";
 import { prayer_end } from "./prayer_end.mjs";
+import { emoji_pray } from "./emoji_pray.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function reply_prayer_closing(lines) {
   arguments_assert(arguments, 1);
   ("The one prayer that closes a reply, made from the lines noted while the message was read. It opens on a line of its own and the lines run on together after it.");
@@ -26,6 +27,7 @@ export function reply_prayer_closing(lines) {
   let joined = ordered.join(" ");
   let v = prayer_start();
   let v2 = prayer_end();
-  let prayer = text_combine_multiple([v, "\n", joined, v2]);
+  let pray = emoji_pray();
+  let prayer = text_combine_multiple([v, "\n", pray, " ", joined, v2]);
   return prayer;
 }

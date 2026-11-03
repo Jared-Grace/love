@@ -18,6 +18,31 @@
         "source": "/privacy_policy",
         "destination": "/privacy",
         "type": 301
+      },
+      {
+        "source": "/privacy_policy.html",
+        "destination": "/privacy",
+        "type": 301
+      },
+      {
+        "source": "/apps_all",
+        "destination": "/app",
+        "type": 301
+      },
+      {
+        "source": "/apps_all.html",
+        "destination": "/app",
+        "type": 301
+      },
+      {
+        "source": "/designs_universal",
+        "destination": "/design",
+        "type": 301
+      },
+      {
+        "source": "/designs_universal.html",
+        "destination": "/design",
+        "type": 301
       }
     ],
     "headers": [

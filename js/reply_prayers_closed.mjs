@@ -3,7 +3,7 @@ import { reply_property_prayers } from "./reply_property_prayers.mjs";
 import { reply_property_outputs } from "./reply_property_outputs.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { prayer_lines_wrap } from "./prayer_lines_wrap.mjs";
+import { reply_prayer_closing } from "./reply_prayer_closing.mjs";
 import { list_add } from "./list_add.mjs";
 import { reply_on_match } from "./reply_on_match.mjs";
 export function reply_prayers_closed(rule) {
@@ -16,7 +16,7 @@ export function reply_prayers_closed(rule) {
     for (let possibility of possibilities) {
       let lines = property_initialize_list(possibility, name);
       if (list_empty_not_is(lines)) {
-        let prayer = prayer_lines_wrap(lines);
+        let prayer = reply_prayer_closing(lines);
         list_add(possibility[name_outputs], prayer);
       }
     }

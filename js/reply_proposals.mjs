@@ -16,9 +16,11 @@ import { reply_prayer_help_you } from "./reply_prayer_help_you.mjs";
 import { reply_prayer_feed_children } from "./reply_prayer_feed_children.mjs";
 import { prayer_lines_wrap } from "./prayer_lines_wrap.mjs";
 import { reply_prayer_provide_ministry } from "./reply_prayer_provide_ministry.mjs";
-import { reply_choices_will_done_fragment } from "./reply_choices_will_done_fragment.mjs";
-import { reply_pray_response } from "./reply_pray_response.mjs";
+import { reply_prayer_will_done } from "./reply_prayer_will_done.mjs";
+import { reply_prayer_lead_provider } from "./reply_prayer_lead_provider.mjs";
+import { reply_response_nothing_to_give } from "./reply_response_nothing_to_give.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
+import { reply_prayer_closing } from "./reply_prayer_closing.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -1353,9 +1355,40 @@ export function reply_proposals() {
     ],
   };
   let line_ministry = reply_prayer_provide_ministry();
-  let pray_request = reply_choices_will_done_fragment();
-  let line_will_done = reply_pray_response(pray_request);
+  let line_will_done = reply_prayer_will_done();
+  let line_lead = reply_prayer_lead_provider();
+  let nothing_to_give = reply_response_nothing_to_give();
   let line_glory = reply_choices_glory();
+  let visit_removed_fragment = text_combine_multiple([
+    "-  let pray_request = ",
+    fn_name("reply_choices_will_done_fragment"),
+    "();",
+  ]);
+  let visit_removed_response = text_combine_multiple([
+    "-  let will_be_done = ",
+    fn_name("reply_pray_response"),
+    "(pray_request);",
+  ]);
+  let visit_removed_step = text_combine_multiple([
+    "-  let visit_step = ",
+    fn_name("reply_on_match_output_code"),
+    '(s_visit, will_be_done, "todo()");',
+  ]);
+  let visit_added_coded = text_combine_multiple([
+    "+  let visit_coded = ",
+    fn_name("reply_on_match_outputs_codes_multiple"),
+    '(s_visit, [], ["todo()"]);',
+  ]);
+  let visit_added_will = text_combine_multiple([
+    "+  let will_done = ",
+    fn_name("reply_prayer_will_done"),
+    "();",
+  ]);
+  let visit_added_step = text_combine_multiple([
+    "+  let visit_step = ",
+    fn_name("reply_on_match_prayer"),
+    "(visit_coded, will_done);",
+  ]);
   let combined39 = text_combine_multiple([
     "-  let give = ",
     fn_name("app_shared_message_reply_give"),
@@ -1405,13 +1438,44 @@ export function reply_proposals() {
     fn_name("reply_prayers_closed"),
     "(said_once);",
   ]);
-  let wrapped = prayer_lines_wrap([line_ministry]);
-  let wrapped2 = prayer_lines_wrap([line_family]);
-  let wrapped3 = prayer_lines_wrap([line_children]);
-  let wrapped4 = prayer_lines_wrap([line_family, line_help]);
-  let wrapped5 = prayer_lines_wrap([line_ministry]);
-  let wrapped6 = prayer_lines_wrap([line_help, line_ministry, line_children]);
-  let wrapped7 = prayer_lines_wrap([line_family, line_children]);
+  let wrapped = reply_prayer_closing([
+    line_will_done,
+    line_ministry,
+    line_lead,
+  ]);
+  let wrapped2 = reply_prayer_closing([line_will_done, line_family, line_lead]);
+  let wrapped3 = reply_prayer_closing([
+    line_will_done,
+    line_children,
+    line_lead,
+  ]);
+  let wrapped4 = reply_prayer_closing([
+    line_will_done,
+    line_family,
+    line_help,
+    line_lead,
+  ]);
+  let wrapped6 = reply_prayer_closing([
+    line_will_done,
+    line_help,
+    line_ministry,
+    line_children,
+    line_lead,
+  ]);
+  let wrapped7 = reply_prayer_closing([
+    line_will_done,
+    line_family,
+    line_children,
+    line_lead,
+  ]);
+  let wrapped8 = reply_prayer_closing([
+    line_will_done,
+    line_family,
+    line_help,
+    line_children,
+    line_lead,
+  ]);
+  let wrapped9 = reply_prayer_closing([line_will_done]);
   let card_asks_gathered = {
     title:
       "answer a poor family, hungry children or a ministry, alone or together, and close the reply with one prayer",
@@ -1423,11 +1487,21 @@ export function reply_proposals() {
       fn_name("reply_property_prayers"),
       fn_name("reply_prayer_provide_ministry"),
       fn_name("reply_cheapest_per_position"),
+      fn_name("reply_response_nothing_to_give"),
+      fn_name("reply_prayer_will_done"),
+      fn_name("reply_prayer_lead_provider"),
+      fn_name("reply_prayer_closing"),
     ],
     diff: [
       combined39,
       combined40,
       combined41,
+      visit_removed_fragment,
+      visit_removed_response,
+      visit_removed_step,
+      visit_added_coded,
+      visit_added_will,
+      visit_added_step,
       "-    give,",
       "-    poor_family,",
       "+    asks,",
@@ -1444,62 +1518,73 @@ export function reply_proposals() {
         message:
           "I am requesting you to support in ministry, God's will, come and fellowship with us, God's will, thank you.",
         answered: true,
-        outputs: [give_response, line_will_done, line_glory, wrapped],
+        outputs: [nothing_to_give, line_glory, wrapped],
       },
       {
         from: "",
         message: "I am from a poor family",
         answered: true,
-        outputs: [give_response, wrapped2],
+        outputs: [nothing_to_give, wrapped2],
       },
       {
         from: "",
         message: "my children are hungry",
         answered: true,
-        outputs: [give_response, wrapped3],
+        outputs: [nothing_to_give, wrapped3],
       },
       {
         from: "",
         message: "I am from a poor family, please help me",
         answered: true,
-        outputs: [give_response, wrapped4],
+        outputs: [nothing_to_give, wrapped4],
       },
       {
         from: "",
         message:
           "I am from a poor family, please help me, my children are hungry",
         answered: true,
-        outputs: [give_response, prayer_family_help_children],
+        outputs: [nothing_to_give, wrapped8],
       },
       {
         from: "",
         message:
           "I am requesting you to support us in ministry according to God's will",
         answered: true,
-        outputs: [give_response, wrapped5],
+        outputs: [nothing_to_give, wrapped],
       },
       {
         from: "",
         message:
           "please help, I am requesting you to support us in ministry according to God's will, my children are hungry",
         answered: true,
-        outputs: [give_response, wrapped6],
+        outputs: [nothing_to_give, wrapped6],
       },
       {
         from: "",
         message: "I am from a poor family, hello, my children need food",
         answered: true,
-        outputs: [give_response, greeting, wrapped7],
+        outputs: [nothing_to_give, greeting, wrapped7],
+      },
+      {
+        from: "",
+        message: "come and fellowship with us",
+        answered: true,
+        outputs: [wrapped9],
       },
     ],
     decide: [
       "this answers messages alone that used to reach you. I am from a poor family, and my children are hungry, now get a prayer and the Sorry line, and nobody reads them. That is what you asked for, and it was the rejected reading on the earlier card. All three of those messages left the no-reply list and are tests here.",
       "please help on its own still gets no reply, because it is not one of the three things. Anything else in the message still means no reply, so my wife died in the middle still sends the whole message to you.",
-      "this changes one saved test. Test 1 goes from three replies to four: it gains the ministry prayer as its last line.",
-      "the prayer is the last thing said, so it closes the reply whatever else was said. Every line of it is said once, in the order first asked.",
+      "this changes one saved test. Test 1 now gets three replies as you wrote them: the short Sorry line, the glory line, and the prayer.",
+      "the Sorry line is now only Sorry, I have nothing that I can give you at this time. What it used to ask of God moved into the prayer.",
+      "every giving prayer holds His will and lead you to someone, whatever they asked for. The rejected reading was saying lead you to someone only for a ministry.",
+      "the order is always His will, then what they asked for in the order they asked, then lead you to someone. The rejected reading was the order they said it, which would put lead you to someone in the middle when they ask for two things.",
+      "come and fellowship with us alone gets a short prayer with only His will in it, because that line now lives in the prayer. The rejected reading was keeping it a plain line when it is alone. Should it stay a plain line?",
+      "the prayer opens with In the name of the Father on its own line, and all its lines run together after it, as you wrote it. The rejected reading was one line each.",
+      "the prayer is the last thing said, so it closes the reply whatever else was said. Every line of it is said once.",
       "the Sorry line stays where the first of these things was said, and only the prayer moves to the end. So family, hello, children gets the Sorry line, the greeting, then the prayer. The rejected reading was moving the Sorry line to just before the prayer. Should it move?",
-      "the Sorry line ends May the LORD provide, and the prayer can say provide for your ministry, so a ministry reply says provide twice near its end. Is that acceptable?",
-      "only these four lines go in the closing prayer. Other lines that pray, such as May the LORD have His will done, stay where they are. Any of them could join it later with one call.",
+      "only the lines shown go in the closing prayer. Any other line that prays could join it later with one call.",
+      "the old long Sorry line stays for the old rules until you approve this, and can go after.",
       "please help can come before or after each thing, as you wrote it. I did not write the repeating into this rule, because the rule set already repeats. That also lets other things be said in between. A please help between two things can be read as belonging to either one, which on its own made a message with five of them take two seconds and a longer one run out of memory. So at each place in the message only the cheapest reading is kept. Over 1033 mixed messages, typos included, no reply changed.",
       "the two old rules and the piece that took three parts in any order are unused once this goes in. I would remove them after you approve.",
     ],
