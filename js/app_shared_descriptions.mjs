@@ -32,7 +32,7 @@ export function app_shared_descriptions() {
       "A game where you walk a street, turn to look at the people around you, and pray a blessing over everyone you can see.",
     g_hero:
       "A game where you walk a busy street as a young woman while one person at a time turns evil and hunts the others. Find them and tap them to burn them up with fire.",
-    autopray:
+    pray_auto:
       "Leave this page open and it prays over every verse of the Bible in turn, asking that all creation would hear, believe, obey, enjoy and proclaim the word of God.",
     supper:
       "The nine passages of the Bible about the Lord's Supper, in the languages you choose, one passage at a time. For reading together before you take the bread and the cup.",
