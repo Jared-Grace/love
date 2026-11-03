@@ -3,10 +3,23 @@ import { app_code_lesson_statement_name_two_title_name_id } from "./app_code_les
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { app_code_lesson_statement_name_two_batch } from "./app_code_lesson_statement_name_two_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
+import { js_parse } from "./js_parse.mjs";
+import { js_strings } from "./js_strings.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_last } from "./list_last.mjs";
+import { js_declared_names } from "./js_declared_names.mjs";
+import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { equal } from "./equal.mjs";
+import { ternary } from "./ternary.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_lesson_statement_name_two_above } from "./app_code_lesson_statement_name_two_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-import { app_code_lesson_decoy_code_words } from "./app_code_lesson_decoy_code_words.mjs";
+import { app_code_lesson_decoy_code_pieces } from "./app_code_lesson_decoy_code_pieces.mjs";
 export function app_code_lesson_statement_name_two() {
   arguments_assert(arguments, 0);
   ('two values given two names, and only one of them written out: let a = "grapes"; let b = "olives"; console.log(b); writes out olives');
@@ -20,7 +33,51 @@ export function app_code_lesson_statement_name_two() {
     app_code_lesson_statement_name_two_batch,
     eval_console_log_to_list,
   );
+  ("Every wrong answer uses only this program's own words and names, in both directions, so nothing on the buttons can be thrown out for holding a word the code does not. Reading backwards the same two words are on every button, so the one thing left to read is which name each holds and which name is written out.");
+  function backwards_decoys(question, answer) {
+    "the other name written out, the two words swapped, and the name in quote marks";
+    let ast = js_parse(answer);
+    let words = js_strings(ast);
+    let word_first = app_code_string_code(list_first(words));
+    let word_last = app_code_string_code(list_last(words));
+    let names = js_declared_names(ast);
+    let name_first = list_first(names);
+    let name_last = list_last(names);
+    let written = eval_console_log_lines(answer);
+    let first_written = equal(written, list_first(words));
+    let name_logged = ternary(first_written, name_first, name_last);
+    let name_other = ternary(first_written, name_last, name_first);
+    function program_of(held_first, held_last, logged) {
+      "the three lines with the two words and the writing-out line handed in";
+      let lines = [
+        js_code_let_statement(name_first, held_first),
+        js_code_let_statement(name_last, held_last),
+        logged,
+      ];
+      let code = list_join_newline(lines);
+      return code;
+    }
+    let found = [
+      program_of(
+        word_first,
+        word_last,
+        js_code_console_log_statement(name_other),
+      ),
+      program_of(
+        word_last,
+        word_first,
+        js_code_console_log_statement(name_logged),
+      ),
+      program_of(
+        word_first,
+        word_last,
+        app_code_word_console_log_statement(name_logged),
+      ),
+    ];
+    return found;
+  }
   let lesson = app_code_lesson_code_logged({
+    backwards_decoys,
     above: app_code_lesson_statement_name_two_above,
     name_id,
     batch_get: batch,
@@ -29,7 +86,7 @@ export function app_code_lesson_statement_name_two() {
     unscramble: false,
     lines: true,
     steps: true,
-    decoys: app_code_lesson_decoy_code_words,
+    decoys: app_code_lesson_decoy_code_pieces,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
