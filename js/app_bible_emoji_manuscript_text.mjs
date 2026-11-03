@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { app_emoji_bible_original_language_text } from "./app_emoji_bible_original_language_text.mjs";
+import { app_bible_emoji_original_language_text } from "./app_bible_emoji_original_language_text.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_bible_emoji_manuscript_text(chapter_code) {
   arguments_assert(arguments, 1);
@@ -13,7 +13,7 @@ export function app_bible_emoji_manuscript_text(chapter_code) {
     let r = "Original manuscript";
     return r;
   }
-  let language = app_emoji_bible_original_language_text(chapter_code);
+  let language = app_bible_emoji_original_language_text(chapter_code);
   let text = text_combine(language, " manuscript");
   return text;
 }

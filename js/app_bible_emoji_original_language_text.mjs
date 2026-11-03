@@ -3,7 +3,7 @@ import { text_empty_is } from "./text_empty_is.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
 import { ebible_testament_new_name } from "./ebible_testament_new_name.mjs";
 import { equal } from "./equal.mjs";
-export function app_emoji_bible_original_language_text(chapter_code) {
+export function app_bible_emoji_original_language_text(chapter_code) {
   arguments_assert(arguments, 1);
   ("What the language a chapter was written in is called on the picture Bible's settings: Greek for the New Testament, Hebrew/Aramaic for the Old, asked for by the human.");
   ("$plain chapter_code");

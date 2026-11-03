@@ -5,7 +5,7 @@ import { app_bible_emoji_english_shown_get } from "./app_bible_emoji_english_sho
 import { app_bible_emoji_english_shown_set } from "./app_bible_emoji_english_shown_set.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_buttons_choice_pair } from "./app_shared_buttons_choice_pair.mjs";
-import { app_emoji_bible_original_language_text } from "./app_emoji_bible_original_language_text.mjs";
+import { app_bible_emoji_original_language_text } from "./app_bible_emoji_original_language_text.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_bible_emoji_key_shown_get } from "./app_bible_emoji_key_shown_get.mjs";
 import { app_bible_emoji_key_shown_set } from "./app_bible_emoji_key_shown_set.mjs";
@@ -35,7 +35,7 @@ export function app_emoji_bible_settings_choices(parent, fn_draw) {
     english_shown,
     english_set,
   );
-  let language = app_emoji_bible_original_language_text(chapter_code);
+  let language = app_bible_emoji_original_language_text(chapter_code);
   let text_show = text_combine("Show ", language);
   let text_hide = text_combine("Hide ", language);
   let key_shown = app_bible_emoji_key_shown_get();
