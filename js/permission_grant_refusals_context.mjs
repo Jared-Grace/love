@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -33,6 +35,18 @@ export async function permission_grant_refusals_context(unaliased, context) {
       refusals,
       unaliased +
         " reaches a file writer that refuses no path, so it could change the settings or the hooks whatever it takes - nothing here can rule that out",
+    );
+  }
+  let address_steering = property_get(context, "address_steering");
+  if (address_steering.has(unaliased)) {
+    list_add(
+      refusals,
+      unaliased +
+        text_combine_multiple([
+          " can be handed the address it opens, so an argument could send anything to any site - add ",
+          fn_name("url_opened_unasked_assert"),
+          " before it opens the address, or leave the human to approve each use",
+        ]),
     );
   }
   let r = await permission_grant_refusals_context_destructive(
