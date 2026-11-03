@@ -1,14 +1,15 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { json_to } from "./json_to.mjs";
-import { subtract } from "./subtract.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { wikidata_city_names_population_at_least } from "./wikidata_city_names_population_at_least.mjs";
 import { reply_cities_names } from "./reply_cities_names.mjs";
+import { not } from "./not.mjs";
 import { reply_cities_distress_phrases } from "./reply_cities_distress_phrases.mjs";
 import { reply_cities_distress_readings } from "./reply_cities_distress_readings.mjs";
+import { json_to } from "./json_to.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { function_source_formatted_overwrite } from "./function_source_formatted_overwrite.mjs";
+import { function_auto_checked } from "./function_auto_checked.mjs";
+import { subtract } from "./subtract.mjs";
 export async function reply_cities_wikidata_names_write(population) {
   "$plain population";
   arguments_assert(arguments, 1);
@@ -51,13 +52,18 @@ export async function reply_cities_wikidata_names_write(population) {
   let json3 = json_to(
     "Written by a command from a public query, never by hand and never from a message. A name that would read a hardship as a town is left out when it is written. Wikidata only counts what somebody tagged as a city, so plenty of real towns are missing, and those still go to a human.",
   );
+  let combined = text_combine_multiple([
+    "  ",
+    fn_name("arguments_assert"),
+    "(arguments, 0);",
+  ]);
   let source = [
-    "export function reply_cities_wikidata_names() {",
     text_combine_multiple([
-      "  ",
-      fn_name("arguments_assert"),
-      "(arguments, 0);",
+      "export function ",
+      fn_name("reply_cities_wikidata_names"),
+      "() {",
     ]),
+    combined,
     json2,
     ";",
     json3,
@@ -69,9 +75,11 @@ export async function reply_cities_wikidata_names_write(population) {
     "}",
   ].join("\n");
   await function_source_formatted_overwrite(
-    "reply_cities_wikidata_names",
+    fn_name("reply_cities_wikidata_names"),
     source,
   );
+  ("The file is put through the canonicalizing pass here, because the source above carries no imports and the list cannot run without them.");
+  await function_auto_checked(fn_name("reply_cities_wikidata_names"));
   let r2 = {
     population,
     fetched: fetched.length,

@@ -1,7 +1,7 @@
-import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_first } from "./list_first.mjs";
+import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -9,6 +9,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
@@ -65,7 +66,10 @@ export function app_code_lesson_if_true() {
   function decoys(question, answer) {
     "true, as if the if wrote out the value inside its parentheses: it stands in the code beside the word written out, so the right answer can no longer be picked as the one word on the screen";
     "2026-11-01, when the step-by-step quiz joined this lesson and the gate over quizzes passable by reading found this one: every right answer was the only word in the code. Not picked: if (true) written whole, which no line writes out; and nothing at all, which is the next lesson's answer and is not yet shown here.";
-    let found = ["true"];
+    "2026-11-03: the other two wrong answers hold the word on the screen too. One is the word with its quote marks kept, the mistake the strings lesson is about. The other is true and then the word, as if the if wrote out its value and then ran the line. Filled from the other questions they held other words, so the one button with the word on the screen was still the answer, whenever true was turned down.";
+    let quoted = app_code_string_code(answer);
+    let both = list_join_newline(["true", answer]);
+    let found = ["true", quoted, both];
     return found;
   }
   function backwards_decoys(question, answer) {

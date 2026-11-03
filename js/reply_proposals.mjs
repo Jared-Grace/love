@@ -1131,6 +1131,51 @@ export function reply_proposals() {
       "measured on the whole rule set with all three cards in: seventeen of the eighteen saved tests give the same answer as before, and the eighteenth is that full message, which got nothing before. With this card alone all eighteen stay the same.",
     ],
   };
+  let combined34 = text_combine_multiple([
+    "+  let names = ",
+    fn_name("reply_cities_names_all"),
+    "();",
+  ]);
+  let towns_wikidata = {
+    title: "read every city of ten thousand people or more as a town",
+    fn: fn_name("reply_cities"),
+    whole: [
+      fn_name("reply_cities_names_all"),
+      fn_name("reply_cities_wikidata_names"),
+    ],
+    diff: [
+      text_combine_multiple([
+        "-  let names = ",
+        fn_name("reply_cities_names"),
+        "();",
+      ]),
+      combined34,
+    ],
+    cases: [
+      {
+        from: "",
+        message: "am from Kisumu in Kenya",
+        answered: true,
+        outputs: located,
+      },
+      {
+        from: "",
+        message: "am from Eldoret in Kenya",
+        answered: true,
+        outputs: located,
+      },
+    ],
+    decide: [
+      "this adds 3,755 towns to the 926 places the rules know, making 4,681. They come from a public Wikidata search for every city of ten thousand people or more. No message fed it, so it publishes nobody.",
+      "the reply is the same fixed line as before. It says where we are and never repeats the town.",
+      "a town still needs the word in before the country, so Kisumu Kenya gets no reply.",
+      "Wikidata only counts what somebody tagged as a city, so plenty of real towns are missing. Those still get no reply and come to you.",
+      "a check now tries 581 phrases, such as hospital, poor, my prison, an orphanage and a church, and fails if any of them reads as a town. Five names were left out because of it: podor, thebes, police, mission and farim. Podor and Thebes are real places, so somebody from there gets no reply and comes to you.",
+      "one phrase is not checked: a pain reads as the city Al Ain, already on the list, one mistake away. Nobody says they are from a pain.",
+      "ordinary words can still read as a town when they are not on that list. Africa reads as Arica, so am from Africa in Kenya gets the location reply. The reply is harmless there. Is that acceptable?",
+      "this makes the rules download about 41 KB bigger before compression. That is over the limit a page may grow in one step, so that check will fail until somebody accepts the new size.",
+    ],
+  };
   let give_response = reply_choices_give();
   let line_family = reply_prayer_bless_family();
   let line_help = reply_prayer_help_you();
@@ -1270,6 +1315,7 @@ export function reply_proposals() {
     blessing_one_space,
     from_town_country,
     poor_family,
+    towns_wikidata,
   ];
   return proposals;
 }
