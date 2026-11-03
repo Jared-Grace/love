@@ -30,13 +30,11 @@ export async function app_message_reply_proposals_shown() {
     let from = property_get(one, "from");
     return from;
   }
-  let shown_cases = list_concat(
-    list_squash(list_map(proposals, proposal_cases)),
-    checked,
-  );
-  let by_key = await app_message_reply_records_by_keys(
-    list_map(shown_cases, from_read),
-  );
+  let lists = list_map(proposals, proposal_cases);
+  let a = list_squash(lists);
+  let shown_cases = list_concat(a, checked);
+  let keys = list_map(shown_cases, from_read);
+  let by_key = await app_message_reply_records_by_keys(keys);
   function each_case(one) {
     let from = property_get(one, "from");
     let found = reply_case_real_or_null(by_key, from);
