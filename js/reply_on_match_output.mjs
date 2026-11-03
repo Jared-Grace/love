@@ -1,7 +1,7 @@
 import { reply_on_match_output_multiple } from "./reply_on_match_output_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function reply_on_match_output(fn_a, item) {
+export function reply_on_match_output(fn_a, output) {
   arguments_assert(arguments, 2);
-  let fn = reply_on_match_output_multiple(fn_a, [item]);
+  let fn = reply_on_match_output_multiple(fn_a, [output]);
   return fn;
 }

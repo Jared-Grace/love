@@ -16,7 +16,7 @@ export function app_shared_message_reply_give() {
   let us = reply_word_us();
   let o_us = reply_optional(us);
   let according_to_gods_will = reply_phrase_according_to_gods_will();
-  let item = reply_choices_give();
+  let output = reply_choices_give();
   let you = reply_phrase_you();
   let to = reply_word_to();
   let give = reply_sequence_output(
@@ -31,7 +31,7 @@ export function app_shared_message_reply_give() {
       "ministry",
       according_to_gods_will,
     ],
-    item,
+    output,
   );
   return give;
 }
