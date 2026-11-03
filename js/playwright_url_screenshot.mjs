@@ -1,3 +1,4 @@
+import { url_opened_unasked_assert } from "./url_opened_unasked_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
 export async function playwright_url_screenshot(url, f_path, width, height) {
@@ -7,6 +8,7 @@ export async function playwright_url_screenshot(url, f_path, width, height) {
   "$plain height";
   "Opens a page in a browser with no screen, at a window of the size asked for, and saves a picture of what is showing to a file.";
   "The size is set before the address is opened, because a page that lays itself out for the window it was given would otherwise lay itself out for the wrong one and then be photographed mid-rearrangement.";
+  url_opened_unasked_assert(url);
   async function on_page(page) {
     "the size is read as a number whether it came from code or from a command line, which hands every argument over as text - and the browser refuses a size written as text";
     let viewport = {
