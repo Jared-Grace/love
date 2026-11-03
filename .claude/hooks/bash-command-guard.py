@@ -1825,6 +1825,35 @@ def is_safe_claude_temp_mv(words):
     return all(is_safe_claude_temp_path(p) for p in paths)
 
 
+GLOSS_WRITE_FILE_RE = re.compile(
+    r"^(/home/j/a/user/storage/gloss_write/[A-Za-z0-9_]+/)[A-Za-z0-9_,.-]+\.json$"
+)
+
+
+def is_safe_gloss_write_mv(words):
+    """`mv <file> <file>` renaming one hand-off file inside one store's folder
+    of /home/j/a/user/storage/gloss_write, with no flags.
+
+    Authors keep guessing a hand-off file's name (a comma where the name has a
+    dash), and the correct repair is to rename it. The file tools already
+    write anywhere in this folder unasked, so a rename inside it reaches
+    nothing they could not, and the prompt it cost guarded nothing.
+
+    Both paths must be whole and in the SAME store, because a file moved
+    between stores would file one language's words under another. Slashes and
+    glob characters are outside the name's characters, so a name cannot walk
+    out of the folder or expand to something unseen. Exactly two words: `-t`
+    would carry the destination in a flag, and a third word makes the last one
+    a folder."""
+    if len(words) != 3 or words[0] != "mv":
+        return False
+    source = GLOSS_WRITE_FILE_RE.match(words[1])
+    destination = GLOSS_WRITE_FILE_RE.match(words[2])
+    if not source or not destination:
+        return False
+    return source.group(1) == destination.group(1)
+
+
 CP_SAFE_FLAG_CHARS = set("vfnrR")
 
 
@@ -2628,6 +2657,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_bare_mount(words)
             and not is_safe_claude_temp_rm(words)
             and not is_safe_claude_temp_mkdir(words)
+            and not is_safe_gloss_write_mv(words)
             and not is_safe_claude_temp_mv(words)
             and not is_safe_claude_temp_cp(words)
             and not is_safe_verify_html_rm(words)
