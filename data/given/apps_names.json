@@ -2,7 +2,6 @@
  "names": [
   "a",
   "app",
-  "autopray",
   "bible",
   "bible_sermons",
   "calendar",
@@ -24,6 +23,7 @@
   "music",
   "next",
   "original_bible",
+  "pray_auto",
   "privacy",
   "receipts",
   "receipts_view",
