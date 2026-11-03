@@ -1204,23 +1204,11 @@ export function reply_proposals() {
     line_help,
     line_family,
   ]);
-  let poor_family_kept_give = text_combine_multiple([
-    "   let give = ",
-    fn_name("app_shared_message_reply_give"),
-    "();",
-  ]);
-  let poor_family_added_rule = text_combine_multiple([
-    "+  let poor_family = ",
-    fn_name("app_shared_message_reply_poor_family"),
-    "();",
-  ]);
   let poor_family = {
     title:
       "answer somebody from a poor family asking for help for their hungry children",
     fn: fn_name("app_shared_message_reply_choices"),
     whole: [
-      fn_name("app_shared_message_reply_poor_family"),
-      fn_name("reply_any_order"),
       fn_name("prayer_lines_wrap"),
       fn_name("reply_prayer_bless_family"),
       fn_name("reply_prayer_help_you"),
@@ -1228,12 +1216,7 @@ export function reply_proposals() {
       fn_name("text_may_the_lord_combine"),
       fn_name("text_may_the_lord_exclamation"),
     ],
-    diff: [
-      poor_family_kept_give,
-      poor_family_added_rule,
-      "     give,",
-      "+    poor_family,",
-    ],
+    diff: ["     give,", "+    poor_family,"],
     cases: [
       {
         from: "",
@@ -1389,16 +1372,6 @@ export function reply_proposals() {
     fn_name("reply_on_match_prayer"),
     "(visit_coded, will_done);",
   ]);
-  let combined39 = text_combine_multiple([
-    "-  let give = ",
-    fn_name("app_shared_message_reply_give"),
-    "();",
-  ]);
-  let combined40 = text_combine_multiple([
-    "-  let poor_family = ",
-    fn_name("app_shared_message_reply_poor_family"),
-    "();",
-  ]);
   let combined41 = text_combine_multiple([
     "+  let asks = ",
     fn_name("app_shared_message_reply_asks"),
@@ -1494,8 +1467,6 @@ export function reply_proposals() {
       fn_name("reply_prayer_closing"),
     ],
     diff: [
-      combined39,
-      combined40,
       combined41,
       visit_removed_fragment,
       visit_removed_response,
