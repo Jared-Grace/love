@@ -1,3 +1,4 @@
+import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
@@ -9,7 +10,11 @@ export function cloudflare_pages_headers_text(hosting) {
   let blocks = property_get(hosting, "headers");
   function block_text(block) {
     let source = property_get(block, "source");
-    let path = "/" + text_prefix_without(source, "**/");
+    ("Firebase's ** reaches every address, the front page at / among them, where **/* misses that one. Cloudflare's /* already reaches all of them.");
+    let path = "/*";
+    if (not_equal(source, "**")) {
+      path = "/" + text_prefix_without(source, "**/");
+    }
     let headers = property_get(block, "headers");
     function header_line(header) {
       let key = property_get(header, "key");

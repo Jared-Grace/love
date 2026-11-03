@@ -16,8 +16,8 @@ import { reply_prayer_help_you } from "./reply_prayer_help_you.mjs";
 import { reply_prayer_feed_children } from "./reply_prayer_feed_children.mjs";
 import { prayer_lines_wrap } from "./prayer_lines_wrap.mjs";
 import { reply_prayer_provide_ministry } from "./reply_prayer_provide_ministry.mjs";
-import { reply_pray_response } from "./reply_pray_response.mjs";
 import { reply_choices_will_done_fragment } from "./reply_choices_will_done_fragment.mjs";
+import { reply_pray_response } from "./reply_pray_response.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
@@ -1372,21 +1372,23 @@ export function reply_proposals() {
     "();",
   ]);
   let combined61 = text_combine_multiple([
-    "-  let room = ",
-    fn_name("reply_once_or_more"),
-    "(choices_main);",
+    "-  let r = ",
+    fn_name("reply_outputs_mapped"),
+    "(with_repeats, ",
+    fn_name("list_unique"),
+    ");",
   ]);
   let combined62 = text_combine_multiple([
-    "+  let room_more = ",
-    fn_name("reply_once_or_more"),
-    "(choices_main);",
+    "+  let said_once = ",
+    fn_name("reply_outputs_mapped"),
+    "(with_repeats, ",
+    fn_name("list_unique"),
+    ");",
   ]);
   let combined63 = text_combine_multiple([
-    "+  let room = ",
-    fn_name("reply_outputs_mapped"),
-    "(room_more, ",
-    fn_name("reply_outputs_asks_gather"),
-    ");",
+    "+  let r = ",
+    fn_name("reply_prayers_closed"),
+    "(said_once);",
   ]);
   let wrapped = prayer_lines_wrap([line_ministry]);
   let wrapped2 = prayer_lines_wrap([line_family]);
@@ -1397,13 +1399,13 @@ export function reply_proposals() {
   let wrapped7 = prayer_lines_wrap([line_family, line_children]);
   let card_asks_gathered = {
     title:
-      "give one prayer and one Sorry for a poor family, hungry children or a ministry, each said alone or together",
+      "answer a poor family, hungry children or a ministry, alone or together, and close the reply with one prayer",
     fn: fn_name("app_shared_message_reply_choices"),
     whole: [
       fn_name("app_shared_message_reply_asks"),
-      fn_name("reply_outputs_asks_gather"),
-      fn_name("reply_outputs_mapped"),
-      fn_name("reply_asks_lines"),
+      fn_name("reply_on_match_prayer"),
+      fn_name("reply_prayers_closed"),
+      fn_name("reply_property_prayers"),
       fn_name("reply_prayer_provide_ministry"),
     ],
     diff: [
@@ -1423,60 +1425,62 @@ export function reply_proposals() {
         message:
           "come and fellowship with us, God's will, IAM request you to support in ministry, God's will, thank you.",
         answered: true,
-        outputs: [line_will_done, wrapped, give_response, line_glory],
+        outputs: [line_will_done, give_response, line_glory, wrapped],
       },
       {
         from: "",
         message: "I am from a poor family",
         answered: true,
-        outputs: [wrapped2, give_response],
+        outputs: [give_response, wrapped2],
       },
       {
         from: "",
         message: "my children are hungry",
         answered: true,
-        outputs: [wrapped3, give_response],
+        outputs: [give_response, wrapped3],
       },
       {
         from: "",
         message: "I am from a poor family, please help me",
         answered: true,
-        outputs: [wrapped4, give_response],
+        outputs: [give_response, wrapped4],
       },
       {
         from: "",
         message:
           "I am from a poor family, please help me, my children are hungry",
         answered: true,
-        outputs: [prayer_family_help_children, give_response],
+        outputs: [give_response, prayer_family_help_children],
       },
       {
         from: "",
         message:
           "I am requesting you to support us in ministry according to God's will",
         answered: true,
-        outputs: [wrapped5, give_response],
+        outputs: [give_response, wrapped5],
       },
       {
         from: "",
         message:
           "please help, I am requesting you to support us in ministry according to God's will, my children are hungry",
         answered: true,
-        outputs: [wrapped6, give_response],
+        outputs: [give_response, wrapped6],
       },
       {
         from: "",
         message: "I am from a poor family, hello, my children need food",
         answered: true,
-        outputs: [wrapped7, give_response, greeting],
+        outputs: [give_response, greeting, wrapped7],
       },
     ],
     decide: [
       "this answers messages alone that used to reach you. I am from a poor family, and my children are hungry, now get a prayer and the Sorry line, and nobody reads them. That is what you asked for, and it was the rejected reading on the earlier card. All three of those messages left the no-reply list and are tests here.",
       "please help on its own still gets no reply, because it is not one of the three things. Anything else in the message still means no reply, so my wife died in the middle still sends the whole message to you.",
-      "this changes one saved test. Test 1 goes from three replies to four: it gains the ministry prayer before the Sorry line.",
-      "the prayer says provide for your ministry, and the Sorry line right after it says May the LORD provide. So provide comes twice in a row. Is that acceptable?",
-      "the prayer comes where the first of these things was said, and the other replies keep their places. So family, hello, children gets the prayer, the Sorry line, then the greeting.",
+      "this changes one saved test. Test 1 goes from three replies to four: it gains the ministry prayer as its last line.",
+      "the prayer is the last thing said, so it closes the reply whatever else was said. Every line of it is said once, in the order first asked.",
+      "the Sorry line stays where the first of these things was said, and only the prayer moves to the end. So family, hello, children gets the Sorry line, the greeting, then the prayer. The rejected reading was moving the Sorry line to just before the prayer. Should it move?",
+      "the Sorry line ends May the LORD provide, and the prayer can say provide for your ministry, so a ministry reply says provide twice near its end. Is that acceptable?",
+      "only these four lines go in the closing prayer. Other lines that pray, such as May the LORD have His will done, stay where they are. Any of them could join it later with one call.",
       "please help can come before or after each thing, as you wrote it. I did not write the repeating into this rule, because the rule set already repeats. That also lets other things be said in between, and a please help between two things cannot be read two ways that differ.",
       "the two old rules and the piece that took three parts in any order are unused once this goes in. I would remove them after you approve.",
     ],
