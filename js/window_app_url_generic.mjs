@@ -1,7 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_name_page_link } from "./file_name_page_link.mjs";
 import { hash_to_url } from "./hash_to_url.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { app_shared_page_stage_root } from "./app_shared_page_stage_root.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function window_app_url_generic(fn, app_fn_name, hash) {
   arguments_assert(arguments, 3);
   ("Where one of these apps lives, written as an address: its page, and the link words it should open with.");
@@ -9,6 +10,7 @@ export function window_app_url_generic(fn, app_fn_name, hash) {
   let without = fn(app_fn_name);
   let file_name = file_name_page_link(without);
   let h = hash_to_url(hash);
-  let url = text_combine(file_name, h);
+  let root = app_shared_page_stage_root();
+  let url = text_combine_multiple([root, file_name, h]);
   return url;
 }
