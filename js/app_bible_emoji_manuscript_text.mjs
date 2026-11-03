@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { app_emoji_bible_original_language_text } from "./app_emoji_bible_original_language_text.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_emoji_bible_manuscript_text(chapter_code) {
+export function app_bible_emoji_manuscript_text(chapter_code) {
   arguments_assert(arguments, 1);
   ("What the manuscript a chapter was written in is called on the button that puts the pictures in its order: Greek manuscript for the New Testament, Hebrew/Aramaic manuscript for the Old, asked for by the human.");
   ("$plain chapter_code");

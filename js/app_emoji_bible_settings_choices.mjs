@@ -10,7 +10,7 @@ import { text_combine } from "./text_combine.mjs";
 import { app_bible_emoji_key_shown_get } from "./app_bible_emoji_key_shown_get.mjs";
 import { app_bible_emoji_key_shown_set } from "./app_bible_emoji_key_shown_set.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_emoji_bible_manuscript_text } from "./app_emoji_bible_manuscript_text.mjs";
+import { app_bible_emoji_manuscript_text } from "./app_bible_emoji_manuscript_text.mjs";
 import { app_bible_emoji_literal_shown_get } from "./app_bible_emoji_literal_shown_get.mjs";
 import { app_bible_emoji_literal_shown_set } from "./app_bible_emoji_literal_shown_set.mjs";
 export function app_emoji_bible_settings_choices(parent, fn_draw) {
@@ -53,7 +53,7 @@ export function app_emoji_bible_settings_choices(parent, fn_draw) {
   );
   let card_order = app_shared_container_blue(parent);
   html_div_text(card_order, "What order should the emojis be in?");
-  let manuscript = app_emoji_bible_manuscript_text(chapter_code);
+  let manuscript = app_bible_emoji_manuscript_text(chapter_code);
   let literal_shown = app_bible_emoji_literal_shown_get();
   async function literal_set(value) {
     app_bible_emoji_literal_shown_set(value);
