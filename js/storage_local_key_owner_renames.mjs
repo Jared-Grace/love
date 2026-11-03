@@ -37,6 +37,10 @@ export function storage_local_key_owner_renames() {
       before: text_frozen("app_emoji_bible_offline_saved_get"),
       after: fn_name("app_bible_emoji_offline_saved_get"),
     },
+    {
+      before: text_frozen("app_emoji_bible_tradition_get"),
+      after: fn_name("app_bible_emoji_tradition_get"),
+    },
   ];
   return r;
 }

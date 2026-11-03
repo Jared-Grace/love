@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_emoji_bible_tradition_get } from "./app_emoji_bible_tradition_get.mjs";
+import { app_bible_emoji_tradition_get } from "./app_bible_emoji_tradition_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_bible_emoji_tradition_base } from "./app_bible_emoji_tradition_base.mjs";
@@ -17,7 +17,7 @@ export function app_emoji_bible_tradition_picker(parent, fn_draw) {
   ("EVERY CROSS IS SHOWN AT ONCE, chosen by the human, so a reader sees both before picking and sees which one is theirs. Rejected: one button that swaps to the other cross, which showed only the cross a reader did not have and made them tap to find out what the other one looked like.");
   ("EACH BUTTON SHOWS ITS CROSS AS THE PAGE WILL DRAW IT, looked up through the same tradition table the chapter uses, so a button cannot promise a cross the page then fails to draw.");
   ("THE PAGE HANDS IN ITS OWN WAY OF DRAWING ITSELF AGAIN, so the coloured button moves the moment it is tapped, and this file never reaches back for the screen it sits on.");
-  let chosen = app_emoji_bible_tradition_get();
+  let chosen = app_bible_emoji_tradition_get();
   let row = html_div(parent);
   html_div_text(row, "Which cross should be shown?");
   let name2 = app_bible_emoji_tradition_base();
