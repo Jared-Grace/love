@@ -1,0 +1,1 @@
+{"f_name":"text_may_the_lord_combine","text":"+import { text_combine } from \"./text_combine.mjs\";\n+import { text_may_the_lord } from \"./text_may_the_lord.mjs\";\n+export function text_may_the_lord_combine(request) {\n+  let left = text_may_the_lord();\n+  let line = text_combine(left, request);\n+  return line;\n+}\n+"}

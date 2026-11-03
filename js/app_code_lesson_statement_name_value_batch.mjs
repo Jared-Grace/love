@@ -1,16 +1,16 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 export function app_code_lesson_statement_name_value_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives one word a name and then writes that name out");
   ("All four are the same two lines with a different word in them, because the one thing being asked is whether a name hands back what was put under it. A second shape on the same screen would be a second question.");
-  ("The four words are different from each other, because the wrong answers a question offers are the other questions' answers, and two questions coming out the same would put two right buttons on one screen.");
+  ("The four words are different from each other, so no two questions on a screen come out the same.");
   ("The words are the ones the string lessons draw from, so the only thing here a learner has not met is the name.");
   let name = app_code_lesson_statement_name_value_name();
   function program_of(word) {
