@@ -1351,6 +1351,12 @@ def transparent_wrapper_skip(words):
         return skip
     if words[0] == "time" and len(words) >= 2 and not words[1].startswith("-"):
         return 1
+    # `setsid` and `nohup` with no flags run exactly the command they are given,
+    # with its arguments: they only detach it from this session. So the command
+    # underneath is what gets judged, and every floor reads through them too. A
+    # flag stays unread, because those change how the command is launched.
+    if words[0] in ("setsid", "nohup") and len(words) >= 2 and not words[1].startswith("-"):
+        return 1
     # `!` inverts the exit status of what follows and nothing else - it runs
     # exactly the same command, with the same arguments, reading and writing
     # the same things, and only the number bash reports afterwards differs.
