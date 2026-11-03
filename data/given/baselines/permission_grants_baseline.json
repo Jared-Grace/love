@@ -203,6 +203,10 @@
   {
    "name": "permission_grant_add_auto",
    "refusals": 1
+  },
+  {
+   "name": "app_en_learn_bible_gloss_tagalog_write_chapter_file",
+   "refusals": 1
   }
  ]
 }
