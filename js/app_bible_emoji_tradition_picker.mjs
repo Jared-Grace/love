@@ -7,7 +7,7 @@ import { app_bible_emoji_tradition_orthodox } from "./app_bible_emoji_tradition_
 import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_emoji_bible_tradition_set } from "./app_emoji_bible_tradition_set.mjs";
+import { app_bible_emoji_tradition_set } from "./app_bible_emoji_tradition_set.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
@@ -28,7 +28,7 @@ export function app_bible_emoji_tradition_picker(parent, fn_draw) {
     let lookup = bible_glyph_characters_lookup(traditions);
     let character = property_get(lookup, "cross");
     async function choose() {
-      app_emoji_bible_tradition_set(name);
+      app_bible_emoji_tradition_set(name);
       await fn_draw();
     }
     let button = app_shared_button(row, character, choose);
