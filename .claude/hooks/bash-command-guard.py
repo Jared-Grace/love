@@ -5060,12 +5060,35 @@ GIT_MV_DECIDING_DENY_REASON = (
 )
 
 
+def git_subcommand_tail(words):
+    """The words after git's own subcommand when that subcommand is `mv`, else
+    None. git's own options may stand first (`git -C . mv`, `git --no-pager mv`)
+    and the prefix stripping does not reach every wrapper (`time git mv`), so
+    git is looked for at any position and its options are walked past."""
+    for at, word in enumerate(words):
+        if word.split("/")[-1] != "git":
+            continue
+        i = at + 1
+        while i < len(words):
+            option = words[i]
+            if option in ("-C", "-c", "--git-dir", "--work-tree", "--namespace"):
+                i += 2
+            elif option.startswith("-"):
+                i += 1
+            else:
+                break
+        if i < len(words) and words[i] == "mv":
+            return words[i + 1:]
+    return None
+
+
 def git_mv_touches_deciding(command):
     """A forced move replaces any file with any tracked file, so it could replace
     a hook or a granted function with no check reading the new contents. A word
     naming a deciding path anywhere in the chain counts, so `cd .claude` first
     is the same answer. A word the shell would change cannot be read, so it
-    counts too."""
+    counts too, anywhere in the chain, because `cd .cl*` first would otherwise
+    walk in unnamed. git accepts a long option cut short, so `--for` is --force."""
     texts = [command]
     unrolled = for_loop_unrolled_text(command)
     if unrolled is not None:
@@ -5073,20 +5096,22 @@ def git_mv_touches_deciding(command):
     statements = []
     for text in texts:
         statements.extend(statements_words(text))
-    moves = [words for words in statements if words[:2] == ["git", "mv"]]
-    if not moves:
+    tails = [git_subcommand_tail(words) for words in statements]
+    tails = [tail for tail in tails if tail is not None]
+    if not tails:
         return False
     for words in statements:
         for word in words:
             if ".claude" in word or "commands_only" in word:
                 return True
-    for words in moves:
-        for word in words[2:]:
-            if word == "--force":
-                return True
-            if word.startswith("-") and not word.startswith("--") and "f" in word:
-                return True
             if any(mark in word for mark in "$*?[`~"):
+                return True
+    for tail in tails:
+        for word in tail:
+            if word.startswith("--"):
+                if len(word) > 2 and "--force".startswith(word):
+                    return True
+            elif word.startswith("-") and "f" in word:
                 return True
     return False
 
@@ -6198,6 +6223,11 @@ def main():
     if not safe_verbs and not safe_exact_commands:
         return
 
+    # Before the allow decision, because every git verb is granted and so a move
+    # that may not run unasked would be approved before anything below read it.
+    if git_mv_touches_deciding(command):
+        return decide("deny", GIT_MV_DECIDING_DENY_REASON)
+
     if snapshot_detached_checkout_is(command):
         return decide("allow", (
             "Auto-approved: a detached checkout of a scratch worktree "
@@ -6341,9 +6371,6 @@ def main():
 
     if dispatcher_name_variable_is(command, safe_verbs, safe_exact_commands):
         return decide("deny", DISPATCHER_NAME_VARIABLE_DENY_REASON)
-
-    if git_mv_touches_deciding(command):
-        return decide("deny", GIT_MV_DECIDING_DENY_REASON)
 
     if refused_piece_is_curl(command, safe_verbs, safe_exact_commands):
         return decide("deny", (
