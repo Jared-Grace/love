@@ -58,7 +58,8 @@ export function app_reply_rules_corpus_show(root, cases, approvals) {
   function quiet_is(one) {
     let ok = property_get(one, "ok");
     let changed = app_reply_rules_rewrite_changed_is(one);
-    return ok && not(changed);
+    let r = ok && not(changed);
+    return r;
   }
   let quiet = list_filter(cases, quiet_is);
   app_reply_rules_cases_approved_show(root, quiet, approvals);
