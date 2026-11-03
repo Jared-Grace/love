@@ -7,7 +7,7 @@ import { app_shared_bible_verse_colors } from "./app_shared_bible_verse_colors.m
 import { list_get } from "./list_get.mjs";
 import { app_bible_emoji_verse_key_band } from "./app_bible_emoji_verse_key_band.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_emoji_bible_verse_key_draw(
+export function app_bible_emoji_verse_key_draw(
   content,
   row,
   original_shown,
