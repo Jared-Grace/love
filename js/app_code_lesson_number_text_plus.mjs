@@ -1,21 +1,21 @@
-import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { json_to } from "./json_to.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { json_to } from "./json_to.mjs";
 import { range_from } from "./range_from.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_first } from "./list_first.mjs";
+import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { list_last } from "./list_last.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { text_trim } from "./text_trim.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -29,19 +29,25 @@ export function app_code_lesson_number_text_plus() {
   arguments_assert(arguments, 0);
   ('a number joined to a string with a plus: console.log(5 + " is a number"); writes out 5 is a number');
   ("Split from the lesson that joins a name holding a number, by the human's word 2026-10-07: that lesson asked two things at once, that a plus between a number and a string joins them, and that a name stands for the number it holds. Only the first was new, so it comes first and alone, as if (2 < 3) came before if (a < b).");
-  ("Reading forwards, the wrong answers offered are the two run together with no space, 5is a number, since the last string lesson said a plus adds no space and the space here is the one at the start of the string; and the plus written out, 5 + is a number, as though the line were written out as it reads. Reading backwards, the wrong program is the same line with no space at the start of the string, which writes out 5is a number.");
+  ("Reading forwards, the wrong answers offered are the two run together with no space, 5is a number, since the last string lesson said a plus adds no space and the space here is the one at the start of the string; and the plus written out, 5 + is a number, as though the line were written out as it reads.");
+  ("Reading backwards every wrong program holds the same number and the same ending as the right one, so none can be thrown out for a word that did not come out. They are the line with no space at the start of the string, which writes out 5is a number; the whole line in one string, which writes out 5 + is a number, the forward mistake turned around; and the string before the number, which writes the number last. Not picked: the number in quotes, or a space in a string of its own, because each writes out exactly the same words and so would be a second right answer.");
   ("The strings are three short endings, so the number and the space are the parts to watch.");
   ('The sentence about the space shows the string and how it starts as code, asked for by the human 2026-10-07: the start is written " ..." as the human wrote it. Not picked: a string holding only the space, " ", which reads as a second string rather than the start of this one.');
   ("The writing is a first draft by Claude 2026-10-07.");
   ("Not built a line at a time, as the if lessons around it are since 2026-10-08: the program is one line, so putting its lines in order asks nothing, and building its one missing line is unscrambling the whole program.");
   let plus = js_operator_plus_symbol();
   let endings = [" is a number", " is my number", " is the answer"];
-  function program_get(number, ending) {
-    'console.log(number + "ending");';
-    let left = json_to(number);
+  function line_get(left, ending) {
+    'console.log(left + "ending"); with left already written as code';
     let right = app_code_string_code(ending);
     let joined = js_code_binary_spaced_nb(left, plus, right);
     let code = js_code_console_log_statement(joined);
+    return code;
+  }
+  function program_get(number, ending) {
+    'console.log(number + "ending");';
+    let left = json_to(number);
+    let code = line_get(left, ending);
     return code;
   }
   function batch_get() {
@@ -80,13 +86,20 @@ export function app_code_lesson_number_text_plus() {
     return found;
   }
   function backwards_decoys(question, answer) {
-    "the same line with no space at the start of the string";
-    let parts = number_ending(answer);
+    "the same line with no space at the start of the string, the whole line in one string, and the string before the number";
+    "Backwards the question is what came out and the answer is the program, so the number and the ending are read from the question. Read from the program they gave a button with a program inside a string.";
+    let parts = number_ending(question);
     let number = list_first(parts);
     let ending = list_last(parts);
     let trimmed = text_trim(ending);
-    let code = program_get(number, trimmed);
-    let found = [code];
+    let no_space = line_get(number, trimmed);
+    let plus_written = text_combine_multiple([number, " ", plus, ending]);
+    let one_string = app_code_string_code(plus_written);
+    let all_quoted = js_code_console_log_statement(one_string);
+    let ending_code = app_code_string_code(ending);
+    let swapped = js_code_binary_spaced_nb(ending_code, plus, number);
+    let string_first = js_code_console_log_statement(swapped);
+    let found = [no_space, all_quoted, string_first];
     return found;
   }
   function above(root, context) {

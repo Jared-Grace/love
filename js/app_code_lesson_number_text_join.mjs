@@ -1,30 +1,29 @@
-import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
-import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
-import { app_code_lesson_number_text_plus } from "./app_code_lesson_number_text_plus.mjs";
-import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { range_from } from "./range_from.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_between } from "./text_between.mjs";
+import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { list_last } from "./list_last.mjs";
-import { text_replace } from "./text_replace.mjs";
 import { list_first } from "./list_first.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_number_text_plus } from "./app_code_lesson_number_text_plus.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_number_text_join() {
@@ -32,7 +31,8 @@ export function app_code_lesson_number_text_join() {
   ('a number joined to a string: let n = 5; console.log(n + " is a number"); writes out 5 is a number');
   ('Asked for by the human 2026-10-07, who wanted console.log(n + " is a number") beside an if that writes out n + " is even"; that program needs a plus between a number and a string, which no lesson had shown, so it gets a lesson of its own first.');
   ("Since 2026-10-07, asked for by the human, a number plus a string with no name is a lesson of its own just before this one, so the one new thing here is the name standing for the number it holds.");
-  ("The wrong answers offered reading forwards are the name written out in place of what it holds, n is a number, and the two run together with no space, 5is a number: the last string lesson said a plus adds no space, and the space here is the one at the start of the string. Reading backwards, the wrong program puts the name in quotes, which writes out the name rather than the number.");
+  ("The wrong answers offered reading forwards are the name written out in place of what it holds, n is a number, and the two run together with no space, 5is a number: the last string lesson said a plus adds no space, and the space here is the one at the start of the string.");
+  ("Reading backwards every wrong program holds the same number and the same ending as the right one, so none can be thrown out for a word that did not come out. They are the name in quotes, which writes out the name rather than the number; the whole line in one string, which writes out n + is a number; and the ending with no space at its start, which writes out 5is a number. Not picked: the string before the name, because it asks about the order from the lesson before and not about the name; and the number written in place of the name, because that writes out exactly the same words and so would be a second right answer.");
   ("The strings are three short endings, so the number is the part to watch.");
   ("The writing is a first draft by Claude 2026-10-07.");
   let plus = js_operator_plus_symbol();
@@ -80,16 +80,24 @@ export function app_code_lesson_number_text_join() {
     return found;
   }
   function backwards_decoys(question, answer) {
-    "the same program with the name in quotes, which writes out the name";
+    "the same first line, then the name in quotes, or the whole line in one string, or no space at the start of the ending";
     let lines = text_split_newline(answer);
-    let quoted = app_code_string_code(name);
-    let joined_line = list_last(lines);
-    let from2 = text_combine("(", name);
-    let to = text_combine("(", quoted);
-    let replaced = text_replace(joined_line, from2, to);
     let first = list_first(lines);
-    let code = list_join_newline([first, replaced]);
-    let found = [code];
+    let number = text_between(answer, "= ", ";");
+    let ending = text_prefix_without_inner(question, number);
+    function program_of(inside) {
+      "the same first line, then a line writing out what is given";
+      let statement = js_code_console_log_statement(inside);
+      let code = list_join_newline([first, statement]);
+      return code;
+    }
+    let quoted = app_code_string_code(name);
+    let name_quoted = joined(quoted, ending);
+    let plus_written = text_combine_multiple([name, " ", plus, ending]);
+    let one_string = app_code_string_code(plus_written);
+    let trimmed = text_trim(ending);
+    let no_space = joined(name, trimmed);
+    let found = list_map([name_quoted, one_string, no_space], program_of);
     return found;
   }
   function above(root, context) {
