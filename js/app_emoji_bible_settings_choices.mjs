@@ -8,7 +8,7 @@ import { app_shared_buttons_choice_pair } from "./app_shared_buttons_choice_pair
 import { app_emoji_bible_original_language_text } from "./app_emoji_bible_original_language_text.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_bible_emoji_key_shown_get } from "./app_bible_emoji_key_shown_get.mjs";
-import { app_emoji_bible_key_shown_set } from "./app_emoji_bible_key_shown_set.mjs";
+import { app_bible_emoji_key_shown_set } from "./app_bible_emoji_key_shown_set.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_emoji_bible_manuscript_text } from "./app_emoji_bible_manuscript_text.mjs";
 import { app_emoji_bible_literal_shown_get } from "./app_emoji_bible_literal_shown_get.mjs";
@@ -40,7 +40,7 @@ export function app_emoji_bible_settings_choices(parent, fn_draw) {
   let text_hide = text_combine("Hide ", language);
   let key_shown = app_bible_emoji_key_shown_get();
   async function key_set(value) {
-    app_emoji_bible_key_shown_set(value);
+    app_bible_emoji_key_shown_set(value);
     await fn_draw();
   }
   let card_key = app_shared_container_blue(parent);
