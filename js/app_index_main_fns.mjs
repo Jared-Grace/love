@@ -106,7 +106,7 @@ export function app_index_main_fns(about_opened) {
       category: worship,
     },
     {
-      app_fn: fn_name("app_autopray"),
+      app_fn: fn_name("app_pray_auto"),
       text: "Prays through the whole Bible one verse at a time, asking the Lord to lead all creation to hear, believe and obey each verse",
       category: worship,
     },

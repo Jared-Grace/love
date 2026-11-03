@@ -6,7 +6,7 @@ import { ebible_version_chapters_all_download } from "./ebible_version_chapters_
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { app_pray_auto_verse_show } from "./app_pray_auto_verse_show.mjs";
-export async function app_autopray(context) {
+export async function app_pray_auto(context) {
   let root = property_get(context, "root");
   let version = ebible_folder_english();
   let chapters = await ebible_version_chapters_all_download(version);

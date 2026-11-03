@@ -72,11 +72,11 @@ export async function prayer_lead_all_creation_gate_run() {
   ("a right answer proves nothing if nobody asks for it any more");
   let reaches = [
     {
-      importer: fn_name("app_autopray"),
+      importer: fn_name("app_pray_auto"),
       imported: fn_name("app_pray_auto_verse_show"),
     },
     {
-      importer: fn_name("app_autopray"),
+      importer: fn_name("app_pray_auto"),
       imported: fn_name("ebible_version_chapters_all_download"),
     },
     {

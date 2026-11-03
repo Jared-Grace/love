@@ -17,6 +17,10 @@ export function storage_local_key_owner_renames() {
       before: text_frozen("app_designs_universal"),
       after: fn_name("app_design"),
     },
+    {
+      before: text_frozen("app_autopray"),
+      after: fn_name("app_pray_auto"),
+    },
   ];
   return r;
 }

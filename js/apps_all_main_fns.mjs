@@ -4,7 +4,7 @@ export function apps_all_main_fns() {
   let r = [
     fn_name("app_a"),
     fn_name("app_app"),
-    fn_name("app_autopray"),
+    fn_name("app_pray_auto"),
     fn_name("app_bible"),
     fn_name("app_bible_sermons"),
     fn_name("app_calendar"),

@@ -65,7 +65,7 @@ export function app_index_emojis() {
       emoji: emoji_pray(),
     },
     {
-      app_fn: fn_name("app_autopray"),
+      app_fn: fn_name("app_pray_auto"),
       emoji: emoji_pray(),
     },
     {
