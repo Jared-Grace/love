@@ -1,4 +1,3 @@
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -37,6 +36,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_while_log } from "./app_code_lesson_while_log.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
@@ -142,7 +142,8 @@ export function app_code_lesson_while_log_skipped() {
     let shifted_ended = list_concat(shifted, [ended]);
     let candidates = [more, shifted_ended];
     if (equal(size, 0)) {
-      candidates = [more, [ended_more]];
+      ("Also n written out twice, as if the console.log inside ran and the n += did not count. It holds only a number on the screen. The third button used to be filled from the other questions, so the one answer made only of numbers on the screen was right every time on a while that never runs: measured 2026-11-03 at 72 in 100 against 25 by chance. Not picked: writing out nothing, which is the answer the lesson says never happens, because the console.log after the while always runs.");
+      candidates = [more, [ended_more], [ended, ended]];
     }
     if (less_than_equal(1, size)) {
       let count = subtract(size, 1);
@@ -196,13 +197,14 @@ export function app_code_lesson_while_log_skipped() {
     let lines3 = program_lines(9, 5, 2);
     app_code_code_lines_writes_out(box_two, lines3, "9");
     let first = js_code_binary_spaced_nb(9, less, 5);
+    let r = app_code_braces_dots();
     app_code_div_cycle_code(box_two, [
       "",
       first,
       " is ",
       "false",
       ", so the ",
-      app_code_braces_dots(),
+      r,
       " is skipped, and the ",
       "console.log",
       " inside it writes out nothing",
