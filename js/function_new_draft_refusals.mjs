@@ -4,6 +4,8 @@ import { js_unparse } from "./js_unparse.mjs";
 import { js_code_export } from "./js_code_export.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { functions_names } from "./functions_names.mjs";
+import { js_identifiers_referenced_names } from "./js_identifiers_referenced_names.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { js_function_flow_read } from "./js_function_flow_read.mjs";
 export async function function_new_draft_refusals(
   f_name,
@@ -23,6 +25,13 @@ export async function function_new_draft_refusals(
   let landed = js_parse(code_export);
   let f_names = await functions_names();
   let known = new Set([...f_names, f_name]);
+  let names_used = js_identifiers_referenced_names(landed);
+  let unfenced = names_used.includes(fn_name("file_overwrite_unfenced"));
+  if (unfenced) {
+    refusals.push(
+      "the draft calls the file writer that refuses no path, so it could change the settings or the hooks",
+    );
+  }
   let read = js_function_flow_read(f_name, landed, known);
   for (let why of [...read.machine, ...read.strange]) {
     refusals.push("the draft reaches outside the repo: " + why);

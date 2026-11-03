@@ -1,6 +1,7 @@
 import { functions_names } from "./functions_names.mjs";
 import { guard_denied_dispatcher_names } from "./guard_denied_dispatcher_names.mjs";
 import { function_open_names_reached } from "./function_open_names_reached.mjs";
+import { file_overwrite_unfenced_reachers } from "./file_overwrite_unfenced_reachers.mjs";
 export async function permission_grant_context() {
   "the answers the safety check needs that are the same whichever function it is asked about, worked out once and carried along";
   "asked for one function this costs what it always cost. asked for every standing grant it is the difference between reading the repo's function list two hundred times and reading it once, which is what makes the same check affordable to run as a gate.";
@@ -13,7 +14,9 @@ export async function permission_grant_context() {
   let parsed = {};
   let known = new Set(live);
   let machine_reasons = {};
+  let unfenced_reachers = await file_overwrite_unfenced_reachers();
   let context = {
+    unfenced_reachers,
     known,
     machine_reasons,
     live,

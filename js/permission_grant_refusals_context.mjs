@@ -26,6 +26,15 @@ export async function permission_grant_refusals_context(unaliased, context) {
     );
     return refusals;
   }
+  let unfenced_reachers = property_get(context, "unfenced_reachers");
+  let unfenced = list_includes(unfenced_reachers, unaliased);
+  if (unfenced) {
+    list_add(
+      refusals,
+      unaliased +
+        " reaches a file writer that refuses no path, so it could change the settings or the hooks whatever it takes - nothing here can rule that out",
+    );
+  }
   let r = await permission_grant_refusals_context_destructive(
     denied,
     unaliased,
