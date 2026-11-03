@@ -19,8 +19,8 @@ export function reply_cheapest_per_position(rule) {
     let items = list_map_property(grouped, "items");
     let kept = list_map(items, reply_cheapest);
     function lambda(possibility) {
-      let r = list_includes(kept, possibility);
-      return r;
+      let included = list_includes(kept, possibility);
+      return included;
     }
     let filtered = list_filter(possibilities, lambda);
     list_clear(possibilities);

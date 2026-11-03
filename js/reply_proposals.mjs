@@ -1371,6 +1371,21 @@ export function reply_proposals() {
     fn_name("app_shared_message_reply_asks"),
     "();",
   ]);
+  let room_before = text_combine_multiple([
+    "-  let room = ",
+    fn_name("reply_once_or_more"),
+    "(choices_main);",
+  ]);
+  let room_cheapest = text_combine_multiple([
+    "+  let choices_cheapest = ",
+    fn_name("reply_cheapest_per_position"),
+    "(choices_main);",
+  ]);
+  let room_after = text_combine_multiple([
+    "+  let room = ",
+    fn_name("reply_once_or_more"),
+    "(choices_cheapest);",
+  ]);
   let combined61 = text_combine_multiple([
     "-  let r = ",
     fn_name("reply_outputs_mapped"),
@@ -1407,6 +1422,7 @@ export function reply_proposals() {
       fn_name("reply_prayers_closed"),
       fn_name("reply_property_prayers"),
       fn_name("reply_prayer_provide_ministry"),
+      fn_name("reply_cheapest_per_position"),
     ],
     diff: [
       combined39,
@@ -1415,6 +1431,9 @@ export function reply_proposals() {
       "-    give,",
       "-    poor_family,",
       "+    asks,",
+      room_before,
+      room_cheapest,
+      room_after,
       combined61,
       combined62,
       combined63,
@@ -1481,7 +1500,7 @@ export function reply_proposals() {
       "the Sorry line stays where the first of these things was said, and only the prayer moves to the end. So family, hello, children gets the Sorry line, the greeting, then the prayer. The rejected reading was moving the Sorry line to just before the prayer. Should it move?",
       "the Sorry line ends May the LORD provide, and the prayer can say provide for your ministry, so a ministry reply says provide twice near its end. Is that acceptable?",
       "only these four lines go in the closing prayer. Other lines that pray, such as May the LORD have His will done, stay where they are. Any of them could join it later with one call.",
-      "please help can come before or after each thing, as you wrote it. I did not write the repeating into this rule, because the rule set already repeats. That also lets other things be said in between, and a please help between two things cannot be read two ways that differ.",
+      "please help can come before or after each thing, as you wrote it. I did not write the repeating into this rule, because the rule set already repeats. That also lets other things be said in between. A please help between two things can be read as belonging to either one, which on its own made a message with five of them take two seconds and a longer one run out of memory. So at each place in the message only the cheapest reading is kept. Over 1033 mixed messages, typos included, no reply changed.",
       "the two old rules and the piece that took three parts in any order are unused once this goes in. I would remove them after you approve.",
     ],
   };
