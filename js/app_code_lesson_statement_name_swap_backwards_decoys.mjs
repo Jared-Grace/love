@@ -1,16 +1,17 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { text_split } from "./text_split.mjs";
 import { list_first } from "./list_first.mjs";
+import { text_split } from "./text_split.mjs";
 import { list_second } from "./list_second.mjs";
 import { list_copy } from "./list_copy.mjs";
-import { list_set } from "./list_set.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_set } from "./list_set.mjs";
 import { list_swap_at } from "./list_swap_at.mjs";
 import { list_index_last } from "./list_index_last.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
 export function app_code_lesson_statement_name_swap_backwards_decoys(
   question,
   answer,
@@ -50,5 +51,7 @@ export function app_code_lesson_statement_name_swap_backwards_decoys(
   let v3 = traded_at(difference, last);
   let programs = [v, v2, v3];
   let found_all = list_map(programs, list_join_newline);
+  ("Shuffled because these programs are long: the quiz keeps only as many wrong answers as fit its limit on lines, from the front of the list, which is two of these for the shorter lesson and one for the longer. In a fixed order the one mistake at the front would be the only one ever asked.");
+  list_shuffle(found_all);
   return found_all;
 }
