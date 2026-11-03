@@ -6,7 +6,7 @@ import { not } from "./not.mjs";
 import { bible_glyph_chapter_draw_html } from "./bible_glyph_chapter_draw_html.mjs";
 import { bible_glyph_chapter_built_fetched } from "./bible_glyph_chapter_built_fetched.mjs";
 import { bible_glyph_chapter_rosetta_verses } from "./bible_glyph_chapter_rosetta_verses.mjs";
-import { app_emoji_bible_literal_rosetta_rows } from "./app_emoji_bible_literal_rosetta_rows.mjs";
+import { app_bible_emoji_literal_rosetta_rows } from "./app_bible_emoji_literal_rosetta_rows.mjs";
 import { app_emoji_bible_verse_key_draw } from "./app_emoji_bible_verse_key_draw.mjs";
 import { bible_glyph_words_tap_listen } from "./bible_glyph_words_tap_listen.mjs";
 export async function app_bible_emoji_chapter_body(
@@ -41,7 +41,7 @@ export async function app_bible_emoji_chapter_body(
       built,
       traditions,
     );
-    let literal_rows = app_emoji_bible_literal_rosetta_rows(
+    let literal_rows = app_bible_emoji_literal_rosetta_rows(
       literal,
       built_rows,
     );

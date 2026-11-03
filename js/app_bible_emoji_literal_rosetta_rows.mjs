@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_emoji_bible_literal_rosetta_rows(literal, rows) {
+export function app_bible_emoji_literal_rosetta_rows(literal, rows) {
   arguments_assert(arguments, 2);
   ("$plain literal");
   ("$plain rows");
