@@ -3,7 +3,7 @@ import { app_bible_emoji_tradition_get } from "./app_bible_emoji_tradition_get.m
 import { app_bible_emoji_key_shown_get } from "./app_bible_emoji_key_shown_get.mjs";
 import { app_bible_emoji_english_shown_get } from "./app_bible_emoji_english_shown_get.mjs";
 import { app_bible_emoji_literal_shown_get } from "./app_bible_emoji_literal_shown_get.mjs";
-export function app_emoji_bible_views_chosen() {
+export function app_bible_emoji_views_chosen() {
   arguments_assert(arguments, 0);
   ("The four choices a reader has made about how a chapter is drawn - which cross, whether the original is under each verse, whether the English is, and whether the pictures follow the manuscript's order - read once and handed back together for the chapter to be drawn from.");
   ("ALL FOUR ARE CHOSEN IN SETTINGS NOW, moved off the chapter's bar by the human, so nothing here draws a button; the chapter reads them in one place so a chapter cannot be drawn from half of them.");

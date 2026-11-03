@@ -14,7 +14,7 @@ import { app_bible_emoji_settings_button } from "./app_bible_emoji_settings_butt
 import { app_bible_emoji_chapter_index } from "./app_bible_emoji_chapter_index.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_bible_emoji_chapter_bar } from "./app_bible_emoji_chapter_bar.mjs";
-import { app_emoji_bible_views_chosen } from "./app_emoji_bible_views_chosen.mjs";
+import { app_bible_emoji_views_chosen } from "./app_bible_emoji_views_chosen.mjs";
 import { app_bible_emoji_traditions } from "./app_bible_emoji_traditions.mjs";
 import { app_bible_emoji_chapter_body } from "./app_bible_emoji_chapter_body.mjs";
 import { app_emoji_bible_words_button } from "./app_emoji_bible_words_button.mjs";
@@ -39,7 +39,7 @@ export async function app_emoji_bible(context) {
   ("The key opens DOWN. The picture Bible is the thing being offered, and a page that printed the English under every verse before being asked would have quietly become an English Bible with pictures over it - which is the exact failure this whole project exists to avoid.");
   ("THE VERSES ARE DRAWN AS ARTWORK RATHER THAN AS EMOJI CHARACTERS, and a reader who has been here before will see the same Bible drawn by this project instead of by their phone. The emoji are still underneath every picture and appear the moment one fails to arrive, so a glyph nobody has drawn yet costs nothing and a phone too old to know a character never has to draw it at all. That last one is not a nicety: several of these characters were added to the standard in the last few years, and the phone this Bible is for is the cheap one.");
   ("The reader's choices about a chapter are made in Settings, moved off the chapter's bar by the human, each as a pair of buttons. THE KEY AND THE ENGLISH ARE TWO CONTROLS AND NOT ONE: a reader who only wants to know what a verse says is not the reader who is learning what the pictures mean, and charging the first one three lines under every verse to answer a question they did not ask is how a page becomes unreadable. Asking for the English alone puts one line under each verse, and it is the same line the key would have shown, drawn by the same call - so the two views cannot drift apart. They are read by ",
-    fn_name("app_emoji_bible_views_chosen"),
+    fn_name("app_bible_emoji_views_chosen"),
     " in one call, so the chapter is drawn from one reading of all of them.");
   let hash = app_shared_bible_page_start_hash(context, app_emoji_bible);
   let corrected = null_is(hash);
@@ -68,7 +68,7 @@ export async function app_emoji_bible(context) {
     return;
   }
   app_bible_emoji_chapter_bar(bar, chapters, chosen);
-  let chosen_views = app_emoji_bible_views_chosen();
+  let chosen_views = app_bible_emoji_views_chosen();
   let tradition = property_get(chosen_views, "tradition");
   let key_shown = property_get(chosen_views, "key_shown");
   let english_shown = property_get(chosen_views, "english_shown");
