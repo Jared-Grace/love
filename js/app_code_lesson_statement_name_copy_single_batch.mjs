@@ -12,7 +12,7 @@ export function app_code_lesson_statement_name_copy_single_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives a word to a name, gives a second name what the first one holds, and writes the second one out");
   ("One word per program, so the only new thing is the name with no quote marks on the right of the equals. Choosing which of two names was copied is the lesson after this one.");
-  ("Four different words, so the four answers are four different words and every wrong answer a question offers is another question's answer.");
+  ("Four different words, so the four answers are four different words.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
   let words = fruits_of_the_spirit();

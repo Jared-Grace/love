@@ -1,7 +1,7 @@
-import { app_code_lesson_statement_title_code_note_paint_get } from "./app_code_lesson_statement_title_code_note_paint_get.mjs";
-import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_code_lesson_statement_title_code_note_paint_get } from "./app_code_lesson_statement_title_code_note_paint_get.mjs";
+import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 import { app_code_lesson_statement_name_last } from "./app_code_lesson_statement_name_last.mjs";
 export function app_code_lesson_statement_name_pair_last(lesson_first, pair) {
   arguments_assert(arguments, 2);

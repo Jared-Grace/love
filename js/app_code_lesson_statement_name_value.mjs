@@ -4,15 +4,14 @@ import { app_code_batch_question_answer_fns } from "./app_code_batch_question_an
 import { app_code_lesson_statement_name_value_batch } from "./app_code_lesson_statement_name_value_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_lesson_decoy_code_names } from "./app_code_lesson_decoy_code_names.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
+import { app_code_lesson_decoy_code_pieces } from "./app_code_lesson_decoy_code_pieces.mjs";
 import { app_code_lesson_statement_name_value_above } from "./app_code_lesson_statement_name_value_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_statement_name_value() {
@@ -31,30 +30,21 @@ export function app_code_lesson_statement_name_value() {
     app_code_lesson_statement_name_value_batch,
     eval_console_log_to_list,
   );
-  function decoys(question, answer) {
-    "the name written out rather than what it holds, the word with its quote marks, and the word twice";
-    let word = eval_console_log_lines(question);
-    let names = app_code_lesson_decoy_code_names(question, answer);
-    let quoted = app_code_string_code(word);
-    let twice = list_join_newline([word, word]);
-    let found = list_concat(names, [quoted, twice]);
-    return found;
-  }
   function backwards_decoys(question, answer) {
     "the first line alone, the name in quote marks, and the name written out twice";
-    let word2 = eval_console_log_lines(answer);
+    let word = eval_console_log_lines(answer);
     let name = app_code_lesson_statement_name_value_name();
-    let quoted2 = app_code_string_code(word2);
-    let held = js_code_let_statement(name, quoted2);
+    let quoted = app_code_string_code(word);
+    let held = js_code_let_statement(name, quoted);
     let logged = js_code_console_log_statement(name);
     let logged_name = app_code_word_console_log_statement(name);
     let name_written = list_join_newline([held, logged_name]);
     let written_twice = list_join_newline([held, logged, logged]);
-    let found2 = [held, name_written, written_twice];
-    return found2;
+    let found = [held, name_written, written_twice];
+    return found;
   }
   let lesson = app_code_lesson_code_logged({
-    decoys,
+    decoys: app_code_lesson_decoy_code_pieces,
     backwards_decoys,
     above: app_code_lesson_statement_name_value_above,
     name_id,

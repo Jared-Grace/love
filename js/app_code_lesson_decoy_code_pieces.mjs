@@ -4,17 +4,27 @@ import { app_code_lesson_decoy_code_names } from "./app_code_lesson_decoy_code_n
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
+import { list_without } from "./list_without.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
+import { app_code_answer_count_max } from "./app_code_answer_count_max.mjs";
+import { subtract } from "./subtract.mjs";
+import { list_take } from "./list_take.mjs";
 export function app_code_lesson_decoy_code_pieces(question, answer) {
   arguments_assert(arguments, 2);
   ("the wrong answers for a program that gives names to words, made only of what that program holds: the other words written in it, its names, the word that comes out with its quote marks still on, and that word twice");
-  ("Only as many of these are used as there are places for wrong answers, so they are in the order they are worth: another word in the code is a real reading of the program, a name is the mistake of writing out the name rather than what it holds, and the quote marks and the second copy fill what is left.");
+  ("Only as many of these are kept as there are places for wrong answers, so they are in the order they are worth: another word in the code is a real reading of the program, a name is the mistake of writing out the name rather than what it holds, and the quote marks and the second copy fill what is left.");
   ("The places are filled here rather than left to the draw, because a wrong answer drawn from another question carries a word this program does not hold, and a learner can throw that one out without reading anything.");
   let words = app_code_lesson_decoy_code_words(question, answer);
   let names = app_code_lesson_decoy_code_names(question, answer);
   let word = eval_console_log_lines(question);
   let quoted = app_code_string_code(word);
   let twice = list_join_newline([word, word]);
-  let found = list_concat_multiple([words, names, [quoted, twice]]);
+  ("The right answer comes out here too, because a program's words include the one it writes out, and the quiz would drop it after the cut and leave a place for a borrowed word.");
+  let words_other = list_without(words, word);
+  let pieces = list_concat_multiple([words_other, names, [quoted, twice]]);
+  ("Cut to the places here, because nothing later does: the quiz keeps every wrong answer it is handed while the lines fit, so a program with two words and three names drew seven buttons.");
+  let left = app_code_answer_count_max();
+  let places = subtract(left, 1);
+  let found = list_take(pieces, places);
   return found;
 }
