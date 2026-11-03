@@ -2,15 +2,18 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
+import { app_reply_rules_rewrite_changed_is } from "./app_reply_rules_rewrite_changed_is.mjs";
+import { app_reply_rules_case_warned_show } from "./app_reply_rules_case_warned_show.mjs";
 import { app_reply_rules_case_approve_show } from "./app_reply_rules_case_approve_show.mjs";
-import { app_reply_rules_rewrite_changed_show } from "./app_reply_rules_rewrite_changed_show.mjs";
 import { app_reply_rules_case_show } from "./app_reply_rules_case_show.mjs";
+import { app_reply_rules_rewrite_changed_show } from "./app_reply_rules_rewrite_changed_show.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { list_map } from "./list_map.mjs";
+import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_reply_rules_cases_approved_show } from "./app_reply_rules_cases_approved_show.mjs";
 export function app_reply_rules_corpus_show(root, cases, approvals) {
@@ -31,8 +34,11 @@ export function app_reply_rules_corpus_show(root, cases, approvals) {
   function each_shown(one) {
     let ok = property_get(one, "ok");
     if (ok) {
+      if (app_reply_rules_rewrite_changed_is(one)) {
+        app_reply_rules_case_warned_show(root, one, approvals);
+        return;
+      }
       app_reply_rules_case_approve_show(root, one, approvals);
-      app_reply_rules_rewrite_changed_show(root, one);
       return;
     }
     app_reply_rules_case_show(root, one);
@@ -49,11 +55,12 @@ export function app_reply_rules_corpus_show(root, cases, approvals) {
     return line;
   }
   let all = list_map(cases, each_shown);
-  function ok_is(one) {
+  function quiet_is(one) {
     let ok = property_get(one, "ok");
-    return ok;
+    let changed = app_reply_rules_rewrite_changed_is(one);
+    return ok && not(changed);
   }
-  let passing = list_filter(cases, ok_is);
-  app_reply_rules_cases_approved_show(root, passing, approvals);
+  let quiet = list_filter(cases, quiet_is);
+  app_reply_rules_cases_approved_show(root, quiet, approvals);
   return all;
 }
