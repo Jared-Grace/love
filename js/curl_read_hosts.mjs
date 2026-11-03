@@ -3,6 +3,8 @@ import { firebase_project_name_jg } from "./firebase_project_name_jg.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { firebase_storage_host } from "./firebase_storage_host.mjs";
 import { google_storage_host } from "./google_storage_host.mjs";
+import { cloudflare_site_url } from "./cloudflare_site_url.mjs";
+import { url_host } from "./url_host.mjs";
 import { curl_read_hosts_reference } from "./curl_read_hosts_reference.mjs";
 import { list_concat } from "./list_concat.mjs";
 export function curl_read_hosts() {
@@ -16,7 +18,9 @@ export function curl_read_hosts() {
   let published = text_combine(project, ".web.app");
   let storage = firebase_storage_host();
   let bucket = google_storage_host();
-  let own = [published, storage, bucket];
+  let site_url = cloudflare_site_url();
+  let site = url_host(site_url);
+  let own = [published, site, storage, bucket];
   let reference = curl_read_hosts_reference();
   let r = list_concat(own, reference);
   return r;
