@@ -223,10 +223,13 @@ export function app_code_lesson_while_log_after_change() {
       " runs",
     ]);
     let r3 = app_code_braces_dots();
+    let r4 = app_code_braces_dots();
     app_code_div_cycle_code(box_three, [
       "Once the ",
       r3,
-      " starts, every line inside it runs, and then the ",
+      " starts, every line inside the ",
+      r4,
+      " runs, and then the ",
       "while",
       " asks again",
     ]);
