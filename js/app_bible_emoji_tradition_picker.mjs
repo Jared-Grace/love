@@ -4,7 +4,7 @@ import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_bible_emoji_tradition_base } from "./app_bible_emoji_tradition_base.mjs";
 import { app_bible_emoji_tradition_orthodox } from "./app_bible_emoji_tradition_orthodox.mjs";
-import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
+import { app_bible_emoji_traditions } from "./app_bible_emoji_traditions.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_bible_emoji_tradition_set } from "./app_bible_emoji_tradition_set.mjs";
@@ -24,7 +24,7 @@ export function app_bible_emoji_tradition_picker(parent, fn_draw) {
   let name3 = app_bible_emoji_tradition_orthodox();
   let names = [name2, name3];
   for (let name of names) {
-    let traditions = app_emoji_bible_traditions(name);
+    let traditions = app_bible_emoji_traditions(name);
     let lookup = bible_glyph_characters_lookup(traditions);
     let character = property_get(lookup, "cross");
     async function choose() {

@@ -15,7 +15,7 @@ import { app_bible_emoji_chapter_index } from "./app_bible_emoji_chapter_index.m
 import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_bible_emoji_chapter_bar } from "./app_bible_emoji_chapter_bar.mjs";
 import { app_emoji_bible_views_chosen } from "./app_emoji_bible_views_chosen.mjs";
-import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
+import { app_bible_emoji_traditions } from "./app_bible_emoji_traditions.mjs";
 import { app_bible_emoji_chapter_body } from "./app_bible_emoji_chapter_body.mjs";
 import { app_emoji_bible_words_button } from "./app_emoji_bible_words_button.mjs";
 export async function app_emoji_bible(context) {
@@ -74,7 +74,7 @@ export async function app_emoji_bible(context) {
   let english_shown = property_get(chosen_views, "english_shown");
   let literal_shown = property_get(chosen_views, "literal_shown");
   app_bible_emoji_settings_button(bar, context);
-  let traditions = app_emoji_bible_traditions(tradition);
+  let traditions = app_bible_emoji_traditions(tradition);
   let chapter_code = property_get(chosen, "chapter_code");
   await app_bible_emoji_chapter_body(
     content,

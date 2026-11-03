@@ -1,7 +1,7 @@
 import { app_bible_emoji_tradition_orthodox } from "./app_bible_emoji_tradition_orthodox.mjs";
 import { bible_glyph_characters_orthodox } from "./bible_glyph_characters_orthodox.mjs";
 import { equal } from "./equal.mjs";
-export function app_emoji_bible_traditions(name) {
+export function app_bible_emoji_traditions(name) {
   "$plain name";
   "the name says which way of drawing the glyphs was chosen. It is a word to look up and nothing that runs.";
   "The chosen way of drawing, turned into the list of redrawings to lay over the base vocabulary.";
