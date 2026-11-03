@@ -1115,44 +1115,6 @@ export function reply_proposals() {
         outputs: located,
       },
       {
-        from: "",
-        message: "am from Nairobi Kenya",
-        answered: false,
-        outputs: [],
-      },
-      {
-        from: "",
-        message: "am from in Kenya",
-        answered: false,
-        outputs: [],
-      },
-      {
-        from: "",
-        message: "am from Nairobi",
-        answered: false,
-        outputs: [],
-      },
-      {
-        from: "",
-        message: "am from Zzyzxville in Kenya",
-        answered: false,
-        outputs: [],
-      },
-      {
-        from: "",
-        message:
-          "I am from a poor family, please help me, my children are hungry and we are in Kenya",
-        answered: false,
-        outputs: [],
-      },
-      {
-        from: "",
-        message:
-          "I am from the hospital, my wife died, I need prayer, I am in Kenya",
-        answered: false,
-        outputs: [],
-      },
-      {
         from: "3d27ef64ea033e69",
         message: "Hello myfriendinChrist, am from AccrainGhana,amteacher,",
         answered: true,
@@ -1160,7 +1122,7 @@ export function reply_proposals() {
       },
     ],
     decide: [
-      "this replaces the card that took any word as the town. That card answered two cries for help with only a location reply, so nobody would have read them. Both are tests here now and must get no reply.",
+      "this replaces the card that took any word as the town. That card answered two cries for help with only a location reply, so nobody would have read them. Both are on the no reply yet list now, and a gate fails if a rule starts answering them.",
       "the list is 926 places from Wikidata: every capital, old ones included, and every big city of half a million people or more. It is a public list and no message fed it, so it publishes nobody. Smaller towns get no reply and come to you. Is half a million the right line?",
       "the city and the country are not checked against each other. Am from Paris in Kenya gets the same reply. The reply only says where we are, so that costs nothing. Is that acceptable?",
       "a place now needs the word in before the country. Am from Nairobi Kenya gets no reply, and neither does am from in Kenya, which got one before. No saved test writes either one.",
@@ -1276,13 +1238,6 @@ export function reply_proposals() {
           "I am from a poor family, please help me, my children are hungry, I am from Kenya",
         answered: true,
         outputs: [prayer_family_help_children, give_response, t],
-      },
-      {
-        from: "",
-        message:
-          "I am from a poor family, please help me, my wife died, my children are hungry",
-        answered: false,
-        outputs: [],
       },
       {
         from: "",

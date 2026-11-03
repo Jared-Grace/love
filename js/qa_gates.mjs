@@ -1,6 +1,3 @@
-import { files_root_gate_run } from "./files_root_gate_run.mjs";
-import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run } from "./app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run.mjs";
-import { functions_outside_direct_gate_run } from "./functions_outside_direct_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -587,6 +584,7 @@ import { app_code_lessons_released_gate_run } from "./app_code_lessons_released_
 import { bible_glyph_seats_contested_gate_run } from "./bible_glyph_seats_contested_gate_run.mjs";
 import { messages_real_quoted_gate_run } from "./messages_real_quoted_gate_run.mjs";
 import { reply_parser_gate_run } from "./reply_parser_gate_run.mjs";
+import { reply_cases_no_reply_yet_gate_run } from "./reply_cases_no_reply_yet_gate_run.mjs";
 import { app_code_note_name_contrast_gate_run } from "./app_code_note_name_contrast_gate_run.mjs";
 import { functions_calls_walk_unwaited_gate_run } from "./functions_calls_walk_unwaited_gate_run.mjs";
 import { app_code_highlight_color_gate_run } from "./app_code_highlight_color_gate_run.mjs";
@@ -642,6 +640,9 @@ import { giveaway_psalms_boxes_whole_gate_run } from "./giveaway_psalms_boxes_wh
 import { app_code_quiz_lines_order_indent_gate_run } from "./app_code_quiz_lines_order_indent_gate_run.mjs";
 import { app_code_program_step_presses_gate_run } from "./app_code_program_step_presses_gate_run.mjs";
 import { bible_glyph_chapters_note_glyph_gate_run } from "./bible_glyph_chapters_note_glyph_gate_run.mjs";
+import { functions_outside_direct_gate_run } from "./functions_outside_direct_gate_run.mjs";
+import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run } from "./app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run.mjs";
+import { files_root_gate_run } from "./files_root_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -1231,6 +1232,7 @@ export function qa_gates() {
     bible_glyph_seats_contested_gate_run,
     messages_real_quoted_gate_run,
     reply_parser_gate_run,
+    reply_cases_no_reply_yet_gate_run,
     app_code_note_name_contrast_gate_run,
     functions_calls_walk_unwaited_gate_run,
     app_code_highlight_color_gate_run,

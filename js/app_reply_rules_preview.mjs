@@ -10,6 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_filter_property_path } from "./list_filter_property_path.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
+import { not } from "./not.mjs";
 import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { text_from_number } from "./text_from_number.mjs";
@@ -19,7 +20,6 @@ import { app_reply_rules_no_reply_yet_show } from "./app_reply_rules_no_reply_ye
 import { html_clear } from "./html_clear.mjs";
 import { app_reply_rules_proposal_show } from "./app_reply_rules_proposal_show.mjs";
 import { list_map } from "./list_map.mjs";
-import { not } from "./not.mjs";
 import { app_reply_rules_corpus_show } from "./app_reply_rules_corpus_show.mjs";
 import { app_shared_buttons_mark_current } from "./app_shared_buttons_mark_current.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
@@ -59,6 +59,10 @@ export async function app_reply_rules_preview() {
   let counted_cases = word_count_pluralize(count_cases, "worked case");
   let counted_wrong = word_count_pluralize(count_wrong, "case");
   function case_outstanding_is(one) {
+    let answered = property_get(one, "answered");
+    if (not(answered)) {
+      return false;
+    }
     let approval = property_get(one, "approval");
     let name = property_get(approval, "name");
     let lines = property_get(approval, "lines");

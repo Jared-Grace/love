@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
 import { not } from "./not.mjs";
+import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
 import { app_reply_rules_file_card } from "./app_reply_rules_file_card.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_reply_rules_case_show } from "./app_reply_rules_case_show.mjs";
@@ -13,6 +13,11 @@ export function app_reply_rules_case_approve_show(root, one, approvals) {
   let approval = property_get(one, "approval");
   let name = property_get(approval, "name");
   let lines = property_get(approval, "lines");
+  ("★ A TEST WITH NO REPLY ASKS NOBODY FOR A VERDICT. No words go out, so there is nothing to judge; the gate over the worked cases still fails if it starts getting one.");
+  let answered = property_get(one, "answered");
+  if (not(answered)) {
+    return;
+  }
   let outstanding = app_reply_rules_file_outstanding_is(name, lines, approvals);
   if (not(outstanding)) {
     return;
