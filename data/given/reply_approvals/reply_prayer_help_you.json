@@ -1,0 +1,1 @@
+{"f_name":"reply_prayer_help_you","text":"+import { text_may_the_lord_exclamation } from \"./text_may_the_lord_exclamation.mjs\";\n+export function reply_prayer_help_you() {\n+  let line = text_may_the_lord_exclamation(\"help you\");\n+  return line;\n+}\n+"}
