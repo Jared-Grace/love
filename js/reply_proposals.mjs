@@ -1772,6 +1772,78 @@ export function reply_proposals() {
       "the last test is the pastor message rewritten with made-up details. Measured on the real message while the can't rule was still there: all four copies answered, three lines each. That reading never used the can't rule, so removing the rule leaves it standing. I would measure the real message again once this is in. Measured with a copy of the rules with both cards in: no saved test changes except this one.",
     ],
   };
+  let combined39 = text_combine_multiple([
+    "-  let iam_titled_name = ",
+    fn_name("reply_sequence_output"),
+    "([iam, name], response);",
+  ]);
+  let combined40 = text_combine_multiple([
+    "+  let my_name_is = ",
+    fn_name("reply_sequence"),
+    '(["my", "name", "is"]);',
+  ]);
+  let combined64 = text_combine_multiple([
+    "+  let said = ",
+    fn_name("reply_choice"),
+    "([iam, my_name_is]);",
+  ]);
+  let combined65 = text_combine_multiple([
+    "+  let iam_titled_name = ",
+    fn_name("reply_sequence_output"),
+    "([said, name], response);",
+  ]);
+  let my_name_said = {
+    title: "read my name is, and answer it with the name line",
+    fn: fn_name("app_shared_message_reply_iam_titled_name"),
+    whole: [],
+    diff: [combined39, combined40, combined64, combined65],
+    cases: [
+      {
+        from: "",
+        message: "My name is Stephen Mark",
+        answered: true,
+        outputs: [name_response],
+      },
+    ],
+    decide: [
+      "you asked for this: my name is gets the same name line as I am. It uses the same list of names, so my name is hungry gets no reply and comes to you.",
+      "the location rule uses this same piece, so my name is Stephen Mark from Ghana now gets the name line and the location line. The rejected reading was a separate rule for my name is, which would then need its own copy of the from rule.",
+      "this alone does not answer the choir leader's messages. They need every part understood, and more cards are coming for the rest.",
+    ],
+  };
+  let combined66 = text_combine_multiple([
+    "   let fn = ",
+    fn_name("reply_contact_address"),
+    "();",
+  ]);
+  let combined67 = text_combine_multiple([
+    "+  let join = ",
+    fn_name("reply_join_glory"),
+    "();",
+  ]);
+  let v = reply_choices_glory();
+  let line = reply_prayer_will_done();
+  let prayer = reply_prayer_closing([line]);
+  let join_glory = {
+    title: "answer wanting others to join to bring glory to God",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_join_glory")],
+    diff: [combined66, combined67, "     fn,", "+    join,"],
+    cases: [
+      {
+        from: "",
+        message:
+          "I want others to join me so that together we can bring glory to God.",
+        answered: true,
+        outputs: [v, prayer],
+      },
+    ],
+    decide: [
+      "you asked for the will of God and Glory to God, both as they already are. You listed the will of God first, but it comes last here, because every prayer line goes in the one prayer that closes a reply. The rejected reading was putting it first for this message alone, which would give this one message a different shape from every other reply.",
+      "only these exact words are read, because you want other wordings added when somebody really sends them. So I want others to join me, on its own, gets no reply and comes to you.",
+      "this alone does not answer the choir leader's messages. They need every part understood, and more cards are coming for the rest.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -1792,6 +1864,8 @@ export function reply_proposals() {
     town_in_optional,
     cant_out,
     contact_street,
+    my_name_said,
+    join_glory,
   ];
   return proposals;
 }
