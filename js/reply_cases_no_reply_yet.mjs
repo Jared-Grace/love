@@ -12,6 +12,8 @@ export function reply_cases_no_reply_yet() {
     "am from Nairobi",
     "am from Zzyzxville in Kenya",
     "contact 92 and my children are hungry road",
+    "contact 92 help me road",
+    "contact 92 123 main road",
     "I am pastor Samuel my wife is sick from Kenya",
   ];
   return messages;

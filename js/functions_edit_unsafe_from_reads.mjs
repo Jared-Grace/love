@@ -225,6 +225,7 @@ export function functions_edit_unsafe_from_reads(reads) {
     let starts = [];
     let everything = false;
     let whys = [];
+    let steered_any = false;
     ("Inside a function that can run a command or the like, whether a call happens matters as much as what it is handed, so the conditions around its calls are followed too. Everywhere else only values are followed: a path or a key is dangerous for what it can be, and a condition cannot make it anything new.");
     let whether = reaches_whether.has(name);
     for (let call of read.calls) {
@@ -244,6 +245,7 @@ export function functions_edit_unsafe_from_reads(reads) {
         }
       }
       if (hit) {
+        steered_any = true;
         mark(name, "passes into " + call.callee);
         whys.push("passes into " + call.callee);
       }
@@ -265,6 +267,22 @@ export function functions_edit_unsafe_from_reads(reads) {
     let s = js_flow_slice(read, starts, whether, mutating);
     let positions = s.params;
     let callees = s.callees;
+    ("A check standing in front of a dangerous call hands nothing to it, so no value leads from one to the other - yet making the check always pass takes the guard away. So a call whose answer is thrown away, in a function that steers something dangerous, has a result that matters.");
+    if (steered_any) {
+      function lambda_check(call) {
+        let b8 = pdanger.has(call.callee);
+        let r7 = call.discarded && not(b8);
+        return r7;
+      }
+      function lambda_callee(call) {
+        let r8 = call.callee;
+        return r8;
+      }
+      callees = [
+        ...callees,
+        ...read.calls.filter(lambda_check).map(lambda_callee),
+      ];
+    }
     ("A function that may call or change a power depends on which power it is handed, so the functions handing it one have results that matter.");
     let used = js_flow_read_power(
       read,
@@ -289,7 +307,16 @@ export function functions_edit_unsafe_from_reads(reads) {
         let r6 = [...r_read3.data, ...r_read3.control];
         return r6;
       }
-      let returned_from = read.returns.map(lambda7);
+      ("Its answer also includes whether it answers at all: the conditions around a throw, around a return with nothing to hand back, and around any call that might throw decide that. A list a check looks things up in reaches only such a condition, and without this could be widened with nobody asked.");
+      function lambda_control(call) {
+        let r9 = call.control;
+        return r9;
+      }
+      let returned_from = [
+        ...read.returns.map(lambda7),
+        ...read.stops,
+        ...read.calls.map(lambda_control),
+      ];
       callees = [
         ...callees,
         ...js_flow_slice(read, returned_from, true, mutating).callees,

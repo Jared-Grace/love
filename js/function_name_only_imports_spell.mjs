@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { function_deciding_edit_refuse } from "./function_deciding_edit_refuse.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { property_get } from "./property_get.mjs";
 import { file_read } from "./file_read.mjs";
@@ -18,6 +19,7 @@ export async function function_name_only_imports_spell(f_name) {
   ("anybody.");
   ("The import left standing with nothing reading it is swept by the same pass that");
   ("adds the one the new spelling needs, which is why both happen in the one walk.");
+  await function_deciding_edit_refuse(f_name);
   let paths = await functions_names_to_paths();
   let f_path = property_get(paths, f_name);
   let code = await file_read(f_path);

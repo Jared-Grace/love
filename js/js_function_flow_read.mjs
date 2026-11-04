@@ -174,6 +174,7 @@ export function js_function_flow_read(f_name, ast, known) {
   let index = new Map();
   let calls = [];
   let returns = [];
+  let stops = [];
   let mutations = [];
   let dynamic = [];
   let methods_plain = js_flow_methods_plain();
@@ -1020,10 +1021,17 @@ export function js_function_flow_read(f_name, ast, known) {
             spread: equal(a.type, "SpreadElement"),
           });
         }
+        ("A call standing alone, its answer thrown away, can only matter by stopping the function or by changing what it was handed - which is how a check reads.");
+        let enclosing = stack.filter(js_node_is);
+        let above = enclosing[subtract(enclosing.length, 1)];
+        if (equal(above?.type, "AwaitExpression")) {
+          above = enclosing[subtract(enclosing.length, 2)];
+        }
         calls.push({
           callee,
           args,
           control: control_names(stack),
+          discarded: equal(above?.type, "ExpressionStatement"),
         });
       }
     }
@@ -1063,6 +1071,14 @@ export function js_function_flow_read(f_name, ast, known) {
       if (not(called_here) && not(binding)) {
         handed.add(x.name);
       }
+    }
+    ("A throw and a return with nothing to hand back leave no value behind, so they are kept apart from the returns - but the conditions around them decide whether the lines after them run, which is the whole of what a check does.");
+    if (
+      equal(type, "ThrowStatement") ||
+      (equal(type, "ReturnStatement") && not(x.argument))
+    ) {
+      let v29 = control_names(stack);
+      stops.push(v29);
     }
     if (equal(type, "ReturnStatement") && x.argument) {
       let owner = null;
@@ -1120,6 +1136,7 @@ export function js_function_flow_read(f_name, ast, known) {
     aliases,
     calls,
     returns,
+    stops,
     mutations,
     dynamic,
     handed: [...handed],

@@ -1,7 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_deciding_edit_refuse } from "./function_deciding_edit_refuse.mjs";
 import { function_select_apply_pair } from "./function_select_apply_pair.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_transform_imports } from "./function_transform_imports.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 export async function function_select_apply_run_generic(
   f_name,
   select_fn_name,
@@ -20,6 +21,7 @@ export async function function_select_apply_run_generic(
   ("Nothing is kept between commands. Several conversations edit this one");
   ("directory at the same time, so a selection left lying around between two");
   ("commands belongs to whoever wrote it last, and the second command cannot tell.");
+  await function_deciding_edit_refuse(f_name);
   let pair = await function_select_apply_pair(select_fn_name, apply_fn_name);
   let select_fn = property_get(pair, "select_fn");
   let apply_fn = property_get(pair, "apply_fn");
