@@ -1712,7 +1712,7 @@ export function reply_proposals() {
       fn_name("reply_phone_number"),
       fn_name("reply_phone_codes_lengths"),
       fn_name("reply_digits_exactly"),
-      fn_name("list_value_times"),
+      fn_name("list_value_repeat"),
       fn_name("reply_response_whatsapp"),
       fn_name("reply_letters_at_most"),
       fn_name("reply_at_most"),
