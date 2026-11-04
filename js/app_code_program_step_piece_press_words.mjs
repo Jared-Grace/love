@@ -53,14 +53,18 @@ export function app_code_program_step_piece_press_words(
     };
     return r3;
   }
+  ("2026-11-04, the human's words, with the condition filled in from the program at the human's asking. Not picked: filling in the { ... } too, since a body can be many lines");
   let r4 = {
     reason: "piece_condition_first",
     words: [
-      "The condition runs first. It decides whether the ",
+      "The condition ",
+      "(" + property_get(entry, "condition_text") + ")",
+      " runs first. It decides whether the ",
       braces,
       " runs, and the code after the second ",
       ";",
-      " runs after that",
+      " runs after the ",
+      braces,
     ],
   };
   return r4;
