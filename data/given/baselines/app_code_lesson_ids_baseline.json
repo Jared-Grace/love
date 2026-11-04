@@ -326,10 +326,11 @@
   "while_word_down",
   "while_start_end",
   "while_two_lines",
+  "for",
+  "for_change",
   "while_two_names",
   "while_two_meet",
   "while_and",
-  "while_if",
-  "for"
+  "while_if"
  ]
 }
