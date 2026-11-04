@@ -1,3 +1,4 @@
+import { less_than_equal } from "./less_than_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_step_trace } from "./app_code_program_step_trace.mjs";
@@ -36,16 +37,17 @@ import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { subtract } from "./subtract.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { list_set } from "./list_set.mjs";
 import { app_code_line_pieces_text } from "./app_code_line_pieces_text.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { subtract } from "./subtract.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
 import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
@@ -72,7 +74,6 @@ import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { app_code_program_step_piece_press_words } from "./app_code_program_step_piece_press_words.mjs";
 import { app_code_program_step_line_press_words } from "./app_code_program_step_line_press_words.mjs";
 import { app_code_step_reasons_told } from "./app_code_step_reasons_told.mjs";
@@ -317,24 +318,14 @@ export function app_code_program_step_through_generic(
       }
       let row = list_get(rows, line_index);
       let text = list_get(shown, line_index);
-      let written = list_get(lines, line_index);
       html_clear(row);
       let drawn = [];
       let at = 0;
       for (let k = 0; less_than(k, list_size(pieces)); k++) {
         let piece = list_get(pieces, k);
         let from = property_get(piece, "from");
-        let to = property_get(piece, "to");
         let from_now = position_now(line_index, from);
-        let left18 = list_size(pieces);
-        let right6 = subtract(left18, 1);
-        let last = equal(k, right6);
-        let left19 = text_size(text);
-        let left20 = text_size(written);
-        let right7 = subtract(left20, to);
-        let to_now = last
-          ? subtract(left19, right7)
-          : position_now(line_index, to);
+        let to_now = piece_to_now(line_index, k);
         let text6 = text_slice(text, at, from_now);
         html_span_text(row, text6);
         let text7 = text_slice(text, from_now, to_now);
@@ -381,17 +372,75 @@ export function app_code_program_step_through_generic(
     let r2 = text_size(before);
     return r2;
   }
+  function piece_to_now(line_index, k) {
+    "where the end of a line's piece stands in the line as it reads now; the last piece's end is found from the end of the line, since a piece written the long way grows and what follows it does not";
+    let pieces = list_get(row_pieces, line_index);
+    let piece = list_get(pieces, k);
+    let to = property_get(piece, "to");
+    let left18 = list_size(pieces);
+    let b3 = subtract(left18, 1);
+    if (less_than(k, b3)) {
+      let r4 = position_now(line_index, to);
+      return r4;
+    }
+    let text = list_get(shown, line_index);
+    let written = list_get(lines, line_index);
+    let left19 = text_size(text);
+    let left20 = text_size(written);
+    let right6 = subtract(left20, to);
+    let difference = subtract(left19, right6);
+    return difference;
+  }
+  function lit_piece_now(line_index) {
+    "where the piece standing coloured on this line stands now, or null when no piece on it is coloured";
+    let lit_line = property_get(state, "lit_line");
+    let b10 = equal(lit_line, line_index);
+    if (not(b10)) {
+      return null;
+    }
+    let pieces = list_get(row_pieces, line_index);
+    let lit_from = property_get(state, "lit_from");
+    for (let k = 0; less_than(k, list_size(pieces)); k++) {
+      let piece = list_get(pieces, k);
+      let left22 = property_get(piece, "from");
+      if (equal(left22, lit_from)) {
+        let r5 = {
+          from_now: position_now(line_index, lit_from),
+          to_now: piece_to_now(line_index, k),
+        };
+        return r5;
+      }
+    }
+    return null;
+  }
   function row_piece(line_index, from, to) {
     "the line written again as three pieces, the middle one from to to, handed back so a copy of it can be sent somewhere; the line looks as it did";
+    "2026-11-04, at the human's asking: a part of a line stays coloured for as long as it is what is running, as a whole line does. A whole line keeps its colour on the row, which writing its words again does not touch, while a part's is on its span, so when what is written over sits inside the coloured part, the colour is held by a span around it, and shows behind the value as it fades and slides";
     let row = list_get(rows, line_index);
     let text = list_get(shown, line_index);
     html_clear(row);
-    let text3 = text_slice(text, 0, from);
+    let lit = lit_piece_now(line_index);
+    let inside =
+      null_not_is(lit) &&
+      less_than_equal(property_get(lit, "from_now"), from) &&
+      less_than_equal(to, property_get(lit, "to_now"));
+    let holder_from = inside ? property_get(lit, "from_now") : from;
+    let holder_to = inside ? property_get(lit, "to_now") : to;
+    let text3 = text_slice(text, 0, holder_from);
     html_span_text(row, text3);
-    let text4 = text_slice(text, from, to);
-    let piece = html_span_text(row, text4);
-    let text5 = text_skip(text, to);
-    html_span_text(row, text5);
+    let holder = html_span_text(row, "");
+    if (inside) {
+      let color = property_get(state, "lit_color");
+      html_style_background_color_set(holder, color);
+    }
+    let text4 = text_slice(text, holder_from, from);
+    html_span_text(holder, text4);
+    let text5 = text_slice(text, from, to);
+    let piece = html_span_text(holder, text5);
+    let text9 = text_slice(text, to, holder_to);
+    html_span_text(holder, text9);
+    let text10 = text_skip(text, holder_to);
+    html_span_text(row, text10);
     return piece;
   }
   function comment_draw(line_index, name, value_text, part) {
@@ -1013,6 +1062,7 @@ export function app_code_program_step_through_generic(
       }
       row_text_set(line_index, evaluated);
       list_set(replaced, line_index, done_after);
+      rows_pieces_draw();
       return;
     }
     if (equal(kind, "expand")) {
@@ -1032,6 +1082,7 @@ export function app_code_program_step_through_generic(
       await piece_rewrite(line_index, compound_from, compound_to, long);
       row_text_set(line_index, long_line);
       list_set(bases, line_index, long_line);
+      rows_pieces_draw();
       return;
     }
     if (equal(kind, "declare")) {
