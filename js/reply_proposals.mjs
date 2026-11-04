@@ -21,6 +21,7 @@ import { reply_prayer_lead_provider } from "./reply_prayer_lead_provider.mjs";
 import { reply_response_nothing_to_give } from "./reply_response_nothing_to_give.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { reply_prayer_closing } from "./reply_prayer_closing.mjs";
+import { reply_response_whatsapp } from "./reply_response_whatsapp.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -1676,11 +1677,17 @@ export function reply_proposals() {
     fn_name("reply_cant_or_cannot"),
     "();",
   ]);
+  let whatsapp_line = reply_response_whatsapp();
   let contact_street = {
-    title: "read a phone number and a short street, town and cantonment",
+    title:
+      "answer a phone number with the WhatsApp line, and read a short street, town and cantonment after it",
     fn: fn_name("app_shared_message_reply_choices"),
     whole: [
       fn_name("reply_contact_address"),
+      fn_name("reply_phone_number"),
+      fn_name("reply_phone_codes_lengths"),
+      fn_name("reply_digits_exactly"),
+      fn_name("reply_response_whatsapp"),
       fn_name("reply_letters_at_most"),
       fn_name("reply_cantonment"),
       fn_name("reply_cant_or_cannot"),
@@ -1699,21 +1706,27 @@ export function reply_proposals() {
     cases: [
       {
         from: "",
+        message: "92 03001234567",
+        answered: true,
+        outputs: [whatsapp_line],
+      },
+      {
+        from: "",
         message: "contact 92 03001234567 M Main Road",
         answered: true,
-        outputs: [],
+        outputs: [whatsapp_line],
       },
       {
         from: "",
         message: "contact 92 03001234567 M Main Road Karachi Cant",
         answered: true,
-        outputs: [],
+        outputs: [whatsapp_line],
       },
       {
         from: "",
         message: "contact 92 03001234567 M Main Road Karachi Cantonment",
         answered: true,
-        outputs: [],
+        outputs: [whatsapp_line],
       },
       {
         from: "",
@@ -1726,15 +1739,17 @@ export function reply_proposals() {
         message:
           "I'mpastorSamuelAndrewMarkFromKarachiPakistancontact 92 03001234567MMainRoadKarachiCant",
         answered: true,
-        outputs: named_and_located,
+        outputs: [...named_and_located, whatsapp_line],
       },
     ],
     decide: [
-      "the street name can be any letters, up to 12. Spaces are gone before a rule reads a message, so counting letters is the only limit available. Contact 92 and my children are hungry road is too long and gets no reply. Contact 92 help me road fits, and gets a reply with no lines, so nobody reads it. It needs the word contact, digits and a road word together. Is that risk acceptable? The rejected reading was any length, and that answered the hungry children message.",
+      "a number counts as a phone number when it is a country calling code, maybe a 0, then as many digits as that code allows. So 92 alone or 92 123 is not one, and those messages still reach you. The table of codes and lengths is written from memory, not copied from a published list, so a row may be wrong. A wrong row means a real number gets no line, or a wrong length gets one. The rejected reading was any run of digits, which would answer a year or a Bible verse number.",
+      "a phone number on its own, with no word contact, now gets the WhatsApp line too. The rejected reading was requiring the word contact, which would leave a bare number with nobody answering it.",
+      "the street name can be any letters, up to 12. Spaces are gone before a rule reads a message, so counting letters is the only limit available. It now needs a whole phone number before it and a road word after it, so contact 92 help me road gets no reply any more. The rejected reading was any length, and that answered a message about hungry children.",
       "the open word gate does not watch this new piece. It only lists pieces that take any word at all, and it has no way to record your yes. If I listed this piece, the gate would go red the moment you approved. Your yes on this card is the record instead.",
       "cant after a listed town now means a cantonment. Everywhere else it still means can't, so an address with cant and no town gets the change the wording line. The rejected reading was making the address win everywhere, which would need a road word check on every cant.",
-      "a contact line says nothing back, because no reply is written for it. The last test gets only the name and location lines.",
-      "approve this last, after the two cards before it. The last test is the pastor message rewritten with made-up details, and it only gets both lines once all three are in. Measured with all three on the real message: all four copies answered, two lines each, and no saved test changes except this one.",
+      "the WhatsApp line is the same words your own WhatsApp reply button sends, and it stands where the number stood. So the last test gets the name line, the location line, then the WhatsApp line.",
+      "the two cards before this one are already in. The last test is the pastor message rewritten with made-up details. Measured on the real message: all four copies answered, three lines each, and no saved test changes except this one.",
     ],
   };
   let proposals = [
