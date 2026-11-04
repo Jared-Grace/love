@@ -12,6 +12,8 @@ import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
 import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
+import { app_code_lesson_for } from "./app_code_lesson_for.mjs";
+import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 export function app_code_lesson_groups() {
   arguments_assert(arguments, 0);
   ("the groups the home list folds its lessons into, each named and starting at the lesson given, and running until the next one starts - the last runs to the end of the list");
@@ -22,6 +24,7 @@ export function app_code_lesson_groups() {
   ("2026-10-28: Looping starts at Step by step: While, at the human's asking, since that lesson now comes straight before While and had fallen under Branching");
   ("2026-10-31: Looping starts at While again, the step lessons having become the last quiz of each while lesson");
   ("2026-10-29: Branching split in three, at the human's asking: Branching: if, one if; Several branches: else, from the brace-reading lessons before two ifs in a row, through if ... else; Nested branches, from an if inside an if, through else if, which is an if inside an else written shorter. No lesson moved; the order already taught several branches before nested ones. Not picked: else if as a group of its own, four small groups for one idea. Then Multiple branches rather than Several, at the human's asking.");
+  ("2026-11-04: Looping: for starts at For, at the human's asking. More looping: while starts at the while lessons that follow For, so those are not filed under for. Not picked: leaving them in the for group, which would name them wrongly; moving For after them, since For comes first for the easiest learning curve, the human's stated goal.");
   let groups = [
     {
       parts: ["Identifiers"],
@@ -102,6 +105,14 @@ export function app_code_lesson_groups() {
     {
       parts: ["Looping: ", "while"],
       lesson: app_code_lesson_while,
+    },
+    {
+      parts: ["Looping: ", "for"],
+      lesson: app_code_lesson_for,
+    },
+    {
+      parts: ["More looping: ", "while"],
+      lesson: app_code_lesson_while_two_names,
     },
   ];
   return groups;
