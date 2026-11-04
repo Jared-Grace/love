@@ -3,10 +3,11 @@ import { js_parse } from "./js_parse.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { error } from "./error.mjs";
+import { app_code_program_trace_for_start_split_or_null } from "./app_code_program_trace_for_start_split_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { app_code_program_trace_statement } from "./app_code_program_trace_statement.mjs";
 import { app_code_program_trace_line } from "./app_code_program_trace_line.mjs";
 import { app_code_program_trace_statement_piece } from "./app_code_program_trace_statement_piece.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -36,6 +37,11 @@ export function app_code_program_trace(code) {
         message: "this program runs too many lines to follow",
         code,
       });
+    }
+    let split = app_code_program_trace_for_start_split_or_null(node);
+    if (null_not_is(split)) {
+      statements_run(split);
+      return;
     }
     let actions = [];
     let run = app_code_program_trace_statement(node, actions, code, values);

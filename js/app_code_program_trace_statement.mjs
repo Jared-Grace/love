@@ -44,7 +44,7 @@ export function app_code_program_trace_statement(node, actions, code, values) {
     let run2 = app_code_program_trace_while(node, actions, code, values);
     return run2;
   }
-  ("2026-11-01, for the first for lesson: a for holding only its condition, as for (; n < 9;) does, runs as a while does, and a ForStatement keeps its condition and its { ... } where a WhileStatement does, so the while's own run is used. A for with a start is not run here yet, since that runs at another moment");
+  ("2026-11-01, for the first for lesson: a for holding only its condition, as for (; n < 9;) does, runs as a while does, and a ForStatement keeps its condition and its { ... } where a WhileStatement does, so the while's own run is used. A for with a start does not reach here, since the trace runs its start by itself first and hands over the same for with no start");
   let start_none =
     equal(type, "ForStatement") && null_is(property_get(node, "init"));
   if (start_none) {
