@@ -1,6 +1,6 @@
 import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_statement_run_or_null } from "./js_statement_run_or_null.mjs";
+import { js_statement_block_or_null } from "./js_statement_block_or_null.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -38,7 +38,7 @@ export function js_statement_runs(node) {
   let runs = [];
   for (let name of names) {
     let held = property_or_null(node, name);
-    let run = js_statement_run_or_null(held);
+    let run = js_statement_block_or_null(held);
     let there = null_not_is(run);
     if (there) {
       list_add(runs, run);
