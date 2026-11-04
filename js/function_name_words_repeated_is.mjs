@@ -6,10 +6,10 @@ import { subtract } from "./subtract.mjs";
 import { list_part_repeats_is } from "./list_part_repeats_is.mjs";
 export function function_name_words_repeated_is(f_name) {
   "$plain f_name";
-  "Whether a name says the same segment of words twice in a row, however many words long that segment is.";
-  "THE ONE-WORD CASE ALREADY HAD A READING OF ITS OWN, and this is the same question with the length let go. A name is its parts joined, so a segment of parts that repeats the segment before it narrows exactly as little as a single word repeating a single word - the reader has already been told all of it.";
-  "THE LONGER SEGMENTS ARE THE ONES A COMMAND WRITES rather than a person. A person does not type a name that says four words twice; a command that joins a holder's name to a piece already spelled with that holder's name in it does, and what comes out reads as a name somebody chose. Three of those were written in one sitting, and the one-word reading walked past every one of them, because the two words either side of the seam were different words.";
-  "THE SEGMENTS MUST BE SIDE BY SIDE. A word coming back later in a name is ordinary and often right, because the later part narrows what the earlier one opened; only a segment immediately saying itself again is certainly carrying nothing.";
+  "Whether a name says the same words twice in a row, however many words that is.";
+  "THE ONE-WORD CASE ALREADY HAD A READING OF ITS OWN, and this is the same question with the length let go. A name is its parts joined, so several parts that repeat the ones just before them narrow exactly as little as a single word repeating a single word - the reader has already been told all of it.";
+  "THE LONGER REPEATS ARE THE ONES A COMMAND WRITES rather than a person. A person does not type a name that says four words twice; a command that joins a holder's name to a piece already spelled with that holder's name in it does, and what comes out reads as a name somebody chose. Three of those were written in one sitting, and the one-word reading walked past every one of them, because the two words either side of the seam were different words.";
+  "THE REPEATS MUST BE SIDE BY SIDE. A word coming back later in a name is ordinary and often right, because the later part narrows what the earlier one opened; only words immediately saying themselves again are certainly carrying nothing.";
   arguments_assert(arguments, 1);
   let parts = function_name_to_parts(f_name);
   let count = list_size(parts);
