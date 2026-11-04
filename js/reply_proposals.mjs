@@ -1683,9 +1683,7 @@ export function reply_proposals() {
       fn_name("reply_contact_address"),
       fn_name("reply_letters_at_most"),
       fn_name("reply_cantonment"),
-      fn_name("reply_cant"),
       fn_name("reply_cant_or_cannot"),
-      fn_name("text_apostrophes"),
     ],
     diff: [
       contact_digits_list_removed,
@@ -1735,7 +1733,6 @@ export function reply_proposals() {
       "the street name can be any letters, up to 12. Spaces are gone before a rule reads a message, so counting letters is the only limit available. Contact 92 and my children are hungry road is too long and gets no reply. Contact 92 help me road fits, and gets a reply with no lines, so nobody reads it. It needs the word contact, digits and a road word together. Is that risk acceptable? The rejected reading was any length, and that answered the hungry children message.",
       "the open word gate does not watch this new piece. It only lists pieces that take any word at all, and it has no way to record your yes. If I listed this piece, the gate would go red the moment you approved. Your yes on this card is the record instead.",
       "cant after a listed town now means a cantonment. Everywhere else it still means can't, so an address with cant and no town gets the change the wording line. The rejected reading was making the address win everywhere, which would need a road word check on every cant.",
-      "the marks people type for an apostrophe come from one list. Today only the straight one reaches the rules, because the others are removed first, so they cannot match yet.",
       "a contact line says nothing back, because no reply is written for it. The last test gets only the name and location lines.",
       "approve this last, after the two cards before it. The last test is the pastor message rewritten with made-up details, and it only gets both lines once all three are in. Measured with all three on the real message: all four copies answered, two lines each, and no saved test changes except this one.",
     ],

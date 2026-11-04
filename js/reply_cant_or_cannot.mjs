@@ -1,6 +1,5 @@
-import { reply_cant } from "./reply_cant.mjs";
-import { reply_on_match } from "./reply_on_match.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
+import { reply_on_match } from "./reply_on_match.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 export function reply_cant_or_cannot() {
   "Somebody saying they cannot do something: can't, cant or cannot.";
@@ -10,9 +9,10 @@ export function reply_cant_or_cannot() {
       possibility.cost = (possibility.cost || 0) + 1;
     }
   }
-  let cant = reply_cant();
+  let cant = reply_sequence(["can", "t"]);
   let cant_dearer = reply_on_match(cant, [dearer]);
+  let marked = reply_sequence(["can", "'", "t"]);
   let cannot = reply_sequence(["can", "no", "t"]);
-  let either = reply_choice([cant_dearer, cannot]);
+  let either = reply_choice([cant_dearer, marked, cannot]);
   return either;
 }
