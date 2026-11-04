@@ -1,5 +1,5 @@
 import { list_size_equal } from "./list_size_equal.mjs";
-import { js_statement_runs_differing_or_null } from "./js_statement_runs_differing_or_null.mjs";
+import { js_statement_blocks_differing_or_null } from "./js_statement_blocks_differing_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statement_runs } from "./js_statement_runs.mjs";
@@ -17,7 +17,7 @@ export function js_statement_inner_change_named_or_null(before, after) {
   "A BRANCH ADDED OR TAKEN AWAY IS NOT AN EDIT INSIDE ONE. The counts differing is an else appearing or a catch going, which is a change to the statement itself, and the runs on either side no longer line up to be compared at all.";
   "EVERY RUN MATCHING IS THE HEAD HAVING MOVED - the condition, the thing looped over - and that too belongs to the caller rather than here, because nothing inside changed for this to name.";
   arguments_assert(arguments, 2);
-  let differing = js_statement_runs_differing_or_null(before, after);
+  let differing = js_statement_blocks_differing_or_null(before, after);
   let apart = null_is(differing);
   if (apart) {
     return null;

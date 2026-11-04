@@ -9,7 +9,7 @@ import { list_add } from "./list_add.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-export function js_statement_runs_differing_or_null(before, after) {
+export function js_statement_blocks_differing_or_null(before, after) {
   "Which of the runs held inside one statement came back written differently, given the same statement before and after an edit - or nothing at all, where the two do not line up run for run and no such comparison can be made.";
   "TWO STATEMENTS LINE UP OR THEY DO NOT, AND THAT IS A SEPARATE QUESTION FROM WHAT MOVED. Different kinds of statement hold different runs, and the same kind holds a different number of them once an else appears or a catch goes - in either case there is no pairing to compare across, so an empty answer would be a lie and nothing is the truthful one.";
   "AN EMPTY LIST IS AN ANSWER AND NOT A FAILURE. Two statements that line up run for run with no run differing are two statements whose heads moved: the condition, the thing looped over. That is a real finding and the caller that wants to name it needs it told apart from the case where nothing could be compared, which is the whole reason this says nothing rather than nothing-found.";
