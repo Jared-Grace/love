@@ -43,6 +43,26 @@
         "source": "/designs_universal.html",
         "destination": "/design",
         "type": 301
+      },
+      {
+        "source": "/autopray",
+        "destination": "/pray_auto",
+        "type": 301
+      },
+      {
+        "source": "/autopray.html",
+        "destination": "/pray_auto",
+        "type": 301
+      },
+      {
+        "source": "/emoji_bible",
+        "destination": "/bible_emoji",
+        "type": 301
+      },
+      {
+        "source": "/emoji_bible.html",
+        "destination": "/bible_emoji",
+        "type": 301
       }
     ],
     "headers": [
