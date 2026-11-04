@@ -15,6 +15,12 @@ export function reply_cases_no_reply_yet() {
     "contact 92 help me road",
     "contact 92 123 main road",
     "I am pastor Samuel my wife is sick from Kenya",
+    "cant",
+    "can't",
+    "cannot",
+    "I cannot come",
+    "hello cant",
+    "contact 92 03001234567 M Main Road Cant",
   ];
   return messages;
 }
