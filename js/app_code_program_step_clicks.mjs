@@ -1,6 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { app_code_program_step_trace } from "./app_code_program_step_trace.mjs";
+import { app_code_program_step_noun } from "./app_code_program_step_noun.mjs";
+import { app_code_program_step_complete_words } from "./app_code_program_step_complete_words.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_value_code } from "./js_value_code.mjs";
@@ -8,9 +10,10 @@ import { property_exists } from "./property_exists.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_trim } from "./text_trim.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { null_is } from "./null_is.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export function app_code_program_step_clicks(code) {
@@ -20,6 +23,8 @@ export function app_code_program_step_clicks(code) {
   ("Each step is a list of pieces, each piece a text and its kind: words, code, or button - what is pressed as a button on the screen is drawn as one, at the human's asking the same day, so the learner sees the thing to press");
   let lines = text_split_newline(code);
   let traced = app_code_program_step_trace(code);
+  let noun = app_code_program_step_noun(traced);
+  let complete_words = app_code_program_step_complete_words(noun);
   let options = {
     declare: "Declare a variable",
     evaluate: "Solve an expression",
@@ -81,8 +86,12 @@ export function app_code_program_step_clicks(code) {
     let line = property_get(traced_entry, "line");
     let message = list_get(lines, line);
     let trimmed = text_trim(message);
-    let v11 = words("Choose the line ");
-    let v12 = code_piece(trimmed);
+    ("2026-11-04: where only a piece of the line runs, the piece is what is chosen, so it is what is named");
+    let piece = property_get_or(traced_entry, "piece", null);
+    let v11 = words(null_is(piece) ? "Choose the line " : "Choose the code ");
+    let v12 = code_piece(
+      null_is(piece) ? trimmed : property_get(piece, "text"),
+    );
     list_add(clicks, [v11, v12]);
     let actions = property_get(traced_entry, "actions");
     let k = 0;
@@ -110,7 +119,7 @@ export function app_code_program_step_clicks(code) {
       choose_add("This program is complete");
       continue;
     }
-    choose_add("This line is complete; continue to the next line");
+    choose_add(complete_words);
   }
   if (list_empty_is(traced)) {
     choose_add("The program is complete");

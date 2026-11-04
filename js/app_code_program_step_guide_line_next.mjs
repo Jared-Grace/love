@@ -1,10 +1,12 @@
-import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
+import { list_get_property } from "./list_get_property.mjs";
 import { list_get } from "./list_get.mjs";
-import { property_get } from "./property_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { null_is } from "./null_is.mjs";
 import { text_trim } from "./text_trim.mjs";
+import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -13,6 +15,8 @@ import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop_keyword.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { add } from "./add.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 export function app_code_program_step_guide_line_next(lines, trace, index) {
   arguments_assert(arguments, 3);
@@ -26,7 +30,12 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
   }
   let line = list_get_property(trace, index, "line");
   let message = list_get(lines, line);
-  let text = text_trim(message);
+  ("2026-11-04: where only a piece of the line runs, the piece is what is chosen");
+  let entry_due = list_get(trace, index);
+  let piece_due = property_get_or(entry_due, "piece", null);
+  let text = null_is(piece_due)
+    ? text_trim(message)
+    : property_get(piece_due, "text");
   let choose = ["Choose: ", text];
   if (equal(index, 0)) {
     let r2 = [
@@ -142,6 +151,35 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
   }
   let line_before = property_get(before, "line");
   let right = add(line_before, 1);
+  if (null_not_is(piece_due)) {
+    ("2026-11-04: a for with code after its second ; goes three ways, and none of them is the next line down or back to the top of the for alone");
+    if (equal(line, line_before)) {
+      let r14 = [
+        ["That code is done, so the computer checks the condition again"],
+        choose,
+      ];
+      return r14;
+    }
+    let b = property_exists(entry_due, "condition");
+    if (not(b)) {
+      let r17 = app_code_braces_dots();
+      let r15 = [
+        [
+          "Nothing more runs inside this ",
+          r17,
+          ", so the computer goes back up to the code after the second ",
+          ";",
+        ],
+        choose,
+      ];
+      return r15;
+    }
+    let r16 = [
+      ["The line under it runs next, and the condition runs first"],
+      choose,
+    ];
+    return r16;
+  }
   if (equal(line, right)) {
     let r5 = [["The line under it runs next"], choose];
     return r5;
