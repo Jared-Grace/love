@@ -5,10 +5,12 @@ import { less_than } from "./less_than.mjs";
 import { error } from "./error.mjs";
 import { app_code_program_trace_statement } from "./app_code_program_trace_statement.mjs";
 import { app_code_program_trace_line } from "./app_code_program_trace_line.mjs";
+import { app_code_program_trace_piece } from "./app_code_program_trace_piece.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
-import { property_set } from "./property_set.mjs";
 export function app_code_program_trace(code) {
   arguments_assert(arguments, 1);
   ("every line of a program in the order the computer runs it, each with what running it does, in order: a name declared, an expression evaluated, a value assigned to a name, a value logged to the console. A line is done once its last thing is done. Asked for by the human 2026-10-13, so a learner can do every step of the running themselves before being asked what a program logs.");
@@ -41,6 +43,10 @@ export function app_code_program_trace(code) {
       line,
       actions,
     };
+    let piece = app_code_program_trace_piece(node, code);
+    if (null_not_is(piece)) {
+      property_set(entry, "piece", piece);
+    }
     list_add(trace, entry);
     let type = property_get(node, "type");
     if (

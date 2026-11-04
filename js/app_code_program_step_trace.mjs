@@ -2,6 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_program_step_actions_solve_whole } from "./app_code_program_step_actions_solve_whole.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { not } from "./not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
@@ -30,7 +32,11 @@ export function app_code_program_step_trace(code) {
     );
     let line = property_get(traced_entry, "line");
     let actions = grouped;
-    if (list_includes(changed, line)) {
+    ("2026-11-04: the code after a for's second ; shares the for's line, and runs while what the condition came to still stands there, so it does not put the line back; only the for's condition does, as it comes round, and it looks back to when it last ran");
+    let update_is =
+      property_exists(traced_entry, "piece") &&
+      not(property_exists(traced_entry, "alternate"));
+    if (list_includes(changed, line) && not(update_is)) {
       let lines = [line];
       let alternate = property_get_or_null(traced_entry, "alternate");
       if (equal(alternate, "loop")) {
@@ -52,7 +58,9 @@ export function app_code_program_step_trace(code) {
         ...grouped,
       ];
     }
-    list_add(ran, line);
+    if (not(update_is)) {
+      list_add(ran, line);
+    }
     for (let action of grouped) {
       let kind = property_get(action, "kind");
       if (equal(kind, "evaluate") || equal(kind, "expand")) {
