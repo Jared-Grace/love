@@ -303,7 +303,7 @@
     { "command": "grep -l -a x web/dev/a.js | xargs -r ls -la", "decision": "allow", "why": "xargs -r only skips the run on empty input; the command and where its arguments go are unchanged, so it is checked as ls" },
     { "command": "grep -l x f | xargs -r rm", "decision": "ask", "why": "xargs -r is transparent, so the command behind it is judged, and rm is not allowed" },
     { "command": "grep -l x f | xargs -r -I{} ls {}", "decision": "ask", "why": "-I moves the input anywhere in the command, so a flag beyond the weighed ones still refuses" },
-    { "command": "for u in a b; do echo \"$(rm $u)\"; done", "decision": "silent", "why": "a verb not allowed on its own stays refused inside a written-out substitution" },
+    { "command": "for u in a b; do echo \"$(rm $u)\"; done", "decision": "deny", "reason_includes": "Nothing ran", "why": "a verb not allowed on its own stays refused inside a written-out substitution, and the loop comes back to the agent" },
     { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/ -e 'ls'", "decision": "deny", "reason_includes": "sanctioned shape", "why": "sandbox shape but read scope widened past the repo: near-miss deny hands Claude the canonical form instead of prompting the human" },
     { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos -e 'ls'", "decision": "deny", "reason_includes": "sanctioned shape", "why": "eval form pointed at the repo's PARENT dir - near-miss deny" },
     { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos scripts/temp/x.mjs", "decision": "deny", "reason_includes": "sanctioned shape", "why": "script form pointed at the repo's PARENT dir - near-miss deny" },
