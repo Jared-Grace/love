@@ -26,6 +26,7 @@ export function app_code_lesson_for() {
   ("Each screen has four programs, one from each of four counts of runs - none, one, two and three - with the numbers of While, which already keep n from landing on the number it is compared against, except in the backwards wrong program.");
   ("Reading forwards, the wrong answers are n after one run fewer, one run more, and where n starts; reading backwards, the wrong program is compared against one more than the answer, so it runs once more - as in While.");
   ("The writing is a first draft by Claude 2026-11-01.");
+  ("2026-11-04: the sentence introducing the for is the human's wording, which names the condition only after showing it.");
   let less = js_operator_less_than_symbol();
   let plus = js_operator_plus_symbol();
   let name = "n";
@@ -75,9 +76,15 @@ export function app_code_lesson_for() {
     app_code_div_cycle_code(box_two, [
       "A ",
       "for",
-      " with only its condition, between two ",
+      " written this way - with ",
+      condition,
+      " in between two ",
       ";",
-      ", does the same:",
+      " - does the same (the ",
+      condition,
+      " is called the condition of the ",
+      "for",
+      "):",
     ]);
     let for_lines = program_lines(1, 9, 3);
     app_code_code_lines_writes_out(box_two, for_lines, "10");
