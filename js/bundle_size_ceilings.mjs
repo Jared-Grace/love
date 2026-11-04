@@ -59,13 +59,14 @@ export function bundle_size_ceilings() {
   ("What this page drifts on is how many FUNCTIONS it reaches, and not how many previews are registered, which is the thing the paragraph above got wrong by being right about the previews. The built bundle holds a hundred and five modules in thirty four thousand eight hundred and eighty bytes, about three hundred and thirty each once the builder's wrapper and the function's own real name are counted, and a fetcher is one line of that. So fourteen KiB of headroom against a page of eighteen was about forty functions' worth, and reaching forty more functions is what spent it - a preview really does cost a visitor who does not open it almost nothing.");
   ("The choice is a person's and it is the same three as the bible readers'. Raise it. Or take the sandbox off this list the way they were taken off, because the reason given for them is the reason here: a page that drifts with the work charges a person a measurement at every raise forever, and the step gate catches a tree arriving without charging anybody for the drifting. Or cut what the entry reaches, which is the only one that keeps the page small rather than keeping the number honest. What weighs against the second is that this page, unlike those, was DESIGNED small and deliberately brought down from a hundred and forty five KiB to eighteen - this line is the only thing recording that, and nothing else would notice it being undone a function at a time. Nothing was done, for the reason written down above: raising a ceiling to fit is the one move that must never be made by whoever is trying to get past it.");
   ("sandbox is over again at thirty five point five KiB on the sixth of October, and the paragraph above is wrong in one specific way that is worth fixing rather than repeating: a preview a visitor does not open does NOT cost them nothing at all, and a fetcher is not one line of the page. Measured in the BUILT bundle rather than in source, the twenty four registry fetchers weigh about two hundred and sixty five bytes each and six and a half KiB between them, which is eighteen per cent of the whole page, and every visitor pays all of it whichever single preview they came for. So this ceiling is still being climbed once per registration, at two hundred and sixty five bytes a registration instead of a whole tree - the fetch rewrite flattened the slope by two orders of magnitude and did not make it flat. Of the seventeen and a half KiB climbed since the page came down to eighteen, about four and a half is the seventeen previews registered since, which is by itself more than the whole two point seven KiB of overage, and the remaining thirteen is the forty-odd further functions reached that the paragraph above already found. The slope cannot be flattened any further, because this registry has to spell each file outright for the builder to set that file aside, which is written down in the registry itself. And none of this can be found by weighing source: the builder strips the prose, so a function's source size says almost nothing about what it weighs in the page, and ranked by source bytes the heaviest thing this page carries is the registry's own explanation of itself.");
+  ("index went from 50 to 60 on 2026-11-04, asked for by name by the person, at 57.8 KiB. Nothing heavy arrived: about 35 small pieces and 8.5 KB, the largest 1.6 KB carrying saved settings over from old app names. app and design are the addresses apps_all and designs_universal were renamed to; these names are plain text and do not follow a rename, so until this line changed the gate was weighing the old copies, which no longer change.");
   let ceilings = [
     {
       name: "index",
-      kib: 50,
+      kib: 60,
     },
     {
-      name: "apps_all",
+      name: "app",
       kib: 50,
     },
     {
@@ -77,7 +78,7 @@ export function bundle_size_ceilings() {
       kib: 32,
     },
     {
-      name: "designs_universal",
+      name: "design",
       kib: 50,
     },
     {
