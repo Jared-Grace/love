@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_statement_runs } from "./js_statement_runs.mjs";
+import { js_statement_blocks } from "./js_statement_blocks.mjs";
 import { js_unparse_multiple } from "./js_unparse_multiple.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { property_get } from "./property_get.mjs";
@@ -21,8 +21,8 @@ export function js_statement_blocks_differing_or_null(before, after) {
   if (not(kinds_same)) {
     return null;
   }
-  let runs_before = js_statement_runs(before);
-  let runs_after = js_statement_runs(after);
+  let runs_before = js_statement_blocks(before);
+  let runs_after = js_statement_blocks(after);
   let size = list_size(runs_before);
   let right = list_size(runs_after);
   let counts_same = equal(size, right);

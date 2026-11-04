@@ -2,7 +2,7 @@ import { list_size_equal } from "./list_size_equal.mjs";
 import { js_statement_blocks_differing_or_null } from "./js_statement_blocks_differing_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_statement_runs } from "./js_statement_runs.mjs";
+import { js_statement_blocks } from "./js_statement_blocks.mjs";
 import { js_statement_kind_word } from "./js_statement_kind_word.mjs";
 import { js_statements_change_named } from "./js_statements_change_named.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -27,8 +27,8 @@ export function js_statement_inner_change_named_or_null(before, after) {
     return null;
   }
   let place = list_first(differing);
-  let runs_before = js_statement_runs(before);
-  let runs_after = js_statement_runs(after);
+  let runs_before = js_statement_blocks(before);
+  let runs_after = js_statement_blocks(after);
   let before2 = list_get(runs_before, place);
   let after2 = list_get(runs_after, place);
   let inner = js_statements_change_named(before2, after2);

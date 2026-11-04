@@ -5,7 +5,7 @@ import { property_or_null } from "./property_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
-export function js_statement_runs(node) {
+export function js_statement_blocks(node) {
   "Every run of statements one statement holds directly under itself, in the order the properties holding them are named here.";
   "A FUNCTION IS NOT ON THE LIST, AND THAT IS THE POINT OF THE LIST. A function declaration holds its body under the same property name a loop does, so anything reading by property name alone would walk into one and call the edit inside it an edit to a block. Two functions standing at the same place under different names are one function taken out and another put in, and the reading that says so is the one beside this - naming this a block would take that answer away from it.";
   "THE RUNS COME BACK IN A FIXED ORDER, so the same branch of the same statement is at the same index on both sides of a comparison. Read out of the properties as they happen to be written, an if whose else was authored before its then would line its two branches up against the wrong two.";
