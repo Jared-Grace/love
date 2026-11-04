@@ -5,7 +5,6 @@ import { null_is } from "./null_is.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -49,12 +48,11 @@ export function app_code_program_trace_wrong_say(question, answer, choice) {
       words = words + ", then ";
     }
   }
-  let lines = text_split_newline(question);
   for (let entry of trace) {
     let actions = property_get(entry, "actions");
     let condition = property_get_or(entry, "condition", null);
     if (null_not_is(condition)) {
-      ("an if's line says what its condition comes to and what that means for the { } after it; the condition is read off the line as written, between its first ( and its last ), so a name in it is shown as the learner wrote it");
+      ("an if's line says what its condition comes to and what that means for the { } after it; the condition is as the trace read it off the statement, so a name in it is shown as the learner wrote it");
       let index = property_get(entry, "line");
       let condition_text = property_get(entry, "condition_text");
       then_add();

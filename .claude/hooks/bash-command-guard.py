@@ -5162,15 +5162,23 @@ def refused_piece_is_curl(command, safe_verbs, safe_exact_commands):
 
     It only turns a prompt into a refusal, so it can never let anything run.
     The human can still run any curl themselves."""
+    return refused_piece_program(command, safe_verbs, safe_exact_commands) == "curl"
+
+
+def refused_piece_program(command, safe_verbs, safe_exact_commands):
+    """The program the refused part of `command` runs, or None when no part can
+    be singled out. It sees through a `$(...)`, which the deny floors cannot:
+    they read a command with statements_words, and that yields nothing at all
+    for a command holding one."""
     try:
         found = untrusted_piece(command, safe_verbs, safe_exact_commands)
     except Exception:
-        return False
+        return None
     if found is None:
-        return False
+        return None
     words, _why = found
     if words is None:
-        return False
+        return None
     plain = list(words)
     while plain and ASSIGN_RE.match(plain[0]):
         plain = plain[1:]
@@ -5179,7 +5187,9 @@ def refused_piece_is_curl(command, safe_verbs, safe_exact_commands):
         if not skip:
             break
         plain = plain[skip:]
-    return bool(plain) and os.path.basename(plain[0]) == "curl"
+    if not plain:
+        return None
+    return os.path.basename(plain[0])
 
 
 DISPATCHER_NAME_VARIABLE_DENY_REASON = (
@@ -5290,6 +5300,34 @@ def chain_trusted_and_one_blocked(command, safe_verbs, safe_exact_commands, piec
     if len(blocked) != 1 or not trusted:
         return None
     return trusted, blocked[0]
+
+
+def chain_substitution_refused_piece(command, safe_verbs, safe_exact_commands):
+    """The refused part of a long chain or loop holding a `$(...)`, as text, or
+    None.
+
+    chain_one_unknown_piece cannot read these: it needs a text split, and a
+    substitution has separators of its own. So this asks the tokenizer. The
+    permissive validator is for counting only and decides nothing; whether the
+    part is refused comes from untrusted_piece, which checks every substitution.
+
+    Only the first refused part can be named, so a second one comes back when
+    the agent runs what is left. That costs the agent a call and the human
+    nothing. A part the hook could not read stays with the human, since nothing
+    here could say what to do instead. Like every hand-back this only turns a
+    prompt into a refusal, so it cannot let anything run."""
+    if "$(" not in command:
+        return None
+    try:
+        tokens = tokenize(command, lambda inner: True, _literal_var_map(command))
+        found = untrusted_piece(command, safe_verbs, safe_exact_commands)
+    except Exception:
+        return None
+    if len(split_statements(tokens)) < CHAIN_ONE_UNKNOWN_PIECES_MINIMUM:
+        return None
+    if found is None or found[0] is None or found[1] is not None:
+        return None
+    return tokens_text(found[0])
 
 
 def ai_dispatcher_call_is(piece):
@@ -6446,6 +6484,25 @@ def main():
     if verb is not None and untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
         return decide("deny", (
             REWORD_DENY_LEAD
+            + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
+        ))
+
+    refused_program = refused_piece_program(command, safe_verbs, safe_exact_commands)
+    if refused_program in AWK_TEXT_TOOLS:
+        return decide("deny", awk_text_tool_deny_reason(refused_program))
+
+    substituted = chain_substitution_refused_piece(command, safe_verbs, safe_exact_commands)
+    if substituted is not None:
+        return decide("deny", (
+            "Nothing ran. Part of this chain or loop has no rule, so it comes "
+            "back to you rather than making the human read every line.\n"
+            f"  no rule of its own: {substituted}\n"
+            "Decide whether that part is needed at all: look for a named command "
+            "first (`node scripts/ai.mjs functions_search <words>`). A loop can "
+            "become a scripts/temp script run sandboxed. If the part is still "
+            "needed, run the rest as its own call and that part alone, where it "
+            "will ask the human, who then reads one short command. Only `cd` "
+            "carries between calls, and a later part may rely on an earlier one."
             + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
         ))
 
