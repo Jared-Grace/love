@@ -21,6 +21,10 @@ export function reply_cases_no_reply_yet() {
     "I cannot come",
     "hello cant",
     "contact 92 03001234567 M Main Road Cant",
+    "my name is",
+    "my name is hungry",
+    "I want others to join me",
+    "For in the word of the Lord it is written in the first John, verses 7 through 10:",
   ];
   return messages;
 }

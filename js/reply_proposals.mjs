@@ -1844,6 +1844,96 @@ export function reply_proposals() {
       "this alone does not answer the choir leader's messages. They need every part understood, and more cards are coming for the rest.",
     ],
   };
+  let verses_join = text_combine_multiple([
+    "   let join = ",
+    fn_name("reply_join_glory"),
+    "();",
+  ]);
+  let verses_add = text_combine_multiple([
+    "+  let verses = ",
+    fn_name("reply_bible_verses"),
+    "();",
+  ]);
+  let verses_closed_before = text_combine_multiple([
+    "-  let r = ",
+    fn_name("reply_prayers_closed"),
+    "(said_once);",
+  ]);
+  let verses_closed_prayers = text_combine_multiple([
+    "+  let prayed = ",
+    fn_name("reply_prayers_closed"),
+    "(said_once);",
+  ]);
+  let verses_closed_after = text_combine_multiple([
+    "+  let r = ",
+    fn_name("reply_bible_references_closed"),
+    "(prayed);",
+  ]);
+  let verses_message_commandment =
+    "And this is his commandment, that we should believe in the name of his Son Jesus Christ, and love one another, as he hath commanded us.";
+  let verses_message_passage =
+    "For in the word of the Lord it is written in the first John, verses 7 through 10: Beloved, let us love one another, for love is from God; and everyone who loves has been born of God and knows God. He who does not love does not know God, for God is love. In this was manifested the love of God among us, because God sent his only begotten Son into the world, that we might live through him. Herein is love, not that we loved God, but that he loved us, and sent his Son to be the propitiation for our sins.";
+  let verses_said = {
+    title: "read 1 John 3:23 and 4:7-10, and answer with the verse and Amen",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [
+      fn_name("reply_bible_verses"),
+      fn_name("reply_bible_1jn_3_23"),
+      fn_name("reply_bible_1jn_4_7"),
+      fn_name("reply_bible_1jn_4_8"),
+      fn_name("reply_bible_1jn_4_9"),
+      fn_name("reply_bible_1jn_4_10"),
+      fn_name("reply_bible_verse_whole"),
+      fn_name("reply_words"),
+      fn_name("reply_on_match_bible_reference"),
+      fn_name("reply_bible_references_closed"),
+      fn_name("reply_bible_references_runs"),
+      fn_name("reply_bible_references_merged"),
+      fn_name("reply_bible_run_line"),
+    ],
+    diff: [
+      verses_join,
+      verses_add,
+      "     join,",
+      "+    verses,",
+      verses_closed_before,
+      verses_closed_prayers,
+      verses_closed_after,
+      "   return r;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: verses_message_commandment,
+        answered: true,
+        outputs: ["1 John 3:23 Amen!"],
+      },
+      {
+        from: "",
+        message: verses_message_passage,
+        answered: true,
+        outputs: ["1 John 4:7-10 Amen!"],
+      },
+      {
+        from: "",
+        message: text_combine_multiple([
+          verses_message_commandment,
+          " ",
+          verses_message_passage,
+        ]),
+        answered: true,
+        outputs: ["1 John 3:23 Amen!", "1 John 4:7-10 Amen!"],
+      },
+    ],
+    decide: [
+      "you asked for verses to come first in the reply and the prayer last, and for the verse to be fetched by its reference. A verse said whole gets its reference and Amen, and is not quoted back.",
+      "the verse step can also quote a whole verse back when somebody says only part of it, as you asked, but no rule reads a part yet. No real message has done that, so a part of a verse gets no reply and comes to you. The rejected reading was guessing which pieces people would send.",
+      "only these wordings are read, because you want others added when somebody really sends them. Jesus, Christ and Jesus Christ all count as the same in 3:23. The words as he hath commanded us are in that wording because this message uses them.",
+      "the words leading into 4:7 are read only in front of that verse, so on their own they get no reply and come to you.",
+      "the verses are downloaded before the reply goes out. If the download fails there is no reply, and the message comes to you, so a reply never goes out without its verses.",
+      "this alone does not answer the choir leader's messages. They need every part understood, and more cards are coming for the rest.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -1866,6 +1956,7 @@ export function reply_proposals() {
     contact_street,
     my_name_said,
     join_glory,
+    verses_said,
   ];
   return proposals;
 }
