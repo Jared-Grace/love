@@ -165,7 +165,11 @@ export function app_code_program_step_guide_line_next(lines, trace, index) {
     if (equal(line, line_before)) {
       if (app_code_program_step_entry_start_is(before)) {
         let r19 = [
-          ["That code is done, so the computer checks the condition"],
+          [
+            "That code is done, so the computer checks the condition (what's in between the two ",
+            ";",
+            ")",
+          ],
           choose,
         ];
         return r19;
