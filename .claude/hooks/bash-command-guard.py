@@ -2583,6 +2583,28 @@ def is_safe_sed(words):
     return all(not w.startswith("-") for w in words[idx:])
 
 
+def time_assignments_first(words):
+    """`words` with assignments just after a leading `time` moved in front of
+    it, so `time A=1 CMD` is judged exactly as `A=1 time CMD` is.
+
+    `time` is a shell keyword here: it measures the simple command after it,
+    and that command may open with assignments. Moving them in front is what
+    makes every assignment pass the dangerous-name check, so `time PATH=/tmp ls`
+    is refused like `PATH=/tmp ls`. Reading through them in verb_of instead would
+    have skipped that check and allowed it.
+
+    Only `time`. `timeout`, `nohup` and the rest run their next word as a
+    program, so `timeout 5 A=1 ls` really does run a program named `A=1`."""
+    if not words or words[0] != "time":
+        return words
+    end = 1
+    while end < len(words) and ASSIGN_RE.match(words[end]):
+        end += 1
+    if end == 1:
+        return words
+    return words[1:end] + ["time"] + words[end:]
+
+
 def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
     groups = split_statements(tokens)
     if not groups:
@@ -2592,6 +2614,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
         if not words:
             continue
         found_command = True
+        words = time_assignments_first(words)
         # Strip leading `VAR=...` assignment words. An assignment executes no
         # verb of its own - it just sets a shell/environment variable; any
         # `$(...)` in its right-hand side was already validated during
@@ -4767,7 +4790,7 @@ GRANTED_READER_FOR_VERB = {
 def untrusted_piece_hint(words, safe_verbs):
     """One sentence on how to reword the refused part `words`, or "" when
     there is nothing better to say than its name."""
-    plain = list(words)
+    plain = time_assignments_first(list(words))
     while plain and ASSIGN_RE.match(plain[0]):
         plain = plain[1:]
     if not plain:
@@ -5035,8 +5058,12 @@ def untrusted_piece_fix_known(command, safe_verbs, safe_exact_commands):
     words, why = found
     if words is None:
         return "quote" not in why and unread_hint(why, command) != ""
-    plain = list(words)
+    plain = time_assignments_first(list(words))
     while plain and ASSIGN_RE.match(plain[0]):
+        plain = plain[1:]
+    if not plain:
+        return False
+    if plain[0] == "time":
         plain = plain[1:]
     if not plain:
         return False
