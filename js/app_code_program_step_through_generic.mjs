@@ -1,15 +1,7 @@
-import { text_skip } from "./text_skip.mjs";
-import { property_text_to } from "./property_text_to.mjs";
-import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { property_in_list } from "./property_in_list.mjs";
-import { list_size_subtract } from "./list_size_subtract.mjs";
-import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
-import { list_get_property } from "./list_get_property.mjs";
-import { integer_even_is } from "./integer_even_is.mjs";
-import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_step_trace } from "./app_code_program_step_trace.mjs";
+import { app_code_program_step_noun } from "./app_code_program_step_noun.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { html_div } from "./html_div.mjs";
@@ -25,8 +17,11 @@ import { app_shared_code_padding_x } from "./app_shared_code_padding_x.mjs";
 import { html_style_bleed_x } from "./html_style_bleed_x.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { text_size } from "./text_size.mjs";
-import { boolean_is } from "./boolean_is.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { null_is } from "./null_is.mjs";
+import { list_get } from "./list_get.mjs";
 import { not } from "./not.mjs";
+import { boolean_is } from "./boolean_is.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_values } from "./object_values.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -36,16 +31,21 @@ import { app_code_expression_chosen_background_color } from "./app_code_expressi
 import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
-import { list_get } from "./list_get.mjs";
+import { property_set } from "./property_set.mjs";
+import { less_than } from "./less_than.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { subtract } from "./subtract.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { text_slice } from "./text_slice.mjs";
+import { html_on_click } from "./html_on_click.mjs";
+import { text_skip } from "./text_skip.mjs";
 import { list_set } from "./list_set.mjs";
 import { app_code_line_pieces_text } from "./app_code_line_pieces_text.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { text_slice } from "./text_slice.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { subtract } from "./subtract.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
 import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
@@ -58,11 +58,9 @@ import { list_first } from "./list_first.mjs";
 import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { html_copy_fly_text_rect } from "./html_copy_fly_text_rect.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
-import { property_set } from "./property_set.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_size } from "./list_size.mjs";
+import { integer_even_is } from "./integer_even_is.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_take } from "./list_take.mjs";
@@ -71,12 +69,12 @@ import { html_scroll_nearest } from "./html_scroll_nearest.mjs";
 import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
 import { app_code_code_dots_chip_add } from "./app_code_code_dots_chip_add.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
-import { html_on_click } from "./html_on_click.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
-import { less_than } from "./less_than.mjs";
-import { app_code_program_step_line_press_words } from "./app_code_program_step_line_press_words.mjs";
+import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { app_code_program_step_piece_press_words } from "./app_code_program_step_piece_press_words.mjs";
+import { app_code_program_step_line_press_words } from "./app_code_program_step_line_press_words.mjs";
 import { app_code_step_reasons_told } from "./app_code_step_reasons_told.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
@@ -85,9 +83,12 @@ import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { promise_later_catch_ignore } from "./promise_later_catch_ignore.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
+import { list_size_subtract } from "./list_size_subtract.mjs";
+import { list_get_property } from "./list_get_property.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
+import { property_in_list } from "./property_in_list.mjs";
 import { app_code_quiz_choice_button_answer_generic } from "./app_code_quiz_choice_button_answer_generic.mjs";
 import { each } from "./each.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
@@ -109,16 +110,19 @@ import { html_remove } from "./html_remove.mjs";
 import { app_code_program_step_operator_decoys } from "./app_code_program_step_operator_decoys.mjs";
 import { app_code_expression_value_choose_buttons_generic } from "./app_code_expression_value_choose_buttons_generic.mjs";
 import { app_code_line_pieces_add } from "./app_code_line_pieces_add.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { html_opacity_transition } from "./html_opacity_transition.mjs";
 import { sleep } from "./sleep.mjs";
+import { property_text_to } from "./property_text_to.mjs";
 import { app_code_value_logged_output } from "./app_code_value_logged_output.mjs";
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
 import { app_code_style_normal_box } from "./app_code_style_normal_box.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { app_code_program_step_complete_words } from "./app_code_program_step_complete_words.mjs";
+import { equal_not } from "./equal_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_code_program_step_guide_action } from "./app_code_program_step_guide_action.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 import { app_code_program_step_order_words } from "./app_code_program_step_order_words.mjs";
 import { add } from "./add.mjs";
 import { app_code_program_step_solved_already_words } from "./app_code_program_step_solved_already_words.mjs";
@@ -147,6 +151,7 @@ export function app_code_program_step_through_generic(
     fn_name("app_code_program_step_actions_solve_whole"),
     "'s to say. This replaces the operators being asked for one after another in the order the computer takes them, which left the order to the program rather than to the learner");
   let trace = app_code_program_step_trace(code);
+  let noun = app_code_program_step_noun(trace);
   let resets = false;
   for (let trace_entry of trace) {
     for (let step_action of property_get(trace_entry, "actions")) {
@@ -198,6 +203,31 @@ export function app_code_program_step_through_generic(
     list_add(starts, line_start);
     line_start = line_start + text_size(line) + 1;
   }
+  ("2026-11-04, at the human's asking: a line where only a piece of it runs at a time, as a for with code after its second ; is, has each piece pressed by itself. row_pieces holds each line's pieces, none for most lines, and row_spans what each is drawn in right now");
+  let row_pieces = [];
+  let row_spans = [];
+  for (let line of lines) {
+    list_add(row_pieces, []);
+    list_add(row_spans, []);
+  }
+  for (let trace_entry of trace) {
+    let entry_piece = property_get_or(trace_entry, "piece", null);
+    if (null_is(entry_piece)) {
+      continue;
+    }
+    let entry_line = property_get(trace_entry, "line");
+    let pieces_of_line = list_get(row_pieces, entry_line);
+    let entry_from = property_get(entry_piece, "from");
+    function lambda(other) {
+      let left10 = property_get(other, "from");
+      let eq = equal(left10, entry_from);
+      return eq;
+    }
+    let already = pieces_of_line.some(lambda);
+    if (not(already)) {
+      list_add(pieces_of_line, entry_piece);
+    }
+  }
   let logged = html_div(wrap);
   let ask = html_div(wrap);
   html_flex_column_stretch(ask);
@@ -213,7 +243,12 @@ export function app_code_program_step_through_generic(
     declared: {},
     held_before: {},
     reason_box: null,
+    pressed_piece: null,
+    lit_line: null,
+    lit_from: null,
+    lit_color: null,
   };
+  ("pressed_piece: the piece a press has just landed on, set by the piece and read by its line as the press reaches it; lit_line, lit_from and lit_color: which piece stands coloured as what is running, since a line's words are written again as it runs and the colour has to come back with them");
   ("reason_box: where the reason for a wrong press goes while the next line is asked for");
   ("held_before: the values each name held before it was given the one it holds now, by name, so a name asked about after a new value can be offered its old one as a wrong choice");
   ("declared: the line each name was declared on, by name, so a name given a new value on a later line has the value written into the note it already has");
@@ -252,6 +287,79 @@ export function app_code_program_step_through_generic(
       html_style_background_color_set(row, "transparent");
       ("a line the guide lit, to say it is the one to press, goes out with every other mark on the lines");
       app_shared_glow_clear(row);
+    }
+    property_set(state, "lit_line", null);
+  }
+  function piece_span(line_index, piece) {
+    "what a piece of a line is drawn in right now";
+    let drawn = list_get(row_spans, line_index);
+    let from = property_get(piece, "from");
+    for (let item of drawn) {
+      let object5 = property_get(item, "piece");
+      let left = property_get(object5, "from");
+      if (equal(left, from)) {
+        let span = property_get(item, "span");
+        return span;
+      }
+    }
+    return null;
+  }
+  function rows_pieces_draw() {
+    "every line with pieces written again with each piece in a span of its own, which is what lets a piece be pressed by itself. A line's words are written over as it runs, so this is done again each time something is asked. Where a piece stands now is found as where a solved value stands is; the last piece's end is found from the end of the line, since a piece written the long way grows and what follows it does not";
+    for (
+      let line_index = 0;
+      less_than(line_index, list_size(lines));
+      line_index++
+    ) {
+      let pieces = list_get(row_pieces, line_index);
+      if (list_empty_is(pieces)) {
+        continue;
+      }
+      let row = list_get(rows, line_index);
+      let text = list_get(shown, line_index);
+      let written = list_get(lines, line_index);
+      html_clear(row);
+      let drawn = [];
+      let at = 0;
+      for (let k = 0; less_than(k, list_size(pieces)); k++) {
+        let piece = list_get(pieces, k);
+        let from = property_get(piece, "from");
+        let to = property_get(piece, "to");
+        let from_now = position_now(line_index, from);
+        let left18 = list_size(pieces);
+        let right6 = subtract(left18, 1);
+        let last = equal(k, right6);
+        let left19 = text_size(text);
+        let left20 = text_size(written);
+        let right7 = subtract(left20, to);
+        let to_now = last
+          ? subtract(left19, right7)
+          : position_now(line_index, to);
+        let text6 = text_slice(text, at, from_now);
+        html_span_text(row, text6);
+        let text7 = text_slice(text, from_now, to_now);
+        let span = html_span_text(row, text7);
+        function on_piece() {
+          property_set(state, "pressed_piece", piece);
+        }
+        html_on_click(span, on_piece);
+        let left21 = property_get(state, "lit_line");
+        let lit =
+          equal(left21, line_index) &&
+          equal(property_get(state, "lit_from"), from);
+        if (lit) {
+          let color = property_get(state, "lit_color");
+          html_style_background_color_set(span, color);
+        }
+        list_add(drawn, {
+          piece,
+          span,
+        });
+        at = to_now;
+      }
+      let text8 = text_skip(text, at);
+      html_span_text(row, text8);
+      list_set(row_spans, line_index, drawn);
     }
   }
   function row_text_set(line_index, text) {
@@ -399,6 +507,17 @@ export function app_code_program_step_through_generic(
     let row = list_get(rows, i);
     async function on_row() {
       "a line pressed while the next line to run is being asked for";
+      "a press on a piece reaches the piece first and then its line, so what the piece noted is read here, and taken away so the next press starts clean";
+      let pressed_piece = property_get(state, "pressed_piece");
+      property_set(state, "pressed_piece", null);
+      function press_target() {
+        "what a wrong press colours: the piece pressed, or else the whole line";
+        if (null_is(pressed_piece)) {
+          return row;
+        }
+        let span = piece_span(i, pressed_piece);
+        return span;
+      }
       let b = property_get(state, "pressing");
       if (not(b)) {
         ("2026-10-14, at the human's asking: pressing a line while what this line does is asked is a shortcut for choosing that this line is complete and then pressing that line - so it is right only where saying complete is right, and otherwise it is a wrong answer like any other. Not picked: ignoring the press, as before, which told the learner nothing. Not picked: taking the press as complete whatever was asked, which would let a line be left with its work undone");
@@ -413,7 +532,8 @@ export function app_code_program_step_through_generic(
           let current = property_get(object2, "line");
           let b8 = equal(i, current);
           if (not(b8)) {
-            html_style_background_color_set(row, wrong_color);
+            let component2 = press_target();
+            html_style_background_color_set(component2, wrong_color);
           }
           return;
         }
@@ -431,15 +551,22 @@ export function app_code_program_step_through_generic(
       }
       let index = property_get(state, "index");
       let done = list_index_past_end_is(trace, index);
-      let right = not(done) && equal(i, property_get(entry_get(), "line"));
+      let line_right = not(done) && equal(i, property_get(entry_get(), "line"));
+      let obj = entry_get();
+      let piece_due = line_right ? property_get_or(obj, "piece", null) : null;
+      let piece_right =
+        null_is(piece_due) ||
+        (null_not_is(pressed_piece) &&
+          equal(
+            property_get(pressed_piece, "from"),
+            property_get(piece_due, "from"),
+          ));
+      let right = line_right && piece_right;
       if (not(right)) {
-        ("why the press is wrong, where a rule says why; asked of the one function the gate over every program also asks");
-        let press = app_code_program_step_line_press_words(
-          lines,
-          trace,
-          index,
-          i,
-        );
+        ("why the press is wrong, where a rule says why; asked of the one function the gate over every program also asks. On the line due, only the wrong piece can be why");
+        let press = line_right
+          ? app_code_program_step_piece_press_words(trace, index, pressed_piece)
+          : app_code_program_step_line_press_words(lines, trace, index, i);
         let reason = null;
         let reason_words = null;
         if (null_not_is(press)) {
@@ -453,29 +580,47 @@ export function app_code_program_step_through_generic(
         if (soft) {
           property_set(told, reason, true);
           let background2 = app_shared_color_gray_dark();
-          html_style_background_color_set(row, background2);
+          let component3 = press_target();
+          html_style_background_color_set(component3, background2);
         } else {
           on_wrong();
-          html_style_background_color_set(row, wrong_color);
+          let component4 = press_target();
+          html_style_background_color_set(component4, wrong_color);
         }
         line_reason_show(reason_words);
         return;
       }
       property_set(state, "pressing", false);
-      html_data_set_test_happy_remove(row);
+      let lit_target = null_is(piece_due) ? row : piece_span(i, piece_due);
+      html_data_set_test_happy_remove(lit_target);
       on_step();
       rows_plain();
       ("2026-10-14, at the human's asking: the right line goes green first, for as long as any right answer in this app is, and only then blue - green says it was right, as a right choice does, and blue then says where the computer is. Not picked: blue at once, which was the one right answer here that did not say so");
       ("2026-10-14, at the human's asking again: the next question is asked at once, while the line is still green, so being right costs the learner no wait. Not picked: holding everything until the green is over, which was the first version. The turn to blue is skipped when the learner has already moved on to another line, since the line pressed then is no longer where the computer is");
       let green = app_shared_button_background();
-      html_style_background_color_set(row, green);
-      html_font_color_set_white(row);
+      html_style_background_color_set(lit_target, green);
+      html_font_color_set_white(lit_target);
+      if (null_not_is(piece_due)) {
+        ("2026-11-04: only the piece that runs is coloured, and its words are about to be written again, so the colour is noted for them to come back with");
+        property_set(state, "lit_line", i);
+        let value3 = property_get(piece_due, "from");
+        property_set(state, "lit_from", value3);
+        property_set(state, "lit_color", green);
+      }
       async function blue_later() {
         await sleep_success_color();
         let left9 = property_get(state, "index");
-        if (equal(left9, index)) {
-          html_style_background_color_set(row, highlight);
+        let b2 = equal(left9, index);
+        if (not(b2)) {
+          return;
         }
+        if (null_is(piece_due)) {
+          html_style_background_color_set(row, highlight);
+          return;
+        }
+        property_set(state, "lit_color", highlight);
+        let component5 = piece_span(i, piece_due);
+        html_style_background_color_set(component5, highlight);
       }
       promise_later_catch_ignore(blue_later);
       actions_ask(0);
@@ -534,6 +679,7 @@ export function app_code_program_step_through_generic(
   function next_line_ask() {
     "the learner says which line runs next, or that the program is complete";
     html_clear(ask);
+    rows_pieces_draw();
     let index = property_get(state, "index");
     ("2026-10-29, at the human's asking: the line to choose is named as it reads on the screen now, so a while run again is named while (true) {, the way it shows, and not as it is written");
     let r = app_code_program_step_guide_line_next(shown, trace, index);
@@ -553,25 +699,39 @@ export function app_code_program_step_through_generic(
     if (not(done)) {
       let object4 = entry_get();
       let line_at = property_get(object4, "line");
+      let piece_at = property_get_or(object4, "piece", null);
       function row_get() {
+        if (null_not_is(piece_at)) {
+          let span_at = piece_span(line_at, piece_at);
+          return span_at;
+        }
         let row = list_get(rows, line_at);
         return row;
       }
       let message = list_get(lines, line_at);
       choose = {
-        words: text_trim(message),
+        words: null_is(piece_at)
+          ? text_trim(message)
+          : property_get(piece_at, "text"),
         button: false,
         target_get: row_get,
       };
     }
     guide_say(r, choose);
-    app_code_div_cycle_code(ask, ["What is the next line of code to run?"]);
+    ("2026-11-04, the human chose this: a program with a piece to press asks for code, since a for's condition is not a line; every other program asks as it always has");
+    let next_question = equal(noun, "code")
+      ? "What is the next code to run?"
+      : "What is the next line of code to run?";
+    app_code_div_cycle_code(ask, [next_question]);
     property_set(state, "pressing", true);
     ("the line that runs next is marked as the way on, where being right is already decided, so a walk of the whole course can answer this question as it answers every other");
     if (not(done)) {
       let object = entry_get();
       let line_next = property_get(object, "line");
-      let component = list_get(rows, line_next);
+      let piece_next = property_get_or(object, "piece", null);
+      let component = null_is(piece_next)
+        ? list_get(rows, line_next)
+        : piece_span(line_next, piece_next);
       html_data_set_test_happy(component);
     }
     let choices = html_div(ask);
@@ -987,7 +1147,15 @@ export function app_code_program_step_through_generic(
     let kind = property_get(action, "kind");
     property_set(state, "asked", kind);
     html_clear(ask);
+    rows_pieces_draw();
+    ("what running now is called in what is said about it: the piece where only a piece of the line runs, and otherwise the line");
+    let piece_now = property_get_or(entry, "piece", null);
+    let message_now = list_get(lines, line_index);
+    let said_text = null_is(piece_now)
+      ? text_trim(message_now)
+      : property_get(piece_now, "text");
     ("2026-10-21, at the human's asking: writing a line the long way comes after the four things a line does, because only a line written the shorter way needs it; and moving on to the next line comes very last, because it is the way out of a line, taken once everything above it is done. Not picked: the long way first, as it was, which put the rarest choice where every line's eye lands first");
+    let r3 = app_code_program_step_complete_words(noun);
     let options = [
       ["declare", "Declare a variable"],
       ["evaluate", "Solve an expression"],
@@ -995,7 +1163,7 @@ export function app_code_program_step_through_generic(
       ["log", "Log a value to the console"],
       ["expand", "Write it the long way"],
       ["reset", "Reset the block"],
-      ["complete", "This line is complete; continue to the next line"],
+      ["complete", r3],
     ];
     ("2026-10-28: Reset the line is offered only in a program that runs a line twice, so the if lessons, where it is never right, keep the choices they had");
     if (not(resets)) {
@@ -1016,7 +1184,7 @@ export function app_code_program_step_through_generic(
     let holder = {
       button: null,
     };
-    let r10 = app_code_program_step_guide_action(lines, entry, k);
+    let r10 = app_code_program_step_guide_action(lines, entry, k, noun);
     function action_get() {
       let button = property_get(holder, "button");
       return button;
@@ -1027,8 +1195,8 @@ export function app_code_program_step_through_generic(
       target_get: action_get,
     });
     let question = equal(k, 0)
-      ? "What does this line do?"
-      : "What else does this line do?";
+      ? "What does this " + noun + " do?"
+      : "What else does this " + noun + " do?";
     app_code_div_cycle_code(ask, [question]);
     let choices = html_div(ask);
     let answered = {
@@ -1081,13 +1249,12 @@ export function app_code_program_step_through_generic(
       let reason = null;
       let reason_words = null;
       ("a step this line does at another time - later, or already - is said first, since it is the truer reason; only a step the line never does falls to the reasons below");
-      let message6 = list_get(lines, line_index);
-      let order_line = text_trim(message6);
       let order = app_code_program_step_order_words(
         actions,
         k,
         option_kind,
-        order_line,
+        said_text,
+        noun,
       );
       let b18 = null_is(order);
       if (not(b18)) {
@@ -1105,10 +1272,8 @@ export function app_code_program_step_through_generic(
           let valued = equal(kind, "declare")
             ? list_get(actions, index3)
             : action;
-          let message4 = list_get(lines, line_index);
-          let line_text = text_trim(message4);
           reason_words = app_code_program_step_solved_already_words(
-            line_text,
+            said_text,
             valued,
           );
         } else if (equal(kind, "complete") && equal(b7, 0)) {
@@ -1131,10 +1296,8 @@ export function app_code_program_step_through_generic(
           }
           if (null_not_is(valued2)) {
             reason = "solved_already";
-            let message7 = list_get(lines, line_index);
-            let line_text2 = text_trim(message7);
             reason_words = app_code_program_step_solved_already_words(
-              line_text2,
+              said_text,
               valued2,
             );
           }
@@ -1181,13 +1344,12 @@ export function app_code_program_step_through_generic(
     function soft_none() {
       "2026-10-23, at the human's asking: said too soon, the program's being complete is answered with a sign - this line's step still to do, or else the last line still to run";
       let program_reason = program_left_words();
-      let message8 = list_get(lines, line_index);
-      let line_text3 = text_trim(message8);
       let complete_order = app_code_program_step_order_words(
         actions,
         k,
         "complete",
-        line_text3,
+        said_text,
+        noun,
       );
       let b19 = null_is(complete_order);
       if (not(b19)) {
