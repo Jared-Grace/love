@@ -5253,11 +5253,15 @@ def splittable_statements(command, safe_verbs, safe_exact_commands):
     return found
 
 
-CHAIN_ONE_UNKNOWN_PIECES_MINIMUM = 3
+CHAIN_UNKNOWN_PIECES_MINIMUM = 3
 
 
-def chain_one_unknown_piece(command, safe_verbs, safe_exact_commands):
-    """The trusted pieces and the one blocked piece of a long chain, or None.
+def chain_unknown_pieces(command, safe_verbs, safe_exact_commands):
+    """The trusted pieces and the blocked pieces of a long chain, or None.
+
+    Any number of blocked pieces comes back, not just one. Keeping two with the
+    human saved one prompt on paper and cost a whole chain to read in practice:
+    a chain seen prompting ran the same harmless command twice.
 
     Reading is what a long chain costs the human: every line has to be checked
     to find the one that matters. Sending it back runs nothing, so it cannot be
@@ -5267,14 +5271,23 @@ def chain_one_unknown_piece(command, safe_verbs, safe_exact_commands):
     the message here asks whether it is needed at all.
 
     A two-piece chain stays on the answer it had: it is already short to read."""
-    return chain_trusted_and_one_blocked(
-        command, safe_verbs, safe_exact_commands, CHAIN_ONE_UNKNOWN_PIECES_MINIMUM
+    return chain_trusted_and_blocked(
+        command, safe_verbs, safe_exact_commands, CHAIN_UNKNOWN_PIECES_MINIMUM
     )
 
 
 def chain_trusted_and_one_blocked(command, safe_verbs, safe_exact_commands, pieces_minimum):
-    """(trusted_pieces, the_one_blocked_piece) when `command` is a chain of at
-    least `pieces_minimum` independent statements with exactly one not allowed,
+    """(trusted_pieces, the_one_blocked_piece) when `command` is such a chain
+    with exactly one piece not allowed, else None."""
+    found = chain_trusted_and_blocked(command, safe_verbs, safe_exact_commands, pieces_minimum)
+    if found is None or len(found[1]) != 1:
+        return None
+    return found[0], found[1][0]
+
+
+def chain_trusted_and_blocked(command, safe_verbs, safe_exact_commands, pieces_minimum):
+    """(trusted_pieces, blocked_pieces) when `command` is a chain of at least
+    `pieces_minimum` independent statements with some allowed and some not,
     else None. A variable or an assignment means the pieces may depend on each
     other, so those are not chains in this sense."""
     if "$" in command:
@@ -5297,16 +5310,16 @@ def chain_trusted_and_one_blocked(command, safe_verbs, safe_exact_commands, piec
             trusted.append(piece)
         else:
             blocked.append(piece)
-    if len(blocked) != 1 or not trusted:
+    if not blocked or not trusted:
         return None
-    return trusted, blocked[0]
+    return trusted, blocked
 
 
 def chain_substitution_refused_piece(command, safe_verbs, safe_exact_commands):
     """The refused part of a long chain or loop holding a `$(...)`, as text, or
     None.
 
-    chain_one_unknown_piece cannot read these: it needs a text split, and a
+    chain_unknown_pieces cannot read these: it needs a text split, and a
     substitution has separators of its own. So this asks the tokenizer. The
     permissive validator is for counting only and decides nothing; whether the
     part is refused comes from untrusted_piece, which checks every substitution.
@@ -5323,7 +5336,7 @@ def chain_substitution_refused_piece(command, safe_verbs, safe_exact_commands):
         found = untrusted_piece(command, safe_verbs, safe_exact_commands)
     except Exception:
         return None
-    if len(split_statements(tokens)) < CHAIN_ONE_UNKNOWN_PIECES_MINIMUM:
+    if len(split_statements(tokens)) < CHAIN_UNKNOWN_PIECES_MINIMUM:
         return None
     if found is None or found[0] is None or found[1] is not None:
         return None
@@ -6506,17 +6519,17 @@ def main():
             + untrusted_piece_advice(command, safe_verbs, safe_exact_commands)
         ))
 
-    long_chain = chain_one_unknown_piece(command, safe_verbs, safe_exact_commands)
+    long_chain = chain_unknown_pieces(command, safe_verbs, safe_exact_commands)
     if long_chain is not None:
         trusted, blocked = long_chain
         return decide("deny", (
-            "Nothing ran. All of this chain is allowed except one piece, so it "
-            "comes back to you rather than making the human read every line.\n"
+            "Nothing ran. Part of this chain has no rule, so it comes back to "
+            "you rather than making the human read every line.\n"
             + "".join(f"  already allowed: {t}\n" for t in trusted)
-            + f"  no rule of its own: {blocked}\n"
-            "Run the allowed parts as their own call. Then decide whether that "
-            "piece is needed at all: look for a named command first "
-            "(`node scripts/ai.mjs functions_search <words>`). If it is still "
+            + "".join(f"  no rule of its own: {b}\n" for b in blocked)
+            + "Run the allowed parts as their own call. Then decide whether each "
+            "other piece is needed at all: look for a named command first "
+            "(`node scripts/ai.mjs functions_search <words>`). If one is still "
             "needed, run it alone, in the order the chain had it: it will ask "
             "the human, who then reads one short command. Only `cd` carries "
             "between calls, and a later piece may have relied on an earlier one."
