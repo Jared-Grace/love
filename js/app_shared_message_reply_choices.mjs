@@ -1,3 +1,4 @@
+import { reply_join_glory } from "./reply_join_glory.mjs";
 import { reply_contact_address } from "./reply_contact_address.mjs";
 import { app_shared_message_reply_asks } from "./app_shared_message_reply_asks.mjs";
 import { reply_on_match_outputs_codes_multiple } from "./reply_on_match_outputs_codes_multiple.mjs";
@@ -55,6 +56,7 @@ export function app_shared_message_reply_choices() {
   let item = reply_choices_glory();
   let thanks = reply_choice_output(["thanks", thank_you], item);
   let fn = reply_contact_address();
+  let join = reply_join_glory();
   let choices_main = reply_choice([
     hru,
     greeting,
@@ -66,6 +68,7 @@ export function app_shared_message_reply_choices() {
     visit_step,
     thanks,
     fn,
+    join,
   ]);
   let choices_cheapest = reply_cheapest_per_position(choices_main);
   let room = reply_once_or_more(choices_cheapest);
