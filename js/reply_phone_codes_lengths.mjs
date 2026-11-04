@@ -1,6 +1,7 @@
 export function reply_phone_codes_lengths() {
-  "Every country calling code, and how many digits may follow it, not counting a leading 0.";
-  "★ WRITTEN FROM MEMORY, NOT COPIED FROM A SOURCE. A wrong row costs little: a real number gets no line, or a number of the wrong length gets one. Checking it against a published list is still open.";
+  "Every country calling code, and how many digits may follow it for a mobile or a landline, not counting a leading 0.";
+  "★ GENERATED, NOT REMEMBERED. Read on 2026-11-04 from PhoneNumberMetadata.xml in Google's libphonenumber (Apache 2.0). A table written from memory matched this source on 101 rows of 205 and left out real mobile lengths on 15, so a correction belongs in a new reading of that file, not in a hand edit here.";
+  "Toll-free and premium lengths are left out on purpose: nobody gives one of those as the number to reach them on, and every length listed is one more run of digits read as a phone number.";
   let rows = [
     {
       code: "1",
@@ -16,7 +17,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "27",
-      lengths: [9],
+      lengths: [5, 6, 7, 8, 9],
     },
     {
       code: "30",
@@ -24,7 +25,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "31",
-      lengths: [9],
+      lengths: [9, 11],
     },
     {
       code: "32",
@@ -44,11 +45,11 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "39",
-      lengths: [9, 10, 11],
+      lengths: [6, 7, 8, 9, 10, 11, 12],
     },
     {
       code: "40",
-      lengths: [9],
+      lengths: [6, 9],
     },
     {
       code: "41",
@@ -56,7 +57,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "43",
-      lengths: [10, 11, 12, 13],
+      lengths: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
     },
     {
       code: "44",
@@ -68,7 +69,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "46",
-      lengths: [7, 8, 9, 10],
+      lengths: [7, 8, 9],
     },
     {
       code: "47",
@@ -76,11 +77,11 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "48",
-      lengths: [9],
+      lengths: [7, 9],
     },
     {
       code: "49",
-      lengths: [7, 8, 9, 10, 11],
+      lengths: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
     },
     {
       code: "51",
@@ -92,7 +93,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "53",
-      lengths: [8],
+      lengths: [6, 7, 8, 10],
     },
     {
       code: "54",
@@ -108,7 +109,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "57",
-      lengths: [10],
+      lengths: [8, 10],
     },
     {
       code: "58",
@@ -116,7 +117,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "60",
-      lengths: [9, 10],
+      lengths: [8, 9, 10],
     },
     {
       code: "61",
@@ -124,11 +125,11 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "62",
-      lengths: [9, 10, 11, 12],
+      lengths: [7, 8, 9, 10, 11, 12],
     },
     {
       code: "63",
-      lengths: [10],
+      lengths: [6, 8, 9, 10],
     },
     {
       code: "64",
@@ -148,7 +149,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "82",
-      lengths: [9, 10],
+      lengths: [5, 6, 8, 9, 10],
     },
     {
       code: "84",
@@ -156,7 +157,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "86",
-      lengths: [10, 11],
+      lengths: [7, 8, 9, 10, 11],
     },
     {
       code: "90",
@@ -180,11 +181,11 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "95",
-      lengths: [8, 9, 10],
+      lengths: [6, 7, 8, 9, 10],
     },
     {
       code: "98",
-      lengths: [10],
+      lengths: [6, 7, 10],
     },
     {
       code: "211",
@@ -208,7 +209,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "220",
-      lengths: [7],
+      lengths: [7, 9],
     },
     {
       code: "221",
@@ -244,7 +245,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "229",
-      lengths: [8, 10],
+      lengths: [10],
     },
     {
       code: "230",
@@ -264,7 +265,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "234",
-      lengths: [8, 10],
+      lengths: [10],
     },
     {
       code: "235",
@@ -300,7 +301,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "243",
-      lengths: [9],
+      lengths: [7, 8, 9, 10],
     },
     {
       code: "244",
@@ -308,11 +309,15 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "245",
-      lengths: [7, 9],
+      lengths: [9],
     },
     {
       code: "246",
       lengths: [7],
+    },
+    {
+      code: "247",
+      lengths: [5],
     },
     {
       code: "248",
@@ -324,7 +329,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "250",
-      lengths: [9],
+      lengths: [8, 9],
     },
     {
       code: "251",
@@ -332,7 +337,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "252",
-      lengths: [7, 8, 9],
+      lengths: [6, 7, 8, 9],
     },
     {
       code: "253",
@@ -340,7 +345,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "254",
-      lengths: [9, 10],
+      lengths: [7, 8, 9],
     },
     {
       code: "255",
@@ -372,7 +377,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "263",
-      lengths: [9],
+      lengths: [7, 9],
     },
     {
       code: "264",
@@ -428,11 +433,11 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "352",
-      lengths: [8, 9],
+      lengths: [4, 5, 6, 7, 8, 9, 10, 11],
     },
     {
       code: "353",
-      lengths: [9],
+      lengths: [7, 8, 9, 10],
     },
     {
       code: "354",
@@ -452,11 +457,11 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "358",
-      lengths: [9, 10],
+      lengths: [5, 6, 7, 8, 9, 10],
     },
     {
       code: "359",
-      lengths: [8, 9],
+      lengths: [6, 7, 8, 9],
     },
     {
       code: "370",
@@ -484,7 +489,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "376",
-      lengths: [6, 8, 9],
+      lengths: [6, 9],
     },
     {
       code: "377",
@@ -500,7 +505,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "381",
-      lengths: [8, 9],
+      lengths: [7, 8, 9, 10, 11, 12],
     },
     {
       code: "382",
@@ -508,7 +513,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "383",
-      lengths: [8],
+      lengths: [8, 9, 10, 11, 12],
     },
     {
       code: "385",
@@ -520,7 +525,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "387",
-      lengths: [8],
+      lengths: [8, 9],
     },
     {
       code: "389",
@@ -532,7 +537,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "421",
-      lengths: [9],
+      lengths: [6, 7, 9],
     },
     {
       code: "423",
@@ -572,7 +577,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "508",
-      lengths: [6],
+      lengths: [6, 9],
     },
     {
       code: "509",
@@ -600,7 +605,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "595",
-      lengths: [9],
+      lengths: [7, 8, 9],
     },
     {
       code: "596",
@@ -616,7 +621,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "599",
-      lengths: [7],
+      lengths: [7, 8],
     },
     {
       code: "670",
@@ -668,15 +673,15 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "683",
-      lengths: [4, 5],
+      lengths: [4, 7],
     },
     {
       code: "685",
-      lengths: [5, 7],
+      lengths: [5, 6, 7, 10],
     },
     {
       code: "686",
-      lengths: [8],
+      lengths: [5, 8],
     },
     {
       code: "687",
@@ -684,7 +689,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "688",
-      lengths: [5, 6],
+      lengths: [5, 6, 7],
     },
     {
       code: "689",
@@ -692,7 +697,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "690",
-      lengths: [4],
+      lengths: [4, 5, 6, 7],
     },
     {
       code: "691",
@@ -720,15 +725,27 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "856",
-      lengths: [9, 10],
+      lengths: [8, 9, 10],
+    },
+    {
+      code: "870",
+      lengths: [9, 12],
     },
     {
       code: "880",
-      lengths: [10],
+      lengths: [6, 7, 8, 9, 10],
+    },
+    {
+      code: "881",
+      lengths: [9, 10],
+    },
+    {
+      code: "882",
+      lengths: [7, 8, 9, 10, 12],
     },
     {
       code: "886",
-      lengths: [9],
+      lengths: [8, 9],
     },
     {
       code: "960",
@@ -740,15 +757,15 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "962",
-      lengths: [9],
+      lengths: [8, 9],
     },
     {
       code: "963",
-      lengths: [9],
+      lengths: [8, 9],
     },
     {
       code: "964",
-      lengths: [10],
+      lengths: [8, 9, 10],
     },
     {
       code: "965",
@@ -760,7 +777,7 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "967",
-      lengths: [9],
+      lengths: [7, 8, 9],
     },
     {
       code: "968",
@@ -768,15 +785,15 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "970",
-      lengths: [9],
+      lengths: [8, 9],
     },
     {
       code: "971",
-      lengths: [9],
+      lengths: [8, 9],
     },
     {
       code: "972",
-      lengths: [9],
+      lengths: [8, 9, 11, 12],
     },
     {
       code: "973",
@@ -788,15 +805,15 @@ export function reply_phone_codes_lengths() {
     },
     {
       code: "975",
-      lengths: [8],
+      lengths: [7, 8],
     },
     {
       code: "976",
-      lengths: [8],
+      lengths: [8, 9, 10],
     },
     {
       code: "977",
-      lengths: [10],
+      lengths: [8, 10],
     },
     {
       code: "992",
