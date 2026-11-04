@@ -1,8 +1,8 @@
-import { list_last_property } from "./list_last_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_size } from "./list_size.mjs";
+import { app_code_program_step_complete_words } from "./app_code_program_step_complete_words.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
@@ -11,12 +11,13 @@ import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop
 import { subtract } from "./subtract.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
+import { list_last_property } from "./list_last_property.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_exists } from "./property_exists.mjs";
-export function app_code_program_step_guide_action(lines, entry, k) {
-  arguments_assert(arguments, 3);
+export function app_code_program_step_guide_action(lines, entry, k, noun) {
+  arguments_assert(arguments, 4);
   ("2026-11-01: lines, the program's lines, is handed in so a loop line is called by the word it starts with, while or for");
   let actions = property_get(entry, "actions");
   ("what a guided example says while it asks what a line does next: what kind of line it is, the first time it is asked about, and then which to choose. Each sentence is a list of parts, words and code taking turns.");
@@ -25,9 +26,7 @@ export function app_code_program_step_guide_action(lines, entry, k) {
   ("2026-10-14, the human asked for the line spacing of the order lesson's guide, so each sentence is its own line and a sentence never holds two; and for if, (...), true and false written as code. The parentheses are (...), as the human asked the same day, so their dots are drawn grey as the dots in { ... } are, by the one code writer every sentence goes through. Evaluate an expression is said Solve an expression, as the human asked, the same words the option carries");
   let kinds = list_map_property(actions, "kind");
   let size = list_size(actions);
-  let complete = [
-    "So choose: This line is complete; continue to the next line",
-  ];
+  let complete = ["So choose: " + app_code_program_step_complete_words(noun)];
   ("2026-10-28: a line run again starts by being reset, so what is said the first time a line is asked about is said at the step after the reset");
   let start = 0;
   if (
@@ -69,7 +68,7 @@ export function app_code_program_step_guide_action(lines, entry, k) {
       ];
       return r;
     }
-    let r2 = [["Everything this line does is done"], complete];
+    let r2 = [["Everything this " + noun + " does is done"], complete];
     return r2;
   }
   let action = list_get(actions, k);
