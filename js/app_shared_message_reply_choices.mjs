@@ -1,3 +1,4 @@
+import { reply_contact_address } from "./reply_contact_address.mjs";
 import { app_shared_message_reply_asks } from "./app_shared_message_reply_asks.mjs";
 import { reply_on_match_outputs_codes_multiple } from "./reply_on_match_outputs_codes_multiple.mjs";
 import { reply_prayer_will_done } from "./reply_prayer_will_done.mjs";
@@ -20,10 +21,8 @@ import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_phrase_you } from "./reply_phrase_you.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { reply_choice_output } from "./reply_choice_output.mjs";
-import { digits } from "./digits.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_once_or_more } from "./reply_once_or_more.mjs";
-import { reply_roads } from "./reply_roads.mjs";
 import { reply_last } from "./reply_last.mjs";
 export function app_shared_message_reply_choices() {
   let greeting = app_shared_message_reply_greeting();
@@ -55,11 +54,7 @@ export function app_shared_message_reply_choices() {
   let thank_you = reply_sequence(["thank", you]);
   let item = reply_choices_glory();
   let thanks = reply_choice_output(["thanks", thank_you], item);
-  let d = digits();
-  let rc_digits = reply_choice(d);
-  let digits_oom = reply_once_or_more(rc_digits);
-  let r_roads = reply_roads();
-  let fn = reply_sequence(["contact", digits_oom, r_roads]);
+  let fn = reply_contact_address();
   let choices_main = reply_choice([
     hru,
     greeting,
