@@ -3,7 +3,7 @@ import { function_name_to_parts } from "./function_name_to_parts.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
-import { list_segment_repeats_is } from "./list_segment_repeats_is.mjs";
+import { list_part_repeats_is } from "./list_part_repeats_is.mjs";
 export function function_name_words_repeated_is(f_name) {
   "$plain f_name";
   "Whether a name says the same segment of words twice in a row, however many words long that segment is.";
@@ -19,7 +19,7 @@ export function function_name_words_repeated_is(f_name) {
     let left = subtract(count, length);
     let after = subtract(left, length);
     while (less_than(start, after + 1)) {
-      let repeats_is = list_segment_repeats_is(parts, start, length);
+      let repeats_is = list_part_repeats_is(parts, start, length);
       if (repeats_is) {
         return true;
       }
