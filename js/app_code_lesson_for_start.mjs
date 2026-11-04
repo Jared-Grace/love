@@ -45,7 +45,7 @@ export function app_code_lesson_for_start() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "For with a start",
-    "for (let n = 1; n < 9; n += 3) { ... }",
+    "for (let n = 1; ...) { ... }",
   );
   let lesson = app_code_lesson_loop_log_generic({
     name_id,
