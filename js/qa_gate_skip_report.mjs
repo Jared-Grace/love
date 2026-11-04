@@ -1,21 +1,21 @@
-import { round } from "./round.mjs";
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { divide } from "./divide.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_exists } from "./file_exists.mjs";
+import { not } from "./not.mjs";
 import { file_read_lines } from "./file_read_lines.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { json_from } from "./json_from.mjs";
 import { qa_gate_inputs_log_path } from "./qa_gate_inputs_log_path.mjs";
 import { qa_gate_said_log_path } from "./qa_gate_said_log_path.mjs";
-import { file_read_json } from "./file_read_json.mjs";
 import { qa_gate_timings_path } from "./qa_gate_timings_path.mjs";
+import { file_read_json } from "./file_read_json.mjs";
 import { property_exists } from "./property_exists.mjs";
+import { less_than } from "./less_than.mjs";
+import { subtract } from "./subtract.mjs";
 import { object_property_names } from "./object_property_names.mjs";
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { divide } from "./divide.mjs";
+import { round } from "./round.mjs";
 export async function qa_gate_skip_report() {
   "What skipping the traced gates would have decided over the runs logged so far, and whether it would have hidden anything";
   "Each neighbouring pair of runs is one decision per gate: the word for what it read is the same, so it would have been skipped. Every gate really ran both times, so what a skip would have hidden is simply read off - a gate that turned red or green is a hidden verdict, and a gate that stayed red saying something else is a hidden complaint. Those two are kept apart, because the first would make a green false and the second only makes a list of complaints out of date";
@@ -51,9 +51,15 @@ export async function qa_gate_skip_report() {
   let timings = await file_read_json(file_path);
   function lambda(row) {
     let exists2 = property_exists(said_by_commit, row.commit);
-    return exists2;
+    let r3 = exists2 && property_exists(row, "inputs");
+    return r3;
   }
   let joined = inputs.filter(lambda);
+  function lambda4(row) {
+    let exists3 = property_exists(row, "failed");
+    return exists3;
+  }
+  let failures = inputs.filter(lambda4);
   let gates = {};
   let hidden = [];
   let saved_ms = 0;
@@ -129,6 +135,10 @@ export async function qa_gate_skip_report() {
   }
   let r = {
     runs: joined.length,
+    runs_that_failed_to_note: failures.length,
+    newest_failure: equal(failures.length, 0)
+      ? null
+      : failures[subtract(failures.length, 1)].failed,
     pairs,
     minutes_saved_per_run,
     hidden_verdicts: hidden.filter(lambda2).length,
