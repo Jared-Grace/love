@@ -1,4 +1,3 @@
-import { property_text_to } from "./property_text_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_program_trace } from "./app_code_program_trace.mjs";
 import { catch_null } from "./catch_null.mjs";
@@ -10,16 +9,12 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { list_get } from "./list_get.mjs";
-import { text_index_of } from "./text_index_of.mjs";
-import { text_index_of_last } from "./text_index_of_last.mjs";
-import { add } from "./add.mjs";
-import { text_slice } from "./text_slice.mjs";
 import { text_to } from "./text_to.mjs";
 import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_value_code } from "./js_value_code.mjs";
+import { property_text_to } from "./property_text_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export function app_code_program_trace_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
@@ -61,11 +56,7 @@ export function app_code_program_trace_wrong_say(question, answer, choice) {
     if (null_not_is(condition)) {
       ("an if's line says what its condition comes to and what that means for the { } after it; the condition is read off the line as written, between its first ( and its last ), so a name in it is shown as the learner wrote it");
       let index = property_get(entry, "line");
-      let line_text = list_get(lines, index);
-      let opened = text_index_of(line_text, "(");
-      let closed = text_index_of_last(line_text, ")");
-      let from2 = add(opened, 1);
-      let condition_text = text_slice(line_text, from2, closed);
+      let condition_text = property_get(entry, "condition_text");
       then_add();
       code_add(condition_text);
       words = words + " is ";

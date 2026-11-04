@@ -11,6 +11,7 @@ import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
+import { text_slice } from "./text_slice.mjs";
 export function app_code_program_trace(code) {
   arguments_assert(arguments, 1);
   ("every line of a program in the order the computer runs it, each with what running it does, in order: a name declared, an expression evaluated, a value assigned to a name, a value logged to the console. A line is done once its last thing is done. Asked for by the human 2026-10-13, so a learner can do every step of the running themselves before being asked what a program logs.");
@@ -59,6 +60,12 @@ export function app_code_program_trace(code) {
       property_set(entry, "condition", value);
       let value2 = property_get(run, "alternate");
       property_set(entry, "alternate", value2);
+      ("2026-11-04: the condition as written, read off the statement, so what is said about it holds for a for too, whose ( ) hold more than its condition");
+      let test = property_get(node, "test");
+      let test_from = property_get(test, "start");
+      let test_to = property_get(test, "end");
+      let condition_text = text_slice(code, test_from, test_to);
+      property_set(entry, "condition_text", condition_text);
     }
     let next = property_get(run, "next");
     statements_run(next);
