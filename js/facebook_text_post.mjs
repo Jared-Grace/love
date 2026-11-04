@@ -1,8 +1,11 @@
 import { facebook_page_open } from "./facebook_page_open.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
+import { facebook_composer_open } from "./facebook_composer_open.mjs";
+import { facebook_composer_type } from "./facebook_composer_type.mjs";
 import { sleep } from "./sleep.mjs";
 import { facebook_dialog_labels } from "./facebook_dialog_labels.mjs";
-import { facebook_dialog_click } from "./facebook_dialog_click.mjs";
+import { facebook_dialog_post_press } from "./facebook_dialog_post_press.mjs";
+import { facebook_dialog_post_gone_wait } from "./facebook_dialog_post_gone_wait.mjs";
 export async function facebook_text_post(text) {
   "$plain text";
   "Posts words with no film to the facebook profile the page profile is signed in to, publicly, and answers the steps it took. Every step leaves a picture, numbered in order.";
@@ -26,32 +29,10 @@ export async function facebook_text_post(text) {
     steps.push(step + " " + picture);
   }
   try {
-    let opened = await page.evaluate(
-      "(function(){var es=[].slice.call(document.querySelectorAll('[role=button]'));var e=es.find(function(x){return (x.innerText||'').indexOf(\"What's on your mind\")>=0});if(!e)return false;e.click();return true})()",
-    );
-    if (!opened) {
-      throw new Error("no 'What's on your mind' box");
-    }
-    await page.waitForSelector('[role=dialog][aria-label="Create post"]');
-    await sleep(3000);
+    await facebook_composer_open(page);
     await picture_take();
     step = "write the words";
-    let box = await page.waitForSelector(
-      '[role=dialog][aria-label="Create post"] [role=textbox]',
-    );
-    await box.click();
-    await sleep(1000);
-    let lines = text.split("\n");
-    let i = 0;
-    while (i < lines.length) {
-      if (i > 0) {
-        await page.keyboard.down("Shift");
-        await page.keyboard.press("Enter");
-        await page.keyboard.up("Shift");
-      }
-      await page.keyboard.type(lines[i]);
-      i = i + 1;
-    }
+    await facebook_composer_type(page, text);
     await sleep(3000);
     await picture_take();
     step = "the last words";
@@ -67,8 +48,8 @@ export async function facebook_text_post(text) {
     step = "public and no ai label";
     let labels = await facebook_dialog_labels(page);
     function public_is(l) {
-      let r = l.indexOf("Sharing with Public") >= 0;
-      return r;
+      let reads_public = l.indexOf("Sharing with Public") >= 0;
+      return reads_public;
     }
     if (!labels.some(public_is)) {
       throw new Error(
@@ -76,8 +57,8 @@ export async function facebook_text_post(text) {
       );
     }
     function ai_off_is(l) {
-      let r = l.indexOf("AI label off") >= 0;
-      return r;
+      let reads_off = l.indexOf("AI label off") >= 0;
+      return reads_off;
     }
     if (!labels.some(ai_off_is)) {
       throw new Error(
@@ -85,37 +66,9 @@ export async function facebook_text_post(text) {
       );
     }
     step = "post";
-    let posted = null;
-    let presses = 0;
-    while (posted === null && presses < 5) {
-      posted = await facebook_dialog_click(page, "Post");
-      if (posted === null) {
-        let next = await facebook_dialog_click(page, "Next");
-        if (next !== "clicked") {
-          throw new Error("neither Post nor Next: Next was " + next);
-        }
-        presses = presses + 1;
-        await sleep(5000);
-        await picture_take();
-      }
-    }
-    if (posted !== "clicked") {
-      let v = await facebook_dialog_labels(page);
-      throw new Error("Post was " + posted + "; buttons: " + JSON.stringify(v));
-    }
+    await facebook_dialog_post_press(page, picture_take);
     step = "posted";
-    let waited = 0;
-    let busy = true;
-    while (busy) {
-      await sleep(5000);
-      waited = waited + 5000;
-      busy = await page.evaluate(
-        "[].slice.call(document.querySelectorAll('[role=dialog] [role=button],[role=dialog] button')).some(function(x){var r=x.getBoundingClientRect();return r.width>0&&r.height>0&&(x.innerText||'').trim()==='Post'})",
-      );
-      if (busy && waited >= 600000) {
-        throw new Error("the Post button still shows after ten minutes");
-      }
-    }
+    await facebook_dialog_post_gone_wait(page);
     await sleep(5000);
     await picture_take();
     let r = {
