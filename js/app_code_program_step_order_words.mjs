@@ -13,8 +13,9 @@ export function app_code_program_step_order_words(
   k,
   option_kind,
   line_text,
+  noun,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   ("why a choice is not the step now when the line does it at another time: later, or already done, or the line said complete with a step still to do. Returns null when none of these is so, and otherwise {reason, words}, words and code taking turns. actions is the line's steps in order and k the one asked now. 2026-10-23, at the human's asking: a choice the line makes later, or made earlier, gets a good explanation rather than a plain miss. The rule is said rather than the answer, so the learner still finds the step. Not picked: naming the step that comes first, which hands over the answer");
   ("2026-10-23, at the human's asking, whose words were: This line doesn't have a // yet, so it hasn't been declared; The // still has undefined as its value, so it hasn't been assigned yet. So each reason points at a sign on the screen - the // line, the value it shows, what is right of the =, the output - that says whether a step has happened. Not picked: the order rule alone, as it was, which the learner had to take on trust");
   let size = list_size(actions);
@@ -125,7 +126,9 @@ export function app_code_program_step_order_words(
     }
     if (equal(step_kind, "log")) {
       let r11 = [
-        "The output does not show this line's value yet, so it has not been logged",
+        "The output does not show this " +
+          noun +
+          "'s value yet, so it has not been logged",
       ];
       return r11;
     }
@@ -135,7 +138,7 @@ export function app_code_program_step_order_words(
       ];
       return r22;
     }
-    let r12 = ["This line is still written the short way"];
+    let r12 = ["This " + noun + " is still written the short way"];
     return r12;
   }
   function sign_done(step_kind) {
@@ -184,14 +187,14 @@ export function app_code_program_step_order_words(
       ];
       return r23;
     }
-    let r17 = ["This line is already written the long way"];
+    let r17 = ["This " + noun + " is already written the long way"];
     return r17;
   }
   if (equal(option_kind, "complete")) {
     let v = sign_not_yet(kind);
     let r = {
       reason: "complete_early",
-      words: words_then(v, [". So this line is not complete yet"]),
+      words: words_then(v, [". So this " + noun + " is not complete yet"]),
     };
     return r;
   }
@@ -205,7 +208,7 @@ export function app_code_program_step_order_words(
         shown + " += 1;",
         " or ",
         shown + "++;",
-        ", has a long way to write. This line has no ",
+        ", has a long way to write. This " + noun + " has no ",
         "+=",
         " or ",
         "++",
@@ -221,7 +224,7 @@ export function app_code_program_step_order_words(
       words: [
         "If a line has ",
         "let",
-        ", then it needs a declare. However, this line doesn't have ",
+        ", then it needs a declare. However, this " + noun + " doesn't have ",
         "let",
       ],
     };
