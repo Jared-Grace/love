@@ -5,7 +5,7 @@ import { less_than } from "./less_than.mjs";
 import { error } from "./error.mjs";
 import { app_code_program_trace_statement } from "./app_code_program_trace_statement.mjs";
 import { app_code_program_trace_line } from "./app_code_program_trace_line.mjs";
-import { app_code_program_trace_piece } from "./app_code_program_trace_piece.mjs";
+import { app_code_program_trace_statement_piece } from "./app_code_program_trace_statement_piece.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
@@ -43,7 +43,7 @@ export function app_code_program_trace(code) {
       line,
       actions,
     };
-    let piece = app_code_program_trace_piece(node, code);
+    let piece = app_code_program_trace_statement_piece(node, code);
     if (null_not_is(piece)) {
       property_set(entry, "piece", piece);
     }
