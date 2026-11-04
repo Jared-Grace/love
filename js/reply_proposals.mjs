@@ -21,7 +21,6 @@ import { reply_prayer_lead_provider } from "./reply_prayer_lead_provider.mjs";
 import { reply_response_nothing_to_give } from "./reply_response_nothing_to_give.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { reply_prayer_closing } from "./reply_prayer_closing.mjs";
-import { reply_response_not_sure } from "./reply_response_not_sure.mjs";
 import { reply_response_whatsapp } from "./reply_response_whatsapp.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
@@ -1563,7 +1562,6 @@ export function reply_proposals() {
       "the two old rules and the piece that took three parts in any order are unused once this goes in. I would remove them after you approve.",
     ],
   };
-  let cant_line = reply_response_not_sure();
   let names_pakistan = {
     title: "know five more common names from Pakistan",
     fn: fn_name("reply_names_persian"),
@@ -1672,11 +1670,38 @@ export function reply_proposals() {
     fn_name("reply_sequence"),
     '(["can", cannot_middle, "t"]);',
   ]);
-  let cannot_added = text_combine_multiple([
-    "+  let fn20 = ",
-    fn_name("reply_cant_or_cannot"),
-    "();",
+  let cannot_lambda_removed = text_combine_multiple([
+    "-    let r2 = ",
+    fn_name("app_shared_message_reply_choices_lambda"),
+    "(filtered, u);",
   ]);
+  let cannot_matcher_removed = text_combine_multiple([
+    "-  let matcher = ",
+    fn_name("reply_on_match_capture"),
+    "(fn20, lambda);",
+  ]);
+  let cant_out = {
+    title: "stop answering can't, cant and cannot",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [],
+    diff: [
+      cannot_middle_removed,
+      cannot_removed,
+      "-  function lambda(filtered, u) {",
+      cannot_lambda_removed,
+      "-    return r2;",
+      "-  }",
+      cannot_matcher_removed,
+      "-    matcher,",
+    ],
+    cases: [],
+    decide: [
+      "no real message has needed this. Of the 18 different messages stored, none ever got this reply. Only one holds those letters, and there cant is the last word of an address. The rejected reading was keeping the rule with new wording, which would keep a reply nobody has needed.",
+      "cant, can't and cannot now get no reply and come to you. So does a message like hello cant, because any part the rules cannot read means no reply for the whole message. Nobody has really sent these. After this goes in I would add them to the no reply yet list, so a gate fails if a rule starts answering them.",
+      "measured with a copy of the rules: all eighteen saved tests give the same answer as before.",
+      "the function that wrote this reply is unused once this goes in. I would remove it after you approve.",
+    ],
+  };
   let whatsapp_line = reply_response_whatsapp();
   let contact_street = {
     title:
@@ -1690,8 +1715,8 @@ export function reply_proposals() {
       fn_name("list_value_times"),
       fn_name("reply_response_whatsapp"),
       fn_name("reply_letters_at_most"),
+      fn_name("reply_at_most"),
       fn_name("reply_cantonment"),
-      fn_name("reply_cant_or_cannot"),
     ],
     diff: [
       contact_digits_list_removed,
@@ -1700,9 +1725,6 @@ export function reply_proposals() {
       contact_roads_removed,
       contact_removed,
       contact_added,
-      cannot_middle_removed,
-      cannot_removed,
-      cannot_added,
     ],
     cases: [
       {
@@ -1730,12 +1752,6 @@ export function reply_proposals() {
         outputs: [whatsapp_line],
       },
       {
-        from: "",
-        message: "cant",
-        answered: true,
-        outputs: [cant_line],
-      },
-      {
         from: "40d47c1ec2a9759d",
         message:
           "I'mpastorSamuelAndrewMarkFromKarachiPakistancontact 92 03001234567MMainRoadKarachiCant",
@@ -1748,99 +1764,10 @@ export function reply_proposals() {
       "a phone number on its own, with no word contact, now gets the WhatsApp line too. The rejected reading was requiring the word contact, which would leave a bare number with nobody answering it.",
       "the street name can be any letters, up to 12. Spaces are gone before a rule reads a message, so counting letters is the only limit available. It now needs a whole phone number before it and a road word after it, so contact 92 help me road gets no reply any more. The rejected reading was any length, and that answered a message about hungry children.",
       "the open word gate does not watch this new piece. It only lists pieces that take any word at all, and it has no way to record your yes. If I listed this piece, the gate would go red the moment you approved. Your yes on this card is the record instead.",
-      "cant after a listed town now means a cantonment. Everywhere else it still means can't, so an address with cant and no town gets the not sure line, shown here in its new wording from the card after this one. The rejected reading was making the address win everywhere, which would need a road word check on every cant.",
+      "cant counts as a cantonment only after a listed town. So contact 92 03001234567 M Main Road Cant gets no reply and comes to you. The rejected reading was allowing cant after any road, which no real message needs.",
+      "approve this after the card before it. Until that card is in, Karachi Cant also gets the can't reply.",
       "the WhatsApp line is the same words your own WhatsApp reply button sends, and it stands where the number stood. So the last test gets the name line, the location line, then the WhatsApp line.",
-      "the two cards before this one are already in. The last test is the pastor message rewritten with made-up details. Measured on the real message: all four copies answered, three lines each, and no saved test changes except this one.",
-    ],
-  };
-  let not_sure_added = text_combine_multiple([
-    "+    let line = ",
-    fn_name("reply_response_not_sure"),
-    "();",
-  ]);
-  let combined39 = text_combine_multiple([
-    "-    let tokens = ",
-    fn_name("property_get"),
-    '(possibility, "tokens");',
-  ]);
-  let combined40 = text_combine_multiple([
-    "-    let v = ",
-    fn_name("property_path_get_2"),
-    '(possibility, "data", u);',
-  ]);
-  let combined64 = text_combine_multiple([
-    "-    let after = ",
-    fn_name("property_get"),
-    '(v, "after");',
-  ]);
-  let combined65 = text_combine_multiple([
-    "-    let before = ",
-    fn_name("property_get"),
-    '(v, "before");',
-  ]);
-  let combined66 = text_combine_multiple([
-    "-    let sliced = ",
-    fn_name("list_slice"),
-    "(tokens, before, after);",
-  ]);
-  let combined67 = text_combine_multiple([
-    "-    let quote = ",
-    fn_name("list_join_empty"),
-    "(sliced);",
-  ]);
-  let combined68 = text_combine_multiple([
-    "-    ",
-    fn_name("reply_on_match_output_add_multiple"),
-    "(possibility, [",
-  ]);
-  let combined69 = text_combine_multiple([
-    "+    ",
-    fn_name("reply_on_match_output_add_multiple"),
-    "(possibility, [line]);",
-  ]);
-  let not_sure_wording = {
-    title:
-      "say I'm not sure how to answer that, and stop quoting the message back",
-    fn: fn_name("app_shared_message_reply_choices_lambda"),
-    whole: [fn_name("reply_response_not_sure")],
-    diff: [
-      combined39,
-      combined40,
-      combined64,
-      combined65,
-      combined66,
-      combined67,
-      not_sure_added,
-      combined68,
-      '-      "If you want, please change the wording of what you said and send me another message. Here is what you said: ",',
-      "-      quote,",
-      "-    ]);",
-      combined69,
-    ],
-    cases: [
-      {
-        from: "",
-        message: "cant",
-        answered: true,
-        outputs: [cant_line],
-      },
-      {
-        from: "",
-        message: "can't",
-        answered: true,
-        outputs: [cant_line],
-      },
-      {
-        from: "",
-        message: "cannot",
-        answered: true,
-        outputs: [cant_line],
-      },
-    ],
-    decide: [
-      "this card changes this one reply and nothing about what the rules recognise. These are your words.",
-      "the quote goes because your wording has none. That also ends the empty quote after Here is what you said.",
-      "no saved test holds the old words, so no saved test changes. The rejected reading was keeping the quote after the new words, which would show an empty quote again.",
+      "the last test is the pastor message rewritten with made-up details. Measured on the real message while the can't rule was still there: all four copies answered, three lines each. That reading never used the can't rule, so removing the rule leaves it standing. I would measure the real message again once this is in. Measured with a copy of the rules with both cards in: no saved test changes except this one.",
     ],
   };
   let proposals = [
@@ -1861,8 +1788,8 @@ export function reply_proposals() {
     card_asks_gathered,
     names_pakistan,
     town_in_optional,
+    cant_out,
     contact_street,
-    not_sure_wording,
   ];
   return proposals;
 }
