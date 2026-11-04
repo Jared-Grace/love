@@ -4,6 +4,7 @@ import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet
 import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
 import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
 import { app_code_lesson_for } from "./app_code_lesson_for.mjs";
+import { app_code_lesson_for_change } from "./app_code_lesson_for_change.mjs";
 export function app_code_lessons_latest_held_fns() {
   "the lessons kept off latest while every other lesson is shown there, asked for by the human 2026-09-30: deploy through lesson 204 and skip 205, the 24-hour clock, which is not ready to hand over yet";
   "A list of lessons rather than a cut at a number, for the same reason the released list is one: a lesson put in above would move a number, and a list names the lesson itself. Empty it to show every lesson on latest again. Since 2026-10-24 the working copy leaves these out too, so what this holds decides both.";
@@ -128,6 +129,7 @@ export function app_code_lessons_latest_held_fns() {
     app_code_lesson_while_and,
     app_code_lesson_while_if,
     app_code_lesson_for,
+    app_code_lesson_for_change,
   ];
   return fns;
 }

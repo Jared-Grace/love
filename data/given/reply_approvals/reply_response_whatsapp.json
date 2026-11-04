@@ -1,0 +1,1 @@
+{"f_name":"reply_response_whatsapp","text":"+import { text_combine } from \"./text_combine.mjs\";\n+import { emoji_phone } from \"./emoji_phone.mjs\";\n+export function reply_response_whatsapp() {\n+  let left = emoji_phone();\n+  let t = text_combine(left, \" WhatsApp: +1-904-314-4052\");\n+  return t;\n+}\n+"}

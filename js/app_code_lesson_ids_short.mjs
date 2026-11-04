@@ -424,6 +424,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_while_total_squares: text_frozen("while_squares"),
     app_code_lesson_while_if: text_frozen("while_if"),
     app_code_lesson_for: text_frozen("for"),
+    app_code_lesson_for_change: text_frozen("for_change"),
     app_code_lesson_step_while: text_frozen("step_while"),
     app_code_lesson_step_while_log: text_frozen("step_while_log"),
     app_code_lesson_step_while_down: text_frozen("step_while_down"),

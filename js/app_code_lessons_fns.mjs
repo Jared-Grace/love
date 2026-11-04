@@ -325,6 +325,7 @@ import { app_code_lesson_while_repeat_word_down } from "./app_code_lesson_while_
 import { app_code_lesson_while_start_end } from "./app_code_lesson_while_start_end.mjs";
 import { app_code_lesson_while_two_lines } from "./app_code_lesson_while_two_lines.mjs";
 import { app_code_lesson_for } from "./app_code_lesson_for.mjs";
+import { app_code_lesson_for_change } from "./app_code_lesson_for_change.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet.mjs";
 import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
@@ -665,6 +666,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_start_end,
     app_code_lesson_while_two_lines,
     app_code_lesson_for,
+    app_code_lesson_for_change,
     app_code_lesson_while_two_names,
     app_code_lesson_while_two_meet,
     app_code_lesson_while_and,
