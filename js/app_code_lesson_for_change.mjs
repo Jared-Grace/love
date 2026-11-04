@@ -5,7 +5,6 @@ import { app_code_lesson_for } from "./app_code_lesson_for.mjs";
 import { js_code_for_condition_lines } from "./js_code_for_condition_lines.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_for_condition_update_lines } from "./js_code_for_condition_update_lines.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_loop_log_generic } from "./app_code_lesson_loop_log_generic.mjs";
 export function app_code_lesson_for_change() {
@@ -16,34 +15,24 @@ export function app_code_lesson_for_change() {
   function above(root, context, example, walk) {
     "For remembered, then the same program with its change moved up";
     let box_one = app_code_container_light_blue(root);
+    ("2026-11-04, the human's words: the code before and after, then one line saying they do the same, since code is easier to understand than English about code. Not picked: my first draft, which explained the move in English and said when the moved code runs; the step by step below shows that");
     app_code_remember_from_lesson(box_one, context, app_code_lesson_for, [
-      "a ",
-      "for",
-      " with its condition in between two ",
-      ";",
-      " does what a ",
-      "while",
-      " does:",
+      "we can write this:",
     ]);
     example(box_one, js_code_for_condition_lines);
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
-      "The ",
+      "We can move the ",
       "n += 3",
-      " can move up, after the second ",
-      ";",
-      ", and the ",
-      "for",
-      " does the same:",
+      " into the ",
+      "for (...)",
+      " like this:",
     ]);
     example(box_two, js_code_for_condition_update_lines);
-    let r = app_code_braces_dots();
     app_code_div_cycle_code(box_two, [
-      "The code after the second ",
-      ";",
-      " still runs after the ",
-      r,
-      ", each time, and then the condition is checked again:",
+      "These two ",
+      "for",
+      " loops do the same thing",
     ]);
     walk(box_two);
   }
