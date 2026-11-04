@@ -5,8 +5,6 @@ import { python_code_mirror } from "./python_code_mirror.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read } from "./file_read.mjs";
 import { not } from "./not.mjs";
-import { curl_read_hosts } from "./curl_read_hosts.mjs";
-import { dispatcher_scripts } from "./dispatcher_scripts.mjs";
 import { equal } from "./equal.mjs";
 import { json_from } from "./json_from.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -36,10 +34,10 @@ export async function python_mirror_write(mirror, approved) {
       "not written, because this file was not generated: " + path,
     );
   }
-  let hosts_path = ".claude/hooks/" + curl_read_hosts.name + ".py";
+  let hosts_path = ".claude/hooks/" + fn_name("curl_read_hosts") + ".py";
   let refusing_paths = [
     ".claude/hooks/denied_dispatcher_functions.py",
-    ".claude/hooks/" + dispatcher_scripts.name + ".py",
+    ".claude/hooks/" + fn_name("dispatcher_scripts") + ".py",
   ];
   let grows = equal(path, hosts_path);
   let shrinks = refusing_paths.includes(path);
