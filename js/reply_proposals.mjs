@@ -21,6 +21,7 @@ import { reply_prayer_lead_provider } from "./reply_prayer_lead_provider.mjs";
 import { reply_response_nothing_to_give } from "./reply_response_nothing_to_give.mjs";
 import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { reply_prayer_closing } from "./reply_prayer_closing.mjs";
+import { text_frozen } from "./text_frozen.mjs";
 import { reply_response_whatsapp } from "./reply_response_whatsapp.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
@@ -1630,9 +1631,10 @@ export function reply_proposals() {
       "am from in Kenya, am from Nairobi and am from Zzyzxville in Kenya still get no reply.",
     ],
   };
+  let t2 = text_frozen("digits");
   let contact_digits_list_removed = text_combine_multiple([
     "-  let d = ",
-    fn_name("digits"),
+    t2,
     "();",
   ]);
   let contact_digit_removed = text_combine_multiple([
