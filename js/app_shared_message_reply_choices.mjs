@@ -24,9 +24,6 @@ import { digits } from "./digits.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_once_or_more } from "./reply_once_or_more.mjs";
 import { reply_roads } from "./reply_roads.mjs";
-import { reply_choice_optional } from "./reply_choice_optional.mjs";
-import { app_shared_message_reply_choices_lambda } from "./app_shared_message_reply_choices_lambda.mjs";
-import { reply_on_match_capture } from "./reply_on_match_capture.mjs";
 import { reply_last } from "./reply_last.mjs";
 export function app_shared_message_reply_choices() {
   let greeting = app_shared_message_reply_greeting();
@@ -63,13 +60,6 @@ export function app_shared_message_reply_choices() {
   let digits_oom = reply_once_or_more(rc_digits);
   let r_roads = reply_roads();
   let fn = reply_sequence(["contact", digits_oom, r_roads]);
-  let cannot_middle = reply_choice_optional(["'", "no"]);
-  let fn20 = reply_sequence(["can", cannot_middle, "t"]);
-  function lambda(filtered, u) {
-    let r2 = app_shared_message_reply_choices_lambda(filtered, u);
-    return r2;
-  }
-  let matcher = reply_on_match_capture(fn20, lambda);
   let choices_main = reply_choice([
     hru,
     greeting,
@@ -81,7 +71,6 @@ export function app_shared_message_reply_choices() {
     visit_step,
     thanks,
     fn,
-    matcher,
   ]);
   let choices_cheapest = reply_cheapest_per_position(choices_main);
   let room = reply_once_or_more(choices_cheapest);
