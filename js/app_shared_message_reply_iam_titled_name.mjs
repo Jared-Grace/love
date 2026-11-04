@@ -1,3 +1,5 @@
+import { reply_sequence } from "./reply_sequence.mjs";
+import { reply_choice } from "./reply_choice.mjs";
 import { reply_name_title_optional } from "./reply_name_title_optional.mjs";
 import { reply_sequence_output } from "./reply_sequence_output.mjs";
 import { reply_phrase_i_am } from "./reply_phrase_i_am.mjs";
@@ -6,6 +8,8 @@ export function app_shared_message_reply_iam_titled_name() {
   let response = reply_choices_name();
   let name = reply_name_title_optional();
   let iam = reply_phrase_i_am();
-  let iam_titled_name = reply_sequence_output([iam, name], response);
+  let my_name_is = reply_sequence(["my", "name", "is"]);
+  let said = reply_choice([iam, my_name_is]);
+  let iam_titled_name = reply_sequence_output([said, name], response);
   return iam_titled_name;
 }
