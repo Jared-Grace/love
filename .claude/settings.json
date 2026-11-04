@@ -66,6 +66,7 @@
       "Bash(tr:*)",
       "Bash(paste:*)",
       "Bash(rev:*)",
+      "Bash(basename:*)",
       "Bash(md5sum:*)",
       "Bash(sha256sum:*)",
       "Bash(ffprobe:*)",

@@ -1,11 +1,11 @@
-import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
-import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
+import { list_get_property } from "./list_get_property.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { null_is } from "./null_is.mjs";
@@ -13,6 +13,7 @@ import { app_code_program_step_line_while_words } from "./app_code_program_step_
 import { app_code_program_step_line_wrong_words } from "./app_code_program_step_line_wrong_words.mjs";
 import { app_code_program_step_line_ran_words } from "./app_code_program_step_line_ran_words.mjs";
 import { app_code_program_step_line_never_words } from "./app_code_program_step_line_never_words.mjs";
+import { app_code_program_step_noun } from "./app_code_program_step_noun.mjs";
 export function app_code_program_step_line_press_words(lines, trace, index, i) {
   arguments_assert(arguments, 4);
   ("Why line i is not the line to press next, in the program's lines, run in the order trace gives, with index lines run so far: a reason and its words, words and code taking turns, text first; or null where no rule says why. One function so the step-through screen and the gate over every program ask the same thing");
@@ -84,7 +85,8 @@ export function app_code_program_step_line_press_words(lines, trace, index, i) {
   if (done && null_is(reason)) {
     ("2026-10-24, at the human's asking that every wrong press says why: a line pressed once every line due has run. Words picked by the human from the ones offered");
     reason = "program_done";
-    reason_words = ["The program is complete - no line is left to run"];
+    let noun = app_code_program_step_noun(trace);
+    reason_words = ["The program is complete - no " + noun + " is left to run"];
   }
   if (null_is(reason)) {
     return null;

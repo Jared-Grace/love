@@ -37,8 +37,8 @@ import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { subtract } from "./subtract.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { text_slice } from "./text_slice.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { list_set } from "./list_set.mjs";
@@ -768,7 +768,9 @@ export function app_code_program_step_through_generic(
       }
       property_set(told, reason, true);
       line_reason_show([
-        "You are right that nothing more will change. The computer still runs each line that is left, one at a time, to find that out; press the next line to run",
+        equal(noun, "code")
+          ? "You are right that nothing more will change. The computer still runs the code that is left, one part at a time, to find that out; press the next code to run"
+          : "You are right that nothing more will change. The computer still runs each line that is left, one at a time, to find that out; press the next line to run",
       ]);
       return true;
     }
