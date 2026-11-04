@@ -2,7 +2,7 @@ import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_name_to_parts } from "./function_name_to_parts.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_run_repeats_is } from "./list_run_repeats_is.mjs";
+import { list_segment_repeats_is } from "./list_segment_repeats_is.mjs";
 import { less_than } from "./less_than.mjs";
 export function function_name_words_repeated_is(f_name) {
   "$plain f_name";
@@ -19,7 +19,7 @@ export function function_name_words_repeated_is(f_name) {
     let left = subtract(count, length);
     let after = subtract(left, length);
     while (less_than(start, after + 1)) {
-      let repeats_is = list_run_repeats_is(parts, start, length);
+      let repeats_is = list_segment_repeats_is(parts, start, length);
       if (repeats_is) {
         return true;
       }
