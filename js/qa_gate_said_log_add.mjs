@@ -1,3 +1,4 @@
+import { qa_gate_inputs_log_add } from "./qa_gate_inputs_log_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { qa_gate_said_log_entry } from "./qa_gate_said_log_entry.mjs";
@@ -19,6 +20,7 @@ export async function qa_gate_said_log_add(commit, kept) {
     let entry = qa_gate_said_log_entry(commit, kept);
     let f_path = qa_gate_said_log_path();
     await dev_log_add(f_path, entry);
+    await qa_gate_inputs_log_add(commit, kept);
   }
   await catch_null_async(lambda);
 }
