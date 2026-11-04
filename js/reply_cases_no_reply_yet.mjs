@@ -8,10 +8,11 @@ export function reply_cases_no_reply_yet() {
     "I am from a poor family, please help me, my wife died, my children are hungry",
     "I am from a poor family, please help me, my children are hungry and we are in Kenya",
     "I am from the hospital, my wife died, I need prayer, I am in Kenya",
-    "am from Nairobi Kenya",
     "am from in Kenya",
     "am from Nairobi",
     "am from Zzyzxville in Kenya",
+    "contact 92 and my children are hungry road",
+    "I am pastor Samuel my wife is sick from Kenya",
   ];
   return messages;
 }

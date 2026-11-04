@@ -1561,6 +1561,185 @@ export function reply_proposals() {
       "the two old rules and the piece that took three parts in any order are unused once this goes in. I would remove them after you approve.",
     ],
   };
+  let cant_line =
+    "If you want, please change the wording of what you said and send me another message. Here is what you said: ";
+  let names_pakistan = {
+    title: "know five more common names from Pakistan",
+    fn: fn_name("reply_names_persian"),
+    whole: [],
+    diff: [
+      '-  let names = ["javed", "nasreen", "naveed", "sarfraz", "shazia"];',
+      '+  let names = ["akhtar", "dilshad", "javed", "khan", "nasreen", "naveed", "nawaz", "parveen", "sarfraz", "shazia"];',
+    ],
+    cases: [
+      {
+        from: "",
+        message: "I am pastor Samuel Nawaz from Kenya",
+        answered: true,
+        outputs: named_and_located,
+      },
+    ],
+    decide: [
+      "two of these five are names in the waiting message. All five are here because millions of people have them, which is the rule for this list. They carry nothing else about that person: no town, no phone, no street. Are you content to publish them?",
+      "the rejected reading was leaving names open, so any letters could stand as a name. I am pastor Samuel my wife is sick from Kenya then got a reply that ignored the sick wife. That message is now on the no reply yet list, and a gate fails if a rule starts answering it.",
+      "somebody whose name is on no list still gets no reply and comes to you.",
+    ],
+  };
+  let o_in_added = text_combine_multiple([
+    "+  let o_in = ",
+    fn_name("reply_optional"),
+    "(n);",
+  ]);
+  let o_city_in_removed = text_combine_multiple([
+    "-  let o_city_in = ",
+    fn_name("reply_sequence_optional"),
+    "([cities, n]);",
+  ]);
+  let o_city_in_added = text_combine_multiple([
+    "+  let o_city_in = ",
+    fn_name("reply_sequence_optional"),
+    "([cities, o_in]);",
+  ]);
+  let town_in_optional = {
+    title:
+      "answer somebody who names a listed city and their country without in",
+    fn: fn_name("app_shared_message_reply_from_country"),
+    whole: [],
+    diff: [
+      '-  "So no town from a message is written here and none is ever added. The shape is from, then optionally a city from a public list and the word in, then a country. A small town stays unmatched and goes to a human, which is the right answer to it. A slot open to any run of letters was tried and took a whole cry for help as a town: `i am from the hospital my wife died i need prayer i am in kenya` got only this sentence back, and so never reached anybody. A closed list cannot do that.";',
+      '+  "So no town from a message is written here and none is ever added. The shape is from, then optionally a city from a public list and maybe the word in, then a country. A small town stays unmatched and goes to a human, which is the right answer to it. A slot open to any run of letters was tried and took a whole cry for help as a town: `i am from the hospital my wife died i need prayer i am in kenya` got only this sentence back, and so never reached anybody. A closed list cannot do that.";',
+      o_city_in_removed,
+      o_in_added,
+      o_city_in_added,
+    ],
+    cases: [
+      {
+        from: "",
+        message: "am from Nairobi Kenya",
+        answered: true,
+        outputs: located,
+      },
+      {
+        from: "",
+        message: "am from Nairobi in Kenya",
+        answered: true,
+        outputs: located,
+      },
+    ],
+    decide: [
+      "this undoes one line of the card you approved: a place used to need the word in before the country. Am from Nairobi Kenya came off the no reply yet list because of this.",
+      "am from in Kenya, am from Nairobi and am from Zzyzxville in Kenya still get no reply.",
+    ],
+  };
+  let contact_digits_list_removed = text_combine_multiple([
+    "-  let d = ",
+    fn_name("digits"),
+    "();",
+  ]);
+  let contact_digit_removed = text_combine_multiple([
+    "-  let rc_digits = ",
+    fn_name("reply_choice"),
+    "(d);",
+  ]);
+  let contact_digits_removed = text_combine_multiple([
+    "-  let digits_oom = ",
+    fn_name("reply_once_or_more"),
+    "(rc_digits);",
+  ]);
+  let contact_roads_removed = text_combine_multiple([
+    "-  let r_roads = ",
+    fn_name("reply_roads"),
+    "();",
+  ]);
+  let contact_removed = text_combine_multiple([
+    "-  let fn = ",
+    fn_name("reply_sequence"),
+    '(["contact", digits_oom, r_roads]);',
+  ]);
+  let contact_added = text_combine_multiple([
+    "+  let fn = ",
+    fn_name("reply_contact_address"),
+    "();",
+  ]);
+  let cannot_middle_removed = text_combine_multiple([
+    "-  let cannot_middle = ",
+    fn_name("reply_choice_optional"),
+    '(["\'", "no"]);',
+  ]);
+  let cannot_removed = text_combine_multiple([
+    "-  let fn20 = ",
+    fn_name("reply_sequence"),
+    '(["can", cannot_middle, "t"]);',
+  ]);
+  let cannot_added = text_combine_multiple([
+    "+  let fn20 = ",
+    fn_name("reply_cant_or_cannot"),
+    "();",
+  ]);
+  let contact_street = {
+    title: "read a phone number and a short street, town and cantonment",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [
+      fn_name("reply_contact_address"),
+      fn_name("reply_letters_at_most"),
+      fn_name("reply_cantonment"),
+      fn_name("reply_cant"),
+      fn_name("reply_cant_or_cannot"),
+      fn_name("text_apostrophes"),
+    ],
+    diff: [
+      contact_digits_list_removed,
+      contact_digit_removed,
+      contact_digits_removed,
+      contact_roads_removed,
+      contact_removed,
+      contact_added,
+      cannot_middle_removed,
+      cannot_removed,
+      cannot_added,
+    ],
+    cases: [
+      {
+        from: "",
+        message: "contact 92 03001234567 M Main Road",
+        answered: true,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "contact 92 03001234567 M Main Road Karachi Cant",
+        answered: true,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "contact 92 03001234567 M Main Road Karachi Cantonment",
+        answered: true,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "cant",
+        answered: true,
+        outputs: [cant_line, ""],
+      },
+      {
+        from: "40d47c1ec2a9759d",
+        message:
+          "I'mpastorSamuelAndrewMarkFromKarachiPakistancontact 92 03001234567MMainRoadKarachiCant",
+        answered: true,
+        outputs: named_and_located,
+      },
+    ],
+    decide: [
+      "the street name can be any letters, up to 12. Spaces are gone before a rule reads a message, so counting letters is the only limit available. Contact 92 and my children are hungry road is too long and gets no reply. Contact 92 help me road fits, and gets a reply with no lines, so nobody reads it. It needs the word contact, digits and a road word together. Is that risk acceptable? The rejected reading was any length, and that answered the hungry children message.",
+      "the open word gate does not watch this new piece. It only lists pieces that take any word at all, and it has no way to record your yes. If I listed this piece, the gate would go red the moment you approved. Your yes on this card is the record instead.",
+      "cant after a listed town now means a cantonment. Everywhere else it still means can't, so an address with cant and no town gets the change the wording line. The rejected reading was making the address win everywhere, which would need a road word check on every cant.",
+      "the marks people type for an apostrophe come from one list. Today only the straight one reaches the rules, because the others are removed first, so they cannot match yet.",
+      "a contact line says nothing back, because no reply is written for it. The last test gets only the name and location lines.",
+      "approve this last, after the two cards before it. The last test is the pastor message rewritten with made-up details, and it only gets both lines once all three are in. Measured with all three on the real message: all four copies answered, two lines each, and no saved test changes except this one.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -1577,6 +1756,9 @@ export function reply_proposals() {
     towns_wikidata,
     card_repeats_once,
     card_asks_gathered,
+    names_pakistan,
+    town_in_optional,
+    contact_street,
   ];
   return proposals;
 }
