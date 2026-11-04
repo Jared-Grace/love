@@ -267,8 +267,8 @@ export function functions_edit_unsafe_from_reads(reads) {
     let s = js_flow_slice(read, starts, whether, mutating);
     let positions = s.params;
     let callees = s.callees;
-    ("A check standing in front of a dangerous call hands nothing to it, so no value leads from one to the other - yet making the check always pass takes the guard away. So a call whose answer is thrown away, in a function that steers something dangerous, has a result that matters.");
-    if (steered_any) {
+    ("A check standing in front of a dangerous call hands nothing to it, so no value leads from one to the other - yet making the check always pass takes the guard away. So a call whose answer is thrown away, in a function that steers something dangerous or whose own result matters, has a result that matters - the second because a check often hands part of its work to a smaller check.");
+    if (steered_any || returns_danger.has(name)) {
       function lambda_check(call) {
         let b8 = pdanger.has(call.callee);
         let r7 = call.discarded && not(b8);
