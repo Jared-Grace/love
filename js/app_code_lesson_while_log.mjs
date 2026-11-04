@@ -1,9 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
-import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_loop_log_generic } from "./app_code_lesson_loop_log_generic.mjs";
@@ -37,7 +38,8 @@ export function app_code_lesson_while_log() {
       name,
       " every time the lines run:",
     ]);
-    example(box_two, js_code_while_lines_multiple);
+    let lines = js_code_start_above_lines(js_code_while_lines_multiple);
+    example(box_two, lines);
     walk(box_two);
     let r2 = app_code_braces_dots();
     app_code_div_cycle_code(box_two, [
@@ -53,7 +55,7 @@ export function app_code_lesson_while_log() {
   let lesson = app_code_lesson_loop_log_generic({
     name_id,
     above,
-    loop_lines: js_code_while_lines_multiple,
+    program_write: js_code_start_above_lines(js_code_while_lines_multiple),
   });
   return lesson;
 }

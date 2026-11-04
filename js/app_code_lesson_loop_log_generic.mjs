@@ -6,7 +6,6 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
@@ -21,6 +20,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_size } from "./list_size.mjs";
 import { multiply } from "./multiply.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_without } from "./list_without.mjs";
@@ -36,28 +36,27 @@ import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.m
 export function app_code_lesson_loop_log_generic(params) {
   arguments_assert(arguments, 1);
   ("A lesson about one loop with a console.log inside: let n = start; loop (n < bound) { console.log(n); n += added; } writes out each value n holds as the loop runs, asked forwards and backwards.");
-  ("What differs between lessons is the title, what is shown above, and how the loop is written around its two lines, which loop_lines does when handed the condition and those lines. Above is handed example, which draws the program of 1, 9 and 3 and what it writes out in a given way of writing the loop, and walk, which says what that program does run by run.");
+  ("What differs between lessons is the title, what is shown above, and how the whole program is written, which program_write does when handed the let, the condition and the two lines. Above is handed example, which draws the program of 1, 9 and 3 and what it writes out in a given way of writing it, and walk, which says what that program does run by run.");
   ("Each screen has one program from each of three counts of runs - one, two and three. None is left out, because a program that writes out nothing would show an empty answer.");
   ("Reading forwards, the wrong answers are the lines one run fewer, one run more, and every line written after n has changed rather than before; each once and never the answer.");
   ("Reading backwards, the wrong program is the same program compared against a number past where n ends, so it runs once more and writes out one line more.");
   let name_id = property_get(params, "name_id");
   let above_inner = property_get(params, "above");
-  let loop_lines = property_get(params, "loop_lines");
+  let program_write = property_get(params, "program_write");
   let less = js_operator_less_than_symbol();
   let plus = js_operator_plus_symbol();
   let name = "n";
-  function program_lines(lines_of_loop, start, bound, added) {
+  function program_lines(write, start, bound, added) {
     "let n = start; the loop asking n < bound around console.log(n); n += added;";
     let code = js_code_let_statement(name, start);
     let condition = js_code_binary_spaced_nb(name, less, bound);
     let logged = js_code_console_log_statement(name);
     let changed = js_code_assign_operator_statement(name, plus, added);
-    let looped = lines_of_loop(condition, [logged, changed]);
-    let lines = list_concat([code], looped);
+    let lines = write(code, condition, [logged, changed]);
     return lines;
   }
   function program_get(start, bound, added) {
-    let lines2 = program_lines(loop_lines, start, bound, added);
+    let lines2 = program_lines(program_write, start, bound, added);
     let joined = list_join_newline(lines2);
     return joined;
   }
@@ -171,9 +170,9 @@ export function app_code_lesson_loop_log_generic(params) {
       json2,
     ]);
   }
-  function example(root, lines_of_loop) {
-    "the program of 1, 9 and 3, written with lines_of_loop, and what it writes out";
-    let lines3 = program_lines(lines_of_loop, 1, 9, 3);
+  function example(root, write) {
+    "the program of 1, 9 and 3, written with write, and what it writes out";
+    let lines3 = program_lines(write, 1, 9, 3);
     let value2 = written([1, 4, 7]);
     app_code_code_lines_writes_out(root, lines3, value2);
   }

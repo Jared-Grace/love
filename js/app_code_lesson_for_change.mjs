@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_for } from "./app_code_lesson_for.mjs";
+import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_for_condition_lines } from "./js_code_for_condition_lines.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_for_condition_update_lines } from "./js_code_for_condition_update_lines.mjs";
@@ -19,7 +20,8 @@ export function app_code_lesson_for_change() {
     app_code_remember_from_lesson(box_one, context, app_code_lesson_for, [
       "we can write this:",
     ]);
-    example(box_one, js_code_for_condition_lines);
+    let lines_one = js_code_start_above_lines(js_code_for_condition_lines);
+    example(box_one, lines_one);
     let box_two = app_code_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "We can move the ",
@@ -28,7 +30,10 @@ export function app_code_lesson_for_change() {
       "for (...)",
       " like this:",
     ]);
-    example(box_two, js_code_for_condition_update_lines);
+    let lines_two = js_code_start_above_lines(
+      js_code_for_condition_update_lines,
+    );
+    example(box_two, lines_two);
     app_code_div_cycle_code(box_two, [
       "These two ",
       "for",
@@ -43,7 +48,9 @@ export function app_code_lesson_for_change() {
   let lesson = app_code_lesson_loop_log_generic({
     name_id,
     above,
-    loop_lines: js_code_for_condition_update_lines,
+    program_write: js_code_start_above_lines(
+      js_code_for_condition_update_lines,
+    ),
   });
   return lesson;
 }
