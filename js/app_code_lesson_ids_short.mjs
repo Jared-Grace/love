@@ -407,7 +407,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_while_countdown: text_frozen("while_countdown"),
     app_code_lesson_while_repeat_word: text_frozen("while_repeat"),
     app_code_lesson_while_start_end: text_frozen("while_start_end"),
-    app_code_lesson_while_repeat_word_down: text_frozen("while_repeat_down"),
+    app_code_lesson_while_repeat_word_down: text_frozen("while_word_down"),
     app_code_lesson_while_two_lines: text_frozen("while_two_lines"),
     app_code_lesson_while_two_names: text_frozen("while_two_names"),
     app_code_lesson_while_two_meet: text_frozen("while_two_meet"),
