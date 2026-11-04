@@ -1,13 +1,10 @@
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_title_passage } from "./psalms_title_passage.mjs";
+import { equal } from "./equal.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
 import { app_shared_bible_verses_separator } from "./app_shared_bible_verses_separator.mjs";
-import { app_shared_bible_mode_hash_key } from "./app_shared_bible_mode_hash_key.mjs";
-import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
-import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
+import { facebook_bible_chapter_url } from "./facebook_bible_chapter_url.mjs";
 import { app_shared_bible_verse_hash_key } from "./app_shared_bible_verse_hash_key.mjs";
-import { cloudflare_site_url } from "./cloudflare_site_url.mjs";
 export function facebook_psalm_bible_url(passage) {
   arguments_assert(arguments, 1);
   ("$plain passage");
@@ -20,18 +17,11 @@ export function facebook_psalm_bible_url(passage) {
   let chapter_code = ebible_chapter_code_pad("PSA", named.chapter);
   let verses =
     named.verse_first + app_shared_bible_verses_separator() + named.verse_last;
-  let hash =
-    app_shared_bible_mode_hash_key() +
-    "=" +
-    app_shared_bible_mode_chapter() +
-    "," +
-    app_shared_bible_chapter_hash_key() +
-    "=" +
-    chapter_code +
+  let url =
+    facebook_bible_chapter_url(chapter_code) +
     "," +
     app_shared_bible_verse_hash_key() +
     "=" +
     verses;
-  let url = cloudflare_site_url() + "/bible#" + hash;
   return url;
 }

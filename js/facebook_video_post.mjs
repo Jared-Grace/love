@@ -3,6 +3,10 @@ import { youtube_studio_chrome_path } from "./youtube_studio_chrome_path.mjs";
 import { facebook_page_user_data_path } from "./facebook_page_user_data_path.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { sleep } from "./sleep.mjs";
+import { facebook_composer_open } from "./facebook_composer_open.mjs";
+import { facebook_composer_type } from "./facebook_composer_type.mjs";
+import { facebook_dialog_labels } from "./facebook_dialog_labels.mjs";
+import { facebook_dialog_click } from "./facebook_dialog_click.mjs";
 import { facebook_composer_ai_label_add } from "./facebook_composer_ai_label_add.mjs";
 import { facebook_reel_cover_upload } from "./facebook_reel_cover_upload.mjs";
 export async function facebook_video_post(file_path, text, cover_path) {
@@ -43,21 +47,6 @@ export async function facebook_video_post(file_path, text, cover_path) {
     });
     steps.push(step + " " + picture);
   }
-  async function click_in_dialog(label) {
-    "Clicks the last visible button of that name in any open dialog: a reel stacks its pages as dialogs, and the one in front is the last.";
-    let found = await page.evaluate(
-      "(function(w){var es=[].slice.call(document.querySelectorAll('[role=dialog] [role=button],[role=dialog] button,[role=dialog] [role=switch],[role=dialog] [role=checkbox]')).filter(function(x){var r=x.getBoundingClientRect();return r.width>0&&r.height>0&&((x.getAttribute('aria-label')||'')===w||(x.innerText||'').trim()===w)});var e=es[es.length-1];if(!e)return null;if(e.getAttribute('aria-disabled')==='true')return 'disabled';e.click();return 'clicked'})(" +
-        JSON.stringify(label) +
-        ")",
-    );
-    return found;
-  }
-  async function dialog_labels() {
-    let r = await page.evaluate(
-      "(function(){return [].slice.call(document.querySelectorAll('[role=dialog] [role=button],[role=dialog] button,[role=dialog] [role=switch],[role=dialog] [role=checkbox]')).map(function(e){return (e.getAttribute('aria-label')||'')+' | '+(e.innerText||'').trim().slice(0,40)})})()",
-    );
-    return r;
-  }
   try {
     let pages = await browser.pages();
     page = pages[0];
@@ -69,14 +58,7 @@ export async function facebook_video_post(file_path, text, cover_path) {
     await page.goto("https://www.facebook.com/CHRISTrosetolife/");
     await sleep(6000);
     step = "open the composer";
-    let opened = await page.evaluate(
-      "(function(){var es=[].slice.call(document.querySelectorAll('[role=button]'));var e=es.find(function(x){return (x.innerText||'').indexOf(\"What's on your mind\")>=0});if(!e)return false;e.click();return true})()",
-    );
-    if (!opened) {
-      throw new Error("no 'What's on your mind' box");
-    }
-    await page.waitForSelector('[role=dialog][aria-label="Create post"]');
-    await sleep(3000);
+    await facebook_composer_open(page);
     await picture_take();
     step = "hand over the film";
     let input = await page.waitForSelector(
@@ -86,37 +68,22 @@ export async function facebook_video_post(file_path, text, cover_path) {
     await sleep(8000);
     await picture_take();
     step = "write the words";
-    let box = await page.waitForSelector(
-      '[role=dialog][aria-label="Create post"] [role=textbox]',
-    );
-    await box.click();
-    await sleep(1000);
-    let lines = text.split("\n");
-    let i = 0;
-    while (i < lines.length) {
-      if (i > 0) {
-        await page.keyboard.down("Shift");
-        await page.keyboard.press("Enter");
-        await page.keyboard.up("Shift");
-      }
-      await page.keyboard.type(lines[i]);
-      i = i + 1;
-    }
+    await facebook_composer_type(page, text);
     await sleep(2000);
     await picture_take();
     step = "ai label";
-    let labels = await dialog_labels();
+    let labels = await facebook_dialog_labels(page);
     function lambda(l) {
       let has_off = l.indexOf("AI label off") >= 0;
       return has_off;
     }
     let ai_off = labels.find(lambda);
     if (ai_off) {
-      await click_in_dialog("AI label off");
+      await facebook_dialog_click(page, "AI label off");
       await facebook_composer_ai_label_add(page);
       await picture_take();
     }
-    labels = await dialog_labels();
+    labels = await facebook_dialog_labels(page);
     function lambda2(l) {
       let has_on = l.indexOf("AI label") === 0 && l.indexOf("AI label off") < 0;
       return has_on;
@@ -154,15 +121,15 @@ export async function facebook_video_post(file_path, text, cover_path) {
         covered = true;
         step = "post";
       }
-      posted = await click_in_dialog("Post");
+      posted = await facebook_dialog_click(page, "Post");
       if (posted === null) {
-        posted = await click_in_dialog("Share");
+        posted = await facebook_dialog_click(page, "Share");
       }
       if (posted === null) {
-        posted = await click_in_dialog("Share now");
+        posted = await facebook_dialog_click(page, "Share now");
       }
       if (posted === null) {
-        let next = await click_in_dialog("Next");
+        let next = await facebook_dialog_click(page, "Next");
         if (next !== "clicked") {
           throw new Error("neither a send button nor Next: Next was " + next);
         }
@@ -172,7 +139,7 @@ export async function facebook_video_post(file_path, text, cover_path) {
       }
     }
     if (posted !== "clicked") {
-      let v2 = await dialog_labels();
+      let v2 = await facebook_dialog_labels(page);
       throw new Error(
         "Post was " + posted + "; buttons: " + JSON.stringify(v2),
       );
