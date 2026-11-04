@@ -1,3 +1,4 @@
+import { qa_gate_said_log_add } from "./qa_gate_said_log_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_commit_beside_heads } from "./qa_commit_beside_heads.mjs";
 import { property_get } from "./property_get.mjs";
@@ -28,6 +29,7 @@ export async function qa_commit_kept_file(named, kept, path, before) {
   if (fileable) {
     property_set(kept, "beside", heads);
     await file_json_transform_initialize(path, {}, entry_add);
+    await qa_gate_said_log_add(named, kept);
   }
   let r = {
     filed: fileable,
