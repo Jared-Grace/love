@@ -2420,7 +2420,7 @@ export function permission_grant_names() {
     fn_name("berean_usfm_download_path"),
     fn_name("functions_search_family_or_null_cases_gate_run"),
     fn_name("firebase_function_chapters_uploaded"),
-    fn_name("app_original_bible_gloss_unpublished_gate_run"),
+    fn_name("app_learn_original_gloss_unpublished_gate_run"),
     fn_name("ebible_version_storage_delete"),
     fn_name("ebible_versions_published_commercial_not"),
     fn_name("ebible_versions_english_choices_upload_path"),
