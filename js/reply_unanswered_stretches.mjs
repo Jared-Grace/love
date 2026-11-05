@@ -9,8 +9,9 @@ import { reply_case_key } from "./reply_case_key.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
 export async function reply_unanswered_stretches(f_name) {
   arguments_assert(arguments, 1);
-  ("Which stretches of each different waiting message a drafted rule set can read, as word positions, with the words between them counted. f_name is a function that hands back the whole rule set.");
-  ("★ THE ANSWER HOLDS ONLY NUMBERS, BECAUSE THE WORDS ARE PRIVATE. Reading how far from the start stops at the first unknown part, so it cannot say whether the parts after it are known. This asks from every word, and keeps for each the longest run of up to twenty words the rules read to its end.");
+  ("Which stretches of each different waiting message a drafted rule set can read, as word positions. f_name is a function that hands back the whole rule set.");
+  ("★ THE ANSWER HOLDS ONLY NUMBERS, BECAUSE THE WORDS ARE PRIVATE. Reading how far from the start stops at the first unknown part, so it cannot say whether the parts after it are known. This asks from every word, and keeps for each the longest run the rules read to its end.");
+  ("★ A RUN IS TRIED UP TO FIFTY WORDS, BECAUSE A BIBLE VERSE ONLY READS WHOLE. A shorter limit reports a verse the rules know as a gap. So a stretch that reaches fifty may go on further, and the next stretch starts where it stopped.");
   let f = await function_import(f_name);
   let start = f();
   let records = await app_message_private_records_replied();
@@ -31,7 +32,7 @@ export async function reply_unanswered_stretches(f_name) {
     while (less_than(from, words.length)) {
       let found = 0;
       let b = subtract(words.length, from);
-      let longest = math_min(20, b);
+      let longest = math_min(50, b);
       for (let size = longest; greater_than(size, 0); size--) {
         let piece = words.slice(from, from + size).join(" ");
         let attempt = await reply_attempt(piece, start);
