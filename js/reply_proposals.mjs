@@ -2144,6 +2144,141 @@ export function reply_proposals() {
       "this alone does not answer the choir leader's messages. They need every part understood, and more cards are coming for the rest.",
     ],
   };
+  let teacher_blessing_line = text_combine_multiple([
+    "   let teaching = ",
+    fn_name("prayer_blessing"),
+    '("your ministry and teaching");',
+  ]);
+  let teacher_old = text_combine_multiple([
+    "-  let teacher = ",
+    fn_name("reply_i_am_a_output"),
+    '("teacher", teaching);',
+  ]);
+  let teacher_o_school = text_combine_multiple([
+    "+  let o_sunday_school = ",
+    fn_name("reply_sequence_optional"),
+    '(["sunday", "school"]);',
+  ]);
+  let teacher_title = text_combine_multiple([
+    "+  let title = ",
+    fn_name("reply_sequence"),
+    '([o_sunday_school, "teacher"]);',
+  ]);
+  let teacher_new = text_combine_multiple([
+    "+  let teacher = ",
+    fn_name("reply_i_am_a_output"),
+    "(title, teaching);",
+  ]);
+  let ministers_old = text_combine_multiple([
+    "-  let ministers = ",
+    fn_name("reply_choice"),
+    "([minister, teacher]);",
+  ]);
+  let work_add = text_combine_multiple([
+    "+  let work = ",
+    fn_name("reply_ministry_work"),
+    "();",
+  ]);
+  let ministers_new = text_combine_multiple([
+    "+  let ministers = ",
+    fn_name("reply_choice"),
+    "([minister, teacher, work]);",
+  ]);
+  let teacher_work_said = {
+    title:
+      "bless a Sunday school teacher, and somebody doing ministry work in a country",
+    fn: fn_name("app_shared_message_reply_minister"),
+    whole: [fn_name("reply_ministry_work")],
+    diff: [
+      teacher_blessing_line,
+      teacher_old,
+      teacher_o_school,
+      teacher_title,
+      teacher_new,
+      ministers_old,
+      work_add,
+      ministers_new,
+      "   return ministers;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "I am a Sunday school teacher",
+        answered: true,
+        outputs: [teaching_response],
+      },
+      {
+        from: "",
+        message: "I am a teacher",
+        answered: true,
+        outputs: [teaching_response],
+      },
+      {
+        from: "",
+        message: "I do ministry work in Kenya",
+        answered: true,
+        outputs: [ministry_response],
+      },
+      {
+        from: "",
+        message: "I do ministry work",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "a Sunday school teacher gets the same blessing as any teacher: your ministry and teaching. The rejected reading was a separate blessing for Sunday school.",
+      "ministry work in a country gets your ministry, and says nothing about the country. The rejected reading was also answering with the location line, because the person is saying where they serve and not where they are from.",
+      "only these words are read, with the country from the list, because you want other wordings added when somebody really sends them.",
+      "this alone does not answer the waiting messages. They need every part understood, and more cards are coming for the rest.",
+    ],
+  };
+  let names_sanskrit_said = {
+    title: "know five more common names from India",
+    fn: fn_name("reply_names_sanskrit"),
+    whole: [],
+    diff: [
+      '     "anita",',
+      '+    "arun",',
+      '+    "ashok",',
+      '     "deepak",',
+      '     "geeta",',
+      '     "kavita",',
+      '     "lakshmi",',
+      '     "mahesh",',
+      '     "manoj",',
+      '     "meena",',
+      '     "neha",',
+      '     "pooja",',
+      '     "prakash",',
+      '     "priya",',
+      '+    "rahul",',
+      '     "rajesh",',
+      '     "ramesh",',
+      '     "rani",',
+      '     "rekha",',
+      '+    "sagar",',
+      '     "sanjay",',
+      '     "seema",',
+      '     "sunil",',
+      '     "sunita",',
+      '     "suresh",',
+      '     "vijay",',
+      '+    "vikram",',
+    ],
+    cases: [
+      {
+        from: "",
+        message: "I am pastor Samuel Vikram from Kenya",
+        answered: true,
+        outputs: named_and_located,
+      },
+    ],
+    decide: [
+      "one of these five is a name in the waiting message. All five are here because millions of people have them, which is the rule for this list. They carry nothing else about that person: no town, no phone, no street. Are you content to publish them?",
+      "somebody whose name is on no list still gets no reply and comes to you.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -2170,6 +2305,8 @@ export function reply_proposals() {
     us_word,
     verses_said,
     age_said,
+    teacher_work_said,
+    names_sanskrit_said,
   ];
   return proposals;
 }
