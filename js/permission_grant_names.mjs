@@ -1420,7 +1420,7 @@ export function permission_grant_names() {
     fn_name("app_ceb_bible_gloss_self_roots_count"),
     fn_name("app_ceb_bible_gloss_chapter_roots_prompts"),
     fn_name("function_command_seams_reached_paths"),
-    fn_name("app_original_bible_gloss_words_unicode_repair"),
+    fn_name("app_learn_original_gloss_words_unicode_repair"),
     fn_name("function_functionize_before"),
     fn_name("function_functionize_rest"),
     fn_name("app_learn_original_gloss_explains_text_passages"),

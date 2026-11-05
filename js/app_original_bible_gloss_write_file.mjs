@@ -1,7 +1,7 @@
 import { app_learn_original_gloss_passages } from "./app_learn_original_gloss_passages.mjs";
 import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { gloss_write_file_generic } from "./gloss_write_file_generic.mjs";
-import { app_original_bible_gloss_words_unicode_repair } from "./app_original_bible_gloss_words_unicode_repair.mjs";
+import { app_learn_original_gloss_words_unicode_repair } from "./app_learn_original_gloss_words_unicode_repair.mjs";
 export async function app_original_bible_gloss_write_file(
   chapter_code,
   verse_key,
@@ -23,7 +23,7 @@ export async function app_original_bible_gloss_write_file(
     fn,
   );
   let repaired =
-    await app_original_bible_gloss_words_unicode_repair(chapter_code);
+    await app_learn_original_gloss_words_unicode_repair(chapter_code);
   let r = {
     path,
     repaired,
