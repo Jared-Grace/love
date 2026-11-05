@@ -427,6 +427,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_for_change: text_frozen("for_change"),
     app_code_lesson_for_start: text_frozen("for_start"),
     app_code_lesson_for_increment: text_frozen("for_increment"),
+    app_code_lesson_for_decrement: text_frozen("for_decrement"),
     app_code_lesson_step_while: text_frozen("step_while"),
     app_code_lesson_step_while_log: text_frozen("step_while_log"),
     app_code_lesson_step_while_down: text_frozen("step_while_down"),
