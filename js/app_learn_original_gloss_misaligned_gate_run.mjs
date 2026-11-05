@@ -12,7 +12,7 @@ export async function app_learn_original_gloss_misaligned_gate_run() {
   let words_read = gloss_passage_words_originals;
   let mend = text_combine_multiple([
     "two words that look the same are the ordinary cause here, because an accented Hebrew or Greek letter has more than one spelling of the same characters - put the passage's own letters back across every chapter at once with ",
-    fn_name("app_original_bible_gloss_words_unicode_repair_all"),
+    fn_name("app_learn_original_gloss_words_unicode_repair_all"),
     ", which finds its own work, and read whatever is left after that",
   ]);
   let r = await gloss_words_misaligned_gate_generic(

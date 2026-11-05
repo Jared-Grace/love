@@ -2497,7 +2497,7 @@ export function permission_grant_names() {
     fn_name("function_imports_bundled"),
     fn_name("app_en_learn_bible_gloss_urdu_passages_words"),
     fn_name("gloss_root_claimed_shape"),
-    fn_name("app_original_bible_gloss_words_unicode_repair_all"),
+    fn_name("app_learn_original_gloss_words_unicode_repair_all"),
     fn_name("gloss_root_claimed_backing_gate_run"),
     fn_name("ai_git_noted"),
     fn_name("app_ceb_bible_gloss_explains_repair_silent"),
