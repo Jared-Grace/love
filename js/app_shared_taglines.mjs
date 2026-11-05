@@ -8,7 +8,7 @@ export function app_shared_taglines() {
     bible: "read the written word of God",
     bible_emoji: "the Bible written with pictures in place of its words",
     search: "find a word anywhere in the Bible",
-    original_bible:
+    learn_original:
       "every word explained in English, with the number to look it up by",
     ceb_bible: "every word explained, with the root it comes from",
     en_learn_bible:
