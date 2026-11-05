@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_chapter_codes } from "./local_function_chapter_codes.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { app_learn_original_gloss_chapter_translits_add } from "./app_learn_original_gloss_chapter_translits_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
@@ -13,7 +13,7 @@ export async function app_original_bible_gloss_translits_add_all() {
   "The chapters are taken one after another rather than all at once, because each one reads and writes the same store and the interlinear behind them is large enough that asking for many at the same time buys nothing.";
   arguments_assert(arguments, 0);
   let codes = await local_function_chapter_codes(
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
   );
   let chapters = [];
   let added = 0;

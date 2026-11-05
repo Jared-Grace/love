@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_chapter_codes } from "./local_function_chapter_codes.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { app_learn_original_gloss_chapter_section_marks_strip } from "./app_learn_original_gloss_chapter_section_marks_strip.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -12,7 +12,7 @@ export async function app_original_bible_gloss_section_marks_strip_all() {
   "A chapter with no welded word is left alone and mends nothing, so running this twice costs the second run nothing and changes no file.";
   arguments_assert(arguments, 0);
   let codes = await local_function_chapter_codes(
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
   );
   let changes = [];
   for (let code of codes) {

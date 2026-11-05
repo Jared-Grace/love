@@ -5,7 +5,7 @@
   "gloss_store_words_read -> app_ceb_bible_gloss_generate",
   "gloss_stores -> app_ceb_bible_gloss_generate",
   "gloss_stores -> app_en_learn_bible_gloss_urdu_generate",
-  "gloss_stores -> app_original_bible_gloss_generate",
+  "gloss_stores -> app_learn_original_gloss_generate",
   "hash_fields_all -> app_code_hash_fields",
   "hash_fields_all -> app_supper_hash_fields",
   "karate_tests -> app_karate",

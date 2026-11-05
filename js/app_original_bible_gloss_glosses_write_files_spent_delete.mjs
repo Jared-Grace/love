@@ -1,4 +1,4 @@
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { app_original_bible_gloss_passage_entries } from "./app_original_bible_gloss_passage_entries.mjs";
 import { gloss_entry_gloss_key } from "./gloss_entry_gloss_key.mjs";
 import { gloss_write_files_spent_delete_generic } from "./gloss_write_files_spent_delete_generic.mjs";
@@ -8,7 +8,7 @@ export async function app_original_bible_gloss_glosses_write_files_spent_delete(
   "It names the store, the family of files, the reading that opens a passage, and which half of a word's row is being cleared; the clearing itself is written once and shared with the twin over the prose.";
   let key = gloss_entry_gloss_key();
   let r = await gloss_write_files_spent_delete_generic(
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
     "glosses_",
     app_original_bible_gloss_passage_entries,
     key,

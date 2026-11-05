@@ -1,6 +1,6 @@
 import { property_in_list } from "./property_in_list.mjs";
 import { app_learn_original_gloss_explains_write } from "./app_learn_original_gloss_explains_write.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { each_async } from "./each_async.mjs";
 import { each_index } from "./each_index.mjs";
 import { equal } from "./equal.mjs";
@@ -21,7 +21,7 @@ export async function app_original_bible_gloss_marker_clauses_repair() {
   "An author who left a marker under a word often pointed at it in the sentence beside it, so mending the two halves of a word's row is one piece of work in two sittings: the short English is written first, and this is what closes the second half. Until it runs, a mended word reads with a sentence pointing at a mark that is no longer on the page.";
   "It finds its own work rather than being handed a list, and it finds it by asking which words still carry a marker - so a chapter half mended keeps every clause that is still true, and running it again after everything is written changes nothing.";
   "Only the sentence a reader reads is written back, and only at the standings that changed. The words themselves are never retyped, because a passage's Greek and Hebrew do not survive being typed again.";
-  let fn = app_original_bible_gloss_generate;
+  let fn = app_learn_original_gloss_generate;
   let markers = gloss_placeholder_glosses();
   let gloss_key = gloss_entry_gloss_key();
   let explain_key = gloss_entry_explain_key();

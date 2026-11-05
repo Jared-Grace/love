@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { bible_interlinear_original_strongs } from "./bible_interlinear_original_strongs.mjs";
 import { gloss_original_word_key_read } from "./gloss_original_word_key_read.mjs";
 import { app_original_bible_gloss_text_index } from "./app_original_bible_gloss_text_index.mjs";
@@ -14,7 +14,7 @@ export async function app_learn_original_gloss_chapters_claims_generic(
   "The words are met by their dictionary entry rather than by their spelling, which is what these two languages need and what neither of the other stores uses. Measured on 2026-09-25, keying by spelling called eighty-five claims in every hundred wrong here against twenty in the Urdu store, and the whole of that gap was one word's ending moving between two verses.";
   "The dictionary is opened once and handed to every chapter, because it is read out of the whole interlinear and that is the slow part. Opening it per chapter would pay the same reading four hundred times over.";
   arguments_assert(arguments, 1);
-  let fn = app_original_bible_gloss_generate;
+  let fn = app_learn_original_gloss_generate;
   let strongs = await bible_interlinear_original_strongs();
   let word_keys_read = gloss_original_word_key_read(strongs);
   let text_index = app_original_bible_gloss_text_index();

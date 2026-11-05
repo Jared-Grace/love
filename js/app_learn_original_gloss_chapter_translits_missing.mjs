@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapter_entries } from "./gloss_chapter_entries.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { bible_interlinear_chapter_word_forms } from "./bible_interlinear_chapter_word_forms.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_word_form } from "./bible_word_form.mjs";
@@ -17,7 +17,7 @@ export async function app_learn_original_gloss_chapter_translits_missing(
   arguments_assert(arguments, 1);
   let entries = await gloss_chapter_entries(
     chapter_code,
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
   );
   let forms = await bible_interlinear_chapter_word_forms(chapter_code);
   let translits = {};

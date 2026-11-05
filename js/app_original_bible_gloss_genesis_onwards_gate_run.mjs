@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_chapter_codes } from "./local_function_chapter_codes.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { ebible_book_codes_old_testament } from "./ebible_book_codes_old_testament.mjs";
 import { gloss_chapters_run_offenders } from "./gloss_chapters_run_offenders.mjs";
 import { gloss_chapters_offenders_assert } from "./gloss_chapters_offenders_assert.mjs";
@@ -19,7 +19,7 @@ export async function app_original_bible_gloss_genesis_onwards_gate_run() {
   ("Green on the day it landed: Genesis fifty, Exodus forty, Leviticus twenty seven, Numbers thirty six, Deuteronomy thirty four, Joshua twenty four, Judges twenty - the first seven books of the canon in order, with the run stopping inside the seventh and no hole behind it.");
   arguments_assert(arguments, 0);
   let chapter_codes = await local_function_chapter_codes(
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
   );
   let book_codes = ebible_book_codes_old_testament();
   let walked = gloss_chapters_run_offenders(chapter_codes, book_codes);

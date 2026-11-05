@@ -1,5 +1,5 @@
 import { app_learn_original_gloss_explains_write_file } from "./app_learn_original_gloss_explains_write_file.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { each_async } from "./each_async.mjs";
 import { gloss_explains_write_files_verse_keys } from "./gloss_explains_write_files_verse_keys.mjs";
 import { list_add } from "./list_add.mjs";
@@ -11,7 +11,7 @@ export async function app_learn_original_gloss_explains_write_chapter(
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   "Mending a chapter of fifty passages one command at a time leaves nothing behind that says what was done, and no single command to say it with - so the record of the work becomes a sentence somebody wrote, which is the one thing that must not go there. Asking the folder what is waiting makes the whole chapter one named command with one real argument.";
   "It finds its own work, so a sitting that mends six passages and a sitting that mends the remaining thirty-nine are the same command, and running it again after everything is written changes nothing.";
-  let fn = app_original_bible_gloss_generate;
+  let fn = app_learn_original_gloss_generate;
   let verse_keys = await gloss_explains_write_files_verse_keys(
     chapter_code,
     fn,

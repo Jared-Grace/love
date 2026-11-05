@@ -2,7 +2,7 @@ import { bible_interlinear_verses_words } from "./bible_interlinear_verses_words
 import { list_filter } from "./list_filter.mjs";
 import { gloss_finding_elsewhere_empty_is } from "./gloss_finding_elsewhere_empty_is.mjs";
 import { list_filter_not } from "./list_filter_not.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_entries_parsings_exceeding } from "./gloss_entries_parsings_exceeding.mjs";
@@ -26,7 +26,7 @@ export async function app_original_bible_gloss_parsings_exceeding(
   "The parsing is the one thing in a word explanation that was handed to its author instead of being worked out, so it is the one thing a reader can be held to without anybody having to know Greek. Everything else an explanation says - what a form is doing in its clause, what the word is built from, what it echoes elsewhere - is outside what this can see, and a chapter that comes back clean here has been checked on one claim and not on the rest.";
   "A chapter nobody has authored yet has nothing to look at and comes back empty, and a passage whose explanations and words will not line up is named as unlooked-at rather than counted as clean. Which passages are still waiting to be written is a separate question with its own reader.";
   "What comes back is sorted into two, and nothing is dropped out of either. A place lands under the exceeding ones when no word in its passage carries the form the explanation names, which leaves the explanation nothing to have meant; it lands under the elsewhere ones when some other word does carry it, which is what an explanation saying a word does not agree with the genitive words before it looks like from here. The second sort is far the commoner and is read by skimming; the first is short and every one of them wants an answer.";
-  let fn = app_original_bible_gloss_generate;
+  let fn = app_learn_original_gloss_generate;
   let path = local_function_path_json(chapter_code, fn);
   let exists = await file_exists(path);
   if (not(exists)) {

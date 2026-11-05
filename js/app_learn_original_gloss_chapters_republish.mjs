@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_republish_generic } from "./gloss_chapters_republish_generic.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { app_learn_original_gloss_chapters_uploaded } from "./app_learn_original_gloss_chapters_uploaded.mjs";
 import { app_learn_original_gloss_chapter_upload_stored } from "./app_learn_original_gloss_chapter_upload_stored.mjs";
 export async function app_learn_original_gloss_chapters_republish() {
@@ -12,7 +12,7 @@ export async function app_learn_original_gloss_chapters_republish() {
   ("Measured 2026-10-01: that repair mended one chapter, JDG06, which turned out not to be published yet - so nothing was stranded that day. The command is here for the day the same repair lands on a chapter that is published, when nothing anywhere would say so.");
   arguments_assert(arguments, 0);
   let r = await gloss_chapters_republish_generic(
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
     app_learn_original_gloss_chapters_uploaded,
     app_learn_original_gloss_chapter_upload_stored,
   );

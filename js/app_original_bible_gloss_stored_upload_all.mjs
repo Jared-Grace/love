@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_chapter_codes } from "./local_function_chapter_codes.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { app_learn_original_gloss_chapter_upload_stored } from "./app_learn_original_gloss_chapter_upload_stored.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_original_bible_gloss_stored_upload_all() {
@@ -11,7 +11,7 @@ export async function app_original_bible_gloss_stored_upload_all() {
   "The chapters go one after another rather than all at once, because this is a write to a shared store and a burst of them is the one thing the store answers slowly to.";
   arguments_assert(arguments, 0);
   let codes = await local_function_chapter_codes(
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
   );
   for (let code of codes) {
     await app_learn_original_gloss_chapter_upload_stored(code);

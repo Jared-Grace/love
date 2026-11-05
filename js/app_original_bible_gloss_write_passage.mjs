@@ -1,6 +1,6 @@
 import { equal } from "./equal.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
 import { bible_strong_chapter_tallies_cache } from "./bible_strong_chapter_tallies_cache.mjs";
 import { gloss_words_occurrence_added } from "./gloss_words_occurrence_added.mjs";
@@ -57,7 +57,7 @@ export async function app_original_bible_gloss_write_passage(
   let file = gloss_write_file_path(
     chapter_code,
     verse_key,
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
   );
   let r2 = {
     chapter_code,

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -29,7 +29,7 @@ export async function app_learn_original_gloss_chapter_section_marks_strip(
   arguments_assert(arguments, 1);
   let path = local_function_path_json(
     chapter_code,
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
   );
   let chapter = await file_read_json(path);
   let passages = property_get(chapter, "passages");

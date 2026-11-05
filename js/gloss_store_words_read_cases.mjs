@@ -15,7 +15,7 @@ export function gloss_store_words_read_cases() {
         read: ["panan", "aw"],
       },
       {
-        store: fn_name("app_original_bible_gloss_generate"),
+        store: fn_name("app_learn_original_gloss_generate"),
         read: ["panan", "aw"],
       },
     ],

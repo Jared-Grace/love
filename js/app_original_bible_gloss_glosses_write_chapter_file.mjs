@@ -1,4 +1,4 @@
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { app_original_bible_gloss_glosses_write } from "./app_original_bible_gloss_glosses_write.mjs";
 import { each_async } from "./each_async.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -16,7 +16,7 @@ export async function app_original_bible_gloss_glosses_write_chapter_file(
   "One file rather than one per passage, because an author reads a whole chapter's marked words in one worksheet and answers them in one sitting; fifty files would be fifty writings of the same answer.";
   let path = gloss_glosses_write_chapter_file(
     chapter_code,
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
   );
   let passages = await file_read_json(path);
   let verse_keys = object_property_names(passages);

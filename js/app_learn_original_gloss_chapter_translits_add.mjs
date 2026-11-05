@@ -1,7 +1,7 @@
 import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_interlinear_chapter_word_forms } from "./bible_interlinear_chapter_word_forms.mjs";
@@ -32,7 +32,7 @@ export async function app_learn_original_gloss_chapter_translits_add(
   arguments_assert(arguments, 1);
   let path = local_function_path_json(
     chapter_code,
-    app_original_bible_gloss_generate,
+    app_learn_original_gloss_generate,
   );
   let chapter = await file_read_json(path);
   let passages = property_get(chapter, "passages");

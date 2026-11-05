@@ -1,4 +1,4 @@
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { app_learn_original_gloss_generate_upload_path } from "./app_learn_original_gloss_generate_upload_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_generate_upload_filter } from "./g_generate_upload_filter.mjs";
@@ -12,7 +12,7 @@ export async function app_learn_original_gloss_chapter_upload_stored(
   ("A chapter is published part-written on purpose. The store holds only the passages that have been authored, so a reader on a verse nobody has explained yet is shown the chapter and no explanations, rather than an explanation nobody wrote.");
   ("$plain chapter_code");
   ("the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to publish and nothing that runs.");
-  let fn = app_original_bible_gloss_generate;
+  let fn = app_learn_original_gloss_generate;
   let path_get = app_learn_original_gloss_generate_upload_path;
   await g_generate_upload_filter(fn, path_get, chapter_code);
 }

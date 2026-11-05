@@ -1,4 +1,4 @@
-import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
+import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { gloss_chapter_explains_text_passages } from "./gloss_chapter_explains_text_passages.mjs";
 export async function app_learn_original_gloss_explains_text_passages(
   chapter_code,
@@ -8,7 +8,7 @@ export async function app_learn_original_gloss_explains_text_passages(
   "$plain chapter_code";
   "$plain text";
   "both name text to read: a chapter of the Bible, and a run of letters to look for in what was written about it. Neither names anything that runs.";
-  let fn = app_original_bible_gloss_generate;
+  let fn = app_learn_original_gloss_generate;
   let r = await gloss_chapter_explains_text_passages(chapter_code, fn, text);
   return r;
 }
