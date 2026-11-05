@@ -3,7 +3,7 @@ import { local_function_chapter_codes } from "./local_function_chapter_codes.mjs
 import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { app_learn_original_gloss_chapter_upload_stored } from "./app_learn_original_gloss_chapter_upload_stored.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_original_bible_gloss_stored_upload_all() {
+export async function app_learn_original_gloss_stored_upload_all() {
   "Publish every chapter of the original-language gloss store exactly as it already stands, generating nothing, and answer with how many went.";
   "★ IT IS FOR A CHANGE THAT TOUCHED CHAPTERS ALREADY PUBLISHED, which is the one case publishing only the unpublished ones cannot serve: those chapters have all been up for months, so that command finds nothing to do and says so, while every reader keeps being served the old words.";
   "★ IT GENERATES NOTHING, so it can never put a machine's answer on a reader's screen in place of what somebody wrote. It carries up what is on this disk and nothing else.";
