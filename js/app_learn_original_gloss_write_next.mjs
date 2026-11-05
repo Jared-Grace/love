@@ -5,7 +5,7 @@ import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_original_bible_gloss_write_next(chapter_code) {
+export async function app_learn_original_gloss_write_next(chapter_code) {
   "Everything needed to author the next passage of a chapter that has no word explanations yet: its English wording, and each of its verses with every original-language word already parsed.";
   "The parsing, the transliteration and the Strong's number are handed over rather than worked out, so an explanation says what a form is doing in its clause and never has to decide what the form is. The rubric for what an explanation owes the reader is notes/gloss_method.md.";
   "A word rare enough to be worth remarking on also arrives carrying the sentence that says so, already written out of the counts. That claim used to be the author's to make and was the one kind they could not check: nobody remembers how many times a word stands in a testament, and a sentence saying it stands only here reads exactly the same whether or not it is true. Handing it over puts it in the same class as the parsing - given, not generated - so the author is left with the part no dataset holds.";

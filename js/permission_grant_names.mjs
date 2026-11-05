@@ -1036,7 +1036,7 @@ export function permission_grant_names() {
     fn_name("ebible_chapter_verse_numbers_to_pair"),
     fn_name("g_arc_prompt_chapter_leader"),
     fn_name("storage_prefix_read_check"),
-    fn_name("app_original_bible_gloss_write_next"),
+    fn_name("app_learn_original_gloss_write_next"),
     fn_name("qa_gate_timings_stale_is"),
     fn_name("file_days_since_written"),
     fn_name("storage_rules_gate_run"),
