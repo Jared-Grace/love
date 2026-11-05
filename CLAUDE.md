@@ -94,7 +94,7 @@ Not in `public/` any more (moved 2026-08-23: `public/img`, `public/bible`, the l
 
 ## Authoring Bible word glosses — **read [notes/gloss_method.md](notes/gloss_method.md) before authoring a passage**
 
-The rubric for `app_original_bible` and `app_ceb_bible`: the interlinear already gives you the word, its transliteration, its parsing, and its Strong's number (`bible_interlinear_chapters_words_cache`), so a parsing is **explained, never generated**; the note also covers what an `explain` owes the reader and the plain-text limits the renderer imposes.
+The rubric for `app_learn_original` and `app_ceb_bible`: the interlinear already gives you the word, its transliteration, its parsing, and its Strong's number (`bible_interlinear_chapters_words_cache`), so a parsing is **explained, never generated**; the note also covers what an `explain` owes the reader and the plain-text limits the renderer imposes.
 
 **Adding a translation, or arguing about a licence, is a different question — [notes/bible_sources.md](notes/bible_sources.md).** Where the text comes from, and why the words of the terms decide rather than the label on them.
 

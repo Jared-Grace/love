@@ -1,6 +1,6 @@
 # Glossing method
 
-**Read this before authoring gloss content for a passage.** It is the rubric for `app_original_bible` (Greek and Hebrew), `app_ceb_bible` (Cebuano) and `app_en_learn_bible` (English words explained in Urdu). One entry per word, whether you author a passage at a time or a whole chapter at a time.
+**Read this before authoring gloss content for a passage.** It is the rubric for `app_learn_original` (Greek and Hebrew), `app_ceb_bible` (Cebuano) and `app_en_learn_bible` (English words explained in Urdu). One entry per word, whether you author a passage at a time or a whole chapter at a time.
 
 **The Urdu store differs only in which two languages sit on either side of an entry.** The `word` is the English word, the `gloss` is its Urdu, and the `explain` is written *in Urdu* for a reader whose English is beginning. Everything below about simplicity, about defining a term where it is used, about never writing "same as above", and about minimum additional meaning applies to it word for word.
 
@@ -36,7 +36,7 @@ Consequences you must author to:
 
 ## The grammar is GIVEN. Do not generate it.
 
-You are handed the words, already parsed. `app_original_bible_gloss_write_next(chapter_code)` returns, in order, one record per word:
+You are handed the words, already parsed. `app_learn_original_gloss_write_next(chapter_code)` returns, in order, one record per word:
 
 ```
 { original, translit, parsing, parsing_long, gloss, strong,
@@ -99,7 +99,7 @@ A repeat is an opportunity, not a duplicate. The word is doing a **different job
 
 The repeat entry can be shorter than the first. It cannot be empty. This is the same principle the sermon side already runs on: `g_sermon_glosses_for_word` exists so a term defined in an earlier chapter gets a **different facet** rather than the same sentence twice.
 
-**And the `gloss` is never a marker.** `gloss_placeholder_glosses()` names three — `. . .`, `vvv`, and a bare `-` — and `app_original_bible_gloss_placeholders_gate_run` rejects all three wherever they stand, whether the payload handed them to you or you wrote one yourself. There is no carve-out for a word English folds away: an article before a proper name still gets `the`, an untranslated `οὖν` still gets `so`, an `ἐάν` folded into *anyone* still gets `if`. The reader is looking at the Greek word; telling them it means a dash tells them nothing, and the explain underneath is already where the folding gets explained. Believing otherwise costs a whole chapter at once — the gate runs per chapter, so a wrong assumption is not caught until twenty-two passages later, and `app_original_bible_gloss_placeholders_chapter_entries <CHAPTER>` is then what lists them by index for the mend loop.
+**And the `gloss` is never a marker.** `gloss_placeholder_glosses()` names three — `. . .`, `vvv`, and a bare `-` — and `app_learn_original_gloss_placeholders_gate_run` rejects all three wherever they stand, whether the payload handed them to you or you wrote one yourself. There is no carve-out for a word English folds away: an article before a proper name still gets `the`, an untranslated `οὖν` still gets `so`, an `ἐάν` folded into *anyone* still gets `if`. The reader is looking at the Greek word; telling them it means a dash tells them nothing, and the explain underneath is already where the folding gets explained. Believing otherwise costs a whole chapter at once — the gate runs per chapter, so a wrong assumption is not caught until twenty-two passages later, and `app_learn_original_gloss_placeholders_chapter_entries <CHAPTER>` is then what lists them by index for the mend loop.
 
 The Hebrew direct object marker `אֶת` is the word this bites on most often, because every payload hands it over as a bare `-` and English really has nothing to put there. **The corpus already answers it: the gloss is `object marker`**, and the explain says which word the marking falls on ("The pointing word, marking who is to be let go."). Copy that rather than inventing a second wording — it is the one place a whole class of words would otherwise each get a different English word for the same job.
 
@@ -173,7 +173,7 @@ Small choices, fixed once, so chapters authored months apart match:
 
 - [ ] One entry per word, in passage order, no word skipped — the count matches the interlinear record count.
 - [ ] Every `word` field is copied from `original`, not retyped.
-- [ ] No explain contradicts or exceeds its `parsing_long`. `app_original_bible_gloss_parsings_gate_run` (in `q`) settles the half of this a machine can: an explain naming a tense, mood or case that **no word of its passage** carries fails the build. Naming one that a *neighbouring* word carries is fine and expected — that is the comparison this rubric asks for — but it must still be a term you defined in this passage, because the passage is all the reader can see.
+- [ ] No explain contradicts or exceeds its `parsing_long`. `app_learn_original_gloss_parsings_gate_run` (in `q`) settles the half of this a machine can: an explain naming a tense, mood or case that **no word of its passage** carries fails the build. Naming one that a *neighbouring* word carries is fine and expected — that is the comparison this rubric asks for — but it must still be a term you defined in this passage, because the passage is all the reader can see.
 - [ ] No "same as above", no empty explain, no markdown, no line breaks.
 - [ ] Every gloss and every explain passes the ten-year-old test — plain everyday words, short sentences, one idea each. This is standing, not a per-request extra.
 - [ ] Every grammar term used is defined somewhere in this passage before or where it is used.

@@ -118,7 +118,7 @@ Only the characters of the text are frozen. That means:
   character into the text. An added `*` is punctuation added to the Scriptures,
   which is the one thing named.
 
-The gloss corpus (`app_original_bible`, `app_ceb_bible`) inserts nothing into the
+The gloss corpus (`app_learn_original`, `app_ceb_bible`) inserts nothing into the
 verse either, but before shipping an ND text into a glossing app, check that the
 renderer for it holds notes apart from the words.
 
