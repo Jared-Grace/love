@@ -2,13 +2,14 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_proposals_waiting } from "./reply_proposals_waiting.mjs";
 import { app_message_reply_cases_checked } from "./app_message_reply_cases_checked.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { list_squash } from "./list_squash.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_squash } from "./list_squash.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { app_message_reply_records_by_keys } from "./app_message_reply_records_by_keys.mjs";
 import { reply_case_real_or_null } from "./reply_case_real_or_null.mjs";
 import { reply_case_approval } from "./reply_case_approval.mjs";
 import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
+import { reply_proposal_changed_approval } from "./reply_proposal_changed_approval.mjs";
 import { list_add } from "./list_add.mjs";
 import { reply_cases_no_reply_yet_shown } from "./reply_cases_no_reply_yet_shown.mjs";
 export async function app_message_reply_proposals_shown() {
@@ -55,10 +56,18 @@ export async function app_message_reply_proposals_shown() {
     let cases = property_get(proposal, "cases");
     let joined = list_map(cases, each_case);
     let drawn = await reply_proposal_drawn(proposal);
+    let title = property_get(proposal, "title");
+    let f_name = property_get(proposal, "fn");
+    let drawn_lines = property_get(drawn, "lines");
     let carried = {
-      title: property_get(proposal, "title"),
-      fn: property_get(proposal, "fn"),
-      lines: property_get(drawn, "lines"),
+      title,
+      fn: f_name,
+      lines: drawn_lines,
+      changed_approval: reply_proposal_changed_approval(
+        title,
+        f_name,
+        drawn_lines,
+      ),
       unplaced: property_get(drawn, "unplaced"),
       whole: property_get(drawn, "whole"),
       decide: property_get(proposal, "decide"),

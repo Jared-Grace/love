@@ -10,7 +10,6 @@ import { app_reply_rules_case_approve_show } from "./app_reply_rules_case_approv
 import { list_map } from "./list_map.mjs";
 import { app_reply_rules_cases_approved_show } from "./app_reply_rules_cases_approved_show.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { reply_proposal_changed_approval } from "./reply_proposal_changed_approval.mjs";
 import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
 import { app_reply_rules_file_card } from "./app_reply_rules_file_card.mjs";
 import { app_reply_rules_file_contents } from "./app_reply_rules_file_contents.mjs";
@@ -59,7 +58,8 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   let unplaced = property_get(proposal, "unplaced");
   let stale = list_empty_not_is(unplaced);
   ("★ ONLY THE CODE STILL NEEDING A VERDICT IS DRAWN. A file already approved as it stands is a question answered, so its card is left out when the page opens. A file approved in an older wording is drawn again, and so is an altered file with lines missing, however it was approved, because the warning about those lines is the one thing that means stop.");
-  let changed_approval = reply_proposal_changed_approval(title, f_name, lines);
+  ("The name of a verdict is worked out on the server and handed down, the same as a test's, because working it out needs a hash the browser does not have.");
+  let changed_approval = property_get(proposal, "changed_approval");
   let changed_name = property_get(changed_approval, "name");
   let changed_lines = property_get(changed_approval, "lines");
   let outstanding = app_reply_rules_file_outstanding_is(
