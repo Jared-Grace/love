@@ -4,6 +4,8 @@ import { reply_country_shown_words } from "./reply_country_shown_words.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_sequence_output } from "./reply_sequence_output.mjs";
 import { reply_countries_shown } from "./reply_countries_shown.mjs";
+import { reply_continents_shown } from "./reply_continents_shown.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_squash } from "./list_squash.mjs";
 import { reply_countries_words } from "./reply_countries_words.mjs";
@@ -26,7 +28,9 @@ export function reply_ministry_work() {
     let rule = reply_sequence_output([country_choice], country_blessing);
     return rule;
   }
-  let shown = reply_countries_shown();
+  let countries_shown = reply_countries_shown();
+  let continents = reply_continents_shown();
+  let shown = list_concat(countries_shown, continents);
   let shown_words = list_map(shown, reply_country_shown_words);
   let covered = list_squash(shown_words);
   let spellings = reply_countries_words();
