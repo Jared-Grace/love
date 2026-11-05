@@ -1,12 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
-import { js_operator_less_than_equal_symbol } from "./js_operator_less_than_equal_symbol.mjs";
-import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { add } from "./add.mjs";
-import { subtract } from "./subtract.mjs";
+import { app_code_lesson_up_to_log_options } from "./app_code_lesson_up_to_log_options.mjs";
 import { app_code_lesson_while_less_equal } from "./app_code_lesson_while_less_equal.mjs";
 export function app_code_lesson_while_up_to() {
   arguments_assert(arguments, 0);
@@ -20,27 +15,8 @@ export function app_code_lesson_while_up_to() {
     "while (n <= 3) { n++; }",
   );
   let lesson = app_code_lesson_while_update_log_generic({
+    ...app_code_lesson_up_to_log_options(),
     name_id,
-    comparison: js_operator_less_than_equal_symbol(),
-    comparison_mistaken: js_operator_less_than_symbol(),
-    asks: less_than_equal,
-    change: js_operator_plus_symbol(),
-    step: add,
-    step_back: subtract,
-    groups: [
-      [
-        [3, 3],
-        [6, 6],
-      ],
-      [
-        [2, 3],
-        [5, 6],
-      ],
-      [
-        [1, 3],
-        [4, 6],
-      ],
-    ],
     remembered: app_code_lesson_while_less_equal,
     remembered_parts: [
       "",
@@ -56,8 +32,6 @@ export function app_code_lesson_while_up_to() {
       "console.log",
       ", the number it is compared with is written out too:",
     ],
-    start: 1,
-    bound: 3,
   });
   return lesson;
 }
