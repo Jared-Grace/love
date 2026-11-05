@@ -19,9 +19,9 @@ export function reply_bible_1jn_4_7() {
   let fn3 = reply_optional("ones");
   let item2 = reply_choice(["let", "lets"]);
   let fn4 = reply_optional(item2);
-  let item3 = reply_choice(["may", "us"]);
+  let item3 = reply_choice(["may", "us", "vs"]);
   let fn5 = reply_optional(item3);
-  let item4 = reply_choice(["have", "vs", "we"]);
+  let item4 = reply_choice(["have", "we"]);
   let fn6 = reply_optional(item4);
   let r2 = reply_word_love();
   let fn7 = reply_optional("for");

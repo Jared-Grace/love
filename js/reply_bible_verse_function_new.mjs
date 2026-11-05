@@ -1,3 +1,6 @@
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 import { reply_bible_verse_references_written } from "./reply_bible_verse_references_written.mjs";
 import { reply_bible_verse_wordings } from "./reply_bible_verse_wordings.mjs";
 import { reply_bible_wordings_columns } from "./reply_bible_wordings_columns.mjs";
@@ -18,11 +21,12 @@ export async function reply_bible_verse_function_new(
   let references = await reply_bible_verse_references_written();
   function same(reference) {
     let is =
-      reference.chapter_code === chapter_code &&
-      reference.verse_number === verse_number;
+      equal(reference.chapter_code, chapter_code) &&
+      equal(reference.verse_number, verse_number);
     return is;
   }
-  if (!references.some(same)) {
+  let b = references.some(same);
+  if (not(b)) {
     references.push({
       chapter_code,
       verse_number,
@@ -35,14 +39,15 @@ export async function reply_bible_verse_function_new(
       reference.chapter_code,
       reference.verse_number,
     );
-    if (wordings.length === 0) {
+    if (equal(wordings.length, 0)) {
       throw new Error(
         `no Bible here has ${reference.chapter_code} ${reference.verse_number}`,
       );
     }
     wordings_all.push(...wordings);
     let columns = reply_bible_wordings_columns(wordings);
-    verses_parts.push(reply_bible_columns_parts(columns));
+    let parts2 = reply_bible_columns_parts(columns);
+    verses_parts.push(parts2);
   }
   let shared = reply_bible_parts_shared(verses_parts);
   shared.names = await reply_bible_choice_function_names(
@@ -50,10 +55,11 @@ export async function reply_bible_verse_function_new(
     wordings_all,
   );
   function codes_get(parts) {
-    let codes = parts.flatMap(function part_code(part) {
+    function part_code(part) {
       let code = reply_bible_part_code(part, shared);
       return code;
-    });
+    }
+    let codes = parts.flatMap(part_code);
     return codes;
   }
   let verses_codes = verses_parts.map(codes_get);
@@ -63,7 +69,7 @@ export async function reply_bible_verse_function_new(
     codes_all,
   );
   let verses_written = [];
-  for (let index = 0; index < references.length; index++) {
+  for (let index = 0; less_than(index, references.length); index++) {
     let f_name = await reply_bible_verse_function_write(
       references[index],
       verses_codes[index],
