@@ -4,7 +4,7 @@ import { reply_words } from "./reply_words.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_phrase_that_we } from "./reply_phrase_that_we.mjs";
 import { reply_word_son_sonne } from "./reply_word_son_sonne.mjs";
-import { reply_word_loue_love } from "./reply_word_loue_love.mjs";
+import { reply_word_love } from "./reply_word_love.mjs";
 import { reply_phrase_one_another } from "./reply_phrase_one_another.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
@@ -29,7 +29,7 @@ export function reply_bible_1jn_3_23() {
   let fn8 = reply_optional("we");
   let item2 = reply_choice(["may", "should"]);
   let fn9 = reply_optional(item2);
-  let r8 = reply_word_loue_love();
+  let r8 = reply_word_love();
   let fn10 = reply_optional("for");
   let r9 = reply_phrase_one_another();
   let item3 = reply_choice(["even", "just"]);

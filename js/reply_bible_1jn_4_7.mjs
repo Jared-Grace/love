@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_optional } from "./reply_optional.mjs";
-import { reply_word_loue_love } from "./reply_word_loue_love.mjs";
+import { reply_word_love } from "./reply_word_love.mjs";
 import { reply_phrase_one_another } from "./reply_phrase_one_another.mjs";
 import { reply_word_because_for } from "./reply_word_because_for.mjs";
 import { reply_word_charity_loue_love } from "./reply_word_charity_loue_love.mjs";
@@ -23,7 +23,7 @@ export function reply_bible_1jn_4_7() {
   let fn5 = reply_optional(item3);
   let item4 = reply_choice(["have", "vs", "we"]);
   let fn6 = reply_optional(item4);
-  let r2 = reply_word_loue_love();
+  let r2 = reply_word_love();
   let fn7 = reply_optional("for");
   let r3 = reply_phrase_one_another();
   let r4 = reply_word_because_for();
