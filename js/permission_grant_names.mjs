@@ -2646,7 +2646,7 @@ export function permission_grant_names() {
     fn_name("app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run"),
     fn_name("app_en_learn_bible_gloss_urdu_words_sound_keys_gate_run"),
     fn_name("app_message_reply_cases_gate_run"),
-    fn_name("app_original_bible_gloss_genesis_onwards_gate_run"),
+    fn_name("app_learn_original_gloss_genesis_onwards_gate_run"),
     fn_name("app_original_bible_gloss_published_unfinished_gate_run"),
     fn_name("app_original_bible_gloss_verse_claims_wrong_gate_run"),
     fn_name("app_replace_hash_ids_gate_run"),
