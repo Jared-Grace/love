@@ -3,7 +3,7 @@ import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_ge
 import { each_async } from "./each_async.mjs";
 import { gloss_explains_write_files_verse_keys } from "./gloss_explains_write_files_verse_keys.mjs";
 import { list_add } from "./list_add.mjs";
-export async function app_original_bible_gloss_explains_write_chapter(
+export async function app_learn_original_gloss_explains_write_chapter(
   chapter_code,
 ) {
   "Write into one chapter of the original-language gloss every piece of new wording waiting for it, a passage at a time, and answer with the passages mended.";
