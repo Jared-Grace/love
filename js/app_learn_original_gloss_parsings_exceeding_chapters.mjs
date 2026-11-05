@@ -1,6 +1,6 @@
 import { list_size } from "./list_size.mjs";
 import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
-import { app_original_bible_gloss_parsings_exceeding } from "./app_original_bible_gloss_parsings_exceeding.mjs";
+import { app_learn_original_gloss_parsings_exceeding } from "./app_learn_original_gloss_parsings_exceeding.mjs";
 import { file_name_json_name } from "./file_name_json_name.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
@@ -20,7 +20,7 @@ export async function app_learn_original_gloss_parsings_exceeding_chapters() {
   let chapter_codes = list_map(file_names, file_name_json_name);
   let answers = await list_map_async(
     chapter_codes,
-    app_original_bible_gloss_parsings_exceeding,
+    app_learn_original_gloss_parsings_exceeding,
   );
   function exceeding_is(chapter) {
     let offending = property_list_empty_not_is(chapter, "exceeding");

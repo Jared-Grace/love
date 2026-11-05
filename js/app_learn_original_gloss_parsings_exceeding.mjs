@@ -17,7 +17,7 @@ import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_original_bible_gloss_parsings_exceeding(
+export async function app_learn_original_gloss_parsings_exceeding(
   chapter_code,
 ) {
   "Every place in one authored chapter of the original-language gloss where an explanation names a tense, a mood or a form that the interlinear does not give the word it is explaining.";
