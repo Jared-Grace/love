@@ -3,6 +3,7 @@ import { list_get } from "./list_get.mjs";
 import { not } from "./not.mjs";
 import { app_code_program_line_enclosing } from "./app_code_program_line_enclosing.mjs";
 import { equal } from "./equal.mjs";
+import { app_code_program_step_loop_keyword } from "./app_code_program_step_loop_keyword.mjs";
 export function app_code_program_step_line_never_words(lines, trace, pressed) {
   arguments_assert(arguments, 3);
   ("Why a pressed line is not the next to run, when it never runs at all: the nearest { } around it whose head runs is never entered - an if false each time it runs, or an else whose ifs before it are never all false. null when the line runs, or when something else keeps it from running. lines is the program's lines, trace the lines it runs in order, and pressed the line pressed");
@@ -70,8 +71,28 @@ export function app_code_program_step_line_never_words(lines, trace, pressed) {
       };
       return r2;
     }
+    if (text.startsWith("while") || text.startsWith("for")) {
+      ("2026-11-05: a loop whose condition is false every time it is checked keeps the lines inside it from ever running, the same as an if that is false, and the presses gate found these with no words on three for lessons. The same words as the if, naming the loop. A loop that was never reached is not the cause, so the next { } out is asked, as for an if. Not picked: keeping those lessons from drawing such loops, which leaves the rule silent for the next lesson that draws one");
+      let b4 = runs.includes(j);
+      if (not(b4)) {
+        continue;
+      }
+      if (entered) {
+        return null;
+      }
+      let keyword = app_code_program_step_loop_keyword(lines, j);
+      let r_loop = {
+        reason: "never_runs_loop",
+        words: [
+          "That line never runs, because the ",
+          keyword,
+          "'s condition is false when it runs",
+        ],
+      };
+      return r_loop;
+    }
     let b2 = text.includes("if (");
-    if (not(b2) || text.startsWith("while") || text.startsWith("for")) {
+    if (not(b2)) {
       return null;
     }
     let b3 = runs.includes(j);
