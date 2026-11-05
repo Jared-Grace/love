@@ -1,6 +1,6 @@
 import { app_original_bible_gloss_write_passage } from "./app_original_bible_gloss_write_passage.mjs";
 import { objects_merge } from "./objects_merge.mjs";
-import { app_original_bible_gloss_write_coverage } from "./app_original_bible_gloss_write_coverage.mjs";
+import { app_learn_original_gloss_write_coverage } from "./app_learn_original_gloss_write_coverage.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -13,7 +13,7 @@ export async function app_original_bible_gloss_write_next(chapter_code) {
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to read and nothing that runs.";
   "Each word also arrives with its parsing already said as a plain English sentence, and with what the lexicon holds under its Strong's number - the dictionary form, where the word comes from, and its range of meaning. Both belong to the same class as the parsing and the rarity: worked out for the author rather than by them. Where a word comes from was the last part being produced from memory, and it is the one part nothing downstream can check, because a wrong origin reads exactly like a right one and is the sentence a reader is most likely to carry away.";
-  let coverage = await app_original_bible_gloss_write_coverage(chapter_code);
+  let coverage = await app_learn_original_gloss_write_coverage(chapter_code);
   let missing = property_get(coverage, "missing");
   if (list_empty_is(missing)) {
     let finished = {
