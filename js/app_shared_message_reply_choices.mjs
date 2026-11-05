@@ -1,3 +1,5 @@
+import { reply_bible_verses } from "./reply_bible_verses.mjs";
+import { reply_bible_references_closed } from "./reply_bible_references_closed.mjs";
 import { reply_join_glory } from "./reply_join_glory.mjs";
 import { reply_contact_address } from "./reply_contact_address.mjs";
 import { app_shared_message_reply_asks } from "./app_shared_message_reply_asks.mjs";
@@ -57,6 +59,7 @@ export function app_shared_message_reply_choices() {
   let thanks = reply_choice_output(["thanks", thank_you], item);
   let fn = reply_contact_address();
   let join = reply_join_glory();
+  let verses = reply_bible_verses();
   let choices_main = reply_choice([
     hru,
     greeting,
@@ -69,12 +72,14 @@ export function app_shared_message_reply_choices() {
     thanks,
     fn,
     join,
+    verses,
   ]);
   let choices_cheapest = reply_cheapest_per_position(choices_main);
   let room = reply_once_or_more(choices_cheapest);
   let last = reply_last();
   let with_repeats = reply_sequence([room, last]);
   let said_once = reply_outputs_mapped(with_repeats, list_unique);
-  let r = reply_prayers_closed(said_once);
+  let prayed = reply_prayers_closed(said_once);
+  let r = reply_bible_references_closed(prayed);
   return r;
 }
