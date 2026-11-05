@@ -16,7 +16,7 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
-export async function app_original_bible_gloss_chapter_section_marks_strip(
+export async function app_learn_original_gloss_chapter_section_marks_strip(
   chapter_code,
 ) {
   "$plain chapter_code";
