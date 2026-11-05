@@ -1,5 +1,5 @@
 import { app_learn_original_gloss_passage_entries } from "./app_learn_original_gloss_passage_entries.mjs";
-import { app_original_bible_gloss_write } from "./app_original_bible_gloss_write.mjs";
+import { app_learn_original_gloss_write } from "./app_learn_original_gloss_write.mjs";
 import { error_json } from "./error_json.mjs";
 import { gloss_entries_explains_set } from "./gloss_entries_explains_set.mjs";
 import { null_is } from "./null_is.mjs";
@@ -25,7 +25,7 @@ export async function app_learn_original_gloss_explains_write(
   }
   let message = chapter_code + " " + verse_key;
   gloss_entries_explains_set(entries, explains, message);
-  let path = await app_original_bible_gloss_write(
+  let path = await app_learn_original_gloss_write(
     chapter_code,
     verse_key,
     entries,
