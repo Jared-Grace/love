@@ -14,7 +14,7 @@ export async function app_original_bible_gloss_parsings_gate_run() {
   let walked = await app_original_bible_gloss_parsings_exceeding_chapters();
   let fault = text_combine_multiple([
     "explain a word by naming a form no word of its passage carries - swap the wording in each with ",
-    fn_name("app_original_bible_gloss_chapter_explains_text_replace"),
+    fn_name("app_learn_original_gloss_chapter_explains_text_replace"),
     ", which takes the chapter code and finds the file itself",
   ]);
   let r = gloss_chapters_offenders_assert(walked, "original_bible", fault);

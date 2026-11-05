@@ -2564,7 +2564,7 @@ export function permission_grant_names() {
     fn_name("gloss_chapter_explains_text_replace"),
     fn_name("app_shared_dev_build_stale"),
     fn_name("app_en_learn_bible_gloss_urdu_chapter_explains_text_replace"),
-    fn_name("app_original_bible_gloss_chapter_explains_text_replace"),
+    fn_name("app_learn_original_gloss_chapter_explains_text_replace"),
     fn_name("web_assets_upload_folder"),
     fn_name("bible_glyph_chapters_name_tag_fire_joined_baseline_write"),
     fn_name("qa_commit_named_app_blocking_report"),
