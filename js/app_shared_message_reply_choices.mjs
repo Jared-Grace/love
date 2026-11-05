@@ -1,3 +1,4 @@
+import { reply_pray_for_me } from "./reply_pray_for_me.mjs";
 import { reply_we_should } from "./reply_we_should.mjs";
 import { reply_age_said } from "./reply_age_said.mjs";
 import { reply_bible_verses } from "./reply_bible_verses.mjs";
@@ -62,6 +63,7 @@ export function app_shared_message_reply_choices() {
   let fn = reply_contact_address();
   let join = reply_join_glory();
   let verses = reply_bible_verses();
+  let pray_for_me = reply_pray_for_me();
   let we_should = reply_we_should();
   let age = reply_age_said();
   let choices_main = reply_choice([
@@ -77,6 +79,7 @@ export function app_shared_message_reply_choices() {
     fn,
     join,
     verses,
+    pray_for_me,
     we_should,
     age,
   ]);
