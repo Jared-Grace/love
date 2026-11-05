@@ -1687,7 +1687,7 @@ export function permission_grant_names() {
     fn_name("js_visit_cases_gate_run"),
     fn_name("js_scope_binds_is_cases_gate_run"),
     fn_name("js_name_taken_is_cases_gate_run"),
-    fn_name("app_original_bible_gloss_placeholders_gate_run"),
+    fn_name("app_learn_original_gloss_placeholders_gate_run"),
     fn_name("gloss_marker_clauses"),
     fn_name("bible_glyph_artwork_absent"),
     fn_name("bible_storage_books_path"),
