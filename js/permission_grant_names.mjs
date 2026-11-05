@@ -1676,7 +1676,7 @@ export function permission_grant_names() {
     fn_name("ebible_readaloud_lines_offered_to_fetch_baseline_write"),
     fn_name("ebible_chapter_readaloud_file_or_null"),
     fn_name("text_replace_path_start_cases_gate_run"),
-    fn_name("app_original_bible_gloss_explains_write_file"),
+    fn_name("app_learn_original_gloss_explains_write_file"),
     fn_name("app_shared_text_reader_language_from_write"),
     fn_name("firebase_prod_hashes_write_from_disk"),
     fn_name("qa_gate_said_accused_or_null_gate_run"),
