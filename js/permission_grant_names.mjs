@@ -1032,7 +1032,7 @@ export function permission_grant_names() {
     fn_name("ebible_verses_upload_name"),
     fn_name("g_profiles_leader"),
     fn_name("text_replace_once_cases_gate_run"),
-    fn_name("app_original_bible_gloss_write_file"),
+    fn_name("app_learn_original_gloss_write_file"),
     fn_name("ebible_chapter_verse_numbers_to_pair"),
     fn_name("g_arc_prompt_chapter_leader"),
     fn_name("storage_prefix_read_check"),
