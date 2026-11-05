@@ -1970,6 +1970,44 @@ export function reply_proposals() {
     fn_name("prayer_end"),
     ", so it always closes the line, with the praying hands. That moves the Amen behind a quoted verse, where you first asked for it in front. The rejected reading was keeping a bare Amen in front for that one case.",
   ]);
+  let us_word_call = text_combine_multiple([
+    "+  let r = ",
+    fn_name("reply_word_u_v"),
+    '("us");',
+  ]);
+  let us_nothing_to_give = reply_response_nothing_to_give();
+  let combined70 = text_combine_multiple([
+    "this makes one function for the word us, with the old printing spelling vs inside it, so the name stays plain English. Live replies use it in two places: support us in ministry, and fellowship with us. So vs now counts in those two places as well. Both answers above are from the asking rules alone, and the second is worked out from the first: today vs gets no answer there. The rejected reading was keeping two functions, ",
+    fn_name("reply_word_us"),
+    " for live replies and a longer name for the Bibles.",
+  ]);
+  let us_word = {
+    title: "read vs as well as us",
+    fn: fn_name("reply_word_us"),
+    whole: [],
+    diff: ['-  let v = "us";', "-  return v;", us_word_call, "+  return r;"],
+    cases: [
+      {
+        from: "",
+        message:
+          "I am requesting you to support us in ministry according to God's will",
+        answered: true,
+        outputs: [us_nothing_to_give],
+      },
+      {
+        from: "",
+        message:
+          "I am requesting you to support vs in ministry according to God's will",
+        answered: true,
+        outputs: [us_nothing_to_give],
+      },
+    ],
+    decide: [
+      combined70,
+      "please help us has its own typed us, so it does not read vs. No Bible needs that, so I left it.",
+      "after you approve, the four verse rules call this function and the longer one is deleted.",
+    ],
+  };
   let verses_said = {
     title: "read 1 John 3:23 and 4:7-10, and answer with the verse and Amen",
     fn: fn_name("app_shared_message_reply_choices"),
@@ -2086,6 +2124,7 @@ export function reply_proposals() {
     my_name_said,
     join_glory,
     jesus_titles,
+    us_word,
     verses_said,
   ];
   return proposals;
