@@ -1,8 +1,8 @@
-import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_words } from "./reply_words.mjs";
-import { reply_choice } from "./reply_choice.mjs";
 import { reply_word_command } from "./reply_word_command.mjs";
+import { reply_choice } from "./reply_choice.mjs";
+import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_word_may_should } from "./reply_word_may_should.mjs";
 import { reply_phrase_his_son } from "./reply_phrase_his_son.mjs";
 import { reply_phrase_jesus } from "./reply_phrase_jesus.mjs";
@@ -55,7 +55,8 @@ export function reply_bible_1jn_3_23() {
   let what = reply_choice([fn12, fn14]);
   let gave_command = reply_sequence([gave, what]);
   let fn15 = reply_optional(us);
-  let commanded = reply_sequence(["commanded", fn15]);
+  let fn18 = reply_optional(fn10);
+  let commanded = reply_sequence([fn18, "commanded", fn15]);
   let said = reply_sequence(["said", to_us]);
   let item4 = reply_choice(["even", "just"]);
   let fn16 = reply_optional(item4);
