@@ -10,11 +10,17 @@ import { text_starts_with } from "./text_starts_with.mjs";
 import { or } from "./or.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
 import { functions_rename_generic } from "./functions_rename_generic.mjs";
+import { text_quote_double } from "./text_quote_double.mjs";
+import { object_values } from "./object_values.mjs";
+import { function_name_to_path_found } from "./function_name_to_path_found.mjs";
+import { file_read } from "./file_read.mjs";
+import { not } from "./not.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { function_call_commit } from "./function_call_commit.mjs";
+import { function_string_whole_replace } from "./function_string_whole_replace.mjs";
 import { app_name_keyed_tables } from "./app_name_keyed_tables.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { function_call_commit } from "./function_call_commit.mjs";
 import { function_select_apply_args_auto } from "./function_select_apply_args_auto.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
@@ -62,6 +68,21 @@ export async function app_rename(a_name_before, a_name_after) {
     return name_changed;
   }
   let renamed = await functions_rename_generic(mine, name_change);
+  ("A function of the app may spell the app's short name as a value, the way the gloss gates hand it to the complaint they raise. That spelling follows no rename, so it is moved here, and only in the app's own functions: elsewhere the same word can be a test's content.");
+  let quoted = text_quote_double(a_name_before);
+  for (let f_name of object_values(renamed)) {
+    let f_path = await function_name_to_path_found(f_name);
+    let code = await file_read(f_path);
+    let b = text_includes(code, quoted);
+    if (not(b)) {
+      continue;
+    }
+    await function_call_commit(function_string_whole_replace, [
+      f_name,
+      a_name_before,
+      a_name_after,
+    ]);
+  }
   let tables = app_name_keyed_tables();
   let keys_moved = [];
   for (let table of tables) {
