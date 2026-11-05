@@ -1,9 +1,9 @@
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
 import { bible_word_article_bodies_folder } from "./bible_word_article_bodies_folder.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
+import { equal } from "./equal.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_exists } from "./file_exists.mjs";
+import { less_than } from "./less_than.mjs";
 import { http_text_or_null } from "./http_text_or_null.mjs";
 import { bible_word_article_page_body } from "./bible_word_article_page_body.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
@@ -14,7 +14,10 @@ export async function bible_word_article_bodies_fetch(limit_per_site) {
   "the limit is how many articles of each site to fetch in this run, written as a number; it only counts, and nothing in it runs.";
   "THE LIST IS FOUND, NOT GIVEN: every site in the article sites list, every article in its table. An article with a file on disk is skipped, so a run that died picks up where it stopped.";
   "ONE ARTICLE FAILING DOES NOT STOP THE REST, and it is named in the answer: a missing article looks the same as an article that cites nothing unless the miss is reported.";
-  "ONE PAGE A SECOND, because these are other people's servers and nothing here is in a hurry.";
+  "ONE PAGE A SECOND, because these are other people's servers and nothing here is in a hurry. OrthodoxWiki's robots.txt asks for ten seconds between pages, so it gets ten.";
+  let waits = {
+    OrthodoxWiki: 10000,
+  };
   let limit = Number(limit_per_site);
   let folder = bible_word_article_bodies_folder();
   let sites = bible_word_article_sites();
@@ -53,7 +56,7 @@ export async function bible_word_article_bodies_fetch(limit_per_site) {
           await file_overwrite_uncached(file_path, body);
           fetched = fetched + 1;
         }
-        await sleep(1000);
+        await sleep(waits[site.name] ?? 1000);
       }
     }
     report.push({
