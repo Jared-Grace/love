@@ -25,6 +25,6 @@ export async function app_learn_original_gloss_genesis_onwards_gate_run() {
   let walked = gloss_chapters_run_offenders(chapter_codes, book_codes);
   let fault =
     "stand outside the unbroken run from the first chapter of Genesis that this app's card promises - either a book of the Old Testament has been begun while an earlier one is untouched, or a book's own chapters have a hole in them or do not start at its first chapter. A book code on its own is the first kind; a book code with a number beside it is the chapter the run was expecting there and did not find";
-  let r = gloss_chapters_offenders_assert(walked, "original_bible", fault);
+  let r = gloss_chapters_offenders_assert(walked, "learn_original", fault);
   return r;
 }
