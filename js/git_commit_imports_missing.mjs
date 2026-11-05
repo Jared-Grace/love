@@ -1,11 +1,12 @@
-import { text_split_last } from "./text_split_last.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_here_run_lines } from "./git_here_run_lines.mjs";
 import { set_new } from "./set_new.mjs";
+import { text_split_last } from "./text_split_last.mjs";
 import { set_add } from "./set_add.mjs";
 import { text_split_colon } from "./text_split_colon.mjs";
 import { set_includes } from "./set_includes.mjs";
 import { not } from "./not.mjs";
+import { set_add_try } from "./set_add_try.mjs";
 import { git_commit_file_imports_relative } from "./git_commit_file_imports_relative.mjs";
 import { list_add } from "./list_add.mjs";
 export async function git_commit_imports_missing(commit) {
@@ -34,7 +35,7 @@ export async function git_commit_imports_missing(commit) {
     let named = text_split_last(parts[2], "/");
     let held = set_includes(present, named);
     if (not(held)) {
-      set_add(suspects, holder);
+      set_add_try(suspects, holder);
     }
   }
   let missing = [];
