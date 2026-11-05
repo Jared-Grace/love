@@ -556,7 +556,7 @@ export function permission_grant_names() {
     fn_name("firebase_prod_asset_download"),
     fn_name("firebase_prod_asset_unchanged_is"),
     fn_name("g_sermon_generate_download"),
-    fn_name("app_original_bible_gloss_generate_upload_path"),
+    fn_name("app_learn_original_gloss_generate_upload_path"),
     fn_name("daemons_journal_recent"),
     fn_name("daemon_journal_recent_count"),
     fn_name("claude_transcript_paths_recent"),
