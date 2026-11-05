@@ -9,17 +9,17 @@ import { qa_app_commit_promote } from "./qa_app_commit_promote.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { folder_web_latest_absolute } from "./folder_web_latest_absolute.mjs";
 import { qa_stage_pieces_assert } from "./qa_stage_pieces_assert.mjs";
+import { qa_promoted } from "./qa_promoted.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
+import { json_equal } from "./json_equal.mjs";
 import { app_shared_name_latest_text } from "./app_shared_name_latest_text.mjs";
 import { qa_app_e2e_happy_run } from "./qa_app_e2e_happy_run.mjs";
 import { folder_public_root_noting_set } from "./folder_public_root_noting_set.mjs";
 import { html_public_from_latest } from "./html_public_from_latest.mjs";
 import { firebase_deploy_locked_generic } from "./firebase_deploy_locked_generic.mjs";
 import { folder_public_root_noting_clear } from "./folder_public_root_noting_clear.mjs";
-import { qa_promoted } from "./qa_promoted.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
-import { json_equal } from "./json_equal.mjs";
 import { qa_promoted_app_write } from "./qa_promoted_app_write.mjs";
 import { qa_promote_steps_log_add_try } from "./qa_promote_steps_log_add_try.mjs";
 export async function qa_app_commit_promote_judged(search, commit) {
@@ -35,7 +35,8 @@ export async function qa_app_commit_promote_judged(search, commit) {
   "Moving up is done by the one function every way of putting an app in front of people goes through, rather than by copying here. That function writes down what it moved, and that note is what a later sending reads to refuse a folder holding anything else - so a second way in that copied for itself would be a second way to leave the note describing the build before.";
   "Which commit these pieces came out of is written down last, after they are actually in place, so a run that fell over partway through leaves no note claiming a build that did not finish.";
   "★ IT ALSO SAYS WHETHER THIS APP CAME OUT CARRYING ANYTHING NEW. What is on disk now is held against what was written down the last time this app went out, and when the two say the same thing the answer carries a word saying so. Nobody asked that before, which is how a run could prepare eight apps and report eight successes when five of them were the same code under a newer stamp - the run looked exactly as productive either way, so the waste had nothing to show it by. It is asked before the note is written rather than after, because writing it is what destroys the thing being compared against.";
-  "★ IT IS SAID RATHER THAN ACTED ON. Being told an app changed nothing is worth having on its own, and stopping short here on the strength of it would be a much larger claim: the pieces are already standing in the folder the sending reads from, so refusing at this point would leave them there unaccounted for rather than leaving nothing behind. The saving that matters was already taken further up, where a page that would have differed by its stamp alone was left where it was.";
+  "★ IT IS NOT A REASON TO STOP. Being told an app changed nothing is worth having on its own, and stopping short here on the strength of it would be a much larger claim: the pieces are already standing in the folder the sending reads from, so refusing at this point would leave them there unaccounted for rather than leaving nothing behind.";
+  "★ IT IS A REASON NOT TO WALK THEM AGAIN. The note is written after a walk has passed or been excused by this same test, so pieces matching it byte for byte are pieces already walked. The walk follows the length of the course - measured 2026-11-05 at about a press a second, and thousands of presses at 302 lessons, so over two hours - and it was paid in full by every sending of pieces it had already passed. Pieces that differ in any byte are walked as before, including a page differing only by its stamp, because a false difference costs a walk and a false match would cost the check. What this cannot see is a change outside the pieces: a walk made stricter does not walk old pieces again until they change.";
   "★ EVERY SLOW STEP IS TIMED AND THE TIMES ARE KEPT, WHETHER THE RUN SUCCEEDS OR NOT. This takes the better part of an hour and until these were kept nothing could say which step that hour went to. Taking the load and writing the note can only ever cost the note, so neither changes what this does or what it throws.";
   arguments_assert(arguments, 2);
   let steps = [];
@@ -63,11 +64,21 @@ export async function qa_app_commit_promote_judged(search, commit) {
       file_names,
     ]);
     ("Before anything is put where the sending reads from, the app is walked the whole way through as somebody who gets every question right. Every gate there is reads code without ever opening a page, so a page that opens and cannot be used passes all of them: the replacing game drew every symbol as one no rule could touch, and so could not be played at all, for nine days with nothing red. An app with no walk of its own goes straight past.");
-    let stage_name = app_shared_name_latest_text();
-    await function_call_timed_add(steps, qa_app_e2e_happy_run, [
-      app_name,
-      stage_name,
-    ]);
+    let promoted = await qa_promoted();
+    let note = property_get_or_null(promoted, app_name);
+    let unwritten = null_is(note);
+    let sent = {};
+    if (not(unwritten)) {
+      sent = property_get(note, "hashes");
+    }
+    let unchanged = json_equal(sent, hashes);
+    if (not(unchanged)) {
+      let stage_name = app_shared_name_latest_text();
+      await function_call_timed_add(steps, qa_app_e2e_happy_run, [
+        app_name,
+        stage_name,
+      ]);
+    }
     folder_public_root_noting_set(app_name);
     async function lambda() {
       let copied = await html_public_from_latest(search);
@@ -78,14 +89,6 @@ export async function qa_app_commit_promote_judged(search, commit) {
       qa_app_commit_promote_judged.name,
     ]);
     folder_public_root_noting_clear();
-    let promoted = await qa_promoted();
-    let note = property_get_or_null(promoted, app_name);
-    let unwritten = null_is(note);
-    let sent = {};
-    if (not(unwritten)) {
-      sent = property_get(note, "hashes");
-    }
-    let unchanged = json_equal(sent, hashes);
     await function_call_timed_add(steps, qa_promoted_app_write, [
       app_name,
       commit,
