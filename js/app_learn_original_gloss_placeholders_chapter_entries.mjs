@@ -2,7 +2,7 @@ import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_ge
 import { gloss_chapter_passages_asked_generic } from "./gloss_chapter_passages_asked_generic.mjs";
 import { gloss_entries_placeholder_marked } from "./gloss_entries_placeholder_marked.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-export async function app_original_bible_gloss_placeholders_chapter_entries(
+export async function app_learn_original_gloss_placeholders_chapter_entries(
   chapter_code,
 ) {
   "Everything an author needs to give one chapter of the original-language gloss the meanings it is missing: every passage holding a word whose short English is a marker, and within it every such word, where it stands, and the prose already written beside it.";

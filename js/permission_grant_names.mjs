@@ -1630,7 +1630,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_coverage_curve"),
     fn_name("text_split_comma_outside_brackets_cases_gate_run"),
     fn_name("folders_root_gate_run"),
-    fn_name("app_original_bible_gloss_placeholders_chapter_entries"),
+    fn_name("app_learn_original_gloss_placeholders_chapter_entries"),
     fn_name("functions_nested_lift_handback_pass"),
     fn_name("function_lift_handback_candidates"),
     fn_name("js_binding_names_cases_gate_run"),
