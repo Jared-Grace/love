@@ -1,4 +1,4 @@
-import { app_original_bible_gloss_passage_entries } from "./app_original_bible_gloss_passage_entries.mjs";
+import { app_learn_original_gloss_passage_entries } from "./app_learn_original_gloss_passage_entries.mjs";
 import { app_original_bible_gloss_write } from "./app_original_bible_gloss_write.mjs";
 import { error_json } from "./error_json.mjs";
 import { gloss_entries_explains_set } from "./gloss_entries_explains_set.mjs";
@@ -12,7 +12,7 @@ export async function app_learn_original_gloss_explains_write(
   "Rewriting a whole passage to change its prose meant typing its Greek out again, and the letters do not survive that: an accented letter has more than one spelling that looks the same, so the passage stopped matching itself in a way nothing on the page shows. Handing over the wording alone removes the chance of that entirely.";
   "A passage nobody has written yet is refused rather than started, because there is nothing here to mend and wording alone would leave every word unnamed.";
   "The rest of the chapter is left where it stands, so a chapter can be mended a passage at a time over as many sittings as it takes.";
-  let entries = await app_original_bible_gloss_passage_entries(
+  let entries = await app_learn_original_gloss_passage_entries(
     chapter_code,
     verse_key,
   );

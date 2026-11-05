@@ -1,5 +1,5 @@
 import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
-import { app_original_bible_gloss_passage_entries } from "./app_original_bible_gloss_passage_entries.mjs";
+import { app_learn_original_gloss_passage_entries } from "./app_learn_original_gloss_passage_entries.mjs";
 import { gloss_entry_gloss_key } from "./gloss_entry_gloss_key.mjs";
 import { gloss_write_files_spent_delete_generic } from "./gloss_write_files_spent_delete_generic.mjs";
 export async function app_learn_original_gloss_glosses_write_files_spent_delete() {
@@ -10,7 +10,7 @@ export async function app_learn_original_gloss_glosses_write_files_spent_delete(
   let r = await gloss_write_files_spent_delete_generic(
     app_learn_original_gloss_generate,
     "glosses_",
-    app_original_bible_gloss_passage_entries,
+    app_learn_original_gloss_passage_entries,
     key,
   );
   return r;
