@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_original_bible_gloss_translits_add_all() {
+export async function app_learn_original_gloss_translits_add_all() {
   "Give every explanation in every written original-language gloss chapter the pronunciation of the word it is about, and answer with how many words each chapter gained.";
   "★ IT FINDS ITS OWN SET, asking the store which chapters are there rather than being handed a list, so a chapter written after this was last run is swept the next time without anyone remembering to add it.";
   "A chapter that already carries every pronunciation is left alone and reports nothing gained, so running this twice costs the second run nothing and changes no file.";
