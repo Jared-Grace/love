@@ -1,8 +1,8 @@
 import { greater_than } from "./greater_than.mjs";
+import { json_to } from "./json_to.mjs";
+import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { not } from "./not.mjs";
-import { json_to } from "./json_to.mjs";
 import { reply_bible_elements_code } from "./reply_bible_elements_code.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function reply_bible_tokens_codes(tokens, shared) {
@@ -40,7 +40,7 @@ export function reply_bible_tokens_codes(tokens, shared) {
       code = `${shared.names[key]}()`;
     }
     if (equal(word, "jesus") || equal(word, "christ")) {
-      code = `${fn_name("reply_phrase_jesus_either_order")}()`;
+      code = `${fn_name("reply_phrase_jesus")}()`;
     }
     if (token.optional) {
       code = `reply_optional(${code})`;

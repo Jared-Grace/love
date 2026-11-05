@@ -1844,6 +1844,89 @@ export function reply_proposals() {
       "this alone does not answer the choir leader's messages. They need every part understood, and more cards are coming for the rest.",
     ],
   };
+  let jesus_head = text_combine_multiple([
+    "   export function ",
+    fn_name("reply_phrase_jesus"),
+    "() {",
+  ]);
+  let jesus_either_removed = text_combine_multiple([
+    "-  let phrase_jesus = ",
+    fn_name("reply_either_both"),
+    "(jesus, christ);",
+  ]);
+  let jesus_either_added = text_combine_multiple([
+    "+  let name = ",
+    fn_name("reply_either_both"),
+    "(jesus, christ);",
+  ]);
+  let jesus_reversed = text_combine_multiple([
+    "+  let reversed = ",
+    fn_name("reply_sequence"),
+    "([christ, jesus]);",
+  ]);
+  let jesus_yeshua_messiah = text_combine_multiple([
+    "+  let yeshua_messiah = ",
+    fn_name("reply_sequence"),
+    '([yeshua, "the", messiah]);',
+  ]);
+  let jesus_all = text_combine_multiple([
+    "+  let phrase_jesus = ",
+    fn_name("reply_choice"),
+    "([name, reversed, yeshua, messiah, yeshua_messiah]);",
+  ]);
+  let jesus_line = "✝️ Jesus is Lord! 👑";
+  let jesus_titles = {
+    title: "read every title of Jesus in one function",
+    fn: fn_name("reply_phrase_jesus"),
+    whole: [],
+    diff: [
+      jesus_head,
+      '+  "Every way of saying the name of Jesus, each standing for the others. Lord is not one of them, because it also names the Father.";',
+      '   let jesus = "jesus";',
+      '   let christ = "christ";',
+      jesus_either_removed,
+      jesus_either_added,
+      jesus_reversed,
+      '+  let yeshua = "yeshua";',
+      '+  let messiah = "messiah";',
+      jesus_yeshua_messiah,
+      jesus_all,
+      "   return phrase_jesus;",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "Yeshua the Messiah",
+        answered: true,
+        outputs: [jesus_line],
+      },
+      {
+        from: "",
+        message: "Yeshua",
+        answered: true,
+        outputs: [jesus_line],
+      },
+      {
+        from: "",
+        message: "Messiah",
+        answered: true,
+        outputs: [jesus_line],
+      },
+      {
+        from: "",
+        message: "Christ Jesus",
+        answered: true,
+        outputs: [jesus_line],
+      },
+    ],
+    decide: [
+      "you asked for one function for the titles of Jesus. It reads Jesus, Christ, Jesus Christ, Christ Jesus, Yeshua, Messiah and Yeshua the Messiah. The second function that read Christ Jesus is gone, and the verse rules use this one.",
+      "Lord is left out, because it also names the Father, so the LORD bless you could get Jesus is Lord back. The rejected reading was to count Lord as a title.",
+      "other wordings, like the Messiah or Jesus the Messiah, get no reply and come to you until somebody really sends them.",
+      "the my dear brother and my friend greetings use this same piece, so in Yeshua and in Messiah are heard after them too.",
+      "Christ Jesus already gets this reply today, as two names one after the other. It is here to show that it keeps the same answer.",
+    ],
+  };
   let verses_join = text_combine_multiple([
     "   let join = ",
     fn_name("reply_join_glory"),
@@ -1913,7 +1996,6 @@ export function reply_proposals() {
       fn_name("reply_phrase_love_for_one_another"),
       fn_name("reply_bible_verse_whole"),
       fn_name("reply_words"),
-      fn_name("reply_phrase_jesus_either_order"),
       fn_name("equal_by_property"),
       fn_name("equal_by_property_multiple"),
       fn_name("reply_on_match_bible_reference"),
@@ -1963,7 +2045,7 @@ export function reply_proposals() {
       "words a Bible left out are optional, so the end of a verse can count as all of it: know God for God is love counts as 1 John 4:8 said whole. That person gets the reference and Amen, not the full verse. God is love alone gets no reply. The rejected reading was also asking for a minimum number of words, because no real message has needed it.",
       combined68,
       "a word printed with both u and v is written once and reads either spelling, even at a place where the Bibles printed only one. The rejected reading was a choice of one letter inside the word, because the cut pieces would forgive fewer typing mistakes.",
-      "3:23 as the Bibles that say Yeshua the Messiah print it gets no reply and comes to you, because the name of Jesus does not read those words yet. Every other wording in the 16 Bibles gets an answer.",
+      "3:23 as the Bibles that say Yeshua the Messiah print it needs the card that reads every title of Jesus. Until that card goes in, those words get no reply and come to you.",
       "the words leading into 4:7 are read only in front of that verse, so on their own they get no reply and come to you.",
       "the verses are downloaded before the reply goes out. If the download fails there is no reply, and the message comes to you, so a reply never goes out without its verses.",
       "this alone does not answer the choir leader's messages. They need every part understood, and more cards are coming for the rest.",
@@ -1991,6 +2073,7 @@ export function reply_proposals() {
     contact_street,
     my_name_said,
     join_glory,
+    jesus_titles,
     verses_said,
   ];
   return proposals;
