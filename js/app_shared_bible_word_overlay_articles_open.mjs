@@ -1,9 +1,6 @@
-import { app_shared_bible_word_offers_split_draw } from "./app_shared_bible_word_offers_split_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
-import { bible_word_articles_matching } from "./bible_word_articles_matching.mjs";
-import { bible_word_articles_placed } from "./bible_word_articles_placed.mjs";
+import { bible_word_article_offers_at } from "./bible_word_article_offers_at.mjs";
 import { app_shared_overlay_card_closable } from "./app_shared_overlay_card_closable.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -17,19 +14,13 @@ import { bible_word_article_site_chosen } from "./bible_word_article_site_chosen
 import { window_open } from "./window_open.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { html_div_text } from "./html_div_text.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { bible_word_article_sites_recent } from "./bible_word_article_sites_recent.mjs";
 import { bible_word_article_offers_recent_split } from "./bible_word_article_offers_recent_split.mjs";
+import { app_shared_bible_word_offers_split_draw } from "./app_shared_bible_word_offers_split_draw.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { window_open_google_define } from "./window_open_google_define.mjs";
 import { app_shared_bible_word_search_google_text_get } from "./app_shared_bible_word_search_google_text_get.mjs";
-import { app_shared_bible_word_ask_ai_text_get } from "./app_shared_bible_word_ask_ai_text_get.mjs";
-import { app_shared_bible_word_question_text_get } from "./app_shared_bible_word_question_text_get.mjs";
-import { window_open_url_prefix_query } from "./window_open_url_prefix_query.mjs";
-import { app_shared_bible_word_ask_llm_text_get } from "./app_shared_bible_word_ask_llm_text_get.mjs";
-import { llms_query_url_prefixes } from "./llms_query_url_prefixes.mjs";
-import { list_recent_split_by_names } from "./list_recent_split_by_names.mjs";
+import { app_shared_bible_word_ask_llms_draw } from "./app_shared_bible_word_ask_llms_draw.mjs";
 export async function app_shared_bible_word_overlay_articles_open(
   word,
   strong_url,
@@ -69,23 +60,12 @@ export async function app_shared_bible_word_overlay_articles_open(
   ("THE ARTICLES ARE FETCHED BEFORE THE CARD IS DRAWN. The table of articles is loaded only when a word is tapped, so a reader who never taps one never downloads it; waiting for it first means the buttons below never jump down when it arrives.");
   ("A name can mean more than one person - John is the Baptist and the apostle - so every article it names is offered, each saying who it is about.");
   ("The Google search asks for the word as scripture uses it, the same search a tapped word made before this choice existed. The AI sites are asked the same thing as a plain question, because a chat answers a sentence better than a search phrase.");
-  let sites = bible_word_article_sites();
-  let offers = [];
-  for (let site of sites) {
-    let table = await site.table();
-    let matched = bible_word_articles_matching(table, words, index);
-    let articles = bible_word_articles_placed(
-      matched,
-      chapter_code,
-      verse_number,
-    );
-    for (let article of articles) {
-      offers.push({
-        site,
-        article,
-      });
-    }
-  }
+  let offers = await bible_word_article_offers_at(
+    words,
+    index,
+    chapter_code,
+    verse_number,
+  );
   let overlay = app_shared_overlay_card_closable();
   let card = property_get(overlay, "body");
   let big = property_get(overlay, "title");
@@ -129,25 +109,5 @@ export async function app_shared_bible_word_overlay_articles_open(
   }
   let text = app_shared_bible_word_search_google_text_get();
   app_shared_button(choices, text, google);
-  let text2 = app_shared_bible_word_ask_ai_text_get();
-  let ask_label = html_div_text(choices, text2);
-  app_shared_text_deemphasized(ask_label);
-  let question = app_shared_bible_word_question_text_get(word);
-  function llm_draw(llm) {
-    function ask() {
-      bible_word_article_site_chosen(llm.name);
-      window_open_url_prefix_query(llm.prefix, question);
-    }
-    let label = app_shared_bible_word_ask_llm_text_get(llm.name);
-    app_shared_button(choices, label, ask);
-  }
-  ("AN AI THE READER HAS ASKED BEFORE COMES FIRST TOO, under its own Recent and Others below Ask an AI - asked for by the human 2026-11-01. The AIs are kept in the same list of names as the article sites, because no AI is named like a site.");
-  let llms = llms_query_url_prefixes();
-  function llm_name(llm) {
-    let name = llm.name;
-    return name;
-  }
-  let llm_names = llms.map(llm_name);
-  let llm_split = list_recent_split_by_names(llms, llm_names, recent_names);
-  app_shared_bible_word_offers_split_draw(llm_split, llm_draw, choices);
+  app_shared_bible_word_ask_llms_draw(choices, word, recent_names);
 }

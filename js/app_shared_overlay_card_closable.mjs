@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_overlay_backdrop_card } from "./html_overlay_backdrop_card.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_remove } from "./html_remove.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { equal } from "./equal.mjs";
 import { html_on_click } from "./html_on_click.mjs";
@@ -16,11 +15,9 @@ export function app_shared_overlay_card_closable() {
   "TWO WAYS OUT THAT CAN BE SEEN, so nobody is left stuck: a tap on the backdrop is invisible, and a card taller than the screen hides whichever end is scrolled away, so there is a way out at each end.";
   arguments_assert(arguments, 0);
   let r = html_overlay_backdrop_card();
-  let backdrop = property_get(r, "backdrop");
   let card = property_get(r, "card");
-  function close() {
-    html_remove(backdrop);
-  }
+  let close = property_get(r, "close");
+  let backdrop = property_get(r, "backdrop");
   let element = html_component_element_get(backdrop);
   function on_backdrop(event) {
     if (equal(event.target, element)) {
