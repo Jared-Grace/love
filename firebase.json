@@ -63,6 +63,16 @@
         "source": "/emoji_bible.html",
         "destination": "/bible_emoji",
         "type": 301
+      },
+      {
+        "source": "/original_bible",
+        "destination": "/learn_original",
+        "type": 301
+      },
+      {
+        "source": "/original_bible.html",
+        "destination": "/learn_original",
+        "type": 301
       }
     ],
     "headers": [
