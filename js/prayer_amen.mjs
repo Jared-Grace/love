@@ -1,4 +1,4 @@
 export function prayer_amen() {
-  let v = "Amen!";
-  return v;
+  let a = "Amen!";
+  return a;
 }
