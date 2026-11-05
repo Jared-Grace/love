@@ -15,7 +15,7 @@ export async function app_original_bible_gloss_placeholders_gate_run() {
     "show a marker where a word's meaning belongs - ask ",
     fn_name("app_original_bible_gloss_placeholders_chapter_entries"),
     " for a chapter's worksheet, write the meanings back with ",
-    fn_name("app_original_bible_gloss_glosses_write"),
+    fn_name("app_learn_original_gloss_glosses_write"),
     ", then clear the sentences left pointing at the gone markers with ",
     fn_name("app_original_bible_gloss_marker_clauses_repair"),
   ]);
