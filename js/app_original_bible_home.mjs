@@ -1,7 +1,7 @@
 import { bible_word_sound_url_cycling } from "./bible_word_sound_url_cycling.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_original_bible_gloss_generate_download } from "./app_original_bible_gloss_generate_download.mjs";
+import { app_learn_original_gloss_generate_download } from "./app_learn_original_gloss_generate_download.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_gloss_bible_home_generic } from "./app_shared_gloss_bible_home_generic.mjs";
 import { app_original_bible } from "./app_original_bible.mjs";
@@ -14,7 +14,7 @@ export async function app_original_bible_home(context) {
   ("★ EACH TAP GOES ROUND THE WORD'S CAST OF VOICES, as the English words' taps do and for the same reason; Hebrew has four people and Greek one, and the cast is asked of the word because one screen can hold both.");
   ("The first tap's place is drawn from twelve, because twelve divides evenly by every cast size up to four, so whichever language a reader starts in every person of its cast is as likely to be heard first.");
   arguments_assert(arguments, 1);
-  let download = app_original_bible_gloss_generate_download;
+  let download = app_learn_original_gloss_generate_download;
   let cycling = bible_word_sound_url_cycling();
   let sound_url_get = property_get(cycling, "sound");
   let slow_url_get = property_get(cycling, "slow");
