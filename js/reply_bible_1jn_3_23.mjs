@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_words } from "./reply_words.mjs";
 import { reply_word_command_commandment } from "./reply_word_command_commandment.mjs";
@@ -15,11 +14,11 @@ import { reply_word_commandement_commandment } from "./reply_word_commandement_c
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_1jn_3_23() {
-  ("1 John 3:23 said whole, in the words of the English Bibles nobody owns, lined up.");
+  "1 John 3:23 said whole, in the words of the English Bibles nobody owns, lined up.";
   let fn = reply_optional("and");
   let r2 = reply_words("this is");
   let fn2 = reply_optional("then");
-  let r3 = reply_words("his");
+  let r3 = "his";
   let r4 = reply_word_command_commandment();
   let fn3 = reply_choice([r4, "commandement", "law"]);
   let r5 = reply_phrase_that_we();
@@ -31,7 +30,7 @@ export function reply_bible_1jn_3_23() {
   let r7 = reply_words("the name of");
   let r8 = reply_phrase_his_son();
   let phrase_jesus = reply_phrase_jesus();
-  let r9 = reply_words("and");
+  let r9 = "and";
   let fn7 = reply_optional("that");
   let fn8 = reply_optional("we");
   let item2 = reply_word_may_should();
@@ -39,7 +38,7 @@ export function reply_bible_1jn_3_23() {
   let r10 = reply_phrase_love_for_one_another();
   let item3 = reply_choice(["even", "just"]);
   let fn10 = reply_optional(item3);
-  let r11 = reply_words("as");
+  let r11 = "as";
   let fn11 = reply_optional("he");
   let item4 = reply_choice(["did", "has", "hath", "hee", "said"]);
   let fn12 = reply_optional(item4);

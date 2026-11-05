@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_word_herein_this } from "./reply_word_herein_this.mjs";
@@ -6,7 +5,6 @@ import { reply_word_us_u_v } from "./reply_word_us_u_v.mjs";
 import { reply_word_has_is } from "./reply_word_has_is.mjs";
 import { reply_word_that_the } from "./reply_word_that_the.mjs";
 import { reply_word_charity_love } from "./reply_word_charity_love.mjs";
-import { reply_words } from "./reply_words.mjs";
 import { reply_word_begotten_born } from "./reply_word_begotten_born.mjs";
 import { reply_word_son } from "./reply_word_son.mjs";
 import { reply_phrase_that_we } from "./reply_phrase_that_we.mjs";
@@ -15,7 +13,7 @@ import { reply_word_u_v } from "./reply_word_u_v.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_1jn_4_9() {
-  ("1 John 4:9 said whole, in the words of the English Bibles nobody owns, lined up.");
+  "1 John 4:9 said whole, in the words of the English Bibles nobody owns, lined up.";
   let item = reply_choice(["by", "in"]);
   let fn = reply_optional(item);
   let item2 = reply_word_herein_this();
@@ -64,7 +62,7 @@ export function reply_bible_1jn_4_9() {
   let fn20 = reply_optional(item10);
   let fn21 = reply_optional("sent");
   let fn22 = reply_optional("that");
-  let r5 = reply_words("his");
+  let r5 = "his";
   let item11 = reply_choice(["one", "son"]);
   let fn23 = reply_optional(item11);
   let item12 = reply_choice(["and", "the"]);
@@ -78,7 +76,7 @@ export function reply_bible_1jn_4_9() {
   let fn29 = reply_choice([r6, "sent"]);
   let fn30 = reply_choice(["into", "to"]);
   let fn31 = reply_choice(["the", "this"]);
-  let r7 = reply_words("world");
+  let r7 = "world";
   let fn32 = reply_optional("so");
   let r8 = reply_phrase_that_we();
   let fn33 = reply_optional("might");
@@ -87,7 +85,7 @@ export function reply_bible_1jn_4_9() {
   let r9 = reply_word_u_v("live");
   let fn35 = reply_choice(["life", r9]);
   let fn36 = reply_choice(["by", "through"]);
-  let r10 = reply_words("him");
+  let r10 = "him";
   let read = reply_sequence([
     fn,
     fn2,

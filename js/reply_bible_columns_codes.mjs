@@ -10,7 +10,8 @@ export function reply_bible_columns_codes(columns) {
     if (greater_than(plain.length, 0)) {
       let joined = plain.join(" ");
       let words = json_to(joined);
-      codes.push(`reply_words(${words})`);
+      let one = equal(plain.length, 1);
+      codes.push(one ? words : `reply_words(${words})`);
       plain = [];
     }
   }
