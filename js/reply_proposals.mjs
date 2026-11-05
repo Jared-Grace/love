@@ -2591,6 +2591,59 @@ export function reply_proposals() {
       "myself with no name after it gets no reply and comes to you.",
     ],
   };
+  let name_alone_add = text_combine_multiple([
+    "+  let name_alone = ",
+    fn_name("app_shared_message_reply_iam_titled_name"),
+    "();",
+  ]);
+  let age_then = text_combine_multiple([
+    "   let age = ",
+    fn_name("reply_age_said"),
+    "();",
+  ]);
+  let name_alone_said = {
+    title: "answer somebody giving their name with no country after it",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [],
+    diff: [age_then, name_alone_add, "     age,", "+    name_alone,"],
+    cases: [
+      {
+        from: "",
+        message: "My name is Stephen Mark",
+        answered: true,
+        outputs: [name_response],
+      },
+      {
+        from: "",
+        message: "My name is Stephen Mark and I'm 40th year old",
+        answered: true,
+        outputs: [name_response, age_line],
+      },
+      {
+        from: "",
+        message: "Myself Samuel",
+        answered: true,
+        outputs: [name_response],
+      },
+      {
+        from: "",
+        message: "I am Grace",
+        answered: true,
+        outputs: [name_response],
+      },
+      {
+        from: "",
+        message: "My name is hungry",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "the earlier cards said my name is and myself would get the name line, but they only taught the words. The rule was reached only when from and a country followed, so those tests were never true. This is the line that makes them true.",
+      "measured on the two waiting messages: with this line both are read whole, one gets 11 lines back and the other 10. All 20 messages with no reply yet stay silent.",
+      "I am Grace on its own now gets the name line. An earlier card said it would not, and said a bare name would be a separate rule; this is that rule. The rejected reading was answering my name is and myself but not I am, which would give one way of saying a name no reply and the others one.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -2623,6 +2676,7 @@ export function reply_proposals() {
     we_should_said,
     pray_for_me_said,
     myself_said,
+    name_alone_said,
   ];
   return proposals;
 }
