@@ -1705,7 +1705,7 @@ export function permission_grant_names() {
     fn_name("functions_unreachable_statements_names"),
     fn_name("literals_frozen_gate_run_arrived"),
     fn_name("ebible_version_copyright_read"),
-    fn_name("app_original_bible_gloss_lexicons_named_chapters"),
+    fn_name("app_learn_original_gloss_lexicons_named_chapters"),
     fn_name("permission_label_allowed_is"),
     fn_name("ebible_chapter_code_known_is"),
     fn_name("app_code_quiz_leniency_baseline_write"),
