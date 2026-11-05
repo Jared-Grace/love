@@ -22,6 +22,6 @@ export async function app_learn_original_gloss_published_unfinished_gate_run() {
     ", write them, then carry the chapter up again with ",
     fn_name("app_learn_original_gloss_chapter_upload_stored"),
   ]);
-  let r = gloss_chapters_offenders_assert(walked, "original_bible", fault);
+  let r = gloss_chapters_offenders_assert(walked, "learn_original", fault);
   return r;
 }
