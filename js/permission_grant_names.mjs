@@ -1735,7 +1735,7 @@ export function permission_grant_names() {
     fn_name("findings_from_data_moved"),
     fn_name("folders_root_tracked"),
     fn_name("folder_root_move_spellings_repoint"),
-    fn_name("app_original_bible_gloss_glosses_write_chapter"),
+    fn_name("app_learn_original_gloss_glosses_write_chapter"),
     fn_name("ebible_version_books_upload_name"),
     fn_name("folders_function_named"),
     fn_name("functions_repack_only_added_fold"),
