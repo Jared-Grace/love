@@ -1453,7 +1453,7 @@ export function permission_grant_names() {
     fn_name("js_page_serialized_import_uses_cases_gate_run"),
     fn_name("functions_statements_after_return_split"),
     fn_name("ebible_version_downloaded_books_count"),
-    fn_name("app_original_bible_gloss_explains_write_files_spent_delete"),
+    fn_name("app_learn_original_gloss_explains_write_files_spent_delete"),
     fn_name("ebible_languages_commercial"),
     fn_name("ebible_versions_language_code_disagreements"),
     fn_name("gloss_upload_namespace_ceb_bible"),
