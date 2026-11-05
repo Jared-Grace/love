@@ -26,7 +26,7 @@ export function apps_all_main_fns() {
     fn_name("app_message"),
     fn_name("app_music"),
     fn_name("app_next"),
-    fn_name("app_original_bible"),
+    fn_name("app_learn_original"),
     fn_name("app_privacy"),
     fn_name("app_receipts"),
     fn_name("app_receipts_view"),

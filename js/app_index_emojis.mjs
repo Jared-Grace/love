@@ -77,7 +77,7 @@ export function app_index_emojis() {
       emoji: emoji_arrows_crossed(),
     },
     {
-      app_fn: fn_name("app_original_bible"),
+      app_fn: fn_name("app_learn_original"),
       emoji: emoji_books(),
     },
     {

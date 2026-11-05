@@ -21,7 +21,7 @@ export async function app_index_gloss_coverage() {
   async function coverage_ask() {
     let stores = [
       {
-        app_fn: fn_name("app_original_bible"),
+        app_fn: fn_name("app_learn_original"),
         namespace_fn: gloss_upload_namespace_original_bible,
       },
       {

@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_original_gloss_generate_download } from "./app_learn_original_gloss_generate_download.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_gloss_bible_home_generic } from "./app_shared_gloss_bible_home_generic.mjs";
-import { app_original_bible } from "./app_original_bible.mjs";
+import { app_learn_original } from "./app_learn_original.mjs";
 export async function app_learn_original_home(context) {
   "Every word on this page can be heard said, because a clip is named after the word itself and so the page needs to hand over nothing but the word a finger landed on.";
   ("★ A WORD THAT WAS NEVER RECORDED MAKES A GOOD-LOOKING ADDRESS AND FETCHES NOTHING, and the playing swallows that silently, so a tap on it does nothing at all and the reader is told nothing. ",
@@ -22,7 +22,7 @@ export async function app_learn_original_home(context) {
     context,
     download,
     false,
-    app_original_bible,
+    app_learn_original,
     sound_url_get,
     slow_url_get,
   );

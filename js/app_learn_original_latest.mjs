@@ -4,7 +4,7 @@ import { app_shared_main_latest } from "./app_shared_main_latest.mjs";
 export async function app_learn_original_latest() {
   let firebase_name_value = firebase_project_name_jg();
   await app_shared_main_latest(
-    fn_name("app_original_bible"),
+    fn_name("app_learn_original"),
     firebase_name_value,
   );
 }

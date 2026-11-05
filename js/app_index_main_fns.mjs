@@ -43,7 +43,7 @@ export function app_index_main_fns(about_opened) {
       category: reading,
     },
     {
-      app_fn: fn_name("app_original_bible"),
+      app_fn: fn_name("app_learn_original"),
       text: "Allows learning the original languages of the Bible by reading it in ancient Greek and Hebrew (with word definitions and explanations)",
       category: languages,
     },
