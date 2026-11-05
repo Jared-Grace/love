@@ -1,3 +1,4 @@
+import { app_shared_bible_word_offers_split_draw } from "./app_shared_bible_word_offers_split_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
@@ -16,11 +17,8 @@ import { bible_word_article_site_chosen } from "./bible_word_article_site_chosen
 import { window_open } from "./window_open.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { app_shared_bible_word_sites_recent_text_get } from "./app_shared_bible_word_sites_recent_text_get.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { app_shared_bible_word_sites_others_text_get } from "./app_shared_bible_word_sites_others_text_get.mjs";
 import { bible_word_article_sites_recent } from "./bible_word_article_sites_recent.mjs";
 import { bible_word_article_offers_recent_split } from "./bible_word_article_offers_recent_split.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -122,30 +120,9 @@ export async function app_shared_bible_word_overlay_articles_open(
     app_shared_button(choices, label, read);
   }
   ("A SITE THE READER HAS CHOSEN BEFORE COMES FIRST, under Recent, the one chosen last at the top; the rest follow under Others - asked for by the human 2026-11-01, so a Catholic reader who opens the Catholic Encyclopedia sees it first every time after. Before any choice there is nothing recent, so the articles show in the sites' usual order with no labels at all.");
-  function split_draw(offers_split, draw) {
-    let recent_items = offers_split.recent;
-    let other_items = offers_split.others;
-    let labelled = greater_than(recent_items.length, 0);
-    if (labelled) {
-      let text3 = app_shared_bible_word_sites_recent_text_get();
-      let recent_label = html_div_text(choices, text3);
-      app_shared_text_deemphasized(recent_label);
-      for (let item of recent_items) {
-        draw(item);
-      }
-      if (greater_than(other_items.length, 0)) {
-        let text4 = app_shared_bible_word_sites_others_text_get();
-        let others_label = html_div_text(choices, text4);
-        app_shared_text_deemphasized(others_label);
-      }
-    }
-    for (let item of other_items) {
-      draw(item);
-    }
-  }
   let recent_names = bible_word_article_sites_recent();
   let split = bible_word_article_offers_recent_split(offers, recent_names);
-  split_draw(split, offer_draw);
+  app_shared_bible_word_offers_split_draw(split, offer_draw, choices);
   function google() {
     let search_term = text_combine(word, " (Bible)");
     window_open_google_define(search_term);
@@ -172,5 +149,5 @@ export async function app_shared_bible_word_overlay_articles_open(
   }
   let llm_names = llms.map(llm_name);
   let llm_split = list_recent_split_by_names(llms, llm_names, recent_names);
-  split_draw(llm_split, llm_draw);
+  app_shared_bible_word_offers_split_draw(llm_split, llm_draw, choices);
 }

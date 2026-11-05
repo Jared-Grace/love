@@ -1,8 +1,4 @@
-import { gloss_root_word_own_is } from "./gloss_root_word_own_is.mjs";
-import { text_lower_is } from "./text_lower_is.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
+import { bible_word_article_keys_stand_at } from "./bible_word_article_keys_stand_at.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 import { text_split_space } from "./text_split_space.mjs";
@@ -25,32 +21,6 @@ export function bible_word_articles_matching(table, words, index) {
     let name = word.replace(/['’]s?$/, "");
     return name;
   }
-  function word_matches(word, key, several) {
-    let name = bare(word);
-    if (several) {
-      let left = text_lower_to(name);
-      let eq = gloss_root_word_own_is(key, left);
-      return eq;
-    }
-    let r2 = equal(name, key) || equal(name, key.toUpperCase());
-    if (r2) {
-      return true;
-    }
-    let lower = text_lower_is(key);
-    let capital = key.charAt(0).toUpperCase() + key.slice(1);
-    let first = lower && equal(name, capital);
-    return first;
-  }
-  function at(keys, start) {
-    let several = greater_than(keys.length, 1);
-    for (let k = 0; less_than(k, keys.length); k++) {
-      let b = word_matches(words[start + k], keys[k], several);
-      if (not(b)) {
-        return false;
-      }
-    }
-    return true;
-  }
   ("A NAME INSIDE A LONGER NAME THE VERSE SPELLS OUT GIVES WAY TO IT, asked for by the human 2026-11-01: in Mary Magdalene came to the tomb, a tap on Mary offers Mary Magdalene and not the other Marys the table files under Mary alone. Only a name standing wholly inside the longer run gives way; names that merely overlap it both stay.");
   let found = [];
   for (let row of table) {
@@ -60,7 +30,10 @@ export function bible_word_articles_matching(table, words, index) {
       let end = start + keys.length;
       let inside =
         greater_than_equal(start, 0) && less_than_equal(end, words.length);
-      if (inside && at(keys, start)) {
+      if (
+        inside &&
+        bible_word_article_keys_stand_at(keys, start, words, bare)
+      ) {
         found.push({
           row,
           start,
