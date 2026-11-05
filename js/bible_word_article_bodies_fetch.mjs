@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
 import { bible_word_article_bodies_folder } from "./bible_word_article_bodies_folder.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
 import { path_join } from "./path_join.mjs";
@@ -22,7 +24,8 @@ export async function bible_word_article_bodies_fetch(limit_per_site) {
     let files = [];
     for (let row of table) {
       let file = row[2];
-      if (files.includes(file) === false) {
+      let left = files.includes(file);
+      if (equal(left, false)) {
         files.push(file);
       }
     }
@@ -35,14 +38,15 @@ export async function bible_word_article_bodies_fetch(limit_per_site) {
       let exists = await file_exists(file_path);
       if (exists) {
         already = already + 1;
-      } else if (fetched + missed.length < limit) {
+      } else if (less_than(fetched + missed.length, limit)) {
         let html = null;
         try {
-          html = await http_text_or_null(site.url(file));
+          let url2 = site.url(file);
+          html = await http_text_or_null(url2);
         } catch (error) {
           html = null;
         }
-        if (html === null) {
+        if (equal(html, null)) {
           missed.push(file);
         } else {
           let body = bible_word_article_page_body(html);
