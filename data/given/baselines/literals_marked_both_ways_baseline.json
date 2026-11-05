@@ -1,12 +1,10 @@
 {
  "known": [
-  "app_ceb_bible_gloss_generate_upload",
   "add",
   "equal",
   "not_equal",
   "not",
   "log",
-  "app_learn_original_gloss_generate_upload",
   "list_add",
   "property_get",
   "app_reply",
@@ -14,6 +12,7 @@
   "app_a_file_system_initialize",
   "list_first",
   "g_arc_write_upload",
+  "app_ceb_bible_gloss_generate_upload",
   "list_map",
   "null_is",
   "list_empty_is",
