@@ -1,15 +1,15 @@
-import { app_sandbox_previews_bible_offline_check_load } from "./app_sandbox_previews_bible_offline_check_load.mjs";
-import { app_sandbox_previews_phone_photos_load } from "./app_sandbox_previews_phone_photos_load.mjs";
-import { app_sandbox_previews_song_image_brighter_load } from "./app_sandbox_previews_song_image_brighter_load.mjs";
 import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_sandbox_previews_lyric_timing_load } from "./app_sandbox_previews_lyric_timing_load.mjs";
+import { app_sandbox_previews_song_image_brighter_load } from "./app_sandbox_previews_song_image_brighter_load.mjs";
 import { app_sandbox_previews_lyric_video_song_review_load } from "./app_sandbox_previews_lyric_video_song_review_load.mjs";
 import { app_sandbox_previews_lyric_video_song_swaps_load } from "./app_sandbox_previews_lyric_video_song_swaps_load.mjs";
 import { app_sandbox_previews_lyric_video_song_words_timing_load } from "./app_sandbox_previews_lyric_video_song_words_timing_load.mjs";
 import { app_sandbox_previews_lyric_video_pictures_review_load } from "./app_sandbox_previews_lyric_video_pictures_review_load.mjs";
 import { app_sandbox_previews_message_private_load } from "./app_sandbox_previews_message_private_load.mjs";
 import { app_sandbox_previews_glyph_built_load } from "./app_sandbox_previews_glyph_built_load.mjs";
+import { app_sandbox_previews_phone_photos_load } from "./app_sandbox_previews_phone_photos_load.mjs";
+import { app_sandbox_previews_bible_offline_check_load } from "./app_sandbox_previews_bible_offline_check_load.mjs";
 export function app_sandbox_previews() {
   "registry of sandbox previews keyed by URL-hash name: add your own file plus one entry here, then open the sandbox app with #<name> — several people can each preview a different thing on the one sandbox app at once";
   "WHAT IS KEPT HERE IS A WAY TO FETCH EACH PREVIEW RATHER THAN THE PREVIEW ITSELF, so a visit downloads the one preview the address names instead of all of them. The page has only ever shown one at a time, and until now every registration was paid for by everybody: seven previews had grown it to a hundred and forty five KiB, of which two thirds could be reached by exactly one of the seven.";
@@ -53,8 +53,8 @@ export function app_sandbox_previews() {
     return r16;
   }
   async function bible_word_voice_trial_load() {
-    let m = await import("./app_original_bible_word_voice_trial_preview.mjs");
-    let r17 = m.app_original_bible_word_voice_trial_preview;
+    let m = await import("./app_learn_original_word_voice_trial_preview.mjs");
+    let r17 = m.app_learn_original_word_voice_trial_preview;
     return r17;
   }
   let previews = {
