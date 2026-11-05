@@ -1,1 +1,1 @@
-{"f_name":"reply_word_son","text":"+import { reply_choice } from \"./reply_choice.mjs\";\n+export function reply_word_son() {\n+  let r = reply_choice([\"son\", \"sonne\"]);\n+  return r;\n+}\n+"}
+{"f_name":"reply_word_son","text":"+import { reply_optional } from \"./reply_optional.mjs\";\n+import { reply_sequence } from \"./reply_sequence.mjs\";\n+export function reply_word_son() {\n+  let ending = reply_optional(\"ne\");\n+  let r = reply_sequence([\"son\", ending]);\n+  return r;\n+}\n+"}

@@ -1,0 +1,1 @@
+{"f_name":"reply_phrase_his_son","text":"+import { reply_word_son } from \"./reply_word_son.mjs\";\n+import { reply_sequence } from \"./reply_sequence.mjs\";\n+export function reply_phrase_his_son() {\n+  let r3 = reply_word_son();\n+  let r = reply_sequence([\"his\", r3]);\n+  return r;\n+}\n+"}
