@@ -1,4 +1,4 @@
-import { app_original_bible_gloss_chapters_new_testament } from "./app_original_bible_gloss_chapters_new_testament.mjs";
+import { app_learn_original_gloss_chapters_new_testament } from "./app_learn_original_gloss_chapters_new_testament.mjs";
 import { bible_word_voice_chapter_missing } from "./bible_word_voice_chapter_missing.mjs";
 import { equal } from "./equal.mjs";
 import { bible_word_speech_text } from "./bible_word_speech_text.mjs";
@@ -6,7 +6,7 @@ export async function bible_word_voice_new_testament_missing(voice_name) {
   "$plain voice_name";
   "Every published New Testament chapter that still has words with no clip in one voice, and how many letters recording all of them would send to be said.";
   "A WORD MISSING FROM TWO CHAPTERS IS COUNTED ONCE, because it is recorded once and played wherever it appears; the letters are what the voice is handed rather than what the page spells, since that is what gets billed.";
-  let chapter_codes = await app_original_bible_gloss_chapters_new_testament();
+  let chapter_codes = await app_learn_original_gloss_chapters_new_testament();
   let chapters = [];
   let seen = new Set();
   let characters = 0;
