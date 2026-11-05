@@ -1372,7 +1372,7 @@ export function permission_grant_names() {
     fn_name("function_lift_wrapper_candidates"),
     fn_name("lift_candidate_size_least"),
     fn_name("bible_chapter_testament_name"),
-    fn_name("app_original_bible_gloss_write_passage"),
+    fn_name("app_learn_original_gloss_write_passage"),
     fn_name("webpack_build"),
     fn_name("lock_waiting_dead_clear"),
     fn_name("app_shared_latest_build"),

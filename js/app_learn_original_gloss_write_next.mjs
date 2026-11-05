@@ -1,4 +1,4 @@
-import { app_original_bible_gloss_write_passage } from "./app_original_bible_gloss_write_passage.mjs";
+import { app_learn_original_gloss_write_passage } from "./app_learn_original_gloss_write_passage.mjs";
 import { objects_merge } from "./objects_merge.mjs";
 import { app_learn_original_gloss_write_coverage } from "./app_learn_original_gloss_write_coverage.mjs";
 import { list_first } from "./list_first.mjs";
@@ -25,7 +25,7 @@ export async function app_learn_original_gloss_write_next(chapter_code) {
   }
   let verse_key = list_first(missing);
   ("Which passage is next is the whole of this function's own work. Everything the author is handed for it is the same whether the passage has been written before or not, so it is read by the one that takes a passage by name.");
-  let handed = await app_original_bible_gloss_write_passage(
+  let handed = await app_learn_original_gloss_write_passage(
     chapter_code,
     verse_key,
   );

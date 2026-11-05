@@ -13,7 +13,7 @@ import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chap
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_original_bible_gloss_write_passage(
+export async function app_learn_original_gloss_write_passage(
   chapter_code,
   verse_key,
 ) {
