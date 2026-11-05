@@ -96,7 +96,7 @@ export async function app_shared_bible_word_overlay_articles_open(
       window_open(url);
     }
     ("the article's name is quoted, asked for by the human 2026-11-01, so a name of several words - Valley of Succoth - reads as one thing rather than running into the words around it");
-    let label = text_combine_multiple(["Open “", about, "” on ", site.name]);
+    let label = text_combine_multiple(["📖 Open “", about, "” on ", site.name]);
     app_shared_button(choices, label, read);
   }
   ("A SITE THE READER HAS CHOSEN BEFORE COMES FIRST, under Recent, the one chosen last at the top; the rest follow under Others - asked for by the human 2026-11-01, so a Catholic reader who opens the Catholic Encyclopedia sees it first every time after. Before any choice there is nothing recent, so the articles show in the sites' usual order with no labels at all.");

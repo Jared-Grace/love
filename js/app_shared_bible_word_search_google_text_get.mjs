@@ -2,10 +2,10 @@ import { app_shared_text_reader_language } from "./app_shared_text_reader_langua
 export function app_shared_bible_word_search_google_text_get() {
   "What the button that looks a Bible word up on Google says, in the language the reader of this app reads.";
   let texts = {
-    en: "Search Google",
-    ur: "گوگل پر تلاش کریں",
+    en: "🔍 Search Google",
+    ur: "🔍 گوگل پر تلاش کریں",
     translated_from: {
-      ur: "Search Google",
+      ur: "🔍 Search Google",
     },
   };
   let v = app_shared_text_reader_language(texts);
