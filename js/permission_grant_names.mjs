@@ -1115,7 +1115,7 @@ export function permission_grant_names() {
     fn_name("firebase_prod_app_asset_file_names"),
     fn_name("data_terminal_get"),
     fn_name("pages_published_gate_run"),
-    fn_name("app_original_bible_gloss_chapter_upload_stored"),
+    fn_name("app_learn_original_gloss_chapter_upload_stored"),
     fn_name("app_replace_abbreviations_baseline_write"),
     fn_name("app_replace_abbreviations_gate_run"),
     fn_name("app_replace_abbreviations_mismatches"),

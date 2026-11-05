@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_republish_generic } from "./gloss_chapters_republish_generic.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { app_original_bible_gloss_chapters_uploaded } from "./app_original_bible_gloss_chapters_uploaded.mjs";
-import { app_original_bible_gloss_chapter_upload_stored } from "./app_original_bible_gloss_chapter_upload_stored.mjs";
+import { app_learn_original_gloss_chapter_upload_stored } from "./app_learn_original_gloss_chapter_upload_stored.mjs";
 export async function app_original_bible_gloss_chapters_republish() {
   "Carry up again every chapter of the Bible explained in its own Hebrew and Greek words that a reader can already reach and that has been changed since it was last sent, so that what is in front of them is what the store says today.";
   ("★ THE REPAIR THIS STORE NEEDS FIRST IS THE ONE FOR LETTERS THAT LOOK THE SAME. An accented Hebrew or Greek letter has more than one spelling of the same characters, so a word can be explained under a spelling the passage does not carry and the two are identical to look at. ",
@@ -14,7 +14,7 @@ export async function app_original_bible_gloss_chapters_republish() {
   let r = await gloss_chapters_republish_generic(
     app_original_bible_gloss_generate,
     app_original_bible_gloss_chapters_uploaded,
-    app_original_bible_gloss_chapter_upload_stored,
+    app_learn_original_gloss_chapter_upload_stored,
   );
   return r;
 }

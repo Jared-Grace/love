@@ -20,7 +20,7 @@ export async function app_original_bible_gloss_published_unfinished_gate_run() {
     "are published with passages nobody has explained yet - read the verses each one is missing with ",
     fn_name("app_original_bible_gloss_write_coverage"),
     ", write them, then carry the chapter up again with ",
-    fn_name("app_original_bible_gloss_chapter_upload_stored"),
+    fn_name("app_learn_original_gloss_chapter_upload_stored"),
   ]);
   let r = gloss_chapters_offenders_assert(walked, "original_bible", fault);
   return r;

@@ -2,7 +2,7 @@ import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_ge
 import { app_original_bible_gloss_generate_upload_path } from "./app_original_bible_gloss_generate_upload_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_generate_upload_filter } from "./g_generate_upload_filter.mjs";
-export async function app_original_bible_gloss_chapter_upload_stored(
+export async function app_learn_original_gloss_chapter_upload_stored(
   chapter_code,
 ) {
   "Publish one chapter of the original-language gloss store exactly as it already stands, generating nothing.";

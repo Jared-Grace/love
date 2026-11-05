@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_chapter_codes } from "./local_function_chapter_codes.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
-import { app_original_bible_gloss_chapter_upload_stored } from "./app_original_bible_gloss_chapter_upload_stored.mjs";
+import { app_learn_original_gloss_chapter_upload_stored } from "./app_learn_original_gloss_chapter_upload_stored.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_original_bible_gloss_stored_upload_all() {
   "Publish every chapter of the original-language gloss store exactly as it already stands, generating nothing, and answer with how many went.";
@@ -14,7 +14,7 @@ export async function app_original_bible_gloss_stored_upload_all() {
     app_original_bible_gloss_generate,
   );
   for (let code of codes) {
-    await app_original_bible_gloss_chapter_upload_stored(code);
+    await app_learn_original_gloss_chapter_upload_stored(code);
   }
   let r = {
     uploaded: list_size(codes),
