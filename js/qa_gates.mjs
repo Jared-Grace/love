@@ -445,7 +445,7 @@ import { diff_line_kind_cases_gate_run } from "./diff_line_kind_cases_gate_run.m
 import { js_source_bare_token_kind_cases_gate_run } from "./js_source_bare_token_kind_cases_gate_run.mjs";
 import { bible_versions_english_choices_psalms_agreement_gate_run } from "./bible_versions_english_choices_psalms_agreement_gate_run.mjs";
 import { functions_search_family_or_null_cases_gate_run } from "./functions_search_family_or_null_cases_gate_run.mjs";
-import { app_original_bible_gloss_unpublished_gate_run } from "./app_original_bible_gloss_unpublished_gate_run.mjs";
+import { app_learn_original_gloss_unpublished_gate_run } from "./app_learn_original_gloss_unpublished_gate_run.mjs";
 import { app_ceb_bible_gloss_unpublished_gate_run } from "./app_ceb_bible_gloss_unpublished_gate_run.mjs";
 import { qa_promoted_unbuilt_linked_gate_run } from "./qa_promoted_unbuilt_linked_gate_run.mjs";
 import { functions_rewrite_then_read_gate_run } from "./functions_rewrite_then_read_gate_run.mjs";
@@ -1095,7 +1095,7 @@ export function qa_gates() {
     js_source_bare_token_kind_cases_gate_run,
     bible_versions_english_choices_psalms_agreement_gate_run,
     functions_search_family_or_null_cases_gate_run,
-    app_original_bible_gloss_unpublished_gate_run,
+    app_learn_original_gloss_unpublished_gate_run,
     app_ceb_bible_gloss_unpublished_gate_run,
     qa_promoted_unbuilt_linked_gate_run,
     functions_rewrite_then_read_gate_run,
