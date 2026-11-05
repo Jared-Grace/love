@@ -14,6 +14,6 @@ export async function app_learn_original_gloss_lexicons_named_gate_run() {
     fn_name("app_learn_original_gloss_chapter_explains_text_replace"),
     ", which takes the chapter code and finds the file itself",
   ]);
-  let r = gloss_chapters_offenders_assert(walked, "original_bible", fault);
+  let r = gloss_chapters_offenders_assert(walked, "learn_original", fault);
   return r;
 }
