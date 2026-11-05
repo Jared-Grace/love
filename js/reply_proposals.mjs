@@ -1856,13 +1856,15 @@ export function reply_proposals() {
   ]);
   let jesus_either_added = text_combine_multiple([
     "+  let name = ",
-    fn_name("reply_either_both"),
+    fn_name("reply_either_both_unordered"),
     "(jesus, christ);",
   ]);
-  let jesus_reversed = text_combine_multiple([
-    "+  let reversed = ",
-    fn_name("reply_sequence"),
-    "([christ, jesus]);",
+  let jesus_import_removed = text_combine_multiple([
+    "-import { ",
+    fn_name("reply_either_both"),
+    ' } from "./',
+    fn_name("reply_either_both"),
+    '.mjs";',
   ]);
   let jesus_yeshua_messiah = text_combine_multiple([
     "+  let yeshua_messiah = ",
@@ -1872,21 +1874,21 @@ export function reply_proposals() {
   let jesus_all = text_combine_multiple([
     "+  let phrase_jesus = ",
     fn_name("reply_choice"),
-    "([name, reversed, yeshua, messiah, yeshua_messiah]);",
+    "([name, yeshua, messiah, yeshua_messiah]);",
   ]);
   let jesus_line = "✝️ Jesus is Lord! 👑";
   let jesus_titles = {
     title: "read every title of Jesus in one function",
     fn: fn_name("reply_phrase_jesus"),
-    whole: [],
+    whole: [fn_name("reply_either_both_unordered")],
     diff: [
+      jesus_import_removed,
       jesus_head,
       '+  "Every way of saying the name of Jesus, each standing for the others. Lord is not one of them, because it also names the Father.";',
       '   let jesus = "jesus";',
       '   let christ = "christ";',
       jesus_either_removed,
       jesus_either_added,
-      jesus_reversed,
       '+  let yeshua = "yeshua";',
       '+  let messiah = "messiah";',
       jesus_yeshua_messiah,
@@ -1963,6 +1965,11 @@ export function reply_proposals() {
     fn_name("reply_word_love"),
     ".",
   ]);
+  let combined69 = text_combine_multiple([
+    "every Amen here comes from ",
+    fn_name("prayer_end"),
+    ", so it always closes the line, with the praying hands. That moves the Amen behind a quoted verse, where you first asked for it in front. The rejected reading was keeping a bare Amen in front for that one case.",
+  ]);
   let verses_said = {
     title: "read 1 John 3:23 and 4:7-10, and answer with the verse and Amen",
     fn: fn_name("app_shared_message_reply_choices"),
@@ -2002,7 +2009,8 @@ export function reply_proposals() {
       fn_name("reply_bible_references_closed"),
       fn_name("reply_bible_references_runs"),
       fn_name("reply_bible_references_merged"),
-      fn_name("reply_bible_run_line"),
+      fn_name("reply_bible_runs_line"),
+      fn_name("reply_bible_run_citation_after"),
     ],
     diff: [
       verses_join,
@@ -2019,13 +2027,13 @@ export function reply_proposals() {
         from: "",
         message: verses_message_commandment,
         answered: true,
-        outputs: ["1 John 3:23 Amen!"],
+        outputs: ["📖 1 John 3:23: Amen! 🙏"],
       },
       {
         from: "",
         message: verses_message_passage,
         answered: true,
-        outputs: ["1 John 4:7-10 Amen!"],
+        outputs: ["📖 1 John 4:7-10: Amen! 🙏"],
       },
       {
         from: "",
@@ -2035,12 +2043,15 @@ export function reply_proposals() {
           verses_message_passage,
         ]),
         answered: true,
-        outputs: ["1 John 3:23 Amen!", "1 John 4:7-10 Amen!"],
+        outputs: ["📖 1 John 3:23; 4:7-10: Amen! 🙏"],
       },
     ],
     decide: [
       "you asked for verses to come first in the reply and the prayer last, and for the verse to be fetched by its reference. A verse said whole gets its reference and Amen, and is not quoted back.",
       "the verse step can also quote a whole verse back when somebody says only part of it, as you asked, but no rule reads a part yet. No real message has done that, so a part of a verse gets no reply and comes to you. The rejected reading was guessing which pieces people would send.",
+      combined69,
+      "all the verses in a message share one line and one Amen: 1 John 3:23; 4:7-10. A comma means the same chapter, a semicolon another chapter or book. A verse quoted back keeps its own whole citation, so its words are not taken for a neighbour's. The rejected reading was one Amen per verse.",
+      "the line opens with a book, and a colon comes before the Amen: the Amen is to what the Book says at that place, not to the wording or typos of the message. The rejected readings were a bare space, which reads as agreeing with what was typed, and As written in, which says it in more words.",
       "each verse rule is generated from its reference alone. It lines up the 16 English Bibles nobody owns, keeps the words in order, and offers a choice where they differ. So it also reads mixes no Bible wrote, which is how it reads this message's wordings with no quote typed in. Jesus, Christ and Jesus Christ all count as the same. A choice or phrase in more than one verse is its own function. The rejected readings were a list of whole wordings, and adding this message's wording by hand.",
       "words a Bible left out are optional, so the end of a verse can count as all of it: know God for God is love counts as 1 John 4:8 said whole. That person gets the reference and Amen, not the full verse. God is love alone gets no reply. The rejected reading was also asking for a minimum number of words, because no real message has needed it.",
       combined68,

@@ -1,13 +1,13 @@
-import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_on_match_bible_reference } from "./reply_on_match_bible_reference.mjs";
-import { reply_choice } from "./reply_choice.mjs";
 import { reply_sequence_output } from "./reply_sequence_output.mjs";
-import { reply_bible_references_closed } from "./reply_bible_references_closed.mjs";
+import { reply_choice } from "./reply_choice.mjs";
 import { reply_once_or_more } from "./reply_once_or_more.mjs";
 import { reply_last } from "./reply_last.mjs";
+import { reply_bible_references_closed } from "./reply_bible_references_closed.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 export async function reply_bible_references_closed_cases() {
@@ -30,8 +30,9 @@ export async function reply_bible_references_closed_cases() {
   let v6 = verse(["whole", "twenty"], "MAT17", "20", false);
   let v7 = verse(["whole", "twenty", "two"], "MAT17", "22", false);
   let v8 = verse(["whole", "ninety"], "1JN04", "99", false);
+  let v9 = verse(["whole", "three"], "1JN03", "23", false);
   let o = reply_sequence_output(["hello"], "Hello");
-  let said = reply_choice([v, v2, v3, v4, v5, v6, v7, v8, o]);
+  let said = reply_choice([v, v2, v3, v4, v5, v6, v7, v8, v9, o]);
   let room = reply_once_or_more(said);
   let last = reply_last();
   let rule2 = reply_sequence([room, last]);
@@ -42,39 +43,47 @@ export async function reply_bible_references_closed_cases() {
   let cases = [
     {
       message: "part seven",
-      outputs: [`Amen! 1 John 4:7 ${seven}`],
+      outputs: [`📖 1 John 4:7 ${seven} Amen! 🙏`],
     },
     {
       message: "whole seven",
-      outputs: ["1 John 4:7 Amen!"],
+      outputs: ["📖 1 John 4:7: Amen! 🙏"],
     },
     {
       message: "whole seven whole eight",
-      outputs: ["1 John 4:7-8 Amen!"],
+      outputs: ["📖 1 John 4:7-8: Amen! 🙏"],
     },
     {
       message: "part seven part eight",
-      outputs: [`Amen! 1 John 4:7-8 ${seven} ${eight}`],
+      outputs: [`📖 1 John 4:7-8 ${seven} ${eight} Amen! 🙏`],
     },
     {
       message: "part seven whole seven",
-      outputs: ["1 John 4:7 Amen!"],
+      outputs: ["📖 1 John 4:7: Amen! 🙏"],
     },
     {
       message: "whole seven whole nine",
-      outputs: ["1 John 4:7 Amen!", "1 John 4:9 Amen!"],
+      outputs: ["📖 1 John 4:7, 9: Amen! 🙏"],
+    },
+    {
+      message: "whole three whole seven",
+      outputs: ["📖 1 John 3:23; 4:7: Amen! 🙏"],
+    },
+    {
+      message: "whole seven whole twenty",
+      outputs: ["📖 1 John 4:7; Matthew 17:20: Amen! 🙏"],
     },
     {
       message: "part seven whole eight",
-      outputs: [`Amen! 1 John 4:7 ${seven}`, "1 John 4:8 Amen!"],
+      outputs: [`📖 1 John 4:7 ${seven} 📖 1 John 4:8: Amen! 🙏`],
     },
     {
       message: "whole twenty whole twenty two",
-      outputs: ["Matthew 17:20-22 Amen!"],
+      outputs: ["📖 Matthew 17:20-22: Amen! 🙏"],
     },
     {
       message: "hello whole seven",
-      outputs: ["1 John 4:7 Amen!", "Hello"],
+      outputs: ["📖 1 John 4:7: Amen! 🙏", "Hello"],
     },
     {
       message: "hello",

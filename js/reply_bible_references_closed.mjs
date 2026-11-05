@@ -1,5 +1,5 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { reply_property_bible_references } from "./reply_property_bible_references.mjs";
 import { reply_property_outputs } from "./reply_property_outputs.mjs";
 import { reply_wrap_invoke } from "./reply_wrap_invoke.mjs";
@@ -8,8 +8,7 @@ import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { reply_bible_references_runs } from "./reply_bible_references_runs.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_map } from "./list_map.mjs";
-import { reply_bible_run_line } from "./reply_bible_run_line.mjs";
+import { reply_bible_runs_line } from "./reply_bible_runs_line.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_add } from "./list_add.mjs";
 export function reply_bible_references_closed(rule) {
@@ -36,9 +35,9 @@ export function reply_bible_references_closed(rule) {
         if (null_is(runs)) {
           continue;
         }
-        let lines = list_map(runs, reply_bible_run_line);
+        let line = reply_bible_runs_line(runs);
         possibility[name_outputs] = list_concat(
-          lines,
+          [line],
           possibility[name_outputs],
         );
       }

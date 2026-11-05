@@ -1,12 +1,12 @@
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { reply_once_or_more } from "./reply_once_or_more.mjs";
 import { reply_bible_verses } from "./reply_bible_verses.mjs";
-import { reply_bible_references_closed } from "./reply_bible_references_closed.mjs";
-import { reply_sequence } from "./reply_sequence.mjs";
+import { reply_once_or_more } from "./reply_once_or_more.mjs";
 import { reply_last } from "./reply_last.mjs";
+import { reply_sequence } from "./reply_sequence.mjs";
+import { reply_bible_references_closed } from "./reply_bible_references_closed.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
 import { list_size } from "./list_size.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -32,13 +32,16 @@ export async function reply_bible_verses_cases_gate_run() {
     "Herein is love, not that we loved God, but that he loved us, and sent his Son to be the propitiation for our sins.";
   let v = three.replace("Jesus Christ", "Christ");
   let cases = [
-    [three, ["1 John 3:23 Amen!"]],
-    [v, ["1 John 3:23 Amen!"]],
-    [seven, ["1 John 4:7 Amen!"]],
-    [`${lead} ${seven} ${eight} ${nine} ${ten}`, ["1 John 4:7-10 Amen!"]],
+    [three, ["📖 1 John 3:23: Amen! 🙏"]],
+    [v, ["📖 1 John 3:23: Amen! 🙏"]],
+    [seven, ["📖 1 John 4:7: Amen! 🙏"]],
+    [
+      `${lead} ${seven} ${eight} ${nine} ${ten}`,
+      ["📖 1 John 4:7-10: Amen! 🙏"],
+    ],
     [
       `${three} ${lead} ${seven} ${eight} ${nine} ${ten}`,
-      ["1 John 3:23 Amen!", "1 John 4:7-10 Amen!"],
+      ["📖 1 John 3:23; 4:7-10: Amen! 🙏"],
     ],
     [lead, []],
   ];
