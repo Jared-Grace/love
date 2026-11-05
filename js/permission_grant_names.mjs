@@ -1005,7 +1005,7 @@ export function permission_grant_names() {
     fn_name("folder_lines_search"),
     fn_name("folder_lines_search_args"),
     fn_name("permission_grants_writing_arguments"),
-    fn_name("app_original_bible_gloss_chapter_base_repair"),
+    fn_name("app_learn_original_gloss_chapter_base_repair"),
     fn_name("firebase_storage_download_json_jg"),
     fn_name("app_original_bible_gloss_generate_upload"),
     fn_name("app_original_bible_gloss_passages"),
