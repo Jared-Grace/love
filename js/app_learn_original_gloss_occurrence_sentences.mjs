@@ -7,7 +7,7 @@ import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_original_bible_gloss_occurrence_sentences(
+export async function app_learn_original_gloss_occurrence_sentences(
   chapter_code,
 ) {
   "Every sentence about rarity that the counts themselves would write for the words of one chapter, each set beside the word it belongs to.";
