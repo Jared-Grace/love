@@ -4183,10 +4183,14 @@ def split_top_level_statements_text(command):
 
     Pipes are deliberately NOT split points: `a | b` is a single command whose
     halves have no meaning apart, and the guard already answers a pipe of
-    trusted verbs on its own."""
-    if any(ch in command for ch in "()`"):
-        return None
-    if "$(" in command or "\n" in command:
+    trusted verbs on its own.
+
+    A bracket inside quotes is only a letter, as in `grep -E 'a(b|c)'`, so only
+    one outside quotes leaves the command whole. A backtick stays refused
+    anywhere, and so does `$(`, because both run a command inside double quotes.
+    Every caller only sends a chain back to the agent, so a wrong split here
+    costs a call and cannot let anything run."""
+    if "`" in command or "$(" in command or "\n" in command:
         return None
     pieces = []
     current = ""
@@ -4205,6 +4209,8 @@ def split_top_level_statements_text(command):
             current += ch
             index += 1
             continue
+        if ch in "()":
+            return None
         two = command[index:index + 2]
         if two in ("&&", "||"):
             pieces.append(current)
