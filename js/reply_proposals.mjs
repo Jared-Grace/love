@@ -2186,11 +2186,18 @@ export function reply_proposals() {
     fn_name("reply_choice"),
     "([minister, teacher, work]);",
   ]);
+  let v3 = prayer_blessing("your ministry and the people of Kenya");
+  let v4 = prayer_blessing("your ministry and the people of Kenya");
+  let v5 = prayer_blessing("your ministry and the people of the Philippines");
   let teacher_work_said = {
     title:
       "bless a Sunday school teacher, and somebody doing ministry work in a country",
     fn: fn_name("app_shared_message_reply_minister"),
-    whole: [fn_name("reply_ministry_work")],
+    whole: [
+      fn_name("reply_ministry_work"),
+      fn_name("reply_countries_shown"),
+      fn_name("reply_country_shown_words"),
+    ],
     diff: [
       teacher_blessing_line,
       teacher_old,
@@ -2219,7 +2226,31 @@ export function reply_proposals() {
         from: "",
         message: "I do ministry work in Kenya",
         answered: true,
+        outputs: [v3],
+      },
+      {
+        from: "",
+        message: "I do ministry work in Kenia",
+        answered: true,
+        outputs: [v4],
+      },
+      {
+        from: "",
+        message: "I do ministry work in the Philippines",
+        answered: true,
+        outputs: [v5],
+      },
+      {
+        from: "",
+        message: "I do ministry work in Antarctica",
+        answered: true,
         outputs: [ministry_response],
+      },
+      {
+        from: "",
+        message: "I do ministry work in Nairobi",
+        answered: false,
+        outputs: [],
       },
       {
         from: "",
@@ -2230,7 +2261,10 @@ export function reply_proposals() {
     ],
     decide: [
       "a Sunday school teacher gets the same blessing as any teacher: your ministry and teaching. The rejected reading was a separate blessing for Sunday school.",
-      "ministry work in a country gets your ministry, and says nothing about the country. The rejected reading was also answering with the location line, because the person is saying where they serve and not where they are from.",
+      "ministry work in a country also blesses the people of that country. The rejected reading was also answering with the location line, because the person is saying where they serve and not where they are from.",
+      "the name in the prayer always comes from a list of 237 written names, and never from the letters somebody typed. So Kenia is prayed for as Kenya. A town is never repeated, because a town gets no reply here at all. The rejected reading was repeating the typed word, which would repeat a misspelling.",
+      "a country with no written name, like Antarctica, or a less common spelling like Burma or Holland, gets the blessing on the ministry with no country in it. Read the list if a name should be there or should not.",
+      "the list includes names people disagree about, such as Taiwan, Palestine and Kosovo, because it only says back what the person said. Tell me if you want any of them to get the plain blessing instead.",
       "only these words are read, with the country from the list, because you want other wordings added when somebody really sends them.",
       "this alone does not answer the waiting messages. They need every part understood, and more cards are coming for the rest.",
     ],

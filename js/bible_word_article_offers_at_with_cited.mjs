@@ -1,7 +1,8 @@
-import { equal } from "./equal.mjs";
 import { bible_word_article_offers_at } from "./bible_word_article_offers_at.mjs";
 import { bible_word_article_cited_at } from "./bible_word_article_cited_at.mjs";
+import { list_get } from "./list_get.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
+import { equal } from "./equal.mjs";
 import { bible_word_articles_with_cited } from "./bible_word_articles_with_cited.mjs";
 export async function bible_word_article_offers_at_with_cited(
   words,
@@ -22,8 +23,9 @@ export async function bible_word_article_offers_at_with_cited(
     chapter_code,
     verse_number,
   );
+  let word = list_get(words, index);
   let cited = await bible_word_article_cited_at(
-    words[index],
+    word,
     chapter_code,
     verse_number,
   );

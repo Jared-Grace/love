@@ -2,6 +2,7 @@ import { bible_word_article_citations_path } from "./bible_word_article_citation
 import { web_assets_url } from "./web_assets_url.mjs";
 import { http_json_browser_quiet } from "./http_json_browser_quiet.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
+import { property_or_null } from "./property_or_null.mjs";
 export async function bible_word_article_cited_at(
   word,
   chapter_code,
@@ -22,7 +23,7 @@ export async function bible_word_article_cited_at(
     return fetched;
   }
   let chapter = await catch_null_async(chapter_fetch);
-  let verse = chapter?.[verse_number];
-  let pairs = verse?.[word] ?? [];
+  let verse = property_or_null(chapter, verse_number);
+  let pairs = property_or_null(verse, word) ?? [];
   return pairs;
 }
