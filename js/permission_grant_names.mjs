@@ -1146,7 +1146,7 @@ export function permission_grant_names() {
     fn_name("text_split_comma_nested_cases_gate_run"),
     fn_name("g_arc_prompt"),
     fn_name("g_leader_chapter_codes"),
-    fn_name("app_original_bible_gloss_generate_download"),
+    fn_name("app_learn_original_gloss_generate_download"),
     fn_name("storage_function_path_json"),
     fn_name("gloss_back_references_baseline_write"),
     fn_name("gloss_back_references_gate_run"),
