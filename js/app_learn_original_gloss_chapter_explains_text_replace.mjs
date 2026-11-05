@@ -1,6 +1,6 @@
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { gloss_chapter_explains_text_replace } from "./gloss_chapter_explains_text_replace.mjs";
-export async function app_original_bible_gloss_chapter_explains_text_replace(
+export async function app_learn_original_gloss_chapter_explains_text_replace(
   chapter_code,
   before,
   after,
