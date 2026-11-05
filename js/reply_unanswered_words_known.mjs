@@ -1,5 +1,3 @@
-import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read } from "./file_read.mjs";
 import { reply_names_common } from "./reply_names_common.mjs";
@@ -7,6 +5,9 @@ import { reply_cities_names_all } from "./reply_cities_names_all.mjs";
 import { reply_countries_names } from "./reply_countries_names.mjs";
 import { app_message_private_records_replied } from "./app_message_private_records_replied.mjs";
 import { reply_case_key } from "./reply_case_key.mjs";
+import { reply_message_words } from "./reply_message_words.mjs";
+import { not } from "./not.mjs";
+import { less_than } from "./less_than.mjs";
 export async function reply_unanswered_words_known() {
   arguments_assert(arguments, 0);
   ("Each different waiting message with every word put to a question mark unless it is an ordinary dictionary word, so its shape can be read without its private details. Lines of ten words, each starting with the position of its first word.");
@@ -37,7 +38,7 @@ export async function reply_unanswered_words_known() {
       continue;
     }
     seen.add(key);
-    let words = record.message.split(/\s+/).filter(Boolean);
+    let words = reply_message_words(record.message);
     function lambda2(word) {
       let cleaned = word.toLowerCase().replace(/^[^a-z']+|[^a-z']+$/g, "");
       let bare = cleaned.replace(/'s$/, "");

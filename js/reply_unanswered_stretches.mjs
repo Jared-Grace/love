@@ -1,11 +1,12 @@
-import { math_min } from "./math_min.mjs";
-import { less_than } from "./less_than.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_import } from "./function_import.mjs";
 import { app_message_private_records_replied } from "./app_message_private_records_replied.mjs";
 import { reply_case_key } from "./reply_case_key.mjs";
+import { reply_message_words } from "./reply_message_words.mjs";
+import { less_than } from "./less_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { math_min } from "./math_min.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
 export async function reply_unanswered_stretches(f_name) {
   arguments_assert(arguments, 1);
@@ -26,7 +27,7 @@ export async function reply_unanswered_stretches(f_name) {
       continue;
     }
     seen.add(key);
-    let words = record.message.split(/\s+/).filter(Boolean);
+    let words = reply_message_words(record.message);
     let stretches = [];
     let from = 0;
     while (less_than(from, words.length)) {
