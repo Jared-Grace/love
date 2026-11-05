@@ -5322,8 +5322,13 @@ def chain_trusted_and_blocked(command, safe_verbs, safe_exact_commands, pieces_m
     """(trusted_pieces, blocked_pieces) when `command` is a chain of at least
     `pieces_minimum` independent statements with some allowed and some not,
     else None. A variable or an assignment means the pieces may depend on each
-    other, so those are not chains in this sense."""
-    if "$" in command:
+    other, so those are not chains in this sense.
+
+    `$?` is not such a variable: nothing in the chain sets it by name, and it is
+    how a run usually reports how it ended. If the agent drops the piece just
+    before it, it reports the piece before that instead, which is only a wrong
+    number on screen."""
+    if "$" in command.replace("$?", ""):
         return None
     pieces = split_top_level_statements_text(command)
     if pieces is None or len(pieces) < pieces_minimum:

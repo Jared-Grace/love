@@ -46,12 +46,14 @@ export function http_node_request({
     let i2 = catch_call_later(reject, on_end);
     res.on("end", i2);
   }
+  ("2026-11-05: agent false, because node's shared pool of connections carries a timeout of its own, 5 seconds, which reaches this same on_idle before the idle limit is set on the socket. So asks were given up after seconds while saying the idle limit had passed, and one such ask in a gate that fetches a hundred and fifty psalms failed a gate with nothing wrong, and held back every app's send. Not picked: passing timeout on this ask, which the pool's own options overwrite. What this costs is a fresh connection for each ask");
   let a = {
     hostname: urlObj.hostname,
     port: urlObj.port || (swHttps ? 443 : 80),
     path: text_combine(urlObj.pathname, urlObj.search),
     method,
     family: 4,
+    agent: false,
     headers: {
       ...(options.headers || {}),
       ...(body
