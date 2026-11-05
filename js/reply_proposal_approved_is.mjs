@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { property_get } from "./property_get.mjs";
+import { reply_proposal_changed_approval } from "./reply_proposal_changed_approval.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { reply_case_approval } from "./reply_case_approval.mjs";
 import { list_map } from "./list_map.mjs";
@@ -21,10 +22,9 @@ export async function reply_proposal_approved_is(proposal, approvals) {
     return false;
   }
   let f_name = property_get(proposal, "fn");
-  let altered = {
-    name: f_name,
-    lines: property_get(drawn, "lines"),
-  };
+  let title = property_get(proposal, "title");
+  let drawn_lines = property_get(drawn, "lines");
+  let altered = reply_proposal_changed_approval(title, f_name, drawn_lines);
   let files = [altered];
   let whole = property_get(drawn, "whole");
   list_add_multiple(files, whole);

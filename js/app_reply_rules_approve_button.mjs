@@ -31,10 +31,12 @@ export function app_reply_rules_approve_button(
 ) {
   "The one control on this bench: a reviewer saying that this file, as the lines above it stand, is right.";
   "★ IT IS PER FILE AND NOT PER CHANGE, because a change is several files and a reader gets through them one at a time. A single button at the foot of a change asks for a verdict on all of it at once, which leaves two ways to answer and both are bad: pass files that have not been read, or put the whole change down and read every file again on the next visit. A button under each file lets the reading be stopped and picked up, and records exactly as much as has actually been read and no more.";
-  "★ WHAT IS PASSED IS THE TEXT ABOVE THE BUTTON AND NOT THE FILE ON DISK. They are the same thing at the moment of reading and can stop being so a minute later, and the reviewer can only have meant the lines they were looking at. Storing what the file says instead would record a verdict on something nobody read.";
-  "A file already passed says so instead of offering the button again, because offering it again asks a question that has been answered and makes a page of answered questions look like a page of waiting ones.";
-  "A file passed in a wording it no longer has says that in red, and it is the loudest thing on the screen on purpose. It is the state where somebody could act on a permission that was given for different words.";
-  "★ A FILE PASSED AS IT STANDS HAS ITS LINES PUT AWAY, and nothing else is. The lines are the long part of the page and a passed file is a question already answered, so leaving them out is what lets the files still waiting be found by scrolling. A file passed in a wording it no longer has shows its lines again, because those are exactly the lines that now need reading.";
+  ("★ WHAT IS PASSED IS THE TEXT ABOVE THE BUTTON AND NOT THE FILE ON DISK. They are the same thing at the moment of reading and can stop being so a minute later, and the reviewer can only have meant the lines they were looking at. Storing what the file says instead would record a verdict on something nobody read. For the file a change alters, the lines passed are only the ones it adds or removes, under a name belonging to that change, from ",
+    fn_name("reply_proposal_changed_approval"),
+    ", so the page draws more than the verdict covers.");
+  ("A file already passed says so instead of offering the button again, because offering it again asks a question that has been answered and makes a page of answered questions look like a page of waiting ones.");
+  ("A file passed in a wording it no longer has says that in red, and it is the loudest thing on the screen on purpose. It is the state where somebody could act on a permission that was given for different words.");
+  ("★ A FILE PASSED AS IT STANDS HAS ITS LINES PUT AWAY, and nothing else is. The lines are the long part of the page and a passed file is a question already answered, so leaving them out is what lets the files still waiting be found by scrolling. A file passed in a wording it no longer has shows its lines again, because those are exactly the lines that now need reading.");
   let text = list_join_newline(lines);
   let approved = property_get_or_null(approvals, f_name);
   let verdict = reply_approved_verdict(text, approved);
