@@ -20,7 +20,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_original_bible_gloss_chapter_translits_add(
+export async function app_learn_original_gloss_chapter_translits_add(
   chapter_code,
 ) {
   "$plain chapter_code";

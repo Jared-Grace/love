@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_chapter_codes } from "./local_function_chapter_codes.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
-import { app_original_bible_gloss_chapter_translits_add } from "./app_original_bible_gloss_chapter_translits_add.mjs";
+import { app_learn_original_gloss_chapter_translits_add } from "./app_learn_original_gloss_chapter_translits_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,7 +18,7 @@ export async function app_original_bible_gloss_translits_add_all() {
   let chapters = [];
   let added = 0;
   for (let code of codes) {
-    let done = await app_original_bible_gloss_chapter_translits_add(code);
+    let done = await app_learn_original_gloss_chapter_translits_add(code);
     let gained = property_get(done, "added");
     added = add(added, gained);
     list_add(chapters, done);
