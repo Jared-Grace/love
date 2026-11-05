@@ -16,7 +16,7 @@ import { list_size } from "./list_size.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-export async function app_original_bible_gloss_marker_clauses_repair() {
+export async function app_learn_original_gloss_marker_clauses_repair() {
   "Take out of the original-language gloss every clause that points at a marker beside a word that no longer carries one, and answer with the passages mended and how many words were mended in each.";
   "An author who left a marker under a word often pointed at it in the sentence beside it, so mending the two halves of a word's row is one piece of work in two sittings: the short English is written first, and this is what closes the second half. Until it runs, a mended word reads with a sentence pointing at a mark that is no longer on the page.";
   "It finds its own work rather than being handed a list, and it finds it by asking which words still carry a marker - so a chapter half mended keeps every clause that is still true, and running it again after everything is written changes nothing.";

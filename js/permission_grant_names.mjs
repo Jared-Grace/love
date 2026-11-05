@@ -1647,7 +1647,7 @@ export function permission_grant_names() {
     fn_name("storage_local_key_sites"),
     fn_name("app_ceb_bible_gloss_chapter_affix_letters_wrong"),
     fn_name("data_loose_room_moved"),
-    fn_name("app_original_bible_gloss_marker_clauses_repair"),
+    fn_name("app_learn_original_gloss_marker_clauses_repair"),
     fn_name("functions_lift_refusal_rows"),
     fn_name("gloss_explain_roots_claimed"),
     fn_name("js_scopes_shadowing_cases_gate_run"),
