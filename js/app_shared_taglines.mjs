@@ -5,7 +5,7 @@ export function app_shared_taglines() {
   "the order here follows the list of names, so the two files can be read side by side and a missing app is easy to see";
   let r = {
     index: "all free, with nothing to sign up for",
-    bible: "read it in your own language",
+    bible: "read the written word of God",
     bible_emoji: "the Bible written with pictures in place of its words",
     search: "find a word anywhere in the Bible",
     original_bible:
