@@ -4,8 +4,6 @@ import { function_read } from "./function_read.mjs";
 import { reply_proposal_diff_whole } from "./reply_proposal_diff_whole.mjs";
 import { reply_proposal_whole_added } from "./reply_proposal_whole_added.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 export async function reply_proposal_drawn(proposal) {
   arguments_assert(arguments, 1);
   ("One change to the reply rules laid over the files as they stand: every line of the function it alters, signed, with any lines it names that the file no longer holds, and every new file it brings, whole.");
@@ -24,13 +22,6 @@ export async function reply_proposal_drawn(proposal) {
     };
     list_add(files, one);
   }
-  ("The shortest files come first, so a reader takes in the small pieces before the longer files that use them. Files of the same length keep the order the change lists them in.");
-  function file_size(file) {
-    let lines = property_get(file, "lines");
-    let size = list_size(lines);
-    return size;
-  }
-  list_sort_number_mapper(files, file_size);
   let laid = {
     lines: property_get(drawn, "lines"),
     unplaced: property_get(drawn, "unplaced"),

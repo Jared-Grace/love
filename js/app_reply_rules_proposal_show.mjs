@@ -5,34 +5,36 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_reply_rules_case_approve_show } from "./app_reply_rules_case_approve_show.mjs";
+import { list_map } from "./list_map.mjs";
+import { app_reply_rules_cases_approved_show } from "./app_reply_rules_cases_approved_show.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
-import { or } from "./or.mjs";
 import { app_reply_rules_file_card } from "./app_reply_rules_file_card.mjs";
 import { app_reply_rules_file_contents } from "./app_reply_rules_file_contents.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
 import { not } from "./not.mjs";
 import { app_reply_rules_approve_button } from "./app_reply_rules_approve_button.mjs";
 import { app_reply_rules_file_notes } from "./app_reply_rules_file_notes.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_reply_rules_whole_show } from "./app_reply_rules_whole_show.mjs";
-import { list_map } from "./list_map.mjs";
-import { app_reply_rules_case_approve_show } from "./app_reply_rules_case_approve_show.mjs";
-import { app_reply_rules_cases_approved_show } from "./app_reply_rules_cases_approved_show.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
+import { or } from "./or.mjs";
 import { list_size } from "./list_size.mjs";
+import { list_add } from "./list_add.mjs";
+import { app_reply_rules_whole_show } from "./app_reply_rules_whole_show.mjs";
+import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
 import { noop } from "./noop.mjs";
 export function app_reply_rules_proposal_show(root, proposal, approvals) {
   arguments_assert(arguments, 3);
   ("One change to the reply rules laid out to be said yes or no to: what it is for, the lines it would alter, the exchanges it was measured to produce, and the questions about it that nobody else can answer.");
-  ("★ THE ORDER IS THE ORDER SOMEBODY DECIDES IN, and it is not the order a change is written in. What it does comes first, because a reader who does not want it can stop there. The lines come next, because a reader who does want it has to see that it is small. The exchanges come after the lines rather than before them, because the whole reason to look at the lines is to believe the exchanges. The questions come last, because they are what is left once the change itself has been agreed to.");
+  ("★ THE ORDER IS THE ORDER SOMEBODY DECIDES IN, and it is not the order a change is written in. What it does comes first, because a reader who does not want it can stop there. The exchanges come next, because what a reply says can be judged on sight, and a reader who does not want the answers has no need of the code. The files come after them, and the questions come last, because they are what is left once the change itself has been agreed to.");
   ("The name of the function is said once, across the top of its card, and not again under the title. It is what makes the change findable afterwards and not what the change is about, and a second copy of it directly above the first said nothing the card does not.");
-  ("★ THE FILE IS SHOWN WHOLE AND THE NEW FILES ARE SHOWN WHOLE AFTER IT, WHICH IS LONGER TO SCROLL AND IS THE POINT. A few lines either side of a change say what the change is and say nothing about what else is in the file, so anybody wanting to know whether something else is also going on had to leave this screen and open the code - which is the one thing this screen exists to save them. Nothing above is hidden behind a summary, because a summary of a change is the change described by the person proposing it.");
-  ("The new files come after the altered one rather than before it, because the altered one is where the change is decided. What a new file holds only matters once somebody has seen the line that starts calling it.");
+  ("★ EVERY FILE IS SHOWN WHOLE, WHICH IS LONGER TO SCROLL AND IS THE POINT. A few lines either side of a change say what the change is and say nothing about what else is in the file, so anybody wanting to know whether something else is also going on had to leave this screen and open the code - which is the one thing this screen exists to save them. Nothing above is hidden behind a summary, because a summary of a change is the change described by the person proposing it.");
+  ("The shortest file comes first, whether it is new or altered, so a reader takes in the small pieces before the longer files. An altered file with lines missing comes before them all, because its warning means stop.");
   ("Lines the change names that the file no longer holds are said in red directly under it, because a change drawn without them is a change that has been quietly shortened. They are put under it rather than over it so that a reader sees what was drawn before being told part of it is missing, and they are the one thing on this screen that means stop rather than read on.");
   ("The questions are numbered by being listed rather than by counting, because they are answered in a message written back and a person answering picks them out by their first few words.");
   let title = property_get(proposal, "title");
@@ -41,6 +43,16 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   let head = html_p_text(block, title);
   html_style_font_size(head, "1.2em");
   let gray = app_shared_color_gray_dark();
+  let cases_head = html_p_text(block, "What it would answer");
+  html_style_margin_top(cases_head, "1.5em");
+  html_style_font_size(cases_head, "0.9em");
+  html_font_color_set(cases_head, gray);
+  let cases = property_get(proposal, "cases");
+  function each_case(one) {
+    app_reply_rules_case_approve_show(block, one, approvals);
+  }
+  list_map(cases, each_case);
+  app_reply_rules_cases_approved_show(block, cases, approvals);
   let f_name = property_get(proposal, "fn");
   let lines = property_get(proposal, "lines");
   let unplaced = property_get(proposal, "unplaced");
@@ -51,7 +63,7 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
     lines,
     approvals,
   );
-  if (or(stale, outstanding)) {
+  function changed_show() {
     let card = app_reply_rules_file_card(block, "changed file", f_name);
     let diff = app_reply_rules_file_contents(card);
     app_reply_rules_diff_show(diff, lines);
@@ -81,21 +93,36 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
     return r;
   }
   let whole_outstanding = list_filter(whole, file_outstanding_is);
+  let shows = [];
+  if (or(stale, outstanding)) {
+    let size = list_size(lines);
+    if (stale) {
+      size = 0;
+    }
+    list_add(shows, {
+      size,
+      show: changed_show,
+    });
+  }
   function each_file(file) {
-    let shown = app_reply_rules_whole_show(block, file, approvals);
-    return shown;
+    function file_show() {
+      app_reply_rules_whole_show(block, file, approvals);
+    }
+    let file_lines = property_get(file, "lines");
+    list_add(shows, {
+      size: list_size(file_lines),
+      show: file_show,
+    });
   }
   list_map(whole_outstanding, each_file);
-  let cases_head = html_p_text(block, "What it would answer");
-  html_style_margin_top(cases_head, "1.5em");
-  html_style_font_size(cases_head, "0.9em");
-  html_font_color_set(cases_head, gray);
-  let cases = property_get(proposal, "cases");
-  function each_case(one) {
-    app_reply_rules_case_approve_show(block, one, approvals);
+  function show_size(one) {
+    let size = property_get(one, "size");
+    return size;
   }
-  list_map(cases, each_case);
-  app_reply_rules_cases_approved_show(block, cases, approvals);
+  list_sort_number_mapper(shows, show_size);
+  for (let one of shows) {
+    one.show();
+  }
   ("The questions stay shut under one line that says how many there are, because a verdict does not wait on any of them, and each change on the page was otherwise followed by a wall of them. With none, nothing is drawn.");
   let decide = property_get(proposal, "decide");
   let none = list_empty_is(decide);
