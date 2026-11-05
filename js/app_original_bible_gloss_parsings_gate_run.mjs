@@ -1,4 +1,4 @@
-import { app_original_bible_gloss_parsings_exceeding_chapters } from "./app_original_bible_gloss_parsings_exceeding_chapters.mjs";
+import { app_learn_original_gloss_parsings_exceeding_chapters } from "./app_learn_original_gloss_parsings_exceeding_chapters.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_chapters_offenders_assert } from "./gloss_chapters_offenders_assert.mjs";
@@ -11,7 +11,7 @@ export async function app_original_bible_gloss_parsings_gate_run() {
   ("★ THE COMMAND THAT MENDS A CHAPTER IS NAMED IN THE COMPLAINT, BECAUSE THE CHAPTER CODE THIS HANDS BACK DOES NOT SAY WHERE THE WORDING IS KEPT AND NOTHING NEARBY DOES EITHER. The text is not in this repo at all: it is in a store under the human's own folder, addressed by a chain of six functions from a chapter code, and a reader stopped by this has no reason to know any of that. The fault here is a sentence that says the wrong thing about a form, so the mend is the same reword the sister gate ",
     fn_name("app_learn_original_gloss_lexicons_named_gate_run"),
     " asks for, and that is where the measurement and the reason the cure may be named at all are written down.");
-  let walked = await app_original_bible_gloss_parsings_exceeding_chapters();
+  let walked = await app_learn_original_gloss_parsings_exceeding_chapters();
   let fault = text_combine_multiple([
     "explain a word by naming a form no word of its passage carries - swap the wording in each with ",
     fn_name("app_learn_original_gloss_chapter_explains_text_replace"),

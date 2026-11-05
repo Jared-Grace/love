@@ -1389,7 +1389,7 @@ export function permission_grant_names() {
     fn_name("ebible_verse_download"),
     fn_name("ebible_version_books_testament_new"),
     fn_name("function_prose_replace"),
-    fn_name("app_original_bible_gloss_parsings_exceeding_chapters"),
+    fn_name("app_learn_original_gloss_parsings_exceeding_chapters"),
     fn_name("app_original_bible_gloss_passage_entries"),
     fn_name("function_string_value_replace"),
     fn_name("qa_gate_add"),

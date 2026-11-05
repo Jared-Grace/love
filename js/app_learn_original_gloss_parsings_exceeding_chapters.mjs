@@ -9,7 +9,7 @@ import { list_map } from "./list_map.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
-export async function app_original_bible_gloss_parsings_exceeding_chapters() {
+export async function app_learn_original_gloss_parsings_exceeding_chapters() {
   "How many chapters of the original-language gloss have been authored, and which of them hold an explanation that names a tense, a mood or a form no word of its own passage carries.";
   "The store is read rather than a list of chapters being handed in, so a chapter authored later is checked from the moment it is written and nobody has to remember to name it anywhere.";
   "Only the places with nowhere to point are carried back. The far commoner sort, where the named form does stand on some other word of the passage, is what an explanation comparing one word with its neighbours looks like from here, and gathering those would bury the few that want an answer.";
