@@ -1,0 +1,1 @@
+{"f_name":"reply_word_command","text":"+import { reply_choice } from \"./reply_choice.mjs\";\n+export function reply_word_command() {\n+  \"The noun for what God commands, in the spellings the English Bibles use.\";\n+  let r = reply_choice([\"command\", \"commandment\", \"commandement\"]);\n+  return r;\n+}\n+"}
