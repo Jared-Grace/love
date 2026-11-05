@@ -2018,7 +2018,6 @@ export function reply_proposals() {
       fn_name("reply_bible_1jn_4_9"),
       fn_name("reply_bible_1jn_4_10"),
       fn_name("reply_word_u_v"),
-      fn_name("reply_word_us_u_v"),
       fn_name("reply_word_love"),
       fn_name("reply_word_love_loved"),
       fn_name("reply_word_love_loves_loveth"),
