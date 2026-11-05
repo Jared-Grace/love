@@ -1975,9 +1975,8 @@ export function reply_proposals() {
     fn_name("reply_word_u_v"),
     '("us");',
   ]);
-  let us_nothing_to_give = reply_response_nothing_to_give();
   let combined70 = text_combine_multiple([
-    "this makes one function for the word us, with the old printing spelling vs inside it, so the name stays plain English. Live replies use it in two places: support us in ministry, and fellowship with us. So vs now counts in those two places as well. Both answers above are from the asking rules alone, and the second is worked out from the first: today vs gets no answer there. The rejected reading was keeping two functions, ",
+    "this makes one function for the word us, with the old printing spelling vs inside it, so the name stays plain English. Live replies use it in two places: support us in ministry, and fellowship with us. So vs now counts in those two places as well. Both answers above are from the full rules, and the second is worked out from the first: today vs gets no answer there. The rejected reading was keeping two functions, ",
     fn_name("reply_word_us"),
     " for live replies and a longer name for the Bibles.",
   ]);
@@ -1992,14 +1991,14 @@ export function reply_proposals() {
         message:
           "I am requesting you to support us in ministry according to God's will",
         answered: true,
-        outputs: [us_nothing_to_give],
+        outputs: [nothing_to_give, wrapped],
       },
       {
         from: "",
         message:
           "I am requesting you to support vs in ministry according to God's will",
         answered: true,
-        outputs: [us_nothing_to_give],
+        outputs: [nothing_to_give, wrapped],
       },
     ],
     decide: [
