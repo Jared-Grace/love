@@ -1,0 +1,1 @@
+{"f_name":"reply_word_because_for","text":"+import { reply_choice } from \"./reply_choice.mjs\";\n+export function reply_word_because_for() {\n+  let r = reply_choice([\"because\", \"for\"]);\n+  return r;\n+}\n+"}

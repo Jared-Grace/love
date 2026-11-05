@@ -1,0 +1,1 @@
+{"f_name":"reply_word_charity_love","text":"+import { reply_word_love } from \"./reply_word_love.mjs\";\n+import { reply_choice } from \"./reply_choice.mjs\";\n+export function reply_word_charity_love() {\n+  let r2 = reply_word_love();\n+  let r = reply_choice([r2, \"charity\"]);\n+  return r;\n+}\n+"}
