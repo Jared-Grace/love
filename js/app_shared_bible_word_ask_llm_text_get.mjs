@@ -7,10 +7,10 @@ export function app_shared_bible_word_ask_llm_text_get(llm_name) {
   ("What the button that asks one AI about a Bible word says, in the language the reader of this app reads.");
   ("The AI's name is the gap, because English asks the name and Urdu puts the name before the asking.");
   let texts = {
-    en: "Ask {name}",
-    ur: "{name} سے پوچھیں",
+    en: "🤖 Ask {name}",
+    ur: "🤖 {name} سے پوچھیں",
     translated_from: {
-      ur: "Ask {name}",
+      ur: "🤖 Ask {name}",
     },
   };
   let v = app_shared_text_reader_language_filled(texts, {
