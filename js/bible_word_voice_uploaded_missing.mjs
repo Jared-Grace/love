@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_original_bible_gloss_chapters_uploaded } from "./app_original_bible_gloss_chapters_uploaded.mjs";
+import { app_learn_original_gloss_chapters_uploaded } from "./app_learn_original_gloss_chapters_uploaded.mjs";
 import { bible_word_voice_chapter_asked } from "./bible_word_voice_chapter_asked.mjs";
 import { bible_word_voice_name } from "./bible_word_voice_name.mjs";
 import { bible_word_voice_path } from "./bible_word_voice_path.mjs";
@@ -9,7 +9,7 @@ export async function bible_word_voice_uploaded_missing() {
   "How many different words a reader can tap in the published chapters still have no clip on this machine in the voice the page will ask for, counted per voice with the letters each would send, so a recording run can be priced before it is started.";
   "★ A WORD IS COUNTED ONCE HOWEVER MANY CHAPTERS HOLD IT, because its clip is named after the word and serves every chapter; counting per chapter would price the same recording many times.";
   arguments_assert(arguments, 0);
-  let chapter_codes = await app_original_bible_gloss_chapters_uploaded();
+  let chapter_codes = await app_learn_original_gloss_chapters_uploaded();
   let seen = new Set();
   let voices = {};
   for (let chapter_code of chapter_codes) {

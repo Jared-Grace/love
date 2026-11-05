@@ -1,7 +1,7 @@
 import { retry } from "./retry.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_original_bible_gloss_chapters_uploaded } from "./app_original_bible_gloss_chapters_uploaded.mjs";
+import { app_learn_original_gloss_chapters_uploaded } from "./app_learn_original_gloss_chapters_uploaded.mjs";
 import { bible_word_voice_chapter_asked } from "./bible_word_voice_chapter_asked.mjs";
 import { bible_word_voices } from "./bible_word_voices.mjs";
 import { bible_word_voice_record_local } from "./bible_word_voice_record_local.mjs";
@@ -16,7 +16,7 @@ export async function bible_word_voice_uploaded_write() {
   "★ GENESIS COMES FIRST, because it is where a reader starts and where the listener checks the voices; the rest follow in the order published.";
   "EACH CHAPTER IS ASKED FOR AGAIN ON A FAILURE, because a run of days is certain to meet a download that stalls, and one stall ending the run was seen. ★ THE WAITS SUM TO ABOUT AN HOUR (thirteen tries, each wait doubling from a second), because the standard five summed to fifteen seconds, and on 2026-10-07 a dropped connection outlasted them and stopped the run for two days with nobody watching.";
   arguments_assert(arguments, 0);
-  let uploaded = await app_original_bible_gloss_chapters_uploaded();
+  let uploaded = await app_learn_original_gloss_chapters_uploaded();
   function lambda(c) {
     let r3 = c.startsWith("GEN");
     return r3;
