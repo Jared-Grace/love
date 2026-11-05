@@ -1,7 +1,7 @@
 import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 import { gloss_passage_words_originals } from "./gloss_passage_words_originals.mjs";
 import { gloss_chapter_words_respell } from "./gloss_chapter_words_respell.mjs";
-export async function app_original_bible_gloss_words_respell(chapter_code) {
+export async function app_learn_original_gloss_words_respell(chapter_code) {
   "Give every explanation in one original-language gloss chapter the passage's own spelling of the word it is about.";
   "$plain chapter_code";
   "the code is a chapter's name, like JHN05, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";

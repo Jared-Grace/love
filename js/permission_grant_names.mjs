@@ -1217,7 +1217,7 @@ export function permission_grant_names() {
     fn_name("app_code_screens"),
     fn_name("app_learn_original_gloss_occurrence_sentences"),
     fn_name("app_learn_original_gloss_parsings_exceeding"),
-    fn_name("app_original_bible_gloss_words_respell"),
+    fn_name("app_learn_original_gloss_words_respell"),
     fn_name("app_replace_abbreviations"),
     fn_name("app_replace_rule_sets"),
     fn_name("app_replace_rule_sets_fns_names"),
