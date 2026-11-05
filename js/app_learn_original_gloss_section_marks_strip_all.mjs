@@ -5,7 +5,7 @@ import { app_learn_original_gloss_chapter_section_marks_strip } from "./app_lear
 import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_original_bible_gloss_section_marks_strip_all() {
+export async function app_learn_original_gloss_section_marks_strip_all() {
   "Take the welded Hebrew paragraph mark off every word that carries one, across every written original-language gloss chapter, and answer with every spelling it mended.";
   "★ IT FINDS ITS OWN SET, asking the store which chapters are there rather than being handed a list, so a chapter written after this was last run is swept the next time without anyone remembering to add it.";
   "★ IT HANDS BACK THE MENDS THEMSELVES, not a count of them, because this changes how a word of the Bible is spelt on the page and a number cannot be checked by eye. Every before and after is there to be read.";
