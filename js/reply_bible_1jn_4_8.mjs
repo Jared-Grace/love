@@ -10,9 +10,7 @@ import { reply_word_charity_love } from "./reply_word_charity_love.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_1jn_4_8() {
-  ("1 John 4:8 said whole, in the words of the English Bibles nobody owns, lined up. Made by ",
-    fn_name("reply_bible_verse_function_new"),
-    ".");
+  ("1 John 4:8 said whole, in the words of the English Bibles nobody owns, lined up.");
   let fn = reply_optional("he");
   let item = reply_choice(["who", "whoever"]);
   let fn2 = reply_optional(item);

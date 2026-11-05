@@ -15,9 +15,7 @@ import { reply_word_u_v } from "./reply_word_u_v.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_1jn_4_9() {
-  ("1 John 4:9 said whole, in the words of the English Bibles nobody owns, lined up. Made by ",
-    fn_name("reply_bible_verse_function_new"),
-    ".");
+  ("1 John 4:9 said whole, in the words of the English Bibles nobody owns, lined up.");
   let item = reply_choice(["by", "in"]);
   let fn = reply_optional(item);
   let item2 = reply_word_herein_this();

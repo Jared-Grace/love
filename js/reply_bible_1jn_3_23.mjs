@@ -15,9 +15,7 @@ import { reply_word_commandement_commandment } from "./reply_word_commandement_c
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_1jn_3_23() {
-  ("1 John 3:23 said whole, in the words of the English Bibles nobody owns, lined up. Made by ",
-    fn_name("reply_bible_verse_function_new"),
-    ".");
+  ("1 John 3:23 said whole, in the words of the English Bibles nobody owns, lined up.");
   let fn = reply_optional("and");
   let r2 = reply_words("this is");
   let fn2 = reply_optional("then");

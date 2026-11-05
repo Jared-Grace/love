@@ -13,9 +13,7 @@ import { reply_word_begotten_born } from "./reply_word_begotten_born.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_1jn_4_7() {
-  ("1 John 4:7 said whole, in the words of the English Bibles nobody owns, lined up. Made by ",
-    fn_name("reply_bible_verse_function_new"),
-    ".");
+  ("1 John 4:7 said whole, in the words of the English Bibles nobody owns, lined up.");
   let item = reply_choice(["dearly", "my"]);
   let fn = reply_optional(item);
   let r2 = reply_word_u_v("beloved");

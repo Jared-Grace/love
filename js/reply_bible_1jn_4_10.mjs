@@ -12,9 +12,7 @@ import { reply_phrase_his_son } from "./reply_phrase_his_son.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_1jn_4_10() {
-  ("1 John 4:10 said whole, in the words of the English Bibles nobody owns, lined up. Made by ",
-    fn_name("reply_bible_verse_function_new"),
-    ".");
+  ("1 John 4:10 said whole, in the words of the English Bibles nobody owns, lined up.");
   let fn = reply_optional("and");
   let item = reply_word_love();
   let fn2 = reply_optional(item);
