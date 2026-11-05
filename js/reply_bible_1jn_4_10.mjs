@@ -6,7 +6,7 @@ import { reply_word_charity_love } from "./reply_word_charity_love.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_phrase_love_loved_for } from "./reply_phrase_love_loved_for.mjs";
 import { reply_words } from "./reply_words.mjs";
-import { reply_word_us_u_v } from "./reply_word_us_u_v.mjs";
+import { reply_word_us } from "./reply_word_us.mjs";
 import { reply_phrase_his_son } from "./reply_phrase_his_son.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
@@ -36,7 +36,7 @@ export function reply_bible_1jn_4_10() {
   let item4 = reply_choice(["did", "first", "had"]);
   let fn13 = reply_optional(item4);
   let r8 = reply_phrase_love_loved_for();
-  let r9 = reply_word_us_u_v();
+  let r9 = reply_word_us();
   let r10 = "and";
   let fn14 = reply_optional("did");
   let fn15 = reply_choice(["send", "sent"]);

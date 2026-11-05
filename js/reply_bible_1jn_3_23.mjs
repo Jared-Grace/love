@@ -9,7 +9,7 @@ import { reply_phrase_jesus } from "./reply_phrase_jesus.mjs";
 import { reply_word_may_should } from "./reply_word_may_should.mjs";
 import { reply_phrase_love_for_one_another } from "./reply_phrase_love_for_one_another.mjs";
 import { reply_word_u_v } from "./reply_word_u_v.mjs";
-import { reply_word_us_u_v } from "./reply_word_us_u_v.mjs";
+import { reply_word_us } from "./reply_word_us.mjs";
 import { reply_word_commandement_commandment } from "./reply_word_commandement_commandment.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
@@ -48,7 +48,7 @@ export function reply_bible_1jn_3_23() {
   let fn14 = reply_optional(item5);
   let item6 = reply_choice(["to", "unto"]);
   let fn15 = reply_optional(item6);
-  let item7 = reply_word_us_u_v();
+  let item7 = reply_word_us();
   let fn16 = reply_optional(item7);
   let item8 = reply_word_commandement_commandment();
   let fn17 = reply_optional(item8);
