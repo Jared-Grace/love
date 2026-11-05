@@ -6,7 +6,7 @@ import { gloss_glosses_write_chapter_file } from "./gloss_glosses_write_chapter_
 import { list_add } from "./list_add.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_original_bible_gloss_glosses_write_chapter_file(
+export async function app_learn_original_gloss_glosses_write_chapter_file(
   chapter_code,
 ) {
   "Take the new short English written for a whole chapter of the original-language Bible out of the one file it was handed over in, and mend every passage named inside it.";

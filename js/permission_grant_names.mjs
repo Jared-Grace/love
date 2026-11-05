@@ -1624,7 +1624,7 @@ export function permission_grant_names() {
     fn_name("functions_span_cut_all"),
     fn_name("permission_replay_label_commands"),
     fn_name("js_calls_to_each_cases_gate_run"),
-    fn_name("app_original_bible_gloss_glosses_write_chapter_file"),
+    fn_name("app_learn_original_gloss_glosses_write_chapter_file"),
     fn_name("bible_glyph_chapters"),
     fn_name("bible_glyph_chapter_draw"),
     fn_name("bible_glyph_coverage_curve"),
