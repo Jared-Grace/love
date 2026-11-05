@@ -2486,7 +2486,7 @@ export function permission_grant_names() {
     fn_name("apps_names_file_path"),
     fn_name("bible_glyph_chapter_urdu_verses"),
     fn_name("bible_glyph_chapter_urdu_verses_fetched"),
-    fn_name("app_original_bible_gloss_unpublished_upload"),
+    fn_name("app_learn_original_gloss_unpublished_upload"),
     fn_name("app_message_download_private"),
     fn_name("functions_locals_unread_baseline_path"),
     fn_name("qa_promoted_publish_imports_gate_run"),
