@@ -1,3 +1,4 @@
+import { reply_age_said } from "./reply_age_said.mjs";
 import { reply_bible_verses } from "./reply_bible_verses.mjs";
 import { reply_bible_references_closed } from "./reply_bible_references_closed.mjs";
 import { reply_join_glory } from "./reply_join_glory.mjs";
@@ -60,6 +61,7 @@ export function app_shared_message_reply_choices() {
   let fn = reply_contact_address();
   let join = reply_join_glory();
   let verses = reply_bible_verses();
+  let age = reply_age_said();
   let choices_main = reply_choice([
     hru,
     greeting,
@@ -73,6 +75,7 @@ export function app_shared_message_reply_choices() {
     fn,
     join,
     verses,
+    age,
   ]);
   let choices_cheapest = reply_cheapest_per_position(choices_main);
   let room = reply_once_or_more(choices_cheapest);
