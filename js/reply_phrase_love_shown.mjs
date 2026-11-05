@@ -6,6 +6,7 @@ export function reply_phrase_love_shown() {
     "in this was manifested the love of god toward us",
     "in this was manifested the love of god towards us",
     "in this was manifested the love of god in us",
+    "in this was manifested the love of god among us",
     "and the love of god was made clear to us",
     "this is how gods love was revealed among us",
     "this is how god's love was revealed among us",

@@ -6,6 +6,7 @@ export function reply_phrase_god_sent_his_son() {
     "that god hath sent his only begotten son into the world",
     "that god has sent his only begotten son into the world",
     "that god has sent his only born son into the world",
+    "because god sent his only begotten son into the world",
     "because god hath sent his only begotten son into the world",
     "because that god sent his only begotten son into the world",
     "because god sent that his onely begotten sonne into this world",
