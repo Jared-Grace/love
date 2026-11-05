@@ -1,0 +1,1 @@
+{"f_name":"reply_word_us","text":" export function reply_word_us() {\n-  let v = \"us\";\n-  return v;\n+  let r = reply_word_u_v(\"us\");\n+  return r;\n }\n "}
