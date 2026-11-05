@@ -25,8 +25,8 @@ export function bible_word_articles_with_cited(
     let wanted =
       equal(cited_site, site_name) && equal(files.has(cited_file), false);
     if (wanted) {
-      function row_is(row) {
-        let same = equal(row[2], cited_file);
+      function row_is(article_row) {
+        let same = equal(article_row[2], cited_file);
         return same;
       }
       let row = table.find(row_is);
