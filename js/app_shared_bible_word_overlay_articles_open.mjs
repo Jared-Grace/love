@@ -1,6 +1,6 @@
+import { bible_word_article_offers_at_with_cited } from "./bible_word_article_offers_at_with_cited.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { bible_word_article_offers_at } from "./bible_word_article_offers_at.mjs";
 import { app_shared_overlay_card_closable } from "./app_shared_overlay_card_closable.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -60,7 +60,7 @@ export async function app_shared_bible_word_overlay_articles_open(
   ("THE ARTICLES ARE FETCHED BEFORE THE CARD IS DRAWN. The table of articles is loaded only when a word is tapped, so a reader who never taps one never downloads it; waiting for it first means the buttons below never jump down when it arrives.");
   ("A name can mean more than one person - John is the Baptist and the apostle - so every article it names is offered, each saying who it is about.");
   ("The Google search asks for the word as scripture uses it, the same search a tapped word made before this choice existed. The AI sites are asked the same thing as a plain question, because a chat answers a sentence better than a search phrase.");
-  let offers = await bible_word_article_offers_at(
+  let offers = await bible_word_article_offers_at_with_cited(
     words,
     index,
     chapter_code,
