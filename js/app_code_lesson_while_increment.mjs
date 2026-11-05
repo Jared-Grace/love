@@ -1,11 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
-import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
-import { less_than } from "./less_than.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { add } from "./add.mjs";
-import { subtract } from "./subtract.mjs";
+import { app_code_lesson_increment_log_options } from "./app_code_lesson_increment_log_options.mjs";
 import { app_code_lesson_statement_name_increment } from "./app_code_lesson_statement_name_increment.mjs";
 export function app_code_lesson_while_increment() {
   arguments_assert(arguments, 0);
@@ -18,27 +14,8 @@ export function app_code_lesson_while_increment() {
     "while (n < 4) { n++; }",
   );
   let lesson = app_code_lesson_while_update_log_generic({
+    ...app_code_lesson_increment_log_options(),
     name_id,
-    comparison: js_operator_less_than_symbol(),
-    comparison_mistaken: null,
-    asks: less_than,
-    change: js_operator_plus_symbol(),
-    step: add,
-    step_back: subtract,
-    groups: [
-      [
-        [3, 4],
-        [6, 7],
-      ],
-      [
-        [2, 4],
-        [5, 7],
-      ],
-      [
-        [1, 4],
-        [4, 7],
-      ],
-    ],
     remembered: app_code_lesson_statement_name_increment,
     remembered_parts: ["", "n++", " adds one to ", "n", "."],
     intro_parts: [
@@ -48,8 +25,6 @@ export function app_code_lesson_while_increment() {
       "console.log",
       " shows every run:",
     ],
-    start: 1,
-    bound: 4,
   });
   return lesson;
 }
