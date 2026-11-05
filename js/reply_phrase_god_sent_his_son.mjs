@@ -1,14 +1,17 @@
+import { reply_word_god } from "./reply_word_god.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_words } from "./reply_words.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_word_son } from "./reply_word_son.mjs";
+import { reply_phrase_his_son } from "./reply_phrase_his_son.mjs";
 export function reply_phrase_god_sent_his_son() {
   "God sent his son into the world, in the words of 1 John 4:9.";
+  let word_god = reply_word_god();
   let r2 = reply_words("because that");
   let item = reply_choice([r2, "because", "that"]);
   let opener = reply_optional(item);
-  let fn = reply_sequence([opener, "god"]);
+  let fn = reply_sequence([opener, word_god]);
   let r3 = reply_words("when he");
   let god = reply_choice([fn, r3]);
   let item2 = reply_choice(["hath", "has"]);
@@ -26,9 +29,10 @@ export function reply_phrase_god_sent_his_son() {
   let fn5 = reply_choice(["the", "this"]);
   let world = reply_sequence([fn4, fn5, "world"]);
   let sent = reply_sequence([god, hath, "sent", son, world]);
-  let son_first = reply_words(
-    "because his son the only begotten hath god sent to the world",
-  );
+  let r6 = reply_phrase_his_son();
+  let r7 = reply_words("the only begotten hath");
+  let r8 = reply_words("sent to the world");
+  let son_first = reply_sequence(["because", r6, r7, word_god, r8]);
   let r = reply_choice([sent, son_first]);
   return r;
 }
