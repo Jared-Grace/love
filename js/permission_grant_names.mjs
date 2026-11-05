@@ -1090,7 +1090,7 @@ export function permission_grant_names() {
     fn_name("app_ceb_bible_gloss_write_coverage_all"),
     fn_name("g_sermon_scripture_key_migrate"),
     fn_name("g_sermon_bible_store_convert"),
-    fn_name("app_original_bible_gloss_write_coverage_all"),
+    fn_name("app_learn_original_gloss_write_coverage_all"),
     fn_name("qa_gate_run_timings_read"),
     fn_name("g_arc_prompt_chapter_role"),
     fn_name("g_openers_unbeliever"),
