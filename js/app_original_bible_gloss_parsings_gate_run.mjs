@@ -9,7 +9,7 @@ export async function app_original_bible_gloss_parsings_gate_run() {
   "It starts at nothing and there is no baseline beside it, because a list to add offenders to would turn a red light into a place to write things down. A store that is not clean today therefore stays out of the whole-repo list until it is, rather than having its faults written down as expected.";
   "How many chapters were reached travels out with the verdict. The store is a folder read at the moment of asking, so an empty answer would otherwise read the same whether every chapter came back clean or the folder had moved and none was opened at all.";
   ("★ THE COMMAND THAT MENDS A CHAPTER IS NAMED IN THE COMPLAINT, BECAUSE THE CHAPTER CODE THIS HANDS BACK DOES NOT SAY WHERE THE WORDING IS KEPT AND NOTHING NEARBY DOES EITHER. The text is not in this repo at all: it is in a store under the human's own folder, addressed by a chain of six functions from a chapter code, and a reader stopped by this has no reason to know any of that. The fault here is a sentence that says the wrong thing about a form, so the mend is the same reword the sister gate ",
-    fn_name("app_original_bible_gloss_lexicons_named_gate_run"),
+    fn_name("app_learn_original_gloss_lexicons_named_gate_run"),
     " asks for, and that is where the measurement and the reason the cure may be named at all are written down.");
   let walked = await app_original_bible_gloss_parsings_exceeding_chapters();
   let fault = text_combine_multiple([

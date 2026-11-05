@@ -1435,7 +1435,7 @@ export function permission_grant_names() {
     fn_name("permission_grant_word_params"),
     fn_name("app_ceb_bible_gloss_chapters_rewrite"),
     fn_name("app_ceb_bible_gloss_affix_kinds_wrong_count"),
-    fn_name("app_original_bible_gloss_lexicons_named_gate_run"),
+    fn_name("app_learn_original_gloss_lexicons_named_gate_run"),
     fn_name("qa_gates_red_results"),
     fn_name("text_lines_ends_kept_cases_gate_run"),
     fn_name("bible_folder_key"),
