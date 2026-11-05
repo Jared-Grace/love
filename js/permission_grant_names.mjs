@@ -1516,7 +1516,7 @@ export function permission_grant_names() {
     fn_name("g_verify_suggest_clear"),
     fn_name("g_verify_status_set"),
     fn_name("local_function_folder_backup"),
-    fn_name("app_original_bible_gloss_punctuation_entries_repair"),
+    fn_name("app_learn_original_gloss_punctuation_entries_repair"),
     fn_name("app_original_bible_gloss_words_distinct"),
     fn_name("app_ceb_bible_gloss_chapter_verse_recurrence_claims"),
     fn_name("functions_forwarding_whole"),
