@@ -1,3 +1,4 @@
+import { prayer_according_to_desire } from "./prayer_according_to_desire.mjs";
 import { app_reply_pray } from "./app_reply_pray.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_dove } from "./emoji_dove.mjs";
@@ -182,7 +183,6 @@ export function app_reply_choices() {
   let left38 = emoji_pray();
   let left39 = emoji_pray();
   let v24 = emoji_pray();
-  let left40 = emoji_pray();
   let v25 = emoji_pray();
   let left41 = emoji_pray();
   let v26 = emoji_pray();
@@ -481,10 +481,7 @@ export function app_reply_choices() {
     },
     {
       text: text_combine_multiple([v24, " ", "Prayers"]),
-      response: text_combine(
-        left40,
-        "According to the desire of God, may there be prayer",
-      ),
+      response: prayer_according_to_desire(),
     },
     {
       text: text_combine_multiple([v25, " ", "Programming"]),
