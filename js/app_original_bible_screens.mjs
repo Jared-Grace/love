@@ -1,10 +1,10 @@
-import { app_original_bible_home } from "./app_original_bible_home.mjs";
+import { app_learn_original_home } from "./app_learn_original_home.mjs";
 import { app_shared_bible_languages } from "./app_shared_bible_languages.mjs";
 import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
 import { app_shared_bible_books } from "./app_shared_bible_books.mjs";
 export function app_original_bible_screens() {
   let screens = [
-    app_original_bible_home,
+    app_learn_original_home,
     app_shared_bible_books,
     app_shared_bible_chapters,
     app_shared_bible_languages,

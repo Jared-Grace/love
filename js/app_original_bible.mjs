@@ -1,5 +1,5 @@
 import { app_original_bible_screens } from "./app_original_bible_screens.mjs";
-import { app_original_bible_home } from "./app_original_bible_home.mjs";
+import { app_learn_original_home } from "./app_learn_original_home.mjs";
 import { app_learn_original_gloss_chapters_uploaded } from "./app_learn_original_gloss_chapters_uploaded.mjs";
 import { app_shared_bible_chapters_offered_key } from "./app_shared_bible_chapters_offered_key.mjs";
 import { property_set } from "./property_set.mjs";
@@ -11,7 +11,7 @@ export async function app_original_bible(context) {
   try {
     let app_fn = app_original_bible;
     let screens = app_original_bible_screens();
-    let screen_home = app_original_bible_home;
+    let screen_home = app_learn_original_home;
     let chapters_ask = app_learn_original_gloss_chapters_uploaded;
     let key_chapters = app_shared_bible_chapters_offered_key();
     property_set(context, key_chapters, chapters_ask);
