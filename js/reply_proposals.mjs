@@ -1883,7 +1883,9 @@ export function reply_proposals() {
       fn_name("reply_bible_1jn_4_8"),
       fn_name("reply_bible_1jn_4_9"),
       fn_name("reply_bible_1jn_4_10"),
+      fn_name("reply_bible_verse_read"),
       fn_name("reply_bible_verse_whole"),
+      fn_name("reply_words_christ"),
       fn_name("reply_words"),
       fn_name("reply_on_match_bible_reference"),
       fn_name("reply_bible_references_closed"),
@@ -1928,7 +1930,7 @@ export function reply_proposals() {
     decide: [
       "you asked for verses to come first in the reply and the prayer last, and for the verse to be fetched by its reference. A verse said whole gets its reference and Amen, and is not quoted back.",
       "the verse step can also quote a whole verse back when somebody says only part of it, as you asked, but no rule reads a part yet. No real message has done that, so a part of a verse gets no reply and comes to you. The rejected reading was guessing which pieces people would send.",
-      "only these wordings are read, because you want others added when somebody really sends them. Jesus, Christ and Jesus Christ all count as the same in 3:23. The words as he hath commanded us are in that wording because this message uses them.",
+      "each verse rule is generated from its reference and reads every wording in the 16 English Bibles nobody owns. This message's wording of 4:10 is in one of them. Its wordings of the other four are not, so those are added as well. Jesus, Christ and Jesus Christ all count as the same. The rejected reading was reading only the wording this message used.",
       "the words leading into 4:7 are read only in front of that verse, so on their own they get no reply and come to you.",
       "the verses are downloaded before the reply goes out. If the download fails there is no reply, and the message comes to you, so a reply never goes out without its verses.",
       "this alone does not answer the choir leader's messages. They need every part understood, and more cards are coming for the rest.",
