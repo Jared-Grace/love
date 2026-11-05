@@ -1,12 +1,17 @@
 import { fn_name } from "./fn_name.mjs";
 import { reply_optional } from "./reply_optional.mjs";
 import { reply_words } from "./reply_words.mjs";
+import { reply_word_command_commandment } from "./reply_word_command_commandment.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_phrase_that_we } from "./reply_phrase_that_we.mjs";
-import { reply_word_son } from "./reply_word_son.mjs";
+import { reply_word_have_may } from "./reply_word_have_may.mjs";
+import { reply_phrase_his_son } from "./reply_phrase_his_son.mjs";
 import { reply_phrase_jesus_either_order } from "./reply_phrase_jesus_either_order.mjs";
-import { reply_word_love } from "./reply_word_love.mjs";
-import { reply_phrase_one_another } from "./reply_phrase_one_another.mjs";
+import { reply_word_may_should } from "./reply_word_may_should.mjs";
+import { reply_phrase_love_for_one_another } from "./reply_phrase_love_for_one_another.mjs";
+import { reply_word_u_v } from "./reply_word_u_v.mjs";
+import { reply_word_us_u_v } from "./reply_word_us_u_v.mjs";
+import { reply_word_commandement_commandment } from "./reply_word_commandement_commandment.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_1jn_3_23() {
@@ -17,66 +22,66 @@ export function reply_bible_1jn_3_23() {
   let r2 = reply_words("this is");
   let fn2 = reply_optional("then");
   let r3 = reply_words("his");
-  let fn3 = reply_choice(["command", "commandement", "commandment", "law"]);
-  let r4 = reply_phrase_that_we();
-  let item = reply_choice(["have", "may", "should"]);
+  let r4 = reply_word_command_commandment();
+  let fn3 = reply_choice([r4, "commandement", "law"]);
+  let r5 = reply_phrase_that_we();
+  let r6 = reply_word_have_may();
+  let item = reply_choice([r6, "should"]);
   let fn4 = reply_optional(item);
   let fn5 = reply_choice(["beleeue", "believe", "faith"]);
   let fn6 = reply_choice(["in", "on"]);
-  let r5 = reply_words("the name of his");
-  let r6 = reply_word_son();
+  let r7 = reply_words("the name of");
+  let r8 = reply_phrase_his_son();
   let either = reply_phrase_jesus_either_order();
-  let r7 = reply_words("and");
+  let r9 = reply_words("and");
   let fn7 = reply_optional("that");
   let fn8 = reply_optional("we");
-  let item2 = reply_choice(["may", "should"]);
+  let item2 = reply_word_may_should();
   let fn9 = reply_optional(item2);
-  let r8 = reply_word_love();
-  let fn10 = reply_optional("for");
-  let r9 = reply_phrase_one_another();
+  let r10 = reply_phrase_love_for_one_another();
   let item3 = reply_choice(["even", "just"]);
-  let fn11 = reply_optional(item3);
-  let r10 = reply_words("as");
-  let fn12 = reply_optional("he");
+  let fn10 = reply_optional(item3);
+  let r11 = reply_words("as");
+  let fn11 = reply_optional("he");
   let item4 = reply_choice(["did", "has", "hath", "hee", "said"]);
-  let fn13 = reply_optional(item4);
-  let fn14 = reply_choice(["commanded", "gaue", "gave", "give", "given", "to"]);
-  let item5 = reply_choice(["command", "commandment"]);
-  let fn15 = reply_optional(item5);
+  let fn12 = reply_optional(item4);
+  let r12 = reply_word_u_v("gave");
+  let fn13 = reply_choice(["commanded", r12, "give", "given", "to"]);
+  let item5 = reply_word_command_commandment();
+  let fn14 = reply_optional(item5);
   let item6 = reply_choice(["to", "unto"]);
-  let fn16 = reply_optional(item6);
-  let fn17 = reply_optional("us");
-  let item7 = reply_choice(["commandement", "commandment"]);
-  let fn18 = reply_optional(item7);
+  let fn15 = reply_optional(item6);
+  let item7 = reply_word_us_u_v();
+  let fn16 = reply_optional(item7);
+  let item8 = reply_word_commandement_commandment();
+  let fn17 = reply_optional(item8);
   let read = reply_sequence([
     fn,
     r2,
     fn2,
     r3,
     fn3,
-    r4,
+    r5,
     fn4,
     fn5,
     fn6,
-    r5,
-    r6,
-    either,
     r7,
+    r8,
+    either,
+    r9,
     fn7,
     fn8,
     fn9,
-    r8,
-    fn10,
-    r9,
-    fn11,
     r10,
+    fn10,
+    r11,
+    fn11,
     fn12,
     fn13,
     fn14,
     fn15,
     fn16,
     fn17,
-    fn18,
   ]);
   let r = reply_bible_verse_whole("1JN03", "23", read);
   return r;
