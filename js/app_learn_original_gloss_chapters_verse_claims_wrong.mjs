@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_original_gloss_chapters_claims_generic } from "./app_learn_original_gloss_chapters_claims_generic.mjs";
 import { gloss_passages_verse_claims_wrong } from "./gloss_passages_verse_claims_wrong.mjs";
-export async function app_original_bible_gloss_chapters_verse_claims_wrong() {
+export async function app_learn_original_gloss_chapters_verse_claims_wrong() {
   "Every authored chapter of the original-language store holding a word explanation that names a verse carrying no word from the same dictionary entry.";
   "This is the reading that settles a claim outright. A sentence naming a verse can be checked against that verse, so what comes back here is worth opening rather than merely worth counting.";
   "The words are met by their dictionary entry and not by their spelling, which is what Hebrew and Greek need, since those languages change a word's ending with almost every use. That is settled next door, where the dictionary is opened; this reading only asks the question.";
