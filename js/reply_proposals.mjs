@@ -1885,7 +1885,6 @@ export function reply_proposals() {
       fn_name("reply_bible_1jn_4_10"),
       fn_name("reply_bible_verse_read"),
       fn_name("reply_bible_verse_whole"),
-      fn_name("reply_words_christ"),
       fn_name("reply_words"),
       fn_name("reply_on_match_bible_reference"),
       fn_name("reply_bible_references_closed"),
