@@ -23,6 +23,7 @@ import { reply_choices_glory } from "./reply_choices_glory.mjs";
 import { reply_prayer_closing } from "./reply_prayer_closing.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 import { reply_response_whatsapp } from "./reply_response_whatsapp.mjs";
+import { reply_choices_age } from "./reply_choices_age.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -2099,6 +2100,50 @@ export function reply_proposals() {
       "this alone does not answer the choir leader's messages. They need every part understood, and more cards are coming for the rest.",
     ],
   };
+  let age_line = reply_choices_age();
+  let age_verses = text_combine_multiple([
+    "   let verses = ",
+    fn_name("reply_bible_verses"),
+    "();",
+  ]);
+  let age_add = text_combine_multiple([
+    "+  let age = ",
+    fn_name("reply_age_said"),
+    "();",
+  ]);
+  let age_said = {
+    title:
+      "answer somebody saying their age with about how old the servant of God is",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_age_said"), fn_name("reply_choices_age")],
+    diff: [age_verses, age_add, "     verses,", "+    age,"],
+    cases: [
+      {
+        from: "",
+        message: "and I'm 40th year old",
+        answered: true,
+        outputs: [age_line],
+      },
+      {
+        from: "",
+        message: "My name is Stephen Mark and I'm 40th year old",
+        answered: true,
+        outputs: [name_response, age_line],
+      },
+      {
+        from: "",
+        message: "I'm 40 year old",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "you asked for this line. The age is this year minus 1989, worked out when the reply is made, so it stays true every year with nobody editing it. Only the year is in the code, no month or day, and that is why it says about: before your birthday in any year it is one too many. The rejected reading was a typed age, which would be wrong by next year.",
+      "the number they give is not used in the reply, so any two digits are read, followed by st, nd, rd or th, then year old. The rejected reading was reading only the number in the real message, which would fail for the next person.",
+      "only this way of saying an age is read, because you want other wordings added when somebody really sends them. So I'm 40 year old, and I'm 40 years old, get no reply and come to you.",
+      "this alone does not answer the choir leader's messages. They need every part understood, and more cards are coming for the rest.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -2124,6 +2169,7 @@ export function reply_proposals() {
     jesus_titles,
     us_word,
     verses_said,
+    age_said,
   ];
   return proposals;
 }
