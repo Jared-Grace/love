@@ -358,7 +358,7 @@ import { text_lines_ends_kept_cases_gate_run } from "./text_lines_ends_kept_case
 import { list_starts_with_cases_gate_run } from "./list_starts_with_cases_gate_run.mjs";
 import { bytes_text_try_cases_gate_run } from "./bytes_text_try_cases_gate_run.mjs";
 import { app_learn_original_gloss_misaligned_gate_run } from "./app_learn_original_gloss_misaligned_gate_run.mjs";
-import { app_original_bible_gloss_parsings_gate_run } from "./app_original_bible_gloss_parsings_gate_run.mjs";
+import { app_learn_original_gloss_parsings_gate_run } from "./app_learn_original_gloss_parsings_gate_run.mjs";
 import { app_learn_original_gloss_lexicons_named_gate_run } from "./app_learn_original_gloss_lexicons_named_gate_run.mjs";
 import { app_original_bible_gloss_placeholders_gate_run } from "./app_original_bible_gloss_placeholders_gate_run.mjs";
 import { app_ceb_bible_gloss_misaligned_gate_run } from "./app_ceb_bible_gloss_misaligned_gate_run.mjs";
@@ -1008,7 +1008,7 @@ export function qa_gates() {
     list_starts_with_cases_gate_run,
     bytes_text_try_cases_gate_run,
     app_learn_original_gloss_misaligned_gate_run,
-    app_original_bible_gloss_parsings_gate_run,
+    app_learn_original_gloss_parsings_gate_run,
     app_learn_original_gloss_lexicons_named_gate_run,
     app_original_bible_gloss_placeholders_gate_run,
     app_ceb_bible_gloss_misaligned_gate_run,

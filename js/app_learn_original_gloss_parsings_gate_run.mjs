@@ -2,7 +2,7 @@ import { app_learn_original_gloss_parsings_exceeding_chapters } from "./app_lear
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_chapters_offenders_assert } from "./gloss_chapters_offenders_assert.mjs";
-export async function app_original_bible_gloss_parsings_gate_run() {
+export async function app_learn_original_gloss_parsings_gate_run() {
   "Gate: no authored chapter of the original-language gloss explains a word by naming a tense, a mood or a form that no word of its own passage carries. Throws so the dispatcher seam exits nonzero.";
   "The parsing is the one thing in a word explanation that was handed to its author rather than worked out by them, so it is the one claim a machine can settle without knowing Greek. A chapter passing here has been checked on that claim and on nothing else.";
   "Only the places with nowhere to point are gated. Where the named form does stand on some other word of the passage the explanation was almost certainly comparing the two, which is a thing the rubric asks for; where it stands on no word at all the reader is being told about a form that is not on the screen, and the passage is the whole of what the reader can see.";
