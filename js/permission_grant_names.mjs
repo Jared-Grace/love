@@ -1580,7 +1580,7 @@ export function permission_grant_names() {
     fn_name("app_ceb_bible_gloss_roots_shallower_baseline_write"),
     fn_name("folder_root_move_bare_named"),
     fn_name("app_shared_text_reader_untranslated_gate_run"),
-    fn_name("app_original_bible_gloss_glosses_write_files_spent_delete"),
+    fn_name("app_learn_original_gloss_glosses_write_files_spent_delete"),
     fn_name("bible_glyph_artwork_urls"),
     fn_name("song_image_drawn_path"),
     fn_name("psalms_playlists_descriptions_verify"),
