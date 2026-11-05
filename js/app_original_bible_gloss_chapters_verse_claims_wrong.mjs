@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_original_bible_gloss_chapters_claims_generic } from "./app_original_bible_gloss_chapters_claims_generic.mjs";
+import { app_learn_original_gloss_chapters_claims_generic } from "./app_learn_original_gloss_chapters_claims_generic.mjs";
 import { gloss_passages_verse_claims_wrong } from "./gloss_passages_verse_claims_wrong.mjs";
 export async function app_original_bible_gloss_chapters_verse_claims_wrong() {
   "Every authored chapter of the original-language store holding a word explanation that names a verse carrying no word from the same dictionary entry.";
@@ -10,7 +10,7 @@ export async function app_original_bible_gloss_chapters_verse_claims_wrong() {
   "The case against it is that this store quotes no word anywhere at all. Every apostrophe in those two hundred and twenty-nine explanations is a possessive - God's, the poet's, Joshua's - and the sweep run with the filter in place came back empty over the whole store. A reading that can only ever answer nothing is not a quiet check, it is a check that cannot disagree, and a gate standing on one says the store is clean whatever is written into it. So the noisy reading is kept and the noise is a fact about this store's prose rather than a fault to be filtered away.";
   "A FIX THAT READS THE SENTENCE BETTER CAN PUT A ROW IN RATHER THAN TAKE ONE OUT, and that is not a step backwards. She drinks here in verse twenty four, and then in verse twenty six was read as naming verses twenty, four and six while the dash was missing from the reading; three rows, none of them a claim anybody made. Reading it properly left one row, on verse twenty-six, which is a real claim about what happens there. Three wrong rows became one right one.";
   arguments_assert(arguments, 0);
-  let r = await app_original_bible_gloss_chapters_claims_generic(
+  let r = await app_learn_original_gloss_chapters_claims_generic(
     gloss_passages_verse_claims_wrong,
   );
   return r;

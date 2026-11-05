@@ -5,7 +5,7 @@ import { gloss_original_word_key_read } from "./gloss_original_word_key_read.mjs
 import { app_original_bible_gloss_text_index } from "./app_original_bible_gloss_text_index.mjs";
 import { app_original_bible_gloss_passages_texted } from "./app_original_bible_gloss_passages_texted.mjs";
 import { gloss_chapters_claims_generic } from "./gloss_chapters_claims_generic.mjs";
-export async function app_original_bible_gloss_chapters_claims_generic(
+export async function app_learn_original_gloss_chapters_claims_generic(
   lambda_claims,
 ) {
   "Every authored chapter of the store that explains the Hebrew and the Greek, asked whatever the caller came to ask, and only the chapters that answered with something named.";
