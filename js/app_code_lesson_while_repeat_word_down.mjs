@@ -19,7 +19,7 @@ import { app_code_lesson_while_repeat_word } from "./app_code_lesson_while_repea
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_while_word_three_runs } from "./app_code_while_word_three_runs.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_while_repeat_word_generic } from "./app_code_lesson_while_repeat_word_generic.mjs";
+import { app_code_lesson_repeat_word_generic } from "./app_code_lesson_repeat_word_generic.mjs";
 export function app_code_lesson_while_repeat_word_down() {
   arguments_assert(arguments, 0);
   ('a while that writes out the same word each run while n counts down: let n = 3; while (n > 0) { console.log("joy"); n--; } writes out joy three times');
@@ -77,7 +77,7 @@ export function app_code_lesson_while_repeat_word_down() {
     "The same word, counting down",
     "while (n > 0) { ... n--; }",
   );
-  let lesson = app_code_lesson_while_repeat_word_generic(
+  let lesson = app_code_lesson_repeat_word_generic(
     program_lines,
     values_of,
     above,

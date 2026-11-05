@@ -21,7 +21,7 @@ import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_while_repeat_word_generic(
+export function app_code_lesson_repeat_word_generic(
   program_lines,
   values_of,
   above,
