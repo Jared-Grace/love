@@ -12,7 +12,7 @@ export async function app_original_bible_gloss_genesis_onwards_gate_run() {
   ("WHAT IS ASKED IS THE AUTHORED STORE, NOT WHAT HAS BEEN PUBLISHED, AND THOSE ARE NOT THE SAME LIST. The chapters a reader can actually reach are the ones ",
     fn_name("app_original_bible_gloss_chapters_uploaded"),
     " names, and that is a question put over the network at the moment of asking, which is no way to run a gate. The store on this machine is asked instead for two reasons: an out-of-order run is born when a chapter is authored rather than when it is sent, so this catches it earlier and cheaper; and whatever sits written here and unsent is already measured next door by ",
-    fn_name("app_original_bible_gloss_chapters_republish_wanted"),
+    fn_name("app_learn_original_gloss_chapters_republish_wanted"),
     ". The hole this leaves is a publish that skips a chapter already authored in its place, which neither list would call out on its own.");
   ("IT NAMES THE APP ON THE WAY OUT AND KEEPS THAT NAME OUT OF THE HINT, which the shared assert does for it. A red gate that names no function belongs to nobody and holds back every app in the folder; named, it stops this one.");
   ("THE WALK ITSELF IS NEXT DOOR AND THIS ONLY NAMES THE TWO LISTS TO HAND IT. A gate reads its store off the disk, so the only way to see it go red is to break the store, and a check that cannot be made to disagree is worth nothing. Handing the walk a made-up list of chapter codes is how both faults were seen failing, and it is the same walk any other app promising a run through a testament would hand its own books to.");
