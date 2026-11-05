@@ -2191,6 +2191,7 @@ export function reply_proposals() {
   let v5 = prayer_blessing("your ministry and the people of the Philippines");
   let v6 = prayer_blessing("your ministry and the people of Africa");
   let v7 = prayer_blessing("your ministry and the people of Antarctica");
+  let v8 = prayer_blessing("your ministry and the people of Burma");
   let teacher_work_said = {
     title:
       "bless a Sunday school teacher, and somebody doing ministry work in a country",
@@ -2259,6 +2260,12 @@ export function reply_proposals() {
         from: "",
         message: "I do ministry work in Burma",
         answered: true,
+        outputs: [v8],
+      },
+      {
+        from: "",
+        message: "I do ministry work in Yugoslavia",
+        answered: true,
         outputs: [ministry_response],
       },
       {
@@ -2277,9 +2284,9 @@ export function reply_proposals() {
     decide: [
       "a Sunday school teacher gets the same blessing as any teacher: your ministry and teaching. The rejected reading was a separate blessing for Sunday school.",
       "ministry work in a country also blesses the people of that country. The rejected reading was also answering with the location line, because the person is saying where they serve and not where they are from.",
-      "the name in the prayer always comes from a list of 244 written names, 237 countries and 7 continents, and never from the letters somebody typed. So Kenia is prayed for as Kenya. A town is never repeated, because a town gets no reply here at all. The rejected reading was repeating the typed word, which would repeat a misspelling.",
+      "the name in the prayer always comes from a list of 290 written names, 283 countries and 7 continents, and never from the letters somebody typed. So Kenia is prayed for as Kenya. A town is never repeated, because a town gets no reply here at all. The rejected reading was repeating the typed word, which would repeat a misspelling.",
       "continents count only for ministry work. Whether I am from Africa should count as saying where somebody is from is a separate question, not changed here. Antarctica is blessed like the rest because you asked for continents, though almost nobody lives there.",
-      "a place with no written name, like Bouvet Island, or a less common spelling like Burma or Holland, gets the blessing on the ministry with no country in it. Read the list if a name should be there or should not.",
+      "34 spellings have no written name and get the blessing on the ministry with no place in it: places where nobody lives like Bouvet Island, places that no longer exist like Yugoslavia, jokes and old misspellings like murica, and a few that read badly after the people of, like Saudi. Read the list if a name should be there or should not.",
       "the list includes names people disagree about, such as Taiwan, Palestine and Kosovo, because it only says back what the person said. Tell me if you want any of them to get the plain blessing instead.",
       "only these words are read, with the country from the list, because you want other wordings added when somebody really sends them.",
       "this alone does not answer the waiting messages. They need every part understood, and more cards are coming for the rest.",
