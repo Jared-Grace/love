@@ -25,7 +25,7 @@ import { html_value_get } from "./html_value_get.mjs";
 import { html_on_input } from "./html_on_input.mjs";
 import { html_hash_name_second_set } from "./html_hash_name_second_set.mjs";
 import { html_hash_name_second_or_empty } from "./html_hash_name_second_or_empty.mjs";
-export async function app_original_bible_word_voice_trial_preview() {
+export async function app_learn_original_word_voice_trial_preview() {
   "The screen for judging which Google voice says a single Hebrew or Greek Bible word better, on the sandbox app at hash bible_word_voice_trial: play both recordings of a word, pick the better one or call them the same, and write what was heard.";
   "A THIRD PART OF THE HASH NAMES WHICH WORDS TO SHOW, as their numbers joined by commas - #bible_word_voice_trial/gem/6,8,11 - so a request to listen to a few words hands over a link that opens on exactly those; choosing a tab drops it and shows the whole set again.";
   "PICKS AND COMMENTS ARE KEPT ON THIS MACHINE THROUGH THE API, so whoever reads the review back reads the file rather than asking for it to be copied out of a phone.";
