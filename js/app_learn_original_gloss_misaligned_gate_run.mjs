@@ -17,7 +17,7 @@ export async function app_learn_original_gloss_misaligned_gate_run() {
   ]);
   let r = await gloss_words_misaligned_gate_generic(
     fn,
-    "original_bible",
+    "learn_original",
     words_read,
     mend,
   );
