@@ -1045,7 +1045,7 @@ export function permission_grant_names() {
     fn_name("apps_prod_chunks_unreachable_gate_run"),
     fn_name("app_original_bible_gloss_misaligned"),
     fn_name("ebible_chapter_verse_texts"),
-    fn_name("app_original_bible_gloss_misaligned_gate_run"),
+    fn_name("app_learn_original_gloss_misaligned_gate_run"),
     fn_name("app_ceb_bible_gloss_misaligned_gate_run"),
     fn_name("ebible_readaloud_lines_gate_run"),
     fn_name("bytes_text_try_cases_gate_run"),
