@@ -34,7 +34,7 @@ export function app_code_lesson_for_increment() {
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "For adding one",
-    "for (let n = 1; n < 4; n++) { ... }",
+    "for (...; n++) { ... }",
   );
   let lesson = app_code_lesson_update_log_generic({
     ...app_code_lesson_increment_log_options(),
