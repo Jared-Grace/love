@@ -1,13 +1,14 @@
+import { qa_app_sending_refuse_assert } from "./qa_app_sending_refuse_assert.mjs";
+import { qa_build_folder } from "./qa_build_folder.mjs";
+import { qa_snapshot_clean } from "./qa_snapshot_clean.mjs";
+import { qa_build_copy_name } from "./qa_build_copy_name.mjs";
+import { qa_snapshot_ensure_named } from "./qa_snapshot_ensure_named.mjs";
+import { app_shared_name_search } from "./app_shared_name_search.mjs";
 import { folder_public } from "./folder_public.mjs";
 import { path_join } from "./path_join.mjs";
 import { folder_app_stale_delete } from "./folder_app_stale_delete.mjs";
-import { qa_build_copy_name } from "./qa_build_copy_name.mjs";
-import { app_shared_name_search } from "./app_shared_name_search.mjs";
-import { qa_build_folder } from "./qa_build_folder.mjs";
 import { qa_snapshot_app_build } from "./qa_snapshot_app_build.mjs";
 import { qa_snapshot_app_hashes } from "./qa_snapshot_app_hashes.mjs";
-import { qa_snapshot_clean } from "./qa_snapshot_clean.mjs";
-import { qa_snapshot_ensure_named } from "./qa_snapshot_ensure_named.mjs";
 export async function qa_app_commit_hashes(search, commit) {
   "$plain search";
   "$plain commit";
@@ -17,6 +18,8 @@ export async function qa_app_commit_hashes(search, commit) {
   "So these words are only worth anything about the very pieces that were made here. They can say whether what is about to be sent is those pieces; they can never say whether something built somewhere else would have matched. Anything built again is a different thing, even from the same commit - which means the pieces that were looked at are the pieces that have to be sent, rather than being rebuilt on the way out";
   "The copy is put back to how its commit had it before anything else happens, because what the last build left behind would otherwise refuse to be moved aside. That is asked first every time rather than only when it is needed, since asking costs nothing and knowing whether it is needed costs a check that could be wrong";
   "The name the app is looked up by is worked out here rather than inside the copy. The two could disagree if an app were named differently at that commit - and it is the pieces that go out that are being reduced, so what they are called is what this repo calls them";
+  "Asked here as well as where the build itself asks, because the build runs out of the copy, and a copy of an older commit does not have that question in it yet. The copy's waiting folder is a link to the real one, so a build from a copy replaces what a send is walking just the same";
+  await qa_app_sending_refuse_assert(search);
   let folder = qa_build_folder();
   await qa_snapshot_clean(folder);
   let copy_name = qa_build_copy_name();

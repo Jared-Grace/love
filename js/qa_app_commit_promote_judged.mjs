@@ -16,10 +16,13 @@ import { not } from "./not.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { app_shared_name_latest_text } from "./app_shared_name_latest_text.mjs";
 import { qa_app_e2e_happy_run } from "./qa_app_e2e_happy_run.mjs";
+import { qa_stage_pieces_changed } from "./qa_stage_pieces_changed.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { folder_public_root_noting_set } from "./folder_public_root_noting_set.mjs";
 import { html_public_from_latest } from "./html_public_from_latest.mjs";
 import { firebase_deploy_locked_generic } from "./firebase_deploy_locked_generic.mjs";
 import { folder_public_root_noting_clear } from "./folder_public_root_noting_clear.mjs";
+import { qa_app_sending_during } from "./qa_app_sending_during.mjs";
 import { qa_promoted_app_write } from "./qa_promoted_app_write.mjs";
 import { qa_promote_steps_log_add_try } from "./qa_promote_steps_log_add_try.mjs";
 export async function qa_app_commit_promote_judged(search, commit) {
@@ -72,23 +75,33 @@ export async function qa_app_commit_promote_judged(search, commit) {
       sent = property_get(note, "hashes");
     }
     let unchanged = json_equal(sent, hashes);
-    if (not(unchanged)) {
-      let stage_name = app_shared_name_latest_text();
-      await function_call_timed_add(steps, qa_app_e2e_happy_run, [
+    async function walk_then_move_up() {
+      if (not(unchanged)) {
+        let stage_name = app_shared_name_latest_text();
+        await function_call_timed_add(steps, qa_app_e2e_happy_run, [
+          app_name,
+          stage_name,
+        ]);
+      }
+      ("★ THE FILES ARE READ AGAIN BEFORE THEY MOVE UP. The note made after this would describe the build held in memory, so files replaced during the walk would move up, stand in the folder every send reads from, and refuse every app's send. Refused here, the folder people are served from has not been touched. That happened twice on 2026-11-05, once after five hours.");
+      let changed = await qa_stage_pieces_changed(hashes);
+      list_empty_is_assert_json(changed, {
+        hint: "these files were replaced after this send built them, so what was walked is not what would go out. Nothing was moved up. Find what built this app meanwhile, then send again",
         app_name,
-        stage_name,
+        commit,
+      });
+      folder_public_root_noting_set(app_name);
+      async function lambda() {
+        let copied = await html_public_from_latest(search);
+        return copied;
+      }
+      await function_call_timed_add(steps, firebase_deploy_locked_generic, [
+        lambda,
+        qa_app_commit_promote_judged.name,
       ]);
+      folder_public_root_noting_clear();
     }
-    folder_public_root_noting_set(app_name);
-    async function lambda() {
-      let copied = await html_public_from_latest(search);
-      return copied;
-    }
-    await function_call_timed_add(steps, firebase_deploy_locked_generic, [
-      lambda,
-      qa_app_commit_promote_judged.name,
-    ]);
-    folder_public_root_noting_clear();
+    await qa_app_sending_during(app_name, walk_then_move_up);
     await function_call_timed_add(steps, qa_promoted_app_write, [
       app_name,
       commit,
