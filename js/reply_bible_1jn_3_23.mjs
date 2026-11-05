@@ -3,7 +3,7 @@ import { reply_optional } from "./reply_optional.mjs";
 import { reply_words } from "./reply_words.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 import { reply_phrase_that_we } from "./reply_phrase_that_we.mjs";
-import { reply_word_son_sonne } from "./reply_word_son_sonne.mjs";
+import { reply_word_son } from "./reply_word_son.mjs";
 import { reply_word_love } from "./reply_word_love.mjs";
 import { reply_phrase_one_another } from "./reply_phrase_one_another.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
@@ -23,7 +23,7 @@ export function reply_bible_1jn_3_23() {
   let fn5 = reply_choice(["beleeue", "believe", "faith"]);
   let fn6 = reply_choice(["in", "on"]);
   let r5 = reply_words("the name of his");
-  let r6 = reply_word_son_sonne();
+  let r6 = reply_word_son();
   let r7 = reply_words("jesus and");
   let fn7 = reply_optional("that");
   let fn8 = reply_optional("we");

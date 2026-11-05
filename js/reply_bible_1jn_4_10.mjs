@@ -5,7 +5,7 @@ import { reply_choice } from "./reply_choice.mjs";
 import { reply_word_charity_loue_love } from "./reply_word_charity_loue_love.mjs";
 import { reply_words } from "./reply_words.mjs";
 import { reply_word_us_vs } from "./reply_word_us_vs.mjs";
-import { reply_word_son_sonne } from "./reply_word_son_sonne.mjs";
+import { reply_word_son } from "./reply_word_son.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_bible_verse_whole } from "./reply_bible_verse_whole.mjs";
 export function reply_bible_1jn_4_10() {
@@ -42,7 +42,7 @@ export function reply_bible_1jn_4_10() {
   let fn18 = reply_optional("did");
   let fn19 = reply_choice(["send", "sent"]);
   let r9 = reply_words("his");
-  let r10 = reply_word_son_sonne();
+  let r10 = reply_word_son();
   let fn20 = reply_optional("to");
   let item4 = reply_choice(["as", "be"]);
   let fn21 = reply_optional(item4);

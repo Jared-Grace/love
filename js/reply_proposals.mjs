@@ -1883,7 +1883,7 @@ export function reply_proposals() {
       fn_name("reply_bible_1jn_4_8"),
       fn_name("reply_bible_1jn_4_9"),
       fn_name("reply_bible_1jn_4_10"),
-      fn_name("reply_word_son_sonne"),
+      fn_name("reply_word_son"),
       fn_name("reply_word_love"),
       fn_name("reply_word_because_for"),
       fn_name("reply_word_charity_loue_love"),
