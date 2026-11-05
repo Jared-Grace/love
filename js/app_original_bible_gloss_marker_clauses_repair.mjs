@@ -1,5 +1,5 @@
 import { property_in_list } from "./property_in_list.mjs";
-import { app_original_bible_gloss_explains_write } from "./app_original_bible_gloss_explains_write.mjs";
+import { app_learn_original_gloss_explains_write } from "./app_learn_original_gloss_explains_write.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { each_async } from "./each_async.mjs";
 import { each_index } from "./each_index.mjs";
@@ -66,7 +66,7 @@ export async function app_original_bible_gloss_marker_clauses_repair() {
       let verses = property_get(saying, "verses");
       let mends = property_get(saying, "mends");
       let words = property_get(saying, "words");
-      await app_original_bible_gloss_explains_write(
+      await app_learn_original_gloss_explains_write(
         chapter_code,
         verses,
         mends,

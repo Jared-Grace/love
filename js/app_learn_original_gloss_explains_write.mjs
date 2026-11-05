@@ -3,7 +3,7 @@ import { app_original_bible_gloss_write } from "./app_original_bible_gloss_write
 import { error_json } from "./error_json.mjs";
 import { gloss_entries_explains_set } from "./gloss_entries_explains_set.mjs";
 import { null_is } from "./null_is.mjs";
-export async function app_original_bible_gloss_explains_write(
+export async function app_learn_original_gloss_explains_write(
   chapter_code,
   verse_key,
   explains,
