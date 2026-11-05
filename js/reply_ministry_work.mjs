@@ -7,15 +7,11 @@ import { reply_countries_shown } from "./reply_countries_shown.mjs";
 import { reply_continents_shown } from "./reply_continents_shown.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_squash } from "./list_squash.mjs";
-import { reply_countries_words } from "./reply_countries_words.mjs";
-import { list_difference } from "./list_difference.mjs";
-import { list_add } from "./list_add.mjs";
 import { reply_word_in } from "./reply_word_in.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 export function reply_ministry_work() {
-  "Somebody saying they do ministry work in a country. It gets the blessing on their ministry, and on the people of that country when the country has a name a reply may say.";
-  "★ ONE RULE PER COUNTRY, SO THE NAME SAID BACK IS ALWAYS THE LISTED ONE AND NEVER THE LETTERS TYPED. Kenia is blessed as Kenya. A spelling with no listed name still gets the blessing on the ministry, without a name in it. The rejected reading was reading the typed word back out of the message, which would repeat a misspelling.";
+  "Somebody saying they do ministry work in a country. It gets the blessing on their ministry, and on the people of that country.";
+  "★ ONE RULE PER COUNTRY, SO THE NAME SAID BACK IS ALWAYS THE LISTED ONE AND NEVER THE LETTERS TYPED. Kenia is blessed as Kenya. A spelling added to the country lists with no written name gets no reply here until it is given one, because a silence is safe and a prayer that drops the place was not wanted. The rejected reading was reading the typed word back out of the message, which would repeat a misspelling.";
   "★ THESE ARE THE WORDS A REAL MESSAGE USED AND NO OTHERS, WITH ONLY THE COUNTRY OPEN. Other ways of saying this are added when somebody really says them.";
   function country_rule(country) {
     let blessed = text_combine_multiple([
@@ -31,15 +27,7 @@ export function reply_ministry_work() {
   let countries_shown = reply_countries_shown();
   let continents = reply_continents_shown();
   let shown = list_concat(countries_shown, continents);
-  let shown_words = list_map(shown, reply_country_shown_words);
-  let covered = list_squash(shown_words);
-  let spellings = reply_countries_words();
-  let unnamed = list_difference(spellings, covered);
-  let unnamed_choice = reply_choice(unnamed);
-  let blessing = prayer_blessing("your ministry");
-  let unnamed_rule = reply_sequence_output([unnamed_choice], blessing);
   let rules = list_map(shown, country_rule);
-  list_add(rules, unnamed_rule);
   let countries = reply_choice(rules);
   let n = reply_word_in();
   let work = reply_sequence(["i", "do", "ministry", "work", n, countries]);

@@ -1,8 +1,11 @@
+import { fn_name } from "./fn_name.mjs";
 export function reply_countries_shown() {
   "How a country is written when a reply says its name back, with the word the in front where English puts it there.";
   "★ A REPLY MAY ONLY EVER SAY A NAME FROM THIS LIST, NEVER THE LETTERS SOMEBODY TYPED. Repeating what was typed would repeat a misspelling, and it would repeat a town or a street the moment a rule read one. A country name written here is known to millions of people and tells nobody anything about one person.";
-  "A place is left out only when nobody lives there or it no longer exists, or when the spelling is a joke or an old misspelling. A place left out still gets its reply, just without its name in it.";
-  "★ A NAME PEOPLE DISAGREE ABOUT STAYS ON, BECAUSE THE REPLY ONLY SAYS BACK WHAT THE PERSON SAID. Burma was left out at first for that reason, while Taiwan was kept, and nothing justified the difference. Somebody who writes Burma is prayed for as Burma, and somebody who writes Myanmar as Myanmar.";
+  ("★ A PLACE STAYS ON WHEN IT NO LONGER EXISTS OR HARDLY ANYBODY LIVES THERE. Somebody who writes Yugoslavia still means real people, and leaving it out was a judgment the prayer has no need to make. Rhodesia is on for the same reason, and the rejected reading was blessing that one without its name because the name carries a painful history. A joke or an old misspelling is said back under the proper name, on ",
+    fn_name("reply_countries_shown_spellings"),
+    ".");
+  ("★ A NAME PEOPLE DISAGREE ABOUT STAYS ON, BECAUSE THE REPLY ONLY SAYS BACK WHAT THE PERSON SAID. Burma was left out at first for that reason, while Taiwan was kept, and nothing justified the difference. Somebody who writes Burma is prayed for as Burma, and somebody who writes Myanmar as Myanmar.");
   let shown = [
     "Afghanistan",
     "Aland",
@@ -287,6 +290,32 @@ export function reply_countries_shown() {
     "the United States Virgin Islands",
     "the United States of America",
     "the Vatican",
+    "Bouvet Island",
+    "Ceylon",
+    "Clipperton Island",
+    "Diego Garcia",
+    "East Germany",
+    "Guiana",
+    "Heard Island",
+    "Heard Island and McDonald Islands",
+    "Hindustan",
+    "Kampuchea",
+    "Moldavia",
+    "Rhodesia",
+    "Saint Helena, Ascension and Tristan da Cunha",
+    "South Georgia and the South Sandwich Islands",
+    "Svalbard",
+    "Svalbard and Jan Mayen",
+    "Yugoslavia",
+    "Zaire",
+    "the Antarctic Treaty Area",
+    "the British Indian Ocean Territory",
+    "the French Southern Territories",
+    "the French Southern and Antarctic Lands",
+    "the Malvinas",
+    "the Netherlands Antilles",
+    "the Trust Territory of the Pacific Islands",
+    "the United States Minor Outlying Islands",
   ];
   return shown;
 }
