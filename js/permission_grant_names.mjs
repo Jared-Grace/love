@@ -2648,7 +2648,7 @@ export function permission_grant_names() {
     fn_name("app_message_reply_cases_gate_run"),
     fn_name("app_learn_original_gloss_genesis_onwards_gate_run"),
     fn_name("app_learn_original_gloss_published_unfinished_gate_run"),
-    fn_name("app_original_bible_gloss_verse_claims_wrong_gate_run"),
+    fn_name("app_learn_original_gloss_verse_claims_wrong_gate_run"),
     fn_name("app_replace_hash_ids_gate_run"),
     fn_name("app_supper_passages_count_gate_run"),
     fn_name("apps_names_way_in_gate_run"),

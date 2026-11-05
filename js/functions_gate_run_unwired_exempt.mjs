@@ -58,7 +58,7 @@ export function functions_gate_run_unwired_exempt() {
       ]),
     },
     {
-      name: fn_name("app_original_bible_gloss_verse_claims_wrong_gate_run"),
+      name: fn_name("app_learn_original_gloss_verse_claims_wrong_gate_run"),
       why: text_combine_multiple([
         "the human took it out of the list on 2026-09-28, and its own prose says so and says why: it cannot tell a sentence that made no claim from one that made a wrong claim. this store writes essays that name a neighbouring verse for literary reasons and quote no word at all, so the reading falls back to whatever word the entry is about and asks a question the sentence never raised - three hundred and fifty-five rows standing, and of three hundred and eighty-one read by hand two were real. it is kept and stays runnable by name as a report to be asked for. its twin ",
         fn_name("app_ceb_bible_gloss_verse_claims_wrong_gate_run"),
