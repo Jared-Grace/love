@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { bible_word_article_names_in_text } from "./bible_word_article_names_in_text.mjs";
 import { bible_references_in_text } from "./bible_references_in_text.mjs";
 export function bible_word_article_citations_chapters(articles, bibles) {
@@ -18,7 +20,8 @@ export function bible_word_article_citations_chapters(articles, bibles) {
         let names = verse_names.get(key) ?? new Set();
         for (let match of verse.text.matchAll(/\p{L}[\p{L}’'-]*/gu)) {
           let word = match[0].replace(/['’]s?$/, "");
-          if (word === word.toLowerCase()) {
+          let right = word.toLowerCase();
+          if (equal(word, right)) {
             small.add(word);
           } else {
             names.add(word);
@@ -32,18 +35,19 @@ export function bible_word_article_citations_chapters(articles, bibles) {
   let citations = 0;
   let nowhere = 0;
   for (let article of articles) {
-    let printed = new Set(bible_word_article_names_in_text(article.text));
+    let r = bible_word_article_names_in_text(article.text);
+    let printed = new Set(r);
     for (let reference of bible_references_in_text(article.text)) {
       citations = citations + 1;
       let names = verse_names.get(reference);
-      if (names === undefined) {
+      if (equal(names, undefined)) {
         nowhere = nowhere + 1;
       } else {
         let [chapter_code, verse_number] = reference.split(":");
         for (let name of names) {
           let offered =
-            name.length > 1 &&
-            small.has(name.toLowerCase()) === false &&
+            greater_than(name.length, 1) &&
+            equal(small.has(name.toLowerCase()), false) &&
             printed.has(name);
           if (offered) {
             index[chapter_code] ??= {};
