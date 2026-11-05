@@ -3,7 +3,7 @@ import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_ge
 import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { app_original_bible_gloss_verse_claims_wrong_names } from "./app_original_bible_gloss_verse_claims_wrong_names.mjs";
-import { app_original_bible_gloss_verse_claims_wrong_baseline_growth_assert } from "./app_original_bible_gloss_verse_claims_wrong_baseline_growth_assert.mjs";
+import { app_learn_original_gloss_verse_claims_wrong_baseline_growth_assert } from "./app_learn_original_gloss_verse_claims_wrong_baseline_growth_assert.mjs";
 import { app_original_bible_gloss_verse_claims_wrong_baseline_path } from "./app_original_bible_gloss_verse_claims_wrong_baseline_path.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function app_original_bible_gloss_verse_claims_wrong_baseline_write() {
@@ -18,7 +18,7 @@ export async function app_original_bible_gloss_verse_claims_wrong_baseline_write
     stored,
   });
   let known = await app_original_bible_gloss_verse_claims_wrong_names();
-  await app_original_bible_gloss_verse_claims_wrong_baseline_growth_assert(
+  await app_learn_original_gloss_verse_claims_wrong_baseline_growth_assert(
     known,
   );
   let path = app_original_bible_gloss_verse_claims_wrong_baseline_path();
