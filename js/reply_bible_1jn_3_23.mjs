@@ -6,7 +6,7 @@ import { reply_choice } from "./reply_choice.mjs";
 import { reply_phrase_that_we } from "./reply_phrase_that_we.mjs";
 import { reply_word_have_may } from "./reply_word_have_may.mjs";
 import { reply_phrase_his_son } from "./reply_phrase_his_son.mjs";
-import { reply_phrase_jesus_either_order } from "./reply_phrase_jesus_either_order.mjs";
+import { reply_phrase_jesus } from "./reply_phrase_jesus.mjs";
 import { reply_word_may_should } from "./reply_word_may_should.mjs";
 import { reply_phrase_love_for_one_another } from "./reply_phrase_love_for_one_another.mjs";
 import { reply_word_u_v } from "./reply_word_u_v.mjs";
@@ -32,7 +32,7 @@ export function reply_bible_1jn_3_23() {
   let fn6 = reply_choice(["in", "on"]);
   let r7 = reply_words("the name of");
   let r8 = reply_phrase_his_son();
-  let either = reply_phrase_jesus_either_order();
+  let phrase_jesus = reply_phrase_jesus();
   let r9 = reply_words("and");
   let fn7 = reply_optional("that");
   let fn8 = reply_optional("we");
@@ -67,7 +67,7 @@ export function reply_bible_1jn_3_23() {
     fn6,
     r7,
     r8,
-    either,
+    phrase_jesus,
     r9,
     fn7,
     fn8,
