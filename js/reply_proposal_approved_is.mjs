@@ -1,54 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
-import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
-import { property_get } from "./property_get.mjs";
-import { reply_proposal_changed_approval } from "./reply_proposal_changed_approval.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
-import { reply_case_approval } from "./reply_case_approval.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { reply_approved_verdict } from "./reply_approved_verdict.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
+import { reply_proposal_outstanding } from "./reply_proposal_outstanding.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 export async function reply_proposal_approved_is(proposal, approvals) {
   arguments_assert(arguments, 2);
   ("Whether every file one change touches has been approved, in the wording it has right now.");
   ("★ ONE FILE NOT APPROVED, OR APPROVED IN AN OLDER WORDING, IS A NO FOR THE WHOLE CHANGE. The change is applied on the strength of this answer and nobody is asked again, so a yes here has to mean that a person read every line that is about to go in.");
   ("A change with lines its file no longer holds is never approved, whatever was stored for it. The screen offers no button for one, and a verdict left over from before the file moved was given for a change that can no longer be drawn.");
-  let drawn = await reply_proposal_drawn(proposal);
-  let missing = property_list_empty_not_is(drawn, "unplaced");
-  if (missing) {
-    return false;
-  }
-  let f_name = property_get(proposal, "fn");
-  let title = property_get(proposal, "title");
-  let drawn_lines = property_get(drawn, "lines");
-  let altered = reply_proposal_changed_approval(title, f_name, drawn_lines);
-  let files = [altered];
-  let whole = property_get(drawn, "whole");
-  list_add_multiple(files, whole);
-  ("★ THE TESTS OF A CHANGE ARE APPROVED LIKE ITS CODE. What a change was measured to answer is the half a person can judge on sight, so a change goes in only once each of its exchanges has been passed in the words it has now.");
-  let cases = property_get(proposal, "cases");
-  function each_test(one) {
-    let message = property_get(one, "message");
-    let answered = property_get(one, "answered");
-    let outputs = property_get(one, "outputs");
-    let test = reply_case_approval(message, answered, outputs);
-    return test;
-  }
-  let tests = list_map(cases, each_test);
-  list_add_multiple(files, tests);
-  for (let file of files) {
-    let name = property_get(file, "name");
-    let lines = property_get(file, "lines");
-    let text = list_join_newline(lines);
-    let approved = property_get_or_null(approvals, name);
-    let verdict = reply_approved_verdict(text, approved);
-    let passed = equal(verdict, "approved");
-    if (not(passed)) {
-      return false;
-    }
-  }
-  return true;
+  let outstanding = await reply_proposal_outstanding(proposal, approvals);
+  let approved = list_empty_is(outstanding);
+  return approved;
 }
