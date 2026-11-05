@@ -28,7 +28,7 @@ export function app_code_lesson_repeat_word_generic(
   name_id,
 ) {
   arguments_assert(arguments, 4);
-  ("A lesson where a while writes out the same word each run, whichever way n counts. program_lines is given (low, high, word) and returns the program's lines; values_of is given (low, high) and returns every value n holds when the question is true.");
+  ("A lesson where a loop writes out the same word each run, whichever way n counts. program_lines is given (low, high, word) and returns the program's lines; values_of is given (low, high) and returns every value n holds when the question is true.");
   ("Each program's two numbers are taken as the lower and the higher, because that reads the same both ways: a higher higher number means one run more whether n stops at it or starts from it.");
   ("Each screen has one program from each of three counts of runs - one, two and three.");
   ("Reading forwards, the wrong answers are the word one run fewer (with one run, the number and the word together instead), one run more, and the numbers n holds rather than the word; each once and never the answer.");
