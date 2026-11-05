@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal_by_property_multiple } from "./equal_by_property_multiple.mjs";
+import { reply_bible_references_same_verse } from "./reply_bible_references_same_verse.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { json_copy } from "./json_copy.mjs";
@@ -12,10 +12,7 @@ export function reply_bible_references_merged(references) {
   let merged = [];
   for (let reference of references) {
     function same_verse(earlier) {
-      let same = equal_by_property_multiple(earlier, reference, [
-        "chapter_code",
-        "verse_number",
-      ]);
+      let same = reply_bible_references_same_verse(earlier, reference);
       return same;
     }
     let found = list_filter(merged, same_verse);

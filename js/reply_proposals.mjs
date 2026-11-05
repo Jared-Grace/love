@@ -2009,6 +2009,7 @@ export function reply_proposals() {
       fn_name("reply_bible_references_closed"),
       fn_name("reply_bible_references_runs"),
       fn_name("reply_bible_references_merged"),
+      fn_name("reply_bible_references_same_verse"),
       fn_name("reply_bible_runs_line"),
       fn_name("reply_bible_run_citation_after"),
     ],

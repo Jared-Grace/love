@@ -1,14 +1,15 @@
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 import { reply_bible_verse_references_written } from "./reply_bible_verse_references_written.mjs";
+import { reply_bible_references_same_verse } from "./reply_bible_references_same_verse.mjs";
+import { not } from "./not.mjs";
 import { reply_bible_verse_wordings } from "./reply_bible_verse_wordings.mjs";
+import { equal } from "./equal.mjs";
 import { reply_bible_wordings_columns } from "./reply_bible_wordings_columns.mjs";
 import { reply_bible_tokens_spelled } from "./reply_bible_tokens_spelled.mjs";
 import { reply_bible_choices_shared } from "./reply_bible_choices_shared.mjs";
 import { reply_bible_choice_function_names } from "./reply_bible_choice_function_names.mjs";
 import { reply_bible_sequences_shared } from "./reply_bible_sequences_shared.mjs";
 import { reply_bible_shared_functions_write } from "./reply_bible_shared_functions_write.mjs";
+import { less_than } from "./less_than.mjs";
 import { reply_bible_tokens_codes } from "./reply_bible_tokens_codes.mjs";
 import { reply_bible_verse_function_write } from "./reply_bible_verse_function_write.mjs";
 export async function reply_bible_verse_function_new(
@@ -20,18 +21,17 @@ export async function reply_bible_verse_function_new(
   "Writes the rule for one verse from its reference alone, out of the words of the English Bibles nobody owns: a sequence of what they all say, with a choice where they differ.";
   "A new verse can repeat a choice or a phrase from a verse already written, and that verse then has to call the shared function too. So every verse that has a rule is written again with it. Anything said twice, in the same verse or another, becomes its own function.";
   let references = await reply_bible_verse_references_written();
+  let reference_new = {
+    chapter_code,
+    verse_number,
+  };
   function same(reference) {
-    let is =
-      equal(reference.chapter_code, chapter_code) &&
-      equal(reference.verse_number, verse_number);
+    let is = reply_bible_references_same_verse(reference, reference_new);
     return is;
   }
   let b = references.some(same);
   if (not(b)) {
-    references.push({
-      chapter_code,
-      verse_number,
-    });
+    references.push(reference_new);
   }
   let verses_columns = [];
   let wordings_all = [];

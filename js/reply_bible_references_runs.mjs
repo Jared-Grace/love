@@ -1,15 +1,16 @@
-import { property_get } from "./property_get.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_bible_references_merged } from "./reply_bible_references_merged.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_chapter_group_laid_out_load } from "./app_chapter_group_laid_out_load.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
-import { list_index_of } from "./list_index_of.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { equal_by_property_multiple } from "./equal_by_property_multiple.mjs";
 import { list_last } from "./list_last.mjs";
+import { list_index_of } from "./list_index_of.mjs";
+import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 export async function reply_bible_references_runs(references) {
   arguments_assert(arguments, 1);
@@ -32,8 +33,7 @@ export async function reply_bible_references_runs(references) {
     let joins = false;
     if (
       not_equal(run, null) &&
-      equal(run.chapter_code, chapter_code) &&
-      equal(run.quote, quote)
+      equal_by_property_multiple(run, reference, ["chapter_code", "quote"])
     ) {
       let item = list_last(run.verses);
       let index_last = list_index_of(verses, item);
