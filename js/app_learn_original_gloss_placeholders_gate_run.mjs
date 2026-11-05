@@ -19,6 +19,6 @@ export async function app_learn_original_gloss_placeholders_gate_run() {
     ", then clear the sentences left pointing at the gone markers with ",
     fn_name("app_learn_original_gloss_marker_clauses_repair"),
   ]);
-  let r = gloss_chapters_offenders_assert(walked, "original_bible", fault);
+  let r = gloss_chapters_offenders_assert(walked, "learn_original", fault);
   return r;
 }
