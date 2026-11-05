@@ -1008,7 +1008,7 @@ export function permission_grant_names() {
     fn_name("app_learn_original_gloss_chapter_base_repair"),
     fn_name("firebase_storage_download_json_jg"),
     fn_name("app_learn_original_gloss_generate_upload"),
-    fn_name("app_original_bible_gloss_passages"),
+    fn_name("app_learn_original_gloss_passages"),
     fn_name("ebible_readaloud_lines_write"),
     fn_name("app_original_bible_gloss_write_coverage"),
     fn_name("storage_rules_read_prefixes"),
