@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { bible_word_form } from "./bible_word_form.mjs";
 import { not } from "./not.mjs";
 import { list_unique } from "./list_unique.mjs";
-export async function app_original_bible_gloss_chapter_translits_missing(
+export async function app_learn_original_gloss_chapter_translits_missing(
   chapter_code,
 ) {
   "$plain chapter_code";
