@@ -1,4 +1,4 @@
-import { app_original_bible_gloss_placeholders_chapters } from "./app_original_bible_gloss_placeholders_chapters.mjs";
+import { app_learn_original_gloss_placeholders_chapters } from "./app_learn_original_gloss_placeholders_chapters.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_chapters_offenders_assert } from "./gloss_chapters_offenders_assert.mjs";
@@ -10,7 +10,7 @@ export async function app_original_bible_gloss_placeholders_gate_run() {
     fn_name("app_learn_original_gloss_lexicons_named_gate_run"),
     " is where the measurement and the reason a cure may be named inside a complaint at all are written down.");
   ("It takes three rather than one because this fault cannot be mended by swapping one wording for another. A marker is standing where a meaning was never written, so the meaning has to be authored: the first hands back the worksheet for one chapter - every marked word, where it stands, and the prose already beside it - and the second writes the short English back a passage at a time. The third is owed because an author who left a marker often pointed at it in the sentence beside the word, so mending the short English alone leaves a sentence pointing at a mark that is no longer on the page; it finds its own work and may be run once at the end rather than per chapter.");
-  let walked = await app_original_bible_gloss_placeholders_chapters();
+  let walked = await app_learn_original_gloss_placeholders_chapters();
   let fault = text_combine_multiple([
     "show a marker where a word's meaning belongs - ask ",
     fn_name("app_learn_original_gloss_placeholders_chapter_entries"),
