@@ -24,6 +24,8 @@ import { reply_prayer_closing } from "./reply_prayer_closing.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 import { reply_response_whatsapp } from "./reply_response_whatsapp.mjs";
 import { reply_choices_age } from "./reply_choices_age.mjs";
+import { prayer_according_to_desire } from "./prayer_according_to_desire.mjs";
+import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
 export function reply_proposals() {
   arguments_assert(arguments, 0);
   ("Changes to the reply rules that have been worked out and measured but not made, each one carrying the lines it would change, the messages it would newly answer, and what those messages would get back.");
@@ -2279,6 +2281,198 @@ export function reply_proposals() {
       "somebody whose name is on no list still gets no reply and comes to you.",
     ],
   };
+  let desire_keep = text_combine_multiple([
+    "   let v24 = ",
+    fn_name("emoji_pray"),
+    "();",
+  ]);
+  let desire_left = text_combine_multiple([
+    "-  let left40 = ",
+    fn_name("emoji_pray"),
+    "();",
+  ]);
+  let desire_after = text_combine_multiple([
+    "   let v25 = ",
+    fn_name("emoji_pray"),
+    "();",
+  ]);
+  let desire_text = text_combine_multiple([
+    "       text: ",
+    fn_name("text_combine_multiple"),
+    '([v24, " ", "Prayers"]),',
+  ]);
+  let desire_open = text_combine_multiple([
+    "-      response: ",
+    fn_name("text_combine"),
+    "(",
+  ]);
+  let desire_new = text_combine_multiple([
+    "+      response: ",
+    fn_name("prayer_according_to_desire"),
+    "(),",
+  ]);
+  let desire_line = {
+    title:
+      "put a space after the praying hands in the reply app's prayer line, and share that line",
+    fn: fn_name("app_reply_choices"),
+    whole: [fn_name("prayer_according_to_desire")],
+    diff: [
+      desire_keep,
+      desire_left,
+      desire_after,
+      desire_text,
+      desire_open,
+      "-        left40,",
+      '-        "According to the desire of God, may there be prayer",',
+      "-      ),",
+      desire_new,
+    ],
+    cases: [],
+    decide: [
+      "this is on its own because it changes what the reply app already says. The only change is the space you asked for, and the message rules can then use the same line.",
+    ],
+  };
+  let should_add = text_combine_multiple([
+    "+  let we_should = ",
+    fn_name("reply_we_should"),
+    "();",
+  ]);
+  let love_verse =
+    "📖 1 John 4:7 Beloved, let us love one another, because love comes from God. Everyone who loves has been born of God and knows God. Amen! 🙏";
+  let line2 = reply_prayer_will_done();
+  let stay_prayer = reply_prayer_closing([line2]);
+  let we_should_said = {
+    title: "answer we should love each other and stay connected",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_we_should")],
+    diff: [age_verses, should_add, "     verses,", "+    we_should,"],
+    cases: [
+      {
+        from: "",
+        message: "We should love each other",
+        answered: true,
+        outputs: [love_verse],
+      },
+      {
+        from: "",
+        message:
+          "We should also love each other and stay connected to each other",
+        answered: true,
+        outputs: [love_verse, stay_prayer],
+      },
+      {
+        from: "",
+        message: "We should stay connected to each other",
+        answered: true,
+        outputs: [stay_prayer],
+      },
+      {
+        from: "",
+        message: "We should love",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "love each other gets 1 John 4:7 with its words and Amen, on the verse line, as you asked. The Amen is on that line, so it is not said twice. The rejected reading was an Amen line of its own.",
+      "stay connected gets the prayer that the LORD have His will done, in the closing prayer at the end.",
+      "the sentence is written as we should, then one thing, then and another as many times as they say. A new thing is one more choice. The rejected reading was one rule per whole sentence.",
+    ],
+  };
+  let pray_add = text_combine_multiple([
+    "+  let pray_for_me = ",
+    fn_name("reply_pray_for_me"),
+    "();",
+  ]);
+  let line3 = prayer_according_to_desire();
+  let v2 = prayer_blessing_expand();
+  let pray_lines = [line3, v2];
+  let pray_for_me_said = {
+    title: "answer I ask you to pray for me",
+    fn: fn_name("app_shared_message_reply_choices"),
+    whole: [fn_name("reply_pray_for_me")],
+    diff: [age_verses, pray_add, "     verses,", "+    pray_for_me,"],
+    cases: [
+      {
+        from: "",
+        message: "I ask you to pray for me",
+        answered: true,
+        outputs: pray_lines,
+      },
+      {
+        from: "",
+        message: "I ask you to pray for me, my dear brother",
+        answered: true,
+        outputs: pray_lines,
+      },
+      {
+        from: "",
+        message: "I ask you to pray",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "these are your two lines, the prayer line from the reply app and the blessing on you, your family, your church and your country. Both are shared with the reply app, so editing either changes both.",
+      "the blessing keeps its own opening and Amen, so a reply can hold it and a separate closing prayer. The rejected reading was moving it inside the closing prayer, because that would make it a second wording of the same blessing.",
+      "only these words are read, because you want other ways of asking added when somebody really sends them.",
+    ],
+  };
+  let myself_names = text_combine_multiple([
+    "   let my_name_is = ",
+    fn_name("reply_sequence"),
+    '(["my", "name", "is"]);',
+  ]);
+  let myself_and = text_combine_multiple([
+    "+  let o_and = ",
+    fn_name("reply_optional"),
+    '("and");',
+  ]);
+  let myself_add = text_combine_multiple([
+    "+  let myself = ",
+    fn_name("reply_sequence"),
+    '([o_and, "myself"]);',
+  ]);
+  let myself_old = text_combine_multiple([
+    "-  let said = ",
+    fn_name("reply_choice"),
+    "([iam, my_name_is]);",
+  ]);
+  let myself_new = text_combine_multiple([
+    "+  let said = ",
+    fn_name("reply_choice"),
+    "([iam, my_name_is, myself]);",
+  ]);
+  let myself_said = {
+    title: "answer somebody signing off with myself and their name",
+    fn: fn_name("app_shared_message_reply_iam_titled_name"),
+    whole: [],
+    diff: [myself_names, myself_and, myself_add, myself_old, myself_new],
+    cases: [
+      {
+        from: "",
+        message: "And myself Samuel Grace from Kenya",
+        answered: true,
+        outputs: named_and_located,
+      },
+      {
+        from: "",
+        message: "Myself Samuel",
+        answered: true,
+        outputs: [name_response],
+      },
+      {
+        from: "",
+        message: "Myself from Kenya",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      "myself then a name counts the same as my name is, so it gets the same answer, and from a country adds the location line. The rejected reading was a new line for a sign-off, because new words are yours to write.",
+      "myself with no name after it gets no reply and comes to you.",
+    ],
+  };
   let proposals = [
     time_of_day,
     name_out,
@@ -2307,6 +2501,10 @@ export function reply_proposals() {
     age_said,
     teacher_work_said,
     names_sanskrit_said,
+    desire_line,
+    we_should_said,
+    pray_for_me_said,
+    myself_said,
   ];
   return proposals;
 }
