@@ -1423,7 +1423,7 @@ export function permission_grant_names() {
     fn_name("app_original_bible_gloss_words_unicode_repair"),
     fn_name("function_functionize_before"),
     fn_name("function_functionize_rest"),
-    fn_name("app_original_bible_gloss_explains_text_passages"),
+    fn_name("app_learn_original_gloss_explains_text_passages"),
     fn_name("app_original_bible_gloss_explains_write_chapter"),
     fn_name("binisaya_affixes_vocabulary"),
     fn_name("binisaya_affixes_plain_coverage"),
