@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_published_unfinished } from "./gloss_chapters_published_unfinished.mjs";
 import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
-import { app_original_bible_gloss_passages } from "./app_original_bible_gloss_passages.mjs";
+import { app_learn_original_gloss_passages } from "./app_learn_original_gloss_passages.mjs";
 import { gloss_upload_namespace_original_bible } from "./gloss_upload_namespace_original_bible.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -13,7 +13,7 @@ export async function app_original_bible_gloss_published_unfinished_gate_run() {
   arguments_assert(arguments, 0);
   let walked = await gloss_chapters_published_unfinished(
     app_learn_original_gloss_generate,
-    app_original_bible_gloss_passages,
+    app_learn_original_gloss_passages,
     gloss_upload_namespace_original_bible,
   );
   let fault = text_combine_multiple([

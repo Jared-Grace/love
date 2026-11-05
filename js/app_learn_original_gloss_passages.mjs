@@ -1,7 +1,7 @@
 import { gloss_passages_original_present } from "./gloss_passages_original_present.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { bible_passages_grouped } from "./bible_passages_grouped.mjs";
-export async function app_original_bible_gloss_passages(chapter_code) {
+export async function app_learn_original_gloss_passages(chapter_code) {
   "The passages of one chapter, divided exactly as the gloss store already holds them, each carrying its original-language wording, its English wording, and the verse numbers it covers.";
   "This is what an author is handed before writing a chapter's word explanations, and it is read rather than chosen: the division is the one the store was built with, so a passage written now drops into the file beside passages written earlier without disturbing them.";
   "$plain chapter_code";

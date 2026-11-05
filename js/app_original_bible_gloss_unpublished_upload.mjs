@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_unpublished_upload_generic } from "./gloss_chapters_unpublished_upload_generic.mjs";
 import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
-import { app_original_bible_gloss_passages } from "./app_original_bible_gloss_passages.mjs";
+import { app_learn_original_gloss_passages } from "./app_learn_original_gloss_passages.mjs";
 import { gloss_upload_namespace_original_bible } from "./gloss_upload_namespace_original_bible.mjs";
 import { app_learn_original_gloss_chapter_upload_stored } from "./app_learn_original_gloss_chapter_upload_stored.mjs";
 export async function app_original_bible_gloss_unpublished_upload() {
@@ -10,7 +10,7 @@ export async function app_original_bible_gloss_unpublished_upload() {
   arguments_assert(arguments, 0);
   let r = await gloss_chapters_unpublished_upload_generic(
     app_learn_original_gloss_generate,
-    app_original_bible_gloss_passages,
+    app_learn_original_gloss_passages,
     gloss_upload_namespace_original_bible,
     app_learn_original_gloss_chapter_upload_stored,
   );
