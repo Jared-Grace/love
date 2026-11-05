@@ -1,6 +1,6 @@
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { gloss_chapter_base_repair } from "./gloss_chapter_base_repair.mjs";
-export async function app_original_bible_gloss_chapter_base_repair(
+export async function app_learn_original_gloss_chapter_base_repair(
   chapter_code,
 ) {
   "Bring one authored original-language gloss chapter back in line with the base text.";
