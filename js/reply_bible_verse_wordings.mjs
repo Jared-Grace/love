@@ -32,8 +32,8 @@ export async function reply_bible_verse_wordings(chapter_code, verse_number) {
   }
   async function wording(entry) {
     async function usfm_read() {
-      let usfm = await bible_usfm_version_book_text(entry.version, book_code);
-      return usfm;
+      let text = await bible_usfm_version_book_text(entry.version, book_code);
+      return text;
     }
     let usfm = await catch_null_async(usfm_read);
     if (null_is(usfm)) {

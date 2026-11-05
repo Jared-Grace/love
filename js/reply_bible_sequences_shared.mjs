@@ -56,12 +56,12 @@ export function reply_bible_sequences_shared(verses_tokens, shared) {
       }
       for (let [key, entry] of seen) {
         if (greater_than(entry.count, 1)) {
-          let found = {
+          let repeat = {
             key,
             size,
             tokens: entry.tokens,
           };
-          return found;
+          return repeat;
         }
       }
     }
@@ -69,13 +69,13 @@ export function reply_bible_sequences_shared(verses_tokens, shared) {
   }
   function token_word(token) {
     if (token.call) {
-      let word = token.call.replace("reply_phrase_", "");
-      return word;
+      let phrase = token.call.replace("reply_phrase_", "");
+      return phrase;
     }
     let key = token.elements.join(" ");
     if (shared.keys.includes(key)) {
-      let word = shared.names[key].replace("reply_word_", "");
-      return word;
+      let choice = shared.names[key].replace("reply_word_", "");
+      return choice;
     }
     let word = token.elements[0].replace("*", "");
     return word;
@@ -95,7 +95,7 @@ export function reply_bible_sequences_shared(verses_tokens, shared) {
   let found = repeated_find();
   while (not_equal(found, null)) {
     let name = name_free(found.tokens);
-    function list_replace(list) {
+    function list_folded(list) {
       let out = [];
       let at = 0;
       while (less_than(at, list.length)) {
@@ -114,7 +114,7 @@ export function reply_bible_sequences_shared(verses_tokens, shared) {
       }
       return out;
     }
-    lists = lists.map(list_replace);
+    lists = lists.map(list_folded);
     sequences.push({
       name,
       index: lists.length,
