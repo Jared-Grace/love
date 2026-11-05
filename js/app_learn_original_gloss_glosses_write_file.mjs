@@ -2,7 +2,7 @@ import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_ge
 import { app_original_bible_gloss_glosses_write } from "./app_original_bible_gloss_glosses_write.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { gloss_glosses_write_file_path } from "./gloss_glosses_write_file_path.mjs";
-export async function app_original_bible_gloss_glosses_write_file(
+export async function app_learn_original_gloss_glosses_write_file(
   chapter_code,
   verse_key,
 ) {

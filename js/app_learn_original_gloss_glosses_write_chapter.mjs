@@ -1,5 +1,5 @@
 import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
-import { app_original_bible_gloss_glosses_write_file } from "./app_original_bible_gloss_glosses_write_file.mjs";
+import { app_learn_original_gloss_glosses_write_file } from "./app_learn_original_gloss_glosses_write_file.mjs";
 import { each_async } from "./each_async.mjs";
 import { gloss_write_files_verse_keys_generic } from "./gloss_write_files_verse_keys_generic.mjs";
 import { list_add } from "./list_add.mjs";
@@ -20,7 +20,7 @@ export async function app_learn_original_gloss_glosses_write_chapter(
   );
   let mended = [];
   async function verse_key_write(verse_key) {
-    await app_original_bible_gloss_glosses_write_file(chapter_code, verse_key);
+    await app_learn_original_gloss_glosses_write_file(chapter_code, verse_key);
     list_add(mended, verse_key);
   }
   await each_async(verse_keys, verse_key_write);
