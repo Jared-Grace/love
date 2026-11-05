@@ -1,17 +1,34 @@
-import { reply_phrases } from "./reply_phrases.mjs";
+import { reply_optional } from "./reply_optional.mjs";
+import { reply_choice } from "./reply_choice.mjs";
+import { reply_words } from "./reply_words.mjs";
+import { reply_sequence } from "./reply_sequence.mjs";
+import { reply_word_son } from "./reply_word_son.mjs";
 export function reply_phrase_god_sent_his_son() {
   "God sent his son into the world, in the words of 1 John 4:9.";
-  let r = reply_phrases([
-    "god sent his one and only son into the world",
-    "that god hath sent his only begotten son into the world",
-    "that god has sent his only begotten son into the world",
-    "that god has sent his only born son into the world",
-    "because god sent his only begotten son into the world",
-    "because god hath sent his only begotten son into the world",
-    "because that god sent his only begotten son into the world",
-    "because god sent that his onely begotten sonne into this world",
+  let r2 = reply_words("because that");
+  let item = reply_choice([r2, "because", "that"]);
+  let opener = reply_optional(item);
+  let fn = reply_sequence([opener, "god"]);
+  let r3 = reply_words("when he");
+  let god = reply_choice([fn, r3]);
+  let item2 = reply_choice(["hath", "has"]);
+  let hath = reply_optional(item2);
+  let item3 = reply_choice(["begotten", "born"]);
+  let begotten = reply_optional(item3);
+  let fn2 = reply_choice(["only", "onely"]);
+  let only = reply_sequence([fn2, begotten]);
+  let r4 = reply_words("one and only");
+  let only_any = reply_choice([r4, only]);
+  let fn3 = reply_optional("that");
+  let r5 = reply_word_son();
+  let son = reply_sequence([fn3, "his", only_any, r5]);
+  let fn4 = reply_choice(["into", "to"]);
+  let fn5 = reply_choice(["the", "this"]);
+  let world = reply_sequence([fn4, fn5, "world"]);
+  let sent = reply_sequence([god, hath, "sent", son, world]);
+  let son_first = reply_words(
     "because his son the only begotten hath god sent to the world",
-    "when he sent his only son into the world",
-  ]);
+  );
+  let r = reply_choice([sent, son_first]);
   return r;
 }
