@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { app_bible_search_hash_query_apply } from "./app_bible_search_hash_query_apply.mjs";
 import { html_on_hash_change } from "./html_on_hash_change.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
-export async function app_search_home(context) {
+export async function app_bible_search_home(context) {
   let hash = html_hash_object_get();
   ("the link is read back to the reader before the page is cleared, because clearing it is what would leave a reader who mistyped a language staring at an empty screen");
   let unknown_shown = app_shared_language_hash_unknown_page_shown_is(
