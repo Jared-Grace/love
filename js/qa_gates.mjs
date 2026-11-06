@@ -644,7 +644,7 @@ import { app_code_quiz_lines_order_indent_gate_run } from "./app_code_quiz_lines
 import { app_code_program_step_presses_gate_run } from "./app_code_program_step_presses_gate_run.mjs";
 import { bible_glyph_chapters_note_glyph_gate_run } from "./bible_glyph_chapters_note_glyph_gate_run.mjs";
 import { functions_outside_direct_gate_run } from "./functions_outside_direct_gate_run.mjs";
-import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run } from "./app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run.mjs";
+import { app_learn_en_gloss_urdu_bible_quotes_absent_gate_run } from "./app_learn_en_gloss_urdu_bible_quotes_absent_gate_run.mjs";
 import { files_root_gate_run } from "./files_root_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
@@ -1295,7 +1295,7 @@ export function qa_gates() {
     app_code_program_step_presses_gate_run,
     bible_glyph_chapters_note_glyph_gate_run,
     functions_outside_direct_gate_run,
-    app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run,
+    app_learn_en_gloss_urdu_bible_quotes_absent_gate_run,
     files_root_gate_run,
   ];
   return gates;

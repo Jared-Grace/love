@@ -7,7 +7,7 @@ import { app_learn_en_gloss_urdu_bible_quotes_absent_baseline_path } from "./app
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
-export async function app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run() {
+export async function app_learn_en_gloss_urdu_bible_quotes_absent_gate_run() {
   "Gate: no Urdu gloss explanation authored from here on may quote a chapter of the Bible by name and number with words the Urdu Bible on the page does not hold in that chapter, unless the record already holds it. Throws so the dispatcher seam exits nonzero.";
   "★ A QUOTE IS A CLAIM THE READER CAN CHECK, AND THE APP PUTS THE BIBLE TO CHECK IT RIGHT BESIDE IT. Measured on 2026-10-31, nine hundred and thirty-two of nine hundred and eighty quotes were not in the chapter they named, and nothing had said so - each was written fluently, in an older wording, from memory.";
   "The record starts at those nine hundred and thirty-two and may only shrink. Which wording the standing quotes should follow is a decision waiting on a person; the gate's work is to stop a new one joining them unseen.";
