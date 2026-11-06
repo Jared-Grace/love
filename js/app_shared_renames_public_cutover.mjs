@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_renames } from "./app_renames.mjs";
+import { app_shared_renames } from "./app_shared_renames.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_renames_page_ready } from "./app_shared_renames_page_ready.mjs";
 import { not } from "./not.mjs";
@@ -13,7 +13,7 @@ export async function app_shared_renames_public_cutover() {
   arguments_assert(arguments, 0);
   ("Finishes every app rename whose new page is already in the served folder: the old page's files are taken out, and every such old address is sent on to the new one. A rename whose new page has not been promoted yet is left alone, so its old page goes on being served.");
   ("Finds its own set from the renames record and the served folder, so it takes nothing and running it again changes nothing.");
-  let renames = await app_renames();
+  let renames = await app_shared_renames();
   let removed = [];
   for (let rename of renames) {
     let before = property_get(rename, "before");

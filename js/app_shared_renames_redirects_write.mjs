@@ -1,6 +1,6 @@
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_renames } from "./app_renames.mjs";
+import { app_shared_renames } from "./app_shared_renames.mjs";
 import { html_extension } from "./html_extension.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_map } from "./list_map.mjs";
@@ -23,7 +23,7 @@ export async function app_shared_renames_redirects_write() {
   ("An old address whose new page is not served yet gets no redirect, because sending people on would land them on nothing while the old page is still there to read.");
   ("Each old address leads straight to today's name, never through a later old one - an app renamed twice sends both its old addresses to where it is now, so nobody is passed along twice.");
   ("Rules for other addresses are left as they are. Only rules whose source is a recorded old address are replaced, so running this again writes the same file.");
-  let renames = await app_renames();
+  let renames = await app_shared_renames();
   ("An old address is sent on with and without .html. The sites only answer page.html by sending it to /page while the file is there, so once the old page is taken out its .html address would find nothing, and that spelling is still in older saved links and in what an installed app opens at. Measured 2026-11-03: /privacy_policy forwarded on both sites and /privacy_policy.html was not found on either.");
   function source_html(source_short) {
     let r = source_short + html_extension();
