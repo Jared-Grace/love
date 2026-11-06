@@ -1566,7 +1566,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_chapter_draft_coverage"),
     fn_name("js_code_getter_number_cases_gate_run"),
     fn_name("bless_marks_climbed_cases_gate_run"),
-    fn_name("app_ceb_bible_gloss_roots_shallower_gate_run"),
+    fn_name("app_learn_ceb_gloss_roots_shallower_gate_run"),
     fn_name("gloss_repairs_file_path"),
     fn_name("bible_sentence_end_marks_path"),
     fn_name("bible_verse_holes_path"),

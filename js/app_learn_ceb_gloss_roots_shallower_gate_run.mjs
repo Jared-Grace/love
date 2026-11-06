@@ -4,7 +4,7 @@ import { app_learn_ceb_gloss_roots_shallower_baseline_path } from "./app_learn_c
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
-export async function app_ceb_bible_gloss_roots_shallower_gate_run() {
+export async function app_learn_ceb_gloss_roots_shallower_gate_run() {
   "Gate: no Cebuano explanation may newly hand the reader a word built out of the root as though it were the root. Throws so the dispatcher seam exits nonzero.";
   "This is the single thing the whole gloss exists to prevent - a learner told that lilisang is where makalilisang comes from has been taught a word nobody speaks. Thirty of them were taken out by hand, and the pass that writes these explanations would put them straight back if it were run again over a chapter.";
   "It was measured against the record rather than against zero while the record held names, because most of them were the dictionary being the odd one out - it strips naa off anaa, an etymological stem nobody says, and the explanation named the actual word. Repairing those would have made the prose worse, so the record held them where they were.";
