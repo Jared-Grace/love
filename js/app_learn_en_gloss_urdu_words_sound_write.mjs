@@ -6,7 +6,7 @@ import { gloss_word_sound_voices } from "./gloss_word_sound_voices.mjs";
 import { gloss_words_sound_write_generic } from "./gloss_words_sound_write_generic.mjs";
 import { list_add } from "./list_add.mjs";
 import { each_async } from "./each_async.mjs";
-export async function app_en_learn_bible_gloss_urdu_words_sound_write() {
+export async function app_learn_en_gloss_urdu_words_sound_write() {
   "Records every English word the Urdu gloss store explains, in every voice of the cast that has no recording of it yet, so a reader who cannot read the spelling can hear the word instead.";
   "It finds its own set rather than being handed one: the words come from the store, the voices from the cast, and the pairs already recorded are read off the folder. So it is run after authoring a chapter and it does exactly the words that chapter added, and running it twice over does nothing the second time.";
   "★ THE VOICES ARE DONE ONE AFTER ANOTHER RATHER THAN TOGETHER, AND THE REASON IS THE WORKING FOLDER RATHER THAN THE MACHINE. Every run empties the same working folder and nothing a run leaves behind says who spoke it, so two voices going at once would file each other's leftovers. Two of them at once would also want the model in memory twice, on a machine that has already stopped one of these runs dead.";
