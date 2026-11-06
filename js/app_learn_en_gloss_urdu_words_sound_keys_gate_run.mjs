@@ -46,7 +46,7 @@ export async function app_learn_en_gloss_urdu_words_sound_keys_gate_run() {
   let any = greater_than(count, 0);
   let listed = [];
   if (any) {
-    list_add(listed, "en_learn_bible");
+    list_add(listed, "learn_en");
   }
   let none = not(any);
   let shown = json_format_to(clashes);
