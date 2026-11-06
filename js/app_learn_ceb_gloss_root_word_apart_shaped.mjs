@@ -11,7 +11,7 @@ import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_root_word_apart_shaped() {
+export async function app_learn_ceb_gloss_root_word_apart_shaped() {
   "The words whose explanation takes them back to a root sharing nothing with them, split by whether an ordinary shape of Cebuano writing accounts for the difference - so that the pile nobody needs to read is set aside from the pile somebody does.";
   "The reading underneath says a word and its root stand apart wherever neither holds the other and they share no run of four letters, and its own prose says that answer is mostly wrong here: Cebuano drops the vowel out of a root's last syllable when a suffix goes on, so kusgan stands apart from kusog and sulugoon from sugo, both of them correct. It settles that by having somebody read the top of the list. This asks the reader of shapes instead, which was written for exactly that difference and had only ever been shown pairs of roots - two hundred and four sightings of them.";
   "★ THE ONLY THING THIS DECIDES IS WHICH PILE A WORD GOES IN, AND A NAMED SHAPE IS NOT A VERDICT THAT THE EXPLANATION IS RIGHT. A dropped vowel accounts for the spelling and says nothing about whether the root is the one this word was really built from; a made-up root that happens to differ by a vowel would be named a shape and let through. What the shape pile is worth is the other direction - it is the pile nobody needs to read, so that the pile somebody does need to read is what is left.";

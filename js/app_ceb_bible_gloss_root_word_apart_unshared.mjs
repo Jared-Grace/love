@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_root_word_apart_shaped } from "./app_ceb_bible_gloss_root_word_apart_shaped.mjs";
+import { app_learn_ceb_gloss_root_word_apart_shaped } from "./app_learn_ceb_gloss_root_word_apart_shaped.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { text_shared_run_longest } from "./text_shared_run_longest.mjs";
@@ -18,7 +18,7 @@ export async function app_ceb_bible_gloss_root_word_apart_unshared() {
   "The run of nothing is the interesting end and it holds one pair. Ayaw explained as coming from dili - two ways of saying no, sharing not one letter, forty entries of it. The reading underneath found that same pair by having somebody read the top of a list of four hundred; this is that reading done by a rule, and the value is not the pair but that nobody has to read four hundred rows again to find the next one.";
   "Both halves are folded first, the same folding every reading of these roots uses, so that a d written as an r or an o written as a u never counts as a letter not shared.";
   arguments_assert(arguments, 0);
-  let read = await app_ceb_bible_gloss_root_word_apart_shaped();
+  let read = await app_learn_ceb_gloss_root_word_apart_shaped();
   let residue = property_get(read, "residue");
   let run_pairs = {};
   let run_entries = {};
