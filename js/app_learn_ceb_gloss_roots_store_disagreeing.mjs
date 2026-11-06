@@ -18,7 +18,7 @@ import { not } from "./not.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-export async function app_ceb_bible_gloss_roots_store_disagreeing() {
+export async function app_learn_ceb_gloss_roots_store_disagreeing() {
   "Every word the Cebuano gloss store takes back to one root in one chapter and to a different root in another, named beside all the roots it was given, what kind of difference it is, and what the dictionary already on this disk says about it.";
   "★ THE CHAPTER WAS NEVER THE RIGHT BOUNDARY FOR THIS QUESTION AND WAS BORROWED FROM SOMETHING ELSE. Its sibling compares sentences inside one chapter because that is as far as a handed-in correction reaches, which is the right scope for asking what a correction would damage and the wrong one for asking whether the store is telling the truth. A word given one root in Psalms and another in John is exactly as contradictory as one given two roots in the same psalm, and only the first of those was being looked for.";
   "A word may honestly be two words spelled alike, and across a whole bible that is likelier than within one chapter. This is why the kind of difference is reported beside the roots rather than the count being handed over on its own - two roots with nothing in common is where that reading belongs, and it is also where a genuine pair of look-alike words would show up.";
