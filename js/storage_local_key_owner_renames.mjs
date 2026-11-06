@@ -61,6 +61,10 @@ export function storage_local_key_owner_renames() {
       before: text_frozen("app_en_learn_bible_language_code_save"),
       after: fn_name("app_learn_en_language_code_save"),
     },
+    {
+      before: text_frozen("app_en_learn_bible"),
+      after: fn_name("app_learn_en"),
+    },
   ];
   return r;
 }

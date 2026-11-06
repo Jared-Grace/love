@@ -29,7 +29,7 @@ export async function app_index_gloss_coverage() {
         namespace_fn: gloss_upload_namespace_ceb_bible,
       },
       {
-        app_fn: fn_name("app_en_learn_bible"),
+        app_fn: fn_name("app_learn_en"),
         namespace_fn: gloss_upload_namespace_en_learn_bible_urdu,
       },
     ];

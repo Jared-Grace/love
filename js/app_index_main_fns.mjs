@@ -53,7 +53,7 @@ export function app_index_main_fns(about_opened) {
       category: languages,
     },
     {
-      app_fn: fn_name("app_en_learn_bible"),
+      app_fn: fn_name("app_learn_en"),
       text: "Allows learning English by reading the Bible, with every word explained in Urdu",
       category: languages,
     },
