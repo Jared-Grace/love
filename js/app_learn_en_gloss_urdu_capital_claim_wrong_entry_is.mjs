@@ -2,7 +2,7 @@ import { text_lower_is } from "./text_lower_is.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_en_learn_bible_gloss_urdu_explain_capital_claim_is } from "./app_en_learn_bible_gloss_urdu_explain_capital_claim_is.mjs";
+import { app_learn_en_gloss_urdu_explain_capital_claim_is } from "./app_learn_en_gloss_urdu_explain_capital_claim_is.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 export function app_learn_en_gloss_urdu_capital_claim_wrong_entry_is(entry) {
   "Whether one entry of the English-to-Urdu gloss store wears an explanation asserting the word is written with a capital letter while the word itself carries no capital at all.";
@@ -11,8 +11,7 @@ export function app_learn_en_gloss_urdu_capital_claim_wrong_entry_is(entry) {
   let explain = property_get_or_null(entry, key);
   let written = null_not_is(explain);
   if (written) {
-    let claimed =
-      app_en_learn_bible_gloss_urdu_explain_capital_claim_is(explain);
+    let claimed = app_learn_en_gloss_urdu_explain_capital_claim_is(explain);
     if (claimed) {
       let word = gloss_entry_word_read(entry);
       let plain = text_lower_is(word);
