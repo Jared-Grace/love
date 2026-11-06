@@ -1,6 +1,6 @@
 import { app_learn_en_gloss_urdu_write_finished } from "./app_learn_en_gloss_urdu_write_finished.mjs";
 import { app_learn_en_gloss_urdu_write_coverage } from "./app_learn_en_gloss_urdu_write_coverage.mjs";
-import { app_en_learn_bible_gloss_urdu_write_passage } from "./app_en_learn_bible_gloss_urdu_write_passage.mjs";
+import { app_learn_en_gloss_urdu_write_passage } from "./app_learn_en_gloss_urdu_write_passage.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
@@ -20,7 +20,7 @@ export async function app_learn_en_gloss_urdu_write_next(chapter_code) {
   }
   let verse_key = list_first(missing);
   ("Which passage is next is the whole of this function's own work. Everything the author is handed for it is the same whether the passage has been written before or not, so it is read by the one that takes a passage by name.");
-  let handed = await app_en_learn_bible_gloss_urdu_write_passage(
+  let handed = await app_learn_en_gloss_urdu_write_passage(
     chapter_code,
     verse_key,
   );

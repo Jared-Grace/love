@@ -2,7 +2,7 @@ import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_gene
 import { app_learn_en_gloss_urdu_passages } from "./app_learn_en_gloss_urdu_passages.mjs";
 import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
-export async function app_en_learn_bible_gloss_urdu_write_passage(
+export async function app_learn_en_gloss_urdu_write_passage(
   chapter_code,
   verse_key,
 ) {
