@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_reader_language_set } from "./app_en_learn_bible_reader_language_set.mjs";
+import { app_learn_en_reader_language_set } from "./app_learn_en_reader_language_set.mjs";
 import { app_learn_en_gloss_download } from "./app_learn_en_gloss_download.mjs";
 import { gloss_word_sound_url_cycling } from "./gloss_word_sound_url_cycling.mjs";
 import { app_learn_en_gloss_urdu_words_sound_url } from "./app_learn_en_gloss_urdu_words_sound_url.mjs";
@@ -15,7 +15,7 @@ export async function app_learn_en_home(context) {
   "★ THE CYCLE THROUGH THE VOICES IS STARTED HERE, ONCE, AND THAT IS WHY IT IS STARTED AT ALL RATHER THAN LIVING INSIDE THE ADDRESS. A screen is opened once and tapped many times, so a cycle begun here counts across the whole reading and every tap moves it on by one. Begun any deeper it would be begun again on every tap and the reader would hear the same drawn voice all day.";
   "★ THE SLOWER READINGS ARE HANDED IN BESIDE THE ORDINARY ONES RATHER THAN INSTEAD OF THEM, AND BOTH COME OUT OF THE ONE CYCLE. The two ways of asking share the count, so every press at either speed takes the next person, and the men and women alternate without a break.";
   arguments_assert(arguments, 1);
-  app_en_learn_bible_reader_language_set();
+  app_learn_en_reader_language_set();
   let download = app_learn_en_gloss_download;
   let cycling = gloss_word_sound_url_cycling(
     app_learn_en_gloss_urdu_words_sound_url,

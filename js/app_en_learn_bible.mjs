@@ -1,6 +1,6 @@
 import { not } from "./not.mjs";
 import { app_learn_en_language_known_ensure } from "./app_learn_en_language_known_ensure.mjs";
-import { app_en_learn_bible_reader_language_set } from "./app_en_learn_bible_reader_language_set.mjs";
+import { app_learn_en_reader_language_set } from "./app_learn_en_reader_language_set.mjs";
 import { app_learn_en_languages_offered } from "./app_learn_en_languages_offered.mjs";
 import { app_shared_bible_languages_offered_key } from "./app_shared_bible_languages_offered_key.mjs";
 import { property_set } from "./property_set.mjs";
@@ -23,7 +23,7 @@ export async function app_en_learn_bible(context) {
   if (not(known)) {
     return;
   }
-  app_en_learn_bible_reader_language_set();
+  app_learn_en_reader_language_set();
   let languages_offered = app_learn_en_languages_offered();
   let key = app_shared_bible_languages_offered_key();
   property_set(context, key, languages_offered);
