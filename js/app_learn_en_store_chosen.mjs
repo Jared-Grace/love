@@ -8,7 +8,7 @@ import { list_find_or_null } from "./list_find_or_null.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
-export function app_en_learn_bible_store_chosen() {
+export function app_learn_en_store_chosen() {
   "The store of explanations for the language the reader has chosen, read from the address each time it is asked.";
   "Read each time rather than once at the start, because the language is changed in the settings while the app is running, and the reading screen drawn after that has to fetch from the store the reader just picked.";
   "The reader may have chosen several languages, since the chooser is the one every bible app here shares; the first of them this app can explain in wins, in the order the reader put them. Having chosen none it can explain in, the reader gets the first store, which is the language the app opens in.";
