@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { not } from "./not.mjs";
-import { app_en_learn_bible_gloss_urdu_verse_claims_wrong_names } from "./app_en_learn_bible_gloss_urdu_verse_claims_wrong_names.mjs";
+import { app_learn_en_gloss_urdu_verse_claims_wrong_names } from "./app_learn_en_gloss_urdu_verse_claims_wrong_names.mjs";
 import { app_learn_en_gloss_urdu_verse_claims_wrong_baseline_path } from "./app_learn_en_gloss_urdu_verse_claims_wrong_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
@@ -23,8 +23,7 @@ export async function app_learn_en_gloss_urdu_verse_claims_wrong_gate_run() {
     };
     return skipped;
   }
-  let offenders =
-    await app_en_learn_bible_gloss_urdu_verse_claims_wrong_names();
+  let offenders = await app_learn_en_gloss_urdu_verse_claims_wrong_names();
   let path = app_learn_en_gloss_urdu_verse_claims_wrong_baseline_path();
   let told = await baseline_names_gate_generic(
     offenders,
