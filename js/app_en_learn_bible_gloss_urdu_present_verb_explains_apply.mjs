@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_en_learn_bible_gloss_urdu_present_verb_explains } from "./app_en_learn_bible_gloss_urdu_present_verb_explains.mjs";
 import { gloss_chapters_word_explains_set } from "./gloss_chapters_word_explains_set.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
-import { app_en_learn_bible_gloss_urdu_present_parsing_only_is } from "./app_en_learn_bible_gloss_urdu_present_parsing_only_is.mjs";
+import { app_learn_en_gloss_urdu_present_parsing_only_is } from "./app_learn_en_gloss_urdu_present_parsing_only_is.mjs";
 export async function app_en_learn_bible_gloss_urdu_present_verb_explains_apply() {
   "Write the settled wording for each named present-tense English verb over every explanation of that word that still says only that it is a verb of present time, and answer with the chapters it rewrote.";
   "It takes no list from the caller and reads none of its own: the words and their wordings are written down together in one place, so running it again after that place grows covers the new words and asks nothing twice.";
@@ -12,7 +12,7 @@ export async function app_en_learn_bible_gloss_urdu_present_verb_explains_apply(
   let r = await gloss_chapters_word_explains_set(
     app_learn_en_gloss_urdu_generate,
     explains,
-    app_en_learn_bible_gloss_urdu_present_parsing_only_is,
+    app_learn_en_gloss_urdu_present_parsing_only_is,
   );
   return r;
 }
