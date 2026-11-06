@@ -3,7 +3,7 @@ import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { app_en_learn_bible_language_code_saved_or_null } from "./app_en_learn_bible_language_code_saved_or_null.mjs";
+import { app_learn_en_language_code_saved_or_null } from "./app_learn_en_language_code_saved_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_en_language_ask } from "./app_learn_en_language_ask.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
@@ -16,7 +16,7 @@ export function app_en_learn_bible_language_known_ensure(context, on_chosen) {
   let named = property_get_or(hash, key, "");
   let missing = text_empty_is(named);
   if (missing) {
-    let saved = app_en_learn_bible_language_code_saved_or_null();
+    let saved = app_learn_en_language_code_saved_or_null();
     if (null_is(saved)) {
       app_learn_en_language_ask(context, on_chosen);
       return false;
