@@ -9,7 +9,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { html_public_remove_named } from "./html_public_remove_named.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_renames_redirects_write } from "./app_renames_redirects_write.mjs";
-export async function app_renames_public_cutover() {
+export async function app_shared_renames_public_cutover() {
   arguments_assert(arguments, 0);
   ("Finishes every app rename whose new page is already in the served folder: the old page's files are taken out, and every such old address is sent on to the new one. A rename whose new page has not been promoted yet is left alone, so its old page goes on being served.");
   ("Finds its own set from the renames record and the served folder, so it takes nothing and running it again changes nothing.");
