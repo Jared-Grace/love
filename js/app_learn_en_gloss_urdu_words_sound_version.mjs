@@ -1,6 +1,6 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_en_learn_bible_gloss_urdu_words_sound_version() {
+export function app_learn_en_gloss_urdu_words_sound_version() {
   function_duplicate_kind_parallel();
   ("The stamp carried on the end of every word recording's address, changed by hand whenever the recordings are sent up to storage again.");
   ("★ IT IS WHAT LETS A RECORDING BE KEPT FOR A YEAR AND STILL BE REPLACEABLE. The address of a recording is the word itself, which is the whole point of it - so the address stays the same when the same word is recorded again in a better voice, or after a name that was being said wrongly is fixed. A phone told to keep that address for a year would go on saying the old one for a year, and there would be no way to reach it. A stamp on the end makes the new recording a new address, which the phone has never seen and so must fetch.");
