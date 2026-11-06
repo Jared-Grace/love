@@ -6,7 +6,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_finished_unpublished } from "./gloss_chapters_finished_unpublished.mjs";
 import { gloss_chapters_offenders_assert } from "./gloss_chapters_offenders_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export async function app_en_learn_bible_gloss_urdu_unpublished_gate_run() {
+export async function app_learn_en_gloss_urdu_unpublished_gate_run() {
   "Gate: no chapter of English words explained in Urdu is finished and left sitting unpublished. Throws so the dispatcher seam exits nonzero.";
   "This app offers a reader exactly the chapters it has published, so a chapter finished and not carried up is work that was done and never arrived. Nothing else notices: the pickers go on listing what is up there, the reader is shown nothing wrong, and the only sign is somebody happening to ask.";
   "It stays green for the ordinary state of this material. A chapter is red here only between the moment its last passage is written and the moment it is carried up, and closing that is one command that takes seconds - so this is not a light left red for weeks while a book is written, and it does not hold the rest of the repo behind an authoring chore.";

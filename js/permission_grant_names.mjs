@@ -2232,7 +2232,7 @@ export function permission_grant_names() {
     fn_name("functions_rewrite_then_read_gate_run"),
     fn_name("functions_rewrite_then_read"),
     fn_name("bible_chapter_verses"),
-    fn_name("app_en_learn_bible_gloss_urdu_unpublished_gate_run"),
+    fn_name("app_learn_en_gloss_urdu_unpublished_gate_run"),
     fn_name("ebible_upload_doors_commercial_gate_run"),
     fn_name("apps_published_names"),
     fn_name("qa_gates_repo_lookup_reaching"),
