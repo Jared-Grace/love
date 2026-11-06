@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_republish_generic } from "./gloss_chapters_republish_generic.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_ceb_bible_gloss_chapters_uploaded } from "./app_ceb_bible_gloss_chapters_uploaded.mjs";
-import { app_ceb_bible_gloss_chapter_upload_stored } from "./app_ceb_bible_gloss_chapter_upload_stored.mjs";
+import { app_learn_ceb_gloss_chapter_upload_stored } from "./app_learn_ceb_gloss_chapter_upload_stored.mjs";
 export async function app_ceb_bible_gloss_chapters_republish() {
   "Carry up again every chapter of the Bible explained in Cebuano that a reader can already reach and that has been changed since it was last sent, so that what is in front of them is what the store says today.";
   ("★ THIS STORE IS MENDED BY SEVERAL COMMANDS AND NONE OF THEM IS NAMED HERE AS THE ONE TO RUN FIRST, BECAUSE THERE IS NO SUCH ONE. ",
@@ -19,7 +19,7 @@ export async function app_ceb_bible_gloss_chapters_republish() {
   let r = await gloss_chapters_republish_generic(
     app_ceb_bible_gloss_generate,
     app_ceb_bible_gloss_chapters_uploaded,
-    app_ceb_bible_gloss_chapter_upload_stored,
+    app_learn_ceb_gloss_chapter_upload_stored,
   );
   return r;
 }

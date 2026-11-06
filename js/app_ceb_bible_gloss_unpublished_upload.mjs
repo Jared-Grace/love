@@ -3,7 +3,7 @@ import { gloss_chapters_unpublished_upload_generic } from "./gloss_chapters_unpu
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_ceb_bible_gloss_passages } from "./app_ceb_bible_gloss_passages.mjs";
 import { gloss_upload_namespace_ceb_bible } from "./gloss_upload_namespace_ceb_bible.mjs";
-import { app_ceb_bible_gloss_chapter_upload_stored } from "./app_ceb_bible_gloss_chapter_upload_stored.mjs";
+import { app_learn_ceb_gloss_chapter_upload_stored } from "./app_learn_ceb_gloss_chapter_upload_stored.mjs";
 export async function app_ceb_bible_gloss_unpublished_upload() {
   "Publish every Cebuano gloss chapter that is finished and has not been carried up yet, and hand back what went and what is left.";
   "This is the one command the gate over the same store names when it complains, so what a reader of the failure is told to type is a single thing that finds its own set rather than a chapter's name they would have to copy out of the list fifty times.";
@@ -12,7 +12,7 @@ export async function app_ceb_bible_gloss_unpublished_upload() {
     app_ceb_bible_gloss_generate,
     app_ceb_bible_gloss_passages,
     gloss_upload_namespace_ceb_bible,
-    app_ceb_bible_gloss_chapter_upload_stored,
+    app_learn_ceb_gloss_chapter_upload_stored,
   );
   return r;
 }
