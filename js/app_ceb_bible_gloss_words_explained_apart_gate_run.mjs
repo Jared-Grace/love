@@ -30,7 +30,7 @@ export async function app_ceb_bible_gloss_words_explained_apart_gate_run() {
     offenders,
     path,
     "this word is now explained one way in one chapter and another way in another, and no dictionary is needed to see that one of them is wrong - open both passages, keep the explanation that is right and mend the other, or bank the row if the two claims are one root read at two depths",
-    fn_name("app_ceb_bible_gloss_words_explained_apart_baseline_write"),
+    fn_name("app_learn_ceb_gloss_words_explained_apart_baseline_write"),
   );
   let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
