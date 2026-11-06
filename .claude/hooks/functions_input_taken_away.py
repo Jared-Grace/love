@@ -2,4 +2,4 @@
 # Source of truth: js/functions_input_taken_away.mjs. Regenerate with
 # `node scripts/r.mjs python_mirrors_write`; drift fails `q`
 # via python_mirrors_assert.
-FUNCTIONS_INPUT_TAKEN_AWAY = {"app_learn_ceb_gloss_write_chapter_file", "app_en_learn_bible_gloss_tagalog_write_chapter_file", "app_en_learn_bible_gloss_urdu_write_chapter_file"}
+FUNCTIONS_INPUT_TAKEN_AWAY = {"app_learn_ceb_gloss_write_chapter_file", "app_learn_en_gloss_tagalog_write_chapter_file", "app_learn_en_gloss_urdu_write_chapter_file"}
