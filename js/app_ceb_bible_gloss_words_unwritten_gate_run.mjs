@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_stored_not_is } from "./app_learn_ceb_gloss_stored_not_is.mjs";
 import { app_ceb_bible_gloss_words_unwritten_names } from "./app_ceb_bible_gloss_words_unwritten_names.mjs";
-import { app_ceb_bible_gloss_words_unwritten_baseline_path } from "./app_ceb_bible_gloss_words_unwritten_baseline_path.mjs";
+import { app_learn_ceb_gloss_words_unwritten_baseline_path } from "./app_learn_ceb_gloss_words_unwritten_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
@@ -24,7 +24,7 @@ export async function app_ceb_bible_gloss_words_unwritten_gate_run() {
     return skipped;
   }
   let offenders = await app_ceb_bible_gloss_words_unwritten_names();
-  let path = app_ceb_bible_gloss_words_unwritten_baseline_path();
+  let path = app_learn_ceb_gloss_words_unwritten_baseline_path();
   let told = await baseline_names_gate_generic(
     offenders,
     path,
