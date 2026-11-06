@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_spelling_claims_wrong } from "./app_en_learn_bible_gloss_urdu_spelling_claims_wrong.mjs";
+import { app_learn_en_gloss_urdu_spelling_claims_wrong } from "./app_learn_en_gloss_urdu_spelling_claims_wrong.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -16,7 +16,7 @@ export function app_learn_en_gloss_urdu_spelling_claim_gate_run() {
     regular: 1,
     plural_plain: 63,
   };
-  let found = app_en_learn_bible_gloss_urdu_spelling_claims_wrong();
+  let found = app_learn_en_gloss_urdu_spelling_claims_wrong();
   for (let one of found.faults) {
     console.log("wrong  " + one.claim + "  " + one.word + "  " + one.explain);
   }

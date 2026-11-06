@@ -4,7 +4,7 @@ import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { not } from "./not.mjs";
-export function app_en_learn_bible_gloss_urdu_spelling_claims_wrong() {
+export function app_learn_en_gloss_urdu_spelling_claims_wrong() {
   "Every sentence in the gloss tables that tells a reader how a word is spelled, checked against the word it was written for. These sentences are generated from a template over a list, so one of them is written for every member alike, and it is false for whichever members are exceptions to the exception it describes.";
   "That is not a guess about what could go wrong. It went wrong: the past form sentence said that in a few old verbs the word itself changes, 'hear' to 'heard', when nothing changes - the spelling adds a plain 'd' and it is the sound that moves. Another told a reader that no '-ed' had been added while printing a word with '-ed' on the end of it. Six live sentences were wrong about two verbs, and they were found by reading one word by hand.";
   "A spelling claim is worth checking because it is the one kind of claim in these tables that can be settled without knowing any Urdu. The sentence names a base and a form, and whether the form is the base plus a suffix is arithmetic on two strings. Nothing else here is decidable that way, which is exactly why this much should never again be left to somebody noticing.";
