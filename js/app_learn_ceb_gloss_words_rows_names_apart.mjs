@@ -2,7 +2,7 @@ import { app_ceb_bible_words_common } from "./app_ceb_bible_words_common.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_words_rows_names_apart } from "./gloss_words_rows_names_apart.mjs";
-export async function app_ceb_bible_gloss_words_rows_names_apart(rows) {
+export async function app_learn_ceb_gloss_words_rows_names_apart(rows) {
   "$plain rows";
   "One list of Cebuano word rows cut in two against the whole Cebuano bible: the borrowed names no honest gloss can be written for, and everything a person could sit down and write about.";
   ("The cutting itself is ",

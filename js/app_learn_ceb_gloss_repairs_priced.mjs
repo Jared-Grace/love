@@ -2,7 +2,7 @@ import { app_learn_ceb_gloss_roots_disagreeing_offenders } from "./app_learn_ceb
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_offenders_roots_silent_words } from "./gloss_offenders_roots_silent_words.mjs";
-import { app_ceb_bible_gloss_words_rows_names_apart } from "./app_ceb_bible_gloss_words_rows_names_apart.mjs";
+import { app_learn_ceb_gloss_words_rows_names_apart } from "./app_learn_ceb_gloss_words_rows_names_apart.mjs";
 import { gloss_words_repair_priced_generic } from "./gloss_words_repair_priced_generic.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 export async function app_learn_ceb_gloss_repairs_priced() {
@@ -14,7 +14,7 @@ export async function app_learn_ceb_gloss_repairs_priced() {
   arguments_assert(arguments, 0);
   let offenders = await app_learn_ceb_gloss_roots_disagreeing_offenders();
   let silent_words = gloss_offenders_roots_silent_words(offenders);
-  let apart = await app_ceb_bible_gloss_words_rows_names_apart(silent_words);
+  let apart = await app_learn_ceb_gloss_words_rows_names_apart(silent_words);
   let rows = property_get(apart, "words");
   let priced = await gloss_words_repair_priced_generic(
     app_learn_ceb_gloss_generate,

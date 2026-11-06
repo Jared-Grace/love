@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_roots_disagreeing } from "./app_learn_ceb_gloss_roots_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_offenders_roots_silent_words } from "./gloss_offenders_roots_silent_words.mjs";
-import { app_ceb_bible_gloss_words_rows_names_apart } from "./app_ceb_bible_gloss_words_rows_names_apart.mjs";
+import { app_learn_ceb_gloss_words_rows_names_apart } from "./app_learn_ceb_gloss_words_rows_names_apart.mjs";
 import { gloss_names_filter_checked } from "./gloss_names_filter_checked.mjs";
 export async function app_learn_ceb_gloss_names_filter_checked() {
   "Checks the names the Cebuano queue quietly drops against the app's own sentences: which of them a written explanation actually proves is a name, which rest on the vocabulary test alone, and which proven names the test failed to drop.";
@@ -14,7 +14,7 @@ export async function app_learn_ceb_gloss_names_filter_checked() {
   let offenders = property_get(disagreeing, "offenders");
   let consulted = property_get(disagreeing, "consulted");
   let silent_words = gloss_offenders_roots_silent_words(offenders);
-  let apart = await app_ceb_bible_gloss_words_rows_names_apart(silent_words);
+  let apart = await app_learn_ceb_gloss_words_rows_names_apart(silent_words);
   let names_taken = property_get(apart, "names");
   let checked = gloss_names_filter_checked(offenders, names_taken);
   let taken_total = property_get(checked, "taken_total");
