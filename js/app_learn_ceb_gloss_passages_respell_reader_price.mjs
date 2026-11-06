@@ -12,7 +12,7 @@ import { text_punctuation_dash_kept_split } from "./text_punctuation_dash_kept_s
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { gloss_chapters_passages_entried_generic } from "./gloss_chapters_passages_entried_generic.mjs";
-export async function app_ceb_bible_gloss_passages_respell_reader_price() {
+export async function app_learn_ceb_gloss_passages_respell_reader_price() {
   "What changing the Cebuano gloss store's word reader would cost the respell, counted as the passages it would then walk past, under each of the four ways the two sides of its count can be read.";
   "★ THE RESPELL COMPARES TWO COUNTS AND DOES NOTHING AT ALL WHEN THEY DISAGREE, SO A READER CHANGED ON ONE SIDE ONLY IS SILENT DAMAGE RATHER THAN A WRONG ANSWER. The words the explanations name are cut one way and the words of the passage another, and both are cut at the dash today. Keeping the dash on one side turns every dashed word into one word there and leaves it as two on the other, so the counts part company and the passage is declined. Nothing is written, nothing is logged, and the answer the respell gives is the same empty list a passage that needed no correction gives.";
   "The four readings are the whole space, so the two halves can be seen to be as bad as each other rather than assumed to be. Both sides changed together is the reading that matters, and it is worth the run on its own: it says whether keeping the dash costs the respell anything at all.";
