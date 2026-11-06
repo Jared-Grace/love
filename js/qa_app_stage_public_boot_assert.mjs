@@ -15,7 +15,8 @@ export async function qa_app_stage_public_boot_assert(app_name) {
   "It opens the home screen and nothing more. It takes seconds where the walk takes hours, and it asks the one question the walk cannot: does the public page open at all.";
   let folder = folder_web_latest_absolute();
   let file_name = file_name_html(app_name);
-  let url = text_combine_multiple([server_url(), "/", file_name]);
+  let url2 = server_url();
+  let url = text_combine_multiple([url2, "/", file_name]);
   async function page_prepare(page) {
     await page_route_root_from_folder(page, folder);
   }
