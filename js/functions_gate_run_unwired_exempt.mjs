@@ -61,7 +61,7 @@ export function functions_gate_run_unwired_exempt() {
       name: fn_name("app_learn_original_gloss_verse_claims_wrong_gate_run"),
       why: text_combine_multiple([
         "the human took it out of the list on 2026-09-28, and its own prose says so and says why: it cannot tell a sentence that made no claim from one that made a wrong claim. this store writes essays that name a neighbouring verse for literary reasons and quote no word at all, so the reading falls back to whatever word the entry is about and asks a question the sentence never raised - three hundred and fifty-five rows standing, and of three hundred and eighty-one read by hand two were real. it is kept and stays runnable by name as a report to be asked for. its twin ",
-        fn_name("app_ceb_bible_gloss_verse_claims_wrong_gate_run"),
+        fn_name("app_learn_ceb_gloss_verse_claims_wrong_gate_run"),
         " is in the list and belongs there, because cross-referencing is rare in that store and fifty of its fifty-six claims hold. putting this one back means first finding a way to see the silence - a sentence that named a verse without claiming the word stands in it",
       ]),
     },

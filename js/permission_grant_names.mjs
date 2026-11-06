@@ -2629,7 +2629,7 @@ export function permission_grant_names() {
     fn_name("app_learn_ceb_gloss_affix_kinds_wrong_gate_run"),
     fn_name("app_learn_ceb_gloss_published_unfinished_gate_run"),
     fn_name("app_learn_ceb_gloss_roots_claimed_stopped_short_gate_run"),
-    fn_name("app_ceb_bible_gloss_verse_claims_wrong_gate_run"),
+    fn_name("app_learn_ceb_gloss_verse_claims_wrong_gate_run"),
     fn_name("app_ceb_bible_gloss_words_edged_gate_run"),
     fn_name("app_ceb_bible_gloss_words_explained_apart_gate_run"),
     fn_name("app_ceb_bible_gloss_words_unwritten_gate_run"),

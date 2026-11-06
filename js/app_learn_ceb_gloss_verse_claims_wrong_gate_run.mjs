@@ -5,7 +5,7 @@ import { app_ceb_bible_gloss_verse_claims_wrong_names } from "./app_ceb_bible_gl
 import { app_learn_ceb_gloss_verse_claims_wrong_baseline_path } from "./app_learn_ceb_gloss_verse_claims_wrong_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-export async function app_ceb_bible_gloss_verse_claims_wrong_gate_run() {
+export async function app_learn_ceb_gloss_verse_claims_wrong_gate_run() {
   "Gate: no Cebuano gloss explanation authored from here on may name a verse of its own chapter that holds nothing built on the same root, unless somebody has already read that sentence and banked it. Throws so the dispatcher seam exits nonzero.";
   "★ THIS IS THE ONE THING AN EXPLANATION SAYS THAT A MACHINE CAN SETTLE. Everything else in a gloss sentence is judgment - whether the meaning is right, whether the parts are named well, whether a reader will follow it. A sentence that says the word also stands in verse fifteen is checkable against verse fifteen, and the chapter holding the answer is already open. A wrong fact costs a reader more than a clumsy sentence does, so the one checkable claim is worth a gate on its own.";
   "The record starts at six and may only shrink, because a row here is a report rather than a verdict. An explanation may name a verse to say what happens there instead of to say the word stands there, and both kinds arrive looking identical. Fifty of the store's fifty-six claims do hold, so the six standing are a reading queue, and the gate's work is to stop a seventh joining it unseen.";
