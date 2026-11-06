@@ -1,7 +1,7 @@
 import { app_learn_en_gloss_urdu_settled_explains } from "./app_learn_en_gloss_urdu_settled_explains.mjs";
 import { object_values } from "./object_values.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { app_en_learn_bible_gloss_urdu_superseded_explains } from "./app_en_learn_bible_gloss_urdu_superseded_explains.mjs";
+import { app_learn_en_gloss_urdu_superseded_explains } from "./app_learn_en_gloss_urdu_superseded_explains.mjs";
 export function app_en_learn_bible_gloss_urdu_table_wording_is(explain) {
   "Whether an explanation in the store that explains English words to an Urdu reader is word for word one of the wordings the tables hold or once held, and so may be written over by the settled wording belonging to the word it actually stands under.";
   "A settled wording is a good explanation, so this is not the test the shared-label predicate makes. It answers a narrower question: this sentence was not written for the verse it sits in, it was copied from the table, so replacing it with the table's answer for this word loses nothing that was ever authored here.";
@@ -14,7 +14,7 @@ export function app_en_learn_bible_gloss_urdu_table_wording_is(explain) {
   if (settled) {
     return settled;
   }
-  let retired = app_en_learn_bible_gloss_urdu_superseded_explains();
+  let retired = app_learn_en_gloss_urdu_superseded_explains();
   let was = list_includes(retired, explain);
   return was;
 }

@@ -6,7 +6,7 @@ import { list_add } from "./list_add.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { text_lower_is } from "./text_lower_is.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_en_learn_bible_gloss_urdu_superseded_explains() {
+export function app_learn_en_gloss_urdu_superseded_explains() {
   "Every wording that was once the settled explanation of an English word in the store that teaches English to an Urdu reader, and has since been replaced by a better one, in the small-letter form it was written in and in the capitalised form the table derived from it.";
   "Retiring a wording strands the entries carrying it. The sweep that writes a settled wording over a stale one recognises a stale one by finding it in the table, so the moment a wording leaves the table the entries holding it become invisible to the only thing that could mend them. They then sit in the store forever, saying something true and out of date, and no reading of the table can see them.";
   "So a wording leaves the table by being written down here in the same commit. Nothing else about it changes: it is still a sentence somebody wrote for a whole word rather than for the verse it sits in, which is the one property that makes it safe to write over. A reader of this list is looking at the history of the settled wordings, which is the only place that history is kept.";
