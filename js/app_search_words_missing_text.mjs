@@ -3,7 +3,7 @@ import { list_without_multiple } from "./list_without_multiple.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_search_words_unreachable_text } from "./app_search_words_unreachable_text.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_search_words_absent_text } from "./app_search_words_absent_text.mjs";
+import { app_bible_search_words_absent_text } from "./app_bible_search_words_absent_text.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 export function app_search_words_missing_text(
   words_missing,
@@ -23,7 +23,7 @@ export function app_search_words_missing_text(
   }
   let absent = list_empty_not_is(words_absent);
   if (absent) {
-    let said = app_search_words_absent_text(words_absent);
+    let said = app_bible_search_words_absent_text(words_absent);
     list_add(sentences, said);
   }
   let joined = list_join_space(sentences);
