@@ -1,7 +1,7 @@
 import { app_ceb_bible_gloss_stored_is } from "./app_ceb_bible_gloss_stored_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_named } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_named.mjs";
-import { app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_growth_assert } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_growth_assert.mjs";
+import { app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_growth_assert } from "./app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_growth_assert.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_path } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_path.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_write() {
@@ -13,7 +13,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_w
     stored,
   });
   let known = await app_ceb_bible_gloss_roots_claimed_stopped_short_named();
-  await app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_growth_assert(
+  await app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_growth_assert(
     known,
   );
   let path = app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_path();
