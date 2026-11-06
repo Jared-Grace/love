@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_any } from "./list_any.mjs";
-export function app_search_results_expand_more_is(buttons) {
+export function app_bible_search_results_expand_more_is(buttons) {
   "Whether pressing open-everything on a page of search results would still bring anything new to it: any verse listed on the page whose words have not been fetched yet.";
   "THE BUTTON'S MAIN WORK IS NOT FOLDING. It opens the cards, and then it fetches the words of every verse inside them - and a page can land with every card already open and not one verse fetched, which is exactly what a search matching a single book does. Asked only about the cards, the button switched itself off there and left the reader looking at a list of references with nothing under any of them, and a button greyed out beside it saying there was nothing left to do.";
   arguments_assert(arguments, 1);
