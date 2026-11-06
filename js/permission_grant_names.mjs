@@ -1539,7 +1539,7 @@ export function permission_grant_names() {
     fn_name("functions_delete_seams"),
     fn_name("daemons_unhealthy"),
     fn_name("ebible_readaloud_lines_path"),
-    fn_name("app_en_learn_bible_gloss_urdu_punctuation_entries_repair"),
+    fn_name("app_learn_en_gloss_urdu_punctuation_entries_repair"),
     fn_name("gloss_glosses_write_file_path"),
     fn_name("app_learn_en_gloss_urdu_chapter_upload_stored"),
     fn_name("data_path"),
