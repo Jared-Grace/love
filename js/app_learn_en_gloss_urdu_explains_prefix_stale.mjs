@@ -3,7 +3,7 @@ import { app_en_learn_bible_gloss_urdu_settled_explains } from "./app_en_learn_b
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
-export async function app_en_learn_bible_gloss_urdu_explains_prefix_stale() {
+export async function app_learn_en_gloss_urdu_explains_prefix_stale() {
   "Every wording in the store that is a strict prefix of what the settled tables say for that same word today, with how many entries carry it. Each one is an older build of that one sentence: a clause was appended to the table and what stood before it was never retired.";
   "It is decidable from the two strings alone, which is the whole point of it. A wording that merely differs from the table's is usually a per-verse gloss doing its job, and counting those gives a number in the thousands that names no fault at all. A wording the table's own sentence begins with cannot be a second opinion about the word - it is the same sentence one clause short, and the only question is how it survived.";
   "It survived because retiring is a step somebody has to remember. The list of superseded wordings is written by hand as each round of rewriting lands, so it holds what that round's author thought to write down, and a word nobody was thinking about at the time keeps its old sentence forever. This asks the store instead, so it finds the words the author was not thinking about - which, by construction, are the only ones still broken.";
