@@ -13,7 +13,7 @@ import { gloss_root_named_word_spelled_in_is } from "./gloss_root_named_word_spe
 import { gloss_vocabularies_word_met_is } from "./gloss_vocabularies_word_met_is.mjs";
 import { gloss_chapters_entries_explained_generic } from "./gloss_chapters_entries_explained_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
-export async function app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted() {
+export async function app_learn_ceb_gloss_root_self_named_apart_vocabulary_counted() {
   "The sightings of the ambiguous wording whose named root is not spelled inside its word, split again by whether the language has ever heard of that root, which is the test for whether a filter would cost anything.";
   "★ THE SPELLING MARK ALONE IS A TRADE AND THIS ASKS WHETHER THE TRADE CAN BE AVOIDED. Reading all 43 roots it flags: 19 of them are English pronouns and account for 764 sightings, and the other 24 are real Cebuano roots whose spelling shifted - dala under dad-on, dumdom under nahinumdom - and account for 35. Filtering on spelling alone would therefore buy 764 corrections at a cost of 35 losses, which is a judgment somebody has to make rather than a fault to fix.";
   "Adding the vocabularies is what could make it cost nothing, because the two sides differ in a second way. A shifted root is an ordinary word of the language and stands somewhere in the bible or in the dictionary; an English pronoun stands in neither. So the question worth an answer is how many of the 35 the vocabularies rescue and how many of the 764 they let through.";
