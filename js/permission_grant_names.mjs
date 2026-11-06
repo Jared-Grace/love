@@ -1461,7 +1461,7 @@ export function permission_grant_names() {
     fn_name("js_function_forwarding_cases_gate_run"),
     fn_name("js_function_parameter_call_sizes_cases_gate_run"),
     fn_name("js_function_forwarding_remove_cases_gate_run"),
-    fn_name("app_ceb_bible_gloss_affix_kinds_wrong_chapters"),
+    fn_name("app_learn_ceb_gloss_affix_kinds_wrong_chapters"),
     fn_name("app_ceb_bible_gloss_write_passages"),
     fn_name("app_ceb_bible_gloss_chapter_upload_stored"),
     fn_name("app_ceb_bible_gloss_chapter_verse_claims_wrong"),

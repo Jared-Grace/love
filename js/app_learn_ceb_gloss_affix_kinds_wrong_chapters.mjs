@@ -5,7 +5,7 @@ import { list_map } from "./list_map.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_list_size } from "./property_list_size.mjs";
-export async function app_ceb_bible_gloss_affix_kinds_wrong_chapters() {
+export async function app_learn_ceb_gloss_affix_kinds_wrong_chapters() {
   "Every Cebuano chapter whose explanations call a piece of a word by a name the dictionary gives no piece of, worst first, with how many each holds.";
   "The count over the whole store answers whether the store is getting better. This answers which chapter to sit down with, which is a different question and the one somebody about to do the work is asking.";
   "The findings themselves are left behind and only their number is carried, because a whole store's prose is more than anybody reads at once. A single chapter hands over its own findings when it is chosen.";
