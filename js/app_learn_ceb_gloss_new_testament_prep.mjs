@@ -13,7 +13,7 @@ import { list_map_async } from "./list_map_async.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { wolff_word_find } from "./wolff_word_find.mjs";
-export async function app_ceb_bible_gloss_new_testament_prep() {
+export async function app_learn_ceb_gloss_new_testament_prep() {
   "How much dictionary reading stands between here and a Cebuano gloss of the whole New Testament, counted in words rather than in chapters.";
   "Chapters are the wrong unit for this. The same word stands in dozens of chapters and is looked up once, so the reading is far smaller than the writing, and the two have to be sized apart before either is planned.";
   "Only one of the counts is free, and it is the words already asked about. Everything else has to be asked of a website one word at a time with a wait between, which is the only part of this measured in hours. The other three counts say what that remainder is made of - how much of it looks like names, how much of it the printed dictionary also carries - which is worth knowing while planning and is not a reason to leave any of it unasked.";
