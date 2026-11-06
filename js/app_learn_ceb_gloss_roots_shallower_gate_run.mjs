@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
+import { app_learn_ceb_gloss_stored_not_is } from "./app_learn_ceb_gloss_stored_not_is.mjs";
 import { app_learn_ceb_gloss_roots_shallower } from "./app_learn_ceb_gloss_roots_shallower.mjs";
 import { app_learn_ceb_gloss_roots_shallower_baseline_path } from "./app_learn_ceb_gloss_roots_shallower_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -15,7 +15,7 @@ export async function app_learn_ceb_gloss_roots_shallower_gate_run() {
   ("So what a reader should expect of this gate from here on is narrower than what it was seeded for. It still refuses a thirtieth arriving, which is what it was built for and the only thing the pass that writes these explanations would do. It can no longer be the list somebody sits down with, because that list is gone.");
   ("A store that is not on the disk is passed over and said so, rather than counted as clean. The store lives on a drive that is not always mounted, and every Claude in the repo runs this gate - a sweep that read nothing and called it nought would turn one unmounted drive into a record wiped for everybody.");
   ("How many chapters were walked travels out beside the verdict, because finding none and reaching none are the same word otherwise. The chapters are asked for from the same place the sweep gets them, so the two fall together: on the day the store's own listing stops answering, the number goes to nought where a reader can see it rather than the verdict going quietly green.");
-  let unread = await app_ceb_bible_gloss_stored_not_is();
+  let unread = await app_learn_ceb_gloss_stored_not_is();
   if (unread) {
     let skipped = {
       skipped: 1,

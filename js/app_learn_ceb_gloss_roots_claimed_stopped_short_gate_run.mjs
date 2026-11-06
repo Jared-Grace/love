@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
+import { app_learn_ceb_gloss_stored_not_is } from "./app_learn_ceb_gloss_stored_not_is.mjs";
 import { app_learn_ceb_gloss_roots_claimed_stopped_short_named } from "./app_learn_ceb_gloss_roots_claimed_stopped_short_named.mjs";
 import { app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_path } from "./app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -14,7 +14,7 @@ export async function app_learn_ceb_gloss_roots_claimed_stopped_short_gate_run()
   "★ THE GATE BESIDE THIS ONE WENT THE OTHER WAY ON THE SAME MORNING, WHICH IS WHY THE CHECK ABOVE IS WORTH THE TIME. The record of words explained two ways went wholly stale in the same pass and must not be shrunk, because its reader only sees the one wording root is and the pass writes comes from instead - the words are still explained two ways on the disk and the reading can no longer see it. Same pass, same hour, opposite verdicts. A stale name is never news on its own.";
   "A store that is not on the disk is passed over and said so, rather than counted as clean. The store lives on a drive that is not always mounted, and every Claude in the repo runs this gate - a sweep that read nothing and called it nought would turn one unmounted drive into a record wiped for everybody.";
   "How many chapters were walked travels out beside the verdict, because finding none and reaching none are the same word otherwise.";
-  let unread = await app_ceb_bible_gloss_stored_not_is();
+  let unread = await app_learn_ceb_gloss_stored_not_is();
   if (unread) {
     let skipped = {
       skipped: 1,

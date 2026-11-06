@@ -1,5 +1,5 @@
 import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
-import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
+import { app_learn_ceb_gloss_stored_not_is } from "./app_learn_ceb_gloss_stored_not_is.mjs";
 import { app_learn_ceb_gloss_affix_kinds_wrong_names } from "./app_learn_ceb_gloss_affix_kinds_wrong_names.mjs";
 import { app_learn_ceb_gloss_affix_kinds_wrong_baseline_path } from "./app_learn_ceb_gloss_affix_kinds_wrong_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -10,7 +10,7 @@ export async function app_learn_ceb_gloss_affix_kinds_wrong_gate_run() {
   "It is the name of the piece and not its letters that is watched here, which is the opposite half from the sibling gate. A word can quote the right letters under the wrong name and a word can quote invented letters under a name the dictionary does give; neither check sees what the other does, and the earlier one passed six hundred and eleven of these.";
   "A store that is not on the disk is passed over and said so, rather than counted as clean. The store lives on a drive that is not always mounted, and every Claude in the repo runs this gate - a sweep that read nothing and called it nought would turn one unmounted drive into a record wiped for everybody.";
   "How many chapters were walked travels out beside the verdict, because finding none and reaching none are the same word otherwise.";
-  let unread = await app_ceb_bible_gloss_stored_not_is();
+  let unread = await app_learn_ceb_gloss_stored_not_is();
   if (unread) {
     let skipped = {
       skipped: 1,
