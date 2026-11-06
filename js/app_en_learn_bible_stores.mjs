@@ -1,5 +1,5 @@
 import { ebible_language_urdu } from "./ebible_language_urdu.mjs";
-import { app_en_learn_bible_gloss_urdu_generate_download } from "./app_en_learn_bible_gloss_urdu_generate_download.mjs";
+import { app_learn_en_gloss_urdu_generate_download } from "./app_learn_en_gloss_urdu_generate_download.mjs";
 import { app_learn_en_gloss_urdu_chapters_uploaded } from "./app_learn_en_gloss_urdu_chapters_uploaded.mjs";
 import { ebible_language_tagalog } from "./ebible_language_tagalog.mjs";
 import { app_learn_en_gloss_tagalog_generate_download } from "./app_learn_en_gloss_tagalog_generate_download.mjs";
@@ -10,7 +10,7 @@ export function app_en_learn_bible_stores() {
   "The first entry is the one the app opens in when the reader has chosen none of them.";
   let urdu = {
     language: ebible_language_urdu(),
-    download: app_en_learn_bible_gloss_urdu_generate_download,
+    download: app_learn_en_gloss_urdu_generate_download,
     chapters_uploaded: app_learn_en_gloss_urdu_chapters_uploaded,
   };
   let tagalog = {

@@ -2476,7 +2476,7 @@ export function permission_grant_names() {
     fn_name("function_imports_missing"),
     fn_name("berean_book_chapters_verses"),
     fn_name("app_en_learn_bible_gloss_urdu_unpublished_upload"),
-    fn_name("app_en_learn_bible_gloss_urdu_generate_download"),
+    fn_name("app_learn_en_gloss_urdu_generate_download"),
     fn_name("bible_glyph_chapter_rosetta_lines_file_source"),
     fn_name("web_assets_folder"),
     fn_name("web_assets_song_folder_name"),
