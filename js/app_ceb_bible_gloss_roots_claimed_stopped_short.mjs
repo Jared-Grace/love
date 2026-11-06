@@ -1,6 +1,6 @@
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_value } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_value.mjs";
-import { app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally.mjs";
+import { app_learn_ceb_gloss_roots_claimed_stopped_short_books_tally } from "./app_learn_ceb_gloss_roots_claimed_stopped_short_books_tally.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { each } from "./each.mjs";
@@ -26,7 +26,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   "★ NOT VOUCHED IS NOT DISPROVED. The vouching map vouches and never refuses, so a root missing from it may be perfectly good Cebuano that nothing in the dictionary happens to be built from. What is named here is a claim the dictionary is silent about standing where a claim the dictionary speaks for would have fitted, which is a reason to look and not a verdict.";
   "★ THE LONGER RUN IS NOT THE REPAIR EITHER. It is one root the dictionary knows that the word holds at that place, and a word can hold more than one. The longest is named first because it is the one the letters were cut from, and the rest are named beside it so a reader can see what the choice was.";
   arguments_assert(arguments, 0);
-  let r = await app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally();
+  let r = await app_learn_ceb_gloss_roots_claimed_stopped_short_books_tally();
   let books_tally = property_get(r, "books_tally");
   let vouched_is = property_get(r, "vouched_is");
   let sightings_named = property_get(r, "sightings_named");
