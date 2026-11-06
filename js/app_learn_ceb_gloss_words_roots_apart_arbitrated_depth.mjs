@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_words_roots_chapters_disagreeing } from "./app_ceb_bible_gloss_words_roots_chapters_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_ceb_gloss_words_roots_apart_arbitrated_contradiction_is } from "./app_learn_ceb_gloss_words_roots_apart_arbitrated_contradiction_is.mjs";
-import { app_ceb_bible_gloss_words_roots_apart_arbitrated_unproved } from "./app_ceb_bible_gloss_words_roots_apart_arbitrated_unproved.mjs";
+import { app_learn_ceb_gloss_words_roots_apart_arbitrated_unproved } from "./app_learn_ceb_gloss_words_roots_apart_arbitrated_unproved.mjs";
 export async function app_learn_ceb_gloss_words_roots_apart_arbitrated_depth() {
   arguments_assert(arguments, 0);
   let reading = await app_ceb_bible_gloss_words_roots_chapters_disagreeing();
@@ -11,7 +11,7 @@ export async function app_learn_ceb_gloss_words_roots_apart_arbitrated_depth() {
     await app_learn_ceb_gloss_words_roots_apart_arbitrated_contradiction_is(
       apart,
     );
-  let r3 = app_ceb_bible_gloss_words_roots_apart_arbitrated_unproved(r2);
+  let r3 = app_learn_ceb_gloss_words_roots_apart_arbitrated_unproved(r2);
   let unproved = property_get(r3, "unproved");
   let contradiction = property_get(r3, "contradiction");
   let shared = property_get(r3, "shared");

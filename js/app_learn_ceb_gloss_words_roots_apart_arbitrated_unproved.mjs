@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function app_ceb_bible_gloss_words_roots_apart_arbitrated_unproved(r2) {
+export function app_learn_ceb_gloss_words_roots_apart_arbitrated_unproved(r2) {
   arguments_assert(arguments, 1);
   let contradiction_is = property_get(r2, "contradiction_is");
   let shared_is = property_get(r2, "shared_is");
