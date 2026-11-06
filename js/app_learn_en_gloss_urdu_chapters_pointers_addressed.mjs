@@ -6,7 +6,7 @@ import { list_map_async } from "./list_map_async.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_en_learn_bible_gloss_urdu_chapters_pointers_addressed() {
+export async function app_learn_en_gloss_urdu_chapters_pointers_addressed() {
   "Writes addresses beside the pointing explanations of every chapter the Urdu gloss store holds, and answers with how many chapters were read, how many addresses were written, and how many different words got one.";
   "It takes no list, because the store already knows which chapters it holds and a list handed in could only be a stale copy of that. Running it again writes nothing more: an explanation that already carries an address is not looked at again, and one the chapter could not settle will not have become settled by asking a second time.";
   arguments_assert(arguments, 0);
