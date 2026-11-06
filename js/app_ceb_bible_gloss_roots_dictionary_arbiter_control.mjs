@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_roots_dictionary_arbiter_control_entry_read } from "./app_ceb_bible_gloss_roots_dictionary_arbiter_control_entry_read.mjs";
+import { app_learn_ceb_gloss_roots_dictionary_arbiter_control_entry_read } from "./app_learn_ceb_gloss_roots_dictionary_arbiter_control_entry_read.mjs";
 import { app_ceb_bible_gloss_roots_dictionary_arbiter_control_word_read } from "./app_ceb_bible_gloss_roots_dictionary_arbiter_control_word_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
@@ -24,7 +24,7 @@ export async function app_ceb_bible_gloss_roots_dictionary_arbiter_control() {
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let said = {};
   let entry_read =
-    app_ceb_bible_gloss_roots_dictionary_arbiter_control_entry_read(
+    app_learn_ceb_gloss_roots_dictionary_arbiter_control_entry_read(
       word_key,
       said,
     );
