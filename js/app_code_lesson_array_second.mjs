@@ -1,0 +1,48 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_array_first } from "./app_code_lesson_array_first.mjs";
+import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
+import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
+import { app_code_lesson_array_index_generic } from "./app_code_lesson_array_index_generic.mjs";
+export function app_code_lesson_array_second() {
+  arguments_assert(arguments, 0);
+  ("the second item of an array: let a = [14, 27, 35]; console.log(a[1]); writes out 27");
+  ("The one new fact is that counting from 0 makes a[1] the second item, not the first. Reading a[1] as the first item, or as the number 1, are both wrong answers on every screen.");
+  ("The second lesson of arrays, chosen by the human 2026-11-06. The writing is a first draft by Claude 2026-11-06.");
+  function above(root, context, example, walk) {
+    "a[0] remembered, then a[1] the second item";
+    let box_one = app_code_container_light_blue(root);
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_code_lesson_array_first,
+      ["", "a[0]", " is the first item of an array."],
+    );
+    let box_two = app_code_container_light_blue(root);
+    app_code_div_cycle_code(box_two, [
+      "So ",
+      "a[1]",
+      " is the second item, since counting starts at ",
+      "0",
+      ":",
+    ]);
+    example(box_two);
+    walk(box_two);
+  }
+  let name_id = app_code_lesson_statement_title_name_id(
+    "The second item of an array",
+    "a[1]",
+  );
+  let lesson = app_code_lesson_array_index_generic({
+    name_id,
+    above,
+    item_count: 3,
+    indexes: [1],
+    example: {
+      items: [14, 27, 35],
+      index: 1,
+    },
+  });
+  return lesson;
+}

@@ -14,6 +14,7 @@ import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_code_lesson_for } from "./app_code_lesson_for.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
+import { app_code_lesson_array_first } from "./app_code_lesson_array_first.mjs";
 export function app_code_lesson_groups() {
   arguments_assert(arguments, 0);
   ("the groups the home list folds its lessons into, each named and starting at the lesson given, and running until the next one starts - the last runs to the end of the list");
@@ -25,6 +26,7 @@ export function app_code_lesson_groups() {
   ("2026-10-31: Looping starts at While again, the step lessons having become the last quiz of each while lesson");
   ("2026-10-29: Branching split in three, at the human's asking: Branching: if, one if; Several branches: else, from the brace-reading lessons before two ifs in a row, through if ... else; Nested branches, from an if inside an if, through else if, which is an if inside an else written shorter. No lesson moved; the order already taught several branches before nested ones. Not picked: else if as a group of its own, four small groups for one idea. Then Multiple branches rather than Several, at the human's asking.");
   ("2026-11-04: Looping: for starts at For, at the human's asking. More looping: while starts at the while lessons that follow For, so those are not filed under for. Not picked: leaving them in the for group, which would name them wrongly; moving For after them, since For comes first for the easiest learning curve, the human's stated goal.");
+  ("2026-11-06: Arrays starts at The first item of an array, at the human's asking, a group of its own after the for+if lessons. Named by the one word, since an array has no keyword to show as code. Not picked: Arrays: followed by square brackets as code, which reads as an empty array rather than as the topic.");
   let groups = [
     {
       parts: ["Identifiers"],
@@ -113,6 +115,10 @@ export function app_code_lesson_groups() {
     {
       parts: ["More looping: ", "while"],
       lesson: app_code_lesson_while_two_names,
+    },
+    {
+      parts: ["Arrays"],
+      lesson: app_code_lesson_array_first,
     },
   ];
   return groups;
