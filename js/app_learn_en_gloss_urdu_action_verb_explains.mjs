@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_en_learn_bible_gloss_urdu_third_form_jobs } from "./app_en_learn_bible_gloss_urdu_third_form_jobs.mjs";
+import { app_learn_en_gloss_urdu_third_form_jobs } from "./app_learn_en_gloss_urdu_third_form_jobs.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { equal } from "./equal.mjs";
@@ -37,7 +37,7 @@ export function app_learn_en_gloss_urdu_action_verb_explains() {
   "The words for both jobs were taken from the store rather than composed, and the breadth test is what says they are the store's words and not one writer's. Saying the action was done to it appears five hundred and thirty nine times across a hundred and seventy nine different words; saying a thing has come to be finished appears over a hundred and forty; and the phrase for one word arriving alongside another appears across three hundred and twenty. Three separate phrases, each carried by enough different words to be a convention rather than a batch. So the sentence is assembled out of what the store already says, and a reader who has met any of these elsewhere meets them here in the same shape.";
   "One clause is now a single string used in three places - the irregular past that doubles as the third form, the separate third form, and the regular 'ed' form - because all three are the same English form doing the same two jobs. They were three sentences before and had already started to differ. A reader meeting 'said' and then 'named' should not be able to tell that two different pieces of code wrote their help.";
   ("That clause then left this file altogether, because a fourth and fifth caller turned up outside it. 'been' and 'done' are the third forms of the two commonest verbs in the Bible and they live in the helping verb table, which is a different file and was about to spell the same sentence again. So it is `",
-    fn_name("app_en_learn_bible_gloss_urdu_third_form_jobs"),
+    fn_name("app_learn_en_gloss_urdu_third_form_jobs"),
     "` now, and this table joins its own leading space to it. The helping verb table's own prose records four typed capitals that drifted apart one edit at a time while a rule above them said they were identical; a sentence spelled in two files is that same arrangement waiting to happen.");
   ("The grammar disagrees with the store's own habit in one place and the disagreement is deliberate. The store nearly always writes the verb of 'this tells you that' in its masculine form, because it nearly always has the word itself as the subject, and a word is masculine here. This sentence's subject is the form, which is feminine, so the verb is written feminine to match. Being correct beats matching a count in an app whose whole purpose is teaching a language.");
   ("The fifty sentences this replaced were written down before the change rather than worked out after it, and that order is the point. The retired list has to hold what was actually in front of readers, and a generator asked after the fact tells you what it would write now - which, having just been changed, is the new sentence. So the old strings were read out of the live table first and pasted into the retired list as literal text. A retired list that is itself generated cannot retire the thing it was written to retire.");
@@ -263,7 +263,7 @@ export function app_learn_en_gloss_urdu_action_verb_explains() {
     Bring: "bring",
   };
   let also = " یِہی شکل 'have' اَور 'be' کے ساتھ بھی آتی ہے:";
-  let jobs = " " + app_en_learn_bible_gloss_urdu_third_form_jobs();
+  let jobs = " " + app_learn_en_gloss_urdu_third_form_jobs();
   let learn = " اَیسے فعل یاد کرنے پڑتے ہیں۔";
   let changes = "، مگر چند پُرانے فعلوں میں لفظ خود بدل جاتا ہے: '";
   function changes_read(spelled, form) {

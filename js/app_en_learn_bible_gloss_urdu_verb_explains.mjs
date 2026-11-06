@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_en_learn_bible_gloss_urdu_third_form_jobs } from "./app_en_learn_bible_gloss_urdu_third_form_jobs.mjs";
+import { app_learn_en_gloss_urdu_third_form_jobs } from "./app_learn_en_gloss_urdu_third_form_jobs.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { property_set } from "./property_set.mjs";
@@ -19,7 +19,7 @@ export function app_en_learn_bible_gloss_urdu_verb_explains() {
   "The all-capital spelling is built from the same place with its own sentence added, because there the capital does mean something extra and a reader needs telling. The name table writes a sentence for that case too, in slightly different words, and the two should probably become one - left alone here on purpose, because that is a change to two tables and this one is about the be-forms.";
   "FOUR WORDINGS SAID ONLY WHERE THE FORM SITS, WHICH IS THE ONE THING THE READER COULD ALREADY SEE. 'been' said it comes after 'have', 'has' or 'had'; 'done' said the same; 'being' and 'having' said they are for an action in progress and that such forms end in 'ing'. Every word of that is true and none of it is the question. A reader looking at 'has been' can see 'been' sitting after 'has' - what they cannot see is what the pair is telling them. These four were the last stubs in a table whose other twenty entries say which verb, which time, and who it goes with.";
   ("So each now says what its form is for. 'been' and 'done' are third forms, so they say what a third form does: after 'have' the action is finished, after 'be' the action was done to the thing. 'done' takes that sentence from the shared `",
-    fn_name("app_en_learn_bible_gloss_urdu_third_form_jobs"),
+    fn_name("app_learn_en_gloss_urdu_third_form_jobs"),
     "` rather than spelling it, because the action verb table says it of every verb it knows, and a reader meets 'written' and 'done' in the same chapter. 'being' and 'having' say what the 'ing' form does when a third form follows it - 'being' marks the passive as it happens, 'having' marks the earlier of two actions.");
   ("The phrases were checked against the store before they were written, not after. Saying the action was done to it is carried by a hundred and seventy nine different words in the store; the phrase for an action in progress by two hundred and seventy; 'ہستی' by a hundred and thirteen; 'ہو چُکا تھا' by thirty six. Two phrases that had seemed natural were dropped for failing the same test - 'پہلے سے چلی آ رہی' is carried by two words and 'جِیتی جاگتی' by two, which is one writer's habit rather than the store's language. What replaced them is what the sibling entries for 'have', 'has' and 'had' already say.");
   ("'being' is told to name both of its jobs because the table cannot tell them apart. The word is a verb form in most verses and a noun in some - a living thing, somebody who exists - and a table keyed on spelling sees one word. Naming only the verb would be right most of the time and silently wrong the rest, which the rule five paragraphs up forbids. So the wording says the verb job, and then says the same spelling can be a noun and what it means there. That is the same answer the third form got: where the word has two jobs and the verse decides which, say both and let the reader do the deciding they are in the verse to do.");
@@ -48,7 +48,7 @@ export function app_en_learn_bible_gloss_urdu_verb_explains() {
     did: "فعل 'do' کی وہ شکل ہے جو گُزرے ہوئے وقت کے لیٔے آتی ہے۔ یہ بےقاعدہ ہے: do → did → done۔ یہ سوال بنانے اَور اِنکار کرنے میں دُوسرے فعلوں کی مدد بھی کرتی ہے۔",
     done:
       "فعل 'do' یعنی 'کرنا' کی وہ تِیسری شکل ہے جو 'have'، 'has' یا 'had' کے پِیچھے آتی ہے۔ " +
-      app_en_learn_bible_gloss_urdu_third_form_jobs() +
+      app_learn_en_gloss_urdu_third_form_jobs() +
       " یہ فعل بےقاعدہ ہے: do → did → done۔",
     can: "مدد کرنے والا فعل ہے۔ یہ بتاتا ہے کہ کویٔی کام ہو سکتا ہے: سکتا ہے۔",
     could:
