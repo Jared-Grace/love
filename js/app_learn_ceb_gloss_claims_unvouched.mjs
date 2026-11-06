@@ -9,7 +9,7 @@ import { gloss_classes_claimed_unvouched } from "./gloss_classes_claimed_unvouch
 import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-export async function app_ceb_bible_gloss_claims_unvouched(sample_size) {
+export async function app_learn_ceb_gloss_claims_unvouched(sample_size) {
   "The explanations in the Cebuano app that name a root nothing in the dictionary vouches for, most-seen first: where a made-up root would be if there is one.";
   "The dictionary cannot be asked whether it holds a word. A page with no breakdown and a page for a word the site never had are stored as the same four fields, three of them empty, so asking whether an entry is held answers only whether somebody asked. Every reading here that took holding for knowing was reading its own request back.";
   "What the site alone could have written is one of its entries naming another word as its root. That vouches, and it is the only thing in the stored data that does. Measured on the sightings gathered so far, it leaves a hundred and sixty three of them across seventy two pairs where the claimed root is held as a bare entry and named by nothing at all.";
