@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_stored_is } from "./app_ceb_bible_gloss_stored_is.mjs";
+import { app_learn_ceb_gloss_stored_is } from "./app_learn_ceb_gloss_stored_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { app_ceb_bible_gloss_words_explained_apart_names } from "./app_ceb_bible_gloss_words_explained_apart_names.mjs";
 import { app_ceb_bible_gloss_words_explained_apart_baseline_path } from "./app_ceb_bible_gloss_words_explained_apart_baseline_path.mjs";
@@ -11,7 +11,7 @@ export async function app_ceb_bible_gloss_words_explained_apart_baseline_reseed(
   "So the saying-so is a person's, by name, and shows up in the log as its own line - the same bargain the clearing command strikes, for the same reason: nothing here can check that the widening is honest, and nothing could. What it buys is that starting a ratchet again was chosen rather than slipped in under a routine rewrite.";
   "A store that is not on the disk stops it before it starts, for the reason the writer gives: a folder that is not there holds no chapters, so the walk would come back empty and the record would be seeded at nothing, which reads ever after like a store somebody has finished mending.";
   arguments_assert(arguments, 0);
-  let stored = await app_ceb_bible_gloss_stored_is();
+  let stored = await app_learn_ceb_gloss_stored_is();
   assert_json(stored, {
     hint: "the Cebuano gloss store is not on the disk, so there is nothing to seed the record from - mount the drive the store lives on and run this again",
     stored,
