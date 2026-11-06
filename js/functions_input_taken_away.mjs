@@ -8,7 +8,7 @@ export function functions_input_taken_away() {
   let names = [
     fn_name("app_learn_ceb_gloss_write_chapter_file"),
     fn_name("app_learn_en_gloss_tagalog_write_chapter_file"),
-    fn_name("app_en_learn_bible_gloss_urdu_write_chapter_file"),
+    fn_name("app_learn_en_gloss_urdu_write_chapter_file"),
   ];
   return names;
 }
