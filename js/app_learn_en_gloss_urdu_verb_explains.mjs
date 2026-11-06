@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_en_learn_bible_gloss_urdu_verb_explains() {
+export function app_learn_en_gloss_urdu_verb_explains() {
   "The wording every explanation of an English helping verb is given in the store that teaches English to an Urdu reader - the forms of be, of have, of do, and the small words that put a verb into another time.";
   "These are the words a beginner meets most and understands least. They carry almost no meaning of their own, they change shape for no reason a learner can see, and English will not let a sentence stand without them. An Urdu reader looking at ‘is’ is not looking for a translation of it, they are looking for what it is doing there.";
   "So each wording says which verb the form belongs to, which time it stands for, and who it goes with - one, or more than one. That is the whole of what tells the forms apart, and it is what a reader needs in order to recognise the next one they meet rather than looking it up again.";
