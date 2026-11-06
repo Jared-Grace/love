@@ -6,7 +6,7 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
-export async function app_ceb_bible_gloss_root_word_given_apart_counted_vocabulary() {
+export async function app_learn_ceb_gloss_root_word_given_apart_counted_vocabulary() {
   arguments_assert(arguments, 0);
   let common = await app_ceb_bible_words_common();
   let dictionary = await binisaya_words_known();

@@ -1,5 +1,5 @@
 import { list_size_equal } from "./list_size_equal.mjs";
-import { app_ceb_bible_gloss_root_word_given_apart_counted_vocabulary } from "./app_ceb_bible_gloss_root_word_given_apart_counted_vocabulary.mjs";
+import { app_learn_ceb_gloss_root_word_given_apart_counted_vocabulary } from "./app_learn_ceb_gloss_root_word_given_apart_counted_vocabulary.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -30,7 +30,7 @@ export async function app_ceb_bible_gloss_root_word_given_apart_counted(
   let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let vocabulary =
-    await app_ceb_bible_gloss_root_word_given_apart_counted_vocabulary();
+    await app_learn_ceb_gloss_root_word_given_apart_counted_vocabulary();
   let vocabulary_none = list_unique_set([]);
   let sentence_total = 0;
   let spelling_total = 0;
