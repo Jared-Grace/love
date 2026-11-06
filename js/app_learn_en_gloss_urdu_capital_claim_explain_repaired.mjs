@@ -2,7 +2,7 @@ import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { app_en_learn_bible_gloss_urdu_capital_claim_wordings } from "./app_en_learn_bible_gloss_urdu_capital_claim_wordings.mjs";
+import { app_learn_en_gloss_urdu_capital_claim_wordings } from "./app_learn_en_gloss_urdu_capital_claim_wordings.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_en_learn_bible_gloss_urdu_explain_capital_claims } from "./app_en_learn_bible_gloss_urdu_explain_capital_claims.mjs";
 import { text_urdu_sentence_end } from "./text_urdu_sentence_end.mjs";
@@ -14,7 +14,7 @@ export function app_learn_en_gloss_urdu_capital_claim_explain_repaired(entry) {
   let explain = property_get_or_null(entry, key);
   let word = gloss_entry_word_read(entry);
   let folded = text_lower_to(word);
-  let wordings = app_en_learn_bible_gloss_urdu_capital_claim_wordings();
+  let wordings = app_learn_en_gloss_urdu_capital_claim_wordings();
   let authored = property_get_or_null(wordings, folded);
   let held = null_not_is(authored);
   if (held) {
