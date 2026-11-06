@@ -12,7 +12,7 @@ import { not } from "./not.mjs";
 import { add } from "./add.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
-export async function app_ceb_bible_gloss_root_omitted_wordings_walked(words) {
+export async function app_learn_ceb_gloss_root_omitted_wordings_walked(words) {
   "Walks every glossed entry and, for the words asked about only, counts the times a root was named and the times it was left out, and keeps the wordings themselves on each side - so the two accounts of one word can be read against each other to see what the explanation said instead of naming a root.";
   arguments_assert(arguments, 1);
   let fn = app_learn_ceb_gloss_generate;

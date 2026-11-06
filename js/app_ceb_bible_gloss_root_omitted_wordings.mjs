@@ -1,5 +1,5 @@
 import { app_ceb_bible_gloss_root_omitted_wordings_word_read } from "./app_ceb_bible_gloss_root_omitted_wordings_word_read.mjs";
-import { app_ceb_bible_gloss_root_omitted_wordings_walked } from "./app_ceb_bible_gloss_root_omitted_wordings_walked.mjs";
+import { app_learn_ceb_gloss_root_omitted_wordings_walked } from "./app_learn_ceb_gloss_root_omitted_wordings_walked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
@@ -22,7 +22,7 @@ export async function app_ceb_bible_gloss_root_omitted_wordings() {
     "kinabuhi",
     "atubangan",
   ];
-  let r2 = await app_ceb_bible_gloss_root_omitted_wordings_walked(words);
+  let r2 = await app_learn_ceb_gloss_root_omitted_wordings_walked(words);
   let walked = property_get(r2, "walked");
   let by_word = property_get(r2, "by_word");
   let rows = [];
