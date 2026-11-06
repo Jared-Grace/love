@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_search_language_words } from "./app_search_language_words.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_bible_search_chapter_verses_matching } from "./app_bible_search_chapter_verses_matching.mjs";
-export async function app_search_language_matching_or_null(
+export async function app_bible_search_language_matching_or_null(
   language_code,
   query,
 ) {

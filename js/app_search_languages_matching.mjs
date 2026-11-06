@@ -1,5 +1,5 @@
 import { app_search_languages_answers_joined } from "./app_search_languages_answers_joined.mjs";
-import { app_search_language_matching_or_null } from "./app_search_language_matching_or_null.mjs";
+import { app_bible_search_language_matching_or_null } from "./app_bible_search_language_matching_or_null.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_search_language_searchable } from "./app_search_language_searchable.mjs";
 import { list_add } from "./list_add.mjs";
@@ -30,7 +30,10 @@ export async function app_search_languages_matching(languages_chosen, query) {
     }
   }
   async function language_matching(language_code) {
-    let r2 = await app_search_language_matching_or_null(language_code, query);
+    let r2 = await app_bible_search_language_matching_or_null(
+      language_code,
+      query,
+    );
     return r2;
   }
   let answers = await list_map_unordered_async(codes, language_matching);
