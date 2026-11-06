@@ -28,7 +28,7 @@ export async function app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run
     offenders,
     path,
     "these explanations quote a chapter of the Bible with words the Urdu Bible on the page does not hold there - open that chapter and copy its words into the quote",
-    fn_name("app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_write"),
+    fn_name("app_learn_en_gloss_urdu_bible_quotes_absent_baseline_write"),
   );
   let r = await gloss_gate_told_chapters(fn, told);
   return r;
