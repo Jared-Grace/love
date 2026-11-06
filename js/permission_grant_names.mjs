@@ -1576,7 +1576,7 @@ export function permission_grant_names() {
     fn_name("g_verify_chapter_asked_cases_gate_run"),
     fn_name("query_key_getters_all"),
     fn_name("bless_block_materials_gate_run"),
-    fn_name("app_ceb_bible_gloss_affix_letters_apart_gate_run"),
+    fn_name("app_learn_ceb_gloss_affix_letters_apart_gate_run"),
     fn_name("app_ceb_bible_gloss_roots_shallower_baseline_write"),
     fn_name("folder_root_move_bare_named"),
     fn_name("app_shared_text_reader_untranslated_gate_run"),

@@ -4,7 +4,7 @@ import { app_ceb_bible_gloss_affix_letters_apart } from "./app_ceb_bible_gloss_a
 import { app_learn_ceb_gloss_affix_letters_apart_baseline_path } from "./app_learn_ceb_gloss_affix_letters_apart_baseline_path.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
-export async function app_ceb_bible_gloss_affix_letters_apart_gate_run() {
+export async function app_learn_ceb_gloss_affix_letters_apart_gate_run() {
   "Gate: no Cebuano explanation may quote letters for a piece of its word that stand nowhere in the dictionary's cut of it. Throws so the dispatcher seam exits nonzero.";
   "The record stands empty and that is the point. Six hundred and fifty of these explanations disagree with the dictionary about where a word ends and its piece begins, and every one of those tells a learner something true; the handful that quoted letters belonging to neither the word nor its cut were repaired, and no reading is left that would justify another.";
   "It is the letters and not the name of the piece that is watched here. A check on the name alone passes any word the dictionary builds with a piece of that kind, however wrong the letters quoted for it - six hundred and eleven faults were invisible behind exactly that.";
