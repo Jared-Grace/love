@@ -20,7 +20,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
-export function app_search_results_verse_button(
+export function app_bible_search_results_verse_button(
   verse_number,
   div_chapter,
   chapter_code,

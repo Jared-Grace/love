@@ -20,7 +20,7 @@ import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
-import { app_search_results_verse_button } from "./app_search_results_verse_button.mjs";
+import { app_bible_search_results_verse_button } from "./app_bible_search_results_verse_button.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { list_map } from "./list_map.mjs";
@@ -64,7 +64,7 @@ export function app_bible_search_results_chapter_card(
   let chapter_header = html_div_text_bold(div_chapter, chapter_header_text);
   html_style_margin_bottom(chapter_header, "0.3em");
   function each_verse_number(verse_number) {
-    let r = app_search_results_verse_button(
+    let r = app_bible_search_results_verse_button(
       verse_number,
       div_chapter,
       chapter_code,
