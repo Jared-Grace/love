@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_map } from "./list_map.mjs";
-export async function app_ceb_bible_gloss_words_edged_labelled(
+export async function app_learn_ceb_gloss_words_edged_labelled(
   offenders,
   carried,
 ) {
