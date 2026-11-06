@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { not } from "./not.mjs";
-import { app_en_learn_bible_gloss_urdu_occurrence_claims_rule_mixed_names } from "./app_en_learn_bible_gloss_urdu_occurrence_claims_rule_mixed_names.mjs";
+import { app_learn_en_gloss_urdu_occurrence_claims_rule_mixed_names } from "./app_learn_en_gloss_urdu_occurrence_claims_rule_mixed_names.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { list_size } from "./list_size.mjs";
@@ -24,7 +24,7 @@ export async function app_learn_en_gloss_urdu_occurrence_claim_rule_gate_run() {
     return skipped;
   }
   let offenders =
-    await app_en_learn_bible_gloss_urdu_occurrence_claims_rule_mixed_names();
+    await app_learn_en_gloss_urdu_occurrence_claims_rule_mixed_names();
   list_empty_is_assert_json(offenders, {
     hint: "in each of these chapters one English word is counted two different ways - list that word's numbers through the whole chapter, see which rule the chapter keeps to for most of it, and mend the few sentences that leave it; the sentence named is where the counting changed, so the slip is behind it",
     offenders,
