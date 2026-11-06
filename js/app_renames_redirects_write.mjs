@@ -10,7 +10,7 @@ import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_in_list_not } from "./property_in_list_not.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_renames_page_ready } from "./app_renames_page_ready.mjs";
+import { app_shared_renames_page_ready } from "./app_shared_renames_page_ready.mjs";
 import { not } from "./not.mjs";
 import { app_shared_renames_current } from "./app_shared_renames_current.mjs";
 import { app_route } from "./app_route.mjs";
@@ -44,7 +44,7 @@ export async function app_renames_redirects_write() {
   let made = [];
   for (let rename of renames) {
     let before = property_get(rename, "before");
-    let ready = await app_renames_page_ready(renames, before);
+    let ready = await app_shared_renames_page_ready(renames, before);
     if (not(ready)) {
       continue;
     }

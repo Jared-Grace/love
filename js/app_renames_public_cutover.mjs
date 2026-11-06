@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_renames } from "./app_renames.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_renames_page_ready } from "./app_renames_page_ready.mjs";
+import { app_shared_renames_page_ready } from "./app_shared_renames_page_ready.mjs";
 import { not } from "./not.mjs";
 import { folder_public_absolute } from "./folder_public_absolute.mjs";
 import { folder_app_file_names } from "./folder_app_file_names.mjs";
@@ -17,7 +17,7 @@ export async function app_renames_public_cutover() {
   let removed = [];
   for (let rename of renames) {
     let before = property_get(rename, "before");
-    let ready = await app_renames_page_ready(renames, before);
+    let ready = await app_shared_renames_page_ready(renames, before);
     if (not(ready)) {
       continue;
     }
