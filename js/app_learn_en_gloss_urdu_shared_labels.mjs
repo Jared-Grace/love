@@ -1,4 +1,4 @@
-export function app_en_learn_bible_gloss_urdu_shared_labels() {
+export function app_learn_en_gloss_urdu_shared_labels() {
   "The wordings the store that explains English words to an Urdu reader hands to whole classes of words at once, saying what kind of word it is and nothing about the word in front of the reader.";
   "These are the sentences to write over. Each one is true of the word it stands under and would be just as true of a hundred others, so a reader meeting it learns that ‘but’ is a joining word and is left to guess what it joins. Measured across the store, seventy four wordings like these carry thousands of entries between them.";
   "The pointers are here for the same reason and not a different one. A wording reading ‘the same word again’ never says the thing, it sends the reader back up the passage to look for it, and where the earlier entry was itself a pointer there is nothing at the end of the trail. The method note names this the single worst failure in gloss content.";
