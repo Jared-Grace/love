@@ -1,6 +1,6 @@
 import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_explain_meaning_parts } from "./app_en_learn_bible_gloss_urdu_explain_meaning_parts.mjs";
+import { app_learn_en_gloss_urdu_explain_meaning_parts } from "./app_learn_en_gloss_urdu_explain_meaning_parts.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is } from "./app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is.mjs";
 import { app_en_learn_bible_gloss_urdu_pointing_cores } from "./app_en_learn_bible_gloss_urdu_pointing_cores.mjs";
@@ -17,7 +17,7 @@ export function app_en_learn_bible_gloss_urdu_pointing_explain_fresh(
   "Three reasons to answer with nothing, and each one is a refusal to invent. The earlier explanation may have nothing to lend, being a pointing sentence itself. It may be tied to its own place in the verse, in which case carrying it would put an unchecked claim in the reader's hands. And it may say no more than the pointing sentence already said, in which case the reader gains nothing and only the counting gets quieter, which is the worst of the three because it looks like progress.";
   "What the pointing explanation says after its first sentence is kept and put back at the end. That is where the store writes why the first letter is a capital, and it is true of this place and of no other, so it must survive a sentence arriving from somewhere else.";
   arguments_assert(arguments, 2);
-  let borrowed = app_en_learn_bible_gloss_urdu_explain_meaning_parts(source);
+  let borrowed = app_learn_en_gloss_urdu_explain_meaning_parts(source);
   let nothing_to_lend = list_empty_is(borrowed);
   if (nothing_to_lend) {
     return null;
