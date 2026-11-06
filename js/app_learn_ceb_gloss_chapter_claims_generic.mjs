@@ -1,7 +1,7 @@
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_word_root_key_reader } from "./binisaya_word_root_key_reader.mjs";
 import { gloss_word_keys_reader_one } from "./gloss_word_keys_reader_one.mjs";
-import { app_ceb_bible_gloss_text_index } from "./app_ceb_bible_gloss_text_index.mjs";
+import { app_learn_ceb_gloss_text_index } from "./app_learn_ceb_gloss_text_index.mjs";
 import { gloss_chapter_claims_generic } from "./gloss_chapter_claims_generic.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_chapter_found_counted } from "./gloss_chapter_found_counted.mjs";
@@ -19,7 +19,7 @@ export async function app_learn_ceb_gloss_chapter_claims_generic(
   let known = await binisaya_words_known();
   let word_key_read = binisaya_word_root_key_reader(known);
   let word_keys_read = gloss_word_keys_reader_one(word_key_read);
-  let text_index = app_ceb_bible_gloss_text_index();
+  let text_index = app_learn_ceb_gloss_text_index();
   let found = await gloss_chapter_claims_generic(
     chapter_code,
     app_learn_ceb_gloss_generate,
