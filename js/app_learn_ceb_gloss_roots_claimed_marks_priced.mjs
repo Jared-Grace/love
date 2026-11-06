@@ -17,7 +17,7 @@ import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_marks_priced() {
+export async function app_learn_ceb_gloss_roots_claimed_marks_priced() {
   "What taking the accent marks off a stated root would actually buy: every root written with one, and whether the same root without it is a word the bible writes or a word the dictionary holds.";
   "The reading of the rare letters found roots written da, tamay and pangganod with a stress mark on a vowel, and the Cebuano bible writes that mark in no word at all, so nothing matching a root against the text can ever meet one. That is a reason to fold the marks away, and a reason is not a price. A fold is worth what it lets a reader find that they could not find before, and a root that is unmatchable with the mark and still unmatchable without it is not helped by folding at all.";
   "So both spellings are put to both vocabularies and the four answers are handed back together. A root that goes from found nowhere to found in the bible is what the fold buys; a root that was already found, or is found neither way, is what it does not.";

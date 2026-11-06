@@ -19,7 +19,7 @@ import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs
 export async function app_learn_ceb_gloss_roots_claimed_marks_inside_priced() {
   "What taking the accent marks off a stated root would buy on the one test that the marks actually reach: whether the root is spelled inside the word it is said to be the root of.";
   ("★ THE FOLD IS ALREADY PRICED AND THE PRICE WAS TAKEN OVER THE WRONG POPULATION. ",
-    fn_name("app_ceb_bible_gloss_roots_claimed_marks_priced"),
+    fn_name("app_learn_ceb_gloss_roots_claimed_marks_priced"),
     " asks whether the stripped spelling turns up among the words the bible writes or the words the dictionary holds, and answers nothing bought, none of twelve, none of thirty sightings. That answer is correct and it is about a question nobody was going to ask. Every marked root is already held by the dictionary with its mark on, so of course the strip adds nothing there. The place a mark costs something is somewhere else entirely, and it was never asked.");
   ("Where it costs something is ",
     fn_name("app_ceb_bible_gloss_roots_claimed_outside_word"),
