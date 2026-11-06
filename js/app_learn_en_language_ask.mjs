@@ -5,7 +5,7 @@ import { html_mobile_default } from "./html_mobile_default.mjs";
 import { app_shared_screen_centered } from "./app_shared_screen_centered.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { app_en_learn_bible_language_names_own } from "./app_en_learn_bible_language_names_own.mjs";
+import { app_learn_en_language_names_own } from "./app_learn_en_language_names_own.mjs";
 import { app_en_learn_bible_stores } from "./app_en_learn_bible_stores.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { property_get } from "./property_get.mjs";
@@ -26,7 +26,7 @@ export function app_learn_en_language_ask(context, on_chosen) {
   app_shared_text_body(card, "Choose the language you speak");
   app_shared_text_body(card, "اپنی زبان منتخب کریں");
   app_shared_text_body(card, "Piliin ang wikang ginagamit mo");
-  let names = app_en_learn_bible_language_names_own();
+  let names = app_learn_en_language_names_own();
   let stores = app_en_learn_bible_stores();
   let property_name = language_code_key();
   for (let store of stores) {
