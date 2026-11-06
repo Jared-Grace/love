@@ -10,7 +10,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_sort_text_mapper } from "./list_sort_text_mapper.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
-export function app_search_results_render(
+export function app_bible_search_results_render(
   div_results,
   books,
   results,

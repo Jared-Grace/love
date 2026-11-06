@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_search_results_render } from "./app_search_results_render.mjs";
+import { app_bible_search_results_render } from "./app_bible_search_results_render.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { app_shared_folds_set } from "./app_shared_folds_set.mjs";
@@ -15,7 +15,7 @@ export async function app_bible_search_results_render_and_open(
 ) {
   "Drawing the found verses onto the page, and then opening whatever the search left no choice about.";
   arguments_assert(arguments, 4);
-  let r = app_search_results_render(
+  let r = app_bible_search_results_render(
     div_results,
     books,
     results,
