@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
+import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { app_learn_ceb_gloss_affix_kinds_wrong_names } from "./app_learn_ceb_gloss_affix_kinds_wrong_names.mjs";
 import { app_learn_ceb_gloss_affix_kinds_wrong_baseline_path } from "./app_learn_ceb_gloss_affix_kinds_wrong_baseline_path.mjs";
@@ -28,6 +28,6 @@ export async function app_learn_ceb_gloss_affix_kinds_wrong_gate_run() {
     "these explanations call a piece of their word by a name the dictionary gives the word no piece of - name only the kinds of piece the dictionary gives for that word, or name none",
     name_write,
   );
-  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
+  let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
 }

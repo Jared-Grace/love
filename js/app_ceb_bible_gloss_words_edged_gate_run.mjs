@@ -4,7 +4,7 @@ import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_
 import { app_ceb_bible_gloss_words_edged_names } from "./app_ceb_bible_gloss_words_edged_names.mjs";
 import { app_ceb_bible_gloss_words_edged_baseline_path } from "./app_ceb_bible_gloss_words_edged_baseline_path.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
+import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
 export async function app_ceb_bible_gloss_words_edged_gate_run() {
   "Gate: no Cebuano gloss chapter authored from here on may explain a word that still carries a mark from the sentence around it. Throws so the dispatcher seam exits nonzero.";
   "★ A WORD NAMED HERE IS INVISIBLE TO EVERY OTHER CHECK IN THE REPO, WHICH IS WHY THIS ONE IS WORTH KEEPING. The root checks, the affix checks and the dictionary readings all ask under the spelling the author typed, so a word wearing a quotation mark or a comma is asked for under a spelling no dictionary holds, comes back unknown, and is passed over in silence by all of them. Nothing goes red anywhere; the word is simply never looked at again.";
@@ -32,6 +32,6 @@ export async function app_ceb_bible_gloss_words_edged_gate_run() {
     "these explanations are written against a word that still carries a mark from the sentence around it, so every root and affix check asks the dictionary under a spelling it does not hold and passes the word over without a word - open the chapter at that word and write the explanation against the word alone, leaving the mark in the verse where it belongs",
     fn_name("app_ceb_bible_gloss_words_edged_baseline_write"),
   );
-  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
+  let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
 }

@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
+import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_verse_claims_wrong_names } from "./app_ceb_bible_gloss_verse_claims_wrong_names.mjs";
@@ -31,6 +31,6 @@ export async function app_ceb_bible_gloss_verse_claims_wrong_gate_run() {
     "these explanations name a verse of their own chapter that holds no word built on the same root - open the chapter at that word and read the sentence: mend it if it claims the word stands in the verse it names, and bank it deliberately if it only says what happens there",
     name_write,
   );
-  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
+  let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
 }

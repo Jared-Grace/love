@@ -4,7 +4,7 @@ import { app_ceb_bible_gloss_words_unwritten_names } from "./app_ceb_bible_gloss
 import { app_ceb_bible_gloss_words_unwritten_baseline_path } from "./app_ceb_bible_gloss_words_unwritten_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
+import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
 export async function app_ceb_bible_gloss_words_unwritten_gate_run() {
   "Gate: no Cebuano gloss word authored from here on may be a word the whole Cebuano translation never writes standing alone. Throws so the dispatcher seam exits nonzero.";
   "★ AN EXPLANATION IS PAINTED UNDER A WORD OF THE VERSE, SO A WORD NAMED HERE IS AN EXPLANATION THE READER FINDS NOTHING TO STAND ON. It is not a complaint about the language. Every explained word was supposed to have been taken out of the passage it sits under, so a word the translation never writes at all is a spelling that went wrong on the way in, or an explanation written about something the passage does not say.";
@@ -31,6 +31,6 @@ export async function app_ceb_bible_gloss_words_unwritten_gate_run() {
     "the Cebuano translation never writes these explained words standing anywhere in sixty-six books, so the reader has nothing to paint the explanation under - open the passage the word is explained in and mend the spelling to the word the verse actually writes, or take the explanation away if the passage does not carry the word at all",
     fn_name("app_ceb_bible_gloss_words_unwritten_baseline_write"),
   );
-  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
+  let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
 }

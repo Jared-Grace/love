@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
+import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { app_learn_ceb_gloss_affix_letters_apart } from "./app_learn_ceb_gloss_affix_letters_apart.mjs";
 import { app_learn_ceb_gloss_affix_letters_apart_baseline_path } from "./app_learn_ceb_gloss_affix_letters_apart_baseline_path.mjs";
@@ -28,6 +28,6 @@ export async function app_learn_ceb_gloss_affix_letters_apart_gate_run() {
     "these explanations quote letters for a piece of their word that stand nowhere in the dictionary's cut of it, so the piece was got from nowhere - quote the letters the dictionary gives, or leave the piece unnamed",
     name_write,
   );
-  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
+  let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
 }

@@ -3,7 +3,7 @@ import { app_ceb_bible_gloss_roots_shallower } from "./app_ceb_bible_gloss_roots
 import { app_ceb_bible_gloss_roots_shallower_baseline_path } from "./app_ceb_bible_gloss_roots_shallower_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
+import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
 export async function app_ceb_bible_gloss_roots_shallower_gate_run() {
   "Gate: no Cebuano explanation may newly hand the reader a word built out of the root as though it were the root. Throws so the dispatcher seam exits nonzero.";
   "This is the single thing the whole gloss exists to prevent - a learner told that lilisang is where makalilisang comes from has been taught a word nobody speaks. Thirty of them were taken out by hand, and the pass that writes these explanations would put them straight back if it were run again over a chapter.";
@@ -30,6 +30,6 @@ export async function app_ceb_bible_gloss_roots_shallower_gate_run() {
     "these explanations name a word built out of the root as though it were the root, which hands a learner a word nobody speaks - write the root the dictionary gives, or say plainly that the word named is a further layer built on it",
     fn_name("app_ceb_bible_gloss_roots_shallower_baseline_write"),
   );
-  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
+  let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
 }

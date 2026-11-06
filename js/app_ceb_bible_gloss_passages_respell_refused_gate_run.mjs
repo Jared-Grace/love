@@ -4,7 +4,7 @@ import { app_ceb_bible_gloss_passages_respell_refused_names } from "./app_ceb_bi
 import { app_ceb_bible_gloss_passages_respell_refused_baseline_path } from "./app_ceb_bible_gloss_passages_respell_refused_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
+import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
 export async function app_ceb_bible_gloss_passages_respell_refused_gate_run() {
   "Gate: no Cebuano gloss passage authored from here on may explain a different number of words than the passage holds, which is the shape that makes the respell walk past it. Throws so the dispatcher seam exits nonzero.";
   ("The record started full and may only shrink. Thirteen passages were already in that state when the store was first read for this, each of them a reading job rather than a sweep, and all thirteen have since been mended. On the second of October the walk reached nine hundred and seventy nine chapters and twenty three thousand nine hundred and thirty five passages and declined none of them, so the record was emptied on purpose with ",
@@ -30,6 +30,6 @@ export async function app_ceb_bible_gloss_passages_respell_refused_gate_run() {
     "the words these passages explain do not come to the same number as the words they hold, so the respell walks past them and says nothing - explain the word that was missed, or take away the explanation of a word the passage does not carry",
     fn_name("app_ceb_bible_gloss_passages_respell_refused_baseline_write"),
   );
-  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
+  let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
 }

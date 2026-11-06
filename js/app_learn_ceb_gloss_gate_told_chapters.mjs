@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-export async function app_ceb_bible_gloss_gate_told_chapters(told) {
+export async function app_learn_ceb_gloss_gate_told_chapters(told) {
   arguments_assert(arguments, 1);
   ("What a Cebuano gloss gate hands back once its record has been checked: whatever the check said, with how many chapters of this store were walked to reach it standing beside it.");
   ("The count travels out because finding nothing and reaching nothing are the same word otherwise. A gate that walked four hundred and forty-nine chapters and met no offender is clean; a gate that walked none because the drive was not mounted has said nothing at all, and both of them would otherwise answer nought.");
