@@ -3,7 +3,7 @@ import { app_ceb_bible_gloss_words_roots_chapters_disagreeing } from "./app_ceb_
 import { property_get } from "./property_get.mjs";
 import { app_learn_ceb_gloss_words_roots_apart_arbitrated_contradiction_is } from "./app_learn_ceb_gloss_words_roots_apart_arbitrated_contradiction_is.mjs";
 import { app_ceb_bible_gloss_words_roots_apart_arbitrated_unproved } from "./app_ceb_bible_gloss_words_roots_apart_arbitrated_unproved.mjs";
-export async function app_ceb_bible_gloss_words_roots_apart_arbitrated_depth() {
+export async function app_learn_ceb_gloss_words_roots_apart_arbitrated_depth() {
   arguments_assert(arguments, 0);
   let reading = await app_ceb_bible_gloss_words_roots_chapters_disagreeing();
   let apart = property_get(reading, "apart");
