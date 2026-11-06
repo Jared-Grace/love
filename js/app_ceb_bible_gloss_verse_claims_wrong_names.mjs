@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_chapters_verse_claims_wrong } from "./app_ceb_bible_gloss_chapters_verse_claims_wrong.mjs";
+import { app_learn_ceb_gloss_chapters_verse_claims_wrong } from "./app_learn_ceb_gloss_chapters_verse_claims_wrong.mjs";
 import { gloss_chapters_claims_wrong_names } from "./gloss_chapters_claims_wrong_names.mjs";
 export async function app_ceb_bible_gloss_verse_claims_wrong_names() {
   "Every Cebuano word explanation naming a verse of its own chapter that holds nothing built on the same root, named once each by the chapter, the verses the passage covers, the word and the verse it named.";
@@ -9,7 +9,7 @@ export async function app_ceb_bible_gloss_verse_claims_wrong_names() {
   "The Urdu store is the opposite case and the comparison is the useful half: it says آیت twenty-four thousand times, so the same reading over it is a long reading queue. The difference is not the languages, it is what the writers habitually do, and nothing in the reading can tell you which kind of store it has been handed.";
   "How a row is named is the same in every store, so it is asked for rather than written out here. What this keeps is which sweep to run.";
   arguments_assert(arguments, 0);
-  let chapters = await app_ceb_bible_gloss_chapters_verse_claims_wrong();
+  let chapters = await app_learn_ceb_gloss_chapters_verse_claims_wrong();
   let names = gloss_chapters_claims_wrong_names(chapters);
   return names;
 }
