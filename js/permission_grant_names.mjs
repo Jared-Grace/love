@@ -1079,7 +1079,7 @@ export function permission_grant_names() {
     fn_name("binisaya_word_read_cache"),
     fn_name("g_sermon_book_days_all"),
     fn_name("g_sermon_chapters_passage_lines"),
-    fn_name("app_ceb_bible_gloss_words_distinct"),
+    fn_name("app_learn_ceb_gloss_words_distinct"),
     fn_name("app_ceb_bible_gloss_words_gather"),
     fn_name("app_learn_ceb_gloss_roots_disagreeing"),
     fn_name("app_code_lesson_expression_which_part_first_gate_run"),
