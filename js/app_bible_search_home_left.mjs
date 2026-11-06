@@ -15,7 +15,7 @@ import { html_input_text } from "./html_input_text.mjs";
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_on_enter } from "./html_on_enter.mjs";
 import { emoji_search } from "./emoji_search.mjs";
-export function app_search_home_left(context, hash, search) {
+export function app_bible_search_home_left(context, hash, search) {
   arguments_assert(arguments, 3);
   let root = property_get(context, "root");
   html_clear(root);
