@@ -1,7 +1,7 @@
 import { app_learn_ceb_gloss_roots_disagreeing_offenders } from "./app_learn_ceb_gloss_roots_disagreeing_offenders.mjs";
 import { gloss_offenders_roots_silent_words } from "./gloss_offenders_roots_silent_words.mjs";
 import { app_ceb_bible_gloss_words_rows_names_apart_sample } from "./app_ceb_bible_gloss_words_rows_names_apart_sample.mjs";
-export async function app_ceb_bible_gloss_roots_silent_words(sample_size) {
+export async function app_learn_ceb_gloss_roots_silent_words(sample_size) {
   "Every Cebuano word whose explanation says nothing about the root binisaya.com takes it back to, named once each with the chapters it was met in, commonest first - with the borrowed names the dictionary only appears to have analysed set aside.";
   "This is one of the two lists to write from, and measured on 2026-09-06 it is the smaller of them: 253 words stand here against 424 naming a root the dictionary does not give. It is dated rather than left standing as a fact, because the store is authored continually and both piles move; it was written down as the larger, and may well have been when that was written. The count of sightings says how many places are wrong and nothing about how much writing there is: one word met once a verse counts as hundreds, and the words are what somebody sits down to.";
   "★ THE VOCABULARY THE NAME TEST IS GIVEN IS THE WHOLE CEBUANO BIBLE, NOT THE CHAPTERS THAT HAVE BEEN GLOSSED SO FAR, AND THAT IS THE ONLY THING MAKING THE TEST TRUSTWORTHY. A word is called a name when its small-letter spelling appears nowhere, so every book that has not been read yet is a chance for an ordinary word to clear itself, and handing over the glossed chapters alone would file the language's own words as names.";
