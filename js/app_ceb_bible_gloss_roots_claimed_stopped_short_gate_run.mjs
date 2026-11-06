@@ -27,7 +27,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run()
     offenders,
     path,
     "these explanations hand a learner half of a word as its root, where the dictionary vouches for the whole run of letters starting at the same place - write the root out whole, or say plainly what the letters named are a part of",
-    fn_name("app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_write"),
+    fn_name("app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_write"),
   );
   let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
