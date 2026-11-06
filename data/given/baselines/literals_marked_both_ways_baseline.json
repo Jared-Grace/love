@@ -12,7 +12,6 @@
   "app_a_file_system_initialize",
   "list_first",
   "g_arc_write_upload",
-  "app_ceb_bible_gloss_generate_upload",
   "list_map",
   "null_is",
   "list_empty_is",

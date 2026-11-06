@@ -1,7 +1,7 @@
 import { app_learn_ceb_gloss_generate_upload_path } from "./app_learn_ceb_gloss_generate_upload_path.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { g_generate_upload_generic } from "./g_generate_upload_generic.mjs";
-export async function app_ceb_bible_gloss_generate_upload() {
+export async function app_learn_ceb_gloss_generate_upload() {
   "this fn name is used as a path in firebase, so be careful renaming";
   "uploads stored files";
   let fn = app_ceb_bible_gloss_generate;
