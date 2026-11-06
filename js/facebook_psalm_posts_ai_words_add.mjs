@@ -1,5 +1,4 @@
-import { youtube_studio_chrome_path } from "./youtube_studio_chrome_path.mjs";
-import { facebook_page_user_data_path } from "./facebook_page_user_data_path.mjs";
+import { facebook_page_launch } from "./facebook_page_launch.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { sleep } from "./sleep.mjs";
 export async function facebook_psalm_posts_ai_words_add() {
@@ -10,17 +9,7 @@ export async function facebook_psalm_posts_ai_words_add() {
   "★ SAVE IS PRESSED WITH THE MOUSE AND PROVED BY THE EDIT PAGE CLOSING. On the 'Edit reel' page the Save button read as disabled to a script for a full minute while it showed blue and ready, so the flag is not asked; the page going away is what says it saved, and a page that stays is an error rather than a post found again and edited twice.";
   "A picture is left for each step in gitignore/facebook_psalm_posts_ai_words_add_N.png.";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
-  let puppeteer = await import("puppeteer");
-  let browser = await puppeteer.launch({
-    headless: true,
-    executablePath: youtube_studio_chrome_path(),
-    ignoreDefaultArgs: ["--enable-automation"],
-    userDataDir: facebook_page_user_data_path(),
-    defaultViewport: {
-      width: 1400,
-      height: 1000,
-    },
-  });
+  let browser = await facebook_page_launch();
   let steps = [];
   let edited = 0;
   let pages = await browser.pages();

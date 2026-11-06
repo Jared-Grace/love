@@ -1,6 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { youtube_studio_chrome_path } from "./youtube_studio_chrome_path.mjs";
-import { facebook_page_user_data_path } from "./facebook_page_user_data_path.mjs";
+import { facebook_page_launch } from "./facebook_page_launch.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { sleep } from "./sleep.mjs";
 import { facebook_composer_open } from "./facebook_composer_open.mjs";
@@ -23,18 +22,7 @@ export async function facebook_video_post(file_path, text, cover_path) {
   ("★ IT KEEPS THE BROWSER OPEN UNTIL THE UPLOAD STOPS SAYING IT IS UPLOADING. Facebook carries on sending the film after the post button is pressed, and closing the browser then would leave a post with no film in it.");
   ("What runs inside the page is written as text, never as a function, because the canonicalizer rewrites a function's comparisons into helpers the page has never heard of.");
   ("BROWSER-SERIALIZED - do NOT auto-canonicalize");
-  let puppeteer = await import("puppeteer");
-  let browser = await puppeteer.launch({
-    headless: true,
-    executablePath: youtube_studio_chrome_path(),
-    ignoreDefaultArgs: ["--enable-automation"],
-    userDataDir: facebook_page_user_data_path(),
-    defaultViewport: {
-      width: 1400,
-      height: 1000,
-    },
-    protocolTimeout: 600000,
-  });
+  let browser = await facebook_page_launch();
   let step = "launch";
   let page = null;
   let steps = [];

@@ -1,9 +1,8 @@
-import { youtube_studio_chrome_path } from "./youtube_studio_chrome_path.mjs";
-import { facebook_page_user_data_path } from "./facebook_page_user_data_path.mjs";
+import { facebook_page_launch } from "./facebook_page_launch.mjs";
 import { sleep } from "./sleep.mjs";
-import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
 export async function facebook_page_look(url, click_label) {
   "$plain url";
   "$plain click_label";
@@ -12,17 +11,7 @@ export async function facebook_page_look(url, click_label) {
   "It waits up to two minutes for a page, as posting does: on 2026-10-19 the network was slow enough that facebook's own page took longer than the thirty seconds a page is otherwise given, twice running.";
   "Pass '-' as click_label to click nothing.";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
-  let puppeteer = await import("puppeteer");
-  let browser = await puppeteer.launch({
-    headless: true,
-    executablePath: youtube_studio_chrome_path(),
-    ignoreDefaultArgs: ["--enable-automation"],
-    userDataDir: facebook_page_user_data_path(),
-    defaultViewport: {
-      width: 1400,
-      height: 1000,
-    },
-  });
+  let browser = await facebook_page_launch();
   try {
     let pages = await browser.pages();
     let page = pages[0];
