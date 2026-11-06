@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_bible_folder } from "./app_ceb_bible_gloss_bible_folder.mjs";
+import { app_learn_ceb_gloss_bible_folder } from "./app_learn_ceb_gloss_bible_folder.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
@@ -13,7 +13,7 @@ export async function app_ceb_bible_gloss_chapter_known_capitalised(
   "Neither says anything on its own. The dictionary answers about the letters it is given rather than about the word meant by them, and the capitalisation answers about a habit of printing rather than about a name; put beside each other they are evidence an author settles, and apart they are each a claim that is wrong about as often as it is right.";
   arguments_assert(arguments, 1);
   let known = await binisaya_words_known();
-  let bible_folder = app_ceb_bible_gloss_bible_folder();
+  let bible_folder = app_learn_ceb_gloss_bible_folder();
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let capitalised = await gloss_words_capitalised_always(
     bible_folder,
