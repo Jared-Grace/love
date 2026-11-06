@@ -1204,7 +1204,7 @@ export function permission_grant_names() {
       "app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run",
     ),
     fn_name("app_learn_ceb_gloss_chapters_absent"),
-    fn_name("app_ceb_bible_gloss_generate_chapter_bible_folders"),
+    fn_name("app_learn_ceb_gloss_generate_chapter_bible_folders"),
     fn_name("app_ceb_bible_gloss_new_testament_prep"),
     fn_name("app_ceb_bible_gloss_passages"),
     fn_name("app_ceb_bible_gloss_wolff_coverage"),

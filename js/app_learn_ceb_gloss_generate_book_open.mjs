@@ -10,7 +10,7 @@ import { list_get_end } from "./list_get_end.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { app_ceb_bible_gloss_generate_chapter_language } from "./app_ceb_bible_gloss_generate_chapter_language.mjs";
-import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "./app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
+import { app_learn_ceb_gloss_generate_chapter_bible_folders } from "./app_learn_ceb_gloss_generate_chapter_bible_folders.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { g_sermon_generate_book_generic_prompts } from "./g_sermon_generate_book_generic_prompts.mjs";
 import { app_shared_gloss_bible_generate_generic_prompt_user_middle } from "./app_shared_gloss_bible_generate_generic_prompt_user_middle.mjs";
@@ -36,7 +36,7 @@ export async function app_learn_ceb_gloss_generate_book_open() {
       language,
       "English",
     );
-  let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
+  let bible_folders = app_learn_ceb_gloss_generate_chapter_bible_folders();
   let known = await binisaya_words_known();
   function passage_reference(passage) {
     let reference = app_ceb_bible_gloss_passage_roots_prompt(passage, known);
