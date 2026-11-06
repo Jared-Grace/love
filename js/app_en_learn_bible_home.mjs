@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_en_learn_bible_reader_language_set } from "./app_en_learn_bible_reader_language_set.mjs";
-import { app_en_learn_bible_gloss_download } from "./app_en_learn_bible_gloss_download.mjs";
+import { app_learn_en_gloss_download } from "./app_learn_en_gloss_download.mjs";
 import { gloss_word_sound_url_cycling } from "./gloss_word_sound_url_cycling.mjs";
 import { app_en_learn_bible_gloss_urdu_words_sound_url } from "./app_en_learn_bible_gloss_urdu_words_sound_url.mjs";
 import { app_en_learn_bible_gloss_urdu_words_sound_slow_url } from "./app_en_learn_bible_gloss_urdu_words_sound_slow_url.mjs";
@@ -16,7 +16,7 @@ export async function app_en_learn_bible_home(context) {
   "★ THE SLOWER READINGS ARE HANDED IN BESIDE THE ORDINARY ONES RATHER THAN INSTEAD OF THEM, AND BOTH COME OUT OF THE ONE CYCLE. The two ways of asking share the count, so every press at either speed takes the next person, and the men and women alternate without a break.";
   arguments_assert(arguments, 1);
   app_en_learn_bible_reader_language_set();
-  let download = app_en_learn_bible_gloss_download;
+  let download = app_learn_en_gloss_download;
   let cycling = gloss_word_sound_url_cycling(
     app_en_learn_bible_gloss_urdu_words_sound_url,
     app_en_learn_bible_gloss_urdu_words_sound_slow_url,
