@@ -4,7 +4,7 @@ import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
-export function app_search_results_book_verses_count(
+export function app_bible_search_results_book_verses_count(
   book_code,
   results,
   result_verses_count,

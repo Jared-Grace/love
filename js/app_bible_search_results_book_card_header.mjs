@@ -6,7 +6,7 @@ import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
-import { app_search_results_book_verses_count } from "./app_search_results_book_verses_count.mjs";
+import { app_bible_search_results_book_verses_count } from "./app_bible_search_results_book_verses_count.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
@@ -27,7 +27,7 @@ export function app_bible_search_results_book_card_header(
   html_style_margin_y(div_book, value);
   html_text_align_left(div_book);
   let book_name = ebible_book_code_to_name(books, book_code);
-  let verses_count = app_search_results_book_verses_count(
+  let verses_count = app_bible_search_results_book_verses_count(
     book_code,
     results,
     result_verses_count,
