@@ -10,7 +10,7 @@ import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_dash_pieces_unwritten_decomposed() {
+export async function app_learn_ceb_gloss_dash_pieces_unwritten_decomposed() {
   "The dash-pieces the Cebuano translation never writes that binisaya.com has nevertheless handed back a root and a construction for.";
   "★ AN EMPTY ANSWER IS HARMLESS AND A FULL ONE IS NOT, WHICH IS WHY THIS COUNTS THE FULL ONES RATHER THAN THE ASKINGS. Every consumer of the dictionary in this repo passes straight over an entry whose root is blank - the quoted-only repair says so in its own prose and stops on the blank before it looks at anything else. So a piece that came back undecomposed cost a request and changed nothing. A piece that came back decomposed is a root and an affix build for a run of letters no Cebuano source here has ever seen standing alone, and that does reach a reader.";
   ("The site inventing under a malformed question is not a guess made here - ",
