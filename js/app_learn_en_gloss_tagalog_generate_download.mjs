@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_tagalog_generate_upload_path } from "./app_en_learn_bible_gloss_tagalog_generate_upload_path.mjs";
+import { app_learn_en_gloss_tagalog_generate_upload_path } from "./app_learn_en_gloss_tagalog_generate_upload_path.mjs";
 import { firebase_storage_download_json_decompress_project_jg } from "./firebase_storage_download_json_decompress_project_jg.mjs";
 export async function app_learn_en_gloss_tagalog_generate_download(
   chapter_code,
@@ -8,7 +8,7 @@ export async function app_learn_en_gloss_tagalog_generate_download(
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to fetch and nothing that runs.";
   arguments_assert(arguments, 1);
-  let destination_get = app_en_learn_bible_gloss_tagalog_generate_upload_path;
+  let destination_get = app_learn_en_gloss_tagalog_generate_upload_path;
   let fn = app_learn_en_gloss_tagalog_generate_download;
   let value = await firebase_storage_download_json_decompress_project_jg(
     fn,

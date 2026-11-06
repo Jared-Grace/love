@@ -1,5 +1,5 @@
 import { app_en_learn_bible_gloss_tagalog_generate } from "./app_en_learn_bible_gloss_tagalog_generate.mjs";
-import { app_en_learn_bible_gloss_tagalog_generate_upload_path } from "./app_en_learn_bible_gloss_tagalog_generate_upload_path.mjs";
+import { app_learn_en_gloss_tagalog_generate_upload_path } from "./app_learn_en_gloss_tagalog_generate_upload_path.mjs";
 import { g_generate_upload_filter } from "./g_generate_upload_filter.mjs";
 export async function app_learn_en_gloss_tagalog_chapter_upload_stored(
   chapter_code,
@@ -9,6 +9,6 @@ export async function app_learn_en_gloss_tagalog_chapter_upload_stored(
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to publish and nothing that runs.";
   let fn = app_en_learn_bible_gloss_tagalog_generate;
-  let path_get = app_en_learn_bible_gloss_tagalog_generate_upload_path;
+  let path_get = app_learn_en_gloss_tagalog_generate_upload_path;
   await g_generate_upload_filter(fn, path_get, chapter_code);
 }
