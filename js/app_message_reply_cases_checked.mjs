@@ -1,8 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_cases } from "./reply_cases.mjs";
-import { app_shared_message_reply_choices } from "./app_shared_message_reply_choices.mjs";
+import { reply_rules_remembered } from "./reply_rules_remembered.mjs";
 import { property_get } from "./property_get.mjs";
-import { reply_attempt } from "./reply_attempt.mjs";
+import { reply_attempt_remembered } from "./reply_attempt_remembered.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 export async function app_message_reply_cases_checked() {
@@ -12,10 +12,10 @@ export async function app_message_reply_cases_checked() {
   ("The rule set is built once and handed to every case, because building it is most of the work and it does not depend on the message.");
   ("★ THE BREAKING IS CARRIED THROUGH RATHER THAN FOLDED INTO NOT-MATCHING. A case whose rules throw part way through is a defect, and a case nobody has written a rule for yet is not; told apart here, the difference survives all the way to whoever reads it.");
   let cases = await reply_cases();
-  let start = app_shared_message_reply_choices();
+  let rules = await reply_rules_remembered();
   async function lambda(one) {
     let message = property_get(one, "message");
-    let attempt = await reply_attempt(message, start);
+    let attempt = await reply_attempt_remembered(message, rules);
     let answered = property_get(attempt, "answered");
     let outputs = property_get(attempt, "outputs");
     let broke = property_get(attempt, "broke");

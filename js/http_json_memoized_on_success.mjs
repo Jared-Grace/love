@@ -1,9 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { global_function_property_exists } from "./global_function_property_exists.mjs";
+import { global_function_property_get } from "./global_function_property_get.mjs";
 import { http_json } from "./http_json.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
-import { global_function_property_exists } from "./global_function_property_exists.mjs";
-import { global_function_property_get } from "./global_function_property_get.mjs";
+import { http_json_memoized_failure_add } from "./http_json_memoized_failure_add.mjs";
 import { global_function_property_set } from "./global_function_property_set.mjs";
 export async function http_json_memoized_on_success(fn, key, url) {
   arguments_assert(arguments, 3);
@@ -26,6 +27,7 @@ export async function http_json_memoized_on_success(fn, key, url) {
   }
   let value = await catch_null_async(fetch_json);
   if (null_is(value)) {
+    http_json_memoized_failure_add();
     return null;
   }
   global_function_property_set(fn, key, value);
