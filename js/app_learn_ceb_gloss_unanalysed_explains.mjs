@@ -1,4 +1,4 @@
-export function app_ceb_bible_gloss_unanalysed_explains() {
+export function app_learn_ceb_gloss_unanalysed_explains() {
   "The wording every explanation of a named Cebuano word is given, for the words binisaya.com holds an entry for and takes back to no root.";
   "Nothing is said here about how these words are built, because there is nothing to say: a word the dictionary takes apart no further is either a root standing on its own or one of the small words that hold a sentence together, and both are simply what they are. That silence is the finding. An explanation that invented a breakdown for one of them would be inventing it exactly where the dictionary looked and found none.";
   "What a reader is owed instead is what kind of word it is and what it carries. For a small word that is a sentence and no more; for a thing or a doing it is what the word names, and where an English reader would otherwise put a word Cebuano is not using.";

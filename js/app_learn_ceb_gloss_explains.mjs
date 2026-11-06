@@ -1,6 +1,6 @@
 import { app_learn_ceb_gloss_particle_explains } from "./app_learn_ceb_gloss_particle_explains.mjs";
 import { app_learn_ceb_gloss_root_explains } from "./app_learn_ceb_gloss_root_explains.mjs";
-import { app_ceb_bible_gloss_unanalysed_explains } from "./app_ceb_bible_gloss_unanalysed_explains.mjs";
+import { app_learn_ceb_gloss_unanalysed_explains } from "./app_learn_ceb_gloss_unanalysed_explains.mjs";
 import { app_ceb_bible_gloss_word_explains } from "./app_ceb_bible_gloss_word_explains.mjs";
 import { objects_merge } from "./objects_merge.mjs";
 export function app_learn_ceb_gloss_explains() {
@@ -9,7 +9,7 @@ export function app_learn_ceb_gloss_explains() {
   let r2 = app_learn_ceb_gloss_particle_explains();
   let r3 = app_ceb_bible_gloss_word_explains();
   let r4 = app_learn_ceb_gloss_root_explains();
-  let r5 = app_ceb_bible_gloss_unanalysed_explains();
+  let r5 = app_learn_ceb_gloss_unanalysed_explains();
   let maps = [r2, r3, r4, r5];
   let r = objects_merge(maps);
   return r;
