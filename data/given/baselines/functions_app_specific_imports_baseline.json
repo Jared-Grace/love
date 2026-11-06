@@ -13,7 +13,7 @@
   "qa_gates -> app_learn_ceb_gloss_affix_kinds_wrong_gate_run",
   "qa_gates -> app_learn_ceb_gloss_affix_letters_apart_gate_run",
   "qa_gates -> app_learn_ceb_gloss_chapters_absent_gate_run",
-  "qa_gates -> app_ceb_bible_gloss_misaligned_gate_run",
+  "qa_gates -> app_learn_ceb_gloss_misaligned_gate_run",
   "qa_gates -> app_ceb_bible_gloss_passages_respell_refused_gate_run",
   "qa_gates -> app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run",
   "qa_gates -> app_ceb_bible_gloss_roots_shallower_gate_run",
