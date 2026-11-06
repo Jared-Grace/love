@@ -512,7 +512,7 @@ import { app_learn_ceb_gloss_affix_kinds_wrong_gate_run } from "./app_learn_ceb_
 import { psalms_song_file_chapter_take_cases_gate_run } from "./psalms_song_file_chapter_take_cases_gate_run.mjs";
 import { lyric_video_document_times_spread_is_cases_gate_run } from "./lyric_video_document_times_spread_is_cases_gate_run.mjs";
 import { lyric_video_document_times_hand_is_cases_gate_run } from "./lyric_video_document_times_hand_is_cases_gate_run.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound_keys_gate_run } from "./app_en_learn_bible_gloss_urdu_words_sound_keys_gate_run.mjs";
+import { app_learn_en_gloss_urdu_words_sound_keys_gate_run } from "./app_learn_en_gloss_urdu_words_sound_keys_gate_run.mjs";
 import { lyric_video_hearings_match_rate_gate_run } from "./lyric_video_hearings_match_rate_gate_run.mjs";
 import { lyric_video_hand_times_gate_run } from "./lyric_video_hand_times_gate_run.mjs";
 import { text_word_plain_canonical_cases_gate_run } from "./text_word_plain_canonical_cases_gate_run.mjs";
@@ -1163,7 +1163,7 @@ export function qa_gates() {
     psalms_song_file_chapter_take_cases_gate_run,
     lyric_video_document_times_spread_is_cases_gate_run,
     lyric_video_document_times_hand_is_cases_gate_run,
-    app_en_learn_bible_gloss_urdu_words_sound_keys_gate_run,
+    app_learn_en_gloss_urdu_words_sound_keys_gate_run,
     lyric_video_hearings_match_rate_gate_run,
     lyric_video_hand_times_gate_run,
     text_word_plain_canonical_cases_gate_run,
