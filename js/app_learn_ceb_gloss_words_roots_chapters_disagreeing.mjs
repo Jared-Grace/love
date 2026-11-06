@@ -18,7 +18,7 @@ import { each } from "./each.mjs";
 import { each_async } from "./each_async.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_filter } from "./list_filter.mjs";
-export async function app_ceb_bible_gloss_words_roots_chapters_disagreeing() {
+export async function app_learn_ceb_gloss_words_roots_chapters_disagreeing() {
   "Every Cebuano word the gloss store takes back to one root in one chapter and to a different root in another chapter, each named beside the roots, the chapters that gave them, and what kind of difference it is - with the ones a single chapter already shows on its own kept apart from the ones only a reading across the whole store can see.";
   "The check beside this one sets a chapter's sentences against each other and says out loud why it stops there: two chapters may honestly be explaining two different words that happen to be spelled alike. That is a true caution and it is not a reason the number cannot be had. It is a reason to hand back the chapters beside every row, which is what this does, so that a reader can tell a homograph from a contradiction instead of the question going unasked.";
   "★ A ROW HERE IS A DISAGREEMENT AND NOT YET A FAULT, AND THE KIND IS WHAT SEPARATES THEM. Two sentences differing over how far back to go - one naming gugma where the other names higugma - leave a reader better off than silence and come back as deeper or shallower. Two roots with nothing in common come back as apart, and there one of the two sentences is simply wrong. Counting all the kinds together would make the store look far more broken than it is, so the kinds are counted separately and apart is the only one worth anybody's time.";
