@@ -19,7 +19,7 @@ export function app_shared_descriptions() {
     code: "Learn to program in JavaScript one small step at a time, by working on real code rather than reading about it.",
     replace:
       "A puzzle where you rewrite a row of symbols one rule at a time, from a single letter up to a working function. The same moves a compiler makes.",
-    en_learn_bible:
+    learn_en:
       "Read a verse of the New Testament in Urdu and then in English, with every English word explained in Urdu. The Bible teaches you English as you read it.",
     learn_ceb:
       "Read the New Testament in Cebuano with every word explained: what it means, and the root word it comes from. For reading Cebuano Scripture closely, whether it is your own language or one you are learning.",
