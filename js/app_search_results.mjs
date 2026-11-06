@@ -10,7 +10,7 @@ import { app_search_words_missing_text } from "./app_search_words_missing_text.m
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_search_results_with_verses_and_books } from "./app_search_results_with_verses_and_books.mjs";
 import { app_bible_search_none_found_text } from "./app_bible_search_none_found_text.mjs";
-import { app_search_results_render_and_open } from "./app_search_results_render_and_open.mjs";
+import { app_bible_search_results_render_and_open } from "./app_bible_search_results_render_and_open.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
   let books = await app_shared_bible_read_books_en();
@@ -56,7 +56,7 @@ export async function app_search_results(context, div_results) {
     app_shared_text_body(div_results, none_text);
     return;
   }
-  await app_search_results_render_and_open(
+  await app_bible_search_results_render_and_open(
     div_results,
     books,
     results,

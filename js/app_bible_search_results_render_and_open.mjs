@@ -7,7 +7,7 @@ import { list_single } from "./list_single.mjs";
 import { html_page_scrolls } from "./html_page_scrolls.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { app_shared_folds_refresh } from "./app_shared_folds_refresh.mjs";
-export async function app_search_results_render_and_open(
+export async function app_bible_search_results_render_and_open(
   div_results,
   books,
   results,
