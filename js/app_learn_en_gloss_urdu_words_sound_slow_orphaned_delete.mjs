@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_words_sound_slow_orphaned } from "./app_learn_en_gloss_urdu_words_sound_slow_orphaned.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound_slow } from "./app_en_learn_bible_gloss_urdu_words_sound_slow.mjs";
+import { app_learn_en_gloss_urdu_words_sound_slow } from "./app_learn_en_gloss_urdu_words_sound_slow.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { app_learn_en_gloss_urdu_words_sound_slow_upload_path } from "./app_learn_en_gloss_urdu_words_sound_slow_upload_path.mjs";
 import { firebase_storage_delete_absent_ok } from "./firebase_storage_delete_absent_ok.mjs";
@@ -22,7 +22,7 @@ export async function app_learn_en_gloss_urdu_words_sound_slow_orphaned_delete()
   arguments_assert(arguments, 0);
   let found = await app_learn_en_gloss_urdu_words_sound_slow_orphaned();
   let orphaned = property_get(found, "orphaned");
-  let slow_fn = app_en_learn_bible_gloss_urdu_words_sound_slow;
+  let slow_fn = app_learn_en_gloss_urdu_words_sound_slow;
   let folder = local_function_folder(slow_fn);
   async function sound_each(relative) {
     let destination =

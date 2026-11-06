@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_en_learn_bible_gloss_urdu_words_sound } from "./app_en_learn_bible_gloss_urdu_words_sound.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound_slow } from "./app_en_learn_bible_gloss_urdu_words_sound_slow.mjs";
+import { app_learn_en_gloss_urdu_words_sound_slow } from "./app_learn_en_gloss_urdu_words_sound_slow.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { gloss_word_sound_voices } from "./gloss_word_sound_voices.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -24,7 +24,7 @@ export async function app_learn_en_gloss_urdu_words_sound_slow_orphaned() {
   "Nothing is removed here. What comes back is a list to look at, because the answer is the argument for deleting and the deleting is not undoable.";
   arguments_assert(arguments, 0);
   let sound_fn = app_en_learn_bible_gloss_urdu_words_sound;
-  let slow_fn = app_en_learn_bible_gloss_urdu_words_sound_slow;
+  let slow_fn = app_learn_en_gloss_urdu_words_sound_slow;
   let folder_from = local_function_folder(sound_fn);
   let folder_to = local_function_folder(slow_fn);
   let voices = gloss_word_sound_voices();
