@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { app_search_words_unreachable_text } from "./app_search_words_unreachable_text.mjs";
+import { app_bible_search_words_unreachable_text } from "./app_bible_search_words_unreachable_text.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_bible_search_words_absent_text } from "./app_bible_search_words_absent_text.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -18,7 +18,7 @@ export function app_bible_search_words_missing_text(
   let sentences = [];
   let unreachable = list_empty_not_is(words_unreachable);
   if (unreachable) {
-    let said = app_search_words_unreachable_text(words_unreachable);
+    let said = app_bible_search_words_unreachable_text(words_unreachable);
     list_add(sentences, said);
   }
   let absent = list_empty_not_is(words_absent);
