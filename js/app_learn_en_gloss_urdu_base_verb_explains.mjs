@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_en_learn_bible_gloss_urdu_base_verb_explains() {
+export function app_learn_en_gloss_urdu_base_verb_explains() {
   "The wording every explanation of a named base-form English verb is given, for an Urdu reader, written for the words that were carrying nothing but the parsing.";
   "WHAT THESE REPLACE SAID ONLY THAT THE WORD IS A VERB AND THAT THIS IS ITS BASIC SHAPE. That is the least useful of the three stock sentences, because 'basic shape' is a name for the absence of a mark and the reader can see the absence already. What the base form actually needs is the opposite fact: not what has been taken off it, but WHERE IN A SENTENCE IT TURNS UP - after 'to', after 'will', 'can' and 'must', and when somebody is being told to do something. A reader who knows those three places can read half the verbs in a chapter.";
   "So the second sentence is the same in every entry, deliberately. It is the one thing being taught, and a reader who meets it thirty times has it.";
