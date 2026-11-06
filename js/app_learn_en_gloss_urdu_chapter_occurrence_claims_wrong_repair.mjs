@@ -1,7 +1,7 @@
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_store_word_key_read } from "./gloss_store_word_key_read.mjs";
 import { gloss_word_keys_reader_one } from "./gloss_word_keys_reader_one.mjs";
-import { app_en_learn_bible_gloss_urdu_text_index } from "./app_en_learn_bible_gloss_urdu_text_index.mjs";
+import { app_learn_en_gloss_urdu_text_index } from "./app_learn_en_gloss_urdu_text_index.mjs";
 import { gloss_chapter_occurrence_claims_wrong_urdu_repair } from "./gloss_chapter_occurrence_claims_wrong_urdu_repair.mjs";
 export async function app_learn_en_gloss_urdu_chapter_occurrence_claims_wrong_repair(
   chapter_code,
@@ -13,7 +13,7 @@ export async function app_learn_en_gloss_urdu_chapter_occurrence_claims_wrong_re
   let fn = app_learn_en_gloss_urdu_generate;
   let word_key_read = gloss_store_word_key_read(fn);
   let word_keys_read = gloss_word_keys_reader_one(word_key_read);
-  let text_index = app_en_learn_bible_gloss_urdu_text_index();
+  let text_index = app_learn_en_gloss_urdu_text_index();
   let r = await gloss_chapter_occurrence_claims_wrong_urdu_repair(
     chapter_code,
     fn,

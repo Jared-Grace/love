@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_store_word_key_read } from "./gloss_store_word_key_read.mjs";
 import { gloss_word_keys_reader_one } from "./gloss_word_keys_reader_one.mjs";
-import { app_en_learn_bible_gloss_urdu_text_index } from "./app_en_learn_bible_gloss_urdu_text_index.mjs";
+import { app_learn_en_gloss_urdu_text_index } from "./app_learn_en_gloss_urdu_text_index.mjs";
 import { gloss_chapters_claims_generic } from "./gloss_chapters_claims_generic.mjs";
 export async function app_learn_en_gloss_urdu_chapters_claims_generic(
   lambda_claims,
@@ -15,7 +15,7 @@ export async function app_learn_en_gloss_urdu_chapters_claims_generic(
   let fn = app_learn_en_gloss_urdu_generate;
   let word_key_read = gloss_store_word_key_read(fn);
   let word_keys_read = gloss_word_keys_reader_one(word_key_read);
-  let text_index = app_en_learn_bible_gloss_urdu_text_index();
+  let text_index = app_learn_en_gloss_urdu_text_index();
   let r = await gloss_chapters_claims_generic(
     fn,
     text_index,

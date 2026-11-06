@@ -15,7 +15,7 @@ import { error } from "./error.mjs";
 import { ebible_urdu_chapters_quote_index } from "./ebible_urdu_chapters_quote_index.mjs";
 import { gloss_word_keys_reader_one } from "./gloss_word_keys_reader_one.mjs";
 import { gloss_store_word_key_read } from "./gloss_store_word_key_read.mjs";
-import { app_en_learn_bible_gloss_urdu_text_index } from "./app_en_learn_bible_gloss_urdu_text_index.mjs";
+import { app_learn_en_gloss_urdu_text_index } from "./app_learn_en_gloss_urdu_text_index.mjs";
 import { gloss_passages_bible_quotes_absent_urdu } from "./gloss_passages_bible_quotes_absent_urdu.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { json_format_to } from "./json_format_to.mjs";
@@ -81,7 +81,7 @@ export async function app_learn_en_gloss_urdu_bible_quotes_mend_file(
   let index = await ebible_urdu_chapters_quote_index();
   let word_key_read = gloss_store_word_key_read(fn);
   let word_keys_read = gloss_word_keys_reader_one(word_key_read);
-  let text_index = app_en_learn_bible_gloss_urdu_text_index();
+  let text_index = app_learn_en_gloss_urdu_text_index();
   let absent = gloss_passages_bible_quotes_absent_urdu(
     passages,
     text_index,
