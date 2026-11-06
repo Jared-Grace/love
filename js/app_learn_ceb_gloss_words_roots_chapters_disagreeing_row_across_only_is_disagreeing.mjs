@@ -4,7 +4,7 @@ import { app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is
 import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
-export function app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is_disagreeing(
+export function app_learn_ceb_gloss_words_roots_chapters_disagreeing_row_across_only_is_disagreeing(
   rooted,
   claim_root,
   words,
