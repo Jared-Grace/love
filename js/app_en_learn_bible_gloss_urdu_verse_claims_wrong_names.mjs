@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_chapters_verse_claims_wrong } from "./app_en_learn_bible_gloss_urdu_chapters_verse_claims_wrong.mjs";
+import { app_learn_en_gloss_urdu_chapters_verse_claims_wrong } from "./app_learn_en_gloss_urdu_chapters_verse_claims_wrong.mjs";
 import { gloss_chapters_claims_wrong_names } from "./gloss_chapters_claims_wrong_names.mjs";
 export async function app_en_learn_bible_gloss_urdu_verse_claims_wrong_names() {
   "Every Urdu word explanation naming a verse of its own chapter that holds nothing built on the same English root, named once each by the chapter, the verses the passage covers, the word and the verse it named.";
@@ -7,8 +7,7 @@ export async function app_en_learn_bible_gloss_urdu_verse_claims_wrong_names() {
   "Three were read against the stored text and are genuinely wrong: the word and naming verse fifteen of the first letter of John's second chapter, which holds no and; the word is naming verse twenty-one, which holds no form of be; the word the naming verse twenty-six, which holds no the. So the queue is not empty of real faults either.";
   "How a row is named is the same in every store, so it is asked for rather than written out here.";
   arguments_assert(arguments, 0);
-  let chapters =
-    await app_en_learn_bible_gloss_urdu_chapters_verse_claims_wrong();
+  let chapters = await app_learn_en_gloss_urdu_chapters_verse_claims_wrong();
   let names = gloss_chapters_claims_wrong_names(chapters);
   return names;
 }
