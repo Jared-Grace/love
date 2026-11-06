@@ -12,7 +12,7 @@ import { file_read_json } from "./file_read_json.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { list_map_async_filter_null_not_is } from "./list_map_async_filter_null_not_is.mjs";
-export async function app_en_learn_bible_gloss_urdu_names_repair() {
+export async function app_learn_en_gloss_urdu_names_repair() {
   "Every stored chapter of English words explained in Urdu, with each Bible name in our own writing spelled the way whoever reads Urdu has ruled it should be spelled, and a report of which chapters that changed.";
   "This is what makes a name single sourced. A name stands in hundreds of places across the chapters, so a ruling that had to be carried by hand would be a sweep through every file every time somebody changed their mind. Written into the table instead, a ruling is one line, and this carries it everywhere.";
   "The rulings live apart from this on purpose, in the table, because they are given data: what makes one spelling of a name right is knowing how the people who will read it say the name, and no amount of reading the text answers that.";
