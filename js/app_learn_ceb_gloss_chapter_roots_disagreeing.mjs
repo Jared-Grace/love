@@ -3,7 +3,7 @@ import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_chapter_roots_disagreeing } from "./gloss_chapter_roots_disagreeing.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-export async function app_ceb_bible_gloss_chapter_roots_disagreeing(
+export async function app_learn_ceb_gloss_chapter_roots_disagreeing(
   chapter_code,
 ) {
   "Every Cebuano explanation in one chapter that says nothing about the root binisaya.com takes its word back to.";
