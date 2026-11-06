@@ -688,7 +688,7 @@ export function permission_grant_names() {
     fn_name("permission_grant_check_multiple"),
     fn_name("g_sermon_generate_upload_path"),
     fn_name("g_arc_generate_upload_path"),
-    fn_name("app_ceb_bible_gloss_generate_upload_path"),
+    fn_name("app_learn_ceb_gloss_generate_upload_path"),
     fn_name("list_squash"),
     fn_name("functions_path"),
     fn_name("firebase_function_folder_names"),
