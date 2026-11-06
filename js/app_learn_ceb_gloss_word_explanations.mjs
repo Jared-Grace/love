@@ -3,7 +3,7 @@ import { app_learn_ceb_gloss_roots_disagreeing } from "./app_learn_ceb_gloss_roo
 import { property_get } from "./property_get.mjs";
 import { gloss_offenders_word_explanations } from "./gloss_offenders_word_explanations.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_word_explanations(word) {
+export async function app_learn_ceb_gloss_word_explanations(word) {
   "Every way the Cebuano app has explained one word, commonest wording first: the sheet to read before deciding which of two explanations is the wrong one.";
   "The queue of words explained more than one way says which roots were claimed and how often and in which chapters, and it cannot say the one thing the decision turns on - what the reader is actually shown. Ask this for a word off that queue and the wordings come back side by side, each once, so the choice is made from a screen rather than from a search.";
   "Only words the findings caught are here, which means only words where the dictionary and the app disagreed at all. A word explained perfectly consistently is not in the findings and will come back empty, and that is the right answer rather than a fault.";
