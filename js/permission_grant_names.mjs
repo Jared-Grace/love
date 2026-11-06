@@ -2574,7 +2574,7 @@ export function permission_grant_names() {
     fn_name("app_learn_ceb_gloss_chapters_republish"),
     fn_name("bible_glyph_chapters_name_tag_fire_joined_gate_run"),
     fn_name("lyric_video_song_video_write"),
-    fn_name("app_en_learn_bible_gloss_urdu_chapters_absent_testament_old"),
+    fn_name("app_learn_en_gloss_urdu_chapters_absent_testament_old"),
     fn_name("baselines_unwatched_excused"),
     fn_name("qa_commit_named_gates_apps_blocked_report"),
     fn_name("qa_commit_named_auto_seconds"),
