@@ -6,7 +6,7 @@ import { list_map_async } from "./list_map_async.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_unique } from "./list_unique.mjs";
-export async function app_en_learn_bible_gloss_urdu_chapters_pointing_repair() {
+export async function app_learn_en_gloss_urdu_chapters_pointing_repair() {
   "Runs the pointing repair over every chapter the Urdu gloss store holds, and answers with how many chapters were read, how many explanations moved, and which words they were on.";
   "It takes no list, because the store already knows which chapters it holds and a list handed in could only be a stale copy of that. Running it again after the first run does nothing, since a repaired explanation no longer points anywhere and the reading that finds them will not find it.";
   arguments_assert(arguments, 0);
