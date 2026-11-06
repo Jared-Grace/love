@@ -1,5 +1,5 @@
 import { app_en_learn_bible_gloss_tagalog_passages } from "./app_en_learn_bible_gloss_tagalog_passages.mjs";
-import { app_en_learn_bible_gloss_passages_words_generic } from "./app_en_learn_bible_gloss_passages_words_generic.mjs";
+import { app_learn_en_gloss_passages_words_generic } from "./app_learn_en_gloss_passages_words_generic.mjs";
 export async function app_en_learn_bible_gloss_tagalog_passages_words(
   chapter_code,
 ) {
@@ -7,7 +7,7 @@ export async function app_en_learn_bible_gloss_tagalog_passages_words(
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to read and nothing that runs.";
   let passages_read = app_en_learn_bible_gloss_tagalog_passages;
-  let r = await app_en_learn_bible_gloss_passages_words_generic(
+  let r = await app_learn_en_gloss_passages_words_generic(
     chapter_code,
     passages_read,
   );

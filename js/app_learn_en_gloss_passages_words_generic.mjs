@@ -6,7 +6,7 @@ import { list_join_space } from "./list_join_space.mjs";
 import { gloss_passage_words_bare } from "./gloss_passage_words_bare.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map } from "./list_map.mjs";
-export async function app_en_learn_bible_gloss_passages_words_generic(
+export async function app_learn_en_gloss_passages_words_generic(
   chapter_code,
   passages_read,
 ) {
