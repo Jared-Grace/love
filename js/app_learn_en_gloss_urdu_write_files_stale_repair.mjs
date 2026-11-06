@@ -1,7 +1,7 @@
 import { gloss_write_files_stale_repair_generic } from "./gloss_write_files_stale_repair_generic.mjs";
 import { app_learn_en_gloss_urdu_passages } from "./app_learn_en_gloss_urdu_passages.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
-export async function app_en_learn_bible_gloss_urdu_write_files_stale_repair(
+export async function app_learn_en_gloss_urdu_write_files_stale_repair(
   chapter_code,
 ) {
   "Store every passage of one chapter of the store that teaches English to an Urdu reader whose authored word explanations are in their hand-off file and not in the store.";
