@@ -6,7 +6,7 @@ import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_names } from "./app_e
 import { app_learn_en_gloss_urdu_bible_quotes_absent_baseline_growth_assert } from "./app_learn_en_gloss_urdu_bible_quotes_absent_baseline_growth_assert.mjs";
 import { app_learn_en_gloss_urdu_bible_quotes_absent_baseline_path } from "./app_learn_en_gloss_urdu_bible_quotes_absent_baseline_path.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
-export async function app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_write() {
+export async function app_learn_en_gloss_urdu_bible_quotes_absent_baseline_write() {
   "Rewrite the record of the Urdu explanations quoting a Bible chapter with words it does not hold, from what the store holds right now. For seeding it once, and for banking each batch of mended quotes - never for widening it.";
   "A store that is not on the disk stops the rewrite before it starts, because an empty sweep would empty the record to match.";
   arguments_assert(arguments, 0);
