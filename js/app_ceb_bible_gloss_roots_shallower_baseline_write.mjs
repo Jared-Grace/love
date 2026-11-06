@@ -1,6 +1,6 @@
 import { app_ceb_bible_gloss_roots_shallower } from "./app_ceb_bible_gloss_roots_shallower.mjs";
 import { app_learn_ceb_gloss_roots_shallower_baseline_growth_assert } from "./app_learn_ceb_gloss_roots_shallower_baseline_growth_assert.mjs";
-import { app_ceb_bible_gloss_roots_shallower_baseline_path } from "./app_ceb_bible_gloss_roots_shallower_baseline_path.mjs";
+import { app_learn_ceb_gloss_roots_shallower_baseline_path } from "./app_learn_ceb_gloss_roots_shallower_baseline_path.mjs";
 import { app_ceb_bible_gloss_stored_is } from "./app_ceb_bible_gloss_stored_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
@@ -14,7 +14,7 @@ export async function app_ceb_bible_gloss_roots_shallower_baseline_write() {
   });
   let known = await app_ceb_bible_gloss_roots_shallower();
   await app_learn_ceb_gloss_roots_shallower_baseline_growth_assert(known);
-  let path = app_ceb_bible_gloss_roots_shallower_baseline_path();
+  let path = app_learn_ceb_gloss_roots_shallower_baseline_path();
   let r = await baseline_known_write(known, path);
   return r;
 }
