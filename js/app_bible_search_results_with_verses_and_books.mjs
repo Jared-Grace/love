@@ -5,7 +5,10 @@ import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_book_exists } from "./ebible_book_exists.mjs";
-export function app_search_results_with_verses_and_books(dictionary, books) {
+export function app_bible_search_results_with_verses_and_books(
+  dictionary,
+  books,
+) {
   arguments_assert(arguments, 2);
   let results_all = object_to_list(dictionary);
   function result_verses_exist(vk) {
