@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_roots_claimed_letters_rare_bible_words_of } from "./app_ceb_bible_gloss_roots_claimed_letters_rare_bible_words_of.mjs";
+import { app_learn_ceb_gloss_roots_claimed_letters_rare_bible_words_of } from "./app_learn_ceb_gloss_roots_claimed_letters_rare_bible_words_of.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_letters_counted } from "./bible_words_letters_counted.mjs";
@@ -17,7 +17,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare() {
   let counted = await bible_words_letters_counted(bible_folder);
   let letter_rows = property_get(counted, "letters");
   let letter_words = {};
-  let r2 = await app_ceb_bible_gloss_roots_claimed_letters_rare_bible_words_of(
+  let r2 = await app_learn_ceb_gloss_roots_claimed_letters_rare_bible_words_of(
     letter_words,
     letter_rows,
   );
