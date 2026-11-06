@@ -1,4 +1,4 @@
-import { app_ceb_bible_words_common } from "./app_ceb_bible_words_common.mjs";
+import { app_learn_ceb_words_common } from "./app_learn_ceb_words_common.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
@@ -12,7 +12,7 @@ export async function app_learn_ceb_gloss_vocabularies() {
   ("Reading is what happens here and nothing else. The dictionary is read off the disk and the bible is walked afresh, so this is not free and should be asked once at the top of a reading rather than inside a walk - which is what all three of the readings underneath it already did, for the plainer reason that a test inside a walk cannot ask a vocabulary that has not arrived yet.");
   ("Only the Cebuano bible is ever handed to this, and the name says so rather than taking a folder, because the dictionary half is Cebuano and could not be handed another language's words even if the bible half could. A second language would want its own pair, not an argument here.");
   arguments_assert(arguments, 0);
-  let common = await app_ceb_bible_words_common();
+  let common = await app_learn_ceb_words_common();
   let written = list_unique_set(common);
   let known = await binisaya_words_known();
   let vocabularies = {

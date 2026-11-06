@@ -1,4 +1,4 @@
-import { app_ceb_bible_words_common } from "./app_ceb_bible_words_common.mjs";
+import { app_learn_ceb_words_common } from "./app_learn_ceb_words_common.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -8,7 +8,7 @@ import { each } from "./each.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 export async function app_learn_ceb_gloss_root_word_given_apart_counted_vocabulary() {
   arguments_assert(arguments, 0);
-  let common = await app_ceb_bible_words_common();
+  let common = await app_learn_ceb_words_common();
   let dictionary = await binisaya_words_known();
   let dictionary_words = object_property_names(dictionary);
   let vocabulary_words = [];

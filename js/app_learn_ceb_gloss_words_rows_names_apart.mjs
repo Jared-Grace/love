@@ -1,4 +1,4 @@
-import { app_ceb_bible_words_common } from "./app_ceb_bible_words_common.mjs";
+import { app_learn_ceb_words_common } from "./app_learn_ceb_words_common.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_words_rows_names_apart } from "./gloss_words_rows_names_apart.mjs";
@@ -14,7 +14,7 @@ export async function app_learn_ceb_gloss_words_rows_names_apart(rows) {
   ("Both halves come back whole rather than one of them, because the four readings want different halves - two of them print the names as well, to show what was taken off somebody's list, and a wrapper handing back only the words would make that impossible without going round it.");
   ("Nothing is written, and the bible underneath is walked afresh every time this is asked - the vocabulary is not held over between asks anywhere below here. So a reading that means to cut two lists should ask once and cut twice rather than ask twice, and that cost was already what it was: each of the four readings asked exactly once before this existed and asks exactly once now.");
   arguments_assert(arguments, 1);
-  let common_words = await app_ceb_bible_words_common();
+  let common_words = await app_learn_ceb_words_common();
   let apart = gloss_words_rows_names_apart(rows, common_words);
   return apart;
 }
