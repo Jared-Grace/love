@@ -14,7 +14,7 @@ import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_dictionary_unwritten_answered() {
+export async function app_learn_ceb_gloss_dictionary_unwritten_answered() {
   "How often the dictionary on this disk gave a root for a word the Cebuano translation never writes standing alone, set against how often it gave one for a word the translation does write, so that the rate it answers about forms nobody wrote can be read rather than guessed at.";
   "★ A LOOKUP THAT SUCCEEDS ON A CUT-UP WORD INVENTS A ROOT FOR IT, AND SUCCEEDING IS THEN THE WARNING RATHER THAN THE CONFIRMATION. Reading twenty-one rows by hand turned up gamhana, cut from gamhanang, answered galam; hitas, cut from kahitas-an, answered hita, which is a thigh; guliang answered ligo. Each of those is a real word of the language that the mangled form happens to be spelled near, so the answer looks exactly like a good one. This asks how far that reaches instead of leaving it at three examples.";
   "The two rates together are the reading and neither alone is. A dictionary that answers about half of everything says nothing by answering about a cut-up form. One that answers nearly everything it is asked has no refusal in it at all, and every answer it gave about a form nobody wrote is then worth as much as its silence would have been. The measurement below lands between those two and nearer the first, which was not what the hand-read examples pointed at.";
