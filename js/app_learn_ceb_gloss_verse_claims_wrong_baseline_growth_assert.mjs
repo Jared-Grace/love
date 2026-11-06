@@ -1,6 +1,6 @@
 import { app_ceb_bible_gloss_verse_claims_wrong_baseline_path } from "./app_ceb_bible_gloss_verse_claims_wrong_baseline_path.mjs";
 import { baseline_known_growth_assert } from "./baseline_known_growth_assert.mjs";
-export async function app_ceb_bible_gloss_verse_claims_wrong_baseline_growth_assert(
+export async function app_learn_ceb_gloss_verse_claims_wrong_baseline_growth_assert(
   known,
 ) {
   "Refuse to record a Cebuano explanation naming an unrelated verse that the record did not already hold.";
