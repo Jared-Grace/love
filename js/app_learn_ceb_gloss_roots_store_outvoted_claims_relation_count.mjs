@@ -3,7 +3,7 @@ import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { property_count_add } from "./property_count_add.mjs";
-export function app_ceb_bible_gloss_roots_store_outvoted_claims_relation_count(
+export function app_learn_ceb_gloss_roots_store_outvoted_claims_relation_count(
   keys,
   key_read,
   listed,
