@@ -39,7 +39,7 @@ export function app_sandbox_previews() {
   }
   async function word_sound_load() {
     let m = await import("./app_learn_en_word_sound_preview.mjs");
-    let r14 = m.app_en_learn_bible_word_sound_preview;
+    let r14 = m.app_learn_en_word_sound_preview;
     return r14;
   }
   async function lyric_video_review_load() {
