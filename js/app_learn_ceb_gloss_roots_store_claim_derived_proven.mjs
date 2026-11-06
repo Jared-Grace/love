@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_store_outvoted_claims } from "./app_ceb_bible_gloss_roots_store_outvoted_claims.mjs";
+import { app_learn_ceb_gloss_roots_store_outvoted_claims } from "./app_learn_ceb_gloss_roots_store_outvoted_claims.mjs";
 import { property_get } from "./property_get.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -20,7 +20,7 @@ export async function app_learn_ceb_gloss_roots_store_claim_derived_proven() {
   "What is proven is that the named form is derived, and that is not the same as the deeper form being what a reader should be given. Babaye is taken back to baye and paminaw to minaw, and neither baye nor minaw is a word anybody writes on its own. So these rows say the store is wrong to stop where it stops; they do not by themselves say the dictionary is where it should stop instead.";
   "Nothing is asked of the site and nothing is written.";
   arguments_assert(arguments, 0);
-  let measured = await app_ceb_bible_gloss_roots_store_outvoted_claims();
+  let measured = await app_learn_ceb_gloss_roots_store_outvoted_claims();
   let listed = property_get(measured, "listed");
   let known = await binisaya_words_known();
   let proven = [];

@@ -3,7 +3,7 @@ import { app_learn_ceb_gloss_roots_store_outvoted_claims_by_relation } from "./a
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_store_outvoted_claims() {
+export async function app_learn_ceb_gloss_roots_store_outvoted_claims() {
   "The chapter-by-chapter list of Cebuano gloss roots the dictionary contradicts, collapsed to the distinct claims behind it, biggest first, each carrying the chapters that make it.";
   "★ SIX HUNDRED AND EIGHTY-TWO ROWS IS A FINDING NOBODY CAN ANSWER AND SEVENTY-TWO CLAIMS IS A DECISION SOMEBODY CAN MAKE IN AN EVENING. The rows underneath are one per chapter, so a single wrong idea about one word is spread across every chapter that repeated it - halangdon taken back to halang appears fifteen times and is one thing to agree or disagree with, not fifteen. Collapsing them is not a summary that loses detail, because the chapters are carried along and the rows can still be walked; it is the same finding addressed to a reader rather than to a counter.";
   "The reading time of the person who has to say yes is the scarce thing here, and every measurement made so far has been spent describing a decision instead of making it cheap. A list ordered by how many chapters repeat a claim puts the ones worth arguing about at the top, and a claim made once sits at the bottom where a reader may stop.";
