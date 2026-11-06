@@ -7,7 +7,7 @@ import { app_learn_en_language_code_saved_or_null } from "./app_learn_en_languag
 import { null_is } from "./null_is.mjs";
 import { app_learn_en_language_ask } from "./app_learn_en_language_ask.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
-export function app_en_learn_bible_language_known_ensure(context, on_chosen) {
+export function app_learn_en_language_known_ensure(context, on_chosen) {
   "Make sure the address names the language the reader speaks, answering whether the app can open now.";
   "A link that already names a language wins, so a link somebody sent opens in the language it was sent in. Failing that, the language this reader chose on an earlier visit is written into the address. Failing both, this is a new reader: they are asked, the answer is no for now, and on_chosen opens the app once they have chosen.";
   arguments_assert(arguments, 2);
