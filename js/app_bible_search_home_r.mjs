@@ -3,7 +3,7 @@ import { app_bible_search_home_left } from "./app_bible_search_home_left.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_bible_search_home_div_results } from "./app_bible_search_home_div_results.mjs";
 import { app_search_home_search } from "./app_search_home_search.mjs";
-export function app_search_home_r(context, hash) {
+export function app_bible_search_home_r(context, hash) {
   arguments_assert(arguments, 2);
   let r2 = app_bible_search_home_left(context, hash, search);
   let left = property_get(r2, "left");
