@@ -1397,7 +1397,7 @@ export function permission_grant_names() {
     fn_name("function_span_candidates"),
     fn_name("ai_log_entries_recent"),
     fn_name("function_aliases"),
-    fn_name("app_ceb_bible_gloss_names_rooted"),
+    fn_name("app_learn_ceb_gloss_names_rooted"),
     fn_name("memory_lines_search"),
     fn_name("git_history_folder_bytes"),
     fn_name("gloss_words_capitalised_always"),
