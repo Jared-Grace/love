@@ -16,7 +16,7 @@ import { gloss_root_row_note } from "./gloss_root_row_note.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { list_take } from "./list_take.mjs";
-export async function app_ceb_bible_gloss_root_named_foreign_counted(
+export async function app_learn_ceb_gloss_root_named_foreign_counted(
   sample_size,
 ) {
   "Every root only the widened reader can see that is neither a word the Cebuano bible writes nor a word the dictionary on this disk has heard of, gathered by the root so one habit of writing shows as one row.";
