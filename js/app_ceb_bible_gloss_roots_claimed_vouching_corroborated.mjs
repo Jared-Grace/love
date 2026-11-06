@@ -1,5 +1,5 @@
 import { app_learn_ceb_gloss_roots_claimed_vouching_corroborated_root_read } from "./app_learn_ceb_gloss_roots_claimed_vouching_corroborated_root_read.mjs";
-import { app_ceb_bible_gloss_roots_claimed_vouching_corroborated_witness_count } from "./app_ceb_bible_gloss_roots_claimed_vouching_corroborated_witness_count.mjs";
+import { app_learn_ceb_gloss_roots_claimed_vouching_corroborated_witness_count } from "./app_learn_ceb_gloss_roots_claimed_vouching_corroborated_witness_count.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -21,7 +21,7 @@ export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated() 
   "★ ONE WITNESS IS NOT A FAULT. Most real roots are named by one word or by none, because most words were never taken apart. What is separated here is how much a vouching rests on, not whether a root is good, and the single-witness rows are listed with the word that vouched for them so that a reader can see the difference between kaon reached once and isi reached once.";
   arguments_assert(arguments, 0);
   let r =
-    await app_ceb_bible_gloss_roots_claimed_vouching_corroborated_witness_count();
+    await app_learn_ceb_gloss_roots_claimed_vouching_corroborated_witness_count();
   let witness_count = property_get(r, "witness_count");
   let named_more = property_get(r, "named_more");
   let named_once = property_get(r, "named_once");

@@ -13,7 +13,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated_witness_count() {
+export async function app_learn_ceb_gloss_roots_claimed_vouching_corroborated_witness_count() {
   "Reads the dictionary once and builds, for each root as it is spelt there, the list of words that name that root - then hands back the store together with the counter that says how many different words vouch for one root, which is what the reading above it asks of every claim.";
   arguments_assert(arguments, 0);
   let known = await binisaya_words_known();
