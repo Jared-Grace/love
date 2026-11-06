@@ -42,7 +42,7 @@ export function literals_frozen_names() {
     fn_name("app_a_app_selected_key"),
     fn_name("app_a_function_name_selected_key"),
     fn_name("browser_files_path_key"),
-    fn_name("app_search_query_hash_key"),
+    fn_name("app_bible_search_query_hash_key"),
     fn_name("app_shared_bible_mode_hash_key"),
     fn_name("browser_files_store"),
     fn_name("browser_files_database_name"),

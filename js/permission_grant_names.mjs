@@ -396,7 +396,7 @@ export function permission_grant_names() {
     fn_name("qa_app_commit_gate_run_at"),
     fn_name("functions_shape_blocks_report"),
     fn_name("qa_commit_named_at"),
-    fn_name("app_search_query_hash_key"),
+    fn_name("app_bible_search_query_hash_key"),
     fn_name("app_search_query_hash_word_gap"),
     fn_name("js_declared_names_cases_gate_run"),
     fn_name("functions_names_in_text_gate_run"),

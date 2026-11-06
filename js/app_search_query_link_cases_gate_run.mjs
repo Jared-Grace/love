@@ -3,7 +3,7 @@ import { app_shared_description } from "./app_shared_description.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
-import { app_search_query_hash_key } from "./app_search_query_hash_key.mjs";
+import { app_bible_search_query_hash_key } from "./app_bible_search_query_hash_key.mjs";
 import { app_search_query_link_cases } from "./app_search_query_link_cases.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_search_query_link_written } from "./app_search_query_link_written.mjs";
@@ -33,7 +33,7 @@ export async function app_search_query_link_cases_gate_run() {
   if (not(b)) {
     wrong.push("the card no longer says " + promise + ": " + said);
   }
-  let key = app_search_query_hash_key();
+  let key = app_bible_search_query_hash_key();
   let cases = app_search_query_link_cases();
   for (let one of cases) {
     let query = property_get(one, "query");

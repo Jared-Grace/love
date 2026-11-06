@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { app_search_query_hash_key } from "./app_search_query_hash_key.mjs";
+import { app_bible_search_query_hash_key } from "./app_bible_search_query_hash_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal_loose } from "./equal_loose.mjs";
 import { app_search_query_link_words } from "./app_search_query_link_words.mjs";
@@ -12,7 +12,7 @@ export async function app_bible_search_hash_query_apply(input, search) {
   ("the words the address asks for, put in the box and searched for.");
   ("the box holds what was last searched for, so an address that says the same thing is this page's own writing coming back to it - searching again there would run the very search that wrote it a second time.");
   let hash = html_hash_object_get();
-  let key = app_search_query_hash_key();
+  let key = app_bible_search_query_hash_key();
   let query_hash = property_get_or_null(hash, key);
   let asks_nothing = equal_loose(query_hash, null);
   if (asks_nothing) {
