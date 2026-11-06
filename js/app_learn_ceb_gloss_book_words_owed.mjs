@@ -6,7 +6,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-export async function app_ceb_bible_gloss_book_words_owed(book_code) {
+export async function app_learn_ceb_gloss_book_words_owed(book_code) {
   "Every Cebuano word one book of the New Testament is written with that the dictionary has not been asked about yet.";
   "$plain book_code";
   "the code is a book's name, like MAT, chosen from the Bible's own book numbering. It names text to read and nothing that runs.";
