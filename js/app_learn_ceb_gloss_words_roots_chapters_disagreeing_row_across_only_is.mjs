@@ -1,7 +1,7 @@
 import { app_learn_ceb_gloss_words_roots_chapters_disagreeing_row_across_only_is_lambda } from "./app_learn_ceb_gloss_words_roots_chapters_disagreeing_row_across_only_is_lambda.mjs";
 import { app_learn_ceb_gloss_words_roots_chapters_disagreeing_row_across_only_is_disagreeing } from "./app_learn_ceb_gloss_words_roots_chapters_disagreeing_row_across_only_is_disagreeing.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is(
+export function app_learn_ceb_gloss_words_roots_chapters_disagreeing_row_across_only_is(
   rooted,
   claim_root,
   words,
