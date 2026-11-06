@@ -2827,7 +2827,7 @@ export function permission_grant_names() {
     fn_name("app_learn_original_gloss_chapter_translits_add"),
     fn_name("app_learn_en_gloss_tagalog_passages_words"),
     fn_name("app_learn_en_gloss_tagalog_chapter_upload_stored"),
-    fn_name("app_en_learn_bible_gloss_tagalog_write_coverage"),
+    fn_name("app_learn_en_gloss_tagalog_write_coverage"),
     fn_name("lyric_video_document_line_starts_set"),
     fn_name("lyric_video_document_audio_from_set"),
     fn_name("lyric_video_bible_description_file_write"),
