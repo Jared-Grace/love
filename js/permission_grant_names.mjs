@@ -1108,7 +1108,7 @@ export function permission_grant_names() {
     fn_name("machine_setup"),
     fn_name("g_sermon_chapter_verses_text_sizes"),
     fn_name("g_arc_prompt_style_assert"),
-    fn_name("app_ceb_bible_gloss_particle_explains_apply"),
+    fn_name("app_learn_ceb_gloss_particle_explains_apply"),
     fn_name("g_leader_book_reaches_canon_assert"),
     fn_name("g_sermon_chapter_verses_json_compare"),
     fn_name("app_replace_tests_run_e2e_deployed_url"),
