@@ -1466,7 +1466,7 @@ export function permission_grant_names() {
     fn_name("app_learn_ceb_gloss_chapter_upload_stored"),
     fn_name("app_learn_ceb_gloss_chapter_verse_claims_wrong"),
     fn_name("app_learn_ceb_gloss_passage_entries"),
-    fn_name("app_ceb_bible_gloss_write_chapter_file"),
+    fn_name("app_learn_ceb_gloss_write_chapter_file"),
     fn_name("app_code_lesson_statement_name_copy_batch"),
     fn_name("app_shared_bible_hash_field_chapter"),
     fn_name("app_shared_bible_hash_field_mode"),

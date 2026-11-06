@@ -6,7 +6,7 @@ export function functions_input_taken_away() {
     fn_name("gloss_write_chapter_file_generic"),
     ", which is where the removal lives and where the reason for it is written down. A third caller of that function belongs here too.");
   let names = [
-    fn_name("app_ceb_bible_gloss_write_chapter_file"),
+    fn_name("app_learn_ceb_gloss_write_chapter_file"),
     fn_name("app_en_learn_bible_gloss_tagalog_write_chapter_file"),
     fn_name("app_en_learn_bible_gloss_urdu_write_chapter_file"),
   ];
