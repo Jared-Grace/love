@@ -4,7 +4,7 @@ import { app_bible_search_languages_matching } from "./app_bible_search_language
 import { html_clear } from "./html_clear.mjs";
 import { app_bible_search_languages_unsearchable_show } from "./app_bible_search_languages_unsearchable_show.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { app_search_no_words_show } from "./app_search_no_words_show.mjs";
+import { app_bible_search_no_words_show } from "./app_bible_search_no_words_show.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
@@ -33,7 +33,7 @@ export async function app_search_results(context, div_results) {
       ("the note above already says why nothing was looked for; telling the reader no words were found as well would point them at their typing instead");
       return;
     }
-    app_search_no_words_show(div_results, query, languages_chosen);
+    app_bible_search_no_words_show(div_results, query, languages_chosen);
     return;
   }
   let dictionary = property_get(matching, "dictionary");
