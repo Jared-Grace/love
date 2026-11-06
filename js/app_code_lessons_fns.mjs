@@ -335,10 +335,14 @@ import { app_code_lesson_for_up_to } from "./app_code_lesson_for_up_to.mjs";
 import { app_code_lesson_for_total_step } from "./app_code_lesson_for_total_step.mjs";
 import { app_code_lesson_for_count } from "./app_code_lesson_for_count.mjs";
 import { app_code_lesson_for_after_change } from "./app_code_lesson_for_after_change.mjs";
+import { app_code_lesson_for_log_double } from "./app_code_lesson_for_log_double.mjs";
+import { app_code_lesson_for_down_to } from "./app_code_lesson_for_down_to.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
+import { app_code_lesson_for_two_names } from "./app_code_lesson_for_two_names.mjs";
 import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet.mjs";
 import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
 import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
+import { app_code_lesson_for_if } from "./app_code_lesson_for_if.mjs";
 export function app_code_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
@@ -685,10 +689,14 @@ export function app_code_lessons_fns() {
     app_code_lesson_for_total_step,
     app_code_lesson_for_count,
     app_code_lesson_for_after_change,
+    app_code_lesson_for_log_double,
+    app_code_lesson_for_down_to,
     app_code_lesson_while_two_names,
+    app_code_lesson_for_two_names,
     app_code_lesson_while_two_meet,
     app_code_lesson_while_and,
     app_code_lesson_while_if,
+    app_code_lesson_for_if,
   ];
   return fns;
 }
