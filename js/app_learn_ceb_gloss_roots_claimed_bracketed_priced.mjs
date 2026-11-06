@@ -18,7 +18,7 @@ import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_bracketed_priced() {
+export async function app_learn_ceb_gloss_roots_claimed_bracketed_priced() {
   "Every root an explanation states outright with a bracket in it, read both ways the bracket can be meant, with each reading put to the bible's words, to the dictionary, and to the word the root was claimed for.";
   "A dictionary writes lagi(w) to say one headword covers two spellings, and a root copied out of one carries the bracket into a store where nothing knows what it means. The bracket has two readings and they are opposites: keep the letter and the root is lagiw, drop it and the root is lagi. What settles which was meant is the word the sentence was explaining, because the bracket says a letter may or may not be there and the word shows whether it is.";
   "★ ONLY THE KEPT READING CAN BE SHOWN BY THE WORD, AND THE DROPPED ONE NEVER CAN. Dropping a letter off the end leaves a spelling that the kept one begins with, so any word holding lagiw holds lagi as well and asking whether it does answers yes for every root of this shape. That question was asked here first and it could not come back any other way, which is why it is now reported and not counted: the finding is the kept form standing in the word, and the dropped form standing there too is a consequence of the letters rather than evidence about the bracket.";
