@@ -17,7 +17,7 @@ import { app_route } from "./app_route.mjs";
 import { property_set } from "./property_set.mjs";
 import { json_format_to_spaces } from "./json_format_to_spaces.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
-export async function app_renames_redirects_write() {
+export async function app_shared_renames_redirects_write() {
   arguments_assert(arguments, 0);
   ("Writes one lasting redirect into firebase.json for every old app address in the renames record whose app has its page served under today's name, sending it there. Cloudflare's rules are read off the same file, so both sites follow.");
   ("An old address whose new page is not served yet gets no redirect, because sending people on would land them on nothing while the old page is still there to read.");
