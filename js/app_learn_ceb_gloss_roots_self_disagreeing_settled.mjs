@@ -10,7 +10,7 @@ import { equal } from "./equal.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { list_size } from "./list_size.mjs";
 import { each } from "./each.mjs";
-export async function app_ceb_bible_gloss_roots_self_disagreeing_settled() {
+export async function app_learn_ceb_gloss_roots_self_disagreeing_settled() {
   "The places the Cebuano gloss store gives one word two different roots, sorted by what the dictionary already sitting on this disk says about them: the ones where it names one of the two, the ones where it names a third root neither sentence gave, and the ones it has nothing to say about.";
   "★ NOTHING IS ASKED OF THE SITE HERE AND NOTHING NEEDS TO BE. The answers were fetched long ago and are held word by word; the disagreements were found without leaving the store. Setting the two against each other is a join between two things already on the disk, and it turns a pile of places needing a judgment into a much smaller pile, at the cost of one pass and no waiting at all.";
   "The three answers are different kinds of thing and are kept apart rather than counted together. Where the dictionary names one of the two roots, the disagreement is over - the other sentence is the wrong one and no judgment is needed. Where it names a third root, nobody is agreeing with anybody and the row needs reading rather than applying - it is not the same as both sentences being wrong. Two of the three found this way are the dictionary stopping at a shallower form than the store went to, gamhanan under gamhanang where a sentence said gahum, so the store is further back rather than mistaken. Where the dictionary says nothing, the judgment is still owed to somebody.";
