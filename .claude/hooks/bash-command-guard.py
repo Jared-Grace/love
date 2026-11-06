@@ -4198,6 +4198,13 @@ def split_top_level_statements_text(command):
     index = 0
     while index < len(command):
         ch = command[index]
+        # A backslash keeps the next letter as a letter, outside quotes and
+        # inside double quotes alike, so `"a\"b"` stays one quoted word. Inside
+        # single quotes it is only a letter itself.
+        if ch == "\\" and quote != "'":
+            current += command[index:index + 2]
+            index += 2
+            continue
         if quote:
             current += ch
             if ch == quote:
