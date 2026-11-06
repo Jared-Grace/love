@@ -1,4 +1,4 @@
-export function app_en_learn_bible_gloss_urdu_noun_explains() {
+export function app_learn_en_gloss_urdu_noun_explains() {
   "The wording every explanation of a named ordinary English noun is given in the store that teaches English to an Urdu reader, for the everyday things the passages keep naming.";
   "These are words whose meaning does not move from one verse to the next. A hand is a hand in every chapter it appears in, so one wording written once is truer than a sentence guessed afresh at each place, and a reader meeting the word again meets the same sentence and knows it.";
   "Each wording says what kind of word it is and then hands over the Urdu word for the thing, because the reader already has Urdu and is being handed English. That is the whole of what a beginner needs from an ordinary noun, and it is exactly what the bare label reading ‘noun’ withholds.";
