@@ -10,7 +10,7 @@ import { property_set } from "./property_set.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_ceb_bible_gloss_roots_dictionary_arbiter_control_word_read(
+export function app_learn_ceb_gloss_roots_dictionary_arbiter_control_word_read(
   said,
   known,
   unanimous,
