@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_ceb_bible_gloss_passages_respell_refused_each } from "./app_ceb_bible_gloss_passages_respell_refused_each.mjs";
+import { app_learn_ceb_gloss_passages_respell_refused_each } from "./app_learn_ceb_gloss_passages_respell_refused_each.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_ceb_bible_gloss_passages_respell_refused() {
   "The passages in the Cebuano gloss store that the respell walks past without correcting anything, because the words its explanations name do not come to the same number as the words in the passage.";
@@ -20,7 +20,7 @@ export async function app_ceb_bible_gloss_passages_respell_refused() {
     list_add(refused, row);
   }
   let walked =
-    await app_ceb_bible_gloss_passages_respell_refused_each(refused_read);
+    await app_learn_ceb_gloss_passages_respell_refused_each(refused_read);
   let r = {
     chapters: property_get(walked, "chapters"),
     passages: property_get(walked, "passages"),

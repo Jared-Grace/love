@@ -5,7 +5,7 @@ import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_ceb_bible_gloss_passages_respell_refused_each } from "./app_ceb_bible_gloss_passages_respell_refused_each.mjs";
+import { app_learn_ceb_gloss_passages_respell_refused_each } from "./app_learn_ceb_gloss_passages_respell_refused_each.mjs";
 export async function app_learn_ceb_gloss_passages_respell_refused_diverged() {
   "For each Cebuano passage the respell walks past, the first place the words its explanations name stop agreeing with the words in the passage, with a little of each side around it.";
   "★ A COUNT SAYS THAT TWO LISTS DISAGREE AND NEVER WHERE, AND WHERE IS THE WHOLE OF WHAT A PERSON NEEDS TO MEND ONE. Every refusal measured so far names one more word than the passage has, which is one shape and not thirteen accidents; the first place the two sequences part is the word that shape is about. Reading it off the count alone is impossible, and reading it off the file by hand is thirteen passages of counting words.";
@@ -29,7 +29,7 @@ export async function app_learn_ceb_gloss_passages_respell_refused_diverged() {
     };
     list_add(diverged, row);
   }
-  await app_ceb_bible_gloss_passages_respell_refused_each(refused_read);
+  await app_learn_ceb_gloss_passages_respell_refused_each(refused_read);
   let r = {
     refused: list_size(diverged),
     rows: diverged,

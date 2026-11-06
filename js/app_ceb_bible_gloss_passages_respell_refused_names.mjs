@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_ceb_bible_gloss_passages_respell_refused_each } from "./app_ceb_bible_gloss_passages_respell_refused_each.mjs";
+import { app_learn_ceb_gloss_passages_respell_refused_each } from "./app_learn_ceb_gloss_passages_respell_refused_each.mjs";
 import { list_unique_sorted } from "./list_unique_sorted.mjs";
 export async function app_ceb_bible_gloss_passages_respell_refused_names() {
   "Every Cebuano passage the respell walks past without correcting anything, named once each by the chapter it stands in and the verses it covers.";
@@ -18,7 +18,7 @@ export async function app_ceb_bible_gloss_passages_respell_refused_names() {
     let named = text_combine_multiple([chapter_code, " ", verses]);
     list_add(names, named);
   }
-  await app_ceb_bible_gloss_passages_respell_refused_each(refused_read);
+  await app_learn_ceb_gloss_passages_respell_refused_each(refused_read);
   let sorted = list_unique_sorted(names);
   return sorted;
 }

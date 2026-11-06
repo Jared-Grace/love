@@ -6,7 +6,7 @@ import { gloss_entries_words_bare } from "./gloss_entries_words_bare.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_chapters_passages_entried_generic } from "./gloss_chapters_passages_entried_generic.mjs";
-export async function app_ceb_bible_gloss_passages_respell_refused_each(
+export async function app_learn_ceb_gloss_passages_respell_refused_each(
   refused_read,
 ) {
   "The walk the respell itself does over the Cebuano gloss store, handing over every passage it would decline: the chapter it stands in, the words its explanations name, the words the passage actually has, and the passage itself.";
