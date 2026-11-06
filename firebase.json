@@ -83,6 +83,16 @@
         "source": "/ceb_bible.html",
         "destination": "/learn_ceb",
         "type": 301
+      },
+      {
+        "source": "/search",
+        "destination": "/bible_search",
+        "type": 301
+      },
+      {
+        "source": "/search.html",
+        "destination": "/bible_search",
+        "type": 301
       }
     ],
     "headers": [
