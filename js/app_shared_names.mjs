@@ -7,7 +7,7 @@ export function app_shared_names() {
     index: "Apps for reading the Bible and learning to program",
     bible: "Bible",
     bible_emoji: "Emoji Bible",
-    search: "Bible Search",
+    bible_search: "Bible Search",
     learn_original: "Greek and Hebrew Bible",
     learn_ceb: "Cebuano Bible",
     en_learn_bible: "English Bible in Urdu",
