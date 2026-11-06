@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_affix_letters_apart } from "./app_ceb_bible_gloss_affix_letters_apart.mjs";
+import { app_learn_ceb_gloss_affix_letters_apart } from "./app_learn_ceb_gloss_affix_letters_apart.mjs";
 import { app_learn_ceb_gloss_affix_letters_apart_baseline_growth_assert } from "./app_learn_ceb_gloss_affix_letters_apart_baseline_growth_assert.mjs";
 import { app_learn_ceb_gloss_affix_letters_apart_baseline_path } from "./app_learn_ceb_gloss_affix_letters_apart_baseline_path.mjs";
 import { app_ceb_bible_gloss_stored_is } from "./app_ceb_bible_gloss_stored_is.mjs";
@@ -12,7 +12,7 @@ export async function app_learn_ceb_gloss_affix_letters_apart_baseline_write() {
     hint: "the Cebuano gloss store is not on the disk, so there is nothing to write the record from - mount the drive the store lives on and run this again",
     stored,
   });
-  let known = await app_ceb_bible_gloss_affix_letters_apart();
+  let known = await app_learn_ceb_gloss_affix_letters_apart();
   await app_learn_ceb_gloss_affix_letters_apart_baseline_growth_assert(known);
   let path = app_learn_ceb_gloss_affix_letters_apart_baseline_path();
   let r = await baseline_known_write(known, path);

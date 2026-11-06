@@ -6,7 +6,7 @@ import { property_equals_not } from "./property_equals_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { gloss_offenders_said_names } from "./gloss_offenders_said_names.mjs";
-export async function app_ceb_bible_gloss_affix_letters_apart() {
+export async function app_learn_ceb_gloss_affix_letters_apart() {
   "Every Cebuano explanation quoting letters for a piece of its word that stand nowhere in the dictionary's own cut of it, named once each however many chapters met it.";
   "One of the three readings of a disagreeing piece, and the only one that is an invention. Letters sitting inside the dictionary's are a disagreement about where the word ends and its piece begins, and letters holding the dictionary's inside them are a cut taken one layer further back; both tell a reader something true. Letters standing apart from both were got from nowhere.";
   "Named by the word and the piece rather than counted, because a count cannot be refused with anything a reader can act on, and because one word met in a dozen chapters is one thing to write out again rather than a dozen.";
