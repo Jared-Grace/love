@@ -2,7 +2,7 @@ import { app_learn_ceb_gloss_chapter_known_capitalised } from "./app_learn_ceb_g
 import { property_get } from "./property_get.mjs";
 import { app_learn_ceb_gloss_passage_verses_read } from "./app_learn_ceb_gloss_passage_verses_read.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
-import { app_ceb_bible_gloss_passages } from "./app_ceb_bible_gloss_passages.mjs";
+import { app_learn_ceb_gloss_passages } from "./app_learn_ceb_gloss_passages.mjs";
 import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
 export async function app_ceb_bible_gloss_write_passage(
@@ -19,7 +19,7 @@ export async function app_ceb_bible_gloss_write_passage(
   "The two are handed over together because either one alone is a claim this cannot make good. Withholding the root said this word is a name, and in poetry that is wrong far more often than it is right: measured over the Psalms, four hundred and six words are never once written in small letters, and most of them are ordinary commands that only ever open a line - barog, tan-awa, pamatia. Told they were names, an author would withhold the origins of words that have them, which is the same mistake pointing the other way and at a hundred times the volume. Both readings are evidence and neither is a verdict, so the author is given both and settles it.";
   "It also answers with the file to write the explanations into, because that name is a convention and a convention nobody can see is a convention nobody can follow.";
   "The passage is named rather than found, which is what lets a passage that already carries explanations be authored again. That matters here more than on the Greek side, because every Cebuano chapter now in the store was generated rather than authored, so re-authoring is not the exception but the whole of the work.";
-  let passages = await app_ceb_bible_gloss_passages(chapter_code);
+  let passages = await app_learn_ceb_gloss_passages(chapter_code);
   let passage = gloss_passages_verses_key_find(passages, verse_key);
   let sources =
     await app_learn_ceb_gloss_chapter_known_capitalised(chapter_code);

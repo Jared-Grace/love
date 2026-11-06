@@ -1206,7 +1206,7 @@ export function permission_grant_names() {
     fn_name("app_learn_ceb_gloss_chapters_absent"),
     fn_name("app_learn_ceb_gloss_generate_chapter_bible_folders"),
     fn_name("app_learn_ceb_gloss_new_testament_prep"),
-    fn_name("app_ceb_bible_gloss_passages"),
+    fn_name("app_learn_ceb_gloss_passages"),
     fn_name("app_ceb_bible_gloss_wolff_coverage"),
     fn_name("app_ceb_bible_gloss_word_explains"),
     fn_name("app_code_answer_count_max"),
