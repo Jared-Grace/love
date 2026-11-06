@@ -25,7 +25,7 @@ export async function app_bible_search_query_link_cases_gate_run() {
   "THE OLD ADDRESSES ARE CHECKED TOO, because this was a repair and a repair that quietly stops old links opening has traded one silence for another. Every link anybody has already sent was written the previous way, and those are read here exactly as they always were.";
   arguments_assert(arguments, 0);
   let wrong = [];
-  let s = app_shared_description("search");
+  let s = app_shared_description("bible_search");
   let said = text_lower_to(s);
   ("The claim this gate stands behind, in the card's own words, so that a reworded card cannot leave a check guarding a promise nobody is making any more.");
   let promise = "sent as a link";
@@ -137,7 +137,7 @@ export async function app_bible_search_query_link_cases_gate_run() {
     wrong,
   });
   let r = {
-    app_name: "search",
+    app_name: "bible_search",
     queries: list_size(cases),
     old_links: list_size(old_links),
     doors: list_size(doors),
