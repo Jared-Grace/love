@@ -1,7 +1,7 @@
 import { app_shared_folds_refresh } from "./app_shared_folds_refresh.mjs";
 import { app_bible_search_results_expand_more_is } from "./app_bible_search_results_expand_more_is.mjs";
 import { app_bible_search_results_collect_all_texts } from "./app_bible_search_results_collect_all_texts.mjs";
-import { app_search_results_top_buttons } from "./app_search_results_top_buttons.mjs";
+import { app_bible_search_results_top_buttons } from "./app_bible_search_results_top_buttons.mjs";
 import { app_shared_folds_set } from "./app_shared_folds_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
@@ -44,7 +44,7 @@ export function app_bible_search_results_top_buttons_add(
     let more = app_bible_search_results_expand_more_is(buttons);
     return more;
   }
-  app_search_results_top_buttons({
+  app_bible_search_results_top_buttons({
     div_results,
     expand_all_lambda,
     collapse_all_lambda,
