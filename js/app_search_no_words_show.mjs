@@ -1,7 +1,7 @@
 import { app_search_no_words_text } from "./app_search_no_words_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_search_nothing_typed_is } from "./app_search_nothing_typed_is.mjs";
-import { app_search_bible_url } from "./app_search_bible_url.mjs";
+import { app_bible_search_bible_url } from "./app_bible_search_bible_url.mjs";
 import { app_bible_search_bible_link_text } from "./app_bible_search_bible_link_text.mjs";
 import { app_shared_button_wide_link } from "./app_shared_button_wide_link.mjs";
 export function app_search_no_words_show(div_results, query, languages_chosen) {
@@ -13,7 +13,7 @@ export function app_search_no_words_show(div_results, query, languages_chosen) {
   if (nothing_typed) {
     return;
   }
-  let url = app_search_bible_url(languages_chosen);
+  let url = app_bible_search_bible_url(languages_chosen);
   let text = app_bible_search_bible_link_text();
   app_shared_button_wide_link(div_results, text, url);
 }
