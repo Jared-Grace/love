@@ -23,7 +23,7 @@ import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_shapes_unreached_witnessed() {
+export async function app_learn_ceb_gloss_roots_claimed_shapes_unreached_witnessed() {
   "Every word and root pair that no named shape of Cebuano word building reaches, asked of the rest of the store: how many other words are taken back to that same root, how many of them spell it inside themselves, and how many of them a named shape reaches.";
   "The pricing beside this one leaves a residue no shape accounts for, and that residue is the honest fault list of the store. It is short enough to read and it has stayed unread, because every row in it is a question about Cebuano and nobody here can answer one. This asks a different question, which the store can answer about itself: does this root do ordinary work anywhere else?";
   "★ THE MEASURE IS THE STORE'S OWN USE OF THE ROOT AND IT NEEDS NO CEBUANO. A root the store hands to thirty words and spells inside twenty nine of them is a root the language really has, and the row here is then a real claim about one hard word. A root the store hands to one word, never spells inside it, and reaches by no shape, is a root nothing in the store has ever shown doing anything. That second kind is where a fault would be, and saying so is arithmetic rather than judgement.";
