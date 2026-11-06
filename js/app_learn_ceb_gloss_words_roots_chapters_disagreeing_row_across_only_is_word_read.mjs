@@ -14,7 +14,7 @@ import { greater_than } from "./greater_than.mjs";
 import { list_get } from "./list_get.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is_word_read(
+export function app_learn_ceb_gloss_words_roots_chapters_disagreeing_row_across_only_is_word_read(
   rooted,
   claim_root,
   claim_chapter,
