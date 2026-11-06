@@ -1,7 +1,7 @@
 import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { app_ceb_bible_gloss_affix_kinds_wrong_names } from "./app_ceb_bible_gloss_affix_kinds_wrong_names.mjs";
-import { app_ceb_bible_gloss_affix_kinds_wrong_baseline_path } from "./app_ceb_bible_gloss_affix_kinds_wrong_baseline_path.mjs";
+import { app_learn_ceb_gloss_affix_kinds_wrong_baseline_path } from "./app_learn_ceb_gloss_affix_kinds_wrong_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 export async function app_ceb_bible_gloss_affix_kinds_wrong_gate_run() {
@@ -18,7 +18,7 @@ export async function app_ceb_bible_gloss_affix_kinds_wrong_gate_run() {
     return skipped;
   }
   let offenders = await app_ceb_bible_gloss_affix_kinds_wrong_names();
-  let path = app_ceb_bible_gloss_affix_kinds_wrong_baseline_path();
+  let path = app_learn_ceb_gloss_affix_kinds_wrong_baseline_path();
   let name_write = fn_name(
     "app_ceb_bible_gloss_affix_kinds_wrong_baseline_write",
   );
