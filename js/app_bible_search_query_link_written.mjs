@@ -3,7 +3,7 @@ import { text_url_encode } from "./text_url_encode.mjs";
 import { app_bible_search_query_hash_word_gap } from "./app_bible_search_query_hash_word_gap.mjs";
 import { text_url_space_spelled } from "./text_url_space_spelled.mjs";
 import { text_replace } from "./text_replace.mjs";
-export function app_search_query_link_written(query) {
+export function app_bible_search_query_link_written(query) {
   "$plain query";
   "What somebody typed into the search box, spelled the way a link may carry it.";
   "EVERY CHARACTER IS SPELLED OUT FIRST, AND THAT IS THE WHOLE POINT. A set of named values is written into an address as name equals value, with a comma between one pair and the next, so a comma inside a value is read at the other end as the end of that value. A search for faith, hope and love arrived as a search for faith, and the reader was shown real verses for a real word with nothing saying that three of their words had been dropped. An ampersand is read as that same separator by an older spelling the reader still accepts, and a plus is read as a gap between words, so both of those were lost in their own way too.";

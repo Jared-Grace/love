@@ -6,7 +6,7 @@ import { not } from "./not.mjs";
 import { app_bible_search_query_hash_key } from "./app_bible_search_query_hash_key.mjs";
 import { app_bible_search_query_link_cases } from "./app_bible_search_query_link_cases.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_search_query_link_written } from "./app_search_query_link_written.mjs";
+import { app_bible_search_query_link_written } from "./app_bible_search_query_link_written.mjs";
 import { hash_to_url } from "./hash_to_url.mjs";
 import { hash_text_object } from "./hash_text_object.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -38,7 +38,7 @@ export async function app_bible_search_query_link_cases_gate_run() {
   for (let one of cases) {
     let query = property_get(one, "query");
     let hash = {};
-    hash[key] = app_search_query_link_written(query);
+    hash[key] = app_bible_search_query_link_written(query);
     let url = hash_to_url(hash);
     let read = hash_text_object(url);
     let carried = property_get_or_null(read, key);
@@ -101,7 +101,7 @@ export async function app_bible_search_query_link_cases_gate_run() {
   let doors = [
     {
       page: fn_name("app_bible_search_home_search"),
-      door: fn_name("app_search_query_link_written"),
+      door: fn_name("app_bible_search_query_link_written"),
       what: "send a search as a link",
     },
     {
@@ -128,7 +128,7 @@ export async function app_bible_search_query_link_cases_gate_run() {
   list_empty_is_assert_json(wrong, {
     hint:
       "A search no longer survives being sent as a link, which is what the search card promises a stranger. The writing side is " +
-      fn_name("app_search_query_link_written") +
+      fn_name("app_bible_search_query_link_written") +
       " and the reading side is " +
       fn_name("app_bible_search_query_link_words") +
       "; the searches that have to survive, and why each one is there, are in " +
