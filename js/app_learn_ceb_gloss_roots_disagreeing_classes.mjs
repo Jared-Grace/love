@@ -4,7 +4,7 @@ import { gloss_classes_claimed_known_mark } from "./gloss_classes_claimed_known_
 import { object_merge_replace } from "./object_merge_replace.mjs";
 import { gloss_roots_disagreeing_classes } from "./gloss_roots_disagreeing_classes.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_ceb_bible_gloss_roots_disagreeing_classes(
+export async function app_learn_ceb_gloss_roots_disagreeing_classes(
   relation_wanted,
   sample_size,
 ) {

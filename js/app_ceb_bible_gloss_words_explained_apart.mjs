@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_disagreeing_classes } from "./app_ceb_bible_gloss_roots_disagreeing_classes.mjs";
+import { app_learn_ceb_gloss_roots_disagreeing_classes } from "./app_learn_ceb_gloss_roots_disagreeing_classes.mjs";
 import { gloss_classes_words_apart_counted } from "./gloss_classes_words_apart_counted.mjs";
 export async function app_ceb_bible_gloss_words_explained_apart(sample_size) {
   "The words the Cebuano app explains one way in one chapter and another way in another, worst first.";
@@ -11,7 +11,7 @@ export async function app_ceb_bible_gloss_words_explained_apart(sample_size) {
   "how many classes to draw from, said as text as readily as as a number. It names nothing that runs.";
   arguments_assert(arguments, 1);
   let everything = "all";
-  let gathered = await app_ceb_bible_gloss_roots_disagreeing_classes(
+  let gathered = await app_learn_ceb_gloss_roots_disagreeing_classes(
     everything,
     sample_size,
   );

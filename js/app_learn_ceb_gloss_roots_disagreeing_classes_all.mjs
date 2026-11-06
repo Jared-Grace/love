@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_disagreeing_classes } from "./app_ceb_bible_gloss_roots_disagreeing_classes.mjs";
+import { app_learn_ceb_gloss_roots_disagreeing_classes } from "./app_learn_ceb_gloss_roots_disagreeing_classes.mjs";
 export async function app_learn_ceb_gloss_roots_disagreeing_classes_all(
   sample_size,
 ) {
@@ -14,7 +14,7 @@ export async function app_learn_ceb_gloss_roots_disagreeing_classes_all(
     ", which is where it is recognised rather than supplied. Those two are deliberately left apart: one of them decides what all means and the other only asks for it.");
   arguments_assert(arguments, 1);
   let everything = "all";
-  let gathered = await app_ceb_bible_gloss_roots_disagreeing_classes(
+  let gathered = await app_learn_ceb_gloss_roots_disagreeing_classes(
     everything,
     sample_size,
   );
