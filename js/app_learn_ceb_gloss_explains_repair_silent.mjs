@@ -10,7 +10,7 @@ import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { text_includes_not } from "./text_includes_not.mjs";
 import { gloss_explains_repair_decided_generic } from "./gloss_explains_repair_decided_generic.mjs";
-export async function app_ceb_bible_gloss_explains_repair_silent() {
+export async function app_learn_ceb_gloss_explains_repair_silent() {
   "The Cebuano word explanations named in the repairs file put right only where the sentence already standing says nothing about the dictionary's root - leaving every sighting that already names it exactly as its author wrote it.";
   "★ THIS IS THE NARROW TWIN OF THE PLAIN REPAIR, AND THE DIFFERENCE IS THE WHOLE OF WHETHER THE QUEUE CAN BE DRAINED AT ALL. The plain one replaces every sighting of a word because the handover file is keyed on words; measured 2026-09-06 that meant about twenty-one sound explanations overwritten for each faulty one put right, and only sixty-four of the two hundred and seventy-five words left were safe to write for. Asked this way the same handover file touches the faulty sightings and nothing else, so every word on the list becomes safe and the trade disappears.";
   "The test is the same one the reading uses to call a sighting silent: does the sentence spell the root binisaya.com takes the word back to. So a word cleared here is a word the reading will stop listing, and the two cannot drift apart, because there is one idea of silence and this is it.";
