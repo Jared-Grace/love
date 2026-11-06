@@ -95,8 +95,8 @@ export async function app_shared_rename(a_name_before, a_name_after) {
   let tables = app_shared_name_keyed_tables();
   let keys_moved = [];
   for (let table of tables) {
-    let keyed = table();
-    let has = property_exists(keyed, a_name_before);
+    let table_keyed = table();
+    let has = property_exists(table_keyed, a_name_before);
     if (not(has)) {
       continue;
     }
