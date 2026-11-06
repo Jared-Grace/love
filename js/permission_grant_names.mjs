@@ -1597,7 +1597,7 @@ export function permission_grant_names() {
     fn_name("functions_oversize_blockers"),
     fn_name("ebible_versions_chapters_empty"),
     fn_name("ebible_languages_curated_codes_gate_run"),
-    fn_name("app_ceb_bible_gloss_roots_claimed_gather"),
+    fn_name("app_learn_ceb_gloss_roots_claimed_gather"),
     fn_name("app_ceb_bible_gloss_stored_is"),
     fn_name("app_learn_ceb_gloss_affix_letters_apart_baseline_write"),
     fn_name("instructions_notes_unreached"),

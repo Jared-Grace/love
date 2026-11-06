@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_gather } from "./binisaya_words_gather.mjs";
 import { gloss_roots_disagreeing_classes } from "./gloss_roots_disagreeing_classes.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_gather() {
+export async function app_learn_ceb_gloss_roots_claimed_gather() {
   "Look up on binisaya.com every root a Cebuano explanation named that the dictionary disagreed with, so that whether the dictionary knows the word can be asked rather than guessed at.";
   "Whether the named root is a word at all is the reading that decides what to do with one of these disagreements, and until the word has been asked about there is nothing to read. A word met only inside longer forms was never asked about, because the asking follows the words the verses use - so pasaylo, padayag and patalinghog were each read as a word nobody speaks purely for never having stood alone in a psalm. Eight of the ten worst-looking disagreements were that, and nothing about them was wrong.";
   "It finds its own set rather than being handed one. The disagreements are the set, they move whenever a chapter is authored, and a list typed out beside them would be right on the day it was written and quietly wrong afterwards.";
