@@ -21,7 +21,7 @@ export function app_shared_descriptions() {
       "A puzzle where you rewrite a row of symbols one rule at a time, from a single letter up to a working function. The same moves a compiler makes.",
     en_learn_bible:
       "Read a verse of the New Testament in Urdu and then in English, with every English word explained in Urdu. The Bible teaches you English as you read it.",
-    ceb_bible:
+    learn_ceb:
       "Read the New Testament in Cebuano with every word explained: what it means, and the root word it comes from. For reading Cebuano Scripture closely, whether it is your own language or one you are learning.",
     learn_original:
       "Read the New Testament in the Greek it was written in, and the Old Testament in Hebrew from Genesis onwards, with every word explained in English: what it means, how it is being used in that sentence, and the number you can look it up by.",
