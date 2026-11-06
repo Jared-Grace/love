@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_chapter_glosses_blank_words } from "./gloss_chapter_glosses_blank_words.mjs";
-export async function app_en_learn_bible_gloss_urdu_glosses_blank_words(
+export async function app_learn_en_gloss_urdu_glosses_blank_words(
   chapter_code,
 ) {
   "Every English word one chapter of the English-words-explained-in-Urdu store has been left without an Urdu meaning, under the verses it sits in.";
