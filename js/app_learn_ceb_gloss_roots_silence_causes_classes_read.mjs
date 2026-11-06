@@ -3,7 +3,7 @@ import { app_learn_ceb_gloss_roots_disagreeing_classes_all } from "./app_learn_c
 import { property_get } from "./property_get.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_folded_index } from "./binisaya_words_known_folded_index.mjs";
-import { app_ceb_bible_gloss_roots_silence_causes_sightings } from "./app_ceb_bible_gloss_roots_silence_causes_sightings.mjs";
+import { app_learn_ceb_gloss_roots_silence_causes_sightings } from "./app_learn_ceb_gloss_roots_silence_causes_sightings.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_learn_ceb_gloss_roots_silence_causes_classes_read(
   sample_size,
@@ -14,7 +14,7 @@ export async function app_learn_ceb_gloss_roots_silence_causes_classes_read(
   let classes = property_get(gathered, "classes");
   let known = await binisaya_words_known();
   let folded_index = binisaya_words_known_folded_index(known);
-  let r2 = app_ceb_bible_gloss_roots_silence_causes_sightings(
+  let r2 = app_learn_ceb_gloss_roots_silence_causes_sightings(
     classes,
     known,
     folded_index,

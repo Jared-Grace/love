@@ -7,7 +7,7 @@ import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 import { app_learn_ceb_gloss_roots_silence_causes_reachable_now } from "./app_learn_ceb_gloss_roots_silence_causes_reachable_now.mjs";
-export function app_ceb_bible_gloss_roots_silence_causes_sightings(
+export function app_learn_ceb_gloss_roots_silence_causes_sightings(
   classes,
   known,
   folded_index,
