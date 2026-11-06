@@ -1,6 +1,6 @@
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { app_ceb_bible_gloss_passage_roots_prompt } from "./app_ceb_bible_gloss_passage_roots_prompt.mjs";
-import { app_ceb_bible_gloss_generate_chapter_language } from "./app_ceb_bible_gloss_generate_chapter_language.mjs";
+import { app_learn_ceb_gloss_generate_chapter_language } from "./app_learn_ceb_gloss_generate_chapter_language.mjs";
 import { app_learn_ceb_gloss_generate_chapter_bible_folders } from "./app_learn_ceb_gloss_generate_chapter_bible_folders.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { app_shared_gloss_bible_generate_generic } from "./app_shared_gloss_bible_generate_generic.mjs";
@@ -9,7 +9,7 @@ export async function app_ceb_bible_gloss_generate_chapter(
   chapter_code_specified,
 ) {
   let book_code = ebible_chapter_code_to_book(chapter_code_specified);
-  let language = app_ceb_bible_gloss_generate_chapter_language();
+  let language = app_learn_ceb_gloss_generate_chapter_language();
   let fn = app_ceb_bible_gloss_generate;
   let bible_folders = app_learn_ceb_gloss_generate_chapter_bible_folders();
   let last = "original language and English are";

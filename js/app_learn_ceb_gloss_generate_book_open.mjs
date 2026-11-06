@@ -9,7 +9,7 @@ import { openai_responses_cache_args } from "./openai_responses_cache_args.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { app_ceb_bible_gloss_generate_chapter_language } from "./app_ceb_bible_gloss_generate_chapter_language.mjs";
+import { app_learn_ceb_gloss_generate_chapter_language } from "./app_learn_ceb_gloss_generate_chapter_language.mjs";
 import { app_learn_ceb_gloss_generate_chapter_bible_folders } from "./app_learn_ceb_gloss_generate_chapter_bible_folders.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { g_sermon_generate_book_generic_prompts } from "./g_sermon_generate_book_generic_prompts.mjs";
@@ -22,7 +22,7 @@ import { function_import } from "./function_import.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 export async function app_learn_ceb_gloss_generate_book_open() {
   let chapter_code = "PRO22";
-  let language = app_ceb_bible_gloss_generate_chapter_language();
+  let language = app_learn_ceb_gloss_generate_chapter_language();
   let last = "original language and English are";
   let word = app_shared_gloss_bible_generate_generic_word();
   let prompt_system = app_shared_gloss_bible_generate_generic_prompt_system(
