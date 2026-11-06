@@ -18,7 +18,7 @@ export function app_search_home_r(context, hash) {
   let r4 = {
     content,
     input,
-    search,
+    search_run: search,
   };
   return r4;
 }
