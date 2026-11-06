@@ -9,7 +9,7 @@ export async function app_learn_ceb_gloss_chapters_republish() {
   ("★ THIS STORE IS MENDED BY SEVERAL COMMANDS AND NONE OF THEM IS NAMED HERE AS THE ONE TO RUN FIRST, BECAUSE THERE IS NO SUCH ONE. ",
     fn_name("app_learn_ceb_gloss_explains_repair"),
     ", ",
-    fn_name("app_ceb_bible_gloss_explains_unnamed_source_repair"),
+    fn_name("app_learn_ceb_gloss_explains_unnamed_source_repair"),
     " and ",
     fn_name("app_ceb_bible_gloss_punctuation_entries_repair"),
     " each answer a different fault in the stored sentences. Whichever of them you ran is what has to come before this, because what goes up is the store as it stands; run this on its own and nothing is found changed and nothing is sent.");
