@@ -11,7 +11,7 @@ import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_root
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated() {
+export async function app_learn_ceb_gloss_roots_claimed_vouching_corroborated() {
   "Every root the Cebuano gloss store names, sorted by how many different dictionary words vouch for it, so that a vouching resting on one word alone is told apart from a vouching many words agree on.";
   "Vouching was read until now as a single yes. A word the dictionary names as some other word's root was taken as proved, because nothing the app asks for can put a word in that position and only the site could have written it. That much is still true and it is why the reading exists.";
   "What it misses is that the site does not look a word up before answering. It strips affixes off whatever it is handed and reports the residue, so it answered moises with the root isi and the affixes mo- and -s, and it answered aaron with the root aron and the prefix a-. Neither residue was ever a word anybody used. Both are now sitting in the vouched set, indistinguishable from sulti and buhat, because the store cannot tell a lexicon hit from a guess.";
