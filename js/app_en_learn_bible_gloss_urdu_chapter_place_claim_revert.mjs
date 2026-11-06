@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_chapter_backup_explains } from "./app_en_learn_bible_gloss_urdu_chapter_backup_explains.mjs";
+import { app_learn_en_gloss_urdu_chapter_backup_explains } from "./app_learn_en_gloss_urdu_chapter_backup_explains.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { add } from "./add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -23,7 +23,7 @@ export async function app_en_learn_bible_gloss_urdu_chapter_place_claim_revert(
   "Only an entry the sweep actually moved is touched. The author wrote place-bound explanations everywhere on purpose, and they are right where they were written; it is the copy of one that is wrong. Comparing against the backup is what tells those two apart, and nothing else can.";
   "The entries are matched to the backup by their position, counted as the walk goes. The walk asks the first reading of every entry in the order the chapter reads, and asks the second only of the entries the first one took, so the count kept here is the entry's own place in the chapter.";
   arguments_assert(arguments, 2);
-  let before = await app_en_learn_bible_gloss_urdu_chapter_backup_explains(
+  let before = await app_learn_en_gloss_urdu_chapter_backup_explains(
     chapter_code,
     backup_folder,
   );

@@ -7,7 +7,7 @@ import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_add } from "./list_add.mjs";
-export async function app_en_learn_bible_gloss_urdu_chapter_backup_explains(
+export async function app_learn_en_gloss_urdu_chapter_backup_explains(
   chapter_code,
   backup_folder,
 ) {
