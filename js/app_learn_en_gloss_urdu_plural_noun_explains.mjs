@@ -3,7 +3,7 @@ import { list_includes } from "./list_includes.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_map } from "./list_map.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-export function app_en_learn_bible_gloss_urdu_plural_noun_explains() {
+export function app_learn_en_gloss_urdu_plural_noun_explains() {
   "The wording every explanation of a plural English noun is given in the store that teaches English to an Urdu reader.";
   "Plurals are kept apart from the ordinary nouns because what a plural owes the reader is one thing more, and it is the thing the bare label was withholding. Told only that a word is a noun standing for more than one, a reader learns nothing about the word in front of them and nothing about how English got from the one to the many. Both are written here: the Urdu for the thing, and the singular the plural was made from.";
   "How the plural was made is the second half of every entry, because it is the one piece of English grammar a beginner can carry from this word to the next thousand. Three ways are told apart. Most take an s on the end. A few swap a y for ies. A handful change inside and take no s at all, and those are worth saying out loud, because a reader who has learned the s rule will otherwise read them as a different word.";

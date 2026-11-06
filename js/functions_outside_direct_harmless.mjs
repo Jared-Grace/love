@@ -12,7 +12,7 @@ export function functions_outside_direct_harmless() {
     ", and their callers are decided here one by one.");
   ("Callers of a transport that fix a read: a plain GET, a page of a storage listing, a local server's data. Porkbun's price list is asked for with POST and an empty body, because that is how its open interface is spelled; it carries no key and changes nothing.");
   let names = [
-    fn_name("app_en_learn_bible_gloss_urdu_plural_noun_explains"),
+    fn_name("app_learn_en_gloss_urdu_plural_noun_explains"),
     fn_name("bible_glyph_artwork_names"),
     fn_name("easton_word_articles"),
     fn_name("smith_word_articles"),
