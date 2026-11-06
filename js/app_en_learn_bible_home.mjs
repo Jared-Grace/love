@@ -3,7 +3,7 @@ import { app_en_learn_bible_reader_language_set } from "./app_en_learn_bible_rea
 import { app_learn_en_gloss_download } from "./app_learn_en_gloss_download.mjs";
 import { gloss_word_sound_url_cycling } from "./gloss_word_sound_url_cycling.mjs";
 import { app_en_learn_bible_gloss_urdu_words_sound_url } from "./app_en_learn_bible_gloss_urdu_words_sound_url.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound_slow_url } from "./app_en_learn_bible_gloss_urdu_words_sound_slow_url.mjs";
+import { app_learn_en_gloss_urdu_words_sound_slow_url } from "./app_learn_en_gloss_urdu_words_sound_slow_url.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_gloss_bible_home_generic } from "./app_shared_gloss_bible_home_generic.mjs";
 import { app_en_learn_bible } from "./app_en_learn_bible.mjs";
@@ -19,7 +19,7 @@ export async function app_en_learn_bible_home(context) {
   let download = app_learn_en_gloss_download;
   let cycling = gloss_word_sound_url_cycling(
     app_en_learn_bible_gloss_urdu_words_sound_url,
-    app_en_learn_bible_gloss_urdu_words_sound_slow_url,
+    app_learn_en_gloss_urdu_words_sound_slow_url,
   );
   let sound_url_get = property_get(cycling, "sound");
   let slow_url_get = property_get(cycling, "slow");

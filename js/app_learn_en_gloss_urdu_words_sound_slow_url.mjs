@@ -5,10 +5,7 @@ import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_
 import { firebase_storage_url } from "./firebase_storage_url.mjs";
 import { app_en_learn_bible_gloss_urdu_words_sound_slow_version } from "./app_en_learn_bible_gloss_urdu_words_sound_slow_version.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_en_learn_bible_gloss_urdu_words_sound_slow_url(
-  word,
-  voice,
-) {
+export function app_learn_en_gloss_urdu_words_sound_slow_url(word, voice) {
   "$plain word";
   "$plain voice";
   "Where a reader's phone fetches one person saying one English word slowly, so that a learner who did not catch it can ask for it again more clearly.";
