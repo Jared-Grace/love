@@ -1,7 +1,7 @@
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_learn_ceb_gloss_passages } from "./app_learn_ceb_gloss_passages.mjs";
 import { gloss_write_generic } from "./gloss_write_generic.mjs";
-export async function app_ceb_bible_gloss_write(
+export async function app_learn_ceb_gloss_write(
   chapter_code,
   verse_key,
   entries,
