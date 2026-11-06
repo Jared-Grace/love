@@ -2541,7 +2541,7 @@ export function permission_grant_names() {
     fn_name("song_image_notes_open_unreviewed"),
     fn_name("qa_commit_named_gone_forget"),
     fn_name("qa_snapshot_folder_named"),
-    fn_name("app_en_learn_bible_gloss_urdu_chapters_absent"),
+    fn_name("app_learn_en_gloss_urdu_chapters_absent"),
     fn_name("app_learn_original_gloss_chapters_uploaded"),
     fn_name("git_objects_tidy_love"),
     fn_name("function_temp_write"),

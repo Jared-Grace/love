@@ -1677,7 +1677,7 @@ export function reply_proposals() {
   ]);
   let cannot_lambda_removed = text_combine_multiple([
     "-    let r2 = ",
-    fn_name("app_shared_message_reply_choices_lambda"),
+    "app_shared_message_reply_choices_lambda",
     "(filtered, u);",
   ]);
   let cannot_matcher_removed = text_combine_multiple([
