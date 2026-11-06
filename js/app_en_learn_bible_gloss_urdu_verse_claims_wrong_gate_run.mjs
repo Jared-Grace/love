@@ -30,7 +30,7 @@ export async function app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run(
     offenders,
     path,
     "these explanations name a verse of their own chapter that holds no word built on the same English root - open the chapter at that word and read the sentence: mend it if it claims the word stands in the verse it names, and bank it deliberately if it only points at another word there or says the word was absent",
-    fn_name("app_en_learn_bible_gloss_urdu_verse_claims_wrong_baseline_write"),
+    fn_name("app_learn_en_gloss_urdu_verse_claims_wrong_baseline_write"),
   );
   let r = await gloss_gate_told_chapters(fn, told);
   return r;
