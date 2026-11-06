@@ -1,7 +1,7 @@
 import { app_learn_en_gloss_tagalog_passages } from "./app_learn_en_gloss_tagalog_passages.mjs";
 import { app_learn_en_gloss_tagalog_generate } from "./app_learn_en_gloss_tagalog_generate.mjs";
 import { gloss_write_chapter_file_generic } from "./gloss_write_chapter_file_generic.mjs";
-export async function app_en_learn_bible_gloss_tagalog_write_chapter_file(
+export async function app_learn_en_gloss_tagalog_write_chapter_file(
   chapter_code,
 ) {
   "Save a whole chapter of English words explained in Tagalog from one JSON file, keyed by the verses each passage covers.";
