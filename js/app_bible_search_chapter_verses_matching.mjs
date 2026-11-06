@@ -11,7 +11,10 @@ import { properties_get } from "./properties_get.mjs";
 import { list_intersect_multiple } from "./list_intersect_multiple.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_to_dictionary_value } from "./list_to_dictionary_value.mjs";
-export async function app_search_chapter_verses_matching(language_code, words) {
+export async function app_bible_search_chapter_verses_matching(
+  language_code,
+  words,
+) {
   "$plain language_code";
   "Every chapter and verse holding all of the words in one language's index.";
   arguments_assert(arguments, 2);
