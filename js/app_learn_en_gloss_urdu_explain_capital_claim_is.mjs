@@ -1,6 +1,6 @@
 import { app_learn_en_gloss_urdu_explain_capital_claims_elsewhere } from "./app_learn_en_gloss_urdu_explain_capital_claims_elsewhere.mjs";
 import { text_replace_multiple_to } from "./text_replace_multiple_to.mjs";
-import { app_en_learn_bible_gloss_urdu_explain_capital_claims } from "./app_en_learn_bible_gloss_urdu_explain_capital_claims.mjs";
+import { app_learn_en_gloss_urdu_explain_capital_claims } from "./app_learn_en_gloss_urdu_explain_capital_claims.mjs";
 import { text_accent_marks_removed } from "./text_accent_marks_removed.mjs";
 import { text_includes_any } from "./text_includes_any.mjs";
 export function app_learn_en_gloss_urdu_explain_capital_claim_is(explain) {
@@ -11,7 +11,7 @@ export function app_learn_en_gloss_urdu_explain_capital_claim_is(explain) {
   "Measured 2026-09-23: reading without this called four explanations false, and one of the four was the sentence in Revelation 22 teaching that 'the' stands in front of a title although the title carries the capital. That sentence is right, and the repair that follows a wrong claim would have deleted it whole.";
   let elsewhere = app_learn_en_gloss_urdu_explain_capital_claims_elsewhere();
   let own = text_replace_multiple_to(explain, elsewhere, "");
-  let claims = app_en_learn_bible_gloss_urdu_explain_capital_claims();
+  let claims = app_learn_en_gloss_urdu_explain_capital_claims();
   let s = text_accent_marks_removed(own);
   let claimed = text_includes_any(s, claims);
   return claimed;
