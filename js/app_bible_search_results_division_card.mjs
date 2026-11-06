@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
-export function app_search_results_division_card(
+export function app_bible_search_results_division_card(
   book_code,
   division_current,
   div_books,
