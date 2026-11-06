@@ -12,7 +12,7 @@ import { list_wait } from "./list_wait.mjs";
 import { list_chunk } from "./list_chunk.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_en_learn_bible_gloss_urdu_words_sound_unwritten_delete() {
+export async function app_learn_en_gloss_urdu_words_sound_unwritten_delete() {
   "Takes away every recording of an English word that no word anybody wrote is filed under, from storage and from this machine both.";
   "★ IT FINDS ITS OWN SET RATHER THAN BEING HANDED ONE, WHICH IS THE ONLY SHAPE A REMOVAL LIKE THIS MAY HAVE. A list of names typed out somewhere is a list about the day it was typed, and a removal run from a stale list takes away recordings that have since become wanted. Asking the question again at the moment of removing means the answer cannot have drifted in between.";
   "★ STORAGE GOES FIRST AND THIS MACHINE SECOND, WHICH IS THE ORDER THAT SURVIVES A FAILURE HALF WAY. The only thing that knows a file in storage is unwanted is the copy of it here, so removing this one first and then failing would leave the far copy with nothing left anywhere that could name it. Done the other way round, a run that stops leaves both copies standing and running it again picks up exactly where it stopped.";
