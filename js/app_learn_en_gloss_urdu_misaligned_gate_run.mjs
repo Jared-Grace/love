@@ -11,7 +11,7 @@ export async function app_learn_en_gloss_urdu_misaligned_gate_run() {
     "the words being explained are the English ones, written in a Latin alphabet, so one word spelled two ways cannot be the cause here - either a word was left with no explanation under it or an explanation was left over after the words ran out, and the chapter's explanations have to be authored to cover the passage's words in the order it writes them";
   let r = await gloss_words_misaligned_gate_generic(
     fn,
-    "en_learn_bible",
+    "learn_en",
     words_read,
     mend,
   );
