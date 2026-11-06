@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_rule_mixed } from "./app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_rule_mixed.mjs";
+import { app_learn_en_gloss_urdu_chapters_occurrence_claims_rule_mixed } from "./app_learn_en_gloss_urdu_chapters_occurrence_claims_rule_mixed.mjs";
 import { gloss_chapters_claims_wrong_names_generic } from "./gloss_chapters_claims_wrong_names_generic.mjs";
 export async function app_en_learn_bible_gloss_urdu_occurrence_claims_rule_mixed_names() {
   "The chapter, verses, word and entry number of every place in the Urdu-explained English store where one word's occurrence numbers stop following any single rule.";
@@ -8,7 +8,7 @@ export async function app_en_learn_bible_gloss_urdu_occurrence_claims_rule_mixed
   arguments_assert(arguments, 0);
   let part = "at";
   let chapters =
-    await app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_rule_mixed();
+    await app_learn_en_gloss_urdu_chapters_occurrence_claims_rule_mixed();
   let names = gloss_chapters_claims_wrong_names_generic(chapters, part);
   return names;
 }
