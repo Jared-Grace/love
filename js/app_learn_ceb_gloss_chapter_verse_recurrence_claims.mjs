@@ -1,6 +1,6 @@
 import { app_learn_ceb_gloss_chapter_claims_generic } from "./app_learn_ceb_gloss_chapter_claims_generic.mjs";
 import { gloss_passages_verse_recurrence_claims } from "./gloss_passages_verse_recurrence_claims.mjs";
-export async function app_ceb_bible_gloss_chapter_verse_recurrence_claims(
+export async function app_learn_ceb_gloss_chapter_verse_recurrence_claims(
   chapter_code,
 ) {
   "Every Cebuano word explanation in one chapter that says how often its word stands there, laid beside the verses the word actually stands in.";
