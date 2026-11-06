@@ -9,7 +9,7 @@ import { list_map_unique } from "./list_map_unique.mjs";
 import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_words_dash_pieces_rooted() {
+export async function app_learn_ceb_gloss_words_dash_pieces_rooted() {
   "The pieces of dashed Cebuano words that the store explains nowhere on its own and that an authored explanation nonetheless names as a root.";
   "★ THIS IS THE QUESTION THAT SEPARATES A WASTED LOOKUP FROM A FALSE STATEMENT A READER IS SHOWN. A dictionary invented an analysis of a piece nobody wrote, and that cost a fetch. If the same piece is standing in an explanation as somebody's root, it has stopped being a cost and become a claim about Cebuano that the page makes to whoever reads it.";
   "No piece can be explained under its own name, and that needs no measuring: a piece counts as absent exactly because no word the store explains is spelled that way. The root claims are the one road left open, because a root is named inside prose and does not have to be a word the store explains at all.";
