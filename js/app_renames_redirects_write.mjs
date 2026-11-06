@@ -12,7 +12,7 @@ import { property_in_list_not } from "./property_in_list_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_renames_page_ready } from "./app_renames_page_ready.mjs";
 import { not } from "./not.mjs";
-import { app_renames_current } from "./app_renames_current.mjs";
+import { app_shared_renames_current } from "./app_shared_renames_current.mjs";
 import { app_route } from "./app_route.mjs";
 import { property_set } from "./property_set.mjs";
 import { json_format_to_spaces } from "./json_format_to_spaces.mjs";
@@ -49,7 +49,7 @@ export async function app_renames_redirects_write() {
       continue;
     }
     let source = property_get(rename, "source");
-    let current = app_renames_current(renames, before);
+    let current = app_shared_renames_current(renames, before);
     let destination = app_route(current);
     list_add_multiple(made, [
       {
