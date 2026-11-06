@@ -10,7 +10,7 @@ import { list_get } from "./list_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_take } from "./list_take.mjs";
-export async function app_ceb_bible_gloss_quoted_only_rooted_named(
+export async function app_learn_ceb_gloss_quoted_only_rooted_named(
   sample_size,
 ) {
   "Every Cebuano explanation the quoted-only reading calls silent about where its word came from, that names a root outright in one of the wordings the strict root reader cannot see.";
