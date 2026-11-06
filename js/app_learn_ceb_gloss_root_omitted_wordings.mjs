@@ -3,7 +3,7 @@ import { app_learn_ceb_gloss_root_omitted_wordings_walked } from "./app_learn_ce
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_ceb_bible_gloss_root_omitted_wordings() {
+export async function app_learn_ceb_gloss_root_omitted_wordings() {
   "The sentences the Cebuano gloss store actually writes for a handful of words it names a root for most of the time and no root for the rest of the time, one rooted wording and one bare wording of each set side by side so a reader can see what the difference between them is made of.";
   "★ IT WAS BUILT TO TEST A SENTENCE THAT HAD ALREADY BEEN OFFERED AS A RECOMMENDATION, WHICH IS THAT FILLING THOSE ENTRIES IN IS MECHANICAL. The reading beside this one found the words the store roots more often than it does not, and the entries where it does not, and called filling them a codemod because the answer is already in the store. That is a claim about the shape of the writing and not about the count, and nothing measured up to then had looked at the writing.";
   "Reading the writing answered a different question four times over. Each run of this printed a first bare sentence that was not bare at all but named the same root in a wording the reader could not yet see, and each of those became a wording the reader now reads. Three came out of three rounds that way. So this is what found them, and it found them by printing sentences rather than by counting anything.";
