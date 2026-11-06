@@ -1,7 +1,7 @@
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { equal_not } from "./equal_not.mjs";
-import { app_ceb_bible_gloss_roots_store_disagreeing_known } from "./app_ceb_bible_gloss_roots_store_disagreeing_known.mjs";
+import { app_learn_ceb_gloss_roots_store_disagreeing_known } from "./app_learn_ceb_gloss_roots_store_disagreeing_known.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -30,7 +30,7 @@ export async function app_ceb_bible_gloss_roots_store_disagreeing() {
   let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let said = {};
-  let known = await app_ceb_bible_gloss_roots_store_disagreeing_known(
+  let known = await app_learn_ceb_gloss_roots_store_disagreeing_known(
     word_key,
     said,
     fn,

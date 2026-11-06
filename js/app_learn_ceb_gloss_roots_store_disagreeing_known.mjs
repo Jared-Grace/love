@@ -7,7 +7,7 @@ import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
-export async function app_ceb_bible_gloss_roots_store_disagreeing_known(
+export async function app_learn_ceb_gloss_roots_store_disagreeing_known(
   word_key,
   said,
   fn,
