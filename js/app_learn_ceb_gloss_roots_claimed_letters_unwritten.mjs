@@ -15,7 +15,7 @@ import { list_size } from "./list_size.mjs";
 import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_letters_unwritten() {
+export async function app_learn_ceb_gloss_roots_claimed_letters_unwritten() {
   "Every root an explanation states outright that is spelled with a character the Cebuano bible never writes at all, gathered under that character.";
   ("This is the bottom band of the run ",
     fn_name("app_learn_ceb_gloss_roots_claimed_letters_rare"),
