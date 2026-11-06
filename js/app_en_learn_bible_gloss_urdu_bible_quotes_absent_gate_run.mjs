@@ -3,7 +3,7 @@ import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_glo
 import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { not } from "./not.mjs";
 import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_names } from "./app_en_learn_bible_gloss_urdu_bible_quotes_absent_names.mjs";
-import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_path } from "./app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_path.mjs";
+import { app_learn_en_gloss_urdu_bible_quotes_absent_baseline_path } from "./app_learn_en_gloss_urdu_bible_quotes_absent_baseline_path.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
@@ -23,7 +23,7 @@ export async function app_en_learn_bible_gloss_urdu_bible_quotes_absent_gate_run
   }
   let offenders =
     await app_en_learn_bible_gloss_urdu_bible_quotes_absent_names();
-  let path = app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_path();
+  let path = app_learn_en_gloss_urdu_bible_quotes_absent_baseline_path();
   let told = await baseline_names_gate_generic(
     offenders,
     path,
