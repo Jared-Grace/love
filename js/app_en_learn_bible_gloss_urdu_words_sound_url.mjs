@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_word_sound_path } from "./gloss_word_sound_path.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound_upload_path } from "./app_en_learn_bible_gloss_urdu_words_sound_upload_path.mjs";
+import { app_learn_en_gloss_urdu_words_sound_upload_path } from "./app_learn_en_gloss_urdu_words_sound_upload_path.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { firebase_storage_url } from "./firebase_storage_url.mjs";
 import { app_en_learn_bible_gloss_urdu_words_sound_version } from "./app_en_learn_bible_gloss_urdu_words_sound_version.mjs";
@@ -14,8 +14,7 @@ export function app_en_learn_bible_gloss_urdu_words_sound_url(word, voice) {
   "It takes the word as it was written, capital letter and apostrophe and all, and the quieting of that into a file name is done elsewhere rather than spelled here. That name has to be agreed on by the recorder, the uploader and this, and only this side would ever find out they had stopped agreeing - by a reader tapping a word and hearing nothing at all.";
   arguments_assert(arguments, 2);
   let file_name = gloss_word_sound_path(word, voice);
-  let destination =
-    app_en_learn_bible_gloss_urdu_words_sound_upload_path(file_name);
+  let destination = app_learn_en_gloss_urdu_words_sound_upload_path(file_name);
   let project_url = firebase_storage_url_project_jg();
   let url = firebase_storage_url(destination, project_url);
   let stamp = app_en_learn_bible_gloss_urdu_words_sound_version();
