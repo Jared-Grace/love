@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_not } from "./property_not.mjs";
 import { gloss_occurrence_claim_counted_is } from "./gloss_occurrence_claim_counted_is.mjs";
 import { not } from "./not.mjs";
-import { app_en_learn_bible_gloss_urdu_chapters_claims_generic } from "./app_en_learn_bible_gloss_urdu_chapters_claims_generic.mjs";
+import { app_learn_en_gloss_urdu_chapters_claims_generic } from "./app_learn_en_gloss_urdu_chapters_claims_generic.mjs";
 import { gloss_passages_occurrence_claims_urdu } from "./gloss_passages_occurrence_claims_urdu.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -28,7 +28,7 @@ export async function app_en_learn_bible_gloss_urdu_occurrence_claims_tally() {
     let unread = not(counted);
     return unread;
   }
-  let chapters = await app_en_learn_bible_gloss_urdu_chapters_claims_generic(
+  let chapters = await app_learn_en_gloss_urdu_chapters_claims_generic(
     gloss_passages_occurrence_claims_urdu,
   );
   let claims = [];

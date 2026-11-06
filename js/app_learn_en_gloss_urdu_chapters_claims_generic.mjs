@@ -4,7 +4,7 @@ import { gloss_store_word_key_read } from "./gloss_store_word_key_read.mjs";
 import { gloss_word_keys_reader_one } from "./gloss_word_keys_reader_one.mjs";
 import { app_en_learn_bible_gloss_urdu_text_index } from "./app_en_learn_bible_gloss_urdu_text_index.mjs";
 import { gloss_chapters_claims_generic } from "./gloss_chapters_claims_generic.mjs";
-export async function app_en_learn_bible_gloss_urdu_chapters_claims_generic(
+export async function app_learn_en_gloss_urdu_chapters_claims_generic(
   lambda_claims,
 ) {
   "Every authored chapter of the store that teaches English through Urdu, asked whatever the caller came to ask, and only the chapters that answered with something named.";
