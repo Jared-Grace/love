@@ -21,6 +21,6 @@ export async function app_learn_en_gloss_urdu_unpublished_gate_run() {
     "are explained all the way through and still unpublished - carry each one up with ",
     fn_name("app_learn_en_gloss_urdu_unpublished_upload"),
   ]);
-  let r = gloss_chapters_offenders_assert(walked, "en_learn_bible", fault);
+  let r = gloss_chapters_offenders_assert(walked, "learn_en", fault);
   return r;
 }
