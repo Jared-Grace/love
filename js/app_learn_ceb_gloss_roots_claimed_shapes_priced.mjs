@@ -22,7 +22,7 @@ import { list_join_space } from "./list_join_space.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_shapes_priced() {
+export async function app_learn_ceb_gloss_roots_claimed_shapes_priced() {
   "What each named shape of Cebuano word building would buy if somebody decided it counts as a shape rather than a fault, measured over every root in the store that is not spelled inside its own word - so that a question a reader of shapes says needs a Cebuano speaker is put to that speaker with numbers on it.";
   (fn_name("gloss_root_claimed_shape"),
     " reaches three shapes and its own prose names four more it does not reach, and says of each that somebody who knows Cebuano has to call it a shape rather than a fault before it is written down. That is the right refusal and it has stood unanswered, because a refusal with no numbers beside it gives nobody anything to answer with. This does not decide any of it. It counts.");

@@ -1,6 +1,6 @@
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_claimed_shapes_priced } from "./app_ceb_bible_gloss_roots_claimed_shapes_priced.mjs";
+import { app_learn_ceb_gloss_roots_claimed_shapes_priced } from "./app_learn_ceb_gloss_roots_claimed_shapes_priced.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_chapters_roots_claimed_gathered } from "./gloss_chapters_roots_claimed_gathered.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
@@ -36,7 +36,7 @@ export async function app_ceb_bible_gloss_roots_claimed_shapes_unreached_witness
   "The three Psalm 144 rows naming an English phrase as the root land in the unproved band, and so do the asterisk root and one of the two bracketed roots that the rare letter reading files under characters the bible never writes. Two readings built for different reasons arrive at the same rows by different roads, which is worth more than either arriving alone.";
   "Nothing is written and nothing is asked of the site.";
   arguments_assert(arguments, 0);
-  let priced = await app_ceb_bible_gloss_roots_claimed_shapes_priced();
+  let priced = await app_learn_ceb_gloss_roots_claimed_shapes_priced();
   let rows = property_get(priced, "rows");
   let gathered = await gloss_chapters_roots_claimed_gathered(
     app_learn_ceb_gloss_generate,
