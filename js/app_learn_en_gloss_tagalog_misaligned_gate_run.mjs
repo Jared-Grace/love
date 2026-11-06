@@ -1,7 +1,7 @@
 import { app_learn_en_gloss_tagalog_generate } from "./app_learn_en_gloss_tagalog_generate.mjs";
 import { gloss_passage_words_text_first } from "./gloss_passage_words_text_first.mjs";
 import { gloss_words_misaligned_gate_generic } from "./gloss_words_misaligned_gate_generic.mjs";
-export async function app_en_learn_bible_gloss_tagalog_misaligned_gate_run() {
+export async function app_learn_en_gloss_tagalog_misaligned_gate_run() {
   "Gate: no authored chapter of English words explained in Tagalog explains a word the passage does not carry, in the order the page paints them. Throws so the dispatcher seam exits nonzero.";
   "The words checked against are the first text's, because English is the first of the two bibles the passage carries and it is the English that is being explained.";
   let fn = app_learn_en_gloss_tagalog_generate;
