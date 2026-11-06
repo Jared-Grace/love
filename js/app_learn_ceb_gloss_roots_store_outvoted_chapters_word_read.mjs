@@ -10,7 +10,7 @@ import { null_is } from "./null_is.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read(
+export function app_learn_ceb_gloss_roots_store_outvoted_chapters_word_read(
   said,
   known,
   chapters_touched,

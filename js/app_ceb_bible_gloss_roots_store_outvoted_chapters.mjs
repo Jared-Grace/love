@@ -1,5 +1,5 @@
 import { app_learn_ceb_gloss_roots_store_outvoted_chapters_entry_read } from "./app_learn_ceb_gloss_roots_store_outvoted_chapters_entry_read.mjs";
-import { app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read } from "./app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read.mjs";
+import { app_learn_ceb_gloss_roots_store_outvoted_chapters_word_read } from "./app_learn_ceb_gloss_roots_store_outvoted_chapters_word_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -29,7 +29,7 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_chapters() {
   let said_words = object_property_names(said);
   let rows = [];
   let chapters_touched = [];
-  let word_read = app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read(
+  let word_read = app_learn_ceb_gloss_roots_store_outvoted_chapters_word_read(
     said,
     known,
     chapters_touched,
