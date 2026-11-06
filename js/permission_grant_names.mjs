@@ -2287,7 +2287,7 @@ export function permission_grant_names() {
     fn_name("door43_versions_english_choices"),
     fn_name("ebible_bible_folder_commercial_not_assert"),
     fn_name("ebible_versions_english_choices"),
-    fn_name("app_ceb_bible_gloss_unpublished_upload"),
+    fn_name("app_learn_ceb_gloss_unpublished_upload"),
     fn_name("firebase_prod_hashes_stale_apps"),
     fn_name("berean_books_path"),
     fn_name("commits_message_alias_baseline_write"),
