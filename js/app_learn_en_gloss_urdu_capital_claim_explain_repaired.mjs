@@ -7,9 +7,7 @@ import { null_not_is } from "./null_not_is.mjs";
 import { app_en_learn_bible_gloss_urdu_explain_capital_claims } from "./app_en_learn_bible_gloss_urdu_explain_capital_claims.mjs";
 import { text_urdu_sentence_end } from "./text_urdu_sentence_end.mjs";
 import { gloss_explain_claim_sentences_stripped } from "./gloss_explain_claim_sentences_stripped.mjs";
-export function app_en_learn_bible_gloss_urdu_capital_claim_explain_repaired(
-  entry,
-) {
+export function app_learn_en_gloss_urdu_capital_claim_explain_repaired(entry) {
   "What should stand in place of an Urdu explanation that claims a capital the word does not carry: the hand-written wording if one was authored for that word, and otherwise the same explanation with the false sentence taken out.";
   "The hand-written wording is asked for first because it is the narrower answer. Where somebody has looked at the word and written a fresh explanation for it, that judgement should not be overruled by a rule that only knows how to delete.";
   let key = gloss_entry_explain_key();
