@@ -8,7 +8,7 @@ import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 import { gloss_classes_backing_elsewhere } from "./gloss_classes_backing_elsewhere.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_backing_queue(sample_size) {
+export async function app_learn_ceb_gloss_roots_backing_queue(sample_size) {
   "The disagreements between an explanation and the dictionary, narrowed to the ones the dictionary's own walk does not account for, commonest first.";
   "Most of these disagreements are not faults. An explanation naming a root standing further back than the dictionary stopped is right whenever the dictionary itself walks from its root to the one claimed, and it says so in its own entries. Reading that walk clears a hundred and sixty one of the eight hundred and thirty sightings gathered so far, and another forty three are not a claim about an origin at all but the dictionary's own root written with the other of the two vowels Cebuano uses for one sound. What is left is fifty sightings across nineteen pairs, where the claim stands somewhere the walk never reaches. That is a screen of rows rather than a pile, which is the whole point of asking the question this way round.";
   "The four answers are reported beside the queue, because the queue on its own cannot say how much was cleared and how much was never asked. Five hundred and seventy six sightings come back silent - the dictionary was asked about the words and never about their roots, so it has no walk to offer and no verdict either. Silence is not agreement, and a reader taking the short queue as the whole of what is wrong would be reading the unasked as the answered.";
