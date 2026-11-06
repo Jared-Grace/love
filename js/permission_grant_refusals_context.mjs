@@ -1,9 +1,10 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
+import { functions_outside_irreversible_seams } from "./functions_outside_irreversible_seams.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { permission_grant_refusals_context_destructive } from "./permission_grant_refusals_context_destructive.mjs";
 import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
 import { permission_grant_refusals_code_overwrite } from "./permission_grant_refusals_code_overwrite.mjs";
@@ -27,6 +28,15 @@ export async function permission_grant_refusals_context(unaliased, context) {
         " is not a live function, so the rule would grant a name that is free for anyone to claim",
     );
     return refusals;
+  }
+  let irreversible = functions_outside_irreversible_seams();
+  let listed = list_includes(irreversible, unaliased);
+  if (listed) {
+    list_add(
+      refusals,
+      unaliased +
+        " is itself on the list of what only a person may run, because what it changes, or lets a new function change, is beyond what git can hand back - so a person has to see each use",
+    );
   }
   let unfenced_reachers = property_get(context, "unfenced_reachers");
   let unfenced = list_includes(unfenced_reachers, unaliased);
