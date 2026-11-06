@@ -5,7 +5,11 @@ import { app_search_query_hash_key } from "./app_search_query_hash_key.mjs";
 import { app_search_query_link_written } from "./app_search_query_link_written.mjs";
 import { html_hash_object_property_set } from "./html_hash_object_property_set.mjs";
 import { app_search_results } from "./app_search_results.mjs";
-export async function app_search_home_search(input, context, div_results) {
+export async function app_bible_search_home_search(
+  input,
+  context,
+  div_results,
+) {
   arguments_assert(arguments, 3);
   let query = html_value_get(input);
   property_set(context, "query", query);
