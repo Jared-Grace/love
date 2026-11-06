@@ -4,7 +4,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_learn_ceb_gloss_passages_respell_refused_each } from "./app_learn_ceb_gloss_passages_respell_refused_each.mjs";
 import { list_unique_sorted } from "./list_unique_sorted.mjs";
-export async function app_ceb_bible_gloss_passages_respell_refused_names() {
+export async function app_learn_ceb_gloss_passages_respell_refused_names() {
   "Every Cebuano passage the respell walks past without correcting anything, named once each by the chapter it stands in and the verses it covers.";
   "The reading beside this one answers with how many and by how much, which is what a person weighing the size of the problem wants. A record cannot be kept in those: it holds no name, so nothing in it could refuse the arrival of a fourteenth passage that the respell has quietly stopped touching.";
   "★ THE REFUSAL IS SILENT, WHICH IS THE WHOLE REASON A RECORD OF IT IS WORTH KEEPING. A passage the respell declines and a passage that needed no correction answer identically from outside - both hand back nothing changed. So a chapter authored today whose explanations do not line up with its words joins the untouched set without any reading going red, and stays there.";

@@ -2512,7 +2512,7 @@ export function permission_grant_names() {
     fn_name("app_learn_ceb_gloss_chapters_absent_gate_run"),
     fn_name("app_learn_ceb_gloss_passages_respell_refused_baseline_write"),
     fn_name("app_learn_ceb_gloss_passages_respell_refused_gate_run"),
-    fn_name("app_ceb_bible_gloss_passages_respell_refused_names"),
+    fn_name("app_learn_ceb_gloss_passages_respell_refused_names"),
     fn_name("bible_glyph_chapters_verse_marks_overdrawn_gate_run"),
     fn_name("bible_glyph_chapters_marks_doubled_gate_run"),
     fn_name("bible_interlinear_verse_lines"),
