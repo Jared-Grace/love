@@ -1,5 +1,5 @@
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { app_ceb_bible_gloss_generate_chapter } from "./app_ceb_bible_gloss_generate_chapter.mjs";
+import { app_learn_ceb_gloss_generate_chapter } from "./app_learn_ceb_gloss_generate_chapter.mjs";
 import { each_async } from "./each_async.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { list_size } from "./list_size.mjs";
@@ -11,7 +11,7 @@ export async function app_learn_ceb_gloss_chapters_rewrite() {
   "The chapters are asked for one after another rather than all at once. The service is one shared thing being paid for by the word, and a whole store put to it at once is the shape that spends everything before anybody can look at the first answer.";
   let chapter_codes = await gloss_chapters_stored(app_ceb_bible_gloss_generate);
   async function chapter_write(chapter_code) {
-    await app_ceb_bible_gloss_generate_chapter(chapter_code);
+    await app_learn_ceb_gloss_generate_chapter(chapter_code);
     log_keep(app_learn_ceb_gloss_chapters_rewrite.name, chapter_code);
   }
   await each_async(chapter_codes, chapter_write);

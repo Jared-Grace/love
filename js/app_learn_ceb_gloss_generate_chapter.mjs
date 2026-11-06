@@ -5,7 +5,7 @@ import { app_learn_ceb_gloss_generate_chapter_bible_folders } from "./app_learn_
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { app_shared_gloss_bible_generate_generic } from "./app_shared_gloss_bible_generate_generic.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-export async function app_ceb_bible_gloss_generate_chapter(
+export async function app_learn_ceb_gloss_generate_chapter(
   chapter_code_specified,
 ) {
   let book_code = ebible_chapter_code_to_book(chapter_code_specified);
