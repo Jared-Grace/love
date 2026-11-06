@@ -1529,7 +1529,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_gate_run"),
     fn_name("js_await_add_cases_gate_run"),
     fn_name("js_let_add_cases_gate_run"),
-    fn_name("app_ceb_bible_gloss_chapter_verse_position_claims"),
+    fn_name("app_learn_ceb_gloss_chapter_verse_position_claims"),
     fn_name("app_ceb_bible_gloss_chapters_verse_position_claims"),
     fn_name("bible_glyph_roots"),
     fn_name("text_replace_space_underscore_lower"),

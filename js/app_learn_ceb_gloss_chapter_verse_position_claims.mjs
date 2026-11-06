@@ -1,6 +1,6 @@
 import { app_learn_ceb_gloss_chapter_claims_generic } from "./app_learn_ceb_gloss_chapter_claims_generic.mjs";
 import { gloss_passages_verse_position_claims } from "./gloss_passages_verse_position_claims.mjs";
-export async function app_ceb_bible_gloss_chapter_verse_position_claims(
+export async function app_learn_ceb_gloss_chapter_verse_position_claims(
   chapter_code,
 ) {
   "Every Cebuano word explanation in one chapter that says where its word stands among the words beside it, laid beside the words that actually stand there.";
