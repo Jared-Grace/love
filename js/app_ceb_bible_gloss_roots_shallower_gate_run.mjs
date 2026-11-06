@@ -28,7 +28,7 @@ export async function app_ceb_bible_gloss_roots_shallower_gate_run() {
     offenders,
     path,
     "these explanations name a word built out of the root as though it were the root, which hands a learner a word nobody speaks - write the root the dictionary gives, or say plainly that the word named is a further layer built on it",
-    fn_name("app_ceb_bible_gloss_roots_shallower_baseline_write"),
+    fn_name("app_learn_ceb_gloss_roots_shallower_baseline_write"),
   );
   let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
