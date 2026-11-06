@@ -6,6 +6,6 @@ export async function app_learn_en_gloss_tagalog_glosses_empty_gate_run() {
   "The reader here is learning English, so the Tagalog meaning is the one piece of the row they can already understand, and the alignment gate never looks at it.";
   arguments_assert(arguments, 0);
   let fn = app_learn_en_gloss_tagalog_generate;
-  let r = await gloss_glosses_empty_gate_generic(fn, "en_learn_bible");
+  let r = await gloss_glosses_empty_gate_generic(fn, "learn_en");
   return r;
 }
