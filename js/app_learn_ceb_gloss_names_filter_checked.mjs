@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { gloss_offenders_roots_silent_words } from "./gloss_offenders_roots_silent_words.mjs";
 import { app_ceb_bible_gloss_words_rows_names_apart } from "./app_ceb_bible_gloss_words_rows_names_apart.mjs";
 import { gloss_names_filter_checked } from "./gloss_names_filter_checked.mjs";
-export async function app_ceb_bible_gloss_names_filter_checked() {
+export async function app_learn_ceb_gloss_names_filter_checked() {
   "Checks the names the Cebuano queue quietly drops against the app's own sentences: which of them a written explanation actually proves is a name, which rest on the vocabulary test alone, and which proven names the test failed to drop.";
   "The queue of words whose glosses say nothing about their root takes proper names off itself before anybody reads it, because a name has no Cebuano root and the dictionary invents one - Moises comes back as mo- plus isi plus -s. That removal is a kindness and it is also unchecked. It rests on one question, whether the word is ever met in small letters in the sixty-six books, and the account of that test names two rows it got wrong and one it loses to a single small-letter spelling. Nothing was reading the rows it took.";
   "This reads them. The evidence it reads them with is authored rather than counted: an explanation that says the word is a name, and names which word. Where the two agree the row is settled twice over; where they disagree the row is worth a person's minute.";
