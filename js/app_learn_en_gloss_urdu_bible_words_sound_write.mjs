@@ -8,7 +8,7 @@ import { gloss_words_sound_write_generic } from "./gloss_words_sound_write_gener
 import { object_merge_set } from "./object_merge_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { each_async } from "./each_async.mjs";
-export async function app_en_learn_bible_gloss_urdu_bible_words_sound_write() {
+export async function app_learn_en_gloss_urdu_bible_words_sound_write() {
   "Records every English word the bible spells, book by book with the New Testament first, so that a word already has its sound on the day somebody authors the chapter that explains it.";
   "★ THIS ASKS THE BIBLE AND NOT THE GLOSS STORE, WHICH IS THE WHOLE DIFFERENCE FROM THE ONE BESIDE IT. Asking the store can only ever record what has already been authored, so a chapter finished this morning is silent until somebody remembers to run the recorder - and measured over one day, four passes each closed that gap and each saw it reopen within the hour, because authoring never stops and nothing triggers recording. The words are the verse's own words, so they are knowable from the text months early, and recording them ahead removes the race rather than chasing it.";
   "★ IT DOES NOT REPLACE THE STORE-FED RECORDER, IT RETIRES THE HURRY. A gloss may still spell a word the reader of the text does not produce - a possessive keeping its apostrophe is the measured case, three words in two and a half thousand - so the store-fed run stays as the thing that catches the remainder, and it now has almost nothing left to do.";
