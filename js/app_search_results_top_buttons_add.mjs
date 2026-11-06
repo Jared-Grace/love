@@ -1,6 +1,6 @@
 import { app_shared_folds_refresh } from "./app_shared_folds_refresh.mjs";
 import { app_search_results_expand_more_is } from "./app_search_results_expand_more_is.mjs";
-import { app_search_results_collect_all_texts } from "./app_search_results_collect_all_texts.mjs";
+import { app_bible_search_results_collect_all_texts } from "./app_bible_search_results_collect_all_texts.mjs";
 import { app_search_results_top_buttons } from "./app_search_results_top_buttons.mjs";
 import { app_shared_folds_set } from "./app_shared_folds_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -21,7 +21,8 @@ export function app_search_results_top_buttons_add(
     app_shared_folds_set(testament_folds, false);
     app_shared_folds_set(book_folds, false);
     let button_list = property_get(buttons, "list");
-    let squashed = await app_search_results_collect_all_texts(button_list);
+    let squashed =
+      await app_bible_search_results_collect_all_texts(button_list);
     ("the verses are what took the waiting, and this button is lit while any of them is still empty, so the moment they have all arrived is the moment it has to be asked again - the folding it did before the fetch asked while every verse was still missing");
     app_shared_folds_refresh(book_folds);
     return squashed;
