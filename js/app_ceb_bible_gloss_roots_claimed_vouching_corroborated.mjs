@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_roots_claimed_vouching_corroborated_root_read } from "./app_ceb_bible_gloss_roots_claimed_vouching_corroborated_root_read.mjs";
+import { app_learn_ceb_gloss_roots_claimed_vouching_corroborated_root_read } from "./app_learn_ceb_gloss_roots_claimed_vouching_corroborated_root_read.mjs";
 import { app_ceb_bible_gloss_roots_claimed_vouching_corroborated_witness_count } from "./app_ceb_bible_gloss_roots_claimed_vouching_corroborated_witness_count.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -44,7 +44,7 @@ export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated() 
   let once_books = {};
   let once_listed = [];
   let root_read =
-    app_ceb_bible_gloss_roots_claimed_vouching_corroborated_root_read({
+    app_learn_ceb_gloss_roots_claimed_vouching_corroborated_root_read({
       poetic,
       claims_rest,
       claims_poetry,

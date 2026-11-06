@@ -10,7 +10,7 @@ import { not } from "./not.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_ceb_bible_gloss_roots_claimed_vouching_corroborated_root_read({
+export function app_learn_ceb_gloss_roots_claimed_vouching_corroborated_root_read({
   poetic,
   claims_rest,
   claims_poetry,
