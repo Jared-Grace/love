@@ -11,7 +11,7 @@ import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_root_word_apart_unshared() {
+export async function app_learn_ceb_gloss_root_word_apart_unshared() {
   "The words left over when no ordinary shape of Cebuano writing accounts for the root their explanation names, sorted by how much of the word that root still shares with it - so the ones no affixing rule could ever have produced come out on their own.";
   "Every rule for building a Cebuano word out of a root keeps the root's letters. A piece goes on the front or the end, a vowel drops out of the last syllable, a consonant changes where the two meet - through all of it a run of the root survives in the word, which is why the reading underneath measures a shared run in the first place and calls four letters kin. Turned the other way round the same measure says something a language rule cannot argue with: where a word and its named root share no run of even two letters, no affixing produced one from the other, whatever anybody knows about Cebuano.";
   "★ A SHORT SHARED RUN IS A REASON TO LOOK AND NOT A VERDICT. Three of the pairs sharing a single run are the English meaning of a root rather than a root, put there by a reader that takes the wrong half of a sentence, and one more is the dictionary printing its own shorthand. What the sorting is worth is that it is small enough to read at all: four hundred and two pairs went into the reading underneath and fourteen come out here, and the pile it leaves behind is morphology.";
