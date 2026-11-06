@@ -5,7 +5,7 @@ import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs
 import { app_learn_ceb_gloss_passages } from "./app_learn_ceb_gloss_passages.mjs";
 import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
-export async function app_ceb_bible_gloss_write_passage(
+export async function app_learn_ceb_gloss_write_passage(
   chapter_code,
   verse_key,
 ) {

@@ -1,5 +1,5 @@
 import { app_learn_ceb_gloss_write_coverage } from "./app_learn_ceb_gloss_write_coverage.mjs";
-import { app_ceb_bible_gloss_write_passage } from "./app_ceb_bible_gloss_write_passage.mjs";
+import { app_learn_ceb_gloss_write_passage } from "./app_learn_ceb_gloss_write_passage.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
@@ -22,7 +22,7 @@ export async function app_learn_ceb_gloss_write_next(chapter_code) {
   }
   let verse_key = list_first(missing);
   ("Which passage is next is the whole of this function's own work. Everything the author is handed for it is the same whether the passage has been written before or not, so it is read by the one that takes a passage by name.");
-  let handed = await app_ceb_bible_gloss_write_passage(chapter_code, verse_key);
+  let handed = await app_learn_ceb_gloss_write_passage(chapter_code, verse_key);
   let left = {
     remaining: list_size(missing),
   };

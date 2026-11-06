@@ -1393,7 +1393,7 @@ export function permission_grant_names() {
     fn_name("app_learn_original_gloss_passage_entries"),
     fn_name("function_string_value_replace"),
     fn_name("qa_gate_add"),
-    fn_name("app_ceb_bible_gloss_write_passage"),
+    fn_name("app_learn_ceb_gloss_write_passage"),
     fn_name("function_span_candidates"),
     fn_name("ai_log_entries_recent"),
     fn_name("function_aliases"),
