@@ -8,7 +8,7 @@ import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
 import { app_shared_bible_offline_gear } from "./app_shared_bible_offline_gear.mjs";
-import { app_search_bible_button } from "./app_search_bible_button.mjs";
+import { app_bible_search_bible_button } from "./app_bible_search_bible_button.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_input_text } from "./html_input_text.mjs";
@@ -28,7 +28,7 @@ export function app_search_home_left(context, hash, search) {
   property_set(context, "languages_chosen", languages_chosen);
   app_shared_bible_languages_gear(bar, content, language_codes);
   app_shared_bible_offline_gear(bar, content, languages_chosen);
-  app_search_bible_button(bar, languages_chosen);
+  app_bible_search_bible_button(bar, languages_chosen);
   ("The search looks in each chosen language that has an index, every word inside one language, and joins what the languages found. It once looked in English alone while saying any version would do; a language with no index yet still finds nothing, and says which words it could not find.");
   ("English once had its own exception here, 'except in English'. That was not true, save for œ, which that table lacks: the English index files a word written with an accent under its plain spelling as well, by ",
     fn_name("bible_search_symbols_plain"),
