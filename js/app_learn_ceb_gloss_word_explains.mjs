@@ -1,4 +1,4 @@
-export function app_ceb_bible_gloss_word_explains() {
+export function app_learn_ceb_gloss_word_explains() {
   "The wording every explanation of a named Cebuano word is given, for the words whose written explanations were found to disagree with the root a dictionary takes them back to.";
   "Each root and each affix here was read off binisaya.com and not worked out from the shape of the word. What the explanations they replace had in common was inventing one: a root nobody says exists, or an affix named after the letters that happen to start the word. Where the dictionary is silent, nothing is claimed.";
   "One wording stands at every place its word does, rather than the first one carrying the explanation and the rest pointing back at it. Most of the words here were carrying nothing but ‘See above.’, which is the one failure the method note calls the worst in the store; repeating a whole sentence is what it asks for instead.";
