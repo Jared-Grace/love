@@ -3,7 +3,7 @@ import { gloss_store_word_key_read } from "./gloss_store_word_key_read.mjs";
 import { gloss_word_keys_reader_one } from "./gloss_word_keys_reader_one.mjs";
 import { app_en_learn_bible_gloss_urdu_text_index } from "./app_en_learn_bible_gloss_urdu_text_index.mjs";
 import { gloss_chapter_occurrence_claims_wrong_urdu_repair } from "./gloss_chapter_occurrence_claims_wrong_urdu_repair.mjs";
-export async function app_en_learn_bible_gloss_urdu_chapter_occurrence_claims_wrong_repair(
+export async function app_learn_en_gloss_urdu_chapter_occurrence_claims_wrong_repair(
   chapter_code,
 ) {
   "Rewrite every count in one chapter of the store that teaches English through Urdu that says which time over a word has come and that no way of counting reaches, to the number the chapter's own rule gives.";
