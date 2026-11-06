@@ -20,7 +20,7 @@ import { file_read_json } from "./file_read_json.mjs";
 import { file_open } from "./file_open.mjs";
 import { function_import } from "./function_import.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
-export async function app_ceb_bible_gloss_generate_book_open() {
+export async function app_learn_ceb_gloss_generate_book_open() {
   let chapter_code = "PRO22";
   let language = app_ceb_bible_gloss_generate_chapter_language();
   let last = "original language and English are";
@@ -66,7 +66,7 @@ export async function app_ceb_bible_gloss_generate_book_open() {
   let imported_fn = await function_import(f_name);
   let path = local_function_path_json(chapter_code, imported_fn);
   let data = await file_read_json(path);
-  log(app_ceb_bible_gloss_generate_book_open.name, {
+  log(app_learn_ceb_gloss_generate_book_open.name, {
     data,
   });
 }
