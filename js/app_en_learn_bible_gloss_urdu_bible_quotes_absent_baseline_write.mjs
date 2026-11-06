@@ -3,7 +3,7 @@ import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_glo
 import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_names } from "./app_en_learn_bible_gloss_urdu_bible_quotes_absent_names.mjs";
-import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_growth_assert } from "./app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_growth_assert.mjs";
+import { app_learn_en_gloss_urdu_bible_quotes_absent_baseline_growth_assert } from "./app_learn_en_gloss_urdu_bible_quotes_absent_baseline_growth_assert.mjs";
 import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_path } from "./app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_path.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_write() {
@@ -17,7 +17,7 @@ export async function app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline
     stored,
   });
   let known = await app_en_learn_bible_gloss_urdu_bible_quotes_absent_names();
-  await app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_growth_assert(
+  await app_learn_en_gloss_urdu_bible_quotes_absent_baseline_growth_assert(
     known,
   );
   let path = app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_path();

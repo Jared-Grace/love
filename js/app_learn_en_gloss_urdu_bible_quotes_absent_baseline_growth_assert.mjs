@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_path } from "./app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_path.mjs";
 import { baseline_known_growth_assert } from "./baseline_known_growth_assert.mjs";
-export async function app_en_learn_bible_gloss_urdu_bible_quotes_absent_baseline_growth_assert(
+export async function app_learn_en_gloss_urdu_bible_quotes_absent_baseline_growth_assert(
   known,
 ) {
   "Refuse to record an Urdu explanation quoting a Bible chapter with words it does not hold, that the record did not already hold.";
