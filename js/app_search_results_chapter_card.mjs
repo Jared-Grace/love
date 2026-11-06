@@ -24,7 +24,7 @@ import { app_search_results_verse_button } from "./app_search_results_verse_butt
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_search_results_buttons_expand } from "./app_search_results_buttons_expand.mjs";
+import { app_bible_search_results_buttons_expand } from "./app_bible_search_results_buttons_expand.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_search_results_chapter_card(
   vk,
@@ -77,7 +77,7 @@ export function app_search_results_chapter_card(
   let bs = list_map(verse_numbers, each_verse_number);
   async function chapter_expand() {
     "everything this chapter matched, opened together";
-    await app_search_results_buttons_expand(bs);
+    await app_bible_search_results_buttons_expand(bs);
   }
   list_add(book_current.chapter_expands, chapter_expand);
   return bs;
