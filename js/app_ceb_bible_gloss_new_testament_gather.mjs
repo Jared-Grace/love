@@ -1,6 +1,6 @@
 import { app_learn_ceb_gloss_bible_folder } from "./app_learn_ceb_gloss_bible_folder.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_ceb_bible_gloss_book_gather } from "./app_ceb_bible_gloss_book_gather.mjs";
+import { app_learn_ceb_gloss_book_gather } from "./app_learn_ceb_gloss_book_gather.mjs";
 import { ebible_version_books_testament_new } from "./ebible_version_books_testament_new.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { each_async } from "./each_async.mjs";
@@ -14,7 +14,7 @@ export async function app_ceb_bible_gloss_new_testament_gather() {
   async function adder(la) {
     async function book_gather(book) {
       let book_code = property_get(book, "book_code");
-      let gathered = await app_ceb_bible_gloss_book_gather(book_code);
+      let gathered = await app_learn_ceb_gloss_book_gather(book_code);
       la({
         book_code,
         gathered,

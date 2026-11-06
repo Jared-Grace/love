@@ -1269,7 +1269,7 @@ export function permission_grant_names() {
     fn_name("function_copy_generic"),
     fn_name("function_wrap_generic"),
     fn_name("functions_values_report"),
-    fn_name("app_ceb_bible_gloss_book_gather"),
+    fn_name("app_learn_ceb_gloss_book_gather"),
     fn_name("app_ceb_bible_gloss_book_words_owed"),
     fn_name("app_code_lesson_ids_baseline_write"),
     fn_name("app_code_lesson_ids_gate_run"),

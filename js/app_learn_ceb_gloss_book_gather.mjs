@@ -1,6 +1,6 @@
 import { app_ceb_bible_gloss_book_words_owed } from "./app_ceb_bible_gloss_book_words_owed.mjs";
 import { binisaya_words_gather } from "./binisaya_words_gather.mjs";
-export async function app_ceb_bible_gloss_book_gather(book_code) {
+export async function app_learn_ceb_gloss_book_gather(book_code) {
   "Ask the dictionary about every Cebuano word one book of the New Testament needs and does not yet hold, one word at a time.";
   "$plain book_code";
   "the code is a book's name, like MAT, chosen from the Bible's own book numbering. It names text to read and nothing that runs.";
