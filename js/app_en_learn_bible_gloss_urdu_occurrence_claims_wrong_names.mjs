@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_wrong } from "./app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_wrong.mjs";
+import { app_learn_en_gloss_urdu_chapters_occurrence_claims_wrong } from "./app_learn_en_gloss_urdu_chapters_occurrence_claims_wrong.mjs";
 import { gloss_chapters_claims_wrong_names_generic } from "./gloss_chapters_claims_wrong_names_generic.mjs";
 export async function app_en_learn_bible_gloss_urdu_occurrence_claims_wrong_names() {
   "Every Urdu word explanation saying which time over one of its English words has come and naming a number the chapter's own words reach no way of counting, named once each by the chapter, the verses the passage covers, the word, and which explanation in the passage said it.";
@@ -9,7 +9,7 @@ export async function app_en_learn_bible_gloss_urdu_occurrence_claims_wrong_name
   arguments_assert(arguments, 0);
   let part = "at";
   let chapters =
-    await app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_wrong();
+    await app_learn_en_gloss_urdu_chapters_occurrence_claims_wrong();
   let names = gloss_chapters_claims_wrong_names_generic(chapters, part);
   return names;
 }
