@@ -93,6 +93,16 @@
         "source": "/search.html",
         "destination": "/bible_search",
         "type": 301
+      },
+      {
+        "source": "/en_learn_bible",
+        "destination": "/learn_en",
+        "type": 301
+      },
+      {
+        "source": "/en_learn_bible.html",
+        "destination": "/learn_en",
+        "type": 301
       }
     ],
     "headers": [
