@@ -1,4 +1,4 @@
-export function app_ceb_bible_gloss_root_explains() {
+export function app_learn_ceb_gloss_root_explains() {
   "The wording every explanation of a named built-up Cebuano word is given, for the words binisaya.com was able to take back to a root.";
   "Each root and each piece added to it is read off that dictionary rather than worked out here. A breakdown that looks obvious is exactly where an invented one hides, and a wrong root is worse for the reader than no root at all, because it is the part they will remember.";
   "What a piece added to a root does is said in plain words rather than named. A reader who has never met the word ‘affix’ is the one being written for, so ‘the ending -on builds a word for the one the doing falls on’ is the explanation and ‘suffix -on’ is only a label.";
