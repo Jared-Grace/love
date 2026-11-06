@@ -1064,7 +1064,7 @@ export function permission_grant_names() {
     fn_name("app_learn_ceb_gloss_generate_download"),
     fn_name("ebible_bibles_answered_assert"),
     fn_name("ebible_version_readaloud_download"),
-    fn_name("app_ceb_bible_gloss_words_respell"),
+    fn_name("app_learn_ceb_gloss_words_respell"),
     fn_name("app_shared_bible_hash_unknown_gate_run"),
     fn_name("gloss_words_misaligned_cases_gate_run"),
     fn_name("app_code_lessons"),
