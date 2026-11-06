@@ -2353,7 +2353,7 @@ export function permission_grant_names() {
     fn_name("apps_published_dev_missing"),
     fn_name("function_calls_callee_set_multiple"),
     fn_name("bless_building_shape"),
-    fn_name("app_en_learn_bible_gloss_urdu_write_coverage_all"),
+    fn_name("app_learn_en_gloss_urdu_write_coverage_all"),
     fn_name("app_shared_text_reader_language_sites"),
     fn_name("app_shared_text_reader_language_pickers"),
     fn_name("app_shared_text_reader_stops"),
