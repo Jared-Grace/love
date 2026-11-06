@@ -1,6 +1,6 @@
 import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_words_roots_self_disagreeing } from "./app_ceb_bible_gloss_words_roots_self_disagreeing.mjs";
+import { app_learn_ceb_gloss_words_roots_self_disagreeing } from "./app_learn_ceb_gloss_words_roots_self_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -16,7 +16,7 @@ export async function app_learn_ceb_gloss_roots_self_disagreeing_settled() {
   "The three answers are different kinds of thing and are kept apart rather than counted together. Where the dictionary names one of the two roots, the disagreement is over - the other sentence is the wrong one and no judgment is needed. Where it names a third root, nobody is agreeing with anybody and the row needs reading rather than applying - it is not the same as both sentences being wrong. Two of the three found this way are the dictionary stopping at a shallower form than the store went to, gamhanan under gamhanang where a sentence said gahum, so the store is further back rather than mistaken. Where the dictionary says nothing, the judgment is still owed to somebody.";
   "The words are folded before they are set equal, the same folding the relation reader uses, because Cebuano writes one sound two ways and matuod against matuor would otherwise read as two roots when they are one.";
   arguments_assert(arguments, 0);
-  let measured = await app_ceb_bible_gloss_words_roots_self_disagreeing();
+  let measured = await app_learn_ceb_gloss_words_roots_self_disagreeing();
   let rows = property_get(measured, "rows");
   let known = await binisaya_words_known();
   let settled = [];

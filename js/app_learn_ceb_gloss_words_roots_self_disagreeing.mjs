@@ -14,7 +14,7 @@ import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_word_sentences_generic } from "./gloss_chapters_word_sentences_generic.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_ceb_bible_gloss_words_roots_self_disagreeing() {
+export async function app_learn_ceb_gloss_words_roots_self_disagreeing() {
   "The words the Cebuano gloss store takes back to one root in one place of a chapter and to a different root in another place of the same chapter, each named beside the roots it was given.";
   "★ THIS IS THE STORE DISAGREEING WITH ITSELF, WHICH NO CHECK AGAINST AN OUTSIDE DICTIONARY CAN FIND. The root comparisons beside this one ask whether an explanation matches what binisaya.com says, so a word the dictionary has never been asked about is invisible to them and two explanations that are both wrong in the same way come out clean. Here nothing outside is asked at all: one of the two sentences is wrong whatever the dictionary would have said, and the only thing needed to know that is the store itself.";
   "The first root a sentence names is the one compared, and a sentence naming none is passed over rather than counted as disagreeing. An explanation may mention several roots when it is unpicking a compound, and the first is the one it is about; a sentence that claims nothing is not evidence of anything and the reader it is handed to says so itself.";
