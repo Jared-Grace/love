@@ -1,6 +1,6 @@
 import { ebible_language_urdu } from "./ebible_language_urdu.mjs";
 import { app_en_learn_bible_gloss_urdu_generate_download } from "./app_en_learn_bible_gloss_urdu_generate_download.mjs";
-import { app_en_learn_bible_gloss_urdu_chapters_uploaded } from "./app_en_learn_bible_gloss_urdu_chapters_uploaded.mjs";
+import { app_learn_en_gloss_urdu_chapters_uploaded } from "./app_learn_en_gloss_urdu_chapters_uploaded.mjs";
 import { ebible_language_tagalog } from "./ebible_language_tagalog.mjs";
 import { app_learn_en_gloss_tagalog_generate_download } from "./app_learn_en_gloss_tagalog_generate_download.mjs";
 import { app_learn_en_gloss_tagalog_chapters_uploaded } from "./app_learn_en_gloss_tagalog_chapters_uploaded.mjs";
@@ -11,7 +11,7 @@ export function app_en_learn_bible_stores() {
   let urdu = {
     language: ebible_language_urdu(),
     download: app_en_learn_bible_gloss_urdu_generate_download,
-    chapters_uploaded: app_en_learn_bible_gloss_urdu_chapters_uploaded,
+    chapters_uploaded: app_learn_en_gloss_urdu_chapters_uploaded,
   };
   let tagalog = {
     language: ebible_language_tagalog(),

@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_en_learn_bible_gloss_urdu_chapters_uploaded } from "./app_en_learn_bible_gloss_urdu_chapters_uploaded.mjs";
+import { app_learn_en_gloss_urdu_chapters_uploaded } from "./app_learn_en_gloss_urdu_chapters_uploaded.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { ternary } from "./ternary.mjs";
@@ -13,7 +13,7 @@ export async function app_en_learn_bible_gloss_urdu_write_finished(
   "A gate over the whole repo catches the same thing, and it is kept, because this only reaches an author who happened to ask. What it does instead is not wait: the gate is a quarter of an hour away and behind everything else in that run, while this is one question asked beside one already being asked.";
   "Whether it went up is asked of the bucket rather than of anything written down here. The chapter is written on one machine and fetched by a page somewhere else, so the place the page fetches from is the only one that knows.";
   "The command that publishes it is named rather than described, because whoever reads this wants the next thing to type, and nothing in its place is how a chapter already up says there is nothing to type at all.";
-  let published_codes = await app_en_learn_bible_gloss_urdu_chapters_uploaded();
+  let published_codes = await app_learn_en_gloss_urdu_chapters_uploaded();
   let published = list_includes(published_codes, chapter_code);
   let waiting = not(published);
   let upload_name = fn_name("app_learn_en_gloss_urdu_chapter_upload_stored");

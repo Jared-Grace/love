@@ -2469,7 +2469,7 @@ export function permission_grant_names() {
     fn_name("firebase_prod_asset_download_or_null"),
     fn_name("public_chunks_orphaned_names_walked"),
     fn_name("apps_published_dev_missing_walked"),
-    fn_name("app_en_learn_bible_gloss_urdu_chapters_uploaded"),
+    fn_name("app_learn_en_gloss_urdu_chapters_uploaded"),
     fn_name("song_images_kept_urls"),
     fn_name("qa_promoted_piece_app"),
     fn_name("bible_glyph_chapter_urdu_verses_fetched_gate_run"),
