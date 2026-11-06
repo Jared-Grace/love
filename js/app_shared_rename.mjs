@@ -5,6 +5,8 @@ import { property_get } from "./property_get.mjs";
 import { list_includes_assert_json } from "./list_includes_assert_json.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not_assert_json } from "./not_assert_json.mjs";
+import { app_shared_rename_keys_named } from "./app_shared_rename_keys_named.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { equal } from "./equal.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { or } from "./or.mjs";
@@ -14,8 +16,8 @@ import { text_quote_double } from "./text_quote_double.mjs";
 import { object_values } from "./object_values.mjs";
 import { function_name_to_path_found } from "./function_name_to_path_found.mjs";
 import { file_read } from "./file_read.mjs";
-import { not } from "./not.mjs";
 import { text_includes } from "./text_includes.mjs";
+import { not } from "./not.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { function_string_whole_replace } from "./function_string_whole_replace.mjs";
 import { app_shared_name_keyed_tables } from "./app_shared_name_keyed_tables.mjs";
@@ -23,6 +25,7 @@ import { property_exists } from "./property_exists.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_select_apply_args_auto } from "./function_select_apply_args_auto.mjs";
 import { list_add } from "./list_add.mjs";
+import { app_shared_name_listed_functions } from "./app_shared_name_listed_functions.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { property_set } from "./property_set.mjs";
@@ -40,7 +43,7 @@ export async function app_shared_rename(a_name_before, a_name_after) {
   "$plain a_name_after";
   arguments_assert(arguments, 2);
   ("Gives an app a new short name, and so a new address - the name is the address, so a different address is always a rename and never a lookup table between the two.");
-  ("Moves everything that spells the name: every function named after the app, the keys of every table that is keyed by app names, the list of apps, and the app's dev stamp. Settings people saved follow the functions that own them, because each function rename records itself for the browser to carry across.");
+  ("Moves everything that spells the name: every function named after the app, the keys of every table that is keyed by app names, the plain-word lists of app names, the list of apps, and the app's dev stamp. Settings people saved follow the functions that own them, because each function rename records itself for the browser to carry across.");
   ("The old address is already out in the world, so it is written down for good. Nothing in the served folder is touched: the old page keeps being served until the app is built and promoted under its new name, and only then is the old page taken out and its address sent on - a redirect written now would send people to a page that does not exist yet.");
   let names_path = apps_names_file_path();
   let data = await file_read_json(names_path);
@@ -52,6 +55,12 @@ export async function app_shared_rename(a_name_before, a_name_after) {
   not_assert_json(taken, {
     hint: "the new name should not already be an app - pick a name nothing answers to",
     a_name_after,
+  });
+  ("Refused before anything moves when one of the app's functions reads the old name as a key: the move below would rewrite that read and leave the object it reads from holding the old key, so the page would quietly get nothing back. Rename the key in those functions first, as its own change.");
+  let keyed = await app_shared_rename_keys_named(a_name_before);
+  list_empty_is_assert_json(keyed, {
+    hint: "these functions read the old app name as a key - rename that key first, then rename the app",
+    a_name_before,
   });
   let main_before = "app_" + a_name_before;
   let main_after = "app_" + a_name_after;
@@ -101,6 +110,22 @@ export async function app_shared_rename(a_name_before, a_name_after) {
     await function_call_commit(function_select_apply_args_auto, args);
     list_add(keys_moved, table.name);
   }
+  ("Lists that spell app names as plain words: nothing above follows them, so the old word is replaced there whole.");
+  let lists_moved = [];
+  for (let listed of app_shared_name_listed_functions()) {
+    let listed_path = await function_name_to_path_found(listed.name);
+    let listed_code = await file_read(listed_path);
+    let listed_has = text_includes(listed_code, quoted);
+    if (not(listed_has)) {
+      continue;
+    }
+    await function_call_commit(function_string_whole_replace, [
+      listed.name,
+      a_name_before,
+      a_name_after,
+    ]);
+    list_add(lists_moved, listed.name);
+  }
   function name_lambda(name) {
     if (equal(name, a_name_before)) {
       return a_name_after;
@@ -133,6 +158,7 @@ export async function app_shared_rename(a_name_before, a_name_after) {
   let r = {
     renamed,
     keys_moved,
+    lists_moved,
     description_moved,
   };
   return r;
