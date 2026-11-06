@@ -1431,7 +1431,7 @@ export function permission_grant_names() {
     fn_name("claude_bash_program_argument_shapes_ranked"),
     fn_name("qa_commit_named_red_report"),
     fn_name("qa_commit_named_head"),
-    fn_name("app_ceb_bible_gloss_chapter_affix_kinds_wrong"),
+    fn_name("app_learn_ceb_gloss_chapter_affix_kinds_wrong"),
     fn_name("permission_grant_word_params"),
     fn_name("app_ceb_bible_gloss_chapters_rewrite"),
     fn_name("app_learn_ceb_gloss_affix_kinds_wrong_count"),
