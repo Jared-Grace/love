@@ -5,7 +5,7 @@ import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_punctuation_removed } from "./text_punctuation_removed.mjs";
-export async function app_ceb_bible_gloss_punctuation_explains() {
+export async function app_learn_ceb_gloss_punctuation_explains() {
   "The wording to give a Cebuano word that reached the gloss still wearing a quote mark or a comma, borrowed from the same word written bare.";
   "A word met at the head of a sentence or at the end of one arrives with the punctuation stuck to it, and the gloss keys itself by exactly what the reader sees, so that spelling is a word of its own and has no explanation. It needs none written for it: the reader is looking at a word this repo has already settled wording for, and the mark is where the word fell rather than anything about the word.";
   "It is derived rather than listed, so a passage authored later that ends a sentence on an already-explained word is covered without anything being typed. A word whose bare spelling has no wording yet is passed over here - that is a word owed a real explanation, and borrowing nothing is how it stays visible as one.";

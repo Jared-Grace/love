@@ -1195,7 +1195,7 @@ export function permission_grant_names() {
     fn_name("js_code_binary_expression_commutative"),
     fn_name("js_code_call_commutative"),
     fn_name("text_punctuation_removed"),
-    fn_name("app_ceb_bible_gloss_punctuation_explains"),
+    fn_name("app_learn_ceb_gloss_punctuation_explains"),
     fn_name("app_learn_ceb_gloss_punctuation_explains_apply"),
     fn_name("qa_gate_timings_quiet_load"),
     fn_name("functions_inside_duplicate_names"),
