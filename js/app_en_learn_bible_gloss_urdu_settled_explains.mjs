@@ -6,7 +6,7 @@ import { app_en_learn_bible_gloss_urdu_verb_explains } from "./app_en_learn_bibl
 import { app_en_learn_bible_gloss_urdu_plural_noun_explains } from "./app_en_learn_bible_gloss_urdu_plural_noun_explains.mjs";
 import { app_learn_en_gloss_urdu_adjective_explains } from "./app_learn_en_gloss_urdu_adjective_explains.mjs";
 import { app_learn_en_gloss_urdu_action_verb_explains } from "./app_learn_en_gloss_urdu_action_verb_explains.mjs";
-import { app_en_learn_bible_gloss_urdu_adverb_conjunction_explains } from "./app_en_learn_bible_gloss_urdu_adverb_conjunction_explains.mjs";
+import { app_learn_en_gloss_urdu_adverb_conjunction_explains } from "./app_learn_en_gloss_urdu_adverb_conjunction_explains.mjs";
 export function app_en_learn_bible_gloss_urdu_settled_explains() {
   "Every English word the store that teaches English to an Urdu reader has a settled wording for, whatever kind of word it is, in one lookup.";
   "There are eight tables behind this and they are kept apart because their reasons are different. One holds the small closed classes - the articles, the joining words, the prepositions, the pronouns - where what the word does in a sentence is the whole of what there is to say and no dictionary work stands behind any of it. One holds the ordinary nouns, where the whole of the entry is the Urdu word for the thing and every line of it is dictionary work. The third holds the names, where the entry is neither of those: it is who the person is, which is read off the passages themselves rather than out of a dictionary, and it goes stale for a different reason than either of the others.";
@@ -32,7 +32,7 @@ export function app_en_learn_bible_gloss_urdu_settled_explains() {
   object_merge(r, from7);
   let from8 = app_learn_en_gloss_urdu_action_verb_explains();
   object_merge(r, from8);
-  let from9 = app_en_learn_bible_gloss_urdu_adverb_conjunction_explains();
+  let from9 = app_learn_en_gloss_urdu_adverb_conjunction_explains();
   object_merge(r, from9);
   return r;
 }

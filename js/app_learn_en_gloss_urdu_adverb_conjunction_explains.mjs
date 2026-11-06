@@ -7,7 +7,7 @@ import { app_en_learn_bible_gloss_urdu_reverent_words } from "./app_en_learn_bib
 import { app_en_learn_bible_gloss_urdu_word_explains } from "./app_en_learn_bible_gloss_urdu_word_explains.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
-export function app_en_learn_bible_gloss_urdu_adverb_conjunction_explains() {
+export function app_learn_en_gloss_urdu_adverb_conjunction_explains() {
   "The small English words that are not a kind of word so much as a leftover: the ones that shade a sentence, the ones that place it in time or space, the ones that count roughly, and the ones that join one clause to the next.";
   "Urdu grammar would split these into ظرف and حرفِ ربط and would be right to. They are in one table because the reason for every entry in it is the same: a reader meets the word in the first chapter, keeps meeting it, and cannot work it out from a root or a suffix. The reader either is told or is stuck. Splitting them four ways would have given four tables of a dozen words each with no separate reason standing behind any of them.";
   "The sentences are short on purpose, and shorter than the ones in the verb table next door. A verb needs its three forms explained because English will not give them up; ‘here’ needs the word یہاں and then nothing. Saying more would not be teaching, it would be filling.";
