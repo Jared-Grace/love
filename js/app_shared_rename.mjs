@@ -35,7 +35,7 @@ import { file_delete } from "./file_delete.mjs";
 import { app_renames_path } from "./app_renames_path.mjs";
 import { app_route } from "./app_route.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
-export async function app_rename(a_name_before, a_name_after) {
+export async function app_shared_rename(a_name_before, a_name_after) {
   "$plain a_name_before";
   "$plain a_name_after";
   arguments_assert(arguments, 2);
