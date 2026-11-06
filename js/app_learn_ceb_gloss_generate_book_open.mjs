@@ -1,5 +1,5 @@
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
-import { app_ceb_bible_gloss_passage_roots_prompt } from "./app_ceb_bible_gloss_passage_roots_prompt.mjs";
+import { app_learn_ceb_gloss_passage_roots_prompt } from "./app_learn_ceb_gloss_passage_roots_prompt.mjs";
 import { error } from "./error.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { invoke_cache_file_get } from "./invoke_cache_file_get.mjs";
@@ -39,7 +39,7 @@ export async function app_learn_ceb_gloss_generate_book_open() {
   let bible_folders = app_learn_ceb_gloss_generate_chapter_bible_folders();
   let known = await binisaya_words_known();
   function passage_reference(passage) {
-    let reference = app_ceb_bible_gloss_passage_roots_prompt(passage, known);
+    let reference = app_learn_ceb_gloss_passage_roots_prompt(passage, known);
     return reference;
   }
   let chapters = await g_sermon_generate_book_generic_prompts(

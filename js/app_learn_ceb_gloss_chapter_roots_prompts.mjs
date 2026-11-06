@@ -1,5 +1,5 @@
 import { app_learn_ceb_gloss_generate_chapter_bible_folders } from "./app_learn_ceb_gloss_generate_chapter_bible_folders.mjs";
-import { app_ceb_bible_gloss_passage_roots_prompt } from "./app_ceb_bible_gloss_passage_roots_prompt.mjs";
+import { app_learn_ceb_gloss_passage_roots_prompt } from "./app_learn_ceb_gloss_passage_roots_prompt.mjs";
 import { bible_passages_grouped } from "./bible_passages_grouped.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { list_map } from "./list_map.mjs";
@@ -13,7 +13,7 @@ export async function app_learn_ceb_gloss_chapter_roots_prompts(chapter_code) {
   let passages = await bible_passages_grouped(bible_folders, [chapter_code]);
   let known = await binisaya_words_known();
   function passage_read(passage) {
-    let reference = app_ceb_bible_gloss_passage_roots_prompt(passage, known);
+    let reference = app_learn_ceb_gloss_passage_roots_prompt(passage, known);
     return reference;
   }
   let r = list_map(passages, passage_read);
