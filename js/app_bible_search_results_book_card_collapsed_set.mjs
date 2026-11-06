@@ -6,7 +6,7 @@ import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap
 import { html_style_margin_x } from "./html_style_margin_x.mjs";
 import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { html_display_block } from "./html_display_block.mjs";
-export function app_search_results_book_card_collapsed_set(
+export function app_bible_search_results_book_card_collapsed_set(
   value,
   card,
   div_body,
