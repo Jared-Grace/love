@@ -13,7 +13,7 @@ import { gloss_root_row_note } from "./gloss_root_row_note.mjs";
 import { gloss_chapters_entries_explained_generic } from "./gloss_chapters_entries_explained_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { list_take } from "./list_take.mjs";
-export async function app_ceb_bible_gloss_root_self_named_apart_counted(
+export async function app_learn_ceb_gloss_root_self_named_apart_counted(
   sample_size,
 ) {
   "The one ambiguous wording split by whether the root it names is spelled inside the word it is given for, which is what tells a root from an English meaning in that shape.";
