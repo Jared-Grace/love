@@ -22,7 +22,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { path_join } from "./path_join.mjs";
 import { list_add } from "./list_add.mjs";
 import { properties_size } from "./properties_size.mjs";
-export async function app_en_learn_bible_gloss_urdu_words_sound_unwritten() {
+export async function app_learn_en_gloss_urdu_words_sound_unwritten() {
   "The recordings of English words sitting on this machine that no word anybody actually wrote is filed under.";
   "★ A RECORDING NOBODY CAN REACH IS INVISIBLE UNTIL SOMETHING ASKS THIS QUESTION. It is a real file of real audio filed under a real-looking name, so nothing about it looks wrong from the disk, from storage, or from the run that made it. The only thing that can call it junk is the list of words somebody wrote, and that list lives in two different places.";
   "★ IT ASKS BOTH WORD SOURCES AND WOULD BE DANGEROUS ASKING ONE. Two recorders fill this same folder: one takes its words from the gloss store, so it holds what has been authored, and one takes them from the bible, so it holds what is knowable ahead. A recording missing from either list is still wanted if the other list spells it, and a sweep built on one source alone would call several thousand good recordings junk.";

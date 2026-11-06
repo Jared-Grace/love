@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound_unwritten } from "./app_en_learn_bible_gloss_urdu_words_sound_unwritten.mjs";
+import { app_learn_en_gloss_urdu_words_sound_unwritten } from "./app_learn_en_gloss_urdu_words_sound_unwritten.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_en_learn_bible_gloss_urdu_words_sound } from "./app_en_learn_bible_gloss_urdu_words_sound.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
@@ -19,7 +19,7 @@ export async function app_learn_en_gloss_urdu_words_sound_unwritten_delete() {
   "A file already gone from storage counts as removed, because a request that timed out may well have been carried out at the far end, and a second run must not turn its own earlier success into an error.";
   "The question is asked again afterwards and the answer travels out, because a removal that quietly did nothing and a removal that worked are otherwise the same silence.";
   arguments_assert(arguments, 0);
-  let found = await app_en_learn_bible_gloss_urdu_words_sound_unwritten();
+  let found = await app_learn_en_gloss_urdu_words_sound_unwritten();
   let unwritten = property_get(found, "unwritten");
   let sound_fn = app_en_learn_bible_gloss_urdu_words_sound;
   let folder = local_function_folder(sound_fn);
@@ -37,7 +37,7 @@ export async function app_learn_en_gloss_urdu_words_sound_unwritten_delete() {
   let at_once = 32;
   let chunks = list_chunk(unwritten, at_once);
   await each_async(chunks, chunk_each);
-  let after = await app_en_learn_bible_gloss_urdu_words_sound_unwritten();
+  let after = await app_learn_en_gloss_urdu_words_sound_unwritten();
   let left = property_get(after, "unwritten");
   let r = {
     deleted: list_size(unwritten),
