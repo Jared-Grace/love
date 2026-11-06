@@ -12,7 +12,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_words_edged_roots() {
+export async function app_learn_ceb_gloss_words_edged_roots() {
   "The faults hiding behind the marks: every Cebuano explanation whose word carries a quotation mark or a comma from its sentence, put to the same root question the ordinary sweep asks, under the word spelled bare.";
   "This counts faults and not lookups. Knowing how many of these words a dictionary could be made to answer about says only what could be asked; what a reader wants to know before paying for the asking is how many of the answers would say something is wrong. So each one is judged by the same reading the ordinary sweep is judged by, and only the ones that come out disagreeing are named.";
   "The bare spelling is what is judged, not the spelling in the store, because the mark is no part of the word - a root that is the word's own spelling has to be recognised as that with the comma taken off, or every one of these would be reported as a disagreement.";
