@@ -12,7 +12,7 @@ import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { set_includes } from "./set_includes.mjs";
-export function app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read(
+export function app_learn_ceb_gloss_roots_claimed_unvouched_split_root_read(
   piles,
   counts,
   vouched,

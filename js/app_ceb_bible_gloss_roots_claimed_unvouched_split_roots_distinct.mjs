@@ -1,6 +1,6 @@
 import { property_list_size } from "./property_list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read } from "./app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read.mjs";
+import { app_learn_ceb_gloss_roots_claimed_unvouched_split_root_read } from "./app_learn_ceb_gloss_roots_claimed_unvouched_split_root_read.mjs";
 import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -17,7 +17,7 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_di
 ) {
   arguments_assert(arguments, 4);
   let counts = {};
-  let root_read = app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read(
+  let root_read = app_learn_ceb_gloss_roots_claimed_unvouched_split_root_read(
     piles,
     counts,
     vouched,
