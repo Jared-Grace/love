@@ -4,7 +4,7 @@ import { gloss_chapters_republish_generic } from "./gloss_chapters_republish_gen
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_chapters_uploaded } from "./app_en_learn_bible_gloss_urdu_chapters_uploaded.mjs";
 import { app_learn_en_gloss_urdu_chapter_upload_stored } from "./app_learn_en_gloss_urdu_chapter_upload_stored.mjs";
-export async function app_en_learn_bible_gloss_urdu_chapters_republish() {
+export async function app_learn_en_gloss_urdu_chapters_republish() {
   "Carry up again every chapter of English words explained in Urdu that a reader can already reach and that has been changed since it was last sent, so that what is in front of them is what the store says today.";
   "That is how the welded Urdu spellings stayed in front of readers after the store was put right, which is why this was the first of the three stores to get such a command.";
   ("★ THE REPAIR THIS STORE NEEDS FIRST IS THE ONE FOR RETIRED WORDINGS. Retiring a wording from the settled tables changes what the tables say and changes nothing in the store, because the store holds the sentence that was written into it on the day the chapter was generated. ",
