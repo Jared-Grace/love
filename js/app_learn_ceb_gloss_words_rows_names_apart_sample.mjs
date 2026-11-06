@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_take } from "./list_take.mjs";
-export async function app_ceb_bible_gloss_words_rows_names_apart_sample(
+export async function app_learn_ceb_gloss_words_rows_names_apart_sample(
   rows,
   sample_size,
 ) {

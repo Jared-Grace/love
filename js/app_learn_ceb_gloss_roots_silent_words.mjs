@@ -1,6 +1,6 @@
 import { app_learn_ceb_gloss_roots_disagreeing_offenders } from "./app_learn_ceb_gloss_roots_disagreeing_offenders.mjs";
 import { gloss_offenders_roots_silent_words } from "./gloss_offenders_roots_silent_words.mjs";
-import { app_ceb_bible_gloss_words_rows_names_apart_sample } from "./app_ceb_bible_gloss_words_rows_names_apart_sample.mjs";
+import { app_learn_ceb_gloss_words_rows_names_apart_sample } from "./app_learn_ceb_gloss_words_rows_names_apart_sample.mjs";
 export async function app_learn_ceb_gloss_roots_silent_words(sample_size) {
   "Every Cebuano word whose explanation says nothing about the root binisaya.com takes it back to, named once each with the chapters it was met in, commonest first - with the borrowed names the dictionary only appears to have analysed set aside.";
   "This is one of the two lists to write from, and measured on 2026-09-06 it is the smaller of them: 253 words stand here against 424 naming a root the dictionary does not give. It is dated rather than left standing as a fact, because the store is authored continually and both piles move; it was written down as the larger, and may well have been when that was written. The count of sightings says how many places are wrong and nothing about how much writing there is: one word met once a verse counts as hundreds, and the words are what somebody sits down to.";
@@ -12,7 +12,7 @@ export async function app_learn_ceb_gloss_roots_silent_words(sample_size) {
   "Measured on 2026-09-07, 205 of the 253 words in this queue were given a written explanation naming the dictionary root, reaching 8874 sightings when they were spread. The handover they went into stands at 270 words over 448 of the 449 chapters, which is 8454 chapter-and-word entries; those two counts differ because a word met five times in one chapter is five sightings but one entry. The 48 left are not unfinished writing; they are a different fault, and worth naming here because a later reader will otherwise take them for a remainder to be worked through. In every one of the 48 the root the dictionary gives is not in the word at all, so no honest sentence can be written that names it - denaryo taken back to diriyot, komino to kino, platero to plato, kaninya to sinya. Ten of the 48 are words Cebuano borrowed or names it carried over, where a Cebuano root does not exist to be found; the other thirty-eight are ordinary Cebuano words whose lookup simply landed on the wrong entry. Two of those thirty-eight are the sharpest: pag and mag are bare affixes rather than words, and they have been handed to the dictionary as though they were words and given the roots pala and mala. The remedy for this residue is in the root lookup, not in the writing.";
   let offenders = await app_learn_ceb_gloss_roots_disagreeing_offenders();
   let found = gloss_offenders_roots_silent_words(offenders);
-  let r = await app_ceb_bible_gloss_words_rows_names_apart_sample(
+  let r = await app_learn_ceb_gloss_words_rows_names_apart_sample(
     found,
     sample_size,
   );
