@@ -4,16 +4,8 @@ import { list_find_property } from "./list_find_property.mjs";
 import { reply_approved_all } from "./reply_approved_all.mjs";
 import { reply_proposal_approved_is } from "./reply_proposal_approved_is.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
+import { reply_proposal_after_source } from "./reply_proposal_after_source.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_starts_with_not } from "./text_starts_with_not.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { text_slice_from } from "./text_slice_from.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
-import { js_parse } from "./js_parse.mjs";
-import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
-import { js_unparse } from "./js_unparse.mjs";
 import { function_source_formatted_overwrite } from "./function_source_formatted_overwrite.mjs";
 import { function_auto_checked } from "./function_auto_checked.mjs";
 import { reply_proposal_cases_record } from "./reply_proposal_cases_record.mjs";
@@ -34,24 +26,8 @@ export async function reply_proposal_apply(title) {
     title,
     hint: "every file this change touches must be approved, in the wording it has now, before it goes into the code",
   });
-  let drawn = await reply_proposal_drawn(proposal);
-  let lines = property_get(drawn, "lines");
-  function kept_is(line) {
-    let r = text_starts_with_not(line, "-");
-    return r;
-  }
-  let kept = list_filter(lines, kept_is);
-  function unsigned(line) {
-    let r = text_slice_from(line, 1);
-    return r;
-  }
-  let after_lines = list_map(kept, unsigned);
-  let after = list_join_newline(after_lines);
+  let whole = await reply_proposal_after_source(proposal);
   let f_name = property_get(proposal, "fn");
-  ("★ THE IMPORTS GO IN BEFORE THE FILE IS WRITTEN, NOT AFTER. The canonicalizing pass below takes seconds, and written without them the rule could not run for those seconds: the review screen asked to redraw in that gap and showed a 500 over a change that had gone in correctly.");
-  let ast = js_parse(after);
-  await js_imports_missing_add_all(ast);
-  let whole = js_unparse(ast);
   await function_source_formatted_overwrite(f_name, whole);
   let checked = await function_auto_checked(f_name);
   let ok = property_get(checked, "ok");
