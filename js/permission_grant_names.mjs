@@ -1159,7 +1159,7 @@ export function permission_grant_names() {
     fn_name("app_replace_rules_used_gate_run"),
     fn_name("gloss_back_references_measure"),
     fn_name("app_shared_bible_hash_field_reference_cases_gate_run"),
-    fn_name("app_ceb_bible_gloss_words_owed"),
+    fn_name("app_learn_ceb_gloss_words_owed"),
     fn_name("app_g_player_walk_cases_gate_run"),
     fn_name("app_replace_tests_run_dev"),
     fn_name("daemons_stale_gate_run"),
