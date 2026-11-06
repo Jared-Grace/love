@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapter_pointers_addressed_generic } from "./gloss_chapter_pointers_addressed_generic.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { gloss_explain_back_reference_is } from "./gloss_explain_back_reference_is.mjs";
-export async function app_en_learn_bible_gloss_urdu_chapter_pointers_addressed(
+export async function app_learn_en_gloss_urdu_chapter_pointers_addressed(
   chapter_code,
 ) {
   "Writes an address beside every Urdu explanation in one chapter that tells the reader they have met this word before, wherever the chapter settles which meeting was meant, and answers with the words that got one.";

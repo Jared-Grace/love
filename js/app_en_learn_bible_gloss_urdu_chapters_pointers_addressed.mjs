@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
-import { app_en_learn_bible_gloss_urdu_chapter_pointers_addressed } from "./app_en_learn_bible_gloss_urdu_chapter_pointers_addressed.mjs";
+import { app_learn_en_gloss_urdu_chapter_pointers_addressed } from "./app_learn_en_gloss_urdu_chapter_pointers_addressed.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -15,9 +15,7 @@ export async function app_en_learn_bible_gloss_urdu_chapters_pointers_addressed(
   );
   async function chapter_address(chapter_code) {
     let changes =
-      await app_en_learn_bible_gloss_urdu_chapter_pointers_addressed(
-        chapter_code,
-      );
+      await app_learn_en_gloss_urdu_chapter_pointers_addressed(chapter_code);
     return changes;
   }
   let nested = await list_map_async(chapter_codes, chapter_address);
