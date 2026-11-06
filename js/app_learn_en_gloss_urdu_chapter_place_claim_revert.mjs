@@ -6,7 +6,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_en_gloss_urdu_explain_meaning_parts } from "./app_learn_en_gloss_urdu_explain_meaning_parts.mjs";
-import { app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is } from "./app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is.mjs";
+import { app_learn_en_gloss_urdu_explain_occurrence_bound_is } from "./app_learn_en_gloss_urdu_explain_occurrence_bound_is.mjs";
 import { not } from "./not.mjs";
 import { gloss_chapter_entries_explain_rewrite_generic } from "./gloss_chapter_entries_explain_rewrite_generic.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
@@ -48,8 +48,7 @@ export async function app_learn_en_gloss_urdu_chapter_place_claim_revert(
     }
     let parts = app_learn_en_gloss_urdu_explain_meaning_parts(explain);
     let meaning = parts.join(separator);
-    let bound =
-      app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is(meaning);
+    let bound = app_learn_en_gloss_urdu_explain_occurrence_bound_is(meaning);
     if (not(bound)) {
       return false;
     }

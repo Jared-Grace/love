@@ -2,7 +2,7 @@ import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_explain_meaning_parts } from "./app_learn_en_gloss_urdu_explain_meaning_parts.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is } from "./app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is.mjs";
+import { app_learn_en_gloss_urdu_explain_occurrence_bound_is } from "./app_learn_en_gloss_urdu_explain_occurrence_bound_is.mjs";
 import { app_en_learn_bible_gloss_urdu_pointing_cores } from "./app_en_learn_bible_gloss_urdu_pointing_cores.mjs";
 import { not } from "./not.mjs";
 import { list_any } from "./list_any.mjs";
@@ -25,8 +25,7 @@ export function app_en_learn_bible_gloss_urdu_pointing_explain_fresh(
   let stop = "۔";
   let separator = "۔ ";
   let meaning = borrowed.join(separator);
-  let bound =
-    app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is(meaning);
+  let bound = app_learn_en_gloss_urdu_explain_occurrence_bound_is(meaning);
   if (bound) {
     return null;
   }
