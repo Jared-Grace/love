@@ -1509,7 +1509,7 @@ export function permission_grant_names() {
     fn_name("functions_nested_lift_wrapper_pass"),
     fn_name("gloss_write_root_folder"),
     fn_name("app_learn_en_gloss_urdu_misaligned_gate_run"),
-    fn_name("app_en_learn_bible_gloss_urdu_passages"),
+    fn_name("app_learn_en_gloss_urdu_passages"),
     fn_name("app_en_learn_bible_gloss_urdu_write_chapter_file"),
     fn_name("g_verify_queue_advance"),
     fn_name("g_verify_suggest_read"),

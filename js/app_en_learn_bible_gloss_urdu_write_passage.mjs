@@ -1,5 +1,5 @@
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
-import { app_en_learn_bible_gloss_urdu_passages } from "./app_en_learn_bible_gloss_urdu_passages.mjs";
+import { app_learn_en_gloss_urdu_passages } from "./app_learn_en_gloss_urdu_passages.mjs";
 import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
 export async function app_en_learn_bible_gloss_urdu_write_passage(
@@ -14,7 +14,7 @@ export async function app_en_learn_bible_gloss_urdu_write_passage(
   "The Greek is here for the same reason it is in the store: where the English wording is a choice among several the Greek allows, an explanation of the English word should not quietly promise the reader more than the Greek said.";
   "It also answers with the file to write the explanations into, because that name is a convention and a convention nobody can see is a convention nobody can follow.";
   "The passage is named rather than found, which is what lets a passage that already carries explanations be authored again - correcting one is the same work as writing it the first time, and it should not need a different door.";
-  let passages = await app_en_learn_bible_gloss_urdu_passages(chapter_code);
+  let passages = await app_learn_en_gloss_urdu_passages(chapter_code);
   let passage = gloss_passages_verses_key_find(passages, verse_key);
   let file = gloss_write_file_path(
     chapter_code,

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_unpublished_upload_generic } from "./gloss_chapters_unpublished_upload_generic.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
-import { app_en_learn_bible_gloss_urdu_passages } from "./app_en_learn_bible_gloss_urdu_passages.mjs";
+import { app_learn_en_gloss_urdu_passages } from "./app_learn_en_gloss_urdu_passages.mjs";
 import { gloss_upload_namespace_en_learn_bible_urdu } from "./gloss_upload_namespace_en_learn_bible_urdu.mjs";
 import { app_learn_en_gloss_urdu_chapter_upload_stored } from "./app_learn_en_gloss_urdu_chapter_upload_stored.mjs";
 export async function app_en_learn_bible_gloss_urdu_unpublished_upload() {
@@ -10,7 +10,7 @@ export async function app_en_learn_bible_gloss_urdu_unpublished_upload() {
   arguments_assert(arguments, 0);
   let r = await gloss_chapters_unpublished_upload_generic(
     app_learn_en_gloss_urdu_generate,
-    app_en_learn_bible_gloss_urdu_passages,
+    app_learn_en_gloss_urdu_passages,
     gloss_upload_namespace_en_learn_bible_urdu,
     app_learn_en_gloss_urdu_chapter_upload_stored,
   );

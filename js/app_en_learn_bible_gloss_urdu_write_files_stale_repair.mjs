@@ -1,5 +1,5 @@
 import { gloss_write_files_stale_repair_generic } from "./gloss_write_files_stale_repair_generic.mjs";
-import { app_en_learn_bible_gloss_urdu_passages } from "./app_en_learn_bible_gloss_urdu_passages.mjs";
+import { app_learn_en_gloss_urdu_passages } from "./app_learn_en_gloss_urdu_passages.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 export async function app_en_learn_bible_gloss_urdu_write_files_stale_repair(
   chapter_code,
@@ -10,7 +10,7 @@ export async function app_en_learn_bible_gloss_urdu_write_files_stale_repair(
   "What it does is the same whatever chapter it is asked for: it finds its own list, writes the author's file over the store where the two differ, and asks again.";
   let r = await gloss_write_files_stale_repair_generic(
     chapter_code,
-    app_en_learn_bible_gloss_urdu_passages,
+    app_learn_en_gloss_urdu_passages,
     app_learn_en_gloss_urdu_generate,
   );
   return r;
