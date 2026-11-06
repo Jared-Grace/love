@@ -5,7 +5,7 @@ import { list_map_sum } from "./list_map_sum.mjs";
 import { gloss_chapters_words_edged } from "./gloss_chapters_words_edged.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_words_edged() {
+export async function app_learn_ceb_gloss_words_edged() {
   "Every word in the Cebuano gloss store that carries a mark from the sentence around it, named once each, set beside what the dictionary says about the same word spelled bare.";
   "This prices a blind spot rather than repairing one. Every check over these explanations asks the dictionary under the spelling the author typed, so a word wearing a quotation mark or a comma is asked for under a spelling no dictionary holds, comes back unknown, and is passed over in silence by every root and affix check there is. Nothing goes red; the word is simply never looked at.";
   "The three answers are kept apart because they cost different things to fix. A word the dictionary breaks down under its bare spelling is checking that is being thrown away and could be had by changing where the mark is taken off. A word the dictionary refuses to break down would have been passed over anyway, so it is no loss. A word the dictionary has never been asked about at all is a gather that still has to be run before anything can be checked.";

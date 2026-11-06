@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_words_edged } from "./app_ceb_bible_gloss_words_edged.mjs";
+import { app_learn_ceb_gloss_words_edged } from "./app_learn_ceb_gloss_words_edged.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -11,7 +11,7 @@ export async function app_learn_ceb_gloss_words_edged_names() {
   "The sightings are left out. They count how often the word was met rather than how many explanations there are to mend, so a chapter authored today that happens to use the word would read as the fault getting worse when nothing about it changed.";
   "The test is not repeated here. It is asked for from the reading that prices it, so this list and the counts beside it can never come to be about different sets of words.";
   arguments_assert(arguments, 0);
-  let priced = await app_ceb_bible_gloss_words_edged();
+  let priced = await app_learn_ceb_gloss_words_edged();
   let broken_down = property_get(priced, "broken_down");
   let refused = property_get(priced, "refused");
   let unknown = property_get(priced, "unknown");
