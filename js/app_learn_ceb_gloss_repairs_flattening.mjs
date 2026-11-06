@@ -17,7 +17,7 @@ import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { each_async } from "./each_async.mjs";
-export async function app_ceb_bible_gloss_repairs_flattening() {
+export async function app_learn_ceb_gloss_repairs_flattening() {
   "Of the corrections handed in for the Cebuano gloss store, how many land on a word its chapter explains more than one way - so that setting them all replaces sentences nobody asked about - each named beside how many sentences it would flatten.";
   "★ THE SET AT RISK AND THE SET ACTUALLY REACHED ARE DIFFERENT SIZES AND ONLY THE SECOND IS A FAULT COUNT. Seventeen in every hundred words of a chapter are explained two ways somewhere in it, which is the size of what the repair rule walks over; but the rule only ever fires on a word a correction was handed in for. Counting the first and calling it damage would price a gap by how big it is rather than by how often it goes wrong, which is the reverse of what a measurement is for.";
   "A correction naming a word the chapter does not explain at all is counted apart. It changes nothing, and the repair already reports those by name for the same reason - a mistyped word otherwise reports the same success as a repaired one.";
