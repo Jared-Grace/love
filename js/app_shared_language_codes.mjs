@@ -10,7 +10,7 @@ export function app_shared_language_codes() {
   let property_name = language_code_key();
   let code_urdu = property_get(urdu, property_name);
   let r = {
-    en_learn_bible: code_urdu,
+    learn_en: code_urdu,
   };
   return r;
 }
