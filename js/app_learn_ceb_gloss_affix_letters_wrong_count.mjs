@@ -11,7 +11,7 @@ import { gloss_chapters_affix_letters_wrong } from "./gloss_chapters_affix_lette
 import { list_map_sum } from "./list_map_sum.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-export async function app_ceb_bible_gloss_affix_letters_wrong_count() {
+export async function app_learn_ceb_gloss_affix_letters_wrong_count() {
   "How many Cebuano explanations across the whole store quote letters for a piece of their word which the dictionary gives no piece of that kind holding, and how many chapters they are spread over.";
   "This counts the faults the check on kind names cannot see. That one passes any word the dictionary does build with a piece of the kind named, however wrong the letters quoted for it are, so its number is a floor and not a total. Read the two together or neither says anything.";
   "The number of words consulted comes back beside it, because two counts taken from the same store only compare when the dictionary behind them was the same size both times.";

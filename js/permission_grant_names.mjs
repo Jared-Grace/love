@@ -1557,7 +1557,7 @@ export function permission_grant_names() {
     fn_name("git_commit_file_text"),
     fn_name("permission_replay_reading_checked"),
     fn_name("app_ceb_bible_gloss_roots_disagreeing_classes"),
-    fn_name("app_ceb_bible_gloss_affix_letters_wrong_count"),
+    fn_name("app_learn_ceb_gloss_affix_letters_wrong_count"),
     fn_name("bible_glyph_artwork_names_search"),
     fn_name("youtube_playlist_videos"),
     fn_name("folder_root_move"),
