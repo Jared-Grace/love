@@ -12,7 +12,7 @@ import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
 import { list_take } from "./list_take.mjs";
-export async function app_ceb_bible_gloss_root_named_spaced_counted(
+export async function app_learn_ceb_gloss_root_named_spaced_counted(
   sample_size,
 ) {
   "How many of the roots the widened reader hands back are not roots at all but quoted English, counted apart for the wording that names one outright and the three that were added to it.";
