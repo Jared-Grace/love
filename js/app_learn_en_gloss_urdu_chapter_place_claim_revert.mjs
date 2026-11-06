@@ -10,7 +10,7 @@ import { app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is } from "./app
 import { not } from "./not.mjs";
 import { gloss_chapter_entries_explain_rewrite_generic } from "./gloss_chapter_entries_explain_rewrite_generic.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
-export async function app_en_learn_bible_gloss_urdu_chapter_place_claim_revert(
+export async function app_learn_en_gloss_urdu_chapter_place_claim_revert(
   chapter_code,
   backup_folder,
 ) {
