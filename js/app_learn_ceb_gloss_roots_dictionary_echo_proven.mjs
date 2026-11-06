@@ -10,7 +10,7 @@ import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_dictionary_echo_proven() {
+export async function app_learn_ceb_gloss_roots_dictionary_echo_proven() {
   "The words where the dictionary on this disk names a root that the same dictionary, asked about that root, says is itself built from something else - so the first answer was an affixed form rather than a root, proven by nothing but the dictionary disagreeing with itself.";
   "★ THIS NEEDS NO JUDGMENT AND NO OUTSIDE SOURCE, WHICH IS WHY IT IS WORTH MORE THAN A READING OF THE SAME ROWS. Guessing which answers are affixed means naming Cebuano affixes and deciding how much of a word an ending may be, and every such rule has exceptions that only a speaker can settle. Asking the dictionary about its own answer has no rule in it at all: if it says the root of one word is a second word, and says the root of that second word is a third, then by its own account the second was never a root. A source is allowed to be incomplete, and it is not allowed to be inconsistent.";
   "The echo was found by reading ten outliers by hand and looks like a habit of the lookup rather than a scattering of mistakes - an entry reached under an inflected word can answer with that word. Ten cases cannot say how far a habit reaches. This counts it over everything the dictionary has ever answered here.";
