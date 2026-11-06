@@ -1,6 +1,6 @@
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
-import { app_search_home_query_hash } from "./app_search_home_query_hash.mjs";
+import { app_bible_search_home_query_hash } from "./app_bible_search_home_query_hash.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_bible_search_hash_query_apply } from "./app_bible_search_hash_query_apply.mjs";
 import { html_on_hash_change } from "./html_on_hash_change.mjs";
@@ -15,7 +15,7 @@ export async function app_search_home(context) {
   if (unknown_shown) {
     return;
   }
-  let r = app_search_home_query_hash(context, hash);
+  let r = app_bible_search_home_query_hash(context, hash);
   let content = property_get(r, "content");
   let input = property_get(r, "input");
   let search = property_get(r, "search_run");
