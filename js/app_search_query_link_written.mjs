@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_url_encode } from "./text_url_encode.mjs";
-import { app_search_query_hash_word_gap } from "./app_search_query_hash_word_gap.mjs";
+import { app_bible_search_query_hash_word_gap } from "./app_bible_search_query_hash_word_gap.mjs";
 import { text_url_space_spelled } from "./text_url_space_spelled.mjs";
 import { text_replace } from "./text_replace.mjs";
 export function app_search_query_link_written(query) {
@@ -11,7 +11,7 @@ export function app_search_query_link_written(query) {
   "NOTHING THE OLD WAY WROTE STOPS OPENING. A link already sent names its words either plainly or with a plus between them, and neither of those holds a spelling to undo, so it reads back exactly as it did before. What changes is only what is written from here on.";
   arguments_assert(arguments, 1);
   let spelled = text_url_encode(query);
-  let gap = app_search_query_hash_word_gap();
+  let gap = app_bible_search_query_hash_word_gap();
   let space = text_url_space_spelled();
   let written = text_replace(spelled, space, gap);
   return written;

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_search_query_hash_word_gap } from "./app_search_query_hash_word_gap.mjs";
+import { app_bible_search_query_hash_word_gap } from "./app_bible_search_query_hash_word_gap.mjs";
 import { text_replace_to_space } from "./text_replace_to_space.mjs";
 import { text_url_decode_or_same } from "./text_url_decode_or_same.mjs";
 export function app_search_query_link_words(carried) {
@@ -9,7 +9,7 @@ export function app_search_query_link_words(carried) {
   "AN ADDRESS HANDS BACK ITS OWN SPELLING AND MUST BE READ BACK OUT OF IT. A page is given its address exactly as the browser stores it, which spells every letter outside the plain alphabet as percent pairs - so a shared search for one Persian word arrived as six of them, the word cutter made d8, ae, af and a7 out of it, and the page said nothing came back for those, which was true and told the reader nothing.";
   "It is taken as text rather than read off the page, which is what lets a check standing outside a browser read a link the same way the page does.";
   arguments_assert(arguments, 1);
-  let gap = app_search_query_hash_word_gap();
+  let gap = app_bible_search_query_hash_word_gap();
   let spaced = text_replace_to_space(carried, gap);
   let words = text_url_decode_or_same(spaced);
   return words;
