@@ -2571,7 +2571,7 @@ export function permission_grant_names() {
     fn_name("git_commit_name_current"),
     fn_name("functions_duplicates_any_names"),
     fn_name("app_ceb_bible_gloss_roots_disagreeing_classes_all"),
-    fn_name("app_ceb_bible_gloss_chapters_republish"),
+    fn_name("app_learn_ceb_gloss_chapters_republish"),
     fn_name("bible_glyph_chapters_name_tag_fire_joined_gate_run"),
     fn_name("lyric_video_song_video_write"),
     fn_name("app_en_learn_bible_gloss_urdu_chapters_absent_testament_old"),
