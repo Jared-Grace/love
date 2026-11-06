@@ -9,6 +9,7 @@ import { qa_app_commit_promote } from "./qa_app_commit_promote.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { folder_web_latest_absolute } from "./folder_web_latest_absolute.mjs";
 import { qa_stage_pieces_assert } from "./qa_stage_pieces_assert.mjs";
+import { qa_app_stage_public_boot_assert } from "./qa_app_stage_public_boot_assert.mjs";
 import { qa_promoted } from "./qa_promoted.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -67,6 +68,10 @@ export async function qa_app_commit_promote_judged(search, commit) {
       file_names,
     ]);
     ("Before anything is put where the sending reads from, the app is walked the whole way through as somebody who gets every question right. Every gate there is reads code without ever opening a page, so a page that opens and cannot be used passes all of them: the replacing game drew every symbol as one no rule could touch, and so could not be played at all, for nine days with nothing red. An app with no walk of its own goes straight past.");
+    ("Before the walk, the page is opened once as the public opens it, at the top of the site. A page decides what it shows by the address it was opened at, and the walk opens it under latest, so the walk cannot see the page people get. 2026-11-06: code passed a six-hour walk and then threw for every learner. This takes seconds, so it comes before the walk rather than after, and it runs even when the pieces are unchanged, since a walk passed under latest says nothing about this.");
+    await function_call_timed_add(steps, qa_app_stage_public_boot_assert, [
+      app_name,
+    ]);
     let promoted = await qa_promoted();
     let note = property_get_or_null(promoted, app_name);
     let unwritten = null_is(note);
