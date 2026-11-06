@@ -73,6 +73,16 @@
         "source": "/original_bible.html",
         "destination": "/learn_original",
         "type": 301
+      },
+      {
+        "source": "/ceb_bible",
+        "destination": "/learn_ceb",
+        "type": 301
+      },
+      {
+        "source": "/ceb_bible.html",
+        "destination": "/learn_ceb",
+        "type": 301
       }
     ],
     "headers": [
