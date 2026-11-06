@@ -8,7 +8,7 @@ import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_r
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { each } from "./each.mjs";
-export async function app_ceb_bible_gloss_roots_dictionary_arbiter_control() {
+export async function app_learn_ceb_gloss_roots_dictionary_arbiter_control() {
   "How often the dictionary on this disk disagrees with the Cebuano gloss store where the store never disagrees with itself, set beside how often it disagrees where the store does, so that using it to settle arguments can be priced instead of assumed.";
   "★ EVERY READING BEFORE THIS ONE USED THE DICTIONARY AS THE ARBITER AND NONE OF THEM ASKED WHETHER IT DESERVES TO BE. Two hundred and eighty-seven contradictions were called settled because the dictionary named one of the two roots, and that is only worth something if the dictionary is right about roots in general. The population that answers it is the one those readings threw away on purpose: the words every chapter already agrees on. There the store has no argument to settle, so any disagreement is the dictionary standing alone, and how often that happens is the error rate of the arbiter.";
   "A control has to be the same kind of measurement as the thing it controls or it says nothing. So the same roots are read from the same sentences by the same reader, folded the same way, and handed to the same relation reader; the only thing that changes is whether the store speaks with one voice about the word. If the two rates come out alike, the dictionary is disagreeing with the store at a rate that owes nothing to the store being wrong, and a settlement is worth much less than it looked.";
