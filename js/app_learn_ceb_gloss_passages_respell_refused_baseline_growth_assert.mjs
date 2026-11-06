@@ -1,6 +1,6 @@
 import { app_ceb_bible_gloss_passages_respell_refused_baseline_path } from "./app_ceb_bible_gloss_passages_respell_refused_baseline_path.mjs";
 import { baseline_known_growth_assert } from "./baseline_known_growth_assert.mjs";
-export async function app_ceb_bible_gloss_passages_respell_refused_baseline_growth_assert(
+export async function app_learn_ceb_gloss_passages_respell_refused_baseline_growth_assert(
   known,
 ) {
   "Refuse to record a Cebuano passage the respell walks past that the record did not already hold.";
