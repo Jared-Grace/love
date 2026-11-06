@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_repairs_priced } from "./app_ceb_bible_gloss_repairs_priced.mjs";
+import { app_learn_ceb_gloss_repairs_priced } from "./app_learn_ceb_gloss_repairs_priced.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
@@ -9,7 +9,7 @@ export async function app_learn_ceb_gloss_queue_slips() {
   "A repair is written against the word as the translation spells it, so a repair aimed at a misprint writes a settled explanation for something nobody meant to say - and settles it, which is worse than leaving it blank. These rows are the queue entries to take out rather than work through.";
   "Ten times commoner is what counts as a commoner neighbour here. That number is a starting place rather than a finding; ask the reading underneath for a different one when the shortlist reads wrong.";
   "Nothing is written and nothing is ruled. Each row carries the verse the word was first met in, because whether a spelling is a slip is a question about the sentence it stands in.";
-  let priced = await app_ceb_bible_gloss_repairs_priced();
+  let priced = await app_learn_ceb_gloss_repairs_priced();
   let rows = property_get(priced, "priced");
   function row_word(row) {
     let word = property_get(row, "word");
