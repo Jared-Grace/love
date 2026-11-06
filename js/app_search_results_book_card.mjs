@@ -1,6 +1,6 @@
 import { app_shared_folds_refresh } from "./app_shared_folds_refresh.mjs";
 import { app_shared_folds_setter_add } from "./app_shared_folds_setter_add.mjs";
-import { app_search_results_book_card_header } from "./app_search_results_book_card_header.mjs";
+import { app_bible_search_results_book_card_header } from "./app_bible_search_results_book_card_header.mjs";
 import { app_search_results_chapters_single_expand } from "./app_search_results_chapters_single_expand.mjs";
 import { app_bible_search_results_book_card_collapsed_set } from "./app_bible_search_results_book_card_collapsed_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -34,7 +34,7 @@ export function app_search_results_book_card(
   let div_group = book_group_div(book_code);
   let div_book = app_shared_container_blue(div_group);
   ("this is the third of four cards nested one inside the next, and the two outside it already trim to this one named amount; it used to write its own number a twentieth of a letter away from that, which no reader could have told apart and no line of the file explained");
-  let header = app_search_results_book_card_header(
+  let header = app_bible_search_results_book_card_header(
     div_book,
     books,
     book_code,

@@ -13,7 +13,7 @@ import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
-export function app_search_results_book_card_header(
+export function app_bible_search_results_book_card_header(
   div_book,
   books,
   book_code,
