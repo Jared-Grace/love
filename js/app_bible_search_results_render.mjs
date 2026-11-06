@@ -1,5 +1,5 @@
 import { list_map_then_squash } from "./list_map_then_squash.mjs";
-import { app_search_results_top_buttons_add } from "./app_search_results_top_buttons_add.mjs";
+import { app_bible_search_results_top_buttons_add } from "./app_bible_search_results_top_buttons_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_folds } from "./app_shared_folds.mjs";
 import { app_bible_search_results_bible_order_key } from "./app_bible_search_results_bible_order_key.mjs";
@@ -24,7 +24,7 @@ export function app_bible_search_results_render(
   ("the two levels of card are kept as two groups rather than one, because the buttons do not act on both: opening acts on the sections and the books, shutting only on the books. Held apart, each button can also switch itself off at the right moment - shutting has something to do while any BOOK is open, whatever the sections are doing");
   let book_folds = app_shared_folds();
   let testament_folds = app_shared_folds();
-  app_search_results_top_buttons_add(
+  app_bible_search_results_top_buttons_add(
     div_results,
     book_folds,
     testament_folds,

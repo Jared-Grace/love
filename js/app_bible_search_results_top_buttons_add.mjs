@@ -6,7 +6,7 @@ import { app_shared_folds_set } from "./app_shared_folds_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_search_results_top_buttons_add(
+export function app_bible_search_results_top_buttons_add(
   div_results,
   book_folds,
   testament_folds,
