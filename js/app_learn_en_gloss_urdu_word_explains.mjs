@@ -1,4 +1,4 @@
-export function app_en_learn_bible_gloss_urdu_word_explains() {
+export function app_learn_en_gloss_urdu_word_explains() {
   "The wording every explanation of a named English word is given in the store that teaches English to an Urdu reader, for the small closed classes of words that carry most of the store's shared labels.";
   "Articles, conjunctions, prepositions, pronouns, the words of denial, the words of belonging, and the counting words. Every one of them is a word English has a fixed handful of and will never add to, and what each does in a sentence is the whole of what there is to say about it - so one wording written once is truer than a sentence guessed afresh at each place, and there is no dictionary work behind any of it.";
   "Each wording says what the word does and then names the Urdu that does the same work, because the reader already has Urdu and is being handed English. That is the one thing a shared label could never do: ‘conjunction’ is true of ‘and’, ‘but’ and ‘or’ together, and which Urdu word to reach for is exactly what separates them.";

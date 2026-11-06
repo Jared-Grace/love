@@ -4,7 +4,7 @@ import { property_set } from "./property_set.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_en_gloss_urdu_reverent_words } from "./app_learn_en_gloss_urdu_reverent_words.mjs";
-import { app_en_learn_bible_gloss_urdu_word_explains } from "./app_en_learn_bible_gloss_urdu_word_explains.mjs";
+import { app_learn_en_gloss_urdu_word_explains } from "./app_learn_en_gloss_urdu_word_explains.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 export function app_learn_en_gloss_urdu_adverb_conjunction_explains() {
@@ -106,7 +106,7 @@ export function app_learn_en_gloss_urdu_adverb_conjunction_explains() {
   let capital_words = object_property_names(capitals);
   list_map(capital_words, capital_write);
   let reverent = app_learn_en_gloss_urdu_reverent_words();
-  let elsewhere = app_en_learn_bible_gloss_urdu_word_explains();
+  let elsewhere = app_learn_en_gloss_urdu_word_explains();
   let elsewhere_words = object_property_names(elsewhere);
   function elsewhere_capital_write(word) {
     let writable = list_includes_not(reverent, word);

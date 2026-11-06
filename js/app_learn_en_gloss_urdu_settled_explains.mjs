@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_word_explains } from "./app_en_learn_bible_gloss_urdu_word_explains.mjs";
+import { app_learn_en_gloss_urdu_word_explains } from "./app_learn_en_gloss_urdu_word_explains.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { app_learn_en_gloss_urdu_noun_explains } from "./app_learn_en_gloss_urdu_noun_explains.mjs";
 import { app_learn_en_gloss_urdu_name_explains } from "./app_learn_en_gloss_urdu_name_explains.mjs";
@@ -18,7 +18,7 @@ export function app_learn_en_gloss_urdu_settled_explains() {
   "They are joined here rather than in any one of them so that the pass which writes settled wordings over shared labels asks one question and not eight, and so that a further kind of word is added by writing another table and one line here.";
   "The merge is the strict one, so a word appearing in both tables is an error rather than a silent choice between two wordings. That is the whole of the check this needs: a word belongs to one kind, and if somebody has written it down twice the two entries will disagree sooner or later and nothing afterwards could say which was meant.";
   let r = {};
-  let from2 = app_en_learn_bible_gloss_urdu_word_explains();
+  let from2 = app_learn_en_gloss_urdu_word_explains();
   object_merge(r, from2);
   let from3 = app_learn_en_gloss_urdu_noun_explains();
   object_merge(r, from3);
