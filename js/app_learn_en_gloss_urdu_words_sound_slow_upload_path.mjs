@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_words_sound_slow_upload_namespace } from "./app_learn_en_gloss_urdu_words_sound_slow_upload_namespace.mjs";
 import { firebase_function_upload_path } from "./firebase_function_upload_path.mjs";
-export function app_en_learn_bible_gloss_urdu_words_sound_slow_upload_path(
+export function app_learn_en_gloss_urdu_words_sound_slow_upload_path(
   file_name,
 ) {
   "$plain file_name";

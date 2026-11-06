@@ -3,7 +3,7 @@ import { app_learn_en_gloss_urdu_words_sound_slow_orphaned } from "./app_learn_e
 import { property_get } from "./property_get.mjs";
 import { app_en_learn_bible_gloss_urdu_words_sound_slow } from "./app_en_learn_bible_gloss_urdu_words_sound_slow.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound_slow_upload_path } from "./app_en_learn_bible_gloss_urdu_words_sound_slow_upload_path.mjs";
+import { app_learn_en_gloss_urdu_words_sound_slow_upload_path } from "./app_learn_en_gloss_urdu_words_sound_slow_upload_path.mjs";
 import { firebase_storage_delete_absent_ok } from "./firebase_storage_delete_absent_ok.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_delete } from "./file_delete.mjs";
@@ -26,7 +26,7 @@ export async function app_learn_en_gloss_urdu_words_sound_slow_orphaned_delete()
   let folder = local_function_folder(slow_fn);
   async function sound_each(relative) {
     let destination =
-      app_en_learn_bible_gloss_urdu_words_sound_slow_upload_path(relative);
+      app_learn_en_gloss_urdu_words_sound_slow_upload_path(relative);
     await firebase_storage_delete_absent_ok(destination);
     let file_path = path_join([folder, relative]);
     await file_delete(file_path);

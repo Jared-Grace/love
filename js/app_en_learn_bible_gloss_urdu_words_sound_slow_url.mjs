@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_word_sound_path } from "./gloss_word_sound_path.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound_slow_upload_path } from "./app_en_learn_bible_gloss_urdu_words_sound_slow_upload_path.mjs";
+import { app_learn_en_gloss_urdu_words_sound_slow_upload_path } from "./app_learn_en_gloss_urdu_words_sound_slow_upload_path.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { firebase_storage_url } from "./firebase_storage_url.mjs";
 import { app_en_learn_bible_gloss_urdu_words_sound_slow_version } from "./app_en_learn_bible_gloss_urdu_words_sound_slow_version.mjs";
@@ -17,7 +17,7 @@ export function app_en_learn_bible_gloss_urdu_words_sound_slow_url(
   arguments_assert(arguments, 2);
   let file_name = gloss_word_sound_path(word, voice);
   let destination =
-    app_en_learn_bible_gloss_urdu_words_sound_slow_upload_path(file_name);
+    app_learn_en_gloss_urdu_words_sound_slow_upload_path(file_name);
   let project_url = firebase_storage_url_project_jg();
   let url = firebase_storage_url(destination, project_url);
   let stamp = app_en_learn_bible_gloss_urdu_words_sound_slow_version();
