@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_ceb_bible_gloss_words_roots_unproved_holdings_gather_words } from "./app_ceb_bible_gloss_words_roots_unproved_holdings_gather_words.mjs";
+import { app_learn_ceb_gloss_words_roots_unproved_holdings_gather_words } from "./app_learn_ceb_gloss_words_roots_unproved_holdings_gather_words.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
@@ -12,7 +12,7 @@ export async function app_ceb_bible_gloss_words_roots_unproved_holdings() {
   "The words to fetch are handed back already lowered and deduplicated, in the shape the gather takes, so that nothing between here and there has to be typed out by hand.";
   arguments_assert(arguments, 0);
   let r2 =
-    await app_ceb_bible_gloss_words_roots_unproved_holdings_gather_words();
+    await app_learn_ceb_gloss_words_roots_unproved_holdings_gather_words();
   let gather_words = property_get(r2, "gather_words");
   let unproved = property_get(r2, "unproved");
   let accent = property_get(r2, "accent");

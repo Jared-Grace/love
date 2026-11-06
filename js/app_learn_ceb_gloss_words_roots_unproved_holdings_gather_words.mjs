@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-export async function app_ceb_bible_gloss_words_roots_unproved_holdings_gather_words() {
+export async function app_learn_ceb_gloss_words_roots_unproved_holdings_gather_words() {
   arguments_assert(arguments, 0);
   let arbitrated = await app_learn_ceb_gloss_words_roots_apart_arbitrated();
   let r2 =
