@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_chapter_known_capitalised } from "./app_ceb_bible_gloss_chapter_known_capitalised.mjs";
+import { app_learn_ceb_gloss_chapter_known_capitalised } from "./app_learn_ceb_gloss_chapter_known_capitalised.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_ceb_bible_gloss_passage_verses_read } from "./app_ceb_bible_gloss_passage_verses_read.mjs";
@@ -15,7 +15,7 @@ export async function app_ceb_bible_gloss_write_passages(chapter_code) {
   "It also answers with the one file to write the whole chapter's explanations into, keyed by the verses each passage covers, because that name is a convention and a convention nobody can see is a convention nobody can follow.";
   let passages = await app_ceb_bible_gloss_passages(chapter_code);
   let sources =
-    await app_ceb_bible_gloss_chapter_known_capitalised(chapter_code);
+    await app_learn_ceb_gloss_chapter_known_capitalised(chapter_code);
   let known = property_get(sources, "known");
   let capitalised = property_get(sources, "capitalised");
   function passage_read(passage) {

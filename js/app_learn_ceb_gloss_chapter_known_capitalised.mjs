@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { gloss_words_capitalised_always } from "./gloss_words_capitalised_always.mjs";
-export async function app_ceb_bible_gloss_chapter_known_capitalised(
+export async function app_learn_ceb_gloss_chapter_known_capitalised(
   chapter_code,
 ) {
   "$plain chapter_code";
