@@ -21,7 +21,7 @@ export async function app_learn_en_gloss_urdu_published_unfinished_gate_run() {
   );
   let fault = text_combine_multiple([
     "are published with passages nobody has explained yet - read the verses each one is missing with ",
-    fn_name("app_en_learn_bible_gloss_urdu_write_coverage"),
+    fn_name("app_learn_en_gloss_urdu_write_coverage"),
     ", write them, then carry the chapter up again with ",
     fn_name("app_learn_en_gloss_urdu_chapter_upload_stored"),
   ]);
