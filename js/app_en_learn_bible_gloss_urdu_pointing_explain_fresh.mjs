@@ -7,7 +7,7 @@ import { app_en_learn_bible_gloss_urdu_pointing_cores } from "./app_en_learn_bib
 import { not } from "./not.mjs";
 import { list_any } from "./list_any.mjs";
 import { app_en_learn_bible_gloss_urdu_explain_sentences } from "./app_en_learn_bible_gloss_urdu_explain_sentences.mjs";
-import { app_en_learn_bible_gloss_urdu_explain_pointing_sentence_is } from "./app_en_learn_bible_gloss_urdu_explain_pointing_sentence_is.mjs";
+import { app_learn_en_gloss_urdu_explain_pointing_sentence_is } from "./app_learn_en_gloss_urdu_explain_pointing_sentence_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function app_en_learn_bible_gloss_urdu_pointing_explain_fresh(
   explain,
@@ -42,7 +42,7 @@ export function app_en_learn_bible_gloss_urdu_pointing_explain_fresh(
   let after_first = own.slice(1);
   function carried_is(sentence) {
     let pointing =
-      app_en_learn_bible_gloss_urdu_explain_pointing_sentence_is(sentence);
+      app_learn_en_gloss_urdu_explain_pointing_sentence_is(sentence);
     let carried = not(pointing);
     return carried;
   }
