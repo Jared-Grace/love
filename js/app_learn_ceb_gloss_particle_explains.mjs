@@ -1,4 +1,4 @@
-export function app_ceb_bible_gloss_particle_explains() {
+export function app_learn_ceb_gloss_particle_explains() {
   "The wording every explanation of a named Cebuano particle is given, for the small closed set of words that carry most of the store's pointers back up the passage.";
   "These are markers, links and pronouns rather than words built from a root, so nothing here is an etymology and no dictionary was needed to write one. What each says is what the word does in a sentence, which is the whole of what there is to say about it.";
   "One wording covers every place a particle stands, and that is truer here than a wording written for each place. A marker like ‘sa’ was being guessed at sentence by sentence - ‘of’ here, ‘in’ there, ‘to’ somewhere else - as though the word changed. It does not: it says the word after it is not the one the sentence is about, and the reading in English is decided by the sentence around it. Saying that once is the honest account; picking one English word each time was the store pretending to a precision the Cebuano does not have.";

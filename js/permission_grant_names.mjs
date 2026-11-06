@@ -1806,7 +1806,7 @@ export function permission_grant_names() {
     fn_name("psalms_videos_descriptions_verify"),
     fn_name("psalms_videos_descriptions_payload_parts_write"),
     fn_name("psalms_video_description"),
-    fn_name("app_ceb_bible_gloss_particle_explains"),
+    fn_name("app_learn_ceb_gloss_particle_explains"),
     fn_name("app_code_lesson_ids_baseline_path"),
     fn_name("qa_promoted_path"),
     fn_name("g_sermon_chapter_passages_chaptered"),
