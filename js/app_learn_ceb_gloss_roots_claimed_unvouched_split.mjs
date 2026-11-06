@@ -7,7 +7,7 @@ import { binisaya_words_known_roots_named } from "./binisaya_words_known_roots_n
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_written_lowered_set } from "./bible_words_written_lowered_set.mjs";
 import { property_set } from "./property_set.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
+export async function app_learn_ceb_gloss_roots_claimed_unvouched_split() {
   "Every root the Cebuano gloss store names that nothing in the dictionary is built from, split by what the dictionary did when it was asked about that root and by whether the translation ever writes it as a word on its own.";
   "Unvouched is one answer covering three different situations, and they want three different things done about them. A root the site holds a full breakdown for is a root the site says is not a root, because a breakdown names what the word was built out of. A root nobody has ever asked about is a question, and the answer is a gather away. A root the site was asked about and had no breakdown for is the ordinary shape of a real root and also the shape of a word the site does not have, and those two cannot be told apart here at all.";
   "The three come apart because a gathered answer with no breakdown in it is stored exactly like an answer about a word the site does not have - four fields with three of them empty. That sameness is what makes the middle pile ambiguous rather than damning: kamot, bulak and likod are all stored that way, and they are ordinary Cebuano roots stored that way precisely because a root is not built out of anything for the site to report.";
