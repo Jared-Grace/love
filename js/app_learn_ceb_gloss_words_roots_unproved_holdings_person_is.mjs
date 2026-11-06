@@ -4,7 +4,7 @@ import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_folded_index } from "./binisaya_words_known_folded_index.mjs";
 import { text_accent_marks_removed } from "./text_accent_marks_removed.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { app_ceb_bible_gloss_words_roots_unproved_holdings_row_owed } from "./app_ceb_bible_gloss_words_roots_unproved_holdings_row_owed.mjs";
+import { app_learn_ceb_gloss_words_roots_unproved_holdings_row_owed } from "./app_learn_ceb_gloss_words_roots_unproved_holdings_row_owed.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_equals } from "./property_equals.mjs";
 export async function app_learn_ceb_gloss_words_roots_unproved_holdings_person_is(
@@ -20,7 +20,7 @@ export async function app_learn_ceb_gloss_words_roots_unproved_holdings_person_i
     let lowered = text_lower_to(plain);
     return lowered;
   }
-  let row_owed = app_ceb_bible_gloss_words_roots_unproved_holdings_row_owed(
+  let row_owed = app_learn_ceb_gloss_words_roots_unproved_holdings_row_owed(
     accent_free,
     known,
     folded_index,

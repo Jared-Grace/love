@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_root_dictionary_named } from "./gloss_root_dictionary_named.mjs";
-export function app_ceb_bible_gloss_words_roots_unproved_holdings_row_owed(
+export function app_learn_ceb_gloss_words_roots_unproved_holdings_row_owed(
   accent_free,
   known,
   folded_index,
