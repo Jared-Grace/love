@@ -4,6 +4,7 @@
   "app",
   "bible",
   "bible_emoji",
+  "bible_search",
   "bible_sermons",
   "calendar",
   "calendar_paste",
@@ -31,7 +32,6 @@
   "reply",
   "reply_local",
   "sandbox",
-  "search",
   "supper",
   "supper_tl",
   "verses"
