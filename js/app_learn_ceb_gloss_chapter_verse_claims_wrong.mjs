@@ -1,6 +1,6 @@
 import { app_learn_ceb_gloss_chapter_claims_generic } from "./app_learn_ceb_gloss_chapter_claims_generic.mjs";
 import { gloss_passages_verse_claims_wrong } from "./gloss_passages_verse_claims_wrong.mjs";
-export async function app_ceb_bible_gloss_chapter_verse_claims_wrong(
+export async function app_learn_ceb_gloss_chapter_verse_claims_wrong(
   chapter_code,
 ) {
   "Every Cebuano word explanation in one chapter that names a verse holding no word built on the same root.";
