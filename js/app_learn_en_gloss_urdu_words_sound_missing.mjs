@@ -24,7 +24,7 @@ import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { properties_size } from "./properties_size.mjs";
-export async function app_en_learn_bible_gloss_urdu_words_sound_missing() {
+export async function app_learn_en_gloss_urdu_words_sound_missing() {
   "The words nobody has a recording of yet, and which voices are short of each one.";
   "★ IT IS THE OTHER HALF OF THE QUESTION THE JUNK-FINDER BESIDE IT ASKS, AND ONLY THE TWO TOGETHER SAY WHETHER THE RECORDINGS ARE FINISHED. That one walks the folder and asks what no word claims; this walks the words and asks what no file answers to. A folder with nothing junk in it can still be half empty, and a folder with every word in it can still be carrying a pile nobody wants, so neither answer stands in for the other.";
   "★ THE ONLY WAY TO LEARN THIS TODAY IS TO START THE RECORDER, WHICH IS WHY IT IS WORTH A NAME. The recorder works out its own missing set and then immediately spends four seconds of this machine on every word of it, so asking what is left has until now cost the same as doing it. Asked here it costs two folder reads, and it can be asked while a recording run is going on.";
