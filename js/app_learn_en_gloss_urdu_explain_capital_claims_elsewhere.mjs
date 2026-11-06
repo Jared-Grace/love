@@ -1,4 +1,4 @@
-export function app_en_learn_bible_gloss_urdu_explain_capital_claims_elsewhere() {
+export function app_learn_en_gloss_urdu_explain_capital_claims_elsewhere() {
   "The turns of phrase an Urdu gloss uses to say that a capital letter stands on some other word, and not on the word the reader is looking at.";
   "They are listed so that the reading which asks whether an explanation claims a capital can take them out of the text before it looks. Without that, a sentence teaching the reader that 'the' comes before a title although the title is written with a capital reads as a sentence claiming that 'the' itself is written with a capital, and 'the' never is.";
   "Each is spelled with its vowel mark and is matched against the explanation as written, before any mark is taken off. That is the opposite of how a claim is matched, and it is deliberate: the mark is the whole of the difference. Take the marks off and اُس کا, meaning that one's, becomes the same six letters as اِس کا, meaning this one's - so a reading that folded them would throw away every honest claim written the second way along with the one dishonest claim written the first.";
