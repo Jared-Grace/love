@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_words_edged_labelled } from "./app_learn_ceb_gloss_words_edged_labelled.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_filter } from "./list_filter.mjs";
-export async function app_ceb_bible_gloss_words_edged_unknown(offenders) {
+export async function app_learn_ceb_gloss_words_edged_unknown(offenders) {
   arguments_assert(arguments, 1);
   let carried = ["bare"];
   let labelled = await app_learn_ceb_gloss_words_edged_labelled(

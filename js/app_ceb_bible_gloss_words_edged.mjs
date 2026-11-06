@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_ceb_bible_gloss_words_edged_unknown } from "./app_ceb_bible_gloss_words_edged_unknown.mjs";
+import { app_learn_ceb_gloss_words_edged_unknown } from "./app_learn_ceb_gloss_words_edged_unknown.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { gloss_chapters_words_edged } from "./gloss_chapters_words_edged.mjs";
@@ -12,7 +12,7 @@ export async function app_ceb_bible_gloss_words_edged() {
   let offenders = await gloss_chapters_words_edged(
     app_learn_ceb_gloss_generate,
   );
-  let r2 = await app_ceb_bible_gloss_words_edged_unknown(offenders);
+  let r2 = await app_learn_ceb_gloss_words_edged_unknown(offenders);
   let unknown = property_get(r2, "unknown");
   let refused = property_get(r2, "refused");
   let broken_down = property_get(r2, "broken_down");
