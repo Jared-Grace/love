@@ -1,7 +1,7 @@
 import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { app_en_learn_bible_gloss_urdu_chapters_absent } from "./app_en_learn_bible_gloss_urdu_chapters_absent.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_en_learn_bible_gloss_urdu_bible_folders } from "./app_en_learn_bible_gloss_urdu_bible_folders.mjs";
+import { app_learn_en_gloss_urdu_bible_folders } from "./app_learn_en_gloss_urdu_bible_folders.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_punctuation_split } from "./text_punctuation_split.mjs";
 import { list_size } from "./list_size.mjs";
@@ -16,7 +16,7 @@ export async function app_en_learn_bible_gloss_urdu_entries_absent() {
   "The English text is read and not the Urdu, because the explanations are about the English wording; the Urdu is what they are written in.";
   let absent = await app_en_learn_bible_gloss_urdu_chapters_absent();
   let chapter_codes = property_get(absent, "chapter_codes");
-  let bible_folders = app_en_learn_bible_gloss_urdu_bible_folders();
+  let bible_folders = app_learn_en_gloss_urdu_bible_folders();
   let bible_folder = list_first(bible_folders);
   function verse_words_size(verse) {
     let text = property_get(verse, "text");

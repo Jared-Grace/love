@@ -1,5 +1,5 @@
 import { text_empty } from "./text_empty.mjs";
-import { app_en_learn_bible_gloss_urdu_bible_folders } from "./app_en_learn_bible_gloss_urdu_bible_folders.mjs";
+import { app_learn_en_gloss_urdu_bible_folders } from "./app_learn_en_gloss_urdu_bible_folders.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { app_shared_gloss_bible_generate_generic } from "./app_shared_gloss_bible_generate_generic.mjs";
@@ -14,7 +14,7 @@ export async function app_en_learn_bible_gloss_urdu_generate_chapter(
   let language = "English";
   let language_reader = "Urdu";
   let fn = app_en_learn_bible_gloss_urdu_generate;
-  let bible_folders = app_en_learn_bible_gloss_urdu_bible_folders();
+  let bible_folders = app_learn_en_gloss_urdu_bible_folders();
   let last = "Urdu and the original language are";
   await app_shared_gloss_bible_generate_generic({
     language,
