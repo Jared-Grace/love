@@ -1599,7 +1599,7 @@ export function permission_grant_names() {
     fn_name("ebible_languages_curated_codes_gate_run"),
     fn_name("app_ceb_bible_gloss_roots_claimed_gather"),
     fn_name("app_ceb_bible_gloss_stored_is"),
-    fn_name("app_ceb_bible_gloss_affix_letters_apart_baseline_write"),
+    fn_name("app_learn_ceb_gloss_affix_letters_apart_baseline_write"),
     fn_name("instructions_notes_unreached"),
     fn_name("functions_repack_only_baseline_path"),
     fn_name("app_shared_text_reader_seats_candidates"),
