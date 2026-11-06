@@ -7,7 +7,7 @@ import { app_shared_name_prefixed } from "./app_shared_name_prefixed.mjs";
 import { log_console } from "./log_console.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-export async function app_ceb_bible_gloss_chapters_absent_gate_run() {
+export async function app_learn_ceb_gloss_chapters_absent_gate_run() {
   "Gate: every chapter of the Cebuano New Testament still has a gloss chapter in the store. Throws so the dispatcher seam exits nonzero.";
   "★ THE STORE IS NOT IN THE REPOSITORY, SO A CHAPTER LOST FROM IT IS LOST SILENTLY. Everything else the gates watch is a file git is holding, and a file git is holding cannot go missing without somebody being told. These chapters live on a drive that is mounted when it is mounted, and a half-finished write, a script pointed at the wrong folder or a bad sector takes one away with nothing anywhere going red. Months of authoring stand behind each one.";
   "It holds at nought rather than against a record, because nought is what the store holds today: all two hundred and sixty chapters of the New Testament are authored. There is no tail to bank and nothing to decide, so a record file would be an empty file and a name to keep in step for no gain.";

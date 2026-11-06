@@ -2509,7 +2509,7 @@ export function permission_grant_names() {
     fn_name("app_ceb_bible_gloss_passages_respell_refused"),
     fn_name("app_ceb_bible_gloss_passages_respell_reader_price"),
     fn_name("functions_span_cut_all_starts_with"),
-    fn_name("app_ceb_bible_gloss_chapters_absent_gate_run"),
+    fn_name("app_learn_ceb_gloss_chapters_absent_gate_run"),
     fn_name("app_ceb_bible_gloss_passages_respell_refused_baseline_write"),
     fn_name("app_ceb_bible_gloss_passages_respell_refused_gate_run"),
     fn_name("app_ceb_bible_gloss_passages_respell_refused_names"),
