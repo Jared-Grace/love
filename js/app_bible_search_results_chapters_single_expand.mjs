@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { not } from "./not.mjs";
 import { list_single } from "./list_single.mjs";
-export async function app_search_results_chapters_single_expand(
+export async function app_bible_search_results_chapters_single_expand(
   chapter_expands,
 ) {
   arguments_assert(arguments, 1);
