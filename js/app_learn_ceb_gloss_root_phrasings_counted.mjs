@@ -11,7 +11,7 @@ import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_entries_explained_generic } from "./gloss_chapters_entries_explained_generic.mjs";
-export async function app_ceb_bible_gloss_root_phrasings_counted() {
+export async function app_learn_ceb_gloss_root_phrasings_counted() {
   "How many explanations in the Cebuano gloss store name the word's root in the one wording the strict root reader looks for, how many name one in a wording it cannot see, and how many name none at all.";
   "★ EVERY READING OF THIS STORE TREATED AN EMPTY ANSWER FROM THE STRICT ROOT READER AS THE STORE NAMING NO ROOT, AND THAT IS NOT WHAT AN EMPTY ANSWER MEANS. That reader matches the word root followed by a quoted word, and the store has no one way of saying it. Built on 'buhat', to do names the same root; so does 'Gibuhat' is 'buhat', to do; so does means was done, from 'buhat'. All three come back empty, because the word root is not in the sentence. The strict reader's own prose says a caller is meant to fall back on an empty answer; the readings built on it did not fall back, so they counted a difference of phrasing as a difference of content.";
   "This is what makes the count worth having rather than the wording being a matter of taste. A reading beside this one reported 8919 entries where the store names a root for a word elsewhere and no root here, and recommended filling them in from the store's own answers. Some of those pairs are the same claim written twice, and this is how many.";
