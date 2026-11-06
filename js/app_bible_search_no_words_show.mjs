@@ -1,4 +1,4 @@
-import { app_search_no_words_text } from "./app_search_no_words_text.mjs";
+import { app_bible_search_no_words_text } from "./app_bible_search_no_words_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_search_nothing_typed_is } from "./app_search_nothing_typed_is.mjs";
 import { app_bible_search_bible_url } from "./app_bible_search_bible_url.mjs";
@@ -11,7 +11,7 @@ export function app_bible_search_no_words_show(
 ) {
   "what the page shows when there was nothing to search for: why, and where to go instead.";
   "The way out is only offered to a reader who typed something, because the two ways to reach here want opposite things. An empty box wants the box, and it is already there above this message; a sentence in a script this search cannot cut wants somewhere that reads it, and that is the bible reader.";
-  let no_words_text = app_search_no_words_text(query);
+  let no_words_text = app_bible_search_no_words_text(query);
   app_shared_text_body(div_results, no_words_text);
   let nothing_typed = app_search_nothing_typed_is(query);
   if (nothing_typed) {
