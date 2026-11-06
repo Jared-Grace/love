@@ -5,7 +5,7 @@ import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
-export function app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted_root_note() {
+export function app_learn_ceb_gloss_root_self_named_apart_vocabulary_counted_root_note() {
   arguments_assert(arguments, 0);
   function root_note(holder, root, word) {
     let row = property_get_or_null(holder, root);
