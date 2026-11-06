@@ -10,7 +10,7 @@ export function app_shared_names() {
     bible_search: "Bible Search",
     learn_original: "Greek and Hebrew Bible",
     learn_ceb: "Cebuano Bible",
-    en_learn_bible: "English Bible in Urdu",
+    learn_en: "English Bible in Urdu",
     verses: "Verses",
     reply: "Reply",
     next: "Next Passage",
