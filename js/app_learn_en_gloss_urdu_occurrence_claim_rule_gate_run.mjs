@@ -6,7 +6,7 @@ import { app_en_learn_bible_gloss_urdu_occurrence_claims_rule_mixed_names } from
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_en_learn_bible_gloss_urdu_occurrence_claim_rule_gate_run() {
+export async function app_learn_en_gloss_urdu_occurrence_claim_rule_gate_run() {
   "Gate: within one chapter of the Urdu-explained English store, one word's occurrence numbers must all be reachable by a single rule. Throws so the dispatcher seam exits nonzero.";
   "★ THE GATE BESIDE THIS ONE CANNOT SEE THIS FAULT, AND SAID SO WHEN IT WAS BUILT. It asks of each sentence on its own whether some rule reaches its number, and a chapter that counts a word with the spellings apart for a few verses and then folds them together answers yes every single time. Nine places in the store did exactly that, and every one of them was invisible to a check that looks at one sentence at a time. A rule is a promise to the next sentence, so it has to be checked over a run and not over a row.";
   "★ THIS STILL SETTLES NOTHING ABOUT WHICH RULE IS RIGHT. Whether And and and are one word or two is a question for a person, and both answers stay open here: all of one or all of the other passes. What fails is only the chapter contradicting itself, which no answer to that question would excuse.";
