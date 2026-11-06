@@ -2,7 +2,7 @@ import { list_map_then_squash } from "./list_map_then_squash.mjs";
 import { app_search_results_top_buttons_add } from "./app_search_results_top_buttons_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_folds } from "./app_shared_folds.mjs";
-import { app_search_results_bible_order_key } from "./app_search_results_bible_order_key.mjs";
+import { app_bible_search_results_bible_order_key } from "./app_bible_search_results_bible_order_key.mjs";
 import { app_search_results_division_card } from "./app_search_results_division_card.mjs";
 import { app_search_results_book_card } from "./app_search_results_book_card.mjs";
 import { app_search_results_chapter_card } from "./app_search_results_chapter_card.mjs";
@@ -31,7 +31,7 @@ export function app_search_results_render(
     buttons,
   );
   function bible_order_key(vk) {
-    let r3 = app_search_results_bible_order_key(vk, books);
+    let r3 = app_bible_search_results_bible_order_key(vk, books);
     return r3;
   }
   list_sort_text_mapper(results, bible_order_key);
