@@ -9,7 +9,7 @@ import { bible_chapter_verses } from "./bible_chapter_verses.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { list_map_async } from "./list_map_async.mjs";
-export async function app_en_learn_bible_gloss_urdu_entries_absent() {
+export async function app_learn_en_gloss_urdu_entries_absent() {
   "How many word explanations the chapters this store has not begun would come to, with the verses they are spread over.";
   "The cost of finishing is a decision somebody is making, and a count of chapters cannot price it: the chapter that was timed held seventeen verses where the average holds nearer thirty, so multiplying a measured chapter by the chapters left is out by half. An explanation is written once per word of the English wording, so the words are the unit that carries across, and they are countable today from text already on this disk.";
   "The words are cut exactly as the check that lays an explanation beside its passage cuts them, so the count is the number of entries that check will demand rather than an estimate of it.";
