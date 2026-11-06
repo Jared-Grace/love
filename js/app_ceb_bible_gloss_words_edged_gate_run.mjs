@@ -30,7 +30,7 @@ export async function app_ceb_bible_gloss_words_edged_gate_run() {
     offenders,
     path,
     "these explanations are written against a word that still carries a mark from the sentence around it, so every root and affix check asks the dictionary under a spelling it does not hold and passes the word over without a word - open the chapter at that word and write the explanation against the word alone, leaving the mark in the verse where it belongs",
-    fn_name("app_ceb_bible_gloss_words_edged_baseline_write"),
+    fn_name("app_learn_ceb_gloss_words_edged_baseline_write"),
   );
   let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
