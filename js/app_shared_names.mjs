@@ -9,7 +9,7 @@ export function app_shared_names() {
     bible_emoji: "Emoji Bible",
     search: "Bible Search",
     learn_original: "Greek and Hebrew Bible",
-    ceb_bible: "Cebuano Bible",
+    learn_ceb: "Cebuano Bible",
     en_learn_bible: "English Bible in Urdu",
     verses: "Verses",
     reply: "Reply",
