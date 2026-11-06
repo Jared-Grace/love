@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_roots_silence_causes_classes_read } from "./app_ceb_bible_gloss_roots_silence_causes_classes_read.mjs";
+import { app_learn_ceb_gloss_roots_silence_causes_classes_read } from "./app_learn_ceb_gloss_roots_silence_causes_classes_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
@@ -13,7 +13,7 @@ export async function app_ceb_bible_gloss_roots_silence_causes(sample_size) {
   "how many classes to draw from, said as text as readily as as a number. It names nothing that runs.";
   arguments_assert(arguments, 1);
   let r2 =
-    await app_ceb_bible_gloss_roots_silence_causes_classes_read(sample_size);
+    await app_learn_ceb_gloss_roots_silence_causes_classes_read(sample_size);
   let classes_read = property_get(r2, "classes_read");
   let classes_total = property_get(r2, "classes_total");
   let silent = property_get(r2, "silent");
