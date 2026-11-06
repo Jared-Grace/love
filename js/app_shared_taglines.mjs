@@ -11,7 +11,7 @@ export function app_shared_taglines() {
     learn_original:
       "every word explained in English, with the number to look it up by",
     learn_ceb: "every word explained, with the root it comes from",
-    en_learn_bible:
+    learn_en:
       "a verse in your own language, then in English with every word explained",
     verses: "encouraging Bible verses to share",
     reply: "encouraging Bible verses, with a reply to write under them",
