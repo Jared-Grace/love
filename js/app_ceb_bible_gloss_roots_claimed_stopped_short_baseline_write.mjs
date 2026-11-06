@@ -2,7 +2,7 @@ import { app_ceb_bible_gloss_stored_is } from "./app_ceb_bible_gloss_stored_is.m
 import { assert_json } from "./assert_json.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_named } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_named.mjs";
 import { app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_growth_assert } from "./app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_growth_assert.mjs";
-import { app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_path } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_path.mjs";
+import { app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_path } from "./app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_path.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_write() {
   "Rewrite the record of the Cebuano explanations cutting a root short, from what the store holds right now. For seeding it once, and for banking a repair - never for blessing a fresh cut, which is the one thing the gate exists to refuse.";
@@ -16,7 +16,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_w
   await app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_growth_assert(
     known,
   );
-  let path = app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_path();
+  let path = app_learn_ceb_gloss_roots_claimed_stopped_short_baseline_path();
   let r = await baseline_known_write(known, path);
   return r;
 }
