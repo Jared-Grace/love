@@ -23,7 +23,7 @@ import { list_slice_count } from "./list_slice_count.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-export async function app_ceb_bible_gloss_root_word_apart() {
+export async function app_learn_ceb_gloss_root_word_apart() {
   "Every entry in the Cebuano gloss store whose explanation takes a word back to a root sharing nothing with it, gathered by the pair so one repeated claim counts once, beside the counts of the ordinary relations for scale.";
   "★ EVERY EARLIER READING SET THE NAMED ROOT AGAINST SOMETHING OTHER THAN THE WORD IT IS THE ROOT OF. One asked whether two chapters name the same root for one word, another whether the dictionary names the same root, another whether the dictionary derives the named root further. All three need a second opinion before they can say anything, so all three are silent wherever no second opinion exists. This needs none: the word is written right there in the entry, and a root sharing no run of four letters with the word it explains looked wrong on its face, whoever else was asked. It is not, and the measurement below is the refutation of that sentence rather than a use of it.";
   "It is the cheapest check of the four and it was the last one built, which is worth saying plainly rather than quietly fixing. The dictionary took a network and months of gathering; this needed nothing that was not already in the file being read. Reaching for the outside source first is what left it until last - and the outside source turns out to have been worth the trouble, because it knows the language and a rule about shared letters does not.";

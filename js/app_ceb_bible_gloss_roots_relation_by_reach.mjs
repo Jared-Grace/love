@@ -35,7 +35,7 @@ export async function app_ceb_bible_gloss_roots_relation_by_reach() {
   ("★ THE READER SAYS OF ITSELF THAT IT IS MISLEADING HERE, AND NOBODY HAD PRICED THAT. ",
     fn_name("gloss_root_claimed_relation"),
     " carries the warning outright: between two roots it is sound, between a word and its root an affix is always in the way, and apart comes back for correct Cebuano like sulugoon under sugo and kusgan under kusog. ",
-    fn_name("app_ceb_bible_gloss_root_word_apart"),
+    fn_name("app_learn_ceb_gloss_root_word_apart"),
     " met 2311 of those and decided the check against itself by reading the top of the list. That is the head, and the head of a list sorted by how often a pair is met is clean by selection: four hundred pairs sit in the tail at one entry each, unread.");
   ("A distance settles the tail without anybody reading it. Cebuano drops the vowel out of a root's last syllable when a suffix goes on, and that is one edit; a consonant shifting where a piece meets the root is one more. So a root within two edits of standing inside its word is reachable by the language's own ordinary word-building, whatever relation the shared-run rule answered, and a root three or more edits away is not reachable that way at all.");
   ("★ REACHABLE IS NOT INNOCENT. A root somebody invented can land one edit away by chance, so this splits what ordinary word-building could have made from what it could not, and never true from false. The unreachable rows are a floor under the faults on this side and never a ceiling.");

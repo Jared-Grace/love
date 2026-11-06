@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_root_word_apart } from "./app_ceb_bible_gloss_root_word_apart.mjs";
+import { app_learn_ceb_gloss_root_word_apart } from "./app_learn_ceb_gloss_root_word_apart.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_root_claimed_shape } from "./gloss_root_claimed_shape.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
@@ -18,7 +18,7 @@ export async function app_learn_ceb_gloss_root_word_apart_shaped() {
   "It asks the reading underneath rather than walking the store itself, which is the difference between four hundred and two pairs and four hundred and forty-seven. Written as its own walk it kept the word as the store spells it, so Tinuod at the opening of a sentence and tinuod inside one were two pairs wherever a book happened to use both. The reading underneath lowers both halves before it gathers them, and every count here is that reading's count with a shape hung on it.";
   "The whole distribution is handed straight back for scale, because a pile of unaccounted words cannot be read without knowing how many words were looked at to find it.";
   arguments_assert(arguments, 0);
-  let read = await app_ceb_bible_gloss_root_word_apart();
+  let read = await app_learn_ceb_gloss_root_word_apart();
   let listed = property_get(read, "listed");
   let shape_words = {};
   let shape_entries = {};
