@@ -18,7 +18,7 @@ import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_r
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_tally } from "./list_tally.mjs";
 import { subtract } from "./subtract.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_outside_word_priced() {
+export async function app_learn_ceb_gloss_roots_claimed_outside_word_priced() {
   "How far each Cebuano root that is not spelled inside its own word stands from being spelled inside it, counted in single-letter edits, so that the one side of the store nobody has a number for is priced by what could be at fault on it rather than by how many rows it holds.";
   ("★ THE ITEM COUNT AND THE FAULT COUNT ARE TWO ORDERS OF MAGNITUDE APART. ",
     fn_name("app_ceb_bible_gloss_roots_claimed_outside_word"),

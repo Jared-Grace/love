@@ -42,7 +42,7 @@ export async function app_ceb_bible_gloss_roots_relation_by_reach() {
   ("The relation and the distance are crossed rather than reported one beside the other, because the whole question is whether they disagree: a table of both says how much of apart is ordinary morphology, which is the sentence the reader's own warning makes and does not measure.");
   ("The apart rows that are also unreachable are gathered by the word and root together, because one rule wrongly learned is written into every chapter using the word, and a run of entries of one wrong pair is one thing to disagree with rather than a run of them.");
   ("The accent marks come off before the distance is taken, for the reason ",
-    fn_name("app_ceb_bible_gloss_roots_claimed_outside_word_priced"),
+    fn_name("app_learn_ceb_gloss_roots_claimed_outside_word_priced"),
     " gives: the fold leaves a mark where it finds it and the Cebuano text writes none, so a marked root would read as distance where it is really spelling. The relation is asked exactly as the reading beside this one asks it, marks and all, so that the two tallies can be set against each other.");
   ("Nothing is asked of the site and nothing is written.");
   arguments_assert(arguments, 0);
