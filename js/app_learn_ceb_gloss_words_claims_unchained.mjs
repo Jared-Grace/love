@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_classes_word_claims_unchained } from "./gloss_classes_word_claims_unchained.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_words_claims_unchained(sample_size) {
+export async function app_learn_ceb_gloss_words_claims_unchained(sample_size) {
   "The words the Cebuano app explains more than one way and the dictionary cannot reconcile, worst first: the queue after every disagreement that was only a depth has been taken out of it.";
   "The list this narrows is already the answerable half of the work - one word does not come from two unrelated roots, so a word explained two ways is wrong somewhere whether or not any dictionary was ever asked. What the dictionary is used for here is only subtraction. Where it says one claim stands on the other's chain, the two explanations are steps on one path and nobody has to choose between them.";
   "Both figures are given, the queue before the folding and after it, because the second one alone would look like a smaller problem rather than the same problem with the settled part taken out. The first of them, and the sample's reach beside the classes there are, come from the shared counting of a gathering; the subtraction is what belongs to this reading alone.";
