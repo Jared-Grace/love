@@ -1,6 +1,6 @@
 import { property_text_split_space } from "./property_text_split_space.mjs";
 import { property_null_is } from "./property_null_is.mjs";
-import { app_ceb_bible_verses_all } from "./app_ceb_bible_verses_all.mjs";
+import { app_learn_ceb_verses_all } from "./app_learn_ceb_verses_all.mjs";
 import { text_apostrophe_inside_word_is } from "./text_apostrophe_inside_word_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
@@ -21,7 +21,7 @@ export async function app_learn_ceb_apostrophe_pieces_unwritten() {
   "A piece also written somewhere on its own is left out, because a yes about it is not wrong.";
   "Only an apostrophe standing inside a word counts as a join here. The same mark opens and closes quoted speech all through this translation, and counting those as joins too was measured to name three thousand apostrophed words where the translation writes about forty, each of them then handing its own dashes and pieces over to an answer about apostrophes.";
   arguments_assert(arguments, 0);
-  let verses = await app_ceb_bible_verses_all();
+  let verses = await app_learn_ceb_verses_all();
   let alone = {};
   let apostrophed = [];
   function verse_read(verse) {
