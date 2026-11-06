@@ -7,7 +7,7 @@ import { list_any } from "./list_any.mjs";
 import { list_concat_unique } from "./list_concat_unique.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_search_languages_answers_joined(
+export function app_bible_search_languages_answers_joined(
   asked,
   words,
   languages_unsearchable,

@@ -1,4 +1,4 @@
-import { app_search_languages_answers_joined } from "./app_search_languages_answers_joined.mjs";
+import { app_bible_search_languages_answers_joined } from "./app_bible_search_languages_answers_joined.mjs";
 import { app_bible_search_language_matching_or_null } from "./app_bible_search_language_matching_or_null.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_bible_search_language_searchable } from "./app_bible_search_language_searchable.mjs";
@@ -46,7 +46,7 @@ export async function app_search_languages_matching(languages_chosen, query) {
   for (let a of asked) {
     words = list_concat_unique(words, a.words);
   }
-  let r = app_search_languages_answers_joined(
+  let r = app_bible_search_languages_answers_joined(
     asked,
     words,
     languages_unsearchable,
