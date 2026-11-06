@@ -6,7 +6,7 @@ import { app_bible_search_languages_unsearchable_show } from "./app_bible_search
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_bible_search_no_words_show } from "./app_bible_search_no_words_show.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
+import { app_bible_search_words_missing_text } from "./app_bible_search_words_missing_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_bible_search_results_with_verses_and_books } from "./app_bible_search_results_with_verses_and_books.mjs";
 import { app_bible_search_none_found_text } from "./app_bible_search_none_found_text.mjs";
@@ -41,7 +41,7 @@ export async function app_bible_search_results(context, div_results) {
   let words_unreachable = property_get(matching, "words_unreachable");
   let missing = list_empty_not_is(words_missing);
   if (missing) {
-    let missing_text = app_search_words_missing_text(
+    let missing_text = app_bible_search_words_missing_text(
       words_missing,
       words_unreachable,
     );

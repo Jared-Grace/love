@@ -5,7 +5,7 @@ import { app_search_words_unreachable_text } from "./app_search_words_unreachabl
 import { list_add } from "./list_add.mjs";
 import { app_bible_search_words_absent_text } from "./app_bible_search_words_absent_text.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-export function app_search_words_missing_text(
+export function app_bible_search_words_missing_text(
   words_missing,
   words_unreachable,
 ) {
