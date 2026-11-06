@@ -3,7 +3,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_ceb_bible_gloss_explains_depth_by_book_chapter_read_book_row(
+export function app_learn_ceb_gloss_explains_depth_by_book_chapter_read_book_row(
   by_book,
 ) {
   arguments_assert(arguments, 1);
