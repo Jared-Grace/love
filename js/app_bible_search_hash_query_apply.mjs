@@ -3,7 +3,7 @@ import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_bible_search_query_hash_key } from "./app_bible_search_query_hash_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal_loose } from "./equal_loose.mjs";
-import { app_search_query_link_words } from "./app_search_query_link_words.mjs";
+import { app_bible_search_query_link_words } from "./app_bible_search_query_link_words.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { equal } from "./equal.mjs";
 import { html_value_set } from "./html_value_set.mjs";
@@ -19,7 +19,7 @@ export async function app_bible_search_hash_query_apply(input, search) {
     return;
   }
   ("How a link's words are read back lives next door, so that the writing side and a check standing outside a browser walk the one path rather than three copies of it that can drift apart.");
-  let query_from_hash = app_search_query_link_words(query_hash);
+  let query_from_hash = app_bible_search_query_link_words(query_hash);
   let query_shown = html_value_get(input);
   let same = equal(query_shown, query_from_hash);
   if (same) {

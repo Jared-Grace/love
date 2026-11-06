@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_bible_search_query_hash_word_gap } from "./app_bible_search_query_hash_word_gap.mjs";
 import { text_replace_to_space } from "./text_replace_to_space.mjs";
 import { text_url_decode_or_same } from "./text_url_decode_or_same.mjs";
-export function app_search_query_link_words(carried) {
+export function app_bible_search_query_link_words(carried) {
   "$plain carried";
   "The words to search for, read back out of what a link was carrying for them.";
   "THE PLUS IS UNDONE FIRST AND THE SPELLING AFTER, NEVER THE OTHER WAY. A plus between words means a gap, and a plus somebody actually typed is carried spelled out, so undoing the spelling first would turn their plus into a gap as well and a search for C++ would open as a search for C.";

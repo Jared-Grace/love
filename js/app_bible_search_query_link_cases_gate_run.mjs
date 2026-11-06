@@ -11,7 +11,7 @@ import { hash_to_url } from "./hash_to_url.mjs";
 import { hash_text_object } from "./hash_text_object.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
-import { app_search_query_link_words } from "./app_search_query_link_words.mjs";
+import { app_bible_search_query_link_words } from "./app_bible_search_query_link_words.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_imports } from "./function_imports.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -46,7 +46,7 @@ export async function app_bible_search_query_link_cases_gate_run() {
       wrong.push("nothing came back for " + query + " sent as " + url);
       continue;
     }
-    let words = app_search_query_link_words(carried);
+    let words = app_bible_search_query_link_words(carried);
     let b2 = equal(words, query);
     if (not(b2)) {
       wrong.push(
@@ -84,7 +84,7 @@ export async function app_bible_search_query_link_cases_gate_run() {
       wrong.push("an address sent before now carries nothing: " + url);
       continue;
     }
-    let words = app_search_query_link_words(carried);
+    let words = app_bible_search_query_link_words(carried);
     let wanted = property_get(one, "words");
     let b3 = equal(words, wanted);
     if (not(b3)) {
@@ -106,7 +106,7 @@ export async function app_bible_search_query_link_cases_gate_run() {
     },
     {
       page: fn_name("app_bible_search_hash_query_apply"),
-      door: fn_name("app_search_query_link_words"),
+      door: fn_name("app_bible_search_query_link_words"),
       what: "open a search somebody sent",
     },
   ];
@@ -130,7 +130,7 @@ export async function app_bible_search_query_link_cases_gate_run() {
       "A search no longer survives being sent as a link, which is what the search card promises a stranger. The writing side is " +
       fn_name("app_search_query_link_written") +
       " and the reading side is " +
-      fn_name("app_search_query_link_words") +
+      fn_name("app_bible_search_query_link_words") +
       "; the searches that have to survive, and why each one is there, are in " +
       fn_name("app_bible_search_query_link_cases") +
       ".",
