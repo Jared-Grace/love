@@ -4,7 +4,7 @@ import { list_map } from "./list_map.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { ebible_words_sightings } from "./ebible_words_sightings.mjs";
 import { bible_words_slips } from "./bible_words_slips.mjs";
-export async function app_ceb_bible_gloss_queue_slips() {
+export async function app_learn_ceb_gloss_queue_slips() {
   "Which words in the Cebuano gloss queue are probably misprints in the translation rather than words needing an explanation.";
   "A repair is written against the word as the translation spells it, so a repair aimed at a misprint writes a settled explanation for something nobody meant to say - and settles it, which is worse than leaving it blank. These rows are the queue entries to take out rather than work through.";
   "Ten times commoner is what counts as a commoner neighbour here. That number is a starting place rather than a finding; ask the reading underneath for a different one when the shortlist reads wrong.";
