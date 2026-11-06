@@ -7,7 +7,7 @@ import { app_learn_en_gloss_urdu_words_sound_slow_url } from "./app_learn_en_glo
 import { property_get } from "./property_get.mjs";
 import { app_shared_gloss_bible_home_generic } from "./app_shared_gloss_bible_home_generic.mjs";
 import { app_en_learn_bible } from "./app_en_learn_bible.mjs";
-export async function app_en_learn_bible_home(context) {
+export async function app_learn_en_home(context) {
   "The reading screen for somebody learning English from the Bible: the verse in English, and under it each English word explained in the reader's own language.";
   "The explanations are about the English wording, so the words shown are the first of the passage's texts, which is the English one - that is what asking for the text rather than the original language means here.";
   "The explanations come from the store of the language the reader has chosen, asked for each time this screen is drawn, and the reader language is said again here for the same reason: the reader may have changed it in the settings since the app started.";
