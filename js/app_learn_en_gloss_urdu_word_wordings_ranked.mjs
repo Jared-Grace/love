@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_word_wordings } from "./gloss_chapters_word_wordings.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
-export async function app_en_learn_bible_gloss_urdu_word_wordings_ranked(word) {
+export async function app_learn_en_gloss_urdu_word_wordings_ranked(word) {
   "Every distinct sentence the store explaining English words to an Urdu reader has written under one English word, commonest first.";
   "$plain word";
   "the word is one English word as it appears in the text, like that or Then. It names entries in a store and nothing that runs.";
