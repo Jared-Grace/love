@@ -1,4 +1,3 @@
-import { less_than_equal } from "./less_than_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_program_step_trace } from "./app_code_program_step_trace.mjs";
@@ -43,11 +42,12 @@ import { html_on_click } from "./html_on_click.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { list_set } from "./list_set.mjs";
 import { app_code_line_pieces_text } from "./app_code_line_pieces_text.mjs";
+import { subtract } from "./subtract.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { app_code_note_name_mark_open } from "./app_code_note_name_mark_open.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { subtract } from "./subtract.mjs";
 import { app_code_note_runs } from "./app_code_note_runs.mjs";
 import { app_code_note_runs_cut } from "./app_code_note_runs_cut.mjs";
 import { app_code_note_name_colors } from "./app_code_note_name_colors.mjs";
@@ -1067,21 +1067,26 @@ export function app_code_program_step_through_generic(
     }
     if (equal(kind, "expand")) {
       ("2026-10-21, at the human's asking: a line written the shorter way is written out the long way in the program, a++ becoming a = a + 1, by the same fade and slide a value is solved in with, and the long line is then what the line reads and what every step after it solves into");
-      line_restore(line_index);
+      ("2026-11-06, at the human's asking: what was solved into the rest of the line stays, so a for's condition still reads true while its n++ is written the long way, and is put back only when the learner chooses to reset it. Not picked: putting the whole line back first, as before, which reset the condition without the learner choosing it. Every value solved into the line so far stands before the piece written the long way, since a piece is written the long way before anything in it or after it is solved");
       let line_from4 = list_get(starts, line_index);
       let left14 = property_get(action, "from");
       let compound_from = subtract(left14, line_from4);
       let left15 = property_get(action, "to");
       let compound_to = subtract(left15, line_from4);
       let long = property_get(action, "written");
-      let line4 = list_get(lines, line_index);
+      let line4 = list_get(bases, line_index);
       let to5 = text_size(line4);
       let sliced = text_slice(line4, 0, compound_from);
       let sliced2 = text_slice(line4, compound_to, to5);
       let long_line = text_combine_multiple([sliced, long, sliced2]);
-      await piece_rewrite(line_index, compound_from, compound_to, long);
-      row_text_set(line_index, long_line);
+      let compound_from_now = position_now(line_index, compound_from);
+      let compound_to_now = position_now(line_index, compound_to);
+      await piece_rewrite(line_index, compound_from_now, compound_to_now, long);
       list_set(bases, line_index, long_line);
+      let done2 = list_get(replaced, line_index);
+      let size_long = text_size(long_line);
+      let long_now = app_code_line_pieces_text(long_line, done2, 0, size_long);
+      row_text_set(line_index, long_now);
       rows_pieces_draw();
       return;
     }
