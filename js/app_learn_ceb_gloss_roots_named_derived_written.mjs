@@ -10,7 +10,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { add } from "./add.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_named_derived_written() {
+export async function app_learn_ceb_gloss_roots_named_derived_written() {
   "The roots the Cebuano gloss store names that the dictionary takes back further, split by whether the translation itself ever writes the named form standing alone and whether it ever writes the deeper one, so that a word a reader actually meets is told apart from a form that only exists inside longer words.";
   "★ THE QUESTION THAT WAS BEING LEFT TO A SPEAKER HAS AN ANSWER IN THE TEXT ITSELF. Whether paagi is a word or a derived form of agi decided the whole of the wider count, and it was handed over as a judgment nobody here could make. But the translation is right there, and a form it writes on its own line by itself is a word its readers meet; a form that never once appears except buried inside longer words is not, whatever a dictionary can derive. That is evidence rather than an opinion, and it is the same test used earlier to say which apostrophe pieces were words nobody wrote.";
   "Four answers rather than two, because both halves can be words and both can fail to be. Where the translation writes both, the store picking the longer one is a choice between two real words and defensible. Where it writes only the form the store named, the dictionary has gone behind anything a reader would recognise. Where it writes only the deeper form, the store named something its own text never uses alone, and that is the sharp case. Where it writes neither, both are pieces and the entry needs a different kind of help.";
