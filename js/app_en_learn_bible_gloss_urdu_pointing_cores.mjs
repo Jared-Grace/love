@@ -1,7 +1,7 @@
 import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_back_reference_wordings } from "./gloss_back_reference_wordings.mjs";
-import { app_en_learn_bible_gloss_urdu_explain_sentences } from "./app_en_learn_bible_gloss_urdu_explain_sentences.mjs";
+import { app_learn_en_gloss_urdu_explain_sentences } from "./app_learn_en_gloss_urdu_explain_sentences.mjs";
 import { text_split } from "./text_split.mjs";
 export function app_en_learn_bible_gloss_urdu_pointing_cores() {
   "What each known pointing wording would say if it were not pointing anywhere - the sentence with its pointing word struck off the front.";
@@ -10,7 +10,7 @@ export function app_en_learn_bible_gloss_urdu_pointing_cores() {
   arguments_assert(arguments, 0);
   let wordings = gloss_back_reference_wordings();
   function core_of(wording) {
-    let sentences = app_en_learn_bible_gloss_urdu_explain_sentences(wording);
+    let sentences = app_learn_en_gloss_urdu_explain_sentences(wording);
     let first = sentences[0];
     let words = text_split(first, " ");
     let rest = words.slice(1);
