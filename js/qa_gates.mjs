@@ -613,7 +613,7 @@ import { apps_prod_descriptions_differences_gate_run } from "./apps_prod_descrip
 import { gloss_term_written_is_cases_gate_run } from "./gloss_term_written_is_cases_gate_run.mjs";
 import { app_shared_bible_bare_start_gate_run } from "./app_shared_bible_bare_start_gate_run.mjs";
 import { app_shared_bible_verses_choices_gate_run } from "./app_shared_bible_verses_choices_gate_run.mjs";
-import { app_search_query_link_cases_gate_run } from "./app_search_query_link_cases_gate_run.mjs";
+import { app_bible_search_query_link_cases_gate_run } from "./app_bible_search_query_link_cases_gate_run.mjs";
 import { app_supper_tl_languages_gate_run } from "./app_supper_tl_languages_gate_run.mjs";
 import { prayer_lead_all_creation_gate_run } from "./prayer_lead_all_creation_gate_run.mjs";
 import { app_bible_card_claims_gate_run } from "./app_bible_card_claims_gate_run.mjs";
@@ -1264,7 +1264,7 @@ export function qa_gates() {
     gloss_term_written_is_cases_gate_run,
     app_shared_bible_bare_start_gate_run,
     app_shared_bible_verses_choices_gate_run,
-    app_search_query_link_cases_gate_run,
+    app_bible_search_query_link_cases_gate_run,
     app_supper_tl_languages_gate_run,
     prayer_lead_all_creation_gate_run,
     app_bible_card_claims_gate_run,

@@ -2585,7 +2585,7 @@ export function permission_grant_names() {
     fn_name("app_code_tests_run_e2e_happy_dev_newest"),
     fn_name("app_shared_bible_bare_start_gate_run"),
     fn_name("app_shared_bible_verses_choices_gate_run"),
-    fn_name("app_search_query_link_cases_gate_run"),
+    fn_name("app_bible_search_query_link_cases_gate_run"),
     fn_name("app_supper_tl_languages_gate_run"),
     fn_name("prayer_lead_all_creation_gate_run"),
     fn_name("app_bible_card_claims_gate_run"),

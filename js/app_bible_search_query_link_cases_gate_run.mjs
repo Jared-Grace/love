@@ -17,7 +17,7 @@ import { function_imports } from "./function_imports.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_search_query_link_cases_gate_run() {
+export async function app_bible_search_query_link_cases_gate_run() {
   "Checks that a search really does survive being sent as a link, which is the half of the search card a stranger is most likely to test: a search can be sent as a link, so whoever opens it sees the same verses you did.";
   "IT NEEDS NO BIBLE AND NO NETWORK, WHICH IS THE WHOLE REASON IT CAN BE A GATE. Putting a search into an address and reading it back out is arithmetic on text, so the one thing the card promises can be checked on a machine with nothing switched on. What it cannot check is that the verses found are the right verses; it checks that the words arrive, and the words arriving is where the promise was being broken.";
   "THE BROWSER IS THE ONE PART NOT RUN HERE, and it is left out because it does nothing: the characters a search can hold are all ones a browser carries through the end of an address exactly as given, and hands back exactly as stored. So writing the address and then reading that same text is the real round trip and not a stand-in for it.";
