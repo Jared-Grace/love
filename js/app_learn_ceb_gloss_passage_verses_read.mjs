@@ -8,7 +8,7 @@ import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_punctuation_dash_kept_split } from "./text_punctuation_dash_kept_split.mjs";
-export function app_ceb_bible_gloss_passage_verses_read(
+export function app_learn_ceb_gloss_passage_verses_read(
   passage,
   known,
   capitalised,

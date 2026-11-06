@@ -1,7 +1,7 @@
 import { app_learn_ceb_gloss_chapter_known_capitalised } from "./app_learn_ceb_gloss_chapter_known_capitalised.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
-import { app_ceb_bible_gloss_passage_verses_read } from "./app_ceb_bible_gloss_passage_verses_read.mjs";
+import { app_learn_ceb_gloss_passage_verses_read } from "./app_learn_ceb_gloss_passage_verses_read.mjs";
 import { app_ceb_bible_gloss_passages } from "./app_ceb_bible_gloss_passages.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_write_chapter_file_path } from "./gloss_write_chapter_file_path.mjs";
@@ -20,7 +20,7 @@ export async function app_ceb_bible_gloss_write_passages(chapter_code) {
   let capitalised = property_get(sources, "capitalised");
   function passage_read(passage) {
     let verse_key = g_sermon_passage_verses_key(passage);
-    let verses = app_ceb_bible_gloss_passage_verses_read(
+    let verses = app_learn_ceb_gloss_passage_verses_read(
       passage,
       known,
       capitalised,
