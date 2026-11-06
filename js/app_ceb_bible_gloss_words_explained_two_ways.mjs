@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_size } from "./list_size.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
@@ -14,7 +14,7 @@ export async function app_ceb_bible_gloss_words_explained_two_ways() {
   "An entry carrying no explanation at all is passed over rather than counted as a way of explaining the word.";
   "The gathering that puts a chapter's words against their sentences is the shared walk, which is where the two rules above are actually kept; what is left here is only the counting.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let sightings = 0;
   let rows = [];
   function word_read(chapter_code, word, sentences) {

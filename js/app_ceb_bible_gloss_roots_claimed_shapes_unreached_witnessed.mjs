@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_roots_claimed_shapes_priced } from "./app_ceb_bible_gloss_roots_claimed_shapes_priced.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_chapters_roots_claimed_gathered } from "./gloss_chapters_roots_claimed_gathered.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -39,7 +39,7 @@ export async function app_ceb_bible_gloss_roots_claimed_shapes_unreached_witness
   let priced = await app_ceb_bible_gloss_roots_claimed_shapes_priced();
   let rows = property_get(priced, "rows");
   let gathered = await gloss_chapters_roots_claimed_gathered(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
   );
   let by_root = property_get(gathered, "by_root");
   let pairs = {};

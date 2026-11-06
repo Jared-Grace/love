@@ -2,7 +2,7 @@ import { property_list_size } from "./property_list_size.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { property_get } from "./property_get.mjs";
@@ -33,7 +33,7 @@ export async function app_ceb_bible_gloss_roots_named_derived_all() {
   "How many entries the store holds altogether is the one number here the shared walk has to hand back rather than this reading counting it, because entries carrying no explanation are never handed over. It is the denominator of the first figure in the measurement above, and a reading that counted only what reached it would quietly report the wrong whole.";
   "The word is read off the entry with the reader that throws when it is absent, and that is this reading's own choice rather than the shared walk's: the walk hands the whole entry over precisely so that each reading keeps the reader it had.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let known = await binisaya_words_known();
   let named_seen = 0;

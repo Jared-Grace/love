@@ -1,7 +1,7 @@
 import { list_size_equal } from "./list_size_equal.mjs";
 import { app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted_root_note } from "./app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted_root_note.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { app_ceb_bible_gloss_vocabularies } from "./app_ceb_bible_gloss_vocabularies.mjs";
 import { property_get } from "./property_get.mjs";
@@ -21,7 +21,7 @@ export async function app_ceb_bible_gloss_root_self_named_apart_vocabulary_count
   "Nothing is written and nothing is asked of the site.";
   "The walk this sits on hands over explained entries and nothing else, which is the right one of the three: the reader asked here is the one for this single wording, and neither of the two walks that read roots asks it. The two vocabularies are read before the walk starts, because the test inside it cannot ask a vocabulary that has not arrived.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let vocabularies = await app_ceb_bible_gloss_vocabularies();
   let outside = 0;

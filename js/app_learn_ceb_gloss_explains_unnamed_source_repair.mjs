@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_chapters_explains_text_replace } from "./gloss_chapters_explains_text_replace.mjs";
 export async function app_learn_ceb_gloss_explains_unnamed_source_repair() {
   "Every Cebuano word explanation that credits its root to an analysis the reader cannot see, reworded to say the root plainly.";
@@ -6,7 +6,7 @@ export async function app_learn_ceb_gloss_explains_unnamed_source_repair() {
   "The wordings are listed here rather than asked for, because they are the ones this store was written with - a run of letters handed in from outside could reword anything at all, and there would be nothing to check it against.";
   "The longer wording of a pair is listed before the shorter one it contains, so the shorter one cannot eat the longer one's opening words and leave a half sentence behind.";
   "It takes no set and is given no list. It asks the store what chapters it holds, and a second run over a store already repaired changes nothing, which is how a run proves it worked.";
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let wordings = [
     ["The analysis gives its root here as", "The root behind it here is"],
     ["The analysis gives its root as", "The root behind it is"],

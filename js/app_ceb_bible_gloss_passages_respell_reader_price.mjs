@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
@@ -18,7 +18,7 @@ export async function app_ceb_bible_gloss_passages_respell_reader_price() {
   "The four readings are the whole space, so the two halves can be seen to be as bad as each other rather than assumed to be. Both sides changed together is the reading that matters, and it is worth the run on its own: it says whether keeping the dash costs the respell anything at all.";
   "Nothing is written by this. The store is crossed by the shared walk that hands over every explained passage, which is also the walk the respell's own refusal reading uses, so the four counts here are about exactly the passages that reading is about.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let today = 0;
   let both_kept = 0;

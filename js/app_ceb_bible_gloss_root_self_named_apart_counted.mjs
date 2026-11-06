@@ -1,6 +1,6 @@
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_explain_roots_self_named } from "./gloss_explain_roots_self_named.mjs";
@@ -23,7 +23,7 @@ export async function app_ceb_bible_gloss_root_self_named_apart_counted(
   "$plain sample_size";
   "the count says how many roots to print from each half. It names nothing that runs.";
   arguments_assert(arguments, 1);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let self_total = 0;
   let inside = 0;

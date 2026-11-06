@@ -1,7 +1,7 @@
 import { app_ceb_bible_gloss_roots_dictionary_arbiter_control_entry_read } from "./app_ceb_bible_gloss_roots_dictionary_arbiter_control_entry_read.mjs";
 import { app_ceb_bible_gloss_roots_dictionary_arbiter_control_word_read } from "./app_ceb_bible_gloss_roots_dictionary_arbiter_control_word_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
@@ -20,7 +20,7 @@ export async function app_ceb_bible_gloss_roots_dictionary_arbiter_control() {
   "The same reader, the same folding and the same relation reader is what the control paragraph promises, and the walk over the store is now shared as well, which is the same promise kept one layer further down: the population being compared cannot differ by an accident of how the two passes were written out.";
   "The word is read off the entry with the reader that throws when it is absent, and that is this reading's own choice rather than the shared walk's: the walk hands the whole entry over precisely so that each reading keeps the reader it had.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let said = {};
   let entry_read =

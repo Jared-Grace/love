@@ -12,7 +12,7 @@ import { text_includes } from "./text_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_before_misread() {
   "Every Cebuano explanation where the root reader hands back a word that is not spelled in the word being explained while the sentence quotes one that is, immediately in front of the words is the root - the sightings where the store is right and the reading is wrong, said with the sentence and both readings so that no one has to take it on trust.";
   "★ NOTHING HERE IS A FAULT IN THE STORE AND EVERY ROW IS A FAULT IN THE READING. That is the opposite of what every other reading beside this one reports, and reading these rows as authoring mistakes would send somebody to correct sentences that are already correct. ‘Awit’ is the root ‘to sing’ says exactly the right thing in exactly the right order; the reader takes the quoted piece after the phrase, which in this shape is the English meaning.";
@@ -84,7 +84,7 @@ export async function app_ceb_bible_gloss_roots_claimed_before_misread() {
     list_add(rows, row);
   }
   let walked = await gloss_chapters_roots_claimed_entries_generic(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     entry_read,
   );
   let r = {

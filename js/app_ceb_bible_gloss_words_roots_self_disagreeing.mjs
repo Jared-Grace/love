@@ -1,6 +1,6 @@
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
@@ -22,7 +22,7 @@ export async function app_ceb_bible_gloss_words_roots_self_disagreeing() {
   "Each disagreement is handed to the reader that says what kind it is, because they are not one thing and only some of them are faults. One sentence stopping at a form the other went further back through is a difference about how far to go and leaves both readers better off than silence; two roots with nothing in common is one sentence simply being wrong. Where more than two roots were named the first two are the pair read, since the count is already in the roots beside it.";
   "The gathering that puts a chapter's words against their sentences is the shared walk, which is where the chapter-at-a-time rule above is actually kept; what is left here is the reading of the roots.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let comparable = 0;
   let rows = [];
   function word_read(chapter_code, word, sentences) {

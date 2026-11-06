@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_size } from "./text_size.mjs";
@@ -24,7 +24,7 @@ export function app_learn_ceb_gloss_explains_depth_by_book_chapter_read_lambda(
     counted_add(row, "chapters", 1);
     let entries = await gloss_chapter_entries_collect_generic(
       chapter_code,
-      app_ceb_bible_gloss_generate,
+      app_learn_ceb_gloss_generate,
       entries_pass,
     );
     function entry_read(entry) {

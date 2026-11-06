@@ -1,7 +1,7 @@
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
@@ -15,7 +15,7 @@ import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roo
 export async function app_ceb_bible_gloss_root_omitted_wordings_walked(words) {
   "Walks every glossed entry and, for the words asked about only, counts the times a root was named and the times it was left out, and keeps the wordings themselves on each side - so the two accounts of one word can be read against each other to see what the explanation said instead of naming a root.";
   arguments_assert(arguments, 1);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let by_word = {};
   function word_start(word) {

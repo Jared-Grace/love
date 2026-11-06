@@ -15,7 +15,7 @@ import { text_edit_distance_inside } from "./text_edit_distance_inside.mjs";
 import { list_add } from "./list_add.mjs";
 import { less_than } from "./less_than.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_tally } from "./list_tally.mjs";
 import { subtract } from "./subtract.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_outside_word_priced() {
@@ -77,7 +77,7 @@ export async function app_ceb_bible_gloss_roots_claimed_outside_word_priced() {
     list_add(rows, row);
   }
   let walked = await gloss_chapters_roots_claimed_entries_generic(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     entry_read,
   );
   let outside = list_size(distances);

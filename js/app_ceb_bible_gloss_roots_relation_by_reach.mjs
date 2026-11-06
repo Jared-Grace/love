@@ -23,7 +23,7 @@ import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
 import { list_add } from "./list_add.mjs";
@@ -108,7 +108,7 @@ export async function app_ceb_bible_gloss_roots_relation_by_reach() {
     list_add_if_not_includes(chapters, chapter_code);
   }
   let walked = await gloss_chapters_roots_claimed_entries_generic(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     entry_read,
   );
   let keys = object_property_names(far_pairs);

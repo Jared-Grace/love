@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_chapters_affix_kinds_wrong } from "./gloss_chapters_affix_kinds_wrong.mjs";
 import { list_map } from "./list_map.mjs";
@@ -11,7 +11,7 @@ export async function app_learn_ceb_gloss_affix_kinds_wrong_chapters() {
   "The findings themselves are left behind and only their number is carried, because a whole store's prose is more than anybody reads at once. A single chapter hands over its own findings when it is chosen.";
   let known = await binisaya_words_known();
   let offenders = await gloss_chapters_affix_kinds_wrong(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     known,
   );
   function chapter_count(chapter) {

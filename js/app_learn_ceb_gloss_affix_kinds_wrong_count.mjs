@@ -1,5 +1,5 @@
 import { gloss_chapter_found_count } from "./gloss_chapter_found_count.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_chapters_affix_kinds_wrong } from "./gloss_chapters_affix_kinds_wrong.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
@@ -14,7 +14,7 @@ export async function app_learn_ceb_gloss_affix_kinds_wrong_count() {
   let list = object_property_names(known);
   let consulted = list_size(list);
   let offenders = await gloss_chapters_affix_kinds_wrong(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     known,
   );
   let chapters = list_size(offenders);

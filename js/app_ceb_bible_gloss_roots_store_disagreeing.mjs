@@ -3,7 +3,7 @@ import { list_filter_size } from "./list_filter_size.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { app_ceb_bible_gloss_roots_store_disagreeing_known } from "./app_ceb_bible_gloss_roots_store_disagreeing_known.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
@@ -27,7 +27,7 @@ export async function app_ceb_bible_gloss_roots_store_disagreeing() {
   "The word is read off the entry with the reader that throws when it is absent, and that is this reading's own choice rather than the shared walk's: the walk hands the whole entry over precisely so that each reading keeps the reader it had.";
   "The chapter a sighting stood in is not read at all here, which is the whole of what the paragraph about the boundary says, arriving as a line of code rather than as a claim.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let said = {};
   let known = await app_ceb_bible_gloss_roots_store_disagreeing_known(

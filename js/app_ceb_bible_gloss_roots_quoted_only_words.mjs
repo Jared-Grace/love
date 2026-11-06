@@ -1,5 +1,5 @@
 import { gloss_chapters_roots_quoted_only } from "./gloss_chapters_roots_quoted_only.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { gloss_offenders_findings_by_word } from "./gloss_offenders_findings_by_word.mjs";
@@ -12,7 +12,7 @@ export async function app_ceb_bible_gloss_roots_quoted_only_words(sample_size) {
   "$plain sample_size";
   "the count says how many rows to print. It names nothing that runs.";
   let held = await gloss_chapters_roots_quoted_only(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
   );
   let offenders = property_get(held, "offenders");
   function quoted_is(finding) {

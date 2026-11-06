@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_passage_words_text_first } from "./gloss_passage_words_text_first.mjs";
 import { gloss_passage_words_bare } from "./gloss_passage_words_bare.mjs";
 import { gloss_entries_words_bare } from "./gloss_entries_words_bare.mjs";
@@ -17,7 +17,7 @@ export async function app_ceb_bible_gloss_passages_respell_refused_each(
   "Nothing is written. The chapters are read off the disk and compared, and the store is left exactly as it was found.";
   "The one parameter names something that runs: it is called once for every declined passage, with the chapter code, the explained words, the written words and the passage, and what it does with those four is the whole of what one reading differs from another by.";
   arguments_assert(arguments, 1);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let words_read = gloss_passage_words_text_first;
   function passage_read(chapter_code, passage, entries) {
     let written = gloss_passage_words_bare(passage, words_read);

@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_repairs_words_named } from "./gloss_repairs_words_named.mjs";
 import { binisaya_word_read_cache } from "./binisaya_word_read_cache.mjs";
 import { property_get } from "./property_get.mjs";
@@ -17,7 +17,7 @@ export async function app_learn_ceb_gloss_explains_repair_quoted_only() {
   "A word the dictionary was never asked about is passed over rather than replaced, which is the opposite of what the narrow repair does with one. There the missing root means the reading could not have checked the sentence and the author's correction should stand; here the missing root means there was never a quotation to be fooled by, so there is nothing to put right.";
   "The dictionary is read for every word before the walk begins, because the decision is asked once per entry inside a walk that cannot wait on a read.";
   "The words to look up come from the handover file asked for by name rather than gathered here, which is the same list the other repair over the same file works from. Two repairs disagreeing about which words were handed in would be a fault neither of them could report, and there is now one answer to that.";
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let words = await gloss_repairs_words_named(fn);
   let roots = {};
   let builds = {};

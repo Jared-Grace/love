@@ -1,7 +1,7 @@
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
@@ -20,7 +20,7 @@ export async function app_ceb_bible_gloss_root_phrasings_counted() {
   "Nothing is asked of the site and nothing is written.";
   "The walk this sits on hands over explained entries and nothing more, which is the right one of the three: this reading is about the two readers of roots disagreeing, so it has to call both of them itself and in its own order. A walk that had already called one would decide half of what is being counted.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let explained = 0;
   let worded_root = 0;
   let built_on = 0;

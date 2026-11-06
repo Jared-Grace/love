@@ -1,7 +1,7 @@
 import { gloss_finding_silent_is } from "./gloss_finding_silent_is.mjs";
 import { property_not } from "./property_not.mjs";
 import { gloss_chapters_words_edged } from "./gloss_chapters_words_edged.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { property_get } from "./property_get.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
@@ -17,7 +17,7 @@ export async function app_ceb_bible_gloss_words_edged_roots() {
   "This counts faults and not lookups. Knowing how many of these words a dictionary could be made to answer about says only what could be asked; what a reader wants to know before paying for the asking is how many of the answers would say something is wrong. So each one is judged by the same reading the ordinary sweep is judged by, and only the ones that come out disagreeing are named.";
   "The bare spelling is what is judged, not the spelling in the store, because the mark is no part of the word - a root that is the word's own spelling has to be recognised as that with the comma taken off, or every one of these would be reported as a disagreement.";
   let offenders = await gloss_chapters_words_edged(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
   );
   let known = await binisaya_words_known();
   let judged_count = 0;

@@ -14,7 +14,7 @@ import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_reconstructed() {
@@ -75,7 +75,7 @@ export async function app_ceb_bible_gloss_roots_claimed_reconstructed() {
     each(claimed, root_read);
   }
   let walked = await gloss_chapters_roots_claimed_entries_generic(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     entry_read,
   );
   list_sort_number_mapper_reverse(rows, gloss_row_sightings);

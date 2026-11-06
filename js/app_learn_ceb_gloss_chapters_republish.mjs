@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_republish_generic } from "./gloss_chapters_republish_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_learn_ceb_gloss_chapters_uploaded } from "./app_learn_ceb_gloss_chapters_uploaded.mjs";
 import { app_learn_ceb_gloss_chapter_upload_stored } from "./app_learn_ceb_gloss_chapter_upload_stored.mjs";
 export async function app_learn_ceb_gloss_chapters_republish() {
@@ -17,7 +17,7 @@ export async function app_learn_ceb_gloss_chapters_republish() {
   ("968 chapters is what this store had published on 2026-10-02, and sending all of them took the better part of an hour. That is the run the narrowing exists for.");
   arguments_assert(arguments, 0);
   let r = await gloss_chapters_republish_generic(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     app_learn_ceb_gloss_chapters_uploaded,
     app_learn_ceb_gloss_chapter_upload_stored,
   );

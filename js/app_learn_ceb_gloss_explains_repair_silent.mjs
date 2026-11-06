@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_repairs_words_named } from "./gloss_repairs_words_named.mjs";
 import { binisaya_word_read_cache } from "./binisaya_word_read_cache.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,7 +18,7 @@ export async function app_learn_ceb_gloss_explains_repair_silent() {
   "The roots are all looked up before the walk begins, because the decision is asked once per entry inside a walk that cannot wait on a read. The lookup is per word rather than per sighting for the same reason it is worth doing: a word met a thousand times asks the dictionary once.";
   "The words to look up come from the handover file asked for by name rather than gathered here, which is the same list the other repair over the same file works from. Two repairs disagreeing about which words were handed in would be a fault neither of them could report, and there is now one answer to that.";
   "Beware the spellings. The test is a plain search for the root's letters, and it folds nothing - a sentence spelling the text's own form where the dictionary spells it otherwise reads as silent here and will be replaced. That is the same blindness the reading has, so this repairs exactly what that reading complains of, no more.";
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let words = await gloss_repairs_words_named(fn);
   let roots = {};
   async function word_root_read(word) {

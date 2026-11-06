@@ -2,7 +2,7 @@ import { property_list_size } from "./property_list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read } from "./app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read.mjs";
 import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -25,7 +25,7 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_di
     vocabulary,
   );
   let gathered = await gloss_chapters_roots_claimed_rows_generic(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     root_read,
   );
   let pile_names = object_property_names(piles);

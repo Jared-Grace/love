@@ -1,7 +1,7 @@
 import { app_ceb_bible_gloss_roots_store_outvoted_chapters_entry_read } from "./app_ceb_bible_gloss_roots_store_outvoted_chapters_entry_read.mjs";
 import { app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read } from "./app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { list_size } from "./list_size.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
@@ -17,7 +17,7 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_chapters() {
   "The walk over the store is now the shared one, so what this reading and the one beside it still have in common is the gathering rather than the pass. Collapsing that as well would change a unit that has already been measured against, and it is the half where the two genuinely differ - this one keeps the chapter a sighting stood in and the other throws it away - so it stays undone on purpose.";
   "The word is read off the entry with the reader that throws when it is absent, and that is this reading's own choice rather than the shared walk's: the walk hands the whole entry over precisely so that each reading keeps the reader it had.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let said = {};
   let entry_read = app_ceb_bible_gloss_roots_store_outvoted_chapters_entry_read(

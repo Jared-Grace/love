@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { text_punctuation_dash_kept_split } from "./text_punctuation_dash_kept_split.mjs";
 import { text_punctuation_split } from "./text_punctuation_split.mjs";
 export function gloss_store_words_read(fn) {
@@ -10,7 +10,7 @@ export function gloss_store_words_read(fn) {
   ("This is the gloss layer's copy of a decision the bible layer already made word for word, in ",
     fn_name("bible_folder_words_read"),
     ", which chooses by the folder a translation is stored under. Two layers read the same Cebuano and only one of them was choosing.");
-  let cebuano = equal(fn, app_ceb_bible_gloss_generate);
+  let cebuano = equal(fn, app_learn_ceb_gloss_generate);
   let read = cebuano
     ? text_punctuation_dash_kept_split
     : text_punctuation_split;

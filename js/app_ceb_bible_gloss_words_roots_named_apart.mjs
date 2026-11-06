@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
@@ -28,7 +28,7 @@ export async function app_ceb_bible_gloss_words_roots_named_apart() {
   "Not every row is a fault. One root can stand behind another, so a word explained as tarong and as matarong may be explained rightly twice at two depths, and which of those a row is is a person's reading rather than a rule's.";
   "How many chapters were walked and how many entries were met come back beside the rows, because finding none and reaching none are the same answer otherwise.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let by_word = {};
   let sightings_rooted = 0;

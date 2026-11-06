@@ -7,7 +7,7 @@ export function gloss_store_words_read_cases() {
     word: "panan-aw",
     reads: [
       {
-        store: fn_name("app_ceb_bible_gloss_generate"),
+        store: fn_name("app_learn_ceb_gloss_generate"),
         read: ["panan-aw"],
       },
       {

@@ -1,7 +1,7 @@
 import { list_size_equal } from "./list_size_equal.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { add } from "./add.mjs";
@@ -24,7 +24,7 @@ export async function app_ceb_bible_gloss_root_named_spaced_counted(
   "$plain sample_size";
   "the count says how many spaced answers to print. It names nothing that runs.";
   arguments_assert(arguments, 1);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let named_total = 0;
   let strict_total = 0;
   let strict_spaced = 0;

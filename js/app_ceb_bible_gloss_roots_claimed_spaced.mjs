@@ -7,7 +7,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_spaced() {
   "Every Cebuano explanation that names something with a space in it as the word's root, given back with the word, the chapter and the sentence itself, because a Cebuano root is one word and a thing with a space in it is a translation standing where a root belongs.";
@@ -41,7 +41,7 @@ export async function app_ceb_bible_gloss_roots_claimed_spaced() {
     each(claimed, root_read);
   }
   let walked = await gloss_chapters_roots_claimed_entries_generic(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     entry_read,
   );
   let r = {

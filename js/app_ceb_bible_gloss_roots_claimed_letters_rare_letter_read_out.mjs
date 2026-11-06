@@ -11,7 +11,7 @@ import { property_set } from "./property_set.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
@@ -45,7 +45,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read
     list_add(listed, row);
   }
   let gathered = await gloss_chapters_roots_claimed_rows_generic(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     root_file,
   );
   let letters_used = object_property_names(by_letter);

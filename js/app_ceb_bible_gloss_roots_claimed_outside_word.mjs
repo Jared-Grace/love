@@ -11,7 +11,7 @@ import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_outside_word() {
   "How many Cebuano explanations name a root that is not spelled anywhere inside the word they are explaining, counted over the sentences that plainly say the word root - the side of the store that three readings all step over on purpose and none of them has ever measured.";
   "★ THE EXEMPTION THIS FILLS IN IS WRITTEN DOWN AS A REASON AND THE REASON IS FALSE. Three readings skip these sentences, and one of them says why: where the sentence writes the word root outright the person has said what they mean, so a wrong answer there is theirs rather than the reading's. Three sentences in PSA144 say ‘awit’ is the root ‘to sing’, and the reader hands back to sing. The person said what they meant, they meant awit, and the reading got it wrong anyway - which is the one thing the exemption asserts cannot happen. So this side has been left unmeasured for a reason that a reader on it disproves.";
@@ -56,7 +56,7 @@ export async function app_ceb_bible_gloss_roots_claimed_outside_word() {
     list_add(rows, row);
   }
   let walked = await gloss_chapters_roots_claimed_entries_generic(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     entry_read,
   );
   let r = {

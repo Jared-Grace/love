@@ -2,7 +2,7 @@ import { list_size_equal } from "./list_size_equal.mjs";
 import { gloss_relation_apart_is } from "./gloss_relation_apart_is.mjs";
 import { app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is } from "./app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
 import { gloss_entries_words_named } from "./gloss_entries_words_named.mjs";
@@ -25,7 +25,7 @@ export async function app_ceb_bible_gloss_words_roots_chapters_disagreeing() {
   "The word is keyed by its bare spelling, so a word filed once mid-sentence and once before a comma is one word here rather than two. Keying by the spelling the verse happened to use would let a contradiction hide behind a quotation mark, which is the whole reason the bare spelling is worked out where the entries are read.";
   "Whether a chapter shows the disagreement by itself is carried on every row, because those rows are already found by the check beside this one and counting them again would report old news as new. What this adds is the rest.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let chapter_codes = await gloss_chapters_stored(fn);
   let rooted = {};
   let sightings_rooted = 0;

@@ -21,7 +21,7 @@ import { less_than } from "./less_than.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_shapes_priced() {
   "What each named shape of Cebuano word building would buy if somebody decided it counts as a shape rather than a fault, measured over every root in the store that is not spelled inside its own word - so that a question a reader of shapes says needs a Cebuano speaker is put to that speaker with numbers on it.";
   (fn_name("gloss_root_claimed_shape"),
@@ -114,7 +114,7 @@ export async function app_ceb_bible_gloss_roots_claimed_shapes_priced() {
     list_add(rows, row);
   }
   let walked = await gloss_chapters_roots_claimed_entries_generic(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     entry_read,
   );
   let r = {

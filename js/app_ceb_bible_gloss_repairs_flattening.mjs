@@ -1,6 +1,6 @@
 import { app_ceb_bible_gloss_repairs_flattening_entries_pass } from "./app_ceb_bible_gloss_repairs_flattening_entries_pass.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_repairs_read } from "./gloss_repairs_read.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -24,7 +24,7 @@ export async function app_ceb_bible_gloss_repairs_flattening() {
   "An entry carrying no explanation is passed over rather than counted as a way of explaining the word.";
   "The handover file is asked for by name rather than found and read here, so that this reading and the two repairs it is a warning about are all looking at the same file. A reading that priced the damage of a different file from the one about to be run would be worse than no reading at all.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let repairs = await gloss_repairs_read(fn);
   let chapter_codes = object_property_names(repairs);
   let word_key = app_shared_gloss_bible_generate_generic_word();

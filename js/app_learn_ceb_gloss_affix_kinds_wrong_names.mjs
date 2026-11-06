@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_chapters_affix_kinds_wrong } from "./gloss_chapters_affix_kinds_wrong.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { gloss_offenders_said_names } from "./gloss_offenders_said_names.mjs";
 export async function app_learn_ceb_gloss_affix_kinds_wrong_names() {
@@ -13,7 +13,7 @@ export async function app_learn_ceb_gloss_affix_kinds_wrong_names() {
   arguments_assert(arguments, 0);
   let known = await binisaya_words_known();
   let offenders = await gloss_chapters_affix_kinds_wrong(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     known,
   );
   function kind_name(word, kind) {

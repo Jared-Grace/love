@@ -11,7 +11,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { app_learn_ceb_gloss_generate_chapter_language } from "./app_learn_ceb_gloss_generate_chapter_language.mjs";
 import { app_learn_ceb_gloss_generate_chapter_bible_folders } from "./app_learn_ceb_gloss_generate_chapter_bible_folders.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { g_sermon_generate_book_generic_prompts } from "./g_sermon_generate_book_generic_prompts.mjs";
 import { app_shared_gloss_bible_generate_generic_prompt_user_middle } from "./app_shared_gloss_bible_generate_generic_prompt_user_middle.mjs";
 import { app_shared_gloss_bible_generate_generic_prompt_system } from "./app_shared_gloss_bible_generate_generic_prompt_system.mjs";
@@ -46,7 +46,7 @@ export async function app_learn_ceb_gloss_generate_book_open() {
     bible_folders,
     null,
     chapter_code,
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     prompt_user_middle,
     prompt_system,
     passage_reference,

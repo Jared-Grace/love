@@ -1,6 +1,6 @@
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,7 +15,7 @@ import { subtract } from "./subtract.mjs";
 export async function app_ceb_bible_gloss_root_omitted_elsewhere_named_unexplained() {
   "Walks every glossed entry in the Cebuano Bible and gathers, for each word as it is spelt in lower case, how many times a root was named for it and how many times none was, which roots were named, and the chapters where the root was left out - and says how many entries carried no explanation at all, which the walk itself never reaches.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
+  let fn = app_learn_ceb_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let by_word = {};
   let explained = 0;

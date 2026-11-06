@@ -2,7 +2,7 @@ import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { app_learn_ceb_gloss_explains_depth_by_book_chapter_read } from "./app_learn_ceb_gloss_explains_depth_by_book_chapter_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
@@ -23,7 +23,7 @@ export async function app_learn_ceb_gloss_explains_depth_by_book() {
   "Every book is reported and not only the ones that stand out, because a book with nothing remarkable in it is the comparison, and a reading that dropped it would be naming the same three books it was built to test.";
   "★ DEPTH IS NOT QUALITY AND THIS SAYS NOTHING ABOUT EITHER. A short sentence can be wrong and a long one can be right. What is here is how much each book's sentences undertake to say, which is a reason a fault would land in one book and not another, and never itself the fault.";
   arguments_assert(arguments, 0);
-  let chapter_codes = await gloss_chapters_stored(app_ceb_bible_gloss_generate);
+  let chapter_codes = await gloss_chapters_stored(app_learn_ceb_gloss_generate);
   let explain_key = gloss_entry_explain_key();
   let by_book = {};
   let chapter_read = app_learn_ceb_gloss_explains_depth_by_book_chapter_read(

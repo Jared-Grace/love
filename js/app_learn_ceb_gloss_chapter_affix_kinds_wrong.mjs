@@ -1,5 +1,5 @@
 import { gloss_chapter_found_counted } from "./gloss_chapter_found_counted.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_chapter_affix_kinds_wrong } from "./gloss_chapter_affix_kinds_wrong.mjs";
 export async function app_learn_ceb_gloss_chapter_affix_kinds_wrong(
@@ -12,7 +12,7 @@ export async function app_learn_ceb_gloss_chapter_affix_kinds_wrong(
   let known = await binisaya_words_known();
   let found = await gloss_chapter_affix_kinds_wrong(
     chapter_code,
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     known,
   );
   let r = gloss_chapter_found_counted(chapter_code, found);

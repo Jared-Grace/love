@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_chapters_affix_letters_wrong } from "./gloss_chapters_affix_letters_wrong.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -14,7 +14,7 @@ export async function app_learn_ceb_gloss_affix_letters_apart() {
   arguments_assert(arguments, 0);
   let known = await binisaya_words_known();
   let offenders = await gloss_chapters_affix_letters_wrong(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     known,
   );
   function claim_name_try(word, claim) {

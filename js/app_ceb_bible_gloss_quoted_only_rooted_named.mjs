@@ -1,7 +1,7 @@
 import { list_size_equal } from "./list_size_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { gloss_chapters_roots_quoted_only } from "./gloss_chapters_roots_quoted_only.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
@@ -20,7 +20,7 @@ export async function app_ceb_bible_gloss_quoted_only_rooted_named(
   "$plain sample_size";
   "the count says how many sentences to print. It names nothing that runs.";
   let held = await gloss_chapters_roots_quoted_only(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
   );
   let offenders = property_get(held, "offenders");
   let sightings = 0;

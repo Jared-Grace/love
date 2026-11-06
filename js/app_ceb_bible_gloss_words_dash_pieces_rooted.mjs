@@ -4,7 +4,7 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 import { gloss_chapters_roots_claimed_distinct } from "./gloss_chapters_roots_claimed_distinct.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -23,7 +23,7 @@ export async function app_ceb_bible_gloss_words_dash_pieces_rooted() {
   }
   each(absent, phantom_hold);
   let claimed = await gloss_chapters_roots_claimed_distinct(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
   );
   let lowered = list_map_unique(claimed, text_lower_to);
   function phantom_is(root) {

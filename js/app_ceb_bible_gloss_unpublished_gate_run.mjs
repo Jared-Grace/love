@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_finished_unpublished } from "./gloss_chapters_finished_unpublished.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_ceb_bible_gloss_passages } from "./app_ceb_bible_gloss_passages.mjs";
 import { gloss_upload_namespace_ceb_bible } from "./gloss_upload_namespace_ceb_bible.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -13,7 +13,7 @@ export async function app_ceb_bible_gloss_unpublished_gate_run() {
   "The command that closes it is named in the complaint rather than described, because a gate is read by somebody who was doing something else and wants the next thing to type.";
   arguments_assert(arguments, 0);
   let walked = await gloss_chapters_finished_unpublished(
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     app_ceb_bible_gloss_passages,
     gloss_upload_namespace_ceb_bible,
   );

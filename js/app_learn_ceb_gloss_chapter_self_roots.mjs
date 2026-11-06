@@ -1,5 +1,5 @@
 import { gloss_chapter_found_counted } from "./gloss_chapter_found_counted.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
 import { gloss_entries_self_roots } from "./gloss_entries_self_roots.mjs";
 export async function app_learn_ceb_gloss_chapter_self_roots(chapter_code) {
@@ -9,7 +9,7 @@ export async function app_learn_ceb_gloss_chapter_self_roots(chapter_code) {
   "The root comparison and this one are asked side by side and neither replaces the other. That one finds a root the prose never mentions; this one finds prose that mentions a root which is only the word again. A chapter can come out clean on one and badly on the other.";
   let found = await gloss_chapter_entries_collect_generic(
     chapter_code,
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     gloss_entries_self_roots,
   );
   let r = gloss_chapter_found_counted(chapter_code, found);

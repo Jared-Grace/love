@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_chapter_roots_disagreeing } from "./gloss_chapter_roots_disagreeing.mjs";
 import { list_size } from "./list_size.mjs";
@@ -16,7 +16,7 @@ export async function app_learn_ceb_gloss_chapter_roots_disagreeing(
   let consulted = list_size(list);
   let disagreeing = await gloss_chapter_roots_disagreeing(
     chapter_code,
-    app_ceb_bible_gloss_generate,
+    app_learn_ceb_gloss_generate,
     known,
   );
   let count = list_size(disagreeing);
