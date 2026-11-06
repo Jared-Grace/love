@@ -3,7 +3,7 @@ import { app_learn_ceb_gloss_explains_depth_by_book_chapter_read_book_row } from
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_ceb_bible_gloss_explains_depth_by_book_chapter_read_counted_add(
+export function app_learn_ceb_gloss_explains_depth_by_book_chapter_read_counted_add(
   by_book,
 ) {
   arguments_assert(arguments, 1);
