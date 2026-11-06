@@ -6,7 +6,7 @@ import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_stopped_short_value(
+export async function app_learn_ceb_gloss_roots_claimed_stopped_short_value(
   root_read,
   listed,
   claimed_books,

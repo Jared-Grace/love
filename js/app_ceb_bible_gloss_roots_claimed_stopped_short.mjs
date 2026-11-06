@@ -1,5 +1,5 @@
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
-import { app_ceb_bible_gloss_roots_claimed_stopped_short_value } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_value.mjs";
+import { app_learn_ceb_gloss_roots_claimed_stopped_short_value } from "./app_learn_ceb_gloss_roots_claimed_stopped_short_value.mjs";
 import { app_learn_ceb_gloss_roots_claimed_stopped_short_books_tally } from "./app_learn_ceb_gloss_roots_claimed_stopped_short_books_tally.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
@@ -88,7 +88,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
     };
     list_add(listed, named);
   }
-  let r2 = await app_ceb_bible_gloss_roots_claimed_stopped_short_value(
+  let r2 = await app_learn_ceb_gloss_roots_claimed_stopped_short_value(
     root_read,
     listed,
     claimed_books,
