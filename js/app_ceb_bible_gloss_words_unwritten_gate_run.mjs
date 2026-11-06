@@ -29,7 +29,7 @@ export async function app_ceb_bible_gloss_words_unwritten_gate_run() {
     offenders,
     path,
     "the Cebuano translation never writes these explained words standing anywhere in sixty-six books, so the reader has nothing to paint the explanation under - open the passage the word is explained in and mend the spelling to the word the verse actually writes, or take the explanation away if the passage does not carry the word at all",
-    fn_name("app_ceb_bible_gloss_words_unwritten_baseline_write"),
+    fn_name("app_learn_ceb_gloss_words_unwritten_baseline_write"),
   );
   let r = await app_learn_ceb_gloss_gate_told_chapters(told);
   return r;
