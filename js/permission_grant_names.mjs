@@ -1097,7 +1097,7 @@ export function permission_grant_names() {
     fn_name("g_openers_disciple"),
     fn_name("g_openers_disciple_arc"),
     fn_name("app_shared_prod_snapshot"),
-    fn_name("app_ceb_bible_gloss_back_references"),
+    fn_name("app_learn_ceb_gloss_back_references"),
     fn_name("app_learn_original_gloss_back_references"),
     fn_name("g_profile_target_shares_assert"),
     fn_name("apps_hash_keys_unchecked"),
