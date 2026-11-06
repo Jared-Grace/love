@@ -2,7 +2,7 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_map } from "./list_map.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-export function app_en_learn_bible_gloss_urdu_adjective_explains() {
+export function app_learn_en_gloss_urdu_adjective_explains() {
   "The settled wording for each describing word in these passages, for the store that explains English words to an Urdu reader.";
   "The store was handing every one of these the single word ‘adjective’, which tells a reader the one thing they cannot use. A beginner meeting ‘wicked’ does not need to be told it describes; they need to be told what it says about the man it describes, and whether it is the same as ‘bad’ or something harder.";
   "So each wording gives the Urdu word first and stops there where the Urdu word is the whole of it. ‘red’ is لال and there is nothing else to say; a sentence explaining that red is a colour would be filling space. Where the English word carries something the one Urdu word does not, a second sentence says that and no more: ‘old’ is پُرانا for a thing and بُوڑھا for a person, and a reader handed only one of those will read half the verses wrong.";

@@ -4,7 +4,7 @@ import { app_en_learn_bible_gloss_urdu_noun_explains } from "./app_en_learn_bibl
 import { app_en_learn_bible_gloss_urdu_name_explains } from "./app_en_learn_bible_gloss_urdu_name_explains.mjs";
 import { app_en_learn_bible_gloss_urdu_verb_explains } from "./app_en_learn_bible_gloss_urdu_verb_explains.mjs";
 import { app_en_learn_bible_gloss_urdu_plural_noun_explains } from "./app_en_learn_bible_gloss_urdu_plural_noun_explains.mjs";
-import { app_en_learn_bible_gloss_urdu_adjective_explains } from "./app_en_learn_bible_gloss_urdu_adjective_explains.mjs";
+import { app_learn_en_gloss_urdu_adjective_explains } from "./app_learn_en_gloss_urdu_adjective_explains.mjs";
 import { app_learn_en_gloss_urdu_action_verb_explains } from "./app_learn_en_gloss_urdu_action_verb_explains.mjs";
 import { app_en_learn_bible_gloss_urdu_adverb_conjunction_explains } from "./app_en_learn_bible_gloss_urdu_adverb_conjunction_explains.mjs";
 export function app_en_learn_bible_gloss_urdu_settled_explains() {
@@ -28,7 +28,7 @@ export function app_en_learn_bible_gloss_urdu_settled_explains() {
   object_merge(r, from5);
   let from6 = app_en_learn_bible_gloss_urdu_plural_noun_explains();
   object_merge(r, from6);
-  let from7 = app_en_learn_bible_gloss_urdu_adjective_explains();
+  let from7 = app_learn_en_gloss_urdu_adjective_explains();
   object_merge(r, from7);
   let from8 = app_learn_en_gloss_urdu_action_verb_explains();
   object_merge(r, from8);
