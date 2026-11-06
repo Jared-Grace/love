@@ -8,7 +8,7 @@ import { app_en_learn_bible_gloss_urdu_occurrence_claims_tally } from "./app_en_
 import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { assert_json } from "./assert_json.mjs";
-export async function app_en_learn_bible_gloss_urdu_occurrence_claim_gate_run() {
+export async function app_learn_en_gloss_urdu_occurrence_claim_gate_run() {
   "Gate: no Urdu gloss explanation may tell a reader that one of its English words has come for a time the chapter's own words do not reach, counted either way round. Throws so the dispatcher seam exits nonzero.";
   "★ THIS IS THE SECOND THING AN EXPLANATION SAYS THAT A MACHINE CAN SETTLE, AND THE STORE SAYS IT FOUR THOUSAND TIMES. Almost every explanation opens by saying which time over its word has come. The chapter holding the answer is already open, so the sentence can be read against it; and a wrong number is worse than a clumsy sentence, because a reader counting along finds the chapter disagreeing with the book teaching them to count.";
   "★ WHETHER TWO SPELLINGS OF ONE WORD ARE ONE WORD IS NOT SETTLED HERE AND MUST NOT BE. The sweep counts each word both ways - every spelling apart, and all spellings of a word together - and a sentence agreeing with either is left alone. So this gate is silent on a chapter counted consistently by either rule, and red only on a number that no counting reaches. The cost is stated plainly: a chapter that counted some words one way and some the other passes, and catching that wants a different reading, one asking whether a single word's numbers climb by one under a single rule.";
