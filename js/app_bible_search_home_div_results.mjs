@@ -7,7 +7,7 @@ import { html_focus } from "./html_focus.mjs";
 import { emoji_x_red } from "./emoji_x_red.mjs";
 import { html_br_2 } from "./html_br_2.mjs";
 import { html_div } from "./html_div.mjs";
-export function app_search_home_div_results(r2, left, search) {
+export function app_bible_search_home_div_results(r2, left, search) {
   arguments_assert(arguments, 3);
   let input = property_get(r2, "input");
   let content = property_get(r2, "content");
