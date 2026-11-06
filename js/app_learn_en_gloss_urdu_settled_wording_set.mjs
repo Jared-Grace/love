@@ -15,7 +15,7 @@ import { js_object_property_text_is } from "./js_object_property_text_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_object_property_text_set } from "./js_object_property_text_set.mjs";
 import { function_transform } from "./function_transform.mjs";
-export async function app_en_learn_bible_gloss_urdu_settled_wording_set(
+export async function app_learn_en_gloss_urdu_settled_wording_set(
   word,
   wording,
 ) {
