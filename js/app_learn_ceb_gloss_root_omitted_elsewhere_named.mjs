@@ -15,7 +15,7 @@ import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_rever
 import { text_size } from "./text_size.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
-export async function app_ceb_bible_gloss_root_omitted_elsewhere_named() {
+export async function app_learn_ceb_gloss_root_omitted_elsewhere_named() {
   "Every word the Cebuano gloss store takes back to a root in one place and leaves without one in another, gathered by the word, with the roots it did name and the count of entries that went without.";
   "★ EVERY READING BEFORE THIS ONE LOOKED ONLY AT ENTRIES THAT NAME A ROOT, AND ALSO COULD NOT SEE MOST OF THOSE. Four checks were built asking whether a named root is the right one; none asked whether a root was named at all. All four asked the strict root reader, which sees one of the four wordings the store uses, so their 42484 was really 68536 and their idea of an entry that names nothing held 26052 entries that name a root in plain words. This reads all four wordings.";
   "Both halves of that mattered here and they pulled opposite ways, which is why the numbers moved so little. Allowing the further wordings takes entries out of the bare pile, which shrinks what any one word is owed; and it also moves words over the line where the store usually roots them, which lets more words in. The first run of this reported 1563 words and 8919 entries and the corrected one reports 1643 and 7755, so the summary held while a quarter of the list underneath it changed. A number that survives a correction is not thereby confirmed by it.";
