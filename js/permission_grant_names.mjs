@@ -2161,7 +2161,7 @@ export function permission_grant_names() {
     fn_name("audio_video_black_beside_write"),
     fn_name("qa_gates_repo_lookup_reaching_gate_run"),
     fn_name("function_parameters_record"),
-    fn_name("app_ceb_bible_gloss_unpublished_gate_run"),
+    fn_name("app_learn_ceb_gloss_unpublished_gate_run"),
     fn_name("public_chunks_orphaned"),
     fn_name("functions_return_key_shapes_gate_run"),
     fn_name("bible_usfm_version_book_path"),
