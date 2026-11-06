@@ -1,7 +1,7 @@
 import { app_learn_ceb_gloss_bible_folder } from "./app_learn_ceb_gloss_bible_folder.mjs";
 import { words_capitalised_always } from "./words_capitalised_always.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { app_ceb_bible_gloss_new_testament_prep_counted } from "./app_ceb_bible_gloss_new_testament_prep_counted.mjs";
+import { app_learn_ceb_gloss_new_testament_prep_counted } from "./app_learn_ceb_gloss_new_testament_prep_counted.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
@@ -62,6 +62,6 @@ export async function app_ceb_bible_gloss_new_testament_prep() {
     return r4;
   }
   let placed = await list_map_async(words, word_place);
-  let r = app_ceb_bible_gloss_new_testament_prep_counted(placed, words, absent);
+  let r = app_learn_ceb_gloss_new_testament_prep_counted(placed, words, absent);
   return r;
 }

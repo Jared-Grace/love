@@ -5,7 +5,7 @@ import { list_take } from "./list_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
-export function app_ceb_bible_gloss_new_testament_prep_counted(
+export function app_learn_ceb_gloss_new_testament_prep_counted(
   placed,
   words,
   absent,
