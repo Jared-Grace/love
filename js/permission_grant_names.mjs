@@ -2463,7 +2463,7 @@ export function permission_grant_names() {
     fn_name("song_image_notes_done"),
     fn_name("function_parameters_record_multiple"),
     fn_name("app_message_download_private_missing"),
-    fn_name("app_ceb_bible_gloss_affix_kinds_words_spread"),
+    fn_name("app_learn_ceb_gloss_affix_kinds_words_spread"),
     fn_name("app_ceb_bible_gloss_affix_kinds_wrong_words"),
     fn_name("bible_glyph_chapters_bands_missing_repair"),
     fn_name("firebase_prod_asset_download_or_null"),
