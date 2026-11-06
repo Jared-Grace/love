@@ -343,6 +343,10 @@ import { app_code_lesson_while_two_meet } from "./app_code_lesson_while_two_meet
 import { app_code_lesson_while_and } from "./app_code_lesson_while_and.mjs";
 import { app_code_lesson_while_if } from "./app_code_lesson_while_if.mjs";
 import { app_code_lesson_for_if } from "./app_code_lesson_for_if.mjs";
+import { app_code_lesson_for_count_if } from "./app_code_lesson_for_count_if.mjs";
+import { app_code_lesson_for_total_if } from "./app_code_lesson_for_total_if.mjs";
+import { app_code_lesson_for_if_even } from "./app_code_lesson_for_if_even.mjs";
+import { app_code_lesson_for_if_else } from "./app_code_lesson_for_if_else.mjs";
 export function app_code_lessons_fns() {
   "Every lesson of the code app, as the functions that build them, in the order a learner meets them.";
   "2026-10-15: the step lesson after logging a string taken out, asked for by the human: each of its programs is one line, so there is no next line to choose. Its function and its id step_log_string are kept, so the id is never handed to another lesson.";
@@ -697,6 +701,10 @@ export function app_code_lessons_fns() {
     app_code_lesson_while_and,
     app_code_lesson_while_if,
     app_code_lesson_for_if,
+    app_code_lesson_for_count_if,
+    app_code_lesson_for_total_if,
+    app_code_lesson_for_if_even,
+    app_code_lesson_for_if_else,
   ];
   return fns;
 }
