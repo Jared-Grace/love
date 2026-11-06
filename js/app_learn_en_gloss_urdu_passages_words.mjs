@@ -6,9 +6,7 @@ import { list_join_space } from "./list_join_space.mjs";
 import { gloss_passage_words_bare } from "./gloss_passage_words_bare.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map } from "./list_map.mjs";
-export async function app_en_learn_bible_gloss_urdu_passages_words(
-  chapter_code,
-) {
+export async function app_learn_en_gloss_urdu_passages_words(chapter_code) {
   "The passages of one chapter handed over ready to author against: each one carrying the key it must be filed under, its texts, the English words already cut the way the store cuts them, and how many of those words there are.";
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to read and nothing that runs.";
