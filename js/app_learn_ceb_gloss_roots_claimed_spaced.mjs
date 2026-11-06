@@ -9,7 +9,7 @@ import { each } from "./each.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_spaced() {
+export async function app_learn_ceb_gloss_roots_claimed_spaced() {
   "Every Cebuano explanation that names something with a space in it as the word's root, given back with the word, the chapter and the sentence itself, because a Cebuano root is one word and a thing with a space in it is a translation standing where a root belongs.";
   "★ THE COUNT OF THESE ALREADY EXISTED AND THE OFFENDERS DID NOT. The reading beside this one arrives at three of them and then returns without any of them in its rows: it collects a row only on the branch where the strict reader found nothing, and these are the entries where the strict reader found something. So the number has been sitting in an answer for as long as anybody has run it, correct and completely unactionable, and the entries it counts cannot be reached from it at all. A count nobody can walk back to is a report that a fault exists and a refusal to say where.";
   "It asks the strict reader rather than the widened one on purpose. The widened reader takes a guess at a root wherever a sentence has not plainly named one, and a guess with a space in it says something about the guess; the strict reader only answers where the sentence really did name a root, so a space in what it hands back is the sentence's own doing.";
