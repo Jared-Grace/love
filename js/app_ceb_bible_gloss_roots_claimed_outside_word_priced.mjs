@@ -27,7 +27,7 @@ export async function app_ceb_bible_gloss_roots_claimed_outside_word_priced() {
   ("What two edits buys is not a guess. Every pair met at two is a sound change somebody could name - hinungdan from tungod at a hundred and three sightings, ilimnon from inom, kamatuoran from tinuod, pinuy-anan from puyo - and the count at two is led by exactly the shape the other reading gives as its own example. Three is where ordinary word-building stops being able to reach, so a row at three or more is the one a person should read.");
   ("★ NEARNESS IS NOT INNOCENCE AND THIS NUMBER MUST NOT BE READ AS ONE. A root somebody invented can land close by chance: panapton is two edits from hapot, and hapot is a root no dictionary gives. So a small distance says ordinary sound change could have made this, never that it did. The unreachable rows are a floor under the faults, never a ceiling on them.");
   ("The accent marks are taken off before the spellings are folded, because the fold this reading borrows leaves a mark exactly where it finds it while the Cebuano bible writes no accent in any word of its text, so a marked root reads as standing outside a word it is spelled inside. That is the whole of what ",
-    fn_name("app_ceb_bible_gloss_roots_claimed_marks_inside_priced"),
+    fn_name("app_learn_ceb_gloss_roots_claimed_marks_inside_priced"),
     " measured, and stripping here is what keeps thirty rows from being counted as distance where they are really spelling.");
   ("The far rows are handed back whole, sentence and all, because a count of fifty five that nobody can walk back to says a fault exists and refuses to say where.");
   arguments_assert(arguments, 0);

@@ -16,7 +16,7 @@ import { and } from "./and.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_marks_inside_priced() {
+export async function app_learn_ceb_gloss_roots_claimed_marks_inside_priced() {
   "What taking the accent marks off a stated root would buy on the one test that the marks actually reach: whether the root is spelled inside the word it is said to be the root of.";
   ("★ THE FOLD IS ALREADY PRICED AND THE PRICE WAS TAKEN OVER THE WRONG POPULATION. ",
     fn_name("app_ceb_bible_gloss_roots_claimed_marks_priced"),
