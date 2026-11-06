@@ -10,7 +10,7 @@ import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_explain_root_quoted_only_is } from "./gloss_explain_root_quoted_only_is.mjs";
 import { gloss_explains_repair_decided_generic } from "./gloss_explains_repair_decided_generic.mjs";
-export async function app_ceb_bible_gloss_explains_repair_quoted_only() {
+export async function app_learn_ceb_gloss_explains_repair_quoted_only() {
   "The Cebuano word explanations named in the repairs file put right only where the sentence already standing says nothing about where the word came from and merely appeared to, because the root's letters arrived inside the quoted word - leaving every other sighting exactly as its author wrote it.";
   "★ THIS IS THE THIRD DOOR ONTO THE SAME STORE AND IT REACHES SENTENCES NEITHER OF THE OTHER TWO CAN. The plain repair replaces every sighting of a word and would flatten hundreds of sound explanations to correct one. The narrow repair replaces only the sightings the root reading calls wrong - and a sentence caught here is one that reading calls right, so it walks straight past it. Measured 2026-09-06 over the Cebuano store, that blind spot is four hundred and thirty-two words, larger than the whole queue of sentences the reading does complain about.";
   "The test is the reading's own, asked from the same function, so a sentence this replaces is exactly a sentence that sweep names and there is no third opinion between them.";
