@@ -2,7 +2,7 @@ import { property_equals } from "./property_equals.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_claimed_letters_rare } from "./app_ceb_bible_gloss_roots_claimed_letters_rare.mjs";
+import { app_learn_ceb_gloss_roots_claimed_letters_rare } from "./app_learn_ceb_gloss_roots_claimed_letters_rare.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -18,7 +18,7 @@ import { each } from "./each.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_letters_unwritten() {
   "Every root an explanation states outright that is spelled with a character the Cebuano bible never writes at all, gathered under that character.";
   ("This is the bottom band of the run ",
-    fn_name("app_ceb_bible_gloss_roots_claimed_letters_rare"),
+    fn_name("app_learn_ceb_gloss_roots_claimed_letters_rare"),
     " already files, taken out and named. That run orders every character by how many bible words hold it and says in its own words that where along it a root stops being Cebuano is the reader's judgement. It is right, and this band is the one part of it that is not a judgement: a character standing in no bible word at all is not a rare letter of the language, it is notation, another language, or a mark, and the line under it is drawn by the bible rather than by anybody here.");
   ("★ THE BAND IS A FAULT LIST AND THE RUN ABOVE IT IS NOT. Immediately above zero sit f in two hundred and forty three words, j in three hundred and fifty seven and c in four hundred and five, and those are the letters of Efraim, Jesus and Cristo, where a name really is the root. So the reading stops at zero and does not creep upward, because the first step up is into names and the fault would then be the reading's rather than the store's.");
   ("★ REACHING THE BAND IS NOT KNOWING THE REPAIR, AND THE KINDS INSIDE IT DO NOT SHARE ONE. Three mechanical facts are carried for each character so the kinds can be told apart without anybody judging them: whether it is a space, whether it carries an accent, and the number the character is stored as. A space means a phrase of another language was filed where a root goes; an accent means a dictionary's pronunciation notation was copied in; anything else is notation of some other kind. Those want three different repairs and this decides none of them.");
@@ -28,7 +28,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_unwritten() {
   ("The sightings under a character are added up by the named reader every other ranking here uses rather than by a loop written out again. That reader says in its own prose that it was written out fourteen times before it was given a name, and this reading made it fifteen on the day it was authored.");
   ("Nothing is written and nothing is asked of the site.");
   arguments_assert(arguments, 0);
-  let read = await app_ceb_bible_gloss_roots_claimed_letters_rare();
+  let read = await app_learn_ceb_gloss_roots_claimed_letters_rare();
   let letters = property_get(read, "letters");
   let listed = [];
   let roots_total = 0;

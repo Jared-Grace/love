@@ -4,7 +4,7 @@ import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_letters_counted } from "./bible_words_letters_counted.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_letters_rare() {
+export async function app_learn_ceb_gloss_roots_claimed_letters_rare() {
   "Every root an explanation states outright, filed under the least written letter it holds, with the letters put in the order the Cebuano bible itself writes them.";
   "A root that cannot be a word of the language is the one kind of wrong root that can be shown without knowing the language, and the showing is done by letters. What was missing was the list of letters, because a list of them written out here would be a claim about Cebuano that nobody in this repo can check. The bible's own words answer it instead, and the counting of them is asked for rather than repeated here.";
   "★ NO LINE IS DRAWN AND NONE SHOULD BE READ IN. Every root is filed, the letters run from the one the bible writes in twenty-two thousand words down to the one it writes in a single word, and where along that run a root stops being Cebuano is the reader's judgement and not this reading's. The break is plain enough in the counting to be seen rather than set: the letters fall away steadily to w in eighteen hundred words and then drop straight to c in four hundred, and nothing else in the run halves like that.";
