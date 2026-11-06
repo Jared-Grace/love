@@ -11,7 +11,7 @@ import { list_map_async_filter_null_not_is } from "./list_map_async_filter_null_
 import { property_not } from "./property_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_en_learn_bible_gloss_urdu_glued_words_repair() {
+export async function app_learn_en_gloss_urdu_glued_words_repair() {
   "Put the missing spaces back into the store of English words explained in Urdu: every chapter of it, every piece of Urdu in every chapter, spelled the way somebody reading Urdu ruled it should be spelled.";
   "The store is Urdu by construction and is named here rather than matched by shape, which is what bounds the repair. Word rulings made for one publisher's bible have no business reaching writing they were not made about, and the only thing that keeps them from it is a caller that knows what it is holding.";
   "Two different kinds of Urdu inside a chapter carry the fault and both are put right by the same reading. The verse itself is a copy of the bible's own Urdu, taken before the missing spaces were ever put back, so a reader on that verse still sees the welded spelling. The explanations are written by hand, but a gloss quotes the verse's word, so a word welded in the verse was copied welded into the gloss beside it - measured on the first of September, 187 of the one and 99 of the other.";
