@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { global_function_property_exists } from "./global_function_property_exists.mjs";
 import { global_function_property_get } from "./global_function_property_get.mjs";
@@ -9,8 +10,9 @@ export function http_json_memoized_failures() {
     http_json_memoized_failures,
     "count",
   );
-  if (!present) {
-    return 0;
+  if (not(present)) {
+    let r = 0;
+    return r;
   }
   let count = global_function_property_get(
     http_json_memoized_failures,
