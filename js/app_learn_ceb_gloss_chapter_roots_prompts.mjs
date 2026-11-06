@@ -3,7 +3,7 @@ import { app_ceb_bible_gloss_passage_roots_prompt } from "./app_ceb_bible_gloss_
 import { bible_passages_grouped } from "./bible_passages_grouped.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { list_map } from "./list_map.mjs";
-export async function app_ceb_bible_gloss_chapter_roots_prompts(chapter_code) {
+export async function app_learn_ceb_gloss_chapter_roots_prompts(chapter_code) {
   "The dictionary roots that would be put in front of the machine for each passage of one Cebuano chapter, without generating anything.";
   "$plain chapter_code";
   "the code is a chapter's name, like PRO22, chosen from the Bible's own book and chapter numbering - it is looked up, never run, and nothing here can be steered by it";
