@@ -6,7 +6,7 @@ import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { objects_merge } from "./objects_merge.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_en_learn_bible_gloss_urdu_write_next(chapter_code) {
+export async function app_learn_en_gloss_urdu_write_next(chapter_code) {
   "Everything needed to explain the next passage of a chapter that has no English word explanations yet, in the language its Urdu reader already has.";
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to read and nothing that runs.";
