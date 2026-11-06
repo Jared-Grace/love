@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_en_learn_bible_gloss_urdu_present_verb_explains() {
+export function app_learn_en_gloss_urdu_present_verb_explains() {
   "The wording every explanation of a named present-tense English verb is given, for an Urdu reader, written for the words that were carrying nothing but the parsing.";
   "WHAT THESE REPLACE SAID ONLY THAT THE WORD IS A VERB AND IS OF PRESENT TIME. Its past-tense twin says why that is worth nothing to a reader who can already see the word. What the present tense has to teach instead is a different fact from the past's, and a smaller one: English marks the present hardly at all. The bare verb is the present for almost everybody, and one ending, '-s', is added for one kind of doer only.";
   "SO THE THING WORTH SAYING IS WHAT THE ENDING SAYS ABOUT WHO IS DOING IT - which is the one piece of English grammar an Urdu reader has no need of in their own language, because Urdu marks the doer on the verb far more fully and never in this shape. A reader who is not told will read 'comes' and 'come' as the same word spelled twice.";
