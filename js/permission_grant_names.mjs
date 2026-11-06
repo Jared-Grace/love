@@ -1403,7 +1403,7 @@ export function permission_grant_names() {
     fn_name("gloss_words_capitalised_always"),
     fn_name("functions_span_candidates"),
     fn_name("function_identifier_replace_auto"),
-    fn_name("app_ceb_bible_gloss_write_next"),
+    fn_name("app_learn_ceb_gloss_write_next"),
     fn_name("app_learn_ceb_gloss_write_file"),
     fn_name("app_learn_original_gloss_parsings_gate_run"),
     fn_name("gloss_write_root_files_gate_run"),

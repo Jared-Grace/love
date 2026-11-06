@@ -5,7 +5,7 @@ import { list_first } from "./list_first.mjs";
 import { list_size } from "./list_size.mjs";
 import { objects_merge } from "./objects_merge.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_ceb_bible_gloss_write_next(chapter_code) {
+export async function app_learn_ceb_gloss_write_next(chapter_code) {
   "Everything needed to author the next passage of a Cebuano chapter that has no word explanations yet: its Cebuano wording, its English wording, and each of its words with what a dictionary says it is built from.";
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to read and nothing that runs.";
