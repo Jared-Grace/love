@@ -11,7 +11,7 @@ import { each } from "./each.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_words_written_apostrophe_price() {
+export async function app_learn_ceb_words_written_apostrophe_price() {
   "What changes in the list of words the Cebuano bible is written with if it is read without cutting at the apostrophe, named both ways round: the words only today's reading produces, and the words only the other one does.";
   "★ THE READER THIS COMPARES AGAINST HAD TO BE BUILT, WHICH IS ITSELF THE ANSWER TO A QUESTION THAT LOOKED SETTLED. Cebuano keeps a dash inside a word and an apostrophe inside a word, and the reader chosen for it today keeps only the first of those. A reader keeping both already existed and was tried here first, and it cut at spaces alone - which welded 867 pairs into words nobody wrote, kalibotannga and hariug and pinulongannanagbarog, wherever a comma had been standing between two words. Keeping a mark and cutting at punctuation are separate decisions, and only one of them had been made.";
   "The two answers are not the same kind of thing and should not be added up. A word only today's reading produces is one this translation never wrote, invented by the cut; a word only the other reading produces is one the translation did write and today's reading loses. Inventing is the harm - anything afterwards asking this list whether some run of letters is a word gets a yes it has not earned - and losing is a smaller one, because a word missing from the list only ever makes a check stricter than it should be.";
