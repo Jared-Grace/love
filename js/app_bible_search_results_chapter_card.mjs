@@ -26,7 +26,7 @@ import { integer_to_try } from "./integer_to_try.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_bible_search_results_buttons_expand } from "./app_bible_search_results_buttons_expand.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_search_results_chapter_card(
+export function app_bible_search_results_chapter_card(
   vk,
   book_card_add,
   book_current,
