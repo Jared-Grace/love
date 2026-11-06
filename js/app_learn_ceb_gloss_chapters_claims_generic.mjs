@@ -4,7 +4,7 @@ import { gloss_word_keys_reader_one } from "./gloss_word_keys_reader_one.mjs";
 import { app_ceb_bible_gloss_text_index } from "./app_ceb_bible_gloss_text_index.mjs";
 import { gloss_chapters_claims_generic } from "./gloss_chapters_claims_generic.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-export async function app_ceb_bible_gloss_chapters_claims_generic(
+export async function app_learn_ceb_gloss_chapters_claims_generic(
   lambda_claims,
 ) {
   "Every authored Cebuano chapter asked whatever the caller came to ask, and only the chapters that answered with something named.";
