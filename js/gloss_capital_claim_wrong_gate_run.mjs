@@ -22,9 +22,7 @@ export async function gloss_capital_claim_wrong_gate_run() {
     return any;
   }
   let offenders = list_filter(counts, wrong_is);
-  let f_name = fn_name(
-    "app_en_learn_bible_gloss_urdu_capital_claim_wrong_repair",
-  );
+  let f_name = fn_name("app_learn_en_gloss_urdu_capital_claim_wrong_repair");
   list_empty_is_assert_json(offenders, {
     hint: text_combine_multiple([
       "these gloss stores tell the reader a word wears a capital that the word does not wear - run ",
