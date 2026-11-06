@@ -1,6 +1,6 @@
 import { text_split_comma_map_async } from "./text_split_comma_map_async.mjs";
 import { app_learn_ceb_gloss_chapter_upload_stored } from "./app_learn_ceb_gloss_chapter_upload_stored.mjs";
-export async function app_ceb_bible_gloss_chapters_upload_stored(
+export async function app_learn_ceb_gloss_chapters_upload_stored(
   chapter_codes_comma,
 ) {
   "Publish several chapters of the Cebuano gloss store exactly as they already stand, generating nothing.";
