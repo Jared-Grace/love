@@ -2784,7 +2784,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_chapter_literal"),
     fn_name("permission_auto_refusals"),
     fn_name("app_learn_en_gloss_urdu_write_coverage"),
-    fn_name("app_en_learn_bible_gloss_urdu_write_files_stale"),
+    fn_name("app_learn_en_gloss_urdu_write_files_stale"),
     fn_name("app_learn_en_gloss_urdu_write_files_stale_from_store"),
     fn_name("gotquestions_word_articles_unavailable"),
     fn_name("app_shared_url_dev_local"),
