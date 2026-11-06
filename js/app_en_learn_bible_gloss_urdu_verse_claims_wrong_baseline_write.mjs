@@ -4,7 +4,7 @@ import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { app_en_learn_bible_gloss_urdu_verse_claims_wrong_names } from "./app_en_learn_bible_gloss_urdu_verse_claims_wrong_names.mjs";
 import { app_learn_en_gloss_urdu_verse_claims_wrong_baseline_growth_assert } from "./app_learn_en_gloss_urdu_verse_claims_wrong_baseline_growth_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_verse_claims_wrong_baseline_path } from "./app_en_learn_bible_gloss_urdu_verse_claims_wrong_baseline_path.mjs";
+import { app_learn_en_gloss_urdu_verse_claims_wrong_baseline_path } from "./app_learn_en_gloss_urdu_verse_claims_wrong_baseline_path.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function app_en_learn_bible_gloss_urdu_verse_claims_wrong_baseline_write() {
   "Rewrite the record of the Urdu explanations naming a verse that holds nothing related, from what the store holds right now. For seeding it once, and for banking each batch of settled sentences - never for widening it, which is the one thing the gate exists to refuse.";
@@ -21,7 +21,7 @@ export async function app_en_learn_bible_gloss_urdu_verse_claims_wrong_baseline_
   await app_learn_en_gloss_urdu_verse_claims_wrong_baseline_growth_assert(
     known,
   );
-  let path = app_en_learn_bible_gloss_urdu_verse_claims_wrong_baseline_path();
+  let path = app_learn_en_gloss_urdu_verse_claims_wrong_baseline_path();
   let r = await baseline_known_write(known, path);
   return r;
 }
