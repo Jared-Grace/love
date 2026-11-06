@@ -105,7 +105,7 @@ export async function app_search_query_link_cases_gate_run() {
       what: "send a search as a link",
     },
     {
-      page: fn_name("app_search_hash_query_apply"),
+      page: fn_name("app_bible_search_hash_query_apply"),
       door: fn_name("app_search_query_link_words"),
       what: "open a search somebody sent",
     },

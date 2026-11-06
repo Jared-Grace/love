@@ -7,7 +7,7 @@ import { app_search_query_link_words } from "./app_search_query_link_words.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { equal } from "./equal.mjs";
 import { html_value_set } from "./html_value_set.mjs";
-export async function app_search_hash_query_apply(input, search) {
+export async function app_bible_search_hash_query_apply(input, search) {
   arguments_assert(arguments, 2);
   ("the words the address asks for, put in the box and searched for.");
   ("the box holds what was last searched for, so an address that says the same thing is this page's own writing coming back to it - searching again there would run the very search that wrote it a second time.");
