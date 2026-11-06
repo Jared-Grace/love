@@ -5,7 +5,7 @@ import { app_learn_ceb_gloss_words_explained_apart_baseline_path } from "./app_l
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
-export async function app_ceb_bible_gloss_words_explained_apart_gate_run() {
+export async function app_learn_ceb_gloss_words_explained_apart_gate_run() {
   "Gate: no Cebuano gloss chapter authored from here on may explain a word one way where another chapter explains it another way. Throws so the dispatcher seam exits nonzero.";
   "★ THIS IS THE ONLY GATE OVER THE STORE THAT ASKS NOBODY ANYTHING. Every other reading of these explanations puts its question to binisaya.com, which means it is answerable only where the dictionary holds the word, and the dictionary is silent on four fifths of them. One word does not come from two unrelated roots, so where the app explains a word two ways it has written something wrong somewhere - and that is settled from the disk alone, with no network reached and nothing fetched.";
   "The record starts full and may only shrink. Eight hundred and three words of twelve thousand three hundred and forty five are explained two ways, and not every one of them is a fault: one root can stand behind another, so a word explained as tarong and as matarong may be explained rightly twice at two depths. What cannot be right twice is tarong and taro, and which of the two a row is is a person's reading rather than a rule's - so the record holds the ones already looked at and the gate watches for the ones that are not.";

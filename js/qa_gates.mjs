@@ -559,7 +559,7 @@ import { app_learn_ceb_gloss_verse_claims_wrong_gate_run } from "./app_learn_ceb
 import { app_learn_ceb_gloss_chapters_absent_gate_run } from "./app_learn_ceb_gloss_chapters_absent_gate_run.mjs";
 import { app_ceb_bible_gloss_words_unwritten_gate_run } from "./app_ceb_bible_gloss_words_unwritten_gate_run.mjs";
 import { app_learn_ceb_gloss_words_edged_gate_run } from "./app_learn_ceb_gloss_words_edged_gate_run.mjs";
-import { app_ceb_bible_gloss_words_explained_apart_gate_run } from "./app_ceb_bible_gloss_words_explained_apart_gate_run.mjs";
+import { app_learn_ceb_gloss_words_explained_apart_gate_run } from "./app_learn_ceb_gloss_words_explained_apart_gate_run.mjs";
 import { bible_glyph_chapters_marks_doubled_gate_run } from "./bible_glyph_chapters_marks_doubled_gate_run.mjs";
 import { gloss_pointers_dangling_gate_run } from "./gloss_pointers_dangling_gate_run.mjs";
 import { gloss_capital_claim_wrong_gate_run } from "./gloss_capital_claim_wrong_gate_run.mjs";
@@ -1209,7 +1209,7 @@ export function qa_gates() {
     app_learn_ceb_gloss_chapters_absent_gate_run,
     app_ceb_bible_gloss_words_unwritten_gate_run,
     app_learn_ceb_gloss_words_edged_gate_run,
-    app_ceb_bible_gloss_words_explained_apart_gate_run,
+    app_learn_ceb_gloss_words_explained_apart_gate_run,
     bible_glyph_chapters_marks_doubled_gate_run,
     gloss_pointers_dangling_gate_run,
     gloss_capital_claim_wrong_gate_run,
