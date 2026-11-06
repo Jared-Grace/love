@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_words_sound_unwritten } from "./app_learn_en_gloss_urdu_words_sound_unwritten.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound } from "./app_en_learn_bible_gloss_urdu_words_sound.mjs";
+import { app_learn_en_gloss_urdu_words_sound } from "./app_learn_en_gloss_urdu_words_sound.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { app_learn_en_gloss_urdu_words_sound_upload_path } from "./app_learn_en_gloss_urdu_words_sound_upload_path.mjs";
 import { firebase_storage_delete_absent_ok } from "./firebase_storage_delete_absent_ok.mjs";
@@ -21,7 +21,7 @@ export async function app_learn_en_gloss_urdu_words_sound_unwritten_delete() {
   arguments_assert(arguments, 0);
   let found = await app_learn_en_gloss_urdu_words_sound_unwritten();
   let unwritten = property_get(found, "unwritten");
-  let sound_fn = app_en_learn_bible_gloss_urdu_words_sound;
+  let sound_fn = app_learn_en_gloss_urdu_words_sound;
   let folder = local_function_folder(sound_fn);
   async function sound_each(relative) {
     let destination = app_learn_en_gloss_urdu_words_sound_upload_path(relative);

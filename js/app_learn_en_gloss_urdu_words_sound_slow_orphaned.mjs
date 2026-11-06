@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound } from "./app_en_learn_bible_gloss_urdu_words_sound.mjs";
+import { app_learn_en_gloss_urdu_words_sound } from "./app_learn_en_gloss_urdu_words_sound.mjs";
 import { app_learn_en_gloss_urdu_words_sound_slow } from "./app_learn_en_gloss_urdu_words_sound_slow.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { gloss_word_sound_voices } from "./gloss_word_sound_voices.mjs";
@@ -23,7 +23,7 @@ export async function app_learn_en_gloss_urdu_words_sound_slow_orphaned() {
   "The comparison is made inside one voice rather than across all of them, because each person's recordings are their own folder and a name only means the same file when the voice is the same.";
   "Nothing is removed here. What comes back is a list to look at, because the answer is the argument for deleting and the deleting is not undoable.";
   arguments_assert(arguments, 0);
-  let sound_fn = app_en_learn_bible_gloss_urdu_words_sound;
+  let sound_fn = app_learn_en_gloss_urdu_words_sound;
   let slow_fn = app_learn_en_gloss_urdu_words_sound_slow;
   let folder_from = local_function_folder(sound_fn);
   let folder_to = local_function_folder(slow_fn);

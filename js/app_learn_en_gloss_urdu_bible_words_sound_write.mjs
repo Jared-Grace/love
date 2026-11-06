@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_book_codes_new_testament_first } from "./ebible_book_codes_new_testament_first.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound } from "./app_en_learn_bible_gloss_urdu_words_sound.mjs";
+import { app_learn_en_gloss_urdu_words_sound } from "./app_learn_en_gloss_urdu_words_sound.mjs";
 import { gloss_word_sound_voices } from "./gloss_word_sound_voices.mjs";
 import { ebible_version_book_words } from "./ebible_version_book_words.mjs";
 import { gloss_words_sound_write_generic } from "./gloss_words_sound_write_generic.mjs";
@@ -18,7 +18,7 @@ export async function app_learn_en_gloss_urdu_bible_words_sound_write() {
   arguments_assert(arguments, 0);
   let bible_folder = ebible_folder_english();
   let book_codes = ebible_book_codes_new_testament_first();
-  let sound_fn = app_en_learn_bible_gloss_urdu_words_sound;
+  let sound_fn = app_learn_en_gloss_urdu_words_sound;
   let voices = gloss_word_sound_voices();
   let done = [];
   async function book_each(book_code) {

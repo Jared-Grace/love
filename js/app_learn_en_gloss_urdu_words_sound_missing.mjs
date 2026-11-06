@@ -9,7 +9,7 @@ import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_book_codes_new_testament_first } from "./ebible_book_codes_new_testament_first.mjs";
 import { ebible_version_book_words } from "./ebible_version_book_words.mjs";
 import { each_async } from "./each_async.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound } from "./app_en_learn_bible_gloss_urdu_words_sound.mjs";
+import { app_learn_en_gloss_urdu_words_sound } from "./app_learn_en_gloss_urdu_words_sound.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { gloss_word_sound_voices } from "./gloss_word_sound_voices.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -47,7 +47,7 @@ export async function app_learn_en_gloss_urdu_words_sound_missing() {
     each(spelled, word_each);
   }
   await each_async(book_codes, book_each);
-  let sound_fn = app_en_learn_bible_gloss_urdu_words_sound;
+  let sound_fn = app_learn_en_gloss_urdu_words_sound;
   let folder = local_function_folder(sound_fn);
   let voices = gloss_word_sound_voices();
   let said = {};

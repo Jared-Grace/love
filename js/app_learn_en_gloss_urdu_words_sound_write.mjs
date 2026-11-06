@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_en_learn_bible_gloss_urdu_words } from "./app_en_learn_bible_gloss_urdu_words.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound } from "./app_en_learn_bible_gloss_urdu_words_sound.mjs";
+import { app_learn_en_gloss_urdu_words_sound } from "./app_learn_en_gloss_urdu_words_sound.mjs";
 import { gloss_word_sound_voices } from "./gloss_word_sound_voices.mjs";
 import { gloss_words_sound_write_generic } from "./gloss_words_sound_write_generic.mjs";
 import { list_add } from "./list_add.mjs";
@@ -15,7 +15,7 @@ export async function app_learn_en_gloss_urdu_words_sound_write() {
   arguments_assert(arguments, 0);
   let found = await app_en_learn_bible_gloss_urdu_words();
   let words = property_get(found, "words");
-  let sound_fn = app_en_learn_bible_gloss_urdu_words_sound;
+  let sound_fn = app_learn_en_gloss_urdu_words_sound;
   let voices = gloss_word_sound_voices();
   let done = [];
   async function voice_each(voice) {
