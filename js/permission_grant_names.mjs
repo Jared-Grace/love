@@ -1645,7 +1645,7 @@ export function permission_grant_names() {
     fn_name("bible_verse_holes_empty_folders"),
     fn_name("bundles_names_missing_repair"),
     fn_name("storage_local_key_sites"),
-    fn_name("app_ceb_bible_gloss_chapter_affix_letters_wrong"),
+    fn_name("app_learn_ceb_gloss_chapter_affix_letters_wrong"),
     fn_name("data_loose_room_moved"),
     fn_name("app_learn_original_gloss_marker_clauses_repair"),
     fn_name("functions_lift_refusal_rows"),

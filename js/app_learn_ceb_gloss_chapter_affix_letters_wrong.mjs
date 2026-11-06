@@ -2,7 +2,7 @@ import { gloss_chapter_found_counted } from "./gloss_chapter_found_counted.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_chapter_affix_letters_wrong } from "./gloss_chapter_affix_letters_wrong.mjs";
-export async function app_ceb_bible_gloss_chapter_affix_letters_wrong(
+export async function app_learn_ceb_gloss_chapter_affix_letters_wrong(
   chapter_code,
 ) {
   "The Cebuano explanations in one chapter that quote letters for a piece of their word which the dictionary gives no piece of that kind holding, with what each one said beside what the dictionary gives.";
