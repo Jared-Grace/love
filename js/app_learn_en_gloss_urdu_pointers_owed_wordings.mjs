@@ -1,4 +1,4 @@
-export function app_en_learn_bible_gloss_urdu_pointers_owed_wordings() {
+export function app_learn_en_gloss_urdu_pointers_owed_wordings() {
   "The Urdu wording written by hand for each English word the English-to-Urdu gloss store points at but has never explained anywhere.";
   "These are what is left after the store has been asked to repair itself out of its own settled wordings. Every word here was met by a reader as an explanation saying only that the same word came above, when no earlier entry in that chapter said anything about it at all - and no reading of the store could mend those, because the store has never said anything about them anywhere.";
   "The keys are written in small letters. A word standing at the head of a sentence wears a capital and the same word in the middle does not, and they are one word wanting one explanation, so the lookup folds the case away and the table is written on the folded side.";
