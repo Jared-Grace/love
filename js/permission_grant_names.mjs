@@ -1069,7 +1069,7 @@ export function permission_grant_names() {
     fn_name("gloss_words_misaligned_cases_gate_run"),
     fn_name("app_code_lessons"),
     fn_name("claude_bash_labels_alongside"),
-    fn_name("app_ceb_bible_gloss_misaligned_show"),
+    fn_name("app_learn_ceb_gloss_misaligned_show"),
     fn_name("ebible_bible_folders_sorted"),
     fn_name("app_learn_ceb_gloss_entries_edits_apply"),
     fn_name("file_read_json"),
