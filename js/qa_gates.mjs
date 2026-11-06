@@ -599,7 +599,7 @@ import { app_learn_ceb_gloss_published_unfinished_gate_run } from "./app_learn_c
 import { app_learn_original_gloss_published_unfinished_gate_run } from "./app_learn_original_gloss_published_unfinished_gate_run.mjs";
 import { firebase_sending_tests_none_gate_run } from "./firebase_sending_tests_none_gate_run.mjs";
 import { gloss_stores_verse_order_gate_run } from "./gloss_stores_verse_order_gate_run.mjs";
-import { app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run } from "./app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run.mjs";
+import { app_learn_en_gloss_urdu_verse_claims_wrong_gate_run } from "./app_learn_en_gloss_urdu_verse_claims_wrong_gate_run.mjs";
 import { gloss_explain_verse_numbers_cases_gate_run } from "./gloss_explain_verse_numbers_cases_gate_run.mjs";
 import { gloss_explain_verse_number_words_cases_gate_run } from "./gloss_explain_verse_number_words_cases_gate_run.mjs";
 import { path_outward_cases_gate_run } from "./path_outward_cases_gate_run.mjs";
@@ -1250,7 +1250,7 @@ export function qa_gates() {
     app_learn_original_gloss_published_unfinished_gate_run,
     firebase_sending_tests_none_gate_run,
     gloss_stores_verse_order_gate_run,
-    app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run,
+    app_learn_en_gloss_urdu_verse_claims_wrong_gate_run,
     gloss_explain_verse_numbers_cases_gate_run,
     gloss_explain_verse_number_words_cases_gate_run,
     path_outward_cases_gate_run,

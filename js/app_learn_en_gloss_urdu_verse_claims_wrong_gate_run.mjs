@@ -7,7 +7,7 @@ import { app_learn_en_gloss_urdu_verse_claims_wrong_baseline_path } from "./app_
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
-export async function app_en_learn_bible_gloss_urdu_verse_claims_wrong_gate_run() {
+export async function app_learn_en_gloss_urdu_verse_claims_wrong_gate_run() {
   "Gate: no Urdu gloss explanation authored from here on may name a verse of its own chapter that holds nothing built on the same English root, unless somebody has already read that sentence and banked it. Throws so the dispatcher seam exits nonzero.";
   "★ THIS IS THE ONE THING AN EXPLANATION SAYS THAT A MACHINE CAN SETTLE. Everything else in a gloss sentence is judgment - whether the meaning is right, whether the parts are named well, whether a ten year old will follow it. A sentence that says the word also stands in verse fifteen is checkable against verse fifteen, and the chapter holding the answer is already open. A wrong fact costs a reader more than a clumsy sentence does, so the one checkable claim is worth a gate on its own.";
   "★ THIS STORE SAYS آیت ۲۱ AND NEVER VERSE TWENTY-ONE, AND THE READING THAT RAN OVER IT KNEW ONLY THE ENGLISH SPELLING. So it found nothing at all and reported nothing wrong, which reads exactly like a store with nothing wrong in it. The store had said آیت twenty-four thousand four hundred and forty-nine times before anybody looked. That silence is what this gate was built out of, and it is worth remembering when the next store arrives.";
