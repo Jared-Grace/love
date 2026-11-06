@@ -38,7 +38,7 @@ export function app_index_main_fns(about_opened) {
       category: reading,
     },
     {
-      app_fn: fn_name("app_search"),
+      app_fn: fn_name("app_bible_search"),
       text: "Allows search across multiple versions of the Bible in English and copying results in multiple languages",
       category: reading,
     },

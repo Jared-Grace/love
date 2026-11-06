@@ -34,7 +34,7 @@ export function apps_all_main_fns() {
     fn_name("app_reply"),
     fn_name("app_reply_local"),
     fn_name("app_sandbox"),
-    fn_name("app_search"),
+    fn_name("app_bible_search"),
     fn_name("app_supper"),
     fn_name("app_supper_tl"),
     fn_name("app_verses"),

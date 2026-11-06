@@ -8,7 +8,7 @@ export function app_shared_bible_search_button(bar) {
   "The search app is opened with no hash, so it starts empty and in its own default language rather than guessing which of the reader's languages its index can serve.";
   arguments_assert(arguments, 1);
   function open_search() {
-    window_open_app(fn_name("app_search"), {});
+    window_open_app(fn_name("app_bible_search"), {});
   }
   app_shared_button(bar, "🔍", open_search);
 }

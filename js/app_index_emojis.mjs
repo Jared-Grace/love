@@ -45,7 +45,7 @@ export function app_index_emojis() {
       emoji: emoji_book_open(),
     },
     {
-      app_fn: fn_name("app_search"),
+      app_fn: fn_name("app_bible_search"),
       emoji: emoji_search(),
     },
     {
