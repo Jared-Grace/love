@@ -3,9 +3,7 @@ import { app_learn_en_gloss_urdu_chapters_uploaded } from "./app_learn_en_gloss_
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { ternary } from "./ternary.mjs";
-export async function app_en_learn_bible_gloss_urdu_write_finished(
-  chapter_code,
-) {
+export async function app_learn_en_gloss_urdu_write_finished(chapter_code) {
   "What to tell an author who has just explained the last passage of a chapter: that nothing is left to write, and whether the chapter has reached a reader yet.";
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to ask after and nothing that runs.";

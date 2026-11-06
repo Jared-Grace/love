@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_write_finished } from "./app_en_learn_bible_gloss_urdu_write_finished.mjs";
+import { app_learn_en_gloss_urdu_write_finished } from "./app_learn_en_gloss_urdu_write_finished.mjs";
 import { app_learn_en_gloss_urdu_write_coverage } from "./app_learn_en_gloss_urdu_write_coverage.mjs";
 import { app_en_learn_bible_gloss_urdu_write_passage } from "./app_en_learn_bible_gloss_urdu_write_passage.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -15,8 +15,7 @@ export async function app_en_learn_bible_gloss_urdu_write_next(chapter_code) {
   let coverage = await app_learn_en_gloss_urdu_write_coverage(chapter_code);
   let missing = property_get(coverage, "missing");
   if (list_empty_is(missing)) {
-    let finished =
-      await app_en_learn_bible_gloss_urdu_write_finished(chapter_code);
+    let finished = await app_learn_en_gloss_urdu_write_finished(chapter_code);
     return finished;
   }
   let verse_key = list_first(missing);
