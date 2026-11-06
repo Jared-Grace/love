@@ -5,7 +5,7 @@ import { app_ceb_bible_gloss_words_edged_names } from "./app_ceb_bible_gloss_wor
 import { app_learn_ceb_gloss_words_edged_baseline_path } from "./app_learn_ceb_gloss_words_edged_baseline_path.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
-export async function app_ceb_bible_gloss_words_edged_gate_run() {
+export async function app_learn_ceb_gloss_words_edged_gate_run() {
   "Gate: no Cebuano gloss chapter authored from here on may explain a word that still carries a mark from the sentence around it. Throws so the dispatcher seam exits nonzero.";
   "★ A WORD NAMED HERE IS INVISIBLE TO EVERY OTHER CHECK IN THE REPO, WHICH IS WHY THIS ONE IS WORTH KEEPING. The root checks, the affix checks and the dictionary readings all ask under the spelling the author typed, so a word wearing a quotation mark or a comma is asked for under a spelling no dictionary holds, comes back unknown, and is passed over in silence by all of them. Nothing goes red anywhere; the word is simply never looked at again.";
   "That makes this the opposite of the gates beside it. They watch for a claim that turned out wrong, and a person can argue with any of them. This watches for a word that no longer reaches the place where a claim about it could be argued with at all.";
