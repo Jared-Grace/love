@@ -2834,7 +2834,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_testament_literal_coverage"),
     fn_name("bible_glyph_verses_seated_read"),
     fn_name("app_learn_en_gloss_tagalog_write_chapter_file"),
-    fn_name("app_en_learn_bible_gloss_urdu_bible_quotes_mend_file"),
+    fn_name("app_learn_en_gloss_urdu_bible_quotes_mend_file"),
     fn_name("qa_gate_timed_solo"),
     fn_name("currency_php_per_usd_date_frankfurter"),
     fn_name("cloudflare_pages_firebase_compare"),

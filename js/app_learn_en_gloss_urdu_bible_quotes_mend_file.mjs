@@ -21,7 +21,7 @@ import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { gloss_write_files_from_store_generic } from "./gloss_write_files_from_store_generic.mjs";
 import { file_delete } from "./file_delete.mjs";
-export async function app_en_learn_bible_gloss_urdu_bible_quotes_mend_file(
+export async function app_learn_en_gloss_urdu_bible_quotes_mend_file(
   chapter_code,
 ) {
   "Put right the Bible quotes one stored chapter of the Urdu-explained English store gets wrong, from one file pairing each quote as it is written with the words the cited chapter of the Urdu Bible really holds, and take the file away once they are stored.";
