@@ -3,7 +3,7 @@ import { app_en_learn_bible_store_chosen } from "./app_en_learn_bible_store_chos
 import { property_get } from "./property_get.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { app_shared_language_code_reader_set } from "./app_shared_language_code_reader_set.mjs";
-import { app_en_learn_bible_language_code_save } from "./app_en_learn_bible_language_code_save.mjs";
+import { app_learn_en_language_code_save } from "./app_learn_en_language_code_save.mjs";
 import { app_en_learn_bible_title_set } from "./app_en_learn_bible_title_set.mjs";
 export function app_en_learn_bible_reader_language_set() {
   "Say which language the app is speaking to its reader in, taken from the store of explanations the reader has chosen, and remember it on this device for the next visit.";
@@ -14,6 +14,6 @@ export function app_en_learn_bible_reader_language_set() {
   let property_name = language_code_key();
   let language_code = property_get(language, property_name);
   app_shared_language_code_reader_set(language_code);
-  app_en_learn_bible_language_code_save(language_code);
+  app_learn_en_language_code_save(language_code);
   app_en_learn_bible_title_set(language);
 }

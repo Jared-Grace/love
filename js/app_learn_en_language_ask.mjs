@@ -9,7 +9,7 @@ import { app_en_learn_bible_language_names_own } from "./app_en_learn_bible_lang
 import { app_en_learn_bible_stores } from "./app_en_learn_bible_stores.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_en_learn_bible_language_code_save } from "./app_en_learn_bible_language_code_save.mjs";
+import { app_learn_en_language_code_save } from "./app_learn_en_language_code_save.mjs";
 import { app_shared_bible_language_hash_key } from "./app_shared_bible_language_hash_key.mjs";
 import { html_hash_property_set } from "./html_hash_property_set.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
@@ -33,7 +33,7 @@ export function app_learn_en_language_ask(context, on_chosen) {
     let language_code = property_path_get_2(store, "language", property_name);
     let name = property_get(names, language_code);
     async function on_click() {
-      app_en_learn_bible_language_code_save(language_code);
+      app_learn_en_language_code_save(language_code);
       let key = app_shared_bible_language_hash_key();
       html_hash_property_set(key, language_code);
       await on_chosen();
