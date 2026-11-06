@@ -18,7 +18,7 @@ import { not } from "./not.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { function_string_whole_replace } from "./function_string_whole_replace.mjs";
-import { app_name_keyed_tables } from "./app_name_keyed_tables.mjs";
+import { app_shared_name_keyed_tables } from "./app_shared_name_keyed_tables.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_select_apply_args_auto } from "./function_select_apply_args_auto.mjs";
@@ -83,7 +83,7 @@ export async function app_rename(a_name_before, a_name_after) {
       a_name_after,
     ]);
   }
-  let tables = app_name_keyed_tables();
+  let tables = app_shared_name_keyed_tables();
   let keys_moved = [];
   for (let table of tables) {
     let keyed = table();
