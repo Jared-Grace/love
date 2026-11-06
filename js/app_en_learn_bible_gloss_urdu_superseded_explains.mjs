@@ -1,5 +1,5 @@
 import { app_en_learn_bible_gloss_urdu_reverent_words } from "./app_en_learn_bible_gloss_urdu_reverent_words.mjs";
-import { app_en_learn_bible_gloss_urdu_capital_tail } from "./app_en_learn_bible_gloss_urdu_capital_tail.mjs";
+import { app_learn_en_gloss_urdu_capital_tail } from "./app_learn_en_gloss_urdu_capital_tail.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_add } from "./list_add.mjs";
@@ -1039,7 +1039,7 @@ export function app_en_learn_bible_gloss_urdu_superseded_explains() {
     ["that", "اِشارہ: وہ۔"],
   ];
   let reverent = app_en_learn_bible_gloss_urdu_reverent_words();
-  let tail = app_en_learn_bible_gloss_urdu_capital_tail();
+  let tail = app_learn_en_gloss_urdu_capital_tail();
   let r = [];
   function retired_write(pair) {
     let word = list_first(pair);

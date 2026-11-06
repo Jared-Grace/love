@@ -11,7 +11,7 @@ import { object_property_names } from "./object_property_names.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_suffix_without_try } from "./text_suffix_without_try.mjs";
 import { text_last } from "./text_last.mjs";
-import { app_en_learn_bible_gloss_urdu_capital_tail } from "./app_en_learn_bible_gloss_urdu_capital_tail.mjs";
+import { app_learn_en_gloss_urdu_capital_tail } from "./app_learn_en_gloss_urdu_capital_tail.mjs";
 export function app_learn_en_gloss_urdu_action_verb_explains() {
   "The wording every explanation of an ordinary English verb is given in the store that teaches English to an Urdu reader - the words for doing and saying and going, as against the handful of helping verbs written next door.";
   "The sentence these are built on was not invented here. The store had already written it out by hand for six verbs, once each for ‘see’, ‘come’, ‘say’, ‘tell’, ‘go’ and ‘do’, and it is a good sentence: it names the verb, hands over the Urdu for it, says that the bare form is the one a dictionary lists, and then names the four places English puts that bare form. Writing a different sentence here would have left the store saying the same true thing two ways, which is the exact failure the shared-label note keeps complaining about. So the existing sentence is the template and every verb here is handed it.";
@@ -487,7 +487,7 @@ export function app_learn_en_gloss_urdu_action_verb_explains() {
   function capital_write(spelled) {
     let word = property_get(capitals, spelled);
     let said = property_get(r, word);
-    let whole = said + app_en_learn_bible_gloss_urdu_capital_tail();
+    let whole = said + app_learn_en_gloss_urdu_capital_tail();
     property_set(r, spelled, whole);
   }
   let capital_spellings = object_property_names(capitals);

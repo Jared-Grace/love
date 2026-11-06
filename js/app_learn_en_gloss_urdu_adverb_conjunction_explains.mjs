@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_capital_tail } from "./app_en_learn_bible_gloss_urdu_capital_tail.mjs";
+import { app_learn_en_gloss_urdu_capital_tail } from "./app_learn_en_gloss_urdu_capital_tail.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -97,7 +97,7 @@ export function app_learn_en_gloss_urdu_adverb_conjunction_explains() {
     Truly: "truly",
     Later: "later",
   };
-  let capital_tail = app_en_learn_bible_gloss_urdu_capital_tail();
+  let capital_tail = app_learn_en_gloss_urdu_capital_tail();
   function capital_write(word) {
     let lower = property_get(capitals, word);
     let said = property_get(r, lower);
