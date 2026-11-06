@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { gloss_upload_namespace_en_learn_bible_urdu } from "./gloss_upload_namespace_en_learn_bible_urdu.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_passages } from "./app_en_learn_bible_gloss_urdu_passages.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_finished_unpublished } from "./gloss_chapters_finished_unpublished.mjs";
@@ -13,7 +13,7 @@ export async function app_en_learn_bible_gloss_urdu_unpublished_gate_run() {
   "The command that closes it is named in the complaint rather than described, because a gate is read by somebody who was doing something else and wants the next thing to type.";
   arguments_assert(arguments, 0);
   let walked = await gloss_chapters_finished_unpublished(
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
     app_en_learn_bible_gloss_urdu_passages,
     gloss_upload_namespace_en_learn_bible_urdu,
   );

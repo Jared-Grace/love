@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { app_en_learn_bible_gloss_urdu_verse_claims_wrong_names } from "./app_en_learn_bible_gloss_urdu_verse_claims_wrong_names.mjs";
@@ -11,7 +11,7 @@ export async function app_en_learn_bible_gloss_urdu_verse_claims_wrong_baseline_
   "This is the command the gate's own message names. The record fails on a line that no longer offends as surely as on a new one, because an entry left behind after a sentence was mended lets the same claim come back under cover of being already known.";
   "A store that is not on the disk stops the rewrite before it starts. A folder that is not there holds no chapters, so the sweep would come back empty and the record would be emptied to match - and a record wiped while the drive was unmounted looks to every later reading exactly like a store somebody has finished reading through.";
   arguments_assert(arguments, 0);
-  let fn = app_en_learn_bible_gloss_urdu_generate;
+  let fn = app_learn_en_gloss_urdu_generate;
   let stored = await gloss_store_stored_is(fn);
   assert_json(stored, {
     hint: "the Urdu gloss store is not on the disk, so there is nothing to write the record from - mount the drive the store lives on and run this again",

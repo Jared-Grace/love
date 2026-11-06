@@ -1,5 +1,5 @@
 import { app_en_learn_bible_gloss_urdu_write_file_misaligned_assert } from "./app_en_learn_bible_gloss_urdu_write_file_misaligned_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_passages } from "./app_en_learn_bible_gloss_urdu_passages.mjs";
 import { gloss_write_file_generic } from "./gloss_write_file_generic.mjs";
 export async function app_en_learn_bible_gloss_urdu_write_file(
@@ -11,7 +11,7 @@ export async function app_en_learn_bible_gloss_urdu_write_file(
   "$plain verse_key";
   "both name text to read: a chapter of the Bible, and the verses a passage of it covers. Neither names anything that runs.";
   let passages_read = app_en_learn_bible_gloss_urdu_passages;
-  let fn = app_en_learn_bible_gloss_urdu_generate;
+  let fn = app_learn_en_gloss_urdu_generate;
   await app_en_learn_bible_gloss_urdu_write_file_misaligned_assert(
     chapter_code,
     verse_key,

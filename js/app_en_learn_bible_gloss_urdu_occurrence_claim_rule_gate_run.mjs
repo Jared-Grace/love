@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { not } from "./not.mjs";
 import { app_en_learn_bible_gloss_urdu_occurrence_claims_rule_mixed_names } from "./app_en_learn_bible_gloss_urdu_occurrence_claims_rule_mixed_names.mjs";
@@ -15,7 +15,7 @@ export async function app_en_learn_bible_gloss_urdu_occurrence_claim_rule_gate_r
   "A store that is not on the disk is passed over and said so, rather than counted as clean. The store lives on a drive that is not always mounted, and a sweep that read nothing and called it clean would turn one unmounted drive into a gate that passes for everybody.";
   "How many chapters were walked travels out beside the verdict, because finding none and reaching none are the same word otherwise.";
   arguments_assert(arguments, 0);
-  let fn = app_en_learn_bible_gloss_urdu_generate;
+  let fn = app_learn_en_gloss_urdu_generate;
   let stored = await gloss_store_stored_is(fn);
   if (not(stored)) {
     let skipped = {

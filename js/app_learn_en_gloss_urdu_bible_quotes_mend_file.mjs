@@ -1,7 +1,7 @@
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_quotes_chapter_file_path } from "./gloss_quotes_chapter_file_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -32,7 +32,7 @@ export async function app_learn_en_gloss_urdu_bible_quotes_mend_file(
   "The hand-off files of the verses this mend changes are given the stored explanations afterwards, because the stale repair lets a hand-off file win over the store and would write the old quote straight back. A file that already disagreed with the store before the mend is left as it was, since that disagreement is a judgment about the verse this command was never asked to make.";
   "The file is written with the Write tool, which needs no prompt; this one reads it and stores it, and what it does is the same whatever it is asked for, so it is safe to grant.";
   arguments_assert(arguments, 1);
-  let fn = app_en_learn_bible_gloss_urdu_generate;
+  let fn = app_learn_en_gloss_urdu_generate;
   let file_path = gloss_quotes_chapter_file_path(chapter_code, fn);
   let authored = await file_read_json(file_path);
   let befores = object_property_names(authored);

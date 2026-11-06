@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_passages } from "./app_en_learn_bible_gloss_urdu_passages.mjs";
 import { gloss_passages_verses_key_find } from "./gloss_passages_verses_key_find.mjs";
 import { gloss_write_file_path } from "./gloss_write_file_path.mjs";
@@ -19,7 +19,7 @@ export async function app_en_learn_bible_gloss_urdu_write_passage(
   let file = gloss_write_file_path(
     chapter_code,
     verse_key,
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
   );
   let r = {
     chapter_code,

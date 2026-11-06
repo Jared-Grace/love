@@ -1,5 +1,5 @@
 import { gloss_chapter_explains_repeated } from "./gloss_chapter_explains_repeated.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_learn_en_gloss_urdu_explains_repeated(chapter_code) {
   "Every explanation in one chapter of the store that explains English words to an Urdu reader which some other word in the same chapter was given word for word, commonest first, each named beside how many words were handed it.";
@@ -9,7 +9,7 @@ export async function app_learn_en_gloss_urdu_explains_repeated(chapter_code) {
   "How many explanations the chapter holds in all is dropped here rather than carried, because a person about to rewrite a sentence is not weighing the chapter against anything - the gate is, and it asks the reading underneath this one.";
   let found = await gloss_chapter_explains_repeated(
     chapter_code,
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
   );
   let repeated = property_get(found, "repeated");
   return repeated;

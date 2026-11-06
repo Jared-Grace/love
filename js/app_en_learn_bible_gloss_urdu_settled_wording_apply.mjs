@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_en_learn_bible_gloss_urdu_settled_explains } from "./app_en_learn_bible_gloss_urdu_settled_explains.mjs";
 import { gloss_chapters_word_explains_set } from "./gloss_chapters_word_explains_set.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_table_wording_is } from "./app_en_learn_bible_gloss_urdu_table_wording_is.mjs";
 export async function app_en_learn_bible_gloss_urdu_settled_wording_apply() {
   "Give every explanation in the store that teaches English to an Urdu reader that is a settled wording written for some other word the settled wording written for the word it stands under, and answer with the chapters it rewrote.";
@@ -12,7 +12,7 @@ export async function app_en_learn_bible_gloss_urdu_settled_wording_apply() {
   arguments_assert(arguments, 0);
   let explains = app_en_learn_bible_gloss_urdu_settled_explains();
   let r = await gloss_chapters_word_explains_set(
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
     explains,
     app_en_learn_bible_gloss_urdu_table_wording_is,
   );

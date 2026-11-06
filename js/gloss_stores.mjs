@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { app_learn_original_gloss_generate } from "./app_learn_original_gloss_generate.mjs";
 export function gloss_stores() {
@@ -9,7 +9,7 @@ export function gloss_stores() {
   let stores = [
     app_learn_ceb_gloss_generate,
     app_learn_original_gloss_generate,
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
   ];
   return stores;
 }

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { not } from "./not.mjs";
 import { app_learn_en_gloss_urdu_bible_quotes_absent_names } from "./app_learn_en_gloss_urdu_bible_quotes_absent_names.mjs";
@@ -13,7 +13,7 @@ export async function app_learn_en_gloss_urdu_bible_quotes_absent_gate_run() {
   "The record starts at those nine hundred and thirty-two and may only shrink. Which wording the standing quotes should follow is a decision waiting on a person; the gate's work is to stop a new one joining them unseen.";
   "A store that is not on the disk is passed over and said so, rather than counted as clean.";
   arguments_assert(arguments, 0);
-  let fn = app_en_learn_bible_gloss_urdu_generate;
+  let fn = app_learn_en_gloss_urdu_generate;
   let stored = await gloss_store_stored_is(fn);
   if (not(stored)) {
     let skipped = {

@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -19,7 +19,7 @@ export async function app_en_learn_bible_gloss_urdu_glued_words_repair() {
   "A chapter whose text does not change is not written back. That leaves the file dates telling the truth about which chapters this touched, and it is what lets the answer say how many were actually spelled wrong rather than how many were looked at.";
   "It asks again after writing. Running the reading over what was just written must change nothing further, and a chapter where it would is reported by name rather than passed over, because that is the one outcome that means the repair does not settle.";
   "Which chapters the store holds is asked of the reading that every other sweep over a gloss store asks, rather than opened here. Reading a folder and turning its file names into chapter names is not this function's work and was written out twice, once here and once in the repair standing beside it - which is exactly the shared run a gate names.";
-  let fn = app_en_learn_bible_gloss_urdu_generate;
+  let fn = app_learn_en_gloss_urdu_generate;
   let chapter_codes = await gloss_chapters_stored(fn);
   async function chapter_repair(chapter_code) {
     let path = local_function_path_json(chapter_code, fn);

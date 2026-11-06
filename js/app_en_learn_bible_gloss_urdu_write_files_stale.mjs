@@ -1,5 +1,5 @@
 import { gloss_write_files_stale_generic } from "./gloss_write_files_stale_generic.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 export async function app_en_learn_bible_gloss_urdu_write_files_stale(
   chapter_code,
 ) {
@@ -9,7 +9,7 @@ export async function app_en_learn_bible_gloss_urdu_write_files_stale(
   "It only reads. What it answers is the list the repair beside it would write, so it can be asked about a chapter somebody else is reading without taking anything away from them.";
   let r = await gloss_write_files_stale_generic(
     chapter_code,
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
   );
   return r;
 }

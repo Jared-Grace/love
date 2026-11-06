@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_chapter_explains_text_replace } from "./gloss_chapter_explains_text_replace.mjs";
 export async function app_learn_en_gloss_urdu_chapter_explains_text_replace(
   chapter_code,
@@ -13,7 +13,7 @@ export async function app_learn_en_gloss_urdu_chapter_explains_text_replace(
   "$plain before";
   "$plain after";
   "the two are runs of letters, the wording to look for and the wording to leave in its place. They are prose a reader sees and nothing that runs.";
-  let fn = app_en_learn_bible_gloss_urdu_generate;
+  let fn = app_learn_en_gloss_urdu_generate;
   let r = await gloss_chapter_explains_text_replace(
     chapter_code,
     fn,

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { app_learn_en_gloss_urdu_chapter_pointing_repair } from "./app_learn_en_gloss_urdu_chapter_pointing_repair.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_flat } from "./list_flat.mjs";
@@ -11,7 +11,7 @@ export async function app_learn_en_gloss_urdu_chapters_pointing_repair() {
   "It takes no list, because the store already knows which chapters it holds and a list handed in could only be a stale copy of that. Running it again after the first run does nothing, since a repaired explanation no longer points anywhere and the reading that finds them will not find it.";
   arguments_assert(arguments, 0);
   let chapter_codes = await gloss_chapters_stored(
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
   );
   async function chapter_repair(chapter_code) {
     let changes =

@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_passage_urdu_texts_mapped } from "./gloss_passage_urdu_texts_mapped.mjs";
@@ -20,7 +20,7 @@ export async function app_en_learn_bible_gloss_urdu_names_repair() {
   "A chapter that changed is written back and then run through again, and the second run has to find nothing. It would find something if one ruling respelled a name into a spelling that another ruling respells again, which is a table that contradicts itself, and that is worth being told about rather than being applied twice.";
   "A chapter is repaired where it is stored and is not published by this. Sending the repaired chapters out to the reader is its own step.";
   "Which chapters the store holds is asked of the reading that every other sweep over a gloss store asks, rather than opened here. Reading a folder and turning its file names into chapter names is not this function's work and was written out twice, once here and once in the repair standing beside it - which is exactly the shared run a gate names.";
-  let fn = app_en_learn_bible_gloss_urdu_generate;
+  let fn = app_learn_en_gloss_urdu_generate;
   let chapter_codes = await gloss_chapters_stored(fn);
   function chapter_map(chapter) {
     let passages = property_get(chapter, "passages");

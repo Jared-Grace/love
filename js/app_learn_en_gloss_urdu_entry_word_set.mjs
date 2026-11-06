@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_chapter_entry_word_set } from "./gloss_chapter_entry_word_set.mjs";
 export async function app_learn_en_gloss_urdu_entry_word_set(
   chapter_code,
@@ -14,7 +14,7 @@ export async function app_learn_en_gloss_urdu_entry_word_set(
   "$plain word";
   "the word is the spelling to write, ordinary text shown to a reader.";
   "This corrects what is held here. Putting the corrected chapter where readers get it is a separate step.";
-  let fn = app_en_learn_bible_gloss_urdu_generate;
+  let fn = app_learn_en_gloss_urdu_generate;
   let index = Number(at);
   let r = await gloss_chapter_entry_word_set(
     chapter_code,

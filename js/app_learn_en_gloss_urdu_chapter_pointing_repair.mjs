@@ -10,7 +10,7 @@ import { app_learn_en_gloss_urdu_explain_meaning_parts } from "./app_learn_en_gl
 import { property_set } from "./property_set.mjs";
 import { app_en_learn_bible_gloss_urdu_pointing_explain_fresh } from "./app_en_learn_bible_gloss_urdu_pointing_explain_fresh.mjs";
 import { gloss_chapter_entries_explain_rewrite_generic } from "./gloss_chapter_entries_explain_rewrite_generic.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 export async function app_learn_en_gloss_urdu_chapter_pointing_repair(
   chapter_code,
 ) {
@@ -55,7 +55,7 @@ export async function app_learn_en_gloss_urdu_chapter_pointing_repair(
   }
   let changes = await gloss_chapter_entries_explain_rewrite_generic(
     chapter_code,
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
     entry_any_is,
     explain_new,
   );

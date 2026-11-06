@@ -3,7 +3,7 @@ import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_en_learn_bible_gloss_urdu_verse_claims_wrong_read } from "./app_en_learn_bible_gloss_urdu_verse_claims_wrong_read.mjs";
 import { gloss_chapter_read } from "./gloss_chapter_read.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 export async function app_en_learn_bible_gloss_urdu_verse_claims_spanned() {
   "Every recorded Urdu verse claim sorted by whether the verse it names heads a passage that does hold the word, because a passage may cover several verses and is named by the first of them.";
   "★ THE RECORD ASKS WHETHER ONE VERSE HOLDS THE WORD, AND A WRITER LOOKING AT THE SCREEN SEES A WHOLE PASSAGE UNDER ONE NUMBER. Where a passage runs from five to six, the words of verse six stand under the heading five, so a sentence saying the word came in verse five is true of what the reader can see and false of verse five alone. This counts how much of the record is that disagreement rather than a mistake.";
@@ -22,7 +22,7 @@ export async function app_en_learn_bible_gloss_urdu_verse_claims_spanned() {
     if (equal(chapter, undefined)) {
       chapter = await gloss_chapter_read(
         chapter_code,
-        app_en_learn_bible_gloss_urdu_generate,
+        app_learn_en_gloss_urdu_generate,
       );
       chapters[chapter_code] = chapter;
     }

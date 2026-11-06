@@ -1,5 +1,5 @@
 import { app_learn_en_gloss_urdu_bible_folders } from "./app_learn_en_gloss_urdu_bible_folders.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_chapters_absent_generic } from "./gloss_chapters_absent_generic.mjs";
 import { list_first } from "./list_first.mjs";
 export async function app_learn_en_gloss_urdu_chapters_absent() {
@@ -8,7 +8,7 @@ export async function app_learn_en_gloss_urdu_chapters_absent() {
   let bible_folders = app_learn_en_gloss_urdu_bible_folders();
   let bible_folder = list_first(bible_folders);
   let r = await gloss_chapters_absent_generic(
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
     bible_folder,
   );
   return r;

@@ -1,6 +1,6 @@
 import { app_en_learn_bible_gloss_urdu_settled_explains } from "./app_en_learn_bible_gloss_urdu_settled_explains.mjs";
 import { gloss_chapters_word_explains_set } from "./gloss_chapters_word_explains_set.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_shared_label_is } from "./app_en_learn_bible_gloss_urdu_shared_label_is.mjs";
 export async function app_en_learn_bible_gloss_urdu_word_explains_apply() {
   "Write the settled wording for each named English word over the shared labels standing under that word in the store that teaches English to an Urdu reader, and answer with the chapters it rewrote.";
@@ -9,7 +9,7 @@ export async function app_en_learn_bible_gloss_urdu_word_explains_apply() {
   "The words come from the one lookup that joins every kind of word, so a kind added there is covered here without this being touched. The closed classes were first and the ordinary nouns followed, and nothing about the writing differs between them - a label saying only ‘noun’ withholds the Urdu word for the thing exactly as a label saying only ‘conjunction’ withholds what the word joins.";
   let explains = app_en_learn_bible_gloss_urdu_settled_explains();
   let r = await gloss_chapters_word_explains_set(
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
     explains,
     app_en_learn_bible_gloss_urdu_shared_label_is,
   );

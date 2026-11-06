@@ -1,5 +1,5 @@
 import { gloss_chapter_pointers_shown_generic } from "./gloss_chapter_pointers_shown_generic.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 export async function app_learn_en_gloss_urdu_chapter_pointers_shown(
   chapter_code,
 ) {
@@ -8,7 +8,7 @@ export async function app_learn_en_gloss_urdu_chapter_pointers_shown(
   "the code is a chapter's name, like ACT01, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   let shown = await gloss_chapter_pointers_shown_generic(
     chapter_code,
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
   );
   return shown;
 }

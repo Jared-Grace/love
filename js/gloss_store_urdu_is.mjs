@@ -7,7 +7,7 @@ export function gloss_store_urdu_is(fn) {
   let matched = property_equals(
     fn,
     "name",
-    fn_name("app_en_learn_bible_gloss_urdu_generate"),
+    fn_name("app_learn_en_gloss_urdu_generate"),
   );
   return matched;
 }

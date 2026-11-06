@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapter_pointers_addressed_generic } from "./gloss_chapter_pointers_addressed_generic.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_explain_back_reference_is } from "./gloss_explain_back_reference_is.mjs";
 export async function app_learn_en_gloss_urdu_chapter_pointers_addressed(
   chapter_code,
@@ -12,7 +12,7 @@ export async function app_learn_en_gloss_urdu_chapter_pointers_addressed(
   arguments_assert(arguments, 1);
   let changes = await gloss_chapter_pointers_addressed_generic(
     chapter_code,
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
     gloss_explain_back_reference_is,
   );
   return changes;

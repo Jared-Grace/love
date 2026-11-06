@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_chapter_passage_entries } from "./gloss_chapter_passage_entries.mjs";
 export async function app_en_learn_bible_gloss_urdu_passage_entries(
   chapter_code,
@@ -8,7 +8,7 @@ export async function app_en_learn_bible_gloss_urdu_passage_entries(
   "$plain chapter_code";
   "$plain verse_key";
   "both name text to read: a chapter of the Bible, and the verses a passage of it covers. Neither names anything that runs.";
-  let fn = app_en_learn_bible_gloss_urdu_generate;
+  let fn = app_learn_en_gloss_urdu_generate;
   let entries = await gloss_chapter_passage_entries(
     chapter_code,
     verse_key,

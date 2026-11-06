@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_word_wordings } from "./gloss_chapters_word_wordings.mjs";
-import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
+import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 export async function app_en_learn_bible_gloss_urdu_word_wordings_ranked(word) {
   "Every distinct sentence the store explaining English words to an Urdu reader has written under one English word, commonest first.";
   "$plain word";
@@ -10,7 +10,7 @@ export async function app_en_learn_bible_gloss_urdu_word_wordings_ranked(word) {
   "Named for the store rather than taking it as a parameter, for the same reason the other rankings are: the name is what a person types when they want to know what one word is carrying.";
   arguments_assert(arguments, 1);
   let r = await gloss_chapters_word_wordings(
-    app_en_learn_bible_gloss_urdu_generate,
+    app_learn_en_gloss_urdu_generate,
     word,
   );
   return r;
