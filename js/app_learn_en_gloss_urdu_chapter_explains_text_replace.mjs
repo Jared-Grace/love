@@ -1,6 +1,6 @@
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { gloss_chapter_explains_text_replace } from "./gloss_chapter_explains_text_replace.mjs";
-export async function app_en_learn_bible_gloss_urdu_chapter_explains_text_replace(
+export async function app_learn_en_gloss_urdu_chapter_explains_text_replace(
   chapter_code,
   before,
   after,
