@@ -6,7 +6,7 @@ import { app_learn_ceb_gloss_passages } from "./app_learn_ceb_gloss_passages.mjs
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { gloss_write_chapter_file_path } from "./gloss_write_chapter_file_path.mjs";
 import { list_map } from "./list_map.mjs";
-export async function app_ceb_bible_gloss_write_passages(chapter_code) {
+export async function app_learn_ceb_gloss_write_passages(chapter_code) {
   "Everything needed to author a whole Cebuano chapter in one sitting: every passage of it, each with its Cebuano wording, its English wording, and each of its verses cut into words beside what a dictionary says each word is built from.";
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to read and nothing that runs.";
