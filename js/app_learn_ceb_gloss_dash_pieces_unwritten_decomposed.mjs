@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_words_dash_pieces_unwritten } from "./app_ceb_bible_gloss_words_dash_pieces_unwritten.mjs";
+import { app_learn_ceb_gloss_words_dash_pieces_unwritten } from "./app_learn_ceb_gloss_words_dash_pieces_unwritten.mjs";
 import { property_get } from "./property_get.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -18,7 +18,7 @@ export async function app_learn_ceb_gloss_dash_pieces_unwritten_decomposed() {
     " records three of them found by hand, where the same three words asked with a stray quotation mark attached each came back with a root that does not exist. A piece cut out of the middle of a dashed word is the same malformed question asked several hundred times.");
   ("Nothing is asked of the site by this. The held answers are read off the disk, so a piece nobody has asked about yet is simply absent from the count rather than fetched to complete it.");
   arguments_assert(arguments, 0);
-  let measured = await app_ceb_bible_gloss_words_dash_pieces_unwritten();
+  let measured = await app_learn_ceb_gloss_words_dash_pieces_unwritten();
   let pieces = property_get(measured, "words");
   let known = await binisaya_words_known();
   let asked = 0;
