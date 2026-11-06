@@ -16,7 +16,7 @@ import { gloss_root_row_note } from "./gloss_root_row_note.mjs";
 import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { list_take } from "./list_take.mjs";
-export async function app_ceb_bible_gloss_root_reversed_shape_counted(
+export async function app_learn_ceb_gloss_root_reversed_shape_counted(
   sample_size,
 ) {
   "How many explanations the four wordings still call bare open by naming a root before they name anything else, which is the one shape that puts the root first and so could never be read from the sentence alone.";
