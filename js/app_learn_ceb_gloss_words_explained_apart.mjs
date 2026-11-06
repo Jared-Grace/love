@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_roots_disagreeing_classes } from "./app_learn_ceb_gloss_roots_disagreeing_classes.mjs";
 import { gloss_classes_words_apart_counted } from "./gloss_classes_words_apart_counted.mjs";
-export async function app_ceb_bible_gloss_words_explained_apart(sample_size) {
+export async function app_learn_ceb_gloss_words_explained_apart(sample_size) {
   "The words the Cebuano app explains one way in one chapter and another way in another, worst first.";
   "The other readers of these findings all ask the dictionary, and the dictionary has nothing to say about four fifths of them. This asks nothing of anybody. One word does not come from two unrelated roots, so where the app explains a word two ways it has written something wrong somewhere, and that is true with no source consulted and no network reached.";
   "That makes this the part of the work that is answerable tonight. It also makes it the larger part: measured on the sightings gathered so far, the words explained more than one way cover several times what the dictionary was able to settle, and almost none of them appear in the dictionary-backed queue at all, because the dictionary was silent on them.";
