@@ -11,7 +11,7 @@ import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_bible_search_results_with_verses_and_books } from "./app_bible_search_results_with_verses_and_books.mjs";
 import { app_bible_search_none_found_text } from "./app_bible_search_none_found_text.mjs";
 import { app_bible_search_results_render_and_open } from "./app_bible_search_results_render_and_open.mjs";
-export async function app_search_results(context, div_results) {
+export async function app_bible_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
   let books = await app_shared_bible_read_books_en();
   let query = property_get(context, "query");
