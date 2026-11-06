@@ -1,5 +1,5 @@
 import { property_null_is } from "./property_null_is.mjs";
-import { app_ceb_bible_gloss_words_dash_kept_distinct } from "./app_ceb_bible_gloss_words_dash_kept_distinct.mjs";
+import { app_learn_ceb_gloss_words_dash_kept_distinct } from "./app_learn_ceb_gloss_words_dash_kept_distinct.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -17,7 +17,7 @@ export async function app_ceb_bible_gloss_words_dashed_unasked() {
   "The ones the translation writes standing alone are counted apart, because for those the question has a right answer waiting and nobody has gone and asked it.";
   "The translation's vocabulary is asked for in small letters and as a set, rather than built out of the written words here, because that is one named reading of the bible and this had a hand-made copy of it standing in the middle of it.";
   arguments_assert(arguments, 0);
-  let explained = await app_ceb_bible_gloss_words_dash_kept_distinct();
+  let explained = await app_learn_ceb_gloss_words_dash_kept_distinct();
   let lowered = list_map_unique(explained, text_lower_to);
   function dashed_is(word) {
     let held = text_includes(word, "-");

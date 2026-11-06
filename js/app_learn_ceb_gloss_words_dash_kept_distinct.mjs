@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_chapters_words_dash_kept_distinct } from "./gloss_chapters_words_dash_kept_distinct.mjs";
-export async function app_ceb_bible_gloss_words_dash_kept_distinct() {
+export async function app_learn_ceb_gloss_words_dash_kept_distinct() {
   arguments_assert(arguments, 0);
   ("Every different word the Cebuano gloss store explains, each one whole and with its dash left in it.");
   ("The reading underneath takes a generator, because a store is named by the thing that writes it and there is more than one store. Which generator a Cebuano gloss is written by has one answer, and the readings that ask this question were each naming it for themselves on the line before they asked. Saying it once leaves them about the words.");

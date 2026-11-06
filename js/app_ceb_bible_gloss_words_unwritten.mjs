@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_words_dash_kept_distinct } from "./app_ceb_bible_gloss_words_dash_kept_distinct.mjs";
+import { app_learn_ceb_gloss_words_dash_kept_distinct } from "./app_learn_ceb_gloss_words_dash_kept_distinct.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_cebuano_words_unwritten } from "./bible_cebuano_words_unwritten.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,7 +9,7 @@ export async function app_ceb_bible_gloss_words_unwritten() {
   "The store's own spelling is kept and the dash with it, so a word joined by a dash is asked about whole rather than in halves - the halves are a different measurement and already have one.";
   "The comparison against the translation, the lowering of both sides and the counting of the written words are the shared test, which the dash pieces ask in exactly the same words; what is chosen here is only which words to put to it.";
   arguments_assert(arguments, 0);
-  let explained = await app_ceb_bible_gloss_words_dash_kept_distinct();
+  let explained = await app_learn_ceb_gloss_words_dash_kept_distinct();
   let measured = await bible_cebuano_words_unwritten(explained);
   let words = property_get(measured, "lowered");
   let unwritten = property_get(measured, "unwritten");
