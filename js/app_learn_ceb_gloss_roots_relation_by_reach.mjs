@@ -30,7 +30,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_entries_count } from "./gloss_entries_count.mjs";
-export async function app_ceb_bible_gloss_roots_relation_by_reach() {
+export async function app_learn_ceb_gloss_roots_relation_by_reach() {
   "Every relation the Cebuano store's roots answer, split by how many single-letter edits the root stands from being spelled inside the word it explains, so that the one warning written on the relation reader is a number instead of a reading of the top of a list.";
   ("★ THE READER SAYS OF ITSELF THAT IT IS MISLEADING HERE, AND NOBODY HAD PRICED THAT. ",
     fn_name("gloss_root_claimed_relation"),
