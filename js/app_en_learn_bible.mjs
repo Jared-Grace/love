@@ -4,7 +4,7 @@ import { app_en_learn_bible_reader_language_set } from "./app_en_learn_bible_rea
 import { app_en_learn_bible_languages_offered } from "./app_en_learn_bible_languages_offered.mjs";
 import { app_shared_bible_languages_offered_key } from "./app_shared_bible_languages_offered_key.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_en_learn_bible_gloss_chapters_uploaded } from "./app_en_learn_bible_gloss_chapters_uploaded.mjs";
+import { app_learn_en_gloss_chapters_uploaded } from "./app_learn_en_gloss_chapters_uploaded.mjs";
 import { app_shared_bible_chapters_offered_key } from "./app_shared_bible_chapters_offered_key.mjs";
 import { app_en_learn_bible_screens } from "./app_en_learn_bible_screens.mjs";
 import { app_en_learn_bible_home } from "./app_en_learn_bible_home.mjs";
@@ -27,7 +27,7 @@ export async function app_en_learn_bible(context) {
   let languages_offered = app_en_learn_bible_languages_offered();
   let key = app_shared_bible_languages_offered_key();
   property_set(context, key, languages_offered);
-  let chapters_ask = app_en_learn_bible_gloss_chapters_uploaded;
+  let chapters_ask = app_learn_en_gloss_chapters_uploaded;
   let key_chapters = app_shared_bible_chapters_offered_key();
   property_set(context, key_chapters, chapters_ask);
   let app_fn = app_en_learn_bible;
