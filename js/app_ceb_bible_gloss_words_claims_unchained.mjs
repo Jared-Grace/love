@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_disagreeing_classes_all } from "./app_ceb_bible_gloss_roots_disagreeing_classes_all.mjs";
+import { app_learn_ceb_gloss_roots_disagreeing_classes_all } from "./app_learn_ceb_gloss_roots_disagreeing_classes_all.mjs";
 import { gloss_classes_words_apart_counted } from "./gloss_classes_words_apart_counted.mjs";
 import { property_get } from "./property_get.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
@@ -13,7 +13,7 @@ export async function app_ceb_bible_gloss_words_claims_unchained(sample_size) {
   "how many classes to draw from, said as text as readily as as a number. It names nothing that runs.";
   arguments_assert(arguments, 1);
   let gathered =
-    await app_ceb_bible_gloss_roots_disagreeing_classes_all(sample_size);
+    await app_learn_ceb_gloss_roots_disagreeing_classes_all(sample_size);
   let counted = gloss_classes_words_apart_counted(gathered);
   let classes = property_get(gathered, "classes");
   let known = await binisaya_words_known();

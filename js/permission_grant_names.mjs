@@ -2570,7 +2570,7 @@ export function permission_grant_names() {
     fn_name("qa_commit_named_app_blocking_report"),
     fn_name("git_commit_name_current"),
     fn_name("functions_duplicates_any_names"),
-    fn_name("app_ceb_bible_gloss_roots_disagreeing_classes_all"),
+    fn_name("app_learn_ceb_gloss_roots_disagreeing_classes_all"),
     fn_name("app_learn_ceb_gloss_chapters_republish"),
     fn_name("bible_glyph_chapters_name_tag_fire_joined_gate_run"),
     fn_name("lyric_video_song_video_write"),

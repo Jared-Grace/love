@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_disagreeing_classes_all } from "./app_ceb_bible_gloss_roots_disagreeing_classes_all.mjs";
+import { app_learn_ceb_gloss_roots_disagreeing_classes_all } from "./app_learn_ceb_gloss_roots_disagreeing_classes_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_folded_index } from "./binisaya_words_known_folded_index.mjs";
@@ -10,7 +10,7 @@ export async function app_ceb_bible_gloss_roots_silence_causes_classes_read(
 ) {
   arguments_assert(arguments, 1);
   let gathered =
-    await app_ceb_bible_gloss_roots_disagreeing_classes_all(sample_size);
+    await app_learn_ceb_gloss_roots_disagreeing_classes_all(sample_size);
   let classes = property_get(gathered, "classes");
   let known = await binisaya_words_known();
   let folded_index = binisaya_words_known_folded_index(known);

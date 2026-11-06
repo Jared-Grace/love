@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_roots_disagreeing_classes } from "./app_ceb_bible_gloss_roots_disagreeing_classes.mjs";
-export async function app_ceb_bible_gloss_roots_disagreeing_classes_all(
+export async function app_learn_ceb_gloss_roots_disagreeing_classes_all(
   sample_size,
 ) {
   "Every disagreement between a Cebuano explanation and the dictionary, gathered by the root the explanation named and with no reading of the pair left out.";
