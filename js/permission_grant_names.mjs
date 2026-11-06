@@ -1410,7 +1410,7 @@ export function permission_grant_names() {
     fn_name("ai_log_triples_frequent"),
     fn_name("function_write_seams_reached"),
     fn_name("gloss_write_folder"),
-    fn_name("app_ceb_bible_gloss_roots_disagreeing_nearness"),
+    fn_name("app_learn_ceb_gloss_roots_disagreeing_nearness"),
     fn_name("literals_marked_both_ways_baseline_add"),
     fn_name("text_split_outside_quotes_cases_gate_run"),
     fn_name("js_span_cuttable_cases_gate_run"),

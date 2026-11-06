@@ -1,6 +1,6 @@
 import { app_ceb_bible_gloss_roots_disagreeing_offenders } from "./app_ceb_bible_gloss_roots_disagreeing_offenders.mjs";
 import { gloss_roots_disagreeing_nearness } from "./gloss_roots_disagreeing_nearness.mjs";
-export async function app_ceb_bible_gloss_roots_disagreeing_nearness(
+export async function app_learn_ceb_gloss_roots_disagreeing_nearness(
   sample_size,
 ) {
   "How far every Cebuano explanation that missed its word's root came from saying it, counted at each distance, with a spread sample of the ones furthest away.";
