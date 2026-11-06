@@ -4,6 +4,7 @@ import { reply_attempts_remembered_root } from "./reply_attempts_remembered_root
 export function reply_attempts_remembered_folder(code_hash) {
   arguments_assert(arguments, 1);
   ("Where the kept answers of one version of the reply rules' code sit: a folder of its own, so the answers of older code can be taken away whole.");
-  let path = path_join([reply_attempts_remembered_root(), code_hash]);
+  let path2 = reply_attempts_remembered_root();
+  let path = path_join([path2, code_hash]);
   return path;
 }
