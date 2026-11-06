@@ -3,7 +3,7 @@ import { equal } from "./equal.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
 import { bible_search_words } from "./bible_search_words.mjs";
 import { text_search_words } from "./text_search_words.mjs";
-export function app_search_language_words(language_code, query) {
+export function app_bible_search_language_words(language_code, query) {
   "$plain language_code";
   "$plain query";
   "The words a query is asked for in one language's index, cut the way that index was cut when it was built - a query cut any other way asks for words the index never wrote.";
