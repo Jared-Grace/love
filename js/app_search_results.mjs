@@ -9,7 +9,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_search_results_with_verses_and_books } from "./app_search_results_with_verses_and_books.mjs";
-import { app_search_none_found_text } from "./app_search_none_found_text.mjs";
+import { app_bible_search_none_found_text } from "./app_bible_search_none_found_text.mjs";
 import { app_search_results_render_and_open } from "./app_search_results_render_and_open.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
@@ -52,7 +52,7 @@ export async function app_search_results(context, div_results) {
   let none = list_empty_is(results);
   if (none) {
     ("nothing to expand and nothing to copy, so say so instead of leaving a bare Expand all button over an empty page");
-    let none_text = app_search_none_found_text(words);
+    let none_text = app_bible_search_none_found_text(words);
     app_shared_text_body(div_results, none_text);
     return;
   }
