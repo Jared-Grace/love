@@ -188,17 +188,17 @@ export function app_code_lesson_if_inside_generic(options) {
     let object = add(value, step);
     let after = json_to(object);
     let shown = json_to(value);
-    let middle = [", so ", shown, " is written out"];
+    let middle = [", so ", shown, " is written out, then "];
     let truth = "true";
     if (equal(through2, false)) {
       let r = app_code_braces_dots();
-      middle = [", so the ", "if", "'s ", r, " is skipped"];
+      middle = [", so the ", "if", "'s ", r, " is skipped, then "];
       truth = "false";
     }
     let parts = list_concat_multiple([
       ["", asked2, " is ", truth],
       middle,
-      [", then ", name, " becomes ", after],
+      [name, " becomes ", after],
     ]);
     app_code_div_cycle_code(root, parts);
   }
