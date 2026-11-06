@@ -16,7 +16,7 @@ import { set_includes } from "./set_includes.mjs";
 import { path_join } from "./path_join.mjs";
 import { list_add } from "./list_add.mjs";
 import { each_async } from "./each_async.mjs";
-export async function app_en_learn_bible_gloss_urdu_words_sound_slow_orphaned() {
+export async function app_learn_en_gloss_urdu_words_sound_slow_orphaned() {
   "The slower readings sitting on this machine that no ordinary recording is left underneath.";
   "★ THE SLOWER READINGS ARE MADE OUT OF THE ORDINARY ONES, SO A RECORDING TAKEN AWAY LEAVES ITS SLOW COPY BEHIND. Removing a recording removes it from the folder it was recorded into and from storage, and neither of those is the folder the slower ones live in - nothing about a slow file changes when the file it was made from stops existing. So a sweep over the ordinary recordings quietly leaves a matching pile of junk in the slow folder, and the pile only grows.";
   "★ THE QUESTION HERE IS SIMPLER THAN THE ONE ASKED OF THE ORDINARY RECORDINGS, AND DELIBERATELY SO. An ordinary recording is junk when no word anybody wrote is filed under it, which needs both lists of words to answer. A slow reading is junk when the recording it was made from is gone, which needs nothing but the two folders - and it stays right however the word lists change afterwards, because the ordinary folder is already the answer to that question.";
