@@ -4,7 +4,7 @@ import { gloss_chapters_affix_kinds_wrong } from "./gloss_chapters_affix_kinds_w
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { gloss_offenders_said_names } from "./gloss_offenders_said_names.mjs";
-export async function app_ceb_bible_gloss_affix_kinds_wrong_names() {
+export async function app_learn_ceb_gloss_affix_kinds_wrong_names() {
   "Every Cebuano explanation calling a piece of its word by a name the dictionary gives no piece of, named once each however many chapters met it.";
   "The count beside this answers whether the store is getting better, and it is the number a rewrite of the whole store was judged by. It cannot hold a ratchet: a number falling is not a record of which readings were blessed, so nothing in it refuses the return of a fault that was already repaired.";
   "Named by the word and the name it wrongly gave a piece, because that pair is the whole of the fault and it is what somebody repairing it writes out again. One word met in a dozen chapters is one sentence to author, not a dozen, and the repair spreads itself from there.";
