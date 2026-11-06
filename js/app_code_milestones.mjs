@@ -4,6 +4,8 @@ import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_map_property } from "./list_map_property.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_size } from "./list_size.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { list_map } from "./list_map.mjs";
@@ -27,7 +29,12 @@ export function app_code_milestones() {
   let ids = app_code_lesson_ids_short();
   let loop_id = property_get(ids, fn_name("app_code_lesson_while"));
   let lesson_ids = list_map_property(lessons, "id");
-  let branches_count = list_index_of(lesson_ids, loop_id);
+  ("2026-11-06: the public site is handed only the released lessons, and While is not one of them, so asking where While stands threw there and every learner opening the page got an error instead of the home list. With no While in this run, every lesson in it is before the first while, so the run goes to its end. Measured the same day: the walk reads latest, which holds While, so it could not see this.");
+  let loop_shown = list_includes(lesson_ids, loop_id);
+  let branches_count = list_size(lesson_ids);
+  if (loop_shown) {
+    branches_count = list_index_of(lesson_ids, loop_id);
+  }
   ("Starting at the first lesson that runs a program of two pairs of braces, and drawing each lesson's batch once, because this is asked several times for each page: measured 2026-11-02, reading every one of the 302 lessons before While took 650 ms on a computer for each ask. A lesson put before this one would not join a milestone.");
   let first_id = property_get(ids, fn_name("app_code_lesson_braces_run"));
   let first_index = list_index_of(lesson_ids, first_id);
