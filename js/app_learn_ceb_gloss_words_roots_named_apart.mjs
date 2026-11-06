@@ -18,7 +18,7 @@ import { list_sort_text } from "./list_sort_text.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-export async function app_ceb_bible_gloss_words_roots_named_apart() {
+export async function app_learn_ceb_gloss_words_roots_named_apart() {
   "Every Cebuano word the gloss store takes back to one root in one place and to a different root in another, read in all four of the wordings an explanation can name a root in, worst first.";
   "★ IT IS THE WIDE-READING TWIN OF A READING THAT WENT BLIND WHEN THE STORE WAS REWORDED. The reading the gate sits on asks the narrow reader, which matches the word root followed by a quoted word and nothing else. On the second of October a pass rewrote nine hundred and sixty seven of the store's nine hundred and seventy nine chapters into comes from kalooy and binisaya.com takes it back to kalooy, and every one of its thirty six recorded words went stale without being mended - maluluy-on is still taken back to kalooy, to looy and to luoy in three chapters, and the narrow reader sees one of the three. The store did not get better; the question stopped reaching it.";
   "Nothing is asked of binisaya.com and nothing is written. One word does not come from two unrelated roots, so where the store explains a word two ways it has written something wrong somewhere, and that is settled from the disk alone.";
