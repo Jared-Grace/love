@@ -16,7 +16,7 @@ import { list_add } from "./list_add.mjs";
 import { divide } from "./divide.mjs";
 import { number_round_places } from "./number_round_places.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-export async function app_ceb_bible_gloss_explains_depth_by_book() {
+export async function app_learn_ceb_gloss_explains_depth_by_book() {
   "How deeply the Cebuano gloss store explains a word, book by book: how many entries carry a sentence, how long that sentence runs, how often it names a root outright, and how often it names a piece of the word as a prefix, a suffix or an infix.";
   "It exists because two halves of one store were found writing in two registers, and a register is the kind of thing a reader sees in two samples and cannot then prove. Luke is told a word means a person; a psalm is told which part of speech a word is, what its prefix does and what its root means. The second is where every invented root sits, and depth is the one property of the two registers that can be counted rather than described.";
   "Depth is counted three ways because no one of them settles it. Length alone would call a long sentence deep when it is only wordy, a root claim alone would miss a breakdown that names pieces and stops short of a root, and an affix claim alone would miss the many sentences that name a root and no piece at all. Read together they say what shape a book's sentences are.";
