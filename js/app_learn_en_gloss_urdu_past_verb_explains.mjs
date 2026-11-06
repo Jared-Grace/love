@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_en_learn_bible_gloss_urdu_past_verb_explains() {
+export function app_learn_en_gloss_urdu_past_verb_explains() {
   "The wording every explanation of a named past-tense English verb is given, for an Urdu reader, written for the words that were carrying nothing but the parsing.";
   "WHAT THESE REPLACE SAID ONLY THAT THE WORD IS A VERB AND IS OF PAST TIME. That sentence is true of every one of them, which is why one wording had come to stand under ninety-seven different words and eight hundred entries: it names the class and stops. A reader who already sees the word cannot do anything with it. What is worth saying about a past-tense verb is the two things the word itself does not show - which verb it is the past of, and how English got from that verb to this word.";
   "A CONSTANT WORDING IS SAFE HERE ONLY BECAUSE EVERY CLAIM IN IT IS ABOUT THE WORD AND NONE IS ABOUT THE SENTENCE. That 'came' is the past of 'come' holds wherever 'came' stands. What the word is doing in its clause - carrying the action, or standing under another verb - changes verse by verse and is deliberately not claimed, because a constant sentence cannot know it and would be wrong wherever it guessed.";
