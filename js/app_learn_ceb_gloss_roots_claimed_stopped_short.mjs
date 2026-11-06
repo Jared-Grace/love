@@ -16,7 +16,7 @@ import { text_slice } from "./text_slice.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { property_set } from "./property_set.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
+export async function app_learn_ceb_gloss_roots_claimed_stopped_short() {
   "Every root the Cebuano gloss store names that the dictionary has never vouched for, where a longer run of letters starting at the very same place in the very same word is one the dictionary has vouched for - so the sentence stopped short of a root that was already known, at the spot it was pointing at.";
   "This is the fault the relation readings cannot see. Asked how a claimed root stands to a dictionary root, an inside answer comes back deeper, and deeper is usually right: naming gugma under higugma tells a reader more than the dictionary does. Naming an under anyag is the same answer and the opposite thing, because an is not a shorter root, it is anyag with the end cut off.";
   "What tells the two apart without anybody judging Cebuano is that the dictionary itself has vouched for gugma and has never vouched for an. Vouching is the one thing in the stored dictionary that only the site could have written - a word named as some other word's root. So the reading asks nothing about morphology and only ever compares two answers the dictionary gave.";

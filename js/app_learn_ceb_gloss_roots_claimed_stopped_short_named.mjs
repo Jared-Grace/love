@@ -1,6 +1,6 @@
 import { property_list_first } from "./property_list_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_claimed_stopped_short } from "./app_ceb_bible_gloss_roots_claimed_stopped_short.mjs";
+import { app_learn_ceb_gloss_roots_claimed_stopped_short } from "./app_learn_ceb_gloss_roots_claimed_stopped_short.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_map } from "./list_map.mjs";
@@ -11,7 +11,7 @@ export async function app_learn_ceb_gloss_roots_claimed_stopped_short_named() {
   "The longest run is the one named, out of however many the dictionary vouched for at that spot, because it is the whole word the letters were taken from and the shorter ones are all inside it. Naming them all would make the same fault read as several.";
   "Sorted so that the record is written the same way every time it is written, which is what lets two runs of it be compared at all.";
   arguments_assert(arguments, 0);
-  let read = await app_ceb_bible_gloss_roots_claimed_stopped_short();
+  let read = await app_learn_ceb_gloss_roots_claimed_stopped_short();
   let listed = property_get(read, "listed");
   function row_named(row) {
     let claimed = property_get(row, "stated_root");
