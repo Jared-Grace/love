@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { not } from "./not.mjs";
-import { app_en_learn_bible_gloss_urdu_occurrence_claims_wrong_names } from "./app_en_learn_bible_gloss_urdu_occurrence_claims_wrong_names.mjs";
+import { app_learn_en_gloss_urdu_occurrence_claims_wrong_names } from "./app_learn_en_gloss_urdu_occurrence_claims_wrong_names.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { app_learn_en_gloss_urdu_occurrence_claims_tally } from "./app_learn_en_gloss_urdu_occurrence_claims_tally.mjs";
 import { property_get } from "./property_get.mjs";
@@ -24,8 +24,7 @@ export async function app_learn_en_gloss_urdu_occurrence_claim_gate_run() {
     };
     return skipped;
   }
-  let offenders =
-    await app_en_learn_bible_gloss_urdu_occurrence_claims_wrong_names();
+  let offenders = await app_learn_en_gloss_urdu_occurrence_claims_wrong_names();
   list_empty_is_assert_json(offenders, {
     hint: "these explanations say their word has come for a time the chapter does not reach, counted either way round - open the chapter at that word, count the word through that explanation, and write the number the chapter gives",
     offenders,
