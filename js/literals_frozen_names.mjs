@@ -84,7 +84,7 @@ export function literals_frozen_names() {
     fn_name("g_arc_write_upload_namespace"),
     fn_name("app_shared_bible_history_key"),
     fn_name("app_shared_bible_session_id_key"),
-    fn_name("app_en_learn_bible_gloss_urdu_words_sound_upload_namespace"),
+    fn_name("app_learn_en_gloss_urdu_words_sound_upload_namespace"),
     fn_name("app_code_review_hash_key"),
     fn_name("app_learn_en_gloss_urdu_words_sound_slow_upload_namespace"),
     fn_name("app_replace_rule_set_hash_key"),
