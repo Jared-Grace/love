@@ -1,7 +1,7 @@
 import { app_search_languages_answers_joined } from "./app_search_languages_answers_joined.mjs";
 import { app_bible_search_language_matching_or_null } from "./app_bible_search_language_matching_or_null.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_search_language_searchable } from "./app_search_language_searchable.mjs";
+import { app_bible_search_language_searchable } from "./app_bible_search_language_searchable.mjs";
 import { list_add } from "./list_add.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -22,7 +22,7 @@ export async function app_search_languages_matching(languages_chosen, query) {
   let languages_unsearchable = [];
   for (let language of languages_chosen) {
     let code = property_get(language, property_name);
-    let searchable = await app_search_language_searchable(code);
+    let searchable = await app_bible_search_language_searchable(code);
     if (searchable) {
       list_add(codes, code);
     } else {

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_search_language_searchable } from "./app_search_language_searchable.mjs";
+import { app_bible_search_language_searchable } from "./app_bible_search_language_searchable.mjs";
 import { bible_search_language_upload } from "./bible_search_language_upload.mjs";
 export async function bible_search_languages_unbuilt_upload() {
   "Build the search index of every offered language storage has no index for yet, one language after another.";
@@ -13,7 +13,7 @@ export async function bible_search_languages_unbuilt_upload() {
   let failed = [];
   for (let language of languages) {
     let language_code = property_get(language, "language_code");
-    let searchable = await app_search_language_searchable(language_code);
+    let searchable = await app_bible_search_language_searchable(language_code);
     if (searchable) {
       continue;
     }
