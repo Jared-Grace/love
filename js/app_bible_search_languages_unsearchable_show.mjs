@@ -5,7 +5,10 @@ import { list_map_property } from "./list_map_property.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-export function app_search_languages_unsearchable_show(div_results, matching) {
+export function app_bible_search_languages_unsearchable_show(
+  div_results,
+  matching,
+) {
   "$plain div_results";
   "$plain matching";
   "Name the chosen languages the search could not look in, and say whether any were named.";

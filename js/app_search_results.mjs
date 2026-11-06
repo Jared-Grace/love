@@ -2,7 +2,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
 import { app_bible_search_languages_matching } from "./app_bible_search_languages_matching.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_search_languages_unsearchable_show } from "./app_search_languages_unsearchable_show.mjs";
+import { app_bible_search_languages_unsearchable_show } from "./app_bible_search_languages_unsearchable_show.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_search_no_words_show } from "./app_search_no_words_show.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -21,7 +21,7 @@ export async function app_search_results(context, div_results) {
   );
   ("every word is fetched by now, so the page is cleared once here and everything below only adds to it - a second clear further down would wipe the note naming the languages that were not searched");
   html_clear(div_results);
-  let unsearchable = app_search_languages_unsearchable_show(
+  let unsearchable = app_bible_search_languages_unsearchable_show(
     div_results,
     matching,
   );
