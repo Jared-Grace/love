@@ -15,7 +15,7 @@ import { gloss_root_row_note } from "./gloss_root_row_note.mjs";
 import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { list_take } from "./list_take.mjs";
-export async function app_ceb_bible_gloss_root_word_given_apart_counted(
+export async function app_learn_ceb_gloss_root_word_given_apart_counted(
   sample_size,
 ) {
   "What the reader that is given the word as well as the sentence would change about the Cebuano gloss store, counted three ways so the choice between spelling alone and spelling with a vocabulary behind it is a number rather than an argument.";
