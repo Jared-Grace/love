@@ -2578,7 +2578,7 @@ export function permission_grant_names() {
     fn_name("baselines_unwatched_excused"),
     fn_name("qa_commit_named_gates_apps_blocked_report"),
     fn_name("qa_commit_named_auto_seconds"),
-    fn_name("app_ceb_bible_gloss_explains_repair_drafted"),
+    fn_name("app_learn_ceb_gloss_explains_repair_drafted"),
     fn_name("song_image_couplets_description_brief"),
     fn_name("bible_glyph_chapters_seat_split_redraw"),
     fn_name("bible_glyph_chapters_seat_split_planned"),
