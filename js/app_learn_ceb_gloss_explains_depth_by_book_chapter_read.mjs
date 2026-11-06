@@ -2,7 +2,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_ceb_gloss_explains_depth_by_book_chapter_read_counted_add } from "./app_learn_ceb_gloss_explains_depth_by_book_chapter_read_counted_add.mjs";
 import { app_learn_ceb_gloss_explains_depth_by_book_chapter_read_lambda } from "./app_learn_ceb_gloss_explains_depth_by_book_chapter_read_lambda.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_ceb_bible_gloss_explains_depth_by_book_chapter_read(
+export function app_learn_ceb_gloss_explains_depth_by_book_chapter_read(
   by_book,
   explain_key,
 ) {

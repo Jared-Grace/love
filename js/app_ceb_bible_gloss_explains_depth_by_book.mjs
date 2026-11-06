@@ -1,5 +1,5 @@
 import { gloss_entries_count } from "./gloss_entries_count.mjs";
-import { app_ceb_bible_gloss_explains_depth_by_book_chapter_read } from "./app_ceb_bible_gloss_explains_depth_by_book_chapter_read.mjs";
+import { app_learn_ceb_gloss_explains_depth_by_book_chapter_read } from "./app_learn_ceb_gloss_explains_depth_by_book_chapter_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -26,7 +26,7 @@ export async function app_ceb_bible_gloss_explains_depth_by_book() {
   let chapter_codes = await gloss_chapters_stored(app_ceb_bible_gloss_generate);
   let explain_key = gloss_entry_explain_key();
   let by_book = {};
-  let chapter_read = app_ceb_bible_gloss_explains_depth_by_book_chapter_read(
+  let chapter_read = app_learn_ceb_gloss_explains_depth_by_book_chapter_read(
     by_book,
     explain_key,
   );
