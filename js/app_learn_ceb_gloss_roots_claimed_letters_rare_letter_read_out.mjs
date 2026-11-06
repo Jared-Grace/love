@@ -16,7 +16,7 @@ import { object_property_names } from "./object_property_names.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read_out(
+export async function app_learn_ceb_gloss_roots_claimed_letters_rare_letter_read_out(
   letter_words,
   by_letter,
 ) {

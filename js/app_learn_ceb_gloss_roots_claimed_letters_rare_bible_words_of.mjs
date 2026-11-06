@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-import { app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read_out } from "./app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read_out.mjs";
+import { app_learn_ceb_gloss_roots_claimed_letters_rare_letter_read_out } from "./app_learn_ceb_gloss_roots_claimed_letters_rare_letter_read_out.mjs";
 export async function app_learn_ceb_gloss_roots_claimed_letters_rare_bible_words_of(
   letter_words,
   letter_rows,
@@ -15,7 +15,7 @@ export async function app_learn_ceb_gloss_roots_claimed_letters_rare_bible_words
   }
   each(letter_rows, letter_note);
   let by_letter = {};
-  let r2 = await app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read_out(
+  let r2 = await app_learn_ceb_gloss_roots_claimed_letters_rare_letter_read_out(
     letter_words,
     by_letter,
   );
