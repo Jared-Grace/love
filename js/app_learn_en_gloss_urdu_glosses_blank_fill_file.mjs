@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_chapter_glosses_blank_fill_file_generic } from "./gloss_chapter_glosses_blank_fill_file_generic.mjs";
-export async function app_en_learn_bible_gloss_urdu_glosses_blank_fill_file(
+export async function app_learn_en_gloss_urdu_glosses_blank_fill_file(
   chapter_code,
 ) {
   "Give an Urdu meaning to every word one stored chapter of the English-words-explained-in-Urdu store had been left without, from one file naming them verse by verse.";
