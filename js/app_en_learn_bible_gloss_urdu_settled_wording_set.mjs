@@ -6,7 +6,7 @@ import { app_en_learn_bible_gloss_urdu_verb_explains } from "./app_en_learn_bibl
 import { app_en_learn_bible_gloss_urdu_plural_noun_explains } from "./app_en_learn_bible_gloss_urdu_plural_noun_explains.mjs";
 import { app_en_learn_bible_gloss_urdu_adjective_explains } from "./app_en_learn_bible_gloss_urdu_adjective_explains.mjs";
 import { app_en_learn_bible_gloss_urdu_adverb_conjunction_explains } from "./app_en_learn_bible_gloss_urdu_adverb_conjunction_explains.mjs";
-import { app_en_learn_bible_gloss_urdu_action_verb_explains } from "./app_en_learn_bible_gloss_urdu_action_verb_explains.mjs";
+import { app_learn_en_gloss_urdu_action_verb_explains } from "./app_learn_en_gloss_urdu_action_verb_explains.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -41,8 +41,8 @@ export async function app_en_learn_bible_gloss_urdu_settled_wording_set(
     app_en_learn_bible_gloss_urdu_adjective_explains();
   tables[fn_name("app_en_learn_bible_gloss_urdu_adverb_conjunction_explains")] =
     app_en_learn_bible_gloss_urdu_adverb_conjunction_explains();
-  tables[fn_name("app_en_learn_bible_gloss_urdu_action_verb_explains")] =
-    app_en_learn_bible_gloss_urdu_action_verb_explains();
+  tables[fn_name("app_learn_en_gloss_urdu_action_verb_explains")] =
+    app_learn_en_gloss_urdu_action_verb_explains();
   let holders = [];
   for (let table_name of object_property_names(tables)) {
     let table = tables[table_name];

@@ -1,4 +1,4 @@
-import { app_en_learn_bible_gloss_urdu_action_verb_explains } from "./app_en_learn_bible_gloss_urdu_action_verb_explains.mjs";
+import { app_learn_en_gloss_urdu_action_verb_explains } from "./app_learn_en_gloss_urdu_action_verb_explains.mjs";
 import { app_en_learn_bible_gloss_urdu_plural_noun_explains } from "./app_en_learn_bible_gloss_urdu_plural_noun_explains.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
@@ -9,7 +9,7 @@ export function app_en_learn_bible_gloss_urdu_spelling_claims_wrong() {
   "That is not a guess about what could go wrong. It went wrong: the past form sentence said that in a few old verbs the word itself changes, 'hear' to 'heard', when nothing changes - the spelling adds a plain 'd' and it is the sound that moves. Another told a reader that no '-ed' had been added while printing a word with '-ed' on the end of it. Six live sentences were wrong about two verbs, and they were found by reading one word by hand.";
   "A spelling claim is worth checking because it is the one kind of claim in these tables that can be settled without knowing any Urdu. The sentence names a base and a form, and whether the form is the base plus a suffix is arithmetic on two strings. Nothing else here is decidable that way, which is exactly why this much should never again be left to somebody noticing.";
   "IT COUNTS WHAT IT FOUND AS WELL AS WHAT WAS WRONG, BECAUSE A CHECK THAT LOOKS FOR A SENTENCE FAILS OPEN WHEN THE SENTENCE IS REWORDED. Finding no claims and finding no faults are the same answer to a caller that only reads the fault list, so the caller is given the counts too and holds them to a floor. Reword a claim and the gate goes red asking to be told the new wording, which is the failure that should happen.";
-  let verbs = app_en_learn_bible_gloss_urdu_action_verb_explains();
+  let verbs = app_learn_en_gloss_urdu_action_verb_explains();
   let plurals = app_en_learn_bible_gloss_urdu_plural_noun_explains();
   let s_form =
     "' کی وہ شکل ہے جو ایک ہی کرنے والے کے ساتھ آتی ہے: آخِر میں 's' لگا ہے۔";

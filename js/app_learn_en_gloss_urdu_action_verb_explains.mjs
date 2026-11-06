@@ -12,7 +12,7 @@ import { list_map } from "./list_map.mjs";
 import { text_suffix_without_try } from "./text_suffix_without_try.mjs";
 import { text_last } from "./text_last.mjs";
 import { app_en_learn_bible_gloss_urdu_capital_tail } from "./app_en_learn_bible_gloss_urdu_capital_tail.mjs";
-export function app_en_learn_bible_gloss_urdu_action_verb_explains() {
+export function app_learn_en_gloss_urdu_action_verb_explains() {
   "The wording every explanation of an ordinary English verb is given in the store that teaches English to an Urdu reader - the words for doing and saying and going, as against the handful of helping verbs written next door.";
   "The sentence these are built on was not invented here. The store had already written it out by hand for six verbs, once each for ‘see’, ‘come’, ‘say’, ‘tell’, ‘go’ and ‘do’, and it is a good sentence: it names the verb, hands over the Urdu for it, says that the bare form is the one a dictionary lists, and then names the four places English puts that bare form. Writing a different sentence here would have left the store saying the same true thing two ways, which is the exact failure the shared-label note keeps complaining about. So the existing sentence is the template and every verb here is handed it.";
   "The irregular verbs get one clause more, and that clause is why the label reading ‘a verb, irregular’ can be written over at all. A reader told only that a verb is irregular has been told that something is coming which they cannot guess, and not what it is. The clause gives the three forms, so the reader can actually use the word: ‘go’ makes ‘went’ and ‘gone’ rather than ‘goed’.";
