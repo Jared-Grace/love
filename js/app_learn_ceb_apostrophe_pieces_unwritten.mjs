@@ -13,7 +13,7 @@ import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_apostrophe_pieces_unwritten() {
+export async function app_learn_ceb_apostrophe_pieces_unwritten() {
   "The words a reading that ends a word at an apostrophe will say the Cebuano bible contains that the Cebuano bible never writes on its own, each named beside the apostrophed words it was cut out of.";
   "★ THIS IS THE SAME FAULT AS THE HYPHEN ONE, ONE CHARACTER OVER, AND IT REACHES THE CHECK RATHER THAN ONLY THE STORE. Cebuano writes an enclitic joined to the word before it and spells that join with an apostrophe some of the time - usa'g, siya'y, ako'y, kita'y, gagmay'ng. A reading that stops at the apostrophe turns each of those into two, and the small half is then filed as a word this translation writes. Anything that afterwards asks the translation whether some run of letters is a word gets a yes it has not earned, and the reading used to answer that question is exactly this one.";
   "What makes this worth a measurement of its own is who was relying on it. The words this bible is written with are the only witness in the repo outside the gloss pipeline, so they are what an explanation's claim gets checked against; a witness that manufactures its own evidence clears exactly the claims nobody else can.";
