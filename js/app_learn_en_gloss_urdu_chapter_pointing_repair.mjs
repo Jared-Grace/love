@@ -8,7 +8,7 @@ import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { gloss_explain_back_reference_is } from "./gloss_explain_back_reference_is.mjs";
 import { app_learn_en_gloss_urdu_explain_meaning_parts } from "./app_learn_en_gloss_urdu_explain_meaning_parts.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_en_learn_bible_gloss_urdu_pointing_explain_fresh } from "./app_en_learn_bible_gloss_urdu_pointing_explain_fresh.mjs";
+import { app_learn_en_gloss_urdu_pointing_explain_fresh } from "./app_learn_en_gloss_urdu_pointing_explain_fresh.mjs";
 import { gloss_chapter_entries_explain_rewrite_generic } from "./gloss_chapter_entries_explain_rewrite_generic.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 export async function app_learn_en_gloss_urdu_chapter_pointing_repair(
@@ -47,10 +47,7 @@ export async function app_learn_en_gloss_urdu_chapter_pointing_repair(
     if (null_is(source)) {
       return null;
     }
-    let fresh = app_en_learn_bible_gloss_urdu_pointing_explain_fresh(
-      explain,
-      source,
-    );
+    let fresh = app_learn_en_gloss_urdu_pointing_explain_fresh(explain, source);
     return fresh;
   }
   let changes = await gloss_chapter_entries_explain_rewrite_generic(

@@ -9,7 +9,7 @@ import { list_any } from "./list_any.mjs";
 import { app_learn_en_gloss_urdu_explain_sentences } from "./app_learn_en_gloss_urdu_explain_sentences.mjs";
 import { app_learn_en_gloss_urdu_explain_pointing_sentence_is } from "./app_learn_en_gloss_urdu_explain_pointing_sentence_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function app_en_learn_bible_gloss_urdu_pointing_explain_fresh(
+export function app_learn_en_gloss_urdu_pointing_explain_fresh(
   explain,
   source,
 ) {
