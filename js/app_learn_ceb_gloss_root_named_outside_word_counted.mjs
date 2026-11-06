@@ -12,7 +12,7 @@ import { gloss_root_named_word_spelled_in_is } from "./gloss_root_named_word_spe
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { list_take } from "./list_take.mjs";
-export async function app_ceb_bible_gloss_root_named_outside_word_counted(
+export async function app_learn_ceb_gloss_root_named_outside_word_counted(
   sample_size,
 ) {
   "How many of the roots only the widened reader can see are not spelled anywhere inside the word they are given for, which is the mark of a quoted English meaning read as though it were a root.";
