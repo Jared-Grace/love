@@ -9,7 +9,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_en_learn_bible_gloss_urdu_occurrence_claims_tally() {
+export async function app_learn_en_gloss_urdu_occurrence_claims_tally() {
   "How many sentences of the Urdu store say which time over one of its English words has come, split by how far the reading got with each one: the ones whose number it read, the ones whose number it could not read, and the ones it decided were about some other time than this word's.";
   "★ THIS IS WHAT STOPS THE GATE BESIDE IT GOING QUIET. The reading finds a claim by the words the store happens to spell it with, so a chapter worded any other way is found nowhere and reports nothing wrong - which is the same answer as a chapter with nothing wrong in it. A floor under the number counted turns that silence into a red gate, and the number is here rather than inside the gate so that anybody can ask it without running one.";
   "The three kinds are counted apart rather than together because each one fails differently. The counted ones are the gate's whole reach. The unread ones are a number spelled a way the ordinal table does not hold, so the table is what wants widening. The ones set aside are sentences looking back at an earlier time rather than claiming this one, and they are counted so that a change which quietly turned real claims into set-aside ones shows up as the counted number falling.";

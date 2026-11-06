@@ -4,7 +4,7 @@ import { gloss_store_stored_is } from "./gloss_store_stored_is.mjs";
 import { not } from "./not.mjs";
 import { app_en_learn_bible_gloss_urdu_occurrence_claims_wrong_names } from "./app_en_learn_bible_gloss_urdu_occurrence_claims_wrong_names.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { app_en_learn_bible_gloss_urdu_occurrence_claims_tally } from "./app_en_learn_bible_gloss_urdu_occurrence_claims_tally.mjs";
+import { app_learn_en_gloss_urdu_occurrence_claims_tally } from "./app_learn_en_gloss_urdu_occurrence_claims_tally.mjs";
 import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -30,7 +30,7 @@ export async function app_learn_en_gloss_urdu_occurrence_claim_gate_run() {
     hint: "these explanations say their word has come for a time the chapter does not reach, counted either way round - open the chapter at that word, count the word through that explanation, and write the number the chapter gives",
     offenders,
   });
-  let tally = await app_en_learn_bible_gloss_urdu_occurrence_claims_tally();
+  let tally = await app_learn_en_gloss_urdu_occurrence_claims_tally();
   let counted = property_get(tally, "counted");
   let thin = less_than(counted, floored);
   let enough = not(thin);
