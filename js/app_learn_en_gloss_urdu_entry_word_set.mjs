@@ -1,6 +1,6 @@
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { gloss_chapter_entry_word_set } from "./gloss_chapter_entry_word_set.mjs";
-export async function app_en_learn_bible_gloss_urdu_entry_word_set(
+export async function app_learn_en_gloss_urdu_entry_word_set(
   chapter_code,
   verses,
   at,
