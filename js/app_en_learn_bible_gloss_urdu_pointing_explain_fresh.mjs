@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_en_gloss_urdu_explain_meaning_parts } from "./app_learn_en_gloss_urdu_explain_meaning_parts.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_learn_en_gloss_urdu_explain_occurrence_bound_is } from "./app_learn_en_gloss_urdu_explain_occurrence_bound_is.mjs";
-import { app_en_learn_bible_gloss_urdu_pointing_cores } from "./app_en_learn_bible_gloss_urdu_pointing_cores.mjs";
+import { app_learn_en_gloss_urdu_pointing_cores } from "./app_learn_en_gloss_urdu_pointing_cores.mjs";
 import { not } from "./not.mjs";
 import { list_any } from "./list_any.mjs";
 import { app_learn_en_gloss_urdu_explain_sentences } from "./app_learn_en_gloss_urdu_explain_sentences.mjs";
@@ -29,7 +29,7 @@ export function app_en_learn_bible_gloss_urdu_pointing_explain_fresh(
   if (bound) {
     return null;
   }
-  let cores = app_en_learn_bible_gloss_urdu_pointing_cores();
+  let cores = app_learn_en_gloss_urdu_pointing_cores();
   function core_not_is(part) {
     let said = list_includes_not(cores, part);
     return said;
