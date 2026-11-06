@@ -9,7 +9,7 @@ import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_rever
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { each } from "./each.mjs";
 import { property_set } from "./property_set.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_distinct(
+export async function app_learn_ceb_gloss_roots_claimed_unvouched_split_roots_distinct(
   piles,
   vouched,
   known,

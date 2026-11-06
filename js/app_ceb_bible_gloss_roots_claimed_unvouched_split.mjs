@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_distinct } from "./app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_distinct.mjs";
+import { app_learn_ceb_gloss_roots_claimed_unvouched_split_roots_distinct } from "./app_learn_ceb_gloss_roots_claimed_unvouched_split_roots_distinct.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
@@ -23,7 +23,7 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
   let vocabulary = await bible_words_written_lowered_set(bible_folder);
   let piles = {};
   let r =
-    await app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_distinct(
+    await app_learn_ceb_gloss_roots_claimed_unvouched_split_roots_distinct(
       piles,
       vouched,
       known,
