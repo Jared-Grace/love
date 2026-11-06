@@ -31,7 +31,7 @@ export async function app_learn_ceb_gloss_chapters_absent_gate_run() {
   let chapter_codes = property_get(walked, "chapter_codes");
   let any = list_empty_not_is(chapter_codes);
   if (any) {
-    let f_name = app_shared_name_prefixed("ceb_bible");
+    let f_name = app_shared_name_prefixed("learn_ceb");
     log_console(f_name);
   }
   let hint = text_combine_multiple([
