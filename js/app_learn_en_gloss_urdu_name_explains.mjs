@@ -2,7 +2,7 @@ import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_en_learn_bible_gloss_urdu_name_explains() {
+export function app_learn_en_gloss_urdu_name_explains() {
   "The wording every explanation of a Bible name is given in the store that teaches English to an Urdu reader, for the people and the places the passages call by name.";
   "A name is the one kind of word where the bare label costs the reader most. Told that a word is a proper noun, a beginner learns that it names somebody and is left not knowing who, and the whole of what the verse was saying about that somebody stays shut. So each wording says what sort of thing the name names, and then who or what it is, in a clause short enough to be read in passing.";
   "The name itself is not spelled again in the wording, and that is deliberate rather than an omission. Our Urdu spelling of the name is already standing beside it in the short Urdu written for the word, so a wording that spelled it again would be the same name written twice on one line in a reader's face, and two chances for the two spellings to drift apart when somebody rules that a name should be spelled differently.";
