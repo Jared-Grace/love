@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_generate_download } from "./app_learn_ceb_gloss_generate_download.mjs";
 import { app_shared_gloss_bible_home_generic } from "./app_shared_gloss_bible_home_generic.mjs";
-import { app_ceb_bible } from "./app_ceb_bible.mjs";
+import { app_learn_ceb } from "./app_learn_ceb.mjs";
 export async function app_learn_ceb_home(context) {
   "No recordings are handed in, so no speaker is drawn beside a word. Nothing has been recorded for these words yet; the day something is, the way to ask for one goes in here and the row starts showing it.";
   "No slower readings either, for the same reason and separately - the two arrive on their own days, and a language can have ordinary recordings for a good while before anybody has slowed them.";
@@ -13,7 +13,7 @@ export async function app_learn_ceb_home(context) {
     context,
     download,
     true,
-    app_ceb_bible,
+    app_learn_ceb,
     sound_url_get,
     slow_url_get,
   );

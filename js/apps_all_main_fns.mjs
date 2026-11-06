@@ -9,7 +9,7 @@ export function apps_all_main_fns() {
     fn_name("app_bible_sermons"),
     fn_name("app_calendar"),
     fn_name("app_calendar_paste"),
-    fn_name("app_ceb_bible"),
+    fn_name("app_learn_ceb"),
     fn_name("app_chapter_group"),
     fn_name("app_code"),
     fn_name("app_design"),

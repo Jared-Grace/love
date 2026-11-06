@@ -81,7 +81,7 @@ export function app_index_emojis() {
       emoji: emoji_books(),
     },
     {
-      app_fn: fn_name("app_ceb_bible"),
+      app_fn: fn_name("app_learn_ceb"),
       emoji: emoji_globe_americas(),
     },
     {

@@ -48,7 +48,7 @@ export function app_index_main_fns(about_opened) {
       category: languages,
     },
     {
-      app_fn: fn_name("app_ceb_bible"),
+      app_fn: fn_name("app_learn_ceb"),
       text: "Allows learning the language Cebuano by reading the Bible in Cebuano (with word definitions and explanations)",
       category: languages,
     },
