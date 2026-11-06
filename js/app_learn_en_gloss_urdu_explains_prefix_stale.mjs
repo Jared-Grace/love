@@ -1,5 +1,5 @@
 import { app_en_learn_bible_gloss_urdu_words_ranked } from "./app_en_learn_bible_gloss_urdu_words_ranked.mjs";
-import { app_en_learn_bible_gloss_urdu_settled_explains } from "./app_en_learn_bible_gloss_urdu_settled_explains.mjs";
+import { app_learn_en_gloss_urdu_settled_explains } from "./app_learn_en_gloss_urdu_settled_explains.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
@@ -12,7 +12,7 @@ export async function app_learn_en_gloss_urdu_explains_prefix_stale() {
   "Nothing is lost by that, because the retired list covers it from the other side. Writing a word down there retires its wording and, for an ordinary lowercase word, the capitalised form of that wording as well, derived rather than typed. So a round found by this test still sweeps up the capitalised copies it never reported. It shows as a sweep rewriting more entries than the prediction said: three more, the first time this was used, and that was the whole of the difference.";
   "The rows are what a round of retiring needs: the word, the wording to put on the superseded list, and the entry count to predict the sweep with. Predicting first and matching the delivered count afterwards is what proves the sweep touched everything it should have and nothing else.";
   let ranked = await app_en_learn_bible_gloss_urdu_words_ranked();
-  let settled = app_en_learn_bible_gloss_urdu_settled_explains();
+  let settled = app_learn_en_gloss_urdu_settled_explains();
   let rows = [];
   let entries = 0;
   for (let ranked_row of ranked.ranked) {

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_settled_explains } from "./app_en_learn_bible_gloss_urdu_settled_explains.mjs";
+import { app_learn_en_gloss_urdu_settled_explains } from "./app_learn_en_gloss_urdu_settled_explains.mjs";
 import { gloss_chapters_word_explains_set } from "./gloss_chapters_word_explains_set.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_table_wording_is } from "./app_en_learn_bible_gloss_urdu_table_wording_is.mjs";
@@ -10,7 +10,7 @@ export async function app_en_learn_bible_gloss_urdu_settled_wording_apply() {
   "Running it again when nothing is behind rewrites nothing, because the writer leaves an entry alone the moment it already carries its own word's wording. So it may be asked after any authoring, and the honest answer to 'is any of this stale' is to run it and read the count.";
   "Whether a wording may be written over is asked of the predicate rather than assumed here, the same way the shared-label sweep asks its own. That is the whole of the safety: an explanation written for the verse it sits in is not a settled wording, so it is never seen by this.";
   arguments_assert(arguments, 0);
-  let explains = app_en_learn_bible_gloss_urdu_settled_explains();
+  let explains = app_learn_en_gloss_urdu_settled_explains();
   let r = await gloss_chapters_word_explains_set(
     app_learn_en_gloss_urdu_generate,
     explains,
