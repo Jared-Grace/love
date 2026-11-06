@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_write_coverage } from "./app_ceb_bible_gloss_write_coverage.mjs";
+import { app_learn_ceb_gloss_write_coverage } from "./app_learn_ceb_gloss_write_coverage.mjs";
 import { app_ceb_bible_gloss_write_passage } from "./app_ceb_bible_gloss_write_passage.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
@@ -10,7 +10,7 @@ export async function app_ceb_bible_gloss_write_next(chapter_code) {
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to read and nothing that runs.";
   "It answers with how many passages are still waiting as well as with the one to write, so an author knows whether a chapter is nearly done without asking a second question, and a chapter that is finished says so rather than handing over nothing and leaving that to be read as a failure.";
-  let coverage = await app_ceb_bible_gloss_write_coverage(chapter_code);
+  let coverage = await app_learn_ceb_gloss_write_coverage(chapter_code);
   let missing = property_get(coverage, "missing");
   if (list_empty_is(missing)) {
     let finished = {
