@@ -1,6 +1,6 @@
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
-import { app_search_languages_matching } from "./app_search_languages_matching.mjs";
+import { app_bible_search_languages_matching } from "./app_bible_search_languages_matching.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_search_languages_unsearchable_show } from "./app_search_languages_unsearchable_show.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -15,7 +15,10 @@ export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
   let books = await app_shared_bible_read_books_en();
   let query = property_get(context, "query");
-  let matching = await app_search_languages_matching(languages_chosen, query);
+  let matching = await app_bible_search_languages_matching(
+    languages_chosen,
+    query,
+  );
   ("every word is fetched by now, so the page is cleared once here and everything below only adds to it - a second clear further down would wipe the note naming the languages that were not searched");
   html_clear(div_results);
   let unsearchable = app_search_languages_unsearchable_show(

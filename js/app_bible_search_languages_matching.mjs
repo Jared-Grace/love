@@ -9,7 +9,10 @@ import { language_code_key } from "./language_code_key.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_concat_unique } from "./list_concat_unique.mjs";
-export async function app_search_languages_matching(languages_chosen, query) {
+export async function app_bible_search_languages_matching(
+  languages_chosen,
+  query,
+) {
   "$plain languages_chosen";
   "$plain query";
   "Every chapter and verse matching a query in any of the languages the reader chose, with the words it was asked as and the words no language had.";
