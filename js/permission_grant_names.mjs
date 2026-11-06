@@ -2619,7 +2619,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_roots_split_families"),
     fn_name("bible_glyph_chapters_verse_marks_overdrawn_walked"),
     fn_name("app_en_learn_bible_gloss_urdu_write_file"),
-    fn_name("app_en_learn_bible_gloss_urdu_chapters_occurrence_claims_wrong"),
+    fn_name("app_learn_en_gloss_urdu_chapters_occurrence_claims_wrong"),
     fn_name("permission_grant_add_auto"),
     fn_name("bible_glyph_chapters_seat_split_redraw_was"),
     fn_name("lyric_video_document_pictures_copy_write"),
