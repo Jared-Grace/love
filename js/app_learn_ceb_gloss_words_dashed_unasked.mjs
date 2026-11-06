@@ -10,7 +10,7 @@ import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_written_lowered_set } from "./bible_words_written_lowered_set.mjs";
 import { set_includes } from "./set_includes.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_words_dashed_unasked() {
+export async function app_learn_ceb_gloss_words_dashed_unasked() {
   "The words holding a dash that the Cebuano gloss store explains and the dictionary has never once been asked about, and how many of them the translation writes standing alone.";
   "★ THE READING THAT ASKS ABOUT PIECES NOBODY WROTE IS THE SAME READING THAT NEVER ASKS ABOUT THE WHOLE WORD, AND ONLY THE FIRST HALF OF THAT HAD BEEN COUNTED. The queue finds its own list through a reader that cuts at every dash, so panan-awon reaches it as panan and awon and never as itself. Both halves get asked, the whole word never does, and the store ends up holding two answers about runs of letters this translation does not contain and none at all about the word it does.";
   "This is why the fix is not only a matter of asking less. A word counted here is an explanation the store carries that nothing outside it has ever checked, and no amount of dropping bad answers reaches one of them.";
