@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_named_derived_all } from "./app_ceb_bible_gloss_roots_named_derived_all.mjs";
+import { app_learn_ceb_gloss_roots_named_derived_all } from "./app_learn_ceb_gloss_roots_named_derived_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_words_written } from "./bible_words_written.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
@@ -19,7 +19,7 @@ export async function app_ceb_bible_gloss_roots_named_derived_written() {
   "That leaves 43 named roots and 528 entries where the translation never writes the named form alone, and 21 of those 43 name a deeper form it never writes alone either. Both halves of those 21 are pieces no reader of this bible ever meets. Reading them beside the words they were claimed for splits them in two, and it is not the split the count suggests: the four biggest, hibulong himuot hinumdum and pahimutang, are 100 of the 144 entries and are real stems this translation only ever writes with something attached, so they are correct and merely unwritten. The tail behind them is a different thing, the named form being a cut of the word rather than a root of it - gamhana taken from gamhanang, sagda from pasagdan, sabtan from nasabtan, imutang from nahimutangan, hitas from kahitas-an - and there the dictionary answering at all is itself a warning, because it answered galam for gamhana and hita for hitas, which are unrelated words that happen to be spelled near it.";
   "Nothing is asked of the site and nothing is written.";
   arguments_assert(arguments, 0);
-  let measured = await app_ceb_bible_gloss_roots_named_derived_all();
+  let measured = await app_learn_ceb_gloss_roots_named_derived_all();
   let listed = property_get(measured, "listed");
   let bible_folder = ebible_folder_cebuano();
   let written = await bible_words_written(bible_folder);

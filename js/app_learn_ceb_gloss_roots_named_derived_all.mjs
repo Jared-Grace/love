@@ -21,7 +21,7 @@ import { object_property_names } from "./object_property_names.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-export async function app_ceb_bible_gloss_roots_named_derived_all() {
+export async function app_learn_ceb_gloss_roots_named_derived_all() {
   "Every entry in the Cebuano gloss store naming a root that the dictionary on this disk says came from somewhere else, counted over the whole store rather than over the part of it that argues with itself, and gathered by the named root so a repeated habit shows as one row.";
   "★ EVERY READING BEFORE THIS ONE LOOKED ONLY WHERE THE STORE CONTRADICTED ITSELF, AND A HABIT DOES NOT CONTRADICT ANYTHING. The chain that found the causative pa being kept inside roots started from words given two different roots in two different chapters, so a word every chapter agrees about could not appear in it however wrong the agreement was. If every sentence naming pasalamat names pasalamat, there is no disagreement to notice and the fault is invisible. The 118 entries found that way were never the size of the fault.";
   "Nothing here needs the store to disagree with anybody. An entry is counted when the root it names is a word the dictionary has been asked about and answers with a source of its own, which shows the named form is derived whatever any other chapter said.";
