@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_search_language_word_download } from "./app_search_language_word_download.mjs";
+import { app_bible_search_language_word_download } from "./app_bible_search_language_word_download.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { catch_message_async } from "./catch_message_async.mjs";
 import { not } from "./not.mjs";
@@ -22,7 +22,10 @@ export async function app_bible_search_chapter_verses_matching(
   let words_unreachable = [];
   async function lambda(word) {
     async function get() {
-      let o = await app_search_language_word_download(language_code, word);
+      let o = await app_bible_search_language_word_download(
+        language_code,
+        word,
+      );
       return o;
     }
     ("the index keeps one file per word it has seen, so a word appearing nowhere has no file and the download fails; catch it and carry on, rather than letting one unknown word reject the whole search and leave a blank page");

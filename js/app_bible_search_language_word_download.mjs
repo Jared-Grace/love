@@ -4,7 +4,10 @@ import { equal } from "./equal.mjs";
 import { bible_search_word_key } from "./bible_search_word_key.mjs";
 import { bible_search_word_download } from "./bible_search_word_download.mjs";
 import { bible_search_language_word_download } from "./bible_search_language_word_download.mjs";
-export async function app_search_language_word_download(language_code, word) {
+export async function app_bible_search_language_word_download(
+  language_code,
+  word,
+) {
   "$plain language_code";
   "$plain word";
   "The chapters and verses holding one word in one language's index. English sits where it always has, at the top of the index folder; every other language sits under its own code.";
