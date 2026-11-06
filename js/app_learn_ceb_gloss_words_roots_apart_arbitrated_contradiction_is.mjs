@@ -6,7 +6,7 @@ import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { app_ceb_bible_gloss_words_roots_apart_arbitrated_row_arbitrated } from "./app_ceb_bible_gloss_words_roots_apart_arbitrated_row_arbitrated.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_equals } from "./property_equals.mjs";
-export async function app_ceb_bible_gloss_words_roots_apart_arbitrated_contradiction_is(
+export async function app_learn_ceb_gloss_words_roots_apart_arbitrated_contradiction_is(
   apart,
 ) {
   "Reads the dictionary once and settles every word the chapters gave two roots, then hands back the settled rows together with the three tests that pick out the ones held apart by depth, by a shared form, and by a real contradiction - the tests travel with the rows so a caller cannot sort them by a word spelt differently from the one the verdict was written under.";
