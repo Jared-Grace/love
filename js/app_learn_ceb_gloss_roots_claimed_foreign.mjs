@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_vocabularies } from "./app_ceb_bible_gloss_vocabularies.mjs";
+import { app_learn_ceb_gloss_vocabularies } from "./app_learn_ceb_gloss_vocabularies.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_vocabularies_word_met_is } from "./gloss_vocabularies_word_met_is.mjs";
 import { add } from "./add.mjs";
@@ -18,7 +18,7 @@ export async function app_learn_ceb_gloss_roots_claimed_foreign() {
   "Nothing is written and nothing is asked of the site.";
   "The two vocabularies are read before the store is walked rather than after, because the walk now carries the reading with it and a reading cannot ask a vocabulary that has not arrived. They are asked for as one pair and put to a root by the one test written over that pair, so the two readings that ask the same question of the same two vocabularies now ask it in the same words rather than in two shapes that have to be compared to be seen as the same.";
   arguments_assert(arguments, 0);
-  let vocabularies = await app_ceb_bible_gloss_vocabularies();
+  let vocabularies = await app_learn_ceb_gloss_vocabularies();
   let listed = [];
   let foreign_sightings = 0;
   function root_read(row) {

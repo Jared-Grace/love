@@ -3,7 +3,7 @@ import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
-export async function app_ceb_bible_gloss_vocabularies() {
+export async function app_learn_ceb_gloss_vocabularies() {
   "The two vocabularies a Cebuano root is put to before anybody calls it foreign, read together and handed over as one thing: every word the Cebuano bible writes in small letters, as a set to ask membership of, and every word the dictionary on this disk has an entry for.";
   "Three readings each open with these same four lines in this same order, and each of them says in its own prose why there are two of them rather than one. The bible's own words are asked because a root that is a word of the language will normally stand somewhere in sixty-six books; the dictionary is asked because a bound root need never stand alone and the first test on its own would accuse it wrongly. An English pronoun is in neither, and that is the whole of what these two together can say.";
   ("★ THE PAIR IS HANDED OVER WHOLE AND THE TEST OVER IT IS ",
