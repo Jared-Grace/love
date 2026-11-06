@@ -2,7 +2,7 @@ import { app_learn_ceb_gloss_roots_silence_causes_classes_read } from "./app_lea
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_silence_causes(sample_size) {
+export async function app_learn_ceb_gloss_roots_silence_causes(sample_size) {
   "The disagreements the dictionary said nothing about, split by why it said nothing, with the ones already answerable on this machine listed out.";
   "Four fifths of the sightings gathered end in silence, and a pile that size gets read as one thing and planned for as one thing. It is not one thing. Roughly half of it is words the dictionary has never been asked about, which closes by going and asking. Roughly the other half is words it holds and carries no breakdown of, which never closes that way at all - asking a second time fetches the same page. A plan made from the total alone spends half its effort where no effort can land.";
   "The smallest of the three is the one to act on first and the only one costing nothing. Those are words the dictionary does hold, under one of the two spellings Cebuano gives a sound, and was asked in the other. The answer is already on the machine, so they are listed out here rather than counted, commonest first.";
