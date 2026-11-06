@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-import { app_ceb_bible_gloss_roots_silence_causes_reachable_now } from "./app_ceb_bible_gloss_roots_silence_causes_reachable_now.mjs";
+import { app_learn_ceb_gloss_roots_silence_causes_reachable_now } from "./app_learn_ceb_gloss_roots_silence_causes_reachable_now.mjs";
 export function app_ceb_bible_gloss_roots_silence_causes_sightings(
   classes,
   known,
@@ -31,7 +31,7 @@ export function app_ceb_bible_gloss_roots_silence_causes_sightings(
   }
   each(silent, sighting_add);
   let by_cause = {};
-  let r2 = app_ceb_bible_gloss_roots_silence_causes_reachable_now(
+  let r2 = app_learn_ceb_gloss_roots_silence_causes_reachable_now(
     known,
     folded_index,
     by_cause,

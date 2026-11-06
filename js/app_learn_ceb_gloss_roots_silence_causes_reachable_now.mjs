@@ -12,7 +12,7 @@ import { object_property_names } from "./object_property_names.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_class_count } from "./gloss_class_count.mjs";
-export function app_ceb_bible_gloss_roots_silence_causes_reachable_now(
+export function app_learn_ceb_gloss_roots_silence_causes_reachable_now(
   known,
   folded_index,
   by_cause,
