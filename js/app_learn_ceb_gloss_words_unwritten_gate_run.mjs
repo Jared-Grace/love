@@ -5,7 +5,7 @@ import { app_learn_ceb_gloss_words_unwritten_baseline_path } from "./app_learn_c
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 import { app_learn_ceb_gloss_gate_told_chapters } from "./app_learn_ceb_gloss_gate_told_chapters.mjs";
-export async function app_ceb_bible_gloss_words_unwritten_gate_run() {
+export async function app_learn_ceb_gloss_words_unwritten_gate_run() {
   "Gate: no Cebuano gloss word authored from here on may be a word the whole Cebuano translation never writes standing alone. Throws so the dispatcher seam exits nonzero.";
   "★ AN EXPLANATION IS PAINTED UNDER A WORD OF THE VERSE, SO A WORD NAMED HERE IS AN EXPLANATION THE READER FINDS NOTHING TO STAND ON. It is not a complaint about the language. Every explained word was supposed to have been taken out of the passage it sits under, so a word the translation never writes at all is a spelling that went wrong on the way in, or an explanation written about something the passage does not say.";
   "The witness is the translation, which the gloss pipeline did not produce - that is the only reason an answer from it settles anything. Asking the store whether it knows a word it invented is circular; the translation was written by somebody else and covers sixty-six books.";
