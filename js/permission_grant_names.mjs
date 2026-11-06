@@ -1169,7 +1169,7 @@ export function permission_grant_names() {
     fn_name("app_replace_rule_set_verify_all"),
     fn_name("app_learn_ceb_gloss_root_explains"),
     fn_name("daemons_stale"),
-    fn_name("app_ceb_bible_gloss_words_owed_gather"),
+    fn_name("app_learn_ceb_gloss_words_owed_gather"),
     fn_name("functions_arity_baseline_path"),
     fn_name("g_tiles_window_axis_cases_gate_run"),
     fn_name("binisaya_words_known"),
