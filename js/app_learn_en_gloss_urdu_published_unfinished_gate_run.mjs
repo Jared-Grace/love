@@ -6,7 +6,7 @@ import { gloss_upload_namespace_en_learn_bible_urdu } from "./gloss_upload_names
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_chapters_offenders_assert } from "./gloss_chapters_offenders_assert.mjs";
-export async function app_en_learn_bible_gloss_urdu_published_unfinished_gate_run() {
+export async function app_learn_en_gloss_urdu_published_unfinished_gate_run() {
   "Gate: no chapter of English words explained in Urdu is published while passages in it are still unexplained. Throws so the dispatcher seam exits nonzero.";
   "This app offers a reader exactly the chapters it has published, and it offers each one whole. A chapter carried up early is therefore a chapter the reader opens and reads until the explanations stop, with nothing anywhere saying they were never written - so the one person who can see the fault is the one person who cannot report it.";
   "It is the mirror of the unpublished gate beside it. That one catches work that was finished and never arrived; this one catches work that arrived before it was finished. Neither could see the other's fault, because each reads only one side of the same pair of lists.";
