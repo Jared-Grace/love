@@ -16,9 +16,7 @@ export async function app_en_learn_bible_gloss_urdu_write_finished(
   let published_codes = await app_en_learn_bible_gloss_urdu_chapters_uploaded();
   let published = list_includes(published_codes, chapter_code);
   let waiting = not(published);
-  let upload_name = fn_name(
-    "app_en_learn_bible_gloss_urdu_chapter_upload_stored",
-  );
+  let upload_name = fn_name("app_learn_en_gloss_urdu_chapter_upload_stored");
   let publish_with = ternary(waiting, upload_name, null);
   let r = {
     chapter_code,

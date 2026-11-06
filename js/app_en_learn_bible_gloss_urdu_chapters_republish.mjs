@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_republish_generic } from "./gloss_chapters_republish_generic.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_chapters_uploaded } from "./app_en_learn_bible_gloss_urdu_chapters_uploaded.mjs";
-import { app_en_learn_bible_gloss_urdu_chapter_upload_stored } from "./app_en_learn_bible_gloss_urdu_chapter_upload_stored.mjs";
+import { app_learn_en_gloss_urdu_chapter_upload_stored } from "./app_learn_en_gloss_urdu_chapter_upload_stored.mjs";
 export async function app_en_learn_bible_gloss_urdu_chapters_republish() {
   "Carry up again every chapter of English words explained in Urdu that a reader can already reach and that has been changed since it was last sent, so that what is in front of them is what the store says today.";
   "That is how the welded Urdu spellings stayed in front of readers after the store was put right, which is why this was the first of the three stores to get such a command.";
@@ -15,7 +15,7 @@ export async function app_en_learn_bible_gloss_urdu_chapters_republish() {
   let r = await gloss_chapters_republish_generic(
     app_en_learn_bible_gloss_urdu_generate,
     app_en_learn_bible_gloss_urdu_chapters_uploaded,
-    app_en_learn_bible_gloss_urdu_chapter_upload_stored,
+    app_learn_en_gloss_urdu_chapter_upload_stored,
   );
   return r;
 }
