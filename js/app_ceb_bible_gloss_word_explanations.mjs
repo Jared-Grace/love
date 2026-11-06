@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_disagreeing } from "./app_ceb_bible_gloss_roots_disagreeing.mjs";
+import { app_learn_ceb_gloss_roots_disagreeing } from "./app_learn_ceb_gloss_roots_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_offenders_word_explanations } from "./gloss_offenders_word_explanations.mjs";
 import { list_size } from "./list_size.mjs";
@@ -10,7 +10,7 @@ export async function app_ceb_bible_gloss_word_explanations(word) {
   "$plain word";
   "the word to gather, as it is spelled anywhere it appears. It names nothing that runs.";
   arguments_assert(arguments, 1);
-  let disagreeing = await app_ceb_bible_gloss_roots_disagreeing();
+  let disagreeing = await app_learn_ceb_gloss_roots_disagreeing();
   let offenders = property_get(disagreeing, "offenders");
   let wordings = gloss_offenders_word_explanations(offenders, word);
   let wordings_total = list_size(wordings);

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_disagreeing } from "./app_ceb_bible_gloss_roots_disagreeing.mjs";
+import { app_learn_ceb_gloss_roots_disagreeing } from "./app_learn_ceb_gloss_roots_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_offenders_names_candidates } from "./gloss_offenders_names_candidates.mjs";
 import { list_size } from "./list_size.mjs";
@@ -12,7 +12,7 @@ export async function app_learn_ceb_gloss_names_candidates() {
   "Read the declared column first. Where it is true the app's own sentence says the word is a name and says which word, so nothing else can have been meant and the row is proof. Where it is false the row is a candidate and not a verdict, because a word that opens every line it appears in is capitalised every time too.";
   "The silent column says how many of the sightings never reached the queue of words explained two ways, because the explanation named no root at all. Those are the ones nothing else in this app is looking at.";
   arguments_assert(arguments, 0);
-  let disagreeing = await app_ceb_bible_gloss_roots_disagreeing();
+  let disagreeing = await app_learn_ceb_gloss_roots_disagreeing();
   let offenders = property_get(disagreeing, "offenders");
   let consulted = property_get(disagreeing, "consulted");
   let candidates = gloss_offenders_names_candidates(offenders);

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_disagreeing } from "./app_ceb_bible_gloss_roots_disagreeing.mjs";
+import { app_learn_ceb_gloss_roots_disagreeing } from "./app_learn_ceb_gloss_roots_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_offenders_roots_silent_words } from "./gloss_offenders_roots_silent_words.mjs";
 import { app_ceb_bible_gloss_words_rows_names_apart } from "./app_ceb_bible_gloss_words_rows_names_apart.mjs";
@@ -10,7 +10,7 @@ export async function app_learn_ceb_gloss_names_filter_checked() {
   "This reads them. The evidence it reads them with is authored rather than counted: an explanation that says the word is a name, and names which word. Where the two agree the row is settled twice over; where they disagree the row is worth a person's minute.";
   "Silence proves nothing here, and the unproven list is the larger one for that reason alone - most explanations of a name never use the word name. So the proven count is a floor on how much of the removal is sound, never a verdict on the rest.";
   arguments_assert(arguments, 0);
-  let disagreeing = await app_ceb_bible_gloss_roots_disagreeing();
+  let disagreeing = await app_learn_ceb_gloss_roots_disagreeing();
   let offenders = property_get(disagreeing, "offenders");
   let consulted = property_get(disagreeing, "consulted");
   let silent_words = gloss_offenders_roots_silent_words(offenders);
