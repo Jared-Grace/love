@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_word_sound_key } from "./gloss_word_sound_key.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_en_learn_bible_gloss_urdu_words } from "./app_en_learn_bible_gloss_urdu_words.mjs";
+import { app_learn_en_gloss_urdu_words } from "./app_learn_en_gloss_urdu_words.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -34,7 +34,7 @@ export async function app_learn_en_gloss_urdu_words_sound_unwritten() {
     let key = gloss_word_sound_key(word);
     property_set(keys, key, true);
   }
-  let found = await app_en_learn_bible_gloss_urdu_words();
+  let found = await app_learn_en_gloss_urdu_words();
   let authored = property_get(found, "words");
   each(authored, word_each);
   let bible_folder = ebible_folder_english();

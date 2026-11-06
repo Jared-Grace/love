@@ -2,7 +2,7 @@ import { properties_size } from "./properties_size.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_words } from "./app_en_learn_bible_gloss_urdu_words.mjs";
+import { app_learn_en_gloss_urdu_words } from "./app_learn_en_gloss_urdu_words.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_word_sound_key } from "./gloss_word_sound_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -24,7 +24,7 @@ export async function app_learn_en_gloss_urdu_words_sound_keys_gate_run() {
   ("★ IT IS ASKED OVER THE STORE RATHER THAN OVER A LIST, WHICH IS WHY IT KEEPS ANSWERING. Words arrive here by somebody authoring a chapter, so a list of words checked once is a list about the chapters that existed the day it was written. Reading the store means the chapter authored tomorrow is inside the question from the moment it is stored, and nobody has to remember this gate exists.");
   ("How many words were read travels out with the verdict, because finding no clash and reading no words at all are otherwise the same answer - and this store sits outside the repo, which is the ordinary way a sweep here stops reaching anything.");
   arguments_assert(arguments, 0);
-  let found = await app_en_learn_bible_gloss_urdu_words();
+  let found = await app_learn_en_gloss_urdu_words();
   let words = property_get(found, "words");
   let by_key = {};
   function word_each(word) {

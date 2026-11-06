@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_en_learn_bible_gloss_urdu_words } from "./app_en_learn_bible_gloss_urdu_words.mjs";
+import { app_learn_en_gloss_urdu_words } from "./app_learn_en_gloss_urdu_words.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_en_gloss_urdu_words_sound } from "./app_learn_en_gloss_urdu_words_sound.mjs";
 import { gloss_word_sound_voices } from "./gloss_word_sound_voices.mjs";
@@ -13,7 +13,7 @@ export async function app_learn_en_gloss_urdu_words_sound_write() {
   "★ THE RECORDINGS ARE MADE HERE AND NOT IN THE VOICE THE CHAPTERS ARE READ IN, WHICH USED TO BE THE WHOLE POINT OF MAKING THEM. The old reasoning was that a reader who taps a word and then hears the chapter should hear the same person, and that reasoning is now outvoted by a better one: a learner who only ever hears one mouth has learned that mouth rather than the word. So a word is said by four different people in turn, and the chapters go on being read by whoever reads them.";
   "It reports one line per voice rather than one number, because a run that stopped after the second voice and a run that had nothing to do are otherwise the same answer.";
   arguments_assert(arguments, 0);
-  let found = await app_en_learn_bible_gloss_urdu_words();
+  let found = await app_learn_en_gloss_urdu_words();
   let words = property_get(found, "words");
   let sound_fn = app_learn_en_gloss_urdu_words_sound;
   let voices = gloss_word_sound_voices();
