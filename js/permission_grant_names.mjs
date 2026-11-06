@@ -1087,7 +1087,7 @@ export function permission_grant_names() {
     fn_name("ebible_version_download"),
     fn_name("app_learn_ceb_gloss_word_explains_apply"),
     fn_name("app_ceb_bible_gloss_write_coverage"),
-    fn_name("app_ceb_bible_gloss_write_coverage_all"),
+    fn_name("app_learn_ceb_gloss_write_coverage_all"),
     fn_name("g_sermon_scripture_key_migrate"),
     fn_name("g_sermon_bible_store_convert"),
     fn_name("app_learn_original_gloss_write_coverage_all"),
