@@ -2,7 +2,7 @@ import { app_learn_en_gloss_urdu_passages } from "./app_learn_en_gloss_urdu_pass
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
 import { gloss_passage_words_text_first } from "./gloss_passage_words_text_first.mjs";
 import { gloss_write_file_misaligned_assert_generic } from "./gloss_write_file_misaligned_assert_generic.mjs";
-export async function app_en_learn_bible_gloss_urdu_write_file_misaligned_assert(
+export async function app_learn_en_gloss_urdu_write_file_misaligned_assert(
   chapter_code,
   verse_key,
 ) {
