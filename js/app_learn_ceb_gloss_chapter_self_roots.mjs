@@ -2,7 +2,7 @@ import { gloss_chapter_found_counted } from "./gloss_chapter_found_counted.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
 import { gloss_entries_self_roots } from "./gloss_entries_self_roots.mjs";
-export async function app_ceb_bible_gloss_chapter_self_roots(chapter_code) {
+export async function app_learn_ceb_gloss_chapter_self_roots(chapter_code) {
   "Every Cebuano explanation in one chapter that gives its own word as the root it is built from.";
   "$plain chapter_code";
   "the code is a chapter's name, like PRO22, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
