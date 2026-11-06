@@ -9,7 +9,7 @@ import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { gloss_roots_pair_dictionary_verdict } from "./gloss_roots_pair_dictionary_verdict.mjs";
-export function app_ceb_bible_gloss_words_roots_apart_arbitrated_row_arbitrated(
+export function app_learn_ceb_gloss_words_roots_apart_arbitrated_row_arbitrated(
   known,
   folded_index,
   root_folded,

@@ -3,7 +3,7 @@ import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_folded_index } from "./binisaya_words_known_folded_index.mjs";
 import { gloss_word_bare } from "./gloss_word_bare.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { app_ceb_bible_gloss_words_roots_apart_arbitrated_row_arbitrated } from "./app_ceb_bible_gloss_words_roots_apart_arbitrated_row_arbitrated.mjs";
+import { app_learn_ceb_gloss_words_roots_apart_arbitrated_row_arbitrated } from "./app_learn_ceb_gloss_words_roots_apart_arbitrated_row_arbitrated.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_equals } from "./property_equals.mjs";
 export async function app_learn_ceb_gloss_words_roots_apart_arbitrated_contradiction_is(
@@ -19,7 +19,7 @@ export async function app_learn_ceb_gloss_words_roots_apart_arbitrated_contradic
     return folded;
   }
   let row_arbitrated =
-    app_ceb_bible_gloss_words_roots_apart_arbitrated_row_arbitrated(
+    app_learn_ceb_gloss_words_roots_apart_arbitrated_row_arbitrated(
       known,
       folded_index,
       root_folded,
