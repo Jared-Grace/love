@@ -10,7 +10,7 @@ import { property_count_add } from "./property_count_add.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_roots_store_claim_derived_proven() {
+export async function app_learn_ceb_gloss_roots_store_claim_derived_proven() {
   "The outvoted claims where the root the Cebuano gloss store named is itself a word the dictionary says came from somewhere else - so the store handed a reader an affixed form as though it were a root, proven without anybody reading the sentence.";
   "★ THE PILE LEFT FOR A PERSON WAS NEVER ALL JUDGMENT AND NOBODY HAD CHECKED WHICH PART OF IT WAS. The same test that showed the dictionary stopping a step short works the other way round and is stronger there. Asked about the dictionary it found a source being incomplete, which is allowed. Asked about the store it finds a sentence naming as a root a word that is not one, which is the single thing these explanations exist to prevent - a reader is told where a word comes from and handed a form it does not come from.";
   "A claim is only counted when the dictionary has actually been asked about the named root and gives it a source of its own. Silence proves nothing either way and is left alone; a dictionary calling the named root its own root agrees with the store and is left alone too.";
