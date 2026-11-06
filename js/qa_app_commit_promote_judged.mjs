@@ -15,6 +15,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { json_equal } from "./json_equal.mjs";
+import { qa_app_e2e_happy_public_run } from "./qa_app_e2e_happy_public_run.mjs";
 import { app_shared_name_latest_text } from "./app_shared_name_latest_text.mjs";
 import { qa_app_e2e_happy_run } from "./qa_app_e2e_happy_run.mjs";
 import { qa_stage_pieces_changed } from "./qa_stage_pieces_changed.mjs";
@@ -82,11 +83,19 @@ export async function qa_app_commit_promote_judged(search, commit) {
     let unchanged = json_equal(sent, hashes);
     async function walk_then_move_up() {
       if (not(unchanged)) {
-        let stage_name = app_shared_name_latest_text();
-        await function_call_timed_add(steps, qa_app_e2e_happy_run, [
-          app_name,
-          stage_name,
-        ]);
+        ("The walk is taken at the address the public opens, with the latest build routed in, because a page decides what it shows by its address and the walk is there to protect what the public gets. An app with no walk of that kind is walked under latest as before.");
+        let walked_public = await function_call_timed_add(
+          steps,
+          qa_app_e2e_happy_public_run,
+          [app_name],
+        );
+        if (null_is(walked_public)) {
+          let stage_name = app_shared_name_latest_text();
+          await function_call_timed_add(steps, qa_app_e2e_happy_run, [
+            app_name,
+            stage_name,
+          ]);
+        }
       }
       ("★ THE FILES ARE READ AGAIN BEFORE THEY MOVE UP. The note made after this would describe the build held in memory, so files replaced during the walk would move up, stand in the folder every send reads from, and refuse every app's send. Refused here, the folder people are served from has not been touched. That happened twice on 2026-11-05, once after five hours.");
       let changed = await qa_stage_pieces_changed(hashes);

@@ -10,6 +10,7 @@ import { reply_case_real_or_null } from "./reply_case_real_or_null.mjs";
 import { reply_case_approval } from "./reply_case_approval.mjs";
 import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
 import { reply_proposal_changed_approval } from "./reply_proposal_changed_approval.mjs";
+import { reply_proposal_cases_wrong } from "./reply_proposal_cases_wrong.mjs";
 import { list_add } from "./list_add.mjs";
 import { reply_cases_no_reply_yet_shown } from "./reply_cases_no_reply_yet_shown.mjs";
 export async function app_message_reply_proposals_shown() {
@@ -72,6 +73,7 @@ export async function app_message_reply_proposals_shown() {
       whole: property_get(drawn, "whole"),
       decide: property_get(proposal, "decide"),
       cases: joined,
+      wrong: await reply_proposal_cases_wrong(title),
     };
     return carried;
   }

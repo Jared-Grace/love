@@ -8,6 +8,7 @@ import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_reply_rules_case_approve_show } from "./app_reply_rules_case_approve_show.mjs";
 import { list_map } from "./list_map.mjs";
+import { app_reply_rules_cases_wrong_show } from "./app_reply_rules_cases_wrong_show.mjs";
 import { app_reply_rules_cases_approved_show } from "./app_reply_rules_cases_approved_show.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_reply_rules_file_outstanding_is } from "./app_reply_rules_file_outstanding_is.mjs";
@@ -52,6 +53,8 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
     app_reply_rules_case_approve_show(block, one, approvals);
   }
   list_map(cases, each_case);
+  let wrong = property_get(proposal, "wrong");
+  app_reply_rules_cases_wrong_show(block, wrong);
   app_reply_rules_cases_approved_show(block, cases, approvals);
   let f_name = property_get(proposal, "fn");
   let lines = property_get(proposal, "lines");
