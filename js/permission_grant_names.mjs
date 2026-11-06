@@ -1061,7 +1061,7 @@ export function permission_grant_names() {
     fn_name("app_ceb_bible_gloss_punctuation_entries_repair"),
     fn_name("qa_gates_machine_names"),
     fn_name("app_ceb_bible_gloss_generate_upload"),
-    fn_name("app_ceb_bible_gloss_generate_download"),
+    fn_name("app_learn_ceb_gloss_generate_download"),
     fn_name("ebible_bibles_answered_assert"),
     fn_name("ebible_version_readaloud_download"),
     fn_name("app_ceb_bible_gloss_words_respell"),
