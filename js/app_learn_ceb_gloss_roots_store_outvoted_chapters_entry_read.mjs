@@ -5,7 +5,7 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_ceb_bible_gloss_roots_store_outvoted_chapters_entry_read(
+export function app_learn_ceb_gloss_roots_store_outvoted_chapters_entry_read(
   word_key,
   said,
 ) {
