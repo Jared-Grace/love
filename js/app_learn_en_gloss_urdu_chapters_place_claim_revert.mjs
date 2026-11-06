@@ -6,7 +6,7 @@ import { list_map_async } from "./list_map_async.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_en_learn_bible_gloss_urdu_chapters_place_claim_revert(
+export async function app_learn_en_gloss_urdu_chapters_place_claim_revert(
   backup_folder,
 ) {
   "Runs the place-claim revert over every chapter the Urdu gloss store holds, and answers with how many chapters were read, how many explanations went back, and which words they were on.";
