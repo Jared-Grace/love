@@ -1,5 +1,5 @@
 import { app_ceb_bible_gloss_affix_letters_apart } from "./app_ceb_bible_gloss_affix_letters_apart.mjs";
-import { app_ceb_bible_gloss_affix_letters_apart_baseline_growth_assert } from "./app_ceb_bible_gloss_affix_letters_apart_baseline_growth_assert.mjs";
+import { app_learn_ceb_gloss_affix_letters_apart_baseline_growth_assert } from "./app_learn_ceb_gloss_affix_letters_apart_baseline_growth_assert.mjs";
 import { app_ceb_bible_gloss_affix_letters_apart_baseline_path } from "./app_ceb_bible_gloss_affix_letters_apart_baseline_path.mjs";
 import { app_ceb_bible_gloss_stored_is } from "./app_ceb_bible_gloss_stored_is.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -13,7 +13,7 @@ export async function app_ceb_bible_gloss_affix_letters_apart_baseline_write() {
     stored,
   });
   let known = await app_ceb_bible_gloss_affix_letters_apart();
-  await app_ceb_bible_gloss_affix_letters_apart_baseline_growth_assert(known);
+  await app_learn_ceb_gloss_affix_letters_apart_baseline_growth_assert(known);
   let path = app_ceb_bible_gloss_affix_letters_apart_baseline_path();
   let r = await baseline_known_write(known, path);
   return r;
