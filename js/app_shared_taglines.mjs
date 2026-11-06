@@ -10,7 +10,7 @@ export function app_shared_taglines() {
     search: "find a word anywhere in the Bible",
     learn_original:
       "every word explained in English, with the number to look it up by",
-    ceb_bible: "every word explained, with the root it comes from",
+    learn_ceb: "every word explained, with the root it comes from",
     en_learn_bible:
       "a verse in your own language, then in English with every word explained",
     verses: "encouraging Bible verses to share",
