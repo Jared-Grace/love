@@ -33,7 +33,7 @@ import { app_shared_dev_stamp_path } from "./app_shared_dev_stamp_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_delete } from "./file_delete.mjs";
 import { app_shared_renames_path } from "./app_shared_renames_path.mjs";
-import { app_route } from "./app_route.mjs";
+import { app_shared_route } from "./app_shared_route.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function app_shared_rename(a_name_before, a_name_after) {
   "$plain a_name_before";
@@ -123,7 +123,7 @@ export async function app_shared_rename(a_name_before, a_name_after) {
   }
   let renames_path = app_shared_renames_path();
   let renames = await file_read_json(renames_path);
-  let source = app_route(a_name_before);
+  let source = app_shared_route(a_name_before);
   list_add(renames, {
     before: a_name_before,
     after: a_name_after,
