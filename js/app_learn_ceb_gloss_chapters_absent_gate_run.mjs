@@ -1,6 +1,6 @@
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_chapters_absent } from "./app_ceb_bible_gloss_chapters_absent.mjs";
+import { app_learn_ceb_gloss_chapters_absent } from "./app_learn_ceb_gloss_chapters_absent.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_shared_name_prefixed } from "./app_shared_name_prefixed.mjs";
@@ -25,7 +25,7 @@ export async function app_learn_ceb_gloss_chapters_absent_gate_run() {
     };
     return skipped;
   }
-  let walked = await app_ceb_bible_gloss_chapters_absent();
+  let walked = await app_learn_ceb_gloss_chapters_absent();
   let chapters = property_get(walked, "chapters");
   let absent = property_get(walked, "absent");
   let chapter_codes = property_get(walked, "chapter_codes");
