@@ -6,7 +6,7 @@ import { list_size } from "./list_size.mjs";
 import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-export async function app_ceb_bible_gloss_names_candidates() {
+export async function app_learn_ceb_gloss_names_candidates() {
   "The proper names hiding in the Cebuano app's findings, commonest first: every word written with a capital everywhere it appears, the root the dictionary handed back for it, and whether the app itself already said in so many words that the word is a name.";
   "Most of these findings are not faults at all. A name has no Cebuano root, so the dictionary answers a question nobody asked and hands back whatever it can reach - Moises fetching isi, Galilea fetching lili, Gideon fetching dili, which means not. Left alone they sit in the pile forever, because no amount of reading the explanation can settle them: the explanation was right. What settles them is somebody marking the word a name, once, and that mark being kept.";
   "Read the declared column first. Where it is true the app's own sentence says the word is a name and says which word, so nothing else can have been meant and the row is proof. Where it is false the row is a candidate and not a verdict, because a word that opens every line it appears in is capitalised every time too.";
