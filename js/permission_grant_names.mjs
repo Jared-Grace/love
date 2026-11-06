@@ -1058,7 +1058,7 @@ export function permission_grant_names() {
     fn_name("claude_bash_labels_report"),
     fn_name("local_function_folder"),
     fn_name("claude_bash_commands_labelled"),
-    fn_name("app_ceb_bible_gloss_punctuation_entries_repair"),
+    fn_name("app_learn_ceb_gloss_punctuation_entries_repair"),
     fn_name("qa_gates_machine_names"),
     fn_name("app_learn_ceb_gloss_generate_upload"),
     fn_name("app_learn_ceb_gloss_generate_download"),
