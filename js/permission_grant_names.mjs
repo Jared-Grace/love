@@ -2626,7 +2626,7 @@ export function permission_grant_names() {
     fn_name("app_en_learn_bible_gloss_tagalog_book_claim_next"),
     fn_name("app_en_learn_bible_gloss_urdu_spelling_claim_gate_run"),
     fn_name("app_en_learn_bible_gloss_urdu_occurrence_claim_rule_gate_run"),
-    fn_name("app_ceb_bible_gloss_affix_kinds_wrong_gate_run"),
+    fn_name("app_learn_ceb_gloss_affix_kinds_wrong_gate_run"),
     fn_name("app_ceb_bible_gloss_published_unfinished_gate_run"),
     fn_name("app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run"),
     fn_name("app_ceb_bible_gloss_verse_claims_wrong_gate_run"),
