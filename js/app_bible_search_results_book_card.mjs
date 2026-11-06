@@ -11,7 +11,7 @@ import { not } from "./not.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_search_results_book_card(
+export function app_bible_search_results_book_card(
   book_code,
   {
     book_current,

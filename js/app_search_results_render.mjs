@@ -4,7 +4,7 @@ import { property_set } from "./property_set.mjs";
 import { app_shared_folds } from "./app_shared_folds.mjs";
 import { app_bible_search_results_bible_order_key } from "./app_bible_search_results_bible_order_key.mjs";
 import { app_search_results_division_card } from "./app_search_results_division_card.mjs";
-import { app_search_results_book_card } from "./app_search_results_book_card.mjs";
+import { app_bible_search_results_book_card } from "./app_bible_search_results_book_card.mjs";
 import { app_search_results_chapter_card } from "./app_search_results_chapter_card.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_sort_text_mapper } from "./list_sort_text_mapper.mjs";
@@ -54,7 +54,7 @@ export function app_search_results_render(
     return r5;
   }
   function book_card_add(book_code) {
-    let r2 = app_search_results_book_card(book_code, {
+    let r2 = app_bible_search_results_book_card(book_code, {
       book_current,
       book_group_div,
       books,
