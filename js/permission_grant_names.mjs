@@ -1346,7 +1346,7 @@ export function permission_grant_names() {
     fn_name("claude_sessions_folder"),
     fn_name("git_push_urls_expected"),
     fn_name("git_push_auto_seconds"),
-    fn_name("app_ceb_bible_gloss_new_testament_gather"),
+    fn_name("app_learn_ceb_gloss_new_testament_gather"),
     fn_name("workspace_shortcuts_ensure"),
     fn_name("git_history_paths_drop_rehearse"),
     fn_name("g_sermon_stores_passages"),

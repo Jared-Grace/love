@@ -4,7 +4,7 @@ import { app_learn_ceb_gloss_book_gather } from "./app_learn_ceb_gloss_book_gath
 import { ebible_version_books_testament_new } from "./ebible_version_books_testament_new.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { each_async } from "./each_async.mjs";
-export async function app_ceb_bible_gloss_new_testament_gather() {
+export async function app_learn_ceb_gloss_new_testament_gather() {
   "Ask the dictionary about every Cebuano word the New Testament is written with and does not yet hold, a book at a time, in the order the books stand.";
   "It finds its own books rather than being handed a list, so a book cannot be left out by being forgotten and the run cannot drift from what the bible actually holds. Running one book at a time by hand did the same work and left nothing behind that could say whether every book had been reached.";
   "This takes days, because each asking waits the time the site asks to be waited. Nothing is asked twice: a book whose words are all held already passes through at once, so a run stopped after two days and started again begins where it left off without being told where that was.";
