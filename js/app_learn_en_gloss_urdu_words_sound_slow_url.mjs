@@ -3,7 +3,7 @@ import { gloss_word_sound_path } from "./gloss_word_sound_path.mjs";
 import { app_learn_en_gloss_urdu_words_sound_slow_upload_path } from "./app_learn_en_gloss_urdu_words_sound_slow_upload_path.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { firebase_storage_url } from "./firebase_storage_url.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound_slow_version } from "./app_en_learn_bible_gloss_urdu_words_sound_slow_version.mjs";
+import { app_learn_en_gloss_urdu_words_sound_slow_version } from "./app_learn_en_gloss_urdu_words_sound_slow_version.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_learn_en_gloss_urdu_words_sound_slow_url(word, voice) {
   "$plain word";
@@ -17,7 +17,7 @@ export function app_learn_en_gloss_urdu_words_sound_slow_url(word, voice) {
     app_learn_en_gloss_urdu_words_sound_slow_upload_path(file_name);
   let project_url = firebase_storage_url_project_jg();
   let url = firebase_storage_url(destination, project_url);
-  let stamp = app_en_learn_bible_gloss_urdu_words_sound_slow_version();
+  let stamp = app_learn_en_gloss_urdu_words_sound_slow_version();
   let stamped = text_combine_multiple([url, "&v=", stamp]);
   return stamped;
 }

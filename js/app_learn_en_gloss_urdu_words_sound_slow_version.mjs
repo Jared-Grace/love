@@ -1,6 +1,6 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_en_learn_bible_gloss_urdu_words_sound_slow_version() {
+export function app_learn_en_gloss_urdu_words_sound_slow_version() {
   function_duplicate_kind_parallel();
   ("The stamp carried on the end of every slow reading's address, changed by hand whenever the slow readings are sent up to storage again.");
   ("★ IT IS ITS OWN STAMP RATHER THAN THE ORDINARY RECORDINGS' ONE, BECAUSE THE TWO SETS ARE REMADE FOR DIFFERENT REASONS. A voice is recorded again when the way it says a vowel is wrong; the slow readings are made again when the way of slowing is wrong. Sharing a stamp would make every phone fetch sixteen hundred ordinary recordings again to hear one change to the slowing, and fetch sixteen hundred slow readings again to hear one word respoken - on the slow connections this app is for, that is the difference between a change arriving and a change not being worth making.");
