@@ -1,6 +1,6 @@
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { gloss_repairs_word_write_generic } from "./gloss_repairs_word_write_generic.mjs";
-export async function app_ceb_bible_gloss_repairs_word_write(word, explain) {
+export async function app_learn_ceb_gloss_repairs_word_write(word, explain) {
   "One settled Cebuano explanation written into the handover file for a single word, against every chapter that holds it.";
   "$plain word";
   "$plain explain";
