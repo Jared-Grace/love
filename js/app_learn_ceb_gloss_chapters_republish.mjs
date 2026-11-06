@@ -7,7 +7,7 @@ import { app_learn_ceb_gloss_chapter_upload_stored } from "./app_learn_ceb_gloss
 export async function app_learn_ceb_gloss_chapters_republish() {
   "Carry up again every chapter of the Bible explained in Cebuano that a reader can already reach and that has been changed since it was last sent, so that what is in front of them is what the store says today.";
   ("★ THIS STORE IS MENDED BY SEVERAL COMMANDS AND NONE OF THEM IS NAMED HERE AS THE ONE TO RUN FIRST, BECAUSE THERE IS NO SUCH ONE. ",
-    fn_name("app_ceb_bible_gloss_explains_repair"),
+    fn_name("app_learn_ceb_gloss_explains_repair"),
     ", ",
     fn_name("app_ceb_bible_gloss_explains_unnamed_source_repair"),
     " and ",

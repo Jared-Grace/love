@@ -1615,7 +1615,7 @@ export function permission_grant_names() {
     fn_name("functions_inside_shapes_shared"),
     fn_name("bible_storage_empty_gate_run"),
     fn_name("functions_repack_only_baseline_write"),
-    fn_name("app_ceb_bible_gloss_explains_repair"),
+    fn_name("app_learn_ceb_gloss_explains_repair"),
     fn_name("functions_lift_handback_candidates"),
     fn_name("function_worker_pool_retire_try"),
     fn_name("app_shared_text_reader_untranslated"),
