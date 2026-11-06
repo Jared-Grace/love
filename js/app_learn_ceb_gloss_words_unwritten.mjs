@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_cebuano_words_unwritten } from "./bible_cebuano_words_unwritten.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_ceb_bible_gloss_words_unwritten() {
+export async function app_learn_ceb_gloss_words_unwritten() {
   "The words the Cebuano gloss store explains that the Cebuano translation never writes standing alone.";
   "★ AN EXPLANATION IS PAINTED UNDER A WORD OF THE VERSE, SO A WORD IN THIS LIST IS AN EXPLANATION THE READER CANNOT FIND ANYTHING TO STAND IT ON. Every explained word was supposed to have come out of the passage it sits under, which is why this list should be nearly empty and why whatever is in it is worth reading one by one rather than counting. It is not the same question as the dash pieces: those are made by the reader cutting a word up, while these are words an author actually wrote down as the thing being explained.";
   "The store's own spelling is kept and the dash with it, so a word joined by a dash is asked about whole rather than in halves - the halves are a different measurement and already have one.";

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_words_unwritten } from "./app_ceb_bible_gloss_words_unwritten.mjs";
+import { app_learn_ceb_gloss_words_unwritten } from "./app_learn_ceb_gloss_words_unwritten.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 export async function app_learn_ceb_gloss_words_unwritten_names() {
@@ -9,7 +9,7 @@ export async function app_learn_ceb_gloss_words_unwritten_names() {
   "The words arrive lowered and distinct from the reading, because the comparison that found them is made in small letters. Only the order is chosen here, and it is chosen so two runs of a record can be read against each other by eye.";
   "The test is not repeated here. It is asked for from the reading that makes it, so this list and the counts beside it can never come to be about different sets of words.";
   arguments_assert(arguments, 0);
-  let measured = await app_ceb_bible_gloss_words_unwritten();
+  let measured = await app_learn_ceb_gloss_words_unwritten();
   let words = property_get(measured, "words");
   let sorted = list_sort_text(words);
   return sorted;
