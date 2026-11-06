@@ -17,7 +17,7 @@ import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_r
 import { app_learn_ceb_gloss_generate } from "./app_learn_ceb_gloss_generate.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
-export async function app_ceb_bible_gloss_roots_claimed_reconstructed() {
+export async function app_learn_ceb_gloss_roots_claimed_reconstructed() {
   "Every Cebuano explanation naming a root that is written with an asterisk in front of it - the notation for a word nobody ever recorded, worked back to from the languages descended from it - said with the word, the chapter and how many places it is stored.";
   "★ NOTHING HERE IS A FAULT IN THE STORE. An asterisk in front of a form is how linguists write a reconstruction, and an explanation reaching back to Proto-Austronesian for the origin of a Cebuano word is doing scholarship rather than making a mistake. What is a fault is anything downstream treating one of these as a Cebuano word: the readers of roots hand the asterisk straight through, so a form nobody has ever spoken can be carried into a queue of words to look up, and a dictionary asked for it will answer nothing for the rest of time.";
   "The asterisk is what makes this askable without judgment. Every other reading over these roots has to decide whether a spelling is ordinary Cebuano or an invention, and that decision belongs to somebody who knows the language. This one decides nothing - the notation is in the text, put there deliberately by whoever wrote the sentence, and it means exactly one thing.";
