@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_words_roots_apart_arbitrated } from "./app_learn_ceb_gloss_words_roots_apart_arbitrated.mjs";
-import { app_ceb_bible_gloss_words_roots_unproved_holdings_row_unheard } from "./app_ceb_bible_gloss_words_roots_unproved_holdings_row_unheard.mjs";
+import { app_learn_ceb_gloss_words_roots_unproved_holdings_row_unheard } from "./app_learn_ceb_gloss_words_roots_unproved_holdings_row_unheard.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
@@ -9,7 +9,7 @@ export async function app_learn_ceb_gloss_words_roots_unproved_holdings_gather_w
   arguments_assert(arguments, 0);
   let arbitrated = await app_learn_ceb_gloss_words_roots_apart_arbitrated();
   let r2 =
-    await app_ceb_bible_gloss_words_roots_unproved_holdings_row_unheard(
+    await app_learn_ceb_gloss_words_roots_unproved_holdings_row_unheard(
       arbitrated,
     );
   let row_unheard = property_get(r2, "row_unheard");

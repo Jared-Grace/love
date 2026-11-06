@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_ceb_gloss_words_roots_unproved_holdings_person_is } from "./app_learn_ceb_gloss_words_roots_unproved_holdings_person_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
-export async function app_ceb_bible_gloss_words_roots_unproved_holdings_row_unheard(
+export async function app_learn_ceb_gloss_words_roots_unproved_holdings_row_unheard(
   arbitrated,
 ) {
   arguments_assert(arguments, 1);
