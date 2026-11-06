@@ -1,9 +1,11 @@
-import { object_property_names } from "./object_property_names.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { literals_frozen_path } from "./literals_frozen_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+import { equal } from "./equal.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_set_exists_not } from "./property_set_exists_not.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function function_rename_literals_frozen_record(
   f_name_before,
@@ -22,7 +24,8 @@ export async function function_rename_literals_frozen_record(
       key_after = f_name_after;
       sites = sites + 1;
     }
-    renamed[key_after] = record[key];
+    let value = property_get(record, key);
+    property_set_exists_not(renamed, key_after, value);
   }
   if (greater_than(sites, 0)) {
     await file_overwrite_json(path, renamed);
