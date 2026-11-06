@@ -1,5 +1,5 @@
 import { list_filter_size } from "./list_filter_size.mjs";
-import { app_ceb_bible_gloss_root_omitted_elsewhere_named_unexplained } from "./app_ceb_bible_gloss_root_omitted_elsewhere_named_unexplained.mjs";
+import { app_learn_ceb_gloss_root_omitted_elsewhere_named_unexplained } from "./app_learn_ceb_gloss_root_omitted_elsewhere_named_unexplained.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -28,7 +28,7 @@ export async function app_ceb_bible_gloss_root_omitted_elsewhere_named() {
   "The entries that carry no explanation at all are worked out rather than counted, because the shared walk hands over only the explained ones. Every entry seen less every entry reached is exactly the entries it passed over, and the store has none of them today.";
   "Nothing is asked of the site and nothing is written.";
   arguments_assert(arguments, 0);
-  let r2 = await app_ceb_bible_gloss_root_omitted_elsewhere_named_unexplained();
+  let r2 = await app_learn_ceb_gloss_root_omitted_elsewhere_named_unexplained();
   let unexplained = property_get(r2, "unexplained");
   let entries_seen = property_get(r2, "entries_seen");
   let by_word = property_get(r2, "by_word");
