@@ -5,11 +5,12 @@ export function facebook_messenger_messages(text) {
   let lines = text.split("\n");
   let r = [];
   for (let line of lines) {
-    let m = line.match(/^Enter, Message sent .*? by (.+?): (.*)$/);
+    ("★ A MESSAGE WITH NO WORDS IS KEPT, with empty words - a photo, a sticker or a voice message may say only who sent it. Dropped, it would be invisible to anything deciding whether a reply needs a person; kept as empty, it is a reply nobody can read as Amen.");
+    let m = line.match(/^Enter, Message sent .*? by (.+?)(?:: (.*))?$/);
     if (not_equal(m, null)) {
       r.push({
         from: m[1],
-        text: m[2],
+        text: m[2] ?? "",
       });
     }
   }
