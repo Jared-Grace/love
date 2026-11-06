@@ -20,7 +20,7 @@ export async function app_ceb_bible_gloss_affix_kinds_wrong_gate_run() {
   let offenders = await app_ceb_bible_gloss_affix_kinds_wrong_names();
   let path = app_learn_ceb_gloss_affix_kinds_wrong_baseline_path();
   let name_write = fn_name(
-    "app_ceb_bible_gloss_affix_kinds_wrong_baseline_write",
+    "app_learn_ceb_gloss_affix_kinds_wrong_baseline_write",
   );
   let told = await baseline_names_gate_generic(
     offenders,
