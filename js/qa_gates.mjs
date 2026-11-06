@@ -594,7 +594,7 @@ import { app_code_color_tone_gate_run } from "./app_code_color_tone_gate_run.mjs
 import { git_history_purge_case_blind_gate_run } from "./git_history_purge_case_blind_gate_run.mjs";
 import { app_en_learn_bible_gloss_urdu_published_unfinished_gate_run } from "./app_en_learn_bible_gloss_urdu_published_unfinished_gate_run.mjs";
 import { purge_words_live_gate_run } from "./purge_words_live_gate_run.mjs";
-import { app_ceb_bible_gloss_published_unfinished_gate_run } from "./app_ceb_bible_gloss_published_unfinished_gate_run.mjs";
+import { app_learn_ceb_gloss_published_unfinished_gate_run } from "./app_learn_ceb_gloss_published_unfinished_gate_run.mjs";
 import { app_learn_original_gloss_published_unfinished_gate_run } from "./app_learn_original_gloss_published_unfinished_gate_run.mjs";
 import { firebase_sending_tests_none_gate_run } from "./firebase_sending_tests_none_gate_run.mjs";
 import { gloss_stores_verse_order_gate_run } from "./gloss_stores_verse_order_gate_run.mjs";
@@ -1244,7 +1244,7 @@ export function qa_gates() {
     git_history_purge_case_blind_gate_run,
     app_en_learn_bible_gloss_urdu_published_unfinished_gate_run,
     purge_words_live_gate_run,
-    app_ceb_bible_gloss_published_unfinished_gate_run,
+    app_learn_ceb_gloss_published_unfinished_gate_run,
     app_learn_original_gloss_published_unfinished_gate_run,
     firebase_sending_tests_none_gate_run,
     gloss_stores_verse_order_gate_run,
