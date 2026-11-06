@@ -1,6 +1,6 @@
 import { gloss_write_files_stale_from_store_generic } from "./gloss_write_files_stale_from_store_generic.mjs";
 import { app_learn_en_gloss_urdu_generate } from "./app_learn_en_gloss_urdu_generate.mjs";
-export async function app_en_learn_bible_gloss_urdu_write_files_stale_from_store(
+export async function app_learn_en_gloss_urdu_write_files_stale_from_store(
   chapter_code,
 ) {
   "Write the stored explanations of the store that teaches English to an Urdu reader over every hand-off file of one chapter that disagrees with them - for a chapter whose store has been judged the right side.";
