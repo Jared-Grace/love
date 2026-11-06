@@ -4,7 +4,7 @@ import { html_display_inline_block } from "./html_display_inline_block.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
-import { app_search_results_verse_card } from "./app_search_results_verse_card.mjs";
+import { app_bible_search_results_verse_card } from "./app_bible_search_results_verse_card.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
@@ -41,7 +41,7 @@ export function app_bible_search_results_verse_button(
     }
     let bible_texts = [];
     property_set_exists_not(b, "bible_texts", bible_texts);
-    app_search_results_verse_card(div_verse);
+    app_bible_search_results_verse_card(div_verse);
     html_remove(b);
     let cb_text = html_button_copy_text();
     app_shared_button_wide(div_verse, cb_text, copy);
