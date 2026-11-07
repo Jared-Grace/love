@@ -4,7 +4,7 @@ import { null_is } from "./null_is.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_name_id_words } from "./app_code_lesson_name_id_words.mjs";
-import { app_code_batch_code_eval } from "./app_code_batch_code_eval.mjs";
+import { app_learn_js_batch_code_eval } from "./app_learn_js_batch_code_eval.mjs";
 import { app_code_lesson_code_generic } from "./app_code_lesson_code_generic.mjs";
 export function app_code_lesson_expression_generic(params) {
   "a bare-expression lesson (no console.log wrapper): the question is the expression, the answer is its value; caller passes next_arg (produces expression code strings), an above intro, example_count, and either a name_id or (name_id_rights + category) for the title";
@@ -24,7 +24,7 @@ export function app_code_lesson_expression_generic(params) {
     let r = [arg];
     return r;
   }
-  let b = app_code_batch_code_eval(batch_get);
+  let b = app_learn_js_batch_code_eval(batch_get);
   let forwards_answer_count_override = property_get_or(
     params,
     "forwards_answer_count_override",
