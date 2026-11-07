@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_title_na
 import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_questions } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_above } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or_above.mjs";
-export function app_code_lesson_expression_choose_order_parentheses_and_or() {
+export function app_learn_js_lesson_expression_choose_order_parentheses_and_or() {
   arguments_assert(arguments, 0);
   ("the same three words with one pair of parentheses round the first two or round the last two, taken a press at a time: (false && true) || true or false && (true || true), choose what the marks gather, choose what it comes to, then the operator left holding it");
   ("The lesson before it always put the parentheses round the || , so the parenthesised pair and the || were the same pair and a learner could press the || every time and never be wrong. Here the marks go round either half, so what to press can only be read off where they are - which is the first time in this run that the parentheses have to be read to answer.");
