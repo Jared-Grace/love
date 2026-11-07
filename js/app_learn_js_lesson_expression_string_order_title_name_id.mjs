@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_string_operators_shape } from "./app_code_string_operators_shape.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-export function app_code_lesson_expression_string_order_title_name_id() {
+export function app_learn_js_lesson_expression_string_order_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: alphabetical order");
   function paint(parent) {
