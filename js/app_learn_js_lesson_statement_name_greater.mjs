@@ -3,7 +3,7 @@ import { js_operator_greater_than_symbol } from "./js_operator_greater_than_symb
 import { app_code_lesson_statement_names_binary_pairs_balanced } from "./app_code_lesson_statement_names_binary_pairs_balanced.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
 import { app_learn_js_lesson_expression_greater_than } from "./app_learn_js_lesson_expression_greater_than.mjs";
-export function app_code_lesson_statement_name_greater() {
+export function app_learn_js_lesson_statement_name_greater() {
   arguments_assert(arguments, 0);
   ("two names compared the other way: let a = 9; let b = 2; let bigger = a > b; console.log(bigger); writes out true");
   ("The same screen as the lesson that compares two names with the less than symbol, with the symbol turned round. Only two answers exist, so a question offers two buttons, and each screen draws two programs that come out true and two that come out false.");
