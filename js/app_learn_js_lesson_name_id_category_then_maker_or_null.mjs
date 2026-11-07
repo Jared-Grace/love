@@ -6,7 +6,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_first_try } from "./list_first_try.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_lesson_name_id_category_then_painter_or_null } from "./app_code_lesson_name_id_category_then_painter_or_null.mjs";
-export function app_code_lesson_name_id_category_then_maker_or_null(ast) {
+export function app_learn_js_lesson_name_id_category_then_maker_or_null(ast) {
   arguments_assert(arguments, 1);
   ("The one function in this file that a lesson name and id was handed to be titled by, or null when the file holds no such thing.");
   ("It is known by the two names it receives and by holding nothing but a painter and the line handing that painter back. Every one of the fifty written by hand matched that, so anything else is a shape nobody has seen and is left alone rather than guessed at.");
