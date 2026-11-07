@@ -26,7 +26,7 @@ import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_values } from "./object_values.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
-import { app_code_decoys_near_add } from "./app_code_decoys_near_add.mjs";
+import { app_learn_js_decoys_near_add } from "./app_learn_js_decoys_near_add.mjs";
 import { app_code_expression_chosen_background_color } from "./app_code_expression_chosen_background_color.mjs";
 import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -280,7 +280,7 @@ export function app_code_program_step_through_generic(
     }
     list_remove_if_exists(decoys, value);
     ("2026-10-29, at the human's asking: a number with too few wrong choices is offered one next to it as well. This replaces the earlier Not picked: made-up values, for that case only");
-    let near_added = app_code_decoys_near_add(decoys, value);
+    let near_added = app_learn_js_decoys_near_add(decoys, value);
     return near_added;
   }
   let highlight = app_code_expression_chosen_background_color();
@@ -952,7 +952,10 @@ export function app_code_program_step_through_generic(
           }
           let decoys_solved = app_code_program_step_solve_decoys(current, node);
           let value10 = app_code_expression_value(node);
-          let solved_near = app_code_decoys_near_add(decoys_solved, value10);
+          let solved_near = app_learn_js_decoys_near_add(
+            decoys_solved,
+            value10,
+          );
           return solved_near;
         }
         guide_say([["Solve ", name, " one step at a time"]], null);
@@ -1050,7 +1053,7 @@ export function app_code_program_step_through_generic(
         ("an operator solved is offered the wrong values the lessons on operators offer, the value the other operator would give on the same two values, so the same mistake is caught here as there");
         if (operator_is) {
           let operator_decoys = app_code_program_step_operator_decoys(action);
-          decoys = app_code_decoys_near_add(operator_decoys, value);
+          decoys = app_learn_js_decoys_near_add(operator_decoys, value);
         } else {
           decoys = name_decoys(name, value);
         }
