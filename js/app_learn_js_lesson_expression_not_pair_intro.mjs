@@ -17,7 +17,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
 import { app_code_not_parenthesis_shape } from "./app_code_not_parenthesis_shape.mjs";
 import { app_code_lesson_expression_worked_card_not } from "./app_code_lesson_expression_worked_card_not.mjs";
-export function app_code_lesson_expression_not_pair_intro(root, context) {
+export function app_learn_js_lesson_expression_not_pair_intro(root, context) {
   arguments_assert(arguments, 2);
   ("the two cards above the ! around a joined pair lesson: what is new said as three shapes, then one line carried all the way to its value");
   ("How far a ! reaches, and why what it reaches past has to be gathered into parentheses, is NOT built up again here. The lesson that put a ! around a comparison built it a piece at a time, from what the ! would apply to without the parentheses through to the finished line, and a learner arriving here has read it. Built a second time it would be a near-copy of a card they know, which reads as a new thing to learn and is not one.");

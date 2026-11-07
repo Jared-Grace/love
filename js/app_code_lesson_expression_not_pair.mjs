@@ -5,7 +5,7 @@ import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_pair_expression } from "./app_learn_js_lesson_expression_choose_order_not_pair_expression.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
-import { app_code_lesson_expression_not_pair_intro } from "./app_code_lesson_expression_not_pair_intro.mjs";
+import { app_learn_js_lesson_expression_not_pair_intro } from "./app_learn_js_lesson_expression_not_pair_intro.mjs";
 import { app_code_lesson_expression_not_pair_title_name_id } from "./app_code_lesson_expression_not_pair_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -35,7 +35,7 @@ export function app_code_lesson_expression_not_pair() {
   let next_arg = list_iterator_refillable(refill);
   let name_id = app_code_lesson_expression_not_pair_title_name_id();
   let lesson = app_learn_js_lesson_expression_generic({
-    above: app_code_lesson_expression_not_pair_intro,
+    above: app_learn_js_lesson_expression_not_pair_intro,
     name_id,
     next_arg,
     example_count: 2,
