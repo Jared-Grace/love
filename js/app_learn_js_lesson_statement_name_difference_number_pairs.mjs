@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-export function app_code_lesson_statement_name_difference_number_pairs() {
+export function app_learn_js_lesson_statement_name_difference_number_pairs() {
   arguments_assert(arguments, 0);
   ("four pairs of numbers for programs that take the second from the first, in a fresh order each screen");
   ("Every first number is larger than every second number, so no answer is below zero - a negative answer would be a second new thing on a screen about names.");
