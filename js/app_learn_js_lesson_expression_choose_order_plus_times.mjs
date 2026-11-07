@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { app_code_lesson_expression_choose_order_twin_generic } from "./app_code_lesson_expression_choose_order_twin_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_twin_generic } from "./app_learn_js_lesson_expression_choose_order_twin_generic.mjs";
 import { app_code_lesson_expression_plus_times } from "./app_code_lesson_expression_plus_times.mjs";
 export function app_learn_js_lesson_expression_choose_order_plus_times() {
   arguments_assert(arguments, 0);
@@ -9,7 +9,7 @@ export function app_learn_js_lesson_expression_choose_order_plus_times() {
   let plus = js_operator_plus_symbol();
   let times = js_operator_asterisk_symbol();
   let words = ["Solve ", plus, " ", times];
-  let lesson = app_code_lesson_expression_choose_order_twin_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_twin_generic(
     words,
     app_code_lesson_expression_plus_times,
   );

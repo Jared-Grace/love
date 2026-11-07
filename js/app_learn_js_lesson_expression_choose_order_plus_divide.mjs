@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
-import { app_code_lesson_expression_choose_order_twin_generic } from "./app_code_lesson_expression_choose_order_twin_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_twin_generic } from "./app_learn_js_lesson_expression_choose_order_twin_generic.mjs";
 import { app_code_lesson_expression_plus_divide } from "./app_code_lesson_expression_plus_divide.mjs";
 export function app_learn_js_lesson_expression_choose_order_plus_divide() {
   arguments_assert(arguments, 0);
@@ -9,7 +9,7 @@ export function app_learn_js_lesson_expression_choose_order_plus_divide() {
   let plus = js_operator_plus_symbol();
   let divided = js_operator_division_symbol();
   let words = ["Solve ", plus, " ", divided];
-  let lesson = app_code_lesson_expression_choose_order_twin_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_twin_generic(
     words,
     app_code_lesson_expression_plus_divide,
   );

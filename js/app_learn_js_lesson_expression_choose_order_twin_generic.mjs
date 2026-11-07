@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_twin_read_generic } from "./app_code_lesson_expression_choose_order_twin_read_generic.mjs";
 import { app_learn_js_expression_flat_tree_of_code } from "./app_learn_js_expression_flat_tree_of_code.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
-export function app_code_lesson_expression_choose_order_twin_generic(
+export function app_learn_js_lesson_expression_choose_order_twin_generic(
   title_words,
   twin_get,
 ) {
