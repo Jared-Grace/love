@@ -6,7 +6,7 @@ import { equal } from "./equal.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_progress_ids_complete_mark } from "./app_code_progress_ids_complete_mark.mjs";
-export async function app_code_hash_complete_latest_restore(context, hash) {
+export async function app_learn_js_hash_complete_latest_restore(context, hash) {
   arguments_assert(arguments, 2);
   ("If the link says complete=latest, ask the machine serving this page which lessons latest has, and mark them finished before anything is drawn.");
   ("It asks the serving machine because only that machine holds latest's build; a page cannot read another page's storage, so what the reader finished on latest itself is out of reach and what latest has is the nearest thing. It is awaited before the first drawing, unlike the other link fields, because the answer comes back over the network. On a page with no such machine behind it, the public site, the asking fails and says so.");
