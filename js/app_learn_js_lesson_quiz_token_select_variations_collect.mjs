@@ -14,7 +14,10 @@ import { list_permutations } from "./list_permutations.mjs";
 import { js_special_arguments } from "./js_special_arguments.mjs";
 import { app_code_lesson_quiz_token_select_variations_set_args } from "./app_code_lesson_quiz_token_select_variations_set_args.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_quiz_token_select_variations_collect(la, tree) {
+export function app_learn_js_lesson_quiz_token_select_variations_collect(
+  la,
+  tree,
+) {
   arguments_assert(arguments, 2);
   ("gather one orderable per commutative node - each carries its list of ordering functions and a restore to its original arrangement");
   let commutatives = js_code_binary_expression_commutative();

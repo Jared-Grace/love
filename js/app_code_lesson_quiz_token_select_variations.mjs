@@ -5,7 +5,7 @@ import { js_parse_try } from "./js_parse_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { js_parse } from "./js_parse.mjs";
-import { app_code_lesson_quiz_token_select_variations_collect } from "./app_code_lesson_quiz_token_select_variations_collect.mjs";
+import { app_learn_js_lesson_quiz_token_select_variations_collect } from "./app_learn_js_lesson_quiz_token_select_variations_collect.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { app_learn_js_lesson_quiz_token_select_meaning_variations } from "./app_learn_js_lesson_quiz_token_select_meaning_variations.mjs";
 import { app_learn_js_lesson_quiz_token_select_shape_variations } from "./app_learn_js_lesson_quiz_token_select_shape_variations.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   let expression_is = js_expression_is(code);
   let tree = js_parse(code);
   function collect(la) {
-    let r = app_code_lesson_quiz_token_select_variations_collect(la, tree);
+    let r = app_learn_js_lesson_quiz_token_select_variations_collect(la, tree);
     return r;
   }
   let orderable_nodes = list_adder(collect);
