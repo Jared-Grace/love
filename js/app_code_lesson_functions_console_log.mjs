@@ -13,7 +13,7 @@ import { property_get } from "./property_get.mjs";
 import { js_operator_first_code_call } from "./js_operator_first_code_call.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
-import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
+import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { app_code_div_cycle_code_multiple } from "./app_code_div_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
   var r = app_code_lesson_functions_console_log_generic({
@@ -55,11 +55,11 @@ export function app_code_lesson_functions_console_log() {
     ]);
     let first = js_operator_first_code_call_only(next_operator);
     let v = js_code_call_arg_fn(f_name, next);
-    app_code_container_light_blue_cycle_code_multiple(root, [
+    app_learn_js_container_light_blue_cycle_code_multiple(root, [
       ["", verb, " has two numbers separated by a ", comma, ...inside, " :"],
       ["", first],
     ]);
-    app_code_container_light_blue_cycle_code_multiple(root, [
+    app_learn_js_container_light_blue_cycle_code_multiple(root, [
       [
         "But, for now, we will see ",
         f_name,

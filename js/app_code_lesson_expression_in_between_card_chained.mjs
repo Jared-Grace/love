@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
+import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lesson_expression_in_between_card_chained(root) {
   arguments_assert(arguments, 1);
@@ -8,7 +8,7 @@ export function app_code_lesson_expression_in_between_card_chained(root) {
   ("What the line does instead is not on this card. It is the aside in ",
     fn_name("app_code_lesson_expression_in_between_card_unexplained"),
     ", placed after the fix, because a reader who never asks the question still has to get past it to reach the line that changes what they type.");
-  app_code_container_light_blue_cycle_code_multiple(root, [
+  app_learn_js_container_light_blue_cycle_code_multiple(root, [
     ["To answer, you might write ", "2 < 5 < 8"],
     ["That is how we would write this in math"],
     ["However, that is not how we write this in JS"],

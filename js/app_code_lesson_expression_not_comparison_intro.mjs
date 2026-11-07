@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_worked_card_not } from "./app_code_lesson_expression_worked_card_not.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
+import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { js_code_not } from "./js_code_not.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_expression_not_comparison_intro(root, context) {
   let not_three = js_code_not(three);
   let bare = text_combine_multiple([not_three, " ", equal_symbol, " ", five]);
   let not_false = js_code_not(false_word);
-  app_code_container_light_blue_cycle_code_multiple(root, [
+  app_learn_js_container_light_blue_cycle_code_multiple(root, [
     ["A ", symbol, " applies only to what's right after it"],
     [
       "For example, for ",

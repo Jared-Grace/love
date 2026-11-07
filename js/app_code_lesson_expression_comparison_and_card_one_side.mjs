@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
+import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 export function app_code_lesson_expression_comparison_and_card_one_side(root) {
   arguments_assert(arguments, 1);
   ("one side of the && changed from a plain true or false into a comparison, worked out - the single step from the && the learner already has - once with the comparison on the right and once with it on the left");
@@ -11,7 +11,7 @@ export function app_code_lesson_expression_comparison_and_card_one_side(root) {
   ("The left-hand line uses a different comparison, and one that comes out false. Worked with the same 1 < 2 the four rows would be the four rows above with the pieces shifted along, which reads as the card repeating itself rather than as a second case - and a reader skips a block they have already read. Coming out false also settles the question the first block cannot: that what the comparison is worth is what gets put back, and not that a comparison on the side of an && makes the line true.");
   ("THE TURN IS NAMED BEFORE IT IS TAKEN, in three rows: what was just watched, that the other side can carry one too, and the line itself standing on its own before anything is done to it. The card used to move from the last row of the first working straight into a sentence about the left side, so the four rows above it were left unlabelled - a reader who had just watched them had never been told which side they were about, and the word left arrived with no right to answer to.");
   ("The new line is put up bare before it is worked. Every other line on this screen is named first and solved after, and a line that arrived already inside its own first step would be the one place the reader is asked to take in a new line and a move on it in the same row.");
-  app_code_container_light_blue_cycle_code_multiple(root, [
+  app_learn_js_container_light_blue_cycle_code_multiple(root, [
     ["For ", "true && 1 < 2", ", we solve ", "1 < 2", " before ", "&&"],
     ["", "1 < 2", " is ", "true"],
     ["Then we have ", "true && true"],

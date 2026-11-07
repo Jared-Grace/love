@@ -1,4 +1,4 @@
-import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
+import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_parentheses_both_sides_card_flat_line
   ("The flat line is not left as an assertion that it means something else - it is solved, in the exact walk the comparing-a-comparison lesson taught. Saying only that JavaScript works it out left to right asks the reader to do that walk in their head, and the walk crosses a step no lesson has ever shown them: a true or false compared with a number. They have the rule for it, from two lessons back - but having a rule and having performed it are not the same thing, and this card is where the two would first be asked to meet without being introduced.");
   let t = js_keyword_true();
   let f = js_keyword_false();
-  app_code_container_light_blue_cycle_code_multiple(root, [
+  app_learn_js_container_light_blue_cycle_code_multiple(root, [
     ["What if there were no ", open, " and ", close, "?"],
     ["Without them we would write ", "3 === 5 === 5 === 3"],
     [
@@ -25,13 +25,13 @@ export function app_code_lesson_expression_parentheses_both_sides_card_flat_line
       "false === 5 === 3",
     ],
   ]);
-  app_code_container_light_blue_cycle_code_multiple(root, [
+  app_learn_js_container_light_blue_cycle_code_multiple(root, [
     ["Then ", "false === 5", " is solved"],
     ["A ", t, " or ", f, " is never equal to a number (like ", "5", ")"],
     ["So ", "false === 5", " is ", f],
     ["Replacing leaves ", "false === 3", ", which is ", f],
   ]);
-  app_code_container_light_blue_cycle_code_multiple(root, [
+  app_learn_js_container_light_blue_cycle_code_multiple(root, [
     [
       "So if we want the ",
       "5 === 3",

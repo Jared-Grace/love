@@ -1,4 +1,4 @@
-import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
+import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 export function app_code_lesson_operators_asterisk_generic_invalid(
   root,
   operator,
@@ -6,7 +6,7 @@ export function app_code_lesson_operators_asterisk_generic_invalid(
 ) {
   let missing_right = combine("invalid", operator);
   let missing_left = combine(operator, "invalid");
-  app_code_container_light_blue_cycle_code_multiple(root, [
+  app_learn_js_container_light_blue_cycle_code_multiple(root, [
     [
       "Therefore, ",
       operator,
