@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_color_hue_groups } from "./app_learn_js_color_hue_groups.mjs";
 import { text_to } from "./text_to.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_color_tone_faults() {
+export function app_learn_js_color_tone_faults() {
   arguments_assert(arguments, 0);
   ("every hue this app draws that does not hold exactly one dark colour and one light one, written out as a sentence per fault - either a hue said twice at the same tone, or a hue with one tone and no twin at the other");
   ("THE RULE IS ONE DARK AND ONE LIGHT PER HUE, AND THE WHOLE OF ITS FORCE IS THAT THE TWO TONES ARE WHAT THE DRAWING ASKS FOR. Four ways of drawing a colour are in use and they ask two questions between them - a colour carrying white lettering must be dark, a colour carrying near-black lettering must be light, a word read on the black code line must be light, a word read on the pale card must be dark. A hue that has answered both has nothing left to be asked. A second dark at the same hue is therefore not a colour, it is the first one written out again somewhere else, and it will drift away from its twin the first time either is revised.");

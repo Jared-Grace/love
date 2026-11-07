@@ -23,7 +23,7 @@ export function app_code_color_tones() {
   "THE CHECK THIS WAS WRITTEN FOR NOW EXISTS AND ASKS IT. " +
     fn_name("app_learn_js_color_hue_groups") +
     " stands the colours in order round the wheel and cuts them into hues, " +
-    fn_name("app_code_color_tone_faults") +
+    fn_name("app_learn_js_color_tone_faults") +
     " asks each hue for exactly one dark and one light, and " +
     fn_name("app_code_color_tone_gate_run") +
     " holds the answer still against what is already known. The four faults it reports are the four written out in the paragraph above. That was once described here as independent confirmation. It is not, and the correction is worth more than the claim was: the gate reads the palettes through this function, so it is handed the same ten colours this argument was made from and cannot reach a different subject. It can catch a colour changed inside one of the three palettes, which is a real job. It cannot catch a colour the app draws from somewhere else, and that is exactly what was wrong here.";
