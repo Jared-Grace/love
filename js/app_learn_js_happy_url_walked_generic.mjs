@@ -8,7 +8,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_happy_trail_quizzes_skipped } from "./app_learn_js_happy_trail_quizzes_skipped.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { playwright_happy_trail_wide } from "./playwright_happy_trail_wide.mjs";
-export async function app_code_happy_url_walked_generic(url, page_prepare) {
+export async function app_learn_js_happy_url_walked_generic(url, page_prepare) {
   "$plain url";
   "click all the way through the code course at a given address, as somebody who gets every question right, from an empty browser to the note that says there are no more lessons - with the page handed to page_prepare first, before it is opened";
   "What it proves is the one thing no other check here proves: that the course can be COMPLETED. Every screen is reached the way a learner reaches it rather than by an address, so a right answer that cannot be pressed, a Next that never appears, a lesson that throws on its way in, and a review that will not let go all fail here and are invisible everywhere else.";
