@@ -9,7 +9,7 @@ import { app_code_lesson_expression_choose_order_and_before_or_expression } from
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-export function app_code_lesson_expression_and_before_or() {
+export function app_learn_js_lesson_expression_and_before_or() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: false && true || true asked for its value, with nothing to press");
   ("The twin of the lesson that walks the same line a press at a time, and the one the run was missing. A learner who can press the && and then the || in the right order has still never been asked to hold both steps at once, which is the thing they will need in front of real code.");
