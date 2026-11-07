@@ -24,7 +24,7 @@ import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
 import { app_code_home_review_row } from "./app_code_home_review_row.mjs";
 import { app_code_home_milestone_rows } from "./app_code_home_milestone_rows.mjs";
 import { each_index } from "./each_index.mjs";
-import { app_code_home_groups_finish } from "./app_code_home_groups_finish.mjs";
+import { app_learn_js_home_groups_finish } from "./app_learn_js_home_groups_finish.mjs";
 import { app_learn_js_home_all_complete } from "./app_learn_js_home_all_complete.mjs";
 import { app_code_home_just_left_center } from "./app_code_home_just_left_center.mjs";
 export async function app_code_home(context) {
@@ -136,7 +136,7 @@ export async function app_code_home(context) {
   }
   each_index(lessons, lambda);
   ("the group is opened before scrolling, because a row inside a shut group has no place on the screen to scroll to");
-  app_code_home_groups_finish(cards, opened);
+  app_learn_js_home_groups_finish(cards, opened);
   app_learn_js_home_all_complete(g, bar, context);
   await app_code_home_just_left_center(just_left, context);
 }

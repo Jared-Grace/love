@@ -14,7 +14,7 @@ import { list_filter_property } from "./list_filter_property.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
-export function app_code_home_groups_finish(cards, opened) {
+export function app_learn_js_home_groups_finish(cards, opened) {
   arguments_assert(arguments, 2);
   ("once every lesson is drawn: a group whose lessons are all finished turns green, and one group is left open - the one handed in, or else the first group not yet finished, or else the last");
   ("The open one is chosen after drawing because only then is it known which group the learner just left and which are finished. Opening it shuts every other, so this one call leaves exactly one open.");
