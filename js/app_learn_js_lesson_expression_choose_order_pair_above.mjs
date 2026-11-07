@@ -4,7 +4,7 @@ import { app_code_lesson_expression_choose_order_pair_intro } from "./app_code_l
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_sides_parentheses_say } from "./app_code_lesson_expression_sides_parentheses_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_choose_order_pair_above(
+export function app_learn_js_lesson_expression_choose_order_pair_above(
   root,
   context,
 ) {
