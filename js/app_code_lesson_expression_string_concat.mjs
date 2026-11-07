@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_string_concat_above } from "./app_learn_js_lesson_expression_string_concat_above.mjs";
 import { app_learn_js_lesson_expression_string_concat_pair } from "./app_learn_js_lesson_expression_string_concat_pair.mjs";
-import { app_code_lesson_expression_string_concat_title_name_id } from "./app_code_lesson_expression_string_concat_title_name_id.mjs";
+import { app_learn_js_lesson_expression_string_concat_title_name_id } from "./app_learn_js_lesson_expression_string_concat_title_name_id.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_expression_string_concat() {
     return r;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = app_code_lesson_expression_string_concat_title_name_id();
+  let name_id = app_learn_js_lesson_expression_string_concat_title_name_id();
   let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
