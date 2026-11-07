@@ -17,7 +17,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_between_space_nb } from "./list_between_space_nb.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_multiply } from "./app_code_lesson_statement_name_multiply.mjs";
+import { app_learn_js_lesson_statement_name_multiply } from "./app_learn_js_lesson_statement_name_multiply.mjs";
 export function app_code_lesson_statement_name_sum_to() {
   arguments_assert(arguments, 0);
   ("the sum 1 + 2 + ... + n in three short lines: let next = n + 1; let product = n * next; let sum = product / 2;");
@@ -101,7 +101,7 @@ export function app_code_lesson_statement_name_sum_to() {
     values_get,
     example_values: [4],
     step,
-    remember_lesson: app_code_lesson_statement_name_multiply,
+    remember_lesson: app_learn_js_lesson_statement_name_multiply,
     remember_parts: ["we can multiply two names and give the answer a name:"],
     remember_lines,
     explain: [
