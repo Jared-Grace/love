@@ -5,7 +5,7 @@ import { app_learn_js_comparison_side } from "./app_learn_js_comparison_side.mjs
 import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
-export function app_code_lesson_expression_comparing_a_comparison_expression(
+export function app_learn_js_lesson_expression_comparing_a_comparison_expression(
   want_true,
 ) {
   arguments_assert(arguments, 1);

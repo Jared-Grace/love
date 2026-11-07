@@ -1,7 +1,7 @@
 import { app_code_lesson_expression_comparing_a_comparison_replacing_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_replacing_worked_example.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_line } from "./app_code_lesson_expression_comparing_a_comparison_line.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
-import { app_code_lesson_expression_comparing_a_comparison_expression } from "./app_code_lesson_expression_comparing_a_comparison_expression.mjs";
+import { app_learn_js_lesson_expression_comparing_a_comparison_expression } from "./app_learn_js_lesson_expression_comparing_a_comparison_expression.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_worked_example.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
@@ -38,9 +38,10 @@ export function app_code_lesson_expression_comparing_a_comparison() {
   return lesson;
   function refill() {
     "two examples a screen, one true and one false. Every line here is the same shape - a comparison on the left, a plain true or false on the right - so the only thing that changes from line to line is the answer, and two lines show both answers. Four lines said those same two things twice, with different numbers.";
-    let v = app_code_lesson_expression_comparing_a_comparison_expression(true);
+    let v =
+      app_learn_js_lesson_expression_comparing_a_comparison_expression(true);
     let v2 =
-      app_code_lesson_expression_comparing_a_comparison_expression(false);
+      app_learn_js_lesson_expression_comparing_a_comparison_expression(false);
     let list = [v, v2];
     return list;
   }
