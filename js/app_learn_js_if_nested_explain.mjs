@@ -10,7 +10,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
-export function app_code_if_nested_explain(root, context) {
+export function app_learn_js_if_nested_explain(root, context) {
   arguments_assert(arguments, 2);
   ("two ifs remembered, then an if inside an if three ways: both true, b false, and a false, which is where the if inside is never reached");
   ("Moved here from If inside an if at the human's asking 2026-10-11, that the Does this section run? before each shape introduce it: which lines run is that lesson's question, so the three ways are where it is first met. If inside an if keeps the last box, a && b, and a reminder of this.");

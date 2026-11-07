@@ -5,7 +5,7 @@ import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
-import { app_code_if_nested_explain } from "./app_code_if_nested_explain.mjs";
+import { app_learn_js_if_nested_explain } from "./app_learn_js_if_nested_explain.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
@@ -40,7 +40,7 @@ export function app_code_lesson_if_nested() {
       ],
     );
     ("2026-10-12, at the human's asking: what the code writes out is explained back here, where it is first asked, the lesson before now walking through which sections run");
-    app_code_if_nested_explain(root, context);
+    app_learn_js_if_nested_explain(root, context);
     let box_two = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(box_two, [
       "So the lines inside ",
