@@ -12,7 +12,7 @@ import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_lesson_expression_whole_part_formula_title_name_id } from "./app_code_lesson_expression_whole_part_formula_title_name_id.mjs";
+import { app_learn_js_lesson_expression_whole_part_formula_title_name_id } from "./app_learn_js_lesson_expression_whole_part_formula_title_name_id.mjs";
 import { app_learn_js_lesson_expression_whole_part_formula_above } from "./app_learn_js_lesson_expression_whole_part_formula_above.mjs";
 export function app_code_lesson_expression_whole_part_formula() {
   "the FIRST of the three whole-part lessons: LEARN THE EQUATION a / b => Math.floor(a / b) * b (rewrite a division into its whole-part formula). The learner builds the formula from tokens given the division, so they produce the rewrite themselves rather than just recognising it. The next lesson evaluates the formula, and the one after does both. Uses the shared divisor/quotient batch so a quotient-0 division can appear";
@@ -109,7 +109,8 @@ export function app_code_lesson_expression_whole_part_formula() {
     let div = html_div(parent);
     html_text_set_code_dark(div, text);
   }
-  let name_id = app_code_lesson_expression_whole_part_formula_title_name_id();
+  let name_id =
+    app_learn_js_lesson_expression_whole_part_formula_title_name_id();
   let lesson = app_learn_js_lesson_base(
     name_id,
     above,
