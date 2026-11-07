@@ -7,7 +7,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_lesson_statement_name_number_title_name_id } from "./app_code_lesson_statement_name_number_title_name_id.mjs";
+import { app_learn_js_lesson_statement_name_number_title_name_id } from "./app_learn_js_lesson_statement_name_number_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_lesson_statement_name_number_batch } from "./app_learn_js_lesson_statement_name_number_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_statement_name_number() {
     let found = list_map(programs, list_join_newline);
     return found;
   }
-  let name_id = app_code_lesson_statement_name_number_title_name_id();
+  let name_id = app_learn_js_lesson_statement_name_number_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
     app_learn_js_lesson_statement_name_number_batch,
     eval_console_log_to_list,
