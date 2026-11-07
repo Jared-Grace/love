@@ -2,7 +2,7 @@ import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_operators_above } from "./app_learn_js_lesson_expression_choose_order_operators_above.mjs";
 import { app_learn_js_lesson_expression_choose_order_operators_questions } from "./app_learn_js_lesson_expression_choose_order_operators_questions.mjs";
-import { app_code_lesson_expression_choose_order_operators_title_name_id } from "./app_code_lesson_expression_choose_order_operators_title_name_id.mjs";
+import { app_learn_js_lesson_expression_choose_order_operators_title_name_id } from "./app_learn_js_lesson_expression_choose_order_operators_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 export function app_code_lesson_expression_choose_order_operators() {
@@ -12,7 +12,7 @@ export function app_code_lesson_expression_choose_order_operators() {
   "Two operators, the count the learner is used to. Three is the next step and it is a lesson of its own - the new thing here is which operators can turn up, and a longer line at the same moment would be two new things at once.";
   "The wrong values offered are the ones the arithmetic lesson before it offers: what the other operator would have given, and what the whole line comes to. They are worked out from the line rather than typed, so no line can be printed beside choices that do not belong to it.";
   let name_id =
-    app_code_lesson_expression_choose_order_operators_title_name_id();
+    app_learn_js_lesson_expression_choose_order_operators_title_name_id();
   ("the quiz and the front page are the ones the lessons on either side use, handed this lesson's wrong values - the pressing, the layout and the finishing are the same doing, and only what could be pressed instead differs");
   function answer_draw(parent, tree, on_success, on_wrong, answer_label_set) {
     "the quiz, with this lesson's wrong values: the value the other operator would have given, and the value of the whole line";
