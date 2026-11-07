@@ -34,7 +34,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_code_lesson_statement_title_name_id_dots } from "./app_code_lesson_statement_title_name_id_dots.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_less_than() {
+export function app_learn_js_lesson_if_less_than() {
   arguments_assert(arguments, 0);
   ('the third if: a comparison inside the parentheses, if (2 < 3) { console.log("love"); } with console.log("joy"); beside it writes out love and joy, and with 3 < 2 writes out joy alone');
   ("The one new fact is that what goes inside the parentheses can be worked out, rather than written as true or false. The learner has worked out a < b many times, and has just met if (true) and if (false); here the two are put together, so a < b is worked out first and the if then does what the last two lessons said.");

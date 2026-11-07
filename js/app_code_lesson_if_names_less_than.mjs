@@ -10,7 +10,7 @@ import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_less_than } from "./app_code_lesson_if_less_than.mjs";
+import { app_learn_js_lesson_if_less_than } from "./app_learn_js_lesson_if_less_than.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -57,7 +57,7 @@ export function app_code_lesson_if_names_less_than() {
     app_code_remember_from_lesson(
       box_one,
       context,
-      app_code_lesson_if_less_than,
+      app_learn_js_lesson_if_less_than,
       [
         "",
         small_first,

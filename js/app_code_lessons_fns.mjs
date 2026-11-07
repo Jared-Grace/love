@@ -243,7 +243,7 @@ import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_
 import { app_code_lesson_statement_name_rectangle_wide_as_tall } from "./app_code_lesson_statement_name_rectangle_wide_as_tall.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
 import { app_learn_js_lesson_if_false } from "./app_learn_js_lesson_if_false.mjs";
-import { app_code_lesson_if_less_than } from "./app_code_lesson_if_less_than.mjs";
+import { app_learn_js_lesson_if_less_than } from "./app_learn_js_lesson_if_less_than.mjs";
 import { app_code_lesson_if_name } from "./app_code_lesson_if_name.mjs";
 import { app_code_lesson_if_names_less_than } from "./app_code_lesson_if_names_less_than.mjs";
 import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
@@ -604,7 +604,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_rectangle_wide_as_tall,
     app_code_lesson_if_true,
     app_learn_js_lesson_if_false,
-    app_code_lesson_if_less_than,
+    app_learn_js_lesson_if_less_than,
     app_code_lesson_if_name,
     app_code_lesson_if_names_less_than,
     app_code_lesson_if_not,
