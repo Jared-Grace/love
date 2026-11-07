@@ -1,6 +1,6 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_swapping_add } from "./app_learn_js_lesson_expression_swapping_add.mjs";
-import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
+import { app_learn_js_lesson_swapping_same_numbers_line } from "./app_learn_js_lesson_swapping_same_numbers_line.mjs";
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_expression_swapping_divide() {
       " are different, so we can never swap two different numbers around ",
       "/",
     ]);
-    app_code_lesson_swapping_same_numbers_line(division);
+    app_learn_js_lesson_swapping_same_numbers_line(division);
     let leftover = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(leftover, [
       "The remainder (",

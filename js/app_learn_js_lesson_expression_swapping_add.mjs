@@ -1,4 +1,4 @@
-import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
+import { app_learn_js_lesson_swapping_same_numbers_line } from "./app_learn_js_lesson_swapping_same_numbers_line.mjs";
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_learn_js_dot_rectangle } from "./app_learn_js_dot_rectangle.mjs";
@@ -112,6 +112,6 @@ export function app_learn_js_lesson_expression_swapping_add() {
       " are different, so we can never swap two different numbers around ",
       "-",
     ]);
-    app_code_lesson_swapping_same_numbers_line(minus);
+    app_learn_js_lesson_swapping_same_numbers_line(minus);
   }
 }

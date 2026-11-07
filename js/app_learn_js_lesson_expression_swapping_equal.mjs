@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_expression_equals } from "./app_learn_js_lesson_expression_equals.mjs";
 import { app_learn_js_lesson_expression_not_equal } from "./app_learn_js_lesson_expression_not_equal.mjs";
 import { app_learn_js_lesson_expression_parentheses_both_sides } from "./app_learn_js_lesson_expression_parentheses_both_sides.mjs";
-import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
+import { app_learn_js_lesson_swapping_same_numbers_line } from "./app_learn_js_lesson_swapping_same_numbers_line.mjs";
 import { app_learn_js_lesson_name_id_category_then } from "./app_learn_js_lesson_name_id_category_then.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
@@ -105,7 +105,7 @@ export function app_learn_js_lesson_expression_swapping_equal() {
       " and ",
       ">=",
     ]);
-    app_code_lesson_swapping_same_numbers_line(order_recall);
+    app_learn_js_lesson_swapping_same_numbers_line(order_recall);
     let paren = app_learn_js_container_light_blue(root);
     ("Sides of a comparison, said rather than left to be worked out. A side belongs to something, and here the something is itself a comparison - which is the whole shape this recalls, so leaving it out drops the one fact the line is about. Comparison twice over is not a stumble: a comparison standing on each side of a comparison is exactly what is being named.");
     ("Comparison rather than === or !==, even though the line below is a === one. Every comparison is wrapped the same way here, the four ordering ones included - the quiz asks about all six - so naming one operator would promise less than the rule keeps.");
