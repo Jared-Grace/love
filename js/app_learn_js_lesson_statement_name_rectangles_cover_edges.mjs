@@ -22,7 +22,7 @@ import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_c
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_rectangles_cover_together } from "./app_code_lesson_statement_name_rectangles_cover_together.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rectangles_cover_edges() {
+export function app_learn_js_lesson_statement_name_rectangles_cover_edges() {
   arguments_assert(arguments, 0);
   ("how many squares two rectangles cover together, from their eight edges - picked by the human 2026-10-06, after asking why How many squares two rectangles cover together starts from three areas and not from the edges. In DSA it is Rectangle Area, LeetCode 223: the area of the union of two rectangles given by their corners.");
   ("A review: every line repeats a shape an earlier lesson taught - a width, a height and an area as in How many squares two rectangles share, the shared part's edges as in How long two meetings overlap, the floor at 0 as in Squares shared when rectangles may not overlap, and the last two lines as in How many squares two rectangles cover together, which is the reminder. Nothing here is new except doing them all in one program.");
