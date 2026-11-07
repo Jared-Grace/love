@@ -16,7 +16,7 @@ import { app_code_lesson_quiz_lines_show } from "./app_code_lesson_quiz_lines_sh
 import { list_first } from "./list_first.mjs";
 import { app_code_lines_indent_braces } from "./app_code_lines_indent_braces.mjs";
 import { app_code_lesson_quiz_pieces_select } from "./app_code_lesson_quiz_pieces_select.mjs";
-export function app_code_lesson_quiz_lines_order(
+export function app_learn_js_lesson_quiz_lines_order(
   parent,
   info,
   qa,
