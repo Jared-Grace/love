@@ -13,7 +13,7 @@ import { app_code_operator_code_before } from "./app_code_operator_code_before.m
 import { app_code_operator_rank_least_left } from "./app_code_operator_rank_least_left.mjs";
 import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
-export function app_code_expression_code(item) {
+export function app_learn_js_expression_code(item) {
   arguments_assert(arguments, 1);
   ("the code a learner reads for a whole expression shape: the shape for 1 + 2 * 3 prints as 1 + 2 * 3, and the shape for (1 + 2) * 3 prints with its parentheses");
   ("Parentheses are worked out rather than remembered. The shape says which operator holds which, so a parenthesis is needed exactly where leaving it out would let a reader take the parts in a different order - and that is a question the ranks answer. Remembering instead which parentheses were typed would let a shape print as a line that does not mean it.");
@@ -35,7 +35,7 @@ export function app_code_expression_code(item) {
     let called = app_code_operator_called_is(symbol);
     if (called) {
       ("an operator spelled as a name with brackets keeps them round whatever is inside, so it is never asked whether the inside needs gathering: after the division in Math.floor(14 / 4) has been worked out the line reads Math.floor(3.5), where a gathering would have left Math.floor3.5");
-      let inside_code = app_code_expression_code(acted_on);
+      let inside_code = app_learn_js_expression_code(acted_on);
       let code_called = js_code_called(symbol, inside_code);
       return code_called;
     }

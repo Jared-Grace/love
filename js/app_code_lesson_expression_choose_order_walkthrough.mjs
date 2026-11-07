@@ -4,7 +4,7 @@ import { app_code_expression_step_say } from "./app_code_expression_step_say.mjs
 import { app_learn_js_expression_choose_say } from "./app_learn_js_expression_choose_say.mjs";
 import { app_code_lesson_expression_choose_order_wrong_say } from "./app_code_lesson_expression_choose_order_wrong_say.mjs";
 import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { noop } from "./noop.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     "after every replacement, say what the line is now and what to choose next";
     let current = property_get(step, "current");
     ("kept as the line is drawn again, so a refused press can be answered about the line as it stands rather than about the one the lesson opened with");
-    line_code = app_code_expression_code(current);
+    line_code = app_learn_js_expression_code(current);
     let solved = property_get(step, "solved");
     let ready = property_get(step, "ready");
     ready_now = ready;

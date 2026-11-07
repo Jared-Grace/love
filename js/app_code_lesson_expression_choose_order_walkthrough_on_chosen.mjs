@@ -3,7 +3,7 @@ import { html_div } from "./html_div.mjs";
 import { html_div_first } from "./html_div_first.mjs";
 import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_lesson_expression_choose_order_intro } from "./app_code_lesson_expression_choose_order_intro.mjs";
 import { html_remove_if_not_null } from "./html_remove_if_not_null.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_expression_choose_order_walkthrough_on_chosen(
   let duration = app_shared_animation_duration();
   let intro = html_div(head);
   let note = html_div(head);
-  let whole_line = app_code_expression_code(tree);
+  let whole_line = app_learn_js_expression_code(tree);
   let line_code = whole_line;
   ("which operators may go next is kept alongside the line itself, for the same reason: a refused press is answered about the line as it stands, and the answer names the operator that may go instead of the one just pressed");
   let ready_now = [];

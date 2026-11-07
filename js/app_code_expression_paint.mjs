@@ -17,7 +17,7 @@ export function app_code_expression_paint(parent, item, on_operator) {
   arguments_assert(arguments, 3);
   ("write an expression shape into a parent as separate pieces rather than as one piece of text, so that each operator standing in it is its own thing on the page and can be pressed");
   ("The same line ",
-    fn_name("app_code_expression_code"),
+    fn_name("app_learn_js_expression_code"),
     " writes, character for character - the spacing and the parentheses are decided by the same two helpers, so a learner pressing a line and a learner reading one are looking at the same line.");
   ("on_operator receives the operator, the piece of page the symbol was written into, and the piece holding the symbol together with both of its sides; the caller decides from there what pressing it does: the lesson makes the one that may be worked out next pressable and leaves the rest plain.");
   let node_is = app_code_expression_node_is(item);

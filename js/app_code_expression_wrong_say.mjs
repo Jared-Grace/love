@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_flat_tree_of_code } from "./app_code_expression_flat_tree_of_code.mjs";
 import { app_code_expression_press_steps } from "./app_code_expression_press_steps.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { catch_null } from "./catch_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_to } from "./text_to.mjs";
@@ -19,7 +19,7 @@ export function app_code_expression_wrong_say(question, answer, choice) {
   function steps_get() {
     let tree = app_code_expression_flat_tree_of_code(question);
     let steps = app_code_expression_press_steps(tree);
-    let listed = list_map(steps, app_code_expression_code);
+    let listed = list_map(steps, app_learn_js_expression_code);
     return listed;
   }
   let codes = catch_null(steps_get);

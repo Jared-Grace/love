@@ -20,7 +20,7 @@ import { app_code_expression_names_apart } from "./app_code_expression_names_apa
 import { catch_null } from "./catch_null.mjs";
 import { app_code_expression_values_number_boolean_is } from "./app_code_expression_values_number_boolean_is.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
 import { list_get } from "./list_get.mjs";
 import { subtract } from "./subtract.mjs";
@@ -114,7 +114,7 @@ export function app_code_program_step_actions_solve_whole(code, actions) {
     if (not_equal(worked, right)) {
       return false;
     }
-    let whole = app_code_expression_code(tree);
+    let whole = app_learn_js_expression_code(tree);
     let solving = object_copy_assign(root, {
       name: whole,
       whole,

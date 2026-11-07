@@ -2,7 +2,7 @@ import { function_duplicate_kind_parallel } from "./function_duplicate_kind_para
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
 import { list_first } from "./list_first.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { text_to } from "./text_to.mjs";
 import { property_get } from "./property_get.mjs";
@@ -27,14 +27,14 @@ export function app_code_lesson_expression_choose_order_run_worked(
   ("Both readings are asked for at once, out of the one place every lesson that takes a line down an operator at a time asks them - so the sentence the learner reads here is the sentence the quiz marks by, and it names the two operators that are actually on the line. This run used to look at the right side itself and write the parentheses sentence out where it stood. The look was right about the two lines it was given and about nothing else: it asked whether the right side had an operator in it, which is not the same question as whether that part gets printed inside parentheses, and it wrote the sentence a second time in words that had to be kept level with the first copy by hand.");
   let list = app_code_expression_nodes_ready(tree);
   let step = list_first(list);
-  let whole_line = app_code_expression_code(tree);
-  let step_code = app_code_expression_code(step);
+  let whole_line = app_learn_js_expression_code(tree);
+  let step_code = app_learn_js_expression_code(step);
   let step_value = app_code_expression_value(step);
   let step_text = text_to(step_value);
   let outer_symbol = property_get(tree, "operator");
   let step_symbol = property_get(step, "operator");
   let stepped = app_code_expression_solved(tree, step);
-  let stepped_code = app_code_expression_code(stepped);
+  let stepped_code = app_learn_js_expression_code(stepped);
   let final_value = app_code_expression_value(tree);
   let final_text = text_to(final_value);
   ("The line stands in a card of its own, and so does the run under it: the line is not a step of the run - it is what the run is done to.");

@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_learn_js_division_formula_recall_words(what, tree_of) {
   arguments_assert(arguments, 2);
@@ -16,9 +16,9 @@ export function app_learn_js_division_formula_recall_words(what, tree_of) {
   let divisor = property_get(numbers, "divisor");
   let divided_by = js_operator_division_symbol();
   let division = app_code_expression_node(dividend, divided_by, divisor);
-  let division_code = app_code_expression_code(division);
+  let division_code = app_learn_js_expression_code(division);
   let formula = tree_of(dividend, divisor);
-  let formula_code = app_code_expression_code(formula);
+  let formula_code = app_learn_js_expression_code(formula);
   let lead = text_combine_multiple(["the ", what, " of "]);
   let words = [lead, division_code, " is ", formula_code];
   return words;

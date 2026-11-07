@@ -1,6 +1,6 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_expression_sides_read } from "./app_code_expression_sides_read.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
@@ -29,7 +29,7 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   ("Every piece of the telling comes from that one line - both sides, what each comes to, what is left when both are done, and what that comes to. Numbers borrowed from nowhere in particular would be things to take on trust; one line worked from top to bottom is a run a learner can follow.");
   ("the recall makes its own card, so it is handed the root rather than a card to stand inside - a card within a card draws a second border around one line and reads as a note pinned to a screen rather than as one of its cards");
   recall(root, context);
-  let whole_line = app_code_expression_code(tree);
+  let whole_line = app_learn_js_expression_code(tree);
   let sides = app_code_expression_sides_read(tree);
   let left_code = property_get(sides, "left_code");
   let right_code = property_get(sides, "right_code");
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   let right_text = text_to(right_value);
   ("what is left when both sides are done is built from the two values rather than stepped to, because the two sides are shown coming to their values one row each just above and stepping to it again would be the same two steps a third time");
   let both = app_code_expression_node(left_value, outer_symbol, right_value);
-  let both_code = app_code_expression_code(both);
+  let both_code = app_learn_js_expression_code(both);
   let final_value = app_code_expression_value(tree);
   let final_text = text_to(final_value);
   let line_card = app_learn_js_container_light_blue(root);

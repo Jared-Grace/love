@@ -1,7 +1,7 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_lesson_expression_choose_order_solve_intro } from "./app_code_lesson_expression_choose_order_solve_intro.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
 import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
@@ -32,12 +32,12 @@ export function app_code_lesson_expression_choose_order_solve_above(
   app_code_operators_say(definition_card);
   let strong_right = true;
   let tree = app_code_lesson_expression_choose_order_expression(strong_right);
-  let whole_line = app_code_expression_code(tree);
+  let whole_line = app_learn_js_expression_code(tree);
   let ready = app_code_expression_nodes_ready(tree);
   let step = list_first(ready);
   let first_symbol = property_get(step, "operator");
   let next_symbol = property_get(tree, "operator");
-  let step_code = app_code_expression_code(step);
+  let step_code = app_learn_js_expression_code(step);
   let step_value = app_code_expression_value(step);
   let step_text = text_to(step_value);
   let final_value = app_code_expression_value(tree);

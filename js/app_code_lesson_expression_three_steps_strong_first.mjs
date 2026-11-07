@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_three } from "./app_code_lesson
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_three_operator_count } from "./app_code_lesson_expression_choose_order_three_operator_count.mjs";
 import { app_code_expression_flat_random_strong_first } from "./app_code_expression_flat_random_strong_first.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_lesson_expression_choose_order_three_above } from "./app_code_lesson_expression_choose_order_three_above.mjs";
 import { app_code_expression_flat_value_left_to_right } from "./app_code_expression_flat_value_left_to_right.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_three_steps_strong_first() {
     "one line of this lesson's family, handed over as the text of it";
     let count = app_code_lesson_expression_choose_order_three_operator_count();
     let tree = app_code_expression_flat_random_strong_first(count);
-    let code = app_code_expression_code(tree);
+    let code = app_learn_js_expression_code(tree);
     return code;
   }
   function above(root, context) {

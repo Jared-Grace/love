@@ -5,7 +5,7 @@ import { app_code_expression_node_settled_is } from "./app_code_expression_node_
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { app_code_expression_node_parentheses_is } from "./app_code_expression_node_parentheses_is.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { app_code_expression_operator_symbols } from "./app_code_expression_operator_symbols.mjs";
@@ -37,7 +37,7 @@ export function app_code_expression_step_reason_of(item, node) {
   }
   let parentheses = app_code_expression_node_parentheses_is(item, node);
   if (parentheses) {
-    let step_code = app_code_expression_code(node);
+    let step_code = app_learn_js_expression_code(node);
     let gathered = text_wrap_parenthesis(step_code);
     let marks = [
       "The ",

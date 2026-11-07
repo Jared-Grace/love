@@ -1,7 +1,7 @@
 import { list_random_item } from "./list_random_item.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_expression_parentheses_value_generic(
   function code_wanted(want_true, parentheses_left) {
     "one line of this lesson's family, drawn to come out to want_true with the parentheses at the end asked for, handed over as the text of it";
     let tree = expression_of(want_true, parentheses_left);
-    let code = app_code_expression_code(tree);
+    let code = app_learn_js_expression_code(tree);
     return code;
   }
   function refill() {

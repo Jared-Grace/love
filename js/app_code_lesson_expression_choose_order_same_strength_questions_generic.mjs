@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_flat_random_same_strength } from "./app_code_expression_flat_random_same_strength.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_expression_flat_tree_of_code } from "./app_code_expression_flat_tree_of_code.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_same_strength_questions_
   function item_new() {
     "a question is the line as written and its answer is what the line comes to";
     let tree = app_code_expression_flat_random_same_strength(operator_count);
-    let question = app_code_expression_code(tree);
+    let question = app_learn_js_expression_code(tree);
     let answer = app_code_expression_value(tree);
     let item = {
       question,

@@ -8,7 +8,7 @@ import { app_code_expression_parts_node } from "./app_code_expression_parts_node
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_code_lesson_expression_choose_order_or_expression } from "./app_code_lesson_expression_choose_order_or_expression.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_expression_code } from "./app_code_expression_code.mjs";
+import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_comparison_or_title_name_id } from "./app_code_lesson_expression_comparison_or_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -50,7 +50,7 @@ export function app_code_lesson_expression_comparison_or() {
     let mixed_true = mixed_tree(true);
     let mixed_false = mixed_tree(false);
     let trees = [both_true, both_false, mixed_true, mixed_false];
-    let list = list_map(trees, app_code_expression_code);
+    let list = list_map(trees, app_learn_js_expression_code);
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
