@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { boolean_is } from "./boolean_is.mjs";
-import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
+import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 export function app_code_program_step_solve_decoys(current, node) {
   arguments_assert(arguments, 2);
   ("the wrong values offered for the operator a learner stepping through a program just pressed, on an expression of that program solved whole: current is the expression as it reads now and node the part pressed - the decoys_get of ",
@@ -20,6 +20,6 @@ export function app_code_program_step_solve_decoys(current, node) {
   let whole_value = app_code_expression_value(current);
   let whole_boolean = boolean_is(whole_value);
   let whole = whole_boolean ? node : current;
-  let decoys2 = app_code_expression_value_decoys(whole, node);
+  let decoys2 = app_learn_js_expression_value_decoys(whole, node);
   return decoys2;
 }

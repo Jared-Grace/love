@@ -14,7 +14,7 @@ import { number_nan_is } from "./number_nan_is.mjs";
 import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_unique } from "./list_unique.mjs";
-export function app_code_expression_value_decoys(current, node) {
+export function app_learn_js_expression_value_decoys(current, node) {
   arguments_assert(arguments, 2);
   ("the wrong values to offer beside the right one when a learner is asked what the operator they just chose comes to: the value the OTHER operator would have given on the same two numbers, and the value the whole line comes to");
   ("Both are mistakes somebody actually makes, and neither is a near miss. The first is the slip of reading the symbol wrong - 2 * 3 answered as 5. The second is answering the line instead of the step, which is the very habit the step-at-a-time lesson before this one exists to break; a learner still thinking in whole lines reaches for it.");

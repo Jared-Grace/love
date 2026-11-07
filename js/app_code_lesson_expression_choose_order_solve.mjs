@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_questions } from "./app_code_le
 import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
 import { app_code_lesson_expression_choose_order_solve_above } from "./app_code_lesson_expression_choose_order_solve_above.mjs";
 import { app_code_lesson_expression_choose_order_solve_title_name_id } from "./app_code_lesson_expression_choose_order_solve_title_name_id.mjs";
-import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
+import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 export function app_code_lesson_expression_choose_order_solve() {
   "choosing which part of a line to solve, and then working that part out: 1 + 2 * 3, choose the times, choose 6 out of what it could come to, see 1 + 6, choose the plus, choose 7";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_choose_order_solve() {
       on_success,
       on_wrong,
       answer_label_set,
-      app_code_expression_value_decoys,
+      app_learn_js_expression_value_decoys,
     );
   }
   function example_draw(parent, card, tree) {
@@ -30,7 +30,7 @@ export function app_code_lesson_expression_choose_order_solve() {
       parent,
       card,
       tree,
-      app_code_expression_value_decoys,
+      app_learn_js_expression_value_decoys,
     );
   }
   ("everything else this lesson is made of - the one quiz kind, the labels, the front page finding its own line - is what it has in common with the lesson before it, and is written once for the two of them");

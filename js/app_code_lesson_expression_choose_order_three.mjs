@@ -1,4 +1,4 @@
-import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
+import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_choose_order_three() {
       on_success,
       on_wrong,
       answer_label_set,
-      app_code_expression_value_decoys,
+      app_learn_js_expression_value_decoys,
     );
   }
   function example_draw(parent, card, tree) {
@@ -30,7 +30,7 @@ export function app_code_lesson_expression_choose_order_three() {
       parent,
       card,
       tree,
-      app_code_expression_value_decoys,
+      app_learn_js_expression_value_decoys,
     );
   }
   let bank = app_code_lesson_expression_choose_order_three_questions();

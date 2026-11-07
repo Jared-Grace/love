@@ -5,7 +5,7 @@ import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { equal } from "./equal.mjs";
 import { or } from "./or.mjs";
 import { not } from "./not.mjs";
-import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
+import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { ternary } from "./ternary.mjs";
 import { floor } from "./floor.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_expression_value_decoys_rounding(current, node) {
   let dividing = equal(symbol, divided_by);
   let rounding_part = or(called, dividing);
   if (not(rounding_part)) {
-    let plain = app_code_expression_value_decoys(current, node);
+    let plain = app_learn_js_expression_value_decoys(current, node);
     return plain;
   }
   let value = app_code_expression_value(node);

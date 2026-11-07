@@ -6,7 +6,7 @@ import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { app_code_lesson_expression_choose_order_twin_read_generic } from "./app_code_lesson_expression_choose_order_twin_read_generic.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide } from "./app_code_lesson_expression_parentheses_minus_divide.mjs";
 import { app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code.mjs";
-import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
+import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_minus_divide() {
   arguments_assert(arguments, 0);
   ("( and ) on the right of a - or a /, taken a press at a time before the lesson next door asks for the whole line: 14 - (7 - 2), choose the inner minus, choose 5, see 14 - 5, choose the minus, choose 9");
@@ -29,7 +29,7 @@ export function app_code_lesson_expression_choose_order_parentheses_minus_divide
     words,
     app_code_lesson_expression_parentheses_minus_divide,
     app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code,
-    app_code_expression_value_decoys,
+    app_learn_js_expression_value_decoys,
   );
   return lesson;
 }

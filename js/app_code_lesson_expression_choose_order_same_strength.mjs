@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_choose_order_same_strength_title_name_id } from "./app_code_lesson_expression_choose_order_same_strength_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
-import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
+import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 import { app_code_lesson_expression_choose_order_same_strength_questions } from "./app_code_lesson_expression_choose_order_same_strength_questions.mjs";
 import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_choose_order_same_strength() {
       on_success,
       on_wrong,
       answer_label_set,
-      app_code_expression_value_decoys,
+      app_learn_js_expression_value_decoys,
     );
   }
   function example_draw(parent, card, tree) {
@@ -32,7 +32,7 @@ export function app_code_lesson_expression_choose_order_same_strength() {
       parent,
       card,
       tree,
-      app_code_expression_value_decoys,
+      app_learn_js_expression_value_decoys,
     );
   }
   let bank = app_code_lesson_expression_choose_order_same_strength_questions();

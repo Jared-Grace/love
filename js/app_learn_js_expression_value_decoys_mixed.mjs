@@ -1,4 +1,4 @@
-import { app_code_expression_value_decoys } from "./app_code_expression_value_decoys.mjs";
+import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_learn_js_expression_value_decoys_boolean } from "./app_learn_js_expression_value_decoys_boolean.mjs";
 import { app_code_operator_comparison_is } from "./app_code_operator_comparison_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_expression_value_decoys_mixed(current, node) {
     );
     return boolean_decoys;
   }
-  let candidates = app_code_expression_value_decoys(current, node);
+  let candidates = app_learn_js_expression_value_decoys(current, node);
   let decoys = list_filter(candidates, number_is);
   return decoys;
 }
