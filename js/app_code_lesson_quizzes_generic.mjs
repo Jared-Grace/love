@@ -11,7 +11,7 @@ import { each } from "./each.mjs";
 import { app_code_lesson_quizzes_lines_add } from "./app_code_lesson_quizzes_lines_add.mjs";
 import { app_learn_js_lesson_quiz_step_info } from "./app_learn_js_lesson_quiz_step_info.mjs";
 import { list_add_first } from "./list_add_first.mjs";
-import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
+import { app_learn_js_lesson_quiz } from "./app_learn_js_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_quizzes_generic(params) {
   let forwards_record = property_get(params, "forwards");
@@ -103,7 +103,7 @@ export function app_code_lesson_quizzes_generic(params) {
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {
       let r = function quiz(context, parent, container, refresh, next_get) {
-        app_code_lesson_quiz({
+        app_learn_js_lesson_quiz({
           container_blue_light: container,
           qa: {
             question,

@@ -7,7 +7,7 @@ import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.m
 import { app_learn_js_lesson_quiz_token_select } from "./app_learn_js_lesson_quiz_token_select.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_item_qa_for } from "./app_learn_js_lesson_expression_remainder_divide_item_qa_for.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_qa_for } from "./app_learn_js_lesson_expression_remainder_divide_qa_for.mjs";
-import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
+import { app_learn_js_lesson_quiz } from "./app_learn_js_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_learn_js_lesson_expression_remainder_divide_quizzes_get(
@@ -65,7 +65,7 @@ export function app_learn_js_lesson_expression_remainder_divide_quizzes_get(
       percent_expression,
     );
     function quiz(context, parent, container, refresh, next_get) {
-      app_code_lesson_quiz({
+      app_learn_js_lesson_quiz({
         container_blue_light: container,
         qa: quiz_qa,
         parent,
