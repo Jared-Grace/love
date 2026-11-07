@@ -6,7 +6,7 @@ import { app_shared_url_suffix_stage_hash } from "./app_shared_url_suffix_stage_
 import { app_code } from "./app_code.mjs";
 import { server_url } from "./server_url.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_happy_url_walked } from "./app_code_happy_url_walked.mjs";
+import { app_learn_js_happy_url_walked } from "./app_learn_js_happy_url_walked.mjs";
 export async function app_code_tests_run_e2e_happy_from(stage_name, lesson_id) {
   "$plain stage_name";
   "$plain lesson_id";
@@ -23,6 +23,6 @@ export async function app_code_tests_run_e2e_happy_from(stage_name, lesson_id) {
   let path = await app_shared_url_suffix_stage_hash(app_code, stage_name, hash);
   let left = server_url();
   let url = text_combine(left, path);
-  let walked = await app_code_happy_url_walked(url);
+  let walked = await app_learn_js_happy_url_walked(url);
   return walked;
 }

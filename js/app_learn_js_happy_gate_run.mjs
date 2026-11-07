@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_url_dev } from "./app_shared_url_dev.mjs";
 import { app_code } from "./app_code.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_code_happy_url_walked } from "./app_code_happy_url_walked.mjs";
+import { app_learn_js_happy_url_walked } from "./app_learn_js_happy_url_walked.mjs";
 import { server_static_free_port_run } from "./server_static_free_port_run.mjs";
 import { catch_error_text_or_null_async } from "./catch_error_text_or_null_async.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -24,7 +24,7 @@ export async function app_learn_js_happy_gate_run() {
   async function walk(base) {
     let path = await app_shared_url_dev(app_code);
     let url = text_combine(base, path);
-    reached = await app_code_happy_url_walked(url);
+    reached = await app_learn_js_happy_url_walked(url);
   }
   async function served() {
     await server_static_free_port_run(walk);
