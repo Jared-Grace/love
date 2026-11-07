@@ -4,7 +4,7 @@ import { app_code_braces_colors } from "./app_code_braces_colors.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_braces_colors_bag } from "./app_code_braces_colors_bag.mjs";
+import { app_learn_js_braces_colors_bag } from "./app_learn_js_braces_colors_bag.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -26,7 +26,7 @@ export function app_code_braces_colors_next(code) {
     }
   }
   count = math_min(count, all.length);
-  let bag = app_code_braces_colors_bag();
+  let bag = app_learn_js_braces_colors_bag();
   let remaining = property_get(bag, "remaining");
   let taken = [];
   while (less_than(taken.length, count)) {
