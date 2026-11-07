@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { app_code_lesson_expression_choose_order_tree_of_code_generic } from "./app_code_lesson_expression_choose_order_tree_of_code_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_tree_of_code_generic } from "./app_learn_js_lesson_expression_choose_order_tree_of_code_generic.mjs";
 export function app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side(
   code,
   node_left,
@@ -15,13 +15,13 @@ export function app_code_lesson_expression_choose_order_tree_of_code_parenthesis
   let opens_parenthesised = text_starts_with(code, left_parenthesis);
   if (opens_parenthesised) {
     let tree_left =
-      app_code_lesson_expression_choose_order_tree_of_code_generic(
+      app_learn_js_lesson_expression_choose_order_tree_of_code_generic(
         code,
         node_left,
       );
     return tree_left;
   }
-  let tree = app_code_lesson_expression_choose_order_tree_of_code_generic(
+  let tree = app_learn_js_lesson_expression_choose_order_tree_of_code_generic(
     code,
     node_right,
   );

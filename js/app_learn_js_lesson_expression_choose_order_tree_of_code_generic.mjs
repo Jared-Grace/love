@@ -8,7 +8,7 @@ import { list_size_assert } from "./list_size_assert.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { equal } from "./equal.mjs";
 import { js_two_operator_line_parts } from "./js_two_operator_line_parts.mjs";
-export function app_code_lesson_expression_choose_order_tree_of_code_generic(
+export function app_learn_js_lesson_expression_choose_order_tree_of_code_generic(
   code,
   node_from_parts,
 ) {
