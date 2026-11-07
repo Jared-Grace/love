@@ -10,7 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
+import { app_learn_js_lesson_statement_name_average_two } from "./app_learn_js_lesson_statement_name_average_two.mjs";
 export function app_learn_js_lesson_statement_name_average_three() {
   arguments_assert(arguments, 0);
   ("the average of three names: let sum = a + b + c; let average = sum / 3; console.log(average);");
@@ -55,7 +55,7 @@ export function app_learn_js_lesson_statement_name_average_three() {
     values_get,
     example_values: [4, 6, 8],
     step,
-    remember_lesson: app_code_lesson_statement_name_average_two,
+    remember_lesson: app_learn_js_lesson_statement_name_average_two,
     remember_parts: [
       "the average of two names is their ",
       "sum",

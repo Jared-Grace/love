@@ -7,7 +7,7 @@ import { app_learn_js_lesson_bold_term } from "./app_learn_js_lesson_bold_term.m
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
-import { app_code_lesson_statement_name_average_two } from "./app_code_lesson_statement_name_average_two.mjs";
+import { app_learn_js_lesson_statement_name_average_two } from "./app_learn_js_lesson_statement_name_average_two.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_middle_step } from "./app_code_lesson_statement_name_middle_step.mjs";
@@ -161,7 +161,7 @@ export function app_code_lesson_statement_name_middle() {
     app_learn_js_lesson_reference_draw(
       line,
       context,
-      app_code_lesson_statement_name_average_two,
+      app_learn_js_lesson_statement_name_average_two,
     );
     html_span_text_content(
       line,

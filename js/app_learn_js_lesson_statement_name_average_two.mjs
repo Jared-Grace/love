@@ -18,7 +18,7 @@ import { app_learn_js_definition_term } from "./app_learn_js_definition_term.mjs
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_divide } from "./app_code_lesson_statement_name_divide.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_average_two() {
+export function app_learn_js_lesson_statement_name_average_two() {
   arguments_assert(arguments, 0);
   ("the average of two names, in two short lines: let sum = a + b; let average = sum / 2; console.log(average);");
   ("The first formula split into short lines. Each line does one thing and gives its answer a name, and the next line reads that name - so a formula a learner could not read at a glance is two lines they can.");
