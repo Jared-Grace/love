@@ -2,7 +2,9 @@ import { app_learn_js_lesson_expression_choose_order_not_tree_of_code_generic } 
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { number_from_text } from "./number_from_text.mjs";
-export function app_code_lesson_expression_choose_order_not_tree_of_code(code) {
+export function app_learn_js_lesson_expression_choose_order_not_tree_of_code(
+  code,
+) {
   arguments_assert(arguments, 1);
   ("the shape behind a line this lesson printed, worked out again from the line itself: !(3 < 5) gives back the shape whose ! holds the whole comparison");
   ("Taking the line apart is its neighbour lesson's job as much as this one's and is done there. What is left here is what the two outer words mean: this lesson writes a number at each end, so each is read back as the number it spells.");
