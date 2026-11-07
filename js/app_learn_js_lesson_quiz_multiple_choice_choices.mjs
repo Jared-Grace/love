@@ -14,7 +14,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_lesson_quiz_multiple_choice_distractors_fit } from "./app_code_lesson_quiz_multiple_choice_distractors_fit.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_lesson_quiz_multiple_choice_choices(
+export function app_learn_js_lesson_quiz_multiple_choice_choices(
   r2,
   distractor_count,
   attempts_max,
