@@ -28,7 +28,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_two_ifs() {
+export function app_learn_js_lesson_if_two_ifs() {
   arguments_assert(arguments, 0);
   ('two ifs asking about two names: let a = 2; let b = 7; if (a < 5) { console.log("love"); } if (b < 5) { console.log("joy"); } console.log("peace"); writes out love and peace');
   ("The one new fact is that two ifs each ask their own question, so together they can go four ways: both run, only the first, only the second, or neither. Each batch holds one program of each, so the learner meets all four.");
