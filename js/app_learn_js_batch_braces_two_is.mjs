@@ -6,7 +6,7 @@ import { not } from "./not.mjs";
 import { text_occurrences_count } from "./text_occurrences_count.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_all } from "./list_all.mjs";
-export function app_code_batch_braces_two_is(items) {
+export function app_learn_js_batch_braces_two_is(items) {
   arguments_assert(arguments, 1);
   ("whether every program of a lesson's batch has two or more pairs of braces: what the milestones gather from, asked for by the human 2026-10-22");
   ("Read off the lesson rather than listed, because the human asked for a milestone chosen by what lessons hold, where a review is chosen by where they stand: a new lesson of this kind joins the milestone without anybody adding it.");

@@ -9,7 +9,7 @@ import { list_size } from "./list_size.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_batch_braces_two_is } from "./app_code_batch_braces_two_is.mjs";
+import { app_learn_js_batch_braces_two_is } from "./app_learn_js_batch_braces_two_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_max } from "./list_max.mjs";
@@ -51,7 +51,7 @@ export function app_code_milestones() {
   let entries = list_map(branches, with_items);
   function entry_braces_two_is(entry) {
     let items = property_get(entry, "items");
-    let two = app_code_batch_braces_two_is(items);
+    let two = app_learn_js_batch_braces_two_is(items);
     return two;
   }
   let braces = list_filter(entries, entry_braces_two_is);
