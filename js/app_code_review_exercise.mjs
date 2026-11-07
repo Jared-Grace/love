@@ -10,7 +10,7 @@ import { html_div } from "./html_div.mjs";
 import { app_code_review_exercise_excuse } from "./app_code_review_exercise_excuse.mjs";
 import { app_code_quiz_reveal_button } from "./app_code_quiz_reveal_button.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
-import { app_code_lesson_quiz_correction_code_set } from "./app_code_lesson_quiz_correction_code_set.mjs";
+import { app_learn_js_lesson_quiz_correction_code_set } from "./app_learn_js_lesson_quiz_correction_code_set.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 import { or } from "./or.mjs";
@@ -75,7 +75,7 @@ export function app_code_review_exercise(
     correction_render,
     qa,
   );
-  let correction_code_set = app_code_lesson_quiz_correction_code_set(
+  let correction_code_set = app_learn_js_lesson_quiz_correction_code_set(
     container_correction,
     correction_render,
     qa,

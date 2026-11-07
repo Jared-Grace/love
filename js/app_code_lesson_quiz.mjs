@@ -5,7 +5,7 @@ import { app_learn_js_lesson_quiz_answer_label_set } from "./app_learn_js_lesson
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
-import { app_code_lesson_quiz_correction_code_set } from "./app_code_lesson_quiz_correction_code_set.mjs";
+import { app_learn_js_lesson_quiz_correction_code_set } from "./app_learn_js_lesson_quiz_correction_code_set.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_correct_record.mjs";
@@ -64,7 +64,7 @@ export function app_code_lesson_quiz({
       qa,
     );
     ("a quiz whose answer can be written more than one way is handed a way to say which way it is aiming at, so that the answer the learner is shown when they ask for it agrees with what they have already built rather than contradicting it");
-    let correction_code_set = app_code_lesson_quiz_correction_code_set(
+    let correction_code_set = app_learn_js_lesson_quiz_correction_code_set(
       container_correction,
       correction_render,
       qa,

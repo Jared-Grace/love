@@ -1,6 +1,6 @@
 import { app_code_lesson_quiz_correction_redraw } from "./app_code_lesson_quiz_correction_redraw.mjs";
 import { object_copy_property_set } from "./object_copy_property_set.mjs";
-export function app_code_lesson_quiz_correction_code_set(
+export function app_learn_js_lesson_quiz_correction_code_set(
   container_correction,
   correction_render,
   qa,
