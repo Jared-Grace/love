@@ -7,7 +7,7 @@ import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_plus_times() {
+export function app_learn_js_lesson_expression_plus_times() {
   "mixing + and * in one expression: a + b * c and a * b + c; unlike + and -, these are NOT the same strength - * is stronger, so we always do it first, even when it comes later in the line; the intro works a multiplication in each position, on its own numbers; only + and * here, so every value is a whole number";
   let plus = js_operator_plus();
   let times = js_operator_asterisk();
