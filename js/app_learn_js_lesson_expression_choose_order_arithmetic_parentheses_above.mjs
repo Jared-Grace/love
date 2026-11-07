@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expr
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_code_parentheses_either_side_words } from "./app_code_parentheses_either_side_words.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
-import { app_code_lesson_expression_choose_order_arithmetic_parentheses_recall } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses_recall.mjs";
+import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_recall } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_recall.mjs";
 import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_intro } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_intro.mjs";
 export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_above(
   root,
@@ -40,7 +40,7 @@ export function app_learn_js_lesson_expression_choose_order_arithmetic_parenthes
   ];
   app_code_lesson_expression_choose_order_walks_above_generic(
     root,
-    app_code_lesson_expression_choose_order_arithmetic_parentheses_recall,
+    app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_recall,
     walks,
     app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_intro,
     context,
