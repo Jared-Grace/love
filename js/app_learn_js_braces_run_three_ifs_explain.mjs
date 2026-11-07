@@ -6,7 +6,7 @@ import { app_code_lesson_braces_run } from "./app_code_lesson_braces_run.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_braces_three_ifs } from "./app_learn_js_braces_three_ifs.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
+import { app_learn_js_lesson_above } from "./app_learn_js_lesson_above.mjs";
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 export function app_learn_js_braces_run_three_ifs_explain(root, context) {
   arguments_assert(arguments, 2);
@@ -25,7 +25,7 @@ export function app_learn_js_braces_run_three_ifs_explain(root, context) {
   app_learn_js_div_cycle_code(box, ["Here there are three ", "if", "s:"]);
   let code = app_learn_js_braces_three_ifs();
   let code_label = app_learn_js_label_code_question();
-  app_code_lesson_above(
+  app_learn_js_lesson_above(
     box,
     code_label,
     code,

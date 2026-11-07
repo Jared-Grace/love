@@ -2,7 +2,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
-import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
+import { app_learn_js_lesson_above } from "./app_learn_js_lesson_above.mjs";
 import { app_learn_js_example_answer_label } from "./app_learn_js_example_answer_label.mjs";
 import { app_learn_js_label_text_set } from "./app_learn_js_label_text_set.mjs";
 import { app_code_lesson_quiz_show_correction } from "./app_code_lesson_quiz_show_correction.mjs";
@@ -46,7 +46,7 @@ export function app_code_review_exercise(
     answer,
   };
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
-  let a = app_code_lesson_above(
+  let a = app_learn_js_lesson_above(
     parent,
     question_label,
     quiz_question,
