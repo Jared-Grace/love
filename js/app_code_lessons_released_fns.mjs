@@ -2,7 +2,7 @@ import { app_learn_js_lesson_symbols_digits_numbered } from "./app_learn_js_less
 import { app_learn_js_lesson_symbols_digit_number } from "./app_learn_js_lesson_symbols_digit_number.mjs";
 import { app_learn_js_lesson_symbols_digits } from "./app_learn_js_lesson_symbols_digits.mjs";
 import { app_learn_js_lesson_symbols_letters } from "./app_learn_js_lesson_symbols_letters.mjs";
-import { app_code_lesson_symbols_space } from "./app_code_lesson_symbols_space.mjs";
+import { app_learn_js_lesson_symbols_space } from "./app_learn_js_lesson_symbols_space.mjs";
 import { app_learn_js_lesson_identifiers_letters_spaces } from "./app_learn_js_lesson_identifiers_letters_spaces.mjs";
 import { app_learn_js_lesson_identifiers_underscores } from "./app_learn_js_lesson_identifiers_underscores.mjs";
 import { app_learn_js_lesson_identifiers_dollar_signs } from "./app_learn_js_lesson_identifiers_dollar_signs.mjs";
@@ -315,7 +315,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_symbols_digit_number,
     app_learn_js_lesson_symbols_digits,
     app_learn_js_lesson_symbols_letters,
-    app_code_lesson_symbols_space,
+    app_learn_js_lesson_symbols_space,
     app_learn_js_lesson_identifiers_letters_spaces,
     app_learn_js_lesson_identifiers_underscores,
     app_learn_js_lesson_identifiers_dollar_signs,

@@ -16,7 +16,7 @@ import { app_learn_js_lesson_symbols_counting } from "./app_learn_js_lesson_symb
 import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_symbols_space() {
+export function app_learn_js_lesson_symbols_space() {
   function lambda(root) {
     let c = app_learn_js_container_light_blue(root);
     let div = html_div(c);
