@@ -6,7 +6,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { list_join_newline } from "./list_join_newline.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-export function app_code_lesson_statement_name_value_batch() {
+export function app_learn_js_lesson_statement_name_value_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives one word a name and then writes that name out");
   ("All four are the same two lines with a different word in them, because the one thing being asked is whether a name hands back what was put under it. A second shape on the same screen would be a second question.");

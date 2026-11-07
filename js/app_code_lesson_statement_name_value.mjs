@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_title_name_id } from "./app_code_lesson_statement_name_value_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_lesson_statement_name_value_batch } from "./app_code_lesson_statement_name_value_batch.mjs";
+import { app_learn_js_lesson_statement_name_value_batch } from "./app_learn_js_lesson_statement_name_value_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_statement_name_value() {
   ("Building the code from tokens is left switched off. The order the words of two lines go in is a second thing to learn, and this lesson is about the name.");
   let name_id = app_code_lesson_statement_name_value_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
-    app_code_lesson_statement_name_value_batch,
+    app_learn_js_lesson_statement_name_value_batch,
     eval_console_log_to_list,
   );
   function backwards_decoys(question, answer) {
