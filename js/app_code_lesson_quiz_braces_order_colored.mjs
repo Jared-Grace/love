@@ -11,7 +11,7 @@ import { text_space_nb } from "./text_space_nb.mjs";
 import { less_than } from "./less_than.mjs";
 import { js_code_brace_is } from "./js_code_brace_is.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_braces_pair_color } from "./app_code_braces_pair_color.mjs";
+import { app_learn_js_braces_pair_color } from "./app_learn_js_braces_pair_color.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -67,7 +67,7 @@ export function app_code_lesson_quiz_braces_order_colored(
       let piece = {
         order: list_size(pieces),
         brace: code[i],
-        color: app_code_braces_pair_color(code, i, colors),
+        color: app_learn_js_braces_pair_color(code, i, colors),
       };
       list_add(pieces, piece);
     }

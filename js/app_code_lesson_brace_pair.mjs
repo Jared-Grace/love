@@ -8,7 +8,7 @@ import { app_code_lesson_token_order_braces } from "./app_code_lesson_token_orde
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
-import { app_code_braces_pair_color } from "./app_code_braces_pair_color.mjs";
+import { app_learn_js_braces_pair_color } from "./app_learn_js_braces_pair_color.mjs";
 import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
@@ -75,7 +75,11 @@ export function app_code_lesson_brace_pair() {
     for (let i = 0; less_than(i, paired_code.length); i++) {
       let brace_char = paired_code[i];
       if (equal(brace_char, left) || equal(brace_char, right)) {
-        let brace_color = app_code_braces_pair_color(paired_code, i, colors);
+        let brace_color = app_learn_js_braces_pair_color(
+          paired_code,
+          i,
+          colors,
+        );
         list_add_multiple(braces_painted, [
           {
             brace: brace_char,

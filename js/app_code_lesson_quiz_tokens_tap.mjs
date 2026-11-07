@@ -20,7 +20,7 @@ import { app_code_quiz_tokens_places } from "./app_code_quiz_tokens_places.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_brace_is } from "./js_code_brace_is.mjs";
 import { text_get } from "./text_get.mjs";
-import { app_code_braces_pair_color } from "./app_code_braces_pair_color.mjs";
+import { app_learn_js_braces_pair_color } from "./app_learn_js_braces_pair_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { app_code_token_chip_thin } from "./app_code_token_chip_thin.mjs";
@@ -125,7 +125,7 @@ export function app_code_lesson_quiz_tokens_tap({
     if (not(colored && brace)) {
       return;
     }
-    let color = app_code_braces_pair_color(code, start, colors);
+    let color = app_learn_js_braces_pair_color(code, start, colors);
     html_style_background_color_set(span, color);
     html_font_color_set_white(span);
   }
