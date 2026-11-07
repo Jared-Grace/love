@@ -20,7 +20,7 @@ import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logg
 import { app_learn_js_lesson_statement_name_copy_above } from "./app_learn_js_lesson_statement_name_copy_above.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_learn_js_lesson_decoy_code_pieces } from "./app_learn_js_lesson_decoy_code_pieces.mjs";
-export function app_code_lesson_statement_name_copy() {
+export function app_learn_js_lesson_statement_name_copy() {
   arguments_assert(arguments, 0);
   ('a name given what another name holds: let a = "grapes"; let b = "olives"; let c = a; console.log(c); writes out grapes');
   ("The first screen where a name is read rather than written out. Every line up to here has put a value under a name and then handed that name to console.log; here a name is handed to the thing that makes a name, which is the same reading in a place a learner has never seen it.");

@@ -5,7 +5,7 @@ import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson_names } from "./app_code_remember_from_lesson_names.mjs";
-import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
+import { app_learn_js_lesson_statement_name_copy } from "./app_learn_js_lesson_statement_name_copy.mjs";
 import { app_learn_js_lesson_cups_row_holding } from "./app_learn_js_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -41,7 +41,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_above(
   app_code_remember_from_lesson_names(
     box_have,
     context,
-    app_code_lesson_statement_name_copy,
+    app_learn_js_lesson_statement_name_copy,
     ["we gave cup ", name_copy, " whatever was in cup ", name_first],
     names,
   );

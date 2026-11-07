@@ -8,7 +8,7 @@ import { app_code_lesson_statement_name_fill_from_step } from "./app_code_lesson
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { app_code_lesson_statement_name_swap_ladder } from "./app_code_lesson_statement_name_swap_ladder.mjs";
-import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
+import { app_learn_js_lesson_statement_name_copy } from "./app_learn_js_lesson_statement_name_copy.mjs";
 export function app_code_lesson_statement_name_fill_from() {
   arguments_assert(arguments, 0);
   ("the first lesson of the swapping ladder: a name that already holds a number is given what another name holds - let a = 3; let b = 8; a = b; writes out 8 and 8");
@@ -28,7 +28,7 @@ export function app_code_lesson_statement_name_fill_from() {
   let lesson = app_code_lesson_statement_name_swap_ladder({
     words: "Filling a name from another name",
     step,
-    remember_lesson: app_code_lesson_statement_name_copy,
+    remember_lesson: app_learn_js_lesson_statement_name_copy,
     remember_parts: [
       "we can give a new name what another name holds (",
       copied,
