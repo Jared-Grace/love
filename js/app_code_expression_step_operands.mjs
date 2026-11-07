@@ -1,4 +1,4 @@
-import { app_code_expression_step_operands_times_is } from "./app_code_expression_step_operands_times_is.mjs";
+import { app_learn_js_expression_step_operands_times_is } from "./app_learn_js_expression_step_operands_times_is.mjs";
 import { app_learn_js_expression_step_operands_minus_is } from "./app_learn_js_expression_step_operands_minus_is.mjs";
 import { app_learn_js_expression_step_operands_dividends } from "./app_learn_js_expression_step_operands_dividends.mjs";
 import { app_code_expression_step_value_least } from "./app_code_expression_step_value_least.mjs";
@@ -50,7 +50,7 @@ export function app_code_expression_step_operands(value, symbol, value_left) {
     let wholes = range_from(whole_least, most);
     return wholes;
   }
-  let times_is = app_code_expression_step_operands_times_is(symbol);
+  let times_is = app_learn_js_expression_step_operands_times_is(symbol);
   if (times_is) {
     let factor_most = divide_floor(most, value);
     let factors = range_from(least, factor_most);
