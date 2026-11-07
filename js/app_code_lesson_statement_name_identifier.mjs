@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_identifier_title_name_id } from "./app_code_lesson_statement_name_identifier_title_name_id.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
-import { app_code_lesson_statement_name_identifier_batch } from "./app_code_lesson_statement_name_identifier_batch.mjs";
+import { app_learn_js_lesson_statement_name_identifier_batch } from "./app_learn_js_lesson_statement_name_identifier_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { list_first } from "./list_first.mjs";
@@ -26,7 +26,7 @@ export function app_code_lesson_statement_name_identifier() {
   ("Building the code from tokens is left switched off, for the reason the lesson before gives: the order two lines go in is a second thing to learn.");
   let name_id = app_code_lesson_statement_name_identifier_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
-    app_code_lesson_statement_name_identifier_batch,
+    app_learn_js_lesson_statement_name_identifier_batch,
     eval_console_log_to_list,
   );
   ("Every wrong answer uses only this program's own two words, in both directions, so nothing on the buttons can be thrown out for holding a word the code does not. Reading backwards the two words are also swapped, which is why the words here are ones JS accepts as a name: the swapped program runs and writes out the other word.");

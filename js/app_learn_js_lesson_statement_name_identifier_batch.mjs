@@ -9,7 +9,7 @@ import { list_get_wrap } from "./list_get_wrap.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-export function app_code_lesson_statement_name_identifier_batch() {
+export function app_learn_js_lesson_statement_name_identifier_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives one word a name, the name being another word, and then writes that name out");
   ("Four words are picked, and each program holds one of them and is named after the next one along, the last one named after the first. So every word on the screen is a name once and a value once, and neither reading of a word is the one it always has.");
