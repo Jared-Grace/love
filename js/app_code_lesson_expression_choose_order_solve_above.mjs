@@ -2,7 +2,7 @@ import { function_duplicate_kind_parallel } from "./function_duplicate_kind_para
 import { app_code_lesson_expression_choose_order_solve_intro } from "./app_code_lesson_expression_choose_order_solve_intro.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
+import { app_learn_js_expression_equals_text } from "./app_learn_js_expression_equals_text.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
 import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
@@ -53,7 +53,7 @@ export function app_code_lesson_expression_choose_order_solve_above(
     next_symbol,
     ")",
   ]);
-  let solved = app_code_expression_equals_text(step_code, step_text);
+  let solved = app_learn_js_expression_equals_text(step_code, step_text);
   app_learn_js_div_cycle_code(recap, [
     "Then you saw what that operator would be replaced with (like ",
     solved,

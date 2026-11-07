@@ -2,7 +2,7 @@ import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_expression_equals_text(solved_code, value_text) {
+export function app_learn_js_expression_equals_text(solved_code, value_text) {
   arguments_assert(arguments, 2);
   ("one piece of a line written beside what it comes to: (3 * 7) === 21");
   ("Said with === rather than with becomes or equals, because that is how this track has written what a line comes to since the very first lesson that printed an answer.");

@@ -9,7 +9,7 @@ import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
+import { app_learn_js_expression_equals_text } from "./app_learn_js_expression_equals_text.mjs";
 export function app_code_lesson_expression_choose_order_both_sides_above_generic(
   root,
   tree,
@@ -64,9 +64,12 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
     "JavaScript always works out the left side before the right",
   ]);
   ("both are then simply shown coming to their values, one line each, with nothing said about order - the order question is already answered above and saying it again here would make it sound unsettled");
-  let left_solved = app_code_expression_equals_text(left_code, left_text);
+  let left_solved = app_learn_js_expression_equals_text(left_code, left_text);
   app_learn_js_div_cycle_code(run, ["", left_solved]);
-  let right_solved = app_code_expression_equals_text(right_code, right_text);
+  let right_solved = app_learn_js_expression_equals_text(
+    right_code,
+    right_text,
+  );
   app_learn_js_div_cycle_code(run, ["", right_solved]);
   app_learn_js_div_cycle_code(run, [
     "Then we replace them to get ",

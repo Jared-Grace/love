@@ -1,5 +1,5 @@
 import { app_shared_encouragement_step_exclamation } from "./app_shared_encouragement_step_exclamation.mjs";
-import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
+import { app_learn_js_expression_equals_text } from "./app_learn_js_expression_equals_text.mjs";
 import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_cycle } from "./html_cycle.mjs";
@@ -10,7 +10,7 @@ export function app_code_expression_replace_say(note, solved_code, value_text) {
   arguments_assert(arguments, 3);
   ("say what the operator a learner just chose comes to, and that the piece it stands in is about to be swapped for it: 3 * 7 === 21, so now we replace the 3 * 7 with 21");
   ("Both halves of the sentence are said from the one place each of them lives in, because the lesson that comes after this one tells the learner about this very press afterwards and has to tell them about it in the words they were shown.");
-  let worked_out = app_code_expression_equals_text(solved_code, value_text);
+  let worked_out = app_learn_js_expression_equals_text(solved_code, value_text);
   ("praised from the words said DURING a piece of work rather than the ones said at the end of it, because there is more of the same line still to solve underneath this sentence");
   ("It used to read from the one list every place in the app praised from, and so a learner one step into three was told Congratulations - which is what a person is told when they have arrived, so the two steps still to come read as something having gone wrong rather than as the rest of the work.");
   let praise = app_shared_encouragement_step_exclamation();
