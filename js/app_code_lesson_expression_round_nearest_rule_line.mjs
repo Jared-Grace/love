@@ -1,4 +1,4 @@
-import { app_code_first_decimal_digit_words } from "./app_code_first_decimal_digit_words.mjs";
+import { app_learn_js_first_decimal_digit_words } from "./app_learn_js_first_decimal_digit_words.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_expression_round_nearest_rule_line(
   ("The comma before or is deliberate. The list builder this repo already has leaves it out, and it is wanted here: a learner reading 0, 1, 2, 3 or 4 aloud can hear the last two as one item.");
   let div = html_div(parent);
   html_span_text(div, "If the ");
-  let text = app_code_first_decimal_digit_words();
+  let text = app_learn_js_first_decimal_digit_words();
   html_span_text(div, text);
   let parts = [" is "];
   let last_index = list_size_subtract(first_digits, 1);

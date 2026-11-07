@@ -1,4 +1,4 @@
-import { app_code_first_decimal_digit_words } from "./app_code_first_decimal_digit_words.mjs";
+import { app_learn_js_first_decimal_digit_words } from "./app_learn_js_first_decimal_digit_words.mjs";
 import { app_code_lesson_expression_round_nearest_digit_card } from "./app_code_lesson_expression_round_nearest_digit_card.mjs";
 import { text_decimal_combine } from "./text_decimal_combine.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -80,7 +80,7 @@ export function app_code_lesson_expression_round_nearest_above(root) {
   app_shared_spaced_below(up);
   let decides = html_div(rule);
   html_span_text(decides, "So the ");
-  let text = app_code_first_decimal_digit_words();
+  let text = app_learn_js_first_decimal_digit_words();
   html_span_text(decides, text);
   html_span_text(
     decides,

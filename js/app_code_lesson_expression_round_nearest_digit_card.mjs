@@ -1,4 +1,4 @@
-import { app_code_first_decimal_digit_words } from "./app_code_first_decimal_digit_words.mjs";
+import { app_learn_js_first_decimal_digit_words } from "./app_learn_js_first_decimal_digit_words.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_first_decimal_digit_line } from "./app_learn_js_first_decimal_digit_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_expression_round_nearest_digit_card(
   let card = app_learn_js_container_light_blue(root);
   let asked = html_div(card);
   html_span_text(asked, "What's the ");
-  let text = app_code_first_decimal_digit_words();
+  let text = app_learn_js_first_decimal_digit_words();
   html_span_text(asked, text);
   html_span_text(asked, "?");
   app_learn_js_first_decimal_digit_line(
