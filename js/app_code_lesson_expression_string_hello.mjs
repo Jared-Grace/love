@@ -2,7 +2,7 @@ import { js_string_quote } from "./js_string_quote.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_expression_string_hello_title_name_id } from "./app_code_lesson_expression_string_hello_title_name_id.mjs";
-import { app_code_lesson_expression_string_generic } from "./app_code_lesson_expression_string_generic.mjs";
+import { app_learn_js_lesson_expression_string_generic } from "./app_learn_js_lesson_expression_string_generic.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_code_lesson_expression_string_hello_above } from "./app_code_lesson_expression_string_hello_above.mjs";
 export function app_code_lesson_expression_string_hello() {
@@ -27,7 +27,7 @@ export function app_code_lesson_expression_string_hello() {
     return found;
   }
   let name_id = app_code_lesson_expression_string_hello_title_name_id();
-  let lesson = app_code_lesson_expression_string_generic({
+  let lesson = app_learn_js_lesson_expression_string_generic({
     words_get: fruits_of_the_spirit,
     decoys,
     backwards_decoys,

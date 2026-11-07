@@ -3,7 +3,7 @@ import { text_replace_space_to } from "./text_replace_space_to.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { app_code_lesson_expression_string_generic } from "./app_code_lesson_expression_string_generic.mjs";
+import { app_learn_js_lesson_expression_string_generic } from "./app_learn_js_lesson_expression_string_generic.mjs";
 import { app_code_verse_word_pairs } from "./app_code_verse_word_pairs.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_string_shape } from "./app_code_string_shape.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_expression_string_spaces() {
     return found;
   }
   let name_id = title_name_id();
-  let lesson = app_code_lesson_expression_string_generic({
+  let lesson = app_learn_js_lesson_expression_string_generic({
     words_get: app_code_verse_word_pairs,
     decoys,
     backwards_decoys,

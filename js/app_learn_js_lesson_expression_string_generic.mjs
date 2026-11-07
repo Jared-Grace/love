@@ -5,7 +5,7 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_lesson_expression_generic } from "./app_learn_js_lesson_expression_generic.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
-export function app_code_lesson_expression_string_generic(params) {
+export function app_learn_js_lesson_expression_string_generic(params) {
   "the shared body of every string lesson: four quoted-string questions drawn from the lesson's own word source, the same forwards/backwards/unscramble labels, and the lesson-specific intro (above), wrong answers (decoys), and home title (name_id). Only those three plus the word source differ between string lessons; everything else lives here once.";
   let words_get = property_get(params, "words_get");
   let decoys = property_get(params, "decoys");
