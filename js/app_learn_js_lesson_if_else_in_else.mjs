@@ -18,7 +18,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_if_ab_logged } from "./app_learn_js_lesson_if_ab_logged.mjs";
-export function app_code_lesson_if_else_in_else() {
+export function app_learn_js_lesson_if_else_in_else() {
   arguments_assert(arguments, 0);
   ('an if and else inside an else: let a = false; let b = false; if (a) { console.log("love"); } else { console.log("joy"); if (b) { console.log("peace"); } else { console.log("kindness"); } } console.log("patience"); writes out joy, kindness and patience');
   ("The one new fact is that the if inside an else can have an else of its own. The program is the one from An if inside an else with an else added to the if inside, so that else is the only new piece.");
