@@ -1,7 +1,7 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";
 import { app_code_lesson_expression_parentheses_both_sides_card_flat_line } from "./app_code_lesson_expression_parentheses_both_sides_card_flat_line.mjs";
-import { app_code_comparison_side_wrapped } from "./app_code_comparison_side_wrapped.mjs";
+import { app_learn_js_comparison_side_wrapped } from "./app_learn_js_comparison_side_wrapped.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_code_lesson_expression_parentheses_both_sides_title_name_id } from "./app_code_lesson_expression_parentheses_both_sides_title_name_id.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
@@ -42,8 +42,8 @@ export function app_code_lesson_expression_parentheses_both_sides() {
   return lesson;
   function expression(want_true) {
     "a wrapped comparison, then === or !==, then another wrapped comparison, with the operator picked so the whole line lands on want_true";
-    let left = app_code_comparison_side_wrapped();
-    let right = app_code_comparison_side_wrapped();
+    let left = app_learn_js_comparison_side_wrapped();
+    let right = app_learn_js_comparison_side_wrapped();
     let left_value = property_get(left, "value");
     let right_value = property_get(right, "value");
     let agree = equal(left_value, right_value);

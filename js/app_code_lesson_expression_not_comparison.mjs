@@ -2,7 +2,7 @@ import { property_equals } from "./property_equals.mjs";
 import { js_code_not } from "./js_code_not.mjs";
 import { app_code_lesson_expression_not_comparison_intro } from "./app_code_lesson_expression_not_comparison_intro.mjs";
 import { app_code_lesson_expression_not_comparison_title_name_id } from "./app_code_lesson_expression_not_comparison_title_name_id.mjs";
-import { app_code_comparison_side_wrapped } from "./app_code_comparison_side_wrapped.mjs";
+import { app_learn_js_comparison_side_wrapped } from "./app_learn_js_comparison_side_wrapped.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_not_comparison() {
       let same = property_equals(side, "value", want);
       return same;
     }
-    let drawn = invoke_until(app_code_comparison_side_wrapped, matches);
+    let drawn = invoke_until(app_learn_js_comparison_side_wrapped, matches);
     let wanted = list_last(drawn);
     return wanted;
   }
