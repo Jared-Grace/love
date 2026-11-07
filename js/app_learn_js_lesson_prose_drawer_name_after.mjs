@@ -4,7 +4,7 @@ import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_lesson_prose_box_declaration_is } from "./app_learn_js_lesson_prose_box_declaration_is.mjs";
 import { not } from "./not.mjs";
-export function app_code_lesson_prose_drawer_name_after(body, place) {
+export function app_learn_js_lesson_prose_drawer_name_after(body, place) {
   arguments_assert(arguments, 2);
   integer_is_assert(place);
   ("The name of the next thing a lesson screen actually draws after the line at this place, or nothing when the next thing is not a drawing at all.");

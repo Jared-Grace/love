@@ -8,7 +8,7 @@ import { not } from "./not.mjs";
 import { app_code_lesson_prose_tail_text_node_or_null } from "./app_code_lesson_prose_tail_text_node_or_null.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_lesson_prose_drawer_name_after } from "./app_code_lesson_prose_drawer_name_after.mjs";
+import { app_learn_js_lesson_prose_drawer_name_after } from "./app_learn_js_lesson_prose_drawer_name_after.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { property_set } from "./property_set.mjs";
@@ -60,7 +60,7 @@ export function app_learn_js_lesson_prose_colon_ast_add(ast) {
         continue;
       }
       let place2 = subtract(place, 1);
-      let follower = app_code_lesson_prose_drawer_name_after(body, place2);
+      let follower = app_learn_js_lesson_prose_drawer_name_after(body, place2);
       let draws = list_includes(drawers, follower);
       if (not(draws)) {
         continue;
