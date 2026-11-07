@@ -1,4 +1,4 @@
-import { app_code_expression_chosen_code_nowrap } from "./app_code_expression_chosen_code_nowrap.mjs";
+import { app_learn_js_expression_chosen_code_nowrap } from "./app_learn_js_expression_chosen_code_nowrap.mjs";
 import { app_code_expression_replace_word_say } from "./app_code_expression_replace_word_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -18,7 +18,7 @@ export function app_code_expression_replace_swap_say(
   function chosen(text) {
     "a piece of the line, styled as the piece being swapped and remembered in the one pass that makes it";
     let span = html_span_text(parent, text);
-    app_code_expression_chosen_code_nowrap(span);
+    app_learn_js_expression_chosen_code_nowrap(span);
     list_add(chosen_pieces, span);
   }
   html_span_text(parent, lead);
