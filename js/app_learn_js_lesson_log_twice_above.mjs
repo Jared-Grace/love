@@ -1,6 +1,6 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_functions_console_log_arithmetic } from "./app_learn_js_lesson_functions_console_log_arithmetic.mjs";
-import { app_code_lesson_sum_lines } from "./app_code_lesson_sum_lines.mjs";
+import { app_learn_js_lesson_sum_lines } from "./app_learn_js_lesson_sum_lines.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_log_twice_above(root, context) {
   ("The second box is the first box with a line added and nothing else changed, so there is only one thing between them that could account for the extra answer. The learner reads the first answer again in the second card, which says the line they already knew went on doing exactly what it did.");
   ("The third box is the whole point of the second. Two lines that write out could have meant the two answers appear together in no particular order, and the only way to rule that out is to show the same two lines swapped and the answers swapped with them. Said in a sentence it would have to be believed; shown, it is read off the card.");
   ("The numbers here are in none of the programs the questions ask about - neither as something written nor as something worked out - so no number a learner meets on this screen turns up later as something to recognise rather than to read.");
-  let lines = app_code_lesson_sum_lines();
+  let lines = app_learn_js_lesson_sum_lines();
   let box_one = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_one,

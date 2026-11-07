@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-export function app_code_lesson_sum_lines() {
+export function app_learn_js_lesson_sum_lines() {
   arguments_assert(arguments, 0);
   ("the two lines the boxes above these lessons' first question are built from, and what each of them writes out: each line writes out what two numbers add up to");
   ("Both screens that read this show a program the learner has already read on the screen before, which is the whole reason either screen works - a box holding a program they know turns the next box into a single change rather than a new program to take in. That only holds while the two screens show the same program, so the lines and the numbers are said once here rather than once on each screen, where they could drift apart without anything looking wrong.");

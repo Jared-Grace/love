@@ -1,6 +1,6 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_log_twice } from "./app_learn_js_lesson_log_twice.mjs";
-import { app_code_lesson_sum_lines } from "./app_code_lesson_sum_lines.mjs";
+import { app_learn_js_lesson_sum_lines } from "./app_learn_js_lesson_sum_lines.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -18,7 +18,7 @@ export function app_learn_js_lesson_comment_skip_line_above(root, context) {
   ("The second box is that program with two slashes added and nothing else touched, so there is one thing between the boxes that could account for an answer going missing. The learner reads the first answer again and finds the second one gone.");
   ("The third box is the whole point of the second. An answer disappearing once could have meant a program only ever writes out its first line, and the only way to rule that out is to put the slashes on the other line and show the other answer going instead. Said in a sentence it would have to be believed; shown, it is read off the card.");
   ("The numbers are in none of the programs the questions ask about - neither as something written nor as something worked out - so no number a learner meets here turns up later as something to recognise rather than to read.");
-  let lines = app_code_lesson_sum_lines();
+  let lines = app_learn_js_lesson_sum_lines();
   let prefix = js_code_comment_prefix();
   let first_line = property_get(lines, "first_line");
   let first_noted = text_combine(prefix, first_line);

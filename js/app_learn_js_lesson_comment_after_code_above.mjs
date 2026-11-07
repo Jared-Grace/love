@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_sum_lines } from "./app_code_lesson_sum_lines.mjs";
+import { app_learn_js_lesson_sum_lines } from "./app_learn_js_lesson_sum_lines.mjs";
 import { js_code_comment_prefix } from "./js_code_comment_prefix.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_comment_after_code_above(root, context) {
   ("The second box is where the words the course uses for a comment - the computer skips the rest of that line - are shown meaning what they say. Until now the slashes always started the line, so the rest of the line was the whole of it.");
   ("The third box is what a comment after code is usually for: a note about the code in front of it. It comes last because words after the slashes would be skipped whatever a learner believed, so only code after the slashes can show that the skipping starts at the slashes.");
   ("The numbers are in none of the programs the questions ask about, so no number a learner meets here turns up later as something to recognise rather than to read.");
-  let lines = app_code_lesson_sum_lines();
+  let lines = app_learn_js_lesson_sum_lines();
   let prefix = js_code_comment_prefix();
   let first_line = property_get(lines, "first_line");
   let last_line = property_get(lines, "last_line");
