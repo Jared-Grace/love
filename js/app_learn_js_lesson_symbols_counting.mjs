@@ -7,7 +7,7 @@ import { app_code_symbols_count_wrong_say } from "./app_code_symbols_count_wrong
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_learn_js_lesson_quizzes } from "./app_learn_js_lesson_quizzes.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
-export function app_code_lesson_symbols_counting(
+export function app_learn_js_lesson_symbols_counting(
   name_id,
   above,
   batch_symbols,

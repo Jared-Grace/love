@@ -13,7 +13,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { list_alphabet_lower } from "./list_alphabet_lower.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
+import { app_learn_js_lesson_symbols_counting } from "./app_learn_js_lesson_symbols_counting.mjs";
 import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
@@ -74,7 +74,7 @@ export function app_code_lesson_symbols_letters() {
     return mapped;
   }
   let name_id = app_learn_js_lesson_name_id("symbols", ["letters"]);
-  let r5 = app_code_lesson_symbols_counting(
+  let r5 = app_learn_js_lesson_symbols_counting(
     name_id,
     lambda,
     batch_get,
