@@ -5,7 +5,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
-export function app_code_lesson_expression_comparison_equal_generic(words) {
+export function app_learn_js_lesson_expression_comparison_equal_generic(words) {
   "the shared body of the two lessons teaching a comparison that also accepts equal (>= and <=): one strict relation makes it true, equal makes it true, the opposite relation makes it false";
   "The two differ in three things and nothing else: which strict relation counts as";
   "true, which one counts as false, and the words a reader is asked the question in.";
