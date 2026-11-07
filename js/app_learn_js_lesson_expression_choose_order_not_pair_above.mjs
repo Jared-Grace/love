@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_pair_expression } from "./app_learn_js_lesson_expression_choose_order_not_pair_expression.mjs";
 import { app_code_lesson_expression_choose_order_steps_above_generic } from "./app_code_lesson_expression_choose_order_steps_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_not_pair_recall } from "./app_code_lesson_expression_choose_order_not_pair_recall.mjs";
-import { app_code_lesson_expression_choose_order_not_pair_intro } from "./app_code_lesson_expression_choose_order_not_pair_intro.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_pair_intro } from "./app_learn_js_lesson_expression_choose_order_not_pair_intro.mjs";
 export function app_learn_js_lesson_expression_choose_order_not_pair_above(
   root,
   context,
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_expression_choose_order_not_pair_above(
     root,
     app_code_lesson_expression_choose_order_not_pair_recall,
     tree,
-    app_code_lesson_expression_choose_order_not_pair_intro,
+    app_learn_js_lesson_expression_choose_order_not_pair_intro,
     context,
   );
 }

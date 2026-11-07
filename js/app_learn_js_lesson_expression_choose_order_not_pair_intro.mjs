@@ -7,7 +7,9 @@ import { js_keyword_false } from "./js_keyword_false.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_not_pair_intro(parent) {
+export function app_learn_js_lesson_expression_choose_order_not_pair_intro(
+  parent,
+) {
   arguments_assert(arguments, 1);
   ("the sentences that say what is different about this lesson, in a card of their own");
   ("It opens with two lines that can be written out rather than with a rule about them. A learner who has just been shown one such line worked all the way down reads !(true && true) and !(false || true) as two more of the same thing, and the sentence that follows is then a description of two lines already in front of them instead of a claim they have to take on trust.");
