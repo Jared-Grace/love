@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_twin_read_generic } from "./app_code_lesson_expression_choose_order_twin_read_generic.mjs";
 import { app_code_lesson_expression_in_between } from "./app_code_lesson_expression_in_between.mjs";
-import { app_code_expression_flat_tree_of_code } from "./app_code_expression_flat_tree_of_code.mjs";
+import { app_learn_js_expression_flat_tree_of_code } from "./app_learn_js_expression_flat_tree_of_code.mjs";
 import { app_code_expression_value_decoys_boolean } from "./app_code_expression_value_decoys_boolean.mjs";
 export function app_code_lesson_expression_choose_order_in_between() {
   arguments_assert(arguments, 0);
@@ -11,7 +11,7 @@ export function app_code_lesson_expression_choose_order_in_between() {
   let lesson = app_code_lesson_expression_choose_order_twin_read_generic(
     words,
     app_code_lesson_expression_in_between,
-    app_code_expression_flat_tree_of_code,
+    app_learn_js_expression_flat_tree_of_code,
     app_code_expression_value_decoys_boolean,
   );
   return lesson;

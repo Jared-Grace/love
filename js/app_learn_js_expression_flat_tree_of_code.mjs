@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { app_code_expression_from_js } from "./app_code_expression_from_js.mjs";
-export function app_code_expression_flat_tree_of_code(code) {
+export function app_learn_js_expression_flat_tree_of_code(code) {
   arguments_assert(arguments, 1);
   ("the shape behind a line of arithmetic that carries no parentheses, read back out of the line itself: 2 + 9 / 3 - 4 gives back the shape whose divide sits inside the plus, and whose minus holds all of it");
   ("A quiz hands its question over as text, and a line outlives the run that built it - a review saves the line to ask again and comes back to it after the page has been loaded afresh. A shape kept beside the line it printed would have been forgotten by then, and the lesson would throw where a learner was owed a question.");

@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_flat_random_same_strength } from "./app_learn_js_expression_flat_random_same_strength.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
-import { app_code_expression_flat_tree_of_code } from "./app_code_expression_flat_tree_of_code.mjs";
+import { app_learn_js_expression_flat_tree_of_code } from "./app_learn_js_expression_flat_tree_of_code.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 export function app_code_lesson_expression_choose_order_same_strength_questions_generic(
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_choose_order_same_strength_questions_
   }
   function tree_for(question) {
     "the shape behind a line, worked out again from the writing it was printed as";
-    let tree = app_code_expression_flat_tree_of_code(question);
+    let tree = app_learn_js_expression_flat_tree_of_code(question);
     return tree;
   }
   function tree_of(qa, info) {
