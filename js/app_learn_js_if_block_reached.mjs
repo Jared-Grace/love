@@ -5,7 +5,7 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_if_block_reached(blocks, index) {
+export function app_learn_js_if_block_reached(blocks, index) {
   arguments_assert(arguments, 2);
   ("whether the section at index of the sections ",
     fn_name("app_code_if_blocks"),

@@ -3,7 +3,7 @@ import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { less_than } from "./less_than.mjs";
-import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
+import { app_learn_js_if_block_reached } from "./app_learn_js_if_block_reached.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -23,7 +23,7 @@ export function app_code_if_blocks_lines_kept(code, blocks, count) {
   let removed = [];
   let dedents = [];
   for (let n = 0; less_than(n, count); n++) {
-    let b = app_code_if_block_reached(blocks, n);
+    let b = app_learn_js_if_block_reached(blocks, n);
     if (not(b)) {
       continue;
     }

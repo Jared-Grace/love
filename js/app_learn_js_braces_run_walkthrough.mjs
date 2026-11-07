@@ -16,7 +16,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
-import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
+import { app_learn_js_if_block_reached } from "./app_learn_js_if_block_reached.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -132,7 +132,7 @@ export function app_learn_js_braces_run_walkthrough(root, code) {
   }
   let first = true;
   for (let n = 0; less_than(n, count); n++) {
-    let b = app_code_if_block_reached(blocks, n);
+    let b = app_learn_js_if_block_reached(blocks, n);
     if (not(b)) {
       continue;
     }

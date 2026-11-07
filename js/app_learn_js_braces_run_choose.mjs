@@ -36,7 +36,7 @@ import { subtract } from "./subtract.mjs";
 import { not } from "./not.mjs";
 import { html_style_clear } from "./html_style_clear.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_code_if_block_reached } from "./app_code_if_block_reached.mjs";
+import { app_learn_js_if_block_reached } from "./app_learn_js_if_block_reached.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_learn_js_braces_run_output_show } from "./app_learn_js_braces_run_output_show.mjs";
@@ -223,7 +223,7 @@ export function app_learn_js_braces_run_choose(
     let index = property_get(state, "index");
     while (
       less_than(index, list_size(blocks)) &&
-      not(app_code_if_block_reached(blocks, index))
+      not(app_learn_js_if_block_reached(blocks, index))
     ) {
       index = index + 1;
     }
