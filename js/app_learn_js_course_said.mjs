@@ -6,7 +6,7 @@ import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_learn_js_course_hash_key } from "./app_learn_js_course_hash_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { app_learn_js_course_known_is } from "./app_learn_js_course_known_is.mjs";
-export function app_code_course_said() {
+export function app_learn_js_course_said() {
   "The course word the link of the page being read says, or null when it says none this page honours.";
   "Only the working copy, for now: the word in a link is frozen the moment a link holding it leaves this repo, so it is tried where nobody else is handed it first. Not picked: honouring it on latest as well, which would hand the word out before it has been tried.";
   "2026-10-18: latest honours it too, at the human's asking. Prod still does not.";
