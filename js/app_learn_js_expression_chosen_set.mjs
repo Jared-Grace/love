@@ -1,4 +1,4 @@
-import { app_code_expression_operator_chip_room_clear } from "./app_code_expression_operator_chip_room_clear.mjs";
+import { app_learn_js_expression_operator_chip_room_clear } from "./app_learn_js_expression_operator_chip_room_clear.mjs";
 import { app_code_expression_operator_chip_uncolored } from "./app_code_expression_operator_chip_uncolored.mjs";
 import { app_learn_js_expression_chosen_style_assign } from "./app_learn_js_expression_chosen_style_assign.mjs";
 import { app_learn_js_expression_colored_slowly } from "./app_learn_js_expression_colored_slowly.mjs";
@@ -20,7 +20,7 @@ export function app_learn_js_expression_chosen_set(node_span, operator_span) {
   app_code_expression_operator_chip_uncolored(operator_span);
   ("and the room it was holding goes in that same frame, alone among the chips on the line - because the block it is inside takes exactly that room back on the very next line, so the two cancel and nothing to the right of the block moves at all");
   ("Every OTHER chip on the line is closing up over a while, watched. This one has nothing to watch: it neither widens nor narrows the line, so a while spent on it would be a while in which the learner is shown nothing.");
-  app_code_expression_operator_chip_room_clear(operator_span);
+  app_learn_js_expression_operator_chip_room_clear(operator_span);
   ("the blue is given last, once the operator is already plain and already narrow, so what rises is a block of one colour rather than a blue closing in around a grey");
   app_learn_js_expression_chosen_style_assign(node_span);
   app_learn_js_expression_chip_style(node_span);

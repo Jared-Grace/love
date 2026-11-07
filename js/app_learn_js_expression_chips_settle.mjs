@@ -1,4 +1,4 @@
-import { app_code_expression_operator_chip_room_clear } from "./app_code_expression_operator_chip_room_clear.mjs";
+import { app_learn_js_expression_operator_chip_room_clear } from "./app_learn_js_expression_operator_chip_room_clear.mjs";
 import { app_code_expression_operator_chip_uncolored } from "./app_code_expression_operator_chip_uncolored.mjs";
 import { app_shared_animation_duration_quick } from "./app_shared_animation_duration_quick.mjs";
 import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
@@ -17,7 +17,7 @@ export async function app_learn_js_expression_chips_settle(line, spans) {
   ("the line is measured whole rather than only where the chips are, the same way the settling after a swap measures it, because a chip narrowing in the middle moves everything after it and none of those pieces knows a chip was involved");
   let pieces = html_descendants_innermost(line);
   function change() {
-    each(spans, app_code_expression_operator_chip_room_clear);
+    each(spans, app_learn_js_expression_operator_chip_room_clear);
   }
   ("the short while, not the whole one: nothing is worked out here and no answer changes - this is the line tidying itself up behind a press the learner has already watched being answered");
   let duration = app_shared_animation_duration_quick();
