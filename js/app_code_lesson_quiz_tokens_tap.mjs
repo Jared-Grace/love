@@ -13,7 +13,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { not } from "./not.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
+import { app_learn_js_code_dark_lines_braces_paired_colors } from "./app_learn_js_code_dark_lines_braces_paired_colors.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { app_code_quiz_tokens_places } from "./app_code_quiz_tokens_places.mjs";
@@ -99,7 +99,11 @@ export function app_code_lesson_quiz_tokens_tap({
     list_add(tapped, text);
     let joined = list_join_space(tapped);
     if (colored) {
-      app_code_code_dark_lines_braces_paired_colors(line_div, joined, colors);
+      app_learn_js_code_dark_lines_braces_paired_colors(
+        line_div,
+        joined,
+        colors,
+      );
     } else {
       html_text_set(line_div, joined);
     }

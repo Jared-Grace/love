@@ -3,7 +3,7 @@ import { list_permutations } from "./list_permutations.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
+import { app_learn_js_code_dark_lines_braces_paired_colors } from "./app_learn_js_code_dark_lines_braces_paired_colors.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_quiz_braces_choose_colored_generic(
   let colorings = list_permutations(colors);
   let question_div = html_div(parent);
   let shown_question = backwards ? sequence : code;
-  app_code_code_dark_lines_braces_paired_colors(
+  app_learn_js_code_dark_lines_braces_paired_colors(
     question_div,
     shown_question,
     colors,
@@ -90,7 +90,7 @@ export function app_code_lesson_quiz_braces_choose_colored_generic(
       on_wrong,
     );
     let shown = backwards ? c_code : c_braces;
-    app_code_code_dark_lines_braces_paired_colors(b, shown, c_colors);
+    app_learn_js_code_dark_lines_braces_paired_colors(b, shown, c_colors);
     app_shared_button_code_unframed(b);
   }
   each(choices, choice_draw);

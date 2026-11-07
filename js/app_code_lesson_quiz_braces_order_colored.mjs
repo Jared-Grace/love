@@ -4,7 +4,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_braces_colors_next } from "./app_learn_js_braces_colors_next.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
+import { app_learn_js_code_dark_lines_braces_paired_colors } from "./app_learn_js_code_dark_lines_braces_paired_colors.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
@@ -49,7 +49,7 @@ export function app_code_lesson_quiz_braces_order_colored(
   correction_code_set(sequence);
   let colors = app_learn_js_braces_colors_next(code);
   let code_div = html_div(parent);
-  app_code_code_dark_lines_braces_paired_colors(code_div, code, colors);
+  app_learn_js_code_dark_lines_braces_paired_colors(code_div, code, colors);
   app_code_label_text(parent, "Its braces:");
   let answer_div = html_div(parent);
   let chosen = [];
@@ -58,7 +58,7 @@ export function app_code_lesson_quiz_braces_order_colored(
     if (list_empty_is(chosen)) {
       text = text_space_nb();
     }
-    app_code_code_dark_lines_braces_paired_colors(answer_div, text, colors);
+    app_learn_js_code_dark_lines_braces_paired_colors(answer_div, text, colors);
   }
   show();
   let pieces = [];

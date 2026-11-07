@@ -13,7 +13,7 @@ import { equal } from "./equal.mjs";
 import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
-export function app_code_code_dark_lines_braces_paired_colors(
+export function app_learn_js_code_dark_lines_braces_paired_colors(
   component,
   code,
   colors,

@@ -8,7 +8,7 @@ import { list_join_space } from "./list_join_space.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_space_nb } from "./text_space_nb.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_code_code_dark_lines_braces_paired_colors } from "./app_code_code_dark_lines_braces_paired_colors.mjs";
+import { app_learn_js_code_dark_lines_braces_paired_colors } from "./app_learn_js_code_dark_lines_braces_paired_colors.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_lesson_quiz_pieces_select } from "./app_code_lesson_quiz_pieces_select.mjs";
 export function app_code_lesson_quiz_braces_order_generic({
@@ -50,7 +50,11 @@ export function app_code_lesson_quiz_braces_order_generic({
     }
     html_clear(answer_div);
     if (colored) {
-      app_code_code_dark_lines_braces_paired_colors(answer_div, text, colors);
+      app_learn_js_code_dark_lines_braces_paired_colors(
+        answer_div,
+        text,
+        colors,
+      );
     } else {
       html_text_set_code_dark_lines(answer_div, text);
     }
