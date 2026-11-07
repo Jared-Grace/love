@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-export function app_code_expression_node_logical_is(item) {
+export function app_learn_js_expression_node_logical_is(item) {
   arguments_assert(arguments, 1);
   ("whether a part of an expression is an && or an || standing between two sides: the two operators JavaScript may finish without ever reading their right side");
   let node_is = app_learn_js_expression_node_is(item);

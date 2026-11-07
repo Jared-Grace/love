@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_expression_node_logical_is } from "./app_code_expression_node_logical_is.mjs";
+import { app_learn_js_expression_node_logical_is } from "./app_learn_js_expression_node_logical_is.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_is } from "./app_learn_js_expression_node_is.mjs";
@@ -12,7 +12,7 @@ export function app_code_expression_node_settled_is(item) {
   ("2026-10-17, at the human's asking: JavaScript never reads the right side of one of these, so neither does a learner. Asked by ",
     fn_name("app_code_expression_nodes_ready"),
     ", which then offers the operator itself next. Worked out by the same && and || every step uses, which hands back the left side exactly when it settles the answer. Not picked: working the right side out and throwing it away, which is what a learner would then be taught JavaScript does.");
-  let logical = app_code_expression_node_logical_is(item);
+  let logical = app_learn_js_expression_node_logical_is(item);
   if (not(logical)) {
     return false;
   }

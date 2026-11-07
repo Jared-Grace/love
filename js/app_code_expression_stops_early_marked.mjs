@@ -5,7 +5,7 @@ import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_expression_node_before_is } from "./app_learn_js_expression_node_before_is.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
-import { app_code_expression_node_logical_is } from "./app_code_expression_node_logical_is.mjs";
+import { app_learn_js_expression_node_logical_is } from "./app_learn_js_expression_node_logical_is.mjs";
 export function app_code_expression_stops_early_marked(item) {
   arguments_assert(arguments, 1);
   ("a copy of the line item with every && and || in it marked to stop early, as JavaScript does: once the left side decides the answer, the right side is never read");
@@ -28,7 +28,7 @@ export function app_code_expression_stops_early_marked(item) {
     left: left_marked,
     right: right_marked,
   };
-  if (app_code_expression_node_logical_is(item)) {
+  if (app_learn_js_expression_node_logical_is(item)) {
     sides.stops_early = true;
   }
   let both = object_copy_assign(item, sides);
