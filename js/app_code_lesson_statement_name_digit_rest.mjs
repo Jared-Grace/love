@@ -1,6 +1,6 @@
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
-import { app_code_example_number_part_pointed_draw } from "./app_code_example_number_part_pointed_draw.mjs";
+import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
@@ -168,7 +168,7 @@ export function app_code_lesson_statement_name_digit_rest() {
       ["", line_rest],
     ],
     decoys: null,
-    example_pointers: app_code_example_number_part_pointed_draw([
+    example_pointers: app_learn_js_example_number_part_pointed_draw([
       [["12"], color],
       [["3"], color4],
     ]),

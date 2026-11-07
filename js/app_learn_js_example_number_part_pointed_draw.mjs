@@ -1,7 +1,7 @@
 import { app_learn_js_code_dark_lines_number_part_pointed } from "./app_learn_js_code_dark_lines_number_part_pointed.mjs";
 import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
 import { app_learn_js_code_lines_writes_out_on } from "./app_learn_js_code_lines_writes_out_on.mjs";
-export function app_code_example_number_part_pointed_draw(pointers) {
+export function app_learn_js_example_number_part_pointed_draw(pointers) {
   "the last example of a formula lesson drawn with part of a number coloured, in its code and its output alike: an example_pointers function for a lesson whose writing colours the 3 at the end of 123, or the 12 in front of it";
   function draw(box, lines, output) {
     let on_code = app_learn_js_code_dark_lines_number_part_pointed(pointers);

@@ -1,4 +1,4 @@
-import { app_code_example_number_part_pointed_draw } from "./app_code_example_number_part_pointed_draw.mjs";
+import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
@@ -160,7 +160,7 @@ export function app_code_lesson_statement_name_digit_split() {
       ],
     ],
     decoys: null,
-    example_pointers: app_code_example_number_part_pointed_draw([
+    example_pointers: app_learn_js_example_number_part_pointed_draw([
       [["3"], color3],
     ]),
     steps: false,

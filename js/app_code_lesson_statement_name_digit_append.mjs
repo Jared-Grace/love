@@ -15,7 +15,7 @@ import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_digit_rest } from "./app_code_lesson_statement_name_digit_rest.mjs";
 import { app_code_explain_container_next } from "./app_code_explain_container_next.mjs";
-import { app_code_example_number_part_pointed_draw } from "./app_code_example_number_part_pointed_draw.mjs";
+import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
 export function app_code_lesson_statement_name_digit_append() {
   arguments_assert(arguments, 0);
   ("a last digit put back on the end of a number: let with_0 = rest * 10; let n = with_0 + last_digit; - the two digit lessons before it take 123 apart into 12 and 3, and this one puts them back together, so the three together are one idea seen both ways");
@@ -117,7 +117,7 @@ export function app_code_lesson_statement_name_digit_append() {
       ["", line_n],
     ],
     decoys: null,
-    example_pointers: app_code_example_number_part_pointed_draw([
+    example_pointers: app_learn_js_example_number_part_pointed_draw([
       [["12"], color],
       [["3"], color4],
     ]),
