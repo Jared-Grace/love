@@ -5,7 +5,7 @@ import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app
 import { app_learn_js_lesson_expression_choose_order_three_above } from "./app_learn_js_lesson_expression_choose_order_three_above.mjs";
 import { app_learn_js_lesson_expression_choose_order_three_questions } from "./app_learn_js_lesson_expression_choose_order_three_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_three_title_name_id } from "./app_learn_js_lesson_expression_choose_order_three_title_name_id.mjs";
-export function app_code_lesson_expression_choose_order_three() {
+export function app_learn_js_lesson_expression_choose_order_three() {
   "choosing which part of a line to solve and then what that part comes to, three times over on the one line: 5 - 6 / 3 + 4, choose the divide, choose 2, see 5 - 2 + 4, choose the minus, choose 3, see 3 + 4, choose the plus, choose 7";
   "The same two presses on the same engine as the lesson before it, with one thing changed: the line has three operators on it rather than two, so the reading that ended the last lesson's line has to be done once more here.";
   "This is what stands between choosing the order on a short line and holding a whole line in the head. A learner who has only ever pressed sides that do not touch has never had to re-read a line they themselves changed twice, and the lesson after this one asks for the answer to a line like this in one go.";
