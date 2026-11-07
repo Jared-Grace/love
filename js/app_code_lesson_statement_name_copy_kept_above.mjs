@@ -17,7 +17,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { text_empty } from "./text_empty.mjs";
-import { app_code_js_written_that_text } from "./app_code_js_written_that_text.mjs";
+import { app_learn_js_js_written_that_text } from "./app_learn_js_js_written_that_text.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   arguments_assert(arguments, 2);
@@ -126,7 +126,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   let note_logged = js_code_comment_line(words_logged);
   ("A blank line stands before each note, so the notes break the program into the three moments the story told it in - filling, changing, writing out. Run together, twelve lines of alternating note and code read as one wall.");
   let blank = text_empty();
-  let text = app_code_js_written_that_text();
+  let text = app_learn_js_js_written_that_text();
   app_learn_js_div_cycle_code(box_code, [text]);
   ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The filling, the copying and the changing stand here because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on lines a learner had to carry down the box - and this screen turns entirely on their order, since the word that comes out is the one the middle line copied and not the one the last line put in.");
   let lines = [

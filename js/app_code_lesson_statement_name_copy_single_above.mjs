@@ -12,7 +12,7 @@ import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
 import { app_code_lesson_cups_copy_story } from "./app_code_lesson_cups_copy_story.mjs";
-import { app_code_js_written_that_text } from "./app_code_js_written_that_text.mjs";
+import { app_learn_js_js_written_that_text } from "./app_learn_js_js_written_that_text.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
@@ -70,7 +70,7 @@ export function app_code_lesson_statement_name_copy_single_above(
   let box_copy = app_learn_js_container_light_blue(root);
   ("the names in this box wear the colours the cups above and the box below give them, at the human's request - the sentence through the writer that colours a name, and the program through notes that mark each name, the way the lesson that copies into a third cup writes its program, because the notes are what the code box reads its colours from");
   ("the program box directly under the cups opens with the line the lesson that copies into a third cup opens its program with, and says nothing else, so the program reads as the cup story written in JS - every word in it is one the cups hold");
-  let written = app_code_js_written_that_text();
+  let written = app_learn_js_js_written_that_text();
   app_learn_js_div_cycle_code(box_copy, [written]);
   let first_named = app_code_note_name_mark(name_first);
   let words_made = list_join_empty(["We make cup ", first_named]);
