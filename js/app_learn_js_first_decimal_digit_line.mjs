@@ -6,7 +6,7 @@ import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_margin_x } from "./html_style_margin_x.mjs";
-export function app_code_first_decimal_digit_line(
+export function app_learn_js_first_decimal_digit_line(
   parent,
   lead,
   whole_text,
