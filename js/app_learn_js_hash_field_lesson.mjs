@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_hash_key } from "./app_learn_js_lesson_hash_key.mjs";
 import { app_learn_js_lesson_id_known_is } from "./app_learn_js_lesson_id_known_is.mjs";
-import { app_code_lesson_id_suggestions } from "./app_code_lesson_id_suggestions.mjs";
+import { app_learn_js_lesson_id_suggestions } from "./app_learn_js_lesson_id_suggestions.mjs";
 import { app_learn_js_lesson_id_label } from "./app_learn_js_lesson_id_label.mjs";
 export function app_learn_js_hash_field_lesson() {
   "The lesson field of a code app link, described in the shape the checking of links reads.";
@@ -11,7 +11,7 @@ export function app_learn_js_hash_field_lesson() {
     list_is: false,
     number_is: false,
     valid_is: app_learn_js_lesson_id_known_is,
-    suggestions: app_code_lesson_id_suggestions,
+    suggestions: app_learn_js_lesson_id_suggestions,
     label: app_learn_js_lesson_id_label,
   };
   return field;
