@@ -17,7 +17,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_line_pointed_draw } from "./app_code_line_pointed_draw.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_learn_js_lesson_reference_draw } from "./app_learn_js_lesson_reference_draw.mjs";
-import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
+import { app_learn_js_lesson_statement_name_remainder } from "./app_learn_js_lesson_statement_name_remainder.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_statement_name_grid_row } from "./app_learn_js_lesson_statement_name_grid_row.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
@@ -158,7 +158,7 @@ export function app_learn_js_lesson_statement_name_grid_position() {
     app_learn_js_lesson_reference_draw(
       line,
       context,
-      app_code_lesson_statement_name_remainder,
+      app_learn_js_lesson_statement_name_remainder,
     );
     html_span_text_content(line, ":");
   }
