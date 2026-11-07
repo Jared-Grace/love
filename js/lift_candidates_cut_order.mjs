@@ -13,7 +13,7 @@ export function lift_candidates_cut_order(rows) {
   ("A value closed over is fine as a parameter and a function closed over is not, and that is the whole discriminator. Handing a number in says what to draw with. Handing a helper in says the two were never really separate, and now a reader has to hold both to read either.");
   ("Nothing is dropped. A candidate that closes over a sibling is still a real cut and still listed - it is only listed after the cut that would make it cheaper, so working the list from the top is working it in the right order.");
   ("Measured on ",
-    fn_name("app_code_lesson_expression_repeated_generic"),
+    fn_name("app_learn_js_lesson_expression_repeated_generic"),
     " on 2026-08-03: ranked by size the first cut was expanded_counted, thirty-five lines closing over four sibling helpers and one word. Ranked this way it is cell_at, four lines closing over nothing.");
   function stuck_is(row) {
     let row_stuck = property_list_empty_not_is(row, "closed_nested");
