@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_ids } from "./app_code_lesson_ids.mjs";
-import { app_code_lesson_ids_baseline_path } from "./app_code_lesson_ids_baseline_path.mjs";
+import { app_learn_js_lesson_ids_baseline_path } from "./app_learn_js_lesson_ids_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 export async function app_code_lesson_ids_gate_run() {
@@ -12,7 +12,7 @@ export async function app_code_lesson_ids_gate_run() {
   ("The other half fails on an id that is new. That is not a fault and is not meant to read as one; it asks for the writer to be run once, so that a new id is something somebody said yes to rather than something that appeared.");
   ("The shared ratchet says the same sentence about every name it finds left in a record, and here that sentence is the mild one - it invites the record to be shrunk. Shrinking is right only once somebody has decided what happens to the learners holding the old key: carry their record over to the new id, or accept that those lessons come back unfinished. This prose is where that decision is asked for, so read it before running the writer.");
   let ids = app_code_lesson_ids();
-  let path = app_code_lesson_ids_baseline_path();
+  let path = app_learn_js_lesson_ids_baseline_path();
   let hint =
     "these lesson ids are being taught and the record does not hold them - if they are meant to be what learners' progress is stored under, record them";
   let r = await baseline_names_gate_generic(
