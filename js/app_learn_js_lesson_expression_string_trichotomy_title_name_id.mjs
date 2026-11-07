@@ -4,7 +4,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_operators_shape_list } from "./app_code_operators_shape_list.mjs";
 import { app_code_placeholder_tile_string } from "./app_code_placeholder_tile_string.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-export function app_code_lesson_expression_string_trichotomy_title_name_id(
+export function app_learn_js_lesson_expression_string_trichotomy_title_name_id(
   equals_operator,
   less_operator,
   greater_operator,

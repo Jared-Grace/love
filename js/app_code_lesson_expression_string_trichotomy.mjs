@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_expression_number_trichotomy } from "./app_learn_js_lesson_expression_number_trichotomy.mjs";
 import { app_learn_js_lesson_expression_string_order } from "./app_learn_js_lesson_expression_string_order.mjs";
 import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
-import { app_code_lesson_expression_string_trichotomy_title_name_id } from "./app_code_lesson_expression_string_trichotomy_title_name_id.mjs";
+import { app_learn_js_lesson_expression_string_trichotomy_title_name_id } from "./app_learn_js_lesson_expression_string_trichotomy_title_name_id.mjs";
 import { app_code_string_comparison_code } from "./app_code_string_comparison_code.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_learn_js_label_value } from "./app_learn_js_label_value.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_expression_string_trichotomy() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = app_code_lesson_expression_string_trichotomy_title_name_id(
+  let name_id = app_learn_js_lesson_expression_string_trichotomy_title_name_id(
     equals_operator,
     less_operator,
     greater_operator,
