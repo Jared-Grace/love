@@ -19,7 +19,7 @@ import { app_learn_js_if_boolean_flipped } from "./app_learn_js_if_boolean_flipp
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_else() {
+export function app_learn_js_lesson_if_else() {
   arguments_assert(arguments, 0);
   ('else: let a = true; if (a) { console.log("love"); } else { console.log("joy"); } writes out love, and with let a = false; writes out joy');
   ("The one new fact is that else names the lines to run when the if does not, which If and if not wrote as a second if asking the opposite. Exactly one of the two runs, as there.");

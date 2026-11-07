@@ -24,7 +24,7 @@ import { less_than } from "./less_than.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
+import { app_learn_js_lesson_if_else } from "./app_learn_js_lesson_if_else.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -133,13 +133,12 @@ export function app_learn_js_lesson_if_else_change() {
     let box_one = app_learn_js_container_light_blue(root);
     let code3 = js_code_else_dots();
     let code4 = js_code_if_dots("a");
-    app_code_remember_from_lesson(box_one, context, app_code_lesson_if_else, [
-      "",
-      code3,
-      " runs when ",
-      code4,
-      " does not",
-    ]);
+    app_code_remember_from_lesson(
+      box_one,
+      context,
+      app_learn_js_lesson_if_else,
+      ["", code3, " runs when ", code4, " does not"],
+    );
     let box_two = app_learn_js_container_light_blue(root);
     let condition2 = js_code_binary_spaced_nb(name, less, 5);
     let if_dots = js_code_if_dots(condition2);
