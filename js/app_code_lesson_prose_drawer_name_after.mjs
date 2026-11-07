@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_is_assert } from "./integer_is_assert.mjs";
 import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_lesson_prose_box_declaration_is } from "./app_code_lesson_prose_box_declaration_is.mjs";
+import { app_learn_js_lesson_prose_box_declaration_is } from "./app_learn_js_lesson_prose_box_declaration_is.mjs";
 import { not } from "./not.mjs";
 export function app_code_lesson_prose_drawer_name_after(body, place) {
   arguments_assert(arguments, 2);
@@ -25,7 +25,7 @@ export function app_code_lesson_prose_drawer_name_after(body, place) {
     }
     let declaring = equal(node.type, "VariableDeclaration");
     if (declaring) {
-      let opens = app_code_lesson_prose_box_declaration_is(node);
+      let opens = app_learn_js_lesson_prose_box_declaration_is(node);
       if (opens) {
         return null;
       }
