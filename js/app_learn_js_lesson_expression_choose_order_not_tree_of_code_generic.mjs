@@ -7,7 +7,7 @@ import { list_size_assert } from "./list_size_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_wrapped_inner } from "./text_wrapped_inner.mjs";
-export function app_code_lesson_expression_choose_order_not_tree_of_code_generic(
+export function app_learn_js_lesson_expression_choose_order_not_tree_of_code_generic(
   code,
   parts_of_words,
 ) {
