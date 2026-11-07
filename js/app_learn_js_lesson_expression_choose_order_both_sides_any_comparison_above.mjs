@@ -4,7 +4,7 @@ import { app_code_lesson_expression_choose_order_both_sides_expression_same_symb
 import { app_learn_js_comparison_symbols_not_equality } from "./app_learn_js_comparison_symbols_not_equality.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_any_comparison_intro } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison_intro.mjs";
-export function app_code_lesson_expression_choose_order_both_sides_any_comparison_above(
+export function app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above(
   root,
   context,
 ) {

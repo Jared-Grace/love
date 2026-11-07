@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_both_sides_any_comparison } fro
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_any_comparison_expression } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison_expression.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_any_comparison_above } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_learn_js_lesson_expression_both_sides_any_comparison_title_name_id } from "./app_learn_js_lesson_expression_both_sides_any_comparison_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_expression_both_sides_any_comparison() {
       app_code_lesson_expression_choose_order_both_sides_any_comparison,
       "you are asked to provide the final answer, instead of solving it step by step",
     );
-    app_code_lesson_expression_choose_order_both_sides_any_comparison_above(
+    app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_above(
       root,
       context,
     );
