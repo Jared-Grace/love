@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_family_telling_bank } from "./app_learn_js_lesson_family_telling_bank.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_names_marks } from "./app_code_lesson_names_marks.mjs";
+import { app_learn_js_lesson_names_marks } from "./app_learn_js_lesson_names_marks.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -20,8 +20,11 @@ export async function app_code_lesson_telling_missing_generic(
   let sides = await app_learn_js_lesson_family_telling_bank(root, roots, names);
   let telling_names = property_get(sides, "telling");
   let bank_names = property_get(sides, "bank");
-  let telling = await app_code_lesson_names_marks(telling_names, source_read);
-  let bank = await app_code_lesson_names_marks(bank_names, source_read);
+  let telling = await app_learn_js_lesson_names_marks(
+    telling_names,
+    source_read,
+  );
+  let bank = await app_learn_js_lesson_names_marks(bank_names, source_read);
   let missing = [];
   for (let mark of bank) {
     let told = list_includes_not(telling, mark);
