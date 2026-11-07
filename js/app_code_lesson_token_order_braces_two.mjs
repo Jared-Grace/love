@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_token_order_braces_two() {
   let right = js_code_brace_right();
   function above(root, context) {
     "how this lesson differs from the lesson before, with a link to it, and that some of its code is taught later";
-    let box = app_code_container_light_blue(root);
+    let box = app_learn_js_container_light_blue(root);
     let line = html_div(box);
     html_span_text_content(line, "This is the same as ");
     app_code_lesson_reference_draw(

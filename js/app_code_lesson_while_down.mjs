@@ -5,7 +5,7 @@ import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -64,7 +64,7 @@ export function app_code_lesson_while_down() {
   }
   function above(root, context, program_lines, said) {
     "the first while remembered, adding to n; then a while taking away from n, asked with greater than";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_while, [
       "a ",
       "while",
@@ -81,7 +81,7 @@ export function app_code_lesson_while_down() {
     let statement = js_code_console_log_statement(name);
     let up_lines = list_concat_multiple([[code], while_lines, [statement]]);
     app_learn_js_code_lines_writes_out(box_one, up_lines, "10");
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "A ",
       "while",

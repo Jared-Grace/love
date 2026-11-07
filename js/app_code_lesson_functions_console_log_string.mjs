@@ -13,7 +13,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_div_code } from "./app_code_div_code.mjs";
 import { app_code_writes_out_line } from "./app_code_writes_out_line.mjs";
@@ -76,7 +76,7 @@ export function app_code_lesson_functions_console_log_string() {
     let list = fruits_of_the_spirit();
     let word = list_random_item(list);
     let code = app_code_word_console_log_statement(word);
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(c, ["", f_name, " can be given a string too:"]);
     app_code_div_code(c, code);
     app_code_writes_out_line(c, word);

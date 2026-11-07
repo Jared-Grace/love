@@ -15,7 +15,7 @@ import { list_sort_text } from "./list_sort_text.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 export function app_code_lesson_expression_string_order_equal() {
   "comparing two strings with <= and >= - the same less-than-or-equal and greater-than-or-equal the learner already knows on numbers, now on strings, and building on the string < and > they just learned: it works the same alphabetical way, with one addition - <= and >= are ALSO true when the two strings are equal (so unlike < and >, they are not opposites of each other). Only the all-lowercase verse words are used, for the same reason as the order lesson - character-code order matches alphabetical order only within one case. The four examples emphasise the equal case, because that is the one thing new here. Placed just after the string trichotomy lesson (which itself follows the string order lesson), and after the numeric <= / >= lessons.";
   let less_equal_operator = "<=";
@@ -71,7 +71,7 @@ export function app_code_lesson_expression_string_order_equal() {
   return lesson;
   function above(root, context) {
     "three teach boxes then the refreshable examples. Box 1 recalls that the learner already compared strings with < and >, and that when two strings are equal both are false. Box 2 teaches <= and >= DIFFERENTIALLY - each is the same as the < or > they already know, with the one change named at the point it happens: where the strict operator is false (the two strings equal), this one is true instead. Naming both the before value (false) and the after value (true) inline is what makes the delta line self-contained, on top of the recall box's general premise. Box 3 restates the same fact POSITIVELY - <= means comes-before-or-equal, >= means comes-after-or-equal. Two framings of one small addition on purpose: different learners latch onto different explanations, and a simple labelled line is cheap to skim past for anyone who already got it. What is avoided is the earlier version's re-definition of every case from scratch, which buried the one new thing. No worked examples here: the four refreshable examples below demonstrate the cases.";
-    let recall = app_code_container_light_blue(root);
+    let recall = app_learn_js_container_light_blue(root);
     app_code_prose_code_line(recall, [
       ["text", "You've compared strings with "],
       ["code", "<"],
@@ -91,7 +91,7 @@ export function app_code_lesson_expression_string_order_equal() {
         "false",
       ],
     );
-    let addition = app_code_container_light_blue(root);
+    let addition = app_learn_js_container_light_blue(root);
     app_code_prose_code_line(addition, [
       ["text", "We can use "],
       ["code", "<="],
@@ -114,7 +114,7 @@ export function app_code_lesson_expression_string_order_equal() {
     }
     differential("<=", "<");
     differential(">=", ">");
-    let meaning = app_code_container_light_blue(root);
+    let meaning = app_learn_js_container_light_blue(root);
     function positive(operator, direction) {
       "one positive-meaning line: this operator means the first string comes before/after the second string, or the two are equal - the frame single-sourced so <= and >= cannot drift";
       let phrase = text_combine_multiple([

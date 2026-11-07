@@ -12,7 +12,7 @@ import { app_code_lesson_identifiers_valid } from "./app_code_lesson_identifiers
 import { app_code_lesson_name_id_symbol } from "./app_code_lesson_name_id_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_identifiers_underscores_generic({
   separator_invalid_name,
@@ -24,14 +24,14 @@ export function app_code_lesson_identifiers_underscores_generic({
   defines_invert,
 }) {
   function above(root, context) {
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let defines = [define_valid, define_invalid];
     if (defines_invert) {
       list_swap_beginning(defines);
     }
     invoke_multiple(defines);
     defines_after(root);
-    let c2 = app_code_container_light_blue(root);
+    let c2 = app_learn_js_container_light_blue(root);
     let identifier_symbols_types = ["letters"];
     list_add_multiple(identifier_symbols_types, identifier_symbols_types_adds);
     let right = list_to_text_and_list(identifier_symbols_types);

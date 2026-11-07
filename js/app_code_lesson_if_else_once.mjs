@@ -23,7 +23,7 @@ import { list_first } from "./list_first.mjs";
 import { app_code_if_boolean_flipped } from "./app_code_if_boolean_flipped.mjs";
 import { list_without } from "./list_without.mjs";
 import { text_between } from "./text_between.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -138,7 +138,7 @@ export function app_code_lesson_if_else_once() {
     let else_dots = js_code_else_dots();
     let say_love = logged(love);
     let say_joy = logged(joy);
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_if_else, [
       "",
       else_dots,
@@ -148,7 +148,7 @@ export function app_code_lesson_if_else_once() {
       name4,
       " in between",
     ]);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "But suppose ",
       if_dots,
@@ -181,7 +181,7 @@ export function app_code_lesson_if_else_once() {
       say_joy,
       " is written out",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, ["", else_dots, " asks only once:"]);
     let else_lines = program_lines(name4, words7, true);
     app_learn_js_code_lines_writes_out(box_three, else_lines, love);
@@ -206,7 +206,7 @@ export function app_code_lesson_if_else_once() {
       " is now ",
       "false",
     ]);
-    let box_four = app_code_container_light_blue(root);
+    let box_four = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_four, [
       "So exactly one of ",
       if_dots,

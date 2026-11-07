@@ -1,4 +1,4 @@
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -20,12 +20,12 @@ export function app_code_lesson_expression_comparison_or_intro(root, context) {
   let right_side = app_code_operator_code("8", less_than_symbol, "2");
   let whole = app_code_operator_code(left_side, symbol, right_side);
   let values = app_code_operator_code(true_word, symbol, false_word);
-  let what_is_new = app_code_container_light_blue(root);
+  let what_is_new = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(what_is_new, [
     "A comparison can be either side of ",
     symbol,
   ]);
-  let worked = app_code_container_light_blue(root);
+  let worked = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(worked, [
     "For ",
     whole,

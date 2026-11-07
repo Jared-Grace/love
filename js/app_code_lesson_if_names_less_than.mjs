@@ -8,7 +8,7 @@ import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_less_than } from "./app_code_lesson_if_less_than.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -53,7 +53,7 @@ export function app_code_lesson_if_names_less_than() {
     let brace_right = js_code_brace_right();
     let small_first = js_code_binary_spaced_nb(2, less, 3);
     let big_first = js_code_binary_spaced_nb(3, less, 2);
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -79,7 +79,7 @@ export function app_code_lesson_if_names_less_than() {
       true,
     );
     app_learn_js_code_lines_writes_out(box_one, remember_lines, both);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, ["Names can hold the numbers instead:"]);
     let setup2 = setup_get(2, 3);
     let true_lines = app_code_if_program_lines(
@@ -99,7 +99,7 @@ export function app_code_lesson_if_names_less_than() {
       brace_right,
       " run",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "But suppose ",
       "a",

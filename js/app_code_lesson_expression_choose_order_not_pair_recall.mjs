@@ -3,7 +3,7 @@ import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_not_changes_true_false } from "./app_code_not_changes_true_false.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_expression_choose_order_not_pair_recall(
   ("What the ! does is asked for from the one place that holds it, so this card and the other lessons saying it cannot drift into saying it almost the same way. Why it is worded as the two moves rather than as the rule about what stands after it is written down there.");
   let left_parenthesis = js_code_parenthesis_left();
   let right_parenthesis = js_code_parenthesis_right();
-  let recall_card = app_code_container_light_blue(root);
+  let recall_card = app_learn_js_container_light_blue(root);
   let changes = app_code_not_changes_true_false("");
   app_code_remember_from_lesson(
     recall_card,

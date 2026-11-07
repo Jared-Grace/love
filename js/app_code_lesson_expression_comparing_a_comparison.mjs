@@ -6,7 +6,7 @@ import { app_code_lesson_expression_comparing_a_comparison_worked_example } from
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -51,7 +51,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     "An idea card used to stand between the line and the replacing rule: seven rows climbing from 1 < 2 is true up to so anywhere true or false can be used, we can use a comparison. It argued the line was LEGAL - a comparison may stand where a plain true or false stands - which is the opposite direction from the one that solves it, and it argued it on 1 < 2 and true === true, neither of which is the line on the screen. Nothing in this lesson or its quiz ever runs that direction: the learner is handed a line and asked for its value, every time, and the replacing card with the two walkthroughs carries that the whole way. So the longest explanation on the screen was answering a question the screen never asks, and a learner reading down it met a second line being taken apart before the first one had been. It is gone; the learner now reaches a worked line four rows sooner. What makes the line legal is learned by working it, not by reading a derivation of it";
     app_code_lesson_expression_comparing_a_comparison_recall(root, context);
     let same = js_operator_triple_equal();
-    let goal = app_code_container_light_blue(root);
+    let goal = app_learn_js_container_light_blue(root);
     let goal_line = app_code_lesson_expression_comparing_a_comparison_line(
       "3 === 5",
       same,

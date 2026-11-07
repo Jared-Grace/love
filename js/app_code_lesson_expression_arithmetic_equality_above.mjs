@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_learn_js_arithmetic_to_value_symbols } from "./app_learn_js_arithmetic_to_value_symbols.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
@@ -8,11 +8,11 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 export function app_code_lesson_expression_arithmetic_equality_above(root) {
   arguments_assert(arguments, 1);
   ("first the rule, then it worked once true and once false: each side is done first to its own number, and only then are the two numbers compared");
-  let header = app_code_container_light_blue(root);
+  let header = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(header, [
     "Both sides of a comparison can be arithmetic",
   ]);
-  let yes = app_code_container_light_blue(root);
+  let yes = app_learn_js_container_light_blue(root);
   ("the rule is named by its two operators before the line is worked, because a learner who has just been told that both sides MAY be arithmetic still has no reason to do the arithmetic first - the naming is what turns the worked line below from a thing to copy into a thing that follows");
   ("The same words as the lessons ahead of this one - X is solved before Y - so that a learner meeting the shape again with a different operator in the middle recognises the sentence rather than reading a new rule.");
   ("EVERY OPERATOR THE QUIZ CAN PUT ON A LINE IS NAMED, and the naming is built from the very list the lines are drawn from rather than typed out beside it. The rule used to name the plus alone - + is solved before === - while the sides of a line are each drawn an operator of their own from plus, minus and divide. Measured 2026-08-28 over four hundred drawn lines: of the eight hundred sides, 251 were written with +, 281 with - and 268 with /, and only 33 of the four hundred lines carried a + on both sides. So a learner was told a rule about one symbol and then handed 27 / 3 === 18 / 2, a line holding none of it, better than half the time.");
@@ -44,7 +44,7 @@ export function app_code_lesson_expression_arithmetic_equality_above(root) {
     " is ",
     "true",
   ]);
-  let no = app_code_container_light_blue(root);
+  let no = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(no, [
     "For ",
     "10 - 4 === 2 + 5",

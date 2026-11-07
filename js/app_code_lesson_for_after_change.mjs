@@ -33,7 +33,7 @@ import { list_take } from "./list_take.mjs";
 import { list_without } from "./list_without.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_log_after_change } from "./app_code_lesson_while_log_after_change.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -199,7 +199,7 @@ export function app_code_lesson_for_after_change() {
   }
   function above(root, context) {
     "The while with its change first remembered, then that change moved up into a for, what the for does run by run, and why the two differ";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -210,7 +210,7 @@ export function app_code_lesson_for_after_change() {
     let value4 = written([4, 6]);
     let lines5 = while_lines(numbers3);
     app_learn_js_code_lines_writes_out(box_one, lines5, value4);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "Move ",
       "n += 2",
@@ -234,7 +234,7 @@ export function app_code_lesson_for_after_change() {
       r2,
       " is skipped, and the code continues after it",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "These two loops do not do the same thing",
     ]);

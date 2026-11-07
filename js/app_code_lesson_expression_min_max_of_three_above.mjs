@@ -6,7 +6,7 @@ import { math_max } from "./math_max.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_expression_min_max_of_three_code } from "./app_code_lesson_expression_min_max_of_three_code.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_expression_min_max_of_three_above(root) {
     b,
     c,
   );
-  let define = app_code_container_light_blue(root);
+  let define = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(define, [
     "",
     "Math.min",
@@ -49,7 +49,7 @@ export function app_code_lesson_expression_min_max_of_three_above(root) {
     "Math.max",
     " can receive more than two numbers",
   ]);
-  let min_box = app_code_container_light_blue(root);
+  let min_box = app_learn_js_container_light_blue(root);
   let min_line = html_div(min_box);
   html_span_text_code_dark(min_line, smallest_text);
   html_span_text(min_line, " is the smallest (the ");
@@ -58,7 +58,7 @@ export function app_code_lesson_expression_min_max_of_three_above(root) {
   html_span_text(min_line, "imum) of ");
   html_span_text_code_dark(min_line, nums_text);
   app_code_div_cycle_code(min_box, ["So ", v_min, " is ", smallest_text]);
-  let max_box = app_code_container_light_blue(root);
+  let max_box = app_learn_js_container_light_blue(root);
   let max_line = html_div(max_box);
   html_span_text_code_dark(max_line, largest_text);
   html_span_text(max_line, " is the largest (the ");

@@ -18,7 +18,7 @@ import { text_trim } from "./text_trim.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_number_text_plus } from "./app_code_lesson_number_text_plus.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -102,7 +102,7 @@ export function app_code_lesson_number_text_join() {
   }
   function above(root, context) {
     "a number joined to a string remembered, then a name holding the number";
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_two,
       context,
@@ -114,7 +114,7 @@ export function app_code_lesson_number_text_join() {
     let statement3 = js_code_console_log_statement(code4);
     let value = text_combine("5", ending);
     app_learn_js_code_lines_writes_out(box_two, [statement3], value);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "A name holding a number joins the same way:",
     ]);

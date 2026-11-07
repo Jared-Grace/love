@@ -16,7 +16,7 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { divide } from "./divide.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_remainder_any() {
   "practice the remainder % with a mix of divisors; the intro DEFINES the remainder via the formula (dividend - Math.floor(n / d) * d, learned in the remainder-by-dividing lessons) rather than pointing back to the 2/3/4 lessons; both the number and the divisor vary each question";
@@ -62,7 +62,7 @@ export function app_code_lesson_expression_remainder_any() {
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
   function above(root, context) {
-    let derive = app_code_container_light_blue(root);
+    let derive = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       derive,
       context,
@@ -85,7 +85,7 @@ export function app_code_lesson_expression_remainder_any() {
       " is ",
       "14 - Math.floor(14 / 4) * 4",
     ]);
-    let define = app_code_container_light_blue(root);
+    let define = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(define, [
       "So the remainder ",
       percent,

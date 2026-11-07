@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_array_first } from "./app_code_lesson_array_first.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -12,14 +12,14 @@ export function app_code_lesson_array_second() {
   ("The second lesson of arrays, chosen by the human 2026-11-06. The writing is a first draft by Claude 2026-11-06.");
   function above(root, context, example, walk) {
     "a[0] remembered, then a[1] the second item";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
       app_code_lesson_array_first,
       ["", "a[0]", " is the first item of an array."],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "So ",
       "a[1]",

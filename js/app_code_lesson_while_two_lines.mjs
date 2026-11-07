@@ -30,7 +30,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_start_end } from "./app_code_lesson_while_start_end.mjs";
@@ -194,7 +194,7 @@ export function app_code_lesson_while_two_lines() {
     "Inside and outside remembered, then two lines inside a while taking turns";
     let fruits = fruits_of_the_spirit();
     let joy = list_get(fruits, 1);
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     let r = app_learn_js_braces_dots();
     app_code_remember_from_lesson(
       box_one,
@@ -202,7 +202,7 @@ export function app_code_lesson_while_two_lines() {
       app_code_lesson_while_start_end,
       ["Lines inside the ", r, " repeat, and lines outside it run once."],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     let r2 = app_learn_js_braces_dots();
     app_code_div_cycle_code(box_two, [
       "Lines inside the ",

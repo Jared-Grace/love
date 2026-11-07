@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_string_concat_above_so_value } from "./app_code_lesson_expression_string_concat_above_so_value.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
 export function app_code_lesson_expression_string_concat_above_order(
@@ -28,7 +28,7 @@ export function app_code_lesson_expression_string_concat_above_order(
   );
   let name_term = html_span_text(name_line, "concatenation");
   html_bold(name_term);
-  let order = app_code_container_light_blue(root);
+  let order = app_learn_js_container_light_blue(root);
   let r2 = {
     code_a,
     code_b,

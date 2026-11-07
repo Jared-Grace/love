@@ -12,14 +12,14 @@ import { html_text_characters_numbered } from "./html_text_characters_numbered.m
 import { html_span_text } from "./html_span_text.mjs";
 import { list_alphabet_lower } from "./list_alphabet_lower.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
 export function app_code_lesson_symbols_letters() {
   function lambda(root, context) {
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let div = html_div(c);
     html_span_text(div, "In English, there are 26 letters in the alphabet: ");
     let div2 = html_div(c);
@@ -30,7 +30,7 @@ export function app_code_lesson_symbols_letters() {
       "lowercase",
       ".",
     ]);
-    let container = app_code_container_light_blue(root);
+    let container = app_learn_js_container_light_blue(root);
     html_div_cycle_bold(container, [
       "Here are the 26 English letters written in ",
       "uppercase",
@@ -39,7 +39,7 @@ export function app_code_lesson_symbols_letters() {
     let div5 = html_div(container);
     let alphabet_upper = list_alphabet_upper();
     html_text_characters_numbered(div5, alphabet_upper);
-    let container2 = app_code_container_light_blue(root);
+    let container2 = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       container2,
       context,

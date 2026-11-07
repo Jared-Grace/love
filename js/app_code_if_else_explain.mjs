@@ -6,7 +6,7 @@ import { list_get } from "./list_get.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_and_if_not } from "./app_code_lesson_if_and_if_not.mjs";
 import { js_code_let_json_statement } from "./js_code_let_json_statement.mjs";
@@ -31,7 +31,7 @@ export function app_code_if_else_explain(root, context) {
   let if_dots = js_code_if_dots(name);
   let if_not_dots = js_code_if_dots(opposite);
   let else_dots = js_code_else_dots();
-  let box_one = app_code_container_light_blue(root);
+  let box_one = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_one,
     context,
@@ -43,7 +43,7 @@ export function app_code_if_else_explain(root, context) {
   let if_no = js_code_if_lines(opposite, statement_joy);
   let both_lines = list_concat_multiple([[setup], if_yes, if_no]);
   app_learn_js_code_lines_writes_out(box_one, both_lines, love);
-  let box_two = app_code_container_light_blue(root);
+  let box_two = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_two, [
     "",
     else_dots,
@@ -66,7 +66,7 @@ export function app_code_if_else_explain(root, context) {
     if_dots,
     " runs",
   ]);
-  let box_three = app_code_container_light_blue(root);
+  let box_three = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_three, [
     "But suppose ",
     name,
@@ -87,7 +87,7 @@ export function app_code_if_else_explain(root, context) {
     else_dots,
     " runs",
   ]);
-  let box_four = app_code_container_light_blue(root);
+  let box_four = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_four, [
     "So ",
     else_dots,

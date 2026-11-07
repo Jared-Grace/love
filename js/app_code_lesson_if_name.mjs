@@ -4,7 +4,7 @@ import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_true_false } from "./app_code_lesson_statement_name_true_false.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_if_name() {
     let brace_right = js_code_brace_right();
     ("The name goes in an if, worded so since 2026-10-08, as in If less than at the human's word. Not picked: inside ( and ), the first wording, since a ( and a ) also group a value.");
     let name = "a";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -52,7 +52,7 @@ export function app_code_lesson_if_name() {
     let a = setup_get(name, true);
     let remember_lines = list_concat(a, [logged]);
     app_learn_js_code_lines_writes_out(box_one, remember_lines, "true");
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, ["We can put the name in an ", "if", ":"]);
     let setup2 = setup_get(name, true);
     let true_lines = app_code_if_program_lines(
@@ -72,7 +72,7 @@ export function app_code_lesson_if_name() {
       brace_right,
       " run",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,

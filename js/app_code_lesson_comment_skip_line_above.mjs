@@ -3,7 +3,7 @@ import { app_code_lesson_log_twice } from "./app_code_lesson_log_twice.mjs";
 import { app_code_lesson_sum_lines } from "./app_code_lesson_sum_lines.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_code_comment_prefix } from "./js_code_comment_prefix.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_comment_skip_line_above(root, context) {
   let first_noted = text_combine(prefix, first_line);
   let last_line = property_get(lines, "last_line");
   let last_noted = text_combine(prefix, last_line);
-  let box_both = app_code_container_light_blue(root);
+  let box_both = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(box_both, context, app_code_lesson_log_twice, [
     "two lines that write out give two answers:",
   ]);
@@ -33,7 +33,7 @@ export function app_code_lesson_comment_skip_line_above(root, context) {
   let both = list_join_newline([first_total, last_total]);
   app_learn_js_code_lines_writes_out(box_both, [first_line, last_line], both);
   let slashes = js_comment_start();
-  let box_last_off = app_code_container_light_blue(root);
+  let box_last_off = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_last_off, [
     "We can put two slashes (",
     slashes,
@@ -49,7 +49,7 @@ export function app_code_lesson_comment_skip_line_above(root, context) {
     "That line is a comment now, so it is skipped",
   ]);
   app_code_div_cycle_code(box_last_off, ["Its answer is gone"]);
-  let box_first_off = app_code_container_light_blue(root);
+  let box_first_off = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_first_off, [
     "If we put the slashes in front of the first line instead:",
   ]);

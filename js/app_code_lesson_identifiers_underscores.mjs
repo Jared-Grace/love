@@ -5,7 +5,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_identifiers_underscores() {
   "The lesson that a name is joined up with underscores rather than hyphens, and the panel under it showing how the two marks differ to the eye, the hyphen being shorter and near the middle of the line while the underscore is longer and near the bottom.";
@@ -23,7 +23,7 @@ export function app_code_lesson_identifiers_underscores() {
     defines_invert: true,
   });
   function defines_after(root) {
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     html_div_text(c, "How they look different:");
     let div = html_div(c);
     html_style_assign(div, {

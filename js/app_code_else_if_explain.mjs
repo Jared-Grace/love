@@ -5,7 +5,7 @@ import { app_code_word_console_log_statement } from "./app_code_word_console_log
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
 import { js_code_else_one_line } from "./js_code_else_one_line.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_in_else } from "./app_code_lesson_if_in_else.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -27,14 +27,14 @@ export function app_code_else_if_explain(root, context) {
   let if_b = js_code_if_dots("b");
   let else_if_b = js_code_else_if_dots("b");
   let else_with_if = js_code_else_one_line(if_b);
-  let box_one = app_code_container_light_blue(root);
+  let box_one = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(box_one, context, app_code_lesson_if_in_else, [
     "An ",
     "if",
     " can go inside an ",
     "else",
   ]);
-  let box_two = app_code_container_light_blue(root);
+  let box_two = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_two, [
     "Here ",
     if_b,
@@ -45,7 +45,7 @@ export function app_code_else_if_explain(root, context) {
   let nested = app_code_else_if_nested_lines([false, true], words);
   let written = list_join_newline([joy, peace]);
   app_learn_js_code_lines_writes_out(box_two, nested, written);
-  let box_three = app_code_container_light_blue(root);
+  let box_three = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_three, [
     "So ",
     else_with_if,
@@ -68,7 +68,7 @@ export function app_code_else_if_explain(root, context) {
     else_if_b,
     " run",
   ]);
-  let box_four = app_code_container_light_blue(root);
+  let box_four = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_four, ["But suppose ", "a", " is ", "true", ":"]);
   let love_lines = app_code_else_if_program_lines([true, true], words);
   let love_written = list_join_newline([love, peace]);

@@ -5,7 +5,7 @@ import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_swapping_divide() {
   "the second swapping lesson: the arithmetic operators that do NOT swap - / (divide), % (remainder) and ** (power). Each gets an everyday reason it is directional, so the rule is understood, not memorised, and both sides are worked out so the swap is seen. + and * are recalled as the ones that do swap, so the quiz mixes them (true) with / % ** (false). Answer is the code's own true/false value, correct by construction.";
@@ -29,7 +29,7 @@ export function app_code_lesson_expression_swapping_divide() {
   }
   function above(root, context) {
     "recall + * swap, then show /, % and ** each changing when swapped, with an everyday reason and both sides worked out";
-    let recall = app_code_container_light_blue(root);
+    let recall = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       recall,
       context,
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_swapping_divide() {
       " and swapped: ",
       "4 + 3 === 7",
     ]);
-    let division = app_code_container_light_blue(root);
+    let division = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(division, [
       "Dividing (",
       "/",
@@ -63,7 +63,7 @@ export function app_code_lesson_expression_swapping_divide() {
       "/",
     ]);
     app_code_lesson_swapping_same_numbers_line(division);
-    let leftover = app_code_container_light_blue(root);
+    let leftover = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(leftover, [
       "The remainder (",
       "%",
@@ -83,7 +83,7 @@ export function app_code_lesson_expression_swapping_divide() {
       " are different, so we can never swap two different numbers around ",
       "%",
     ]);
-    let power = app_code_container_light_blue(root);
+    let power = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(power, [
       "A power (",
       "**",

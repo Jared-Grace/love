@@ -9,7 +9,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 export function app_code_lesson_expression_parentheses_arithmetic() {
@@ -46,7 +46,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     let times = js_operator_asterisk_symbol();
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
-    let recall = app_code_container_light_blue(root);
+    let recall = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       recall,
       context,
@@ -59,7 +59,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
       plus,
       " first?",
     ]);
-    let tool = app_code_container_light_blue(root);
+    let tool = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(tool, [
       "We can put ",
       open,
@@ -84,7 +84,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
       "3 * 3",
     ]);
     app_code_div_cycle_code(tool, ["So ", "(1 + 2) * 3", " is ", "9"]);
-    let either = app_code_container_light_blue(root);
+    let either = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(either, [
       "The ",
       open,
@@ -109,7 +109,7 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
       "4 * 2",
     ]);
     app_code_div_cycle_code(either, ["So ", "4 * (5 - 3)", " is ", "8"]);
-    let rule = app_code_container_light_blue(root);
+    let rule = app_learn_js_container_light_blue(root);
     let r = app_code_parentheses_inside_before_outside("");
     app_code_div_cycle_code(rule, [
       "Whatever is inside ",

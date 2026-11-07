@@ -18,7 +18,7 @@ import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_not } from "./app_code_lesson_if_not.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -101,7 +101,7 @@ export function app_code_lesson_if_and_if_not() {
     let opposite2 = text_combine(bang, name2);
     let love = list_get(fruits, 0);
     let joy = list_get(fruits, 1);
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_if_not, [
       "",
       opposite2,
@@ -117,7 +117,7 @@ export function app_code_lesson_if_and_if_not() {
     let if_not_lines = js_code_if_lines(opposite2, statement4);
     let one = list_concat([setup2], if_not_lines);
     app_learn_js_code_lines_writes_out(box_one, one, love);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "We can put ",
       "if (a)",
@@ -145,7 +145,7 @@ export function app_code_lesson_if_and_if_not() {
       say_joy,
       " does not run",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "But suppose ",
       name2,
@@ -173,7 +173,7 @@ export function app_code_lesson_if_and_if_not() {
       say_joy,
       " runs",
     ]);
-    let box_four = app_code_container_light_blue(root);
+    let box_four = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_four, [
       "So exactly one of ",
       if_dots,

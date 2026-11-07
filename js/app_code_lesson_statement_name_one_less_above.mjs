@@ -6,7 +6,7 @@ import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_statement_name_one_less_above(root, context) {
   let code_more = js_code_assign_statement(name, more);
   let code_less = js_code_assign_statement(name, less);
   let logged = js_code_console_log_statement(name);
-  let box_more = app_code_container_light_blue(root);
+  let box_more = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_more,
     context,
@@ -36,7 +36,7 @@ export function app_code_lesson_statement_name_one_less_above(root, context) {
     code_more,
     logged,
   ]);
-  let box_less = app_code_container_light_blue(root);
+  let box_less = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_less, [
     "A name can also be given one less than it holds (",
     code_less,

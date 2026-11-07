@@ -7,7 +7,7 @@ import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_console_log_nested_generic(params) {
@@ -39,7 +39,7 @@ export function app_code_lesson_console_log_nested_generic(params) {
   });
   return lesson;
   function above(root) {
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let line_seen = html_div(c);
     let seen_text = text_combine_multiple([
       "We've already seen how to ",

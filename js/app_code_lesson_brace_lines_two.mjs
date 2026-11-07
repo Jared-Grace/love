@@ -5,7 +5,7 @@ import { app_learn_js_braces_two_if_else } from "./app_learn_js_braces_two_if_el
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_brace_pair_two } from "./app_code_lesson_brace_pair_two.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -21,14 +21,14 @@ export function app_code_lesson_brace_lines_two() {
   let right = js_code_brace_right();
   function above(root, context) {
     "a { beginning a section remembered, then the section as the lines between the { and its }";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
       app_code_lesson_brace_pair_two,
       ["a ", left, " begins a section of code, and its ", right, " ends it."],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "The lines of that section are the lines between the ",
       left,

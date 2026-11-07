@@ -22,7 +22,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { json_to } from "./json_to.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
 import { js_code_if_lines } from "./js_code_if_lines.mjs";
@@ -135,7 +135,7 @@ export function app_code_lesson_if_two_changes() {
   }
   function above(root, context) {
     "one change in an if remembered, then two, then the same two the other way round";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_if_change, [
       "the line inside an ",
       "if",
@@ -148,7 +148,7 @@ export function app_code_lesson_if_two_changes() {
     let statement2 = js_code_console_log_statement(name);
     let one_change = list_concat_multiple([[code4], if_lines2, [statement2]]);
     app_learn_js_code_lines_writes_out(box_one, one_change, "7");
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, ["An ", "if", " can hold two changes:"]);
     let times_lines = program_lines(4, 5, 3, 1, true);
     app_learn_js_code_lines_writes_out(box_two, times_lines, "13");
@@ -164,7 +164,7 @@ export function app_code_lesson_if_two_changes() {
       " is ",
       "13",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, ["But suppose we swap the two lines:"]);
     let plus_lines = program_lines(4, 5, 3, 1, false);
     app_learn_js_code_lines_writes_out(box_three, plus_lines, "15");

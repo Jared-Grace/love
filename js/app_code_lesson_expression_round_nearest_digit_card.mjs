@@ -1,5 +1,5 @@
 import { app_code_first_decimal_digit_words } from "./app_code_first_decimal_digit_words.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_first_decimal_digit_line } from "./app_code_first_decimal_digit_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_round_nearest_digit_card(
   ("the first of the two questions this screen asks, with its answer under it: which digit is the first digit after the decimal point, shown on two numbers whose first digits differ");
   ("Nothing here rounds anything. The digit is found before it is put to work, because the screen used to name it for the first time three lines after two numbers had already been rounded by it.");
   ("The two digits are literal - 3 and 4 - while the whole part varies. Which digits they are is the card's own content rather than a thing to randomize: both must fall in the same rounding half for the second question to have something to say about them, and 3 beside 4 is the pair a reader can least confuse with the whole part standing to their left.");
-  let card = app_code_container_light_blue(root);
+  let card = app_learn_js_container_light_blue(root);
   let asked = html_div(card);
   html_span_text(asked, "What's the ");
   let text = app_code_first_decimal_digit_words();

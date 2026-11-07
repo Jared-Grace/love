@@ -11,7 +11,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_code_tile } from "./app_learn_js_code_tile.mjs";
@@ -52,7 +52,7 @@ export function app_code_lesson_expression_not_pair_intro(root, context) {
     }
     return fill_pair;
   }
-  let card = app_code_container_light_blue(root);
+  let card = app_learn_js_container_light_blue(root);
   function shape_row(said, joined_symbol, fill) {
     "one row of the card: the mark being talked about, the sentence about it, then the shape itself";
     let row = html_div(card);

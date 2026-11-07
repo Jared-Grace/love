@@ -11,7 +11,7 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { less_than } from "./less_than.mjs";
 import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -100,14 +100,14 @@ export function app_code_lesson_else_if_order() {
     let say_peace = app_code_word_console_log_statement(peace);
     let else_if_b = js_code_else_if_dots("b");
     let else_if_second = js_code_else_if_dots(second_check);
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
       app_code_lesson_else_if_else,
       ["an ", else_if_b, " can have an ", "else", " after it"],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, ["The checks can be comparisons:"]);
     let joy_lines = program_lines([50], words4);
     let joy_written = list_join_newline([joy, patience]);
@@ -127,7 +127,7 @@ export function app_code_lesson_else_if_order() {
       say_joy,
       " runs",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, ["But suppose ", "n", " is ", "5", ":"]);
     let love_lines = program_lines([5], words4);
     let love_written = list_join_newline([love, patience]);
@@ -157,7 +157,7 @@ export function app_code_lesson_else_if_order() {
       "true",
       " wins",
     ]);
-    let box_four = app_code_container_light_blue(root);
+    let box_four = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_four, [
       "And suppose ",
       "n",

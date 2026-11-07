@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_string_quote } from "./js_string_quote.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_name_no_quotes_box(
   ("The mark itself is shown on the line that says it is missing. A reader who has met quote marks only as something a word is written between has no picture to go with the phrase, and the one being talked about here is absent from the line being pointed at - so the words alone leave them looking for a thing that is not there. Shown the character, they know what they are failing to find. It is the same mark, shown the same way, on the last line of the box where the line does have it, so the two lines differ in what they say and not in how they say it.");
   ("Every cup name here wears the colour it wears in the program above, so the a in the sentence is seen to be the a in the code without being matched up by eye.");
   ("THE HIGHLIGHTED WORD INSIDE IS PAIRED WITH WHAT IS INSIDE, which is the word the cup holds, and the pairing is what the highlight is for: a highlighted word and a highlighted piece of code say that they are about each other. For a while inside was highlighted here with nothing else wearing its colour, so the tile pointed at nothing. The name of the cup is not the partner - it already wears its cup colour, and the line is about the thing in the cup rather than the writing on it. So the partner is the value, and only the first time it is said, where inside is.");
-  let box = app_code_container_light_blue(root);
+  let box = app_learn_js_container_light_blue(root);
   let quote = js_string_quote();
   let quoted_word = app_code_string_code(word_source);
   let highlight = app_code_highlight_color();

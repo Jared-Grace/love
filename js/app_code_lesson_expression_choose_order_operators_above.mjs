@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_choose_order_strong_card } from "./app_code_lesson_expression_choose_order_strong_card.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
 import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
@@ -43,9 +43,9 @@ export function app_code_lesson_expression_choose_order_operators_above(
   let final_value = app_code_expression_value(tree);
   let final_text = text_to(final_value);
   ("The line stands in a card of its own, and so does the sentence at the end. Between them is the run: the line is not a step of it - it is what the run is done to - and the sentence is not a step either, it is what the next screen asks for.");
-  let line_card = app_code_container_light_blue(root);
+  let line_card = app_learn_js_container_light_blue(root);
   app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
-  let run = app_code_container_light_blue(root);
+  let run = app_learn_js_container_light_blue(root);
   ("the rule is said FIRST, naming both operators, and what it rules out follows from it - because which of the two is stronger is the whole of why this line has an order at all");
   ("It used to open with the weaker operator having something on one side, so it could not be solved yet. That is true of the line and it is not the reason: read as written, the order comes from one part having something beside it, which is not a rule a learner can carry to the next line - and the rule they CAN carry, that this operator goes before that one, was left to be inferred from the word stronger a line further down.");
   ("Said of these two operators rather than of the four. The card above already names all four in their two groups; what this line adds is that the rule has just decided something about the line in front of them.");
@@ -77,6 +77,6 @@ export function app_code_lesson_expression_choose_order_operators_above(
     ", and that solves to ",
     final_text,
   ]);
-  let change_card = app_code_container_light_blue(root);
+  let change_card = app_learn_js_container_light_blue(root);
   app_code_lesson_expression_choose_order_operators_intro(change_card);
 }

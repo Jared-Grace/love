@@ -21,7 +21,7 @@ import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_change } from "./app_code_lesson_if_change.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -164,7 +164,7 @@ export function app_code_lesson_if_twice() {
   }
   function above(root, context) {
     "one if remembered, then the same if twice, running twice and then once";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_if_change, [
       "the line inside an ",
       "if",
@@ -177,7 +177,7 @@ export function app_code_lesson_if_twice() {
     let statement2 = js_code_console_log_statement(name);
     let one_if = list_concat_multiple([[code5], if_lines2, [statement2]]);
     app_learn_js_code_lines_writes_out(box_one, one_if, "4");
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "We can write the same ",
       "if",
@@ -187,7 +187,7 @@ export function app_code_lesson_if_twice() {
     app_learn_js_code_lines_writes_out(box_two, twice_lines, "7");
     said(box_two, 1, 4, true);
     said(box_two, 4, 7, true);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,

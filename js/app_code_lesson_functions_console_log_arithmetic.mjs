@@ -10,7 +10,7 @@ import { js_operator_to_expression_only } from "./js_operator_to_expression_only
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_arithmetic() {
@@ -39,7 +39,7 @@ export function app_code_lesson_functions_console_log_arithmetic() {
   let lesson = property_get(r, "lesson");
   return lesson;
   function above(root) {
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(c, [
       "Before, we put a single number inside ",
       f_name,

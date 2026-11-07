@@ -3,7 +3,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_identifier_name } from "./app_code_lesson_statement_name_identifier_name.mjs";
 import { app_code_lesson_statement_name_identifier_word } from "./app_code_lesson_statement_name_identifier_word.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
   let name = app_code_lesson_statement_name_identifier_name();
   let word = app_code_lesson_statement_name_identifier_word();
   let grapes = app_code_lesson_statement_name_value_word();
-  let box_before = app_code_container_light_blue(root);
+  let box_before = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_before,
     context,
@@ -35,7 +35,7 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
   let uncolored = [];
   app_code_lesson_cup_fruit(box_before, grapes, name_before, uncolored);
   ("the second picture is the first one with a different word written on it, and the line under it says the one thing a learner has to carry away - that nothing else about the cup moved");
-  let box_any = app_code_container_light_blue(root);
+  let box_any = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_any, [
     "But you can call a cup whatever you like",
   ]);
@@ -44,7 +44,7 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
   app_code_lesson_cup_fruit(box_any, grapes, name, uncolored);
   app_code_div_cycle_code(box_any, ["What is in the cup did not change"]);
   app_code_value_line(box_any, "Inside the cup: ", grapes);
-  let box_id = app_code_container_light_blue(root);
+  let box_id = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_id, ["A name can be any identifier"]);
   app_code_div_cycle_code(box_id, [
     "The word ",
@@ -53,7 +53,7 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
   ]);
   ("the code box gives a cup a word for a name and a word for a value, so the two are the same kind of thing on the page and only where they stand tells them apart - which is exactly the reading the questions ask for");
   app_code_lesson_cup_code_box(root, name, word);
-  let box_care = app_code_container_light_blue(root);
+  let box_care = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_care, [
     "What comes out is what is inside the cup, not the name on it",
   ]);

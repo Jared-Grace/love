@@ -8,7 +8,7 @@ import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map } from "./list_map.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -93,7 +93,7 @@ export function app_code_lesson_expression_number_trichotomy() {
   return lesson;
   function above(root) {
     "first an example box: two numbers can be the same or different; then a reasoning box - when they are different one is bigger, shown both as bigger and as smaller; then the three-cases box: any two numbers give exactly one of the three, listed a/b/c with the operator that tests each case tagged in parentheses. Everyday words bigger/smaller, and the general rule stated in words (the first / the second number) because variables are not taught yet, so all code shown is concrete numbers.";
-    let example = app_code_container_light_blue(root);
+    let example = app_learn_js_container_light_blue(root);
     app_code_prose_code_line(example, [
       ["code", "1"],
       ["text", " and "],
@@ -108,7 +108,7 @@ export function app_code_lesson_expression_number_trichotomy() {
       ["text", " are different: "],
       ["code", "2 !== 3"],
     ]);
-    let reasoning = app_code_container_light_blue(root);
+    let reasoning = app_learn_js_container_light_blue(root);
     app_code_prose_code_line(reasoning, [
       ["text", "When two numbers are different, one is bigger than the other"],
     ]);
@@ -126,7 +126,7 @@ export function app_code_lesson_expression_number_trichotomy() {
       ["text", ": "],
       ["code", "2 < 3"],
     ]);
-    let cases = app_code_container_light_blue(root);
+    let cases = app_learn_js_container_light_blue(root);
     app_code_prose_code_line(cases, [["text", "Suppose we have two numbers"]]);
     app_code_prose_code_line(cases, [
       ["text", "Then exactly one of these will be "],

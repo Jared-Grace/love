@@ -13,7 +13,7 @@ import { text_pad_space } from "./text_pad_space.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_identifiers_symbol_first_generic } from "./app_code_lesson_identifiers_symbol_first_generic.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
       app_code_lesson_identifiers_symbol_first,
       "the symbols are not separated",
     );
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let batch = property_get(r, "batch");
     let b = batch();
     let question = list_first_property(b, "question");

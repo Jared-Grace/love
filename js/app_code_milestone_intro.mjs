@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_explain } from "./app_code_review_explain.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
@@ -19,7 +19,7 @@ export function app_code_milestone_intro(root, context, checkpoint) {
   arguments_assert(arguments, 3);
   ("the first screen of a milestone: its words by themselves, and a Begin button that writes down it was pressed and draws the questions - asked for by the human 2026-10-23");
   ("the words and the button share the card a question is drawn in, so the screen is as wide, and as centered, as the questions that follow it");
-  let c = app_code_container_light_blue(root);
+  let c = app_learn_js_container_light_blue(root);
   let explain = property_get(checkpoint, "explain");
   app_code_review_explain(c, explain);
   let arrow = emoji_arrow_right();

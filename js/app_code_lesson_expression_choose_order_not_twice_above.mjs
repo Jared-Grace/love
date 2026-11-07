@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_recall } from "./app_code_lesson_expression_choose_order_not_twice_recall.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_intro } from "./app_code_lesson_expression_choose_order_not_twice_intro.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_inside_first } from "./app_code_lesson_expression_choose_order_not_twice_inside_first.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_worked } from "./app_code_lesson_expression_choose_order_not_twice_worked.mjs";
@@ -13,10 +13,10 @@ export function app_code_lesson_expression_choose_order_not_twice_above(
   "Four cards rather than the run's recall, run, hinge three, because the new thing here is a pair of words and a rule about them rather than a wider line. A card apiece keeps the words, the rule and the working from being read as one long paragraph.";
   arguments_assert(arguments, 2);
   app_code_lesson_expression_choose_order_not_twice_recall(root, context);
-  let words_card = app_code_container_light_blue(root);
+  let words_card = app_learn_js_container_light_blue(root);
   app_code_lesson_expression_choose_order_not_twice_intro(words_card);
-  let order_card = app_code_container_light_blue(root);
+  let order_card = app_learn_js_container_light_blue(root);
   app_code_lesson_expression_choose_order_not_twice_inside_first(order_card);
-  let worked_card = app_code_container_light_blue(root);
+  let worked_card = app_learn_js_container_light_blue(root);
   app_code_lesson_expression_choose_order_not_twice_worked(worked_card);
 }

@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 export function app_learn_js_container_light_blue_div(parent) {
   arguments_assert(arguments, 1);
@@ -10,7 +10,7 @@ export function app_learn_js_container_light_blue_div(parent) {
   ("again once the line exists.");
   ("The line comes back rather than the card, because the line is what the caller");
   ("goes on to write into.");
-  let card = app_code_container_light_blue(parent);
+  let card = app_learn_js_container_light_blue(parent);
   let line = html_div(card);
   return line;
 }

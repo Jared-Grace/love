@@ -1,5 +1,5 @@
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_worked_card_two_operators({
@@ -18,7 +18,7 @@ export function app_code_lesson_expression_worked_card_two_operators({
   ("The heading is a row put at the top of the card for a caller with something to say about this working in particular rather than about the lesson - a lesson showing two workings has a sentence to put between them. Handed nothing, no row is written, which is what a lesson showing one working asks for.");
   ("The last row names the answer rather than writing the whole line out again. The whole line already stands at the top of the card, three rows up, so repeating it says nothing the reader cannot see - and on a line carrying parentheses it is long enough to wrap on a phone, which puts the value the row exists to give at the end of a second line.");
   let heading_written = list_empty_not_is(heading);
-  let worked = app_code_container_light_blue(root);
+  let worked = app_learn_js_container_light_blue(root);
   if (heading_written) {
     app_code_div_cycle_code(worked, heading);
   }

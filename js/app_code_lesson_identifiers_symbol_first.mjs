@@ -15,7 +15,7 @@ import { list_concat_single } from "./list_concat_single.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_between_space } from "./list_between_space.mjs";
 import { digits } from "./digits.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_to_text_and_list } from "./list_to_text_and_list.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { each } from "./each.mjs";
@@ -61,7 +61,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     let identifiers_valid_anywhere = list_to_text_and_list(
       identifier_symbols_types_plural,
     );
-    let c2 = app_code_container_light_blue(root);
+    let c2 = app_learn_js_container_light_blue(root);
     let text = text_combine(
       "identifiers can have different kinds of symbols including ",
       identifiers_valid_anywhere,
@@ -82,7 +82,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     ]);
     let parts = list_concat_single(single, combined);
     app_code_div_cycle_code(c2, parts);
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     html_div_text_multiple(c, [
       "However identifiers cannot have a digit as their first symbol (Identifiers cannot begin with a digit)",
       "After the first symbol an identifier can always be a digit",

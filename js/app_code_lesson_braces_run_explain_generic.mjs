@@ -1,6 +1,6 @@
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_learn_js_braces_run_programs_shape } from "./app_learn_js_braces_run_programs_shape.mjs";
 import { list_get } from "./list_get.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_braces_run_explain_generic(
     "what is new about this shape, then what happens to a section that runs and to one that does not";
     "The box on sections last, straight before the worked example, at the human's asking 2026-10-11: it is the rule the example is answered by, so it sits where the answering begins.";
     explain(root, context);
-    let box_steps = app_code_container_light_blue(root);
+    let box_steps = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_steps, [
       "When a ",
       app_learn_js_braces_dots(),

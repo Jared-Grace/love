@@ -29,7 +29,7 @@ import { list_size } from "./list_size.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_decrement } from "./app_code_lesson_while_decrement.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
@@ -167,7 +167,7 @@ export function app_code_lesson_while_countdown() {
   }
   function above(root, context) {
     "While taking away one remembered, then a countdown with one line after the { ... }";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -182,7 +182,7 @@ export function app_code_lesson_while_countdown() {
         " each run.",
       ],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     let r3 = app_learn_js_braces_dots();
     app_code_div_cycle_code(box_two, [
       "A line after the ",

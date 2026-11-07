@@ -2,7 +2,7 @@ import { app_code_lesson_expression_comparing_a_comparison_replaced_lines } from
 import { app_code_lesson_expression_comparing_a_comparison_line } from "./app_code_lesson_expression_comparing_a_comparison_line.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_comparing_a_comparison_worked_example(
@@ -20,7 +20,7 @@ export function app_code_lesson_expression_comparing_a_comparison_worked_example
   ("This is the SECOND line the screen works, and it opens on a line of its own rather than on the one already standing at the top. The card before it takes the top line all the way down, so a learner arriving here is being shown the same move on different code, which is what makes it a second example rather than a second telling.");
   ("Five lines rather than one because the move this lesson teaches happens in the middle - the comparison is gone and its answer is sitting where it stood. A line that jumped straight to the final true or false would hide the only new step in the lesson, and the learner would have to take the answer on trust");
   ("The last three lines are the same three the card before it ends on, said in the one place, so the two walkthroughs cannot finish in two different ways");
-  let card = app_code_container_light_blue(root);
+  let card = app_learn_js_container_light_blue(root);
   let answer = js_true_false_word(value);
   let whole = app_code_lesson_expression_comparing_a_comparison_line(
     code,

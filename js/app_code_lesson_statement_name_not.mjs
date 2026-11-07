@@ -13,7 +13,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
@@ -61,7 +61,7 @@ export function app_code_lesson_statement_name_not() {
     let value_true = js_keyword_true();
     let value_false = js_keyword_false();
     let value_asked = js_code_not(value_true);
-    let box_remember = app_code_container_light_blue(root);
+    let box_remember = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_remember,
       context,
@@ -74,7 +74,7 @@ export function app_code_lesson_statement_name_not() {
       [logged_value],
       value_false,
     );
-    let box_name = app_code_container_light_blue(root);
+    let box_name = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_name, [
       "Suppose we give a name (",
       name,

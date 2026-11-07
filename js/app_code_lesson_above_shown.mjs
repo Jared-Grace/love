@@ -12,7 +12,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { app_code_lesson_ids_short } from "./app_code_lesson_ids_short.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
 import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_above_shown(context, lesson) {
   arguments_assert(arguments, 2);
@@ -44,7 +44,7 @@ export function app_code_lesson_above_shown(context, lesson) {
     return above;
   }
   function above_short(root, context_above) {
-    let box = app_code_container_light_blue(root);
+    let box = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box, [
       "The last lesson ran these programs one line at a time, and its boxes explain each line",
     ]);

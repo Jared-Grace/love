@@ -22,7 +22,7 @@ import { text_integers } from "./text_integers.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { less_than } from "./less_than.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_twice } from "./app_code_lesson_if_twice.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -170,13 +170,13 @@ export function app_code_lesson_if_two_bounds() {
     let joy = list_get(fruits, 1);
     let peace = list_get(fruits, 2);
     let words3 = [love, joy, peace];
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_if_twice, [
       "The same ",
       "if",
       " can be written twice",
     ]);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "Two ",
       "if",
@@ -195,7 +195,7 @@ export function app_code_lesson_if_two_bounds() {
       ", and so is ",
       high_true,
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,
@@ -218,7 +218,7 @@ export function app_code_lesson_if_two_bounds() {
       " is ",
       "false",
     ]);
-    let box_four = app_code_container_light_blue(root);
+    let box_four = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_four, [
       "So these two ",
       "if",

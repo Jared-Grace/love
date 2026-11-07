@@ -6,13 +6,13 @@ import { digit_positive_random } from "./digit_positive_random.mjs";
 import { text_combine_right_fn } from "./text_combine_right_fn.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 export function app_code_lesson_operators_asterisk_generic_minus(
   root,
   operator,
   context,
 ) {
-  let c = app_code_container_light_blue(root);
+  let c = app_learn_js_container_light_blue(root);
   let minus = js_operator_minus_symbol();
   app_code_remember_from_lesson(c, context, app_code_lesson_operators_minus, [
     "for ",

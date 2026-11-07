@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
 import { js_code_while_lines_multiple } from "./js_code_while_lines_multiple.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -19,14 +19,14 @@ export function app_code_lesson_while_log_double() {
   let program_write = js_code_start_above_lines(js_code_while_lines_multiple);
   function above(root, context, example, walk) {
     "console.log with math remembered, then the same inside a while";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
       app_code_lesson_functions_console_log_arithmetic,
       ["", "console.log", " does the math first, then writes out the answer."],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     let times = js_operator_asterisk_symbol();
     let doubled = js_code_binary_spaced_nb(name, times, 2);
     app_code_div_cycle_code(box_two, [

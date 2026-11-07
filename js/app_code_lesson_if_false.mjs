@@ -24,7 +24,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_true } from "./app_code_lesson_if_true.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -128,7 +128,7 @@ export function app_code_lesson_if_false() {
     let right = js_code_parenthesis_right();
     let brace_left = js_code_brace_left();
     let brace_right = js_code_brace_right();
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_if_true, [
       "if the value inside ",
       left,
@@ -145,7 +145,7 @@ export function app_code_lesson_if_false() {
     let true_lines = program_lines("true", inside_shown, after_shown, true);
     let both = list_join_newline([inside_shown, after_shown]);
     app_learn_js_code_lines_writes_out(box_one, true_lines, both);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "If the value inside ",
       left,

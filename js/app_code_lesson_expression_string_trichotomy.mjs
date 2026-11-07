@@ -11,7 +11,7 @@ import { app_code_prose_code_list } from "./app_code_prose_code_list.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -90,7 +90,7 @@ export function app_code_lesson_expression_string_trichotomy() {
   return lesson;
   function above(root, context) {
     "first a transfer box tying back to the number trichotomy the learner just did; then a dictionary box with a worked pair (same, different, before); then the three-cases box: any two strings give exactly one of the three, listed a/b/c with the operator that tests each case tagged in parentheses. Same shape as the number lesson, with smaller/bigger becoming before/after in the dictionary.";
-    let transfer = app_code_container_light_blue(root);
+    let transfer = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       transfer,
       context,
@@ -108,7 +108,7 @@ export function app_code_lesson_expression_string_trichotomy() {
     app_code_prose_code_line(transfer, [
       ["text", "Two strings work the same way"],
     ]);
-    let dictionary = app_code_container_light_blue(root);
+    let dictionary = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       dictionary,
       context,
@@ -134,7 +134,7 @@ export function app_code_lesson_expression_string_trichotomy() {
       ["text", " comes before "],
       ["code", '"truth"'],
     ]);
-    let cases = app_code_container_light_blue(root);
+    let cases = app_learn_js_container_light_blue(root);
     app_code_prose_code_line(cases, [["text", "Suppose we have two strings"]]);
     app_code_prose_code_line(cases, [
       ["text", "Then exactly one of these will be "],

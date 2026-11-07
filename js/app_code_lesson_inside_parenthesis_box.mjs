@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_inside_parenthesis_box(
   ("So the chip is the line and the pieces inside it are bare writing: the black, the code font and the white all come from the one chip, and the name adds a background of its own and nothing else. That is what keeps the black solid all the way across while still letting the one name be a different colour.");
   ("Then the name that does not come out is given, and the reason is given in the same three pieces, so the pieces are what a learner learns to look for rather than a shape they saw once.");
   ("Still there BUT not written out, rather than still there AND not written out. The two are in tension - a cup that is still standing there is exactly the one a learner expects to hear about - and that tension is the whole of what the line has to say. An and puts them side by side as two things that simply both happen, which is the reading where nothing has been learnt.");
-  let box_care = app_code_container_light_blue(root);
+  let box_care = app_learn_js_container_light_blue(root);
   let log_name = js_console_log_name();
   let paren_left = js_code_parenthesis_left();
   let paren_right = js_code_parenthesis_right();

@@ -1,7 +1,7 @@
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { app_code_div_code_multiple } from "./app_code_div_code_multiple.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_code_lesson_operators_minus_generic_container_both_sides(
   root,
@@ -10,7 +10,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   code_to,
   example_get,
 ) {
-  let c = app_code_container_light_blue(root);
+  let c = app_learn_js_container_light_blue(root);
   let u = text_first_upper_to(
     text_combine(text_before, " on both the left and right sides of the "),
   );

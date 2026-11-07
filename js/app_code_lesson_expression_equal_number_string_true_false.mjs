@@ -3,7 +3,7 @@ import { app_code_lesson_expression_equal_number_string_true_false_number_and_tr
 import { app_code_lesson_expression_equal_number_string_true_false_same_string } from "./app_code_lesson_expression_equal_number_string_true_false_same_string.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false_look_alike } from "./app_code_lesson_expression_equal_number_string_true_false_look_alike.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -51,7 +51,7 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     "what the learner already has, then the new rule with all three of its cases, then the one thing that tells the two sides of a look-alike apart";
     let t = js_keyword_true();
     let f = js_keyword_false();
-    let known = app_code_container_light_blue(root);
+    let known = app_learn_js_container_light_blue(root);
     ("The recall card shows the three groups by example rather than listing them, and it uses the words the track has already spent on them - hello is the first string the learner ever met. Example before rule, and here the examples are also the proof that nothing new is being asked for yet.");
     app_code_div_cycle_code(known, [
       "We have compared numbers, strings, ",
@@ -62,7 +62,7 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     app_code_div_cycle_code(known, ["", "1 === 1", " is ", "true"]);
     app_code_div_cycle_code(known, ["", '"hello" === "hello"', " is ", "true"]);
     app_code_div_cycle_code(known, ["", "true === true", " is ", "true"]);
-    let never = app_code_container_light_blue(root);
+    let never = app_learn_js_container_light_blue(root);
     ("The rule names its subjects rather than saying they - a pronoun here would point at three things that have never been gathered under one word, which is exactly the word this lesson is refusing to introduce.");
     ("Three groups make three pairs, and the rule is stated as TWO sentences rather than one or three. Three - a number is never a string, true is never a number or a string, false is never a number or a string - repeats itself, because true and false answer alike and saying them apart invites the reader to look for the difference. One - none of the three is ever equal to another - is the tightest, and it is the one the reader has to unpack into the three pairs themselves before it says anything about the line in front of them. Two is where the factoring stops paying: it covers all three pairs, neither sentence needs unpacking, and each can stand directly above the example that shows it.");
     app_code_div_cycle_code(never, ["But a number is never equal to a string"]);
@@ -76,7 +76,7 @@ export function app_code_lesson_expression_equal_number_string_true_false() {
     ]);
     app_code_div_cycle_code(never, ["", '"true" === true', " is ", "false"]);
     app_code_div_cycle_code(never, ["", "1 === true", " is ", "false"]);
-    let quotes = app_code_container_light_blue(root);
+    let quotes = app_learn_js_container_light_blue(root);
     ("Quotes, not quote marks - the first string lesson defined a string as text in quotes and every string lesson since has said quotes, so this card adds no word at all. It only points the one already there at the difference the learner is looking straight at.");
     ("The two lines come first and the rule after them, which is the track's order everywhere.");
     ("The closing line says what the quotes DO, and does not say that they are the only difference. Only the quotes are different is a comparison: it hands the reader two lines, asks them to find every way the lines differ, and then asks them to trust that the one they found is the one that matters. That is a second inference on a card whose whole job is a first one. Saying that the quotes are what settles whether the 1 is a string or a number states the fact by itself - the two lines above are then an example of it rather than a puzzle it depends on.");

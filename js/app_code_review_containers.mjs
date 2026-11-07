@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
 export function app_code_review_containers(root) {
@@ -12,7 +12,7 @@ export function app_code_review_containers(root) {
   let g = app_code_container_padded_x(root);
   let progress = html_div(g);
   let success_container = html_div(g);
-  let c = app_code_container_light_blue(g);
+  let c = app_learn_js_container_light_blue(g);
   app_shared_success_message(success_container);
   app_code_review_hide_success(success_container);
   let r = {

@@ -11,7 +11,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_if_program_lines } from "./app_code_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -80,7 +80,7 @@ export function app_code_lesson_if_steps() {
     let brace_right = js_code_brace_right();
     let seed = [4, 3, 5];
     let condition = condition_get(seed, true);
-    let box = app_code_container_light_blue(root);
+    let box = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box, [
       "Each line can work something out, and an ",
       "if",

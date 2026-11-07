@@ -7,7 +7,7 @@ import { not } from "./not.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_not } from "./app_code_lesson_statement_name_not.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_if_not() {
     ("The name goes in an if, worded so since 2026-10-08, as in If less than at the human's word. Not picked: inside ( and ), the first wording, since a ( and a ) also group a value.");
     let name = "a";
     let opposite = text_combine(bang, name);
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -64,7 +64,7 @@ export function app_code_lesson_if_not() {
         "true",
       ],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "We can put ",
       opposite,
@@ -91,7 +91,7 @@ export function app_code_lesson_if_not() {
       brace_right,
       " run",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,

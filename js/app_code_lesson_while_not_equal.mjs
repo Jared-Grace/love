@@ -3,7 +3,7 @@ import { js_operator_bang_double_equal_symbol } from "./js_operator_bang_double_
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { add } from "./add.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_greater_equal } from "./app_code_lesson_while_greater_equal.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -54,7 +54,7 @@ export function app_code_lesson_while_not_equal() {
   }
   function above(root, context, program_lines, said) {
     "While asking >= remembered, then a while asking !==";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -69,7 +69,7 @@ export function app_code_lesson_while_not_equal() {
         " lands exactly on the number.",
       ],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "With ",
       not_equal_symbol,
@@ -85,7 +85,7 @@ export function app_code_lesson_while_not_equal() {
     said(box_two, 3, 7, 5, true);
     said(box_two, 5, 7, 7, true);
     said(box_two, 7, 7, 7, false);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "If ",
       name,

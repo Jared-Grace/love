@@ -6,7 +6,7 @@ import { text_slash_forward } from "./text_slash_forward.mjs";
 import { integer_is } from "./integer_is.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { divide } from "./divide.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_down } from "./app_code_lesson_while_down.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -70,7 +70,7 @@ export function app_code_lesson_while_halve() {
   }
   function above(root, context, program_lines, said) {
     "the last while remembered, taking away the same amount each time; then a while halving n";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -90,7 +90,7 @@ export function app_code_lesson_while_halve() {
     let statement = js_code_console_log_statement(name);
     let down_lines = list_concat_multiple([[code], while_lines, [statement]]);
     app_learn_js_code_lines_writes_out(box_one, down_lines, "1");
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "A ",
       "while",

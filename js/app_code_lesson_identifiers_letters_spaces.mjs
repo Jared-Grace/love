@@ -15,10 +15,10 @@ import { languages_popular } from "./languages_popular.mjs";
 import { list_to_text_or_list } from "./list_to_text_or_list.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 export function app_code_lesson_identifiers_letters_spaces() {
   function lambda(root) {
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let lp = languages_popular();
     let languages = list_to_text_or_list(lp);
     let combined = text_combine_multiple([
@@ -37,23 +37,19 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "JavaScript",
     ]);
     html_div_cycle_bold(c, ["JavaScript is often shortened to ", "JS"]);
-    let c2 = app_code_container_light_blue(root);
+    let c2 = app_learn_js_container_light_blue(root);
     html_div_text(
       c2,
       "We can give names to people, cities, countries, mountains, rivers, etc.",
     );
-    html_div_cycle_bold(c2, [
-      "In JS, ",
-      "identifiers",
-      " are used as names",
-    ]);
-    let c4 = app_code_container_light_blue(root);
+    html_div_cycle_bold(c2, ["In JS, ", "identifiers", " are used as names"]);
+    let c4 = app_learn_js_container_light_blue(root);
     html_div_text_multiple(c4, [
       "In English, letters are inside of words, words are inside of sentences and sentences are inside of paragraphs",
       "In English, letters are a basic building block and in JS, symbols are a basic building block",
       "In English, letters are inside of words and in JS, symbols (like letters) are inside of identifiers",
     ]);
-    let c3 = app_code_container_light_blue(root);
+    let c3 = app_learn_js_container_light_blue(root);
     html_div_text_multiple(c3, [
       "Identifiers can have different kinds of symbols including letters",
       "But identifiers cannot have spaces",

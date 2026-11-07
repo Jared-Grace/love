@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_note_name_mark } from "./app_code_note_name_mark.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_statement_name_copy_code_box(
   let name_first = list_last(cup_first);
   let word_last = list_first(cup_last);
   let name_last = list_last(cup_last);
-  let box_code = app_code_container_light_blue(root);
+  let box_code = app_learn_js_container_light_blue(root);
   let quoted_first = app_code_string_code(word_first);
   let held_first = js_code_let_statement(name_first, quoted_first);
   let quoted_last = app_code_string_code(word_last);

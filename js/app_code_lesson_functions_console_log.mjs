@@ -11,7 +11,7 @@ import { js_code_parenthesis_list } from "./js_code_parenthesis_list.mjs";
 import { js_code_comma } from "./js_code_comma.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_first_code_call } from "./js_operator_first_code_call.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { app_code_div_cycle_code_multiple } from "./app_code_div_cycle_code_multiple.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_functions_console_log() {
     let o_f = js_operator_first_code_call(next_operator);
     let verb = property_get(o_f, "verb");
     let call = property_get(o_f, "call");
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     js_code_call_arg_fn(f_name, next);
     js_operators_arithmetic();
     app_code_div_cycle_code_multiple(c, [

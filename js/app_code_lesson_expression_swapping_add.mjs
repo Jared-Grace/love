@@ -4,7 +4,7 @@ import { app_learn_js_category_expressions } from "./app_learn_js_category_expre
 import { app_code_dot_rectangle } from "./app_code_dot_rectangle.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_swapping_add() {
   "the first swapping lesson: put the SAME two numbers on each side of ===, swapped around the operator - a op b === b op a. Leads with + (the earliest arithmetic anyone learns), then *, both of which keep their value when swapped, each with an everyday reason so the rule is understood, not memorised; then - as the contrast that changes when swapped. Each case shows both sides worked out so the swap is visible, not left implied. The quiz mixes + * (true) with - (false). Answer is the code's own true/false value, correct by construction.";
@@ -28,7 +28,7 @@ export function app_code_lesson_expression_swapping_add() {
   }
   function above(root) {
     "define swap once, then show it for +, * and -: + and * keep the value when swapped (each with an everyday reason), - changes it. Every case shows both sides worked out so the swap is seen, not implied";
-    let setup = app_code_container_light_blue(root);
+    let setup = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(setup, ["Suppose we have ", "3 + 4"]);
     app_code_div_cycle_code(setup, [
       "Then we can swap the ",
@@ -37,7 +37,7 @@ export function app_code_lesson_expression_swapping_add() {
       "4",
     ]);
     app_code_div_cycle_code(setup, ["Now we have ", "4 + 3"]);
-    let plus = app_code_container_light_blue(root);
+    let plus = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(plus, [
       "Adding (",
       "+",
@@ -57,7 +57,7 @@ export function app_code_lesson_expression_swapping_add() {
       " are the same, so we can always swap the numbers around ",
       "+",
     ]);
-    let times = app_code_container_light_blue(root);
+    let times = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(times, [
       "We can represent ",
       "3 * 4",
@@ -92,7 +92,7 @@ export function app_code_lesson_expression_swapping_add() {
       "So we can always swap the numbers around ",
       "*",
     ]);
-    let minus = app_code_container_light_blue(root);
+    let minus = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(minus, [
       "Subtracting (",
       "-",

@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { text_empty } from "./text_empty.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_identifiers_letters_spaces } from "./app_code_lesson_identifiers_letters_spaces.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -22,14 +22,14 @@ export function app_code_lesson_statement_name_value_above(root, context) {
   let word = app_code_lesson_statement_name_value_word();
   let nothing = text_empty();
   ("a reminder rather than a new fact: the identifier lessons already said identifiers are used as names, and this is the first screen where one actually names something. Saying it again here is what joins the two, and it costs nothing to read because a learner has met every word of it.");
-  let box_remember = app_code_container_light_blue(root);
+  let box_remember = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_remember,
     context,
     app_code_lesson_identifiers_letters_spaces,
     ["in JS, identifiers are used as names"],
   );
-  let box_cup = app_code_container_light_blue(root);
+  let box_cup = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_cup, ["Suppose you had a cup"]);
   ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");
   let uncolored = [];
@@ -49,7 +49,7 @@ export function app_code_lesson_statement_name_value_above(root, context) {
   ("the answer is dressed the way a value that comes out is dressed, because that is what it is - the very thing the code at the bottom of the screen writes out, said first in a story where nobody has to read any code to know it");
   app_code_value_line(box_cup, "You could answer: ", word);
   ("the word is bolded here and nowhere else, because this is the one place it is being given a meaning rather than used");
-  let box_word = app_code_container_light_blue(root);
+  let box_word = app_learn_js_container_light_blue(root);
   html_div_cycle_bold(box_word, [
     "In computers, cups like this are called ",
     "variables",

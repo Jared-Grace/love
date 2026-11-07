@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_braces_run_else_if } from "./app_code_lesson_braces_run_else_if.mjs";
 import { app_code_else_if_explain } from "./app_code_else_if_explain.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_else_if() {
   let fruits = fruits_of_the_spirit();
   function above(root, context) {
     "the section-run lesson remembered";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,

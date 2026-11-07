@@ -5,7 +5,7 @@ import { app_code_lesson_statement_name_third } from "./app_code_lesson_statemen
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
@@ -32,7 +32,7 @@ export function app_code_lesson_statement_name_total_above(root, context) {
   let number_last = 3;
   let total = add(number_first, number_last);
   let names_sum = app_code_lesson_statement_names_added();
-  let box_remember = app_code_container_light_blue(root);
+  let box_remember = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_remember,
     context,
@@ -43,7 +43,7 @@ export function app_code_lesson_statement_name_total_above(root, context) {
   let held_first = js_code_let_statement(name_first, number_first);
   let held_last = js_code_let_statement(name_last, number_last);
   html_div_code_lines(box_remember, [held_first, held_last]);
-  let box_named = app_code_container_light_blue(root);
+  let box_named = app_learn_js_container_light_blue(root);
   ("the plus stands in the writing as a code chip, because it is the symbol the lesson turns on rather than a symbol merely mentioned in passing.");
   ("Both lines name the third cup in brackets, drawn as code because that is what it is everywhere else on this screen. A name and that name are the only words a learner would otherwise have, and neither says which of the three cups is meant, so the letter is put where the sentence needs it rather than left to be found by looking back up at the code.");
   app_code_div_cycle_code(box_named, [
@@ -69,7 +69,7 @@ export function app_code_lesson_statement_name_total_above(root, context) {
   ("The reason under the two lines is written as code a learner can already read, not as a claim about the code. A sum standing equal to its value is what the equals lesson of the Operators course taught, so nothing new has to be introduced to justify the swap.");
   let operator = js_operator_triple_equal_symbol();
   let equality = js_code_binary_spaced_nb(names_sum, operator, total);
-  let box_same = app_code_container_light_blue(root);
+  let box_same = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_same, [
     "When we solve ",
     names_sum,

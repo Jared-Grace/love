@@ -25,7 +25,7 @@ import { text_integers } from "./text_integers.mjs";
 import { list_first } from "./list_first.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_code_if_condition_set } from "./app_code_if_condition_set.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_halve_even } from "./app_code_lesson_if_halve_even.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -104,14 +104,14 @@ export function app_code_lesson_if_halve_or_triple() {
   }
   function above(root, context) {
     "halving if even remembered, then the else for odd numbers, with n odd and then even, then where the step leads";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
       app_code_lesson_if_halve_even,
       ["An ", "if", " can halve an even number"],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "An ",
       "else",
@@ -142,7 +142,7 @@ export function app_code_lesson_if_halve_or_triple() {
       " is ",
       "22",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,
@@ -164,7 +164,7 @@ export function app_code_lesson_if_halve_or_triple() {
       name,
       " is halved",
     ]);
-    let box_four = app_code_container_light_blue(root);
+    let box_four = app_learn_js_container_light_blue(root);
     let if_dots = js_code_if_dots(even_check);
     let if_else = if_dots + " " + else_dots;
     app_code_div_cycle_code(box_four, [

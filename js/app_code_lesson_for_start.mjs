@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_for_change } from "./app_code_lesson_for_change.mjs";
 import { js_code_start_above_lines } from "./js_code_start_above_lines.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_for_start() {
   ("The writing is a first draft by Claude 2026-11-04.");
   function above(root, context, example, walk) {
     "For with a change remembered, then the same program with its start moved in";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -27,7 +27,7 @@ export function app_code_lesson_for_start() {
       js_code_for_condition_update_lines,
     );
     example(box_one, lines_one);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "We can move the ",
       "let n = 1",

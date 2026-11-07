@@ -5,7 +5,7 @@ import { html_span_text_bold } from "./html_span_text_bold.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { digits } from "./digits.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
 export function app_code_lesson_symbols_digits_numbered() {
@@ -18,7 +18,7 @@ export function app_code_lesson_symbols_digits_numbered() {
   );
   return r;
   function above(root) {
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let p = html_div(c);
     let ds = digits();
     html_cycle_mono_list_between_comma_space_before_after(

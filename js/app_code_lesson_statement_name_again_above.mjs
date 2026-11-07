@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   let name = app_code_lesson_statement_name_value_name();
   let word_before = app_code_lesson_statement_name_value_word();
   let word_after = app_code_lesson_statement_name_two_word();
-  let box_before = app_code_container_light_blue(root);
+  let box_before = app_learn_js_container_light_blue(root);
   let has = list_join_empty([" has ", word_before, " in it"]);
   app_code_remember_from_lesson(
     box_before,
@@ -36,7 +36,7 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   ("No names are lent to these cups, so their letters come out the dark blue every cup on these screens has always been written in. The colours belong to a lesson whose code box draws the same names in the same colours, and this screen's does not yet.");
   let uncolored = [];
   app_code_lesson_cup_fruit(box_before, word_before, name, uncolored);
-  let box_after = app_code_container_light_blue(root);
+  let box_after = app_learn_js_container_light_blue(root);
   let swap = list_join_empty([
     "Now take the ",
     word_before,
@@ -58,7 +58,7 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   ]);
   app_code_div_cycle_code(box_after, [gone]);
   ("the code box says the no-let part before the second line rather than after it, because a learner reading the line first will read the missing word as a mistake");
-  let box_code = app_code_container_light_blue(root);
+  let box_code = app_learn_js_container_light_blue(root);
   let quoted_before = app_code_string_code(word_before);
   let quoted_after = app_code_string_code(word_after);
   let held = js_code_let_statement(name, quoted_before);
@@ -83,7 +83,7 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   ("The recall comes first, because the sentence under it leans on it. A learner who has to remember what a statement is while reading a rule about statements is doing two things at once, and the first of them is free to give them.");
   ("Then the rule is spent on the very cup in front of them rather than left general. WHAT COMES OUT IS WHATEVER WENT IN LAST is true and says nothing about this screen; naming the cup, and saying out loud that its value was set twice here, is the same rule with the working shown - and this screen is the one place a learner can check it against a picture.");
   let semicolon = js_code_semicolon();
-  let box_care = app_code_container_light_blue(root);
+  let box_care = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_care,
     context,

@@ -7,7 +7,7 @@ import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_times_divide() {
   "mixing * and / in one expression: a * b / c and a / b * c; * and / are the same strength, so it just works from left to right; each triple is built so a = b * c, which keeps BOTH arrangements whole numbers (a * b / c and a / b * c) - no decimals either way";
@@ -32,7 +32,7 @@ export function app_code_lesson_expression_times_divide() {
     return triples;
   }
   function above(root) {
-    let box = app_code_container_light_blue(root);
+    let box = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box, [
       "We can mix ",
       times,
@@ -42,7 +42,7 @@ export function app_code_lesson_expression_times_divide() {
     ]);
     let same_strength = app_code_label_solve_left_to_right();
     app_code_div_cycle_code(box, [same_strength]);
-    let example_box = app_code_container_light_blue(root);
+    let example_box = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(example_box, [
       "For example, for ",
       "6 * 2 / 3",

@@ -10,7 +10,7 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_expression_not_twice() {
     let not_true = js_code_not(true_word);
     let not_false = js_code_not(false_word);
     let twice_true = not_twice_of(true_word);
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(c, [
       "A ",
       symbol,

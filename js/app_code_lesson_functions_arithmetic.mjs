@@ -15,7 +15,7 @@ import { app_code_function_call_wrong_say } from "./app_code_function_call_wrong
 import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code_instead_could_write } from "./app_code_div_cycle_code_instead_could_write.mjs";
 import { equal_0 } from "./equal_0.mjs";
 import { each_index } from "./each_index.mjs";
@@ -119,12 +119,12 @@ export function app_code_lesson_functions_arithmetic() {
       let r = js_operator_to_code_call(o, next);
       let code = property_get(r, "call");
       let expression = property_get(r, "expression");
-      let c2 = app_code_container_light_blue(root);
+      let c2 = app_learn_js_container_light_blue(root);
       app_code_div_cycle_code_instead_could_write(c2, expression, code);
       equal_0(index);
     }
     each_index(operators, lambda);
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let o_f = js_operator_first_code_call(next);
     let call = property_get(o_f, "call");
     let verb = property_get(o_f, "verb");

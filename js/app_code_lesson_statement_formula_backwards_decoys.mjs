@@ -11,7 +11,7 @@ import { list_map } from "./list_map.mjs";
 import { app_code_programs_answers_paired } from "./app_code_programs_answers_paired.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { function_is } from "./function_is.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -92,7 +92,7 @@ export function app_code_lesson_statement_formula_backwards_decoys({
   );
   function above(root, context) {
     "the earlier lesson, whole, and then the writing that leads to this lesson's program, whole";
-    let box_before = app_code_container_light_blue(root);
+    let box_before = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_before,
       context,
@@ -112,11 +112,11 @@ export function app_code_lesson_statement_formula_backwards_decoys({
         output_before,
       );
     }
-    let box_now = app_code_container_light_blue(root);
+    let box_now = app_learn_js_container_light_blue(root);
     for (let parts of explain) {
       ("an entry is either a line of writing, as a list, or a picture, as a function that draws into the box. The drawing is handed the screen's context too, so a sentence in it can hold a button, such as the one to an earlier lesson it leans on; a drawing that has no button ignores it");
       if (equal(parts, app_code_explain_container_next)) {
-        box_now = app_code_container_light_blue(root);
+        box_now = app_learn_js_container_light_blue(root);
       } else if (function_is(parts)) {
         parts(box_now, context);
       } else {

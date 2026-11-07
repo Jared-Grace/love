@@ -13,7 +13,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_functions_console_log_string } from "./app_code_lesson_functions_console_log_string.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -97,7 +97,7 @@ export function app_code_lesson_if_true() {
   function above(root, context) {
     "the line the learner knows, then the same line inside an if, writing out the same word";
     let statement = app_code_word_console_log_statement(shown);
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -105,7 +105,7 @@ export function app_code_lesson_if_true() {
       ["a line can write out a string:"],
     );
     app_learn_js_code_lines_writes_out(box_one, [statement], shown);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     let keyword = js_keyword_if();
     app_code_div_cycle_code(box_two, [
       "We can put ",

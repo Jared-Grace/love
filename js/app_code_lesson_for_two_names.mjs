@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_two_names } from "./app_code_lesson_while_two_names.mjs";
 import { js_code_two_names_while_b_first_lines } from "./js_code_two_names_while_b_first_lines.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_for_two_names() {
   ("The writing is a first draft by Claude 2026-11-06.");
   function above(root, context, example, walk) {
     "Two names in a while remembered, written so the for is that while with two lines moved, then the for, then every run walked through";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -24,7 +24,7 @@ export function app_code_lesson_for_two_names() {
       ["we can write this:"],
     );
     example(box_one, js_code_two_names_while_b_first_lines);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, ["We can write it with a ", "for", ":"]);
     example(box_two, js_code_two_names_for_lines);
     app_code_div_cycle_code(box_two, ["These two loops do the same thing"]);

@@ -11,14 +11,14 @@ import { list_join_space_nb } from "./list_join_space_nb.mjs";
 import { list_slices_size_random } from "./list_slices_size_random.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_symbols_space() {
   function lambda(root) {
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let div = html_div(c);
     let nb = text_space_nb();
     let list = [

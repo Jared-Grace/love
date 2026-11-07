@@ -1,6 +1,6 @@
 import { change_if_equal } from "./change_if_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -22,10 +22,10 @@ export function app_code_lesson_statement_name_shorter_above({
   ("THE SAME PROGRAM TWICE, with one line changed, so the same output under both is the claim that the two lines do the same thing. Said in words alone, a learner would have to take it on trust; drawn, they can check it.");
   ("The short line is never called a new thing, only a shorter way to write one they already know, because that is all it is - and a learner told so has one fact to learn rather than a new kind of line.");
   ("Two lines then say it outright: the two do exactly the same thing, and the short one is shorter and easier to type - the reason anyone would write it - at the human's request, 2026-09-27.");
-  let box_long = app_code_container_light_blue(root);
+  let box_long = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(box_long, context, lesson_from, remembered);
   app_learn_js_code_lines_writes_out_watched(box_long, lines_long);
-  let box_short = app_code_container_light_blue(root);
+  let box_short = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_short, [
     "A shorter way to write ",
     long,

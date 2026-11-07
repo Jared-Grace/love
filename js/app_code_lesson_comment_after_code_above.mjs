@@ -4,7 +4,7 @@ import { js_code_comment_prefix } from "./js_code_comment_prefix.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { property_text_to } from "./property_text_to.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_comment_after_code_above(root, context) {
   let last_line = property_get(lines, "last_line");
   let last_noted = text_combine(prefix, last_line);
   let value = property_text_to(lines, "first_total");
-  let box_lines = app_code_container_light_blue(root);
+  let box_lines = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_lines,
     context,
@@ -38,7 +38,7 @@ export function app_code_lesson_comment_after_code_above(root, context) {
     value,
   );
   let slashes = js_comment_start();
-  let box_after = app_code_container_light_blue(root);
+  let box_after = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_after, [
     "The slashes can also go after code, on the same line:",
   ]);
@@ -50,7 +50,7 @@ export function app_code_lesson_comment_after_code_above(root, context) {
     ") runs",
   ]);
   app_code_div_cycle_code(box_after, ["The rest of that line is skipped"]);
-  let box_note = app_code_container_light_blue(root);
+  let box_note = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_note, [
     "A comment after code is often a note about that code:",
   ]);

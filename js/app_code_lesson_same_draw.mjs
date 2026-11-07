@@ -1,6 +1,6 @@
 import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_same_which } from "./app_code_lesson_same_which.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_same_draw(
   ("NAMING A LESSON AND NOT OPENING IT IS HALF AN ANSWER. The sentence sends the reader somewhere, so the words saying where are the words to press. Told they have read this before and left to find it on the home list, a learner is handed work rather than a way back - and the number in the sentence is the number of the row they would be hunting for, which is exactly the hunt worth removing.");
   ("Which lesson is named is worked out from where the two of them sit rather than typed, so putting a lesson in between changes the sentence instead of falsifying it.");
   ("The lesson it opens is always one this reader can reach. A lesson being repeated sits earlier than the lesson repeating it, and the built site shows a run cut off the tail - so a reader looking at this screen has the other one behind them, and there is no missing case to draw switched off.");
-  let c = app_code_container_light_blue(parent);
+  let c = app_learn_js_container_light_blue(parent);
   let div = html_div(c);
   html_span_text(div, "This lesson is the same as ");
   let which = app_code_lesson_same_which(fn_reading, fn_repeated);

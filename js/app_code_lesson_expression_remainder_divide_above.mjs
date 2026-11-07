@@ -1,12 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_learn_js_arrow } from "./app_learn_js_arrow.mjs";
 export function app_code_lesson_expression_remainder_divide_above(root) {
   arguments_assert(arguments, 1);
-  let setup = app_code_container_light_blue(root);
+  let setup = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(setup, ["For ", "14 / 4", " :"]);
   app_code_div_cycle_code(setup, ["", "14", " is the dividend"]);
   app_code_div_cycle_code(setup, ["", "4", " is the divisor"]);
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_remainder_divide_above(root) {
   app_learn_js_arrow(step);
   html_span_text_code_dark(step, "3 * 4 === 12");
   app_code_div_cycle_code(setup, ["So the whole part is ", "12"]);
-  let properties = app_code_container_light_blue(root);
+  let properties = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(properties, [
     "Notice that ",
     "4",
@@ -62,7 +62,7 @@ export function app_code_lesson_expression_remainder_divide_above(root) {
     "14",
     ")",
   ]);
-  let result = app_code_container_light_blue(root);
+  let result = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(result, [
     "Now we will subtract the whole part (",
     "12",
@@ -74,7 +74,7 @@ export function app_code_lesson_expression_remainder_divide_above(root) {
   app_code_div_cycle_code(result, ["So ", "2", " is the remainder"]);
   app_code_div_cycle_code(result, ["This is the same as ", "14 % 4", " :"]);
   app_code_div_cycle_code(result, ["", "14 % 4 === 2"]);
-  let summary = app_code_container_light_blue(root);
+  let summary = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(summary, ["So for ", "14 % 4"]);
   app_code_div_cycle_code(summary, [
     "We use this formula: ",

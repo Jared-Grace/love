@@ -7,7 +7,7 @@ import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -61,7 +61,7 @@ export function app_code_lesson_expression_in_between() {
   return lesson;
   function above(root) {
     "the goal, then the trap, then the fix: repeat the middle number and join with &&";
-    let goal = app_code_container_light_blue(root);
+    let goal = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(goal, [
       "Is ",
       "5",
@@ -72,7 +72,7 @@ export function app_code_lesson_expression_in_between() {
       " ?",
     ]);
     app_code_lesson_expression_in_between_card_chained(root);
-    let fix = app_code_container_light_blue(root);
+    let fix = app_learn_js_container_light_blue(root);
     ("The fix is given as a break into pieces rather than as repeat the middle number, because repeating a number is what the writing looks like, not what it means. Two pieces that must both hold is the meaning, and it is also what && was taught to do, so the && arrives as the thing the reader already has rather than as a trick. The last line then hands back the shorthand, once it stands for something.");
     app_code_div_cycle_code(fix, [
       "For JS, instead of a single ",

@@ -6,7 +6,7 @@ import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
 import { js_code_else_one_line } from "./js_code_else_one_line.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_else_if } from "./app_code_lesson_else_if.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -31,14 +31,14 @@ export function app_code_else_if_else_explain(root, context) {
   let else_if_b = js_code_else_if_dots("b");
   let else_with_if = js_code_else_one_line(if_b);
   let else_dots = js_code_else_dots();
-  let box_one = app_code_container_light_blue(root);
+  let box_one = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(box_one, context, app_code_lesson_else_if, [
     "",
     else_with_if,
     " can be written shorter as ",
     else_if_b,
   ]);
-  let box_two = app_code_container_light_blue(root);
+  let box_two = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_two, [
     "An ",
     else_if_b,
@@ -62,7 +62,7 @@ export function app_code_else_if_else_explain(root, context) {
     else_dots,
     " run",
   ]);
-  let box_three = app_code_container_light_blue(root);
+  let box_three = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_three, [
     "But suppose ",
     "b",
@@ -86,7 +86,7 @@ export function app_code_else_if_else_explain(root, context) {
     else_dots,
     " is not reached",
   ]);
-  let box_four = app_code_container_light_blue(root);
+  let box_four = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_four, ["And suppose ", "a", " is ", "true", ":"]);
   let love_lines = app_code_else_if_else_program_lines([true, true], words);
   let love_written = list_join_newline([love, patience]);

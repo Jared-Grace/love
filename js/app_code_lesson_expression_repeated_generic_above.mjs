@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_repeated_generic_above(
   expand_symbol,
 ) {
   arguments_assert(arguments, 4);
-  let c = app_code_container_light_blue(root);
+  let c = app_learn_js_container_light_blue(root);
   let short_separator = text_combine_multiple([" ", symbol, " "]);
   ("two worked examples, each a left number and a count - four colored numbers in all - given four distinct familiar colours (red, green, blue, amber) so every number is easy to tell apart and no number wears a colour here and another colour there");
   let left_one = app_code_lesson_chip_color(0);

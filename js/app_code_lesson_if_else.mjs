@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_if_else() {
   let fruits = fruits_of_the_spirit();
   function above(root, context) {
     "the section-run lesson remembered: exactly one of if and else runs";
-    let box = app_code_container_light_blue(root);
+    let box = app_learn_js_container_light_blue(root);
     let code2 = js_code_else_dots();
     let code3 = js_code_if_dots("a");
     app_code_remember_from_lesson(

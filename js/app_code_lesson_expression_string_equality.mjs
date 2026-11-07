@@ -16,7 +16,7 @@ import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { ternary } from "./ternary.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 export function app_code_lesson_expression_string_equality() {
   "comparing two strings for equality - the same triple-equals and not-equals the learner already knows on numbers, now on strings: it is true when the two strings are exactly the same text. Half the questions use triple-equals (true when the words match) and half not-equals (true when they differ), over words from the shared verse. Placed just after the numeric equal-to / not-equal-to lessons and the string lessons.";
   let equal_operator = "===";
@@ -88,7 +88,7 @@ export function app_code_lesson_expression_string_equality() {
     "first a recall box anchoring on the === the learner already knows on numbers, then reveal it also compares strings; then two rule boxes, each its own light-blue container - === and !== - and within each box the true case and the false case are stated on their own line, condition first (When ... then ... is true/false), the first letter of each paragraph capitalised. No worked examples here: the four refreshable examples below demonstrate all four cases.";
     let true_text = js_keyword_true();
     let false_text = js_keyword_false();
-    let recall = app_code_container_light_blue(root);
+    let recall = app_learn_js_container_light_blue(root);
     app_code_prose_code_line(recall, [
       ["text", "You've seen that "],
       ["code", "==="],
@@ -98,7 +98,7 @@ export function app_code_lesson_expression_string_equality() {
       ["code", "==="],
       ["text", " also compares two strings"],
     ]);
-    let equals_box = app_code_container_light_blue(root);
+    let equals_box = app_learn_js_container_light_blue(root);
     app_code_prose_rule_line(
       equals_box,
       "both strings are exactly the same",
@@ -111,7 +111,7 @@ export function app_code_lesson_expression_string_equality() {
       "===",
       false_text,
     );
-    let not_box = app_code_container_light_blue(root);
+    let not_box = app_learn_js_container_light_blue(root);
     app_code_prose_code_line(not_box, [
       ["code", "!=="],
       ["text", " is the opposite"],

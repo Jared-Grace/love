@@ -6,7 +6,7 @@ import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_plus_minus() {
   "mixing + and - in one expression: console.log(a + b - c) and console.log(a - b + c); + and - are the same strength, so it just works from left to right; the first number is 5..9 and the others 2..4 so the answer never drops below 0";
@@ -30,7 +30,7 @@ export function app_code_lesson_expression_plus_minus() {
     return triples;
   }
   function above(root) {
-    let box = app_code_container_light_blue(root);
+    let box = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box, [
       "We can mix ",
       plus,
@@ -40,7 +40,7 @@ export function app_code_lesson_expression_plus_minus() {
     ]);
     let same_strength = app_code_label_solve_left_to_right();
     app_code_div_cycle_code(box, [same_strength]);
-    let example_box = app_code_container_light_blue(root);
+    let example_box = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(example_box, [
       "For example, for ",
       "5 + 2 - 3",

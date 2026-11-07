@@ -4,7 +4,7 @@ import { list_get } from "./list_get.mjs";
 import { app_code_word_console_log_statement } from "./app_code_word_console_log_statement.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -27,14 +27,14 @@ export function app_code_if_in_else_explain(root, context) {
   let if_a = js_code_if_dots("a");
   let if_b = js_code_if_dots("b");
   let else_dots = js_code_else_dots();
-  let box_one = app_code_container_light_blue(root);
+  let box_one = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(box_one, context, app_code_lesson_if_nested, [
     "An ",
     "if",
     " can go inside an ",
     "if",
   ]);
-  let box_two = app_code_container_light_blue(root);
+  let box_two = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_two, [
     "An ",
     "if",
@@ -65,7 +65,7 @@ export function app_code_if_in_else_explain(root, context) {
     if_b,
     " runs",
   ]);
-  let box_three = app_code_container_light_blue(root);
+  let box_three = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_three, [
     "But suppose ",
     "b",
@@ -87,7 +87,7 @@ export function app_code_if_in_else_explain(root, context) {
     if_b,
     " does not run",
   ]);
-  let box_four = app_code_container_light_blue(root);
+  let box_four = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_four, ["And suppose ", "a", " is ", "true", ":"]);
   let love_lines = app_code_if_in_else_program_lines([true, true], words);
   let love_written = list_join_newline([love, patience]);

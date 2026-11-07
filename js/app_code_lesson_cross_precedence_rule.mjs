@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_label_solve_left_to_right } from "./app_code_label_solve_left_to_right.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_cross_precedence_rule(
@@ -13,7 +13,7 @@ export function app_code_lesson_cross_precedence_rule(
   "EVERY LINE SAYS SOLVE. Do was the word before, and it is broader than the act being taught - solve is what the learner already calls this from school arithmetic, so the four lines name one act four times rather than naming it and then naming something vaguer.";
   "THE LAST LINE SEPARATES WRITTEN FROM SOLVED. It used to say comes first ... comes later ... do first, spending first on where an operator stands and on when it is solved. Position is now written and solving order is first, so the one line that exists to prise those two apart no longer uses one word for both.";
   arguments_assert(arguments, 3);
-  let header = app_code_container_light_blue(root);
+  let header = app_learn_js_container_light_blue(root);
   let same_strength = app_code_label_solve_left_to_right();
   app_code_div_cycle_code(header, [same_strength]);
   app_code_div_cycle_code(header, [

@@ -4,7 +4,7 @@ import { text_decimal_combine } from "./text_decimal_combine.mjs";
 import { list_get } from "./list_get.mjs";
 import { add } from "./add.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -36,9 +36,9 @@ export function app_code_lesson_expression_round_generic_above_term({
     chosen_whole = whole_up;
     other_whole = whole_text;
   }
-  let metaphor = app_code_container_light_blue(root);
+  let metaphor = app_learn_js_container_light_blue(root);
   metaphor_render(metaphor);
-  let define = app_code_container_light_blue(root);
+  let define = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(define, ["", decimal, " is a decimal number"]);
   let no_decimal = html_div(define);
   html_span_text_code_dark(no_decimal, whole_text);

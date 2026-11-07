@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_min_max_generic_two_numbers } from "./app_code_lesson_expression_min_max_generic_two_numbers.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_to } from "./text_to.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_expression_min_max_generic_code } from "./app_code_lesson_expression_min_max_generic_code.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_expression_min_max_generic_above({
   let other = decoy_choose(a, b);
   let chosen_text = text_to(chosen);
   let other_text = text_to(other);
-  let example_box = app_code_container_light_blue(root);
+  let example_box = app_learn_js_container_light_blue(root);
   let compare_middle = text_combine_multiple([" is ", comparison, " "]);
   app_code_div_cycle_code(example_box, [
     "",
@@ -57,7 +57,7 @@ export function app_code_lesson_expression_min_max_generic_above({
   let short_term = html_span_text(chooses_line, short_name);
   html_bold(short_term);
   html_span_text(chooses_line, "imum)");
-  let equal_box = app_code_container_light_blue(root);
+  let equal_box = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(equal_box, [
     "If both numbers are equal, then there's only one number to choose from, so ",
     called_name,

@@ -3,7 +3,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_statement_name_two_above(root, context) {
   let name_last = app_code_lesson_statement_name_two_name();
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
-  let box_two = app_code_container_light_blue(root);
+  let box_two = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_two, ["You can have more than one cup"]);
   ("TWO CUPS, and a colon before the two names. Two on its own leaves the noun to be carried down from the line above it, and the two names that follow then arrive as a list of something the sentence never said; the colon is what marks them as that list rather than as more of the same sentence.");
   app_code_div_cycle_code(box_two, [
@@ -43,7 +43,7 @@ export function app_code_lesson_statement_name_two_above(root, context) {
     uncolored,
   );
   ("asked one at a time, and answered one at a time, because the name is what picks which of the two is being talked about and that is the only new thing on this screen");
-  let box_ask = app_code_container_light_blue(root);
+  let box_ask = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_ask, [
     "If someone asked what is inside the cup called ",
     name_first,
@@ -61,7 +61,7 @@ export function app_code_lesson_statement_name_two_above(root, context) {
   let held_first = js_code_let_statement(name_first, quoted_first);
   let held_last = js_code_let_statement(name_last, quoted_last);
   let logged = js_code_console_log_statement(name_last);
-  let box_code = app_code_container_light_blue(root);
+  let box_code = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_code, ["In JS we make both cups like this:"]);
   ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   html_div_code_lines(box_code, [held_first, held_last]);

@@ -6,7 +6,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { or } from "./or.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 export function app_code_lesson_expression_or() {
@@ -24,7 +24,7 @@ export function app_code_lesson_expression_or() {
   let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol);
   return lesson_symbol;
   function above(root) {
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let t = js_keyword_true();
     let t2 = js_keyword_true();
     let t3 = js_keyword_true();

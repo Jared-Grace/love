@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { list_to_or_list_generic } from "./list_to_or_list_generic.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_legend_part } from "./app_code_lesson_console_log_remainder_generic_above_legend_part.mjs";
 import { each_index } from "./each_index.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_console_log_remainder_generic_above_row_count(
     return r2;
   }
   each_index(or_parts, legend_part);
-  let table = app_code_container_light_blue(root);
+  let table = app_learn_js_container_light_blue(root);
   html_style_gap(table, "0");
   html_style_padding_x(table, "0");
   html_style_padding_y(table, "0");

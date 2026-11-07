@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_is } from "./object_is.mjs";
 import { app_code_program_step_clicks } from "./app_code_program_step_clicks.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { less_than } from "./less_than.mjs";
@@ -34,7 +34,7 @@ export function app_code_program_step_correction(container, qa) {
   let done = stepped ? property_get(answer, "done") : 0;
   let look_here = stepped ? property_get(answer, "look_here") : null;
   let clicks = app_code_program_step_clicks(code);
-  let box = app_code_container_light_blue(container);
+  let box = app_learn_js_container_light_blue(container);
   html_text_align_left(box);
   let radius = app_shared_border_radius();
   function ignore() {}

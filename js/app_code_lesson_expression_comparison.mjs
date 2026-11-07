@@ -3,7 +3,7 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { app_learn_js_binary_next_arg } from "./app_learn_js_binary_next_arg.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { each } from "./each.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -44,7 +44,7 @@ export function app_code_lesson_expression_comparison(params) {
     function render_section(lines) {
       let present = null_not_is(lines);
       if (present) {
-        let container = app_code_container_light_blue(root);
+        let container = app_learn_js_container_light_blue(root);
         function render_line(line) {
           app_code_div_cycle_code(container, line);
         }
@@ -52,7 +52,7 @@ export function app_code_lesson_expression_comparison(params) {
       }
     }
     render_section(preamble);
-    let question_container = app_code_container_light_blue(root);
+    let question_container = app_learn_js_container_light_blue(root);
     let tail = text_combine_multiple([
       " asks a question: is the left number ",
       question_middle,

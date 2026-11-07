@@ -6,7 +6,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_recall(
   root,
@@ -20,7 +20,7 @@ export function app_code_lesson_expression_choose_order_parentheses_recall(
   let or_symbol = js_operator_or_symbol();
   let left_parenthesis = js_code_parenthesis_left();
   let right_parenthesis = js_code_parenthesis_right();
-  let recall_card = app_code_container_light_blue(root);
+  let recall_card = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     recall_card,
     context,

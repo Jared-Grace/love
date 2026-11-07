@@ -1,7 +1,7 @@
 import { app_code_lesson_operand_generic_quizzes_get } from "./app_code_lesson_operand_generic_quizzes_get.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_operand_generic(params) {
   let example_answer_label = text_combine_multiple(["The ", role, " is: "]);
   function above(root, context) {
     "define the role with the term bolded, then a RANDOM worked example from the same generator as the quiz, then the ask";
-    let intro = app_code_container_light_blue(root);
+    let intro = app_learn_js_container_light_blue(root);
     app_code_lesson_bold_term(intro, define_prose, role);
     let list = batch_get();
     let sample = list_first(list);
@@ -40,7 +40,7 @@ export function app_code_lesson_operand_generic(params) {
       ("an optional extra block after the definition (the quotient lesson uses it to remind all three roles, since its question shows the dividend, divisor and quotient at once)");
       above_more(root, context);
     }
-    let ask = app_code_container_light_blue(root);
+    let ask = app_learn_js_container_light_blue(root);
     let combined = text_combine_multiple([
       "In this lesson you will choose the ",
       role,

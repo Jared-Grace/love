@@ -13,7 +13,7 @@ import { list_add } from "./list_add.mjs";
 import { subtract } from "./subtract.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while_repeat_word } from "./app_code_lesson_while_repeat_word.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -57,14 +57,14 @@ export function app_code_lesson_while_repeat_word_down() {
     "The same word each run remembered, then the same word with n counting down";
     let fruits = fruits_of_the_spirit();
     let joy = list_get(fruits, 1);
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
       app_code_lesson_while_repeat_word,
       ["A ", "while", " can write out the same word each run."],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "",
       name,

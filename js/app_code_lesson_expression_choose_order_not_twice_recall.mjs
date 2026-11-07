@@ -2,7 +2,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_choose_order_not_twice_recall(
   "It stands in a card of its own above the run because it is not part of it - it is what the run is about to be read with. Every press on this lesson is that one fact used twice, so it is the whole of what a learner needs in hand before the run starts.";
   arguments_assert(arguments, 2);
   let symbol = js_operator_bang_symbol();
-  let recall_card = app_code_container_light_blue(root);
+  let recall_card = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     recall_card,
     context,

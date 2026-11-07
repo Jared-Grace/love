@@ -1,6 +1,6 @@
 import { app_code_string_value_of_is_say } from "./app_code_string_value_of_is_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
@@ -11,7 +11,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_string_hello_define(root, word) {
   arguments_assert(arguments, 2);
   ("the second box: says what the value of a string is, then shows it on the same word the box above used - quoted on one side, bare on the other, with the value coloured both times so the eye follows what changed. The one thing to take away is written underneath: the quotes are how it is written, not part of what it is.");
-  let define = app_code_container_light_blue(root);
+  let define = app_learn_js_container_light_blue(root);
   let concept = html_div(define);
   html_span_text(concept, "The ");
   let value_term = html_span_text(concept, "value of a string");

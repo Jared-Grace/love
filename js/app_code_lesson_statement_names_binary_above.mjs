@@ -10,7 +10,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { json_to } from "./json_to.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_statement_names_binary_above({
   if (text_is(value)) {
     written = value;
   }
-  let box_remember = app_code_container_light_blue(root);
+  let box_remember = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_remember,
     context,
@@ -70,7 +70,7 @@ export function app_code_lesson_statement_names_binary_above({
     remember_parts,
   );
   app_learn_js_code_lines_writes_out(box_remember, [logged_numbers], written);
-  let box_names = app_code_container_light_blue(root);
+  let box_names = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_names, [
     "Suppose we give names (",
     name_first,

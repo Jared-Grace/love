@@ -13,7 +13,7 @@ import { app_code_operators_arithmetic } from "./app_code_operators_arithmetic.m
 import { app_code_div_code } from "./app_code_div_code.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_operator_dot_name } from "./js_operator_dot_name.mjs";
 import { js_operator_dot } from "./js_operator_dot.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_operators_dot_numbers() {
   let batch = app_code_lesson_operators_dot_batch_numbers(operator);
   function above(root) {
     let operator_name_math_articled = text_articled_pad_space(operator_name);
-    let c4 = app_code_container_light_blue(root);
+    let c4 = app_learn_js_container_light_blue(root);
     let combined = text_combine_multiple([
       "In JS, ",
       operator_name_math_articled,
@@ -41,14 +41,14 @@ export function app_code_lesson_operators_dot_numbers() {
     ]);
     let first3 = number_pi_truncated_text();
     app_code_div_code(c4, first3);
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let d = app_code_div_cycle_code(c, [
       "Besides decimal points, ",
       operator,
       " is a symbol that can be used like: ",
     ]);
     app_code_operators_arithmetic(d);
-    let c2 = app_code_container_light_blue(root);
+    let c2 = app_learn_js_container_light_blue(root);
     let d2 = html_div_text(c2, "We can use ");
     app_code_operators_arithmetic(d2);
     html_span_text(d2, " with numbers");
@@ -67,7 +67,7 @@ export function app_code_lesson_operators_dot_numbers() {
       js_code_binary,
       example_get,
     );
-    let c3 = app_code_container_light_blue(root);
+    let c3 = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(c3, [
       "However, we cannot directly use ",
       operator,

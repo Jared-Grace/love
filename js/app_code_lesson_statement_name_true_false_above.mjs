@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_box } from "./app_code_lesson_statement_name_value_box.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_statement_name_true_false_above(root, context) {
   arguments_assert(arguments, 2);
@@ -12,7 +12,7 @@ export function app_code_lesson_statement_name_true_false_above(root, context) {
   app_code_lesson_statement_name_value_box(root, context);
   let t = js_keyword_true();
   let f = js_keyword_false();
-  let box_true = app_code_container_light_blue(root);
+  let box_true = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_true, [
     "A variable can also hold ",
     t,

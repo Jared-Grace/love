@@ -5,7 +5,7 @@ import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_state
 import { add } from "./add.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   let total = add(number_first, number_last);
   let names_sum = app_code_lesson_statement_names_added();
   let name_third = app_code_lesson_statement_name_third();
-  let box_total = app_code_container_light_blue(root);
+  let box_total = app_learn_js_container_light_blue(root);
   ("Every reminder names its cups in brackets as well, not just the box the lesson turns on. A reminder is read fastest of all - a learner is checking that they already know it rather than working it out - and a sentence made only of the words a name and two names makes them look down at the code to find out which cups it is talking about, which is slower than reading the letters in place.");
   ("A reminder ends by naming the line it is about, whole and with its semicolon, because that line is drawn a few rows below it and again further down the screen. Described in words alone, a learner has to read the sentence, look down at the program and work out which of its lines the sentence was pointing at - and this screen is about one line turning into another, so which line is the whole question.");
   let code_total = js_code_let_statement(name_third, names_sum);
@@ -57,7 +57,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   let logged_third = js_code_console_log_statement(name_third);
   let lines_total = [held_first, held_last, code_total, logged_third];
   app_learn_js_code_lines_writes_out(box_total, lines_total, total);
-  let box_again = app_code_container_light_blue(root);
+  let box_again = app_learn_js_container_light_blue(root);
   ("the line itself stands where the new value alone used to, because the line holds that value and says what is done with it. The number on its own named half of what the reminder is about and left the other half - the name being filled rather than made - to be found by looking down at the program.");
   let given_again = js_code_assign_statement(name_first, number_new);
   app_code_remember_from_lesson(
@@ -77,7 +77,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
     number_first,
     ") is gone",
   ]);
-  let box_itself = app_code_container_light_blue(root);
+  let box_itself = app_learn_js_container_light_blue(root);
   ("the earlier line is set above the changed one so the change can be seen rather than described, which is the shape the screen before this one ended on and so the shape a learner read a moment ago.");
   ("Neither line is said to be the other. They do different things - one makes a name and one fills a name that is already there - and the whole misreading this screen guards against is a learner taking the sum to be tied to the name for good, so the two lines are never put forward as swaps for each other. The word instead appears twice below and neither time stands between those two lines. Once it stands between two names, a new one and one we already have, which really are alternatives and the sentence is choosing between them. Once it stands between the sum and the value the sum comes to, which really are swaps, and the line above it says so.");
   ("Which lesson that line came from is asked of the lesson order here too, rather than written into the sentence, so this box points the same way the two boxes above it do. In the lesson before said it in words a learner could not press, and it stops being true the moment a lesson is put in between the two - while the number is worked out from where the lessons actually stand and so cannot come to name the wrong one.");
@@ -119,7 +119,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   ("The lesson before this one says at length why a sum may be swapped for its value, with the two lines set side by side and the reason underneath. Here it is three short ones and no side-by-side pair, because a learner has just read that and this screen is about a different thing - that the name being filled may be one the sum was read from.");
   ("Three short lines rather than one long one, because they are three steps and a learner is being walked down them: the sum has a value, so the sum did not have to be written, so the value could have been written in its place. Said in one line the middle step is missing and the last line arrives as a claim; said in three, each line is the reason for the one under it.");
   ("A box makes one point, and this is a second one. The box above says which name the sum may be given to; this one says that the sum could have been a plain number all along. A learner who only wants the first point can stop at the end of the box above it, which they cannot do when the two run on inside one box.");
-  let box_value = app_code_container_light_blue(root);
+  let box_value = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box_value, ["", names_sum, " solves to ", total]);
   ("both sentences name a whole line rather than the half of it that changes, and the line they are about is drawn once, underneath, inside the program it belongs to. Named as a sum and a number, the two sentences were about the right-hand sides and a learner had to work out for themselves that the rest of the line stayed as it was.");
   let given_total = js_code_assign_statement(name_first, total);

@@ -5,7 +5,7 @@ import { js_code_if_lines } from "./js_code_if_lines.mjs";
 import { app_code_for_if_skipped_parts } from "./app_code_for_if_skipped_parts.mjs";
 import { add } from "./add.mjs";
 import { json_to } from "./json_to.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_for_total } from "./app_code_lesson_for_total.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -61,7 +61,7 @@ export function app_code_lesson_for_total_if() {
   }
   function above(root, context, example, walk) {
     "For with a running total remembered, then the total inside an if";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_for_total, [
       "",
       added,
@@ -73,7 +73,7 @@ export function app_code_lesson_for_total_if() {
       total_name,
       ".",
     ]);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "Put it inside an ",
       "if",

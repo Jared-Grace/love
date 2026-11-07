@@ -10,7 +10,7 @@ import { app_learn_js_batch_on_refill } from "./app_learn_js_batch_on_refill.mjs
 import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_batch_item_get } from "./app_learn_js_batch_item_get.mjs";
 import { list_single } from "./list_single.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_example_answer_gap } from "./app_code_example_answer_gap.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { property_get } from "./property_get.mjs";
@@ -64,7 +64,7 @@ export function app_code_quiz(context) {
   );
   function on_batch_item(container, bs, refresh_given, next_get) {
     let b = list_single(bs);
-    let c = app_code_container_light_blue(container);
+    let c = app_learn_js_container_light_blue(container);
     app_code_example_answer_gap(c);
     html_div_text(c, "Please answer the following quiz question:");
     let qs = property_get(b, "quizzes");

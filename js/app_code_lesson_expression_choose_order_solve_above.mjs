@@ -1,6 +1,6 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_lesson_expression_choose_order_solve_intro } from "./app_code_lesson_expression_choose_order_solve_intro.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_expression_choose_order_solve_above(
   ("Every number in the telling comes from that one line - the two operators in the order they go, the piece that goes first, what that piece comes to, and what the whole line comes to. One line worked through is a run a learner can follow from top to bottom; numbers borrowed from nowhere in particular are four separate things to take on trust.");
   ("The times is on the right of it, for the reason the first question of the bank puts it there: the operator to choose is not the leftmost one, so a learner reading the run learns to read the operator rather than the position.");
   ("The steps are told in the past tense and of the learner - you chose, you saw, you replaced - because they are not being taught here. They happened, on the screen before this one, and what they are doing in this lesson is holding the place the change goes into.");
-  let definition_card = app_code_container_light_blue(root);
+  let definition_card = app_learn_js_container_light_blue(root);
   app_code_operators_say(definition_card);
   let strong_right = true;
   let tree = app_code_lesson_expression_choose_order_expression(strong_right);
@@ -43,9 +43,9 @@ export function app_code_lesson_expression_choose_order_solve_above(
   let final_value = app_code_expression_value(tree);
   let final_text = text_to(final_value);
   ("The line itself gets a card to itself, and so does the one sentence at the end saying what changes. Between them stands the run: four steps, each one a thing that happened, and the card around them is what says they are one run rather than four remarks. The line is not a step of the run - it is what the run was done to - and the sentence at the end is not a step either, it is what the next screen does instead.");
-  let line_card = app_code_container_light_blue(root);
+  let line_card = app_learn_js_container_light_blue(root);
   app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
-  let recap = app_code_container_light_blue(root);
+  let recap = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(recap, [
     "Before, you chose each operator in order (",
     first_symbol,
@@ -75,6 +75,6 @@ export function app_code_lesson_expression_choose_order_solve_above(
   ]);
   ("The one sentence that says what changes stands in a card of its own. It used to stand at the foot of the run with a rule drawn above it, and a rule inside a card is a second boundary doing what the edge of a card already does - so the run ended, then ended again, and the gap the rule needed either side of it left the sentence adrift at the bottom of a box it was not part of. The edge of its own card says the same thing in no space at all.");
   ("It is said here rather than on the card below because it only means anything beside the run it changes. On that card it stood alone, a screen away from the four steps it names, and a learner reading it there had to carry the run back down to it from above.");
-  let change_card = app_code_container_light_blue(root);
+  let change_card = app_learn_js_container_light_blue(root);
   app_code_lesson_expression_choose_order_solve_intro(change_card);
 }

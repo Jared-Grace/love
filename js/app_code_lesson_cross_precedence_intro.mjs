@@ -1,5 +1,5 @@
 import { app_code_lesson_cross_precedence_rule } from "./app_code_lesson_cross_precedence_rule.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_cross_precedence_intro(params) {
   app_code_lesson_cross_precedence_rule(root, weak_symbol, strong_symbol);
   function example_say(expression, sub, inner, combined, final) {
     "one example said in two lines: the whole expression and the strong sub-expression taken out of it with its value, then what is left of the line and what that comes to";
-    let box = app_code_container_light_blue(root);
+    let box = app_learn_js_container_light_blue(root);
     let t3 = text_to(inner);
     app_code_div_cycle_code(box, [
       "For ",

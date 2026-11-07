@@ -2,7 +2,7 @@ import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { js_code_if_dots } from "./js_code_if_dots.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_braces_run_nested } from "./app_code_lesson_braces_run_nested.mjs";
 import { app_code_if_nested_explain } from "./app_code_if_nested_explain.mjs";
@@ -26,7 +26,7 @@ export function app_code_lesson_if_nested() {
   function above(root, context) {
     "the section-run lesson remembered, then a && b";
     let if_b = js_code_if_dots("b");
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -41,7 +41,7 @@ export function app_code_lesson_if_nested() {
     );
     ("2026-10-12, at the human's asking: what the code writes out is explained back here, where it is first asked, the lesson before now walking through which sections run");
     app_code_if_nested_explain(root, context);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "So the lines inside ",
       if_b,

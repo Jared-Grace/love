@@ -19,7 +19,7 @@ import { json_to } from "./json_to.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_plus_assign } from "./app_code_lesson_statement_name_plus_assign.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -129,7 +129,7 @@ export function app_code_lesson_if_change() {
   }
   function above(root, context) {
     "+= remembered, then the same line inside an if that runs, then inside one that does not";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -144,7 +144,7 @@ export function app_code_lesson_if_change() {
       [code5, change2, statement2],
       "7",
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "We can put ",
       change2,
@@ -169,7 +169,7 @@ export function app_code_lesson_if_change() {
       " becomes ",
       "7",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,

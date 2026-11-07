@@ -16,7 +16,7 @@ import { list_set } from "./list_set.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { js_code_else_if_dots } from "./js_code_else_if_dots.mjs";
 import { js_code_else_dots } from "./js_code_else_dots.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_braces_run_else_if_twice } from "./app_code_lesson_braces_run_else_if_twice.mjs";
 import { app_code_lesson_else_if_else } from "./app_code_lesson_else_if_else.mjs";
@@ -97,7 +97,7 @@ export function app_code_lesson_else_if_twice() {
     let else_if_c = js_code_else_if_dots("c");
     let else_dots = js_code_else_dots();
     ("2026-10-14, at the human's asking: the section-run lesson straight before is remembered first, as Else if and else remembers its own, and this lesson's explanation stays here, where what the code writes out is first asked");
-    let box_run = app_code_container_light_blue(root);
+    let box_run = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_run,
       context,
@@ -110,14 +110,14 @@ export function app_code_lesson_else_if_twice() {
         " runs, the rest are not reached",
       ],
     );
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
       app_code_lesson_else_if_else,
       ["an ", else_if_b, " can have an ", "else", " after it"],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "An ",
       else_if_b,
@@ -150,7 +150,7 @@ export function app_code_lesson_else_if_twice() {
       say_peace,
       " runs",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "But suppose ",
       "b",
@@ -180,7 +180,7 @@ export function app_code_lesson_else_if_twice() {
       " is ",
       "true",
     ]);
-    let box_four = app_code_container_light_blue(root);
+    let box_four = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_four, [
       "And suppose ",
       "a",

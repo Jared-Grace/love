@@ -1,4 +1,4 @@
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_learn_js_code_output_explain_box(root) {
@@ -8,7 +8,7 @@ export function app_learn_js_code_output_explain_box(root) {
   ("It is said after the card rather than before it, so there is nothing to hold. A learner has just seen the thing being named, and the words land on something already in front of them rather than on something promised.");
   ("Said once and never again. From the next screen on a learner has been told, and every screen after that would be spending a box on a thing they know - which is the cost the app pays everywhere else by writing Remember once and trusting it.");
   ("Not the example is said outright rather than left to be worked out from the example coming later. The whole of the confusion is a reader guessing, so a line that only implies the answer leaves the guess where it was.");
-  let box = app_code_container_light_blue(root);
+  let box = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(box, [
     "The box above shows code and what it writes out",
   ]);

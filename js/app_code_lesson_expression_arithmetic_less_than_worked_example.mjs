@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ternary } from "./ternary.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_arithmetic_less_than_worked_example({
   other,
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_arithmetic_less_than_worked_example({
   let final_left = ternary(other_on_left, other, a_value);
   let final_right = ternary(other_on_left, a_value, other);
   let final = less_than_fn(final_left, final_right);
-  let box = app_code_container_light_blue(root);
+  let box = app_learn_js_container_light_blue(root);
   let t5 = text_to(a_value);
   let full_expression = text_combine_multiple([
     full_left,

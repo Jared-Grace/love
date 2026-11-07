@@ -5,7 +5,7 @@ import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_braces_two_batch } from "./app_learn_js_braces_two_batch.mjs";
 import { app_learn_js_braces_sequence } from "./app_learn_js_braces_sequence.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_token_order } from "./app_code_lesson_token_order.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -28,14 +28,14 @@ export function app_code_lesson_token_order_braces() {
   );
   function above(root, context) {
     "the order of the tokens remembered, then the braces as the tokens that are { or }, written down in the order they are read";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
       app_code_lesson_token_order,
       ["we read the tokens of code left to right, then top to bottom."],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "The braces of code are its ",
       left,

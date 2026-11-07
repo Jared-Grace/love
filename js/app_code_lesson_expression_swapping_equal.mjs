@@ -7,7 +7,7 @@ import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_swapping_equal() {
   "the fourth swapping lesson: === and !== DO swap, because asking are-they-the-same (or are-they-different) reads the same either way. Both sides are already comparisons, so each is wrapped in ( ) - (a === b) === (b === a) - since a === b === b === a would otherwise chain left to right. The ordering comparisons < > <= >= are recalled as the ones that flip, so the quiz mixes === !== (true) with < > <= >= (false), all wrapped. Answer is the code's own true/false value, correct by construction.";
@@ -31,7 +31,7 @@ export function app_code_lesson_expression_swapping_equal() {
   }
   function above(root, context) {
     "show that === and !== swap (asking either way gives the same answer), that < > <= >= still flip, and that when both sides are comparisons each is wrapped in ( and ). the wrapping is taught in two steps: first one wrapped comparison against a plain false - (3 === 5) === false - which is the single new idea that a comparison stands where a true/false stood; only then both sides wrapped";
-    let intro = app_code_container_light_blue(root);
+    let intro = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       intro,
       context,
@@ -44,7 +44,7 @@ export function app_code_lesson_expression_swapping_equal() {
       app_code_lesson_expression_not_equal,
       ["", "!==", " asks: are the two numbers different?"],
     );
-    let same = app_code_container_light_blue(root);
+    let same = app_learn_js_container_light_blue(root);
     ("One line became four, each a single step, because the original packed the supposition, the swap, the reason and the conclusion into one sentence joined by a dash - and it opened on the conclusion (doesn't matter) before the reader had been given the thing it was a conclusion about.");
     app_code_div_cycle_code(same, [
       "Suppose we ask if two numbers are the same (",
@@ -91,7 +91,7 @@ export function app_code_lesson_expression_swapping_equal() {
       " is ",
       "true",
     ]);
-    let order_recall = app_code_container_light_blue(root);
+    let order_recall = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(order_recall, [
       "But we can never swap two different numbers around ",
       "<",
@@ -103,7 +103,7 @@ export function app_code_lesson_expression_swapping_equal() {
       ">=",
     ]);
     app_code_lesson_swapping_same_numbers_line(order_recall);
-    let paren = app_code_container_light_blue(root);
+    let paren = app_learn_js_container_light_blue(root);
     ("Sides of a comparison, said rather than left to be worked out. A side belongs to something, and here the something is itself a comparison - which is the whole shape this recalls, so leaving it out drops the one fact the line is about. Comparison twice over is not a stumble: a comparison standing on each side of a comparison is exactly what is being named.");
     ("Comparison rather than === or !==, even though the line below is a === one. Every comparison is wrapped the same way here, the four ordering ones included - the quiz asks about all six - so naming one operator would promise less than the rule keeps.");
     ("Both sides is the phrasing the lesson this recalls used. A Remember: card is only recall if the words are the ones being recalled, so it is worth keeping even where another turn of phrase would read lighter.");

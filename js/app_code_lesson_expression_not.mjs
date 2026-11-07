@@ -5,7 +5,7 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 export function app_code_lesson_expression_not() {
@@ -30,7 +30,7 @@ export function app_code_lesson_expression_not() {
   let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol);
   return lesson_symbol;
   function above(root) {
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(c, [
       "The symbol ",
       symbol,

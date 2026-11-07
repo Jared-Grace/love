@@ -8,7 +8,7 @@ import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
@@ -29,7 +29,7 @@ export function app_code_lesson_symbols_digit_number() {
     let count_text = text_to(count);
     let chars = text_split_empty(number_text);
     let chars_joined = list_join_comma_space(chars);
-    let example_box = app_code_container_light_blue(root);
+    let example_box = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(example_box, ["", number_text, " is a number"]);
     app_code_div_cycle_code(example_box, [
       "It is made of ",
@@ -37,7 +37,7 @@ export function app_code_lesson_symbols_digit_number() {
       " digits: ",
       chars_joined,
     ]);
-    let rule_box = app_code_container_light_blue(root);
+    let rule_box = app_learn_js_container_light_blue(root);
     let rule_line = html_div(rule_box);
     html_span_text(rule_line, "A ");
     let number_term = html_span_text(rule_line, "number");

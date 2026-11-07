@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_step_programs_generic(
   ("2026-10-15: taken out of the lesson on programs of one shape, so a lesson can step through another lesson's programs too");
   function above(root, context) {
     "what the learner does, in the order the questions come";
-    let box = app_code_container_light_blue(root);
+    let box = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box, [
       "Run the program yourself, one line at a time, as the computer does",
     ]);

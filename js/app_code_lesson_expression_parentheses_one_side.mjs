@@ -3,7 +3,7 @@ import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_code_lesson_expression_parentheses_one_side_title_name_id } from "./app_code_lesson_expression_parentheses_one_side_title_name_id.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -61,7 +61,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
     app_code_lesson_expression_comparing_a_comparison_recall(root, context);
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
-    let idea = app_code_container_light_blue(root);
+    let idea = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(idea, [
       "We can put ",
       open,
@@ -79,7 +79,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
       " show that whatever is inside",
     );
     app_code_div_cycle_code(idea, ["The ", open, " and ", close, r]);
-    let first = app_code_container_light_blue(root);
+    let first = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(first, ["", "3 === 5", " is ", "false"]);
     app_code_div_cycle_code(first, [
       "So ",
@@ -87,7 +87,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
       " is ",
       "true",
     ]);
-    let either = app_code_container_light_blue(root);
+    let either = app_learn_js_container_light_blue(root);
     ("The outer operator is named by its SYMBOL, never by the word comparison. Two comparisons stand on this line - the > inside the parentheses and the === outside them - and the word is already spent on the inner one by the card above, which says we put ( and ) AROUND a comparison. So either side of the comparison would say the parentheses can sit outside the thing they are around. Both symbols are listed because the quiz asks both, and a rule naming only === would read as a rule about ===.");
     let same_symbol = js_operator_triple_equal_symbol();
     let different_symbol = js_operator_bang_double_equal_symbol();

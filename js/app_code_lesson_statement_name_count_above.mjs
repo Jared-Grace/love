@@ -6,7 +6,7 @@ import { add } from "./add.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_statement_name_count_above(root, context) {
   let held = js_code_let_statement(name, start);
   let grown = js_code_assign_statement(name, more);
   let logged = js_code_console_log_statement(name);
-  let box_once = app_code_container_light_blue(root);
+  let box_once = app_learn_js_container_light_blue(root);
   ("the reminder names the whole line, semicolon and all, rather than the sum on its right. The sentence below it names a line and so does this one, and the two are the same line - said as half of it here and whole there, a learner has to put the halves together to see that. Every other reminder on these screens names the line it is about whole.");
   app_code_remember_from_lesson(
     box_once,
@@ -37,7 +37,7 @@ export function app_code_lesson_statement_name_count_above(root, context) {
   );
   ("the lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   app_learn_js_code_lines_writes_out_watched(box_once, [held, grown, logged]);
-  let box_twice = app_code_container_light_blue(root);
+  let box_twice = app_learn_js_container_light_blue(root);
   ("how far the name moves is said as a number rather than as the word twice, and the number one copy of the line would have moved it is said beside it. Twice named the count of lines and left the reader to carry it over to the value, which is the step being shown; the two numbers side by side are that step, written.");
   app_code_div_cycle_code(box_twice, [
     "Write that line (",

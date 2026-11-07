@@ -3,7 +3,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson_names } from "./app_code_remember_from_lesson_names.mjs";
 import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   ("Written out here rather than taken from the program, because the story starts several boxes above anything that could be read as code, and a colour arriving only at the program would be the joining work handed back to the reader.");
   ("The list is made before the first box rather than beside the cups, because the reminder above them says both names and says them first. A colour that started at the cups would leave the sentence carrying the story in from the previous lesson as the one plain mention on the screen - which is the joining work this list exists to take away, left in the place a reader meets first.");
   let names = [name_first, name_copy];
-  let box_have = app_code_container_light_blue(root);
+  let box_have = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson_names(
     box_have,
     context,
@@ -53,7 +53,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   ("the word for what is in a cup is joined into the writing around it rather than given as a part of its own. The parts alternate between plain writing and code all the way along, so a part standing in an odd place comes out dressed as code - and only the names on the cups are code here.");
   let both = list_join_empty(["So both cups have ", word_first, " in them"]);
   app_code_div_cycle_code(box_have, [both]);
-  let box_change = app_code_container_light_blue(root);
+  let box_change = app_learn_js_container_light_blue(root);
   let took = list_join_empty([
     "Now suppose someone took the ",
     word_first,
@@ -79,7 +79,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
     ["Cup ", name_copy, still, name_copy],
     names,
   );
-  let box_code = app_code_container_light_blue(root);
+  let box_code = app_learn_js_container_light_blue(root);
   let quoted_first = app_code_string_code(word_first);
   let held = js_code_let_statement(name_first, quoted_first);
   let copied = js_code_let_statement(name_copy, name_first);

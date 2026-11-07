@@ -30,7 +30,7 @@ import { list_unique } from "./list_unique.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_while_runs_max } from "./app_code_while_runs_max.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
@@ -215,7 +215,7 @@ export function app_code_lesson_while_two_meet() {
   }
   function above(root, context) {
     "While remembered, then a while changing two names, landing together, and then passing each other";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, app_code_lesson_while, [
       "a ",
       "while",
@@ -225,7 +225,7 @@ export function app_code_lesson_while_two_meet() {
       "true",
       ".",
     ]);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "A ",
       "while",
@@ -242,7 +242,7 @@ export function app_code_lesson_while_two_meet() {
     said(box_two, 2, 6);
     said(box_two, 3, 5);
     said_false(box_two, 4, 4);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "They do not always land together. Started one apart, they pass each other:",
     ]);

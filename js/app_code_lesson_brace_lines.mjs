@@ -5,7 +5,7 @@ import { app_learn_js_brace_lines_example } from "./app_learn_js_brace_lines_exa
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_brace_lines_generic } from "./app_code_lesson_brace_lines_generic.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_brace_lines() {
   let right = js_code_brace_right();
   function above(root, context) {
     "the lines between a pair of braces remembered";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
@@ -34,7 +34,7 @@ export function app_code_lesson_brace_lines() {
         ".",
       ],
     );
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     let codes = app_learn_js_brace_pair_programs_three();
     let code = list_last(codes);
     app_learn_js_brace_lines_example(box_two, code, 0);

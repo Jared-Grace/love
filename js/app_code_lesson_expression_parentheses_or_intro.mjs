@@ -1,7 +1,7 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_choose_order_arithmetic_parentheses } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses.mjs";
 import { each } from "./each.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_expression_parentheses_worked_card } from "./app_code_lesson_expression_parentheses_worked_card.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_expression_parentheses_or_intro(root, context) {
   let heading_none = [];
   let heading_either =
     app_code_lesson_expression_choose_order_parentheses_either_side();
-  let rule_card = app_code_container_light_blue(root);
+  let rule_card = app_learn_js_container_light_blue(root);
   let inside_first = app_code_parentheses_inside_before_outside("");
   app_code_remember_from_lesson(
     rule_card,

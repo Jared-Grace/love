@@ -7,7 +7,7 @@ import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { ternary } from "./ternary.mjs";
@@ -64,10 +64,10 @@ export function app_code_lesson_expression_comparison_and() {
   function above(root) {
     "the rule, then one side changed, then both sides changed, worked once true and once false: each comparison is done first, and only then does && combine them";
     "The one-side form is worked first because it is the single step from the && the learner already has. They know true && false; replacing ONE operand with a comparison changes one thing. The card used to open on 3 < 5 && 2 < 4, which replaces both at once - two changes shown as one, and the header sentence says one side, so the first example contradicted the line above it.";
-    let header = app_code_container_light_blue(root);
+    let header = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(header, ["A comparison can be one side of ", "&&"]);
     app_code_lesson_expression_comparison_and_card_one_side(root);
-    let yes = app_code_container_light_blue(root);
+    let yes = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(yes, [
       "Both sides of ",
       "&&",
@@ -91,7 +91,7 @@ export function app_code_lesson_expression_comparison_and() {
       " is ",
       "true",
     ]);
-    let no = app_code_container_light_blue(root);
+    let no = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(no, [
       "Likewise, for ",
       "7 > 2 && 5 > 8",

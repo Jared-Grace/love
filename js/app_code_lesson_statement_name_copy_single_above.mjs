@@ -7,7 +7,7 @@ import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { text_empty } from "./text_empty.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_note_div_cycle_code } from "./app_code_note_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_statement_name_copy_single_above(
   ("the cup story comes before the code, the way the lesson that copies into a third cup tells it, because this is the first lesson where one name is given another name - so it is where a learner first wonders whether the first name loses its word. The story never pours: someone looks inside one cup and fetches more of the same, which is what the code does, at the human's request");
   let nothing = text_empty();
   let cup_first = [word_first, name_first];
-  let box_cups = app_code_container_light_blue(root);
+  let box_cups = app_learn_js_container_light_blue(root);
   let has_first = list_join_empty([" has ", word_first, " and cup "]);
   app_code_note_div_cycle_code(
     box_cups,
@@ -67,7 +67,7 @@ export function app_code_lesson_statement_name_copy_single_above(
     name_last,
     names,
   );
-  let box_copy = app_code_container_light_blue(root);
+  let box_copy = app_learn_js_container_light_blue(root);
   ("the names in this box wear the colours the cups above and the box below give them, at the human's request - the sentence through the writer that colours a name, and the program through notes that mark each name, the way the lesson that copies into a third cup writes its program, because the notes are what the code box reads its colours from");
   ("the program box directly under the cups opens with the line the lesson that copies into a third cup opens its program with, and says nothing else, so the program reads as the cup story written in JS - every word in it is one the cups hold");
   let written = app_code_js_written_that_text();
@@ -80,7 +80,7 @@ export function app_code_lesson_statement_name_copy_single_above(
   app_learn_js_code_lines_writes_out(box_copy, lines, word_first);
   ("THE SCREEN OPENS WITH THE CUPS, AND THE REMINDER OF THE LESSON BEFORE COMES AFTER THE PROGRAM THAT TELLS THEM, directly above the sentence comparing the two programs - so the two programs being compared stand one under the other, and nothing the cups never hold is read before the cups, at the human's request");
   ("the reminder names the two names and the two words they held, rather than one line of the program, and leaves the names uncoloured - the colours belong to the cups of this lesson, and the reminder is about the lesson before, at the human's request");
-  let box_two = app_code_container_light_blue(root);
+  let box_two = app_learn_js_container_light_blue(root);
   app_code_remember_from_lesson(
     box_two,
     context,

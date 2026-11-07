@@ -5,7 +5,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -102,7 +102,7 @@ export function app_code_lesson_expression_true_false_compare_generic(
   }
   function above(root) {
     "the recall line first, then the idea. The word also is only meaningful once what came before is named, and both operators have already been taught on numbers and again on strings, so the recall line names both of those and the second line adds true and false to them. The examples below are all four possibilities, so they carry the demonstration and no worked line here would add anything";
-    let plain = app_code_container_light_blue(root);
+    let plain = app_learn_js_container_light_blue(root);
     let t = js_keyword_true();
     let f = js_keyword_false();
     app_code_div_cycle_code(plain, [

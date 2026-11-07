@@ -13,7 +13,7 @@ import { list_get } from "./list_get.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_remainder_divide_solve() {
   "SOLVE the remainder-by-dividing formula: given a - Math.floor(a / b) * b, work out its value - the remainder. The learner has already solved each sub-part (Math.floor(a / b) in integer division, then * b for the whole part), so this is the one added step: subtract the whole part from the dividend. The answer is the leftover (the remainder); quotient 2..3, divisor 3..6";
@@ -68,14 +68,14 @@ export function app_code_lesson_expression_remainder_divide_solve() {
   });
   return lesson;
   function above(root, context) {
-    let recall = app_code_container_light_blue(root);
+    let recall = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       recall,
       context,
       app_code_lesson_expression_remainder_divide,
       ["the remainder of ", "14 / 4", " is ", "14 - Math.floor(14 / 4) * 4"],
     );
-    let solving = app_code_container_light_blue(root);
+    let solving = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(solving, ["Solve the formula one step at a time:"]);
     app_code_div_cycle_code(solving, ["", "14 / 4", " is ", "3.5"]);
     app_code_div_cycle_code(solving, ["", "Math.floor(14 / 4)", " is ", "3"]);

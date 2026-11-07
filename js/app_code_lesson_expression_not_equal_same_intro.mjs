@@ -8,7 +8,7 @@ import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_not_changes_true_false } from "./app_code_not_changes_true_false.mjs";
 export function app_code_lesson_expression_not_equal_same_intro(root, context) {
@@ -31,7 +31,7 @@ export function app_code_lesson_expression_not_equal_same_intro(root, context) {
   let inner = app_code_operator_code(three, same_symbol, five);
   let long = js_code_not_parenthesis_wrapped(inner);
   let long_other = js_code_not_parenthesis_wrapped(short);
-  let asks = app_code_container_light_blue(root);
+  let asks = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(asks, [
     "",
     short,
@@ -49,7 +49,7 @@ export function app_code_lesson_expression_not_equal_same_intro(root, context) {
     " gives the opposite answer to ",
     same_symbol,
   ]);
-  let joins = app_code_container_light_blue(root);
+  let joins = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(joins, [
     "",
     true_word,

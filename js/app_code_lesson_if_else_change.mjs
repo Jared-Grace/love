@@ -22,7 +22,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { less_than } from "./less_than.mjs";
 import { json_to } from "./json_to.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_else } from "./app_code_lesson_if_else.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -130,7 +130,7 @@ export function app_code_lesson_if_else_change() {
   }
   function above(root, context) {
     "else remembered, then a change on each side, with the if running and then the else";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     let code3 = js_code_else_dots();
     let code4 = js_code_if_dots("a");
     app_code_remember_from_lesson(box_one, context, app_code_lesson_if_else, [
@@ -140,7 +140,7 @@ export function app_code_lesson_if_else_change() {
       code4,
       " does not",
     ]);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     let condition2 = js_code_binary_spaced_nb(name, less, 5);
     let if_dots = js_code_if_dots(condition2);
     let code5 = js_code_else_dots();
@@ -164,7 +164,7 @@ export function app_code_lesson_if_else_change() {
       yes2,
       " runs",
     ]);
-    let box_three = app_code_container_light_blue(root);
+    let box_three = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_three, [
       "But suppose ",
       name,

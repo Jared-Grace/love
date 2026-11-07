@@ -8,7 +8,7 @@ import { text_to } from "./text_to.mjs";
 import { app_code_operator_code_subject_first } from "./app_code_operator_code_subject_first.mjs";
 import { multiply } from "./multiply.mjs";
 import { add } from "./add.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_which_part_first_above(
@@ -70,7 +70,7 @@ export function app_code_lesson_expression_which_part_first_above(
   );
   let wrong_value = multiply(wrong_inner, far);
   let wrong_value_text = text_to(wrong_value);
-  let right_card = app_code_container_light_blue(root);
+  let right_card = app_learn_js_container_light_blue(root);
   app_code_lesson_suppose_solve_line(right_card, "Suppose", whole);
   app_code_remember_from_lesson(
     right_card,
@@ -91,7 +91,7 @@ export function app_code_lesson_expression_which_part_first_above(
     inner_text,
     ", and that is valid",
   ]);
-  let wrong_card = app_code_container_light_blue(root);
+  let wrong_card = app_learn_js_container_light_blue(root);
   ("The card opens on the question it is answering. Without it the first line is a bare fact about a part of the line nobody has been given a reason to look at, and a learner who has just been told the 2 * 4 is solved first has to guess why the 1 + 2 is suddenly being solved instead. Naming both parts is what makes it a choice rather than a change of subject.");
   ("A question, not the conclusion. The conclusion here is that this way is wrong, and stating that first leaves nothing to find out - the card would be watched rather than followed. The parentheses card that asks What if there were no ( and ) is the same move for the same reason.");
   app_code_div_cycle_code(wrong_card, [
@@ -140,7 +140,7 @@ export function app_code_lesson_expression_which_part_first_above(
     " is solved before ",
     plus,
   ]);
-  let rule_card = app_code_container_light_blue(root);
+  let rule_card = app_learn_js_container_light_blue(root);
   ("the rule closes the screen rather than opening it, the same way round as the lesson on comparing a comparison: a general sentence put first has nothing yet to attach to, while the same sentence at the end is a name for something already watched happening");
   app_code_div_cycle_code(rule_card, [
     "So, in general, replacements must honor order like ",

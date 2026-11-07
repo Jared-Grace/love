@@ -7,7 +7,7 @@ import { text_to } from "./text_to.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { add } from "./add.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_expression_round_nearest_round_code } from "./app_code_lesson_expression_round_nearest_round_code.mjs";
 import { app_code_lesson_expression_round_nearest_rule_line } from "./app_code_lesson_expression_round_nearest_rule_line.mjs";
 import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
@@ -43,7 +43,7 @@ export function app_code_lesson_expression_round_nearest_above(root) {
     color_high,
   );
   ("second question: what the digit decides. Each case is a rule line, then that rule on an ordinary number, then that rule on the knife-edge number where a learner would most doubt it");
-  let rule = app_code_container_light_blue(root);
+  let rule = app_learn_js_container_light_blue(root);
   app_code_div_cycle_code(rule, ["What does ", "Math.round", " do?"]);
   app_code_lesson_expression_round_nearest_rule_line(
     rule,

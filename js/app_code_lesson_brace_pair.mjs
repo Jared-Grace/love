@@ -22,7 +22,7 @@ import { equal } from "./equal.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
@@ -47,14 +47,14 @@ export function app_code_lesson_brace_pair() {
     "braces in pairs remembered, then shown in colours, with the first } closing the most recent { rather than the first";
     let left = js_code_brace_left();
     let right = js_code_brace_right();
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       box_one,
       context,
       app_code_lesson_brace_pair_two,
       ["braces come in pairs."],
     );
-    let box_paired = app_code_container_light_blue(root);
+    let box_paired = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_paired, [
       "Here each pair has a colour of its own:",
     ]);

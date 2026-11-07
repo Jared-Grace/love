@@ -1,4 +1,4 @@
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,6 +13,6 @@ export function app_code_lesson_expression_choose_order_run_open(
   arguments_assert(arguments, 3);
   let whole_line = app_code_expression_code(tree);
   app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
-  let run = app_code_container_light_blue(root);
+  let run = app_learn_js_container_light_blue(root);
   return run;
 }

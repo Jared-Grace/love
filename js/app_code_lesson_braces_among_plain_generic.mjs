@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_div } from "./html_div.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_braces_among_plain_generic(
     "the coloured lesson remembered, then the same written out with no colours";
     let left = js_code_brace_left();
     let right = js_code_brace_right();
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(box_one, context, lesson_colored, [
       "the braces of code are its ",
       left,
@@ -32,7 +32,7 @@ export function app_code_lesson_braces_among_plain_generic(
       right,
       " tokens, in the order we read them.",
     ]);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     html_div_text(
       box_two,
       "Now the braces have no colours. We find them by reading, left to right, then top to bottom:",

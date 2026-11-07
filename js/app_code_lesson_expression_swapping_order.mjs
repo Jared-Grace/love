@@ -5,7 +5,7 @@ import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { app_code_lesson_swapping_generic } from "./app_code_lesson_swapping_generic.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 export function app_code_lesson_expression_swapping_order() {
   "the third swapping lesson: the ordering comparisons < > <= >=, which FLIP when swapped. The reason is understood, not memorised: if 2 < 3 is true then 3 < 2 is false, because swapping would say the bigger number is now the smaller one. + and * are recalled as the ones that can swap, so the quiz mixes them (true) with < > <= >= (false). Answer is the code's own true/false value, correct by construction.";
@@ -38,14 +38,14 @@ export function app_code_lesson_expression_swapping_order() {
   }
   function above(root, context) {
     "show that ordering comparisons flip when swapped, with the reason: if 2 < 3 is true then 3 < 2 is false, because the bigger number would now be the smaller one. + and * are recalled as the swappers";
-    let intro = app_code_container_light_blue(root);
+    let intro = app_learn_js_container_light_blue(root);
     app_code_remember_from_lesson(
       intro,
       context,
       app_code_lesson_expression_less_than,
       ["", "<", " and ", ">", " ask which number is smaller or bigger"],
     );
-    let less = app_code_container_light_blue(root);
+    let less = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(less, [
       "",
       "2 < 3",
@@ -69,7 +69,7 @@ export function app_code_lesson_expression_swapping_order() {
       ">",
     ]);
     app_code_lesson_swapping_same_numbers_line(less);
-    let or_equal = app_code_container_light_blue(root);
+    let or_equal = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(or_equal, [
       "",
       "3 <= 5",
@@ -86,7 +86,7 @@ export function app_code_lesson_expression_swapping_order() {
       " or ",
       ">=",
     ]);
-    let swappers = app_code_container_light_blue(root);
+    let swappers = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(swappers, [
       "So far, only ",
       "+",

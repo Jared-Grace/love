@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_braces_dots } from "./app_learn_js_braces_dots.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_while } from "./app_code_lesson_while.mjs";
@@ -19,7 +19,7 @@ export function app_code_lesson_while_log() {
   let name = "n";
   function above(root, context, example, walk) {
     "While remembered, then the same while with a console.log inside, writing out each run";
-    let box_one = app_code_container_light_blue(root);
+    let box_one = app_learn_js_container_light_blue(root);
     let r = app_learn_js_braces_dots();
     app_code_remember_from_lesson(box_one, context, app_code_lesson_while, [
       "a ",
@@ -30,7 +30,7 @@ export function app_code_lesson_while_log() {
       "true",
       ".",
     ]);
-    let box_two = app_code_container_light_blue(root);
+    let box_two = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code(box_two, [
       "Put a ",
       "console.log",

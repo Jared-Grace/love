@@ -14,7 +14,7 @@ import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "./app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_div_code_multiple } from "./app_code_div_code_multiple.mjs";
 import { app_code_div_cycle_code_multiple } from "./app_code_div_cycle_code_multiple.mjs";
@@ -72,7 +72,7 @@ export function app_code_lesson_operators_minus_generic({
       left_transform,
       verb,
     );
-    let c = app_code_container_light_blue(root);
+    let c = app_learn_js_container_light_blue(root);
     let combined8 = text_combine_multiple([
       "However, when making a number ",
       sign,
@@ -83,7 +83,7 @@ export function app_code_lesson_operators_minus_generic({
     let right2 = "right";
     let combined4 = text_combine(operator, right2);
     app_code_div_code_multiple(c, [combined2, combined4]);
-    let c4 = app_code_container_light_blue(root);
+    let c4 = app_learn_js_container_light_blue(root);
     app_code_div_cycle_code_multiple(c4, [
       ["Therefore, ", operator, " must have a value on the right side"],
       [
