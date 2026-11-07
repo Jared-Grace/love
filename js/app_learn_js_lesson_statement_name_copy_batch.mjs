@@ -14,7 +14,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-export function app_code_lesson_statement_name_copy_batch() {
+export function app_learn_js_lesson_statement_name_copy_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives two words two names, gives a third name what is inside one of those two, and writes the third one out");
   ("The word the third name did not get is the whole question. Both words are on the screen and only one of them was copied, so a learner who reads the third line as decoration rather than as a name has a word to reach for, and it is wrong.");
