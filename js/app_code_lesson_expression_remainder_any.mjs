@@ -1,7 +1,7 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_expression_dividend } from "./app_code_lesson_expression_dividend.mjs";
 import { app_code_uneven_dividend_between } from "./app_code_uneven_dividend_between.mjs";
-import { app_code_division_dividend } from "./app_code_division_dividend.mjs";
+import { app_learn_js_division_dividend } from "./app_learn_js_division_dividend.mjs";
 import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
 import { app_code_lesson_expression_remainder_any_title_name_id } from "./app_code_lesson_expression_remainder_any_title_name_id.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
@@ -40,7 +40,7 @@ export function app_code_lesson_expression_remainder_any() {
   }
   function decoys(question, answer) {
     "three tempting wrong values, matching the mistakes the formula makes visible: the QUOTIENT floor(n / d) (how many whole times the divisor fits - stopped before finding what is left over), the WHOLE PART floor(n / d) * d (the part that divides evenly - forgot to subtract it from the dividend), and the RAW division n / d (never rounded down)";
-    let number = app_code_division_dividend(question);
+    let number = app_learn_js_division_dividend(question);
     let divisor = app_code_division_divisor(question);
     let quotient = divide_floor(number, divisor);
     let whole_part = multiply(quotient, divisor);
