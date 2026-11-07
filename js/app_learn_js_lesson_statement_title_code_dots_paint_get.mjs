@@ -2,7 +2,7 @@ import { each_index } from "./each_index.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
 import { app_learn_js_lesson_title_code_breakable } from "./app_learn_js_lesson_title_code_breakable.mjs";
-import { app_code_lesson_title_code_tile } from "./app_code_lesson_title_code_tile.mjs";
+import { app_learn_js_lesson_title_code_tile } from "./app_learn_js_lesson_title_code_tile.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split } from "./text_split.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_statement_title_code_dots_paint_get(code) {
   }
   function paint_code(parent) {
     "the same tile and the same places to break as a title piece with no dots, so a long piece wraps between its tokens rather than running off the right edge - it was held to one line before, and on a phone with the text size turned up let c = a; a = \"...\"; ran past the screen, at the human's request, 2026-09-28";
-    let tile = app_code_lesson_title_code_tile(parent);
+    let tile = app_learn_js_lesson_title_code_tile(parent);
     fill(tile);
   }
   return paint_code;
