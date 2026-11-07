@@ -8,7 +8,7 @@ import { app_learn_js_lesson_chip_color } from "./app_learn_js_lesson_chip_color
 import { integer_random } from "./integer_random.mjs";
 import { add } from "./add.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_lesson_expression_round_nearest_round_code } from "./app_code_lesson_expression_round_nearest_round_code.mjs";
+import { app_learn_js_lesson_expression_round_nearest_round_code } from "./app_learn_js_lesson_expression_round_nearest_round_code.mjs";
 import { app_code_lesson_expression_round_nearest_rule_line } from "./app_code_lesson_expression_round_nearest_rule_line.mjs";
 import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -50,7 +50,7 @@ export function app_learn_js_lesson_expression_round_nearest_above(root) {
     ["0", "1", "2", "3", "4"],
     "Math.floor",
   );
-  let v = app_code_lesson_expression_round_nearest_round_code(low_decimal);
+  let v = app_learn_js_lesson_expression_round_nearest_round_code(low_decimal);
   app_learn_js_div_cycle_code(rule, ["For example, ", v, " is ", whole_text]);
   let down = app_code_lesson_expression_round_nearest_rounds_line(
     "4999",
@@ -67,7 +67,8 @@ export function app_learn_js_lesson_expression_round_nearest_above(root) {
     ["5", "6", "7", "8", "9"],
     "Math.ceil",
   );
-  let v2 = app_code_lesson_expression_round_nearest_round_code(high_decimal);
+  let v2 =
+    app_learn_js_lesson_expression_round_nearest_round_code(high_decimal);
   app_learn_js_div_cycle_code(rule, ["For example, ", v2, " is ", whole_up]);
   let up = app_code_lesson_expression_round_nearest_rounds_line(
     "5",
