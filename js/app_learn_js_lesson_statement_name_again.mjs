@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_statement_name_again_pair } from "./app_learn_js_lesson_statement_name_again_pair.mjs";
-import { app_code_lesson_statement_name_pair_first } from "./app_code_lesson_statement_name_pair_first.mjs";
+import { app_learn_js_lesson_statement_name_pair_first } from "./app_learn_js_lesson_statement_name_pair_first.mjs";
 export function app_learn_js_lesson_statement_name_again() {
   arguments_assert(arguments, 0);
   ('one name given a value and then given another one: let a = "grapes"; console.log(a); a = "olives"; console.log(a); writes out grapes and then olives');
@@ -9,6 +9,6 @@ export function app_learn_js_lesson_statement_name_again() {
   ("The new line shape is the only new thing. One name still, the same one letter, values still words: what changed is that a name can be given a value without let, and only because it already has one.");
   ("Building the code from tokens stays switched off, for the reason the lessons before give.");
   let pair = app_learn_js_lesson_statement_name_again_pair();
-  let lesson = app_code_lesson_statement_name_pair_first(pair, true);
+  let lesson = app_learn_js_lesson_statement_name_pair_first(pair, true);
   return lesson;
 }
