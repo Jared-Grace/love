@@ -4,7 +4,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_arithmetic_less_than_worked_example({
+export function app_learn_js_lesson_expression_arithmetic_less_than_worked_example({
   other,
   other_on_left,
   a_left,

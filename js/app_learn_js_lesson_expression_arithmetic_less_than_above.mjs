@@ -10,7 +10,7 @@ import { app_code_operators_word_list } from "./app_code_operators_word_list.mjs
 import { js_operator_symbol } from "./js_operator_symbol.mjs";
 import { app_code_operators_comparison_or_list } from "./app_code_operators_comparison_or_list.mjs";
 import { add } from "./add.mjs";
-import { app_code_lesson_expression_arithmetic_less_than_worked_example } from "./app_code_lesson_expression_arithmetic_less_than_worked_example.mjs";
+import { app_learn_js_lesson_expression_arithmetic_less_than_worked_example } from "./app_learn_js_lesson_expression_arithmetic_less_than_worked_example.mjs";
 import { multiply } from "./multiply.mjs";
 export function app_learn_js_lesson_expression_arithmetic_less_than_above(
   root,
@@ -38,7 +38,7 @@ export function app_learn_js_lesson_expression_arithmetic_less_than_above(
   html_span_text(line, ": ");
   app_code_operators_comparison_or_list(line);
   let sum = add(2, 3);
-  app_code_lesson_expression_arithmetic_less_than_worked_example({
+  app_learn_js_lesson_expression_arithmetic_less_than_worked_example({
     other: 9,
     other_on_left: true,
     a_left: 2,
@@ -50,7 +50,7 @@ export function app_learn_js_lesson_expression_arithmetic_less_than_above(
     less_than_symbol,
   });
   let p = multiply(3, 2);
-  app_code_lesson_expression_arithmetic_less_than_worked_example({
+  app_learn_js_lesson_expression_arithmetic_less_than_worked_example({
     other: 7,
     other_on_left: false,
     a_left: 3,
