@@ -4,7 +4,7 @@ import { less_than } from "./less_than.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_lesson_increment_log_options() {
+export function app_learn_js_lesson_increment_log_options() {
   arguments_assert(arguments, 0);
   ("what a lesson about a loop adding one to n hands in, whichever loop it is written with: let n = 1; n < 4; n++ writes out 1, 2 and 3");
   let r = {

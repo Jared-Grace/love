@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_while_update_log_generic } from "./app_code_lesson_while_update_log_generic.mjs";
-import { app_code_lesson_increment_log_options } from "./app_code_lesson_increment_log_options.mjs";
+import { app_learn_js_lesson_increment_log_options } from "./app_learn_js_lesson_increment_log_options.mjs";
 import { app_code_lesson_statement_name_increment } from "./app_code_lesson_statement_name_increment.mjs";
 export function app_code_lesson_while_increment() {
   arguments_assert(arguments, 0);
@@ -14,7 +14,7 @@ export function app_code_lesson_while_increment() {
     "while (n < 4) { n++; }",
   );
   let lesson = app_code_lesson_while_update_log_generic({
-    ...app_code_lesson_increment_log_options(),
+    ...app_learn_js_lesson_increment_log_options(),
     name_id,
     remembered: app_code_lesson_statement_name_increment,
     remembered_parts: ["", "n++", " adds one to ", "n", "."],

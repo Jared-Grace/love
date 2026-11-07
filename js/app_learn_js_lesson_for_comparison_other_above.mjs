@@ -18,7 +18,7 @@ export function app_learn_js_lesson_for_comparison_other_above(
 ) {
   arguments_assert(arguments, 3);
   ("What sits above a for lesson that differs from an earlier for lesson only in its comparison: the earlier program remembered, then the same lines written with the other comparison, then every run walked through, then what the two comparisons do with the number they are compared with. earlier and options are what each lesson hands in, as ",
-    fn_name("app_code_lesson_increment_log_options"),
+    fn_name("app_learn_js_lesson_increment_log_options"),
     " does.");
   let name = "n";
   function above(root, context, example, walk) {
