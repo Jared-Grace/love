@@ -1,4 +1,4 @@
-import { app_code_expression_replace_word_say } from "./app_code_expression_replace_word_say.mjs";
+import { app_learn_js_expression_replace_word_say } from "./app_learn_js_expression_replace_word_say.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_learn_js_expression_replace_button(parent, press) {
@@ -11,6 +11,6 @@ export function app_learn_js_expression_replace_button(parent, press) {
   ("Wide because that is the shape of a button here: See another example, Next and Home all fill their line, and a smaller button among them reads as a different kind of thing to press rather than as the next one. Grey for the same reason - green is what this app says well done in, and a button offering the swap is asking for it, not praising it.");
   ("the word is written from the one place that says how the word for the swap is written, because the lesson after this one tells the learner about this very press afterwards and has to say the word to them in the colour they pressed it in");
   let button = app_shared_button_wide(parent, "Click here to ", press);
-  app_code_expression_replace_word_say(button, "replace");
+  app_learn_js_expression_replace_word_say(button, "replace");
   return button;
 }

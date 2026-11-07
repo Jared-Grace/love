@@ -1,5 +1,5 @@
 import { app_learn_js_expression_chosen_code_nowrap } from "./app_learn_js_expression_chosen_code_nowrap.mjs";
-import { app_code_expression_replace_word_say } from "./app_code_expression_replace_word_say.mjs";
+import { app_learn_js_expression_replace_word_say } from "./app_learn_js_expression_replace_word_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { list_add } from "./list_add.mjs";
@@ -22,7 +22,7 @@ export function app_learn_js_expression_replace_swap_say(
     list_add(chosen_pieces, span);
   }
   html_span_text(parent, lead);
-  app_code_expression_replace_word_say(parent, word);
+  app_learn_js_expression_replace_word_say(parent, word);
   html_span_text(parent, " the ");
   chosen(solved_code);
   html_span_text(parent, " with ");

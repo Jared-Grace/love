@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { not } from "./not.mjs";
-import { app_code_expression_replace_word_say } from "./app_code_expression_replace_word_say.mjs";
+import { app_learn_js_expression_replace_word_say } from "./app_learn_js_expression_replace_word_say.mjs";
 import { app_code_token_chip_thin } from "./app_code_token_chip_thin.mjs";
 import { app_learn_js_expression_chosen_style_assign } from "./app_learn_js_expression_chosen_style_assign.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
@@ -17,7 +17,7 @@ export function app_code_tokens_choose_say(parent, lead, word, guided) {
     html_span_text(line, " each token in order:");
     return line;
   }
-  app_code_expression_replace_word_say(line, word);
+  app_learn_js_expression_replace_word_say(line, word);
   html_span_text(line, " each token in order - the right choice is ");
   let blue = html_span_text(line, "blue");
   app_code_token_chip_thin(blue);
