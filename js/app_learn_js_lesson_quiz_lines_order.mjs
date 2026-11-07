@@ -15,7 +15,7 @@ import { list_take } from "./list_take.mjs";
 import { app_learn_js_lesson_quiz_lines_show } from "./app_learn_js_lesson_quiz_lines_show.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_code_lines_indent_braces } from "./app_code_lines_indent_braces.mjs";
-import { app_code_lesson_quiz_pieces_select } from "./app_code_lesson_quiz_pieces_select.mjs";
+import { app_learn_js_lesson_quiz_pieces_select } from "./app_learn_js_lesson_quiz_pieces_select.mjs";
 export function app_learn_js_lesson_quiz_lines_order(
   parent,
   info,
@@ -61,7 +61,7 @@ export function app_learn_js_lesson_quiz_lines_order(
     correction_code_set(joined);
     app_learn_js_lesson_quiz_lines_show(answer_div, chosen_now, lines);
   }
-  app_code_lesson_quiz_pieces_select(
+  app_learn_js_lesson_quiz_pieces_select(
     parent,
     note_div,
     pieces,

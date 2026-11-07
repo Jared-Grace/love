@@ -20,7 +20,7 @@ import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { log } from "./log.mjs";
 import { app_code_lesson_quiz_token_select_needed_not_is } from "./app_code_lesson_quiz_token_select_needed_not_is.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_quiz_pieces_select(
+export function app_learn_js_lesson_quiz_pieces_select(
   parent,
   note_div,
   pieces,
@@ -84,7 +84,7 @@ export function app_code_lesson_quiz_pieces_select(
       await sleep_seconds(0.1);
       if (any) {
         html_visibility_hidden(b);
-        log(app_code_lesson_quiz_pieces_select.name, {
+        log(app_learn_js_lesson_quiz_pieces_select.name, {
           variations,
           chosen,
         });
@@ -110,7 +110,7 @@ export function app_code_lesson_quiz_pieces_select(
     variations,
     buttons,
   );
-  log(app_code_lesson_quiz_pieces_select.name, {
+  log(app_learn_js_lesson_quiz_pieces_select.name, {
     variations,
   });
 }
