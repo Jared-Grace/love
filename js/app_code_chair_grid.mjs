@@ -1,7 +1,7 @@
 import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { divide_floor } from "./divide_floor.mjs";
-import { app_code_chair_circle } from "./app_code_chair_circle.mjs";
+import { app_learn_js_chair_circle } from "./app_learn_js_chair_circle.mjs";
 import { app_code_chair_emoji } from "./app_code_chair_emoji.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { divide } from "./divide.mjs";
@@ -73,7 +73,7 @@ export function app_code_chair_grid(parent, count, width, marked) {
   each(list, column_heading_draw);
   function circle_set(picture) {
     "a white circle behind the emoji of every chair, so the brown chair shows against the blue or green of a filled chair, and every chair looks alike on the light blue too, asked by the human 2026-09-27";
-    app_code_chair_circle(picture);
+    app_learn_js_chair_circle(picture);
     html_style_assign(picture, {
       "margin-bottom": app_shared_spaced_neighbor_gap(),
     });
