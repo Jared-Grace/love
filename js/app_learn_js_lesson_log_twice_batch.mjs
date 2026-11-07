@@ -5,7 +5,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_log_twice_batch() {
+export function app_learn_js_lesson_log_twice_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each is two lines, and each line writes out what two numbers add up to");
   ("Both lines are the line the learner already knows, so the only thing on the screen they have not read before is that there are two of them. A second line doing something newer would be asking two questions at once and only one of them would be this lesson's.");

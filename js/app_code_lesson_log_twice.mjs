@@ -3,7 +3,7 @@ import { app_learn_js_lesson_decoy_lines_reversed } from "./app_learn_js_lesson_
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { app_learn_js_lesson_log_twice_above } from "./app_learn_js_lesson_log_twice_above.mjs";
-import { app_code_lesson_log_twice_batch } from "./app_code_lesson_log_twice_batch.mjs";
+import { app_learn_js_lesson_log_twice_batch } from "./app_learn_js_lesson_log_twice_batch.mjs";
 import { app_code_lesson_log_twice_title_name_id } from "./app_code_lesson_log_twice_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_log_twice() {
   ("Reading backwards the reversed one still stands alone, because the answers there are code rather than what came out, and the two mistakes the single lines catch are mistakes about working a program out.");
   let name_id = app_code_lesson_log_twice_title_name_id();
   let batch = app_learn_js_batch_question_answer_fns(
-    app_code_lesson_log_twice_batch,
+    app_learn_js_lesson_log_twice_batch,
     eval_console_log_lines,
   );
   let lesson = app_learn_js_lesson_code_logged({
