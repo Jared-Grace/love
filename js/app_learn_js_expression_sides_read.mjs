@@ -1,7 +1,7 @@
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_expression_sides_read(tree) {
+export function app_learn_js_expression_sides_read(tree) {
   arguments_assert(arguments, 1);
   ("the four things a sentence about a two-sided line needs, read off the line itself: each side as it is written, the operator standing inside the sides, and the operator standing between them");
   ("Read rather than handed in, so a sentence about the line cannot end up being about a different line than the one printed above it.");

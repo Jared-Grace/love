@@ -1,7 +1,7 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { app_code_expression_sides_read } from "./app_code_expression_sides_read.mjs";
+import { app_learn_js_expression_sides_read } from "./app_learn_js_expression_sides_read.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { text_to } from "./text_to.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   ("the recall makes its own card, so it is handed the root rather than a card to stand inside - a card within a card draws a second border around one line and reads as a note pinned to a screen rather than as one of its cards");
   recall(root, context);
   let whole_line = app_learn_js_expression_code(tree);
-  let sides = app_code_expression_sides_read(tree);
+  let sides = app_learn_js_expression_sides_read(tree);
   let left_code = property_get(sides, "left_code");
   let right_code = property_get(sides, "right_code");
   let outer_symbol = property_get(sides, "outer_symbol");
