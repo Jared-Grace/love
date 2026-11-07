@@ -2,7 +2,7 @@ import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
 import { app_code_lesson_current_id } from "./app_code_lesson_current_id.mjs";
-import { app_code_course_unfinished_next } from "./app_code_course_unfinished_next.mjs";
+import { app_learn_js_course_unfinished_next } from "./app_learn_js_course_unfinished_next.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_course_unfinished_go } from "./app_learn_js_course_unfinished_go.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_button_skip_lesson_unfinished(context, parent) {
   let number = app_code_lesson_current_number(context);
   let id = app_code_lesson_current_id(context);
   let index = subtract(number, 1);
-  let way = app_code_course_unfinished_next(context, index, id);
+  let way = app_learn_js_course_unfinished_next(context, index, id);
   let none = null_is(way);
   if (none) {
     return null;

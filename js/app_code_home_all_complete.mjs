@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_course_unfinished_next } from "./app_code_course_unfinished_next.mjs";
+import { app_learn_js_course_unfinished_next } from "./app_learn_js_course_unfinished_next.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_color_page_complete } from "./app_shared_color_page_complete.mjs";
@@ -14,7 +14,7 @@ export function app_code_home_all_complete(parent, bar, context) {
   arguments_assert(arguments, 3);
   let index_start = 0;
   let id_none = null;
-  let way = app_code_course_unfinished_next(context, index_start, id_none);
+  let way = app_learn_js_course_unfinished_next(context, index_start, id_none);
   let left = null_not_is(way);
   if (left) {
     return null;

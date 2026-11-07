@@ -8,7 +8,7 @@ import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
 import { app_code_lesson_current_id } from "./app_code_lesson_current_id.mjs";
-import { app_code_course_unfinished_next } from "./app_code_course_unfinished_next.mjs";
+import { app_learn_js_course_unfinished_next } from "./app_learn_js_course_unfinished_next.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
@@ -54,7 +54,7 @@ export function app_code_lesson_quiz_way_on_unfinished_try(
   let id = app_code_lesson_current_id(context);
   ("the search starts AT this lesson, which is named as the one being left, so the review standing straight after it is the first thing looked at");
   let index = subtract(number, 1);
-  let way = app_code_course_unfinished_next(context, index, id);
+  let way = app_learn_js_course_unfinished_next(context, index, id);
   let none = null_is(way);
   if (none) {
     return null;

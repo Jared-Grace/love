@@ -12,7 +12,7 @@ import { not } from "./not.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
-export function app_code_course_unfinished_next(
+export function app_learn_js_course_unfinished_next(
   context,
   index_start,
   id_skipped,

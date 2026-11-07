@@ -1,6 +1,6 @@
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_course_unfinished_next } from "./app_code_course_unfinished_next.mjs";
+import { app_learn_js_course_unfinished_next } from "./app_learn_js_course_unfinished_next.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
@@ -16,7 +16,7 @@ export function app_code_review_button_unfinished(context, parent, number) {
   "The review stands in front of the lesson at its own 1-based number counted from zero, so that number is both where the search starts and where the continue button goes. No lesson is named as the one being left, because a review is not a lesson.";
   arguments_assert(arguments, 3);
   let lesson_none = null;
-  let way = app_code_course_unfinished_next(context, number, lesson_none);
+  let way = app_learn_js_course_unfinished_next(context, number, lesson_none);
   let none = null_is(way);
   if (none) {
     return null;
