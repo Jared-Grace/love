@@ -1,6 +1,6 @@
 import { list_first_property } from "./list_first_property.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
-import { app_code_lesson_operators_generic_batch_get } from "./app_code_lesson_operators_generic_batch_get.mjs";
+import { app_learn_js_lesson_operators_generic_batch_get } from "./app_learn_js_lesson_operators_generic_batch_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { word_add_ing } from "./word_add_ing.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "./app_code_lesson_operators_minus_generic_container_both_sides.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
     example_get,
   );
   function example_get() {
-    let batch_binary = app_code_lesson_operators_generic_batch_get(
+    let batch_binary = app_learn_js_lesson_operators_generic_batch_get(
       operator,
       left_transform,
     );
