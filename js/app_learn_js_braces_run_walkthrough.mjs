@@ -23,7 +23,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_learn_js_braces_color_next } from "./app_learn_js_braces_color_next.mjs";
 import { app_code_if_blocks_lines_kept } from "./app_code_if_blocks_lines_kept.mjs";
 import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
-export function app_code_braces_run_walkthrough(root, code) {
+export function app_learn_js_braces_run_walkthrough(root, code) {
   arguments_assert(arguments, 2);
   ("the worked example's answering written out, one box per section reached: the program as it stands, that section's braces drawn in a colour, Does this { ... } run?, why, and the answer; then the program once every section is answered. Asked for by the human 2026-10-12, so the writing above a Does this section run? lesson explains the exercise it asks, rather than what the code writes out, which is the lesson after's.");
   ("The reason is said before the answer, the proof before what it proves. A section asking a name runs as that name is true or false; one after a section of the same if that ran does not run, whatever it asks; an else runs when no section before it ran. A section inside one that did not run is never reached, so it is never asked, as in the exercise.");
