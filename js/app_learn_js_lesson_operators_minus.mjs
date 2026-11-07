@@ -5,7 +5,7 @@ import { digit_positive_random } from "./digit_positive_random.mjs";
 import { app_learn_js_lesson_operators_minus_generic } from "./app_learn_js_lesson_operators_minus_generic.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { add } from "./add.mjs";
-export function app_code_lesson_operators_minus() {
+export function app_learn_js_lesson_operators_minus() {
   let operator = js_operator_minus_symbol();
   let operator_name = js_operator_minus_name();
   let math_name = js_operator_minus_name_root();
