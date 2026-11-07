@@ -15,7 +15,7 @@ import { not } from "./not.mjs";
 import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_quiz_token_select_count_badge_style } from "./app_code_lesson_quiz_token_select_count_badge_style.mjs";
+import { app_learn_js_lesson_quiz_token_select_count_badge_style } from "./app_learn_js_lesson_quiz_token_select_count_badge_style.mjs";
 import { app_learn_js_lesson_quiz_token_select_count_badge_room_keep } from "./app_learn_js_lesson_quiz_token_select_count_badge_room_keep.mjs";
 import { each_index } from "./each_index.mjs";
 export function app_code_lesson_quiz_token_select_counts_set(
@@ -75,7 +75,7 @@ export function app_code_lesson_quiz_token_select_counts_set(
     let spelled = text_from_number(number);
     let label = text_combine_multiple(["×", spelled]);
     let badge = html_span_text(b, label);
-    app_code_lesson_quiz_token_select_count_badge_style(badge, b);
+    app_learn_js_lesson_quiz_token_select_count_badge_style(badge, b);
     app_learn_js_lesson_quiz_token_select_count_badge_room_keep(badge, b);
     if (one_only) {
       html_visibility_hidden(badge);

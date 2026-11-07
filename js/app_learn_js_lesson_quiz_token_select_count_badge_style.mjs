@@ -18,7 +18,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { app_shared_color_blue_medium } from "./app_shared_color_blue_medium.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_border } from "./html_border.mjs";
-export function app_code_lesson_quiz_token_select_count_badge_style(
+export function app_learn_js_lesson_quiz_token_select_count_badge_style(
   badge,
   tile,
 ) {
