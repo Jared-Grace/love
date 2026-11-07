@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_token_select_marks_set } from "./app_code_lesson_quiz_token_select_marks_set.mjs";
-import { app_code_lesson_quiz_token_select_counts_set } from "./app_code_lesson_quiz_token_select_counts_set.mjs";
+import { app_learn_js_lesson_quiz_token_select_counts_set } from "./app_learn_js_lesson_quiz_token_select_counts_set.mjs";
 export function app_code_lesson_quiz_token_select_row_set(
   tokens_unique,
   chosen,
@@ -17,7 +17,7 @@ export function app_code_lesson_quiz_token_select_row_set(
     variations,
     buttons,
   );
-  app_code_lesson_quiz_token_select_counts_set(
+  app_learn_js_lesson_quiz_token_select_counts_set(
     tokens_unique,
     chosen,
     variations,

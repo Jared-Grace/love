@@ -18,7 +18,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_lesson_quiz_token_select_count_badge_style } from "./app_learn_js_lesson_quiz_token_select_count_badge_style.mjs";
 import { app_learn_js_lesson_quiz_token_select_count_badge_room_keep } from "./app_learn_js_lesson_quiz_token_select_count_badge_room_keep.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_lesson_quiz_token_select_counts_set(
+export function app_learn_js_lesson_quiz_token_select_counts_set(
   tokens_unique,
   chosen,
   variations,
