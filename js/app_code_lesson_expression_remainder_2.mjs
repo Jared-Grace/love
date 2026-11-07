@@ -1,4 +1,4 @@
-import { app_code_lesson_console_log_remainder_generic } from "./app_code_lesson_console_log_remainder_generic.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic } from "./app_learn_js_lesson_console_log_remainder_generic.mjs";
 export function app_code_lesson_expression_remainder_2() {
   "remainder by 2 is the even/odd test: even numbers give 0, odd numbers give 1";
   let divisor = 2;
@@ -12,6 +12,9 @@ export function app_code_lesson_expression_remainder_2() {
       remainder: 1,
     },
   ];
-  let lesson = app_code_lesson_console_log_remainder_generic(divisor, insight);
+  let lesson = app_learn_js_lesson_console_log_remainder_generic(
+    divisor,
+    insight,
+  );
   return lesson;
 }

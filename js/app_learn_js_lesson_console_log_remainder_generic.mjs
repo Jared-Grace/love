@@ -13,7 +13,7 @@ import { add } from "./add.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_to } from "./text_to.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_console_log_remainder_generic(
+export function app_learn_js_lesson_console_log_remainder_generic(
   divisor,
   insight,
 ) {
