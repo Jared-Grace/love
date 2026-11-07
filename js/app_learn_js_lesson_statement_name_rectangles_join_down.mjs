@@ -22,7 +22,7 @@ import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_sta
 import { app_learn_js_lesson_statement_name_meetings_join } from "./app_learn_js_lesson_statement_name_meetings_join.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_learn_js_lesson_statement_min_max_mixed_decoys } from "./app_learn_js_lesson_statement_min_max_mixed_decoys.mjs";
-export function app_code_lesson_statement_name_rectangles_join_down() {
+export function app_learn_js_lesson_statement_name_rectangles_join_down() {
   arguments_assert(arguments, 0);
   ("where two rectangles together start and end going down: let top = Math.min(t1, t2); let bottom = Math.max(b1, b2); - picked by Claude 2026-10-05 when the human asked for the next lesson, as Join two overlapping meetings done down a picture, the way How many rows are between two rectangles did How many hours are free between two meetings. In DSA it is half of the box around two boxes, the smallest rectangle holding both, which a screen uses to redraw only the part that changed and a game to test two shapes together.");
   ("Down only, with across the lesson after it, as rows and then columns between two rectangles went: the four lines of the whole box would start eight names at once. Not picked: the whole box in one lesson, for that reason; and the box's size, which would add a third line to an idea not yet shown.");

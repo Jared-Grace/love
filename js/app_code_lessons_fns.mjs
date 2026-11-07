@@ -237,7 +237,7 @@ import { app_learn_js_lesson_statement_name_meetings_free } from "./app_learn_js
 import { app_learn_js_lesson_statement_name_rectangle_above } from "./app_learn_js_lesson_statement_name_rectangle_above.mjs";
 import { app_code_lesson_statement_name_rectangles_rows_between } from "./app_code_lesson_statement_name_rectangles_rows_between.mjs";
 import { app_learn_js_lesson_statement_name_rectangles_columns_between } from "./app_learn_js_lesson_statement_name_rectangles_columns_between.mjs";
-import { app_code_lesson_statement_name_rectangles_join_down } from "./app_code_lesson_statement_name_rectangles_join_down.mjs";
+import { app_learn_js_lesson_statement_name_rectangles_join_down } from "./app_learn_js_lesson_statement_name_rectangles_join_down.mjs";
 import { app_learn_js_lesson_statement_name_rectangles_join_across } from "./app_learn_js_lesson_statement_name_rectangles_join_across.mjs";
 import { app_learn_js_lesson_statement_name_rectangles_cover_together } from "./app_learn_js_lesson_statement_name_rectangles_cover_together.mjs";
 import { app_learn_js_lesson_statement_name_rectangle_wide_as_tall } from "./app_learn_js_lesson_statement_name_rectangle_wide_as_tall.mjs";
@@ -598,7 +598,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_statement_name_rectangle_above,
     app_code_lesson_statement_name_rectangles_rows_between,
     app_learn_js_lesson_statement_name_rectangles_columns_between,
-    app_code_lesson_statement_name_rectangles_join_down,
+    app_learn_js_lesson_statement_name_rectangles_join_down,
     app_learn_js_lesson_statement_name_rectangles_join_across,
     app_learn_js_lesson_statement_name_rectangles_cover_together,
     app_learn_js_lesson_statement_name_rectangle_wide_as_tall,
