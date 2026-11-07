@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_integer_division_uneven_cards(root) {
   arguments_assert(arguments, 1);
@@ -31,7 +31,7 @@ export function app_code_integer_division_uneven_cards(root) {
   let divided_by = js_operator_division_symbol();
   let division = app_learn_js_expression_node(dividend, divided_by, divisor);
   let division_code = app_learn_js_expression_code(division);
-  let value = app_code_expression_value(division);
+  let value = app_learn_js_expression_value(division);
   let value_text = text_to(value);
   app_learn_js_div_cycle_code(problem, [
     "For example, ",

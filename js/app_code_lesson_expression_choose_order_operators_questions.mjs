@@ -1,5 +1,5 @@
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
-import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { app_code_lesson_expression_choose_order_operators_expression } from "./app_code_lesson_expression_choose_order_operators_expression.mjs";
 import { app_code_lesson_expression_choose_order_operators_tree_of_code } from "./app_code_lesson_expression_choose_order_operators_tree_of_code.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_expression_choose_order_operators_questions() {
     "a question is the line as written and its answer is what the line comes to";
     let tree = tree_new();
     let question = app_learn_js_expression_code(tree);
-    let answer = app_code_expression_value(tree);
+    let answer = app_learn_js_expression_value(tree);
     let item = {
       question,
       answer,

@@ -6,7 +6,7 @@ import { equal } from "./equal.mjs";
 import { or } from "./or.mjs";
 import { not } from "./not.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
-import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { ternary } from "./ternary.mjs";
 import { floor } from "./floor.mjs";
 import { ceil } from "./ceil.mjs";
@@ -32,13 +32,13 @@ export function app_learn_js_expression_value_decoys_rounding(current, node) {
     let plain = app_learn_js_expression_value_decoys(current, node);
     return plain;
   }
-  let value = app_code_expression_value(node);
+  let value = app_learn_js_expression_value(node);
   let acted_on = property_get(node, "right");
-  let acted_on_value = app_code_expression_value(acted_on);
+  let acted_on_value = app_learn_js_expression_value(acted_on);
   let decimal = ternary(called, acted_on_value, value);
   let below = floor(decimal);
   let above = ceil(decimal);
-  let whole = app_code_expression_value(current);
+  let whole = app_learn_js_expression_value(current);
   let candidates = [decimal, below, above, whole];
   function wrong_is(candidate) {
     let differs = equal_not(candidate, value);

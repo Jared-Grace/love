@@ -5,7 +5,7 @@ import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs
 import { app_learn_js_expression_equals_text } from "./app_learn_js_expression_equals_text.mjs";
 import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
 import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_expression_replace_swap_say.mjs";
-import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { app_code_lesson_expression_choose_order_expression } from "./app_code_lesson_expression_choose_order_expression.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_code_operators_say } from "./app_code_operators_say.mjs";
@@ -38,9 +38,9 @@ export function app_code_lesson_expression_choose_order_solve_above(
   let first_symbol = property_get(step, "operator");
   let next_symbol = property_get(tree, "operator");
   let step_code = app_learn_js_expression_code(step);
-  let step_value = app_code_expression_value(step);
+  let step_value = app_learn_js_expression_value(step);
   let step_text = text_to(step_value);
-  let final_value = app_code_expression_value(tree);
+  let final_value = app_learn_js_expression_value(tree);
   let final_text = text_to(final_value);
   ("The line itself gets a card to itself, and so does the one sentence at the end saying what changes. Between them stands the run: four steps, each one a thing that happened, and the card around them is what says they are one run rather than four remarks. The line is not a step of the run - it is what the run was done to - and the sentence at the end is not a step either, it is what the next screen does instead.");
   let line_card = app_learn_js_container_light_blue(root);

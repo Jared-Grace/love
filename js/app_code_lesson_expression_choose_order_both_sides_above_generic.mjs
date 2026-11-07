@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_sides_read } from "./app_learn_js_expression_sides_read.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -36,8 +36,8 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   let outer_symbol = property_get(sides, "outer_symbol");
   let left = property_get(tree, "left");
   let right = property_get(tree, "right");
-  let left_value = app_code_expression_value(left);
-  let right_value = app_code_expression_value(right);
+  let left_value = app_learn_js_expression_value(left);
+  let right_value = app_learn_js_expression_value(right);
   let left_text = text_to(left_value);
   let right_text = text_to(right_value);
   ("what is left when both sides are done is built from the two values rather than stepped to, because the two sides are shown coming to their values one row each just above and stepping to it again would be the same two steps a third time");
@@ -47,7 +47,7 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
     right_value,
   );
   let both_code = app_learn_js_expression_code(both);
-  let final_value = app_code_expression_value(tree);
+  let final_value = app_learn_js_expression_value(tree);
   let final_text = text_to(final_value);
   let line_card = app_learn_js_container_light_blue(root);
   app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);

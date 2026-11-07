@@ -17,7 +17,7 @@ export function app_learn_js_expression_nodes_ready(item) {
     fn_name("app_learn_js_expression_nodes_ready_first"),
     " is where that reading lives.");
   ("The two questions are kept apart because a value can be worked out in any of these orders and come to the same number - that is what lets ",
-    fn_name("app_code_expression_value"),
+    fn_name("app_learn_js_expression_value"),
     " walk the list freely - while a LEARNER being asked which operator goes next has exactly one right answer, the one the machine would take. A single function answering both would have to be wrong for one of them.");
   let node_is = app_learn_js_expression_node_is(item);
   if (not(node_is)) {

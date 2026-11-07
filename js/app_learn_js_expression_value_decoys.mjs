@@ -5,7 +5,7 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
-import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { text_is } from "./text_is.mjs";
 import { app_code_text_join_decoys } from "./app_code_text_join_decoys.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_expression_value_decoys(current, node) {
   let times_is = equal(symbol, times);
   let other = ternary(times_is, plus, times);
   let slipped = app_code_operator_solve(left, other, right);
-  let whole = app_code_expression_value(current);
+  let whole = app_learn_js_expression_value(current);
   let candidates = [slipped, whole];
   ("2026-10-15, seen on screen: two pieces of text joined have no other operator's value, since text times text is not a value, so on its own a join was asked with one button. It is offered the wrong joins the lesson on joining two names offers");
   if (text_is(left) && text_is(right)) {

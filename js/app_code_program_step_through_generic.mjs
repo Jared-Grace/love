@@ -101,7 +101,7 @@ import { html_size_change_animate } from "./html_size_change_animate.mjs";
 import { js_value_code } from "./js_value_code.mjs";
 import { app_learn_js_expression_name_is } from "./app_learn_js_expression_name_is.mjs";
 import { app_code_program_step_solve_decoys } from "./app_code_program_step_solve_decoys.mjs";
-import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { html_text_get } from "./html_text_get.mjs";
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
 import { app_learn_js_expression_replaced_set } from "./app_learn_js_expression_replaced_set.mjs";
@@ -951,7 +951,7 @@ export function app_code_program_step_through_generic(
             return decoys_named;
           }
           let decoys_solved = app_code_program_step_solve_decoys(current, node);
-          let value10 = app_code_expression_value(node);
+          let value10 = app_learn_js_expression_value(node);
           let solved_near = app_learn_js_decoys_near_add(
             decoys_solved,
             value10,

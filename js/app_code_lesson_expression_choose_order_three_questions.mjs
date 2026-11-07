@@ -1,7 +1,7 @@
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_flat_random_strong_first } from "./app_learn_js_expression_flat_random_strong_first.mjs";
 import { app_learn_js_expression_flat_tree_of_code } from "./app_learn_js_expression_flat_tree_of_code.mjs";
-import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { app_code_lesson_expression_choose_order_three_operator_count } from "./app_code_lesson_expression_choose_order_three_operator_count.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_expression_choose_order_three_questions() {
     "a question is the line as written and its answer is what the line comes to";
     let tree = app_learn_js_expression_flat_random_strong_first(count);
     let question = app_learn_js_expression_code(tree);
-    let answer = app_code_expression_value(tree);
+    let answer = app_learn_js_expression_value(tree);
     let item = {
       question,
       answer,
