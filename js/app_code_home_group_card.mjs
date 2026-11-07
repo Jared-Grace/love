@@ -2,7 +2,7 @@ import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_bottom } from "./html_style_padding_bottom.mjs";
 import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_code_column_cap_width } from "./app_code_column_cap_width.mjs";
+import { app_learn_js_column_cap_width } from "./app_learn_js_column_cap_width.mjs";
 import { html_style_max_width } from "./html_style_max_width.mjs";
 import { html_style_margin_x } from "./html_style_margin_x.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -45,7 +45,7 @@ export function app_code_home_group_card(cards, parent, group) {
   let folded = app_shared_container_blue_collapsible(parent, "", changed);
   entry.card = property_get(folded, "card");
   ("the card is as wide as the lesson buttons it holds, not the whole page, and sits centred over them like a light blue paragraph, asked by the human 2026-09-27. The cap is the one every wide button wears, widened by the card's padding and border on each side - the card is measured from its outer edge, so the cap alone squeezed the buttons a few pixels - so the buttons keep the width they always had and the card's padding and border sit just outside them; on a phone the page is narrower than the cap and nothing changes");
-  let cap = app_code_column_cap_width();
+  let cap = app_learn_js_column_cap_width();
   let gap = app_shared_spaced_frame_gap();
   ("the card leaves more room between its border and the lesson buttons than the trim every folding card wears, at the sides and under the last button, asked by the human 2026-09-27; the room is added to the cap too, so on a wide screen the buttons still keep their width, while on a phone it comes off the buttons");
   let pad = "0.6em";
