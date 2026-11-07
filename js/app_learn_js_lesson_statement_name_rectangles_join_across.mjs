@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -52,7 +52,7 @@ export function app_learn_js_lesson_statement_name_rectangles_join_across() {
   let down_line_top = js_code_let_statement(top, down_top);
   let down_bottom = js_code_call_args(max_name, ["b1", "b2"]);
   let down_line_bottom = js_code_let_statement(bottom, down_bottom);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       ["t1", 1],
       ["b1", 3],

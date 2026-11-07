@@ -24,7 +24,7 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_statement_name_rows_apart } from "./app_learn_js_lesson_statement_name_rows_apart.mjs";
@@ -60,7 +60,7 @@ export function app_learn_js_lesson_statement_name_grid_steps() {
     middle: [line_rows, line_cols, line_steps],
     logged: [steps],
   };
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [r, 5],
       [r2, 2],

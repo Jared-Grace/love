@@ -8,7 +8,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
@@ -61,7 +61,7 @@ export function app_learn_js_lesson_statement_name_shared_squares() {
   let line_down = js_code_let_statement(down_name, check_down);
   let both = js_code_binary_spaced_nb(across_name, and_op, down_name);
   let line_overlap = js_code_let_statement(overlap, both);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [left, 2],
       [right, 3],

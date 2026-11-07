@@ -6,7 +6,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
@@ -45,7 +45,7 @@ export function app_learn_js_lesson_statement_name_digit_append() {
   let floor_name = js_code_math_floor_name();
   let rounded = js_code_call_args(floor_name, [divided]);
   let line_rest = js_code_let_statement(rest, rounded);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [["n", 123]],
     [line_rest],
     [rest],

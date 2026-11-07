@@ -6,7 +6,7 @@ import { app_learn_js_lesson_statement_name_fill_from_step } from "./app_learn_j
 import { app_code_lesson_statement_name_swap_try_step } from "./app_code_lesson_statement_name_swap_try_step.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_last } from "./list_last.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { app_learn_js_lesson_statement_name_swap_ladder } from "./app_learn_js_lesson_statement_name_swap_ladder.mjs";
 import { app_learn_js_lesson_statement_name_fill_from } from "./app_learn_js_lesson_statement_name_fill_from.mjs";
 export function app_code_lesson_statement_name_swap_try() {
@@ -23,7 +23,7 @@ export function app_code_lesson_statement_name_swap_try() {
   let middle = property_get(step, "middle");
   let line = list_last(middle);
   let logged = property_get(before, "logged");
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [name_a, 3],
       [name_b, 8],

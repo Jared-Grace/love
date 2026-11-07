@@ -14,7 +14,7 @@ import { list_first } from "./list_first.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 export function app_learn_js_lesson_statement_name_digit_split() {
@@ -44,7 +44,7 @@ export function app_learn_js_lesson_statement_name_digit_split() {
   let remainder = "remainder";
   let divided = js_code_binary_spaced_nb(name_a, percent, name_b);
   let line_remainder = js_code_let_statement(remainder, divided);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [name_a, 14],
       [name_b, 4],

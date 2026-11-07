@@ -12,7 +12,7 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_between_space_nb } from "./list_between_space_nb.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -46,7 +46,7 @@ export function app_learn_js_lesson_statement_name_sum_to() {
   let name_b = "b";
   let multiplied_ab = js_code_binary_spaced_nb(name_a, times, name_b);
   let line_ab = js_code_let_statement(product, multiplied_ab);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [name_a, 4],
       [name_b, 5],

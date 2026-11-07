@@ -4,7 +4,7 @@ import { list_second } from "./list_second.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-export function app_code_lesson_statement_name_swap_program(
+export function app_learn_js_lesson_statement_name_swap_program(
   lets,
   middle,
   logged,

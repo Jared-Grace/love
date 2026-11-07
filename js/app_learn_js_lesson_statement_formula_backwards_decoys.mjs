@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { equal } from "./equal.mjs";
 import { list_map } from "./list_map.mjs";
@@ -62,7 +62,7 @@ export function app_learn_js_lesson_statement_formula_backwards_decoys({
       return pair;
     }
     let lets = list_map_index(names, let_pair);
-    let lines = app_code_lesson_statement_name_swap_program(
+    let lines = app_learn_js_lesson_statement_name_swap_program(
       lets,
       middle,
       logged,

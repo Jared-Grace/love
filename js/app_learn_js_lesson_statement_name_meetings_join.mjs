@@ -4,7 +4,7 @@ import { list_second } from "./list_second.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -50,7 +50,7 @@ export function app_learn_js_lesson_statement_name_meetings_join() {
   let overlap_line_start = js_code_let_statement(start, overlap_start);
   let overlap_end = js_code_call_args(min_name, [e, e2]);
   let overlap_line_end = js_code_let_statement(end, overlap_end);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [s, 9],
       [e, 11],

@@ -5,7 +5,7 @@ import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symb
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_highlight_color_sixth } from "./app_learn_js_highlight_color_sixth.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
@@ -68,7 +68,7 @@ export function app_learn_js_lesson_statement_name_king_steps() {
   let grid_cols = apart_line(cols, c1, c2);
   let grid_added = js_code_binary_spaced_nb(rows, plus, cols);
   let grid_steps = js_code_let_statement(steps, grid_added);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [r1, 3],
       [c1, 1],

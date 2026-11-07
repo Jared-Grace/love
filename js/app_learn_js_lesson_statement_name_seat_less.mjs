@@ -7,7 +7,7 @@ import { js_operator_less_than_equal_symbol } from "./js_operator_less_than_equa
 import { js_code_between_symbols } from "./js_code_between_symbols.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -39,7 +39,7 @@ export function app_learn_js_lesson_statement_name_seat_less() {
   let line_last = js_code_let_statement(last, max_less);
   let check_last = js_code_between_symbols("0", at_most, n, at_most, last);
   let line_ok_last = js_code_let_statement(ok, check_last);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [n, 4],
       [max, 5],

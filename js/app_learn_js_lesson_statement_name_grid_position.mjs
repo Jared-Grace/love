@@ -6,7 +6,7 @@ import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_chair_grid } from "./app_learn_js_chair_grid.mjs";
 import { app_learn_js_chair_line_pointed } from "./app_learn_js_chair_line_pointed.mjs";
@@ -52,7 +52,7 @@ export function app_learn_js_lesson_statement_name_grid_position() {
   let columns = list_second(names);
   let percent = js_operator_percent_symbol();
   let minus = js_operator_minus_symbol();
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [chair, 7],
       [columns, 3],

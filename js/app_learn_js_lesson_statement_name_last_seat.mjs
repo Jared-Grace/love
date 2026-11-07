@@ -4,7 +4,7 @@ import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { app_learn_js_chair_emoji } from "./app_learn_js_chair_emoji.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
@@ -36,7 +36,7 @@ export function app_learn_js_lesson_statement_name_last_seat() {
   let line_after = js_code_let_statement(after, pages_less);
   let pages_more = js_code_binary_spaced_nb(after, plus, "1");
   let line_pages = js_code_let_statement(pages, pages_more);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [first, 3],
       [last, 7],

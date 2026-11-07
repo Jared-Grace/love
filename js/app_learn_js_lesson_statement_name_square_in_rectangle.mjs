@@ -8,7 +8,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_code_between_symbols } from "./js_code_between_symbols.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -70,7 +70,7 @@ export function app_learn_js_lesson_statement_name_square_in_rectangle() {
   let grid_line_c = js_code_let_statement(in_c, grid_c);
   let grid_both = js_code_binary_spaced_nb(in_r, and_op, in_c);
   let grid_line_ok = js_code_let_statement(ok, grid_both);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [
       [r, 2],
       [c, 1],

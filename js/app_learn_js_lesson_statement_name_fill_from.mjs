@@ -6,7 +6,7 @@ import { list_second } from "./list_second.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { app_learn_js_lesson_statement_name_fill_from_step } from "./app_learn_js_lesson_statement_name_fill_from_step.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
+import { app_learn_js_lesson_statement_name_swap_program } from "./app_learn_js_lesson_statement_name_swap_program.mjs";
 import { app_learn_js_lesson_statement_name_swap_ladder } from "./app_learn_js_lesson_statement_name_swap_ladder.mjs";
 import { app_learn_js_lesson_statement_name_copy } from "./app_learn_js_lesson_statement_name_copy.mjs";
 export function app_learn_js_lesson_statement_name_fill_from() {
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_statement_name_fill_from() {
   let step = app_learn_js_lesson_statement_name_fill_from_step();
   let line = property_list_first(step, "middle");
   let copied = js_code_let_statement(name_c, name_a);
-  let remember_lines = app_code_lesson_statement_name_swap_program(
+  let remember_lines = app_learn_js_lesson_statement_name_swap_program(
     [[name_a, 3]],
     [copied],
     [name_c],
