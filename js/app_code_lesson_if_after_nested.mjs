@@ -6,7 +6,7 @@ import { app_code_lesson_braces_run_after_nested } from "./app_code_lesson_brace
 import { app_learn_js_if_after_nested_explain } from "./app_learn_js_if_after_nested_explain.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
-import { app_code_if_after_nested_program_lines } from "./app_code_if_after_nested_program_lines.mjs";
+import { app_learn_js_if_after_nested_program_lines } from "./app_learn_js_if_after_nested_program_lines.mjs";
 export function app_code_lesson_if_after_nested() {
   arguments_assert(arguments, 0);
   ('an if after an if inside an if: let a = false; let b = true; if (a) { console.log("love"); if (b) { console.log("joy"); } } if (b) { console.log("peace"); } console.log("patience"); writes out peace and patience');
@@ -44,7 +44,7 @@ export function app_code_lesson_if_after_nested() {
   );
   let lesson = app_code_lesson_if_ab_logged(
     fruits,
-    app_code_if_after_nested_program_lines,
+    app_learn_js_if_after_nested_program_lines,
     4,
     true,
     above,

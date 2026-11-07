@@ -8,7 +8,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_if_after_nested_program_lines } from "./app_code_if_after_nested_program_lines.mjs";
+import { app_learn_js_if_after_nested_program_lines } from "./app_learn_js_if_after_nested_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 export function app_learn_js_if_after_nested_explain(root, context) {
@@ -42,7 +42,10 @@ export function app_learn_js_if_after_nested_explain(root, context) {
     "if",
     ":",
   ]);
-  let all_lines = app_code_if_after_nested_program_lines([true, true], words);
+  let all_lines = app_learn_js_if_after_nested_program_lines(
+    [true, true],
+    words,
+  );
   let all_written = list_join_newline(words);
   app_learn_js_code_lines_writes_out(box_two, all_lines, all_written);
   app_learn_js_div_cycle_code(box_two, ["", if_joy, " is inside ", if_a]);
@@ -64,7 +67,10 @@ export function app_learn_js_if_after_nested_explain(root, context) {
     "false",
     ":",
   ]);
-  let none_lines = app_code_if_after_nested_program_lines([false, true], words);
+  let none_lines = app_learn_js_if_after_nested_program_lines(
+    [false, true],
+    words,
+  );
   let none_written = list_join_newline([peace, patience]);
   app_learn_js_code_lines_writes_out(box_three, none_lines, none_written);
   app_learn_js_div_cycle_code(box_three, [
