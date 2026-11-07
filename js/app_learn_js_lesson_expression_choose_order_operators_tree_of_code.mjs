@@ -10,7 +10,7 @@ import { or } from "./or.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { text_split_space } from "./text_split_space.mjs";
-export function app_code_lesson_expression_choose_order_operators_tree_of_code(
+export function app_learn_js_lesson_expression_choose_order_operators_tree_of_code(
   code,
 ) {
   function_duplicate_kind_parallel();

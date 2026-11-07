@@ -1,7 +1,7 @@
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_value } from "./app_learn_js_expression_value.mjs";
 import { app_learn_js_lesson_expression_choose_order_operators_expression } from "./app_learn_js_lesson_expression_choose_order_operators_expression.mjs";
-import { app_code_lesson_expression_choose_order_operators_tree_of_code } from "./app_code_lesson_expression_choose_order_operators_tree_of_code.mjs";
+import { app_learn_js_lesson_expression_choose_order_operators_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_operators_tree_of_code.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
@@ -41,7 +41,9 @@ export function app_learn_js_lesson_expression_choose_order_operators_questions(
   function tree_for(question) {
     "the shape behind a line, worked out again from the writing it was printed as";
     let tree =
-      app_code_lesson_expression_choose_order_operators_tree_of_code(question);
+      app_learn_js_lesson_expression_choose_order_operators_tree_of_code(
+        question,
+      );
     return tree;
   }
   function tree_of(qa, info) {
