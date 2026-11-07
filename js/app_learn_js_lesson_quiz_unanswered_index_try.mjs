@@ -10,7 +10,7 @@ import { equal } from "./equal.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_first_try } from "./list_first_try.mjs";
-export function app_code_lesson_quiz_unanswered_index_try(
+export function app_learn_js_lesson_quiz_unanswered_index_try(
   context,
   quizzes,
   quiz_index,

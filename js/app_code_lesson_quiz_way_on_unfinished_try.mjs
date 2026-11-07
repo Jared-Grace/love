@@ -1,7 +1,7 @@
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_unanswered_index_try } from "./app_code_lesson_quiz_unanswered_index_try.mjs";
+import { app_learn_js_lesson_quiz_unanswered_index_try } from "./app_learn_js_lesson_quiz_unanswered_index_try.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { add_1 } from "./add_1.mjs";
 import { not } from "./not.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_quiz_way_on_unfinished_try(
   "A QUIZ OF THIS LESSON IS LOOKED FOR FIRST, because work left behind where the learner is standing is nearer than work anywhere else in the course, and going to it does not take them out of the lesson they are reading.";
   "What comes back says WHICH KIND it is, because the kinds are gone to in different ways and are told to the learner in different words, and neither the going nor the telling can work that out from a place alone.";
   arguments_assert(arguments, 4);
-  let index_quiz = app_code_lesson_quiz_unanswered_index_try(
+  let index_quiz = app_learn_js_lesson_quiz_unanswered_index_try(
     context,
     quizzes,
     quiz_index,
