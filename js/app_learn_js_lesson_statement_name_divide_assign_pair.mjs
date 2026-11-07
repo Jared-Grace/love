@@ -10,7 +10,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_lesson_statement_name_shorter_above } from "./app_code_lesson_statement_name_shorter_above.mjs";
 import { app_learn_js_lesson_statement_name_itself_sum } from "./app_learn_js_lesson_statement_name_itself_sum.mjs";
-import { app_code_lesson_statement_name_quotient_number_pairs } from "./app_code_lesson_statement_name_quotient_number_pairs.mjs";
+import { app_learn_js_lesson_statement_name_quotient_number_pairs } from "./app_learn_js_lesson_statement_name_quotient_number_pairs.mjs";
 import { app_learn_js_lesson_statement_name_first_written_batch } from "./app_learn_js_lesson_statement_name_first_written_batch.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
 export function app_learn_js_lesson_statement_name_divide_assign_pair() {
@@ -51,7 +51,7 @@ export function app_learn_js_lesson_statement_name_divide_assign_pair() {
   }
   function batch() {
     "pairs that divide with nothing left over, with the short line";
-    let pairs = app_code_lesson_statement_name_quotient_number_pairs();
+    let pairs = app_learn_js_lesson_statement_name_quotient_number_pairs();
     let codes = app_learn_js_lesson_statement_name_first_written_batch(
       pairs,
       short,

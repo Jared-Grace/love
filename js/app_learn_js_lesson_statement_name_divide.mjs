@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { app_code_lesson_statement_names_binary } from "./app_code_lesson_statement_names_binary.mjs";
-import { app_code_lesson_statement_name_quotient_number_pairs } from "./app_code_lesson_statement_name_quotient_number_pairs.mjs";
+import { app_learn_js_lesson_statement_name_quotient_number_pairs } from "./app_learn_js_lesson_statement_name_quotient_number_pairs.mjs";
 import { app_learn_js_lesson_operators_slash_forward } from "./app_learn_js_lesson_operators_slash_forward.mjs";
 export function app_learn_js_lesson_statement_name_divide() {
   arguments_assert(arguments, 0);
@@ -11,7 +11,7 @@ export function app_learn_js_lesson_statement_name_divide() {
   let lesson = app_code_lesson_statement_names_binary({
     words: "Dividing two names",
     symbol: slash,
-    pairs_get: app_code_lesson_statement_name_quotient_number_pairs,
+    pairs_get: app_learn_js_lesson_statement_name_quotient_number_pairs,
     example_pair: [12, 4],
     remember_lesson: app_learn_js_lesson_operators_slash_forward,
     remember_parts: ["we can divide (", slash, ") one number by another:"],
