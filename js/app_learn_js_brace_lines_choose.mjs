@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_braces_color_next } from "./app_code_braces_color_next.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_brace_lines_draw } from "./app_code_brace_lines_draw.mjs";
+import { app_learn_js_brace_lines_draw } from "./app_learn_js_brace_lines_draw.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
 import { property_get } from "./property_get.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_brace_lines_choose(
   ("A line tapped right wears the pair's colour and stays so; a line tapped wrong is turned red until a right one is tapped, and a line already chosen does nothing when tapped again.");
   let color = app_code_braces_color_next();
   html_div_text(parent, "Tap every line between the coloured braces:");
-  let entries = app_code_brace_lines_draw(parent, question, color, true);
+  let entries = app_learn_js_brace_lines_draw(parent, question, color, true);
   let wanted = [];
   let refused = [];
   let state = {
