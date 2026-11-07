@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_fruit_emoji } from "./app_code_lesson_fruit_emoji.mjs";
+import { app_learn_js_lesson_fruit_emoji } from "./app_learn_js_lesson_fruit_emoji.mjs";
 import { app_learn_js_cup } from "./app_learn_js_cup.mjs";
 export function app_learn_js_lesson_cup_fruit(parent, word, name, names) {
   arguments_assert(arguments, 4);
@@ -7,7 +7,7 @@ export function app_learn_js_lesson_cup_fruit(parent, word, name, names) {
   ("Asked for by the word, so a screen names what is in the cup once and the picture follows. Four screens used to fetch the picture themselves and hand it over beside the word, which is the same fact carried twice and two chances to carry it wrong.");
   ("The plain cup keeps its own name for the screens that draw one with nothing in it, which is a picture rather than a fruit and has no word to be asked by.");
   ("The lesson's names are carried straight through to the cup, which is what writes the letter in that name's colour. Nothing is decided on the way; this stands between a screen and the cup only to turn a word into a picture.");
-  let emoji = app_code_lesson_fruit_emoji(word);
+  let emoji = app_learn_js_lesson_fruit_emoji(word);
   let cup = app_learn_js_cup(parent, emoji, name, names);
   return cup;
 }

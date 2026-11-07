@@ -6,7 +6,7 @@ import { property_name_internal_not_assert } from "./property_name_internal_not_
 import { emoji_grape } from "./emoji_grape.mjs";
 import { emoji_olive } from "./emoji_olive.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_fruit_emoji(word) {
+export function app_learn_js_lesson_fruit_emoji(word) {
   arguments_assert(arguments, 1);
   ("the picture drawn inside a cup, given the word the screen writes out for what is in it");
   ("The picture and the word are one fact, and every cup screen had them as two: it fetched the word from one place and the picture from another, and nothing anywhere said which picture went with which word. A screen could draw olives and write out grapes and no gate would have anything to say about it.");
