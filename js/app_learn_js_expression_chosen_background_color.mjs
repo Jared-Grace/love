@@ -1,7 +1,7 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_shared_color_brand_blue } from "./app_shared_color_brand_blue.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_expression_chosen_background_color() {
+export function app_learn_js_expression_chosen_background_color() {
   function_duplicate_kind_parallel();
   arguments_assert(arguments, 0);
   ("the colour a piece of a line wears while it is the piece being worked out: the block a learner has just chosen, the words naming it, and what it comes to on its way down");
