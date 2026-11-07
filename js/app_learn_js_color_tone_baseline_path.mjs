@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { data_given_baselines_folder } from "./data_given_baselines_folder.mjs";
 import { path_join } from "./path_join.mjs";
-export function app_code_color_tone_baseline_path() {
+export function app_learn_js_color_tone_baseline_path() {
   arguments_assert(arguments, 0);
   ("where the list of hues that do not yet hold exactly one dark colour and one light one is kept. Reading it, rewriting it and refusing to let it change quietly are separate functions, so the name of the file is spelled once here rather than once in each of them.");
   let v = data_given_baselines_folder();

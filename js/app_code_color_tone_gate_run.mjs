@@ -3,7 +3,7 @@ import { app_learn_js_color_hue_groups } from "./app_learn_js_color_hue_groups.m
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_color_tone_faults } from "./app_code_color_tone_faults.mjs";
-import { app_code_color_tone_baseline_path } from "./app_code_color_tone_baseline_path.mjs";
+import { app_learn_js_color_tone_baseline_path } from "./app_learn_js_color_tone_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
 export async function app_code_color_tone_gate_run() {
@@ -22,7 +22,7 @@ export async function app_code_color_tone_gate_run() {
     walked = walked + list_size(dark) + list_size(light);
   }
   let faults = app_code_color_tone_faults();
-  let path = app_code_color_tone_baseline_path();
+  let path = app_learn_js_color_tone_baseline_path();
   let told = await baseline_names_gate_generic(
     faults,
     path,
