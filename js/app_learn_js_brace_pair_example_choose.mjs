@@ -1,6 +1,6 @@
 import { app_code_expression_operator_chip } from "./app_code_expression_operator_chip.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
+import { app_learn_js_brace_unmarked } from "./app_learn_js_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
 import { app_code_braces_color_next } from "./app_code_braces_color_next.mjs";
@@ -41,7 +41,7 @@ export function app_learn_js_brace_pair_example_choose(
   ("Nothing is counted here, as in the worked examples of The order of the tokens: a wrong brace is turned red until the right one is tapped, and the right one takes the colour of the brace pointed at, with the praise those examples end with under it.");
   ("The brace pointed at wears a colour from the bag every pair of braces draws from, so it changes from one example to the next, as the human asked 2026-10-11. It wears the same chip as the braces that can be tapped, so all of them are the same width and the pointed-at one differs only by its colour. The chip is the full one an operator wears, not the thin one every token of a line wears, because here only the braces are chips, and the human asked 2026-10-11 for every brace to be padded.");
   ("Takes the example's outer box as well because that is how every worked example is drawn; the choosing needs only the box it is drawn in.");
-  let unmarked = app_code_brace_unmarked(text);
+  let unmarked = app_learn_js_brace_unmarked(text);
   let code = property_get(unmarked, "code");
   let index = property_get(unmarked, "index");
   let partner = js_code_brace_partner_index(code, index);

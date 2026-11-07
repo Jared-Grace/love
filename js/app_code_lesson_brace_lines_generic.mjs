@@ -4,7 +4,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { modulo } from "./modulo.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
-import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
+import { app_learn_js_brace_unmarked } from "./app_learn_js_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
   let left = js_code_brace_left();
   function between_lines(question) {
     "the lines standing between the pointed-at { and the } that closes it, one under another";
-    let unmarked = app_code_brace_unmarked(question);
+    let unmarked = app_learn_js_brace_unmarked(question);
     let code = property_get(unmarked, "code");
     let open = property_get(unmarked, "index");
     let close = js_code_brace_partner_index(code, open);

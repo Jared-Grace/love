@@ -3,7 +3,7 @@ import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
+import { app_learn_js_brace_unmarked } from "./app_learn_js_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
 import { integer_is_assert } from "./integer_is_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -20,7 +20,7 @@ export function app_code_code_dark_lines_brace_marked(component, text) {
   html_text_align_left(component);
   let nothing = text_empty();
   html_text_set(component, nothing);
-  let unmarked = app_code_brace_unmarked(text);
+  let unmarked = app_learn_js_brace_unmarked(text);
   let code = property_get(unmarked, "code");
   let index = property_get(unmarked, "index");
   integer_is_assert(index);

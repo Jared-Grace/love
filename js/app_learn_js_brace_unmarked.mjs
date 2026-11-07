@@ -6,7 +6,7 @@ import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { assert } from "./assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_brace_unmarked(text) {
+export function app_learn_js_brace_unmarked(text) {
   arguments_assert(arguments, 1);
   ("the code a marked question holds, and where in that code the pointed-at brace stands; the index is -1 when nothing is pointed at");
   let left = app_learn_js_brace_mark_left();

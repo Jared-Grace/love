@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
+import { app_learn_js_brace_unmarked } from "./app_learn_js_brace_unmarked.mjs";
 import { equal } from "./equal.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -14,7 +14,7 @@ export function app_learn_js_brace_pair_wrong_say(question, answer, choice) {
   ("for a quiz asking which brace pairs with the one pointed at: walks from the pointed-at brace the way ",
     fn_name("js_code_brace_partner_index"),
     " does, counting each brace of its own kind as 1 more and each of the other kind as 1 less, and names the block the pair belongs to; null when nothing is pointed at");
-  let unmarked = app_code_brace_unmarked(question);
+  let unmarked = app_learn_js_brace_unmarked(question);
   let code = unmarked.code;
   let index = unmarked.index;
   if (equal(index, -1)) {

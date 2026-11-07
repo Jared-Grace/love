@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
+import { app_learn_js_brace_unmarked } from "./app_learn_js_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
 import { html_div } from "./html_div.mjs";
@@ -26,7 +26,7 @@ export function app_learn_js_brace_lines_draw(parent, question, color, chips) {
   ("A line is between the pair when it starts after the { and ends before the }, so the line holding either brace is not between it.");
   ("Every line is a pale chip, the same chip every other choosing in this app is drawn with, so the learner can see what can be tapped; when chips is false the lines are drawn plain, for code that is only read, as the human asked 2026-10-11 so the worked example does not look like buttons. The spaces a line is indented by are left outside its chip, so the shape of the code stays as it is written.");
   ("Drawn once here for the line choosing and for the worked example shown above it, so the example a learner reads and the code they then tap look the same.");
-  let unmarked = app_code_brace_unmarked(question);
+  let unmarked = app_learn_js_brace_unmarked(question);
   let code = property_get(unmarked, "code");
   let open = property_get(unmarked, "index");
   let close = js_code_brace_partner_index(code, open);

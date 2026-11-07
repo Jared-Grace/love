@@ -9,7 +9,7 @@ import { list_get } from "./list_get.mjs";
 import { modulo } from "./modulo.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_brace_marked } from "./app_learn_js_brace_marked.mjs";
-import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
+import { app_learn_js_brace_unmarked } from "./app_learn_js_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_brace_pair_generic(
   }
   function partner_marked(question) {
     "the same program with the partner of the pointed-at brace pointed at instead";
-    let unmarked = app_code_brace_unmarked(question);
+    let unmarked = app_learn_js_brace_unmarked(question);
     let code3 = property_get(unmarked, "code");
     let index3 = property_get(unmarked, "index");
     let partner = js_code_brace_partner_index(code3, index3);
@@ -79,7 +79,7 @@ export function app_code_lesson_brace_pair_generic(
   let batch = app_learn_js_batch_question_answer_fns(batch_get, partner_marked);
   function decoys(question, answer) {
     "every other brace of the kind asked for, each once and never the answer";
-    let unmarked2 = app_code_brace_unmarked(question);
+    let unmarked2 = app_learn_js_brace_unmarked(question);
     let code4 = property_get(unmarked2, "code");
     let index4 = property_get(unmarked2, "index");
     let partner2 = js_code_brace_partner_index(code4, index4);
