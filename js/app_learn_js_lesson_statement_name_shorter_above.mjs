@@ -5,7 +5,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_code_lines_writes_out_watched } from "./app_learn_js_code_lines_writes_out_watched.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_statement_name_shorter_above({
+export function app_learn_js_lesson_statement_name_shorter_above({
   root,
   context,
   lesson_from,

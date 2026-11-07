@@ -8,7 +8,7 @@ import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_assign_operator_statement } from "./js_code_assign_operator_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { app_code_lesson_statement_name_shorter_above } from "./app_code_lesson_statement_name_shorter_above.mjs";
+import { app_learn_js_lesson_statement_name_shorter_above } from "./app_learn_js_lesson_statement_name_shorter_above.mjs";
 import { app_learn_js_lesson_statement_name_itself_sum } from "./app_learn_js_lesson_statement_name_itself_sum.mjs";
 import { app_learn_js_lesson_statement_name_product_number_pairs } from "./app_learn_js_lesson_statement_name_product_number_pairs.mjs";
 import { app_learn_js_lesson_statement_name_first_written_batch } from "./app_learn_js_lesson_statement_name_first_written_batch.mjs";
@@ -35,7 +35,7 @@ export function app_code_lesson_statement_name_times_assign_pair() {
     let code2 = js_code_let_statement(name_last, 7);
     let statement = js_code_console_log_statement(name_first);
     let lines_long = [code, code2, long, statement];
-    app_code_lesson_statement_name_shorter_above({
+    app_learn_js_lesson_statement_name_shorter_above({
       root,
       context,
       lesson_from: app_learn_js_lesson_statement_name_itself_sum,
