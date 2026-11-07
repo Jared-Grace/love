@@ -1,7 +1,7 @@
 import { app_learn_js_expression_chosen_background_color } from "./app_learn_js_expression_chosen_background_color.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
 import { html_style_code_generic } from "./html_style_code_generic.mjs";
-export function app_code_expression_chosen_code(component) {
+export function app_learn_js_expression_chosen_code(component) {
   "a piece of code wearing the blue a chosen block on the line wears, so a word in a sentence and the block it is talking about are seen to be the same thing";
   "The dark one is code at rest and this one is code that has been picked out. Both read the blue from the one place it is named, so a sentence naming the block never drifts from the block itself.";
   let color_box_shadow = "transparent";
