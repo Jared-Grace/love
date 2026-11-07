@@ -13,7 +13,7 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_two_places } from "./app_code_lesson_expression_parentheses_moved_card_two_places.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_worked } from "./app_code_lesson_expression_parentheses_moved_card_worked.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_different_answer } from "./app_code_lesson_expression_parentheses_moved_card_different_answer.mjs";
-import { app_code_lesson_expression_parentheses_moved_card_changes_nothing } from "./app_code_lesson_expression_parentheses_moved_card_changes_nothing.mjs";
+import { app_learn_js_lesson_expression_parentheses_moved_card_changes_nothing } from "./app_learn_js_lesson_expression_parentheses_moved_card_changes_nothing.mjs";
 export function app_code_lesson_expression_parentheses_moved() {
   "the same three numbers and the same two operators, with the ( and ) in one of two places: (2 + 3) * 4 is 20 and 2 + (3 * 4) is 14. The first parentheses lesson showed the parentheses against no parentheses. This one shows them against THEMSELVES - nothing on the line differs except where the pair sits, so the answer can only come from reading their position. That is also the first place a learner sees parentheses that change nothing: 2 + (3 * 4) is what 2 + 3 * 4 already did, because the parentheses there agree with the * being stronger.";
   "The two wrong answers offered are the values of BOTH placements. One of them is the real answer and the multiple choice drops it as a duplicate, so what is left is always the other placement - the exact mistake of reading the parentheses in the wrong spot.";
@@ -83,7 +83,7 @@ export function app_code_lesson_expression_parentheses_moved() {
       open,
       close,
     );
-    app_code_lesson_expression_parentheses_moved_card_changes_nothing(
+    app_learn_js_lesson_expression_parentheses_moved_card_changes_nothing(
       root,
       plus,
       times,
