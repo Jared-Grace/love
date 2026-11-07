@@ -9,7 +9,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
-import { app_code_lesson_statement_name_rows_down } from "./app_code_lesson_statement_name_rows_down.mjs";
+import { app_learn_js_lesson_statement_name_rows_down } from "./app_learn_js_lesson_statement_name_rows_down.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_learn_js_lesson_statement_name_pages_read() {
   arguments_assert(arguments, 0);
@@ -67,7 +67,7 @@ export function app_learn_js_lesson_statement_name_pages_read() {
     values_get,
     example_values: [3, 7],
     step,
-    remember_lesson: app_code_lesson_statement_name_rows_down,
+    remember_lesson: app_learn_js_lesson_statement_name_rows_down,
     remember_parts: ["we can find how many rows down:"],
     remember_lines,
     explain: [

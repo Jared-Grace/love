@@ -12,7 +12,7 @@ import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_sta
 import { app_code_lesson_statement_name_subtract } from "./app_code_lesson_statement_name_subtract.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_rows_down() {
+export function app_learn_js_lesson_statement_name_rows_down() {
   arguments_assert(arguments, 0);
   ("how many rows down from one row to a later one: let rows = r2 - r1; - the first of three lessons toward the steps between two squares of a grid, then Math.abs for either direction, then rows and columns added. The split was chosen by the human 2026-10-01, so each lesson asks one new thing. Not picked: a lesson for rows and another for columns, which would teach the same line twice under other names.");
   ("The names r1 and r2 rather than row1 and row2 because the lesson after this one wraps the same subtraction in Math.abs, and Math.abs(row2 - row1) is past the 30 characters a code line may be. Every question has r2 past r1, so the answer is never negative - the negative is the next lesson's question.");
