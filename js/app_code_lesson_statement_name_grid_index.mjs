@@ -13,7 +13,7 @@ import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { each_index } from "./each_index.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { app_code_chair_line_pointed } from "./app_code_chair_line_pointed.mjs";
+import { app_learn_js_chair_line_pointed } from "./app_learn_js_chair_line_pointed.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -131,7 +131,7 @@ export function app_code_lesson_statement_name_grid_index() {
   let color_count = app_code_highlight_color_fifth();
   function pointed(parts) {
     "a line wearing the grid's colours: the blue chairs blue, chair 7 green, row 2 and column 1 in the headings' colours, and the 3 chairs in a row in the fifth colour";
-    let draw = app_code_chair_line_pointed(parts, ["2"], ["1"]);
+    let draw = app_learn_js_chair_line_pointed(parts, ["2"], ["1"]);
     return draw;
   }
   let code = js_code_binary_result_nb("2", times, "3", "6");

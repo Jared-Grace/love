@@ -6,7 +6,7 @@ import { app_code_highlight_color_second } from "./app_code_highlight_color_seco
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_code_highlight_color_fourth } from "./app_code_highlight_color_fourth.mjs";
 import { app_code_highlight_color_fifth } from "./app_code_highlight_color_fifth.mjs";
-export function app_code_chair_line_pointed(
+export function app_learn_js_chair_line_pointed(
   parts,
   row_numbers,
   column_numbers,
