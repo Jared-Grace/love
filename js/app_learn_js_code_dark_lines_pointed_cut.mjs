@@ -11,7 +11,7 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_text_code_breakable_add } from "./html_text_code_breakable_add.mjs";
-export function app_code_code_dark_lines_pointed_cut(cut) {
+export function app_learn_js_code_dark_lines_pointed_cut(cut) {
   "a painter for a program on more than one line, drawing it as the note-dimming writer does and then handing each whole number and whole name to cut, which answers with the pieces to draw it as, each a pair of its text and the colour to put behind it, or null for none";
   "cut is what differs between painters: one colours a whole number a pointer names, another also colours part of a number, such as the 3 at the end of 123. The walk over the runs and the drawing of each piece are written once here, so the two cannot drift apart.";
   "It is drawn over the note-dimming writer's own runs rather than beside them, so the names keep the colours that writer gives them and a note stays dim.";

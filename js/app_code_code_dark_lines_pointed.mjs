@@ -1,4 +1,4 @@
-import { app_code_code_dark_lines_pointed_cut } from "./app_code_code_dark_lines_pointed_cut.mjs";
+import { app_learn_js_code_dark_lines_pointed_cut } from "./app_learn_js_code_dark_lines_pointed_cut.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_pointer_color_or_null } from "./app_code_pointer_color_or_null.mjs";
 export function app_code_code_dark_lines_pointed(pointers) {
@@ -11,6 +11,6 @@ export function app_code_code_dark_lines_pointed(pointers) {
     let drawn = [[piece, color]];
     return drawn;
   }
-  let paint = app_code_code_dark_lines_pointed_cut(cut);
+  let paint = app_learn_js_code_dark_lines_pointed_cut(cut);
   return paint;
 }

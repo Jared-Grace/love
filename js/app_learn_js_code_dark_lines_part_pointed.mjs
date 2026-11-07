@@ -3,7 +3,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_pointer_color_or_null } from "./app_code_pointer_color_or_null.mjs";
-import { app_code_code_dark_lines_pointed_cut } from "./app_code_code_dark_lines_pointed_cut.mjs";
+import { app_learn_js_code_dark_lines_pointed_cut } from "./app_learn_js_code_dark_lines_pointed_cut.mjs";
 export function app_learn_js_code_dark_lines_part_pointed(
   pointers,
   part,
@@ -40,7 +40,7 @@ export function app_learn_js_code_dark_lines_part_pointed(
       count = count + 1;
       return drawn;
     }
-    let draw = app_code_code_dark_lines_pointed_cut(cut);
+    let draw = app_learn_js_code_dark_lines_pointed_cut(cut);
     draw(component, code);
   }
   return paint;
