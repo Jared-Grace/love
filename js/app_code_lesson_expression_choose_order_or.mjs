@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_or_title_name_id } from "./app_code_lesson_expression_choose_order_or_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_or_questions } from "./app_code_lesson_expression_choose_order_or_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
-import { app_code_lesson_expression_choose_order_or_above } from "./app_code_lesson_expression_choose_order_or_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_or_above } from "./app_learn_js_lesson_expression_choose_order_or_above.mjs";
 export function app_code_lesson_expression_choose_order_or() {
   arguments_assert(arguments, 0);
   ("a comparison either side of ||, taken a press at a time: 3 < 5 || 2 < 4, choose either comparison, choose what it comes to, choose the other, choose what it comes to, then choose the || between them");
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_choose_order_or() {
   let bank = app_code_lesson_expression_choose_order_or_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
-    app_code_lesson_expression_choose_order_or_above,
+    app_learn_js_lesson_expression_choose_order_or_above,
     bank,
   );
   return lesson;
