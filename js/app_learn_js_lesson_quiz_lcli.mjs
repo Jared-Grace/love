@@ -5,7 +5,7 @@ import { list_index_last_is } from "./list_index_last_is.mjs";
 import { app_learn_js_lesson_current_number } from "./app_learn_js_lesson_current_number.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_learn_js_lesson_current_last_is } from "./app_learn_js_lesson_current_last_is.mjs";
-export function app_code_lesson_quiz_lcli({
+export function app_learn_js_lesson_quiz_lcli({
   info,
   qa,
   container_blue_light,

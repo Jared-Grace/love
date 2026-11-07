@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_lcli } from "./app_code_lesson_quiz_lcli.mjs";
+import { app_learn_js_lesson_quiz_lcli } from "./app_learn_js_lesson_quiz_lcli.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_lesson_next_none_is } from "./app_learn_js_lesson_next_none_is.mjs";
 export function app_code_lesson_quiz_no_more({
@@ -12,7 +12,7 @@ export function app_code_lesson_quiz_no_more({
   quizzes,
 }) {
   arguments_assert(arguments, 1);
-  let r4 = app_code_lesson_quiz_lcli({
+  let r4 = app_learn_js_lesson_quiz_lcli({
     info,
     qa,
     container_blue_light,
