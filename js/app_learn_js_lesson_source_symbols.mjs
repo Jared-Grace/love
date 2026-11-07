@@ -4,7 +4,7 @@ import { text_includes } from "./text_includes.mjs";
 import { app_code_lesson_symbol_source_symbols } from "./app_code_lesson_symbol_source_symbols.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_unique } from "./list_unique.mjs";
-export async function app_code_lesson_source_symbols(source, source_names) {
+export async function app_learn_js_lesson_source_symbols(source, source_names) {
   arguments_assert(arguments, 2);
   ("every operator symbol one file of a lesson SHOWS: the ones it spells in a short quoted piece, and the ones it gets by asking a function that stands for a symbol.");
   ("The symbol-standing functions are handed in rather than found here, because the same list serves every file of every lesson and working it out again per file would run the whole repo's names past the same four tests forty times over.");
