@@ -87,6 +87,8 @@ import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { text_trim } from "./text_trim.mjs";
+import { object_copy_property_set } from "./object_copy_property_set.mjs";
+import { list_copy } from "./list_copy.mjs";
 import { app_code_program_step_guide_line_next } from "./app_code_program_step_guide_line_next.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { property_in_list } from "./property_in_list.mjs";
@@ -725,13 +727,49 @@ export function app_code_program_step_through_generic(
     ];
     return r12;
   }
+  function trace_piece_named_now(index) {
+    "the trace with the piece due to run next named as it reads on the screen now; the trace itself when no piece is due";
+    if (list_index_past_end_is(trace, index)) {
+      return trace;
+    }
+    let entry_now = list_get(trace, index);
+    let piece_now = property_get_or(entry_now, "piece", null);
+    if (null_is(piece_now)) {
+      return trace;
+    }
+    let line_now = property_get(entry_now, "line");
+    let pieces_now = list_get(row_pieces, line_now);
+    let from_now = property_get(piece_now, "from");
+    for (let k = 0; less_than(k, list_size(pieces_now)); k++) {
+      let piece_k = list_get(pieces_now, k);
+      let from_k = property_get(piece_k, "from");
+      if (equal(from_k, from_now)) {
+        let text_now = list_get(shown, line_now);
+        let at = position_now(line_now, from_now);
+        let end = piece_to_now(line_now, k);
+        let read_now = text_slice(text_now, at, end);
+        let piece_read = object_copy_property_set(piece_now, "text", read_now);
+        let entry_read = object_copy_property_set(
+          entry_now,
+          "piece",
+          piece_read,
+        );
+        let copied = list_copy(trace);
+        list_set(copied, index, entry_read);
+        return copied;
+      }
+    }
+    return trace;
+  }
   function next_line_ask() {
     "the learner says which line runs next, or that the program is complete";
     html_clear(ask);
     rows_pieces_draw();
     let index = property_get(state, "index");
     ("2026-10-29, at the human's asking: the line to choose is named as it reads on the screen now, so a while run again is named while (true) {, the way it shows, and not as it is written");
-    let r = app_code_program_step_guide_line_next(shown, trace, index);
+    ("2026-11-07, at the human's asking: a piece of a line is named the same way, so a for's condition come round again is named true, the way it shows, until the learner resets it");
+    let trace_now = trace_piece_named_now(index);
+    let r = app_code_program_step_guide_line_next(shown, trace_now, index);
     let done = list_index_past_end_is(trace, index);
     let holder = {
       button: null,

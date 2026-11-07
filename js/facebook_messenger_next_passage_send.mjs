@@ -1,15 +1,16 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { facebook_page_open } from "./facebook_page_open.mjs";
 import { sleep } from "./sleep.mjs";
 import { facebook_messenger_next_passage_plan_text } from "./facebook_messenger_next_passage_plan_text.mjs";
-import { puppeteer_type_lines } from "./puppeteer_type_lines.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { puppeteer_type_lines } from "./puppeteer_type_lines.mjs";
 import { facebook_messenger_messages } from "./facebook_messenger_messages.mjs";
 export async function facebook_messenger_next_passage_send(thread_url) {
   "$plain thread_url";
   "Once a day: when your last message in the conversation at thread_url has been answered by Amen or praying hands alone, sends the next passage - the words its next-passage link's page copies - and answers what it did. Any other reply, or none yet, sends nothing, so a person answers it.";
   "★ IT IS SAFE TO RUN AGAIN: once sent, your message is the last one and nothing has answered it, so a second run sends nothing.";
+  "★ IT TYPES NOTHING WHILE ANY DIALOG IS OPEN, and answers the dialog's words instead: on 2026-11-07 a PIN prompt covered the chat and took the passage's digits as wrong PINs.";
   "It checks afterwards that your last message now begins with the passage's first line, and says sent: false when it does not.";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
   let main =
@@ -21,6 +22,21 @@ export async function facebook_messenger_next_passage_send(thread_url) {
     let before = await page.evaluate(main);
     let r = await facebook_messenger_next_passage_plan_text(before);
     if (!r.send) {
+      return r;
+    }
+    let dialog = await page.evaluate(
+      "(function(){var d=document.querySelector('[role=dialog]');return d?(d.innerText||'').trim().slice(0,200):null})()",
+    );
+    if (dialog !== null) {
+      let name2 = text_combine_multiple([
+        fn_name("facebook_messenger_next_passage_send"),
+        ".png",
+      ]);
+      await page.screenshot({
+        path: folder_gitignore_join(name2),
+      });
+      r.send = false;
+      r.dialog = dialog;
       return r;
     }
     let box = await page.waitForSelector(
