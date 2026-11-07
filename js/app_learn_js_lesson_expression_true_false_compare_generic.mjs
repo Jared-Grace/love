@@ -17,7 +17,7 @@ import { js_keyword_true } from "./js_keyword_true.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_true_false_compare_generic(
+export function app_learn_js_lesson_expression_true_false_compare_generic(
   operator,
 ) {
   arguments_assert(arguments, 1);
