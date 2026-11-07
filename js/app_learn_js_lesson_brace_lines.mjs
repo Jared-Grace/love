@@ -10,7 +10,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_brace_lines_generic } from "./app_learn_js_lesson_brace_lines_generic.mjs";
 import { app_learn_js_brace_pair_programs_three } from "./app_learn_js_brace_pair_programs_three.mjs";
-export function app_code_lesson_brace_lines() {
+export function app_learn_js_lesson_brace_lines() {
   arguments_assert(arguments, 0);
   ("which lines stand between a pair of braces, in programs with three pairs of braces: the learner taps every line between a { and the } that closes it");
   ("Asked for by the human 2026-10-11, as the version of The lines between braces, two pairs with three pairs, placed straight after it.");

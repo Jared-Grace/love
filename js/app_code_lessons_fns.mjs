@@ -280,7 +280,7 @@ import { app_code_lesson_if_nested } from "./app_code_lesson_if_nested.mjs";
 import { app_code_lesson_token_order_braces_three } from "./app_code_lesson_token_order_braces_three.mjs";
 import { app_code_lesson_token_order_braces_three_plain } from "./app_code_lesson_token_order_braces_three_plain.mjs";
 import { app_code_lesson_brace_pair } from "./app_code_lesson_brace_pair.mjs";
-import { app_code_lesson_brace_lines } from "./app_code_lesson_brace_lines.mjs";
+import { app_learn_js_lesson_brace_lines } from "./app_learn_js_lesson_brace_lines.mjs";
 import { app_code_lesson_braces_run_after_nested } from "./app_code_lesson_braces_run_after_nested.mjs";
 import { app_code_lesson_if_after_nested } from "./app_code_lesson_if_after_nested.mjs";
 import { app_code_lesson_braces_run_if_else_in_if } from "./app_code_lesson_braces_run_if_else_in_if.mjs";
@@ -641,7 +641,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_token_order_braces_three,
     app_code_lesson_token_order_braces_three_plain,
     app_code_lesson_brace_pair,
-    app_code_lesson_brace_lines,
+    app_learn_js_lesson_brace_lines,
     app_code_lesson_braces_run_after_nested,
     app_code_lesson_if_after_nested,
     app_code_lesson_braces_run_if_else_in_if,
