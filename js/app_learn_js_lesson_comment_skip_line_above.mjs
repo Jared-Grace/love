@@ -11,7 +11,7 @@ import { js_comment_start } from "./js_comment_start.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_lesson_comment_skip_line_above(root, context) {
+export function app_learn_js_lesson_comment_skip_line_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the two lines that write out, then the slashes put in front of the second of them, then the same slashes put in front of the first instead");
   ("The first box is the program from the screen before this one, numbers and all. A learner who has just read it reads it here as something they already know, which is what makes the second box a single change rather than a new program.");
