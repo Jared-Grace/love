@@ -9,7 +9,7 @@ import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_times_divide() {
+export function app_learn_js_lesson_expression_times_divide() {
   "mixing * and / in one expression: a * b / c and a / b * c; * and / are the same strength, so it just works from left to right; each triple is built so a = b * c, which keeps BOTH arrangements whole numbers (a * b / c and a / b * c) - no decimals either way";
   let times = js_operator_asterisk_symbol();
   let divided = js_operator_division_symbol();
