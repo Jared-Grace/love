@@ -6,7 +6,7 @@ import { equal } from "./equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { or } from "./or.mjs";
-export function app_code_lesson_family_telling_bank_itself(
+export function app_learn_js_lesson_family_telling_bank_itself(
   family,
   counted,
   root,

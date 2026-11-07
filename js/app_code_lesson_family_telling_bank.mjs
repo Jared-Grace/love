@@ -1,4 +1,4 @@
-import { app_code_lesson_family_telling_bank_itself } from "./app_code_lesson_family_telling_bank_itself.mjs";
+import { app_learn_js_lesson_family_telling_bank_itself } from "./app_learn_js_lesson_family_telling_bank_itself.mjs";
 import { app_learn_js_lesson_family_telling_bank_asked } from "./app_learn_js_lesson_family_telling_bank_asked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_family_file_names } from "./app_learn_js_lesson_family_file_names.mjs";
@@ -14,7 +14,7 @@ export async function app_code_lesson_family_telling_bank(root, roots, names) {
   let family = app_learn_js_lesson_family_file_names(root, roots, names);
   let source = await repo_love_function_read(root);
   let counted = [];
-  let telling = app_code_lesson_family_telling_bank_itself(
+  let telling = app_learn_js_lesson_family_telling_bank_itself(
     family,
     counted,
     root,
