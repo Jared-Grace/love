@@ -16,7 +16,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-import { app_code_lesson_if_cases_generic } from "./app_code_lesson_if_cases_generic.mjs";
+import { app_learn_js_lesson_if_cases_generic } from "./app_learn_js_lesson_if_cases_generic.mjs";
 export function app_code_lesson_if_steps() {
   arguments_assert(arguments, 0);
   ('practice: a value worked out over several lines, then an if at the end: let a = 4; let b = a * 3; let c = b - 5; if (c < 10) { console.log("love"); } console.log("joy");');
@@ -125,7 +125,7 @@ export function app_code_lesson_if_steps() {
       " run",
     ]);
   }
-  let lesson = app_code_lesson_if_cases_generic(
+  let lesson = app_learn_js_lesson_if_cases_generic(
     "Practice: steps, then if",
     "if (c < 10) { ... }",
     above,

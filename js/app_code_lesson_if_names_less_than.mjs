@@ -15,7 +15,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_if_program_lines } from "./app_learn_js_if_program_lines.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_lesson_if_cases_generic } from "./app_code_lesson_if_cases_generic.mjs";
+import { app_learn_js_lesson_if_cases_generic } from "./app_learn_js_lesson_if_cases_generic.mjs";
 export function app_code_lesson_if_names_less_than() {
   arguments_assert(arguments, 0);
   ('names compared inside an if: let a = 2; let b = 3; if (a < b) { console.log("love"); } console.log("joy"); writes out love and joy, and with a and b swapped writes out joy alone');
@@ -132,7 +132,7 @@ export function app_code_lesson_if_names_less_than() {
       " do not run",
     ]);
   }
-  let lesson = app_code_lesson_if_cases_generic(
+  let lesson = app_learn_js_lesson_if_cases_generic(
     "If names compared",
     "if (a < b) { ... }",
     above,
