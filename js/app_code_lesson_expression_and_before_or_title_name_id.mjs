@@ -1,7 +1,7 @@
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_cycle_code } from "./app_code_cycle_code.mjs";
+import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 export function app_code_lesson_expression_and_before_or_title_name_id() {
@@ -12,7 +12,7 @@ export function app_code_lesson_expression_and_before_or_title_name_id() {
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
   function paint(parent) {
-    app_code_cycle_code(parent, ["", and_symbol, " before ", or_symbol]);
+    app_learn_js_cycle_code(parent, ["", and_symbol, " before ", or_symbol]);
   }
   let left = app_learn_js_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
