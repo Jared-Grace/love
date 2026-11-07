@@ -12,7 +12,7 @@ import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_permutations } from "./list_permutations.mjs";
 import { js_special_arguments } from "./js_special_arguments.mjs";
-import { app_code_lesson_quiz_token_select_variations_set_args } from "./app_code_lesson_quiz_token_select_variations_set_args.mjs";
+import { app_learn_js_lesson_quiz_token_select_variations_set_args } from "./app_learn_js_lesson_quiz_token_select_variations_set_args.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_learn_js_lesson_quiz_token_select_variations_collect(
   la,
@@ -65,7 +65,7 @@ export function app_learn_js_lesson_quiz_token_select_variations_collect(
       let key = js_special_arguments();
       function make_ordering(perm) {
         function ordering() {
-          app_code_lesson_quiz_token_select_variations_set_args(
+          app_learn_js_lesson_quiz_token_select_variations_set_args(
             perm,
             node,
             key,
@@ -75,7 +75,7 @@ export function app_learn_js_lesson_quiz_token_select_variations_collect(
       }
       let orderings = list_map(perms, make_ordering);
       function restore() {
-        app_code_lesson_quiz_token_select_variations_set_args(
+        app_learn_js_lesson_quiz_token_select_variations_set_args(
           original,
           node,
           key,
