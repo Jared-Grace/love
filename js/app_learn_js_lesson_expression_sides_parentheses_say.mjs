@@ -1,7 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_sides_parentheses_say(run, sides) {
+export function app_learn_js_lesson_expression_sides_parentheses_say(
+  run,
+  sides,
+) {
   arguments_assert(arguments, 2);
   ("why the two sides of a line go first, told for a line whose two sides stand in parentheses: the parentheses are pointed at, and then the question of which of them goes first is asked for the run underneath to answer");
   ("The parentheses are what says these two go first, and not a number standing either side of them - every earlier line was ordered by which operator was stronger, and here all three operators are the same strength, so the parentheses are the only thing left on the line that says anything about order at all.");
