@@ -3,7 +3,7 @@ import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_if_two_bounds } from "./app_code_lesson_if_two_bounds.mjs";
+import { app_learn_js_lesson_if_two_bounds } from "./app_learn_js_lesson_if_two_bounds.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_if_nested_program_lines } from "./app_learn_js_if_nested_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
@@ -23,7 +23,7 @@ export function app_learn_js_if_nested_explain(root, context) {
   app_code_remember_from_lesson(
     box_one,
     context,
-    app_code_lesson_if_two_bounds,
+    app_learn_js_lesson_if_two_bounds,
     ["Two ", "if", "s ask two questions, one after the other"],
   );
   let box_two = app_learn_js_container_light_blue(root);

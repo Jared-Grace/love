@@ -30,7 +30,7 @@ import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_wr
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_two_bounds() {
+export function app_learn_js_lesson_if_two_bounds() {
   arguments_assert(arguments, 0);
   ('two ifs asking about one name: let n = 4; if (n > 1) { console.log("love"); } if (n > 3) { console.log("joy"); } console.log("peace"); writes out love, joy and peace, and with n starting at 2 writes out love and peace');
   ("The one new fact is that two ifs ask their own questions even about the same name, but here they can only go three ways: both, only the first, or neither. Only the second can never run alone, since a number more than 3 is more than 1 too. So this comes before Two ifs, which asks about two names and so goes all four ways.");

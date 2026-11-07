@@ -266,7 +266,7 @@ import { app_learn_js_lesson_brace_lines_two } from "./app_learn_js_lesson_brace
 import { app_learn_js_lesson_brace_lines_two_nested } from "./app_learn_js_lesson_brace_lines_two_nested.mjs";
 import { app_learn_js_lesson_braces_run } from "./app_learn_js_lesson_braces_run.mjs";
 import { app_learn_js_lesson_if_twice } from "./app_learn_js_lesson_if_twice.mjs";
-import { app_code_lesson_if_two_bounds } from "./app_code_lesson_if_two_bounds.mjs";
+import { app_learn_js_lesson_if_two_bounds } from "./app_learn_js_lesson_if_two_bounds.mjs";
 import { app_code_lesson_if_two_ifs } from "./app_code_lesson_if_two_ifs.mjs";
 import { app_learn_js_lesson_if_and_if_not } from "./app_learn_js_lesson_if_and_if_not.mjs";
 import { app_learn_js_lesson_braces_run_if_else } from "./app_learn_js_lesson_braces_run_if_else.mjs";
@@ -579,7 +579,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_brace_lines_two_nested,
     app_learn_js_lesson_braces_run,
     app_learn_js_lesson_if_twice,
-    app_code_lesson_if_two_bounds,
+    app_learn_js_lesson_if_two_bounds,
     app_code_lesson_if_two_ifs,
     app_learn_js_lesson_if_and_if_not,
     app_learn_js_lesson_braces_run_if_else,
