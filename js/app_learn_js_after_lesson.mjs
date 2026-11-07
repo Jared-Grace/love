@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_current_number } from "./app_learn_js_lesson_current_number.mjs";
 import { app_code_review_due_is } from "./app_code_review_due_is.mjs";
 import { app_code_review_go } from "./app_code_review_go.mjs";
-import { app_code_lesson_next } from "./app_code_lesson_next.mjs";
+import { app_learn_js_lesson_next } from "./app_learn_js_lesson_next.mjs";
 export async function app_learn_js_after_lesson(context) {
   "after finishing a lesson: go to the review when this lesson is a checkpoint (5, 10, 15...), otherwise to the next lesson";
   let number = app_learn_js_lesson_current_number(context);
@@ -10,5 +10,5 @@ export async function app_learn_js_after_lesson(context) {
     await app_code_review_go(context, number);
     return;
   }
-  await app_code_lesson_next(context);
+  await app_learn_js_lesson_next(context);
 }

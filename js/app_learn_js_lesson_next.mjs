@@ -10,7 +10,7 @@ import { app_learn_js_lesson_first_id } from "./app_learn_js_lesson_first_id.mjs
 import { storage_session_transform_context } from "./storage_session_transform_context.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
-export async function app_code_lesson_next(context) {
+export async function app_learn_js_lesson_next(context) {
   "advance from the lesson the learner is reading to THE LESSON STRAIGHT AFTER IT, and show its examples - the course walked in the order it was written.";
   "IT WENT LOOKING FOR AN UNFINISHED LESSON FIRST, and that is what this button is being asked to stop doing. A learner who had skipped ahead pressed Next at the end of a lesson and was carried off to an early lesson they had left open, with nothing on the page having said so - and the button they pressed was the one that says Next. Where the learner has work left elsewhere they are now OFFERED it, on a button of its own that says what it is, and Next goes where its own word promises.";
   "Where there is no lesson after this one it asks for an unfinished lesson further on, which never goes round the top of the list, so on the last lesson it stays put and the screens show that the course is done. It used to wrap round to an early unfinished lesson; that was rejected because a button saying Next must never carry a learner backwards.";
