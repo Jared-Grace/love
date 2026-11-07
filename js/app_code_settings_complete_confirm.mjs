@@ -1,4 +1,4 @@
-import { app_code_home } from "./app_code_home.mjs";
+import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { app_code_progress_all_complete_mark } from "./app_code_progress_all_complete_mark.mjs";
 import { app_code_screen_capped } from "./app_code_screen_capped.mjs";
 import { app_code_settings } from "./app_code_settings.mjs";
@@ -12,10 +12,13 @@ export function app_code_settings_complete_confirm(context) {
   arguments_assert(arguments, 1);
   let g = app_code_screen_capped(context);
   let check = emoji_check();
-  let text_confirm = text_combine(check, " Yes, mark lessons and reviews complete");
+  let text_confirm = text_combine(
+    check,
+    " Yes, mark lessons and reviews complete",
+  );
   async function on_confirm() {
     app_code_progress_all_complete_mark(context);
-    await app_shared_screen_set(context, app_code_home);
+    await app_shared_screen_set(context, app_learn_js_home);
   }
   app_shared_confirm(
     g,

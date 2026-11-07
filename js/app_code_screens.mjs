@@ -3,12 +3,12 @@ import { app_code_settings_complete_confirm } from "./app_code_settings_complete
 import { app_code_settings } from "./app_code_settings.mjs";
 import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_code_quiz } from "./app_code_quiz.mjs";
-import { app_code_home } from "./app_code_home.mjs";
+import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { app_code_review } from "./app_code_review.mjs";
 export function app_code_screens() {
   "Every screen the code app has, in the order they are offered.";
   let s = [
-    app_code_home,
+    app_learn_js_home,
     app_code_quiz,
     app_learn_js_examples,
     app_code_review,

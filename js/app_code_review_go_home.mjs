@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { app_code_home } from "./app_code_home.mjs";
+import { app_learn_js_home } from "./app_learn_js_home.mjs";
 export function app_code_review_go_home(r7, context) {
   arguments_assert(arguments, 2);
   let home_text = property_get(r7, "home_text");
@@ -17,7 +17,7 @@ export function app_code_review_go_home(r7, context) {
   let passed = property_get(r7, "passed");
   let restart_button = property_get(r7, "restart_button");
   async function go_home() {
-    await app_shared_screen_set(context, app_code_home);
+    await app_shared_screen_set(context, app_learn_js_home);
   }
   let r = {
     home_text,

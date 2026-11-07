@@ -10,7 +10,7 @@ import { app_learn_js_column_cap } from "./app_learn_js_column_cap.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { app_code_home } from "./app_code_home.mjs";
+import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { html_div } from "./html_div.mjs";
 import { emoji_home } from "./emoji_home.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -63,7 +63,7 @@ export function app_code_title_strip(
   let value = app_shared_spaced_gap();
   html_style_margin_y(strip, value);
   async function go_home() {
-    await app_shared_screen_set(context, app_code_home);
+    await app_shared_screen_set(context, app_learn_js_home);
   }
   ("home and the arrow back share the first track, laid side by side inside it, because a grid gives each thing put into it a track of its own and there are only three - so the two that belong on the left have to arrive as one thing");
   let leading = html_div(strip);

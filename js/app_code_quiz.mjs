@@ -26,7 +26,7 @@ import { app_learn_js_examples } from "./app_learn_js_examples.mjs";
 import { app_learn_js_go_back } from "./app_learn_js_go_back.mjs";
 import { emoji_arrow_left } from "./emoji_arrow_left.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
-import { app_code_home } from "./app_code_home.mjs";
+import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { app_learn_js_container_padded_x } from "./app_learn_js_container_padded_x.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
@@ -96,7 +96,7 @@ export function app_code_quiz(context) {
   let text = app_shared_button_home_text();
   async function lambda2() {
     app_code_quiz_index_reset(context);
-    await app_shared_screen_set(context, app_code_home);
+    await app_shared_screen_set(context, app_learn_js_home);
   }
   let g = app_learn_js_container_padded_x(root);
   let b3 = app_shared_button_wide(g, text, lambda2);

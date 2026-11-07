@@ -4,7 +4,7 @@ import { app_learn_js_examples_on_more } from "./app_learn_js_examples_on_more.m
 import { app_learn_js_examples_lambda } from "./app_learn_js_examples_lambda.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_code_lesson_previous_set } from "./app_code_lesson_previous_set.mjs";
-import { app_code_home } from "./app_code_home.mjs";
+import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { app_shared_button_screen_wide } from "./app_shared_button_screen_wide.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
 import { app_learn_js_go_back } from "./app_learn_js_go_back.mjs";
@@ -67,7 +67,7 @@ export function app_learn_js_examples(context) {
   app_learn_js_button_skip_lesson(context, g);
   app_learn_js_button_skip_lesson_unfinished(context, g);
   let text = app_shared_button_home_text();
-  let b = app_shared_button_screen_wide(context, app_code_home, g, text);
+  let b = app_shared_button_screen_wide(context, app_learn_js_home, g, text);
   let value = app_shared_spaced_gap();
   html_style_margin_top(b, value);
 }

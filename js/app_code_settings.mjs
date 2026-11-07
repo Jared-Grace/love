@@ -1,4 +1,4 @@
-import { app_code_home } from "./app_code_home.mjs";
+import { app_learn_js_home } from "./app_learn_js_home.mjs";
 import { app_code_screen_capped } from "./app_code_screen_capped.mjs";
 import { app_code_settings_clear_confirm } from "./app_code_settings_clear_confirm.mjs";
 import { app_code_settings_complete_confirm } from "./app_code_settings_complete_confirm.mjs";
@@ -15,7 +15,7 @@ export function app_code_settings(context) {
   arguments_assert(arguments, 1);
   let g = app_code_screen_capped(context);
   let text_home = app_shared_button_home_text();
-  app_shared_screen_set_button(g, context, app_code_home, text_home);
+  app_shared_screen_set_button(g, context, app_learn_js_home, text_home);
   app_shared_font_size_buttons(g, context);
   let check = emoji_check();
   let combined = text_combine(check, " Mark all lessons and reviews complete");
@@ -26,7 +26,10 @@ export function app_code_settings(context) {
     combined,
   );
   let cross = emoji_x_red();
-  let combined2 = text_combine(cross, " Mark all lessons and reviews incomplete");
+  let combined2 = text_combine(
+    cross,
+    " Mark all lessons and reviews incomplete",
+  );
   app_shared_screen_set_button(
     g,
     context,

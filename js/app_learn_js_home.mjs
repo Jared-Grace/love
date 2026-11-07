@@ -27,7 +27,7 @@ import { each_index } from "./each_index.mjs";
 import { app_learn_js_home_groups_finish } from "./app_learn_js_home_groups_finish.mjs";
 import { app_learn_js_home_all_complete } from "./app_learn_js_home_all_complete.mjs";
 import { app_learn_js_home_just_left_center } from "./app_learn_js_home_just_left_center.mjs";
-export async function app_code_home(context) {
+export async function app_learn_js_home(context) {
   "on returning home the row just left is scrolled to the vertical center, so the learner lands back where they were - and that row is the review checkpoint where a review is what they came back from, and the lesson (its id is remembered in lesson_id) otherwise";
   let root = html_clear_context(context);
   let r = app_learn_js_home_value(root, context);
