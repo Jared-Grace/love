@@ -2,7 +2,7 @@ import { app_learn_js_lesson_expression_comparison_equal_generic } from "./app_l
 import { js_operator_greater_than_equal } from "./js_operator_greater_than_equal.mjs";
 import { js_operator_greater_than } from "./js_operator_greater_than.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
-export function app_code_lesson_expression_greater_than_equal() {
+export function app_learn_js_lesson_expression_greater_than_equal() {
   let operator = js_operator_greater_than_equal();
   let strict_operator = js_operator_greater_than();
   let opposite_operator = js_operator_less_than();
