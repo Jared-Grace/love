@@ -3,7 +3,7 @@ import { app_code_lesson_expression_round_generic_above_v } from "./app_code_les
 import { app_learn_js_lesson_expression_round_generic_above_gives_suffix } from "./app_learn_js_lesson_expression_round_generic_above_gives_suffix.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_round_generic_above_trap_render(
+export function app_learn_js_lesson_expression_round_generic_above_trap_render(
   r,
   superlative,
   called_name,

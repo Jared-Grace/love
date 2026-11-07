@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_round_generic_above_trap_render } from "./app_code_lesson_expression_round_generic_above_trap_render.mjs";
+import { app_learn_js_lesson_expression_round_generic_above_trap_render } from "./app_learn_js_lesson_expression_round_generic_above_trap_render.mjs";
 import { app_learn_js_lesson_expression_round_generic_above_rounds } from "./app_learn_js_lesson_expression_round_generic_above_rounds.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -26,13 +26,14 @@ export function app_code_lesson_expression_round_generic_above({
     metaphor_render,
     introduce_whole_number,
   );
-  let whole_stays = app_code_lesson_expression_round_generic_above_trap_render(
-    r,
-    superlative,
-    called_name,
-    preposition,
-    trap_render,
-  );
+  let whole_stays =
+    app_learn_js_lesson_expression_round_generic_above_trap_render(
+      r,
+      superlative,
+      called_name,
+      preposition,
+      trap_render,
+    );
   let whole_para = app_learn_js_container_light_blue(root);
   app_learn_js_div_cycle_code(whole_para, [
     "",
