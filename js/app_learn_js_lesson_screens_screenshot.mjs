@@ -8,7 +8,7 @@ import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { app_code_screen_next_click_script } from "./app_code_screen_next_click_script.mjs";
 import { app_code_screens_seed_script } from "./app_code_screens_seed_script.mjs";
 import { playwright_test_blank } from "./playwright_test_blank.mjs";
-export async function app_code_lesson_screens_screenshot(id) {
+export async function app_learn_js_lesson_screens_screenshot(id) {
   "$plain id";
   "Opens one lesson of the code app on the dev build at phone width, the way a learner meets it, and saves a picture of its examples screen and of each quiz kind, clicking Next between them. Answers the pictures saved, the words on each, and any error the page threw. id is the lesson's short id, as a link spells it.";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
