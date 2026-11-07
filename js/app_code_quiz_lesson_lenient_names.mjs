@@ -1,5 +1,5 @@
 import { property_equals } from "./property_equals.mjs";
-import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice } from "./app_learn_js_lesson_quiz_multiple_choice.mjs";
 import { app_code_quiz_exercise_lenient_is } from "./app_code_quiz_exercise_lenient_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -25,7 +25,7 @@ export function app_code_quiz_lesson_lenient_names(lesson) {
       let on_answer = property_get_or(info, "on_answer", null);
       let multiple_choice = equal(
         on_answer,
-        app_code_lesson_quiz_multiple_choice,
+        app_learn_js_lesson_quiz_multiple_choice,
       );
       if (multiple_choice) {
         let asks_the_answer = property_equals(

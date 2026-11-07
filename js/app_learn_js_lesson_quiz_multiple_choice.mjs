@@ -9,7 +9,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_each_button } from "./app_learn_js_lesson_quiz_multiple_choice_each_button.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_div } from "./html_div.mjs";
-export function app_code_lesson_quiz_multiple_choice(
+export function app_learn_js_lesson_quiz_multiple_choice(
   parent,
   info,
   qa,

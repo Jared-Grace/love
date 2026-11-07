@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice } from "./app_learn_js_lesson_quiz_multiple_choice.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_next_get } from "./app_learn_js_lesson_quiz_multiple_choice_next_get.mjs";
 import { app_learn_js_lesson_quiz_multiple_choice_answered } from "./app_learn_js_lesson_quiz_multiple_choice_answered.mjs";
@@ -30,7 +30,7 @@ export function app_code_wrong_say_silent_walked() {
         for (let ex of exercises) {
           let info = property_get_or(ex, "info", {});
           let on_answer = property_get_or(info, "on_answer", null);
-          let b = equal(on_answer, app_code_lesson_quiz_multiple_choice);
+          let b = equal(on_answer, app_learn_js_lesson_quiz_multiple_choice);
           if (not(b)) {
             continue;
           }

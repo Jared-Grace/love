@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_percent_expression } from "./app_learn_js_lesson_expression_remainder_divide_percent_expression.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice } from "./app_learn_js_lesson_quiz_multiple_choice.mjs";
 import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_learn_js_lesson_expression_remainder_divide_item_qa_for } from "./app_learn_js_lesson_expression_remainder_divide_item_qa_for.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_expression_remainder_divide_quizzes_get(
     answer_on_button: html_text_set_code_dark,
     answer_count_override: null,
     answer_property: "answer",
-    on_answer: app_code_lesson_quiz_multiple_choice,
+    on_answer: app_learn_js_lesson_quiz_multiple_choice,
     wrong_say: app_code_whole_part_wrong_say,
     decoys: recognize_decoys,
   };
@@ -50,7 +50,7 @@ export function app_learn_js_lesson_expression_remainder_divide_quizzes_get(
     answer_on_button: html_text_set_code_dark,
     answer_count_override: null,
     answer_property: "answer",
-    on_answer: app_code_lesson_quiz_multiple_choice,
+    on_answer: app_learn_js_lesson_quiz_multiple_choice,
     wrong_say: app_code_whole_part_wrong_say,
     decoys: backwards_decoys,
     backwards: true,

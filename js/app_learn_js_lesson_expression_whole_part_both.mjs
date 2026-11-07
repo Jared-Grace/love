@@ -8,7 +8,7 @@ import { app_learn_js_lesson_expression_whole_part_both_decoys_backwards } from 
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { noop } from "./noop.mjs";
-import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
+import { app_learn_js_lesson_quiz_multiple_choice } from "./app_learn_js_lesson_quiz_multiple_choice.mjs";
 import { app_code_whole_part_wrong_say } from "./app_code_whole_part_wrong_say.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
@@ -60,7 +60,7 @@ export function app_learn_js_lesson_expression_whole_part_both() {
       answer_on_button: noop,
       answer_count_override: null,
       answer_property: "answer",
-      on_answer: app_code_lesson_quiz_multiple_choice,
+      on_answer: app_learn_js_lesson_quiz_multiple_choice,
       wrong_say: app_code_whole_part_wrong_say,
       decoys,
     };
@@ -71,7 +71,7 @@ export function app_learn_js_lesson_expression_whole_part_both() {
       answer_on_button: html_text_set_code_dark,
       answer_count_override: null,
       answer_property: "question",
-      on_answer: app_code_lesson_quiz_multiple_choice,
+      on_answer: app_learn_js_lesson_quiz_multiple_choice,
       wrong_say: app_code_whole_part_wrong_say,
       decoys: decoys_backwards,
     };
