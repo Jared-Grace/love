@@ -12,7 +12,7 @@ import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { app_code_word_three_runs_example } from "./app_code_word_three_runs_example.mjs";
 import { app_code_word_three_runs_walk } from "./app_code_word_three_runs_walk.mjs";
-import { app_code_lesson_repeat_word_generic } from "./app_code_lesson_repeat_word_generic.mjs";
+import { app_learn_js_lesson_repeat_word_generic } from "./app_learn_js_lesson_repeat_word_generic.mjs";
 export function app_code_lesson_repeat_word_up_generic(
   program_write,
   above_inner,
@@ -61,7 +61,7 @@ export function app_code_lesson_repeat_word_up_generic(
   function above(root, context) {
     above_inner(root, context, example, walk);
   }
-  let lesson = app_code_lesson_repeat_word_generic(
+  let lesson = app_learn_js_lesson_repeat_word_generic(
     program_lines,
     values_of,
     above,
