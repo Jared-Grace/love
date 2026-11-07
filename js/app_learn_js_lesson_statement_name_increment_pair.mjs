@@ -9,7 +9,7 @@ import { app_learn_js_lesson_statement_name_shorter_above } from "./app_learn_js
 import { app_learn_js_lesson_statement_name_one_more } from "./app_learn_js_lesson_statement_name_one_more.mjs";
 import { app_learn_js_lesson_statement_name_one_batch } from "./app_learn_js_lesson_statement_name_one_batch.mjs";
 import { app_code_lesson_statement_title_code_paint_get } from "./app_code_lesson_statement_title_code_paint_get.mjs";
-import { app_code_lesson_statement_name_step_backwards_decoys } from "./app_code_lesson_statement_name_step_backwards_decoys.mjs";
+import { app_learn_js_lesson_statement_name_step_backwards_decoys } from "./app_learn_js_lesson_statement_name_step_backwards_decoys.mjs";
 export function app_learn_js_lesson_statement_name_increment_pair() {
   arguments_assert(arguments, 0);
   ("the pair on the shorter way to add one to a name, a++; for a = a + 1;: its programs, its title line, and the words both its lessons are called by");
@@ -51,7 +51,7 @@ export function app_learn_js_lesson_statement_name_increment_pair() {
     words: "A shorter way to add one to a name",
     decoys_last: null,
     backwards_decoys_first:
-      app_code_lesson_statement_name_step_backwards_decoys,
+      app_learn_js_lesson_statement_name_step_backwards_decoys,
   };
   return pair;
 }
