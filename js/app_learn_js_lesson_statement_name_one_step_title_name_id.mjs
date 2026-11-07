@@ -4,7 +4,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-export function app_code_lesson_statement_name_one_step_title_name_id(
+export function app_learn_js_lesson_statement_name_one_step_title_name_id(
   words,
   operator,
 ) {
