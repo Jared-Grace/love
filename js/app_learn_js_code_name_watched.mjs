@@ -9,7 +9,7 @@ import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { each } from "./each.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_code_name_watched(code) {
+export function app_learn_js_code_name_watched(code) {
   arguments_assert(arguments, 1);
   ("a program that ends by writing out one name, rewritten to write that name out after every line that gives it a value instead - let a = 7; a = a + 1; console.log(a); becomes let a = 7; console.log(a); a = a + 1; console.log(a);");
   ("The name watched is the one the last line writes out, because that is the name the program was asking about. The last line itself goes: the last line giving the name a value is now followed by the same writing-out, so keeping it would write the final value twice.");
