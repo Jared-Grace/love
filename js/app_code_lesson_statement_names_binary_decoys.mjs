@@ -3,7 +3,7 @@ import { app_code_lesson_statement_names_binary_title_name_id } from "./app_code
 import { app_code_lesson_statement_names_binary_programs } from "./app_code_lesson_statement_names_binary_programs.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
-import { app_code_lesson_statement_names_binary_above } from "./app_code_lesson_statement_names_binary_above.mjs";
+import { app_learn_js_lesson_statement_names_binary_above } from "./app_learn_js_lesson_statement_names_binary_above.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 export function app_code_lesson_statement_names_binary_decoys({
@@ -42,7 +42,7 @@ export function app_code_lesson_statement_names_binary_decoys({
   );
   function above(root, context) {
     "the boxes read before the first question, with this lesson's symbol, pair, reminder and answer name";
-    app_code_lesson_statement_names_binary_above({
+    app_learn_js_lesson_statement_names_binary_above({
       root,
       context,
       symbol,
