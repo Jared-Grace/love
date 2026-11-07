@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_choose_order_pair_title_name_id } from "./app_code_lesson_expression_choose_order_pair_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_pair_questions } from "./app_code_lesson_expression_choose_order_pair_questions.mjs";
-import { app_code_lesson_expression_choose_order_boolean_generic } from "./app_code_lesson_expression_choose_order_boolean_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_code_lesson_expression_choose_order_pair_above } from "./app_code_lesson_expression_choose_order_pair_above.mjs";
 export function app_code_lesson_expression_choose_order_pair() {
   "two comparisons compared against each other, taken a press at a time: (3 === 5) === (5 === 3), choose either parenthesis, choose what it comes to, choose the other, choose what it comes to, then choose the === between them";
@@ -10,7 +10,7 @@ export function app_code_lesson_expression_choose_order_pair() {
   "The wrong value offered is the other of true and false, the same as the lesson before it: every part of this line is a comparison, so the whole of what could be pressed instead is already on the screen.";
   let name_id = app_code_lesson_expression_choose_order_pair_title_name_id();
   let bank = app_code_lesson_expression_choose_order_pair_questions();
-  let lesson = app_code_lesson_expression_choose_order_boolean_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
     app_code_lesson_expression_choose_order_pair_above,
     bank,

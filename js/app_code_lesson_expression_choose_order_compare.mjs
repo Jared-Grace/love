@@ -1,6 +1,6 @@
 import { app_code_lesson_expression_choose_order_compare_title_name_id } from "./app_code_lesson_expression_choose_order_compare_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_compare_questions } from "./app_code_lesson_expression_choose_order_compare_questions.mjs";
-import { app_code_lesson_expression_choose_order_boolean_generic } from "./app_code_lesson_expression_choose_order_boolean_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_code_lesson_expression_choose_order_compare_above } from "./app_code_lesson_expression_choose_order_compare_above.mjs";
 export function app_code_lesson_expression_choose_order_compare() {
   "choosing which part of a line to solve and then what that part comes to, on a line whose parts are comparisons: true === (3 < 5), choose the 3 < 5, choose true out of true and false, see true === true, choose the ===, choose true";
@@ -11,7 +11,7 @@ export function app_code_lesson_expression_choose_order_compare() {
   "The wrong value offered is the other of true and false, and there is only ever one of it. Nothing has to be invented: a comparison comes to true or false and to nothing else, so the whole of what could be pressed instead is already on the screen.";
   let name_id = app_code_lesson_expression_choose_order_compare_title_name_id();
   let bank = app_code_lesson_expression_choose_order_compare_questions();
-  let lesson = app_code_lesson_expression_choose_order_boolean_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
     app_code_lesson_expression_choose_order_compare_above,
     bank,

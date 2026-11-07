@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_choose_order_boolean_generic } from "./app_code_lesson_expression_choose_order_boolean_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_code_lesson_expression_choose_order_not_pair_above } from "./app_code_lesson_expression_choose_order_not_pair_above.mjs";
 import { app_code_lesson_expression_choose_order_not_pair_questions } from "./app_code_lesson_expression_choose_order_not_pair_questions.mjs";
 import { app_code_lesson_expression_choose_order_not_pair_title_name_id } from "./app_code_lesson_expression_choose_order_not_pair_title_name_id.mjs";
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_choose_order_not_pair() {
   let name_id =
     app_code_lesson_expression_choose_order_not_pair_title_name_id();
   let bank = app_code_lesson_expression_choose_order_not_pair_questions();
-  let lesson = app_code_lesson_expression_choose_order_boolean_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
     app_code_lesson_expression_choose_order_not_pair_above,
     bank,

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_title_name_id } from "./app_code_lesson_expression_choose_order_parentheses_and_or_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_questions } from "./app_code_lesson_expression_choose_order_parentheses_and_or_questions.mjs";
-import { app_code_lesson_expression_choose_order_boolean_generic } from "./app_code_lesson_expression_choose_order_boolean_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_above } from "./app_code_lesson_expression_choose_order_parentheses_and_or_above.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_and_or() {
   arguments_assert(arguments, 0);
@@ -14,7 +14,7 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or() {
     app_code_lesson_expression_choose_order_parentheses_and_or_title_name_id();
   let bank =
     app_code_lesson_expression_choose_order_parentheses_and_or_questions();
-  let lesson = app_code_lesson_expression_choose_order_boolean_generic(
+  let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
     app_code_lesson_expression_choose_order_parentheses_and_or_above,
     bank,
