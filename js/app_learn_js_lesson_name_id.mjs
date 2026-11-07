@@ -4,7 +4,7 @@ import { list_first_remaining } from "./list_first_remaining.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_lesson_name_id(left, rights) {
+export function app_learn_js_lesson_name_id(left, rights) {
   let paint = function app_code_lesson_name_id_paint(parent) {
     let r = list_first_remaining(rights);
     let first = property_get(r, "first");

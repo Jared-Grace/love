@@ -1,4 +1,4 @@
-import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
@@ -23,7 +23,7 @@ import { js_operator_first_code_call } from "./js_operator_first_code_call.mjs";
 import { app_learn_js_code_example_name } from "./app_learn_js_code_example_name.mjs";
 import { html_div_cycle_code_bold } from "./html_div_cycle_code_bold.mjs";
 export function app_learn_js_lesson_functions_arithmetic() {
-  let name_id = app_code_lesson_name_id("functions", ["arithmetic"]);
+  let name_id = app_learn_js_lesson_name_id("functions", ["arithmetic"]);
   let example_answer_label = "Function: ";
   let quiz_label = "What is this code rewritten using a function call?";
   let example_question_label = app_learn_js_label_code_question();

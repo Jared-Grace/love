@@ -8,7 +8,7 @@ import { list_join_space_nb } from "./list_join_space_nb.mjs";
 import { js_identifier_words_invalid } from "./js_identifier_words_invalid.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { app_learn_js_lesson_identifiers_valid } from "./app_learn_js_lesson_identifiers_valid.mjs";
-import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
 import { html_div_text_multiple } from "./html_div_text_multiple.mjs";
 import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
 import { languages_popular } from "./languages_popular.mjs";
@@ -68,7 +68,7 @@ export function app_learn_js_lesson_identifiers_letters_spaces() {
     let difference = list_difference(mapped2, list_other);
     return difference;
   }
-  let name_id = app_code_lesson_name_id("identifiers", [
+  let name_id = app_learn_js_lesson_name_id("identifiers", [
     "letters allowed",
     "spaces not",
   ]);

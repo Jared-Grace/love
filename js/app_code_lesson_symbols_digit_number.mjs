@@ -11,10 +11,10 @@ import { html_div } from "./html_div.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
-import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
 export function app_code_lesson_symbols_digit_number() {
   "the digit-vs-number lesson - a real student confused the two: a digit is one symbol 0-9, a number is made of one or more digits (42 is a number made of the two digits 4 and 2); the quiz counts the digits in a number, reusing the counting quiz";
-  let name_id = app_code_lesson_name_id("symbols", ["digits in a number"]);
+  let name_id = app_learn_js_lesson_name_id("symbols", ["digits in a number"]);
   let r = app_code_lesson_symbols_counting(
     name_id,
     above,

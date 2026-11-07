@@ -16,7 +16,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { js_operator_to_code_call } from "./js_operator_to_code_call.mjs";
-import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "./app_code_lesson_validity_code.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { property_get } from "./property_get.mjs";
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_functions_invalid() {
   "The broken versions are not invented one at a time. Every combination of those symbols is taken, smallest first, so a student meets one missing symbol before two, and the whole of what can go missing is covered rather than sampled.";
   "The two questions of a round are built from the same operator, so the only thing that differs between the whole call and the broken one is what was taken out of it.";
   "Whether a question is valid code is worked out from the code itself rather than written down beside it, so a question and its answer cannot come apart.";
-  let name_id = app_code_lesson_name_id("functions", ["validity"]);
+  let name_id = app_learn_js_lesson_name_id("functions", ["validity"]);
   let operators = js_operators_arithmetic();
   let next = app_code_lesson_operators_value_max_range_1_next();
   let symbols_required = js_code_call_symbols();

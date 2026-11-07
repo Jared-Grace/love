@@ -13,7 +13,7 @@ import { list_map } from "./list_map.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
-import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { app_learn_js_lesson_name_id } from "./app_learn_js_lesson_name_id.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_symbols_space() {
@@ -39,7 +39,7 @@ export function app_code_lesson_symbols_space() {
     let mapped2 = list_map(list2, list_join_space_nb);
     return mapped2;
   }
-  let name_id = app_code_lesson_name_id("symbols", ["space"]);
+  let name_id = app_learn_js_lesson_name_id("symbols", ["space"]);
   let r = app_code_lesson_symbols_counting(
     name_id,
     lambda,
