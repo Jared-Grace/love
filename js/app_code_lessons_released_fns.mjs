@@ -40,7 +40,7 @@ import { app_learn_js_lesson_expression_choose_order_solve } from "./app_learn_j
 import { app_learn_js_lesson_expression_nested_add } from "./app_learn_js_lesson_expression_nested_add.mjs";
 import { app_code_lesson_expression_nested_subtract } from "./app_code_lesson_expression_nested_subtract.mjs";
 import { app_learn_js_lesson_expression_multiply } from "./app_learn_js_lesson_expression_multiply.mjs";
-import { app_code_lesson_expression_nested_multiply } from "./app_code_lesson_expression_nested_multiply.mjs";
+import { app_learn_js_lesson_expression_nested_multiply } from "./app_learn_js_lesson_expression_nested_multiply.mjs";
 import { app_learn_js_lesson_expression_nested_divide } from "./app_learn_js_lesson_expression_nested_divide.mjs";
 import { app_code_lesson_expression_plus_minus } from "./app_code_lesson_expression_plus_minus.mjs";
 import { app_code_lesson_expression_times_divide } from "./app_code_lesson_expression_times_divide.mjs";
@@ -353,7 +353,7 @@ export function app_code_lessons_released_fns() {
     app_learn_js_lesson_expression_nested_add,
     app_code_lesson_expression_nested_subtract,
     app_learn_js_lesson_expression_multiply,
-    app_code_lesson_expression_nested_multiply,
+    app_learn_js_lesson_expression_nested_multiply,
     app_learn_js_lesson_expression_nested_divide,
     app_code_lesson_expression_plus_minus,
     app_code_lesson_expression_times_divide,
