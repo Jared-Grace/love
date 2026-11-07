@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_pair_intro(root) {
+export function app_learn_js_lesson_expression_choose_order_pair_intro(root) {
   arguments_assert(arguments, 1);
   ("the one sentence that says what is different about this lesson, in a card of its own");
   ("It makes the card rather than being handed one, so that a lesson with nothing left to say can hand in a painter that draws nothing at all and leave no empty card behind - the shape the shared run above these lessons expects of every closing sentence.");
