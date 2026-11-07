@@ -5,7 +5,7 @@ import { app_code_lesson_array_second } from "./app_code_lesson_array_second.mjs
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_array_index_generic } from "./app_code_lesson_array_index_generic.mjs";
-export function app_code_lesson_array_any() {
+export function app_learn_js_lesson_array_any() {
   arguments_assert(arguments, 0);
   ("any item of an array of four: let a = [14, 27, 35, 42]; console.log(a[3]); writes out 42, the fourth");
   ("The one new fact is that the counting from 0 reaches every item the same way, so the last of four is a[3]. Four items rather than three, so the last index is not the count of items.");
