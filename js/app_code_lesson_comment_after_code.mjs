@@ -4,7 +4,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { app_code_lesson_comment_after_code_batch } from "./app_code_lesson_comment_after_code_batch.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
-import { app_code_lesson_comment_after_code_above } from "./app_code_lesson_comment_after_code_above.mjs";
+import { app_learn_js_lesson_comment_after_code_above } from "./app_learn_js_lesson_comment_after_code_above.mjs";
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { app_code_lesson_decoy_comment_ignored } from "./app_code_lesson_decoy_comment_ignored.mjs";
 import { app_code_lesson_decoy_comment_after_code_swapped } from "./app_code_lesson_decoy_comment_after_code_swapped.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_comment_after_code() {
     eval_console_log_lines,
   );
   let lesson = app_learn_js_lesson_code_logged({
-    above: app_code_lesson_comment_after_code_above,
+    above: app_learn_js_lesson_comment_after_code_above,
     name_id,
     batch_get: batch,
     example_count: 1,

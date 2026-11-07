@@ -12,7 +12,7 @@ import { js_comment_start } from "./js_comment_start.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
-export function app_code_lesson_comment_after_code_above(root, context) {
+export function app_learn_js_lesson_comment_after_code_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the two lines from the lesson before with the slashes in front of the second, then those same two lines joined into one, then a comment after code saying what the code does");
   ("The first box is a program from the screen before this one, numbers and all, so the second box is a single change rather than a new program: the line break is taken out and nothing else is touched. The answer stays the same, and that is read off the card rather than told.");
