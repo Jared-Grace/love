@@ -124,7 +124,7 @@ import { app_code_lesson_expression_choose_order_not_pair } from "./app_code_les
 import { app_code_lesson_expression_not_pair } from "./app_code_lesson_expression_not_pair.mjs";
 import { app_code_lesson_expression_choose_order_both_sides } from "./app_code_lesson_expression_choose_order_both_sides.mjs";
 import { app_learn_js_lesson_expression_arithmetic_equality } from "./app_learn_js_lesson_expression_arithmetic_equality.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_any_comparison } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison.mjs";
 import { app_learn_js_lesson_expression_both_sides_any_comparison } from "./app_learn_js_lesson_expression_both_sides_any_comparison.mjs";
 import { app_code_lesson_expression_choose_order_swapping_add } from "./app_code_lesson_expression_choose_order_swapping_add.mjs";
 import { app_code_lesson_expression_swapping_add } from "./app_code_lesson_expression_swapping_add.mjs";
@@ -485,7 +485,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_not_pair,
     app_code_lesson_expression_choose_order_both_sides,
     app_learn_js_lesson_expression_arithmetic_equality,
-    app_code_lesson_expression_choose_order_both_sides_any_comparison,
+    app_learn_js_lesson_expression_choose_order_both_sides_any_comparison,
     app_learn_js_lesson_expression_both_sides_any_comparison,
     app_code_lesson_expression_choose_order_swapping_add,
     app_code_lesson_expression_swapping_add,
