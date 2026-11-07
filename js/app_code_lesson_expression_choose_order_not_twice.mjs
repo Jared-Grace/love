@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_title_name_id } from "./app_code_lesson_expression_choose_order_not_twice_title_name_id.mjs";
-import { app_code_lesson_expression_choose_order_not_twice_questions } from "./app_code_lesson_expression_choose_order_not_twice_questions.mjs";
+import { app_learn_js_lesson_expression_choose_order_not_twice_questions } from "./app_learn_js_lesson_expression_choose_order_not_twice_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_boolean_generic } from "./app_learn_js_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_twice_above } from "./app_learn_js_lesson_expression_choose_order_not_twice_above.mjs";
 export function app_code_lesson_expression_choose_order_not_twice() {
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_choose_order_not_twice() {
   arguments_assert(arguments, 0);
   let name_id =
     app_code_lesson_expression_choose_order_not_twice_title_name_id();
-  let bank = app_code_lesson_expression_choose_order_not_twice_questions();
+  let bank = app_learn_js_lesson_expression_choose_order_not_twice_questions();
   let lesson = app_learn_js_lesson_expression_choose_order_boolean_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_not_twice_above,
