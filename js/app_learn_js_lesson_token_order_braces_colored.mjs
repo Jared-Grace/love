@@ -12,7 +12,7 @@ import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_less
 import { app_code_lesson_token_order_generic } from "./app_code_lesson_token_order_generic.mjs";
 import { app_code_lesson_token_order_example_choose_braces } from "./app_code_lesson_token_order_example_choose_braces.mjs";
 import { app_learn_js_lesson_quiz_tokens_tap_braces_colored } from "./app_learn_js_lesson_quiz_tokens_tap_braces_colored.mjs";
-export function app_code_lesson_token_order_braces_colored() {
+export function app_learn_js_lesson_token_order_braces_colored() {
   arguments_assert(arguments, 0);
   ("the order of the tokens with the braces coloured: the same choosing as The order of the tokens, with no blue, except the braces of the code wear a colour, and under every token chosen the braces chosen are written out on a line of their own, in the colour they wear");
   ("Asked for by the human 2026-10-10: a new lesson straight after The order of the tokens, with no blue, the same interaction except the braces are coloured and only a chosen brace is shown below, opening by saying how it differs from the lesson before, with a link to it. Then asked 2026-10-10 for the braces chosen and every token chosen both; so the opening line that said only the braces are shown below now says they are also shown on a line of their own, and showing only the braces moved to the lesson after.");
