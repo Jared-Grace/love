@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_lesson_expression_repeated_generic_short_form(
+export function app_learn_js_lesson_expression_repeated_generic_short_form(
   parent,
   left,
   count,

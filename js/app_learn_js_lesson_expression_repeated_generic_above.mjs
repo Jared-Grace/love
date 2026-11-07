@@ -7,7 +7,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_lesson_expression_repeated_generic_expanded_counted } from "./app_learn_js_lesson_expression_repeated_generic_expanded_counted.mjs";
 import { app_learn_js_lesson_expression_repeated_generic_chip } from "./app_learn_js_lesson_expression_repeated_generic_chip.mjs";
-import { app_code_lesson_expression_repeated_generic_short_form } from "./app_code_lesson_expression_repeated_generic_short_form.mjs";
+import { app_learn_js_lesson_expression_repeated_generic_short_form } from "./app_learn_js_lesson_expression_repeated_generic_short_form.mjs";
 export function app_learn_js_lesson_expression_repeated_generic_above(
   root,
   symbol,
@@ -57,7 +57,7 @@ export function app_learn_js_lesson_expression_repeated_generic_above(
   html_span_text(map, " appears ");
   app_learn_js_lesson_expression_repeated_generic_chip(map, 3, count_one);
   html_span_text(map, " times, so we can write ");
-  app_code_lesson_expression_repeated_generic_short_form(
+  app_learn_js_lesson_expression_repeated_generic_short_form(
     map,
     2,
     3,
@@ -77,7 +77,7 @@ export function app_learn_js_lesson_expression_repeated_generic_above(
     expand_symbol,
   );
   html_span_text(likewise, " is ");
-  app_code_lesson_expression_repeated_generic_short_form(
+  app_learn_js_lesson_expression_repeated_generic_short_form(
     likewise,
     5,
     4,
