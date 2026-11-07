@@ -3,7 +3,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_operator.mjs";
 import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
 import { app_learn_js_lesson_operators_asterisk_generic_invalid } from "./app_learn_js_lesson_operators_asterisk_generic_invalid.mjs";
-import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "./app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
+import { app_learn_js_lesson_operators_minus_generic_container_both_sides_number } from "./app_learn_js_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { app_learn_js_lesson_operators_asterisk_generic_minus } from "./app_learn_js_lesson_operators_asterisk_generic_minus.mjs";
 import { app_learn_js_lesson_operators_generic_batch_get_binary } from "./app_learn_js_lesson_operators_generic_batch_get_binary.mjs";
 export function app_learn_js_lesson_operators_asterisk_generic(
@@ -17,7 +17,7 @@ export function app_learn_js_lesson_operators_asterisk_generic(
     left_transform,
   );
   function above(root, context) {
-    app_code_lesson_operators_minus_generic_container_both_sides_number(
+    app_learn_js_lesson_operators_minus_generic_container_both_sides_number(
       root,
       operator,
       left_transform,

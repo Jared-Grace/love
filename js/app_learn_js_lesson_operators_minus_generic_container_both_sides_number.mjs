@@ -5,7 +5,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { word_add_ing } from "./word_add_ing.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "./app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_operators_minus_generic_container_both_sides_number(
+export function app_learn_js_lesson_operators_minus_generic_container_both_sides_number(
   root,
   operator,
   left_transform,

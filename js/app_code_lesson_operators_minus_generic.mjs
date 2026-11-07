@@ -13,7 +13,7 @@ import { text_combine_right_fn } from "./text_combine_right_fn.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
-import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "./app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
+import { app_learn_js_lesson_operators_minus_generic_container_both_sides_number } from "./app_learn_js_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_div_code_multiple } from "./app_learn_js_div_code_multiple.mjs";
@@ -66,7 +66,7 @@ export function app_code_lesson_operators_minus_generic({
       ": ",
     ]);
     app_learn_js_container_light_blue_cycle_code(root, [combined7, combined]);
-    app_code_lesson_operators_minus_generic_container_both_sides_number(
+    app_learn_js_lesson_operators_minus_generic_container_both_sides_number(
       root,
       operator,
       left_transform,
