@@ -13,7 +13,7 @@ import { list_filter } from "./list_filter.mjs";
 import { equal } from "./equal.mjs";
 import { boolean_to_text_validity } from "./boolean_to_text_validity.mjs";
 import { text_trim } from "./text_trim.mjs";
-export function app_code_identifier_validity_wrong_say(
+export function app_learn_js_identifier_validity_wrong_say(
   question,
   answer,
   choice,
