@@ -10,7 +10,7 @@ import { app_learn_js_expression_node } from "./app_learn_js_expression_node.mjs
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { app_learn_js_expression_node_before } from "./app_learn_js_expression_node_before.mjs";
-import { app_code_expression_remainder_tree } from "./app_code_expression_remainder_tree.mjs";
+import { app_learn_js_expression_remainder_tree } from "./app_learn_js_expression_remainder_tree.mjs";
 export function app_code_expression_written_shapes_numbers() {
   arguments_assert(arguments, 0);
   ("shapes of arithmetic to hold every printed line against: one operator, then two with the deeper one first on the left and then on the right, then rounding down over a division and over a plain number, then a rounding down standing on either side of another operator, and the remainder formula whole");
@@ -71,7 +71,10 @@ export function app_code_expression_written_shapes_numbers() {
     list_add(shapes, on_right);
   }
   each(arithmetic, beside);
-  let remainder = app_code_expression_remainder_tree(left_number, right_number);
+  let remainder = app_learn_js_expression_remainder_tree(
+    left_number,
+    right_number,
+  );
   list_add(shapes, remainder);
   return shapes;
 }
