@@ -410,7 +410,7 @@ export function permission_grant_names() {
     fn_name("firebase_prod_apps_asset_file_names"),
     fn_name("app_code_lessons_rights_space_strip"),
     fn_name("app_code_lessons_rights_space_gate_run"),
-    fn_name("app_code_lesson_ids"),
+    fn_name("app_learn_js_lesson_ids"),
     fn_name("functions_assert_json_get_lambda_sites"),
     fn_name("functions_assert_json_get_lambda_collapse"),
     fn_name("app_shared_dev_build_multiple_prompt"),

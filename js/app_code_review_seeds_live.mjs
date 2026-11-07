@@ -1,5 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_ids } from "./app_code_lesson_ids.mjs";
+import { app_learn_js_lesson_ids } from "./app_learn_js_lesson_ids.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
@@ -22,7 +22,7 @@ export function app_code_review_seeds_live(seeds, kind_is) {
   ("★ BOTH HALVES OF A SEED CAN GO STALE, AND CHECKING ONLY THE LESSON LEAVES THE SAME DEAD SCREEN. A seed also names which of that lesson's quiz kinds it is, by position, and a lesson that has since lost a kind hands back a list too short to answer - which throws exactly as hard, at exactly the same moment, and looks identical to the learner.");
   ("The kinds are counted once per LESSON rather than once per seed, which is what makes the second half affordable. A queue holds one seed per lesson per kind, so counting per seed would build the same lesson's batch several times over; counted per lesson it is the same work the gathering next door does anyway at this very moment, and the gathering is what runs instead when this drops everything.");
   ("The lesson is answered first and the kinds only for what survives, so a lesson that is no longer handed out is never built to be measured.");
-  let ids = app_code_lesson_ids();
+  let ids = app_learn_js_lesson_ids();
   function named_is(seed) {
     let named = property_in_list(seed, "lesson_id", ids);
     return named;
