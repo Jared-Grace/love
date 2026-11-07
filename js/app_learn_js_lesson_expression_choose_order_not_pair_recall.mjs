@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_not_changes_true_false } from "./app_code_not_changes_true_false.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
-export function app_code_lesson_expression_choose_order_not_pair_recall(
+export function app_learn_js_lesson_expression_choose_order_not_pair_recall(
   root,
   context,
 ) {
