@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_answer_label } from "./app_code_lesson_quiz_answer_label.mjs";
+import { app_learn_js_lesson_quiz_answer_label } from "./app_learn_js_lesson_quiz_answer_label.mjs";
 import { app_code_lesson_quiz_on_question } from "./app_code_lesson_quiz_on_question.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_on_reveal } from "./app_code_lesson_quiz_on_reveal.mjs";
@@ -14,7 +14,7 @@ export function app_code_lesson_quiz_container_question({
   refresh,
 }) {
   arguments_assert(arguments, 1);
-  let r = app_code_lesson_quiz_answer_label({
+  let r = app_learn_js_lesson_quiz_answer_label({
     info,
     qa,
     container_blue_light,
