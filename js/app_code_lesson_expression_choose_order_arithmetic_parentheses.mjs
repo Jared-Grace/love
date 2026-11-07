@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_arithmetic_parentheses_title_na
 import { app_code_lesson_expression_choose_order_solve_answer_draw } from "./app_code_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
-import { app_code_lesson_expression_choose_order_arithmetic_parentheses_questions } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses_questions.mjs";
+import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_questions } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_questions.mjs";
 import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_above } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_above.mjs";
 export function app_code_lesson_expression_choose_order_arithmetic_parentheses() {
@@ -38,7 +38,7 @@ export function app_code_lesson_expression_choose_order_arithmetic_parentheses()
     );
   }
   let bank =
-    app_code_lesson_expression_choose_order_arithmetic_parentheses_questions();
+    app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_questions();
   let lesson = app_code_lesson_expression_choose_order_generic(
     name_id,
     app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_above,

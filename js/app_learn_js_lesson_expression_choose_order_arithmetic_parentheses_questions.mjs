@@ -3,7 +3,7 @@ import { not } from "./not.mjs";
 import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expression } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_expression.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses_tree_of_code.mjs";
-export function app_code_lesson_expression_choose_order_arithmetic_parentheses_questions() {
+export function app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_questions() {
   arguments_assert(arguments, 0);
   ("the question bank this lesson draws on: lines whose + or - stands in ( and ) at one end of a times and then at the other, given out one a screen and worked out again from the writing they were printed as");
   ("The asking is the same asking as every other press-at-a-time lesson - one line a screen, worked out again from the line - so it is asked for rather than written out here. What differs is the maker and the reader, and they differ together, because a reader that could not take apart what its own maker builds would throw where a learner was owed a question.");
