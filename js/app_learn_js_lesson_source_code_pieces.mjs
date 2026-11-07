@@ -8,7 +8,7 @@ import { less_than } from "./less_than.mjs";
 import { and } from "./and.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
-export function app_code_lesson_source_code_pieces(source) {
+export function app_learn_js_lesson_source_code_pieces(source) {
   arguments_assert(arguments, 1);
   ("the quoted pieces of a lesson file that are short enough to be code it PUTS ON A CARD, rather than a sentence it says about itself. Splitting the source at every quote mark leaves the quoted pieces at the odd places, which is the whole of the parsing this needs.");
   ("A quoted piece longer than a line of code is one of this repo's prose paragraphs rather than a card, and prose is full of code written as an example of what the card must NOT be. Length is what tells the two apart without parsing anything, and twenty-eight characters is longer than every code line these lessons show.");
