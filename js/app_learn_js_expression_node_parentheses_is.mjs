@@ -9,7 +9,7 @@ import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_code_expression_side_parenthesis_is } from "./app_code_expression_side_parenthesis_is.mjs";
 import { app_code_operator_rank_least_left } from "./app_code_operator_rank_least_left.mjs";
 import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
-export function app_code_expression_node_parentheses_is(item, node) {
+export function app_learn_js_expression_node_parentheses_is(item, node) {
   arguments_assert(arguments, 2);
   ("whether one part of an expression is written inside a pair of parentheses on the line the whole expression prints as: on false && (true || true) the || comes back yes and the && comes back no");
   ("For a telling that wants to point at the marks. A part is gathered because of what stands around it rather than because of anything it holds, so the part on its own cannot be asked - it has to be found on the line it belongs to, and the answer is about that pairing rather than about either one.");
@@ -39,7 +39,10 @@ export function app_code_expression_node_parentheses_is(item, node) {
       );
       return gathered_before;
     }
-    let inside_before = app_code_expression_node_parentheses_is(right, node);
+    let inside_before = app_learn_js_expression_node_parentheses_is(
+      right,
+      node,
+    );
     return inside_before;
   }
   let left = property_get(item, "left");
@@ -61,10 +64,10 @@ export function app_code_expression_node_parentheses_is(item, node) {
     );
     return gathered_right;
   }
-  let from_left = app_code_expression_node_parentheses_is(left, node);
+  let from_left = app_learn_js_expression_node_parentheses_is(left, node);
   if (from_left) {
     return from_left;
   }
-  let from_right = app_code_expression_node_parentheses_is(right, node);
+  let from_right = app_learn_js_expression_node_parentheses_is(right, node);
   return from_right;
 }
