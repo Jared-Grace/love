@@ -11,7 +11,9 @@ import { list_filter } from "./list_filter.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { range_from } from "./range_from.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_code_expression_flat_random_strong_first(operator_count) {
+export function app_learn_js_expression_flat_random_strong_first(
+  operator_count,
+) {
   arguments_assert(arguments, 1);
   ("a line of arithmetic with as many operators on it as asked for, needing no parentheses, answerable a step at a time all the way down, and always carrying a times or a divide that has to go first: asked for three it gives lines like 2 + 9 / 3 - 4");
   ("Grown from a single number outwards rather than drawn as a whole and checked afterwards. Every step is chosen from the ones already known to work, so a line of any length is safe by the way it was made - there is no drawing again, and so no line length at which the making might fail to finish.");
