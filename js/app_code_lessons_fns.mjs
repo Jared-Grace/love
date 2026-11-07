@@ -222,7 +222,7 @@ import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_st
 import { app_code_lesson_statement_name_clock_back } from "./app_code_lesson_statement_name_clock_back.mjs";
 import { app_code_lesson_statement_name_even } from "./app_code_lesson_statement_name_even.mjs";
 import { app_code_lesson_statement_name_page_start } from "./app_code_lesson_statement_name_page_start.mjs";
-import { app_code_lesson_statement_name_clamp } from "./app_code_lesson_statement_name_clamp.mjs";
+import { app_learn_js_lesson_statement_name_clamp } from "./app_learn_js_lesson_statement_name_clamp.mjs";
 import { app_code_lesson_statement_name_meetings_overlap } from "./app_code_lesson_statement_name_meetings_overlap.mjs";
 import { app_code_lesson_statement_name_overlap_hours } from "./app_code_lesson_statement_name_overlap_hours.mjs";
 import { app_code_lesson_statement_name_meetings_join } from "./app_code_lesson_statement_name_meetings_join.mjs";
@@ -583,7 +583,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_clock_back,
     app_code_lesson_statement_name_even,
     app_code_lesson_statement_name_page_start,
-    app_code_lesson_statement_name_clamp,
+    app_learn_js_lesson_statement_name_clamp,
     app_code_lesson_statement_name_meetings_overlap,
     app_code_lesson_statement_name_overlap_hours,
     app_code_lesson_statement_name_meetings_join,

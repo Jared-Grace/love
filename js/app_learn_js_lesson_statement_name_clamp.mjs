@@ -8,7 +8,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { app_learn_js_lesson_expression_larger } from "./app_learn_js_lesson_expression_larger.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_clamp() {
+export function app_learn_js_lesson_statement_name_clamp() {
   arguments_assert(arguments, 0);
   ("keeping a heater's setting between 10 and 30 degrees: let low_ok = Math.max(t, 10); let t2 = Math.min(low_ok, 30); - picked by the human 2026-10-02 from a list of next lessons. In DSA it is clamping, keeping an index or a value between two bounds.");
   ("A heater, asked for by the human 2026-10-03, because a temperature asked for can be any number, far outside on either side. The first draft was a board of squares 0 to 9: a board reads as two-dimensional, a grid, while this keeps one number. Not picked: volume, which steps up and down by 1 and so is only ever one past an edge; a test score out of 100, a slider dragged past its end, and a number typed into a box.");
