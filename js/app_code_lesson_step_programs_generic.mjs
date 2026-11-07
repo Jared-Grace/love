@@ -3,7 +3,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_learn_js_if_blocks_kept } from "./app_learn_js_if_blocks_kept.mjs";
-import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
+import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
 import { app_code_lesson_quiz_step_info } from "./app_code_lesson_quiz_step_info.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_step_programs_generic(
   );
   let forwards = {
     question_label: "",
-    on_question: app_code_lesson_quiz_question_none,
+    on_question: app_learn_js_lesson_quiz_question_none,
     answer_label: "",
     answer_on_button: app_learn_js_brace_marked_div,
     answer_count_override: null,

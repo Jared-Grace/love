@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
+import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
 import { app_learn_js_code_dark_lines_braces_paired_random } from "./app_learn_js_code_dark_lines_braces_paired_random.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
 import { app_learn_js_lesson_quiz_braces_choose_colored_forwards } from "./app_learn_js_lesson_quiz_braces_choose_colored_forwards.mjs";
@@ -19,7 +19,7 @@ export function app_learn_js_lesson_braces_among_colored_generic(
   ("Both ways of choosing come before the writing, as the human asked 2026-10-11: from the code to its braces, then from the braces to the code. Each question and all its choices wear the one set of colours, so the colours are part of the answer and there are four choices, as the human asked 2026-10-11 too. Every quiz draws its own question, so the record each is built on asks for nothing above it.");
   let forwards = {
     question_label: "",
-    on_question: app_code_lesson_quiz_question_none,
+    on_question: app_learn_js_lesson_quiz_question_none,
     answer_label: "Which are its braces, in order?",
     answer_on_button: app_learn_js_code_dark_lines_braces_paired_random,
     answer_count_override: null,
@@ -36,19 +36,19 @@ export function app_learn_js_lesson_braces_among_colored_generic(
     builds_more: [
       {
         question_label: "",
-        on_question: app_code_lesson_quiz_question_none,
+        on_question: app_learn_js_lesson_quiz_question_none,
         answer_label: "Which are its braces, in order?",
         on_answer: app_learn_js_lesson_quiz_braces_choose_colored_forwards,
       },
       {
         question_label: "",
-        on_question: app_code_lesson_quiz_question_none,
+        on_question: app_learn_js_lesson_quiz_question_none,
         answer_label: "Which code has these braces, in order?",
         on_answer: app_learn_js_lesson_quiz_braces_choose_colored_backwards,
       },
       {
         question_label: "",
-        on_question: app_code_lesson_quiz_question_none,
+        on_question: app_learn_js_lesson_quiz_question_none,
         answer_label: "Please write the braces of this code in order:",
         on_answer: app_learn_js_lesson_quiz_braces_order_colored,
       },
