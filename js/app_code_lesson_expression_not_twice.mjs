@@ -1,6 +1,6 @@
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_learn_js_lesson_expression_choose_order_not_twice } from "./app_learn_js_lesson_expression_choose_order_not_twice.mjs";
-import { app_code_lesson_expression_not_twice_title_name_id } from "./app_code_lesson_expression_not_twice_title_name_id.mjs";
+import { app_learn_js_lesson_expression_not_twice_title_name_id } from "./app_learn_js_lesson_expression_not_twice_title_name_id.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_code_not } from "./js_code_not.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_expression_not_twice() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = app_code_lesson_expression_not_twice_title_name_id();
+  let name_id = app_learn_js_lesson_expression_not_twice_title_name_id();
   let lesson = app_learn_js_lesson_expression_generic({
     above,
     name_id,
