@@ -11,7 +11,7 @@ import { app_learn_js_lesson_expression_repeated_generic_lefts } from "./app_lea
 import { list_size } from "./list_size.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { app_code_lesson_expression_repeated_generic_title_name_id } from "./app_code_lesson_expression_repeated_generic_title_name_id.mjs";
+import { app_learn_js_lesson_expression_repeated_generic_title_name_id } from "./app_learn_js_lesson_expression_repeated_generic_title_name_id.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
@@ -93,7 +93,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
     let pairs = list_concat(shown, rest);
     return pairs;
   }
-  let name_id = app_code_lesson_expression_repeated_generic_title_name_id(
+  let name_id = app_learn_js_lesson_expression_repeated_generic_title_name_id(
     title_word,
     symbol,
   );
