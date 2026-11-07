@@ -13,7 +13,7 @@ import { app_learn_js_expression_paint_before_side } from "./app_learn_js_expres
 import { app_code_operator_rank_least_left } from "./app_code_operator_rank_least_left.mjs";
 import { app_learn_js_expression_paint_side } from "./app_learn_js_expression_paint_side.mjs";
 import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
-export function app_code_expression_paint(parent, item, on_operator) {
+export function app_learn_js_expression_paint(parent, item, on_operator) {
   arguments_assert(arguments, 3);
   ("write an expression shape into a parent as separate pieces rather than as one piece of text, so that each operator standing in it is its own thing on the page and can be pressed");
   ("The same line ",

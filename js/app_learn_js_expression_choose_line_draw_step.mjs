@@ -3,7 +3,7 @@ import { not } from "./not.mjs";
 import { app_learn_js_expression_nodes_ready_first } from "./app_learn_js_expression_nodes_ready_first.mjs";
 import { app_learn_js_expression_choose_line_draw_on_operator } from "./app_learn_js_expression_choose_line_draw_on_operator.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_expression_paint } from "./app_code_expression_paint.mjs";
+import { app_learn_js_expression_paint } from "./app_learn_js_expression_paint.mjs";
 export function app_learn_js_expression_choose_line_draw_step({
   stepped_from,
   current,
@@ -33,7 +33,7 @@ export function app_learn_js_expression_choose_line_draw_step({
   });
   let on_operator = property_get(r, "on_operator");
   let pressable = property_get(r, "pressable");
-  app_code_expression_paint(line, current, on_operator);
+  app_learn_js_expression_paint(line, current, on_operator);
   let step = {
     current,
     ready,
