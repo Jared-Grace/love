@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_first } from "./html_div_first.mjs";
-import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
+import { app_learn_js_head_spaced_above_code } from "./app_learn_js_head_spaced_above_code.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_code_lesson_expression_choose_order_intro } from "./app_code_lesson_expression_choose_order_intro.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_expression_choose_order_walkthrough_on_chosen(
   ("It used to be said above the example, of a line built for the saying. That put two different lines of the same shape one under the other, and a learner comparing them for what had changed was reading a difference the lesson never meant to draw.");
   let head = html_div_first(card);
   ("the words stand off from the Code label under them, because the label and the line it introduces are a second thing on the card and words running straight into a label read as one sentence broken in the middle");
-  app_code_head_spaced_above_code(head);
+  app_learn_js_head_spaced_above_code(head);
   let duration = app_shared_animation_duration();
   let intro = html_div(head);
   let note = html_div(head);

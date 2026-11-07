@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_first } from "./html_div_first.mjs";
-import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
+import { app_learn_js_head_spaced_above_code } from "./app_learn_js_head_spaced_above_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_expression_choose_order_solve_example(
   let head = html_div_first(card);
   ("the asking stands off from the Code label under it, by the same small gap the walkthrough of the lesson before leaves there - the two screens are one screen with one thing changed, and a gap on one of them and none on the other would be a second difference to find");
   ("It never gives that room back, because nothing but words ever stands here: where the walkthrough grows a button to press, this screen asks its question and then asks the next one.");
-  app_code_head_spaced_above_code(head);
+  app_learn_js_head_spaced_above_code(head);
   let asking = html_div(head);
   let duration = app_shared_animation_duration();
   function ask(words) {
