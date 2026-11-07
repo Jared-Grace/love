@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_boolean_expression_generic } from "./app_code_lesson_expression_choose_order_boolean_expression_generic.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
-export function app_code_lesson_expression_choose_order_and_expression(
+export function app_learn_js_lesson_expression_choose_order_and_expression(
   want_true,
 ) {
   arguments_assert(arguments, 1);
