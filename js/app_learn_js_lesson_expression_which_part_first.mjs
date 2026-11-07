@@ -7,7 +7,7 @@ import { app_learn_js_lesson_expression_which_part_first_decoys } from "./app_le
 import { app_learn_js_lesson_expression_which_part_first_expression } from "./app_learn_js_lesson_expression_which_part_first_expression.mjs";
 import { app_learn_js_lesson_expression_which_part_first_title_name_id } from "./app_learn_js_lesson_expression_which_part_first_title_name_id.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-export function app_code_lesson_expression_which_part_first() {
+export function app_learn_js_lesson_expression_which_part_first() {
   "which part of a line is replaced first, and what goes wrong when it is the other one: 1 + 2 * 4. ONE new idea on top of the replacing lessons, which each held a line with only one part that could be replaced - so the choice never arose and replacing landed on the right value whichever way it was read. Here there are two parts and only one of them may go first.";
   "The rule this teaches - * before + - is not new. The cross-precedence lessons already taught it about SOLVING a line. What is new is that the same rule governs REPLACING: a learner who has been told a part can be swapped for its value has been given a move that is only sound at one of the two places it appears to fit.";
   "It is a lesson rather than a line inside another one because it can be QUIZZED. Said as a caveat at the foot of a card it can only be read; asked as a question with the wrong part sitting next to the right one, the learner has to make the choice the rule is about, and making it wrong once teaches more than the caveat ever did.";
