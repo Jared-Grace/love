@@ -11,7 +11,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_statement_formula.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_clock_next() {
+export function app_learn_js_lesson_statement_name_clock_next() {
   arguments_assert(arguments, 0);
   ("the hour after this one on a clock: let later = hour + 1; let next = later % 24; - after 23 comes 0, not 24, because the remainder of dividing by 24 starts the count again");
   ("Chosen for later use: going round a list and back to its start, the next place in a ring, and the day of the week a number of days from now are all this line, once lists are taught. A clock is used first because every learner already knows the hour after 23 is 0, so the formula explains a thing they know rather than a thing they do not. Picked by the human from a list of formulas, 2026-09-28.");
