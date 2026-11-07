@@ -22,7 +22,7 @@ import { app_learn_js_arrow_inline_draw } from "./app_learn_js_arrow_inline_draw
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
-import { app_code_lesson_statement_name_grid_inside } from "./app_code_lesson_statement_name_grid_inside.mjs";
+import { app_learn_js_lesson_statement_name_grid_inside } from "./app_learn_js_lesson_statement_name_grid_inside.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_square_in_rectangle() {
   arguments_assert(arguments, 0);
@@ -353,7 +353,7 @@ export function app_code_lesson_statement_name_square_in_rectangle() {
     values_get,
     example_values: [1, 4, 1, 3, 2, 2],
     step,
-    remember_lesson: app_code_lesson_statement_name_grid_inside,
+    remember_lesson: app_learn_js_lesson_statement_name_grid_inside,
     remember_parts: ["we can check whether a square is inside a grid:"],
     remember_lines,
     explain: [

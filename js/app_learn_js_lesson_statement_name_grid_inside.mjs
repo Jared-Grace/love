@@ -26,7 +26,7 @@ import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_lesson_statement_formula_answer_count } from "./app_learn_js_lesson_statement_formula_answer_count.mjs";
 import { app_code_lesson_statement_name_seat_less } from "./app_code_lesson_statement_name_seat_less.mjs";
 import { app_learn_js_explain_containers } from "./app_learn_js_explain_containers.mjs";
-export function app_code_lesson_statement_name_grid_inside() {
+export function app_learn_js_lesson_statement_name_grid_inside() {
   arguments_assert(arguments, 0);
   ("whether a square is inside a grid whose rows and columns are numbered from 0: let in_r = 0 <= r && r < rows; let in_c = 0 <= c && c < cols; let ok = in_r && in_c; - picked by the human 2026-10-02 from a list of next lessons. In DSA it is the check made before stepping to a neighbouring square of a grid, so a search never reads past an edge.");
   ("The new idea is only that a square needs two checks, one for its row and one for its column, and both must pass. Each check is Seat in the row, shorter, with its names changed, so that lesson is the reminder.");
