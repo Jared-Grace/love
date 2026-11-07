@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-import { app_code_division_worked_numbers } from "./app_code_division_worked_numbers.mjs";
+import { app_learn_js_division_worked_numbers } from "./app_learn_js_division_worked_numbers.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
@@ -25,7 +25,7 @@ export function app_code_integer_division_uneven_cards(root) {
   app_learn_js_div_cycle_code(problem, [
     "Dividing does not always come out even",
   ]);
-  let numbers = app_code_division_worked_numbers();
+  let numbers = app_learn_js_division_worked_numbers();
   let dividend = property_get(numbers, "dividend");
   let divisor = property_get(numbers, "divisor");
   let divided_by = js_operator_division_symbol();

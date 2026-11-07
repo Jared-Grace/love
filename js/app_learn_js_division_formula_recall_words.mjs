@@ -1,4 +1,4 @@
-import { app_code_division_worked_numbers } from "./app_code_division_worked_numbers.mjs";
+import { app_learn_js_division_worked_numbers } from "./app_learn_js_division_worked_numbers.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
@@ -11,7 +11,7 @@ export function app_learn_js_division_formula_recall_words(what, tree_of) {
   ("Four lessons say a sentence of this shape - the whole part and the remainder, each asked for all at once on one screen and pressed apart a part at a time on the screen in front of it - and each pair must say it in the same words. A learner recognises a sentence they have already read in the second it takes, while a near-copy stops them to compare two sentences that mean the same thing.");
   ("The formula is handed in as a shape and written out from the shape, rather than typed here as text. Typed, the day a line changed the sentence introducing it would have gone on describing the line before, and nothing would have complained.");
   ("The worked numbers are the same two on all four screens, and they are asked for rather than typed here, so a learner following the run meets one example rather than four, and the formula they were shown is the formula they are asked for.");
-  let numbers = app_code_division_worked_numbers();
+  let numbers = app_learn_js_division_worked_numbers();
   let dividend = property_get(numbers, "dividend");
   let divisor = property_get(numbers, "divisor");
   let divided_by = js_operator_division_symbol();

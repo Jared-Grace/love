@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_division_worked_numbers() {
+export function app_learn_js_division_worked_numbers() {
   arguments_assert(arguments, 0);
   ("the two numbers every worked division in this run of lessons is worked on: 14 divided by 4");
   ("One pair, asked for rather than typed, so a learner reading down the run meets one example over and over instead of a fresh pair on every screen. Recognising the numbers is most of what makes the fifth sentence of a shape read as the same sentence as the first.");
