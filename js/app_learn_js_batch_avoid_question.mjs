@@ -2,7 +2,11 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_batch_avoid_question(items, avoid_question, next_get) {
+export function app_learn_js_batch_avoid_question(
+  items,
+  avoid_question,
+  next_get,
+) {
   arguments_assert(arguments, 3);
   ("The batch about to be drawn, with any line in it that repeats one the learner has already been shown worked out swapped for the next line the bank has.");
   ("A LESSON THAT SHOWS A LINE SOLVED AND THEN ASKS FOR THAT LINE HAS ASKED NOTHING. The telling above a lesson's card builds its own line and the card below draws from the bank, and the two are built independently - so the clash is possible on every screen and invisible to both halves of it.");

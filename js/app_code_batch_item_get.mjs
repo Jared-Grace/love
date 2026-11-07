@@ -1,4 +1,4 @@
-import { app_code_batch_avoid_question } from "./app_code_batch_avoid_question.mjs";
+import { app_learn_js_batch_avoid_question } from "./app_learn_js_batch_avoid_question.mjs";
 import { range_map } from "./range_map.mjs";
 import { list_iterator_refillable_on } from "./list_iterator_refillable_on.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,7 +23,7 @@ export function app_code_batch_item_get(
   let refresh = function lambda() {
     html_clear(container);
     let drawn = range_map(example_count, next_get);
-    let bs = app_code_batch_avoid_question(drawn, avoid_question, next_get);
+    let bs = app_learn_js_batch_avoid_question(drawn, avoid_question, next_get);
     on_batch_item(container, bs, refresh, next_get);
   };
   refresh();
