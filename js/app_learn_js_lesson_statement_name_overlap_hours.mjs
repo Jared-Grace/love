@@ -19,7 +19,7 @@ import { app_learn_js_lesson_statement_formula } from "./app_learn_js_lesson_sta
 import { app_learn_js_lesson_statement_name_meetings_overlap } from "./app_learn_js_lesson_statement_name_meetings_overlap.mjs";
 import { app_learn_js_explain_said } from "./app_learn_js_explain_said.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
-export function app_code_lesson_statement_name_overlap_hours() {
+export function app_learn_js_lesson_statement_name_overlap_hours() {
   arguments_assert(arguments, 0);
   ("how many hours two meetings overlap: let gap = end - start; let hours = Math.max(gap, 0); - chosen by Claude 2026-10-03, when the human asked for another lesson without naming one. In DSA it is the length of the overlap of two ranges, used to total shared time and to measure how much two boxes cover each other; the Math.max with 0 is the step that is forgotten, and a negative length is the bug it leaves.");
   ("It starts from the overlap's start and end rather than from the two meetings, because Do two meetings overlap already finds those, so that lesson is the reminder and the new idea is only the length and the 0 floor. Not picked: the middle of a range, which Middle already teaches, and the four meeting times as names, which would put five lines in every program.");
