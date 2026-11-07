@@ -1,6 +1,6 @@
 import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
@@ -65,7 +65,7 @@ export function app_code_lesson_statement_name_digit_split() {
     return chip;
   }
   let by_ten = by(ten);
-  let color = app_code_highlight_color();
+  let color = app_learn_js_highlight_color();
   let color2 = app_learn_js_highlight_color_second();
   let pointers = [
     [["3"], color],
@@ -84,7 +84,7 @@ export function app_code_lesson_statement_name_digit_split() {
   let v4 = pointed(["", seven]);
   let v5 = by("9");
   let v6 = by("11");
-  let color3 = app_code_highlight_color();
+  let color3 = app_learn_js_highlight_color();
   let v7 = pointed([
     "Let's suppose we have a whole number, like ",
     "123",

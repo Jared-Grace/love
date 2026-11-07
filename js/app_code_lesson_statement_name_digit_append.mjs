@@ -8,7 +8,7 @@ import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_statement_name_digit_append() {
     let taken = list_shuffle_take(candidates, 4);
     return taken;
   }
-  let color = app_code_highlight_color();
+  let color = app_learn_js_highlight_color();
   let color4 = app_learn_js_highlight_color_fourth();
   let pointers = [
     [["12"], color],

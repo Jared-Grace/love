@@ -3,7 +3,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
 import { app_learn_js_code_lines_writes_out_on } from "./app_learn_js_code_lines_writes_out_on.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_code_colored_inline } from "./app_learn_js_explain_code_colored_inline.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
@@ -77,7 +77,7 @@ export function app_code_lesson_statement_name_even() {
     list_shuffle(taken);
     return taken;
   }
-  let remainder_color = app_code_highlight_color();
+  let remainder_color = app_learn_js_highlight_color();
   let plain = app_shared_color_code_background();
   let spaced_percent = js_code_binary_spaced_nb("", percent, "");
   let spaced_same = js_code_binary_spaced_nb("", same, "");

@@ -1,7 +1,7 @@
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_statement_name_digit_rest() {
   let divided3 = js_code_binary_spaced_nb("4567", slash, ten);
   let floored2 = js_code_call_args(floor_name, [divided3]);
   let whole2 = js_code_binary_spaced_nb(floored2, same, "456");
-  let color = app_code_highlight_color();
+  let color = app_learn_js_highlight_color();
   let color2 = app_learn_js_highlight_color_second();
   ("the dot in 12.3 wears a third colour and the 3 after it a fourth, asked by the human 2026-09-28, so the dot that division puts in and the digit that rounding down takes away are each seen; the 3 of 123 stays plain, because a pointer on .3 names only the 3 after a dot");
   let color3 = app_learn_js_highlight_color_third();

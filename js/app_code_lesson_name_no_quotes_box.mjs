@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_string_quote } from "./js_string_quote.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_name_no_quotes_box(
   let box = app_learn_js_container_light_blue(root);
   let quote = js_string_quote();
   let quoted_word = app_code_string_code(word_source);
-  let highlight = app_code_highlight_color();
+  let highlight = app_learn_js_highlight_color();
   let line_plain = js_code_let_statement(name_copy, name_source);
   ("The box opens by naming the line the learner may have expected to see, so the first line below is read as a correction of it rather than as a new fact. Asked for by the human in these words.");
   let quoted_name = app_code_string_code(name_source);

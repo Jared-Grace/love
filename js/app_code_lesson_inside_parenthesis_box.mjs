@@ -4,7 +4,7 @@ import { js_console_log_name } from "./js_console_log_name.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_semicolon } from "./js_code_semicolon.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_inside_parenthesis_box(
   ("Everything is written exactly as it would be typed, with no room left inside the parenthesis. A space put there to hold the name apart is dark, because it is inside the chip, so it comes out as a bar of code colour between the parenthesis and the name - which reads as something written rather than as a gap. The chips have room of their own at their edges and that is all the parting the name needs.");
   ('The pair of parenthesis in the sentence is two chips with a plain space between them, not one chip reading "( )". There is no such thing in code as an open and a close written together; they are two characters that stand at the two ends of something, and one chip round both says they are a single mark - which is the reading this whole box exists to undo.');
   ("TWO POINTERS AT ONCE, so both colours are on the screen and neither is decoration. The first says which name comes out, and it is worn by the word inside and by the name in the middle of the call. The second says what inside means, and it is worn by the word parenthesis and by every open and close on the screen - the loose pair in the sentence, the two standing round the name in the call, and the two inside the chips at the bottom. A learner who has been told that inside means inside those marks can then find the marks by their colour wherever they next appear.");
-  let highlight = app_code_highlight_color();
+  let highlight = app_learn_js_highlight_color();
   let marking = app_learn_js_highlight_color_second();
   let line_only = html_div(box_care);
   html_span_text(line_only, "Only the name ");

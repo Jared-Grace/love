@@ -8,7 +8,7 @@ import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw.mjs";
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { each_index } from "./each_index.mjs";
@@ -151,7 +151,7 @@ export function app_code_lesson_statement_name_grid_index() {
   let v2 = pointed(["The ", "", blue, "", " are the 2 whole rows before it"]);
   let v_held = pointed(["2 rows of ", "3", " chairs hold 6 chairs:"]);
   let v3 = pointed(["", code]);
-  let color_before = app_code_highlight_color();
+  let color_before = app_learn_js_highlight_color();
   function held_draw(box) {
     "the sum 2 * 3 === 6, then the 6 chairs it counts listed out, 0 to 5, each in the blue the grid fills them with, as the column lesson lists them";
     let line = v3(box);

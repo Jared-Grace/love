@@ -3,7 +3,7 @@ import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_expression_choose_order_not_twice_inside_first(
   let word_true = js_keyword_true();
   let left = js_code_parenthesis_left();
   let right = js_code_parenthesis_right();
-  let color_first = app_code_highlight_color();
+  let color_first = app_learn_js_highlight_color();
   let color_second = app_learn_js_highlight_color_second();
   let color_third = app_learn_js_highlight_color_third();
   let not_true = app_code_operator_code_before(bang, word_true);

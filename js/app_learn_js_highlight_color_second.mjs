@@ -4,7 +4,7 @@ import { app_shared_color_green_pointer } from "./app_shared_color_green_pointer
 export function app_learn_js_highlight_color_second() {
   "the second pointing colour: worn by a word and by the piece of code that word points at, on a screen where another word is pointing at a different piece of code at the same time";
   ("IT SAYS NOTHING ON ITS OWN. Where one thing is being pointed at, that thing wears ",
-    fn_name("app_code_highlight_color"),
+    fn_name("app_learn_js_highlight_color"),
     " and this colour is never reached. It arrives only as the other half of a pair, and what it tells a learner is not green but not the blue one - so a screen reaching for it must have both colours on it at once, or the second colour is decoration wearing a pointer's clothes.");
   ("A GREEN, AND IT WAS AN AMBER UNTIL THE THIRD POINTER EXISTED. Two colours could sit anywhere as long as they were not each other, and the amber was fine. Adding ",
     fn_name("app_learn_js_highlight_color_third"),

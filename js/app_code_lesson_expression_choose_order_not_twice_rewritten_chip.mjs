@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_choose_order_not_twice_rewritten_chip
     ", the same place the plain showing of this line takes them from, so the coloured line and the uncoloured one cannot drift into being two different lines.");
   ("Written into a line handed in rather than onto a line of its own, because every sentence that uses it has words on at least one side of it.");
   arguments_assert(arguments, 1);
-  let color_first = app_code_highlight_color();
+  let color_first = app_learn_js_highlight_color();
   let color_second = app_learn_js_highlight_color_second();
   let color_third = app_learn_js_highlight_color_third();
   let plain = app_shared_color_code_background();

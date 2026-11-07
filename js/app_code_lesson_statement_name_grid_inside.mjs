@@ -9,7 +9,7 @@ import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_s
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
@@ -90,7 +90,7 @@ export function app_code_lesson_statement_name_grid_inside() {
     list_shuffle(taken);
     return taken;
   }
-  let grid_color = app_code_highlight_color();
+  let grid_color = app_learn_js_highlight_color();
   let row_color = app_learn_js_highlight_color_third();
   let column_color = app_learn_js_highlight_color_fourth();
   let rows_count_color = app_learn_js_highlight_color_second();

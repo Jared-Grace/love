@@ -10,7 +10,7 @@ import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_third } from "./app_learn_js_highlight_color_third.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
@@ -85,7 +85,7 @@ export function app_code_lesson_statement_name_shared_squares() {
     );
     return all;
   }
-  let start_color = app_code_highlight_color();
+  let start_color = app_learn_js_highlight_color();
   let end_color = app_learn_js_highlight_color_second();
   let overlap_color = app_learn_js_highlight_color_third();
   let plain = app_shared_color_code_background();

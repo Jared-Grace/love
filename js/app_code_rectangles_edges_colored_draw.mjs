@@ -8,7 +8,7 @@ import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_grid_edge_line_draw } from "./app_learn_js_grid_edge_line_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_learn_js_highlight_color } from "./app_learn_js_highlight_color.mjs";
 import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
@@ -49,7 +49,7 @@ export function app_code_rectangles_edges_colored_draw({
   ("across and down are each a list of [start, end] spans, whose numbers wear the start and end colours of the meetings lessons, or null to leave every number plain: one span for the shared part of two rectangles, or one for each rectangle when both edges of each are compared, asked by the human 2026-10-04 for a rectangle inside a rectangle, whose second rectangle's numbers were plain in the picture while its words coloured them. An edge that ends one span and starts another, as two rectangles that touch share, wears both: its number is half the end colour and half the start colour, and its line is the two side by side, the end colour first, in the order a reader meets them - the first rectangle ends there before the second starts. Asked by the human 2026-10-05 for two rectangles that touch, where the edge wore only the start colour; the meetings picture stripes such a line instead, but stripes have no order, and the human asked for the order");
   ("marked is [left, right, top, bottom] of squares filled with the overlap colour whether or not both rectangles cover them, or null for none - asked by the human 2026-10-04 to show the square a wrong answer counts, between two rectangles that share none");
   ("The numbers sit on the lines and not on the squares, unlike the grid lessons' headings, because a meeting from 9 to 11 is two hours: the numbers are the edges, and left < right reads true exactly when a rectangle has a square between them.");
-  let start_color = app_code_highlight_color();
+  let start_color = app_learn_js_highlight_color();
   let end_color = app_learn_js_highlight_color_second();
   let first_color = app_learn_js_highlight_color_fourth();
   let second_color = app_learn_js_highlight_color_fifth();

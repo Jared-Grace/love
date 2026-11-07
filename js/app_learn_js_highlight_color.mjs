@@ -1,7 +1,7 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_brand_blue } from "./app_shared_color_brand_blue.mjs";
-export function app_code_highlight_color() {
+export function app_learn_js_highlight_color() {
   function_duplicate_kind_parallel();
   arguments_assert(arguments, 0);
   ("the colour behind a word that is being pointed at, and behind the piece of code that word is pointing to");
