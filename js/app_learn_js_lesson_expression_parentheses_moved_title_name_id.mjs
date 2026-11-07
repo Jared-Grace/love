@@ -4,7 +4,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
-export function app_code_lesson_expression_parentheses_moved_title_name_id() {
+export function app_learn_js_lesson_expression_parentheses_moved_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: moving the ( and ), an Expressions lesson. The title names the movement rather than an operator, because the operators never change in this lesson - only where the parentheses sit");
   function paint(parent) {
