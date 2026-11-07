@@ -47,7 +47,12 @@ import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
 import { app_code_div_braces_painted } from "./app_code_div_braces_painted.mjs";
 import { app_code_quiz_choice_button_answer } from "./app_code_quiz_choice_button_answer.mjs";
-export function app_code_braces_run_choose(parent, code, on_wrong, on_success) {
+export function app_learn_js_braces_run_choose(
+  parent,
+  code,
+  on_wrong,
+  on_success,
+) {
   arguments_assert(arguments, 4);
   ("a program whose sections are asked about one at a time, its braces drawn in a colour: does this { ... } run? Once the right answer is pressed, the program is taken a step towards what runs of it. A section that does not run is swallowed: what is inside its braces fades out, and the braces close up over the room it took. A section that runs loses the if, or the if () { } else {, around it and its last }, and its lines move diagonally out and up to where they now stand. Asked for by the human 2026-10-11");
   ("What each answer does is ",

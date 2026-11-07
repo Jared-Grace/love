@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_code_braces_run_choose } from "./app_code_braces_run_choose.mjs";
+import { app_learn_js_braces_run_choose } from "./app_learn_js_braces_run_choose.mjs";
 export function app_code_lesson_quiz_braces_run(
   parent,
   info,
@@ -14,5 +14,5 @@ export function app_code_lesson_quiz_braces_run(
   let question = property_get(qa, "question");
   let answer = property_get(qa, "answer");
   correction_code_set(answer);
-  app_code_braces_run_choose(parent, question, on_wrong, on_success);
+  app_learn_js_braces_run_choose(parent, question, on_wrong, on_success);
 }

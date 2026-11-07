@@ -24,7 +24,7 @@ export async function app_code_braces_run_output_show(
   ("once every section is answered, what the program left writes out appears under it: first the room for it opens, pushing what is below down, then the words fade into it, and only then is the answer counted");
   ("Asked for by the human 2026-10-11: the lesson after each of these asks what such a program writes out, and what is left here is straight-line code, so its output is the one step from this answer to that question. The room opens before the words come so that nothing jumps - a box arriving whole moves everything under it at once. Not picked: the output shown from the start, which would tell which sections run before they are asked; and asking for the output as one more question, which is the next lesson's quiz.");
   ("Its own function rather than a step inside ",
-    fn_name("app_code_braces_run_choose"),
+    fn_name("app_learn_js_braces_run_choose"),
     ", because that one reads letters by number and so cannot be proved safe to edit; this way the change there is one call.");
   let duration = app_shared_animation_duration();
   let kept = app_code_if_blocks_kept(code);

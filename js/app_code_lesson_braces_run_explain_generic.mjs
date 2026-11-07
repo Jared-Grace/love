@@ -8,7 +8,7 @@ import { app_code_braces_run_walkthrough } from "./app_code_braces_run_walkthrou
 import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
-import { app_code_braces_run_choose } from "./app_code_braces_run_choose.mjs";
+import { app_learn_js_braces_run_choose } from "./app_learn_js_braces_run_choose.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_braces_run_explain_generic(
     function success() {
       app_shared_success_message(component);
     }
-    app_code_braces_run_choose(component, text, wrong, success);
+    app_learn_js_braces_run_choose(component, text, wrong, success);
   }
   let forwards = {
     question_label: "",
