@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_tokens_rows_braces_all } from "./app_code_tokens_rows_braces_all.mjs";
 import { app_code_lesson_token_order_example_choose_generic } from "./app_code_lesson_token_order_example_choose_generic.mjs";
-export function app_code_lesson_token_order_example_choose_braces(
+export function app_learn_js_lesson_token_order_example_choose_braces(
   component,
   code,
   container,

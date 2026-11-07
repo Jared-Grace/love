@@ -10,7 +10,7 @@ import { app_learn_js_lesson_token_order_alone } from "./app_learn_js_lesson_tok
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_lesson_statement_title_name_id } from "./app_learn_js_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_token_order_generic } from "./app_code_lesson_token_order_generic.mjs";
-import { app_code_lesson_token_order_example_choose_braces } from "./app_code_lesson_token_order_example_choose_braces.mjs";
+import { app_learn_js_lesson_token_order_example_choose_braces } from "./app_learn_js_lesson_token_order_example_choose_braces.mjs";
 import { app_learn_js_lesson_quiz_tokens_tap_braces_colored } from "./app_learn_js_lesson_quiz_tokens_tap_braces_colored.mjs";
 export function app_learn_js_lesson_token_order_braces_colored() {
   arguments_assert(arguments, 0);
@@ -56,7 +56,7 @@ export function app_learn_js_lesson_token_order_braces_colored() {
   let lesson = app_code_lesson_token_order_generic(
     name_id,
     above,
-    app_code_lesson_token_order_example_choose_braces,
+    app_learn_js_lesson_token_order_example_choose_braces,
     app_learn_js_lesson_quiz_tokens_tap_braces_colored,
   );
   return lesson;
