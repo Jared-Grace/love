@@ -20,7 +20,7 @@ import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "./app_code_lesson_validity_code.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_functions_invalid() {
+export function app_learn_js_lesson_functions_invalid() {
   "The lesson on what a function call cannot do without: the student is shown a whole call, and then the same call with some of the symbols a call is made of taken out, and says each time whether what is left is still code.";
   "The broken versions are not invented one at a time. Every combination of those symbols is taken, smallest first, so a student meets one missing symbol before two, and the whole of what can go missing is covered rather than sampled.";
   "The two questions of a round are built from the same operator, so the only thing that differs between the whole call and the broken one is what was taken out of it.";
