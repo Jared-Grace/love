@@ -1,7 +1,7 @@
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { app_code_lesson_brace_lines_two_nested } from "./app_code_lesson_brace_lines_two_nested.mjs";
 import { list_last } from "./list_last.mjs";
-import { app_code_brace_lines_example } from "./app_code_brace_lines_example.mjs";
+import { app_learn_js_brace_lines_example } from "./app_learn_js_brace_lines_example.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
@@ -37,7 +37,7 @@ export function app_code_lesson_brace_lines() {
     let box_two = app_code_container_light_blue(root);
     let codes = app_code_brace_pair_programs_three();
     let code = list_last(codes);
-    app_code_brace_lines_example(box_two, code, 0);
+    app_learn_js_brace_lines_example(box_two, code, 0);
   }
   let name_id = app_code_lesson_statement_title_name_id(
     "The lines between braces",

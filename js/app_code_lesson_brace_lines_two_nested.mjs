@@ -6,7 +6,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_brace_lines_two } from "./app_code_lesson_brace_lines_two.mjs";
 import { app_code_braces_two_nested } from "./app_code_braces_two_nested.mjs";
-import { app_code_brace_lines_example } from "./app_code_brace_lines_example.mjs";
+import { app_learn_js_brace_lines_example } from "./app_learn_js_brace_lines_example.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_brace_lines_generic } from "./app_code_lesson_brace_lines_generic.mjs";
 export function app_code_lesson_brace_lines_two_nested() {
@@ -33,7 +33,7 @@ export function app_code_lesson_brace_lines_two_nested() {
     );
     let box_two = app_code_container_light_blue(root);
     let code = app_code_braces_two_nested();
-    app_code_brace_lines_example(box_two, code, 0);
+    app_learn_js_brace_lines_example(box_two, code, 0);
   }
   function codes_get() {
     "an if inside an if, four times";

@@ -1,6 +1,6 @@
 import { app_code_braces_dots } from "./app_code_braces_dots.mjs";
 import { app_code_braces_two_ifs } from "./app_code_braces_two_ifs.mjs";
-import { app_code_brace_lines_example } from "./app_code_brace_lines_example.mjs";
+import { app_learn_js_brace_lines_example } from "./app_learn_js_brace_lines_example.mjs";
 import { app_code_braces_two_if_else } from "./app_code_braces_two_if_else.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_brace_lines_two() {
       right,
     ]);
     let code = app_code_braces_two_ifs();
-    app_code_brace_lines_example(box_two, code, 0);
+    app_learn_js_brace_lines_example(box_two, code, 0);
   }
   function codes_get() {
     "two ifs one after the other, and an if and its else, each twice";
