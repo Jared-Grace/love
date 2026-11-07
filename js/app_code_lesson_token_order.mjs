@@ -16,7 +16,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
-import { app_code_lesson_quiz_tokens_tap_guided } from "./app_code_lesson_quiz_tokens_tap_guided.mjs";
+import { app_learn_js_lesson_quiz_tokens_tap_guided } from "./app_learn_js_lesson_quiz_tokens_tap_guided.mjs";
 import { app_learn_js_lesson_base } from "./app_learn_js_lesson_base.mjs";
 export function app_code_lesson_token_order() {
   arguments_assert(arguments, 0);
@@ -78,7 +78,7 @@ export function app_code_lesson_token_order() {
     batch_get: batch,
     forwards_code: true,
     unscramble_label: app_code_tokens_choose_label_guided,
-    unscramble_on_answer: app_code_lesson_quiz_tokens_tap_guided,
+    unscramble_on_answer: app_learn_js_lesson_quiz_tokens_tap_guided,
     builds_more: [],
   });
   let lesson = app_learn_js_lesson_base(
