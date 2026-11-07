@@ -4,7 +4,7 @@ import { html_span_code_dark } from "./html_span_code_dark.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_lesson_console_log_remainder_generic_remainder_color } from "./app_learn_js_lesson_console_log_remainder_generic_remainder_color.mjs";
-import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
+import { app_learn_js_lesson_number_chip_lifted } from "./app_learn_js_lesson_number_chip_lifted.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_learn_js_lesson_console_log_remainder_generic_equation_with_remainder(
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_equation_with_
     remainder,
     divisor,
   );
-  app_code_lesson_number_chip_lifted(tile, remainder, color);
+  app_learn_js_lesson_number_chip_lifted(tile, remainder, color);
   let t = text_to(result);
   let after = text_combine_multiple([" ", triple_equal, " ", t]);
   html_span_text(tile, after);
