@@ -8,7 +8,7 @@ import { property_get } from "./property_get.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_learn_js_lesson_statement_name_swap_backwards_decoys } from "./app_learn_js_lesson_statement_name_swap_backwards_decoys.mjs";
-export function app_code_lesson_statement_name_swap_step() {
+export function app_learn_js_lesson_statement_name_swap_step() {
   arguments_assert(arguments, 0);
   ("the last step of the swapping ladder: the third step's lines with b = temp; after them - a and b have swapped, and both are written out");
   let names = app_code_lesson_statement_name_value_names();
