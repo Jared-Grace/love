@@ -13,7 +13,7 @@ import { list_reverse } from "./list_reverse.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { each } from "./each.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
-import { app_code_lesson_quiz_token_select_row_set } from "./app_code_lesson_quiz_token_select_row_set.mjs";
+import { app_learn_js_lesson_quiz_token_select_row_set } from "./app_learn_js_lesson_quiz_token_select_row_set.mjs";
 import { app_learn_js_lesson_quiz_token_select_done_is } from "./app_learn_js_lesson_quiz_token_select_done_is.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
@@ -73,7 +73,7 @@ export function app_learn_js_lesson_quiz_pieces_select(
       app_shared_button_screen_green_style_assign(b);
       list_add(chosen, token);
       variations = variations_new;
-      app_code_lesson_quiz_token_select_row_set(
+      app_learn_js_lesson_quiz_token_select_row_set(
         tokens_unique,
         chosen,
         variations,
@@ -107,7 +107,7 @@ export function app_learn_js_lesson_quiz_pieces_select(
     return b;
   }
   buttons = list_map(tokens_unique, lambda);
-  app_code_lesson_quiz_token_select_row_set(
+  app_learn_js_lesson_quiz_token_select_row_set(
     tokens_unique,
     chosen,
     variations,
