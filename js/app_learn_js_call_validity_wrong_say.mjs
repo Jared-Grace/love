@@ -16,7 +16,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
 import { boolean_to_text_validity } from "./boolean_to_text_validity.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-export function app_code_call_validity_wrong_say(question, answer, choice) {
+export function app_learn_js_call_validity_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner calls a function call valid or invalid wrongly: a call needs its ( , the , between its numbers and its ), and which of them this line has none of, as parts that take turns between words and code. null for a line that does not start with the name of a function the lessons call, and for a line whose answer the reason given here would not explain");
   ("Not picked: saying where a symbol is missing; the lesson takes a symbol out everywhere it stands, so having none of it is the whole of what went wrong");
