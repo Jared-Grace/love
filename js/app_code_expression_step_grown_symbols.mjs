@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_learn_js_expression_rank } from "./app_learn_js_expression_rank.mjs";
-import { app_code_expression_step_choices_symbols } from "./app_code_expression_step_choices_symbols.mjs";
+import { app_learn_js_expression_step_choices_symbols } from "./app_learn_js_expression_step_choices_symbols.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_expression_step_choice_grown } from "./app_learn_js_expression_step_choice_grown.mjs";
 export function app_code_expression_step_grown_symbols(item, symbols) {
@@ -10,7 +10,7 @@ export function app_code_expression_step_grown_symbols(item, symbols) {
   ("The line already there becomes one side of the new operator, exactly as it does for every other grower, so a line built this way still has exactly one part ready at every moment however long it grows.");
   let value = app_code_expression_value(item);
   let rank_most = app_learn_js_expression_rank(item);
-  let choices = app_code_expression_step_choices_symbols(
+  let choices = app_learn_js_expression_step_choices_symbols(
     value,
     rank_most,
     symbols,

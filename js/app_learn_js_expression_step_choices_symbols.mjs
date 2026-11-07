@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_step_choices } from "./app_code_expression_step_choices.mjs";
 import { property_in_list } from "./property_in_list.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function app_code_expression_step_choices_symbols(
+export function app_learn_js_expression_step_choices_symbols(
   value,
   rank_most,
   symbols,
