@@ -8,7 +8,7 @@ import { app_learn_js_lesson_comment_after_code_above } from "./app_learn_js_les
 import { app_learn_js_code_dark_lines_comments } from "./app_learn_js_code_dark_lines_comments.mjs";
 import { app_code_lesson_decoy_comment_ignored } from "./app_code_lesson_decoy_comment_ignored.mjs";
 import { app_code_lesson_decoy_comment_after_code_swapped } from "./app_code_lesson_decoy_comment_after_code_swapped.mjs";
-export function app_code_lesson_comment_after_code() {
+export function app_learn_js_lesson_comment_after_code() {
   arguments_assert(arguments, 0);
   ("a comment after code on the same line: console.log(6 + 5); // console.log(3 + 9); writes out 11 and nothing else");
   ("The one new fact is that the slashes need not start the line. The code in front of them runs, and everything from them to the end of the line is skipped - which is what the words the course gives for a comment always said, and what a learner could not see while the slashes stood at the start of every line.");
