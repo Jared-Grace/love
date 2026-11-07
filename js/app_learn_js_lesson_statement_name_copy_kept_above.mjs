@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
+import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -30,7 +30,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_above(
   ("The taking out is said as a person doing it. The copying lesson was careful that nobody ever poured one cup into another; this screen is the one where something really is removed, and saying who removed it and from which cup keeps the two apart.");
   ("It is said flatly afterwards that nobody touched the second cup. That is the whole fact, and a learner who has just watched one cup change will look at the other one expecting it to have changed too.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_copy = app_code_lesson_statement_name_third();
+  let name_copy = app_learn_js_lesson_statement_name_third();
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
   ("THE TWO NAMES ARE LENT COLOURS HERE, IN THE ORDER THE SCREEN INTRODUCES THEM. The cup that changes is met first and the cup that keeps its word second, which is also the order the program's notes at the bottom mark them in - and it has to stay that way, because the code box works its own order out from those notes rather than being handed this list.");

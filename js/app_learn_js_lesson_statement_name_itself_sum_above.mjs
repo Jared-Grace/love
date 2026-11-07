@@ -4,7 +4,7 @@ import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_sta
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { add } from "./add.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
-import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
+import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -33,7 +33,7 @@ export function app_learn_js_lesson_statement_name_itself_sum_above(
   let number_new = 9;
   let total = add(number_first, number_last);
   let names_sum = app_code_lesson_statement_names_added();
-  let name_third = app_code_lesson_statement_name_third();
+  let name_third = app_learn_js_lesson_statement_name_third();
   let box_total = app_learn_js_container_light_blue(root);
   ("Every reminder names its cups in brackets as well, not just the box the lesson turns on. A reminder is read fastest of all - a learner is checking that they already know it rather than working it out - and a sentence made only of the words a name and two names makes them look down at the code to find out which cups it is talking about, which is slower than reading the letters in place.");
   ("A reminder ends by naming the line it is about, whole and with its semicolon, because that line is drawn a few rows below it and again further down the screen. Described in words alone, a learner has to read the sentence, look down at the program and work out which of its lines the sentence was pointing at - and this screen is about one line turning into another, so which line is the whole question.");

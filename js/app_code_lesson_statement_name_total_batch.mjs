@@ -2,7 +2,7 @@ import { app_code_lesson_statement_names_added } from "./app_code_lesson_stateme
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
-import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
+import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_learn_js_lesson_statement_name_sum_number_pairs } from "./app_learn_js_lesson_statement_name_sum_number_pairs.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_statement_name_total_batch() {
   ("So the three wrong answers a question offers are the other three questions' answers. Nothing has to be invented to fill the buttons, and every wrong answer is a total that some sum on this lesson really does come to.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
-  let name_total = app_code_lesson_statement_name_third();
+  let name_total = app_learn_js_lesson_statement_name_third();
   let summed = app_code_lesson_statement_names_added();
   let pairs = app_learn_js_lesson_statement_name_sum_number_pairs();
   function program_of(pair) {

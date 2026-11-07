@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
-import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
+import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_statement_name_average_three_step() {
   let names = app_code_lesson_statement_name_value_names();
   let name_a = list_first(names);
   let name_b = list_second(names);
-  let name_c = app_code_lesson_statement_name_third();
+  let name_c = app_learn_js_lesson_statement_name_third();
   let sum = "sum";
   let average = "average";
   let plus = js_operator_plus_symbol();

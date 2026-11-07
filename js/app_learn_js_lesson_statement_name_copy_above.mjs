@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
-import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
+import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { text_empty } from "./text_empty.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_statement_name_copy_above(root, context) {
   ("The third cup is a new cup rather than one of the two, so the screen never has to say that a name was given something twice. That was the lesson before, it is settled, and putting it here would give a learner two reasons for a word to have moved.");
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
-  let name_copy = app_code_lesson_statement_name_third();
+  let name_copy = app_learn_js_lesson_statement_name_third();
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
   ("THE ORDER OF THIS LIST IS WHAT DECIDES WHICH NAME IS WHICH COLOUR, on the cups, in the sentences, and in the program at the bottom of the screen. It is the order the screen introduces them in, which is also the order the program's notes first mark them in - and it has to stay that way, because the code box works its own order out from the notes rather than being told this one.");

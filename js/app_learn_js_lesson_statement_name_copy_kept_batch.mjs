@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
+import { app_learn_js_lesson_statement_name_third } from "./app_learn_js_lesson_statement_name_third.mjs";
 import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
@@ -21,7 +21,7 @@ export function app_learn_js_lesson_statement_name_copy_kept_batch() {
   ("Two names and not three. The screen before the one that taught the copying had two cups on it for a reason of its own; here a third cup would be a cup nothing reads, and every word on the screen has to be one a learner might answer with.");
   ("The words are the fruits of the Spirit as the string lessons have them; no word here is used as a name.");
   let name_first = app_code_lesson_statement_name_value_name();
-  let name_copy = app_code_lesson_statement_name_third();
+  let name_copy = app_learn_js_lesson_statement_name_third();
   equal_not_assert_json(name_copy, name_first, {
     hint: "the name filled from the other cup is spelled the same as the cup it is filled from, so the changing line would be changing the answer as well",
   });
