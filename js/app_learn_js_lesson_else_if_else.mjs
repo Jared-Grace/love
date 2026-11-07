@@ -5,7 +5,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_braces_run_else_if_else } from "./app_learn_js_lesson_braces_run_else_if_else.mjs";
 import { app_learn_js_else_if_else_explain } from "./app_learn_js_else_if_else_explain.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
+import { app_learn_js_lesson_if_ab_logged } from "./app_learn_js_lesson_if_ab_logged.mjs";
 import { app_learn_js_else_if_else_program_lines } from "./app_learn_js_else_if_else_program_lines.mjs";
 export function app_learn_js_lesson_else_if_else() {
   arguments_assert(arguments, 0);
@@ -34,7 +34,7 @@ export function app_learn_js_lesson_else_if_else() {
     "Else if and else",
     "else if ... else ...",
   );
-  let lesson = app_code_lesson_if_ab_logged(
+  let lesson = app_learn_js_lesson_if_ab_logged(
     fruits,
     app_learn_js_else_if_else_program_lines,
     4,

@@ -16,7 +16,7 @@ import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_if_ab_logged(
+export function app_learn_js_lesson_if_ab_logged(
   fruits,
   program_lines,
   word_count,

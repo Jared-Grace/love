@@ -5,7 +5,7 @@ import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.m
 import { app_learn_js_lesson_braces_run_after_nested } from "./app_learn_js_lesson_braces_run_after_nested.mjs";
 import { app_learn_js_if_after_nested_explain } from "./app_learn_js_if_after_nested_explain.mjs";
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
-import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
+import { app_learn_js_lesson_if_ab_logged } from "./app_learn_js_lesson_if_ab_logged.mjs";
 import { app_learn_js_if_after_nested_program_lines } from "./app_learn_js_if_after_nested_program_lines.mjs";
 export function app_code_lesson_if_after_nested() {
   arguments_assert(arguments, 0);
@@ -42,7 +42,7 @@ export function app_code_lesson_if_after_nested() {
     "An if after an if inside an if",
     "{ if (b) ... } if (b) ...",
   );
-  let lesson = app_code_lesson_if_ab_logged(
+  let lesson = app_learn_js_lesson_if_ab_logged(
     fruits,
     app_learn_js_if_after_nested_program_lines,
     4,
