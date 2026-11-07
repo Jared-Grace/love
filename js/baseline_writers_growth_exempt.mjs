@@ -33,7 +33,7 @@ export function baseline_writers_growth_exempt() {
       why: "its record is of commit messages already in the history, and a message cannot be edited without writing every commit after it again under a new name - so a name arriving here names a fault nobody can put right, and a list that refused it would go red and stay red. What stands in place of the refusal is narrower than a refusal and stronger: before anything is written, every offender made after the door was shut is asserted away, so growth is only ever possible for a commit worded before there was a door to go round",
     },
     {
-      f_name: fn_name("app_code_lesson_chip_color_baseline_write"),
+      f_name: fn_name("app_learn_js_lesson_chip_color_baseline_write"),
       why: "its record is of readings and not of offences, so growth there is not a fault being written away. A fifth chip colour honestly produces more readings - three for itself and four more for every pair it makes - and refusing those would refuse the very case the gate was built to notice. The teeth are not in the writer but in who runs it and when: running it makes the gate green whatever the palette now says, and what that buys is only that the change cannot happen quietly, since the readings land in a commit as a plain diff of before and after",
     },
     {

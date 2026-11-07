@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_chip_color_readings } from "./app_code_lesson_chip_color_readings.mjs";
 import { app_learn_js_lesson_chip_color_baseline_path } from "./app_learn_js_lesson_chip_color_baseline_path.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
-export async function app_code_lesson_chip_color_baseline_write() {
+export async function app_learn_js_lesson_chip_color_baseline_write() {
   arguments_assert(arguments, 0);
   ("write down what the categorical chip palette measures right now, so that the gate can tell afterwards whether anything about it has moved. For seeding it once, and for banking a change to the palette that somebody has decided on.");
   ("IT DOES NOT REFUSE TO GROW, AND EVERY OTHER RECORD OF THIS SHAPE DOES. The others hold offences, where growing is the one thing the gate exists to stop; this one holds readings, and a fifth colour added to the palette honestly produces more of them - three for itself and four more for every pair it makes. Refusing that would refuse the very case the gate was built to notice.");

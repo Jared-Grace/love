@@ -20,7 +20,7 @@ export async function app_code_lesson_chip_color_gate_run() {
     readings,
     path,
     "the chip palette measures differently than it did - read these against the ones that went away, decide whether the change is wanted, and bank it if it is",
-    fn_name("app_code_lesson_chip_color_baseline_write"),
+    fn_name("app_learn_js_lesson_chip_color_baseline_write"),
   );
   let added = property_get(told, "added");
   let stale = property_get(told, "stale");
