@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_choose_order_both_sides_above_arithmetic } from "./app_learn_js_lesson_expression_choose_order_both_sides_above_arithmetic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_expression_same_symbol } from "./app_code_lesson_expression_choose_order_both_sides_expression_same_symbol.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_expression_same_symbol } from "./app_learn_js_lesson_expression_choose_order_both_sides_expression_same_symbol.mjs";
 import { app_learn_js_comparison_symbols_not_equality } from "./app_learn_js_comparison_symbols_not_equality.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_intro } from "./app_learn_js_lesson_expression_choose_order_both_sides_any_comparison_intro.mjs";
@@ -16,7 +16,7 @@ export function app_learn_js_lesson_expression_choose_order_both_sides_any_compa
   let symbols = app_learn_js_comparison_symbols_not_equality();
   let outer_symbol = list_random_item(symbols);
   let tree =
-    app_code_lesson_expression_choose_order_both_sides_expression_same_symbol(
+    app_learn_js_lesson_expression_choose_order_both_sides_expression_same_symbol(
       want_true,
       outer_symbol,
     );

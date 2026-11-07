@@ -1,6 +1,6 @@
 import { app_learn_js_lesson_expression_choose_order_both_sides_above_arithmetic } from "./app_learn_js_lesson_expression_choose_order_both_sides_above_arithmetic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_both_sides_expression_same_symbol } from "./app_code_lesson_expression_choose_order_both_sides_expression_same_symbol.mjs";
+import { app_learn_js_lesson_expression_choose_order_both_sides_expression_same_symbol } from "./app_learn_js_lesson_expression_choose_order_both_sides_expression_same_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { noop } from "./noop.mjs";
 export function app_learn_js_lesson_expression_choose_order_both_sides_above(
@@ -15,7 +15,7 @@ export function app_learn_js_lesson_expression_choose_order_both_sides_above(
   let want_true = true;
   let outer_symbol = js_operator_triple_equal_symbol();
   let tree =
-    app_code_lesson_expression_choose_order_both_sides_expression_same_symbol(
+    app_learn_js_lesson_expression_choose_order_both_sides_expression_same_symbol(
       want_true,
       outer_symbol,
     );
