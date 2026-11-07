@@ -1,6 +1,8 @@
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_in_between_card_unexplained(root) {
+export function app_learn_js_lesson_expression_in_between_card_unexplained(
+  root,
+) {
   arguments_assert(arguments, 1);
   ("the aside: the chained line does something else in JS, and what it does is deliberately not explained here");
   ("This is its own card, and it is last, because it can be cut whole. What a learner has to keep is the chained line before it and the fix above it - that line is maths, JS is not written that way, so write two pieces. Everything here answers a question a curious reader asks and an incurious one does not, so it sits after the line that changes what they type rather than in front of it.");

@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_in_between_card_unexplained } from "./app_code_lesson_expression_in_between_card_unexplained.mjs";
+import { app_learn_js_lesson_expression_in_between_card_unexplained } from "./app_learn_js_lesson_expression_in_between_card_unexplained.mjs";
 import { app_learn_js_lesson_expression_in_between_card_chained } from "./app_learn_js_lesson_expression_in_between_card_chained.mjs";
 import { app_code_lesson_expression_in_between_range_code } from "./app_code_lesson_expression_in_between_range_code.mjs";
 import { app_code_lesson_expression_in_between_title_name_id } from "./app_code_lesson_expression_in_between_title_name_id.mjs";
@@ -94,6 +94,6 @@ export function app_code_lesson_expression_in_between() {
       " with ",
       "5 && 5",
     ]);
-    app_code_lesson_expression_in_between_card_unexplained(root);
+    app_learn_js_lesson_expression_in_between_card_unexplained(root);
   }
 }
