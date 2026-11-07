@@ -13,7 +13,7 @@ import { word_pluralize } from "./word_pluralize.mjs";
 import { word_is_are } from "./word_is_are.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_remainder_chip } from "./app_learn_js_lesson_console_log_remainder_generic_remainder_chip.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_lesson_console_log_remainder_generic_equation_with_remainder } from "./app_learn_js_lesson_console_log_remainder_generic_equation_with_remainder.mjs";
 export function app_learn_js_lesson_console_log_remainder_generic_example(
@@ -66,7 +66,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_example(
     " left over, so ",
   ]);
   let leftover_line = html_div(parent);
-  app_code_lesson_console_log_remainder_generic_remainder_chip(
+  app_learn_js_lesson_console_log_remainder_generic_remainder_chip(
     leftover_line,
     left,
     divisor,
@@ -91,7 +91,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_example(
   );
   let conclusion = html_div(parent);
   html_span_text(conclusion, "So the remainder is ");
-  app_code_lesson_console_log_remainder_generic_remainder_chip(
+  app_learn_js_lesson_console_log_remainder_generic_remainder_chip(
     conclusion,
     left,
     divisor,

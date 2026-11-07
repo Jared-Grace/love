@@ -8,7 +8,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_lesson_console_log_remainder_generic_example } from "./app_learn_js_lesson_console_log_remainder_generic_example.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_remainder_chip } from "./app_learn_js_lesson_console_log_remainder_generic_remainder_chip.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { range_map } from "./range_map.mjs";
 import { text_to } from "./text_to.mjs";
@@ -50,7 +50,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_above_remainde
     evenly,
     "When two numbers divide evenly, nothing is left over, so the remainder is ",
   );
-  app_code_lesson_console_log_remainder_generic_remainder_chip(
+  app_learn_js_lesson_console_log_remainder_generic_remainder_chip(
     evenly,
     0,
     divisor,

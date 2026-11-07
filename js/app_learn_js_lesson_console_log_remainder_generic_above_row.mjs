@@ -7,7 +7,7 @@ import { html_page_padding_x } from "./html_page_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_remainder_chip } from "./app_learn_js_lesson_console_log_remainder_generic_remainder_chip.mjs";
 export function app_learn_js_lesson_console_log_remainder_generic_above_row(
   n,
   percent,
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_above_row(
   html_style_padding_y(line, "0.35em");
   html_span_text_code_dark(line, expr);
   html_span_text(line, " is ");
-  app_code_lesson_console_log_remainder_generic_remainder_chip(
+  app_learn_js_lesson_console_log_remainder_generic_remainder_chip(
     line,
     remainder,
     divisor,
