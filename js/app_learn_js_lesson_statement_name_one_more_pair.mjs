@@ -4,7 +4,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { app_learn_js_lesson_statement_name_one_more_above } from "./app_learn_js_lesson_statement_name_one_more_above.mjs";
 import { app_learn_js_lesson_statement_name_one_more_batch } from "./app_learn_js_lesson_statement_name_one_more_batch.mjs";
 import { app_learn_js_lesson_statement_name_itself_step_title_code } from "./app_learn_js_lesson_statement_name_itself_step_title_code.mjs";
-export function app_code_lesson_statement_name_one_more_pair() {
+export function app_learn_js_lesson_statement_name_one_more_pair() {
   arguments_assert(arguments, 0);
   ("the pair on adding one to a name: its programs, its title line, and the words both its lessons are called by");
   ("The title line is the whole lesson. The title before it has the same name on both sides of the equals with another name beside it; here that other name is a written 1, which is the only difference between the two lines and the only thing this pair adds.");
