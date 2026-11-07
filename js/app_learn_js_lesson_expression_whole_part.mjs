@@ -15,7 +15,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_whole_part() {
+export function app_learn_js_lesson_expression_whole_part() {
   "practice the whole part in finding a remainder: the quotient (how many whole times the number divides) times the divisor gives the biggest multiple of the divisor that fits - 3 whole 4s is 3 * 4 which is 12, and 12 is as much of 14 as splits evenly into 4s; this is the multiply step of the remainder pipeline (integer division gave the quotient, next you subtract this whole part from the number); the answer is the product; quotient 2..3, divisor 3..6";
   function make(divisor) {
     "Math.floor(dividend / divisor) * divisor for the given divisor - the dividend is quotient*divisor + a leftover of 1..divisor-1 so the division never comes out even; Math.floor gives the quotient and times the divisor gives the whole part (the biggest multiple of the divisor that fits), so the answer is quotient*divisor";
