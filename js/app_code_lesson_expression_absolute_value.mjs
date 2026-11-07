@@ -6,7 +6,7 @@ import { list_map_index } from "./list_map_index.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_expression_absolute_value_title_name_id } from "./app_code_lesson_expression_absolute_value_title_name_id.mjs";
+import { app_learn_js_lesson_expression_absolute_value_title_name_id } from "./app_learn_js_lesson_expression_absolute_value_title_name_id.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
@@ -54,7 +54,7 @@ export function app_code_lesson_expression_absolute_value() {
     return found;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = app_code_lesson_expression_absolute_value_title_name_id();
+  let name_id = app_learn_js_lesson_expression_absolute_value_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
