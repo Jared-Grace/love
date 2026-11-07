@@ -3,7 +3,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_expression_paint } from "./app_code_expression_paint.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-export function app_code_expression_paint_parenthesised(
+export function app_learn_js_expression_paint_parenthesised(
   parent,
   side,
   on_operator,

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
-import { app_code_expression_paint_parenthesised } from "./app_code_expression_paint_parenthesised.mjs";
+import { app_learn_js_expression_paint_parenthesised } from "./app_learn_js_expression_paint_parenthesised.mjs";
 import { app_code_expression_paint_side } from "./app_code_expression_paint_side.mjs";
 export function app_learn_js_expression_paint_before_side(
   parent,
@@ -18,7 +18,7 @@ export function app_learn_js_expression_paint_before_side(
     " asks where it prints the line as text, so a learner pressing a line and a learner reading one are shown the same brackets.");
   let called = app_code_operator_called_is(symbol);
   if (called) {
-    app_code_expression_paint_parenthesised(parent, side, on_operator);
+    app_learn_js_expression_paint_parenthesised(parent, side, on_operator);
     return;
   }
   app_code_expression_paint_side(parent, side, rank, on_operator);
