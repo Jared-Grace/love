@@ -1,5 +1,5 @@
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
+import { app_learn_js_lesson_expression_pair_generic } from "./app_learn_js_lesson_expression_pair_generic.mjs";
 import { app_learn_js_lesson_cross_precedence_intro } from "./app_learn_js_lesson_cross_precedence_intro.mjs";
 import { js_operator_plus } from "./js_operator_plus.mjs";
 import { js_operator_division } from "./js_operator_division.mjs";
@@ -48,7 +48,7 @@ export function app_code_lesson_expression_plus_divide() {
       first_outer: 9,
     });
   }
-  let lesson = app_code_lesson_expression_pair_generic({
+  let lesson = app_learn_js_lesson_expression_pair_generic({
     symbol1: plus_symbol,
     symbol2: divide_symbol,
     word: " plus divide",

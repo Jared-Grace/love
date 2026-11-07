@@ -13,7 +13,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-export function app_code_lesson_expression_pair_generic(params) {
+export function app_learn_js_lesson_expression_pair_generic(params) {
   "a reusable bare-expression lesson mixing TWO operators (a op1 b op2 c); the arrangement flips by index parity so the two worked examples always show opposite orders (a op1 b op2 c and a op2 b op1 c) - proving precedence is about the operator, not its position; caller passes the two symbols, an above intro, and triples_get returning distinct [a,b,c] triples";
   "A word for the id used to be taken out of what the caller hands in and then never read. The id is built from the two symbols, which is what tells one of these lessons from another, so the word had nothing left to do.";
   let symbol = property_get(params, "symbol1");

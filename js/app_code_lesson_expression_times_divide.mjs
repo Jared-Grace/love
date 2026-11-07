@@ -1,6 +1,6 @@
 import { app_learn_js_label_solve_left_to_right } from "./app_learn_js_label_solve_left_to_right.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
+import { app_learn_js_lesson_expression_pair_generic } from "./app_learn_js_lesson_expression_pair_generic.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -59,7 +59,7 @@ export function app_code_lesson_expression_times_divide() {
     ]);
     app_learn_js_div_cycle_code(example_box, ["So ", "6 * 2 / 3", " is ", "4"]);
   }
-  let lesson = app_code_lesson_expression_pair_generic({
+  let lesson = app_learn_js_lesson_expression_pair_generic({
     symbol1: times,
     symbol2: divided,
     word: " times divide",
