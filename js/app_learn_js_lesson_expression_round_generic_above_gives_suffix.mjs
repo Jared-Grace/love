@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_expression_round_generic_above_gives_suffix(
+export function app_learn_js_lesson_expression_round_generic_above_gives_suffix(
   r2,
   called_name,
   preposition,

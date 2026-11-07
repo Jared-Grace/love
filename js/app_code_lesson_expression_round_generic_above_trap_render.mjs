@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_round_generic_above_v } from "./app_code_lesson_expression_round_generic_above_v.mjs";
-import { app_code_lesson_expression_round_generic_above_gives_suffix } from "./app_code_lesson_expression_round_generic_above_gives_suffix.mjs";
+import { app_learn_js_lesson_expression_round_generic_above_gives_suffix } from "./app_learn_js_lesson_expression_round_generic_above_gives_suffix.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_expression_round_generic_above_trap_render(
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_round_generic_above_trap_render(
     superlative,
     called_name,
   );
-  let r3 = app_code_lesson_expression_round_generic_above_gives_suffix(
+  let r3 = app_learn_js_lesson_expression_round_generic_above_gives_suffix(
     r2,
     called_name,
     preposition,
