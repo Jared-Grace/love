@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
-import { app_code_lesson_expression_choose_order_change_card } from "./app_code_lesson_expression_choose_order_change_card.mjs";
+import { app_learn_js_lesson_expression_choose_order_change_card } from "./app_learn_js_lesson_expression_choose_order_change_card.mjs";
 export function app_code_lesson_expression_choose_order_walks_above_generic(
   root,
   recall,
@@ -20,5 +20,5 @@ export function app_code_lesson_expression_choose_order_walks_above_generic(
     let tree = property_get(walk, "tree");
     app_code_lesson_expression_choose_order_reason_run(root, heading, tree);
   }
-  app_code_lesson_expression_choose_order_change_card(root, intro);
+  app_learn_js_lesson_expression_choose_order_change_card(root, intro);
 }

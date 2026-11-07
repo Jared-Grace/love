@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-export function app_code_lesson_expression_choose_order_change_card(
+export function app_learn_js_lesson_expression_choose_order_change_card(
   root,
   intro,
 ) {
