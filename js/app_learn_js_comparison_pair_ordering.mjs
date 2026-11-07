@@ -3,7 +3,7 @@ import { integer_random } from "./integer_random.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-export function app_code_comparison_pair_ordering(compare) {
+export function app_learn_js_comparison_pair_ordering(compare) {
   "left/right operands for an ORDERING comparison lesson: pick a smaller and a larger number, then order them so the comparison yields want_true";
   let max = app_code_lesson_operators_value_max();
   function pair(want_true) {

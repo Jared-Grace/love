@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
-import { app_code_comparison_pair_ordering } from "./app_code_comparison_pair_ordering.mjs";
+import { app_learn_js_comparison_pair_ordering } from "./app_learn_js_comparison_pair_ordering.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_less_than() {
   let operator = js_operator_less_than();
   let compare = property_get(operator, "fn");
-  let pair = app_code_comparison_pair_ordering(compare);
+  let pair = app_learn_js_comparison_pair_ordering(compare);
   function closing() {
     let parts = [
       "Before, the value was always a number, but now it is ",
