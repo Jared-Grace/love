@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_value_choose_buttons } from "./app_code_expression_value_choose_buttons.mjs";
 import { html_remove } from "./html_remove.mjs";
-export async function app_code_expression_value_choose_await(
+export async function app_learn_js_expression_value_choose_await(
   parent,
   value,
   decoys,
