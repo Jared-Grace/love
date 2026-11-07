@@ -6,7 +6,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { noop } from "./noop.mjs";
 import { promise_wrap_unawait } from "./promise_wrap_unawait.mjs";
 import { text_to } from "./text_to.mjs";
-export async function app_code_expression_replace_await({
+export async function app_learn_js_expression_replace_await({
   note,
   node,
   node_span,

@@ -8,7 +8,7 @@ import { app_code_lesson_expression_choose_order_intro } from "./app_code_lesson
 import { html_remove_if_not_null } from "./html_remove_if_not_null.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { app_code_head_flush_above_code } from "./app_code_head_flush_above_code.mjs";
-import { app_code_expression_replace_await } from "./app_code_expression_replace_await.mjs";
+import { app_learn_js_expression_replace_await } from "./app_learn_js_expression_replace_await.mjs";
 export function app_code_lesson_expression_choose_order_walkthrough_on_chosen(
   parent,
   card,
@@ -63,7 +63,7 @@ export function app_code_lesson_expression_choose_order_walkthrough_on_chosen(
   async function on_chosen(node, value, node_span, waiting_on) {
     "the press is answered in words before anything on the line moves: what the chosen operator comes to, and then a button to make the swap, so the replacement is something the learner does rather than something that happens to them";
     "the blue block itself is handed over too, because once the button is pressed the swap is shown travelling between that block and the two blue pieces of the sentence naming it";
-    await app_code_expression_replace_await({
+    await app_learn_js_expression_replace_await({
       note,
       node,
       node_span,
