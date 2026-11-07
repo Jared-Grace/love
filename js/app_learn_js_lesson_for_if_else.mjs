@@ -10,7 +10,7 @@ import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_state
 import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_code_lesson_for_if_greater_options } from "./app_code_lesson_for_if_greater_options.mjs";
 import { app_code_lesson_for_if_generic } from "./app_code_lesson_for_if_generic.mjs";
-export function app_code_lesson_for_if_else() {
+export function app_learn_js_lesson_for_if_else() {
   arguments_assert(arguments, 0);
   ('an if with an else inside a for: for (let n = 2; n < 5; n++) { if (n > 2) { console.log("big"); } else { console.log("small"); } } writes out small, big and big, one under the other');
   ("The one new fact is that with an else, every run writes something: the if's lines when it is true and the else's when it is false. Sorting the items of an array into two kinds is this shape.");
