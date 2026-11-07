@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { repo_functions_names_code_includes } from "./repo_functions_names_code_includes.mjs";
-import { app_code_lesson_prose_colon_function_repair } from "./app_code_lesson_prose_colon_function_repair.mjs";
+import { app_learn_js_lesson_prose_colon_function_repair } from "./app_learn_js_lesson_prose_colon_function_repair.mjs";
 import { list_add } from "./list_add.mjs";
 export async function app_code_lesson_prose_colon_repair() {
   arguments_assert(arguments, 0);
@@ -16,7 +16,7 @@ export async function app_code_lesson_prose_colon_repair() {
   let repaired = [];
   let added_all = 0;
   for (let f_name of names) {
-    let added = await app_code_lesson_prose_colon_function_repair(f_name);
+    let added = await app_learn_js_lesson_prose_colon_function_repair(f_name);
     if (added) {
       list_add(repaired, {
         f_name,
