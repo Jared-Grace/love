@@ -1,7 +1,7 @@
 import { app_learn_js_lesson_progress_render } from "./app_learn_js_lesson_progress_render.mjs";
 import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_answer_label_set } from "./app_code_lesson_quiz_answer_label_set.mjs";
+import { app_learn_js_lesson_quiz_answer_label_set } from "./app_learn_js_lesson_quiz_answer_label_set.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_quiz({
   next_get,
 }) {
   let question_label = property_get(info, "question_label");
-  let r = app_code_lesson_quiz_answer_label_set({
+  let r = app_learn_js_lesson_quiz_answer_label_set({
     info,
     qa,
     container_blue_light,
