@@ -7,7 +7,7 @@ import { property_exists_not } from "./property_exists_not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
-export function app_code_lesson_ids_short_missing_gate_run() {
+export function app_learn_js_lesson_ids_short_missing_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: every code lesson written has an id in the table, held lessons included. Read-only.");
   ("★ HELD LESSONS ARE THE ONES THIS IS FOR. The gate on the set of ids reads the lessons the app hands out, and a held lesson is not handed out, so a held lesson with no id passed it. The dev page still builds every lesson, and it stopped with an error on the first load: that happened on 2026-10-27 with While halving, and the human saw it before any gate did.");
