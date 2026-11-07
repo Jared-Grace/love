@@ -2,7 +2,7 @@ import { app_code_lesson_expression_string_order_above } from "./app_code_lesson
 import { app_code_verse_words_lower_only } from "./app_code_verse_words_lower_only.mjs";
 import { app_code_lesson_expression_string_order_title_name_id } from "./app_code_lesson_expression_string_order_title_name_id.mjs";
 import { app_code_string_comparison_code } from "./app_code_string_comparison_code.mjs";
-import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
+import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
@@ -60,7 +60,7 @@ export function app_code_lesson_expression_string_order() {
     forwards_question_label: app_learn_js_label_code_question(),
     forwards_answer_label: app_code_label_value(),
     backwards_question_label: app_code_label_value(),
-    backwards_answer_label: app_code_label_value_backwards(),
+    backwards_answer_label: app_learn_js_label_value_backwards(),
     unscramble_label: "Build the code that gives this value: ",
     forwards_answer_count_override: 2,
   });

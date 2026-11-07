@@ -2,7 +2,7 @@ import { app_code_lesson_expression_in_between_card_unexplained } from "./app_co
 import { app_code_lesson_expression_in_between_card_chained } from "./app_code_lesson_expression_in_between_card_chained.mjs";
 import { app_code_lesson_expression_in_between_range_code } from "./app_code_lesson_expression_in_between_range_code.mjs";
 import { app_code_lesson_expression_in_between_title_name_id } from "./app_code_lesson_expression_in_between_title_name_id.mjs";
-import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
+import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
@@ -55,7 +55,7 @@ export function app_code_lesson_expression_in_between() {
     forwards_question_label: app_learn_js_label_code_question(),
     forwards_answer_label: app_code_label_value(),
     backwards_question_label: app_code_label_value(),
-    backwards_answer_label: app_code_label_value_backwards(),
+    backwards_answer_label: app_learn_js_label_value_backwards(),
     forwards_answer_count_override: 2,
   });
   return lesson;

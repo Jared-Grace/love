@@ -16,7 +16,7 @@ import { app_code_lesson_expression_comparison_or_intro } from "./app_code_lesso
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
-import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
+import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 export function app_code_lesson_expression_comparison_or() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: 3 < 5 || 2 < 4 asked for its value, with nothing to press");
@@ -64,7 +64,7 @@ export function app_code_lesson_expression_comparison_or() {
     forwards_question_label: app_learn_js_label_code_question(),
     forwards_answer_label: app_code_label_value(),
     backwards_question_label: app_code_label_value(),
-    backwards_answer_label: app_code_label_value_backwards(),
+    backwards_answer_label: app_learn_js_label_value_backwards(),
     forwards_answer_count_override: 2,
   });
   return lesson;

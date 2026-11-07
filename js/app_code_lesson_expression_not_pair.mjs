@@ -2,7 +2,7 @@ import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
-import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
+import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
 import { app_code_lesson_expression_choose_order_not_pair_expression } from "./app_code_lesson_expression_choose_order_not_pair_expression.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_expression_not_pair_intro } from "./app_code_lesson_expression_not_pair_intro.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_expression_not_pair() {
     forwards_question_label: app_learn_js_label_code_question(),
     forwards_answer_label: app_code_label_value(),
     backwards_question_label: app_code_label_value(),
-    backwards_answer_label: app_code_label_value_backwards(),
+    backwards_answer_label: app_learn_js_label_value_backwards(),
     forwards_answer_count_override: 2,
   });
   return lesson;
