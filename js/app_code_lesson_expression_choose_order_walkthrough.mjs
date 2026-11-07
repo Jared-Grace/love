@@ -1,7 +1,7 @@
 import { app_code_lesson_expression_choose_order_walkthrough_on_chosen } from "./app_code_lesson_expression_choose_order_walkthrough_on_chosen.mjs";
 import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
 import { app_code_expression_step_say } from "./app_code_expression_step_say.mjs";
-import { app_code_expression_choose_say } from "./app_code_expression_choose_say.mjs";
+import { app_learn_js_expression_choose_say } from "./app_learn_js_expression_choose_say.mjs";
 import { app_code_lesson_expression_choose_order_wrong_say } from "./app_code_lesson_expression_choose_order_wrong_say.mjs";
 import { app_learn_js_expression_choose_line } from "./app_learn_js_expression_choose_line.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
@@ -43,7 +43,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     if (null_is(solved)) {
       ("the opening words are simply there when the page arrives, with nothing slowed: nothing has been pressed yet, so there is no place the learner was looking that a change could take them away from");
       html_clear(note);
-      app_code_expression_choose_say(note, ready, "So first, choose ");
+      app_learn_js_expression_choose_say(note, ready, "So first, choose ");
       return;
     }
     function change() {

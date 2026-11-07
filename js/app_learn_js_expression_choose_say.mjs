@@ -3,7 +3,7 @@ import { app_code_expression_operator_chip } from "./app_code_expression_operato
 import { html_div_cycle } from "./html_div_cycle.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first_property } from "./list_first_property.mjs";
-export function app_code_expression_choose_say(note, ready, lead) {
+export function app_learn_js_expression_choose_say(note, ready, lead) {
   arguments_assert(arguments, 3);
   ("name the one operator that may go next, so a walkthrough tells rather than asks");
   ("The lead is handed in because the same naming opens the line and then carries it on - So first, choose * and Now, choose + are one sentence with one word changed, and writing them as two would let them drift apart.");

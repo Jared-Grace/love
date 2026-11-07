@@ -1,4 +1,4 @@
-import { app_code_expression_choose_say } from "./app_code_expression_choose_say.mjs";
+import { app_learn_js_expression_choose_say } from "./app_learn_js_expression_choose_say.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -17,5 +17,5 @@ export function app_code_expression_step_say(note, current, ready, line_code) {
     return;
   }
   app_learn_js_div_cycle_code(note, ["So now we have ", line_code]);
-  app_code_expression_choose_say(note, ready, "Now, choose ");
+  app_learn_js_expression_choose_say(note, ready, "Now, choose ");
 }
