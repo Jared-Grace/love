@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_remainder_random } from "./app_learn_js_expression_remainder_random.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_remainder_recall } from "./app_code_lesson_expression_choose_order_remainder_recall.mjs";
-import { app_code_lesson_expression_choose_order_remainder_intro } from "./app_code_lesson_expression_choose_order_remainder_intro.mjs";
+import { app_learn_js_lesson_expression_choose_order_remainder_intro } from "./app_learn_js_lesson_expression_choose_order_remainder_intro.mjs";
 export function app_learn_js_lesson_expression_choose_order_remainder_above(
   root,
   context,
@@ -24,7 +24,7 @@ export function app_learn_js_lesson_expression_choose_order_remainder_above(
     root,
     app_code_lesson_expression_choose_order_remainder_recall,
     walks,
-    app_code_lesson_expression_choose_order_remainder_intro,
+    app_learn_js_lesson_expression_choose_order_remainder_intro,
     context,
   );
 }

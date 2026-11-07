@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_remainder_intro(
+export function app_learn_js_lesson_expression_choose_order_remainder_intro(
   parent,
 ) {
   arguments_assert(arguments, 1);
