@@ -7,7 +7,7 @@ import { app_code_lesson_expression_choose_order_solve_example } from "./app_cod
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_integer_division_tree_of_code } from "./app_code_lesson_expression_choose_order_integer_division_tree_of_code.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
-import { app_code_lesson_expression_choose_order_integer_division_above } from "./app_code_lesson_expression_choose_order_integer_division_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_integer_division_above } from "./app_learn_js_lesson_expression_choose_order_integer_division_above.mjs";
 export function app_code_lesson_expression_choose_order_integer_division() {
   arguments_assert(arguments, 0);
   ("an integer division taken a press at a time: Math.floor(17 / 5), press the division, press 3.4, see Math.floor(3.4), press the rounding, press 3");
@@ -50,7 +50,7 @@ export function app_code_lesson_expression_choose_order_integer_division() {
   );
   let lesson = app_learn_js_lesson_expression_choose_order_generic(
     name_id,
-    app_code_lesson_expression_choose_order_integer_division_above,
+    app_learn_js_lesson_expression_choose_order_integer_division_above,
     answer_draw,
     example_draw,
     bank,
