@@ -1,26 +1,30 @@
-import { object_property_names } from "./object_property_names.mjs";
-import { json_to } from "./json_to.mjs";
-import { equal } from "./equal.mjs";
 import { bible_word_article_bodies_folder } from "./bible_word_article_bodies_folder.mjs";
 import { bible_word_article_sites } from "./bible_word_article_sites.mjs";
+import { equal } from "./equal.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read } from "./file_read.mjs";
 import { bible_word_article_text_own } from "./bible_word_article_text_own.mjs";
+import { folder_read } from "./folder_read.mjs";
+import { bible_word_article_title } from "./bible_word_article_title.mjs";
 import { ebible_version_chapters_cache } from "./ebible_version_chapters_cache.mjs";
 import { bible_word_article_citations_chapters } from "./bible_word_article_citations_chapters.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { bible_word_article_citations_path } from "./bible_word_article_citations_path.mjs";
 import { web_assets_folder_join } from "./web_assets_folder_join.mjs";
+import { json_to } from "./json_to.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 export async function bible_word_article_citations_write() {
   "Works out which article to offer for which word of which verse from every article fetched so far, writes one file per chapter under the assets folder, and says how much it read and what was missing.";
-  "THE LIST OF ARTICLES IS FOUND, NOT GIVEN: every article of every site, read from where the fetching left it. One not fetched yet is counted and named by site rather than treated as citing nothing.";
+  "THE LIST OF ARTICLES IS FOUND, NOT GIVEN: every article of every site, read from where the fetching left it. One a site's table names but not fetched yet is counted and named by site rather than treated as citing nothing.";
+  "AN ARTICLE NO TABLE NAMES IS READ TOO - the fetching of a whole site leaves thousands - and carries the title it gives itself, so the reader has a name to put on its button. One whose title cannot be read is left out and counted as untitled, because a button with no name says nothing.";
   "THREE ENGLISH BIBLES ARE ASKED, because a reader's word is spelled by the reader's Bible: the Berean Standard says Gerasenes where the King James says Gadarenes.";
   "ONLY THE ADDRESSES ARE WRITTEN, never the articles' words, because this repo and these files are public and the articles are other people's writing.";
   let folder = bible_word_article_bodies_folder();
   let sites = bible_word_article_sites();
   let articles = [];
   let absent = {};
+  let untitled = {};
   for (let site of sites) {
     let table = await site.table();
     let seen = new Set();
@@ -39,9 +43,34 @@ export async function bible_word_article_citations_write() {
             site: site.name,
             file,
             text,
+            title: null,
           });
         } else {
           absent[site.name] = (absent[site.name] ?? 0) + 1;
+        }
+      }
+    }
+    let site_folder = path_join([folder, site.name]);
+    let fetched = await folder_read(site_folder);
+    for (let name of fetched) {
+      let v = name.replace(/\.txt$/, "");
+      let file = decodeURIComponent(v);
+      let left = seen.has(file);
+      if (equal(left, false)) {
+        seen.add(file);
+        let file_path2 = path_join([site_folder, name]);
+        let page = await file_read(file_path2);
+        let title = bible_word_article_title(site.name, page);
+        if (equal(title, null)) {
+          untitled[site.name] = (untitled[site.name] ?? 0) + 1;
+        } else {
+          let text = bible_word_article_text_own(page);
+          articles.push({
+            site: site.name,
+            file,
+            text,
+            title,
+          });
         }
       }
     }
@@ -64,6 +93,7 @@ export async function bible_word_article_citations_write() {
   let report = {
     articles: articles.length,
     absent,
+    untitled,
     citations: worked.citations,
     nowhere: worked.nowhere,
     chapters: chapter_codes.length,
