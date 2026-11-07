@@ -7,7 +7,7 @@ import { app_code_lesson_statement_name_swap_try_step } from "./app_code_lesson_
 import { app_code_lesson_statement_name_temp_keep_step } from "./app_code_lesson_statement_name_temp_keep_step.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
-import { app_code_lesson_statement_name_swap_ladder } from "./app_code_lesson_statement_name_swap_ladder.mjs";
+import { app_learn_js_lesson_statement_name_swap_ladder } from "./app_learn_js_lesson_statement_name_swap_ladder.mjs";
 import { app_code_lesson_statement_name_swap_try } from "./app_code_lesson_statement_name_swap_try.mjs";
 export function app_code_lesson_statement_name_temp_keep() {
   arguments_assert(arguments, 0);
@@ -31,7 +31,7 @@ export function app_code_lesson_statement_name_temp_keep() {
     middle2,
     logged,
   );
-  let lesson = app_code_lesson_statement_name_swap_ladder({
+  let lesson = app_learn_js_lesson_statement_name_swap_ladder({
     words: "Keeping a value before it is lost",
     step,
     remember_lesson: app_code_lesson_statement_name_swap_try,

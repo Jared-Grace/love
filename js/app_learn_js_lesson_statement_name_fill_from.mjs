@@ -7,7 +7,7 @@ import { app_code_lesson_statement_name_third } from "./app_code_lesson_statemen
 import { app_learn_js_lesson_statement_name_fill_from_step } from "./app_learn_js_lesson_statement_name_fill_from_step.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
-import { app_code_lesson_statement_name_swap_ladder } from "./app_code_lesson_statement_name_swap_ladder.mjs";
+import { app_learn_js_lesson_statement_name_swap_ladder } from "./app_learn_js_lesson_statement_name_swap_ladder.mjs";
 import { app_learn_js_lesson_statement_name_copy } from "./app_learn_js_lesson_statement_name_copy.mjs";
 export function app_learn_js_lesson_statement_name_fill_from() {
   arguments_assert(arguments, 0);
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_statement_name_fill_from() {
     [copied],
     [name_c],
   );
-  let lesson = app_code_lesson_statement_name_swap_ladder({
+  let lesson = app_learn_js_lesson_statement_name_swap_ladder({
     words: "Filling a name from another name",
     step,
     remember_lesson: app_learn_js_lesson_statement_name_copy,

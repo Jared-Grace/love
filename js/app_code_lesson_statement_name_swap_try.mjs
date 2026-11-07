@@ -7,7 +7,7 @@ import { app_code_lesson_statement_name_swap_try_step } from "./app_code_lesson_
 import { property_get } from "./property_get.mjs";
 import { list_last } from "./list_last.mjs";
 import { app_code_lesson_statement_name_swap_program } from "./app_code_lesson_statement_name_swap_program.mjs";
-import { app_code_lesson_statement_name_swap_ladder } from "./app_code_lesson_statement_name_swap_ladder.mjs";
+import { app_learn_js_lesson_statement_name_swap_ladder } from "./app_learn_js_lesson_statement_name_swap_ladder.mjs";
 import { app_learn_js_lesson_statement_name_fill_from } from "./app_learn_js_lesson_statement_name_fill_from.mjs";
 export function app_code_lesson_statement_name_swap_try() {
   arguments_assert(arguments, 0);
@@ -31,7 +31,7 @@ export function app_code_lesson_statement_name_swap_try() {
     middle_before,
     logged,
   );
-  let lesson = app_code_lesson_statement_name_swap_ladder({
+  let lesson = app_learn_js_lesson_statement_name_swap_ladder({
     words: "Trying to swap two names",
     step,
     remember_lesson: app_learn_js_lesson_statement_name_fill_from,
