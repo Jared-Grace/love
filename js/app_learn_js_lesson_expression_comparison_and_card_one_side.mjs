@@ -1,6 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue_cycle_code_multiple } from "./app_learn_js_container_light_blue_cycle_code_multiple.mjs";
-export function app_code_lesson_expression_comparison_and_card_one_side(root) {
+export function app_learn_js_lesson_expression_comparison_and_card_one_side(
+  root,
+) {
   arguments_assert(arguments, 1);
   ("one side of the && changed from a plain true or false into a comparison, worked out - the single step from the && the learner already has - once with the comparison on the right and once with it on the left");
   ("The learner arrives knowing true && false. Replacing ONE operand with a comparison changes one thing; the lesson used to open on 3 < 5 && 2 < 4, which replaces both at once.");

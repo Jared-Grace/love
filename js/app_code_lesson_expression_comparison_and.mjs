@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_comparison_and_card_one_side } from "./app_code_lesson_expression_comparison_and_card_one_side.mjs";
+import { app_learn_js_lesson_expression_comparison_and_card_one_side } from "./app_learn_js_lesson_expression_comparison_and_card_one_side.mjs";
 import { app_code_lesson_expression_comparison_and_operands_false } from "./app_code_lesson_expression_comparison_and_operands_false.mjs";
 import { app_code_lesson_expression_comparison_and_comparison } from "./app_code_lesson_expression_comparison_and_comparison.mjs";
 import { app_code_lesson_expression_comparison_and_title_name_id } from "./app_code_lesson_expression_comparison_and_title_name_id.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_expression_comparison_and() {
       "A comparison can be one side of ",
       "&&",
     ]);
-    app_code_lesson_expression_comparison_and_card_one_side(root);
+    app_learn_js_lesson_expression_comparison_and_card_one_side(root);
     let yes = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(yes, [
       "Both sides of ",
