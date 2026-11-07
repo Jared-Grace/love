@@ -4,7 +4,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_equals_text } from "./app_learn_js_expression_equals_text.mjs";
 import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
-import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
+import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_expression_replace_swap_say.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_lesson_expression_choose_order_expression } from "./app_code_lesson_expression_choose_order_expression.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
@@ -61,7 +61,7 @@ export function app_code_lesson_expression_choose_order_solve_above(
   ]);
   ("the swap is said in the very words the button that made it said, out of the one place both of them read, so the learner is told about the press they made in the words they made it in - and the word for the swap and its two pieces all wear the colour they wore on the line");
   let swap_line = html_div(recap);
-  app_code_expression_replace_swap_say(
+  app_learn_js_expression_replace_swap_say(
     swap_line,
     "Then you ",
     "replaced",

@@ -3,7 +3,7 @@ import { app_code_expression_replace_word_say } from "./app_code_expression_repl
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_expression_replace_swap_say(
+export function app_learn_js_expression_replace_swap_say(
   parent,
   lead,
   word,

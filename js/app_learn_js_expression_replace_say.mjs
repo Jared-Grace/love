@@ -1,6 +1,6 @@
 import { app_shared_encouragement_step_exclamation } from "./app_shared_encouragement_step_exclamation.mjs";
 import { app_learn_js_expression_equals_text } from "./app_learn_js_expression_equals_text.mjs";
-import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
+import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_expression_replace_swap_say.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_cycle } from "./html_cycle.mjs";
 import { html_div } from "./html_div.mjs";
@@ -24,7 +24,7 @@ export function app_learn_js_expression_replace_say(
   let line = html_div(note);
   let cycles = [noop, html_style_code_dark_nowrap];
   html_cycle(line, cycles, [praise, worked_out]);
-  let chosen_pieces = app_code_expression_replace_swap_say(
+  let chosen_pieces = app_learn_js_expression_replace_swap_say(
     line,
     ", so now we ",
     "replace",

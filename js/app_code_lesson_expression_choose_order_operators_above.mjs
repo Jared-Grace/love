@@ -3,7 +3,7 @@ import { function_duplicate_kind_parallel } from "./function_duplicate_kind_para
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_expression_code } from "./app_learn_js_expression_code.mjs";
 import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_nodes_ready.mjs";
-import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
+import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_expression_replace_swap_say.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_lesson_expression_choose_order_operators_expression } from "./app_code_lesson_expression_choose_order_operators_expression.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_expression_choose_order_operators_above(
   ]);
   ("the swap is said in the very words the button that makes it says, out of the one place both of them read, so the word for the swap and its two pieces wear the colour they wear on the line itself");
   let swap_line = html_div(run);
-  app_code_expression_replace_swap_say(
+  app_learn_js_expression_replace_swap_say(
     swap_line,
     "So we ",
     "replace",

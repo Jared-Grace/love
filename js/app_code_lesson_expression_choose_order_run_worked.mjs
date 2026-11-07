@@ -12,7 +12,7 @@ import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_so
 import { app_code_expression_step_reason_of } from "./app_code_expression_step_reason_of.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
+import { app_learn_js_expression_replace_swap_say } from "./app_learn_js_expression_replace_swap_say.mjs";
 export function app_code_lesson_expression_choose_order_run_worked(
   root,
   tree,
@@ -65,7 +65,7 @@ export function app_code_lesson_expression_choose_order_run_worked(
   ]);
   ("the swap is said in the very words the button that makes it says, out of the one place both of them read, so the word for the swap and its two pieces wear the colour they wear on the line itself");
   let swap_line = html_div(run);
-  app_code_expression_replace_swap_say(
+  app_learn_js_expression_replace_swap_say(
     swap_line,
     "So we ",
     "replace",
