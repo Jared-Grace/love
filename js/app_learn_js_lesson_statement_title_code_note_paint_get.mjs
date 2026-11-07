@@ -3,7 +3,7 @@ import { html_style_white_space } from "./html_style_white_space.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_lesson_statement_title_code_note_paint_get(
+export function app_learn_js_lesson_statement_title_code_note_paint_get(
   fragment,
   note,
 ) {
