@@ -87,7 +87,7 @@ import { app_code_lesson_expression_equal_true_false } from "./app_code_lesson_e
 import { app_code_lesson_expression_not_equal_true_false } from "./app_code_lesson_expression_not_equal_true_false.mjs";
 import { app_code_lesson_expression_equal_number_string_true_false } from "./app_code_lesson_expression_equal_number_string_true_false.mjs";
 import { app_learn_js_lesson_expression_choose_order_compare } from "./app_learn_js_lesson_expression_choose_order_compare.mjs";
-import { app_code_lesson_expression_comparing_a_comparison } from "./app_code_lesson_expression_comparing_a_comparison.mjs";
+import { app_learn_js_lesson_expression_comparing_a_comparison } from "./app_learn_js_lesson_expression_comparing_a_comparison.mjs";
 import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";
 import { app_learn_js_lesson_expression_choose_order_and_before_or } from "./app_learn_js_lesson_expression_choose_order_and_before_or.mjs";
 import { app_learn_js_lesson_expression_and_before_or } from "./app_learn_js_lesson_expression_and_before_or.mjs";
@@ -400,7 +400,7 @@ export function app_code_lessons_released_fns() {
     app_code_lesson_expression_not_equal_true_false,
     app_code_lesson_expression_equal_number_string_true_false,
     app_learn_js_lesson_expression_choose_order_compare,
-    app_code_lesson_expression_comparing_a_comparison,
+    app_learn_js_lesson_expression_comparing_a_comparison,
     app_code_lesson_expression_parentheses_one_side,
     app_learn_js_lesson_expression_choose_order_and_before_or,
     app_learn_js_lesson_expression_and_before_or,
