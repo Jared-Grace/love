@@ -10,7 +10,7 @@ import { js_arithmetic_value } from "./js_arithmetic_value.mjs";
 import { app_code_lesson_expression_parentheses_moved_expression } from "./app_code_lesson_expression_parentheses_moved_expression.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
-import { app_code_lesson_expression_parentheses_moved_card_two_places } from "./app_code_lesson_expression_parentheses_moved_card_two_places.mjs";
+import { app_learn_js_lesson_expression_parentheses_moved_card_two_places } from "./app_learn_js_lesson_expression_parentheses_moved_card_two_places.mjs";
 import { app_code_lesson_expression_parentheses_moved_card_worked } from "./app_code_lesson_expression_parentheses_moved_card_worked.mjs";
 import { app_learn_js_lesson_expression_parentheses_moved_card_different_answer } from "./app_learn_js_lesson_expression_parentheses_moved_card_different_answer.mjs";
 import { app_learn_js_lesson_expression_parentheses_moved_card_changes_nothing } from "./app_learn_js_lesson_expression_parentheses_moved_card_changes_nothing.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_expression_parentheses_moved() {
     let times = js_operator_asterisk_symbol();
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
-    app_code_lesson_expression_parentheses_moved_card_two_places(
+    app_learn_js_lesson_expression_parentheses_moved_card_two_places(
       root,
       open,
       close,
