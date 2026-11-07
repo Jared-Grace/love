@@ -8,7 +8,7 @@ import { app_learn_js_expression_choose_line_press_elsewhere } from "./app_learn
 import { app_learn_js_expression_choose_line_operator_refuse } from "./app_learn_js_expression_choose_line_operator_refuse.mjs";
 import { each } from "./each.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
-import { app_code_expression_refusals_clear } from "./app_code_expression_refusals_clear.mjs";
+import { app_learn_js_expression_refusals_clear } from "./app_learn_js_expression_refusals_clear.mjs";
 import { app_learn_js_expression_chosen_set } from "./app_learn_js_expression_chosen_set.mjs";
 import { app_learn_js_expression_chips_settle } from "./app_learn_js_expression_chips_settle.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
@@ -69,7 +69,7 @@ export function app_learn_js_expression_choose_line_draw_on_operator({
       ("and the marks go with the answering: the line has stopped taking presses, so nothing on it is the way on any more. What is left standing marked would be pressed again by a walk, over and over, into the guard above that answers it with a glow - and the question it should be answering is the one that just opened somewhere else.");
       each(pressable, html_data_set_test_happy_remove);
       ("the reds go before anything else happens, so what the learner watches from here is one block being worked out rather than a working out with a refusal still standing beside it");
-      app_code_expression_refusals_clear(refused);
+      app_learn_js_expression_refusals_clear(refused);
       ("the blue block is the first thing that happens, in the frame the press is made, so the press is answered before anything else on the line is asked to change");
       app_learn_js_expression_chosen_set(node_span, span);
       ("and only then do the other chips go, so the line stops offering presses it will not answer while the value question is open");
