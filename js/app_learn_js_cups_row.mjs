@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_row_center } from "./html_flex_row_center.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-export function app_code_cups_row(parent) {
+export function app_learn_js_cups_row(parent) {
   arguments_assert(arguments, 1);
   ("a place to draw cups next to each other rather than one under the other");
   ("Two cups stacked in a column are two pictures, read one after the other, and the second is understood as what happened next to the first. Side by side they are one picture of two cups standing at the same time, which is what a screen about having more than one name has to show.");

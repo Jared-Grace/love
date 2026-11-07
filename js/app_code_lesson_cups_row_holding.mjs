@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_cups_row } from "./app_code_cups_row.mjs";
+import { app_learn_js_cups_row } from "./app_learn_js_cups_row.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_cups_row_holding(parent, pairs, names) {
   ("The lesson's names are given to the row rather than to each cup, because the colour a name is written in is decided by where that name stands among the lesson's names - which is one fact about the lesson, not one per cup. Handed out cup by cup, the same row could have said two different things about the same name.");
   ("The names are not read off the pairs, although here they would come out right. A row can leave a cup out, draw them in another order, or show one cup twice, and any of those would quietly repaint a name that the code box further down is still drawing the old way. The lesson knows the order it introduced its names in; the picture only knows what it happens to be showing.");
   ("A screen with no colours yet hands in an empty list and every letter comes out the dark blue the cups have always been written in.");
-  let row = app_code_cups_row(parent);
+  let row = app_learn_js_cups_row(parent);
   function cup_of(pair) {
     "one cup of the row, drawn from the word it holds and the name written on it";
     let word = list_first(pair);
