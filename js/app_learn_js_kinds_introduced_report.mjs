@@ -2,7 +2,7 @@ import { equal_not } from "./equal_not.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_order_rounds } from "./app_code_lessons_order_rounds.mjs";
-import { app_code_kinds_introduced } from "./app_code_kinds_introduced.mjs";
+import { app_learn_js_kinds_introduced } from "./app_learn_js_kinds_introduced.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
@@ -12,7 +12,7 @@ export function app_learn_js_kinds_introduced_report() {
   ("Asked with no arguments so it can be run from the command line, which is the only way anyone reaches the reading it wraps.");
   ("Only the short ones are handed back, because the ones carrying what they brought in on every line are the answer being right and there are two dozen of them.");
   let rounds = app_code_lessons_order_rounds();
-  let read = app_code_kinds_introduced(rounds);
+  let read = app_learn_js_kinds_introduced(rounds);
   let introduced = property_get(read, "introduced");
   function partly_is(entry) {
     "this lesson, if some of its lines do not carry what it brings in";

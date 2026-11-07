@@ -18,7 +18,7 @@ import { list_any } from "./list_any.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { list_size } from "./list_size.mjs";
-export function app_code_kinds_introduced(rounds) {
+export function app_learn_js_kinds_introduced(rounds) {
   arguments_assert(arguments, 1);
   ("Every lesson that writes a kind of code no lesson before it wrote, beside how much of that lesson is about the kind it brings in: the kinds themselves, how many of the lesson's lines carry one of them, and how many lines it has. Thinnest share first.");
   ("This answers whether the course teaches what it uses. A lesson that brings in a sign and puts that sign on every line it hands out is the lesson that sign belongs to, and a learner who has worked through it has been taught it. A lesson that brings in a sign on four lines out of a hundred and twenty-seven has not taught it to anybody; the sign arrived as decoration on a lesson about something else, and every later line carrying it asks for something no lesson ever gave.");
