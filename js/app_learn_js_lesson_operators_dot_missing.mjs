@@ -7,7 +7,7 @@ import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_op
 import { app_learn_js_lesson_operators_dot_batch_numbers } from "./app_learn_js_lesson_operators_dot_batch_numbers.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_learn_js_lesson_operators_dot_numbers_both_sides_text_common } from "./app_learn_js_lesson_operators_dot_numbers_both_sides_text_common.mjs";
-import { app_code_lesson_operators_dot_numbers_example } from "./app_code_lesson_operators_dot_numbers_example.mjs";
+import { app_learn_js_lesson_operators_dot_numbers_example } from "./app_learn_js_lesson_operators_dot_numbers_example.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_learn_js_lesson_operators_asterisk_generic_invalid } from "./app_learn_js_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_learn_js_lesson_operators_asterisk_generic_minus } from "./app_learn_js_lesson_operators_asterisk_generic_minus.mjs";
@@ -23,7 +23,8 @@ export function app_learn_js_lesson_operators_dot_missing() {
       operator,
       " will be used with identifiers, and not as a decimal point in a number",
     ]);
-    let example_get = app_code_lesson_operators_dot_numbers_example(operator);
+    let example_get =
+      app_learn_js_lesson_operators_dot_numbers_example(operator);
     let common =
       app_learn_js_lesson_operators_dot_numbers_both_sides_text_common();
     let common_trimmed = text_trim(common);
