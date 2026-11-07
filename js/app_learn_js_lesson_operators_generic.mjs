@@ -11,7 +11,7 @@ import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_und
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_operators_generic({
+export function app_learn_js_lesson_operators_generic({
   operator_js,
   operator_math,
   operator_name_js,

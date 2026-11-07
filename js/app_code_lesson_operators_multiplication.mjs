@@ -2,7 +2,7 @@ import { js_operator_asterisk_name } from "./js_operator_asterisk_name.mjs";
 import { js_operator_asterisk_verb } from "./js_operator_asterisk_verb.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { identity } from "./identity.mjs";
-import { app_code_lesson_operators_generic } from "./app_code_lesson_operators_generic.mjs";
+import { app_learn_js_lesson_operators_generic } from "./app_learn_js_lesson_operators_generic.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_code_lesson_operators_multiplication() {
   let operator_js = js_operator_asterisk_symbol();
@@ -11,7 +11,7 @@ export function app_code_lesson_operators_multiplication() {
   let math_name = "multiplication";
   let operator_name_math = text_combine(math_name, " sign");
   let verb = js_operator_asterisk_verb();
-  let r = app_code_lesson_operators_generic({
+  let r = app_learn_js_lesson_operators_generic({
     operator_js,
     operator_math,
     operator_name_js,
