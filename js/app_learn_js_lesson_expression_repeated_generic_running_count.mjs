@@ -3,7 +3,7 @@ import { text_to } from "./text_to.mjs";
 import { html_span_text_smaller } from "./html_span_text_smaller.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_bold } from "./html_bold.mjs";
-export function app_code_lesson_expression_repeated_generic_running_count(
+export function app_learn_js_lesson_expression_repeated_generic_running_count(
   grid,
   number,
 ) {

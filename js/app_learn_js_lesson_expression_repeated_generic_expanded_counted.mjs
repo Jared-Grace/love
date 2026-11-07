@@ -8,7 +8,7 @@ import { html_style_grid_cell } from "./html_style_grid_cell.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { equal } from "./equal.mjs";
 import { app_learn_js_lesson_expression_repeated_generic_final_count } from "./app_learn_js_lesson_expression_repeated_generic_final_count.mjs";
-import { app_code_lesson_expression_repeated_generic_running_count } from "./app_code_lesson_expression_repeated_generic_running_count.mjs";
+import { app_learn_js_lesson_expression_repeated_generic_running_count } from "./app_learn_js_lesson_expression_repeated_generic_running_count.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_font_jetbrains_mono } from "./html_font_jetbrains_mono.mjs";
@@ -51,7 +51,7 @@ export function app_learn_js_lesson_expression_repeated_generic_expanded_counted
         count_color,
       );
     } else {
-      numeral = app_code_lesson_expression_repeated_generic_running_count(
+      numeral = app_learn_js_lesson_expression_repeated_generic_running_count(
         grid,
         position,
       );
