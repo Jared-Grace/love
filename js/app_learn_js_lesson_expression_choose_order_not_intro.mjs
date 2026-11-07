@@ -5,7 +5,7 @@ import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_not_parenthesis_shape } from "./app_code_not_parenthesis_shape.mjs";
-export function app_code_lesson_expression_choose_order_not_intro(parent) {
+export function app_learn_js_lesson_expression_choose_order_not_intro(parent) {
   arguments_assert(arguments, 1);
   ("the sentences that say what is different about this lesson, in a card of their own");
   ("PARENTHESES, never parentheses. The marks on the line are ( and ), and in this language [ and ] are a different symbol doing a different job - so a card that called these parentheses would be teaching a word the learner has to unlearn the first time they meet a list.");
