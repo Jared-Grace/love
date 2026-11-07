@@ -4,7 +4,7 @@ import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
 import { app_learn_js_category_expressions } from "./app_learn_js_category_expressions.mjs";
 import { js_operator_bang } from "./js_operator_bang.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_expression_not_comparison_title_name_id() {
+export function app_learn_js_lesson_expression_not_comparison_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: ! around a comparison, an Expressions lesson. The title paints the symbol rather than the word not, because the lesson is about the symbol - the word is only what the URL name is spelled with, where a symbol cannot go");
   let operator = js_operator_bang();

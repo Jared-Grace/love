@@ -1,7 +1,7 @@
 import { property_equals } from "./property_equals.mjs";
 import { js_code_not } from "./js_code_not.mjs";
 import { app_learn_js_lesson_expression_not_comparison_intro } from "./app_learn_js_lesson_expression_not_comparison_intro.mjs";
-import { app_code_lesson_expression_not_comparison_title_name_id } from "./app_code_lesson_expression_not_comparison_title_name_id.mjs";
+import { app_learn_js_lesson_expression_not_comparison_title_name_id } from "./app_learn_js_lesson_expression_not_comparison_title_name_id.mjs";
 import { app_learn_js_comparison_side_wrapped } from "./app_learn_js_comparison_side_wrapped.mjs";
 import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_learn_js_label_value_backwards } from "./app_learn_js_label_value_backwards.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_expression_not_comparison() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = app_code_lesson_expression_not_comparison_title_name_id();
+  let name_id = app_learn_js_lesson_expression_not_comparison_title_name_id();
   let lesson = app_learn_js_lesson_expression_generic({
     above: app_learn_js_lesson_expression_not_comparison_intro,
     name_id,
