@@ -2,7 +2,7 @@ import { app_learn_js_lesson_expression_choose_order_comparison_side } from "./a
 import { app_learn_js_expression_node_not_of_parts } from "./app_learn_js_expression_node_not_of_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
-export function app_code_lesson_expression_choose_order_not_expression(
+export function app_learn_js_lesson_expression_choose_order_not_expression(
   want_true,
 ) {
   arguments_assert(arguments, 1);
