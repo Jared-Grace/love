@@ -10,7 +10,7 @@ import { list_join_space } from "./list_join_space.mjs";
 import { app_code_lesson_text_operator_symbols } from "./app_code_lesson_text_operator_symbols.mjs";
 import { text_is } from "./text_is.mjs";
 import { js_operator_symbol } from "./js_operator_symbol.mjs";
-export async function app_code_lesson_symbol_source_symbols(name) {
+export async function app_learn_js_lesson_symbol_source_symbols(name) {
   arguments_assert(arguments, 1);
   ("the symbols one of those functions stands for, got by RUNNING it. Reading its source instead does not answer: an operator here is often held as an object built two files away, and only the file at the bottom of that chain ever spells the symbol itself. Running it was measured against reading it - reading named four operators for a lesson that shows five, and following the names in the source instead over-reached the other way and named ten for a lesson that shows three.");
   ("A function that wants an argument, or a browser, hands back nothing rather than throwing. The name shape that got it here is a guess about what a function is for, and a guess that turns out wrong should cost the reading nothing.");

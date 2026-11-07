@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_source_literal_symbols } from "./app_learn_js_lesson_source_literal_symbols.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { app_code_lesson_symbol_source_symbols } from "./app_code_lesson_symbol_source_symbols.mjs";
+import { app_learn_js_lesson_symbol_source_symbols } from "./app_learn_js_lesson_symbol_source_symbols.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_unique } from "./list_unique.mjs";
 export async function app_learn_js_lesson_source_symbols(source, source_names) {
@@ -12,7 +12,7 @@ export async function app_learn_js_lesson_source_symbols(source, source_names) {
   for (let name of source_names) {
     let mentioned = text_includes(source, name);
     if (mentioned) {
-      let symbols = await app_code_lesson_symbol_source_symbols(name);
+      let symbols = await app_learn_js_lesson_symbol_source_symbols(name);
       list_add_multiple(found, symbols);
     }
   }
