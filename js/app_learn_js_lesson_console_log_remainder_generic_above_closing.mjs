@@ -3,7 +3,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { app_code_lesson_console_log_remainder_generic_above_has_insight } from "./app_code_lesson_console_log_remainder_generic_above_has_insight.mjs";
 import { app_code_lesson_console_log_remainder_generic_above_insight_line } from "./app_code_lesson_console_log_remainder_generic_above_insight_line.mjs";
 import { each } from "./each.mjs";
-export function app_code_lesson_console_log_remainder_generic_above_closing({
+export function app_learn_js_lesson_console_log_remainder_generic_above_closing({
   root,
   divisor,
   divisor_text,
