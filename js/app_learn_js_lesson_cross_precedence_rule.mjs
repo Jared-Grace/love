@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_label_solve_left_to_right } from "./app_learn_js_label_solve_left_to_right.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_cross_precedence_rule(
+export function app_learn_js_lesson_cross_precedence_rule(
   root,
   weak_symbol,
   strong_symbol,
