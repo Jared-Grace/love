@@ -4,7 +4,7 @@ import { app_code_label_value_backwards } from "./app_code_label_value_backwards
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_prose_rule_line } from "./app_code_prose_rule_line.mjs";
 import { app_code_prose_code_line } from "./app_code_prose_code_line.mjs";
-import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
+import { app_learn_js_comparison_decoys } from "./app_learn_js_comparison_decoys.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -75,7 +75,7 @@ export function app_code_lesson_expression_string_equality() {
     name_id,
     next_arg,
     example_count: 4,
-    decoys: app_code_comparison_decoys,
+    decoys: app_learn_js_comparison_decoys,
     forwards_question_label: app_code_label_code_question(),
     forwards_answer_label: app_code_label_value(),
     backwards_question_label: app_code_label_value(),
