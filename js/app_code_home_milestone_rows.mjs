@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_review_complete_is } from "./app_code_review_complete_is.mjs";
-import { app_code_home_milestone_row } from "./app_code_home_milestone_row.mjs";
+import { app_learn_js_home_milestone_row } from "./app_learn_js_home_milestone_row.mjs";
 import { equal } from "./equal.mjs";
 import { each } from "./each.mjs";
 export function app_code_home_milestone_rows(
@@ -25,7 +25,12 @@ export function app_code_home_milestone_rows(
   function each_milestone(milestone) {
     let id = property_get(milestone, "id");
     let complete = app_code_review_complete_is(reviews_complete, id);
-    let row = app_code_home_milestone_row(body, context, milestone, complete);
+    let row = app_learn_js_home_milestone_row(
+      body,
+      context,
+      milestone,
+      complete,
+    );
     if (equal(id, id_left)) {
       left = row;
     }

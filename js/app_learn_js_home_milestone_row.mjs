@@ -4,7 +4,12 @@ import { app_code_milestone_go } from "./app_code_milestone_go.mjs";
 import { app_learn_js_checkpoint_button } from "./app_learn_js_checkpoint_button.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-export function app_code_home_milestone_row(g, context, milestone, complete) {
+export function app_learn_js_home_milestone_row(
+  g,
+  context,
+  milestone,
+  complete,
+) {
   "$plain complete";
   "The button on the home screen that opens one milestone, drawn the way a review's row is drawn, with the same gap above it, and handed back for the same reason: the list scrolls back to the row the learner just left.";
   arguments_assert(arguments, 4);
