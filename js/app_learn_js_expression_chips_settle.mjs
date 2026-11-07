@@ -6,7 +6,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_descendants_innermost } from "./html_descendants_innermost.mjs";
 import { html_move_animate_settle } from "./html_move_animate_settle.mjs";
-export async function app_code_expression_chips_settle(line, spans) {
+export async function app_learn_js_expression_chips_settle(line, spans) {
   arguments_assert(arguments, 2);
   ("take the chips off a run of operators in two stages: first they go plain where they stand, and only then the room they were holding goes and the rest of the line slides along into it");
   ("Both stages at once is one change too many to follow. The pale square leaving and the whole line shifting sideways land in the same frame, and a learner looking for the operator they did not press finds it somewhere else, plain, with no way to tell whether it moved because it stopped being pressable or because something was worked out.");
