@@ -4,7 +4,7 @@ import { app_learn_js_lesson_expression_choose_order_operators_above } from "./a
 import { app_learn_js_lesson_expression_choose_order_operators_questions } from "./app_learn_js_lesson_expression_choose_order_operators_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_operators_title_name_id } from "./app_learn_js_lesson_expression_choose_order_operators_title_name_id.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
-import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app_learn_js_lesson_expression_choose_order_solve_example.mjs";
 export function app_learn_js_lesson_expression_choose_order_operators() {
   "choosing which part of a line to solve and then what that part comes to, on a line built from any of the four arithmetic operators: 8 - 2 * 3, choose the times, choose 6, see 8 - 6, choose the minus, choose 2";
   "The same two presses on the same engine as the lesson before it, with one thing changed: the operators are drawn from all four rather than being times and plus every line. A learner has chosen the order and chosen the value on a line of times and plus; here they do it again where the strong one may be a divide and the weak one a minus.";
@@ -27,7 +27,7 @@ export function app_learn_js_lesson_expression_choose_order_operators() {
   }
   function example_draw(parent, card, tree) {
     "the front page, with the same wrong values the quiz offers";
-    app_code_lesson_expression_choose_order_solve_example(
+    app_learn_js_lesson_expression_choose_order_solve_example(
       parent,
       card,
       tree,

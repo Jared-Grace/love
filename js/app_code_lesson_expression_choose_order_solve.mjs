@@ -4,7 +4,7 @@ import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn
 import { app_learn_js_lesson_expression_choose_order_solve_above } from "./app_learn_js_lesson_expression_choose_order_solve_above.mjs";
 import { app_code_lesson_expression_choose_order_solve_title_name_id } from "./app_code_lesson_expression_choose_order_solve_title_name_id.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
-import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app_learn_js_lesson_expression_choose_order_solve_example.mjs";
 export function app_code_lesson_expression_choose_order_solve() {
   "choosing which part of a line to solve, and then working that part out: 1 + 2 * 3, choose the times, choose 6 out of what it could come to, see 1 + 6, choose the plus, choose 7";
   "The lesson before this one chooses the order and is GIVEN each value; the lessons after it ask for the answer to a whole two-operator line in one go. Between those two stands one step, and this is it: the order is still chosen the same way, and the value that was handed over is now asked for.";
@@ -26,7 +26,7 @@ export function app_code_lesson_expression_choose_order_solve() {
   }
   function example_draw(parent, card, tree) {
     "the front page, with the same wrong values the quiz offers";
-    app_code_lesson_expression_choose_order_solve_example(
+    app_learn_js_lesson_expression_choose_order_solve_example(
       parent,
       card,
       tree,

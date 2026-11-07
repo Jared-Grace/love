@@ -3,7 +3,7 @@ import { app_learn_js_lesson_expression_choose_order_integer_division_title_name
 import { app_learn_js_expression_integer_division_random } from "./app_learn_js_expression_integer_division_random.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys_rounding } from "./app_learn_js_expression_value_decoys_rounding.mjs";
-import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app_learn_js_lesson_expression_choose_order_solve_example.mjs";
 import { app_learn_js_lesson_expression_choose_order_questions_generic } from "./app_learn_js_lesson_expression_choose_order_questions_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_integer_division_tree_of_code } from "./app_learn_js_lesson_expression_choose_order_integer_division_tree_of_code.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_expression_choose_order_integer_division() {
   }
   function example_draw(parent, card, tree) {
     "the front page, with the same wrong values the quiz offers";
-    app_code_lesson_expression_choose_order_solve_example(
+    app_learn_js_lesson_expression_choose_order_solve_example(
       parent,
       card,
       tree,

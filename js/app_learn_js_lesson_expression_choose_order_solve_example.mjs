@@ -9,7 +9,7 @@ import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
 import { app_learn_js_expression_choose_order_ask } from "./app_learn_js_expression_choose_order_ask.mjs";
 import { noop } from "./noop.mjs";
-export function app_code_lesson_expression_choose_order_solve_example(
+export function app_learn_js_lesson_expression_choose_order_solve_example(
   parent,
   card,
   tree,

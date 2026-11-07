@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
-import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app_learn_js_lesson_expression_choose_order_solve_example.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 export function app_learn_js_lesson_expression_choose_order_decoys_generic(
   name_id,
@@ -25,7 +25,7 @@ export function app_learn_js_lesson_expression_choose_order_decoys_generic(
   }
   function example_draw(parent, card, tree) {
     "the front page, with the same wrong values the quiz offers";
-    app_code_lesson_expression_choose_order_solve_example(
+    app_learn_js_lesson_expression_choose_order_solve_example(
       parent,
       card,
       tree,

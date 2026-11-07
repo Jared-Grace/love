@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength_pair_title_name_id } from "./app_learn_js_lesson_expression_choose_order_same_strength_pair_title_name_id.mjs";
 import { app_learn_js_lesson_expression_choose_order_solve_answer_draw } from "./app_learn_js_lesson_expression_choose_order_solve_answer_draw.mjs";
 import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_value_decoys.mjs";
-import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
+import { app_learn_js_lesson_expression_choose_order_solve_example } from "./app_learn_js_lesson_expression_choose_order_solve_example.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength_pair_questions } from "./app_learn_js_lesson_expression_choose_order_same_strength_pair_questions.mjs";
 import { app_learn_js_lesson_expression_choose_order_generic } from "./app_learn_js_lesson_expression_choose_order_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_same_strength_pair_above } from "./app_learn_js_lesson_expression_choose_order_same_strength_pair_above.mjs";
@@ -31,7 +31,7 @@ export function app_learn_js_lesson_expression_choose_order_same_strength_pair()
   }
   function example_draw(parent, card, tree) {
     "the front page, with the same wrong values the quiz offers";
-    app_code_lesson_expression_choose_order_solve_example(
+    app_learn_js_lesson_expression_choose_order_solve_example(
       parent,
       card,
       tree,
