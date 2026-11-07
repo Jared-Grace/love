@@ -1273,7 +1273,7 @@ export function permission_grant_names() {
     fn_name("functions_values_report"),
     fn_name("app_learn_ceb_gloss_book_gather"),
     fn_name("app_learn_ceb_gloss_book_words_owed"),
-    fn_name("app_code_lesson_ids_baseline_write"),
+    fn_name("app_learn_js_lesson_ids_baseline_write"),
     fn_name("app_code_lesson_ids_gate_run"),
     fn_name("app_code_quiz_unscramble_shortcut_gate_run"),
     fn_name("app_shared_frozen_assert"),

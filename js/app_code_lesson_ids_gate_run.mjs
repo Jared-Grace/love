@@ -19,7 +19,7 @@ export async function app_code_lesson_ids_gate_run() {
     ids,
     path,
     hint,
-    fn_name("app_code_lesson_ids_baseline_write"),
+    fn_name("app_learn_js_lesson_ids_baseline_write"),
   );
   return r;
 }
