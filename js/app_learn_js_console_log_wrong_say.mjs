@@ -18,7 +18,7 @@ import { list_add } from "./list_add.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { js_string_quote } from "./js_string_quote.mjs";
 import { js_tokenizer_normalized } from "./js_tokenizer_normalized.mjs";
-export function app_code_console_log_wrong_say(question, answer, choice) {
+export function app_learn_js_console_log_wrong_say(question, answer, choice) {
   arguments_assert(arguments, 3);
   ("said when a learner picks a wrong output for one console.log call: that console.log writes out what is inside its ( ), worked out first when it is a sum, and without the quote marks when it is a text, as parts that take turns between words and code. null when the code is not one console.log call, when it cannot be followed, or when what it writes out is not the right answer");
   ("Not picked: the working of a sum step by step, as the expression reminder gives it; the lessons here teach what console.log does with its inside, and the value it writes out is enough to find the slip");

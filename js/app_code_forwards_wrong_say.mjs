@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_comment_wrong_say } from "./app_learn_js_comment_wrong_say.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_console_log_wrong_say } from "./app_code_console_log_wrong_say.mjs";
+import { app_learn_js_console_log_wrong_say } from "./app_learn_js_console_log_wrong_say.mjs";
 import { app_code_expression_wrong_say } from "./app_code_expression_wrong_say.mjs";
 import { app_code_math_call_wrong_say } from "./app_code_math_call_wrong_say.mjs";
 import { app_code_string_value_wrong_say } from "./app_code_string_value_wrong_say.mjs";
@@ -20,7 +20,7 @@ export function app_code_forwards_wrong_say(question, answer, choice) {
     return comment;
   }
   ("2026-10-26: one console.log call is answered next, by what console.log does with its inside; the expression reminder takes only a bare expression, so the two never both speak");
-  let logged = app_code_console_log_wrong_say(question, answer, choice);
+  let logged = app_learn_js_console_log_wrong_say(question, answer, choice);
   if (null_not_is(logged)) {
     return logged;
   }
