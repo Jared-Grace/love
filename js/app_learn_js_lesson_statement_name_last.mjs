@@ -12,7 +12,7 @@ import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_que
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_learn_js_lesson_code_logged } from "./app_learn_js_lesson_code_logged.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_statement_name_last(
+export function app_learn_js_lesson_statement_name_last(
   lesson_first,
   batch_original,
   name_id,
