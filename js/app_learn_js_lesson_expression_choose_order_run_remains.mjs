@@ -4,7 +4,7 @@ import { app_learn_js_expression_nodes_ready } from "./app_learn_js_expression_n
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { not } from "./not.mjs";
-export function app_code_lesson_expression_choose_order_run_remains(
+export function app_learn_js_lesson_expression_choose_order_run_remains(
   run,
   current,
 ) {

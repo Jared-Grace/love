@@ -10,7 +10,7 @@ import { app_learn_js_expression_value } from "./app_learn_js_expression_value.m
 import { text_to } from "./text_to.mjs";
 import { app_learn_js_expression_step_reason_of } from "./app_learn_js_expression_step_reason_of.mjs";
 import { app_learn_js_expression_solved } from "./app_learn_js_expression_solved.mjs";
-import { app_code_lesson_expression_choose_order_run_remains } from "./app_code_lesson_expression_choose_order_run_remains.mjs";
+import { app_learn_js_lesson_expression_choose_order_run_remains } from "./app_learn_js_lesson_expression_choose_order_run_remains.mjs";
 export function app_learn_js_lesson_expression_choose_order_reason_run(
   root,
   heading,
@@ -51,6 +51,9 @@ export function app_learn_js_lesson_expression_choose_order_reason_run(
     }
     app_learn_js_div_cycle_code(run, [lead, step_code, " to get ", step_text]);
     current = app_learn_js_expression_solved(current, node);
-    ready = app_code_lesson_expression_choose_order_run_remains(run, current);
+    ready = app_learn_js_lesson_expression_choose_order_run_remains(
+      run,
+      current,
+    );
   }
 }
