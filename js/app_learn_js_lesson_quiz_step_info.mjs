@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_lesson_quiz_question_none } from "./app_learn_js_lesson_quiz_question_none.mjs";
 import { app_learn_js_brace_marked_div } from "./app_learn_js_brace_marked_div.mjs";
-import { app_code_lesson_quiz_step } from "./app_code_lesson_quiz_step.mjs";
+import { app_learn_js_lesson_quiz_step } from "./app_learn_js_lesson_quiz_step.mjs";
 import { app_code_program_step_correction } from "./app_code_program_step_correction.mjs";
 export function app_learn_js_lesson_quiz_step_info() {
   arguments_assert(arguments, 0);
@@ -13,7 +13,7 @@ export function app_learn_js_lesson_quiz_step_info() {
     answer_label: "",
     answer_on_button: app_learn_js_brace_marked_div,
     answer_count_override: null,
-    on_answer: app_code_lesson_quiz_step,
+    on_answer: app_learn_js_lesson_quiz_step,
     correction: app_code_program_step_correction,
   };
   return info;

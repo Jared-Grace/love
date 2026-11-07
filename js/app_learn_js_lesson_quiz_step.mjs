@@ -1,7 +1,7 @@
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_code_program_step_through_generic } from "./app_code_program_step_through_generic.mjs";
-export function app_code_lesson_quiz_step(
+export function app_learn_js_lesson_quiz_step(
   parent,
   info,
   qa,
