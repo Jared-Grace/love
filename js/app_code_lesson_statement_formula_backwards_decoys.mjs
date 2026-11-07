@@ -19,7 +19,7 @@ import { app_code_explain_container_next } from "./app_code_explain_container_ne
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { null_is } from "./null_is.mjs";
-import { app_code_code_dark_lines_pointed } from "./app_code_code_dark_lines_pointed.mjs";
+import { app_learn_js_code_dark_lines_pointed } from "./app_learn_js_code_dark_lines_pointed.mjs";
 import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
 import { app_code_code_lines_writes_out_on } from "./app_code_code_lines_writes_out_on.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -127,7 +127,7 @@ export function app_code_lesson_statement_formula_backwards_decoys({
     } else if (function_is(example_pointers)) {
       example_pointers(box_now, lines_now, output_now);
     } else {
-      let on_code = app_code_code_dark_lines_pointed(example_pointers);
+      let on_code = app_learn_js_code_dark_lines_pointed(example_pointers);
       let on_output = app_code_output_pointed(example_pointers);
       app_code_code_lines_writes_out_on(
         box_now,

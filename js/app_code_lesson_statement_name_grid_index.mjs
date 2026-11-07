@@ -1,4 +1,4 @@
-import { app_code_code_dark_lines_pointed } from "./app_code_code_dark_lines_pointed.mjs";
+import { app_learn_js_code_dark_lines_pointed } from "./app_learn_js_code_dark_lines_pointed.mjs";
 import { app_code_output_pointed } from "./app_code_output_pointed.mjs";
 import { app_code_code_lines_writes_out_on } from "./app_code_code_lines_writes_out_on.mjs";
 import { html_span } from "./html_span.mjs";
@@ -80,7 +80,7 @@ export function app_code_lesson_statement_name_grid_index() {
       [["row"], color_row],
       [["column", "columns"], color_column],
     ];
-    let paint = app_code_code_dark_lines_pointed(names_pointed);
+    let paint = app_learn_js_code_dark_lines_pointed(names_pointed);
     let on_output = app_code_output_pointed(names_pointed);
     app_code_code_lines_writes_out_on(
       box,
