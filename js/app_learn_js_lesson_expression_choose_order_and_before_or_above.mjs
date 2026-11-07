@@ -4,7 +4,7 @@ import { app_learn_js_lesson_expression_choose_order_sides_settled_tree } from "
 import { app_learn_js_expression_node_left_operator_first } from "./app_learn_js_expression_node_left_operator_first.mjs";
 import { app_learn_js_expression_node_right_operator_first } from "./app_learn_js_expression_node_right_operator_first.mjs";
 import { app_learn_js_lesson_expression_choose_order_and_before_or_either_side } from "./app_learn_js_lesson_expression_choose_order_and_before_or_either_side.mjs";
-import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_walks_above_generic } from "./app_learn_js_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_and_before_or_recall } from "./app_learn_js_lesson_expression_choose_order_and_before_or_recall.mjs";
 import { app_learn_js_lesson_expression_choose_order_and_before_or_intro } from "./app_learn_js_lesson_expression_choose_order_and_before_or_intro.mjs";
 export function app_learn_js_lesson_expression_choose_order_and_before_or_above(
@@ -48,7 +48,7 @@ export function app_learn_js_lesson_expression_choose_order_and_before_or_above(
       tree: tree_or_first,
     },
   ];
-  app_code_lesson_expression_choose_order_walks_above_generic(
+  app_learn_js_lesson_expression_choose_order_walks_above_generic(
     root,
     app_learn_js_lesson_expression_choose_order_and_before_or_recall,
     walks,

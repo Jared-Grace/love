@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_integer_division_random } from "./app_learn_js_expression_integer_division_random.mjs";
-import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_walks_above_generic } from "./app_learn_js_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_learn_js_lesson_expression_choose_order_integer_division_recall } from "./app_learn_js_lesson_expression_choose_order_integer_division_recall.mjs";
 import { app_learn_js_lesson_expression_choose_order_integer_division_intro } from "./app_learn_js_lesson_expression_choose_order_integer_division_intro.mjs";
 export function app_learn_js_lesson_expression_choose_order_integer_division_above(
@@ -20,7 +20,7 @@ export function app_learn_js_lesson_expression_choose_order_integer_division_abo
       tree,
     },
   ];
-  app_code_lesson_expression_choose_order_walks_above_generic(
+  app_learn_js_lesson_expression_choose_order_walks_above_generic(
     root,
     app_learn_js_lesson_expression_choose_order_integer_division_recall,
     walks,

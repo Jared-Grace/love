@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_expression_whole_part_random } from "./app_learn_js_expression_whole_part_random.mjs";
-import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
+import { app_learn_js_lesson_expression_choose_order_walks_above_generic } from "./app_learn_js_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_whole_part_recall } from "./app_code_lesson_expression_choose_order_whole_part_recall.mjs";
 import { app_code_lesson_expression_choose_order_whole_part_intro } from "./app_code_lesson_expression_choose_order_whole_part_intro.mjs";
 export function app_code_lesson_expression_choose_order_whole_part_above(
@@ -20,7 +20,7 @@ export function app_code_lesson_expression_choose_order_whole_part_above(
       tree,
     },
   ];
-  app_code_lesson_expression_choose_order_walks_above_generic(
+  app_learn_js_lesson_expression_choose_order_walks_above_generic(
     root,
     app_code_lesson_expression_choose_order_whole_part_recall,
     walks,
