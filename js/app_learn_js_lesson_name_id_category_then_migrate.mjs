@@ -17,7 +17,7 @@ export async function app_learn_js_lesson_name_id_category_then_migrate() {
   ("Each file is committed as it is rewritten. A run this long is overtaken by somebody else's sweep, and a file swept up before this finishes says nothing about how it was changed.");
   await ai_git_noted();
   let callers = await data_identifiers_search(
-    fn_name("app_code_lesson_name_id_generic"),
+    fn_name("app_learn_js_lesson_name_id_generic"),
   );
   let names = object_property_names(callers);
   let work = list_without(

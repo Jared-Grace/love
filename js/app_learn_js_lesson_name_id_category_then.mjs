@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
+import { app_learn_js_lesson_name_id_generic } from "./app_learn_js_lesson_name_id_generic.mjs";
 export function app_learn_js_lesson_name_id_category_then(left, paint) {
   arguments_assert(arguments, 2);
   ("A lesson name whose home title is whatever paint draws; the category word is taken and no longer drawn, see below.");
@@ -16,6 +16,6 @@ export function app_learn_js_lesson_name_id_category_then(left, paint) {
     }
     return render;
   }
-  let name_id = app_code_lesson_name_id_generic(left, title_get);
+  let name_id = app_learn_js_lesson_name_id_generic(left, title_get);
   return name_id;
 }

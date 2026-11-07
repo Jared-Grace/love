@@ -50,7 +50,7 @@ export function app_learn_js_lesson_name_id_category_then_rewrite(ast) {
   property_set(maker, "body", painter_body);
   let calls = js_list_calls_named_nodes(
     ast,
-    fn_name("app_code_lesson_name_id_generic"),
+    fn_name("app_learn_js_lesson_name_id_generic"),
   );
   function callee_swap(call) {
     let callee = property_get(call, "callee");
