@@ -12,7 +12,7 @@ import { list_skip } from "./list_skip.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_take } from "./list_take.mjs";
-import { app_code_lesson_quiz_lines_show } from "./app_code_lesson_quiz_lines_show.mjs";
+import { app_learn_js_lesson_quiz_lines_show } from "./app_learn_js_lesson_quiz_lines_show.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_code_lines_indent_braces } from "./app_code_lines_indent_braces.mjs";
 import { app_code_lesson_quiz_pieces_select } from "./app_code_lesson_quiz_pieces_select.mjs";
@@ -46,7 +46,7 @@ export function app_learn_js_lesson_quiz_lines_order(
   let tokens_unique = list_unique(rest);
   list_sort_text(tokens_unique);
   let chosen = list_take(lines, held_count);
-  app_code_lesson_quiz_lines_show(answer_div, chosen, lines);
+  app_learn_js_lesson_quiz_lines_show(answer_div, chosen, lines);
   let pieces = {
     variations,
     tokens_unique,
@@ -59,7 +59,7 @@ export function app_learn_js_lesson_quiz_lines_order(
     let list = app_code_lines_indent_braces(order);
     let joined = list_join_newline(list);
     correction_code_set(joined);
-    app_code_lesson_quiz_lines_show(answer_div, chosen_now, lines);
+    app_learn_js_lesson_quiz_lines_show(answer_div, chosen_now, lines);
   }
   app_code_lesson_quiz_pieces_select(
     parent,

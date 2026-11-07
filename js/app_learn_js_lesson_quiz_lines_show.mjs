@@ -6,7 +6,7 @@ import { list_concat } from "./list_concat.mjs";
 import { app_code_lines_indent_braces } from "./app_code_lines_indent_braces.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
-export function app_code_lesson_quiz_lines_show(answer_div, chosen, lines) {
+export function app_learn_js_lesson_quiz_lines_show(answer_div, chosen, lines) {
   "Write the lines tapped so far into the panel above the lines to choose from, one under another, with a blank line held for every line still to come.";
   "THE BLANK LINES ARE THERE SO NOTHING MOVES. The panel is as tall as the finished program from the moment the question opens, so a tap adds words to a line that was already there instead of pushing the buttons below it further down the screen, under the learner's finger.";
   let size = list_size(chosen);
