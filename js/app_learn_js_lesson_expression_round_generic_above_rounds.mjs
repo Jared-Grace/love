@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-export function app_code_lesson_expression_round_generic_above_rounds(
+export function app_learn_js_lesson_expression_round_generic_above_rounds(
   ordinary_digits,
   extreme_digits,
   rounds_up,

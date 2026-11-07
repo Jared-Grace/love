@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_round_generic_above_trap_render } from "./app_code_lesson_expression_round_generic_above_trap_render.mjs";
-import { app_code_lesson_expression_round_generic_above_rounds } from "./app_code_lesson_expression_round_generic_above_rounds.mjs";
+import { app_learn_js_lesson_expression_round_generic_above_rounds } from "./app_learn_js_lesson_expression_round_generic_above_rounds.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_expression_round_generic_above({
 }) {
   arguments_assert(arguments, 1);
   ("the worked examples are randomized each visit: a decimal and its whole part for the definitions, an EXTREME decimal (leaning the other way under round-to-nearest) to show it still rounds its fixed way, and a separate already-whole number that does not change");
-  let r = app_code_lesson_expression_round_generic_above_rounds(
+  let r = app_learn_js_lesson_expression_round_generic_above_rounds(
     ordinary_digits,
     extreme_digits,
     rounds_up,
