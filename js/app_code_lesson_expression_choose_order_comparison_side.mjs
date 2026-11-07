@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operators_comparison_symbols } from "./js_operators_comparison_symbols.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { app_code_comparison_operands_wanted } from "./app_code_comparison_operands_wanted.mjs";
+import { app_learn_js_comparison_operands_wanted } from "./app_learn_js_comparison_operands_wanted.mjs";
 export function app_code_lesson_expression_choose_order_comparison_side(
   want_true,
 ) {
@@ -12,7 +12,7 @@ export function app_code_lesson_expression_choose_order_comparison_side(
   ("Which of true and false the side has to come to is asked for rather than drawn, because the whole line is asked for as a true one or a false one and the two sides are what has to add up to it.");
   let symbols = js_operators_comparison_symbols();
   let symbol = list_random_item(symbols);
-  let operands = app_code_comparison_operands_wanted(symbol, want_true);
+  let operands = app_learn_js_comparison_operands_wanted(symbol, want_true);
   let parts = {
     left: operands.left,
     right: operands.right,

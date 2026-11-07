@@ -5,7 +5,7 @@ import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { equal } from "./equal.mjs";
-export function app_code_comparison_operands_wanted(symbol, want_true) {
+export function app_learn_js_comparison_operands_wanted(symbol, want_true) {
   arguments_assert(arguments, 2);
   ("two numbers to stand either side of a given comparison so that the comparison comes out true, or comes out false, whichever was asked for: >= with false asked for gives back a smaller number and a larger one");
   ("A lesson choosing its own numbers has to know what each comparison means all over again - which way round <= wants them, that !== will take any two that differ, that === wants one number twice. Six operators and two answers each is twelve small rules to get right in every lesson that asks, and the operator itself already knows all of them.");
