@@ -147,7 +147,7 @@ import { app_code_lesson_expression_three_steps_strong_first } from "./app_code_
 import { app_learn_js_lesson_comment_note } from "./app_learn_js_lesson_comment_note.mjs";
 import { app_code_lesson_log_twice } from "./app_code_lesson_log_twice.mjs";
 import { app_code_lesson_step_log_twice } from "./app_code_lesson_step_log_twice.mjs";
-import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
+import { app_learn_js_lesson_comment_skip_line } from "./app_learn_js_lesson_comment_skip_line.mjs";
 import { app_learn_js_lesson_comment_after_code } from "./app_learn_js_lesson_comment_after_code.mjs";
 import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { app_code_lesson_statement_name_number } from "./app_code_lesson_statement_name_number.mjs";
@@ -508,7 +508,7 @@ export function app_code_lessons_fns() {
     app_learn_js_lesson_comment_note,
     app_code_lesson_log_twice,
     app_code_lesson_step_log_twice,
-    app_code_lesson_comment_skip_line,
+    app_learn_js_lesson_comment_skip_line,
     app_learn_js_lesson_comment_after_code,
     app_code_lesson_statement_name_value,
     app_code_lesson_statement_name_number,

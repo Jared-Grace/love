@@ -8,7 +8,7 @@ import { app_code_lesson_decoy_comment_ignored } from "./app_code_lesson_decoy_c
 import { app_code_lesson_decoy_comment_moved } from "./app_code_lesson_decoy_comment_moved.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
-export function app_code_lesson_comment_skip_line() {
+export function app_learn_js_lesson_comment_skip_line() {
   arguments_assert(arguments, 0);
   ("two lines that write out with the two slashes in front of one of them: // console.log(4 + 6); console.log(3 + 8); writes out 11 and nothing else");
   ("The one new fact is that a line can be in a program and not run. A learner has met the slashes as the way to write words for a person to read, and has met a program whose lines each did something; here the slashes are put in front of a line that would have done something, and it does not.");

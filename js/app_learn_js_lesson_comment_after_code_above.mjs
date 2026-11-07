@@ -6,7 +6,7 @@ import { text_combine } from "./text_combine.mjs";
 import { property_text_to } from "./property_text_to.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
+import { app_learn_js_lesson_comment_skip_line } from "./app_learn_js_lesson_comment_skip_line.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
 import { js_comment_start } from "./js_comment_start.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
@@ -29,7 +29,7 @@ export function app_learn_js_lesson_comment_after_code_above(root, context) {
   app_code_remember_from_lesson(
     box_lines,
     context,
-    app_code_lesson_comment_skip_line,
+    app_learn_js_lesson_comment_skip_line,
     ["two slashes in front of a line skip the whole line:"],
   );
   app_learn_js_code_lines_writes_out(
