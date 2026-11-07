@@ -9,7 +9,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_container_light_blue_cycle_code } from "./app_learn_js_container_light_blue_cycle_code.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_true_false() {
+export function app_learn_js_lesson_expression_true_false() {
   function refill() {
     let t = js_keyword_true();
     let f = js_keyword_false();
