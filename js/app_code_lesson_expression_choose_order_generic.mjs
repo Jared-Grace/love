@@ -1,5 +1,5 @@
 import { app_learn_js_label_code_question } from "./app_learn_js_label_code_question.mjs";
-import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
+import { app_learn_js_label_line_to_solve } from "./app_learn_js_label_line_to_solve.mjs";
 import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
@@ -44,7 +44,7 @@ export function app_code_lesson_expression_choose_order_generic(
     "the one quiz every press-the-operators lesson asks: a line printed as code, and the learner told to choose what to solve first";
     "One kind, so one quiz. Backwards asks what code produces a value, and the value is not what is being asked for here; unscramble asks the learner to build the line, and the line is given. Both would be questions about something these lessons are not teaching.";
     let info = {
-      question_label: app_code_label_line_to_solve(),
+      question_label: app_learn_js_label_line_to_solve(),
       on_question: html_text_set_code_dark,
       answer_label: app_code_label_solve_first(),
       on_answer,
