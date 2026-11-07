@@ -11,7 +11,7 @@ import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 import { app_code_if_after_nested_program_lines } from "./app_code_if_after_nested_program_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { app_learn_js_code_lines_writes_out } from "./app_learn_js_code_lines_writes_out.mjs";
-export function app_code_if_after_nested_explain(root, context) {
+export function app_learn_js_if_after_nested_explain(root, context) {
   arguments_assert(arguments, 2);
   ("an if inside an if remembered, then an if after it, then the program with a false, which is where the if inside is never reached and the if after still runs");
   ("Moved here from An if after an if inside an if at the human's asking 2026-10-11, as for If inside an if and Else: the Does this section run? before each shape introduces it. That lesson keeps a reminder of this.");
