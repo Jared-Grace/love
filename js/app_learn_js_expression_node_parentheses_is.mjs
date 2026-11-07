@@ -6,7 +6,7 @@ import { app_learn_js_expression_node_before_is } from "./app_learn_js_expressio
 import { equal } from "./equal.mjs";
 import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
-import { app_code_expression_side_parenthesis_is } from "./app_code_expression_side_parenthesis_is.mjs";
+import { app_learn_js_expression_side_parenthesis_is } from "./app_learn_js_expression_side_parenthesis_is.mjs";
 import { app_code_operator_rank_least_left } from "./app_code_operator_rank_least_left.mjs";
 import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
 export function app_learn_js_expression_node_parentheses_is(item, node) {
@@ -33,7 +33,7 @@ export function app_learn_js_expression_node_parentheses_is(item, node) {
         return called;
       }
       let rank = app_code_operator_rank(symbol);
-      let gathered_before = app_code_expression_side_parenthesis_is(
+      let gathered_before = app_learn_js_expression_side_parenthesis_is(
         right,
         rank,
       );
@@ -49,7 +49,7 @@ export function app_learn_js_expression_node_parentheses_is(item, node) {
   let left_here = equal(left, node);
   if (left_here) {
     let rank_left = app_code_operator_rank_least_left(symbol);
-    let gathered_left = app_code_expression_side_parenthesis_is(
+    let gathered_left = app_learn_js_expression_side_parenthesis_is(
       left,
       rank_left,
     );
@@ -58,7 +58,7 @@ export function app_learn_js_expression_node_parentheses_is(item, node) {
   let right_here = equal(right, node);
   if (right_here) {
     let rank_right = app_code_operator_rank_least_right(symbol);
-    let gathered_right = app_code_expression_side_parenthesis_is(
+    let gathered_right = app_learn_js_expression_side_parenthesis_is(
       right,
       rank_right,
     );

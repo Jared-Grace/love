@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { less_than } from "./less_than.mjs";
 import { or } from "./or.mjs";
-export function app_code_expression_side_parenthesis_is(side, rank_least) {
+export function app_learn_js_expression_side_parenthesis_is(side, rank_least) {
   arguments_assert(arguments, 2);
   ("whether one side of an operator has to be gathered into parentheses when it is written out beside it");
   ("Asked in one place because a line is now written twice - once as a piece of text a learner reads, and once as separate pieces a learner can press - and two spellings of the same rule would let the pressable line grow or lose a parenthesis the written one did not.");
