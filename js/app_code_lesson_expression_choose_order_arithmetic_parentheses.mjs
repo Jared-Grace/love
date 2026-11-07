@@ -5,7 +5,7 @@ import { app_learn_js_expression_value_decoys } from "./app_learn_js_expression_
 import { app_code_lesson_expression_choose_order_solve_example } from "./app_code_lesson_expression_choose_order_solve_example.mjs";
 import { app_code_lesson_expression_choose_order_arithmetic_parentheses_questions } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses_questions.mjs";
 import { app_code_lesson_expression_choose_order_generic } from "./app_code_lesson_expression_choose_order_generic.mjs";
-import { app_code_lesson_expression_choose_order_arithmetic_parentheses_above } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses_above.mjs";
+import { app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_above } from "./app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_above.mjs";
 export function app_code_lesson_expression_choose_order_arithmetic_parentheses() {
   arguments_assert(arguments, 0);
   ("( and ) round a + or a - among numbers, taken a press at a time: 4 * (5 - 3), choose the minus, choose 2, see 4 * 2, choose the times, choose 8");
@@ -41,7 +41,7 @@ export function app_code_lesson_expression_choose_order_arithmetic_parentheses()
     app_code_lesson_expression_choose_order_arithmetic_parentheses_questions();
   let lesson = app_code_lesson_expression_choose_order_generic(
     name_id,
-    app_code_lesson_expression_choose_order_arithmetic_parentheses_above,
+    app_learn_js_lesson_expression_choose_order_arithmetic_parentheses_above,
     answer_draw,
     example_draw,
     bank,
