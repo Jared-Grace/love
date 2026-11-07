@@ -1,4 +1,4 @@
-import { app_code_lesson_console_log_remainder_generic_above } from "./app_code_lesson_console_log_remainder_generic_above.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_above } from "./app_learn_js_lesson_console_log_remainder_generic_above.mjs";
 import { app_code_lesson_console_log_remainder_generic_code_of } from "./app_code_lesson_console_log_remainder_generic_code_of.mjs";
 import { app_code_lesson_console_log_remainder_generic_title_name_id } from "./app_code_lesson_console_log_remainder_generic_title_name_id.mjs";
 import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
@@ -54,7 +54,7 @@ export function app_code_lesson_console_log_remainder_generic(
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
   function above(root, context) {
-    let r2 = app_code_lesson_console_log_remainder_generic_above({
+    let r2 = app_learn_js_lesson_console_log_remainder_generic_above({
       root,
       divisor,
       divisor_text,

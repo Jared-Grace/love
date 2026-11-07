@@ -3,7 +3,7 @@ import { app_learn_js_lesson_console_log_remainder_generic_above_alternates } fr
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
-export function app_code_lesson_console_log_remainder_generic_above({
+export function app_learn_js_lesson_console_log_remainder_generic_above({
   root,
   divisor,
   divisor_text,
