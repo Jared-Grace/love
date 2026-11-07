@@ -3,7 +3,7 @@ import { html_cursor_default } from "./html_cursor_default.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-export function app_code_expression_operator_chip_uncolored(span) {
+export function app_learn_js_expression_operator_chip_uncolored(span) {
   arguments_assert(arguments, 1);
   ("take the pale chip's look back off an operator - its fill, its lettering, its edge and the hand cursor over it - so it goes on reading as part of the line rather than as something to press");
   ("The chip is the whole of how this screen says press me. An operator that cannot be pressed and still wears one is a control that answers nothing, and a learner pressing it learns only that the screen is broken.");

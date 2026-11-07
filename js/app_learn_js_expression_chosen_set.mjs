@@ -1,5 +1,5 @@
 import { app_learn_js_expression_operator_chip_room_clear } from "./app_learn_js_expression_operator_chip_room_clear.mjs";
-import { app_code_expression_operator_chip_uncolored } from "./app_code_expression_operator_chip_uncolored.mjs";
+import { app_learn_js_expression_operator_chip_uncolored } from "./app_learn_js_expression_operator_chip_uncolored.mjs";
 import { app_learn_js_expression_chosen_style_assign } from "./app_learn_js_expression_chosen_style_assign.mjs";
 import { app_learn_js_expression_colored_slowly } from "./app_learn_js_expression_colored_slowly.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
@@ -17,7 +17,7 @@ export function app_learn_js_expression_chosen_set(node_span, operator_span) {
   ("the operator's own chip is not faded with it - it goes plain in the very frame it narrows, because the narrowing cannot be slowed and a chip still wearing its grey while it closes up is read as the grey itself shrinking");
   ("Faded, the two are seen out of step: the room goes between one frame and the next, the colour takes half a second to follow, and for that half second there is a grey standing at a width it never had.");
   ("its edge goes with its fill, in the same breath: an edge left drawn round the operator keeps it marked out as one thing inside the blue, and the whole point of the blue is that the operator and its two sides have just become one thing");
-  app_code_expression_operator_chip_uncolored(operator_span);
+  app_learn_js_expression_operator_chip_uncolored(operator_span);
   ("and the room it was holding goes in that same frame, alone among the chips on the line - because the block it is inside takes exactly that room back on the very next line, so the two cancel and nothing to the right of the block moves at all");
   ("Every OTHER chip on the line is closing up over a while, watched. This one has nothing to watch: it neither widens nor narrows the line, so a while spent on it would be a while in which the learner is shown nothing.");
   app_learn_js_expression_operator_chip_room_clear(operator_span);

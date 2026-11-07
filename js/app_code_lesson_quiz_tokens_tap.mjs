@@ -32,7 +32,7 @@ import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
 import { list_clear } from "./list_clear.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
-import { app_code_expression_operator_chip_uncolored } from "./app_code_expression_operator_chip_uncolored.mjs";
+import { app_learn_js_expression_operator_chip_uncolored } from "./app_learn_js_expression_operator_chip_uncolored.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
@@ -167,7 +167,7 @@ export function app_code_lesson_quiz_tokens_tap({
       each(refused, chip);
       list_clear(refused);
       html_data_set_test_happy_remove(span);
-      app_code_expression_operator_chip_uncolored(span);
+      app_learn_js_expression_operator_chip_uncolored(span);
       paint(index);
       html_style_opacity(span, 0.4);
       function lambda(line) {
