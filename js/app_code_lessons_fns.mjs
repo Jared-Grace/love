@@ -189,7 +189,7 @@ import { app_learn_js_lesson_statement_name_compare } from "./app_learn_js_lesso
 import { app_code_lesson_statement_name_greater } from "./app_code_lesson_statement_name_greater.mjs";
 import { app_code_lesson_statement_name_smaller_equal } from "./app_code_lesson_statement_name_smaller_equal.mjs";
 import { app_code_lesson_statement_name_greater_equal } from "./app_code_lesson_statement_name_greater_equal.mjs";
-import { app_code_lesson_statement_name_equal } from "./app_code_lesson_statement_name_equal.mjs";
+import { app_learn_js_lesson_statement_name_equal } from "./app_learn_js_lesson_statement_name_equal.mjs";
 import { app_code_lesson_statement_name_not_equal } from "./app_code_lesson_statement_name_not_equal.mjs";
 import { app_code_lesson_statement_name_not } from "./app_code_lesson_statement_name_not.mjs";
 import { app_code_lesson_statement_name_or } from "./app_code_lesson_statement_name_or.mjs";
@@ -550,7 +550,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_greater,
     app_code_lesson_statement_name_smaller_equal,
     app_code_lesson_statement_name_greater_equal,
-    app_code_lesson_statement_name_equal,
+    app_learn_js_lesson_statement_name_equal,
     app_code_lesson_statement_name_not_equal,
     app_code_lesson_statement_name_not,
     app_code_lesson_statement_name_or,
