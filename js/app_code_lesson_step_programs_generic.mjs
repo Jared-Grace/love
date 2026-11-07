@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_brace_marked_div } from "./app_code_brace_marked_div.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_step_programs_generic(
       "When no line is left to run, choose: The program is complete",
     ]);
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     programs,
     app_code_if_blocks_kept,
   );

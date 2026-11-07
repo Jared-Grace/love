@@ -10,7 +10,7 @@ import { list_get } from "./list_get.mjs";
 import { multiply } from "./multiply.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_code_if_codes_halves } from "./app_code_if_codes_halves.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -82,7 +82,7 @@ export function app_code_lesson_if_cases_generic(
     let ordered = app_code_if_codes_halves(codes);
     return ordered;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     batch_get,
     eval_console_log_lines,
   );

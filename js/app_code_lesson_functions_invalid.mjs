@@ -9,7 +9,7 @@ import { js_operator_to_code_call_only } from "./js_operator_to_code_call_only.m
 import { list_adder } from "./list_adder.mjs";
 import { js_tokenizer_normalized } from "./js_tokenizer_normalized.mjs";
 import { app_code_symbols_eval_valid_expression } from "./app_code_symbols_eval_valid_expression.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { list_between_space_before } from "./list_between_space_before.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_functions_invalid() {
     let list = list_adder(lambda);
     return list;
   }
-  let b = app_code_batch_question_answer_fns(
+  let b = app_learn_js_batch_question_answer_fns(
     batch_get,
     app_code_symbols_eval_valid_expression,
   );

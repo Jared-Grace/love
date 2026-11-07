@@ -15,7 +15,7 @@ import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { json_from } from "./json_from.mjs";
@@ -114,7 +114,7 @@ export function app_code_lesson_count_generic(
     let codes = list_map(pairs, program_of);
     return codes;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     batch_get,
     eval_console_log_lines,
   );

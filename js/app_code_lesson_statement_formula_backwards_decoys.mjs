@@ -9,7 +9,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { equal } from "./equal.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_programs_answers_paired } from "./app_code_programs_answers_paired.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
@@ -86,7 +86,7 @@ export function app_code_lesson_statement_formula_backwards_decoys({
     }
     return codes;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     programs_get,
     eval_console_log_lines,
   );

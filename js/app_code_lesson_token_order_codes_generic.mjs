@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_quiz_tokens_order } from "./app_code_quiz_tokens_order.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_tokens_choose_label } from "./app_code_tokens_choose_label.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_token_order_codes_generic(
 ) {
   arguments_assert(arguments, 5);
   ("a lesson whose tokens are chosen in order with nothing shown to follow, on the programs codes_get hands back: one worked example chosen through by example_choose, then quizzes chosen through by quiz_choose, so the lessons after The order of the tokens differ only in their opening, their programs and in how the choosing is drawn");
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     codes_get,
     app_code_quiz_tokens_order,
   );

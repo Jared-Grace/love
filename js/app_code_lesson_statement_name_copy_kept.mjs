@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_copy_kept_title_name_id } from "./app_code_lesson_statement_name_copy_kept_title_name_id.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_lesson_statement_name_copy_kept_batch } from "./app_code_lesson_statement_name_copy_kept_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -26,7 +26,7 @@ export function app_code_lesson_statement_name_copy_kept() {
   ("Two names and four lines, which is the copying screen's program with one line put in. The line put in is the changing line from the lesson that gives a name a new value, so the program is made only of lines a learner has read, and everything new is in the order they come in.");
   ("Building the code from tokens stays switched off, for the reason the screens before give.");
   let name_id = app_code_lesson_statement_name_copy_kept_title_name_id();
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_lesson_statement_name_copy_kept_batch,
     eval_console_log_to_list,
   );

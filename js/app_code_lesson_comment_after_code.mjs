@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_comment_after_code_title_name_id } from "./app_code_lesson_comment_after_code_title_name_id.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_lesson_comment_after_code_batch } from "./app_code_lesson_comment_after_code_batch.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_comment_after_code() {
   ("The program is not unscrambled, for the reason the lesson before gives: the machine does not read a comment, so the tokens a program is taken apart into leave the skipped half out, and a learner would be asked to build a line that has lost the half it is about.");
   ("Both quizzes are given tailored wrong answers. Given the code, the ways to be wrong are to read the comment as code and so answer with both numbers, and to read the wrong half and answer with the one that never ran; given what came out, the ways to be wrong are the line with its halves swapped and the line with its slashes taken out. Without them either direction could be settled by finding a number.");
   let name_id = app_code_lesson_comment_after_code_title_name_id();
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_lesson_comment_after_code_batch,
     eval_console_log_lines,
   );

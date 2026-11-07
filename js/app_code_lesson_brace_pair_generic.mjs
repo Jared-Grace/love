@@ -12,7 +12,7 @@ import { app_code_brace_marked } from "./app_code_brace_marked.mjs";
 import { app_code_brace_unmarked } from "./app_code_brace_unmarked.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_brace_partner_index } from "./js_code_brace_partner_index.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { integer_is_assert } from "./integer_is_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_without } from "./list_without.mjs";
@@ -76,7 +76,7 @@ export function app_code_lesson_brace_pair_generic(
     let answer = app_code_brace_marked(code3, partner);
     return answer;
   }
-  let batch = app_code_batch_question_answer_fns(batch_get, partner_marked);
+  let batch = app_learn_js_batch_question_answer_fns(batch_get, partner_marked);
   function decoys(question, answer) {
     "every other brace of the kind asked for, each once and never the answer";
     let unmarked2 = app_code_brace_unmarked(question);

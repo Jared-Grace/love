@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_copy_title_name_id } from "./app_code_lesson_statement_name_copy_title_name_id.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_lesson_statement_name_copy_batch } from "./app_code_lesson_statement_name_copy_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_statement_name_copy() {
   ("Both words are on the screen of every question and only one of them was copied, so the word that was not copied is a wrong answer waiting to be reached for. That is what makes the third line worth reading rather than skipping.");
   ("Building the code from tokens stays switched off, for the reason the lessons before give; there are four lines now.");
   let name_id = app_code_lesson_statement_name_copy_title_name_id();
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_lesson_statement_name_copy_batch,
     eval_console_log_to_list,
   );

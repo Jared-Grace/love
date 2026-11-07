@@ -22,7 +22,7 @@ import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_last } from "./list_last.mjs";
@@ -134,7 +134,7 @@ export function app_code_lesson_for_after_change() {
     let codes = list_map_index(triples, program_of);
     return codes;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     batch_get,
     eval_console_log_lines,
   );

@@ -1,6 +1,6 @@
 import { app_code_lesson_decoy_lines_reversed_and_each } from "./app_code_lesson_decoy_lines_reversed_and_each.mjs";
 import { app_code_lesson_decoy_lines_reversed } from "./app_code_lesson_decoy_lines_reversed.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_lesson_log_twice_above } from "./app_code_lesson_log_twice_above.mjs";
 import { app_code_lesson_log_twice_batch } from "./app_code_lesson_log_twice_batch.mjs";
@@ -19,7 +19,7 @@ export function app_code_lesson_log_twice() {
   ("Reading forwards that is not enough on its own, and each of the two lines alone is offered as well. Reversed is the only other option there, and its first line is the right answer's second, so a learner could work out the first sum, look for the option beginning with it, and never work out the second. The single lines share a first line with the right answer, so the second one has to be worked out too - and each is the natural mistake of stopping after one line on the screen that has just said two lines write out two things. Three wrong answers, and all three are tailored: nothing is left for the draw to fill.");
   ("Reading backwards the reversed one still stands alone, because the answers there are code rather than what came out, and the two mistakes the single lines catch are mistakes about working a program out.");
   let name_id = app_code_lesson_log_twice_title_name_id();
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_lesson_log_twice_batch,
     eval_console_log_lines,
   );

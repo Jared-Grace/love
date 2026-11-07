@@ -2,7 +2,7 @@ import { app_code_lesson_braces_among_colored_generic } from "./app_code_lesson_
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_brace_left } from "./js_code_brace_left.mjs";
 import { js_code_brace_right } from "./js_code_brace_right.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_braces_two_batch } from "./app_code_braces_two_batch.mjs";
 import { app_code_braces_sequence } from "./app_code_braces_sequence.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_token_order_braces() {
   ("The writing is a first draft by Claude 2026-10-10.");
   let left = js_code_brace_left();
   let right = js_code_brace_right();
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_braces_two_batch,
     app_code_braces_sequence,
   );

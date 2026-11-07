@@ -5,7 +5,7 @@ import { app_code_div_cycle_code } from "./app_code_div_cycle_code.mjs";
 import { app_code_braces_run_programs_shape } from "./app_code_braces_run_programs_shape.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_braces_run_walkthrough } from "./app_code_braces_run_walkthrough.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_if_blocks_kept } from "./app_code_if_blocks_kept.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_code_braces_run_choose } from "./app_code_braces_run_choose.mjs";
@@ -52,7 +52,7 @@ export function app_code_lesson_braces_run_explain_generic(
     let list = app_code_braces_run_programs_shape(code_get, names);
     return list;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     programs,
     app_code_if_blocks_kept,
   );

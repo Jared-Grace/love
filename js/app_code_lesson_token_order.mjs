@@ -9,7 +9,7 @@ import { app_code_lesson_token_order_example_choose } from "./app_code_lesson_to
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
 import { app_code_tokens_explain } from "./app_code_tokens_explain.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_quiz_tokens_order } from "./app_code_quiz_tokens_order.mjs";
 import { html_text_set_code_dark_lines } from "./html_text_set_code_dark_lines.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_token_order() {
   ("The longer program in the opening has its tokens drawn each as a chip of its own, not as one block of code, as the human asked 2026-10-10.");
   ("The quiz does not show the program a second time above the one being tapped, so the label over it is left empty and its drawing draws nothing.");
   ("The writing is a first draft by Claude 2026-10-10.");
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_token_order_batch,
     app_code_quiz_tokens_order,
   );

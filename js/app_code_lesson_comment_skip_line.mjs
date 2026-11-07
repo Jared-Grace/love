@@ -1,4 +1,4 @@
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_lesson_comment_skip_line_above } from "./app_code_lesson_comment_skip_line_above.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_comment_skip_line() {
   ("The program is not unscrambled. The tokens a program is taken apart into come from the machine's reading of it, and the machine does not read a note - so the skipped line arrives as nothing at all, and a learner would be asked to build a program that has lost the line it is about.");
   ("Both quizzes are given tailored wrong answers, and they are different in the two directions because the two directions ask different things. Given the code, the ways to be wrong are to read the note as code and to read the wrong line; given what came out, the way to be wrong is to pick the program with its note on the other line. Without them either direction could be settled by finding a number, and the screen would accept an answer from a learner who never saw the slashes.");
   let name_id = app_code_lesson_comment_skip_line_title_name_id();
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_lesson_comment_skip_line_batch,
     eval_console_log_lines,
   );

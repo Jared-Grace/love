@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_names_binary_title_name_id } from "./app_code_lesson_statement_names_binary_title_name_id.mjs";
 import { app_code_lesson_statement_names_binary_programs } from "./app_code_lesson_statement_names_binary_programs.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_code_lesson_statement_names_binary_above } from "./app_code_lesson_statement_names_binary_above.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_statement_names_binary_decoys({
     );
     return codes;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     programs_get,
     eval_console_log_to_list,
   );

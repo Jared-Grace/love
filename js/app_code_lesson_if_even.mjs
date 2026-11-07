@@ -17,7 +17,7 @@ import { list_last } from "./list_last.mjs";
 import { each } from "./each.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_if_condition_set } from "./app_code_if_condition_set.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -88,7 +88,7 @@ export function app_code_lesson_if_even() {
     let codes = list_map(ordered, program_get);
     return codes;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     batch_get,
     eval_console_log_lines,
   );

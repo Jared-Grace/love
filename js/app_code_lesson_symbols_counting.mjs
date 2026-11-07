@@ -1,6 +1,6 @@
 import { text_size_text_to } from "./text_size_text_to.mjs";
 import { app_code_label_symbols } from "./app_code_label_symbols.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "./app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { noop } from "./noop.mjs";
 import { app_code_symbols_count_wrong_say } from "./app_code_symbols_count_wrong_say.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_symbols_counting(
   let label_answer_forwards = "How many symbols are there? ";
   let symbols_to_answer = text_size_text_to;
   let example_question_label = app_code_label_symbols();
-  let batch_get = app_code_batch_question_answer_fns(
+  let batch_get = app_learn_js_batch_question_answer_fns(
     batch_symbols,
     symbols_to_answer,
   );

@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_which_part_first_above } from "./app_code_lesson_expression_which_part_first_above.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_code_generic } from "./app_code_lesson_code_generic.mjs";
 import { app_code_lesson_expression_which_part_first_answer } from "./app_code_lesson_expression_which_part_first_answer.mjs";
@@ -21,7 +21,7 @@ export function app_code_lesson_expression_which_part_first() {
     let r = [arg];
     return r;
   }
-  let batch_get = app_code_batch_question_answer_fns(
+  let batch_get = app_learn_js_batch_question_answer_fns(
     questions_get,
     app_code_lesson_expression_which_part_first_answer,
   );

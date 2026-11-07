@@ -7,7 +7,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { text_replace } from "./text_replace.mjs";
@@ -59,7 +59,7 @@ export function app_code_lesson_if_true() {
     let codes = list_shuffle_take_map(rest, 4, program_of);
     return codes;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     batch_get,
     eval_console_log_lines,
   );

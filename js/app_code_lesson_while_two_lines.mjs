@@ -14,7 +14,7 @@ import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { app_code_while_word_programs } from "./app_code_while_word_programs.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_map } from "./list_map.mjs";
@@ -99,7 +99,7 @@ export function app_code_lesson_while_two_lines() {
     let codes = app_code_while_word_programs(program_get);
     return codes;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     batch_get,
     eval_console_log_lines,
   );

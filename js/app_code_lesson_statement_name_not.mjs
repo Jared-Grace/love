@@ -9,7 +9,7 @@ import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_state
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
@@ -52,7 +52,7 @@ export function app_code_lesson_statement_name_not() {
     let codes = list_shuffle_take_map([true, false], 2, program_of);
     return codes;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     programs_get,
     eval_console_log_to_list,
   );

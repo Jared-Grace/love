@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_identifier_title_name_id } from "./app_code_lesson_statement_name_identifier_title_name_id.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_lesson_statement_name_identifier_batch } from "./app_code_lesson_statement_name_identifier_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_statement_name_identifier() {
   ("The value is still a word and the code is still the same two lines. Only what the name is spelled with has moved.");
   ("Building the code from tokens is left switched off, for the reason the lesson before gives: the order two lines go in is a second thing to learn.");
   let name_id = app_code_lesson_statement_name_identifier_title_name_id();
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_lesson_statement_name_identifier_batch,
     eval_console_log_to_list,
   );

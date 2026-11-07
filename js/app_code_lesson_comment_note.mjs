@@ -1,4 +1,4 @@
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { app_code_lesson_comment_note_above } from "./app_code_lesson_comment_note_above.mjs";
@@ -14,7 +14,7 @@ export function app_code_lesson_comment_note() {
   ("Notes are not unscrambled. The tokens a program is taken apart into come from the machine's reading of it, and the machine does not read a note - so a note handed to that quiz arrives as nothing at all, and a learner would be asked to build a line that has gone.");
   ("The code is painted with the note dimmed, in the questions as well as in the worked example. A screen that dimmed the note in one place and not the other would be saying the note is different only sometimes.");
   let name_id = app_code_lesson_comment_note_title_name_id();
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_lesson_comment_note_batch,
     eval_console_log_to_list,
   );

@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_true_false_title_name_id } from "./app_code_lesson_statement_name_true_false_title_name_id.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_lesson_statement_name_true_false_batch } from "./app_code_lesson_statement_name_true_false_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_statement_name_true_false() {
   ("The examples screen shows both programs and so is complete: it offers no button for another example, because pressing it could only show the same two again.");
   ("Building the code from tokens is left switched off, as it is on the lesson this one follows from.");
   let name_id = app_code_lesson_statement_name_true_false_title_name_id();
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_lesson_statement_name_true_false_batch,
     eval_console_log_to_list,
   );

@@ -16,7 +16,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_brace_marked } from "./app_code_brace_marked.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_code_brace_lines_choose } from "./app_code_brace_lines_choose.mjs";
 import { app_code_lesson_quiz_question_none } from "./app_code_lesson_quiz_question_none.mjs";
@@ -71,7 +71,7 @@ export function app_code_lesson_brace_lines_generic(name_id, above, codes_get) {
     list_shuffle(questions);
     return questions;
   }
-  let batch = app_code_batch_question_answer_fns(batch_get, between_lines);
+  let batch = app_learn_js_batch_question_answer_fns(batch_get, between_lines);
   function example_choose(component, text, container) {
     "a worked example chosen on the page, with nothing to tell the lesson when a line is tapped wrong";
     function wrong() {}

@@ -8,7 +8,7 @@ import { list_shuffle_cycled } from "./list_shuffle_cycled.mjs";
 import { js_arithmetic_value } from "./js_arithmetic_value.mjs";
 import { throws_not } from "./throws_not.mjs";
 import { boolean_to_text_validity } from "./boolean_to_text_validity.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { text_combine_right_fn } from "./text_combine_right_fn.mjs";
 import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -51,7 +51,10 @@ export function app_code_lesson_operators_minus_generic({
     let result = boolean_to_text_validity(valid);
     return result;
   };
-  let batch = app_code_batch_question_answer_fns(batch_get, symbols_to_answer);
+  let batch = app_learn_js_batch_question_answer_fns(
+    batch_get,
+    symbols_to_answer,
+  );
   function above(root) {
     let combined = text_combine_right_fn(operator, right_random_get);
     let operator_name_math_articled = text_articled_pad_space(operator_name);

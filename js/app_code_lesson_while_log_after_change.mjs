@@ -18,7 +18,7 @@ import { json_to } from "./json_to.mjs";
 import { app_code_lesson_log_after_change_groups } from "./app_code_lesson_log_after_change_groups.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { eval_console_log_lines } from "./eval_console_log_lines.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_size } from "./list_size.mjs";
@@ -97,7 +97,7 @@ export function app_code_lesson_while_log_after_change() {
     let codes = list_map(triples, program_get);
     return codes;
   }
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     batch_get,
     eval_console_log_lines,
   );

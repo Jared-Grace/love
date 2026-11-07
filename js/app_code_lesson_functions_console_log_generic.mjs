@@ -2,7 +2,7 @@ import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_les
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
 import { app_code_lesson_name_id_function } from "./app_code_lesson_name_id_function.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_functions_console_log_generic(params) {
     let r = [transfomed];
     return r;
   }
-  let b = app_code_batch_question_answer_fns(
+  let b = app_learn_js_batch_question_answer_fns(
     batch_get,
     eval_console_log_to_list,
   );

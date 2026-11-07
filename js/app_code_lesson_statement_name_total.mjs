@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_total_title_name_id } from "./app_code_lesson_statement_name_total_title_name_id.mjs";
-import { app_code_batch_question_answer_fns } from "./app_code_batch_question_answer_fns.mjs";
+import { app_learn_js_batch_question_answer_fns } from "./app_learn_js_batch_question_answer_fns.mjs";
 import { app_code_lesson_statement_name_total_batch } from "./app_code_lesson_statement_name_total_batch.mjs";
 import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
 import { app_code_lesson_code_logged } from "./app_code_lesson_code_logged.mjs";
@@ -14,7 +14,7 @@ export function app_code_lesson_statement_name_total() {
   ("A third name rather than one of the two. Given back to the first name, the line would be reading a cup and filling the same cup, and a learner would have two things to work out at once when this screen is asking about one.");
   ("Numbers rather than the words the earlier screens use, for the same reason as the screen before: a plus between two pieces of text does something a learner has never been told about, and it would be the second new thing on a screen that has one.");
   let name_id = app_code_lesson_statement_name_total_title_name_id();
-  let batch = app_code_batch_question_answer_fns(
+  let batch = app_learn_js_batch_question_answer_fns(
     app_code_lesson_statement_name_total_batch,
     eval_console_log_to_list,
   );
