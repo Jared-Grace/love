@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_on_move_on } from "./app_code_lesson_quiz_on_move_on.mjs";
+import { app_learn_js_lesson_quiz_on_move_on } from "./app_learn_js_lesson_quiz_on_move_on.mjs";
 import { app_code_quiz_index_transform } from "./app_code_quiz_index_transform.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_learn_js_hash_write } from "./app_learn_js_hash_write.mjs";
@@ -12,7 +12,7 @@ export async function app_code_lesson_quiz_on_next(
   arguments_assert(arguments, 4);
   ("Next moves to the next quiz KIND (forwards, backwards, unscramble...); on the last kind it goes to the next lesson, same as Skip");
   if (qli) {
-    await app_code_lesson_quiz_on_move_on(context);
+    await app_learn_js_lesson_quiz_on_move_on(context);
   } else {
     app_code_quiz_index_transform(context, quizzes, add_1);
     refresh();
