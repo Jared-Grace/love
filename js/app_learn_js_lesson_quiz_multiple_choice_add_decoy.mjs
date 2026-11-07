@@ -3,7 +3,7 @@ import { text_to } from "./text_to.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_lesson_quiz_multiple_choice_add_decoy(
+export function app_learn_js_lesson_quiz_multiple_choice_add_decoy(
   decoy,
   seen,
   distractors,
