@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
-import { app_code_lesson_expression_choose_order_parentheses_and_or_expression } from "./app_code_lesson_expression_choose_order_parentheses_and_or_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code } from "./app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_and_or_questions() {
   arguments_assert(arguments, 0);
@@ -18,7 +18,7 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or_quest
     let sides = [true, false];
     let parentheses_left = list_random_item(sides);
     let tree =
-      app_code_lesson_expression_choose_order_parentheses_and_or_expression(
+      app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression(
         want_true,
         parentheses_left,
       );

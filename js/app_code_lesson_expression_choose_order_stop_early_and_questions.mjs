@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_parentheses_and_or_expression } from "./app_code_lesson_expression_choose_order_parentheses_and_or_expression.mjs";
+import { app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression } from "./app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression.mjs";
 import { app_learn_js_expression_stops_early_marked } from "./app_learn_js_expression_stops_early_marked.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code } from "./app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
@@ -10,7 +10,7 @@ export function app_code_lesson_expression_choose_order_stop_early_and_questions
   function expression(want_true) {
     "a line with the && leftmost and parentheses on its right, marked to stop early";
     let tree =
-      app_code_lesson_expression_choose_order_parentheses_and_or_expression(
+      app_learn_js_lesson_expression_choose_order_parentheses_and_or_expression(
         want_true,
         false,
       );
