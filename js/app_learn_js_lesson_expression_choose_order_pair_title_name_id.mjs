@@ -2,7 +2,7 @@ import { app_learn_js_category_expressions } from "./app_learn_js_category_expre
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_cycle_code } from "./app_learn_js_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_pair_title_name_id() {
+export function app_learn_js_lesson_expression_choose_order_pair_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: solving three comparisons one step at a time, an Expressions lesson");
   ("Three, not two. Every line this lesson hands out carries three comparison signs - one inside each parenthesis, drawn from ===, !==, < and >, and one between them that is === or !==. The title used to say two, which counted the two being compared and left out the one comparing them, so a learner reading (4 > 2) === (5 !== 7) could see a sign the title did not admit to.");
