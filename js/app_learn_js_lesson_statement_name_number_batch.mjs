@@ -5,7 +5,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_statement_name_number_batch() {
+export function app_learn_js_lesson_statement_name_number_batch() {
   arguments_assert(arguments, 0);
   ("the four programs a screen of this lesson asks about: each gives one number a name and then writes that name out");
   ("The lesson that first gave a value a name gave it a word. This one gives it a number and changes nothing else, so the only thing a learner is asked to accept is that a name holds a number the way it holds a word.");
