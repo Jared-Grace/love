@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_complete_messages(noun) {
+export function app_learn_js_complete_messages(noun) {
   arguments_assert(arguments, 1);
   ("the loving lines shown when the whole of something is done, noun naming what was done: review, or milestone - asked for by the human 2026-10-23, since a finished milestone was told it had finished a review");
   let r = [
