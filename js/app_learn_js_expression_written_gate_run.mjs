@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-export function app_code_expression_written_gate_run() {
+export function app_learn_js_expression_written_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: every line a learner is shown while pressing an expression apart means the shape that printed it.");
   ("The check a person had to make twice by eye. Math.floor3.8 * 5 stood on the whole part screen and 23 - Math.floor2.3 * 10 on the order screen, and neither is a line of javascript - a pair of brackets that belong to the name Math.floor had gone. Both were found by somebody reading the screen. Nothing here could have found them, because nothing here had ever asked whether the line above the buttons says what the buttons are pressing apart.");

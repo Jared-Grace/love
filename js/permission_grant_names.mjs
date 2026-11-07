@@ -2534,7 +2534,7 @@ export function permission_grant_names() {
     fn_name("bible_glyph_chapters_unlisted_add"),
     fn_name("bible_glyph_chapters_unlisted"),
     fn_name("folder_secret"),
-    fn_name("app_code_expression_written_gate_run"),
+    fn_name("app_learn_js_expression_written_gate_run"),
     fn_name("app_learn_en_gloss_urdu_passages_reworded"),
     fn_name("lyric_video_song_document_draft"),
     fn_name("git_history_purge_paths"),

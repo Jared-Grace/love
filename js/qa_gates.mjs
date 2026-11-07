@@ -478,7 +478,7 @@ import { js_ast_return_key_shapes_disagreeing_cases_gate_run } from "./js_ast_re
 import { functions_return_key_shapes_gate_run } from "./functions_return_key_shapes_gate_run.mjs";
 import { bible_usfm_versions_withheld_gate_run } from "./bible_usfm_versions_withheld_gate_run.mjs";
 import { app_code_lesson_telling_shapes_gate_run } from "./app_code_lesson_telling_shapes_gate_run.mjs";
-import { app_code_expression_written_gate_run } from "./app_code_expression_written_gate_run.mjs";
+import { app_learn_js_expression_written_gate_run } from "./app_learn_js_expression_written_gate_run.mjs";
 import { bible_usfm_versions_apart_gate_run } from "./bible_usfm_versions_apart_gate_run.mjs";
 import { js_ast_return_key_shapes_agree_cases_gate_run } from "./js_ast_return_key_shapes_agree_cases_gate_run.mjs";
 import { bible_versions_sung_gate_run } from "./bible_versions_sung_gate_run.mjs";
@@ -1129,7 +1129,7 @@ export function qa_gates() {
     functions_return_key_shapes_gate_run,
     bible_usfm_versions_withheld_gate_run,
     app_code_lesson_telling_shapes_gate_run,
-    app_code_expression_written_gate_run,
+    app_learn_js_expression_written_gate_run,
     bible_usfm_versions_apart_gate_run,
     js_ast_return_key_shapes_agree_cases_gate_run,
     bible_versions_sung_gate_run,
