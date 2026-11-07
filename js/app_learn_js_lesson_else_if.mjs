@@ -7,7 +7,7 @@ import { app_learn_js_else_if_explain } from "./app_learn_js_else_if_explain.mjs
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { app_code_lesson_if_ab_logged } from "./app_code_lesson_if_ab_logged.mjs";
 import { app_learn_js_else_if_program_lines } from "./app_learn_js_else_if_program_lines.mjs";
-export function app_code_lesson_else_if() {
+export function app_learn_js_lesson_else_if() {
   arguments_assert(arguments, 0);
   ('else if: let a = false; let b = true; if (a) { console.log("love"); } else if (b) { console.log("joy"); } console.log("peace"); writes out joy and peace');
   ("The one new fact is that when an if is the only line inside an else, else { if (b) { ... } } can be written shorter as else if (b) { ... }, and the program does the same thing. The program shown first is an if inside an else, from An if inside an else, with nothing else inside that else, so the shorter way is the only new piece.");
