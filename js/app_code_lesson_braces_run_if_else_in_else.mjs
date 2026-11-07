@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_braces_run_explain_generic } from "./app_code_lesson_braces_run_explain_generic.mjs";
 import { noop } from "./noop.mjs";
-import { app_code_braces_four_if_else_in_else } from "./app_code_braces_four_if_else_in_else.mjs";
+import { app_learn_js_braces_four_if_else_in_else } from "./app_learn_js_braces_four_if_else_in_else.mjs";
 export function app_code_lesson_braces_run_if_else_in_else() {
   arguments_assert(arguments, 0);
   ("whether a section of code runs, in programs of an if and its else with an if and its else inside the else; asked for by the human 2026-10-14, straight before the lesson on that shape");
@@ -10,7 +10,7 @@ export function app_code_lesson_braces_run_if_else_in_else() {
   let lesson = app_code_lesson_braces_run_explain_generic(
     "Does this section run? If and else inside an else",
     noop,
-    app_code_braces_four_if_else_in_else,
+    app_learn_js_braces_four_if_else_in_else,
     ["a", "b"],
   );
   return lesson;
