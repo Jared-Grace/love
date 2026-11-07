@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
-import { app_code_label_solve_left_to_right } from "./app_code_label_solve_left_to_right.mjs";
+import { app_learn_js_label_solve_left_to_right } from "./app_learn_js_label_solve_left_to_right.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
 export function app_code_lesson_cross_precedence_rule(
   root,
@@ -14,7 +14,7 @@ export function app_code_lesson_cross_precedence_rule(
   "THE LAST LINE SEPARATES WRITTEN FROM SOLVED. It used to say comes first ... comes later ... do first, spending first on where an operator stands and on when it is solved. Position is now written and solving order is first, so the one line that exists to prise those two apart no longer uses one word for both.";
   arguments_assert(arguments, 3);
   let header = app_learn_js_container_light_blue(root);
-  let same_strength = app_code_label_solve_left_to_right();
+  let same_strength = app_learn_js_label_solve_left_to_right();
   app_learn_js_div_cycle_code(header, [same_strength]);
   app_learn_js_div_cycle_code(header, [
     "But some operators are solved before other operators",

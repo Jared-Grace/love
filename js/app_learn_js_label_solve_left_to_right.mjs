@@ -1,4 +1,4 @@
-export function app_code_label_solve_left_to_right() {
+export function app_learn_js_label_solve_left_to_right() {
   "the ordinary rule for a line of operators, said the way the same-strength pair lessons say it: operators are solved left to right.";
   "It is written here rather than in each lesson that says it because the cross-precedence lessons open by recalling it and then taking it away, and a recall that is worded even slightly differently from the sentence being recalled reads as a second rule rather than the same one coming back.";
   "IT NAMES OPERATORS RATHER THAN SAYING WHICHEVER ONE. It used to read whichever one comes first, we do first, and a learner reading that line on its own has nothing for one to point at - it is a pronoun with no noun in front of it, so the line has to be held unread until a later line explains it.";

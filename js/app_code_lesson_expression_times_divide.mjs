@@ -1,4 +1,4 @@
-import { app_code_label_solve_left_to_right } from "./app_code_label_solve_left_to_right.mjs";
+import { app_learn_js_label_solve_left_to_right } from "./app_learn_js_label_solve_left_to_right.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -40,7 +40,7 @@ export function app_code_lesson_expression_times_divide() {
       divided,
       " together",
     ]);
-    let same_strength = app_code_label_solve_left_to_right();
+    let same_strength = app_learn_js_label_solve_left_to_right();
     app_learn_js_div_cycle_code(box, [same_strength]);
     let example_box = app_learn_js_container_light_blue(root);
     app_learn_js_div_cycle_code(example_box, [
