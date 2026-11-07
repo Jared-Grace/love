@@ -5,7 +5,7 @@ import { app_code_braces_two_ifs } from "./app_code_braces_two_ifs.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_code_dark_lines_comments } from "./app_code_code_dark_lines_comments.mjs";
-export function app_code_braces_run_two_ifs_explain(root, context) {
+export function app_learn_js_braces_run_two_ifs_explain(root, context) {
   arguments_assert(arguments, 2);
   ("two ifs, one after the other, shown, then the four ways they may run");
   ("Written by the human 2026-10-11, replacing the one rule this lesson had, that each if asks its own test whatever the one before it did. Not picked: moving The same if twice into here, at the human's own question, since that lesson is about a name changed by the first if changing what the second asks, which programs of names that are only ever true or false cannot show.");

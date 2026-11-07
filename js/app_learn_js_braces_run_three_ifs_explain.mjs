@@ -12,7 +12,7 @@ export function app_learn_js_braces_run_three_ifs_explain(root, context) {
   arguments_assert(arguments, 2);
   ("two ifs remembered, then three ifs, one after the other, shown, then the ways they may run");
   ("Written by Claude 2026-10-11 after the human's two ifs explanation (",
-    fn_name("app_code_braces_run_two_ifs_explain"),
+    fn_name("app_learn_js_braces_run_two_ifs_explain"),
     "), replacing the one rule this lesson had, that each of three ifs asks its own test. Not picked: moving The same if three times into here, as was done for the other shapes, since that lesson is about a name changed by each if changing what the next asks, which programs of names that are only ever true or false cannot show - the same reason The same if twice stayed out of the two ifs lesson.");
   ("The eight ways are not listed one by one as the four were for two ifs: eight lines say less than the one fact that any of them may run whatever the others do.");
   let box_one = app_code_container_light_blue(root);
