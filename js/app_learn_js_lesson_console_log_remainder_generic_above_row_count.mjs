@@ -7,7 +7,7 @@ import { app_learn_js_container_light_blue } from "./app_learn_js_container_ligh
 import { html_style_gap } from "./html_style_gap.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
-import { app_code_lesson_console_log_remainder_generic_above_row } from "./app_code_lesson_console_log_remainder_generic_above_row.mjs";
+import { app_learn_js_lesson_console_log_remainder_generic_above_row } from "./app_learn_js_lesson_console_log_remainder_generic_above_row.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 export function app_learn_js_lesson_console_log_remainder_generic_above_row_count(
   r4,
@@ -37,7 +37,7 @@ export function app_learn_js_lesson_console_log_remainder_generic_above_row_coun
   html_style_padding_x(table, "0");
   html_style_padding_y(table, "0");
   function row(n) {
-    let r = app_code_lesson_console_log_remainder_generic_above_row(
+    let r = app_learn_js_lesson_console_log_remainder_generic_above_row(
       n,
       percent,
       divisor,

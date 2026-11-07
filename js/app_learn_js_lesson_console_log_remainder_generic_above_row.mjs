@@ -8,7 +8,7 @@ import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
-export function app_code_lesson_console_log_remainder_generic_above_row(
+export function app_learn_js_lesson_console_log_remainder_generic_above_row(
   n,
   percent,
   divisor,
