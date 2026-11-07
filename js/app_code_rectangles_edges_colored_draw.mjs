@@ -9,7 +9,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_grid_edge_line_draw } from "./app_learn_js_grid_edge_line_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
@@ -50,7 +50,7 @@ export function app_code_rectangles_edges_colored_draw({
   ("marked is [left, right, top, bottom] of squares filled with the overlap colour whether or not both rectangles cover them, or null for none - asked by the human 2026-10-04 to show the square a wrong answer counts, between two rectangles that share none");
   ("The numbers sit on the lines and not on the squares, unlike the grid lessons' headings, because a meeting from 9 to 11 is two hours: the numbers are the edges, and left < right reads true exactly when a rectangle has a square between them.");
   let start_color = app_code_highlight_color();
-  let end_color = app_code_highlight_color_second();
+  let end_color = app_learn_js_highlight_color_second();
   let first_color = app_learn_js_highlight_color_fourth();
   let second_color = app_learn_js_highlight_color_fifth();
   let plain = app_shared_color_code_background();

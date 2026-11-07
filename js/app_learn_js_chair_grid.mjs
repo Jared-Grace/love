@@ -11,7 +11,7 @@ import { text_to } from "./text_to.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
@@ -42,7 +42,7 @@ export function app_learn_js_chair_grid(parent, count, width, marked) {
     margin: "0.5em 0",
   });
   let before_color = app_code_highlight_color();
-  let marked_color = app_code_highlight_color_second();
+  let marked_color = app_learn_js_highlight_color_second();
   let border_color = app_shared_color_blue_dark();
   function heading_draw(text) {
     let heading = html_div_text(grid, text);

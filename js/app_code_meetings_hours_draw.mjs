@@ -9,7 +9,7 @@ import { app_learn_js_grid_edge_line_draw } from "./app_learn_js_grid_edge_line_
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
@@ -43,7 +43,7 @@ export function app_code_meetings_hours_draw(
   ("The hours sit on the lines between squares and not on the squares, as the rectangle pictures number their edges, because a meeting from 9 to 11 is two squares: the hours are where it starts and ends. An hour a meeting starts at wears the start colour and an hour one ends at the end colour, as in the meetings lessons; an hour that is both wears both, the end colour on its left half and the start colour on its right, and its line is the two side by side, the end colour on the left and the start colour on the right - asked by the human 2026-10-05 for two meetings that touch, where the plain hour was the one number in the picture that did not say what it was. Not picked: one of the two colours, which would say the hour is only an end or only a start. The line was first striped, the end colour dashed over the start colour; the human found the dashes showed the two colours unequally, and two lines side by side also say which comes first, as the rectangle pictures draw a shared edge.");
   ("Each hour has a line drawn down through the bars in its own colour, asked by the human 2026-10-04 after a student read the hours as columns rather than as the lines between them; a coloured line lies above a plain one.");
   let start_color = app_code_highlight_color();
-  let end_color = app_code_highlight_color_second();
+  let end_color = app_learn_js_highlight_color_second();
   let plain = app_shared_color_code_background();
   let color2 = app_learn_js_highlight_color_fourth();
   let color3 = app_learn_js_highlight_color_fifth();

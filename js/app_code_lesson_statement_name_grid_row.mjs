@@ -23,7 +23,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_middle } from "./app_code_lesson_statement_name_middle.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 export function app_code_lesson_statement_name_grid_row() {
@@ -169,7 +169,7 @@ export function app_code_lesson_statement_name_grid_row() {
     ["2"],
     [],
   );
-  let color = app_code_highlight_color_second();
+  let color = app_learn_js_highlight_color_second();
   let color2 = app_learn_js_highlight_color_fifth();
   let color3 = app_code_highlight_color_third();
   let v10 = worded(["The chairs are in rows and columns"]);

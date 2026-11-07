@@ -20,7 +20,7 @@ import { app_code_lesson_reference_draw } from "./app_code_lesson_reference_draw
 import { app_code_lesson_statement_name_remainder } from "./app_code_lesson_statement_name_remainder.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
 import { app_code_lesson_statement_name_grid_row } from "./app_code_lesson_statement_name_grid_row.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
 export function app_code_lesson_statement_name_grid_position() {
@@ -168,7 +168,7 @@ export function app_code_lesson_statement_name_grid_position() {
     [],
     ["1"],
   );
-  let color = app_code_highlight_color_second();
+  let color = app_learn_js_highlight_color_second();
   let color2 = app_learn_js_highlight_color_fifth();
   let color4 = app_learn_js_highlight_color_fourth();
   let v2 = pointed(["", column_formula], [], []);

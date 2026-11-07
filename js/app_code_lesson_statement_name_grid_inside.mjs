@@ -12,7 +12,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
 import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_color_fourth.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_highlight_color_fifth } from "./app_learn_js_highlight_color_fifth.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_learn_js_explain_word_colored } from "./app_learn_js_explain_word_colored.mjs";
@@ -93,7 +93,7 @@ export function app_code_lesson_statement_name_grid_inside() {
   let grid_color = app_code_highlight_color();
   let row_color = app_code_highlight_color_third();
   let column_color = app_learn_js_highlight_color_fourth();
-  let rows_count_color = app_code_highlight_color_second();
+  let rows_count_color = app_learn_js_highlight_color_second();
   let columns_count_color = app_learn_js_highlight_color_fifth();
   let plain = app_shared_color_code_background();
   let grid_word = app_learn_js_explain_word_colored("grid", grid_color);

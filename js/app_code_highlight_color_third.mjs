@@ -4,7 +4,7 @@ import { app_shared_color_red_pointer } from "./app_shared_color_red_pointer.mjs
 export function app_code_highlight_color_third() {
   "the third pointing colour, for a screen where three different words are each pointing at a different piece of the same line of code";
   ("CHOSEN HERE, AND SO IS ",
-    fn_name("app_code_highlight_color_second"),
+    fn_name("app_learn_js_highlight_color_second"),
     ". The four colours this app tells numbers apart with were the obvious place to shop, and they are the wrong shape for this: they only have to differ from each other, where these three have also to sit evenly round the wheel and to stand at the same distance off a black line. Two colours picked for one job rarely fit another without being moved.");
   ("THE MOVING TURNED OUT TO BE SMALL, AND THE PARAGRAPH ABOVE GIVES THE WRONG REASON FOR IT. Measured 2026-09-20, each of these three sits close to one of those four: the second pointer is 0.043 from the chip green, this red is 0.060 from the chip red, the first pointer is 0.083 from the chip blue. The second pointer and the chip green are the same hue and the same chroma and differ in lightness alone, 0.55 against 0.51. So this is not a different set of colours; it is that set, lifted to stand off a black line.");
   ("Standing off black was never what ruled them out either - the chip red, green and blue measure 3.16, 3.89 and 3.46 against it, and a shape needs 3. What actually rules them out is the amber, which measures 4.48 under white lettering where lettering needs 4.5, and a pointer is a patch of colour with white code written on it. The real answer is that three of the four would serve and the fourth would not, and that the lightness had to move anyway.");

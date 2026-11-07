@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_green_pointer } from "./app_shared_color_green_pointer.mjs";
-export function app_code_highlight_color_second() {
+export function app_learn_js_highlight_color_second() {
   "the second pointing colour: worn by a word and by the piece of code that word points at, on a screen where another word is pointing at a different piece of code at the same time";
   ("IT SAYS NOTHING ON ITS OWN. Where one thing is being pointed at, that thing wears ",
     fn_name("app_code_highlight_color"),

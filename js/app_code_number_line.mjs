@@ -10,7 +10,7 @@ import { floor } from "./floor.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { html_div } from "./html_div.mjs";
 import { text_to } from "./text_to.mjs";
@@ -50,7 +50,7 @@ export function app_code_number_line(parent, low, high, step, ends, middle) {
   let chip_center = "70%";
   let line_color = app_shared_color_blue_dark();
   let end_color = app_code_highlight_color();
-  let middle_color = app_code_highlight_color_second();
+  let middle_color = app_learn_js_highlight_color_second();
   let plain = app_shared_color_code_background();
   let row = html_div(parent);
   let t = text_to(count);

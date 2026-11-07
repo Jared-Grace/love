@@ -14,7 +14,7 @@ import { app_learn_js_highlight_color_fourth } from "./app_learn_js_highlight_co
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_learn_js_arrow_inline } from "./app_learn_js_arrow_inline.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
 import { app_code_square_grid } from "./app_code_square_grid.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -83,7 +83,7 @@ export function app_code_lesson_statement_name_grid_steps() {
   let start_color = app_code_highlight_color_sixth();
   let row_color = app_code_highlight_color_third();
   let column_color = app_learn_js_highlight_color_fourth();
-  let rows_count_color = app_code_highlight_color_second();
+  let rows_count_color = app_learn_js_highlight_color_second();
   let columns_count_color = app_learn_js_highlight_color_fifth();
   let end_color = app_code_highlight_color();
   let rows_worked = app_learn_js_explain_abs_apart_colored(

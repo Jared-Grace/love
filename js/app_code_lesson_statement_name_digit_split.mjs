@@ -1,7 +1,7 @@
 import { app_learn_js_example_number_part_pointed_draw } from "./app_learn_js_example_number_part_pointed_draw.mjs";
 import { app_code_line_number_part_pointed_draw } from "./app_code_line_number_part_pointed_draw.mjs";
 import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
-import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_learn_js_highlight_color_second } from "./app_learn_js_highlight_color_second.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 import { app_code_lesson_statement_name_value_names } from "./app_code_lesson_statement_name_value_names.mjs";
 import { list_second } from "./list_second.mjs";
@@ -66,7 +66,7 @@ export function app_code_lesson_statement_name_digit_split() {
   }
   let by_ten = by(ten);
   let color = app_code_highlight_color();
-  let color2 = app_code_highlight_color_second();
+  let color2 = app_learn_js_highlight_color_second();
   let pointers = [
     [["3"], color],
     [["7"], color2],
