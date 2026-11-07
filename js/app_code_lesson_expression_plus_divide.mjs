@@ -1,6 +1,6 @@
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
-import { app_code_lesson_cross_precedence_intro } from "./app_code_lesson_cross_precedence_intro.mjs";
+import { app_learn_js_lesson_cross_precedence_intro } from "./app_learn_js_lesson_cross_precedence_intro.mjs";
 import { js_operator_plus } from "./js_operator_plus.mjs";
 import { js_operator_division } from "./js_operator_division.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_expression_plus_divide() {
   }
   function above(root) {
     "the numbers are picked so no number is said twice inside one worked line: 2 + 6 / 3 would come to 2 + 2, and a learner reading that has to work out which 2 was already there and which one the division just made";
-    app_code_lesson_cross_precedence_intro({
+    app_learn_js_lesson_cross_precedence_intro({
       root,
       weak: plus,
       strong: divided,

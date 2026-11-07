@@ -16,7 +16,7 @@ export function app_code_lesson_expression_not_comparison_intro(root, context) {
   "Built rather than presented, so the finished shape arrives as the last step of something the reader watched happen rather than as a new thing to take on trust.";
   "It says what the ! would apply to without the parentheses and stops there. It does not say what !3 works out to, because that answer needs a number counted as true or false, which no lesson has taught and this one is not the place to teach. Naming what the ! applies to is enough to motivate the parentheses, and it is true.";
   ("It stands in its own file because the lesson holding it was over the work-size ceiling with it inside, and because a card is a different kind of thing from the questions the lesson draws - the same split as ",
-    fn_name("app_code_lesson_cross_precedence_intro"),
+    fn_name("app_learn_js_lesson_cross_precedence_intro"),
     ".");
   let symbol = js_operator_bang_symbol();
   let true_word = js_keyword_true();

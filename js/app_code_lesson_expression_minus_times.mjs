@@ -1,6 +1,6 @@
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
-import { app_code_lesson_cross_precedence_intro } from "./app_code_lesson_cross_precedence_intro.mjs";
+import { app_learn_js_lesson_cross_precedence_intro } from "./app_learn_js_lesson_cross_precedence_intro.mjs";
 import { js_operator_minus } from "./js_operator_minus.mjs";
 import { js_operator_asterisk } from "./js_operator_asterisk.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_expression_minus_times() {
     return triples;
   }
   function above(root) {
-    app_code_lesson_cross_precedence_intro({
+    app_learn_js_lesson_cross_precedence_intro({
       root,
       weak: minus,
       strong: times,
