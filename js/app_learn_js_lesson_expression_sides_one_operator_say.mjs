@@ -2,7 +2,10 @@ import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_sides_one_operator_say(run, sides) {
+export function app_learn_js_lesson_expression_sides_one_operator_say(
+  run,
+  sides,
+) {
   arguments_assert(arguments, 2);
   ("why the two sides of a line go first, told for a line whose two sides hold the SAME operator: the operator is named, both of it are pointed at, and then the question of which of them goes first is asked for the run underneath to answer");
   ("It counts rather than classes. Told that the sides are arithmetic and so go before the comparison, a learner has to already know what arithmetic is and which of the symbols in front of them are it; told that / is solved before === and that there are two /, they can see both of them on the line without knowing either word.");
