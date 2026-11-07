@@ -4,7 +4,7 @@ import { app_learn_js_lesson_text_line_parenthesis_shape_or_null } from "./app_l
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_learn_js_lesson_text_line_operator_mix_or_null } from "./app_learn_js_lesson_text_line_operator_mix_or_null.mjs";
-import { app_code_lesson_text_line_value_sides } from "./app_code_lesson_text_line_value_sides.mjs";
+import { app_learn_js_lesson_text_line_value_sides } from "./app_learn_js_lesson_text_line_value_sides.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_learn_js_lesson_text_line_operand_kinds } from "./app_learn_js_lesson_text_line_operand_kinds.mjs";
 export function app_learn_js_lesson_text_line_shapes(text) {
@@ -26,7 +26,7 @@ export function app_learn_js_lesson_text_line_shapes(text) {
   if (some2) {
     list_add(found, mix);
   }
-  let sides = app_code_lesson_text_line_value_sides(trimmed);
+  let sides = app_learn_js_lesson_text_line_value_sides(trimmed);
   list_add_multiple(found, sides);
   let kinds = app_learn_js_lesson_text_line_operand_kinds(trimmed);
   list_add_multiple(found, kinds);

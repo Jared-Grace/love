@@ -5,7 +5,7 @@ import { app_code_lesson_value_words } from "./app_code_lesson_value_words.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
-export function app_code_lesson_text_line_value_sides(text) {
+export function app_learn_js_lesson_text_line_value_sides(text) {
   arguments_assert(arguments, 1);
   ("which end of a line of code a true or a false is written at - the left, the right, both, or neither.");
   ("The other half of the fault a person reading lesson eighty-nine reported. They said the telling explained false !== (3 === 3) while the question asked 2 !== 2 === false, and named two differences: the parentheses, and that the false had moved to the other side. The parentheses are read by the check standing beside this one; this is the side.");
