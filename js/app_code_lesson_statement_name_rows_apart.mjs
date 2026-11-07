@@ -10,7 +10,7 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { js_code_binary_result_nb } from "./js_code_binary_result_nb.mjs";
 import { app_code_lesson_statement_formula } from "./app_code_lesson_statement_formula.mjs";
-import { app_code_lesson_expression_absolute_value } from "./app_code_lesson_expression_absolute_value.mjs";
+import { app_learn_js_lesson_expression_absolute_value } from "./app_learn_js_lesson_expression_absolute_value.mjs";
 import { app_learn_js_explain_container_next } from "./app_learn_js_explain_container_next.mjs";
 export function app_code_lesson_statement_name_rows_apart() {
   arguments_assert(arguments, 0);
@@ -64,7 +64,7 @@ export function app_code_lesson_statement_name_rows_apart() {
     values_get,
     example_values: [5, 2],
     step,
-    remember_lesson: app_code_lesson_expression_absolute_value,
+    remember_lesson: app_learn_js_lesson_expression_absolute_value,
     remember_parts: ["", math_abs, " gives how far a number is from zero:"],
     remember_lines,
     explain: [

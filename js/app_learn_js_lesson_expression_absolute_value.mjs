@@ -11,7 +11,7 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { integer_random } from "./integer_random.mjs";
 import { app_learn_js_container_light_blue } from "./app_learn_js_container_light_blue.mjs";
 import { app_learn_js_div_cycle_code } from "./app_learn_js_div_cycle_code.mjs";
-export function app_code_lesson_expression_absolute_value() {
+export function app_learn_js_lesson_expression_absolute_value() {
   "practice Math.abs, another value-in value-out function like the rounding ones: Math.abs gives how far a number is from zero, which is always positive - a negative number loses its minus sign (Math.abs(-5) is 5) and a positive number stays the same (Math.abs(5) is 5); the answer is that distance; magnitude 2..9";
   function abs_code(inner) {
     "Math.abs(inner) as a code string";
